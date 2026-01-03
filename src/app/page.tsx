@@ -1,65 +1,242 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
+              A CPA-Designed Study Plan to Help You Pass the CPA Exam Faster
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-up animate-delay-100">
+              Free study plans, section strategies, and real advice from licensed CPAs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-200">
+              <Link
+                href="/study-plan"
+                className="bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                Build My Free CPA Study Plan
+              </Link>
+              <Link
+                href="/about"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[var(--primary)] transition-colors"
+              >
+                Meet Our CPAs
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="py-12 bg-[var(--card)] border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-center">
+            <div className="flex items-center space-x-2">
+              <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-[var(--foreground)] font-medium">Written by Licensed CPAs</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-[var(--foreground)] font-medium">Real-World Experience</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-[var(--foreground)] font-medium">100% Free Guidance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+              Everything You Need to Pass the CPA Exam
+            </h2>
+            <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
+              Stop wasting time on Reddit rabbit holes and comparison paralysis.
+              Get clear, actionable guidance from CPAs who have been in your shoes.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Personalized Study Guidance */}
+            <div className="bg-white p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-[var(--primary)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
+                Personalized Study Plans
+              </h3>
+              <p className="text-[var(--muted)]">
+                Get a customized study schedule based on your work schedule, background, and timeline.
+              </p>
+            </div>
+
+            {/* Section Strategies */}
+            <div className="bg-white p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-[var(--secondary)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[var(--secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
+                Section-by-Section Strategies
+              </h3>
+              <p className="text-[var(--muted)]">
+                Deep-dive into FAR, AUD, REG, and TCP with targeted strategies for each section.
+              </p>
+            </div>
+
+            {/* Real CPA Insights */}
+            <div className="bg-white p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-[var(--accent)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
+                Real CPA Insights
+              </h3>
+              <p className="text-[var(--muted)]">
+                Learn from CPAs who passed the exam and work in the field every day.
+              </p>
+            </div>
+
+            {/* Time-Saving Frameworks */}
+            <div className="bg-white p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-purple-500 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
+                Time-Saving Frameworks
+              </h3>
+              <p className="text-[var(--muted)]">
+                Skip the trial and error. Follow proven frameworks that actually work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pain Points Section */}
+      <section className="py-20 bg-[var(--card)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-6">
+                Feeling Overwhelmed by the CPA Exam?
+              </h2>
+              <p className="text-lg text-[var(--muted)] mb-8">
+                You&apos;re not alone. Every CPA candidate faces the same questions:
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Where do I even start?",
+                  "Which section should I take first?",
+                  "How long will this realistically take?",
+                  "How do I study while working full time?",
+                  "What mistakes cause people to fail?",
+                  "How do I avoid wasting time and money?",
+                ].map((question, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <svg className="w-6 h-6 text-[var(--primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-[var(--foreground)] text-lg">{question}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-2xl border border-[var(--border)] shadow-lg">
+              <h3 className="text-2xl font-bold text-[var(--foreground)] mb-4">
+                We Answer These Questions Before Selling Anything
+              </h3>
+              <p className="text-[var(--muted)] mb-6">
+                Our goal is to give you clarity and confidence first. Build your free personalized study plan and get the answers you need.
+              </p>
+              <Link
+                href="/study-plan"
+                className="btn-secondary inline-block w-full text-center"
+              >
+                Build My Free Study Plan
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CPA Sections Preview */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+              Master Each CPA Exam Section
+            </h2>
+            <p className="text-lg text-[var(--muted)]">
+              Get targeted strategies for every section of the CPA exam.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "FAR", title: "Financial Accounting & Reporting", color: "bg-blue-500", href: "/sections/far" },
+              { name: "AUD", title: "Auditing & Attestation", color: "bg-green-500", href: "/sections/aud" },
+              { name: "REG", title: "Regulation", color: "bg-orange-500", href: "/sections/reg" },
+              { name: "TCP", title: "Tax Compliance & Planning", color: "bg-purple-500", href: "/sections/tcp" },
+            ].map((section) => (
+              <Link
+                key={section.name}
+                href={section.href}
+                className="group bg-white p-6 rounded-xl border border-[var(--border)] hover-lift text-center"
+              >
+                <div className={`w-16 h-16 ${section.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <span className="text-white font-bold text-xl">{section.name}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
+                  {section.title}
+                </h3>
+                <p className="text-[var(--muted)] text-sm mt-2">
+                  Learn what it takes to pass
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Soft CTA */}
+      <section className="py-16 bg-[var(--primary)]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Ready for a CPA Review Program?
+          </h2>
+          <p className="text-gray-200 mb-8 text-lg">
+            See the CPA review program we recommend to our students.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/recommended-program"
+            className="inline-block bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            See Our Recommendation
+          </Link>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
