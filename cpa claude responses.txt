@@ -523,7 +523,24 @@ User reports blogs not visible on deployed site.
 
 **Blog URL:** `/blog`
 
-**Checking if deployment completed successfully after adding environment variables.**
+**Resolution:** Blog was accessible - user needed to hard refresh (Ctrl+Shift+R) to clear cache.
+
+---
+
+### Header Navigation Cleanup
+
+**Before:** Cluttered nav with 7 items (Study Plan, Exam Sections, Free Tools, Guides, Working Full Time, Blog, About, CTA)
+
+**After:** Clean nav with 4 items:
+- **Exam Sections** dropdown (FAR, AUD, REG, TCP with descriptions)
+- **Resources** mega-menu dropdown with categories:
+  - Free Tools: Score Calendar, NTS Tracker, Study Hours Calculator, State Requirements
+  - Guides: Exam Day Walkthrough, I Failed Now What, Working Full Time
+  - Learn: Blog, Success Stories
+- **About** (standalone link)
+- **Build My Study Plan** (CTA button)
+
+**Commit:** `08d4465` - Simplify header navigation with cleaner dropdowns
 
 ---
 

@@ -70,12 +70,12 @@ export default function Header() {
                 </svg>
               </button>
               {sectionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
-                  {sections.map((section) => (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-[var(--border)] rounded-lg shadow-lg py-3">
+                  {sections.map((section, index) => (
                     <Link
                       key={section.name}
                       href={section.href}
-                      className="block px-4 py-3 hover:bg-[var(--card)] transition-colors"
+                      className={`block px-5 py-3 hover:bg-[var(--card)] transition-colors ${index !== sections.length - 1 ? 'border-b border-[var(--border)]' : ''}`}
                     >
                       <div className="font-medium text-[var(--foreground)]">{section.name}</div>
                       <div className="text-sm text-[var(--muted)]">{section.description}</div>
@@ -106,18 +106,18 @@ export default function Header() {
                 </svg>
               </button>
               {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-[var(--border)] rounded-lg shadow-lg p-4">
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-[var(--border)] rounded-lg shadow-lg p-5">
+                  <div className="grid grid-cols-2 gap-6">
                     {/* Tools Column */}
                     <div>
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
                         Free Tools
                       </div>
                       {resources.tools.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-1.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                          className="block py-2.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -125,26 +125,26 @@ export default function Header() {
                     </div>
                     {/* Guides & Learn Column */}
                     <div>
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
                         Guides
                       </div>
                       {resources.guides.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-1.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                          className="block py-2.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
                         >
                           {item.name}
                         </Link>
                       ))}
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2 mt-4">
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3 mt-5">
                         Learn
                       </div>
                       {resources.learn.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-1.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                          className="block py-2.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
                         >
                           {item.name}
                         </Link>
