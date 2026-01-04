@@ -6,12 +6,20 @@ import { useState } from "react";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sectionsOpen, setSectionsOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
 
   const sections = [
     { name: "FAR", href: "/sections/far" },
     { name: "AUD", href: "/sections/aud" },
     { name: "REG", href: "/sections/reg" },
     { name: "TCP", href: "/sections/tcp" },
+  ];
+
+  const tools = [
+    { name: "Score Release Calendar", href: "/tools/score-release-calendar" },
+    { name: "NTS Expiration Tracker", href: "/tools/nts-tracker" },
+    { name: "Study Hours Calculator", href: "/tools/study-hours-calculator" },
+    { name: "State Requirements", href: "/state-requirements" },
   ];
 
   return (
@@ -63,6 +71,38 @@ export default function Header() {
                       className="block px-4 py-2 text-[var(--foreground)] hover:bg-[var(--card)] hover:text-[var(--primary)] transition-colors"
                     >
                       {section.name} Section
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Tools Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setToolsOpen(!toolsOpen)}
+                onBlur={() => setTimeout(() => setToolsOpen(false), 150)}
+                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
+              >
+                <span>Free Tools</span>
+                <svg
+                  className={`w-4 h-4 transition-transform ${toolsOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {toolsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
+                  {tools.map((tool) => (
+                    <Link
+                      key={tool.name}
+                      href={tool.href}
+                      className="block px-4 py-2 text-[var(--foreground)] hover:bg-[var(--card)] hover:text-[var(--primary)] transition-colors"
+                    >
+                      {tool.name}
                     </Link>
                   ))}
                 </div>
@@ -129,6 +169,19 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {section.name}
+                  </Link>
+                ))}
+              </div>
+              <div className="space-y-2">
+                <span className="text-[var(--muted)] text-sm font-medium">Free Tools</span>
+                {tools.map((tool) => (
+                  <Link
+                    key={tool.name}
+                    href={tool.href}
+                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {tool.name}
                   </Link>
                 ))}
               </div>

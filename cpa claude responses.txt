@@ -1,0 +1,184 @@
+CPA Exam Blueprint - Claude Code Session Responses
+==================================================
+
+---
+
+## Strategic Consulting Assessment (Response 1)
+
+Great question. Here's my strategic assessment:
+
+---
+
+## Immediate High-Impact Additions
+
+### 1. **Free Tools That Provide Real Value**
+Students would return repeatedly for:
+
+- **Score Release Countdown Timer** - Synced with AICPA score release dates, with email notifications
+- **NTS Expiration Tracker** - Input your NTS date, get reminders before it expires
+- **Study Hours Calculator** - "I have X weeks until my exam, how many hours/day do I need?"
+- **Section Order Quiz** - More sophisticated than current form, with detailed reasoning
+
+*These create habits and capture emails naturally.*
+
+### 2. **Content That Builds Authority**
+- **Exam Day Walkthrough** - Step-by-step of what to expect (parking, check-in, breaks, scratch paper)
+- **Score Release Calendar** - Updated for current testing windows
+- **State-by-State Requirements Guide** - Licensure requirements vary significantly
+- **"I Failed, Now What?" Guide** - Compassionate, actionable content for retakers (huge underserved audience)
+
+### 3. **Community & Social Proof**
+- **Pass Stories** - Real candidates sharing their journey (video testimonials if possible)
+- **Monthly Pass Rate Updates** - "47 students passed using our study plans this month"
+- **Progress Tracker** - Let users log their study hours and see community stats
+
+---
+
+## Strategic Differentiators
+
+### 1. **CPA Office Hours (Free Monthly Webinar)**
+30-minute live Q&A with your CPAs. Topics like:
+- "Ask a CPA Anything About FAR"
+- "Busy Season Study Strategies"
+- "Career Paths After Passing"
+
+*Builds massive trust, captures emails, showcases expertise.*
+
+### 2. **AI-Powered Study Assistant**
+A simple chatbot that can:
+- Answer common CPA exam questions
+- Recommend section order based on situation
+- Provide encouragement and motivation
+
+*Could be built with the same stack as your Wedding Chat Tool.*
+
+### 3. **Diagnostic Assessment**
+A free 10-15 question quiz per section that:
+- Identifies weak areas
+- Provides personalized study recommendations
+- Gates detailed results behind email capture
+
+*This is what Becker and Roger charge for - offering it free is huge.*
+
+---
+
+## Lead Nurturing Improvements
+
+### 1. **Email Sequence After Study Plan**
+Currently we capture the email but don't nurture. Add:
+- Day 1: Study plan delivery
+- Day 3: "How to use your first week" tips
+- Day 7: Section-specific content based on their recommended first section
+- Day 14: Soft CTA for recommended program
+- Day 30: "Checking in - how's studying going?"
+
+### 2. **Segment by Intent**
+Track which pages they visit:
+- Visited /working-full-time → Send time management content
+- Visited /sections/far → Send FAR-specific tips
+- Visited /recommended-program multiple times → Higher intent, more direct CTA
+
+---
+
+## Technical Enhancements
+
+| Feature | Purpose |
+|---------|---------|
+| Blog with SEO content | Organic traffic ("How long to study for FAR") |
+| Exit-intent popup | Capture abandoning visitors |
+| Progress saving | Let users save/return to their study plan |
+| Mobile app (PWA) | Push notifications for score releases, study reminders |
+| Referral program | "Share your study plan, get X" |
+
+---
+
+## What Would Set You Apart From Competitors
+
+| Competitor Approach | Your Differentiation |
+|---------------------|----------------------|
+| Comparison sites rank by commission | You recommend ONE program with transparent reasoning |
+| Generic study tips | Personalized plans based on actual situation |
+| Anonymous content | Named CPAs with real credentials |
+| Paid tools | Free tools that actually help |
+| Transactional relationship | Ongoing guidance through email nurture |
+
+---
+
+## Priority Recommendation
+
+If I had to pick **three things** to build next:
+
+1. **Email nurture sequence** - Maximize value from leads you're already capturing
+2. **Score release calendar + countdown** - Evergreen traffic driver, highly shareable
+3. **Free diagnostic quiz for one section (start with FAR)** - Major differentiator, high perceived value
+
+---
+
+## Comprehensive Implementation Plan (Response 2)
+
+### Research Conducted
+
+**CPA Exam Structure (CPA Evolution - 2024+)**
+- 3 Core sections: FAR, AUD, REG (continuous testing)
+- 1 Discipline section: BAR, TCP, or ISC (quarterly testing: Jan, Apr, Jul, Oct)
+- 18-month rolling window to pass all sections
+- Score releases: Core every 1-2 weeks, Discipline quarterly
+
+**Pass Rates (2024-2025)**
+- FAR: 40-43% (hardest core)
+- AUD: 46-50%
+- REG: 58-64%
+- TCP: 72-82% (highest)
+- BAR: 33-40% (hardest overall)
+- ISC: ~51%
+
+**Competitor Analysis**
+- Becker: $2,499-$5,999, AI tutor, 8,000+ MCQs
+- UWorld/Roger: $2,299-$4,100, engaging lectures
+- Surgent: $800-$1,700, best adaptive learning
+
+### 5-Phase Implementation Plan
+
+**Phase 1 (Weeks 1-6): Free Tools**
+- Score Release Calendar with countdown
+- NTS Expiration Tracker
+- Study Hours Calculator
+- State Requirements Guide (55 jurisdictions)
+- Enhanced Section Order Quiz
+
+**Phase 2 (Weeks 7-10): Content & Authority**
+- Blog with MDX + SEO
+- Exam Day Walkthrough guide
+- "I Failed, Now What?" guide
+- Success Stories section
+
+**Phase 3 (Weeks 11-14): Email Nurturing**
+- 7-email welcome sequence
+- Segment-based content delivery
+- Score release notifications
+
+**Phase 4 (Weeks 15-20): Interactive Features**
+- AI chatbot (Anthropic Claude)
+- Diagnostic quizzes per section
+- Progress tracker
+
+**Phase 5 (Weeks 21-24): Infrastructure**
+- Supabase database
+- NextAuth.js authentication
+- Admin dashboard
+
+### Key Decisions Made
+- Affiliate Partner: Surgent CPA Review
+- AI Provider: Anthropic Claude
+- Database: Supabase (PostgreSQL)
+- Auth: NextAuth.js
+
+### Sources Referenced
+- Becker CPA Review: https://www.becker.com/cpa-review/courses
+- AICPA Score Releases: https://www.aicpa-cima.com/resources/article/find-out-when-youll-get-your-cpa-exam-score
+- CPA Requirements by State: https://www.becker.com/cpa-review/requirements
+- UWorld CPA: https://accounting.uworld.com/cpa-review/
+- CPA Pass Rates: https://accounting.uworld.com/cpa-review/cpa-exam/pass-rates/
+
+---
+

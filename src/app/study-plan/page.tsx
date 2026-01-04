@@ -7,7 +7,7 @@ interface FormData {
   workingFullTime: string;
   hoursPerWeek: string;
   accountingBackground: string;
-  targetTimeline: string;
+  disciplineSection: string;
   email: string;
 }
 
@@ -16,7 +16,40 @@ interface StudyPlan {
   weeklySchedule: string;
   estimatedCompletion: string;
   tips: string[];
+  disciplineInfo: {
+    section: string;
+    passRate: number;
+    testingWindow: string;
+    recommendation: string;
+  };
 }
+
+const disciplineSections = {
+  TCP: {
+    name: "Tax Compliance and Planning",
+    passRate: 77,
+    difficulty: "Easiest Discipline",
+    bestFor: "Those with tax background or interest in tax careers",
+    testingWindows: "January, April, July, October",
+    description: "Focuses on tax planning for individuals, entities, and transactions.",
+  },
+  BAR: {
+    name: "Business Analysis and Reporting",
+    passRate: 37,
+    difficulty: "Hardest Discipline",
+    bestFor: "Those strong in financial analysis and reporting",
+    testingWindows: "January, April, July, October",
+    description: "Covers technical accounting, financial statement analysis, and prospective analysis.",
+  },
+  ISC: {
+    name: "Information Systems and Controls",
+    passRate: 51,
+    difficulty: "Moderate",
+    bestFor: "Those with IT background or interest in systems/audit",
+    testingWindows: "January, April, July, October",
+    description: "Focuses on IT governance, security, and data management.",
+  },
+};
 
 export default function StudyPlanPage() {
   const [step, setStep] = useState(1);
@@ -24,11 +57,13 @@ export default function StudyPlanPage() {
     workingFullTime: "",
     hoursPerWeek: "",
     accountingBackground: "",
-    targetTimeline: "",
+    disciplineSection: "",
     email: "",
   });
   const [studyPlan, setStudyPlan] = useState<StudyPlan | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const totalSteps = 5;
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -38,19 +73,29 @@ export default function StudyPlanPage() {
     const hours = parseInt(formData.hoursPerWeek) || 15;
     const hasBackground = formData.accountingBackground === "strong";
     const isWorking = formData.workingFullTime === "yes";
+    const discipline = formData.disciplineSection as keyof typeof disciplineSections;
 
     let sectionOrder: string[];
     let weeklySchedule: string;
     let estimatedCompletion: string;
     const tips: string[] = [];
 
-    // Determine section order based on background
+    // Determine section order based on background and discipline choice
     if (hasBackground) {
-      sectionOrder = ["FAR", "AUD", "REG", "TCP"];
+      sectionOrder = ["FAR", "AUD", "REG", discipline];
       tips.push("With your strong accounting background, starting with FAR makes sense - you can build momentum quickly.");
     } else {
-      sectionOrder = ["AUD", "FAR", "REG", "TCP"];
+      sectionOrder = ["AUD", "FAR", "REG", discipline];
       tips.push("Starting with AUD allows you to build confidence with more conceptual material before tackling FAR.");
+    }
+
+    // Add discipline-specific tips
+    if (discipline === "TCP") {
+      tips.push("TCP has the highest pass rate (77%). If you have any tax experience, you'll have an advantage.");
+    } else if (discipline === "BAR") {
+      tips.push("BAR is the hardest discipline (37% pass rate). Give yourself extra study time and focus on financial analysis.");
+    } else if (discipline === "ISC") {
+      tips.push("ISC requires understanding IT concepts. Review IT governance frameworks and security controls thoroughly.");
     }
 
     // Calculate weekly schedule
@@ -79,7 +124,16 @@ export default function StudyPlanPage() {
     tips.push("Focus on understanding concepts, not memorizing. The exam tests application.");
     tips.push("Take at least one full practice exam per section before your real exam.");
 
-    return { sectionOrder, weeklySchedule, estimatedCompletion, tips };
+    // Discipline info
+    const disciplineData = disciplineSections[discipline];
+    const disciplineInfo = {
+      section: discipline,
+      passRate: disciplineData.passRate,
+      testingWindow: disciplineData.testingWindows,
+      recommendation: disciplineData.bestFor,
+    };
+
+    return { sectionOrder, weeklySchedule, estimatedCompletion, tips, disciplineInfo };
   };
 
   const handleSubmit = async () => {
@@ -95,6 +149,7 @@ export default function StudyPlanPage() {
           workingFullTime: formData.workingFullTime,
           hoursPerWeek: formData.hoursPerWeek,
           accountingBackground: formData.accountingBackground,
+          disciplineSection: formData.disciplineSection,
           studyPlan: plan,
         }),
       });
@@ -108,7 +163,19 @@ export default function StudyPlanPage() {
 
     setStudyPlan(plan);
     setIsSubmitting(false);
-    setStep(5);
+    setStep(6);
+  };
+
+  const getSectionColor = (section: string) => {
+    const colors: Record<string, string> = {
+      FAR: "#1e3a5f",
+      AUD: "#0891b2",
+      REG: "#7c3aed",
+      TCP: "#16a34a",
+      BAR: "#dc2626",
+      ISC: "#ea580c",
+    };
+    return colors[section] || "#1e3a5f";
   };
 
   const renderStepContent = () => {
@@ -246,6 +313,71 @@ export default function StudyPlanPage() {
         return (
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-[var(--foreground)]">
+              Which discipline section will you take?
+            </h2>
+            <p className="text-[var(--muted)]">
+              Under CPA Evolution, you choose one discipline section (BAR, TCP, or ISC) to complete alongside the three core sections.
+            </p>
+            <div className="space-y-4">
+              {(Object.entries(disciplineSections) as [keyof typeof disciplineSections, typeof disciplineSections[keyof typeof disciplineSections]][]).map(
+                ([code, section]) => (
+                  <button
+                    key={code}
+                    onClick={() => {
+                      handleInputChange("disciplineSection", code);
+                      setStep(5);
+                    }}
+                    className={`w-full p-6 border-2 rounded-xl text-left transition-all hover:border-[var(--primary)] ${
+                      formData.disciplineSection === code
+                        ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
+                        : "border-[var(--border)]"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <div className="flex items-center space-x-2">
+                          <span
+                            className="px-2 py-1 rounded text-white text-sm font-bold"
+                            style={{ backgroundColor: getSectionColor(code) }}
+                          >
+                            {code}
+                          </span>
+                          <span className="text-lg font-semibold">{section.name}</span>
+                        </div>
+                        <p className="text-sm text-[var(--muted)] mt-2">{section.description}</p>
+                        <p className="text-sm text-[var(--muted)] mt-1">
+                          <strong>Best for:</strong> {section.bestFor}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <div
+                          className={`text-lg font-bold ${
+                            section.passRate >= 70
+                              ? "text-green-600"
+                              : section.passRate >= 50
+                              ? "text-yellow-600"
+                              : "text-red-600"
+                          }`}
+                        >
+                          {section.passRate}%
+                        </div>
+                        <div className="text-xs text-[var(--muted)]">Pass Rate</div>
+                      </div>
+                    </div>
+                  </button>
+                )
+              )}
+            </div>
+            <div className="bg-[var(--card)] rounded-lg p-4 text-sm text-[var(--muted)]">
+              <strong>Note:</strong> Discipline sections are only offered during quarterly testing windows (January, April, July, October).
+            </div>
+          </div>
+        );
+
+      case 5:
+        return (
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-[var(--foreground)]">
               Get your personalized study plan
             </h2>
             <p className="text-[var(--muted)]">
@@ -274,7 +406,7 @@ export default function StudyPlanPage() {
           </div>
         );
 
-      case 5:
+      case 6:
         return (
           <div className="space-y-8">
             <div className="text-center">
@@ -298,22 +430,55 @@ export default function StudyPlanPage() {
                   <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
                     Recommended Section Order
                   </h3>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-wrap items-center justify-center gap-2">
                     {studyPlan.sectionOrder.map((section, index) => (
                       <div key={section} className="flex items-center">
                         <div className="text-center">
-                          <div className="w-12 h-12 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto">
-                            <span className="text-white font-bold">{index + 1}</span>
+                          <div
+                            className="w-14 h-14 rounded-full flex items-center justify-center mx-auto"
+                            style={{ backgroundColor: getSectionColor(section) }}
+                          >
+                            <span className="text-white font-bold text-sm">{section}</span>
                           </div>
-                          <span className="text-sm font-medium mt-2 block">{section}</span>
+                          <span className="text-xs text-[var(--muted)] mt-1 block">
+                            {index === 0 ? "Start" : index === 3 ? "Finish" : `Step ${index + 1}`}
+                          </span>
                         </div>
                         {index < studyPlan.sectionOrder.length - 1 && (
-                          <svg className="w-6 h-6 text-[var(--muted)] mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-6 h-6 text-[var(--muted)] mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         )}
                       </div>
                     ))}
+                  </div>
+                </div>
+
+                {/* Discipline Section Info */}
+                <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
+                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+                    Your Discipline Section: {studyPlan.disciplineInfo.section}
+                  </h3>
+                  <div className="grid md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-[var(--card)] rounded-lg p-4">
+                      <div
+                        className={`text-2xl font-bold ${
+                          studyPlan.disciplineInfo.passRate >= 70
+                            ? "text-green-600"
+                            : studyPlan.disciplineInfo.passRate >= 50
+                            ? "text-yellow-600"
+                            : "text-red-600"
+                        }`}
+                      >
+                        {studyPlan.disciplineInfo.passRate}%
+                      </div>
+                      <div className="text-sm text-[var(--muted)]">Pass Rate</div>
+                    </div>
+                    <div className="bg-[var(--card)] rounded-lg p-4 md:col-span-2">
+                      <div className="text-sm text-[var(--foreground)]">
+                        <strong>Testing Windows:</strong> {studyPlan.disciplineInfo.testingWindow}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -376,23 +541,23 @@ export default function StudyPlanPage() {
     <div className="min-h-screen bg-[var(--card)] py-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Progress bar */}
-        {step < 5 && (
+        {step <= totalSteps && (
           <div className="mb-8">
             <div className="flex justify-between text-sm text-[var(--muted)] mb-2">
-              <span>Step {step} of 4</span>
-              <span>{Math.round((step / 4) * 100)}% complete</span>
+              <span>Step {step} of {totalSteps}</span>
+              <span>{Math.round((step / totalSteps) * 100)}% complete</span>
             </div>
             <div className="h-2 bg-[var(--border)] rounded-full overflow-hidden">
               <div
                 className="h-full bg-[var(--primary)] transition-all duration-300"
-                style={{ width: `${(step / 4) * 100}%` }}
+                style={{ width: `${(step / totalSteps) * 100}%` }}
               />
             </div>
           </div>
         )}
 
         {/* Back button */}
-        {step > 1 && step < 5 && (
+        {step > 1 && step <= totalSteps && (
           <button
             onClick={() => setStep(step - 1)}
             className="flex items-center text-[var(--muted)] hover:text-[var(--foreground)] mb-6 transition-colors"
