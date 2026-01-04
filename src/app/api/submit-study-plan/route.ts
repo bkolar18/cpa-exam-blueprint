@@ -1,0 +1,153 @@
+import { Resend } from "resend";
+import { NextResponse } from "next/server";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+interface StudyPlanData {
+  email: string;
+  workingFullTime: string;
+  hoursPerWeek: string;
+  accountingBackground: string;
+  studyPlan: {
+    sectionOrder: string[];
+    weeklySchedule: string;
+    estimatedCompletion: string;
+    tips: string[];
+  };
+}
+
+export async function POST(request: Request) {
+  try {
+    const data: StudyPlanData = await request.json();
+
+    // Send study plan to user
+    await resend.emails.send({
+      from: "CPA Exam Blueprint <onboarding@resend.dev>",
+      to: [data.email],
+      subject: "Your Personalized CPA Study Plan",
+      html: `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: linear-gradient(135deg, #1e3a5f, #152a45); color: white; padding: 30px; border-radius: 12px 12px 0 0; text-align: center; }
+    .header h1 { margin: 0; font-size: 24px; }
+    .content { background: #f8fafc; padding: 30px; border-radius: 0 0 12px 12px; }
+    .section { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e2e8f0; }
+    .section h2 { color: #1e3a5f; margin-top: 0; font-size: 18px; }
+    .order-item { display: inline-block; background: #1e3a5f; color: white; padding: 8px 16px; border-radius: 20px; margin: 4px; font-weight: 600; }
+    .tip { padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
+    .tip:last-child { border-bottom: none; }
+    .cta { text-align: center; margin-top: 30px; }
+    .button { display: inline-block; background: #16a34a; color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+    .footer { text-align: center; color: #64748b; font-size: 14px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Your CPA Study Plan</h1>
+      <p style="margin: 10px 0 0 0; opacity: 0.9;">Personalized for your schedule and background</p>
+    </div>
+    <div class="content">
+      <div class="section">
+        <h2>Recommended Section Order</h2>
+        <div>
+          ${data.studyPlan.sectionOrder.map((section, i) => `<span class="order-item">${i + 1}. ${section}</span>`).join(" ")}
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Weekly Study Schedule</h2>
+        <p style="margin: 0;">${data.studyPlan.weeklySchedule}</p>
+      </div>
+
+      <div class="section">
+        <h2>Estimated Timeline</h2>
+        <p style="margin: 0;">${data.studyPlan.estimatedCompletion}</p>
+      </div>
+
+      <div class="section">
+        <h2>CPA-Recommended Tips</h2>
+        ${data.studyPlan.tips.map(tip => `<div class="tip">✓ ${tip}</div>`).join("")}
+      </div>
+
+      <div class="cta">
+        <p>Ready to start studying?</p>
+        <a href="https://cpa-exam-blueprint.vercel.app/recommended-program" class="button">See Our Recommended Program</a>
+      </div>
+    </div>
+    <div class="footer">
+      <p>CPA Exam Blueprint - Free guidance from licensed CPAs</p>
+      <p>You received this because you requested a study plan at cpaexamblueprint.com</p>
+    </div>
+  </div>
+</body>
+</html>
+      `,
+    });
+
+    // Send notification to admin
+    const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
+    await resend.emails.send({
+      from: "CPA Exam Blueprint <onboarding@resend.dev>",
+      to: [adminEmail],
+      subject: `New Lead: ${data.email}`,
+      html: `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #1e3a5f; color: white; padding: 20px; border-radius: 8px 8px 0 0; }
+    .content { background: #f8fafc; padding: 20px; border-radius: 0 0 8px 8px; }
+    .field { margin-bottom: 16px; }
+    .label { font-weight: 600; color: #374151; font-size: 14px; }
+    .value { background: white; padding: 12px; border-radius: 6px; margin-top: 4px; border: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 style="margin: 0;">New Study Plan Lead</h2>
+    </div>
+    <div class="content">
+      <div class="field">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:${data.email}">${data.email}</a></div>
+      </div>
+      <div class="field">
+        <div class="label">Working Full Time</div>
+        <div class="value">${data.workingFullTime === "yes" ? "Yes" : "No"}</div>
+      </div>
+      <div class="field">
+        <div class="label">Hours Per Week</div>
+        <div class="value">${data.hoursPerWeek} hours</div>
+      </div>
+      <div class="field">
+        <div class="label">Accounting Background</div>
+        <div class="value">${data.accountingBackground}</div>
+      </div>
+      <div class="field">
+        <div class="label">Recommended Section Order</div>
+        <div class="value">${data.studyPlan.sectionOrder.join(" → ")}</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+      `,
+    });
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
+  }
+}

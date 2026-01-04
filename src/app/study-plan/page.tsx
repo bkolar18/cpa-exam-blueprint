@@ -84,9 +84,28 @@ export default function StudyPlanPage() {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
     const plan = generateStudyPlan();
+
+    try {
+      const response = await fetch("/api/submit-study-plan", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          workingFullTime: formData.workingFullTime,
+          hoursPerWeek: formData.hoursPerWeek,
+          accountingBackground: formData.accountingBackground,
+          studyPlan: plan,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+
     setStudyPlan(plan);
     setIsSubmitting(false);
     setStep(5);
