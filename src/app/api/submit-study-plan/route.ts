@@ -1,5 +1,7 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { determineSegments, getSegmentEmail, generateSegmentEmailHtml } from "@/lib/email/segment-content";
+import { nurtureSequence, generateNurtureEmailHtml } from "@/lib/email/nurture-sequence";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -89,7 +91,36 @@ export async function POST(request: Request) {
       `,
     });
 
-    // Send notification to admin
+    // Determine user segments for targeted follow-up
+    const userSegments = determineSegments({
+      workingFullTime: data.workingFullTime,
+      hoursPerWeek: data.hoursPerWeek,
+      accountingBackground: data.accountingBackground,
+      sectionOrder: data.studyPlan.sectionOrder,
+    });
+
+    // Send segment-specific email (first relevant segment)
+    // This provides immediate personalized value
+    if (userSegments.length > 0) {
+      const primarySegment = userSegments[0];
+      const segmentEmail = getSegmentEmail(primarySegment);
+
+      if (segmentEmail) {
+        try {
+          await resend.emails.send({
+            from: "CPA Exam Blueprint <onboarding@resend.dev>",
+            to: [data.email],
+            subject: segmentEmail.subject,
+            html: generateSegmentEmailHtml(segmentEmail),
+          });
+        } catch (segmentError) {
+          console.error("Error sending segment email:", segmentError);
+          // Don't fail the whole request if segment email fails
+        }
+      }
+    }
+
+    // Send notification to admin with segment info
     const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
     await resend.emails.send({
       from: "CPA Exam Blueprint <onboarding@resend.dev>",
@@ -107,6 +138,7 @@ export async function POST(request: Request) {
     .field { margin-bottom: 16px; }
     .label { font-weight: 600; color: #374151; font-size: 14px; }
     .value { background: white; padding: 12px; border-radius: 6px; margin-top: 4px; border: 1px solid #e2e8f0; }
+    .segment-tag { display: inline-block; background: #16a34a; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 4px; }
   </style>
 </head>
 <body>
@@ -118,6 +150,10 @@ export async function POST(request: Request) {
       <div class="field">
         <div class="label">Email</div>
         <div class="value"><a href="mailto:${data.email}">${data.email}</a></div>
+      </div>
+      <div class="field">
+        <div class="label">Segments</div>
+        <div class="value">${userSegments.length > 0 ? userSegments.map(s => `<span class="segment-tag">${s}</span>`).join(" ") : "None detected"}</div>
       </div>
       <div class="field">
         <div class="label">Working Full Time</div>
@@ -135,6 +171,10 @@ export async function POST(request: Request) {
         <div class="label">Recommended Section Order</div>
         <div class="value">${data.studyPlan.sectionOrder.join(" → ")}</div>
       </div>
+      <div class="field">
+        <div class="label">Nurture Sequence</div>
+        <div class="value">Enrolled in 7-email welcome sequence (Days 0, 3, 7, 14, 21, 28, 30)</div>
+      </div>
     </div>
   </div>
 </body>
@@ -142,7 +182,11 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({
+      success: true,
+      segments: userSegments,
+      nurtureSequenceEnrolled: true
+    });
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(

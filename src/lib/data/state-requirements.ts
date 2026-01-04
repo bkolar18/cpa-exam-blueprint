@@ -512,6 +512,581 @@ export const stateRequirements: Record<string, StateRequirement> = {
       required: false,
       notes: "No residency requirements"
     }
+  },
+
+  AZ: {
+    code: "AZ",
+    name: "Arizona",
+    boardName: "Arizona State Board of Accountancy",
+    boardUrl: "https://azaccountancy.gov/",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 36,
+      businessCredits: 30,
+      notes: [
+        "Bachelor's degree required",
+        "Can sit with 120 credits (24 accounting, 18 business)",
+        "150 required for license with 36 upper-level accounting"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government accounting",
+        "Tax preparation"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with 120 credits", "Experience must be within 10 years"]
+    },
+    fees: {
+      initialApplication: 100,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Professional Ethics Exam",
+      whenRequired: "Within 2 years of license application"
+    },
+    residency: {
+      required: true,
+      notes: "Must be U.S. citizen with Social Security number"
+    }
+  },
+
+  CO: {
+    code: "CO",
+    name: "Colorado",
+    boardName: "Colorado State Board of Accountancy",
+    boardUrl: "https://dpo.colorado.gov/Accountancy",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 27,
+      businessCredits: 27,
+      notes: [
+        "Bachelor's degree required",
+        "150 credits required since July 2015",
+        "Broader qualifying experience definitions"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government",
+        "Academia",
+        "Consulting"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: false,
+      creditTransfer: true,
+      notes: ["Must have 150 credits to sit"]
+    },
+    fees: {
+      initialApplication: 80,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Lower application fee than average"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "No residency requirements"
+    }
+  },
+
+  WA: {
+    code: "WA",
+    name: "Washington",
+    boardName: "Washington State Board of Accountancy",
+    boardUrl: "https://acb.wa.gov/",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 24,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree with accounting concentration",
+        "24 hours upper-level accounting (auditing, financial, managerial, tax)",
+        "24 hours business courses (max 6 can be upper-level accounting)"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government",
+        "Academia"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Detailed pre-exam vs licensure requirements"]
+    },
+    fees: {
+      initialApplication: 50,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Low application fee"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "No residency requirements"
+    }
+  },
+
+  VA: {
+    code: "VA",
+    name: "Virginia",
+    boardName: "Virginia Board of Accountancy",
+    boardUrl: "https://boa.virginia.gov/",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 24,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree required",
+        "24 hours upper-level accounting",
+        "24 hours upper-level business"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with bachelor's and required credits"]
+    },
+    fees: {
+      initialApplication: 85,
+      perSection: 238,
+      reexamFee: 60,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "Virginia-specific Ethics Course and Exam",
+      whenRequired: "Before license (state-specific requirement)"
+    },
+    residency: {
+      required: true,
+      notes: "U.S. residency required, Virginia residency not required"
+    }
+  },
+
+  MA: {
+    code: "MA",
+    name: "Massachusetts",
+    boardName: "Massachusetts Board of Public Accountancy",
+    boardUrl: "https://www.mass.gov/orgs/board-of-public-accountancy",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 21,
+      businessCredits: 9,
+      notes: [
+        "Bachelor's degree required",
+        "21 credits in financial accounting, auditing, management accounting, taxation",
+        "9 business credits including business law, finance, information systems"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with 120 credits"]
+    },
+    fees: {
+      initialApplication: 150,
+      perSection: 238,
+      reexamFee: 75,
+      notes: ["Slightly higher application fee"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "No residency requirements"
+    }
+  },
+
+  MI: {
+    code: "MI",
+    name: "Michigan",
+    boardName: "Michigan Board of Accountancy",
+    boardUrl: "https://www.michigan.gov/lara/bureau-list/bpl/occ/prof/accountancy",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 21,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree required",
+        "Can sit with 120 credits",
+        "Minimum 3 hours in auditing required",
+        "150 required for license"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government",
+        "Academia"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with 120 credits"]
+    },
+    fees: {
+      initialApplication: 90,
+      perSection: 238,
+      reexamFee: 55,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: false,
+      examName: "N/A",
+      whenRequired: "N/A"
+    },
+    residency: {
+      required: false,
+      notes: "No age, residency, or citizenship requirements. SSN required."
+    }
+  },
+
+  MN: {
+    code: "MN",
+    name: "Minnesota",
+    boardName: "Minnesota Board of Accountancy",
+    boardUrl: "https://boa.state.mn.us/",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 24,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree required",
+        "New pathways available (2025): Bachelor's + 2 years exp, or Master's + 1 year exp",
+        "Traditional 150-hour path still available"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private accounting",
+        "Government",
+        "Academia"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: false,
+      creditTransfer: true,
+      notes: ["Strict residency requirements for exam eligibility"]
+    },
+    fees: {
+      initialApplication: 100,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: true,
+      notes: "Must be MN resident, attend school in MN, or work in MN to sit for exam"
+    }
+  },
+
+  MO: {
+    code: "MO",
+    name: "Missouri",
+    boardName: "Missouri State Board of Accountancy",
+    boardUrl: "https://pr.mo.gov/accountancy.asp",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 33,
+      businessCredits: 27,
+      notes: [
+        "Bachelor's degree required",
+        "33 hours in accounting subjects",
+        "27 hours in general business (non-accounting)"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with 120 credits"]
+    },
+    fees: {
+      initialApplication: 75,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Lower application fee"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "Minimum age of 21 required"
+    }
+  },
+
+  TN: {
+    code: "TN",
+    name: "Tennessee",
+    boardName: "Tennessee State Board of Accountancy",
+    boardUrl: "https://www.tn.gov/commerce/regboards/accountancy.html",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 18,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree required before exam",
+        "18 credits upper-level accounting",
+        "Alternative pathway (2026): 120 hours + 2 years experience"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private accounting (finance, tax, advisory)",
+        "Government",
+        "Consulting"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: false,
+      creditTransfer: true,
+      notes: ["Must have bachelor's degree to sit", "New 120-hour pathway effective Jan 2026"]
+    },
+    fees: {
+      initialApplication: 100,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "No residency requirements"
+    }
+  },
+
+  IN: {
+    code: "IN",
+    name: "Indiana",
+    boardName: "Indiana Board of Accountancy",
+    boardUrl: "https://www.in.gov/pla/professions/indiana-board-of-accountancy/",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 24,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree required",
+        "24 hours accounting (financial, auditing, taxation, managerial)",
+        "24 hours business administration/economics",
+        "Must complete all education before exam"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 4000,
+      yearsRequired: 2,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public practice",
+        "Private industry",
+        "Government",
+        "Academia"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: false,
+      creditTransfer: true,
+      notes: ["Must have 150 credits to sit", "Full education completion required"]
+    },
+    fees: {
+      initialApplication: 40,
+      perSection: 238,
+      reexamFee: 40,
+      notes: ["Low application and reexam fees"]
+    },
+    ethicsExam: {
+      required: false,
+      examName: "N/A",
+      whenRequired: "N/A"
+    },
+    residency: {
+      required: false,
+      notes: "No residency or citizenship requirements"
+    }
+  },
+
+  WI: {
+    code: "WI",
+    name: "Wisconsin",
+    boardName: "Wisconsin Accounting Examining Board",
+    boardUrl: "https://dsps.wi.gov/pages/BoardsCouncils/Accounting/Default.aspx",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 24,
+      businessCredits: 24,
+      notes: [
+        "Bachelor's degree required",
+        "Can sit with 120 credits",
+        "150 required for license"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with 120 credits"]
+    },
+    fees: {
+      initialApplication: 75,
+      perSection: 238,
+      reexamFee: 50,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "AICPA Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "No residency requirements"
+    }
+  },
+
+  MD: {
+    code: "MD",
+    name: "Maryland",
+    boardName: "Maryland State Board of Public Accountancy",
+    boardUrl: "https://www.dllr.state.md.us/license/cpa/",
+    educationRequirements: {
+      totalCredits: 150,
+      accountingCredits: 27,
+      businessCredits: 21,
+      notes: [
+        "Bachelor's degree required",
+        "Can sit with 120 credits",
+        "150 required for license"
+      ]
+    },
+    experienceRequirements: {
+      totalHours: 2000,
+      yearsRequired: 1,
+      supervisionRequired: true,
+      acceptableExperience: [
+        "Public accounting",
+        "Private industry",
+        "Government",
+        "Academia"
+      ]
+    },
+    examRequirements: {
+      canSitBeforeDegree: true,
+      creditTransfer: true,
+      notes: ["Can sit with 120 credits"]
+    },
+    fees: {
+      initialApplication: 100,
+      perSection: 238,
+      reexamFee: 60,
+      notes: ["Standard fee structure"]
+    },
+    ethicsExam: {
+      required: true,
+      examName: "Maryland Ethics Exam",
+      whenRequired: "Before license"
+    },
+    residency: {
+      required: false,
+      notes: "No residency requirements"
+    }
   }
 };
 
