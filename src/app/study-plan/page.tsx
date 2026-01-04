@@ -77,7 +77,6 @@ export default function StudyPlanPage() {
 
     let sectionOrder: string[];
     let weeklySchedule: string;
-    let estimatedCompletion: string;
     const tips: string[] = [];
 
     // Determine section order based on background and discipline choice
@@ -119,7 +118,7 @@ export default function StudyPlanPage() {
     const weeksPerSection = isWorking ? (hours < 20 ? 10 : 8) : 6;
     const totalWeeks = weeksPerSection * 4;
     const months = Math.ceil(totalWeeks / 4);
-    estimatedCompletion = `${months}-${months + 2} months to complete all four sections`;
+    const estimatedCompletion = `${months}-${months + 2} months to complete all four sections`;
 
     tips.push("Focus on understanding concepts, not memorizing. The exam tests application.");
     tips.push("Take at least one full practice exam per section before your real exam.");

@@ -5,6 +5,11 @@ CPA EXAM BLUEPRINT - SESSION LOG
 This file tracks what was accomplished in each session. Update after each
 working session to maintain continuity.
 
+IMPORTANT REMINDERS:
+- This file is LOCAL - do not push to GitHub every update
+- Log ALL console responses to "cpa claude responses.txt" (user cannot read console)
+- Only push to GitHub when committing actual code changes
+
 ================================================================================
 SESSION: 2026-01-03 (Phase 1 Implementation)
 ================================================================================

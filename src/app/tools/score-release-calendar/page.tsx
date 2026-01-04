@@ -3,11 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  scoreReleaseDates,
   getNextScoreRelease,
   getUpcomingReleases,
   sectionInfo,
-  type ScoreReleaseDate,
 } from "@/lib/data/score-release-dates";
 
 interface CountdownTime {

@@ -228,24 +228,38 @@ CODE STYLE:
 - Tailwind utility classes
 
 DOCUMENTATION:
+- **CRITICAL**: Log EVERY response to "cpa claude responses.txt" (user cannot read console)
 - Update SESSION_LOG.txt after each session
 - Update CLAUDE_CONTEXT.txt when major changes occur
-- Log important responses to "cpa claude responses.txt"
+- Session files (SESSION_*.txt, CLAUDE_CONTEXT.txt) are local - don't push to GitHub every time
 
 ================================================================================
 6. GOLDEN RULES
 ================================================================================
 
-1. ALWAYS read SESSION_PROMPT.txt at session start
-2. ALWAYS update SESSION_LOG.txt at session end
-3. NEVER commit .env.local or expose API keys
-4. ALWAYS run `npm run build` before committing
-5. PREFER editing existing files over creating new ones
-6. KEEP the design consistent (use CSS variables)
-7. CAPTURE emails at every opportunity (lead generation focus)
-8. MAINTAIN mobile responsiveness on all pages
-9. WRITE code that compiles - verify with build
-10. DOCUMENT major decisions in this file
+**CRITICAL - TOP PRIORITY:**
+1. LOG ALL RESPONSES: Copy EVERY console response to "cpa claude responses.txt"
+   - The user CANNOT read responses in the console
+   - This is essential for project efficiency and continuity
+   - Do this for EVERY response, no exceptions
+
+2. SESSION FILES ARE LOCAL: Do NOT push these to GitHub every update:
+   - SESSION_PROMPT.txt
+   - SESSION_LOG.txt
+   - CLAUDE_CONTEXT.txt
+   - Only push when committing actual code changes or when explicitly requested
+
+**STANDARD RULES:**
+3. ALWAYS read SESSION_PROMPT.txt at session start
+4. ALWAYS update SESSION_LOG.txt at session end
+5. NEVER commit .env.local or expose API keys
+6. ALWAYS run `npm run build` before committing code
+7. PREFER editing existing files over creating new ones
+8. KEEP the design consistent (use CSS variables)
+9. CAPTURE emails at every opportunity (lead generation focus)
+10. MAINTAIN mobile responsiveness on all pages
+11. WRITE code that compiles - verify with build
+12. DOCUMENT major decisions in this file
 
 ================================================================================
 7. PROJECT HISTORY

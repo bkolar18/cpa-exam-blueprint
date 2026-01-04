@@ -7,6 +7,19 @@ IMPORTANT: Read this file at the start of each session to understand project
 context and continue work seamlessly.
 
 ================================================================================
+CRITICAL RULES - READ FIRST
+================================================================================
+
+1. **LOG ALL RESPONSES**: You MUST copy EVERY response you generate to
+   "cpa claude responses.txt" in this project directory. The user CANNOT read
+   responses in the console. This is critical for project efficiency.
+
+2. **LOCAL FILES ONLY**: SESSION_PROMPT.txt, SESSION_LOG.txt, and
+   CLAUDE_CONTEXT.txt are LOCAL working files. Do NOT push these to GitHub
+   every time you update them. Only push when explicitly requested or when
+   committing actual code changes.
+
+================================================================================
 PROJECT OVERVIEW
 ================================================================================
 
