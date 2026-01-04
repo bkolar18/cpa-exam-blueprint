@@ -1,0 +1,45 @@
+15:01:34.761 Running build in Washington, D.C., USA (East) – iad1
+15:01:34.767 Build machine configuration: 2 cores, 8 GB
+15:01:34.794 Cloning github.com/bkolar18/cpa-exam-blueprint (Branch: main, Commit: 61eed33)
+15:01:34.796 Skipping build cache, deployment was triggered without cache.
+15:01:35.437 Cloning completed: 643.000ms
+15:01:36.028 Running "vercel build"
+15:01:36.441 Vercel CLI 50.1.3
+15:01:36.775 Installing dependencies...
+15:01:49.631 
+15:01:49.631 added 502 packages in 13s
+15:01:49.631 
+15:01:49.631 242 packages are looking for funding
+15:01:49.631   run `npm fund` for details
+15:01:49.681 Detected Next.js version: 16.1.1
+15:01:49.688 Running "npm run build"
+15:01:49.786 
+15:01:49.787 > cpa-exam-blueprint@0.1.0 build
+15:01:49.787 > next build
+15:01:49.787 
+15:01:50.569 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+15:01:50.569 This information is used to shape Next.js' roadmap and prioritize features.
+15:01:50.570 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+15:01:50.570 https://nextjs.org/telemetry
+15:01:50.570 
+15:01:50.582 ▲ Next.js 16.1.1 (Turbopack)
+15:01:50.583 
+15:01:50.617   Creating an optimized production build ...
+15:01:59.323 ✓ Compiled successfully in 8.2s
+15:01:59.326   Running TypeScript ...
+15:02:04.569   Collecting page data using 1 worker ...
+15:02:04.948 Error: Missing API key. Pass it to the constructor `new Resend("re_123")`
+15:02:04.948     at new x (.next/server/chunks/[root-of-the-server]__efafb54b._.js:2:128405)
+15:02:04.949     at module evaluation (.next/server/chunks/[root-of-the-server]__bad366f3._.js:1:1282)
+15:02:04.949     at instantiateModule (.next/server/chunks/[turbopack]_runtime.js:740:9)
+15:02:04.949     at instantiateRuntimeModule (.next/server/chunks/[turbopack]_runtime.js:768:12)
+15:02:04.950     at getOrInstantiateRuntimeModule (.next/server/chunks/[turbopack]_runtime.js:781:12)
+15:02:04.950     at Object.m (.next/server/chunks/[turbopack]_runtime.js:790:18)
+15:02:04.950     at Object.<anonymous> (.next/server/app/api/submit-study-plan/route.js:6:3)
+15:02:05.454 
+15:02:05.454 > Build error occurred
+15:02:05.457 Error: Failed to collect page data for /api/submit-study-plan
+15:02:05.457     at ignore-listed frames {
+15:02:05.457   type: 'Error'
+15:02:05.457 }
+15:02:05.493 Error: Command "npm run build" exited with 1

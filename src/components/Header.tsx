@@ -6,28 +6,32 @@ import { useState } from "react";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sectionsOpen, setSectionsOpen] = useState(false);
-  const [toolsOpen, setToolsOpen] = useState(false);
-  const [guidesOpen, setGuidesOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   const sections = [
-    { name: "FAR", href: "/sections/far" },
-    { name: "AUD", href: "/sections/aud" },
-    { name: "REG", href: "/sections/reg" },
-    { name: "TCP", href: "/sections/tcp" },
+    { name: "FAR", description: "Financial Accounting & Reporting", href: "/sections/far" },
+    { name: "AUD", description: "Auditing & Attestation", href: "/sections/aud" },
+    { name: "REG", description: "Regulation", href: "/sections/reg" },
+    { name: "TCP", description: "Tax Compliance & Planning", href: "/sections/tcp" },
   ];
 
-  const tools = [
-    { name: "Score Release Calendar", href: "/tools/score-release-calendar" },
-    { name: "NTS Expiration Tracker", href: "/tools/nts-tracker" },
-    { name: "Study Hours Calculator", href: "/tools/study-hours-calculator" },
-    { name: "State Requirements", href: "/state-requirements" },
-  ];
-
-  const guides = [
-    { name: "Exam Day Walkthrough", href: "/guides/exam-day" },
-    { name: "I Failed, Now What?", href: "/guides/failed-section" },
-    { name: "Success Stories", href: "/success-stories" },
-  ];
+  const resources = {
+    tools: [
+      { name: "Score Release Calendar", href: "/tools/score-release-calendar" },
+      { name: "NTS Expiration Tracker", href: "/tools/nts-tracker" },
+      { name: "Study Hours Calculator", href: "/tools/study-hours-calculator" },
+      { name: "State Requirements", href: "/state-requirements" },
+    ],
+    guides: [
+      { name: "Exam Day Walkthrough", href: "/guides/exam-day" },
+      { name: "I Failed, Now What?", href: "/guides/failed-section" },
+      { name: "Working Full Time", href: "/working-full-time" },
+    ],
+    learn: [
+      { name: "Blog", href: "/blog" },
+      { name: "Success Stories", href: "/success-stories" },
+    ],
+  };
 
   return (
     <header className="bg-white border-b border-[var(--border)] sticky top-0 z-50">
@@ -44,18 +48,14 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/study-plan"
-              className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
-            >
-              Study Plan
-            </Link>
-
+          <div className="hidden md:flex items-center space-x-6">
             {/* Sections Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setSectionsOpen(!sectionsOpen)}
+                onClick={() => {
+                  setSectionsOpen(!sectionsOpen);
+                  setResourcesOpen(false);
+                }}
                 onBlur={() => setTimeout(() => setSectionsOpen(false), 150)}
                 className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
               >
@@ -70,30 +70,34 @@ export default function Header() {
                 </svg>
               </button>
               {sectionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
                   {sections.map((section) => (
                     <Link
                       key={section.name}
                       href={section.href}
-                      className="block px-4 py-2 text-[var(--foreground)] hover:bg-[var(--card)] hover:text-[var(--primary)] transition-colors"
+                      className="block px-4 py-3 hover:bg-[var(--card)] transition-colors"
                     >
-                      {section.name} Section
+                      <div className="font-medium text-[var(--foreground)]">{section.name}</div>
+                      <div className="text-sm text-[var(--muted)]">{section.description}</div>
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Tools Dropdown */}
+            {/* Resources Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setToolsOpen(!toolsOpen)}
-                onBlur={() => setTimeout(() => setToolsOpen(false), 150)}
+                onClick={() => {
+                  setResourcesOpen(!resourcesOpen);
+                  setSectionsOpen(false);
+                }}
+                onBlur={() => setTimeout(() => setResourcesOpen(false), 150)}
                 className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
               >
-                <span>Free Tools</span>
+                <span>Resources</span>
                 <svg
-                  className={`w-4 h-4 transition-transform ${toolsOpen ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 transition-transform ${resourcesOpen ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -101,66 +105,55 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {toolsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
-                  {tools.map((tool) => (
-                    <Link
-                      key={tool.name}
-                      href={tool.href}
-                      className="block px-4 py-2 text-[var(--foreground)] hover:bg-[var(--card)] hover:text-[var(--primary)] transition-colors"
-                    >
-                      {tool.name}
-                    </Link>
-                  ))}
+              {resourcesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-[var(--border)] rounded-lg shadow-lg p-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* Tools Column */}
+                    <div>
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">
+                        Free Tools
+                      </div>
+                      {resources.tools.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    {/* Guides & Learn Column */}
+                    <div>
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">
+                        Guides
+                      </div>
+                      {resources.guides.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2 mt-4">
+                        Learn
+                      </div>
+                      {resources.learn.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
-
-            {/* Guides Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setGuidesOpen(!guidesOpen)}
-                onBlur={() => setTimeout(() => setGuidesOpen(false), 150)}
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
-              >
-                <span>Guides</span>
-                <svg
-                  className={`w-4 h-4 transition-transform ${guidesOpen ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {guidesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
-                  {guides.map((guide) => (
-                    <Link
-                      key={guide.name}
-                      href={guide.href}
-                      className="block px-4 py-2 text-[var(--foreground)] hover:bg-[var(--card)] hover:text-[var(--primary)] transition-colors"
-                    >
-                      {guide.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/working-full-time"
-              className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
-            >
-              Working Full Time
-            </Link>
-
-            <Link
-              href="/blog"
-              className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
-            >
-              Blog
-            </Link>
 
             <Link
               href="/about"
@@ -198,15 +191,11 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-[var(--border)]">
             <div className="flex flex-col space-y-4">
-              <Link
-                href="/study-plan"
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Study Plan
-              </Link>
+              {/* Exam Sections */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-medium">Exam Sections</span>
+                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                  Exam Sections
+                </span>
                 {sections.map((section) => (
                   <Link
                     key={section.name}
@@ -214,50 +203,62 @@ export default function Header() {
                     className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {section.name}
+                    {section.name} - {section.description}
                   </Link>
                 ))}
               </div>
+
+              {/* Free Tools */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-medium">Free Tools</span>
-                {tools.map((tool) => (
+                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                  Free Tools
+                </span>
+                {resources.tools.map((item) => (
                   <Link
-                    key={tool.name}
-                    href={tool.href}
+                    key={item.name}
+                    href={item.href}
                     className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {tool.name}
+                    {item.name}
                   </Link>
                 ))}
               </div>
+
+              {/* Guides */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-medium">Guides</span>
-                {guides.map((guide) => (
+                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                  Guides
+                </span>
+                {resources.guides.map((item) => (
                   <Link
-                    key={guide.name}
-                    href={guide.href}
+                    key={item.name}
+                    href={item.href}
                     className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {guide.name}
+                    {item.name}
                   </Link>
                 ))}
               </div>
-              <Link
-                href="/working-full-time"
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Working Full Time
-              </Link>
-              <Link
-                href="/blog"
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
+
+              {/* Learn */}
+              <div className="space-y-2">
+                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                  Learn
+                </span>
+                {resources.learn.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
               <Link
                 href="/about"
                 className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
@@ -265,6 +266,7 @@ export default function Header() {
               >
                 About
               </Link>
+
               <Link
                 href="/study-plan"
                 className="btn-primary text-center"
