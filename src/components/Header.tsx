@@ -7,6 +7,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sectionsOpen, setSectionsOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [guidesOpen, setGuidesOpen] = useState(false);
 
   const sections = [
     { name: "FAR", href: "/sections/far" },
@@ -20,6 +21,12 @@ export default function Header() {
     { name: "NTS Expiration Tracker", href: "/tools/nts-tracker" },
     { name: "Study Hours Calculator", href: "/tools/study-hours-calculator" },
     { name: "State Requirements", href: "/state-requirements" },
+  ];
+
+  const guides = [
+    { name: "Exam Day Walkthrough", href: "/guides/exam-day" },
+    { name: "I Failed, Now What?", href: "/guides/failed-section" },
+    { name: "Success Stories", href: "/success-stories" },
   ];
 
   return (
@@ -109,11 +116,50 @@ export default function Header() {
               )}
             </div>
 
+            {/* Guides Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setGuidesOpen(!guidesOpen)}
+                onBlur={() => setTimeout(() => setGuidesOpen(false), 150)}
+                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
+              >
+                <span>Guides</span>
+                <svg
+                  className={`w-4 h-4 transition-transform ${guidesOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {guidesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
+                  {guides.map((guide) => (
+                    <Link
+                      key={guide.name}
+                      href={guide.href}
+                      className="block px-4 py-2 text-[var(--foreground)] hover:bg-[var(--card)] hover:text-[var(--primary)] transition-colors"
+                    >
+                      {guide.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/working-full-time"
               className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
             >
               Working Full Time
+            </Link>
+
+            <Link
+              href="/blog"
+              className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
+            >
+              Blog
             </Link>
 
             <Link
@@ -185,12 +231,32 @@ export default function Header() {
                   </Link>
                 ))}
               </div>
+              <div className="space-y-2">
+                <span className="text-[var(--muted)] text-sm font-medium">Guides</span>
+                {guides.map((guide) => (
+                  <Link
+                    key={guide.name}
+                    href={guide.href}
+                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {guide.name}
+                  </Link>
+                ))}
+              </div>
               <Link
                 href="/working-full-time"
                 className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Working Full Time
+              </Link>
+              <Link
+                href="/blog"
+                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 href="/about"
