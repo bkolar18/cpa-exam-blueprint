@@ -1,0 +1,141 @@
+================================================================================
+CPA EXAM BLUEPRINT - SESSION PROMPT
+================================================================================
+Last Updated: 2026-01-03
+
+IMPORTANT: Read this file at the start of each session to understand project
+context and continue work seamlessly.
+
+================================================================================
+PROJECT OVERVIEW
+================================================================================
+
+Project: CPA Exam Blueprint
+Purpose: Lead generation website for CPA review firm (affiliate: Surgent)
+Stack: Next.js 16.1.1, React 19, Tailwind CSS v4, TypeScript
+Repo: https://github.com/bkolar18/cpa-exam-blueprint
+Live: https://cpa-exam-blueprint.vercel.app
+
+================================================================================
+CURRENT PROJECT STATE
+================================================================================
+
+Phase 1 (Free Tools) - COMPLETE
+- Score Release Calendar with countdown timer
+- NTS Expiration Tracker with email reminders
+- Study Hours Calculator for all 6 sections
+- State Requirements Guide (10 states)
+- Enhanced Study Plan quiz with discipline sections
+
+Phase 2 (Content & Authority) - NOT STARTED
+Phase 3 (Email Nurturing) - NOT STARTED
+Phase 4 (Interactive Features) - NOT STARTED
+Phase 5 (Infrastructure) - NOT STARTED
+
+================================================================================
+NEXT STEPS (PRIORITY ORDER)
+================================================================================
+
+1. Phase 2: Content & Authority
+   - Set up MDX blog infrastructure
+   - Create Exam Day Walkthrough guide
+   - Create "I Failed, Now What?" retaker guide
+   - Add Success Stories section
+
+2. Phase 3: Email Nurturing
+   - Build 7-email welcome sequence
+   - Implement segment-based content delivery
+   - Set up score release notifications
+
+3. Phase 4: Interactive Features
+   - AI chatbot with Anthropic Claude
+   - Diagnostic quizzes per section
+   - Progress tracker
+
+================================================================================
+KEY DOCUMENTS TO READ
+================================================================================
+
+1. PROJECT_ROADMAP.md
+   - Complete 5-phase implementation plan
+   - Database schema design
+   - API architecture
+   - Component library structure
+
+2. cpa claude responses.txt
+   - Strategic consulting recommendations
+   - Research findings (pass rates, competitors)
+   - Session summaries
+
+3. SESSION_LOG.txt
+   - What was accomplished in the last session
+
+4. CLAUDE_CONTEXT.txt
+   - Complete project history and context
+   - Workflow preferences
+   - Golden rules
+
+================================================================================
+CORE PROJECT STRUCTURE
+================================================================================
+
+src/
+├── app/
+│   ├── api/
+│   │   ├── submit-study-plan/      # Lead capture endpoint
+│   │   ├── subscribe-score-release/ # Score calendar subscriptions
+│   │   └── subscribe-nts/          # NTS tracker subscriptions
+│   ├── sections/                   # FAR, AUD, REG, TCP pages
+│   ├── state-requirements/         # State-specific CPA requirements
+│   │   └── [state]/               # Dynamic state pages
+│   ├── tools/
+│   │   ├── score-release-calendar/
+│   │   ├── nts-tracker/
+│   │   └── study-hours-calculator/
+│   ├── study-plan/                 # Multi-step quiz with email capture
+│   ├── recommended-program/        # Surgent affiliate page
+│   ├── working-full-time/
+│   └── about/
+├── components/
+│   ├── Header.tsx                  # Nav with Tools dropdown
+│   ├── Footer.tsx
+│   └── SectionPage.tsx            # Reusable section template
+└── lib/
+    └── data/
+        ├── score-release-dates.ts  # 2025-2026 release schedule
+        └── state-requirements.ts   # 10 states requirements data
+
+================================================================================
+ENVIRONMENT VARIABLES
+================================================================================
+
+Current (.env.local):
+- RESEND_API_KEY (set)
+- EMAIL_TO (currently: delivered@resend.dev - needs real admin email)
+
+Future (not yet implemented):
+- SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
+- NEXTAUTH_SECRET, NEXTAUTH_URL
+- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
+- ANTHROPIC_API_KEY
+
+================================================================================
+KEY DECISIONS MADE
+================================================================================
+
+- Affiliate Partner: Surgent CPA Review
+- AI Provider: Anthropic Claude (for future chatbot)
+- Database: Supabase (PostgreSQL) - not yet implemented
+- Auth: NextAuth.js - not yet implemented
+- Email: Resend API
+
+================================================================================
+COMMANDS
+================================================================================
+
+cd "C:\Users\brenn\Documents\Coding Projects\CPA Exam Site\cpa-exam-blueprint"
+npm run dev      # Start dev server
+npm run build    # Production build
+git push         # Deploy to Vercel (auto)
+
+================================================================================

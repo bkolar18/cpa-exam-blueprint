@@ -1,0 +1,553 @@
+================================================================================
+CPA EXAM BLUEPRINT - CLAUDE CONTEXT
+================================================================================
+Last Updated: 2026-01-03
+
+This is a comprehensive context file for Claude Code sessions. It contains
+complete project history, workflow preferences, golden rules, and detailed
+system structure.
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+1. PROJECT IDENTITY
+2. BUSINESS CONTEXT
+3. TECHNICAL ARCHITECTURE
+4. COMPLETE FILE STRUCTURE
+5. WORKFLOW PREFERENCES
+6. GOLDEN RULES
+7. PROJECT HISTORY
+8. DATA MODELS
+9. API REFERENCE
+10. STYLING GUIDE
+11. FUTURE ROADMAP
+
+================================================================================
+1. PROJECT IDENTITY
+================================================================================
+
+Name: CPA Exam Blueprint
+Tagline: Free CPA Study Plans from Licensed CPAs
+Domain: cpa-exam-blueprint.vercel.app (production)
+Repository: https://github.com/bkolar18/cpa-exam-blueprint
+Owner: bkolar18 (Brenn)
+
+Purpose:
+A lead generation website that helps CPA exam candidates with free tools and
+study plans, ultimately recommending a CPA review program (Surgent) for
+monetization through affiliate commissions.
+
+================================================================================
+2. BUSINESS CONTEXT
+================================================================================
+
+TARGET AUDIENCE:
+- CPA exam candidates (accounting students, career changers)
+- Working professionals studying part-time
+- Recent graduates preparing for the exam
+
+VALUE PROPOSITION:
+- Free personalized study plans (competitors charge for this)
+- Free tools (score calendar, NTS tracker, calculator)
+- State-specific requirement guides
+- Guidance from "licensed CPAs" (authority positioning)
+
+MONETIZATION:
+- Affiliate Partner: Surgent CPA Review
+- Commission: Earned on referral signups
+- Lead Capture: Email collection for nurturing
+
+COMPETITIVE DIFFERENTIATION:
+| Competitors Do          | We Do Instead                    |
+|-------------------------|----------------------------------|
+| Rank by commission      | Recommend ONE program honestly   |
+| Generic tips            | Personalized plans               |
+| Anonymous content       | Named CPA credentials            |
+| Paid tools              | Free tools that actually help    |
+| Transactional           | Ongoing email nurture            |
+
+CPA EXAM STRUCTURE (CPA Evolution 2024+):
+- 3 Core Sections: FAR, AUD, REG (continuous testing)
+- 1 Discipline Section: BAR, TCP, or ISC (quarterly: Jan, Apr, Jul, Oct)
+- 18-month rolling window to pass all sections
+- Passing score: 75 on each section
+
+PASS RATES (2024-2025):
+- FAR: 40-43% (hardest core)
+- AUD: 46-50%
+- REG: 58-64%
+- TCP: 72-82% (highest - easiest discipline)
+- BAR: 33-40% (hardest overall)
+- ISC: ~51%
+
+================================================================================
+3. TECHNICAL ARCHITECTURE
+================================================================================
+
+FRAMEWORK & RUNTIME:
+- Next.js 16.1.1 (App Router)
+- React 19
+- TypeScript
+- Node.js
+
+STYLING:
+- Tailwind CSS v4
+- CSS Variables for theming
+- No component library (custom components)
+
+EMAIL:
+- Resend API for transactional emails
+- Templates: HTML inline styles
+
+DEPLOYMENT:
+- Vercel (auto-deploy from GitHub main branch)
+- Vercel Analytics enabled
+
+FUTURE ADDITIONS (Not Yet Implemented):
+- Database: Supabase (PostgreSQL)
+- Auth: NextAuth.js with email + Google
+- AI: Anthropic Claude API for chatbot
+
+ENVIRONMENT VARIABLES:
+```
+# Current
+RESEND_API_KEY=re_XEVXzFPr_HsK9GPJzNhGorSNHrpsxo9dU
+EMAIL_TO=delivered@resend.dev  # TODO: Set real admin email
+
+# Future
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+ANTHROPIC_API_KEY=
+```
+
+================================================================================
+4. COMPLETE FILE STRUCTURE
+================================================================================
+
+cpa-exam-blueprint/
+├── .env.local                    # Environment variables (gitignored)
+├── .gitignore
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+│
+├── PROJECT_ROADMAP.md            # 5-phase implementation plan
+├── SESSION_PROMPT.txt            # Quick start for new sessions
+├── SESSION_LOG.txt               # Session-by-session accomplishments
+├── CLAUDE_CONTEXT.txt            # This file - comprehensive context
+├── cpa claude responses.txt      # Strategic planning session logs
+│
+├── public/
+│   └── (static assets)
+│
+└── src/
+    ├── app/
+    │   ├── globals.css           # Design system, CSS variables
+    │   ├── layout.tsx            # Root layout with Header/Footer
+    │   ├── page.tsx              # Home page
+    │   │
+    │   ├── api/
+    │   │   ├── submit-study-plan/
+    │   │   │   └── route.ts      # POST: Study plan email + admin notification
+    │   │   ├── subscribe-score-release/
+    │   │   │   └── route.ts      # POST: Score calendar email subscription
+    │   │   └── subscribe-nts/
+    │   │       └── route.ts      # POST: NTS tracker email subscription
+    │   │
+    │   ├── study-plan/
+    │   │   └── page.tsx          # 5-step quiz with email capture
+    │   │
+    │   ├── sections/
+    │   │   ├── far/page.tsx
+    │   │   ├── aud/page.tsx
+    │   │   ├── reg/page.tsx
+    │   │   └── tcp/page.tsx
+    │   │
+    │   ├── tools/
+    │   │   ├── score-release-calendar/
+    │   │   │   └── page.tsx      # Countdown timer, email subscribe
+    │   │   ├── nts-tracker/
+    │   │   │   └── page.tsx      # Expiration calculator, reminders
+    │   │   └── study-hours-calculator/
+    │   │       └── page.tsx      # Hours per section calculator
+    │   │
+    │   ├── state-requirements/
+    │   │   ├── page.tsx          # State grid landing page
+    │   │   └── [state]/
+    │   │       └── page.tsx      # Dynamic state detail pages
+    │   │
+    │   ├── recommended-program/
+    │   │   └── page.tsx          # Surgent affiliate page
+    │   │
+    │   ├── working-full-time/
+    │   │   └── page.tsx          # Time management tips
+    │   │
+    │   └── about/
+    │       └── page.tsx          # CPA credentials, trust building
+    │
+    ├── components/
+    │   ├── Header.tsx            # Navigation with dropdowns
+    │   ├── Footer.tsx            # Site footer
+    │   └── SectionPage.tsx       # Reusable section template
+    │
+    └── lib/
+        └── data/
+            ├── score-release-dates.ts  # 2025-2026 release schedule
+            └── state-requirements.ts   # 10 states CPA requirements
+
+================================================================================
+5. WORKFLOW PREFERENCES
+================================================================================
+
+DEVELOPMENT:
+- Always run `npm run build` to verify before committing
+- Commit frequently with descriptive messages
+- Push to trigger Vercel auto-deploy
+
+GIT CONVENTIONS:
+- Main branch only (no feature branches for this project)
+- Commit messages: Clear, descriptive, include scope
+- Always include Claude Code attribution in commits
+
+FILE ORGANIZATION:
+- Keep related files together (page + its data)
+- Use lib/data/ for static data files
+- Prefer editing existing files over creating new ones
+
+CODE STYLE:
+- TypeScript strict mode
+- Functional components with hooks
+- CSS variables for colors (not hardcoded)
+- Tailwind utility classes
+
+DOCUMENTATION:
+- Update SESSION_LOG.txt after each session
+- Update CLAUDE_CONTEXT.txt when major changes occur
+- Log important responses to "cpa claude responses.txt"
+
+================================================================================
+6. GOLDEN RULES
+================================================================================
+
+1. ALWAYS read SESSION_PROMPT.txt at session start
+2. ALWAYS update SESSION_LOG.txt at session end
+3. NEVER commit .env.local or expose API keys
+4. ALWAYS run `npm run build` before committing
+5. PREFER editing existing files over creating new ones
+6. KEEP the design consistent (use CSS variables)
+7. CAPTURE emails at every opportunity (lead generation focus)
+8. MAINTAIN mobile responsiveness on all pages
+9. WRITE code that compiles - verify with build
+10. DOCUMENT major decisions in this file
+
+================================================================================
+7. PROJECT HISTORY
+================================================================================
+
+PHASE 0: Initial Setup (Completed)
+----------------------------------
+- Created Next.js project with TypeScript
+- Set up Tailwind CSS v4 with CSS variables
+- Built core pages: Home, Study Plan, Sections, About
+- Created Header/Footer components
+- Implemented study plan quiz with email capture
+- Integrated Resend API for emails
+- Deployed to Vercel
+- Added Vercel Analytics
+
+PHASE 1: Free Tools (Completed 2026-01-03)
+------------------------------------------
+- Score Release Calendar with countdown timer
+- NTS Expiration Tracker with reminder system
+- Study Hours Calculator for all 6 sections
+- State Requirements Guide (10 states)
+- Enhanced Study Plan with discipline selection
+- Added "Free Tools" dropdown to navigation
+
+PHASE 2: Content & Authority (Planned)
+--------------------------------------
+- MDX blog setup
+- Exam Day Walkthrough guide
+- "I Failed, Now What?" retaker guide
+- Success Stories section
+
+PHASE 3: Email Nurturing (Planned)
+----------------------------------
+- 7-email welcome sequence
+- Segment-based content delivery
+- Automated score release notifications
+
+PHASE 4: Interactive Features (Planned)
+---------------------------------------
+- AI chatbot (Anthropic Claude)
+- Diagnostic quizzes per section
+- Progress tracker with user accounts
+
+PHASE 5: Infrastructure (Planned)
+---------------------------------
+- Supabase database integration
+- NextAuth.js authentication
+- Admin dashboard
+
+================================================================================
+8. DATA MODELS
+================================================================================
+
+SCORE RELEASE DATE:
+```typescript
+interface ScoreReleaseDate {
+  date: string;           // ISO date string
+  type: "core" | "discipline";
+  testingWindow?: string; // For discipline sections
+  sections: string[];     // ["FAR", "AUD", "REG"] or ["BAR", "TCP", "ISC"]
+  notes?: string;
+}
+```
+
+STATE REQUIREMENT:
+```typescript
+interface StateRequirement {
+  code: string;           // "CA", "TX", etc.
+  name: string;           // "California"
+  boardName: string;
+  boardUrl: string;
+  educationRequirements: {
+    totalCredits: number;
+    accountingCredits: number;
+    businessCredits: number;
+    notes: string[];
+  };
+  experienceRequirements: {
+    totalHours: number;
+    yearsRequired: number;
+    supervisionRequired: boolean;
+    acceptableExperience: string[];
+  };
+  examRequirements: {
+    canSitBeforeDegree: boolean;
+    creditTransfer: boolean;
+    notes: string[];
+  };
+  fees: {
+    initialApplication: number;
+    perSection: number;
+    reexamFee: number;
+    notes: string[];
+  };
+  ethicsExam: {
+    required: boolean;
+    examName: string;
+    whenRequired: string;
+  };
+  residency: {
+    required: boolean;
+    notes: string;
+  };
+}
+```
+
+STUDY PLAN (Generated):
+```typescript
+interface StudyPlan {
+  sectionOrder: string[];  // ["FAR", "AUD", "REG", "TCP"]
+  weeklySchedule: string;
+  estimatedCompletion: string;
+  tips: string[];
+  disciplineInfo: {
+    section: string;
+    passRate: number;
+    testingWindow: string;
+    recommendation: string;
+  };
+}
+```
+
+FUTURE: DATABASE SCHEMA (Supabase)
+```sql
+-- Leads table
+CREATE TABLE leads (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT UNIQUE NOT NULL,
+  source TEXT,  -- 'study_plan', 'score_calendar', 'nts_tracker'
+  form_data JSONB,
+  email_consent BOOLEAN DEFAULT true,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- Email sequence progress
+CREATE TABLE email_sequence_progress (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  lead_id UUID REFERENCES leads(id),
+  sequence_name TEXT,
+  current_step INTEGER DEFAULT 0,
+  last_sent_at TIMESTAMPTZ,
+  completed BOOLEAN DEFAULT false
+);
+
+-- NTS records for reminders
+CREATE TABLE nts_records (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT NOT NULL,
+  state_code TEXT,
+  issue_date DATE,
+  expiration_date DATE,
+  reminder_30_sent BOOLEAN DEFAULT false,
+  reminder_14_sent BOOLEAN DEFAULT false,
+  reminder_7_sent BOOLEAN DEFAULT false
+);
+
+-- Score release subscriptions
+CREATE TABLE score_subscriptions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT NOT NULL,
+  sections TEXT[],
+  notify_days_before INTEGER[] DEFAULT '{3}'
+);
+```
+
+================================================================================
+9. API REFERENCE
+================================================================================
+
+POST /api/submit-study-plan
+---------------------------
+Request:
+```json
+{
+  "email": "user@example.com",
+  "workingFullTime": "yes" | "no",
+  "hoursPerWeek": "10" | "20" | "30" | "40",
+  "accountingBackground": "strong" | "moderate" | "limited",
+  "disciplineSection": "TCP" | "BAR" | "ISC",
+  "studyPlan": { ... }
+}
+```
+Response: { "success": true }
+
+Actions:
+1. Sends formatted study plan email to user
+2. Sends lead notification to admin (EMAIL_TO)
+
+
+POST /api/subscribe-score-release
+---------------------------------
+Request:
+```json
+{
+  "email": "user@example.com"
+}
+```
+Response: { "success": true }
+
+Actions:
+1. Sends confirmation email to user
+2. Notifies admin of new subscriber
+
+
+POST /api/subscribe-nts
+-----------------------
+Request:
+```json
+{
+  "email": "user@example.com",
+  "ntsDate": "2025-01-15",
+  "expirationDate": "2025-07-15T00:00:00.000Z"
+}
+```
+Response: { "success": true }
+
+Actions:
+1. Sends confirmation with reminder schedule to user
+2. Notifies admin of new subscriber
+
+================================================================================
+10. STYLING GUIDE
+================================================================================
+
+CSS VARIABLES (defined in globals.css):
+```css
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+  --primary: #1e3a5f;        /* Navy blue - main brand */
+  --primary-light: #2d5a87;
+  --primary-dark: #152a45;
+  --secondary: #16a34a;      /* Green - CTAs, success */
+  --secondary-light: #22c55e;
+  --accent: #0ea5e9;         /* Blue - links, highlights */
+  --muted: #64748b;          /* Gray - secondary text */
+  --muted-light: #94a3b8;
+  --border: #e2e8f0;
+  --card: #f8fafc;           /* Light gray - backgrounds */
+}
+```
+
+SECTION COLORS:
+```typescript
+const sectionColors = {
+  FAR: "#1e3a5f",  // Navy (primary)
+  AUD: "#0891b2",  // Cyan
+  REG: "#7c3aed",  // Purple
+  TCP: "#16a34a",  // Green (secondary)
+  BAR: "#dc2626",  // Red
+  ISC: "#ea580c",  // Orange
+};
+```
+
+BUTTON CLASSES:
+```css
+.btn-primary    /* Navy background, white text */
+.btn-secondary  /* Green background, white text */
+```
+
+COMMON PATTERNS:
+- Cards: `bg-white rounded-xl p-6 border border-[var(--border)]`
+- Sections: `py-12` or `py-16` for vertical spacing
+- Max width: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`
+- Headings: `text-[var(--foreground)]` with appropriate size
+- Muted text: `text-[var(--muted)]`
+
+================================================================================
+11. FUTURE ROADMAP
+================================================================================
+
+IMMEDIATE (Phase 2):
+- [ ] Set up MDX for blog posts
+- [ ] Create 3-5 SEO-targeted blog posts
+- [ ] Build Exam Day Walkthrough page
+- [ ] Build "I Failed, Now What?" guide
+- [ ] Add Success Stories section
+
+SHORT-TERM (Phase 3):
+- [ ] Design 7-email welcome sequence
+- [ ] Set up email automation (consider: Resend + cron, or Loops.so)
+- [ ] Implement segment tracking
+
+MEDIUM-TERM (Phase 4):
+- [ ] Integrate Anthropic Claude API
+- [ ] Build chat widget component
+- [ ] Create diagnostic quiz for FAR section
+- [ ] Add progress tracker (requires auth)
+
+LONG-TERM (Phase 5):
+- [ ] Set up Supabase project
+- [ ] Implement NextAuth.js
+- [ ] Build admin dashboard
+- [ ] Add remaining 45 states to requirements guide
+
+WISHLIST:
+- Mobile app (PWA)
+- Referral program
+- Exit-intent popup
+- A/B testing infrastructure
+
+================================================================================
+END OF CONTEXT FILE
+================================================================================
