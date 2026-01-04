@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useAuth } from "@/components/auth/AuthProvider";
 
 export default function Header() {
+  const { user, loading } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sectionsOpen, setSectionsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -162,6 +164,29 @@ export default function Header() {
               About
             </Link>
 
+            {!loading && (
+              <>
+                {user ? (
+                  <Link
+                    href="/dashboard"
+                    className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <span>Dashboard</span>
+                  </Link>
+                ) : (
+                  <Link
+                    href="/login"
+                    className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
+                  >
+                    Log In
+                  </Link>
+                )}
+              </>
+            )}
+
             <Link href="/study-plan" className="btn-primary">
               Build My Study Plan
             </Link>
@@ -266,6 +291,31 @@ export default function Header() {
               >
                 About
               </Link>
+
+              {!loading && (
+                <>
+                  {user ? (
+                    <Link
+                      href="/dashboard"
+                      className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium flex items-center space-x-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <span>My Dashboard</span>
+                    </Link>
+                  ) : (
+                    <Link
+                      href="/login"
+                      className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Log In / Sign Up
+                    </Link>
+                  )}
+                </>
+              )}
 
               <Link
                 href="/study-plan"
