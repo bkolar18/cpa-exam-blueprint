@@ -3811,3 +3811,51 @@ CREATE TRIGGER on_study_session_added
 **Alternatively:** If testing with the same email verified on the Resend account, check spam folder.
 
 ---
+
+## Database Storage Analysis for Planned Features (January 2026)
+
+### Feature 1: Returning to Prior Study Sessions for Review
+
+**What this would store:**
+- We already have `practice_attempts` table storing each answer
+- Current schema: `question_id`, `selected_answer`, `is_correct`, `created_at`
+
+**Storage estimate per user:**
+- ~200 bytes per attempt
+- If a user does 50 questions/week × 52 weeks = 2,600 attempts/year
+- **~520 KB per active user per year**
+
+**Recommendation:** Very lightweight. Supabase free tier gives 500MB. Even with 500 active users doing heavy practice = ~260MB/year. **No concern.**
+
+**Implementation:** Just need a UI to query existing `practice_attempts` grouped by session (using timestamps to cluster attempts into sessions).
+
+---
+
+### Feature 2: Adding More MCQs to Testing Booklets
+
+**Current approach:** Questions stored in code (`src/lib/data/practice-questions/`), not database.
+
+**Two options:**
+
+| Approach | Storage Impact | Pros | Cons |
+|----------|---------------|------|------|
+| Keep in code | 0 DB storage | Fast, no queries, versioned with Git | Harder to add dynamically |
+| Move to database | ~1-2 KB per question | Easy to add/edit via admin, per-question stats | Adds DB queries, needs migration |
+
+**Storage estimate if moved to DB:**
+- 8,800 questions (Surgent-level) × 2KB = ~17MB
+- Only 3.4% of Supabase's free 500MB
+- **Not a concern**
+
+---
+
+### Summary
+
+**Storage is not a bottleneck.** Text-based questions and user attempts are tiny.
+
+**Recommendations:**
+1. Keep questions in code for now - simpler, faster, no migration needed
+2. Add session review feature - easy win, data already exists
+3. If 1000+ questions needed later, consider hybrid: current questions in code + `custom_questions` table for future additions
+
+---
