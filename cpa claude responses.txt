@@ -1199,3 +1199,81 @@ After promoting, your production URL should have all the latest changes.
 
 ---
 
+## "Authentication service not configured" Error - Environment Variable Scope
+
+If you see "Authentication service not configured" when trying to log in, the `NEXT_PUBLIC_` environment variables aren't available in your production build.
+
+**Common cause:** Environment variables are only set for Preview/Development, not Production.
+
+**Check that your env vars are enabled for Production:**
+
+1. Go to Vercel → your project → **Settings** → **Environment Variables**
+2. Find `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+3. Click on each one and check the **Environments** checkboxes
+4. Make sure **Production** is checked (not just Preview or Development)
+5. Save if you made changes
+
+**After updating, trigger a fresh build:**
+1. Go to **Deployments**
+2. Click **"..."** on the latest deployment
+3. Click **Redeploy** with "Use existing Build Cache" **UNCHECKED**
+
+This ensures the production build includes the environment variables.
+
+---
+
+## Dashboard/Login Link Not Showing - How the Header Auth Logic Works
+
+The Header code for showing Dashboard (signed in) or Log In (signed out) is already implemented:
+
+```jsx
+{!loading && (
+  <>
+    {user ? (
+      <Link href="/dashboard">Dashboard</Link>  // Shows when signed in
+    ) : (
+      <Link href="/login">Log In</Link>         // Shows when signed out
+    )}
+  </>
+)}
+```
+
+**Why neither link appears:**
+If you don't see either "Log In" OR "Dashboard", the `loading` state is stuck at `true`. This happens when the Supabase environment variables aren't available in the browser.
+
+**The fix:**
+The Vercel environment variables must be:
+1. Named exactly `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+2. Have **Production** environment checked
+3. Be included in a fresh build (not just a redeploy)
+
+Once properly configured, the auth state will load correctly and the appropriate link will appear.
+
+---
+
+## Vercel Environment Variables Look Correct But Still Not Working
+
+If your Vercel environment variables are:
+- Named correctly (`NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`)
+- Set to "All Environments" (includes Production)
+- Have correct values
+
+But you see the message "A new Deployment is required for your changes to take effect" - you need a fresh build.
+
+**Do a fresh build without cache:**
+
+1. Go to Vercel → **Deployments**
+2. Click **"..."** on the latest deployment
+3. Click **Redeploy**
+4. **UNCHECK** "Use existing Build Cache"
+5. Click **Redeploy**
+
+Wait for the build to complete (~1-2 minutes), then test the production URL.
+
+**If still not working, debug in browser:**
+1. Open Developer Tools (F12)
+2. Check Console for errors
+3. Check Network tab for Supabase requests (filter by "supabase")
+
+---
+

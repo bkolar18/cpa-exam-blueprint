@@ -12,11 +12,17 @@ export function createClient(): SupabaseClient | null {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
+  // Debug logging - remove after fixing
+  console.log('[Supabase Debug] URL exists:', !!supabaseUrl);
+  console.log('[Supabase Debug] Key exists:', !!supabaseAnonKey);
+
   // During SSG/build time, credentials may not be available
   if (!supabaseUrl || !supabaseAnonKey) {
+    console.log('[Supabase Debug] Missing credentials, returning null');
     return null;
   }
 
+  console.log('[Supabase Debug] Creating client...');
   supabaseClient = createBrowserClient(supabaseUrl, supabaseAnonKey);
   return supabaseClient;
 }
