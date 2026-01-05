@@ -266,7 +266,6 @@ export default function AccoladesPage() {
                       tier={achievement.tier}
                       points={achievement.points}
                       isUnlocked={achievement.isUnlocked}
-                      isHidden={achievement.is_hidden}
                       unlockedAt={achievement.unlockedAt}
                     />
                   ))}

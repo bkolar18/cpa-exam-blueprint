@@ -8,7 +8,6 @@ interface AchievementItemProps {
   tier: Tier;
   points: number;
   isUnlocked: boolean;
-  isHidden: boolean;
   unlockedAt: string | null | undefined;
 }
 
@@ -18,13 +17,9 @@ export function AchievementItem({
   tier,
   points,
   isUnlocked,
-  isHidden,
   unlockedAt,
 }: AchievementItemProps) {
   const tierConfig = TIER_CONFIG[tier];
-
-  // For hidden achievements that are NOT unlocked, show "???" as description
-  const displayDescription = isHidden && !isUnlocked ? "???" : description;
 
   return (
     <div
@@ -78,14 +73,8 @@ export function AchievementItem({
             {tier}
           </span>
         </div>
-        <p
-          className={`text-sm line-clamp-1 ${
-            isHidden && !isUnlocked
-              ? "italic text-[var(--muted-foreground)]"
-              : "text-[var(--muted-foreground)]"
-          }`}
-        >
-          {displayDescription}
+        <p className="text-sm text-[var(--muted-foreground)] line-clamp-1">
+          {description}
         </p>
       </div>
 
