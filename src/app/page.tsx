@@ -134,6 +134,99 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CPA Academy Promo */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
+                Free Study Dashboard
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Track Your Progress with CPA Academy
+              </h2>
+              <p className="text-xl text-blue-100 mb-6">
+                Your personal command center for conquering the CPA exam. Log study hours,
+                earn achievements, and stay motivated throughout your journey.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Track study hours across all sections",
+                  "Earn badges and unlock achievements",
+                  "Build and maintain study streaks",
+                  "Never miss an NTS expiration",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/cpa-academy"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  href="/signup"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                >
+                  Create Free Account
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="font-semibold">FAR Progress</div>
+                        <div className="text-sm text-blue-200">75 / 150 hours</div>
+                      </div>
+                    </div>
+                    <span className="text-2xl font-bold">50%</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-xl">
+                        🔥
+                      </div>
+                      <div>
+                        <div className="font-semibold">Study Streak</div>
+                        <div className="text-sm text-blue-200">Keep it going!</div>
+                      </div>
+                    </div>
+                    <span className="text-2xl font-bold">7 days</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xl">
+                        ⭐
+                      </div>
+                      <div>
+                        <div className="font-semibold">Total Points</div>
+                        <div className="text-sm text-blue-200">3 badges earned</div>
+                      </div>
+                    </div>
+                    <span className="text-2xl font-bold">245</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pain Points Section */}
       <section className="py-20 bg-[var(--card)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

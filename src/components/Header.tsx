@@ -50,7 +50,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-2">
             {/* Sections Dropdown */}
             <div className="relative">
               <button
@@ -59,11 +59,15 @@ export default function Header() {
                   setResourcesOpen(false);
                 }}
                 onBlur={() => setTimeout(() => setSectionsOpen(false), 150)}
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center space-x-1 ${
+                  sectionsOpen
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white"
+                }`}
               >
                 <span>Exam Sections</span>
                 <svg
-                  className={`w-4 h-4 transition-transform ${sectionsOpen ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 transition-transform duration-200 ${sectionsOpen ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -72,15 +76,15 @@ export default function Header() {
                 </svg>
               </button>
               {sectionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-[var(--border)] rounded-lg shadow-lg py-3">
-                  {sections.map((section, index) => (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
+                  {sections.map((section) => (
                     <Link
                       key={section.name}
                       href={section.href}
-                      className={`block px-5 py-3 hover:bg-[var(--card)] transition-colors ${index !== sections.length - 1 ? 'border-b border-[var(--border)]' : ''}`}
+                      className="block px-5 py-3 hover:bg-[var(--primary)] hover:text-white transition-all duration-200"
                     >
-                      <div className="font-medium text-[var(--foreground)]">{section.name}</div>
-                      <div className="text-sm text-[var(--muted)]">{section.description}</div>
+                      <div className="font-medium">{section.name}</div>
+                      <div className="text-sm opacity-80">{section.description}</div>
                     </Link>
                   ))}
                 </div>
@@ -95,11 +99,15 @@ export default function Header() {
                   setSectionsOpen(false);
                 }}
                 onBlur={() => setTimeout(() => setResourcesOpen(false), 150)}
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center space-x-1 ${
+                  resourcesOpen
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white"
+                }`}
               >
                 <span>Resources</span>
                 <svg
-                  className={`w-4 h-4 transition-transform ${resourcesOpen ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 transition-transform duration-200 ${resourcesOpen ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -119,7 +127,7 @@ export default function Header() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-2.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
                         >
                           {item.name}
                         </Link>
@@ -134,7 +142,7 @@ export default function Header() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-2.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
                         >
                           {item.name}
                         </Link>
@@ -146,11 +154,21 @@ export default function Header() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-2.5 text-sm text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
                         >
                           {item.name}
                         </Link>
                       ))}
+                      {/* CPA Academy */}
+                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3 mt-5">
+                        Study Hub
+                      </div>
+                      <Link
+                        href="/cpa-academy"
+                        className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
+                      >
+                        CPA Academy
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -159,7 +177,7 @@ export default function Header() {
 
             <Link
               href="/about"
-              className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
+              className="px-4 py-2 rounded-lg font-medium text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white transition-all duration-200"
             >
               About
             </Link>
@@ -169,7 +187,7 @@ export default function Header() {
                 {user ? (
                   <Link
                     href="/dashboard"
-                    className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors flex items-center space-x-1"
+                    className="px-4 py-2 rounded-lg font-medium text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white transition-all duration-200 flex items-center space-x-1"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -179,7 +197,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href="/login"
-                    className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors"
+                    className="px-4 py-2 rounded-lg font-medium text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white transition-all duration-200"
                   >
                     Log In
                   </Link>
