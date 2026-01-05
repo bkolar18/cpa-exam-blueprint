@@ -3517,3 +3517,122 @@ If 0 rows returned, the is_hidden column wasn't set correctly and needs the UPDA
 
 ---
 
+## Session: 2026-01-05 - Practice Booklets Implementation
+
+### CPA Academy Page & Nav Styling
+
+**Changes Made:**
+1. Updated Header.tsx with prominent hover styling (matching dashboard)
+2. Created `/cpa-academy` page with full landing page:
+   - Hero section with CTA buttons
+   - Features grid (6 features: Track Progress, Study Log, NTS Tracker, Practice Sessions, Achievements, Study Streaks)
+   - Gamification showcase section
+   - Call-to-action section
+3. Added CPA Academy link in Resources dropdown under "Study Hub" category
+4. Added CPA Academy promotional section to home page
+
+**Commit:** `87d78b6` - Add CPA Academy page, update nav hover styling, add home page promo section
+
+---
+
+### Practice Booklets Feature (Complete)
+
+**New Files Created:**
+
+| File | Purpose |
+|------|---------|
+| `src/lib/data/practice-questions/types.ts` | TypeScript types for questions, quizzes, results |
+| `src/lib/data/practice-questions/far.ts` | 25 FAR practice questions |
+| `src/lib/data/practice-questions/aud.ts` | 25 AUD practice questions |
+| `src/lib/data/practice-questions/reg.ts` | 25 REG practice questions |
+| `src/lib/data/practice-questions/index.ts` | Utilities for fetching/filtering questions |
+| `src/components/practice/QuizQuestion.tsx` | Interactive question component |
+| `src/components/practice/QuizResults.tsx` | Results summary component |
+| `src/app/dashboard/practice/[section]/page.tsx` | Section-specific quiz page |
+
+**Question Topics Covered:**
+
+**FAR (25 questions):**
+- Conceptual Framework
+- Financial Statements
+- Revenue Recognition (ASC 606)
+- Leases (ASC 842)
+- Inventory
+- Fixed Assets
+- Intangible Assets
+- Bonds & Long-term Debt
+- Stockholders' Equity
+- Government Accounting
+- Non-profit Accounting
+
+**AUD (25 questions):**
+- Ethics & Independence
+- Professional Responsibilities
+- Audit Planning
+- Risk Assessment
+- Internal Control (COSO)
+- Audit Evidence
+- Audit Sampling
+- Audit Reports
+- Reviews & Compilations
+- SOC Reports
+
+**REG (25 questions):**
+- Individual Taxation
+- Business Taxation
+- Property Transactions (Section 1031, 1245, 1250)
+- Business Law (Contracts, Agency, Negotiable Instruments)
+- Ethics & Responsibilities (Circular 230)
+- Federal Tax Procedures
+
+**Features:**
+1. **Configurable Quizzes** - Choose:
+   - Number of questions (5, 10, 15, 20, 25)
+   - Topic filter
+   - Difficulty filter (easy, medium, hard)
+
+2. **Interactive Quiz Interface:**
+   - Progress bar showing question X of Y
+   - Difficulty and topic indicators
+   - Four answer choices (A, B, C, D)
+   - Submit button (disabled until answer selected)
+   - Immediate feedback with color coding
+   - Detailed explanations for all questions
+   - Study tips on many questions
+
+3. **Results Summary:**
+   - Overall score and accuracy percentage
+   - Score message based on performance
+   - Stats grid (correct, incorrect, total)
+   - Topic-by-topic performance breakdown with progress bars
+   - Full question review showing all answers
+   - Retry Same Questions button
+   - New Quiz button
+   - Back to Practice link
+
+4. **Database Integration:**
+   - All attempts saved to `practice_attempts` table
+   - Tracks: user_id, question_id, section, topic, selected_answer, correct_answer, is_correct
+   - Stats displayed on main practice page
+
+5. **Updated Practice Page:**
+   - Banner now says "Practice Booklets Now Available!"
+   - Section cards show question count for available sections
+   - "Start Practice" button for FAR, AUD, REG
+   - "Coming Soon" for TCP, BAR, ISC
+   - Topics Covered section only shows available sections
+
+**Routes:**
+- `/dashboard/practice` - Main practice page with section cards
+- `/dashboard/practice/far` - FAR quiz page
+- `/dashboard/practice/aud` - AUD quiz page
+- `/dashboard/practice/reg` - REG quiz page
+
+**Build Stats:**
+- 69 total pages
+- 9 files changed, 2,111 insertions
+
+**Commit:** `4663860` - Add practice booklets feature with 75 questions for FAR, AUD, REG
+
+---
+

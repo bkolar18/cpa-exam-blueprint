@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { createClient } from "@/lib/supabase/client";
+import { useStudySessionAchievements } from "@/components/gamification/AchievementProvider";
 import QuizQuestion from "@/components/practice/QuizQuestion";
 import QuizResults from "@/components/practice/QuizResults";
 import {
@@ -16,6 +17,7 @@ import {
   PracticeQuestion,
   SectionCode,
 } from "@/lib/data/practice-questions";
+import type { SectionCode as DBSectionCode } from "@/lib/supabase/types";
 
 interface QuizResult {
   question: PracticeQuestion;
@@ -39,6 +41,7 @@ export default function SectionPracticePage() {
   const router = useRouter();
   const { user } = useAuth();
   const supabase = createClient();
+  const { onStudySessionLogged } = useStudySessionAchievements();
 
   const sectionParam = params.section as string;
   const section = sectionParam.toUpperCase() as SectionCode;
@@ -48,6 +51,10 @@ export default function SectionPracticePage() {
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [results, setResults] = useState<QuizResult[]>([]);
+  const [studySessionLogged, setStudySessionLogged] = useState(false);
+
+  // Quiz timing
+  const quizStartTime = useRef<Date | null>(null);
 
   // Quiz setup options
   const [questionCount, setQuestionCount] = useState(10);
@@ -73,8 +80,51 @@ export default function SectionPracticePage() {
     setQuestions(quizQuestions);
     setCurrentQuestionIndex(0);
     setResults([]);
+    setStudySessionLogged(false);
+    quizStartTime.current = new Date();
     setQuizState('quiz');
   };
+
+  // Auto-log practice session to study log when quiz is completed
+  const logPracticeSession = async (quizResults: QuizResult[]) => {
+    if (!user || !supabase || studySessionLogged) return;
+
+    const endTime = new Date();
+    const startTime = quizStartTime.current || endTime;
+    const durationMinutes = Math.max(1, Math.round((endTime.getTime() - startTime.getTime()) / 60000));
+    const durationHours = Math.round((durationMinutes / 60) * 4) / 4; // Round to nearest 0.25
+
+    const correctCount = quizResults.filter(r => r.isCorrect).length;
+    const accuracy = Math.round((correctCount / quizResults.length) * 100);
+    const topicsCovered = [...new Set(quizResults.map(r => r.question.topic))];
+
+    // Create study session entry
+    try {
+      const { error } = await supabase.from('study_sessions').insert({
+        user_id: user.id,
+        section: section as DBSectionCode,
+        date: new Date().toISOString().split('T')[0],
+        hours: Math.max(0.25, durationHours), // Minimum 15 minutes credit
+        notes: `Practice quiz: ${quizResults.length} questions, ${accuracy}% accuracy. Topics: ${topicsCovered.join(', ')}`,
+        topics_covered: topicsCovered,
+      });
+
+      if (!error) {
+        setStudySessionLogged(true);
+        // Trigger achievement check
+        await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, durationHours));
+      }
+    } catch (error) {
+      console.error('Failed to log study session:', error);
+    }
+  };
+
+  // Log study session when quiz completes
+  useEffect(() => {
+    if (quizState === 'results' && results.length > 0 && !studySessionLogged) {
+      logPracticeSession(results);
+    }
+  }, [quizState, results, studySessionLogged]);
 
   const handleAnswer = async (selectedAnswer: 'A' | 'B' | 'C' | 'D', isCorrect: boolean) => {
     const currentQuestion = questions[currentQuestionIndex];
@@ -115,6 +165,8 @@ export default function SectionPracticePage() {
   const handleRetry = () => {
     setCurrentQuestionIndex(0);
     setResults([]);
+    setStudySessionLogged(false);
+    quizStartTime.current = new Date();
     setQuizState('quiz');
   };
 
@@ -122,6 +174,8 @@ export default function SectionPracticePage() {
     setQuizState('setup');
     setResults([]);
     setCurrentQuestionIndex(0);
+    setStudySessionLogged(false);
+    quizStartTime.current = null;
   };
 
   if (!hasQuestions) {
@@ -283,6 +337,7 @@ export default function SectionPracticePage() {
           results={results}
           onRetry={handleRetry}
           onNewQuiz={handleNewQuiz}
+          studySessionLogged={studySessionLogged}
         />
       )}
     </div>

@@ -15,6 +15,7 @@ interface QuizResultsProps {
   results: QuizResult[];
   onRetry: () => void;
   onNewQuiz: () => void;
+  studySessionLogged?: boolean;
 }
 
 export default function QuizResults({
@@ -23,6 +24,7 @@ export default function QuizResults({
   results,
   onRetry,
   onNewQuiz,
+  studySessionLogged = false,
 }: QuizResultsProps) {
   const totalQuestions = results.length;
   const correctAnswers = results.filter(r => r.isCorrect).length;
@@ -90,6 +92,29 @@ export default function QuizResults({
           </div>
         </div>
       </div>
+
+      {/* Study Session Logged Notice */}
+      {studySessionLogged && (
+        <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center space-x-3">
+          <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <p className="font-medium text-green-800">Study Session Logged!</p>
+            <p className="text-sm text-green-600">
+              This practice session has been automatically added to your Study Log.
+            </p>
+          </div>
+          <Link
+            href="/dashboard/study-log"
+            className="ml-auto text-sm font-medium text-green-700 hover:text-green-800 whitespace-nowrap"
+          >
+            View Log &rarr;
+          </Link>
+        </div>
+      )}
 
       {/* Topic Analysis */}
       {Object.keys(topicAnalysis).length > 1 && (
