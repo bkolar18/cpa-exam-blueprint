@@ -3094,3 +3094,146 @@ const signOut = async () => {
 
 ---
 
+## PHASE 2 COMPLETED: Gamification System (2026-01-05)
+
+**Commit:** `aa57033` - Add gamification system: badges, achievements, and Accolades page
+
+### Overview
+Implemented a full gamification system with badges, achievements, and an Accolades page. PlayStation-inspired tier system (Bronze, Silver, Gold, Platinum) with point values.
+
+---
+
+### Database Schema Created
+
+**New Tables:**
+- `badges` - Defines available badges (study hour milestones per section)
+- `achievements` - Defines achievements (visible and hidden)
+- `user_badges` - Tracks user badge progress and earned badges
+- `user_achievements` - Tracks unlocked achievements
+- `practice_sessions` - Timed practice session tracking
+
+**Profile Additions:**
+- `total_points` - Cumulative gamification points
+- `badge_count` - Number of badges earned
+- `achievement_count` - Number of achievements unlocked
+- `current_streak` - Current study day streak
+- `longest_streak` - All-time best streak
+- `last_study_date` - For streak calculation
+
+**Database Triggers:**
+- Auto-update points when badge/achievement earned
+- Auto-update streak on study session logged
+
+**File:** `supabase-gamification-schema.sql`
+
+---
+
+### Badge System
+
+**Categories:** Study hours per section (FAR, AUD, REG, TCP, BAR, ISC)
+
+**Progression:** 25% → 50% → 75% → 100% of recommended hours
+
+| Section | Recommended Hours |
+|---------|-------------------|
+| FAR | 150 hours |
+| AUD | 100 hours |
+| REG | 100 hours |
+| TCP | 80 hours |
+| BAR | 100 hours |
+| ISC | 80 hours |
+
+**Total Badges:** 24 (4 per section × 6 sections)
+
+---
+
+### Achievement System
+
+**Visible Achievements:**
+- First Steps (first study session)
+- Ready to Go (complete profile)
+- Committed Path (choose discipline)
+- Officially Scheduled (add NTS entry)
+- Dedicated (7-day streak)
+- Committed (30-day streak)
+- One Down/Halfway/Almost There/CPA Candidate (pass sections)
+- Century Club/Study Warrior/Study Legend (100/300/500 total hours)
+
+**Hidden Achievements (reveal on unlock):**
+- FAR/AUD/REG/Discipline Sharp (75%+ accuracy)
+- Speed Demon (50 questions, 30 min, 70%+ accuracy)
+- Night Owl (study 10 PM - 2 AM)
+- Early Bird (study 5 AM - 7 AM)
+- Marathon Runner (8+ hours in one day)
+- Perfect 10/Flawless (10/50 correct in a row)
+- Weekend Warrior (10+ hours on weekend)
+
+**Platinum Master:** Unlock all achievements → Surgent discount code
+
+---
+
+### Point System
+
+| Tier | Points | Color |
+|------|--------|-------|
+| Bronze | 15 | #CD7F32 |
+| Silver | 30 | #C0C0C0 |
+| Gold | 90 | #FFD700 |
+| Platinum | 300 | #E5E4E2 |
+
+---
+
+### Files Created
+
+```
+src/lib/gamification/
+├── types.ts              # TypeScript types for badges/achievements
+└── checker.ts            # Achievement checking logic
+
+src/components/gamification/
+├── AchievementProvider.tsx  # Context provider + toast container
+├── AchievementToast.tsx     # Notification toast component
+├── BadgeCard.tsx            # Badge display card
+└── AchievementItem.tsx      # Achievement list item
+
+src/app/dashboard/accolades/
+└── page.tsx              # Accolades dashboard page
+```
+
+### Files Modified
+
+- `src/app/dashboard/layout.tsx` - Wrapped with AchievementProvider
+- `src/app/dashboard/study-log/page.tsx` - Triggers achievements on session log
+- `src/components/dashboard/DashboardNav.tsx` - Added Accolades link
+- `src/lib/supabase/types.ts` - Added gamification profile fields
+
+---
+
+### Accolades Page Features
+
+- **Stats Overview:** Total points, badges earned, achievements unlocked, study streak
+- **Badges Tab:** Grid display with section filter, progress bars, tier badges
+- **Achievements Tab:** Grouped by tier (Platinum/Gold/Silver/Bronze)
+- **Hidden Achievements:** Display as "???" until unlocked
+- **Platinum Reward Banner:** Shows when close to or achieved platinum
+
+---
+
+### Achievement Triggers
+
+When user logs a study session:
+1. `useStudySessionAchievements()` hook called
+2. Checks for: first session, streak, hours milestones, time-based achievements
+3. Updates badge progress for section
+4. If new achievement/badge earned → toast notification appears
+5. Points automatically added via database trigger
+
+---
+
+### Next Steps to Deploy
+
+1. Run `supabase-gamification-schema.sql` in Supabase SQL Editor
+2. Deploy will auto-trigger via GitHub push
+
+---
+
