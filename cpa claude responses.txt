@@ -2338,3 +2338,600 @@ Before implementation, please clarify:
 
 ---
 
+## PHASE 1 COMPLETED: UI Fixes and Surgent Page (2026-01-05)
+
+**Commit:** `e9ab9aa` - Phase 1 UI fixes and Surgent CPA Review page
+
+### UI Fixes Implemented
+
+**1. Hours Display Fix (0.0 → 0)**
+- Files: `dashboard/page.tsx`, `dashboard/study-log/page.tsx`
+- Added `formatHours()` helper function:
+```typescript
+const formatHours = (hours: number): string => {
+  if (hours === 0) return "0";
+  if (hours % 1 === 0) return hours.toString();
+  return hours.toFixed(1);
+};
+```
+
+**2. Bullet Colors on Exam Day Walkthrough**
+- File: `guides/exam-day/page.tsx`
+- Changed from white circles with gray border to small blue filled circles:
+```tsx
+// Before
+<div className="w-6 h-6 rounded-full border-2 border-[var(--border)] flex-shrink-0 mt-0.5" />
+
+// After
+<div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0 mt-2" />
+```
+
+**3. Removed Sticky CTAs (Too Sticky)**
+- Files modified:
+  - `components/SectionPage.tsx` - "Get Your Study Plan" box
+  - `working-full-time/page.tsx` - "Get Your Personalized Schedule" box
+  - `recommended-program/page.tsx` - "Our Top Pick" box
+- Fix: Removed `sticky top-24` class from sidebar CTA divs
+
+**4. Markdown Table Rendering**
+- Installed: `npm install remark-gfm`
+- File: `blog/[slug]/page.tsx`
+- Added remarkGfm plugin to MDXRemote:
+```tsx
+import remarkGfm from 'remark-gfm';
+
+<MDXRemote
+  source={post.content}
+  components={mdxComponents}
+  options={{
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+    },
+  }}
+/>
+```
+
+### Surgent CPA Review Page
+
+**File:** `recommended-program/page.tsx` - Complete rewrite
+
+**Key Sections Added:**
+1. **Hero** - "Our Recommended CPA Review: Surgent"
+2. **Why We Recommend Surgent**
+   - A.S.A.P. Adaptive Technology
+   - ReadySCORE Technology (98-99% accuracy)
+   - 8,800+ MCQs and 450+ TBS
+   - 350+ Video Lectures
+   - Unlimited Access + Pass Guarantee
+3. **Pricing Tiers**
+   - Essentials Pass: $999
+   - Premier Pass: $1,599 (marked as POPULAR)
+   - Ultimate Pass: $1,999
+4. **How Surgent Supports Our Methodology**
+5. **Honest Assessment** - Pros and Cons
+6. **Competitor Comparison Table** (Surgent vs Becker vs Roger)
+7. **Sidebar** - Stats, CTA button, special offers section
+
+**Surgent Stats Used:**
+- Pass Rate: 88-92%
+- Practice Questions: 8,800+
+- Video Lectures: 350+
+- Access Period: Unlimited
+- Starting Price: $999
+- Avg Study Hours/Section: ~46 hours
+
+---
+
+## PHASE 2 PENDING: Gamification System
+
+Remaining tasks for future implementation:
+- [ ] Build database schema (badges, achievements, user_badges, user_achievements, practice_sessions)
+- [ ] Create achievement checking logic
+- [ ] Build practice timer integration
+- [ ] Build Accolades page (`/dashboard/accolades`)
+- [ ] Add achievement notification dropdowns
+- [ ] Integrate Surgent discount code for platinum achievement
+
+---
+
+## Surgent Branding Update (Session 2)
+
+**Date:** January 5, 2026
+
+Added Surgent brand styling to the recommended-program page for visual consistency and partner branding.
+
+### Changes Made:
+
+1. **Brand Colors Constant Added**
+```typescript
+const surgentColors = {
+  primary: "#327999",    // Astral - teal blue
+  dark: "#1E3E4D",       // Blue Dianne - dark teal
+  light: "#4A9BBD",      // Lighter teal for hover states
+};
+```
+
+2. **Sidebar CTA Card Redesign**
+   - Added Surgent teal gradient background (`#327999` → `#1E3E4D`)
+   - Added "SURGENT" text branding with "CPA Review" subtitle
+   - Stats section now uses white/semi-transparent text on dark background
+   - CTA button changed to white with dark Surgent text (#1E3E4D)
+   - Maintained "affiliate link" disclosure
+
+3. **Special Offer Section**
+   - Updated with darker Surgent gradient (`#1E3E4D` → `#0f2830`)
+   - Yellow accent for savings highlight
+   - Clean, professional look matching Surgent brand
+
+**Colors Source:** Brandfetch (verified Surgent brand colors)
+
+**Files Modified:**
+- `src/app/recommended-program/page.tsx`
+
+---
+
+## Login Hanging Fix (Session 2)
+
+**Date:** January 5, 2026
+
+**Problem:** Login was hanging indefinitely, causing the page to never load after authentication.
+
+**Root Causes Identified:**
+1. Middleware had no timeout on `supabase.auth.getUser()` - could hang forever
+2. Client used `createClient` from `@supabase/supabase-js` (localStorage) instead of `createBrowserClient` from `@supabase/ssr` (cookies) - session mismatch between client/server
+3. Login page used `router.push()` which doesn't work reliably with auth state changes
+4. No safety timeouts in AuthProvider or Dashboard layout
+5. Profile fetch could block auth loading indefinitely
+
+**Fixes Applied:**
+
+### 1. Middleware Timeout (`src/lib/supabase/middleware.ts`)
+```typescript
+// Added 2-second timeout to prevent hanging
+try {
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('Auth timeout')), 2000)
+  );
+  await Promise.race([supabase.auth.getUser(), timeoutPromise]);
+} catch (error) {
+  console.log('[Middleware] Auth check skipped:', error.message);
+}
+```
+
+### 2. Client Cookie Sync (`src/lib/supabase/client.ts`)
+```typescript
+// Changed from createClient to createBrowserClient for cookie sync
+import { createBrowserClient } from '@supabase/ssr'
+supabaseClient = createBrowserClient(supabaseUrl, supabaseAnonKey);
+```
+
+### 3. Login Page Improvements (`src/app/login/page.tsx`)
+- Added `useAuth` hook to detect if already logged in
+- Added redirect effect for authenticated users
+- Changed from `router.push()` to `window.location.href` for reliable redirect
+- Added try/catch for error handling
+
+### 4. AuthProvider Improvements (`src/components/auth/AuthProvider.tsx`)
+- Added `useRef` to prevent double initialization in React Strict Mode
+- Added 5-second safety timeout that always sets loading to false
+- Made profile fetch non-blocking (uses `.then()` instead of `await`)
+- Added timeout to profile fetch (2 seconds)
+- Better cleanup on unmount
+
+### 5. Dashboard Layout (`src/app/dashboard/layout.tsx`)
+- Added 6-second loading timeout state
+- If loading times out, redirects to login
+- Added visual feedback ("Loading your dashboard..." / "Redirecting to login...")
+
+**Files Modified:**
+- `src/lib/supabase/middleware.ts`
+- `src/lib/supabase/client.ts`
+- `src/app/login/page.tsx`
+- `src/components/auth/AuthProvider.tsx`
+- `src/app/dashboard/layout.tsx`
+
+**Result:** Auth flow now has multiple layers of timeout protection. Maximum wait time is ~6 seconds before being redirected to login.
+
+---
+
+## Login Fix - Simplified Approach (Session 2 - Continued)
+
+**Date:** January 5, 2026
+
+**Problem:** Login still not working - console showed "Session check timed out" even after previous fixes. The `getSession()` call was hanging.
+
+**Root Cause:**
+1. Previous code had `initRef` that prevented auth from re-running on navigation
+2. Complex timeout logic was causing false negatives (returning "no session" when session existed)
+3. Middleware was blocking with timeout on `getUser()` call
+4. User was running cached old code
+
+**Final Simplified Solution:**
+
+### 1. AuthProvider (`src/components/auth/AuthProvider.tsx`)
+- Removed `initRef` - was preventing auth from working on navigation
+- Removed all timeout logic - let Supabase handle its own timing
+- Simplified to use `.then()` pattern instead of async/await with race conditions
+- Profile fetch is non-blocking
+
+```typescript
+useEffect(() => {
+  const supabase = createClient();
+  if (!supabase) { setLoading(false); return; }
+
+  // Simple promise-based session check
+  supabase.auth.getSession().then(({ data: { session } }) => {
+    setSession(session);
+    setUser(session?.user ?? null);
+    if (session?.user) fetchProfile(session.user.id).then(setProfile);
+    setLoading(false);
+  }).catch(() => setLoading(false));
+
+  // Listen for auth changes
+  const { data: { subscription } } = supabase.auth.onAuthStateChange(...);
+  return () => subscription.unsubscribe();
+}, []);
+```
+
+### 2. Login Page (`src/app/login/page.tsx`)
+- Removed `useAuth` hook dependency
+- Check session directly with supabase client on mount
+- After successful login, use `router.push()` + `router.refresh()`
+
+### 3. Dashboard Layout (`src/app/dashboard/layout.tsx`)
+- Simplified to basic loading/redirect logic
+- Removed timeout state complexity
+
+### 4. Middleware (`src/lib/supabase/middleware.ts`)
+- Changed from `await` to fire-and-forget for `getUser()`
+- No longer blocks page load waiting for auth
+```typescript
+// Don't await - let client handle auth
+supabase.auth.getUser().catch(() => {});
+return supabaseResponse;
+```
+
+### 5. Client (`src/lib/supabase/client.ts`)
+- Uses `createBrowserClient` from `@supabase/ssr` for cookie sync
+- Singleton pattern with proper initialization flag
+
+**Files Modified:**
+- `src/components/auth/AuthProvider.tsx`
+- `src/app/login/page.tsx`
+- `src/app/dashboard/layout.tsx`
+- `src/lib/supabase/middleware.ts`
+- `src/lib/supabase/client.ts`
+
+**User Instructions:**
+
+After making auth-related code changes, you MUST follow these steps to see the changes take effect:
+
+### Step 1: Stop the Dev Server
+- Go to the terminal where `npm run dev` is running
+- Press `Ctrl + C` to stop the server
+
+### Step 2: Delete the Next.js Cache
+Open a terminal in the project folder and run:
+
+**Windows (PowerShell):**
+```powershell
+Remove-Item -Recurse -Force .next
+```
+
+**Windows (Command Prompt):**
+```cmd
+rmdir /s /q .next
+```
+
+**Mac/Linux:**
+```bash
+rm -rf .next
+```
+
+### Step 3: Restart the Dev Server
+```bash
+npm run dev
+```
+
+### Step 4: Clear Browser Data for Localhost
+**Option A - Quick (Incognito):**
+- Open Chrome/Edge in Incognito mode (Ctrl+Shift+N)
+- Go to http://localhost:3000
+
+**Option B - Clear Site Data:**
+1. Go to http://localhost:3000
+2. Open DevTools (F12)
+3. Go to Application tab
+4. In left sidebar, click "Storage"
+5. Click "Clear site data" button
+
+**Option C - Clear Cookies Only:**
+1. Open DevTools (F12)
+2. Go to Application tab
+3. Expand "Cookies" in left sidebar
+4. Right-click "http://localhost:3000"
+5. Click "Clear"
+
+### Step 5: Test Login
+1. Go to http://localhost:3000/login
+2. Enter your credentials
+3. You should be redirected to /dashboard
+4. Check browser console (F12 → Console) for any errors
+
+### Troubleshooting
+If login still doesn't work:
+- Check console for `[Auth]` prefixed messages
+- Verify `.env.local` has correct Supabase credentials:
+  ```
+  NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+  NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+  ```
+- Try a completely different browser
+- Check Supabase dashboard to verify the user exists
+
+---
+
+## Quick Reference: How to Restart Dev Server
+
+**Date:** January 5, 2026
+
+If Claude makes code changes and you need to restart the server, just ask Claude to do it. Claude can run these commands for you:
+
+### What Claude Does:
+1. Clears the Next.js cache (`.next` folder)
+2. Starts the dev server with `npm run dev`
+3. Tells you which port to use (usually 3000 or 3001)
+
+### What You Do:
+1. Open an **incognito/private browser window** (Ctrl+Shift+N)
+2. Go to the URL Claude gives you (e.g., http://localhost:3001)
+3. Test the feature
+
+### Why Incognito?
+- Incognito mode starts fresh with no cached data
+- No old cookies or session data that might interfere
+- Easiest way to test auth changes
+
+### Common Ports:
+- **Port 3000** - Default port
+- **Port 3001** - Used when 3000 is busy (another server running)
+- **Port 3002** - Used when both 3000 and 3001 are busy
+
+### If Something Goes Wrong:
+Just tell Claude:
+- "restart the dev server"
+- "clear the cache and restart"
+- "the login still isn't working"
+
+Claude will handle the technical stuff.
+
+---
+
+## Fix: Stale Auth Data in Regular Browser (Session 2 - Continued)
+
+**Date:** January 5, 2026
+
+**Problem:** Login worked in incognito but not in regular browser. Old auth data was interfering with new sessions.
+
+**Root Cause:**
+When we switched from `createClient` (localStorage-based) to `createBrowserClient` (cookie-based), old localStorage auth tokens remained in the browser. These stale tokens were conflicting with the new cookie-based authentication.
+
+**Solution:**
+Added automatic cleanup of stale auth data:
+
+### 1. Login Page (`src/app/login/page.tsx`)
+Before attempting login, clear all stale data:
+```typescript
+const handleLogin = async (e: React.FormEvent) => {
+  // Clear any stale auth data before login attempt
+  try {
+    // Sign out first to clear any stale session
+    await supabase.auth.signOut();
+
+    // Clear old localStorage keys that might interfere
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('sb-') || key.includes('supabase')) {
+        localStorage.removeItem(key);
+      }
+    });
+  } catch (e) {
+    // Ignore cleanup errors
+  }
+
+  // Now proceed with fresh login
+  const { data, error } = await supabase.auth.signInWithPassword({...});
+};
+```
+
+### 2. AuthProvider (`src/components/auth/AuthProvider.tsx`)
+On session errors, automatically sign out and clear state:
+```typescript
+supabase.auth.getSession().then(({ data: { session }, error }) => {
+  if (error) {
+    console.error("[Auth] Session error, signing out:", error);
+    // If there's an error getting session, clear everything and start fresh
+    supabase.auth.signOut();
+    setSession(null);
+    setUser(null);
+    setLoading(false);
+    return;
+  }
+  // ... normal session handling
+});
+```
+
+**Files Modified:**
+- `src/app/login/page.tsx`
+- `src/components/auth/AuthProvider.tsx`
+
+**Result:** Users no longer need to clear browser data or use incognito. The login process automatically cleans up stale auth data before authenticating.
+
+---
+
+## Fix: Browser Caching Old JavaScript Files
+
+**Date:** January 5, 2026
+
+**Problem:** After code changes, browser still shows old console logs like `[Auth] Session check timed out`. The browser is loading cached JavaScript files (e.g., `856bac62191b018e.js`) instead of the new code.
+
+**Solution:** Hard refresh the browser to force it to load fresh JavaScript.
+
+### Method 1: Keyboard Shortcut (Fastest)
+- **Windows/Linux:** `Ctrl + Shift + R`
+- **Mac:** `Cmd + Shift + R`
+
+### Method 2: DevTools Hard Reload
+1. Open DevTools (F12)
+2. **Right-click** the refresh button (circular arrow in browser toolbar)
+3. Select **"Empty Cache and Hard Reload"**
+
+### Method 3: Disable Cache While DevTools Open
+1. Open DevTools (F12)
+2. Go to **Network** tab
+3. Check **"Disable cache"** checkbox
+4. Keep DevTools open while testing
+
+### Why This Happens
+- Browsers cache JavaScript files to load pages faster
+- File names like `856bac62191b018e.js` are hashed bundles
+- When code changes, new bundles are created with new hashes
+- But browser keeps serving old cached files until forced to refresh
+
+### Prevention
+When testing code changes:
+1. Always do `Ctrl + Shift + R` after Claude restarts the dev server
+2. Or keep DevTools open with "Disable cache" checked
+
+---
+
+## Production-Ready Auth System Rewrite
+
+**Date:** January 5, 2026
+
+**Problem:** Auth system had accumulated too many patches, timeouts, and workarounds. It was unreliable and required users to clear cache/use incognito. Not suitable for production.
+
+**Solution:** Complete rewrite with simple, standard Supabase auth pattern.
+
+### Philosophy
+- No timeouts or race conditions
+- No complex cleanup logic
+- No middleware auth blocking
+- Let Supabase handle session management
+- Simple, readable code that just works
+
+### Final Clean Architecture
+
+#### 1. Client (`src/lib/supabase/client.ts`)
+Simple singleton using standard Supabase client:
+```typescript
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+
+let supabaseClient: SupabaseClient | null = null;
+
+export function createClient(): SupabaseClient | null {
+  if (supabaseClient) return supabaseClient;
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key) return null;
+
+  supabaseClient = createSupabaseClient(url, key);
+  return supabaseClient;
+}
+```
+
+#### 2. Middleware (`src/lib/supabase/middleware.ts`)
+Pass-through only - no auth checking:
+```typescript
+export async function updateSession(request: NextRequest) {
+  return NextResponse.next({ request })
+}
+```
+
+#### 3. AuthProvider (`src/components/auth/AuthProvider.tsx`)
+Clean session management:
+```typescript
+useEffect(() => {
+  const supabase = createClient();
+  if (!supabase) { setLoading(false); return; }
+
+  // Get initial session
+  supabase.auth.getSession().then(({ data: { session } }) => {
+    setSession(session);
+    setUser(session?.user ?? null);
+    if (session?.user) fetchProfile(session.user.id).then(setProfile);
+    setLoading(false);
+  });
+
+  // Listen for changes
+  const { data: { subscription } } = supabase.auth.onAuthStateChange(
+    (_event, session) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      // ... handle profile
+      setLoading(false);
+    }
+  );
+
+  return () => subscription.unsubscribe();
+}, []);
+```
+
+#### 4. Login Page (`src/app/login/page.tsx`)
+Simple form submission:
+```typescript
+const handleLogin = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setLoading(true);
+
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    setError(error.message);
+    setLoading(false);
+    return;
+  }
+
+  router.push("/dashboard");
+  router.refresh();
+};
+```
+
+#### 5. Dashboard Layout (`src/app/dashboard/layout.tsx`)
+Simple auth guard:
+```typescript
+const { user, loading } = useAuth();
+
+useEffect(() => {
+  if (!loading && !user) router.push("/login");
+}, [user, loading, router]);
+
+if (loading || !user) return <Spinner />;
+return <DashboardContent />;
+```
+
+### Files Modified
+- `src/lib/supabase/client.ts` - Simplified to standard client
+- `src/lib/supabase/middleware.ts` - Removed all auth logic
+- `src/components/auth/AuthProvider.tsx` - Clean rewrite
+- `src/app/login/page.tsx` - Clean rewrite
+- `src/app/dashboard/layout.tsx` - Simplified
+
+### What Was Removed
+- All timeout logic
+- All localStorage cleanup hacks
+- SSR browser client complexity
+- Middleware auth checking
+- initRef and double-initialization guards
+- Complex error recovery
+
+### Result
+Simple, standard auth that:
+- Works immediately on page load
+- No cache clearing needed
+- No incognito mode needed
+- Production-ready
+- Easy to maintain
+
+---
+

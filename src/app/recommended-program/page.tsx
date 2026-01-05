@@ -5,6 +5,13 @@ export const metadata = {
   description: "See why we recommend Surgent CPA Review for CPA candidates. Featuring A.S.A.P. adaptive technology, 8,800+ practice questions, and a proven pass rate.",
 };
 
+// Surgent brand colors
+const surgentColors = {
+  primary: "#327999",    // Astral - teal blue
+  dark: "#1E3E4D",       // Blue Dianne - dark teal
+  light: "#4A9BBD",      // Lighter teal for hover states
+};
+
 export default function RecommendedProgramPage() {
   return (
     <div>
@@ -304,67 +311,94 @@ export default function RecommendedProgramPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {/* CTA Card */}
-            <div className="bg-white p-6 rounded-xl border-2 border-[var(--secondary)]">
+            {/* CTA Card - Surgent Branded */}
+            <div
+              className="p-6 rounded-xl border-2 text-white"
+              style={{
+                background: `linear-gradient(135deg, ${surgentColors.primary} 0%, ${surgentColors.dark} 100%)`,
+                borderColor: surgentColors.primary
+              }}
+            >
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-[var(--secondary)] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                {/* Surgent Logo/Branding */}
+                <div className="mb-4">
+                  <span
+                    className="text-3xl font-bold tracking-tight"
+                    style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+                  >
+                    SURGENT
+                  </span>
+                  <p className="text-sm text-white/80 mt-1">CPA Review</p>
                 </div>
-                <h3 className="text-xl font-bold text-[var(--foreground)]">
-                  Our Top Pick
-                </h3>
-                <p className="text-[var(--primary)] font-semibold mt-2">
-                  Surgent CPA Review
+                <div className="w-12 h-1 bg-white/30 mx-auto rounded-full mb-4"></div>
+                <p className="text-sm text-white/90 font-medium">
+                  Our #1 Recommended Course
                 </p>
               </div>
-              <div className="space-y-4 mb-6">
+              <div className="space-y-3 mb-6 bg-white/10 rounded-lg p-4">
                 <div className="flex justify-between text-sm">
-                  <span className="text-[var(--muted)]">Pass Rate</span>
-                  <span className="font-semibold text-[var(--foreground)]">88-92%</span>
+                  <span className="text-white/70">Pass Rate</span>
+                  <span className="font-semibold text-white">88-92%</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-[var(--muted)]">Practice Questions</span>
-                  <span className="font-semibold text-[var(--foreground)]">8,800+</span>
+                  <span className="text-white/70">Practice Questions</span>
+                  <span className="font-semibold text-white">8,800+</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-[var(--muted)]">Video Lectures</span>
-                  <span className="font-semibold text-[var(--foreground)]">350+</span>
+                  <span className="text-white/70">Video Lectures</span>
+                  <span className="font-semibold text-white">350+</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-[var(--muted)]">Access Period</span>
-                  <span className="font-semibold text-[var(--foreground)]">Unlimited</span>
+                  <span className="text-white/70">Access Period</span>
+                  <span className="font-semibold text-white">Unlimited</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[var(--muted)]">Starting Price</span>
-                  <span className="font-semibold text-[var(--foreground)]">$999</span>
+                <div className="flex justify-between text-sm border-t border-white/20 pt-3 mt-3">
+                  <span className="text-white/70">Starting At</span>
+                  <span className="font-bold text-white text-lg">$999</span>
                 </div>
               </div>
               <a
                 href="https://www.surgent.com/cpa-review/"
-                className="btn-secondary w-full text-center block mb-3"
+                className="w-full text-center block mb-3 px-6 py-3 bg-white text-[#1E3E4D] font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get Started with Surgent
+                Get Started with Surgent →
               </a>
-              <p className="text-xs text-center text-[var(--muted)]">
+              <p className="text-xs text-center text-white/60">
                 Affiliate link - see disclosure above
               </p>
             </div>
 
             {/* Special Offer */}
-            <div className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] p-6 rounded-xl text-white">
-              <h3 className="text-lg font-semibold mb-2">
-                Save on Surgent
-              </h3>
-              <p className="text-sm text-gray-200 mb-4">
-                Use promo codes at checkout for potential savings up to $700-$1,100 off. Check Surgent&apos;s website for current promotions.
+            <div
+              className="p-6 rounded-xl text-white"
+              style={{
+                background: `linear-gradient(135deg, ${surgentColors.dark} 0%, #0f2830 100%)`,
+              }}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <h3 className="text-lg font-semibold">
+                  Save on Surgent
+                </h3>
+              </div>
+              <p className="text-sm text-white/80 mb-4">
+                Use promo codes at checkout for potential savings up to <span className="font-bold text-yellow-400">$700-$1,100 off</span>. Check Surgent&apos;s website for current promotions.
               </p>
-              <p className="text-xs text-gray-300">
-                Promotions change frequently. Verify current offers on surgent.com
-              </p>
+              <a
+                href="https://www.surgent.com/cpa-review/"
+                className="text-sm font-medium text-white/90 hover:text-white flex items-center gap-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View current offers
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
 
             {/* Not Ready? */}

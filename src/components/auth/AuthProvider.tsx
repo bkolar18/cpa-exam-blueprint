@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
-import { User, Session, AuthChangeEvent } from "@supabase/supabase-js";
+import { User, Session } from "@supabase/supabase-js";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
 import type { Profile } from "@/lib/supabase/types";
 
@@ -29,7 +29,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchProfile = useCallback(async (userId: string) => {
+  const fetchProfile = useCallback(async (userId: string): Promise<Profile | null> => {
     const supabase = createClient();
     if (!supabase) return null;
 
@@ -39,10 +39,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       .eq("id", userId)
       .single();
 
-    if (error) {
-      console.error("Error fetching profile:", error);
-      return null;
-    }
+    if (error) return null;
     return data as Profile;
   }, []);
 
@@ -54,68 +51,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user, fetchProfile]);
 
   useEffect(() => {
-    console.log('[Auth] Starting auth check...');
-
-    // Check if Supabase is configured
     if (!isSupabaseConfigured()) {
-      console.log('[Auth] Supabase not configured');
       setLoading(false);
       return;
     }
 
     const supabase = createClient();
     if (!supabase) {
-      console.log('[Auth] No supabase client');
       setLoading(false);
       return;
     }
 
-    console.log('[Auth] Getting session...');
-
     // Get initial session
-    const getSession = async () => {
-      try {
-        // Timeout after 3 seconds to prevent infinite hanging
-        const timeoutPromise = new Promise<{ data: { session: null } }>((resolve) =>
-          setTimeout(() => {
-            console.log('[Auth] Session check timed out');
-            resolve({ data: { session: null } });
-          }, 3000)
-        );
-
-        const sessionPromise = supabase.auth.getSession();
-        const { data: { session } } = await Promise.race([sessionPromise, timeoutPromise]);
-        console.log('[Auth] Session result:', session ? 'logged in' : 'no session');
-        setSession(session);
-        setUser(session?.user ?? null);
-
-        if (session?.user) {
-          const profileData = await fetchProfile(session.user.id);
-          setProfile(profileData);
-        }
-      } catch (error) {
-        console.error("[Auth] Error getting session:", error);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        fetchProfile(session.user.id).then(setProfile);
       }
-
-      console.log('[Auth] Setting loading to false');
       setLoading(false);
-    };
-
-    getSession();
+    });
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (_event: AuthChangeEvent, session: Session | null) => {
+      (_event, session) => {
         setSession(session);
         setUser(session?.user ?? null);
-
         if (session?.user) {
-          const profileData = await fetchProfile(session.user.id);
-          setProfile(profileData);
+          fetchProfile(session.user.id).then(setProfile);
         } else {
           setProfile(null);
         }
-
         setLoading(false);
       }
     );

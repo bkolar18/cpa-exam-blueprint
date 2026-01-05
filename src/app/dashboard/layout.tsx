@@ -14,16 +14,11 @@ export default function DashboardLayout({
   const router = useRouter();
 
   useEffect(() => {
-    // Wait for auth to finish loading
-    if (loading) return;
-
-    // If no user, redirect to login
-    if (!user) {
+    if (!loading && !user) {
       router.push("/login");
     }
   }, [user, loading, router]);
 
-  // Show loading state while checking auth
   if (loading) {
     return (
       <div className="min-h-screen bg-[var(--card)] flex items-center justify-center">
@@ -32,7 +27,6 @@ export default function DashboardLayout({
     );
   }
 
-  // If not authenticated, show nothing (redirect is happening)
   if (!user) {
     return (
       <div className="min-h-screen bg-[var(--card)] flex items-center justify-center">
