@@ -544,3 +544,658 @@ User reports blogs not visible on deployed site.
 
 ---
 
+### Dropdown Menu Spacing Update
+
+Added more spacing between dropdown menu items for better readability:
+- Increased item padding (py-1.5 → py-2.5)
+- Added divider lines between Exam Section items
+- More space between category headers in Resources menu
+- Increased overall padding in dropdown containers
+
+**Commit:** `e991dc9` - Add more spacing to dropdown menu items
+
+---
+
+### Session Continuation (2026-01-04)
+
+**Previous Session Summary:**
+Phase 2 is now complete. All blog infrastructure, guides, and success stories have been implemented and pushed to Vercel.
+
+**Phase 2 Status: COMPLETE**
+
+| Component | Status |
+|-----------|--------|
+| Blog Infrastructure | ✅ Complete |
+| Blog Posts (4) | ✅ Complete |
+| Exam Day Walkthrough | ✅ Complete |
+| "I Failed, Now What?" Guide | ✅ Complete |
+| Success Stories (5) | ✅ Complete |
+| Header Navigation Cleanup | ✅ Complete |
+| Dropdown Spacing | ✅ Complete |
+
+**Current Site Stats:**
+- 42 total routes
+- 4 blog posts
+- 5 success stories
+- 10 state pages
+- 2 comprehensive guides
+
+**All commits pushed to Vercel:**
+- e2f6510: Phase 2 Blog, Guides, Success Stories
+- 61eed33: 3 SEO-targeted blog posts
+- 08d4465: Simplified header navigation
+- e991dc9: Dropdown menu spacing
+
+**Ready for Phase 3: Email Nurturing** (when you want to proceed)
+
+---
+
+### Phase 3 Implementation Complete (2026-01-04)
+
+All three tasks completed and pushed to Vercel.
+
+---
+
+## 1. Email Nurturing System
+
+**New Files Created:**
+
+| File | Purpose |
+|------|---------|
+| `src/lib/email/nurture-sequence.ts` | 7-email welcome sequence with HTML templates |
+| `src/lib/email/segment-content.ts` | Segment-based targeted emails |
+
+**7-Email Welcome Sequence:**
+
+| Day | Subject | Category |
+|-----|---------|----------|
+| 0 | Your CPA Study Plan is Ready! | Welcome |
+| 3 | How to Use Your First Week Wisely | Tips |
+| 7 | The MCQ Strategy Most Candidates Miss | Tips |
+| 14 | Feeling Overwhelmed? Read This. | Motivation |
+| 21 | The Review Course That Actually Works | Soft CTA |
+| 28 | How's Studying Going? (Quick Check-In) | Check-in |
+| 30 | Your Path to Passing (Final Thoughts) | Motivation |
+
+**Segment-Based Emails:**
+
+| Segment | Trigger |
+|---------|---------|
+| working-full-time | Working full time = Yes |
+| limited-hours | Hours per week <= 15 |
+| far-first | First section = FAR |
+| aud-first | First section = AUD |
+| reg-first | First section = REG |
+| retaker | Indicated retaking a section |
+
+**API Updated:**
+- `src/app/api/submit-study-plan/route.ts` now:
+  - Determines user segments from quiz answers
+  - Sends segment-specific email immediately after study plan
+  - Includes segment info in admin notification
+  - Shows nurture sequence enrollment status
+
+---
+
+## 2. New Blog Posts (4 total)
+
+All thoroughly researched with current 2025-2026 information:
+
+| Post | Category | Featured |
+|------|----------|----------|
+| AUD Section: Complete Study Guide for 2025 | section-guides | Yes |
+| REG Section: Complete Study Guide for 2025 | section-guides | No |
+| CPA Exam Changes 2026: New Licensure Pathways | news | Yes |
+| Choosing Your CPA Discipline Section: BAR vs TCP vs ISC | exam-strategy | No |
+
+**Total Blog Posts Now:** 8
+
+**Research Sources Used:**
+- Becker CPA Review
+- UWorld CPA
+- AICPA-CIMA
+- NASBA
+- Gleim Exam Prep
+- State Board websites
+
+---
+
+## 3. Expanded State Requirements (13 new states)
+
+**Original States (10):** CA, TX, NY, FL, IL, PA, OH, GA, NJ, NC
+
+**New States Added (13):** AZ, CO, WA, VA, MA, MI, MN, MO, TN, IN, WI, MD
+
+**Total States Now:** 23
+
+**Key State Highlights:**
+- **Arizona:** Requires U.S. citizenship, AICPA ethics within 2 years
+- **Minnesota:** Strict residency requirement for exam eligibility; new pathways (2025)
+- **Tennessee:** New 120-hour pathway effective Jan 2026
+- **Indiana:** Requires 2 years experience (4,000 hours) instead of 1
+- **Missouri:** Minimum age 21 required
+- **Virginia:** Requires state-specific ethics exam
+
+---
+
+## Build Stats
+
+- **Total Routes:** 58 pages
+- **Blog Posts:** 8
+- **Success Stories:** 5
+- **State Pages:** 23
+- **Guide Pages:** 2
+- **Email Templates:** 13 (7 nurture + 6 segment)
+
+---
+
+## Commit
+
+**Commit:** `1bfd1d1` - Add Phase 3: Email nurturing, new blog posts, and expanded state requirements
+
+- 8 files changed, 2,548 insertions
+
+---
+
+## Phase 3 Status: COMPLETE
+
+| Task | Status |
+|------|--------|
+| 7-email nurture sequence | ✅ Complete |
+| Segment-based emails | ✅ Complete |
+| Blog posts (4 new) | ✅ Complete |
+| State requirements (+13) | ✅ Complete |
+| Build verification | ✅ Passing |
+| Pushed to Vercel | ✅ Complete |
+
+---
+
+## Implementation Note: Email Automation
+
+The nurture sequence templates are ready in `src/lib/email/nurture-sequence.ts`. To fully automate scheduled sending:
+
+**Option 1: Vercel Cron Jobs**
+- Add `vercel.json` with cron configuration
+- Create API endpoint that queries subscribers and sends appropriate day's email
+
+**Option 2: External Service**
+- Export templates to email marketing platform (Mailchimp, ConvertKit)
+- Use their automation features for drip campaigns
+
+**Option 3: Database Integration**
+- Add Supabase for subscriber tracking
+- Store signup date, send nurture emails via scheduled function
+
+Currently, segment emails send immediately on quiz completion. The nurture sequence content is ready for whichever automation approach you choose.
+
+---
+
+### Email Automation Recommendation
+
+**Recommendation: Option 2 (External Email Marketing Service)**
+
+Here's why:
+
+**Why External Service Wins:**
+
+| Factor | External Service | Vercel Cron + DB |
+|--------|------------------|------------------|
+| Setup time | Hours | Days |
+| Scheduling | Built-in | Build yourself |
+| Deliverability | Optimized | You manage |
+| Analytics | Included | Build yourself |
+| Unsubscribe handling | Automatic | Build yourself |
+| CAN-SPAM compliance | Handled | Your responsibility |
+| Maintenance | None | Ongoing |
+
+**Recommended Platform: ConvertKit**
+
+For a CPA exam lead generation site, ConvertKit is the best fit:
+
+- **Free tier:** 10,000 subscribers (very generous)
+- **Built for creators/educators:** Not e-commerce focused like Mailchimp
+- **Visual automation builder:** Drag-and-drop sequences
+- **Tag-based segmentation:** Perfect for your segment system
+- **Landing pages included:** Bonus
+
+**How It Would Work:**
+
+1. **Keep Resend** for transactional emails (study plan delivery, score alerts)
+2. **Use ConvertKit** for nurture sequences
+3. **On quiz completion:**
+   - Resend sends immediate study plan email
+   - API call adds subscriber to ConvertKit with tags (working-full-time, far-first, etc.)
+   - ConvertKit handles the 7-email drip automatically
+
+**Simple Integration:**
+
+```typescript
+// After sending study plan via Resend
+await fetch('https://api.convertkit.com/v3/forms/{FORM_ID}/subscribe', {
+  method: 'POST',
+  body: JSON.stringify({
+    api_key: process.env.CONVERTKIT_API_KEY,
+    email: data.email,
+    tags: userSegments, // ["working-full-time", "far-first"]
+  })
+});
+```
+
+**When Option 3 (Supabase) Makes Sense:**
+
+If you're planning to add:
+- User accounts
+- Progress tracking
+- Saved study plans
+- Community features
+
+Then Supabase makes sense as foundation. But for just email automation, it's overengineering.
+
+**Bottom line:** Use the right tool for the job. Email marketing platforms have spent years perfecting drip campaigns. Let them do it.
+
+---
+
+### Student Dashboard & User Accounts Strategy
+
+**Question:** Should we add user accounts to save state, NTS data, study hours, and practice question progress?
+
+**Recommendation: Yes, absolutely.**
+
+---
+
+**Why User Accounts Make Sense:**
+
+**Current model:** Visitors come, use a tool, leave (maybe with email captured)
+
+**With accounts:** Visitors become *users* who return repeatedly over their 12-18 month CPA journey
+
+| Feature | Without Account | With Account |
+|---------|-----------------|--------------|
+| NTS Tracker | Re-enter data each visit | Saved, with notifications |
+| Study Hours | Calculate once, forget | Track actual vs planned |
+| State Requirements | Look up each time | Personalized to their state |
+| Practice Questions | No progress tracking | Scores, weak areas, history |
+| Study Plan | One-time PDF | Living document they update |
+
+---
+
+**The Business Case:**
+
+**Stickiness = Value**
+- CPA journey is 12-18 months
+- A dashboard they check weekly = 50+ visits vs 1-2
+- Engaged users are far more likely to convert on affiliate offers
+- You become their "home base" for the entire journey
+
+**Differentiation**
+Most CPA sites are:
+- Static content/comparison sites
+- OR expensive full courses ($2,000+)
+
+You'd be the **free companion tool** that actually helps them track and succeed. That's a unique position.
+
+---
+
+**What the Dashboard Could Include:**
+
+**Phase 1: Core Tracking**
+- My Profile: State, target exam date, discipline choice
+- NTS Tracker: Saved dates with email reminders
+- Study Progress: Hours logged vs planned
+- Section Status: Not started → Studying → Scheduled → Passed
+
+**Phase 2: Practice & Learning**
+- Practice Questions: By section, track scores
+- Weak Area Analysis: "Focus on governmental accounting"
+- Study Streak: Gamification (studied X days in a row)
+
+**Phase 3: Community**
+- Progress Sharing: Optional public profile
+- Leaderboards: Hours studied this week
+- Success Stories: Users share when they pass
+
+---
+
+**Recommended Tech Stack:**
+
+| Component | Tool | Why |
+|-----------|------|-----|
+| Database | Supabase (PostgreSQL) | Free tier generous, real-time capable |
+| Auth | Supabase Auth | Built-in, handles OAuth, magic links |
+| Email Marketing | ConvertKit | Still best for drip campaigns |
+| Transactional Email | Resend | Keep for immediate notifications |
+
+**Supabase Auth options:**
+- Email/password
+- Magic link (passwordless)
+- Google OAuth
+- GitHub OAuth (if targeting tech-savvy candidates)
+
+---
+
+**Data Model Sketch:**
+
+```
+users
+  - id
+  - email
+  - state_code
+  - target_date
+  - discipline_choice
+  - created_at
+
+nts_entries
+  - user_id
+  - section
+  - issue_date
+  - expiration_date
+  - status (active/used/expired)
+
+study_sessions
+  - user_id
+  - date
+  - section
+  - hours
+  - notes
+
+section_progress
+  - user_id
+  - section (FAR/AUD/REG/TCP/BAR/ISC)
+  - status (not_started/studying/scheduled/passed/failed)
+  - exam_date
+  - score
+
+practice_attempts
+  - user_id
+  - question_id
+  - selected_answer
+  - correct
+  - timestamp
+```
+
+---
+
+**Recommendation:**
+
+Yes, build the student dashboard. It transforms your site from a lead-gen tool into a genuine product that provides ongoing value.
+
+**Suggested approach:**
+1. Start with Supabase setup + basic auth
+2. Build MVP dashboard (profile, NTS tracker, section status)
+3. Add study hour logging
+4. Then tackle practice questions
+
+---
+
+### Student Dashboard Implementation Complete (2026-01-04)
+
+The student dashboard is now complete and pushed to GitHub.
+
+---
+
+## Student Dashboard Features
+
+**Authentication System:**
+- Login page (`/login`) with email/password and Google OAuth
+- Signup page (`/signup`) with email confirmation flow
+- AuthProvider context for app-wide auth state
+- Session management with middleware
+
+**Dashboard Pages:**
+- **Overview** (`/dashboard`) - Welcome stats, quick actions, recent sessions
+- **My Sections** (`/dashboard/sections`) - Track progress on all 6 CPA sections
+- **Study Log** (`/dashboard/study-log`) - Log and view study sessions with weekly stats
+- **NTS Tracker** (`/dashboard/nts`) - Manage Notice to Schedule entries with expiration alerts
+- **Practice** (`/dashboard/practice`) - Placeholder for practice questions (coming soon)
+- **Settings** (`/dashboard/settings`) - Profile and study preferences
+
+**Database Schema** (`supabase-schema.sql`):
+- `profiles` - User preferences (state, discipline, target date, weekly hours)
+- `nts_entries` - NTS tracking with status and dates
+- `study_sessions` - Study time logging by section
+- `section_progress` - Exam section status and scores
+- `practice_attempts` - Individual question tracking
+
+**Header Navigation Updated:**
+- Shows "Log In" when not authenticated
+- Shows "Dashboard" link with user icon when authenticated
+
+---
+
+## Files Created
+
+| File | Purpose |
+|------|---------|
+| `src/lib/supabase/client.ts` | Browser Supabase client |
+| `src/lib/supabase/server.ts` | Server Supabase client |
+| `src/lib/supabase/middleware.ts` | Session refresh middleware |
+| `src/lib/supabase/types.ts` | TypeScript types for database |
+| `src/middleware.ts` | Next.js middleware for auth |
+| `src/components/auth/AuthProvider.tsx` | Auth context provider |
+| `src/components/dashboard/DashboardNav.tsx` | Dashboard navigation |
+| `src/app/login/page.tsx` | Login page |
+| `src/app/signup/page.tsx` | Signup page |
+| `src/app/auth/callback/route.ts` | OAuth callback handler |
+| `src/app/dashboard/layout.tsx` | Protected dashboard layout |
+| `src/app/dashboard/page.tsx` | Dashboard overview |
+| `src/app/dashboard/sections/page.tsx` | Section progress tracker |
+| `src/app/dashboard/study-log/page.tsx` | Study session logging |
+| `src/app/dashboard/nts/page.tsx` | NTS entry management |
+| `src/app/dashboard/practice/page.tsx` | Practice questions (coming soon) |
+| `src/app/dashboard/settings/page.tsx` | User settings |
+| `supabase-schema.sql` | Database schema with RLS policies |
+
+---
+
+## Next Steps to Deploy
+
+1. **Create Supabase Project:**
+   - Go to supabase.com and create a new project
+   - Run `supabase-schema.sql` in the SQL Editor
+
+2. **Add Environment Variables to Vercel:**
+   - `NEXT_PUBLIC_SUPABASE_URL` = your project URL
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = your anon key
+
+3. **Configure Google OAuth (optional):**
+   - In Supabase Dashboard → Authentication → Providers
+   - Enable Google and add your OAuth credentials
+
+---
+
+## Commit
+
+**Commit:** `2956c1f` - Add student dashboard with Supabase authentication
+- 22 files changed, 3,222 insertions
+
+---
+
+## Build Stats
+
+- **Total Routes:** 67 pages
+- **Dashboard Pages:** 6
+- **Authentication Pages:** 2
+- **Blog Posts:** 8
+- **Success Stories:** 5
+- **State Pages:** 23
+
+---
+
+## Remaining Task
+
+- Connect existing tools (NTS Tracker, Study Hours Calculator) to save data for logged-in users
+
+---
+
+### Running the Supabase Schema
+
+If you get an error like `syntax error at or near "supabase"`, you're typing the filename instead of the SQL content.
+
+**How to run the schema:**
+
+1. Go to Supabase Dashboard → **SQL Editor** (left sidebar)
+2. Click **New Query**
+3. **Delete any existing text** in the editor
+4. **Copy and paste** the entire contents of `supabase-schema.sql`
+5. Click **Run** (or press Ctrl+Enter)
+
+You should see "Success. No rows returned" - that means it worked.
+
+**The schema creates:**
+- `profiles` table - User preferences
+- `nts_entries` table - NTS tracking
+- `study_sessions` table - Study time logging
+- `section_progress` table - Exam section status
+- `practice_attempts` table - Question tracking
+- Row Level Security policies - Users can only see their own data
+- Auto-create profile trigger - Creates profile when user signs up
+- Updated_at triggers - Auto-updates timestamps
+
+---
+
+### How to Get Supabase API Keys
+
+In your Supabase Dashboard:
+
+1. Click **Settings** (gear icon in left sidebar)
+2. Click **API** (under Configuration)
+3. You'll see two sections:
+   - **Project URL** → Copy this for `NEXT_PUBLIC_SUPABASE_URL`
+   - **Project API keys** → Copy the `anon` `public` key for `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+The anon key is the one labeled "anon" and "public" - it's safe to expose in the browser. Don't use the `service_role` key (that one should stay secret).
+
+**Add to Vercel:**
+1. Go to Vercel → your project → Settings → Environment Variables
+2. Add:
+   - `NEXT_PUBLIC_SUPABASE_URL` = your Project URL
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = your anon public key
+3. Redeploy
+
+---
+
+### Google OAuth Setup (Optional)
+
+Google OAuth requires additional setup beyond Supabase URL and anon key.
+
+**Step 1: Google Cloud Console**
+1. Go to console.cloud.google.com
+2. Create a new project (or use existing)
+3. Go to **APIs & Services** → **Credentials**
+4. Click **Create Credentials** → **OAuth client ID**
+5. Application type: **Web application**
+6. Add Authorized redirect URI:
+   ```
+   https://{your-project-id}.supabase.co/auth/v1/callback
+   ```
+7. Copy the **Client ID** and **Client Secret**
+
+**Step 2: Supabase Dashboard**
+1. Go to **Authentication** → **Providers**
+2. Find **Google** and enable it
+3. Paste your Client ID and Client Secret
+4. Save
+
+**Step 3: Configure OAuth Consent Screen** (if not done)
+1. In Google Cloud Console → **OAuth consent screen**
+2. Add your app name, support email
+3. Add authorized domain: `supabase.co`
+4. Publish the app (or keep in testing mode for now)
+
+**Recommendation:** Test email/password login first to make sure basic auth works, then add Google OAuth later.
+
+---
+
+### Fix: Email Confirmation Redirecting to Localhost
+
+If clicking the email confirmation link redirects to `localhost:3000` instead of your production site, you need to update the Site URL in Supabase.
+
+**Fix in Supabase Dashboard:**
+
+1. Go to **Authentication** → **URL Configuration**
+2. Update **Site URL** to your Vercel URL:
+   ```
+   https://cpa-exam-blueprint.vercel.app
+   ```
+   (or whatever your actual Vercel domain is)
+
+3. Add to **Redirect URLs** (allow list):
+   ```
+   https://cpa-exam-blueprint.vercel.app/**
+   ```
+
+4. Save
+
+Now when users click the email confirmation link, they'll be redirected to your production site instead of localhost.
+
+**To find your Vercel URL:**
+- Go to Vercel dashboard → your project
+- It's shown at the top (e.g., `cpa-exam-blueprint.vercel.app`)
+
+After updating, try signing up with a new email to test it.
+
+---
+
+## Dashboard Link Not Showing - Environment Variables Not Baked Into Build
+
+If you don't see "Log In" OR "Dashboard" in the header after deploying, it means the `NEXT_PUBLIC_` environment variables weren't included in the build.
+
+**Why this happens:**
+`NEXT_PUBLIC_` variables are baked into the JavaScript at **build time**, not runtime. If you added them after the original build and then just "redeployed", they won't be available to the client-side code.
+
+**To fix this:**
+
+1. Go to Vercel → your project → Deployments
+2. Click on the latest deployment
+3. Click the "..." menu → "Redeploy"
+4. **IMPORTANT:** Make sure "Use existing Build Cache" is **UNCHECKED**
+5. Click "Redeploy"
+
+This triggers a fresh build that includes your environment variables (`NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`).
+
+**How to verify it worked:**
+After the new build deploys, refresh your site - you should see either "Log In" (if not signed in) or "Dashboard" (if signed in) in the header navigation.
+
+---
+
+## Vercel Preview Shows Changes But Live Site Doesn't - Browser Caching
+
+If you see the changes in Vercel's preview but not when you open the actual page, your browser has cached the old JavaScript bundle.
+
+**Option 1: Hard refresh**
+- Windows: `Ctrl + Shift + R` or `Ctrl + F5`
+- Mac: `Cmd + Shift + R`
+
+**Option 2: Clear cache for the site**
+1. Open Developer Tools (F12)
+2. Right-click the refresh button
+3. Select "Empty Cache and Hard Reload"
+
+**Option 3: Incognito/Private window**
+Open your site in an incognito window - it won't have any cached files.
+
+---
+
+## Preview URL Works But Production URL Doesn't - Different Deployments
+
+If one URL works (e.g., `https://your-project-git-main-username.vercel.app/`) but your production URL doesn't (e.g., `https://your-project.vercel.app/`), they're pointing to different deployments.
+
+**Why this happens:**
+- The branch preview URL gets the fresh build with environment variables
+- The production domain is still pointing to an older build without them
+
+**To fix - Promote the correct deployment to production:**
+
+1. Go to Vercel → your project → **Deployments**
+2. Find the deployment that's working (the one with the fresh build)
+3. Click the **"..."** menu next to it
+4. Select **"Promote to Production"**
+
+**Alternative - Check domain settings:**
+1. Go to **Settings → Domains**
+2. Make sure your production domain is assigned to the correct deployment
+
+After promoting, your production URL should have all the latest changes.
+
+---
+

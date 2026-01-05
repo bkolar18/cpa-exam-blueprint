@@ -16,7 +16,11 @@ export async function GET(request: Request) {
     const { error } = await supabase.auth.exchangeCodeForSession(code)
 
     if (!error) {
-      return NextResponse.redirect(`${origin}${next}`)
+      // Add verified param to show success message on dashboard
+      const redirectUrl = next.includes('?')
+        ? `${origin}${next}&verified=true`
+        : `${origin}${next}?verified=true`
+      return NextResponse.redirect(redirectUrl)
     }
   }
 

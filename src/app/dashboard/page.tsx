@@ -11,7 +11,13 @@ interface StudySessionRow {
   notes: string | null;
 }
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ verified?: string }>;
+}) {
+  const params = await searchParams;
+  const isVerified = params.verified === "true";
   const supabase = await createClient();
 
   // Handle case where Supabase is not configured
@@ -65,6 +71,25 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-8">
+      {/* Email Verification Success Message */}
+      {isVerified && (
+        <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="font-semibold text-green-800">Email Verified Successfully!</h3>
+              <p className="text-green-700 text-sm">
+                Your account is now active. Welcome to CPA Exam Blueprint!
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] rounded-2xl p-8 text-white">
         <h1 className="text-3xl font-bold mb-2">
