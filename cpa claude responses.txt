@@ -3333,3 +3333,156 @@ className={`${isUnlocked ? "" : "opacity-50 grayscale-[30%]"}`}
 
 ---
 
+## Session: Hidden Achievements Debug (January 2026)
+
+### Issue
+Hidden achievements are showing full descriptions instead of "???" on the Accolades page.
+
+### Root Cause Investigation
+The `is_hidden` column in the database may not be set to `true` for hidden achievements. This could happen if:
+1. The schema was run but seed data didn't execute properly
+2. The achievements table had existing data that wasn't updated
+
+### Debug Steps Added
+
+**1. Added console logging to checker.ts:**
+```typescript
+// Debug: log hidden achievements
+const hiddenCount = (data || []).filter(a => a.is_hidden === true).length;
+console.log(`[Achievements] Total: ${data?.length}, Hidden: ${hiddenCount}`);
+```
+
+**2. User should check browser console for:**
+- `[Achievements] Total: X, Hidden: Y`
+- If Hidden: 0, the database `is_hidden` values are incorrect
+
+### Database Fix SQL
+
+Run in Supabase SQL Editor:
+
+```sql
+-- Check current is_hidden values
+SELECT code, name, is_hidden FROM achievements ORDER BY sort_order;
+
+-- Fix hidden achievements if is_hidden = false
+UPDATE achievements SET is_hidden = true WHERE code IN (
+  'accuracy_75_far', 'accuracy_75_aud', 'accuracy_75_reg', 'accuracy_75_disc',
+  'speed_demon', 'night_owl', 'early_bird', 'marathon',
+  'perfect_10', 'perfect_50', 'weekend_warrior'
+);
+```
+
+### Expected Hidden Achievements (11 total)
+| Code | Name | Description (hidden until unlocked) |
+|------|------|-------------------------------------|
+| accuracy_75_far | FAR Sharp | Score 75%+ accuracy in FAR practice |
+| accuracy_75_aud | AUD Sharp | Score 75%+ accuracy in AUD practice |
+| accuracy_75_reg | REG Sharp | Score 75%+ accuracy in REG practice |
+| accuracy_75_disc | Discipline Sharp | Score 75%+ in discipline section |
+| speed_demon | Speed Demon | 50 questions in <30 min with 70%+ |
+| night_owl | Night Owl | Study between 10 PM - 2 AM |
+| early_bird | Early Bird | Study between 5 AM - 7 AM |
+| marathon | Marathon Runner | Study 8+ hours in one day |
+| perfect_10 | Perfect 10 | Answer 10 questions correctly in a row |
+| perfect_50 | Flawless | Answer 50 questions correctly in a row |
+| weekend_warrior | Weekend Warrior | Study 10+ hours on a weekend |
+
+### Data Flow for Hidden Achievements
+1. Database `achievements` table has `is_hidden = true` for hidden achievements
+2. `getAllAchievements()` fetches with `select('*')` - includes `is_hidden`
+3. `getGamificationSummary()` computes `displayName` and `displayDescription`
+4. Accolades page passes `isHidden={achievement.is_hidden}` to component
+5. AchievementItem overrides description to "???" when `isHidden && !isUnlocked`
+
+### Files Modified
+- `src/lib/gamification/checker.ts` - Added debug logging
+- `src/app/dashboard/accolades/page.tsx` - Uses displayName/displayDescription
+
+### Debugging: Console Log Not Showing
+
+**Issue:** User doesn't see console log when reloading the page.
+
+**Cause:** Need to run the development server to see client-side console logs.
+
+**Steps to Debug:**
+1. Start dev server: `npm run dev`
+2. Go to http://localhost:3000/dashboard/accolades
+3. Open DevTools (F12) → Console tab
+4. Refresh the page
+5. Look for `[Achievements] Total: X, Hidden: Y`
+
+**If dev server is already running:**
+- Check which port it's using (usually 3000 or 3004)
+- If running old code, stop it (Ctrl+C) and restart with `npm run dev`
+
+**Note:** Production builds (npm run build) won't show console.log output unless you check the browser console while the app is running.
+
+### Restarting Dev Server
+
+**Commands used to kill and restart:**
+
+```powershell
+# Find process on port 3000
+netstat -ano | findstr :3000
+
+# Kill the process (PID 4352 in this case)
+powershell.exe -Command "Stop-Process -Id 4352 -Force"
+
+# Remove stale lock file if needed
+rm "C:\...\cpa-exam-blueprint\.next\dev\lock"
+
+# Start dev server
+npm run dev
+```
+
+**Result:** Dev server running at http://localhost:3000
+
+### Testing on Vercel vs Localhost
+
+**Issue:** User testing on Vercel URL, but latest debug code hasn't been deployed.
+
+**Option 1: Deploy to Vercel**
+```bash
+npx vercel --prod --yes
+```
+
+**Option 2 (Faster): Check database directly in Supabase SQL Editor**
+
+Check if is_hidden is set correctly:
+```sql
+SELECT code, name, is_hidden FROM achievements WHERE is_hidden = true;
+```
+
+If returns 0 rows, run the fix:
+```sql
+UPDATE achievements SET is_hidden = true WHERE code IN (
+  'accuracy_75_far', 'accuracy_75_aud', 'accuracy_75_reg', 'accuracy_75_disc',
+  'speed_demon', 'night_owl', 'early_bird', 'marathon',
+  'perfect_10', 'perfect_50', 'weekend_warrior'
+);
+```
+
+### Verify Hidden Achievements Query
+
+Run this query to confirm hidden achievements are properly marked:
+```sql
+SELECT code, name, is_hidden FROM achievements WHERE is_hidden = true;
+```
+
+**Expected result:** 11 rows returned:
+- accuracy_75_far (FAR Sharp)
+- accuracy_75_aud (AUD Sharp)
+- accuracy_75_reg (REG Sharp)
+- accuracy_75_disc (Discipline Sharp)
+- speed_demon (Speed Demon)
+- night_owl (Night Owl)
+- early_bird (Early Bird)
+- marathon (Marathon Runner)
+- perfect_10 (Perfect 10)
+- perfect_50 (Flawless)
+- weekend_warrior (Weekend Warrior)
+
+If 0 rows returned, the is_hidden column wasn't set correctly and needs the UPDATE query above.
+
+---
+

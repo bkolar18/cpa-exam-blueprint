@@ -68,6 +68,9 @@ export default function AccoladesPage() {
 
       try {
         const summary = await getGamificationSummary(user.id);
+        // Debug: check is_hidden values
+        const hiddenAchievements = summary?.achievements.list.filter((a: { is_hidden?: boolean }) => a.is_hidden === true);
+        console.log('[Accolades] Hidden achievements:', hiddenAchievements?.length, hiddenAchievements?.map((a: { code?: string }) => a.code));
         setData(summary);
       } catch (error) {
         console.error("Error loading accolades:", error);
@@ -261,11 +264,12 @@ export default function AccoladesPage() {
                   {achievements.map((achievement) => (
                     <AchievementItem
                       key={achievement.id}
-                      name={achievement.name}
-                      description={achievement.description}
+                      name={achievement.displayName}
+                      description={achievement.displayDescription}
                       tier={achievement.tier}
                       points={achievement.points}
                       isUnlocked={achievement.isUnlocked}
+                      isHidden={achievement.is_hidden}
                       unlockedAt={achievement.unlockedAt}
                     />
                   ))}

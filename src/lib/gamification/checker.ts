@@ -44,6 +44,10 @@ export async function getAllAchievements(): Promise<Achievement[]> {
     return [];
   }
 
+  // Debug: log hidden achievements
+  const hiddenCount = (data || []).filter(a => a.is_hidden === true).length;
+  console.log(`[Achievements] Total: ${data?.length}, Hidden: ${hiddenCount}`);
+
   return data || [];
 }
 
