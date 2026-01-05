@@ -3237,6 +3237,18 @@ When user logs a study session:
 
 ---
 
+## All Achievements Visible Update (2026-01-05)
+
+**Commit:** `d5bdca4` - Show all achievements with full details from the start
+
+Changed achievements to be fully visible from the start - users can see the title AND description for all achievements, whether completed or not. This lets users know exactly what they need to do to unlock each achievement.
+
+- Removed `isHidden` prop from AchievementItem component
+- All achievements show full name and description
+- Completed = green highlight, Incomplete = grayed out
+
+---
+
 ## Achievement Display Update (2026-01-05)
 
 **Commit:** `4579aca` - Update achievements display: show title with ??? description for hidden, green highlight for completed
