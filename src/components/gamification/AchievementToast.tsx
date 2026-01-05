@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { TIER_CONFIG, type AchievementNotification } from "@/lib/gamification/types";
+import { TIER_CONFIG, type AchievementNotification, type BadgeAchievementNotification } from "@/lib/gamification/types";
 
 interface AchievementToastProps {
   notification: AchievementNotification;
@@ -17,9 +17,17 @@ export function AchievementToast({
   const [isVisible, setIsVisible] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
 
-  const tierConfig = TIER_CONFIG[notification.item.tier];
+  // Handle streak notifications differently
+  const isStreak = notification.type === "streak";
+  const tierConfig = isStreak
+    ? { color: "#F97316", bgColor: "rgba(249, 115, 22, 0.1)", borderColor: "rgba(249, 115, 22, 0.3)" }
+    : TIER_CONFIG[(notification as BadgeAchievementNotification).item.tier];
   const isAchievement = notification.type === "achievement";
-  const title = isAchievement ? "Achievement Unlocked!" : "Badge Earned!";
+  const title = isStreak
+    ? `${notification.streakDays} Day Study Streak!`
+    : isAchievement
+    ? "Achievement Unlocked!"
+    : "Badge Earned!";
 
   useEffect(() => {
     // Animate in
@@ -63,34 +71,43 @@ export function AchievementToast({
             className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
             style={{ backgroundColor: tierConfig.bgColor, border: `2px solid ${tierConfig.color}` }}
           >
-            <span className="text-2xl">{isAchievement ? "🏆" : "🎖️"}</span>
+            <span className="text-2xl">{isStreak ? "🔥" : isAchievement ? "🏆" : "🎖️"}</span>
           </div>
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
-              <span
-                className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded"
-                style={{ backgroundColor: tierConfig.color, color: "#000" }}
-              >
-                {notification.item.tier}
-              </span>
-              <span className="text-xs text-[var(--muted-foreground)]">
-                +{notification.pointsEarned} pts
-              </span>
-            </div>
-
-            <p className="text-sm font-medium text-[var(--muted-foreground)] mb-0.5">
-              {title}
-            </p>
+            {!isStreak && (
+              <div className="flex items-center gap-2 mb-1">
+                <span
+                  className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded"
+                  style={{ backgroundColor: tierConfig.color, color: "#000" }}
+                >
+                  {(notification as BadgeAchievementNotification).item.tier}
+                </span>
+                <span className="text-xs text-[var(--muted-foreground)]">
+                  +{(notification as BadgeAchievementNotification).pointsEarned} pts
+                </span>
+              </div>
+            )}
 
             <h4 className="font-bold text-[var(--foreground)] truncate">
-              {notification.item.name}
+              {title}
             </h4>
 
-            <p className="text-sm text-[var(--muted-foreground)] line-clamp-2 mt-1">
-              {notification.item.description}
-            </p>
+            {isStreak ? (
+              <p className="text-sm text-[var(--muted-foreground)] mt-1">
+                Way to go! Keep up the great work!
+              </p>
+            ) : (
+              <>
+                <p className="text-sm font-medium text-[var(--muted-foreground)] mb-0.5">
+                  {(notification as BadgeAchievementNotification).item.name}
+                </p>
+                <p className="text-sm text-[var(--muted-foreground)] line-clamp-2 mt-1">
+                  {(notification as BadgeAchievementNotification).item.description}
+                </p>
+              </>
+            )}
           </div>
 
           {/* Close button */}
@@ -132,10 +149,17 @@ export function AchievementToastContainer({
   notifications,
   onDismiss,
 }: AchievementToastContainerProps) {
+  const getNotificationKey = (notification: AchievementNotification, index: number): string => {
+    if (notification.type === "streak") {
+      return `streak-${notification.streakDays}-${index}`;
+    }
+    return `${(notification as BadgeAchievementNotification).item.code}-${index}`;
+  };
+
   return (
     <div className="fixed top-4 right-4 z-50 flex flex-col gap-3 max-w-sm w-full pointer-events-none">
       {notifications.map((notification, index) => (
-        <div key={`${notification.item.code}-${index}`} className="pointer-events-auto">
+        <div key={getNotificationKey(notification, index)} className="pointer-events-auto">
           <AchievementToast
             notification={notification}
             onClose={() => onDismiss(index)}

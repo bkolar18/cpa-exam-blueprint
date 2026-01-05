@@ -171,12 +171,13 @@ export default function QuizResults({
                   </div>
                   <p className="text-sm text-[var(--foreground)] line-clamp-2">{result.question.question}</p>
                   <div className="mt-2 text-xs">
-                    <span className={result.isCorrect ? 'text-green-700' : 'text-red-700'}>
-                      Your answer: {result.selectedAnswer}
-                    </span>
-                    {!result.isCorrect && (
-                      <span className="text-green-700 ml-3">
-                        Correct: {result.question.correctAnswer}
+                    {result.isCorrect ? (
+                      <span className="text-green-700">
+                        {result.selectedAnswer}. {result.question.options[result.selectedAnswer]}
+                      </span>
+                    ) : (
+                      <span className="text-green-700">
+                        Correct Answer: {result.question.correctAnswer}. {result.question.options[result.question.correctAnswer]}
                       </span>
                     )}
                   </div>

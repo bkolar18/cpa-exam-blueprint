@@ -3636,3 +3636,158 @@ If 0 rows returned, the is_hidden column wasn't set correctly and needs the UPDA
 
 ---
 
+
+## Session: Achievement Tracking & Dashboard UX Improvements
+
+### Achievement Tracking Enabled (Commit: 3e181af)
+
+Fixed achievement tracking across all user actions. Previously, achievements weren't being triggered because the pages weren't calling the achievement check functions.
+
+**Changes Made:**
+
+1. **Settings Page** (`src/app/dashboard/settings/page.tsx`):
+   - Now triggers `onProfileUpdated()` when settings are saved
+   - Unlocks "Profile Complete" achievement when all fields filled
+   - Unlocks "Discipline Chosen" achievement when discipline selected
+
+2. **NTS Page** (`src/app/dashboard/nts/page.tsx`):
+   - Now triggers `onNTSAdded()` when creating a new NTS entry
+   - Unlocks first NTS achievement
+
+3. **Sections Page** (`src/app/dashboard/sections/page.tsx`):
+   - Now triggers `onSectionUpdated()` when updating section progress
+   - Tracks section milestones
+
+4. **Practice Quizzes** (`src/app/dashboard/practice/[section]/page.tsx`):
+   - Already had `onStudySessionLogged()` 
+   - Added `onPracticeSessionCompleted()` for practice-specific achievements
+
+5. **New Helper Hooks** in `AchievementProvider.tsx`:
+   - `useProfileAchievements()` - for profile updates
+   - `useNTSAchievements()` - for NTS additions
+   - `useSectionAchievements()` - for section updates
+
+---
+
+### Study Plan CTA Update (Commit: 3ad1e88)
+
+Updated `/study-plan` page to include CPA Academy signup option.
+
+**Changes:**
+- Added "Sign Up for CPA Academy" as primary CTA button
+- Kept "See Our Recommendation" as secondary button
+- Buttons display side-by-side on desktop, stacked on mobile
+- Updated description: "Track your progress and unlock achievements with CPA Academy, or see the review program we recommend."
+
+---
+
+### Dashboard UX & Practice Session Debug (Commit: e9e9b20)
+
+**1. Dashboard Practice Button:**
+- Added "Start Practice Session" link in Recent Study Sessions header
+- Added "Start Practice Quiz" button in empty state
+
+**2. Achievement Toast Transparency Fix:**
+- Changed from semi-transparent gradient to solid white background
+- `bg-white` class added with gradient overlay
+- Text now readable against any background
+
+**3. Practice Session Logging Debug:**
+Added detailed console logging to identify why practice sessions aren't being saved to study log:
+- `logPracticeSession called` - confirms function runs
+- `No user/supabase` - identifies auth issues
+- `Attempting to insert study session:` - shows data being saved
+- `Database error logging study session:` - shows Supabase errors
+- `Study session logged successfully:` - confirms success
+
+**Debugging Steps:**
+1. Open browser DevTools (F12)
+2. Go to Console tab
+3. Complete a practice quiz
+4. Check for error messages
+
+**Likely Issues:**
+- RLS (Row Level Security) policies in Supabase
+- `topics_covered` column data type mismatch
+- User session not active
+
+---
+
+## Practice Session Logging Bug Fix
+
+### Root Cause Identified
+
+Error from browser console:
+```
+POST https://...supabase.co/rest/v1/study_sessions?select=* 400 (Bad Request)
+Database error: {code: '42702', message: 'column reference "current_streak" is ambiguous'}
+```
+
+**Problem:** In `supabase-gamification-schema.sql`, the `update_study_streak()` function has a local variable named `current_streak` that conflicts with the `profiles.current_streak` column.
+
+Line 284 declares: `current_streak INTEGER;`
+Line 317 sets: `current_streak = current_streak,` — PostgreSQL can't tell which is which.
+
+### Fix
+
+Run this SQL in Supabase SQL Editor:
+
+```sql
+-- Drop the existing trigger first
+DROP TRIGGER IF EXISTS on_study_session_added ON study_sessions;
+
+-- Replace the function with fixed variable names
+CREATE OR REPLACE FUNCTION update_study_streak()
+RETURNS TRIGGER AS $$
+DECLARE
+  v_last_date DATE;
+  v_current_streak INTEGER;
+  v_longest INTEGER;
+BEGIN
+  -- Get user's last study date and current streak
+  SELECT last_study_date, current_streak, longest_streak
+  INTO v_last_date, v_current_streak, v_longest
+  FROM profiles
+  WHERE id = NEW.user_id;
+
+  -- Calculate new streak
+  IF v_last_date IS NULL OR NEW.date > v_last_date + INTERVAL '1 day' THEN
+    v_current_streak := 1;
+  ELSIF NEW.date = v_last_date + INTERVAL '1 day' THEN
+    v_current_streak := v_current_streak + 1;
+  ELSIF NEW.date = v_last_date THEN
+    NULL;
+  ELSE
+    NULL;
+  END IF;
+
+  -- Update longest streak if needed
+  IF v_current_streak > COALESCE(v_longest, 0) THEN
+    v_longest := v_current_streak;
+  END IF;
+
+  -- Update profile
+  UPDATE profiles
+  SET
+    last_study_date = GREATEST(last_study_date, NEW.date),
+    current_streak = v_current_streak,
+    longest_streak = v_longest
+  WHERE id = NEW.user_id;
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Recreate the trigger
+CREATE TRIGGER on_study_session_added
+  AFTER INSERT ON study_sessions
+  FOR EACH ROW EXECUTE FUNCTION update_study_streak();
+```
+
+**Note:** Supabase warns this is "destructive" but it's safe:
+- Only modifies function/trigger definitions
+- Does NOT delete any tables or user data
+- The current function is broken anyway (causing 400 errors)
+- Fix just renames variables to avoid ambiguity (prefixed with `v_`)
+
+---

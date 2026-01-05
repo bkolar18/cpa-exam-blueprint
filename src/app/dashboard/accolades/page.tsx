@@ -95,11 +95,32 @@ export default function AccoladesPage() {
     );
   }
 
-  // Filter badges by section
-  const sections = ["all", "FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
+  // Filter badges by section - only show user's discipline, not all three
+  const disciplineSections = ["TCP", "BAR", "ISC"];
+  const userDiscipline = profile?.discipline_choice;
+  const sections = [
+    "all",
+    "FAR",
+    "AUD",
+    "REG",
+    // Only include the user's chosen discipline, or none if not chosen yet
+    ...(userDiscipline ? [userDiscipline] : []),
+  ];
+
+  // When "all" is selected, only show core sections + user's discipline (not all disciplines)
   const filteredBadges =
     sectionFilter === "all"
-      ? data.badges.list
+      ? data.badges.list.filter((b) => {
+          // Core sections always shown
+          if (!b.requirement_section || ["FAR", "AUD", "REG"].includes(b.requirement_section)) {
+            return true;
+          }
+          // Only show user's chosen discipline badges
+          if (userDiscipline && b.requirement_section === userDiscipline) {
+            return true;
+          }
+          return false;
+        })
       : data.badges.list.filter((b) => b.requirement_section === sectionFilter);
 
   // Group achievements by tier

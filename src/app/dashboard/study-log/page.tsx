@@ -95,11 +95,15 @@ export default function StudyLogPage() {
     }
   };
 
-  // Helper function to format hours (show 0 instead of 0.0)
-  const formatHours = (hours: number): string => {
-    if (hours === 0) return "0";
-    if (hours % 1 === 0) return hours.toString();
-    return hours.toFixed(1);
+  // Helper function to format hours (show minutes if under 1 hour)
+  const formatTime = (hours: number): string => {
+    if (hours === 0) return "0h";
+    if (hours < 1) {
+      const minutes = Math.round(hours * 60);
+      return `${minutes}m`;
+    }
+    if (hours % 1 === 0) return `${hours}h`;
+    return `${hours.toFixed(1)}h`;
   };
 
   // Calculate weekly stats
@@ -153,11 +157,11 @@ export default function StudyLogPage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl border border-[var(--border)] p-5">
           <p className="text-sm text-[var(--muted)]">This Week</p>
-          <p className="text-2xl font-bold text-[var(--primary)]">{formatHours(weeklyHours)}h</p>
+          <p className="text-2xl font-bold text-[var(--primary)]">{formatTime(weeklyHours)}</p>
         </div>
         <div className="bg-white rounded-xl border border-[var(--border)] p-5">
           <p className="text-sm text-[var(--muted)]">Total Hours</p>
-          <p className="text-2xl font-bold text-green-600">{formatHours(totalHours)}h</p>
+          <p className="text-2xl font-bold text-green-600">{formatTime(totalHours)}</p>
         </div>
         <div className="bg-white rounded-xl border border-[var(--border)] p-5">
           <p className="text-sm text-[var(--muted)]">Sessions This Week</p>
@@ -166,7 +170,7 @@ export default function StudyLogPage() {
         <div className="bg-white rounded-xl border border-[var(--border)] p-5">
           <p className="text-sm text-[var(--muted)]">Avg Per Session</p>
           <p className="text-2xl font-bold text-orange-600">
-            {sessions.length > 0 ? formatHours(totalHours / sessions.length) : 0}h
+            {sessions.length > 0 ? formatTime(totalHours / sessions.length) : "0h"}
           </p>
         </div>
       </div>
@@ -276,7 +280,7 @@ export default function StudyLogPage() {
                       Week of {weekDate.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                     </h3>
                     <span className="text-sm font-semibold text-[var(--primary)]">
-                      {weekTotal.toFixed(1)} hours
+                      {formatTime(weekTotal)}
                     </span>
                   </div>
                   <div className="space-y-3">
@@ -291,7 +295,9 @@ export default function StudyLogPage() {
                           </div>
                           <div>
                             <p className="font-medium text-[var(--foreground)]">
-                              {Number(session.hours).toFixed(1)} hours
+                              {Number(session.hours) < 1
+                                ? `${Math.round(Number(session.hours) * 60)} minutes`
+                                : `${Number(session.hours).toFixed(1)} hours`}
                             </p>
                             <p className="text-sm text-[var(--muted)]">
                               {new Date(session.date).toLocaleDateString("en-US", {

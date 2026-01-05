@@ -135,8 +135,17 @@ export default function SectionPracticePage() {
       console.log('Study session logged successfully:', data);
       setStudySessionLogged(true);
 
-      // Trigger achievement checks
-      await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, durationHours));
+      // Fetch updated profile to get current streak
+      const { data: profileData } = await supabase
+        .from('profiles')
+        .select('current_streak')
+        .eq('id', user.id)
+        .single();
+
+      const currentStreak = profileData?.current_streak || 0;
+
+      // Trigger achievement checks and show streak notification if streak > 0
+      await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, durationHours), currentStreak > 0, currentStreak);
       await onPracticeSessionCompleted(section as DBSectionCode, correctCount, quizResults.length);
     } catch (error) {
       console.error('Failed to log study session:', error);

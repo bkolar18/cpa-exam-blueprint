@@ -18,7 +18,7 @@ interface StudySessionRow {
 export default function DashboardPage() {
   const searchParams = useSearchParams();
   const isVerified = searchParams.get("verified") === "true";
-  const { user, profile, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
   const [sectionProgress, setSectionProgress] = useState<{ status: string }[]>([]);
   const [recentSessions, setRecentSessions] = useState<StudySessionRow[]>([]);
   const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
@@ -39,6 +39,9 @@ export default function DashboardPage() {
       setLoading(false);
       return;
     }
+
+    // Refresh profile to get latest streak data
+    await refreshProfile();
 
     // Fetch section progress
     const { data: progressData } = await supabase
@@ -68,9 +71,13 @@ export default function DashboardPage() {
     setLoading(false);
   };
 
-  // Helper function to format hours (show 0 instead of 0.0)
+  // Helper function to format hours (show minutes if under 1 hour)
   const formatHours = (hours: number): string => {
     if (hours === 0) return "0";
+    if (hours < 1) {
+      const minutes = Math.round(hours * 60);
+      return `${minutes}m`;
+    }
     if (hours % 1 === 0) return hours.toString();
     return hours.toFixed(1);
   };
@@ -154,7 +161,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           label="This Week"
-          value={`${formatHours(weeklyHours)}h`}
+          value={weeklyHours < 1 && weeklyHours > 0 ? formatHours(weeklyHours) : `${formatHours(weeklyHours)}h`}
           sublabel={profile?.weekly_study_hours ? `Goal: ${profile.weekly_study_hours}h` : "Set a goal"}
           color="blue"
         />
@@ -172,8 +179,8 @@ export default function DashboardPage() {
         />
         <StatCard
           label="Study Streak"
-          value="0 days"
-          sublabel="Log a session"
+          value={`${profile?.current_streak || 0} days`}
+          sublabel={profile?.longest_streak ? `Best: ${profile.longest_streak} days` : "Log a session"}
           color="orange"
         />
       </div>
@@ -241,7 +248,11 @@ export default function DashboardPage() {
                     <span className="text-sm font-bold text-[var(--primary)]">{session.section}</span>
                   </div>
                   <div>
-                    <p className="font-medium text-[var(--foreground)]">{session.hours} hours</p>
+                    <p className="font-medium text-[var(--foreground)]">
+                      {session.hours < 1
+                        ? `${Math.round(session.hours * 60)} minutes`
+                        : `${session.hours} hours`}
+                    </p>
                     <p className="text-sm text-[var(--muted)]">{new Date(session.date).toLocaleDateString()}</p>
                   </div>
                 </div>

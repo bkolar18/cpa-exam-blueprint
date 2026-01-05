@@ -56,6 +56,7 @@ interface AchievementContextType {
   loading: boolean;
   triggerCheck: (context: Omit<AchievementCheckContext, "userId">) => Promise<void>;
   refreshSummary: () => Promise<void>;
+  showStreakNotification: (streakDays: number) => void;
 }
 
 const AchievementContext = createContext<AchievementContextType>({
@@ -64,6 +65,7 @@ const AchievementContext = createContext<AchievementContextType>({
   loading: true,
   triggerCheck: async () => {},
   refreshSummary: async () => {},
+  showStreakNotification: () => {},
 });
 
 export function AchievementProvider({ children }: { children: React.ReactNode }) {
@@ -122,6 +124,14 @@ export function AchievementProvider({ children }: { children: React.ReactNode })
     setNotifications((prev) => prev.filter((_, i) => i !== index));
   }, []);
 
+  // Show streak notification
+  const showStreakNotification = useCallback((streakDays: number) => {
+    setNotifications((prev) => [
+      ...prev,
+      { type: "streak" as const, streakDays },
+    ]);
+  }, []);
+
   return (
     <AchievementContext.Provider
       value={{
@@ -130,6 +140,7 @@ export function AchievementProvider({ children }: { children: React.ReactNode })
         loading,
         triggerCheck,
         refreshSummary,
+        showStreakNotification,
       }}
     >
       {children}
@@ -151,21 +162,29 @@ export function useAchievements() {
 
 // Helper hook for triggering study session achievements
 export function useStudySessionAchievements() {
-  const { triggerCheck } = useAchievements();
+  const { triggerCheck, refreshSummary, showStreakNotification } = useAchievements();
 
   const onStudySessionLogged = useCallback(
-    async (section: SectionCode, hours: number) => {
+    async (section: SectionCode, hours: number, showStreak: boolean = false, streakDays: number = 0) => {
       await triggerCheck({
         trigger: "study_session",
         section,
         hours,
         sessionTime: new Date(),
       });
+
+      // Refresh summary to get updated data
+      await refreshSummary();
+
+      // Show streak notification if requested
+      if (showStreak && streakDays > 0) {
+        showStreakNotification(streakDays);
+      }
     },
-    [triggerCheck]
+    [triggerCheck, refreshSummary, showStreakNotification]
   );
 
-  return { onStudySessionLogged };
+  return { onStudySessionLogged, showStreakNotification };
 }
 
 // Helper hook for triggering practice session achievements

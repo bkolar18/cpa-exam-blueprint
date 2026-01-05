@@ -168,9 +168,16 @@ export interface AchievementCheckContext {
 }
 
 // Notification types
-export interface AchievementNotification {
+export interface BadgeAchievementNotification {
   type: 'badge' | 'achievement';
   item: Badge | Achievement;
   pointsEarned: number;
   isHidden: boolean;
 }
+
+export interface StreakNotification {
+  type: 'streak';
+  streakDays: number;
+}
+
+export type AchievementNotification = BadgeAchievementNotification | StreakNotification;
