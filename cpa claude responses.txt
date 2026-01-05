@@ -3791,3 +3791,23 @@ CREATE TRIGGER on_study_session_added
 - Fix just renames variables to avoid ambiguity (prefixed with `v_`)
 
 ---
+
+## Study Plan Email Not Sending (January 2026)
+
+**Issue:** User submitted study plan with email but didn't receive anything.
+
+**Finding:** The email system is already fully built in `src/app/api/submit-study-plan/route.ts`. It sends:
+1. A nicely formatted study plan email with section order, schedule, timeline, and tips
+2. A segment-specific follow-up email based on user profile
+3. An admin notification
+
+**Root Cause:** The `from` address is using `onboarding@resend.dev` - Resend's sandbox domain. In sandbox mode, emails only deliver to the email address verified on the Resend account. It won't send to arbitrary addresses.
+
+**Solution:**
+1. Add a custom domain in Resend (like `noreply@cpaexamblueprint.com`)
+2. Verify the DNS records Resend provides
+3. Update the `from` address in the code to use the verified domain
+
+**Alternatively:** If testing with the same email verified on the Resend account, check spam folder.
+
+---
