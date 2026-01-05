@@ -5,22 +5,23 @@ import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
 import type { PracticeAttempt, SectionCode } from "@/lib/supabase/types";
 import Link from "next/link";
+import { sectionHasQuestions, getQuestionCount } from "@/lib/data/practice-questions";
 
 const sections: { code: SectionCode; name: string; topics: string[] }[] = [
   {
     code: "FAR",
     name: "Financial Accounting & Reporting",
-    topics: ["Conceptual Framework", "Financial Statements", "Government Accounting", "Non-profit Accounting"],
+    topics: ["Conceptual Framework", "Financial Statements", "Revenue Recognition", "Government Accounting"],
   },
   {
     code: "AUD",
     name: "Auditing & Attestation",
-    topics: ["Ethics & Independence", "Risk Assessment", "Evidence & Procedures", "Reporting"],
+    topics: ["Ethics & Independence", "Risk Assessment", "Audit Evidence", "Audit Reports"],
   },
   {
     code: "REG",
     name: "Regulation",
-    topics: ["Individual Taxation", "Business Taxation", "Business Law", "Ethics"],
+    topics: ["Individual Taxation", "Business Taxation", "Business Law", "Federal Tax Procedures"],
   },
   {
     code: "TCP",
@@ -46,7 +47,7 @@ export default function PracticePage() {
   const supabase = createClient();
 
   useEffect(() => {
-    if (authLoading) return; // Wait for auth to finish
+    if (authLoading) return;
     if (user) {
       fetchAttempts();
     } else {
@@ -72,7 +73,6 @@ export default function PracticePage() {
     setLoading(false);
   };
 
-  // Calculate stats per section (each attempt is a single question)
   const getSectionStats = (sectionCode: SectionCode) => {
     const sectionAttempts = attempts.filter((a) => a.section === sectionCode);
     if (sectionAttempts.length === 0) {
@@ -86,19 +86,19 @@ export default function PracticePage() {
     return { totalQuestions, correctAnswers, accuracy };
   };
 
-  // Get recent attempts
   const recentAttempts = attempts.slice(0, 5);
-
-  // Overall stats (each attempt is a single question)
   const totalQuestions = attempts.length;
   const totalCorrect = attempts.filter((a) => a.is_correct).length;
   const overallAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
 
-  // Filter sections based on discipline choice
   const disciplineChoice = profile?.discipline_choice;
   const visibleSections = sections.filter(
     (s) => ["FAR", "AUD", "REG"].includes(s.code) || s.code === disciplineChoice || !disciplineChoice
   );
+
+  // Count sections with available questions
+  const availableSections = visibleSections.filter(s => sectionHasQuestions(s.code));
+  const totalAvailableQuestions = availableSections.reduce((acc, s) => acc + getQuestionCount(s.code), 0);
 
   if (loading) {
     return (
@@ -116,14 +116,14 @@ export default function PracticePage() {
         <p className="text-[var(--muted)]">Test your knowledge and track your progress</p>
       </div>
 
-      {/* Coming Soon Banner */}
-      <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] rounded-2xl p-8 text-white">
+      {/* Practice Banner */}
+      <div className="bg-gradient-to-r from-[var(--primary)] to-blue-600 rounded-2xl p-8 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-bold mb-2">Practice Booklets Coming Soon!</h2>
+            <h2 className="text-2xl font-bold mb-2">Practice Booklets Now Available!</h2>
             <p className="text-white/80 max-w-xl">
-              We&apos;re building comprehensive practice question sets for each CPA exam section.
-              Get notified when they&apos;re ready.
+              {totalAvailableQuestions} practice questions across {availableSections.length} sections.
+              Start practicing FAR, AUD, and REG today. More sections coming soon!
             </p>
           </div>
           <div className="hidden md:block">
@@ -159,21 +159,36 @@ export default function PracticePage() {
           {visibleSections.map((section) => {
             const stats = getSectionStats(section.code);
             const isCore = ["FAR", "AUD", "REG"].includes(section.code);
+            const hasQuestions = sectionHasQuestions(section.code);
+            const questionCount = getQuestionCount(section.code);
 
             return (
               <div
                 key={section.code}
-                className="bg-white rounded-xl border border-[var(--border)] p-5 hover:border-[var(--primary)] transition-colors"
+                className={`bg-white rounded-xl border p-5 transition-all duration-200 ${
+                  hasQuestions
+                    ? "border-[var(--border)] hover:border-[var(--primary)] hover:shadow-md"
+                    : "border-[var(--border)] opacity-75"
+                }`}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-[var(--primary)] rounded-xl flex items-center justify-center">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                    hasQuestions ? "bg-[var(--primary)]" : "bg-gray-300"
+                  }`}>
                     <span className="text-white font-bold">{section.code}</span>
                   </div>
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    isCore ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"
-                  }`}>
-                    {isCore ? "Core" : "Discipline"}
-                  </span>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className={`px-2 py-1 rounded text-xs font-medium ${
+                      isCore ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"
+                    }`}>
+                      {isCore ? "Core" : "Discipline"}
+                    </span>
+                    {hasQuestions && (
+                      <span className="text-xs text-green-600 font-medium">
+                        {questionCount} questions
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 <h3 className="font-semibold text-[var(--foreground)] mb-1">{section.code}</h3>
@@ -197,16 +212,30 @@ export default function PracticePage() {
                   </div>
                 ) : (
                   <div className="text-center py-4">
-                    <p className="text-sm text-[var(--muted)]">No attempts yet</p>
+                    <p className="text-sm text-[var(--muted)]">
+                      {hasQuestions ? "No attempts yet" : "Questions coming soon"}
+                    </p>
                   </div>
                 )}
 
-                <button
-                  disabled
-                  className="w-full mt-4 px-4 py-2 bg-gray-100 text-gray-400 rounded-lg cursor-not-allowed text-sm"
-                >
-                  Coming Soon
-                </button>
+                {hasQuestions ? (
+                  <Link
+                    href={`/dashboard/practice/${section.code.toLowerCase()}`}
+                    className="w-full mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded-lg text-sm font-medium hover:bg-[var(--primary-dark)] transition-colors flex items-center justify-center"
+                  >
+                    Start Practice
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                ) : (
+                  <button
+                    disabled
+                    className="w-full mt-4 px-4 py-2 bg-gray-100 text-gray-400 rounded-lg cursor-not-allowed text-sm"
+                  >
+                    Coming Soon
+                  </button>
+                )}
               </div>
             );
           })}
@@ -215,15 +244,20 @@ export default function PracticePage() {
 
       {/* Topics Preview */}
       <div className="bg-white rounded-xl border border-[var(--border)] p-6">
-        <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Topics We&apos;ll Cover</h2>
+        <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Topics Covered</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleSections.map((section) => (
+          {visibleSections.filter(s => sectionHasQuestions(s.code)).map((section) => (
             <div key={section.code}>
-              <h3 className="font-medium text-[var(--foreground)] mb-2">{section.code}</h3>
-              <ul className="space-y-1">
+              <h3 className="font-medium text-[var(--foreground)] mb-2 flex items-center">
+                <span className="w-8 h-8 bg-[var(--primary)] text-white rounded-lg flex items-center justify-center text-xs font-bold mr-2">
+                  {section.code}
+                </span>
+                {section.name}
+              </h3>
+              <ul className="space-y-1 ml-10">
                 {section.topics.map((topic) => (
                   <li key={topic} className="text-sm text-[var(--muted)] flex items-center">
-                    <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     {topic}
@@ -278,7 +312,7 @@ export default function PracticePage() {
       <div className="bg-white rounded-xl border border-[var(--border)] p-6">
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Study Resources</h2>
         <p className="text-[var(--muted)] mb-4">
-          While our practice questions are in development, check out these study guides:
+          Complement your practice with these comprehensive study guides:
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           <Link
