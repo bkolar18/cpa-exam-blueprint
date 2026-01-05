@@ -196,3 +196,65 @@ export function usePracticeSessionAchievements() {
 
   return { onPracticeSessionCompleted };
 }
+
+// Helper hook for triggering profile update achievements
+export function useProfileAchievements() {
+  const { triggerCheck } = useAchievements();
+
+  const onProfileUpdated = useCallback(
+    async (profile: {
+      full_name?: string | null;
+      state_code?: string | null;
+      target_completion_date?: string | null;
+      discipline_choice?: string | null;
+      weekly_study_hours?: number | null;
+    }) => {
+      // Check if profile is "complete" - has all key fields filled
+      const profileComplete = !!(
+        profile.full_name &&
+        profile.state_code &&
+        profile.target_completion_date &&
+        profile.discipline_choice &&
+        profile.weekly_study_hours
+      );
+
+      // Check if discipline was chosen
+      const disciplineChosen = !!profile.discipline_choice;
+
+      await triggerCheck({
+        trigger: "profile_update",
+        profileComplete,
+        disciplineChosen,
+      });
+    },
+    [triggerCheck]
+  );
+
+  return { onProfileUpdated };
+}
+
+// Helper hook for triggering NTS achievements
+export function useNTSAchievements() {
+  const { triggerCheck } = useAchievements();
+
+  const onNTSAdded = useCallback(async () => {
+    await triggerCheck({
+      trigger: "nts_add",
+    });
+  }, [triggerCheck]);
+
+  return { onNTSAdded };
+}
+
+// Helper hook for triggering section update achievements
+export function useSectionAchievements() {
+  const { triggerCheck } = useAchievements();
+
+  const onSectionUpdated = useCallback(async () => {
+    await triggerCheck({
+      trigger: "section_update",
+    });
+  }, [triggerCheck]);
+
+  return { onSectionUpdated };
+}

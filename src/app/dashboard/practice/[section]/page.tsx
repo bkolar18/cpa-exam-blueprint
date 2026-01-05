@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { createClient } from "@/lib/supabase/client";
-import { useStudySessionAchievements } from "@/components/gamification/AchievementProvider";
+import { useStudySessionAchievements, usePracticeSessionAchievements } from "@/components/gamification/AchievementProvider";
 import QuizQuestion from "@/components/practice/QuizQuestion";
 import QuizResults from "@/components/practice/QuizResults";
 import {
@@ -42,6 +42,7 @@ export default function SectionPracticePage() {
   const { user } = useAuth();
   const supabase = createClient();
   const { onStudySessionLogged } = useStudySessionAchievements();
+  const { onPracticeSessionCompleted } = usePracticeSessionAchievements();
 
   const sectionParam = params.section as string;
   const section = sectionParam.toUpperCase() as SectionCode;
@@ -111,8 +112,9 @@ export default function SectionPracticePage() {
 
       if (!error) {
         setStudySessionLogged(true);
-        // Trigger achievement check
+        // Trigger achievement checks
         await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, durationHours));
+        await onPracticeSessionCompleted(section as DBSectionCode, correctCount, quizResults.length);
       }
     } catch (error) {
       console.error('Failed to log study session:', error);

@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { useNTSAchievements } from "@/components/gamification/AchievementProvider";
 import type { NTSEntry, SectionCode, NTSStatus } from "@/lib/supabase/types";
 
 const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
 
 export default function NTSPage() {
   const { user, loading: authLoading } = useAuth();
+  const { onNTSAdded } = useNTSAchievements();
   const [entries, setEntries] = useState<NTSEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -94,7 +96,11 @@ export default function NTSPage() {
         .update(entryData)
         .eq("id", editingEntry.id);
     } else {
-      await supabase.from("nts_entries").insert(entryData);
+      const { error } = await supabase.from("nts_entries").insert(entryData);
+      // Trigger achievement check for new NTS
+      if (!error) {
+        await onNTSAdded();
+      }
     }
 
     resetForm();

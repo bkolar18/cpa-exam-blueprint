@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { useProfileAchievements } from "@/components/gamification/AchievementProvider";
 import { getAllStates } from "@/lib/data/state-requirements";
 
 export default function SettingsPage() {
   const { user, profile, refreshProfile, loading: authLoading } = useAuth();
+  const { onProfileUpdated } = useProfileAchievements();
   const [formData, setFormData] = useState({
     full_name: "",
     state_code: "",
@@ -55,6 +57,14 @@ export default function SettingsPage() {
     if (!error) {
       setSuccess(true);
       await refreshProfile();
+      // Trigger achievement check for profile update
+      await onProfileUpdated({
+        full_name: formData.full_name || null,
+        state_code: formData.state_code || null,
+        target_completion_date: formData.target_completion_date || null,
+        discipline_choice: formData.discipline_choice || null,
+        weekly_study_hours: formData.weekly_study_hours ? parseInt(formData.weekly_study_hours) : null,
+      });
       setTimeout(() => setSuccess(false), 3000);
     }
 

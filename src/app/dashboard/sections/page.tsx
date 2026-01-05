@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { useSectionAchievements } from "@/components/gamification/AchievementProvider";
 import type { SectionProgress, SectionCode, SectionStatus } from "@/lib/supabase/types";
 
 const sections: { code: SectionCode; name: string; type: "core" | "discipline" }[] = [
@@ -24,6 +25,7 @@ const statuses: { value: SectionStatus; label: string; color: string }[] = [
 
 export default function SectionsPage() {
   const { user, profile, loading: authLoading } = useAuth();
+  const { onSectionUpdated } = useSectionAchievements();
   const [progress, setProgress] = useState<Record<string, SectionProgress>>({});
   const [loading, setLoading] = useState(true);
   const [editingSection, setEditingSection] = useState<SectionCode | null>(null);
@@ -91,13 +93,21 @@ export default function SectionsPage() {
       attempt_number: existing?.attempt_number || 1,
     };
 
+    let error;
     if (existing) {
-      await supabase
+      const result = await supabase
         .from("section_progress")
         .update(updateData)
         .eq("id", existing.id);
+      error = result.error;
     } else {
-      await supabase.from("section_progress").insert(updateData);
+      const result = await supabase.from("section_progress").insert(updateData);
+      error = result.error;
+    }
+
+    // Trigger achievement check for section update
+    if (!error) {
+      await onSectionUpdated();
     }
 
     setEditingSection(null);
