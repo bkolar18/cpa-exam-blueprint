@@ -43,7 +43,8 @@ export async function POST(request: Request) {
     .tip { padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
     .tip:last-child { border-bottom: none; }
     .cta { text-align: center; margin-top: 30px; }
-    .button { display: inline-block; background: #16a34a; color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+    .button { display: inline-block; background: #16a34a; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+    .button-secondary { display: inline-block; background: #1e3a5f; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; margin-left: 12px; }
     .footer { text-align: center; color: #64748b; font-size: 14px; margin-top: 30px; }
   </style>
 </head>
@@ -78,7 +79,8 @@ export async function POST(request: Request) {
 
       <div class="cta">
         <p>Ready to start studying?</p>
-        <a href="https://cpa-exam-blueprint.vercel.app/recommended-program" class="button">See Our Recommended Program</a>
+        <a href="https://cpa-exam-blueprint.vercel.app/recommended-program" class="button" style="color: #ffffff !important; text-decoration: none;">See Our Recommended Program</a>
+        <a href="https://cpa-exam-blueprint.vercel.app/cpa-academy" class="button-secondary" style="color: #ffffff !important; text-decoration: none;">Explore CPA Academy</a>
       </div>
     </div>
     <div class="footer">
