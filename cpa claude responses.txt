@@ -1368,3 +1368,92 @@ After this change, the auth flow should complete properly:
 
 ---
 
+## Dashboard Sub-Pages Infinite Loading - Auth State Not Ready
+
+If dashboard sub-pages (sections, study-log, nts, practice) show infinite loading spinners, the issue is that pages are waiting for `user` to exist before fetching data, but never set `loading` to false when auth is still loading.
+
+**Fix:** Check for auth loading state before proceeding:
+
+```typescript
+export default function SomeDashboardPage() {
+  const { user, loading: authLoading } = useAuth();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (authLoading) return; // Wait for auth to finish
+    if (user) {
+      fetchData();
+    } else {
+      setLoading(false);
+    }
+  }, [user, authLoading]);
+  // ...
+}
+```
+
+---
+
+## @supabase/ssr createBrowserClient Hangs on getSession()
+
+The `@supabase/ssr` package's `createBrowserClient` may hang indefinitely on `getSession()` calls in certain environments. Console shows "Calling getSession..." but never "Session result".
+
+**Symptoms:**
+- No network requests to supabase.co
+- Auth loading state never completes
+- "Session timeout" errors if you add a timeout
+
+**Solution:** Use the standard `@supabase/supabase-js` client instead:
+
+```typescript
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+
+supabaseClient = createSupabaseClient(supabaseUrl, supabaseAnonKey);
+```
+
+**Important:** After switching clients:
+1. Log out completely
+2. Clear localStorage for the site (DevTools → Application → Local Storage)
+3. Log in again fresh
+
+The standard client stores sessions in localStorage instead of cookies, so a fresh login is required.
+
+---
+
+## How to Clear LocalStorage and Login Fresh (Detailed Steps)
+
+When switching Supabase client types or fixing auth issues, you need to clear stored session data:
+
+**Step 1: Open your site**
+Go to your deployed site URL (e.g., `https://your-site.vercel.app/`)
+
+**Step 2: Open Developer Tools**
+Press `F12` on your keyboard (or right-click anywhere and select "Inspect")
+
+**Step 3: Go to Application tab**
+In the Developer Tools panel, click the **"Application"** tab at the top.
+(If you don't see it, click the `>>` arrows to find more tabs)
+
+**Step 4: Clear Local Storage**
+- In the left sidebar, expand **"Local Storage"**
+- Click on your site's URL
+- Right-click on any row and select **"Clear"** to delete all entries
+- Or select each row and press the `Delete` key
+
+**Step 5: Clear Cookies (recommended)**
+- In the left sidebar, expand **"Cookies"**
+- Click on your site's URL
+- Right-click and select **"Clear"**
+
+**Step 6: Refresh the page**
+Press `F5` or click the refresh button
+
+**Step 7: Log in fresh**
+- Click "Log In" in the header
+- Enter your email and password
+- Sign in
+
+**Step 8: Test**
+Navigate to dashboard pages - they should load without infinite spinning.
+
+---
+
