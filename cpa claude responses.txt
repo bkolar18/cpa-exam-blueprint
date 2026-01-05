@@ -2935,3 +2935,38 @@ Simple, standard auth that:
 
 ---
 
+## Deployment to Vercel
+
+**Date:** January 5, 2026
+
+**Commit:** `b4c36e6` - "Simplify auth system for production reliability"
+
+**Changes Deployed:**
+- Simplified auth system (client, middleware, AuthProvider, login page, dashboard layout)
+- Surgent branding on recommended-program page
+- Documentation updates
+
+**Vercel Status Terms:**
+- **Ready** = Deployment succeeded and is live
+- **Stale** = An older deployment that's been superseded by a newer one
+
+**Testing Production:**
+Always test on the Vercel URL, not localhost:
+- **Production URL:** https://cpa-exam-blueprint.vercel.app/login
+
+**If Page Doesn't Load:**
+1. Hard refresh: `Ctrl + Shift + R`
+2. Or use incognito: `Ctrl + Shift + N`
+3. Check DevTools Console (F12) for JavaScript errors
+
+**Deployment Trigger:**
+Vercel auto-deploys when code is pushed to GitHub:
+```bash
+git add -A
+git commit -m "Your message"
+git push
+```
+Wait 2-3 minutes for deployment to complete.
+
+---
+

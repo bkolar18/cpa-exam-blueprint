@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import { User, Session } from "@supabase/supabase-js";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
+import { clearAllAuthStorage } from "@/lib/supabase/clearAuthStorage";
 import type { Profile } from "@/lib/supabase/types";
 
 interface AuthContextType {
@@ -62,24 +63,63 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchProfile(session.user.id).then(setProfile);
+    async function initializeAuth() {
+      try {
+        // Step 1: Get local session
+        const { data: { session: localSession }, error: sessionError } =
+          await supabase.auth.getSession();
+
+        if (sessionError) {
+          console.error("Session error, clearing storage:", sessionError);
+          clearAllAuthStorage();
+          setLoading(false);
+          return;
+        }
+
+        if (localSession) {
+          // Step 2: CRITICAL - Validate with server to catch stale tokens
+          const { data: { user: validatedUser }, error: userError } =
+            await supabase.auth.getUser();
+
+          if (userError || !validatedUser) {
+            // Local session exists but server says it's invalid
+            console.error("Stale session detected, clearing:", userError?.message);
+            clearAllAuthStorage();
+            await supabase.auth.signOut({ scope: 'local' });
+            setSession(null);
+            setUser(null);
+            setLoading(false);
+            return;
+          }
+
+          // Session is valid
+          setSession(localSession);
+          setUser(validatedUser);
+          fetchProfile(validatedUser.id).then(setProfile);
+        }
+      } catch (error) {
+        console.error("Auth initialization failed:", error);
+        // On any error, clear and start fresh
+        clearAllAuthStorage();
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
-    });
+    }
+
+    initializeAuth();
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-        if (session?.user) {
-          fetchProfile(session.user.id).then(setProfile);
-        } else {
+      async (event, session) => {
+        if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+          setSession(session);
+          setUser(session?.user ?? null);
+          if (session?.user) {
+            fetchProfile(session.user.id).then(setProfile);
+          }
+        } else if (event === 'SIGNED_OUT') {
+          setSession(null);
+          setUser(null);
           setProfile(null);
         }
         setLoading(false);
@@ -94,6 +134,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (supabase) {
       await supabase.auth.signOut();
     }
+    clearAllAuthStorage();
     setUser(null);
     setProfile(null);
     setSession(null);
