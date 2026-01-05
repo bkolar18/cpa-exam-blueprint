@@ -3237,6 +3237,31 @@ When user logs a study session:
 
 ---
 
+## Troubleshooting: Achievements Not Showing (2026-01-05)
+
+**Issue:** Accolades page shows 0/0 badges and 0/0 achievements, with no items listed.
+
+**Cause:** The gamification database schema hasn't been run in Supabase yet. The `badges` and `achievements` tables don't exist, so queries return empty arrays.
+
+**Solution:**
+1. Go to Supabase Dashboard → **SQL Editor**
+2. Click **New Query**
+3. Copy and paste the entire contents of `supabase-gamification-schema.sql`
+4. Click **Run**
+
+**What the schema creates:**
+- `badges` table - 24 badges (study hour milestones per section)
+- `achievements` table - 25+ achievements with seed data
+- `user_badges` table - Tracks user badge progress
+- `user_achievements` table - Tracks unlocked achievements
+- `practice_sessions` table - For practice timer feature
+- Database triggers for auto-updating points and streaks
+- RLS policies for security
+
+After running the schema, refresh the Accolades page to see all badges and achievements.
+
+---
+
 ## All Achievements Visible Update (2026-01-05)
 
 **Commit:** `d5bdca4` - Show all achievements with full details from the start
