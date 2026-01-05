@@ -1341,3 +1341,30 @@ But you never see "Session result" or "Setting loading to false", the `supabase.
 
 ---
 
+## Fix: Switch from @supabase/ssr to @supabase/supabase-js
+
+If `getSession()` hangs and no network requests are made to Supabase, the `@supabase/ssr` package's `createBrowserClient` may be the issue.
+
+**Solution:** Use the standard `@supabase/supabase-js` client instead.
+
+Change `src/lib/supabase/client.ts` from:
+```typescript
+import { createBrowserClient } from '@supabase/ssr'
+
+supabaseClient = createBrowserClient(supabaseUrl, supabaseAnonKey);
+```
+
+To:
+```typescript
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+
+supabaseClient = createSupabaseClient(supabaseUrl, supabaseAnonKey);
+```
+
+After this change, the auth flow should complete properly:
+- Console shows "Session result: no session" or "Session result: has session"
+- Console shows "Setting loading to false"
+- Header shows "Log In" (not signed in) or "Dashboard" (signed in)
+
+---
+
