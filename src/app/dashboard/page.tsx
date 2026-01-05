@@ -23,7 +23,21 @@ export default function DashboardPage() {
   const [recentSessions, setRecentSessions] = useState<StudySessionRow[]>([]);
   const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showPromo, setShowPromo] = useState(false);
   const supabase = createClient();
+
+  // Check if promo was dismissed
+  useEffect(() => {
+    const dismissed = localStorage.getItem('surgent-promo-dismissed');
+    if (!dismissed) {
+      setShowPromo(true);
+    }
+  }, []);
+
+  const dismissPromo = () => {
+    localStorage.setItem('surgent-promo-dismissed', 'true');
+    setShowPromo(false);
+  };
 
   useEffect(() => {
     if (authLoading) return;
@@ -226,6 +240,73 @@ export default function DashboardPage() {
           description="Read section-specific study strategies"
         />
       </div>
+
+      {/* Surgent Promo */}
+      {showPromo && (
+        <div className="relative bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-6 text-white overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+          {/* Dismiss button */}
+          <button
+            onClick={dismissPromo}
+            className="absolute top-3 right-3 text-white/60 hover:text-white transition-colors"
+            aria-label="Dismiss"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div className="relative flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="bg-white/20 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                  RECOMMENDED
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Ready for the Full Course?</h3>
+              <p className="text-white/90 mb-3">
+                You&apos;ve been warming up with our practice questions. Surgent CPA Review offers{" "}
+                <span className="font-semibold">8,800+ practice questions</span> with adaptive learning
+                technology that focuses on your weak areas.
+              </p>
+              <ul className="text-white/80 text-sm space-y-1 mb-4">
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  8,800+ MCQs & Task-Based Simulations
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  A.S.A.P. Technology adapts to how you learn
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Pass guarantee included
+                </li>
+              </ul>
+            </div>
+            <div className="flex-shrink-0">
+              <Link
+                href="/recommended-program"
+                className="inline-flex items-center gap-2 bg-white text-emerald-700 font-semibold px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors shadow-lg"
+              >
+                Learn More
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Recent Activity */}
       <div className="bg-white rounded-xl border border-[var(--border)] p-6">
