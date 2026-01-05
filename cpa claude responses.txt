@@ -1277,3 +1277,37 @@ Wait for the build to complete (~1-2 minutes), then test the production URL.
 
 ---
 
+## Adding Debug Logging to Diagnose Environment Variable Issues
+
+If environment variables appear correct but auth still isn't working, add debug logging to `src/lib/supabase/client.ts`:
+
+```typescript
+export function createClient(): SupabaseClient | null {
+  if (supabaseClient) {
+    return supabaseClient;
+  }
+
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  // Debug logging - remove after fixing
+  console.log('[Supabase Debug] URL exists:', !!supabaseUrl);
+  console.log('[Supabase Debug] Key exists:', !!supabaseAnonKey);
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.log('[Supabase Debug] Missing credentials, returning null');
+    return null;
+  }
+
+  console.log('[Supabase Debug] Creating client...');
+  supabaseClient = createBrowserClient(supabaseUrl, supabaseAnonKey);
+  return supabaseClient;
+}
+```
+
+**After deploying, check the Console tab (F12 → Console):**
+- If you see `URL exists: false` or `Key exists: false` → env vars not in build
+- If you see `Creating client...` → env vars are working, issue is elsewhere
+
+---
+

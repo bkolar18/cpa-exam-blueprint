@@ -54,22 +54,30 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user, fetchProfile]);
 
   useEffect(() => {
+    console.log('[Auth Debug] useEffect running');
+
     // Check if Supabase is configured
     if (!isSupabaseConfigured()) {
+      console.log('[Auth Debug] Supabase not configured');
       setLoading(false);
       return;
     }
 
     const supabase = createClient();
     if (!supabase) {
+      console.log('[Auth Debug] No supabase client');
       setLoading(false);
       return;
     }
 
+    console.log('[Auth Debug] Supabase client exists, getting session...');
+
     // Get initial session
     const getSession = async () => {
       try {
+        console.log('[Auth Debug] Calling getSession...');
         const { data: { session } } = await supabase.auth.getSession();
+        console.log('[Auth Debug] Session result:', session ? 'has session' : 'no session');
         setSession(session);
         setUser(session?.user ?? null);
 
@@ -81,6 +89,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         console.error("Error getting session:", error);
       }
 
+      console.log('[Auth Debug] Setting loading to false');
       setLoading(false);
     };
 
