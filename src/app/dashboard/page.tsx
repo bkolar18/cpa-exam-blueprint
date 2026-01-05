@@ -127,7 +127,9 @@ export default function DashboardPage() {
         </h1>
         <p className="text-white/80">
           {weeklyHours > 0
-            ? `You've logged ${weeklyHours.toFixed(1)} study hours this week. Keep it up!`
+            ? weeklyHours < 1
+              ? `You've logged ${Math.round(weeklyHours * 60)} study minutes this week. Keep it up!`
+              : `You've logged ${weeklyHours.toFixed(1)} study hours this week. Keep it up!`
             : "Ready to start tracking your CPA journey?"}
         </p>
       </div>
@@ -179,8 +181,8 @@ export default function DashboardPage() {
         />
         <StatCard
           label="Study Streak"
-          value={`${profile?.current_streak || 0} days`}
-          sublabel={profile?.longest_streak ? `Best: ${profile.longest_streak} days` : "Log a session"}
+          value={`${profile?.current_streak || 0} ${(profile?.current_streak || 0) === 1 ? 'day' : 'days'}`}
+          sublabel={profile?.longest_streak ? `Best: ${profile.longest_streak} ${profile.longest_streak === 1 ? 'day' : 'days'}` : "Log a session"}
           color="orange"
         />
       </div>
