@@ -1311,3 +1311,33 @@ export function createClient(): SupabaseClient | null {
 
 ---
 
+## getSession() Hanging - Auth State Never Loads
+
+If debug logs show:
+```
+[Auth Debug] useEffect running
+[Supabase Debug] URL exists: true
+[Supabase Debug] Key exists: true
+[Supabase Debug] Creating client...
+[Auth Debug] Supabase client exists, getting session...
+[Auth Debug] Calling getSession...
+```
+
+But you never see "Session result" or "Setting loading to false", the `supabase.auth.getSession()` call is hanging and never resolving.
+
+**Check the Network tab for Supabase requests:**
+1. Open Developer Tools (F12) → Network tab
+2. Filter by "supabase"
+3. Look for requests that are:
+   - Pending/stuck (no status code)
+   - Failed (red, status 4xx or 5xx)
+   - Blocked
+
+**Common causes:**
+- Incorrect Supabase URL
+- CORS issues
+- Supabase project paused or not accessible
+- Network/firewall blocking the request
+
+---
+
