@@ -520,11 +520,16 @@ export default function StudyPlanPage() {
                     Ready to start studying?
                   </h3>
                   <p className="text-[var(--muted)] mb-4">
-                    See the CPA review program we recommend to help you execute this plan.
+                    Track your progress and unlock achievements with CPA Academy, or see the review program we recommend.
                   </p>
-                  <Link href="/recommended-program" className="btn-primary inline-block">
-                    See Our Recommendation
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    <Link href="/signup" className="btn-primary inline-block">
+                      Sign Up for CPA Academy
+                    </Link>
+                    <Link href="/recommended-program" className="btn-secondary inline-block">
+                      See Our Recommendation
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}
