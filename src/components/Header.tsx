@@ -116,26 +116,41 @@ export default function Header() {
                 </svg>
               </button>
               {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-[var(--border)] rounded-lg shadow-lg p-5">
-                  <div className="grid grid-cols-2 gap-6">
-                    {/* Tools Column */}
+                <div className="absolute top-full left-0 mt-2 w-[420px] bg-white border border-[var(--border)] rounded-lg shadow-lg p-5">
+                  <div className="grid grid-cols-2 gap-8">
+                    {/* Left Column - Study Hub & Tools */}
                     <div>
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
-                        Free Tools
-                      </div>
-                      {resources.tools.map((item) => (
+                      {/* Study Hub Section */}
+                      <div className="mb-5">
+                        <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
+                          Study Hub
+                        </div>
                         <Link
-                          key={item.name}
-                          href={item.href}
+                          href="/cpa-academy"
                           className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
                         >
-                          {item.name}
+                          CPA Academy
                         </Link>
-                      ))}
+                      </div>
+                      {/* Free Tools Section */}
+                      <div>
+                        <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
+                          Free Tools
+                        </div>
+                        {resources.tools.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                    {/* Guides & Learn Column */}
+                    {/* Right Column - Guides & Learn */}
                     <div>
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
+                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
                         Guides
                       </div>
                       {resources.guides.map((item) => (
@@ -147,7 +162,7 @@ export default function Header() {
                           {item.name}
                         </Link>
                       ))}
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3 mt-5">
+                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20 mt-5">
                         Learn
                       </div>
                       {resources.learn.map((item) => (
@@ -159,16 +174,6 @@ export default function Header() {
                           {item.name}
                         </Link>
                       ))}
-                      {/* CPA Academy */}
-                      <div className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3 mt-5">
-                        Study Hub
-                      </div>
-                      <Link
-                        href="/cpa-academy"
-                        className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                      >
-                        CPA Academy
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -236,7 +241,7 @@ export default function Header() {
             <div className="flex flex-col space-y-4">
               {/* Exam Sections */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
                   Exam Sections
                 </span>
                 {sections.map((section) => (
@@ -251,9 +256,23 @@ export default function Header() {
                 ))}
               </div>
 
+              {/* Study Hub */}
+              <div className="space-y-2">
+                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
+                  Study Hub
+                </span>
+                <Link
+                  href="/cpa-academy"
+                  className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  CPA Academy
+                </Link>
+              </div>
+
               {/* Free Tools */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
                   Free Tools
                 </span>
                 {resources.tools.map((item) => (
@@ -270,7 +289,7 @@ export default function Header() {
 
               {/* Guides */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
                   Guides
                 </span>
                 {resources.guides.map((item) => (
@@ -287,7 +306,7 @@ export default function Header() {
 
               {/* Learn */}
               <div className="space-y-2">
-                <span className="text-[var(--muted)] text-sm font-semibold uppercase tracking-wider">
+                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
                   Learn
                 </span>
                 {resources.learn.map((item) => (
