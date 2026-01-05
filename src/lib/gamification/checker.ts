@@ -383,7 +383,12 @@ export async function checkAchievements(
 }
 
 // Get user's gamification summary
-export async function getGamificationSummary(userId: string) {
+export async function getGamificationSummary(userId: string, disciplineChoice?: string | null) {
+  // Discipline sections - filter out ones user didn't select
+  const allDisciplines = ['TCP', 'BAR', 'ISC'];
+  const excludedDisciplines = disciplineChoice
+    ? allDisciplines.filter(d => d !== disciplineChoice)
+    : []; // If no discipline chosen, show all
   const supabase = createClient();
   if (!supabase) return null;
 
@@ -412,14 +417,29 @@ export async function getGamificationSummary(userId: string) {
     userAchievements.map((ua) => ua.achievement_id)
   );
 
+  // Filter badges - exclude ones for disciplines the user didn't select
+  const filteredBadges = allBadges.filter((badge) => {
+    if (!badge.requirement_section) return true;
+    return !excludedDisciplines.includes(badge.requirement_section);
+  });
+
+  // Filter achievements - exclude ones for disciplines the user didn't select
+  const filteredAchievements = allAchievements.filter((achievement) => {
+    const meta = achievement.requirement_metadata as { section?: string } | null;
+    if (!meta?.section) return true;
+    // Handle discipline-specific achievements
+    if (meta.section === 'discipline') return true; // Keep general discipline achievement
+    return !excludedDisciplines.includes(meta.section);
+  });
+
   return {
     totalPoints: profile?.total_points || 0,
     currentStreak: profile?.current_streak || 0,
     longestStreak: profile?.longest_streak || 0,
     badges: {
-      total: allBadges.length,
-      earned: earnedBadgeIds.size,
-      list: allBadges.map((badge) => ({
+      total: filteredBadges.length,
+      earned: filteredBadges.filter((b) => earnedBadgeIds.has(b.id)).length,
+      list: filteredBadges.map((badge) => ({
         ...badge,
         isEarned: earnedBadgeIds.has(badge.id),
         progress: userBadges.find((ub) => ub.badge_id === badge.id)?.progress || 0,
@@ -427,9 +447,9 @@ export async function getGamificationSummary(userId: string) {
       })),
     },
     achievements: {
-      total: allAchievements.length,
-      unlocked: unlockedAchievementIds.size,
-      list: allAchievements.map((achievement) => {
+      total: filteredAchievements.length,
+      unlocked: filteredAchievements.filter((a) => unlockedAchievementIds.has(a.id)).length,
+      list: filteredAchievements.map((achievement) => {
         const userAchievement = userAchievements.find(
           (ua) => ua.achievement_id === achievement.id
         );

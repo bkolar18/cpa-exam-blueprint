@@ -51,7 +51,7 @@ interface GamificationData {
 }
 
 export default function AccoladesPage() {
-  const { user, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
   const [data, setData] = useState<GamificationData | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<"badges" | "achievements">("badges");
@@ -67,10 +67,7 @@ export default function AccoladesPage() {
       }
 
       try {
-        const summary = await getGamificationSummary(user.id);
-        // Debug: check is_hidden values
-        const hiddenAchievements = summary?.achievements.list.filter((a: { is_hidden?: boolean }) => a.is_hidden === true);
-        console.log('[Accolades] Hidden achievements:', hiddenAchievements?.length, hiddenAchievements?.map((a: { code?: string }) => a.code));
+        const summary = await getGamificationSummary(user.id, profile?.discipline_choice);
         setData(summary);
       } catch (error) {
         console.error("Error loading accolades:", error);
@@ -80,7 +77,7 @@ export default function AccoladesPage() {
     }
 
     loadData();
-  }, [user, authLoading]);
+  }, [user, profile, authLoading]);
 
   if (loading || authLoading) {
     return (
