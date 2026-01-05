@@ -116,7 +116,7 @@ export default function AccoladesPage() {
     {} as Record<Tier, AchievementData[]>
   );
 
-  const tierOrder: Tier[] = ["platinum", "gold", "silver", "bronze"];
+  const tierOrder: Tier[] = ["bronze", "silver", "gold", "platinum"];
 
   return (
     <div className="max-w-6xl mx-auto">
