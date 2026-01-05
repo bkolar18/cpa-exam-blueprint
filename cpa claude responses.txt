@@ -3237,3 +3237,62 @@ When user logs a study session:
 
 ---
 
+## Achievement Display Update (2026-01-05)
+
+**Commit:** `4579aca` - Update achievements display: show title with ??? description for hidden, green highlight for completed
+
+### Changes Made
+
+Updated the Accolades page achievement display per user request:
+
+**1. Hidden Achievements**
+- Show the actual achievement title (not "???")
+- Show "???" as the description in italics
+- Grayed out with locked icon
+
+**2. Completed Achievements**
+- Green gradient background
+- Green border
+- Green checkmark icon
+- Title and points displayed in green
+- Date unlocked shown in green
+
+**3. Incomplete Achievements**
+- Grayed out (50% opacity + 30% grayscale)
+- Locked icon (🔒)
+- Muted colors for tier badge
+
+### Visual States
+
+| State | Border | Background | Icon | Title Color | Description |
+|-------|--------|------------|------|-------------|-------------|
+| Completed | Green (#22c55e) | Green gradient | ✓ | Green | Full description |
+| Incomplete (visible) | Gray | Card color | 🔒 | Muted | Full description |
+| Incomplete (hidden) | Gray | Card color | 🔒 | Muted | "???" (italic) |
+
+### Files Modified
+
+- `src/components/gamification/AchievementItem.tsx` - Updated styling and logic
+- `src/app/dashboard/accolades/page.tsx` - Changed props passed to AchievementItem
+
+### Code Changes
+
+**AchievementItem.tsx:**
+```tsx
+// For hidden achievements that are NOT unlocked, show "???" as description
+const displayDescription = isHidden && !isUnlocked ? "???" : description;
+
+// Completed state styling
+style={{
+  background: isUnlocked
+    ? "linear-gradient(90deg, rgba(34, 197, 94, 0.15) 0%, var(--card) 50%)"
+    : "var(--card)",
+  borderColor: isUnlocked ? "#22c55e" : "var(--border)",
+}}
+
+// Incomplete state styling
+className={`${isUnlocked ? "" : "opacity-50 grayscale-[30%]"}`}
+```
+
+---
+
