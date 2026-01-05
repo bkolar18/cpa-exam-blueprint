@@ -88,7 +88,20 @@ export default function SectionPracticePage() {
 
   // Auto-log practice session to study log when quiz is completed
   const logPracticeSession = async (quizResults: QuizResult[]) => {
-    if (!user || !supabase || studySessionLogged) return;
+    console.log('logPracticeSession called', { user: !!user, supabase: !!supabase, studySessionLogged });
+
+    if (!user) {
+      console.log('No user - skipping practice session log');
+      return;
+    }
+    if (!supabase) {
+      console.log('No supabase client - skipping practice session log');
+      return;
+    }
+    if (studySessionLogged) {
+      console.log('Session already logged - skipping');
+      return;
+    }
 
     const endTime = new Date();
     const startTime = quizStartTime.current || endTime;
@@ -99,23 +112,32 @@ export default function SectionPracticePage() {
     const accuracy = Math.round((correctCount / quizResults.length) * 100);
     const topicsCovered = [...new Set(quizResults.map(r => r.question.topic))];
 
+    const sessionData = {
+      user_id: user.id,
+      section: section as DBSectionCode,
+      date: new Date().toISOString().split('T')[0],
+      hours: Math.max(0.25, durationHours), // Minimum 15 minutes credit
+      notes: `Practice quiz: ${quizResults.length} questions, ${accuracy}% accuracy. Topics: ${topicsCovered.join(', ')}`,
+      topics_covered: topicsCovered,
+    };
+
+    console.log('Attempting to insert study session:', sessionData);
+
     // Create study session entry
     try {
-      const { error } = await supabase.from('study_sessions').insert({
-        user_id: user.id,
-        section: section as DBSectionCode,
-        date: new Date().toISOString().split('T')[0],
-        hours: Math.max(0.25, durationHours), // Minimum 15 minutes credit
-        notes: `Practice quiz: ${quizResults.length} questions, ${accuracy}% accuracy. Topics: ${topicsCovered.join(', ')}`,
-        topics_covered: topicsCovered,
-      });
+      const { data, error } = await supabase.from('study_sessions').insert(sessionData).select();
 
-      if (!error) {
-        setStudySessionLogged(true);
-        // Trigger achievement checks
-        await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, durationHours));
-        await onPracticeSessionCompleted(section as DBSectionCode, correctCount, quizResults.length);
+      if (error) {
+        console.error('Database error logging study session:', error);
+        return;
       }
+
+      console.log('Study session logged successfully:', data);
+      setStudySessionLogged(true);
+
+      // Trigger achievement checks
+      await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, durationHours));
+      await onPracticeSessionCompleted(section as DBSectionCode, correctCount, quizResults.length);
     } catch (error) {
       console.error('Failed to log study session:', error);
     }
