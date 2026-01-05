@@ -3,8 +3,8 @@
 import { TIER_CONFIG, type Tier } from "@/lib/gamification/types";
 
 interface AchievementItemProps {
-  displayName: string;
-  displayDescription: string;
+  name: string;
+  description: string;
   tier: Tier;
   points: number;
   isUnlocked: boolean;
@@ -13,8 +13,8 @@ interface AchievementItemProps {
 }
 
 export function AchievementItem({
-  displayName,
-  displayDescription,
+  name,
+  description,
   tier,
   points,
   isUnlocked,
@@ -23,64 +23,83 @@ export function AchievementItem({
 }: AchievementItemProps) {
   const tierConfig = TIER_CONFIG[tier];
 
+  // For hidden achievements that are NOT unlocked, show "???" as description
+  const displayDescription = isHidden && !isUnlocked ? "???" : description;
+
   return (
     <div
       className={`
         flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-300
-        ${isUnlocked ? "opacity-100" : "opacity-60"}
+        ${isUnlocked ? "" : "opacity-50 grayscale-[30%]"}
       `}
       style={{
         background: isUnlocked
-          ? `linear-gradient(90deg, ${tierConfig.bgColor} 0%, var(--card) 50%)`
+          ? "linear-gradient(90deg, rgba(34, 197, 94, 0.15) 0%, var(--card) 50%)"
           : "var(--card)",
-        borderColor: isUnlocked ? tierConfig.color : tierConfig.borderColor,
+        borderColor: isUnlocked ? "#22c55e" : "var(--border)",
       }}
     >
       {/* Status icon */}
       <div
         className={`
           w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0
-          ${isUnlocked ? "" : "grayscale"}
         `}
         style={{
-          backgroundColor: tierConfig.bgColor,
-          border: `2px solid ${isUnlocked ? tierConfig.color : tierConfig.borderColor}`,
+          backgroundColor: isUnlocked ? "rgba(34, 197, 94, 0.2)" : "var(--card)",
+          border: `2px solid ${isUnlocked ? "#22c55e" : "var(--border)"}`,
         }}
       >
-        {isUnlocked ? "🏆" : isHidden ? "❓" : "🔒"}
+        {isUnlocked ? "✓" : "🔒"}
       </div>
 
       {/* Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
-          <h4 className="font-bold text-[var(--foreground)] truncate">
-            {displayName}
+          <h4
+            className={`font-bold truncate ${
+              isUnlocked ? "text-green-600" : "text-[var(--muted-foreground)]"
+            }`}
+          >
+            {name}
           </h4>
           <span
-            className="text-xs font-bold uppercase px-1.5 py-0.5 rounded flex-shrink-0"
+            className={`text-xs font-bold uppercase px-1.5 py-0.5 rounded flex-shrink-0 ${
+              isUnlocked ? "" : "opacity-60"
+            }`}
             style={{
-              backgroundColor: tierConfig.color,
-              color: tier === "platinum" || tier === "silver" ? "#000" : "#fff",
+              backgroundColor: isUnlocked ? tierConfig.color : "var(--border)",
+              color: isUnlocked
+                ? tier === "platinum" || tier === "silver"
+                  ? "#000"
+                  : "#fff"
+                : "var(--muted-foreground)",
             }}
           >
             {tier}
           </span>
         </div>
-        <p className="text-sm text-[var(--muted-foreground)] line-clamp-1">
+        <p
+          className={`text-sm line-clamp-1 ${
+            isHidden && !isUnlocked
+              ? "italic text-[var(--muted-foreground)]"
+              : "text-[var(--muted-foreground)]"
+          }`}
+        >
           {displayDescription}
         </p>
       </div>
 
-      {/* Points and date */}
+      {/* Points */}
       <div className="text-right flex-shrink-0">
         <div
-          className="font-bold"
-          style={{ color: isUnlocked ? tierConfig.color : "var(--muted-foreground)" }}
+          className={`font-bold ${
+            isUnlocked ? "text-green-600" : "text-[var(--muted-foreground)]"
+          }`}
         >
-          +{points}
+          +{points} pts
         </div>
         {isUnlocked && unlockedAt && (
-          <div className="text-xs text-[var(--muted-foreground)]">
+          <div className="text-xs text-green-600">
             {new Date(unlockedAt).toLocaleDateString()}
           </div>
         )}
@@ -88,17 +107,14 @@ export function AchievementItem({
 
       {/* Checkmark for unlocked */}
       {isUnlocked && (
-        <div
-          className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-          style={{ backgroundColor: tierConfig.color }}
-        >
+        <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-green-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
             viewBox="0 0 24 24"
             fill="none"
-            stroke={tier === "platinum" || tier === "silver" ? "#000" : "#fff"}
+            stroke="#fff"
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"

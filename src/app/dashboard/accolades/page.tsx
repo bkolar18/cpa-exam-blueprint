@@ -261,8 +261,8 @@ export default function AccoladesPage() {
                   {achievements.map((achievement) => (
                     <AchievementItem
                       key={achievement.id}
-                      displayName={achievement.displayName}
-                      displayDescription={achievement.displayDescription}
+                      name={achievement.name}
+                      description={achievement.description}
                       tier={achievement.tier}
                       points={achievement.points}
                       isUnlocked={achievement.isUnlocked}
