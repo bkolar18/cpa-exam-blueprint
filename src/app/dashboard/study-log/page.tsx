@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { useStudySessionAchievements } from "@/components/gamification/AchievementProvider";
 import type { StudySession, SectionCode } from "@/lib/supabase/types";
 
 const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
 
 export default function StudyLogPage() {
   const { user, loading: authLoading } = useAuth();
+  const { onStudySessionLogged } = useStudySessionAchievements();
   const [sessions, setSessions] = useState<StudySession[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -64,6 +66,9 @@ export default function StudyLogPage() {
     });
 
     if (!error) {
+      // Trigger achievement check
+      await onStudySessionLogged(formData.section, parseFloat(formData.hours));
+
       setFormData({
         section: "FAR",
         date: new Date().toISOString().split("T")[0],

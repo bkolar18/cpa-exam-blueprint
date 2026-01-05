@@ -13,6 +13,13 @@ export interface Profile {
   discipline_choice: 'TCP' | 'BAR' | 'ISC' | null;
   weekly_study_hours: number | null;
   working_full_time: boolean | null;
+  // Gamification fields
+  total_points: number;
+  badge_count: number;
+  achievement_count: number;
+  current_streak: number;
+  longest_streak: number;
+  last_study_date: string | null;
   created_at: string;
   updated_at: string;
 }
