@@ -111,9 +111,22 @@ export default function PracticePage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-[var(--foreground)]">Practice Questions</h1>
-        <p className="text-[var(--muted)]">Test your knowledge and track your progress</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-[var(--foreground)]">Practice Questions</h1>
+          <p className="text-[var(--muted)]">Test your knowledge and track your progress</p>
+        </div>
+        {attempts.length > 0 && (
+          <Link
+            href="/dashboard/practice/history"
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-[var(--border)] rounded-lg hover:border-[var(--primary)] hover:shadow-md transition-all text-[var(--foreground)] font-medium"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            View History
+          </Link>
+        )}
       </div>
 
       {/* Practice Banner */}
