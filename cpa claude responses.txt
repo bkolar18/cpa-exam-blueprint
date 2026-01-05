@@ -3486,3 +3486,34 @@ If 0 rows returned, the is_hidden column wasn't set correctly and needs the UPDA
 
 ---
 
+## Session: Dashboard Navigation Consolidation (January 2026)
+
+### Current Navigation Items
+1. **Overview** - Main dashboard
+2. **My Sections** - Section progress tracking
+3. **Study Log** - Log study hours
+4. **NTS Tracker** - Exam scheduling
+5. **Practice** - Practice questions
+6. **Accolades** - Badges/achievements
+7. **Settings** - Profile settings
+
+### Proposed Consolidation Options
+
+**Option A: Group into dropdowns**
+- **Study** (Study Log, Practice)
+- **Progress** (My Sections, Accolades)
+- **Exam** (NTS Tracker)
+- Overview & Settings stay separate
+
+**Option B: Combine similar pages**
+- Merge "My Sections" into "Overview"
+- Keep rest flat but reorder
+
+**Option C: Simplify to essentials**
+- Overview, Study, Exam, Profile (with sub-sections)
+
+### File Location
+- `src/components/dashboard/DashboardNav.tsx`
+
+---
+

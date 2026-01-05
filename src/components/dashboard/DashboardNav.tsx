@@ -3,15 +3,51 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const navItems = [
+// Standalone nav items
+const standaloneItems = [
   { href: "/dashboard", label: "Overview", icon: "home" },
-  { href: "/dashboard/sections", label: "My Sections", icon: "sections" },
+];
+
+// Grouped nav items with dropdowns
+const groupedItems = [
+  {
+    label: "Study",
+    icon: "book",
+    items: [
+      { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
+      { href: "/dashboard/practice", label: "Practice", icon: "practice" },
+    ],
+  },
+  {
+    label: "Progress",
+    icon: "chart",
+    items: [
+      { href: "/dashboard/sections", label: "My Sections", icon: "sections" },
+      { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
+    ],
+  },
+  {
+    label: "Exam",
+    icon: "calendar",
+    items: [
+      { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
+    ],
+  },
+];
+
+// Settings stays separate
+const settingsItem = { href: "/dashboard/settings", label: "Settings", icon: "settings" };
+
+// All items flat for mobile
+const allNavItems = [
+  { href: "/dashboard", label: "Overview", icon: "home" },
   { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
-  { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
   { href: "/dashboard/practice", label: "Practice", icon: "practice" },
+  { href: "/dashboard/sections", label: "My Sections", icon: "sections" },
   { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
+  { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
   { href: "/dashboard/settings", label: "Settings", icon: "settings" },
 ];
 
@@ -52,7 +88,94 @@ const icons: Record<string, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3h14M5 3v4a7 7 0 0014 0V3M5 3H3m16 0h2M12 14v7m-4 0h8M8 21v-4m8 4v-4" />
     </svg>
   ),
+  book: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+  ),
+  chart: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>
+  ),
+  chevronDown: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  ),
 };
+
+// Dropdown component
+function NavDropdown({
+  label,
+  icon,
+  items,
+  pathname
+}: {
+  label: string;
+  icon: string;
+  items: { href: string; label: string; icon: string }[];
+  pathname: string;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Check if any child is active
+  const hasActiveChild = items.some(item => pathname === item.href);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+          hasActiveChild
+            ? "bg-[var(--primary)] text-white"
+            : "text-[var(--foreground)] hover:bg-[var(--card)]"
+        }`}
+      >
+        {icons[icon]}
+        <span>{label}</span>
+        <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`}>
+          {icons.chevronDown}
+        </span>
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-[var(--border)] py-1 z-50">
+          {items.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center space-x-2 px-4 py-2 text-sm transition-colors ${
+                  isActive
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                }`}
+              >
+                {icons[item.icon]}
+                <span>{item.label}</span>
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function DashboardNav() {
   const pathname = usePathname();
@@ -75,7 +198,8 @@ export default function DashboardNav() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => {
+            {/* Standalone items (Overview) */}
+            {standaloneItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
@@ -92,6 +216,30 @@ export default function DashboardNav() {
                 </Link>
               );
             })}
+
+            {/* Grouped items with dropdowns */}
+            {groupedItems.map((group) => (
+              <NavDropdown
+                key={group.label}
+                label={group.label}
+                icon={group.icon}
+                items={group.items}
+                pathname={pathname}
+              />
+            ))}
+
+            {/* Settings */}
+            <Link
+              href={settingsItem.href}
+              className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                pathname === settingsItem.href
+                  ? "bg-[var(--primary)] text-white"
+                  : "text-[var(--foreground)] hover:bg-[var(--card)]"
+              }`}
+            >
+              {icons[settingsItem.icon]}
+              <span>{settingsItem.label}</span>
+            </Link>
           </div>
 
           {/* User Menu */}
@@ -120,11 +268,11 @@ export default function DashboardNav() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - flat list */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-[var(--border)]">
             <div className="flex flex-col space-y-1">
-              {navItems.map((item) => {
+              {allNavItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
