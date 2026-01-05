@@ -167,7 +167,7 @@ export default function ExamDayGuidePage() {
             <ul className="space-y-3">
               {checklistItems.weekBefore.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full border-2 border-[var(--border)] flex-shrink-0 mt-0.5" />
+                  <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0 mt-2" />
                   <span className="text-[var(--foreground)]">{item}</span>
                 </li>
               ))}
@@ -187,7 +187,7 @@ export default function ExamDayGuidePage() {
             <ul className="space-y-3">
               {checklistItems.dayBefore.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full border-2 border-[var(--border)] flex-shrink-0 mt-0.5" />
+                  <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0 mt-2" />
                   <span className="text-[var(--foreground)]">{item}</span>
                 </li>
               ))}

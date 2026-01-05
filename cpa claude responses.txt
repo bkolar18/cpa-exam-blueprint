@@ -1490,3 +1490,851 @@ If `supabase.auth.getSession()` hangs but there are NO network requests to supab
 
 ---
 
+## Dashboard Redirect Loop After Login - Server vs Client Auth Mismatch
+
+**Problem:** After logging in (in incognito mode), clicking "Dashboard" kept redirecting back to the login page in an infinite loop.
+
+**Symptoms:**
+- Login succeeds (session stored)
+- "Dashboard" link appears in header
+- Clicking Dashboard redirects back to /login
+- This repeats infinitely
+
+**Root Cause:**
+The dashboard layout was using **server-side auth checks** (cookies), but the login process stored the session in **localStorage** (client-side).
+
+- Login → Session stored in localStorage
+- Dashboard layout checks auth on server → Looks for session in cookies
+- Server doesn't see session → Redirects to /login
+- Loop repeats
+
+**Fix Applied:**
+Converted dashboard from server-side auth to client-side auth:
+
+1. **`src/app/dashboard/layout.tsx`** - Changed to "use client" with useAuth() hook
+2. **`src/app/dashboard/page.tsx`** - Ensured it waits for authLoading state
+3. **`src/app/dashboard/settings/page.tsx`** - Added missing authLoading check
+
+**Code pattern for dashboard pages:**
+
+```typescript
+"use client";
+
+import { useAuth } from "@/components/auth/AuthProvider";
+
+export default function DashboardPage() {
+  const { user, loading: authLoading } = useAuth();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (authLoading) return; // Wait for auth to finish
+    if (user) {
+      fetchData();
+    } else {
+      setLoading(false);
+    }
+  }, [user, authLoading]);
+
+  if (loading || authLoading) {
+    return <LoadingSpinner />;
+  }
+
+  // ... rest of component
+}
+```
+
+**Commit:** `822b0bf` - Fix dashboard auth: convert to client-side auth to fix redirect loop
+
+**To Test:**
+1. Open an **incognito/private** browser window
+2. Go to your site
+3. Click "Log In" and log in
+4. Click "Dashboard" - should load properly (no redirect loop)
+5. Navigate to sub-pages (Sections, Study Log, etc.) - all should load
+
+**Note:** Auth still hangs in regular browser if a browser extension is blocking Supabase. Whitelist your site in your ad blocker or continue testing in incognito.
+
+---
+
+## How to Whitelist Your Site in Ad Blockers
+
+If authentication works in incognito but not in your regular browser, a browser extension is blocking Supabase requests. Here's how to whitelist your site in common ad blockers:
+
+### Finding Your Extensions in Chrome
+
+If you don't see extension icons in your toolbar, they may be hidden:
+
+**Method 1: Check the puzzle piece icon**
+1. Look for the **puzzle piece icon** (🧩) in the top-right of Chrome, next to the address bar
+2. Click it to see all your installed extensions
+3. Find which ad blocker you have (uBlock Origin, AdBlock, etc.)
+4. Click the **pin icon** next to it to show it in your toolbar
+
+**Method 2: Go to Chrome Extensions page**
+1. Click the **three dots menu** (⋮) in top-right of Chrome
+2. Go to **Extensions** → **Manage Extensions**
+3. Or type `chrome://extensions` in the address bar
+4. This shows ALL your installed extensions
+5. Look for any ad blockers: uBlock Origin, AdBlock, AdBlock Plus, Ghostery, etc.
+
+**Method 3: Check what's blocking Supabase**
+1. Go to your site: `https://cpa-exam-blueprint.vercel.app`
+2. Open DevTools (F12) → **Network** tab
+3. Refresh the page
+4. Look for requests with "supabase" that show as **blocked** or **failed**
+5. The blocking extension often shows in the error details
+
+---
+
+### uBlock Origin
+
+1. Click the **uBlock Origin icon** in your browser toolbar (or find it via puzzle piece icon)
+2. Click the **blue power button** (it will turn gray) to disable for this site
+3. **Refresh the page**
+
+**Or permanently whitelist:**
+1. Click the uBlock Origin icon
+2. Click the **gear icon** (Dashboard)
+3. Go to **Whitelist** tab
+4. Add your site URL: `cpa-exam-blueprint.vercel.app`
+5. Click **Apply changes**
+
+### AdBlock Plus
+
+1. Click the **AdBlock Plus icon** in toolbar
+2. Click **"Don't run on pages on this site"**
+3. Click **Refresh**
+
+**Or via settings:**
+1. Click AdBlock Plus icon → **gear icon**
+2. Go to **Allowlisted websites**
+3. Add: `cpa-exam-blueprint.vercel.app`
+4. Click **Add website**
+
+### AdBlock
+
+1. Click the **AdBlock icon** in toolbar
+2. Click **"Don't run on pages on this domain"**
+3. Confirm and refresh
+
+### Brave Browser (Built-in Shields)
+
+1. Click the **Brave lion icon** in the address bar
+2. Toggle **Shields** to **Down** for this site
+3. Page will auto-refresh
+
+**Or adjust specific settings:**
+1. Click Brave lion icon
+2. Click **Advanced controls**
+3. Set **Block trackers & ads** to **Disabled** for this site
+
+### Ghostery
+
+1. Click the **Ghostery icon** in toolbar
+2. Click **Trust Site**
+3. Refresh the page
+
+### Privacy Badger
+
+1. Click the **Privacy Badger icon** in toolbar
+2. Click the **Disable** button for this site
+3. Refresh the page
+
+### Firefox Enhanced Tracking Protection
+
+1. Click the **shield icon** in the address bar (left of URL)
+2. Toggle off **Enhanced Tracking Protection** for this site
+3. Page will refresh automatically
+
+---
+
+### After Whitelisting
+
+1. **Hard refresh** the page: `Ctrl + Shift + R` (Windows) or `Cmd + Shift + R` (Mac)
+2. Check the **Console** (F12) - you should see auth debug messages completing
+3. The **"Log In"** or **"Dashboard"** link should appear in the header
+4. Login should work and dashboard should load properly
+
+---
+
+## No Ad Blockers But Auth Still Not Working - Clear Site Data
+
+If you don't have any ad blockers installed but auth works in incognito and not in your regular browser, the issue is likely **corrupted cached data** or **old JavaScript bundles**.
+
+### Solution: Clear All Site Data in Chrome
+
+**Step 1: Open Site Settings**
+1. Go to your site: `https://cpa-exam-blueprint.vercel.app`
+2. Click the **lock icon** (or info icon) in the address bar (left side of URL)
+3. Click **"Site settings"**
+
+**Step 2: Clear Data**
+1. Click **"Clear data"** button (or "Delete data")
+2. This removes all cookies, localStorage, and cached files for this site only
+3. Close the settings tab
+
+**Step 3: Hard Refresh**
+1. Go back to your site tab
+2. Press `Ctrl + Shift + R` to hard refresh
+3. Check if "Log In" appears in the header
+
+---
+
+### Alternative: Clear All Browsing Data
+
+If the above doesn't work, clear more broadly:
+
+1. Press `Ctrl + Shift + Delete` (opens Clear Browsing Data)
+2. Set time range to **"All time"**
+3. Check these boxes:
+   - ✅ Cookies and other site data
+   - ✅ Cached images and files
+4. Click **"Clear data"**
+5. Go to your site and test
+
+**Note:** This will log you out of all websites.
+
+---
+
+### Check for Other Extensions
+
+Even non-ad-blocker extensions can interfere. Go to `chrome://extensions` and look for:
+
+- **Privacy extensions** (Privacy Badger, DuckDuckGo Privacy Essentials)
+- **Security extensions** (Malwarebytes Browser Guard, Norton Safe Web)
+- **VPN extensions** (NordVPN, ExpressVPN browser extensions)
+- **Script blockers** (NoScript, ScriptSafe)
+- **Cookie managers** (EditThisCookie, Cookie AutoDelete)
+
+Try **disabling ALL extensions temporarily**, then test. If it works, re-enable them one by one to find the culprit.
+
+---
+
+## RESOLVED: Auth Not Working in Regular Browser
+
+**Issue:** Auth worked in incognito but not in regular Chrome browser. No ad blockers installed, no Supabase requests appearing in Network tab.
+
+**Root Cause:** Corrupted cached JavaScript bundles or localStorage data from previous development/deployment cycles.
+
+**Solution:** Clear site data in Chrome:
+1. Go to your site
+2. Click lock icon → Site settings → Clear data
+3. Hard refresh (`Ctrl + Shift + R`)
+
+**Result:** "Log In" appeared in header, authentication works, dashboard loads properly.
+
+---
+
+# COMPREHENSIVE IMPLEMENTATION PLAN: CPA Website Enhancements
+
+**Date:** 2026-01-05
+**Based on:** CPA Website Notes.txt
+**Research conducted:** Gamification best practices, PlayStation trophy system, Duolingo/Khan Academy patterns
+
+---
+
+## Executive Summary
+
+This plan covers two categories of enhancements:
+1. **Dashboard Gamification System** - Badges, achievements, practice timers, accolades page
+2. **Main Page UI Fixes** - Sticky CTA, bullet styling, table formatting, auto-scroll removal
+
+**Estimated Implementation:** 4-5 phases over multiple sessions
+**Complexity:** Medium-High (requires new database schema, components, and logic)
+
+---
+
+## PART 1: QUICK UI FIXES (Low Effort, High Impact)
+
+### 1.1 Fix Hours Display (0.0 → 0)
+
+**File:** `src/app/dashboard/page.tsx`
+**Current:** `{weeklyHours.toFixed(1)}h` displays "0.0h"
+**Fix:** Display whole number if no decimal, otherwise show one decimal
+
+```typescript
+// Helper function
+const formatHours = (hours: number): string => {
+  if (hours === 0) return "0";
+  if (hours % 1 === 0) return hours.toString();
+  return hours.toFixed(1);
+};
+
+// Usage
+<StatCard label="This Week" value={`${formatHours(weeklyHours)}h`} ... />
+```
+
+**Files to update:**
+- `src/app/dashboard/page.tsx` (StatCard value)
+- `src/app/dashboard/study-log/page.tsx` (weekly/total hours displays)
+
+---
+
+### 1.2 Change Exam Day Walkthrough Bullet Colors
+
+**File:** `src/app/guides/exam-day/page.tsx`
+**Current:** White circles with gray border (`border-[var(--border)]`)
+**Fix:** Blue filled circles matching theme
+
+```tsx
+// Current (lines 169-170, 188-189)
+<div className="w-6 h-6 rounded-full border-2 border-[var(--border)] flex-shrink-0 mt-0.5" />
+
+// New
+<div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0 mt-2" />
+```
+
+---
+
+### 1.3 Remove Auto-Scrolling from Working Full Time Page
+
+**File:** `src/app/working-full-time/page.tsx` (or wherever "Get Your Personalized Schedule" box lives)
+**Issue:** Box follows user while scrolling
+**Fix:** Remove `sticky` positioning if present, or investigate any JavaScript scroll behavior
+
+---
+
+### 1.4 Lock "Get Your Study Plan" CTA in Place (Exam Section Pages)
+
+**File:** `src/components/SectionPage.tsx`
+**Current:** Already has `sticky top-24` on line 157
+**Issue:** May be scrolling with follow behavior instead of staying fixed
+
+**Analysis:** The `sticky top-24` should work. If it's "following" the scroll, it might be:
+1. Parent container has `overflow: hidden` preventing sticky behavior
+2. Need to adjust to `position: fixed` instead
+
+**Fix Options:**
+```tsx
+// Option A: If sticky isn't working, use fixed positioning
+<div className="hidden lg:block lg:w-80 fixed top-24 right-8">
+
+// Option B: Ensure parent allows sticky
+<div className="lg:col-span-1 relative">
+  <div className="sticky top-24">
+```
+
+**User clarification needed:** Is the CTA card scrolling away with the page, or following the user as they scroll? The fix differs based on this.
+
+---
+
+### 1.5 Fix Markdown Tables in Blogs/Success Stories
+
+**Issue:** Tables display as raw text like `| Column | Data |` instead of formatted HTML tables
+
+**Root Cause:** MDX tables component exists in `src/app/blog/[slug]/page.tsx` (lines 79-89), but the markdown parser may not be converting pipe tables to HTML.
+
+**Files to check:**
+- `src/content/blog/*.mdx` - Verify table syntax is correct
+- `src/lib/blog/posts.ts` - Check if remark-gfm plugin is needed
+
+**Solution:** Add `remark-gfm` plugin for GitHub Flavored Markdown table support:
+
+```bash
+npm install remark-gfm
+```
+
+```tsx
+// src/app/blog/[slug]/page.tsx
+import remarkGfm from 'remark-gfm';
+
+<MDXRemote
+  source={post.content}
+  components={mdxComponents}
+  options={{
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+    },
+  }}
+/>
+```
+
+---
+
+## PART 2: GAMIFICATION SYSTEM (Complex Feature)
+
+### 2.1 System Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    GAMIFICATION SYSTEM                       │
+├─────────────────────────────────────────────────────────────┤
+│  BADGES (Progress-based)          ACHIEVEMENTS (Action-based)│
+│  ├─ Study Hour Milestones         ├─ Visible Achievements    │
+│  ├─ Per-Section Progress          ├─ Hidden/Secret Achievements│
+│  └─ 25%, 50%, 75%, 100%          └─ Unlocked on discovery    │
+├─────────────────────────────────────────────────────────────┤
+│  TIERS (PlayStation-style)                                   │
+│  Bronze (15 pts) → Silver (30 pts) → Gold (90 pts) → Platinum│
+├─────────────────────────────────────────────────────────────┤
+│  REWARDS                                                     │
+│  └─ Platinum Achievement = Surgent Discount Code             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 2.2 Database Schema Additions
+
+```sql
+-- New table: badges (defines available badges)
+CREATE TABLE badges (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  code VARCHAR(50) UNIQUE NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  description TEXT NOT NULL,
+  category VARCHAR(50) NOT NULL, -- 'study_hours', 'practice', 'section', 'account'
+  tier VARCHAR(20) NOT NULL, -- 'bronze', 'silver', 'gold', 'platinum'
+  points INTEGER NOT NULL DEFAULT 15,
+  icon_url TEXT,
+  requirement_type VARCHAR(50) NOT NULL, -- 'hours', 'percentage', 'count', 'boolean'
+  requirement_value DECIMAL,
+  requirement_section VARCHAR(10), -- 'FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC', NULL for all
+  sort_order INTEGER DEFAULT 0,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- New table: achievements (defines available achievements)
+CREATE TABLE achievements (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  code VARCHAR(50) UNIQUE NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  hidden_name VARCHAR(100) DEFAULT '???',
+  description TEXT NOT NULL,
+  hidden_description TEXT DEFAULT 'Complete a hidden challenge to discover this achievement.',
+  category VARCHAR(50) NOT NULL, -- 'practice', 'account', 'speed', 'accuracy', 'special'
+  tier VARCHAR(20) NOT NULL,
+  points INTEGER NOT NULL DEFAULT 15,
+  icon_url TEXT,
+  is_hidden BOOLEAN DEFAULT FALSE,
+  requirement_type VARCHAR(50) NOT NULL,
+  requirement_value DECIMAL,
+  requirement_metadata JSONB, -- flexible additional conditions
+  sort_order INTEGER DEFAULT 0,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- New table: user_badges (tracks which badges users have earned)
+CREATE TABLE user_badges (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+  badge_id UUID REFERENCES badges(id) ON DELETE CASCADE,
+  earned_at TIMESTAMPTZ DEFAULT NOW(),
+  progress DECIMAL DEFAULT 0, -- percentage toward earning (0-100)
+  UNIQUE(user_id, badge_id)
+);
+
+-- New table: user_achievements (tracks which achievements users have unlocked)
+CREATE TABLE user_achievements (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+  achievement_id UUID REFERENCES achievements(id) ON DELETE CASCADE,
+  unlocked_at TIMESTAMPTZ DEFAULT NOW(),
+  is_discovered BOOLEAN DEFAULT TRUE, -- for hidden achievements
+  UNIQUE(user_id, achievement_id)
+);
+
+-- New table: practice_sessions (links to study sessions with timer)
+CREATE TABLE practice_sessions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+  section VARCHAR(10) NOT NULL,
+  started_at TIMESTAMPTZ NOT NULL,
+  ended_at TIMESTAMPTZ,
+  duration_minutes INTEGER,
+  questions_attempted INTEGER DEFAULT 0,
+  questions_correct INTEGER DEFAULT 0,
+  accuracy_percentage DECIMAL,
+  study_session_id UUID REFERENCES study_sessions(id), -- auto-created study log
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Update profiles table to track total points
+ALTER TABLE profiles ADD COLUMN IF NOT EXISTS total_points INTEGER DEFAULT 0;
+ALTER TABLE profiles ADD COLUMN IF NOT EXISTS badge_count INTEGER DEFAULT 0;
+ALTER TABLE profiles ADD COLUMN IF NOT EXISTS achievement_count INTEGER DEFAULT 0;
+
+-- RLS policies
+ALTER TABLE badges ENABLE ROW LEVEL SECURITY;
+ALTER TABLE achievements ENABLE ROW LEVEL SECURITY;
+ALTER TABLE user_badges ENABLE ROW LEVEL SECURITY;
+ALTER TABLE user_achievements ENABLE ROW LEVEL SECURITY;
+ALTER TABLE practice_sessions ENABLE ROW LEVEL SECURITY;
+
+-- Badges/achievements are public read
+CREATE POLICY "Badges are viewable by everyone" ON badges FOR SELECT USING (true);
+CREATE POLICY "Achievements are viewable by everyone" ON achievements FOR SELECT USING (true);
+
+-- User data is private
+CREATE POLICY "Users can view own badges" ON user_badges FOR SELECT USING (auth.uid() = user_id);
+CREATE POLICY "Users can insert own badges" ON user_badges FOR INSERT WITH CHECK (auth.uid() = user_id);
+CREATE POLICY "Users can view own achievements" ON user_achievements FOR SELECT USING (auth.uid() = user_id);
+CREATE POLICY "Users can insert own achievements" ON user_achievements FOR INSERT WITH CHECK (auth.uid() = user_id);
+CREATE POLICY "Users can manage own practice sessions" ON practice_sessions FOR ALL USING (auth.uid() = user_id);
+```
+
+---
+
+### 2.3 Badge Definitions
+
+**Study Hour Badges (Per Section)**
+
+| Badge Code | Name | Tier | Requirement | Points |
+|------------|------|------|-------------|--------|
+| far_hours_25 | FAR Beginner | Bronze | 25% of 150 hrs (37.5 hrs) | 15 |
+| far_hours_50 | FAR Student | Silver | 50% of 150 hrs (75 hrs) | 30 |
+| far_hours_75 | FAR Scholar | Gold | 75% of 150 hrs (112.5 hrs) | 90 |
+| far_hours_100 | FAR Master | Gold | 100% of 150 hrs (150 hrs) | 90 |
+| aud_hours_25 | AUD Beginner | Bronze | 25% of 100 hrs (25 hrs) | 15 |
+| aud_hours_50 | AUD Student | Silver | 50% of 100 hrs (50 hrs) | 30 |
+| aud_hours_75 | AUD Scholar | Gold | 75% of 100 hrs (75 hrs) | 90 |
+| aud_hours_100 | AUD Master | Gold | 100% of 100 hrs (100 hrs) | 90 |
+| reg_hours_25 | REG Beginner | Bronze | 25% of 100 hrs | 15 |
+| reg_hours_50 | REG Student | Silver | 50% of 100 hrs | 30 |
+| reg_hours_75 | REG Scholar | Gold | 75% of 100 hrs | 90 |
+| reg_hours_100 | REG Master | Gold | 100% of 100 hrs | 90 |
+| (discipline)_hours_* | Similar for TCP/BAR/ISC | ... | 80 hrs recommended | ... |
+
+**Recommended Study Hours Reference:**
+- FAR: 120-150 hours (use 150)
+- AUD: 80-100 hours (use 100)
+- REG: 80-100 hours (use 100)
+- TCP: 60-80 hours (use 80)
+- BAR: 80-100 hours (use 100)
+- ISC: 60-80 hours (use 80)
+
+---
+
+### 2.4 Achievement Definitions
+
+**Visible Achievements**
+
+| Code | Name | Tier | Condition | Points |
+|------|------|------|-----------|--------|
+| first_session | First Steps | Bronze | Log first study session | 15 |
+| week_streak_7 | Dedicated | Bronze | 7-day study streak | 15 |
+| week_streak_30 | Committed | Silver | 30-day study streak | 30 |
+| section_passed_1 | One Down | Silver | Pass first section | 30 |
+| section_passed_all | CPA Candidate | Platinum | Pass all 4 sections | 300 |
+| profile_complete | Ready to Go | Bronze | Complete all profile settings | 15 |
+| discipline_chosen | Committed Path | Bronze | Choose discipline section | 15 |
+| nts_added | Officially Scheduled | Bronze | Add first NTS entry | 15 |
+| practice_all_sections | Well Rounded | Silver | Practice in all 4 sections (3 core + discipline) | 30 |
+
+**Hidden Achievements (Display as "???" until unlocked)**
+
+| Code | Hidden Name | Revealed Name | Tier | Condition | Points |
+|------|-------------|---------------|------|-----------|--------|
+| accuracy_75_far | ??? | FAR Sharp | Silver | 75%+ accuracy in FAR practice session | 30 |
+| accuracy_75_aud | ??? | AUD Sharp | Silver | 75%+ accuracy in AUD practice session | 30 |
+| accuracy_75_reg | ??? | REG Sharp | Silver | 75%+ accuracy in REG practice session | 30 |
+| accuracy_75_disc | ??? | Discipline Sharp | Silver | 75%+ in discipline section | 30 |
+| speed_demon | ??? | Speed Demon | Gold | Complete 50 questions in under 30 min with 70%+ | 90 |
+| night_owl | ??? | Night Owl | Bronze | Complete session between 10 PM - 2 AM | 15 |
+| early_bird | ??? | Early Bird | Bronze | Complete session between 5 AM - 7 AM | 15 |
+| marathon | ??? | Marathon Runner | Gold | Study 8+ hours in a single day | 90 |
+| comeback | ??? | Comeback Kid | Gold | Improve from <50% to >75% accuracy in a topic | 90 |
+| perfect_10 | ??? | Perfect 10 | Silver | Answer 10 questions correctly in a row | 30 |
+| perfect_50 | ??? | Flawless | Gold | Answer 50 questions correctly in a row | 90 |
+
+**Platinum Achievement (Master Trophy)**
+
+| Code | Name | Tier | Condition | Points | Reward |
+|------|------|------|-----------|--------|--------|
+| platinum_master | CPA Blueprint Master | Platinum | Unlock all other achievements | 300 | Surgent discount code |
+
+---
+
+### 2.5 Point System & Tiers
+
+**Tier Structure (PlayStation-inspired)**
+
+| Tier | Points | Color | Requirements |
+|------|--------|-------|--------------|
+| Bronze | 15 | #CD7F32 | Easy/starter achievements |
+| Silver | 30 | #C0C0C0 | Moderate difficulty |
+| Gold | 90 | #FFD700 | Significant accomplishments |
+| Platinum | 300 | #E5E4E2 | Master achievement only |
+
+**Total Available Points:** ~1,200-1,500 (matches PlayStation game trophy lists)
+
+---
+
+### 2.6 Practice Timer Integration
+
+**Flow:**
+1. User navigates to Practice page
+2. Selects section (FAR, AUD, REG, or discipline)
+3. Clicks "Start Practice Session"
+4. Timer starts, questions presented
+5. User answers questions (tracked individually)
+6. User ends session OR time limit reached
+7. System calculates:
+   - Duration (minutes)
+   - Questions attempted
+   - Questions correct
+   - Accuracy percentage
+8. Auto-creates study_session entry with:
+   - section: selected section
+   - hours: duration / 60
+   - date: today
+   - notes: "Practice session - X questions, Y% accuracy"
+9. Checks for achievement triggers
+10. Returns to Practice page with session summary
+
+**Timer Component:**
+```tsx
+// src/components/practice/PracticeTimer.tsx
+interface PracticeTimerProps {
+  section: SectionCode;
+  onComplete: (results: PracticeResults) => void;
+}
+
+interface PracticeResults {
+  duration: number; // minutes
+  questionsAttempted: number;
+  questionsCorrect: number;
+  accuracy: number;
+}
+```
+
+---
+
+### 2.7 Accolades Page Design
+
+**Route:** `/dashboard/accolades`
+
+**Layout:**
+```
+┌─────────────────────────────────────────────────────────────┐
+│  MY ACCOLADES                                               │
+│  Total Points: 450  |  Badges: 12/28  |  Achievements: 8/20 │
+├─────────────────────────────────────────────────────────────┤
+│  BADGES                                                      │
+│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐           │
+│  │ FAR │ │ FAR │ │ FAR │ │ AUD │ │ AUD │ │ ??? │           │
+│  │ 25% │ │ 50% │ │ 75% │ │ 25% │ │ 50% │ │     │           │
+│  │ ✓   │ │ ✓   │ │ 60% │ │ ✓   │ │ 80% │ │     │           │
+│  └─────┘ └─────┘ └─────┘ └─────┘ └─────┘ └─────┘           │
+├─────────────────────────────────────────────────────────────┤
+│  ACHIEVEMENTS                                                │
+│  ┌─────────────────────────────────────────────────────────┐│
+│  │ BRONZE                                                   ││
+│  │ [✓] First Steps - Log your first study session          ││
+│  │ [✓] Ready to Go - Complete your profile                 ││
+│  │ [ ] ??? - Hidden achievement                            ││
+│  ├─────────────────────────────────────────────────────────┤│
+│  │ SILVER                                                   ││
+│  │ [✓] One Down - Pass your first section                  ││
+│  │ [ ] ??? - Hidden achievement                            ││
+│  ├─────────────────────────────────────────────────────────┤│
+│  │ GOLD                                                     ││
+│  │ [ ] ??? - Hidden achievement                            ││
+│  ├─────────────────────────────────────────────────────────┤│
+│  │ PLATINUM                                                 ││
+│  │ [ ] CPA Blueprint Master - Unlock all achievements      ││
+│  │     Progress: 8/19 achievements                          ││
+│  └─────────────────────────────────────────────────────────┘│
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Features:**
+- Progress bars for in-progress badges
+- Locked/unlocked visual states
+- Hidden achievements show "???" until discovered
+- Tier sections (Bronze, Silver, Gold, Platinum)
+- Total points display
+- Rarity indicator (% of users who have earned)
+
+---
+
+### 2.8 Achievement Checking Logic
+
+**When to check for achievements:**
+1. After study session logged → check streak, hours milestones
+2. After practice session completed → check accuracy, speed achievements
+3. After section status updated → check section passed achievements
+4. After profile updated → check profile completion
+5. After NTS added → check NTS achievement
+6. On login → check time-based achievements (streak maintenance)
+
+**Service function:**
+```typescript
+// src/lib/achievements/checker.ts
+export async function checkAchievements(
+  userId: string,
+  trigger: 'study_session' | 'practice_session' | 'section_update' | 'profile_update' | 'nts_add' | 'login',
+  context?: Record<string, any>
+): Promise<Achievement[]> {
+  // Returns newly unlocked achievements
+}
+```
+
+---
+
+## PART 3: IMPLEMENTATION PHASES
+
+### Phase 1: Quick UI Fixes (1-2 hours)
+- [ ] Fix hours display formatting (0.0 → 0)
+- [ ] Change bullet colors on exam day page
+- [ ] Fix sticky CTA on section pages
+- [ ] Add remark-gfm for table rendering
+
+### Phase 2: Database Schema (1 hour)
+- [ ] Create badges table
+- [ ] Create achievements table
+- [ ] Create user_badges table
+- [ ] Create user_achievements table
+- [ ] Create practice_sessions table
+- [ ] Add columns to profiles table
+- [ ] Set up RLS policies
+- [ ] Seed initial badge/achievement data
+
+### Phase 3: Core Gamification Logic (3-4 hours)
+- [ ] Create TypeScript types for badges/achievements
+- [ ] Build achievement checking service
+- [ ] Build badge progress calculator
+- [ ] Integrate with existing study session logging
+- [ ] Integrate with section progress updates
+- [ ] Add achievement triggers to profile updates
+
+### Phase 4: Practice Timer Feature (3-4 hours)
+- [ ] Build PracticeTimer component
+- [ ] Build practice question interface (or placeholder)
+- [ ] Integrate timer with practice_sessions table
+- [ ] Auto-create study sessions from practice
+- [ ] Add achievement checks on practice completion
+
+### Phase 5: Accolades Page (2-3 hours)
+- [ ] Create `/dashboard/accolades/page.tsx`
+- [ ] Build badge grid component
+- [ ] Build achievement list component
+- [ ] Add tier sections
+- [ ] Show progress indicators
+- [ ] Implement hidden achievement display logic
+
+### Phase 6: Polish & Integration (2-3 hours)
+- [ ] Add notification toasts for new achievements
+- [ ] Add accolades link to dashboard nav
+- [ ] Show recent achievements on dashboard overview
+- [ ] Implement Surgent discount code reveal for platinum
+- [ ] Test all achievement triggers
+- [ ] Add loading states and error handling
+
+---
+
+## PART 4: FILES TO CREATE/MODIFY
+
+### New Files
+```
+src/lib/gamification/
+├── types.ts              # Badge, Achievement, UserBadge, UserAchievement types
+├── badges.ts             # Badge definitions and utilities
+├── achievements.ts       # Achievement definitions and utilities
+├── checker.ts            # Achievement checking logic
+└── calculator.ts         # Progress calculation utilities
+
+src/components/gamification/
+├── BadgeCard.tsx         # Individual badge display
+├── BadgeGrid.tsx         # Grid of badges
+├── AchievementItem.tsx   # Individual achievement row
+├── AchievementList.tsx   # List of achievements by tier
+├── ProgressRing.tsx      # Circular progress indicator
+└── AchievementToast.tsx  # Notification for new achievements
+
+src/components/practice/
+├── PracticeTimer.tsx     # Timer component
+├── PracticeSession.tsx   # Practice session wrapper
+└── SessionSummary.tsx    # Post-session results display
+
+src/app/dashboard/accolades/
+└── page.tsx              # Accolades dashboard page
+```
+
+### Modified Files
+```
+src/app/dashboard/page.tsx           # Add recent achievements section
+src/app/dashboard/study-log/page.tsx # Trigger achievement checks
+src/app/dashboard/practice/page.tsx  # Integrate practice timer
+src/app/dashboard/sections/page.tsx  # Trigger achievement checks
+src/app/dashboard/settings/page.tsx  # Trigger profile achievements
+src/app/dashboard/nts/page.tsx       # Trigger NTS achievement
+src/components/dashboard/DashboardNav.tsx # Add Accolades link
+src/lib/supabase/types.ts            # Add new types
+src/app/guides/exam-day/page.tsx     # Fix bullet colors
+src/components/SectionPage.tsx       # Fix sticky CTA
+src/app/blog/[slug]/page.tsx         # Add remark-gfm
+```
+
+---
+
+## PART 5: SURGENT DISCOUNT INTEGRATION
+
+**Platinum Reward Implementation:**
+
+1. When user unlocks platinum achievement:
+   - Generate unique discount code (or use pre-set code)
+   - Store in user_achievements metadata
+   - Display on Accolades page
+
+2. Display options:
+   - Modal celebration when platinum unlocked
+   - Permanent display on Accolades page
+   - Link to Surgent with affiliate tracking + discount
+
+```tsx
+// Example platinum reward display
+{hasPlatinum && (
+  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 text-white">
+    <h3 className="text-xl font-bold mb-2">🏆 You've Earned a Reward!</h3>
+    <p className="mb-4">Use code <strong>CPAMASTER</strong> for 20% off Surgent CPA Review</p>
+    <a href="/recommended-program?discount=CPAMASTER" className="btn-secondary">
+      Claim Your Discount
+    </a>
+  </div>
+)}
+```
+
+---
+
+## PART 6: RESEARCH SOURCES
+
+**Gamification Best Practices:**
+- Duolingo achievement system (3.6x engagement after 7-day streak)
+- PlayStation trophy tiers (Bronze 15, Silver 30, Gold 90, Platinum 300)
+- Khan Academy mastery levels
+- Avoid over-notification (batch achievements)
+- Hidden achievements should be 10-15% of total
+
+**Study Timer Research:**
+- Pomodoro technique (25 min sessions)
+- Spaced repetition benefits
+- Variable session lengths based on content type
+
+---
+
+## PART 7: QUESTIONS FOR USER
+
+Before implementation, please clarify:
+
+1. **Sticky CTA behavior:** Is the "Get Your Study Plan" box currently:
+   - A) Scrolling away with the page (not sticky)?
+   - B) Following the user as they scroll (too sticky)?
+
+2. **Working Full Time page:** Where is the "Get Your Personalized Schedule" box that has auto-scrolling? Is it at `/working-full-time` or another URL?
+
+3. **Practice questions:** Do you have practice question content ready, or should the practice timer just be a timer without actual questions for now?
+
+4. **Surgent discount:** Do you have a specific discount code to use, or should we generate unique codes per user?
+
+5. **Priority:** Would you like to start with:
+   - A) Quick UI fixes first?
+   - B) Full gamification system?
+   - C) Both in parallel?
+
+---
+
+**End of Implementation Plan**
+
+---
+

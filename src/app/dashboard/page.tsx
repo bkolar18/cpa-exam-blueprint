@@ -68,6 +68,13 @@ export default function DashboardPage() {
     setLoading(false);
   };
 
+  // Helper function to format hours (show 0 instead of 0.0)
+  const formatHours = (hours: number): string => {
+    if (hours === 0) return "0";
+    if (hours % 1 === 0) return hours.toString();
+    return hours.toFixed(1);
+  };
+
   // Calculate stats
   const weeklyHours = recentSessions?.reduce((sum: number, s: { hours: number }) => sum + Number(s.hours), 0) || 0;
   const sectionsPassed = sectionProgress?.filter((s: { status: string }) => s.status === "passed").length || 0;
@@ -147,7 +154,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           label="This Week"
-          value={`${weeklyHours.toFixed(1)}h`}
+          value={`${formatHours(weeklyHours)}h`}
           sublabel={profile?.weekly_study_hours ? `Goal: ${profile.weekly_study_hours}h` : "Set a goal"}
           color="blue"
         />

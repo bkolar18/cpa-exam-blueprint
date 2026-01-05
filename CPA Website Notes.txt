@@ -1,0 +1,15 @@
+CPA Website Notes:
+
+Dashboard:
+-Change hours in "This Week" section to 0 from 0.0 (no decimals unless over 0)
+-Lets add a feature that links the study log and practice sessions. Once we create our practice booklets, users can click on a practice session and once they begin, a timer starts. When their practice session is over, the timer ends and the study session is logged to the study session page. 
+- We can also add a badge system where different badges are earned based on hours studied (base badges on recommended study hours, one badge at 25% of recommended hours, 1 at 50%, 1 at 75%, and 1 at 100% for each section and a users chosen discipline.
+- Add secret achievements that are unlocked as well (list of hidden achievements include user achieving a 75% or higher correct in a given session in each exam section, sessions completed in a certain timeframe (speed), sections marked as passed, fully completing your account settings, choosing a discipline, adding an NTS, practicing once in each section and your chosen discipline, etc.
+- Add an "Accolades" page to the dashboard that displays a users badges and achievements that theyve unlocked. All achievements are listed on the accolades page but are listed as "???" until they are unlocked/discovered by the user. Achievements are categorized by difficulty like PlayStation achievements are (bronze, silver, gold, platinum) with platinum being "Unlock All Achievements".
+- If user achieves the platinum accolade, get a discount on Surgent.
+
+Main Pages:
+- In each exam section page, lets lock the "Get Your xxx Study Plan..." block in place (no follow with scrolling)
+-On CPA Exam Walkthrough page, change bullets in Week Before exam and day Before Exam sections from white circles to smaller blue circles (same color as our theme)
+-In the Passing the CPA Exam While Working Full Time page, remove auto scrolling from "Get Your Personalized Schedule" box
+-In the blogs and success stories, there are several tables that look like this: | Testlet | Content | Count | |---------|---------|-------| | 1 | Multiple Choice Questions | 39 MCQs | | 2 | Multiple Choice Questions | 39 MCQs | | 3 | Task-Based Simulations | 2 TBS | | 4 | Task-Based Simulations | 3 TBS | | 5 | Task-Based Simulations | 3 TBS |. This formatting does not look legible to users, nor is it professional. Make this a clean user friendly table or list in every instance that uses these dashes and lines to emulate a data table.

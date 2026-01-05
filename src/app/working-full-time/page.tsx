@@ -193,7 +193,7 @@ export default function WorkingFullTimePage() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* CTA Card */}
-            <div className="bg-white p-6 rounded-xl border border-[var(--border)] sticky top-24">
+            <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
               <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
                 Get Your Personalized Schedule
               </h3>
