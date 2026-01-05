@@ -23,7 +23,7 @@ const statuses: { value: SectionStatus; label: string; color: string }[] = [
 ];
 
 export default function SectionsPage() {
-  const { user, profile } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
   const [progress, setProgress] = useState<Record<string, SectionProgress>>({});
   const [loading, setLoading] = useState(true);
   const [editingSection, setEditingSection] = useState<SectionCode | null>(null);
@@ -36,10 +36,13 @@ export default function SectionsPage() {
   const supabase = createClient();
 
   useEffect(() => {
+    if (authLoading) return; // Wait for auth to finish
     if (user) {
       fetchProgress();
+    } else {
+      setLoading(false);
     }
-  }, [user]);
+  }, [user, authLoading]);
 
   const fetchProgress = async () => {
     if (!supabase) {

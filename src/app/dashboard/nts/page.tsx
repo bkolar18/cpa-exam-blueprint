@@ -8,7 +8,7 @@ import type { NTSEntry, SectionCode, NTSStatus } from "@/lib/supabase/types";
 const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
 
 export default function NTSPage() {
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const [entries, setEntries] = useState<NTSEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -24,10 +24,13 @@ export default function NTSPage() {
   const supabase = createClient();
 
   useEffect(() => {
+    if (authLoading) return; // Wait for auth to finish
     if (user) {
       fetchEntries();
+    } else {
+      setLoading(false);
     }
-  }, [user]);
+  }, [user, authLoading]);
 
   const fetchEntries = async () => {
     if (!supabase) {

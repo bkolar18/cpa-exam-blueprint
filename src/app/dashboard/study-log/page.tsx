@@ -8,7 +8,7 @@ import type { StudySession, SectionCode } from "@/lib/supabase/types";
 const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
 
 export default function StudyLogPage() {
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const [sessions, setSessions] = useState<StudySession[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -22,10 +22,13 @@ export default function StudyLogPage() {
   const supabase = createClient();
 
   useEffect(() => {
+    if (authLoading) return; // Wait for auth to finish
     if (user) {
       fetchSessions();
+    } else {
+      setLoading(false);
     }
-  }, [user]);
+  }, [user, authLoading]);
 
   const fetchSessions = async () => {
     if (!supabase) {

@@ -40,16 +40,19 @@ const sections: { code: SectionCode; name: string; topics: string[] }[] = [
 ];
 
 export default function PracticePage() {
-  const { user, profile } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
   const [attempts, setAttempts] = useState<PracticeAttempt[]>([]);
   const [loading, setLoading] = useState(true);
   const supabase = createClient();
 
   useEffect(() => {
+    if (authLoading) return; // Wait for auth to finish
     if (user) {
       fetchAttempts();
+    } else {
+      setLoading(false);
     }
-  }, [user]);
+  }, [user, authLoading]);
 
   const fetchAttempts = async () => {
     if (!supabase) {
