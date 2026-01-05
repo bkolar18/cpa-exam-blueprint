@@ -138,15 +138,15 @@ function NavDropdown({
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-          hasActiveChild
+        className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+          hasActiveChild || isOpen
             ? "bg-[var(--primary)] text-white"
-            : "text-[var(--foreground)] hover:bg-[var(--card)]"
+            : "text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white"
         }`}
       >
         {icons[icon]}
         <span>{label}</span>
-        <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`}>
+        <span className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
           {icons.chevronDown}
         </span>
       </button>
@@ -160,10 +160,10 @@ function NavDropdown({
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center space-x-2 px-4 py-2 text-sm transition-colors ${
+                className={`flex items-center space-x-2 px-4 py-2.5 text-sm transition-all duration-200 ${
                   isActive
                     ? "bg-[var(--primary)] text-white"
-                    : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                    : "text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white"
                 }`}
               >
                 {icons[item.icon]}
@@ -197,7 +197,7 @@ export default function DashboardNav() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-3">
             {/* Standalone items (Overview) */}
             {standaloneItems.map((item) => {
               const isActive = pathname === item.href;
@@ -205,10 +205,10 @@ export default function DashboardNav() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
                       ? "bg-[var(--primary)] text-white"
-                      : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                      : "text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white"
                   }`}
                 >
                   {icons[item.icon]}
@@ -227,27 +227,24 @@ export default function DashboardNav() {
                 pathname={pathname}
               />
             ))}
+          </div>
 
-            {/* Settings */}
+          {/* Right side: Settings & Sign Out */}
+          <div className="hidden md:flex items-center space-x-3">
             <Link
               href={settingsItem.href}
-              className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 pathname === settingsItem.href
                   ? "bg-[var(--primary)] text-white"
-                  : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                  : "text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white"
               }`}
             >
               {icons[settingsItem.icon]}
               <span>{settingsItem.label}</span>
             </Link>
-          </div>
-
-          {/* User Menu */}
-          <div className="hidden md:flex items-center space-x-4">
-            <span className="text-sm text-[var(--muted)]">{user?.email}</span>
             <button
               onClick={signOut}
-              className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+              className="px-4 py-2 text-sm font-medium text-[var(--muted)] hover:text-red-600 transition-colors"
             >
               Sign Out
             </button>
