@@ -1,4 +1,4 @@
-import { createBrowserClient } from '@supabase/ssr'
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 let supabaseClient: SupabaseClient | null = null;
@@ -17,8 +17,8 @@ export function createClient(): SupabaseClient | null {
     return null;
   }
 
-  // Use browser client from @supabase/ssr for proper cookie handling
-  supabaseClient = createBrowserClient(supabaseUrl, supabaseAnonKey);
+  // Use standard Supabase client - stores session in localStorage
+  supabaseClient = createSupabaseClient(supabaseUrl, supabaseAnonKey);
   return supabaseClient;
 }
 

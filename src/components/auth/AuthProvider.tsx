@@ -66,16 +66,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    // Get initial session with timeout to prevent infinite loading
+    // Get initial session
     const getSession = async () => {
       try {
-        // Add timeout to prevent hanging
-        const timeoutPromise = new Promise((_, reject) =>
-          setTimeout(() => reject(new Error('Session timeout')), 5000)
-        );
-
-        const sessionPromise = supabase.auth.getSession();
-        const { data: { session } } = await Promise.race([sessionPromise, timeoutPromise]) as Awaited<typeof sessionPromise>;
+        const { data: { session } } = await supabase.auth.getSession();
         setSession(session);
         setUser(session?.user ?? null);
 
