@@ -2970,3 +2970,127 @@ Wait 2-3 minutes for deployment to complete.
 
 ---
 
+## Root Cause Analysis: Auth Works in Incognito But Not Regular Browser
+
+**Date:** January 5, 2026
+
+**Problem:** Login works perfectly in incognito mode but fails in regular browser. Users shouldn't need to clear cache or use incognito.
+
+### Diagnosis
+
+**Root Cause:** Stale/corrupted localStorage tokens from previous sessions or switching between Supabase client implementations.
+
+**How Supabase Stores Auth:**
+- Standard client (`@supabase/supabase-js`) stores in localStorage
+- Key pattern: `sb-<project-ref>-auth-token`
+- Contains: access_token, refresh_token, expires_at, user info
+
+**Why Incognito Works:**
+- Incognito starts with empty localStorage
+- No stale tokens to conflict with auth flow
+
+**What Causes Stale Tokens:**
+1. Expired refresh tokens (default 7 day lifetime)
+2. Switching between client implementations (SSR vs standard)
+3. Multiple Supabase client instances
+4. Browser not visited in a while
+
+**The Critical Bug:**
+`getSession()` returns local tokens without validating with server. If tokens are invalid on server but exist locally, auth breaks silently.
+
+### Solution Implemented
+
+**Key Insight:** Always validate local session with server using `getUser()`, not just `getSession()`.
+
+#### 1. Created `clearAllAuthStorage.ts`
+```typescript
+export function clearAllAuthStorage(): void {
+  // Clear localStorage
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith('sb-') || key.includes('supabase')) {
+      localStorage.removeItem(key);
+    }
+  });
+
+  // Clear sessionStorage
+  Object.keys(sessionStorage).forEach(key => {
+    if (key.startsWith('sb-') || key.includes('supabase')) {
+      sessionStorage.removeItem(key);
+    }
+  });
+
+  // Clear cookies
+  document.cookie.split(';').forEach(cookie => {
+    const name = cookie.split('=')[0].trim();
+    if (name.startsWith('sb-')) {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    }
+  });
+}
+```
+
+#### 2. Updated AuthProvider with Server Validation
+```typescript
+async function initializeAuth() {
+  // Step 1: Get local session
+  const { data: { session: localSession }, error: sessionError } =
+    await supabase.auth.getSession();
+
+  if (sessionError) {
+    clearAllAuthStorage();  // Clear corrupted data
+    return;
+  }
+
+  if (localSession) {
+    // Step 2: CRITICAL - Validate with server
+    const { data: { user: validatedUser }, error: userError } =
+      await supabase.auth.getUser();
+
+    if (userError || !validatedUser) {
+      // Local session exists but server rejects it
+      console.error("Stale session detected, clearing");
+      clearAllAuthStorage();
+      await supabase.auth.signOut({ scope: 'local' });
+      return;
+    }
+
+    // Session is valid - proceed
+    setSession(localSession);
+    setUser(validatedUser);
+  }
+}
+```
+
+#### 3. Sign Out Also Clears Storage
+```typescript
+const signOut = async () => {
+  await supabase.auth.signOut();
+  clearAllAuthStorage();  // Prevent stale tokens on next visit
+  setUser(null);
+  setSession(null);
+};
+```
+
+### Files Created/Modified
+- `src/lib/supabase/clearAuthStorage.ts` (NEW)
+- `src/components/auth/AuthProvider.tsx` (UPDATED)
+
+### How It Works Now
+1. Page loads → AuthProvider initializes
+2. Gets local session from localStorage
+3. **Validates with Supabase server** using `getUser()`
+4. If server rejects → automatically clears all storage
+5. User sees clean login page (no stale state)
+6. On sign out → clears storage to prevent future issues
+
+### Result
+- Works in regular browser without clearing cache
+- Works in incognito
+- Auto-recovers from corrupted/expired sessions
+- No user action required
+
+### Commit
+`aab3209` - "Fix stale auth tokens: validate with server and auto-recover"
+
+---
+

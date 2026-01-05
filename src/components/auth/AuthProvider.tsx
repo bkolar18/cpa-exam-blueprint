@@ -67,7 +67,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       try {
         // Step 1: Get local session
         const { data: { session: localSession }, error: sessionError } =
-          await supabase.auth.getSession();
+          await supabase!.auth.getSession();
 
         if (sessionError) {
           console.error("Session error, clearing storage:", sessionError);
@@ -79,13 +79,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (localSession) {
           // Step 2: CRITICAL - Validate with server to catch stale tokens
           const { data: { user: validatedUser }, error: userError } =
-            await supabase.auth.getUser();
+            await supabase!.auth.getUser();
 
           if (userError || !validatedUser) {
             // Local session exists but server says it's invalid
             console.error("Stale session detected, clearing:", userError?.message);
             clearAllAuthStorage();
-            await supabase.auth.signOut({ scope: 'local' });
+            await supabase!.auth.signOut({ scope: 'local' });
             setSession(null);
             setUser(null);
             setLoading(false);

@@ -1,113 +1,39 @@
-cpa-exam-blueprint – Deployment OverviewSkip to content
-Brennan's projects
-Brennan's projects
-
-Hobby
-
-cpa-exam-blueprint
-
-
-Find…
-F
-
-Project Settings
-Go to Team Settings
-Search...
-General
-Build and Deployment
-Domains
-Environments
-Environment Variables
-Git
-Integrations
-Deployment Protection
-Functions
-Caches
-Cron Jobs
-Microfrontends
-Project Members
-Drains
-Security
-Connectivity
-Advanced
-Environment Variables
-In order to provide your Deployment with Environment Variables at Build and Runtime, you may enter them right here, for the Environment of your choice. Learn more
-
-A new Deployment is required for your changes to take effect.
-
-Create new
-
-Link Shared Environment Variables
-Sensitive
-If enabled, you and your team will not be able to read the values after creation. Learn more
-
-
-Environments
-key
-CLIENT_KEY…
-value
-Note
-Describe how you created this environment variable and how it is used
-or paste the .env contents above
-
-
-Automatically expose System Environment Variables
-Search…
-All Environments
-
-Last Updated
-
-NEXT_PUBLIC_SUPABASE_URL
-All Environments
-
-https://ibyxxuxcevcdmgnazqme.supabase.co
-Updated 12h ago
-
-Name
-NEXT_PUBLIC_SUPABASE_URL
-
-Value
-https://ibyxxuxcevcdmgnazqme.supabase.co
-Comment
-Describe how you created this environment variable and how it is used
-Environments
-
-NEXT_PUBLIC_SUPABASE_ANON_KEY
-All Environments
-
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlieXh4dXhjZXZjZG1nbmF6cW1lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1NzI2OTMsImV4cCI6MjA4MzE0ODY5M30.toDk8Bu7JATFfbJFzt-jnsBzKU-cki86gYUwaimWxJM
-Added 12h ago
-
-
-EMAIL_TO
-All Environments
-•••••••••••••••
-
-Added 17h ago
-
-
-RESEND_API_KEY
-All Environments
-•••••••••••••••
-
-Added 17h ago
-
-Shared Environment Variables
-No Shared Environment Variables are linked to this app.
-Shared Environment Variables are set at the Team level and are inherited by this Project.
-
-Home
-Docs
-Knowledge Base
-Academy
-Help
-Contact
-All systems normal.
-
-Select a display theme:
-
-system
-
-light
-
-dark
+13:24:34.117 Running build in Washington, D.C., USA (East) – iad1
+13:24:34.125 Build machine configuration: 2 cores, 8 GB
+13:24:34.454 Cloning github.com/bkolar18/cpa-exam-blueprint (Branch: main, Commit: aab3209)
+13:24:35.353 Cloning completed: 898.000ms
+13:24:35.916 Restored build cache from previous deployment (G7xobUuU4r8ury8wFvyUk45NeytK)
+13:24:36.506 Running "vercel build"
+13:24:36.958 Vercel CLI 50.1.3
+13:24:37.301 Installing dependencies...
+13:24:38.821 
+13:24:38.822 up to date in 1s
+13:24:38.822 
+13:24:38.822 261 packages are looking for funding
+13:24:38.822   run `npm fund` for details
+13:24:38.854 Detected Next.js version: 16.1.1
+13:24:38.859 Running "npm run build"
+13:24:38.965 
+13:24:38.968 > cpa-exam-blueprint@0.1.0 build
+13:24:38.969 > next build
+13:24:38.969 
+13:24:40.058 ▲ Next.js 16.1.1 (Turbopack)
+13:24:40.059 
+13:24:40.069 ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+13:24:40.106   Creating an optimized production build ...
+13:24:53.119 ✓ Compiled successfully in 12.4s
+13:24:53.119   Running TypeScript ...
+13:25:00.178 Failed to compile.
+13:25:00.179 
+13:25:00.179 ./src/components/auth/AuthProvider.tsx:70:17
+13:25:00.179 Type error: 'supabase' is possibly 'null'.
+13:25:00.179 
+13:25:00.179 [0m [90m 68 |[39m         [90m// Step 1: Get local session[39m
+13:25:00.179  [90m 69 |[39m         [36mconst[39m { data[33m:[39m { session[33m:[39m localSession }[33m,[39m error[33m:[39m sessionError } [33m=[39m
+13:25:00.179 [31m[1m>[22m[39m[90m 70 |[39m           [36mawait[39m supabase[33m.[39mauth[33m.[39mgetSession()[33m;[39m
+13:25:00.179  [90m    |[39m                 [31m[1m^[22m[39m
+13:25:00.179  [90m 71 |[39m
+13:25:00.179  [90m 72 |[39m         [36mif[39m (sessionError) {
+13:25:00.180  [90m 73 |[39m           console[33m.[39merror([32m"Session error, clearing storage:"[39m[33m,[39m sessionError)[33m;[39m[0m
+13:25:00.216 Next.js build worker exited with code: 1 and signal: null
+13:25:00.254 Error: Command "npm run build" exited with 1
