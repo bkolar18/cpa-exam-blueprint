@@ -441,12 +441,12 @@ export async function getGamificationSummary(userId: string) {
           isUnlocked,
           unlockedAt: userAchievement?.unlocked_at,
           isDiscovered,
-          displayName: isUnlocked || !achievement.is_hidden
-            ? achievement.name
-            : achievement.hidden_name,
+          // Always show real name, even for hidden achievements
+          displayName: achievement.name,
+          // Hide description for hidden achievements until unlocked
           displayDescription: isUnlocked || !achievement.is_hidden
             ? achievement.description
-            : achievement.hidden_description,
+            : '???',
         };
       }),
     },
