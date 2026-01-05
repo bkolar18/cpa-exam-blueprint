@@ -1,6 +1,10 @@
-import { createClient } from "@/lib/supabase/server";
+"use client";
+
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/components/auth/AuthProvider";
 
 // Type for study session from Supabase
 interface StudySessionRow {
@@ -11,54 +15,58 @@ interface StudySessionRow {
   notes: string | null;
 }
 
-export default async function DashboardPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ verified?: string }>;
-}) {
-  const params = await searchParams;
-  const isVerified = params.verified === "true";
-  const supabase = await createClient();
+export default function DashboardPage() {
+  const searchParams = useSearchParams();
+  const isVerified = searchParams.get("verified") === "true";
+  const { user, profile, loading: authLoading } = useAuth();
+  const [sectionProgress, setSectionProgress] = useState<{ status: string }[]>([]);
+  const [recentSessions, setRecentSessions] = useState<StudySessionRow[]>([]);
+  const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
+  const [loading, setLoading] = useState(true);
+  const supabase = createClient();
 
-  // Handle case where Supabase is not configured
-  if (!supabase) {
-    redirect("/login");
-  }
+  useEffect(() => {
+    if (authLoading) return;
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+    fetchDashboardData();
+  }, [user, authLoading]);
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const fetchDashboardData = async () => {
+    if (!supabase || !user) {
+      setLoading(false);
+      return;
+    }
 
-  if (!user) {
-    redirect("/login");
-  }
+    // Fetch section progress
+    const { data: progressData } = await supabase
+      .from("section_progress")
+      .select("*")
+      .eq("user_id", user.id);
+    if (progressData) setSectionProgress(progressData);
 
-  // Fetch user profile
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
-    .single();
+    // Fetch study sessions (last 7 days)
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    const { data: sessionsData } = await supabase
+      .from("study_sessions")
+      .select("*")
+      .eq("user_id", user.id)
+      .gte("date", sevenDaysAgo.toISOString().split("T")[0]);
+    if (sessionsData) setRecentSessions(sessionsData as StudySessionRow[]);
 
-  // Fetch section progress
-  const { data: sectionProgress } = await supabase
-    .from("section_progress")
-    .select("*")
-    .eq("user_id", user.id);
+    // Fetch NTS entries
+    const { data: ntsData } = await supabase
+      .from("nts_entries")
+      .select("*")
+      .eq("user_id", user.id)
+      .eq("status", "active");
+    if (ntsData) setNtsEntries(ntsData);
 
-  // Fetch study sessions (last 7 days)
-  const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-  const { data: recentSessions } = await supabase
-    .from("study_sessions")
-    .select("*")
-    .eq("user_id", user.id)
-    .gte("date", sevenDaysAgo.toISOString().split("T")[0]);
-
-  // Fetch NTS entries
-  const { data: ntsEntries } = await supabase
-    .from("nts_entries")
-    .select("*")
-    .eq("user_id", user.id)
-    .eq("status", "active");
+    setLoading(false);
+  };
 
   // Calculate stats
   const weeklyHours = recentSessions?.reduce((sum: number, s: { hours: number }) => sum + Number(s.hours), 0) || 0;
@@ -68,6 +76,14 @@ export default async function DashboardPage({
 
   // Check if profile is incomplete (needs onboarding)
   const needsOnboarding = !profile?.state_code || !profile?.target_completion_date;
+
+  if (loading || authLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8">
@@ -200,7 +216,7 @@ export default async function DashboardPage({
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Recent Study Sessions</h2>
         {recentSessions && recentSessions.length > 0 ? (
           <div className="space-y-3">
-            {(recentSessions as StudySessionRow[]).slice(0, 5).map((session) => (
+            {recentSessions.slice(0, 5).map((session) => (
               <div key={session.id} className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-0">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center">

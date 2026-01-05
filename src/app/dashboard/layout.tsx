@@ -1,23 +1,44 @@
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/components/auth/AuthProvider";
 import DashboardNav from "@/components/dashboard/DashboardNav";
 
-export default async function DashboardLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = await createClient();
+  const { user, loading } = useAuth();
+  const router = useRouter();
 
-  // Handle case where Supabase is not configured
-  if (!supabase) {
-    redirect("/login");
+  useEffect(() => {
+    // Wait for auth to finish loading
+    if (loading) return;
+
+    // If no user, redirect to login
+    if (!user) {
+      router.push("/login");
+    }
+  }, [user, loading, router]);
+
+  // Show loading state while checking auth
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[var(--card)] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+      </div>
+    );
   }
 
-  const { data: { user } } = await supabase.auth.getUser();
-
+  // If not authenticated, show nothing (redirect is happening)
   if (!user) {
-    redirect("/login");
+    return (
+      <div className="min-h-screen bg-[var(--card)] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+      </div>
+    );
   }
 
   return (

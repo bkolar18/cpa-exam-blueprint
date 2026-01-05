@@ -6,7 +6,7 @@ import { useAuth } from "@/components/auth/AuthProvider";
 import { getAllStates } from "@/lib/data/state-requirements";
 
 export default function SettingsPage() {
-  const { user, profile, refreshProfile } = useAuth();
+  const { user, profile, refreshProfile, loading: authLoading } = useAuth();
   const [formData, setFormData] = useState({
     full_name: "",
     state_code: "",
@@ -60,6 +60,14 @@ export default function SettingsPage() {
 
     setLoading(false);
   };
+
+  if (authLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl">

@@ -1457,3 +1457,36 @@ Navigate to dashboard pages - they should load without infinite spinning.
 
 ---
 
+## Root Cause: getSession() Hanging With No Network Requests
+
+If `supabase.auth.getSession()` hangs but there are NO network requests to supabase.co in the Network tab, the issue is not the code - something is preventing the Supabase client from working.
+
+**Possible root causes:**
+
+1. **Supabase project is paused**
+   - Free tier projects pause after inactivity
+   - Go to https://supabase.com/dashboard → your project
+   - If you see "Project is paused", click to restore it
+
+2. **Browser extension blocking Supabase**
+   - Ad blockers (uBlock, AdBlock Plus)
+   - Privacy extensions (Privacy Badger, Ghostery)
+   - Brave browser's built-in shields
+   - **Test:** Open your site in an Incognito/Private window (extensions are disabled)
+
+3. **Environment variable format issue**
+   - Check that `NEXT_PUBLIC_SUPABASE_URL` starts with `https://`
+   - Check that `NEXT_PUBLIC_SUPABASE_ANON_KEY` is the full JWT token
+
+4. **Network/firewall blocking**
+   - Corporate networks may block certain domains
+   - Try on a different network (mobile hotspot)
+
+**How to diagnose:**
+1. Open DevTools → Network tab
+2. Clear any filters
+3. Refresh the page
+4. Look for ANY failed requests (red) or requests to supabase.co
+
+---
+
