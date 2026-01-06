@@ -20,6 +20,7 @@ export interface Profile {
   current_streak: number;
   longest_streak: number;
   last_study_date: string | null;
+  promo_dismissed_at: string | null;
   created_at: string;
   updated_at: string;
 }

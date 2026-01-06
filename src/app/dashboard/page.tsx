@@ -26,17 +26,35 @@ export default function DashboardPage() {
   const [showPromo, setShowPromo] = useState(false);
   const supabase = createClient();
 
-  // Check if promo was dismissed
+  // Check if promo should be shown (per-account, reappears after 30 days)
   useEffect(() => {
-    const dismissed = localStorage.getItem('surgent-promo-dismissed');
-    if (!dismissed) {
-      setShowPromo(true);
-    }
-  }, []);
+    if (!profile) return;
 
-  const dismissPromo = () => {
-    localStorage.setItem('surgent-promo-dismissed', 'true');
+    const dismissedAt = profile.promo_dismissed_at;
+    if (!dismissedAt) {
+      // Never dismissed - show promo
+      setShowPromo(true);
+    } else {
+      // Check if 30 days have passed since dismissal
+      const dismissedDate = new Date(dismissedAt);
+      const now = new Date();
+      const daysSinceDismissed = Math.floor((now.getTime() - dismissedDate.getTime()) / (1000 * 60 * 60 * 24));
+      if (daysSinceDismissed >= 30) {
+        setShowPromo(true);
+      }
+    }
+  }, [profile]);
+
+  const dismissPromo = async () => {
     setShowPromo(false);
+
+    if (!supabase || !user) return;
+
+    // Update profile with dismissal timestamp
+    await supabase
+      .from("profiles")
+      .update({ promo_dismissed_at: new Date().toISOString() })
+      .eq("id", user.id);
   };
 
   useEffect(() => {
