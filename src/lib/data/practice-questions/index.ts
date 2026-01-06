@@ -1,21 +1,27 @@
 import { farQuestions } from './far';
 import { audQuestions } from './aud';
 import { regQuestions } from './reg';
+import { tcpQuestions } from './tcp';
+import { barQuestions } from './bar';
+import { iscQuestions } from './isc';
 import { QuestionSet, PracticeQuestion, SectionCode } from './types';
 
 export * from './types';
 export { farQuestions } from './far';
 export { audQuestions } from './aud';
 export { regQuestions } from './reg';
+export { tcpQuestions } from './tcp';
+export { barQuestions } from './bar';
+export { iscQuestions } from './isc';
 
 // Combined questions lookup
 export const questionSets: Record<SectionCode, QuestionSet | null> = {
   FAR: farQuestions,
   AUD: audQuestions,
   REG: regQuestions,
-  TCP: null, // Coming soon
-  BAR: null, // Coming soon
-  ISC: null, // Coming soon
+  TCP: tcpQuestions,
+  BAR: barQuestions,
+  ISC: iscQuestions,
 };
 
 // Get all questions for a section
@@ -68,6 +74,9 @@ export function getQuestionById(id: string): PracticeQuestion | undefined {
     ...(farQuestions?.questions || []),
     ...(audQuestions?.questions || []),
     ...(regQuestions?.questions || []),
+    ...(tcpQuestions?.questions || []),
+    ...(barQuestions?.questions || []),
+    ...(iscQuestions?.questions || []),
   ];
   return allQuestions.find(q => q.id === id);
 }
