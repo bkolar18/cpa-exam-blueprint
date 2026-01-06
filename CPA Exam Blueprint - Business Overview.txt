@@ -1,0 +1,295 @@
+CPA Exam Blueprint - Business Overview & Marketing Strategy
+===========================================================
+
+For: Surgent CPA Review Team
+Prepared by: Project Development Team
+
+
+THE PROBLEM WE'RE SOLVING
+-------------------------
+
+Right now, Surgent relies heavily on affiliate marketers and review sites to drive traffic.
+That's fine, but here's the issue: those affiliates are often promoting whoever pays them
+the most, and the leads come from people who are already comparison shopping. They're
+halfway out the door before they even land on Surgent's site.
+
+CPA Exam Blueprint takes a different approach. Instead of catching people at the end of
+their decision process, we catch them at the beginning - when they're overwhelmed,
+confused, and just trying to figure out where to start. We help them first, build trust,
+and then introduce Surgent as our recommended solution. It's a warmer lead, and it's
+coming from a place of genuine value rather than a banner ad.
+
+
+WHAT THE SITE DOES (IN PLAIN ENGLISH)
+-------------------------------------
+
+Think of CPA Exam Blueprint as a free resource hub for CPA candidates. It's the kind of
+site someone finds when they Google "how do I pass the CPA exam while working full time"
+or "which CPA section should I take first." We answer those questions, give them tools
+to plan their journey, and stay with them through the process.
+
+Here's everything the site offers:
+
+
+1. FREE PERSONALIZED STUDY PLAN GENERATOR
+
+   This is the main lead capture tool. A prospective CPA candidate answers five questions:
+   - Are they working full-time?
+   - How many hours per week can they study?
+   - What's their accounting background?
+   - Which discipline section will they take (TCP, BAR, or ISC)?
+   - Their email address
+
+   Based on their answers, the site generates a customized study plan that includes:
+   - Recommended section order (FAR, AUD, REG, plus their discipline)
+   - Weekly study schedule based on their availability
+   - Estimated timeline to pass all four sections
+   - CPA-recommended tips tailored to their situation
+
+   The plan is emailed to them, so we capture their contact info naturally. No hard sell,
+   just genuine value. We now have a warm lead.
+
+
+2. CPA ACADEMY (FREE USER DASHBOARD)
+
+   Users can create a free account and get access to a personal dashboard where they track
+   their entire CPA journey. It includes:
+
+   - Study Session Logging: They can log study hours by section and date, add notes about
+     what they covered, and see their weekly totals.
+
+   - Progress Tracking: Mark each section as "Not Started," "Studying," "Scheduled,"
+     or "Passed." Visual progress indicators show how far they've come.
+
+   - Study Streaks: A gamification element that tracks consecutive days of studying.
+     Shows current streak and longest streak. This keeps people coming back daily.
+
+   - Achievements & Badges: Users earn badges for milestones like "First Study Session,"
+     "Study Streak: 7 Days," "FAR Passed," etc. It's a small thing, but it creates
+     emotional investment in the platform.
+
+   - NTS Management: Track Notice to Schedule dates directly in the dashboard with
+     expiration countdowns.
+
+   Why this matters: Users who log into a dashboard regularly are FAR more likely to
+   see our Surgent recommendation and take action on it. The dashboard has a tasteful
+   promotional banner for Surgent that appears until dismissed.
+
+
+3. PRACTICE QUESTIONS (600 QUESTIONS)
+
+   We've built a substantial practice question bank with 100 questions per section:
+   - FAR (Financial Accounting & Reporting)
+   - AUD (Auditing & Attestation)
+   - REG (Regulation)
+   - TCP (Tax Compliance & Planning)
+   - BAR (Business Analysis & Reporting)
+   - ISC (Information Systems & Controls)
+
+   Each question includes:
+   - The question and four answer choices
+   - Correct answer with detailed explanation
+   - Difficulty level (easy, medium, hard)
+   - Topic categorization
+   - Helpful tips where applicable
+
+   Users can practice by section, track their accuracy, and review their history. This
+   keeps them engaged with the platform AND demonstrates that comprehensive prep
+   (like Surgent's 8,800+ questions) would be even more beneficial.
+
+
+4. FREE TOOLS
+
+   NTS Expiration Tracker:
+   - Users enter their Notice to Schedule issue date
+   - We calculate the 6-month expiration date
+   - Show a live countdown (days, hours, minutes, seconds)
+   - Highlight key dates (30 days before, 14 days, 7 days)
+   - Offer email reminders at those intervals
+   - This is another email capture opportunity
+
+   Score Release Calendar:
+   - Shows when CPA exam scores are released each quarter
+   - Users can sign up for email notifications
+   - Another email capture point
+
+   Study Hours Calculator:
+   - Users enter their exam date and available hours per week
+   - We calculate if they're on track to be ready
+   - Suggests adjustments if needed
+
+
+5. COMPREHENSIVE CONTENT
+
+   Section Guides:
+   - Deep-dive pages for each CPA section (FAR, AUD, REG, TCP)
+   - What's tested, how it's weighted, common struggles, study tips
+   - Links naturally to our study plan generator
+
+   State Requirements:
+   - Licensure requirements for all 50 states
+   - Education requirements, experience requirements, ethics exam info
+   - Users can find their specific state's rules
+
+   Blog/Study Guides:
+   - "FAR Section Complete Study Guide"
+   - "AUD Section Complete Study Guide"
+   - "REG Section Complete Study Guide"
+   - "How to Choose Your CPA Discipline Section"
+   - "Studying While Working Full-Time"
+   - And more
+
+   Exam Day Guide:
+   - What to expect at the testing center
+   - What to bring, what not to bring
+   - Break policies, scratch paper rules
+   - Reduces test anxiety
+
+   Failed Section Guide:
+   - Compassionate, actionable content for retakers
+   - This is an underserved audience - people who failed are desperate for help
+   - Builds trust and loyalty
+
+   Success Stories:
+   - Real testimonials from people who passed
+   - Different backgrounds (working mom, career changer, Big 4 grind, etc.)
+   - Social proof that passing is achievable
+
+
+6. SURGENT RECOMMENDATION PAGE
+
+   This is where it all comes together. After users have received value from our free
+   tools and content, we have a dedicated page explaining why we recommend Surgent.
+
+   The page is TRANSPARENT - we clearly disclose that it's an affiliate relationship.
+   This actually builds more trust than hiding it.
+
+   We cover:
+   - Why we recommend Surgent (A.S.A.P. technology, ReadySCORE, question bank size)
+   - Honest pros and cons (yes, we list areas for improvement)
+   - Pricing breakdown for all tiers
+   - Comparison table vs. Becker and Roger
+   - How Surgent supports our study methodology
+   - Current promotions and discounts
+
+   The page uses Surgent's brand colors and has clear CTAs to the Surgent website.
+
+
+HOW THE MARKETING FUNNEL WORKS
+------------------------------
+
+Stage 1: Discovery
+User finds us through organic search (SEO) when looking for CPA exam guidance.
+Examples: "CPA study schedule," "which CPA section first," "CPA exam while working"
+
+Stage 2: Value Delivery
+User gets immediate value - a study plan, practice questions, tools, or content.
+No paywalls. No hard sells. Just help.
+
+Stage 3: Email Capture
+User provides email for their study plan, NTS reminders, or score notifications.
+We now have a warm lead who already trusts us.
+
+Stage 4: Engagement
+User creates an account, logs study sessions, earns badges, takes practice quizzes.
+They return to the site regularly. They see the Surgent promo in their dashboard.
+
+Stage 5: Soft Conversion
+When they're ready to buy a review course (or after engaging with our content
+enough), they check our recommendation page and click through to Surgent.
+
+Stage 6: Follow-up
+Users who signed up for NTS reminders, score notifications, or study plans are
+in our email list. We can send helpful content and occasional Surgent mentions.
+
+
+WHY THIS IS BETTER THAN TRADITIONAL AFFILIATES
+----------------------------------------------
+
+1. WARMER LEADS
+   By the time someone clicks our Surgent link, they've already received significant
+   value from us. They trust us. They're not comparison shopping - they're following
+   a recommendation from someone who helped them.
+
+2. EARLIER IN THE FUNNEL
+   Affiliate sites catch people who are already shopping for a CPA course. We catch
+   people who just learned they need to take the CPA exam. We're building the
+   relationship from day one.
+
+3. RECURRING ENGAGEMENT
+   The dashboard, practice questions, and tools bring users back repeatedly. An
+   affiliate banner is a one-time impression. Our platform is an ongoing relationship.
+
+4. SEO COMPOUND EFFECT
+   Every piece of content we publish (guides, blog posts, tool pages) is another
+   opportunity to rank in Google. Over time, this compounds. Traditional affiliate
+   sites have to keep paying for traffic.
+
+5. BRAND ASSOCIATION
+   When users associate their CPA journey success with CPA Exam Blueprint, and we
+   recommend Surgent, that positive association transfers to Surgent.
+
+6. DATA & INSIGHTS
+   We're learning what CPA candidates struggle with, what they search for, what
+   their timelines look like. This data is valuable for refining Surgent's
+   marketing messages.
+
+
+WHAT SUCCESS LOOKS LIKE
+-----------------------
+
+Short-term (3-6 months):
+- Organic traffic growth from SEO
+- Email list building through study plans and tools
+- Users creating accounts and logging study sessions
+- Clicks through to Surgent recommendation
+
+Medium-term (6-12 months):
+- Strong domain authority from quality content
+- Engaged user community returning regularly
+- Practice question library expansion
+- Affiliate revenue from Surgent conversions
+
+Long-term (1-2 years):
+- CPA Exam Blueprint becomes a go-to resource for CPA candidates
+- Reduced reliance on other affiliate channels
+- Community of users who passed using our tools + Surgent
+- Potential for additional partnerships/monetization
+
+
+THE BOTTOM LINE
+---------------
+
+CPA Exam Blueprint isn't just another affiliate site slapping Surgent banners on
+generic content. It's a genuine resource that helps CPA candidates succeed. We
+happen to believe Surgent is the best tool for that success, and we recommend it
+after proving our value first.
+
+The result? Better leads, warmer conversions, and a sustainable marketing channel
+that compounds over time instead of requiring constant ad spend.
+
+It's affiliate marketing done right - value first, recommendation second.
+
+
+---
+
+Technical Notes:
+- Built with Next.js 16 and React
+- Database: Supabase (PostgreSQL)
+- Authentication: Supabase Auth
+- Hosting: Vercel
+- Email: Resend API
+- Fully responsive for mobile/tablet/desktop
+
+Current Content Stats:
+- 600 practice questions across 6 sections
+- 22 state requirement pages
+- 8 comprehensive blog/guide articles
+- 5 success stories
+- 4 section-specific guides
+- 3 free tools
+- Full user dashboard with gamification
+
+---
+
+Questions? Reach out to the development team.
