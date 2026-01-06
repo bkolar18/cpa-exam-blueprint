@@ -3892,3 +3892,21 @@ All 600 practice questions have been created and integrated successfully. Here's
 The build passes successfully and all questions are now available in the practice section. Users can access questions for all 6 CPA exam sections.
 
 ---
+
+## Surgent Dashboard Promo Banner Logic (Response)
+
+The promo uses `localStorage` which persists in the browser regardless of which account you're logged into. If you (or anyone using that browser) ever dismissed the promo before, it won't show again - even for a new account.
+
+**Quick test:** Open your browser's DevTools (F12), go to the Console tab, and run:
+```javascript
+localStorage.removeItem('surgent-promo-dismissed')
+```
+Then refresh the page - the promo should appear.
+
+**The real question:** Do you want the promo to be:
+1. **Per-browser** (current behavior) - once dismissed, gone forever in that browser
+2. **Per-account** - stores in the user's profile so it follows them across devices
+
+If you want it per-account (probably makes more sense), I can move the dismissed state to the user's profile in Supabase. That way new accounts always see it, and dismissing it persists across devices for that specific user.
+
+---
