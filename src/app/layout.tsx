@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "CPA Exam Blueprint | Pass the CPA Exam for Less",
-  description: "Affordable CPA exam prep with 6,000+ practice questions, progress tracking, and unlimited access. Quality study materials at 95% less than the competition.",
+  description: "Affordable CPA exam prep with 6,000+ practice questions, progress tracking, and unlimited access until you pass. Quality study materials at 95% less than the competition.",
   keywords: "CPA exam, CPA study plan, CPA practice questions, CPA study aid, affordable CPA prep, FAR, AUD, REG, TCP",
 };
 

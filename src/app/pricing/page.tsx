@@ -10,18 +10,18 @@ const tiers = [
     price: "$0",
     originalPrice: null,
     description: "Get started with the basics",
-    accessPeriod: "Unlimited",
+    accessPeriod: "Until you pass",
     features: [
       "50 practice questions",
       "1 exam section (FAR)",
       "Basic progress tracking",
       "Study hours logging",
       "Score release calendar",
+      "Unlimited access until you pass",
     ],
     notIncluded: [
       "All 6 exam sections",
       "Full question bank (6,000+)",
-      "Unlimited access",
       "Adaptive learning",
       "AI study assistant",
     ],
@@ -36,11 +36,11 @@ const tiers = [
     originalPrice: "$99",
     period: "one-time",
     description: "Everything you need for core sections",
-    accessPeriod: "18 months",
+    accessPeriod: "Until you pass",
     features: [
       "3,000+ practice questions",
       "All 4 core sections (FAR, AUD, REG, TCP)",
-      "18 months access",
+      "Unlimited access until you pass",
       "Full progress tracking & analytics",
       "NTS expiration tracking",
       "Study plan builder",
@@ -49,7 +49,6 @@ const tiers = [
     ],
     notIncluded: [
       "Discipline sections (BAR, ISC)",
-      "Unlimited access",
       "AI study assistant",
     ],
     cta: "Get Standard",
@@ -68,7 +67,7 @@ const tiers = [
     features: [
       "6,000+ practice questions",
       "All 6 exam sections",
-      "Unlimited access - never expires",
+      "Unlimited access until you pass",
       "Adaptive learning algorithm",
       "AI study assistant (coming soon)",
       "Advanced analytics & insights",
@@ -118,9 +117,9 @@ const faqs = [
       "Yes! If you're not satisfied within 30 days of purchase, we'll refund your payment in full. No questions asked.",
   },
   {
-    question: "What's the difference between Standard and Pro access periods?",
+    question: "How long do I have access?",
     answer:
-      "Standard Plan: 18 months of full access to all core sections (FAR, AUD, REG, TCP). Pro Plan: Unlimited access that never expires - study at your own pace for as long as you need, with access to all 6 sections including discipline sections (BAR, ISC).",
+      "All tiers include unlimited access until you pass! Free tier covers FAR only, Standard covers all 4 core sections (FAR, AUD, REG, TCP), and Pro includes all 6 sections including discipline sections (BAR, ISC). Study at your own pace with no time pressure.",
   },
 ];
 

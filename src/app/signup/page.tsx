@@ -154,7 +154,7 @@ export default function SignupPage() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Unlimited Access</h3>
-                <p className="text-gray-400 text-sm">Pro tier includes unlimited access that never expires</p>
+                <p className="text-gray-400 text-sm">All tiers include unlimited access until you pass</p>
               </div>
             </div>
 

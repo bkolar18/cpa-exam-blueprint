@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "About Us | CPA Exam Blueprint",
-  description: "Learn about CPA Exam Blueprint - affordable CPA exam prep with 6,000+ practice questions, progress tracking, and unlimited access at a fraction of the cost.",
+  description: "Learn about CPA Exam Blueprint - affordable CPA exam prep with 6,000+ practice questions, progress tracking, and unlimited access until you pass at a fraction of the cost.",
 };
 
 export default function AboutPage() {
@@ -39,7 +39,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-white">Our Mission</h2>
             </div>
             <p className="text-xl text-white/90 leading-relaxed max-w-3xl">
-              We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide everything you need to pass - 6,000+ practice questions, study tools, progress tracking, and unlimited access - at a fraction of what the big review courses charge.
+              We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide everything you need to pass - 6,000+ practice questions, study tools, progress tracking, and unlimited access until you pass - at a fraction of what the big review courses charge.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 The big CPA review courses charge $2,000-$3,500 for their programs. Not everyone has that kind of money to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
               </p>
               <p className="font-medium">
-                We built CPA Exam Blueprint to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and unlimited access on our Pro tier, we offer everything you need at 95% less than the competition.
+                We built CPA Exam Blueprint to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and unlimited access until you pass on all tiers, we offer everything you need at 95% less than the competition.
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-[var(--foreground)] mb-1">Unlimited Access</h3>
-                <p className="text-[var(--muted)] text-sm">Pro tier includes unlimited access that never expires - study at your own pace.</p>
+                <p className="text-[var(--muted)] text-sm">All tiers include unlimited access until you pass - study at your own pace.</p>
               </div>
             </div>
           </div>
@@ -154,22 +154,26 @@ export default function AboutPage() {
               </svg>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-green-800 mb-2">Flexible Access Options</h3>
+              <h3 className="text-lg font-semibold text-green-800 mb-2">Unlimited Access Until You Pass</h3>
               <p className="text-green-700 mb-4">
-                Choose the access period that works best for your study timeline:
+                All tiers include unlimited access until you pass - no time limits, no pressure:
               </p>
               <ul className="space-y-2 text-green-700">
                 <li className="flex items-start space-x-2">
-                  <span className="font-bold">Standard Plan:</span>
-                  <span>18 months of full access to all core sections (FAR, AUD, REG, TCP)</span>
+                  <span className="font-bold">Free:</span>
+                  <span>50 questions for FAR section</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="font-bold">Pro Plan:</span>
-                  <span>Unlimited access that never expires - study at your own pace with no time pressure</span>
+                  <span className="font-bold">Standard:</span>
+                  <span>3,000+ questions across all 4 core sections (FAR, AUD, REG, TCP)</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="font-bold">Pro:</span>
+                  <span>6,000+ questions across all 6 sections including discipline sections (BAR, ISC)</span>
                 </li>
               </ul>
               <p className="mt-4 text-green-700 text-sm">
-                Like other CPA review providers, our questions are based on the official CPA Exam Blueprints published by the AICPA. We&apos;re confident in our materials and want you to have the time you need to succeed.
+                Like other CPA review providers, our questions are based on the official CPA Exam Blueprints published by the AICPA. Study at your own pace with no time pressure.
               </p>
             </div>
           </div>
@@ -395,7 +399,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
             <p className="text-sm text-[var(--muted)]">
-              <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA and unlimited access in our Pro plan - all for <strong>95% less</strong>. The main differences are we don&apos;t have video lectures or task-based simulations. If you learn best from reading and practice, we&apos;re the smart choice.
+              <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA and unlimited access until you pass on all tiers - all for <strong>95% less</strong>. The main differences are we don&apos;t have video lectures or task-based simulations. If you learn best from reading and practice, we&apos;re the smart choice.
             </p>
             <p className="text-xs text-[var(--muted)] mt-3 opacity-70">
               *Features and pricing are based on publicly available information as of January 2025. Verify current offerings directly with each provider before purchasing.
@@ -446,7 +450,7 @@ export default function AboutPage() {
         <div className="bg-[var(--primary)] p-8 rounded-xl text-white text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Start Studying?</h2>
           <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-            Get access to 6,000+ practice questions, progress tracking, and unlimited access on Pro - starting at just $79.
+            Get access to 6,000+ practice questions, progress tracking, and unlimited access until you pass - starting at just $79.
           </p>
           <Link
             href="/pricing"

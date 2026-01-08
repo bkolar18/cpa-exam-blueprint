@@ -106,7 +106,7 @@ CPA Exam Blueprint offers the following subscription tiers:
 - Study plan builder
 - Gamification and achievements
 - Email support
-- 18-month access period
+- Unlimited access until you pass
 
 **Pro Tier ($149 one-time payment)**
 - 6,000+ practice questions
@@ -119,7 +119,7 @@ CPA Exam Blueprint offers the following subscription tiers:
 - Study plan builder
 - Gamification and achievements
 - Priority email support
-- Unlimited access period (never expires)
+- Unlimited access until you pass
 
 ### 4.2 Pricing
 
@@ -141,13 +141,17 @@ Prices may not include applicable taxes. You are responsible for paying any appl
 
 ## 5. Access Period Terms
 
-### 5.1 Standard Tier Access
+### 5.1 Unlimited Access Until You Pass
 
-Standard tier provides 18 months of access from the date of purchase. Upon expiration of the 18-month period, access to paid features will be revoked and your account will be downgraded to the Free tier.
+All tiers (Free, Standard, and Pro) provide unlimited access until you pass the CPA exam. There are no time limits on your access - study at your own pace.
 
-### 5.2 Pro Tier Access
+- **Free Tier:** Unlimited access to 50 practice questions (FAR section only)
+- **Standard Tier:** Unlimited access to 3,000+ practice questions across all 4 core sections (FAR, AUD, REG, TCP)
+- **Pro Tier:** Unlimited access to 6,000+ practice questions across all 6 sections (FAR, AUD, REG, TCP, BAR, ISC)
 
-Pro tier provides unlimited access that never expires. As long as your account remains in good standing (no violations of these Terms), you will retain access to all Pro tier features indefinitely.
+### 5.2 Account Good Standing
+
+Access is contingent on your account remaining in good standing. Accounts may be suspended or terminated for violations of these Terms.
 
 ### 5.3 Important Disclaimers
 
