@@ -45,7 +45,7 @@ function FeaturedPost({ post }: { post: ReturnType<typeof getAllPosts>[0] }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-gradient-to-br from-amber-500 via-orange-500 to-rose-500 rounded-2xl overflow-hidden hover-lift"
+      className="group block bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl overflow-hidden hover-lift"
     >
       <div className="p-8 md:p-10">
         <div className="flex items-center gap-3 mb-4">
@@ -55,15 +55,15 @@ function FeaturedPost({ post }: { post: ReturnType<typeof getAllPosts>[0] }) {
             </svg>
             Featured
           </span>
-          <span className="text-sm text-white/80">{post.readingTime} min read</span>
+          <span className="text-sm text-blue-100">{post.readingTime} min read</span>
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-white/90 transition-colors">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-blue-100 transition-colors">
           {post.title}
         </h2>
-        <p className="text-white/90 mb-6 text-lg">
+        <p className="text-blue-100 mb-6 text-lg">
           {post.description}
         </p>
-        <div className="flex items-center gap-4 text-sm text-white/70">
+        <div className="flex items-center gap-4 text-sm text-blue-200">
           <span>{post.author}</span>
           <span>•</span>
           <span>
