@@ -15,7 +15,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-300 max-w-md">
               Affordable CPA exam prep with 6,000+ practice questions,
-              progress tracking, and a pass guarantee.
+              progress tracking, and unlimited access.
             </p>
             <p className="text-gray-400 text-sm mt-4">
               A budget-friendly alternative for CPA candidates.

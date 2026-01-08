@@ -11,7 +11,7 @@ export default function Home() {
               Pass the CPA Exam Without Breaking the Bank
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-up animate-delay-100">
-              6,000+ practice questions, progress tracking, and a pass guarantee — for 95% less than the big names.
+              6,000+ practice questions, progress tracking, and unlimited access — for 95% less than the big names.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-200">
               <Link
@@ -45,7 +45,7 @@ export default function Home() {
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-[var(--foreground)] font-medium">Pass Guarantee</span>
+              <span className="text-[var(--foreground)] font-medium">Unlimited Access</span>
             </div>
             <div className="flex items-center space-x-2">
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
@@ -320,7 +320,7 @@ export default function Home() {
             Ready to Start Studying?
           </h2>
           <p className="text-gray-200 mb-8 text-lg">
-            Get access to 6,000+ practice questions with a pass guarantee - starting at just $79.
+            Get access to 6,000+ practice questions with unlimited access on Pro - starting at just $79.
           </p>
           <Link
             href="/pricing"

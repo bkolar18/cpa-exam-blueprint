@@ -153,8 +153,8 @@ export default function SignupPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-1">Pass Guarantee</h3>
-                <p className="text-gray-400 text-sm">We stand behind our materials with extended access if needed</p>
+                <h3 className="text-white font-semibold mb-1">Unlimited Access</h3>
+                <p className="text-gray-400 text-sm">Pro tier includes unlimited access that never expires</p>
               </div>
             </div>
 

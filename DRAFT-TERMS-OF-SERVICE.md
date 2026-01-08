@@ -107,7 +107,6 @@ CPA Exam Blueprint offers the following subscription tiers:
 - Gamification and achievements
 - Email support
 - 18-month access period
-- Pass Guarantee: 6-month extension (see Section 5)
 
 **Pro Tier ($149 one-time payment)**
 - 6,000+ practice questions
@@ -120,8 +119,7 @@ CPA Exam Blueprint offers the following subscription tiers:
 - Study plan builder
 - Gamification and achievements
 - Priority email support
-- Unlimited access period
-- Pass Guarantee: Access until you pass (see Section 5)
+- Unlimited access period (never expires)
 
 ### 4.2 Pricing
 
@@ -133,7 +131,7 @@ Payments are processed through third-party payment processors (currently Stripe)
 
 ### 4.4 One-Time Payment Model
 
-Standard and Pro tiers are one-time payments, not recurring subscriptions. You will not be automatically charged again after your initial purchase. Access periods are defined in Section 4.1 and Section 5.
+Standard and Pro tiers are one-time payments, not recurring subscriptions. You will not be automatically charged again after your initial purchase. Access periods are defined in Section 4.1.
 
 ### 4.5 Taxes
 
@@ -141,67 +139,22 @@ Prices may not include applicable taxes. You are responsible for paying any appl
 
 ---
 
-## 5. Pass Guarantee Terms
+## 5. Access Period Terms
 
-### 5.1 Overview
+### 5.1 Standard Tier Access
 
-CPA Exam Blueprint offers a Pass Guarantee for paid subscription tiers. This guarantee provides extended access to our materials if you do not pass a CPA exam section during your initial access period. The Pass Guarantee is NOT a guarantee that you will pass the CPA exam.
+Standard tier provides 18 months of access from the date of purchase. Upon expiration of the 18-month period, access to paid features will be revoked and your account will be downgraded to the Free tier.
 
-### 5.2 Standard Tier Pass Guarantee
+### 5.2 Pro Tier Access
 
-**Guarantee:** If you do not pass a CPA exam section within your 18-month access period, we will extend your access for an additional 6 months at no additional charge.
+Pro tier provides unlimited access that never expires. As long as your account remains in good standing (no violations of these Terms), you will retain access to all Pro tier features indefinitely.
 
-**Eligibility Requirements:**
-- You must have an active Standard tier subscription
-- You must have completed at least 70% of the available practice questions for the section(s) you are claiming the extension for
-- You must have attempted the actual CPA exam section within your 18-month access period
-- You must provide proof of exam attempt and non-passing score (official NASBA score report or state board notification)
-- You must submit your extension request within 30 days of receiving your non-passing score
-- Extension requests must be submitted via email to [support email]
+### 5.3 Important Disclaimers
 
-**Limitations:**
-- The 6-month extension applies to your entire account, not individual sections
-- Only one extension is available per Standard tier purchase
-- The extension cannot be combined with other offers or converted to cash value
-- The extension must be claimed within 30 days of your access period expiring or within 30 days of receiving a non-passing score, whichever is earlier
-
-### 5.3 Pro Tier Pass Guarantee
-
-**Guarantee:** You will retain access to all Pro tier features until you have passed all CPA exam sections, with no time limit.
-
-**Eligibility Requirements:**
-- You must have an active Pro tier subscription
-- You must use the Service in good faith for exam preparation purposes
-- Your account must remain in good standing (no violations of these Terms)
-
-**Limitations:**
-- "Passed all sections" means achieving passing scores (75 or higher) on all four core sections (FAR, AUD, REG, and one discipline section of your choice) as required for CPA licensure, OR passing all sections you are personally required to pass based on your jurisdiction's requirements
-- If CPA exam requirements change significantly (e.g., number of sections, passing score threshold), we reserve the right to modify this guarantee with 90 days' notice
+- Access to our materials does NOT guarantee that you will pass the CPA exam
+- We do not provide refunds for exam fees, application fees, or any costs outside of our Service
+- We do not cover any costs associated with retaking the CPA exam
 - Access may be suspended or terminated for violations of these Terms
-- This guarantee applies to the individual account holder only and is non-transferable
-
-### 5.4 What the Pass Guarantee Does NOT Cover
-
-The Pass Guarantee does NOT:
-- Guarantee that you will pass the CPA exam
-- Provide refunds for exam fees, application fees, or any costs outside of our Service
-- Cover any costs associated with retaking the CPA exam
-- Apply to Free tier users
-- Apply to accounts that have been terminated for Terms violations
-- Provide compensation for lost wages, travel expenses, or any other consequential damages
-- Cover situations where you did not meet the eligibility requirements
-
-### 5.5 Claiming Your Guarantee
-
-To claim your Pass Guarantee benefit:
-
-1. Email [support email] with subject line "Pass Guarantee Claim - [Your Tier]"
-2. Include your registered email address and account username
-3. Attach proof of exam attempt and score (official score report)
-4. For Standard tier: Specify which section(s) you did not pass
-5. Allow up to 10 business days for processing
-
-We reserve the right to verify all claims and deny claims that do not meet eligibility requirements or appear fraudulent.
 
 ---
 
