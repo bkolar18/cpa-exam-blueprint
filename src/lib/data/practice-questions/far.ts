@@ -30103,8 +30103,8 @@ const questions = [
       "D": "Sales-type lease"
     },
     "correctAnswer": "A",
-    "explanation": "Finance lease criteria require meeting ANY ONE of: (1) Transfer of ownership, (2) Bargain purchase option, (3) Lease term ≥ 75% of useful life, (4) PV of payments ≥ 90% of FV, (5) Specialized asset. Here: Lease term = 4/6 = 67% (< 75%), PV of payments = 85% (< 90%). Neither test is met and no other criteria are indicated, so this is an operating lease.",
-    "tip": "Finance lease (lessee): Transfer, BPO, 75% life test, 90% value test, or specialized use. Any one = finance.",
+    "explanation": "Under ASC 842, a lessee classifies a lease as a finance lease if ANY ONE of five criteria is met: (1) Transfer of ownership, (2) Purchase option reasonably certain to be exercised, (3) Lease term is for the major part of the asset's remaining economic life, (4) PV of lease payments equals substantially all of the asset's fair value, (5) Asset is specialized with no alternative use to lessor. Note: ASC 842 uses principle-based terms ('major part,' 'substantially all') rather than bright-line percentages. The 75%/90% thresholds are common CPA exam benchmarks but are not codified in ASC 842. Here: Lease term = 4/6 = 67% (not a major part), PV = 85% (not substantially all). Neither criterion is met, so this is an operating lease.",
+    "tip": "Finance lease criteria (lessee): Transfer, purchase option, major part of life, substantially all of FV, or specialized asset. CPA exam often uses 75%/90% as benchmarks, but ASC 842 is principle-based.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
