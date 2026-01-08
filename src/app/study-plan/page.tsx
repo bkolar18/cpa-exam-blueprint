@@ -381,7 +381,7 @@ export default function StudyPlanPage() {
             </h2>
             <p className="text-[var(--muted)]">
               Enter your email to receive your customized CPA study plan with
-              section order, weekly schedule, and expert tips.
+              section order, weekly schedule, and study tips.
             </p>
             <div className="space-y-4">
               <input

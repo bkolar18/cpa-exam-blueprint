@@ -134,7 +134,7 @@ export default function SectionPage({
             {/* CPA Study Advice */}
             <div className="bg-white p-8 rounded-xl border border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
-                CPA-Authored Study Advice
+                Proven Study Strategies
               </h2>
               <div className="space-y-6">
                 {studyAdvice.map((advice, index) => (

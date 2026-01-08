@@ -174,7 +174,7 @@ export default function StudyHoursCalculatorPage() {
                       onClick={() => setSelectedSection(section)}
                       className={`p-3 border-2 rounded-xl text-center transition-all ${
                         selectedSection === section
-                          ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
+                          ? "border-[var(--primary)] bg-[var(--primary)] text-white"
                           : "border-[var(--border)] hover:border-[var(--primary)]"
                       }`}
                     >
@@ -234,12 +234,12 @@ export default function StudyHoursCalculatorPage() {
                       onClick={() => setAccountingBackground(option.value as typeof accountingBackground)}
                       className={`w-full p-3 border-2 rounded-xl text-left transition-all ${
                         accountingBackground === option.value
-                          ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
+                          ? "border-[var(--primary)] bg-[var(--primary)] text-white"
                           : "border-[var(--border)] hover:border-[var(--primary)]"
                       }`}
                     >
                       <span className="font-medium">{option.label}</span>
-                      <span className="text-sm text-[var(--muted)] ml-2">- {option.desc}</span>
+                      <span className={`text-sm ml-2 ${accountingBackground === option.value ? "text-white/80" : "text-[var(--muted)]"}`}>- {option.desc}</span>
                     </button>
                   ))}
                 </div>
