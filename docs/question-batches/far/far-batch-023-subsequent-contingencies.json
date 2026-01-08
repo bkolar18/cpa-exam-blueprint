@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Subsequent Events and Contingencies",
+    "batchNumber": 23,
+    "questionCount": 25,
+    "weight": "3%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-subseq-001",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Subsequent Events Basics",
+      "conceptTested": "Subsequent event definition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The subsequent event period ends when:",
+      "options": {
+        "A": "Year-end",
+        "B": "Financial statements are issued or available to be issued",
+        "C": "The board meeting occurs",
+        "D": "30 days after year-end"
+      },
+      "correctAnswer": "B",
+      "explanation": "The subsequent event period extends from the balance sheet date until the financial statements are issued (SEC filers) or available to be issued (non-SEC filers).",
+      "tip": "Subsequent event period: balance sheet date → issuance date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-subseq-002",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Event Types",
+      "conceptTested": "Two types of subsequent events",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The two types of subsequent events are:",
+      "options": {
+        "A": "Material and immaterial",
+        "B": "Recognized and nonrecognized",
+        "C": "Current and noncurrent",
+        "D": "Required and optional"
+      },
+      "correctAnswer": "B",
+      "explanation": "Subsequent events are classified as recognized (Type 1) events that provide additional evidence about conditions at the balance sheet date, or nonrecognized (Type 2) events that arise after the balance sheet date.",
+      "tip": "Type 1: recognized (adjust). Type 2: nonrecognized (disclose).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-003",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Recognized Events",
+      "conceptTested": "Type 1 examples",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is an example of a recognized (Type 1) subsequent event?",
+      "options": {
+        "A": "Declaration of a stock split after year-end",
+        "B": "Settlement of litigation after year-end for an amount different than accrued, involving events that occurred before year-end",
+        "C": "Loss of a major customer after year-end",
+        "D": "Natural disaster occurring after year-end"
+      },
+      "correctAnswer": "B",
+      "explanation": "The litigation settlement provides additional evidence about a condition (the lawsuit) that existed at year-end. The financial statements should be adjusted to reflect the settlement amount.",
+      "tip": "Type 1: provides evidence about year-end conditions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-004",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Nonrecognized Events",
+      "conceptTested": "Type 2 examples",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is an example of a nonrecognized (Type 2) subsequent event?",
+      "options": {
+        "A": "Collection of a receivable written off before year-end",
+        "B": "A fire that destroys a major plant after year-end",
+        "C": "Bankruptcy of a customer whose balance was outstanding at year-end",
+        "D": "Discovery of fraud that occurred before year-end"
+      },
+      "correctAnswer": "B",
+      "explanation": "The fire is a new event arising after year-end that doesn't provide evidence about conditions existing at year-end. It's disclosed but doesn't adjust the financial statements.",
+      "tip": "Type 2: new event after year-end = disclose only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-005",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Recognized Events",
+      "conceptTested": "Adjustment requirement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A recognized subsequent event requires:",
+      "options": {
+        "A": "Disclosure only",
+        "B": "Adjustment of the financial statements",
+        "C": "Reissuance of prior year statements",
+        "D": "No action if immaterial"
+      },
+      "correctAnswer": "B",
+      "explanation": "Recognized (Type 1) subsequent events require adjustment of the financial statements to reflect the additional evidence about conditions that existed at the balance sheet date.",
+      "tip": "Recognized = adjust financial statements.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-subseq-006",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Nonrecognized Events",
+      "conceptTested": "Disclosure requirements",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Nonrecognized subsequent events that would affect users' understanding require disclosure of:",
+      "options": {
+        "A": "Only the nature of the event",
+        "B": "The nature of the event and an estimate of its financial effect (or statement that estimate cannot be made)",
+        "C": "No disclosure is required",
+        "D": "Only a general risk warning"
+      },
+      "correctAnswer": "B",
+      "explanation": "For material nonrecognized subsequent events, disclosure should include the nature of the event and an estimate of its financial effect, or a statement that such estimate cannot be made.",
+      "tip": "Type 2 disclosure: nature + estimated financial effect.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-007",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Reissued Statements",
+      "conceptTested": "Reissued financial statements",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When financial statements are reissued, the entity should evaluate subsequent events through:",
+      "options": {
+        "A": "The original issuance date",
+        "B": "The reissuance date",
+        "C": "The original balance sheet date",
+        "D": "One year after original issuance"
+      },
+      "correctAnswer": "B",
+      "explanation": "For reissued financial statements, subsequent events are evaluated through the new reissuance date. However, the evaluation is limited to the specific matter being revised.",
+      "tip": "Reissuance: evaluate subsequent events through new date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-008",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Loss Contingency Basics",
+      "conceptTested": "Loss contingency definition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "A loss contingency is:",
+      "options": {
+        "A": "A certain future expense",
+        "B": "An existing condition involving uncertainty about possible loss depending on future events",
+        "C": "Any lawsuit against the company",
+        "D": "A guaranteed warranty claim"
+      },
+      "correctAnswer": "B",
+      "explanation": "A loss contingency is an existing condition, situation, or set of circumstances involving uncertainty as to possible loss that will be resolved when future events occur or fail to occur.",
+      "tip": "Contingency = existing uncertainty about possible future loss.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-subseq-009",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Loss Recognition",
+      "conceptTested": "Accrual criteria",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A loss contingency is accrued when:",
+      "options": {
+        "A": "The loss is possible",
+        "B": "The loss is probable and the amount can be reasonably estimated",
+        "C": "The loss is certain",
+        "D": "Management decides to accrue"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under ASC 450, a loss contingency is accrued when: (1) it is probable that a loss has been incurred, and (2) the amount can be reasonably estimated.",
+      "tip": "Accrue loss: probable + reasonably estimable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-subseq-010",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Probability Levels",
+      "conceptTested": "Probable vs reasonably possible",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "If a loss is 'reasonably possible' but not 'probable,' the entity should:",
+      "options": {
+        "A": "Accrue the loss",
+        "B": "Disclose the nature and estimate of possible loss (or range)",
+        "C": "Neither accrue nor disclose",
+        "D": "Record as other comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "When a loss is reasonably possible (more than remote but less than probable), disclosure is required but accrual is not. Disclosure includes the nature of the contingency and estimate of possible loss.",
+      "tip": "Reasonably possible = disclose only, don't accrue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-011",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Probability Levels",
+      "conceptTested": "Remote losses",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "If a loss contingency is considered 'remote,' the entity should:",
+      "options": {
+        "A": "Accrue the loss",
+        "B": "Disclose the loss",
+        "C": "Neither accrue nor disclose (generally)",
+        "D": "Record as a deferred expense"
+      },
+      "correctAnswer": "C",
+      "explanation": "Remote loss contingencies generally require no accrual or disclosure. However, certain guarantees must be disclosed regardless of probability.",
+      "tip": "Remote = generally no accrual, no disclosure.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-subseq-012",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Range of Loss",
+      "conceptTested": "Amount within range",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a range of loss exists for a probable loss contingency and no amount in the range is a better estimate:",
+      "options": {
+        "A": "The midpoint is accrued",
+        "B": "The minimum (low end) of the range is accrued",
+        "C": "The maximum (high end) is accrued",
+        "D": "No amount is accrued"
+      },
+      "correctAnswer": "B",
+      "explanation": "When a range of loss is probable and no single amount is the best estimate, the minimum amount in the range is accrued. The additional exposure above the minimum is disclosed.",
+      "tip": "Range with no best estimate: accrue the minimum.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-013",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Gain Contingencies",
+      "conceptTested": "Gain contingency treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Gain contingencies are:",
+      "options": {
+        "A": "Recognized when probable",
+        "B": "Not recognized until realized; may be disclosed if probable",
+        "C": "Recognized at fair value",
+        "D": "Never disclosed"
+      },
+      "correctAnswer": "B",
+      "explanation": "Gain contingencies are not recognized until realized (conservatism). Adequate disclosure should be made, but care should be taken to avoid misleading implications about the likelihood of realization.",
+      "tip": "Gain contingency: don't recognize until realized.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-014",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Litigation",
+      "conceptTested": "Litigation accrual",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A company is being sued for $500,000. Legal counsel believes an unfavorable outcome is probable and estimates the loss at $300,000-$400,000. The company should:",
+      "options": {
+        "A": "Accrue $500,000",
+        "B": "Accrue $300,000 and disclose the range",
+        "C": "Accrue $350,000 (midpoint)",
+        "D": "Disclose only, no accrual"
+      },
+      "correctAnswer": "B",
+      "explanation": "With a range where no amount is the best estimate, accrue the minimum ($300,000). Disclose that the actual loss could be up to $400,000.",
+      "tip": "Probable loss with range: accrue minimum, disclose range.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-subseq-015",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Warranties",
+      "conceptTested": "Warranty accrual",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Product warranty costs should be:",
+      "options": {
+        "A": "Expensed when warranty claims are paid",
+        "B": "Accrued at the time of sale based on estimated future warranty costs",
+        "C": "Capitalized as inventory cost",
+        "D": "Disclosed but not accrued"
+      },
+      "correctAnswer": "B",
+      "explanation": "Warranty costs meet the criteria for accrual: the loss is probable (some products will fail) and estimable (based on historical data). Expense is matched to the period of sale.",
+      "tip": "Warranties: accrue at time of sale (matching principle).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-016",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Environmental Liabilities",
+      "conceptTested": "Environmental contingency",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An environmental remediation liability should be recognized when:",
+      "options": {
+        "A": "Only when payment is certain",
+        "B": "Litigation has been commenced by the EPA and the entity is named as a potentially responsible party, making an obligation probable and estimable",
+        "C": "Only after cleanup is complete",
+        "D": "When insurance recovery is expected"
+      },
+      "correctAnswer": "B",
+      "explanation": "Environmental liabilities are recognized when it's probable an obligation has been incurred and the amount is reasonably estimable. Being named as a potentially responsible party often triggers this assessment.",
+      "tip": "Environmental: accrue when probable and estimable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-017",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Guarantees",
+      "conceptTested": "Guarantee disclosure",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Guarantees of the indebtedness of others must be disclosed:",
+      "options": {
+        "A": "Only if loss is probable",
+        "B": "Regardless of the probability of loss",
+        "C": "Only if the guarantee is in writing",
+        "D": "Only for related parties"
+      },
+      "correctAnswer": "B",
+      "explanation": "Certain guarantees require disclosure regardless of the likelihood of making payments, including guarantees of indebtedness, performance guarantees, and indemnification agreements.",
+      "tip": "Guarantees: disclose even if remote.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-018",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Asset Retirement Obligations",
+      "conceptTested": "ARO recognition",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An asset retirement obligation should be recognized:",
+      "options": {
+        "A": "When the asset is retired",
+        "B": "At fair value when a legal obligation exists and can be reasonably estimated",
+        "C": "Only if the obligation is certain",
+        "D": "At the book value of the related asset"
+      },
+      "correctAnswer": "B",
+      "explanation": "Asset retirement obligations are recognized at fair value in the period when a legal obligation is incurred, if a reasonable estimate can be made. The liability is initially measured at fair value.",
+      "tip": "ARO: recognize at fair value when legal obligation arises.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-019",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Insurance Recoveries",
+      "conceptTested": "Contingent asset for insurance",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An expected insurance recovery related to a recognized loss contingency is:",
+      "options": {
+        "A": "Offset against the loss",
+        "B": "Recognized separately when recovery is probable",
+        "C": "Always disclosed but never recorded",
+        "D": "Recorded at the same time as the loss"
+      },
+      "correctAnswer": "B",
+      "explanation": "Expected insurance recoveries are recognized as assets separately from the loss when recovery is probable. The recovery cannot be netted against the liability.",
+      "tip": "Insurance recovery: separate asset when probable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-020",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Going Concern",
+      "conceptTested": "Going concern as subsequent event",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If events after the balance sheet date raise substantial doubt about going concern:",
+      "options": {
+        "A": "No adjustment is required",
+        "B": "The entity should evaluate and disclose management's plans and the conditions",
+        "C": "The financial statements must be prepared on a liquidation basis",
+        "D": "Only auditors need to evaluate this"
+      },
+      "correctAnswer": "B",
+      "explanation": "If conditions or events raise substantial doubt about the entity's ability to continue as a going concern, management must evaluate whether their plans alleviate doubt and make appropriate disclosures.",
+      "tip": "Going concern doubt: evaluate plans, disclose conditions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-021",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Self-Insurance",
+      "conceptTested": "Self-insurance accrual",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A company self-insures for certain risks. How should uninsured losses be handled?",
+      "options": {
+        "A": "Accrue an estimated amount for all possible future losses",
+        "B": "Accrue only for losses that have been incurred (claims reported or estimable)",
+        "C": "No accrual is permitted for self-insured risks",
+        "D": "Disclose but never accrue"
+      },
+      "correctAnswer": "B",
+      "explanation": "Self-insurance accruals are made only for losses that have been incurred by the balance sheet date. Future losses from self-insurance cannot be accrued in advance.",
+      "tip": "Self-insurance: accrue only for incurred losses.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-subseq-022",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Dividends",
+      "conceptTested": "Post-balance sheet dividends",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A cash dividend declared after the balance sheet date but before financial statement issuance is:",
+      "options": {
+        "A": "Accrued as a liability at year-end",
+        "B": "Not recorded as a liability; may be disclosed",
+        "C": "Recorded as a reduction of retained earnings at year-end",
+        "D": "Reported as other comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "Dividends declared after year-end are not a liability at the balance sheet date because no obligation existed. Disclosure of the subsequent declaration may be appropriate.",
+      "tip": "Post-year-end dividend declaration: disclose only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-023",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Unasserted Claims",
+      "conceptTested": "Unasserted claim disclosure",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "For unasserted claims (potential claims where no lawsuit has yet been filed), disclosure is required if:",
+      "options": {
+        "A": "Any claim is possible",
+        "B": "It is probable a claim will be asserted and a reasonable possibility of unfavorable outcome exists",
+        "C": "Management is aware of any potential issue",
+        "D": "Never, since no claim has been made"
+      },
+      "correctAnswer": "B",
+      "explanation": "Unasserted claims require disclosure when: (1) it's probable the claim will be asserted and (2) there's a reasonable possibility of an unfavorable outcome.",
+      "tip": "Unasserted claims: probable assertion + reasonably possible loss.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-subseq-024",
+      "section": "FAR",
+      "topic": "Subsequent Events",
+      "subtopic": "Business Combination",
+      "conceptTested": "Post-year acquisition",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A significant business acquisition completed after year-end but before financial statement issuance is:",
+      "options": {
+        "A": "Recorded in the current year financial statements",
+        "B": "A nonrecognized subsequent event requiring disclosure",
+        "C": "Ignored until next year's statements",
+        "D": "Recorded at fair value in current year"
+      },
+      "correctAnswer": "B",
+      "explanation": "A business acquisition after year-end is a nonrecognized (Type 2) subsequent event because it represents a new condition arising after year-end. It requires disclosure if material.",
+      "tip": "Post-year acquisition: Type 2 = disclose only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-subseq-025",
+      "section": "FAR",
+      "topic": "Contingencies",
+      "subtopic": "Exit and Disposal Costs",
+      "conceptTested": "Restructuring liability",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A liability for one-time employee termination benefits under a restructuring plan is recognized when:",
+      "options": {
+        "A": "The plan is announced",
+        "B": "The plan is communicated to employees and meets other recognition criteria",
+        "C": "Employees are actually terminated",
+        "D": "The board approves the plan"
+      },
+      "correctAnswer": "B",
+      "explanation": "One-time termination benefits are recognized when the plan is communicated to affected employees and it's probable benefits will be paid and the amount is estimable.",
+      "tip": "Termination benefits: recognize when communicated to employees.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    }
+  ]
+}

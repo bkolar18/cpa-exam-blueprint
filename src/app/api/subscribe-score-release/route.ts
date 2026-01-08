@@ -57,7 +57,7 @@ export async function POST(request: Request) {
       </div>
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint - Free guidance from licensed CPAs</p>
+      <p>CPA Exam Blueprint - Affordable CPA exam study tools</p>
       <p>You can unsubscribe at any time by replying to this email.</p>
     </div>
   </div>

@@ -156,36 +156,36 @@ export default function WorkingFullTimePage() {
               </div>
             </div>
 
-            {/* CPA Stories */}
+            {/* Study Tips */}
             <div className="bg-white p-8 rounded-xl border border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
-                Real CPA Stories
+                Tips from Working Professionals
               </h2>
               <div className="space-y-6">
-                <blockquote className="border-l-4 border-[var(--primary)] pl-4">
-                  <p className="text-[var(--foreground)] italic">
-                    &quot;I woke up at 5 AM every day for 14 months. It was hard, but that 2 hours of study before work was when I did my best learning. I passed all four sections on the first try.&quot;
+                <div className="border-l-4 border-[var(--primary)] pl-4">
+                  <p className="text-[var(--foreground)] font-medium mb-2">
+                    Morning Study Sessions
                   </p>
-                  <footer className="text-sm text-[var(--muted)] mt-2">
-                    — Sarah M., CPA (passed while working at Big 4)
-                  </footer>
-                </blockquote>
-                <blockquote className="border-l-4 border-[var(--secondary)] pl-4">
-                  <p className="text-[var(--foreground)] italic">
-                    &quot;I failed FAR twice before I realized I was trying to study too much at once. I scaled back to 15 hours per week, focused on quality over quantity, and passed on my third attempt.&quot;
+                  <p className="text-[var(--muted)]">
+                    Many working candidates find that waking up 1-2 hours early to study before work is the most effective strategy. Your mind is fresh, and there are fewer distractions.
                   </p>
-                  <footer className="text-sm text-[var(--muted)] mt-2">
-                    — Michael R., CPA (passed while working in industry)
-                  </footer>
-                </blockquote>
-                <blockquote className="border-l-4 border-[var(--accent)] pl-4">
-                  <p className="text-[var(--foreground)] italic">
-                    &quot;The key for me was telling my friends and family I wasn&apos;t available on weekend mornings. Once everyone respected my study time, I could actually focus.&quot;
+                </div>
+                <div className="border-l-4 border-[var(--secondary)] pl-4">
+                  <p className="text-[var(--foreground)] font-medium mb-2">
+                    Quality Over Quantity
                   </p>
-                  <footer className="text-sm text-[var(--muted)] mt-2">
-                    — Jessica T., CPA (passed while working at regional firm)
-                  </footer>
-                </blockquote>
+                  <p className="text-[var(--muted)]">
+                    15 focused hours per week often beats 25 distracted hours. It&apos;s better to scale back your study time and maintain consistency than to burn out trying to do too much.
+                  </p>
+                </div>
+                <div className="border-l-4 border-[var(--accent)] pl-4">
+                  <p className="text-[var(--foreground)] font-medium mb-2">
+                    Protect Your Study Time
+                  </p>
+                  <p className="text-[var(--muted)]">
+                    Block your study time on your calendar and communicate boundaries with friends and family. When everyone respects your study schedule, you can actually focus.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -205,13 +205,13 @@ export default function WorkingFullTimePage() {
               </Link>
               <div className="border-t border-[var(--border)] my-6" />
               <h4 className="font-medium text-[var(--foreground)] mb-3">
-                Need a Review Course?
+                Ready to Practice?
               </h4>
               <p className="text-sm text-[var(--muted)] mb-4">
-                See which program we recommend for working professionals.
+                Access 600+ practice questions and track your progress.
               </p>
-              <Link href="/recommended-program" className="btn-outline w-full text-center block text-sm">
-                See Recommendation
+              <Link href="/signup" className="btn-outline w-full text-center block text-sm">
+                Get Started
               </Link>
             </div>
 

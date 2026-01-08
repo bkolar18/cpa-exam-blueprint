@@ -1,0 +1,483 @@
+[
+  {
+    "id": "far-int-001",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Goodwill recognition",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Goodwill is recognized only when it is:",
+    "options": {
+      "A": "Developed internally through successful operations",
+      "B": "Acquired in a business combination",
+      "C": "Purchased separately from an identifiable seller",
+      "D": "Estimated based on the company's stock price"
+    },
+    "correctAnswer": "B",
+    "explanation": "Goodwill is recognized only when acquired in a business combination. It represents the excess of the purchase price over the fair value of identifiable net assets acquired. Internally developed goodwill cannot be recognized because it cannot be reliably measured and is not separable from the business.",
+    "tip": "Goodwill = purchased only (from business combinations). No internal goodwill."
+  },
+  {
+    "id": "far-int-002",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Goodwill calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "An acquirer pays $5,000,000 for a company with identifiable assets having a fair value of $4,200,000 and liabilities with a fair value of $1,500,000. What is the goodwill recognized?",
+    "options": {
+      "A": "$800,000",
+      "B": "$2,300,000",
+      "C": "$3,500,000",
+      "D": "$1,200,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Fair value of net identifiable assets = $4,200,000 − $1,500,000 = $2,700,000. Goodwill = Purchase price − Fair value of net identifiable assets = $5,000,000 − $2,700,000 = $2,300,000.",
+    "tip": "Goodwill = Price paid − FV of net identifiable assets.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-int-003",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Goodwill amortization",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, how is goodwill accounted for after initial recognition?",
+    "options": {
+      "A": "Amortized over 40 years",
+      "B": "Amortized over its estimated useful life, not exceeding 10 years",
+      "C": "Not amortized, but tested for impairment annually",
+      "D": "Expensed immediately in the period of acquisition"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under US GAAP, goodwill is not amortized. Instead, it is tested for impairment at least annually at the reporting unit level, and more frequently if events indicate possible impairment. Private companies may elect to amortize goodwill over 10 years under a practical expedient.",
+    "tip": "Public company goodwill: no amortization, annual impairment test."
+  },
+  {
+    "id": "far-int-004",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Goodwill impairment test",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A reporting unit has a carrying amount of $10 million (including $3 million of goodwill) and a fair value of $8 million. What goodwill impairment loss is recognized?",
+    "options": {
+      "A": "$0",
+      "B": "$2,000,000",
+      "C": "$3,000,000",
+      "D": "$5,000,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under the simplified goodwill impairment test (ASU 2017-04), impairment equals the excess of carrying amount over fair value, limited to the amount of goodwill. Excess = $10M − $8M = $2M. Since $2M is less than goodwill of $3M, the impairment loss is $2,000,000.",
+    "tip": "Goodwill impairment = Carrying amount − Fair value (but cannot exceed goodwill balance).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-int-005",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Qualitative assessment for goodwill",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The qualitative assessment (Step 0) for goodwill impairment allows an entity to:",
+    "options": {
+      "A": "Skip impairment testing entirely",
+      "B": "Assess whether it is more likely than not that fair value is less than carrying amount before performing quantitative test",
+      "C": "Amortize goodwill instead of testing for impairment",
+      "D": "Test goodwill every two years instead of annually"
+    },
+    "correctAnswer": "B",
+    "explanation": "The qualitative assessment allows an entity to first assess qualitative factors to determine whether it is more likely than not (>50% probability) that the fair value of a reporting unit is less than its carrying amount. If not more likely than not, no quantitative test is required. This reduces the cost and effort of impairment testing.",
+    "tip": "Qualitative assessment: if <50% chance of impairment, skip quantitative test."
+  },
+  {
+    "id": "far-int-006",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Criteria for intangible asset recognition",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "To be recognized as an identifiable intangible asset separate from goodwill, an asset must:",
+    "options": {
+      "A": "Have a determinable useful life",
+      "B": "Be separable or arise from contractual or legal rights",
+      "C": "Be internally developed",
+      "D": "Have a fair value exceeding $1 million"
+    },
+    "correctAnswer": "B",
+    "explanation": "An intangible asset is identifiable if it meets either the separability criterion (can be separated from the entity and sold, transferred, licensed) OR the contractual-legal criterion (arises from contractual or legal rights). This distinguishes identifiable intangibles from goodwill, which is neither separable nor contractual.",
+    "tip": "Identifiable intangible: separable OR from contractual/legal rights."
+  },
+  {
+    "id": "far-int-007",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Amortization of finite-life intangibles",
+    "difficulty": "easy",
+    "questionFormat": "calculation",
+    "question": "A patent is acquired for $480,000 and has a remaining legal life of 10 years and an estimated useful life of 8 years. What is annual amortization using straight-line?",
+    "options": {
+      "A": "$48,000",
+      "B": "$60,000",
+      "C": "$40,000",
+      "D": "$80,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Intangible assets are amortized over the shorter of their legal life or useful life. Here, useful life (8 years) is shorter than legal life (10 years). Annual amortization = $480,000 / 8 years = $60,000.",
+    "tip": "Amortize over shorter of legal or useful life.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-int-008",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Indefinite-life intangibles",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "An intangible asset with an indefinite useful life is:",
+    "options": {
+      "A": "Amortized over 40 years",
+      "B": "Not amortized but tested for impairment annually",
+      "C": "Amortized over 20 years",
+      "D": "Expensed immediately"
+    },
+    "correctAnswer": "B",
+    "explanation": "Intangible assets with indefinite useful lives are not amortized. Instead, they are tested for impairment at least annually, or more frequently if events indicate impairment. Examples include certain trademarks, broadcast licenses, and franchises that can be renewed indefinitely at minimal cost.",
+    "tip": "Indefinite life intangibles: no amortization, annual impairment test."
+  },
+  {
+    "id": "far-int-009",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Research & Development Costs",
+    "conceptTested": "R&D expense treatment",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, research and development costs are generally:",
+    "options": {
+      "A": "Capitalized as intangible assets",
+      "B": "Expensed as incurred",
+      "C": "Capitalized if certain criteria are met",
+      "D": "Deferred until the product is sold"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under US GAAP, research and development costs are expensed as incurred. This applies to both research (discovering new knowledge) and development (applying research to develop new products or processes). This differs from IFRS, which requires capitalization of development costs when criteria are met.",
+    "tip": "US GAAP: R&D costs expensed as incurred. (IFRS: development may be capitalized.)"
+  },
+  {
+    "id": "far-int-010",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Research & Development Costs",
+    "conceptTested": "R&D costs elements",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are included in research and development costs EXCEPT:",
+    "options": {
+      "A": "Salaries of R&D personnel",
+      "B": "Materials consumed in R&D activities",
+      "C": "Depreciation of equipment used in R&D",
+      "D": "Legal costs of obtaining a patent"
+    },
+    "correctAnswer": "D",
+    "explanation": "Legal costs of obtaining a patent are capitalized as part of the patent's cost, not expensed as R&D. R&D costs include personnel costs, materials consumed, depreciation of R&D equipment, purchased intangibles for R&D with no alternative future use, and contract R&D services.",
+    "tip": "Patent legal fees = capitalize. R&D costs = expense."
+  },
+  {
+    "id": "far-int-011",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Research & Development Costs",
+    "conceptTested": "Equipment used in R&D",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Equipment purchased for use in various R&D projects that has alternative future uses should be:",
+    "options": {
+      "A": "Expensed immediately as R&D",
+      "B": "Capitalized and depreciated, with depreciation charged to R&D expense",
+      "C": "Capitalized and depreciated to general expense",
+      "D": "Not recorded until the R&D project is completed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Equipment with alternative future uses (can be used in other projects or sold) is capitalized as a fixed asset. Depreciation during the time it's used for R&D is charged to R&D expense. Equipment purchased for a specific R&D project with no alternative future use is expensed immediately.",
+    "tip": "R&D equipment: if alternative use exists, capitalize and depreciate to R&D."
+  },
+  {
+    "id": "far-int-012",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Software Development Costs",
+    "conceptTested": "Software for internal use—capitalization point",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For software developed for internal use, costs should be capitalized beginning when:",
+    "options": {
+      "A": "Management commits to funding the project",
+      "B": "The preliminary project stage is completed and management commits to fund and the project is probable to be completed",
+      "C": "The software is ready for use",
+      "D": "All costs should be expensed as incurred"
+    },
+    "correctAnswer": "B",
+    "explanation": "Internal-use software has three stages: (1) preliminary project—expense, (2) application development—capitalize when management commits to fund and it's probable the project will be completed, (3) post-implementation—expense. Capitalized costs are amortized over the software's useful life.",
+    "tip": "Internal-use software: capitalize during application development stage."
+  },
+  {
+    "id": "far-int-013",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Software Development Costs",
+    "conceptTested": "Software for sale—capitalization point",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For software developed to be sold, leased, or marketed, costs should be capitalized beginning when:",
+    "options": {
+      "A": "The project is approved by management",
+      "B": "Technological feasibility has been established",
+      "C": "The software is ready for sale",
+      "D": "The first sale is made"
+    },
+    "correctAnswer": "B",
+    "explanation": "For software developed for external sale, all costs before technological feasibility (defined as completion of a detailed program design or working model) are expensed as R&D. Costs after technological feasibility but before the product is available for release are capitalized. Costs after release are inventory or period costs.",
+    "tip": "Software for sale: capitalize from technological feasibility to product release."
+  },
+  {
+    "id": "far-int-014",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Software Development Costs",
+    "conceptTested": "Software amortization for sale",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Capitalized software costs for products to be sold are amortized using:",
+    "options": {
+      "A": "Straight-line only",
+      "B": "The greater of (1) straight-line over remaining useful life or (2) ratio of current revenue to total expected revenue",
+      "C": "Units-of-production only",
+      "D": "Double-declining balance"
+    },
+    "correctAnswer": "B",
+    "explanation": "Capitalized software costs are amortized using the greater of: (1) straight-line over remaining estimated economic life, or (2) the ratio of current gross revenues to total anticipated gross revenues (revenue method). This ensures amortization is at least as fast as straight-line.",
+    "tip": "Software amortization: greater of straight-line or revenue ratio."
+  },
+  {
+    "id": "far-int-015",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Impairment of finite-life intangibles",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Impairment testing for finite-life intangible assets follows the same model as:",
+    "options": {
+      "A": "Goodwill",
+      "B": "Indefinite-life intangible assets",
+      "C": "Long-lived tangible assets (PP&E)",
+      "D": "Inventory"
+    },
+    "correctAnswer": "C",
+    "explanation": "Finite-life intangible assets follow the same impairment model as PP&E under ASC 360. When events indicate impairment, compare carrying value to undiscounted cash flows. If impaired, write down to fair value. This differs from indefinite-life intangibles and goodwill, which are tested annually and written down directly to fair value.",
+    "tip": "Finite-life intangibles: impairment like PP&E (undiscounted CF test first)."
+  },
+  {
+    "id": "far-int-016",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Bargain purchase",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "An acquirer pays $3,000,000 for a company with identifiable net assets having a fair value of $3,500,000. How is this accounted for?",
+    "options": {
+      "A": "Record goodwill of $500,000",
+      "B": "Reduce the fair values of the assets acquired proportionally",
+      "C": "Recognize a gain of $500,000 in earnings",
+      "D": "Record negative goodwill as a deferred credit"
+    },
+    "correctAnswer": "C",
+    "explanation": "When the fair value of net identifiable assets exceeds the purchase price, a bargain purchase occurs. The acquirer must first reassess whether all assets and liabilities have been properly identified and measured. If the excess remains after reassessment, it is recognized as a gain in earnings immediately.",
+    "tip": "Bargain purchase (negative goodwill): recognize immediate gain after reassessment."
+  },
+  {
+    "id": "far-int-017",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Franchise costs",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Initial franchise fees paid by a franchisee to a franchisor should be:",
+    "options": {
+      "A": "Expensed immediately",
+      "B": "Capitalized as an intangible asset and amortized over the franchise term",
+      "C": "Recorded as a prepaid expense",
+      "D": "Capitalized only if the franchise can be renewed indefinitely"
+    },
+    "correctAnswer": "B",
+    "explanation": "Initial franchise fees paid for the right to operate under a franchise agreement are capitalized as an intangible asset. The franchisee amortizes this cost over the term of the franchise agreement. Ongoing royalties are expensed as incurred. If the franchise has an indefinite life, test for impairment annually.",
+    "tip": "Initial franchise fee = capitalize and amortize over franchise term."
+  },
+  {
+    "id": "far-int-018",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Research & Development Costs",
+    "conceptTested": "Acquired R&D",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "In a business combination, acquired in-process research and development (IPR&D) should be:",
+    "options": {
+      "A": "Expensed immediately",
+      "B": "Recognized as an indefinite-life intangible asset until the project is completed or abandoned",
+      "C": "Included in goodwill",
+      "D": "Recognized only if probable of commercial success"
+    },
+    "correctAnswer": "B",
+    "explanation": "Acquired IPR&D in a business combination is recognized as an indefinite-life intangible asset at fair value. It is not amortized but is tested for impairment until the R&D project is completed (then it becomes finite-life and is amortized) or abandoned (then written off).",
+    "tip": "Acquired IPR&D: indefinite-life intangible until project completes or fails."
+  },
+  {
+    "id": "far-int-019",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Customer-related intangibles",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are customer-related intangible assets that could be recognized separately in a business combination EXCEPT:",
+    "options": {
+      "A": "Customer lists",
+      "B": "Customer relationships",
+      "C": "Customer loyalty",
+      "D": "Backlog of orders"
+    },
+    "correctAnswer": "C",
+    "explanation": "Customer loyalty represents the general affinity customers have toward a company and is not separable or arising from contractual rights—it is included in goodwill. Customer lists, customer relationships, and order backlogs meet the identifiability criteria (separable or contractual) and are recognized separately.",
+    "tip": "Customer loyalty = goodwill. Customer lists/relationships/backlog = identifiable intangibles."
+  },
+  {
+    "id": "far-int-020",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Software Development Costs",
+    "conceptTested": "Cloud computing implementation costs",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Implementation costs for a cloud computing arrangement that is a service contract should be:",
+    "options": {
+      "A": "Expensed as incurred",
+      "B": "Capitalized similar to internal-use software if certain criteria are met",
+      "C": "Recorded as a lease asset",
+      "D": "Included in inventory"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under ASU 2018-15, implementation costs for cloud computing arrangements that are service contracts (not licenses) are capitalized if they would be capitalized under the internal-use software guidance. The capitalized costs are then amortized over the term of the service contract and presented in the same income statement line as the service fees.",
+    "tip": "Cloud implementation costs: capitalize like internal-use software if service contract."
+  },
+  {
+    "id": "far-int-021",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Trademark costs",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Legal fees to successfully defend a trademark should be:",
+    "options": {
+      "A": "Expensed as incurred",
+      "B": "Capitalized as part of the trademark",
+      "C": "Charged to retained earnings",
+      "D": "Recorded as a loss"
+    },
+    "correctAnswer": "B",
+    "explanation": "Legal fees to successfully defend an intangible asset (like a trademark or patent) are capitalized as part of the asset's cost because they help establish or maintain the asset's legal validity. If the defense is unsuccessful, the costs should be expensed, and the related intangible may need to be written off.",
+    "tip": "Successful defense costs = capitalize. Unsuccessful defense = expense."
+  },
+  {
+    "id": "far-int-022",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Reporting unit definition",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For goodwill impairment testing, a reporting unit is:",
+    "options": {
+      "A": "The entire company",
+      "B": "An operating segment or one level below an operating segment",
+      "C": "Any revenue-generating unit",
+      "D": "A cost center"
+    },
+    "correctAnswer": "B",
+    "explanation": "A reporting unit is defined as an operating segment or one level below an operating segment (a component). A component is a reporting unit if it constitutes a business and discrete financial information is available. Two or more components may be aggregated if they have similar economic characteristics.",
+    "tip": "Reporting unit = operating segment or component below it."
+  },
+  {
+    "id": "far-int-023",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Identifiable Intangibles",
+    "conceptTested": "Internally developed intangibles",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Which of the following internally developed intangibles can be capitalized under US GAAP?",
+    "options": {
+      "A": "Internally developed trademarks",
+      "B": "Internally developed customer lists",
+      "C": "Website development costs for external use",
+      "D": "Internally developed goodwill"
+    },
+    "correctAnswer": "C",
+    "explanation": "Website development costs can be capitalized if they meet certain criteria (similar to internal-use software). Internally developed trademarks, customer lists, and goodwill cannot be capitalized under US GAAP because costs cannot be reliably separated from overall business development costs. Only acquired intangibles in these categories are recognized.",
+    "tip": "Most internally developed intangibles = expense. Website costs may be capitalized."
+  },
+  {
+    "id": "far-int-024",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Goodwill & Impairment",
+    "conceptTested": "Private company goodwill alternative",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the private company alternative, goodwill may be:",
+    "options": {
+      "A": "Written off immediately upon acquisition",
+      "B": "Amortized over 10 years (or less if a shorter life is more appropriate) and tested for impairment only upon a triggering event",
+      "C": "Amortized over 40 years",
+      "D": "Revalued to fair value annually"
+    },
+    "correctAnswer": "B",
+    "explanation": "Private companies may elect to amortize goodwill on a straight-line basis over 10 years (or less if more appropriate). Under this alternative, goodwill is tested for impairment only when a triggering event occurs, rather than annually. This reduces the cost and complexity of goodwill accounting for private entities.",
+    "tip": "Private company alternative: amortize goodwill over ≤10 years, trigger-based testing."
+  },
+  {
+    "id": "far-int-025",
+    "section": "FAR",
+    "topic": "Intangible Assets",
+    "subtopic": "Software Development Costs",
+    "conceptTested": "Website development stages",
+    "difficulty": "hard",
+    "questionFormat": "except",
+    "question": "Website development costs incurred during which stage should be capitalized?",
+    "options": {
+      "A": "Planning stage",
+      "B": "Application and infrastructure development stage",
+      "C": "Graphics development stage",
+      "D": "Content development stage (if for advertising)"
+    },
+    "correctAnswer": "D",
+    "explanation": "Content development costs for advertising purposes are expensed because advertising costs must generally be expensed under GAAP. Application/infrastructure development and graphics development costs meeting capitalization criteria are capitalized. Planning stage costs are expensed similar to the preliminary project stage for software.",
+    "tip": "Website: capitalize development, expense planning and advertising content."
+  }
+]

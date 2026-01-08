@@ -1,0 +1,477 @@
+[
+  {
+    "id": "far-gov-001",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fund Accounting Basics",
+    "conceptTested": "Fund accounting purpose",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Governmental fund accounting emphasizes:",
+    "options": {
+      "A": "Net income and profitability",
+      "B": "Fiscal accountability and current financial resources",
+      "C": "Cash flows from operations",
+      "D": "Return on investment"
+    },
+    "correctAnswer": "B",
+    "explanation": "Governmental fund accounting emphasizes fiscal accountability—demonstrating that resources were used in compliance with budgets and legal requirements. It focuses on current financial resources (resources available to pay current liabilities) rather than profitability or economic resources.",
+    "tip": "Government funds = fiscal accountability + current financial resources."
+  },
+  {
+    "id": "far-gov-002",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fund Accounting Basics",
+    "conceptTested": "Measurement focus",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Governmental funds use which measurement focus?",
+    "options": {
+      "A": "Economic resources measurement focus",
+      "B": "Current financial resources measurement focus",
+      "C": "Cash measurement focus",
+      "D": "Accrual measurement focus"
+    },
+    "correctAnswer": "B",
+    "explanation": "Governmental funds (General, Special Revenue, Capital Projects, Debt Service, Permanent) use the current financial resources measurement focus. This means only current assets and current liabilities are reported, and the focus is on resources available to pay near-term obligations.",
+    "tip": "Governmental funds = current financial resources. Proprietary/fiduciary = economic resources."
+  },
+  {
+    "id": "far-gov-003",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fund Accounting Basics",
+    "conceptTested": "Modified accrual basis",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the modified accrual basis of accounting used by governmental funds, revenues are recognized when:",
+    "options": {
+      "A": "Earned and receivable",
+      "B": "Measurable and available",
+      "C": "Cash is received",
+      "D": "Billed to taxpayers"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under modified accrual, revenues are recognized when measurable (amount can be determined) and available (collectible within the current period or soon enough thereafter to pay current liabilities, typically 60 days). This is more restrictive than full accrual.",
+    "tip": "Modified accrual revenue: measurable + available (typically 60 days)."
+  },
+  {
+    "id": "far-gov-004",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Governmental Fund Types",
+    "conceptTested": "General fund",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The General Fund is used to account for:",
+    "options": {
+      "A": "Long-term debt payments",
+      "B": "All financial resources not required to be accounted for in another fund",
+      "C": "Capital asset acquisitions only",
+      "D": "Enterprise activities"
+    },
+    "correctAnswer": "B",
+    "explanation": "The General Fund is the primary operating fund, used to account for all financial resources not required to be accounted for in another fund. It typically records property taxes, most governmental expenditures, and general operations.",
+    "tip": "General Fund = catchall for resources not in another fund."
+  },
+  {
+    "id": "far-gov-005",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Governmental Fund Types",
+    "conceptTested": "Special revenue funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Special Revenue Funds are used to account for:",
+    "options": {
+      "A": "Enterprise activities",
+      "B": "Resources legally restricted for specific purposes other than debt service or capital projects",
+      "C": "Pension plan assets",
+      "D": "Internal service activities"
+    },
+    "correctAnswer": "B",
+    "explanation": "Special Revenue Funds account for resources that are legally restricted or committed for specific purposes other than debt service or capital projects. Examples include grants restricted for parks, gas tax revenues restricted for roads, or federal grants for specific programs.",
+    "tip": "Special Revenue = legally restricted revenue for specific purposes."
+  },
+  {
+    "id": "far-gov-006",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Governmental Fund Types",
+    "conceptTested": "Capital projects funds",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Capital Projects Funds are used to account for:",
+    "options": {
+      "A": "Depreciation of capital assets",
+      "B": "Resources for acquiring or constructing major capital facilities",
+      "C": "Working capital for ongoing operations",
+      "D": "Enterprise equipment purchases"
+    },
+    "correctAnswer": "B",
+    "explanation": "Capital Projects Funds account for resources used for acquiring or constructing major capital facilities other than those financed by proprietary or fiduciary funds. They track construction spending but do not record the capital assets themselves (which go on government-wide statements).",
+    "tip": "Capital Projects Fund = tracks construction/acquisition spending."
+  },
+  {
+    "id": "far-gov-007",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Governmental Fund Types",
+    "conceptTested": "Debt service funds",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Debt Service Funds are used to account for:",
+    "options": {
+      "A": "Issuing new bonds",
+      "B": "Accumulation of resources for and payment of principal and interest on general long-term debt",
+      "C": "Short-term operating loans",
+      "D": "Enterprise fund debt"
+    },
+    "correctAnswer": "B",
+    "explanation": "Debt Service Funds account for resources accumulated to pay principal and interest on general long-term debt. They receive transfers from other funds or dedicated tax revenues and use those resources to make debt payments.",
+    "tip": "Debt Service Fund = pays principal and interest on long-term debt."
+  },
+  {
+    "id": "far-gov-008",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Government-Wide Statements",
+    "conceptTested": "Government-wide financial statements",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Government-wide financial statements use which basis of accounting?",
+    "options": {
+      "A": "Modified accrual",
+      "B": "Cash basis",
+      "C": "Full accrual (economic resources focus)",
+      "D": "Budgetary basis"
+    },
+    "correctAnswer": "C",
+    "explanation": "Government-wide statements (Statement of Net Position and Statement of Activities) use full accrual accounting and economic resources measurement focus, similar to commercial accounting. This provides an overall picture of the government's financial position and operations, including capital assets and long-term liabilities.",
+    "tip": "Government-wide = full accrual, economic resources (like commercial)."
+  },
+  {
+    "id": "far-gov-009",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Government-Wide Statements",
+    "conceptTested": "Statement of Net Position categories",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Net position in government-wide statements is categorized as:",
+    "options": {
+      "A": "Retained earnings and contributed capital",
+      "B": "Net investment in capital assets, restricted, and unrestricted",
+      "C": "Reserved and unreserved fund balance",
+      "D": "Committed, assigned, and unassigned"
+    },
+    "correctAnswer": "B",
+    "explanation": "Government-wide net position has three categories: (1) Net investment in capital assets (capital assets minus related debt), (2) Restricted (externally restricted by creditors, grantors, laws, or constitutional provisions), and (3) Unrestricted (all other net position).",
+    "tip": "Net position: invested in capital assets, restricted, unrestricted."
+  },
+  {
+    "id": "far-gov-010",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Budgetary Accounting",
+    "conceptTested": "Budgetary accounts",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a government formally adopts its annual budget, what entry is made in the General Fund?",
+    "options": {
+      "A": "Debit Cash, Credit Revenue",
+      "B": "Debit Estimated Revenues, Credit Appropriations and Budgetary Fund Balance",
+      "C": "Debit Expenditures, Credit Encumbrances",
+      "D": "No entry—budgets are memoranda only"
+    },
+    "correctAnswer": "B",
+    "explanation": "When the budget is adopted: Debit Estimated Revenues (expected inflows), Credit Appropriations (authorized spending), and debit or credit Budgetary Fund Balance for the difference. If Estimated Revenues > Appropriations, credit Fund Balance. If Appropriations > Estimated Revenues, debit Fund Balance.",
+    "tip": "Budget entry: Dr Estimated Revenues, Cr Appropriations, plug to Budgetary FB."
+  },
+  {
+    "id": "far-gov-011",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Budgetary Accounting",
+    "conceptTested": "Encumbrances",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "An encumbrance in governmental accounting represents:",
+    "options": {
+      "A": "An actual expenditure",
+      "B": "A commitment to purchase goods or services",
+      "C": "Depreciation on capital assets",
+      "D": "Interest on long-term debt"
+    },
+    "correctAnswer": "B",
+    "explanation": "An encumbrance is recorded when a commitment (like a purchase order) is made. It reserves a portion of the appropriation for the commitment. When goods/services are received, the encumbrance is reversed and an expenditure is recorded. Encumbrances provide budgetary control.",
+    "tip": "Encumbrance = commitment (PO). Reversed when goods received and expenditure recorded."
+  },
+  {
+    "id": "far-gov-012",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Capital Assets & Long-Term Liabilities",
+    "conceptTested": "Capital assets in governmental funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a governmental fund purchases a capital asset, the accounting treatment is:",
+    "options": {
+      "A": "Record the asset and depreciate it",
+      "B": "Record an expenditure in the fund; capitalize the asset in government-wide statements",
+      "C": "Record a prepaid asset",
+      "D": "No entry is required"
+    },
+    "correctAnswer": "B",
+    "explanation": "In governmental funds (using modified accrual), capital asset purchases are recorded as expenditures because the focus is on current financial resources. The asset is capitalized only in the government-wide statements, which use full accrual and economic resources measurement focus.",
+    "tip": "Governmental funds: expense (expenditure). Government-wide: capitalize."
+  },
+  {
+    "id": "far-gov-013",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Capital Assets & Long-Term Liabilities",
+    "conceptTested": "Long-term debt in governmental funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a government issues bonds to finance a capital project, how is this recorded in the Capital Projects Fund?",
+    "options": {
+      "A": "Debit Cash, Credit Bonds Payable",
+      "B": "Debit Cash, Credit Other Financing Sources—Proceeds of Bonds",
+      "C": "Debit Bonds Payable, Credit Cash",
+      "D": "No entry until the bonds mature"
+    },
+    "correctAnswer": "B",
+    "explanation": "Governmental funds do not report long-term liabilities. Bond proceeds are reported as 'Other Financing Sources' in the Capital Projects Fund. The liability (Bonds Payable) is reported only in the government-wide statements. This maintains the current financial resources focus.",
+    "tip": "Bond proceeds in governmental funds = Other Financing Source (not liability)."
+  },
+  {
+    "id": "far-gov-014",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fund Accounting Basics",
+    "conceptTested": "Fund balance categories",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under GASB 54, governmental fund balances are classified in all of the following categories EXCEPT:",
+    "options": {
+      "A": "Nonspendable",
+      "B": "Restricted",
+      "C": "Unappropriated",
+      "D": "Committed"
+    },
+    "correctAnswer": "C",
+    "explanation": "GASB 54 establishes five fund balance categories: Nonspendable, Restricted, Committed, Assigned, and Unassigned. 'Unappropriated' is not a GASB 54 category. These categories show the extent to which the government is bound to use resources for specific purposes.",
+    "tip": "GASB 54 fund balance: Nonspendable, Restricted, Committed, Assigned, Unassigned."
+  },
+  {
+    "id": "far-gov-015",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fiduciary Funds",
+    "conceptTested": "Fiduciary fund purpose",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Fiduciary funds are used to account for:",
+    "options": {
+      "A": "The government's general operations",
+      "B": "Resources held by the government as trustee or agent for others",
+      "C": "Business-type activities",
+      "D": "Internal service operations"
+    },
+    "correctAnswer": "B",
+    "explanation": "Fiduciary funds account for resources held by the government in a trustee or custodial capacity for parties outside the government. Examples include pension trust funds, investment trust funds, private-purpose trust funds, and custodial funds. These are not available for the government's own programs.",
+    "tip": "Fiduciary = holding resources for others (not government's own use)."
+  },
+  {
+    "id": "far-gov-016",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Government-Wide Statements",
+    "conceptTested": "Reconciliation between fund and government-wide",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "To reconcile governmental fund balance to government-wide net position, which adjustment is needed?",
+    "options": {
+      "A": "Subtract capital assets and add long-term liabilities",
+      "B": "Add capital assets and subtract long-term liabilities",
+      "C": "No reconciliation is needed",
+      "D": "Eliminate all intergovernmental revenues"
+    },
+    "correctAnswer": "B",
+    "explanation": "The reconciliation adds items not in governmental funds: add capital assets (net of depreciation), add other long-term assets, subtract long-term liabilities (bonds, compensated absences), and adjust for accrual-based revenues/expenses. This converts current financial resources to economic resources focus.",
+    "tip": "Reconciliation: + capital assets, − long-term liabilities, adjust for accrual items."
+  },
+  {
+    "id": "far-gov-017",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Budgetary Accounting",
+    "conceptTested": "Expenditure recognition",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under modified accrual, expenditures are generally recognized when:",
+    "options": {
+      "A": "The cash is paid",
+      "B": "The related liability is incurred (if measurable)",
+      "C": "The appropriation is made",
+      "D": "The budget is adopted"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under modified accrual, expenditures are generally recognized when the related fund liability is incurred, assuming the amount is measurable. Unlike expenses under full accrual, expenditures include both operating costs and capital outlays. Some exceptions exist for items like debt service.",
+    "tip": "Expenditures: when liability is incurred (modified accrual)."
+  },
+  {
+    "id": "far-gov-018",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Governmental Fund Types",
+    "conceptTested": "Permanent funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Permanent Funds are used to account for:",
+    "options": {
+      "A": "Resources that must be used for enterprise operations",
+      "B": "Resources where principal must be preserved but earnings may be used for government programs",
+      "C": "Employee pension benefits",
+      "D": "All restricted resources"
+    },
+    "correctAnswer": "B",
+    "explanation": "Permanent Funds account for resources that are legally restricted such that only earnings (not principal) may be used for purposes supporting government programs. They differ from private-purpose trusts where the beneficiaries are outside parties.",
+    "tip": "Permanent Fund = principal preserved, earnings support government programs."
+  },
+  {
+    "id": "far-gov-019",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Government-Wide Statements",
+    "conceptTested": "Program revenues vs general revenues",
+    "difficulty": "hard",
+    "questionFormat": "except",
+    "question": "All of the following are program revenues in government-wide statements EXCEPT:",
+    "options": {
+      "A": "Charges for services",
+      "B": "Operating grants and contributions",
+      "C": "Property taxes",
+      "D": "Capital grants and contributions"
+    },
+    "correctAnswer": "C",
+    "explanation": "Program revenues are directly associated with functions/programs and include charges for services, operating grants, and capital grants. Property taxes are general revenues because they are not specifically associated with a particular program—they support general governmental activities.",
+    "tip": "Program revenues: charges, operating grants, capital grants. Property tax = general revenue."
+  },
+  {
+    "id": "far-gov-020",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fiduciary Funds",
+    "conceptTested": "Pension trust funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Pension trust funds should be reported using:",
+    "options": {
+      "A": "Modified accrual basis and current financial resources focus",
+      "B": "Full accrual basis and economic resources focus",
+      "C": "Cash basis",
+      "D": "Budgetary basis"
+    },
+    "correctAnswer": "B",
+    "explanation": "Pension trust funds (and all fiduciary funds) use full accrual accounting and economic resources measurement focus, similar to proprietary funds and government-wide statements. This provides complete information about pension assets and liabilities.",
+    "tip": "Fiduciary funds = full accrual, economic resources focus."
+  },
+  {
+    "id": "far-gov-021",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Capital Assets & Long-Term Liabilities",
+    "conceptTested": "Infrastructure assets",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under the modified approach for reporting infrastructure assets, depreciation is not recognized if:",
+    "options": {
+      "A": "The assets are over 50 years old",
+      "B": "The government manages and preserves assets at a condition level established by policy, documents that condition is being maintained",
+      "C": "The assets were donated",
+      "D": "The assets cost less than $5 million"
+    },
+    "correctAnswer": "B",
+    "explanation": "The modified approach allows governments to not depreciate infrastructure assets (roads, bridges, etc.) if they: (1) manage assets using an asset management system, (2) document that assets are preserved at a condition level established by policy, and (3) report amounts necessary to maintain that condition.",
+    "tip": "Modified approach for infrastructure: no depreciation if properly managed/preserved."
+  },
+  {
+    "id": "far-gov-022",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Budgetary Accounting",
+    "conceptTested": "Budget variance reporting",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Budgetary comparison schedules or statements must present:",
+    "options": {
+      "A": "Original budget only",
+      "B": "Final budget only",
+      "C": "Original budget, final budget, and actual results",
+      "D": "Actual results only"
+    },
+    "correctAnswer": "C",
+    "explanation": "Budgetary comparison schedules (or statements, depending on presentation) must show three columns: original budget, final budget (after amendments), and actual results on the budgetary basis. This allows users to evaluate both budget amendments and variances from budget.",
+    "tip": "Budget comparison: original budget + final budget + actual."
+  },
+  {
+    "id": "far-gov-023",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fund Accounting Basics",
+    "conceptTested": "Proprietary funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Proprietary funds use which basis of accounting?",
+    "options": {
+      "A": "Modified accrual",
+      "B": "Full accrual (economic resources focus)",
+      "C": "Cash basis",
+      "D": "Budgetary basis"
+    },
+    "correctAnswer": "B",
+    "explanation": "Proprietary funds (Enterprise Funds and Internal Service Funds) use full accrual accounting and economic resources measurement focus, similar to commercial accounting. They report revenues, expenses, assets, liabilities, and changes in net position.",
+    "tip": "Proprietary funds = full accrual, like a business."
+  },
+  {
+    "id": "far-gov-024",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Governmental Fund Types",
+    "conceptTested": "Enterprise funds",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Enterprise Funds are used to account for:",
+    "options": {
+      "A": "Activities providing services to other departments within the government",
+      "B": "Business-type activities that charge fees to external users",
+      "C": "All capital asset purchases",
+      "D": "Trust assets held for employees"
+    },
+    "correctAnswer": "B",
+    "explanation": "Enterprise Funds account for business-type activities that charge fees to external users (citizens, businesses). Examples include utilities (water, sewer, electric), transit systems, and golf courses. The intent is to operate like a business, covering costs through user charges.",
+    "tip": "Enterprise Fund = business-type activity charging fees to outsiders."
+  },
+  {
+    "id": "far-gov-025",
+    "section": "FAR",
+    "topic": "Government Accounting",
+    "subtopic": "Fund Accounting Basics",
+    "conceptTested": "Internal service funds",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Internal Service Funds are used to account for:",
+    "options": {
+      "A": "Services provided to external customers",
+      "B": "Services provided to other departments or governments on a cost-reimbursement basis",
+      "C": "Pension benefits",
+      "D": "Debt service payments"
+    },
+    "correctAnswer": "B",
+    "explanation": "Internal Service Funds account for services provided by one government department to other departments or to other governments on a cost-reimbursement basis. Examples include central motor pools, print shops, and self-insurance funds. They're proprietary funds using full accrual.",
+    "tip": "Internal Service Fund = serves internal customers (other departments)."
+  }
+]

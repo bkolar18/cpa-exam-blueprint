@@ -500,7 +500,7 @@ export default function StudyPlanPage() {
                 {/* Tips */}
                 <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
                   <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
-                    CPA-Recommended Tips
+                    Study Tips
                   </h3>
                   <ul className="space-y-3">
                     {studyPlan.tips.map((tip, index) => (
@@ -520,14 +520,14 @@ export default function StudyPlanPage() {
                     Ready to start studying?
                   </h3>
                   <p className="text-[var(--muted)] mb-4">
-                    Track your progress and unlock achievements with CPA Academy, or see the review program we recommend.
+                    Track your progress and unlock achievements with your CPA Academy dashboard.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <Link href="/signup" className="btn-primary inline-block">
                       Sign Up for CPA Academy
                     </Link>
-                    <Link href="/recommended-program" className="btn-secondary inline-block">
-                      See Our Recommendation
+                    <Link href="/dashboard" className="btn-secondary inline-block">
+                      Go to Dashboard
                     </Link>
                   </div>
                 </div>
@@ -580,7 +580,7 @@ export default function StudyPlanPage() {
 
         {/* Trust signal */}
         <p className="text-center text-sm text-[var(--muted)] mt-6">
-          Developed by licensed CPAs with real exam experience
+          Study planning tools developed by an accounting graduate
         </p>
       </div>
     </div>

@@ -1,0 +1,596 @@
+[
+  {
+    "id": "far-ppe-001",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Costs to capitalize for PP&E",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Which of the following costs should be capitalized as part of the cost of equipment?",
+    "options": {
+      "A": "Repairs made after the equipment is placed in service",
+      "B": "Sales tax paid on the purchase",
+      "C": "Insurance expense for the first year of operation",
+      "D": "Training costs for employees to operate the equipment"
+    },
+    "correctAnswer": "B",
+    "explanation": "The cost of PP&E includes all costs necessary to acquire the asset and prepare it for its intended use. This includes purchase price, sales tax, freight, installation, and testing costs. Repairs after being placed in service, ongoing insurance, and employee training are period costs expensed as incurred.",
+    "tip": "Capitalize costs to acquire and prepare for use. Expense operating costs."
+  },
+  {
+    "id": "far-ppe-002",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Land costs",
+    "difficulty": "easy",
+    "questionFormat": "except",
+    "question": "All of the following should be included in the cost of land EXCEPT:",
+    "options": {
+      "A": "Real estate commissions",
+      "B": "Cost to demolish an old building on the site",
+      "C": "Cost of fencing and parking lot paving",
+      "D": "Delinquent property taxes assumed by the buyer"
+    },
+    "correctAnswer": "C",
+    "explanation": "Fencing and parking lots are land improvements, which are depreciable assets separate from land. Land costs include purchase price, closing costs, commissions, title insurance, legal fees, surveying, demolition of unwanted structures (net of salvage), and delinquent taxes assumed. Land itself is not depreciated.",
+    "tip": "Land improvements (fencing, paving, landscaping) are separate depreciable assets."
+  },
+  {
+    "id": "far-ppe-003",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Self-constructed assets",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When an entity constructs an asset for its own use, the cost of the asset should include:",
+    "options": {
+      "A": "Direct materials, direct labor, and a reasonable allocation of overhead",
+      "B": "Only direct materials and direct labor",
+      "C": "The fair value of a similar asset if purchased externally",
+      "D": "Direct materials, direct labor, overhead, and any profit the company would have earned if it had sold the asset"
+    },
+    "correctAnswer": "A",
+    "explanation": "Self-constructed assets are capitalized at the cost of construction, including direct materials, direct labor, and a reasonable allocation of overhead (variable and fixed). No profit is included because the company cannot profit from itself. The asset should not be recorded above its fair value.",
+    "tip": "Self-constructed: materials + labor + overhead. No internal profit."
+  },
+  {
+    "id": "far-ppe-004",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Interest capitalization",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Interest costs may be capitalized during the construction of an asset if:",
+    "options": {
+      "A": "The asset is purchased from an external vendor",
+      "B": "The asset requires a period of time to get ready for its intended use and expenditures and borrowings have occurred",
+      "C": "The company has any outstanding debt",
+      "D": "The asset will be used for more than one year"
+    },
+    "correctAnswer": "B",
+    "explanation": "Interest capitalization applies to assets that require a period of time to get ready for their intended use (qualifying assets). Three conditions must be met: (1) expenditures for the asset have been made, (2) activities to get the asset ready are in progress, and (3) interest cost is being incurred. Assets purchased ready to use do not qualify.",
+    "tip": "Capitalize interest: qualifying asset + expenditures + activities + interest incurred."
+  },
+  {
+    "id": "far-ppe-005",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Avoidable interest calculation",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A company constructs a building, incurring average accumulated expenditures of $2,000,000. The company has a $1,500,000 construction loan at 8% and other debt of $3,000,000 at 6%. What is the capitalizable interest?",
+    "options": {
+      "A": "$120,000",
+      "B": "$150,000",
+      "C": "$160,000",
+      "D": "$180,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "First, use the specific construction loan: $1,500,000 × 8% = $120,000. Remaining expenditures: $2,000,000 − $1,500,000 = $500,000. Apply weighted average rate of other debt: $500,000 × 6% = $30,000. Total capitalizable interest = $120,000 + $30,000 = $150,000. (Cannot exceed actual interest incurred.)",
+    "tip": "Use specific borrowings first, then weighted average rate for excess.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 120
+  },
+  {
+    "id": "far-ppe-006",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Straight-line depreciation",
+    "difficulty": "easy",
+    "questionFormat": "calculation",
+    "question": "Equipment costing $50,000 with a $5,000 salvage value and a 5-year useful life is depreciated using straight-line. What is annual depreciation expense?",
+    "options": {
+      "A": "$9,000",
+      "B": "$10,000",
+      "C": "$11,000",
+      "D": "$12,500"
+    },
+    "correctAnswer": "A",
+    "explanation": "Straight-line depreciation = (Cost − Salvage value) / Useful life = ($50,000 − $5,000) / 5 years = $45,000 / 5 = $9,000 per year. The depreciable base is the cost less estimated salvage value.",
+    "tip": "SL depreciation = (Cost − Salvage) ÷ Life.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-ppe-007",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Double-declining balance depreciation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Equipment costing $100,000 with a $10,000 salvage value and a 5-year useful life is depreciated using double-declining balance. What is first-year depreciation?",
+    "options": {
+      "A": "$36,000",
+      "B": "$40,000",
+      "C": "$18,000",
+      "D": "$20,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "DDB rate = (1/Life) × 2 = (1/5) × 2 = 40%. Year 1 depreciation = $100,000 × 40% = $40,000. Note: Salvage value is not subtracted in the DDB calculation, but depreciation stops when book value equals salvage value.",
+    "tip": "DDB Year 1 = Cost × (2/Life). Ignore salvage initially.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-ppe-008",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Units-of-production depreciation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A machine costs $80,000, has a $8,000 salvage value, and is expected to produce 180,000 units over its life. If 30,000 units are produced in Year 1, what is depreciation expense?",
+    "options": {
+      "A": "$12,000",
+      "B": "$13,333",
+      "C": "$10,000",
+      "D": "$14,400"
+    },
+    "correctAnswer": "A",
+    "explanation": "Depreciation per unit = (Cost − Salvage) / Total units = ($80,000 − $8,000) / 180,000 = $0.40 per unit. Year 1 depreciation = 30,000 units × $0.40 = $12,000. This method ties depreciation to actual usage.",
+    "tip": "Units-of-production: calculate rate per unit, multiply by actual production.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-ppe-009",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Sum-of-years-digits depreciation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "An asset costs $60,000, has a $6,000 salvage value, and a 4-year life. Using sum-of-years-digits, what is Year 2 depreciation?",
+    "options": {
+      "A": "$21,600",
+      "B": "$16,200",
+      "C": "$14,400",
+      "D": "$10,800"
+    },
+    "correctAnswer": "B",
+    "explanation": "SYD = 4 + 3 + 2 + 1 = 10. Depreciable base = $60,000 − $6,000 = $54,000. Year 2 fraction = 3/10 (second highest remaining years). Year 2 depreciation = $54,000 × 3/10 = $16,200.",
+    "tip": "SYD: SYD = n(n+1)/2. Year fraction = remaining years / SYD.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "far-ppe-010",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Partial year depreciation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Equipment purchased on April 1 costs $24,000, has no salvage value, and a 4-year life. Using straight-line and monthly proration, what is Year 1 depreciation?",
+    "options": {
+      "A": "$6,000",
+      "B": "$4,500",
+      "C": "$3,000",
+      "D": "$5,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Annual depreciation = $24,000 / 4 = $6,000. Asset used for 9 months in Year 1 (April through December). Year 1 depreciation = $6,000 × 9/12 = $4,500.",
+    "tip": "Partial year: Calculate full year, then prorate for months used.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-ppe-011",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Component depreciation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, component depreciation (depreciating significant parts of an asset separately) is:",
+    "options": {
+      "A": "Required for all fixed assets",
+      "B": "Permitted but not required",
+      "C": "Prohibited",
+      "D": "Required only for buildings"
+    },
+    "correctAnswer": "B",
+    "explanation": "US GAAP permits but does not require component depreciation. An entity may depreciate significant components of an asset separately if they have different useful lives. IFRS requires component depreciation when parts have significantly different useful lives. In practice, many US companies depreciate assets as a whole.",
+    "tip": "US GAAP: component depreciation permitted, not required. IFRS: required."
+  },
+  {
+    "id": "far-ppe-012",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Impairment of Long-Lived Assets",
+    "conceptTested": "Impairment testing trigger",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 360, impairment of long-lived assets held for use should be tested when:",
+    "options": {
+      "A": "At the end of every reporting period",
+      "B": "Events or changes in circumstances indicate the carrying amount may not be recoverable",
+      "C": "The asset's fair value declines below book value",
+      "D": "The asset reaches half of its useful life"
+    },
+    "correctAnswer": "B",
+    "explanation": "Impairment testing for long-lived assets held for use is performed when events or changes in circumstances indicate the carrying amount may not be recoverable (triggering events). Unlike goodwill, there is no annual testing requirement. Examples include significant decrease in market value, adverse changes in use, or operating losses.",
+    "tip": "Long-lived assets: test only when triggering events occur (not annually)."
+  },
+  {
+    "id": "far-ppe-013",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Impairment of Long-Lived Assets",
+    "conceptTested": "Two-step impairment test",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Equipment has a carrying value of $500,000, expected future undiscounted cash flows of $450,000, and fair value of $380,000. What impairment loss should be recognized?",
+    "options": {
+      "A": "$0",
+      "B": "$50,000",
+      "C": "$120,000",
+      "D": "$70,000"
+    },
+    "correctAnswer": "C",
+    "explanation": "Step 1 (Recoverability test): Compare carrying value ($500,000) to undiscounted cash flows ($450,000). Since $500,000 > $450,000, the asset is impaired. Step 2 (Measurement): Impairment loss = Carrying value − Fair value = $500,000 − $380,000 = $120,000.",
+    "tip": "Step 1: undiscounted CF test. Step 2: measure loss using fair value.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-ppe-014",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Impairment of Long-Lived Assets",
+    "conceptTested": "Impairment reversal",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, if a previously impaired long-lived asset held for use subsequently increases in value:",
+    "options": {
+      "A": "The impairment must be reversed",
+      "B": "The impairment cannot be reversed; the reduced carrying amount is the new cost basis",
+      "C": "The impairment is reversed only if the fair value exceeds original cost",
+      "D": "A gain is recognized in other comprehensive income"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under US GAAP, impairment losses on long-lived assets held for use cannot be reversed. Once written down, the reduced amount becomes the new cost basis for depreciation purposes. This differs from IFRS, which permits reversal of impairment losses (but not above original depreciated cost).",
+    "tip": "US GAAP: No reversal of impairment on assets held for use."
+  },
+  {
+    "id": "far-ppe-015",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Impairment of Long-Lived Assets",
+    "conceptTested": "Assets held for sale",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a long-lived asset is classified as held for sale, it should be measured at:",
+    "options": {
+      "A": "Fair value",
+      "B": "Net realizable value",
+      "C": "The lower of carrying amount or fair value less costs to sell",
+      "D": "Historical cost"
+    },
+    "correctAnswer": "C",
+    "explanation": "Assets held for sale are measured at the lower of (1) carrying amount or (2) fair value less costs to sell. Depreciation ceases once classified as held for sale. If fair value less costs to sell is lower, a loss is recognized. Subsequent increases in fair value less costs to sell can be recognized (limited to cumulative losses).",
+    "tip": "Held for sale: lower of book value or (fair value − selling costs). Stop depreciating."
+  },
+  {
+    "id": "far-ppe-016",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Asset Retirement Obligations",
+    "conceptTested": "ARO initial recognition",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When an asset retirement obligation (ARO) is recognized, the initial journal entry includes:",
+    "options": {
+      "A": "Debit to expense, credit to liability",
+      "B": "Debit to the related asset, credit to the ARO liability",
+      "C": "Debit to retained earnings, credit to the ARO liability",
+      "D": "Debit to deferred charge, credit to the ARO liability"
+    },
+    "correctAnswer": "B",
+    "explanation": "When an ARO is recognized, the entity records a liability (at fair value, typically present value of expected costs) and capitalizes an equal amount as an increase to the related long-lived asset. The asset addition is then depreciated over the asset's useful life. The liability accretes over time to the settlement amount.",
+    "tip": "ARO: Debit asset (capitalize), Credit liability (present value)."
+  },
+  {
+    "id": "far-ppe-017",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Asset Retirement Obligations",
+    "conceptTested": "ARO accretion expense",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "An ARO liability was recorded at $100,000 (present value) using a 6% credit-adjusted risk-free rate. What is the accretion expense for Year 1?",
+    "options": {
+      "A": "$6,000",
+      "B": "$0",
+      "C": "$10,000",
+      "D": "$3,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Accretion expense increases the ARO liability over time to its future settlement amount. Year 1 accretion = Opening liability × Credit-adjusted risk-free rate = $100,000 × 6% = $6,000. This is reported as an operating expense (not interest expense).",
+    "tip": "Accretion = ARO liability × Credit-adjusted rate. It's an operating expense.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-ppe-018",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Nonmonetary Exchanges",
+    "conceptTested": "Commercial substance",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "An exchange of nonmonetary assets has commercial substance if:",
+    "options": {
+      "A": "The fair values of the assets exchanged are equal",
+      "B": "The entity's future cash flows are expected to change significantly as a result of the exchange",
+      "C": "No boot (cash) is involved in the exchange",
+      "D": "The assets exchanged are similar in nature"
+    },
+    "correctAnswer": "B",
+    "explanation": "An exchange has commercial substance if the entity's future cash flows are expected to change significantly as a result—either in timing, amount, or risk. Exchanges with commercial substance are recorded at fair value, and gains/losses are recognized. Exchanges lacking commercial substance are recorded at book value with no gain recognition.",
+    "tip": "Commercial substance = cash flows change significantly. Record at fair value."
+  },
+  {
+    "id": "far-ppe-019",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Nonmonetary Exchanges",
+    "conceptTested": "Exchange with commercial substance",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "Company A exchanges equipment (cost $50,000, accumulated depreciation $30,000, fair value $25,000) for equipment from Company B, receiving $3,000 cash. The exchange has commercial substance. What gain or loss does Company A recognize?",
+    "options": {
+      "A": "$5,000 gain",
+      "B": "$5,000 loss",
+      "C": "$8,000 gain",
+      "D": "$3,000 gain"
+    },
+    "correctAnswer": "A",
+    "explanation": "Book value of asset given = $50,000 − $30,000 = $20,000. Total consideration received = Fair value of asset received + Cash = $25,000 (implied from FV given). Gain = FV received − Book value given = $25,000 − $20,000 = $5,000 gain. With commercial substance, full gain is recognized.",
+    "tip": "Commercial substance: Gain/loss = Fair value received − Book value given.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "far-ppe-020",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Nonmonetary Exchanges",
+    "conceptTested": "Exchange without commercial substance",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "In an exchange of nonmonetary assets lacking commercial substance where no boot is received, how is the acquired asset recorded?",
+    "options": {
+      "A": "At fair value, with gain or loss recognized",
+      "B": "At the book value of the asset given up, with no gain or loss recognized",
+      "C": "At the fair value of the asset given up, with loss recognized but gain deferred",
+      "D": "At the lower of fair value or book value"
+    },
+    "correctAnswer": "B",
+    "explanation": "When an exchange lacks commercial substance and no boot is received, the acquired asset is recorded at the book value of the asset given up. No gain is recognized. Losses, however, must still be recognized if indicated (when fair value is less than book value). This preserves the original cost basis.",
+    "tip": "No commercial substance: record at book value given, no gain. Losses are recognized."
+  },
+  {
+    "id": "far-ppe-021",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Lump-sum purchase allocation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company purchases land and a building together for $600,000. Appraised values are: land $250,000, building $500,000. What amount is allocated to the building?",
+    "options": {
+      "A": "$500,000",
+      "B": "$400,000",
+      "C": "$350,000",
+      "D": "$300,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "In a lump-sum (basket) purchase, allocate based on relative fair values. Total appraised value = $250,000 + $500,000 = $750,000. Building allocation = ($500,000 / $750,000) × $600,000 = 66.67% × $600,000 = $400,000.",
+    "tip": "Basket purchase: allocate based on relative fair/appraised values.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-ppe-022",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Change in depreciation estimate",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A company changes its estimate of an asset's useful life from 10 years to 8 years after using the asset for 4 years. How is this change accounted for?",
+    "options": {
+      "A": "Retrospectively, restating prior periods",
+      "B": "Prospectively, adjusting depreciation for current and future periods",
+      "C": "As a cumulative effect adjustment to retained earnings",
+      "D": "As an extraordinary item"
+    },
+    "correctAnswer": "B",
+    "explanation": "Changes in accounting estimates (useful life, salvage value, depreciation method) are accounted for prospectively. The remaining depreciable amount is allocated over the revised remaining useful life. No restatement of prior periods is required. The new estimate is applied to current and future periods.",
+    "tip": "Estimate changes = prospective treatment (adjust current and future periods)."
+  },
+  {
+    "id": "far-ppe-023",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Capitalization vs expense",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following costs should be expensed as incurred EXCEPT:",
+    "options": {
+      "A": "Repairs that maintain the asset in normal operating condition",
+      "B": "Routine maintenance costs",
+      "C": "Costs to install a new component that extends the asset's useful life",
+      "D": "Minor parts replacement"
+    },
+    "correctAnswer": "C",
+    "explanation": "Costs that extend an asset's useful life, increase its capacity, or improve its efficiency should be capitalized. Routine repairs, maintenance, and minor parts replacement are expensed because they merely maintain the asset's current operating capability without extending its life or improving it.",
+    "tip": "Capitalize: extends life or improves asset. Expense: maintains current condition."
+  },
+  {
+    "id": "far-ppe-024",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Gain/loss on disposal",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Equipment with a cost of $40,000 and accumulated depreciation of $32,000 is sold for $10,000. What is the gain or loss on disposal?",
+    "options": {
+      "A": "$2,000 gain",
+      "B": "$2,000 loss",
+      "C": "$10,000 gain",
+      "D": "$30,000 loss"
+    },
+    "correctAnswer": "A",
+    "explanation": "Book value = Cost − Accumulated depreciation = $40,000 − $32,000 = $8,000. Sales proceeds = $10,000. Gain = Sales proceeds − Book value = $10,000 − $8,000 = $2,000 gain.",
+    "tip": "Gain/loss = Proceeds − Book value (Cost − Accum. depreciation).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-ppe-025",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Impairment of Long-Lived Assets",
+    "conceptTested": "Asset grouping for impairment",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "For impairment testing under ASC 360, long-lived assets should be grouped at:",
+    "options": {
+      "A": "The individual asset level only",
+      "B": "The reporting unit level",
+      "C": "The lowest level at which identifiable cash flows are largely independent of other assets",
+      "D": "The entity level"
+    },
+    "correctAnswer": "C",
+    "explanation": "Long-lived assets are grouped for impairment testing at the lowest level at which there are identifiable cash flows that are largely independent of other asset groups. This is often an asset group used together to generate cash flows. This differs from goodwill, which is tested at the reporting unit level.",
+    "tip": "Group assets at lowest level with independent cash flows."
+  },
+  {
+    "id": "far-ppe-026",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Asset Retirement Obligations",
+    "conceptTested": "ARO revision",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When the estimated future cost of an asset retirement obligation increases, the adjustment is:",
+    "options": {
+      "A": "Recognized as a loss in the current period",
+      "B": "Added to the carrying amount of the related asset and liability, using the current credit-adjusted risk-free rate",
+      "C": "Recorded only when the obligation is settled",
+      "D": "Added to the liability using the original discount rate"
+    },
+    "correctAnswer": "B",
+    "explanation": "Upward revisions to ARO estimates increase both the liability and the related asset. The increase is measured using the current credit-adjusted risk-free rate at the revision date (different from the original rate). Downward revisions are recorded using the original weighted average rate for the layers being reduced.",
+    "tip": "ARO increases: use current rate. ARO decreases: use original rate."
+  },
+  {
+    "id": "far-ppe-027",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Government grants for PP&E",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, a government grant received to subsidize the purchase of equipment should be:",
+    "options": {
+      "A": "Recognized as revenue immediately",
+      "B": "Either deducted from the asset cost or recognized as deferred revenue and amortized over the asset's life",
+      "C": "Recorded as a direct increase to equity",
+      "D": "Recognized only when conditions are met, then recorded as other income"
+    },
+    "correctAnswer": "B",
+    "explanation": "US GAAP (ASC 958/IAS 20 by analogy) permits two methods for government grants related to assets: (1) reduce the carrying amount of the asset (net method), or (2) record deferred revenue and recognize it systematically over the asset's useful life. Both methods result in the same net income over the asset's life.",
+    "tip": "Asset grants: reduce asset cost OR defer and amortize over asset life."
+  },
+  {
+    "id": "far-ppe-028",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Nonmonetary Exchanges",
+    "conceptTested": "Boot received in exchange",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "In an exchange lacking commercial substance, Company X gives up equipment (book value $40,000, fair value $50,000) and receives equipment worth $42,000 plus $8,000 cash. What is the gain recognized?",
+    "options": {
+      "A": "$10,000",
+      "B": "$1,600",
+      "C": "$0",
+      "D": "$8,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "When boot is received in an exchange lacking commercial substance, recognize gain proportional to boot received. Total gain = FV given − BV given = $50,000 − $40,000 = $10,000. Boot proportion = $8,000 / $50,000 = 16%. Recognized gain = $10,000 × 16% = $1,600.",
+    "tip": "Boot received without commercial substance: recognize gain × (boot / total FV received).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-ppe-029",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Depreciation Methods",
+    "conceptTested": "Composite vs group depreciation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the composite depreciation method, when an individual asset is disposed of:",
+    "options": {
+      "A": "A gain or loss is recognized based on the individual asset's book value",
+      "B": "No gain or loss is recognized; the difference is absorbed in accumulated depreciation",
+      "C": "A loss is recognized but gains are deferred",
+      "D": "The composite rate must be recalculated"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under composite (or group) depreciation, individual assets are grouped and depreciated using a weighted average rate. When an individual asset is disposed of, no gain or loss is recognized. Cash proceeds are credited, the asset is removed at cost, and the difference goes to accumulated depreciation. Gains and losses average out over time.",
+    "tip": "Composite method: no individual gains/losses. Difference hits accumulated depreciation."
+  },
+  {
+    "id": "far-ppe-030",
+    "section": "FAR",
+    "topic": "Property, Plant & Equipment",
+    "subtopic": "Initial Measurement & Capitalization",
+    "conceptTested": "Donated assets",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a company receives property as a donation, at what value should the asset be recorded?",
+    "options": {
+      "A": "The donor's book value",
+      "B": "Fair value at the date of donation",
+      "C": "Zero, since no cost was incurred",
+      "D": "Appraised value at acquisition less estimated depreciation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Donated assets are recorded at fair value on the date of donation. A corresponding credit is recorded as contribution revenue (for-profit entities) or contribution revenue with or without donor restrictions (not-for-profits). The fair value becomes the depreciable basis of the asset.",
+    "tip": "Donated assets = fair value at donation date."
+  }
+]

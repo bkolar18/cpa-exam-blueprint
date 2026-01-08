@@ -2,7 +2,7 @@ import SectionPage from "@/components/SectionPage";
 
 export const metadata = {
   title: "TCP Section Guide | CPA Exam Blueprint",
-  description: "Master the TCP (Tax Compliance & Planning) section of the CPA exam with expert strategies and study advice from licensed CPAs.",
+  description: "Master the TCP (Tax Compliance & Planning) section of the CPA exam with study strategies, key topics, and practical tips.",
 };
 
 export default function TCPPage() {

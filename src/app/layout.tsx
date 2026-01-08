@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CPA Exam Blueprint | Free CPA Study Plans from Licensed CPAs",
-  description: "Get a personalized CPA study plan, section strategies, and real advice from licensed CPAs. Pass the CPA exam faster with expert guidance.",
-  keywords: "CPA exam, CPA study plan, CPA review, FAR, AUD, REG, TCP, pass CPA exam",
+  title: "CPA Exam Blueprint | Affordable CPA Exam Study Aid",
+  description: "Affordable CPA exam prep with 600+ practice questions, study tracking, and personalized study plans. Quality study materials at a fraction of the cost.",
+  keywords: "CPA exam, CPA study plan, CPA practice questions, CPA study aid, affordable CPA prep, FAR, AUD, REG, TCP",
 };
 
 export default function RootLayout({

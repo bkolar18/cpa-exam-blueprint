@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Conceptual Framework and Standards",
+    "batchNumber": 40,
+    "totalQuestions": 30,
+    "dateGenerated": "2025-01-07",
+    "generatedBy": "Claude"
+  },
+  "questions": [
+    {
+      "id": "far-cf-001",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Qualitative Characteristics",
+      "conceptTested": "Fundamental characteristics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The two fundamental qualitative characteristics of useful financial information are:",
+      "options": {
+        "A": "Relevance and faithful representation",
+        "B": "Comparability and timeliness",
+        "C": "Understandability and verifiability",
+        "D": "Materiality and completeness"
+      },
+      "correctAnswer": "A",
+      "explanation": "The fundamental characteristics are relevance (predictive value, confirmatory value, materiality) and faithful representation (completeness, neutrality, free from error).",
+      "tip": "Fundamental: Relevance + Faithful representation. Enhancing: C-T-U-V.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-002",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Qualitative Characteristics",
+      "conceptTested": "Enhancing characteristics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is an enhancing qualitative characteristic?",
+      "options": {
+        "A": "Relevance",
+        "B": "Faithful representation",
+        "C": "Comparability",
+        "D": "Predictive value"
+      },
+      "correctAnswer": "C",
+      "explanation": "Enhancing characteristics are: Comparability, Timeliness, Understandability, and Verifiability. They enhance the usefulness of relevant and faithfully represented information.",
+      "tip": "Enhancing: Comparability, Timeliness, Understandability, Verifiability.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-003",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Recognition",
+      "conceptTested": "Asset definition",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An asset is:",
+      "options": {
+        "A": "Cash and cash equivalents only",
+        "B": "A present right to an economic benefit controlled by the entity",
+        "C": "Any item on the balance sheet with a debit balance",
+        "D": "Anything the company owns"
+      },
+      "correctAnswer": "B",
+      "explanation": "An asset is a present right to an economic benefit that an entity controls as a result of past events. It's based on control, not ownership.",
+      "tip": "Asset = present right to economic benefit, controlled by entity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-004",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Recognition",
+      "conceptTested": "Liability definition",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A liability is:",
+      "options": {
+        "A": "Any amount owed to creditors",
+        "B": "A present obligation to transfer economic benefits",
+        "C": "A future expense",
+        "D": "Only contractual debts"
+      },
+      "correctAnswer": "B",
+      "explanation": "A liability is a present obligation to transfer an economic benefit (payment, goods, services) arising from past events.",
+      "tip": "Liability = present obligation to transfer economic benefit.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-005",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Recognition",
+      "conceptTested": "Revenue recognition criterion",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the conceptual framework, income (including revenue) is recognized when:",
+      "options": {
+        "A": "Cash is received",
+        "B": "An increase in assets or decrease in liabilities results in an increase in equity",
+        "C": "The seller has earned the revenue",
+        "D": "A contract is signed"
+      },
+      "correctAnswer": "B",
+      "explanation": "Income is recognized when there's an increase in assets or decrease in liabilities that increases equity (other than from owners).",
+      "tip": "Income = ↑ assets or ↓ liabilities → ↑ equity (not from owners).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-006",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Measurement",
+      "conceptTested": "Historical cost",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Historical cost is:",
+      "options": {
+        "A": "Current market value",
+        "B": "The amount paid to acquire an asset or received to incur a liability",
+        "C": "Replacement cost",
+        "D": "Present value of future cash flows"
+      },
+      "correctAnswer": "B",
+      "explanation": "Historical cost is the transaction price—the amount paid to acquire an asset or received to assume a liability at the acquisition date.",
+      "tip": "Historical cost = original transaction price.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-cf-007",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Measurement",
+      "conceptTested": "Current value bases",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is a current value measurement basis?",
+      "options": {
+        "A": "Historical cost",
+        "B": "Amortized cost",
+        "C": "Fair value",
+        "D": "Net book value"
+      },
+      "correctAnswer": "C",
+      "explanation": "Current value bases include fair value, value in use, and current cost. Historical cost and amortized cost are based on original transaction price.",
+      "tip": "Current value: fair value, value in use, current cost.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-008",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Objectives",
+      "conceptTested": "Primary objective",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The primary objective of financial reporting is to:",
+      "options": {
+        "A": "Minimize tax liability",
+        "B": "Provide information useful to existing and potential investors, lenders, and creditors for decision-making",
+        "C": "Report the highest possible income",
+        "D": "Comply with SEC regulations"
+      },
+      "correctAnswer": "B",
+      "explanation": "The objective is to provide financial information about the entity that is useful to existing and potential investors, lenders, and other creditors in making decisions.",
+      "tip": "Objective: decision-useful information for capital providers.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-009",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Assumptions",
+      "conceptTested": "Going concern",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The going concern assumption implies that:",
+      "options": {
+        "A": "The entity will liquidate shortly",
+        "B": "The entity will continue operations for the foreseeable future",
+        "C": "The entity is profitable",
+        "D": "All obligations will be paid immediately"
+      },
+      "correctAnswer": "B",
+      "explanation": "Going concern assumes the entity will continue operations for the foreseeable future and will not need to liquidate or curtail operations significantly.",
+      "tip": "Going concern = operations continue indefinitely.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-cf-010",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Constraints",
+      "conceptTested": "Cost constraint",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The cost constraint on financial reporting means:",
+      "options": {
+        "A": "Companies must minimize costs",
+        "B": "The benefits of providing information must justify the costs of providing it",
+        "C": "Inexpensive methods must be used",
+        "D": "Costs must be shown at historical cost"
+      },
+      "correctAnswer": "B",
+      "explanation": "The cost constraint recognizes that providing information has costs, and those costs should be justified by the benefits of the information to users.",
+      "tip": "Cost constraint: benefits must exceed costs of reporting.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-011",
+      "section": "FAR",
+      "topic": "GAAP Hierarchy",
+      "subtopic": "Authority Level",
+      "conceptTested": "GAAP sources",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Authoritative GAAP for nongovernmental entities consists of:",
+      "options": {
+        "A": "FASB ASC only",
+        "B": "FASB ASC and SEC rules for SEC registrants",
+        "C": "Any accounting literature",
+        "D": "Only FASB Statements"
+      },
+      "correctAnswer": "B",
+      "explanation": "GAAP includes the FASB Accounting Standards Codification. For SEC registrants, SEC rules and interpretive releases are also authoritative.",
+      "tip": "GAAP = FASB ASC + SEC rules (for registrants).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-012",
+      "section": "FAR",
+      "topic": "GAAP Hierarchy",
+      "subtopic": "Non-authoritative",
+      "conceptTested": "Using non-authoritative guidance",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When GAAP does not specifically address a transaction, an entity should:",
+      "options": {
+        "A": "Not record the transaction",
+        "B": "Consider similar guidance within GAAP, then non-authoritative literature",
+        "C": "Use management's best judgment without research",
+        "D": "Request a private ruling from FASB"
+      },
+      "correctAnswer": "B",
+      "explanation": "When GAAP doesn't address an issue, consider similar authoritative GAAP guidance, then non-authoritative sources (textbooks, articles) that don't conflict with GAAP.",
+      "tip": "No specific GAAP: use similar guidance, then non-authoritative sources.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-013",
+      "section": "FAR",
+      "topic": "Accounting Principles",
+      "subtopic": "Accrual Basis",
+      "conceptTested": "Accrual vs cash",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under accrual accounting, revenue is recognized when:",
+      "options": {
+        "A": "Cash is received",
+        "B": "Performance obligations are satisfied",
+        "C": "An invoice is issued",
+        "D": "A deposit is received"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accrual accounting recognizes revenue when earned (performance obligations satisfied), regardless of when cash is received.",
+      "tip": "Accrual: recognize when earned, not when cash received.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-cf-014",
+      "section": "FAR",
+      "topic": "Accounting Principles",
+      "subtopic": "Matching",
+      "conceptTested": "Expense recognition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The matching principle requires:",
+      "options": {
+        "A": "Matching debits with credits",
+        "B": "Recognizing expenses in the same period as the related revenue",
+        "C": "Matching assets with liabilities",
+        "D": "Using the same accounting method each year"
+      },
+      "correctAnswer": "B",
+      "explanation": "The matching principle requires recognizing expenses in the same period as the revenues they helped generate.",
+      "tip": "Matching: expenses recognized with related revenue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-cf-015",
+      "section": "FAR",
+      "topic": "Accounting Principles",
+      "subtopic": "Materiality",
+      "conceptTested": "Materiality threshold",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Information is material if:",
+      "options": {
+        "A": "It exceeds 5% of net income",
+        "B": "Omitting or misstating it could influence decisions of primary users",
+        "C": "It is over $1 million",
+        "D": "Management considers it important"
+      },
+      "correctAnswer": "B",
+      "explanation": "Materiality is based on whether the information could influence decisions of users. There is no single threshold; it's entity and context-specific.",
+      "tip": "Material = could influence user decisions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-016",
+      "section": "FAR",
+      "topic": "Accounting Principles",
+      "subtopic": "Conservatism",
+      "conceptTested": "Prudence",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The concept of conservatism (prudence) suggests:",
+      "options": {
+        "A": "Always record the lowest possible income",
+        "B": "Exercise caution when making judgments under uncertainty without creating hidden reserves",
+        "C": "Understate assets and overstate liabilities",
+        "D": "Recognize losses immediately but defer gains indefinitely"
+      },
+      "correctAnswer": "B",
+      "explanation": "Prudence is exercising caution in uncertain situations but not to the extent of biasing information. It's not about deliberately understating income.",
+      "tip": "Prudence = caution, but not bias.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-017",
+      "section": "FAR",
+      "topic": "Accounting Principles",
+      "subtopic": "Substance over Form",
+      "conceptTested": "Economic reality",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Substance over form means:",
+      "options": {
+        "A": "Legal form always determines accounting treatment",
+        "B": "Transactions are recorded based on economic substance, not just legal form",
+        "C": "Contracts must be in writing to be recorded",
+        "D": "Only cash transactions are recorded"
+      },
+      "correctAnswer": "B",
+      "explanation": "Substance over form requires accounting to reflect economic reality, not just the legal form. Leases classified as finance leases despite legal title remaining with lessor are an example.",
+      "tip": "Substance over form: economic reality > legal structure.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-018",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Elements",
+      "conceptTested": "Equity definition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Equity is defined as:",
+      "options": {
+        "A": "Common stock only",
+        "B": "The residual interest in assets after deducting liabilities",
+        "C": "Retained earnings",
+        "D": "Cash contributed by owners"
+      },
+      "correctAnswer": "B",
+      "explanation": "Equity is the residual interest—assets minus liabilities. It includes common stock, APIC, retained earnings, AOCI, and treasury stock.",
+      "tip": "Equity = Assets - Liabilities (residual interest).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-cf-019",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Elements",
+      "conceptTested": "Gains and losses",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Gains differ from revenues in that gains:",
+      "options": {
+        "A": "Are always material",
+        "B": "Arise from peripheral or incidental transactions",
+        "C": "Are recognized only when cash is received",
+        "D": "Increase liabilities"
+      },
+      "correctAnswer": "B",
+      "explanation": "Gains arise from peripheral or incidental activities (like selling equipment), while revenues arise from the entity's core operating activities.",
+      "tip": "Gains = peripheral/incidental; Revenues = core operations.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-020",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Faithful Representation",
+      "conceptTested": "Components",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Faithful representation requires information to be:",
+      "options": {
+        "A": "Timely and comparable",
+        "B": "Complete, neutral, and free from error",
+        "C": "Relevant and material",
+        "D": "Verified by external auditors"
+      },
+      "correctAnswer": "B",
+      "explanation": "Faithful representation means information is complete, neutral (unbiased), and free from error. Errors include mistakes in description or process.",
+      "tip": "Faithful representation: complete + neutral + free from error.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-021",
+      "section": "FAR",
+      "topic": "Accounting Changes",
+      "subtopic": "Change in Estimate",
+      "conceptTested": "Treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A change in accounting estimate is accounted for:",
+      "options": {
+        "A": "Retrospectively",
+        "B": "Prospectively from the date of change",
+        "C": "As an error correction",
+        "D": "Directly to retained earnings"
+      },
+      "correctAnswer": "B",
+      "explanation": "Changes in estimates (useful life, salvage value, bad debt percentage) are applied prospectively—affecting current and future periods only.",
+      "tip": "Estimate change = prospective only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-022",
+      "section": "FAR",
+      "topic": "Accounting Changes",
+      "subtopic": "Change in Principle",
+      "conceptTested": "Treatment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A change in accounting principle (e.g., from FIFO to weighted average) is generally accounted for:",
+      "options": {
+        "A": "Prospectively only",
+        "B": "Retrospectively with restatement of prior periods",
+        "C": "As a cumulative effect in the current year",
+        "D": "Only if mandated by FASB"
+      },
+      "correctAnswer": "B",
+      "explanation": "Changes in accounting principle are applied retrospectively with comparative periods restated (unless impracticable or a specific ASU says otherwise).",
+      "tip": "Principle change = retrospective; Estimate = prospective.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-cf-023",
+      "section": "FAR",
+      "topic": "Accounting Changes",
+      "subtopic": "Error Correction",
+      "conceptTested": "Treatment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Prior period errors are corrected by:",
+      "options": {
+        "A": "Adjusting current period income",
+        "B": "Restating prior period financial statements and adjusting beginning retained earnings",
+        "C": "Disclosing the error in notes only",
+        "D": "Ignoring if immaterial"
+      },
+      "correctAnswer": "B",
+      "explanation": "Prior period errors require retrospective restatement—correcting the prior periods presented and adjusting beginning retained earnings for the earliest period shown.",
+      "tip": "Error correction = restate prior periods + adjust opening RE.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-cf-024",
+      "section": "FAR",
+      "topic": "Fair Value",
+      "subtopic": "Definition",
+      "conceptTested": "Exit price",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fair value under ASC 820 is:",
+      "options": {
+        "A": "The price paid to acquire an asset",
+        "B": "The price to sell an asset or transfer a liability in an orderly transaction between market participants",
+        "C": "Replacement cost",
+        "D": "Historical cost adjusted for inflation"
+      },
+      "correctAnswer": "B",
+      "explanation": "Fair value is an exit price—the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction between market participants.",
+      "tip": "Fair value = exit price (sell asset / transfer liability).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-025",
+      "section": "FAR",
+      "topic": "Fair Value",
+      "subtopic": "Hierarchy",
+      "conceptTested": "Level 1 inputs",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Level 1 inputs in the fair value hierarchy are:",
+      "options": {
+        "A": "Management estimates",
+        "B": "Quoted prices in active markets for identical assets or liabilities",
+        "C": "Observable inputs other than Level 1",
+        "D": "Discounted cash flow projections"
+      },
+      "correctAnswer": "B",
+      "explanation": "Level 1 inputs are quoted prices (unadjusted) in active markets for identical assets or liabilities. They provide the most reliable fair value measurements.",
+      "tip": "Level 1 = quoted prices, active markets, identical items.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-026",
+      "section": "FAR",
+      "topic": "Fair Value",
+      "subtopic": "Hierarchy",
+      "conceptTested": "Level 3 inputs",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Level 3 inputs are characterized by:",
+      "options": {
+        "A": "Quoted prices in active markets",
+        "B": "Observable inputs like comparable transactions",
+        "C": "Unobservable inputs based on entity's own assumptions",
+        "D": "Government-published rates"
+      },
+      "correctAnswer": "C",
+      "explanation": "Level 3 inputs are unobservable and based on the entity's own assumptions about market participant assumptions, used when observable inputs aren't available.",
+      "tip": "Level 3 = unobservable, management assumptions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-027",
+      "section": "FAR",
+      "topic": "Fair Value",
+      "subtopic": "Principal Market",
+      "conceptTested": "Market selection",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Fair value should be measured using prices in:",
+      "options": {
+        "A": "The market with the highest price",
+        "B": "The principal market, or most advantageous market if no principal market",
+        "C": "The most convenient market",
+        "D": "Any market the entity chooses"
+      },
+      "correctAnswer": "B",
+      "explanation": "Fair value is based on the principal market (greatest volume and activity). If no principal market, use the most advantageous market (highest net price after costs).",
+      "tip": "Principal market first; if none, most advantageous.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-cf-028",
+      "section": "FAR",
+      "topic": "Disclosure",
+      "subtopic": "Fair Value Disclosure",
+      "conceptTested": "Required disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fair value disclosures must include:",
+      "options": {
+        "A": "Only total fair value amounts",
+        "B": "The fair value hierarchy level for each measurement",
+        "C": "Only Level 1 measurements",
+        "D": "Only changes in fair value"
+      },
+      "correctAnswer": "B",
+      "explanation": "Disclosures include the hierarchy level for each recurring and nonrecurring fair value measurement, along with valuation techniques and inputs used.",
+      "tip": "Disclose FV hierarchy level + valuation technique.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-cf-029",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Entity Assumption",
+      "conceptTested": "Reporting entity",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The entity assumption means:",
+      "options": {
+        "A": "All entities use the same accounting policies",
+        "B": "The entity is separate and distinct from its owners for accounting purposes",
+        "C": "The entity and its owners are treated as one",
+        "D": "Only corporations are reporting entities"
+      },
+      "correctAnswer": "B",
+      "explanation": "The entity assumption treats the business as separate from its owners, allowing separate financial statements for the business entity.",
+      "tip": "Entity assumption: business separate from owners.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-cf-030",
+      "section": "FAR",
+      "topic": "Conceptual Framework",
+      "subtopic": "Period Assumption",
+      "conceptTested": "Artificial time periods",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The periodicity assumption:",
+      "options": {
+        "A": "Requires reporting at the end of the entity's life only",
+        "B": "Divides the entity's life into artificial time periods for reporting",
+        "C": "Requires quarterly reporting only",
+        "D": "Applies only to public companies"
+      },
+      "correctAnswer": "B",
+      "explanation": "Periodicity assumes the entity's life can be divided into artificial time periods (years, quarters) for financial reporting purposes.",
+      "tip": "Periodicity: divide infinite life into reporting periods.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    }
+  ]
+}

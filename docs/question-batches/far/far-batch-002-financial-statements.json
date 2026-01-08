@@ -1,0 +1,776 @@
+[
+  {
+    "id": "far-fs-001",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Current vs noncurrent classification",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, a liability is generally classified as current if it is expected to be settled within:",
+    "options": {
+      "A": "6 months from the balance sheet date",
+      "B": "One year from the balance sheet date or the operating cycle, whichever is longer",
+      "C": "90 days from the balance sheet date",
+      "D": "The next fiscal quarter"
+    },
+    "correctAnswer": "B",
+    "explanation": "Current liabilities are obligations expected to be settled within one year of the balance sheet date or within the operating cycle, whichever is longer. If the operating cycle exceeds one year (as in some industries like construction or winemaking), that longer period is used for classification purposes.",
+    "tip": "Current = within 1 year or operating cycle, whichever is LONGER."
+  },
+  {
+    "id": "far-fs-002",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Working capital calculation",
+    "difficulty": "easy",
+    "questionFormat": "calculation",
+    "question": "A company has current assets of $450,000 and current liabilities of $180,000. What is the company's working capital?",
+    "options": {
+      "A": "$180,000",
+      "B": "$270,000",
+      "C": "$630,000",
+      "D": "$450,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Working capital is calculated as current assets minus current liabilities. Working capital = $450,000 - $180,000 = $270,000. This represents the net amount of liquid resources available to meet short-term obligations.",
+    "tip": "Working capital = Current assets − Current liabilities.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-fs-003",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Prepaid expenses classification",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "A company pays $24,000 on January 1, Year 1, for a 2-year insurance policy. How should this be classified on the December 31, Year 1 balance sheet?",
+    "options": {
+      "A": "$24,000 as a current asset",
+      "B": "$12,000 as a current asset and $12,000 as a noncurrent asset",
+      "C": "$24,000 as a noncurrent asset",
+      "D": "$12,000 as a current asset only"
+    },
+    "correctAnswer": "D",
+    "explanation": "At December 31, Year 1, one year of coverage ($12,000) has been used and expensed. The remaining prepaid amount is $12,000 for Year 2 only. Since the entire remaining coverage period (Year 2) falls within the next 12 months from the balance sheet date, the entire $12,000 is classified as a current asset.",
+    "tip": "Prepaid expenses are current if they will be consumed within 12 months of the balance sheet date."
+  },
+  {
+    "id": "far-fs-004",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Current portion of long-term debt",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "Carson Company has a $500,000 note payable due in 5 years, with annual principal payments of $100,000 required each year. How should this be classified on the balance sheet?",
+    "options": {
+      "A": "$500,000 as long-term debt",
+      "B": "$100,000 as current liability and $400,000 as long-term debt",
+      "C": "$500,000 as current liability",
+      "D": "$200,000 as current liability and $300,000 as long-term debt"
+    },
+    "correctAnswer": "B",
+    "explanation": "The portion of long-term debt that is due within one year must be classified as a current liability (current portion of long-term debt). The annual payment of $100,000 due within the next year is current, while the remaining $400,000 due beyond one year is long-term.",
+    "tip": "Always reclassify the portion of debt due within 12 months as current."
+  },
+  {
+    "id": "far-fs-005",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Refinancing short-term debt exception",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Parker Inc. has a $1,000,000 note payable due on March 1, Year 2. On February 15, Year 2 (before the Year 1 financial statements are issued), Parker refinances the note with a new 5-year loan. How should Parker classify the debt on its December 31, Year 1 balance sheet?",
+    "options": {
+      "A": "$1,000,000 as current liability because it was due within one year of the balance sheet date",
+      "B": "$1,000,000 as long-term liability because it was refinanced before the financial statements were issued",
+      "C": "$500,000 as current and $500,000 as long-term",
+      "D": "The debt should be derecognized entirely"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under ASC 470-10, a short-term obligation can be classified as long-term if the entity intends to refinance on a long-term basis AND demonstrates the ability to do so. The ability can be demonstrated by actually refinancing before the financial statements are issued or by entering into a financing agreement. Since Parker refinanced before issuing financial statements, the debt can be classified as long-term.",
+    "tip": "Short-term debt can be long-term if refinanced (or agreement in place) before FS issuance."
+  },
+  {
+    "id": "far-fs-006",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Income Statement Presentation",
+    "conceptTested": "Single-step vs multi-step income statement",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Which of the following is a characteristic of a multi-step income statement that distinguishes it from a single-step income statement?",
+    "options": {
+      "A": "It reports comprehensive income",
+      "B": "It separately reports gross profit",
+      "C": "It presents revenues before expenses",
+      "D": "It shows earnings per share"
+    },
+    "correctAnswer": "B",
+    "explanation": "A multi-step income statement separates operating revenues and expenses from non-operating items and presents intermediate subtotals like gross profit (revenues minus cost of goods sold) and operating income. A single-step statement simply groups all revenues together and all expenses together without these intermediate subtotals.",
+    "tip": "Multi-step = shows gross profit and operating income subtotals."
+  },
+  {
+    "id": "far-fs-007",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Income Statement Presentation",
+    "conceptTested": "Gross profit calculation",
+    "difficulty": "easy",
+    "questionFormat": "calculation",
+    "question": "A retailer has net sales of $800,000 and cost of goods sold of $520,000. What is the gross profit margin?",
+    "options": {
+      "A": "35%",
+      "B": "65%",
+      "C": "45%",
+      "D": "54%"
+    },
+    "correctAnswer": "A",
+    "explanation": "Gross profit = Net sales − Cost of goods sold = $800,000 − $520,000 = $280,000. Gross profit margin = Gross profit ÷ Net sales = $280,000 ÷ $800,000 = 35%. This measures the percentage of revenue retained after direct costs.",
+    "tip": "Gross profit margin = (Sales − COGS) ÷ Sales.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-fs-008",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Income Statement Presentation",
+    "conceptTested": "Discontinued operations presentation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 205-20, how should the results of discontinued operations be presented on the income statement?",
+    "options": {
+      "A": "Included in operating expenses",
+      "B": "Reported as a separate component below income from continuing operations, net of tax",
+      "C": "Reported as an adjustment to beginning retained earnings",
+      "D": "Included in other comprehensive income"
+    },
+    "correctAnswer": "B",
+    "explanation": "Discontinued operations are reported as a separate component of income, presented below income from continuing operations and shown net of applicable income taxes. This presentation allows users to distinguish between results that will continue and those that will not. Discontinued operations are never reported in OCI or as retained earnings adjustments.",
+    "tip": "Discontinued operations = separate line, net of tax, below continuing operations."
+  },
+  {
+    "id": "far-fs-009",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Income Statement Presentation",
+    "conceptTested": "Unusual or infrequent items",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under current US GAAP, how should gains or losses that are unusual in nature OR infrequently occurring be presented?",
+    "options": {
+      "A": "As extraordinary items, net of tax",
+      "B": "As a separate line item within income from continuing operations",
+      "C": "In other comprehensive income",
+      "D": "As an adjustment to retained earnings"
+    },
+    "correctAnswer": "B",
+    "explanation": "Following ASU 2015-01, extraordinary items are no longer permitted in US GAAP. Items that are unusual or infrequent are presented as a separate line item within income from continuing operations or disclosed in the notes. They are no longer shown net of tax as a separate category.",
+    "tip": "No more extraordinary items in GAAP—unusual/infrequent items stay in continuing operations."
+  },
+  {
+    "id": "far-fs-010",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Classification of operating activities",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Which of the following is classified as an operating activity in the statement of cash flows?",
+    "options": {
+      "A": "Proceeds from issuing common stock",
+      "B": "Payment to acquire equipment",
+      "C": "Cash received from customers",
+      "D": "Repayment of long-term debt"
+    },
+    "correctAnswer": "C",
+    "explanation": "Operating activities include cash flows from the principal revenue-producing activities of the entity. Cash received from customers is a core operating activity. Issuing stock and repaying debt are financing activities, while acquiring equipment is an investing activity.",
+    "tip": "Operating = cash from main business operations (customers, suppliers, employees)."
+  },
+  {
+    "id": "far-fs-011",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Classification of investing activities",
+    "difficulty": "easy",
+    "questionFormat": "except",
+    "question": "All of the following are investing activities EXCEPT:",
+    "options": {
+      "A": "Purchase of held-to-maturity securities",
+      "B": "Proceeds from sale of equipment",
+      "C": "Cash paid for dividends to shareholders",
+      "D": "Loans made to other entities"
+    },
+    "correctAnswer": "C",
+    "explanation": "Cash paid for dividends to shareholders is a financing activity, not investing. Investing activities involve acquiring and disposing of long-term assets and investments. The purchase and sale of securities (other than trading), purchase and sale of equipment, and making loans to others are all investing activities.",
+    "tip": "Dividends paid = financing activity (transactions with owners)."
+  },
+  {
+    "id": "far-fs-012",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Direct vs indirect method",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "What is the primary difference between the direct and indirect methods of presenting operating cash flows?",
+    "options": {
+      "A": "The direct method results in a different total cash from operations",
+      "B": "The indirect method shows major classes of gross cash receipts and payments",
+      "C": "The direct method shows major classes of gross operating cash receipts and payments, while the indirect method reconciles net income to operating cash flows",
+      "D": "Only the direct method is permitted under US GAAP"
+    },
+    "correctAnswer": "C",
+    "explanation": "The direct method presents major classes of gross operating cash receipts and payments (cash from customers, cash paid to suppliers, etc.). The indirect method starts with net income and adjusts for non-cash items and changes in operating assets and liabilities. Both methods arrive at the same total operating cash flows and both are permitted under US GAAP.",
+    "tip": "Direct = show actual cash flows. Indirect = reconcile from net income."
+  },
+  {
+    "id": "far-fs-013",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Indirect method adjustment for depreciation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When using the indirect method to prepare the operating section of the statement of cash flows, why is depreciation expense added back to net income?",
+    "options": {
+      "A": "Because depreciation represents a source of cash",
+      "B": "Because depreciation reduced net income but did not require a cash outflow",
+      "C": "Because depreciation must be shown separately as an investing activity",
+      "D": "Because depreciation increases the value of assets"
+    },
+    "correctAnswer": "B",
+    "explanation": "Depreciation is a non-cash expense that reduced net income but did not result in a cash outflow during the period. Since we start with net income (which was reduced by depreciation), we add depreciation back to arrive at cash from operations. This does not mean depreciation is a source of cash—it simply reverses the non-cash deduction.",
+    "tip": "Depreciation add-back reverses the non-cash expense, not a cash source."
+  },
+  {
+    "id": "far-fs-014",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Indirect method—changes in current assets",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Using the indirect method, an increase in accounts receivable during the period is:",
+    "options": {
+      "A": "Added to net income",
+      "B": "Subtracted from net income",
+      "C": "Reported as an investing activity",
+      "D": "Not included in the cash flow statement"
+    },
+    "correctAnswer": "B",
+    "explanation": "An increase in accounts receivable means revenue was recognized (increasing net income) but cash was not collected. To adjust net income to cash from operations, the increase in receivables must be subtracted. Generally, increases in operating assets are subtracted and decreases are added when using the indirect method.",
+    "tip": "Increase in operating assets (like A/R) = subtract from net income."
+  },
+  {
+    "id": "far-fs-015",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Indirect method—changes in current liabilities",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Using the indirect method, a decrease in accounts payable during the period is:",
+    "options": {
+      "A": "Added to net income",
+      "B": "Subtracted from net income",
+      "C": "Reported as a financing activity",
+      "D": "Ignored because it is a non-cash item"
+    },
+    "correctAnswer": "B",
+    "explanation": "A decrease in accounts payable means cash was paid to settle liabilities beyond what was recognized as expense (reducing the payable balance). This represents a cash outflow not reflected in net income, so it must be subtracted. Generally, decreases in operating liabilities are subtracted and increases are added.",
+    "tip": "Decrease in operating liabilities (like A/P) = subtract from net income."
+  },
+  {
+    "id": "far-fs-016",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Interest and dividends classification",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, how are interest paid and dividends received classified in the statement of cash flows?",
+    "options": {
+      "A": "Both are financing activities",
+      "B": "Interest paid is financing; dividends received is investing",
+      "C": "Both are operating activities",
+      "D": "Interest paid is operating; dividends received is financing"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under US GAAP, interest paid, interest received, and dividends received are all classified as operating activities. This differs from IFRS, which allows more flexibility. Dividends paid (to shareholders) is a financing activity. The rationale is that interest and dividends received affect net income and thus are operational.",
+    "tip": "US GAAP: Interest (paid/received) and dividends received = operating. Dividends paid = financing."
+  },
+  {
+    "id": "far-fs-017",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Calculating cash from operations—indirect method",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "Miller Corp. had net income of $200,000. During the year: depreciation expense was $30,000, accounts receivable increased by $15,000, inventory decreased by $10,000, and accounts payable decreased by $5,000. What is cash from operating activities?",
+    "options": {
+      "A": "$220,000",
+      "B": "$230,000",
+      "C": "$200,000",
+      "D": "$180,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Start with net income: $200,000. Add depreciation (non-cash): +$30,000. Subtract increase in A/R (cash not collected): -$15,000. Add decrease in inventory (cash conserved): +$10,000. Subtract decrease in A/P (cash paid out): -$5,000. Cash from operations = $200,000 + $30,000 - $15,000 + $10,000 - $5,000 = $220,000.",
+    "tip": "Add non-cash expenses and decreases in assets; subtract increases in assets and decreases in liabilities.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-fs-018",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Non-cash investing and financing activities",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A company acquires equipment by issuing common stock. How should this transaction be reported?",
+    "options": {
+      "A": "As both an investing inflow and financing outflow",
+      "B": "As an investing outflow only",
+      "C": "It should not appear in the statement of cash flows but must be disclosed in a supplemental schedule",
+      "D": "As a financing inflow only"
+    },
+    "correctAnswer": "C",
+    "explanation": "Significant non-cash investing and financing activities must be disclosed but are not reported in the body of the statement of cash flows because no cash was involved. Common examples include acquiring assets by issuing stock or debt, converting debt to equity, and asset exchanges. These are reported in a supplemental schedule or notes.",
+    "tip": "Non-cash transactions = supplemental disclosure, not in the cash flow statement body."
+  },
+  {
+    "id": "far-fs-019",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Gain on sale adjustment—indirect method",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Harris Inc. sold equipment with a book value of $40,000 for $55,000 cash, recognizing a $15,000 gain. Using the indirect method, how does this transaction affect the operating section?",
+    "options": {
+      "A": "Add $15,000 to net income",
+      "B": "Subtract $15,000 from net income",
+      "C": "Add $55,000 to net income",
+      "D": "No adjustment is needed in the operating section"
+    },
+    "correctAnswer": "B",
+    "explanation": "The $15,000 gain increased net income but is not an operating cash flow—it results from an investing activity (selling equipment). The $55,000 proceeds are reported in the investing section. To avoid double-counting, the gain must be subtracted from net income in the operating section. The investing section will show the full $55,000 cash inflow.",
+    "tip": "Subtract gains on asset sales from net income (they're investing, not operating)."
+  },
+  {
+    "id": "far-fs-020",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Comprehensive Income",
+    "conceptTested": "Components of other comprehensive income",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are typically reported in other comprehensive income (OCI) EXCEPT:",
+    "options": {
+      "A": "Unrealized gains on available-for-sale debt securities",
+      "B": "Foreign currency translation adjustments",
+      "C": "Unrealized gains on trading securities",
+      "D": "Certain pension adjustments"
+    },
+    "correctAnswer": "C",
+    "explanation": "Unrealized gains and losses on trading securities are recognized directly in net income, not OCI. Common OCI items include: unrealized gains/losses on AFS debt securities, foreign currency translation adjustments, certain pension adjustments (actuarial gains/losses, prior service costs), and cash flow hedge gains/losses.",
+    "tip": "Trading securities = net income. AFS debt securities = OCI."
+  },
+  {
+    "id": "far-fs-021",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Comprehensive Income",
+    "conceptTested": "Comprehensive income presentation options",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, which of the following is a permitted format for reporting comprehensive income?",
+    "options": {
+      "A": "Only in the statement of changes in stockholders' equity",
+      "B": "In a single continuous statement or in two separate consecutive statements",
+      "C": "Only in the notes to the financial statements",
+      "D": "Combined with the statement of cash flows"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under ASC 220, comprehensive income may be presented in: (1) a single continuous statement of comprehensive income, or (2) two separate but consecutive statements (an income statement followed by a statement of comprehensive income). It may not be presented only in stockholders' equity or notes.",
+    "tip": "Comprehensive income: one statement or two consecutive statements."
+  },
+  {
+    "id": "far-fs-022",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Comprehensive Income",
+    "conceptTested": "Reclassification adjustments",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Porter Co. sold an available-for-sale debt security that had accumulated unrealized gains of $12,000 in OCI. Upon sale, the realized gain is recognized in net income. What reclassification adjustment is required?",
+    "options": {
+      "A": "Increase OCI by $12,000",
+      "B": "Decrease OCI by $12,000",
+      "C": "No reclassification is needed",
+      "D": "Decrease retained earnings by $12,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "When a gain previously recognized in OCI is realized (through sale), a reclassification adjustment removes the gain from accumulated OCI and recognizes it in net income. This prevents the gain from being counted twice in comprehensive income (once when unrealized, once when realized). OCI decreases by $12,000.",
+    "tip": "Reclassification moves realized amounts from OCI to net income."
+  },
+  {
+    "id": "far-fs-023",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Stockholders Equity",
+    "conceptTested": "Components of stockholders' equity statement",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Which of the following is typically included as a column in the statement of stockholders' equity?",
+    "options": {
+      "A": "Cash and cash equivalents",
+      "B": "Accumulated other comprehensive income",
+      "C": "Accounts receivable",
+      "D": "Long-term debt"
+    },
+    "correctAnswer": "B",
+    "explanation": "The statement of stockholders' equity shows changes in all equity accounts, typically including: common stock, additional paid-in capital, retained earnings, accumulated other comprehensive income (AOCI), and treasury stock. Cash, receivables, and debt are balance sheet items, not equity components.",
+    "tip": "Stockholders' equity statement columns = equity accounts only."
+  },
+  {
+    "id": "far-fs-024",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Stockholders Equity",
+    "conceptTested": "Retained earnings changes",
+    "difficulty": "easy",
+    "questionFormat": "calculation",
+    "question": "Beginning retained earnings is $500,000. Net income is $120,000, and dividends declared are $30,000. What is ending retained earnings?",
+    "options": {
+      "A": "$590,000",
+      "B": "$620,000",
+      "C": "$470,000",
+      "D": "$650,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Ending retained earnings = Beginning RE + Net income − Dividends declared. Ending RE = $500,000 + $120,000 − $30,000 = $590,000. Retained earnings increases with net income and decreases with dividends declared (and certain other items like some prior period adjustments).",
+    "tip": "RE ending = RE beginning + Net income − Dividends.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-fs-025",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Stockholders Equity",
+    "conceptTested": "Prior period adjustments",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Where is the effect of a prior period adjustment resulting from the correction of an error reported?",
+    "options": {
+      "A": "In the current period's income statement",
+      "B": "As an adjustment to the beginning balance of retained earnings",
+      "C": "In other comprehensive income",
+      "D": "In the investing section of the cash flow statement"
+    },
+    "correctAnswer": "B",
+    "explanation": "The correction of an error in previously issued financial statements is reported as a prior period adjustment. It is presented as an adjustment to the opening balance of retained earnings (or other affected equity accounts) in the statement of stockholders' equity, with restatement of comparative prior period statements.",
+    "tip": "Error corrections = prior period adjustment to beginning retained earnings."
+  },
+  {
+    "id": "far-fs-026",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Notes to Financial Statements",
+    "conceptTested": "Significant accounting policies disclosure",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The summary of significant accounting policies note should include:",
+    "options": {
+      "A": "A schedule of all long-term debt maturities",
+      "B": "The accounting principles and methods used by the entity",
+      "C": "A reconciliation of book to tax income",
+      "D": "A listing of all related parties"
+    },
+    "correctAnswer": "B",
+    "explanation": "The summary of significant accounting policies discloses the accounting principles and methods used in preparing the financial statements, including those that involve selection from alternatives or are peculiar to the industry. Debt maturities, tax reconciliations, and related party listings are separate disclosures.",
+    "tip": "Accounting policies note = principles and methods used by the entity."
+  },
+  {
+    "id": "far-fs-027",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Notes to Financial Statements",
+    "conceptTested": "Subsequent events disclosure",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Which type of subsequent event requires recognition (adjustment) in the financial statements?",
+    "options": {
+      "A": "A major acquisition completed after year-end",
+      "B": "Evidence that provides information about conditions that existed at the balance sheet date",
+      "C": "A natural disaster occurring after year-end",
+      "D": "A significant decline in market prices after year-end"
+    },
+    "correctAnswer": "B",
+    "explanation": "Recognized subsequent events (Type I) provide additional evidence about conditions that existed at the balance sheet date—the financial statements are adjusted. Non-recognized events (Type II) arise from conditions that occurred after the balance sheet date and are disclosed but not adjusted. Acquisitions, disasters, and market declines after year-end are typically Type II.",
+    "tip": "Type I (recognize): conditions existed at B/S date. Type II (disclose only): conditions arose after."
+  },
+  {
+    "id": "far-fs-028",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Deferred revenue classification",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "A company receives $36,000 on October 1, Year 1, for a 3-year service contract beginning on that date. How should the deferred revenue be classified on the December 31, Year 1 balance sheet?",
+    "options": {
+      "A": "$36,000 as current liability",
+      "B": "$12,000 as current liability and $24,000 as long-term liability",
+      "C": "$9,000 as current liability and $24,000 as long-term liability",
+      "D": "$12,000 as current liability and $21,000 as long-term liability"
+    },
+    "correctAnswer": "D",
+    "explanation": "At December 31, Year 1, 3 months of the contract have been performed, earning $3,000 ($36,000 ÷ 36 months × 3 months). Remaining deferred revenue is $33,000. The portion to be earned in the next 12 months (Year 2) is $12,000, classified as current. The remaining $21,000 (October Year 2 through September Year 4) is long-term.",
+    "tip": "Deferred revenue: classify portion to be earned in next 12 months as current."
+  },
+  {
+    "id": "far-fs-029",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Offsetting assets and liabilities",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, when is it appropriate to offset assets and liabilities on the balance sheet?",
+    "options": {
+      "A": "Whenever they relate to the same counterparty",
+      "B": "Only when the entity has a legally enforceable right to offset and intends to settle net or simultaneously",
+      "C": "Whenever the amounts are equal",
+      "D": "Offsetting is always prohibited under GAAP"
+    },
+    "correctAnswer": "B",
+    "explanation": "US GAAP generally prohibits offsetting assets and liabilities unless specific criteria are met. The entity must have a legal right to set off the recognized amounts AND intend either to settle on a net basis or to realize the asset and settle the liability simultaneously. Merely having amounts with the same counterparty is insufficient.",
+    "tip": "Offsetting requires legal right to offset + intent to settle net/simultaneously."
+  },
+  {
+    "id": "far-fs-030",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Income Statement Presentation",
+    "conceptTested": "Cost of goods sold calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company had beginning inventory of $80,000, purchases of $320,000, and ending inventory of $95,000. What is cost of goods sold?",
+    "options": {
+      "A": "$305,000",
+      "B": "$400,000",
+      "C": "$335,000",
+      "D": "$295,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Cost of goods sold = Beginning inventory + Purchases − Ending inventory. COGS = $80,000 + $320,000 − $95,000 = $305,000. This formula calculates the cost of inventory actually sold during the period.",
+    "tip": "COGS = Beginning inventory + Purchases − Ending inventory.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-fs-031",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Free cash flow concept",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company has cash from operations of $500,000 and capital expenditures of $150,000. What is free cash flow?",
+    "options": {
+      "A": "$650,000",
+      "B": "$350,000",
+      "C": "$500,000",
+      "D": "$150,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Free cash flow (a non-GAAP measure) is commonly calculated as cash from operating activities minus capital expenditures. FCF = $500,000 − $150,000 = $350,000. This represents cash available for discretionary purposes after maintaining productive capacity.",
+    "tip": "Free cash flow = Operating cash flow − Capital expenditures.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-fs-032",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Operating cycle industries",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A winery ages wine for 18 months before sale. How does this affect the classification of inventory on its balance sheet?",
+    "options": {
+      "A": "Inventory must be classified as noncurrent because it won't be sold within one year",
+      "B": "Inventory is classified as current because it will be sold within the operating cycle",
+      "C": "The inventory must be written down if it won't be sold within one year",
+      "D": "Only the portion expected to be sold within one year is classified as current"
+    },
+    "correctAnswer": "B",
+    "explanation": "For classification purposes, current assets are those expected to be realized within one year OR within the operating cycle, whichever is longer. If the operating cycle (production to cash collection) exceeds one year, as in winemaking, the longer cycle is used. Therefore, wine inventory held for 18 months is still properly classified as current.",
+    "tip": "Longer operating cycles extend the current classification period."
+  },
+  {
+    "id": "far-fs-033",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Cash equivalents definition",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, which of the following is considered a cash equivalent?",
+    "options": {
+      "A": "Common stock investments",
+      "B": "A 90-day Treasury bill",
+      "C": "A 6-month certificate of deposit",
+      "D": "Accounts receivable due in 30 days"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cash equivalents are short-term, highly liquid investments with original maturities of three months or less from the date of purchase. A 90-day Treasury bill qualifies. A 6-month CD has too long a maturity, stocks are not cash equivalents, and receivables are not investments.",
+    "tip": "Cash equivalents = highly liquid, original maturity ≤ 3 months."
+  },
+  {
+    "id": "far-fs-034",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Notes to Financial Statements",
+    "conceptTested": "Related party disclosures",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "Which of the following must be disclosed for related party transactions?",
+    "options": {
+      "A": "The nature of the relationship",
+      "B": "A description of the transactions",
+      "C": "The amounts involved in the transactions",
+      "D": "The market value of the related party entity"
+    },
+    "correctAnswer": "D",
+    "explanation": "Related party disclosures must include the nature of the relationship, a description of the transactions, the dollar amounts involved, and any amounts due to or from related parties. The market value of the related party entity itself is not a required disclosure.",
+    "tip": "Related party disclosure: relationship + description + amounts. Not market values."
+  },
+  {
+    "id": "far-fs-035",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Debt covenant violations",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "On December 31, Year 1, Delta Corp. violated a debt covenant on its 5-year term loan, giving the lender the right to demand immediate repayment. On February 15, Year 2 (before issuance of Year 1 financial statements), the lender waived the violation. How should the debt be classified on December 31, Year 1?",
+    "options": {
+      "A": "As long-term, because the waiver was obtained before financial statement issuance",
+      "B": "As current, because the lender had the right to demand payment at the balance sheet date",
+      "C": "As long-term, if the waiver extends for at least 12 months beyond the balance sheet date",
+      "D": "Either current or long-term at management's discretion"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under ASC 470-10, when a covenant violation makes debt callable, classification depends on when a waiver is obtained. If obtained before the balance sheet date (not the case here), the debt remains long-term. If obtained after the balance sheet date but before issuance, the debt is classified as long-term only if the waiver is for at least 12 months. Otherwise, it's current.",
+    "tip": "Post-B/S waiver must be for 12+ months to classify debt as long-term."
+  },
+  {
+    "id": "far-fs-036",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Income Statement Presentation",
+    "conceptTested": "Operating income calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Given: Net sales $1,000,000; Cost of goods sold $600,000; Selling expenses $120,000; General and administrative expenses $80,000; Interest expense $30,000. What is operating income?",
+    "options": {
+      "A": "$170,000",
+      "B": "$200,000",
+      "C": "$280,000",
+      "D": "$400,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Operating income = Net sales − COGS − Operating expenses. Operating income = $1,000,000 − $600,000 − $120,000 − $80,000 = $200,000. Interest expense is a non-operating expense and is excluded from operating income. Gross profit is $400,000; operating income is after operating expenses.",
+    "tip": "Operating income = Gross profit − Operating expenses (exclude interest).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-fs-037",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Comprehensive Income",
+    "conceptTested": "Tax effect presentation of OCI",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, how may the tax effects of other comprehensive income items be presented?",
+    "options": {
+      "A": "Only net of tax for each item",
+      "B": "Only before tax for each item with aggregate tax shown separately",
+      "C": "Either net of tax for each item, or before tax with aggregate tax shown separately",
+      "D": "Tax effects of OCI items are not reported"
+    },
+    "correctAnswer": "C",
+    "explanation": "Entities may present OCI items either (1) net of related tax effects for each item, or (2) before tax effects with one amount shown for the aggregate tax relating to all OCI items. Either presentation is acceptable under US GAAP as long as the tax effects are disclosed.",
+    "tip": "OCI: either net of tax per item OR before tax with aggregate tax shown."
+  },
+  {
+    "id": "far-fs-038",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Statement of Cash Flows",
+    "conceptTested": "Income taxes in cash flows",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, how are income tax payments classified in the statement of cash flows?",
+    "options": {
+      "A": "As operating activities, unless they can be specifically identified with financing or investing activities",
+      "B": "Always as financing activities",
+      "C": "Allocated proportionally among operating, investing, and financing activities",
+      "D": "As a separate fourth category"
+    },
+    "correctAnswer": "A",
+    "explanation": "Under US GAAP, income tax payments are generally classified as operating activities because they usually cannot be practically separated by activity type. However, if a tax payment can be specifically identified with a particular financing or investing transaction, it may be classified accordingly. In practice, most entities report all tax payments as operating.",
+    "tip": "Tax payments = generally operating (unless specifically identifiable)."
+  },
+  {
+    "id": "far-fs-039",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Balance Sheet Classification",
+    "conceptTested": "Marketable securities classification",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A company holds equity securities for short-term profit-taking. How are these classified on the balance sheet?",
+    "options": {
+      "A": "As noncurrent investments",
+      "B": "As current assets (trading securities)",
+      "C": "As other comprehensive income",
+      "D": "As cash equivalents"
+    },
+    "correctAnswer": "B",
+    "explanation": "Securities held for short-term profit-taking are classified as trading securities and reported as current assets. They are measured at fair value with changes in fair value recognized in net income. Equity securities that are not trading are classified based on intent and ability to sell within one year.",
+    "tip": "Trading securities = current assets, fair value through net income."
+  },
+  {
+    "id": "far-fs-040",
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "subtopic": "Notes to Financial Statements",
+    "conceptTested": "Commitments and contingencies disclosure",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "What must be disclosed about loss contingencies that are reasonably possible but not probable?",
+    "options": {
+      "A": "They must be accrued as liabilities",
+      "B": "The nature of the contingency and an estimate of the possible loss or range of loss",
+      "C": "Only the nature of the contingency; no loss estimate is required",
+      "D": "Nothing needs to be disclosed if the loss is not probable"
+    },
+    "correctAnswer": "B",
+    "explanation": "For loss contingencies that are reasonably possible (but not probable), disclosure is required of the nature of the contingency and an estimate of the possible loss or range of loss, unless an estimate cannot be made. If an estimate cannot be made, that fact should be stated. Accrual is required only when probable and estimable.",
+    "tip": "Reasonably possible = disclose nature + estimate. Probable + estimable = accrue."
+  }
+]

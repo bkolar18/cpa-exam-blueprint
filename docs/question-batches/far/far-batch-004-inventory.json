@@ -1,0 +1,584 @@
+[
+  {
+    "id": "far-inv-001",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "FIFO cost flow assumption",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under the FIFO (First-In, First-Out) cost flow assumption, which costs are assigned to cost of goods sold?",
+    "options": {
+      "A": "The most recent costs",
+      "B": "The oldest costs",
+      "C": "An average of all costs",
+      "D": "The highest costs"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under FIFO, the oldest costs (first costs incurred) are assumed to be the first sold and are assigned to cost of goods sold. The most recent costs remain in ending inventory. This matches the physical flow for many businesses, particularly those with perishable goods.",
+    "tip": "FIFO: oldest costs → COGS, newest costs → ending inventory."
+  },
+  {
+    "id": "far-inv-002",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "LIFO cost flow assumption",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under the LIFO (Last-In, First-Out) cost flow assumption during a period of rising prices, compared to FIFO:",
+    "options": {
+      "A": "Cost of goods sold is lower and ending inventory is higher",
+      "B": "Cost of goods sold is higher and ending inventory is lower",
+      "C": "Both cost of goods sold and ending inventory are higher",
+      "D": "Both cost of goods sold and ending inventory are lower"
+    },
+    "correctAnswer": "B",
+    "explanation": "During rising prices, LIFO assigns the newest (higher) costs to COGS, resulting in higher COGS and lower net income compared to FIFO. Ending inventory reflects the oldest (lower) costs, so it is valued lower. This provides a tax benefit but understates inventory on the balance sheet.",
+    "tip": "Rising prices + LIFO = higher COGS, lower income, lower ending inventory."
+  },
+  {
+    "id": "far-inv-003",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "FIFO ending inventory calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company had the following inventory transactions: Beginning inventory: 100 units @ $10; Purchase 1: 150 units @ $12; Purchase 2: 200 units @ $14. If 300 units were sold, what is ending inventory under FIFO?",
+    "options": {
+      "A": "$2,100",
+      "B": "$2,000",
+      "C": "$1,500",
+      "D": "$2,800"
+    },
+    "correctAnswer": "A",
+    "explanation": "Total units = 100 + 150 + 200 = 450. Units sold = 300. Ending inventory = 150 units. Under FIFO, ending inventory consists of the most recent purchases: 150 units from Purchase 2 @ $14 = $2,100. (All 200 from Purchase 2, but only 150 remain; actually: 200 - 50 from Purchase 2 = 150 units × $14 = $2,100).",
+    "tip": "FIFO ending inventory = most recent costs. Work backward from latest purchase.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-inv-004",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "LIFO ending inventory calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Using the same data: Beginning inventory: 100 units @ $10; Purchase 1: 150 units @ $12; Purchase 2: 200 units @ $14. If 300 units were sold, what is ending inventory under LIFO?",
+    "options": {
+      "A": "$2,100",
+      "B": "$1,700",
+      "C": "$1,600",
+      "D": "$1,500"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under LIFO, the newest costs go to COGS first. Units sold: 200 from Purchase 2 + 100 from Purchase 1 = 300. Ending inventory = 100 units from beginning @ $10 + 50 units from Purchase 1 @ $12 = $1,000 + $600 = $1,600.",
+    "tip": "LIFO ending inventory = oldest costs. Work forward from beginning inventory.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-inv-005",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "Weighted average cost method",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company using the periodic weighted average method had: Beginning inventory 200 units @ $5; Purchases 300 units @ $7. What is the weighted average cost per unit?",
+    "options": {
+      "A": "$6.00",
+      "B": "$6.20",
+      "C": "$5.80",
+      "D": "$7.00"
+    },
+    "correctAnswer": "B",
+    "explanation": "Weighted average cost = Total cost / Total units. Total cost = (200 × $5) + (300 × $7) = $1,000 + $2,100 = $3,100. Total units = 500. Weighted average = $3,100 / 500 = $6.20 per unit.",
+    "tip": "Weighted average = Total cost ÷ Total units available.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-inv-006",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "LIFO conformity rule",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The LIFO conformity rule requires that:",
+    "options": {
+      "A": "LIFO must be used for all inventory items if used for any",
+      "B": "If LIFO is used for tax purposes, it must also be used for financial reporting",
+      "C": "LIFO can only be used if inventory turns over at least twice per year",
+      "D": "LIFO must be disclosed in the notes even if not used"
+    },
+    "correctAnswer": "B",
+    "explanation": "The LIFO conformity rule (IRC Section 472) requires that if a company uses LIFO for tax purposes, it must also use LIFO in its primary financial statements (books). This prevents companies from getting LIFO tax benefits while reporting higher income to shareholders using FIFO.",
+    "tip": "LIFO for taxes = must use LIFO for financial reporting too."
+  },
+  {
+    "id": "far-inv-007",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "LIFO reserve",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The LIFO reserve represents:",
+    "options": {
+      "A": "The amount of inventory held in reserve for future sales",
+      "B": "The difference between inventory valued at LIFO and inventory at FIFO (or current cost)",
+      "C": "A contra-asset account that reduces inventory to market value",
+      "D": "The excess of replacement cost over historical cost"
+    },
+    "correctAnswer": "B",
+    "explanation": "The LIFO reserve (or LIFO allowance) is the difference between inventory reported under LIFO and what it would be under FIFO or current cost. During rising prices, LIFO inventory is lower, so the reserve represents the cumulative difference. It must be disclosed and allows analysts to convert LIFO to FIFO for comparability.",
+    "tip": "LIFO reserve = FIFO inventory − LIFO inventory."
+  },
+  {
+    "id": "far-inv-008",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "LIFO liquidation",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "A LIFO liquidation occurs when:",
+    "options": {
+      "A": "A company switches from LIFO to FIFO",
+      "B": "Units sold exceed units purchased, causing older, lower-cost layers to be sold",
+      "C": "Inventory is written down to market value",
+      "D": "A company adopts LIFO for the first time"
+    },
+    "correctAnswer": "B",
+    "explanation": "LIFO liquidation occurs when sales exceed purchases, causing the company to dip into older LIFO layers with lower costs. This results in lower COGS (matching old low costs against current revenues), higher gross profit, and higher taxes—the opposite of the intended LIFO benefit. Companies often disclose the effect of LIFO liquidations.",
+    "tip": "LIFO liquidation = selling into old layers, artificially boosting profit."
+  },
+  {
+    "id": "far-inv-009",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "NRV definition",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, net realizable value (NRV) for inventory is defined as:",
+    "options": {
+      "A": "Replacement cost",
+      "B": "Estimated selling price less costs of completion and disposal",
+      "C": "Fair market value",
+      "D": "Historical cost adjusted for inflation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Net realizable value is the estimated selling price in the ordinary course of business, less reasonably predictable costs of completion, disposal, and transportation. This represents the net amount the entity expects to realize from selling the inventory.",
+    "tip": "NRV = Selling price − Costs to complete and sell."
+  },
+  {
+    "id": "far-inv-010",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "LC-NRV application",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Inventory has a cost of $50,000, a selling price of $60,000, costs to complete of $5,000, and selling costs of $8,000. At what amount should inventory be reported?",
+    "options": {
+      "A": "$50,000",
+      "B": "$47,000",
+      "C": "$52,000",
+      "D": "$60,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "NRV = Selling price − Costs to complete − Selling costs = $60,000 − $5,000 − $8,000 = $47,000. Since NRV ($47,000) is less than cost ($50,000), inventory is written down to $47,000. The $3,000 loss is recognized in the period of decline.",
+    "tip": "Report at lower of cost or NRV. Write down if NRV < cost.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-inv-011",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "LC-NRV for LIFO/retail method",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "For inventory measured using LIFO or the retail inventory method, the lower of cost or market rule uses market defined as:",
+    "options": {
+      "A": "Net realizable value only",
+      "B": "Replacement cost, with a ceiling of NRV and a floor of NRV minus normal profit margin",
+      "C": "Fair value",
+      "D": "The higher of replacement cost or NRV"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under the legacy LCM rule (still applicable for LIFO and retail method), market is replacement cost, but it cannot exceed NRV (ceiling) or be less than NRV minus a normal profit margin (floor). This range prevents both overstating and understating inventory. Other methods use the simplified LC-NRV approach.",
+    "tip": "LIFO/retail: Market = replacement cost, bounded by NRV ceiling and NRV−profit floor."
+  },
+  {
+    "id": "far-inv-012",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "Reversal of inventory write-downs",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, if inventory that was previously written down subsequently increases in value:",
+    "options": {
+      "A": "The write-down must be reversed up to the original cost",
+      "B": "The write-down cannot be reversed; the reduced amount becomes the new cost basis",
+      "C": "The inventory is revalued to fair market value",
+      "D": "A gain is recognized in other comprehensive income"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under US GAAP, once inventory is written down to NRV (or market), that reduced amount becomes the new cost basis. Subsequent recoveries in value are not recognized—the write-down is not reversed. This differs from IFRS, which permits reversal of previous write-downs.",
+    "tip": "US GAAP: No reversal of inventory write-downs. New cost = written-down amount."
+  },
+  {
+    "id": "far-inv-013",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Estimation Methods",
+    "conceptTested": "Gross profit method",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company has beginning inventory of $40,000, net purchases of $200,000, and net sales of $300,000. The historical gross profit rate is 30%. Using the gross profit method, what is the estimated ending inventory?",
+    "options": {
+      "A": "$30,000",
+      "B": "$50,000",
+      "C": "$90,000",
+      "D": "$70,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Cost of goods available = $40,000 + $200,000 = $240,000. Estimated COGS = Sales × (1 − Gross profit rate) = $300,000 × 70% = $210,000. Estimated ending inventory = $240,000 − $210,000 = $30,000.",
+    "tip": "Gross profit method: Ending inventory = Goods available − Estimated COGS.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "far-inv-014",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Estimation Methods",
+    "conceptTested": "Retail inventory method",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A retailer has: Beginning inventory at cost $20,000 and retail $30,000; Purchases at cost $80,000 and retail $120,000; Sales $100,000. Using the conventional retail method (average, LCM), what is ending inventory at cost?",
+    "options": {
+      "A": "$33,333",
+      "B": "$30,000",
+      "C": "$50,000",
+      "D": "$35,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Cost-to-retail ratio (LCM basis excludes markdowns from denominator, but assume none here): Cost ratio = ($20,000 + $80,000) / ($30,000 + $120,000) = $100,000 / $150,000 = 66.67%. Ending inventory at retail = $150,000 − $100,000 = $50,000. Ending inventory at cost = $50,000 × 66.67% = $33,333.",
+    "tip": "Retail method: Calculate cost ratio, apply to ending inventory at retail.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 120
+  },
+  {
+    "id": "far-inv-015",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Estimation Methods",
+    "conceptTested": "Dollar-value LIFO",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "The dollar-value LIFO method measures inventory layers in:",
+    "options": {
+      "A": "Physical units of specific products",
+      "B": "Dollars adjusted for price changes using a price index",
+      "C": "Replacement cost dollars",
+      "D": "Net realizable value"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dollar-value LIFO measures inventory in pools of dollars rather than specific units, using price indices to identify real increases in inventory quantity versus price changes. This simplifies LIFO application for companies with many inventory items and allows better matching of current costs with current revenues.",
+    "tip": "Dollar-value LIFO: track layers in base-year dollars using price indices."
+  },
+  {
+    "id": "far-inv-016",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Purchase Commitments",
+    "conceptTested": "Loss on purchase commitments",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A company has a noncancelable commitment to purchase inventory for $100,000. At year-end, the market value of this inventory has declined to $75,000. What entry is required?",
+    "options": {
+      "A": "No entry until the inventory is received",
+      "B": "Debit Loss on Purchase Commitment $25,000, Credit Liability for Purchase Commitment $25,000",
+      "C": "Debit Inventory $75,000, Credit Accounts Payable $100,000, Credit Gain $25,000",
+      "D": "Debit Loss $25,000, Credit Inventory $25,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "When market value falls below a firm purchase commitment price, a loss should be recognized in the period of decline. The entry debits a loss and credits a liability (or contra-asset) for the expected loss. When inventory is later received, it's recorded at market value ($75,000) with the commitment liability eliminated.",
+    "tip": "Firm commitment + market decline = recognize loss and liability immediately."
+  },
+  {
+    "id": "far-inv-017",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Errors",
+    "conceptTested": "Effect of ending inventory error",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "If ending inventory is understated in Year 1, what is the effect on Year 1 net income and Year 2 net income (assuming the error is not corrected)?",
+    "options": {
+      "A": "Year 1 understated, Year 2 understated",
+      "B": "Year 1 understated, Year 2 overstated",
+      "C": "Year 1 overstated, Year 2 understated",
+      "D": "Year 1 overstated, Year 2 overstated"
+    },
+    "correctAnswer": "B",
+    "explanation": "If ending inventory is understated, COGS is overstated (goods available − understated ending = overstated COGS), so Year 1 net income is understated. In Year 2, the understated ending inventory becomes understated beginning inventory, causing COGS to be understated and Year 2 net income to be overstated. The errors self-correct over two periods.",
+    "tip": "Inventory errors reverse: understated ending → understated Y1 income, overstated Y2."
+  },
+  {
+    "id": "far-inv-018",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Errors",
+    "conceptTested": "Effect on retained earnings",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "If ending inventory was understated in Year 1 and the error was not discovered until Year 3, what is the effect on Year 3 beginning retained earnings?",
+    "options": {
+      "A": "Overstated",
+      "B": "Understated",
+      "C": "No effect—the error has self-corrected",
+      "D": "Cannot be determined without more information"
+    },
+    "correctAnswer": "C",
+    "explanation": "Inventory errors self-correct over two years. The understated Year 1 ending inventory caused Year 1 income to be understated and Year 2 income to be overstated by the same amount. By Year 3, the cumulative effect on retained earnings is zero. Only a Year 2 ending inventory error would affect Year 3 beginning retained earnings.",
+    "tip": "Inventory errors self-correct over 2 years. Effect on RE = 0 after correction period."
+  },
+  {
+    "id": "far-inv-019",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "Specific identification",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The specific identification inventory method is most appropriate for:",
+    "options": {
+      "A": "Commodities traded on an exchange",
+      "B": "High-volume, low-cost items",
+      "C": "Unique, high-value items like automobiles or jewelry",
+      "D": "Perishable goods"
+    },
+    "correctAnswer": "C",
+    "explanation": "Specific identification tracks the actual cost of each individual item sold. It's practical and appropriate for unique, high-value items where each unit can be identified (cars, jewelry, art, custom equipment). It's impractical for high-volume, interchangeable items where tracking individual units is not cost-effective.",
+    "tip": "Specific identification = unique, identifiable, high-value items."
+  },
+  {
+    "id": "far-inv-020",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "Moving average vs periodic average",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the moving average method (perpetual system), the average cost per unit is recalculated:",
+    "options": {
+      "A": "At the end of each accounting period",
+      "B": "After each purchase",
+      "C": "After each sale",
+      "D": "Monthly"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under a perpetual system using moving average, a new weighted average cost is calculated after each purchase. This new average is used for subsequent sales until the next purchase. The periodic weighted average method calculates one average at the end of the period using all units and costs.",
+    "tip": "Moving average (perpetual) = recalculate after each purchase."
+  },
+  {
+    "id": "far-inv-021",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "Application level for LC-NRV",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The lower of cost or net realizable value test may be applied:",
+    "options": {
+      "A": "Only to total inventory",
+      "B": "Only to individual items",
+      "C": "To individual items, categories, or total inventory, depending on the circumstances",
+      "D": "Only to categories of similar items"
+    },
+    "correctAnswer": "C",
+    "explanation": "LC-NRV can be applied at the individual item level, category/class level, or total inventory level. The method chosen should be applied consistently. Item-by-item application is most conservative and commonly used. Category or total application may be used when items are interrelated or for practical reasons.",
+    "tip": "LC-NRV: apply to items, categories, or total—be consistent."
+  },
+  {
+    "id": "far-inv-022",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "LIFO under IFRS",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Which of the following statements about LIFO is correct?",
+    "options": {
+      "A": "LIFO is required under both US GAAP and IFRS",
+      "B": "LIFO is permitted under US GAAP but prohibited under IFRS",
+      "C": "LIFO is prohibited under both US GAAP and IFRS",
+      "D": "LIFO is permitted under IFRS but prohibited under US GAAP"
+    },
+    "correctAnswer": "B",
+    "explanation": "LIFO is permitted under US GAAP but is prohibited under IFRS (IAS 2). This is a significant difference between the two frameworks. Companies using LIFO for US reporting must use a different method for IFRS reporting if they have dual reporting requirements.",
+    "tip": "LIFO: allowed under US GAAP, prohibited under IFRS."
+  },
+  {
+    "id": "far-inv-023",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Estimation Methods",
+    "conceptTested": "When gross profit method is used",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The gross profit method is commonly used for:",
+    "options": {
+      "A": "Year-end financial statement preparation",
+      "B": "Interim financial statements and estimating inventory losses from casualties",
+      "C": "Tax reporting purposes",
+      "D": "Determining LIFO reserves"
+    },
+    "correctAnswer": "B",
+    "explanation": "The gross profit method is an estimation technique used when a physical count is impractical. Common uses include preparing interim financial statements, estimating inventory lost in a fire or theft (for insurance claims), and testing reasonableness of inventory balances. It's not precise enough for year-end GAAP statements.",
+    "tip": "Gross profit method = estimation tool for interim periods or loss claims."
+  },
+  {
+    "id": "far-inv-024",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "Raw materials and LC-NRV",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Raw materials held for use in production should be written down below cost when:",
+    "options": {
+      "A": "The raw materials' replacement cost has declined",
+      "B": "A decline in raw materials price indicates the finished goods will be sold at a loss",
+      "C": "Always, to be conservative",
+      "D": "The raw materials have been held for more than one year"
+    },
+    "correctAnswer": "B",
+    "explanation": "Raw materials are not written down merely because their replacement cost has fallen. They should be written down only when the decline in price indicates that the cost of the finished goods will exceed their NRV (i.e., the finished products will be sold at a loss). If finished goods can still be sold at a profit, raw materials remain at cost.",
+    "tip": "Write down raw materials only if finished goods NRV is below total production cost."
+  },
+  {
+    "id": "far-inv-025",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "Perpetual vs periodic results",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under which cost flow assumption will the perpetual and periodic inventory systems yield the same results?",
+    "options": {
+      "A": "LIFO only",
+      "B": "FIFO only",
+      "C": "Weighted average only",
+      "D": "All cost flow assumptions yield the same results"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under FIFO, perpetual and periodic systems yield identical results because the oldest costs are always assigned to COGS regardless of when the calculation is made. LIFO and weighted average can yield different results because the timing of cost assignments matters—perpetual updates continuously while periodic calculates at period-end.",
+    "tip": "FIFO: perpetual = periodic. LIFO & average: perpetual ≠ periodic."
+  },
+  {
+    "id": "far-inv-026",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Purchase Commitments",
+    "conceptTested": "Recovery of purchase commitment loss",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "In Year 1, a company recorded a $20,000 loss on a purchase commitment when market value dropped. In Year 2, before delivery, the market value recovered to above the commitment price. How is this handled?",
+    "options": {
+      "A": "No adjustment; the loss is permanent",
+      "B": "Reverse the loss by crediting a gain account",
+      "C": "Recognize a recovery of the loss in Year 2",
+      "D": "Record the inventory at the original commitment price when received"
+    },
+    "correctAnswer": "C",
+    "explanation": "If market prices recover before the inventory is received, the previously recognized loss should be recovered (reversed) to the extent of the original loss. The recovery is recognized in the period the price increases. The inventory is then recorded at market value (up to the commitment price) when received.",
+    "tip": "Purchase commitment losses can be reversed if market recovers before delivery."
+  },
+  {
+    "id": "far-inv-027",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Errors",
+    "conceptTested": "Purchases cutoff error",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "Goods in transit at year-end, shipped FOB shipping point by the vendor, were not recorded as a purchase or included in ending inventory. What is the effect on Year 1 financial statements?",
+    "options": {
+      "A": "Inventory overstated, net income correct",
+      "B": "Inventory understated, accounts payable understated, net income correct",
+      "C": "Inventory understated, accounts payable understated, net income understated",
+      "D": "Inventory correct, accounts payable understated, net income overstated"
+    },
+    "correctAnswer": "B",
+    "explanation": "FOB shipping point means title passed when goods were shipped, so they should be included in the buyer's inventory and accounts payable. Omitting both understates inventory and accounts payable by the same amount. However, net income is unaffected because both the asset and liability were omitted by equal amounts—the error affects the balance sheet but not COGS or income.",
+    "tip": "FOB shipping point = buyer owns in-transit goods. Omitting both sides: no income effect."
+  },
+  {
+    "id": "far-inv-028",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+    "conceptTested": "Inventory costs to include",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following should be included in inventory cost EXCEPT:",
+    "options": {
+      "A": "Purchase price less trade discounts",
+      "B": "Freight-in costs",
+      "C": "Storage costs for finished goods awaiting sale",
+      "D": "Import duties"
+    },
+    "correctAnswer": "C",
+    "explanation": "Inventory cost includes all costs to bring inventory to its present location and condition: purchase price, import duties, freight-in, and handling costs. Storage costs for finished goods awaiting sale are period costs expensed as incurred. Storage is only capitalized if necessary in the production process (e.g., aging wine).",
+    "tip": "Capitalize costs to acquire and prepare. Expense storage of finished goods."
+  },
+  {
+    "id": "far-inv-029",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Inventory Estimation Methods",
+    "conceptTested": "Retail method variations",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "In the retail inventory method, excluding net markdowns from the cost-to-retail ratio calculation results in:",
+    "options": {
+      "A": "A higher cost ratio and higher ending inventory (FIFO approximation)",
+      "B": "A lower cost ratio and lower ending inventory (LCM approximation)",
+      "C": "No change in ending inventory",
+      "D": "A method that can only be used with LIFO"
+    },
+    "correctAnswer": "B",
+    "explanation": "Excluding markdowns from the denominator increases the retail total used to calculate the ratio, resulting in a lower cost-to-retail percentage. This lower ratio, applied to ending inventory at retail, produces a lower ending inventory value—approximating lower of cost or market. Including markdowns approximates average cost.",
+    "tip": "Exclude markdowns = lower ratio = LCM result. Include markdowns = average cost."
+  },
+  {
+    "id": "far-inv-030",
+    "section": "FAR",
+    "topic": "Inventory",
+    "subtopic": "Lower of Cost or Net Realizable Value",
+    "conceptTested": "Presentation of inventory write-downs",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Where is a loss from writing inventory down to net realizable value typically reported?",
+    "options": {
+      "A": "As a separate line item below operating income",
+      "B": "In other comprehensive income",
+      "C": "As part of cost of goods sold or as a separate operating expense",
+      "D": "As an extraordinary item"
+    },
+    "correctAnswer": "C",
+    "explanation": "Inventory write-downs to NRV are typically reported as part of cost of goods sold. Alternatively, if material, they may be shown as a separate line item within operating expenses. They are not reported in OCI or as extraordinary items (which no longer exist under US GAAP).",
+    "tip": "Inventory write-downs = COGS or separate operating expense."
+  }
+]

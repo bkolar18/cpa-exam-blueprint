@@ -21,6 +21,12 @@ export interface Profile {
   longest_streak: number;
   last_study_date: string | null;
   promo_dismissed_at: string | null;
+  // Subscription fields
+  subscription_tier: 'free' | 'standard' | 'pro' | null;
+  stripe_customer_id: string | null;
+  stripe_payment_id: string | null;
+  paid_at: string | null;
+  payment_amount_cents: number | null;
   created_at: string;
   updated_at: string;
 }

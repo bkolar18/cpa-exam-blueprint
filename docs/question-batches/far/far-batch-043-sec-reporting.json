@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "SEC Reporting Requirements",
+    "batchNumber": 43,
+    "totalQuestions": 30,
+    "dateGenerated": "2025-01-07",
+    "generatedBy": "Claude"
+  },
+  "questions": [
+    {
+      "id": "far-sec-001",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Form 10-K",
+      "conceptTested": "Annual report contents",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Form 10-K must be filed within how many days of fiscal year-end for large accelerated filers?",
+      "options": {
+        "A": "45 days",
+        "B": "60 days",
+        "C": "75 days",
+        "D": "90 days"
+      },
+      "correctAnswer": "B",
+      "explanation": "Large accelerated filers (market cap ≥$700M) must file 10-K within 60 days. Accelerated filers have 75 days, non-accelerated have 90 days.",
+      "tip": "10-K deadlines: Large accelerated=60, Accelerated=75, Other=90 days.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-002",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Form 10-Q",
+      "conceptTested": "Quarterly report",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Form 10-Q must be filed for:",
+      "options": {
+        "A": "All four quarters",
+        "B": "The first three quarters only",
+        "C": "Only Q2 and Q4",
+        "D": "Only when material events occur"
+      },
+      "correctAnswer": "B",
+      "explanation": "10-Q is filed for Q1, Q2, and Q3. The fourth quarter is covered by the annual 10-K.",
+      "tip": "10-Q: quarters 1, 2, 3 only; Q4 info in 10-K.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-sec-003",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Form 8-K",
+      "conceptTested": "Current report triggers",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Form 8-K must be filed within how many business days of a triggering event?",
+      "options": {
+        "A": "2 business days",
+        "B": "4 business days",
+        "C": "10 calendar days",
+        "D": "15 calendar days"
+      },
+      "correctAnswer": "B",
+      "explanation": "Form 8-K must be filed within 4 business days of most triggering events (e.g., material agreements, acquisitions, officer changes).",
+      "tip": "8-K: 4 business days for most events.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-sec-004",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Form 8-K",
+      "conceptTested": "Reportable events",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Which event requires an 8-K filing?",
+      "options": {
+        "A": "Minor changes to employee benefits",
+        "B": "Change in fiscal year-end",
+        "C": "Routine board meeting",
+        "D": "Normal quarterly dividend declaration"
+      },
+      "correctAnswer": "B",
+      "explanation": "A change in fiscal year-end is a reportable event requiring 8-K. Other 8-K items include auditor changes, material agreements, and officer appointments.",
+      "tip": "8-K events: auditor change, material contracts, fiscal year change, officer changes.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-005",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Regulation S-X",
+      "conceptTested": "Financial statement requirements",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Regulation S-X prescribes:",
+      "options": {
+        "A": "Disclosure of environmental liabilities only",
+        "B": "Form and content of financial statements for SEC filings",
+        "C": "Proxy statement rules only",
+        "D": "Insider trading rules"
+      },
+      "correctAnswer": "B",
+      "explanation": "Regulation S-X sets forth the form and content of financial statements required in SEC filings, including what must be audited and specific line item requirements.",
+      "tip": "Reg S-X = financial statement form and content.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-006",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Regulation S-K",
+      "conceptTested": "Non-financial disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Regulation S-K covers:",
+      "options": {
+        "A": "Financial statement format",
+        "B": "Non-financial statement disclosure requirements (MD&A, business description)",
+        "C": "Auditing standards",
+        "D": "Tax reporting requirements"
+      },
+      "correctAnswer": "B",
+      "explanation": "Regulation S-K covers non-financial disclosures such as MD&A, business description, risk factors, legal proceedings, and executive compensation.",
+      "tip": "Reg S-K = non-financial disclosures (MD&A, business, risk).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-007",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "MD&A",
+      "conceptTested": "MD&A purpose",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Management's Discussion and Analysis (MD&A) should:",
+      "options": {
+        "A": "Simply repeat information in the financial statements",
+        "B": "Provide management's view of financial condition, results, and future trends",
+        "C": "Replace the financial statements",
+        "D": "Only discuss positive developments"
+      },
+      "correctAnswer": "B",
+      "explanation": "MD&A provides management's perspective on results, liquidity, capital resources, known trends, and events that may affect future results.",
+      "tip": "MD&A = management's narrative on performance and trends.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-008",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Accelerated Filer",
+      "conceptTested": "Definition",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An accelerated filer generally has a public float of at least:",
+      "options": {
+        "A": "$25 million",
+        "B": "$75 million",
+        "C": "$250 million",
+        "D": "$700 million"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accelerated filers have a public float between $75 million and $700 million. Large accelerated filers have $700 million or more.",
+      "tip": "Accelerated: $75M-$700M float; Large accelerated: ≥$700M.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-009",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Smaller Reporting Company",
+      "conceptTested": "SRC definition",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A smaller reporting company (SRC) has a public float of less than:",
+      "options": {
+        "A": "$75 million",
+        "B": "$250 million",
+        "C": "$500 million",
+        "D": "$700 million"
+      },
+      "correctAnswer": "B",
+      "explanation": "SRCs have public float less than $250 million (or less than $100 million annual revenues if float is less than $700 million). They have scaled disclosure requirements.",
+      "tip": "SRC: <$250M float (scaled disclosures allowed).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-010",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Emerging Growth Company",
+      "conceptTested": "EGC benefits",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An emerging growth company (EGC) can defer compliance with:",
+      "options": {
+        "A": "Basic financial statement requirements",
+        "B": "New or revised accounting standards for non-public companies",
+        "C": "All SEC regulations",
+        "D": "Tax reporting requirements"
+      },
+      "correctAnswer": "B",
+      "explanation": "EGCs may elect to delay adoption of new accounting standards until they apply to non-public companies. They also have reduced disclosure requirements.",
+      "tip": "EGC: can delay new GAAP adoption, reduced disclosures.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-011",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Pro Forma",
+      "conceptTested": "Non-GAAP measures",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When presenting non-GAAP financial measures, companies must:",
+      "options": {
+        "A": "Present them more prominently than GAAP measures",
+        "B": "Present a reconciliation to the most directly comparable GAAP measure",
+        "C": "Label them as 'audited'",
+        "D": "Include them in the financial statements"
+      },
+      "correctAnswer": "B",
+      "explanation": "Non-GAAP measures must be reconciled to GAAP, cannot be presented more prominently than GAAP, and must include reasons for usefulness.",
+      "tip": "Non-GAAP: require reconciliation to GAAP, not more prominent.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-012",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Pro Forma",
+      "conceptTested": "Acquisition pro forma",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Pro forma financial information for a significant acquisition must show:",
+      "options": {
+        "A": "Only the acquirer's historical results",
+        "B": "Combined results as if the acquisition occurred at the beginning of the period",
+        "C": "Only projected future results",
+        "D": "Target company results only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Pro forma statements show combined results as if the acquisition had occurred at the beginning of the period (or earliest period presented).",
+      "tip": "Acquisition pro forma: combine as if done at period start.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-013",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "XBRL",
+      "conceptTested": "Interactive data",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "XBRL (eXtensible Business Reporting Language) is used for:",
+      "options": {
+        "A": "Encrypting SEC filings",
+        "B": "Tagging financial data for electronic analysis and comparison",
+        "C": "Internal accounting systems only",
+        "D": "Tax return preparation"
+      },
+      "correctAnswer": "B",
+      "explanation": "XBRL tags financial data elements, making them machine-readable and enabling automated analysis and comparison across companies.",
+      "tip": "XBRL: tags data for electronic processing and comparison.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-014",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Segment Reporting",
+      "conceptTested": "Quantitative thresholds",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A segment must be reported separately if it meets which threshold?",
+      "options": {
+        "A": "5% of any measure",
+        "B": "10% of revenue, profit/loss, or assets",
+        "C": "25% of total company revenue",
+        "D": "50% of total company assets"
+      },
+      "correctAnswer": "B",
+      "explanation": "An operating segment must be reported if its revenue, absolute profit/loss, or assets are ≥10% of the combined total for all segments.",
+      "tip": "Segment threshold: ≥10% of revenue, P&L, or assets.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-015",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Segment Reporting",
+      "conceptTested": "75% test",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Reported segments must represent at least what percentage of total consolidated revenue?",
+      "options": {
+        "A": "50%",
+        "B": "65%",
+        "C": "75%",
+        "D": "90%"
+      },
+      "correctAnswer": "C",
+      "explanation": "Combined external revenue of reported segments must be at least 75% of total consolidated revenue. If not, additional segments must be identified.",
+      "tip": "Segments must cover ≥75% of consolidated revenue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-016",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Interim Reporting",
+      "conceptTested": "Integral vs discrete",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under the integral approach to interim reporting:",
+      "options": {
+        "A": "Each interim period is a standalone period",
+        "B": "Each interim period is part of the annual period, and estimates should be based on annual amounts",
+        "C": "Only GAAP departures are allowed",
+        "D": "No estimates are permitted"
+      },
+      "correctAnswer": "B",
+      "explanation": "The integral approach views each interim period as part of the annual period. Estimates (like annual bonuses, taxes) are spread proportionately.",
+      "tip": "Integral: interim is part of annual; estimate annual, allocate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-017",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Interim Reporting",
+      "conceptTested": "Tax expense",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Interim tax expense is calculated using:",
+      "options": {
+        "A": "The statutory rate",
+        "B": "The estimated annual effective tax rate applied to year-to-date income",
+        "C": "Last year's effective rate",
+        "D": "The marginal rate"
+      },
+      "correctAnswer": "B",
+      "explanation": "Interim tax expense uses the estimated annual effective tax rate (AETR) applied to year-to-date ordinary income, less amounts recognized in prior interim periods.",
+      "tip": "Interim tax = AETR × YTD income - prior quarters.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-018",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Critical Accounting Policies",
+      "conceptTested": "CAP disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Critical accounting policies in MD&A should discuss:",
+      "options": {
+        "A": "Only policies that are consistent with industry practice",
+        "B": "Estimates that require significant judgment and could materially impact results if different assumptions were used",
+        "C": "All accounting policies",
+        "D": "Only new policies adopted in the current year"
+      },
+      "correctAnswer": "B",
+      "explanation": "Critical accounting policies involve significant estimates and judgment where different assumptions could materially affect the financial statements.",
+      "tip": "Critical policies: significant estimates with material impact.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-019",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Internal Controls",
+      "conceptTested": "SOX 404",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "SOX Section 404 requires:",
+      "options": {
+        "A": "Annual audit of executive compensation",
+        "B": "Management assessment and (for accelerated filers) auditor attestation of internal control over financial reporting",
+        "C": "Quarterly reports on litigation",
+        "D": "Monthly reporting to the SEC"
+      },
+      "correctAnswer": "B",
+      "explanation": "SOX 404 requires management's annual assessment of ICFR effectiveness and, for accelerated and large accelerated filers, an auditor's attestation report.",
+      "tip": "SOX 404: management + auditor ICFR reports (for accelerated filers).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-020",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Certifications",
+      "conceptTested": "CEO/CFO certifications",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under SOX 302, CEO and CFO certifications in 10-K/10-Q state that:",
+      "options": {
+        "A": "The financial statements are guaranteed to be error-free",
+        "B": "They have reviewed the report and it fairly presents financial condition in all material respects",
+        "C": "No changes will occur in future periods",
+        "D": "The audit was performed by management"
+      },
+      "correctAnswer": "B",
+      "explanation": "SOX 302 certifications attest that executives have reviewed the report, it's not misleading, it fairly presents financial condition, and they've disclosed material weaknesses.",
+      "tip": "302 certs: reviewed, not misleading, fairly presents, disclosed weaknesses.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-021",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Auditor Independence",
+      "conceptTested": "Prohibited services",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under SOX and SEC rules, which service is prohibited for auditors of SEC registrants?",
+      "options": {
+        "A": "Tax compliance services",
+        "B": "Bookkeeping and financial statement preparation",
+        "C": "All consulting services",
+        "D": "Internal audit outsourcing for non-financial areas"
+      },
+      "correctAnswer": "B",
+      "explanation": "Bookkeeping, financial system design, and management functions are prohibited. Some tax and other services may be allowed with audit committee pre-approval.",
+      "tip": "Prohibited: bookkeeping, FIS design, management functions, actuarial services.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-022",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Related Party",
+      "conceptTested": "Disclosure requirements",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Related party transactions must be disclosed including:",
+      "options": {
+        "A": "Only the amount of the transaction",
+        "B": "Nature of relationship, description of transaction, and amounts",
+        "C": "Only transactions over $1 million",
+        "D": "Only if the transaction was not at arm's length"
+      },
+      "correctAnswer": "B",
+      "explanation": "Related party disclosures include: nature of relationship, description of transactions, amounts, and amounts due to/from related parties.",
+      "tip": "Related party: disclose relationship, nature, and amounts.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-023",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Subsequent Events",
+      "conceptTested": "Disclosure period",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "SEC filers must evaluate subsequent events through:",
+      "options": {
+        "A": "The balance sheet date",
+        "B": "The date financial statements are filed with the SEC",
+        "C": "30 days after year-end",
+        "D": "The date of the auditor's report only"
+      },
+      "correctAnswer": "B",
+      "explanation": "SEC filers evaluate subsequent events through the filing date (not issuance date for private companies). Events are recognized or disclosed as appropriate.",
+      "tip": "SEC filers: subsequent events through filing date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-024",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Risk Factors",
+      "conceptTested": "Risk factor disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Risk factor disclosures should:",
+      "options": {
+        "A": "Include only risks that have already occurred",
+        "B": "Describe specific material risks to the company's business, operations, and financial condition",
+        "C": "Be identical for all companies in the same industry",
+        "D": "Be limited to financial risks only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Risk factors should be company-specific, material risks that could adversely affect the company. Generic risks common to all companies should be avoided.",
+      "tip": "Risk factors: company-specific material risks.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-025",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Executive Compensation",
+      "conceptTested": "Compensation disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Executive compensation disclosures include:",
+      "options": {
+        "A": "Only base salary",
+        "B": "Summary compensation table for named executive officers",
+        "C": "Compensation for all employees",
+        "D": "Only stock option grants"
+      },
+      "correctAnswer": "B",
+      "explanation": "The summary compensation table discloses salary, bonus, stock awards, option awards, and other compensation for the CEO, CFO, and three other highest-paid executives.",
+      "tip": "Summary comp table: CEO, CFO, 3 highest-paid executives.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-026",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Form S-1",
+      "conceptTested": "Registration statement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Form S-1 is used for:",
+      "options": {
+        "A": "Annual reporting",
+        "B": "Initial public offerings and other securities registrations",
+        "C": "Quarterly reporting",
+        "D": "Proxy solicitations"
+      },
+      "correctAnswer": "B",
+      "explanation": "Form S-1 is the registration statement for IPOs and other primary offerings by companies that don't qualify for shorter forms.",
+      "tip": "S-1: registration statement for IPOs and offerings.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-sec-027",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Proxy Statement",
+      "conceptTested": "DEF 14A",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Form DEF 14A (definitive proxy statement) is filed when:",
+      "options": {
+        "A": "Quarterly earnings are released",
+        "B": "Shareholder approval is sought for matters at annual or special meetings",
+        "C": "An 8-K event occurs",
+        "D": "A material acquisition is completed"
+      },
+      "correctAnswer": "B",
+      "explanation": "Proxy statements are filed when shareholder votes are solicited, typically for annual meetings (director elections, auditor ratification, say-on-pay).",
+      "tip": "Proxy (DEF 14A): for shareholder voting matters.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-028",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Beneficial Ownership",
+      "conceptTested": "Form 4",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Form 4 is filed to report:",
+      "options": {
+        "A": "Annual financial statements",
+        "B": "Changes in beneficial ownership of securities by insiders",
+        "C": "New securities offerings",
+        "D": "Quarterly results"
+      },
+      "correctAnswer": "B",
+      "explanation": "Form 4 reports changes in beneficial ownership by officers, directors, and 10% shareholders within 2 business days of the transaction.",
+      "tip": "Form 4: insider trading reports (2 business days).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-sec-029",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Material Weakness",
+      "conceptTested": "ICFR weakness",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A material weakness in internal control over financial reporting:",
+      "options": {
+        "A": "Always results in a financial statement restatement",
+        "B": "Is a deficiency, or combination of deficiencies, where there is a reasonable possibility of a material misstatement not being prevented or detected",
+        "C": "Only relates to IT controls",
+        "D": "Must be corrected within 30 days"
+      },
+      "correctAnswer": "B",
+      "explanation": "A material weakness is a deficiency (or combination) that creates a reasonable possibility that a material misstatement won't be prevented or detected on a timely basis.",
+      "tip": "Material weakness: reasonable possibility of material misstatement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-sec-030",
+      "section": "FAR",
+      "topic": "SEC Reporting",
+      "subtopic": "Going Concern",
+      "conceptTested": "SEC filing requirements",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under SEC rules, substantial doubt about going concern must be assessed for a period of:",
+      "options": {
+        "A": "6 months from the balance sheet date",
+        "B": "12 months from the issuance date of the financial statements",
+        "C": "24 months from the balance sheet date",
+        "D": "The foreseeable future"
+      },
+      "correctAnswer": "B",
+      "explanation": "Management must assess whether conditions raise substantial doubt about the entity's ability to continue as a going concern for 12 months from the date financial statements are issued.",
+      "tip": "Going concern: 12 months from issuance date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    }
+  ]
+}

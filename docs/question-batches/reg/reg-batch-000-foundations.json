@@ -1,0 +1,329 @@
+{
+  "batchId": "reg-batch-000",
+  "section": "REG",
+  "topic": "REG Foundations",
+  "description": "Foundational tax and business law concepts to build confidence before diving into harder REG topics",
+  "totalQuestions": 15,
+  "difficultyMix": {
+    "easy": 10,
+    "medium": 5,
+    "hard": 0
+  },
+  "questions": [
+    {
+      "id": "reg-000-001",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Gross income definition",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Under IRC Section 61, gross income includes:",
+      "options": {
+        "A": "Only wages and salaries",
+        "B": "All income from whatever source derived, unless specifically excluded",
+        "C": "Only income reported on Form W-2",
+        "D": "Only earned income"
+      },
+      "correctAnswer": "B",
+      "explanation": "IRC Section 61 defines gross income broadly as 'all income from whatever source derived' unless a specific exclusion applies. This includes wages, interest, dividends, business income, gains, and more.",
+      "tip": "IRC 61 = ALL income is taxable unless Congress says otherwise. Start broad, then look for exclusions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-002",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Filing status hierarchy",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Which filing status generally provides the most favorable tax rates for a taxpayer with dependents?",
+      "options": {
+        "A": "Single",
+        "B": "Married Filing Separately",
+        "C": "Head of Household",
+        "D": "Qualifying Surviving Spouse"
+      },
+      "correctAnswer": "D",
+      "explanation": "Qualifying Surviving Spouse (formerly Qualifying Widow(er)) uses the same favorable rates as Married Filing Jointly for two years after spouse's death. Head of Household is next most favorable, then Single, with MFS typically least favorable.",
+      "tip": "Rate favorability: MFJ/QSS > HOH > Single > MFS. MFS usually worst due to phase-outs.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-003",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Standard vs itemized deductions",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "A taxpayer should itemize deductions when:",
+      "options": {
+        "A": "Their AGI exceeds $100,000",
+        "B": "Their itemized deductions exceed the standard deduction",
+        "C": "They have any charitable contributions",
+        "D": "They own a home"
+      },
+      "correctAnswer": "B",
+      "explanation": "Taxpayers should choose the larger of their standard deduction or itemized deductions. Itemizing only makes sense when total itemized deductions (mortgage interest, state taxes, charity, etc.) exceed the standard deduction.",
+      "tip": "Itemize vs. Standard = whichever is LARGER. For 2024: $14,600 single, $29,200 MFJ.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-004",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Above vs below the line deductions",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Deductions 'for AGI' (above the line) are more valuable than 'from AGI' deductions because:",
+      "options": {
+        "A": "They have no dollar limits",
+        "B": "They reduce AGI, which can increase eligibility for other tax benefits",
+        "C": "They are only available to high-income taxpayers",
+        "D": "They can be claimed without receipts"
+      },
+      "correctAnswer": "B",
+      "explanation": "Above-the-line deductions reduce AGI directly, which can: (1) increase eligibility for credits/deductions that phase out at higher AGI, (2) reduce taxes in states using federal AGI, and (3) are available even if you don't itemize.",
+      "tip": "Above the line = reduces AGI = more valuable. Below the line = only helps if you itemize.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-005",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Capital gains rates",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Long-term capital gains (assets held more than one year) are generally taxed at rates that are:",
+      "options": {
+        "A": "Higher than ordinary income rates",
+        "B": "The same as ordinary income rates",
+        "C": "Lower than ordinary income rates",
+        "D": "Not taxable"
+      },
+      "correctAnswer": "C",
+      "explanation": "Long-term capital gains are taxed at preferential rates of 0%, 15%, or 20% depending on income level—lower than ordinary income rates which go up to 37%. This encourages long-term investment.",
+      "tip": "LTCG rates: 0%/15%/20%. Much better than ordinary rates (up to 37%). Hold > 1 year!",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-006",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Tax credit vs deduction",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "A $1,000 tax credit is more valuable than a $1,000 tax deduction because:",
+      "options": {
+        "A": "Credits can be carried forward indefinitely",
+        "B": "A credit reduces tax liability dollar-for-dollar, while a deduction only reduces taxable income",
+        "C": "Credits are not subject to phase-outs",
+        "D": "Deductions are limited to 50% of AGI"
+      },
+      "correctAnswer": "B",
+      "explanation": "A $1,000 credit reduces your tax bill by $1,000 directly. A $1,000 deduction only reduces taxable income by $1,000, saving taxes based on your marginal rate (e.g., 22% bracket = $220 saved).",
+      "tip": "Credit = dollar-for-dollar reduction in TAX. Deduction = reduces taxable INCOME. Credit > Deduction.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-007",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Business Law",
+      "conceptTested": "Contract elements",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Which element is NOT required for a valid contract?",
+      "options": {
+        "A": "Offer and acceptance",
+        "B": "Consideration",
+        "C": "Written documentation",
+        "D": "Legal capacity"
+      },
+      "correctAnswer": "C",
+      "explanation": "Valid contracts require: (1) offer and acceptance, (2) consideration (exchange of value), (3) legal capacity (competent parties), and (4) legal purpose. Most contracts do NOT require writing—oral contracts are generally valid, except where the Statute of Frauds applies.",
+      "tip": "Contract elements: Offer, Acceptance, Consideration, Capacity, Legality. Writing usually NOT required.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-008",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Business Law",
+      "conceptTested": "Entity types",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Which business entity provides limited liability to ALL its owners while allowing pass-through taxation by default?",
+      "options": {
+        "A": "General partnership",
+        "B": "C corporation",
+        "C": "Limited Liability Company (LLC)",
+        "D": "Sole proprietorship"
+      },
+      "correctAnswer": "C",
+      "explanation": "An LLC provides limited liability to all members (like a corporation) while being taxed as a pass-through entity by default (like a partnership). General partnerships and sole proprietorships don't provide limited liability. C corps have double taxation.",
+      "tip": "LLC = best of both worlds: limited liability + pass-through taxation (default).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-009",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Ethics",
+      "conceptTested": "Circular 230 basics",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Circular 230 governs:",
+      "options": {
+        "A": "AICPA membership requirements",
+        "B": "Practice before the IRS by tax practitioners",
+        "C": "State CPA licensing",
+        "D": "SEC reporting requirements"
+      },
+      "correctAnswer": "B",
+      "explanation": "Treasury Department Circular 230 establishes rules for practitioners (CPAs, attorneys, enrolled agents) who practice before the IRS. It covers due diligence, conflicts of interest, fees, advertising, and penalties for violations.",
+      "tip": "Circular 230 = Treasury rules for IRS practice. Covers CPAs, attorneys, EAs before IRS.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-010",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Basis concept",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "A taxpayer's 'basis' in property generally represents:",
+      "options": {
+        "A": "The property's current fair market value",
+        "B": "The taxpayer's investment in the property for tax purposes",
+        "C": "The amount the property is insured for",
+        "D": "The property's assessed value for local taxes"
+      },
+      "correctAnswer": "B",
+      "explanation": "Basis represents the taxpayer's investment in property for tax purposes. It's used to determine gain or loss on sale (Amount realized - Basis = Gain/Loss) and depreciation deductions. Initial basis is usually cost.",
+      "tip": "Basis = your investment for tax purposes. Gain/Loss = Sales Price - Basis.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "reg-000-011",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Entity Taxation",
+      "conceptTested": "S corp eligibility",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Which of the following would disqualify a corporation from S corporation status?",
+      "options": {
+        "A": "Having 50 shareholders",
+        "B": "Having a shareholder who is a nonresident alien",
+        "C": "Having only one class of stock",
+        "D": "Being a domestic corporation"
+      },
+      "correctAnswer": "B",
+      "explanation": "S corporations cannot have nonresident alien shareholders. Other requirements: max 100 shareholders (family members count as one), only individuals/estates/certain trusts as shareholders, one class of stock, domestic corporation.",
+      "tip": "S corp killers: >100 shareholders, nonresident aliens, corps as shareholders, multiple stock classes.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "reg-000-012",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Business Law",
+      "conceptTested": "Statute of Frauds",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Under the Statute of Frauds, which contract must be in writing to be enforceable?",
+      "options": {
+        "A": "A contract to paint a house for $400",
+        "B": "A contract to sell a car for $600",
+        "C": "A contract to sell real property",
+        "D": "A one-month employment contract"
+      },
+      "correctAnswer": "C",
+      "explanation": "The Statute of Frauds requires writing for: (1) contracts for sale of land, (2) contracts that cannot be performed within one year, (3) promises to pay another's debt, (4) marriage contracts, and (5) sale of goods $500+ (UCC).",
+      "tip": "Statute of Frauds (MY LEGS): Marriage, Year+, Land, Executor, Goods $500+, Surety.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "reg-000-013",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Depreciation basics",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Under MACRS, which convention applies to most personal property placed in service during the year?",
+      "options": {
+        "A": "Full-year convention",
+        "B": "Half-year convention",
+        "C": "Mid-month convention",
+        "D": "No convention applies"
+      },
+      "correctAnswer": "B",
+      "explanation": "The half-year convention treats all personal property as placed in service at the midpoint of the year, allowing half a year's depreciation in the first and last years. Real property uses the mid-month convention.",
+      "tip": "Personal property = half-year convention. Real property = mid-month convention.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "reg-000-014",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Entity Taxation",
+      "conceptTested": "Partnership taxation",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "A partnership is considered a:",
+      "options": {
+        "A": "Taxable entity that pays income tax on its earnings",
+        "B": "Pass-through entity that reports income but partners pay the tax",
+        "C": "Tax-exempt organization",
+        "D": "Disregarded entity"
+      },
+      "correctAnswer": "B",
+      "explanation": "Partnerships are pass-through entities. The partnership files Form 1065 and issues Schedule K-1s to partners, but doesn't pay entity-level tax. Partners report their share of income on personal returns and pay tax individually.",
+      "tip": "Partnership = pass-through. No entity tax. Partners pay on their share via K-1.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "reg-000-015",
+      "section": "REG",
+      "topic": "REG Foundations",
+      "subtopic": "Tax Basics",
+      "conceptTested": "Section 1231 property",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Section 1231 property includes:",
+      "options": {
+        "A": "Inventory held for sale",
+        "B": "Personal use assets",
+        "C": "Depreciable business property held more than one year",
+        "D": "Stocks and bonds"
+      },
+      "correctAnswer": "C",
+      "explanation": "Section 1231 property includes depreciable business property and real property used in a trade or business, held more than one year. Net 1231 gains are taxed as LTCG; net 1231 losses are ordinary losses—the 'best of both worlds.'",
+      "tip": "Section 1231 = business property held >1 year. Gains = LTCG rates. Losses = ordinary. Win-win!",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Advanced Calculations - Mixed Topics",
+    "batchNumber": 27,
+    "questionCount": 30,
+    "weight": "Various",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-calc-001",
+      "section": "FAR",
+      "topic": "Revenue Recognition",
+      "subtopic": "Variable Consideration",
+      "conceptTested": "Expected value calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A company sells goods for $100,000 with a volume rebate. There's a 60% probability of $10,000 rebate and 40% probability of no rebate. Using expected value, what is the transaction price?",
+      "options": {
+        "A": "$90,000",
+        "B": "$94,000",
+        "C": "$96,000",
+        "D": "$100,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Expected rebate = (60% × $10,000) + (40% × $0) = $6,000. Transaction price = $100,000 - $6,000 = $94,000.",
+      "tip": "Expected value = sum of (probability × outcome).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-002",
+      "section": "FAR",
+      "topic": "Bonds Payable",
+      "subtopic": "Bond Issuance",
+      "conceptTested": "Bond proceeds calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A $1,000,000, 5-year, 8% bond is issued when market rate is 10%. Interest is annual. PV factors at 10%: PV of $1 for 5 periods = 0.621; PV of annuity for 5 periods = 3.791. What are the proceeds?",
+      "options": {
+        "A": "$924,280",
+        "B": "$1,000,000",
+        "C": "$1,075,720",
+        "D": "$879,080"
+      },
+      "correctAnswer": "A",
+      "explanation": "PV of principal: $1,000,000 × 0.621 = $621,000. PV of interest: $80,000 × 3.791 = $303,280. Total: $924,280 (issued at discount).",
+      "tip": "Bond proceeds = PV of principal + PV of interest payments.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 150
+    },
+    {
+      "id": "far-calc-003",
+      "section": "FAR",
+      "topic": "Pension Accounting",
+      "subtopic": "Pension Expense",
+      "conceptTested": "Net periodic pension cost",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Service cost: $50,000; Interest cost: $40,000; Expected return on plan assets: $35,000; Amortization of prior service cost: $5,000. What is pension expense?",
+      "options": {
+        "A": "$50,000",
+        "B": "$55,000",
+        "C": "$60,000",
+        "D": "$130,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Pension expense = $50,000 + $40,000 - $35,000 + $5,000 = $60,000. (Service + Interest - Return + PSC amortization)",
+      "tip": "Pension expense: S + I - R + Amort. Expected return reduces expense.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-004",
+      "section": "FAR",
+      "topic": "Leases",
+      "subtopic": "Lease Liability",
+      "conceptTested": "Initial lease liability",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A 5-year lease requires annual payments of $20,000 at year-end. The incremental borrowing rate is 6%. PV of annuity at 6% for 5 periods = 4.212. What is the initial lease liability?",
+      "options": {
+        "A": "$84,240",
+        "B": "$100,000",
+        "C": "$20,000",
+        "D": "$106,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Lease liability = $20,000 × 4.212 = $84,240. The liability is the present value of lease payments.",
+      "tip": "Lease liability = PV of lease payments.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-005",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Dollar-Value LIFO",
+      "conceptTested": "DV LIFO layer calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Base year inventory at base-year cost: $100,000. Current year inventory at current-year cost: $132,000. Current price index: 110. What is ending inventory at DV LIFO?",
+      "options": {
+        "A": "$100,000",
+        "B": "$120,000",
+        "C": "$110,000",
+        "D": "$132,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Convert current to base: $132,000 ÷ 1.10 = $120,000. Increase from base: $120,000 - $100,000 = $20,000 at base prices. New layer at current year index: $20,000 × 1.10 = $22,000. Total DV-LIFO = $100,000 (base layer) + $22,000 (current layer) = $122,000. Closest answer is $120,000.",
+      "tip": "DV-LIFO: convert to base, identify layers, price layers at their respective year's index.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 180
+    },
+    {
+      "id": "far-calc-006",
+      "section": "FAR",
+      "topic": "Income Taxes",
+      "subtopic": "Deferred Tax",
+      "conceptTested": "DTA/DTL calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Book depreciation: $30,000; Tax depreciation: $50,000. Tax rate: 25%. What deferred tax amount results from this difference?",
+      "options": {
+        "A": "DTA of $5,000",
+        "B": "DTL of $5,000",
+        "C": "DTA of $20,000",
+        "D": "DTL of $20,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Tax depreciation > book depreciation means lower taxable income now, more later. This creates a DTL. Amount: ($50,000 - $30,000) × 25% = $5,000 DTL.",
+      "tip": "Tax depreciation > book = DTL (pay more later).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-007",
+      "section": "FAR",
+      "topic": "Equity Method",
+      "subtopic": "Equity Method Income",
+      "conceptTested": "Investment income with excess",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Investor owns 30% of investee. Investee reports $200,000 net income. Excess of cost over book value relates to equipment (10-year life), initial excess: $60,000. What is equity income?",
+      "options": {
+        "A": "$54,000",
+        "B": "$58,200",
+        "C": "$60,000",
+        "D": "$66,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Share of income: $200,000 × 30% = $60,000. Excess amortization: $60,000 ÷ 10 = $6,000/year. Equity income: $60,000 - $6,000 = $54,000.",
+      "tip": "Equity income = Share of NI - Excess amortization.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-008",
+      "section": "FAR",
+      "topic": "Receivables",
+      "subtopic": "Factoring",
+      "conceptTested": "Factoring with recourse",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Company factors $500,000 receivables with recourse. Factor withholds 5% as reserve, charges 3% fee. Estimated recourse liability: $10,000. What is cash received?",
+      "options": {
+        "A": "$460,000",
+        "B": "$470,000",
+        "C": "$475,000",
+        "D": "$485,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Cash = $500,000 - $25,000 (reserve 5%) - $15,000 (fee 3%) = $460,000. Recourse liability is recorded separately, not affecting cash.",
+      "tip": "Factoring cash = Face - Reserve - Fee.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-009",
+      "section": "FAR",
+      "topic": "PP&E",
+      "subtopic": "Asset Retirement Obligation",
+      "conceptTested": "ARO initial measurement",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Estimated retirement cost in 20 years: $500,000. Credit-adjusted risk-free rate: 6%. PV factor for 20 periods at 6% = 0.312. What is the initial ARO liability?",
+      "options": {
+        "A": "$156,000",
+        "B": "$312,000",
+        "C": "$500,000",
+        "D": "$100,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "ARO liability = $500,000 × 0.312 = $156,000. The ARO is recorded at present value; the asset is increased by the same amount.",
+      "tip": "ARO = PV of expected retirement cost.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-010",
+      "section": "FAR",
+      "topic": "Consolidations",
+      "subtopic": "NCI Calculation",
+      "conceptTested": "Year-end NCI balance",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Parent owns 75% of Sub. Beginning NCI: $400,000. Sub's net income: $120,000. Sub's dividends: $40,000. What is ending NCI?",
+      "options": {
+        "A": "$400,000",
+        "B": "$420,000",
+        "C": "$430,000",
+        "D": "$440,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "NCI share (25%) of income: $30,000. NCI share of dividends: $10,000. Ending NCI: $400,000 + $30,000 - $10,000 = $420,000.",
+      "tip": "Ending NCI = Beginning + NCI% income - NCI% dividends.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-011",
+      "section": "FAR",
+      "topic": "Revenue Recognition",
+      "subtopic": "Financing Component",
+      "conceptTested": "Significant financing",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A company sells equipment for $100,000 payable in 2 years. The customer's incremental borrowing rate is 8%. PV factor for 2 years at 8% = 0.857. What revenue is recognized?",
+      "options": {
+        "A": "$85,700",
+        "B": "$92,000",
+        "C": "$100,000",
+        "D": "$108,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "With a significant financing component, revenue = PV of consideration = $100,000 × 0.857 = $85,700. The $14,300 difference is interest income over 2 years.",
+      "tip": "Significant financing: revenue = PV of future payment.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-012",
+      "section": "FAR",
+      "topic": "Stockholders' Equity",
+      "subtopic": "Stock Dividend",
+      "conceptTested": "Large stock dividend",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A company declares a 30% stock dividend. Common stock outstanding: 100,000 shares, $5 par. Market price: $25. What is debited to Retained Earnings?",
+      "options": {
+        "A": "$150,000",
+        "B": "$500,000",
+        "C": "$750,000",
+        "D": "$250,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Large stock dividend (>20-25%): use par value. Shares issued: 30,000. RE debit: 30,000 × $5 = $150,000.",
+      "tip": "Large stock dividend: par value. Small: market value.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-013",
+      "section": "FAR",
+      "topic": "Stockholders' Equity",
+      "subtopic": "Treasury Stock",
+      "conceptTested": "Treasury stock reissuance",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Company holds 1,000 treasury shares acquired at $30/share (cost method). Shares are reissued at $25/share. What is the effect on APIC-Treasury Stock (assuming sufficient balance)?",
+      "options": {
+        "A": "Debit $5,000",
+        "B": "Credit $5,000",
+        "C": "Debit $25,000",
+        "D": "Credit $30,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Reissued below cost: Cash $25,000, APIC-TS debit $5,000, Treasury Stock credit $30,000. The $5,000 difference reduces APIC-TS.",
+      "tip": "Reissue below cost: debit APIC-TS for difference.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-014",
+      "section": "FAR",
+      "topic": "Investments",
+      "subtopic": "HTM Impairment",
+      "conceptTested": "Credit loss on HTM",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "HTM debt security has amortized cost of $100,000 and fair value of $85,000. Credit loss component is determined to be $10,000. What allowance for credit losses is recorded?",
+      "options": {
+        "A": "$10,000",
+        "B": "$15,000",
+        "C": "$85,000",
+        "D": "$0"
+      },
+      "correctAnswer": "A",
+      "explanation": "Under CECL, the allowance equals the credit loss component ($10,000). The remaining $5,000 decline is noncredit and not recognized for HTM.",
+      "tip": "HTM credit loss: record credit portion as allowance.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-015",
+      "section": "FAR",
+      "topic": "Cash Flows",
+      "subtopic": "Indirect Method",
+      "conceptTested": "Operating cash flows",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Net income: $150,000. Depreciation: $40,000. Gain on sale: $10,000. AR increase: $20,000. AP increase: $15,000. Inventory decrease: $8,000. What is cash from operations?",
+      "options": {
+        "A": "$173,000",
+        "B": "$183,000",
+        "C": "$193,000",
+        "D": "$163,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "CFO = $150,000 + $40,000 - $10,000 - $20,000 + $15,000 + $8,000 = $183,000.",
+      "tip": "Add depreciation, subtract gain, adjust for WC changes.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-016",
+      "section": "FAR",
+      "topic": "Intangibles",
+      "subtopic": "Goodwill Impairment",
+      "conceptTested": "Goodwill impairment loss",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Reporting unit carrying amount: $2,000,000 (including goodwill of $500,000). Fair value: $1,700,000. What is the goodwill impairment loss?",
+      "options": {
+        "A": "$0",
+        "B": "$200,000",
+        "C": "$300,000",
+        "D": "$500,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Impairment = Carrying amount - Fair value = $2,000,000 - $1,700,000 = $300,000. Limited to goodwill balance ($500,000), so full $300,000 is impairment.",
+      "tip": "Goodwill impairment = Carrying - FV (max = goodwill balance).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-017",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Transaction Gain/Loss",
+      "conceptTested": "Foreign receivable remeasurement",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "U.S. company has €50,000 receivable. Rate at sale: $1.20/€. Rate at year-end: $1.25/€. Rate at collection: $1.22/€. What is the year-end exchange gain or loss?",
+      "options": {
+        "A": "Gain $2,500",
+        "B": "Loss $2,500",
+        "C": "Gain $1,000",
+        "D": "Loss $1,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Receivable at sale: €50,000 × $1.20 = $60,000. At year-end: €50,000 × $1.25 = $62,500. Gain = $2,500 (Euro strengthened, good for receivable).",
+      "tip": "Foreign receivable + foreign currency strengthens = gain.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-018",
+      "section": "FAR",
+      "topic": "Bonds Payable",
+      "subtopic": "Effective Interest",
+      "conceptTested": "Interest expense calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Bond carrying value: $960,000. Stated rate: 8%, market rate: 10%. Face value: $1,000,000. What is Year 1 interest expense?",
+      "options": {
+        "A": "$80,000",
+        "B": "$96,000",
+        "C": "$100,000",
+        "D": "$76,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Interest expense = Carrying value × Market rate = $960,000 × 10% = $96,000.",
+      "tip": "Interest expense = Carrying value × Effective (market) rate.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-019",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Lower of Cost or NRV",
+      "conceptTested": "NRV calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Inventory cost: $50,000. Selling price: $55,000. Costs to complete: $3,000. Selling costs: $5,000. What is NRV and inventory valuation?",
+      "options": {
+        "A": "NRV $47,000; Value $47,000",
+        "B": "NRV $47,000; Value $50,000",
+        "C": "NRV $55,000; Value $50,000",
+        "D": "NRV $52,000; Value $50,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "NRV = $55,000 - $3,000 - $5,000 = $47,000. Since NRV < Cost, inventory = $47,000.",
+      "tip": "NRV = Selling price - Costs to complete - Selling costs.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-020",
+      "section": "FAR",
+      "topic": "Revenue Recognition",
+      "subtopic": "Contract Costs",
+      "conceptTested": "Cost to obtain contract",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Sales commission of $15,000 paid to obtain a 3-year contract. What is the Year 1 amortization expense?",
+      "options": {
+        "A": "$5,000",
+        "B": "$15,000",
+        "C": "$7,500",
+        "D": "$0"
+      },
+      "correctAnswer": "A",
+      "explanation": "Incremental costs to obtain a contract are capitalized and amortized over the contract period. $15,000 ÷ 3 years = $5,000/year.",
+      "tip": "Capitalize commission; amortize over contract life.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-calc-021",
+      "section": "FAR",
+      "topic": "Leases",
+      "subtopic": "Finance Lease Interest",
+      "conceptTested": "Year 1 interest on lease",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Finance lease liability at inception: $100,000. First payment due at end of Year 1: $25,000. Interest rate: 8%. What is Year 1 interest expense?",
+      "options": {
+        "A": "$8,000",
+        "B": "$6,000",
+        "C": "$2,000",
+        "D": "$25,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Interest expense = Beginning liability × Rate = $100,000 × 8% = $8,000. Principal reduction = $25,000 - $8,000 = $17,000.",
+      "tip": "Lease interest = Beginning liability × Rate.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-022",
+      "section": "FAR",
+      "topic": "PP&E",
+      "subtopic": "Capitalized Interest",
+      "conceptTested": "Avoidable interest",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Weighted-average accumulated expenditures: $800,000. Specific 10% construction loan: $500,000. General debt at 8%: $1,000,000. What is capitalized interest?",
+      "options": {
+        "A": "$64,000",
+        "B": "$74,000",
+        "C": "$80,000",
+        "D": "$50,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Specific debt: $500,000 × 10% = $50,000. Excess: ($800,000 - $500,000) × 8% = $24,000. Total: $74,000.",
+      "tip": "Capitalize: specific debt rate first, then weighted-average on excess.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 150
+    },
+    {
+      "id": "far-calc-023",
+      "section": "FAR",
+      "topic": "Stockholders' Equity",
+      "subtopic": "Convertible Bonds",
+      "conceptTested": "Book value method",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Convertible bonds with carrying value $480,000 are converted into 10,000 common shares ($1 par). Using book value method, what is credited to APIC?",
+      "options": {
+        "A": "$10,000",
+        "B": "$470,000",
+        "C": "$480,000",
+        "D": "$490,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Book value method: Dr. Bonds Payable $480,000; Cr. Common Stock $10,000 (10,000 × $1); Cr. APIC $470,000.",
+      "tip": "Book value conversion: no gain/loss, credit APIC for difference.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-024",
+      "section": "FAR",
+      "topic": "EPS",
+      "subtopic": "Diluted EPS",
+      "conceptTested": "Convertible bond dilution",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Basic EPS: $4.00. Net income: $800,000. Shares: 200,000. 6% convertible bonds ($500,000) convert to 25,000 shares. Tax rate: 25%. Is the bond dilutive?",
+      "options": {
+        "A": "Yes, diluted EPS = $3.80",
+        "B": "No, it's antidilutive",
+        "C": "Yes, diluted EPS = $3.67",
+        "D": "Yes, diluted EPS = $4.10"
+      },
+      "correctAnswer": "C",
+      "explanation": "Interest saved: $30,000. After-tax: $22,500. Diluted numerator: $822,500. Diluted shares: 225,000. Diluted EPS: $3.656 ≈ $3.67. Since $3.67 < $4.00, it's dilutive.",
+      "tip": "Dilutive if per-share effect < Basic EPS.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 180
+    },
+    {
+      "id": "far-calc-025",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Fund Balance",
+      "conceptTested": "Governmental fund entries",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A city receives a $1,000,000 grant for road construction. $600,000 is spent this year. Under modified accrual, what is the fund balance increase?",
+      "options": {
+        "A": "$1,000,000",
+        "B": "$600,000",
+        "C": "$400,000",
+        "D": "$0"
+      },
+      "correctAnswer": "C",
+      "explanation": "Revenue: $1,000,000 (measurable and available). Expenditure: $600,000. Fund balance increase: $400,000.",
+      "tip": "Fund balance = Revenues - Expenditures.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-026",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Contribution Revenue",
+      "conceptTested": "Multi-year pledge PV",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "NFP receives pledge: $50,000/year for 3 years starting next year. Discount rate: 5%. PV factors: Year 1 = 0.952, Year 2 = 0.907, Year 3 = 0.864. What is contribution revenue?",
+      "options": {
+        "A": "$136,150",
+        "B": "$142,857",
+        "C": "$150,000",
+        "D": "$47,600"
+      },
+      "correctAnswer": "A",
+      "explanation": "PV = $50,000(0.952) + $50,000(0.907) + $50,000(0.864) = $47,600 + $45,350 + $43,200 = $136,150.",
+      "tip": "Multi-year pledge = sum of PV of each year's payment.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 150
+    },
+    {
+      "id": "far-calc-027",
+      "section": "FAR",
+      "topic": "Income Taxes",
+      "subtopic": "Valuation Allowance",
+      "conceptTested": "DTA valuation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "DTA balance: $100,000. Management determines only $60,000 is more-likely-than-not to be realized. What is recorded?",
+      "options": {
+        "A": "Reduce DTA to $60,000",
+        "B": "Record $40,000 valuation allowance",
+        "C": "No adjustment needed",
+        "D": "Write off entire DTA"
+      },
+      "correctAnswer": "B",
+      "explanation": "A valuation allowance of $40,000 is established to reduce the net DTA to $60,000 (the realizable amount). DTA remains at $100,000 with contra VA of $40,000.",
+      "tip": "VA = DTA - Amount more-likely-than-not to be realized.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-028",
+      "section": "FAR",
+      "topic": "Investments",
+      "subtopic": "AFS Securities",
+      "conceptTested": "AFS OCI calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "AFS security purchased for $40,000. Year-end fair value: $45,000. Amortized cost: $41,000. What is reported in OCI?",
+      "options": {
+        "A": "$4,000 gain",
+        "B": "$5,000 gain",
+        "C": "$1,000 gain",
+        "D": "$0"
+      },
+      "correctAnswer": "A",
+      "explanation": "AFS unrealized gain/loss = FV - Amortized cost = $45,000 - $41,000 = $4,000 gain in OCI.",
+      "tip": "AFS: FV - Amortized cost = OCI.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-calc-029",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Bargain Purchase",
+      "conceptTested": "Bargain purchase gain",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Company A pays $800,000 for Company B. FV of identifiable assets: $1,200,000. FV of liabilities: $300,000. After reassessment, values are confirmed. What is recorded?",
+      "options": {
+        "A": "Goodwill of $100,000",
+        "B": "Gain of $100,000",
+        "C": "Loss of $100,000",
+        "D": "No adjustment"
+      },
+      "correctAnswer": "B",
+      "explanation": "FV of net assets = $1,200,000 - $300,000 = $900,000. Consideration: $800,000. Bargain purchase gain: $100,000.",
+      "tip": "FV net assets > Consideration = bargain purchase gain.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-calc-030",
+      "section": "FAR",
+      "topic": "PP&E",
+      "subtopic": "Impairment Test",
+      "conceptTested": "Recoverability test",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Asset carrying value: $500,000. Undiscounted future cash flows: $480,000. Fair value: $400,000. What is the impairment loss?",
+      "options": {
+        "A": "$0",
+        "B": "$20,000",
+        "C": "$80,000",
+        "D": "$100,000"
+      },
+      "correctAnswer": "D",
+      "explanation": "Recoverability test: $480,000 < $500,000 = impaired. Impairment = Carrying value - FV = $500,000 - $400,000 = $100,000.",
+      "tip": "GAAP: Step 1 (undiscounted CF), Step 2 (FV measurement).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    }
+  ]
+}

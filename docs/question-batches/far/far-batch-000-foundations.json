@@ -1,0 +1,329 @@
+{
+  "batchId": "far-batch-000",
+  "section": "FAR",
+  "topic": "FAR Foundations",
+  "description": "Foundational accounting concepts to build confidence before diving into harder FAR topics",
+  "totalQuestions": 15,
+  "difficultyMix": {
+    "easy": 10,
+    "medium": 5,
+    "hard": 0
+  },
+  "questions": [
+    {
+      "id": "far-000-001",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Conceptual Framework",
+      "conceptTested": "Primary objective of financial reporting",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "According to the FASB Conceptual Framework, the primary objective of financial reporting is to provide information that is useful to:",
+      "options": {
+        "A": "Management for internal decision-making",
+        "B": "Existing and potential investors, lenders, and other creditors for making decisions about providing resources",
+        "C": "Government regulators for tax purposes",
+        "D": "Employees for wage negotiations"
+      },
+      "correctAnswer": "B",
+      "explanation": "The primary objective of general-purpose financial reporting is to provide financial information useful to existing and potential investors, lenders, and other creditors in making decisions about providing resources to the entity.",
+      "tip": "Financial reporting's main audience = investors and creditors making resource allocation decisions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-002",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Conceptual Framework",
+      "conceptTested": "Fundamental qualitative characteristics",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "The two fundamental qualitative characteristics of useful financial information are:",
+      "options": {
+        "A": "Comparability and consistency",
+        "B": "Relevance and faithful representation",
+        "C": "Timeliness and understandability",
+        "D": "Verifiability and materiality"
+      },
+      "correctAnswer": "B",
+      "explanation": "Relevance and faithful representation are the fundamental characteristics. Relevance means information can influence decisions. Faithful representation means information is complete, neutral, and free from error. Comparability, timeliness, verifiability, and understandability are enhancing characteristics.",
+      "tip": "Fundamental = Relevance + Faithful Representation. Everything else is 'enhancing.'",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-003",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Financial Statements",
+      "conceptTested": "Basic accounting equation",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "The basic accounting equation is:",
+      "options": {
+        "A": "Revenue - Expenses = Net Income",
+        "B": "Assets = Liabilities + Equity",
+        "C": "Cash In - Cash Out = Cash Flow",
+        "D": "Debits = Credits"
+      },
+      "correctAnswer": "B",
+      "explanation": "Assets = Liabilities + Equity is the fundamental accounting equation. Every transaction must keep this equation in balance. The balance sheet is built on this equation.",
+      "tip": "A = L + E is the foundation of double-entry accounting. Must always balance.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-004",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Financial Statements",
+      "conceptTested": "Four basic financial statements",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Which of the following is NOT one of the four basic financial statements?",
+      "options": {
+        "A": "Balance Sheet",
+        "B": "Income Statement",
+        "C": "Statement of Cash Flows",
+        "D": "Budget vs. Actual Report"
+      },
+      "correctAnswer": "D",
+      "explanation": "The four basic financial statements are: (1) Balance Sheet/Statement of Financial Position, (2) Income Statement/Statement of Comprehensive Income, (3) Statement of Cash Flows, and (4) Statement of Changes in Equity. Budget vs. Actual is internal management reporting.",
+      "tip": "Four statements: Balance Sheet, Income Statement, Cash Flows, Equity Changes.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-005",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Accrual Accounting",
+      "conceptTested": "Cash vs accrual basis",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Under accrual accounting, revenue is recognized when:",
+      "options": {
+        "A": "Cash is received",
+        "B": "The performance obligation is satisfied",
+        "C": "A contract is signed",
+        "D": "An invoice is sent"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under accrual accounting (GAAP), revenue is recognized when performance obligations are satisfied—when goods or services are transferred to the customer—regardless of when cash is received. This is the core principle of ASC 606.",
+      "tip": "Accrual = when earned, not when cash received. Performance obligation satisfied = revenue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-006",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Basic Transactions",
+      "conceptTested": "Debits and credits",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "When a company pays cash to purchase equipment, which accounts are affected?",
+      "options": {
+        "A": "Equipment increases (debit), Cash decreases (credit)",
+        "B": "Equipment decreases (credit), Cash increases (debit)",
+        "C": "Equipment increases (credit), Cash decreases (debit)",
+        "D": "Both accounts increase"
+      },
+      "correctAnswer": "A",
+      "explanation": "Purchasing equipment with cash increases the Equipment asset (debit) and decreases the Cash asset (credit). Total assets remain the same—it's an exchange of one asset for another.",
+      "tip": "Assets: Debit = increase, Credit = decrease. This is just swapping one asset for another.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-007",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Current Assets",
+      "conceptTested": "Current vs noncurrent classification",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "An asset is classified as 'current' if it is expected to be converted to cash or used within:",
+      "options": {
+        "A": "30 days",
+        "B": "90 days",
+        "C": "One year or the operating cycle, whichever is longer",
+        "D": "Five years"
+      },
+      "correctAnswer": "C",
+      "explanation": "Current assets are expected to be realized, sold, or consumed within one year or the normal operating cycle, whichever is longer. Common examples: cash, accounts receivable, inventory, prepaid expenses.",
+      "tip": "Current = within 1 year or operating cycle. Most companies use 1 year.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-008",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Inventory",
+      "conceptTested": "Inventory cost flow methods",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Which inventory cost flow assumption results in the highest cost of goods sold during periods of rising prices?",
+      "options": {
+        "A": "FIFO (First-In, First-Out)",
+        "B": "LIFO (Last-In, First-Out)",
+        "C": "Weighted average",
+        "D": "Specific identification"
+      },
+      "correctAnswer": "B",
+      "explanation": "During rising prices, LIFO assigns the most recent (higher) costs to COGS, resulting in higher COGS and lower net income. FIFO uses older (lower) costs for COGS, resulting in lower COGS and higher net income.",
+      "tip": "Rising prices: LIFO = higher COGS, lower income, lower taxes. FIFO = opposite.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-009",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Depreciation",
+      "conceptTested": "Straight-line depreciation",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Straight-line depreciation allocates the cost of an asset:",
+      "options": {
+        "A": "Based on units produced",
+        "B": "Equally over each period of the asset's useful life",
+        "C": "More in early years, less in later years",
+        "D": "Only when the asset is sold"
+      },
+      "correctAnswer": "B",
+      "explanation": "Straight-line depreciation spreads the depreciable amount (cost minus salvage value) equally over the asset's useful life. Formula: (Cost - Salvage Value) ÷ Useful Life = Annual Depreciation.",
+      "tip": "Straight-line = (Cost - Salvage) ÷ Life. Same amount every year.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-010",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Liabilities",
+      "conceptTested": "Accrued expenses",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "An accrued expense represents:",
+      "options": {
+        "A": "Cash paid in advance for future expenses",
+        "B": "An expense incurred but not yet paid",
+        "C": "Revenue earned but not yet collected",
+        "D": "A prepaid asset"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accrued expenses (accrued liabilities) are expenses that have been incurred but not yet paid. Examples: wages payable, interest payable, utilities payable. They require an adjusting entry to record the expense and liability.",
+      "tip": "Accrued expense = owe money for expense already incurred. Credit the liability.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-000-011",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Revenue Recognition",
+      "conceptTested": "ASC 606 five-step model",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "The first step in the ASC 606 revenue recognition model is to:",
+      "options": {
+        "A": "Determine the transaction price",
+        "B": "Identify the contract with the customer",
+        "C": "Identify the performance obligations",
+        "D": "Recognize revenue when obligations are satisfied"
+      },
+      "correctAnswer": "B",
+      "explanation": "The five steps of ASC 606: (1) Identify the contract, (2) Identify performance obligations, (3) Determine transaction price, (4) Allocate price to obligations, (5) Recognize revenue when obligations are satisfied.",
+      "tip": "ASC 606 five steps: Contract → Obligations → Price → Allocate → Recognize.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-000-012",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Leases",
+      "conceptTested": "ASC 842 basics",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Under ASC 842, most leases for lessees result in recognizing:",
+      "options": {
+        "A": "Only rental expense",
+        "B": "A right-of-use asset and a lease liability on the balance sheet",
+        "C": "Only a footnote disclosure",
+        "D": "Goodwill"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 842 requires lessees to recognize most leases (over 12 months) on the balance sheet as a right-of-use (ROU) asset and corresponding lease liability. This applies to both finance and operating leases.",
+      "tip": "ASC 842 = leases go on balance sheet. ROU asset + Lease liability. Operating leases included!",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-000-013",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Statement of Cash Flows",
+      "conceptTested": "Cash flow categories",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Interest paid is classified in the statement of cash flows under which category for a business enterprise under US GAAP?",
+      "options": {
+        "A": "Operating activities",
+        "B": "Investing activities",
+        "C": "Financing activities",
+        "D": "It is not reported in cash flows"
+      },
+      "correctAnswer": "A",
+      "explanation": "Under US GAAP, interest paid is classified as operating cash flow (despite being a financing cost). Interest received and dividends received are also operating. Dividends paid is financing. IFRS allows more flexibility.",
+      "tip": "US GAAP: Interest paid = operating. Dividends paid = financing. (IFRS allows choice.)",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-000-014",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Equity",
+      "conceptTested": "Treasury stock",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "When a company repurchases its own common stock, treasury stock is:",
+      "options": {
+        "A": "Recorded as an asset",
+        "B": "Recorded as a reduction of stockholders' equity",
+        "C": "Recorded as a liability",
+        "D": "Immediately retired and removed from the books"
+      },
+      "correctAnswer": "B",
+      "explanation": "Treasury stock is a company's own stock that has been repurchased. It's reported as a contra-equity account, reducing total stockholders' equity. It's not an asset because a company cannot own itself.",
+      "tip": "Treasury stock = contra-equity (reduces equity). NOT an asset. Company can't own itself.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-000-015",
+      "section": "FAR",
+      "topic": "FAR Foundations",
+      "subtopic": "Consolidations",
+      "conceptTested": "Consolidation requirement",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "A parent company is generally required to consolidate a subsidiary when the parent owns more than:",
+      "options": {
+        "A": "20% of voting stock",
+        "B": "50% of voting stock",
+        "C": "80% of voting stock",
+        "D": "100% of voting stock"
+      },
+      "correctAnswer": "B",
+      "explanation": "Consolidation is required when the parent has a controlling financial interest, typically ownership of more than 50% of voting stock. 20-50% ownership usually requires equity method accounting. Control can also exist with less than 50% in certain circumstances.",
+      "tip": ">50% = consolidate. 20-50% = equity method. <20% = usually fair value.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    }
+  ]
+}

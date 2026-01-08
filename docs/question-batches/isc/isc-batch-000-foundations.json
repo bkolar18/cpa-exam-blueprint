@@ -1,0 +1,329 @@
+{
+  "batchId": "isc-batch-000",
+  "section": "ISC",
+  "topic": "ISC Foundations",
+  "description": "Foundational concepts to build confidence before diving into harder ISC topics",
+  "totalQuestions": 15,
+  "difficultyMix": {
+    "easy": 10,
+    "medium": 5,
+    "hard": 0
+  },
+  "questions": [
+    {
+      "id": "isc-000-001",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Definition of IT general controls",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "IT general controls (ITGCs) are best described as:",
+      "options": {
+        "A": "Controls that apply only to specific applications",
+        "B": "Policies and procedures that apply to all IT systems and support the effective functioning of application controls",
+        "C": "Physical security measures for data centers only",
+        "D": "Controls implemented by end users"
+      },
+      "correctAnswer": "B",
+      "explanation": "IT general controls are broad controls that apply across the IT environment, including access controls, change management, operations, and data backup. They support the effectiveness of application controls.",
+      "tip": "ITGCs = foundation for all IT controls. Think: access, changes, operations, backup.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-002",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "CIA Triad",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "The three core principles of information security are commonly referred to as:",
+      "options": {
+        "A": "Prevention, Detection, Correction",
+        "B": "Confidentiality, Integrity, Availability",
+        "C": "Authentication, Authorization, Accounting",
+        "D": "Encryption, Decryption, Transmission"
+      },
+      "correctAnswer": "B",
+      "explanation": "The CIA Triad represents the three fundamental principles of information security: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy and completeness), and Availability (ensuring systems and data are accessible when needed).",
+      "tip": "CIA Triad = foundation of all security. Memorize: Confidentiality, Integrity, Availability.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-003",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Authentication vs Authorization",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "What is the difference between authentication and authorization?",
+      "options": {
+        "A": "They are the same thing",
+        "B": "Authentication verifies identity; authorization determines what actions a user can perform",
+        "C": "Authorization verifies identity; authentication determines access rights",
+        "D": "Authentication is for users; authorization is for systems"
+      },
+      "correctAnswer": "B",
+      "explanation": "Authentication answers 'Who are you?' by verifying identity (passwords, biometrics, tokens). Authorization answers 'What can you do?' by determining access rights and permissions after identity is confirmed.",
+      "tip": "Authentication = WHO you are. Authorization = WHAT you can do. Always in that order.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-004",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Types of controls",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Which type of control is designed to discourage potential attackers?",
+      "options": {
+        "A": "Detective control",
+        "B": "Corrective control",
+        "C": "Preventive control",
+        "D": "Deterrent control"
+      },
+      "correctAnswer": "D",
+      "explanation": "Deterrent controls discourage potential attackers (warning signs, visible cameras). Preventive controls stop attacks. Detective controls identify attacks. Corrective controls fix damage after an attack.",
+      "tip": "Control types: Deterrent (discourage), Preventive (stop), Detective (find), Corrective (fix).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-005",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Firewall purpose",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "The primary purpose of a firewall is to:",
+      "options": {
+        "A": "Encrypt data transmissions",
+        "B": "Filter network traffic based on predetermined rules",
+        "C": "Detect malware on computers",
+        "D": "Back up important data"
+      },
+      "correctAnswer": "B",
+      "explanation": "A firewall monitors and controls incoming and outgoing network traffic based on security rules. It acts as a barrier between trusted internal networks and untrusted external networks.",
+      "tip": "Firewall = traffic filter. Like a security guard checking who can enter/exit a building.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-006",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Encryption basics",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Encryption protects data by:",
+      "options": {
+        "A": "Deleting sensitive information",
+        "B": "Converting readable data into an unreadable format that requires a key to decode",
+        "C": "Compressing files to save storage",
+        "D": "Creating backup copies"
+      },
+      "correctAnswer": "B",
+      "explanation": "Encryption transforms plaintext (readable data) into ciphertext (unreadable data) using an algorithm and key. Only authorized parties with the correct key can decrypt and read the data.",
+      "tip": "Encryption = scramble data so only key holders can read it.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-007",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Backup types",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "A full backup includes:",
+      "options": {
+        "A": "Only files changed since the last backup",
+        "B": "All selected files regardless of when they were last backed up",
+        "C": "Only system files",
+        "D": "Only files larger than 1 MB"
+      },
+      "correctAnswer": "B",
+      "explanation": "A full backup copies all selected files and data, regardless of whether they have changed. Incremental backups copy only changed files since the last backup. Differential backups copy changes since the last full backup.",
+      "tip": "Full = everything. Incremental = changes since last backup. Differential = changes since last full.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-008",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Malware types",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Malware that disguises itself as legitimate software to trick users into installing it is called:",
+      "options": {
+        "A": "Virus",
+        "B": "Worm",
+        "C": "Trojan horse",
+        "D": "Spyware"
+      },
+      "correctAnswer": "C",
+      "explanation": "A Trojan horse (or Trojan) appears to be legitimate software but contains malicious code. Unlike viruses, Trojans don't replicate themselves—they rely on users to install them.",
+      "tip": "Trojan = deceptive (looks safe, isn't). Virus = replicates via files. Worm = self-replicates across networks.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-009",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Phishing definition",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "Phishing attacks typically attempt to:",
+      "options": {
+        "A": "Overload a server with requests",
+        "B": "Trick users into revealing sensitive information through deceptive emails or websites",
+        "C": "Physically break into data centers",
+        "D": "Intercept wireless signals"
+      },
+      "correctAnswer": "B",
+      "explanation": "Phishing uses deceptive emails, messages, or fake websites that appear legitimate to trick users into revealing passwords, credit card numbers, or other sensitive information.",
+      "tip": "Phishing = fishing for information. Uses fake emails/websites to steal credentials.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-010",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Basic IT Concepts",
+      "conceptTested": "Cloud service models",
+      "difficulty": "easy",
+      "questionFormat": "MCQ",
+      "question": "In Software as a Service (SaaS), who is responsible for managing the application software?",
+      "options": {
+        "A": "The customer",
+        "B": "The cloud service provider",
+        "C": "A third-party consultant",
+        "D": "No one—it manages itself"
+      },
+      "correctAnswer": "B",
+      "explanation": "In SaaS, the cloud provider manages everything—infrastructure, platform, and application. Customers simply use the software (e.g., Gmail, Salesforce). This differs from IaaS (customer manages more) and PaaS (customer manages applications).",
+      "tip": "SaaS = provider manages all. PaaS = you manage apps. IaaS = you manage almost everything.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "isc-000-011",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "SOC Reports",
+      "conceptTested": "SOC report types",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "A SOC 2 Type 2 report differs from a SOC 2 Type 1 report primarily because it:",
+      "options": {
+        "A": "Is shorter and less detailed",
+        "B": "Tests the operating effectiveness of controls over a period of time",
+        "C": "Only covers financial reporting controls",
+        "D": "Is prepared by internal auditors"
+      },
+      "correctAnswer": "B",
+      "explanation": "Type 1 reports describe controls at a point in time and evaluate design. Type 2 reports test whether controls operated effectively over a period (typically 6-12 months). Type 2 provides more assurance.",
+      "tip": "Type 1 = design at a point in time. Type 2 = operating effectiveness over a period.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "isc-000-012",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "IT Governance",
+      "conceptTested": "COBIT framework",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "COBIT is best described as:",
+      "options": {
+        "A": "A programming language for IT security",
+        "B": "A framework for IT governance and management",
+        "C": "A type of encryption algorithm",
+        "D": "A government regulation for data privacy"
+      },
+      "correctAnswer": "B",
+      "explanation": "COBIT (Control Objectives for Information and Related Technologies) is a framework created by ISACA for IT governance and management. It helps organizations align IT with business goals and manage IT risks.",
+      "tip": "COBIT = IT governance framework from ISACA. Aligns IT with business objectives.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "isc-000-013",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Risk Management",
+      "conceptTested": "Risk response strategies",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Purchasing cyber insurance to cover potential data breach costs is an example of which risk response?",
+      "options": {
+        "A": "Risk avoidance",
+        "B": "Risk acceptance",
+        "C": "Risk mitigation",
+        "D": "Risk transfer"
+      },
+      "correctAnswer": "D",
+      "explanation": "Risk transfer shifts the financial impact of a risk to another party, typically through insurance or contracts. Risk avoidance eliminates the risk. Risk mitigation reduces likelihood/impact. Risk acceptance acknowledges the risk without action.",
+      "tip": "Transfer = shift to another party (insurance). Avoid = eliminate. Mitigate = reduce. Accept = do nothing.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "isc-000-014",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Business Continuity",
+      "conceptTested": "RTO vs RPO",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "Recovery Time Objective (RTO) measures:",
+      "options": {
+        "A": "How much data can be lost",
+        "B": "The maximum acceptable time to restore operations after a disruption",
+        "C": "The cost of recovery",
+        "D": "The number of backup copies to maintain"
+      },
+      "correctAnswer": "B",
+      "explanation": "RTO is the maximum acceptable downtime—how quickly systems must be restored. RPO (Recovery Point Objective) is the maximum acceptable data loss—how much data you can afford to lose (determines backup frequency).",
+      "tip": "RTO = how fast to recover (time). RPO = how much data loss acceptable (point in time).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "isc-000-015",
+      "section": "ISC",
+      "topic": "ISC Foundations",
+      "subtopic": "Network Security",
+      "conceptTested": "VPN purpose",
+      "difficulty": "medium",
+      "questionFormat": "MCQ",
+      "question": "A Virtual Private Network (VPN) provides security primarily by:",
+      "options": {
+        "A": "Blocking all incoming traffic",
+        "B": "Creating an encrypted tunnel for data transmission over public networks",
+        "C": "Scanning files for viruses",
+        "D": "Increasing internet speed"
+      },
+      "correctAnswer": "B",
+      "explanation": "A VPN creates a secure, encrypted connection (tunnel) over a public network like the internet. This protects data confidentiality and integrity when transmitting sensitive information over untrusted networks.",
+      "tip": "VPN = encrypted tunnel over public internet. Protects data in transit.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    }
+  ]
+}

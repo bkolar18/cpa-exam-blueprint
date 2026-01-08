@@ -1,7 +1,7 @@
 ================================================================================
 CPA EXAM BLUEPRINT - CLAUDE CONTEXT
 ================================================================================
-Last Updated: 2026-01-03
+Last Updated: 2026-01-08
 
 This is a comprehensive context file for Claude Code sessions. It contains
 complete project history, workflow preferences, golden rules, and detailed
@@ -18,10 +18,13 @@ TABLE OF CONTENTS
 5. WORKFLOW PREFERENCES
 6. GOLDEN RULES
 7. PROJECT HISTORY
-8. DATA MODELS
-9. API REFERENCE
-10. STYLING GUIDE
-11. FUTURE ROADMAP
+8. DATABASE SCHEMA (Supabase - ACTIVE)
+9. DATA MODELS
+10. API REFERENCE
+11. STYLING GUIDE
+12. PRACTICE QUESTIONS SYSTEM
+13. GAMIFICATION SYSTEM
+14. FUTURE ROADMAP
 
 ================================================================================
 1. PROJECT IDENTITY
@@ -38,6 +41,12 @@ A lead generation website that helps CPA exam candidates with free tools and
 study plans, ultimately recommending a CPA review program (Surgent) for
 monetization through affiliate commissions.
 
+IMPORTANT CONTEXT:
+A family member works at Surgent. The goal of this site is to reduce Surgent's
+reliance on affiliate marketing by creating an owned marketing channel that
+provides genuine value to CPA candidates and builds trust before recommending
+Surgent. Read "CPA Exam Blueprint - Business Overview.txt" for full details.
+
 ================================================================================
 2. BUSINESS CONTEXT
 ================================================================================
@@ -50,13 +59,17 @@ TARGET AUDIENCE:
 VALUE PROPOSITION:
 - Free personalized study plans (competitors charge for this)
 - Free tools (score calendar, NTS tracker, calculator)
-- State-specific requirement guides
+- State-specific requirement guides (22 states)
+- 5,810 practice questions across all 6 sections
+- Exam simulation mode with timed tests and pause functionality
+- User dashboard with progress tracking and gamification
 - Guidance from "licensed CPAs" (authority positioning)
 
 MONETIZATION:
 - Affiliate Partner: Surgent CPA Review
 - Commission: Earned on referral signups
 - Lead Capture: Email collection for nurturing
+- Dashboard Promo: Surgent banner with 30-day reappearance
 
 COMPETITIVE DIFFERENTIATION:
 | Competitors Do          | We Do Instead                    |
@@ -66,6 +79,7 @@ COMPETITIVE DIFFERENTIATION:
 | Anonymous content       | Named CPA credentials            |
 | Paid tools              | Free tools that actually help    |
 | Transactional           | Ongoing email nurture            |
+| No user accounts        | Free dashboard with gamification |
 
 CPA EXAM STRUCTURE (CPA Evolution 2024+):
 - 3 Core Sections: FAR, AUD, REG (continuous testing)
@@ -96,6 +110,11 @@ STYLING:
 - CSS Variables for theming
 - No component library (custom components)
 
+DATABASE & AUTH (ACTIVE):
+- Supabase (PostgreSQL)
+- Supabase Auth (email/password)
+- Row Level Security (RLS) enabled
+
 EMAIL:
 - Resend API for transactional emails
 - Templates: HTML inline styles
@@ -104,26 +123,24 @@ DEPLOYMENT:
 - Vercel (auto-deploy from GitHub main branch)
 - Vercel Analytics enabled
 
-FUTURE ADDITIONS (Not Yet Implemented):
-- Database: Supabase (PostgreSQL)
-- Auth: NextAuth.js with email + Google
-- AI: Anthropic Claude API for chatbot
+FUTURE ADDITIONS:
+- AI: Anthropic Claude API for chatbot (API key exists for scraper)
+- Email automation for nurturing sequences
 
 ENVIRONMENT VARIABLES:
 ```
-# Current
+# Current (Active)
 RESEND_API_KEY=re_XEVXzFPr_HsK9GPJzNhGorSNHrpsxo9dU
 EMAIL_TO=delivered@resend.dev  # TODO: Set real admin email
+NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-anon-key>
+ANTHROPIC_API_KEY=<for-data-extraction>
 
 # Future
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
 NEXTAUTH_SECRET=
 NEXTAUTH_URL=
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
-ANTHROPIC_API_KEY=
 ```
 
 ================================================================================
@@ -143,6 +160,7 @@ cpa-exam-blueprint/
 ├── SESSION_LOG.txt               # Session-by-session accomplishments
 ├── CLAUDE_CONTEXT.txt            # This file - comprehensive context
 ├── cpa claude responses.txt      # Strategic planning session logs
+├── CPA Exam Blueprint - Business Overview.txt  # Business description for Surgent
 │
 ├── public/
 │   └── (static assets)
@@ -160,6 +178,41 @@ cpa-exam-blueprint/
     │   │   │   └── route.ts      # POST: Score calendar email subscription
     │   │   └── subscribe-nts/
     │   │       └── route.ts      # POST: NTS tracker email subscription
+    │   │
+    │   ├── auth/
+    │   │   └── callback/
+    │   │       └── route.ts      # Supabase auth callback handler
+    │   │
+    │   ├── login/
+    │   │   └── page.tsx          # Login page
+    │   ├── signup/
+    │   │   └── page.tsx          # Signup page
+    │   │
+    │   ├── cpa-academy/
+    │   │   └── page.tsx          # CPA Academy landing/marketing page
+    │   │
+    │   ├── dashboard/
+    │   │   ├── layout.tsx        # Dashboard layout with sidebar
+    │   │   ├── page.tsx          # Main dashboard with stats
+    │   │   ├── study-log/
+    │   │   │   └── page.tsx      # Log study sessions
+    │   │   ├── sections/
+    │   │   │   └── page.tsx      # Manage section progress
+    │   │   ├── nts/
+    │   │   │   └── page.tsx      # Manage NTS entries
+    │   │   ├── practice/
+    │   │   │   ├── page.tsx      # Practice overview
+    │   │   │   ├── [section]/
+    │   │   │   │   └── page.tsx  # Section practice questions
+    │   │   │   └── history/
+    │   │   │       └── page.tsx  # Review past attempts
+    │   │   ├── exam-simulation/
+    │   │   │   └── [section]/
+    │   │   │       └── page.tsx  # Timed exam with pause functionality
+    │   │   ├── accolades/
+    │   │   │   └── page.tsx      # Badges and achievements
+    │   │   └── settings/
+    │   │       └── page.tsx      # User preferences
     │   │
     │   ├── study-plan/
     │   │   └── page.tsx          # 5-step quiz with email capture
@@ -179,9 +232,25 @@ cpa-exam-blueprint/
     │   │       └── page.tsx      # Hours per section calculator
     │   │
     │   ├── state-requirements/
-    │   │   ├── page.tsx          # State grid landing page
+    │   │   ├── page.tsx          # State grid landing page (22 states)
     │   │   └── [state]/
     │   │       └── page.tsx      # Dynamic state detail pages
+    │   │
+    │   ├── blog/
+    │   │   ├── page.tsx          # Blog listing
+    │   │   └── [slug]/
+    │   │       └── page.tsx      # Individual blog posts (8 articles)
+    │   │
+    │   ├── guides/
+    │   │   ├── exam-day/
+    │   │   │   └── page.tsx      # Exam day walkthrough
+    │   │   └── failed-section/
+    │   │       └── page.tsx      # "I Failed, Now What?" guide
+    │   │
+    │   ├── success-stories/
+    │   │   ├── page.tsx          # Stories listing (5 stories)
+    │   │   └── [slug]/
+    │   │       └── page.tsx      # Individual story pages
     │   │
     │   ├── recommended-program/
     │   │   └── page.tsx          # Surgent affiliate page
@@ -195,12 +264,36 @@ cpa-exam-blueprint/
     ├── components/
     │   ├── Header.tsx            # Navigation with dropdowns
     │   ├── Footer.tsx            # Site footer
-    │   └── SectionPage.tsx       # Reusable section template
+    │   ├── SectionPage.tsx       # Reusable section template
+    │   └── auth/
+    │       └── AuthProvider.tsx  # Auth context with profile management
     │
     └── lib/
+        ├── supabase/
+        │   ├── client.ts         # Browser Supabase client
+        │   ├── server.ts         # Server Supabase client
+        │   └── types.ts          # Database types (Profile, etc.)
+        │
+        ├── gamification/
+        │   ├── types.ts          # Badge, Achievement types
+        │   ├── badges.ts         # Badge definitions
+        │   └── points.ts         # Point calculations
+        │
         └── data/
+            ├── practice-questions/
+            │   ├── types.ts      # QuestionSet, PracticeQuestion
+            │   ├── index.ts      # Exports and helper functions
+            │   ├── far.ts        # 100 FAR questions
+            │   ├── aud.ts        # 100 AUD questions
+            │   ├── reg.ts        # 100 REG questions
+            │   ├── tcp.ts        # 100 TCP questions
+            │   ├── bar.ts        # 100 BAR questions
+            │   └── isc.ts        # 100 ISC questions
+            │
             ├── score-release-dates.ts  # 2025-2026 release schedule
-            └── state-requirements.ts   # 10 states CPA requirements
+            ├── state-requirements.ts   # 22 states requirements data
+            ├── blog-posts.ts           # Blog post metadata
+            └── success-stories.ts      # Success story data
 
 ================================================================================
 5. WORKFLOW PREFERENCES
@@ -281,46 +374,228 @@ PHASE 1: Free Tools (Completed 2026-01-03)
 - Score Release Calendar with countdown timer
 - NTS Expiration Tracker with reminder system
 - Study Hours Calculator for all 6 sections
-- State Requirements Guide (10 states)
+- State Requirements Guide (started with 10 states, now 22)
 - Enhanced Study Plan with discipline selection
 - Added "Free Tools" dropdown to navigation
 
-PHASE 2: Content & Authority (Planned)
---------------------------------------
-- MDX blog setup
+PHASE 2: Content & Authority (Completed 2026-01-04)
+---------------------------------------------------
+- MDX blog infrastructure
+- 8 blog posts (study guides, pass rates, working full-time, etc.)
 - Exam Day Walkthrough guide
 - "I Failed, Now What?" retaker guide
-- Success Stories section
+- Success Stories section (5 stories)
+- Simplified header navigation
 
-PHASE 3: Email Nurturing (Planned)
-----------------------------------
+PHASE 3: CPA Academy / Dashboard (Completed 2026-01-05, Enhanced 2026-01-08)
+----------------------------------------------------------------------------
+- Supabase database integration (PostgreSQL)
+- User authentication (email/password via Supabase Auth)
+- User dashboard with study tracking
+- Study session logging with streak tracking
+- Section progress management
+- NTS tracking in dashboard
+- Gamification system (points, badges, achievements)
+- 5,810 practice questions across all 6 sections (176 batch files)
+- Practice history and accuracy tracking
+- Exam simulation mode with timed tests and pause functionality
+- Surgent promotional banner (per-account, 30-day reappearance)
+- State requirements expanded to 22 states
+
+PHASE 3.5: Question Bank Expansion (In Progress as of 2026-01-08)
+-----------------------------------------------------------------
+- Expanded from 600 to 5,810 questions
+- 176 question batch files in docs/question-batches/
+- Difficulty distribution analysis and tracking
+- Target: 50-60% medium difficulty (currently at 49.2%)
+- See docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md for full breakdown
+
+PHASE 4: Email Nurturing (NOT STARTED)
+--------------------------------------
 - 7-email welcome sequence
 - Segment-based content delivery
 - Automated score release notifications
 
-PHASE 4: Interactive Features (Planned)
----------------------------------------
+PHASE 5: AI Features (NOT STARTED)
+----------------------------------
 - AI chatbot (Anthropic Claude)
+- AI-powered study recommendations
 - Diagnostic quizzes per section
-- Progress tracker with user accounts
-
-PHASE 5: Infrastructure (Planned)
----------------------------------
-- Supabase database integration
-- NextAuth.js authentication
-- Admin dashboard
 
 ================================================================================
-8. DATA MODELS
+8. DATABASE SCHEMA (Supabase - ACTIVE)
 ================================================================================
+
+The database is fully integrated and active. All tables have Row Level Security.
+
+```sql
+-- PROFILES TABLE
+-- Stores user profile data and gamification stats
+CREATE TABLE profiles (
+  id UUID PRIMARY KEY REFERENCES auth.users(id),
+  email TEXT UNIQUE NOT NULL,
+  full_name TEXT,
+  state_code TEXT,
+  target_completion_date DATE,
+  discipline_choice TEXT CHECK (discipline_choice IN ('TCP', 'BAR', 'ISC')),
+  weekly_study_hours INTEGER,
+  working_full_time BOOLEAN,
+  -- Gamification fields
+  total_points INTEGER DEFAULT 0,
+  badge_count INTEGER DEFAULT 0,
+  achievement_count INTEGER DEFAULT 0,
+  current_streak INTEGER DEFAULT 0,
+  longest_streak INTEGER DEFAULT 0,
+  last_study_date DATE,
+  promo_dismissed_at TIMESTAMPTZ,  -- For Surgent banner (30-day reappearance)
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- STUDY SESSIONS TABLE
+-- Tracks logged study hours
+CREATE TABLE study_sessions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  section TEXT NOT NULL CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC')),
+  date DATE NOT NULL,
+  hours DECIMAL(4,2) NOT NULL,
+  notes TEXT,
+  topics_covered TEXT[],
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- SECTION PROGRESS TABLE
+-- Tracks status of each CPA section
+CREATE TABLE section_progress (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  section TEXT NOT NULL CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC')),
+  status TEXT NOT NULL CHECK (status IN ('not_started', 'studying', 'scheduled', 'passed', 'failed')),
+  start_date DATE,
+  exam_date DATE,
+  score INTEGER,
+  attempt_number INTEGER DEFAULT 1,
+  notes TEXT,
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now(),
+  UNIQUE(user_id, section)
+);
+
+-- NTS ENTRIES TABLE
+-- Tracks Notice to Schedule documents
+CREATE TABLE nts_entries (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  section TEXT NOT NULL CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC')),
+  issue_date DATE NOT NULL,
+  expiration_date DATE NOT NULL,
+  status TEXT NOT NULL CHECK (status IN ('active', 'used', 'expired')),
+  exam_scheduled_date DATE,
+  notes TEXT,
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- PRACTICE ATTEMPTS TABLE
+-- Tracks user answers to practice questions
+CREATE TABLE practice_attempts (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  question_id TEXT NOT NULL,
+  section TEXT NOT NULL CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC')),
+  topic TEXT,
+  selected_answer TEXT NOT NULL,
+  correct_answer TEXT NOT NULL,
+  is_correct BOOLEAN NOT NULL,
+  time_spent_seconds INTEGER,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- USER BADGES TABLE
+-- Tracks earned achievements
+CREATE TABLE user_badges (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  badge_id TEXT NOT NULL,
+  earned_at TIMESTAMPTZ DEFAULT now(),
+  UNIQUE(user_id, badge_id)
+);
+
+-- Indexes for performance
+CREATE INDEX idx_study_sessions_user_date ON study_sessions(user_id, date);
+CREATE INDEX idx_practice_attempts_user ON practice_attempts(user_id);
+CREATE INDEX idx_section_progress_user ON section_progress(user_id);
+```
+
+PENDING MIGRATION:
+```sql
+-- Run this in Supabase SQL Editor for promo banner feature
+ALTER TABLE profiles
+ADD COLUMN IF NOT EXISTS promo_dismissed_at TIMESTAMPTZ DEFAULT NULL;
+```
+
+================================================================================
+9. DATA MODELS
+================================================================================
+
+PROFILE (TypeScript):
+```typescript
+interface Profile {
+  id: string;
+  email: string;
+  full_name: string | null;
+  state_code: string | null;
+  target_completion_date: string | null;
+  discipline_choice: 'TCP' | 'BAR' | 'ISC' | null;
+  weekly_study_hours: number | null;
+  working_full_time: boolean | null;
+  total_points: number;
+  badge_count: number;
+  achievement_count: number;
+  current_streak: number;
+  longest_streak: number;
+  last_study_date: string | null;
+  promo_dismissed_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+```
+
+PRACTICE QUESTION:
+```typescript
+interface PracticeQuestion {
+  id: string;
+  section: SectionCode;
+  topic: string;
+  difficulty: 'easy' | 'medium' | 'hard';
+  question: string;
+  options: {
+    A: string;
+    B: string;
+    C: string;
+    D: string;
+  };
+  correctAnswer: 'A' | 'B' | 'C' | 'D';
+  explanation: string;
+  tip?: string;
+}
+
+interface QuestionSet {
+  section: SectionCode;
+  sectionName: string;
+  topics: string[];
+  questions: PracticeQuestion[];
+}
+```
 
 SCORE RELEASE DATE:
 ```typescript
 interface ScoreReleaseDate {
-  date: string;           // ISO date string
+  date: string;
   type: "core" | "discipline";
-  testingWindow?: string; // For discipline sections
-  sections: string[];     // ["FAR", "AUD", "REG"] or ["BAR", "TCP", "ISC"]
+  testingWindow?: string;
+  sections: string[];
   notes?: string;
 }
 ```
@@ -367,67 +642,8 @@ interface StateRequirement {
 }
 ```
 
-STUDY PLAN (Generated):
-```typescript
-interface StudyPlan {
-  sectionOrder: string[];  // ["FAR", "AUD", "REG", "TCP"]
-  weeklySchedule: string;
-  estimatedCompletion: string;
-  tips: string[];
-  disciplineInfo: {
-    section: string;
-    passRate: number;
-    testingWindow: string;
-    recommendation: string;
-  };
-}
-```
-
-FUTURE: DATABASE SCHEMA (Supabase)
-```sql
--- Leads table
-CREATE TABLE leads (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email TEXT UNIQUE NOT NULL,
-  source TEXT,  -- 'study_plan', 'score_calendar', 'nts_tracker'
-  form_data JSONB,
-  email_consent BOOLEAN DEFAULT true,
-  created_at TIMESTAMPTZ DEFAULT now()
-);
-
--- Email sequence progress
-CREATE TABLE email_sequence_progress (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  lead_id UUID REFERENCES leads(id),
-  sequence_name TEXT,
-  current_step INTEGER DEFAULT 0,
-  last_sent_at TIMESTAMPTZ,
-  completed BOOLEAN DEFAULT false
-);
-
--- NTS records for reminders
-CREATE TABLE nts_records (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email TEXT NOT NULL,
-  state_code TEXT,
-  issue_date DATE,
-  expiration_date DATE,
-  reminder_30_sent BOOLEAN DEFAULT false,
-  reminder_14_sent BOOLEAN DEFAULT false,
-  reminder_7_sent BOOLEAN DEFAULT false
-);
-
--- Score release subscriptions
-CREATE TABLE score_subscriptions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email TEXT NOT NULL,
-  sections TEXT[],
-  notify_days_before INTEGER[] DEFAULT '{3}'
-);
-```
-
 ================================================================================
-9. API REFERENCE
+10. API REFERENCE
 ================================================================================
 
 POST /api/submit-study-plan
@@ -452,12 +668,7 @@ Actions:
 
 POST /api/subscribe-score-release
 ---------------------------------
-Request:
-```json
-{
-  "email": "user@example.com"
-}
-```
+Request: { "email": "user@example.com" }
 Response: { "success": true }
 
 Actions:
@@ -482,7 +693,7 @@ Actions:
 2. Notifies admin of new subscriber
 
 ================================================================================
-10. STYLING GUIDE
+11. STYLING GUIDE
 ================================================================================
 
 CSS VARIABLES (defined in globals.css):
@@ -529,38 +740,215 @@ COMMON PATTERNS:
 - Muted text: `text-[var(--muted)]`
 
 ================================================================================
-11. FUTURE ROADMAP
+12. PRACTICE QUESTIONS SYSTEM
 ================================================================================
 
-IMMEDIATE (Phase 2):
-- [ ] Set up MDX for blog posts
-- [ ] Create 3-5 SEO-targeted blog posts
-- [ ] Build Exam Day Walkthrough page
-- [ ] Build "I Failed, Now What?" guide
-- [ ] Add Success Stories section
+OVERVIEW:
+- 5,810 total questions across 176 batch files
+- Original 600 in TypeScript files (src/lib/data/practice-questions/)
+- Expanded 5,200+ in JSON batch files (docs/question-batches/)
+- Immediate feedback with explanations
+- Accuracy tracking by section
+- History review with filtering
+- Exam simulation mode with timed tests
 
-SHORT-TERM (Phase 3):
-- [ ] Design 7-email welcome sequence
-- [ ] Set up email automation (consider: Resend + cron, or Loops.so)
-- [ ] Implement segment tracking
+QUESTION DISTRIBUTION (as of 2026-01-08):
+| Section | Questions | Batches | Easy% | Med% | Hard% |
+|---------|-----------|---------|-------|------|-------|
+| FAR     | 1,680     | 55      | 19%   | 46%  | 35%   |
+| AUD     | 1,015     | 29      | 18%   | 52%  | 30%   |
+| REG     | 1,260     | 36      | 16%   | 47%  | 36%   |
+| TCP     | 805       | 23      | 17%   | 51%  | 32%   |
+| BAR     | 490       | 14      | 17%   | 56%  | 27%   |
+| ISC     | 560       | 16      | 15%   | 50%  | 35%   |
+| TOTAL   | 5,810     | 176     | 17%   | 49%  | 33%   |
 
-MEDIUM-TERM (Phase 4):
-- [ ] Integrate Anthropic Claude API
-- [ ] Build chat widget component
-- [ ] Create diagnostic quiz for FAR section
-- [ ] Add progress tracker (requires auth)
+Target Distribution: 17% easy, 55% medium, 28% hard
+Current Gap: Need ~336 more medium questions to reach 55% target
 
-LONG-TERM (Phase 5):
-- [ ] Set up Supabase project
-- [ ] Implement NextAuth.js
-- [ ] Build admin dashboard
-- [ ] Add remaining 45 states to requirements guide
+FILES - Original TypeScript:
+- src/lib/data/practice-questions/types.ts: PracticeQuestion, QuestionSet interfaces
+- src/lib/data/practice-questions/index.ts: Exports, helper functions
+- src/lib/data/practice-questions/{far,aud,reg,tcp,bar,isc}.ts: 100 questions each
+
+FILES - JSON Batch System:
+- docs/question-batches/{section}/{section}-batch-{number}-{topic}.json
+- docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md: Complete breakdown of all batches
+- Batch naming: far-batch-001 through far-batch-055, etc.
+
+QUESTION STRUCTURE:
+Each question has:
+- id: Unique identifier (e.g., "far-001", "far-med-015")
+- section: FAR, AUD, REG, TCP, BAR, or ISC
+- topic: Specific topic within section
+- difficulty: easy, medium, or hard
+- question: The question text
+- options: A, B, C, D answer choices
+- correctAnswer: A, B, C, or D
+- explanation: Why the answer is correct
+- tip (optional): Additional study tip
+
+TOPICS COVERED:
+- FAR: Conceptual Framework, Revenue Recognition, Leases, Government, NFP,
+       Consolidations, Foreign Currency, Derivatives, Pensions, etc.
+- AUD: Ethics, Risk Assessment, Evidence, Sampling, Reports, Reviews,
+       Government Auditing, Group Audits, etc.
+- REG: Individual Tax, Business Tax, Property Transactions, Business Law,
+       Circular 230, Gift/Estate Tax, etc.
+- TCP: Tax Planning, Estate Tax, Retirement, International Tax,
+       Business Succession, Passive Activities, etc.
+- BAR: Financial Analysis, Cost Accounting, Budgeting, Data Analytics,
+       Capital Budgeting, Derivatives, etc.
+- ISC: IT Controls, Cybersecurity, Data Management, Cloud, IT Audit,
+       SOC Reports, Encryption, Disaster Recovery, etc.
+
+HELPER FUNCTIONS:
+```typescript
+getQuestionsBySection(section: SectionCode): PracticeQuestion[]
+getQuestionsByTopic(section: SectionCode, topic: string): PracticeQuestion[]
+getQuestionsByDifficulty(section, difficulty): PracticeQuestion[]
+getRandomQuestions(section, count, options?): PracticeQuestion[]
+getQuestionById(id: string): PracticeQuestion | undefined
+getTopicsForSection(section: SectionCode): string[]
+getQuestionCount(section: SectionCode): number
+sectionHasQuestions(section: SectionCode): boolean
+```
+
+================================================================================
+12.5 EXAM SIMULATION SYSTEM
+================================================================================
+
+OVERVIEW:
+The exam simulation feature provides timed practice tests that mimic the real
+CPA exam experience with pause functionality for flexibility.
+
+LOCATION: src/app/dashboard/exam-simulation/[section]/page.tsx
+
+EXAM STATES:
+- 'setup': Configure exam (question count, time limit)
+- 'exam': Active exam with timer running
+- 'paused': Exam paused, timer stopped
+- 'review': Review answers before final submission
+- 'results': View final score and explanations
+
+PAUSE FUNCTIONALITY (Added 2026-01-08):
+- Pause button in timer bar during exam
+- Timer stops when paused, resumes correctly
+- Paused overlay shows:
+  * Current progress (question X of Y)
+  * Questions answered count
+  * Resume button
+  * "End Exam & Submit" option for early termination
+- Records question time before pausing
+
+KEY FUNCTIONS:
+```typescript
+handlePause(): void     // Stops timer, records time, sets paused state
+handleResume(): void    // Resets question start time, returns to exam state
+handleEndExam(): void   // Submits exam early from paused state
+```
+
+================================================================================
+13. GAMIFICATION SYSTEM
+================================================================================
+
+POINTS:
+- Study session: 10 points per hour logged
+- Practice question correct: 5 points
+- Practice question incorrect: 1 point (participation)
+- Section passed: 100 points
+
+STREAKS:
+- Tracked by consecutive days with logged study sessions
+- Current streak and longest streak stored in profile
+- Calculated when logging sessions
+
+BADGES (Examples):
+- First Study Session
+- 7-Day Streak
+- 30-Day Streak
+- 100 Practice Questions
+- Section Passed (per section)
+- All Core Sections Passed
+- CPA Complete
+
+STORAGE:
+- Points: profiles.total_points
+- Badges: user_badges table (badge_id + earned_at)
+- Streak: profiles.current_streak, profiles.longest_streak
+
+================================================================================
+14. FUTURE ROADMAP
+================================================================================
+
+IMMEDIATE (Ready to Start):
+- [ ] Continue adding medium questions (~336 more needed for 55% target)
+      Priority sections: FAR (46%), REG (47%)
+      ISC is now at 50% (target minimum reached)
+- [ ] Phase 4: Email Nurturing
+  - [ ] Design 7-email welcome sequence
+  - [ ] Set up email automation (Resend + cron or external service)
+  - [ ] Implement segment tracking
+
+SHORT-TERM:
+- [x] Practice questions expanded to 5,810 (was 600)
+- [ ] Continue balancing difficulty distribution
+- [ ] Add remaining 28 states to requirements guide
+- [ ] More blog posts for SEO
+- [ ] Diagnostic quizzes per section
+
+MEDIUM-TERM (Phase 5):
+- [ ] Integrate Anthropic Claude API for chatbot
+- [ ] AI-powered study recommendations
+- [ ] Enhanced progress analytics
+
+LONG-TERM:
+- [ ] Mobile app (PWA)
+- [ ] Video content integration
+- [ ] Community features (forums, study groups)
+- [ ] Referral program
 
 WISHLIST:
-- Mobile app (PWA)
-- Referral program
-- Exit-intent popup
+- Exit-intent popup for email capture
 - A/B testing infrastructure
+- Admin dashboard for content management
+- Integration with other CPA review providers (if needed)
+
+================================================================================
+KEY DOCUMENTS REFERENCE
+================================================================================
+
+1. docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md (CRITICAL - Updated 01/08)
+   - Complete breakdown of all 5,810 questions
+   - Distribution by section, difficulty, and batch
+   - Gap analysis for reaching target distribution
+   - Lists all 176 question batch files
+   - READ THIS for question bank status
+
+2. docs/question-batches/ (Question JSON files)
+   - Contains all question batch JSON files organized by section
+   - Format: {section}-batch-{number}-{topic}.json
+   - Recent additions: far-054, far-055, reg-035, reg-036, isc-015, isc-016
+
+3. CPA Exam Blueprint - Business Overview.txt
+   - Complete business description for Surgent team
+   - Marketing funnel explanation
+   - Feature breakdown in plain English
+   - READ THIS to understand the "why" behind the site
+
+4. cpa claude responses.txt
+   - All strategic planning responses
+   - Technical decisions and explanations
+   - Session summaries
+
+5. SESSION_PROMPT.txt
+   - Quick start guide for new sessions
+   - Current state overview
+   - Immediate next steps
+
+6. SESSION_LOG.txt
+   - Detailed session-by-session accomplishments
+   - Commits and technical details
 
 ================================================================================
 END OF CONTEXT FILE

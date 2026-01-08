@@ -1,0 +1,392 @@
+[
+  {
+    "id": "far-tax-001",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Deferred tax liability concept",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "A deferred tax liability arises when:",
+    "options": {
+      "A": "Tax expense exceeds taxes payable in the current period due to temporary differences",
+      "B": "Taxes payable exceed tax expense in the current period",
+      "C": "The company has net operating loss carryforwards",
+      "D": "Permanent differences exist between book and tax income"
+    },
+    "correctAnswer": "A",
+    "explanation": "A deferred tax liability (DTL) arises when taxable income is less than book income in the current period due to temporary differences, meaning more taxes will be paid in future periods. This occurs when book income exceeds taxable income temporarily (e.g., accelerated tax depreciation creating lower taxable income now).",
+    "tip": "DTL: taxable now < book now. Future taxes will be higher."
+  },
+  {
+    "id": "far-tax-002",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Deferred tax asset concept",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "A deferred tax asset arises when:",
+    "options": {
+      "A": "Taxable income exceeds book income due to temporary differences",
+      "B": "Book income exceeds taxable income permanently",
+      "C": "The company pays estimated taxes",
+      "D": "Tax rates are expected to decrease"
+    },
+    "correctAnswer": "A",
+    "explanation": "A deferred tax asset (DTA) arises when taxable income exceeds book income in the current period due to temporary differences, meaning lower taxes will be paid in future periods. Examples include accrued expenses deductible for tax when paid, or net operating loss carryforwards.",
+    "tip": "DTA: taxable now > book now. Future taxes will be lower."
+  },
+  {
+    "id": "far-tax-003",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Temporary vs Permanent Differences",
+    "conceptTested": "Temporary difference example",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Which of the following creates a temporary difference between book and tax income?",
+    "options": {
+      "A": "Municipal bond interest income",
+      "B": "Fines and penalties",
+      "C": "Depreciation using different methods/lives for book and tax",
+      "D": "Life insurance premiums on officers where company is beneficiary"
+    },
+    "correctAnswer": "C",
+    "explanation": "Depreciation differences (using accelerated methods for tax and straight-line for book, or different useful lives) create temporary differences that reverse over the asset's life. The other items are permanent differences—they never reverse because they are either never taxable or never deductible.",
+    "tip": "Temporary = reverses over time. Permanent = never reverses."
+  },
+  {
+    "id": "far-tax-004",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Temporary vs Permanent Differences",
+    "conceptTested": "Permanent difference example",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are permanent differences EXCEPT:",
+    "options": {
+      "A": "Tax-exempt municipal bond interest",
+      "B": "Fines and penalties",
+      "C": "Warranty expense accrued for book but deducted when paid for tax",
+      "D": "Premiums on life insurance policies where the company is beneficiary"
+    },
+    "correctAnswer": "C",
+    "explanation": "Warranty expense is a temporary difference—accrued for book in one period but deducted for tax when paid in a later period. The difference reverses when payments are made. Municipal interest, fines, and officer life insurance premiums are permanent differences that never reverse.",
+    "tip": "Permanent: municipal interest (tax-free), fines (not deductible), officer life insurance."
+  },
+  {
+    "id": "far-tax-005",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Deferred tax calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "At year-end, the book basis of a depreciable asset is $100,000 and tax basis is $60,000. The tax rate is 25%. What deferred tax amount should be recorded?",
+    "options": {
+      "A": "$10,000 deferred tax asset",
+      "B": "$10,000 deferred tax liability",
+      "C": "$40,000 deferred tax liability",
+      "D": "$15,000 deferred tax liability"
+    },
+    "correctAnswer": "B",
+    "explanation": "Book basis ($100,000) exceeds tax basis ($60,000) by $40,000. This means more depreciation was taken for tax, so future taxable income will exceed book income. Deferred tax liability = $40,000 × 25% = $10,000.",
+    "tip": "DTL when book basis > tax basis for assets. DTA when book > tax for liabilities.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-tax-006",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Valuation Allowance",
+    "conceptTested": "Valuation allowance criteria",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A valuation allowance should be recorded against a deferred tax asset when:",
+    "options": {
+      "A": "The tax rate is expected to decrease",
+      "B": "It is more likely than not that some or all of the DTA will not be realized",
+      "C": "The company has any taxable temporary differences",
+      "D": "The DTA exceeds the deferred tax liability"
+    },
+    "correctAnswer": "B",
+    "explanation": "A valuation allowance reduces a DTA to the amount that is more likely than not (>50% probability) to be realized. Factors considered include future taxable income, tax planning strategies, and the nature and timing of reversals. The allowance is a contra-asset, reducing net DTA.",
+    "tip": "Valuation allowance: DTA × probability of non-realization (>50% chance of not realizing)."
+  },
+  {
+    "id": "far-tax-007",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Valuation Allowance",
+    "conceptTested": "Sources of taxable income for DTA realization",
+    "difficulty": "hard",
+    "questionFormat": "except",
+    "question": "When assessing DTA realization, all of the following are considered sources of future taxable income EXCEPT:",
+    "options": {
+      "A": "Future reversal of existing taxable temporary differences (DTLs)",
+      "B": "Projected future taxable income exclusive of reversing temporary differences",
+      "C": "Tax-exempt municipal bond interest expected to be received",
+      "D": "Tax planning strategies"
+    },
+    "correctAnswer": "C",
+    "explanation": "Tax-exempt income does not generate taxable income and cannot be used to realize DTAs. The four sources for DTA realization are: (1) reversal of existing DTLs, (2) projected future taxable income, (3) taxable income in carryback years (if carryback allowed), and (4) tax planning strategies.",
+    "tip": "Four sources: DTL reversal, future taxable income, carryback, tax planning."
+  },
+  {
+    "id": "far-tax-008",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Intraperiod Tax Allocation",
+    "conceptTested": "Intraperiod allocation concept",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Intraperiod tax allocation requires that income tax expense be allocated to:",
+    "options": {
+      "A": "Only continuing operations",
+      "B": "Continuing operations, discontinued operations, OCI, and prior period adjustments",
+      "C": "Each quarter of the fiscal year",
+      "D": "Each revenue and expense account"
+    },
+    "correctAnswer": "B",
+    "explanation": "Intraperiod tax allocation allocates total income tax expense or benefit for a period among continuing operations, discontinued operations, other comprehensive income, and items charged/credited directly to equity (such as prior period adjustments). Each component shows its own tax effect.",
+    "tip": "Intraperiod: allocate tax to continuing ops, discontinued, OCI, and equity items."
+  },
+  {
+    "id": "far-tax-009",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Uncertain Tax Positions",
+    "conceptTested": "Two-step uncertainty model",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 740, an uncertain tax position is recognized if:",
+    "options": {
+      "A": "It is possible the position will be sustained",
+      "B": "It is more likely than not (>50%) the position will be sustained upon examination",
+      "C": "The position is approved by the IRS",
+      "D": "The company's tax advisor confirms the position"
+    },
+    "correctAnswer": "B",
+    "explanation": "The two-step model requires: (1) Recognition—a tax position is recognized only if it is more likely than not to be sustained upon examination. (2) Measurement—if recognized, measure at the largest amount that is greater than 50% likely to be realized. Positions not meeting the threshold are not recognized.",
+    "tip": "Uncertain tax positions: recognize if >50% likely to be sustained."
+  },
+  {
+    "id": "far-tax-010",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Tax rate used for measurement",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Deferred tax assets and liabilities are measured using:",
+    "options": {
+      "A": "The tax rate in effect when the temporary difference originated",
+      "B": "The enacted tax rate expected to apply when the temporary difference reverses",
+      "C": "The highest marginal tax rate",
+      "D": "An average of historical tax rates"
+    },
+    "correctAnswer": "B",
+    "explanation": "Deferred taxes are measured using the enacted tax rate(s) expected to apply in the periods when the deferred amounts are expected to be realized or settled. Changes in tax rates require remeasurement of existing deferred taxes, with the adjustment recognized in income from continuing operations.",
+    "tip": "Use enacted rate expected at reversal. Adjust DTAs/DTLs when rates change."
+  },
+  {
+    "id": "far-tax-011",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Tax rate change effect",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A company has a deferred tax liability of $100,000 measured at a 25% rate. New legislation is enacted reducing the rate to 21%. What adjustment is required?",
+    "options": {
+      "A": "No adjustment until the difference reverses",
+      "B": "Reduce DTL by $16,000 and recognize a tax benefit",
+      "C": "Increase DTL by $16,000 and recognize tax expense",
+      "D": "Reduce DTL by $4,000 and recognize a tax benefit"
+    },
+    "correctAnswer": "B",
+    "explanation": "Original temporary difference = $100,000 / 25% = $400,000. New DTL = $400,000 × 21% = $84,000. Adjustment = $100,000 − $84,000 = $16,000 reduction in DTL. The credit to DTL is offset by a debit to tax expense (benefit).",
+    "tip": "Rate change: remeasure DTAs/DTLs, adjust through income.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-tax-012",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Temporary vs Permanent Differences",
+    "conceptTested": "Effect of permanent differences",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Permanent differences affect:",
+    "options": {
+      "A": "Deferred tax assets and liabilities",
+      "B": "The effective tax rate reported in the financial statements",
+      "C": "The classification of taxes as current or deferred",
+      "D": "The cash paid for taxes but not tax expense"
+    },
+    "correctAnswer": "B",
+    "explanation": "Permanent differences cause the effective tax rate (tax expense / book income) to differ from the statutory rate. They do not create deferred taxes because they never reverse. For example, tax-exempt income lowers the effective rate; non-deductible items increase it.",
+    "tip": "Permanent differences: affect effective tax rate, not deferred taxes."
+  },
+  {
+    "id": "far-tax-013",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Net operating loss carryforward",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A net operating loss carryforward creates a:",
+    "options": {
+      "A": "Deferred tax liability",
+      "B": "Deferred tax asset",
+      "C": "Current tax payable",
+      "D": "Permanent difference"
+    },
+    "correctAnswer": "B",
+    "explanation": "NOL carryforwards create deferred tax assets because they represent future tax benefits—the ability to reduce future taxable income. The DTA is measured at the NOL amount times the enacted future tax rate. A valuation allowance may be needed if realization is not more likely than not.",
+    "tip": "NOL carryforward = DTA. May need valuation allowance."
+  },
+  {
+    "id": "far-tax-014",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Balance sheet presentation",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, deferred tax assets and liabilities are classified on the balance sheet as:",
+    "options": {
+      "A": "Current or noncurrent based on when temporary differences reverse",
+      "B": "All noncurrent",
+      "C": "All current",
+      "D": "Based on the related asset or liability's classification"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under ASU 2015-17, all deferred tax assets and liabilities are classified as noncurrent on the balance sheet. The previous requirement to classify as current or noncurrent based on the underlying asset or liability was eliminated to simplify presentation.",
+    "tip": "All deferred taxes = noncurrent on balance sheet."
+  },
+  {
+    "id": "far-tax-015",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Intraperiod Tax Allocation",
+    "conceptTested": "OCI tax effect",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "A company has an unrealized gain on AFS debt securities of $50,000 (pre-tax) and a 25% tax rate. How is this reported in other comprehensive income?",
+    "options": {
+      "A": "$50,000 gain",
+      "B": "$37,500 gain (net of $12,500 tax)",
+      "C": "$62,500 gain",
+      "D": "$50,000 gain with tax shown in income from operations"
+    },
+    "correctAnswer": "B",
+    "explanation": "OCI items are reported net of their tax effects (or before tax with aggregate tax disclosed separately). Tax on OCI item = $50,000 × 25% = $12,500. Net OCI = $50,000 − $12,500 = $37,500. The tax is allocated to OCI, not to continuing operations.",
+    "tip": "OCI items: show net of tax or before tax with tax disclosed separately.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-tax-016",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Uncertain Tax Positions",
+    "conceptTested": "Interest and penalties on uncertain positions",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Interest and penalties related to uncertain tax positions should be reported:",
+    "options": {
+      "A": "Always as interest expense and operating expense",
+      "B": "Always as additional income tax expense",
+      "C": "As either income tax expense or interest/penalties expense, based on accounting policy election",
+      "D": "As a direct charge to retained earnings"
+    },
+    "correctAnswer": "C",
+    "explanation": "ASC 740 allows an accounting policy choice for presenting interest and penalties on uncertain tax positions. They may be classified as income tax expense or as interest expense and operating expense. The policy must be disclosed and applied consistently.",
+    "tip": "Interest/penalties on UTP: policy choice—tax expense or interest/operating expense."
+  },
+  {
+    "id": "far-tax-017",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Accrued expense timing difference",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "A company accrues $100,000 warranty expense for book purposes. For tax, warranties are deductible when paid. The tax rate is 21%. What deferred tax entry is required?",
+    "options": {
+      "A": "Deferred tax liability of $21,000",
+      "B": "Deferred tax asset of $21,000",
+      "C": "No entry—this is a permanent difference",
+      "D": "Current tax payable of $21,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "The warranty accrual creates a book liability with no tax basis (deducted when paid). Book basis of liability ($100,000) > Tax basis ($0). For liabilities, when book > tax, a DTA is created. DTA = $100,000 × 21% = $21,000. This represents future tax savings when paid.",
+    "tip": "Accrued expenses (deductible when paid): create DTA.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-tax-018",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Valuation Allowance",
+    "conceptTested": "Valuation allowance change",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "A company releases $50,000 of its valuation allowance because it now expects to realize the related DTA. What is the effect on the financial statements?",
+    "options": {
+      "A": "Income tax expense decreases by $50,000",
+      "B": "Income tax expense increases by $50,000",
+      "C": "Other comprehensive income increases by $50,000",
+      "D": "Retained earnings is directly credited $50,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Releasing a valuation allowance increases the net DTA, which reduces income tax expense (or creates a tax benefit). The change is generally recognized in income from continuing operations unless it relates to an item originally charged elsewhere (OCI, equity).",
+    "tip": "VA release = reduces tax expense. VA increase = increases tax expense."
+  },
+  {
+    "id": "far-tax-019",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Temporary vs Permanent Differences",
+    "conceptTested": "Prepaid income timing difference",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "A company receives $60,000 prepaid rent, which is taxable when received but recognized as revenue over 3 years for book purposes. What deferred tax is created in Year 1?",
+    "options": {
+      "A": "DTA because more tax is paid now than book income recognized",
+      "B": "DTL because book income exceeds taxable income",
+      "C": "No deferred tax—this is a permanent difference",
+      "D": "DTA equal to the full $60,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "In Year 1, taxable income includes all $60,000 but book income includes only $20,000 (1/3). The company pays tax now but recognizes income later. This creates a DTA—the company has prepaid its tax. The DTA reverses as book income is recognized in Years 2 and 3.",
+    "tip": "Prepaid income (taxed when received): DTA because tax > book now.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-tax-020",
+    "section": "FAR",
+    "topic": "Income Taxes",
+    "subtopic": "Deferred Tax Assets & Liabilities",
+    "conceptTested": "Net presentation of deferred taxes",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Deferred tax assets and liabilities of the same tax jurisdiction should be:",
+    "options": {
+      "A": "Always shown separately",
+      "B": "Netted and presented as a single amount",
+      "C": "Shown gross with a reconciliation in the notes",
+      "D": "Combined with current taxes payable"
+    },
+    "correctAnswer": "B",
+    "explanation": "Deferred tax assets and liabilities within the same tax jurisdiction are offset and presented as a single net amount. Different jurisdictions (e.g., federal vs. foreign) are shown separately because they cannot legally be offset against each other.",
+    "tip": "Net DTAs and DTLs within same jurisdiction. Keep different jurisdictions separate."
+  }
+]

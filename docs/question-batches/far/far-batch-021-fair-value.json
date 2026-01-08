@@ -1,0 +1,432 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Fair Value Measurements",
+    "batchNumber": 21,
+    "questionCount": 20,
+    "weight": "3%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-fv-001",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Definition",
+      "conceptTested": "Fair value concept",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Fair value is defined as:",
+      "options": {
+        "A": "Historical cost adjusted for depreciation",
+        "B": "The price to sell an asset or transfer a liability in an orderly transaction between market participants",
+        "C": "The replacement cost of an asset",
+        "D": "The present value of future cash flows"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 820 defines fair value as the exit price—the price to sell an asset or transfer a liability in an orderly transaction between market participants at the measurement date.",
+      "tip": "Fair value = exit price (selling/transferring, not buying).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fv-002",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Market Participant",
+      "conceptTested": "Market participant assumption",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fair value is measured from the perspective of:",
+      "options": {
+        "A": "The reporting entity specifically",
+        "B": "Market participants (hypothetical buyers/sellers)",
+        "C": "Management's intent",
+        "D": "Tax authorities"
+      },
+      "correctAnswer": "B",
+      "explanation": "Fair value is based on market participant assumptions—what a knowledgeable, willing buyer/seller would consider in pricing the asset or liability, not entity-specific factors.",
+      "tip": "Fair value = market participant view, not entity-specific.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-003",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Hierarchy",
+      "conceptTested": "Level 1 inputs",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Level 1 inputs in the fair value hierarchy are:",
+      "options": {
+        "A": "Unobservable inputs based on entity assumptions",
+        "B": "Quoted prices in active markets for identical assets or liabilities",
+        "C": "Observable inputs other than quoted prices",
+        "D": "Replacement cost estimates"
+      },
+      "correctAnswer": "B",
+      "explanation": "Level 1 inputs are unadjusted quoted prices in active markets for identical assets or liabilities—the most reliable fair value evidence.",
+      "tip": "Level 1 = quoted prices, active market, identical items.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fv-004",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Hierarchy",
+      "conceptTested": "Level 2 inputs",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Level 2 inputs include:",
+      "options": {
+        "A": "Quoted prices in active markets for identical assets",
+        "B": "Observable inputs for similar assets, or inputs corroborated by market data",
+        "C": "Entity-developed assumptions",
+        "D": "Historical cost"
+      },
+      "correctAnswer": "B",
+      "explanation": "Level 2 inputs are observable inputs other than Level 1 quotes—like quoted prices for similar assets, or inputs derived from or corroborated by observable market data.",
+      "tip": "Level 2 = observable inputs, similar assets, corroborated data.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-005",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Hierarchy",
+      "conceptTested": "Level 3 inputs",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Level 3 inputs are:",
+      "options": {
+        "A": "The most reliable inputs",
+        "B": "Unobservable inputs based on the entity's own assumptions",
+        "C": "Always prohibited",
+        "D": "Government-mandated values"
+      },
+      "correctAnswer": "B",
+      "explanation": "Level 3 inputs are unobservable—based on the entity's own assumptions about what market participants would use. They're used only when observable inputs aren't available.",
+      "tip": "Level 3 = unobservable, entity's own assumptions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-006",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Hierarchy",
+      "conceptTested": "Hierarchy classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The fair value hierarchy level for a measurement is determined by:",
+      "options": {
+        "A": "The highest level input used",
+        "B": "The lowest level input significant to the measurement",
+        "C": "The average of all input levels",
+        "D": "Management's choice"
+      },
+      "correctAnswer": "B",
+      "explanation": "The fair value measurement is categorized based on the lowest level input that is significant to the entire measurement. Level 1 is highest, Level 3 is lowest.",
+      "tip": "Hierarchy = lowest significant input determines level.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-007",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Principal Market",
+      "conceptTested": "Principal vs most advantageous market",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When measuring fair value, the reporting entity should use prices from:",
+      "options": {
+        "A": "The market with the highest price",
+        "B": "The principal market, or if none, the most advantageous market",
+        "C": "Any market the entity chooses",
+        "D": "The market where the asset was originally purchased"
+      },
+      "correctAnswer": "B",
+      "explanation": "Fair value is measured using prices in the principal market (greatest volume/activity). If no principal market exists, use the most advantageous market (best net price after transaction costs).",
+      "tip": "Principal market first; if none, most advantageous.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-008",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Valuation Techniques",
+      "conceptTested": "Three approaches",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The three valuation approaches for measuring fair value are:",
+      "options": {
+        "A": "Historical, replacement, and liquidation",
+        "B": "Market, income, and cost approaches",
+        "C": "Book value, intrinsic value, and par value",
+        "D": "Simple, compound, and weighted approaches"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 820 identifies three valuation approaches: market approach (comparable transactions), income approach (discounted cash flows), and cost approach (replacement cost).",
+      "tip": "Three approaches: market, income, cost.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-009",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Valuation Techniques",
+      "conceptTested": "Income approach",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The income approach to fair value converts:",
+      "options": {
+        "A": "Historical costs to current costs",
+        "B": "Future amounts (cash flows) to a present value",
+        "C": "Book value to market value",
+        "D": "Assets to liabilities"
+      },
+      "correctAnswer": "B",
+      "explanation": "The income approach converts future amounts (expected cash flows, earnings) to a present value using discounting techniques.",
+      "tip": "Income approach = present value of future cash flows.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fv-010",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Highest and Best Use",
+      "conceptTested": "Nonfinancial assets",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "For nonfinancial assets, fair value measurement considers:",
+      "options": {
+        "A": "Only current use by the entity",
+        "B": "The highest and best use by market participants",
+        "C": "Historical cost",
+        "D": "Liquidation value only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Fair value of nonfinancial assets assumes highest and best use by market participants—the use that maximizes value, even if different from the entity's current use.",
+      "tip": "Nonfinancial assets: highest and best use.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-011",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Transaction Costs",
+      "conceptTested": "Transaction costs in fair value",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Transaction costs in fair value measurement are:",
+      "options": {
+        "A": "Added to fair value for assets",
+        "B": "Not included in fair value but considered in determining the most advantageous market",
+        "C": "Always deducted from fair value",
+        "D": "Capitalized as part of the asset"
+      },
+      "correctAnswer": "B",
+      "explanation": "Transaction costs are not part of fair value (which is the exchange price). However, they're considered when determining the most advantageous market if no principal market exists.",
+      "tip": "Transaction costs: not in FV, but used to identify best market.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-012",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Bid-Ask Spread",
+      "conceptTested": "Price within bid-ask",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When Level 1 inputs have a bid-ask spread, fair value should be:",
+      "options": {
+        "A": "Always the bid price",
+        "B": "Always the ask price",
+        "C": "The price within the bid-ask spread most representative of fair value",
+        "D": "The midpoint only"
+      },
+      "correctAnswer": "C",
+      "explanation": "Fair value is measured at a price within the bid-ask spread that is most representative of fair value in the circumstances. The midpoint is common but not required.",
+      "tip": "Bid-ask spread: use price most representative of FV.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-013",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Disclosures",
+      "conceptTested": "Recurring vs nonrecurring",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fair value disclosures differ for recurring versus nonrecurring measurements. Recurring measurements are:",
+      "options": {
+        "A": "One-time measurements like impairments",
+        "B": "Measurements required each reporting period (like trading securities)",
+        "C": "Measurements done annually only",
+        "D": "Historical cost measurements"
+      },
+      "correctAnswer": "B",
+      "explanation": "Recurring fair value measurements are required each reporting period (e.g., trading securities, derivatives). Nonrecurring measurements occur in specific circumstances (e.g., impairments).",
+      "tip": "Recurring = every period. Nonrecurring = specific events.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-014",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Fair Value Option",
+      "conceptTested": "FVO election",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The fair value option (ASC 825) allows entities to:",
+      "options": {
+        "A": "Measure all assets at fair value",
+        "B": "Irrevocably elect fair value measurement for certain eligible financial instruments",
+        "C": "Change fair value measurements each period",
+        "D": "Avoid fair value disclosures"
+      },
+      "correctAnswer": "B",
+      "explanation": "The fair value option allows irrevocable election to measure eligible financial instruments at fair value with changes in earnings. The election is made instrument-by-instrument at specified dates.",
+      "tip": "FVO: irrevocable election for eligible financial instruments.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-015",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Liability Fair Value",
+      "conceptTested": "Own credit risk",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When measuring the fair value of a liability, the entity's own credit risk is:",
+      "options": {
+        "A": "Ignored entirely",
+        "B": "Included in the measurement",
+        "C": "Added to fair value",
+        "D": "Disclosed but not reflected in value"
+      },
+      "correctAnswer": "B",
+      "explanation": "The fair value of a liability includes the entity's own credit risk (nonperformance risk). A decline in creditworthiness would decrease the liability's fair value.",
+      "tip": "Liability FV includes entity's own credit risk.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-016",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Level 3 Disclosures",
+      "conceptTested": "Level 3 requirements",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Level 3 fair value measurements require additional disclosures including:",
+      "options": {
+        "A": "Only the fair value amount",
+        "B": "Reconciliation of beginning to ending balances and quantitative information about unobservable inputs",
+        "C": "Names of appraisers used",
+        "D": "Historical cost comparison only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Level 3 measurements require extensive disclosures: a reconciliation (roll-forward), description of valuation processes, quantitative information about significant unobservable inputs, and sensitivity analysis.",
+      "tip": "Level 3: rollforward, inputs, sensitivity required.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fv-017",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Market Approach",
+      "conceptTested": "Market approach techniques",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The market approach to fair value uses:",
+      "options": {
+        "A": "Discounted cash flows",
+        "B": "Prices and other information from market transactions involving identical or comparable assets",
+        "C": "Replacement cost",
+        "D": "Book value ratios"
+      },
+      "correctAnswer": "B",
+      "explanation": "The market approach uses prices and relevant information from actual market transactions involving identical or comparable assets or liabilities.",
+      "tip": "Market approach = comparable transactions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-018",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Cost Approach",
+      "conceptTested": "Current replacement cost",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The cost approach measures fair value based on:",
+      "options": {
+        "A": "Historical acquisition cost",
+        "B": "The amount required to replace the service capacity of an asset (current replacement cost)",
+        "C": "The amount originally paid plus interest",
+        "D": "Liquidation value"
+      },
+      "correctAnswer": "B",
+      "explanation": "The cost approach reflects the amount that would be required currently to replace the service capacity of an asset, adjusted for obsolescence.",
+      "tip": "Cost approach = current replacement cost.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-019",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Active Market",
+      "conceptTested": "Active market definition",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An active market is characterized by:",
+      "options": {
+        "A": "Government regulation",
+        "B": "Transactions occurring with sufficient frequency and volume to provide pricing information on an ongoing basis",
+        "C": "Physical location only",
+        "D": "At least 100 transactions per day"
+      },
+      "correctAnswer": "B",
+      "explanation": "An active market has transactions with sufficient frequency and volume to provide pricing information on an ongoing basis. There's no specific numerical threshold.",
+      "tip": "Active market = sufficient frequency/volume for ongoing prices.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fv-020",
+      "section": "FAR",
+      "topic": "Fair Value Measurements",
+      "subtopic": "Unit of Account",
+      "conceptTested": "Unit of account concept",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The unit of account for fair value measurement is determined by:",
+      "options": {
+        "A": "ASC 820 (Fair Value Measurement)",
+        "B": "The accounting standard requiring or permitting the fair value measurement",
+        "C": "Management's choice",
+        "D": "The auditor's preference"
+      },
+      "correctAnswer": "B",
+      "explanation": "The unit of account—whether fair value is measured for an individual asset or a group—is determined by the accounting standard that requires or permits the fair value measurement, not ASC 820 itself.",
+      "tip": "Unit of account: determined by the standard requiring FV.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "IFRS vs GAAP Differences",
+    "batchNumber": 26,
+    "questionCount": 25,
+    "weight": "4%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-ifrs-001",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Conceptual Framework",
+      "conceptTested": "Framework differences",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A key difference between GAAP and IFRS conceptual frameworks is that IFRS:",
+      "options": {
+        "A": "Does not have a conceptual framework",
+        "B": "Explicitly includes prudence (conservatism) as a component of faithful representation",
+        "C": "Does not recognize assets and liabilities",
+        "D": "Requires cash basis accounting"
+      },
+      "correctAnswer": "B",
+      "explanation": "The IFRS conceptual framework explicitly includes prudence (the exercise of caution under uncertainty) as supporting faithful representation. GAAP removed conservatism as a specific qualitative characteristic.",
+      "tip": "IFRS: prudence in framework. GAAP: removed conservatism.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-002",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Inventory",
+      "conceptTested": "LIFO prohibition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under IFRS, which inventory cost flow method is prohibited?",
+      "options": {
+        "A": "FIFO",
+        "B": "Weighted average",
+        "C": "LIFO",
+        "D": "Specific identification"
+      },
+      "correctAnswer": "C",
+      "explanation": "IFRS prohibits the use of LIFO (last-in, first-out). Only FIFO, weighted average, and specific identification are permitted under IFRS.",
+      "tip": "IFRS: NO LIFO. GAAP: LIFO permitted.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-ifrs-003",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Inventory",
+      "conceptTested": "Inventory writedown reversal",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Regarding inventory writedowns to net realizable value:",
+      "options": {
+        "A": "Both GAAP and IFRS prohibit reversal",
+        "B": "IFRS permits reversal; GAAP prohibits reversal",
+        "C": "GAAP permits reversal; IFRS prohibits reversal",
+        "D": "Both permit unlimited reversal"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS permits reversal of inventory writedowns if NRV increases (limited to original writedown). GAAP prohibits reversal—once written down, the new lower cost becomes the basis.",
+      "tip": "IFRS: can reverse inventory writedown. GAAP: no reversal.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-004",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "PP&E",
+      "conceptTested": "Revaluation model",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For property, plant, and equipment subsequent measurement:",
+      "options": {
+        "A": "GAAP permits the revaluation model; IFRS does not",
+        "B": "IFRS permits the revaluation model; GAAP requires cost model",
+        "C": "Both require only fair value",
+        "D": "Neither permits revaluation"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS permits an accounting policy choice between the cost model and revaluation model for PPE. GAAP requires the cost model (historical cost less accumulated depreciation and impairment).",
+      "tip": "IFRS: cost or revaluation model. GAAP: cost model only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-005",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "PP&E",
+      "conceptTested": "Component depreciation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Component depreciation for PP&E is:",
+      "options": {
+        "A": "Required by IFRS; permitted but not common under GAAP",
+        "B": "Prohibited by both",
+        "C": "Required by GAAP; prohibited by IFRS",
+        "D": "Optional under both"
+      },
+      "correctAnswer": "A",
+      "explanation": "IFRS requires component depreciation—significant parts of an asset with different useful lives must be depreciated separately. GAAP permits it but companies often don't apply it as rigorously.",
+      "tip": "IFRS: component depreciation required. GAAP: permitted.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-006",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Impairment",
+      "conceptTested": "Impairment reversal",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For impairment losses on long-lived assets (excluding goodwill):",
+      "options": {
+        "A": "Both GAAP and IFRS prohibit reversal",
+        "B": "IFRS permits reversal; GAAP prohibits reversal",
+        "C": "GAAP permits reversal; IFRS prohibits reversal",
+        "D": "Both require immediate reversal"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS permits reversal of impairment losses (except goodwill) if circumstances change. GAAP prohibits reversal of impairment losses—they are considered permanent.",
+      "tip": "IFRS: can reverse asset impairment. GAAP: no reversal.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-007",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Impairment",
+      "conceptTested": "Impairment testing approach",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The impairment test approach differs in that:",
+      "options": {
+        "A": "GAAP uses a one-step FV test; IFRS uses recoverable amount",
+        "B": "GAAP uses a two-step approach (recoverability then measurement); IFRS uses one-step recoverable amount",
+        "C": "Both use identical approaches",
+        "D": "IFRS uses two steps; GAAP uses one step"
+      },
+      "correctAnswer": "B",
+      "explanation": "GAAP uses recoverability test first (compare undiscounted cash flows to carrying amount), then measures impairment using fair value. IFRS compares carrying amount directly to recoverable amount (higher of FV less costs to sell and value in use).",
+      "tip": "GAAP: 2-step (recoverability + FV). IFRS: 1-step (recoverable amount).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-ifrs-008",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Development Costs",
+      "conceptTested": "R&D capitalization",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Development costs are:",
+      "options": {
+        "A": "Expensed under both GAAP and IFRS",
+        "B": "Capitalized if criteria are met under IFRS; generally expensed under GAAP",
+        "C": "Capitalized under GAAP; expensed under IFRS",
+        "D": "Always capitalized under both"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS requires capitalization of development costs when specific criteria are met (technical feasibility, intent to complete, etc.). GAAP generally expenses R&D, with limited exceptions like software development.",
+      "tip": "IFRS: capitalize development if criteria met. GAAP: expense R&D.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-009",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Investment Property",
+      "conceptTested": "Investment property classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Investment property under IFRS:",
+      "options": {
+        "A": "Does not exist as a separate category",
+        "B": "Is a separate category that can be measured at fair value or cost",
+        "C": "Must always be measured at cost",
+        "D": "Is classified the same as under GAAP"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS has a separate 'investment property' category (property held to earn rentals or capital appreciation) with a choice of fair value or cost model. GAAP has no separate investment property category.",
+      "tip": "IFRS: investment property category (FV or cost). GAAP: no such category.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-010",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Goodwill",
+      "conceptTested": "Goodwill amortization",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under IFRS, goodwill is:",
+      "options": {
+        "A": "Amortized over 10 years",
+        "B": "Not amortized; tested for impairment annually",
+        "C": "Amortized over 40 years",
+        "D": "Expensed immediately"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under both IFRS and GAAP, goodwill is not amortized but tested for impairment at least annually. Note: GAAP now allows private companies to elect amortization.",
+      "tip": "Goodwill: no amortization under both (GAAP private co. exception).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-011",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Business Combinations",
+      "conceptTested": "NCI measurement",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "For measuring noncontrolling interest at acquisition:",
+      "options": {
+        "A": "Both require fair value",
+        "B": "IFRS allows fair value or proportionate share; GAAP requires fair value",
+        "C": "GAAP allows choice; IFRS requires fair value",
+        "D": "Both require proportionate share"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS allows a choice: NCI can be measured at fair value (full goodwill) or at the NCI's proportionate share of identifiable net assets (partial goodwill). GAAP requires fair value (full goodwill).",
+      "tip": "IFRS: NCI at FV or proportionate share. GAAP: FV only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-ifrs-012",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Revenue Recognition",
+      "conceptTested": "Revenue standards convergence",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The revenue recognition standards under GAAP (ASC 606) and IFRS (IFRS 15) are:",
+      "options": {
+        "A": "Completely different",
+        "B": "Substantially converged with minor differences",
+        "C": "IFRS has no revenue standard",
+        "D": "GAAP uses cash basis; IFRS uses accrual"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 606 and IFRS 15 were jointly developed and are substantially converged. Both use the 5-step model for revenue recognition with only minor differences.",
+      "tip": "Revenue recognition: substantially converged (ASC 606 = IFRS 15).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-ifrs-013",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Leases",
+      "conceptTested": "Lease convergence",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the lease standards (ASC 842 and IFRS 16), a key difference is that IFRS:",
+      "options": {
+        "A": "Does not require lessees to recognize lease liabilities",
+        "B": "Has a single lease classification for lessees (all similar to finance leases)",
+        "C": "Still uses operating lease treatment",
+        "D": "Requires lessor capitalization"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS 16 has essentially one lessee model—all leases are recognized similarly to finance leases. ASC 842 retains the finance/operating distinction for expense pattern.",
+      "tip": "IFRS: single lessee model. GAAP: finance vs operating distinction.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-014",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Cash Flows",
+      "conceptTested": "Interest/dividend classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For classification of interest and dividends on the cash flow statement:",
+      "options": {
+        "A": "Both GAAP and IFRS require operating classification",
+        "B": "GAAP has fixed classifications; IFRS allows more flexibility",
+        "C": "Both allow complete flexibility",
+        "D": "Neither has guidance on this"
+      },
+      "correctAnswer": "B",
+      "explanation": "GAAP requires interest paid/received and dividends received as operating. IFRS allows interest and dividends to be classified as operating, investing, or financing depending on the nature.",
+      "tip": "GAAP: fixed classification. IFRS: flexible for interest/dividends.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-015",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Financial Statements",
+      "conceptTested": "Balance sheet terminology",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under IFRS, the balance sheet is typically called:",
+      "options": {
+        "A": "Balance sheet (same as GAAP)",
+        "B": "Statement of financial position",
+        "C": "Statement of net worth",
+        "D": "Capital statement"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS uses the term 'statement of financial position' while GAAP commonly uses 'balance sheet,' though both terms are acceptable under both frameworks.",
+      "tip": "IFRS: Statement of Financial Position. GAAP: Balance Sheet.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-ifrs-016",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Financial Statements",
+      "conceptTested": "Extraordinary items",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Extraordinary items classification on the income statement:",
+      "options": {
+        "A": "Is required under both GAAP and IFRS",
+        "B": "Is prohibited under both GAAP and IFRS",
+        "C": "Is permitted under GAAP only",
+        "D": "Is permitted under IFRS only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Both GAAP and IFRS prohibit presenting items as 'extraordinary' on the face of the income statement. Unusual or infrequent items are disclosed separately but not labeled as extraordinary.",
+      "tip": "No extraordinary items under GAAP or IFRS.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-ifrs-017",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Provisions",
+      "conceptTested": "Contingency terminology",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "IFRS uses the term 'provision' where GAAP uses:",
+      "options": {
+        "A": "The same term",
+        "B": "Accrued liability or loss contingency",
+        "C": "Deferred credit",
+        "D": "Reserve"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS uses 'provision' for liabilities of uncertain timing or amount (what GAAP calls accrued liabilities or loss contingencies). GAAP uses 'provision' mainly for income tax provision.",
+      "tip": "IFRS provision = GAAP accrued liability/loss contingency.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-018",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Contingencies",
+      "conceptTested": "Contingency measurement",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a range of equally likely outcomes exists for a provision:",
+      "options": {
+        "A": "GAAP uses midpoint; IFRS uses minimum",
+        "B": "GAAP uses minimum; IFRS uses midpoint (best estimate)",
+        "C": "Both use the maximum",
+        "D": "Both use the minimum"
+      },
+      "correctAnswer": "B",
+      "explanation": "GAAP uses the minimum of a range when no amount is more likely. IFRS uses the midpoint (best estimate) for a large population or the most likely outcome for single obligations.",
+      "tip": "Range: GAAP = minimum. IFRS = midpoint/best estimate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-ifrs-019",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Borrowing Costs",
+      "conceptTested": "Interest capitalization",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Capitalization of borrowing costs for qualifying assets:",
+      "options": {
+        "A": "Is optional under GAAP; required under IFRS",
+        "B": "Is required under both GAAP and IFRS",
+        "C": "Is prohibited under IFRS",
+        "D": "Is required under GAAP; optional under IFRS"
+      },
+      "correctAnswer": "B",
+      "explanation": "Both GAAP and IFRS require capitalization of borrowing costs (interest) for qualifying assets that take substantial time to prepare for use or sale.",
+      "tip": "Borrowing cost capitalization: required under both.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-020",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Prior Period Errors",
+      "conceptTested": "Error correction",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The treatment of prior period errors is:",
+      "options": {
+        "A": "Different between GAAP and IFRS",
+        "B": "Substantially the same—retrospective restatement",
+        "C": "Prospective under IFRS",
+        "D": "Neither requires correction"
+      },
+      "correctAnswer": "B",
+      "explanation": "Both GAAP and IFRS require retrospective restatement for material prior period errors. Prior periods are corrected as if the error had never occurred.",
+      "tip": "Error correction: same treatment (retrospective).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-ifrs-021",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "EPS",
+      "conceptTested": "EPS requirements",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Earnings per share presentation requirements under GAAP and IFRS are:",
+      "options": {
+        "A": "Completely different",
+        "B": "Substantially similar",
+        "C": "Required under GAAP only",
+        "D": "Required under IFRS only"
+      },
+      "correctAnswer": "B",
+      "explanation": "EPS requirements are substantially similar under both GAAP and IFRS. Both require basic and diluted EPS on the face of the income statement for public entities.",
+      "tip": "EPS requirements: substantially the same.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-ifrs-022",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Segment Reporting",
+      "conceptTested": "Segment reporting approach",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Segment reporting under GAAP and IFRS:",
+      "options": {
+        "A": "Uses completely different approaches",
+        "B": "Both use the management approach with minor differences",
+        "C": "Is required under GAAP only",
+        "D": "Uses risk and reward approach under IFRS"
+      },
+      "correctAnswer": "B",
+      "explanation": "Both GAAP (ASC 280) and IFRS (IFRS 8) use the management approach to identify operating segments. Requirements are substantially converged.",
+      "tip": "Segment reporting: both use management approach.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-023",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Biological Assets",
+      "conceptTested": "Agricultural accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Biological assets (like livestock and crops) under IFRS are measured at:",
+      "options": {
+        "A": "Historical cost",
+        "B": "Fair value less costs to sell",
+        "C": "Lower of cost or market",
+        "D": "The same as inventory under GAAP"
+      },
+      "correctAnswer": "B",
+      "explanation": "IFRS has specific guidance (IAS 41) requiring biological assets to be measured at fair value less costs to sell. GAAP has no specific biological asset standard and typically uses cost.",
+      "tip": "IFRS: biological assets at FV less costs to sell.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-ifrs-024",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Rules vs Principles",
+      "conceptTested": "Framework philosophy",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A common characterization of GAAP vs IFRS is that:",
+      "options": {
+        "A": "GAAP is more principles-based; IFRS is more rules-based",
+        "B": "GAAP is more rules-based; IFRS is more principles-based",
+        "C": "Both are equally rules-based",
+        "D": "Neither has any rules or principles"
+      },
+      "correctAnswer": "B",
+      "explanation": "GAAP is often characterized as more rules-based with specific guidance and bright-line tests. IFRS is considered more principles-based, relying more on professional judgment.",
+      "tip": "GAAP: rules-based. IFRS: principles-based.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-ifrs-025",
+      "section": "FAR",
+      "topic": "IFRS Differences",
+      "subtopic": "Fair Value",
+      "conceptTested": "Fair value measurement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fair value measurement guidance under GAAP (ASC 820) and IFRS (IFRS 13):",
+      "options": {
+        "A": "Is completely different",
+        "B": "Is substantially converged",
+        "C": "Only GAAP has fair value guidance",
+        "D": "Uses different fair value hierarchies"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 820 and IFRS 13 were developed through a convergence project and are substantially the same, including the three-level fair value hierarchy.",
+      "tip": "Fair value measurement: converged standards.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

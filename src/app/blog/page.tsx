@@ -4,7 +4,7 @@ import { categoryLabels, categoryColors } from '@/lib/blog/types';
 
 export const metadata = {
   title: 'CPA Exam Blog | Study Tips, Strategies & Guides',
-  description: 'Expert CPA exam tips, study strategies, and section guides from licensed CPAs. Get the latest insights to help you pass the CPA exam.',
+  description: 'CPA exam tips, study strategies, and section guides. Get the latest insights to help you prepare for the CPA exam.',
 };
 
 function PostCard({ post }: { post: ReturnType<typeof getAllPosts>[0] }) {
@@ -91,7 +91,7 @@ export default function BlogPage() {
               CPA Exam Blog
             </h1>
             <p className="text-xl text-gray-200">
-              Expert tips, study strategies, and insights from licensed CPAs to help you pass the CPA exam.
+              Study tips, strategies, and insights to help you prepare for the CPA exam.
             </p>
           </div>
         </div>

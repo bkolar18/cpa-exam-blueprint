@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Inventory - Advanced Topics",
+    "batchNumber": 32,
+    "totalQuestions": 30,
+    "dateGenerated": "2025-01-07",
+    "generatedBy": "Claude"
+  },
+  "questions": [
+    {
+      "id": "far-inv-adv-001",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Lower of Cost or NRV",
+      "conceptTested": "NRV calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Inventory has a cost of $50,000, estimated selling price of $55,000, costs to complete of $3,000, and costs to sell of $4,000. What is the net realizable value?",
+      "options": {
+        "A": "$48,000",
+        "B": "$50,000",
+        "C": "$52,000",
+        "D": "$55,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "NRV = Estimated selling price - Costs to complete - Costs to sell = $55,000 - $3,000 - $4,000 = $48,000.",
+      "tip": "NRV = Selling price - Completion costs - Selling costs.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-002",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Lower of Cost or NRV",
+      "conceptTested": "Writedown entry",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Using the previous question, what is the required inventory writedown?",
+      "options": {
+        "A": "$0",
+        "B": "$2,000",
+        "C": "$5,000",
+        "D": "$7,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cost = $50,000, NRV = $48,000. Writedown = $50,000 - $48,000 = $2,000. Dr. Cost of Goods Sold, Cr. Inventory.",
+      "tip": "Writedown = Cost - NRV (if cost > NRV).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-003",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "LIFO Reserve",
+      "conceptTested": "Converting LIFO to FIFO",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A company reports inventory of $200,000 using LIFO with a LIFO reserve of $35,000. What would be the inventory balance under FIFO?",
+      "options": {
+        "A": "$165,000",
+        "B": "$200,000",
+        "C": "$235,000",
+        "D": "$270,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "FIFO inventory = LIFO inventory + LIFO reserve = $200,000 + $35,000 = $235,000.",
+      "tip": "FIFO = LIFO + LIFO reserve.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-004",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "LIFO Reserve",
+      "conceptTested": "LIFO reserve change impact on COGS",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "If the LIFO reserve increases from $25,000 to $35,000 during the year, LIFO COGS is how much higher than FIFO COGS?",
+      "options": {
+        "A": "$10,000 higher",
+        "B": "$10,000 lower",
+        "C": "$35,000 higher",
+        "D": "Same as FIFO COGS"
+      },
+      "correctAnswer": "A",
+      "explanation": "Increase in LIFO reserve = Additional COGS under LIFO. LIFO COGS is $10,000 higher than FIFO COGS ($35,000 - $25,000).",
+      "tip": "Increase in LIFO reserve = LIFO COGS > FIFO COGS by that amount.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-005",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "LIFO Liquidation",
+      "conceptTested": "Effects of LIFO liquidation",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "During periods of rising prices, a LIFO liquidation (selling from old layers) results in:",
+      "options": {
+        "A": "Higher COGS and lower gross profit",
+        "B": "Lower COGS and higher gross profit",
+        "C": "No change in gross profit",
+        "D": "Higher COGS and higher gross profit"
+      },
+      "correctAnswer": "B",
+      "explanation": "LIFO liquidation sells from older, lower-cost layers, resulting in lower COGS and artificially higher gross profit during inflation.",
+      "tip": "LIFO liquidation = sell old cheap inventory = lower COGS, higher profit.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-006",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Dollar-Value LIFO",
+      "conceptTested": "Price index calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Year-end inventory at current-year prices is $132,000. At base-year prices, it's $110,000. What is the current year price index?",
+      "options": {
+        "A": "0.833",
+        "B": "1.00",
+        "C": "1.10",
+        "D": "1.20"
+      },
+      "correctAnswer": "D",
+      "explanation": "Price index = Current-year prices ÷ Base-year prices = $132,000 ÷ $110,000 = 1.20.",
+      "tip": "Price index = current $ ÷ base-year $.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-007",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Dollar-Value LIFO",
+      "conceptTested": "Layer calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Base layer is $100,000. End of Year 1, inventory at base-year prices is $120,000 with a 1.10 price index. What is the Year 1 layer at LIFO cost?",
+      "options": {
+        "A": "$20,000",
+        "B": "$22,000",
+        "C": "$32,000",
+        "D": "$132,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Year 1 layer in base-year $ = $120,000 - $100,000 = $20,000. LIFO cost = $20,000 × 1.10 = $22,000.",
+      "tip": "DV LIFO layer = layer at base $ × price index when added.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-inv-adv-008",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Retail Method",
+      "conceptTested": "Cost-to-retail ratio",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Beginning inventory: Cost $40,000, Retail $60,000. Purchases: Cost $160,000, Retail $240,000. What is the cost-to-retail ratio?",
+      "options": {
+        "A": "60.0%",
+        "B": "66.7%",
+        "C": "75.0%",
+        "D": "80.0%"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cost-to-retail ratio = ($40,000 + $160,000) ÷ ($60,000 + $240,000) = $200,000 ÷ $300,000 = 66.7%.",
+      "tip": "C/R ratio = (BI cost + Purchases cost) ÷ (BI retail + Purchases retail).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-009",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Retail Method",
+      "conceptTested": "Ending inventory calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Using the previous data (66.7% ratio), if ending inventory at retail is $75,000, what is ending inventory at cost?",
+      "options": {
+        "A": "$45,000",
+        "B": "$50,000",
+        "C": "$56,250",
+        "D": "$75,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Ending inventory at cost = Ending at retail × C/R ratio = $75,000 × 66.7% = $50,025 ≈ $50,000.",
+      "tip": "Ending inventory cost = Ending retail × C/R ratio.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-010",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Retail Method - LCM",
+      "conceptTested": "Net markdowns treatment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under the conventional retail method (lower of cost or market), net markdowns are:",
+      "options": {
+        "A": "Included in both the numerator and denominator",
+        "B": "Excluded from both the numerator and denominator",
+        "C": "Excluded from the numerator but included in the denominator",
+        "D": "Included in the numerator but excluded from the denominator"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under LCM retail method, net markdowns are excluded from the cost-to-retail ratio calculation (excluded from numerator, in denominator via reduced retail value). This produces a lower ratio and approximates LCM.",
+      "tip": "LCM retail: exclude net markdowns from ratio numerator.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-011",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Gross Profit Method",
+      "conceptTested": "Estimating ending inventory",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Beginning inventory $80,000, net purchases $420,000, sales $600,000, gross profit rate 30%. What is estimated ending inventory?",
+      "options": {
+        "A": "$80,000",
+        "B": "$100,000",
+        "C": "$180,000",
+        "D": "$320,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Goods available for sale = $80,000 + $420,000 = $500,000. With gross profit rate of 30% on sales, COGS = 70% of sales = $600,000 × 70% = $420,000. Estimated ending inventory = $500,000 - $420,000 = $80,000.",
+      "tip": "Gross profit method: COGS = Sales × (1 - GP rate). Ending = Goods available - COGS.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-inv-adv-012",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Consignment",
+      "conceptTested": "Consignor inventory reporting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Goods on consignment are reported as inventory by:",
+      "options": {
+        "A": "The consignee only",
+        "B": "The consignor only",
+        "C": "Both consignor and consignee",
+        "D": "Neither party until sold"
+      },
+      "correctAnswer": "B",
+      "explanation": "Consigned goods remain the property of and are reported as inventory by the consignor until sold to a third party by the consignee.",
+      "tip": "Consignment inventory = consignor's inventory until sold.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-013",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Consignment Costs",
+      "conceptTested": "Inventoriable consignment costs",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Freight costs to ship goods to a consignee should be:",
+      "options": {
+        "A": "Expensed immediately by the consignor",
+        "B": "Added to consignment inventory by the consignor",
+        "C": "Recorded as inventory by the consignee",
+        "D": "Recorded as a receivable from the consignee"
+      },
+      "correctAnswer": "B",
+      "explanation": "Freight and other costs to transfer goods to a consignee are added to the consignment inventory cost by the consignor.",
+      "tip": "Consignment freight = add to consignor's inventory cost.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-014",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "FOB Terms",
+      "conceptTested": "FOB shipping point ownership",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Goods shipped FOB shipping point are owned by:",
+      "options": {
+        "A": "The seller until received by the buyer",
+        "B": "The buyer once shipped",
+        "C": "The shipping company during transit",
+        "D": "Neither party during transit"
+      },
+      "correctAnswer": "B",
+      "explanation": "FOB shipping point means title transfers when goods are shipped. The buyer owns goods in transit.",
+      "tip": "FOB shipping point = buyer owns goods in transit.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-inv-adv-015",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Inventory Errors",
+      "conceptTested": "Effect of ending inventory overstatement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "If ending inventory is overstated in Year 1, the effect on Year 1 and Year 2 net income is:",
+      "options": {
+        "A": "Year 1 overstated, Year 2 overstated",
+        "B": "Year 1 overstated, Year 2 understated",
+        "C": "Year 1 understated, Year 2 overstated",
+        "D": "Year 1 understated, Year 2 understated"
+      },
+      "correctAnswer": "B",
+      "explanation": "Overstated ending inventory → understated COGS → overstated Year 1 net income. Year 1 ending = Year 2 beginning. Overstated beginning inventory → overstated COGS → understated Year 2 net income.",
+      "tip": "Ending inventory error reverses in following year.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-016",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Inventory Errors",
+      "conceptTested": "Counterbalancing effect",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Year 1 ending inventory was understated by $8,000. If not corrected, what is the effect on Year 2 retained earnings?",
+      "options": {
+        "A": "Understated by $8,000",
+        "B": "Overstated by $8,000",
+        "C": "Understated by $16,000",
+        "D": "No effect (error counterbalances)"
+      },
+      "correctAnswer": "D",
+      "explanation": "Inventory errors are counterbalancing. Y1 ending understated = Y1 NI understated. Y2 beginning understated = Y2 COGS understated = Y2 NI overstated. Effects cancel over 2 years.",
+      "tip": "Inventory errors self-correct over 2 years (counterbalancing).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-017",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Purchase Commitments",
+      "conceptTested": "Loss on firm purchase commitment",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A company has a firm commitment to purchase 10,000 units at $15 each. Year-end market price is $12. What loss should be recognized?",
+      "options": {
+        "A": "$0",
+        "B": "$12,000",
+        "C": "$30,000",
+        "D": "$150,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Loss on purchase commitment = (Contract price - Market price) × Units = ($15 - $12) × 10,000 = $30,000.",
+      "tip": "Accrue loss when market < contract price on firm commitment.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-018",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Basket Purchase",
+      "conceptTested": "Allocating basket purchase cost",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A company purchases inventory ($60,000 FV) and equipment ($40,000 FV) together for $80,000. What cost is allocated to inventory?",
+      "options": {
+        "A": "$40,000",
+        "B": "$48,000",
+        "C": "$60,000",
+        "D": "$80,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Total FV = $100,000. Inventory allocation = $80,000 × ($60,000 ÷ $100,000) = $80,000 × 60% = $48,000.",
+      "tip": "Basket purchase: allocate based on relative FV.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-019",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Product Costs",
+      "conceptTested": "Capitalizing overhead",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which cost should be included in manufactured inventory?",
+      "options": {
+        "A": "General corporate administrative expenses",
+        "B": "Factory rent and utilities",
+        "C": "Sales commissions",
+        "D": "Advertising costs"
+      },
+      "correctAnswer": "B",
+      "explanation": "Inventory costs include direct materials, direct labor, and manufacturing overhead (including factory rent, utilities, depreciation). Selling and G&A costs are period expenses.",
+      "tip": "Inventory cost = DM + DL + MOH; exclude selling and G&A.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-020",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Abnormal Costs",
+      "conceptTested": "Treatment of abnormal waste",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Abnormal spoilage and waste should be:",
+      "options": {
+        "A": "Included in inventory cost",
+        "B": "Expensed as incurred",
+        "C": "Capitalized as deferred charges",
+        "D": "Added to cost of goods sold only when units are sold"
+      },
+      "correctAnswer": "B",
+      "explanation": "Abnormal spoilage, waste, and idle capacity are not part of inventory cost. They should be recognized as period expenses when incurred.",
+      "tip": "Abnormal costs = expense immediately; normal costs = capitalize.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-021",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Weighted Average",
+      "conceptTested": "Calculating weighted average cost",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Beginning inventory: 100 units @ $10. Purchase 1: 200 units @ $12. Purchase 2: 300 units @ $14. What is the weighted average cost per unit?",
+      "options": {
+        "A": "$12.00",
+        "B": "$12.67",
+        "C": "$13.00",
+        "D": "$14.00"
+      },
+      "correctAnswer": "B",
+      "explanation": "Total cost = (100 × $10) + (200 × $12) + (300 × $14) = $1,000 + $2,400 + $4,200 = $7,600. Total units = 600. Average = $7,600 ÷ 600 = $12.67.",
+      "tip": "Weighted average = Total cost ÷ Total units.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-022",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Moving Average",
+      "conceptTested": "Moving average vs weighted average",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A company using perpetual inventory with moving average cost will recalculate the unit cost:",
+      "options": {
+        "A": "At year-end only",
+        "B": "Each time a purchase is made",
+        "C": "Each time a sale is made",
+        "D": "Monthly"
+      },
+      "correctAnswer": "B",
+      "explanation": "Moving average recalculates the weighted average cost after each purchase. Under periodic weighted average, the calculation occurs only at period end.",
+      "tip": "Moving average (perpetual) = recalculate after each purchase.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-023",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Specific Identification",
+      "conceptTested": "When to use specific identification",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Specific identification is most appropriate for:",
+      "options": {
+        "A": "Commodities like grain or oil",
+        "B": "Mass-produced consumer goods",
+        "C": "High-value, unique items like jewelry or automobiles",
+        "D": "Raw materials in a manufacturing process"
+      },
+      "correctAnswer": "C",
+      "explanation": "Specific identification is used for high-value, individually identifiable items where tracking actual cost per unit is practical and meaningful.",
+      "tip": "Specific ID: unique, high-value items (cars, jewelry, art).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-inv-adv-024",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "LIFO Conformity",
+      "conceptTested": "LIFO tax conformity rule",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The LIFO conformity rule requires that:",
+      "options": {
+        "A": "All inventory must use LIFO if any inventory uses LIFO",
+        "B": "LIFO must be used for financial reporting if used for tax purposes",
+        "C": "LIFO must produce lower net income than FIFO",
+        "D": "LIFO layers must be maintained for 10 years"
+      },
+      "correctAnswer": "B",
+      "explanation": "The LIFO conformity rule requires companies using LIFO for tax purposes to also use LIFO for financial reporting (with some permitted supplementary FIFO disclosure).",
+      "tip": "LIFO conformity: if LIFO for tax, must use LIFO for books.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-025",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Goods in Transit",
+      "conceptTested": "Recording goods in transit",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "At year-end, Company A has $20,000 of goods in transit shipped FOB destination to customers and $15,000 shipped FOB shipping point to customers. How much is in A's inventory?",
+      "options": {
+        "A": "$0",
+        "B": "$15,000",
+        "C": "$20,000",
+        "D": "$35,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "FOB destination: seller owns until delivered, so $20,000 is A's inventory. FOB shipping point: buyer owns once shipped, so $15,000 is not A's inventory. Answer: $20,000.",
+      "tip": "FOB destination sales = still seller's inventory until delivered.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-026",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Standard Costing",
+      "conceptTested": "Year-end variance treatment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Significant unfavorable manufacturing variances under standard costing should be:",
+      "options": {
+        "A": "Charged entirely to COGS",
+        "B": "Allocated between inventory and COGS",
+        "C": "Deferred as an asset",
+        "D": "Reported as other comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "Significant variances should be allocated between ending inventory and COGS to approximate actual cost. Immaterial variances may be charged to COGS for simplicity.",
+      "tip": "Significant variances = allocate to inventory and COGS.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-inv-adv-027",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Physical Flow vs Cost Flow",
+      "conceptTested": "Cost flow assumption independence",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under GAAP, the cost flow assumption (FIFO, LIFO) must:",
+      "options": {
+        "A": "Match the physical flow of goods",
+        "B": "Be the same as the method used for tax purposes",
+        "C": "Need not match the physical flow of goods",
+        "D": "Be disclosed only in notes, not applied to the financial statements"
+      },
+      "correctAnswer": "C",
+      "explanation": "The cost flow assumption does not need to correspond to the actual physical flow of goods. A company may use LIFO even if physical flow is first-in, first-out.",
+      "tip": "Cost flow assumption ≠ physical flow requirement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-inv-adv-028",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Perpetual vs Periodic",
+      "conceptTested": "Difference in ending inventory",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under which method will perpetual and periodic LIFO produce the SAME ending inventory?",
+      "options": {
+        "A": "When prices are rising",
+        "B": "When prices are falling",
+        "C": "When prices are constant",
+        "D": "They always produce different results"
+      },
+      "correctAnswer": "C",
+      "explanation": "Perpetual and periodic LIFO produce the same results only when unit costs are constant. With changing prices, perpetual LIFO tracks layers at each sale, potentially producing different results.",
+      "tip": "Perpetual vs periodic LIFO: same only if prices constant.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-029",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Inventory Turnover",
+      "conceptTested": "Calculating days in inventory",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "COGS is $730,000. Average inventory is $100,000. How many days does inventory remain in stock (365-day year)?",
+      "options": {
+        "A": "36.5 days",
+        "B": "50 days",
+        "C": "73 days",
+        "D": "100 days"
+      },
+      "correctAnswer": "B",
+      "explanation": "Inventory turnover = COGS ÷ Average inventory = $730,000 ÷ $100,000 = 7.3. Days in inventory = 365 ÷ 7.3 = 50 days.",
+      "tip": "Days in inventory = 365 ÷ inventory turnover ratio.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-inv-adv-030",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Inventory Write-down Reversal",
+      "conceptTested": "GAAP vs IFRS on reversal",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under US GAAP, a previous inventory write-down:",
+      "options": {
+        "A": "May be reversed if NRV increases",
+        "B": "May not be reversed; the new cost basis is permanent",
+        "C": "Must be reversed if NRV increases above original cost",
+        "D": "Is reversed automatically at year-end"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under US GAAP, inventory write-downs create a new, lower cost basis that cannot be reversed (unlike IFRS, which permits reversal up to original cost).",
+      "tip": "GAAP: no write-down reversal; IFRS: reversal allowed up to original cost.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    }
+  ]
+}

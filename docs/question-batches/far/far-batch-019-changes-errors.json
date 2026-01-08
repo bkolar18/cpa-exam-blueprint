@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Accounting Changes and Error Corrections",
+    "batchNumber": 19,
+    "questionCount": 25,
+    "weight": "3%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-changes-001",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Types of Changes",
+      "conceptTested": "Types of accounting changes",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The three types of accounting changes are:",
+      "options": {
+        "A": "Voluntary, involuntary, and mandatory",
+        "B": "Change in accounting principle, change in estimate, and change in reporting entity",
+        "C": "Prior period, current period, and prospective",
+        "D": "Material, immaterial, and significant"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 250 identifies three types of accounting changes: change in accounting principle (different GAAP method), change in accounting estimate (revised expectation), and change in reporting entity (different group of entities).",
+      "tip": "Three types: principle, estimate, reporting entity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-changes-002",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Change in Principle",
+      "conceptTested": "Accounting principle change treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A change in accounting principle is generally accounted for by:",
+      "options": {
+        "A": "Prospective application only",
+        "B": "Retrospective application to all prior periods presented",
+        "C": "Cumulative effect adjustment in current year income",
+        "D": "Restatement only of the most recent prior period"
+      },
+      "correctAnswer": "B",
+      "explanation": "Changes in accounting principle are generally applied retrospectively—adjusting all prior periods presented as if the new principle had always been used.",
+      "tip": "Principle change = retrospective (restate prior periods).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-003",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Change in Principle",
+      "conceptTested": "Retrospective application",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When applying retrospective treatment for a change in accounting principle, the cumulative effect adjustment is made to:",
+      "options": {
+        "A": "Current year net income",
+        "B": "Beginning retained earnings of the earliest period presented",
+        "C": "Additional paid-in capital",
+        "D": "Other comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "The cumulative effect of the change on periods prior to those presented is reflected in beginning retained earnings of the earliest period presented.",
+      "tip": "Cumulative effect → beginning retained earnings of earliest period.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-004",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Change in Estimate",
+      "conceptTested": "Estimate change treatment",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "A change in accounting estimate is accounted for:",
+      "options": {
+        "A": "Retrospectively",
+        "B": "Prospectively, in current and future periods",
+        "C": "By restating all prior periods",
+        "D": "As a prior period adjustment"
+      },
+      "correctAnswer": "B",
+      "explanation": "Changes in estimate are accounted for prospectively—in the current period and future periods affected by the change. Prior periods are not restated.",
+      "tip": "Estimate change = prospective (current + future only).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-changes-005",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Change in Estimate",
+      "conceptTested": "Examples of estimate changes",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which is an example of a change in accounting estimate?",
+      "options": {
+        "A": "Changing from FIFO to LIFO inventory",
+        "B": "Revising the estimated useful life of equipment",
+        "C": "Changing from cash to accrual accounting",
+        "D": "Correcting a mathematical error"
+      },
+      "correctAnswer": "B",
+      "explanation": "Revising depreciation useful life is a change in estimate. It reflects new information about expected future benefits, not a new accounting method.",
+      "tip": "Changed useful life, salvage value, bad debt % = estimate changes.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-changes-006",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Estimate Change Calculation",
+      "conceptTested": "Useful life revision",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Equipment cost $100,000, salvage $10,000, original life 10 years. After 4 years, remaining life is revised to 4 years. What is Year 5 depreciation?",
+      "options": {
+        "A": "$9,000",
+        "B": "$13,500",
+        "C": "$15,000",
+        "D": "$22,500"
+      },
+      "correctAnswer": "B",
+      "explanation": "After 4 years: Accumulated depreciation = ($100,000-$10,000)/10 × 4 = $36,000. Book value = $100,000 - $36,000 = $64,000. New annual depreciation = ($64,000 - $10,000) ÷ 4 = $54,000 ÷ 4 = $13,500.",
+      "tip": "New depreciation = (Current BV - Salvage) ÷ New remaining life.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-changes-007",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Principle vs Estimate",
+      "conceptTested": "Inseparable changes",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When a change in accounting principle is inseparable from a change in estimate (e.g., changing depreciation methods), it is accounted for as:",
+      "options": {
+        "A": "A change in principle (retrospective)",
+        "B": "A change in estimate (prospective)",
+        "C": "An error correction",
+        "D": "A change in reporting entity"
+      },
+      "correctAnswer": "B",
+      "explanation": "When a principle change is inseparable from an estimate change, it's treated as a change in estimate—applied prospectively. Examples include changing depreciation methods.",
+      "tip": "Inseparable principle/estimate = treat as estimate (prospective).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-changes-008",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Change in Reporting Entity",
+      "conceptTested": "Reporting entity change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A change in reporting entity is accounted for by:",
+      "options": {
+        "A": "Prospective application",
+        "B": "Retrospective application with restatement of all prior periods",
+        "C": "Cumulative effect adjustment",
+        "D": "No accounting treatment required"
+      },
+      "correctAnswer": "B",
+      "explanation": "Changes in reporting entity (like presenting consolidated vs. individual statements) require retrospective application—restating prior period financial statements as if the new entity had always existed.",
+      "tip": "Reporting entity change = retrospective (restate all periods).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-009",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Error Correction",
+      "conceptTested": "Error correction treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Prior period errors, when discovered, are corrected by:",
+      "options": {
+        "A": "Adjusting current period income",
+        "B": "Restating prior period financial statements",
+        "C": "Prospective adjustment only",
+        "D": "Disclosure without adjustment"
+      },
+      "correctAnswer": "B",
+      "explanation": "Prior period errors are corrected by restating the prior period financial statements affected. If comparative statements aren't presented, adjust beginning retained earnings.",
+      "tip": "Errors = restatement (not a 'change').",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-010",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Error Correction",
+      "conceptTested": "Error vs change distinction",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The key distinction between an error and a change in estimate is:",
+      "options": {
+        "A": "Errors are always material; estimate changes are immaterial",
+        "B": "Errors result from mistakes or oversight; estimate changes result from new information",
+        "C": "Errors are always intentional; estimate changes are unintentional",
+        "D": "There is no distinction"
+      },
+      "correctAnswer": "B",
+      "explanation": "Errors result from mathematical mistakes, misapplication of GAAP, oversight, or fraud. Estimate changes result from new information or developments causing revision of expectations.",
+      "tip": "Error = mistake/oversight. Estimate change = new information.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-011",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Error Correction",
+      "conceptTested": "Error affecting multiple periods",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An error that affected both Year 1 and Year 2 net income is discovered in Year 3. If comparative statements for Years 1 and 2 are presented, the correction should:",
+      "options": {
+        "A": "Adjust only Year 3 beginning retained earnings",
+        "B": "Restate both Year 1 and Year 2 financial statements",
+        "C": "Adjust Year 2 only; Year 1 is too old",
+        "D": "Include the correction in Year 3 income"
+      },
+      "correctAnswer": "B",
+      "explanation": "When comparative statements are presented, each prior period affected is restated to reflect the correction. Both Year 1 and Year 2 would be restated.",
+      "tip": "Error: restate all affected periods presented comparatively.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-changes-012",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Counterbalancing Errors",
+      "conceptTested": "Two-year counterbalancing",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An error that counterbalances over two years means:",
+      "options": {
+        "A": "No correction is ever needed",
+        "B": "If discovered in the third year, no journal entry is needed but prior statements may need restatement",
+        "C": "Both years must always be restated",
+        "D": "The error must be disclosed for 10 years"
+      },
+      "correctAnswer": "B",
+      "explanation": "Counterbalancing errors (like overstated ending inventory) self-correct over two years. If discovered in year 3+, current balances are correct so no entry is needed, but prior year comparatives may need restatement.",
+      "tip": "Counterbalancing: self-corrects, but restate comparatives if shown.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-changes-013",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Counterbalancing Errors",
+      "conceptTested": "Inventory error effects",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Year 1 ending inventory was overstated by $20,000. The error was not discovered until Year 3. What is the effect on Year 2 net income?",
+      "options": {
+        "A": "Overstated by $20,000",
+        "B": "Understated by $20,000",
+        "C": "No effect",
+        "D": "Overstated by $40,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Year 1 ending inventory overstated → Year 1 COGS understated → Year 1 NI overstated. Year 1 EI becomes Year 2 beginning inventory, so Year 2 COGS is overstated → Year 2 NI understated by $20,000.",
+      "tip": "EI error: opposite effect on next year's NI.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-changes-014",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Non-Counterbalancing Errors",
+      "conceptTested": "Depreciation error",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Failing to record depreciation is a non-counterbalancing error because:",
+      "options": {
+        "A": "Depreciation is not a real expense",
+        "B": "The error does not automatically reverse; assets and retained earnings remain misstated",
+        "C": "Depreciation affects only the balance sheet",
+        "D": "Non-counterbalancing errors are always immaterial"
+      },
+      "correctAnswer": "B",
+      "explanation": "Non-counterbalancing errors don't self-correct. Failure to record depreciation leaves assets and retained earnings misstated until corrected—the error persists indefinitely.",
+      "tip": "Non-counterbalancing: persists until corrected (e.g., depreciation).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-changes-015",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Disclosure Requirements",
+      "conceptTested": "Principle change disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When an entity makes a voluntary change in accounting principle, required disclosures include:",
+      "options": {
+        "A": "Only the dollar effect on current year",
+        "B": "Nature of change, reasons for change, and effect on prior periods",
+        "C": "Names of board members who approved the change",
+        "D": "No disclosure is required for voluntary changes"
+      },
+      "correctAnswer": "B",
+      "explanation": "Disclosures for a principle change include: nature of the change, why the new principle is preferable, the method of applying the change, and effects on current and prior periods.",
+      "tip": "Principle change: disclose nature, reason, and effects.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-016",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Impracticability Exception",
+      "conceptTested": "Retrospective impracticability",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If retrospective application of a principle change is impracticable for all prior periods, the entity should:",
+      "options": {
+        "A": "Not make the change",
+        "B": "Apply prospectively only",
+        "C": "Apply retrospectively to the earliest period practicable",
+        "D": "Use the cumulative effect method"
+      },
+      "correctAnswer": "C",
+      "explanation": "If full retrospective application is impracticable, the change is applied retrospectively as far back as practicable. If impracticable for all prior periods, apply prospectively from the earliest date practicable.",
+      "tip": "Impracticable: go back as far as you can.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-changes-017",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "GAAP-Mandated Changes",
+      "conceptTested": "New standard adoption",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When a new accounting standard requires a change in principle, the transition method is determined by:",
+      "options": {
+        "A": "The entity's choice",
+        "B": "The specific requirements in the new standard",
+        "C": "Always retrospective",
+        "D": "Always prospective"
+      },
+      "correctAnswer": "B",
+      "explanation": "New accounting standards often specify the required transition method—which may be retrospective, modified retrospective, prospective, or cumulative effect at adoption date.",
+      "tip": "New standard = follow that standard's transition guidance.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-018",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Change in Principle Examples",
+      "conceptTested": "Inventory method change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A change from FIFO to weighted-average inventory method is:",
+      "options": {
+        "A": "A change in estimate (prospective)",
+        "B": "A change in principle (retrospective)",
+        "C": "An error correction",
+        "D": "A change in reporting entity"
+      },
+      "correctAnswer": "B",
+      "explanation": "Changing inventory cost flow methods (FIFO to weighted-average) is a change in accounting principle, requiring retrospective application.",
+      "tip": "Inventory method change = principle (retrospective).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-changes-019",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Error Correction Entry",
+      "conceptTested": "Journal entry for error",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "In Year 2, Company discovers it failed to record $50,000 depreciation expense in Year 1. Ignoring taxes, the Year 2 correcting entry includes:",
+      "options": {
+        "A": "Debit Depreciation Expense $50,000",
+        "B": "Debit Retained Earnings $50,000",
+        "C": "Credit Retained Earnings $50,000",
+        "D": "No entry needed"
+      },
+      "correctAnswer": "B",
+      "explanation": "The prior period error is corrected by debiting Retained Earnings (reducing it for the missed expense) and crediting Accumulated Depreciation $50,000.",
+      "tip": "Error correction: debit/credit Retained Earnings, not current expense.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-changes-020",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Tax Effects",
+      "conceptTested": "Tax effect of changes",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When applying retrospective treatment for an accounting principle change, the tax effects are:",
+      "options": {
+        "A": "Ignored",
+        "B": "Calculated and included in the retrospective adjustments",
+        "C": "Recognized only in the current year",
+        "D": "Deferred until the change is fully implemented"
+      },
+      "correctAnswer": "B",
+      "explanation": "Tax effects of accounting changes and error corrections are calculated and included in the retrospective adjustments. Both the pre-tax and tax effects are reflected in restated amounts.",
+      "tip": "Include tax effects in retrospective adjustments.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-changes-021",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Error Correction",
+      "conceptTested": "Materiality consideration",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An immaterial prior period error is typically:",
+      "options": {
+        "A": "Still required to be restated",
+        "B": "Corrected in the current period as part of normal operations",
+        "C": "Disclosed but not corrected",
+        "D": "Reported to the SEC"
+      },
+      "correctAnswer": "B",
+      "explanation": "Immaterial prior period errors may be corrected in the current period. Restatement is generally required only for material errors that affect decision-making.",
+      "tip": "Immaterial errors: correct in current period.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-022",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Direct vs Indirect Effects",
+      "conceptTested": "Direct effects of changes",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When applying retrospective treatment, which effects are included in the adjustment?",
+      "options": {
+        "A": "Only indirect effects",
+        "B": "Only direct effects (and related tax effects)",
+        "C": "Both direct and indirect effects",
+        "D": "Neither; only current period is affected"
+      },
+      "correctAnswer": "B",
+      "explanation": "Retrospective application includes only direct effects of the change (items recorded under the old principle) and related tax effects. Indirect effects (like bonus plan impacts) are recognized in the period of change.",
+      "tip": "Retrospective = direct effects only. Indirect effects in current period.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-changes-023",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Interim Periods",
+      "conceptTested": "Estimate changes in interim",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A change in accounting estimate made in the third quarter of a fiscal year is recognized:",
+      "options": {
+        "A": "By restating the first two quarters",
+        "B": "Prospectively from the third quarter forward",
+        "C": "As a cumulative adjustment in the fourth quarter",
+        "D": "In annual financial statements only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Estimate changes are always prospective. If made in Q3, the change affects Q3 and Q4 of the current year and future periods. Prior quarters are not restated.",
+      "tip": "Interim estimate change: prospective from that quarter.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-024",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Preferability",
+      "conceptTested": "Justification for principle change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A voluntary change in accounting principle requires that management demonstrate:",
+      "options": {
+        "A": "The change will increase net income",
+        "B": "The new principle is preferable in the circumstances",
+        "C": "Shareholders approved the change",
+        "D": "The old principle was applied incorrectly"
+      },
+      "correctAnswer": "B",
+      "explanation": "Voluntary principle changes require management to demonstrate the new principle is preferable—that it results in more relevant and reliable financial reporting.",
+      "tip": "Principle change: must justify why new method is preferable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-changes-025",
+      "section": "FAR",
+      "topic": "Accounting Changes and Error Corrections",
+      "subtopic": "Summary Comparison",
+      "conceptTested": "Treatment comparison",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which type of accounting matter requires restating prior period financial statements?",
+      "options": {
+        "A": "Change in estimate",
+        "B": "Change in principle and correction of material errors",
+        "C": "Only voluntary changes",
+        "D": "None; all are prospective"
+      },
+      "correctAnswer": "B",
+      "explanation": "Both changes in accounting principle and correction of material prior period errors require restatement of prior periods. Changes in estimate are prospective only.",
+      "tip": "Restate prior periods: principle changes + error corrections.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

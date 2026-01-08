@@ -2,7 +2,7 @@ import SectionPage from "@/components/SectionPage";
 
 export const metadata = {
   title: "REG Section Guide | CPA Exam Blueprint",
-  description: "Master the REG (Regulation) section of the CPA exam with expert strategies and study advice from licensed CPAs.",
+  description: "Master the REG (Regulation) section of the CPA exam with study strategies, key topics, and practical tips.",
 };
 
 export default function REGPage() {

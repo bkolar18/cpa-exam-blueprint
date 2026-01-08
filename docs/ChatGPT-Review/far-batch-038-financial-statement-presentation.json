@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Financial Statement Presentation",
+    "batchNumber": 38,
+    "totalQuestions": 30,
+    "dateGenerated": "2025-01-07",
+    "generatedBy": "Claude"
+  },
+  "questions": [
+    {
+      "id": "far-fsp-001",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Classification",
+      "conceptTested": "Current vs noncurrent assets",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "A current asset is one that is expected to be realized or consumed within:",
+      "options": {
+        "A": "Six months or the operating cycle, whichever is shorter",
+        "B": "One year or the operating cycle, whichever is longer",
+        "C": "One year regardless of operating cycle",
+        "D": "The operating cycle only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Current assets are expected to be realized within one year or the operating cycle, whichever is longer. For most companies, this is one year.",
+      "tip": "Current = 1 year or operating cycle, whichever is longer.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-002",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Classification",
+      "conceptTested": "Prepaid expenses",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Prepaid expenses are classified as:",
+      "options": {
+        "A": "Liabilities until consumed",
+        "B": "Current assets (if consumed within one year)",
+        "C": "Deferred charges",
+        "D": "Equity"
+      },
+      "correctAnswer": "B",
+      "explanation": "Prepaid expenses are current assets representing future economic benefits (services or goods to be received). If benefits extend beyond one year, the noncurrent portion is classified separately.",
+      "tip": "Prepaid = current asset (benefits within one year).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-003",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Working Capital",
+      "conceptTested": "Working capital calculation",
+      "difficulty": "easy",
+      "questionFormat": "calculation",
+      "question": "Current assets are $250,000 and current liabilities are $150,000. What is working capital?",
+      "options": {
+        "A": "$100,000",
+        "B": "$150,000",
+        "C": "$250,000",
+        "D": "$400,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Working capital = Current assets - Current liabilities = $250,000 - $150,000 = $100,000.",
+      "tip": "Working capital = CA - CL.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 30
+    },
+    {
+      "id": "far-fsp-004",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Liquidity Ratios",
+      "conceptTested": "Current ratio",
+      "difficulty": "easy",
+      "questionFormat": "calculation",
+      "question": "Using the previous question's data, what is the current ratio?",
+      "options": {
+        "A": "0.6:1",
+        "B": "1.0:1",
+        "C": "1.67:1",
+        "D": "2.5:1"
+      },
+      "correctAnswer": "C",
+      "explanation": "Current ratio = Current assets / Current liabilities = $250,000 / $150,000 = 1.67:1.",
+      "tip": "Current ratio = CA / CL.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-005",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Discontinued Operations",
+      "conceptTested": "Reporting requirements",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Discontinued operations are reported:",
+      "options": {
+        "A": "Within operating income",
+        "B": "As a separate line item below continuing operations, net of tax",
+        "C": "Only in the notes",
+        "D": "Above gross profit"
+      },
+      "correctAnswer": "B",
+      "explanation": "Discontinued operations are presented separately after income from continuing operations, shown net of tax. This includes results of operations and any gain/loss on disposal.",
+      "tip": "Discontinued ops = separate section, below continuing, net of tax.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-006",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Discontinued Operations",
+      "conceptTested": "Component requirement",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A disposal qualifies as discontinued operations if it represents:",
+      "options": {
+        "A": "Any sale of an operating segment",
+        "B": "A strategic shift that has a major effect on operations and financial results",
+        "C": "Sale of less than 50% of segment revenue",
+        "D": "Any sale of fixed assets"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under ASU 2014-08, a disposal must represent a strategic shift that has (or will have) a major effect on operations and financial results to qualify as discontinued operations.",
+      "tip": "Discontinued ops = strategic shift with major effect.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fsp-007",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Unusual Items",
+      "conceptTested": "Classification of unusual items",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Unusual or infrequent items are presented:",
+      "options": {
+        "A": "Net of tax after income from continuing operations",
+        "B": "As a separate line within continuing operations",
+        "C": "In OCI",
+        "D": "Only in the notes"
+      },
+      "correctAnswer": "B",
+      "explanation": "Unusual or infrequent items are presented within continuing operations, separately disclosed. They are not shown net of tax like discontinued operations.",
+      "tip": "Unusual/infrequent = within continuing ops, separately disclosed.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-008",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Single-Step vs Multi-Step",
+      "conceptTested": "Multi-step format",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "A multi-step income statement differs from single-step by:",
+      "options": {
+        "A": "Including more line items",
+        "B": "Separating operating from non-operating activities and showing subtotals",
+        "C": "Being longer",
+        "D": "Including comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "Multi-step format separates operating and non-operating items, shows gross profit, operating income, and other subtotals for analysis.",
+      "tip": "Multi-step = multiple subtotals (gross profit, operating income).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-009",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Classification",
+      "conceptTested": "Interest paid classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under US GAAP, interest paid is classified in the statement of cash flows as:",
+      "options": {
+        "A": "Operating activities",
+        "B": "Investing activities",
+        "C": "Financing activities",
+        "D": "Either operating or financing at the entity's election"
+      },
+      "correctAnswer": "A",
+      "explanation": "Under US GAAP, interest paid is classified as operating activity. IFRS allows a choice between operating and financing.",
+      "tip": "GAAP: interest paid = operating; IFRS: choice.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-010",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Classification",
+      "conceptTested": "Dividends paid classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under US GAAP, cash dividends paid are classified as:",
+      "options": {
+        "A": "Operating activities",
+        "B": "Investing activities",
+        "C": "Financing activities",
+        "D": "Supplemental disclosure only"
+      },
+      "correctAnswer": "C",
+      "explanation": "Dividends paid to shareholders are classified as financing activities because they represent a return of capital to equity investors.",
+      "tip": "Dividends paid = financing activity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-011",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Operating Activities",
+      "conceptTested": "Indirect method adjustment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When using the indirect method, an increase in accounts receivable is:",
+      "options": {
+        "A": "Added to net income",
+        "B": "Subtracted from net income",
+        "C": "Reported in investing activities",
+        "D": "Not shown"
+      },
+      "correctAnswer": "B",
+      "explanation": "An increase in AR means sales were made but not collected. The income was earned but cash was not received, so it's subtracted from net income.",
+      "tip": "↑ in current asset = subtract; ↑ in current liability = add.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-012",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Operating Activities",
+      "conceptTested": "Depreciation adjustment",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "In the indirect method, depreciation expense is:",
+      "options": {
+        "A": "Subtracted from net income",
+        "B": "Added back to net income",
+        "C": "Reported in investing activities",
+        "D": "Not included in the cash flow statement"
+      },
+      "correctAnswer": "B",
+      "explanation": "Depreciation is a non-cash expense that reduced net income. It's added back because no cash was spent.",
+      "tip": "Non-cash expenses (depreciation, amortization) = add back.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-013",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Investing Activities",
+      "conceptTested": "Capital expenditures",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Purchase of property, plant, and equipment is classified as:",
+      "options": {
+        "A": "Operating outflow",
+        "B": "Investing outflow",
+        "C": "Financing outflow",
+        "D": "Non-cash activity"
+      },
+      "correctAnswer": "B",
+      "explanation": "Purchases of long-term productive assets are investing activities because they represent investments in the company's future operations.",
+      "tip": "PPE purchase = investing outflow.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-014",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Financing Activities",
+      "conceptTested": "Debt proceeds",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Cash received from issuing bonds is classified as:",
+      "options": {
+        "A": "Operating inflow",
+        "B": "Investing inflow",
+        "C": "Financing inflow",
+        "D": "Non-cash activity"
+      },
+      "correctAnswer": "C",
+      "explanation": "Borrowing money through bond issuance is a financing activity because it represents obtaining capital from creditors.",
+      "tip": "Borrowing = financing inflow.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-015",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Non-Cash Activities",
+      "conceptTested": "Supplemental disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A company acquires equipment by issuing common stock. This transaction is:",
+      "options": {
+        "A": "Reported in investing activities",
+        "B": "Reported in financing activities",
+        "C": "Disclosed as a significant non-cash activity",
+        "D": "Not reported or disclosed"
+      },
+      "correctAnswer": "C",
+      "explanation": "Non-cash investing and financing activities are disclosed separately (either in notes or supplemental schedule) because they don't involve cash but are significant transactions.",
+      "tip": "Non-cash I&F activities = supplemental disclosure.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-016",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Direct Method",
+      "conceptTested": "Cash receipts from customers",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Sales revenue is $500,000. Beginning AR $40,000; Ending AR $55,000. What is cash collected from customers?",
+      "options": {
+        "A": "$455,000",
+        "B": "$485,000",
+        "C": "$500,000",
+        "D": "$515,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cash collected = Sales + Beginning AR - Ending AR = $500,000 + $40,000 - $55,000 = $485,000. (Or: Sales - Increase in AR = $500,000 - $15,000 = $485,000.)",
+      "tip": "Cash from customers = Sales ± change in AR.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-fsp-017",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Direct Method",
+      "conceptTested": "Cash paid to suppliers",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "COGS $300,000; Beginning inventory $50,000; Ending inventory $60,000; Beginning AP $25,000; Ending AP $30,000. Cash paid to suppliers?",
+      "options": {
+        "A": "$295,000",
+        "B": "$305,000",
+        "C": "$315,000",
+        "D": "$325,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Purchases = COGS + Ending Inv - Beginning Inv = $300,000 + $60,000 - $50,000 = $310,000. Cash paid = Purchases - Increase in AP = $310,000 - $5,000 = $305,000.",
+      "tip": "Cash to suppliers: find purchases, then adjust for AP change.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-fsp-018",
+      "section": "FAR",
+      "topic": "Statement of Changes in Equity",
+      "subtopic": "Required Components",
+      "conceptTested": "Statement content",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The statement of changes in stockholders' equity must include:",
+      "options": {
+        "A": "Only changes in retained earnings",
+        "B": "Changes in all equity components: common stock, APIC, retained earnings, AOCI, treasury stock",
+        "C": "Only dividends declared",
+        "D": "Cash flow from financing activities"
+      },
+      "correctAnswer": "B",
+      "explanation": "The statement reconciles all components of stockholders' equity from beginning to ending balances, including capital accounts, retained earnings, AOCI, and treasury stock.",
+      "tip": "Statement of equity: all equity components reconciled.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-019",
+      "section": "FAR",
+      "topic": "Notes to Financial Statements",
+      "subtopic": "Summary of Significant Policies",
+      "conceptTested": "Required disclosure",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The summary of significant accounting policies should disclose:",
+      "options": {
+        "A": "Only the inventory method used",
+        "B": "All significant accounting policies including methods, basis of consolidation, depreciation methods, etc.",
+        "C": "Only changed policies",
+        "D": "Officer compensation"
+      },
+      "correctAnswer": "B",
+      "explanation": "The accounting policies note summarizes the entity's significant policies including measurement bases, revenue recognition, depreciation methods, consolidation practices, and more.",
+      "tip": "First note = summary of significant accounting policies.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-020",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Liabilities",
+      "conceptTested": "Accrued liabilities",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Accrued expenses represent:",
+      "options": {
+        "A": "Expenses paid in advance",
+        "B": "Expenses incurred but not yet paid",
+        "C": "Future expenses",
+        "D": "Non-cash expenses"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accrued expenses (accrued liabilities) are expenses incurred during the period that have not been paid. They create a liability for the unpaid amount.",
+      "tip": "Accrued expense = expense incurred, cash not yet paid.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-021",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Deferred Revenue",
+      "conceptTested": "Unearned revenue",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Deferred revenue (unearned revenue) is classified as:",
+      "options": {
+        "A": "An asset",
+        "B": "A liability",
+        "C": "Revenue",
+        "D": "Stockholders' equity"
+      },
+      "correctAnswer": "B",
+      "explanation": "Deferred revenue is a liability because the entity has received cash but has not yet earned it. The obligation is to provide goods or services.",
+      "tip": "Deferred/unearned revenue = liability (obligation to perform).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-022",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Gross Profit",
+      "conceptTested": "Gross profit calculation",
+      "difficulty": "easy",
+      "questionFormat": "calculation",
+      "question": "Sales $800,000; COGS $480,000; Operating expenses $200,000. What is gross profit?",
+      "options": {
+        "A": "$120,000",
+        "B": "$320,000",
+        "C": "$600,000",
+        "D": "$800,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Gross profit = Sales - COGS = $800,000 - $480,000 = $320,000.",
+      "tip": "Gross profit = Revenue - COGS.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-023",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Operating Income",
+      "conceptTested": "Operating income calculation",
+      "difficulty": "easy",
+      "questionFormat": "calculation",
+      "question": "Using the previous question, what is operating income?",
+      "options": {
+        "A": "$120,000",
+        "B": "$200,000",
+        "C": "$320,000",
+        "D": "$520,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Operating income = Gross profit - Operating expenses = $320,000 - $200,000 = $120,000.",
+      "tip": "Operating income = Gross profit - Operating expenses.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-024",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Offsetting",
+      "conceptTested": "Right of offset",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Assets and liabilities may be offset (shown net) on the balance sheet only when:",
+      "options": {
+        "A": "They involve the same counterparty",
+        "B": "There is a legal right of offset and intent to settle net",
+        "C": "They mature on the same date",
+        "D": "Management chooses to present them net"
+      },
+      "correctAnswer": "B",
+      "explanation": "Offsetting requires both a legal right to set off and the intent to settle net or simultaneously. Otherwise, assets and liabilities must be shown gross.",
+      "tip": "Offset: legal right + intent to settle net required.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fsp-025",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Valuation Accounts",
+      "conceptTested": "Contra asset presentation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Accumulated depreciation is presented on the balance sheet as:",
+      "options": {
+        "A": "A separate liability",
+        "B": "A contra asset, reducing the related asset",
+        "C": "An expense",
+        "D": "A component of equity"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accumulated depreciation is a contra asset that reduces the carrying value of the related fixed asset. It may be shown directly on the balance sheet or disclosed in notes.",
+      "tip": "Accumulated depreciation = contra asset.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-026",
+      "section": "FAR",
+      "topic": "Notes to Financial Statements",
+      "subtopic": "Subsequent Events",
+      "conceptTested": "Type I vs Type II",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A subsequent event that provides evidence of conditions existing at the balance sheet date is:",
+      "options": {
+        "A": "Disclosed but not recognized",
+        "B": "Recognized (adjusted) in the financial statements",
+        "C": "Ignored",
+        "D": "Reported as a contingency"
+      },
+      "correctAnswer": "B",
+      "explanation": "Type I (recognized) subsequent events provide evidence of conditions at the balance sheet date and require adjustment. Type II events arise after and are only disclosed.",
+      "tip": "Type I (recognized) = condition existed at BS date; Type II = disclosed only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-fsp-027",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Reconciliation",
+      "conceptTested": "Required reconciliation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "If the direct method is used for operating activities, what must also be provided?",
+      "options": {
+        "A": "Nothing additional",
+        "B": "A reconciliation of net income to net cash from operating activities",
+        "C": "A forecast of next year's cash flows",
+        "D": "Prior year comparative cash flows"
+      },
+      "correctAnswer": "B",
+      "explanation": "When using the direct method, entities must also provide a reconciliation of net income to cash from operating activities (essentially the indirect method reconciliation).",
+      "tip": "Direct method requires indirect reconciliation disclosure.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-028",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Presentation",
+      "conceptTested": "Income tax expense location",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Income tax expense is presented:",
+      "options": {
+        "A": "Within operating expenses",
+        "B": "Separately, after income before tax",
+        "C": "As part of cost of goods sold",
+        "D": "In other comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "Income tax expense is shown as a separate line item after income before taxes, resulting in net income (or net loss).",
+      "tip": "Tax expense = after pretax income, before net income.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-fsp-029",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Classification",
+      "conceptTested": "Dividends received",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under US GAAP, dividends received on equity investments are classified as:",
+      "options": {
+        "A": "Operating activities",
+        "B": "Investing activities",
+        "C": "Financing activities",
+        "D": "Either operating or investing"
+      },
+      "correctAnswer": "A",
+      "explanation": "Under US GAAP, dividends received are classified as operating activities (similar to interest received). IFRS allows choice between operating or investing.",
+      "tip": "GAAP: dividends received = operating.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-fsp-030",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Equity Presentation",
+      "conceptTested": "Stockholders' equity section order",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "In the stockholders' equity section, the typical order of presentation is:",
+      "options": {
+        "A": "Retained earnings, Common stock, APIC, Treasury stock",
+        "B": "Preferred stock, Common stock, APIC, Retained earnings, AOCI, Treasury stock",
+        "C": "AOCI, Treasury stock, Common stock, Retained earnings",
+        "D": "Common stock, Treasury stock, Preferred stock, APIC"
+      },
+      "correctAnswer": "B",
+      "explanation": "Typical order: Preferred stock, Common stock, APIC, Retained earnings, AOCI, less Treasury stock (as a contra). This presents contributed capital before earned capital.",
+      "tip": "Equity order: contributed capital → earned → AOCI → treasury.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

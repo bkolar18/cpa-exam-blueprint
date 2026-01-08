@@ -33,7 +33,7 @@ export const nurtureSequence: NurtureEmail[] = [
       headline: "Welcome to Your CPA Journey",
       body: [
         "Thank you for creating your personalized CPA study plan. You've just taken the most important step—making the commitment to start.",
-        "Over the next few weeks, I'll send you tips, strategies, and guidance from CPAs who've been exactly where you are now.",
+        "Over the next few weeks, I'll send you tips, strategies, and study guidance to help you prepare.",
         "But first, let me share the #1 mistake new candidates make: trying to do too much, too fast.",
         "The CPA exam is a marathon, not a sprint. Consistency beats intensity every time. If your plan calls for 15 hours per week, protect those 15 hours fiercely—but don't try to cram 30.",
         "Your study plan is designed for sustainable progress. Trust the process."
@@ -131,27 +131,26 @@ export const nurtureSequence: NurtureEmail[] = [
   {
     id: 5,
     dayOffset: 21,
-    subject: "The Review Course That Actually Works",
-    previewText: "After 3 weeks, here's what we recommend",
+    subject: "How's Your Study Progress?",
+    previewText: "After 3 weeks, let's check in",
     category: "soft-cta",
     content: {
-      headline: "Finding the Right Review Course",
+      headline: "Making Progress?",
       body: [
-        "By now, you've been studying for a few weeks. You know whether your current approach is working—or if you need additional support.",
-        "We've reviewed every major CPA review course and consistently recommend Surgent CPA Review for most candidates. Here's why:",
-        "Their adaptive learning technology identifies your weak areas and focuses your study time where it matters most. No wasted hours on topics you already know.",
-        "But the right course depends on your learning style. Some candidates need structured video lectures (Becker). Others prefer engaging instruction (UWorld Roger). Tech-focused learners often thrive with Surgent.",
-        "If you're happy with your current approach, keep going. If you're struggling, it might be time to reassess your resources."
+        "By now, you've been studying for a few weeks. You know whether your current approach is working—or if you need to adjust.",
+        "The key to CPA success isn't just hours studied—it's quality practice on the right topics.",
+        "Focus on understanding concepts, not memorizing. The exam tests application, not recall.",
+        "If you're happy with your current approach, keep going. If you're struggling, consider changing up your study routine or focusing on your weak areas."
       ],
       tips: [
-        "The best review course is the one you'll actually use consistently",
-        "Look for courses with adaptive technology if you're short on time",
-        "Many courses offer free trials—test before you commit",
-        "Course quality matters, but your effort matters more"
+        "Practice questions are more valuable than passive review",
+        "Focus extra time on your weakest topics",
+        "Take timed practice tests to build exam stamina",
+        "Consistency beats cramming every time"
       ],
       callToAction: {
-        text: "See Our Full Course Comparison",
-        url: "https://cpaexamblueprint.com/recommended-program"
+        text: "Practice More Questions",
+        url: "https://cpaexamblueprint.com/dashboard/practice"
       }
     }
   },
@@ -209,8 +208,8 @@ export const nurtureSequence: NurtureEmail[] = [
         author: "CPA Exam Blueprint Team"
       },
       callToAction: {
-        text: "Share Your CPA Goals",
-        url: "https://cpaexamblueprint.com/success-stories"
+        text: "Continue Studying",
+        url: "https://cpaexamblueprint.com/dashboard"
       }
     }
   }
@@ -383,7 +382,7 @@ export function generateNurtureEmailHtml(email: NurtureEmail): string {
       ${ctaHtml}
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint — Free guidance from licensed CPAs</p>
+      <p>CPA Exam Blueprint — Affordable CPA exam study tools</p>
       <p><a href="https://cpaexamblueprint.com">cpaexamblueprint.com</a></p>
       <p style="margin-top: 16px; font-size: 12px;">
         You received this email because you created a study plan at CPA Exam Blueprint.<br>

@@ -1,0 +1,396 @@
+[
+  {
+    "id": "far-eq-001",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Common & Preferred Stock",
+    "conceptTested": "Par value stock issuance",
+    "difficulty": "easy",
+    "questionFormat": "calculation",
+    "question": "A company issues 10,000 shares of $1 par value common stock for $15 per share. What is credited to Additional Paid-in Capital?",
+    "options": {
+      "A": "$10,000",
+      "B": "$140,000",
+      "C": "$150,000",
+      "D": "$15,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Total proceeds = 10,000 × $15 = $150,000. Common Stock (at par) = 10,000 × $1 = $10,000. Additional Paid-in Capital = $150,000 − $10,000 = $140,000. APIC represents the amount received above par value.",
+    "tip": "APIC = Total proceeds − Par value of shares issued.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-eq-002",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Common & Preferred Stock",
+    "conceptTested": "No-par stock issuance",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "When no-par common stock without a stated value is issued, the entire proceeds are credited to:",
+    "options": {
+      "A": "Additional Paid-in Capital",
+      "B": "Retained Earnings",
+      "C": "Common Stock",
+      "D": "Treasury Stock"
+    },
+    "correctAnswer": "C",
+    "explanation": "When no-par stock has no stated value, the entire proceeds from issuance are credited to the Common Stock account. There is no Additional Paid-in Capital because there is no par or stated value to separate from the proceeds.",
+    "tip": "No-par, no stated value: all proceeds to Common Stock."
+  },
+  {
+    "id": "far-eq-003",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Common & Preferred Stock",
+    "conceptTested": "Stock issued for services",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When stock is issued in exchange for services, the transaction should be recorded at:",
+    "options": {
+      "A": "The par value of the stock",
+      "B": "The fair value of the services received or the fair value of the stock issued, whichever is more reliably measurable",
+      "C": "The book value of the company's equity",
+      "D": "Zero, since no cash was exchanged"
+    },
+    "correctAnswer": "B",
+    "explanation": "When stock is issued for non-cash consideration (services, assets), the transaction is recorded at fair value. Use the fair value of the consideration received if it can be reliably measured; otherwise, use the fair value of the equity instruments issued.",
+    "tip": "Stock for services: fair value of services (if measurable) or stock."
+  },
+  {
+    "id": "far-eq-004",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Treasury Stock Transactions",
+    "conceptTested": "Treasury stock cost method",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company repurchases 1,000 shares of its $5 par common stock for $20 per share using the cost method. What is the debit to Treasury Stock?",
+    "options": {
+      "A": "$5,000",
+      "B": "$15,000",
+      "C": "$20,000",
+      "D": "$25,000"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under the cost method, Treasury Stock is debited at the cost of repurchase: 1,000 shares × $20 = $20,000. Par value is not relevant to the entry. Treasury Stock is a contra-equity account reducing total stockholders' equity.",
+    "tip": "Cost method: Debit Treasury Stock at purchase price (not par).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-eq-005",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Treasury Stock Transactions",
+    "conceptTested": "Treasury stock reissuance above cost",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "Treasury stock acquired at $20 per share (1,000 shares) is reissued for $25 per share. What is credited to Paid-in Capital from Treasury Stock?",
+    "options": {
+      "A": "$0",
+      "B": "$5,000",
+      "C": "$20,000",
+      "D": "$25,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cash received = 1,000 × $25 = $25,000. Treasury Stock credit (at cost) = 1,000 × $20 = $20,000. Excess = $25,000 − $20,000 = $5,000, credited to Paid-in Capital from Treasury Stock (not gain—no gain/loss on treasury transactions).",
+    "tip": "Reissue treasury above cost: excess goes to APIC-Treasury Stock.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-eq-006",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Treasury Stock Transactions",
+    "conceptTested": "Treasury stock reissuance below cost",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Treasury stock acquired at $30 per share (500 shares) is reissued for $22 per share. The company has $2,000 in Paid-in Capital from Treasury Stock. What is debited to reduce equity?",
+    "options": {
+      "A": "$4,000 to Paid-in Capital from Treasury Stock",
+      "B": "$2,000 to Paid-in Capital from Treasury Stock and $2,000 to Retained Earnings",
+      "C": "$4,000 to Retained Earnings",
+      "D": "$4,000 recognized as a loss"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cash = 500 × $22 = $11,000. Treasury Stock credit = 500 × $30 = $15,000. Shortfall = $4,000. First reduce APIC-Treasury to zero: debit $2,000. Remainder ($2,000) debited to Retained Earnings. No loss is reported (equity transactions don't go through income).",
+    "tip": "Reissue below cost: reduce APIC-Treasury first, then Retained Earnings.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-eq-007",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Stock Dividends & Splits",
+    "conceptTested": "Small stock dividend",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A small stock dividend (less than 20-25% of outstanding shares) should be recorded at:",
+    "options": {
+      "A": "Par value of the shares issued",
+      "B": "Fair market value of the shares issued",
+      "C": "Book value per share",
+      "D": "No entry is required"
+    },
+    "correctAnswer": "B",
+    "explanation": "Small stock dividends (typically < 20-25%) are recorded at fair market value. Retained Earnings is debited for the fair value; Common Stock is credited for par value; and APIC is credited for the excess. This capitalization of retained earnings recognizes the market's expected dilution.",
+    "tip": "Small stock dividend = fair value. Large stock dividend = par value."
+  },
+  {
+    "id": "far-eq-008",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Stock Dividends & Splits",
+    "conceptTested": "Small stock dividend calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company declares a 10% stock dividend when 100,000 shares of $2 par stock are outstanding. The market price is $15 per share. What is debited to Retained Earnings?",
+    "options": {
+      "A": "$20,000",
+      "B": "$150,000",
+      "C": "$130,000",
+      "D": "$170,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "New shares issued = 100,000 × 10% = 10,000 shares. Small dividend, so use fair value. Retained Earnings debit = 10,000 × $15 = $150,000. Common Stock credit = 10,000 × $2 = $20,000. APIC credit = $130,000.",
+    "tip": "Small dividend: RE debit = shares × market price.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-eq-009",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Stock Dividends & Splits",
+    "conceptTested": "Large stock dividend",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A large stock dividend (25% or more of outstanding shares) should be recorded at:",
+    "options": {
+      "A": "Fair market value of the shares issued",
+      "B": "Par value (or stated value) of the shares issued",
+      "C": "Book value per share",
+      "D": "Average of par and market value"
+    },
+    "correctAnswer": "B",
+    "explanation": "Large stock dividends (25% or more) are recorded at par value. Retained Earnings is debited and Common Stock is credited for the par value of shares issued. No APIC is recorded because the transfer equals only the legal minimum required.",
+    "tip": "Large stock dividend = par value. Small = market value."
+  },
+  {
+    "id": "far-eq-010",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Stock Dividends & Splits",
+    "conceptTested": "Stock split effect",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "A 2-for-1 stock split results in:",
+    "options": {
+      "A": "Total stockholders' equity is doubled",
+      "B": "Par value per share is halved and shares outstanding are doubled",
+      "C": "Retained earnings is reduced by the market value of new shares",
+      "D": "Additional paid-in capital increases"
+    },
+    "correctAnswer": "B",
+    "explanation": "A stock split increases shares outstanding while proportionally reducing par value per share. Total stockholders' equity remains unchanged. No journal entry is required—only a memo entry noting the change in shares and par value. Total par value of outstanding shares remains the same.",
+    "tip": "Stock split: more shares, lower par, same total equity. No journal entry."
+  },
+  {
+    "id": "far-eq-011",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Retained Earnings & Appropriations",
+    "conceptTested": "Appropriations of retained earnings",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "An appropriation of retained earnings:",
+    "options": {
+      "A": "Sets aside cash for a specific purpose",
+      "B": "Restricts a portion of retained earnings, signaling it is not available for dividends",
+      "C": "Reduces total stockholders' equity",
+      "D": "Requires approval from bondholders"
+    },
+    "correctAnswer": "B",
+    "explanation": "Appropriating retained earnings is a disclosure mechanism that restricts a portion of retained earnings to signal it is not available for dividends (e.g., for plant expansion or loan covenants). It does not set aside cash—it's merely a segregation within equity. Total equity is unchanged.",
+    "tip": "Appropriation = restriction within equity. Does not set aside cash."
+  },
+  {
+    "id": "far-eq-012",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Book Value Per Share",
+    "conceptTested": "Book value per share calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company has total stockholders' equity of $5,000,000, including preferred stock of $500,000 (1,000 shares with $500 per share liquidation preference). There are 200,000 common shares outstanding. What is book value per common share?",
+    "options": {
+      "A": "$25.00",
+      "B": "$22.50",
+      "C": "$24.75",
+      "D": "$22.00"
+    },
+    "correctAnswer": "B",
+    "explanation": "Equity available to common = Total equity − Preferred stockholders' claim. Preferred claim = 1,000 × $500 = $500,000. Common equity = $5,000,000 − $500,000 = $4,500,000. Book value per share = $4,500,000 / 200,000 = $22.50.",
+    "tip": "BV per common share = (Total equity − Preferred claims) ÷ Common shares.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-eq-013",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Common & Preferred Stock",
+    "conceptTested": "Cumulative preferred dividends",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company has 10,000 shares of 6%, $100 par cumulative preferred stock. No dividends were paid in Year 1 or Year 2. In Year 3, the company declares $200,000 in dividends. How much goes to preferred shareholders?",
+    "options": {
+      "A": "$60,000",
+      "B": "$120,000",
+      "C": "$180,000",
+      "D": "$200,000"
+    },
+    "correctAnswer": "C",
+    "explanation": "Annual preferred dividend = 10,000 × $100 × 6% = $60,000. Cumulative dividends in arrears (2 years) = $120,000. Current year = $60,000. Total to preferred = $180,000. Remaining $20,000 goes to common shareholders.",
+    "tip": "Cumulative preferred: pay all arrears before common gets anything.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "far-eq-014",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Common & Preferred Stock",
+    "conceptTested": "Participating preferred stock",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Fully participating preferred stock means:",
+    "options": {
+      "A": "Preferred shareholders must vote on all corporate matters",
+      "B": "After receiving their stated dividend and common receives an equal rate, preferred and common share remaining dividends proportionally",
+      "C": "Preferred dividends are guaranteed by the government",
+      "D": "Preferred shareholders can convert to common at any time"
+    },
+    "correctAnswer": "B",
+    "explanation": "Fully participating preferred shares in dividends beyond their stated rate. After preferred receives its stated dividend and common receives an equivalent rate, any additional dividends are shared proportionally between preferred and common based on total par values.",
+    "tip": "Participating preferred: shares in dividends above stated rate."
+  },
+  {
+    "id": "far-eq-015",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Treasury Stock Transactions",
+    "conceptTested": "Treasury stock par value method",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under the par value method of accounting for treasury stock:",
+    "options": {
+      "A": "Treasury stock is debited at cost",
+      "B": "Treasury stock is debited at par value, and APIC and/or Retained Earnings are adjusted",
+      "C": "No entry is made until shares are reissued",
+      "D": "The transaction is recorded the same as the cost method"
+    },
+    "correctAnswer": "B",
+    "explanation": "The par value method records Treasury Stock at par value. APIC related to the original issuance is debited, and any excess of original issue price over reacquisition cost goes to Paid-in Capital from Retirement. If reacquisition cost exceeds original issue price, Retained Earnings is debited for the difference.",
+    "tip": "Par value method: Treasury Stock at par, adjust APIC and RE."
+  },
+  {
+    "id": "far-eq-016",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Stock Dividends & Splits",
+    "conceptTested": "Reverse stock split",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "A 1-for-4 reverse stock split results in:",
+    "options": {
+      "A": "Shares outstanding quadrupled, par value reduced to one-fourth",
+      "B": "Shares outstanding reduced to one-fourth, par value quadrupled",
+      "C": "Retained earnings increased",
+      "D": "Total stockholders' equity decreased"
+    },
+    "correctAnswer": "B",
+    "explanation": "A reverse split reduces shares outstanding while proportionally increasing par value per share. In a 1-for-4 split, shareholders receive 1 new share for every 4 old shares. Total stockholders' equity remains unchanged. Companies often do reverse splits to increase stock price.",
+    "tip": "Reverse split: fewer shares, higher par, same total equity."
+  },
+  {
+    "id": "far-eq-017",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Retained Earnings & Appropriations",
+    "conceptTested": "Dividend dates",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "On which date is a liability recorded for a cash dividend?",
+    "options": {
+      "A": "Date of declaration",
+      "B": "Date of record",
+      "C": "Date of payment",
+      "D": "Ex-dividend date"
+    },
+    "correctAnswer": "A",
+    "explanation": "A liability (Dividends Payable) is recorded on the date of declaration when the board of directors formally declares the dividend. The date of record determines who receives the dividend. The payment date is when cash is distributed and the liability is satisfied.",
+    "tip": "Declaration date: record liability. Payment date: pay and eliminate liability."
+  },
+  {
+    "id": "far-eq-018",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Common & Preferred Stock",
+    "conceptTested": "Preferred stock features",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are typical features of preferred stock EXCEPT:",
+    "options": {
+      "A": "Preference in dividends over common stock",
+      "B": "Preference in liquidation over common stock",
+      "C": "Voting rights equal to common stock",
+      "D": "Fixed dividend rate"
+    },
+    "correctAnswer": "C",
+    "explanation": "Preferred stockholders typically do not have voting rights (or limited voting rights), which is a major trade-off for their dividend and liquidation preferences. Preferred stock usually has a fixed dividend rate and receives priority over common stock in both dividends and liquidation.",
+    "tip": "Preferred: dividend and liquidation preference, but usually no voting."
+  },
+  {
+    "id": "far-eq-019",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Treasury Stock Transactions",
+    "conceptTested": "Treasury stock retirement",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When treasury stock is formally retired, under the cost method:",
+    "options": {
+      "A": "The shares are simply removed from treasury without affecting other accounts",
+      "B": "Common Stock and APIC are reduced; any difference from treasury cost goes to APIC from retirement or Retained Earnings",
+      "C": "A gain or loss is recognized in net income",
+      "D": "The shares are transferred to authorized but unissued status with no entry"
+    },
+    "correctAnswer": "B",
+    "explanation": "When retiring treasury stock under the cost method, debit Common Stock (at par), debit APIC (proportionally for original issuance), credit Treasury Stock (at cost), and debit or credit the difference to APIC from Retirement (if excess) or Retained Earnings (if deficit). No gain or loss is recorded.",
+    "tip": "Treasury retirement: reduce CS and APIC, plug to APIC-Retirement or RE."
+  },
+  {
+    "id": "far-eq-020",
+    "section": "FAR",
+    "topic": "Stockholders Equity",
+    "subtopic": "Book Value Per Share",
+    "conceptTested": "Dividends in arrears effect",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When calculating book value per common share with cumulative preferred dividends in arrears:",
+    "options": {
+      "A": "Dividends in arrears are ignored because they are not a liability",
+      "B": "Dividends in arrears are subtracted from equity available to common shareholders",
+      "C": "Dividends in arrears increase book value per common share",
+      "D": "Dividends in arrears are added to preferred stock on the balance sheet"
+    },
+    "correctAnswer": "B",
+    "explanation": "Although dividends in arrears are not recorded as a liability until declared, they represent a claim by preferred shareholders that must be satisfied before common shareholders receive anything. For book value calculations, dividends in arrears reduce the equity available to common.",
+    "tip": "BV per share: subtract preferred claims including dividends in arrears."
+  }
+]

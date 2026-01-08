@@ -1,10 +1,38 @@
-﻿
-bec924f566529136.js:1 [Achievements] Total: 26, Hidden: 11
-VM39 3a81ef5296d8824d.js:1 logPracticeSession called 
-{user: true, supabase: true, studySessionLogged: false}
-VM39 3a81ef5296d8824d.js:1 Attempting to insert study session: 
-{user_id: 'c2f9cd91-3c6b-4cbb-abc5-d88be0567d79', section: 'FAR', date: '2026-01-05', hours: 0.25, notes: 'Practice quiz: 10 questions, 50% accuracy. Topics:…tements, Stockholders Equity, Revenue Recognition', …}
-3107400ed5c31d7f.js:37 
- POST https://ibyxxuxcevcdmgnazqme.supabase.co/rest/v1/study_sessions?select=* 400 (Bad Request)
-VM39 3a81ef5296d8824d.js:1 Database error logging study session: 
-{code: '42702', details: 'It could refer to either a PL/pgSQL variable or a table column.', hint: null, message: 'column reference "current_streak" is ambiguous'}
+10:21:47.289 Running build in Washington, D.C., USA (East) – iad1
+10:21:47.297 Build machine configuration: 2 cores, 8 GB
+10:21:47.623 Cloning github.com/bkolar18/The-Wedding-Concierge (Branch: main, Commit: 3eb463c)
+10:21:49.294 Cloning completed: 1.671s
+10:21:49.677 Restored build cache from previous deployment (BEo3C97hXbNaegGNx4HMTZm6o6RS)
+10:21:50.400 Running "vercel build"
+10:21:50.901 Vercel CLI 50.1.5
+10:21:51.215 Installing dependencies...
+10:21:52.346 
+10:21:52.348 up to date in 928ms
+10:21:52.349 
+10:21:52.349 145 packages are looking for funding
+10:21:52.349   run `npm fund` for details
+10:21:52.375 Detected Next.js version: 16.1.1
+10:21:52.378 Running "npm run build"
+10:21:52.473 
+10:21:52.473 > frontend@0.1.0 build
+10:21:52.473 > next build
+10:21:52.473 
+10:21:53.461 ▲ Next.js 16.1.1 (Turbopack)
+10:21:53.462 
+10:21:53.498   Creating an optimized production build ...
+10:22:00.494 ✓ Compiled successfully in 6.5s
+10:22:00.498   Running TypeScript ...
+10:22:06.302 Failed to compile.
+10:22:06.302 
+10:22:06.302 ./src/app/setup/page.tsx:419:13
+10:22:06.302 Type error: Object literal may only specify known properties, and 'website_url' does not exist in type 'AccommodationCreateData'.
+10:22:06.302 
+10:22:06.302 [0m [90m 417 |[39m             address[33m:[39m acc[33m.[39maddress [33m||[39m undefined[33m,[39m
+10:22:06.302  [90m 418 |[39m             phone[33m:[39m acc[33m.[39mphone [33m||[39m undefined[33m,[39m
+10:22:06.302 [31m[1m>[22m[39m[90m 419 |[39m             website_url[33m:[39m acc[33m.[39mwebsite_url [33m||[39m undefined[33m,[39m
+10:22:06.302  [90m     |[39m             [31m[1m^[22m[39m
+10:22:06.302  [90m 420 |[39m             booking_url[33m:[39m acc[33m.[39mbooking_url [33m||[39m undefined[33m,[39m
+10:22:06.303  [90m 421 |[39m             has_room_block[33m:[39m acc[33m.[39mhas_room_block[33m,[39m
+10:22:06.303  [90m 422 |[39m             room_block_name[33m:[39m acc[33m.[39mroom_block_name [33m||[39m undefined[33m,[39m[0m
+10:22:06.334 Next.js build worker exited with code: 1 and signal: null
+10:22:06.375 Error: Command "npm run build" exited with 1

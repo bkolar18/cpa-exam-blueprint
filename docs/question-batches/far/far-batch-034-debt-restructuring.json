@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Debt and Troubled Debt Restructuring",
+    "batchNumber": 34,
+    "totalQuestions": 30,
+    "dateGenerated": "2025-01-07",
+    "generatedBy": "Claude"
+  },
+  "questions": [
+    {
+      "id": "far-debt-001",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Bond Issuance",
+      "conceptTested": "Issue price at premium",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A company issues $1,000,000 face value bonds at 103. What cash is received?",
+      "options": {
+        "A": "$970,000",
+        "B": "$1,000,000",
+        "C": "$1,003,000",
+        "D": "$1,030,000"
+      },
+      "correctAnswer": "D",
+      "explanation": "Issue price = Face value × Price = $1,000,000 × 103% = $1,030,000.",
+      "tip": "Issue at 103 = 103% of face value.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-debt-002",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Bond Issuance",
+      "conceptTested": "Stated vs market rate relationship",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Bonds will sell at a premium when:",
+      "options": {
+        "A": "The stated rate equals the market rate",
+        "B": "The stated rate is less than the market rate",
+        "C": "The stated rate exceeds the market rate",
+        "D": "The bonds are callable"
+      },
+      "correctAnswer": "C",
+      "explanation": "When the stated (coupon) rate exceeds the market rate, investors pay more than face value (premium) to earn the higher stated interest.",
+      "tip": "Stated > Market = Premium; Stated < Market = Discount.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-debt-003",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Discount Amortization",
+      "conceptTested": "Effective interest method",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A bond with $100,000 face value was issued for $95,000. Stated rate 8%, market rate 10%. What is Year 1 interest expense using effective interest?",
+      "options": {
+        "A": "$8,000",
+        "B": "$9,500",
+        "C": "$10,000",
+        "D": "$10,500"
+      },
+      "correctAnswer": "B",
+      "explanation": "Interest expense = Carrying value × Market rate = $95,000 × 10% = $9,500.",
+      "tip": "Effective interest: expense = carrying value × market rate.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-004",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Discount Amortization",
+      "conceptTested": "Discount amortization calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Using the previous question, what is Year 1 discount amortization?",
+      "options": {
+        "A": "$500",
+        "B": "$1,000",
+        "C": "$1,500",
+        "D": "$2,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Cash interest = $100,000 × 8% = $8,000. Interest expense = $9,500. Discount amortization = $9,500 - $8,000 = $1,500.",
+      "tip": "Discount amortization = Interest expense - Cash interest.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-005",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Premium Amortization",
+      "conceptTested": "Premium reducing interest expense",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When bonds are issued at a premium, interest expense over the life of the bonds:",
+      "options": {
+        "A": "Equals the cash interest payments",
+        "B": "Exceeds the cash interest payments",
+        "C": "Is less than the cash interest payments",
+        "D": "Varies randomly each period"
+      },
+      "correctAnswer": "C",
+      "explanation": "Premium amortization reduces interest expense below cash paid. Total interest expense = Total cash paid - Premium.",
+      "tip": "Premium: interest expense < cash paid.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-debt-006",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Bond Issuance Costs",
+      "conceptTested": "Issuance cost treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under current GAAP, bond issuance costs are:",
+      "options": {
+        "A": "Expensed immediately",
+        "B": "Recorded as an asset and amortized",
+        "C": "Reported as a direct deduction from the carrying amount of the debt",
+        "D": "Added to the face value of the bonds"
+      },
+      "correctAnswer": "C",
+      "explanation": "Bond issuance costs are presented as a direct deduction from the carrying amount of the bond liability (similar to a discount) and amortized over the bond term.",
+      "tip": "Issuance costs = deduction from bond liability, amortized like discount.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-debt-007",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Early Extinguishment",
+      "conceptTested": "Gain or loss calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Bonds with a carrying value of $485,000 (face $500,000, unamortized discount $15,000) are retired for $490,000. What is the gain or loss?",
+      "options": {
+        "A": "$5,000 gain",
+        "B": "$5,000 loss",
+        "C": "$10,000 gain",
+        "D": "$10,000 loss"
+      },
+      "correctAnswer": "B",
+      "explanation": "Loss = Reacquisition price - Carrying value = $490,000 - $485,000 = $5,000 loss.",
+      "tip": "Extinguishment G/L = Carrying value - Price paid (gain if positive).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-debt-008",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Callable Bonds",
+      "conceptTested": "Call premium impact",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A $1,000,000 bond (carrying value $980,000) is called at 102. What is the loss on extinguishment?",
+      "options": {
+        "A": "$0",
+        "B": "$20,000",
+        "C": "$40,000",
+        "D": "$60,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Call price = $1,000,000 × 102% = $1,020,000. Loss = $1,020,000 - $980,000 = $40,000.",
+      "tip": "Call at 102 = pay 102% of face value.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-debt-009",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Convertible Bonds",
+      "conceptTested": "Conversion at book value",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Convertible bonds (face $200,000, carrying $192,000) are converted to 4,000 shares of $10 par stock. Using the book value method, what is credited to APIC?",
+      "options": {
+        "A": "$0",
+        "B": "$40,000",
+        "C": "$152,000",
+        "D": "$192,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Common stock = 4,000 × $10 = $40,000. Carrying value used as total equity. APIC = $192,000 - $40,000 = $152,000. No gain or loss on conversion.",
+      "tip": "Book value conversion: Equity = carrying value; no G/L.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-debt-010",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Convertible Bonds",
+      "conceptTested": "Induced conversion",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When an issuer induces conversion of convertible debt by offering additional consideration (sweetener), the additional consideration is:",
+      "options": {
+        "A": "Ignored for accounting purposes",
+        "B": "Reported as an expense",
+        "C": "Credited to APIC",
+        "D": "Recorded as a reduction to the conversion price"
+      },
+      "correctAnswer": "B",
+      "explanation": "The fair value of additional consideration given to induce conversion is recognized as an expense (debt conversion expense).",
+      "tip": "Induced conversion sweetener = expense.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-011",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Bonds with Detachable Warrants",
+      "conceptTested": "Allocating proceeds",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Bonds ($500,000 face) with detachable warrants are issued for $530,000. Warrants FV is $40,000, bonds without warrants FV is $480,000. What is allocated to bonds?",
+      "options": {
+        "A": "$480,000",
+        "B": "$489,231",
+        "C": "$490,000",
+        "D": "$530,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Total FV = $480,000 + $40,000 = $520,000. Bond allocation = $530,000 × ($480,000 ÷ $520,000) = $530,000 × 0.9231 = $489,231.",
+      "tip": "Detachable warrants: allocate based on relative FV.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-debt-012",
+      "section": "FAR",
+      "topic": "Troubled Debt Restructuring",
+      "subtopic": "Modification of Terms",
+      "conceptTested": "When to recognize gain",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under ASU 2022-02, a troubled debt restructuring by modification of terms requires the debtor to recognize a gain when:",
+      "options": {
+        "A": "Any modification occurs",
+        "B": "The creditor grants a concession due to the debtor's financial difficulty",
+        "C": "The total future cash payments (principal + interest) are less than the current carrying value",
+        "D": "TDR accounting no longer applies; general modification guidance is used"
+      },
+      "correctAnswer": "D",
+      "explanation": "ASU 2022-02 eliminated TDR accounting for creditors and debtors. Now, all loan modifications are evaluated under general modification guidance. Debtors apply ASC 470-50 modification vs. extinguishment tests.",
+      "tip": "ASU 2022-02 eliminated TDR designation; use general mod guidance.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-debt-013",
+      "section": "FAR",
+      "topic": "Troubled Debt Restructuring",
+      "subtopic": "Debt Modification",
+      "conceptTested": "10% cash flow test",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under ASC 470-50, a debt modification is treated as extinguishment if the present value of cash flows under new terms differs from old terms by more than:",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "15%",
+        "D": "25%"
+      },
+      "correctAnswer": "B",
+      "explanation": "If cash flows under new terms differ by more than 10% from old terms (using the original effective rate), the modification is treated as an extinguishment and new debt issuance.",
+      "tip": "10% test: >10% change = extinguishment; ≤10% = modification.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-014",
+      "section": "FAR",
+      "topic": "Troubled Debt Restructuring",
+      "subtopic": "Asset Transfer",
+      "conceptTested": "Full settlement with assets",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A debtor settles a $500,000 debt by transferring land (cost $300,000, FV $420,000). What is the gain on debt restructuring?",
+      "options": {
+        "A": "$80,000",
+        "B": "$120,000",
+        "C": "$200,000",
+        "D": "$320,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Two components: (1) Gain on asset = FV - Cost = $420,000 - $300,000 = $120,000. (2) Gain on debt = Debt - FV of asset = $500,000 - $420,000 = $80,000. Question asks for restructuring gain = $80,000.",
+      "tip": "Asset transfer: separate asset gain and debt restructuring gain.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-debt-015",
+      "section": "FAR",
+      "topic": "Troubled Debt Restructuring",
+      "subtopic": "Equity Issuance",
+      "conceptTested": "Settlement with equity",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A debtor settles a $400,000 debt by issuing 10,000 shares ($10 par, $35 FMV). What is the gain on restructuring?",
+      "options": {
+        "A": "$0",
+        "B": "$50,000",
+        "C": "$100,000",
+        "D": "$250,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Stock FV = 10,000 × $35 = $350,000. Gain = Debt - Stock FV = $400,000 - $350,000 = $50,000.",
+      "tip": "Equity settlement: gain = debt - FV of equity issued.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-debt-016",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Debt Classification",
+      "conceptTested": "Current vs long-term",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Long-term debt should be classified as current if:",
+      "options": {
+        "A": "It carries a floating interest rate",
+        "B": "It is due within one year and will not be refinanced on a long-term basis",
+        "C": "The debt covenant requires quarterly payments",
+        "D": "The creditor is a related party"
+      },
+      "correctAnswer": "B",
+      "explanation": "Debt due within one year is classified as current unless the entity has the intent and ability to refinance on a long-term basis (with refinancing agreement in place by the balance sheet date).",
+      "tip": "Current classification: due within 1 year unless refinancing is arranged.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-debt-017",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Covenant Violation",
+      "conceptTested": "Classification after covenant breach",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If a debt covenant is violated at the balance sheet date, the debt is classified as:",
+      "options": {
+        "A": "Long-term if the creditor waives the violation after year-end but before financial statements are issued",
+        "B": "Long-term if violation is waived before the balance sheet date",
+        "C": "Current regardless of any waiver",
+        "D": "Based on the original maturity date"
+      },
+      "correctAnswer": "B",
+      "explanation": "For the debt to remain long-term, the waiver must be obtained before the balance sheet date and the waiver period must be at least 12 months.",
+      "tip": "Covenant breach: waiver must be before balance sheet date for long-term classification.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-018",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Fair Value Option",
+      "conceptTested": "Electing FV for debt",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When a company elects the fair value option for its debt, changes in fair value due to the company's own credit risk are recognized in:",
+      "options": {
+        "A": "Net income",
+        "B": "Other comprehensive income",
+        "C": "Retained earnings directly",
+        "D": "As an adjustment to the debt balance only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under ASU 2016-01, changes in FV of debt due to instrument-specific credit risk go to OCI, while other FV changes go to net income.",
+      "tip": "FV option for debt: own credit risk → OCI; other changes → P&L.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-019",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Notes Payable",
+      "conceptTested": "Zero-interest note",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A company issues a $100,000 zero-interest note due in 3 years. Market rate is 8%. PV factor for 3 years at 8% is 0.7938. What is recorded as the note payable?",
+      "options": {
+        "A": "$79,380",
+        "B": "$92,000",
+        "C": "$100,000",
+        "D": "$126,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Zero-interest note is recorded at present value: $100,000 × 0.7938 = $79,380. The discount of $20,620 is amortized as interest expense.",
+      "tip": "Zero-interest note = record at PV; discount = deferred interest.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-020",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Variable Rate Debt",
+      "conceptTested": "Floating rate note valuation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A variable-rate note that resets to market rates at each interest payment date has a fair value that:",
+      "options": {
+        "A": "Equals face value at each reset date",
+        "B": "Always exceeds face value",
+        "C": "Is always less than face value",
+        "D": "Requires complex valuation at each date"
+      },
+      "correctAnswer": "A",
+      "explanation": "A floating-rate note that resets to market rates at each payment date has a fair value approximately equal to face value at reset because the coupon rate equals the market rate.",
+      "tip": "Floating rate note at reset = FV approximately equals face value.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-debt-021",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Serial Bonds",
+      "conceptTested": "Serial bond characteristics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Serial bonds differ from term bonds in that serial bonds:",
+      "options": {
+        "A": "Pay interest semi-annually",
+        "B": "Mature in installments over time rather than all at once",
+        "C": "Are always convertible",
+        "D": "Cannot be issued at a premium"
+      },
+      "correctAnswer": "B",
+      "explanation": "Serial bonds mature in installments (e.g., $100,000 each year for 10 years). Term bonds mature all at once at the end of the term.",
+      "tip": "Serial = staggered maturities; Term = single maturity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-debt-022",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Defeasance",
+      "conceptTested": "In-substance defeasance",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Legal defeasance of debt occurs when:",
+      "options": {
+        "A": "The debtor deposits assets in a trust to cover future payments",
+        "B": "The debtor is legally released from being the primary obligor",
+        "C": "The debt is converted to equity",
+        "D": "The debtor negotiates a lower interest rate"
+      },
+      "correctAnswer": "B",
+      "explanation": "Legal defeasance means the debtor is legally released from the debt obligation. This allows derecognition of the liability. In-substance defeasance (depositing assets) does not result in derecognition under GAAP.",
+      "tip": "Legal defeasance = legal release; In-substance = no derecognition.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-023",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Bonds Between Interest Dates",
+      "conceptTested": "Accrued interest at issuance",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "On March 1, bonds with $500,000 face value and 6% annual interest (semi-annual payments on Jan 1 and July 1) are issued at par plus accrued interest. What accrued interest is collected?",
+      "options": {
+        "A": "$2,500",
+        "B": "$5,000",
+        "C": "$10,000",
+        "D": "$15,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accrued interest = $500,000 × 6% × (2/12) = $5,000 (Jan 1 to Mar 1 is 2 months).",
+      "tip": "Accrued interest at issuance = Face × Rate × Fraction of period.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-debt-024",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Carrying Value",
+      "conceptTested": "Premium vs discount effect over time",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Over the life of a bond, the carrying value of a bond issued at a discount will:",
+      "options": {
+        "A": "Decrease toward face value",
+        "B": "Increase toward face value",
+        "C": "Remain constant at the issue price",
+        "D": "Fluctuate with market interest rates"
+      },
+      "correctAnswer": "B",
+      "explanation": "Discount amortization increases the carrying value toward face value over the bond's life. At maturity, carrying value equals face value.",
+      "tip": "Discount amortizes up; Premium amortizes down; both reach face at maturity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-debt-025",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Sinking Fund",
+      "conceptTested": "Sinking fund classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Assets held in a bond sinking fund should be classified as:",
+      "options": {
+        "A": "Current assets",
+        "B": "Long-term investments",
+        "C": "A reduction of the bond liability",
+        "D": "Other comprehensive income"
+      },
+      "correctAnswer": "B",
+      "explanation": "Sinking fund assets are classified as long-term investments (non-current assets), not netted against the debt. They're restricted for debt repayment.",
+      "tip": "Sinking fund = long-term investment; separate from debt liability.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-debt-026",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Effective Interest",
+      "conceptTested": "Comparing straight-line to effective interest",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Compared to the straight-line method, the effective interest method for a bond issued at a discount results in:",
+      "options": {
+        "A": "Higher interest expense in early years",
+        "B": "Lower interest expense in early years",
+        "C": "Constant interest expense each period",
+        "D": "Higher total interest expense over the bond's life"
+      },
+      "correctAnswer": "B",
+      "explanation": "For discounts, effective interest produces lower expense in early years (smaller carrying value × market rate) and higher expense in later years. Total expense is the same over the life.",
+      "tip": "Discount with effective interest: expense starts low, increases.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-debt-027",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Extinguishment with Restricted Cash",
+      "conceptTested": "Using restricted funds",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Debt is considered extinguished if the debtor irrevocably places assets in a trust solely for satisfying the debt AND:",
+      "options": {
+        "A": "The assets are government securities",
+        "B": "The debtor is legally released from being primary obligor",
+        "C": "The assets exceed the debt by 10%",
+        "D": "The trust is managed by an independent trustee"
+      },
+      "correctAnswer": "B",
+      "explanation": "For in-substance defeasance to result in derecognition, the debtor must be legally released. Otherwise, placing assets in trust is not enough; the debt remains on the books.",
+      "tip": "Extinguishment requires legal release, not just trust funding.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-028",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Short-term to Long-term",
+      "conceptTested": "Reclassification requirements",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "To classify currently maturing debt as long-term, an entity must demonstrate intent and ability to refinance. This is established by:",
+      "options": {
+        "A": "Management's stated intention",
+        "B": "Actual refinancing after year-end or a non-cancellable long-term financing agreement",
+        "C": "History of rolling over similar debt",
+        "D": "Adequate cash reserves"
+      },
+      "correctAnswer": "B",
+      "explanation": "Intent and ability require either: (1) actual post-year-end refinancing before statements are issued, or (2) a non-cancellable financing agreement from a capable lender extending beyond one year.",
+      "tip": "Refinancing proof: actual refinancing or binding agreement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-029",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Debt with Equity Features",
+      "conceptTested": "Warrants from lender",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A company issues debt to a lender and also issues warrants to the lender as an additional consideration. The warrants should be:",
+      "options": {
+        "A": "Ignored in accounting for the debt",
+        "B": "Allocated a portion of the proceeds based on relative fair values",
+        "C": "Recorded as an expense",
+        "D": "Recorded only when exercised"
+      },
+      "correctAnswer": "B",
+      "explanation": "When warrants are issued with debt, proceeds are allocated between debt and equity (warrants) based on relative fair values. The warrant portion is credited to APIC.",
+      "tip": "Warrants with debt: allocate proceeds to debt and equity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-debt-030",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Participating Mortgage",
+      "conceptTested": "Lender participation in income",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A participating mortgage where the lender receives a portion of the property's income in addition to interest should be accounted for by:",
+      "options": {
+        "A": "Recording all payments as interest expense",
+        "B": "Recording the participation payments as additional interest expense as incurred",
+        "C": "Reducing the mortgage principal for participation payments",
+        "D": "Recording participation payments as dividends"
+      },
+      "correctAnswer": "B",
+      "explanation": "Participation payments to lenders based on income are treated as contingent interest and expensed as incurred, in addition to stated interest.",
+      "tip": "Participation payments = contingent interest expense.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    }
+  ]
+}

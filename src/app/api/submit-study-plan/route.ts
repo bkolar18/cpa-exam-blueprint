@@ -73,18 +73,18 @@ export async function POST(request: Request) {
       </div>
 
       <div class="section">
-        <h2>CPA-Recommended Tips</h2>
+        <h2>Study Tips</h2>
         ${data.studyPlan.tips.map(tip => `<div class="tip">✓ ${tip}</div>`).join("")}
       </div>
 
       <div class="cta">
         <p>Ready to start studying?</p>
-        <a href="https://cpa-exam-blueprint.vercel.app/recommended-program" class="button" style="color: #ffffff !important; text-decoration: none;">See Our Recommended Program</a>
-        <a href="https://cpa-exam-blueprint.vercel.app/cpa-academy" class="button-secondary" style="color: #ffffff !important; text-decoration: none;">Explore CPA Academy</a>
+        <a href="https://cpa-exam-blueprint.vercel.app/signup" class="button" style="color: #ffffff !important; text-decoration: none;">Create Your Account</a>
+        <a href="https://cpa-exam-blueprint.vercel.app/dashboard" class="button-secondary" style="color: #ffffff !important; text-decoration: none;">Go to Dashboard</a>
       </div>
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint - Free guidance from licensed CPAs</p>
+      <p>CPA Exam Blueprint - Affordable CPA exam study tools</p>
       <p>You received this because you requested a study plan at cpaexamblueprint.com</p>
     </div>
   </div>

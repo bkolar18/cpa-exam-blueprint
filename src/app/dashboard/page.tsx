@@ -23,38 +23,32 @@ export default function DashboardPage() {
   const [recentSessions, setRecentSessions] = useState<StudySessionRow[]>([]);
   const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showPromo, setShowPromo] = useState(false);
+  const [showUpgradePromo, setShowUpgradePromo] = useState(false);
   const supabase = createClient();
 
-  // Check if promo should be shown (per-account, reappears after 30 days)
-  useEffect(() => {
-    if (!profile) return;
+  // Determine user's subscription tier (default to 'free' if not set)
+  const subscriptionTier = profile?.subscription_tier || "free";
+  const isPro = subscriptionTier === "pro";
+  const isFree = subscriptionTier === "free";
 
-    const dismissedAt = profile.promo_dismissed_at;
-    if (!dismissedAt) {
-      // Never dismissed - show promo
-      setShowPromo(true);
-    } else {
-      // Check if 30 days have passed since dismissal
-      const dismissedDate = new Date(dismissedAt);
-      const now = new Date();
-      const daysSinceDismissed = Math.floor((now.getTime() - dismissedDate.getTime()) / (1000 * 60 * 60 * 24));
-      if (daysSinceDismissed >= 30) {
-        setShowPromo(true);
+  // Check if promo was dismissed in localStorage
+  useEffect(() => {
+    if (typeof window !== "undefined" && !isPro) {
+      const dismissed = localStorage.getItem("upgrade_promo_dismissed");
+      const dismissedTime = dismissed ? parseInt(dismissed, 10) : 0;
+      const threeDaysAgo = Date.now() - 3 * 24 * 60 * 60 * 1000;
+      // Show promo if not dismissed or dismissed more than 3 days ago
+      if (!dismissed || dismissedTime < threeDaysAgo) {
+        setShowUpgradePromo(true);
       }
     }
-  }, [profile]);
+  }, [isPro]);
 
-  const dismissPromo = async () => {
-    setShowPromo(false);
-
-    if (!supabase || !user) return;
-
-    // Update profile with dismissal timestamp
-    await supabase
-      .from("profiles")
-      .update({ promo_dismissed_at: new Date().toISOString() })
-      .eq("id", user.id);
+  const dismissUpgradePromo = () => {
+    setShowUpgradePromo(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("upgrade_promo_dismissed", Date.now().toString());
+    }
   };
 
   useEffect(() => {
@@ -191,6 +185,76 @@ export default function DashboardPage() {
         </div>
       )}
 
+      {/* Upgrade Promotion Banner */}
+      {showUpgradePromo && !isPro && (
+        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-6 text-white relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+          {/* Dismiss button */}
+          <button
+            onClick={dismissUpgradePromo}
+            className="absolute top-3 right-3 p-1 rounded-full hover:bg-white/20 transition-colors"
+            aria-label="Dismiss"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+                <span className="text-sm font-medium text-purple-200 uppercase tracking-wider">
+                  {isFree ? "Unlock More Features" : "Upgrade to Pro"}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">
+                {isFree
+                  ? "Ready to supercharge your CPA prep?"
+                  : "Get unlimited access with Pro!"}
+              </h3>
+              <p className="text-purple-100 text-sm">
+                {isFree
+                  ? "Get 300+ questions across all sections, or go Pro for unlimited questions and adaptive learning. Limited-time launch pricing!"
+                  : "Unlock all 600+ practice questions, adaptive learning, and exclusive study materials."}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              {isFree && (
+                <Link
+                  href="/pricing?plan=standard"
+                  className="px-5 py-2.5 bg-white/20 hover:bg-white/30 rounded-lg font-medium text-center transition-colors"
+                >
+                  <span className="line-through opacity-60">$99</span>{" "}
+                  <span className="font-bold">$79</span>
+                </Link>
+              )}
+              <Link
+                href="/pricing?plan=pro"
+                className="px-5 py-2.5 bg-white text-purple-700 hover:bg-purple-50 rounded-lg font-semibold text-center transition-colors"
+              >
+                {isFree ? (
+                  <>
+                    <span className="line-through opacity-60">$199</span>{" "}
+                    <span className="font-bold">$149</span>
+                  </>
+                ) : (
+                  <>
+                    Pro - <span className="line-through opacity-60">$199</span>{" "}
+                    <span className="font-bold">$149</span>
+                  </>
+                )}
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Stats Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
@@ -258,73 +322,6 @@ export default function DashboardPage() {
           description="Read section-specific study strategies"
         />
       </div>
-
-      {/* Surgent Promo */}
-      {showPromo && (
-        <div className="relative bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-6 text-white overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-
-          {/* Dismiss button */}
-          <button
-            onClick={dismissPromo}
-            className="absolute top-3 right-3 text-white/60 hover:text-white transition-colors"
-            aria-label="Dismiss"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          <div className="relative flex flex-col md:flex-row md:items-center gap-6">
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="bg-white/20 text-white text-xs font-semibold px-2 py-1 rounded-full">
-                  RECOMMENDED
-                </span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Ready for the Full Course?</h3>
-              <p className="text-white/90 mb-3">
-                You&apos;ve been warming up with our practice questions. Surgent CPA Review offers{" "}
-                <span className="font-semibold">8,800+ practice questions</span> with adaptive learning
-                technology that focuses on your weak areas.
-              </p>
-              <ul className="text-white/80 text-sm space-y-1 mb-4">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  8,800+ MCQs & Task-Based Simulations
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  A.S.A.P. Technology adapts to how you learn
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Pass guarantee included
-                </li>
-              </ul>
-            </div>
-            <div className="flex-shrink-0">
-              <Link
-                href="/recommended-program"
-                className="inline-flex items-center gap-2 bg-white text-emerald-700 font-semibold px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors shadow-lg"
-              >
-                Learn More
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Recent Activity */}
       <div className="bg-white rounded-xl border border-[var(--border)] p-6">

@@ -31,7 +31,6 @@ export default function Header() {
     ],
     learn: [
       { name: "Blog", href: "/blog" },
-      { name: "Success Stories", href: "/success-stories" },
     ],
   };
 

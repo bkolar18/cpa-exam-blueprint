@@ -1,0 +1,183 @@
+[
+{
+"questionId": "far-con-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Accurately reflects FASB Conceptual Framework objective. Explanation is clear and CPA-appropriate."
+},
+{
+"questionId": "far-con-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Correct classification of fundamental vs enhancing qualitative characteristics."
+},
+{
+"questionId": "far-con-003",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Asset definition aligns with current Conceptual Framework (present right to an economic resource)."
+},
+{
+"questionId": "far-fin-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Interest paid classified as operating under ASC 230; IFRS contrast is accurate."
+},
+{
+"questionId": "far-fin-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Indirect-method treatment of depreciation is correct."
+},
+{
+"questionId": "far-rev-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Correct application of ASC 606 Step 1 collectibility criterion."
+},
+{
+"questionId": "far-rev-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Proper identification of distinct performance obligations; PCS treated as a series."
+},
+{
+"questionId": "far-rev-003",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Relative standalone selling price allocation math verified."
+},
+{
+"questionId": "far-inv-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "LIFO effect during inflation correctly explained under U.S. GAAP."
+},
+{
+"questionId": "far-inv-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "NRV calculation and write-down under GAAP are correct."
+},
+{
+"questionId": "far-inv-003",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Periodic FIFO ending inventory calculation verified."
+},
+{
+"questionId": "far-ppe-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Double-declining balance depreciation calculation is correct."
+},
+{
+"questionId": "far-ppe-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Capitalization vs expensing guidance is accurate."
+},
+{
+"questionId": "far-lease-001",
+"status": "needs-revision",
+"correctAnswerVerified": true,
+"issues": [
+{
+"type": "clarity",
+"description": "Explanation relies on legacy 75%/90% bright-line thresholds.",
+"suggestion": "Clarify that ASC 842 does not prescribe bright lines; percentages are exam heuristics."
+}
+],
+"notes": "Finance lease conclusion is correct, but explanation should be modernized."
+},
+{
+"questionId": "far-lease-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Operating leases are properly recognized on the balance sheet under ASC 842."
+},
+{
+"questionId": "far-liab-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Bond discount carrying value behavior is correct."
+},
+{
+"questionId": "far-liab-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Loss contingency recognition under ASC 450 is correctly applied."
+},
+{
+"questionId": "far-eq-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Treasury stock cost method journal entry is correct."
+},
+{
+"questionId": "far-eq-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Small stock dividend recorded at fair value; math verified."
+},
+{
+"questionId": "far-tax-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Deferred tax liability concept is accurately described."
+},
+{
+"questionId": "far-tax-002",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Permanent vs temporary differences correctly distinguished."
+},
+{
+"questionId": "far-cons-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Intercompany profit elimination calculation is correct."
+},
+{
+"questionId": "far-gov-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Governmental fund measurement focus and basis are correct."
+},
+{
+"questionId": "far-nfp-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "NFP net asset classification complies with ASU 2016-14."
+},
+{
+"questionId": "far-int-001",
+"status": "approved",
+"correctAnswerVerified": true,
+"issues": [],
+"notes": "Goodwill impairment guidance is current and accurate."
+}
+]

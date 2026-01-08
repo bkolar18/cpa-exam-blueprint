@@ -14,11 +14,11 @@ export default function Footer() {
               <span className="text-xl font-bold">CPA Exam Blueprint</span>
             </div>
             <p className="text-gray-300 max-w-md">
-              Free CPA exam guidance written and reviewed by licensed CPAs.
-              Get a personalized study plan and pass the CPA exam faster.
+              Affordable CPA exam study aid with 600+ practice questions,
+              progress tracking, and personalized study plans.
             </p>
             <p className="text-gray-400 text-sm mt-4">
-              Written and reviewed by licensed CPAs with real-world experience.
+              A budget-friendly alternative for CPA candidates.
             </p>
           </div>
 
@@ -37,13 +37,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/recommended-program" className="text-gray-300 hover:text-white transition-colors">
-                  Recommended Program
+                <Link href="/signup" className="text-gray-300 hover:text-white transition-colors">
+                  Get Started
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Our CPAs
+                  About Us
                 </Link>
               </li>
             </ul>
@@ -83,8 +83,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} CPA Exam Blueprint. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm mt-2 md:mt-0">
-            <Link href="/recommended-program" className="hover:text-white transition-colors">
-              Affiliate Disclosure
+            <Link href="/about" className="hover:text-white transition-colors">
+              About Us
             </Link>
           </p>
         </div>

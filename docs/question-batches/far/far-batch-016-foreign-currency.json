@@ -1,0 +1,432 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Foreign Currency",
+    "batchNumber": 16,
+    "questionCount": 20,
+    "weight": "4%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-forex-001",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Transaction Basics",
+      "conceptTested": "Foreign currency transaction definition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "A foreign currency transaction occurs when a transaction:",
+      "options": {
+        "A": "Is conducted with a foreign company",
+        "B": "Is denominated in a currency other than the entity's functional currency",
+        "C": "Involves importing or exporting goods",
+        "D": "Requires payment within one year"
+      },
+      "correctAnswer": "B",
+      "explanation": "A foreign currency transaction is one denominated or requiring settlement in a currency other than the entity's functional currency. The location of the other party is not the determining factor.",
+      "tip": "Foreign currency = denominated in other than functional currency.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-002",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Functional Currency",
+      "conceptTested": "Functional currency determination",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An entity's functional currency is:",
+      "options": {
+        "A": "Always the currency of the country where it is headquartered",
+        "B": "The currency of the primary economic environment in which it operates",
+        "C": "Always the U.S. dollar for U.S. companies",
+        "D": "The currency chosen by management"
+      },
+      "correctAnswer": "B",
+      "explanation": "The functional currency is the currency of the primary economic environment in which the entity operates—typically where it generates and expends cash. It's determined by economic factors, not management choice.",
+      "tip": "Functional currency = primary economic environment.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-003",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Transaction Recording",
+      "conceptTested": "Initial transaction recording",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "At the transaction date, a foreign currency transaction is recorded using:",
+      "options": {
+        "A": "The forward exchange rate",
+        "B": "The historical exchange rate",
+        "C": "The spot exchange rate",
+        "D": "The average exchange rate for the period"
+      },
+      "correctAnswer": "C",
+      "explanation": "Foreign currency transactions are initially recorded at the spot exchange rate on the transaction date. This rate reflects the current exchange rate for immediate delivery.",
+      "tip": "Transaction date = spot rate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-forex-004",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Transaction Gains/Losses",
+      "conceptTested": "Exchange rate changes",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A U.S. company purchases goods from a British supplier for £100,000 when the rate is $1.30/£. At payment, the rate is $1.35/£. What is the exchange gain or loss?",
+      "options": {
+        "A": "Gain of $5,000",
+        "B": "Loss of $5,000",
+        "C": "Gain of $100,000",
+        "D": "No gain or loss"
+      },
+      "correctAnswer": "B",
+      "explanation": "Original liability: £100,000 × $1.30 = $130,000. Payment at settlement: £100,000 × $1.35 = $135,000. The company paid $5,000 more—a $5,000 exchange loss.",
+      "tip": "Payable in foreign currency + currency strengthens = loss.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-forex-005",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Balance Sheet Date",
+      "conceptTested": "Remeasurement of monetary items",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "At the balance sheet date, foreign currency denominated monetary assets and liabilities are:",
+      "options": {
+        "A": "Kept at the historical rate",
+        "B": "Remeasured at the current (spot) rate",
+        "C": "Remeasured at the average rate",
+        "D": "Written off"
+      },
+      "correctAnswer": "B",
+      "explanation": "Monetary items (cash, receivables, payables) denominated in foreign currency are remeasured at the current spot rate at each balance sheet date, with gains/losses in earnings.",
+      "tip": "Monetary items at balance sheet date = current spot rate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-006",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Transaction Gains/Losses",
+      "conceptTested": "Income statement treatment",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Foreign currency transaction gains and losses from remeasuring monetary items are reported:",
+      "options": {
+        "A": "In other comprehensive income",
+        "B": "In net income",
+        "C": "As direct adjustments to equity",
+        "D": "As adjustments to the asset or liability"
+      },
+      "correctAnswer": "B",
+      "explanation": "Transaction gains and losses from foreign currency monetary items are recognized in net income in the period in which exchange rates change.",
+      "tip": "Transaction gains/losses = income statement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-forex-007",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Translation Basics",
+      "conceptTested": "Translation vs remeasurement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Translation is required when a foreign subsidiary's functional currency is:",
+      "options": {
+        "A": "The U.S. dollar",
+        "B": "Different from the parent's reporting currency",
+        "C": "The same as the parent's reporting currency",
+        "D": "A highly inflationary currency"
+      },
+      "correctAnswer": "B",
+      "explanation": "Translation (current rate method) is used when the subsidiary's functional currency differs from the parent's reporting currency. Remeasurement is used when the functional currency is the parent's reporting currency.",
+      "tip": "Different functional currency from parent = translation required.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-forex-008",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Translation Method",
+      "conceptTested": "Current rate method rates",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the current rate method (translation), which exchange rate is used for assets and liabilities?",
+      "options": {
+        "A": "Historical rate",
+        "B": "Average rate",
+        "C": "Current rate at balance sheet date",
+        "D": "Forward rate"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under the current rate method, all assets and liabilities are translated at the current exchange rate as of the balance sheet date.",
+      "tip": "Translation: A&L at current rate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-009",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Translation Method",
+      "conceptTested": "Revenue and expense translation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the current rate method, revenues and expenses are translated at:",
+      "options": {
+        "A": "The current rate at balance sheet date",
+        "B": "Historical rates when transactions occurred",
+        "C": "The weighted-average rate for the period",
+        "D": "The rate at the beginning of the period"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under the current rate method, revenues and expenses are translated at the weighted-average exchange rate for the period, which approximates translating each transaction at its spot rate.",
+      "tip": "Translation: revenues/expenses at average rate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-010",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Translation Adjustments",
+      "conceptTested": "CTA reporting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The cumulative translation adjustment (CTA) from translating a foreign subsidiary is reported in:",
+      "options": {
+        "A": "Net income",
+        "B": "Other comprehensive income (accumulated OCI in equity)",
+        "C": "Goodwill",
+        "D": "Retained earnings"
+      },
+      "correctAnswer": "B",
+      "explanation": "Translation adjustments (the 'plug' from using different rates for B/S and I/S items) are reported in other comprehensive income and accumulate in AOCI within equity.",
+      "tip": "Translation adjustments = OCI (not income statement).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-011",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Remeasurement",
+      "conceptTested": "Temporal method",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under the temporal method (remeasurement), inventory carried at cost is translated at:",
+      "options": {
+        "A": "Current rate",
+        "B": "Average rate",
+        "C": "Historical rate",
+        "D": "Lower of cost or market rate"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under the temporal method, items carried at historical cost (like inventory at cost, fixed assets, prepaid expenses) are remeasured at historical rates. Monetary items and items at current value use current rates.",
+      "tip": "Temporal: historical cost items = historical rate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-forex-012",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Remeasurement",
+      "conceptTested": "Remeasurement gain/loss",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Gains and losses from remeasurement (temporal method) are reported in:",
+      "options": {
+        "A": "Other comprehensive income",
+        "B": "Net income",
+        "C": "Retained earnings directly",
+        "D": "Deferred until subsidiary is sold"
+      },
+      "correctAnswer": "B",
+      "explanation": "Remeasurement gains and losses (from the temporal method) are reported in net income, unlike translation adjustments which go to OCI.",
+      "tip": "Remeasurement = income. Translation = OCI.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-013",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Highly Inflationary",
+      "conceptTested": "Highly inflationary economy",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a foreign subsidiary operates in a highly inflationary economy, its financial statements are:",
+      "options": {
+        "A": "Translated using the current rate method",
+        "B": "Remeasured as if the functional currency were the reporting currency",
+        "C": "Not consolidated",
+        "D": "Restated for inflation before translation"
+      },
+      "correctAnswer": "B",
+      "explanation": "In a highly inflationary economy (cumulative inflation of ~100% over 3 years), the parent's reporting currency is used as the functional currency, requiring remeasurement (temporal method).",
+      "tip": "Highly inflationary = remeasure (temporal method), not translate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-forex-014",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Translation Calculation",
+      "conceptTested": "Asset translation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A foreign subsidiary has total assets of 500,000 foreign currency units. The current rate is $0.80, the historical rate is $0.75, and the average rate is $0.78. Under the current rate method, what is the translated asset value?",
+      "options": {
+        "A": "$375,000",
+        "B": "$390,000",
+        "C": "$400,000",
+        "D": "$500,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under the current rate method, assets are translated at the current rate: 500,000 × $0.80 = $400,000.",
+      "tip": "Current rate method: assets at current rate.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-015",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Hedging Basics",
+      "conceptTested": "Hedge of net investment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Gains and losses on a hedge of a net investment in a foreign operation are reported in:",
+      "options": {
+        "A": "Net income",
+        "B": "Other comprehensive income (same as translation adjustment)",
+        "C": "Retained earnings",
+        "D": "Goodwill"
+      },
+      "correctAnswer": "B",
+      "explanation": "Gains and losses on qualifying hedges of net investments in foreign operations are reported in OCI, offsetting the translation adjustment on the hedged net investment.",
+      "tip": "Net investment hedge gains/losses = OCI (with CTA).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-forex-016",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Forward Contracts",
+      "conceptTested": "Forward contract fair value",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A forward contract used as a fair value hedge of a recognized foreign currency receivable results in:",
+      "options": {
+        "A": "Both hedging instrument and hedged item gains/losses in earnings",
+        "B": "Hedging instrument gains/losses in OCI, hedged item in earnings",
+        "C": "Both gains/losses deferred until settlement",
+        "D": "No recognition until the contract settles"
+      },
+      "correctAnswer": "A",
+      "explanation": "In a fair value hedge, both the hedging instrument (forward contract) and the hedged item (receivable) are marked to market with gains and losses recognized in earnings, largely offsetting each other.",
+      "tip": "Fair value hedge: both sides in earnings (offset).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-forex-017",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Forward Contracts",
+      "conceptTested": "Cash flow hedge",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The effective portion of a cash flow hedge of a forecasted foreign currency transaction is reported in:",
+      "options": {
+        "A": "Net income immediately",
+        "B": "Other comprehensive income until the hedged transaction affects earnings",
+        "C": "Retained earnings",
+        "D": "As an adjustment to the cost of the hedged item"
+      },
+      "correctAnswer": "B",
+      "explanation": "The effective portion of a cash flow hedge is reported in OCI and reclassified to earnings when the hedged forecasted transaction (e.g., sale) affects earnings.",
+      "tip": "Cash flow hedge effective portion = OCI until transaction hits income.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-forex-018",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Disposal of Foreign Entity",
+      "conceptTested": "CTA reclassification",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a company sells or substantially liquidates a foreign subsidiary, the accumulated translation adjustment (CTA) is:",
+      "options": {
+        "A": "Kept in OCI indefinitely",
+        "B": "Reclassified from AOCI to earnings",
+        "C": "Written off against retained earnings",
+        "D": "Transferred to the buyer"
+      },
+      "correctAnswer": "B",
+      "explanation": "Upon sale or substantial liquidation of a foreign entity, the CTA accumulated in AOCI is reclassified ('recycled') to earnings as part of the gain or loss on disposal.",
+      "tip": "Sell foreign sub = CTA goes from AOCI to income statement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-forex-019",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Translation Calculation",
+      "conceptTested": "Equity translation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the current rate method, common stock of a foreign subsidiary is translated at:",
+      "options": {
+        "A": "The current rate at balance sheet date",
+        "B": "The average rate for the period",
+        "C": "The historical rate when stock was issued",
+        "D": "The forward rate"
+      },
+      "correctAnswer": "C",
+      "explanation": "Equity accounts (common stock, APIC) are translated at historical rates—the rates in effect when the stock was issued or capital transactions occurred.",
+      "tip": "Equity accounts = historical rates (even under current rate method).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-forex-020",
+      "section": "FAR",
+      "topic": "Foreign Currency",
+      "subtopic": "Intercompany Transactions",
+      "conceptTested": "Long-term intercompany loan",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Exchange gains/losses on a long-term intercompany loan that is not expected to be settled in the foreseeable future are:",
+      "options": {
+        "A": "Recognized in net income",
+        "B": "Reported in OCI as part of the cumulative translation adjustment",
+        "C": "Deferred until the loan is repaid",
+        "D": "Eliminated in consolidation"
+      },
+      "correctAnswer": "B",
+      "explanation": "Long-term intercompany loans of a capital nature (not expected to be settled in the foreseeable future) are treated as part of the net investment. Exchange gains/losses go to OCI with the CTA.",
+      "tip": "Long-term intercompany loan (capital nature) = OCI, not income.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ================================================================================
 CPA EXAM BLUEPRINT - SESSION PROMPT
 ================================================================================
-Last Updated: 2026-01-03
+Last Updated: 2026-01-08
 
 IMPORTANT: Read this file at the start of each session to understand project
 context and continue work seamlessly.
@@ -25,68 +25,164 @@ PROJECT OVERVIEW
 
 Project: CPA Exam Blueprint
 Purpose: Lead generation website for CPA review firm (affiliate: Surgent)
-Stack: Next.js 16.1.1, React 19, Tailwind CSS v4, TypeScript
+         A family member works at Surgent - goal is to reduce reliance on
+         affiliate marketing with an owned marketing channel.
+Stack: Next.js 16.1.1, React 19, Tailwind CSS v4, TypeScript, Supabase
 Repo: https://github.com/bkolar18/cpa-exam-blueprint
 Live: https://cpa-exam-blueprint.vercel.app
 
 ================================================================================
-CURRENT PROJECT STATE
+CURRENT PROJECT STATE (as of 2026-01-08)
 ================================================================================
 
 Phase 1 (Free Tools) - COMPLETE
 - Score Release Calendar with countdown timer
 - NTS Expiration Tracker with email reminders
 - Study Hours Calculator for all 6 sections
-- State Requirements Guide (10 states)
+- State Requirements Guide (22 states)
 - Enhanced Study Plan quiz with discipline sections
 
-Phase 2 (Content & Authority) - NOT STARTED
-Phase 3 (Email Nurturing) - NOT STARTED
-Phase 4 (Interactive Features) - NOT STARTED
-Phase 5 (Infrastructure) - NOT STARTED
+Phase 2 (Content & Authority) - COMPLETE
+- MDX blog infrastructure with 8 articles
+- Exam Day Walkthrough guide
+- "I Failed, Now What?" retaker guide
+- Success Stories section (5 stories)
+
+Phase 3 (CPA Academy / Dashboard) - COMPLETE
+- Supabase database integration (PostgreSQL)
+- User authentication (email/password)
+- User dashboard with study tracking
+- Study session logging with streaks
+- Section progress management
+- NTS tracking in dashboard
+- Gamification (points, badges, achievements)
+- 5,810 practice questions across all 6 sections
+- Practice history and accuracy tracking
+- Surgent promotional banner (per-account, 30-day reappearance)
+- **NEW** Exam Simulation Mode with pause functionality
+
+Phase 3.5 (Question Bank Expansion) - IN PROGRESS
+- 5,810 total questions (up from 600 original)
+- 176 question batch files
+- Difficulty distribution: 17% easy, 49% medium, 33% hard
+- Target: 50-60% medium questions
+
+Phase 4 (Email Nurturing) - NOT STARTED
+Phase 5 (AI Features) - NOT STARTED
 
 ================================================================================
-NEXT STEPS (PRIORITY ORDER)
+KEY NEW DOCUMENTS TO READ
 ================================================================================
 
-1. Phase 2: Content & Authority
-   - Set up MDX blog infrastructure
-   - Create Exam Day Walkthrough guide
-   - Create "I Failed, Now What?" retaker guide
-   - Add Success Stories section
+1. **docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md** (CRITICAL - Updated 01/08)
+   - Complete breakdown of all 5,810 questions
+   - Distribution by section, difficulty, and batch
+   - Gap analysis for reaching target distribution
+   - Lists all 176 question batch files
 
-2. Phase 3: Email Nurturing
-   - Build 7-email welcome sequence
-   - Implement segment-based content delivery
-   - Set up score release notifications
+2. **docs/question-batches/** (Question JSON files)
+   - Contains all question batch JSON files organized by section
+   - Format: {section}-batch-{number}-{topic}.json
+   - Recent additions: far-054, far-055, reg-035, reg-036, isc-015, isc-016
 
-3. Phase 4: Interactive Features
-   - AI chatbot with Anthropic Claude
-   - Diagnostic quizzes per section
-   - Progress tracker
+3. **CPA Exam Blueprint - Business Overview.txt**
+   - Complete business description for Surgent partnership
+   - Explains site purpose, all features, marketing funnel
 
-================================================================================
-KEY DOCUMENTS TO READ
-================================================================================
-
-1. PROJECT_ROADMAP.md
-   - Complete 5-phase implementation plan
-   - Database schema design
-   - API architecture
-   - Component library structure
-
-2. cpa claude responses.txt
+4. **cpa claude responses.txt**
    - Strategic consulting recommendations
-   - Research findings (pass rates, competitors)
-   - Session summaries
+   - Session summaries and technical decisions
 
-3. SESSION_LOG.txt
-   - What was accomplished in the last session
-
-4. CLAUDE_CONTEXT.txt
+5. **CLAUDE_CONTEXT.txt**
    - Complete project history and context
-   - Workflow preferences
-   - Golden rules
+   - Database schema (Supabase)
+   - All data models and types
+
+================================================================================
+PRACTICE QUESTIONS STATUS (as of 2026-01-08)
+================================================================================
+
+**Total Questions: 5,810 across 176 batch files**
+
+| Section | Questions | Batches | Easy% | Med% | Hard% |
+|---------|-----------|---------|-------|------|-------|
+| FAR     | 1,680     | 55      | 19%   | 46%  | 35%   |
+| AUD     | 1,015     | 29      | 18%   | 52%  | 30%   |
+| REG     | 1,260     | 36      | 16%   | 47%  | 36%   |
+| TCP     | 805       | 23      | 17%   | 51%  | 32%   |
+| BAR     | 490       | 14      | 17%   | 56%  | 27%   |
+| ISC     | 560       | 16      | 15%   | 50%  | 35%   |
+
+**Difficulty Distribution:**
+- Easy: 1,013 (17.4%) - On target (15-20%)
+- Medium: 2,860 (49.2%) - Near target (50-60%), need ~336 more
+- Hard: 1,937 (33.3%) - Above target (25-30%)
+
+**Question File Locations:**
+- Original 600: src/lib/data/practice-questions/{section}.ts
+- Batch JSON files: docs/question-batches/{section}/
+
+================================================================================
+RECENT ACCOMPLISHMENTS (Session 2026-01-08)
+================================================================================
+
+1. **Exam Simulation Pause Button**
+   - Added pause/resume functionality to exam simulation mode
+   - Timer stops when paused, resumes correctly
+   - Shows paused overlay with progress summary
+   - Options: Resume exam or End & Submit early
+   - File: src/app/dashboard/exam-simulation/[section]/page.tsx
+
+2. **Medium Difficulty Questions Added (210 total)**
+   Round 1 - Conceptual (105 questions):
+   - far-batch-054-medium-conceptual.json (35 questions)
+   - reg-batch-035-medium-conceptual.json (35 questions)
+   - isc-batch-015-medium-conceptual.json (35 questions)
+
+   Round 2 - Application (105 questions):
+   - far-batch-055-medium-application.json (35 questions)
+   - reg-batch-036-medium-application.json (35 questions)
+   - isc-batch-016-medium-application.json (35 questions)
+
+3. **Question Error Fixes**
+   - reg-med-008: Fixed Section 351 control test answer (B→C)
+   - far-med2-015: Fixed EPS calculation answer (B→D, $4.90)
+
+4. **Updated Distribution Analysis**
+   - docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md fully updated
+   - New totals: 5,810 questions, 49.2% medium
+
+================================================================================
+IMMEDIATE NEXT STEPS (Pick up from here)
+================================================================================
+
+**Option A: Continue Adding Medium Questions**
+- Need ~336 more medium questions to reach 55% target
+- Priority sections: FAR (46%), REG (47%)
+- ISC is now at 50% (at target minimum)
+- Could add AUD medium questions (currently at 52% - already good)
+
+**Option B: Phase 4 - Email Nurturing**
+- Design 7-email welcome sequence
+- Set up email automation
+- Implement segment-based content delivery
+
+**Option C: Other Enhancements**
+- Add remaining 28 states to requirements guide
+- More blog posts for SEO
+- Expand exam simulation features
+
+================================================================================
+DATABASE STATUS (Supabase - ACTIVE)
+================================================================================
+
+The database is fully integrated and active. Key tables:
+- profiles (user data, gamification, promo_dismissed_at)
+- study_sessions (logged study hours)
+- section_progress (FAR/AUD/REG/discipline status)
+- nts_entries (Notice to Schedule tracking)
+- practice_attempts (questions, user answers)
+- user_badges (earned achievements)
 
 ================================================================================
 CORE PROJECT STRUCTURE
@@ -95,52 +191,64 @@ CORE PROJECT STRUCTURE
 src/
 ├── app/
 │   ├── api/
-│   │   ├── submit-study-plan/      # Lead capture endpoint
+│   │   ├── submit-study-plan/       # Lead capture endpoint
 │   │   ├── subscribe-score-release/ # Score calendar subscriptions
-│   │   └── subscribe-nts/          # NTS tracker subscriptions
-│   ├── sections/                   # FAR, AUD, REG, TCP pages
-│   ├── state-requirements/         # State-specific CPA requirements
-│   │   └── [state]/               # Dynamic state pages
-│   ├── tools/
-│   │   ├── score-release-calendar/
-│   │   ├── nts-tracker/
-│   │   └── study-hours-calculator/
-│   ├── study-plan/                 # Multi-step quiz with email capture
-│   ├── recommended-program/        # Surgent affiliate page
-│   ├── working-full-time/
-│   └── about/
+│   │   └── subscribe-nts/           # NTS tracker subscriptions
+│   ├── auth/callback/               # Supabase auth callback
+│   ├── blog/                        # MDX blog (8 articles)
+│   ├── cpa-academy/                 # CPA Academy landing page
+│   ├── dashboard/                   # User dashboard (requires auth)
+│   │   ├── practice/                # Practice questions
+│   │   │   ├── [section]/           # Section-specific practice
+│   │   │   └── history/             # Review past attempts
+│   │   ├── exam-simulation/         # Exam simulation mode
+│   │   │   └── [section]/           # Section-specific exam (with pause)
+│   │   ├── study-log/               # Log study sessions
+│   │   ├── sections/                # Track section progress
+│   │   ├── nts/                     # Manage NTS entries
+│   │   ├── accolades/               # Badges and achievements
+│   │   └── settings/                # User preferences
+│   ├── guides/                      # Exam day, failed section
+│   ├── sections/                    # FAR, AUD, REG, TCP pages
+│   ├── state-requirements/          # 22 state requirement pages
+│   ├── success-stories/             # 5 success stories
+│   ├── tools/                       # Free tools (3)
+│   ├── login/, signup/              # Authentication pages
+│   └── recommended-program/         # Surgent affiliate page
 ├── components/
-│   ├── Header.tsx                  # Nav with Tools dropdown
-│   ├── Footer.tsx
-│   └── SectionPage.tsx            # Reusable section template
+│   ├── auth/AuthProvider.tsx        # Auth context with profile
+│   ├── Header.tsx, Footer.tsx
+│   └── dashboard/                   # Dashboard components
 └── lib/
+    ├── supabase/                    # Supabase client & types
+    ├── gamification/                # Points, badges, achievements
     └── data/
-        ├── score-release-dates.ts  # 2025-2026 release schedule
-        └── state-requirements.ts   # 10 states requirements data
+        ├── practice-questions/      # Original 600 questions (6 files)
+        ├── score-release-dates.ts
+        └── state-requirements.ts
+
+docs/
+├── DIFFICULTY-DISTRIBUTION-ANALYSIS.md  # Question stats (READ THIS)
+└── question-batches/                     # 5,200+ additional questions
+    ├── far/                              # 55 batch files
+    ├── aud/                              # 29 batch files
+    ├── reg/                              # 36 batch files
+    ├── tcp/                              # 23 batch files
+    ├── bar/                              # 14 batch files
+    └── isc/                              # 16 batch files
 
 ================================================================================
-ENVIRONMENT VARIABLES
+ENVIRONMENT VARIABLES (Required)
 ================================================================================
 
-Current (.env.local):
-- RESEND_API_KEY (set)
-- EMAIL_TO (currently: delivered@resend.dev - needs real admin email)
+.env.local:
+- RESEND_API_KEY (email sending)
+- EMAIL_TO (admin notification email)
+- NEXT_PUBLIC_SUPABASE_URL (Supabase project URL)
+- NEXT_PUBLIC_SUPABASE_ANON_KEY (Supabase anon key)
+- ANTHROPIC_API_KEY (for data extraction - scraper)
 
-Future (not yet implemented):
-- SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
-- NEXTAUTH_SECRET, NEXTAUTH_URL
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
-- ANTHROPIC_API_KEY
-
-================================================================================
-KEY DECISIONS MADE
-================================================================================
-
-- Affiliate Partner: Surgent CPA Review
-- AI Provider: Anthropic Claude (for future chatbot)
-- Database: Supabase (PostgreSQL) - not yet implemented
-- Auth: NextAuth.js - not yet implemented
-- Email: Resend API
+Vercel Environment Variables: Must mirror .env.local
 
 ================================================================================
 COMMANDS
@@ -148,7 +256,7 @@ COMMANDS
 
 cd "C:\Users\brenn\Documents\Coding Projects\CPA Exam Site\cpa-exam-blueprint"
 npm run dev      # Start dev server
-npm run build    # Production build
+npm run build    # Production build (always run before committing)
 git push         # Deploy to Vercel (auto)
 
 ================================================================================

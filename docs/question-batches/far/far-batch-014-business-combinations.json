@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Business Combinations",
+    "batchNumber": 14,
+    "questionCount": 25,
+    "weight": "5%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-buscom-001",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Acquisition Method",
+      "conceptTested": "Required accounting method",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under GAAP, business combinations must be accounted for using:",
+      "options": {
+        "A": "The pooling of interests method",
+        "B": "The acquisition method",
+        "C": "The equity method",
+        "D": "The cost method"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 805 requires all business combinations to be accounted for using the acquisition method. The pooling of interests method was eliminated in 2001.",
+      "tip": "Business combinations = acquisition method only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-buscom-002",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Acquisition Method",
+      "conceptTested": "Acquisition date",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The acquisition date in a business combination is:",
+      "options": {
+        "A": "The date the acquirer and acquiree sign the agreement",
+        "B": "The date the acquirer obtains control of the acquiree",
+        "C": "The date the acquisition is announced publicly",
+        "D": "The date regulatory approval is received"
+      },
+      "correctAnswer": "B",
+      "explanation": "The acquisition date is the date on which the acquirer obtains control of the acquiree. This is typically the closing date when consideration is transferred and control changes hands.",
+      "tip": "Acquisition date = when control transfers.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-buscom-003",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Fair Value Measurement",
+      "conceptTested": "Identifiable asset measurement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "In a business combination, the acquirer records identifiable assets acquired and liabilities assumed at:",
+      "options": {
+        "A": "The acquiree's book value",
+        "B": "Historical cost",
+        "C": "Fair value at the acquisition date",
+        "D": "The lower of fair value or book value"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under the acquisition method, identifiable assets acquired and liabilities assumed are recognized at their fair values at the acquisition date, regardless of their book values on the acquiree's records.",
+      "tip": "Acquisition method: everything at fair value.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-buscom-004",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Goodwill",
+      "conceptTested": "Goodwill calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Company A acquires Company B for $5,000,000 cash. The fair value of B's identifiable net assets is $4,200,000. What amount of goodwill should A recognize?",
+      "options": {
+        "A": "$0",
+        "B": "$800,000",
+        "C": "$4,200,000",
+        "D": "$5,000,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Goodwill = Consideration transferred - Fair value of identifiable net assets = $5,000,000 - $4,200,000 = $800,000.",
+      "tip": "Goodwill = purchase price - FV of net assets acquired.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-005",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Bargain Purchase",
+      "conceptTested": "Bargain purchase accounting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When the fair value of identifiable net assets acquired exceeds the consideration transferred, the acquirer should:",
+      "options": {
+        "A": "Record negative goodwill as a liability",
+        "B": "Recognize a gain in the income statement",
+        "C": "Reduce the values of noncurrent assets proportionally",
+        "D": "Record the excess as additional paid-in capital"
+      },
+      "correctAnswer": "B",
+      "explanation": "A bargain purchase occurs when FV of net assets > consideration. After reassessing to ensure all assets and liabilities are properly identified and measured, any remaining excess is recognized as a gain in earnings.",
+      "tip": "Bargain purchase = gain (after reassessing values).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-006",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Bargain Purchase",
+      "conceptTested": "Bargain purchase calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "X Corp acquires Y Corp for $3,000,000. The fair value of Y's identifiable net assets is $3,400,000. After reassessing all values, what does X Corp record?",
+      "options": {
+        "A": "Goodwill of $400,000",
+        "B": "A gain on bargain purchase of $400,000",
+        "C": "A reduction in asset values of $400,000",
+        "D": "Negative goodwill liability of $400,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "FV of net assets ($3,400,000) exceeds consideration ($3,000,000) by $400,000. This is a bargain purchase, and the $400,000 difference is recognized as a gain.",
+      "tip": "Bargain purchase gain = FV of net assets - consideration paid.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-007",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Consideration Transferred",
+      "conceptTested": "Contingent consideration",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Contingent consideration in a business combination should be:",
+      "options": {
+        "A": "Recognized only when the contingency is resolved",
+        "B": "Recognized at acquisition-date fair value",
+        "C": "Excluded from the acquisition cost",
+        "D": "Recorded as an expense when paid"
+      },
+      "correctAnswer": "B",
+      "explanation": "Contingent consideration is included in the acquisition cost at its acquisition-date fair value. Subsequent changes in fair value are generally recognized in earnings (for liabilities) or not recognized until settlement (for equity-classified contingent consideration).",
+      "tip": "Contingent consideration: recognize at FV on day one.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-008",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Acquisition Costs",
+      "conceptTested": "Transaction cost treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Acquisition-related costs (legal fees, due diligence costs, finder's fees) in a business combination are:",
+      "options": {
+        "A": "Capitalized as part of goodwill",
+        "B": "Added to the consideration transferred",
+        "C": "Expensed as incurred",
+        "D": "Deducted from retained earnings"
+      },
+      "correctAnswer": "C",
+      "explanation": "Acquisition-related costs are expensed as incurred in the periods the services are received. They are not capitalized as part of the acquisition cost or goodwill.",
+      "tip": "Transaction costs = expense, not capitalized.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-buscom-009",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Consideration Transferred",
+      "conceptTested": "Stock consideration measurement",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Alpha Corp acquires Beta Corp by issuing 100,000 shares of Alpha common stock. The stock has a par value of $1 and a fair value of $25 per share on the acquisition date. What is the consideration transferred?",
+      "options": {
+        "A": "$100,000",
+        "B": "$2,400,000",
+        "C": "$2,500,000",
+        "D": "$2,600,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Consideration transferred is measured at fair value. Stock consideration = 100,000 shares × $25 fair value = $2,500,000. Par value is irrelevant for measuring consideration.",
+      "tip": "Stock consideration = shares × FV per share (ignore par).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-010",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Identifiable Intangibles",
+      "conceptTested": "Intangible recognition criteria",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which of the following intangible assets acquired in a business combination must be recognized separately from goodwill?",
+      "options": {
+        "A": "Only those with a definite useful life",
+        "B": "Only those that are contractual in nature",
+        "C": "Those that meet the contractual-legal or separability criterion",
+        "D": "Only those previously recorded on the acquiree's books"
+      },
+      "correctAnswer": "C",
+      "explanation": "Intangible assets are recognized separately from goodwill if they meet the contractual-legal criterion OR the separability criterion (can be separated and sold, transferred, licensed, rented, or exchanged).",
+      "tip": "Identifiable intangibles: contractual-legal OR separable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-011",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Identifiable Intangibles",
+      "conceptTested": "Customer relationships recognition",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Customer relationships acquired in a business combination:",
+      "options": {
+        "A": "Are always included in goodwill",
+        "B": "Are recognized separately if they meet the separability criterion",
+        "C": "Can never be recognized as an intangible asset",
+        "D": "Are expensed immediately upon acquisition"
+      },
+      "correctAnswer": "B",
+      "explanation": "Customer relationships acquired in a business combination are recognized separately from goodwill if they are separable—meaning they can be separated from the entity and sold, transferred, or licensed.",
+      "tip": "Customer relationships = separable intangible asset.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-012",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Goodwill",
+      "conceptTested": "Goodwill with NCI",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Parent Co. acquires 80% of Sub Co. for $8,000,000 cash. The fair value of Sub's identifiable net assets is $9,000,000. The fair value of the 20% noncontrolling interest is $2,000,000. What is the goodwill?",
+      "options": {
+        "A": "$800,000",
+        "B": "$1,000,000",
+        "C": "$1,200,000",
+        "D": "$2,000,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Total implied value = Consideration ($8,000,000) + NCI at FV ($2,000,000) = $10,000,000. Goodwill = $10,000,000 - FV of net assets ($9,000,000) = $1,000,000.",
+      "tip": "Full goodwill = (Consideration + NCI FV) - FV of net assets.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-buscom-013",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Noncontrolling Interest",
+      "conceptTested": "NCI measurement options",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under GAAP, noncontrolling interest in a business combination can be measured at:",
+      "options": {
+        "A": "Fair value only",
+        "B": "Proportionate share of identifiable net assets only",
+        "C": "Either fair value or proportionate share (GAAP allows fair value only)",
+        "D": "Book value"
+      },
+      "correctAnswer": "A",
+      "explanation": "Under U.S. GAAP (ASC 805), NCI must be measured at fair value. This results in recognizing 100% of goodwill (full goodwill method). Note: IFRS allows either fair value or proportionate share.",
+      "tip": "GAAP: NCI at fair value (full goodwill). IFRS: choice.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-014",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Measurement Period",
+      "conceptTested": "Measurement period adjustments",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "During the measurement period following a business combination, adjustments to provisional amounts are:",
+      "options": {
+        "A": "Recorded prospectively from the date new information is obtained",
+        "B": "Recorded as if known at the acquisition date (retrospectively)",
+        "C": "Not permitted; acquisition accounting is final at closing",
+        "D": "Recorded as an adjustment to retained earnings"
+      },
+      "correctAnswer": "B",
+      "explanation": "Measurement period adjustments are recorded retrospectively as if the adjustment was known at the acquisition date. This includes adjusting goodwill and any related amortization/depreciation.",
+      "tip": "Measurement period: retrospective adjustments (as if known at acquisition).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-015",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Measurement Period",
+      "conceptTested": "Measurement period length",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The measurement period for finalizing business combination accounting cannot exceed:",
+      "options": {
+        "A": "6 months from acquisition date",
+        "B": "One year from acquisition date",
+        "C": "18 months from acquisition date",
+        "D": "Two years from acquisition date"
+      },
+      "correctAnswer": "B",
+      "explanation": "The measurement period ends when the acquirer has obtained all necessary information about facts and circumstances that existed at acquisition date, or one year from the acquisition date, whichever is earlier.",
+      "tip": "Measurement period: maximum 1 year.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-buscom-016",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "In-Process R&D",
+      "conceptTested": "IPR&D accounting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "In-process research and development (IPR&D) acquired in a business combination is:",
+      "options": {
+        "A": "Expensed immediately upon acquisition",
+        "B": "Recognized as an indefinite-lived intangible until completed or abandoned",
+        "C": "Included in goodwill",
+        "D": "Amortized over its estimated useful life from acquisition date"
+      },
+      "correctAnswer": "B",
+      "explanation": "IPR&D acquired in a business combination is recognized as an indefinite-lived intangible asset (tested for impairment, not amortized) until the project is completed (becomes definite-lived) or abandoned (expensed).",
+      "tip": "IPR&D = indefinite-lived until completed or abandoned.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-017",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Step Acquisition",
+      "conceptTested": "Step acquisition accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In a step acquisition where control is achieved, the acquirer's previously held equity interest is:",
+      "options": {
+        "A": "Retained at its original cost basis",
+        "B": "Remeasured to fair value with gain/loss in earnings",
+        "C": "Written off entirely",
+        "D": "Adjusted to proportionate share of book value"
+      },
+      "correctAnswer": "B",
+      "explanation": "When an acquirer obtains control in a step acquisition, the previously held equity interest is remeasured to its acquisition-date fair value, with any resulting gain or loss recognized in earnings.",
+      "tip": "Step acquisition: remeasure old investment to FV, recognize gain/loss.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-018",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Preexisting Relationships",
+      "conceptTested": "Settlement of preexisting relationship",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If an acquirer and acquiree had a preexisting contractual relationship (e.g., supply contract) that is effectively settled in the acquisition, the settlement is:",
+      "options": {
+        "A": "Included in the consideration transferred",
+        "B": "Recognized separately from the business combination",
+        "C": "Added to goodwill",
+        "D": "Ignored for accounting purposes"
+      },
+      "correctAnswer": "B",
+      "explanation": "The effective settlement of a preexisting relationship is accounted for separately from the business combination. Any gain or loss on settlement is recognized in earnings and not included in determining goodwill.",
+      "tip": "Preexisting relationships: account separately, not part of consideration.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-019",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Deferred Taxes",
+      "conceptTested": "DTA/DTL in acquisition",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Deferred tax assets and liabilities are recognized in business combination accounting when:",
+      "options": {
+        "A": "The book basis of acquired assets/liabilities equals tax basis",
+        "B": "Temporary differences arise between fair value and tax basis",
+        "C": "The acquirer elects to recognize them",
+        "D": "Only for goodwill-related differences"
+      },
+      "correctAnswer": "B",
+      "explanation": "Deferred taxes are recognized when the fair values assigned to acquired assets and liabilities differ from their tax bases, creating temporary differences. These are recorded at the acquisition date.",
+      "tip": "FV ≠ tax basis = deferred tax in acquisition accounting.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-020",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Goodwill",
+      "conceptTested": "Goodwill subsequent measurement",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "After initial recognition, goodwill is:",
+      "options": {
+        "A": "Amortized over 40 years",
+        "B": "Amortized over its estimated useful life not to exceed 10 years",
+        "C": "Not amortized but tested for impairment at least annually",
+        "D": "Written off immediately against retained earnings"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under GAAP, goodwill is not amortized. Instead, it is tested for impairment at least annually or more frequently if events indicate possible impairment.",
+      "tip": "Goodwill: no amortization, annual impairment test.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-buscom-021",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Complex Calculations",
+      "conceptTested": "Complete acquisition entry",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "P Corp acquires 100% of S Corp for $2,500,000 cash. S Corp's book values: Assets $3,000,000, Liabilities $1,500,000. Fair value adjustments: Inventory understated by $50,000, Equipment understated by $200,000, Trademark (unrecorded) worth $100,000. What is goodwill?",
+      "options": {
+        "A": "$500,000",
+        "B": "$650,000",
+        "C": "$850,000",
+        "D": "$1,000,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Book value net assets = $3,000,000 - $1,500,000 = $1,500,000. FV adjustments: +$50,000 +$200,000 +$100,000 = +$350,000. FV of net assets = $1,850,000. Goodwill = $2,500,000 - $1,850,000 = $650,000.",
+      "tip": "Goodwill = Consideration - (BV net assets + FV adjustments).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 150
+    },
+    {
+      "id": "far-buscom-022",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Asset Acquisition",
+      "conceptTested": "Asset vs business acquisition",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The key difference between an asset acquisition and a business combination is:",
+      "options": {
+        "A": "Asset acquisitions use fair value; business combinations use book value",
+        "B": "A business includes inputs and processes capable of creating outputs",
+        "C": "Asset acquisitions require using the acquisition method",
+        "D": "Business combinations do not recognize goodwill"
+      },
+      "correctAnswer": "B",
+      "explanation": "A business combination involves acquiring a business—an integrated set of activities and assets with inputs and processes capable of creating outputs. Asset acquisitions lack these business characteristics and have different accounting treatment.",
+      "tip": "Business = inputs + processes + outputs. Assets alone = asset acquisition.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-023",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Asset Acquisition",
+      "conceptTested": "Asset acquisition accounting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "In an asset acquisition (not a business combination), transaction costs are:",
+      "options": {
+        "A": "Expensed as incurred",
+        "B": "Capitalized as part of the assets acquired",
+        "C": "Recorded as goodwill",
+        "D": "Deferred and amortized"
+      },
+      "correctAnswer": "B",
+      "explanation": "In an asset acquisition, transaction costs are capitalized as part of the cost of the acquired assets. This differs from business combinations where such costs are expensed.",
+      "tip": "Asset acquisition: transaction costs capitalized. Business combo: expensed.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-buscom-024",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Pushdown Accounting",
+      "conceptTested": "Pushdown election",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under GAAP, pushdown accounting (recording acquisition fair values in the acquired entity's separate financial statements) is:",
+      "options": {
+        "A": "Required for all acquisitions",
+        "B": "Prohibited",
+        "C": "An accounting policy election by the acquired entity",
+        "D": "Required only for 100% acquisitions"
+      },
+      "correctAnswer": "C",
+      "explanation": "Under ASC 805-50, pushdown accounting is an election available to an acquired entity when it becomes substantially wholly owned. The acquiree can elect to apply pushdown accounting to reflect the acquirer's basis in its separate financial statements.",
+      "tip": "Pushdown accounting: optional election for acquired entity.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-buscom-025",
+      "section": "FAR",
+      "topic": "Business Combinations",
+      "subtopic": "Reverse Acquisitions",
+      "conceptTested": "Reverse acquisition identification",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In a reverse acquisition:",
+      "options": {
+        "A": "The legal acquirer is always the accounting acquirer",
+        "B": "The entity issuing shares is the accounting acquirer",
+        "C": "The legal acquiree may be the accounting acquirer",
+        "D": "Goodwill is recorded by the legal acquiree only"
+      },
+      "correctAnswer": "C",
+      "explanation": "In a reverse acquisition, the legal acquiree (whose shareholders end up controlling the combined entity) is identified as the accounting acquirer. The legal acquirer is treated as the accounting acquiree.",
+      "tip": "Reverse acquisition: legal acquiree = accounting acquirer (control matters).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    }
+  ]
+}

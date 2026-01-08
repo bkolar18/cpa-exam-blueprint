@@ -1,0 +1,485 @@
+[
+  {
+    "id": "far-lease-001",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lease Classification",
+    "conceptTested": "Finance lease criteria",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 842, a lessee classifies a lease as a finance lease if it meets any of the following criteria EXCEPT:",
+    "options": {
+      "A": "Transfer of ownership to the lessee by the end of the lease term",
+      "B": "Lease term is for the major part of the asset's remaining economic life",
+      "C": "The lease is cancelable at any time without penalty",
+      "D": "Present value of lease payments equals substantially all of the fair value of the asset"
+    },
+    "correctAnswer": "C",
+    "explanation": "A cancelable lease without penalty would not typically meet finance lease criteria. Finance lease criteria include: (1) ownership transfer, (2) purchase option reasonably certain to be exercised, (3) lease term for major part of economic life, (4) present value substantially equals fair value, and (5) specialized asset with no alternative use to lessor.",
+    "tip": "Finance lease: ownership transfer, BPO, major part of life, substantially all FV, or specialized."
+  },
+  {
+    "id": "far-lease-002",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lease Classification",
+    "conceptTested": "Operating vs finance lease recognition",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 842, both operating and finance leases require the lessee to recognize:",
+    "options": {
+      "A": "Only a lease liability",
+      "B": "Only a right-of-use asset",
+      "C": "Both a right-of-use asset and a lease liability",
+      "D": "Neither an asset nor a liability for operating leases"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under ASC 842, lessees recognize both a right-of-use (ROU) asset and a lease liability for virtually all leases, regardless of classification. This is a significant change from ASC 840, where operating leases were off-balance sheet. The difference between finance and operating leases is in subsequent measurement and expense recognition.",
+    "tip": "ASC 842: ALL leases (finance and operating) go on the balance sheet."
+  },
+  {
+    "id": "far-lease-003",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "Finance lease initial measurement",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The initial measurement of a right-of-use asset for a finance lease includes:",
+    "options": {
+      "A": "Present value of lease payments only",
+      "B": "Present value of lease payments plus initial direct costs and prepayments, less lease incentives received",
+      "C": "Total undiscounted lease payments",
+      "D": "Fair value of the underlying asset"
+    },
+    "correctAnswer": "B",
+    "explanation": "The ROU asset is initially measured at: (1) the initial measurement of the lease liability (present value of payments), plus (2) lease payments made before commencement, plus (3) initial direct costs incurred, minus (4) lease incentives received. This applies to both finance and operating leases.",
+    "tip": "ROU asset = Lease liability + Prepayments + Initial costs − Incentives."
+  },
+  {
+    "id": "far-lease-004",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "Finance lease expense pattern",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For a finance lease, the lessee recognizes expense in what pattern?",
+    "options": {
+      "A": "Single straight-line lease expense",
+      "B": "Depreciation expense (straight-line) plus interest expense (front-loaded)",
+      "C": "Variable expense based on usage",
+      "D": "Interest expense only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Finance leases result in front-loaded total expense because interest expense is higher in early years (calculated on declining principal) while depreciation is typically straight-line. The ROU asset is depreciated over the shorter of the lease term or useful life, and interest on the lease liability is recognized using the effective interest method.",
+    "tip": "Finance lease expense: Depreciation (SL) + Interest (front-loaded) = higher early expense."
+  },
+  {
+    "id": "far-lease-005",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Operating Lease",
+    "conceptTested": "Operating lease expense pattern",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For an operating lease under ASC 842, the lessee recognizes:",
+    "options": {
+      "A": "Front-loaded expense similar to finance leases",
+      "B": "Single straight-line lease expense over the lease term",
+      "C": "No expense until payments are made",
+      "D": "Variable expense based on the asset's fair value"
+    },
+    "correctAnswer": "B",
+    "explanation": "Operating leases result in straight-line lease expense over the lease term, similar to the old rent expense treatment. Although the liability uses effective interest (creating variable interest) and the ROU amortization varies, the combined effect equals straight-line total expense.",
+    "tip": "Operating lease: straight-line total expense (like old rent expense)."
+  },
+  {
+    "id": "far-lease-006",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "Lease liability calculation",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A company enters a 5-year finance lease with annual payments of $10,000 at the end of each year. The lessee's incremental borrowing rate is 6%. What is the initial lease liability? (PV factor for ordinary annuity, 5 periods, 6% = 4.2124)",
+    "options": {
+      "A": "$50,000",
+      "B": "$42,124",
+      "C": "$44,651",
+      "D": "$47,170"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lease liability = Present value of lease payments. Using the present value of ordinary annuity factor: $10,000 × 4.2124 = $42,124. The lessee uses its incremental borrowing rate unless the rate implicit in the lease is readily determinable.",
+    "tip": "Lease liability = PV of payments at lessee's incremental borrowing rate.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-lease-007",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "Finance lease amortization schedule",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "Using the previous example (lease liability $42,124, 6% rate, $10,000 annual payment), what is Year 1 interest expense?",
+    "options": {
+      "A": "$2,527",
+      "B": "$2,400",
+      "C": "$6,000",
+      "D": "$2,107"
+    },
+    "correctAnswer": "A",
+    "explanation": "Year 1 interest expense = Opening liability × Interest rate = $42,124 × 6% = $2,527.44, rounded to $2,527. The payment of $10,000 minus interest of $2,527 = $7,473 reduction in principal. Ending liability = $42,124 − $7,473 = $34,651.",
+    "tip": "Interest expense = Opening liability × Rate.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-lease-008",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessor Accounting",
+    "conceptTested": "Lessor lease classification",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 842, a lessor classifies a lease as a sales-type lease if:",
+    "options": {
+      "A": "The lease term is less than one year",
+      "B": "Any of the five finance lease criteria are met AND the collectibility criterion is met",
+      "C": "None of the finance lease criteria are met",
+      "D": "The lessor retains substantially all risks and rewards"
+    },
+    "correctAnswer": "B",
+    "explanation": "A lessor classifies a lease as sales-type if any of the five criteria are met (same as lessee finance lease criteria) and collectibility of payments is probable. If criteria are met but collectibility is not probable, the lease is accounted for under the operating lease model until payments are received.",
+    "tip": "Lessor: sales-type = meets criteria + probable collection."
+  },
+  {
+    "id": "far-lease-009",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessor Accounting",
+    "conceptTested": "Direct financing lease",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "A lessor classifies a lease as a direct financing lease when:",
+    "options": {
+      "A": "No finance lease criteria are met",
+      "B": "Finance lease criteria are met, collectibility is probable, but there is no selling profit (fair value equals cost)",
+      "C": "The lease term is exactly 75% of the asset's economic life",
+      "D": "The lessee has a bargain purchase option"
+    },
+    "correctAnswer": "B",
+    "explanation": "A direct financing lease meets finance lease criteria and collectibility is probable, but there is no manufacturer's or dealer's profit at lease inception (the fair value of the underlying asset equals its cost or carrying amount). If there is selling profit, it's a sales-type lease.",
+    "tip": "Direct financing: meets criteria + probable collection + no selling profit."
+  },
+  {
+    "id": "far-lease-010",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Sale-Leaseback Transactions",
+    "conceptTested": "Sale-leaseback qualification",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 842, for a sale-leaseback transaction to be accounted for as a sale, the transfer of the asset must:",
+    "options": {
+      "A": "Involve a related party",
+      "B": "Qualify as a sale under ASC 606 (revenue recognition) criteria",
+      "C": "Result in a gain for the seller-lessee",
+      "D": "Involve a lease term of at least 5 years"
+    },
+    "correctAnswer": "B",
+    "explanation": "For sale-leaseback treatment, the transfer must qualify as a sale under ASC 606 (control transfers to the buyer-lessor). If sale criteria are not met (e.g., seller-lessee has repurchase option at fixed price), it's a failed sale accounted for as a financing arrangement.",
+    "tip": "Sale-leaseback: must qualify as a sale under ASC 606."
+  },
+  {
+    "id": "far-lease-011",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Sale-Leaseback Transactions",
+    "conceptTested": "Gain recognition in sale-leaseback",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A seller-lessee sells an asset with a carrying amount of $100,000 and fair value of $150,000 for $150,000, then leases it back. The leaseback is an operating lease representing 40% of the remaining use. What gain is recognized immediately?",
+    "options": {
+      "A": "$50,000",
+      "B": "$30,000",
+      "C": "$20,000",
+      "D": "$0"
+    },
+    "correctAnswer": "B",
+    "explanation": "In a sale-leaseback, gain is recognized only to the extent rights transferred exceed rights retained. Total gain = $150,000 − $100,000 = $50,000. Rights transferred = 60% (100% − 40% leaseback). Immediate gain = $50,000 × 60% = $30,000. The remaining $20,000 is deferred and amortized.",
+    "tip": "Sale-leaseback gain: recognize only for rights transferred, defer for rights retained.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "far-lease-012",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lease Classification",
+    "conceptTested": "Lease term determination",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 842, the lease term includes:",
+    "options": {
+      "A": "Only the noncancelable period",
+      "B": "The noncancelable period plus periods covered by extension options reasonably certain to be exercised",
+      "C": "The maximum possible term including all renewal options",
+      "D": "The period until the next rent adjustment"
+    },
+    "correctAnswer": "B",
+    "explanation": "The lease term includes: (1) the noncancelable period, (2) periods covered by renewal options if the lessee is reasonably certain to exercise, (3) periods covered by termination options if reasonably certain NOT to exercise, and (4) periods where the lessor controls the option to extend.",
+    "tip": "Lease term = noncancelable + options reasonably certain to be exercised."
+  },
+  {
+    "id": "far-lease-013",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Operating Lease",
+    "conceptTested": "Variable lease payments",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Variable lease payments based on an index or rate are:",
+    "options": {
+      "A": "Excluded from the lease liability entirely",
+      "B": "Included in the lease liability using the index or rate at lease commencement",
+      "C": "Included at the maximum possible amount",
+      "D": "Expensed only when paid"
+    },
+    "correctAnswer": "B",
+    "explanation": "Variable payments based on an index or rate (like CPI adjustments) are included in the lease liability measurement using the index or rate at lease commencement. Variable payments based on usage or performance (not an index/rate) are excluded from the liability and expensed when incurred.",
+    "tip": "Index-based variable payments: include using rate at commencement. Usage-based: exclude."
+  },
+  {
+    "id": "far-lease-014",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "ROU asset depreciation period",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A finance lease ROU asset is typically depreciated over:",
+    "options": {
+      "A": "The lease term only",
+      "B": "The useful life of the asset only",
+      "C": "The shorter of the lease term or the useful life, unless ownership transfers or purchase option is reasonably certain",
+      "D": "40 years"
+    },
+    "correctAnswer": "C",
+    "explanation": "For finance leases, the ROU asset is depreciated over the shorter of the lease term or useful life of the asset. However, if ownership transfers or a purchase option is reasonably certain to be exercised, the asset is depreciated over its useful life (since the lessee expects to own it).",
+    "tip": "Finance ROU: shorter of term or life, unless ownership transfers (then useful life)."
+  },
+  {
+    "id": "far-lease-015",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessor Accounting",
+    "conceptTested": "Sales-type lease gross profit",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A manufacturer-lessor enters a sales-type lease. The asset has a cost of $80,000 and fair value of $100,000. The lease receivable (present value of payments) is $100,000. What gross profit is recognized at lease inception?",
+    "options": {
+      "A": "$0",
+      "B": "$20,000",
+      "C": "$100,000",
+      "D": "$80,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "In a sales-type lease, the lessor recognizes selling profit at inception. Gross profit = Fair value (or lease receivable if lower) − Cost = $100,000 − $80,000 = $20,000. The lessor derecognizes the asset, records a lease receivable, and recognizes sales revenue and cost of goods sold.",
+    "tip": "Sales-type lease: recognize selling profit at inception (FV − Cost).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-lease-016",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Operating Lease",
+    "conceptTested": "Operating lease balance sheet presentation",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Operating lease right-of-use assets and lease liabilities should be presented on the balance sheet:",
+    "options": {
+      "A": "Combined with finance lease amounts",
+      "B": "Separately from finance lease amounts (or disclosed in notes)",
+      "C": "Only in the notes, not on the face of the balance sheet",
+      "D": "As part of PP&E and long-term debt"
+    },
+    "correctAnswer": "B",
+    "explanation": "ASC 842 requires operating lease ROU assets and liabilities to be presented separately from finance lease assets and liabilities on the balance sheet, or the separation can be disclosed in the notes. Operating lease assets should not be presented with PP&E.",
+    "tip": "Operating and finance lease amounts: present separately or disclose separation."
+  },
+  {
+    "id": "far-lease-017",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lease Classification",
+    "conceptTested": "Short-term lease exemption",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 842, a lessee may elect not to recognize lease assets and liabilities for:",
+    "options": {
+      "A": "All operating leases",
+      "B": "Leases with a term of 12 months or less (without purchase option reasonably certain to be exercised)",
+      "C": "Leases with payments under $5,000 per month",
+      "D": "Leases of low-value assets"
+    },
+    "correctAnswer": "B",
+    "explanation": "The short-term lease exemption allows lessees to elect not to recognize ROU assets and liabilities for leases with a term of 12 months or less at commencement (with no purchase option reasonably certain to be exercised). Instead, lease payments are recognized as expense on a straight-line basis.",
+    "tip": "Short-term exemption: 12 months or less, no reasonably certain purchase option."
+  },
+  {
+    "id": "far-lease-018",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "Initial direct costs - lessee",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Initial direct costs incurred by a lessee are:",
+    "options": {
+      "A": "Expensed immediately",
+      "B": "Included in the initial measurement of the right-of-use asset",
+      "C": "Included in the lease liability",
+      "D": "Recognized as a separate asset"
+    },
+    "correctAnswer": "B",
+    "explanation": "Initial direct costs (incremental costs that would not have been incurred if the lease had not been obtained, such as commissions) are included in the initial measurement of the ROU asset. They are then depreciated/amortized along with the ROU asset over the lease term.",
+    "tip": "Lessee initial direct costs: add to ROU asset."
+  },
+  {
+    "id": "far-lease-019",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessor Accounting",
+    "conceptTested": "Operating lease - lessor",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under an operating lease, the lessor:",
+    "options": {
+      "A": "Removes the asset from its balance sheet",
+      "B": "Continues to depreciate the asset and recognizes lease income over the lease term",
+      "C": "Recognizes a lease receivable",
+      "D": "Recognizes selling profit at inception"
+    },
+    "correctAnswer": "B",
+    "explanation": "For operating leases, the lessor keeps the underlying asset on its balance sheet and continues to depreciate it. Lease income is recognized over the lease term, generally on a straight-line basis. No lease receivable or selling profit is recognized at inception.",
+    "tip": "Lessor operating lease: keep asset, depreciate it, recognize rental income over term."
+  },
+  {
+    "id": "far-lease-020",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lease Classification",
+    "conceptTested": "Lease modification - lessee",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When a lease is modified and the modification grants the lessee an additional right of use not in the original lease, at a price commensurate with standalone price, the modification should be:",
+    "options": {
+      "A": "Treated as a new lease for the additional right of use",
+      "B": "Combined with the original lease",
+      "C": "Accounted for by remeasuring the entire lease",
+      "D": "Ignored until the original lease term ends"
+    },
+    "correctAnswer": "A",
+    "explanation": "A modification that grants an additional right of use not in the original lease at a standalone price is treated as a separate contract (new lease) for the additional right. The existing lease continues unchanged. This is similar to contract modification guidance under ASC 606.",
+    "tip": "Modification adding rights at standalone price = separate new lease."
+  },
+  {
+    "id": "far-lease-021",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Sale-Leaseback Transactions",
+    "conceptTested": "Failed sale-leaseback",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "If a sale-leaseback transaction does not qualify as a sale under ASC 606, the seller-lessee should:",
+    "options": {
+      "A": "Recognize a gain on sale",
+      "B": "Remove the asset from the balance sheet",
+      "C": "Account for the proceeds as a financing liability",
+      "D": "Treat the transaction as an operating lease"
+    },
+    "correctAnswer": "C",
+    "explanation": "If the transfer does not qualify as a sale (e.g., seller-lessee has a repurchase option), it is a failed sale. The seller-lessee keeps the asset on its books, continues depreciation, and accounts for the proceeds received as a financing liability (like a loan secured by the asset).",
+    "tip": "Failed sale-leaseback: asset stays, proceeds = financing liability."
+  },
+  {
+    "id": "far-lease-022",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Operating Lease",
+    "conceptTested": "Operating lease cash flow presentation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Cash payments for operating leases are presented in the statement of cash flows as:",
+    "options": {
+      "A": "Financing activities only",
+      "B": "Operating activities only",
+      "C": "Operating activities, except amounts for the interest portion which may be financing",
+      "D": "Investing activities"
+    },
+    "correctAnswer": "B",
+    "explanation": "For operating leases, all cash payments are presented within operating activities in the statement of cash flows. This differs from finance leases, where principal payments are financing activities and interest payments are either operating or financing (under US GAAP, interest is typically operating).",
+    "tip": "Operating lease cash payments = operating activities."
+  },
+  {
+    "id": "far-lease-023",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessee Accounting - Finance Lease",
+    "conceptTested": "Finance lease cash flow presentation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For finance leases, the principal portion of lease payments is classified in the cash flow statement as:",
+    "options": {
+      "A": "Operating activities",
+      "B": "Investing activities",
+      "C": "Financing activities",
+      "D": "Supplemental non-cash disclosure"
+    },
+    "correctAnswer": "C",
+    "explanation": "For finance leases, the principal portion of lease payments is classified as financing activities, while interest payments are classified as operating activities (consistent with interest on other debt). This differs from operating leases, where all payments are operating activities.",
+    "tip": "Finance lease: principal = financing, interest = operating."
+  },
+  {
+    "id": "far-lease-024",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lessor Accounting",
+    "conceptTested": "Lease receivable components",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "In a sales-type or direct financing lease, the lessor's net investment in the lease includes:",
+    "options": {
+      "A": "Only the present value of lease payments",
+      "B": "Present value of lease payments plus unguaranteed residual value",
+      "C": "Fair value of the underlying asset",
+      "D": "Undiscounted lease payments"
+    },
+    "correctAnswer": "B",
+    "explanation": "The lessor's net investment in a sales-type or direct financing lease equals the lease receivable (present value of lease payments not yet received, including guaranteed residual) plus the present value of any unguaranteed residual value expected at the end of the lease term.",
+    "tip": "Lessor net investment = PV of payments + PV of residual (guaranteed and unguaranteed)."
+  },
+  {
+    "id": "far-lease-025",
+    "section": "FAR",
+    "topic": "Leases",
+    "subtopic": "Lease Classification",
+    "conceptTested": "Reassessment of lease term",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "A lessee should reassess the lease term when:",
+    "options": {
+      "A": "At each reporting date",
+      "B": "When there is a significant event or change in circumstances that affects whether the lessee is reasonably certain to exercise an option",
+      "C": "When market interest rates change",
+      "D": "Only at lease inception"
+    },
+    "correctAnswer": "B",
+    "explanation": "The lessee reassesses the lease term (and purchase options) when a significant event or change in circumstances occurs that is within the lessee's control and affects whether it is reasonably certain to exercise or not exercise an option. General changes in market conditions do not trigger reassessment.",
+    "tip": "Reassess lease term: significant event within lessee's control affecting options."
+  }
+]

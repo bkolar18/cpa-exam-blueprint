@@ -166,13 +166,13 @@ export default function SectionPage({
               </Link>
               <div className="border-t border-[var(--border)] my-6" />
               <h4 className="font-medium text-[var(--foreground)] mb-3">
-                How We Recommend Studying {name}
+                Practice {name} Questions
               </h4>
               <p className="text-sm text-[var(--muted)] mb-4">
-                See the CPA review program that aligns with our study methodology.
+                Test your knowledge with our {name} practice questions.
               </p>
-              <Link href="/recommended-program" className="btn-outline w-full text-center block text-sm">
-                See Recommendation
+              <Link href="/signup" className="btn-outline w-full text-center block text-sm">
+                Start Practicing
               </Link>
             </div>
 

@@ -1,0 +1,491 @@
+[
+  {
+    "id": "far-liab-001",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Bond issuance at discount",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "A bond is issued at a discount when:",
+    "options": {
+      "A": "The stated interest rate equals the market rate",
+      "B": "The stated interest rate is greater than the market rate",
+      "C": "The stated interest rate is less than the market rate",
+      "D": "The bond has a call provision"
+    },
+    "correctAnswer": "C",
+    "explanation": "A bond is issued at a discount when the stated (coupon) rate is less than the market (effective) rate. Investors pay less than face value to compensate for the lower-than-market coupon payments. The discount is amortized to interest expense over the bond's life, increasing expense above cash paid.",
+    "tip": "Stated rate < Market rate = Discount. Stated rate > Market rate = Premium."
+  },
+  {
+    "id": "far-liab-002",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Effective interest method",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A $100,000 bond is issued at 95 with a 5% stated rate and 6% effective rate. Using the effective interest method, what is Year 1 interest expense?",
+    "options": {
+      "A": "$5,000",
+      "B": "$5,700",
+      "C": "$6,000",
+      "D": "$5,500"
+    },
+    "correctAnswer": "B",
+    "explanation": "Interest expense = Carrying value × Effective rate. Carrying value = $100,000 × 95% = $95,000. Interest expense = $95,000 × 6% = $5,700. Cash paid = $100,000 × 5% = $5,000. Discount amortization = $5,700 - $5,000 = $700.",
+    "tip": "Effective interest: Expense = Carrying value × Market rate.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-liab-003",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Premium amortization effect",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a bond is issued at a premium, the interest expense recognized each period is:",
+    "options": {
+      "A": "Greater than the cash interest paid",
+      "B": "Less than the cash interest paid",
+      "C": "Equal to the cash interest paid",
+      "D": "Zero because premium bonds pay no interest"
+    },
+    "correctAnswer": "B",
+    "explanation": "When issued at a premium, the effective rate is lower than the stated rate. Interest expense (carrying value × effective rate) is less than cash paid (face value × stated rate). The difference reduces the premium (amortization), bringing carrying value down toward face value at maturity.",
+    "tip": "Premium: Interest expense < Cash paid. Discount: Interest expense > Cash paid."
+  },
+  {
+    "id": "far-liab-004",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Bond issuance costs",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, bond issuance costs are:",
+    "options": {
+      "A": "Expensed immediately",
+      "B": "Recorded as an asset and amortized",
+      "C": "Reported as a direct deduction from the liability carrying amount",
+      "D": "Added to the liability carrying amount"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under ASU 2015-03, bond issuance costs (legal fees, underwriting costs) are reported as a direct deduction from the face amount of the debt on the balance sheet, similar to a debt discount. They are amortized to interest expense over the bond's life using the effective interest method.",
+    "tip": "Issuance costs: deduct from liability, amortize like a discount."
+  },
+  {
+    "id": "far-liab-005",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Early extinguishment of debt",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A company retires bonds with a carrying value of $485,000 (face $500,000, unamortized discount $15,000) by paying $495,000 in the open market. What is the gain or loss?",
+    "options": {
+      "A": "$10,000 gain",
+      "B": "$10,000 loss",
+      "C": "$5,000 gain",
+      "D": "$5,000 loss"
+    },
+    "correctAnswer": "B",
+    "explanation": "Gain/loss on extinguishment = Carrying value − Reacquisition price. Carrying value = $485,000. Reacquisition price = $495,000. Loss = $485,000 − $495,000 = $(10,000) loss. The company paid more than the book value of the debt.",
+    "tip": "Extinguishment: Carrying value − Cash paid = Gain (if positive) or Loss (if negative).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-liab-006",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Troubled Debt Restructuring",
+    "conceptTested": "TDR definition",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A troubled debt restructuring occurs when:",
+    "options": {
+      "A": "A debtor refinances debt at current market rates",
+      "B": "A creditor grants a concession to a debtor experiencing financial difficulties",
+      "C": "A debtor voluntarily prepays debt",
+      "D": "Market interest rates increase"
+    },
+    "correctAnswer": "B",
+    "explanation": "A TDR occurs when a creditor, for economic or legal reasons related to a debtor's financial difficulties, grants a concession that it would not otherwise consider. Concessions include reduced interest rates, extended terms, principal reduction, or transfer of assets/equity in settlement.",
+    "tip": "TDR = debtor in financial difficulty + creditor grants concession."
+  },
+  {
+    "id": "far-liab-007",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Troubled Debt Restructuring",
+    "conceptTested": "TDR - debt modification",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When debt terms are modified in a TDR, the debtor recognizes a gain if:",
+    "options": {
+      "A": "The market rate has increased",
+      "B": "The total future cash payments under the new terms are less than the carrying amount of the debt",
+      "C": "Any modification is made to the original terms",
+      "D": "The creditor agrees to the modification"
+    },
+    "correctAnswer": "B",
+    "explanation": "In a TDR modification, the debtor compares the carrying amount of the debt to the total undiscounted future cash payments under the new terms. If future payments are less than the carrying amount, a gain is recognized for the difference. If future payments exceed carrying amount, no gain is recognized—the effective rate is adjusted.",
+    "tip": "TDR debtor gain: total future payments < carrying amount."
+  },
+  {
+    "id": "far-liab-008",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Contingencies & Provisions",
+    "conceptTested": "Loss contingency recognition",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 450, a loss contingency should be accrued when:",
+    "options": {
+      "A": "The loss is possible and the amount can be estimated",
+      "B": "The loss is probable and the amount can be reasonably estimated",
+      "C": "Any lawsuit is filed against the company",
+      "D": "The loss is remote"
+    },
+    "correctAnswer": "B",
+    "explanation": "A loss contingency is accrued (recognized as a liability and expense) when two conditions are met: (1) it is probable that a liability has been incurred, and (2) the amount can be reasonably estimated. If only one condition is met, disclosure may be required but no accrual is made.",
+    "tip": "Accrue: Probable + Estimable. Disclose: Reasonably possible. Ignore: Remote."
+  },
+  {
+    "id": "far-liab-009",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Contingencies & Provisions",
+    "conceptTested": "Contingency amount to accrue",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "A company estimates a loss from litigation is probable. The estimated range is $100,000 to $300,000, with no amount more likely than another. What amount should be accrued?",
+    "options": {
+      "A": "$0",
+      "B": "$100,000",
+      "C": "$200,000",
+      "D": "$300,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "When a range of loss is probable and no amount within the range is more likely, the minimum of the range ($100,000) is accrued. The full range should be disclosed in the notes. If a specific amount is more likely, that amount is accrued.",
+    "tip": "Range with no best estimate: accrue the minimum. Disclose the range."
+  },
+  {
+    "id": "far-liab-010",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Contingencies & Provisions",
+    "conceptTested": "Gain contingencies",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Gain contingencies should be:",
+    "options": {
+      "A": "Recognized when probable",
+      "B": "Recognized when reasonably possible",
+      "C": "Not recognized until realized, but may be disclosed",
+      "D": "Never disclosed"
+    },
+    "correctAnswer": "C",
+    "explanation": "Gain contingencies are not recognized until realized (conservatism principle). However, adequate disclosure should be made, being careful not to mislead readers about the likelihood of realization. This asymmetric treatment reflects the conservatism in accounting—recognize losses early, gains late.",
+    "tip": "Gain contingencies: don't recognize until realized. May disclose carefully."
+  },
+  {
+    "id": "far-liab-011",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Compensated Absences",
+    "conceptTested": "Vacation accrual",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A liability for compensated absences (vacation pay) should be accrued when:",
+    "options": {
+      "A": "Employees actually take vacation",
+      "B": "The obligation relates to rights that vest or accumulate, services have been rendered, payment is probable, and amount is estimable",
+      "C": "Only for executive employees",
+      "D": "At the end of each calendar year"
+    },
+    "correctAnswer": "B",
+    "explanation": "Vacation and similar compensated absences are accrued when all conditions are met: (1) obligation relates to rights that vest or accumulate, (2) employees have rendered services, (3) payment is probable, and (4) amount can be reasonably estimated. Sick pay that doesn't vest/accumulate is typically not accrued.",
+    "tip": "Accrue vacation: vests/accumulates + services rendered + probable + estimable."
+  },
+  {
+    "id": "far-liab-012",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Exit & Disposal Costs",
+    "conceptTested": "Restructuring liability recognition",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 420, a liability for one-time termination benefits provided to employees in a restructuring is recognized when:",
+    "options": {
+      "A": "Management approves the restructuring plan",
+      "B": "The plan is communicated to employees and specific criteria are met",
+      "C": "Employees are actually terminated",
+      "D": "The restructuring is complete"
+    },
+    "correctAnswer": "B",
+    "explanation": "One-time termination benefits are recognized when the plan is communicated to employees and meets certain criteria: identifies number of employees, their job classifications and locations, termination benefits, and timing. If employees must render future service, the liability is recognized ratably over that service period.",
+    "tip": "Restructuring termination benefits: recognize when communicated with specific details."
+  },
+  {
+    "id": "far-liab-013",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Convertible bonds",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under US GAAP, when convertible debt is issued without a beneficial conversion feature:",
+    "options": {
+      "A": "The conversion option is separated and recorded in equity",
+      "B": "The entire proceeds are recorded as debt (no separation of equity component)",
+      "C": "A portion is allocated to equity based on fair value",
+      "D": "The debt is recorded at fair value of similar non-convertible debt"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under traditional US GAAP, if convertible debt does not contain a beneficial conversion feature (BCF), the entire proceeds are recorded as debt. The conversion feature is not separated. This differs from IFRS, which requires separation of liability and equity components. (Note: ASU 2020-06 simplified this further.)",
+    "tip": "US GAAP convertible debt (no BCF): all proceeds to debt, no equity split."
+  },
+  {
+    "id": "far-liab-014",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Bonds with detachable warrants",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A company issues $1,000,000 face value bonds with detachable stock warrants for $1,050,000. The bonds without warrants would sell for $980,000, and the warrants have a fair value of $120,000. How much is allocated to the bonds?",
+    "options": {
+      "A": "$1,000,000",
+      "B": "$980,000",
+      "C": "$935,455",
+      "D": "$930,000"
+    },
+    "correctAnswer": "C",
+    "explanation": "Allocate proceeds based on relative fair values. Total FV = $980,000 + $120,000 = $1,100,000. Bond allocation = ($980,000 / $1,100,000) × $1,050,000 = 89.09% × $1,050,000 = $935,455. Warrant allocation = ($120,000 / $1,100,000) × $1,050,000 = $114,545.",
+    "tip": "Detachable warrants: allocate proceeds by relative fair values.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-liab-015",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Contingencies & Provisions",
+    "conceptTested": "Warranty liability",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company sells products for $500,000 during the year and estimates warranty costs at 3% of sales. Beginning warranty liability was $8,000, and warranty claims paid during the year were $12,000. What is the ending warranty liability?",
+    "options": {
+      "A": "$15,000",
+      "B": "$11,000",
+      "C": "$23,000",
+      "D": "$8,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Warranty expense accrued = $500,000 × 3% = $15,000. Ending liability = Beginning liability + Expense − Claims paid = $8,000 + $15,000 − $12,000 = $11,000.",
+    "tip": "Warranty liability: Beginning + Expense − Payments = Ending.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-liab-016",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Straight-line vs effective interest",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The straight-line method of amortizing bond discount results in:",
+    "options": {
+      "A": "Increasing interest expense each period",
+      "B": "Decreasing interest expense each period",
+      "C": "Constant interest expense each period",
+      "D": "No interest expense recognition"
+    },
+    "correctAnswer": "C",
+    "explanation": "Straight-line amortization allocates an equal amount of discount to each period, resulting in constant total interest expense. The effective interest method produces varying expense that reflects a constant rate applied to changing carrying value. GAAP prefers effective interest but permits straight-line if the difference is immaterial.",
+    "tip": "Straight-line: constant expense. Effective interest: constant rate (varying expense)."
+  },
+  {
+    "id": "far-liab-017",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Troubled Debt Restructuring",
+    "conceptTested": "TDR - asset transfer",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A debtor settles a $200,000 debt by transferring land with a carrying value of $120,000 and fair value of $150,000. What is the total gain recognized by the debtor?",
+    "options": {
+      "A": "$50,000",
+      "B": "$80,000",
+      "C": "$30,000",
+      "D": "$50,000 restructuring gain and $30,000 gain on asset"
+    },
+    "correctAnswer": "D",
+    "explanation": "Two gains: (1) Gain on asset transfer = FV − Carrying value = $150,000 − $120,000 = $30,000. (2) Restructuring gain = Debt carrying amount − FV of asset = $200,000 − $150,000 = $50,000. Total gain = $80,000, but reported as two separate gains.",
+    "tip": "TDR asset transfer: separate gain on asset (FV−BV) and restructuring gain (Debt−FV).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-liab-018",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Exit & Disposal Costs",
+    "conceptTested": "Contract termination costs",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "A liability for costs to terminate a contract (other than a lease) in a restructuring is recognized when:",
+    "options": {
+      "A": "The company decides to exit the activity",
+      "B": "The company terminates the contract or ceases using the rights under the contract",
+      "C": "The restructuring plan is approved by the board",
+      "D": "The company notifies the other party of its intent to terminate"
+    },
+    "correctAnswer": "B",
+    "explanation": "A liability for contract termination costs is recognized when the entity either terminates the contract in accordance with its terms or ceases using the rights conveyed by the contract and has no remaining economic benefit from those rights. Merely deciding to exit or notifying the other party is insufficient.",
+    "tip": "Contract termination liability: recognize when terminated or cease using rights."
+  },
+  {
+    "id": "far-liab-019",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Contingencies & Provisions",
+    "conceptTested": "Environmental liabilities",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A company becomes aware of environmental contamination at one of its sites. A liability should be recognized when:",
+    "options": {
+      "A": "The contamination is first discovered",
+      "B": "It is probable the company will be responsible for remediation and the cost can be reasonably estimated",
+      "C": "The EPA issues a formal cleanup order",
+      "D": "Cleanup activities begin"
+    },
+    "correctAnswer": "B",
+    "explanation": "Environmental liabilities follow standard contingency guidance (ASC 450). A liability is recognized when it is probable that a liability has been incurred (the company is responsible) and the amount can be reasonably estimated. Discovery, formal orders, or starting cleanup may be relevant events but are not the recognition criteria.",
+    "tip": "Environmental liability: same criteria as other contingencies—probable + estimable."
+  },
+  {
+    "id": "far-liab-020",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Compensated Absences",
+    "conceptTested": "Sick pay accrual",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "A liability for sick pay should be accrued if:",
+    "options": {
+      "A": "Sick pay vests (employees are paid for unused sick days upon termination)",
+      "B": "Employees frequently call in sick",
+      "C": "The company has a generous sick leave policy",
+      "D": "Sick pay never needs to be accrued"
+    },
+    "correctAnswer": "A",
+    "explanation": "Sick pay is accrued only if it vests (employees receive payment for unused sick days when they terminate). If sick pay only accumulates (can be carried forward but not paid out on termination), accrual is permitted but not required. Non-vesting, non-accumulating sick pay is not accrued.",
+    "tip": "Sick pay: accrue only if it vests. Accumulating = optional accrual."
+  },
+  {
+    "id": "far-liab-021",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Zero-coupon bonds",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A company issues a 5-year zero-coupon bond with a face value of $100,000 for $74,726 (effective rate 6%). What is Year 1 interest expense?",
+    "options": {
+      "A": "$0",
+      "B": "$4,484",
+      "C": "$5,053",
+      "D": "$6,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Zero-coupon bonds pay no periodic interest—all return comes from the discount. Year 1 interest expense = Carrying value × Effective rate = $74,726 × 6% = $4,484. This amount increases the carrying value of the bond (accreted).",
+    "tip": "Zero-coupon: Interest expense = Carrying value × Rate. No cash payment.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-liab-022",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Contingencies & Provisions",
+    "conceptTested": "Reasonably possible disclosure",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "When a loss contingency is reasonably possible but not probable, the entity should:",
+    "options": {
+      "A": "Accrue a liability",
+      "B": "Disclose the nature of the contingency and estimate of possible loss or state that an estimate cannot be made",
+      "C": "Neither accrue nor disclose",
+      "D": "Record a deferred charge"
+    },
+    "correctAnswer": "B",
+    "explanation": "When a loss is reasonably possible (more than remote but less than probable), disclosure is required. The note should describe the nature of the contingency and provide an estimate of the possible loss or range, or state that an estimate cannot be made. No accrual is required.",
+    "tip": "Reasonably possible = disclose (no accrual). Include estimate or explain why you can't."
+  },
+  {
+    "id": "far-liab-023",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Bonds Payable & Amortization",
+    "conceptTested": "Bond interest payment timing",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company issues 10%, $100,000 bonds on March 1 when the fiscal year ends December 31. Interest is paid semi-annually on January 1 and July 1. What accrued interest is recorded at December 31?",
+    "options": {
+      "A": "$2,500",
+      "B": "$5,000",
+      "C": "$7,500",
+      "D": "$10,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Interest accrues from the last payment date (July 1) to December 31 = 6 months. Semi-annual interest = $100,000 × 10% × 6/12 = $5,000. This amount is debited to Interest Expense and credited to Interest Payable.",
+    "tip": "Accrue interest from last payment date to balance sheet date.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-liab-024",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Exit & Disposal Costs",
+    "conceptTested": "Subsequent measurement",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Liabilities for exit or disposal activities should be measured at:",
+    "options": {
+      "A": "Historical cost",
+      "B": "Fair value at the recognition date, with subsequent changes recognized in earnings",
+      "C": "The maximum possible cost",
+      "D": "Undiscounted expected cash flows"
+    },
+    "correctAnswer": "B",
+    "explanation": "Exit and disposal liabilities are initially measured at fair value in the period incurred. In subsequent periods, they are adjusted for changes in estimated cash flows and the accretion of the discount (if measured at present value). Changes are recognized in earnings when they occur.",
+    "tip": "Exit/disposal liabilities: fair value at inception, adjust for changes."
+  },
+  {
+    "id": "far-liab-025",
+    "section": "FAR",
+    "topic": "Liabilities",
+    "subtopic": "Troubled Debt Restructuring",
+    "conceptTested": "TDR - equity transfer",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When a debtor settles debt by issuing equity to the creditor in a TDR, the equity issued is measured at:",
+    "options": {
+      "A": "Par value of the shares",
+      "B": "Book value of the debt",
+      "C": "Fair value of the equity issued",
+      "D": "The creditor's basis in the debt"
+    },
+    "correctAnswer": "C",
+    "explanation": "When equity is issued to settle debt in a TDR, the equity is measured at fair value. The difference between the carrying amount of the debt and the fair value of the equity issued is recognized as a gain on restructuring. This reflects the economic substance of the transaction.",
+    "tip": "TDR equity settlement: equity at FV. Gain = Debt carrying amount − FV of equity."
+  }
+]

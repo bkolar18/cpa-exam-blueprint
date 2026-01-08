@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Not-for-Profit Accounting - Advanced Topics",
+    "batchNumber": 29,
+    "questionCount": 25,
+    "weight": "8%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-nfp-adv-001",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Gift Annuities",
+      "conceptTested": "Charitable gift annuity accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In a charitable gift annuity, the NFP records:",
+      "options": {
+        "A": "Only contribution revenue equal to the gift amount",
+        "B": "Asset at FV, annuity liability for PV of future payments, and contribution revenue for the difference",
+        "C": "A liability for the full gift amount",
+        "D": "No entry until annuity payments begin"
+      },
+      "correctAnswer": "B",
+      "explanation": "Gift annuities: Dr. Asset (cash/property) at FV, Cr. Annuity liability (PV of future payments), Cr. Contribution revenue (the residual).",
+      "tip": "Gift annuity: asset - annuity liability = contribution revenue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-002",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Pooled Income Fund",
+      "conceptTested": "Pooled income fund",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A pooled income fund benefiting an NFP is one where:",
+      "options": {
+        "A": "The NFP receives income immediately",
+        "B": "Multiple donors contribute to a commingled fund; income goes to donors for life, remainder to NFP",
+        "C": "Only one donor can participate",
+        "D": "The NFP manages investments but keeps no remainder"
+      },
+      "correctAnswer": "B",
+      "explanation": "Pooled income funds commingle gifts from multiple donors. Donors receive income based on their share during their lives; the remainder goes to the NFP charity.",
+      "tip": "Pooled income: multiple donors, income for life, remainder to NFP.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-003",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Beneficial Interest",
+      "conceptTested": "Beneficial interest in trust",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When an NFP is the beneficiary of a perpetual trust held by a third party, the NFP recognizes:",
+      "options": {
+        "A": "Nothing until cash is received",
+        "B": "Contribution revenue and an asset for the FV of its beneficial interest",
+        "C": "A contingent asset only",
+        "D": "An expense for trust administration"
+      },
+      "correctAnswer": "B",
+      "explanation": "When an NFP has an unconditional right to receive benefits from a trust held by a third party, it recognizes contribution revenue and an asset for the FV of its beneficial interest.",
+      "tip": "Beneficial interest: recognize FV of expected benefits.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-004",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Donor-Imposed Conditions",
+      "conceptTested": "Barrier identification",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under ASU 2018-08, a 'barrier' for a conditional contribution includes:",
+      "options": {
+        "A": "Any future uncertainty",
+        "B": "Measurable performance-related barrier or limited discretion over fund use",
+        "C": "Donor's subjective satisfaction",
+        "D": "Time passage only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Barriers include: measurable performance requirements, benchmarks, or other barriers that limit the NFP's discretion over use of assets. Time alone isn't a barrier.",
+      "tip": "Barrier: performance requirement or limited discretion.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-005",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Grants",
+      "conceptTested": "Government grant accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A government grant to an NFP with a requirement to provide specific services is:",
+      "options": {
+        "A": "Always an exchange transaction",
+        "B": "A contribution with conditions (conditional contribution)",
+        "C": "Either exchange or contribution based on whether public benefit is the primary focus",
+        "D": "Recorded as deferred revenue indefinitely"
+      },
+      "correctAnswer": "C",
+      "explanation": "Government grants can be exchange transactions (if benefits to government are commensurate) or contributions (if primarily for public benefit). ASU 2018-08 provides guidance on classification.",
+      "tip": "Grant: exchange if commensurate value; contribution if public benefit.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-006",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Endowment Spending",
+      "conceptTested": "Spending policy",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An NFP's board-approved endowment spending policy of 4% annually:",
+      "options": {
+        "A": "Creates a donor restriction",
+        "B": "Is disclosed but doesn't change net asset classification",
+        "C": "Requires UPMIFA compliance",
+        "D": "Automatically releases donor restrictions"
+      },
+      "correctAnswer": "B",
+      "explanation": "Board spending policies are internal and don't change classification. Donor restrictions and applicable law (like UPMIFA) govern what can be spent; board policy is disclosed.",
+      "tip": "Board spending policy ≠ donor restriction.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-007",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Financial Assets",
+      "conceptTested": "Liquidity disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The liquidity disclosure for NFPs requires information about:",
+      "options": {
+        "A": "All assets and liabilities",
+        "B": "Financial assets available within one year to meet general expenditures",
+        "C": "Only cash balances",
+        "D": "Donor names with large balances"
+      },
+      "correctAnswer": "B",
+      "explanation": "NFPs must disclose financial assets available within one year of the balance sheet date to meet cash needs for general expenditures, with qualitative information about liquidity management.",
+      "tip": "Liquidity: financial assets available within 1 year.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-008",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Pledges",
+      "conceptTested": "Pledge allowance",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "An NFP receives unconditional pledges totaling $200,000. Collection is estimated at 90%. What is contribution revenue?",
+      "options": {
+        "A": "$200,000",
+        "B": "$180,000",
+        "C": "$20,000",
+        "D": "$220,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Contribution revenue is recorded net of estimated uncollectible amounts: $200,000 × 90% = $180,000. The $20,000 is the allowance.",
+      "tip": "Pledge revenue = gross pledge × collection rate.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-009",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Healthcare",
+      "conceptTested": "Net patient service revenue",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "NFP hospital gross patient charges: $5,000,000. Contractual adjustments: $2,000,000. Bad debt: $100,000. Charity care: $300,000. What is net patient service revenue?",
+      "options": {
+        "A": "$2,600,000",
+        "B": "$2,700,000",
+        "C": "$2,900,000",
+        "D": "$3,000,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Net patient revenue = Gross charges - Contractual adjustments - Bad debt = $5M - $2M - $0.1M = $2.9M. Charity care is never recorded as revenue.",
+      "tip": "Charity care: not revenue. Bad debt: reduces revenue (per ASC 606).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-nfp-adv-010",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Agency Transactions",
+      "conceptTested": "Financial interrelationship",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When an intermediary NFP has a 'financial interrelationship' with a beneficiary NFP, the intermediary records:",
+      "options": {
+        "A": "A liability for amounts received",
+        "B": "Contribution revenue and a payable to the beneficiary",
+        "C": "No entry",
+        "D": "Equity in the beneficiary"
+      },
+      "correctAnswer": "B",
+      "explanation": "With a financial interrelationship (like common control), the intermediary recognizes contribution revenue (with donor restrictions) and an asset/payable to the beneficiary.",
+      "tip": "Financial interrelationship: recognize revenue + payable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-011",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Presentation",
+      "conceptTested": "Statement of activities format",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An NFP's statement of activities may be presented:",
+      "options": {
+        "A": "Only in a single-column format",
+        "B": "In various formats as long as it shows change in each class of net assets",
+        "C": "Only if approved by the board",
+        "D": "Identical to for-profit income statements"
+      },
+      "correctAnswer": "B",
+      "explanation": "The statement of activities can be presented in various formats (single-column, multi-column, layered) as long as it displays changes in each net asset class and total.",
+      "tip": "Flexible format; must show changes by net asset class.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-012",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Contributed Nonfinancial Assets",
+      "conceptTested": "In-kind disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under ASU 2020-07, contributed nonfinancial assets require disclosure of:",
+      "options": {
+        "A": "Only total dollar amount",
+        "B": "Disaggregated amounts by category, valuation techniques, and donor restrictions",
+        "C": "Donor names",
+        "D": "Only in-kind services"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASU 2020-07 requires disaggregated disclosure of contributed nonfinancial assets by category, valuation techniques, donor restrictions, and whether they were monetized or used.",
+      "tip": "In-kind disclosure: category, valuation, restrictions, use.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-013",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Cost Allocation",
+      "conceptTested": "Allocation methodology",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Allocation of costs between program and supporting services must be:",
+      "options": {
+        "A": "50/50 in all cases",
+        "B": "Based on a reasonable and consistently applied methodology",
+        "C": "Approved by donors",
+        "D": "Determined by the IRS"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cost allocation methods must be reasonable, rational, and consistently applied. Common methods include time studies, square footage, or headcount.",
+      "tip": "Cost allocation: reasonable methodology, consistently applied.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-014",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Investments",
+      "conceptTested": "Alternative investments",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "NFP investments in alternative investments (hedge funds, private equity) are typically measured at:",
+      "options": {
+        "A": "Cost",
+        "B": "Fair value, often using NAV as a practical expedient",
+        "C": "Lower of cost or market",
+        "D": "Equity method"
+      },
+      "correctAnswer": "B",
+      "explanation": "Alternative investments are typically reported at fair value. NAV (net asset value) per share is often used as a practical expedient when FV isn't readily determinable.",
+      "tip": "Alternative investments: FV, often using NAV practical expedient.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-015",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Related Organizations",
+      "conceptTested": "Supporting organization",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a supporting organization holds resources for a supported NFP, the supported NFP:",
+      "options": {
+        "A": "Ignores the supporting organization",
+        "B": "May recognize an asset for its interest if it has an unconditional right to the assets",
+        "C": "Consolidates the supporting organization",
+        "D": "Records a liability"
+      },
+      "correctAnswer": "B",
+      "explanation": "If a supported NFP has an unconditional right to receive resources from a supporting organization, it recognizes an asset. The level of economic interest determines recognition.",
+      "tip": "Supporting org: beneficiary recognizes asset if unconditional right.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-016",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Private Schools",
+      "conceptTested": "Tuition revenue",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Tuition revenue at a private NFP university is:",
+      "options": {
+        "A": "A contribution",
+        "B": "An exchange transaction recognized as educational services are provided",
+        "C": "Deferred until graduation",
+        "D": "Recognized when cash is received"
+      },
+      "correctAnswer": "B",
+      "explanation": "Tuition is an exchange transaction—students pay for educational services. Revenue is recognized as services are provided (over the academic term).",
+      "tip": "Tuition = exchange transaction (over term).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-017",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Split-Interest",
+      "conceptTested": "Charitable remainder unitrust",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A charitable remainder unitrust differs from an annuity trust in that:",
+      "options": {
+        "A": "There is no income beneficiary",
+        "B": "Payments are a fixed percentage of annually revalued trust assets",
+        "C": "Payments are a fixed dollar amount",
+        "D": "The NFP is never the remainder beneficiary"
+      },
+      "correctAnswer": "B",
+      "explanation": "Unitrusts pay a fixed percentage of annually revalued assets (amount varies). Annuity trusts pay a fixed dollar amount regardless of asset value changes.",
+      "tip": "Unitrust: % of revalued assets. Annuity trust: fixed amount.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-018",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Revenue Classification",
+      "conceptTested": "Exchange vs contribution analysis",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Membership dues with substantial member benefits (magazine, discounts, events) are:",
+      "options": {
+        "A": "100% contribution revenue",
+        "B": "100% exchange revenue",
+        "C": "Allocated between exchange (value of benefits) and contribution (excess)",
+        "D": "Deferred indefinitely"
+      },
+      "correctAnswer": "C",
+      "explanation": "When membership dues include substantial benefits, the transaction is split: exchange revenue for the FV of benefits received, contribution revenue for any excess.",
+      "tip": "Dues with benefits: allocate between exchange and contribution.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-019",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Functional Expenses",
+      "conceptTested": "Program vs supporting",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "An NFP has total expenses of $1,000,000. Program services: $700,000. Management: $200,000. Fundraising: $100,000. What is the program expense ratio?",
+      "options": {
+        "A": "70%",
+        "B": "30%",
+        "C": "80%",
+        "D": "90%"
+      },
+      "correctAnswer": "A",
+      "explanation": "Program expense ratio = Program expenses ÷ Total expenses = $700,000 ÷ $1,000,000 = 70%.",
+      "tip": "Program ratio = Program ÷ Total expenses.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-020",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Volunteer Services",
+      "conceptTested": "Specialized skill services",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A CPA provides free audit services to an NFP. The NFP should:",
+      "options": {
+        "A": "Not record anything",
+        "B": "Record contribution revenue and professional services expense at fair value",
+        "C": "Record only an expense",
+        "D": "Disclose in notes only"
+      },
+      "correctAnswer": "B",
+      "explanation": "CPA services require specialized skills and would typically be purchased. The NFP records contribution revenue and a corresponding expense (professional fees) at fair value.",
+      "tip": "Specialized donated services: revenue and expense at FV.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-021",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Transfers Between Affiliates",
+      "conceptTested": "Affiliate transfers",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Transfers of assets between NFP affiliates under common control are recognized as:",
+      "options": {
+        "A": "Contributions",
+        "B": "Changes in equity (like a capital transaction)",
+        "C": "Revenue by the recipient",
+        "D": "Loans"
+      },
+      "correctAnswer": "B",
+      "explanation": "Transfers between affiliates under common control are accounted for as equity transactions (changes in net assets), similar to how for-profits treat common control transactions.",
+      "tip": "Common control transfers = equity transaction, not contribution.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-nfp-adv-022",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Measure of Operations",
+      "conceptTested": "Operating measure presentation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "If an NFP reports an operating measure on the statement of activities, items typically excluded include:",
+      "options": {
+        "A": "Program expenses",
+        "B": "Endowment gifts, investment returns beyond spending, and unusual items",
+        "C": "All contributions",
+        "D": "Management expenses"
+      },
+      "correctAnswer": "B",
+      "explanation": "NFPs often exclude from operations: endowment contributions, investment returns beyond the spending rate, unusual/nonrecurring items. The measure must be consistently applied and disclosed.",
+      "tip": "Operating measure typically excludes endowment, excess returns.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-023",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Capital Campaign",
+      "conceptTested": "Capital campaign pledges",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Unconditional pledges received during a building capital campaign are recognized as:",
+      "options": {
+        "A": "Deferred revenue until building is complete",
+        "B": "Revenue with donor restrictions when pledged",
+        "C": "Revenue without restrictions",
+        "D": "Only when collected"
+      },
+      "correctAnswer": "B",
+      "explanation": "Unconditional pledges for a specific purpose (building) are revenue with donor restrictions when pledged. The restriction is released when the purpose is fulfilled.",
+      "tip": "Capital campaign pledges: revenue with restrictions when pledged.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-nfp-adv-024",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Contributions Received",
+      "conceptTested": "Contribution or exchange indicator",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An indicator that a transaction is a contribution rather than exchange is:",
+      "options": {
+        "A": "The payer specifies how funds must be used",
+        "B": "The payer receives commensurate value from the NFP",
+        "C": "The payer's primary motivation is public benefit without commensurate return",
+        "D": "A formal contract exists"
+      },
+      "correctAnswer": "C",
+      "explanation": "Contributions are characterized by donor intent to make a gift for charitable purposes without receiving commensurate value. Exchange transactions involve reciprocal value.",
+      "tip": "Contribution: gift for public benefit. Exchange: commensurate value.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-nfp-adv-025",
+      "section": "FAR",
+      "topic": "NFP Accounting",
+      "subtopic": "Contributed Art",
+      "conceptTested": "Art/historical collection",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A museum receives a donated painting worth $500,000. If the museum doesn't capitalize collections, what is recorded?",
+      "options": {
+        "A": "Asset $500,000, Contribution revenue $500,000",
+        "B": "No entry for the asset; the contribution is still recognized as revenue",
+        "C": "No recognition, only note disclosure",
+        "D": "Deferred revenue $500,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "If an NFP doesn't capitalize collections meeting specific criteria, contributed collection items are neither recorded as assets nor as revenue—only disclosed in notes.",
+      "tip": "Non-capitalized collection: no asset, no revenue, disclosure only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    }
+  ]
+}

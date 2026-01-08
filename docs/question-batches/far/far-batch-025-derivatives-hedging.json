@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Derivatives and Hedging",
+    "batchNumber": 25,
+    "questionCount": 25,
+    "weight": "4%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-deriv-001",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Derivative Definition",
+      "conceptTested": "Derivative characteristics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A derivative instrument has all of the following characteristics EXCEPT:",
+      "options": {
+        "A": "Has one or more underlyings and notional amounts",
+        "B": "Requires no initial net investment or a small one relative to similar contracts",
+        "C": "Can be settled net",
+        "D": "Must be physically settled"
+      },
+      "correctAnswer": "D",
+      "explanation": "Derivatives have: (1) underlying and notional, (2) little or no initial net investment, and (3) net settlement capability. Physical settlement is not required; net settlement distinguishes derivatives.",
+      "tip": "Derivative: underlying + little investment + net settlement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-002",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Measurement",
+      "conceptTested": "Derivative reporting",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "All derivative instruments are reported on the balance sheet at:",
+      "options": {
+        "A": "Historical cost",
+        "B": "Fair value",
+        "C": "Notional amount",
+        "D": "Intrinsic value"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 815 requires all derivatives to be recognized on the balance sheet at fair value as either assets or liabilities.",
+      "tip": "Derivatives = always at fair value on balance sheet.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-deriv-003",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Underlying",
+      "conceptTested": "Underlying examples",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "An underlying for a derivative could be:",
+      "options": {
+        "A": "Only stock prices",
+        "B": "Interest rates, commodity prices, stock prices, exchange rates, or other variables",
+        "C": "Only interest rates",
+        "D": "Only physical commodities"
+      },
+      "correctAnswer": "B",
+      "explanation": "An underlying can be any financial or physical variable: interest rates, security prices, commodity prices, foreign exchange rates, credit indices, or other variables.",
+      "tip": "Underlying: any variable the derivative's value depends on.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-deriv-004",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Non-Hedge Accounting",
+      "conceptTested": "Speculative derivative",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When a derivative is not designated as a hedge, changes in fair value are recognized in:",
+      "options": {
+        "A": "Other comprehensive income",
+        "B": "Earnings immediately",
+        "C": "Retained earnings directly",
+        "D": "Deferred until settlement"
+      },
+      "correctAnswer": "B",
+      "explanation": "For derivatives not designated as hedges (speculative), changes in fair value are recognized immediately in current earnings.",
+      "tip": "No hedge designation = FV changes in earnings.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-005",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Hedge Types",
+      "conceptTested": "Three hedge types",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The three types of hedging relationships under GAAP are:",
+      "options": {
+        "A": "Short, long, and natural",
+        "B": "Fair value hedge, cash flow hedge, and net investment hedge",
+        "C": "Perfect, imperfect, and speculative",
+        "D": "Forward, option, and swap"
+      },
+      "correctAnswer": "B",
+      "explanation": "GAAP recognizes three hedge types: fair value hedges (hedge changes in FV), cash flow hedges (hedge variability of cash flows), and net investment hedges (hedge foreign currency exposure of net investment).",
+      "tip": "Three hedges: fair value, cash flow, net investment.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-006",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Fair Value Hedge",
+      "conceptTested": "FV hedge accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In a fair value hedge, the gain or loss on both the hedging instrument and the hedged item is recognized:",
+      "options": {
+        "A": "In OCI",
+        "B": "In earnings, which should largely offset",
+        "C": "The hedge in OCI, the hedged item in earnings",
+        "D": "Deferred until settlement"
+      },
+      "correctAnswer": "B",
+      "explanation": "In a fair value hedge, both the derivative's gain/loss and the hedged item's gain/loss (due to the hedged risk) are recognized in earnings. They should largely offset if the hedge is effective.",
+      "tip": "Fair value hedge: both sides in earnings (should offset).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-deriv-007",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Cash Flow Hedge",
+      "conceptTested": "CF hedge effective portion",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In a cash flow hedge, the effective portion of the derivative's gain or loss is recognized in:",
+      "options": {
+        "A": "Earnings immediately",
+        "B": "Other comprehensive income, reclassified to earnings when hedged item affects earnings",
+        "C": "Retained earnings",
+        "D": "As an adjustment to the hedged item"
+      },
+      "correctAnswer": "B",
+      "explanation": "In a cash flow hedge, the effective portion of the derivative's gain/loss is reported in OCI and reclassified to earnings when the hedged transaction affects earnings.",
+      "tip": "Cash flow hedge effective: OCI until hedged item hits earnings.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-deriv-008",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Cash Flow Hedge",
+      "conceptTested": "CF hedge ineffective portion",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The ineffective portion of a cash flow hedge is recognized:",
+      "options": {
+        "A": "In OCI",
+        "B": "In earnings immediately",
+        "C": "Deferred indefinitely",
+        "D": "As part of the hedged item"
+      },
+      "correctAnswer": "B",
+      "explanation": "Any ineffective portion of a cash flow hedge (the portion that doesn't offset the hedged item's cash flow change) is recognized immediately in earnings.",
+      "tip": "CF hedge ineffective portion: earnings immediately.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-009",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Net Investment Hedge",
+      "conceptTested": "Net investment hedge accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Gains and losses on a hedge of a net investment in a foreign operation are reported in:",
+      "options": {
+        "A": "Earnings",
+        "B": "OCI (CTA component), same as translation adjustments",
+        "C": "Retained earnings",
+        "D": "The foreign subsidiary's income"
+      },
+      "correctAnswer": "B",
+      "explanation": "Net investment hedge gains/losses are reported in OCI within the cumulative translation adjustment, offsetting the translation adjustment on the hedged net investment.",
+      "tip": "Net investment hedge: OCI with CTA.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-deriv-010",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Hedge Documentation",
+      "conceptTested": "Documentation requirements",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "To qualify for hedge accounting, documentation must be established:",
+      "options": {
+        "A": "Within 30 days of hedge inception",
+        "B": "At inception of the hedge relationship",
+        "C": "By year-end",
+        "D": "When the auditor requests it"
+      },
+      "correctAnswer": "B",
+      "explanation": "Hedge accounting requires formal documentation at inception of the relationship, including identification of the hedging instrument, hedged item, nature of risk, and how effectiveness will be assessed.",
+      "tip": "Hedge documentation: must be at inception.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-011",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Forward Contracts",
+      "conceptTested": "Forward contract basics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A forward contract is:",
+      "options": {
+        "A": "An exchange-traded standardized contract",
+        "B": "A privately negotiated agreement to buy/sell at a specified future date and price",
+        "C": "Always an option to transact",
+        "D": "Never a derivative"
+      },
+      "correctAnswer": "B",
+      "explanation": "A forward contract is a privately negotiated agreement between two parties to buy or sell an asset at a specified price on a specified future date.",
+      "tip": "Forward = private, customized, future transaction.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-012",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Options",
+      "conceptTested": "Option components",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The value of an option consists of:",
+      "options": {
+        "A": "Intrinsic value only",
+        "B": "Time value only",
+        "C": "Intrinsic value and time value",
+        "D": "Par value and premium"
+      },
+      "correctAnswer": "C",
+      "explanation": "Option value = intrinsic value (in-the-money amount) + time value (value due to time remaining and volatility). Total premium paid includes both components.",
+      "tip": "Option value = intrinsic + time value.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-013",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Swaps",
+      "conceptTested": "Interest rate swap",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "In an interest rate swap, the parties exchange:",
+      "options": {
+        "A": "Principal amounts",
+        "B": "Interest payments based on different rate structures",
+        "C": "Equity investments",
+        "D": "Ownership of debt instruments"
+      },
+      "correctAnswer": "B",
+      "explanation": "In an interest rate swap, parties agree to exchange interest payments (e.g., fixed for floating) based on a notional principal amount. The principal is not exchanged.",
+      "tip": "Interest rate swap: exchange interest payments, not principal.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-014",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Hedged Items",
+      "conceptTested": "What can be hedged",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which can be the hedged item in a fair value hedge?",
+      "options": {
+        "A": "A forecasted transaction",
+        "B": "A recognized asset, liability, or firm commitment",
+        "C": "The entity's own equity",
+        "D": "Management compensation"
+      },
+      "correctAnswer": "B",
+      "explanation": "Fair value hedges can hedge recognized assets or liabilities, or unrecognized firm commitments. Cash flow hedges are used for forecasted transactions.",
+      "tip": "FV hedge: recognized items or firm commitments.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-015",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Hedged Items",
+      "conceptTested": "Cash flow hedge eligibility",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which can be the hedged item in a cash flow hedge?",
+      "options": {
+        "A": "Only recognized assets at fixed rates",
+        "B": "Forecasted transactions, variable-rate debt, or foreign currency exposure",
+        "C": "Only equity securities",
+        "D": "Intangible assets only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cash flow hedges protect against variability in cash flows from forecasted transactions (like future inventory purchases), variable-rate instruments, or forecasted foreign currency transactions.",
+      "tip": "CF hedge: forecasted transactions, variable-rate items.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-016",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Embedded Derivatives",
+      "conceptTested": "Embedded derivative concept",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An embedded derivative must be separated from the host contract and accounted for separately when:",
+      "options": {
+        "A": "Always",
+        "B": "Never",
+        "C": "The hybrid instrument is not measured at fair value with changes in earnings, and the embedded derivative is not clearly and closely related to the host",
+        "D": "The host contract is publicly traded"
+      },
+      "correctAnswer": "C",
+      "explanation": "Embedded derivatives are separated (bifurcated) when: (1) not clearly and closely related to the host, (2) the hybrid isn't measured at FV through earnings, and (3) a separate instrument with the same terms would be a derivative.",
+      "tip": "Bifurcate if: not closely related + not FV through earnings.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-deriv-017",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Hedge Effectiveness",
+      "conceptTested": "Effectiveness assessment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under current GAAP, hedge effectiveness is assessed:",
+      "options": {
+        "A": "Only at inception",
+        "B": "At inception and on an ongoing basis qualitatively or quantitatively",
+        "C": "Only at year-end",
+        "D": "Never; all hedges are assumed effective"
+      },
+      "correctAnswer": "B",
+      "explanation": "After ASU 2017-12, effectiveness must be assessed at inception and documented. Ongoing assessment can be qualitative if reasonable assurance exists that the relationship will be highly effective.",
+      "tip": "Effectiveness: inception + ongoing (qualitative OK).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-deriv-018",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Derivative Calculation",
+      "conceptTested": "Forward contract value",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A company has a forward contract to buy €100,000 at $1.10 in 90 days. The forward rate for 90 days is now $1.12. Ignoring discounting, what is the approximate fair value of the forward?",
+      "options": {
+        "A": "$2,000 asset",
+        "B": "$2,000 liability",
+        "C": "$100,000 asset",
+        "D": "$0"
+      },
+      "correctAnswer": "A",
+      "explanation": "The company locked in buying at $1.10 when market is $1.12. Gain = €100,000 × ($1.12 - $1.10) = $2,000. The forward is an asset.",
+      "tip": "Forward value = Notional × (Current rate - Contract rate).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-deriv-019",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Discontinuation",
+      "conceptTested": "Hedge discontinuation",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a cash flow hedge is discontinued, the amount in accumulated OCI is:",
+      "options": {
+        "A": "Immediately reclassified to earnings",
+        "B": "Remains in OCI and is reclassified when the forecasted transaction affects earnings (if still probable)",
+        "C": "Written off to retained earnings",
+        "D": "Reversed against the hedged item"
+      },
+      "correctAnswer": "B",
+      "explanation": "When a CF hedge is discontinued, amounts in AOCI remain there and are reclassified to earnings when the forecasted transaction affects earnings—unless the transaction is no longer probable.",
+      "tip": "CF hedge discontinued: AOCI stays until transaction hits earnings.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-deriv-020",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Basis Adjustments",
+      "conceptTested": "Firm commitment basis adjustment",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In a fair value hedge of a firm commitment to purchase inventory, when the hedged transaction occurs:",
+      "options": {
+        "A": "The basis adjustment is recorded as a separate asset",
+        "B": "The basis adjustment is included in the cost of the acquired inventory",
+        "C": "No basis adjustment is made",
+        "D": "The adjustment is expensed immediately"
+      },
+      "correctAnswer": "B",
+      "explanation": "For fair value hedges of firm commitments, when the hedged transaction occurs (inventory purchased), the basis adjustment on the firm commitment becomes part of the initial measurement of the acquired asset.",
+      "tip": "FV hedge of firm commitment: basis adjustment goes to asset cost.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-deriv-021",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Futures vs Forwards",
+      "conceptTested": "Futures characteristics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Futures contracts differ from forward contracts because futures are:",
+      "options": {
+        "A": "Never derivatives",
+        "B": "Exchange-traded, standardized, and marked to market daily",
+        "C": "Always for commodities only",
+        "D": "Never settled in cash"
+      },
+      "correctAnswer": "B",
+      "explanation": "Futures are exchange-traded (vs. OTC forwards), standardized contracts with daily mark-to-market settlement through a clearinghouse.",
+      "tip": "Futures: exchange-traded, standardized, daily settlement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-022",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Excluded Components",
+      "conceptTested": "Time value exclusion",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under ASC 815, an entity may elect to exclude which component of an option from hedge effectiveness assessment?",
+      "options": {
+        "A": "Intrinsic value",
+        "B": "Time value",
+        "C": "Both components",
+        "D": "Neither component"
+      },
+      "correctAnswer": "B",
+      "explanation": "Entities can elect to exclude the time value of options (or forward points on forwards) from the effectiveness assessment, recognizing changes in excluded components systematically.",
+      "tip": "Option time value can be excluded from effectiveness.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-deriv-023",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Scope Exceptions",
+      "conceptTested": "Derivative scope exceptions",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is NOT within the scope of derivative accounting (ASC 815)?",
+      "options": {
+        "A": "Interest rate swaps",
+        "B": "Regular-way securities purchases",
+        "C": "Currency forwards",
+        "D": "Commodity futures"
+      },
+      "correctAnswer": "B",
+      "explanation": "Regular-way security trades (settlement in customary timeframes) are a scope exception from derivative accounting. The purchase/sale is recorded at trade date, not as a derivative.",
+      "tip": "Regular-way trades: scope exception from derivatives.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-deriv-024",
+      "section": "FAR",
+      "topic": "Hedging",
+      "subtopic": "Foreign Currency Hedge",
+      "conceptTested": "FC hedge types",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A hedge of foreign currency exposure of a forecasted foreign-denominated sale is accounted for as:",
+      "options": {
+        "A": "A fair value hedge",
+        "B": "A cash flow hedge",
+        "C": "A net investment hedge",
+        "D": "Not eligible for hedge accounting"
+      },
+      "correctAnswer": "B",
+      "explanation": "Hedges of foreign currency exposure of forecasted transactions are cash flow hedges. The variability in cash flows from exchange rate changes is being hedged.",
+      "tip": "FC hedge of forecasted transaction = cash flow hedge.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-deriv-025",
+      "section": "FAR",
+      "topic": "Derivatives",
+      "subtopic": "Disclosure Requirements",
+      "conceptTested": "Derivative disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Required disclosures for derivatives include:",
+      "options": {
+        "A": "Only notional amounts",
+        "B": "Objectives, strategies, fair values, gains/losses, and credit risk information",
+        "C": "Only gains and losses",
+        "D": "Only the existence of derivatives"
+      },
+      "correctAnswer": "B",
+      "explanation": "Derivative disclosures must include: objectives and strategies, fair values by type, gains/losses and where reported, credit-risk-related features, and notional amounts.",
+      "tip": "Derivative disclosures: objectives, FV, gains/losses, credit risk.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

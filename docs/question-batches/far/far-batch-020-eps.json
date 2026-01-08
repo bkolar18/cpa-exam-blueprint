@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Earnings Per Share",
+    "batchNumber": 20,
+    "questionCount": 25,
+    "weight": "3%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-eps-001",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "EPS Basics",
+      "conceptTested": "EPS reporting requirement",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which companies are required to report earnings per share?",
+      "options": {
+        "A": "All companies",
+        "B": "Public companies with common stock or potential common stock outstanding",
+        "C": "Only companies with more than $1 billion in revenue",
+        "D": "Only companies that pay dividends"
+      },
+      "correctAnswer": "B",
+      "explanation": "EPS is required for public entities with common stock or potential common stock (like options, warrants, convertible securities) trading in a public market.",
+      "tip": "EPS required: public companies with common or potential common stock.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-eps-002",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Basic EPS",
+      "conceptTested": "Basic EPS formula",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Basic EPS is calculated as:",
+      "options": {
+        "A": "Net income ÷ Ending shares outstanding",
+        "B": "(Net income - Preferred dividends) ÷ Weighted-average common shares",
+        "C": "Net income ÷ Beginning shares outstanding",
+        "D": "Operating income ÷ Total shares issued"
+      },
+      "correctAnswer": "B",
+      "explanation": "Basic EPS = (Net income - Preferred dividends) ÷ Weighted-average common shares outstanding. Preferred dividends reduce income available to common shareholders.",
+      "tip": "Basic EPS: (NI - Preferred dividends) ÷ Weighted-avg shares.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-eps-003",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Basic EPS",
+      "conceptTested": "Weighted-average shares",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "A company had 100,000 shares at January 1. On April 1, it issued 20,000 shares. What is the weighted-average shares for the year?",
+      "options": {
+        "A": "100,000",
+        "B": "110,000",
+        "C": "115,000",
+        "D": "120,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "100,000 × 3/12 = 25,000 (Jan-Mar). 120,000 × 9/12 = 90,000 (Apr-Dec). Total = 115,000. Or: 100,000 + (20,000 × 9/12) = 115,000.",
+      "tip": "Weight shares by months outstanding.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-eps-004",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Basic EPS Calculation",
+      "conceptTested": "Basic EPS with preferred",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Net income is $500,000. Preferred dividends are $50,000. Weighted-average common shares are 100,000. What is basic EPS?",
+      "options": {
+        "A": "$4.50",
+        "B": "$5.00",
+        "C": "$5.50",
+        "D": "$4.00"
+      },
+      "correctAnswer": "A",
+      "explanation": "Basic EPS = ($500,000 - $50,000) ÷ 100,000 = $450,000 ÷ 100,000 = $4.50.",
+      "tip": "Always subtract preferred dividends from net income.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-005",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Preferred Dividends",
+      "conceptTested": "Cumulative preferred treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For cumulative preferred stock, in calculating basic EPS the preferred dividend deduction is:",
+      "options": {
+        "A": "Only dividends actually declared",
+        "B": "The annual dividend requirement whether or not declared",
+        "C": "Zero if dividends are in arrears",
+        "D": "Only dividends paid in cash"
+      },
+      "correctAnswer": "B",
+      "explanation": "For cumulative preferred, the current period's dividend requirement is deducted from net income whether or not declared, because cumulative dividends are owed regardless.",
+      "tip": "Cumulative preferred: deduct annual requirement even if not declared.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-006",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Preferred Dividends",
+      "conceptTested": "Noncumulative preferred treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For noncumulative preferred stock, the preferred dividend deduction in basic EPS is:",
+      "options": {
+        "A": "The full annual dividend amount",
+        "B": "Only dividends declared during the period",
+        "C": "The average of declared dividends over three years",
+        "D": "Cumulative dividends in arrears"
+      },
+      "correctAnswer": "B",
+      "explanation": "For noncumulative preferred, only dividends actually declared during the period are deducted. If not declared, noncumulative dividends are lost.",
+      "tip": "Noncumulative: deduct only what's declared.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-007",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Diluted EPS",
+      "conceptTested": "Diluted EPS concept",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Diluted EPS reflects:",
+      "options": {
+        "A": "The maximum possible EPS",
+        "B": "The worst-case EPS if all dilutive securities were converted/exercised",
+        "C": "EPS using ending shares only",
+        "D": "EPS before preferred dividends"
+      },
+      "correctAnswer": "B",
+      "explanation": "Diluted EPS shows the worst-case (lowest) EPS assuming all dilutive convertible securities and stock options are converted/exercised.",
+      "tip": "Diluted EPS = worst case if all dilutive securities convert.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-008",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Diluted EPS",
+      "conceptTested": "Dilutive vs antidilutive",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A potentially dilutive security is antidilutive if:",
+      "options": {
+        "A": "It decreases EPS when included",
+        "B": "It increases EPS or decreases loss per share when included",
+        "C": "It has no effect on EPS",
+        "D": "It is not convertible"
+      },
+      "correctAnswer": "B",
+      "explanation": "A security is antidilutive if including it increases EPS (or decreases loss per share). Antidilutive securities are excluded from diluted EPS.",
+      "tip": "Antidilutive = increases EPS (exclude from diluted).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-009",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Stock Options",
+      "conceptTested": "Treasury stock method",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under the treasury stock method for options, the assumed shares added to the denominator are:",
+      "options": {
+        "A": "All option shares",
+        "B": "Option shares minus shares assumed repurchased with proceeds",
+        "C": "Shares at the exercise price",
+        "D": "Shares at fair value"
+      },
+      "correctAnswer": "B",
+      "explanation": "Treasury stock method: assume options exercised, use proceeds to buy back shares at average market price. Net shares added = options exercised - shares repurchased.",
+      "tip": "Treasury stock method: net new shares = options - buyback.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-010",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Stock Options",
+      "conceptTested": "Treasury stock calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "10,000 options are outstanding with exercise price of $20. Average market price is $25. Under treasury stock method, how many shares are added to diluted EPS denominator?",
+      "options": {
+        "A": "2,000",
+        "B": "8,000",
+        "C": "10,000",
+        "D": "0"
+      },
+      "correctAnswer": "A",
+      "explanation": "Proceeds = 10,000 × $20 = $200,000. Shares repurchased = $200,000 ÷ $25 = 8,000. Net shares added = 10,000 - 8,000 = 2,000.",
+      "tip": "Net shares = Options - (Proceeds ÷ Market price).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-eps-011",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Stock Options",
+      "conceptTested": "Options antidilutive test",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Stock options are antidilutive when:",
+      "options": {
+        "A": "Exercise price equals market price",
+        "B": "Exercise price exceeds average market price",
+        "C": "Exercise price is below average market price",
+        "D": "Options have more than one year until expiration"
+      },
+      "correctAnswer": "B",
+      "explanation": "When exercise price > average market price, options are 'out of the money.' Including them would reduce shares (company would buy back more than issued), which is antidilutive.",
+      "tip": "Exercise price > market price = antidilutive (exclude).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-012",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Convertible Bonds",
+      "conceptTested": "If-converted method",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Under the if-converted method for convertible bonds, diluted EPS adjustments include:",
+      "options": {
+        "A": "Adding shares only; no income adjustment",
+        "B": "Adding back interest expense (net of tax) and adding shares",
+        "C": "Subtracting interest expense and adding shares",
+        "D": "No adjustments until actually converted"
+      },
+      "correctAnswer": "B",
+      "explanation": "If-converted method: assume bonds converted at beginning of period. Add back interest expense (net of tax) to numerator; add converted shares to denominator.",
+      "tip": "Convertible bonds: add back interest (net of tax) + add shares.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-013",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Convertible Bonds",
+      "conceptTested": "If-converted calculation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "$1,000,000 of 6% convertible bonds are outstanding. Each $1,000 bond converts to 50 shares. Tax rate is 25%. What adjustments are made for diluted EPS?",
+      "options": {
+        "A": "Add $60,000 to numerator; add 50,000 shares to denominator",
+        "B": "Add $45,000 to numerator; add 50,000 shares to denominator",
+        "C": "Add $15,000 to numerator; add 50,000 shares to denominator",
+        "D": "No adjustment; bonds are antidilutive"
+      },
+      "correctAnswer": "B",
+      "explanation": "Interest = $1,000,000 × 6% = $60,000. After-tax = $60,000 × (1 - 0.25) = $45,000 added to numerator. Shares = 1,000 bonds × 50 = 50,000 added to denominator.",
+      "tip": "Add interest net of tax; add converted shares.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 150
+    },
+    {
+      "id": "far-eps-014",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Convertible Preferred",
+      "conceptTested": "Convertible preferred method",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "For convertible preferred stock in diluted EPS, the if-converted method:",
+      "options": {
+        "A": "Adds back preferred dividends to numerator and adds converted shares",
+        "B": "Subtracts additional preferred dividends",
+        "C": "Only adds shares; no numerator adjustment",
+        "D": "Uses treasury stock method"
+      },
+      "correctAnswer": "A",
+      "explanation": "If-converted for preferred: don't deduct preferred dividends (add them back if already deducted) in numerator; add common shares that would be issued upon conversion to denominator.",
+      "tip": "Convertible preferred: add back dividends + add converted shares.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-015",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Stock Dividends/Splits",
+      "conceptTested": "Retroactive treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When a stock dividend or split occurs, weighted-average shares for EPS purposes are:",
+      "options": {
+        "A": "Adjusted only prospectively",
+        "B": "Adjusted retroactively for all periods presented",
+        "C": "Not adjusted",
+        "D": "Adjusted only for the current period"
+      },
+      "correctAnswer": "B",
+      "explanation": "Stock dividends and splits are applied retroactively to all periods presented for EPS comparability. This includes periods before the stock dividend/split occurred.",
+      "tip": "Stock dividends/splits = retroactive adjustment to all periods.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-016",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Stock Dividends/Splits",
+      "conceptTested": "Split after year-end",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A 2-for-1 stock split occurs after year-end but before financial statements are issued. EPS for the current year should:",
+      "options": {
+        "A": "Ignore the split",
+        "B": "Reflect the split retroactively",
+        "C": "Show pro forma EPS only",
+        "D": "Disclose but not adjust"
+      },
+      "correctAnswer": "B",
+      "explanation": "Stock splits occurring after year-end but before issuance are reflected retroactively in EPS because they represent a change in capital structure that affects per-share metrics.",
+      "tip": "Post-year-end split: adjust EPS retroactively.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-017",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Contingent Shares",
+      "conceptTested": "Contingently issuable shares",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Contingently issuable shares are included in diluted EPS when:",
+      "options": {
+        "A": "The contingency period has ended",
+        "B": "All necessary conditions are satisfied by the reporting date",
+        "C": "There is any possibility of issuance",
+        "D": "Management decides to issue them"
+      },
+      "correctAnswer": "B",
+      "explanation": "Contingently issuable shares are included in diluted EPS only when all conditions for issuance are satisfied as of the reporting date (assuming it's the end of the contingency period).",
+      "tip": "Contingent shares: include if conditions met at reporting date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-018",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Complex Capital Structure",
+      "conceptTested": "Order of including dilutive securities",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When multiple potentially dilutive securities exist, they should be included in diluted EPS:",
+      "options": {
+        "A": "In order of issuance date",
+        "B": "In order from most dilutive to least dilutive",
+        "C": "All at once",
+        "D": "In order of maturity date"
+      },
+      "correctAnswer": "B",
+      "explanation": "Securities are ranked by their dilutive effect (per-share impact) and included from most dilutive to least dilutive. Include each until it becomes antidilutive.",
+      "tip": "Order: most dilutive first, stop when antidilutive.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-019",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Loss from Operations",
+      "conceptTested": "EPS with loss",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When a company has a loss from continuing operations, potentially dilutive securities are:",
+      "options": {
+        "A": "Always included in diluted EPS",
+        "B": "Excluded because they would be antidilutive",
+        "C": "Included only if the company pays dividends",
+        "D": "Shown in separate disclosure"
+      },
+      "correctAnswer": "B",
+      "explanation": "When there's a loss, including additional shares would reduce the loss per share (making it less negative), which is antidilutive. So diluted EPS = basic EPS when there's a loss.",
+      "tip": "Loss = all securities are antidilutive (diluted = basic).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-020",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Presentation",
+      "conceptTested": "EPS presentation requirements",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "On the income statement, EPS must be presented for:",
+      "options": {
+        "A": "Net income only",
+        "B": "Income from continuing operations and net income",
+        "C": "Operating income and net income",
+        "D": "Gross profit and net income"
+      },
+      "correctAnswer": "B",
+      "explanation": "EPS must be presented for income from continuing operations and net income. EPS for discontinued operations may be presented on the face or in notes.",
+      "tip": "EPS required: continuing operations + net income.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-eps-021",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Treasury Stock",
+      "conceptTested": "Treasury stock effect",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Treasury stock repurchases affect weighted-average shares:",
+      "options": {
+        "A": "By increasing shares for the full year",
+        "B": "By decreasing shares from date of repurchase",
+        "C": "Only if shares are retired",
+        "D": "Not at all until shares are reissued"
+      },
+      "correctAnswer": "B",
+      "explanation": "Treasury shares are not outstanding and are excluded from weighted-average shares from the repurchase date. They reduce the denominator in EPS calculations.",
+      "tip": "Treasury stock: reduces shares from repurchase date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-eps-022",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Warrants",
+      "conceptTested": "Warrant treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Warrants are treated in diluted EPS calculations:",
+      "options": {
+        "A": "Using the if-converted method",
+        "B": "Using the treasury stock method",
+        "C": "As actual share issuances",
+        "D": "As contingent shares"
+      },
+      "correctAnswer": "B",
+      "explanation": "Warrants are treated using the treasury stock method, the same as stock options. Assume exercise, use proceeds to buy back shares at average market price.",
+      "tip": "Warrants = treasury stock method (same as options).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-eps-023",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Participating Securities",
+      "conceptTested": "Two-class method",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The two-class method for basic EPS is used when:",
+      "options": {
+        "A": "There are two classes of common stock",
+        "B": "Participating securities that share in dividends exist",
+        "C": "Preferred stock is convertible",
+        "D": "Stock options are outstanding"
+      },
+      "correctAnswer": "B",
+      "explanation": "The two-class method is required when participating securities exist that share in undistributed earnings. Earnings are allocated between common shares and participating securities.",
+      "tip": "Two-class method: used for participating securities.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-eps-024",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Comprehensive Calculation",
+      "conceptTested": "Full diluted EPS",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Net income $1,000,000; preferred dividends $100,000; weighted-avg shares 200,000. Options add 10,000 net shares under treasury stock method. What is diluted EPS?",
+      "options": {
+        "A": "$4.29",
+        "B": "$4.50",
+        "C": "$4.76",
+        "D": "$5.00"
+      },
+      "correctAnswer": "A",
+      "explanation": "Diluted EPS = ($1,000,000 - $100,000) ÷ (200,000 + 10,000) = $900,000 ÷ 210,000 = $4.29 (rounded).",
+      "tip": "Diluted: same numerator as basic + incremental shares.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-eps-025",
+      "section": "FAR",
+      "topic": "Earnings Per Share",
+      "subtopic": "Disclosure Requirements",
+      "conceptTested": "EPS disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Required EPS disclosures include:",
+      "options": {
+        "A": "Future projected EPS",
+        "B": "Reconciliation of numerators and denominators for basic and diluted EPS",
+        "C": "Names of shareholders",
+        "D": "Only the final EPS amounts"
+      },
+      "correctAnswer": "B",
+      "explanation": "Disclosures include reconciliation of numerators and denominators, description of securities that could potentially dilute basic EPS in the future, and effects of subsequent stock changes.",
+      "tip": "Disclose: reconciliation of basic to diluted components.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

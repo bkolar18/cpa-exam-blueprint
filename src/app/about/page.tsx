@@ -1,38 +1,11 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Our CPAs | CPA Exam Blueprint",
-  description: "Meet the licensed CPAs behind CPA Exam Blueprint. Real professionals sharing real advice to help you pass the CPA exam.",
+  title: "About Us | CPA Exam Blueprint",
+  description: "Learn about CPA Exam Blueprint - an affordable CPA exam study aid created by an accounting graduate to help candidates prepare without breaking the bank.",
 };
 
 export default function AboutPage() {
-  const team = [
-    {
-      name: "Sarah Mitchell, CPA",
-      title: "Founder & Lead Content Creator",
-      license: "California CPA License #XXXXXX",
-      bio: "Sarah passed all four CPA exam sections on her first attempt while working full-time at a Big 4 firm. With over 10 years of experience in public accounting and financial reporting, she now dedicates her time to helping the next generation of CPAs succeed.",
-      experience: ["Big 4 Audit Senior Manager", "10+ years in public accounting", "Specialized in SEC reporting"],
-      passedSections: ["FAR: 89", "AUD: 85", "REG: 82", "TCP: 87"],
-    },
-    {
-      name: "Michael Chen, CPA",
-      title: "Tax Content Specialist",
-      license: "New York CPA License #XXXXXX",
-      bio: "Michael brings deep expertise in individual and corporate taxation from his career at regional and national firms. He understands the challenges of balancing CPA exam prep with demanding client work and brings practical insights to our tax content.",
-      experience: ["Tax Partner at Regional Firm", "15+ years in tax practice", "Specialized in partnership taxation"],
-      passedSections: ["FAR: 78", "AUD: 81", "REG: 91", "TCP: 88"],
-    },
-    {
-      name: "Jennifer Park, CPA",
-      title: "Audit & Attestation Specialist",
-      license: "Texas CPA License #XXXXXX",
-      bio: "Jennifer has spent her career in audit, from staff accountant to audit manager. She passed the CPA exam while raising two young children and working full-time, and she's passionate about helping working parents achieve their CPA goals.",
-      experience: ["Audit Manager at Big 4", "8+ years in public accounting", "Specialized in financial services"],
-      passedSections: ["FAR: 84", "AUD: 92", "REG: 79", "TCP: 83"],
-    },
-  ];
-
   return (
     <div>
       {/* Hero */}
@@ -40,10 +13,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Meet the CPAs Behind This Site
+              About CPA Exam Blueprint
             </h1>
             <p className="text-xl text-gray-200">
-              We&apos;re licensed CPAs who remember how challenging the exam was. We built this site to give you the guidance we wish we had.
+              An affordable study companion for CPA candidates who want quality practice without the premium price tag.
             </p>
           </div>
         </div>
@@ -54,111 +27,365 @@ export default function AboutPage() {
         <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">Our Mission</h2>
           <p className="text-lg text-[var(--muted)]">
-            We believe every CPA candidate deserves access to quality guidance - not just those who can afford expensive courses or have connections in the industry. Our mission is to provide free, expert-level CPA exam advice that helps you study smarter, avoid common mistakes, and pass the exam faster.
+            We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide an affordable alternative with quality practice questions, study tools, and progress tracking - at a fraction of what the big review courses charge.
           </p>
         </div>
 
-        {/* Why We Built This */}
+        {/* The Story */}
         <div className="bg-[var(--card)] p-8 rounded-xl border border-[var(--border)] mb-12">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Why We Built CPA Exam Blueprint</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <div className="w-12 h-12 bg-[var(--primary)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Why We Built This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--muted)]">
+            <p className="mb-4">
+              CPA Exam Blueprint was created by an accounting and business information systems graduate who saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still wanted structured study materials.
+            </p>
+            <p className="mb-4">
+              The big CPA review courses are excellent, but they&apos;re expensive. Not everyone has $2,500+ to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
+            </p>
+            <p>
+              We built CPA Exam Blueprint as a budget-friendly supplement - not a replacement for comprehensive courses, but a solid study aid with practice questions, progress tracking, and study planning tools.
+            </p>
+          </div>
+        </div>
+
+        {/* What We Offer */}
+        <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">What We Offer</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-[var(--primary)] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Too Much Conflicting Advice</h3>
-              <p className="text-[var(--muted)]">
-                Reddit, forums, and influencers all say different things. We wanted to provide one clear, CPA-vetted source of truth.
-              </p>
+              <div>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">600+ Practice Questions</h3>
+                <p className="text-[var(--muted)] text-sm">Multiple choice questions across all six CPA exam sections with detailed explanations.</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-[var(--secondary)] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-[var(--secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">Progress Tracking</h3>
+                <p className="text-[var(--muted)] text-sm">Track study hours, section progress, and quiz performance over time.</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-[var(--accent)] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">Study Planning</h3>
+                <p className="text-[var(--muted)] text-sm">Personalized study plans based on your schedule and timeline.</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-purple-500 bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">Gamification</h3>
+                <p className="text-[var(--muted)] text-sm">Earn badges, maintain study streaks, and stay motivated throughout your journey.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Important Disclaimer */}
+        <div className="bg-amber-50 border border-amber-200 p-8 rounded-xl mb-12">
+          <div className="flex items-start space-x-4">
+            <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
             </div>
             <div>
-              <div className="w-12 h-12 bg-[var(--secondary)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[var(--secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Guidance Shouldn&apos;t Cost Thousands</h3>
-              <p className="text-[var(--muted)]">
-                The CPA exam is already expensive. Basic guidance on how to study shouldn&apos;t add to that burden.
-              </p>
-            </div>
-            <div>
-              <div className="w-12 h-12 bg-[var(--accent)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">We Remember Being There</h3>
-              <p className="text-[var(--muted)]">
-                We know how stressful and confusing the CPA exam journey is. We want to make it easier for those who come after us.
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">Important: What We Are (and Aren&apos;t)</h3>
+              <ul className="space-y-2 text-amber-700">
+                <li className="flex items-start space-x-2">
+                  <span className="font-bold">✓</span>
+                  <span>We ARE an affordable study aid with practice questions and tracking tools</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="font-bold">✓</span>
+                  <span>Our questions are designed to help you practice accounting concepts</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="font-bold">✗</span>
+                  <span>We are NOT an official CPA review course</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="font-bold">✗</span>
+                  <span>Our questions are NOT sourced from or reviewed by the AICPA</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="font-bold">✗</span>
+                  <span>We do NOT guarantee exam passage</span>
+                </li>
+              </ul>
+              <p className="mt-4 text-amber-700 text-sm">
+                We&apos;re transparent about what we offer. If you need a comprehensive review course with official exam simulations, we recommend looking at established providers like Becker, Surgent, or Roger CPA Review.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Team */}
-        <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8">Our Team</h2>
-        <div className="space-y-8 mb-12">
-          {team.map((member, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl border border-[var(--border)]">
-              <div className="flex flex-col md:flex-row gap-8">
-                {/* Avatar */}
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 bg-[var(--primary)] rounded-full flex items-center justify-center">
-                    <span className="text-3xl font-bold text-white">
-                      {member.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
-                    </span>
-                  </div>
-                </div>
-                {/* Info */}
-                <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-[var(--foreground)]">{member.name}</h3>
-                  <p className="text-[var(--primary)] font-medium">{member.title}</p>
-                  <p className="text-sm text-[var(--muted)] mb-4">{member.license}</p>
-                  <p className="text-[var(--muted)] mb-4">{member.bio}</p>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-[var(--foreground)] mb-2">Experience</h4>
-                      <ul className="space-y-1">
-                        {member.experience.map((exp, i) => (
-                          <li key={i} className="text-sm text-[var(--muted)] flex items-center space-x-2">
-                            <svg className="w-4 h-4 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                            </svg>
-                            <span>{exp}</span>
-                          </li>
-                        ))}
-                      </ul>
+        {/* Comparison Table */}
+        <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">How We Compare</h2>
+          <p className="text-[var(--muted)] mb-6">
+            Here&apos;s an honest comparison with major CPA review providers. Choose what fits your budget and needs.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-[var(--border)]">
+                  <th className="text-left py-4 px-3 font-semibold text-[var(--foreground)]">Feature</th>
+                  <th className="text-center py-4 px-3 font-semibold text-[var(--primary)] bg-[var(--primary)]/5">
+                    <div className="flex flex-col items-center">
+                      <span>CPA Exam Blueprint</span>
+                      <span className="text-xs font-normal mt-1">
+                        <span className="line-through text-[var(--muted)]">$99-$199</span>{" "}
+                        <span className="text-[var(--primary)] font-semibold">$79-$149</span>
+                      </span>
                     </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-[var(--foreground)] mb-2">CPA Exam Scores</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.passedSections.map((score, i) => (
-                          <span key={i} className="px-3 py-1 bg-[var(--card)] rounded-full text-sm text-[var(--foreground)]">
-                            {score}
-                          </span>
-                        ))}
-                      </div>
+                  </th>
+                  <th className="text-center py-4 px-3 font-semibold text-[var(--foreground)]">
+                    <div className="flex flex-col items-center">
+                      <span>Becker</span>
+                      <span className="text-xs font-normal text-[var(--muted)] mt-1">$2,499-$3,799</span>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+                  </th>
+                  <th className="text-center py-4 px-3 font-semibold text-[var(--foreground)]">
+                    <div className="flex flex-col items-center">
+                      <span>Surgent</span>
+                      <span className="text-xs font-normal text-[var(--muted)] mt-1">$1,599-$2,999</span>
+                    </div>
+                  </th>
+                  <th className="text-center py-4 px-3 font-semibold text-[var(--foreground)]">
+                    <div className="flex flex-col items-center">
+                      <span>Roger CPA</span>
+                      <span className="text-xs font-normal text-[var(--muted)] mt-1">$1,899-$3,499</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[var(--border)]">
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Practice Questions</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <span className="text-[var(--foreground)]">600+</span>
+                  </td>
+                  <td className="py-4 px-3 text-center text-[var(--foreground)]">9,000+</td>
+                  <td className="py-4 px-3 text-center text-[var(--foreground)]">7,700+</td>
+                  <td className="py-4 px-3 text-center text-[var(--foreground)]">6,000+</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Video Lectures</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Task-Based Simulations</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Progress Tracking</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Study Planning Tools</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Gamification & Streaks</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">NTS Expiration Tracking</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Pass Guarantee</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="py-4 px-3 text-[var(--foreground)] font-bold">Price</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/10">
+                    <div className="flex flex-col items-center gap-1">
+                      <span className="text-sm line-through text-[var(--muted)]">$99-$199</span>
+                      <span className="text-xl font-bold text-[var(--primary)]">$79-$149</span>
+                    </div>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <span className="text-lg font-semibold text-[var(--foreground)]">$2,499-$3,799</span>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <span className="text-lg font-semibold text-[var(--foreground)]">$1,599-$2,999</span>
+                  </td>
+                  <td className="py-4 px-3 text-center">
+                    <span className="text-lg font-semibold text-[var(--foreground)]">$1,899-$3,499</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
+            <p className="text-sm text-[var(--muted)]">
+              <strong className="text-[var(--foreground)]">Bottom line:</strong> If you need comprehensive video lectures, task-based simulations, and a pass guarantee, the premium courses are worth considering. But if you&apos;re looking for affordable practice questions and study tools to supplement your learning, CPA Exam Blueprint offers great value at a fraction of the cost.
+            </p>
+          </div>
         </div>
 
-        {/* Credentials & Transparency */}
+        {/* Our Commitment */}
         <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Our Commitment to Transparency</h2>
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Our Commitment to You</h2>
           <div className="space-y-4">
             <div className="flex items-start space-x-3">
               <svg className="w-5 h-5 text-[var(--secondary)] mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <p className="text-[var(--muted)]">
-                <strong className="text-[var(--foreground)]">All content is reviewed by licensed CPAs.</strong> Every article, study guide, and recommendation on this site has been written or reviewed by a CPA with active credentials.
+                <strong className="text-[var(--foreground)]">Honest pricing.</strong> No hidden fees, no surprise charges. What you see is what you pay.
               </p>
             </div>
             <div className="flex items-start space-x-3">
@@ -166,7 +393,7 @@ export default function AboutPage() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <p className="text-[var(--muted)]">
-                <strong className="text-[var(--foreground)]">We clearly disclose affiliate relationships.</strong> When we recommend a product and receive compensation, we tell you. Our recommendations are based on quality, not commissions.
+                <strong className="text-[var(--foreground)]">Quality content.</strong> All questions are reviewed for accuracy and relevance to current CPA exam topics.
               </p>
             </div>
             <div className="flex items-start space-x-3">
@@ -174,7 +401,7 @@ export default function AboutPage() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <p className="text-[var(--muted)]">
-                <strong className="text-[var(--foreground)]">We don&apos;t sell your data.</strong> Your email is used only to deliver your study plan and occasional helpful updates. We never sell or share your information with third parties.
+                <strong className="text-[var(--foreground)]">Continuous improvement.</strong> We regularly update content based on exam changes and user feedback.
               </p>
             </div>
             <div className="flex items-start space-x-3">
@@ -182,7 +409,7 @@ export default function AboutPage() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <p className="text-[var(--muted)]">
-                <strong className="text-[var(--foreground)]">We update content regularly.</strong> The CPA exam changes, and so do we. We review and update our content to ensure it reflects current exam standards and best practices.
+                <strong className="text-[var(--foreground)]">We don&apos;t sell your data.</strong> Your email is used only for account access and occasional updates. We never sell or share your information.
               </p>
             </div>
           </div>
@@ -190,15 +417,15 @@ export default function AboutPage() {
 
         {/* CTA */}
         <div className="bg-[var(--primary)] p-8 rounded-xl text-white text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to Start Your CPA Journey?</h2>
+          <h2 className="text-2xl font-bold mb-4">Ready to Start Studying?</h2>
           <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-            Get your personalized study plan created with the methodology we wish we had when we started.
+            Get access to 600+ practice questions and study tools at a price that won&apos;t break the bank.
           </p>
           <Link
-            href="/study-plan"
+            href="/signup"
             className="inline-block bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Build My Free Study Plan
+            Get Started Today
           </Link>
         </div>
       </div>

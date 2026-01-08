@@ -1,0 +1,432 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Stock-Based Compensation",
+    "batchNumber": 13,
+    "questionCount": 20,
+    "weight": "4%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-stock-001",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Stock Options Basics",
+      "conceptTested": "Fair value measurement date",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under ASC 718, compensation cost for employee stock options is measured at:",
+      "options": {
+        "A": "The exercise date",
+        "B": "The grant date",
+        "C": "The vesting date",
+        "D": "The settlement date"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 718 requires that compensation cost for employee stock options be measured at the grant date based on the fair value of the award. The grant date is when the employer and employee have a mutual understanding of the key terms and conditions.",
+      "tip": "Grant date = measurement date for employee awards.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-stock-002",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Stock Options Basics",
+      "conceptTested": "Recognition period",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Compensation expense for stock options granted to employees is recognized over:",
+      "options": {
+        "A": "The option's contractual term",
+        "B": "The requisite service period (typically the vesting period)",
+        "C": "The period from grant date to exercise date",
+        "D": "The fiscal year of the grant"
+      },
+      "correctAnswer": "B",
+      "explanation": "Compensation expense is recognized over the requisite service period, which is typically the vesting period. This matches the expense to the periods in which the employee provides service to earn the award.",
+      "tip": "Service period = vesting period for most stock options.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-stock-003",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Fair Value Methods",
+      "conceptTested": "Option pricing models",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which of the following is NOT a common method for estimating the fair value of stock options?",
+      "options": {
+        "A": "Black-Scholes-Merton model",
+        "B": "Lattice (binomial) model",
+        "C": "Monte Carlo simulation",
+        "D": "Intrinsic value method"
+      },
+      "correctAnswer": "D",
+      "explanation": "The intrinsic value method is not a fair value method—it measures the difference between the stock price and exercise price. ASC 718 requires fair value measurement using models like Black-Scholes, lattice models, or Monte Carlo simulations.",
+      "tip": "Intrinsic value ≠ fair value. Fair value uses option pricing models.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-stock-004",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Stock Options Calculation",
+      "conceptTested": "Total compensation expense calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "On January 1, Year 1, ABC Corp granted 10,000 stock options to employees with a fair value of $8 per option. The options vest ratably over 4 years. What is the compensation expense for Year 1?",
+      "options": {
+        "A": "$10,000",
+        "B": "$20,000",
+        "C": "$40,000",
+        "D": "$80,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Total compensation = 10,000 options × $8 = $80,000. With ratable vesting over 4 years, Year 1 expense = $80,000 ÷ 4 = $20,000.",
+      "tip": "Total fair value ÷ vesting period = annual expense (straight-line).",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-stock-005",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Forfeitures",
+      "conceptTested": "Forfeiture accounting treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under current GAAP, how should a company account for stock option forfeitures?",
+      "options": {
+        "A": "Estimate forfeitures at grant date and adjust each period",
+        "B": "Recognize forfeitures only when they occur",
+        "C": "Either estimate forfeitures or recognize when they occur (accounting policy election)",
+        "D": "Ignore forfeitures in compensation expense calculation"
+      },
+      "correctAnswer": "C",
+      "explanation": "ASC 718 allows companies to make an accounting policy election to either estimate forfeitures at the grant date or recognize forfeitures as they occur. This election must be applied consistently.",
+      "tip": "Forfeitures: estimate OR actual—it's an accounting policy choice.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-stock-006",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Journal Entries",
+      "conceptTested": "Stock option expense entry",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "When recording compensation expense for stock options, the credit is recorded to:",
+      "options": {
+        "A": "Common Stock",
+        "B": "Additional Paid-in Capital—Stock Options",
+        "C": "Retained Earnings",
+        "D": "Stock Options Payable"
+      },
+      "correctAnswer": "B",
+      "explanation": "The journal entry to record stock option compensation expense is: Debit Compensation Expense, Credit Additional Paid-in Capital—Stock Options (or APIC—Stock Options). This reflects the equity nature of the award.",
+      "tip": "Stock option expense: Dr. Compensation Expense, Cr. APIC—Stock Options.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-stock-007",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Exercise of Options",
+      "conceptTested": "Journal entry at exercise",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "An employee exercises 1,000 stock options with an exercise price of $25 per share. The options had a grant-date fair value of $10 per option (already expensed). Par value is $1. What is the total credit to Common Stock and APIC combined?",
+      "options": {
+        "A": "$25,000",
+        "B": "$35,000",
+        "C": "$26,000",
+        "D": "$36,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cash received = 1,000 × $25 = $25,000. APIC—Stock Options reclassified = 1,000 × $10 = $10,000. Total credited to Common Stock ($1,000 at par) and APIC ($34,000) = $35,000.",
+      "tip": "Exercise: Cash + APIC reclassified = total credits to stock accounts.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-stock-008",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Restricted Stock",
+      "conceptTested": "Restricted stock measurement",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Restricted stock granted to employees is measured at:",
+      "options": {
+        "A": "Zero, since no cash is exchanged",
+        "B": "The stock's intrinsic value at grant date",
+        "C": "The stock's fair value at grant date",
+        "D": "The stock's fair value at vesting date"
+      },
+      "correctAnswer": "C",
+      "explanation": "Restricted stock is measured at the fair value of the stock at the grant date. Since restricted stock is actual shares (not options), the fair value equals the stock price on the grant date.",
+      "tip": "Restricted stock fair value = stock price at grant date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-stock-009",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Restricted Stock Units",
+      "conceptTested": "RSU vs restricted stock",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A key difference between restricted stock and restricted stock units (RSUs) is:",
+      "options": {
+        "A": "RSUs are always cash-settled",
+        "B": "Restricted stock shareholders receive dividends during the vesting period; RSU holders typically do not",
+        "C": "RSUs must be expensed over a longer period",
+        "D": "Restricted stock is measured at intrinsic value while RSUs are measured at fair value"
+      },
+      "correctAnswer": "B",
+      "explanation": "Restricted stock grants actual shares at the grant date, so recipients typically receive dividends during vesting. RSU holders receive shares (or cash) only upon vesting and typically do not receive dividends until then.",
+      "tip": "Restricted stock = actual shares (dividends). RSUs = promise of shares (no dividends until vesting).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-stock-010",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Performance Conditions",
+      "conceptTested": "Performance condition accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Stock options with a performance condition (e.g., achieving target EPS) are accounted for by:",
+      "options": {
+        "A": "Recognizing expense only if performance target is probable of being achieved",
+        "B": "Always recognizing expense regardless of probability",
+        "C": "Reducing the fair value of the option by the probability of achieving the target",
+        "D": "Delaying all expense recognition until the performance period ends"
+      },
+      "correctAnswer": "A",
+      "explanation": "For performance conditions, compensation expense is recognized only if it is probable the condition will be achieved. The probability assessment is updated each period, with cumulative adjustments to expense.",
+      "tip": "Performance conditions: recognize expense if probable of achievement.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-stock-011",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Market Conditions",
+      "conceptTested": "Market condition accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Stock options with a market condition (e.g., stock price must reach $50) are accounted for by:",
+      "options": {
+        "A": "Recognizing expense only if the market condition is achieved",
+        "B": "Incorporating the market condition into the grant-date fair value and recognizing expense regardless of outcome",
+        "C": "Adjusting expense each period based on likelihood of achieving the market condition",
+        "D": "Using intrinsic value instead of fair value"
+      },
+      "correctAnswer": "B",
+      "explanation": "Market conditions are incorporated into the grant-date fair value using option pricing models. Compensation expense is recognized regardless of whether the market condition is ultimately achieved (no true-up).",
+      "tip": "Market conditions: baked into fair value, expense recognized regardless of outcome.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-stock-012",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Stock Options Calculation",
+      "conceptTested": "Graded vesting expense",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "On January 1, Year 1, XYZ Corp granted 9,000 stock options with a fair value of $12 per option. The options vest in three tranches: 3,000 at end of Year 1, 3,000 at end of Year 2, and 3,000 at end of Year 3. Using the accelerated method, what is Year 1 compensation expense?",
+      "options": {
+        "A": "$36,000",
+        "B": "$54,000",
+        "C": "$66,000",
+        "D": "$108,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Tranche 1 (vests in 1 year): 3,000 × $12 = $36,000 in Year 1. Tranche 2 (vests in 2 years): 3,000 × $12 ÷ 2 = $18,000 in Year 1. Tranche 3 (vests in 3 years): 3,000 × $12 ÷ 3 = $12,000 in Year 1. Total Year 1 = $66,000.",
+      "tip": "Graded vesting (accelerated): treat each tranche as separate award.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 150
+    },
+    {
+      "id": "far-stock-013",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Modifications",
+      "conceptTested": "Option modification accounting",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When a company modifies employee stock options to increase their fair value, the incremental compensation cost is:",
+      "options": {
+        "A": "Recognized immediately as an expense",
+        "B": "Recognized over the remaining vesting period",
+        "C": "Not recognized; original fair value is maintained",
+        "D": "Recognized over the original vesting period"
+      },
+      "correctAnswer": "B",
+      "explanation": "When stock options are modified, the incremental fair value (new fair value minus old fair value at modification date) is recognized over the remaining vesting period. The original compensation cost continues to be recognized.",
+      "tip": "Modification: incremental value over remaining vesting period.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-stock-014",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Tax Effects",
+      "conceptTested": "Deferred tax for stock compensation",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "During the vesting period, a company records a deferred tax asset related to stock compensation based on:",
+      "options": {
+        "A": "The cumulative book compensation expense",
+        "B": "The intrinsic value of the options",
+        "C": "The tax deduction that will be received at exercise",
+        "D": "Zero, since stock compensation creates a permanent difference"
+      },
+      "correctAnswer": "A",
+      "explanation": "A deferred tax asset is recorded based on cumulative book compensation expense multiplied by the tax rate. This creates a temporary difference because the tax deduction occurs at exercise (based on intrinsic value) rather than over the vesting period.",
+      "tip": "DTA during vesting = cumulative book expense × tax rate.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-stock-015",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Stock Appreciation Rights",
+      "conceptTested": "SAR classification and measurement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Cash-settled stock appreciation rights (SARs) are classified as:",
+      "options": {
+        "A": "Equity awards measured at grant-date fair value",
+        "B": "Liability awards remeasured each period",
+        "C": "Equity awards with no expense recognition",
+        "D": "Off-balance-sheet items"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cash-settled SARs are classified as liability awards because they will be settled in cash. As liability awards, they are remeasured at fair value each reporting period until settlement, with changes in expense.",
+      "tip": "Cash-settled = liability = remeasure each period.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-stock-016",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Employee Stock Purchase Plans",
+      "conceptTested": "ESPP compensatory criteria",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An employee stock purchase plan (ESPP) is noncompensatory if it meets certain criteria, including a purchase discount of no more than:",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "15%",
+        "D": "20%"
+      },
+      "correctAnswer": "A",
+      "explanation": "An ESPP is noncompensatory (no compensation expense) if: (1) it is available to substantially all employees, (2) the discount is 5% or less, and (3) the plan has no option features. A discount over 5% makes the plan compensatory.",
+      "tip": "ESPP noncompensatory: ≤5% discount, available to all, no option features.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-stock-017",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Nonemployee Awards",
+      "conceptTested": "Nonemployee measurement",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under current GAAP, stock-based compensation awards to nonemployees are:",
+      "options": {
+        "A": "Measured at the fair value of goods/services received",
+        "B": "Accounted for the same as employee awards (grant-date fair value)",
+        "C": "Not permitted",
+        "D": "Always measured at intrinsic value"
+      },
+      "correctAnswer": "B",
+      "explanation": "After ASU 2018-07, nonemployee share-based payments are accounted for the same as employee awards—measured at grant-date fair value and recognized over the vesting/service period.",
+      "tip": "Post-2018: nonemployee awards = same as employee awards.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-stock-018",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Option Expiration",
+      "conceptTested": "Unexercised option accounting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "When vested employee stock options expire unexercised, the company should:",
+      "options": {
+        "A": "Reverse the previously recognized compensation expense",
+        "B": "Recognize a gain in the income statement",
+        "C": "Make no adjustment; the APIC remains in equity",
+        "D": "Transfer the amount from APIC to retained earnings"
+      },
+      "correctAnswer": "C",
+      "explanation": "When vested options expire unexercised, no adjustment is made. The amount in APIC—Stock Options remains in equity. The compensation was earned by the employee through service, regardless of whether they exercised.",
+      "tip": "Expired vested options: no reversal, APIC stays put.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-stock-019",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Black-Scholes Inputs",
+      "conceptTested": "Option pricing model inputs",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which of the following is NOT a typical input to the Black-Scholes option pricing model?",
+      "options": {
+        "A": "Expected volatility",
+        "B": "Risk-free interest rate",
+        "C": "Company's debt-to-equity ratio",
+        "D": "Expected term of the option"
+      },
+      "correctAnswer": "C",
+      "explanation": "Black-Scholes inputs include: current stock price, exercise price, expected term, risk-free rate, expected volatility, and expected dividends. The company's debt-to-equity ratio is not a direct input.",
+      "tip": "Black-Scholes inputs: stock price, strike, term, rate, volatility, dividends.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-stock-020",
+      "section": "FAR",
+      "topic": "Stock-Based Compensation",
+      "subtopic": "Service Conditions",
+      "conceptTested": "Service condition accounting",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "A service condition for stock options (e.g., must remain employed for 3 years) affects:",
+      "options": {
+        "A": "The fair value of the award",
+        "B": "The period over which expense is recognized",
+        "C": "Whether the award is classified as equity or liability",
+        "D": "The measurement date"
+      },
+      "correctAnswer": "B",
+      "explanation": "Service conditions affect the requisite service period (vesting period) over which compensation expense is recognized. They do not affect the grant-date fair value calculation.",
+      "tip": "Service conditions = when to expense (not fair value).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

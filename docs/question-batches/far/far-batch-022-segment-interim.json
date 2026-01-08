@@ -1,0 +1,537 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Segment Reporting and Interim Reporting",
+    "batchNumber": 22,
+    "questionCount": 25,
+    "weight": "3%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-segment-001",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Segment Basics",
+      "conceptTested": "Segment reporting applicability",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Segment reporting is required for:",
+      "options": {
+        "A": "All companies",
+        "B": "Public companies whose securities are traded on public markets",
+        "C": "Only companies with international operations",
+        "D": "Companies with more than $100 million in revenue"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASC 280 requires segment reporting for public entities whose debt or equity securities are traded in public markets or that are in the process of issuing such securities.",
+      "tip": "Segment reporting: required for public companies.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-segment-002",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Management Approach",
+      "conceptTested": "Segment identification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the management approach, operating segments are identified based on:",
+      "options": {
+        "A": "Industry classifications",
+        "B": "Geographic regions",
+        "C": "How management organizes the entity for making operating decisions and assessing performance",
+        "D": "Legal entity structure"
+      },
+      "correctAnswer": "C",
+      "explanation": "The management approach identifies segments based on how the chief operating decision maker (CODM) organizes the entity internally for decision-making and performance evaluation.",
+      "tip": "Management approach: segments match internal reporting.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-003",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Operating Segment",
+      "conceptTested": "Operating segment criteria",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An operating segment must have all of the following characteristics EXCEPT:",
+      "options": {
+        "A": "Engages in business activities that may generate revenues and incur expenses",
+        "B": "Operating results are regularly reviewed by the CODM",
+        "C": "Discrete financial information is available",
+        "D": "Annual revenues exceed $10 million"
+      },
+      "correctAnswer": "D",
+      "explanation": "Operating segments must: engage in revenue/expense activities, have results reviewed by CODM, and have discrete financial information. There's no specific revenue threshold for being an operating segment.",
+      "tip": "No minimum revenue to BE an operating segment.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-004",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Quantitative Thresholds",
+      "conceptTested": "10% tests",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An operating segment is separately reportable if it meets any of the following thresholds:",
+      "options": {
+        "A": "5% of revenue, assets, or profit/loss",
+        "B": "10% of revenue, assets, or absolute value of profit/loss",
+        "C": "15% of revenue only",
+        "D": "20% of total company size"
+      },
+      "correctAnswer": "B",
+      "explanation": "An operating segment is reportable if its revenue, assets, or the absolute value of its profit/loss is 10% or more of the combined totals of all operating segments.",
+      "tip": "10% test: revenue, assets, or profit/loss (absolute value).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-005",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "75% Test",
+      "conceptTested": "Minimum external revenue",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "The 75% test requires that reportable segments must represent at least 75% of:",
+      "options": {
+        "A": "Total consolidated assets",
+        "B": "Total combined operating segment revenue",
+        "C": "Consolidated external revenue",
+        "D": "Total consolidated profit"
+      },
+      "correctAnswer": "C",
+      "explanation": "The 75% test requires that reportable segments must include enough segments so that their external revenues equal at least 75% of consolidated external revenues.",
+      "tip": "75% test = enough segments to cover 75% of external revenue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-006",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Segment Disclosures",
+      "conceptTested": "Required segment information",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Required disclosures for reportable segments include:",
+      "options": {
+        "A": "Only revenues and net income",
+        "B": "Factors used to identify segments, products/services, and specified financial information",
+        "C": "Only segment assets",
+        "D": "Budgeted versus actual results"
+      },
+      "correctAnswer": "B",
+      "explanation": "Segment disclosures include: how segments are determined, products/services, segment profit/loss, segment assets, and reconciliations to consolidated amounts.",
+      "tip": "Segment disclosures: identification + financials + reconciliation.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-007",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Geographic Information",
+      "conceptTested": "Enterprise-wide disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Enterprise-wide geographic disclosures require reporting:",
+      "options": {
+        "A": "Only domestic versus foreign",
+        "B": "Revenues from external customers and long-lived assets by country if material",
+        "C": "Segment profit by region",
+        "D": "Employee count by location"
+      },
+      "correctAnswer": "B",
+      "explanation": "Geographic disclosures require revenues from external customers and long-lived assets attributed to the domestic country and foreign countries (separately if material).",
+      "tip": "Geographic: revenue and long-lived assets by country.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-008",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Major Customers",
+      "conceptTested": "Customer concentration",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Disclosure about major customers is required when:",
+      "options": {
+        "A": "Any customer represents more than 5% of revenue",
+        "B": "Any single customer represents 10% or more of total revenue",
+        "C": "The company has fewer than 10 customers",
+        "D": "Customers are governmental entities"
+      },
+      "correctAnswer": "B",
+      "explanation": "If revenues from a single external customer are 10% or more of total enterprise revenue, the entity must disclose that fact, the amount from each such customer, and the segment(s) reporting those revenues.",
+      "tip": "Major customer disclosure: ≥10% of total revenue.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-009",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Segment Calculation",
+      "conceptTested": "10% revenue test",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Total revenue of all operating segments is $50 million. Which segment is reportable under the revenue test?",
+      "options": {
+        "A": "Segment A with $4 million revenue",
+        "B": "Segment B with $5 million revenue",
+        "C": "Segment C with $3 million revenue",
+        "D": "Both A and B"
+      },
+      "correctAnswer": "B",
+      "explanation": "10% threshold = $50 million × 10% = $5 million. Only Segment B meets this threshold exactly.",
+      "tip": "Segment revenue ≥ 10% of combined = reportable.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-010",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "CODM",
+      "conceptTested": "Chief operating decision maker",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The chief operating decision maker (CODM) is:",
+      "options": {
+        "A": "Always the CEO",
+        "B": "A function, not necessarily a single individual, that allocates resources and assesses performance",
+        "C": "The CFO",
+        "D": "The board of directors"
+      },
+      "correctAnswer": "B",
+      "explanation": "The CODM is a function, which may be the CEO, a group of executives, or the board. The function allocates resources to and assesses performance of operating segments.",
+      "tip": "CODM = function (may be individual or group).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-011",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Interim Basics",
+      "conceptTested": "Interim period view",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under U.S. GAAP, interim periods are viewed as:",
+      "options": {
+        "A": "Discrete periods standing alone",
+        "B": "Integral parts of the annual period",
+        "C": "Either discrete or integral, depending on the company",
+        "D": "Only for quarterly SEC filings"
+      },
+      "correctAnswer": "B",
+      "explanation": "U.S. GAAP views interim periods as integral parts of the annual period. This affects how certain items (like taxes and bonuses) are allocated across quarters.",
+      "tip": "GAAP: interim = integral part of annual.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-segment-012",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Revenue Recognition",
+      "conceptTested": "Interim revenue",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Revenue recognition principles for interim periods are:",
+      "options": {
+        "A": "Different from annual periods",
+        "B": "The same as annual periods",
+        "C": "Based on cash receipts only",
+        "D": "Estimated based on prior year"
+      },
+      "correctAnswer": "B",
+      "explanation": "Revenue recognition principles are the same for interim and annual periods. Revenue is recognized when performance obligations are satisfied, regardless of the reporting period.",
+      "tip": "Interim revenue = same rules as annual.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-segment-013",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Income Taxes",
+      "conceptTested": "Estimated annual effective tax rate",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Interim income tax expense is typically computed using:",
+      "options": {
+        "A": "The statutory tax rate",
+        "B": "The estimated annual effective tax rate applied to year-to-date income",
+        "C": "Last year's effective tax rate",
+        "D": "A flat 21% rate"
+      },
+      "correctAnswer": "B",
+      "explanation": "Interim tax expense is calculated by applying the estimated annual effective tax rate to year-to-date ordinary income, then determining the current period's portion.",
+      "tip": "Interim tax: estimated annual effective rate × YTD income.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-014",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Income Tax Calculation",
+      "conceptTested": "Quarterly tax computation",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Q1 pre-tax income is $100,000; Q2 is $150,000. Estimated annual effective tax rate is 30%. What is Q2 income tax expense?",
+      "options": {
+        "A": "$30,000",
+        "B": "$45,000",
+        "C": "$75,000",
+        "D": "$105,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "YTD income through Q2: $250,000. YTD tax: $250,000 × 30% = $75,000. Q1 tax was: $100,000 × 30% = $30,000. Q2 tax = $75,000 - $30,000 = $45,000.",
+      "tip": "Q2 tax = (YTD income × rate) - Q1 tax expense.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-segment-015",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Inventory Losses",
+      "conceptTested": "Interim inventory writedown",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When inventory market value declines below cost in an interim period but is expected to recover by year-end:",
+      "options": {
+        "A": "The loss must be recognized immediately",
+        "B": "The loss may be deferred if recovery is expected",
+        "C": "No disclosure is required",
+        "D": "The loss is split over remaining quarters"
+      },
+      "correctAnswer": "B",
+      "explanation": "If inventory market decline is expected to be temporary and recover by year-end, the loss may be deferred. However, if not expected to recover, it must be recognized immediately.",
+      "tip": "Interim inventory loss: defer if recovery expected by year-end.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-016",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "LIFO Liquidation",
+      "conceptTested": "Interim LIFO",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If a temporary LIFO liquidation occurs in an interim period but is expected to be replaced by year-end:",
+      "options": {
+        "A": "Report the liquidation gain",
+        "B": "Charge cost of sales at expected replacement cost",
+        "C": "Use FIFO for that quarter only",
+        "D": "Report no cost of sales"
+      },
+      "correctAnswer": "B",
+      "explanation": "For temporary LIFO liquidations expected to be replaced, cost of sales is charged at expected replacement cost (not the old LIFO cost). This prevents temporary earnings distortion.",
+      "tip": "Temporary LIFO liquidation: use replacement cost in interim.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-017",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Costs and Expenses",
+      "conceptTested": "Cost allocation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Costs that benefit more than one interim period should be:",
+      "options": {
+        "A": "Expensed entirely in the first quarter",
+        "B": "Allocated among periods benefited on a reasonable basis",
+        "C": "Deferred until year-end",
+        "D": "Capitalized as an asset"
+      },
+      "correctAnswer": "B",
+      "explanation": "Costs benefiting multiple interim periods (like annual insurance) should be allocated on a systematic and rational basis to the periods that benefit.",
+      "tip": "Multi-period costs: allocate to periods benefited.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-018",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Seasonal Revenue",
+      "conceptTested": "Seasonal business treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For highly seasonal businesses, annual costs should be:",
+      "options": {
+        "A": "Deferred to the peak season",
+        "B": "Expensed as incurred, even if creating interim losses",
+        "C": "Allocated evenly across all quarters",
+        "D": "Recognized in the fourth quarter only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Costs are generally expensed as incurred. For seasonal businesses, this may result in losses in off-season quarters. Arbitrary allocation is not permitted.",
+      "tip": "Seasonal business: expense as incurred, may have interim losses.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-019",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Extraordinary Items",
+      "conceptTested": "Unusual items interim treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Material unusual or infrequent items in interim periods should be:",
+      "options": {
+        "A": "Spread over all four quarters",
+        "B": "Recognized in the interim period in which they occur",
+        "C": "Deferred to year-end reporting",
+        "D": "Recognized only if gain"
+      },
+      "correctAnswer": "B",
+      "explanation": "Unusual or infrequent items are recognized in the interim period when they occur, not spread over multiple periods or deferred.",
+      "tip": "Unusual items: recognize in period incurred.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-020",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Accounting Changes",
+      "conceptTested": "Interim accounting change",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An accounting change made in an interim period is applied:",
+      "options": {
+        "A": "Only to subsequent quarters",
+        "B": "Retrospectively as if made at the beginning of the fiscal year",
+        "C": "Only in the annual report",
+        "D": "Prospectively from the quarter of change"
+      },
+      "correctAnswer": "B",
+      "explanation": "Accounting changes in interim periods are applied retrospectively, including restatement of previously reported interim periods of that fiscal year, as if the change was made at year's beginning.",
+      "tip": "Interim accounting change: retroactive to beginning of fiscal year.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-021",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Minimum Disclosures",
+      "conceptTested": "Required interim disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Minimum interim disclosures include:",
+      "options": {
+        "A": "Only revenue and net income",
+        "B": "Sales/revenues, seasonal aspects, unusual items, contingencies, and changes in accounting",
+        "C": "Full annual disclosure requirements",
+        "D": "Only balance sheet information"
+      },
+      "correctAnswer": "B",
+      "explanation": "Minimum interim disclosures include: sales, seasonal revenue variations, unusual items, contingency changes, accounting changes, segment information, and other material items.",
+      "tip": "Interim disclosures: key items, not full annual detail.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-022",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Aggregation Criteria",
+      "conceptTested": "Combining segments",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Two or more operating segments may be aggregated if they have similar:",
+      "options": {
+        "A": "Revenue levels only",
+        "B": "Economic characteristics and similar products, production, customers, distribution, and regulatory environment",
+        "C": "Geographic locations",
+        "D": "Number of employees"
+      },
+      "correctAnswer": "B",
+      "explanation": "Aggregation is permitted if segments have similar economic characteristics and are similar in all of: nature of products/services, production processes, customer types, distribution methods, and regulatory environment.",
+      "tip": "Aggregation: similar economics + 5 qualitative factors.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-segment-023",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Reconciliations",
+      "conceptTested": "Segment to consolidated reconciliation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Segment disclosures must include reconciliations between:",
+      "options": {
+        "A": "Budget and actual",
+        "B": "Total segment amounts and consolidated financial statement amounts",
+        "C": "Current year and prior year",
+        "D": "Domestic and foreign amounts"
+      },
+      "correctAnswer": "B",
+      "explanation": "Reconciliations are required between total segment revenues, profit/loss, assets, and other significant items to the corresponding consolidated amounts.",
+      "tip": "Reconcile: segment totals to consolidated totals.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-024",
+      "section": "FAR",
+      "topic": "Interim Reporting",
+      "subtopic": "Year-End Adjustments",
+      "conceptTested": "Q4 adjustments",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When year-end adjustments significantly affect Q4 results:",
+      "options": {
+        "A": "They should be allocated to all quarters",
+        "B": "The nature and amount must be disclosed in Q4 or annual report",
+        "C": "They should be deferred to the next year",
+        "D": "No special disclosure is required"
+      },
+      "correctAnswer": "B",
+      "explanation": "Material year-end adjustments affecting Q4 must be disclosed, including their nature and amount, to avoid misleading quarterly comparisons.",
+      "tip": "Material Q4 adjustments require disclosure.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-segment-025",
+      "section": "FAR",
+      "topic": "Segment Reporting",
+      "subtopic": "Practical Limit",
+      "conceptTested": "Maximum reportable segments",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "ASC 280 suggests that the number of reportable segments:",
+      "options": {
+        "A": "Must be exactly 5",
+        "B": "Should generally not exceed 10",
+        "C": "Has no limit",
+        "D": "Must be at least 3"
+      },
+      "correctAnswer": "B",
+      "explanation": "While there's no strict maximum, ASC 280 notes that if the number of reportable segments exceeds 10, the entity should consider whether a practical limit has been reached.",
+      "tip": "Practical limit: ~10 reportable segments.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

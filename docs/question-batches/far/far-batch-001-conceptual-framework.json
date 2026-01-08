@@ -1,0 +1,762 @@
+[
+  {
+    "id": "far-cf-001",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Objective of financial reporting",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "According to the FASB Conceptual Framework, what is the primary objective of general-purpose financial reporting?",
+    "options": {
+      "A": "To provide information useful for making decisions about providing resources to the entity",
+      "B": "To determine the amount of taxes owed to governmental authorities",
+      "C": "To calculate the exact market value of an entity at a point in time",
+      "D": "To provide management with operational efficiency metrics"
+    },
+    "correctAnswer": "A",
+    "explanation": "The FASB Conceptual Framework states that the objective of general-purpose financial reporting is to provide financial information about the reporting entity that is useful to existing and potential investors, lenders, and other creditors in making decisions about providing resources to the entity. Tax calculations and operational metrics are not the primary objective of financial reporting under GAAP.",
+    "tip": "Remember: Financial reporting serves external users (investors, creditors) making resource allocation decisions."
+  },
+  {
+    "id": "far-cf-002",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Primary users of financial statements",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under the FASB Conceptual Framework, who are identified as the primary users of general-purpose financial reports?",
+    "options": {
+      "A": "Management and the board of directors",
+      "B": "Existing and potential investors, lenders, and other creditors",
+      "C": "Regulatory agencies and tax authorities",
+      "D": "Employees and labor unions"
+    },
+    "correctAnswer": "B",
+    "explanation": "The Conceptual Framework identifies existing and potential investors, lenders, and other creditors as the primary users of general-purpose financial reports. These users cannot require entities to provide information directly to them and must rely on general-purpose financial reports. While other stakeholders may use financial reports, they are not considered primary users under the framework.",
+    "tip": "Primary users = capital providers who cannot demand custom reports."
+  },
+  {
+    "id": "far-cf-003",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Fundamental qualitative characteristics",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Which of the following are the two fundamental qualitative characteristics of useful financial information?",
+    "options": {
+      "A": "Comparability and timeliness",
+      "B": "Relevance and faithful representation",
+      "C": "Understandability and verifiability",
+      "D": "Materiality and cost-benefit"
+    },
+    "correctAnswer": "B",
+    "explanation": "The two fundamental qualitative characteristics are relevance and faithful representation. Comparability, timeliness, verifiability, and understandability are enhancing qualitative characteristics that improve the usefulness of information that is relevant and faithfully represented. Materiality is a component of relevance, and cost-benefit is a pervasive constraint.",
+    "tip": "Fundamental = Relevance + Faithful Representation. Everything else enhances."
+  },
+  {
+    "id": "far-cf-004",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Components of faithful representation",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "For financial information to be a faithful representation, it must be:",
+    "options": {
+      "A": "Relevant, comparable, and timely",
+      "B": "Complete, neutral, and free from error",
+      "C": "Material, verifiable, and understandable",
+      "D": "Predictive, confirmatory, and material"
+    },
+    "correctAnswer": "B",
+    "explanation": "Faithful representation requires that financial information be complete (includes all information necessary for a user to understand the phenomenon), neutral (without bias in selection or presentation), and free from error (no errors or omissions in the description of the phenomenon, and the process used to produce the reported information was selected and applied with no errors). The other characteristics listed are either components of relevance or enhancing characteristics.",
+    "tip": "Faithful representation = Complete + Neutral + Free from error (CNF)."
+  },
+  {
+    "id": "far-cf-005",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Relevance and predictive/confirmatory value",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Financial information has relevance if it is capable of making a difference in a decision. This requires the information to have:",
+    "options": {
+      "A": "Comparability or consistency",
+      "B": "Predictive value, confirmatory value, or both",
+      "C": "Verifiability and timeliness",
+      "D": "Neutrality and completeness"
+    },
+    "correctAnswer": "B",
+    "explanation": "Relevant information has predictive value (can be used to predict future outcomes), confirmatory value (confirms or changes prior expectations), or both. Information can have predictive value without being a prediction itself. Comparability, verifiability, and timeliness are enhancing characteristics. Neutrality and completeness are components of faithful representation.",
+    "tip": "Relevance = helps users predict OR confirm (or both)."
+  },
+  {
+    "id": "far-cf-006",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Enhancing qualitative characteristics",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are enhancing qualitative characteristics of useful financial information EXCEPT:",
+    "options": {
+      "A": "Comparability",
+      "B": "Verifiability",
+      "C": "Neutrality",
+      "D": "Timeliness"
+    },
+    "correctAnswer": "C",
+    "explanation": "Neutrality is a component of faithful representation, which is a fundamental qualitative characteristic, not an enhancing one. The four enhancing qualitative characteristics are comparability, verifiability, timeliness, and understandability. These characteristics enhance the usefulness of information that is already relevant and faithfully represented.",
+    "tip": "Enhancing = CVTU (Comparability, Verifiability, Timeliness, Understandability)."
+  },
+  {
+    "id": "far-cf-007",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Comparability vs consistency",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "According to the FASB Conceptual Framework, what is the relationship between comparability and consistency?",
+    "options": {
+      "A": "They are synonyms and can be used interchangeably",
+      "B": "Consistency refers to using the same methods over time and helps achieve comparability",
+      "C": "Comparability applies only within a single entity, while consistency applies across entities",
+      "D": "Consistency is a fundamental characteristic while comparability is enhancing"
+    },
+    "correctAnswer": "B",
+    "explanation": "Consistency refers to using the same methods for the same items, either from period to period within a reporting entity or in a single period across entities. Consistency helps achieve the goal of comparability. Comparability is the broader goal that allows users to identify similarities and differences between sets of economic phenomena. Both are considered enhancing characteristics.",
+    "tip": "Consistency is the means; comparability is the goal."
+  },
+  {
+    "id": "far-cf-008",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Definition of an asset",
+    "difficulty": "easy",
+    "questionFormat": "definition",
+    "question": "Under the FASB Conceptual Framework, an asset is defined as:",
+    "options": {
+      "A": "A present right of an entity to an economic benefit",
+      "B": "Cash or items that will be converted to cash within one year",
+      "C": "Property owned by an entity that has a determinable fair value",
+      "D": "Resources controlled by an entity as a result of past events"
+    },
+    "correctAnswer": "A",
+    "explanation": "Under the current FASB Conceptual Framework (SFAC No. 8, Chapter 4), an asset is defined as 'a present right of an entity to an economic benefit.' This updated definition focuses on the 'right' rather than the 'resource' itself. Option D reflects the older IASB definition. Options B and C are incorrect as they impose unnecessary restrictions on the definition.",
+    "tip": "New definition emphasizes 'present right to economic benefit' not just 'resource.'"
+  },
+  {
+    "id": "far-cf-009",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Definition of a liability",
+    "difficulty": "easy",
+    "questionFormat": "definition",
+    "question": "Under the FASB Conceptual Framework, a liability is best described as:",
+    "options": {
+      "A": "Any amount owed to creditors",
+      "B": "A present obligation of an entity to transfer an economic benefit",
+      "C": "A legally enforceable debt",
+      "D": "An obligation that must be settled within one year"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under SFAC No. 8, a liability is defined as 'a present obligation of an entity to transfer an economic benefit.' The obligation does not need to be legally enforceable; it can arise from customary business practices or a desire to maintain good business relationships. The timing of settlement (one year) is a classification issue, not a definitional one.",
+    "tip": "Liability = present obligation to transfer economic benefit."
+  },
+  {
+    "id": "far-cf-010",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Definition of equity",
+    "difficulty": "easy",
+    "questionFormat": "definition",
+    "question": "According to the Conceptual Framework, equity is defined as:",
+    "options": {
+      "A": "The fair value of ownership interests in the entity",
+      "B": "The residual interest in the assets of an entity after deducting its liabilities",
+      "C": "Common stock plus retained earnings",
+      "D": "Total contributed capital of the entity"
+    },
+    "correctAnswer": "B",
+    "explanation": "Equity is defined as the residual interest in the assets of an entity after deducting its liabilities. This is sometimes referred to as 'net assets.' While common stock and retained earnings are components of equity, they do not constitute the complete definition. Fair value and contributed capital are also incomplete characterizations.",
+    "tip": "Equity = Assets − Liabilities (the residual)."
+  },
+  {
+    "id": "far-cf-011",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Revenue and expense definitions",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "According to the FASB Conceptual Framework, revenues and expenses are defined as:",
+    "options": {
+      "A": "Cash inflows and outflows from operating activities",
+      "B": "Increases and decreases in equity from delivering goods or services",
+      "C": "Inflows and outflows of assets from the entity's ongoing major operations",
+      "D": "Changes in equity from transactions with owners in their capacity as owners"
+    },
+    "correctAnswer": "C",
+    "explanation": "Revenues are inflows or other enhancements of assets, or settlements of liabilities, from delivering or producing goods, rendering services, or other activities that constitute the entity's ongoing major or central operations. Expenses are outflows or using up of assets, or incurrences of liabilities, from the same activities. Option D describes transactions with owners, which affect equity but are not revenues or expenses.",
+    "tip": "Revenues/expenses = from ongoing major operations (not owner transactions)."
+  },
+  {
+    "id": "far-cf-012",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Gains and losses vs revenues and expenses",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "How do gains and losses differ from revenues and expenses under the Conceptual Framework?",
+    "options": {
+      "A": "Gains and losses must be realized while revenues and expenses can be unrealized",
+      "B": "Gains and losses result from peripheral or incidental transactions, while revenues and expenses arise from major ongoing operations",
+      "C": "Gains and losses are always noncash items while revenues and expenses involve cash flows",
+      "D": "There is no distinction; the terms are interchangeable"
+    },
+    "correctAnswer": "B",
+    "explanation": "The key distinction is the nature of the activity. Revenues and expenses arise from an entity's ongoing major or central operations (such as sales of goods or services). Gains and losses arise from peripheral or incidental transactions (such as selling equipment used in operations). Both can be realized or unrealized and may or may not involve cash.",
+    "tip": "Core operations → Revenue/Expense. Peripheral activities → Gain/Loss."
+  },
+  {
+    "id": "far-cf-013",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Recognition criteria",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the FASB Conceptual Framework, an item should be recognized in financial statements when:",
+    "options": {
+      "A": "Cash is received or paid",
+      "B": "The item meets the definition of an element and can be measured with sufficient reliability",
+      "C": "Management decides to include it in the financial statements",
+      "D": "The item has been approved by the external auditors"
+    },
+    "correctAnswer": "B",
+    "explanation": "Recognition occurs when an item is included in the financial statements as a word and number. Two conditions must be met: (1) the item must meet the definition of an element (asset, liability, equity, revenue, expense, gain, or loss), and (2) the item must be capable of being measured with sufficient reliability. Cash basis and management discretion are not proper recognition criteria under GAAP.",
+    "tip": "Recognition = meets element definition + can be reliably measured."
+  },
+  {
+    "id": "far-cf-014",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Measurement attributes",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are measurement attributes used in financial statements under GAAP EXCEPT:",
+    "options": {
+      "A": "Historical cost",
+      "B": "Fair value",
+      "C": "Replacement cost",
+      "D": "Net realizable value"
+    },
+    "correctAnswer": "C",
+    "explanation": "While replacement cost (current cost) was historically considered a measurement attribute, it is rarely used in current US GAAP. The primary measurement attributes used are historical cost, fair value, net realizable value (NRV), present value of future cash flows, and current market value. Replacement cost is more associated with specific industry guidance and is not a broadly applied measurement attribute.",
+    "tip": "Know the common measurement bases: historical cost, fair value, NRV, present value."
+  },
+  {
+    "id": "far-cf-015",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Cost constraint",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the FASB Conceptual Framework, the cost constraint means that:",
+    "options": {
+      "A": "All assets must be recorded at historical cost",
+      "B": "The benefits of reporting information should justify the costs of providing it",
+      "C": "Information should be reported at the lowest possible cost",
+      "D": "Companies should minimize their reporting expenses"
+    },
+    "correctAnswer": "B",
+    "explanation": "The cost constraint is a pervasive constraint on financial reporting. It states that the benefits of providing information should justify the costs of obtaining and presenting it. This applies to both standard-setters (when developing standards) and preparers (when applying them). It does not mean minimizing costs, but rather ensuring a positive cost-benefit relationship.",
+    "tip": "Cost constraint = benefits must exceed costs of providing information."
+  },
+  {
+    "id": "far-cf-016",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Materiality",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the FASB Conceptual Framework, materiality is:",
+    "options": {
+      "A": "An enhancing qualitative characteristic",
+      "B": "An entity-specific aspect of relevance based on the nature or magnitude of items",
+      "C": "A threshold that must be exceeded before any item is recorded",
+      "D": "A component of faithful representation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Materiality is an entity-specific aspect of relevance based on the nature or magnitude, or both, of the items to which the information relates in the context of an individual entity's financial report. Information is material if omitting or misstating it could influence decisions that users make. It is not a separate characteristic but rather a component of relevance.",
+    "tip": "Materiality = entity-specific, based on what could influence user decisions."
+  },
+  {
+    "id": "far-cf-017",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Going concern assumption",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The going concern assumption in financial reporting means:",
+    "options": {
+      "A": "The entity will be profitable in the future",
+      "B": "The entity will continue in operation for the foreseeable future",
+      "C": "The entity will be able to pay all its debts as they come due",
+      "D": "The entity's stock price will increase over time"
+    },
+    "correctAnswer": "B",
+    "explanation": "The going concern assumption means the entity is assumed to continue in operation for the foreseeable future, with no intention or necessity to liquidate or curtail operations. This assumption underlies the preparation of financial statements and affects how assets and liabilities are measured. It does not guarantee profitability, debt payment ability, or stock performance.",
+    "tip": "Going concern = entity will continue operating (not liquidate)."
+  },
+  {
+    "id": "far-cf-018",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Accrual basis of accounting",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The accrual basis of accounting recognizes the effects of transactions and events:",
+    "options": {
+      "A": "Only when cash is received or paid",
+      "B": "When they occur, regardless of when cash is received or paid",
+      "C": "At the end of each fiscal year",
+      "D": "When management decides to record them"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under the accrual basis of accounting, the effects of transactions and other events are recognized when they occur (not when cash is received or paid). This means revenues are recognized when earned and expenses when incurred, regardless of the timing of cash flows. This provides a more accurate picture of an entity's financial position and performance than cash basis accounting.",
+    "tip": "Accrual basis = record when transaction occurs, not when cash moves."
+  },
+  {
+    "id": "far-cf-019",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Verifiability",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Verifiability, as an enhancing qualitative characteristic, means that:",
+    "options": {
+      "A": "Information must be audited by a CPA firm",
+      "B": "Different knowledgeable observers could reach consensus that the information is faithfully represented",
+      "C": "All accounting entries must be supported by source documents",
+      "D": "Financial statements must be approved by the board of directors"
+    },
+    "correctAnswer": "B",
+    "explanation": "Verifiability means that different knowledgeable and independent observers could reach consensus (not necessarily unanimous agreement) that a particular depiction is a faithful representation. Verification can be direct (through observation) or indirect (checking inputs to a model and recalculating outputs). It does not require an audit or board approval.",
+    "tip": "Verifiability = independent observers would reach similar conclusions."
+  },
+  {
+    "id": "far-cf-020",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Reporting entity concept",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "According to the FASB Conceptual Framework, a reporting entity is:",
+    "options": {
+      "A": "Any entity required to file with the SEC",
+      "B": "An entity that is required to, or chooses to, prepare general-purpose financial statements",
+      "C": "Only publicly traded companies",
+      "D": "Any entity with annual revenues exceeding $10 million"
+    },
+    "correctAnswer": "B",
+    "explanation": "A reporting entity is an entity that is required to, or chooses to, prepare general-purpose financial reports. It is not limited to SEC filers or public companies. A reporting entity could be a single entity, a portion of an entity (such as a division), or could comprise more than one entity. The concept is defined by the preparation of financial reports, not by size or regulatory requirements.",
+    "tip": "Reporting entity = any entity preparing general-purpose financial statements."
+  },
+  {
+    "id": "far-cf-021",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Comprehensive income",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the Conceptual Framework, comprehensive income includes:",
+    "options": {
+      "A": "Only net income",
+      "B": "Net income plus other comprehensive income items",
+      "C": "Only items that affect retained earnings",
+      "D": "Cash flows from operating activities"
+    },
+    "correctAnswer": "B",
+    "explanation": "Comprehensive income is the change in equity of a business enterprise during a period from transactions and other events from nonowner sources. It includes all components of net income and other comprehensive income (OCI). OCI includes items like unrealized gains/losses on available-for-sale securities, foreign currency translation adjustments, and certain pension adjustments that bypass net income.",
+    "tip": "Comprehensive income = Net income + Other comprehensive income (OCI)."
+  },
+  {
+    "id": "far-cf-022",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Derecognition concept",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "According to the FASB Conceptual Framework, derecognition should occur when:",
+    "options": {
+      "A": "An asset's market value declines below its book value",
+      "B": "An item no longer meets the definition of an asset or liability",
+      "C": "Management decides to write off an item",
+      "D": "The item has been fully depreciated or amortized"
+    },
+    "correctAnswer": "B",
+    "explanation": "Derecognition is the removal of a previously recognized asset or liability from the statement of financial position. It should occur when the item no longer meets the definition of an asset or liability. For example, an asset is derecognized when the entity no longer has a present right to an economic benefit. Market value decline alone, management discretion, or full depreciation are not sufficient criteria for derecognition.",
+    "tip": "Derecognition = when item no longer meets element definition."
+  },
+  {
+    "id": "far-cf-023",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Prudence vs neutrality",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "How does the FASB Conceptual Framework address the concept of prudence (conservatism)?",
+    "options": {
+      "A": "Prudence is a fundamental qualitative characteristic requiring conservative estimates",
+      "B": "Prudence supports neutrality by exercising caution when making judgments under uncertainty",
+      "C": "Prudence requires assets to always be understated and liabilities overstated",
+      "D": "The FASB has eliminated any role for prudence in the Conceptual Framework"
+    },
+    "correctAnswer": "B",
+    "explanation": "The FASB Conceptual Framework includes prudence as supporting neutral information. Prudence is the exercise of caution when making judgments under conditions of uncertainty. However, it does not allow for the deliberate understatement of assets or overstatement of liabilities, as that would conflict with neutrality. Prudence helps achieve neutrality rather than replacing it.",
+    "tip": "Prudence supports neutrality by exercising caution, not systematic bias."
+  },
+  {
+    "id": "far-cf-024",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Timeliness",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Timeliness, as an enhancing qualitative characteristic, means that information is:",
+    "options": {
+      "A": "Reported within 30 days of period end",
+      "B": "Available to decision-makers in time to be capable of influencing their decisions",
+      "C": "Reported at the same time each year",
+      "D": "Updated in real-time on the entity's website"
+    },
+    "correctAnswer": "B",
+    "explanation": "Timeliness means having information available to decision-makers in time to be capable of influencing their decisions. Generally, older information is less useful, but some information may continue to be timely long after the end of a reporting period. There is no specific time requirement (like 30 days); the key is whether information can still influence decisions.",
+    "tip": "Timeliness = available when it can still influence decisions."
+  },
+  {
+    "id": "far-cf-025",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Role of the Conceptual Framework",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The primary purpose of the FASB Conceptual Framework is to:",
+    "options": {
+      "A": "Provide specific accounting rules for all transactions",
+      "B": "Guide the FASB in developing accounting standards and assist others in understanding GAAP",
+      "C": "Replace the need for specific accounting standards",
+      "D": "Establish legal requirements for financial reporting"
+    },
+    "correctAnswer": "B",
+    "explanation": "The Conceptual Framework serves as a foundation for developing accounting standards and as a guide for resolving accounting issues not addressed in standards. It helps the FASB develop internally consistent standards and assists preparers, auditors, and users in understanding and applying GAAP. It does not replace specific standards or establish legal requirements.",
+    "tip": "Conceptual Framework = foundation for standards, not a replacement."
+  },
+  {
+    "id": "far-cf-026",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Investments by owners",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the Conceptual Framework, investments by owners are characterized as:",
+    "options": {
+      "A": "Increases in equity from revenues and gains",
+      "B": "Increases in equity resulting from transfers to the entity to obtain ownership interests",
+      "C": "Assets received in exchange for goods or services",
+      "D": "Liabilities converted into equity instruments"
+    },
+    "correctAnswer": "B",
+    "explanation": "Investments by owners are increases in equity of an entity resulting from transfers to the entity from other entities of something valuable to obtain or increase ownership interests. The most common forms are cash or other assets, but could also include services or conversion of liabilities. They represent transactions with owners in their capacity as owners, distinct from revenues.",
+    "tip": "Investments by owners = transfers to obtain ownership interests (not revenues)."
+  },
+  {
+    "id": "far-cf-027",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Distributions to owners",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Which of the following is NOT considered a distribution to owners under the Conceptual Framework?",
+    "options": {
+      "A": "Cash dividends",
+      "B": "Stock repurchases",
+      "C": "Interest payments on bonds payable",
+      "D": "Property dividends"
+    },
+    "correctAnswer": "C",
+    "explanation": "Distributions to owners are decreases in equity resulting from transferring assets, rendering services, or incurring liabilities to owners. Interest payments on bonds payable are payments to creditors, not owners, and represent expenses rather than distributions to owners. Cash dividends, stock repurchases, and property dividends are all distributions to owners.",
+    "tip": "Distributions to owners = transfers to stockholders (not creditors)."
+  },
+  {
+    "id": "far-cf-028",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Present value measurement",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When present value is used as a measurement attribute, the discount rate should reflect:",
+    "options": {
+      "A": "The entity's weighted average cost of capital in all cases",
+      "B": "The risk-free rate of interest",
+      "C": "The time value of money and risks specific to the asset or liability being measured",
+      "D": "The prime lending rate"
+    },
+    "correctAnswer": "C",
+    "explanation": "When using present value as a measurement attribute, the discount rate should capture the time value of money and the risks specific to the asset or liability. This could be a risk-adjusted discount rate or an expected cash flow approach with a risk-free rate. The specific rate depends on the nature of the measurement and applicable guidance, not a single rate like WACC or prime rate.",
+    "tip": "Discount rate = time value of money + specific risks of the item."
+  },
+  {
+    "id": "far-cf-029",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Capital maintenance concepts",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "The financial capital maintenance concept states that profit is earned only if:",
+    "options": {
+      "A": "The entity's physical productive capacity has been maintained",
+      "B": "The financial (or money) amount of net assets at the end of the period exceeds the beginning amount, after excluding owner transactions",
+      "C": "Cash flows from operations exceed cash flows for investing activities",
+      "D": "The market value of the entity has increased"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under the financial capital maintenance concept, profit is earned only if the financial (or money) amount of net assets at the end of the period exceeds the beginning net assets, after excluding effects of transactions with owners. This is the concept underlying most financial statements. Physical capital maintenance focuses on maintaining productive capacity, which is an alternative concept.",
+    "tip": "Financial capital maintenance = ending net assets > beginning net assets (excluding owner transactions)."
+  },
+  {
+    "id": "far-cf-030",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Understandability",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The enhancing qualitative characteristic of understandability assumes that users:",
+    "options": {
+      "A": "Have no knowledge of business or economic activities",
+      "B": "Have a reasonable knowledge of business and economic activities and review information diligently",
+      "C": "Are professional accountants or financial analysts",
+      "D": "Will have all information explained by the preparer"
+    },
+    "correctAnswer": "B",
+    "explanation": "Understandability means that users are assumed to have a reasonable knowledge of business and economic activities and to review and analyze the information diligently. Financial reports are not designed for users with no business knowledge, nor are they limited to professionals. Some complex matters may require an advisor's help but cannot be excluded if relevant.",
+    "tip": "Users are assumed to have reasonable business knowledge and to review diligently."
+  },
+  {
+    "id": "far-cf-031",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Historical cost attribute",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Historical cost as a measurement attribute represents:",
+    "options": {
+      "A": "The current market value of an asset",
+      "B": "The price paid to acquire an asset or the amount received for a liability when incurred",
+      "C": "The present value of future cash flows",
+      "D": "The amount for which an asset could be sold currently"
+    },
+    "correctAnswer": "B",
+    "explanation": "Historical cost is the amount paid to acquire an asset (or the consideration received when a liability is incurred). It represents the entry price at the transaction date. This differs from fair value (current market value), present value (discounted future cash flows), or exit price (current selling price).",
+    "tip": "Historical cost = original transaction price (entry price)."
+  },
+  {
+    "id": "far-cf-032",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Hierarchy of GAAP",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the GAAP hierarchy for nongovernmental entities, which source has the highest authority?",
+    "options": {
+      "A": "AICPA Accounting Guides",
+      "B": "FASB Accounting Standards Codification",
+      "C": "Widely recognized industry practices",
+      "D": "FASB Concepts Statements"
+    },
+    "correctAnswer": "B",
+    "explanation": "The FASB Accounting Standards Codification (ASC) is the single source of authoritative nongovernmental US GAAP. AICPA Accounting Guides, industry practices, and Concepts Statements are considered nonauthoritative. While they may provide helpful guidance, the Codification is the primary authoritative source that must be followed.",
+    "tip": "ASC = the single source of authoritative GAAP for nongovernmental entities."
+  },
+  {
+    "id": "far-cf-033",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Revenue recognition principle",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the Conceptual Framework, revenue should be recognized when:",
+    "options": {
+      "A": "Cash is received from customers",
+      "B": "A contract is signed with a customer",
+      "C": "An entity satisfies a performance obligation by transferring a promised good or service",
+      "D": "The entity incurs costs to provide goods or services"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under ASC 606 (Revenue from Contracts with Customers), revenue is recognized when (or as) the entity satisfies a performance obligation by transferring a promised good or service to a customer. This occurs when the customer obtains control of the asset. It is not tied to cash receipt, contract signing, or cost incurrence.",
+    "tip": "Revenue recognition = performance obligation satisfied (control transferred)."
+  },
+  {
+    "id": "far-cf-034",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Present obligation criteria",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Beacon Company has historically provided warranty repairs to customers, although it has no legal obligation to do so. Based on the Conceptual Framework, does Beacon have a liability?",
+    "options": {
+      "A": "No, because there is no legal obligation",
+      "B": "Yes, because the customary practice creates a present obligation",
+      "C": "No, because warranty obligations require a written contract",
+      "D": "Yes, but only if the warranty costs are material"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under the Conceptual Framework, a liability can arise from customary business practice, not just legal obligations. If Beacon's past practice creates a valid expectation by customers that it will honor warranties, a present obligation exists. The entity has little or no realistic alternative to settling the obligation. Materiality affects disclosure, not the existence of the liability.",
+    "tip": "Obligations can arise from legal, contractual, OR customary business practice."
+  },
+  {
+    "id": "far-cf-035",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Trade-offs between characteristics",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When the fundamental qualitative characteristics conflict, how should this be resolved according to the Conceptual Framework?",
+    "options": {
+      "A": "Relevance always takes precedence over faithful representation",
+      "B": "Faithful representation always takes precedence over relevance",
+      "C": "Neither takes precedence; the trade-off should maximize decision-usefulness",
+      "D": "The FASB must be consulted to resolve all conflicts"
+    },
+    "correctAnswer": "C",
+    "explanation": "When there is a conflict between relevance and faithful representation, neither automatically takes precedence. The goal is to maximize the usefulness of financial information for decision-making. In practice, this may involve weighing the importance of each characteristic in the specific context and determining which approach provides the most useful information to users.",
+    "tip": "No automatic precedence—maximize decision-usefulness through judgment."
+  },
+  {
+    "id": "far-cf-036",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Entity vs proprietary perspective",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "The FASB Conceptual Framework adopts which perspective in defining the reporting entity?",
+    "options": {
+      "A": "Proprietary perspective, where the entity is viewed as an extension of its owners",
+      "B": "Entity perspective, where the entity is viewed as separate from its owners",
+      "C": "A hybrid approach that varies based on the size of the entity",
+      "D": "The user perspective, based on who is using the financial statements"
+    },
+    "correctAnswer": "B",
+    "explanation": "The FASB Conceptual Framework adopts the entity perspective, viewing the reporting entity as separate and distinct from its owners and other parties. Under this view, the entity has its own resources and obligations, and the financial statements represent the entity's financial position and results, not those of its owners personally.",
+    "tip": "Entity perspective = entity is separate from its owners."
+  },
+  {
+    "id": "far-cf-037",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Recognition & Measurement",
+    "conceptTested": "Expense recognition principle",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the Conceptual Framework, expenses are generally recognized when:",
+    "options": {
+      "A": "Cash is paid",
+      "B": "Goods or services are consumed or a liability is incurred, in connection with generating revenue",
+      "C": "An invoice is received from a vendor",
+      "D": "Management authorizes the expenditure"
+    },
+    "correctAnswer": "B",
+    "explanation": "Expenses are recognized when economic benefits are consumed or an obligation is incurred in connection with the entity's revenue-generating activities. This follows the matching principle where expenses are matched with the revenues they help generate. Cash payment, invoice receipt, and management authorization are not the determining factors for expense recognition.",
+    "tip": "Expenses recognized when consumed or incurred—matched with related revenue."
+  },
+  {
+    "id": "far-cf-038",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Elements of Financial Statements",
+    "conceptTested": "Asset vs expense determination",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "Maxwell Corp. pays $50,000 for an exclusive license to use patented technology for 5 years. At the end of the license term, Maxwell will have no continuing rights. Under the Conceptual Framework, this payment should be:",
+    "options": {
+      "A": "Expensed immediately because it will have no residual value",
+      "B": "Recognized as an asset and amortized over the 5-year license period",
+      "C": "Recorded as prepaid expense and expensed when the license is actually used",
+      "D": "Recognized as an asset only if the license can be sold to a third party"
+    },
+    "correctAnswer": "B",
+    "explanation": "The payment represents a present right to an economic benefit (the use of patented technology) over 5 years, meeting the definition of an asset. Because the economic benefits will be received over the license term, the asset should be amortized over that period. The lack of residual value does not prevent asset recognition, and the ability to sell is not a requirement for asset status.",
+    "tip": "Multi-period benefits = capitalize as asset and amortize over benefit period."
+  },
+  {
+    "id": "far-cf-039",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "Qualitative Characteristics",
+    "conceptTested": "Relevance without faithful representation",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "According to the Conceptual Framework, if relevant information cannot be faithfully represented:",
+    "options": {
+      "A": "It should still be recognized if material",
+      "B": "It may not provide useful information and may be misleading",
+      "C": "It must be disclosed in the notes rather than recognized",
+      "D": "It should be estimated using the most conservative approach"
+    },
+    "correctAnswer": "B",
+    "explanation": "Both fundamental characteristics (relevance and faithful representation) must be present for information to be useful. Even relevant information, if it cannot be faithfully represented, may not provide useful information and could potentially be misleading. The characteristics work together—relevance without faithful representation (or vice versa) does not produce useful financial information.",
+    "tip": "Both relevance AND faithful representation required for useful information."
+  },
+  {
+    "id": "far-cf-040",
+    "section": "FAR",
+    "topic": "Conceptual Framework & Standards",
+    "subtopic": "FASB Conceptual Framework",
+    "conceptTested": "Substance over form",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The concept of 'substance over form' in financial reporting means:",
+    "options": {
+      "A": "All transactions must be documented in writing",
+      "B": "The economic substance of transactions should be reflected, not merely their legal form",
+      "C": "The format of financial statements is more important than their content",
+      "D": "Formal contracts take precedence over informal agreements"
+    },
+    "correctAnswer": "B",
+    "explanation": "Substance over form means that transactions and events should be accounted for in accordance with their economic substance, not merely their legal form. For example, a transaction that transfers substantially all risks and rewards of ownership should be accounted for as a sale even if legal title has not passed. This ensures faithful representation of economic reality.",
+    "tip": "Account for what a transaction IS, not just how it's legally structured."
+  }
+]

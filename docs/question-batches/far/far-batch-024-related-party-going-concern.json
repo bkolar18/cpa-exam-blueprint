@@ -1,0 +1,432 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Related Party Transactions and Going Concern",
+    "batchNumber": 24,
+    "questionCount": 20,
+    "weight": "2%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-rp-001",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Related Party Definition",
+      "conceptTested": "Who are related parties",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which of the following is considered a related party?",
+      "options": {
+        "A": "A competitor company",
+        "B": "An affiliate company under common control",
+        "C": "A major supplier with arm's-length transactions",
+        "D": "A government regulatory agency"
+      },
+      "correctAnswer": "B",
+      "explanation": "Related parties include affiliates, principal owners, management, members of their immediate families, and entities in which the company has investments with significant influence.",
+      "tip": "Related parties: affiliates, owners, management, their families.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-rp-002",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Disclosure Requirements",
+      "conceptTested": "Required disclosures",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Related party disclosures must include:",
+      "options": {
+        "A": "Only transactions over $1 million",
+        "B": "Nature of relationship, description of transactions, dollar amounts, and amounts due to/from",
+        "C": "Only cash transactions",
+        "D": "Only unusual transactions"
+      },
+      "correctAnswer": "B",
+      "explanation": "Related party disclosures include: the nature of the relationship, a description of transactions, dollar amounts, and receivables/payables with related parties.",
+      "tip": "Disclose: relationship, description, amounts, balances.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-003",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Transaction Terms",
+      "conceptTested": "Arm's-length representation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Can an entity represent that related party transactions were conducted on arm's-length terms?",
+      "options": {
+        "A": "Yes, always",
+        "B": "Only if it can be substantiated",
+        "C": "Never",
+        "D": "Only for transactions over $100,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "An entity should not represent that related party transactions were conducted on arm's-length terms unless the representation can be substantiated by comparison to similar third-party transactions.",
+      "tip": "Arm's-length claim: only if you can prove it.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-004",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Common Control",
+      "conceptTested": "Common control entities",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "For entities under common control, disclosures of related party transactions:",
+      "options": {
+        "A": "Are not required",
+        "B": "Are required even if consolidated financial statements are presented",
+        "C": "Are only required in consolidated statements",
+        "D": "Are optional"
+      },
+      "correctAnswer": "B",
+      "explanation": "Related party relationships and transactions are disclosed even in consolidated financial statements because transactions with commonly controlled entities not in the consolidation affect the financial statements.",
+      "tip": "Disclose related party info even in consolidated statements.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-005",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Compensation",
+      "conceptTested": "Executive compensation",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Compensation arrangements with management are:",
+      "options": {
+        "A": "Always related party transactions requiring disclosure",
+        "B": "Not considered related party transactions",
+        "C": "Disclosed only if above market rates",
+        "D": "Disclosed in proxy statements only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Compensation arrangements, expense allowances, and similar items in the ordinary course of business are generally excluded from related party disclosure requirements.",
+      "tip": "Normal compensation = not a related party transaction.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-rp-006",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Control Relationship",
+      "conceptTested": "Control disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The nature of a control relationship must be disclosed:",
+      "options": {
+        "A": "Only if transactions occurred",
+        "B": "Even if no transactions occurred during the period",
+        "C": "Only for parent-subsidiary relationships",
+        "D": "Only in SEC filings"
+      },
+      "correctAnswer": "B",
+      "explanation": "The nature of control relationships must be disclosed even if no transactions occurred between the parties during the period.",
+      "tip": "Control relationship: disclose even without transactions.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-007",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Going Concern Basics",
+      "conceptTested": "Going concern definition",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The going concern assumption means:",
+      "options": {
+        "A": "The entity will liquidate within one year",
+        "B": "The entity will continue operating for the foreseeable future",
+        "C": "The entity is always profitable",
+        "D": "The entity has unlimited resources"
+      },
+      "correctAnswer": "B",
+      "explanation": "Going concern assumes the entity will continue operating for the foreseeable future without the intent or necessity to liquidate, cease trading, or seek protection from creditors.",
+      "tip": "Going concern = entity will keep operating.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-rp-008",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Evaluation Period",
+      "conceptTested": "Management evaluation timeframe",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Management must evaluate going concern for a period of at least:",
+      "options": {
+        "A": "Six months from the balance sheet date",
+        "B": "One year from the date financial statements are issued (or available to be issued)",
+        "C": "Two years from year-end",
+        "D": "Through the next fiscal year"
+      },
+      "correctAnswer": "B",
+      "explanation": "Management evaluates whether substantial doubt exists about the entity's ability to continue as a going concern for one year from the date financial statements are issued or available to be issued.",
+      "tip": "Going concern period: 1 year from issuance date.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-009",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Substantial Doubt",
+      "conceptTested": "Substantial doubt indicators",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Substantial doubt about going concern exists when:",
+      "options": {
+        "A": "Any uncertainty exists",
+        "B": "It is probable the entity cannot meet obligations as they become due within one year",
+        "C": "The entity has any debt",
+        "D": "Revenue declines from prior year"
+      },
+      "correctAnswer": "B",
+      "explanation": "Substantial doubt exists when conditions and events indicate it is probable the entity will be unable to meet its obligations as they become due within one year of financial statement issuance.",
+      "tip": "Substantial doubt: probable can't meet obligations.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-010",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Management Plans",
+      "conceptTested": "Plans to mitigate",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When substantial doubt exists, management's plans are evaluated to determine if they will:",
+      "options": {
+        "A": "Eliminate any possibility of failure",
+        "B": "Mitigate the conditions to make it probable the entity can meet obligations",
+        "C": "Generate profits in the next quarter",
+        "D": "Satisfy all creditors immediately"
+      },
+      "correctAnswer": "B",
+      "explanation": "Management considers whether plans will effectively mitigate the adverse conditions so it becomes probable the entity will be able to meet its obligations for one year.",
+      "tip": "Plans must make meeting obligations probable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-rp-011",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Disclosure Requirements",
+      "conceptTested": "Substantial doubt disclosures",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If substantial doubt exists but is alleviated by management's plans, the entity must disclose:",
+      "options": {
+        "A": "Nothing, since doubt is alleviated",
+        "B": "The conditions that raised substantial doubt and management's plans",
+        "C": "Only the alleviation factors",
+        "D": "A going concern emphasis paragraph only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Even when management's plans alleviate substantial doubt, disclosure is required: the principal conditions/events that raised doubt and management's evaluation and plans to address them.",
+      "tip": "Doubt alleviated: still disclose conditions and plans.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-rp-012",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Disclosure Requirements",
+      "conceptTested": "Unalleviated doubt disclosures",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "If substantial doubt is NOT alleviated after considering management's plans, additional disclosures include:",
+      "options": {
+        "A": "Only a statement that doubt exists",
+        "B": "Statement that substantial doubt exists about the entity's ability to continue as a going concern",
+        "C": "Liquidation values of all assets",
+        "D": "Management resignation"
+      },
+      "correctAnswer": "B",
+      "explanation": "When substantial doubt is not alleviated, disclosure includes an explicit statement that there is substantial doubt about the entity's ability to continue as a going concern within one year.",
+      "tip": "Doubt NOT alleviated: explicit doubt statement required.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-rp-013",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Conditions and Events",
+      "conceptTested": "Warning signs",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is typically a condition that could raise substantial doubt about going concern?",
+      "options": {
+        "A": "Strong cash position",
+        "B": "Recurring losses and negative cash flows from operations",
+        "C": "Consistent profitability",
+        "D": "Increasing market share"
+      },
+      "correctAnswer": "B",
+      "explanation": "Recurring operating losses and negative cash flows, along with working capital deficiencies, loan defaults, and loss of major customers, are conditions that may indicate going concern issues.",
+      "tip": "Red flags: losses, negative cash flow, defaults, customer loss.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-014",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Liquidation Basis",
+      "conceptTested": "When to use liquidation basis",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "An entity should use liquidation basis of accounting when:",
+      "options": {
+        "A": "Substantial doubt exists",
+        "B": "Liquidation is imminent",
+        "C": "Any loan covenant is violated",
+        "D": "Revenue declines for two consecutive years"
+      },
+      "correctAnswer": "B",
+      "explanation": "Liquidation basis is used when liquidation is imminent—either when a plan for liquidation is approved and there are no significant barriers, or when liquidation is imposed by other forces.",
+      "tip": "Liquidation basis: only when liquidation is imminent.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-rp-015",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Transaction Types",
+      "conceptTested": "Common related party transactions",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Common related party transactions include:",
+      "options": {
+        "A": "Sales to unrelated competitors",
+        "B": "Loans to officers, purchases from affiliates, guarantees of affiliate debt",
+        "C": "Normal vendor payments",
+        "D": "Tax payments to government"
+      },
+      "correctAnswer": "B",
+      "explanation": "Common related party transactions include: loans to/from officers and shareholders, sales/purchases with affiliates, and guarantees of related party debt.",
+      "tip": "Related party: loans to officers, deals with affiliates, guarantees.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-rp-016",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Plan Feasibility",
+      "conceptTested": "Probable plan success",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "For management's plans to alleviate going concern doubt, the plans must be:",
+      "options": {
+        "A": "Possible to implement",
+        "B": "Probable of being effectively implemented and resolving the doubt",
+        "C": "Certain to succeed",
+        "D": "Already fully implemented"
+      },
+      "correctAnswer": "B",
+      "explanation": "Plans must be probable (likely) of being effectively implemented, and it must be probable that the plans will mitigate the conditions raising doubt.",
+      "tip": "Plans must be probable of success, not just possible.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-rp-017",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Variable Interest Entities",
+      "conceptTested": "VIE related party considerations",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Related party relationships are particularly important in evaluating VIEs because:",
+      "options": {
+        "A": "VIEs never have related parties",
+        "B": "Related parties may collectively be a de facto agent requiring consolidation",
+        "C": "Related party transactions are prohibited with VIEs",
+        "D": "VIEs are always related parties"
+      },
+      "correctAnswer": "B",
+      "explanation": "In VIE analysis, related parties may act together as a de facto agent. If related parties together have the characteristics of a primary beneficiary, one party may need to consolidate.",
+      "tip": "VIE: related parties together may trigger consolidation.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-rp-018",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Auditor Considerations",
+      "conceptTested": "Management vs auditor responsibility",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The responsibility for evaluating going concern rests with:",
+      "options": {
+        "A": "The external auditor only",
+        "B": "Management, with the auditor evaluating management's assessment",
+        "C": "The SEC",
+        "D": "The board of directors only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Management is responsible for evaluating whether substantial doubt exists and making disclosures. The auditor evaluates whether management's assessment is reasonable and disclosures are adequate.",
+      "tip": "Going concern: management's responsibility, auditor evaluates.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-019",
+      "section": "FAR",
+      "topic": "Related Party Transactions",
+      "subtopic": "Equity Method Investees",
+      "conceptTested": "Equity investee as related party",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An equity method investee is considered a related party because:",
+      "options": {
+        "A": "It is always a subsidiary",
+        "B": "The investor has significant influence over the investee",
+        "C": "Any investment creates a related party",
+        "D": "Equity investments are always material"
+      },
+      "correctAnswer": "B",
+      "explanation": "Entities over which the reporting entity has significant influence (typically 20-50% ownership) are related parties because of the ability to influence operating and financial decisions.",
+      "tip": "Equity method = significant influence = related party.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-rp-020",
+      "section": "FAR",
+      "topic": "Going Concern",
+      "subtopic": "Subsequent Events",
+      "conceptTested": "Going concern and subsequent events",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A favorable subsequent event (like securing new financing) that alleviates going concern doubt occurring before issuance:",
+      "options": {
+        "A": "Eliminates the need for any disclosure",
+        "B": "Should be considered in the going concern evaluation",
+        "C": "Is ignored because it occurred after year-end",
+        "D": "Requires restatement of prior year"
+      },
+      "correctAnswer": "B",
+      "explanation": "Subsequent events through the issuance date, including favorable events like securing financing, are considered in the going concern evaluation and may affect whether substantial doubt exists.",
+      "tip": "Going concern considers subsequent events through issuance.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    }
+  ]
+}

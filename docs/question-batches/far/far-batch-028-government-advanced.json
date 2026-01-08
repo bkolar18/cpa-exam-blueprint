@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Government Accounting - Advanced Topics",
+    "batchNumber": 28,
+    "questionCount": 30,
+    "weight": "10%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-gov-adv-001",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Proprietary Funds",
+      "conceptTested": "Enterprise fund characteristics",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Enterprise funds are used when:",
+      "options": {
+        "A": "Services are provided to other government departments",
+        "B": "Services are provided to external users and financed primarily through user charges",
+        "C": "Grant revenues are received",
+        "D": "Capital projects are undertaken"
+      },
+      "correctAnswer": "B",
+      "explanation": "Enterprise funds are used for activities that provide goods or services to the general public and are financed primarily through user charges (like utilities, airports, hospitals).",
+      "tip": "Enterprise fund = charges to external users.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-002",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Proprietary Funds",
+      "conceptTested": "Internal service fund",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Internal service funds account for:",
+      "options": {
+        "A": "Services provided to external customers",
+        "B": "Services provided to other departments/agencies on a cost-reimbursement basis",
+        "C": "Tax revenues",
+        "D": "Bond proceeds"
+      },
+      "correctAnswer": "B",
+      "explanation": "Internal service funds account for services provided by one department to other departments on a cost-reimbursement basis (like central motor pools, IT services, printing).",
+      "tip": "Internal service = charges to other government departments.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-003",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Fiduciary Funds",
+      "conceptTested": "Fiduciary fund types",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Which is NOT a type of fiduciary fund?",
+      "options": {
+        "A": "Pension trust fund",
+        "B": "Investment trust fund",
+        "C": "Custodial fund",
+        "D": "Capital projects fund"
+      },
+      "correctAnswer": "D",
+      "explanation": "Fiduciary funds include pension trust, investment trust, private-purpose trust, and custodial funds. Capital projects fund is a governmental fund.",
+      "tip": "Fiduciary: pension, investment, private-purpose trusts + custodial.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-004",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Basis of Accounting",
+      "conceptTested": "Proprietary fund basis",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Proprietary funds use which basis of accounting?",
+      "options": {
+        "A": "Modified accrual",
+        "B": "Cash basis",
+        "C": "Full accrual",
+        "D": "Budgetary basis"
+      },
+      "correctAnswer": "C",
+      "explanation": "Proprietary funds (enterprise and internal service) use full accrual accounting and economic resources measurement focus, similar to commercial enterprises.",
+      "tip": "Proprietary funds = full accrual (like businesses).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-gov-adv-005",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Capital Assets",
+      "conceptTested": "Infrastructure assets",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Infrastructure assets in government-wide statements may be depreciated or:",
+      "options": {
+        "A": "Expensed immediately",
+        "B": "Accounted for using the modified approach if maintained at a condition level",
+        "C": "Written off after 50 years",
+        "D": "Reported at fair value only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Governments may use the modified approach for infrastructure—no depreciation if the government maintains assets at established condition levels and reports on their condition.",
+      "tip": "Infrastructure: depreciate OR modified approach (maintain condition).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-006",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Budgetary Accounting",
+      "conceptTested": "Encumbrance accounting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Encumbrances represent:",
+      "options": {
+        "A": "Actual expenditures",
+        "B": "Commitments for future expenditures (like purchase orders)",
+        "C": "Revenues collected",
+        "D": "Fund balance reserves only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Encumbrances are commitments for future expenditures, such as purchase orders. They reserve budget authority but are not actual expenditures until goods/services are received.",
+      "tip": "Encumbrance = commitment (like a PO), not actual spending.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-007",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Budgetary Accounting",
+      "conceptTested": "Budgetary entry",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When the annual budget is adopted, the entry to record estimated revenues exceeding appropriations results in a credit to:",
+      "options": {
+        "A": "Estimated Revenues",
+        "B": "Appropriations",
+        "C": "Budgetary Fund Balance",
+        "D": "Encumbrances"
+      },
+      "correctAnswer": "C",
+      "explanation": "Budget entry: Dr. Estimated Revenues, Cr. Appropriations, Cr. Budgetary Fund Balance (if revenues > appropriations). The plug goes to Budgetary Fund Balance.",
+      "tip": "Revenues > Appropriations = credit Budgetary Fund Balance.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-gov-adv-008",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Fund Balance",
+      "conceptTested": "Fund balance classifications",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fund balance classified as 'Committed' is:",
+      "options": {
+        "A": "Constrained by external parties",
+        "B": "Constrained by the government's highest level of decision-making authority",
+        "C": "Not available for appropriation",
+        "D": "Legally restricted by creditors"
+      },
+      "correctAnswer": "B",
+      "explanation": "Committed fund balance is constrained by the government's highest decision-making authority (usually the governing board) through formal action.",
+      "tip": "Committed = governing board action.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-009",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Fund Balance",
+      "conceptTested": "Restricted vs assigned",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Fund balance restricted for debt service differs from assigned fund balance in that restricted:",
+      "options": {
+        "A": "Is internally designated",
+        "B": "Has externally imposed constraints or enabling legislation",
+        "C": "Can be changed by management",
+        "D": "Is the same as unassigned"
+      },
+      "correctAnswer": "B",
+      "explanation": "Restricted fund balance has constraints from external creditors, grantors, or enabling legislation. Assigned is management's intended use without formal constraint.",
+      "tip": "Restricted = external. Assigned = management intent.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-010",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Interfund Transactions",
+      "conceptTested": "Interfund loan",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "An interfund loan from the General Fund to an Enterprise Fund is reported as:",
+      "options": {
+        "A": "Revenue in the Enterprise Fund",
+        "B": "Expenditure in the General Fund",
+        "C": "Due from/Due to in both funds",
+        "D": "Transfer out and transfer in"
+      },
+      "correctAnswer": "C",
+      "explanation": "Interfund loans are recorded as 'Due from' (asset) in the lending fund and 'Due to' (liability) in the borrowing fund. They're not revenues, expenditures, or transfers.",
+      "tip": "Interfund loans = Due from/Due to (receivable/payable).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-011",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Interfund Transactions",
+      "conceptTested": "Transfers",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Interfund transfers are:",
+      "options": {
+        "A": "Reciprocal transactions requiring repayment",
+        "B": "Nonreciprocal movements of resources between funds without repayment",
+        "C": "Always prohibited",
+        "D": "Reported as revenues and expenditures"
+      },
+      "correctAnswer": "B",
+      "explanation": "Transfers are nonreciprocal interfund activities (no repayment expected). Reported as 'other financing sources/uses' in governmental funds or as transfers in proprietary funds.",
+      "tip": "Transfers = nonreciprocal (no repayment).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-012",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Revenue Recognition",
+      "conceptTested": "Property tax revenue",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "A city levies $10 million property tax for the current fiscal year. Estimated uncollectible: 5%. $9 million collected by year-end; $400,000 collected in first 60 days of next year. Revenue recognized?",
+      "options": {
+        "A": "$9,000,000",
+        "B": "$9,400,000",
+        "C": "$9,500,000",
+        "D": "$10,000,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Property tax revenue = Amount collectible in period or soon enough thereafter (60 days). $9M + $0.4M = $9.4M. The remaining $0.6M isn't collected within 60 days.",
+      "tip": "Property tax: collected by year-end + 60 days afterward.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-gov-adv-013",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Revenue Recognition",
+      "conceptTested": "Grant revenue",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A reimbursement-type federal grant is recognized as revenue when:",
+      "options": {
+        "A": "The grant is awarded",
+        "B": "Qualifying expenditures are made",
+        "C": "Cash is received",
+        "D": "The grant period ends"
+      },
+      "correctAnswer": "B",
+      "explanation": "For reimbursement-type grants (expenditure-driven), revenue is recognized when qualifying expenditures are incurred, not when cash is received or awarded.",
+      "tip": "Reimbursement grant: revenue when expenditures made.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-014",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Debt Reporting",
+      "conceptTested": "General obligation bonds",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "General obligation bonds are reported in governmental fund financial statements as:",
+      "options": {
+        "A": "A long-term liability",
+        "B": "An 'other financing source' when proceeds are received",
+        "C": "Revenue",
+        "D": "Not reported until paid"
+      },
+      "correctAnswer": "B",
+      "explanation": "In governmental funds (using current financial resources focus), bond proceeds are reported as 'other financing sources,' not as long-term debt. The debt appears in government-wide statements.",
+      "tip": "Governmental fund: bond proceeds = other financing source.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-015",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Debt Reporting",
+      "conceptTested": "Debt service fund",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A debt service fund is used to account for:",
+      "options": {
+        "A": "Construction of capital assets",
+        "B": "Accumulation of resources for principal and interest payments on general long-term debt",
+        "C": "Enterprise fund debt only",
+        "D": "Short-term borrowings"
+      },
+      "correctAnswer": "B",
+      "explanation": "Debt service funds accumulate resources and pay principal and interest on general long-term debt backed by taxes or general government resources.",
+      "tip": "Debt service fund = accumulate and pay principal/interest.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-016",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Government-Wide Statements",
+      "conceptTested": "Conversion to accrual",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "When converting from governmental fund statements to government-wide statements, capital outlay expenditures are:",
+      "options": {
+        "A": "Eliminated",
+        "B": "Reported as expenses",
+        "C": "Capitalized as assets and depreciated",
+        "D": "Reported as liabilities"
+      },
+      "correctAnswer": "C",
+      "explanation": "Capital outlay is an expenditure in governmental funds but must be capitalized as an asset in government-wide statements, with depreciation expense recognized over time.",
+      "tip": "Conversion: capitalize capital outlay, add depreciation.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-017",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Government-Wide Statements",
+      "conceptTested": "Net position categories",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Net position in government-wide statements is classified as:",
+      "options": {
+        "A": "Fund balance categories",
+        "B": "Net investment in capital assets, restricted, and unrestricted",
+        "C": "Contributed capital and retained earnings",
+        "D": "Assets minus liabilities only"
+      },
+      "correctAnswer": "B",
+      "explanation": "Government-wide net position has three categories: net investment in capital assets, restricted (by external constraints), and unrestricted.",
+      "tip": "Government-wide: net investment + restricted + unrestricted.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-018",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Pension Reporting",
+      "conceptTested": "Government pension liability",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A government's net pension liability is reported:",
+      "options": {
+        "A": "In governmental fund statements",
+        "B": "In government-wide statements only",
+        "C": "As an expenditure in the current year",
+        "D": "Off-balance sheet"
+      },
+      "correctAnswer": "B",
+      "explanation": "Net pension liability (total pension liability minus plan fiduciary net position) is reported in government-wide statements, not in governmental fund statements which use current financial resources focus.",
+      "tip": "Pension liability: government-wide only.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-019",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Special Revenue Funds",
+      "conceptTested": "Special revenue criteria",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Special revenue funds are used for:",
+      "options": {
+        "A": "All restricted revenues",
+        "B": "Revenues legally restricted or committed for specific purposes other than debt service or capital projects",
+        "C": "Enterprise-type activities",
+        "D": "General government operations"
+      },
+      "correctAnswer": "B",
+      "explanation": "Special revenue funds account for revenues that are legally restricted or committed for specific purposes other than debt service or capital projects (like gas tax for roads).",
+      "tip": "Special revenue: restricted for specific purpose (not debt or capital).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-020",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Capital Projects Fund",
+      "conceptTested": "Capital projects accounting",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "In a capital projects fund, spending on construction is reported as:",
+      "options": {
+        "A": "An asset",
+        "B": "An expenditure",
+        "C": "A transfer out",
+        "D": "Deferred outflow"
+      },
+      "correctAnswer": "B",
+      "explanation": "In governmental funds including capital projects funds, spending on capital assets is recorded as expenditures, not capitalized assets. Capitalization occurs in government-wide statements.",
+      "tip": "Capital projects fund: construction = expenditure.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-021",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "GASB Standards",
+      "conceptTested": "Deferred outflows/inflows",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Deferred outflows of resources:",
+      "options": {
+        "A": "Are the same as assets",
+        "B": "Represent consumption of net position applicable to future periods",
+        "C": "Are liabilities",
+        "D": "Reduce fund balance"
+      },
+      "correctAnswer": "B",
+      "explanation": "Deferred outflows represent consumption of net assets (resources) that is applicable to a future reporting period—a separate element from assets.",
+      "tip": "Deferred outflow = future expense (separate from assets).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-022",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Reporting Entity",
+      "conceptTested": "Component units",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "A component unit that is fiscally dependent on the primary government and would cause misleading statements if omitted is:",
+      "options": {
+        "A": "Discretely presented",
+        "B": "Blended into the primary government's funds",
+        "C": "Excluded from the reporting entity",
+        "D": "Reported in footnotes only"
+      },
+      "correctAnswer": "A",
+      "explanation": "Most component units are discretely presented in a separate column. Blending is limited to component units that are essentially part of the primary government.",
+      "tip": "Most component units: discrete presentation.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-023",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "MD&A",
+      "conceptTested": "Required supplementary information",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Management's Discussion and Analysis (MD&A) in government financial reports is:",
+      "options": {
+        "A": "Part of the basic financial statements",
+        "B": "Required supplementary information (RSI)",
+        "C": "Optional supplementary information",
+        "D": "Statistical section information"
+      },
+      "correctAnswer": "B",
+      "explanation": "MD&A is required supplementary information that precedes the basic financial statements, providing overview and analysis of the government's financial activities.",
+      "tip": "MD&A = RSI (required supplementary information).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-gov-adv-024",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Measurement Focus",
+      "conceptTested": "Economic resources focus",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The economic resources measurement focus reports:",
+      "options": {
+        "A": "Only current assets and current liabilities",
+        "B": "All assets and liabilities (both current and long-term)",
+        "C": "Cash only",
+        "D": "Appropriations and encumbrances"
+      },
+      "correctAnswer": "B",
+      "explanation": "Economic resources focus reports all economic resources (assets) and obligations (liabilities), both current and long-term. Used in government-wide and proprietary statements.",
+      "tip": "Economic resources = all assets and liabilities.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-025",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Reconciliation",
+      "conceptTested": "Fund to government-wide reconciliation",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In reconciling governmental fund balance to government-wide net position, capital assets purchased during the year:",
+      "options": {
+        "A": "Are subtracted",
+        "B": "Are added (since they were expended in funds but capitalized in government-wide)",
+        "C": "Have no effect",
+        "D": "Reduce net position"
+      },
+      "correctAnswer": "B",
+      "explanation": "Capital outlays reduce fund balance (expenditure) but are assets in government-wide. The reconciliation adds back capital outlays to convert to net position.",
+      "tip": "Reconciliation: add capital outlay (fund expense → GW asset).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-gov-adv-026",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Permanent Fund",
+      "conceptTested": "Permanent fund purpose",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "A permanent fund is used when:",
+      "options": {
+        "A": "The principal must be maintained intact and earnings benefit the government or citizens",
+        "B": "Revenues are temporarily restricted",
+        "C": "Capital projects are financed",
+        "D": "Debt is serviced"
+      },
+      "correctAnswer": "A",
+      "explanation": "Permanent funds report resources where the principal must be legally preserved and only earnings can be used for purposes that benefit the government or its citizens (like cemetery perpetual care).",
+      "tip": "Permanent fund: principal intact, earnings benefit government/public.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-027",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Expenditure Recognition",
+      "conceptTested": "Claims and judgments",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "In governmental funds, claims and judgments expenditures are recognized when:",
+      "options": {
+        "A": "The claim is filed",
+        "B": "The liability is due and payable from current financial resources",
+        "C": "The lawsuit is probable of loss",
+        "D": "The event giving rise to the claim occurs"
+      },
+      "correctAnswer": "B",
+      "explanation": "Under modified accrual, claims/judgments expenditures are recognized when the liability is due and payable—when it will require current financial resources.",
+      "tip": "Governmental funds: recognize when due and payable.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-028",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Inventory",
+      "conceptTested": "Governmental fund inventory",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Inventory in governmental funds may be reported using:",
+      "options": {
+        "A": "Only the purchases method",
+        "B": "Only the consumption method",
+        "C": "Either purchases or consumption method",
+        "D": "Fair value only"
+      },
+      "correctAnswer": "C",
+      "explanation": "Governmental funds may use the purchases method (expenditure when purchased) or consumption method (expenditure when used). Both are acceptable.",
+      "tip": "Governmental inventory: purchases OR consumption method.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-gov-adv-029",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "OPEB",
+      "conceptTested": "Other post-employment benefits",
+      "difficulty": "hard",
+      "questionFormat": "conceptual",
+      "question": "Net OPEB liability is calculated as:",
+      "options": {
+        "A": "Total OPEB liability minus plan fiduciary net position",
+        "B": "Total benefits paid",
+        "C": "Contributions minus benefits",
+        "D": "Present value of future salaries"
+      },
+      "correctAnswer": "A",
+      "explanation": "Net OPEB liability = Total OPEB liability - Plan fiduciary net position (plan assets). Similar to pension accounting structure under GASB 75.",
+      "tip": "Net OPEB liability = Total liability - Plan assets.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-gov-adv-030",
+      "section": "FAR",
+      "topic": "Government Accounting",
+      "subtopic": "Statistical Section",
+      "conceptTested": "CAFR components",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "The statistical section of an Annual Comprehensive Financial Report (ACFR) includes:",
+      "options": {
+        "A": "Audited financial statements",
+        "B": "Unaudited financial trend and demographic data",
+        "C": "MD&A",
+        "D": "Notes to financial statements"
+      },
+      "correctAnswer": "B",
+      "explanation": "The statistical section presents unaudited comparative data including financial trends, revenue capacity, debt capacity, demographic information, and operating data over multiple years.",
+      "tip": "Statistical section: unaudited trend/demographic data.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

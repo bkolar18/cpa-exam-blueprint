@@ -298,7 +298,7 @@ export default function AccoladesPage() {
         </div>
       )}
 
-      {/* Platinum Reward Banner */}
+      {/* Achievement Milestone Banner */}
       {data.achievements.unlocked >= data.achievements.total - 1 && (
         <div className="mt-12 rounded-xl p-6 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-2 border-purple-500/50">
           <div className="flex items-center gap-4">
@@ -306,22 +306,14 @@ export default function AccoladesPage() {
             <div>
               <h3 className="text-xl font-bold text-[var(--foreground)] mb-1">
                 {data.achievements.unlocked === data.achievements.total
-                  ? "You've Earned a Reward!"
+                  ? "Congratulations, CPA Master!"
                   : "Almost There!"}
               </h3>
               <p className="text-[var(--muted-foreground)]">
                 {data.achievements.unlocked === data.achievements.total
-                  ? "Use code CPAMASTER for an exclusive discount on Surgent CPA Review!"
-                  : `Unlock ${data.achievements.total - data.achievements.unlocked} more achievement${data.achievements.total - data.achievements.unlocked === 1 ? "" : "s"} to earn an exclusive Surgent discount code.`}
+                  ? "You've unlocked every achievement! You're ready to crush the CPA exam."
+                  : `Unlock ${data.achievements.total - data.achievements.unlocked} more achievement${data.achievements.total - data.achievements.unlocked === 1 ? "" : "s"} to become a CPA Master!`}
               </p>
-              {data.achievements.unlocked === data.achievements.total && (
-                <a
-                  href="/recommended-program"
-                  className="inline-block mt-3 px-6 py-2 bg-[var(--primary)] text-white rounded-lg font-medium hover:opacity-90 transition-opacity"
-                >
-                  Claim Your Discount
-                </a>
-              )}
             </div>
           </div>
         </div>

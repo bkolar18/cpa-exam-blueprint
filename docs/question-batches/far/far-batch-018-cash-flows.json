@@ -1,0 +1,642 @@
+{
+  "batchInfo": {
+    "section": "FAR",
+    "topic": "Statement of Cash Flows",
+    "batchNumber": 18,
+    "questionCount": 30,
+    "weight": "5%",
+    "generatedDate": "2025-01-07"
+  },
+  "questions": [
+    {
+      "id": "far-scf-001",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Cash Flow Basics",
+      "conceptTested": "Purpose of statement",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The primary purpose of the statement of cash flows is to provide information about:",
+      "options": {
+        "A": "The profitability of an entity",
+        "B": "An entity's cash receipts and cash payments during a period",
+        "C": "Changes in an entity's equity",
+        "D": "An entity's financial position at a point in time"
+      },
+      "correctAnswer": "B",
+      "explanation": "The statement of cash flows provides information about cash receipts and payments during a period, helping users assess an entity's ability to generate cash and meet obligations.",
+      "tip": "Cash flow statement = cash in and cash out.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-002",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Cash Flow Categories",
+      "conceptTested": "Three categories",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The three categories of cash flows are:",
+      "options": {
+        "A": "Operating, investing, and financing",
+        "B": "Current, long-term, and equity",
+        "C": "Revenue, expense, and capital",
+        "D": "Direct, indirect, and supplemental"
+      },
+      "correctAnswer": "A",
+      "explanation": "Cash flows are classified into three categories: operating activities (day-to-day business), investing activities (long-term assets), and financing activities (debt and equity).",
+      "tip": "Three categories: operating, investing, financing.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-003",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Operating Activities",
+      "conceptTested": "Operating cash flows",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which of the following is classified as an operating activity?",
+      "options": {
+        "A": "Payment of dividends to shareholders",
+        "B": "Purchase of equipment",
+        "C": "Cash received from customers",
+        "D": "Proceeds from issuing bonds"
+      },
+      "correctAnswer": "C",
+      "explanation": "Cash received from customers is an operating activity—it relates to the entity's primary revenue-generating activities.",
+      "tip": "Operating = day-to-day business (revenue & expense related).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-004",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Investing Activities",
+      "conceptTested": "Investing cash flows",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which of the following is classified as an investing activity?",
+      "options": {
+        "A": "Payment of interest on debt",
+        "B": "Collection of a loan made to another entity",
+        "C": "Proceeds from issuing common stock",
+        "D": "Payment of employee salaries"
+      },
+      "correctAnswer": "B",
+      "explanation": "Collection of a loan principal is an investing activity. Investing activities involve acquiring and disposing of long-term assets and investments.",
+      "tip": "Investing = long-term assets and investments.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-005",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Financing Activities",
+      "conceptTested": "Financing cash flows",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which of the following is classified as a financing activity?",
+      "options": {
+        "A": "Cash paid for inventory",
+        "B": "Cash paid to acquire a subsidiary",
+        "C": "Cash received from issuing bonds",
+        "D": "Cash received from sale of equipment"
+      },
+      "correctAnswer": "C",
+      "explanation": "Proceeds from issuing bonds is a financing activity. Financing activities involve obtaining or repaying capital from creditors and owners.",
+      "tip": "Financing = obtaining/repaying capital (debt and equity).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-006",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Interest Classification",
+      "conceptTested": "Interest paid classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under U.S. GAAP, interest paid is classified as:",
+      "options": {
+        "A": "Operating activity",
+        "B": "Investing activity",
+        "C": "Financing activity",
+        "D": "Either operating or financing (company choice)"
+      },
+      "correctAnswer": "A",
+      "explanation": "Under U.S. GAAP, interest paid is classified as an operating activity because it's included in the determination of net income. Note: IFRS allows more flexibility.",
+      "tip": "GAAP: Interest paid = operating.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-007",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Dividend Classification",
+      "conceptTested": "Dividends paid classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under U.S. GAAP, dividends paid to shareholders are classified as:",
+      "options": {
+        "A": "Operating activity",
+        "B": "Investing activity",
+        "C": "Financing activity",
+        "D": "Not reported on the statement of cash flows"
+      },
+      "correctAnswer": "C",
+      "explanation": "Dividends paid are financing activities under GAAP—they represent distributions of capital to owners.",
+      "tip": "Dividends paid = financing (distribution to owners).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-008",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Dividend Classification",
+      "conceptTested": "Dividends received classification",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under U.S. GAAP, dividends received from investments are classified as:",
+      "options": {
+        "A": "Operating activity",
+        "B": "Investing activity",
+        "C": "Financing activity",
+        "D": "Either operating or investing"
+      },
+      "correctAnswer": "A",
+      "explanation": "Dividends received are classified as operating activities under GAAP because dividend income is included in net income.",
+      "tip": "Dividends received = operating (goes through income).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-009",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Direct Method",
+      "conceptTested": "Direct method presentation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the direct method of presenting operating cash flows:",
+      "options": {
+        "A": "Net income is adjusted for noncash items",
+        "B": "Major classes of gross cash receipts and payments are presented",
+        "C": "Only the change in working capital is shown",
+        "D": "Depreciation is shown as a cash inflow"
+      },
+      "correctAnswer": "B",
+      "explanation": "The direct method presents major classes of operating cash receipts (from customers) and payments (to suppliers, employees) directly rather than adjusting net income.",
+      "tip": "Direct method = show actual cash received and paid.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-010",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Indirect Method",
+      "conceptTested": "Indirect method starting point",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "The indirect method of presenting operating cash flows starts with:",
+      "options": {
+        "A": "Cash received from customers",
+        "B": "Total revenues",
+        "C": "Net income",
+        "D": "Operating income"
+      },
+      "correctAnswer": "C",
+      "explanation": "The indirect method starts with net income and adjusts for noncash items and changes in operating assets and liabilities to arrive at cash from operations.",
+      "tip": "Indirect method starts with net income.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-011",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Indirect Method",
+      "conceptTested": "Depreciation adjustment",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, depreciation expense is:",
+      "options": {
+        "A": "Subtracted from net income",
+        "B": "Added back to net income",
+        "C": "Shown as an investing outflow",
+        "D": "Not included in the statement"
+      },
+      "correctAnswer": "B",
+      "explanation": "Depreciation is a noncash expense that reduced net income. It's added back to net income under the indirect method because it didn't require a cash outflow.",
+      "tip": "Depreciation added back = noncash expense.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-012",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Indirect Method",
+      "conceptTested": "Accounts receivable change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, an increase in accounts receivable is:",
+      "options": {
+        "A": "Added to net income",
+        "B": "Subtracted from net income",
+        "C": "Shown as an investing activity",
+        "D": "Ignored"
+      },
+      "correctAnswer": "B",
+      "explanation": "An increase in accounts receivable means sales exceeded cash collections. It's subtracted from net income because revenue was recognized but cash wasn't received.",
+      "tip": "↑ AR = ↓ cash from operations (collected less than sold).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-013",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Indirect Method",
+      "conceptTested": "Accounts payable change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, a decrease in accounts payable is:",
+      "options": {
+        "A": "Added to net income",
+        "B": "Subtracted from net income",
+        "C": "Shown as a financing activity",
+        "D": "Not adjusted"
+      },
+      "correctAnswer": "B",
+      "explanation": "A decrease in accounts payable means cash payments exceeded expense recognition. It's subtracted because more cash was paid than expenses recorded.",
+      "tip": "↓ AP = ↓ cash from operations (paid more than expensed).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-014",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Indirect Method",
+      "conceptTested": "Inventory change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, an increase in inventory is:",
+      "options": {
+        "A": "Added to net income",
+        "B": "Subtracted from net income",
+        "C": "Shown as an investing outflow",
+        "D": "Shown as a financing outflow"
+      },
+      "correctAnswer": "B",
+      "explanation": "An increase in inventory means cash was spent to purchase more inventory than was sold (cost of goods sold). It's subtracted from net income.",
+      "tip": "↑ Inventory = ↓ cash (bought more than sold).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-015",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Operating Calculation",
+      "conceptTested": "Cash from operations",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Net income is $100,000. Depreciation is $20,000. Accounts receivable increased $15,000 and accounts payable increased $8,000. What is cash from operating activities?",
+      "options": {
+        "A": "$87,000",
+        "B": "$103,000",
+        "C": "$113,000",
+        "D": "$143,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Cash from operations = $100,000 + $20,000 (depreciation) - $15,000 (↑AR) + $8,000 (↑AP) = $113,000.",
+      "tip": "Add depreciation, subtract ↑AR, add ↑AP.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-scf-016",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Gain/Loss Adjustments",
+      "conceptTested": "Gain on sale adjustment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, a gain on sale of equipment is:",
+      "options": {
+        "A": "Added to net income in operating activities",
+        "B": "Subtracted from net income in operating activities",
+        "C": "Shown only in investing activities",
+        "D": "Ignored because it's noncash"
+      },
+      "correctAnswer": "B",
+      "explanation": "The gain is subtracted from operating activities because it's included in net income but the full cash proceeds are shown in investing activities. Subtracting avoids double counting.",
+      "tip": "Gain subtracted from operating (full proceeds in investing).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-scf-017",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Investing Calculation",
+      "conceptTested": "Equipment cash flow",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Equipment with cost $50,000 and accumulated depreciation $30,000 was sold for $25,000. What are the cash flow effects?",
+      "options": {
+        "A": "Investing inflow $25,000; Operating add-back $5,000",
+        "B": "Investing inflow $25,000; Operating subtract $5,000",
+        "C": "Investing inflow $20,000; Operating add-back $5,000",
+        "D": "Investing outflow $25,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Book value = $50,000 - $30,000 = $20,000. Sold for $25,000, so $5,000 gain. Cash inflow of $25,000 is investing. Gain of $5,000 is subtracted from operating.",
+      "tip": "Full proceeds = investing. Gain = subtract from operating.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-scf-018",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Noncash Activities",
+      "conceptTested": "Noncash disclosure",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Significant noncash investing and financing activities are:",
+      "options": {
+        "A": "Included in the body of the cash flow statement",
+        "B": "Disclosed in a separate schedule or notes",
+        "C": "Ignored entirely",
+        "D": "Netted against related cash flows"
+      },
+      "correctAnswer": "B",
+      "explanation": "Significant noncash investing and financing activities (like issuing stock for land) must be disclosed in a separate schedule or in notes, not in the body of the statement.",
+      "tip": "Noncash activities = supplemental disclosure, not in body.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-019",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Noncash Activities",
+      "conceptTested": "Examples of noncash",
+      "difficulty": "easy",
+      "questionFormat": "conceptual",
+      "question": "Which is an example of a noncash investing and financing activity?",
+      "options": {
+        "A": "Purchase of treasury stock for cash",
+        "B": "Payment of cash dividends",
+        "C": "Conversion of bonds to common stock",
+        "D": "Collection of accounts receivable"
+      },
+      "correctAnswer": "C",
+      "explanation": "Converting bonds to common stock is a noncash transaction—no cash changes hands. It must be disclosed as a noncash financing activity.",
+      "tip": "Bond conversion = noncash (no cash exchanged).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 45
+    },
+    {
+      "id": "far-scf-020",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Direct Method Calculation",
+      "conceptTested": "Cash collected from customers",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Sales revenue is $500,000. Beginning accounts receivable was $40,000 and ending is $55,000. What is cash collected from customers?",
+      "options": {
+        "A": "$455,000",
+        "B": "$485,000",
+        "C": "$500,000",
+        "D": "$515,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cash collected = Sales - Increase in AR = $500,000 - ($55,000 - $40,000) = $500,000 - $15,000 = $485,000.",
+      "tip": "Collections = Sales ± change in AR.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-scf-021",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Direct Method Calculation",
+      "conceptTested": "Cash paid to suppliers",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Cost of goods sold is $300,000. Inventory increased $20,000 and accounts payable decreased $10,000. What is cash paid to suppliers?",
+      "options": {
+        "A": "$270,000",
+        "B": "$290,000",
+        "C": "$310,000",
+        "D": "$330,000"
+      },
+      "correctAnswer": "D",
+      "explanation": "Cash paid = COGS + Increase in inventory + Decrease in AP = $300,000 + $20,000 + $10,000 = $330,000.",
+      "tip": "Paid to suppliers = COGS + ↑Inventory + ↓AP.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-scf-022",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Financing Calculation",
+      "conceptTested": "Dividends paid calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Beginning retained earnings: $200,000. Net income: $80,000. Ending retained earnings: $230,000. What dividends were paid?",
+      "options": {
+        "A": "$30,000",
+        "B": "$50,000",
+        "C": "$80,000",
+        "D": "$110,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Dividends = Beginning RE + Net income - Ending RE = $200,000 + $80,000 - $230,000 = $50,000.",
+      "tip": "Dividends = Beg RE + NI - End RE.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 90
+    },
+    {
+      "id": "far-scf-023",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Investing Calculation",
+      "conceptTested": "Equipment purchases",
+      "difficulty": "hard",
+      "questionFormat": "calculation",
+      "question": "Beginning equipment: $400,000. Ending equipment: $480,000. Equipment with original cost of $60,000 was sold. What is cash paid for equipment purchases?",
+      "options": {
+        "A": "$80,000",
+        "B": "$140,000",
+        "C": "$200,000",
+        "D": "$540,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Purchases = Ending - Beginning + Sold = $480,000 - $400,000 + $60,000 = $140,000.",
+      "tip": "Purchases = Change in account + disposals.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-scf-024",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Income Taxes",
+      "conceptTested": "Tax payment calculation",
+      "difficulty": "medium",
+      "questionFormat": "calculation",
+      "question": "Income tax expense is $45,000. Deferred tax liability increased $8,000 and income taxes payable decreased $5,000. What is cash paid for taxes?",
+      "options": {
+        "A": "$32,000",
+        "B": "$42,000",
+        "C": "$50,000",
+        "D": "$58,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "Cash paid = Tax expense - Increase in DTL + Decrease in taxes payable = $45,000 - $8,000 + $5,000 = $42,000.",
+      "tip": "Cash taxes = Expense - ↑DTL - ↑Taxes Payable.",
+      "calculationRequired": true,
+      "timeEstimateSeconds": 120
+    },
+    {
+      "id": "far-scf-025",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Stock-Based Compensation",
+      "conceptTested": "Stock comp adjustment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, stock-based compensation expense is:",
+      "options": {
+        "A": "Subtracted from net income",
+        "B": "Added back to net income",
+        "C": "Shown as a financing outflow",
+        "D": "Not adjusted"
+      },
+      "correctAnswer": "B",
+      "explanation": "Stock-based compensation is a noncash expense that reduced net income. It's added back under the indirect method similar to depreciation.",
+      "tip": "Stock comp added back = noncash expense.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-026",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Restricted Cash",
+      "conceptTested": "Restricted cash presentation",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under current GAAP, restricted cash should be:",
+      "options": {
+        "A": "Excluded from cash and cash equivalents",
+        "B": "Included in the beginning and ending cash balances with reconciliation disclosed",
+        "C": "Shown as an investing activity only",
+        "D": "Reported in financing activities"
+      },
+      "correctAnswer": "B",
+      "explanation": "ASU 2016-18 requires that restricted cash be included in the total cash balance at the beginning and end of the cash flow statement, with a reconciliation to the balance sheet amounts.",
+      "tip": "Restricted cash = include in beginning/ending balances.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-scf-027",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Bank Overdrafts",
+      "conceptTested": "Overdraft treatment",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Bank overdrafts that are repayable on demand and form part of cash management are:",
+      "options": {
+        "A": "Always shown as financing activities",
+        "B": "Included as a component of cash and cash equivalents",
+        "C": "Shown as investing activities",
+        "D": "Excluded from the cash flow statement"
+      },
+      "correctAnswer": "B",
+      "explanation": "Bank overdrafts that are an integral part of cash management (repayable on demand, fluctuating between positive and negative) are included in cash and cash equivalents.",
+      "tip": "Overdrafts (part of cash management) = include in cash.",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    },
+    {
+      "id": "far-scf-028",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Amortization",
+      "conceptTested": "Bond premium amortization",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, amortization of bond premium on bonds payable is:",
+      "options": {
+        "A": "Added to net income",
+        "B": "Subtracted from net income",
+        "C": "Shown as a financing outflow",
+        "D": "Shown as a financing inflow"
+      },
+      "correctAnswer": "B",
+      "explanation": "Premium amortization reduces interest expense below cash paid. Since this increased net income relative to cash, it's subtracted under the indirect method.",
+      "tip": "Premium amortization = subtract (expense < cash paid).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-scf-029",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Amortization",
+      "conceptTested": "Bond discount amortization",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, amortization of bond discount on bonds payable is:",
+      "options": {
+        "A": "Added to net income",
+        "B": "Subtracted from net income",
+        "C": "Shown as a financing outflow",
+        "D": "Shown as a financing inflow"
+      },
+      "correctAnswer": "A",
+      "explanation": "Discount amortization increases interest expense above cash paid. Since this reduced net income relative to cash, it's added back under the indirect method.",
+      "tip": "Discount amortization = add back (expense > cash paid).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 75
+    },
+    {
+      "id": "far-scf-030",
+      "section": "FAR",
+      "topic": "Statement of Cash Flows",
+      "subtopic": "Deferred Revenue",
+      "conceptTested": "Deferred revenue change",
+      "difficulty": "medium",
+      "questionFormat": "conceptual",
+      "question": "Under the indirect method, an increase in deferred revenue (unearned revenue) is:",
+      "options": {
+        "A": "Subtracted from net income",
+        "B": "Added to net income",
+        "C": "Shown as financing activity",
+        "D": "Shown as investing activity"
+      },
+      "correctAnswer": "B",
+      "explanation": "An increase in deferred revenue means cash was received but not yet recognized as revenue (reducing net income relative to cash). It's added back in operating activities.",
+      "tip": "↑ Deferred revenue = add (cash received > revenue recognized).",
+      "calculationRequired": false,
+      "timeEstimateSeconds": 60
+    }
+  ]
+}

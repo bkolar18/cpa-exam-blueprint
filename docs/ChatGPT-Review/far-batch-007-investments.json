@@ -1,0 +1,493 @@
+[
+  {
+    "id": "far-inv-sec-001",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "Held-to-maturity criteria",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Debt securities should be classified as held-to-maturity only if:",
+    "options": {
+      "A": "They will mature within one year",
+      "B": "The entity has the positive intent and ability to hold them until maturity",
+      "C": "They are trading on a public exchange",
+      "D": "They pay fixed interest rates"
+    },
+    "correctAnswer": "B",
+    "explanation": "Held-to-maturity classification requires both positive intent and ability to hold the securities until maturity. If either is lacking, the securities must be classified as available-for-sale (or trading if held for short-term profit). Selling HTM securities before maturity can taint the entire portfolio.",
+    "tip": "HTM = intent AND ability to hold to maturity."
+  },
+  {
+    "id": "far-inv-sec-002",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "HTM measurement",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Held-to-maturity debt securities are reported on the balance sheet at:",
+    "options": {
+      "A": "Fair value with changes in net income",
+      "B": "Fair value with changes in OCI",
+      "C": "Amortized cost",
+      "D": "Lower of cost or market"
+    },
+    "correctAnswer": "C",
+    "explanation": "HTM securities are reported at amortized cost because the holder intends to collect contractual cash flows to maturity, not sell the securities. Any premium or discount is amortized to interest income over the life of the security using the effective interest method.",
+    "tip": "HTM = amortized cost. No fair value adjustments."
+  },
+  {
+    "id": "far-inv-sec-003",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "Trading securities measurement",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Trading debt securities are reported at:",
+    "options": {
+      "A": "Amortized cost",
+      "B": "Fair value with unrealized gains/losses in net income",
+      "C": "Fair value with unrealized gains/losses in OCI",
+      "D": "Lower of cost or fair value"
+    },
+    "correctAnswer": "B",
+    "explanation": "Trading securities are reported at fair value with unrealized gains and losses recognized in net income. These securities are held for short-term profit from price changes, so marking to market through earnings reflects their economic purpose.",
+    "tip": "Trading = fair value through net income."
+  },
+  {
+    "id": "far-inv-sec-004",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "AFS debt securities measurement",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Available-for-sale debt securities are reported at:",
+    "options": {
+      "A": "Amortized cost",
+      "B": "Fair value with unrealized gains/losses in net income",
+      "C": "Fair value with unrealized gains/losses in OCI",
+      "D": "Historical cost"
+    },
+    "correctAnswer": "C",
+    "explanation": "AFS debt securities are reported at fair value, but unrealized gains and losses are reported in other comprehensive income (OCI), not net income. When sold, the accumulated unrealized gain/loss is reclassified from AOCI to net income (reclassification adjustment).",
+    "tip": "AFS debt = fair value through OCI."
+  },
+  {
+    "id": "far-inv-sec-005",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Equity method applicability",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "The equity method of accounting for investments is generally required when the investor has:",
+    "options": {
+      "A": "Less than 20% ownership",
+      "B": "20% to 50% ownership with significant influence",
+      "C": "More than 50% ownership",
+      "D": "Any percentage of ownership in a public company"
+    },
+    "correctAnswer": "B",
+    "explanation": "The equity method is used when the investor has significant influence over the investee, typically presumed with 20-50% ownership. Below 20%, there's typically no significant influence (use fair value). Above 50% typically indicates control, requiring consolidation.",
+    "tip": "20-50% + significant influence = equity method."
+  },
+  {
+    "id": "far-inv-sec-006",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Equity method initial recording",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the equity method, the investment is initially recorded at:",
+    "options": {
+      "A": "The proportionate share of the investee's book value",
+      "B": "The cost paid for the investment",
+      "C": "Fair value of the investee's net assets",
+      "D": "Par value of shares acquired"
+    },
+    "correctAnswer": "B",
+    "explanation": "The equity method investment is initially recorded at cost (the amount paid). Any excess of cost over the investor's share of book value is allocated to identifiable assets/liabilities at fair value, with any remainder assigned to goodwill (embedded in the investment account).",
+    "tip": "Equity method: start at cost paid."
+  },
+  {
+    "id": "far-inv-sec-007",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Equity method income recognition",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "An investor owns 30% of an investee. The investee reported net income of $500,000 and paid dividends of $100,000. What is the investor's equity method income?",
+    "options": {
+      "A": "$150,000",
+      "B": "$120,000",
+      "C": "$30,000",
+      "D": "$180,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Under the equity method, the investor recognizes its share of the investee's net income as investment income: 30% × $500,000 = $150,000. Dividends received ($30,000 = 30% × $100,000) reduce the investment account but are not income—they represent a return of investment.",
+    "tip": "Equity income = % × investee's net income. Dividends reduce investment, not income.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-inv-sec-008",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Equity method balance calculation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "An investor paid $1,000,000 for a 25% interest in an investee. During Year 1, the investee had net income of $400,000 and paid dividends of $80,000. What is the investment balance at year-end?",
+    "options": {
+      "A": "$1,080,000",
+      "B": "$1,100,000",
+      "C": "$1,000,000",
+      "D": "$920,000"
+    },
+    "correctAnswer": "A",
+    "explanation": "Beginning balance: $1,000,000. Add: Share of income (25% × $400,000) = $100,000. Less: Dividends received (25% × $80,000) = $20,000. Ending balance = $1,000,000 + $100,000 - $20,000 = $1,080,000.",
+    "tip": "Investment balance: + share of income, − dividends received.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-inv-sec-009",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Equity method—excess over book value",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "An investor pays $2,000,000 for 40% of an investee with book value of $4,000,000. The excess is attributable to equipment (10-year life) being undervalued by $500,000. What annual amortization reduces equity income?",
+    "options": {
+      "A": "$50,000",
+      "B": "$20,000",
+      "C": "$200,000",
+      "D": "$0"
+    },
+    "correctAnswer": "B",
+    "explanation": "Investor's share of book value = 40% × $4,000,000 = $1,600,000. Excess paid = $2,000,000 − $1,600,000 = $400,000. Investor's share of equipment undervaluation = 40% × $500,000 = $200,000. Annual amortization = $200,000 / 10 years = $20,000, reducing equity income.",
+    "tip": "Excess over book value allocated to assets: amortize and reduce equity income.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-inv-sec-010",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Securities at Fair Value",
+    "conceptTested": "Equity securities default treatment",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 321, equity securities without readily determinable fair values and without significant influence are measured at:",
+    "options": {
+      "A": "Cost with impairment testing",
+      "B": "Fair value through net income by default, or cost minus impairment plus/minus observable price changes if elected",
+      "C": "Fair value through OCI",
+      "D": "Equity method"
+    },
+    "correctAnswer": "B",
+    "explanation": "Equity securities are measured at fair value through net income by default. For equity investments without readily determinable fair values (and no significant influence), entities may elect the measurement alternative: cost minus impairment plus/minus observable price changes in orderly transactions for identical or similar investments.",
+    "tip": "Equity securities: FV through NI default. Private equity: measurement alternative available."
+  },
+  {
+    "id": "far-inv-sec-011",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Securities at Fair Value",
+    "conceptTested": "Equity securities FV measurement",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "An entity holds 1,000 shares of ABC stock (less than 20% ownership, no significant influence). The shares were purchased for $50,000 and have a fair value of $62,000 at year-end. What is reported in net income?",
+    "options": {
+      "A": "$0",
+      "B": "$12,000 unrealized gain",
+      "C": "$62,000 gain",
+      "D": "$12,000 recorded in OCI"
+    },
+    "correctAnswer": "B",
+    "explanation": "Equity securities (without significant influence) are measured at fair value with changes in fair value recognized in net income. The unrealized gain = $62,000 − $50,000 = $12,000, reported in net income. This differs from AFS debt securities, which use OCI.",
+    "tip": "Equity securities = FV through net income (not OCI like AFS debt).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 30
+  },
+  {
+    "id": "far-inv-sec-012",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Fair Value Option",
+    "conceptTested": "Fair value option election",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under the fair value option (ASC 825), an entity may elect to measure certain financial instruments at fair value. Once elected, this choice is:",
+    "options": {
+      "A": "Revocable at any time",
+      "B": "Irrevocable",
+      "C": "Required to be reviewed annually",
+      "D": "Applicable only to debt instruments"
+    },
+    "correctAnswer": "B",
+    "explanation": "The fair value option election is generally irrevocable once made. It must be elected at specific times (initial recognition, certain business combinations, etc.) and applies to the entire instrument. Changes in fair value are recognized in net income.",
+    "tip": "Fair value option = irrevocable election."
+  },
+  {
+    "id": "far-inv-sec-013",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Impairment of Investments",
+    "conceptTested": "AFS debt securities impairment",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under the current expected credit loss (CECL) model for AFS debt securities, an allowance for credit losses is recognized when:",
+    "options": {
+      "A": "The security is other-than-temporarily impaired",
+      "B": "Fair value is below amortized cost and the decline is attributable to credit losses",
+      "C": "The security has been held for more than one year",
+      "D": "Management intends to sell the security"
+    },
+    "correctAnswer": "B",
+    "explanation": "For AFS debt securities, if fair value is below amortized cost, the entity assesses whether any decline is due to credit losses. Credit losses are recognized as an allowance (limited to the amount fair value is below amortized cost), while non-credit losses remain in OCI. If intent to sell exists or more-likely-than-not will be required to sell, write down to fair value through earnings.",
+    "tip": "AFS debt: separate credit loss (allowance) from non-credit loss (OCI)."
+  },
+  {
+    "id": "far-inv-sec-014",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Impairment of Investments",
+    "conceptTested": "HTM impairment under CECL",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under the CECL model, impairment for held-to-maturity debt securities is measured as:",
+    "options": {
+      "A": "The difference between fair value and amortized cost",
+      "B": "Expected credit losses over the remaining life of the security",
+      "C": "Realized losses only",
+      "D": "The difference between face value and purchase price"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under CECL, HTM securities are measured for impairment based on expected credit losses over the remaining life of the security. An allowance is recorded against the amortized cost basis. This forward-looking model replaces the previous incurred loss model and requires estimating lifetime expected losses.",
+    "tip": "CECL for HTM: allowance for lifetime expected credit losses."
+  },
+  {
+    "id": "far-inv-sec-015",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Intercompany profit elimination",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "An investor owns 40% of an investee. The investee sold inventory to the investor for $100,000, which included a $20,000 profit. At year-end, 50% of this inventory remains unsold. What adjustment is needed?",
+    "options": {
+      "A": "Reduce equity income by $20,000",
+      "B": "Reduce equity income by $4,000",
+      "C": "No adjustment needed",
+      "D": "Reduce equity income by $10,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Unrealized intercompany profit must be eliminated to the extent of the investor's ownership. Unrealized profit = $20,000 × 50% (unsold) = $10,000. Investor's share = 40% × $10,000 = $4,000. This reduces equity method income. When inventory is sold externally, the profit is realized.",
+    "tip": "Eliminate investor's share of unrealized intercompany profit.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "far-inv-sec-016",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Loss on equity method",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "If equity method losses reduce the investment account to zero, the investor should:",
+    "options": {
+      "A": "Continue recognizing losses as a negative investment",
+      "B": "Discontinue recognizing losses unless the investor has guaranteed obligations or is committed to provide further support",
+      "C": "Recognize all future losses in OCI",
+      "D": "Immediately write off the investment"
+    },
+    "correctAnswer": "B",
+    "explanation": "When equity method losses reduce the investment to zero, the investor discontinues applying the equity method unless it has guaranteed obligations, has committed to provide additional support, or is otherwise committed to the investee. Additional losses would be recorded only to the extent of such commitments.",
+    "tip": "Equity method: don't go negative unless committed to support investee."
+  },
+  {
+    "id": "far-inv-sec-017",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "Transfers between categories",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When debt securities are transferred from available-for-sale to held-to-maturity, the unrealized holding gain/loss in AOCI is:",
+    "options": {
+      "A": "Recognized immediately in net income",
+      "B": "Amortized over the remaining life of the security as an adjustment to yield",
+      "C": "Retained in AOCI indefinitely",
+      "D": "Written off against retained earnings"
+    },
+    "correctAnswer": "B",
+    "explanation": "When AFS securities are transferred to HTM, the fair value at transfer becomes the new amortized cost basis. The unrealized gain/loss in AOCI is not immediately recognized but is amortized over the remaining life of the security as an adjustment to interest income (yield adjustment).",
+    "tip": "AFS to HTM: amortize AOCI balance over remaining life."
+  },
+  {
+    "id": "far-inv-sec-018",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Change to equity method",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When an investor acquires additional shares and changes from fair value to the equity method, the investor should:",
+    "options": {
+      "A": "Restate prior periods as if equity method was always used",
+      "B": "Apply equity method prospectively from the date significant influence is obtained",
+      "C": "Recognize a gain or loss on the previously held shares",
+      "D": "Both B and C are correct"
+    },
+    "correctAnswer": "D",
+    "explanation": "When moving to equity method, the investor applies the method prospectively from the date significant influence is obtained. The previously held shares are remeasured to fair value at that date, with any gain or loss recognized in earnings. The total investment then becomes the basis for applying the equity method.",
+    "tip": "Change to equity method: remeasure old shares to FV, then apply equity method prospectively."
+  },
+  {
+    "id": "far-inv-sec-019",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "Premium amortization",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A bond is purchased for $108,000 with a face value of $100,000, 8% stated rate, and 5 years to maturity. Using straight-line amortization, what is first-year interest income?",
+    "options": {
+      "A": "$8,000",
+      "B": "$6,400",
+      "C": "$9,600",
+      "D": "$8,640"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cash interest = $100,000 × 8% = $8,000. Premium = $108,000 − $100,000 = $8,000. Annual premium amortization = $8,000 / 5 years = $1,600. Interest income = Cash interest − Premium amortization = $8,000 − $1,600 = $6,400.",
+    "tip": "Premium amortization reduces interest income.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-inv-sec-020",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "Discount amortization",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A bond is purchased for $95,000 with a face value of $100,000, 6% stated rate, and 10 years to maturity. Using straight-line amortization, what is first-year interest income?",
+    "options": {
+      "A": "$6,000",
+      "B": "$6,500",
+      "C": "$5,500",
+      "D": "$5,700"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cash interest = $100,000 × 6% = $6,000. Discount = $100,000 − $95,000 = $5,000. Annual discount amortization = $5,000 / 10 years = $500. Interest income = Cash interest + Discount amortization = $6,000 + $500 = $6,500.",
+    "tip": "Discount amortization increases interest income.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-inv-sec-021",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Goodwill in equity method",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under the equity method, how is goodwill arising from the investment treated?",
+    "options": {
+      "A": "Recorded separately and amortized over 10 years",
+      "B": "Recorded separately and tested for impairment annually",
+      "C": "Included in the investment account and not amortized separately",
+      "D": "Expensed immediately"
+    },
+    "correctAnswer": "C",
+    "explanation": "Goodwill arising from an equity method investment is implicit—it is included in the investment account balance (the excess of cost over the investor's share of fair value of net identifiable assets). It is not separately amortized but is considered when testing the investment for impairment.",
+    "tip": "Equity method goodwill: embedded in investment, not separately reported or amortized."
+  },
+  {
+    "id": "far-inv-sec-022",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Impairment of Investments",
+    "conceptTested": "Equity method impairment",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "An equity method investment should be tested for impairment when:",
+    "options": {
+      "A": "Annually, regardless of circumstances",
+      "B": "Events or changes indicate the carrying amount may not be recoverable",
+      "C": "The investee reports a net loss",
+      "D": "The investor's share of net assets declines"
+    },
+    "correctAnswer": "B",
+    "explanation": "Equity method investments are tested for impairment when events or changes in circumstances indicate the carrying amount may not be recoverable. Unlike goodwill, there is no annual testing requirement. If impairment is other than temporary, the investment is written down to fair value.",
+    "tip": "Equity method: impairment test when triggering events occur (not annually)."
+  },
+  {
+    "id": "far-inv-sec-023",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Debt Securities Classification",
+    "conceptTested": "AFS reclassification on sale",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "AFS debt securities with an amortized cost of $80,000 and fair value of $90,000 were sold for $90,000. The AOCI balance was $10,000. What gain is recognized in net income?",
+    "options": {
+      "A": "$0",
+      "B": "$10,000",
+      "C": "$20,000",
+      "D": "$90,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "When AFS securities are sold, the accumulated unrealized gain in AOCI is reclassified to net income. Gain = Proceeds − Amortized cost = $90,000 − $80,000 = $10,000. The $10,000 in AOCI is reclassified (removed from AOCI, recognized in net income).",
+    "tip": "On sale of AFS, reclassify unrealized gain/loss from AOCI to net income.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-inv-sec-024",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Equity Method Investments",
+    "conceptTested": "Indicators of significant influence",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are indicators of significant influence EXCEPT:",
+    "options": {
+      "A": "Representation on the board of directors",
+      "B": "Participation in policy-making processes",
+      "C": "Ownership of more than 50% of voting stock",
+      "D": "Material intercompany transactions"
+    },
+    "correctAnswer": "C",
+    "explanation": "Ownership over 50% indicates control, requiring consolidation, not the equity method. Indicators of significant influence (20-50% range) include board representation, policy participation, material intercompany transactions, interchange of managerial personnel, and technological dependency.",
+    "tip": "Over 50% = control (consolidate). 20-50% with influence = equity method."
+  },
+  {
+    "id": "far-inv-sec-025",
+    "section": "FAR",
+    "topic": "Investments",
+    "subtopic": "Fair Value Option",
+    "conceptTested": "FVO for investments",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "If an entity elects the fair value option for an equity method investment:",
+    "options": {
+      "A": "The investment is still accounted for under the equity method",
+      "B": "The investment is measured at fair value with changes in net income",
+      "C": "The investment is measured at fair value with changes in OCI",
+      "D": "Dividends are not recognized"
+    },
+    "correctAnswer": "B",
+    "explanation": "When the fair value option is elected for an equity method investment, the investment is measured at fair value each period with changes recognized in net income. The equity method is not applied—no pickup of investee income. Dividends are recognized when received.",
+    "tip": "FVO for equity method investment: fair value, changes in NI, dividends when received."
+  }
+]

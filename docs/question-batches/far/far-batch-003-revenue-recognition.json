@@ -1,0 +1,776 @@
+[
+  {
+    "id": "far-rev-001",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Step 1 - Identifying the contract",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, which of the following is NOT a criterion for identifying a contract with a customer?",
+    "options": {
+      "A": "The parties have approved the contract",
+      "B": "The entity can identify each party's rights regarding goods or services",
+      "C": "The contract must be in written form",
+      "D": "Collection of consideration is probable"
+    },
+    "correctAnswer": "C",
+    "explanation": "ASC 606 does not require a contract to be in written form. A contract can be written, oral, or implied by customary business practices. The five criteria for identifying a contract are: (1) approval by parties, (2) identification of rights, (3) identification of payment terms, (4) commercial substance, and (5) probable collection.",
+    "tip": "Contracts under ASC 606 can be written, oral, or implied—no written requirement."
+  },
+  {
+    "id": "far-rev-002",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Overview of the five steps",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "What is the correct sequence of the five steps in the ASC 606 revenue recognition model?",
+    "options": {
+      "A": "Identify contract, identify performance obligations, determine price, allocate price, recognize revenue",
+      "B": "Determine price, identify contract, recognize revenue, identify performance obligations, allocate price",
+      "C": "Identify performance obligations, identify contract, allocate price, determine price, recognize revenue",
+      "D": "Recognize revenue, identify contract, identify performance obligations, determine price, allocate price"
+    },
+    "correctAnswer": "A",
+    "explanation": "The five-step model under ASC 606 is: (1) Identify the contract with a customer, (2) Identify the performance obligations in the contract, (3) Determine the transaction price, (4) Allocate the transaction price to performance obligations, and (5) Recognize revenue when (or as) performance obligations are satisfied.",
+    "tip": "Remember: Contract → Obligations → Price → Allocate → Recognize."
+  },
+  {
+    "id": "far-rev-003",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Step 5 - When to recognize revenue",
+    "difficulty": "easy",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, revenue is recognized when:",
+    "options": {
+      "A": "Cash is received from the customer",
+      "B": "A contract is signed with the customer",
+      "C": "The entity satisfies a performance obligation by transferring control of a good or service",
+      "D": "The entity issues an invoice to the customer"
+    },
+    "correctAnswer": "C",
+    "explanation": "Under ASC 606, revenue is recognized when (or as) an entity satisfies a performance obligation by transferring a promised good or service (an asset) to a customer. Transfer of control is the key criterion, not cash receipt, contract signing, or invoicing.",
+    "tip": "Revenue recognition = control transferred to customer."
+  },
+  {
+    "id": "far-rev-004",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Identifying Performance Obligations",
+    "conceptTested": "Distinct goods or services",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, a good or service is distinct if:",
+    "options": {
+      "A": "It generates cash flows independently of other assets",
+      "B": "The customer can benefit from it on its own or with readily available resources, AND it is separately identifiable from other promises",
+      "C": "It has a standalone selling price greater than zero",
+      "D": "It is specifically listed as a line item in the contract"
+    },
+    "correctAnswer": "B",
+    "explanation": "A good or service is distinct if both criteria are met: (1) the customer can benefit from it on its own or together with readily available resources (capable of being distinct), AND (2) the promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract).",
+    "tip": "Distinct = capable of being distinct + separately identifiable in the contract."
+  },
+  {
+    "id": "far-rev-005",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Identifying Performance Obligations",
+    "conceptTested": "Series of distinct goods or services",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "A company provides monthly cleaning services for one year under a contract. Each month's cleaning service is distinct and substantially the same. How many performance obligations exist?",
+    "options": {
+      "A": "Twelve separate performance obligations (one per month)",
+      "B": "One performance obligation (the series is treated as single obligation)",
+      "C": "Two performance obligations (first 6 months and last 6 months)",
+      "D": "It depends on when the customer pays"
+    },
+    "correctAnswer": "B",
+    "explanation": "Under ASC 606, a series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer are treated as a single performance obligation. Since each monthly cleaning service is distinct and substantially the same, the series is accounted for as one performance obligation.",
+    "tip": "Series of substantially same distinct services = one performance obligation."
+  },
+  {
+    "id": "far-rev-006",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Transaction Price Allocation",
+    "conceptTested": "Standalone selling price determination",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When allocating the transaction price to performance obligations, ASC 606 requires using:",
+    "options": {
+      "A": "The cost of each performance obligation",
+      "B": "The relative standalone selling prices of each performance obligation",
+      "C": "An equal allocation to each performance obligation",
+      "D": "The residual method for all allocations"
+    },
+    "correctAnswer": "B",
+    "explanation": "ASC 606 requires allocating the transaction price to performance obligations based on their relative standalone selling prices. The standalone selling price is the price at which an entity would sell a promised good or service separately to a customer. If not directly observable, it must be estimated.",
+    "tip": "Allocate based on relative standalone selling prices."
+  },
+  {
+    "id": "far-rev-007",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Transaction Price Allocation",
+    "conceptTested": "Estimating standalone selling price",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a standalone selling price is not directly observable, ASC 606 permits all of the following estimation methods EXCEPT:",
+    "options": {
+      "A": "Adjusted market assessment approach",
+      "B": "Expected cost plus a margin approach",
+      "C": "Residual approach (in certain circumstances)",
+      "D": "Management's best guess approach"
+    },
+    "correctAnswer": "D",
+    "explanation": "ASC 606 specifies three acceptable methods for estimating standalone selling price: (1) adjusted market assessment approach, (2) expected cost plus a margin approach, and (3) residual approach (when price is highly variable or uncertain). 'Management's best guess' is not an acceptable method—estimates must be based on one of the specified approaches.",
+    "tip": "Estimation methods: market assessment, cost-plus margin, or residual (limited)."
+  },
+  {
+    "id": "far-rev-008",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Transaction Price Allocation",
+    "conceptTested": "Relative standalone selling price allocation",
+    "difficulty": "medium",
+    "questionFormat": "calculation",
+    "question": "A company sells a product and a 2-year service contract together for $900. The standalone selling prices are $600 for the product and $400 for the service. How much revenue is allocated to the product?",
+    "options": {
+      "A": "$600",
+      "B": "$540",
+      "C": "$500",
+      "D": "$450"
+    },
+    "correctAnswer": "B",
+    "explanation": "Allocation is based on relative standalone selling prices. Total standalone prices = $600 + $400 = $1,000. Product allocation = ($600 / $1,000) × $900 = $540. Service allocation = ($400 / $1,000) × $900 = $360. The discount of $100 is allocated proportionally.",
+    "tip": "Allocation = (Item SSP / Total SSP) × Transaction price.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-rev-009",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Estimating variable consideration",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, variable consideration should be estimated using:",
+    "options": {
+      "A": "Only the expected value method",
+      "B": "Only the most likely amount method",
+      "C": "Either the expected value or most likely amount method, depending on which better predicts the amount",
+      "D": "The lowest possible amount to be conservative"
+    },
+    "correctAnswer": "C",
+    "explanation": "Variable consideration is estimated using either (1) the expected value method (probability-weighted amounts) or (2) the most likely amount method (single most likely outcome). The entity should use whichever method better predicts the amount of consideration to which it will be entitled. The same method should be used consistently for similar contracts.",
+    "tip": "Expected value OR most likely amount—use whichever predicts better."
+  },
+  {
+    "id": "far-rev-010",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Constraint on variable consideration",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "The constraint on variable consideration under ASC 606 requires that variable amounts be included in the transaction price only to the extent that:",
+    "options": {
+      "A": "Cash has been received",
+      "B": "It is probable that a significant revenue reversal will not occur",
+      "C": "The customer has agreed to the amount in writing",
+      "D": "The amount is fixed and determinable"
+    },
+    "correctAnswer": "B",
+    "explanation": "Variable consideration is included in the transaction price only to the extent that it is probable that a significant reversal in the amount of cumulative revenue recognized will not occur when the uncertainty is resolved. This constraint prevents entities from recognizing revenue that may need to be reversed later.",
+    "tip": "Constraint: include variable consideration only if significant reversal is NOT probable."
+  },
+  {
+    "id": "far-rev-011",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Types of variable consideration",
+    "difficulty": "easy",
+    "questionFormat": "except",
+    "question": "All of the following are examples of variable consideration under ASC 606 EXCEPT:",
+    "options": {
+      "A": "Volume discounts",
+      "B": "Performance bonuses",
+      "C": "Cash selling price",
+      "D": "Rights of return"
+    },
+    "correctAnswer": "C",
+    "explanation": "A fixed cash selling price is not variable consideration. Variable consideration includes discounts, rebates, refunds, credits, price concessions, incentives, performance bonuses, penalties, and rights of return. These amounts are uncertain because they depend on future events or conditions.",
+    "tip": "Variable consideration = amounts that can change based on future events."
+  },
+  {
+    "id": "far-rev-012",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Right of return accounting",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A company sells 1,000 units at $100 each with a 30-day right of return. Based on history, the company expects 5% returns. What amount of revenue should be recognized at the point of sale?",
+    "options": {
+      "A": "$100,000",
+      "B": "$95,000",
+      "C": "$97,500",
+      "D": "$0 until the return period expires"
+    },
+    "correctAnswer": "B",
+    "explanation": "Revenue is recognized only for units not expected to be returned. Expected returns: 1,000 × 5% = 50 units. Revenue recognized: 950 units × $100 = $95,000. The company also records a refund liability for $5,000 (expected returns) and an asset for the right to recover products from customers.",
+    "tip": "With returns: recognize revenue only for units NOT expected to be returned.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-rev-013",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Contract Modifications",
+    "conceptTested": "Modification as separate contract",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, a contract modification is accounted for as a separate contract if:",
+    "options": {
+      "A": "The modification reduces the transaction price",
+      "B": "The modification adds distinct goods or services at standalone selling prices",
+      "C": "The modification extends the contract term",
+      "D": "Any change is made to the original contract"
+    },
+    "correctAnswer": "B",
+    "explanation": "A modification is treated as a separate contract if both conditions are met: (1) the modification adds distinct goods or services, AND (2) the price for the added goods or services reflects their standalone selling prices. If both criteria are not met, the modification is accounted for as part of the existing contract.",
+    "tip": "Separate contract = adds distinct goods/services at standalone selling prices."
+  },
+  {
+    "id": "far-rev-014",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Contract Modifications",
+    "conceptTested": "Modification prospective vs cumulative catch-up",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "When a contract modification is not treated as a separate contract and the remaining goods or services are distinct, how is the modification accounted for?",
+    "options": {
+      "A": "As a termination of the old contract and creation of a new contract",
+      "B": "Prospectively, reallocating the remaining transaction price to remaining performance obligations",
+      "C": "By restating prior period financial statements",
+      "D": "By recording a gain or loss immediately"
+    },
+    "correctAnswer": "B",
+    "explanation": "When a modification is not a separate contract and remaining goods/services are distinct from those already transferred, it is accounted for prospectively. The entity reallocates the remaining transaction price (including the modification) to the remaining performance obligations. No restatement of prior periods is required.",
+    "tip": "Distinct remaining goods = prospective reallocation of remaining price."
+  },
+  {
+    "id": "far-rev-015",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Principal vs Agent",
+    "conceptTested": "Principal vs agent determination",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, an entity is a principal (rather than an agent) if it:",
+    "options": {
+      "A": "Receives a commission from another party",
+      "B": "Controls the specified good or service before it is transferred to the customer",
+      "C": "Never takes physical possession of the goods",
+      "D": "Has no inventory risk"
+    },
+    "correctAnswer": "B",
+    "explanation": "An entity is a principal if it controls the specified good or service before transfer to the customer. Control is evidenced by the ability to direct the use of and obtain substantially all remaining benefits from the asset. Agents facilitate sales but do not control the goods/services. Principals recognize gross revenue; agents recognize net (commission) revenue.",
+    "tip": "Principal = controls goods before transfer. Agent = facilitates for commission."
+  },
+  {
+    "id": "far-rev-016",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Principal vs Agent",
+    "conceptTested": "Gross vs net revenue recognition",
+    "difficulty": "medium",
+    "questionFormat": "scenario",
+    "question": "TravelCo operates a website where hotels list rooms and customers book directly. TravelCo receives 15% of each booking. The hotel sets prices and bears inventory risk. How should TravelCo recognize revenue?",
+    "options": {
+      "A": "Gross revenue for the full booking amount",
+      "B": "Net revenue (15% commission) only",
+      "C": "Gross revenue less cost of goods sold",
+      "D": "No revenue until the customer completes the stay"
+    },
+    "correctAnswer": "B",
+    "explanation": "TravelCo is an agent because it does not control the hotel rooms before transfer to customers—the hotels set prices, bear inventory risk, and are primarily responsible for fulfillment. As an agent, TravelCo recognizes only its commission (15%) as revenue, not the gross booking amount.",
+    "tip": "Agents recognize commission only (net); principals recognize gross revenue."
+  },
+  {
+    "id": "far-rev-017",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Point in time vs over time recognition",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, revenue is recognized over time (rather than at a point in time) if:",
+    "options": {
+      "A": "The contract term exceeds one year",
+      "B": "The customer simultaneously receives and consumes benefits, OR the entity's performance creates or enhances an asset the customer controls, OR the entity's performance creates an asset with no alternative use and the entity has an enforceable right to payment for performance completed",
+      "C": "The entity uses the percentage-of-completion method",
+      "D": "The customer pays in installments"
+    },
+    "correctAnswer": "B",
+    "explanation": "Revenue is recognized over time if one of three criteria is met: (1) customer simultaneously receives and consumes benefits (e.g., cleaning services), (2) entity's performance creates or enhances an asset controlled by the customer (e.g., building on customer's land), or (3) entity's performance creates an asset with no alternative use AND entity has enforceable right to payment for work completed.",
+    "tip": "Over time: simultaneous consumption, customer controls asset, OR no alternative use + payment right."
+  },
+  {
+    "id": "far-rev-018",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Measuring progress toward completion",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When recognizing revenue over time, which of the following is an acceptable method for measuring progress?",
+    "options": {
+      "A": "Only input methods (costs incurred)",
+      "B": "Only output methods (units delivered)",
+      "C": "Either input or output methods, as appropriate to the nature of the performance obligation",
+      "D": "The straight-line method over the contract term"
+    },
+    "correctAnswer": "C",
+    "explanation": "ASC 606 permits either input methods (measuring inputs like costs, labor hours, machine hours) or output methods (measuring outputs like units produced, milestones reached, surveys of work performed). The entity should select the method that best depicts the transfer of goods or services to the customer.",
+    "tip": "Input methods OR output methods—choose what best depicts transfer of control."
+  },
+  {
+    "id": "far-rev-019",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Cost-to-cost method",
+    "difficulty": "hard",
+    "questionFormat": "calculation",
+    "question": "A construction contract has a total price of $5,000,000 and estimated total costs of $4,000,000. At year-end, $1,500,000 in costs have been incurred. Using the cost-to-cost method, how much revenue should be recognized?",
+    "options": {
+      "A": "$1,500,000",
+      "B": "$1,875,000",
+      "C": "$2,000,000",
+      "D": "$5,000,000"
+    },
+    "correctAnswer": "B",
+    "explanation": "Percentage complete = Costs incurred / Estimated total costs = $1,500,000 / $4,000,000 = 37.5%. Revenue recognized = 37.5% × $5,000,000 = $1,875,000. The cost-to-cost method is a common input method for measuring progress on long-term contracts.",
+    "tip": "Cost-to-cost: % complete = Costs incurred ÷ Total estimated costs.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-rev-020",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Identifying Performance Obligations",
+    "conceptTested": "Warranty obligations",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, when does a warranty represent a separate performance obligation?",
+    "options": {
+      "A": "When the warranty period exceeds one year",
+      "B": "When the warranty provides a service beyond assuring the product meets specifications (service-type warranty)",
+      "C": "All warranties are separate performance obligations",
+      "D": "Warranties are never separate performance obligations"
+    },
+    "correctAnswer": "B",
+    "explanation": "An assurance-type warranty (promising the product meets agreed-upon specifications) is NOT a separate performance obligation—it's accounted for under ASC 460 (contingency). A service-type warranty (providing a service beyond the assurance that the product meets specifications, such as extended coverage) IS a separate performance obligation with allocated revenue.",
+    "tip": "Assurance warranty = accrue liability. Service warranty = separate performance obligation."
+  },
+  {
+    "id": "far-rev-021",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Contract costs—costs to obtain",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, incremental costs of obtaining a contract with a customer:",
+    "options": {
+      "A": "Must always be expensed as incurred",
+      "B": "Are capitalized if expected to be recovered and amortized over the period of benefit",
+      "C": "Are capitalized only if the contract term exceeds one year",
+      "D": "Are offset against the transaction price"
+    },
+    "correctAnswer": "B",
+    "explanation": "Incremental costs of obtaining a contract (costs that would not have been incurred if the contract was not obtained, such as sales commissions) are capitalized if the entity expects to recover those costs. They are amortized on a systematic basis consistent with the transfer of goods/services. A practical expedient allows expensing if amortization period is one year or less.",
+    "tip": "Capitalize contract acquisition costs if recoverable; amortize over benefit period."
+  },
+  {
+    "id": "far-rev-022",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Contract costs—costs to fulfill",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Costs to fulfill a contract are capitalized under ASC 606 if they:",
+    "options": {
+      "A": "Are incurred before the contract is signed",
+      "B": "Relate directly to a contract, generate or enhance resources used to satisfy performance obligations, and are expected to be recovered",
+      "C": "Include general and administrative costs",
+      "D": "Are less than 10% of the transaction price"
+    },
+    "correctAnswer": "B",
+    "explanation": "Costs to fulfill a contract are capitalized if all three criteria are met: (1) relate directly to an identified contract, (2) generate or enhance resources used to satisfy performance obligations, and (3) are expected to be recovered. General and administrative costs and wasted materials are expensed as incurred.",
+    "tip": "Capitalize fulfillment costs: direct to contract + enhance resources + recoverable."
+  },
+  {
+    "id": "far-rev-023",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Sales-based royalties",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, how should sales-based or usage-based royalties for licenses of intellectual property be recognized?",
+    "options": {
+      "A": "At contract inception based on estimated royalties",
+      "B": "When the subsequent sale or usage occurs, or the performance obligation is satisfied, whichever is later",
+      "C": "Equally over the license term",
+      "D": "When cash is received"
+    },
+    "correctAnswer": "B",
+    "explanation": "Sales-based and usage-based royalties for licenses of intellectual property have a special constraint. Revenue is recognized when (or as) the later of: (1) the subsequent sale or usage occurs, or (2) the performance obligation to which the royalty relates has been satisfied. This exception prevents recognition based on estimates of future sales.",
+    "tip": "Royalties on IP licenses: recognize at later of sale/usage or performance obligation satisfied."
+  },
+  {
+    "id": "far-rev-024",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Identifying Performance Obligations",
+    "conceptTested": "Bundle of goods and services",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A software company sells a software license, installation, and one year of updates as a bundle. The installation requires significant customization that modifies the software. How many performance obligations exist?",
+    "options": {
+      "A": "Three (license, installation, updates)",
+      "B": "Two (combined license/installation, and updates)",
+      "C": "One (all components are highly interrelated)",
+      "D": "It depends on the standalone selling prices"
+    },
+    "correctAnswer": "B",
+    "explanation": "When installation involves significant customization, the license and installation are not separately identifiable—they are inputs to a combined output. The updates, if distinct (customer can benefit separately), are a separate obligation. Result: two performance obligations—(1) customized software solution and (2) update services.",
+    "tip": "Significant customization/integration = combined performance obligation."
+  },
+  {
+    "id": "far-rev-025",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Licenses of intellectual property",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, a license of intellectual property provides a right to access (rather than a right to use) if:",
+    "options": {
+      "A": "The license term is greater than one year",
+      "B": "The licensor's activities significantly affect the intellectual property, the customer is exposed to those effects, and those activities do not transfer a good or service",
+      "C": "The customer pays a fixed fee",
+      "D": "The license is exclusive"
+    },
+    "correctAnswer": "B",
+    "explanation": "A license provides a 'right to access' (recognized over time) if all three criteria are met: (1) the licensor undertakes activities that significantly affect the IP, (2) the customer is exposed to positive or negative effects of those activities, and (3) those activities do not transfer a good or service to the customer. Otherwise, it's a 'right to use' (recognized at point in time).",
+    "tip": "Right to access = over time. Right to use = point in time."
+  },
+  {
+    "id": "far-rev-026",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Expected value vs most likely amount",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A contractor has a $1,000,000 contract with a $100,000 performance bonus if completed by December 31. There is a 70% probability of meeting the deadline. Using the most likely amount method, what is the transaction price?",
+    "options": {
+      "A": "$1,000,000",
+      "B": "$1,070,000",
+      "C": "$1,100,000",
+      "D": "$1,030,000"
+    },
+    "correctAnswer": "C",
+    "explanation": "The most likely amount method selects the single most likely outcome. With 70% probability of earning the bonus, the most likely outcome is receiving the bonus (since 70% > 50%). Transaction price = $1,000,000 + $100,000 = $1,100,000 (subject to the constraint that a significant reversal is not probable).",
+    "tip": "Most likely amount = single most likely outcome (binary situations often use this).",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "far-rev-027",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Significant financing component",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, when does a contract contain a significant financing component?",
+    "options": {
+      "A": "When payment terms exceed 30 days",
+      "B": "When the timing of payments differs significantly from the timing of transfer of goods/services AND the difference provides a financing benefit",
+      "C": "When interest is explicitly charged",
+      "D": "When the customer makes installment payments"
+    },
+    "correctAnswer": "B",
+    "explanation": "A significant financing component exists when timing of payments differs significantly from transfer timing AND provides a significant financing benefit to either party. Practical expedient: no adjustment needed if period between transfer and payment is one year or less. Interest may need to be imputed even if not explicitly stated.",
+    "tip": "Significant financing component: adjust transaction price for time value of money."
+  },
+  {
+    "id": "far-rev-028",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Transaction Price Allocation",
+    "conceptTested": "Discount allocation",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A company sells three products bundled for $150. Standalone selling prices are: Product A = $80, Product B = $50, Product C = $40. Evidence shows the $20 discount relates entirely to Products A and B. How is revenue allocated?",
+    "options": {
+      "A": "Product A = $70.59, Product B = $44.12, Product C = $35.29",
+      "B": "Product A = $60, Product B = $50, Product C = $40",
+      "C": "Product A = $67.69, Product B = $42.31, Product C = $40",
+      "D": "Equal allocation: $50 each"
+    },
+    "correctAnswer": "C",
+    "explanation": "When evidence shows a discount relates to specific obligations, allocate the discount only to those obligations. Products A and B total SSP = $130. Discount of $20 allocated proportionally: Product A = $80 - ($80/$130 × $20) = $67.69. Product B = $50 - ($50/$130 × $20) = $42.31. Product C = $40 (no discount).",
+    "tip": "Allocate discounts to specific items when there's observable evidence.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-rev-029",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Identifying Performance Obligations",
+    "conceptTested": "Customer options for additional goods",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "A customer option to acquire additional goods or services at a discount is a separate performance obligation if:",
+    "options": {
+      "A": "The option is explicitly stated in the contract",
+      "B": "The option provides a material right that the customer would not receive without entering into the contract",
+      "C": "The customer exercises the option within one year",
+      "D": "The discount exceeds 10% of the regular price"
+    },
+    "correctAnswer": "B",
+    "explanation": "A customer option (such as a discount voucher or loyalty points) is a performance obligation only if it provides a 'material right' the customer would not receive without the contract. If the discount is available to all customers regardless of the current contract, it's not a material right. Revenue is allocated to material rights.",
+    "tip": "Customer option = performance obligation only if it's a material right."
+  },
+  {
+    "id": "far-rev-030",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Bill-and-hold arrangements",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, revenue may be recognized for a bill-and-hold arrangement (where delivery is delayed at customer's request) if all of the following criteria are met EXCEPT:",
+    "options": {
+      "A": "The reason for the arrangement is substantive",
+      "B": "The product is separately identified as belonging to the customer",
+      "C": "The customer must have paid in full before delivery",
+      "D": "The product is currently ready for transfer to the customer"
+    },
+    "correctAnswer": "C",
+    "explanation": "Bill-and-hold revenue recognition requires: (1) substantive reason for arrangement, (2) product separately identified as customer's, (3) product currently ready for transfer, and (4) entity cannot use the product or direct it to another customer. Full payment before delivery is NOT a required criterion—payment terms are separate from control transfer.",
+    "tip": "Bill-and-hold: substantive reason + identified + ready + can't redirect."
+  },
+  {
+    "id": "far-rev-031",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Consignment arrangements",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "In a consignment arrangement, when does the consignor recognize revenue?",
+    "options": {
+      "A": "When goods are shipped to the consignee",
+      "B": "When the consignee sells the goods to the end customer",
+      "C": "When the consignee accepts the goods",
+      "D": "At the end of the consignment period"
+    },
+    "correctAnswer": "B",
+    "explanation": "In a consignment arrangement, the consignor retains control of goods until the consignee sells them to end customers. Revenue is recognized when the consignee sells the goods, which is when control transfers to the end customer. Shipment to or acceptance by the consignee does not transfer control.",
+    "tip": "Consignment: consignor recognizes revenue when consignee sells to end customer."
+  },
+  {
+    "id": "far-rev-032",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Indicators of control transfer",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are indicators that control of a good has transferred to the customer EXCEPT:",
+    "options": {
+      "A": "The entity has a present right to payment for the asset",
+      "B": "The customer has legal title to the asset",
+      "C": "The entity has recorded the sale in its books",
+      "D": "The customer has significant risks and rewards of ownership"
+    },
+    "correctAnswer": "C",
+    "explanation": "Recording the sale in the entity's books is an internal action, not an indicator of control transfer. Indicators of control transfer include: right to payment, legal title, physical possession, significant risks and rewards of ownership, and customer acceptance. The entity's accounting treatment does not determine when control transfers.",
+    "tip": "Control indicators: payment right, title, possession, risks/rewards, acceptance."
+  },
+  {
+    "id": "far-rev-033",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Volume rebates",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A company offers a 5% rebate if a customer purchases more than 1,000 units during the year. Through Q3, the customer has purchased 800 units at $10 each. The company estimates a 75% probability of the customer reaching 1,000 units. Using expected value, what is the cumulative revenue to recognize?",
+    "options": {
+      "A": "$8,000",
+      "B": "$7,600",
+      "C": "$7,700",
+      "D": "$8,400"
+    },
+    "correctAnswer": "C",
+    "explanation": "Expected value calculation: 75% probability of rebate (price = $9.50) + 25% probability of no rebate (price = $10). Expected price per unit = (0.75 × $9.50) + (0.25 × $10) = $7.125 + $2.50 = $9.625. Revenue = 800 units × $9.625 = $7,700.",
+    "tip": "Expected value = probability-weighted average of outcomes.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 90
+  },
+  {
+    "id": "far-rev-034",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Principal vs Agent",
+    "conceptTested": "Indicators of principal vs agent",
+    "difficulty": "medium",
+    "questionFormat": "except",
+    "question": "All of the following are indicators that an entity is a principal EXCEPT:",
+    "options": {
+      "A": "The entity has inventory risk before or after transfer to customer",
+      "B": "The entity has discretion in establishing prices",
+      "C": "The entity receives a fixed commission on sales",
+      "D": "The entity is primarily responsible for fulfilling the contract"
+    },
+    "correctAnswer": "C",
+    "explanation": "Receiving a fixed commission is an indicator of an agent relationship, not a principal. Indicators of being a principal include: primary responsibility for fulfillment, inventory risk, pricing discretion, and credit risk. Agents typically earn commissions and facilitate transactions for others.",
+    "tip": "Commission recipient = agent indicator. Control indicators = principal."
+  },
+  {
+    "id": "far-rev-035",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Noncash consideration",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, noncash consideration received from a customer should be measured at:",
+    "options": {
+      "A": "The entity's cost basis",
+      "B": "Fair value at contract inception",
+      "C": "Fair value at the time of revenue recognition",
+      "D": "The customer's cost basis"
+    },
+    "correctAnswer": "B",
+    "explanation": "Noncash consideration (goods, services, or other noncash items) is measured at fair value at contract inception. If fair value cannot be reasonably estimated, the entity uses the standalone selling price of the goods or services promised in exchange. This ensures the transaction price reflects the value received.",
+    "tip": "Noncash consideration = fair value at contract inception."
+  },
+  {
+    "id": "far-rev-036",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Consideration payable to customer",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, consideration payable to a customer (such as slotting fees or cooperative advertising) should generally be accounted for as:",
+    "options": {
+      "A": "A selling expense",
+      "B": "A reduction of the transaction price",
+      "C": "A separate asset",
+      "D": "Deferred revenue"
+    },
+    "correctAnswer": "B",
+    "explanation": "Consideration payable to a customer (cash, credits, coupons, or vouchers) is accounted for as a reduction of the transaction price unless the payment is for a distinct good or service received from the customer at fair value. This includes slotting fees, cooperative advertising, and similar payments.",
+    "tip": "Payments to customers reduce transaction price unless for distinct goods/services."
+  },
+  {
+    "id": "far-rev-037",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Variable Consideration",
+    "conceptTested": "Refund liabilities",
+    "difficulty": "medium",
+    "questionFormat": "conceptual",
+    "question": "When a customer has a right of return, the entity should recognize:",
+    "options": {
+      "A": "Full revenue with a contingent liability note disclosure",
+      "B": "Revenue for amount expected to be retained, a refund liability, and an asset for the right to recover products",
+      "C": "No revenue until the return period expires",
+      "D": "Revenue net of estimated returns with no liability recorded"
+    },
+    "correctAnswer": "B",
+    "explanation": "For sales with right of return, the entity recognizes: (1) revenue for the amount of consideration expected to be retained (excluding expected returns), (2) a refund liability for amounts expected to be refunded, and (3) an asset for the right to recover products (measured at former carrying amount less expected recovery costs).",
+    "tip": "Returns: revenue (retained), refund liability, and asset for product recovery."
+  },
+  {
+    "id": "far-rev-038",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Transaction Price Allocation",
+    "conceptTested": "Residual approach for SSP",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "The residual approach for estimating standalone selling price may be used when:",
+    "options": {
+      "A": "Always, as it is the preferred method",
+      "B": "The selling price is highly variable OR the entity has not yet established a price for the good/service",
+      "C": "The entity wants to accelerate revenue recognition",
+      "D": "The good or service is immaterial to the contract"
+    },
+    "correctAnswer": "B",
+    "explanation": "The residual approach (transaction price less observable SSPs of other items) is only permitted when the item's standalone selling price is highly variable (wide range of prices) OR uncertain (not yet established). It cannot be used simply for convenience or to manipulate timing.",
+    "tip": "Residual approach: only when SSP is highly variable or uncertain."
+  },
+  {
+    "id": "far-rev-039",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "Contract Modifications",
+    "conceptTested": "Cumulative catch-up adjustment",
+    "difficulty": "hard",
+    "questionFormat": "scenario",
+    "question": "A company is providing services under a $1,000,000 contract. After 40% completion, the contract is modified to reduce total consideration to $900,000 for the same scope. How is the modification accounted for?",
+    "options": {
+      "A": "The $100,000 reduction is recognized immediately as a loss",
+      "B": "Revenue is recognized at the new rate ($900,000) prospectively from 40%",
+      "C": "A cumulative catch-up adjustment is made to recognize revenue at the new rate from inception",
+      "D": "The modification is treated as a separate contract"
+    },
+    "correctAnswer": "C",
+    "explanation": "When remaining goods/services are not distinct from those already transferred (same service continues), the modification is accounted for as part of the original contract with a cumulative catch-up adjustment. Revenue to date is restated to 40% × $900,000 = $360,000 (previously $400,000), requiring a $40,000 reduction.",
+    "tip": "Not distinct remaining = cumulative catch-up to adjust for modification.",
+    "calculationRequired": true,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "far-rev-040",
+    "section": "FAR",
+    "topic": "Revenue Recognition",
+    "subtopic": "ASC 606 Five-Step Model",
+    "conceptTested": "Contract combination",
+    "difficulty": "hard",
+    "questionFormat": "conceptual",
+    "question": "Under ASC 606, when should an entity combine two or more contracts into a single contract for accounting purposes?",
+    "options": {
+      "A": "When both contracts are with the same customer",
+      "B": "When the contracts are entered into at or near the same time with the same customer AND meet specified criteria",
+      "C": "When total consideration exceeds a materiality threshold",
+      "D": "When the performance obligations are similar"
+    },
+    "correctAnswer": "B",
+    "explanation": "Contracts should be combined if entered into at or near the same time with the same customer (or related parties) AND any of these criteria: (1) negotiated as a package with single commercial objective, (2) consideration in one depends on the other, or (3) goods/services are a single performance obligation. Same customer alone is insufficient.",
+    "tip": "Combine contracts: same time + single objective, linked pricing, or single performance obligation."
+  }
+]

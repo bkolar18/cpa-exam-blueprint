@@ -11,8 +11,208 @@ IMPORTANT REMINDERS:
 - Only push to GitHub when committing actual code changes
 
 ================================================================================
-SESSION: 2026-01-04 (Phase 2 Complete)
+SESSION: 2026-01-08 (Exam Simulation Pause + 210 Medium Questions)
 ================================================================================
+
+OBJECTIVES:
+- Add pause functionality to exam simulation mode
+- Add medium difficulty questions to balance distribution (target 50-60%)
+- Ensure no duplicate questions in new batches
+- Maintain appropriate conceptual testing distribution
+
+ACCOMPLISHED:
+
+1. Exam Simulation Pause Button
+   - Added 'paused' state to ExamState type
+   - Implemented handlePause() and handleResume() functions
+   - Timer stops when paused, resumes with correct time remaining
+   - Added pause button to timer bar in exam UI
+   - Created paused state overlay with:
+     * Current progress display (question X of Y)
+     * Questions answered count
+     * Resume button to continue exam
+     * "End Exam & Submit" button for early termination
+   - File modified: src/app/dashboard/exam-simulation/[section]/page.tsx
+
+2. Medium Difficulty Questions - Round 1 (105 conceptual questions)
+   - Created far-batch-054-medium-conceptual.json (35 questions)
+     Topics: Conceptual framework, revenue recognition, leases, inventory,
+     investments, liabilities, income taxes, government accounting, NFP,
+     consolidations, foreign currency, EPS, derivatives, stock compensation
+
+   - Created reg-batch-035-medium-conceptual.json (35 questions)
+     Topics: Filing status, alimony, QBI deduction, gift basis, Section 1231,
+     like-kind exchanges, depreciation recapture, C corps, S corps,
+     partnerships, estates/trusts, gift tax, contracts, agency, business
+     structures, bankruptcy, securities, Circular 230
+
+   - Created isc-batch-015-medium-conceptual.json (35 questions)
+     Topics: IT segregation, change management, SOC 1 vs SOC 2, Type I vs II,
+     BEC/phishing, defense in depth, DMZ, VPN, encryption, hashing, data
+     classification, IaaS/PaaS/SaaS, RTO/RPO, backup types, COBIT, input
+     controls, blockchain, AI audit, incident response, patch management
+
+3. Medium Difficulty Questions - Round 2 (105 application questions)
+   - Created far-batch-055-medium-application.json (35 questions)
+     Topics: Contract modifications, periodic LIFO, componentization, goodwill
+     impairment, HTM investments, variable lease payments, bond issuance,
+     stock splits, UTPs, fiduciary funds, functional expenses, non-cash
+     transactions, bargain purchase, functional currency, diluted EPS
+
+   - Created reg-batch-036-medium-application.json (35 questions)
+     Topics: Educator expense, Social Security, NIIT, related party sales,
+     wash sales, involuntary conversions, W-2 limitation, charitable
+     deductions, DRD, PHC tax, BIG tax, AAA, guaranteed payments, hot assets,
+     trusts, life insurance, gift splitting, penalties, Tax Court
+
+   - Created isc-batch-016-medium-application.json (35 questions)
+     Topics: Version control, batch processing, subservice orgs, TSC
+     categories, pretexting, ransomware, VLANs, zero trust, digital
+     signatures, key management, data retention, data quality, multi-tenancy,
+     CASB, BIA, DR testing, COSO vs COBIT, IT alignment, edit checks,
+     exception reports, IoT, ML bias, SIEM, pen testing, access reviews,
+     email authentication, DLP, interface controls, policy hierarchy,
+     synchronous replication, media disposal, EDR, SOC reliance, OWASP, API
+
+4. Question Error Fixes
+   - reg-med-008: Section 351 control test question
+     * Original answer: B (incorrect)
+     * Fixed answer: C with explanation about 80% control requirement
+     * A and B together only have 75% control (40% + 35%)
+
+   - far-med2-015: EPS calculation question
+     * Original answer: B ($4.76) - incorrect
+     * Fixed answer: D ($4.90)
+     * Diluted EPS = $500,000 / 102,000 shares = $4.90
+
+5. Updated docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md
+   - Updated total questions: 5,705 → 5,810
+   - Updated total batches: 170 → 176
+   - Updated medium percentage: 48.3% → 49.2%
+   - Added entries for all 6 new batch files
+   - Updated section summaries (FAR, REG, ISC)
+   - Updated recommendations section with progress notes
+
+TECHNICAL DETAILS:
+- Files changed: 8 (1 code file, 6 JSON batch files, 1 analysis doc)
+- New question files: 6 (210 total questions)
+- Lines added: ~5,000+ (mostly JSON question data)
+- Question ID format: {section}-med-{number}, {section}-med2-{number}
+
+QUESTION DISTRIBUTION CHANGES:
+| Metric        | Before | After  | Change |
+|---------------|--------|--------|--------|
+| Total         | 5,600  | 5,810  | +210   |
+| Medium Count  | 2,650  | 2,860  | +210   |
+| Medium %      | 47.3%  | 49.2%  | +1.9%  |
+| FAR Medium %  | 44%    | 46%    | +2%    |
+| REG Medium %  | 44%    | 47%    | +3%    |
+| ISC Medium %  | 42%    | 50%    | +8%    |
+
+COMMITS:
+- (Pending commit - session wrapped up before push)
+
+BLOCKERS/ISSUES:
+- None encountered
+
+NEXT SESSION PRIORITIES:
+1. Option A: Continue adding medium questions (~336 more needed for 55% target)
+   - Priority: FAR (46%), REG (47%)
+   - ISC now at target minimum (50%)
+2. Option B: Start Phase 4 - Email Nurturing
+   - Design 7-email welcome sequence
+   - Set up email automation
+3. Option C: Other enhancements
+   - Add remaining 28 states to requirements guide
+   - More blog posts for SEO
+
+================================================================================
+SESSION: 2026-01-05 (Phase 3 Complete - CPA Academy & 600 Questions)
+================================================================================
+
+OBJECTIVES:
+- Create 600 practice questions (100 per section)
+- Create business overview document for Surgent partnership
+- Fix Surgent promo banner to be per-account with 30-day reappearance
+
+ACCOMPLISHED:
+
+1. Practice Questions - 600 Total Created
+   - FAR: 100 questions (expanded from 25)
+   - AUD: 100 questions (expanded from 25)
+   - REG: 100 questions (expanded from 25)
+   - TCP: 100 questions (NEW FILE - Tax Compliance & Planning)
+   - BAR: 100 questions (NEW FILE - Business Analysis & Reporting)
+   - ISC: 100 questions (NEW FILE - Information Systems & Controls)
+
+   Topics covered per section:
+   - FAR: Conceptual Framework, Revenue Recognition, Leases, Government Accounting, etc.
+   - AUD: Ethics & Independence, Risk Assessment, Audit Evidence, Audit Reports, etc.
+   - REG: Individual/Business Taxation, Property Transactions, Business Law, etc.
+   - TCP: Tax Planning, Gift & Estate Tax, Retirement Planning, International Tax, etc.
+   - BAR: Financial Statement Analysis, Cost Accounting, Data Analytics, Derivatives, etc.
+   - ISC: IT Controls, Cybersecurity, Data Management, Cloud Computing, IT Audit, etc.
+
+2. Business Overview Document Created
+   - File: "CPA Exam Blueprint - Business Overview.txt"
+   - Purpose: Explain site to Surgent team (family member context)
+   - Contents:
+     * Problem statement (reducing affiliate marketing reliance)
+     * All features explained in plain English
+     * Marketing funnel breakdown (discovery → conversion)
+     * Why this beats traditional affiliate marketing
+     * Success metrics and roadmap
+   - Written in casual business professional tone
+
+3. Surgent Promo Banner - Per-Account with 30-Day Reappearance
+   - Changed from localStorage (per-browser) to Supabase profile (per-account)
+   - Added promo_dismissed_at column to Profile type
+   - Logic: Show if never dismissed OR 30+ days since last dismissal
+   - Respects user choice while allowing gentle re-marketing
+
+   SQL migration required:
+   ```sql
+   ALTER TABLE profiles
+   ADD COLUMN IF NOT EXISTS promo_dismissed_at TIMESTAMPTZ DEFAULT NULL;
+   ```
+
+4. Updated index.ts for Practice Questions
+   - Added imports for TCP, BAR, ISC question files
+   - Updated questionSets to include all 6 sections
+   - Updated getQuestionById to search all sections
+
+TECHNICAL DETAILS:
+- Files changed: 10+
+- New files: 4 (tcp.ts, bar.ts, isc.ts, Business Overview.txt)
+- Lines added: 8,500+ (mostly questions)
+- Database change: 1 column addition needed
+
+COMMITS:
+- 98001b1: Add 600 practice questions across all CPA exam sections
+- f5c688e: Add business overview document for Surgent partnership
+- 96e9b24: Update claude responses with promo banner explanation
+- 2bb687e: Make Surgent promo per-account with 30-day reappearance
+
+BLOCKERS/ISSUES:
+- User needs to run SQL migration in Supabase for promo_dismissed_at column
+
+NEXT SESSION PRIORITIES:
+1. Run Supabase SQL migration (promo_dismissed_at)
+2. Phase 4: Email Nurturing
+   - Design 7-email welcome sequence
+   - Set up email automation
+3. Expand content:
+   - More practice questions (goal: 1000+ per section)
+   - Add remaining 28 states to requirements guide
+4. Phase 5: AI chatbot with Anthropic Claude
+
+================================================================================
+SESSION: 2026-01-04 (Phase 2 Complete + CPA Academy Foundation)
+================================================================================
+
+Note: This session included significant work beyond Phase 2 that wasn't fully
+documented. The Phase 3 infrastructure (Supabase, auth, dashboard) was built
+in sessions between 01-04 and 01-05.
 
 OBJECTIVES:
 - Verify Phase 1 changes were pushed to Vercel
@@ -31,11 +231,15 @@ ACCOMPLISHED:
    - Category badges with colors
    - Reading time calculation
 
-2. Blog Posts Created (4 total)
+2. Blog Posts Created (8 total by end of sessions)
    - "How Many Hours to Study for CPA Exam" (Featured)
    - "CPA Exam Pass Rates 2025"
    - "FAR Section: Complete Study Guide" (Featured)
+   - "AUD Section: Complete Study Guide"
+   - "REG Section: Complete Study Guide"
    - "CPA Exam While Working Full Time"
+   - "Choosing Your CPA Discipline Section"
+   - "CPA Exam Changes 2026"
 
 3. Guides Created
    - /guides/exam-day - Complete exam day walkthrough
@@ -55,30 +259,58 @@ ACCOMPLISHED:
    - About link + Build My Study Plan CTA
    - Added spacing and divider lines between dropdown items
 
-6. Vercel Deployment Fix
-   - Diagnosed missing RESEND_API_KEY error
-   - User added env vars to Vercel settings
+6. State Requirements Expanded
+   - Added 12 more states (total now 22)
+   - States: CA, TX, NY, FL, IL, PA, OH, GA, NJ, NC, VA, AZ, CO, MA, MD,
+     MI, MN, MO, TN, WA, WI, IN
+
+7. Supabase Integration (CPA Academy Foundation)
+   - Set up Supabase project with PostgreSQL
+   - Created database schema:
+     * profiles (user data, gamification fields)
+     * study_sessions (logged study hours)
+     * section_progress (section status tracking)
+     * nts_entries (NTS management)
+     * practice_attempts (question attempts)
+     * user_badges (earned achievements)
+   - Implemented Supabase auth (email/password)
+   - Created AuthProvider context for React
+   - Built dashboard layout with sidebar navigation
+
+8. Dashboard Features
+   - Main dashboard with stats overview
+   - Study session logging with streak tracking
+   - Section progress management (not started → studying → scheduled → passed)
+   - NTS tracking with expiration countdowns
+   - Accolades/achievements page
+   - Settings page for user preferences
+   - Practice questions UI with immediate feedback
+   - Practice history page
+
+9. Gamification System
+   - Points for study sessions (10 points per hour)
+   - Study streaks (consecutive days)
+   - Badge system with multiple achievements
+   - Points for practice questions (correct/incorrect)
+
+10. Vercel Deployment Fix
+    - Diagnosed missing RESEND_API_KEY error
+    - User added env vars to Vercel settings
+    - Added Supabase env vars to Vercel
 
 TECHNICAL DETAILS:
-- 15+ files changed, 4,700+ lines added
-- 42 total routes
-- New dependencies: next-mdx-remote, gray-matter, reading-time
+- 70+ routes total
+- Dependencies added: next-mdx-remote, gray-matter, reading-time,
+  @supabase/supabase-js, @supabase/ssr
+- Full database schema implemented
+- Authentication flow complete
 
-COMMITS:
+COMMITS: (multiple across sessions)
 - e2f6510: Add Phase 2: Blog, Guides, and Success Stories
 - 61eed33: Add 3 SEO-targeted blog posts
 - 08d4465: Simplify header navigation with cleaner dropdowns
 - e991dc9: Add more spacing to dropdown menu items
-
-BLOCKERS/ISSUES:
-- Vercel deployment failed due to missing env vars (resolved)
-
-NEXT SESSION PRIORITIES:
-1. Phase 3: Email Nurturing
-   - 7-email welcome sequence
-   - Segment-based content delivery
-2. Add more blog posts for SEO
-3. Consider adding more states to State Requirements Guide
+- (various): Supabase integration, dashboard, practice questions
 
 ================================================================================
 SESSION: 2026-01-03 (Phase 1 Implementation)
@@ -138,14 +370,6 @@ TECHNICAL DETAILS:
 COMMITS:
 - 86c6af7: Add Phase 1 free tools and enhanced study plan
 - 2107e23: Update session responses with Phase 1 summary
-
-NEXT SESSION PRIORITIES:
-1. Start Phase 2: Content & Authority
-   - Set up MDX blog infrastructure
-   - Write first blog posts targeting SEO keywords
-   - Create Exam Day Walkthrough guide
-2. Consider adding more states to State Requirements Guide
-3. User needs to set real admin email in EMAIL_TO env variable
 
 ================================================================================
 SESSION: [Previous - Initial Build]
