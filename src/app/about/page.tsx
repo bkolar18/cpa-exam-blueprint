@@ -24,26 +24,51 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Mission Statement */}
-        <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">Our Mission</h2>
-          <p className="text-lg text-[var(--muted)]">
-            We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide everything you need to pass - 6,000+ practice questions, study tools, progress tracking, and a pass guarantee - at a fraction of what the big review courses charge.
-          </p>
+        <div className="relative bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] p-8 md:p-10 rounded-2xl mb-12 overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+          <div className="relative">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h2 className="text-2xl font-bold text-white">Our Mission</h2>
+            </div>
+            <p className="text-xl text-white/90 leading-relaxed max-w-3xl">
+              We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide everything you need to pass - 6,000+ practice questions, study tools, progress tracking, and a pass guarantee - at a fraction of what the big review courses charge.
+            </p>
+          </div>
         </div>
 
         {/* The Story */}
-        <div className="bg-[var(--card)] p-8 rounded-xl border border-[var(--border)] mb-12">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Why We Built This</h2>
-          <div className="prose prose-lg max-w-none text-[var(--muted)]">
-            <p className="mb-4">
-              CPA Exam Blueprint was created by an accounting and business information systems graduate who saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still deserved quality study materials.
-            </p>
-            <p className="mb-4">
-              The big CPA review courses charge $2,000-$3,500 for their programs. Not everyone has that kind of money to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
-            </p>
-            <p>
-              We built CPA Exam Blueprint to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and a pass guarantee, we offer everything you need at 95% less than the competition.
-            </p>
+        <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 p-8 md:p-10 rounded-2xl border border-amber-200 mb-12 overflow-hidden">
+          {/* Decorative quote */}
+          <div className="absolute top-4 right-8 text-amber-200/50 text-8xl font-serif">&ldquo;</div>
+
+          <div className="relative">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h2 className="text-2xl font-bold text-amber-900">Why We Built This</h2>
+            </div>
+            <div className="space-y-4 text-amber-800 text-lg leading-relaxed">
+              <p>
+                CPA Exam Blueprint was created because we saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still deserved quality study materials.
+              </p>
+              <p>
+                The big CPA review courses charge $2,000-$3,500 for their programs. Not everyone has that kind of money to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
+              </p>
+              <p className="font-medium">
+                We built CPA Exam Blueprint to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and a pass guarantee, we offer everything you need at 95% less than the competition.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -74,6 +99,17 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-emerald-500 bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">SmartPath Adaptive Learning</h3>
+                <p className="text-[var(--muted)] text-sm">Our intelligent algorithm analyzes your performance and prioritizes questions in areas where you need the most practice.</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
               <div className="w-10 h-10 bg-[var(--accent)] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -93,6 +129,17 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-semibold text-[var(--foreground)] mb-1">Gamification</h3>
                 <p className="text-[var(--muted)] text-sm">Earn badges, maintain study streaks, and stay motivated throughout your journey.</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-rose-500 bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">Pass Guarantee</h3>
+                <p className="text-[var(--muted)] text-sm">We stand behind our materials. Don&apos;t pass? Get extended access at no extra cost.</p>
               </div>
             </div>
           </div>

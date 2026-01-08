@@ -131,25 +131,36 @@ export default function ExamDayGuidePage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Quick Navigation */}
-        <nav className="bg-[var(--card)] rounded-xl p-6 mb-12">
-          <h2 className="font-semibold text-[var(--foreground)] mb-4">Quick Navigation</h2>
-          <div className="grid sm:grid-cols-2 gap-2">
+        <nav className="bg-gradient-to-br from-[var(--card)] to-white rounded-2xl p-6 md:p-8 mb-12 border border-[var(--border)] shadow-sm">
+          <h2 className="font-bold text-lg text-[var(--foreground)] mb-6 flex items-center gap-2">
+            <svg className="w-5 h-5 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            Quick Navigation
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-3">
             {[
-              { label: 'Week Before Checklist', href: '#week-before' },
-              { label: 'Day Before Checklist', href: '#day-before' },
-              { label: 'What to Bring', href: '#what-to-bring' },
-              { label: 'Exam Day Timeline', href: '#timeline' },
-              { label: 'Prometric Procedures', href: '#prometric' },
-              { label: 'Exam Interface', href: '#interface' },
-              { label: 'Time Management', href: '#time-management' },
-              { label: 'After the Exam', href: '#after-exam' },
+              { label: 'Week Before Checklist', href: '#week-before', icon: '📅', color: 'bg-blue-50 hover:bg-blue-100 border-blue-200' },
+              { label: 'Day Before Checklist', href: '#day-before', icon: '🌙', color: 'bg-purple-50 hover:bg-purple-100 border-purple-200' },
+              { label: 'What to Bring', href: '#what-to-bring', icon: '🎒', color: 'bg-green-50 hover:bg-green-100 border-green-200' },
+              { label: 'Exam Day Timeline', href: '#timeline', icon: '⏰', color: 'bg-orange-50 hover:bg-orange-100 border-orange-200' },
+              { label: 'Prometric Procedures', href: '#prometric', icon: '🏢', color: 'bg-cyan-50 hover:bg-cyan-100 border-cyan-200' },
+              { label: 'Exam Interface', href: '#interface', icon: '💻', color: 'bg-indigo-50 hover:bg-indigo-100 border-indigo-200' },
+              { label: 'Time Management', href: '#time-management', icon: '⏱️', color: 'bg-rose-50 hover:bg-rose-100 border-rose-200' },
+              { label: 'After the Exam', href: '#after-exam', icon: '🎉', color: 'bg-emerald-50 hover:bg-emerald-100 border-emerald-200' },
             ].map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-[var(--accent)] hover:underline"
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${item.color} group`}
               >
-                {item.label}
+                <span className="text-xl">{item.icon}</span>
+                <span className="font-medium text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
+                  {item.label}
+                </span>
+                <svg className="w-4 h-4 ml-auto text-[var(--muted)] group-hover:text-[var(--primary)] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </a>
             ))}
           </div>

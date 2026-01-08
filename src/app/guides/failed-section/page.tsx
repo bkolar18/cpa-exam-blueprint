@@ -268,38 +268,6 @@ export default function FailedSectionGuidePage() {
           </div>
         </section>
 
-        {/* When to Consider a New Review Course */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
-            Should You Switch Review Courses?
-          </h2>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
-            <p className="text-[var(--muted)] mb-4">
-              Switching review courses is a big decision. Consider it if:
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-[var(--foreground)] mb-2 text-green-700">Consider Switching If:</h3>
-                <ul className="space-y-2 text-[var(--muted)]">
-                  <li>• You&apos;ve failed the same section 2+ times</li>
-                  <li>• The teaching style doesn&apos;t match your learning</li>
-                  <li>• You&apos;ve exhausted all the practice questions</li>
-                  <li>• Your course doesn&apos;t cover CPA Evolution content</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-[var(--foreground)] mb-2 text-red-700">Don&apos;t Switch If:</h3>
-                <ul className="space-y-2 text-[var(--muted)]">
-                  <li>• This was your first attempt</li>
-                  <li>• You didn&apos;t fully use your current course</li>
-                  <li>• You scored 65+ (close to passing)</li>
-                  <li>• Your study habits were the real problem</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* The 18-Month Clock */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">

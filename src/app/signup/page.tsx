@@ -75,9 +75,9 @@ export default function SignupPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-[var(--card)] flex items-center justify-center py-12 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-[var(--primary)] via-[var(--primary-dark)] to-[#0a1628] flex items-center justify-center py-12 px-4">
         <div className="max-w-md w-full">
-          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -100,25 +100,117 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--card)] flex items-center justify-center py-12 px-4">
-      <div className="max-w-md w-full">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <Link href="/" className="inline-flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CPA</span>
+    <div className="min-h-screen bg-gradient-to-br from-[var(--primary)] via-[var(--primary-dark)] to-[#0a1628] flex">
+      {/* Left side - Features */}
+      <div className="hidden lg:flex lg:w-1/2 flex-col justify-center px-12 py-12">
+        <div className="max-w-md">
+          <Link href="/" className="inline-flex items-center space-x-2 mb-8">
+            <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
+              <span className="text-white font-bold text-lg">CPA</span>
+            </div>
+            <span className="text-2xl font-bold text-white">
+              CPA Exam Blueprint
+            </span>
+          </Link>
+
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Your CPA journey starts here
+          </h2>
+          <p className="text-xl text-gray-300 mb-10">
+            Join thousands of candidates preparing smarter with our comprehensive study platform.
+          </p>
+
+          {/* Feature highlights */}
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-white/20">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
               </div>
-              <span className="text-xl font-bold text-[var(--primary)]">
-                CPA Exam Blueprint
-              </span>
-            </Link>
-            <h1 className="text-2xl font-bold text-[var(--foreground)]">
-              Create Your Account
-            </h1>
-            <p className="text-[var(--muted)] mt-2">
-              Track your CPA exam journey for free
-            </p>
+              <div>
+                <h3 className="text-white font-semibold mb-1">6,000+ Practice Questions</h3>
+                <p className="text-gray-400 text-sm">Comprehensive coverage across all 6 CPA exam sections</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-white/20">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-1">Smart Progress Tracking</h3>
+                <p className="text-gray-400 text-sm">Track your study hours, quiz scores, and section progress</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-white/20">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-1">Pass Guarantee</h3>
+                <p className="text-gray-400 text-sm">We stand behind our materials with extended access if needed</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-white/20">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-1">95% Less Than Big Names</h3>
+                <p className="text-gray-400 text-sm">Premium prep materials at a fraction of the cost</p>
+              </div>
+            </div>
           </div>
+
+          {/* Stats */}
+          <div className="mt-10 pt-8 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-white">6,000+</div>
+                <div className="text-sm text-gray-400">Questions</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">6</div>
+                <div className="text-sm text-gray-400">Sections</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">$79</div>
+                <div className="text-sm text-gray-400">Starting at</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right side - Form */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center py-12 px-4">
+        <div className="max-w-md w-full">
+          <div className="bg-white rounded-2xl shadow-2xl p-8">
+            <div className="text-center mb-8">
+              <Link href="/" className="lg:hidden inline-flex items-center space-x-2 mb-6">
+                <div className="w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">CPA</span>
+                </div>
+                <span className="text-xl font-bold text-[var(--primary)]">
+                  CPA Exam Blueprint
+                </span>
+              </Link>
+              <h1 className="text-2xl font-bold text-[var(--foreground)]">
+                Create Your Free Account
+              </h1>
+              <p className="text-[var(--muted)] mt-2">
+                Start your CPA exam prep journey today
+              </p>
+            </div>
 
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
@@ -225,6 +317,7 @@ export default function SignupPage() {
           <p className="text-center text-xs text-[var(--muted)] mt-4">
             By signing up, you agree to our Terms of Service and Privacy Policy.
           </p>
+        </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllStates } from "@/lib/data/state-requirements";
+import StateSelector from "./StateSelector";
 
 export const metadata = {
   title: "CPA Requirements by State | CPA Exam Blueprint",
@@ -17,10 +18,13 @@ export default function StateRequirementsPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             CPA Requirements by State
           </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
             Each state has different education, experience, and examination requirements.
             Find the specific requirements for your state board of accountancy.
           </p>
+
+          {/* State Dropdown Selector */}
+          <StateSelector states={states} />
         </div>
       </section>
 
