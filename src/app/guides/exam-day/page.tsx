@@ -167,7 +167,7 @@ export default function ExamDayGuidePage() {
         </nav>
 
         {/* Week Before */}
-        <section id="week-before" className="mb-12">
+        <section id="week-before" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Week Before the Exam
           </h2>
@@ -187,7 +187,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* Day Before */}
-        <section id="day-before" className="mb-12">
+        <section id="day-before" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Day Before the Exam
           </h2>
@@ -207,7 +207,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* What to Bring */}
-        <section id="what-to-bring" className="mb-12">
+        <section id="what-to-bring" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             What to Bring (and Leave Behind)
           </h2>
@@ -247,7 +247,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* Timeline */}
-        <section id="timeline" className="mb-12">
+        <section id="timeline" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Exam Day Timeline
           </h2>
@@ -273,7 +273,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* Prometric Procedures */}
-        <section id="prometric" className="mb-12">
+        <section id="prometric" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Prometric Check-In Procedures
           </h2>
@@ -312,7 +312,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* Exam Interface */}
-        <section id="interface" className="mb-12">
+        <section id="interface" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Exam Interface Overview
           </h2>
@@ -352,7 +352,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* Time Management */}
-        <section id="time-management" className="mb-12">
+        <section id="time-management" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Time Management Strategies
           </h2>
@@ -411,7 +411,7 @@ export default function ExamDayGuidePage() {
         </section>
 
         {/* After the Exam */}
-        <section id="after-exam" className="mb-12">
+        <section id="after-exam" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             After the Exam
           </h2>
