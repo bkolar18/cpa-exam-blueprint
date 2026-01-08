@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PracticeQuestion } from "@/lib/data/practice-questions";
+import FeedbackButton from "./FeedbackButton";
 
 interface QuizQuestionProps {
   question: PracticeQuestion;
@@ -187,6 +188,15 @@ export default function QuizQuestion({
                 </p>
               </div>
             )}
+
+            {/* Feedback Button */}
+            <div className="mt-4 pt-4 border-t border-[var(--border)] flex justify-end">
+              <FeedbackButton
+                questionId={question.id}
+                section={question.section}
+                variant="default"
+              />
+            </div>
           </div>
         )}
       </div>

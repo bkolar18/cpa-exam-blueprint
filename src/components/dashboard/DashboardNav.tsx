@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { useState, useRef, useEffect } from "react";
+import { ThemeToggleSimple } from "@/components/theme/ThemeToggle";
 
 // Standalone nav items
 const standaloneItems = [
@@ -159,7 +160,7 @@ function NavDropdown({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-[var(--border)] py-1 z-50">
+        <div className="absolute top-full left-0 mt-1 w-48 bg-[var(--background)] rounded-lg shadow-lg border border-[var(--border)] py-1 z-50">
           {items.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -190,7 +191,7 @@ export default function DashboardNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-[var(--border)] sticky top-0 z-50">
+    <nav className="bg-[var(--background)] border-b border-[var(--border)] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -236,8 +237,9 @@ export default function DashboardNav() {
             ))}
           </div>
 
-          {/* Right side: Settings & Sign Out */}
+          {/* Right side: Theme Toggle, Settings & Sign Out */}
           <div className="hidden md:flex items-center space-x-3">
+            <ThemeToggleSimple />
             <Link
               href={settingsItem.href}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${

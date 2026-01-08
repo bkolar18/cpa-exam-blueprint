@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { ThemeToggleSimple } from "@/components/theme/ThemeToggle";
 
 export default function Header() {
   const { user, loading } = useAuth();
@@ -35,7 +36,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white border-b border-[var(--border)] sticky top-0 z-50">
+    <header className="bg-[var(--background)] border-b border-[var(--border)] sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -75,7 +76,7 @@ export default function Header() {
                 </svg>
               </button>
               {sectionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-[var(--border)] rounded-lg shadow-lg py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg py-2">
                   {sections.map((section) => (
                     <Link
                       key={section.name}
@@ -115,7 +116,7 @@ export default function Header() {
                 </svg>
               </button>
               {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[420px] bg-white border border-[var(--border)] rounded-lg shadow-lg p-5">
+                <div className="absolute top-full left-0 mt-2 w-[420px] bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg p-5">
                   <div className="grid grid-cols-2 gap-8">
                     {/* Left Column - Study Hub & Tools */}
                     <div>
@@ -212,6 +213,7 @@ export default function Header() {
             <Link href="/study-plan" className="btn-primary">
               Build My Study Plan
             </Link>
+            <ThemeToggleSimple />
           </div>
 
           {/* Mobile menu button */}

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { PracticeQuestion } from "@/lib/data/practice-questions";
+import FeedbackButton from "./FeedbackButton";
 
 interface QuizResult {
   question: PracticeQuestion;
@@ -182,6 +183,11 @@ export default function QuizResults({
                     )}
                   </div>
                 </div>
+                <FeedbackButton
+                  questionId={result.question.id}
+                  section={result.question.section}
+                  variant="compact"
+                />
               </div>
             </div>
           ))}
