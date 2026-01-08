@@ -9,7 +9,8 @@ export type QuestionFormat =
   | 'except'          // "All of the following EXCEPT..."
   | 'best-answer'     // "Which is MOST appropriate..."
   | 'definition'      // Tests terminology
-  | 'application';    // Apply rule to specific situation
+  | 'application'     // Apply rule to specific situation
+  | 'MCQ';            // Standard multiple choice question
 
 export interface PracticeQuestion {
   id: string;
