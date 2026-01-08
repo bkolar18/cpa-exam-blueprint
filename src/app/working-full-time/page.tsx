@@ -208,7 +208,7 @@ export default function WorkingFullTimePage() {
                 Ready to Practice?
               </h4>
               <p className="text-sm text-[var(--muted)] mb-4">
-                Access 600+ practice questions and track your progress.
+                Access 6,000+ practice questions and track your progress.
               </p>
               <Link href="/signup" className="btn-outline w-full text-center block text-sm">
                 Get Started

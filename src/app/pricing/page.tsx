@@ -10,6 +10,7 @@ const tiers = [
     price: "$0",
     originalPrice: null,
     description: "Get started with the basics",
+    accessPeriod: "Unlimited",
     features: [
       "50 practice questions",
       "1 exam section (FAR)",
@@ -19,10 +20,10 @@ const tiers = [
     ],
     notIncluded: [
       "All 6 exam sections",
-      "Full question bank",
+      "Full question bank (6,000+)",
+      "Pass guarantee",
       "Adaptive learning",
       "AI study assistant",
-      "Priority support",
     ],
     cta: "Get Started Free",
     ctaLink: "/signup",
@@ -35,9 +36,12 @@ const tiers = [
     originalPrice: "$99",
     period: "one-time",
     description: "Everything you need for core sections",
+    accessPeriod: "18 months",
+    passGuarantee: "+6 month extension if you don't pass",
     features: [
-      "300+ practice questions",
+      "3,000+ practice questions",
       "All 4 core sections (FAR, AUD, REG, TCP)",
+      "18 months access + pass guarantee",
       "Full progress tracking & analytics",
       "NTS expiration tracking",
       "Study plan builder",
@@ -46,7 +50,7 @@ const tiers = [
     ],
     notIncluded: [
       "Discipline sections (BAR, ISC)",
-      "Adaptive learning",
+      "Unlimited access",
       "AI study assistant",
     ],
     cta: "Get Standard",
@@ -61,9 +65,12 @@ const tiers = [
     originalPrice: "$199",
     period: "one-time",
     description: "Complete prep for serious candidates",
+    accessPeriod: "Unlimited",
+    passGuarantee: "Access until you pass - guaranteed",
     features: [
-      "600+ practice questions",
+      "6,000+ practice questions",
       "All 6 exam sections",
+      "Unlimited access until you pass",
       "Adaptive learning algorithm",
       "AI study assistant (coming soon)",
       "Advanced analytics & insights",
@@ -111,6 +118,11 @@ const faqs = [
     question: "Do you offer refunds?",
     answer:
       "Yes! If you're not satisfied within 30 days of purchase, we'll refund your payment in full. No questions asked.",
+  },
+  {
+    question: "How does the pass guarantee work?",
+    answer:
+      "Standard Plan: If you don't pass a section within your 18-month access period, we'll extend your access for an additional 6 months at no charge. Pro Plan: You get unlimited access until you pass all sections - no time limits, no additional fees. Just provide your NASBA score report showing your exam attempt.",
   },
 ];
 

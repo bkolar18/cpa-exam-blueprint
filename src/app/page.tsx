@@ -39,19 +39,19 @@ export default function Home() {
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-[var(--foreground)] font-medium">600+ Practice Questions</span>
+              <span className="text-[var(--foreground)] font-medium">6,000+ Practice Questions</span>
             </div>
             <div className="flex items-center space-x-2">
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-[var(--foreground)] font-medium">Real-World Experience</span>
+              <span className="text-[var(--foreground)] font-medium">Pass Guarantee</span>
             </div>
             <div className="flex items-center space-x-2">
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-[var(--foreground)] font-medium">90% Less Than Big Courses</span>
+              <span className="text-[var(--foreground)] font-medium">95% Less Than Big Courses</span>
             </div>
           </div>
         </div>
@@ -320,13 +320,13 @@ export default function Home() {
             Ready to Start Studying?
           </h2>
           <p className="text-gray-200 mb-8 text-lg">
-            Get access to 600+ practice questions and study tools starting at just $79.
+            Get access to 6,000+ practice questions with a pass guarantee - starting at just $79.
           </p>
           <Link
-            href="/signup"
+            href="/pricing"
             className="inline-block bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
-            Get Started Today
+            View Pricing Plans
           </Link>
         </div>
       </section>

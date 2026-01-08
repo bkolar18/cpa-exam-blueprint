@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "About Us | CPA Exam Blueprint",
-  description: "Learn about CPA Exam Blueprint - an affordable CPA exam study aid created by an accounting graduate to help candidates prepare without breaking the bank.",
+  description: "Learn about CPA Exam Blueprint - affordable CPA exam prep with 6,000+ practice questions, progress tracking, and a pass guarantee at a fraction of the cost.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
               About CPA Exam Blueprint
             </h1>
             <p className="text-xl text-gray-200">
-              An affordable study companion for CPA candidates who want quality practice without the premium price tag.
+              Comprehensive CPA exam prep with 6,000+ practice questions - everything you need to pass at a fraction of the cost.
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">Our Mission</h2>
           <p className="text-lg text-[var(--muted)]">
-            We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide an affordable alternative with quality practice questions, study tools, and progress tracking - at a fraction of what the big review courses charge.
+            We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide everything you need to pass - 6,000+ practice questions, study tools, progress tracking, and a pass guarantee - at a fraction of what the big review courses charge.
           </p>
         </div>
 
@@ -36,13 +36,13 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Why We Built This</h2>
           <div className="prose prose-lg max-w-none text-[var(--muted)]">
             <p className="mb-4">
-              CPA Exam Blueprint was created by an accounting and business information systems graduate who saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still wanted structured study materials.
+              CPA Exam Blueprint was created by an accounting and business information systems graduate who saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still deserved quality study materials.
             </p>
             <p className="mb-4">
-              The big CPA review courses are excellent, but they&apos;re expensive. Not everyone has $2,500+ to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
+              The big CPA review courses charge $2,000-$3,500 for their programs. Not everyone has that kind of money to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
             </p>
             <p>
-              We built CPA Exam Blueprint as a budget-friendly supplement - not a replacement for comprehensive courses, but a solid study aid with practice questions, progress tracking, and study planning tools.
+              We built CPA Exam Blueprint to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and a pass guarantee, we offer everything you need at 95% less than the competition.
             </p>
           </div>
         </div>
@@ -58,8 +58,8 @@ export default function AboutPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-[var(--foreground)] mb-1">600+ Practice Questions</h3>
-                <p className="text-[var(--muted)] text-sm">Multiple choice questions across all six CPA exam sections with detailed explanations.</p>
+                <h3 className="font-semibold text-[var(--foreground)] mb-1">6,000+ Practice Questions</h3>
+                <p className="text-[var(--muted)] text-sm">Comprehensive question bank across all six CPA exam sections with detailed explanations.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -98,40 +98,31 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Important Disclaimer */}
-        <div className="bg-amber-50 border border-amber-200 p-8 rounded-xl mb-12">
+        {/* Pass Guarantee */}
+        <div className="bg-green-50 border border-green-200 p-8 rounded-xl mb-12">
           <div className="flex items-start space-x-4">
-            <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-amber-800 mb-2">Important: What We Are (and Aren&apos;t)</h3>
-              <ul className="space-y-2 text-amber-700">
+              <h3 className="text-lg font-semibold text-green-800 mb-2">Our Pass Guarantee</h3>
+              <p className="text-green-700 mb-4">
+                We stand behind our materials. If you don&apos;t pass, we&apos;ve got you covered:
+              </p>
+              <ul className="space-y-2 text-green-700">
                 <li className="flex items-start space-x-2">
-                  <span className="font-bold">✓</span>
-                  <span>We ARE an affordable study aid with practice questions and tracking tools</span>
+                  <span className="font-bold">Standard Plan:</span>
+                  <span>18 months access + 6 month extension if you don&apos;t pass</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="font-bold">✓</span>
-                  <span>Our questions are designed to help you practice accounting concepts</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="font-bold">✗</span>
-                  <span>We are NOT an official CPA review course</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="font-bold">✗</span>
-                  <span>Our questions are NOT sourced from or reviewed by the AICPA</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="font-bold">✗</span>
-                  <span>We do NOT guarantee exam passage</span>
+                  <span className="font-bold">Pro Plan:</span>
+                  <span>Unlimited access until you pass - no questions asked</span>
                 </li>
               </ul>
-              <p className="mt-4 text-amber-700 text-sm">
-                We&apos;re transparent about what we offer. If you need a comprehensive review course with official exam simulations, we recommend looking at established providers like Becker, Surgent, or Roger CPA Review.
+              <p className="mt-4 text-green-700 text-sm">
+                Like other CPA review providers, our questions are based on the official CPA Exam Blueprints published by the AICPA. We&apos;re confident in our materials - that&apos;s why we offer a guarantee.
               </p>
             </div>
           </div>
@@ -181,7 +172,7 @@ export default function AboutPage() {
                 <tr>
                   <td className="py-4 px-3 text-[var(--foreground)] font-medium">Practice Questions</td>
                   <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
-                    <span className="text-[var(--foreground)]">600+</span>
+                    <span className="text-[var(--foreground)] font-semibold">6,000+</span>
                   </td>
                   <td className="py-4 px-3 text-center text-[var(--foreground)]">9,000+</td>
                   <td className="py-4 px-3 text-center text-[var(--foreground)]">7,700+</td>
@@ -328,11 +319,6 @@ export default function AboutPage() {
                 <tr>
                   <td className="py-4 px-3 text-[var(--foreground)] font-medium">Pass Guarantee</td>
                   <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
-                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </td>
-                  <td className="py-4 px-3 text-center">
                     <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
@@ -347,6 +333,20 @@ export default function AboutPage() {
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                   </td>
+                  <td className="py-4 px-3 text-center">
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Access Period (Top Tier)</td>
+                  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+                    <span className="text-[var(--foreground)] font-semibold">Unlimited</span>
+                  </td>
+                  <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
+                  <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
+                  <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="py-4 px-3 text-[var(--foreground)] font-bold">Price</td>
@@ -371,7 +371,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
             <p className="text-sm text-[var(--muted)]">
-              <strong className="text-[var(--foreground)]">Bottom line:</strong> If you need comprehensive video lectures, task-based simulations, and a pass guarantee, the premium courses are worth considering. But if you&apos;re looking for affordable practice questions and study tools to supplement your learning, CPA Exam Blueprint offers great value at a fraction of the cost.
+              <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, the same pass guarantee as the big names, and unlimited access in our Pro plan - all for <strong>95% less</strong>. The main differences are we don&apos;t have video lectures or task-based simulations. If you learn best from reading and practice, we&apos;re the smart choice.
             </p>
           </div>
         </div>
@@ -419,13 +419,13 @@ export default function AboutPage() {
         <div className="bg-[var(--primary)] p-8 rounded-xl text-white text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Start Studying?</h2>
           <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
-            Get access to 600+ practice questions and study tools at a price that won&apos;t break the bank.
+            Get access to 6,000+ practice questions, progress tracking, and a pass guarantee - starting at just $79.
           </p>
           <Link
-            href="/signup"
+            href="/pricing"
             className="inline-block bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Get Started Today
+            View Pricing Plans
           </Link>
         </div>
       </div>

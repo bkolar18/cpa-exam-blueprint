@@ -14,8 +14,8 @@ export default function Footer() {
               <span className="text-xl font-bold">CPA Exam Blueprint</span>
             </div>
             <p className="text-gray-300 max-w-md">
-              Affordable CPA exam study aid with 600+ practice questions,
-              progress tracking, and personalized study plans.
+              Affordable CPA exam prep with 6,000+ practice questions,
+              progress tracking, and a pass guarantee.
             </p>
             <p className="text-gray-400 text-sm mt-4">
               A budget-friendly alternative for CPA candidates.
