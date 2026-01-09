@@ -5432,7 +5432,7 @@ const questions = [
     "conceptTested": "Basis calculation comprehensive",
     "difficulty": "hard",
     "questionFormat": "MCQ",
-    "question": "Using the same facts (basis $100K, FMV given $250K, received property $220K + $30K cash), the basis of the replacement property is:",
+    "question": "In a like-kind exchange, a taxpayer exchanges property with a basis of $100,000 and FMV of $250,000 for property worth $220,000 plus $30,000 cash. What is the basis of the replacement property?",
     "options": {
       "A": "$220,000",
       "B": "$100,000",
@@ -9144,7 +9144,7 @@ const questions = [
   {
     "id": "reg-013-001",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Basic Concepts",
     "conceptTested": "Purpose of AMT",
     "difficulty": "easy",
@@ -9165,7 +9165,7 @@ const questions = [
   {
     "id": "reg-013-002",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Rate",
     "conceptTested": "Individual AMT tax rates",
     "difficulty": "easy",
@@ -9186,7 +9186,7 @@ const questions = [
   {
     "id": "reg-013-003",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Exemption",
     "conceptTested": "Exemption concept",
     "difficulty": "easy",
@@ -9207,7 +9207,7 @@ const questions = [
   {
     "id": "reg-013-004",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Calculation",
     "conceptTested": "Starting point for AMTI",
     "difficulty": "easy",
@@ -9228,7 +9228,7 @@ const questions = [
   {
     "id": "reg-013-005",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "TCJA Impact",
     "conceptTested": "TCJA changes to AMT",
     "difficulty": "easy",
@@ -9249,7 +9249,7 @@ const questions = [
   {
     "id": "reg-013-006",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Tax Liability",
     "conceptTested": "AMT vs regular tax",
     "difficulty": "easy",
@@ -9270,7 +9270,7 @@ const questions = [
   {
     "id": "reg-013-007",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Adjustments",
     "conceptTested": "State and local tax deduction",
     "difficulty": "medium",
@@ -9291,7 +9291,7 @@ const questions = [
   {
     "id": "reg-013-008",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Adjustments",
     "conceptTested": "Mortgage interest",
     "difficulty": "medium",
@@ -9312,7 +9312,7 @@ const questions = [
   {
     "id": "reg-013-009",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Adjustments",
     "conceptTested": "Depreciation adjustment",
     "difficulty": "medium",
@@ -9333,7 +9333,7 @@ const questions = [
   {
     "id": "reg-013-010",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Preferences",
     "conceptTested": "Difference between adjustments and preferences",
     "difficulty": "medium",
@@ -9354,7 +9354,7 @@ const questions = [
   {
     "id": "reg-013-011",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Preferences",
     "conceptTested": "Private activity bond interest",
     "difficulty": "medium",
@@ -9375,7 +9375,7 @@ const questions = [
   {
     "id": "reg-013-012",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Exemption Phaseout",
     "conceptTested": "Phaseout mechanics",
     "difficulty": "medium",
@@ -9396,7 +9396,7 @@ const questions = [
   {
     "id": "reg-013-013",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Credit",
     "conceptTested": "Minimum tax credit purpose",
     "difficulty": "medium",
@@ -9417,7 +9417,7 @@ const questions = [
   {
     "id": "reg-013-014",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Standard Deduction",
     "conceptTested": "Standard deduction for AMT",
     "difficulty": "medium",
@@ -9438,7 +9438,7 @@ const questions = [
   {
     "id": "reg-013-015",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Medical Expenses",
     "conceptTested": "Medical expense deduction for AMT",
     "difficulty": "medium",
@@ -9459,7 +9459,7 @@ const questions = [
   {
     "id": "reg-013-016",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "ISO Exercise",
     "conceptTested": "Incentive stock option AMT treatment",
     "difficulty": "medium",
@@ -9480,7 +9480,7 @@ const questions = [
   {
     "id": "reg-013-017",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Calculation",
     "conceptTested": "Capital gains rate for AMT",
     "difficulty": "medium",
@@ -9501,7 +9501,7 @@ const questions = [
   {
     "id": "reg-013-018",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Net Operating Loss",
     "conceptTested": "NOL for AMT",
     "difficulty": "medium",
@@ -9522,7 +9522,7 @@ const questions = [
   {
     "id": "reg-013-019",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Miscellaneous Deductions",
     "conceptTested": "Miscellaneous itemized deductions",
     "difficulty": "medium",
@@ -9543,7 +9543,7 @@ const questions = [
   {
     "id": "reg-013-020",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Personal Exemptions",
     "conceptTested": "Personal exemptions for AMT",
     "difficulty": "medium",
@@ -9564,7 +9564,7 @@ const questions = [
   {
     "id": "reg-013-021",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Passive Activities",
     "conceptTested": "PAL for AMT",
     "difficulty": "medium",
@@ -9585,7 +9585,7 @@ const questions = [
   {
     "id": "reg-013-022",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Small Corporation Exemption",
     "conceptTested": "Corporate AMT exemption",
     "difficulty": "medium",
@@ -9606,7 +9606,7 @@ const questions = [
   {
     "id": "reg-013-023",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Charitable Contributions",
     "conceptTested": "Charitable deduction for AMT",
     "difficulty": "hard",
@@ -9627,7 +9627,7 @@ const questions = [
   {
     "id": "reg-013-024",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Credit Calculation",
     "conceptTested": "MTC calculation",
     "difficulty": "hard",
@@ -9648,7 +9648,7 @@ const questions = [
   {
     "id": "reg-013-025",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "ISO Basis Adjustment",
     "conceptTested": "AMT basis for ISO stock",
     "difficulty": "hard",
@@ -9669,7 +9669,7 @@ const questions = [
   {
     "id": "reg-013-026",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMT Calculation",
     "conceptTested": "Full AMTI calculation",
     "difficulty": "hard",
@@ -9690,7 +9690,7 @@ const questions = [
   {
     "id": "reg-013-027",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Exemption Amount",
     "conceptTested": "Filing status exemptions",
     "difficulty": "hard",
@@ -9711,7 +9711,7 @@ const questions = [
   {
     "id": "reg-013-028",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "MTC Usage",
     "conceptTested": "When MTC can be used",
     "difficulty": "hard",
@@ -9732,7 +9732,7 @@ const questions = [
   {
     "id": "reg-013-029",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Foreign Tax Credit",
     "conceptTested": "FTC for AMT",
     "difficulty": "hard",
@@ -9753,7 +9753,7 @@ const questions = [
   {
     "id": "reg-013-030",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Real Property Depreciation",
     "conceptTested": "AMT depreciation for real property",
     "difficulty": "hard",
@@ -9774,7 +9774,7 @@ const questions = [
   {
     "id": "reg-013-031",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Intangible Drilling Costs",
     "conceptTested": "IDC preference item",
     "difficulty": "hard",
@@ -9795,7 +9795,7 @@ const questions = [
   {
     "id": "reg-013-032",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Corporate AMT",
     "conceptTested": "CAMT rate under IRA",
     "difficulty": "hard",
@@ -9816,7 +9816,7 @@ const questions = [
   {
     "id": "reg-013-033",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Incentive Stock Options",
     "conceptTested": "Disqualifying disposition effect",
     "difficulty": "hard",
@@ -9837,7 +9837,7 @@ const questions = [
   {
     "id": "reg-013-034",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "AMTI Phaseout Calculation",
     "conceptTested": "Exemption phaseout computation",
     "difficulty": "hard",
@@ -9858,7 +9858,7 @@ const questions = [
   {
     "id": "reg-013-035",
     "section": "REG",
-    "topic": "Alternative Minimum Tax",
+    "topic": "AMT Planning",
     "subtopic": "Depletion",
     "conceptTested": "Percentage depletion preference",
     "difficulty": "hard",
@@ -15024,7 +15024,7 @@ const questions = [
   {
     "id": "reg-021-001",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "FICA",
     "conceptTested": "Components of FICA",
     "difficulty": "easy",
@@ -15045,7 +15045,7 @@ const questions = [
   {
     "id": "reg-021-002",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Social Security",
     "conceptTested": "Social Security tax rate",
     "difficulty": "easy",
@@ -15066,7 +15066,7 @@ const questions = [
   {
     "id": "reg-021-003",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Medicare",
     "conceptTested": "Medicare tax rate",
     "difficulty": "easy",
@@ -15087,7 +15087,7 @@ const questions = [
   {
     "id": "reg-021-004",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "FUTA",
     "conceptTested": "FUTA basics",
     "difficulty": "easy",
@@ -15108,7 +15108,7 @@ const questions = [
   {
     "id": "reg-021-005",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Withholding",
     "conceptTested": "Form W-4 purpose",
     "difficulty": "easy",
@@ -15129,7 +15129,7 @@ const questions = [
   {
     "id": "reg-021-006",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Form W-2",
     "conceptTested": "W-2 deadline",
     "difficulty": "easy",
@@ -15150,7 +15150,7 @@ const questions = [
   {
     "id": "reg-021-007",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment Tax",
     "conceptTested": "SE tax rate",
     "difficulty": "medium",
@@ -15171,7 +15171,7 @@ const questions = [
   {
     "id": "reg-021-008",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment Tax",
     "conceptTested": "Net earnings from self-employment",
     "difficulty": "medium",
@@ -15192,7 +15192,7 @@ const questions = [
   {
     "id": "reg-021-009",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "FUTA",
     "conceptTested": "FUTA wage base and credit",
     "difficulty": "medium",
@@ -15213,7 +15213,7 @@ const questions = [
   {
     "id": "reg-021-010",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Additional Medicare Tax",
     "conceptTested": "0.9% additional Medicare",
     "difficulty": "medium",
@@ -15234,7 +15234,7 @@ const questions = [
   {
     "id": "reg-021-011",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Deposit Requirements",
     "conceptTested": "Semi-weekly depositor",
     "difficulty": "medium",
@@ -15255,7 +15255,7 @@ const questions = [
   {
     "id": "reg-021-012",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Form 941",
     "conceptTested": "Form 941 filing",
     "difficulty": "medium",
@@ -15276,7 +15276,7 @@ const questions = [
   {
     "id": "reg-021-013",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment Tax",
     "conceptTested": "SE tax deduction",
     "difficulty": "medium",
@@ -15297,7 +15297,7 @@ const questions = [
   {
     "id": "reg-021-014",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Withholding",
     "conceptTested": "Backup withholding",
     "difficulty": "medium",
@@ -15318,7 +15318,7 @@ const questions = [
   {
     "id": "reg-021-015",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Nanny Tax",
     "conceptTested": "Household employee threshold",
     "difficulty": "medium",
@@ -15339,7 +15339,7 @@ const questions = [
   {
     "id": "reg-021-016",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Worker Classification",
     "conceptTested": "Employee vs independent contractor",
     "difficulty": "medium",
@@ -15360,7 +15360,7 @@ const questions = [
   {
     "id": "reg-021-017",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Form 1099-NEC",
     "conceptTested": "1099-NEC filing",
     "difficulty": "medium",
@@ -15381,7 +15381,7 @@ const questions = [
   {
     "id": "reg-021-018",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Social Security",
     "conceptTested": "Wage base",
     "difficulty": "medium",
@@ -15402,7 +15402,7 @@ const questions = [
   {
     "id": "reg-021-019",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Trust Fund Recovery Penalty",
     "conceptTested": "100% penalty",
     "difficulty": "medium",
@@ -15423,7 +15423,7 @@ const questions = [
   {
     "id": "reg-021-020",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment",
     "conceptTested": "SE tax threshold",
     "difficulty": "medium",
@@ -15444,7 +15444,7 @@ const questions = [
   {
     "id": "reg-021-021",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Tips",
     "conceptTested": "Tip income reporting",
     "difficulty": "medium",
@@ -15465,7 +15465,7 @@ const questions = [
   {
     "id": "reg-021-022",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Deposit Requirements",
     "conceptTested": "$100,000 next-day deposit rule",
     "difficulty": "hard",
@@ -15486,7 +15486,7 @@ const questions = [
   {
     "id": "reg-021-023",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Net Investment Income Tax",
     "conceptTested": "NIIT on wages",
     "difficulty": "hard",
@@ -15507,7 +15507,7 @@ const questions = [
   {
     "id": "reg-021-024",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment",
     "conceptTested": "Partners and SE tax",
     "difficulty": "hard",
@@ -15528,7 +15528,7 @@ const questions = [
   {
     "id": "reg-021-025",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Penalties",
     "conceptTested": "Late deposit penalty",
     "difficulty": "hard",
@@ -15549,7 +15549,7 @@ const questions = [
   {
     "id": "reg-021-026",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Worker Classification",
     "conceptTested": "Section 530 safe harbor",
     "difficulty": "hard",
@@ -15570,7 +15570,7 @@ const questions = [
   {
     "id": "reg-021-027",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment",
     "conceptTested": "Church employee exception",
     "difficulty": "hard",
@@ -15591,7 +15591,7 @@ const questions = [
   {
     "id": "reg-021-028",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Form 940",
     "conceptTested": "FUTA return filing",
     "difficulty": "hard",
@@ -15612,7 +15612,7 @@ const questions = [
   {
     "id": "reg-021-029",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Social Security",
     "conceptTested": "Multiple employers",
     "difficulty": "hard",
@@ -15633,7 +15633,7 @@ const questions = [
   {
     "id": "reg-021-030",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Fringe Benefits",
     "conceptTested": "Taxable fringe benefits",
     "difficulty": "hard",
@@ -15654,7 +15654,7 @@ const questions = [
   {
     "id": "reg-021-031",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Self-Employment",
     "conceptTested": "S corporation shareholder-employee",
     "difficulty": "hard",
@@ -15675,7 +15675,7 @@ const questions = [
   {
     "id": "reg-021-032",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Agricultural Workers",
     "conceptTested": "Farm worker FICA",
     "difficulty": "hard",
@@ -15696,7 +15696,7 @@ const questions = [
   {
     "id": "reg-021-033",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Penalties",
     "conceptTested": "Failure to furnish W-2",
     "difficulty": "hard",
@@ -15717,7 +15717,7 @@ const questions = [
   {
     "id": "reg-021-034",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Withholding",
     "conceptTested": "Supplemental wage withholding",
     "difficulty": "hard",
@@ -15738,7 +15738,7 @@ const questions = [
   {
     "id": "reg-021-035",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Corrections",
     "conceptTested": "Form 941-X",
     "difficulty": "hard",
@@ -23193,7 +23193,7 @@ const questions = [
   {
     "id": "reg-032-005",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "Written advice requirements",
     "difficulty": "easy",
@@ -23466,7 +23466,7 @@ const questions = [
   {
     "id": "reg-032-018",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "Due diligence",
     "difficulty": "medium",
@@ -23697,7 +23697,7 @@ const questions = [
   {
     "id": "reg-032-029",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "Sanctions",
     "difficulty": "hard",
@@ -23823,7 +23823,7 @@ const questions = [
   {
     "id": "reg-032-035",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "Employer Responsibilities",
     "conceptTested": "Trust fund penalty",
     "difficulty": "hard",
@@ -23949,7 +23949,7 @@ const questions = [
   {
     "id": "reg-033-006",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "PTIN requirement",
     "difficulty": "easy",
@@ -24201,7 +24201,7 @@ const questions = [
   {
     "id": "reg-033-018",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "FUTA",
     "conceptTested": "FUTA taxable wages",
     "difficulty": "medium",
@@ -24222,7 +24222,7 @@ const questions = [
   {
     "id": "reg-033-019",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "Best practices",
     "difficulty": "medium",
@@ -24663,7 +24663,7 @@ const questions = [
   {
     "id": "reg-034-005",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "Conflicts of Interest",
     "difficulty": "easy",
@@ -24894,7 +24894,7 @@ const questions = [
   {
     "id": "reg-034-016",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Tax Return Positions",
     "conceptTested": "Substantial Authority Standard",
     "difficulty": "medium",
@@ -25083,7 +25083,7 @@ const questions = [
   {
     "id": "reg-034-025",
     "section": "REG",
-    "topic": "Ethics",
+    "topic": "Professional Ethics",
     "subtopic": "Circular 230",
     "conceptTested": "Best Practices",
     "difficulty": "medium",
@@ -25608,7 +25608,7 @@ const questions = [
   {
     "id": "reg-med-015",
     "section": "REG",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Annual Exclusion",
     "conceptTested": "Present interest requirement",
     "difficulty": "medium",
@@ -25860,7 +25860,7 @@ const questions = [
   {
     "id": "reg-med-027",
     "section": "REG",
-    "topic": "Employment Taxes",
+    "topic": "Employment Tax",
     "subtopic": "FICA",
     "conceptTested": "Social Security wage base",
     "difficulty": "medium",
@@ -26385,7 +26385,7 @@ const questions = [
   {
     "id": "reg-med2-017",
     "section": "REG",
-    "topic": "Estate Tax",
+    "topic": "Estates and Trusts",
     "subtopic": "Gross Estate",
     "conceptTested": "Life insurance inclusion",
     "difficulty": "medium",
@@ -26406,7 +26406,7 @@ const questions = [
   {
     "id": "reg-med2-018",
     "section": "REG",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Split Gifts",
     "conceptTested": "Gift splitting election",
     "difficulty": "medium",
@@ -27267,7 +27267,7 @@ const questions = [
   {
     "id": "reg-med3-024",
     "section": "REG",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Annual Exclusion",
     "conceptTested": "Present interest requirement",
     "difficulty": "medium",
@@ -27897,7 +27897,7 @@ const questions = [
   {
     "id": "reg-med3-054",
     "section": "REG",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Valuation",
     "conceptTested": "Gift tax valuation discounts",
     "difficulty": "medium",

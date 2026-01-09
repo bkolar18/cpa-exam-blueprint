@@ -9107,7 +9107,7 @@ const questions = [
     "conceptTested": "Gain recognition in bargain sale",
     "difficulty": "medium",
     "questionFormat": "MCQ",
-    "question": "Using the same facts (basis $40,000, FMV $100,000, sale price $60,000), what gain must the taxpayer recognize on the bargain sale?",
+    "question": "A taxpayer makes a bargain sale to a charity, selling property with a basis of $40,000 and FMV of $100,000 for $60,000. What gain must the taxpayer recognize?",
     "options": {
       "A": "$0",
       "B": "$20,000",
@@ -13260,7 +13260,7 @@ const questions = [
   {
     "id": "tcp-019-002",
     "section": "TCP",
-    "topic": "Entity Selection",
+    "topic": "Business Entities",
     "subtopic": "S Corporation",
     "conceptTested": "S corp eligibility",
     "difficulty": "easy",
@@ -13323,7 +13323,7 @@ const questions = [
   {
     "id": "tcp-019-005",
     "section": "TCP",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Annual Exclusion",
     "conceptTested": "2024 annual exclusion",
     "difficulty": "easy",
@@ -13365,7 +13365,7 @@ const questions = [
   {
     "id": "tcp-019-007",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Basis Adjustments",
     "conceptTested": "Partner basis calculation",
     "difficulty": "medium",
@@ -13386,7 +13386,7 @@ const questions = [
   {
     "id": "tcp-019-008",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Unified Credit",
     "conceptTested": "2024 estate tax exemption",
     "difficulty": "medium",
@@ -13407,7 +13407,7 @@ const questions = [
   {
     "id": "tcp-019-009",
     "section": "TCP",
-    "topic": "Income Recognition",
+    "topic": "Revenue Recognition",
     "subtopic": "Installment Sales",
     "conceptTested": "Gross profit percentage",
     "difficulty": "medium",
@@ -13449,7 +13449,7 @@ const questions = [
   {
     "id": "tcp-019-011",
     "section": "TCP",
-    "topic": "State Taxation",
+    "topic": "State and Local Tax",
     "subtopic": "Apportionment",
     "conceptTested": "Single sales factor",
     "difficulty": "medium",
@@ -13470,7 +13470,7 @@ const questions = [
   {
     "id": "tcp-019-012",
     "section": "TCP",
-    "topic": "Deferred Compensation",
+    "topic": "Compensation Planning",
     "subtopic": "Section 409A",
     "conceptTested": "409A distribution timing",
     "difficulty": "medium",
@@ -13512,7 +13512,7 @@ const questions = [
   {
     "id": "tcp-019-014",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Dividends Received Deduction",
     "conceptTested": "DRD percentage",
     "difficulty": "medium",
@@ -13554,7 +13554,7 @@ const questions = [
   {
     "id": "tcp-019-016",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Hot Assets",
     "conceptTested": "Section 751 assets",
     "difficulty": "medium",
@@ -13596,7 +13596,7 @@ const questions = [
   {
     "id": "tcp-019-018",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Basis Step-Up",
     "conceptTested": "Inherited property basis",
     "difficulty": "medium",
@@ -13617,7 +13617,7 @@ const questions = [
   {
     "id": "tcp-019-019",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Distributions",
     "conceptTested": "AAA and distribution ordering",
     "difficulty": "medium",
@@ -13638,7 +13638,7 @@ const questions = [
   {
     "id": "tcp-019-020",
     "section": "TCP",
-    "topic": "Deductions",
+    "topic": "Individual Taxation",
     "subtopic": "Business Interest Limitation",
     "conceptTested": "Section 163(j) basics",
     "difficulty": "medium",
@@ -13680,7 +13680,7 @@ const questions = [
   {
     "id": "tcp-019-022",
     "section": "TCP",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Present Interest",
     "conceptTested": "Crummey powers",
     "difficulty": "medium",
@@ -13722,7 +13722,7 @@ const questions = [
   {
     "id": "tcp-019-024",
     "section": "TCP",
-    "topic": "Net Investment Income Tax",
+    "topic": "Individual Taxation",
     "subtopic": "NIIT Application",
     "conceptTested": "NIIT calculation",
     "difficulty": "medium",
@@ -13743,7 +13743,7 @@ const questions = [
   {
     "id": "tcp-019-025",
     "section": "TCP",
-    "topic": "Charitable Planning",
+    "topic": "Charitable Giving",
     "subtopic": "Donor Advised Fund",
     "conceptTested": "DAF timing",
     "difficulty": "medium",
@@ -13764,7 +13764,7 @@ const questions = [
   {
     "id": "tcp-019-026",
     "section": "TCP",
-    "topic": "Entity Taxation",
+    "topic": "Business Entities",
     "subtopic": "Check-the-Box",
     "conceptTested": "Effective date of election",
     "difficulty": "medium",
@@ -13785,7 +13785,7 @@ const questions = [
   {
     "id": "tcp-019-027",
     "section": "TCP",
-    "topic": "Income Recognition",
+    "topic": "Revenue Recognition",
     "subtopic": "Constructive Receipt",
     "conceptTested": "Cash basis income timing",
     "difficulty": "hard",
@@ -13806,7 +13806,7 @@ const questions = [
   {
     "id": "tcp-019-028",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Guaranteed Payments",
     "conceptTested": "Timing of guaranteed payments",
     "difficulty": "hard",
@@ -13827,7 +13827,7 @@ const questions = [
   {
     "id": "tcp-019-029",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Valuation Discounts",
     "conceptTested": "Minority and marketability discounts",
     "difficulty": "hard",
@@ -13848,7 +13848,7 @@ const questions = [
   {
     "id": "tcp-019-030",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Built-In Gains Tax",
     "conceptTested": "BIG tax calculation",
     "difficulty": "hard",
@@ -13890,7 +13890,7 @@ const questions = [
   {
     "id": "tcp-019-032",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "Foreign Tax Credit",
     "conceptTested": "FTC carryover period",
     "difficulty": "hard",
@@ -13911,7 +13911,7 @@ const questions = [
   {
     "id": "tcp-019-033",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Distributable Net Income",
     "conceptTested": "DNI and distributions",
     "difficulty": "hard",
@@ -13932,7 +13932,7 @@ const questions = [
   {
     "id": "tcp-019-034",
     "section": "TCP",
-    "topic": "Section 199A",
+    "topic": "Individual Taxation",
     "subtopic": "W-2 Wage Limitation",
     "conceptTested": "QBI deduction limitations",
     "difficulty": "hard",
@@ -13953,7 +13953,7 @@ const questions = [
   {
     "id": "tcp-019-035",
     "section": "TCP",
-    "topic": "Corporate Reorganizations",
+    "topic": "C Corporations",
     "subtopic": "Type A Merger",
     "conceptTested": "Continuity of interest",
     "difficulty": "hard",
@@ -13995,7 +13995,7 @@ const questions = [
   {
     "id": "tcp-020-002",
     "section": "TCP",
-    "topic": "Entity Selection",
+    "topic": "Business Entities",
     "subtopic": "LLC",
     "conceptTested": "Default LLC taxation",
     "difficulty": "easy",
@@ -14037,7 +14037,7 @@ const questions = [
   {
     "id": "tcp-020-004",
     "section": "TCP",
-    "topic": "Deductions",
+    "topic": "Individual Taxation",
     "subtopic": "Business Expenses",
     "conceptTested": "Meals deduction",
     "difficulty": "easy",
@@ -14100,7 +14100,7 @@ const questions = [
   {
     "id": "tcp-020-007",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Gift Splitting",
     "conceptTested": "Gift tax splitting",
     "difficulty": "medium",
@@ -14121,7 +14121,7 @@ const questions = [
   {
     "id": "tcp-020-008",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Election",
     "conceptTested": "S election deadline",
     "difficulty": "medium",
@@ -14142,7 +14142,7 @@ const questions = [
   {
     "id": "tcp-020-009",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Special Allocations",
     "conceptTested": "Substantial economic effect",
     "difficulty": "medium",
@@ -14184,7 +14184,7 @@ const questions = [
   {
     "id": "tcp-020-011",
     "section": "TCP",
-    "topic": "Charitable Planning",
+    "topic": "Charitable Giving",
     "subtopic": "AGI Limitations",
     "conceptTested": "Cash contribution limit",
     "difficulty": "medium",
@@ -14205,7 +14205,7 @@ const questions = [
   {
     "id": "tcp-020-012",
     "section": "TCP",
-    "topic": "State Taxation",
+    "topic": "State and Local Tax",
     "subtopic": "Pass-Through Entity Tax",
     "conceptTested": "PTET workaround",
     "difficulty": "medium",
@@ -14226,7 +14226,7 @@ const questions = [
   {
     "id": "tcp-020-013",
     "section": "TCP",
-    "topic": "Income Recognition",
+    "topic": "Revenue Recognition",
     "subtopic": "Qualified Dividends",
     "conceptTested": "Holding period requirement",
     "difficulty": "medium",
@@ -14268,7 +14268,7 @@ const questions = [
   {
     "id": "tcp-020-015",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Simple vs Complex",
     "conceptTested": "Simple trust requirements",
     "difficulty": "medium",
@@ -14310,7 +14310,7 @@ const questions = [
   {
     "id": "tcp-020-017",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Penalty Taxes",
     "conceptTested": "Personal holding company income",
     "difficulty": "medium",
@@ -14394,7 +14394,7 @@ const questions = [
   {
     "id": "tcp-020-021",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "FBAR",
     "conceptTested": "FBAR deadline",
     "difficulty": "medium",
@@ -14415,7 +14415,7 @@ const questions = [
   {
     "id": "tcp-020-022",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Marital Deduction",
     "conceptTested": "Unlimited marital deduction",
     "difficulty": "medium",
@@ -14436,7 +14436,7 @@ const questions = [
   {
     "id": "tcp-020-023",
     "section": "TCP",
-    "topic": "Entity Taxation",
+    "topic": "Business Entities",
     "subtopic": "Section 179",
     "conceptTested": "2024 Section 179 limit",
     "difficulty": "medium",
@@ -14520,7 +14520,7 @@ const questions = [
   {
     "id": "tcp-020-027",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Disguised Sales",
     "conceptTested": "Section 707 disguised sale",
     "difficulty": "hard",
@@ -14541,7 +14541,7 @@ const questions = [
   {
     "id": "tcp-020-028",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Generation-Skipping Transfer",
     "conceptTested": "GST tax rate",
     "difficulty": "hard",
@@ -14562,7 +14562,7 @@ const questions = [
   {
     "id": "tcp-020-029",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Earnings and Profits",
     "conceptTested": "E&P adjustments",
     "difficulty": "hard",
@@ -14604,7 +14604,7 @@ const questions = [
   {
     "id": "tcp-020-031",
     "section": "TCP",
-    "topic": "Section 199A",
+    "topic": "Individual Taxation",
     "subtopic": "Aggregation",
     "conceptTested": "Aggregation benefits",
     "difficulty": "hard",
@@ -14625,7 +14625,7 @@ const questions = [
   {
     "id": "tcp-020-032",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "Subpart F",
     "conceptTested": "Subpart F income categories",
     "difficulty": "hard",
@@ -14667,7 +14667,7 @@ const questions = [
   {
     "id": "tcp-020-034",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Grantor Trust",
     "conceptTested": "Defective grantor trust",
     "difficulty": "hard",
@@ -14688,7 +14688,7 @@ const questions = [
   {
     "id": "tcp-020-035",
     "section": "TCP",
-    "topic": "Corporate Reorganizations",
+    "topic": "C Corporations",
     "subtopic": "Section 351",
     "conceptTested": "Control requirement",
     "difficulty": "hard",
@@ -14730,7 +14730,7 @@ const questions = [
   {
     "id": "tcp-021-002",
     "section": "TCP",
-    "topic": "Entity Selection",
+    "topic": "Business Entities",
     "subtopic": "Sole Proprietorship",
     "conceptTested": "SE tax calculation",
     "difficulty": "easy",
@@ -14814,7 +14814,7 @@ const questions = [
   {
     "id": "tcp-021-006",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Portability",
     "conceptTested": "DSUE amount",
     "difficulty": "easy",
@@ -14835,7 +14835,7 @@ const questions = [
   {
     "id": "tcp-021-007",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Shareholder Basis",
     "conceptTested": "Debt basis in S corps",
     "difficulty": "medium",
@@ -14856,7 +14856,7 @@ const questions = [
   {
     "id": "tcp-021-008",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Distributions",
     "conceptTested": "Cash distribution rules",
     "difficulty": "medium",
@@ -14877,7 +14877,7 @@ const questions = [
   {
     "id": "tcp-021-009",
     "section": "TCP",
-    "topic": "Income Recognition",
+    "topic": "Revenue Recognition",
     "subtopic": "Annuities",
     "conceptTested": "Annuity taxation",
     "difficulty": "medium",
@@ -14919,7 +14919,7 @@ const questions = [
   {
     "id": "tcp-021-011",
     "section": "TCP",
-    "topic": "Deductions",
+    "topic": "Individual Taxation",
     "subtopic": "Hobby Loss",
     "conceptTested": "Hobby vs business",
     "difficulty": "medium",
@@ -14940,7 +14940,7 @@ const questions = [
   {
     "id": "tcp-021-012",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "NOL",
     "conceptTested": "Corporate NOL rules",
     "difficulty": "medium",
@@ -14961,7 +14961,7 @@ const questions = [
   {
     "id": "tcp-021-013",
     "section": "TCP",
-    "topic": "Charitable Planning",
+    "topic": "Charitable Giving",
     "subtopic": "Appreciated Property",
     "conceptTested": "Capital gain property donation",
     "difficulty": "medium",
@@ -15003,7 +15003,7 @@ const questions = [
   {
     "id": "tcp-021-015",
     "section": "TCP",
-    "topic": "State Taxation",
+    "topic": "State and Local Tax",
     "subtopic": "Nexus",
     "conceptTested": "Economic nexus",
     "difficulty": "medium",
@@ -15066,7 +15066,7 @@ const questions = [
   {
     "id": "tcp-021-018",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Tax Rates",
     "conceptTested": "Compressed trust brackets",
     "difficulty": "medium",
@@ -15108,7 +15108,7 @@ const questions = [
   {
     "id": "tcp-021-020",
     "section": "TCP",
-    "topic": "Business Planning",
+    "topic": "Tax Planning",
     "subtopic": "Qualified Opportunity Zone",
     "conceptTested": "QOZ deferral deadline",
     "difficulty": "medium",
@@ -15150,7 +15150,7 @@ const questions = [
   {
     "id": "tcp-021-022",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "GRAT",
     "conceptTested": "GRAT mortality risk",
     "difficulty": "medium",
@@ -15171,7 +15171,7 @@ const questions = [
   {
     "id": "tcp-021-023",
     "section": "TCP",
-    "topic": "Section 199A",
+    "topic": "Individual Taxation",
     "subtopic": "SSTB",
     "conceptTested": "SSTB de minimis rule",
     "difficulty": "medium",
@@ -15192,7 +15192,7 @@ const questions = [
   {
     "id": "tcp-021-024",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "Treaty Benefits",
     "conceptTested": "Treaty reduced withholding",
     "difficulty": "medium",
@@ -15255,7 +15255,7 @@ const questions = [
   {
     "id": "tcp-021-027",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Reorganizations",
     "conceptTested": "Boot in reorganizations",
     "difficulty": "hard",
@@ -15276,7 +15276,7 @@ const questions = [
   {
     "id": "tcp-021-028",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Liquidating Distributions",
     "conceptTested": "Liquidation gain/loss",
     "difficulty": "hard",
@@ -15297,7 +15297,7 @@ const questions = [
   {
     "id": "tcp-021-029",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "ILIT",
     "conceptTested": "Irrevocable life insurance trust",
     "difficulty": "hard",
@@ -15339,7 +15339,7 @@ const questions = [
   {
     "id": "tcp-021-031",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Passive Income",
     "conceptTested": "Excessive passive income tax",
     "difficulty": "hard",
@@ -15360,7 +15360,7 @@ const questions = [
   {
     "id": "tcp-021-032",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Charitable Remainder Trust",
     "conceptTested": "CRT taxation",
     "difficulty": "hard",
@@ -15381,7 +15381,7 @@ const questions = [
   {
     "id": "tcp-021-033",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "GILTI",
     "conceptTested": "GILTI individual shareholder",
     "difficulty": "hard",
@@ -15402,7 +15402,7 @@ const questions = [
   {
     "id": "tcp-021-034",
     "section": "TCP",
-    "topic": "Multi-Entity",
+    "topic": "Multi-Entity Planning",
     "subtopic": "Self-Rental",
     "conceptTested": "Self-rental income recharacterization",
     "difficulty": "hard",
@@ -15465,7 +15465,7 @@ const questions = [
   {
     "id": "tcp-022-002",
     "section": "TCP",
-    "topic": "Deductions",
+    "topic": "Individual Taxation",
     "subtopic": "Home Office",
     "conceptTested": "Simplified method",
     "difficulty": "easy",
@@ -15570,7 +15570,7 @@ const questions = [
   {
     "id": "tcp-022-007",
     "section": "TCP",
-    "topic": "Entity Selection",
+    "topic": "Business Entities",
     "subtopic": "Partnership",
     "conceptTested": "Partnership formation",
     "difficulty": "medium",
@@ -15591,7 +15591,7 @@ const questions = [
   {
     "id": "tcp-022-008",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Trusts",
     "conceptTested": "Revocable trust taxation",
     "difficulty": "medium",
@@ -15612,7 +15612,7 @@ const questions = [
   {
     "id": "tcp-022-009",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Health Insurance",
     "conceptTested": ">2% shareholder health insurance",
     "difficulty": "medium",
@@ -15654,7 +15654,7 @@ const questions = [
   {
     "id": "tcp-022-011",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Liability Allocation",
     "conceptTested": "Recourse vs nonrecourse",
     "difficulty": "medium",
@@ -15675,7 +15675,7 @@ const questions = [
   {
     "id": "tcp-022-012",
     "section": "TCP",
-    "topic": "Charitable Planning",
+    "topic": "Charitable Giving",
     "subtopic": "QCD",
     "conceptTested": "QCD vs itemized deduction",
     "difficulty": "medium",
@@ -15696,7 +15696,7 @@ const questions = [
   {
     "id": "tcp-022-013",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Distributions",
     "conceptTested": "Dividend vs return of capital",
     "difficulty": "medium",
@@ -15738,7 +15738,7 @@ const questions = [
   {
     "id": "tcp-022-015",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "65-Day Rule",
     "conceptTested": "Trust distribution election",
     "difficulty": "medium",
@@ -15759,7 +15759,7 @@ const questions = [
   {
     "id": "tcp-022-016",
     "section": "TCP",
-    "topic": "State Taxation",
+    "topic": "State and Local Tax",
     "subtopic": "Throwback Rule",
     "conceptTested": "Throwback sales",
     "difficulty": "medium",
@@ -15864,7 +15864,7 @@ const questions = [
   {
     "id": "tcp-022-021",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "Form 8865",
     "conceptTested": "Foreign partnership reporting",
     "difficulty": "medium",
@@ -15885,7 +15885,7 @@ const questions = [
   {
     "id": "tcp-022-022",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Valuation",
     "conceptTested": "Alternate valuation date",
     "difficulty": "medium",
@@ -15906,7 +15906,7 @@ const questions = [
   {
     "id": "tcp-022-023",
     "section": "TCP",
-    "topic": "Business Planning",
+    "topic": "Tax Planning",
     "subtopic": "Accounting Methods",
     "conceptTested": "Cash method eligibility",
     "difficulty": "medium",
@@ -15927,7 +15927,7 @@ const questions = [
   {
     "id": "tcp-022-024",
     "section": "TCP",
-    "topic": "Section 199A",
+    "topic": "Individual Taxation",
     "subtopic": "Safe Harbor",
     "conceptTested": "Rental real estate safe harbor",
     "difficulty": "medium",
@@ -15990,7 +15990,7 @@ const questions = [
   {
     "id": "tcp-022-027",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Termination",
     "conceptTested": "Partnership termination rules",
     "difficulty": "hard",
@@ -16011,7 +16011,7 @@ const questions = [
   {
     "id": "tcp-022-028",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Section 2032A",
     "conceptTested": "Special use valuation",
     "difficulty": "hard",
@@ -16032,7 +16032,7 @@ const questions = [
   {
     "id": "tcp-022-029",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Termination",
     "conceptTested": "Inadvertent termination relief",
     "difficulty": "hard",
@@ -16074,7 +16074,7 @@ const questions = [
   {
     "id": "tcp-022-031",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "BEAT",
     "conceptTested": "Base erosion anti-abuse tax",
     "difficulty": "hard",
@@ -16095,7 +16095,7 @@ const questions = [
   {
     "id": "tcp-022-032",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "ESBT",
     "conceptTested": "Electing small business trust",
     "difficulty": "hard",
@@ -16137,7 +16137,7 @@ const questions = [
   {
     "id": "tcp-022-034",
     "section": "TCP",
-    "topic": "Corporate Taxation",
+    "topic": "C Corporations",
     "subtopic": "Section 382",
     "conceptTested": "Ownership change calculation",
     "difficulty": "hard",
@@ -16263,7 +16263,7 @@ const questions = [
   {
     "id": "tcp-023-005",
     "section": "TCP",
-    "topic": "Gift Tax",
+    "topic": "Gift and Estate Tax",
     "subtopic": "Unified Credit",
     "conceptTested": "Lifetime gift exemption",
     "difficulty": "easy",
@@ -16305,7 +16305,7 @@ const questions = [
   {
     "id": "tcp-023-007",
     "section": "TCP",
-    "topic": "Entity Selection",
+    "topic": "Business Entities",
     "subtopic": "S Corporation",
     "conceptTested": "Shareholder limit",
     "difficulty": "medium",
@@ -16326,7 +16326,7 @@ const questions = [
   {
     "id": "tcp-023-008",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Tax Year",
     "conceptTested": "Required tax year",
     "difficulty": "medium",
@@ -16347,7 +16347,7 @@ const questions = [
   {
     "id": "tcp-023-009",
     "section": "TCP",
-    "topic": "Income Recognition",
+    "topic": "Revenue Recognition",
     "subtopic": "Alimony",
     "conceptTested": "Post-2018 alimony treatment",
     "difficulty": "medium",
@@ -16368,7 +16368,7 @@ const questions = [
   {
     "id": "tcp-023-010",
     "section": "TCP",
-    "topic": "Deductions",
+    "topic": "Individual Taxation",
     "subtopic": "Depreciation",
     "conceptTested": "Bonus depreciation phase-out",
     "difficulty": "medium",
@@ -16389,7 +16389,7 @@ const questions = [
   {
     "id": "tcp-023-011",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Charitable Deduction",
     "conceptTested": "Estate charitable deduction",
     "difficulty": "medium",
@@ -16410,7 +16410,7 @@ const questions = [
   {
     "id": "tcp-023-012",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Tax Rate",
     "conceptTested": "Corporate tax rate",
     "difficulty": "medium",
@@ -16452,7 +16452,7 @@ const questions = [
   {
     "id": "tcp-023-014",
     "section": "TCP",
-    "topic": "Charitable Planning",
+    "topic": "Charitable Giving",
     "subtopic": "Private Foundation",
     "conceptTested": "PF minimum distribution",
     "difficulty": "medium",
@@ -16473,7 +16473,7 @@ const questions = [
   {
     "id": "tcp-023-015",
     "section": "TCP",
-    "topic": "State Taxation",
+    "topic": "State and Local Tax",
     "subtopic": "Domicile",
     "conceptTested": "State residency factors",
     "difficulty": "medium",
@@ -16557,7 +16557,7 @@ const questions = [
   {
     "id": "tcp-023-019",
     "section": "TCP",
-    "topic": "S Corporation",
+    "topic": "S Corporations",
     "subtopic": "Fringe Benefits",
     "conceptTested": "2% shareholder fringe benefits",
     "difficulty": "medium",
@@ -16578,7 +16578,7 @@ const questions = [
   {
     "id": "tcp-023-020",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Income in Respect of Decedent",
     "conceptTested": "IRD taxation",
     "difficulty": "medium",
@@ -16620,7 +16620,7 @@ const questions = [
   {
     "id": "tcp-023-022",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "Section 965",
     "conceptTested": "Transition tax",
     "difficulty": "medium",
@@ -16662,7 +16662,7 @@ const questions = [
   {
     "id": "tcp-023-024",
     "section": "TCP",
-    "topic": "Entity Taxation",
+    "topic": "Business Entities",
     "subtopic": "Partnership Elections",
     "conceptTested": "BBA audit rules",
     "difficulty": "medium",
@@ -16725,7 +16725,7 @@ const questions = [
   {
     "id": "tcp-023-027",
     "section": "TCP",
-    "topic": "Estate Planning",
+    "topic": "Estate and Gift Planning",
     "subtopic": "Qualified Terminable Interest Property",
     "conceptTested": "QTIP trust",
     "difficulty": "hard",
@@ -16746,7 +16746,7 @@ const questions = [
   {
     "id": "tcp-023-028",
     "section": "TCP",
-    "topic": "Partnership Taxation",
+    "topic": "Partnerships",
     "subtopic": "Carried Interest",
     "conceptTested": "3-year holding period",
     "difficulty": "hard",
@@ -16767,7 +16767,7 @@ const questions = [
   {
     "id": "tcp-023-029",
     "section": "TCP",
-    "topic": "C Corporation",
+    "topic": "C Corporations",
     "subtopic": "Section 311",
     "conceptTested": "Property distributions",
     "difficulty": "hard",
@@ -16788,7 +16788,7 @@ const questions = [
   {
     "id": "tcp-023-030",
     "section": "TCP",
-    "topic": "International Taxation",
+    "topic": "International Tax",
     "subtopic": "FDII",
     "conceptTested": "Foreign-derived intangible income",
     "difficulty": "hard",
@@ -16809,7 +16809,7 @@ const questions = [
   {
     "id": "tcp-023-031",
     "section": "TCP",
-    "topic": "Trust Taxation",
+    "topic": "Estates and Trusts",
     "subtopic": "Throwback Rules",
     "conceptTested": "Accumulated income distributions",
     "difficulty": "hard",
@@ -16872,7 +16872,7 @@ const questions = [
   {
     "id": "tcp-023-034",
     "section": "TCP",
-    "topic": "Multi-Entity",
+    "topic": "Multi-Entity Planning",
     "subtopic": "Consolidated Returns",
     "conceptTested": "Intercompany transactions",
     "difficulty": "hard",

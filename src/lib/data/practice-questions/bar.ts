@@ -1479,7 +1479,7 @@ const questions = [
   {
     "id": "bar-003-001",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Accounting",
     "conceptTested": "General fund purpose",
     "difficulty": "easy",
@@ -1500,7 +1500,7 @@ const questions = [
   {
     "id": "bar-003-002",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Types",
     "conceptTested": "Proprietary fund identification",
     "difficulty": "easy",
@@ -1521,7 +1521,7 @@ const questions = [
   {
     "id": "bar-003-003",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Measurement Focus",
     "conceptTested": "Modified accrual accounting",
     "difficulty": "easy",
@@ -1542,7 +1542,7 @@ const questions = [
   {
     "id": "bar-003-004",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Financial Statements",
     "conceptTested": "Government-wide statement basis",
     "difficulty": "easy",
@@ -1563,7 +1563,7 @@ const questions = [
   {
     "id": "bar-003-005",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Types",
     "conceptTested": "Fiduciary fund classification",
     "difficulty": "easy",
@@ -1584,7 +1584,7 @@ const questions = [
   {
     "id": "bar-003-006",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Budgetary Accounting",
     "conceptTested": "Encumbrance concept",
     "difficulty": "easy",
@@ -1605,7 +1605,7 @@ const questions = [
   {
     "id": "bar-003-007",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Revenue Recognition",
     "conceptTested": "Modified accrual revenue recognition",
     "difficulty": "medium",
@@ -1626,7 +1626,7 @@ const questions = [
   {
     "id": "bar-003-008",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Property Taxes",
     "conceptTested": "Property tax revenue recognition",
     "difficulty": "medium",
@@ -1647,7 +1647,7 @@ const questions = [
   {
     "id": "bar-003-009",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Capital Assets",
     "conceptTested": "Infrastructure reporting",
     "difficulty": "medium",
@@ -1668,7 +1668,7 @@ const questions = [
   {
     "id": "bar-003-010",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Balance",
     "conceptTested": "Fund balance classifications",
     "difficulty": "medium",
@@ -1689,7 +1689,7 @@ const questions = [
   {
     "id": "bar-003-011",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Interfund Transactions",
     "conceptTested": "Interfund transfer classification",
     "difficulty": "medium",
@@ -1710,7 +1710,7 @@ const questions = [
   {
     "id": "bar-003-012",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Statement of Activities",
     "conceptTested": "Net expense/revenue format",
     "difficulty": "medium",
@@ -1731,7 +1731,7 @@ const questions = [
   {
     "id": "bar-003-013",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Net Position",
     "conceptTested": "Net position categories",
     "difficulty": "medium",
@@ -1752,7 +1752,7 @@ const questions = [
   {
     "id": "bar-003-014",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Debt Service Fund",
     "conceptTested": "Debt service fund expenditures",
     "difficulty": "medium",
@@ -1773,7 +1773,7 @@ const questions = [
   {
     "id": "bar-003-015",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Capital Projects Fund",
     "conceptTested": "Bond proceeds recording",
     "difficulty": "medium",
@@ -1794,7 +1794,7 @@ const questions = [
   {
     "id": "bar-003-016",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Special Items",
     "conceptTested": "Special vs. extraordinary items",
     "difficulty": "medium",
@@ -1815,7 +1815,7 @@ const questions = [
   {
     "id": "bar-003-017",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Pension Accounting",
     "conceptTested": "Net pension liability",
     "difficulty": "medium",
@@ -1836,7 +1836,7 @@ const questions = [
   {
     "id": "bar-003-018",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Deferred Outflows/Inflows",
     "conceptTested": "Deferred outflows of resources",
     "difficulty": "medium",
@@ -1857,7 +1857,7 @@ const questions = [
   {
     "id": "bar-003-019",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "OPEB Accounting",
     "conceptTested": "OPEB liability recognition",
     "difficulty": "medium",
@@ -1878,7 +1878,7 @@ const questions = [
   {
     "id": "bar-003-020",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Budgetary Comparison",
     "conceptTested": "Budgetary comparison schedule",
     "difficulty": "medium",
@@ -1899,7 +1899,7 @@ const questions = [
   {
     "id": "bar-003-021",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Enterprise Fund",
     "conceptTested": "Enterprise fund financial statements",
     "difficulty": "medium",
@@ -1920,7 +1920,7 @@ const questions = [
   {
     "id": "bar-003-022",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Internal Service Fund",
     "conceptTested": "Internal service fund purpose",
     "difficulty": "medium",
@@ -1941,7 +1941,7 @@ const questions = [
   {
     "id": "bar-003-023",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Conversion Entries",
     "conceptTested": "Fund to government-wide conversion",
     "difficulty": "medium",
@@ -1962,7 +1962,7 @@ const questions = [
   {
     "id": "bar-003-024",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Grants",
     "conceptTested": "Grant revenue recognition",
     "difficulty": "medium",
@@ -1983,7 +1983,7 @@ const questions = [
   {
     "id": "bar-003-025",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Permanent Fund",
     "conceptTested": "Permanent fund characteristics",
     "difficulty": "medium",
@@ -2004,7 +2004,7 @@ const questions = [
   {
     "id": "bar-003-026",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fiduciary Funds",
     "conceptTested": "Fiduciary fund exclusion",
     "difficulty": "medium",
@@ -2025,7 +2025,7 @@ const questions = [
   {
     "id": "bar-003-027",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Component Units",
     "conceptTested": "Discrete vs. blended presentation",
     "difficulty": "hard",
@@ -2046,7 +2046,7 @@ const questions = [
   {
     "id": "bar-003-028",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Leases",
     "conceptTested": "GASB 87 lease accounting",
     "difficulty": "hard",
@@ -2067,7 +2067,7 @@ const questions = [
   {
     "id": "bar-003-029",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Pension Calculations",
     "conceptTested": "Pension expense components",
     "difficulty": "hard",
@@ -2088,7 +2088,7 @@ const questions = [
   {
     "id": "bar-003-030",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Comprehensive Example",
     "conceptTested": "Fund balance calculation",
     "difficulty": "hard",
@@ -2109,7 +2109,7 @@ const questions = [
   {
     "id": "bar-003-031",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Reconciliation",
     "conceptTested": "Fund to government-wide reconciliation",
     "difficulty": "hard",
@@ -2130,7 +2130,7 @@ const questions = [
   {
     "id": "bar-003-032",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Major Fund Determination",
     "conceptTested": "Major fund criteria",
     "difficulty": "hard",
@@ -2151,7 +2151,7 @@ const questions = [
   {
     "id": "bar-003-033",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Conduit Debt",
     "conceptTested": "Conduit debt obligations",
     "difficulty": "hard",
@@ -2172,7 +2172,7 @@ const questions = [
   {
     "id": "bar-003-034",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Special Assessments",
     "conceptTested": "Special assessment debt",
     "difficulty": "hard",
@@ -2193,7 +2193,7 @@ const questions = [
   {
     "id": "bar-003-035",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "MD&A Requirements",
     "conceptTested": "Management Discussion and Analysis",
     "difficulty": "hard",
@@ -8115,7 +8115,7 @@ const questions = [
   {
     "id": "bar-012-002",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Types",
     "conceptTested": "Debt service fund",
     "difficulty": "easy",
@@ -8136,7 +8136,7 @@ const questions = [
   {
     "id": "bar-012-003",
     "section": "BAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Assets",
     "conceptTested": "Board designated funds",
     "difficulty": "easy",
@@ -8346,7 +8346,7 @@ const questions = [
   {
     "id": "bar-012-013",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Net Position",
     "conceptTested": "Restricted net position",
     "difficulty": "medium",
@@ -8367,7 +8367,7 @@ const questions = [
   {
     "id": "bar-012-014",
     "section": "BAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributions",
     "conceptTested": "Conditional contribution",
     "difficulty": "medium",
@@ -8556,7 +8556,7 @@ const questions = [
   {
     "id": "bar-012-023",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Budgetary",
     "conceptTested": "Budgetary entry",
     "difficulty": "medium",
@@ -8598,7 +8598,7 @@ const questions = [
   {
     "id": "bar-012-025",
     "section": "BAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Functional Expenses",
     "conceptTested": "Expense classification",
     "difficulty": "medium",
@@ -8703,7 +8703,7 @@ const questions = [
   {
     "id": "bar-012-030",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "GASB Pensions",
     "conceptTested": "Pension accounting",
     "difficulty": "hard",
@@ -8787,7 +8787,7 @@ const questions = [
   {
     "id": "bar-012-034",
     "section": "BAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Split-Interest",
     "conceptTested": "Charitable lead trust",
     "difficulty": "hard",
@@ -8850,7 +8850,7 @@ const questions = [
   {
     "id": "bar-013-002",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Balance Classifications",
     "conceptTested": "Restricted fund balance definition",
     "difficulty": "easy",
@@ -8976,7 +8976,7 @@ const questions = [
   {
     "id": "bar-013-008",
     "section": "BAR",
-    "topic": "Derivatives and Hedging",
+    "topic": "Derivatives",
     "subtopic": "Cash Flow Hedge",
     "conceptTested": "Recording effective hedge gains",
     "difficulty": "medium",
@@ -9081,7 +9081,7 @@ const questions = [
   {
     "id": "bar-013-013",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Budgetary Accounting",
     "conceptTested": "Encumbrance accounting",
     "difficulty": "medium",
@@ -9186,7 +9186,7 @@ const questions = [
   {
     "id": "bar-013-018",
     "section": "BAR",
-    "topic": "Derivatives and Hedging",
+    "topic": "Derivatives",
     "subtopic": "Interest Rate Swaps",
     "conceptTested": "Net settlement calculation",
     "difficulty": "medium",
@@ -9312,7 +9312,7 @@ const questions = [
   {
     "id": "bar-013-024",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Modified Accrual",
     "conceptTested": "Revenue recognition timing",
     "difficulty": "medium",
@@ -9375,7 +9375,7 @@ const questions = [
   {
     "id": "bar-013-027",
     "section": "BAR",
-    "topic": "Derivatives and Hedging",
+    "topic": "Derivatives",
     "subtopic": "Hedge Effectiveness",
     "conceptTested": "Ineffectiveness measurement",
     "difficulty": "hard",
@@ -9543,7 +9543,7 @@ const questions = [
   {
     "id": "bar-013-035",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Pension Accounting",
     "conceptTested": "GASB 68 net pension liability",
     "difficulty": "hard",
@@ -9585,7 +9585,7 @@ const questions = [
   {
     "id": "bar-014-002",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fund Types",
     "conceptTested": "Enterprise fund identification",
     "difficulty": "easy",
@@ -9711,7 +9711,7 @@ const questions = [
   {
     "id": "bar-014-008",
     "section": "BAR",
-    "topic": "Derivatives and Hedging",
+    "topic": "Derivatives",
     "subtopic": "Fair Value Hedge",
     "conceptTested": "Recording hedge adjustments",
     "difficulty": "medium",
@@ -9816,7 +9816,7 @@ const questions = [
   {
     "id": "bar-014-013",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Government-wide Statements",
     "conceptTested": "Conversion from fund to government-wide",
     "difficulty": "medium",
@@ -9942,7 +9942,7 @@ const questions = [
   {
     "id": "bar-014-019",
     "section": "BAR",
-    "topic": "Derivatives and Hedging",
+    "topic": "Derivatives",
     "subtopic": "Option Pricing",
     "conceptTested": "Intrinsic value of options",
     "difficulty": "medium",
@@ -10047,7 +10047,7 @@ const questions = [
   {
     "id": "bar-014-024",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "Fiduciary Funds",
     "conceptTested": "Custodial fund use",
     "difficulty": "medium",
@@ -10110,7 +10110,7 @@ const questions = [
   {
     "id": "bar-014-027",
     "section": "BAR",
-    "topic": "Derivatives and Hedging",
+    "topic": "Derivatives",
     "subtopic": "Embedded Derivatives",
     "conceptTested": "Bifurcation requirements",
     "difficulty": "hard",
@@ -10257,7 +10257,7 @@ const questions = [
   {
     "id": "bar-014-034",
     "section": "BAR",
-    "topic": "Governmental Accounting",
+    "topic": "Government Accounting",
     "subtopic": "OPEB Accounting",
     "conceptTested": "GASB 75 liability recognition",
     "difficulty": "hard",

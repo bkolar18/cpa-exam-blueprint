@@ -744,7 +744,7 @@ const questions = [
   {
     "id": "aud-risk-001",
     "section": "AUD",
-    "topic": "Audit Risk",
+    "topic": "Risk Assessment",
     "subtopic": "Audit Risk Model",
     "conceptTested": "Components of audit risk",
     "difficulty": "medium",
@@ -765,7 +765,7 @@ const questions = [
   {
     "id": "aud-risk-002",
     "section": "AUD",
-    "topic": "Audit Risk",
+    "topic": "Risk Assessment",
     "subtopic": "Audit Risk Model",
     "conceptTested": "Relationship between risk components",
     "difficulty": "medium",
@@ -786,7 +786,7 @@ const questions = [
   {
     "id": "aud-risk-003",
     "section": "AUD",
-    "topic": "Audit Risk",
+    "topic": "Risk Assessment",
     "subtopic": "Inherent Risk",
     "conceptTested": "Factors affecting inherent risk",
     "difficulty": "medium",
@@ -807,7 +807,7 @@ const questions = [
   {
     "id": "aud-risk-004",
     "section": "AUD",
-    "topic": "Audit Risk",
+    "topic": "Risk Assessment",
     "subtopic": "Control Risk",
     "conceptTested": "Control risk assessment",
     "difficulty": "medium",
@@ -828,7 +828,7 @@ const questions = [
   {
     "id": "aud-risk-005",
     "section": "AUD",
-    "topic": "Audit Risk",
+    "topic": "Risk Assessment",
     "subtopic": "Risk of Material Misstatement",
     "conceptTested": "Combined assessment",
     "difficulty": "medium",
@@ -13974,7 +13974,7 @@ const questions = [
   {
     "id": "aud-020-001",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Definition",
     "conceptTested": "What is an accounting estimate",
     "difficulty": "easy",
@@ -13995,7 +13995,7 @@ const questions = [
   {
     "id": "aud-020-002",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Management Responsibility",
     "conceptTested": "Who makes estimates",
     "difficulty": "easy",
@@ -14016,7 +14016,7 @@ const questions = [
   {
     "id": "aud-020-003",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Estimation Uncertainty",
     "conceptTested": "Inherent subjectivity in estimates",
     "difficulty": "medium",
@@ -14037,7 +14037,7 @@ const questions = [
   {
     "id": "aud-020-004",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Audit Approach",
     "conceptTested": "Testing approaches for estimates",
     "difficulty": "medium",
@@ -14058,7 +14058,7 @@ const questions = [
   {
     "id": "aud-020-005",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Management Bias",
     "conceptTested": "Indicators of bias",
     "difficulty": "medium",
@@ -14121,7 +14121,7 @@ const questions = [
   {
     "id": "aud-020-008",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Point Estimate vs Range",
     "conceptTested": "Auditor's point estimate",
     "difficulty": "hard",
@@ -14142,7 +14142,7 @@ const questions = [
   {
     "id": "aud-020-009",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Retrospective Review",
     "conceptTested": "Looking at prior estimates",
     "difficulty": "medium",
@@ -14184,7 +14184,7 @@ const questions = [
   {
     "id": "aud-020-011",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Significant Assumptions",
     "conceptTested": "Testing key assumptions",
     "difficulty": "hard",
@@ -14226,7 +14226,7 @@ const questions = [
   {
     "id": "aud-020-013",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Subsequent Events",
     "conceptTested": "Using subsequent events for estimates",
     "difficulty": "easy",
@@ -14268,7 +14268,7 @@ const questions = [
   {
     "id": "aud-020-015",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Documentation",
     "conceptTested": "Documenting estimate testing",
     "difficulty": "easy",
@@ -14310,7 +14310,7 @@ const questions = [
   {
     "id": "aud-020-017",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Control Environment",
     "conceptTested": "Controls over estimates",
     "difficulty": "medium",
@@ -14352,7 +14352,7 @@ const questions = [
   {
     "id": "aud-020-019",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Complexity",
     "conceptTested": "Complex estimates",
     "difficulty": "hard",
@@ -14394,7 +14394,7 @@ const questions = [
   {
     "id": "aud-020-021",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Common Estimates",
     "conceptTested": "Examples of accounting estimates",
     "difficulty": "easy",
@@ -14436,7 +14436,7 @@ const questions = [
   {
     "id": "aud-020-023",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Sensitivity Analysis",
     "conceptTested": "Testing assumption sensitivity",
     "difficulty": "hard",
@@ -14478,7 +14478,7 @@ const questions = [
   {
     "id": "aud-020-025",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Risk Assessment",
     "conceptTested": "Risk of material misstatement",
     "difficulty": "medium",
@@ -14520,7 +14520,7 @@ const questions = [
   {
     "id": "aud-020-027",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Fraud Risk",
     "conceptTested": "Estimates and fraud",
     "difficulty": "hard",
@@ -14562,7 +14562,7 @@ const questions = [
   {
     "id": "aud-020-029",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Governance Communication",
     "conceptTested": "Communicating about estimates",
     "difficulty": "medium",
@@ -14604,7 +14604,7 @@ const questions = [
   {
     "id": "aud-020-031",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Assertions",
     "conceptTested": "Relevant assertions for estimates",
     "difficulty": "medium",
@@ -14646,7 +14646,7 @@ const questions = [
   {
     "id": "aud-020-033",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Evidence Mix",
     "conceptTested": "Evidence for estimates",
     "difficulty": "medium",
@@ -14688,7 +14688,7 @@ const questions = [
   {
     "id": "aud-020-035",
     "section": "AUD",
-    "topic": "Estimates",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Misstatement Evaluation",
     "conceptTested": "Evaluating estimate misstatements",
     "difficulty": "hard",

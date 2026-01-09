@@ -2696,7 +2696,7 @@ const questions = [
     "conceptTested": "LIFO ending inventory calculation",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Using the same data: Beginning inventory: 100 units @ $10; Purchase 1: 150 units @ $12; Purchase 2: 200 units @ $14. If 300 units were sold, what is ending inventory under LIFO?",
+    "question": "A company has: Beginning inventory: 100 units @ $10; Purchase 1: 150 units @ $12; Purchase 2: 200 units @ $14. If 300 units were sold, what is ending inventory under LIFO?",
     "options": {
       "A": "$2,100",
       "B": "$1,700",
@@ -4901,7 +4901,7 @@ const questions = [
     "conceptTested": "Finance lease amortization schedule",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Using the previous example (lease liability $42,124, 6% rate, $10,000 annual payment), what is Year 1 interest expense?",
+    "question": "A finance lease has an initial lease liability of $42,124, a 6% interest rate, and $10,000 annual payments. What is Year 1 interest expense?",
     "options": {
       "A": "$2,527",
       "B": "$2,400",
@@ -5752,7 +5752,7 @@ const questions = [
   {
     "id": "far-eq-001",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Common & Preferred Stock",
     "conceptTested": "Par value stock issuance",
     "difficulty": "easy",
@@ -5773,7 +5773,7 @@ const questions = [
   {
     "id": "far-eq-002",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Common & Preferred Stock",
     "conceptTested": "No-par stock issuance",
     "difficulty": "easy",
@@ -5792,7 +5792,7 @@ const questions = [
   {
     "id": "far-eq-003",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Common & Preferred Stock",
     "conceptTested": "Stock issued for services",
     "difficulty": "medium",
@@ -5811,7 +5811,7 @@ const questions = [
   {
     "id": "far-eq-004",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Treasury Stock Transactions",
     "conceptTested": "Treasury stock cost method",
     "difficulty": "medium",
@@ -5832,7 +5832,7 @@ const questions = [
   {
     "id": "far-eq-005",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Treasury Stock Transactions",
     "conceptTested": "Treasury stock reissuance above cost",
     "difficulty": "medium",
@@ -5853,7 +5853,7 @@ const questions = [
   {
     "id": "far-eq-006",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Treasury Stock Transactions",
     "conceptTested": "Treasury stock reissuance below cost",
     "difficulty": "hard",
@@ -5874,7 +5874,7 @@ const questions = [
   {
     "id": "far-eq-007",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Stock Dividends & Splits",
     "conceptTested": "Small stock dividend",
     "difficulty": "medium",
@@ -5893,7 +5893,7 @@ const questions = [
   {
     "id": "far-eq-008",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Stock Dividends & Splits",
     "conceptTested": "Small stock dividend calculation",
     "difficulty": "medium",
@@ -5914,7 +5914,7 @@ const questions = [
   {
     "id": "far-eq-009",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Stock Dividends & Splits",
     "conceptTested": "Large stock dividend",
     "difficulty": "medium",
@@ -5933,7 +5933,7 @@ const questions = [
   {
     "id": "far-eq-010",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Stock Dividends & Splits",
     "conceptTested": "Stock split effect",
     "difficulty": "easy",
@@ -5952,7 +5952,7 @@ const questions = [
   {
     "id": "far-eq-011",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Retained Earnings & Appropriations",
     "conceptTested": "Appropriations of retained earnings",
     "difficulty": "medium",
@@ -5971,7 +5971,7 @@ const questions = [
   {
     "id": "far-eq-012",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Book Value Per Share",
     "conceptTested": "Book value per share calculation",
     "difficulty": "medium",
@@ -5992,7 +5992,7 @@ const questions = [
   {
     "id": "far-eq-013",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Common & Preferred Stock",
     "conceptTested": "Cumulative preferred dividends",
     "difficulty": "medium",
@@ -6013,7 +6013,7 @@ const questions = [
   {
     "id": "far-eq-014",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Common & Preferred Stock",
     "conceptTested": "Participating preferred stock",
     "difficulty": "hard",
@@ -6032,7 +6032,7 @@ const questions = [
   {
     "id": "far-eq-015",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Treasury Stock Transactions",
     "conceptTested": "Treasury stock par value method",
     "difficulty": "hard",
@@ -6051,7 +6051,7 @@ const questions = [
   {
     "id": "far-eq-016",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Stock Dividends & Splits",
     "conceptTested": "Reverse stock split",
     "difficulty": "easy",
@@ -6070,7 +6070,7 @@ const questions = [
   {
     "id": "far-eq-017",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Retained Earnings & Appropriations",
     "conceptTested": "Dividend dates",
     "difficulty": "easy",
@@ -6089,7 +6089,7 @@ const questions = [
   {
     "id": "far-eq-018",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Common & Preferred Stock",
     "conceptTested": "Preferred stock features",
     "difficulty": "medium",
@@ -6108,7 +6108,7 @@ const questions = [
   {
     "id": "far-eq-019",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Treasury Stock Transactions",
     "conceptTested": "Treasury stock retirement",
     "difficulty": "hard",
@@ -6127,7 +6127,7 @@ const questions = [
   {
     "id": "far-eq-020",
     "section": "FAR",
-    "topic": "Stockholders Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Book Value Per Share",
     "conceptTested": "Dividends in arrears effect",
     "difficulty": "hard",
@@ -11736,7 +11736,7 @@ const questions = [
   {
     "id": "far-fv-001",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Definition",
     "conceptTested": "Fair value concept",
     "difficulty": "easy",
@@ -11757,7 +11757,7 @@ const questions = [
   {
     "id": "far-fv-002",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Market Participant",
     "conceptTested": "Market participant assumption",
     "difficulty": "medium",
@@ -11778,7 +11778,7 @@ const questions = [
   {
     "id": "far-fv-003",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Hierarchy",
     "conceptTested": "Level 1 inputs",
     "difficulty": "easy",
@@ -11799,7 +11799,7 @@ const questions = [
   {
     "id": "far-fv-004",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Hierarchy",
     "conceptTested": "Level 2 inputs",
     "difficulty": "medium",
@@ -11820,7 +11820,7 @@ const questions = [
   {
     "id": "far-fv-005",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Hierarchy",
     "conceptTested": "Level 3 inputs",
     "difficulty": "medium",
@@ -11841,7 +11841,7 @@ const questions = [
   {
     "id": "far-fv-006",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Hierarchy",
     "conceptTested": "Hierarchy classification",
     "difficulty": "medium",
@@ -11862,7 +11862,7 @@ const questions = [
   {
     "id": "far-fv-007",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Principal Market",
     "conceptTested": "Principal vs most advantageous market",
     "difficulty": "medium",
@@ -11883,7 +11883,7 @@ const questions = [
   {
     "id": "far-fv-008",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Valuation Techniques",
     "conceptTested": "Three approaches",
     "difficulty": "medium",
@@ -11904,7 +11904,7 @@ const questions = [
   {
     "id": "far-fv-009",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Valuation Techniques",
     "conceptTested": "Income approach",
     "difficulty": "medium",
@@ -11925,7 +11925,7 @@ const questions = [
   {
     "id": "far-fv-010",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Highest and Best Use",
     "conceptTested": "Nonfinancial assets",
     "difficulty": "hard",
@@ -11946,7 +11946,7 @@ const questions = [
   {
     "id": "far-fv-011",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Transaction Costs",
     "conceptTested": "Transaction costs in fair value",
     "difficulty": "medium",
@@ -11967,7 +11967,7 @@ const questions = [
   {
     "id": "far-fv-012",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Bid-Ask Spread",
     "conceptTested": "Price within bid-ask",
     "difficulty": "hard",
@@ -11988,7 +11988,7 @@ const questions = [
   {
     "id": "far-fv-013",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Disclosures",
     "conceptTested": "Recurring vs nonrecurring",
     "difficulty": "medium",
@@ -12009,7 +12009,7 @@ const questions = [
   {
     "id": "far-fv-014",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Fair Value Option",
     "conceptTested": "FVO election",
     "difficulty": "hard",
@@ -12030,7 +12030,7 @@ const questions = [
   {
     "id": "far-fv-015",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Liability Fair Value",
     "conceptTested": "Own credit risk",
     "difficulty": "hard",
@@ -12051,7 +12051,7 @@ const questions = [
   {
     "id": "far-fv-016",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Level 3 Disclosures",
     "conceptTested": "Level 3 requirements",
     "difficulty": "hard",
@@ -12072,7 +12072,7 @@ const questions = [
   {
     "id": "far-fv-017",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Market Approach",
     "conceptTested": "Market approach techniques",
     "difficulty": "medium",
@@ -12093,7 +12093,7 @@ const questions = [
   {
     "id": "far-fv-018",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Cost Approach",
     "conceptTested": "Current replacement cost",
     "difficulty": "medium",
@@ -12114,7 +12114,7 @@ const questions = [
   {
     "id": "far-fv-019",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Active Market",
     "conceptTested": "Active market definition",
     "difficulty": "medium",
@@ -12135,7 +12135,7 @@ const questions = [
   {
     "id": "far-fv-020",
     "section": "FAR",
-    "topic": "Fair Value Measurements",
+    "topic": "Fair Value",
     "subtopic": "Unit of Account",
     "conceptTested": "Unit of account concept",
     "difficulty": "hard",
@@ -12156,7 +12156,7 @@ const questions = [
   {
     "id": "far-segment-001",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Segment Basics",
     "conceptTested": "Segment reporting applicability",
     "difficulty": "easy",
@@ -12177,7 +12177,7 @@ const questions = [
   {
     "id": "far-segment-002",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Management Approach",
     "conceptTested": "Segment identification",
     "difficulty": "medium",
@@ -12198,7 +12198,7 @@ const questions = [
   {
     "id": "far-segment-003",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Operating Segment",
     "conceptTested": "Operating segment criteria",
     "difficulty": "medium",
@@ -12219,7 +12219,7 @@ const questions = [
   {
     "id": "far-segment-004",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Quantitative Thresholds",
     "conceptTested": "10% tests",
     "difficulty": "medium",
@@ -12240,7 +12240,7 @@ const questions = [
   {
     "id": "far-segment-005",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "75% Test",
     "conceptTested": "Minimum external revenue",
     "difficulty": "hard",
@@ -12261,7 +12261,7 @@ const questions = [
   {
     "id": "far-segment-006",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Segment Disclosures",
     "conceptTested": "Required segment information",
     "difficulty": "medium",
@@ -12282,7 +12282,7 @@ const questions = [
   {
     "id": "far-segment-007",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Geographic Information",
     "conceptTested": "Enterprise-wide disclosures",
     "difficulty": "medium",
@@ -12303,7 +12303,7 @@ const questions = [
   {
     "id": "far-segment-008",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Major Customers",
     "conceptTested": "Customer concentration",
     "difficulty": "medium",
@@ -12324,7 +12324,7 @@ const questions = [
   {
     "id": "far-segment-009",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Segment Calculation",
     "conceptTested": "10% revenue test",
     "difficulty": "medium",
@@ -12345,7 +12345,7 @@ const questions = [
   {
     "id": "far-segment-010",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "CODM",
     "conceptTested": "Chief operating decision maker",
     "difficulty": "medium",
@@ -12366,7 +12366,7 @@ const questions = [
   {
     "id": "far-segment-011",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Interim Basics",
     "conceptTested": "Interim period view",
     "difficulty": "easy",
@@ -12387,7 +12387,7 @@ const questions = [
   {
     "id": "far-segment-012",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Revenue Recognition",
     "conceptTested": "Interim revenue",
     "difficulty": "easy",
@@ -12408,7 +12408,7 @@ const questions = [
   {
     "id": "far-segment-013",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Taxes",
     "conceptTested": "Estimated annual effective tax rate",
     "difficulty": "hard",
@@ -12429,7 +12429,7 @@ const questions = [
   {
     "id": "far-segment-014",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Tax Calculation",
     "conceptTested": "Quarterly tax computation",
     "difficulty": "hard",
@@ -12450,7 +12450,7 @@ const questions = [
   {
     "id": "far-segment-015",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Inventory Losses",
     "conceptTested": "Interim inventory writedown",
     "difficulty": "hard",
@@ -12471,7 +12471,7 @@ const questions = [
   {
     "id": "far-segment-016",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "LIFO Liquidation",
     "conceptTested": "Interim LIFO",
     "difficulty": "hard",
@@ -12492,7 +12492,7 @@ const questions = [
   {
     "id": "far-segment-017",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Costs and Expenses",
     "conceptTested": "Cost allocation",
     "difficulty": "medium",
@@ -12513,7 +12513,7 @@ const questions = [
   {
     "id": "far-segment-018",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Seasonal Revenue",
     "conceptTested": "Seasonal business treatment",
     "difficulty": "medium",
@@ -12534,7 +12534,7 @@ const questions = [
   {
     "id": "far-segment-019",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Extraordinary Items",
     "conceptTested": "Unusual items interim treatment",
     "difficulty": "medium",
@@ -12555,7 +12555,7 @@ const questions = [
   {
     "id": "far-segment-020",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Accounting Changes",
     "conceptTested": "Interim accounting change",
     "difficulty": "hard",
@@ -12576,7 +12576,7 @@ const questions = [
   {
     "id": "far-segment-021",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Minimum Disclosures",
     "conceptTested": "Required interim disclosures",
     "difficulty": "medium",
@@ -12597,7 +12597,7 @@ const questions = [
   {
     "id": "far-segment-022",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Aggregation Criteria",
     "conceptTested": "Combining segments",
     "difficulty": "hard",
@@ -12618,7 +12618,7 @@ const questions = [
   {
     "id": "far-segment-023",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Reconciliations",
     "conceptTested": "Segment to consolidated reconciliation",
     "difficulty": "medium",
@@ -12639,7 +12639,7 @@ const questions = [
   {
     "id": "far-segment-024",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Year-End Adjustments",
     "conceptTested": "Q4 adjustments",
     "difficulty": "hard",
@@ -12660,7 +12660,7 @@ const questions = [
   {
     "id": "far-segment-025",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Practical Limit",
     "conceptTested": "Maximum reportable segments",
     "difficulty": "medium",
@@ -12828,7 +12828,7 @@ const questions = [
   {
     "id": "far-subseq-008",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Loss Contingency Basics",
     "conceptTested": "Loss contingency definition",
     "difficulty": "easy",
@@ -12849,7 +12849,7 @@ const questions = [
   {
     "id": "far-subseq-009",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Loss Recognition",
     "conceptTested": "Accrual criteria",
     "difficulty": "medium",
@@ -12870,7 +12870,7 @@ const questions = [
   {
     "id": "far-subseq-010",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Probability Levels",
     "conceptTested": "Probable vs reasonably possible",
     "difficulty": "medium",
@@ -12891,7 +12891,7 @@ const questions = [
   {
     "id": "far-subseq-011",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Probability Levels",
     "conceptTested": "Remote losses",
     "difficulty": "easy",
@@ -12912,7 +12912,7 @@ const questions = [
   {
     "id": "far-subseq-012",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Range of Loss",
     "conceptTested": "Amount within range",
     "difficulty": "hard",
@@ -12933,7 +12933,7 @@ const questions = [
   {
     "id": "far-subseq-013",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Gain Contingencies",
     "conceptTested": "Gain contingency treatment",
     "difficulty": "medium",
@@ -12954,7 +12954,7 @@ const questions = [
   {
     "id": "far-subseq-014",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Litigation",
     "conceptTested": "Litigation accrual",
     "difficulty": "medium",
@@ -12975,7 +12975,7 @@ const questions = [
   {
     "id": "far-subseq-015",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Warranties",
     "conceptTested": "Warranty accrual",
     "difficulty": "medium",
@@ -12996,7 +12996,7 @@ const questions = [
   {
     "id": "far-subseq-016",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Environmental Liabilities",
     "conceptTested": "Environmental contingency",
     "difficulty": "hard",
@@ -13017,7 +13017,7 @@ const questions = [
   {
     "id": "far-subseq-017",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Guarantees",
     "conceptTested": "Guarantee disclosure",
     "difficulty": "hard",
@@ -13038,7 +13038,7 @@ const questions = [
   {
     "id": "far-subseq-018",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Asset Retirement Obligations",
     "conceptTested": "ARO recognition",
     "difficulty": "hard",
@@ -13059,7 +13059,7 @@ const questions = [
   {
     "id": "far-subseq-019",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Insurance Recoveries",
     "conceptTested": "Contingent asset for insurance",
     "difficulty": "hard",
@@ -13101,7 +13101,7 @@ const questions = [
   {
     "id": "far-subseq-021",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Self-Insurance",
     "conceptTested": "Self-insurance accrual",
     "difficulty": "medium",
@@ -13143,7 +13143,7 @@ const questions = [
   {
     "id": "far-subseq-023",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Unasserted Claims",
     "conceptTested": "Unasserted claim disclosure",
     "difficulty": "hard",
@@ -13185,7 +13185,7 @@ const questions = [
   {
     "id": "far-subseq-025",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Exit and Disposal Costs",
     "conceptTested": "Restructuring liability",
     "difficulty": "hard",
@@ -13206,7 +13206,7 @@ const questions = [
   {
     "id": "far-rp-001",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Related Party Definition",
     "conceptTested": "Who are related parties",
     "difficulty": "easy",
@@ -13227,7 +13227,7 @@ const questions = [
   {
     "id": "far-rp-002",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Disclosure Requirements",
     "conceptTested": "Required disclosures",
     "difficulty": "medium",
@@ -13248,7 +13248,7 @@ const questions = [
   {
     "id": "far-rp-003",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Transaction Terms",
     "conceptTested": "Arm's-length representation",
     "difficulty": "medium",
@@ -13269,7 +13269,7 @@ const questions = [
   {
     "id": "far-rp-004",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Common Control",
     "conceptTested": "Common control entities",
     "difficulty": "medium",
@@ -13290,7 +13290,7 @@ const questions = [
   {
     "id": "far-rp-005",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Compensation",
     "conceptTested": "Executive compensation",
     "difficulty": "easy",
@@ -13311,7 +13311,7 @@ const questions = [
   {
     "id": "far-rp-006",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Control Relationship",
     "conceptTested": "Control disclosure",
     "difficulty": "medium",
@@ -13500,7 +13500,7 @@ const questions = [
   {
     "id": "far-rp-015",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Transaction Types",
     "conceptTested": "Common related party transactions",
     "difficulty": "easy",
@@ -13542,7 +13542,7 @@ const questions = [
   {
     "id": "far-rp-017",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Variable Interest Entities",
     "conceptTested": "VIE related party considerations",
     "difficulty": "hard",
@@ -13584,7 +13584,7 @@ const questions = [
   {
     "id": "far-rp-019",
     "section": "FAR",
-    "topic": "Related Party Transactions",
+    "topic": "Related Parties",
     "subtopic": "Equity Method Investees",
     "conceptTested": "Equity investee as related party",
     "difficulty": "medium",
@@ -13710,7 +13710,7 @@ const questions = [
   {
     "id": "far-deriv-005",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Hedge Types",
     "conceptTested": "Three hedge types",
     "difficulty": "medium",
@@ -13731,7 +13731,7 @@ const questions = [
   {
     "id": "far-deriv-006",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Fair Value Hedge",
     "conceptTested": "FV hedge accounting",
     "difficulty": "hard",
@@ -13752,7 +13752,7 @@ const questions = [
   {
     "id": "far-deriv-007",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Cash Flow Hedge",
     "conceptTested": "CF hedge effective portion",
     "difficulty": "hard",
@@ -13773,7 +13773,7 @@ const questions = [
   {
     "id": "far-deriv-008",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Cash Flow Hedge",
     "conceptTested": "CF hedge ineffective portion",
     "difficulty": "hard",
@@ -13794,7 +13794,7 @@ const questions = [
   {
     "id": "far-deriv-009",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Net Investment Hedge",
     "conceptTested": "Net investment hedge accounting",
     "difficulty": "hard",
@@ -13815,7 +13815,7 @@ const questions = [
   {
     "id": "far-deriv-010",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Hedge Documentation",
     "conceptTested": "Documentation requirements",
     "difficulty": "medium",
@@ -13899,7 +13899,7 @@ const questions = [
   {
     "id": "far-deriv-014",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Hedged Items",
     "conceptTested": "What can be hedged",
     "difficulty": "medium",
@@ -13920,7 +13920,7 @@ const questions = [
   {
     "id": "far-deriv-015",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Hedged Items",
     "conceptTested": "Cash flow hedge eligibility",
     "difficulty": "medium",
@@ -13962,7 +13962,7 @@ const questions = [
   {
     "id": "far-deriv-017",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Hedge Effectiveness",
     "conceptTested": "Effectiveness assessment",
     "difficulty": "hard",
@@ -14004,7 +14004,7 @@ const questions = [
   {
     "id": "far-deriv-019",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Discontinuation",
     "conceptTested": "Hedge discontinuation",
     "difficulty": "hard",
@@ -14025,7 +14025,7 @@ const questions = [
   {
     "id": "far-deriv-020",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Basis Adjustments",
     "conceptTested": "Firm commitment basis adjustment",
     "difficulty": "hard",
@@ -14067,7 +14067,7 @@ const questions = [
   {
     "id": "far-deriv-022",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Excluded Components",
     "conceptTested": "Time value exclusion",
     "difficulty": "hard",
@@ -14109,7 +14109,7 @@ const questions = [
   {
     "id": "far-deriv-024",
     "section": "FAR",
-    "topic": "Hedging",
+    "topic": "Derivatives",
     "subtopic": "Foreign Currency Hedge",
     "conceptTested": "FC hedge types",
     "difficulty": "hard",
@@ -14151,7 +14151,7 @@ const questions = [
   {
     "id": "far-ifrs-001",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Conceptual Framework",
     "conceptTested": "Framework differences",
     "difficulty": "medium",
@@ -14172,7 +14172,7 @@ const questions = [
   {
     "id": "far-ifrs-002",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Inventory",
     "conceptTested": "LIFO prohibition",
     "difficulty": "easy",
@@ -14193,7 +14193,7 @@ const questions = [
   {
     "id": "far-ifrs-003",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Inventory",
     "conceptTested": "Inventory writedown reversal",
     "difficulty": "medium",
@@ -14214,7 +14214,7 @@ const questions = [
   {
     "id": "far-ifrs-004",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "PP&E",
     "conceptTested": "Revaluation model",
     "difficulty": "medium",
@@ -14235,7 +14235,7 @@ const questions = [
   {
     "id": "far-ifrs-005",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "PP&E",
     "conceptTested": "Component depreciation",
     "difficulty": "medium",
@@ -14256,7 +14256,7 @@ const questions = [
   {
     "id": "far-ifrs-006",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Impairment",
     "conceptTested": "Impairment reversal",
     "difficulty": "medium",
@@ -14277,7 +14277,7 @@ const questions = [
   {
     "id": "far-ifrs-007",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Impairment",
     "conceptTested": "Impairment testing approach",
     "difficulty": "hard",
@@ -14298,7 +14298,7 @@ const questions = [
   {
     "id": "far-ifrs-008",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Development Costs",
     "conceptTested": "R&D capitalization",
     "difficulty": "medium",
@@ -14319,7 +14319,7 @@ const questions = [
   {
     "id": "far-ifrs-009",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Investment Property",
     "conceptTested": "Investment property classification",
     "difficulty": "medium",
@@ -14340,7 +14340,7 @@ const questions = [
   {
     "id": "far-ifrs-010",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Goodwill",
     "conceptTested": "Goodwill amortization",
     "difficulty": "medium",
@@ -14361,7 +14361,7 @@ const questions = [
   {
     "id": "far-ifrs-011",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Business Combinations",
     "conceptTested": "NCI measurement",
     "difficulty": "hard",
@@ -14382,7 +14382,7 @@ const questions = [
   {
     "id": "far-ifrs-012",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Revenue Recognition",
     "conceptTested": "Revenue standards convergence",
     "difficulty": "easy",
@@ -14403,7 +14403,7 @@ const questions = [
   {
     "id": "far-ifrs-013",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Leases",
     "conceptTested": "Lease convergence",
     "difficulty": "medium",
@@ -14424,7 +14424,7 @@ const questions = [
   {
     "id": "far-ifrs-014",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Cash Flows",
     "conceptTested": "Interest/dividend classification",
     "difficulty": "medium",
@@ -14445,7 +14445,7 @@ const questions = [
   {
     "id": "far-ifrs-015",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Financial Statements",
     "conceptTested": "Balance sheet terminology",
     "difficulty": "easy",
@@ -14466,7 +14466,7 @@ const questions = [
   {
     "id": "far-ifrs-016",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Financial Statements",
     "conceptTested": "Extraordinary items",
     "difficulty": "easy",
@@ -14487,7 +14487,7 @@ const questions = [
   {
     "id": "far-ifrs-017",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Provisions",
     "conceptTested": "Contingency terminology",
     "difficulty": "medium",
@@ -14508,7 +14508,7 @@ const questions = [
   {
     "id": "far-ifrs-018",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Contingencies",
     "conceptTested": "Contingency measurement",
     "difficulty": "hard",
@@ -14529,7 +14529,7 @@ const questions = [
   {
     "id": "far-ifrs-019",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Borrowing Costs",
     "conceptTested": "Interest capitalization",
     "difficulty": "medium",
@@ -14550,7 +14550,7 @@ const questions = [
   {
     "id": "far-ifrs-020",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Prior Period Errors",
     "conceptTested": "Error correction",
     "difficulty": "easy",
@@ -14571,7 +14571,7 @@ const questions = [
   {
     "id": "far-ifrs-021",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "EPS",
     "conceptTested": "EPS requirements",
     "difficulty": "easy",
@@ -14592,7 +14592,7 @@ const questions = [
   {
     "id": "far-ifrs-022",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Segment Reporting",
     "conceptTested": "Segment reporting approach",
     "difficulty": "medium",
@@ -14613,7 +14613,7 @@ const questions = [
   {
     "id": "far-ifrs-023",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Biological Assets",
     "conceptTested": "Agricultural accounting",
     "difficulty": "hard",
@@ -14634,7 +14634,7 @@ const questions = [
   {
     "id": "far-ifrs-024",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Rules vs Principles",
     "conceptTested": "Framework philosophy",
     "difficulty": "medium",
@@ -14655,7 +14655,7 @@ const questions = [
   {
     "id": "far-ifrs-025",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Fair Value",
     "conceptTested": "Fair value measurement",
     "difficulty": "medium",
@@ -14697,7 +14697,7 @@ const questions = [
   {
     "id": "far-calc-002",
     "section": "FAR",
-    "topic": "Bonds Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Bond Issuance",
     "conceptTested": "Bond proceeds calculation",
     "difficulty": "hard",
@@ -14718,7 +14718,7 @@ const questions = [
   {
     "id": "far-calc-003",
     "section": "FAR",
-    "topic": "Pension Accounting",
+    "topic": "Pensions",
     "subtopic": "Pension Expense",
     "conceptTested": "Net periodic pension cost",
     "difficulty": "hard",
@@ -14802,7 +14802,7 @@ const questions = [
   {
     "id": "far-calc-007",
     "section": "FAR",
-    "topic": "Equity Method",
+    "topic": "Investments",
     "subtopic": "Equity Method Income",
     "conceptTested": "Investment income with excess",
     "difficulty": "hard",
@@ -14823,7 +14823,7 @@ const questions = [
   {
     "id": "far-calc-008",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Factoring",
     "conceptTested": "Factoring with recourse",
     "difficulty": "hard",
@@ -14844,7 +14844,7 @@ const questions = [
   {
     "id": "far-calc-009",
     "section": "FAR",
-    "topic": "PP&E",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Asset Retirement Obligation",
     "conceptTested": "ARO initial measurement",
     "difficulty": "hard",
@@ -14970,7 +14970,7 @@ const questions = [
   {
     "id": "far-calc-015",
     "section": "FAR",
-    "topic": "Cash Flows",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Indirect Method",
     "conceptTested": "Operating cash flows",
     "difficulty": "hard",
@@ -14991,7 +14991,7 @@ const questions = [
   {
     "id": "far-calc-016",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill Impairment",
     "conceptTested": "Goodwill impairment loss",
     "difficulty": "hard",
@@ -15033,7 +15033,7 @@ const questions = [
   {
     "id": "far-calc-018",
     "section": "FAR",
-    "topic": "Bonds Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Effective Interest",
     "conceptTested": "Interest expense calculation",
     "difficulty": "hard",
@@ -15117,7 +15117,7 @@ const questions = [
   {
     "id": "far-calc-022",
     "section": "FAR",
-    "topic": "PP&E",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Capitalized Interest",
     "conceptTested": "Avoidable interest",
     "difficulty": "hard",
@@ -15159,7 +15159,7 @@ const questions = [
   {
     "id": "far-calc-024",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Diluted EPS",
     "conceptTested": "Convertible bond dilution",
     "difficulty": "hard",
@@ -15201,7 +15201,7 @@ const questions = [
   {
     "id": "far-calc-026",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contribution Revenue",
     "conceptTested": "Multi-year pledge PV",
     "difficulty": "hard",
@@ -15285,7 +15285,7 @@ const questions = [
   {
     "id": "far-calc-030",
     "section": "FAR",
-    "topic": "PP&E",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Impairment Test",
     "conceptTested": "Recoverability test",
     "difficulty": "hard",
@@ -15936,7 +15936,7 @@ const questions = [
   {
     "id": "far-nfp-adv-001",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Gift Annuities",
     "conceptTested": "Charitable gift annuity accounting",
     "difficulty": "hard",
@@ -15957,7 +15957,7 @@ const questions = [
   {
     "id": "far-nfp-adv-002",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Pooled Income Fund",
     "conceptTested": "Pooled income fund",
     "difficulty": "hard",
@@ -15978,7 +15978,7 @@ const questions = [
   {
     "id": "far-nfp-adv-003",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Beneficial Interest",
     "conceptTested": "Beneficial interest in trust",
     "difficulty": "hard",
@@ -15999,7 +15999,7 @@ const questions = [
   {
     "id": "far-nfp-adv-004",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Donor-Imposed Conditions",
     "conceptTested": "Barrier identification",
     "difficulty": "hard",
@@ -16020,7 +16020,7 @@ const questions = [
   {
     "id": "far-nfp-adv-005",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Grants",
     "conceptTested": "Government grant accounting",
     "difficulty": "hard",
@@ -16041,7 +16041,7 @@ const questions = [
   {
     "id": "far-nfp-adv-006",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Endowment Spending",
     "conceptTested": "Spending policy",
     "difficulty": "hard",
@@ -16062,7 +16062,7 @@ const questions = [
   {
     "id": "far-nfp-adv-007",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Financial Assets",
     "conceptTested": "Liquidity disclosure",
     "difficulty": "medium",
@@ -16083,7 +16083,7 @@ const questions = [
   {
     "id": "far-nfp-adv-008",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Pledges",
     "conceptTested": "Pledge allowance",
     "difficulty": "medium",
@@ -16104,7 +16104,7 @@ const questions = [
   {
     "id": "far-nfp-adv-009",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Healthcare",
     "conceptTested": "Net patient service revenue",
     "difficulty": "hard",
@@ -16125,7 +16125,7 @@ const questions = [
   {
     "id": "far-nfp-adv-010",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Agency Transactions",
     "conceptTested": "Financial interrelationship",
     "difficulty": "hard",
@@ -16146,7 +16146,7 @@ const questions = [
   {
     "id": "far-nfp-adv-011",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Presentation",
     "conceptTested": "Statement of activities format",
     "difficulty": "medium",
@@ -16167,7 +16167,7 @@ const questions = [
   {
     "id": "far-nfp-adv-012",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributed Nonfinancial Assets",
     "conceptTested": "In-kind disclosure",
     "difficulty": "medium",
@@ -16188,7 +16188,7 @@ const questions = [
   {
     "id": "far-nfp-adv-013",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Cost Allocation",
     "conceptTested": "Allocation methodology",
     "difficulty": "medium",
@@ -16209,7 +16209,7 @@ const questions = [
   {
     "id": "far-nfp-adv-014",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Investments",
     "conceptTested": "Alternative investments",
     "difficulty": "hard",
@@ -16230,7 +16230,7 @@ const questions = [
   {
     "id": "far-nfp-adv-015",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Related Organizations",
     "conceptTested": "Supporting organization",
     "difficulty": "hard",
@@ -16251,7 +16251,7 @@ const questions = [
   {
     "id": "far-nfp-adv-016",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Private Schools",
     "conceptTested": "Tuition revenue",
     "difficulty": "medium",
@@ -16272,7 +16272,7 @@ const questions = [
   {
     "id": "far-nfp-adv-017",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Split-Interest",
     "conceptTested": "Charitable remainder unitrust",
     "difficulty": "hard",
@@ -16293,7 +16293,7 @@ const questions = [
   {
     "id": "far-nfp-adv-018",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Revenue Classification",
     "conceptTested": "Exchange vs contribution analysis",
     "difficulty": "hard",
@@ -16314,7 +16314,7 @@ const questions = [
   {
     "id": "far-nfp-adv-019",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Functional Expenses",
     "conceptTested": "Program vs supporting",
     "difficulty": "medium",
@@ -16335,7 +16335,7 @@ const questions = [
   {
     "id": "far-nfp-adv-020",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Volunteer Services",
     "conceptTested": "Specialized skill services",
     "difficulty": "medium",
@@ -16356,7 +16356,7 @@ const questions = [
   {
     "id": "far-nfp-adv-021",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Transfers Between Affiliates",
     "conceptTested": "Affiliate transfers",
     "difficulty": "hard",
@@ -16377,7 +16377,7 @@ const questions = [
   {
     "id": "far-nfp-adv-022",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Measure of Operations",
     "conceptTested": "Operating measure presentation",
     "difficulty": "medium",
@@ -16398,7 +16398,7 @@ const questions = [
   {
     "id": "far-nfp-adv-023",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Capital Campaign",
     "conceptTested": "Capital campaign pledges",
     "difficulty": "medium",
@@ -16419,7 +16419,7 @@ const questions = [
   {
     "id": "far-nfp-adv-024",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributions Received",
     "conceptTested": "Contribution or exchange indicator",
     "difficulty": "hard",
@@ -16440,7 +16440,7 @@ const questions = [
   {
     "id": "far-nfp-adv-025",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributed Art",
     "conceptTested": "Art/historical collection",
     "difficulty": "hard",
@@ -16739,7 +16739,7 @@ const questions = [
     "conceptTested": "Monthly revenue with upfront fee",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Using the previous question's facts ($300 upfront + $50/month × 12 months), what is the monthly revenue recognition?",
+    "question": "A gym membership requires a $300 non-refundable upfront fee plus $50/month for 12 months. The upfront fee does not provide any distinct benefit. What is the monthly revenue recognition?",
     "options": {
       "A": "$50",
       "B": "$75",
@@ -17957,18 +17957,18 @@ const questions = [
     "conceptTested": "Writedown entry",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Using the previous question, what is the required inventory writedown?",
+    "question": "A company has inventory with a cost of $85,000. The estimated selling price is $90,000, costs to complete are $4,000, and selling costs are $6,000. What inventory writedown, if any, is required?",
     "options": {
       "A": "$0",
-      "B": "$2,000",
+      "B": "$3,000",
       "C": "$5,000",
-      "D": "$7,000"
+      "D": "$10,000"
     },
-    "correctAnswer": "B",
-    "explanation": "Cost = $50,000, NRV = $48,000. Writedown = $50,000 - $48,000 = $2,000. Dr. Cost of Goods Sold, Cr. Inventory.",
-    "tip": "Writedown = Cost - NRV (if cost > NRV).",
+    "correctAnswer": "C",
+    "explanation": "NRV = $90,000 - $4,000 - $6,000 = $80,000. Since cost ($85,000) > NRV ($80,000), writedown = $85,000 - $80,000 = $5,000.",
+    "tip": "Writedown = Cost - NRV when cost exceeds NRV.",
     "calculationRequired": true,
-    "timeEstimateSeconds": 60
+    "timeEstimateSeconds": 75
   },
   {
     "id": "far-inv-adv-003",
@@ -18104,7 +18104,7 @@ const questions = [
     "conceptTested": "Ending inventory calculation",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Using the previous data (66.7% ratio), if ending inventory at retail is $75,000, what is ending inventory at cost?",
+    "question": "A retailer uses the retail inventory method with a cost-to-retail ratio of 66.7%. If ending inventory at retail is $75,000, what is ending inventory at cost?",
     "options": {
       "A": "$45,000",
       "B": "$50,000",
@@ -18897,7 +18897,7 @@ const questions = [
   {
     "id": "far-pen-adv-017",
     "section": "FAR",
-    "topic": "OPEB",
+    "topic": "Pensions",
     "subtopic": "Healthcare Plans",
     "conceptTested": "OPEB vs pension similarities",
     "difficulty": "medium",
@@ -18918,7 +18918,7 @@ const questions = [
   {
     "id": "far-pen-adv-018",
     "section": "FAR",
-    "topic": "OPEB",
+    "topic": "Pensions",
     "subtopic": "Substantive Plan",
     "conceptTested": "Measuring OPEB obligation",
     "difficulty": "hard",
@@ -18939,7 +18939,7 @@ const questions = [
   {
     "id": "far-pen-adv-019",
     "section": "FAR",
-    "topic": "OPEB",
+    "topic": "Pensions",
     "subtopic": "Full Eligibility Date",
     "conceptTested": "Attribution period",
     "difficulty": "hard",
@@ -18960,7 +18960,7 @@ const questions = [
   {
     "id": "far-pen-adv-020",
     "section": "FAR",
-    "topic": "OPEB",
+    "topic": "Pensions",
     "subtopic": "Healthcare Cost Trend",
     "conceptTested": "Effect of trend rate change",
     "difficulty": "hard",
@@ -19233,7 +19233,7 @@ const questions = [
   {
     "id": "far-pen-adv-033",
     "section": "FAR",
-    "topic": "OPEB",
+    "topic": "Pensions",
     "subtopic": "Medicare Part D",
     "conceptTested": "Medicare subsidy",
     "difficulty": "hard",
@@ -19364,18 +19364,18 @@ const questions = [
     "conceptTested": "Discount amortization calculation",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Using the previous question, what is Year 1 discount amortization?",
+    "question": "A $500,000 face value bond was issued at $480,000 when the market rate was 6% and the stated rate was 5%. What is Year 1 discount amortization using the effective interest method?",
     "options": {
-      "A": "$500",
-      "B": "$1,000",
-      "C": "$1,500",
-      "D": "$2,000"
+      "A": "$3,800",
+      "B": "$4,800",
+      "C": "$5,000",
+      "D": "$25,000"
     },
-    "correctAnswer": "C",
-    "explanation": "Cash interest = $100,000 × 8% = $8,000. Interest expense = $9,500. Discount amortization = $9,500 - $8,000 = $1,500.",
-    "tip": "Discount amortization = Interest expense - Cash interest.",
+    "correctAnswer": "A",
+    "explanation": "Interest expense = $480,000 × 6% = $28,800. Cash interest = $500,000 × 5% = $25,000. Discount amortization = $28,800 - $25,000 = $3,800.",
+    "tip": "Discount amortization = Interest expense - Cash interest paid.",
     "calculationRequired": true,
-    "timeEstimateSeconds": 75
+    "timeEstimateSeconds": 90
   },
   {
     "id": "far-debt-005",
@@ -19527,7 +19527,7 @@ const questions = [
   {
     "id": "far-debt-012",
     "section": "FAR",
-    "topic": "Troubled Debt Restructuring",
+    "topic": "Long-term Debt",
     "subtopic": "Modification of Terms",
     "conceptTested": "When to recognize gain",
     "difficulty": "hard",
@@ -19548,7 +19548,7 @@ const questions = [
   {
     "id": "far-debt-013",
     "section": "FAR",
-    "topic": "Troubled Debt Restructuring",
+    "topic": "Long-term Debt",
     "subtopic": "Debt Modification",
     "conceptTested": "10% cash flow test",
     "difficulty": "hard",
@@ -19569,7 +19569,7 @@ const questions = [
   {
     "id": "far-debt-014",
     "section": "FAR",
-    "topic": "Troubled Debt Restructuring",
+    "topic": "Long-term Debt",
     "subtopic": "Asset Transfer",
     "conceptTested": "Full settlement with assets",
     "difficulty": "hard",
@@ -19590,7 +19590,7 @@ const questions = [
   {
     "id": "far-debt-015",
     "section": "FAR",
-    "topic": "Troubled Debt Restructuring",
+    "topic": "Long-term Debt",
     "subtopic": "Equity Issuance",
     "conceptTested": "Settlement with equity",
     "difficulty": "hard",
@@ -20220,7 +20220,7 @@ const questions = [
   {
     "id": "far-ppe-adv-015",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill",
     "conceptTested": "Goodwill impairment test",
     "difficulty": "hard",
@@ -20241,7 +20241,7 @@ const questions = [
   {
     "id": "far-ppe-adv-016",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill",
     "conceptTested": "Goodwill impairment calculation",
     "difficulty": "hard",
@@ -20262,7 +20262,7 @@ const questions = [
   {
     "id": "far-ppe-adv-017",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill",
     "conceptTested": "Goodwill impairment reversal",
     "difficulty": "medium",
@@ -20283,7 +20283,7 @@ const questions = [
   {
     "id": "far-ppe-adv-018",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Indefinite-Lived Intangibles",
     "conceptTested": "Impairment testing",
     "difficulty": "medium",
@@ -20304,7 +20304,7 @@ const questions = [
   {
     "id": "far-ppe-adv-019",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Indefinite-Lived Intangibles",
     "conceptTested": "Impairment calculation",
     "difficulty": "medium",
@@ -20325,7 +20325,7 @@ const questions = [
   {
     "id": "far-ppe-adv-020",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Research and Development",
     "conceptTested": "Acquired in-process R&D",
     "difficulty": "hard",
@@ -20346,7 +20346,7 @@ const questions = [
   {
     "id": "far-ppe-adv-021",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Software Development",
     "conceptTested": "Capitalization point",
     "difficulty": "hard",
@@ -20367,7 +20367,7 @@ const questions = [
   {
     "id": "far-ppe-adv-022",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Software Development",
     "conceptTested": "Internal-use software",
     "difficulty": "hard",
@@ -20472,7 +20472,7 @@ const questions = [
   {
     "id": "far-ppe-adv-027",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Amortization",
     "conceptTested": "Finite-lived intangible amortization",
     "difficulty": "medium",
@@ -20535,7 +20535,7 @@ const questions = [
   {
     "id": "far-ppe-adv-030",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Customer Lists",
     "conceptTested": "Intangible recognition",
     "difficulty": "medium",
@@ -20556,7 +20556,7 @@ const questions = [
   {
     "id": "far-ppe-adv-031",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Franchise",
     "conceptTested": "Franchise fee accounting",
     "difficulty": "medium",
@@ -20876,7 +20876,7 @@ const questions = [
     "conceptTested": "Dividends received",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Using the previous example (30% ownership, $500,000 income, $100,000 dividends), what is the effect of dividends on the investment account?",
+    "question": "An investor owns 30% of an investee that reports $500,000 net income and declares $100,000 in total dividends. Under the equity method, what is the effect of the dividends on the investment account?",
     "options": {
       "A": "Increase of $30,000",
       "B": "Decrease of $30,000",
@@ -21396,7 +21396,7 @@ const questions = [
   {
     "id": "far-oci-001",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Components",
     "conceptTested": "Items included in OCI",
     "difficulty": "medium",
@@ -21417,7 +21417,7 @@ const questions = [
   {
     "id": "far-oci-002",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Components",
     "conceptTested": "Pension OCI",
     "difficulty": "medium",
@@ -21438,7 +21438,7 @@ const questions = [
   {
     "id": "far-oci-003",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Presentation",
     "conceptTested": "Statement formats",
     "difficulty": "easy",
@@ -21459,7 +21459,7 @@ const questions = [
   {
     "id": "far-oci-004",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Calculation",
     "conceptTested": "Total comprehensive income",
     "difficulty": "medium",
@@ -21480,7 +21480,7 @@ const questions = [
   {
     "id": "far-oci-005",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Reclassification",
     "conceptTested": "Reclassification adjustments",
     "difficulty": "hard",
@@ -21501,7 +21501,7 @@ const questions = [
   {
     "id": "far-oci-006",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "AOCI",
     "conceptTested": "AOCI balance sheet presentation",
     "difficulty": "easy",
@@ -21837,7 +21837,7 @@ const questions = [
   {
     "id": "far-oci-022",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Foreign Currency",
     "conceptTested": "Translation adjustments",
     "difficulty": "hard",
@@ -21858,7 +21858,7 @@ const questions = [
   {
     "id": "far-oci-023",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cash Flow Hedges",
     "conceptTested": "Effective hedge gains",
     "difficulty": "hard",
@@ -21963,7 +21963,7 @@ const questions = [
   {
     "id": "far-oci-028",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Tax Effects",
     "conceptTested": "OCI and taxes",
     "difficulty": "medium",
@@ -22047,7 +22047,7 @@ const questions = [
   {
     "id": "far-oci-032",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Disclosure",
     "conceptTested": "Required disclosures",
     "difficulty": "medium",
@@ -22199,16 +22199,16 @@ const questions = [
     "conceptTested": "Current ratio",
     "difficulty": "easy",
     "questionFormat": "calculation",
-    "question": "Using the previous question's data, what is the current ratio?",
+    "question": "A company reports cash $45,000, accounts receivable $75,000, inventory $80,000, and current liabilities $100,000. What is the current ratio?",
     "options": {
-      "A": "0.6:1",
-      "B": "1.0:1",
-      "C": "1.67:1",
+      "A": "1.2:1",
+      "B": "1.5:1",
+      "C": "2.0:1",
       "D": "2.5:1"
     },
     "correctAnswer": "C",
-    "explanation": "Current ratio = Current assets / Current liabilities = $250,000 / $150,000 = 1.67:1.",
-    "tip": "Current ratio = CA / CL.",
+    "explanation": "Current assets = $45,000 + $75,000 + $80,000 = $200,000. Current ratio = $200,000 / $100,000 = 2.0:1.",
+    "tip": "Current ratio = Current assets / Current liabilities.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -22488,7 +22488,7 @@ const questions = [
   {
     "id": "far-fsp-018",
     "section": "FAR",
-    "topic": "Statement of Changes in Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Required Components",
     "conceptTested": "Statement content",
     "difficulty": "medium",
@@ -22509,7 +22509,7 @@ const questions = [
   {
     "id": "far-fsp-019",
     "section": "FAR",
-    "topic": "Notes to Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Summary of Significant Policies",
     "conceptTested": "Required disclosure",
     "difficulty": "easy",
@@ -22598,18 +22598,18 @@ const questions = [
     "conceptTested": "Operating income calculation",
     "difficulty": "easy",
     "questionFormat": "calculation",
-    "question": "Using the previous question, what is operating income?",
+    "question": "A company reports: Revenue $500,000; Cost of goods sold $300,000; Selling expenses $50,000; Administrative expenses $70,000. What is operating income?",
     "options": {
-      "A": "$120,000",
-      "B": "$200,000",
-      "C": "$320,000",
-      "D": "$520,000"
+      "A": "$80,000",
+      "B": "$120,000",
+      "C": "$150,000",
+      "D": "$200,000"
     },
     "correctAnswer": "A",
-    "explanation": "Operating income = Gross profit - Operating expenses = $320,000 - $200,000 = $120,000.",
-    "tip": "Operating income = Gross profit - Operating expenses.",
+    "explanation": "Gross profit = $500,000 - $300,000 = $200,000. Operating income = Gross profit - Operating expenses = $200,000 - $50,000 - $70,000 = $80,000.",
+    "tip": "Operating income = Gross profit - Selling & Admin expenses.",
     "calculationRequired": true,
-    "timeEstimateSeconds": 45
+    "timeEstimateSeconds": 60
   },
   {
     "id": "far-fsp-024",
@@ -22656,7 +22656,7 @@ const questions = [
   {
     "id": "far-fsp-026",
     "section": "FAR",
-    "topic": "Notes to Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Subsequent Events",
     "conceptTested": "Type I vs Type II",
     "difficulty": "hard",
@@ -23496,7 +23496,7 @@ const questions = [
   {
     "id": "far-cf-001",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Qualitative Characteristics",
     "conceptTested": "Fundamental characteristics",
     "difficulty": "medium",
@@ -23517,7 +23517,7 @@ const questions = [
   {
     "id": "far-cf-002",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Qualitative Characteristics",
     "conceptTested": "Enhancing characteristics",
     "difficulty": "medium",
@@ -23538,7 +23538,7 @@ const questions = [
   {
     "id": "far-cf-003",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Recognition",
     "conceptTested": "Asset definition",
     "difficulty": "medium",
@@ -23559,7 +23559,7 @@ const questions = [
   {
     "id": "far-cf-004",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Recognition",
     "conceptTested": "Liability definition",
     "difficulty": "medium",
@@ -23580,7 +23580,7 @@ const questions = [
   {
     "id": "far-cf-005",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Recognition",
     "conceptTested": "Revenue recognition criterion",
     "difficulty": "medium",
@@ -23601,7 +23601,7 @@ const questions = [
   {
     "id": "far-cf-006",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Measurement",
     "conceptTested": "Historical cost",
     "difficulty": "easy",
@@ -23622,7 +23622,7 @@ const questions = [
   {
     "id": "far-cf-007",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Measurement",
     "conceptTested": "Current value bases",
     "difficulty": "medium",
@@ -23643,7 +23643,7 @@ const questions = [
   {
     "id": "far-cf-008",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Objectives",
     "conceptTested": "Primary objective",
     "difficulty": "easy",
@@ -23664,7 +23664,7 @@ const questions = [
   {
     "id": "far-cf-009",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Assumptions",
     "conceptTested": "Going concern",
     "difficulty": "easy",
@@ -23685,7 +23685,7 @@ const questions = [
   {
     "id": "far-cf-010",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Constraints",
     "conceptTested": "Cost constraint",
     "difficulty": "medium",
@@ -23706,7 +23706,7 @@ const questions = [
   {
     "id": "far-cf-011",
     "section": "FAR",
-    "topic": "GAAP Hierarchy",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Authority Level",
     "conceptTested": "GAAP sources",
     "difficulty": "medium",
@@ -23727,7 +23727,7 @@ const questions = [
   {
     "id": "far-cf-012",
     "section": "FAR",
-    "topic": "GAAP Hierarchy",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Non-authoritative",
     "conceptTested": "Using non-authoritative guidance",
     "difficulty": "medium",
@@ -23748,7 +23748,7 @@ const questions = [
   {
     "id": "far-cf-013",
     "section": "FAR",
-    "topic": "Accounting Principles",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Accrual Basis",
     "conceptTested": "Accrual vs cash",
     "difficulty": "easy",
@@ -23769,7 +23769,7 @@ const questions = [
   {
     "id": "far-cf-014",
     "section": "FAR",
-    "topic": "Accounting Principles",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Matching",
     "conceptTested": "Expense recognition",
     "difficulty": "easy",
@@ -23790,7 +23790,7 @@ const questions = [
   {
     "id": "far-cf-015",
     "section": "FAR",
-    "topic": "Accounting Principles",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Materiality",
     "conceptTested": "Materiality threshold",
     "difficulty": "medium",
@@ -23811,7 +23811,7 @@ const questions = [
   {
     "id": "far-cf-016",
     "section": "FAR",
-    "topic": "Accounting Principles",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Conservatism",
     "conceptTested": "Prudence",
     "difficulty": "medium",
@@ -23832,7 +23832,7 @@ const questions = [
   {
     "id": "far-cf-017",
     "section": "FAR",
-    "topic": "Accounting Principles",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Substance over Form",
     "conceptTested": "Economic reality",
     "difficulty": "medium",
@@ -23853,7 +23853,7 @@ const questions = [
   {
     "id": "far-cf-018",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Elements",
     "conceptTested": "Equity definition",
     "difficulty": "easy",
@@ -23874,7 +23874,7 @@ const questions = [
   {
     "id": "far-cf-019",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Elements",
     "conceptTested": "Gains and losses",
     "difficulty": "medium",
@@ -23895,7 +23895,7 @@ const questions = [
   {
     "id": "far-cf-020",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Faithful Representation",
     "conceptTested": "Components",
     "difficulty": "medium",
@@ -23916,7 +23916,7 @@ const questions = [
   {
     "id": "far-cf-021",
     "section": "FAR",
-    "topic": "Accounting Changes",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Change in Estimate",
     "conceptTested": "Treatment",
     "difficulty": "medium",
@@ -23937,7 +23937,7 @@ const questions = [
   {
     "id": "far-cf-022",
     "section": "FAR",
-    "topic": "Accounting Changes",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Change in Principle",
     "conceptTested": "Treatment",
     "difficulty": "hard",
@@ -23958,7 +23958,7 @@ const questions = [
   {
     "id": "far-cf-023",
     "section": "FAR",
-    "topic": "Accounting Changes",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Error Correction",
     "conceptTested": "Treatment",
     "difficulty": "hard",
@@ -24063,7 +24063,7 @@ const questions = [
   {
     "id": "far-cf-028",
     "section": "FAR",
-    "topic": "Disclosure",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Fair Value Disclosure",
     "conceptTested": "Required disclosures",
     "difficulty": "medium",
@@ -24084,7 +24084,7 @@ const questions = [
   {
     "id": "far-cf-029",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Entity Assumption",
     "conceptTested": "Reporting entity",
     "difficulty": "easy",
@@ -24105,7 +24105,7 @@ const questions = [
   {
     "id": "far-cf-030",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Period Assumption",
     "conceptTested": "Artificial time periods",
     "difficulty": "easy",
@@ -24126,7 +24126,7 @@ const questions = [
   {
     "id": "far-calc1-001",
     "section": "FAR",
-    "topic": "Cash Flows",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Indirect Method",
     "conceptTested": "Net income to cash from operations",
     "difficulty": "hard",
@@ -24147,7 +24147,7 @@ const questions = [
   {
     "id": "far-calc1-002",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Interest Expense",
     "conceptTested": "Effective interest method",
     "difficulty": "hard",
@@ -24168,7 +24168,7 @@ const questions = [
   {
     "id": "far-calc1-003",
     "section": "FAR",
-    "topic": "Depreciation",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Double-Declining Balance",
     "conceptTested": "DDB Year 2",
     "difficulty": "hard",
@@ -24215,23 +24215,23 @@ const questions = [
     "conceptTested": "LIFO ending inventory",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Using the previous data, what is LIFO ending inventory?",
+    "question": "A company made the following purchases: 200 units @ $8, then 150 units @ $10, then 100 units @ $12. If 350 units were sold, what is ending inventory under LIFO?",
     "options": {
       "A": "$800",
-      "B": "$960",
-      "C": "$1,040",
-      "D": "$1,120"
+      "B": "$1,000",
+      "C": "$1,100",
+      "D": "$1,200"
     },
     "correctAnswer": "A",
-    "explanation": "LIFO: ending inventory is from oldest purchases. 80 units × $10 = $800.",
-    "tip": "LIFO ending: oldest costs remain.",
+    "explanation": "Total units = 450. Sold 350, leaving 100. Under LIFO, oldest costs remain. 100 units × $8 = $800.",
+    "tip": "LIFO ending inventory uses oldest (first) costs.",
     "calculationRequired": true,
-    "timeEstimateSeconds": 60
+    "timeEstimateSeconds": 90
   },
   {
     "id": "far-calc1-006",
     "section": "FAR",
-    "topic": "Accounts Receivable",
+    "topic": "Revenue and Receivables",
     "subtopic": "Allowance Method",
     "conceptTested": "Bad debt expense calculation",
     "difficulty": "hard",
@@ -24294,7 +24294,7 @@ const questions = [
   {
     "id": "far-calc1-009",
     "section": "FAR",
-    "topic": "Revenue",
+    "topic": "Revenue Recognition",
     "subtopic": "Percentage of Completion",
     "conceptTested": "Revenue recognition",
     "difficulty": "hard",
@@ -24315,23 +24315,23 @@ const questions = [
   {
     "id": "far-calc1-010",
     "section": "FAR",
-    "topic": "Revenue",
+    "topic": "Revenue Recognition",
     "subtopic": "Percentage of Completion",
     "conceptTested": "Gross profit to date",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Using the previous data, what is gross profit recognized to date?",
+    "question": "A construction contract has a price of $2,000,000 and estimated total costs of $1,600,000. To date, costs of $800,000 have been incurred. What is gross profit recognized to date?",
     "options": {
-      "A": "$50,000",
-      "B": "$100,000",
-      "C": "$150,000",
-      "D": "$200,000"
+      "A": "$100,000",
+      "B": "$200,000",
+      "C": "$400,000",
+      "D": "$800,000"
     },
     "correctAnswer": "B",
-    "explanation": "Total expected profit = $1,000,000 - $800,000 = $200,000. Profit to date = 50% × $200,000 = $100,000.",
+    "explanation": "Percentage complete = $800,000 / $1,600,000 = 50%. Total expected profit = $2,000,000 - $1,600,000 = $400,000. Profit to date = 50% × $400,000 = $200,000.",
     "tip": "Profit to date = % complete × total expected profit.",
     "calculationRequired": true,
-    "timeEstimateSeconds": 60
+    "timeEstimateSeconds": 90
   },
   {
     "id": "far-calc1-011",
@@ -24378,7 +24378,7 @@ const questions = [
   {
     "id": "far-calc1-013",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Basic EPS",
     "conceptTested": "Basic EPS calculation",
     "difficulty": "medium",
@@ -24399,7 +24399,7 @@ const questions = [
   {
     "id": "far-calc1-014",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Diluted EPS",
     "conceptTested": "Stock options treasury method",
     "difficulty": "hard",
@@ -24483,7 +24483,7 @@ const questions = [
   {
     "id": "far-calc1-018",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Carrying Value",
     "conceptTested": "Year-end carrying value",
     "difficulty": "hard",
@@ -24504,7 +24504,7 @@ const questions = [
   {
     "id": "far-calc1-019",
     "section": "FAR",
-    "topic": "Deferred Taxes",
+    "topic": "Income Taxes",
     "subtopic": "DTA Calculation",
     "conceptTested": "DTA from accrual",
     "difficulty": "hard",
@@ -24525,7 +24525,7 @@ const questions = [
   {
     "id": "far-calc1-020",
     "section": "FAR",
-    "topic": "Deferred Taxes",
+    "topic": "Income Taxes",
     "subtopic": "DTL Calculation",
     "conceptTested": "DTL from depreciation",
     "difficulty": "hard",
@@ -24546,7 +24546,7 @@ const questions = [
   {
     "id": "far-calc1-021",
     "section": "FAR",
-    "topic": "Impairment",
+    "topic": "Intangible Assets",
     "subtopic": "PPE Impairment Loss",
     "conceptTested": "Two-step impairment",
     "difficulty": "hard",
@@ -24567,7 +24567,7 @@ const questions = [
   {
     "id": "far-calc1-022",
     "section": "FAR",
-    "topic": "Government",
+    "topic": "Government Accounting",
     "subtopic": "Fund Balance",
     "conceptTested": "Fund balance categories",
     "difficulty": "hard",
@@ -24588,7 +24588,7 @@ const questions = [
   {
     "id": "far-calc1-023",
     "section": "FAR",
-    "topic": "NFP",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Assets",
     "conceptTested": "Net asset classification",
     "difficulty": "medium",
@@ -24609,7 +24609,7 @@ const questions = [
   {
     "id": "far-calc1-024",
     "section": "FAR",
-    "topic": "Cash Flows",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Free Cash Flow",
     "conceptTested": "FCF calculation",
     "difficulty": "medium",
@@ -24630,7 +24630,7 @@ const questions = [
   {
     "id": "far-calc1-025",
     "section": "FAR",
-    "topic": "Consolidation",
+    "topic": "Consolidations",
     "subtopic": "NCI",
     "conceptTested": "NCI share of income",
     "difficulty": "hard",
@@ -24651,7 +24651,7 @@ const questions = [
   {
     "id": "far-calc1-026",
     "section": "FAR",
-    "topic": "Consolidation",
+    "topic": "Consolidations",
     "subtopic": "Intercompany Elimination",
     "conceptTested": "Eliminating intercompany sales",
     "difficulty": "hard",
@@ -24693,7 +24693,7 @@ const questions = [
   {
     "id": "far-calc1-028",
     "section": "FAR",
-    "topic": "Revenue",
+    "topic": "Revenue Recognition",
     "subtopic": "Allocation",
     "conceptTested": "Relative SSP allocation",
     "difficulty": "hard",
@@ -24714,7 +24714,7 @@ const questions = [
   {
     "id": "far-calc1-029",
     "section": "FAR",
-    "topic": "Stock Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Option Expense",
     "conceptTested": "Annual compensation expense",
     "difficulty": "hard",
@@ -24756,7 +24756,7 @@ const questions = [
   {
     "id": "far-calc1-031",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Loss Contingency",
     "conceptTested": "Accrual amount",
     "difficulty": "medium",
@@ -24777,7 +24777,7 @@ const questions = [
   {
     "id": "far-calc1-032",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Bond Price",
     "conceptTested": "Present value calculation",
     "difficulty": "hard",
@@ -24845,7 +24845,7 @@ const questions = [
     "conceptTested": "Collection period",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Using the previous data (AR turnover = 12), what are days sales outstanding?",
+    "question": "A company has an accounts receivable turnover ratio of 12 times per year. What are the days sales outstanding (DSO)?",
     "options": {
       "A": "24 days",
       "B": "30 days",
@@ -24945,7 +24945,7 @@ const questions = [
   {
     "id": "far-calc2-005",
     "section": "FAR",
-    "topic": "Consolidation",
+    "topic": "Consolidations",
     "subtopic": "Goodwill Impairment",
     "conceptTested": "Impairment loss",
     "difficulty": "hard",
@@ -24987,7 +24987,7 @@ const questions = [
   {
     "id": "far-calc2-007",
     "section": "FAR",
-    "topic": "Revenue",
+    "topic": "Revenue Recognition",
     "subtopic": "Variable Consideration",
     "conceptTested": "Expected value",
     "difficulty": "hard",
@@ -25008,7 +25008,7 @@ const questions = [
   {
     "id": "far-calc2-008",
     "section": "FAR",
-    "topic": "Revenue",
+    "topic": "Revenue Recognition",
     "subtopic": "Returns",
     "conceptTested": "Refund liability",
     "difficulty": "medium",
@@ -25029,7 +25029,7 @@ const questions = [
   {
     "id": "far-calc2-009",
     "section": "FAR",
-    "topic": "Depreciation",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Change in Estimate",
     "conceptTested": "Revised depreciation",
     "difficulty": "hard",
@@ -25050,7 +25050,7 @@ const questions = [
   {
     "id": "far-calc2-010",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Patent Amortization",
     "conceptTested": "Amortization period",
     "difficulty": "medium",
@@ -25071,7 +25071,7 @@ const questions = [
   {
     "id": "far-calc2-011",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Early Retirement",
     "conceptTested": "Gain/loss on extinguishment",
     "difficulty": "hard",
@@ -25134,7 +25134,7 @@ const questions = [
   {
     "id": "far-calc2-014",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Convertible Bonds",
     "conceptTested": "If-converted method",
     "difficulty": "hard",
@@ -25176,7 +25176,7 @@ const questions = [
   {
     "id": "far-calc2-016",
     "section": "FAR",
-    "topic": "Government",
+    "topic": "Government Accounting",
     "subtopic": "Encumbrances",
     "conceptTested": "Outstanding encumbrances",
     "difficulty": "medium",
@@ -25197,7 +25197,7 @@ const questions = [
   {
     "id": "far-calc2-017",
     "section": "FAR",
-    "topic": "NFP",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributions",
     "conceptTested": "Multi-year pledge",
     "difficulty": "hard",
@@ -25218,7 +25218,7 @@ const questions = [
   {
     "id": "far-calc2-018",
     "section": "FAR",
-    "topic": "Cash Flows",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Equipment Purchase",
     "conceptTested": "Investing outflow",
     "difficulty": "hard",
@@ -25239,7 +25239,7 @@ const questions = [
   {
     "id": "far-calc2-019",
     "section": "FAR",
-    "topic": "Deferred Taxes",
+    "topic": "Income Taxes",
     "subtopic": "Rate Change",
     "conceptTested": "Adjusting DTL",
     "difficulty": "hard",
@@ -25302,7 +25302,7 @@ const questions = [
   {
     "id": "far-calc2-022",
     "section": "FAR",
-    "topic": "PPE",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Basket Purchase",
     "conceptTested": "Allocation",
     "difficulty": "medium",
@@ -25323,7 +25323,7 @@ const questions = [
   {
     "id": "far-calc2-023",
     "section": "FAR",
-    "topic": "PPE",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Interest Capitalization",
     "conceptTested": "Avoidable interest",
     "difficulty": "hard",
@@ -25344,7 +25344,7 @@ const questions = [
   {
     "id": "far-calc2-024",
     "section": "FAR",
-    "topic": "PPE",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "ARO",
     "conceptTested": "Year 2 accretion",
     "difficulty": "hard",
@@ -25365,7 +25365,7 @@ const questions = [
   {
     "id": "far-calc2-025",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Warranty",
     "conceptTested": "Warranty expense",
     "difficulty": "medium",
@@ -25386,7 +25386,7 @@ const questions = [
   {
     "id": "far-calc2-026",
     "section": "FAR",
-    "topic": "Stock Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "RSUs",
     "conceptTested": "RSU expense",
     "difficulty": "medium",
@@ -25491,7 +25491,7 @@ const questions = [
   {
     "id": "far-calc2-031",
     "section": "FAR",
-    "topic": "Revenue",
+    "topic": "Revenue Recognition",
     "subtopic": "Gift Cards",
     "conceptTested": "Breakage revenue",
     "difficulty": "hard",
@@ -25512,7 +25512,7 @@ const questions = [
   {
     "id": "far-calc2-032",
     "section": "FAR",
-    "topic": "Equity Method",
+    "topic": "Investments",
     "subtopic": "Impairment",
     "conceptTested": "Other-than-temporary decline",
     "difficulty": "hard",
@@ -25533,7 +25533,7 @@ const questions = [
   {
     "id": "far-calc2-033",
     "section": "FAR",
-    "topic": "Consolidation",
+    "topic": "Consolidations",
     "subtopic": "NCI at FV",
     "conceptTested": "Full goodwill method",
     "difficulty": "hard",
@@ -25554,7 +25554,7 @@ const questions = [
   {
     "id": "far-calc2-034",
     "section": "FAR",
-    "topic": "Government",
+    "topic": "Government Accounting",
     "subtopic": "Modified Accrual",
     "conceptTested": "Revenue recognition",
     "difficulty": "hard",
@@ -25575,7 +25575,7 @@ const questions = [
   {
     "id": "far-calc2-035",
     "section": "FAR",
-    "topic": "NFP",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Functional Expenses",
     "conceptTested": "Expense allocation",
     "difficulty": "medium",
@@ -29187,7 +29187,7 @@ const questions = [
   {
     "id": "far-calc3-002",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Factoring",
     "conceptTested": "Proceeds from factoring",
     "difficulty": "hard",
@@ -29229,7 +29229,7 @@ const questions = [
   {
     "id": "far-calc3-004",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Asset Retirement Obligation",
     "conceptTested": "ARO initial measurement",
     "difficulty": "hard",
@@ -29250,7 +29250,7 @@ const questions = [
   {
     "id": "far-calc3-005",
     "section": "FAR",
-    "topic": "Bonds Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Issue Price Calculation",
     "conceptTested": "Bond proceeds at premium",
     "difficulty": "hard",
@@ -29292,7 +29292,7 @@ const questions = [
   {
     "id": "far-calc3-007",
     "section": "FAR",
-    "topic": "Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Treasury Stock",
     "conceptTested": "Cost method reissuance",
     "difficulty": "medium",
@@ -29481,7 +29481,7 @@ const questions = [
   {
     "id": "far-calc3-016",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill Impairment",
     "conceptTested": "Simplified impairment test",
     "difficulty": "medium",
@@ -29502,7 +29502,7 @@ const questions = [
   {
     "id": "far-calc3-017",
     "section": "FAR",
-    "topic": "Share-Based Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Stock Options",
     "conceptTested": "Compensation expense calculation",
     "difficulty": "medium",
@@ -29565,7 +29565,7 @@ const questions = [
   {
     "id": "far-calc3-020",
     "section": "FAR",
-    "topic": "Debt",
+    "topic": "Long-term Debt",
     "subtopic": "Troubled Debt Restructuring",
     "conceptTested": "Modification accounting",
     "difficulty": "hard",
@@ -29649,7 +29649,7 @@ const questions = [
   {
     "id": "far-calc3-024",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Asset Classification",
     "conceptTested": "Contribution recognition",
     "difficulty": "medium",
@@ -29733,7 +29733,7 @@ const questions = [
   {
     "id": "far-calc3-028",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Warranty Accrual",
     "conceptTested": "Warranty expense estimation",
     "difficulty": "medium",
@@ -29754,7 +29754,7 @@ const questions = [
   {
     "id": "far-calc3-029",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Quantitative Thresholds",
     "conceptTested": "10% test",
     "difficulty": "medium",
@@ -29817,7 +29817,7 @@ const questions = [
   {
     "id": "far-calc3-032",
     "section": "FAR",
-    "topic": "Accounting Changes",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Change in Estimate",
     "conceptTested": "Depreciation revision",
     "difficulty": "medium",
@@ -29859,7 +29859,7 @@ const questions = [
   {
     "id": "far-calc3-034",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "OCI Reclassification",
     "conceptTested": "Reclassification adjustment",
     "difficulty": "hard",
@@ -29880,7 +29880,7 @@ const questions = [
   {
     "id": "far-calc3-035",
     "section": "FAR",
-    "topic": "Financial Instruments",
+    "topic": "Investments",
     "subtopic": "CECL",
     "conceptTested": "Expected credit loss",
     "difficulty": "hard",
@@ -29901,7 +29901,7 @@ const questions = [
   {
     "id": "far-review-001",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Balance Sheet",
     "conceptTested": "Current vs noncurrent classification",
     "difficulty": "medium",
@@ -29922,7 +29922,7 @@ const questions = [
   {
     "id": "far-review-002",
     "section": "FAR",
-    "topic": "Cash",
+    "topic": "Cash and Cash Equivalents",
     "subtopic": "Cash Equivalents",
     "conceptTested": "Definition of cash equivalents",
     "difficulty": "easy",
@@ -29943,7 +29943,7 @@ const questions = [
   {
     "id": "far-review-003",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Allowance Method",
     "conceptTested": "Bad debt expense calculation",
     "difficulty": "medium",
@@ -29985,7 +29985,7 @@ const questions = [
   {
     "id": "far-review-005",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Depreciation",
     "conceptTested": "Double-declining balance",
     "difficulty": "medium",
@@ -30006,7 +30006,7 @@ const questions = [
   {
     "id": "far-review-006",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill",
     "conceptTested": "Impairment frequency",
     "difficulty": "easy",
@@ -30048,7 +30048,7 @@ const questions = [
   {
     "id": "far-review-008",
     "section": "FAR",
-    "topic": "Equity",
+    "topic": "Stockholders' Equity",
     "subtopic": "Stock Dividends",
     "conceptTested": "Small stock dividend",
     "difficulty": "medium",
@@ -30153,7 +30153,7 @@ const questions = [
   {
     "id": "far-review-013",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Weighted Average Shares",
     "conceptTested": "Stock issuance timing",
     "difficulty": "medium",
@@ -30174,7 +30174,7 @@ const questions = [
   {
     "id": "far-review-014",
     "section": "FAR",
-    "topic": "Cash Flows",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Classification",
     "conceptTested": "Operating vs investing",
     "difficulty": "medium",
@@ -30258,7 +30258,7 @@ const questions = [
   {
     "id": "far-review-018",
     "section": "FAR",
-    "topic": "Accounting Changes",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Error Correction",
     "conceptTested": "Prior period adjustment",
     "difficulty": "medium",
@@ -30321,7 +30321,7 @@ const questions = [
   {
     "id": "far-review-021",
     "section": "FAR",
-    "topic": "NFP Accounting",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Asset Classes",
     "conceptTested": "Classification",
     "difficulty": "medium",
@@ -30447,7 +30447,7 @@ const questions = [
   {
     "id": "far-review-027",
     "section": "FAR",
-    "topic": "Share-Based Payments",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Modification",
     "conceptTested": "Award modification accounting",
     "difficulty": "hard",
@@ -30468,7 +30468,7 @@ const questions = [
   {
     "id": "far-review-028",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Reportable Segments",
     "conceptTested": "75% test",
     "difficulty": "medium",
@@ -30510,7 +30510,7 @@ const questions = [
   {
     "id": "far-review-030",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Components",
     "conceptTested": "OCI items",
     "difficulty": "medium",
@@ -30531,7 +30531,7 @@ const questions = [
   {
     "id": "far-review-031",
     "section": "FAR",
-    "topic": "Disclosure",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Risks and Uncertainties",
     "conceptTested": "SOP 94-6 disclosures",
     "difficulty": "medium",
@@ -30552,7 +30552,7 @@ const questions = [
   {
     "id": "far-review-032",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Integral Approach",
     "conceptTested": "Quarterly income tax",
     "difficulty": "hard",
@@ -30594,7 +30594,7 @@ const questions = [
   {
     "id": "far-review-034",
     "section": "FAR",
-    "topic": "Nonmonetary Transactions",
+    "topic": "Property Transactions",
     "subtopic": "Commercial Substance",
     "conceptTested": "Gain recognition",
     "difficulty": "hard",
@@ -30615,7 +30615,7 @@ const questions = [
   {
     "id": "far-review-035",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Qualitative Characteristics",
     "conceptTested": "Fundamental characteristics",
     "difficulty": "easy",
@@ -31371,7 +31371,7 @@ const questions = [
   {
     "id": "far-fund2-001",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Balance Sheet",
     "conceptTested": "Balance sheet definition",
     "difficulty": "easy",
@@ -31392,7 +31392,7 @@ const questions = [
   {
     "id": "far-fund2-002",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Statement",
     "conceptTested": "Income statement definition",
     "difficulty": "easy",
@@ -31413,7 +31413,7 @@ const questions = [
   {
     "id": "far-fund2-003",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Statement of Cash Flows",
     "conceptTested": "Cash flow statement purpose",
     "difficulty": "easy",
@@ -31434,7 +31434,7 @@ const questions = [
   {
     "id": "far-fund2-004",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cash Flow Activities",
     "conceptTested": "Operating activities",
     "difficulty": "easy",
@@ -31455,7 +31455,7 @@ const questions = [
   {
     "id": "far-fund2-005",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cash Flow Activities",
     "conceptTested": "Investing activities",
     "difficulty": "easy",
@@ -31476,7 +31476,7 @@ const questions = [
   {
     "id": "far-fund2-006",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cash Flow Activities",
     "conceptTested": "Financing activities",
     "difficulty": "easy",
@@ -31497,7 +31497,7 @@ const questions = [
   {
     "id": "far-fund2-007",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cash Flow Activities",
     "conceptTested": "Dividend payments",
     "difficulty": "easy",
@@ -31518,7 +31518,7 @@ const questions = [
   {
     "id": "far-fund2-008",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Balance Sheet",
     "conceptTested": "Asset order",
     "difficulty": "easy",
@@ -31539,7 +31539,7 @@ const questions = [
   {
     "id": "far-fund2-009",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Balance Sheet",
     "conceptTested": "Most liquid asset",
     "difficulty": "easy",
@@ -31560,7 +31560,7 @@ const questions = [
   {
     "id": "far-fund2-010",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Statement",
     "conceptTested": "Multi-step income statement",
     "difficulty": "easy",
@@ -31581,7 +31581,7 @@ const questions = [
   {
     "id": "far-fund2-011",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Statement",
     "conceptTested": "Operating income",
     "difficulty": "easy",
@@ -31602,7 +31602,7 @@ const questions = [
   {
     "id": "far-fund2-012",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Statement",
     "conceptTested": "Income statement calculation",
     "difficulty": "easy",
@@ -31623,7 +31623,7 @@ const questions = [
   {
     "id": "far-fund2-013",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Stockholders' Equity",
     "conceptTested": "Components of equity",
     "difficulty": "easy",
@@ -31644,7 +31644,7 @@ const questions = [
   {
     "id": "far-fund2-014",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Common Stock",
     "conceptTested": "Par value",
     "difficulty": "easy",
@@ -31665,7 +31665,7 @@ const questions = [
   {
     "id": "far-fund2-015",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Stock Issuance",
     "conceptTested": "Recording stock issuance",
     "difficulty": "easy",
@@ -31686,7 +31686,7 @@ const questions = [
   {
     "id": "far-fund2-016",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Treasury Stock",
     "conceptTested": "Treasury stock definition",
     "difficulty": "easy",
@@ -31707,7 +31707,7 @@ const questions = [
   {
     "id": "far-fund2-017",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Retained Earnings",
     "conceptTested": "Retained earnings calculation",
     "difficulty": "easy",
@@ -31728,7 +31728,7 @@ const questions = [
   {
     "id": "far-fund2-018",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Balance Sheet Equation",
     "conceptTested": "Calculate missing amount",
     "difficulty": "easy",
@@ -31749,7 +31749,7 @@ const questions = [
   {
     "id": "far-fund2-019",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Notes",
     "conceptTested": "Financial statement notes",
     "difficulty": "easy",
@@ -31770,7 +31770,7 @@ const questions = [
   {
     "id": "far-fund2-020",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cost of Goods Sold",
     "conceptTested": "COGS formula",
     "difficulty": "easy",
@@ -31791,7 +31791,7 @@ const questions = [
   {
     "id": "far-fund2-021",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Cost of Goods Sold",
     "conceptTested": "COGS calculation",
     "difficulty": "easy",
@@ -31812,7 +31812,7 @@ const questions = [
   {
     "id": "far-fund2-022",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Comprehensive Income",
     "conceptTested": "OCI definition",
     "difficulty": "easy",
@@ -31833,7 +31833,7 @@ const questions = [
   {
     "id": "far-fund2-023",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Comprehensive Income",
     "conceptTested": "Comprehensive income formula",
     "difficulty": "easy",
@@ -31854,7 +31854,7 @@ const questions = [
   {
     "id": "far-fund2-024",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Earnings Per Share",
     "conceptTested": "Basic EPS formula",
     "difficulty": "easy",
@@ -31875,7 +31875,7 @@ const questions = [
   {
     "id": "far-fund2-025",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Earnings Per Share",
     "conceptTested": "Basic EPS calculation",
     "difficulty": "easy",
@@ -31896,7 +31896,7 @@ const questions = [
   {
     "id": "far-fund2-026",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Dividends",
     "conceptTested": "Cash dividend effect",
     "difficulty": "easy",
@@ -31917,7 +31917,7 @@ const questions = [
   {
     "id": "far-fund2-027",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Dividends",
     "conceptTested": "Stock dividend effect",
     "difficulty": "easy",
@@ -31938,7 +31938,7 @@ const questions = [
   {
     "id": "far-fund2-028",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Accrued Expenses",
     "conceptTested": "Accrued expense definition",
     "difficulty": "easy",
@@ -31959,7 +31959,7 @@ const questions = [
   {
     "id": "far-fund2-029",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Accrued Revenue",
     "conceptTested": "Accrued revenue definition",
     "difficulty": "easy",
@@ -31980,7 +31980,7 @@ const questions = [
   {
     "id": "far-fund2-030",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Bad Debt",
     "conceptTested": "Allowance for doubtful accounts",
     "difficulty": "easy",
@@ -32001,7 +32001,7 @@ const questions = [
   {
     "id": "far-fund2-031",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Net Realizable Value",
     "conceptTested": "A/R net realizable value",
     "difficulty": "easy",
@@ -32022,7 +32022,7 @@ const questions = [
   {
     "id": "far-fund2-032",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Interest Expense",
     "conceptTested": "Simple interest calculation",
     "difficulty": "easy",
@@ -32043,7 +32043,7 @@ const questions = [
   {
     "id": "far-fund2-033",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Gross Profit Margin",
     "conceptTested": "Gross profit percentage",
     "difficulty": "easy",
@@ -32064,7 +32064,7 @@ const questions = [
   {
     "id": "far-fund2-034",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Profit Margin",
     "conceptTested": "Net profit margin",
     "difficulty": "easy",
@@ -32085,7 +32085,7 @@ const questions = [
   {
     "id": "far-fund2-035",
     "section": "FAR",
-    "topic": "Financial Statements",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Comparative Statements",
     "conceptTested": "Comparative presentation",
     "difficulty": "easy",
@@ -32106,7 +32106,7 @@ const questions = [
   {
     "id": "far-fund3-001",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Bad Debt Methods",
     "conceptTested": "Allowance method vs direct write-off method",
     "difficulty": "easy",
@@ -32127,7 +32127,7 @@ const questions = [
   {
     "id": "far-fund3-002",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Allowance Method",
     "conceptTested": "Journal entry for bad debt expense",
     "difficulty": "easy",
@@ -32148,7 +32148,7 @@ const questions = [
   {
     "id": "far-fund3-003",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Write-offs",
     "conceptTested": "Effect of write-off on net receivables",
     "difficulty": "easy",
@@ -32169,7 +32169,7 @@ const questions = [
   {
     "id": "far-fund3-004",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Net Realizable Value",
     "conceptTested": "Calculation of net realizable value",
     "difficulty": "easy",
@@ -32316,7 +32316,7 @@ const questions = [
   {
     "id": "far-fund3-011",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Capitalization",
     "conceptTested": "Costs capitalized for equipment",
     "difficulty": "easy",
@@ -32337,7 +32337,7 @@ const questions = [
   {
     "id": "far-fund3-012",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Land Costs",
     "conceptTested": "Costs included in land",
     "difficulty": "easy",
@@ -32358,7 +32358,7 @@ const questions = [
   {
     "id": "far-fund3-013",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Depreciation",
     "conceptTested": "Straight-line depreciation",
     "difficulty": "easy",
@@ -32379,7 +32379,7 @@ const questions = [
   {
     "id": "far-fund3-014",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Book Value",
     "conceptTested": "Calculating book value",
     "difficulty": "easy",
@@ -32400,7 +32400,7 @@ const questions = [
   {
     "id": "far-fund3-015",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Asset Disposal",
     "conceptTested": "Gain or loss on disposal",
     "difficulty": "easy",
@@ -32421,7 +32421,7 @@ const questions = [
   {
     "id": "far-fund3-016",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Finite vs Indefinite Life",
     "conceptTested": "Amortization of intangibles",
     "difficulty": "easy",
@@ -32442,7 +32442,7 @@ const questions = [
   {
     "id": "far-fund3-017",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Research and Development",
     "conceptTested": "R&D cost treatment",
     "difficulty": "easy",
@@ -32463,7 +32463,7 @@ const questions = [
   {
     "id": "far-fund3-018",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Patent Amortization",
     "conceptTested": "Amortization of patent",
     "difficulty": "easy",
@@ -32484,7 +32484,7 @@ const questions = [
   {
     "id": "far-fund3-019",
     "section": "FAR",
-    "topic": "Current Liabilities",
+    "topic": "Liabilities",
     "subtopic": "Accounts Payable",
     "conceptTested": "Definition of accounts payable",
     "difficulty": "easy",
@@ -32505,7 +32505,7 @@ const questions = [
   {
     "id": "far-fund3-020",
     "section": "FAR",
-    "topic": "Current Liabilities",
+    "topic": "Liabilities",
     "subtopic": "Accrued Expenses",
     "conceptTested": "Nature of accrued liabilities",
     "difficulty": "easy",
@@ -32526,7 +32526,7 @@ const questions = [
   {
     "id": "far-fund3-021",
     "section": "FAR",
-    "topic": "Current Liabilities",
+    "topic": "Liabilities",
     "subtopic": "Unearned Revenue",
     "conceptTested": "Classification of unearned revenue",
     "difficulty": "easy",
@@ -32547,7 +32547,7 @@ const questions = [
   {
     "id": "far-fund3-022",
     "section": "FAR",
-    "topic": "Current Liabilities",
+    "topic": "Liabilities",
     "subtopic": "Unearned Revenue Recognition",
     "conceptTested": "Journal entry when revenue is earned",
     "difficulty": "easy",
@@ -32568,7 +32568,7 @@ const questions = [
   {
     "id": "far-fund3-023",
     "section": "FAR",
-    "topic": "Current Liabilities",
+    "topic": "Liabilities",
     "subtopic": "Current Maturities",
     "conceptTested": "Reclassification of long-term debt",
     "difficulty": "easy",
@@ -32589,7 +32589,7 @@ const questions = [
   {
     "id": "far-fund3-024",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Loss Contingencies",
     "conceptTested": "When to accrue a loss contingency",
     "difficulty": "easy",
@@ -32610,7 +32610,7 @@ const questions = [
   {
     "id": "far-fund3-025",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Gain Contingencies",
     "conceptTested": "Treatment of gain contingencies",
     "difficulty": "easy",
@@ -32631,7 +32631,7 @@ const questions = [
   {
     "id": "far-fund3-026",
     "section": "FAR",
-    "topic": "Notes Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Interest Calculation",
     "conceptTested": "Simple interest calculation",
     "difficulty": "easy",
@@ -32652,7 +32652,7 @@ const questions = [
   {
     "id": "far-fund3-027",
     "section": "FAR",
-    "topic": "Warranties",
+    "topic": "Liabilities",
     "subtopic": "Warranty Accrual",
     "conceptTested": "Recording warranty expense",
     "difficulty": "easy",
@@ -32673,7 +32673,7 @@ const questions = [
   {
     "id": "far-fund3-028",
     "section": "FAR",
-    "topic": "Warranties",
+    "topic": "Liabilities",
     "subtopic": "Warranty Calculation",
     "conceptTested": "Estimating warranty liability",
     "difficulty": "easy",
@@ -32694,7 +32694,7 @@ const questions = [
   {
     "id": "far-fund3-029",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Premium vs Discount",
     "conceptTested": "Bond premium concept",
     "difficulty": "easy",
@@ -32715,7 +32715,7 @@ const questions = [
   {
     "id": "far-fund3-030",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Issue Price",
     "conceptTested": "Identifying premium or discount",
     "difficulty": "easy",
@@ -32736,7 +32736,7 @@ const questions = [
   {
     "id": "far-fund3-031",
     "section": "FAR",
-    "topic": "Bonds",
+    "topic": "Long-term Debt",
     "subtopic": "Carrying Value",
     "conceptTested": "Bond carrying amount at issuance",
     "difficulty": "easy",
@@ -32757,7 +32757,7 @@ const questions = [
   {
     "id": "far-fund3-032",
     "section": "FAR",
-    "topic": "Prepaid Expenses",
+    "topic": "Balance Sheet",
     "subtopic": "Classification",
     "conceptTested": "Prepaid expense as an asset",
     "difficulty": "easy",
@@ -32778,7 +32778,7 @@ const questions = [
   {
     "id": "far-fund3-033",
     "section": "FAR",
-    "topic": "Prepaid Expenses",
+    "topic": "Balance Sheet",
     "subtopic": "Adjusting Entry",
     "conceptTested": "Expiring prepaid expense",
     "difficulty": "easy",
@@ -32799,7 +32799,7 @@ const questions = [
   {
     "id": "far-fund3-034",
     "section": "FAR",
-    "topic": "Receivables",
+    "topic": "Revenue and Receivables",
     "subtopic": "Notes Receivable",
     "conceptTested": "Recording notes receivable",
     "difficulty": "easy",
@@ -32820,7 +32820,7 @@ const questions = [
   {
     "id": "far-fund3-035",
     "section": "FAR",
-    "topic": "Fixed Assets",
+    "topic": "Property, Plant & Equipment",
     "subtopic": "Depreciation Methods",
     "conceptTested": "Methods of depreciation",
     "difficulty": "easy",
@@ -33085,7 +33085,7 @@ const questions = [
       "D": "The lessor is a financial institution"
     },
     "correctAnswer": "C",
-    "explanation": "A lessee classifies a lease as finance if it meets any of the five criteria: ownership transfer, bargain purchase option, lease term ≥75% of asset life, PV of payments ≥90% of fair value, or specialized asset.",
+    "explanation": "A lessee classifies a lease as finance if it meets any of the five criteria: ownership transfer, bargain purchase option, lease term is for a major part of the asset's remaining economic life, PV of payments equals substantially all of the asset's fair value, or the asset is specialized with no alternative use to lessor. Note: ASC 842 is principle-based and does not specify exact percentages; 75%/90% are common exam benchmarks but not codified thresholds.",
     "tip": "Finance lease criteria indicate the lessee effectively obtains the risks and rewards of ownership.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -33198,7 +33198,7 @@ const questions = [
   {
     "id": "far-fund4-018",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Classification",
     "conceptTested": "Operating, investing, financing activities",
     "difficulty": "easy",
@@ -33219,7 +33219,7 @@ const questions = [
   {
     "id": "far-fund4-019",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Classification",
     "conceptTested": "Financing activities",
     "difficulty": "easy",
@@ -33240,7 +33240,7 @@ const questions = [
   {
     "id": "far-fund4-020",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Operating Activities",
     "conceptTested": "Cash from operations",
     "difficulty": "easy",
@@ -33261,7 +33261,7 @@ const questions = [
   {
     "id": "far-fund4-021",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Basic EPS",
     "conceptTested": "Basic EPS calculation",
     "difficulty": "easy",
@@ -33282,7 +33282,7 @@ const questions = [
   {
     "id": "far-fund4-022",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Diluted EPS",
     "conceptTested": "Purpose of diluted EPS",
     "difficulty": "easy",
@@ -33366,7 +33366,7 @@ const questions = [
   {
     "id": "far-fund4-026",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Asset Classes",
     "conceptTested": "Net asset classification",
     "difficulty": "easy",
@@ -33387,7 +33387,7 @@ const questions = [
   {
     "id": "far-fund4-027",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributions",
     "conceptTested": "Unconditional contributions",
     "difficulty": "easy",
@@ -33450,7 +33450,7 @@ const questions = [
   {
     "id": "far-fund4-030",
     "section": "FAR",
-    "topic": "Consolidation",
+    "topic": "Consolidations",
     "subtopic": "Control Concept",
     "conceptTested": "When to consolidate",
     "difficulty": "easy",
@@ -33471,7 +33471,7 @@ const questions = [
   {
     "id": "far-fund4-031",
     "section": "FAR",
-    "topic": "Financial Ratios",
+    "topic": "Ratios",
     "subtopic": "Current Ratio",
     "conceptTested": "Current ratio calculation",
     "difficulty": "easy",
@@ -33492,7 +33492,7 @@ const questions = [
   {
     "id": "far-fund4-032",
     "section": "FAR",
-    "topic": "Financial Ratios",
+    "topic": "Ratios",
     "subtopic": "Quick Ratio",
     "conceptTested": "Quick ratio components",
     "difficulty": "easy",
@@ -33513,7 +33513,7 @@ const questions = [
   {
     "id": "far-fund4-033",
     "section": "FAR",
-    "topic": "Financial Ratios",
+    "topic": "Ratios",
     "subtopic": "Debt to Equity",
     "conceptTested": "Leverage ratio calculation",
     "difficulty": "easy",
@@ -33576,7 +33576,7 @@ const questions = [
   {
     "id": "far-med-001",
     "section": "FAR",
-    "topic": "Conceptual Framework",
+    "topic": "Conceptual Framework & Standards",
     "subtopic": "Qualitative Characteristics",
     "conceptTested": "Faithful representation vs relevance trade-off",
     "difficulty": "medium",
@@ -33631,8 +33631,8 @@ const questions = [
       "D": "Operating lease because no purchase option exists"
     },
     "correctAnswer": "C",
-    "explanation": "Lease term (5 years) is 50% of useful life (need >75% for finance). PV ($68,000) is 68% of fair value (need ≥90% for finance). No ownership transfer or purchase option. None of the finance lease criteria are met, so it's an operating lease.",
-    "tip": "Finance lease bright lines: >75% of useful life OR ≥90% of fair value. This lease meets neither.",
+    "explanation": "Lease term (5 years) is 50% of useful life, which is not a 'major part' of the asset's life. PV ($68,000) is 68% of fair value, which is not 'substantially all' of fair value. No ownership transfer or purchase option. None of the finance lease criteria are met, so it's an operating lease. Note: ASC 842 uses 'major part' and 'substantially all' without specifying percentages; 75%/90% are common exam benchmarks.",
+    "tip": "Finance lease: ownership transfer, BPO, major part of life, substantially all of FV, or specialized asset.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -33765,7 +33765,7 @@ const questions = [
   {
     "id": "far-med-010",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Asset Classification",
     "conceptTested": "Donor restrictions",
     "difficulty": "medium",
@@ -33786,7 +33786,7 @@ const questions = [
   {
     "id": "far-med-011",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Operating Activities",
     "conceptTested": "Indirect method adjustments",
     "difficulty": "medium",
@@ -33849,7 +33849,7 @@ const questions = [
   {
     "id": "far-med-014",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Basic EPS",
     "conceptTested": "Preferred dividend impact on EPS",
     "difficulty": "medium",
@@ -33870,7 +33870,7 @@ const questions = [
   {
     "id": "far-med-015",
     "section": "FAR",
-    "topic": "Changes and Errors",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Error Correction",
     "conceptTested": "Prior period adjustment",
     "difficulty": "medium",
@@ -33933,7 +33933,7 @@ const questions = [
   {
     "id": "far-med-018",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Quantitative Thresholds",
     "conceptTested": "Reportable segment criteria",
     "difficulty": "medium",
@@ -33975,7 +33975,7 @@ const questions = [
   {
     "id": "far-med-020",
     "section": "FAR",
-    "topic": "Stock Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Stock Options",
     "conceptTested": "Compensation expense recognition",
     "difficulty": "medium",
@@ -33996,7 +33996,7 @@ const questions = [
   {
     "id": "far-med-021",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Research and Development",
     "conceptTested": "R&D cost treatment",
     "difficulty": "medium",
@@ -34038,7 +34038,7 @@ const questions = [
   {
     "id": "far-med-023",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Inventory Methods",
     "conceptTested": "LIFO prohibition under IFRS",
     "difficulty": "medium",
@@ -34206,7 +34206,7 @@ const questions = [
   {
     "id": "far-med-031",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributed Services",
     "conceptTested": "Recognition criteria for contributed services",
     "difficulty": "medium",
@@ -34227,7 +34227,7 @@ const questions = [
   {
     "id": "far-med-032",
     "section": "FAR",
-    "topic": "Impairment",
+    "topic": "Intangible Assets",
     "subtopic": "Long-lived Assets",
     "conceptTested": "Impairment testing steps",
     "difficulty": "medium",
@@ -34290,7 +34290,7 @@ const questions = [
   {
     "id": "far-med-035",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "OCI Components",
     "conceptTested": "Items in other comprehensive income",
     "difficulty": "medium",
@@ -34374,7 +34374,7 @@ const questions = [
   {
     "id": "far-med2-004",
     "section": "FAR",
-    "topic": "Intangibles",
+    "topic": "Intangible Assets",
     "subtopic": "Goodwill Impairment",
     "conceptTested": "Qualitative assessment option",
     "difficulty": "medium",
@@ -34521,7 +34521,7 @@ const questions = [
   {
     "id": "far-med2-011",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Functional Expenses",
     "conceptTested": "Expense classification requirements",
     "difficulty": "medium",
@@ -34542,7 +34542,7 @@ const questions = [
   {
     "id": "far-med2-012",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Non-cash Transactions",
     "conceptTested": "Disclosure of non-cash activities",
     "difficulty": "medium",
@@ -34605,7 +34605,7 @@ const questions = [
   {
     "id": "far-med2-015",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Diluted EPS",
     "conceptTested": "Treasury stock method",
     "difficulty": "medium",
@@ -34626,7 +34626,7 @@ const questions = [
   {
     "id": "far-med2-016",
     "section": "FAR",
-    "topic": "Changes and Errors",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Change in Estimate",
     "conceptTested": "Prospective treatment",
     "difficulty": "medium",
@@ -34668,7 +34668,7 @@ const questions = [
   {
     "id": "far-med2-018",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Aggregation Criteria",
     "conceptTested": "When segments can be combined",
     "difficulty": "medium",
@@ -34710,7 +34710,7 @@ const questions = [
   {
     "id": "far-med2-020",
     "section": "FAR",
-    "topic": "Stock Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Performance Conditions",
     "conceptTested": "Effect of performance conditions",
     "difficulty": "medium",
@@ -34752,7 +34752,7 @@ const questions = [
   {
     "id": "far-med2-022",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Investment Property",
     "conceptTested": "Investment property accounting",
     "difficulty": "medium",
@@ -34899,7 +34899,7 @@ const questions = [
   {
     "id": "far-med2-029",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Promises to Give",
     "conceptTested": "Multi-year pledge recognition",
     "difficulty": "medium",
@@ -34920,7 +34920,7 @@ const questions = [
   {
     "id": "far-med2-030",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Interest Classification",
     "conceptTested": "Interest paid classification",
     "difficulty": "medium",
@@ -34962,7 +34962,7 @@ const questions = [
   {
     "id": "far-med2-032",
     "section": "FAR",
-    "topic": "Impairment",
+    "topic": "Intangible Assets",
     "subtopic": "Indefinite-Lived Intangibles",
     "conceptTested": "Impairment test for trademarks",
     "difficulty": "medium",
@@ -35025,7 +35025,7 @@ const questions = [
   {
     "id": "far-med2-035",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Reclassification Adjustments",
     "conceptTested": "Reclassification out of AOCI",
     "difficulty": "medium",
@@ -35227,8 +35227,8 @@ const questions = [
       "D": "The asset has no residual value"
     },
     "correctAnswer": "C",
-    "explanation": "Finance lease criteria (any one): ownership transfer, bargain purchase option, lease term ≥75% of economic life, PV of payments ≥90% of fair value, or asset is specialized with no alternative use to lessor.",
-    "tip": "Finance lease = any ONE criterion met. 75% life, 90% PV, transfer, BPO, or specialized asset.",
+    "explanation": "Finance lease criteria (any one): ownership transfer, bargain purchase option, lease term for major part of economic life, PV of payments substantially equals fair value, or asset is specialized with no alternative use. Note: ASC 842 does not prescribe specific percentages; 75%/90% are common exam heuristics but not codified thresholds.",
+    "tip": "Finance lease = any ONE criterion met: transfer, BPO, major part of life, substantially all FV, or specialized.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -35256,7 +35256,7 @@ const questions = [
   {
     "id": "far-med3-011",
     "section": "FAR",
-    "topic": "Bonds Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Effective Interest Method",
     "conceptTested": "Premium amortization pattern",
     "difficulty": "medium",
@@ -35277,7 +35277,7 @@ const questions = [
   {
     "id": "far-med3-012",
     "section": "FAR",
-    "topic": "Bonds Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Early Extinguishment",
     "conceptTested": "Gain or loss on retirement",
     "difficulty": "medium",
@@ -35445,7 +35445,7 @@ const questions = [
   {
     "id": "far-med3-020",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Contributions",
     "conceptTested": "Conditional vs unconditional contributions",
     "difficulty": "medium",
@@ -35466,7 +35466,7 @@ const questions = [
   {
     "id": "far-med3-021",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Net Asset Classes",
     "conceptTested": "Release of donor restrictions",
     "difficulty": "medium",
@@ -35487,7 +35487,7 @@ const questions = [
   {
     "id": "far-med3-022",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Indirect Method Adjustments",
     "conceptTested": "Depreciation in operating section",
     "difficulty": "medium",
@@ -35508,7 +35508,7 @@ const questions = [
   {
     "id": "far-med3-023",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Direct Method",
     "conceptTested": "Cash collected from customers",
     "difficulty": "medium",
@@ -35676,7 +35676,7 @@ const questions = [
   {
     "id": "far-med3-031",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Loss Contingencies",
     "conceptTested": "Accrual criteria",
     "difficulty": "medium",
@@ -35697,7 +35697,7 @@ const questions = [
   {
     "id": "far-med3-032",
     "section": "FAR",
-    "topic": "Contingencies",
+    "topic": "Liabilities",
     "subtopic": "Gain Contingencies",
     "conceptTested": "Treatment of gain contingencies",
     "difficulty": "medium",
@@ -35739,7 +35739,7 @@ const questions = [
   {
     "id": "far-med3-034",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Revenue Recognition",
     "conceptTested": "Interim as discrete period",
     "difficulty": "medium",
@@ -35760,7 +35760,7 @@ const questions = [
   {
     "id": "far-med3-035",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Revaluation Model",
     "conceptTested": "PPE revaluation under IFRS",
     "difficulty": "medium",
@@ -36201,7 +36201,7 @@ const questions = [
   {
     "id": "far-med3-056",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "In-Kind Contributions",
     "conceptTested": "Contributed services recognition",
     "difficulty": "medium",
@@ -36222,7 +36222,7 @@ const questions = [
   {
     "id": "far-med3-057",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Agency Transactions",
     "conceptTested": "Pass-through contributions",
     "difficulty": "medium",
@@ -36243,7 +36243,7 @@ const questions = [
   {
     "id": "far-med3-058",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Weighted Average Shares",
     "conceptTested": "Stock issuance effect on WACS",
     "difficulty": "medium",
@@ -36264,7 +36264,7 @@ const questions = [
   {
     "id": "far-med3-059",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Convertible Securities",
     "conceptTested": "If-converted method",
     "difficulty": "medium",
@@ -36285,7 +36285,7 @@ const questions = [
   {
     "id": "far-med3-060",
     "section": "FAR",
-    "topic": "Changes and Errors",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Prior Period Errors",
     "conceptTested": "Error correction treatment",
     "difficulty": "medium",
@@ -36306,7 +36306,7 @@ const questions = [
   {
     "id": "far-med3-061",
     "section": "FAR",
-    "topic": "Changes and Errors",
+    "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Change in Accounting Principle",
     "conceptTested": "Retrospective application",
     "difficulty": "medium",
@@ -36411,7 +36411,7 @@ const questions = [
   {
     "id": "far-med3-066",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Inventory Methods",
     "conceptTested": "LIFO prohibition under IFRS",
     "difficulty": "medium",
@@ -36432,7 +36432,7 @@ const questions = [
   {
     "id": "far-med3-067",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Development Costs",
     "conceptTested": "Capitalization of development costs",
     "difficulty": "medium",
@@ -36453,7 +36453,7 @@ const questions = [
   {
     "id": "far-med3-068",
     "section": "FAR",
-    "topic": "Comprehensive Income",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Components of OCI",
     "conceptTested": "Items included in OCI",
     "difficulty": "medium",
@@ -36474,7 +36474,7 @@ const questions = [
   {
     "id": "far-med3-069",
     "section": "FAR",
-    "topic": "Discontinued Operations",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Classification Criteria",
     "conceptTested": "What qualifies as discontinued",
     "difficulty": "medium",
@@ -36495,7 +36495,7 @@ const questions = [
   {
     "id": "far-med3-070",
     "section": "FAR",
-    "topic": "Related Party Disclosures",
+    "topic": "Related Parties",
     "subtopic": "Required Disclosures",
     "conceptTested": "Disclosure requirements",
     "difficulty": "medium",
@@ -36768,7 +36768,7 @@ const questions = [
   {
     "id": "far-med4-013",
     "section": "FAR",
-    "topic": "Bonds Payable",
+    "topic": "Long-term Debt",
     "subtopic": "Bond Issue Costs",
     "conceptTested": "Debt issuance cost presentation",
     "difficulty": "medium",
@@ -36978,7 +36978,7 @@ const questions = [
   {
     "id": "far-med4-023",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Board-Designated Net Assets",
     "conceptTested": "Classification of board designations",
     "difficulty": "medium",
@@ -36999,7 +36999,7 @@ const questions = [
   {
     "id": "far-med4-024",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Underwater Endowments",
     "conceptTested": "Endowment below original gift",
     "difficulty": "medium",
@@ -37020,7 +37020,7 @@ const questions = [
   {
     "id": "far-med4-025",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Operating Activities",
     "conceptTested": "Increase in accounts payable",
     "difficulty": "medium",
@@ -37041,7 +37041,7 @@ const questions = [
   {
     "id": "far-med4-026",
     "section": "FAR",
-    "topic": "Cash Flow Statement",
+    "topic": "Statement of Cash Flows",
     "subtopic": "Investing Activities",
     "conceptTested": "Proceeds from asset sale",
     "difficulty": "medium",
@@ -37146,7 +37146,7 @@ const questions = [
   {
     "id": "far-med4-031",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Antidilutive Securities",
     "conceptTested": "Excluding antidilutive items",
     "difficulty": "medium",
@@ -37167,7 +37167,7 @@ const questions = [
   {
     "id": "far-med4-032",
     "section": "FAR",
-    "topic": "EPS",
+    "topic": "Earnings Per Share",
     "subtopic": "Contingently Issuable Shares",
     "conceptTested": "When to include contingent shares",
     "difficulty": "medium",
@@ -37230,7 +37230,7 @@ const questions = [
   {
     "id": "far-med4-035",
     "section": "FAR",
-    "topic": "Stock Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Modification",
     "conceptTested": "Stock option modification",
     "difficulty": "medium",
@@ -37671,7 +37671,7 @@ const questions = [
   {
     "id": "far-med4-056",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Special Events",
     "conceptTested": "Special event revenue recognition",
     "difficulty": "medium",
@@ -37692,7 +37692,7 @@ const questions = [
   {
     "id": "far-med4-057",
     "section": "FAR",
-    "topic": "Not-for-Profit",
+    "topic": "Not-for-Profit Accounting",
     "subtopic": "Split-Interest Agreements",
     "conceptTested": "Charitable remainder trust",
     "difficulty": "medium",
@@ -37755,7 +37755,7 @@ const questions = [
   {
     "id": "far-med4-060",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Revenue Recognition",
     "conceptTested": "IFRS 15 similarities",
     "difficulty": "medium",
@@ -37776,7 +37776,7 @@ const questions = [
   {
     "id": "far-med4-061",
     "section": "FAR",
-    "topic": "IFRS Differences",
+    "topic": "IFRS",
     "subtopic": "Biological Assets",
     "conceptTested": "Agricultural accounting",
     "difficulty": "medium",
@@ -37881,7 +37881,7 @@ const questions = [
   {
     "id": "far-med4-066",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Quantitative Thresholds",
     "conceptTested": "10% tests for reportable segments",
     "difficulty": "medium",
@@ -37902,7 +37902,7 @@ const questions = [
   {
     "id": "far-med4-067",
     "section": "FAR",
-    "topic": "Segment Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Chief Operating Decision Maker",
     "conceptTested": "CODM role in segments",
     "difficulty": "medium",
@@ -37923,7 +37923,7 @@ const questions = [
   {
     "id": "far-med4-068",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Income Taxes",
     "conceptTested": "Estimated annual tax rate",
     "difficulty": "medium",
@@ -37944,7 +37944,7 @@ const questions = [
   {
     "id": "far-med4-069",
     "section": "FAR",
-    "topic": "Interim Reporting",
+    "topic": "Financial Statement Presentation",
     "subtopic": "Inventory Losses",
     "conceptTested": "LCNRV at interim dates",
     "difficulty": "medium",
@@ -37965,7 +37965,7 @@ const questions = [
   {
     "id": "far-med4-070",
     "section": "FAR",
-    "topic": "Stock Compensation",
+    "topic": "Stock-Based Compensation",
     "subtopic": "Forfeitures",
     "conceptTested": "Forfeiture estimation policy",
     "difficulty": "medium",
