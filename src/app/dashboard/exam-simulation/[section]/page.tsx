@@ -677,7 +677,7 @@ export default function ExamSimulationSectionPage() {
               <div key={i} className={`p-4 ${result.isCorrect ? 'bg-green-50/50' : 'bg-red-50/50'}`}>
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-sm font-medium text-[var(--muted)]">
-                    Q{i + 1} • {result.question.difficulty} • {result.question.topic}
+                    Q{i + 1} • {result.question.topic}
                   </span>
                   <span className={`px-2 py-1 rounded text-xs font-medium ${
                     result.isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'

@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { PracticeQuestion } from "@/lib/data/practice-questions";
 import FeedbackButton from "./FeedbackButton";
+import QuestionReview from "./QuestionReview";
 
 interface QuizResult {
   question: PracticeQuestion;
@@ -27,6 +29,7 @@ export default function QuizResults({
   onNewQuiz,
   studySessionLogged = false,
 }: QuizResultsProps) {
+  const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
   const totalQuestions = results.length;
   const correctAnswers = results.filter(r => r.isCorrect).length;
   const accuracy = Math.round((correctAnswers / totalQuestions) * 100);
@@ -151,13 +154,19 @@ export default function QuizResults({
 
       {/* Question Review */}
       <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
-        <h3 className="font-semibold text-[var(--foreground)] mb-4">Question Review</h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="font-semibold text-[var(--foreground)]">Question Review</h3>
+          <span className="text-sm text-[var(--muted)]">Click to view full explanation</span>
+        </div>
         <div className="space-y-3">
           {results.map((result, index) => (
-            <div
+            <button
               key={result.question.id}
-              className={`p-4 rounded-lg border ${
-                result.isCorrect ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : 'border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20'
+              onClick={() => setSelectedQuestion(index)}
+              className={`w-full p-4 rounded-lg border text-left transition-all hover:shadow-md ${
+                result.isCorrect
+                  ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 hover:border-green-300 dark:hover:border-green-700'
+                  : 'border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-700'
               }`}
             >
               <div className="flex items-start justify-between">
@@ -169,6 +178,9 @@ export default function QuizResults({
                       {index + 1}
                     </span>
                     <span className="text-xs text-[var(--muted)]">{result.question.topic}</span>
+                    {result.question.subtopic && (
+                      <span className="text-xs text-[var(--muted)]">/ {result.question.subtopic}</span>
+                    )}
                   </div>
                   <p className="text-sm text-[var(--foreground)] line-clamp-2">{result.question.question}</p>
                   <div className="mt-2 text-xs">
@@ -177,22 +189,43 @@ export default function QuizResults({
                         {result.selectedAnswer}. {result.question.options[result.selectedAnswer]}
                       </span>
                     ) : (
-                      <span className="text-green-700 dark:text-green-300">
-                        Correct Answer: {result.question.correctAnswer}. {result.question.options[result.question.correctAnswer]}
-                      </span>
+                      <div className="space-y-1">
+                        <span className="text-red-700 dark:text-red-300 block">
+                          Your answer: {result.selectedAnswer}. {result.question.options[result.selectedAnswer]}
+                        </span>
+                        <span className="text-green-700 dark:text-green-300 block">
+                          Correct: {result.question.correctAnswer}. {result.question.options[result.question.correctAnswer]}
+                        </span>
+                      </div>
                     )}
                   </div>
                 </div>
-                <FeedbackButton
-                  questionId={result.question.id}
-                  section={result.question.section}
-                  variant="compact"
-                />
+                <div className="flex items-center space-x-2 ml-4">
+                  <FeedbackButton
+                    questionId={result.question.id}
+                    section={result.question.section}
+                    variant="compact"
+                  />
+                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
+
+      {/* Question Review Modal */}
+      {selectedQuestion !== null && results[selectedQuestion] && (
+        <QuestionReview
+          question={results[selectedQuestion].question}
+          selectedAnswer={results[selectedQuestion].selectedAnswer}
+          isCorrect={results[selectedQuestion].isCorrect}
+          questionNumber={selectedQuestion + 1}
+          onClose={() => setSelectedQuestion(null)}
+        />
+      )}
 
       {/* Action Buttons */}
       <div className="flex flex-col sm:flex-row gap-4">

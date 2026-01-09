@@ -1,0 +1,212 @@
+{
+  "auditDate": "2026-01-09",
+  "summary": {
+    "totalFlagged": 14,
+    "questionsReworded": 8,
+    "questionsRemoved": 6,
+    "falsePositives": 1
+  },
+  "questionsReworded": [
+    {
+      "id": "far-inv-004",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Cost Flow Assumptions (FIFO, LIFO, Average)",
+      "conceptTested": "LIFO ending inventory calculation",
+      "difficulty": "medium",
+      "originalQuestion": "Using the same data: Beginning inventory: 100 units @ $10; Purchase 1: 150 units @ $12; Purchase 2: 200 units @ $14. If 300 units were sold, what is ending inventory under LIFO?",
+      "newQuestion": "A company has: Beginning inventory: 100 units @ $10; Purchase 1: 150 units @ $12; Purchase 2: 200 units @ $14. If 300 units were sold, what is ending inventory under LIFO?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "far-lease-007",
+      "section": "FAR",
+      "topic": "Leases",
+      "subtopic": "Lessee Accounting - Finance Lease",
+      "conceptTested": "Finance lease amortization schedule",
+      "difficulty": "hard",
+      "originalQuestion": "Using the previous example (lease liability $42,124, 6% rate, $10,000 annual payment), what is Year 1 interest expense?",
+      "newQuestion": "A finance lease has an initial lease liability of $42,124, a 6% interest rate, and $10,000 annual payments. What is Year 1 interest expense?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "far-rev-adv-014",
+      "section": "FAR",
+      "topic": "Revenue Recognition",
+      "subtopic": "Non-refundable Upfront Fees",
+      "conceptTested": "Monthly revenue with upfront fee",
+      "difficulty": "medium",
+      "originalQuestion": "Using the previous question's facts ($300 upfront + $50/month × 12 months), what is the monthly revenue recognition?",
+      "newQuestion": "A gym membership requires a $300 non-refundable upfront fee plus $50/month for 12 months. The upfront fee does not provide any distinct benefit. What is the monthly revenue recognition?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "far-inv-adv-009",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Retail Method",
+      "conceptTested": "Ending inventory calculation",
+      "difficulty": "hard",
+      "originalQuestion": "Using the previous data (66.7% ratio), if ending inventory at retail is $75,000, what is ending inventory at cost?",
+      "newQuestion": "A retailer uses the retail inventory method with a cost-to-retail ratio of 66.7%. If ending inventory at retail is $75,000, what is ending inventory at cost?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "far-fi-011",
+      "section": "FAR",
+      "topic": "Investments",
+      "subtopic": "Equity Method",
+      "conceptTested": "Dividends received",
+      "difficulty": "medium",
+      "originalQuestion": "Using the previous example (30% ownership, $500,000 income, $100,000 dividends), what is the effect of dividends on the investment account?",
+      "newQuestion": "An investor owns 30% of an investee that reports $500,000 net income and declares $100,000 in total dividends. Under the equity method, what is the effect of the dividends on the investment account?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "far-calc1-035",
+      "section": "FAR",
+      "topic": "Ratios",
+      "subtopic": "Days Sales Outstanding",
+      "conceptTested": "Collection period",
+      "difficulty": "medium",
+      "originalQuestion": "Using the previous data (AR turnover = 12), what are days sales outstanding?",
+      "newQuestion": "A company has an accounts receivable turnover ratio of 12 times per year. What are the days sales outstanding (DSO)?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "reg-007-034",
+      "section": "REG",
+      "topic": "Property Transactions",
+      "subtopic": "Like-Kind Exchanges",
+      "conceptTested": "Basis calculation comprehensive",
+      "difficulty": "hard",
+      "originalQuestion": "Using the same facts (basis $100K, FMV given $250K, received property $220K + $30K cash), the basis of the replacement property is:",
+      "newQuestion": "In a like-kind exchange, a taxpayer exchanges property with a basis of $100,000 and FMV of $250,000 for property worth $220,000 plus $30,000 cash. What is the basis of the replacement property?",
+      "action": "REWORDED"
+    },
+    {
+      "id": "tcp-013-014",
+      "section": "TCP",
+      "topic": "Charitable Giving",
+      "subtopic": "Bargain Sales",
+      "conceptTested": "Gain recognition in bargain sale",
+      "difficulty": "medium",
+      "originalQuestion": "Using the same facts (basis $40,000, FMV $100,000, sale price $60,000), what gain must the taxpayer recognize on the bargain sale?",
+      "newQuestion": "A taxpayer makes a bargain sale to a charity, selling property with a basis of $40,000 and FMV of $100,000 for $60,000. What gain must the taxpayer recognize?",
+      "action": "REWORDED"
+    }
+  ],
+  "questionsRemoved": [
+    {
+      "id": "far-inv-adv-002",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "Lower of Cost or NRV",
+      "conceptTested": "Writedown entry",
+      "difficulty": "medium",
+      "question": "Using the previous question, what is the required inventory writedown?",
+      "correctAnswer": "B",
+      "reason": "No data provided - depended on previous question for cost and NRV values",
+      "action": "REMOVED"
+    },
+    {
+      "id": "far-debt-004",
+      "section": "FAR",
+      "topic": "Long-term Debt",
+      "subtopic": "Discount Amortization",
+      "conceptTested": "Discount amortization calculation",
+      "difficulty": "hard",
+      "question": "Using the previous question, what is Year 1 discount amortization?",
+      "correctAnswer": "C",
+      "reason": "No data provided - depended on previous question for bond details",
+      "action": "REMOVED"
+    },
+    {
+      "id": "far-fsp-004",
+      "section": "FAR",
+      "topic": "Balance Sheet",
+      "subtopic": "Liquidity Ratios",
+      "conceptTested": "Current ratio",
+      "difficulty": "easy",
+      "question": "Using the previous question's data, what is the current ratio?",
+      "correctAnswer": "C",
+      "reason": "No data provided - depended on previous question for current assets/liabilities",
+      "action": "REMOVED"
+    },
+    {
+      "id": "far-fsp-023",
+      "section": "FAR",
+      "topic": "Income Statement",
+      "subtopic": "Operating Income",
+      "conceptTested": "Operating income calculation",
+      "difficulty": "easy",
+      "question": "Using the previous question, what is operating income?",
+      "correctAnswer": "A",
+      "reason": "No data provided - depended on previous question for gross profit and operating expenses",
+      "action": "REMOVED"
+    },
+    {
+      "id": "far-calc1-005",
+      "section": "FAR",
+      "topic": "Inventory",
+      "subtopic": "FIFO vs LIFO",
+      "conceptTested": "LIFO ending inventory",
+      "difficulty": "hard",
+      "question": "Using the previous data, what is LIFO ending inventory?",
+      "correctAnswer": "A",
+      "reason": "No data provided - depended on previous question for purchase data",
+      "action": "REMOVED"
+    },
+    {
+      "id": "far-calc1-010",
+      "section": "FAR",
+      "topic": "Revenue",
+      "subtopic": "Percentage of Completion",
+      "conceptTested": "Gross profit to date",
+      "difficulty": "hard",
+      "question": "Using the previous data, what is gross profit recognized to date?",
+      "correctAnswer": "B",
+      "reason": "No data provided - depended on previous question for contract and cost data",
+      "action": "REMOVED"
+    }
+  ],
+  "falsePositives": [
+    {
+      "id": "isc-014-026",
+      "section": "ISC",
+      "topic": "Comprehensive Review",
+      "subtopic": "Application Controls",
+      "conceptTested": "Concurrent update controls",
+      "question": "When multiple users attempt to update the same database record simultaneously, proper application controls should:",
+      "reason": "Matched 'same' pattern but refers to 'same database record' in the scenario, not a previous question",
+      "action": "NO_CHANGE"
+    }
+  ],
+  "replacementRecommendations": {
+    "FAR - Inventory": {
+      "count": 2,
+      "concepts": ["Writedown entry", "LIFO ending inventory"],
+      "difficulties": ["medium", "hard"]
+    },
+    "FAR - Long-term Debt": {
+      "count": 1,
+      "concepts": ["Discount amortization calculation"],
+      "difficulties": ["hard"]
+    },
+    "FAR - Balance Sheet": {
+      "count": 1,
+      "concepts": ["Current ratio"],
+      "difficulties": ["easy"]
+    },
+    "FAR - Income Statement": {
+      "count": 1,
+      "concepts": ["Operating income calculation"],
+      "difficulties": ["easy"]
+    },
+    "FAR - Revenue": {
+      "count": 1,
+      "concepts": ["Gross profit to date"],
+      "difficulties": ["hard"]
+    }
+  }
+}

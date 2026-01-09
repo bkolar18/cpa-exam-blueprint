@@ -82,6 +82,18 @@ export interface PracticeAttempt {
   created_at: string;
 }
 
+export interface QuestionNote {
+  id: string;
+  user_id: string;
+  question_id: string;
+  section: SectionCode;
+  topic: string;
+  subtopic: string | null;
+  note: string;
+  created_at: string;
+  updated_at: string;
+}
+
 // Dashboard aggregated types
 export interface DashboardStats {
   totalStudyHours: number;

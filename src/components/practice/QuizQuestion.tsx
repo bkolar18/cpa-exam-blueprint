@@ -42,18 +42,7 @@ export default function QuizQuestion({
     onNext();
   };
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'easy':
-        return 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300';
-      case 'hard':
-        return 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300';
-      default:
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
-    }
-  };
+  // Difficulty colors removed - hiding difficulty from students
 
   const getOptionClass = (option: 'A' | 'B' | 'C' | 'D') => {
     const baseClass = "w-full p-4 text-left rounded-lg border-2 transition-all duration-200 flex items-start space-x-3";
@@ -84,9 +73,7 @@ export default function QuizQuestion({
             <span className="text-sm font-medium text-[var(--muted)]">
               Question {questionNumber} of {totalQuestions}
             </span>
-            <span className={`px-2 py-1 rounded text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
-              {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
-            </span>
+            {/* Difficulty hidden - let adaptive model handle question selection */}
           </div>
           <span className="text-sm text-[var(--primary)] font-medium">{question.topic}</span>
         </div>

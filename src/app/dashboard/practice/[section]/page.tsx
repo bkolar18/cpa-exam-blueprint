@@ -13,6 +13,7 @@ import {
   getRandomQuestions,
   getTopicsForSection,
   getSubtopicsForSection,
+  getQuestionById,
   sectionHasQuestions,
   questionSets,
   PracticeQuestion,
@@ -26,7 +27,22 @@ interface QuizResult {
   isCorrect: boolean;
 }
 
+interface SavedSession {
+  section: string;
+  questionIds: string[];
+  currentIndex: number;
+  results: Array<{
+    questionId: string;
+    selectedAnswer: 'A' | 'B' | 'C' | 'D';
+    isCorrect: boolean;
+  }>;
+  startTime: string;
+  savedAt: string;
+}
+
 type QuizState = 'setup' | 'quiz' | 'results';
+
+const SAVED_SESSION_KEY = 'cpa-practice-session';
 
 const sectionNames: Record<string, string> = {
   far: 'Financial Accounting & Reporting',
@@ -54,15 +70,110 @@ export default function SectionPracticePage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [results, setResults] = useState<QuizResult[]>([]);
   const [studySessionLogged, setStudySessionLogged] = useState(false);
+  const [savedSession, setSavedSession] = useState<SavedSession | null>(null);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   // Quiz timing
   const quizStartTime = useRef<Date | null>(null);
+
+  // Check for saved session on mount
+  useEffect(() => {
+    const saved = localStorage.getItem(SAVED_SESSION_KEY);
+    if (saved) {
+      try {
+        const parsed: SavedSession = JSON.parse(saved);
+        // Only show if it's for the current section
+        if (parsed.section === section) {
+          setSavedSession(parsed);
+        }
+      } catch {
+        localStorage.removeItem(SAVED_SESSION_KEY);
+      }
+    }
+  }, [section]);
+
+  // Save session to localStorage
+  const saveSession = () => {
+    const session: SavedSession = {
+      section,
+      questionIds: questions.map(q => q.id),
+      currentIndex: currentQuestionIndex,
+      results: results.map(r => ({
+        questionId: r.question.id,
+        selectedAnswer: r.selectedAnswer,
+        isCorrect: r.isCorrect,
+      })),
+      startTime: quizStartTime.current?.toISOString() || new Date().toISOString(),
+      savedAt: new Date().toISOString(),
+    };
+    localStorage.setItem(SAVED_SESSION_KEY, JSON.stringify(session));
+  };
+
+  // Resume saved session
+  const resumeSession = () => {
+    if (!savedSession) return;
+
+    // Reconstruct questions from IDs
+    const resumedQuestions = savedSession.questionIds
+      .map(id => getQuestionById(id))
+      .filter((q): q is PracticeQuestion => q !== undefined);
+
+    if (resumedQuestions.length === 0) {
+      localStorage.removeItem(SAVED_SESSION_KEY);
+      setSavedSession(null);
+      return;
+    }
+
+    // Reconstruct results
+    const resumedResults: QuizResult[] = savedSession.results
+      .map(r => {
+        const question = resumedQuestions.find(q => q.id === r.questionId);
+        if (!question) return null;
+        return {
+          question,
+          selectedAnswer: r.selectedAnswer,
+          isCorrect: r.isCorrect,
+        };
+      })
+      .filter((r): r is QuizResult => r !== null);
+
+    setQuestions(resumedQuestions);
+    setCurrentQuestionIndex(savedSession.currentIndex);
+    setResults(resumedResults);
+    quizStartTime.current = new Date(savedSession.startTime);
+    setQuizState('quiz');
+    setSavedSession(null);
+  };
+
+  // Discard saved session
+  const discardSession = () => {
+    localStorage.removeItem(SAVED_SESSION_KEY);
+    setSavedSession(null);
+  };
+
+  // Clear saved session (when quiz completes)
+  const clearSavedSession = () => {
+    localStorage.removeItem(SAVED_SESSION_KEY);
+  };
+
+  // Handle save and exit
+  const handleSaveAndExit = () => {
+    saveSession();
+    setShowExitConfirm(false);
+    router.push('/dashboard/practice');
+  };
+
+  // Handle exit without saving
+  const handleExitWithoutSaving = () => {
+    setShowExitConfirm(false);
+    router.push('/dashboard/practice');
+  };
 
   // Quiz setup options
   const [questionCount, setQuestionCount] = useState(10);
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [selectedSubtopic, setSelectedSubtopic] = useState<string>('all');
-  const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
+  // Difficulty filter removed - let adaptive model handle question selection
 
   const topics = getTopicsForSection(section);
   const subtopics = getSubtopicsForSection(section, selectedTopic === 'all' ? undefined : selectedTopic);
@@ -75,10 +186,10 @@ export default function SectionPracticePage() {
   }, [selectedTopic]);
 
   const startQuiz = () => {
-    const options: { topic?: string; subtopic?: string; difficulty?: 'easy' | 'medium' | 'hard' } = {};
+    const options: { topic?: string; subtopic?: string } = {};
     if (selectedTopic !== 'all') options.topic = selectedTopic;
     if (selectedSubtopic !== 'all') options.subtopic = selectedSubtopic;
-    if (selectedDifficulty !== 'all') options.difficulty = selectedDifficulty as 'easy' | 'medium' | 'hard';
+    // Difficulty filter removed - let adaptive model handle question selection
 
     const quizQuestions = getRandomQuestions(section, questionCount, options);
 
@@ -161,9 +272,10 @@ export default function SectionPracticePage() {
     }
   };
 
-  // Log study session when quiz completes
+  // Log study session when quiz completes and clear saved session
   useEffect(() => {
     if (quizState === 'results' && results.length > 0 && !studySessionLogged) {
+      clearSavedSession();
       logPracticeSession(results);
     }
   }, [quizState, results, studySessionLogged]);
@@ -265,6 +377,41 @@ export default function SectionPracticePage() {
 
       {quizState === 'setup' && (
         <>
+          {/* Saved Session Banner */}
+          {savedSession && (
+            <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-xl p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-amber-100 dark:bg-amber-800 rounded-lg flex items-center justify-center">
+                    <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-amber-800 dark:text-amber-200">Resume Previous Session</h3>
+                    <p className="text-sm text-amber-600 dark:text-amber-400">
+                      You have an unfinished quiz ({savedSession.currentIndex}/{savedSession.questionIds.length} questions completed)
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={discardSession}
+                    className="px-4 py-2 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-800 rounded-lg transition-colors"
+                  >
+                    Discard
+                  </button>
+                  <button
+                    onClick={resumeSession}
+                    className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
+                  >
+                    Resume
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Header */}
           <div className="bg-gradient-to-r from-[var(--primary)] to-blue-600 rounded-xl p-6 text-white">
             <div className="flex items-center space-x-4">
@@ -282,7 +429,7 @@ export default function SectionPracticePage() {
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-[var(--foreground)] mb-6">Configure Your Quiz</h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {/* Question Count */}
               <div>
                 <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
@@ -335,22 +482,7 @@ export default function SectionPracticePage() {
                 </select>
               </div>
 
-              {/* Difficulty Filter */}
-              <div>
-                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
-                  Difficulty
-                </label>
-                <select
-                  value={selectedDifficulty}
-                  onChange={(e) => setSelectedDifficulty(e.target.value)}
-                  className="w-full px-4 py-2 border border-[var(--border)] dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
-                >
-                  <option value="all">All Difficulties</option>
-                  <option value="easy">Easy</option>
-                  <option value="medium">Medium</option>
-                  <option value="hard">Hard</option>
-                </select>
-              </div>
+              {/* Difficulty filter removed - let adaptive model handle question selection */}
             </div>
 
             <button
@@ -379,14 +511,29 @@ export default function SectionPracticePage() {
       )}
 
       {quizState === 'quiz' && questions.length > 0 && (
-        <QuizQuestion
-          question={questions[currentQuestionIndex]}
-          questionNumber={currentQuestionIndex + 1}
-          totalQuestions={questions.length}
-          onAnswer={handleAnswer}
-          onNext={handleNext}
-          isLast={currentQuestionIndex === questions.length - 1}
-        />
+        <>
+          {/* Exit Button */}
+          <div className="flex justify-end">
+            <button
+              onClick={() => setShowExitConfirm(true)}
+              className="flex items-center space-x-2 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+              <span>Exit Quiz</span>
+            </button>
+          </div>
+
+          <QuizQuestion
+            question={questions[currentQuestionIndex]}
+            questionNumber={currentQuestionIndex + 1}
+            totalQuestions={questions.length}
+            onAnswer={handleAnswer}
+            onNext={handleNext}
+            isLast={currentQuestionIndex === questions.length - 1}
+          />
+        </>
       )}
 
       {quizState === 'results' && (
@@ -398,6 +545,47 @@ export default function SectionPracticePage() {
           onNewQuiz={handleNewQuiz}
           studySessionLogged={studySessionLogged}
         />
+      )}
+
+      {/* Exit Confirmation Modal */}
+      {showExitConfirm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-md w-full p-6">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-[var(--foreground)]">Exit Quiz?</h3>
+            </div>
+
+            <p className="text-[var(--muted)] mb-6">
+              You&apos;ve completed {results.length} of {questions.length} questions. Would you like to save your progress and resume later?
+            </p>
+
+            <div className="flex flex-col space-y-3">
+              <button
+                onClick={handleSaveAndExit}
+                className="w-full py-3 bg-[var(--primary)] text-white rounded-lg font-semibold hover:bg-[var(--primary-dark)] transition-colors"
+              >
+                Save & Exit
+              </button>
+              <button
+                onClick={handleExitWithoutSaving}
+                className="w-full py-3 border border-[var(--border)] dark:border-gray-600 text-[var(--foreground)] rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                Exit Without Saving
+              </button>
+              <button
+                onClick={() => setShowExitConfirm(false)}
+                className="w-full py-3 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+              >
+                Continue Quiz
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

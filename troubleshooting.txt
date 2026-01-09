@@ -1,38 +1,78 @@
-10:21:47.289 Running build in Washington, D.C., USA (East) – iad1
-10:21:47.297 Build machine configuration: 2 cores, 8 GB
-10:21:47.623 Cloning github.com/bkolar18/The-Wedding-Concierge (Branch: main, Commit: 3eb463c)
-10:21:49.294 Cloning completed: 1.671s
-10:21:49.677 Restored build cache from previous deployment (BEo3C97hXbNaegGNx4HMTZm6o6RS)
-10:21:50.400 Running "vercel build"
-10:21:50.901 Vercel CLI 50.1.5
-10:21:51.215 Installing dependencies...
-10:21:52.346 
-10:21:52.348 up to date in 928ms
-10:21:52.349 
-10:21:52.349 145 packages are looking for funding
-10:21:52.349   run `npm fund` for details
-10:21:52.375 Detected Next.js version: 16.1.1
-10:21:52.378 Running "npm run build"
-10:21:52.473 
-10:21:52.473 > frontend@0.1.0 build
-10:21:52.473 > next build
-10:21:52.473 
-10:21:53.461 ▲ Next.js 16.1.1 (Turbopack)
-10:21:53.462 
-10:21:53.498   Creating an optimized production build ...
-10:22:00.494 ✓ Compiled successfully in 6.5s
-10:22:00.498   Running TypeScript ...
-10:22:06.302 Failed to compile.
-10:22:06.302 
-10:22:06.302 ./src/app/setup/page.tsx:419:13
-10:22:06.302 Type error: Object literal may only specify known properties, and 'website_url' does not exist in type 'AccommodationCreateData'.
-10:22:06.302 
-10:22:06.302 [0m [90m 417 |[39m             address[33m:[39m acc[33m.[39maddress [33m||[39m undefined[33m,[39m
-10:22:06.302  [90m 418 |[39m             phone[33m:[39m acc[33m.[39mphone [33m||[39m undefined[33m,[39m
-10:22:06.302 [31m[1m>[22m[39m[90m 419 |[39m             website_url[33m:[39m acc[33m.[39mwebsite_url [33m||[39m undefined[33m,[39m
-10:22:06.302  [90m     |[39m             [31m[1m^[22m[39m
-10:22:06.302  [90m 420 |[39m             booking_url[33m:[39m acc[33m.[39mbooking_url [33m||[39m undefined[33m,[39m
-10:22:06.303  [90m 421 |[39m             has_room_block[33m:[39m acc[33m.[39mhas_room_block[33m,[39m
-10:22:06.303  [90m 422 |[39m             room_block_name[33m:[39m acc[33m.[39mroom_block_name [33m||[39m undefined[33m,[39m[0m
-10:22:06.334 Next.js build worker exited with code: 1 and signal: null
-10:22:06.375 Error: Command "npm run build" exited with 1
+
+CPA
+CPA Exam Blueprint
+
+Exam Sections
+
+Resources
+About
+Log In
+Build My Study Plan
+
+Back to TBS List
+Test Mode - No Auth Required
+FAR
+TBS 1/1
+Recording a Finance Lease
+0/4
+
+
+
+
+
+
+11:53
+
+Submit
+Review Before Submitting
+Review your answers below. Click on any item to return to it.
+
+4
+Total Items
+0
+Complete
+0
+Partial
+4
+Unanswered
+Time Remaining
+11:53
+Answer Status
+
+1.
+Debit Account
+(1 pt)
+Unanswered
+
+2.
+Debit Amount
+(1 pt)
+Unanswered
+
+3.
+Credit Account
+(1 pt)
+Unanswered
+
+4.
+Credit Amount
+(1 pt)
+Unanswered
+You have 4 unanswered items
+
+Unanswered items will receive zero points. Click on any item above to complete it before submitting.
+
+Return to Questions
+Submit Anyway
+CPA
+CPA Exam Blueprint
+Study Plan
+CPA While Working
+Get Started
+About
+Sections:
+FAR
+AUD
+REG
+TCP
+© 2026 CPA Exam Blueprint

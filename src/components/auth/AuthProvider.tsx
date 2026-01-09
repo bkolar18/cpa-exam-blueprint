@@ -15,14 +15,7 @@ interface AuthContextType {
   refreshProfile: () => Promise<void>;
 }
 
-const AuthContext = createContext<AuthContextType>({
-  user: null,
-  profile: null,
-  session: null,
-  loading: true,
-  signOut: async () => {},
-  refreshProfile: async () => {},
-});
+const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
@@ -153,4 +146,18 @@ export const useAuth = () => {
     throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
+};
+
+// Optional version that returns null values instead of throwing when outside AuthProvider
+export const useAuthOptional = () => {
+  const context = useContext(AuthContext);
+  // Return safe defaults when outside AuthProvider
+  return context ?? {
+    user: null,
+    profile: null,
+    session: null,
+    loading: false,
+    signOut: async () => {},
+    refreshProfile: async () => {},
+  };
 };

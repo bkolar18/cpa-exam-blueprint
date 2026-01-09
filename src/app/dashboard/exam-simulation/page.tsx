@@ -90,7 +90,7 @@ export default function ExamSimulationPage() {
             <h2 className="text-2xl font-bold mb-2">Simulate Real Exam Conditions</h2>
             <p className="text-white/80 max-w-xl">
               Practice with timed exams that match the CPA exam format. Questions are selected
-              using realistic difficulty distributions (17% easy, 55% medium, 28% hard).
+              using a realistic distribution that mirrors the actual CPA exam.
             </p>
           </div>
           <div className="hidden md:block">
@@ -163,7 +163,7 @@ export default function ExamSimulationPage() {
                 <svg className="w-4 h-4 mr-2 mt-0.5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Choose specific topics/difficulties
+                Choose specific topics
               </li>
               <li className="flex items-start">
                 <svg className="w-4 h-4 mr-2 mt-0.5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">

@@ -1,7 +1,21 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { determineSegments, getSegmentEmail, generateSegmentEmailHtml } from "@/lib/email/segment-content";
 import { nurtureSequence, generateNurtureEmailHtml } from "@/lib/email/nurture-sequence";
+
+// Lazy initialization to avoid build-time errors
+let supabaseAdmin: SupabaseClient | null = null;
+
+function getSupabaseAdmin(): SupabaseClient {
+  if (!supabaseAdmin) {
+    supabaseAdmin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+  }
+  return supabaseAdmin;
+}
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -183,6 +197,40 @@ export async function POST(request: Request) {
 </html>
       `,
     });
+
+    // Enroll user in email nurture sequence
+    const now = new Date();
+    const nextEmailDate = new Date(now);
+    nextEmailDate.setDate(nextEmailDate.getDate() + 3); // First follow-up is day 3
+    nextEmailDate.setHours(9, 0, 0, 0);
+
+    try {
+      const db = getSupabaseAdmin();
+      // Check if user already exists in sequence
+      const { data: existing } = await db
+        .from('email_sequence_progress')
+        .select('id')
+        .eq('email', data.email.toLowerCase().trim())
+        .single();
+
+      if (!existing) {
+        // Create new sequence progress record
+        await db.from('email_sequence_progress').insert({
+          email: data.email.toLowerCase().trim(),
+          sequence_type: 'welcome',
+          current_email_id: 1, // Just received the study plan (counts as email 1)
+          last_email_sent_at: now.toISOString(),
+          next_email_scheduled_at: nextEmailDate.toISOString(),
+          signup_date: now.toISOString(),
+          segments: userSegments,
+          total_emails_sent: 1,
+          is_active: true,
+        });
+      }
+    } catch (dbError) {
+      // Log but don't fail the request if DB insert fails
+      console.error('Error enrolling in nurture sequence:', dbError);
+    }
 
     return NextResponse.json({
       success: true,
