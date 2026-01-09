@@ -57,7 +57,7 @@ export function AchievementItem({
         <div className="flex items-center gap-2 mb-0.5">
           <h4
             className={`font-bold truncate ${
-              isUnlocked ? "text-green-600" : "text-[var(--muted-foreground)]"
+              isUnlocked ? "text-green-600 dark:text-green-400" : "text-[var(--muted-foreground)]"
             }`}
           >
             {name}
@@ -87,13 +87,13 @@ export function AchievementItem({
       <div className="text-right flex-shrink-0">
         <div
           className={`font-bold ${
-            isUnlocked ? "text-green-600" : "text-[var(--muted-foreground)]"
+            isUnlocked ? "text-green-600 dark:text-green-400" : "text-[var(--muted-foreground)]"
           }`}
         >
           +{points} pts
         </div>
         {isUnlocked && unlockedAt && (
-          <div className="text-xs text-green-600">
+          <div className="text-xs text-green-600 dark:text-green-400">
             {new Date(unlockedAt).toLocaleDateString()}
           </div>
         )}

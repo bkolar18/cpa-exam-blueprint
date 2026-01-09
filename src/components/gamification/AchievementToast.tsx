@@ -59,9 +59,9 @@ export function AchievementToast({
       `}
     >
       <div
-        className="rounded-xl p-4 shadow-2xl border-2 bg-white"
+        className="rounded-xl p-4 shadow-2xl border-2 bg-white dark:bg-gray-800"
         style={{
-          backgroundImage: `linear-gradient(135deg, ${tierConfig.bgColor} 0%, rgba(255,255,255,1) 100%)`,
+          backgroundImage: `linear-gradient(135deg, ${tierConfig.bgColor} 0%, var(--toast-gradient-end, rgba(255,255,255,1)) 100%)`,
           borderColor: tierConfig.borderColor,
         }}
       >

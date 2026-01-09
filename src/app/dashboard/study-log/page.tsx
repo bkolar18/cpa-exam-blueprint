@@ -155,21 +155,21 @@ export default function StudyLogPage() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
           <p className="text-sm text-[var(--muted)]">This Week</p>
           <p className="text-2xl font-bold text-[var(--primary)]">{formatTime(weeklyHours)}</p>
         </div>
-        <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
           <p className="text-sm text-[var(--muted)]">Total Hours</p>
-          <p className="text-2xl font-bold text-green-600">{formatTime(totalHours)}</p>
+          <p className="text-2xl font-bold text-green-600 dark:text-green-400">{formatTime(totalHours)}</p>
         </div>
-        <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
           <p className="text-sm text-[var(--muted)]">Sessions This Week</p>
-          <p className="text-2xl font-bold text-purple-600">{thisWeekSessions.length}</p>
+          <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">{thisWeekSessions.length}</p>
         </div>
-        <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
           <p className="text-sm text-[var(--muted)]">Avg Per Session</p>
-          <p className="text-2xl font-bold text-orange-600">
+          <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
             {sessions.length > 0 ? formatTime(totalHours / sessions.length) : "0h"}
           </p>
         </div>
@@ -177,7 +177,7 @@ export default function StudyLogPage() {
 
       {/* Log Form */}
       {showForm && (
-        <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Log Study Session</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid md:grid-cols-3 gap-4">
@@ -188,7 +188,7 @@ export default function StudyLogPage() {
                 <select
                   value={formData.section}
                   onChange={(e) => setFormData({ ...formData, section: e.target.value as SectionCode })}
-                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                 >
                   {sections.map((s) => (
                     <option key={s} value={s}>{s}</option>
@@ -204,7 +204,7 @@ export default function StudyLogPage() {
                   value={formData.date}
                   onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                   max={new Date().toISOString().split("T")[0]}
-                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                 />
               </div>
               <div>
@@ -220,7 +220,7 @@ export default function StudyLogPage() {
                   onChange={(e) => setFormData({ ...formData, hours: e.target.value })}
                   placeholder="e.g., 2.5"
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                 />
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function StudyLogPage() {
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 placeholder="What did you study? Any topics or chapters?"
                 rows={2}
-                className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none resize-none"
+                className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none resize-none"
               />
             </div>
             <button
@@ -248,14 +248,14 @@ export default function StudyLogPage() {
       )}
 
       {/* Sessions List */}
-      <div className="bg-white rounded-xl border border-[var(--border)]">
-        <div className="p-6 border-b border-[var(--border)]">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700">
+        <div className="p-6 border-b border-[var(--border)] dark:border-gray-700">
           <h2 className="text-lg font-semibold text-[var(--foreground)]">Study History</h2>
         </div>
 
         {sessions.length === 0 ? (
           <div className="p-12 text-center">
-            <div className="w-16 h-16 bg-[var(--card)] rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-[var(--card)] dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-[var(--muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -266,7 +266,7 @@ export default function StudyLogPage() {
             </button>
           </div>
         ) : (
-          <div className="divide-y divide-[var(--border)]">
+          <div className="divide-y divide-[var(--border)] dark:divide-gray-700">
             {Object.entries(groupedSessions).map(([weekStart, weekSessions]) => {
               const weekTotal = weekSessions.reduce((sum, s) => sum + Number(s.hours), 0);
               const weekDate = new Date(weekStart);
@@ -287,7 +287,7 @@ export default function StudyLogPage() {
                     {weekSessions.map((session) => (
                       <div
                         key={session.id}
-                        className="flex items-center justify-between py-2 px-4 bg-[var(--card)] rounded-lg"
+                        className="flex items-center justify-between py-2 px-4 bg-[var(--card)] dark:bg-gray-700/50 rounded-lg"
                       >
                         <div className="flex items-center space-x-4">
                           <div className="w-12 h-12 bg-[var(--primary)] rounded-lg flex items-center justify-center">
