@@ -7,12 +7,13 @@
 
 ### Pending
 - [ ] Integrate TBS into exam simulations
-- [ ] Study Log page: rename "Manual Study Log" to "All Studying"; clicking practice session should go directly to that session
 - [ ] Scan site for dark mode issues and fix all locations
 - [ ] Fix study streak counter (showing 1 day after 2 consecutive days)
 - [ ] Update Overview page: refresh the 6 action bubbles with new features; make page more visually engaging
 
 ### Completed
+- [x] Study Log page: rename "Manual Study Log" to "All Studying"
+- [x] Clicking practice session now links directly to that session in history
 - [x] Rename "Practice" to "Multiple Choice Questions" in navigation
 - [x] Move Study Log below My Notes in Study dropdown
 - [x] Remove Exam dropdown; move NTS Tracker to Progress section

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { getQuestionById } from "@/lib/data/practice-questions";
 
@@ -83,8 +84,10 @@ function createSessionFromAttempts(attempts: PracticeAttempt[]): Session {
   };
 }
 
-export default function PracticeHistoryPage() {
+function PracticeHistoryContent() {
   const { user, loading: authLoading } = useAuth();
+  const searchParams = useSearchParams();
+  const sessionIdParam = searchParams.get("session");
   const [sessions, setSessions] = useState<Session[]>([]);
   const [selectedSession, setSelectedSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
@@ -98,6 +101,16 @@ export default function PracticeHistoryPage() {
       setLoading(false);
     }
   }, [user, authLoading]);
+
+  // Auto-select session from URL parameter
+  useEffect(() => {
+    if (sessionIdParam && sessions.length > 0 && !selectedSession) {
+      const targetSession = sessions.find(s => s.id === sessionIdParam);
+      if (targetSession) {
+        setSelectedSession(targetSession);
+      }
+    }
+  }, [sessionIdParam, sessions, selectedSession]);
 
   const fetchAttempts = async () => {
     if (!supabase || !user) {
@@ -383,5 +396,17 @@ export default function PracticeHistoryPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function PracticeHistoryPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+      </div>
+    }>
+      <PracticeHistoryContent />
+    </Suspense>
   );
 }

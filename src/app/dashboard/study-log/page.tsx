@@ -406,7 +406,7 @@ export default function StudyLogPage() {
               : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
           }`}
         >
-          Manual Log ({sessions.length})
+          All Studying ({sessions.length})
         </button>
       </div>
 
@@ -446,7 +446,7 @@ export default function StudyLogPage() {
                 {practiceSessions.slice(0, visiblePracticeSessions).map((session) => (
                   <Link
                     key={session.id}
-                    href="/dashboard/practice/history"
+                    href={`/dashboard/practice/history?session=${session.id}`}
                     className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
                   >
                     <div className="flex items-center space-x-4">
@@ -511,11 +511,11 @@ export default function StudyLogPage() {
         </div>
       )}
 
-      {/* Manual Study Log Tab */}
+      {/* All Studying Tab */}
       {activeTab === 'manual' && (
         <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700">
           <div className="p-6 border-b border-[var(--border)] dark:border-gray-700">
-            <h2 className="text-lg font-semibold text-[var(--foreground)]">Manual Study Log</h2>
+            <h2 className="text-lg font-semibold text-[var(--foreground)]">All Studying</h2>
             <p className="text-sm text-[var(--muted)] mt-1">
               Track additional study time (reading, flashcards, etc.)
             </p>
