@@ -13,6 +13,14 @@ interface BadgeCardProps {
   section?: string;
 }
 
+// Default fallback config for when tier is not found
+const DEFAULT_TIER_CONFIG = {
+  color: '#6b7280',
+  bgColor: 'rgba(107, 114, 128, 0.1)',
+  borderColor: 'rgba(107, 114, 128, 0.3)',
+  points: 0,
+};
+
 export function BadgeCard({
   name,
   description,
@@ -23,7 +31,7 @@ export function BadgeCard({
   earnedAt,
   section,
 }: BadgeCardProps) {
-  const tierConfig = TIER_CONFIG[tier];
+  const tierConfig = TIER_CONFIG[tier] || DEFAULT_TIER_CONFIG;
 
   return (
     <div

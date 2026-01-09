@@ -51,6 +51,7 @@ export default function TBSPracticePage() {
       testletTotal={1}
       onComplete={handleComplete}
       isPracticeMode={true}
+      onReturnToLibrary={() => router.push("/dashboard/simulations")}
     />
   );
 }

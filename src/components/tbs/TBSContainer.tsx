@@ -25,6 +25,7 @@ interface TBSContainerProps {
   onNext?: () => void;
   onPrevious?: () => void;
   isPracticeMode?: boolean;
+  onReturnToLibrary?: () => void;
 }
 
 type ViewMode = "work" | "review" | "results";
@@ -37,6 +38,7 @@ export default function TBSContainer({
   onNext,
   onPrevious,
   isPracticeMode = true,
+  onReturnToLibrary,
 }: TBSContainerProps) {
   // Auth and Supabase for saving notes (optional - works without auth provider for testing)
   const { user } = useAuthOptional();
@@ -638,6 +640,7 @@ export default function TBSContainer({
         onSubmit={handleSubmitAttempt}
         onPrevious={onPrevious}
         onNext={onNext}
+        onReturnToLibrary={onReturnToLibrary}
       />
 
       {/* Instructions - hide in review mode */}

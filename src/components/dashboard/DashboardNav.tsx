@@ -30,7 +30,6 @@ const groupedItems = [
     icon: "chart",
     items: [
       { href: "/dashboard/readiness", label: "Exam Readiness", icon: "readiness" },
-      { href: "/dashboard/sections", label: "My Sections", icon: "sections" },
       { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
     ],
   },
@@ -56,7 +55,6 @@ const allNavItems = [
   { href: "/dashboard/flagged-questions", label: "Flagged Questions", icon: "flag" },
   { href: "/dashboard/exam-simulation", label: "Exam Simulation", icon: "exam" },
   { href: "/dashboard/readiness", label: "Exam Readiness", icon: "readiness" },
-  { href: "/dashboard/sections", label: "My Sections", icon: "sections" },
   { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
   { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
   { href: "/dashboard/settings", label: "Settings", icon: "settings" },

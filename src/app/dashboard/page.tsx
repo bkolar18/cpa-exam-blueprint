@@ -292,10 +292,10 @@ export default function DashboardPage() {
           description="Track your daily study hours and topics"
         />
         <QuickActionCard
-          href="/dashboard/sections"
+          href="/dashboard/readiness"
           icon="sections"
-          title="Update Section Progress"
-          description="Mark sections as studying, scheduled, or passed"
+          title="Exam Readiness"
+          description="Track your progress and section status"
         />
         <QuickActionCard
           href="/dashboard/nts"

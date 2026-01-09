@@ -40,6 +40,7 @@ interface TBSHeaderProps {
   onSubmit: () => void;
   onPrevious?: () => void;
   onNext?: () => void;
+  onReturnToLibrary?: () => void;
 }
 
 function formatTime(seconds: number): string {
@@ -91,6 +92,7 @@ export default function TBSHeader({
   onSubmit,
   onPrevious,
   onNext,
+  onReturnToLibrary,
 }: TBSHeaderProps) {
   const remainingSeconds = Math.max(0, timeLimit - elapsedSeconds);
   const timeColor = getTimeColor(elapsedSeconds, timeLimit);
@@ -100,6 +102,20 @@ export default function TBSHeader({
       <div className="flex items-center justify-between">
         {/* Left: Section and Navigation */}
         <div className="flex items-center space-x-3">
+          {/* Return to Library Button */}
+          {onReturnToLibrary && (
+            <button
+              onClick={onReturnToLibrary}
+              className="flex items-center gap-1 px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors"
+              title="Return to Simulation Library"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+              </svg>
+              <span className="hidden sm:inline">Library</span>
+            </button>
+          )}
+
           {/* Section Badge */}
           <span className="px-2 py-0.5 bg-[var(--primary)] text-white text-xs font-semibold rounded">
             {section}

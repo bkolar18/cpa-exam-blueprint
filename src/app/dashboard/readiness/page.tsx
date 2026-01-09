@@ -1,13 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
 import Link from "next/link";
 import { allTaxonomies, type SectionTaxonomy } from "@/lib/data/practice-questions/taxonomy";
 import type { SectionCode } from "@/lib/supabase/types";
 
-const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
+// Core sections always shown
+const coreSections: SectionCode[] = ["FAR", "AUD", "REG"];
+// Discipline sections - only show the one user selected
+const disciplineSections: SectionCode[] = ["TCP", "BAR", "ISC"];
 
 interface PracticeAttempt {
   id: string;
@@ -76,12 +79,26 @@ function getNextMilestone(score: number) {
 }
 
 export default function ReadinessDashboardPage() {
-  const { user, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
   const [selectedSection, setSelectedSection] = useState<SectionCode>("FAR");
   const [readinessData, setReadinessData] = useState<Record<string, SectionReadiness>>({});
   const [confidenceData, setConfidenceData] = useState<ConfidenceData[]>([]);
   const [loading, setLoading] = useState(true);
   const supabase = createClient();
+
+  // Compute visible sections based on user's discipline choice
+  const visibleSections = useMemo(() => {
+    const disciplineChoice = profile?.discipline_choice;
+    if (!disciplineChoice) {
+      // No discipline chosen yet - show all sections
+      return [...coreSections, ...disciplineSections];
+    }
+    // Show core sections + only the chosen discipline
+    return [...coreSections, disciplineChoice as SectionCode];
+  }, [profile?.discipline_choice]);
+
+  // All sections for data fetching (we fetch all, display filtered)
+  const allSections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
 
   useEffect(() => {
     if (authLoading) return;
@@ -111,10 +128,10 @@ export default function ReadinessDashboardPage() {
       .eq("user_id", user.id)
       .not("confidence", "is", null);
 
-    // Process data for each section
+    // Process data for each section (fetch all, display will be filtered)
     const readiness: Record<string, SectionReadiness> = {};
 
-    for (const section of sections) {
+    for (const section of allSections) {
       const taxonomy = allTaxonomies[section];
       const sectionAttempts = (attempts || []).filter(a => a.section === section) as PracticeAttempt[];
 
@@ -280,8 +297,10 @@ export default function ReadinessDashboardPage() {
   const currentMilestone = currentReadiness ? getMilestone(currentReadiness.overallScore) : milestones[0];
   const nextMilestone = currentReadiness ? getNextMilestone(currentReadiness.overallScore) : milestones[1];
 
-  // Calculate overall readiness across all studied sections
-  const studiedSections = Object.values(readinessData).filter(r => r.totalAttempted > 0);
+  // Calculate overall readiness across visible studied sections only
+  const studiedSections = visibleSections
+    .map(s => readinessData[s])
+    .filter((r): r is SectionReadiness => r !== undefined && r.totalAttempted > 0);
   const overallReadiness = studiedSections.length > 0
     ? Math.round(studiedSections.reduce((sum, r) => sum + r.overallScore, 0) / studiedSections.length)
     : 0;
@@ -311,7 +330,7 @@ export default function ReadinessDashboardPage() {
 
       {/* Section Selector */}
       <div className="flex flex-wrap gap-2">
-        {sections.map((section) => {
+        {visibleSections.map((section) => {
           const data = readinessData[section];
           const score = data?.overallScore || 0;
           const milestone = getMilestone(score);
@@ -333,6 +352,20 @@ export default function ReadinessDashboardPage() {
             </button>
           );
         })}
+
+        {/* Show hint when discipline not selected */}
+        {!profile?.discipline_choice && (
+          <Link
+            href="/dashboard/settings"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Select your discipline in Settings
+          </Link>
+        )}
       </div>
 
       {currentReadiness && (

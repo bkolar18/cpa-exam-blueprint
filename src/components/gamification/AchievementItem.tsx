@@ -12,6 +12,14 @@ interface AchievementItemProps {
   unlockedAt: string | null | undefined;
 }
 
+// Default fallback config for when tier is not found
+const DEFAULT_TIER_CONFIG = {
+  color: '#6b7280',
+  bgColor: 'rgba(107, 114, 128, 0.1)',
+  borderColor: 'rgba(107, 114, 128, 0.3)',
+  points: 0,
+};
+
 export function AchievementItem({
   name,
   description,
@@ -21,7 +29,7 @@ export function AchievementItem({
   isHidden,
   unlockedAt,
 }: AchievementItemProps) {
-  const tierConfig = TIER_CONFIG[tier];
+  const tierConfig = TIER_CONFIG[tier] || DEFAULT_TIER_CONFIG;
 
   // For hidden achievements that are NOT unlocked, show "???" as description
   const displayDescription = isHidden && !isUnlocked ? "???" : description;
