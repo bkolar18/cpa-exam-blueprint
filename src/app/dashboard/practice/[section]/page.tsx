@@ -12,6 +12,7 @@ import {
   getQuestionsBySection,
   getRandomQuestions,
   getTopicsForSection,
+  getSubtopicsForSection,
   sectionHasQuestions,
   questionSets,
   PracticeQuestion,
@@ -60,15 +61,23 @@ export default function SectionPracticePage() {
   // Quiz setup options
   const [questionCount, setQuestionCount] = useState(10);
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
+  const [selectedSubtopic, setSelectedSubtopic] = useState<string>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
 
   const topics = getTopicsForSection(section);
+  const subtopics = getSubtopicsForSection(section, selectedTopic === 'all' ? undefined : selectedTopic);
   const hasQuestions = sectionHasQuestions(section);
   const totalAvailable = getQuestionsBySection(section).length;
 
+  // Reset subtopic when topic changes
+  useEffect(() => {
+    setSelectedSubtopic('all');
+  }, [selectedTopic]);
+
   const startQuiz = () => {
-    const options: { topic?: string; difficulty?: 'easy' | 'medium' | 'hard' } = {};
+    const options: { topic?: string; subtopic?: string; difficulty?: 'easy' | 'medium' | 'hard' } = {};
     if (selectedTopic !== 'all') options.topic = selectedTopic;
+    if (selectedSubtopic !== 'all') options.subtopic = selectedSubtopic;
     if (selectedDifficulty !== 'all') options.difficulty = selectedDifficulty as 'easy' | 'medium' | 'hard';
 
     const quizQuestions = getRandomQuestions(section, questionCount, options);
@@ -273,7 +282,7 @@ export default function SectionPracticePage() {
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-[var(--foreground)] mb-6">Configure Your Quiz</h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Question Count */}
               <div>
                 <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
@@ -305,6 +314,23 @@ export default function SectionPracticePage() {
                   <option value="all">All Topics</option>
                   {topics.map(topic => (
                     <option key={topic} value={topic}>{topic}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Subtopic Filter */}
+              <div>
+                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+                  Subtopic
+                </label>
+                <select
+                  value={selectedSubtopic}
+                  onChange={(e) => setSelectedSubtopic(e.target.value)}
+                  className="w-full px-4 py-2 border border-[var(--border)] dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                >
+                  <option value="all">All Subtopics</option>
+                  {subtopics.map(subtopic => (
+                    <option key={subtopic} value={subtopic}>{subtopic}</option>
                   ))}
                 </select>
               </div>

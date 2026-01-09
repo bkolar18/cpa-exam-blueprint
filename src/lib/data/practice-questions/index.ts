@@ -51,6 +51,7 @@ export function getRandomQuestions(
   count: number,
   options?: {
     topic?: string;
+    subtopic?: string;
     difficulty?: 'easy' | 'medium' | 'hard';
   }
 ): PracticeQuestion[] {
@@ -58,6 +59,9 @@ export function getRandomQuestions(
 
   if (options?.topic) {
     questions = questions.filter(q => q.topic === options.topic);
+  }
+  if (options?.subtopic) {
+    questions = questions.filter(q => q.subtopic === options.subtopic);
   }
   if (options?.difficulty) {
     questions = questions.filter(q => q.difficulty === options.difficulty);
@@ -85,6 +89,19 @@ export function getQuestionById(id: string): PracticeQuestion | undefined {
 export function getTopicsForSection(section: SectionCode): string[] {
   const questionSet = questionSets[section];
   return questionSet?.topics || [];
+}
+
+// Get subtopics for a section, optionally filtered by topic
+export function getSubtopicsForSection(section: SectionCode, topic?: string): string[] {
+  const questions = getQuestionsBySection(section);
+  const filteredQuestions = topic ? questions.filter(q => q.topic === topic) : questions;
+  const subtopics = new Set<string>();
+  filteredQuestions.forEach(q => {
+    if (q.subtopic) {
+      subtopics.add(q.subtopic);
+    }
+  });
+  return [...subtopics].sort();
 }
 
 // Get question count by section
