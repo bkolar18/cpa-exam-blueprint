@@ -220,9 +220,9 @@ export default function SectionPracticePage() {
           <span>{section}</span>
         </div>
 
-        <div className="bg-white rounded-xl border border-[var(--border)] p-8 text-center">
-          <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-8 text-center">
+          <div className="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-8 h-8 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
           </div>
@@ -270,7 +270,7 @@ export default function SectionPracticePage() {
           </div>
 
           {/* Quiz Setup */}
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-[var(--foreground)] mb-6">Configure Your Quiz</h2>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -282,7 +282,7 @@ export default function SectionPracticePage() {
                 <select
                   value={questionCount}
                   onChange={(e) => setQuestionCount(Number(e.target.value))}
-                  className="w-full px-4 py-2 border border-[var(--border)] rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-[var(--border)] dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
                 >
                   <option value={5}>5 questions</option>
                   <option value={10}>10 questions</option>
@@ -300,7 +300,7 @@ export default function SectionPracticePage() {
                 <select
                   value={selectedTopic}
                   onChange={(e) => setSelectedTopic(e.target.value)}
-                  className="w-full px-4 py-2 border border-[var(--border)] rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-[var(--border)] dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
                 >
                   <option value="all">All Topics</option>
                   {topics.map(topic => (
@@ -317,7 +317,7 @@ export default function SectionPracticePage() {
                 <select
                   value={selectedDifficulty}
                   onChange={(e) => setSelectedDifficulty(e.target.value)}
-                  className="w-full px-4 py-2 border border-[var(--border)] rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-[var(--border)] dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
                 >
                   <option value="all">All Difficulties</option>
                   <option value="easy">Easy</option>
@@ -336,7 +336,7 @@ export default function SectionPracticePage() {
           </div>
 
           {/* Topics Overview */}
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Topics Covered</h2>
             <div className="flex flex-wrap gap-2">
               {topics.map(topic => (
