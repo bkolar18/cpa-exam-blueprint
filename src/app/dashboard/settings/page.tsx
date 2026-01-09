@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { useProfileAchievements } from "@/components/gamification/AchievementProvider";
 import { getAllStates } from "@/lib/data/state-requirements";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 export default function SettingsPage() {
   const { user, profile, refreshProfile, loading: authLoading } = useAuth();
@@ -88,7 +89,7 @@ export default function SettingsPage() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Profile Section */}
-        <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Profile</h2>
 
           <div className="space-y-4">
@@ -141,8 +142,23 @@ export default function SettingsPage() {
           </div>
         </div>
 
+        {/* Appearance */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
+          <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Appearance</h2>
+
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-[var(--foreground)]">Theme</p>
+              <p className="text-xs text-[var(--muted)] mt-1">
+                Choose light, dark, or follow your system preference
+              </p>
+            </div>
+            <ThemeToggle showLabel />
+          </div>
+        </div>
+
         {/* Study Preferences */}
-        <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Study Preferences</h2>
 
           <div className="space-y-4">
@@ -231,9 +247,9 @@ export default function SettingsPage() {
       </form>
 
       {/* Danger Zone */}
-      <div className="mt-12 bg-red-50 rounded-xl border border-red-200 p-6">
-        <h2 className="text-lg font-semibold text-red-800 mb-2">Danger Zone</h2>
-        <p className="text-sm text-red-700 mb-4">
+      <div className="mt-12 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-200 dark:border-red-800 p-6">
+        <h2 className="text-lg font-semibold text-red-800 dark:text-red-400 mb-2">Danger Zone</h2>
+        <p className="text-sm text-red-700 dark:text-red-300 mb-4">
           Once you delete your account, there is no going back. Please be certain.
         </p>
         <button
