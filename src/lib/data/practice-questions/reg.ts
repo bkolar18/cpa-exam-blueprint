@@ -28257,7 +28257,7 @@ export const regQuestions: QuestionSet = {
   section: 'REG',
   sectionName: 'Regulation',
   topics: [
-      "Alternative Minimum Tax",
+      "AMT Planning",
       "Business Entities",
       "Business Law",
       "Business Law - Agency",
@@ -28267,12 +28267,9 @@ export const regQuestions: QuestionSet = {
       "Business Law - Securities Regulation",
       "C Corporations",
       "Debtor-Creditor",
-      "Employment Taxes",
-      "Estate Tax",
+      "Employment Tax",
       "Estates and Trusts",
-      "Ethics",
       "Filing Status and Dependents",
-      "Gift Tax",
       "Gift and Estate Tax",
       "Individual Taxation",
       "International Tax",
@@ -28286,6 +28283,6 @@ export const regQuestions: QuestionSet = {
       "Sales",
       "Tax Procedures",
       "Tax Research"
-  ],
+    ],
   questions,
 };

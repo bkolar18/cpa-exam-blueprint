@@ -12102,6 +12102,6 @@ export const iscQuestions: QuestionSet = {
       "IT Risk Management",
       "Network Security",
       "SOC Reports"
-  ],
+    ],
   questions,
 };

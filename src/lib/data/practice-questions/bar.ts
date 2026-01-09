@@ -10309,13 +10309,11 @@ export const barQuestions: QuestionSet = {
       "Cost of Capital",
       "Data Analytics",
       "Derivatives",
-      "Derivatives and Hedging",
       "Economic Concepts",
       "Financial Statement Analysis",
       "Foreign Currency",
-      "Governmental Accounting",
-      "Not-for-Profit",
+      "Government Accounting",
       "Not-for-Profit Accounting"
-  ],
+    ],
   questions,
 };
