@@ -7,15 +7,15 @@
 
 ### Pending
 - [ ] Integrate TBS into exam simulations
-- [ ] Rename "Practice" to "Multiple Choice Questions" in navigation
-- [ ] In Study dropdown: move Study Log below My Notes
 - [ ] Study Log page: rename "Manual Study Log" to "All Studying"; clicking practice session should go directly to that session
 - [ ] Scan site for dark mode issues and fix all locations
-- [ ] Remove Exam dropdown; move NTS Tracker to Overview page bottom; remove Recent Study Sessions from Overview
 - [ ] Fix study streak counter (showing 1 day after 2 consecutive days)
 - [ ] Update Overview page: refresh the 6 action bubbles with new features; make page more visually engaging
 
 ### Completed
+- [x] Rename "Practice" to "Multiple Choice Questions" in navigation
+- [x] Move Study Log below My Notes in Study dropdown
+- [x] Remove Exam dropdown; move NTS Tracker to Progress section
 - [x] Fix Accolades page crash (borderColor undefined error)
   - Added fallback tier config for missing/invalid tiers in BadgeCard and AchievementItem
 - [x] Add "Return to Simulation Library" button when working on a simulation

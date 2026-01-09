@@ -17,10 +17,10 @@ const groupedItems = [
     label: "Study",
     icon: "book",
     items: [
-      { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
-      { href: "/dashboard/practice", label: "Practice", icon: "practice" },
+      { href: "/dashboard/practice", label: "Multiple Choice Questions", icon: "practice" },
       { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
       { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
+      { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
       { href: "/dashboard/flagged-questions", label: "Flagged Questions", icon: "flag" },
       { href: "/dashboard/exam-simulation", label: "Exam Simulation", icon: "exam" },
     ],
@@ -31,12 +31,6 @@ const groupedItems = [
     items: [
       { href: "/dashboard/readiness", label: "Exam Readiness", icon: "readiness" },
       { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
-    ],
-  },
-  {
-    label: "Exam",
-    icon: "calendar",
-    items: [
       { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
     ],
   },
@@ -48,10 +42,10 @@ const settingsItem = { href: "/dashboard/settings", label: "Settings", icon: "se
 // All items flat for mobile
 const allNavItems = [
   { href: "/dashboard", label: "Overview", icon: "home" },
-  { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
-  { href: "/dashboard/practice", label: "Practice", icon: "practice" },
+  { href: "/dashboard/practice", label: "Multiple Choice Questions", icon: "practice" },
   { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
   { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
+  { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
   { href: "/dashboard/flagged-questions", label: "Flagged Questions", icon: "flag" },
   { href: "/dashboard/exam-simulation", label: "Exam Simulation", icon: "exam" },
   { href: "/dashboard/readiness", label: "Exam Readiness", icon: "readiness" },
