@@ -320,7 +320,7 @@ export default function DashboardNav() {
                 <p className="px-3 text-sm text-[var(--muted)] mb-2">{user?.email}</p>
                 <button
                   onClick={signOut}
-                  className="w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg"
+                  className="w-full text-left px-3 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg"
                 >
                   Sign Out
                 </button>

@@ -168,9 +168,9 @@ function PracticeHistoryContent() {
       </div>
 
       {sessions.length === 0 ? (
-        <div className="bg-white rounded-xl border border-[var(--border)] p-12 text-center">
-          <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-12 text-center">
+          <div className="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-8 h-8 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
             </svg>
           </div>
@@ -195,7 +195,7 @@ function PracticeHistoryContent() {
             Back to All Sessions
           </button>
 
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
             <div className="flex items-center justify-between mb-6">
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -203,9 +203,9 @@ function PracticeHistoryContent() {
                     {selectedSession.section}
                   </span>
                   <span className={`px-3 py-1 rounded-lg font-medium ${
-                    selectedSession.accuracy >= 80 ? "bg-green-100 text-green-700" :
-                    selectedSession.accuracy >= 60 ? "bg-yellow-100 text-yellow-700" :
-                    "bg-red-100 text-red-700"
+                    selectedSession.accuracy >= 80 ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" :
+                    selectedSession.accuracy >= 60 ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :
+                    "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300"
                   }`}>
                     {selectedSession.accuracy}% Accuracy
                   </span>
@@ -262,18 +262,18 @@ function PracticeHistoryContent() {
                             const isSelected = attempt.selected_answer === letter;
                             const isCorrect = attempt.correct_answer === letter;
 
-                            let bgColor = "bg-white";
-                            let borderColor = "border-gray-200";
+                            let bgColor = "bg-white dark:bg-gray-700";
+                            let borderColor = "border-gray-200 dark:border-gray-600";
                             let textColor = "text-[var(--foreground)]";
 
                             if (isCorrect) {
-                              bgColor = "bg-green-100";
-                              borderColor = "border-green-300";
-                              textColor = "text-green-800";
+                              bgColor = "bg-green-100 dark:bg-green-900/30";
+                              borderColor = "border-green-300 dark:border-green-700";
+                              textColor = "text-green-800 dark:text-green-300";
                             } else if (isSelected && !isCorrect) {
-                              bgColor = "bg-red-100";
-                              borderColor = "border-red-300";
-                              textColor = "text-red-800";
+                              bgColor = "bg-red-100 dark:bg-red-900/30";
+                              borderColor = "border-red-300 dark:border-red-700";
+                              textColor = "text-red-800 dark:text-red-300";
                             }
 
                             return (
@@ -298,7 +298,7 @@ function PracticeHistoryContent() {
                           })}
                         </div>
 
-                        <div className="bg-white p-3 rounded-lg border border-gray-200">
+                        <div className="bg-white dark:bg-gray-700 p-3 rounded-lg border border-gray-200 dark:border-gray-600">
                           <p className="text-sm font-medium text-[var(--foreground)] mb-1">Explanation:</p>
                           <p className="text-sm text-[var(--muted)]">{question.explanation}</p>
                           {question.tip && (
@@ -332,7 +332,7 @@ function PracticeHistoryContent() {
             <button
               key={session.id}
               onClick={() => setSelectedSession(session)}
-              className="w-full bg-white rounded-xl border border-[var(--border)] p-5 hover:border-[var(--primary)] hover:shadow-md transition-all text-left"
+              className="w-full bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5 hover:border-[var(--primary)] hover:shadow-md transition-all text-left"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">

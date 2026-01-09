@@ -11,6 +11,9 @@ import {
   PracticeQuestion,
   SectionCode,
 } from "@/lib/data/practice-questions";
+import { getSampleTBSBySection } from "@/lib/data/tbs/sample-tbs";
+import { TBSQuestion, TBSAttempt } from "@/lib/data/tbs/types";
+import { TBSContainer } from "@/components/tbs";
 import type { SectionCode as DBSectionCode } from "@/lib/supabase/types";
 
 interface ExamResult {
@@ -21,7 +24,13 @@ interface ExamResult {
   timeSpent: number;
 }
 
-type ExamState = 'setup' | 'exam' | 'paused' | 'review' | 'results';
+interface TBSResult {
+  tbs: TBSQuestion;
+  attempt: TBSAttempt;
+}
+
+type ExamState = 'setup' | 'exam' | 'tbs' | 'paused' | 'review' | 'results';
+type TestletType = 'mcq' | 'tbs';
 
 const sectionNames: Record<string, string> = {
   far: 'Financial Accounting & Reporting',
@@ -34,9 +43,27 @@ const sectionNames: Record<string, string> = {
 
 // Exam configuration options
 const EXAM_CONFIGS = {
-  mini: { questions: 20, timeMinutes: 40, label: "Mini Exam", description: "20 questions, 40 minutes" },
-  half: { questions: 36, timeMinutes: 72, label: "Half Exam", description: "36 questions, 72 minutes" },
-  full: { questions: 72, timeMinutes: 144, label: "Full Testlet", description: "72 questions, 144 minutes" },
+  mini: {
+    questions: 20,
+    tbsCount: 0,
+    timeMinutes: 40,
+    label: "MCQ Only",
+    description: "20 MCQ, 40 minutes"
+  },
+  mixed: {
+    questions: 20,
+    tbsCount: 1,
+    timeMinutes: 55,
+    label: "Mixed Practice",
+    description: "20 MCQ + 1 TBS, ~55 minutes"
+  },
+  realistic: {
+    questions: 36,
+    tbsCount: 2,
+    timeMinutes: 90,
+    label: "Realistic Testlet",
+    description: "36 MCQ + 2 TBS, ~90 minutes"
+  },
 };
 
 // Target distribution for realistic exam simulation
@@ -99,11 +126,18 @@ export default function ExamSimulationSectionPage() {
   const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now());
   const [questionTimes, setQuestionTimes] = useState<Record<number, number>>({});
 
+  // TBS State
+  const [tbsQuestions, setTbsQuestions] = useState<TBSQuestion[]>([]);
+  const [currentTbsIndex, setCurrentTbsIndex] = useState(0);
+  const [tbsResults, setTbsResults] = useState<TBSResult[]>([]);
+
   // Timer ref
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const hasQuestions = sectionHasQuestions(section);
   const totalAvailable = getQuestionsBySection(section).length;
+  const availableTBS = getSampleTBSBySection(section);
+  const hasTBS = availableTBS.length > 0;
 
   // Timer effect - only runs when exam is active (not paused)
   useEffect(() => {
@@ -146,10 +180,20 @@ export default function ExamSimulationSectionPage() {
       return;
     }
 
+    // Select TBS questions if configured
+    let selectedTBS: TBSQuestion[] = [];
+    if (config.tbsCount > 0 && hasTBS) {
+      const shuffledTBS = [...availableTBS].sort(() => Math.random() - 0.5);
+      selectedTBS = shuffledTBS.slice(0, Math.min(config.tbsCount, shuffledTBS.length));
+    }
+
     setQuestions(examQuestions);
+    setTbsQuestions(selectedTBS);
     setCurrentIndex(0);
+    setCurrentTbsIndex(0);
     setAnswers({});
     setFlagged(new Set());
+    setTbsResults([]);
     setTimeRemaining(config.timeMinutes * 60);
     setQuestionStartTime(Date.now());
     setQuestionTimes({});
@@ -200,7 +244,43 @@ export default function ExamSimulationSectionPage() {
 
   const handleReviewExam = () => {
     recordQuestionTime();
-    setExamState('review');
+    // If there are TBS questions, transition to TBS phase first
+    if (tbsQuestions.length > 0 && currentTbsIndex < tbsQuestions.length) {
+      setExamState('tbs');
+    } else {
+      setExamState('review');
+    }
+  };
+
+  // Handle TBS completion
+  const handleTBSComplete = (attempt: TBSAttempt) => {
+    const currentTbs = tbsQuestions[currentTbsIndex];
+    setTbsResults(prev => [...prev, { tbs: currentTbs, attempt }]);
+
+    // Move to next TBS or review
+    if (currentTbsIndex < tbsQuestions.length - 1) {
+      setCurrentTbsIndex(prev => prev + 1);
+    } else {
+      setExamState('review');
+    }
+  };
+
+  // Navigate between TBS questions
+  const handleNextTBS = () => {
+    if (currentTbsIndex < tbsQuestions.length - 1) {
+      setCurrentTbsIndex(prev => prev + 1);
+    }
+  };
+
+  const handlePreviousTBS = () => {
+    if (currentTbsIndex > 0) {
+      setCurrentTbsIndex(prev => prev - 1);
+    }
+  };
+
+  // Return to MCQ from TBS
+  const handleReturnToMCQ = () => {
+    setExamState('exam');
   };
 
   const handleFinishExam = useCallback(async () => {
@@ -245,9 +325,38 @@ export default function ExamSimulationSectionPage() {
   };
 
   const getScore = () => {
-    const results = getResults();
-    const correct = results.filter(r => r.isCorrect).length;
-    return { correct, total: results.length, percentage: Math.round((correct / results.length) * 100) };
+    const mcqResults = getResults();
+    const mcqCorrect = mcqResults.filter(r => r.isCorrect).length;
+
+    // Calculate TBS score
+    const tbsTotalPoints = tbsResults.reduce((sum, r) => sum + (r.attempt.maxScore || 0), 0);
+    const tbsEarnedPoints = tbsResults.reduce((sum, r) => sum + (r.attempt.scoreEarned || 0), 0);
+
+    // Combined score (MCQ weight + TBS weight)
+    const mcqTotal = mcqResults.length;
+    const totalItems = mcqTotal + tbsResults.length;
+
+    if (totalItems === 0) return { correct: 0, total: 0, percentage: 0, mcqScore: 0, tbsScore: 0 };
+
+    // For combined percentage: MCQ is binary (correct/incorrect), TBS uses earned/max points
+    const mcqPercentage = mcqTotal > 0 ? (mcqCorrect / mcqTotal) * 100 : 0;
+    const tbsPercentage = tbsTotalPoints > 0 ? (tbsEarnedPoints / tbsTotalPoints) * 100 : 0;
+
+    // Weight MCQ and TBS equally in the final score
+    const hasOnlyMCQ = tbsResults.length === 0;
+    const combinedPercentage = hasOnlyMCQ
+      ? mcqPercentage
+      : (mcqPercentage + tbsPercentage) / 2;
+
+    return {
+      correct: mcqCorrect,
+      total: mcqTotal,
+      percentage: Math.round(combinedPercentage),
+      mcqScore: Math.round(mcqPercentage),
+      tbsScore: Math.round(tbsPercentage),
+      tbsEarnedPoints,
+      tbsTotalPoints,
+    };
   };
 
   if (!hasQuestions) {
@@ -291,7 +400,9 @@ export default function ExamSimulationSectionPage() {
             </div>
             <div>
               <h1 className="text-2xl font-bold">{sectionName}</h1>
-              <p className="text-white/80">{totalAvailable} questions available for simulation</p>
+              <p className="text-white/80">
+                {totalAvailable} MCQ{hasTBS && ` + ${availableTBS.length} TBS`} available
+              </p>
             </div>
           </div>
         </div>
@@ -300,25 +411,49 @@ export default function ExamSimulationSectionPage() {
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-6">Select Exam Length</h2>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
-            {(Object.entries(EXAM_CONFIGS) as [keyof typeof EXAM_CONFIGS, typeof EXAM_CONFIGS[keyof typeof EXAM_CONFIGS]][]).map(([key, config]) => (
-              <button
-                key={key}
-                onClick={() => setSelectedConfig(key)}
-                className={`p-4 rounded-xl border-2 text-left transition-all ${
-                  selectedConfig === key
-                    ? 'border-orange-500 bg-orange-50'
-                    : 'border-[var(--border)] hover:border-orange-300'
-                }`}
-              >
-                <h3 className="font-semibold text-[var(--foreground)]">{config.label}</h3>
-                <p className="text-sm text-[var(--muted)]">{config.description}</p>
-                {config.questions > totalAvailable && (
-                  <p className="text-xs text-orange-600 mt-1">
-                    (Will use {totalAvailable} available questions)
-                  </p>
-                )}
-              </button>
-            ))}
+            {(Object.entries(EXAM_CONFIGS) as [keyof typeof EXAM_CONFIGS, typeof EXAM_CONFIGS[keyof typeof EXAM_CONFIGS]][]).map(([key, config]) => {
+              const tbsAvailable = config.tbsCount > 0 && hasTBS;
+              const tbsShortage = config.tbsCount > availableTBS.length;
+
+              return (
+                <button
+                  key={key}
+                  onClick={() => setSelectedConfig(key)}
+                  className={`p-4 rounded-xl border-2 text-left transition-all ${
+                    selectedConfig === key
+                      ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
+                      : 'border-[var(--border)] hover:border-orange-300 dark:border-gray-700'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <h3 className="font-semibold text-[var(--foreground)]">{config.label}</h3>
+                    {config.tbsCount > 0 && (
+                      <span className={`px-2 py-0.5 text-xs rounded-full ${
+                        tbsAvailable ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' : 'bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
+                      }`}>
+                        +TBS
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-[var(--muted)]">{config.description}</p>
+                  {config.questions > totalAvailable && (
+                    <p className="text-xs text-orange-600 dark:text-orange-400 mt-1">
+                      (Will use {totalAvailable} MCQ)
+                    </p>
+                  )}
+                  {config.tbsCount > 0 && !hasTBS && (
+                    <p className="text-xs text-gray-500 mt-1">
+                      (TBS not available for this section yet)
+                    </p>
+                  )}
+                  {tbsAvailable && tbsShortage && (
+                    <p className="text-xs text-orange-600 dark:text-orange-400 mt-1">
+                      (Will use {availableTBS.length} TBS)
+                    </p>
+                  )}
+                </button>
+              );
+            })}
           </div>
 
           <div className="bg-orange-50 rounded-lg p-4 mb-6">
@@ -547,30 +682,110 @@ export default function ExamSimulationSectionPage() {
     );
   }
 
+  // TBS State - Task-Based Simulations
+  if (examState === 'tbs' && tbsQuestions.length > 0) {
+    const currentTbs = tbsQuestions[currentTbsIndex];
+
+    return (
+      <div className="min-h-screen">
+        {/* TBS Progress Header */}
+        <div className="sticky top-16 z-40 bg-blue-600 text-white p-3 mb-4 rounded-xl mx-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <span className="text-lg font-bold">
+                TBS {currentTbsIndex + 1} of {tbsQuestions.length}
+              </span>
+              <span className="text-sm text-white/80">
+                {currentTbs.title}
+              </span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span className="text-sm">
+                {formatTime(timeRemaining)} remaining
+              </span>
+              <button
+                onClick={handleReturnToMCQ}
+                className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm"
+              >
+                ← Back to MCQ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* TBS Container */}
+        <TBSContainer
+          tbs={currentTbs}
+          testletIndex={currentTbsIndex + 1}
+          testletTotal={tbsQuestions.length}
+          onComplete={handleTBSComplete}
+          onPrevious={currentTbsIndex > 0 ? handlePreviousTBS : undefined}
+          onNext={currentTbsIndex < tbsQuestions.length - 1 ? handleNextTBS : undefined}
+          isPracticeMode={false}
+          onReturnToLibrary={handleReturnToMCQ}
+        />
+      </div>
+    );
+  }
+
   // Review State
   if (examState === 'review') {
     const unanswered = questions.length - Object.keys(answers).length;
     const flaggedList = Array.from(flagged);
+    const tbsCompleted = tbsResults.length;
+    const tbsTotal = tbsQuestions.length;
 
     return (
       <div className="space-y-6">
-        <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] p-6">
           <h2 className="text-xl font-bold text-[var(--foreground)] mb-4">Review Before Submitting</h2>
 
+          {/* MCQ Summary */}
+          <h3 className="text-sm font-semibold text-[var(--muted)] mb-3">Multiple Choice Questions</h3>
           <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="p-4 bg-green-50 rounded-lg">
-              <p className="text-sm text-green-600">Answered</p>
-              <p className="text-2xl font-bold text-green-700">{Object.keys(answers).length}</p>
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+              <p className="text-sm text-green-600 dark:text-green-400">Answered</p>
+              <p className="text-2xl font-bold text-green-700 dark:text-green-300">{Object.keys(answers).length}</p>
             </div>
-            <div className="p-4 bg-red-50 rounded-lg">
-              <p className="text-sm text-red-600">Unanswered</p>
-              <p className="text-2xl font-bold text-red-700">{unanswered}</p>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
+              <p className="text-sm text-red-600 dark:text-red-400">Unanswered</p>
+              <p className="text-2xl font-bold text-red-700 dark:text-red-300">{unanswered}</p>
             </div>
-            <div className="p-4 bg-yellow-50 rounded-lg">
-              <p className="text-sm text-yellow-600">Flagged</p>
-              <p className="text-2xl font-bold text-yellow-700">{flaggedList.length}</p>
+            <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+              <p className="text-sm text-yellow-600 dark:text-yellow-400">Flagged</p>
+              <p className="text-2xl font-bold text-yellow-700 dark:text-yellow-300">{flaggedList.length}</p>
             </div>
           </div>
+
+          {/* TBS Summary - if any TBS were included */}
+          {tbsTotal > 0 && (
+            <>
+              <h3 className="text-sm font-semibold text-[var(--muted)] mb-3">Task-Based Simulations</h3>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <p className="text-sm text-blue-600 dark:text-blue-400">Completed</p>
+                  <p className="text-2xl font-bold text-blue-700 dark:text-blue-300">{tbsCompleted}</p>
+                </div>
+                <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Total TBS</p>
+                  <p className="text-2xl font-bold text-gray-700 dark:text-gray-300">{tbsTotal}</p>
+                </div>
+              </div>
+              {tbsCompleted < tbsTotal && (
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-4">
+                  <p className="text-blue-800 dark:text-blue-300 font-medium">
+                    You have {tbsTotal - tbsCompleted} TBS remaining.
+                    <button
+                      onClick={() => setExamState('tbs')}
+                      className="ml-2 underline hover:no-underline"
+                    >
+                      Continue TBS →
+                    </button>
+                  </p>
+                </div>
+              )}
+            </>
+          )}
 
           {unanswered > 0 && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
@@ -622,6 +837,7 @@ export default function ExamSimulationSectionPage() {
     const score = getScore();
     const results = getResults();
     const passed = score.percentage >= 75;
+    const hasTBSResults = tbsResults.length > 0;
 
     return (
       <div className="space-y-6">
@@ -633,7 +849,10 @@ export default function ExamSimulationSectionPage() {
             </h2>
             <p className="text-6xl font-bold mb-2">{score.percentage}%</p>
             <p className="text-xl text-white/80">
-              {score.correct} out of {score.total} correct
+              {hasTBSResults
+                ? `MCQ: ${score.mcqScore}% | TBS: ${score.tbsScore}%`
+                : `${score.correct} out of ${score.total} correct`
+              }
             </p>
             <p className="mt-4 text-white/70">
               {passed
@@ -644,33 +863,82 @@ export default function ExamSimulationSectionPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-4 gap-4">
-          <div className="bg-white rounded-xl border border-[var(--border)] p-4">
-            <p className="text-sm text-[var(--muted)]">Correct</p>
-            <p className="text-2xl font-bold text-green-600">{score.correct}</p>
+        <div className={`grid gap-4 ${hasTBSResults ? 'md:grid-cols-5' : 'md:grid-cols-4'}`}>
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] p-4">
+            <p className="text-sm text-[var(--muted)]">MCQ Correct</p>
+            <p className="text-2xl font-bold text-green-600 dark:text-green-400">{score.correct}/{score.total}</p>
           </div>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-4">
-            <p className="text-sm text-[var(--muted)]">Incorrect</p>
-            <p className="text-2xl font-bold text-red-600">{score.total - score.correct}</p>
+          {hasTBSResults && (
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] p-4">
+              <p className="text-sm text-[var(--muted)]">TBS Points</p>
+              <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                {score.tbsEarnedPoints}/{score.tbsTotalPoints}
+              </p>
+            </div>
+          )}
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] p-4">
+            <p className="text-sm text-[var(--muted)]">MCQ Incorrect</p>
+            <p className="text-2xl font-bold text-red-600 dark:text-red-400">{score.total - score.correct}</p>
           </div>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] p-4">
             <p className="text-sm text-[var(--muted)]">Time Used</p>
-            <p className="text-2xl font-bold text-blue-600">
+            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
               {formatTime(EXAM_CONFIGS[selectedConfig].timeMinutes * 60 - timeRemaining)}
             </p>
           </div>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-4">
-            <p className="text-sm text-[var(--muted)]">Avg per Question</p>
-            <p className="text-2xl font-bold text-purple-600">
-              {formatTime(Math.round((EXAM_CONFIGS[selectedConfig].timeMinutes * 60 - timeRemaining) / score.total))}
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] p-4">
+            <p className="text-sm text-[var(--muted)]">Avg per MCQ</p>
+            <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+              {score.total > 0 ? formatTime(Math.round((EXAM_CONFIGS[selectedConfig].timeMinutes * 60 - timeRemaining) / score.total)) : '0:00'}
             </p>
           </div>
         </div>
 
-        {/* Question Review */}
-        <div className="bg-white rounded-xl border border-[var(--border)]">
+        {/* TBS Results Summary */}
+        {hasTBSResults && (
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)]">
+            <div className="p-4 border-b border-[var(--border)]">
+              <h3 className="font-semibold text-[var(--foreground)]">TBS Results</h3>
+            </div>
+            <div className="divide-y divide-[var(--border)]">
+              {tbsResults.map((result, i) => {
+                const scorePercent = result.attempt.scorePercentage || 0;
+                const isPassing = scorePercent >= 75;
+                return (
+                  <div key={i} className={`p-4 ${isPassing ? 'bg-green-50/50 dark:bg-green-900/10' : 'bg-red-50/50 dark:bg-red-900/10'}`}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-[var(--foreground)]">
+                          TBS {i + 1}: {result.tbs.title}
+                        </p>
+                        <p className="text-sm text-[var(--muted)]">
+                          {result.tbs.topic} • {result.tbs.tbsType.replace('_', ' ')}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <span className={`px-3 py-1 rounded-lg text-sm font-medium ${
+                          isPassing
+                            ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
+                            : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300'
+                        }`}>
+                          {scorePercent}%
+                        </span>
+                        <p className="text-xs text-[var(--muted)] mt-1">
+                          {result.attempt.scoreEarned}/{result.attempt.maxScore} pts
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* MCQ Review */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)]">
           <div className="p-4 border-b border-[var(--border)]">
-            <h3 className="font-semibold text-[var(--foreground)]">Question Review</h3>
+            <h3 className="font-semibold text-[var(--foreground)]">MCQ Review</h3>
           </div>
           <div className="divide-y divide-[var(--border)]">
             {results.map((result, i) => (

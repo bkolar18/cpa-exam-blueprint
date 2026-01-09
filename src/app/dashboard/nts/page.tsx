@@ -180,7 +180,7 @@ export default function NTSPage() {
 
       {/* Add/Edit Form */}
       {showForm && (
-        <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">
             {editingEntry ? "Edit NTS Entry" : "Add New NTS"}
           </h2>
@@ -275,8 +275,8 @@ export default function NTSPage() {
       )}
 
       {/* Active NTS Entries */}
-      <div className="bg-white rounded-xl border border-[var(--border)]">
-        <div className="p-6 border-b border-[var(--border)]">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700">
+        <div className="p-6 border-b border-[var(--border)] dark:border-gray-700">
           <h2 className="text-lg font-semibold text-[var(--foreground)]">Active NTS Entries</h2>
         </div>
 
@@ -365,13 +365,13 @@ export default function NTSPage() {
 
       {/* Past NTS Entries */}
       {expiredOrUsed.length > 0 && (
-        <div className="bg-white rounded-xl border border-[var(--border)]">
-          <div className="p-6 border-b border-[var(--border)]">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700">
+          <div className="p-6 border-b border-[var(--border)] dark:border-gray-700">
             <h2 className="text-lg font-semibold text-[var(--foreground)]">Past NTS Entries</h2>
           </div>
-          <div className="divide-y divide-[var(--border)]">
+          <div className="divide-y divide-[var(--border)] dark:divide-gray-700">
             {expiredOrUsed.map((entry) => (
-              <div key={entry.id} className="p-6 bg-gray-50">
+              <div key={entry.id} className="p-6 bg-gray-50 dark:bg-gray-700/50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="w-14 h-14 bg-gray-400 rounded-xl flex items-center justify-center">

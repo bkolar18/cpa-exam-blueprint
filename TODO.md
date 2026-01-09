@@ -6,12 +6,29 @@
 (none)
 
 ### Pending
-- [ ] Integrate TBS into exam simulations
-- [ ] Scan site for dark mode issues and fix all locations
-- [ ] Fix study streak counter (showing 1 day after 2 consecutive days)
-- [ ] Update Overview page: refresh the 6 action bubbles with new features; make page more visually engaging
+(none)
 
 ### Completed
+- [x] Update Overview page: refresh the 6 action bubbles with new features
+  - Replaced old actions with: Practice MCQs, TBS Simulations, Exam Simulation, Exam Readiness, Flashcards, Accolades
+  - Added color-coded icons (blue, purple, orange, green, teal, yellow)
+  - Added badges (Core, New, Featured) for visual engagement
+  - Enhanced hover effects with shadow and icon color transition
+- [x] Fix study streak counter (showing 1 day after 2 consecutive days)
+  - Root cause: PostgreSQL variable name conflict in update_study_streak()
+  - Local variable `current_streak` conflicted with column name in UPDATE
+  - Fixed by renaming to `new_streak` in supabase-gamification-schema.sql
+  - Created fix-streak-counter.sql migration to apply to production
+- [x] Scan site for dark mode issues and fix all locations
+  - Fixed NTS Tracker page (3 cards missing dark variants)
+  - Fixed Practice History page (session cards, answer options, explanation boxes)
+  - Fixed DashboardNav sign out button hover state
+  - Fixed QuizResults icon color
+- [x] Integrate TBS into exam simulations
+  - Added 3 exam configs: MCQ Only, Mixed Practice (MCQ+1 TBS), Realistic Testlet (MCQ+2 TBS)
+  - TBS phase after MCQ completion before final review
+  - Combined scoring (MCQ % + TBS %)
+  - TBS results summary in results view
 - [x] Study Log page: rename "Manual Study Log" to "All Studying"
 - [x] Clicking practice session now links directly to that session in history
 - [x] Rename "Practice" to "Multiple Choice Questions" in navigation

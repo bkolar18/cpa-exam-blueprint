@@ -281,22 +281,22 @@ CREATE OR REPLACE FUNCTION update_study_streak()
 RETURNS TRIGGER AS $$
 DECLARE
   last_date DATE;
-  current_streak INTEGER;
+  new_streak INTEGER;  -- Renamed to avoid column name conflict
   longest INTEGER;
 BEGIN
   -- Get user's last study date and current streak
   SELECT last_study_date, current_streak, longest_streak
-  INTO last_date, current_streak, longest
+  INTO last_date, new_streak, longest
   FROM profiles
   WHERE id = NEW.user_id;
 
   -- Calculate new streak
   IF last_date IS NULL OR NEW.date > last_date + INTERVAL '1 day' THEN
     -- Reset streak (first session or gap > 1 day)
-    current_streak := 1;
+    new_streak := 1;
   ELSIF NEW.date = last_date + INTERVAL '1 day' THEN
     -- Consecutive day, increment streak
-    current_streak := current_streak + 1;
+    new_streak := COALESCE(new_streak, 0) + 1;
   ELSIF NEW.date = last_date THEN
     -- Same day, no change to streak
     NULL;
@@ -306,15 +306,15 @@ BEGIN
   END IF;
 
   -- Update longest streak if needed
-  IF current_streak > COALESCE(longest, 0) THEN
-    longest := current_streak;
+  IF new_streak > COALESCE(longest, 0) THEN
+    longest := new_streak;
   END IF;
 
-  -- Update profile
+  -- Update profile (using new_streak to avoid column/variable ambiguity)
   UPDATE profiles
   SET
     last_study_date = GREATEST(last_study_date, NEW.date),
-    current_streak = current_streak,
+    current_streak = new_streak,
     longest_streak = longest
   WHERE id = NEW.user_id;
 

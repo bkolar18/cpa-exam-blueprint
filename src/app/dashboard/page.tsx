@@ -283,43 +283,52 @@ export default function DashboardPage() {
         />
       </div>
 
-      {/* Quick Actions */}
+      {/* Quick Actions - Updated with new features */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <QuickActionCard
-          href="/dashboard/study-log"
-          icon="clock"
-          title="Log Study Session"
-          description="Track your daily study hours and topics"
+          href="/dashboard/practice"
+          icon="practice"
+          title="Practice MCQs"
+          description="6,000+ multiple choice questions across all sections"
+          color="blue"
+          badge="Core"
+        />
+        <QuickActionCard
+          href="/dashboard/simulations"
+          icon="simulation"
+          title="TBS Simulations"
+          description="Task-based simulations with realistic exam scenarios"
+          color="purple"
+          badge="New"
+        />
+        <QuickActionCard
+          href="/dashboard/exam-simulation"
+          icon="exam"
+          title="Exam Simulation"
+          description="Full exam experience with MCQs and TBS combined"
+          color="orange"
+          badge="Featured"
         />
         <QuickActionCard
           href="/dashboard/readiness"
           icon="sections"
           title="Exam Readiness"
-          description="Track your progress and section status"
+          description="Track your progress across all sections"
+          color="green"
         />
         <QuickActionCard
-          href="/dashboard/nts"
-          icon="calendar"
-          title="Manage NTS"
-          description="Track your Notice to Schedule dates"
+          href="/dashboard/flashcards"
+          icon="flashcard"
+          title="Flashcards"
+          description="Spaced repetition cards for key concepts"
+          color="teal"
         />
         <QuickActionCard
-          href="/dashboard/practice"
-          icon="practice"
-          title="Practice Questions"
-          description="Test your knowledge with MCQs"
-        />
-        <QuickActionCard
-          href="/tools/score-release-calendar"
-          icon="calendar"
-          title="Score Release Calendar"
-          description="Check when scores will be released"
-        />
-        <QuickActionCard
-          href="/blog"
-          icon="book"
-          title="Study Guides"
-          description="Read section-specific study strategies"
+          href="/dashboard/accolades"
+          icon="trophy"
+          title="Accolades"
+          description="View your badges and achievements"
+          color="yellow"
         />
       </div>
 
@@ -410,12 +419,61 @@ function QuickActionCard({
   icon,
   title,
   description,
+  color = "primary",
+  badge,
 }: {
   href: string;
   icon: string;
   title: string;
   description: string;
+  color?: "primary" | "blue" | "green" | "purple" | "orange" | "teal" | "yellow";
+  badge?: string;
 }) {
+  const colorStyles: Record<string, { bg: string; text: string; hover: string }> = {
+    primary: {
+      bg: "bg-[var(--primary)]/10 dark:bg-[var(--primary)]/20",
+      text: "text-[var(--primary)]",
+      hover: "group-hover:bg-[var(--primary)]",
+    },
+    blue: {
+      bg: "bg-blue-100 dark:bg-blue-900/30",
+      text: "text-blue-600 dark:text-blue-400",
+      hover: "group-hover:bg-blue-600",
+    },
+    green: {
+      bg: "bg-green-100 dark:bg-green-900/30",
+      text: "text-green-600 dark:text-green-400",
+      hover: "group-hover:bg-green-600",
+    },
+    purple: {
+      bg: "bg-purple-100 dark:bg-purple-900/30",
+      text: "text-purple-600 dark:text-purple-400",
+      hover: "group-hover:bg-purple-600",
+    },
+    orange: {
+      bg: "bg-orange-100 dark:bg-orange-900/30",
+      text: "text-orange-600 dark:text-orange-400",
+      hover: "group-hover:bg-orange-600",
+    },
+    teal: {
+      bg: "bg-teal-100 dark:bg-teal-900/30",
+      text: "text-teal-600 dark:text-teal-400",
+      hover: "group-hover:bg-teal-600",
+    },
+    yellow: {
+      bg: "bg-yellow-100 dark:bg-yellow-900/30",
+      text: "text-yellow-600 dark:text-yellow-400",
+      hover: "group-hover:bg-yellow-600",
+    },
+  };
+
+  const badgeColors: Record<string, string> = {
+    "New": "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
+    "Featured": "bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
+    "Core": "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+    "Beta": "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300",
+  };
+
   const icons: Record<string, React.ReactNode> = {
     clock: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -434,7 +492,28 @@ function QuickActionCard({
     ),
     practice: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    ),
+    simulation: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    exam: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+    flashcard: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+      </svg>
+    ),
+    trophy: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
       </svg>
     ),
     book: (
@@ -444,12 +523,19 @@ function QuickActionCard({
     ),
   };
 
+  const style = colorStyles[color] || colorStyles.primary;
+
   return (
     <Link
       href={href}
-      className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5 hover:border-[var(--primary)] hover:shadow-md transition-all group"
+      className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5 hover:border-[var(--primary)] hover:shadow-lg transition-all group relative overflow-hidden"
     >
-      <div className="w-12 h-12 bg-[var(--primary)]/10 dark:bg-[var(--primary)]/20 rounded-xl flex items-center justify-center text-[var(--primary)] mb-4 group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+      {badge && (
+        <span className={`absolute top-3 right-3 px-2 py-0.5 text-xs font-medium rounded-full ${badgeColors[badge] || "bg-gray-100 text-gray-700"}`}>
+          {badge}
+        </span>
+      )}
+      <div className={`w-12 h-12 ${style.bg} rounded-xl flex items-center justify-center ${style.text} mb-4 ${style.hover} group-hover:text-white transition-colors`}>
         {icons[icon]}
       </div>
       <h3 className="font-semibold text-[var(--foreground)] mb-1">{title}</h3>
