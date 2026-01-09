@@ -32,9 +32,9 @@ export default function QuizResults({
   const accuracy = Math.round((correctAnswers / totalQuestions) * 100);
 
   const getScoreColor = () => {
-    if (accuracy >= 80) return 'text-green-600';
-    if (accuracy >= 60) return 'text-yellow-600';
-    return 'text-red-600';
+    if (accuracy >= 80) return 'text-green-600 dark:text-green-400';
+    if (accuracy >= 60) return 'text-yellow-600 dark:text-yellow-400';
+    return 'text-red-600 dark:text-red-400';
   };
 
   const getScoreMessage = () => {
@@ -59,7 +59,7 @@ export default function QuizResults({
   return (
     <div className="space-y-6">
       {/* Score Card */}
-      <div className="bg-white rounded-xl border border-[var(--border)] overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 overflow-hidden">
         <div className="bg-gradient-to-r from-[var(--primary)] to-blue-600 p-8 text-white text-center">
           <h2 className="text-2xl font-bold mb-2">Quiz Complete!</h2>
           <p className="text-white/80">{sectionName}</p>
@@ -78,13 +78,13 @@ export default function QuizResults({
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-3 border-t border-[var(--border)]">
-          <div className="p-4 text-center border-r border-[var(--border)]">
-            <div className="text-2xl font-bold text-green-600">{correctAnswers}</div>
+        <div className="grid grid-cols-3 border-t border-[var(--border)] dark:border-gray-700">
+          <div className="p-4 text-center border-r border-[var(--border)] dark:border-gray-700">
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400">{correctAnswers}</div>
             <div className="text-sm text-[var(--muted)]">Correct</div>
           </div>
-          <div className="p-4 text-center border-r border-[var(--border)]">
-            <div className="text-2xl font-bold text-red-600">{totalQuestions - correctAnswers}</div>
+          <div className="p-4 text-center border-r border-[var(--border)] dark:border-gray-700">
+            <div className="text-2xl font-bold text-red-600 dark:text-red-400">{totalQuestions - correctAnswers}</div>
             <div className="text-sm text-[var(--muted)]">Incorrect</div>
           </div>
           <div className="p-4 text-center">
@@ -96,21 +96,21 @@ export default function QuizResults({
 
       {/* Study Session Logged Notice */}
       {studySessionLogged && (
-        <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center space-x-3">
-          <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 flex items-center space-x-3">
+          <div className="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <div>
-            <p className="font-medium text-green-800">Study Session Logged!</p>
-            <p className="text-sm text-green-600">
+            <p className="font-medium text-green-800 dark:text-green-300">Study Session Logged!</p>
+            <p className="text-sm text-green-600 dark:text-green-400">
               This practice session has been automatically added to your Study Log.
             </p>
           </div>
           <Link
             href="/dashboard/study-log"
-            className="ml-auto text-sm font-medium text-green-700 hover:text-green-800 whitespace-nowrap"
+            className="ml-auto text-sm font-medium text-green-700 dark:text-green-300 hover:text-green-800 dark:hover:text-green-200 whitespace-nowrap"
           >
             View Log &rarr;
           </Link>
@@ -119,7 +119,7 @@ export default function QuizResults({
 
       {/* Topic Analysis */}
       {Object.keys(topicAnalysis).length > 1 && (
-        <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
           <h3 className="font-semibold text-[var(--foreground)] mb-4">Performance by Topic</h3>
           <div className="space-y-3">
             {Object.entries(topicAnalysis).map(([topic, data]) => {
@@ -129,12 +129,12 @@ export default function QuizResults({
                   <div className="flex justify-between text-sm mb-1">
                     <span className="text-[var(--foreground)]">{topic}</span>
                     <span className={`font-medium ${
-                      topicAccuracy >= 75 ? 'text-green-600' : topicAccuracy >= 50 ? 'text-yellow-600' : 'text-red-600'
+                      topicAccuracy >= 75 ? 'text-green-600 dark:text-green-400' : topicAccuracy >= 50 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'
                     }`}>
                       {data.correct}/{data.total} ({topicAccuracy}%)
                     </span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div
                       className={`h-2 rounded-full ${
                         topicAccuracy >= 75 ? 'bg-green-500' : topicAccuracy >= 50 ? 'bg-yellow-500' : 'bg-red-500'
@@ -150,14 +150,14 @@ export default function QuizResults({
       )}
 
       {/* Question Review */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
         <h3 className="font-semibold text-[var(--foreground)] mb-4">Question Review</h3>
         <div className="space-y-3">
           {results.map((result, index) => (
             <div
               key={result.question.id}
               className={`p-4 rounded-lg border ${
-                result.isCorrect ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'
+                result.isCorrect ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : 'border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20'
               }`}
             >
               <div className="flex items-start justify-between">
@@ -173,11 +173,11 @@ export default function QuizResults({
                   <p className="text-sm text-[var(--foreground)] line-clamp-2">{result.question.question}</p>
                   <div className="mt-2 text-xs">
                     {result.isCorrect ? (
-                      <span className="text-green-700">
+                      <span className="text-green-700 dark:text-green-300">
                         {result.selectedAnswer}. {result.question.options[result.selectedAnswer]}
                       </span>
                     ) : (
-                      <span className="text-green-700">
+                      <span className="text-green-700 dark:text-green-300">
                         Correct Answer: {result.question.correctAnswer}. {result.question.options[result.question.correctAnswer]}
                       </span>
                     )}
@@ -210,7 +210,7 @@ export default function QuizResults({
         </button>
         <Link
           href="/dashboard/practice"
-          className="flex-1 py-3 px-6 bg-[var(--card)] text-[var(--foreground)] rounded-lg font-semibold hover:bg-gray-200 transition-colors text-center"
+          className="flex-1 py-3 px-6 bg-[var(--card)] dark:bg-gray-700 text-[var(--foreground)] rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-center"
         >
           Back to Practice
         </Link>

@@ -129,16 +129,16 @@ export default function DashboardPage() {
     <div className="space-y-8">
       {/* Email Verification Success Message */}
       {isVerified && (
-        <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-8 h-8 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <div>
-              <h3 className="font-semibold text-green-800">Email Verified Successfully!</h3>
-              <p className="text-green-700 text-sm">
+              <h3 className="font-semibold text-green-800 dark:text-green-300">Email Verified Successfully!</h3>
+              <p className="text-green-700 dark:text-green-400 text-sm">
                 Your account is now active. Welcome to CPA Exam Blueprint!
               </p>
             </div>
@@ -162,21 +162,21 @@ export default function DashboardPage() {
 
       {/* Onboarding Prompt */}
       {needsOnboarding && (
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6">
           <div className="flex items-start space-x-4">
-            <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/50 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-amber-800">Complete Your Profile</h3>
-              <p className="text-amber-700 text-sm mt-1">
+              <h3 className="font-semibold text-amber-800 dark:text-amber-300">Complete Your Profile</h3>
+              <p className="text-amber-700 dark:text-amber-400 text-sm mt-1">
                 Set up your state, target date, and study preferences to get personalized insights.
               </p>
               <Link
                 href="/dashboard/settings"
-                className="inline-block mt-3 text-sm font-medium text-amber-800 hover:text-amber-900"
+                className="inline-block mt-3 text-sm font-medium text-amber-800 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-200"
               >
                 Complete Setup &rarr;
               </Link>
@@ -324,7 +324,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Recent Activity */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-[var(--foreground)]">Recent Study Sessions</h2>
           <Link
@@ -340,7 +340,7 @@ export default function DashboardPage() {
         {recentSessions && recentSessions.length > 0 ? (
           <div className="space-y-3">
             {recentSessions.slice(0, 5).map((session) => (
-              <div key={session.id} className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-0">
+              <div key={session.id} className="flex items-center justify-between py-2 border-b border-[var(--border)] dark:border-gray-700 last:border-0">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center">
                     <span className="text-sm font-bold text-[var(--primary)]">{session.section}</span>
@@ -390,16 +390,16 @@ function StatCard({
   color: "blue" | "green" | "purple" | "orange";
 }) {
   const colors = {
-    blue: "bg-blue-50 text-blue-700",
-    green: "bg-green-50 text-green-700",
-    purple: "bg-purple-50 text-purple-700",
-    orange: "bg-orange-50 text-orange-700",
+    blue: "text-blue-700 dark:text-blue-400",
+    green: "text-green-700 dark:text-green-400",
+    purple: "text-purple-700 dark:text-purple-400",
+    orange: "text-orange-700 dark:text-orange-400",
   };
 
   return (
-    <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+    <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
       <p className="text-sm text-[var(--muted)] mb-1">{label}</p>
-      <p className={`text-3xl font-bold ${colors[color].split(" ")[1]}`}>{value}</p>
+      <p className={`text-3xl font-bold ${colors[color]}`}>{value}</p>
       <p className="text-sm text-[var(--muted)] mt-1">{sublabel}</p>
     </div>
   );
@@ -447,9 +447,9 @@ function QuickActionCard({
   return (
     <Link
       href={href}
-      className="bg-white rounded-xl border border-[var(--border)] p-5 hover:border-[var(--primary)] hover:shadow-md transition-all group"
+      className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5 hover:border-[var(--primary)] hover:shadow-md transition-all group"
     >
-      <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-xl flex items-center justify-center text-[var(--primary)] mb-4 group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+      <div className="w-12 h-12 bg-[var(--primary)]/10 dark:bg-[var(--primary)]/20 rounded-xl flex items-center justify-center text-[var(--primary)] mb-4 group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
         {icons[icon]}
       </div>
       <h3 className="font-semibold text-[var(--foreground)] mb-1">{title}</h3>

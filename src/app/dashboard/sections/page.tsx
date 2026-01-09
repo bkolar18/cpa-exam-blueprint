@@ -16,11 +16,11 @@ const sections: { code: SectionCode; name: string; type: "core" | "discipline" }
 ];
 
 const statuses: { value: SectionStatus; label: string; color: string }[] = [
-  { value: "not_started", label: "Not Started", color: "bg-gray-100 text-gray-700" },
-  { value: "studying", label: "Studying", color: "bg-blue-100 text-blue-700" },
-  { value: "scheduled", label: "Scheduled", color: "bg-purple-100 text-purple-700" },
-  { value: "passed", label: "Passed", color: "bg-green-100 text-green-700" },
-  { value: "failed", label: "Failed", color: "bg-red-100 text-red-700" },
+  { value: "not_started", label: "Not Started", color: "bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300" },
+  { value: "studying", label: "Studying", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300" },
+  { value: "scheduled", label: "Scheduled", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300" },
+  { value: "passed", label: "Passed", color: "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300" },
+  { value: "failed", label: "Failed", color: "bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300" },
 ];
 
 export default function SectionsPage() {
@@ -142,12 +142,12 @@ export default function SectionsPage() {
       </div>
 
       {/* Progress Overview */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-[var(--foreground)]">Overall Progress</h2>
           <span className="text-2xl font-bold text-[var(--primary)]">{passedCount}/4</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
           <div
             className="bg-[var(--primary)] h-4 rounded-full transition-all"
             style={{ width: `${(passedCount / 4) * 100}%` }}
@@ -205,7 +205,7 @@ export default function SectionsPage() {
       {/* Edit Modal */}
       {editingSection && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-md w-full p-6">
             <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">
               Update {editingSection}
             </h3>
@@ -218,7 +218,7 @@ export default function SectionsPage() {
                 <select
                   value={formData.status}
                   onChange={(e) => setFormData({ ...formData, status: e.target.value as SectionStatus })}
-                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                 >
                   {statuses.map((s) => (
                     <option key={s.value} value={s.value}>{s.label}</option>
@@ -234,7 +234,7 @@ export default function SectionsPage() {
                   type="date"
                   value={formData.start_date}
                   onChange={(e) => setFormData({ ...formData, start_date: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                 />
               </div>
 
@@ -247,7 +247,7 @@ export default function SectionsPage() {
                     type="date"
                     value={formData.exam_date}
                     onChange={(e) => setFormData({ ...formData, exam_date: e.target.value })}
-                    className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                    className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                   />
                 </div>
               )}
@@ -264,7 +264,7 @@ export default function SectionsPage() {
                     value={formData.score}
                     onChange={(e) => setFormData({ ...formData, score: e.target.value })}
                     placeholder="0-99"
-                    className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+                    className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
                   />
                 </div>
               )}
@@ -273,7 +273,7 @@ export default function SectionsPage() {
             <div className="flex space-x-3 mt-6">
               <button
                 onClick={() => setEditingSection(null)}
-                className="flex-1 px-4 py-2 border border-[var(--border)] rounded-lg hover:bg-[var(--card)] transition-colors"
+                className="flex-1 px-4 py-2 border border-[var(--border)] dark:border-gray-600 rounded-lg hover:bg-[var(--card)] dark:hover:bg-gray-700 text-[var(--foreground)] transition-colors"
               >
                 Cancel
               </button>
@@ -306,8 +306,8 @@ function SectionCard({
 
   return (
     <div
-      className={`bg-white rounded-xl border p-5 ${
-        isSelected ? "border-[var(--primary)] ring-2 ring-[var(--primary)]/20" : "border-[var(--border)]"
+      className={`bg-white dark:bg-gray-800 rounded-xl border p-5 ${
+        isSelected ? "border-[var(--primary)] ring-2 ring-[var(--primary)]/20" : "border-[var(--border)] dark:border-gray-700"
       }`}
     >
       <div className="flex items-center justify-between">
@@ -336,7 +336,7 @@ function SectionCard({
           )}
           <button
             onClick={onEdit}
-            className="p-2 hover:bg-[var(--card)] rounded-lg transition-colors"
+            className="p-2 hover:bg-[var(--card)] dark:hover:bg-gray-700 rounded-lg transition-colors"
           >
             <svg className="w-5 h-5 text-[var(--muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -346,7 +346,7 @@ function SectionCard({
       </div>
 
       {(progress?.start_date || progress?.exam_date) && (
-        <div className="mt-4 pt-4 border-t border-[var(--border)] flex space-x-6 text-sm">
+        <div className="mt-4 pt-4 border-t border-[var(--border)] dark:border-gray-700 flex space-x-6 text-sm">
           {progress.start_date && (
             <div>
               <span className="text-[var(--muted)]">Started: </span>

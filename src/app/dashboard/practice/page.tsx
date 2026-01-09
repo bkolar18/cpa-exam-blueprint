@@ -119,7 +119,7 @@ export default function PracticePage() {
         {attempts.length > 0 && (
           <Link
             href="/dashboard/practice/history"
-            className="flex items-center gap-2 px-4 py-2 bg-white border border-[var(--border)] rounded-lg hover:border-[var(--primary)] hover:shadow-md transition-all text-[var(--foreground)] font-medium"
+            className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-[var(--border)] dark:border-gray-700 rounded-lg hover:border-[var(--primary)] hover:shadow-md transition-all text-[var(--foreground)] font-medium"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -150,17 +150,17 @@ export default function PracticePage() {
       {/* Stats Overview */}
       {attempts.length > 0 && (
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
             <p className="text-sm text-[var(--muted)]">Questions Attempted</p>
             <p className="text-3xl font-bold text-[var(--primary)]">{totalQuestions}</p>
           </div>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
             <p className="text-sm text-[var(--muted)]">Correct Answers</p>
-            <p className="text-3xl font-bold text-green-600">{totalCorrect}</p>
+            <p className="text-3xl font-bold text-green-600 dark:text-green-400">{totalCorrect}</p>
           </div>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-5">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
             <p className="text-sm text-[var(--muted)]">Overall Accuracy</p>
-            <p className="text-3xl font-bold text-purple-600">{overallAccuracy}%</p>
+            <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">{overallAccuracy}%</p>
           </div>
         </div>
       )}
@@ -178,26 +178,26 @@ export default function PracticePage() {
             return (
               <div
                 key={section.code}
-                className={`bg-white rounded-xl border p-5 transition-all duration-200 ${
+                className={`bg-white dark:bg-gray-800 rounded-xl border p-5 transition-all duration-200 ${
                   hasQuestions
-                    ? "border-[var(--border)] hover:border-[var(--primary)] hover:shadow-md"
-                    : "border-[var(--border)] opacity-75"
+                    ? "border-[var(--border)] dark:border-gray-700 hover:border-[var(--primary)] hover:shadow-md"
+                    : "border-[var(--border)] dark:border-gray-700 opacity-75"
                 }`}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                    hasQuestions ? "bg-[var(--primary)]" : "bg-gray-300"
+                    hasQuestions ? "bg-[var(--primary)]" : "bg-gray-300 dark:bg-gray-600"
                   }`}>
                     <span className="text-white font-bold">{section.code}</span>
                   </div>
                   <div className="flex flex-col items-end gap-1">
                     <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      isCore ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"
+                      isCore ? "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300" : "bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300"
                     }`}>
                       {isCore ? "Core" : "Discipline"}
                     </span>
                     {hasQuestions && (
-                      <span className="text-xs text-green-600 font-medium">
+                      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
                         {questionCount} questions
                       </span>
                     )}
@@ -213,7 +213,7 @@ export default function PracticePage() {
                       <span className="text-[var(--muted)]">Accuracy</span>
                       <span className="font-medium text-[var(--foreground)]">{stats.accuracy}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                       <div
                         className="bg-[var(--primary)] h-2 rounded-full"
                         style={{ width: `${stats.accuracy}%` }}
@@ -244,7 +244,7 @@ export default function PracticePage() {
                 ) : (
                   <button
                     disabled
-                    className="w-full mt-4 px-4 py-2 bg-gray-100 text-gray-400 rounded-lg cursor-not-allowed text-sm"
+                    className="w-full mt-4 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 rounded-lg cursor-not-allowed text-sm"
                   >
                     Coming Soon
                   </button>
@@ -256,7 +256,7 @@ export default function PracticePage() {
       </div>
 
       {/* Topics Preview */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Topics Covered</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleSections.filter(s => sectionHasQuestions(s.code)).map((section) => (
@@ -284,19 +284,19 @@ export default function PracticePage() {
 
       {/* Recent Attempts */}
       {recentAttempts.length > 0 && (
-        <div className="bg-white rounded-xl border border-[var(--border)]">
-          <div className="p-6 border-b border-[var(--border)]">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700">
+          <div className="p-6 border-b border-[var(--border)] dark:border-gray-700">
             <h2 className="text-lg font-semibold text-[var(--foreground)]">Recent Questions</h2>
           </div>
-          <div className="divide-y divide-[var(--border)]">
+          <div className="divide-y divide-[var(--border)] dark:divide-gray-700">
             {recentAttempts.map((attempt) => (
               <div key={attempt.id} className="p-4 flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                    attempt.is_correct ? "bg-green-100" : "bg-red-100"
+                    attempt.is_correct ? "bg-green-100 dark:bg-green-900/50" : "bg-red-100 dark:bg-red-900/50"
                   }`}>
                     <span className={`text-sm font-bold ${
-                      attempt.is_correct ? "text-green-600" : "text-red-600"
+                      attempt.is_correct ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
                     }`}>{attempt.section}</span>
                   </div>
                   <div>
@@ -310,7 +310,7 @@ export default function PracticePage() {
                 </div>
                 <div className="text-right">
                   <span className={`px-2 py-1 rounded text-sm font-medium ${
-                    attempt.is_correct ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+                    attempt.is_correct ? "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300" : "bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300"
                   }`}>
                     {attempt.is_correct ? "Correct" : "Incorrect"}
                   </span>
@@ -322,7 +322,7 @@ export default function PracticePage() {
       )}
 
       {/* Resources Links */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Study Resources</h2>
         <p className="text-[var(--muted)] mb-4">
           Complement your practice with these comprehensive study guides:
@@ -330,19 +330,19 @@ export default function PracticePage() {
         <div className="grid md:grid-cols-3 gap-4">
           <Link
             href="/blog/far-section-complete-study-guide"
-            className="p-4 border border-[var(--border)] rounded-lg hover:border-[var(--primary)] transition-colors"
+            className="p-4 border border-[var(--border)] dark:border-gray-700 rounded-lg hover:border-[var(--primary)] transition-colors"
           >
             <span className="text-sm font-medium text-[var(--primary)]">FAR Study Guide &rarr;</span>
           </Link>
           <Link
             href="/blog/aud-section-complete-study-guide"
-            className="p-4 border border-[var(--border)] rounded-lg hover:border-[var(--primary)] transition-colors"
+            className="p-4 border border-[var(--border)] dark:border-gray-700 rounded-lg hover:border-[var(--primary)] transition-colors"
           >
             <span className="text-sm font-medium text-[var(--primary)]">AUD Study Guide &rarr;</span>
           </Link>
           <Link
             href="/blog/reg-section-complete-study-guide"
-            className="p-4 border border-[var(--border)] rounded-lg hover:border-[var(--primary)] transition-colors"
+            className="p-4 border border-[var(--border)] dark:border-gray-700 rounded-lg hover:border-[var(--primary)] transition-colors"
           >
             <span className="text-sm font-medium text-[var(--primary)]">REG Study Guide &rarr;</span>
           </Link>

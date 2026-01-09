@@ -45,13 +45,13 @@ export default function QuizQuestion({
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'easy':
-        return 'bg-green-100 text-green-700';
+        return 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300';
       case 'medium':
-        return 'bg-yellow-100 text-yellow-700';
+        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300';
       case 'hard':
-        return 'bg-red-100 text-red-700';
+        return 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300';
       default:
-        return 'bg-gray-100 text-gray-700';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
     }
   };
 
@@ -60,25 +60,25 @@ export default function QuizQuestion({
 
     if (!hasSubmitted) {
       if (selectedAnswer === option) {
-        return `${baseClass} border-[var(--primary)] bg-[var(--primary)]/5`;
+        return `${baseClass} border-[var(--primary)] bg-[var(--primary)]/5 dark:bg-[var(--primary)]/10`;
       }
-      return `${baseClass} border-[var(--border)] hover:border-[var(--primary)] hover:bg-[var(--primary)]/5`;
+      return `${baseClass} border-[var(--border)] dark:border-gray-600 hover:border-[var(--primary)] hover:bg-[var(--primary)]/5 dark:hover:bg-[var(--primary)]/10`;
     }
 
     // After submission
     if (option === question.correctAnswer) {
-      return `${baseClass} border-green-500 bg-green-50`;
+      return `${baseClass} border-green-500 bg-green-50 dark:bg-green-900/30`;
     }
     if (selectedAnswer === option && option !== question.correctAnswer) {
-      return `${baseClass} border-red-500 bg-red-50`;
+      return `${baseClass} border-red-500 bg-red-50 dark:bg-red-900/30`;
     }
-    return `${baseClass} border-[var(--border)] opacity-50`;
+    return `${baseClass} border-[var(--border)] dark:border-gray-700 opacity-50`;
   };
 
   return (
-    <div className="bg-white rounded-xl border border-[var(--border)] overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-[var(--card)] px-6 py-4 border-b border-[var(--border)]">
+      <div className="bg-[var(--card)] dark:bg-gray-900 px-6 py-4 border-b border-[var(--border)] dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <span className="text-sm font-medium text-[var(--muted)]">
@@ -91,7 +91,7 @@ export default function QuizQuestion({
           <span className="text-sm text-[var(--primary)] font-medium">{question.topic}</span>
         </div>
         {/* Progress bar */}
-        <div className="mt-3 w-full bg-gray-200 rounded-full h-1.5">
+        <div className="mt-3 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
           <div
             className="bg-[var(--primary)] h-1.5 rounded-full transition-all duration-300"
             style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
@@ -120,10 +120,10 @@ export default function QuizQuestion({
                     ? 'bg-green-500 text-white'
                     : selectedAnswer === option
                       ? 'bg-red-500 text-white'
-                      : 'bg-gray-200 text-gray-500'
+                      : 'bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400'
                   : selectedAnswer === option
                     ? 'bg-[var(--primary)] text-white'
-                    : 'bg-gray-200 text-gray-600'
+                    : 'bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
               }`}>
                 {option}
               </span>
@@ -140,7 +140,7 @@ export default function QuizQuestion({
             className={`w-full mt-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
               selectedAnswer
                 ? 'bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)]'
-                : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed'
             }`}
           >
             Submit Answer
@@ -157,22 +157,22 @@ export default function QuizQuestion({
         {/* Explanation (shown after submission) */}
         {hasSubmitted && (
           <div className={`mt-6 p-4 rounded-lg ${
-            selectedAnswer === question.correctAnswer ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'
+            selectedAnswer === question.correctAnswer ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800' : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800'
           }`}>
             <div className="flex items-center space-x-2 mb-2">
               {selectedAnswer === question.correctAnswer ? (
                 <>
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-semibold text-green-700">Correct!</span>
+                  <span className="font-semibold text-green-700 dark:text-green-300">Correct!</span>
                 </>
               ) : (
                 <>
-                  <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="font-semibold text-red-700">
+                  <span className="font-semibold text-red-700 dark:text-red-300">
                     Incorrect - The correct answer is {question.correctAnswer}
                   </span>
                 </>
@@ -182,7 +182,7 @@ export default function QuizQuestion({
               {question.explanation}
             </p>
             {question.tip && (
-              <div className="mt-3 p-3 bg-white/50 rounded border border-[var(--border)]">
+              <div className="mt-3 p-3 bg-white/50 dark:bg-gray-700/50 rounded border border-[var(--border)] dark:border-gray-600">
                 <p className="text-sm text-[var(--primary)] font-medium">
                   <span className="font-bold">Tip:</span> {question.tip}
                 </p>
@@ -190,7 +190,7 @@ export default function QuizQuestion({
             )}
 
             {/* Feedback Button */}
-            <div className="mt-4 pt-4 border-t border-[var(--border)] flex justify-end">
+            <div className="mt-4 pt-4 border-t border-[var(--border)] dark:border-gray-600 flex justify-end">
               <FeedbackButton
                 questionId={question.id}
                 section={question.section}
