@@ -12047,7 +12047,7 @@ const questions = [
     "conceptTested": "Attribution in controlled groups",
     "difficulty": "medium",
     "questionFormat": "MCQ",
-    "question": "A father owns 100% of Corporation A and his son owns 100% of Corporation B. Under Section 318 attribution rules, are A and B related parties?",
+    "question": "A father owns 100% of Northern Industries and his son owns 100% of Pacific Manufacturing. Under Section 318 attribution rules, are A and B related parties?",
     "options": {
       "A": "Only if both corporations are C corporations",
       "B": "Only if the son is a minor",
@@ -12278,7 +12278,7 @@ const questions = [
     "conceptTested": "Section 318 constructive ownership",
     "difficulty": "medium",
     "questionFormat": "MCQ",
-    "question": "Corporation A owns 80% of Corporation B. Corporation B owns 60% of Corporation C. Under Section 318, what percentage of C does A constructively own?",
+    "question": "Northern Industries owns 80% of Pacific Manufacturing. Pacific Manufacturing owns 60% of Corporation C. Under Section 318, what percentage of C does A constructively own?",
     "options": {
       "A": "80%",
       "B": "140%",

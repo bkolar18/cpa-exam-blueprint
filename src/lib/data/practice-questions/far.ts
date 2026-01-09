@@ -3577,7 +3577,7 @@ const questions = [
     "conceptTested": "Exchange with commercial substance",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Company A exchanges equipment (cost $50,000, accumulated depreciation $30,000, fair value $25,000) for equipment from Company B, receiving $3,000 cash. The exchange has commercial substance. What gain or loss does Company A recognize?",
+    "question": "Apex Corp. exchanges equipment (cost $50,000, accumulated depreciation $30,000, fair value $25,000) for equipment from Beacon Inc., receiving $3,000 cash. The exchange has commercial substance. What gain or loss does Apex Corp. recognize?",
     "options": {
       "A": "$8,000 gain",
       "B": "$3,000 gain",
@@ -3754,7 +3754,7 @@ const questions = [
     "conceptTested": "Boot received in exchange",
     "difficulty": "hard",
     "questionFormat": "scenario",
-    "question": "In an exchange lacking commercial substance, Company X gives up equipment (book value $40,000, fair value $50,000) and receives equipment worth $42,000 plus $8,000 cash. What is the gain recognized?",
+    "question": "In an exchange lacking commercial substance, Sterling Co. gives up equipment (book value $40,000, fair value $50,000) and receives equipment worth $42,000 plus $8,000 cash. What is the gain recognized?",
     "options": {
       "A": "$10,000",
       "B": "$1,600",
@@ -7499,7 +7499,7 @@ const questions = [
     "conceptTested": "Goodwill calculation",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Company A acquires Company B for $5,000,000 cash. The fair value of B's identifiable net assets is $4,200,000. What amount of goodwill should A recognize?",
+    "question": "Apex Corp. acquires Beacon Inc. for $5,000,000 cash. The fair value of B's identifiable net assets is $4,200,000. What amount of goodwill should A recognize?",
     "options": {
       "A": "$4,200,000",
       "B": "$5,000,000",
@@ -15269,7 +15269,7 @@ const questions = [
     "conceptTested": "Bargain purchase gain",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Company A pays $800,000 for Company B. FV of identifiable assets: $1,200,000. FV of liabilities: $300,000. After reassessment, values are confirmed. What is recorded?",
+    "question": "Apex Corp. pays $800,000 for Beacon Inc. FV of identifiable assets: $1,200,000. FV of liabilities: $300,000. After reassessment, values are confirmed. What is recorded?",
     "options": {
       "A": "Loss of $100,000",
       "B": "No adjustment",
@@ -18440,7 +18440,7 @@ const questions = [
     "conceptTested": "Recording goods in transit",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "At year-end, Company A has $20,000 of goods in transit shipped FOB destination to customers and $15,000 shipped FOB shipping point to customers. How much is in A's inventory?",
+    "question": "At year-end, Apex Corp. has $20,000 of goods in transit shipped FOB destination to customers and $15,000 shipped FOB shipping point to customers. How much is in A's inventory?",
     "options": {
       "A": "$35,000",
       "B": "$0",
@@ -27638,9 +27638,9 @@ const questions = [
     "conceptTested": "NFP consolidation criteria",
     "difficulty": "hard",
     "questionFormat": "conceptual",
-    "question": "NFP A owns a majority of the voting stock of for-profit Company B. Under what circumstances must consolidation occur?",
+    "question": "NFP A owns a majority of the voting stock of for-profit Beacon Inc. Under what circumstances must consolidation occur?",
     "options": {
-      "A": "Only if Company B is a healthcare entity",
+      "A": "Only if Beacon Inc. is a healthcare entity",
       "B": "Never; NFPs cannot consolidate for-profit entities",
       "C": "Always when majority ownership exists",
       "D": "When there is both economic interest and control"
@@ -28016,12 +28016,12 @@ const questions = [
     "conceptTested": "Primary beneficiary determination",
     "difficulty": "hard",
     "questionFormat": "conceptual",
-    "question": "Company A has a variable interest in Entity X but is not the primary beneficiary. Company B is the primary beneficiary. How should Company A report its interest?",
+    "question": "Apex Corp. has a variable interest in Delta Ventures but is not the primary beneficiary. Beacon Inc. is the primary beneficiary. How should Apex Corp. report its interest?",
     "options": {
       "A": "Use equity method regardless of ownership percentage",
       "B": "Apply appropriate GAAP based on nature of interest (could be cost, fair value, or equity method)",
       "C": "No recognition required",
-      "D": "Consolidate Entity X"
+      "D": "Consolidate Delta Ventures"
     },
     "correctAnswer": "B",
     "explanation": "Only the primary beneficiary consolidates a VIE. Other variable interest holders apply the accounting appropriate to their interest type: equity method if significant influence exists, fair value for certain investments, cost method for insignificant interests. The nature and terms of the specific variable interest determine the appropriate method.",
@@ -28184,7 +28184,7 @@ const questions = [
     "conceptTested": "Indirect ownership",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Parent owns 80% of Subsidiary A. Subsidiary A owns 60% of Subsidiary B. What is Parent's effective ownership in Subsidiary B?",
+    "question": "Parent owns 80% of Harbor Inc. Harbor Inc. owns 60% of Ridge Co.. What is Parent's effective ownership in Ridge Co.?",
     "options": {
       "A": "70%",
       "B": "80%",
@@ -28331,7 +28331,7 @@ const questions = [
     "conceptTested": "Transactions between entities under common control",
     "difficulty": "hard",
     "questionFormat": "conceptual",
-    "question": "Company A and Company B are both 100% owned by Parent Corp. Company A acquires Company B for $5,000,000 (B's book value is $4,000,000). How does Company A record the acquisition?",
+    "question": "Apex Corp. and Beacon Inc. are both 100% owned by Parent Corp. Apex Corp. acquires Beacon Inc. for $5,000,000 (B's book value is $4,000,000). How does Apex Corp. record the acquisition?",
     "options": {
       "A": "Using acquisition method at fair value",
       "B": "As a pooling of interests",
@@ -30221,7 +30221,7 @@ const questions = [
     "conceptTested": "Consolidation requirement",
     "difficulty": "easy",
     "questionFormat": "conceptual",
-    "question": "Company A owns 55% of Company B's voting stock. What is the required accounting treatment?",
+    "question": "Apex Corp. owns 55% of Beacon Inc.'s voting stock. What is the required accounting treatment?",
     "options": {
       "A": "Proportionate consolidation",
       "B": "Cost method",
@@ -30599,7 +30599,7 @@ const questions = [
     "conceptTested": "Gain recognition",
     "difficulty": "hard",
     "questionFormat": "calculation",
-    "question": "Company A exchanges equipment (cost $50,000, accumulated depreciation $30,000, FV $35,000) for equipment from Company B with FV of $35,000. The exchange has commercial substance. What gain does Company A recognize?",
+    "question": "Apex Corp. exchanges equipment (cost $50,000, accumulated depreciation $30,000, FV $35,000) for equipment from Beacon Inc. with FV of $35,000. The exchange has commercial substance. What gain does Apex Corp. recognize?",
     "options": {
       "A": "$0",
       "B": "$15,000",
@@ -33812,7 +33812,7 @@ const questions = [
     "conceptTested": "Goodwill calculation",
     "difficulty": "medium",
     "questionFormat": "calculation",
-    "question": "Company A acquires 100% of Company B for $2,000,000 cash. Company B's identifiable assets have a fair value of $2,500,000 and its liabilities have a fair value of $800,000. What is the amount of goodwill recorded?",
+    "question": "Apex Corp. acquires 100% of Beacon Inc. for $2,000,000 cash. Beacon Inc.'s identifiable assets have a fair value of $2,500,000 and its liabilities have a fair value of $800,000. What is the amount of goodwill recorded?",
     "options": {
       "A": "$300,000",
       "B": "$500,000",

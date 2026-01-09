@@ -791,7 +791,7 @@ const questions = [
     "conceptTested": "Goodwill calculation",
     "difficulty": "easy",
     "questionFormat": "MCQ",
-    "question": "Company A pays $500,000 to acquire Company B. The fair value of Company B's identifiable net assets is $400,000. What amount of goodwill should Company A record?",
+    "question": "Apex Corp. pays $500,000 to acquire Beacon Inc. The fair value of Beacon Inc.'s identifiable net assets is $400,000. What amount of goodwill should Apex Corp. record?",
     "options": {
       "A": "$100,000",
       "B": "$400,000",
@@ -1106,7 +1106,7 @@ const questions = [
     "conceptTested": "Step acquisition accounting",
     "difficulty": "medium",
     "questionFormat": "MCQ",
-    "question": "Company A holds a 30% equity investment in Company B with a carrying value of $300,000. Company A acquires an additional 40% for $500,000, gaining control. The fair value of the previously held 30% is $350,000. What gain should Company A recognize?",
+    "question": "Apex Corp. holds a 30% equity investment in Beacon Inc. with a carrying value of $300,000. Apex Corp. acquires an additional 40% for $500,000, gaining control. The fair value of the previously held 30% is $350,000. What gain should Apex Corp. recognize?",
     "options": {
       "A": "$150,000",
       "B": "$200,000",
@@ -1421,7 +1421,7 @@ const questions = [
     "conceptTested": "Bargain purchase procedures",
     "difficulty": "hard",
     "questionFormat": "MCQ",
-    "question": "Company X acquires Company Y for $800,000. Identifiable assets acquired have fair value of $1,200,000 and liabilities assumed have fair value of $300,000. After reassessing all valuations, what does Company X record?",
+    "question": "Sterling Co. acquires Vista LLC for $800,000. Identifiable assets acquired have fair value of $1,200,000 and liabilities assumed have fair value of $300,000. After reassessing all valuations, what does Sterling Co. record?",
     "options": {
       "A": "Gain of $100,000",
       "B": "Reduction of asset values by $100,000",
@@ -9191,15 +9191,15 @@ const questions = [
     "conceptTested": "Net settlement calculation",
     "difficulty": "medium",
     "questionFormat": "MCQ",
-    "question": "Company A enters into a swap to pay fixed 5% and receive LIBOR on a $10,000,000 notional amount. If LIBOR is 4.5% at settlement, what is the net payment?",
+    "question": "Apex Corp. enters into a swap to pay fixed 5% and receive LIBOR on a $10,000,000 notional amount. If LIBOR is 4.5% at settlement, what is the net payment?",
     "options": {
-      "A": "Company A pays $500,000",
-      "B": "Company A receives $500,000",
-      "C": "Company A receives $50,000",
-      "D": "Company A pays $50,000"
+      "A": "Apex Corp. pays $500,000",
+      "B": "Apex Corp. receives $500,000",
+      "C": "Apex Corp. receives $50,000",
+      "D": "Apex Corp. pays $50,000"
     },
     "correctAnswer": "D",
-    "explanation": "Company A pays: Fixed 5% × $10,000,000 = $500,000. Company A receives: LIBOR 4.5% × $10,000,000 = $450,000. Net payment by Company A = $500,000 - $450,000 = $50,000. Since the fixed rate exceeds LIBOR, the fixed-rate payer makes a net payment.",
+    "explanation": "Apex Corp. pays: Fixed 5% × $10,000,000 = $500,000. Apex Corp. receives: LIBOR 4.5% × $10,000,000 = $450,000. Net payment by Apex Corp. = $500,000 - $450,000 = $50,000. Since the fixed rate exceeds LIBOR, the fixed-rate payer makes a net payment.",
     "tip": "Fixed payer pays when fixed > floating; receives when floating > fixed.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
