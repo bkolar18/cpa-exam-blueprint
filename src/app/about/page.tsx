@@ -45,9 +45,9 @@ export default function AboutPage() {
         </div>
 
         {/* The Story */}
-        <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 p-8 md:p-10 rounded-2xl border border-amber-200 mb-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 p-8 md:p-10 rounded-2xl border border-amber-200 dark:border-amber-800 mb-12 overflow-hidden">
           {/* Decorative quote */}
-          <div className="absolute top-4 right-8 text-amber-200/50 text-8xl font-serif">&ldquo;</div>
+          <div className="absolute top-4 right-8 text-amber-200/50 dark:text-amber-700/30 text-8xl font-serif">&ldquo;</div>
 
           <div className="relative">
             <div className="flex items-center gap-3 mb-6">
@@ -56,16 +56,16 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-amber-900">Why We Built This</h2>
+              <h2 className="text-2xl font-bold text-amber-900 dark:text-amber-200">Why We Built This</h2>
             </div>
-            <div className="space-y-4 text-amber-800 text-lg leading-relaxed">
+            <div className="space-y-4 text-amber-800 dark:text-amber-300 text-lg leading-relaxed">
               <p>
                 CPA Exam Blueprint was created because we saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still deserved quality study materials.
               </p>
               <p>
                 The big CPA review courses charge $2,000-$3,500 for their programs. Not everyone has that kind of money to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
               </p>
-              <p className="font-medium">
+              <p className="font-medium text-amber-900 dark:text-amber-200">
                 We built CPA Exam Blueprint to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and unlimited access until you pass on all tiers, we offer everything you need at 95% less than the competition.
               </p>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
         </div>
 
         {/* What We Offer */}
-        <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-[var(--border)] dark:border-gray-700 mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">What We Offer</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start space-x-4">
@@ -146,19 +146,19 @@ export default function AboutPage() {
         </div>
 
         {/* Access Options */}
-        <div className="bg-green-50 border border-green-200 p-8 rounded-xl mb-12">
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 p-8 rounded-xl mb-12">
           <div className="flex items-start space-x-4">
-            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-green-800 mb-2">Unlimited Access Until You Pass</h3>
-              <p className="text-green-700 mb-4">
+              <h3 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2">Unlimited Access Until You Pass</h3>
+              <p className="text-green-700 dark:text-green-400 mb-4">
                 All tiers include unlimited access until you pass - no time limits, no pressure:
               </p>
-              <ul className="space-y-2 text-green-700">
+              <ul className="space-y-2 text-green-700 dark:text-green-400">
                 <li className="flex items-start space-x-2">
                   <span className="font-bold">Free:</span>
                   <span>50 questions for FAR section</span>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                   <span>6,000+ questions across all 6 sections including discipline sections (BAR, ISC)</span>
                 </li>
               </ul>
-              <p className="mt-4 text-green-700 text-sm">
+              <p className="mt-4 text-green-700 dark:text-green-400 text-sm">
                 Like other CPA review providers, our questions are based on the official CPA Exam Blueprints published by the AICPA. Study at your own pace with no time pressure.
               </p>
             </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-[var(--border)] dark:border-gray-700 mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">How We Compare</h2>
           <p className="text-[var(--muted)] mb-6">
             Here&apos;s an honest comparison with major CPA review providers. Choose what fits your budget and needs.
@@ -376,7 +376,7 @@ export default function AboutPage() {
                   <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
                   <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
                 </tr>
-                <tr className="bg-gray-50">
+                <tr className="bg-gray-50 dark:bg-gray-700/50">
                   <td className="py-4 px-3 text-[var(--foreground)] font-bold">Price</td>
                   <td className="py-4 px-3 text-center bg-[var(--primary)]/10">
                     <div className="flex flex-col items-center gap-1">
@@ -408,7 +408,7 @@ export default function AboutPage() {
         </div>
 
         {/* Our Commitment */}
-        <div className="bg-white p-8 rounded-xl border border-[var(--border)] mb-12">
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-[var(--border)] dark:border-gray-700 mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Our Commitment to You</h2>
           <div className="space-y-4">
             <div className="flex items-start space-x-3">

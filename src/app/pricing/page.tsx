@@ -155,7 +155,7 @@ export default function PricingPage() {
                 className={`relative rounded-2xl p-8 ${
                   tier.highlighted
                     ? "bg-[var(--primary)] text-white ring-4 ring-[var(--primary)]/30 scale-105"
-                    : "bg-white border border-[var(--border)]"
+                    : "bg-white dark:bg-gray-800 border border-[var(--border)] dark:border-gray-700"
                 }`}
               >
                 {tier.badge && (
@@ -306,7 +306,7 @@ export default function PricingPage() {
               <div className="text-3xl font-bold mb-1">$79 - $149</div>
               <p className="text-sm opacity-80">One-time payment</p>
             </div>
-            <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-[var(--border)] dark:border-gray-700">
               <h3 className="font-bold text-lg mb-2 text-[var(--foreground)]">
                 Becker
               </h3>
@@ -315,7 +315,7 @@ export default function PricingPage() {
               </div>
               <p className="text-sm text-[var(--muted)]">Premium courses</p>
             </div>
-            <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-[var(--border)] dark:border-gray-700">
               <h3 className="font-bold text-lg mb-2 text-[var(--foreground)]">
                 Surgent
               </h3>
@@ -324,7 +324,7 @@ export default function PricingPage() {
               </div>
               <p className="text-sm text-[var(--muted)]">Full review</p>
             </div>
-            <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-[var(--border)] dark:border-gray-700">
               <h3 className="font-bold text-lg mb-2 text-[var(--foreground)]">
                 Roger CPA
               </h3>
@@ -526,7 +526,7 @@ export default function PricingPage() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-6 border border-[var(--border)]"
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-[var(--border)] dark:border-gray-700"
               >
                 <h3 className="font-semibold text-[var(--foreground)] mb-2">
                   {faq.question}

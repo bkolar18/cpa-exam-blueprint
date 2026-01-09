@@ -61,9 +61,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--card)] flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-[var(--card)] dark:bg-gray-900 flex items-center justify-center py-12 px-4">
       <div className="max-w-md w-full">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
@@ -82,7 +82,7 @@ export default function LoginPage() {
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg mb-6">
               {error}
             </div>
           )}
@@ -98,7 +98,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all"
                 placeholder="you@example.com"
               />
             </div>
@@ -113,7 +113,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-[var(--border)] dark:border-gray-600 bg-white dark:bg-gray-700 text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all"
                 placeholder="••••••••"
               />
             </div>
@@ -132,13 +132,13 @@ export default function LoginPage() {
               <div className="w-full border-t border-[var(--border)]"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white text-[var(--muted)]">Or continue with</span>
+              <span className="px-4 bg-white dark:bg-gray-800 text-[var(--muted)]">Or continue with</span>
             </div>
           </div>
 
           <button
             onClick={handleGoogleLogin}
-            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-[var(--border)] rounded-lg hover:bg-[var(--card)] transition-colors"
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-[var(--border)] dark:border-gray-600 rounded-lg hover:bg-[var(--card)] dark:hover:bg-gray-700 transition-colors"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
