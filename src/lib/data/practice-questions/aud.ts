@@ -37,12 +37,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Independence in appearance is best described as:",
     "options": {
-      "A": "The state of mind that permits an unbiased conclusion",
-      "B": "The avoidance of circumstances that would cause reasonable third parties to conclude independence is compromised",
-      "C": "The ability to perform an engagement without management override",
-      "D": "The requirement to rotate audit partners"
+      "A": "The avoidance of circumstances that would cause reasonable third parties to conclude independence is compromised",
+      "B": "The ability to perform an engagement without management override",
+      "C": "The requirement to rotate audit partners",
+      "D": "The state of mind that permits an unbiased conclusion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Independence in appearance means avoiding circumstances that would cause a reasonable and informed third party, aware of relevant information, to reasonably conclude that a firm's or member's integrity, objectivity, or professional skepticism is compromised. Independence in fact is the actual state of mind permitting unbiased conclusions.",
     "tip": "In fact = State of mind (actual). In appearance = Perception by reasonable third parties.",
     "calculationRequired": false,
@@ -58,12 +58,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An audit partner owns 100 shares of stock in an audit client. This is an example of:",
     "options": {
-      "A": "Indirect financial interest, which may impair independence if material",
-      "B": "Direct financial interest, which always impairs independence",
-      "C": "An acceptable arrangement if properly disclosed",
-      "D": "An immaterial interest that does not impair independence"
+      "A": "Direct financial interest, which always impairs independence",
+      "B": "An acceptable arrangement if properly disclosed",
+      "C": "An immaterial interest that does not impair independence",
+      "D": "Indirect financial interest, which may impair independence if material"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A direct financial interest in an audit client always impairs independence, regardless of materiality. Direct ownership of shares is a direct financial interest. Indirect financial interests (through mutual funds, etc.) impair independence only if material to the CPA. There is no 'immaterial' exception for direct interests.",
     "tip": "Direct financial interest = Always impairs independence. Indirect = Only if material. Direct includes ownership, loans, and certain relationships.",
     "calculationRequired": false,
@@ -79,12 +79,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which individual is considered a 'covered member' whose independence must be maintained for an attest engagement?",
     "options": {
-      "A": "A tax partner at the firm who has no involvement with the audit",
-      "B": "An audit manager on the engagement team",
-      "C": "The firm's receptionist",
-      "D": "A consultant in a different office with no client involvement"
+      "A": "An audit manager on the engagement team",
+      "B": "The firm's receptionist",
+      "C": "A consultant in a different office with no client involvement",
+      "D": "A tax partner at the firm who has no involvement with the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Covered members include: individuals on the attest engagement team, those in a position to influence the engagement, partners/managers who provide 10+ hours of non-attest services, and partners in the office principally responsible for the engagement. An audit manager on the engagement is clearly a covered member.",
     "tip": "Covered members: Engagement team, those who influence, partners/managers with 10+ hours non-attest, partners in the office.",
     "calculationRequired": false,
@@ -100,12 +100,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which non-attest service would generally impair independence if performed for an audit client, even with management's consent?",
     "options": {
-      "A": "Preparing tax returns",
-      "B": "Making management decisions",
-      "C": "Providing recommendations on internal controls",
-      "D": "Performing valuation services when the result is not material"
+      "A": "Making management decisions",
+      "B": "Providing recommendations on internal controls",
+      "C": "Performing valuation services when the result is not material",
+      "D": "Preparing tax returns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Making management decisions or performing management functions always impairs independence, regardless of management consent or safeguards. Examples include authorizing transactions, supervising client employees, or accepting responsibility for management functions. Other services may be acceptable with proper safeguards.",
     "tip": "Always prohibited: Management functions/decisions. Never act as management or make management's decisions.",
     "calculationRequired": false,
@@ -163,12 +163,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under which circumstance may a CPA disclose confidential client information without the client's consent?",
     "options": {
-      "A": "When requested by another CPA firm seeking a reference",
-      "B": "In response to a valid subpoena",
-      "C": "To obtain consulting advice from a business associate",
-      "D": "When the information could help a potential investor"
+      "A": "To obtain consulting advice from a business associate",
+      "B": "When the information could help a potential investor",
+      "C": "When requested by another CPA firm seeking a reference",
+      "D": "In response to a valid subpoena"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Confidential client information may be disclosed without consent in limited circumstances: (1) in response to a validly issued subpoena or summons, (2) in compliance with laws/regulations (like anti-money laundering), (3) in connection with professional disciplinary proceedings, (4) in peer reviews, (5) to successor auditors (with client consent usually expected but subpoena overrides).",
     "tip": "Disclosure without consent: Subpoena, legal requirement, disciplinary proceedings, peer review. Client consent needed in most other cases.",
     "calculationRequired": false,
@@ -205,12 +205,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A CPA may charge a contingent fee for which service?",
     "options": {
-      "A": "An audit of financial statements",
-      "B": "A review of financial statements",
-      "C": "Representation before the IRS in an examination",
-      "D": "Preparation of an original tax return"
+      "A": "A review of financial statements",
+      "B": "Representation before the IRS in an examination",
+      "C": "Preparation of an original tax return",
+      "D": "An audit of financial statements"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Contingent fees are prohibited for: audits, reviews, compilations when third parties will use and no disclosure of lack of independence, examinations of prospective financial information, and original tax return preparation. Contingent fees are permitted for representation before IRS, amended tax returns, and consulting services not involving these prohibited services.",
     "tip": "Contingent fees prohibited: Audits, reviews, compilations (certain), original tax returns. Permitted: IRS representation, amended returns, consulting.",
     "calculationRequired": false,
@@ -247,12 +247,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under AICPA rules, what is required regarding non-CPA owners of a CPA firm?",
     "options": {
-      "A": "Non-CPAs cannot have any ownership interest",
-      "B": "Non-CPA owners must be actively participating in the firm and CPAs must hold majority ownership",
-      "C": "Non-CPAs may own 100% if they pass an ethics exam",
-      "D": "Non-CPA ownership is only permitted in partnership form"
+      "A": "Non-CPAs may own 100% if they pass an ethics exam",
+      "B": "Non-CPA ownership is only permitted in partnership form",
+      "C": "Non-CPAs cannot have any ownership interest",
+      "D": "Non-CPA owners must be actively participating in the firm and CPAs must hold majority ownership"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The AICPA permits non-CPA owners if: they actively participate in the firm's business, CPAs remain responsible for all attest and compilation services, and certain state-specific requirements are met (often majority CPA ownership). This allows professionals like attorneys or consultants to have ownership stakes.",
     "tip": "Non-CPA ownership: Permitted with restrictions. Must actively participate. CPAs remain responsible for attest services. State rules vary.",
     "calculationRequired": false,
@@ -289,12 +289,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under PCAOB rules, how often must the lead audit partner on an SEC issuer engagement rotate off the engagement?",
     "options": {
-      "A": "Every 3 years with 2-year cooling off",
-      "B": "Every 5 years with 5-year cooling off",
-      "C": "Every 7 years with 3-year cooling off",
-      "D": "Every 10 years with 5-year cooling off"
+      "A": "Every 10 years with 5-year cooling off",
+      "B": "Every 3 years with 2-year cooling off",
+      "C": "Every 5 years with 5-year cooling off",
+      "D": "Every 7 years with 3-year cooling off"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "For SEC issuers, PCAOB Rule 3600T (originally SOX) requires the lead audit partner and concurring review partner to rotate after 5 consecutive years, followed by a 5-year cooling-off period before they can return to that engagement. Other partners have different rotation requirements.",
     "tip": "Lead/concurring partner rotation: 5 years on, 5 years off. Other engagement partners: 7 years on, 2 years off (PCAOB).",
     "calculationRequired": false,
@@ -310,12 +310,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A senior auditor's spouse is the controller of an audit client. What is the impact on independence?",
     "options": {
-      "A": "No impact if the spouse maintains separate finances",
-      "B": "Independence is impaired",
-      "C": "Acceptable if the senior auditor works on a different engagement",
-      "D": "Acceptable with disclosure to the audit committee"
+      "A": "Acceptable with disclosure to the audit committee",
+      "B": "No impact if the spouse maintains separate finances",
+      "C": "Independence is impaired",
+      "D": "Acceptable if the senior auditor works on a different engagement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Immediate family (spouse, spousal equivalent, dependent) of a covered member in a key position at the client impairs independence. Key positions include officer, director, or employee in a position to exercise significant influence over the financial statements (like controller). The senior auditor cannot be on this engagement.",
     "tip": "Immediate family in key position = Independence impaired. Key positions: Officers, directors, significant influence over F/S.",
     "calculationRequired": false,
@@ -331,12 +331,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which action would be considered an act discreditable to the profession?",
     "options": {
-      "A": "Declining an engagement due to lack of competence",
-      "B": "Retaining client records until fees are paid (when permitted by law)",
-      "C": "Committing discrimination in employment practices",
-      "D": "Advertising services in a newspaper"
+      "A": "Retaining client records until fees are paid (when permitted by law)",
+      "B": "Committing discrimination in employment practices",
+      "C": "Advertising services in a newspaper",
+      "D": "Declining an engagement due to lack of competence"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Acts discreditable include: discrimination or harassment in employment practices, negligence in preparing financial statements or tax returns, failure to follow standards, solicitation through coercion, and other acts that reflect adversely on integrity. Declining engagements and appropriate advertising are not discreditable.",
     "tip": "Acts discreditable: Discrimination, harassment, negligence, failure to follow standards, fraud. Not: Declining engagements, proper advertising.",
     "calculationRequired": false,
@@ -352,12 +352,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A CPA is asked to provide litigation support for a client the CPA previously audited. What ethical consideration applies?",
     "options": {
-      "A": "This is prohibited under all circumstances",
-      "B": "The CPA must maintain objectivity and disclose potential conflicts",
-      "C": "Only attorneys can provide litigation support",
-      "D": "The CPA must resign from all future audit engagements"
+      "A": "The CPA must resign from all future audit engagements",
+      "B": "This is prohibited under all circumstances",
+      "C": "The CPA must maintain objectivity and disclose potential conflicts",
+      "D": "Only attorneys can provide litigation support"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CPAs providing litigation support must maintain objectivity. If the CPA has a relationship that could impair objectivity (like auditor-client relationship), this must be disclosed and considered. The service is not prohibited but requires careful evaluation of conflicts and communication with affected parties.",
     "tip": "Litigation support: Maintain objectivity. Disclose conflicts. Evaluate if prior relationships impair objectivity.",
     "calculationRequired": false,
@@ -373,12 +373,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under the conceptual framework for independence, which is NOT a recognized category of threat?",
     "options": {
-      "A": "Self-interest threat",
-      "B": "Familiarity threat",
-      "C": "Competency threat",
-      "D": "Advocacy threat"
+      "A": "Familiarity threat",
+      "B": "Competency threat",
+      "C": "Advocacy threat",
+      "D": "Self-interest threat"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The conceptual framework identifies seven threat categories: self-interest, self-review, advocacy, familiarity, undue influence, management participation, and structural. Competency is not a threat category - it's addressed under due care. The framework requires identifying threats and applying safeguards to reduce them to acceptable levels.",
     "tip": "Independence threat categories: Self-interest, Self-review, Advocacy, Familiarity, Undue influence, Management participation, Structural.",
     "calculationRequired": false,
@@ -394,12 +394,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is an example of a safeguard that can reduce threats to independence?",
     "options": {
-      "A": "Increasing audit fees",
-      "B": "Having a second partner review the engagement",
-      "C": "Reducing the scope of the audit",
-      "D": "Issuing a qualified opinion"
+      "A": "Issuing a qualified opinion",
+      "B": "Increasing audit fees",
+      "C": "Having a second partner review the engagement",
+      "D": "Reducing the scope of the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Safeguards reduce threats to acceptable levels. Examples include: quality control policies, involvement of additional professionals to review work, consultation with third parties, rotation of personnel, discussion with those charged with governance, and disclosure of relationships. A second partner review is a common safeguard.",
     "tip": "Safeguards: Additional review, consultation, rotation, TCWG discussion, disclosure, quality controls. Must reduce threat to acceptable level.",
     "calculationRequired": false,
@@ -415,12 +415,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When may a CPA accept a referral fee?",
     "options": {
-      "A": "Never - referral fees are always prohibited",
-      "B": "Only from other CPAs",
-      "C": "When disclosed to the client and not from an attest client",
-      "D": "Only for tax services"
+      "A": "When disclosed to the client and not from an attest client",
+      "B": "Only for tax services",
+      "C": "Never - referral fees are always prohibited",
+      "D": "Only from other CPAs"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Referral fees are permitted if: (1) disclosed to the client, and (2) the CPA does not perform services for the client that require independence. Commissions follow similar rules. Accepting referral fees from attest clients during the period of engagement impairs independence.",
     "tip": "Referral fees/commissions: Permitted with disclosure if not an attest client. Prohibited if independence required.",
     "calculationRequired": false,
@@ -457,12 +457,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An audit client offers the engagement partner a holiday gift. When would accepting this gift impair independence?",
     "options": {
-      "A": "Always - gifts are never permitted",
-      "B": "Only if the gift is cash",
-      "C": "If the gift is other than clearly insignificant",
-      "D": "Only if the gift exceeds $100"
+      "A": "Only if the gift exceeds $100",
+      "B": "Always - gifts are never permitted",
+      "C": "Only if the gift is cash",
+      "D": "If the gift is other than clearly insignificant"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Accepting gifts from attest clients creates a self-interest threat. Gifts that are clearly insignificant (tokens or small promotional items) generally do not impair independence. Gifts that are more than insignificant can impair independence, and there's no specific dollar threshold - it's based on facts and circumstances.",
     "tip": "Gifts from clients: Clearly insignificant = OK. More than insignificant = May impair independence. No bright-line dollar test.",
     "calculationRequired": false,
@@ -478,12 +478,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An audit client owes the CPA firm fees from the prior year audit that remain unpaid when the current year audit begins. What is the impact?",
     "options": {
-      "A": "No impact if the client has agreed to a payment plan",
-      "B": "Independence is impaired if fees are outstanding for more than one year before the current report date",
-      "C": "Independence is impaired only if the fees are material to the firm",
-      "D": "The firm must obtain a retainer before starting the new audit"
+      "A": "The firm must obtain a retainer before starting the new audit",
+      "B": "No impact if the client has agreed to a payment plan",
+      "C": "Independence is impaired if fees are outstanding for more than one year before the current report date",
+      "D": "Independence is impaired only if the fees are material to the firm"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under AICPA rules, independence is impaired if fees for professional services provided more than one year prior to the current report date remain unpaid when the report is issued. This creates an unpaid fee that functions like a loan to the client, creating a self-interest threat.",
     "tip": "Unpaid fees rule: Fees from >1 year prior still unpaid at report date = Independence impaired. Treat like a loan to client.",
     "calculationRequired": false,
@@ -499,12 +499,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under Statements on Quality Control Standards, which element must be included in a firm's system of quality control?",
     "options": {
-      "A": "Minimum partner billing rates",
-      "B": "Mandatory insurance coverage amounts",
-      "C": "Human resources policies",
-      "D": "Office location requirements"
+      "A": "Office location requirements",
+      "B": "Minimum partner billing rates",
+      "C": "Mandatory insurance coverage amounts",
+      "D": "Human resources policies"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "SQCS requires firms to establish policies for: leadership responsibilities, relevant ethical requirements, acceptance/continuance of clients and engagements, human resources, engagement performance, and monitoring. Human resources includes hiring, competence development, assignment, and evaluation of personnel.",
     "tip": "QC elements: Leadership, Ethics, Acceptance/Continuance, Human Resources, Engagement Performance, Monitoring.",
     "calculationRequired": false,
@@ -520,12 +520,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which body has the authority to revoke a CPA's license to practice?",
     "options": {
-      "A": "AICPA",
-      "B": "State Board of Accountancy",
-      "C": "PCAOB",
-      "D": "SEC"
+      "A": "State Board of Accountancy",
+      "B": "PCAOB",
+      "C": "SEC",
+      "D": "AICPA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "State Boards of Accountancy have the authority to grant, suspend, and revoke CPA licenses within their jurisdiction. The AICPA is a voluntary membership organization. The PCAOB and SEC have authority over auditors of public companies but cannot revoke state licenses directly.",
     "tip": "State Board = Licensing authority. AICPA = Membership organization. PCAOB/SEC = Public company oversight.",
     "calculationRequired": false,
@@ -541,12 +541,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An audit manager's brother (not financially dependent) is an accounting supervisor at the audit client, but not in a key position. What is the effect on independence?",
     "options": {
-      "A": "Independence is impaired",
-      "B": "Independence is not impaired",
-      "C": "Independence is impaired only if they share a residence",
-      "D": "The audit manager must be removed from the engagement"
+      "A": "Independence is impaired only if they share a residence",
+      "B": "The audit manager must be removed from the engagement",
+      "C": "Independence is impaired",
+      "D": "Independence is not impaired"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Close relatives (non-dependent parents, siblings, children) in non-key positions at a client do not automatically impair independence. Key positions (officer, director, or significant influence over F/S) would cause impairment. An accounting supervisor not exercising significant influence is not a key position.",
     "tip": "Close relatives: Key position = impaired. Non-key position = not automatically impaired. Evaluate other threats.",
     "calculationRequired": false,
@@ -583,12 +583,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A CPA discovers after the audit report date that procedures performed were inadequate. What action is required?",
     "options": {
-      "A": "No action if the financial statements were fairly stated",
-      "B": "Perform omitted procedures and take appropriate action based on results",
-      "C": "Immediately withdraw the audit report",
-      "D": "Notify the SEC regardless of client type"
+      "A": "Perform omitted procedures and take appropriate action based on results",
+      "B": "Immediately withdraw the audit report",
+      "C": "Notify the SEC regardless of client type",
+      "D": "No action if the financial statements were fairly stated"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When a CPA discovers that procedures were omitted, they should assess the importance of the omitted procedures. If important, the CPA should perform the omitted procedures or alternative procedures. Based on results, determine if the report is still supported or if further action (notification, revision) is required.",
     "tip": "Omitted procedures discovered post-report: Assess importance → Perform procedures → Determine action based on results.",
     "calculationRequired": false,
@@ -625,12 +625,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A former partner of an audit firm joins an audit client as CFO. What must occur to preserve the firm's independence?",
     "options": {
-      "A": "Nothing - former partners have no effect on independence",
-      "B": "The former partner must not participate in the audit",
-      "C": "The former partner must not be in a position to influence the audit and any amounts owed to them must be fully settled",
-      "D": "A one-year cooling-off period before joining the client"
+      "A": "The former partner must not be in a position to influence the audit and any amounts owed to them must be fully settled",
+      "B": "A one-year cooling-off period before joining the client",
+      "C": "Nothing - former partners have no effect on independence",
+      "D": "The former partner must not participate in the audit"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "When a former partner joins an audit client in a key position, independence is impaired unless: (1) the former partner is not in a position to influence the audit, (2) all financial interests are liquidated, (3) amounts owed are settled, and (4) the former partner is not consulted on accounting or audit matters. CFO is definitely a position of influence.",
     "tip": "Former partner at client: Must sever all financial ties, cannot influence audit. Key positions likely impair independence regardless.",
     "calculationRequired": false,
@@ -646,12 +646,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Professional skepticism includes:",
     "options": {
-      "A": "Assuming management is dishonest",
-      "B": "A questioning mind and critical assessment of audit evidence",
-      "C": "Requiring third-party verification for all transactions",
-      "D": "Declining engagements where fraud risk exists"
+      "A": "A questioning mind and critical assessment of audit evidence",
+      "B": "Requiring third-party verification for all transactions",
+      "C": "Declining engagements where fraud risk exists",
+      "D": "Assuming management is dishonest"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Professional skepticism is an attitude that includes a questioning mind, being alert to conditions that may indicate misstatement due to error or fraud, and a critical assessment of audit evidence. It does not assume dishonesty but also does not assume honesty without corroboration.",
     "tip": "Professional skepticism: Questioning mind + Critical assessment. Neither assume dishonesty nor unquestioned honesty.",
     "calculationRequired": false,
@@ -667,12 +667,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which firms are subject to AICPA peer review requirements?",
     "options": {
-      "A": "Only firms auditing SEC issuers",
-      "B": "AICPA member firms performing accounting or auditing services",
-      "C": "All firms with more than 10 CPAs",
-      "D": "Only firms providing compilation services"
+      "A": "All firms with more than 10 CPAs",
+      "B": "Only firms providing compilation services",
+      "C": "Only firms auditing SEC issuers",
+      "D": "AICPA member firms performing accounting or auditing services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AICPA member firms that perform accounting and auditing services (audits, reviews, compilations, attestation) must undergo peer review. This is a membership requirement. Firms auditing SEC issuers are also subject to PCAOB inspections. Non-member firms are not required but states may have separate requirements.",
     "tip": "AICPA peer review: Required for member firms doing A&A work. Separate from PCAOB inspection for SEC work.",
     "calculationRequired": false,
@@ -688,12 +688,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "What is the most severe sanction the AICPA can impose on a member?",
     "options": {
-      "A": "Monetary fines",
-      "B": "Suspension of license",
-      "C": "Expulsion from membership",
-      "D": "Criminal prosecution"
+      "A": "Criminal prosecution",
+      "B": "Monetary fines",
+      "C": "Suspension of license",
+      "D": "Expulsion from membership"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The AICPA can admonish, suspend, or expel members for violations. Expulsion is the most severe sanction. The AICPA cannot impose fines (a state/regulatory power), suspend licenses (state board authority), or prosecute (government authority). Membership expulsion affects professional standing but not the license itself.",
     "tip": "AICPA sanctions: Admonish, Suspend membership, Expel. Cannot fine, revoke license, or prosecute.",
     "calculationRequired": false,
@@ -730,12 +730,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A covered member's retirement plan (over which they have no control) invests in an audit client's stock. How is independence affected?",
     "options": {
-      "A": "Independence is impaired regardless of control",
-      "B": "Independence is not impaired if the covered member has no control over investment decisions",
-      "C": "Independence is impaired if the investment exceeds 5% of the plan",
-      "D": "This situation never occurs as retirement plans cannot invest in audit clients"
+      "A": "This situation never occurs as retirement plans cannot invest in audit clients",
+      "B": "Independence is impaired regardless of control",
+      "C": "Independence is not impaired if the covered member has no control over investment decisions",
+      "D": "Independence is impaired if the investment exceeds 5% of the plan"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Financial interests in retirement plans over which the covered member has no control (defined benefit plans, defined contribution plans where member cannot direct investments into specific stocks) are considered indirect financial interests. Since the member has no control, independence is generally not impaired even if material, as it's treated like a mutual fund investment.",
     "tip": "Retirement plan investments: No control = generally not impaired (like mutual funds). Control over investment direction = analyze like other investments.",
     "calculationRequired": false,
@@ -751,12 +751,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The audit risk model is expressed as AR = IR × CR × DR. What does DR represent?",
     "options": {
-      "A": "Discovery risk",
-      "B": "Detection risk",
-      "C": "Default risk",
-      "D": "Documentation risk"
+      "A": "Documentation risk",
+      "B": "Discovery risk",
+      "C": "Detection risk",
+      "D": "Default risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Detection risk (DR) is the risk that audit procedures will not detect a material misstatement. It is the only component of audit risk that auditors can directly control through the nature, timing, and extent of procedures. Inherent risk (IR) and control risk (CR) exist independently of the audit.",
     "tip": "Audit risk components: IR and CR are entity-related (auditor assesses). DR is audit-related (auditor controls through procedures).",
     "calculationRequired": false,
@@ -793,12 +793,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which factor would increase inherent risk for the inventory account?",
     "options": {
-      "A": "Stable market prices for inventory items",
-      "B": "Inventory consists of commodity items with quoted market prices",
-      "C": "Inventory includes complex products requiring significant estimation",
-      "D": "Management has extensive experience in the industry"
+      "A": "Inventory consists of commodity items with quoted market prices",
+      "B": "Inventory includes complex products requiring significant estimation",
+      "C": "Management has extensive experience in the industry",
+      "D": "Stable market prices for inventory items"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Inherent risk is higher when accounts involve estimates, judgments, or complex calculations. Inventory with complex products requiring estimation (for obsolescence, lower of cost or NRV) has higher inherent risk than commodities with readily determinable values. Stable prices and experienced management reduce inherent risk.",
     "tip": "Higher inherent risk: Complexity, estimation, judgment, volatile markets, unusual transactions. Lower: Routine, objective, stable.",
     "calculationRequired": false,
@@ -814,12 +814,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An auditor assesses control risk at maximum. This means the auditor:",
     "options": {
-      "A": "Will not perform any substantive procedures",
-      "B": "Has determined controls are ineffective or has decided not to test them",
-      "C": "Must withdraw from the engagement",
-      "D": "Can rely entirely on controls for evidence"
+      "A": "Must withdraw from the engagement",
+      "B": "Can rely entirely on controls for evidence",
+      "C": "Will not perform any substantive procedures",
+      "D": "Has determined controls are ineffective or has decided not to test them"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Assessing control risk at maximum (100%) means the auditor either believes controls are not effective or has decided not to test controls (often because substantive procedures alone would be more efficient). This requires more extensive substantive testing to compensate. The auditor cannot skip substantive procedures.",
     "tip": "CR at maximum: Either controls ineffective OR testing controls not efficient. Either way, rely on substantive procedures only.",
     "calculationRequired": false,
@@ -835,12 +835,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Risk of material misstatement (RMM) is defined as:",
     "options": {
-      "A": "The risk that the auditor will express an incorrect opinion",
-      "B": "The combined effect of inherent risk and control risk",
-      "C": "The same as detection risk",
-      "D": "The risk that fraud exists in the financial statements"
+      "A": "The risk that fraud exists in the financial statements",
+      "B": "The risk that the auditor will express an incorrect opinion",
+      "C": "The combined effect of inherent risk and control risk",
+      "D": "The same as detection risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Risk of material misstatement (RMM) is the combined effect of inherent risk and control risk. It represents the risk that the financial statements are materially misstated prior to audit. RMM = IR × CR. Audit risk = RMM × DR. The auditor assesses RMM and adjusts procedures accordingly.",
     "tip": "RMM = IR × CR (risk before audit). Audit Risk = RMM × DR (overall risk of wrong opinion).",
     "calculationRequired": false,
@@ -856,12 +856,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The overall audit strategy includes:",
     "options": {
-      "A": "Detailed audit procedures for each account",
-      "B": "Scope, timing, direction of the audit, and resource allocation",
-      "C": "Only the engagement letter terms",
-      "D": "The final audit report draft"
+      "A": "Scope, timing, direction of the audit, and resource allocation",
+      "B": "Only the engagement letter terms",
+      "C": "The final audit report draft",
+      "D": "Detailed audit procedures for each account"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The overall audit strategy sets the scope, timing, and direction of the audit and guides development of the detailed audit plan. It includes determining resources needed, materiality, preliminary risk assessments, and the nature of internal control testing. The audit plan then details specific procedures.",
     "tip": "Audit strategy: Overall scope, timing, direction. Audit plan: Detailed procedures. Strategy guides plan development.",
     "calculationRequired": false,
@@ -877,12 +877,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is NOT required when obtaining an understanding of the entity and its environment?",
     "options": {
-      "A": "Industry, regulatory, and external factors",
-      "B": "The entity's selection and application of accounting policies",
-      "C": "Detailed testing of all significant account balances",
-      "D": "The entity's internal control"
+      "A": "Detailed testing of all significant account balances",
+      "B": "The entity's internal control",
+      "C": "Industry, regulatory, and external factors",
+      "D": "The entity's selection and application of accounting policies"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Obtaining an understanding requires knowledge of: industry/regulatory factors, entity nature and operations, accounting policies, objectives/strategies/business risks, and internal control. Detailed testing of account balances is part of substantive procedures, not the risk assessment/understanding phase.",
     "tip": "Understanding the entity: Industry, Operations, Policies, Strategies, Controls. This precedes detailed testing.",
     "calculationRequired": false,
@@ -919,12 +919,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Analytical procedures performed during planning are primarily used to:",
     "options": {
-      "A": "Provide substantive evidence about account balances",
-      "B": "Identify areas of potential risk and focus the audit",
-      "C": "Test the operating effectiveness of controls",
-      "D": "Verify management's estimates"
+      "A": "Test the operating effectiveness of controls",
+      "B": "Verify management's estimates",
+      "C": "Provide substantive evidence about account balances",
+      "D": "Identify areas of potential risk and focus the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Planning-stage analytical procedures help identify areas of potential risk that may indicate misstatement. They enhance understanding of the client's business and highlight unusual changes or relationships requiring further investigation. Substantive analytical procedures (different purpose) provide evidence about account balances.",
     "tip": "Planning analytics: Risk identification, focus audit. Substantive analytics: Provide evidence. Final analytics: Overall review.",
     "calculationRequired": false,
@@ -940,12 +940,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Materiality for planning purposes is typically determined using:",
     "options": {
-      "A": "A percentage of a key financial statement element like revenue, assets, or income",
-      "B": "A fixed dollar amount set by GAAS",
-      "C": "The amount the client requests",
-      "D": "Only qualitative factors"
+      "A": "The amount the client requests",
+      "B": "Only qualitative factors",
+      "C": "A percentage of a key financial statement element like revenue, assets, or income",
+      "D": "A fixed dollar amount set by GAAS"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Materiality is typically calculated as a percentage of a relevant benchmark such as total revenues, total assets, net income, or equity. The benchmark chosen depends on the entity's circumstances and users' focus. Common percentages: 0.5-1% of revenue, 1-2% of assets, 5-10% of income. Professional judgment is required.",
     "tip": "Materiality benchmarks: Revenue (0.5-1%), Assets (1-2%), Income (5-10%). Choose based on entity type and user focus.",
     "calculationRequired": false,
@@ -961,12 +961,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Performance materiality is set at an amount:",
     "options": {
-      "A": "Equal to overall materiality",
-      "B": "Higher than overall materiality",
-      "C": "Less than overall materiality",
-      "D": "Determined only at the completion stage"
+      "A": "Higher than overall materiality",
+      "B": "Less than overall materiality",
+      "C": "Determined only at the completion stage",
+      "D": "Equal to overall materiality"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Performance materiality is set at less than overall materiality to reduce the risk that aggregate uncorrected/undetected misstatements exceed overall materiality. It's used to determine the nature, timing, and extent of audit procedures. It accounts for the risk that multiple smaller misstatements could aggregate to a material amount.",
     "tip": "Performance materiality < Overall materiality. Provides margin for aggregation of misstatements and undetected errors.",
     "calculationRequired": false,
@@ -982,12 +982,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which of the following is considered a significant risk requiring special audit consideration?",
     "options": {
-      "A": "Routine sales transactions",
-      "B": "Revenue recognition in complex arrangements",
-      "C": "Bank reconciliations",
-      "D": "Standard payroll processing"
+      "A": "Revenue recognition in complex arrangements",
+      "B": "Bank reconciliations",
+      "C": "Standard payroll processing",
+      "D": "Routine sales transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Significant risks are identified RMMs that require special audit consideration. They typically involve significant judgments, unusual transactions, fraud risk, or complex accounting. Revenue recognition (especially complex arrangements) is often a significant risk due to judgment involved. Fraud risk in revenue recognition is presumed. Routine transactions generally are not significant risks.",
     "tip": "Significant risks: Require special consideration. Characteristics: Complexity, judgment, fraud risk, unusual transactions, related parties.",
     "calculationRequired": false,
@@ -1003,12 +1003,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which fraud risk is presumed to exist in every audit?",
     "options": {
-      "A": "Misappropriation of assets",
-      "B": "Fraudulent financial reporting",
-      "C": "Risk of material misstatement due to fraud in revenue recognition",
-      "D": "Inventory theft"
+      "A": "Fraudulent financial reporting",
+      "B": "Risk of material misstatement due to fraud in revenue recognition",
+      "C": "Inventory theft",
+      "D": "Misappropriation of assets"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "AU-C 240 (and AS 2401 for PCAOB) presumes that improper revenue recognition is a fraud risk. Unless the auditor has determined this presumption is not applicable (and documented why), revenue recognition must be addressed as a fraud risk. Management override of controls is also a presumed risk.",
     "tip": "Presumed fraud risks: Revenue recognition, Management override of controls. Can be rebutted with documentation.",
     "calculationRequired": false,
@@ -1024,12 +1024,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The fraud triangle includes all of the following EXCEPT:",
     "options": {
-      "A": "Incentive/pressure",
-      "B": "Opportunity",
-      "C": "Rationalization",
-      "D": "Documentation"
+      "A": "Documentation",
+      "B": "Incentive/pressure",
+      "C": "Opportunity",
+      "D": "Rationalization"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "The fraud triangle consists of three conditions generally present when fraud occurs: (1) Incentive/Pressure - motivation to commit fraud, (2) Opportunity - circumstances allowing fraud to occur, and (3) Rationalization - ability to justify the fraudulent act. Documentation is not a fraud condition.",
     "tip": "Fraud triangle: Incentive (pressure), Opportunity, Rationalization. All three typically present when fraud occurs.",
     "calculationRequired": false,
@@ -1045,12 +1045,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is a fraud risk factor related to opportunity?",
     "options": {
-      "A": "Significant bonuses based on financial performance",
-      "B": "Inadequate segregation of duties",
-      "C": "Management's excessive interest in stock price",
-      "D": "Prior employee complaints about unethical behavior"
+      "A": "Management's excessive interest in stock price",
+      "B": "Prior employee complaints about unethical behavior",
+      "C": "Significant bonuses based on financial performance",
+      "D": "Inadequate segregation of duties"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Opportunity risk factors include: inadequate segregation of duties, lack of management oversight, deficient internal controls, complex organizational structure, and high employee turnover in accounting positions. Bonuses and stock price focus are incentive factors. Complaints may indicate rationalization or culture issues.",
     "tip": "Opportunity factors: Weak controls, poor segregation, inadequate oversight. Incentive factors: Bonuses, targets, financial pressures.",
     "calculationRequired": false,
@@ -1066,12 +1066,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is NOT a component of internal control under the COSO framework?",
     "options": {
-      "A": "Control environment",
-      "B": "Risk assessment",
-      "C": "Audit committee",
-      "D": "Monitoring activities"
+      "A": "Monitoring activities",
+      "B": "Control environment",
+      "C": "Risk assessment",
+      "D": "Audit committee"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The five COSO internal control components are: (1) Control Environment, (2) Risk Assessment, (3) Control Activities, (4) Information and Communication, and (5) Monitoring Activities. The audit committee is part of corporate governance and relates to the control environment, but is not itself a component.",
     "tip": "COSO components: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring. (CRIME mnemonic)",
     "calculationRequired": false,
@@ -1129,12 +1129,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is an IT general control (ITGC)?",
     "options": {
-      "A": "Input validation checking",
-      "B": "System access security and user authentication",
-      "C": "Automated calculation of depreciation",
-      "D": "Three-way matching in accounts payable"
+      "A": "Automated calculation of depreciation",
+      "B": "Three-way matching in accounts payable",
+      "C": "Input validation checking",
+      "D": "System access security and user authentication"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IT general controls apply broadly to the IT environment and support application controls. ITGCs include: access security, program changes, program development, and computer operations. Input validation, automated calculations, and matching are application controls that relate to specific transaction processing.",
     "tip": "ITGCs: Access security, Change management, Development, Operations. Application controls: Input, Processing, Output for specific applications.",
     "calculationRequired": false,
@@ -1171,12 +1171,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An overall response to assessed risks at the financial statement level might include:",
     "options": {
-      "A": "Increasing the sample size for accounts receivable",
-      "B": "Assigning more experienced staff or providing more supervision",
-      "C": "Performing detailed tests of inventory count",
-      "D": "Confirming accounts payable"
+      "A": "Confirming accounts payable",
+      "B": "Increasing the sample size for accounts receivable",
+      "C": "Assigning more experienced staff or providing more supervision",
+      "D": "Performing detailed tests of inventory count"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Overall responses address pervasive risks affecting the financial statements as a whole. They include: emphasizing professional skepticism, assigning more experienced staff, using specialists, providing more supervision, incorporating unpredictability, and changing timing/extent generally. Specific account testing is a response at the assertion level.",
     "tip": "Financial statement level responses: Staffing, supervision, unpredictability, skepticism. Assertion level: Specific procedures for accounts.",
     "calculationRequired": false,
@@ -1192,12 +1192,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which assertion relates to whether recorded transactions actually occurred?",
     "options": {
-      "A": "Completeness",
-      "B": "Occurrence",
-      "C": "Accuracy",
-      "D": "Cutoff"
+      "A": "Cutoff",
+      "B": "Completeness",
+      "C": "Occurrence",
+      "D": "Accuracy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Occurrence addresses whether transactions and events that have been recorded have actually occurred and pertain to the entity. It's the opposite of completeness (which addresses whether all transactions are recorded). Occurrence tests for overstatement; completeness tests for understatement.",
     "tip": "Occurrence: Did it happen? (overstatement risk). Completeness: Is everything recorded? (understatement risk). Often tested differently.",
     "calculationRequired": false,
@@ -1213,12 +1213,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The assertion of 'rights and obligations' relates to:",
     "options": {
-      "A": "Whether assets and liabilities exist",
-      "B": "Whether the entity holds or controls rights to assets and liabilities are the entity's obligations",
-      "C": "Whether amounts are recorded at appropriate values",
-      "D": "Whether disclosures are complete"
+      "A": "Whether disclosures are complete",
+      "B": "Whether assets and liabilities exist",
+      "C": "Whether the entity holds or controls rights to assets and liabilities are the entity's obligations",
+      "D": "Whether amounts are recorded at appropriate values"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Rights and obligations addresses whether the entity holds or controls the rights to assets and whether liabilities are the obligations of the entity. This is particularly relevant for assets that may be leased, held on consignment, or subject to liens, and for understanding the nature of recorded liabilities.",
     "tip": "Rights & Obligations: Does entity own/control assets? Are liabilities actually owed? Important for assets not clearly owned.",
     "calculationRequired": false,
@@ -1255,12 +1255,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Before accepting an engagement, what communication with the predecessor auditor is required?",
     "options": {
-      "A": "None - it is optional",
-      "B": "Communication is required; client permission needed first",
-      "C": "The successor must obtain the predecessor's workpapers",
-      "D": "Communication only required if the predecessor was terminated"
+      "A": "Communication only required if the predecessor was terminated",
+      "B": "None - it is optional",
+      "C": "Communication is required; client permission needed first",
+      "D": "The successor must obtain the predecessor's workpapers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The successor auditor is required to communicate with the predecessor auditor before accepting the engagement. Client permission is needed for the predecessor to respond. Inquiries include reasons for the change, disagreements with management, fraud concerns, and any issues bearing on integrity. Workpaper review is optional.",
     "tip": "Predecessor communication: Required before acceptance. Need client permission. Ask about disagreements, fraud, integrity. Workpapers optional.",
     "calculationRequired": false,
@@ -1276,12 +1276,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which procedure helps identify related party transactions?",
     "options": {
-      "A": "Only reviewing management's related party disclosure",
-      "B": "Inquiry, review of documents, and evaluating unusual transactions",
-      "C": "Confirming all transactions with third parties",
-      "D": "Testing only material transactions"
+      "A": "Testing only material transactions",
+      "B": "Only reviewing management's related party disclosure",
+      "C": "Inquiry, review of documents, and evaluating unusual transactions",
+      "D": "Confirming all transactions with third parties"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Identifying related parties requires multiple procedures: inquiring of management, reviewing prior-year workpapers, examining shareholder records, reviewing SEC filings and minutes, evaluating unusual or large transactions, and considering known business relationships. Relying only on management representations is insufficient.",
     "tip": "Related party procedures: Multiple sources - inquiry, documents, minutes, unusual transactions. Don't rely solely on management representations.",
     "calculationRequired": false,
@@ -1339,12 +1339,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When management uses a specialist (such as an actuary) to develop an estimate, the auditor should:",
     "options": {
-      "A": "Accept the specialist's work without question",
-      "B": "Evaluate the specialist's competence, capabilities, and objectivity",
-      "C": "Hire their own specialist in every case",
-      "D": "Disclaim any responsibility for the estimate"
+      "A": "Evaluate the specialist's competence, capabilities, and objectivity",
+      "B": "Hire their own specialist in every case",
+      "C": "Disclaim any responsibility for the estimate",
+      "D": "Accept the specialist's work without question"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When management's specialist is used, the auditor evaluates: the specialist's competence, capabilities, and objectivity; understanding the specialist's work; and whether the work is adequate audit evidence. The auditor cannot simply rely on the specialist's reputation or credentials.",
     "tip": "Management's specialist: Evaluate competence, capabilities, objectivity. Understand work and evaluate adequacy. Auditor remains responsible.",
     "calculationRequired": false,
@@ -1360,12 +1360,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which law would have a 'direct effect' on the financial statements?",
     "options": {
-      "A": "Environmental protection regulations",
-      "B": "Tax laws determining income tax expense",
-      "C": "Occupational safety requirements",
-      "D": "Anti-discrimination employment laws"
+      "A": "Occupational safety requirements",
+      "B": "Anti-discrimination employment laws",
+      "C": "Environmental protection regulations",
+      "D": "Tax laws determining income tax expense"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Direct-effect laws are those with clear, direct financial statement impact - primarily tax laws and regulations affecting recorded amounts. The auditor must obtain sufficient evidence about compliance. Indirect-effect laws (environmental, safety, employment) may result in contingencies but don't directly determine F/S amounts. Different audit response for each.",
     "tip": "Direct effect: Tax laws, regulations determining F/S amounts (test compliance). Indirect: Environmental, safety (be aware, follow up on identified noncompliance).",
     "calculationRequired": false,
@@ -1402,12 +1402,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Sampling risk is the risk that:",
     "options": {
-      "A": "The sample is not randomly selected",
-      "B": "The auditor's conclusion based on a sample differs from the conclusion if the entire population were tested",
-      "C": "The client's population contains errors",
-      "D": "The auditor uses an inappropriate audit procedure"
+      "A": "The auditor's conclusion based on a sample differs from the conclusion if the entire population were tested",
+      "B": "The client's population contains errors",
+      "C": "The auditor uses an inappropriate audit procedure",
+      "D": "The sample is not randomly selected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sampling risk is the risk that the auditor's conclusion based on a sample may differ from the conclusion reached if the entire population were subjected to the same procedure. It can be controlled by adjusting sample size. Non-sampling risk relates to human error or using inappropriate procedures.",
     "tip": "Sampling risk: Sample conclusion ≠ Population conclusion. Controlled by sample size. Non-sampling risk: Human error, wrong procedures.",
     "calculationRequired": false,
@@ -1423,12 +1423,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When using internal auditors to provide direct assistance on the audit, the external auditor:",
     "options": {
-      "A": "Can delegate all audit work to internal auditors",
-      "B": "Must supervise, review, and evaluate their work",
-      "C": "Is not responsible for work performed by internal auditors",
-      "D": "Can only use internal auditors for clerical tasks"
+      "A": "Must supervise, review, and evaluate their work",
+      "B": "Is not responsible for work performed by internal auditors",
+      "C": "Can only use internal auditors for clerical tasks",
+      "D": "Can delegate all audit work to internal auditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When internal auditors provide direct assistance, the external auditor must: evaluate their competence and objectivity, supervise and review their work, and retain responsibility for conclusions. Internal auditors should not work on high-risk areas or make significant judgments. External auditor remains responsible for the audit opinion.",
     "tip": "Internal auditor direct assistance: External auditor supervises, reviews, remains responsible. Limited to lower-risk areas. Evaluate competence/objectivity.",
     "calculationRequired": false,
@@ -1444,12 +1444,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Management representations:",
     "options": {
-      "A": "Substitute for other audit procedures",
-      "B": "Complement but do not replace other audit evidence",
-      "C": "Are only obtained for SEC audits",
-      "D": "Are optional at the auditor's discretion"
+      "A": "Are optional at the auditor's discretion",
+      "B": "Substitute for other audit procedures",
+      "C": "Complement but do not replace other audit evidence",
+      "D": "Are only obtained for SEC audits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Management representations are required written statements from management acknowledging responsibility for F/S, completeness of information, and other matters. However, they complement but do not replace substantive procedures. If other evidence is obtainable, representations alone are not sufficient. They are required for all audits.",
     "tip": "Management representations: Required. Complement other evidence. Don't replace substantive procedures. Written, signed by CEO/CFO.",
     "calculationRequired": false,
@@ -1465,12 +1465,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An engagement quality review is required for:",
     "options": {
-      "A": "All audit engagements",
-      "B": "SEC issuer audits and certain other engagements per firm policy",
-      "C": "Only engagements with qualified opinions",
-      "D": "Only first-year engagements"
+      "A": "Only engagements with qualified opinions",
+      "B": "Only first-year engagements",
+      "C": "All audit engagements",
+      "D": "SEC issuer audits and certain other engagements per firm policy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under PCAOB standards, engagement quality review (EQR) is required for all SEC issuer audits. Under AICPA standards, EQR is required based on firm policy for engagements meeting specified criteria (high risk, public interest entities, etc.). The EQR partner evaluates significant judgments and the report before issuance.",
     "tip": "EQR: Required for SEC issuers (PCAOB). AICPA: Based on firm policy/risk. Reviewer not engagement team member. Evaluates significant judgments.",
     "calculationRequired": false,
@@ -1486,12 +1486,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Sufficiency of audit evidence refers to:",
     "options": {
-      "A": "The quality of the evidence",
-      "B": "The quantity of the evidence",
-      "C": "The reliability of the evidence",
-      "D": "The relevance of the evidence"
+      "A": "The reliability of the evidence",
+      "B": "The relevance of the evidence",
+      "C": "The quality of the evidence",
+      "D": "The quantity of the evidence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sufficiency refers to the quantity (amount) of audit evidence needed. Appropriateness refers to quality, which includes relevance and reliability. Both are required for adequate audit evidence.",
     "tip": "Sufficiency = Quantity. Appropriateness = Quality (relevance + reliability).",
     "calculationRequired": false,
@@ -1507,12 +1507,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Appropriateness of audit evidence is measured by its:",
     "options": {
-      "A": "Quantity and cost",
-      "B": "Relevance and reliability",
-      "C": "Availability and timeliness",
-      "D": "Format and presentation"
+      "A": "Availability and timeliness",
+      "B": "Format and presentation",
+      "C": "Quantity and cost",
+      "D": "Relevance and reliability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Appropriateness measures the quality of evidence through two dimensions: relevance (the evidence relates to the assertion being tested) and reliability (the evidence is believable and trustworthy).",
     "tip": "Appropriate = Relevant (right assertion) + Reliable (trustworthy source).",
     "calculationRequired": false,
@@ -1549,12 +1549,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which audit procedure involves examining records or documents?",
     "options": {
-      "A": "Confirmation",
-      "B": "Inspection",
-      "C": "Observation",
-      "D": "Inquiry"
+      "A": "Observation",
+      "B": "Inquiry",
+      "C": "Confirmation",
+      "D": "Inspection"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Inspection involves examining records, documents, or tangible assets. Confirmation seeks responses from third parties. Observation watches processes or procedures. Inquiry asks questions of client personnel.",
     "tip": "Inspection = Examine documents/assets. Observation = Watch processes. Inquiry = Ask questions.",
     "calculationRequired": false,
@@ -1570,12 +1570,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An external confirmation provides evidence that is:",
     "options": {
-      "A": "Generated internally by the client",
-      "B": "Obtained directly from a third party in response to a request",
-      "C": "Based on the auditor's observation",
-      "D": "Derived from the client's accounting system"
+      "A": "Derived from the client's accounting system",
+      "B": "Generated internally by the client",
+      "C": "Obtained directly from a third party in response to a request",
+      "D": "Based on the auditor's observation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "External confirmation is audit evidence obtained as a direct written response to the auditor from a third party. It provides highly reliable evidence because it comes from an independent source outside the client.",
     "tip": "Confirmation = Third party responds directly to auditor. Very reliable external evidence.",
     "calculationRequired": false,
@@ -1591,12 +1591,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A limitation of observation as an audit procedure is that it:",
     "options": {
-      "A": "Cannot be performed by the auditor",
-      "B": "Only provides evidence about the point in time when observation occurs",
-      "C": "Is never reliable",
-      "D": "Cannot be documented"
+      "A": "Cannot be documented",
+      "B": "Cannot be performed by the auditor",
+      "C": "Only provides evidence about the point in time when observation occurs",
+      "D": "Is never reliable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Observation provides evidence only for the moment in time when observation occurs. It does not provide evidence that the observed behavior or procedure occurs consistently when the auditor is not present.",
     "tip": "Observation = Point-in-time evidence. Behavior may differ when auditor isn't watching.",
     "calculationRequired": false,
@@ -1612,12 +1612,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Inquiry alone is generally insufficient to:",
     "options": {
-      "A": "Understand the client's business",
-      "B": "Identify unusual transactions",
-      "C": "Test the operating effectiveness of controls",
-      "D": "Plan the audit"
+      "A": "Test the operating effectiveness of controls",
+      "B": "Plan the audit",
+      "C": "Understand the client's business",
+      "D": "Identify unusual transactions"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Inquiry alone is generally not sufficient to test controls or to detect material misstatement at the assertion level. It must be combined with other procedures to provide sufficient appropriate evidence for controls testing.",
     "tip": "Inquiry alone = Not enough for controls. Must combine with inspection, observation, or reperformance.",
     "calculationRequired": false,
@@ -1633,12 +1633,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Recalculation as an audit procedure involves:",
     "options": {
-      "A": "Asking management to recalculate amounts",
-      "B": "Checking the mathematical accuracy of documents or records",
-      "C": "Comparing client records to external sources",
-      "D": "Estimating amounts based on industry data"
+      "A": "Estimating amounts based on industry data",
+      "B": "Asking management to recalculate amounts",
+      "C": "Checking the mathematical accuracy of documents or records",
+      "D": "Comparing client records to external sources"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Recalculation consists of checking the mathematical accuracy of documents or records. The auditor independently performs the calculations to verify amounts recorded by the client.",
     "tip": "Recalculation = Auditor independently verifies math (additions, extensions, etc.).",
     "calculationRequired": false,
@@ -1654,12 +1654,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Reperformance differs from recalculation in that reperformance:",
     "options": {
-      "A": "Only tests calculations",
-      "B": "Independently executes procedures or controls originally performed by the client",
-      "C": "Is performed by client personnel",
-      "D": "Does not provide evidence about controls"
+      "A": "Does not provide evidence about controls",
+      "B": "Only tests calculations",
+      "C": "Independently executes procedures or controls originally performed by the client",
+      "D": "Is performed by client personnel"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Reperformance is the auditor's independent execution of procedures or controls that were originally performed by entity personnel. It tests more than math—it tests whether the client's procedures were properly applied.",
     "tip": "Recalculation = Check math only. Reperformance = Redo the whole procedure/control.",
     "calculationRequired": false,
@@ -1675,12 +1675,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Analytical procedures involve:",
     "options": {
-      "A": "Physical examination of assets",
-      "B": "Evaluating financial information through analysis of plausible relationships",
-      "C": "Sending requests for information to third parties",
-      "D": "Interviewing management about estimates"
+      "A": "Sending requests for information to third parties",
+      "B": "Interviewing management about estimates",
+      "C": "Physical examination of assets",
+      "D": "Evaluating financial information through analysis of plausible relationships"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Analytical procedures evaluate financial information by studying plausible relationships among financial and nonfinancial data. They help identify unusual fluctuations, unexpected relationships, or amounts that differ from expectations.",
     "tip": "Analytics = Compare and analyze relationships (trends, ratios, reasonableness).",
     "calculationRequired": false,
@@ -1696,12 +1696,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Analytical procedures are required during which phases of the audit?",
     "options": {
-      "A": "Planning only",
-      "B": "Substantive testing only",
-      "C": "Planning and overall review (near the end)",
-      "D": "All phases including planning, substantive testing, and review"
+      "A": "Substantive testing only",
+      "B": "Planning and overall review (near the end)",
+      "C": "All phases including planning, substantive testing, and review",
+      "D": "Planning only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Analytical procedures are required during planning (to understand the entity and identify risks) and during the overall review near the end of the audit. They are optional but often useful during substantive testing.",
     "tip": "Required: Planning + Final review. Optional: Substantive testing phase.",
     "calculationRequired": false,
@@ -1717,12 +1717,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Internally generated evidence is more reliable when:",
     "options": {
-      "A": "The client's internal controls are weak",
-      "B": "The client's internal controls are effective",
-      "C": "The auditor requests it verbally",
-      "D": "It is provided late in the audit"
+      "A": "It is provided late in the audit",
+      "B": "The client's internal controls are weak",
+      "C": "The client's internal controls are effective",
+      "D": "The auditor requests it verbally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The reliability of internally generated evidence depends on the effectiveness of related controls. When internal controls are effective, internally generated evidence (like accounting records) is more reliable.",
     "tip": "Strong controls = More reliable internal evidence. Weak controls = Less reliable.",
     "calculationRequired": false,
@@ -1738,12 +1738,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which type of documentary evidence is generally most reliable?",
     "options": {
-      "A": "Internally generated and internally circulated",
-      "B": "Internally generated and externally circulated",
-      "C": "Externally generated and held by client",
-      "D": "Externally generated and provided directly to auditor"
+      "A": "Externally generated and held by client",
+      "B": "Externally generated and provided directly to auditor",
+      "C": "Internally generated and internally circulated",
+      "D": "Internally generated and externally circulated"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Documentary evidence is most reliable when externally generated and provided directly to the auditor (like bank confirmations). External circulation or direct receipt increases reliability by reducing client manipulation opportunity.",
     "tip": "Most reliable: External, direct to auditor. Least: Internal, kept by client.",
     "calculationRequired": false,
@@ -1759,12 +1759,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Audit documentation (working papers) serves primarily to:",
     "options": {
-      "A": "Provide a record supporting the auditor's report and compliance with standards",
-      "B": "Satisfy SEC filing requirements",
-      "C": "Replace the client's accounting records",
-      "D": "Guarantee detection of all fraud"
+      "A": "Replace the client's accounting records",
+      "B": "Guarantee detection of all fraud",
+      "C": "Provide a record supporting the auditor's report and compliance with standards",
+      "D": "Satisfy SEC filing requirements"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Audit documentation provides the principal record of procedures performed, evidence obtained, and conclusions reached. It supports the auditor's report and demonstrates compliance with auditing standards.",
     "tip": "Working papers = Support for report + Evidence of compliance with standards.",
     "calculationRequired": false,
@@ -1780,12 +1780,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Audit documentation should be sufficient to enable:",
     "options": {
-      "A": "Only the engagement partner to understand the work performed",
-      "B": "An experienced auditor with no prior connection to the audit to understand the work",
-      "C": "Client management to review the audit procedures",
-      "D": "The court system to evaluate audit quality"
+      "A": "An experienced auditor with no prior connection to the audit to understand the work",
+      "B": "Client management to review the audit procedures",
+      "C": "The court system to evaluate audit quality",
+      "D": "Only the engagement partner to understand the work performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Documentation should be sufficient that an experienced auditor, having no previous connection with the engagement, could understand the nature, timing, extent of procedures, evidence obtained, and conclusions reached.",
     "tip": "Standard: Could another experienced auditor understand what was done and why?",
     "calculationRequired": false,
@@ -1801,12 +1801,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "For audits of issuers, PCAOB rules require audit documentation to be retained for:",
     "options": {
-      "A": "3 years from the report date",
-      "B": "5 years from the report date",
-      "C": "7 years from the report date",
-      "D": "Permanently"
+      "A": "7 years from the report date",
+      "B": "Permanently",
+      "C": "3 years from the report date",
+      "D": "5 years from the report date"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "PCAOB rules require audit documentation for issuer audits to be retained for 7 years from the report release date. For nonissuers under AICPA standards, the retention period is 5 years.",
     "tip": "PCAOB (issuers) = 7 years. AICPA (nonissuers) = 5 years.",
     "calculationRequired": false,
@@ -1843,12 +1843,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If management refuses to provide required written representations, the auditor should:",
     "options": {
-      "A": "Issue a qualified opinion",
-      "B": "Disclaim an opinion due to scope limitation",
-      "C": "Issue an adverse opinion",
-      "D": "Obtain oral representations instead"
+      "A": "Obtain oral representations instead",
+      "B": "Issue a qualified opinion",
+      "C": "Disclaim an opinion due to scope limitation",
+      "D": "Issue an adverse opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Failure to obtain required written representations is a scope limitation that prevents the auditor from obtaining sufficient appropriate evidence. The auditor should disclaim an opinion and consider withdrawing from the engagement.",
     "tip": "No rep letter = Scope limitation = Disclaim opinion.",
     "calculationRequired": false,
@@ -1864,12 +1864,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Regarding related party transactions, the auditor is required to:",
     "options": {
-      "A": "Guarantee all related party transactions are properly disclosed",
-      "B": "Obtain an understanding of related party relationships and evaluate disclosure",
-      "C": "Test all related party transactions 100%",
-      "D": "Ensure all related party transactions are eliminated"
+      "A": "Test all related party transactions 100%",
+      "B": "Ensure all related party transactions are eliminated",
+      "C": "Guarantee all related party transactions are properly disclosed",
+      "D": "Obtain an understanding of related party relationships and evaluate disclosure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor must obtain an understanding of related party relationships and transactions, remain alert for undisclosed relationships, evaluate whether identified transactions are properly accounted for and disclosed.",
     "tip": "Related parties: Understand relationships, stay alert, evaluate accounting and disclosure.",
     "calculationRequired": false,
@@ -1885,12 +1885,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A positive confirmation request:",
     "options": {
-      "A": "Asks the respondent to reply only if they disagree",
-      "B": "Asks the respondent to reply in all cases",
-      "C": "Is sent only to customers with large balances",
-      "D": "Does not require a response"
+      "A": "Asks the respondent to reply in all cases",
+      "B": "Is sent only to customers with large balances",
+      "C": "Does not require a response",
+      "D": "Asks the respondent to reply only if they disagree"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A positive confirmation requests the respondent to reply directly to the auditor in all cases, either confirming the information is correct or providing different information. Negative confirmations request a reply only if information is incorrect.",
     "tip": "Positive = Always respond. Negative = Respond only if incorrect.",
     "calculationRequired": false,
@@ -1906,12 +1906,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Negative confirmations may be appropriate as the sole substantive procedure when:",
     "options": {
-      "A": "The assessed risk of material misstatement is high",
-      "B": "The assessed risk is low, population consists of many small balances, and a low exception rate is expected",
-      "C": "Internal controls are weak",
-      "D": "The auditor cannot obtain positive confirmations"
+      "A": "Internal controls are weak",
+      "B": "The auditor cannot obtain positive confirmations",
+      "C": "The assessed risk of material misstatement is high",
+      "D": "The assessed risk is low, population consists of many small balances, and a low exception rate is expected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Negative confirmations as sole substantive procedure are appropriate only when: risk is low, population has many small homogeneous balances, very low exception rate is expected, and there's no reason to believe respondents will disregard requests.",
     "tip": "Negative only when: Low risk + Many small items + Low exceptions expected.",
     "calculationRequired": false,
@@ -1927,12 +1927,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When a positive confirmation request goes unanswered, the auditor should:",
     "options": {
-      "A": "Assume the balance is correct",
-      "B": "Issue a qualified opinion",
-      "C": "Perform alternative procedures to obtain evidence",
-      "D": "Send a negative confirmation instead"
+      "A": "Issue a qualified opinion",
+      "B": "Perform alternative procedures to obtain evidence",
+      "C": "Send a negative confirmation instead",
+      "D": "Assume the balance is correct"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "When responses to positive confirmations are not received, the auditor should perform alternative procedures to obtain the necessary evidence, such as examining subsequent cash receipts, shipping documents, or other relevant documentation.",
     "tip": "No response to positive confirmation = Perform alternative procedures.",
     "calculationRequired": false,
@@ -1948,12 +1948,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Substantive procedures include:",
     "options": {
-      "A": "Tests of controls only",
-      "B": "Tests of details and substantive analytical procedures",
-      "C": "Risk assessment procedures only",
-      "D": "Inquiry procedures only"
+      "A": "Tests of details and substantive analytical procedures",
+      "B": "Risk assessment procedures only",
+      "C": "Inquiry procedures only",
+      "D": "Tests of controls only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Substantive procedures are designed to detect material misstatements at the assertion level. They include tests of details (of transactions, balances, disclosures) and substantive analytical procedures.",
     "tip": "Substantive = Tests of details + Substantive analytics. Both detect misstatements.",
     "calculationRequired": false,
@@ -1969,12 +1969,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Sampling risk is the risk that:",
     "options": {
-      "A": "The auditor performs the wrong procedure",
-      "B": "The sample is not representative of the population",
-      "C": "The auditor's conclusion based on a sample differs from the conclusion if the entire population were tested",
-      "D": "The auditor selects too large a sample"
+      "A": "The sample is not representative of the population",
+      "B": "The auditor's conclusion based on a sample differs from the conclusion if the entire population were tested",
+      "C": "The auditor selects too large a sample",
+      "D": "The auditor performs the wrong procedure"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Sampling risk is the risk that the auditor's conclusion based on a sample may differ from the conclusion reached if the same procedure were applied to the entire population. It exists whenever sampling is used.",
     "tip": "Sampling risk = Sample conclusion ≠ Population conclusion. Nonsampling risk = All other risks.",
     "calculationRequired": false,
@@ -1990,12 +1990,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In substantive testing, the risk of incorrect acceptance affects:",
     "options": {
-      "A": "Audit efficiency",
-      "B": "Audit effectiveness",
-      "C": "Neither efficiency nor effectiveness",
-      "D": "Only the timing of procedures"
+      "A": "Audit effectiveness",
+      "B": "Neither efficiency nor effectiveness",
+      "C": "Only the timing of procedures",
+      "D": "Audit efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Risk of incorrect acceptance (concluding a balance is not materially misstated when it is) affects effectiveness because a misstatement may go undetected. Risk of incorrect rejection affects efficiency (unnecessary additional work).",
     "tip": "Incorrect acceptance = Effectiveness risk (miss misstatement). Incorrect rejection = Efficiency risk (extra work).",
     "calculationRequired": false,
@@ -2011,12 +2011,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When planning to use the work of internal auditors, the external auditor should evaluate:",
     "options": {
-      "A": "Only the internal auditors' technical qualifications",
-      "B": "The objectivity, competence, and systematic approach of internal audit",
-      "C": "Whether internal audit reports to management",
-      "D": "The size of the internal audit department"
+      "A": "The size of the internal audit department",
+      "B": "Only the internal auditors' technical qualifications",
+      "C": "The objectivity, competence, and systematic approach of internal audit",
+      "D": "Whether internal audit reports to management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The external auditor evaluates the internal audit function's objectivity (reporting level, freedom from interference), competence (qualifications, training), and whether work is performed with due professional care following a systematic approach.",
     "tip": "Evaluate internal audit: Objectivity, Competence, Systematic approach.",
     "calculationRequired": false,
@@ -2032,12 +2032,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When the auditor uses the work of an auditor's specialist, responsibility for the audit opinion:",
     "options": {
-      "A": "Is shared between the auditor and specialist",
-      "B": "Shifts to the specialist for the relevant amounts",
-      "C": "Remains solely with the auditor",
-      "D": "Requires divided responsibility disclosure"
+      "A": "Remains solely with the auditor",
+      "B": "Requires divided responsibility disclosure",
+      "C": "Is shared between the auditor and specialist",
+      "D": "Shifts to the specialist for the relevant amounts"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The auditor is solely responsible for the audit opinion expressed. Using a specialist does not reduce the auditor's responsibility. The auditor must evaluate the specialist's competence, work, and conclusions.",
     "tip": "Auditor's responsibility is NOT reduced by using specialists or internal auditors.",
     "calculationRequired": false,
@@ -2074,12 +2074,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The existence assertion applies primarily to:",
     "options": {
-      "A": "Classes of transactions",
-      "B": "Account balances",
-      "C": "Presentation and disclosure",
-      "D": "Going concern"
+      "A": "Account balances",
+      "B": "Presentation and disclosure",
+      "C": "Going concern",
+      "D": "Classes of transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Existence is an assertion about account balances—that assets, liabilities, and equity interests exist at a given date. Occurrence is the corresponding assertion for transactions—that transactions actually occurred.",
     "tip": "Existence = Balances exist at a date. Occurrence = Transactions happened during the period.",
     "calculationRequired": false,
@@ -2095,12 +2095,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An auditor is most concerned with the completeness assertion when testing:",
     "options": {
-      "A": "Assets",
-      "B": "Liabilities",
-      "C": "Revenue",
-      "D": "Equity"
+      "A": "Liabilities",
+      "B": "Revenue",
+      "C": "Equity",
+      "D": "Assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Completeness (all items that should be recorded are recorded) is of particular concern for liabilities because companies may have incentive to understate obligations. For assets and revenue, existence/occurrence is often more concerning.",
     "tip": "Completeness critical for: Liabilities, Expenses. Existence critical for: Assets, Revenue.",
     "calculationRequired": false,
@@ -2116,12 +2116,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The rights and obligations assertion addresses whether:",
     "options": {
-      "A": "The entity has legal title or control of assets and owes the liabilities",
-      "B": "Amounts are recorded at appropriate values",
-      "C": "All transactions have been recorded",
-      "D": "Disclosures are understandable"
+      "A": "Amounts are recorded at appropriate values",
+      "B": "All transactions have been recorded",
+      "C": "Disclosures are understandable",
+      "D": "The entity has legal title or control of assets and owes the liabilities"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Rights and obligations asserts that the entity holds rights to assets or controls the rights to assets, and that liabilities are obligations of the entity. It addresses ownership and legal standing.",
     "tip": "Rights/Obligations = Does the entity own the assets and owe the liabilities?",
     "calculationRequired": false,
@@ -2137,12 +2137,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A Type I subsequent event:",
     "options": {
-      "A": "Requires disclosure but not adjustment",
-      "B": "Provides evidence of conditions existing at the balance sheet date and requires adjustment",
-      "C": "Occurs only after the audit report date",
-      "D": "Is always immaterial"
+      "A": "Occurs only after the audit report date",
+      "B": "Is always immaterial",
+      "C": "Requires disclosure but not adjustment",
+      "D": "Provides evidence of conditions existing at the balance sheet date and requires adjustment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Type I subsequent events provide additional evidence about conditions that existed at the balance sheet date. They require adjustment of the financial statements. Type II events (conditions arising after) require disclosure only.",
     "tip": "Type I = Adjust (condition existed). Type II = Disclose (new condition).",
     "calculationRequired": false,
@@ -2179,12 +2179,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The management representation letter should be dated:",
     "options": {
-      "A": "As of the balance sheet date",
-      "B": "As of the date of the auditor's report",
-      "C": "As of the date work was completed",
-      "D": "As of the date financial statements are filed"
+      "A": "As of the date work was completed",
+      "B": "As of the date financial statements are filed",
+      "C": "As of the balance sheet date",
+      "D": "As of the date of the auditor's report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The management representation letter should be dated as of the date of the auditor's report, as it covers representations through that date. It should be signed by those responsible for financial statements, typically CEO and CFO.",
     "tip": "Rep letter date = Audit report date. Covers all representations through that date.",
     "calculationRequired": false,
@@ -2200,12 +2200,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When audit evidence exists only in electronic form, the auditor should consider:",
     "options": {
-      "A": "Rejecting it as unreliable",
-      "B": "The time during which the information exists and controls over its reliability",
-      "C": "Printing all electronic evidence",
-      "D": "Using only external confirmations instead"
+      "A": "Printing all electronic evidence",
+      "B": "Using only external confirmations instead",
+      "C": "Rejecting it as unreliable",
+      "D": "The time during which the information exists and controls over its reliability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When evidence exists electronically, the auditor considers controls over its preparation and maintenance, the time during which it exists and is accessible, and whether procedures must be performed at specific times when information is available.",
     "tip": "Electronic evidence: Consider controls, accessibility timing, and need for CAATs.",
     "calculationRequired": false,
@@ -2221,12 +2221,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Internal control is a process designed to provide reasonable assurance regarding:",
     "options": {
-      "A": "Detection of all errors and fraud",
-      "B": "Reliability of financial reporting, effectiveness of operations, and compliance with laws",
-      "C": "Maximization of profit",
-      "D": "Prevention of all misstatements"
+      "A": "Maximization of profit",
+      "B": "Prevention of all misstatements",
+      "C": "Detection of all errors and fraud",
+      "D": "Reliability of financial reporting, effectiveness of operations, and compliance with laws"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Internal control provides reasonable assurance regarding three objectives: (1) reliability of financial reporting, (2) effectiveness and efficiency of operations, and (3) compliance with applicable laws and regulations.",
     "tip": "Three IC objectives: Reliable reporting, Effective operations, Compliance.",
     "calculationRequired": false,
@@ -2242,12 +2242,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "According to the COSO framework, internal control consists of how many integrated components?",
     "options": {
-      "A": "Three",
-      "B": "Four",
-      "C": "Five",
-      "D": "Six"
+      "A": "Four",
+      "B": "Five",
+      "C": "Six",
+      "D": "Three"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "COSO identifies five components: Control Environment, Risk Assessment, Control Activities, Information and Communication, and Monitoring Activities. All five must be present and functioning for effective internal control.",
     "tip": "COSO's 5 components: Environment, Risk Assessment, Activities, Info/Communication, Monitoring.",
     "calculationRequired": false,
@@ -2263,12 +2263,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The control environment is best described as:",
     "options": {
-      "A": "Specific policies and procedures preventing misstatements",
-      "B": "The foundation setting the tone of the organization and influencing control consciousness",
-      "C": "The IT systems used for financial reporting",
-      "D": "External regulatory requirements"
+      "A": "The IT systems used for financial reporting",
+      "B": "External regulatory requirements",
+      "C": "Specific policies and procedures preventing misstatements",
+      "D": "The foundation setting the tone of the organization and influencing control consciousness"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The control environment is the foundation of internal control, setting the tone at the top. It includes integrity, ethical values, management philosophy, organizational structure, human resource policies, and board oversight.",
     "tip": "Control environment = Tone at the top. Foundation for all other components.",
     "calculationRequired": false,
@@ -2284,12 +2284,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An effective audit committee enhances the control environment by:",
     "options": {
-      "A": "Performing daily operational controls",
-      "B": "Providing independent oversight of financial reporting and the audit process",
-      "C": "Preparing the financial statements",
-      "D": "Implementing IT controls"
+      "A": "Implementing IT controls",
+      "B": "Performing daily operational controls",
+      "C": "Providing independent oversight of financial reporting and the audit process",
+      "D": "Preparing the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The audit committee provides independent oversight of financial reporting, the external audit, and internal control. This board-level oversight is a key element of a strong control environment.",
     "tip": "Audit committee = Independent oversight. Part of governance/control environment.",
     "calculationRequired": false,
@@ -2305,12 +2305,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The entity's risk assessment process involves:",
     "options": {
-      "A": "Only identifying risks, not responding to them",
-      "B": "Identifying and analyzing risks relevant to achieving objectives",
-      "C": "Detecting misstatements in financial statements",
-      "D": "Testing controls for operating effectiveness"
+      "A": "Detecting misstatements in financial statements",
+      "B": "Testing controls for operating effectiveness",
+      "C": "Only identifying risks, not responding to them",
+      "D": "Identifying and analyzing risks relevant to achieving objectives"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The entity's risk assessment involves identifying, analyzing, and managing risks that threaten achievement of objectives. This includes risks related to changes in operating environment, personnel, systems, and growth.",
     "tip": "Entity's risk assessment = Identify and analyze risks to objectives. Different from auditor's risk assessment.",
     "calculationRequired": false,
@@ -2326,12 +2326,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which of the following is an example of a control activity?",
     "options": {
-      "A": "The board's commitment to integrity",
-      "B": "Segregation of duties",
-      "C": "Ongoing monitoring of controls",
-      "D": "The organizational chart"
+      "A": "Segregation of duties",
+      "B": "Ongoing monitoring of controls",
+      "C": "The organizational chart",
+      "D": "The board's commitment to integrity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Control activities are policies and procedures that help ensure management directives are carried out. Examples include segregation of duties, authorizations, verifications, reconciliations, and physical controls.",
     "tip": "Control activities = Specific controls. Segregation, authorization, reconciliation, physical security.",
     "calculationRequired": false,
@@ -2347,12 +2347,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Proper segregation of duties requires separating which functions?",
     "options": {
-      "A": "Planning and budgeting",
-      "B": "Authorization, custody, and recordkeeping",
-      "C": "Sales and marketing",
-      "D": "Purchasing and receiving"
+      "A": "Authorization, custody, and recordkeeping",
+      "B": "Sales and marketing",
+      "C": "Purchasing and receiving",
+      "D": "Planning and budgeting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Segregation of duties separates authorization (approving transactions), custody (handling assets), and recordkeeping (maintaining records). One person performing all three creates opportunity for fraud or error.",
     "tip": "Segregate: Authorization, Custody, Recording. No one person controls all three.",
     "calculationRequired": false,
@@ -2368,12 +2368,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The information and communication component of internal control requires that:",
     "options": {
-      "A": "All communications be in writing",
-      "B": "Relevant information is identified, captured, and communicated in a timely manner",
-      "C": "External auditors approve all communications",
-      "D": "Only financial information be communicated"
+      "A": "Only financial information be communicated",
+      "B": "All communications be in writing",
+      "C": "Relevant information is identified, captured, and communicated in a timely manner",
+      "D": "External auditors approve all communications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Information must be identified, captured, and communicated in a form and timeframe enabling people to carry out their responsibilities. This includes both internal and external communication channels.",
     "tip": "Info/Communication = Right information to right people at right time.",
     "calculationRequired": false,
@@ -2410,12 +2410,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An inherent limitation of internal control is:",
     "options": {
-      "A": "The cost of audit procedures",
-      "B": "The possibility of management override",
-      "C": "The use of sampling in audits",
-      "D": "Time pressure on auditors"
+      "A": "The use of sampling in audits",
+      "B": "Time pressure on auditors",
+      "C": "The cost of audit procedures",
+      "D": "The possibility of management override"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management override is an inherent limitation because management can circumvent controls. Other limitations include human error, collusion, and the cost-benefit constraint of controls.",
     "tip": "IC limitations: Management override, human error, collusion, cost vs benefit.",
     "calculationRequired": false,
@@ -2431,12 +2431,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In every audit, the auditor is required to obtain an understanding of internal control:",
     "options": {
-      "A": "Only when planning to rely on controls",
-      "B": "In all audits, regardless of planned reliance on controls",
-      "C": "Only for issuer audits",
-      "D": "Only when control deficiencies are suspected"
+      "A": "In all audits, regardless of planned reliance on controls",
+      "B": "Only for issuer audits",
+      "C": "Only when control deficiencies are suspected",
+      "D": "Only when planning to rely on controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Auditors must obtain an understanding of internal control in every audit. This understanding is used to assess risk and plan the audit, regardless of whether the auditor plans to test and rely on controls.",
     "tip": "Understanding IC = Required always. Testing controls = Optional based on strategy.",
     "calculationRequired": false,
@@ -2452,12 +2452,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An auditor is required to test the operating effectiveness of controls when:",
     "options": {
-      "A": "Always, in every audit",
-      "B": "The risk assessment includes an expectation that controls are operating effectively or substantive procedures alone are insufficient",
-      "C": "Only in integrated audits",
-      "D": "Never for nonissuer audits"
+      "A": "Never for nonissuer audits",
+      "B": "Always, in every audit",
+      "C": "The risk assessment includes an expectation that controls are operating effectively or substantive procedures alone are insufficient",
+      "D": "Only in integrated audits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Testing controls is required when the auditor's risk assessment relies on controls operating effectively, or when substantive procedures alone cannot provide sufficient appropriate evidence for an assertion.",
     "tip": "Test controls when: Relying on them for risk assessment OR Substantive-only won't work.",
     "calculationRequired": false,
@@ -2473,12 +2473,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "To test operating effectiveness of controls, the auditor may use all EXCEPT:",
     "options": {
-      "A": "Inquiry combined with other procedures",
-      "B": "Inquiry alone",
-      "C": "Reperformance",
-      "D": "Observation"
+      "A": "Observation",
+      "B": "Inquiry combined with other procedures",
+      "C": "Inquiry alone",
+      "D": "Reperformance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Inquiry alone is not sufficient to test operating effectiveness of controls. Inquiry must be combined with other procedures such as observation, inspection, or reperformance to obtain evidence that controls operated effectively.",
     "tip": "Testing controls: Inquiry alone = NOT enough. Combine with inspection, observation, reperformance.",
     "calculationRequired": false,
@@ -2494,12 +2494,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A control deficiency exists when:",
     "options": {
-      "A": "The auditor finds a misstatement",
-      "B": "A control is designed, implemented, or operated in a way that prevents timely prevention or detection of misstatements",
-      "C": "Management disagrees with the auditor",
-      "D": "The audit fee is too low"
+      "A": "A control is designed, implemented, or operated in a way that prevents timely prevention or detection of misstatements",
+      "B": "Management disagrees with the auditor",
+      "C": "The audit fee is too low",
+      "D": "The auditor finds a misstatement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A control deficiency exists when the design or operation of a control does not allow management or employees to prevent or detect misstatements on a timely basis. Deficiencies can be in design or in operation.",
     "tip": "Deficiency = Control can't prevent/detect misstatements timely. Design or operation issue.",
     "calculationRequired": false,
@@ -2536,12 +2536,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A material weakness in internal control is a deficiency where there is:",
     "options": {
-      "A": "A confirmed misstatement",
-      "B": "A reasonable possibility that a material misstatement would not be prevented or detected timely",
-      "C": "Any lack of segregation of duties",
-      "D": "Minor errors in account coding"
+      "A": "Minor errors in account coding",
+      "B": "A confirmed misstatement",
+      "C": "A reasonable possibility that a material misstatement would not be prevented or detected timely",
+      "D": "Any lack of segregation of duties"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A material weakness is a deficiency, or combination of deficiencies, where there is a reasonable possibility that a material misstatement in the financial statements will not be prevented or detected on a timely basis.",
     "tip": "Material weakness = Reasonable possibility of material misstatement not caught. Most severe.",
     "calculationRequired": false,
@@ -2557,12 +2557,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Material weaknesses identified during an audit must be communicated to:",
     "options": {
-      "A": "Management only",
-      "B": "Management and those charged with governance in writing",
-      "C": "The SEC",
-      "D": "Shareholders directly"
+      "A": "Management and those charged with governance in writing",
+      "B": "The SEC",
+      "C": "Shareholders directly",
+      "D": "Management only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Material weaknesses and significant deficiencies must be communicated in writing to management and those charged with governance. This is required regardless of whether the deficiencies have been previously communicated.",
     "tip": "MW and SD: Written communication to management AND governance. Required.",
     "calculationRequired": false,
@@ -2578,12 +2578,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "General IT controls include controls over:",
     "options": {
-      "A": "Only data entry",
-      "B": "Program development, program changes, computer operations, and access to programs and data",
-      "C": "Only physical security",
-      "D": "Only backup procedures"
+      "A": "Only physical security",
+      "B": "Only backup procedures",
+      "C": "Only data entry",
+      "D": "Program development, program changes, computer operations, and access to programs and data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "General IT controls (ITGCs) are pervasive controls affecting the IT environment. They include program development, program changes, computer operations, and access to programs and data. They support the functioning of application controls.",
     "tip": "ITGCs: Development, Changes, Operations, Access. Support all IT-dependent controls.",
     "calculationRequired": false,
@@ -2599,12 +2599,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Application controls are designed to:",
     "options": {
-      "A": "Control access to the data center",
-      "B": "Ensure completeness, accuracy, and validity of transaction processing within specific applications",
-      "C": "Monitor overall IT strategy",
-      "D": "Manage IT personnel"
+      "A": "Monitor overall IT strategy",
+      "B": "Manage IT personnel",
+      "C": "Control access to the data center",
+      "D": "Ensure completeness, accuracy, and validity of transaction processing within specific applications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Application controls operate within specific applications to ensure transactions are complete, accurate, valid, authorized, and properly processed. Examples include input validation, edit checks, and batch totals.",
     "tip": "Application controls = Specific to each program. Complete, accurate, valid transactions.",
     "calculationRequired": false,
@@ -2620,12 +2620,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An advantage of automated controls over manual controls is that automated controls:",
     "options": {
-      "A": "Are easier to circumvent",
-      "B": "Operate consistently without human error once properly programmed",
-      "C": "Require more testing",
-      "D": "Cannot be relied upon for audit purposes"
+      "A": "Operate consistently without human error once properly programmed",
+      "B": "Require more testing",
+      "C": "Cannot be relied upon for audit purposes",
+      "D": "Are easier to circumvent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Once properly programmed, automated controls operate consistently without variation. They are not subject to human error, fatigue, or inattention. However, they depend on effective ITGCs and initial proper programming.",
     "tip": "Automated = Consistent if programmed right. Manual = Subject to human variability.",
     "calculationRequired": false,
@@ -2641,12 +2641,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An effective control to ensure sales transactions are properly authorized is:",
     "options": {
-      "A": "Monthly bank reconciliations",
-      "B": "Credit approval before shipment",
-      "C": "Physical inventory counts",
-      "D": "Preparation of sales forecasts"
+      "A": "Preparation of sales forecasts",
+      "B": "Monthly bank reconciliations",
+      "C": "Credit approval before shipment",
+      "D": "Physical inventory counts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Credit approval before shipment ensures sales are authorized and customers are creditworthy. This preventive control helps ensure transactions meet company policy and reduces bad debt risk.",
     "tip": "Authorization control for sales = Credit approval before goods ship.",
     "calculationRequired": false,
@@ -2662,12 +2662,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The three-way match in accounts payable involves comparing:",
     "options": {
-      "A": "Budget, actual, and variance",
-      "B": "Purchase order, receiving report, and vendor invoice",
-      "C": "Check, bank statement, and ledger",
-      "D": "Sales order, shipping document, and invoice"
+      "A": "Check, bank statement, and ledger",
+      "B": "Sales order, shipping document, and invoice",
+      "C": "Budget, actual, and variance",
+      "D": "Purchase order, receiving report, and vendor invoice"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The three-way match compares the purchase order (authorization), receiving report (goods received), and vendor invoice (amount claimed). This ensures payment is made only for authorized purchases actually received at correct prices.",
     "tip": "Three-way match: PO + Receiving report + Invoice. Key AP control.",
     "calculationRequired": false,
@@ -2683,12 +2683,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Proper segregation of duties in payroll requires separation between:",
     "options": {
-      "A": "Sales and collections",
-      "B": "Personnel/HR functions and payroll preparation",
-      "C": "Budgeting and forecasting",
-      "D": "Marketing and sales"
+      "A": "Marketing and sales",
+      "B": "Sales and collections",
+      "C": "Personnel/HR functions and payroll preparation",
+      "D": "Budgeting and forecasting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Payroll duties should be segregated so that personnel/HR (who authorize hiring, rates, terminations) are separate from those preparing and distributing payroll. This prevents fictitious employees or unauthorized pay changes.",
     "tip": "Payroll segregation: HR authorizes, Payroll processes, Treasury distributes.",
     "calculationRequired": false,
@@ -2788,12 +2788,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If an auditor identifies a material weakness in ICFR during an integrated audit, the opinion on ICFR should be:",
     "options": {
-      "A": "Unqualified with explanatory paragraph",
-      "B": "Qualified",
-      "C": "Adverse",
-      "D": "Disclaimer"
+      "A": "Disclaimer",
+      "B": "Unqualified with explanatory paragraph",
+      "C": "Qualified",
+      "D": "Adverse"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The existence of one or more material weaknesses results in an adverse opinion on ICFR. Material weakness means ICFR is not effective. This does not automatically affect the opinion on the financial statements.",
     "tip": "Material weakness = Adverse opinion on ICFR. F/S opinion may still be unqualified.",
     "calculationRequired": false,
@@ -2809,12 +2809,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The top-down approach to ICFR auditing begins with:",
     "options": {
-      "A": "Testing individual transactions",
-      "B": "Understanding overall risks and entity-level controls",
-      "C": "Selecting a sample of controls to test",
-      "D": "Evaluating IT general controls"
+      "A": "Understanding overall risks and entity-level controls",
+      "B": "Selecting a sample of controls to test",
+      "C": "Evaluating IT general controls",
+      "D": "Testing individual transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The top-down approach starts at the financial statement level with understanding overall risks and entity-level controls. The auditor then focuses on significant accounts, identifies relevant assertions, and selects controls to test.",
     "tip": "Top-down: Entity-level controls → Significant accounts → Process controls → Testing.",
     "calculationRequired": false,
@@ -2830,12 +2830,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Entity-level controls include all EXCEPT:",
     "options": {
-      "A": "Controls related to the control environment",
-      "B": "Controls over management override",
-      "C": "Specific input validation checks in the billing system",
-      "D": "Period-end financial reporting process controls"
+      "A": "Period-end financial reporting process controls",
+      "B": "Controls related to the control environment",
+      "C": "Controls over management override",
+      "D": "Specific input validation checks in the billing system"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Entity-level controls are pervasive controls affecting multiple processes. They include control environment factors, risk assessment processes, centralized processing, and period-end reporting. Specific input validation is an application-level control.",
     "tip": "Entity-level = Pervasive, affects whole company. Application-level = Specific to a process.",
     "calculationRequired": false,
@@ -2851,12 +2851,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A preventive control is designed to:",
     "options": {
-      "A": "Identify misstatements after they occur",
-      "B": "Stop errors or fraud before they occur",
-      "C": "Correct errors that have been detected",
-      "D": "Document detected issues"
+      "A": "Correct errors that have been detected",
+      "B": "Document detected issues",
+      "C": "Identify misstatements after they occur",
+      "D": "Stop errors or fraud before they occur"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Preventive controls are designed to prevent errors or fraud before they occur (like requiring approval before payment). Detective controls identify problems after they occur (like reconciliations). Corrective controls fix identified problems.",
     "tip": "Preventive = Stop before. Detective = Find after. Corrective = Fix issues.",
     "calculationRequired": false,
@@ -2872,12 +2872,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Methods to document the auditor's understanding of internal control include all EXCEPT:",
     "options": {
-      "A": "Flowcharts",
-      "B": "Questionnaires",
-      "C": "Narrative memoranda",
-      "D": "Management's annual report"
+      "A": "Management's annual report",
+      "B": "Flowcharts",
+      "C": "Questionnaires",
+      "D": "Narrative memoranda"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Auditors document their understanding through flowcharts, questionnaires, narrative memoranda, or combinations thereof. Management's annual report is a management document, not auditor documentation of understanding.",
     "tip": "Auditor documents IC understanding via: Flowcharts, Questionnaires, Narratives.",
     "calculationRequired": false,
@@ -2893,12 +2893,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The primary purpose of a walkthrough is to:",
     "options": {
-      "A": "Test operating effectiveness of controls",
-      "B": "Confirm the auditor's understanding of the process and identify control points",
-      "C": "Detect fraud",
-      "D": "Calculate account balances"
+      "A": "Calculate account balances",
+      "B": "Test operating effectiveness of controls",
+      "C": "Confirm the auditor's understanding of the process and identify control points",
+      "D": "Detect fraud"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A walkthrough traces a transaction from initiation through processing to recording. It confirms the auditor's understanding of the process, identifies where controls exist, and helps identify potential control deficiencies.",
     "tip": "Walkthrough = Trace one transaction to confirm understanding. Not primarily to test controls.",
     "calculationRequired": false,
@@ -2956,12 +2956,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An unmodified (unqualified) opinion states that the financial statements:",
     "options": {
-      "A": "Are free of all errors",
-      "B": "Present fairly, in all material respects, in accordance with the applicable framework",
-      "C": "Have been approved by management",
-      "D": "Guarantee the entity's future viability"
+      "A": "Guarantee the entity's future viability",
+      "B": "Are free of all errors",
+      "C": "Present fairly, in all material respects, in accordance with the applicable framework",
+      "D": "Have been approved by management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "An unmodified opinion states that the financial statements present fairly, in all material respects, in accordance with the applicable financial reporting framework (GAAP). It does not guarantee accuracy or future performance.",
     "tip": "Unmodified = 'Present fairly in all material respects.' Not a guarantee of accuracy.",
     "calculationRequired": false,
@@ -2977,12 +2977,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The standard audit report includes a section describing:",
     "options": {
-      "A": "The audit fee",
-      "B": "Management's responsibility for the financial statements",
-      "C": "The auditor's compensation arrangement",
-      "D": "Future earnings projections"
+      "A": "Future earnings projections",
+      "B": "The audit fee",
+      "C": "Management's responsibility for the financial statements",
+      "D": "The auditor's compensation arrangement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The standard report includes sections on the opinion, basis for opinion, management's responsibilities, and auditor's responsibilities. Management's responsibility for F/S preparation is explicitly stated.",
     "tip": "Report sections: Opinion, Basis, Management responsibility, Auditor responsibility.",
     "calculationRequired": false,
@@ -2998,12 +2998,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The audit report is typically addressed to:",
     "options": {
-      "A": "Management only",
-      "B": "The shareholders or those charged with governance",
-      "C": "The SEC",
-      "D": "Creditors"
+      "A": "The SEC",
+      "B": "Creditors",
+      "C": "Management only",
+      "D": "The shareholders or those charged with governance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The audit report is typically addressed to the shareholders or board of directors (those charged with governance). The addressee depends on the nature of the engagement and requirements.",
     "tip": "Addressed to: Shareholders or Board (those charged with governance).",
     "calculationRequired": false,
@@ -3019,12 +3019,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Modified audit opinions include all EXCEPT:",
     "options": {
-      "A": "Qualified opinion",
-      "B": "Adverse opinion",
-      "C": "Disclaimer of opinion",
-      "D": "Unmodified opinion with emphasis of matter"
+      "A": "Adverse opinion",
+      "B": "Disclaimer of opinion",
+      "C": "Unmodified opinion with emphasis of matter",
+      "D": "Qualified opinion"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Modified opinions are qualified, adverse, or disclaimer. An unmodified opinion with an emphasis-of-matter paragraph is still an unmodified (unqualified) opinion—the emphasis paragraph doesn't modify the opinion.",
     "tip": "Three modified opinions: Qualified, Adverse, Disclaimer. Emphasis paragraphs don't modify.",
     "calculationRequired": false,
@@ -3040,12 +3040,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A qualified opinion is appropriate when:",
     "options": {
-      "A": "The financial statements are materially and pervasively misstated",
-      "B": "Misstatements are material but not pervasive to the financial statements",
-      "C": "The auditor cannot obtain sufficient appropriate evidence",
-      "D": "Either material misstatement or scope limitation exists, but neither is pervasive"
+      "A": "The auditor cannot obtain sufficient appropriate evidence",
+      "B": "Either material misstatement or scope limitation exists, but neither is pervasive",
+      "C": "The financial statements are materially and pervasively misstated",
+      "D": "Misstatements are material but not pervasive to the financial statements"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "A qualified opinion is issued when the auditor concludes that misstatements are material but not pervasive, or when there is a scope limitation that is material but not pervasive. The key is 'material but not pervasive.'",
     "tip": "Qualified = Material but NOT pervasive (misstatement or scope limitation).",
     "calculationRequired": false,
@@ -3061,12 +3061,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An adverse opinion is issued when:",
     "options": {
-      "A": "The auditor lacks independence",
-      "B": "Misstatements are both material and pervasive to the financial statements",
-      "C": "There is a scope limitation",
-      "D": "Going concern doubt exists"
+      "A": "There is a scope limitation",
+      "B": "Going concern doubt exists",
+      "C": "The auditor lacks independence",
+      "D": "Misstatements are both material and pervasive to the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An adverse opinion is issued when the auditor concludes that misstatements, individually or in aggregate, are both material AND pervasive to the financial statements. The statements are not fairly presented.",
     "tip": "Adverse = Material AND pervasive misstatement. Financial statements are wrong.",
     "calculationRequired": false,
@@ -3082,12 +3082,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A disclaimer of opinion is issued when:",
     "options": {
-      "A": "The auditor disagrees with accounting policies",
-      "B": "The auditor is unable to obtain sufficient appropriate evidence and possible effects are material and pervasive",
-      "C": "There are minor misstatements",
-      "D": "The auditor is not independent"
+      "A": "The auditor is unable to obtain sufficient appropriate evidence and possible effects are material and pervasive",
+      "B": "There are minor misstatements",
+      "C": "The auditor is not independent",
+      "D": "The auditor disagrees with accounting policies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A disclaimer is issued when the auditor is unable to obtain sufficient appropriate audit evidence, and the possible effects on the F/S are both material and pervasive. The auditor cannot express an opinion.",
     "tip": "Disclaimer = Can't get enough evidence, effects could be material AND pervasive.",
     "calculationRequired": false,
@@ -3124,12 +3124,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An other-matter paragraph is used to communicate:",
     "options": {
-      "A": "Matters not presented in F/S but relevant to understanding the audit",
-      "B": "Material misstatements",
-      "C": "Going concern issues",
-      "D": "Related party transactions"
+      "A": "Related party transactions",
+      "B": "Matters not presented in F/S but relevant to understanding the audit",
+      "C": "Material misstatements",
+      "D": "Going concern issues"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "An other-matter paragraph addresses matters not presented or disclosed in the F/S but relevant to users' understanding of the audit, auditor's responsibilities, or auditor's report (e.g., restriction on distribution).",
     "tip": "Emphasis = About F/S matters. Other-matter = About audit matters not in F/S.",
     "calculationRequired": false,
@@ -3166,12 +3166,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If management's disclosures about going concern conditions are inadequate, the auditor should:",
     "options": {
-      "A": "Issue an unmodified opinion",
-      "B": "Add an emphasis paragraph without modifying the opinion",
-      "C": "Issue a qualified or adverse opinion for inadequate disclosure",
-      "D": "Withdraw from the engagement"
+      "A": "Add an emphasis paragraph without modifying the opinion",
+      "B": "Issue a qualified or adverse opinion for inadequate disclosure",
+      "C": "Withdraw from the engagement",
+      "D": "Issue an unmodified opinion"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "If required disclosures about going concern are not adequately made, the auditor should express a qualified or adverse opinion for the disclosure departure, depending on whether inadequacy is pervasive.",
     "tip": "Inadequate going concern disclosure = Modified opinion (qualified or adverse).",
     "calculationRequired": false,
@@ -3187,12 +3187,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When reporting on comparative financial statements, the auditor's opinion:",
     "options": {
-      "A": "Covers only the current year",
-      "B": "Covers all periods presented for which the auditor has audited",
-      "C": "Refers only to the balance sheet",
-      "D": "Must be the same for all years"
+      "A": "Covers all periods presented for which the auditor has audited",
+      "B": "Refers only to the balance sheet",
+      "C": "Must be the same for all years",
+      "D": "Covers only the current year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When comparative statements are presented, the auditor's report covers all periods for which statements are presented and an audit was performed. The opinion can differ by period based on circumstances.",
     "tip": "Comparative reporting covers all audited periods. Opinions can differ by year.",
     "calculationRequired": false,
@@ -3208,12 +3208,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If an auditor previously issued a qualified opinion on prior-year financial statements that have been restated, the current report should:",
     "options": {
-      "A": "Not mention the prior qualification",
-      "B": "Update the opinion and explain the change in an other-matter paragraph",
-      "C": "Repeat the same qualified opinion",
-      "D": "Disclaim on all periods"
+      "A": "Disclaim on all periods",
+      "B": "Not mention the prior qualification",
+      "C": "Update the opinion and explain the change in an other-matter paragraph",
+      "D": "Repeat the same qualified opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When prior period statements are restated and the matter causing a prior modification is resolved, the auditor may update (change) the opinion and should explain the update in an other-matter paragraph.",
     "tip": "Prior qualified, now resolved = Updated opinion + Other-matter explaining change.",
     "calculationRequired": false,
@@ -3229,12 +3229,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When comparative statements include a period audited by a predecessor, and that report is not reissued, the successor auditor's report should:",
     "options": {
-      "A": "Take responsibility for the predecessor's work",
-      "B": "Include an other-matter paragraph indicating the prior period was audited by another auditor",
-      "C": "Reaudit the prior period",
-      "D": "Issue a disclaimer for the prior period"
+      "A": "Reaudit the prior period",
+      "B": "Issue a disclaimer for the prior period",
+      "C": "Take responsibility for the predecessor's work",
+      "D": "Include an other-matter paragraph indicating the prior period was audited by another auditor"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "If the predecessor's report is not reissued, the successor includes an other-matter paragraph stating that the prior period was audited by another auditor, the type of opinion, date, and any modifications.",
     "tip": "Predecessor not reissuing = Successor references their report in Other-matter.",
     "calculationRequired": false,
@@ -3271,12 +3271,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Dual dating of an audit report is used when:",
     "options": {
-      "A": "Two auditors sign the report",
-      "B": "A subsequent event occurring after the original report date is disclosed",
-      "C": "Comparative statements are presented",
-      "D": "The audit takes longer than expected"
+      "A": "A subsequent event occurring after the original report date is disclosed",
+      "B": "Comparative statements are presented",
+      "C": "The audit takes longer than expected",
+      "D": "Two auditors sign the report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dual dating is used when a subsequent event occurs after the original report date but before issuance. The auditor can date the report for the original date 'except for Note X, which is dated [later date].'",
     "tip": "Dual dating = Original date except for specific subsequent event note.",
     "calculationRequired": false,
@@ -3292,12 +3292,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When financial statements contain a material departure from GAAP, the auditor should:",
     "options": {
-      "A": "Always issue a disclaimer",
-      "B": "Issue a qualified or adverse opinion depending on pervasiveness",
-      "C": "Issue an unmodified opinion with emphasis paragraph",
-      "D": "Refuse to issue any report"
+      "A": "Refuse to issue any report",
+      "B": "Always issue a disclaimer",
+      "C": "Issue a qualified or adverse opinion depending on pervasiveness",
+      "D": "Issue an unmodified opinion with emphasis paragraph"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A GAAP departure that is material but not pervasive results in a qualified opinion. If the departure is both material and pervasive, an adverse opinion is issued. The nature and extent determine the opinion type.",
     "tip": "GAAP departure: Material only = Qualified. Material + Pervasive = Adverse.",
     "calculationRequired": false,
@@ -3355,12 +3355,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When the group engagement team assumes responsibility for a component auditor's work, the group auditor's report:",
     "options": {
-      "A": "Must reference the component auditor",
-      "B": "Should not reference the component auditor",
-      "C": "Must name the component auditor",
-      "D": "Should disclaim on the component"
+      "A": "Must name the component auditor",
+      "B": "Should disclaim on the component",
+      "C": "Must reference the component auditor",
+      "D": "Should not reference the component auditor"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When the group engagement team assumes responsibility for a component auditor's work, no reference is made to the component auditor in the report. Reference is only made when responsibility is divided.",
     "tip": "Assume responsibility = No reference. Divided responsibility = Reference component auditor.",
     "calculationRequired": false,
@@ -3376,12 +3376,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When reporting on financial statements prepared using a special purpose framework (OCBOA), the auditor should:",
     "options": {
-      "A": "Issue a GAAP-based opinion",
-      "B": "Include a paragraph describing the framework and any restrictions on use",
-      "C": "Refuse the engagement",
-      "D": "Issue only a disclaimer"
+      "A": "Include a paragraph describing the framework and any restrictions on use",
+      "B": "Refuse the engagement",
+      "C": "Issue only a disclaimer",
+      "D": "Issue a GAAP-based opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For special purpose framework statements (cash basis, tax basis, etc.), the report includes an emphasis paragraph describing the basis, alerting readers that it differs from GAAP, and may restrict distribution/use.",
     "tip": "Special purpose: Describe framework, note it's not GAAP, may restrict use.",
     "calculationRequired": false,
@@ -3397,12 +3397,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An auditor may report on a single financial statement (such as just the balance sheet):",
     "options": {
-      "A": "Never, all statements must be audited together",
-      "B": "Yes, if the reporting framework permits and the auditor is satisfied",
-      "C": "Only for governmental entities",
-      "D": "Only if the income statement is also audited"
+      "A": "Yes, if the reporting framework permits and the auditor is satisfied",
+      "B": "Only for governmental entities",
+      "C": "Only if the income statement is also audited",
+      "D": "Never, all statements must be audited together"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Auditors may report on a single financial statement or specific element if permitted by the framework. The opinion must be worded appropriately to refer only to what was audited, and interrelationships considered.",
     "tip": "Single statement audit is permitted. Scope the opinion to what was actually audited.",
     "calculationRequired": false,
@@ -3418,12 +3418,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When supplementary information accompanies audited financial statements, the auditor:",
     "options": {
-      "A": "Must audit all supplementary information",
-      "B": "May report separately on the supplementary information in relation to the F/S as a whole",
-      "C": "Should ignore the supplementary information",
-      "D": "Must modify the opinion"
+      "A": "May report separately on the supplementary information in relation to the F/S as a whole",
+      "B": "Should ignore the supplementary information",
+      "C": "Must modify the opinion",
+      "D": "Must audit all supplementary information"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor may report on supplementary information in relation to the basic F/S as a whole. This is an 'in relation to' opinion meaning the supplementary info is fairly stated in all material respects in relation to the audited F/S.",
     "tip": "Supplementary info: 'In relation to' opinion possible. Separate from F/S opinion.",
     "calculationRequired": false,
@@ -3439,12 +3439,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "PCAOB audit reports for issuers must include:",
     "options": {
-      "A": "Only the opinion paragraph",
-      "B": "The critical audit matters section for larger issuers",
-      "C": "A guarantee of detection of all fraud",
-      "D": "Projections of future performance"
+      "A": "Projections of future performance",
+      "B": "Only the opinion paragraph",
+      "C": "The critical audit matters section for larger issuers",
+      "D": "A guarantee of detection of all fraud"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PCAOB reports require disclosure of critical audit matters (CAMs) for audits of large accelerated filers and accelerated filers. CAMs are matters that were communicated to the audit committee, related to material accounts, and involved especially challenging judgment.",
     "tip": "PCAOB: Critical Audit Matters (CAMs) required for larger public companies.",
     "calculationRequired": false,
@@ -3460,12 +3460,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A critical audit matter (CAM) is a matter that:",
     "options": {
-      "A": "Results in a modified opinion",
-      "B": "Was communicated to the audit committee, relates to material accounts, and involved especially challenging auditor judgment",
-      "C": "Requires withdrawal from the engagement",
-      "D": "Indicates fraud has occurred"
+      "A": "Was communicated to the audit committee, relates to material accounts, and involved especially challenging auditor judgment",
+      "B": "Requires withdrawal from the engagement",
+      "C": "Indicates fraud has occurred",
+      "D": "Results in a modified opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "CAMs are matters arising from the audit that were communicated to the audit committee, relate to accounts or disclosures material to the F/S, and involved especially challenging, subjective, or complex auditor judgment.",
     "tip": "CAM criteria: Communicated to AC + Material + Especially challenging judgment.",
     "calculationRequired": false,
@@ -3502,12 +3502,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Key Audit Matters (KAMs) under ISA differ from Critical Audit Matters (CAMs) under PCAOB in that:",
     "options": {
-      "A": "KAMs are optional while CAMs are required",
-      "B": "KAMs and CAMs have nearly identical definitions but apply under different standards",
-      "C": "CAMs only apply to small companies",
-      "D": "KAMs relate only to going concern"
+      "A": "KAMs relate only to going concern",
+      "B": "KAMs are optional while CAMs are required",
+      "C": "KAMs and CAMs have nearly identical definitions but apply under different standards",
+      "D": "CAMs only apply to small companies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "KAMs (ISA 701) and CAMs (PCAOB AS 3101) are conceptually similar—both communicate matters of most significance from the audit. The main differences are in specific criteria and applicable standards (international vs. US issuer).",
     "tip": "KAM = ISA (international). CAM = PCAOB (US issuers). Similar concept, different standards.",
     "calculationRequired": false,
@@ -3523,12 +3523,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A change in accounting principle affecting comparability requires:",
     "options": {
-      "A": "An adverse opinion",
-      "B": "An emphasis-of-matter paragraph if not adequately disclosed",
-      "C": "Evaluation of whether the change is appropriate and properly accounted for and disclosed",
-      "D": "Mandatory restatement of all prior periods"
+      "A": "An emphasis-of-matter paragraph if not adequately disclosed",
+      "B": "Evaluation of whether the change is appropriate and properly accounted for and disclosed",
+      "C": "Mandatory restatement of all prior periods",
+      "D": "An adverse opinion"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "When accounting principles change, the auditor evaluates whether the change is appropriate, properly accounted for, and adequately disclosed. If all criteria are met, no modification is required (though emphasis may be added for GAAS).",
     "tip": "Accounting change: Evaluate appropriateness, accounting, and disclosure adequacy.",
     "calculationRequired": false,
@@ -3544,12 +3544,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Regarding 'other information' in documents containing audited F/S, the auditor is required to:",
     "options": {
-      "A": "Audit the other information",
-      "B": "Read and consider whether there is material inconsistency with the F/S",
-      "C": "Ignore the other information",
-      "D": "Include the other information in the audit opinion"
+      "A": "Include the other information in the audit opinion",
+      "B": "Audit the other information",
+      "C": "Read and consider whether there is material inconsistency with the F/S",
+      "D": "Ignore the other information"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor reads other information in documents containing audited F/S (like MD&A in annual reports) to identify material inconsistencies with the F/S or material misstatements of fact. No opinion is given on other information.",
     "tip": "Other info: Read and consider for inconsistencies. No separate opinion given.",
     "calculationRequired": false,
@@ -3565,12 +3565,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If the auditor discovers facts after the report date that would have affected the report, the auditor should:",
     "options": {
-      "A": "Ignore them since the report was already issued",
-      "B": "Discuss with management, consider whether F/S need revision, and take appropriate action",
-      "C": "Automatically withdraw the report",
-      "D": "File a report with the SEC"
+      "A": "Discuss with management, consider whether F/S need revision, and take appropriate action",
+      "B": "Automatically withdraw the report",
+      "C": "File a report with the SEC",
+      "D": "Ignore them since the report was already issued"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When facts are discovered after the report that would have caused a different opinion, the auditor discusses with management, determines if revision is needed, and considers steps to prevent reliance on the current report if management doesn't appropriately respond.",
     "tip": "Post-report discovery: Discuss, evaluate, take appropriate action to prevent improper reliance.",
     "calculationRequired": false,
@@ -3586,12 +3586,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A compilation engagement provides:",
     "options": {
-      "A": "Reasonable assurance",
-      "B": "Limited assurance",
-      "C": "No assurance",
-      "D": "Absolute assurance"
+      "A": "Absolute assurance",
+      "B": "Reasonable assurance",
+      "C": "Limited assurance",
+      "D": "No assurance"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "A compilation provides no assurance on the financial statements. The accountant assists in presenting financial information in financial statement format but does not verify the information.",
     "tip": "Audit = Reasonable assurance. Review = Limited assurance. Compilation = No assurance.",
     "calculationRequired": false,
@@ -3628,12 +3628,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A review report conclusion states that the accountant:",
     "options": {
-      "A": "The financial statements present fairly in all material respects",
-      "B": "Is not aware of any material modifications that should be made to conform with GAAP",
-      "C": "Cannot express an opinion",
-      "D": "Has verified all significant accounts"
+      "A": "Has verified all significant accounts",
+      "B": "The financial statements present fairly in all material respects",
+      "C": "Is not aware of any material modifications that should be made to conform with GAAP",
+      "D": "Cannot express an opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The review conclusion uses negative assurance language: the accountant is not aware of any material modifications needed for conformity with the applicable framework. This differs from the positive assurance in an audit opinion.",
     "tip": "Review conclusion = Negative assurance ('Not aware of...' vs audit's 'Present fairly').",
     "calculationRequired": false,
@@ -3649,12 +3649,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A restricted-use report is appropriate when:",
     "options": {
-      "A": "All audit reports",
-      "B": "The subject matter or presentation criteria are designed for specific users",
-      "C": "The client requests confidentiality",
-      "D": "The auditor lacks independence"
+      "A": "The subject matter or presentation criteria are designed for specific users",
+      "B": "The client requests confidentiality",
+      "C": "The auditor lacks independence",
+      "D": "All audit reports"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Restricted-use reports are appropriate when the subject matter or presentation criteria are designed for limited users who understand the criteria. Examples include agreed-upon procedures and some special purpose reports.",
     "tip": "Restricted use: Specialized criteria designed for specific users who understand them.",
     "calculationRequired": false,
@@ -3670,12 +3670,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Before reissuing a report on prior period financial statements, the predecessor auditor should:",
     "options": {
-      "A": "Perform a complete reaudit",
-      "B": "Read current period F/S, obtain a letter from successor auditor, and compare prior F/S with current presentation",
-      "C": "Simply date the report as of the original date",
-      "D": "Decline to reissue under all circumstances"
+      "A": "Simply date the report as of the original date",
+      "B": "Decline to reissue under all circumstances",
+      "C": "Perform a complete reaudit",
+      "D": "Read current period F/S, obtain a letter from successor auditor, and compare prior F/S with current presentation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Before reissuing, the predecessor should read current F/S, compare prior presentation to that in the current document, obtain a letter from the successor regarding matters affecting the prior F/S, and perform other procedures as needed.",
     "tip": "Predecessor reissuing: Read current, compare prior, get successor letter.",
     "calculationRequired": false,
@@ -3691,12 +3691,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The two types of fraud relevant to auditors are:",
     "options": {
-      "A": "Internal and external fraud",
-      "B": "Fraudulent financial reporting and misappropriation of assets",
-      "C": "Management fraud and employee fraud",
-      "D": "Tax fraud and financial fraud"
+      "A": "Management fraud and employee fraud",
+      "B": "Tax fraud and financial fraud",
+      "C": "Internal and external fraud",
+      "D": "Fraudulent financial reporting and misappropriation of assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Auditing standards distinguish between fraudulent financial reporting (intentional misstatements or omissions) and misappropriation of assets (theft). Both involve intentional acts and can result in material misstatement.",
     "tip": "Two fraud types: Fraudulent reporting (cooking books) and Misappropriation (stealing assets).",
     "calculationRequired": false,
@@ -3733,12 +3733,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The auditor's responsibility for detecting fraud is to:",
     "options": {
-      "A": "Detect all fraud",
-      "B": "Obtain reasonable assurance that the F/S are free from material misstatement due to fraud",
-      "C": "Detect only fraud over a specified dollar amount",
-      "D": "Report all suspicions to law enforcement"
+      "A": "Report all suspicions to law enforcement",
+      "B": "Detect all fraud",
+      "C": "Obtain reasonable assurance that the F/S are free from material misstatement due to fraud",
+      "D": "Detect only fraud over a specified dollar amount"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor is responsible for obtaining reasonable assurance that financial statements are free from material misstatement, whether due to error or fraud. The auditor does not guarantee detection of all fraud.",
     "tip": "Reasonable assurance about material misstatements from fraud. Not absolute detection.",
     "calculationRequired": false,
@@ -3754,12 +3754,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The fraud triangle consists of:",
     "options": {
-      "A": "Intent, concealment, and conversion",
-      "B": "Pressure/incentive, opportunity, and rationalization",
-      "C": "Means, motive, and cover-up",
-      "D": "Planning, execution, and concealment"
+      "A": "Means, motive, and cover-up",
+      "B": "Planning, execution, and concealment",
+      "C": "Intent, concealment, and conversion",
+      "D": "Pressure/incentive, opportunity, and rationalization"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The fraud triangle describes three conditions typically present when fraud occurs: (1) incentive or pressure, (2) opportunity, and (3) attitude or rationalization. Auditors consider these risk factors.",
     "tip": "Fraud triangle: Pressure/Incentive, Opportunity, Rationalization. Remember P-O-R.",
     "calculationRequired": false,
@@ -3775,12 +3775,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is a fraud risk factor related to incentive/pressure?",
     "options": {
-      "A": "Weak internal controls",
-      "B": "Management compensation tied to aggressive financial targets",
-      "C": "Employees with access to assets",
-      "D": "Lack of an internal audit function"
+      "A": "Employees with access to assets",
+      "B": "Lack of an internal audit function",
+      "C": "Weak internal controls",
+      "D": "Management compensation tied to aggressive financial targets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management compensation tied to aggressive targets creates incentive/pressure to misstate results. This is a classic pressure factor. Weak controls and access relate to opportunity, not pressure.",
     "tip": "Pressure: Financial targets, debt covenants, personal financial difficulties, bonus plans.",
     "calculationRequired": false,
@@ -3817,12 +3817,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The engagement team's fraud brainstorming session should:",
     "options": {
-      "A": "Occur only if fraud is suspected",
-      "B": "Include discussion of how and where F/S might be susceptible to material misstatement due to fraud",
-      "C": "Be limited to the engagement partner",
-      "D": "Focus only on asset misappropriation"
+      "A": "Be limited to the engagement partner",
+      "B": "Focus only on asset misappropriation",
+      "C": "Occur only if fraud is suspected",
+      "D": "Include discussion of how and where F/S might be susceptible to material misstatement due to fraud"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Fraud brainstorming is required for every audit. The team discusses how and where the F/S might be susceptible to material fraud, sets aside beliefs about management honesty, and considers fraud risk factors.",
     "tip": "Brainstorming: Required in all audits. Team discusses fraud susceptibility together.",
     "calculationRequired": false,
@@ -3838,12 +3838,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Professional skepticism in fraud detection requires the auditor to:",
     "options": {
-      "A": "Assume management is dishonest",
-      "B": "Maintain a questioning mind and critically assess evidence without assuming honesty or dishonesty",
-      "C": "Trust all management representations",
-      "D": "Only question evidence that appears suspicious"
+      "A": "Trust all management representations",
+      "B": "Only question evidence that appears suspicious",
+      "C": "Assume management is dishonest",
+      "D": "Maintain a questioning mind and critically assess evidence without assuming honesty or dishonesty"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Professional skepticism means maintaining a questioning mind, being alert to fraud conditions, and critically assessing evidence. The auditor neither assumes dishonesty nor assumes unquestioned honesty.",
     "tip": "Skepticism: Neither assume honesty nor dishonesty. Question, verify, assess critically.",
     "calculationRequired": false,
@@ -3859,12 +3859,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Auditing standards require auditors to presume that:",
     "options": {
-      "A": "All revenue transactions are fraudulent",
-      "B": "There is a risk of material misstatement due to fraud in revenue recognition",
-      "C": "Revenue recognition has no fraud risk",
-      "D": "Only cash transactions have fraud risk"
+      "A": "Only cash transactions have fraud risk",
+      "B": "All revenue transactions are fraudulent",
+      "C": "There is a risk of material misstatement due to fraud in revenue recognition",
+      "D": "Revenue recognition has no fraud risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "There is a presumption that improper revenue recognition is a fraud risk in most audits. The auditor must evaluate this risk and can rebut the presumption only if specific conditions exist and are documented.",
     "tip": "Revenue fraud risk presumed in all audits. Must address or document why rebutted.",
     "calculationRequired": false,
@@ -3901,12 +3901,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Testing journal entries for management override involves:",
     "options": {
-      "A": "Testing all journal entries",
-      "B": "Selecting entries based on fraud risk characteristics and testing their validity",
-      "C": "Only testing year-end entries",
-      "D": "Reviewing only entries over $1 million"
+      "A": "Reviewing only entries over $1 million",
+      "B": "Testing all journal entries",
+      "C": "Selecting entries based on fraud risk characteristics and testing their validity",
+      "D": "Only testing year-end entries"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor selects journal entries and other adjustments based on risk characteristics (entries at unusual times, to unusual accounts, by unusual individuals, etc.) and tests whether they have valid business purposes.",
     "tip": "Journal entry testing: Select based on risk characteristics (timing, accounts, personnel).",
     "calculationRequired": false,
@@ -3922,12 +3922,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "To address management override, auditors perform a retrospective review of prior year estimates to:",
     "options": {
-      "A": "Determine if GAAP was followed",
-      "B": "Identify possible bias in management's judgments",
-      "C": "Recalculate all estimates",
-      "D": "Verify mathematical accuracy only"
+      "A": "Recalculate all estimates",
+      "B": "Verify mathematical accuracy only",
+      "C": "Determine if GAAP was followed",
+      "D": "Identify possible bias in management's judgments"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The retrospective review compares actual outcomes to prior year estimates to identify potential management bias. Consistent over or underestimation in a particular direction may indicate intentional manipulation.",
     "tip": "Retrospective review: Look for patterns of bias in estimates (always high or always low).",
     "calculationRequired": false,
@@ -3964,12 +3964,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Introducing unpredictability in audit procedures helps address fraud risk because:",
     "options": {
-      "A": "It reduces audit costs",
-      "B": "Potential fraudsters cannot anticipate and prepare for specific audit tests",
-      "C": "It makes the audit more efficient",
-      "D": "It demonstrates professional competence"
+      "A": "It demonstrates professional competence",
+      "B": "It reduces audit costs",
+      "C": "Potential fraudsters cannot anticipate and prepare for specific audit tests",
+      "D": "It makes the audit more efficient"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Unpredictability makes it harder for those who know the typical audit approach to conceal fraud. Varying timing, selecting unexpected items, or using unexpected procedures catches perpetrators off guard.",
     "tip": "Unpredictability: Fraudsters can't prepare for tests they can't predict.",
     "calculationRequired": false,
@@ -4006,12 +4006,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When the auditor identifies fraud by lower-level employees, communication to those charged with governance:",
     "options": {
-      "A": "Is always required regardless of amount",
-      "B": "Is required when the fraud is material or indicates significant control deficiency",
-      "C": "Is never required",
-      "D": "Is only required if employee is terminated"
+      "A": "Is never required",
+      "B": "Is only required if employee is terminated",
+      "C": "Is always required regardless of amount",
+      "D": "Is required when the fraud is material or indicates significant control deficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Employee fraud should be communicated to governance when it causes material misstatement, indicates a significant deficiency or material weakness in controls, or otherwise warrants attention by governance.",
     "tip": "Employee fraud: Report to governance if material or indicates control weakness.",
     "calculationRequired": false,
@@ -4027,12 +4027,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Documentation related to fraud should include:",
     "options": {
-      "A": "Only identified fraud instances",
-      "B": "Risks identified, responses designed, results of procedures, and communications about fraud",
-      "C": "Only the brainstorming session",
-      "D": "Only material fraud findings"
+      "A": "Only the brainstorming session",
+      "B": "Only material fraud findings",
+      "C": "Only identified fraud instances",
+      "D": "Risks identified, responses designed, results of procedures, and communications about fraud"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Documentation should include risks identified and assessed, responses to those risks, results of procedures, communications with management and governance about fraud, and reasons for rebutting the revenue recognition presumption if applicable.",
     "tip": "Document: Risks, responses, results, communications, any rebuttals.",
     "calculationRequired": false,
@@ -4048,12 +4048,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which is a common red flag for fraudulent financial reporting?",
     "options": {
-      "A": "Stable management team",
-      "B": "Unusual transactions with related parties near period end",
-      "C": "Strong internal audit function",
-      "D": "Conservative accounting policies"
+      "A": "Conservative accounting policies",
+      "B": "Stable management team",
+      "C": "Unusual transactions with related parties near period end",
+      "D": "Strong internal audit function"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Unusual transactions with related parties near period end can indicate attempts to manipulate results. Other red flags include pressure on management, unusual adjustments, excessive complexity, and resistance to auditor inquiries.",
     "tip": "Red flags: Unusual period-end transactions, related parties, excessive adjustments.",
     "calculationRequired": false,
@@ -4111,12 +4111,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Analytical procedures performed to identify fraud risks should focus on:",
     "options": {
-      "A": "Only year-over-year changes",
-      "B": "Unusual relationships or unexpected trends that may indicate manipulation",
-      "C": "Only mathematical accuracy",
-      "D": "Industry comparisons only"
+      "A": "Industry comparisons only",
+      "B": "Only year-over-year changes",
+      "C": "Unusual relationships or unexpected trends that may indicate manipulation",
+      "D": "Only mathematical accuracy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Fraud-related analytical procedures look for unusual relationships, unexpected trends, or results inconsistent with expectations. These may indicate manipulation of accounts, fictitious transactions, or concealment efforts.",
     "tip": "Fraud analytics: Look for the unusual, unexpected, or inconsistent.",
     "calculationRequired": false,
@@ -4132,12 +4132,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When the auditor identifies fraud, the auditor should:",
     "options": {
-      "A": "Immediately withdraw from the engagement",
-      "B": "Evaluate implications, determine if other procedures are needed, and communicate appropriately",
-      "C": "Report to police immediately",
-      "D": "Ignore if immaterial"
+      "A": "Evaluate implications, determine if other procedures are needed, and communicate appropriately",
+      "B": "Report to police immediately",
+      "C": "Ignore if immaterial",
+      "D": "Immediately withdraw from the engagement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When fraud is identified, the auditor evaluates the implications for the audit, considers what additional procedures are needed, communicates to appropriate parties, and considers whether withdrawal may be necessary in extreme cases.",
     "tip": "Fraud found: Evaluate implications, expand procedures, communicate, consider withdrawal.",
     "calculationRequired": false,
@@ -4153,12 +4153,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An auditor may be required to report identified fraud to external parties:",
     "options": {
-      "A": "In all cases",
-      "B": "In response to subpoenas, SEC requirements, or specific regulations (such as banking)",
-      "C": "Never due to confidentiality",
-      "D": "Only if the client requests"
+      "A": "Never due to confidentiality",
+      "B": "Only if the client requests",
+      "C": "In all cases",
+      "D": "In response to subpoenas, SEC requirements, or specific regulations (such as banking)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "While confidentiality normally limits external reporting, exceptions exist: legal subpoenas, SEC regulations (under certain circumstances), banking regulations requiring reports to regulators, and government auditing standards.",
     "tip": "External fraud reporting: Usually no, but exceptions for legal/regulatory requirements.",
     "calculationRequired": false,
@@ -4174,12 +4174,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Withdrawal from an engagement due to fraud may be appropriate when:",
     "options": {
-      "A": "Any fraud is identified",
-      "B": "Management/governance fails to take appropriate action and continuing creates legal exposure",
-      "C": "The audit fee is insufficient",
-      "D": "The fraud is immaterial"
+      "A": "The audit fee is insufficient",
+      "B": "The fraud is immaterial",
+      "C": "Any fraud is identified",
+      "D": "Management/governance fails to take appropriate action and continuing creates legal exposure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Withdrawal may be considered when fraud casts doubt on management integrity, management or governance fails to take appropriate remedial action, continuing poses unacceptable legal risks, or the auditor can no longer rely on representations.",
     "tip": "Consider withdrawal: Management integrity doubt, no remedial action, unacceptable risk.",
     "calculationRequired": false,
@@ -4216,12 +4216,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Employee bonus programs tied to financial targets increase fraud risk because they create:",
     "options": {
-      "A": "Opportunity",
-      "B": "Pressure/incentive",
-      "C": "Rationalization",
-      "D": "All elements of the fraud triangle"
+      "A": "Rationalization",
+      "B": "All elements of the fraud triangle",
+      "C": "Opportunity",
+      "D": "Pressure/incentive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Compensation tied to financial targets creates pressure/incentive to achieve those targets. When targets are aggressive, this can motivate manipulation of results. This addresses one element of the fraud triangle.",
     "tip": "Performance-based pay = Pressure/incentive to meet targets (possibly through fraud).",
     "calculationRequired": false,
@@ -4237,12 +4237,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Significant unusual transactions should be evaluated for:",
     "options": {
-      "A": "Mathematical accuracy only",
-      "B": "Whether they were entered into to engage in fraudulent financial reporting or conceal misappropriation",
-      "C": "Tax implications only",
-      "D": "Whether they were properly approved only"
+      "A": "Tax implications only",
+      "B": "Whether they were properly approved only",
+      "C": "Mathematical accuracy only",
+      "D": "Whether they were entered into to engage in fraudulent financial reporting or conceal misappropriation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor evaluates whether significant unusual transactions (complex structures, related parties, lack of clear business purpose) were entered into for fraudulent purposes such as manipulating reported results.",
     "tip": "Unusual transactions: Question business purpose—could they be fraud vehicles?",
     "calculationRequired": false,
@@ -4279,12 +4279,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Communications to the audit committee regarding fraud should include:",
     "options": {
-      "A": "Only confirmed fraud",
-      "B": "Any fraud involving senior management, fraud causing material misstatement, and other matters warranting attention",
-      "C": "Only fraud over $10,000",
-      "D": "Only fraud discovered by the auditor"
+      "A": "Only fraud over $10,000",
+      "B": "Only fraud discovered by the auditor",
+      "C": "Only confirmed fraud",
+      "D": "Any fraud involving senior management, fraud causing material misstatement, and other matters warranting attention"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should communicate: any fraud involving management (regardless of materiality), fraud causing material misstatement, significant deficiencies in fraud-related controls, and other fraud matters warranting governance attention.",
     "tip": "Report to audit committee: Management fraud (any), material fraud, control weaknesses.",
     "calculationRequired": false,
@@ -4300,12 +4300,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A whistleblower hotline helps prevent and detect fraud by:",
     "options": {
-      "A": "Eliminating the need for other controls",
-      "B": "Providing a channel for employees to report suspected fraud anonymously",
-      "C": "Guaranteeing all fraud will be reported",
-      "D": "Replacing internal audit"
+      "A": "Providing a channel for employees to report suspected fraud anonymously",
+      "B": "Guaranteeing all fraud will be reported",
+      "C": "Replacing internal audit",
+      "D": "Eliminating the need for other controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Whistleblower programs allow employees and others to report concerns confidentially. Tips are the most common source of fraud detection. The program's existence also deters fraud by increasing perceived detection risk.",
     "tip": "Tips detect more fraud than any other method. Hotlines enable confidential reporting.",
     "calculationRequired": false,
@@ -4321,12 +4321,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Collusion among employees makes fraud harder to detect because it:",
     "options": {
-      "A": "Reduces the audit fee",
-      "B": "Circumvents controls that depend on segregation of duties",
-      "C": "Eliminates documentation",
-      "D": "Makes fraud legal"
+      "A": "Eliminates documentation",
+      "B": "Makes fraud legal",
+      "C": "Reduces the audit fee",
+      "D": "Circumvents controls that depend on segregation of duties"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Collusion defeats segregation of duties and other controls relying on independent checks. Two or more colluding parties can override controls that would prevent one person from committing fraud alone.",
     "tip": "Collusion defeats segregation of duties. Harder to detect than single-perpetrator fraud.",
     "calculationRequired": false,
@@ -4363,12 +4363,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Despite proper application of audit standards, fraud may go undetected because:",
     "options": {
-      "A": "Auditors are not competent",
-      "B": "Fraud involves concealment, management override, and auditing is based on sampling and judgment",
-      "C": "Auditors don't look for fraud",
-      "D": "All fraud is immaterial"
+      "A": "All fraud is immaterial",
+      "B": "Auditors are not competent",
+      "C": "Fraud involves concealment, management override, and auditing is based on sampling and judgment",
+      "D": "Auditors don't look for fraud"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Fraud involves intentional concealment, forgery, collusion, and management override. Auditing uses sampling and professional judgment. The inherent nature of fraud means even a properly conducted audit may not detect all fraud.",
     "tip": "Fraud is designed to avoid detection. Inherent limitations exist even with proper auditing.",
     "calculationRequired": false,
@@ -4384,12 +4384,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The Sarbanes-Oxley Act addressed fraud by:",
     "options": {
-      "A": "Eliminating the external audit requirement",
-      "B": "Requiring CEO/CFO certification of F/S, enhanced penalties for fraud, and audit committee oversight",
-      "C": "Reducing financial reporting requirements",
-      "D": "Allowing auditors to provide all services"
+      "A": "Requiring CEO/CFO certification of F/S, enhanced penalties for fraud, and audit committee oversight",
+      "B": "Reducing financial reporting requirements",
+      "C": "Allowing auditors to provide all services",
+      "D": "Eliminating the external audit requirement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SOX addressed fraud through multiple provisions: CEO/CFO certifications, enhanced criminal penalties for fraud, audit committee requirements, auditor independence rules, and internal control assessments.",
     "tip": "SOX antifraud: Certifications, penalties, audit committee oversight, ICFR assessment.",
     "calculationRequired": false,
@@ -4405,12 +4405,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Testing revenue transactions near period end helps detect fraud because:",
     "options": {
-      "A": "All revenue near year-end is fraudulent",
-      "B": "Fraudulent entries are often recorded near period end to meet targets",
-      "C": "Year-end is when auditors are present",
-      "D": "Revenue recognition rules change at year-end"
+      "A": "Fraudulent entries are often recorded near period end to meet targets",
+      "B": "Year-end is when auditors are present",
+      "C": "Revenue recognition rules change at year-end",
+      "D": "All revenue near year-end is fraudulent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Fraudulent revenue is often recorded near period end because: (1) perpetrators wait to see if targets will be met legitimately, (2) manipulation close to reporting has less time for discovery, and (3) incentives peak at period end.",
     "tip": "Period-end focus: Fraudsters wait until late to manipulate results if needed.",
     "calculationRequired": false,
@@ -4447,12 +4447,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Sampling risk is the risk that:",
     "options": {
-      "A": "The sample will be too large",
-      "B": "The auditor's conclusion from the sample differs from the conclusion if the entire population were tested",
-      "C": "The auditor will select the wrong items",
-      "D": "The sample will not be representative"
+      "A": "The auditor's conclusion from the sample differs from the conclusion if the entire population were tested",
+      "B": "The auditor will select the wrong items",
+      "C": "The sample will not be representative",
+      "D": "The sample will be too large"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sampling risk is the risk that the sample-based conclusion differs from the conclusion that would result from testing the entire population. It exists whenever sampling is used.",
     "tip": "Sampling risk = Sample conclusion ≠ Population conclusion. Can only eliminate by testing 100%.",
     "calculationRequired": false,
@@ -4468,12 +4468,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Nonsampling risk includes:",
     "options": {
-      "A": "The risk that the sample is not representative",
-      "B": "Human errors, inappropriate procedures, or failure to recognize misstatements",
-      "C": "The risk of incorrect rejection",
-      "D": "The risk of testing too few items"
+      "A": "Human errors, inappropriate procedures, or failure to recognize misstatements",
+      "B": "The risk of incorrect rejection",
+      "C": "The risk of testing too few items",
+      "D": "The risk that the sample is not representative"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Nonsampling risk includes all causes of error other than sampling—such as using inappropriate procedures, misinterpreting results, or failing to recognize misstatements in items examined.",
     "tip": "Nonsampling risk = Everything else (human error, wrong procedures, misinterpretation).",
     "calculationRequired": false,
@@ -4510,12 +4510,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which selection method gives every item an equal chance of selection?",
     "options": {
-      "A": "Block selection",
-      "B": "Haphazard selection",
-      "C": "Random number selection",
-      "D": "Judgmental selection"
+      "A": "Judgmental selection",
+      "B": "Block selection",
+      "C": "Haphazard selection",
+      "D": "Random number selection"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Random number selection (using random number tables or generators) gives every item in the population an equal probability of selection. This is required for statistical sampling.",
     "tip": "Random selection = Equal probability for all items. Required for statistical sampling.",
     "calculationRequired": false,
@@ -4531,12 +4531,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Systematic selection involves selecting every nth item after:",
     "options": {
-      "A": "Testing the first n items",
-      "B": "Determining a sampling interval and random start",
-      "C": "Selecting the largest items",
-      "D": "Reviewing all items"
+      "A": "Determining a sampling interval and random start",
+      "B": "Selecting the largest items",
+      "C": "Reviewing all items",
+      "D": "Testing the first n items"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Systematic selection calculates a sampling interval (population ÷ sample size), selects a random starting point within the first interval, then selects every nth item. If the population isn't structured, it approximates random selection.",
     "tip": "Systematic: Random start + Fixed interval. Works like random if no pattern in population.",
     "calculationRequired": false,
@@ -4552,12 +4552,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Haphazard selection is:",
     "options": {
-      "A": "The same as random selection",
-      "B": "Selection without structured technique, attempting to avoid bias",
-      "C": "Always unacceptable",
-      "D": "Based on dollar amounts"
+      "A": "Selection without structured technique, attempting to avoid bias",
+      "B": "Always unacceptable",
+      "C": "Based on dollar amounts",
+      "D": "The same as random selection"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Haphazard selection is selecting items without a structured technique while attempting to avoid bias. It's acceptable for nonstatistical sampling but not appropriate for statistical sampling because probability can't be measured.",
     "tip": "Haphazard = 'No conscious bias' selection. OK for nonstatistical, not for statistical.",
     "calculationRequired": false,
@@ -4573,12 +4573,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An increase in the acceptable risk of incorrect acceptance (for substantive testing) would cause sample size to:",
     "options": {
-      "A": "Increase",
-      "B": "Decrease",
-      "C": "Remain unchanged",
-      "D": "Be unpredictable"
+      "A": "Be unpredictable",
+      "B": "Increase",
+      "C": "Decrease",
+      "D": "Remain unchanged"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Accepting more risk means less precision is needed, so sample size decreases. Inverse relationship: higher acceptable risk = smaller sample needed.",
     "tip": "Higher acceptable risk = Less testing needed = Smaller sample.",
     "calculationRequired": false,
@@ -4594,12 +4594,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If the auditor decreases the tolerable misstatement for a substantive test, the sample size will:",
     "options": {
-      "A": "Decrease",
-      "B": "Increase",
-      "C": "Stay the same",
-      "D": "Become irrelevant"
+      "A": "Increase",
+      "B": "Stay the same",
+      "C": "Become irrelevant",
+      "D": "Decrease"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Lower tolerable misstatement means more precision is required, requiring a larger sample. Inverse relationship: lower tolerance = more testing needed.",
     "tip": "Lower tolerable misstatement = Need more precision = Larger sample.",
     "calculationRequired": false,
@@ -4636,12 +4636,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Attribute sampling is primarily used for:",
     "options": {
-      "A": "Estimating total dollar misstatement",
-      "B": "Testing the rate of control deviations",
-      "C": "Calculating inventory values",
-      "D": "Confirming accounts receivable"
+      "A": "Confirming accounts receivable",
+      "B": "Estimating total dollar misstatement",
+      "C": "Testing the rate of control deviations",
+      "D": "Calculating inventory values"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Attribute sampling is used in tests of controls to estimate the rate of deviation from prescribed controls. The sample result is expressed as a deviation rate (percentage) rather than a dollar amount.",
     "tip": "Attribute sampling = Tests of controls. Measures deviation rate (%).",
     "calculationRequired": false,
@@ -4678,12 +4678,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In attribute sampling, the risk of assessing control risk too low relates to:",
     "options": {
-      "A": "Audit efficiency",
-      "B": "Audit effectiveness (concluding controls work when they don't)",
-      "C": "Nonsampling risk only",
-      "D": "Sample size calculation"
+      "A": "Audit effectiveness (concluding controls work when they don't)",
+      "B": "Nonsampling risk only",
+      "C": "Sample size calculation",
+      "D": "Audit efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Risk of assessing control risk too low means concluding controls are effective when the population deviation rate actually exceeds tolerable rate. This affects audit effectiveness because the auditor may do insufficient substantive testing.",
     "tip": "Assessing control risk too low = Overreliance on controls = Effectiveness risk.",
     "calculationRequired": false,
@@ -4720,12 +4720,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The risk of incorrect acceptance in substantive testing affects:",
     "options": {
-      "A": "Audit efficiency",
-      "B": "Audit effectiveness (accepting a materially misstated balance)",
-      "C": "Only planning",
-      "D": "Documentation requirements"
+      "A": "Audit effectiveness (accepting a materially misstated balance)",
+      "B": "Only planning",
+      "C": "Documentation requirements",
+      "D": "Audit efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Risk of incorrect acceptance is concluding that a balance is not materially misstated when it actually is. This affects effectiveness because a material misstatement goes undetected.",
     "tip": "Incorrect acceptance = Effectiveness risk (miss misstatement). Incorrect rejection = Efficiency risk.",
     "calculationRequired": false,
@@ -4741,12 +4741,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The risk of incorrect rejection causes the auditor to:",
     "options": {
-      "A": "Miss material misstatements",
-      "B": "Perform unnecessary additional work when the balance is actually correct",
-      "C": "Issue an incorrect opinion",
-      "D": "Rely too heavily on controls"
+      "A": "Rely too heavily on controls",
+      "B": "Miss material misstatements",
+      "C": "Perform unnecessary additional work when the balance is actually correct",
+      "D": "Issue an incorrect opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Risk of incorrect rejection means concluding a balance is materially misstated when it's not. This leads to unnecessary additional work (inefficiency) but doesn't affect audit effectiveness or opinion correctness.",
     "tip": "Incorrect rejection = Efficiency risk. More work, but won't cause wrong opinion.",
     "calculationRequired": false,
@@ -4762,12 +4762,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Monetary unit sampling (MUS) differs from classical variables sampling in that MUS:",
     "options": {
-      "A": "Selects physical units, not dollar units",
-      "B": "Uses individual dollars as the sampling unit, giving larger items greater selection probability",
-      "C": "Never stratifies the population",
-      "D": "Cannot project misstatements"
+      "A": "Uses individual dollars as the sampling unit, giving larger items greater selection probability",
+      "B": "Never stratifies the population",
+      "C": "Cannot project misstatements",
+      "D": "Selects physical units, not dollar units"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "MUS treats each dollar as a sampling unit. Larger items have more dollars and therefore greater probability of selection. This automatically stratifies by dollar amount without separate stratification.",
     "tip": "MUS: Dollar is the sampling unit. Big items more likely selected. Built-in stratification.",
     "calculationRequired": false,
@@ -4804,12 +4804,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A limitation of monetary unit sampling is that it:",
     "options": {
-      "A": "Cannot be used for substantive testing",
-      "B": "Isn't effective for testing understatement or when many misstatements are expected",
-      "C": "Requires very large sample sizes",
-      "D": "Cannot project results"
+      "A": "Isn't effective for testing understatement or when many misstatements are expected",
+      "B": "Requires very large sample sizes",
+      "C": "Cannot project results",
+      "D": "Cannot be used for substantive testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "MUS is less effective for understatements (small/zero items have low selection probability), and the upper limit calculations become complex when many misstatements are found. It's best for overstatement testing with few expected errors.",
     "tip": "MUS limitations: Poor for understatements, complex if many errors found.",
     "calculationRequired": false,
@@ -4825,12 +4825,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Stratification of a population before sampling typically:",
     "options": {
-      "A": "Increases required sample size",
-      "B": "Reduces variability within strata and can increase efficiency",
-      "C": "Is required for all sampling",
-      "D": "Eliminates the need for projection"
+      "A": "Is required for all sampling",
+      "B": "Eliminates the need for projection",
+      "C": "Increases required sample size",
+      "D": "Reduces variability within strata and can increase efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Stratification divides the population into subgroups with similar characteristics. This reduces variability within each stratum, allowing smaller sample sizes while maintaining precision. It's efficiency-enhancing, not required.",
     "tip": "Stratification: Group similar items together → Less variability → Smaller samples possible.",
     "calculationRequired": false,
@@ -4846,12 +4846,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "After testing a sample, the auditor should:",
     "options": {
-      "A": "Only consider errors found in the sample",
-      "B": "Project sample results to the population and consider sampling risk",
-      "C": "Ignore errors below a threshold",
-      "D": "Always expand the sample"
+      "A": "Project sample results to the population and consider sampling risk",
+      "B": "Ignore errors below a threshold",
+      "C": "Always expand the sample",
+      "D": "Only consider errors found in the sample"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sample results must be projected to the population, and the auditor must consider whether projected misstatement plus sampling risk exceeds tolerable misstatement. Individual errors are also evaluated.",
     "tip": "Project results to population, add sampling risk, compare to tolerable misstatement.",
     "calculationRequired": false,
@@ -4909,12 +4909,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Documentation of a sampling application should include:",
     "options": {
-      "A": "Only the sample size",
-      "B": "Objective, population definition, sample size rationale, selection method, and evaluation",
-      "C": "Only the errors found",
-      "D": "Only the conclusion"
+      "A": "Only the errors found",
+      "B": "Only the conclusion",
+      "C": "Only the sample size",
+      "D": "Objective, population definition, sample size rationale, selection method, and evaluation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Documentation should include: the audit objective, population definition, sampling unit, selection method, sample size and how determined, details of tests performed, results and evaluation, and conclusion reached.",
     "tip": "Document the full sampling process: objective → population → selection → testing → evaluation → conclusion.",
     "calculationRequired": false,
@@ -4951,12 +4951,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Block selection (selecting all items in a sequence) is generally:",
     "options": {
-      "A": "The preferred method for statistical sampling",
-      "B": "Acceptable only in limited circumstances due to lack of representativeness",
-      "C": "Required for accounts receivable testing",
-      "D": "The most efficient method"
+      "A": "Acceptable only in limited circumstances due to lack of representativeness",
+      "B": "Required for accounts receivable testing",
+      "C": "The most efficient method",
+      "D": "The preferred method for statistical sampling"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Block selection (e.g., testing all June transactions) provides limited assurance because it doesn't represent the full population or year. It's acceptable only when combined with other blocks or in limited circumstances.",
     "tip": "Block selection: Limited representativeness. One month ≠ whole year.",
     "calculationRequired": false,
@@ -4972,12 +4972,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The confidence level in statistical sampling is the complement of:",
     "options": {
-      "A": "Tolerable misstatement",
-      "B": "The risk of incorrect acceptance (for substantive tests)",
-      "C": "Expected misstatement",
-      "D": "Sample size"
+      "A": "The risk of incorrect acceptance (for substantive tests)",
+      "B": "Expected misstatement",
+      "C": "Sample size",
+      "D": "Tolerable misstatement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Confidence level + Risk of incorrect acceptance = 100%. If the auditor wants 95% confidence, they accept 5% risk of incorrect acceptance. Higher confidence requires larger samples.",
     "tip": "Confidence = 100% - Risk of incorrect acceptance. 95% confidence = 5% risk.",
     "calculationRequired": false,
@@ -4993,12 +4993,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Discovery sampling is designed to:",
     "options": {
-      "A": "Estimate total misstatement",
-      "B": "Detect at least one occurrence if the population deviation rate exceeds a critical rate",
-      "C": "Find the largest items",
-      "D": "Reduce audit costs"
+      "A": "Reduce audit costs",
+      "B": "Estimate total misstatement",
+      "C": "Detect at least one occurrence if the population deviation rate exceeds a critical rate",
+      "D": "Find the largest items"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Discovery sampling is designed to detect at least one example of a characteristic (like fraud) if it exists above a specified rate. Used when even one instance is critical, like searching for fraud indicators.",
     "tip": "Discovery sampling: Find at least one if rate exceeds threshold. Used for critical characteristics.",
     "calculationRequired": false,
@@ -5014,12 +5014,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In mean-per-unit estimation, the auditor:",
     "options": {
-      "A": "Calculates deviation rates",
-      "B": "Estimates the average value per item and multiplies by population size",
-      "C": "Only tests items over a certain amount",
-      "D": "Uses the client's recorded amounts"
+      "A": "Uses the client's recorded amounts",
+      "B": "Calculates deviation rates",
+      "C": "Estimates the average value per item and multiplies by population size",
+      "D": "Only tests items over a certain amount"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Mean-per-unit estimates the population by calculating the average audited value of sample items and multiplying by the number of items in the population. It's a classical variables sampling technique.",
     "tip": "Mean-per-unit: Average value × Population count = Estimated total.",
     "calculationRequired": false,
@@ -5035,12 +5035,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Difference estimation is most efficient when:",
     "options": {
-      "A": "No misstatements are expected",
-      "B": "Differences between audited and book values are expected and vary in size",
-      "C": "All items have the same value",
-      "D": "The population is very small"
+      "A": "Differences between audited and book values are expected and vary in size",
+      "B": "All items have the same value",
+      "C": "The population is very small",
+      "D": "No misstatements are expected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Difference estimation projects the average difference between audited and book amounts to the population. It's most efficient when differences are expected, vary in size but not proportionally to book value.",
     "tip": "Difference estimation: Best when expecting differences that don't relate to item size.",
     "calculationRequired": false,
@@ -5056,12 +5056,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Ratio estimation is most appropriate when:",
     "options": {
-      "A": "Differences between audited and book values are proportional to book values",
-      "B": "No relationship exists between errors and book values",
-      "C": "The population has no recorded amounts",
-      "D": "Testing controls"
+      "A": "Testing controls",
+      "B": "Differences between audited and book values are proportional to book values",
+      "C": "No relationship exists between errors and book values",
+      "D": "The population has no recorded amounts"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Ratio estimation projects misstatements based on the ratio of audited to book values. It's most efficient when the size of differences is proportional to the size of recorded amounts (larger items, larger errors).",
     "tip": "Ratio estimation: Best when error size relates to item size (proportional relationship).",
     "calculationRequired": false,
@@ -5077,12 +5077,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Attribute sampling tables determine sample size based on:",
     "options": {
-      "A": "Only the population size",
-      "B": "Confidence level, tolerable rate, and expected deviation rate",
-      "C": "Only the auditor's judgment",
-      "D": "The number of auditors available"
+      "A": "Only the auditor's judgment",
+      "B": "The number of auditors available",
+      "C": "Only the population size",
+      "D": "Confidence level, tolerable rate, and expected deviation rate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Attribute sample size depends on: desired confidence level (risk of overreliance), tolerable deviation rate, and expected population deviation rate. Population size generally has minimal effect unless very small.",
     "tip": "Attribute sample size: Confidence level + Tolerable rate + Expected rate. Population size usually doesn't matter much.",
     "calculationRequired": false,
@@ -5098,12 +5098,12 @@ const questions = [
     "questionFormat": "calculation",
     "question": "In an attribute sample of 100 items, 3 deviations were found. The sample deviation rate is:",
     "options": {
-      "A": "0.3%",
-      "B": "3%",
-      "C": "30%",
-      "D": "97%"
+      "A": "30%",
+      "B": "97%",
+      "C": "0.3%",
+      "D": "3%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sample deviation rate = Deviations found ÷ Sample size = 3 ÷ 100 = 3%. This is used to evaluate whether the population likely exceeds the tolerable rate.",
     "tip": "Deviation rate = Deviations ÷ Sample size. Simple percentage calculation.",
     "calculationRequired": true,
@@ -5119,12 +5119,12 @@ const questions = [
     "questionFormat": "calculation",
     "question": "A sample of 50 items from a population of 1,000 found total audited value of $5,000. The estimated population value using mean-per-unit is:",
     "options": {
-      "A": "$5,000",
-      "B": "$50,000",
-      "C": "$100,000",
-      "D": "$500,000"
+      "A": "$100,000",
+      "B": "$500,000",
+      "C": "$5,000",
+      "D": "$50,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Mean per unit = $5,000 ÷ 50 = $100. Estimated population = $100 × 1,000 items = $100,000.",
     "tip": "Mean-per-unit projection: Sample average × Population count.",
     "calculationRequired": true,
@@ -5161,12 +5161,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The primary purpose of audit planning is to:",
     "options": {
-      "A": "Minimize audit fees",
-      "B": "Ensure the audit is performed effectively and efficiently",
-      "C": "Guarantee detection of all fraud",
-      "D": "Satisfy regulatory requirements"
+      "A": "Ensure the audit is performed effectively and efficiently",
+      "B": "Guarantee detection of all fraud",
+      "C": "Satisfy regulatory requirements",
+      "D": "Minimize audit fees"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Planning ensures the audit is conducted effectively (obtaining sufficient appropriate evidence) and efficiently (proper allocation of resources, appropriate direction and supervision of the engagement team).",
     "tip": "Planning = Effectiveness + Efficiency. Right procedures, right resources, right timing.",
     "calculationRequired": false,
@@ -5182,12 +5182,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The engagement letter serves primarily to:",
     "options": {
-      "A": "Guarantee audit results",
-      "B": "Document the agreed-upon terms of the engagement",
-      "C": "Set the audit fee",
-      "D": "Identify all fraud risks"
+      "A": "Identify all fraud risks",
+      "B": "Guarantee audit results",
+      "C": "Document the agreed-upon terms of the engagement",
+      "D": "Set the audit fee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The engagement letter documents the terms of the engagement, including objective and scope, responsibilities of auditor and management, framework used, and expected form of communications. It avoids misunderstandings.",
     "tip": "Engagement letter = Contract for the audit. Documents roles, responsibilities, scope.",
     "calculationRequired": false,
@@ -5203,12 +5203,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The engagement letter should include:",
     "options": {
-      "A": "Only the fee arrangement",
-      "B": "Objectives, scope, management responsibilities, framework, and auditor responsibilities",
-      "C": "Only the expected audit opinion",
-      "D": "Detailed audit procedures"
+      "A": "Detailed audit procedures",
+      "B": "Only the fee arrangement",
+      "C": "Objectives, scope, management responsibilities, framework, and auditor responsibilities",
+      "D": "Only the expected audit opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Required elements include: audit objective and scope, auditor and management responsibilities, financial reporting framework, expected form of reports, statement that some material misstatements may not be detected.",
     "tip": "Key elements: Objectives, scope, responsibilities (both parties), framework, report form.",
     "calculationRequired": false,
@@ -5245,12 +5245,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Overall materiality is typically determined by applying a percentage to a benchmark such as:",
     "options": {
-      "A": "Total liabilities only",
-      "B": "Net income, total assets, revenue, or equity, depending on the entity",
-      "C": "The audit fee",
-      "D": "Industry averages only"
+      "A": "Industry averages only",
+      "B": "Total liabilities only",
+      "C": "Net income, total assets, revenue, or equity, depending on the entity",
+      "D": "The audit fee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Common benchmarks include net income, total revenue, total assets, or equity. The choice depends on the entity's characteristics, what users focus on, and the nature and stability of the benchmark.",
     "tip": "Benchmarks vary: Profit-focused entity = Net income. Asset-based = Total assets. Nonprofit = Expenses.",
     "calculationRequired": false,
@@ -5266,12 +5266,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Performance materiality is set lower than overall materiality to:",
     "options": {
-      "A": "Increase the audit fee",
-      "B": "Reduce the risk that aggregate uncorrected and undetected misstatements exceed overall materiality",
-      "C": "Comply with SEC requirements",
-      "D": "Make the audit easier"
+      "A": "Reduce the risk that aggregate uncorrected and undetected misstatements exceed overall materiality",
+      "B": "Comply with SEC requirements",
+      "C": "Make the audit easier",
+      "D": "Increase the audit fee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Performance materiality is set below overall materiality to provide a margin for undetected misstatements. When testing at the lower level, there's less risk that the aggregate of all misstatements exceeds overall materiality.",
     "tip": "Performance materiality = Safety margin. Lower threshold for testing to catch more.",
     "calculationRequired": false,
@@ -5287,12 +5287,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Understanding the entity and its environment is required to:",
     "options": {
-      "A": "Recommend business improvements",
-      "B": "Assess risks of material misstatement and plan the audit",
-      "C": "Prepare the financial statements",
-      "D": "Set the audit fee"
+      "A": "Set the audit fee",
+      "B": "Recommend business improvements",
+      "C": "Assess risks of material misstatement and plan the audit",
+      "D": "Prepare the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Understanding the entity helps identify and assess risks of material misstatement (from fraud or error), design appropriate audit responses, and evaluate whether evidence supports conclusions about the financial statements.",
     "tip": "Understand entity → Identify risks → Plan response. Foundation of risk-based auditing.",
     "calculationRequired": false,
@@ -5308,12 +5308,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Understanding the entity includes understanding all EXCEPT:",
     "options": {
-      "A": "Industry and regulatory factors",
-      "B": "Internal control",
-      "C": "Personal finances of the CEO",
-      "D": "Entity's objectives and strategies"
+      "A": "Entity's objectives and strategies",
+      "B": "Industry and regulatory factors",
+      "C": "Internal control",
+      "D": "Personal finances of the CEO"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Required understanding includes: industry/regulatory factors, entity nature and operations, accounting policies, objectives/strategies, measurement of performance, and internal control. Personal finances aren't relevant unless affecting F/S.",
     "tip": "Understand: Industry, operations, strategies, policies, performance measures, controls.",
     "calculationRequired": false,
@@ -5329,12 +5329,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Risk assessment procedures include:",
     "options": {
-      "A": "Only tests of controls",
-      "B": "Inquiry, analytical procedures, and observation/inspection",
-      "C": "Only substantive procedures",
-      "D": "Only external confirmations"
+      "A": "Inquiry, analytical procedures, and observation/inspection",
+      "B": "Only substantive procedures",
+      "C": "Only external confirmations",
+      "D": "Only tests of controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Risk assessment procedures include inquiries of management and others, analytical procedures, and observation and inspection. These help the auditor understand the entity and identify risks.",
     "tip": "Risk assessment procedures: Inquire, Analyze, Observe/Inspect. Not tests of controls or substantive.",
     "calculationRequired": false,
@@ -5350,12 +5350,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Analytical procedures performed during planning help the auditor:",
     "options": {
-      "A": "Detect all misstatements",
-      "B": "Identify unusual items or trends and better understand the entity",
-      "C": "Test controls",
-      "D": "Confirm account balances"
+      "A": "Test controls",
+      "B": "Confirm account balances",
+      "C": "Detect all misstatements",
+      "D": "Identify unusual items or trends and better understand the entity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Planning analytical procedures help identify areas of potential misstatement, understand the entity better, and enhance understanding of the client's business and changes from prior periods.",
     "tip": "Planning analytics: Spot unusual items, understand business, identify risk areas.",
     "calculationRequired": false,
@@ -5371,12 +5371,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The overall audit strategy establishes:",
     "options": {
-      "A": "Detailed audit procedures",
-      "B": "Scope, timing, direction of the audit, and resources needed",
-      "C": "Only the audit fee",
-      "D": "The type of opinion to issue"
+      "A": "Only the audit fee",
+      "B": "The type of opinion to issue",
+      "C": "Detailed audit procedures",
+      "D": "Scope, timing, direction of the audit, and resources needed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The overall strategy sets the scope, timing, direction, and resource requirements for the audit. It guides development of the detailed audit plan and is documented before detailed planning begins.",
     "tip": "Strategy = Big picture. Plan = Detailed procedures. Strategy guides the plan.",
     "calculationRequired": false,
@@ -5392,12 +5392,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The audit plan includes:",
     "options": {
-      "A": "Only the audit opinion",
-      "B": "The nature, timing, and extent of planned risk assessment, further audit procedures, and other procedures",
-      "C": "Only staff assignments",
-      "D": "Only materiality calculations"
+      "A": "Only staff assignments",
+      "B": "Only materiality calculations",
+      "C": "Only the audit opinion",
+      "D": "The nature, timing, and extent of planned risk assessment, further audit procedures, and other procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The audit plan is more detailed than the strategy, specifying the nature, timing, and extent of risk assessment procedures, further audit procedures at the assertion level, and other required procedures.",
     "tip": "Audit plan = NTE (Nature, Timing, Extent) of specific procedures.",
     "calculationRequired": false,
@@ -5434,12 +5434,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Direction and supervision of team members ensures:",
     "options": {
-      "A": "The audit fee is minimized",
-      "B": "Work is performed according to standards and conclusions are supported",
-      "C": "All staff receive equal work",
-      "D": "Client management approves all procedures"
+      "A": "All staff receive equal work",
+      "B": "Client management approves all procedures",
+      "C": "The audit fee is minimized",
+      "D": "Work is performed according to standards and conclusions are supported"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Supervision ensures work is performed according to professional standards, in accordance with firm policy, the audit plan is followed, evidence supports conclusions, and documentation is adequate.",
     "tip": "Supervision: Ensure quality work, supported conclusions, adequate documentation.",
     "calculationRequired": false,
@@ -5455,12 +5455,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Before accepting an engagement, communication with the predecessor auditor is:",
     "options": {
-      "A": "Prohibited",
-      "B": "Required (with client permission) to gather information about the engagement",
-      "C": "Optional and rarely useful",
-      "D": "Only required for public companies"
+      "A": "Required (with client permission) to gather information about the engagement",
+      "B": "Optional and rarely useful",
+      "C": "Only required for public companies",
+      "D": "Prohibited"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The successor auditor is required to communicate with the predecessor (with client permission) to inquire about reasons for the change, disagreements with management, facts affecting integrity, and issues about fraud or noncompliance.",
     "tip": "Predecessor communication: Required before accepting. Get client permission first.",
     "calculationRequired": false,
@@ -5518,12 +5518,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Significant risks require:",
     "options": {
-      "A": "No special consideration",
-      "B": "Special audit consideration including understanding related controls and substantive procedures specifically responsive to the risk",
-      "C": "Only disclosure in the audit report",
-      "D": "Management representation only"
+      "A": "Special audit consideration including understanding related controls and substantive procedures specifically responsive to the risk",
+      "B": "Only disclosure in the audit report",
+      "C": "Management representation only",
+      "D": "No special consideration"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Significant risks require: obtaining understanding of related controls, performing substantive procedures specifically designed to address the risk, and when substantive procedures alone aren't sufficient, testing relevant controls.",
     "tip": "Significant risk = Special attention. Must design specific responses, can't just rely on general procedures.",
     "calculationRequired": false,
@@ -5539,12 +5539,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "For initial audits, the auditor must obtain evidence about opening balances because:",
     "options": {
-      "A": "PCAOB requires it",
-      "B": "Opening balances affect the current period financial statements",
-      "C": "The predecessor auditor's work cannot be used",
-      "D": "Opening balances are always materially misstated"
+      "A": "Opening balances affect the current period financial statements",
+      "B": "The predecessor auditor's work cannot be used",
+      "C": "Opening balances are always materially misstated",
+      "D": "PCAOB requires it"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Opening balances affect current period presentations. If opening balances are misstated, it could affect current period F/S. The auditor obtains evidence to determine if they contain misstatements that materially affect current F/S.",
     "tip": "Opening balances: Affect comparatives and current period. Must get comfortable with them.",
     "calculationRequired": false,
@@ -5560,12 +5560,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "For opening balances in an initial audit, the successor may rely on predecessor audit evidence if:",
     "options": {
-      "A": "Never, all work must be redone",
-      "B": "The predecessor's competence and independence are evaluated satisfactorily",
-      "C": "The client requests it",
-      "D": "The predecessor agrees to be responsible"
+      "A": "The predecessor agrees to be responsible",
+      "B": "Never, all work must be redone",
+      "C": "The predecessor's competence and independence are evaluated satisfactorily",
+      "D": "The client requests it"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The successor may review predecessor working papers if satisfied with the predecessor's professional competence and independence. This can provide evidence about opening balances without redoing all work.",
     "tip": "Can use predecessor work if: Evaluate their competence/independence first.",
     "calculationRequired": false,
@@ -5602,12 +5602,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In planning a group audit, the group engagement partner must:",
     "options": {
-      "A": "Personally visit all component locations",
-      "B": "Understand group components, decide on involvement, and communicate with component auditors",
-      "C": "Rely entirely on component auditors",
-      "D": "Only audit the parent company"
+      "A": "Understand group components, decide on involvement, and communicate with component auditors",
+      "B": "Rely entirely on component auditors",
+      "C": "Only audit the parent company",
+      "D": "Personally visit all component locations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Group audit planning involves: understanding the group and components, determining significant components, deciding on involvement in component audits, and communicating requirements to component auditors.",
     "tip": "Group audit: Understand components, determine significance, direct component auditors.",
     "calculationRequired": false,
@@ -5644,12 +5644,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The auditor may set lower materiality for specific accounts or disclosures when:",
     "options": {
-      "A": "The accounts are large",
-      "B": "User expectations or regulatory requirements make misstatements in those areas particularly sensitive",
-      "C": "The accounts are complex to audit",
-      "D": "Management requests higher materiality"
+      "A": "Management requests higher materiality",
+      "B": "The accounts are large",
+      "C": "User expectations or regulatory requirements make misstatements in those areas particularly sensitive",
+      "D": "The accounts are complex to audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Lower materiality may be appropriate for items where users have heightened sensitivity, such as related party disclosures, executive compensation, or items significant to a regulated industry.",
     "tip": "Specific materiality: Lower for sensitive items users care about particularly.",
     "calculationRequired": false,
@@ -5665,12 +5665,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Before accepting a new client, the auditor should:",
     "options": {
-      "A": "Only verify the client can pay the fee",
-      "B": "Evaluate client integrity, firm competence, independence, and ability to serve",
-      "C": "Only review prior financial statements",
-      "D": "Accept all engagements to maximize revenue"
+      "A": "Accept all engagements to maximize revenue",
+      "B": "Only verify the client can pay the fee",
+      "C": "Evaluate client integrity, firm competence, independence, and ability to serve",
+      "D": "Only review prior financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Client acceptance involves evaluating management integrity, firm competence and resources to perform the engagement, independence, and ethical requirements. Not all clients should be accepted.",
     "tip": "Acceptance: Evaluate integrity, competence, independence. Right to decline clients.",
     "calculationRequired": false,
@@ -5686,12 +5686,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Preconditions for an audit include:",
     "options": {
-      "A": "Only a signed engagement letter",
-      "B": "Management's acknowledgment of responsibilities and agreement to provide access and information",
-      "C": "Guarantee of an unqualified opinion",
-      "D": "Only a fee agreement"
+      "A": "Management's acknowledgment of responsibilities and agreement to provide access and information",
+      "B": "Guarantee of an unqualified opinion",
+      "C": "Only a fee agreement",
+      "D": "Only a signed engagement letter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Preconditions include: management acknowledges responsibility for F/S preparation, internal control, and providing access to all information. The auditor also determines the framework is acceptable.",
     "tip": "Preconditions: Management responsibility acknowledgment + Access to information + Acceptable framework.",
     "calculationRequired": false,
@@ -5728,12 +5728,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Understanding IT systems during planning is important because:",
     "options": {
-      "A": "All IT systems have weaknesses",
-      "B": "IT affects how transactions are initiated, processed, recorded, and reported",
-      "C": "IT is the only source of evidence",
-      "D": "IT eliminates all human error"
+      "A": "IT affects how transactions are initiated, processed, recorded, and reported",
+      "B": "IT is the only source of evidence",
+      "C": "IT eliminates all human error",
+      "D": "All IT systems have weaknesses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "IT systems affect how transactions flow through the entity—from initiation through processing to reporting. Understanding IT helps identify risks and determine whether IT controls are relevant to the audit.",
     "tip": "IT understanding: Affects transaction flow and what controls exist. Critical for modern audits.",
     "calculationRequired": false,
@@ -5749,12 +5749,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "During planning, the auditor should obtain understanding of laws and regulations because:",
     "options": {
-      "A": "The auditor must ensure full compliance",
-      "B": "Noncompliance may have material effects on the financial statements",
-      "C": "It is required only for government audits",
-      "D": "It reduces audit scope"
+      "A": "It is required only for government audits",
+      "B": "It reduces audit scope",
+      "C": "The auditor must ensure full compliance",
+      "D": "Noncompliance may have material effects on the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Understanding applicable laws helps identify risks—noncompliance can result in fines, litigation, or other consequences materially affecting F/S. Some laws directly affect F/S amounts (like taxes).",
     "tip": "Laws/regulations: Some directly affect F/S, others indirectly through penalties/litigation.",
     "calculationRequired": false,
@@ -5770,12 +5770,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When planning the audit of accounting estimates, the auditor should consider:",
     "options": {
-      "A": "Only whether the estimate is correctly calculated",
-      "B": "The methods, assumptions, data used, management bias potential, and estimation uncertainty",
-      "C": "Only prior year estimates",
-      "D": "Only management's explanation"
+      "A": "Only management's explanation",
+      "B": "Only whether the estimate is correctly calculated",
+      "C": "The methods, assumptions, data used, management bias potential, and estimation uncertainty",
+      "D": "Only prior year estimates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Planning for estimates involves understanding: how management develops estimates, methods and assumptions used, source data reliability, management's competence, potential for bias, and degree of estimation uncertainty.",
     "tip": "Estimates: Methods, assumptions, data, bias potential, uncertainty. High judgment area.",
     "calculationRequired": false,
@@ -5791,12 +5791,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "During planning, the auditor should consider going concern by:",
     "options": {
-      "A": "Only if management raises concerns",
-      "B": "Being alert to conditions and events indicating possible substantial doubt",
-      "C": "Only reviewing the cash position",
-      "D": "Assuming going concern unless told otherwise"
+      "A": "Being alert to conditions and events indicating possible substantial doubt",
+      "B": "Only reviewing the cash position",
+      "C": "Assuming going concern unless told otherwise",
+      "D": "Only if management raises concerns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Throughout the audit, beginning in planning, the auditor considers whether conditions or events indicate substantial doubt about going concern. Management's assessment is obtained but the auditor remains alert to indicators.",
     "tip": "Going concern: Stay alert throughout audit. Don't just assume it's fine.",
     "calculationRequired": false,
@@ -5833,12 +5833,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Documentation of audit planning should include:",
     "options": {
-      "A": "Only the engagement letter",
-      "B": "The overall strategy, audit plan, and significant changes during the audit",
-      "C": "Only materiality calculations",
-      "D": "Only staff assignments"
+      "A": "The overall strategy, audit plan, and significant changes during the audit",
+      "B": "Only materiality calculations",
+      "C": "Only staff assignments",
+      "D": "Only the engagement letter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Planning documentation includes: overall audit strategy, audit plan, any significant changes made during the engagement and reasons, and key decisions made during planning.",
     "tip": "Document planning: Strategy, plan, changes, key decisions. Shows planning was adequate.",
     "calculationRequired": false,
@@ -5854,12 +5854,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Tolerable misstatement for a specific account should be set:",
     "options": {
-      "A": "Equal to overall materiality",
-      "B": "At or below performance materiality to reduce aggregation risk",
-      "C": "Higher than overall materiality",
-      "D": "At a fixed percentage of the account"
+      "A": "At or below performance materiality to reduce aggregation risk",
+      "B": "Higher than overall materiality",
+      "C": "At a fixed percentage of the account",
+      "D": "Equal to overall materiality"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Tolerable misstatement is the amount set for a particular account. It's typically set at or below performance materiality to ensure that even if all accounts have misstatements up to tolerable, the aggregate won't exceed overall materiality.",
     "tip": "Tolerable misstatement ≤ Performance materiality < Overall materiality. Built-in cushion.",
     "calculationRequired": false,
@@ -5875,12 +5875,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The auditor establishes a 'clearly trivial' threshold to:",
     "options": {
-      "A": "Ignore all misstatements below a certain amount",
-      "B": "Determine which misstatements are so small they need not be accumulated",
-      "C": "Calculate materiality",
-      "D": "Reduce audit procedures"
+      "A": "Reduce audit procedures",
+      "B": "Ignore all misstatements below a certain amount",
+      "C": "Determine which misstatements are so small they need not be accumulated",
+      "D": "Calculate materiality"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Clearly trivial is a threshold below which misstatements are considered inconsequential individually and in aggregate. These need not be accumulated on the summary of audit differences, but judgment is still required.",
     "tip": "Clearly trivial = Too small to matter even in aggregate. Below this, don't accumulate.",
     "calculationRequired": false,
@@ -5896,12 +5896,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The three types of attestation engagements are:",
     "options": {
-      "A": "Audit, review, compilation",
-      "B": "Examination, review, agreed-upon procedures",
-      "C": "Audit, examination, consultation",
-      "D": "Compilation, preparation, review"
+      "A": "Audit, examination, consultation",
+      "B": "Compilation, preparation, review",
+      "C": "Audit, review, compilation",
+      "D": "Examination, review, agreed-upon procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under SSAE, the three types of attestation engagements are: examination (reasonable assurance), review (limited assurance), and agreed-upon procedures (findings reported, no assurance).",
     "tip": "Attestation types: Examination, Review, AUP. Different assurance levels.",
     "calculationRequired": false,
@@ -5959,12 +5959,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Suitable criteria for attestation must be:",
     "options": {
-      "A": "Only GAAP",
-      "B": "Relevant, objective, measurable, complete, and available to users",
-      "C": "Developed by the CPA",
-      "D": "Government-issued"
+      "A": "Developed by the CPA",
+      "B": "Government-issued",
+      "C": "Only GAAP",
+      "D": "Relevant, objective, measurable, complete, and available to users"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Suitable criteria must be: relevant to users, objective (free from bias), measurable (allow consistent measurement), complete (not omit relevant factors), and available to users for understanding.",
     "tip": "Criteria must be: Relevant, Objective, Measurable, Complete, Available. Remember ROMCA.",
     "calculationRequired": false,
@@ -5980,12 +5980,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In an agreed-upon procedures engagement, the practitioner:",
     "options": {
-      "A": "Expresses an opinion on the subject matter",
-      "B": "Reports findings from procedures agreed upon with the specified parties",
-      "C": "Provides negative assurance",
-      "D": "Guarantees results"
+      "A": "Reports findings from procedures agreed upon with the specified parties",
+      "B": "Provides negative assurance",
+      "C": "Guarantees results",
+      "D": "Expresses an opinion on the subject matter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In AUP engagements, the practitioner performs specific procedures agreed upon with the engaging party (and potentially other specified parties) and reports the findings without expressing an opinion or assurance.",
     "tip": "AUP = Report findings only. No assurance, no opinion. Users draw own conclusions.",
     "calculationRequired": false,
@@ -6001,12 +6001,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under current SSAE standards, an AUP report:",
     "options": {
-      "A": "Must be restricted to specified parties only",
-      "B": "May be general use under certain conditions",
-      "C": "Must be filed with the SEC",
-      "D": "Cannot include findings"
+      "A": "Must be filed with the SEC",
+      "B": "Cannot include findings",
+      "C": "Must be restricted to specified parties only",
+      "D": "May be general use under certain conditions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SSAE 19 removed the requirement that AUP reports be restricted to specified parties. Reports may be general use if the practitioner determines parties who might use the report are capable of understanding.",
     "tip": "AUP reports: Can be general use under SSAE 19. No longer automatically restricted.",
     "calculationRequired": false,
@@ -6043,12 +6043,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The conclusion in an attestation review report is expressed as:",
     "options": {
-      "A": "A positive opinion",
-      "B": "Negative assurance stating the practitioner is not aware of material modifications needed",
-      "C": "Findings only",
-      "D": "An adverse opinion"
+      "A": "Negative assurance stating the practitioner is not aware of material modifications needed",
+      "B": "Findings only",
+      "C": "An adverse opinion",
+      "D": "A positive opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A review conclusion uses negative assurance: 'Based on our review, we are not aware of any material modifications that should be made to [subject matter] for it to be in accordance with [criteria].'",
     "tip": "Review = Negative assurance ('Not aware of...'). Limited, not reasonable assurance.",
     "calculationRequired": false,
@@ -6064,12 +6064,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A financial forecast differs from a projection in that a forecast:",
     "options": {
-      "A": "Is more reliable",
-      "B": "Reflects expected conditions, while projection reflects hypothetical assumptions",
-      "C": "Is always for internal use",
-      "D": "Cannot be examined"
+      "A": "Cannot be examined",
+      "B": "Is more reliable",
+      "C": "Reflects expected conditions, while projection reflects hypothetical assumptions",
+      "D": "Is always for internal use"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A forecast reflects expected conditions and courses of action (best estimate). A projection includes one or more hypothetical assumptions ('what-if' scenarios). Both can be examined.",
     "tip": "Forecast = Expected results. Projection = Hypothetical/what-if assumptions.",
     "calculationRequired": false,
@@ -6085,12 +6085,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Financial projections should generally be restricted to:",
     "options": {
-      "A": "All interested parties",
-      "B": "Parties who have a direct relationship with the responsible party",
-      "C": "SEC only",
-      "D": "Internal use only"
+      "A": "SEC only",
+      "B": "Internal use only",
+      "C": "All interested parties",
+      "D": "Parties who have a direct relationship with the responsible party"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Projections typically include hypothetical assumptions and are intended for parties who can discuss assumptions directly with the responsible party. Reports on projections are generally restricted use.",
     "tip": "Projections = Restricted use. Forecasts = Can be general use.",
     "calculationRequired": false,
@@ -6148,12 +6148,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A SOC 2 report addresses controls related to:",
     "options": {
-      "A": "Financial reporting only",
-      "B": "Security, availability, processing integrity, confidentiality, and privacy",
-      "C": "Tax compliance",
-      "D": "Employee benefits"
+      "A": "Tax compliance",
+      "B": "Employee benefits",
+      "C": "Financial reporting only",
+      "D": "Security, availability, processing integrity, confidentiality, and privacy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SOC 2 reports cover the Trust Services Criteria: security, availability, processing integrity, confidentiality, and privacy. They are typically restricted use for management and users with sufficient understanding.",
     "tip": "SOC 2 = Trust Services Criteria. Security, availability, processing integrity, confidentiality, privacy.",
     "calculationRequired": false,
@@ -6169,12 +6169,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A SOC Type 2 report differs from Type 1 in that Type 2:",
     "options": {
-      "A": "Only describes controls",
-      "B": "Includes testing of operating effectiveness over a period",
-      "C": "Covers more criteria",
-      "D": "Is less detailed"
+      "A": "Is less detailed",
+      "B": "Only describes controls",
+      "C": "Includes testing of operating effectiveness over a period",
+      "D": "Covers more criteria"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Type 1 reports on design of controls at a point in time. Type 2 reports on design and operating effectiveness over a specified period (typically 6-12 months).",
     "tip": "Type 1 = Design at point. Type 2 = Design + Operating effectiveness over period.",
     "calculationRequired": false,
@@ -6190,12 +6190,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A SOC 3 report is distinguished by being:",
     "options": {
-      "A": "The most detailed SOC report",
-      "B": "A general use report with a seal for marketing purposes",
-      "C": "Only for financial reporting controls",
-      "D": "Restricted use only"
+      "A": "A general use report with a seal for marketing purposes",
+      "B": "Only for financial reporting controls",
+      "C": "Restricted use only",
+      "D": "The most detailed SOC report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SOC 3 is a general use report suitable for public distribution. It provides a seal/logo for marketing but doesn't contain detailed control descriptions or test results like SOC 2.",
     "tip": "SOC 3 = General use, marketing seal. Less detail than SOC 2.",
     "calculationRequired": false,
@@ -6211,12 +6211,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An examination of pro forma financial information evaluates:",
     "options": {
-      "A": "Only historical accuracy",
-      "B": "Whether assumptions are reasonable and the presentation shows expected effects of transactions",
-      "C": "Whether the transaction should occur",
-      "D": "Tax implications of the transaction"
+      "A": "Whether the transaction should occur",
+      "B": "Tax implications of the transaction",
+      "C": "Only historical accuracy",
+      "D": "Whether assumptions are reasonable and the presentation shows expected effects of transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Pro forma examinations evaluate whether assumptions provide a reasonable basis for presenting effects of the transaction, the pro forma adjustments are appropriate, and the presentation properly reflects those adjustments.",
     "tip": "Pro forma: Reasonable assumptions? Appropriate adjustments? Proper presentation?",
     "calculationRequired": false,
@@ -6232,12 +6232,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An examination of MD&A evaluates whether MD&A:",
     "options": {
-      "A": "Complies with all SEC regulations",
-      "B": "Presents required elements and is consistent with F/S and underlying records",
-      "C": "Guarantees future performance",
-      "D": "Is approved by shareholders"
+      "A": "Is approved by shareholders",
+      "B": "Complies with all SEC regulations",
+      "C": "Presents required elements and is consistent with F/S and underlying records",
+      "D": "Guarantees future performance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "MD&A examination evaluates whether required elements are presented, the historical information is accurately derived from records, and there's consistency with F/S. Forward-looking information is evaluated for reasonableness of assumptions.",
     "tip": "MD&A examination: Required elements + Consistency with F/S + Reasonable forward-looking assumptions.",
     "calculationRequired": false,
@@ -6253,12 +6253,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a direct engagement, the practitioner:",
     "options": {
-      "A": "Reports on management's assertion about the subject matter",
-      "B": "Measures or evaluates the subject matter directly and reports findings",
-      "C": "Only performs agreed-upon procedures",
-      "D": "Cannot express an opinion"
+      "A": "Cannot express an opinion",
+      "B": "Reports on management's assertion about the subject matter",
+      "C": "Measures or evaluates the subject matter directly and reports findings",
+      "D": "Only performs agreed-upon procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In direct engagements, the practitioner directly measures/evaluates the subject matter against criteria. In assertion-based engagements, the practitioner reports on management's written assertion about the subject matter.",
     "tip": "Direct = Practitioner evaluates subject matter. Assertion-based = Evaluate management's assertion.",
     "calculationRequired": false,
@@ -6274,12 +6274,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The responsible party in an attestation engagement is:",
     "options": {
-      "A": "Always the practitioner",
-      "B": "The party responsible for the subject matter",
-      "C": "The user of the report",
-      "D": "The SEC"
+      "A": "The user of the report",
+      "B": "The SEC",
+      "C": "Always the practitioner",
+      "D": "The party responsible for the subject matter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The responsible party is responsible for the subject matter or makes assertions about it. This is often management but could be different from the engaging party or intended users.",
     "tip": "Responsible party = Owns the subject matter. May or may not be the client engaging the practitioner.",
     "calculationRequired": false,
@@ -6295,12 +6295,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "For assertion-based examinations, a written assertion is:",
     "options": {
-      "A": "Optional",
-      "B": "Required to be provided by the responsible party",
-      "C": "Prepared by the practitioner",
-      "D": "Only required for reviews"
+      "A": "Prepared by the practitioner",
+      "B": "Only required for reviews",
+      "C": "Optional",
+      "D": "Required to be provided by the responsible party"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In assertion-based examinations, the responsible party provides a written assertion about the subject matter. The practitioner then examines and opines on whether that assertion is fairly stated.",
     "tip": "Assertion-based = Written assertion required from responsible party.",
     "calculationRequired": false,
@@ -6316,12 +6316,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Examination procedures typically include:",
     "options": {
-      "A": "Only inquiry",
-      "B": "Inspection, observation, confirmation, analytical procedures, and inquiry",
-      "C": "Only external confirmations",
-      "D": "Only analytical procedures"
+      "A": "Only external confirmations",
+      "B": "Only analytical procedures",
+      "C": "Only inquiry",
+      "D": "Inspection, observation, confirmation, analytical procedures, and inquiry"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Examination procedures are similar to audit procedures: inspection, observation, confirmation, recalculation, reperformance, analytical procedures, and inquiry. The mix depends on the subject matter.",
     "tip": "Examination procedures = Similar to audit. Full range of evidence-gathering techniques.",
     "calculationRequired": false,
@@ -6358,12 +6358,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In an AUP engagement, the procedures performed are:",
     "options": {
-      "A": "Determined solely by the practitioner",
-      "B": "Agreed upon with the engaging party",
-      "C": "Mandated by GAAS",
-      "D": "Identical to examination procedures"
+      "A": "Agreed upon with the engaging party",
+      "B": "Mandated by GAAS",
+      "C": "Identical to examination procedures",
+      "D": "Determined solely by the practitioner"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "AUP procedures are agreed upon with the engaging party (and potentially other specified parties). The practitioner doesn't determine procedures independently—they must be explicitly agreed to.",
     "tip": "AUP = Agreed procedures. Not practitioner's choice. Must be specifically agreed.",
     "calculationRequired": false,
@@ -6379,12 +6379,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Attestation on sustainability (ESG) information:",
     "options": {
-      "A": "Cannot be performed under SSAE",
-      "B": "Can be examined or reviewed if suitable criteria exist",
-      "C": "Must use GAAP as criteria",
-      "D": "Is only done in Europe"
+      "A": "Can be examined or reviewed if suitable criteria exist",
+      "B": "Must use GAAP as criteria",
+      "C": "Is only done in Europe",
+      "D": "Cannot be performed under SSAE"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sustainability/ESG information can be subject to attestation if suitable criteria exist (like GRI standards, SASB, or other frameworks). Examinations provide reasonable assurance, reviews provide limited assurance.",
     "tip": "ESG attestation: Growing area. Needs suitable criteria. GRI, SASB, TCFD can be criteria.",
     "calculationRequired": false,
@@ -6400,12 +6400,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Independence requirements for attestation engagements:",
     "options": {
-      "A": "Don't apply to attestation",
-      "B": "Apply to examinations and reviews but not to AUP",
-      "C": "Apply to all three types of attestation engagements",
-      "D": "Only apply if the client is public"
+      "A": "Apply to all three types of attestation engagements",
+      "B": "Only apply if the client is public",
+      "C": "Don't apply to attestation",
+      "D": "Apply to examinations and reviews but not to AUP"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The practitioner must be independent for all attestation engagements—examinations, reviews, and AUP. Independence is a fundamental requirement for the credibility of the practitioner's report.",
     "tip": "Independence required for ALL attestation types, including AUP.",
     "calculationRequired": false,
@@ -6421,12 +6421,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Materiality in attestation engagements:",
     "options": {
-      "A": "Is always the same as for financial statement audits",
-      "B": "Depends on the nature of the subject matter and users' needs",
-      "C": "Is not relevant",
-      "D": "Must be 5% of revenue"
+      "A": "Is not relevant",
+      "B": "Must be 5% of revenue",
+      "C": "Is always the same as for financial statement audits",
+      "D": "Depends on the nature of the subject matter and users' needs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Materiality in attestation depends on the nature of the subject matter and what would influence users' decisions. For non-financial subject matter, different factors may be relevant than for F/S audits.",
     "tip": "Attestation materiality: Varies by subject matter. Not always dollar-based.",
     "calculationRequired": false,
@@ -6442,12 +6442,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Documentation for attestation engagements should include:",
     "options": {
-      "A": "Only the final report",
-      "B": "Evidence of procedures performed, evidence obtained, and conclusions reached",
-      "C": "Only the engagement letter",
-      "D": "Only management's assertion"
+      "A": "Only the engagement letter",
+      "B": "Only management's assertion",
+      "C": "Only the final report",
+      "D": "Evidence of procedures performed, evidence obtained, and conclusions reached"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Like audits, attestation documentation should show the procedures performed, evidence obtained, and basis for conclusions. An experienced practitioner should be able to understand what was done.",
     "tip": "Attestation documentation: Same concept as audit. Support the report and conclusions.",
     "calculationRequired": false,
@@ -6484,12 +6484,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A qualified conclusion in an attestation examination is appropriate when:",
     "options": {
-      "A": "The subject matter is completely misstated",
-      "B": "Misstatement or scope limitation is material but not pervasive",
-      "C": "The practitioner lacks independence",
-      "D": "The criteria are unsuitable"
+      "A": "The practitioner lacks independence",
+      "B": "The criteria are unsuitable",
+      "C": "The subject matter is completely misstated",
+      "D": "Misstatement or scope limitation is material but not pervasive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Like audits, qualified conclusions apply when departure from criteria or scope limitations are material but not pervasive. Material and pervasive issues result in adverse or disclaimer respectively.",
     "tip": "Attestation modifications: Same framework as audits. Qualified, Adverse, Disclaimer.",
     "calculationRequired": false,
@@ -6505,12 +6505,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Engagement quality review is required for attestation engagements when:",
     "options": {
-      "A": "All attestation engagements",
-      "B": "Determined by firm policy based on engagement characteristics",
-      "C": "Only SEC clients",
-      "D": "Never, only applies to audits"
+      "A": "Never, only applies to audits",
+      "B": "All attestation engagements",
+      "C": "Determined by firm policy based on engagement characteristics",
+      "D": "Only SEC clients"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Firms establish policies for when engagement quality review is required based on engagement characteristics (public interest entities, complex issues, etc.). It's not required for all attestation engagements.",
     "tip": "EQR for attestation: Firm policy determines. Consider engagement complexity and public interest.",
     "calculationRequired": false,
@@ -6547,12 +6547,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Under SSAE 18, a service auditor must:",
     "options": {
-      "A": "Only verify that controls exist",
-      "B": "Obtain a written assertion from service organization management",
-      "C": "Audit the user entities",
-      "D": "Test all user entity controls"
+      "A": "Obtain a written assertion from service organization management",
+      "B": "Audit the user entities",
+      "C": "Test all user entity controls",
+      "D": "Only verify that controls exist"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SSAE 18 requires the service auditor to obtain a written assertion from service organization management about the description of controls and (for Type 2) their operating effectiveness.",
     "tip": "SSAE 18: Written assertion required from service organization management.",
     "calculationRequired": false,
@@ -6568,12 +6568,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a SOC report using the carve-out method:",
     "options": {
-      "A": "Subservice organizations are included in the scope",
-      "B": "Subservice organizations are excluded from the service organization's description",
-      "C": "No subservice organizations exist",
-      "D": "The user entity is included"
+      "A": "No subservice organizations exist",
+      "B": "The user entity is included",
+      "C": "Subservice organizations are included in the scope",
+      "D": "Subservice organizations are excluded from the service organization's description"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Carve-out method excludes subservice organizations from the description and testing—only describing the nature of services. Inclusive method includes subservice organization controls in the scope and testing.",
     "tip": "Carve-out = Exclude subservice. Inclusive = Include subservice controls.",
     "calculationRequired": false,
@@ -6589,12 +6589,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Complementary user entity controls (CUECs) in a SOC report are:",
     "options": {
-      "A": "Controls tested by the service auditor",
-      "B": "Controls at user entities that are assumed to be in place for service organization controls to operate effectively",
-      "C": "Optional controls",
-      "D": "Controls at subservice organizations"
+      "A": "Controls at subservice organizations",
+      "B": "Controls tested by the service auditor",
+      "C": "Controls at user entities that are assumed to be in place for service organization controls to operate effectively",
+      "D": "Optional controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CUECs are controls at user entities that must be in place and operating for the service organization's controls to achieve control objectives. The service auditor identifies these but doesn't test them.",
     "tip": "CUECs: User entity must have these for service org controls to work. User auditor tests them.",
     "calculationRequired": false,
@@ -6610,12 +6610,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An attestation engagement letter should include:",
     "options": {
-      "A": "Only the fee",
-      "B": "Objective, scope, responsibilities, criteria to be used, and expected form of report",
-      "C": "Only the subject matter",
-      "D": "Only timing information"
+      "A": "Objective, scope, responsibilities, criteria to be used, and expected form of report",
+      "B": "Only the subject matter",
+      "C": "Only timing information",
+      "D": "Only the fee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The engagement letter documents: engagement objective, subject matter, criteria to be used, responsibilities of practitioner and responsible party, expected report form, and other relevant matters.",
     "tip": "Attestation engagement letter: Similar to audit. Objective, scope, responsibilities, criteria, report form.",
     "calculationRequired": false,
@@ -6673,12 +6673,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A firm's quality control policies regarding independence should:",
     "options": {
-      "A": "Only address partners",
-      "B": "Provide reasonable assurance that all personnel maintain independence where required",
-      "C": "Only apply to audit engagements",
-      "D": "Be informal and unwritten"
+      "A": "Be informal and unwritten",
+      "B": "Only address partners",
+      "C": "Provide reasonable assurance that all personnel maintain independence where required",
+      "D": "Only apply to audit engagements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Independence policies should provide reasonable assurance that all personnel (including partners and staff) maintain independence where required. This includes communication, confirmation, and monitoring.",
     "tip": "Independence policies: All personnel, all applicable engagements, documented and monitored.",
     "calculationRequired": false,
@@ -6694,12 +6694,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Policies for client acceptance and continuance should ensure:",
     "options": {
-      "A": "All prospective clients are accepted",
-      "B": "The firm only accepts clients where it has competence and integrity concerns are addressed",
-      "C": "Only large clients are accepted",
-      "D": "Fees are always negotiable"
+      "A": "The firm only accepts clients where it has competence and integrity concerns are addressed",
+      "B": "Only large clients are accepted",
+      "C": "Fees are always negotiable",
+      "D": "All prospective clients are accepted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Acceptance/continuance policies ensure the firm: evaluates client integrity, has competence and resources, can comply with ethical requirements, and can serve the client adequately.",
     "tip": "Accept clients where: Integrity OK, Competence exists, Resources available, Ethics met.",
     "calculationRequired": false,
@@ -6715,12 +6715,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Human resource policies in a quality control system should address:",
     "options": {
-      "A": "Only compensation",
-      "B": "Recruitment, capabilities, competence, career development, and assignment of personnel",
-      "C": "Only vacation policies",
-      "D": "Only staff promotions"
+      "A": "Only staff promotions",
+      "B": "Only compensation",
+      "C": "Recruitment, capabilities, competence, career development, and assignment of personnel",
+      "D": "Only vacation policies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "HR policies should cover recruitment, capabilities assessment, competence development, professional development, performance evaluation, advancement, and appropriate assignment of personnel to engagements.",
     "tip": "HR for quality: Recruit, develop, evaluate, assign appropriately. Right people, right work.",
     "calculationRequired": false,
@@ -6736,12 +6736,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Engagement performance policies should provide reasonable assurance that:",
     "options": {
-      "A": "All engagements are profitable",
-      "B": "Engagements are performed in accordance with professional standards and requirements",
-      "C": "Partners approve all workpapers",
-      "D": "Staff work without supervision"
+      "A": "Engagements are performed in accordance with professional standards and requirements",
+      "B": "Partners approve all workpapers",
+      "C": "Staff work without supervision",
+      "D": "All engagements are profitable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Performance policies ensure engagements are performed according to professional standards and regulatory/legal requirements, and reports issued are appropriate. This includes direction, supervision, and review.",
     "tip": "Performance policies: Meet standards, proper supervision, appropriate reports.",
     "calculationRequired": false,
@@ -6757,12 +6757,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Monitoring of a firm's quality control system involves:",
     "options": {
-      "A": "Only external inspections",
-      "B": "Ongoing consideration and periodic evaluation of QC system design and operation",
-      "C": "Only annual reviews",
-      "D": "Only client feedback"
+      "A": "Only client feedback",
+      "B": "Only external inspections",
+      "C": "Ongoing consideration and periodic evaluation of QC system design and operation",
+      "D": "Only annual reviews"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Monitoring includes ongoing consideration and periodic evaluation of the QC system's design and operation, inspection of completed engagements, and evaluation of whether policies are being followed.",
     "tip": "Monitoring: Ongoing + Periodic evaluation. Is the QC system working?",
     "calculationRequired": false,
@@ -6799,12 +6799,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "For audits of issuers (public companies), engagement quality review is:",
     "options": {
-      "A": "Optional",
-      "B": "Required for all audit engagements",
-      "C": "Only required for large issuers",
-      "D": "Never required"
+      "A": "Never required",
+      "B": "Optional",
+      "C": "Required for all audit engagements",
+      "D": "Only required for large issuers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PCAOB standards require engagement quality review for all audit engagements of issuers. The EQR reviewer must approve the report before its release. For nonissuers, firm policy determines when required.",
     "tip": "PCAOB: EQR required for all issuer audits. AICPA: Firm policy determines.",
     "calculationRequired": false,
@@ -6820,12 +6820,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The engagement quality reviewer should be:",
     "options": {
-      "A": "A staff member on the engagement",
-      "B": "A partner or qualified individual not involved in the engagement with sufficient expertise",
-      "C": "An external consultant in all cases",
-      "D": "Selected by the client"
+      "A": "A partner or qualified individual not involved in the engagement with sufficient expertise",
+      "B": "An external consultant in all cases",
+      "C": "Selected by the client",
+      "D": "A staff member on the engagement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The EQR reviewer should have sufficient technical expertise and experience, be objective (not involved in the engagement), and have authority to raise concerns. Usually a partner or senior manager.",
     "tip": "EQR reviewer: Not on engagement, sufficient expertise, objective, authority to challenge.",
     "calculationRequired": false,
@@ -6862,12 +6862,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Quality control policies on consultation should ensure:",
     "options": {
-      "A": "Consultation is discouraged to save time",
-      "B": "Appropriate consultation occurs on difficult or contentious matters with qualified individuals",
-      "C": "Only partners can be consulted",
-      "D": "Consultation is optional"
+      "A": "Only partners can be consulted",
+      "B": "Consultation is optional",
+      "C": "Consultation is discouraged to save time",
+      "D": "Appropriate consultation occurs on difficult or contentious matters with qualified individuals"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Consultation policies ensure appropriate consultation occurs on difficult or contentious matters, that resources are available for consultation, and that conclusions reached are documented and implemented.",
     "tip": "Consultation: Encourage on difficult matters. Document conclusions and implement.",
     "calculationRequired": false,
@@ -6883,12 +6883,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When differences of opinion arise within the engagement team, the report should:",
     "options": {
-      "A": "Be issued with the partner's view only",
-      "B": "Not be released until the difference is resolved and documented",
-      "C": "Reflect both views",
-      "D": "Be delayed indefinitely"
+      "A": "Reflect both views",
+      "B": "Be delayed indefinitely",
+      "C": "Be issued with the partner's view only",
+      "D": "Not be released until the difference is resolved and documented"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Quality control requires procedures for resolving differences of opinion. The report should not be released until the matter is resolved. The documentation should show the issue, resolution, and how conclusions were implemented.",
     "tip": "Differences of opinion: Resolve before issuing report. Document the resolution.",
     "calculationRequired": false,
@@ -6904,12 +6904,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Documentation of firm quality control policies should:",
     "options": {
-      "A": "Be informal notes only",
-      "B": "Be maintained to demonstrate operation of each element of the QC system",
-      "C": "Only cover audit policies",
-      "D": "Be optional for small firms"
+      "A": "Be maintained to demonstrate operation of each element of the QC system",
+      "B": "Only cover audit policies",
+      "C": "Be optional for small firms",
+      "D": "Be informal notes only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Firms should document QC policies and their operation. This includes evidence of operation of each QC element, monitoring results, and deficiencies identified and addressed.",
     "tip": "Document QC system: What policies exist and evidence they're working.",
     "calculationRequired": false,
@@ -6925,12 +6925,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Peer review of a CPA firm serves to:",
     "options": {
-      "A": "Replace internal quality control",
-      "B": "Provide external evaluation of the firm's quality control system",
-      "C": "Approve the firm's fee schedule",
-      "D": "Train new staff"
+      "A": "Approve the firm's fee schedule",
+      "B": "Train new staff",
+      "C": "Replace internal quality control",
+      "D": "Provide external evaluation of the firm's quality control system"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Peer review provides an external, independent evaluation of whether a firm's QC system is designed and operating effectively to provide reasonable assurance of performing engagements according to standards.",
     "tip": "Peer review: External check on firm's QC system. Required for AICPA membership.",
     "calculationRequired": false,
@@ -6946,12 +6946,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A system review in peer review covers:",
     "options": {
-      "A": "Only tax engagements",
-      "B": "Firms that perform audits, examinations, or reviews",
-      "C": "Only large firms",
-      "D": "Only governmental audits"
+      "A": "Only large firms",
+      "B": "Only governmental audits",
+      "C": "Only tax engagements",
+      "D": "Firms that perform audits, examinations, or reviews"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "System reviews cover firms performing audits, examinations, or review engagements. Engagement reviews cover firms performing only compilations or preparation engagements. System reviews are more comprehensive.",
     "tip": "System review: For firms doing audits/examinations/reviews. Comprehensive QC evaluation.",
     "calculationRequired": false,
@@ -6988,12 +6988,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "PCAOB inspections of firms that audit more than 100 issuers must occur:",
     "options": {
-      "A": "Every three years",
-      "B": "Annually",
-      "C": "Every five years",
-      "D": "Only upon complaint"
+      "A": "Every five years",
+      "B": "Only upon complaint",
+      "C": "Every three years",
+      "D": "Annually"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Firms that audit more than 100 issuers are inspected annually by the PCAOB. Firms auditing fewer issuers are inspected at least every three years.",
     "tip": "PCAOB inspection frequency: >100 issuers = Annual. <100 issuers = Every 3 years.",
     "calculationRequired": false,
@@ -7009,12 +7009,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Proper supervision of engagement team members includes:",
     "options": {
-      "A": "Only reviewing final workpapers",
-      "B": "Tracking progress, reviewing work, addressing significant matters, and providing coaching",
-      "C": "Only assigning tasks",
-      "D": "Only year-end evaluation"
+      "A": "Only assigning tasks",
+      "B": "Only year-end evaluation",
+      "C": "Only reviewing final workpapers",
+      "D": "Tracking progress, reviewing work, addressing significant matters, and providing coaching"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Supervision includes: tracking progress, considering team competence, addressing significant matters that arise, reviewing work as it progresses, and providing appropriate coaching and feedback.",
     "tip": "Supervision: Ongoing. Track progress, review work, address issues, coach team.",
     "calculationRequired": false,
@@ -7051,12 +7051,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Review of engagement work should ensure that:",
     "options": {
-      "A": "Only mathematical errors are corrected",
-      "B": "Work supports conclusions, evidence is sufficient, and standards are met",
-      "C": "All staff receive equal feedback",
-      "D": "Review is optional if experienced staff are used"
+      "A": "Work supports conclusions, evidence is sufficient, and standards are met",
+      "B": "All staff receive equal feedback",
+      "C": "Review is optional if experienced staff are used",
+      "D": "Only mathematical errors are corrected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Review of work ensures: procedures were performed according to plan, work performed supports conclusions, evidence is sufficient and appropriate, objectives were achieved, and report is appropriate.",
     "tip": "Review purposes: Work supports conclusions, evidence adequate, standards met, report appropriate.",
     "calculationRequired": false,
@@ -7072,12 +7072,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Firm communication about quality control should:",
     "options": {
-      "A": "Be limited to partners",
-      "B": "Ensure personnel understand their QC responsibilities and keep them informed of QC matters",
-      "C": "Only occur at year-end",
-      "D": "Be confidential from staff"
+      "A": "Only occur at year-end",
+      "B": "Be confidential from staff",
+      "C": "Be limited to partners",
+      "D": "Ensure personnel understand their QC responsibilities and keep them informed of QC matters"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "QC communication should ensure all personnel understand their responsibilities for quality and are kept informed of QC policies, changes, and relevant matters affecting quality.",
     "tip": "QC communication: Everyone understands their role. Ongoing, not just annually.",
     "calculationRequired": false,
@@ -7093,12 +7093,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When quality control deficiencies are identified, the firm should:",
     "options": {
-      "A": "Ignore minor deficiencies",
-      "B": "Evaluate causes, determine actions needed, communicate findings, and implement improvements",
-      "C": "Only document the deficiency",
-      "D": "Terminate responsible personnel"
+      "A": "Terminate responsible personnel",
+      "B": "Ignore minor deficiencies",
+      "C": "Evaluate causes, determine actions needed, communicate findings, and implement improvements",
+      "D": "Only document the deficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Response to deficiencies includes: evaluating root causes, determining corrective actions, communicating findings to relevant personnel, considering whether systemic issues exist, and implementing improvements.",
     "tip": "Deficiency response: Root cause analysis, corrective action, communication, systemic review.",
     "calculationRequired": false,
@@ -7114,12 +7114,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "For small firms, quality control policies:",
     "options": {
-      "A": "Are not required",
-      "B": "Should be tailored to the firm's size and circumstances while meeting all requirements",
-      "C": "Must be identical to large firm policies",
-      "D": "Can be completely informal"
+      "A": "Must be identical to large firm policies",
+      "B": "Can be completely informal",
+      "C": "Are not required",
+      "D": "Should be tailored to the firm's size and circumstances while meeting all requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Small firms must have QC systems but can tailor policies to their size and circumstances. For example, a sole practitioner may use external consultation rather than internal consultation resources.",
     "tip": "Small firm QC: Same elements required, implementation can be scaled appropriately.",
     "calculationRequired": false,
@@ -7135,12 +7135,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Annual independence confirmations from personnel help ensure:",
     "options": {
-      "A": "Staff know their salaries",
-      "B": "Personnel are aware of independence requirements and any violations are identified",
-      "C": "Staff understand vacation policies",
-      "D": "Personnel can be promoted"
+      "A": "Personnel are aware of independence requirements and any violations are identified",
+      "B": "Staff understand vacation policies",
+      "C": "Personnel can be promoted",
+      "D": "Staff know their salaries"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Annual confirmations require personnel to confirm their understanding of independence policies and whether any independence issues exist. This is part of monitoring independence compliance.",
     "tip": "Independence confirmations: Awareness + Identification of potential issues.",
     "calculationRequired": false,
@@ -7156,12 +7156,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Policies for handling complaints and allegations should:",
     "options": {
-      "A": "Discourage reporting",
-      "B": "Enable reporting without fear of retaliation and ensure appropriate investigation",
-      "C": "Only cover client complaints",
-      "D": "Require disclosure of complainant identity"
+      "A": "Enable reporting without fear of retaliation and ensure appropriate investigation",
+      "B": "Only cover client complaints",
+      "C": "Require disclosure of complainant identity",
+      "D": "Discourage reporting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Policies should enable personnel to raise concerns without fear of retaliation (whistleblower protection), ensure complaints are investigated appropriately, and document how allegations are resolved.",
     "tip": "Complaint policies: Enable reporting, protect reporters, investigate, document resolution.",
     "calculationRequired": false,
@@ -7177,12 +7177,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Inspection of completed engagements as part of monitoring should:",
     "options": {
-      "A": "Cover only problem engagements",
-      "B": "Include a selection of engagements, with at least one per engagement partner over a cycle",
-      "C": "Occur only when problems are suspected",
-      "D": "Focus only on audit engagements"
+      "A": "Focus only on audit engagements",
+      "B": "Cover only problem engagements",
+      "C": "Include a selection of engagements, with at least one per engagement partner over a cycle",
+      "D": "Occur only when problems are suspected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Monitoring should inspect selected completed engagements on a cyclical basis, ensuring each engagement partner has at least one engagement inspected during a defined cycle. Selection considers risk factors.",
     "tip": "Inspection cycle: Selection of engagements, all partners covered over cycle period.",
     "calculationRequired": false,
@@ -7219,12 +7219,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Continuing professional education requirements support quality control by:",
     "options": {
-      "A": "Reducing audit fees",
-      "B": "Ensuring personnel maintain and develop competence to perform quality work",
-      "C": "Limiting the number of CPAs",
-      "D": "Generating revenue for state boards"
+      "A": "Ensuring personnel maintain and develop competence to perform quality work",
+      "B": "Limiting the number of CPAs",
+      "C": "Generating revenue for state boards",
+      "D": "Reducing audit fees"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "CPE helps ensure personnel maintain competence in changing technical areas, develop new skills, and stay current with professional standards—all essential for quality work.",
     "tip": "CPE supports quality: Current knowledge, developing skills, maintaining competence.",
     "calculationRequired": false,
@@ -7240,12 +7240,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Before accepting a new audit client, the firm should evaluate:",
     "options": {
-      "A": "Only the expected fee",
-      "B": "Client integrity, firm competence, independence, and ability to serve properly",
-      "C": "Only whether the client is publicly traded",
-      "D": "Only the predecessor auditor's identity"
+      "A": "Only whether the client is publicly traded",
+      "B": "Only the predecessor auditor's identity",
+      "C": "Only the expected fee",
+      "D": "Client integrity, firm competence, independence, and ability to serve properly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "New client evaluation includes: management integrity assessment, whether firm has competence and capacity, ability to meet ethical requirements including independence, and whether the firm can properly serve the client.",
     "tip": "New client acceptance: Integrity, competence, independence, capacity. All must be OK.",
     "calculationRequired": false,
@@ -7261,12 +7261,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Quality control policies should address withdrawal from an engagement including:",
     "options": {
-      "A": "Immediate withdrawal without documentation",
-      "B": "Conditions warranting withdrawal, communication requirements, and documentation",
-      "C": "Refund of all fees in all cases",
-      "D": "Withdrawal only upon client request"
+      "A": "Conditions warranting withdrawal, communication requirements, and documentation",
+      "B": "Refund of all fees in all cases",
+      "C": "Withdrawal only upon client request",
+      "D": "Immediate withdrawal without documentation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Withdrawal policies should address: circumstances where withdrawal is appropriate (integrity issues, scope limitations), required communications (to management, governance, regulators), and documentation of reasons.",
     "tip": "Withdrawal policies: When appropriate, who to notify, document reasons.",
     "calculationRequired": false,
@@ -7282,12 +7282,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Engagement documentation should be assembled in the final file:",
     "options": {
-      "A": "Within one year of report date",
-      "B": "Within a specified period after the report date (45 days for PCAOB, 60 for AICPA)",
-      "C": "Whenever convenient",
-      "D": "Before the audit begins"
+      "A": "Before the audit begins",
+      "B": "Within one year of report date",
+      "C": "Within a specified period after the report date (45 days for PCAOB, 60 for AICPA)",
+      "D": "Whenever convenient"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Documentation assembly has deadlines: 45 days from report release for PCAOB (issuers), 60 days for AICPA standards (nonissuers). After assembly, documentation cannot be deleted.",
     "tip": "Documentation deadlines: PCAOB = 45 days. AICPA = 60 days. Then archive locked.",
     "calculationRequired": false,
@@ -7303,12 +7303,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A firm's quality control policies regarding confidentiality should ensure:",
     "options": {
-      "A": "Client information can be shared freely within the industry",
-      "B": "Client information is protected and disclosed only when permitted or required",
-      "C": "Confidentiality applies only to large clients",
-      "D": "Staff can discuss client matters socially"
+      "A": "Confidentiality applies only to large clients",
+      "B": "Staff can discuss client matters socially",
+      "C": "Client information can be shared freely within the industry",
+      "D": "Client information is protected and disclosed only when permitted or required"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Confidentiality policies ensure client information is protected, accessed only for proper purposes, and disclosed only when required by law or permitted by the client. This includes physical and electronic security.",
     "tip": "Confidentiality: Protect information, limited access, disclosure only when permitted/required.",
     "calculationRequired": false,
@@ -7366,12 +7366,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "SSARS provides guidance for which types of engagements?",
     "options": {
-      "A": "Audits, reviews, and compilations",
-      "B": "Preparation, compilation, and review",
-      "C": "Examination, review, and agreed-upon procedures",
-      "D": "Only compilations"
+      "A": "Only compilations",
+      "B": "Audits, reviews, and compilations",
+      "C": "Preparation, compilation, and review",
+      "D": "Examination, review, and agreed-upon procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SSARS covers three engagement types: preparation of financial statements (no report), compilation (no assurance report), and review (limited assurance). Audits are covered by SAS, not SSARS.",
     "tip": "SSARS: Preparation, Compilation, Review. SAS: Audits. Different standards.",
     "calculationRequired": false,
@@ -7387,12 +7387,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A review engagement under SSARS provides:",
     "options": {
-      "A": "Reasonable assurance",
-      "B": "Limited assurance",
-      "C": "No assurance",
-      "D": "Absolute assurance"
+      "A": "No assurance",
+      "B": "Absolute assurance",
+      "C": "Reasonable assurance",
+      "D": "Limited assurance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A review provides limited (negative) assurance. The accountant states they are not aware of any material modifications that should be made. Compilation provides no assurance, and preparation provides no assurance and no report.",
     "tip": "Review = Limited assurance. Compilation = No assurance. Preparation = No assurance, no report.",
     "calculationRequired": false,
@@ -7408,12 +7408,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a preparation engagement, the accountant:",
     "options": {
-      "A": "Issues an audit opinion",
-      "B": "Prepares financial statements without issuing a report or providing assurance",
-      "C": "Provides limited assurance",
-      "D": "Tests internal controls"
+      "A": "Prepares financial statements without issuing a report or providing assurance",
+      "B": "Provides limited assurance",
+      "C": "Tests internal controls",
+      "D": "Issues an audit opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In a preparation engagement, the accountant assists in preparing financial statements but doesn't issue a report or provide any assurance. A legend on each page indicates no assurance is provided.",
     "tip": "Preparation = Prepare F/S + No report + No assurance + Legend on each page.",
     "calculationRequired": false,
@@ -7450,12 +7450,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A compilation engagement involves:",
     "options": {
-      "A": "Providing an audit opinion",
-      "B": "Assisting in presenting financial information in F/S format without providing assurance",
-      "C": "Providing limited assurance",
-      "D": "Testing internal controls"
+      "A": "Assisting in presenting financial information in F/S format without providing assurance",
+      "B": "Providing limited assurance",
+      "C": "Testing internal controls",
+      "D": "Providing an audit opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In a compilation, the accountant assists management in presenting financial information in financial statement format. A report is issued, but no assurance is provided on the statements.",
     "tip": "Compilation = Present in F/S format + Report + No assurance.",
     "calculationRequired": false,
@@ -7471,12 +7471,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The compilation report should state that:",
     "options": {
-      "A": "The F/S present fairly in all material respects",
-      "B": "Management is responsible for F/S and the accountant does not express an opinion or provide assurance",
-      "C": "The accountant is not aware of any material modifications",
-      "D": "Reasonable assurance has been obtained"
+      "A": "Reasonable assurance has been obtained",
+      "B": "The F/S present fairly in all material respects",
+      "C": "Management is responsible for F/S and the accountant does not express an opinion or provide assurance",
+      "D": "The accountant is not aware of any material modifications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The compilation report states: management's responsibility for F/S, that a compilation was performed, the accountant does not express an opinion or provide any assurance, and identification of framework used.",
     "tip": "Compilation report: Management responsible, no opinion, no assurance expressed.",
     "calculationRequired": false,
@@ -7492,12 +7492,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Review procedures under SSARS primarily consist of:",
     "options": {
-      "A": "Tests of controls and substantive testing",
-      "B": "Inquiry and analytical procedures",
-      "C": "External confirmations and physical inspection",
-      "D": "Only management representations"
+      "A": "External confirmations and physical inspection",
+      "B": "Only management representations",
+      "C": "Tests of controls and substantive testing",
+      "D": "Inquiry and analytical procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SSARS reviews primarily use inquiry and analytical procedures. These provide a reasonable basis for limited assurance. Unlike audits, reviews don't require corroboration, tests of records, or confirmations.",
     "tip": "Review procedures: Inquiry + Analytics. No confirmations, no testing of records.",
     "calculationRequired": false,
@@ -7513,12 +7513,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The review report conclusion states:",
     "options": {
-      "A": "The F/S present fairly in all material respects",
-      "B": "The accountant is not aware of any material modifications that should be made",
-      "C": "No opinion is expressed",
-      "D": "The F/S are guaranteed accurate"
+      "A": "The F/S are guaranteed accurate",
+      "B": "The F/S present fairly in all material respects",
+      "C": "The accountant is not aware of any material modifications that should be made",
+      "D": "No opinion is expressed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The review conclusion uses negative assurance: 'Based on our review, we are not aware of any material modifications that should be made to the accompanying financial statements...'",
     "tip": "Review conclusion = Negative assurance. 'Not aware of material modifications needed.'",
     "calculationRequired": false,
@@ -7555,12 +7555,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If an accountant is not independent when performing a compilation, the report should:",
     "options": {
-      "A": "Not be issued",
-      "B": "Include a statement that the accountant is not independent",
-      "C": "Be issued as an audit report",
-      "D": "Include the reasons for lack of independence"
+      "A": "Include a statement that the accountant is not independent",
+      "B": "Be issued as an audit report",
+      "C": "Include the reasons for lack of independence",
+      "D": "Not be issued"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When not independent, the accountant may still compile but must state in the report: 'I am (we are) not independent with respect to [entity].' The reason for non-independence is not required to be disclosed.",
     "tip": "Compilation without independence: Disclose lack of independence. Reason optional.",
     "calculationRequired": false,
@@ -7576,12 +7576,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An engagement letter is required for:",
     "options": {
-      "A": "Only review engagements",
-      "B": "All SSARS engagements (preparation, compilation, and review)",
-      "C": "Only compilation engagements",
-      "D": "Only audit engagements"
+      "A": "Only audit engagements",
+      "B": "Only review engagements",
+      "C": "All SSARS engagements (preparation, compilation, and review)",
+      "D": "Only compilation engagements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SSARS requires engagement letters for all engagement types—preparation, compilation, and review. The letter documents the engagement terms and is signed by both parties.",
     "tip": "Engagement letter: Required for ALL SSARS engagements. Document the terms.",
     "calculationRequired": false,
@@ -7597,12 +7597,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Review inquiries should address:",
     "options": {
-      "A": "Only revenue recognition",
-      "B": "Accounting policies, procedures, unusual transactions, subsequent events, and fraud/error",
-      "C": "Only year-end balances",
-      "D": "Only cash transactions"
+      "A": "Only cash transactions",
+      "B": "Only revenue recognition",
+      "C": "Accounting policies, procedures, unusual transactions, subsequent events, and fraud/error",
+      "D": "Only year-end balances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Review inquiries should cover: accounting principles and practices, procedures for recording transactions, actions at board meetings, subsequent events, fraud or suspected fraud, and significant estimates.",
     "tip": "Review inquiries: Broad coverage. Policies, unusual items, subsequent events, fraud.",
     "calculationRequired": false,
@@ -7618,12 +7618,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Analytical procedures in a review help the accountant:",
     "options": {
-      "A": "Detect all fraud",
-      "B": "Identify unusual items or trends warranting further inquiry",
-      "C": "Test controls",
-      "D": "Provide reasonable assurance"
+      "A": "Provide reasonable assurance",
+      "B": "Detect all fraud",
+      "C": "Identify unusual items or trends warranting further inquiry",
+      "D": "Test controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Review analytical procedures identify unusual items, unexpected fluctuations, or trends that may indicate material misstatement. When issues arise, the accountant makes additional inquiries.",
     "tip": "Review analytics: Identify unusual items for further inquiry. Not fraud detection.",
     "calculationRequired": false,
@@ -7639,12 +7639,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a review engagement, written representations from management are:",
     "options": {
-      "A": "Optional",
-      "B": "Required and should be dated as of the review report date",
-      "C": "Only obtained when problems are identified",
-      "D": "Required only for large clients"
+      "A": "Required and should be dated as of the review report date",
+      "B": "Only obtained when problems are identified",
+      "C": "Required only for large clients",
+      "D": "Optional"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Written management representations are required in reviews. They confirm oral representations, acknowledge management responsibility, and should be dated as of the date of the accountant's review report.",
     "tip": "Review rep letter: Required. Date = Review report date. Similar to audit.",
     "calculationRequired": false,
@@ -7681,12 +7681,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If a review identifies a material GAAP departure that management won't correct, the accountant should:",
     "options": {
-      "A": "Issue an unmodified review report",
-      "B": "Modify the review report to disclose the departure",
-      "C": "Issue an audit opinion",
-      "D": "Only document in workpapers"
+      "A": "Issue an audit opinion",
+      "B": "Only document in workpapers",
+      "C": "Issue an unmodified review report",
+      "D": "Modify the review report to disclose the departure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In a review, if material departures aren't corrected, the report should be modified to describe the departure and, if practicable, state the effects on the financial statements.",
     "tip": "Review with departure: Modify report, describe departure, state effects if known.",
     "calculationRequired": false,
@@ -7702,12 +7702,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Compilations and reviews can be performed on financial statements prepared using:",
     "options": {
-      "A": "Only GAAP",
-      "B": "Special purpose frameworks such as tax basis or cash basis",
-      "C": "Only IFRS",
-      "D": "Only regulatory basis"
+      "A": "Only IFRS",
+      "B": "Only regulatory basis",
+      "C": "Only GAAP",
+      "D": "Special purpose frameworks such as tax basis or cash basis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SSARS engagements can be performed on F/S using special purpose frameworks (cash basis, tax basis, regulatory basis, contractual basis). The report identifies the framework and may restrict use.",
     "tip": "SSARS applies to any framework: GAAP, cash, tax, regulatory, contractual.",
     "calculationRequired": false,
@@ -7744,12 +7744,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If review evidence suggests F/S may be materially misstated and management won't provide information, the accountant should:",
     "options": {
-      "A": "Issue an unmodified report",
-      "B": "Withdraw from the engagement if unable to perform necessary procedures",
-      "C": "Issue an adverse opinion",
-      "D": "Convert to a compilation"
+      "A": "Convert to a compilation",
+      "B": "Issue an unmodified report",
+      "C": "Withdraw from the engagement if unable to perform necessary procedures",
+      "D": "Issue an adverse opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "If the accountant can't obtain sufficient appropriate evidence due to management limitations and the possible effects are material, withdrawal may be necessary. The accountant can't issue a review report without completing procedures.",
     "tip": "Review scope limitation: May need to withdraw if can't complete procedures.",
     "calculationRequired": false,
@@ -7786,12 +7786,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a review engagement, if substantial doubt about going concern exists and is properly disclosed:",
     "options": {
-      "A": "The review report should be modified to add an emphasis paragraph",
-      "B": "The accountant should withdraw",
-      "C": "The review cannot be completed",
-      "D": "No additional reporting is required"
+      "A": "The accountant should withdraw",
+      "B": "The review cannot be completed",
+      "C": "No additional reporting is required",
+      "D": "The review report should be modified to add an emphasis paragraph"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "If substantial doubt exists about going concern and is properly disclosed, the accountant should add an emphasis-of-matter paragraph to the review report to draw attention to the matter.",
     "tip": "Going concern in review: Add emphasis paragraph if properly disclosed.",
     "calculationRequired": false,
@@ -7807,12 +7807,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a review, the accountant should inquire about subsequent events through:",
     "options": {
-      "A": "The balance sheet date",
-      "B": "The date of the review report",
-      "C": "One year after year-end",
-      "D": "The date the F/S are filed"
+      "A": "The date of the review report",
+      "B": "One year after year-end",
+      "C": "The date the F/S are filed",
+      "D": "The balance sheet date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The accountant should inquire about subsequent events through the date of the review report. Events after the balance sheet date may require adjustment or disclosure in the F/S.",
     "tip": "Review subsequent events: Through report date. Inquire about events requiring adjustment/disclosure.",
     "calculationRequired": false,
@@ -7828,12 +7828,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Documentation for a review engagement should include:",
     "options": {
-      "A": "Only the engagement letter and report",
-      "B": "Engagement letter, analytical procedures, inquiries made, unusual matters, and communications",
-      "C": "Only workpapers for problem areas",
-      "D": "Only the representation letter"
+      "A": "Engagement letter, analytical procedures, inquiries made, unusual matters, and communications",
+      "B": "Only workpapers for problem areas",
+      "C": "Only the representation letter",
+      "D": "Only the engagement letter and report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Review documentation includes: engagement letter, analytical procedures performed, significant inquiries, communications about matters, representation letter, and the review report.",
     "tip": "Review documentation: Letter, analytics, inquiries, communications, rep letter, report.",
     "calculationRequired": false,
@@ -7849,12 +7849,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Minimum documentation for a compilation includes:",
     "options": {
-      "A": "Extensive workpapers",
-      "B": "Engagement letter, any communications about fraud or noncompliance, and the report",
-      "C": "Only the final report",
-      "D": "Only the fee arrangement"
+      "A": "Only the final report",
+      "B": "Only the fee arrangement",
+      "C": "Extensive workpapers",
+      "D": "Engagement letter, any communications about fraud or noncompliance, and the report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Compilation documentation should include: the engagement letter, any communications regarding fraud or illegal acts, and the compilation report. Less documentation is required than for reviews.",
     "tip": "Compilation documentation: Engagement letter, communications, report. Minimal but required.",
     "calculationRequired": false,
@@ -7870,12 +7870,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If an accountant becomes aware of fraud during a compilation:",
     "options": {
-      "A": "The accountant must report to law enforcement",
-      "B": "The accountant should communicate to appropriate management level and consider effect on engagement",
-      "C": "The accountant should ignore it since no assurance is provided",
-      "D": "The accountant must expand procedures to an audit"
+      "A": "The accountant should communicate to appropriate management level and consider effect on engagement",
+      "B": "The accountant should ignore it since no assurance is provided",
+      "C": "The accountant must expand procedures to an audit",
+      "D": "The accountant must report to law enforcement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Even though no assurance is provided, the accountant should communicate fraud to appropriate management/governance level and consider the effect on the engagement, including possible withdrawal.",
     "tip": "Fraud in compilation: Still communicate to management. Consider withdrawal if significant.",
     "calculationRequired": false,
@@ -7891,12 +7891,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When comparative financial statements are presented with different service levels for each period:",
     "options": {
-      "A": "Only the current year report is issued",
-      "B": "The report should describe the responsibility assumed for each period",
-      "C": "Both periods must have the same service level",
-      "D": "Prior period statements must be reissued"
+      "A": "Prior period statements must be reissued",
+      "B": "Only the current year report is issued",
+      "C": "The report should describe the responsibility assumed for each period",
+      "D": "Both periods must have the same service level"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When service levels differ (e.g., current year review, prior year compilation), the report should clearly indicate the type of service and level of responsibility for each period.",
     "tip": "Different service levels: Report describes responsibility for each period separately.",
     "calculationRequired": false,
@@ -7912,12 +7912,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When supplementary information accompanies compiled financial statements:",
     "options": {
-      "A": "The accountant cannot report on it",
-      "B": "The compilation report may include a paragraph describing the supplementary information",
-      "C": "A separate audit must be performed",
-      "D": "Supplementary information is prohibited"
+      "A": "The compilation report may include a paragraph describing the supplementary information",
+      "B": "A separate audit must be performed",
+      "C": "Supplementary information is prohibited",
+      "D": "The accountant cannot report on it"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The compilation report may include a paragraph about supplementary information, indicating whether it was compiled as part of the engagement or the accountant has not compiled the supplementary information.",
     "tip": "Supplementary info: Can be addressed in compilation report. Describe if compiled or not.",
     "calculationRequired": false,
@@ -7933,12 +7933,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A compilation or review report should be dated:",
     "options": {
-      "A": "As of the balance sheet date",
-      "B": "As of the date the accountant has completed procedures",
-      "C": "As of the date the F/S are issued",
-      "D": "One month after year-end"
+      "A": "As of the date the F/S are issued",
+      "B": "One month after year-end",
+      "C": "As of the balance sheet date",
+      "D": "As of the date the accountant has completed procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The report should be dated as of the date the accountant has completed the compilation or review procedures. For reviews, this includes obtaining the representation letter.",
     "tip": "Report date = Completion of procedures. Similar to audit report dating concept.",
     "calculationRequired": false,
@@ -7954,12 +7954,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Compilation of prospective financial statements (forecasts or projections) is performed under:",
     "options": {
-      "A": "SSARS",
-      "B": "SSAE (attestation standards)",
-      "C": "SAS",
-      "D": "No professional standards apply"
+      "A": "SAS",
+      "B": "No professional standards apply",
+      "C": "SSARS",
+      "D": "SSAE (attestation standards)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Prospective financial statements (forecasts and projections) are covered by attestation standards (SSAE), not SSARS. SSARS applies to historical financial statements.",
     "tip": "Prospective F/S = SSAE (attestation). Historical F/S = SSARS or SAS.",
     "calculationRequired": false,
@@ -7975,12 +7975,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A firm's quality control system should cover:",
     "options": {
-      "A": "Only audit engagements",
-      "B": "All SSARS engagements in addition to audits and attestation",
-      "C": "Only compilation engagements",
-      "D": "Only engagements requiring independence"
+      "A": "Only compilation engagements",
+      "B": "Only engagements requiring independence",
+      "C": "Only audit engagements",
+      "D": "All SSARS engagements in addition to audits and attestation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A firm's QC system applies to all engagements including SSARS engagements. Policies should address acceptance, human resources, supervision, and monitoring for all service types.",
     "tip": "QC covers all engagements: Audits, attestation, AND SSARS.",
     "calculationRequired": false,
@@ -7996,12 +7996,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When the accountant is aware that compiled F/S will be provided to third parties:",
     "options": {
-      "A": "A compilation cannot be performed",
-      "B": "A compilation report should be issued (preparation alone is not appropriate)",
-      "C": "An audit must be performed",
-      "D": "Only a review can be performed"
+      "A": "Only a review can be performed",
+      "B": "A compilation cannot be performed",
+      "C": "A compilation report should be issued (preparation alone is not appropriate)",
+      "D": "An audit must be performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When third parties will use the F/S, a compilation or review with report is appropriate. Preparation engagement (no report) is only appropriate when F/S are for management use only.",
     "tip": "Third party use = Compilation or review report needed. Preparation alone not sufficient.",
     "calculationRequired": false,
@@ -8017,12 +8017,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "SSARS services can be performed on:",
     "options": {
-      "A": "Only annual financial statements",
-      "B": "Annual, interim, and other period financial statements",
-      "C": "Only year-end financial statements",
-      "D": "Only quarterly statements"
+      "A": "Only year-end financial statements",
+      "B": "Only quarterly statements",
+      "C": "Only annual financial statements",
+      "D": "Annual, interim, and other period financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SSARS applies to financial statements for any period—annual, quarterly, monthly, or other periods. The same standards apply regardless of the reporting period.",
     "tip": "SSARS: Any period F/S. Annual, interim, or special period.",
     "calculationRequired": false,
@@ -8038,12 +8038,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Before performing a review, the accountant should obtain knowledge of:",
     "options": {
-      "A": "Only the client's accounting policies",
-      "B": "The entity's business, industry accounting practices, and accounting system",
-      "C": "Only prior year F/S",
-      "D": "Only the engagement fee"
+      "A": "The entity's business, industry accounting practices, and accounting system",
+      "B": "Only prior year F/S",
+      "C": "Only the engagement fee",
+      "D": "Only the client's accounting policies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The accountant should understand: the entity's business, industry accounting practices, the entity's accounting system, and matters affecting transactions and balances. This supports effective inquiry and analytics.",
     "tip": "Review knowledge: Entity, industry, accounting system. Enables meaningful procedures.",
     "calculationRequired": false,
@@ -8059,12 +8059,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a compilation report, when disclosing lack of independence, the accountant:",
     "options": {
-      "A": "Must describe all reasons for non-independence",
-      "B": "May, but is not required to, disclose the reasons",
-      "C": "Cannot disclose any details",
-      "D": "Must obtain client consent to disclose"
+      "A": "May, but is not required to, disclose the reasons",
+      "B": "Cannot disclose any details",
+      "C": "Must obtain client consent to disclose",
+      "D": "Must describe all reasons for non-independence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The accountant may choose to disclose reasons for lack of independence but is not required to do so. If reasons are disclosed, all reasons should be included to avoid misleading users.",
     "tip": "Non-independence reasons: Optional to disclose. If disclosed, include ALL reasons.",
     "calculationRequired": false,
@@ -8101,12 +8101,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under auditing standards, there is a presumption that improper revenue recognition is a fraud risk. What must an auditor do regarding this presumption?",
     "options": {
-      "A": "Accept the presumption without exception",
-      "B": "Document whether the presumption applies and reasons if rebutted",
-      "C": "Ignore the presumption for recurring audit clients",
-      "D": "Apply the presumption only to public companies"
+      "A": "Apply the presumption only to public companies",
+      "B": "Accept the presumption without exception",
+      "C": "Document whether the presumption applies and reasons if rebutted",
+      "D": "Ignore the presumption for recurring audit clients"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Auditing standards presume fraud risk exists in revenue recognition. While this presumption can be rebutted, the auditor must document the reasons if the presumption is deemed not applicable to the entity's circumstances.",
     "tip": "The revenue fraud presumption is rebuttable but requires documentation.",
     "calculationRequired": false,
@@ -8122,12 +8122,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which type of accounts receivable confirmation asks the recipient to respond only if they disagree with the stated balance?",
     "options": {
-      "A": "Positive confirmation",
-      "B": "Negative confirmation",
-      "C": "Blank confirmation",
-      "D": "Invoice confirmation"
+      "A": "Negative confirmation",
+      "B": "Blank confirmation",
+      "C": "Invoice confirmation",
+      "D": "Positive confirmation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Negative confirmations ask recipients to respond only if they disagree with the stated amount. Positive confirmations require a response in all cases, whether the recipient agrees or disagrees.",
     "tip": "Negative = respond only if 'No' (disagree). Positive = respond always.",
     "calculationRequired": false,
@@ -8143,12 +8143,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the primary assertion being tested when an auditor examines shipping documents around year-end?",
     "options": {
-      "A": "Valuation",
-      "B": "Classification",
-      "C": "Cutoff",
-      "D": "Rights and obligations"
+      "A": "Rights and obligations",
+      "B": "Valuation",
+      "C": "Classification",
+      "D": "Cutoff"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Examining shipping documents around year-end tests the cutoff assertion, ensuring sales transactions are recorded in the proper period based on when the transfer of goods occurred.",
     "tip": "Cutoff testing focuses on transactions near period-end dates.",
     "calculationRequired": false,
@@ -8185,12 +8185,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under which circumstance would positive confirmations be most appropriate for accounts receivable?",
     "options": {
-      "A": "Large number of small balances with low detection risk",
-      "B": "Few accounts with individually significant balances",
-      "C": "Strong internal controls and low inherent risk",
-      "D": "Customers unlikely to respond to confirmation requests"
+      "A": "Few accounts with individually significant balances",
+      "B": "Strong internal controls and low inherent risk",
+      "C": "Customers unlikely to respond to confirmation requests",
+      "D": "Large number of small balances with low detection risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Positive confirmations are most appropriate when there are few accounts with large balances, as each response provides significant audit evidence. Negative confirmations are used for many small accounts when detection risk is low.",
     "tip": "Positive confirmations require more effort but provide stronger evidence for significant accounts.",
     "calculationRequired": false,
@@ -8206,12 +8206,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor is examining a client's bill-and-hold transactions. Which of the following criteria would NOT support the propriety of recognizing revenue before shipment?",
     "options": {
-      "A": "The buyer specifically requested the arrangement due to lack of storage space",
-      "B": "The goods are separately identified as belonging to the buyer",
-      "C": "The seller retains the option to use the goods to fill other orders",
-      "D": "The usual payment terms apply to the transaction"
+      "A": "The goods are separately identified as belonging to the buyer",
+      "B": "The seller retains the option to use the goods to fill other orders",
+      "C": "The usual payment terms apply to the transaction",
+      "D": "The buyer specifically requested the arrangement due to lack of storage space"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For bill-and-hold revenue recognition, goods must be identified as belonging to the buyer and the seller cannot have the ability to use them for other purposes. If the seller retains options to use the goods, control has not transferred to the buyer.",
     "tip": "Bill and hold requires goods be segregated and unavailable for seller's use.",
     "calculationRequired": false,
@@ -8227,12 +8227,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing sales to related parties, the auditor should be most concerned that:",
     "options": {
-      "A": "The transactions are recorded in separate accounts",
-      "B": "The terms of the transactions are equivalent to arm's-length transactions",
-      "C": "Related party sales represent less than 10% of total revenue",
-      "D": "The transactions have been approved by the CEO"
+      "A": "The transactions have been approved by the CEO",
+      "B": "The transactions are recorded in separate accounts",
+      "C": "The terms of the transactions are equivalent to arm's-length transactions",
+      "D": "Related party sales represent less than 10% of total revenue"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Related party transactions may not be conducted at arm's-length and could be used to manipulate financial results. The auditor should evaluate whether terms and pricing are consistent with market conditions.",
     "tip": "Related party transactions lack the economic compulsion that ensures fair dealing.",
     "calculationRequired": false,
@@ -8248,12 +8248,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which audit procedure is most effective for detecting a lapping scheme involving accounts receivable?",
     "options": {
-      "A": "Confirming receivables at year-end",
-      "B": "Comparing shipping documents to sales invoices",
-      "C": "Comparing details of cash receipts journal entries to bank deposits and customer accounts",
-      "D": "Performing analytical procedures on the aging schedule"
+      "A": "Comparing details of cash receipts journal entries to bank deposits and customer accounts",
+      "B": "Performing analytical procedures on the aging schedule",
+      "C": "Confirming receivables at year-end",
+      "D": "Comparing shipping documents to sales invoices"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Lapping involves misappropriating customer payments and covering shortages with subsequent receipts from other customers. Tracing receipts from the cash receipts journal to bank deposits and customer accounts can identify timing delays characteristic of lapping.",
     "tip": "Lapping creates timing differences between receipt, deposit, and customer credit dates.",
     "calculationRequired": false,
@@ -8269,12 +8269,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Testing the completeness assertion for sales revenue would most likely involve:",
     "options": {
-      "A": "Tracing from sales invoices to the sales journal",
-      "B": "Tracing from shipping documents to sales invoices",
-      "C": "Confirming accounts receivable balances",
-      "D": "Examining sales invoices for proper approval"
+      "A": "Confirming accounts receivable balances",
+      "B": "Examining sales invoices for proper approval",
+      "C": "Tracing from sales invoices to the sales journal",
+      "D": "Tracing from shipping documents to sales invoices"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Completeness testing traces from source documents (shipping documents) to recorded transactions (sales invoices) to ensure all shipments have been recorded as sales. Testing from the recording to the source tests occurrence, not completeness.",
     "tip": "Completeness = Source to Records. Occurrence = Records to Source.",
     "calculationRequired": false,
@@ -8290,12 +8290,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor suspects that sales may be inflated through undisclosed side agreements allowing product returns. Which procedure would be most effective in detecting such arrangements?",
     "options": {
-      "A": "Confirming receivables with positive confirmations",
-      "B": "Reviewing shipping documents for completeness",
-      "C": "Examining post year-end credit memos and returns",
-      "D": "Testing mathematical accuracy of sales invoices"
+      "A": "Reviewing shipping documents for completeness",
+      "B": "Examining post year-end credit memos and returns",
+      "C": "Testing mathematical accuracy of sales invoices",
+      "D": "Confirming receivables with positive confirmations"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Undisclosed side agreements often grant return rights not in the formal contract. Examining returns after year-end may reveal patterns suggesting such agreements existed at the time of sale, when revenue recognition criteria may not have been met.",
     "tip": "Post year-end examination can reveal conditions that existed at year-end.",
     "calculationRequired": false,
@@ -8311,12 +8311,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a positive confirmation request is not returned, the auditor should:",
     "options": {
-      "A": "Immediately consider it a misstatement",
-      "B": "Send a second request and assume accuracy if no response",
-      "C": "Apply alternative procedures to obtain evidence",
-      "D": "Exclude the amount from the audit scope"
+      "A": "Send a second request and assume accuracy if no response",
+      "B": "Apply alternative procedures to obtain evidence",
+      "C": "Exclude the amount from the audit scope",
+      "D": "Immediately consider it a misstatement"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For unreturned positive confirmations, the auditor should apply alternative procedures such as examining subsequent cash receipts, shipping documents, and other documentation to obtain sufficient evidence about the account balance.",
     "tip": "No response ≠ confirmation. Alternative procedures are required.",
     "calculationRequired": false,
@@ -8332,12 +8332,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A customer responds to a confirmation request indicating a different balance than shown in the client's records due to goods in transit. This exception:",
     "options": {
-      "A": "Indicates a likely misstatement",
-      "B": "Requires no further investigation if the difference is immaterial",
-      "C": "Should be investigated to determine if it represents an actual error",
-      "D": "Should be reported as a significant deficiency"
+      "A": "Should be reported as a significant deficiency",
+      "B": "Indicates a likely misstatement",
+      "C": "Requires no further investigation if the difference is immaterial",
+      "D": "Should be investigated to determine if it represents an actual error"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "All confirmation exceptions should be investigated regardless of apparent cause. Timing differences like goods in transit may have valid explanations but could also indicate cutoff errors or fictitious sales that need to be evaluated.",
     "tip": "Investigate all exceptions—apparent explanations may hide real problems.",
     "calculationRequired": false,
@@ -8353,12 +8353,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which information would be least useful when evaluating the adequacy of a client's sales returns reserve?",
     "options": {
-      "A": "Historical return rates by product line",
-      "B": "Customer complaints received after year-end",
-      "C": "The client's pricing strategy for new products",
-      "D": "Post year-end actual returns data"
+      "A": "Post year-end actual returns data",
+      "B": "Historical return rates by product line",
+      "C": "Customer complaints received after year-end",
+      "D": "The client's pricing strategy for new products"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Pricing strategy has limited relevance to expected returns. Historical return rates, customer complaints, and actual post year-end returns provide direct evidence about the adequacy of the returns reserve.",
     "tip": "Focus on data directly predictive of return likelihood and magnitude.",
     "calculationRequired": false,
@@ -8395,12 +8395,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor suspects channel stuffing (pushing excess inventory to distributors). Which audit evidence would most directly address this concern?",
     "options": {
-      "A": "Confirmation of receivable balances with distributors",
-      "B": "Analysis of distributor sell-through data and inventory levels",
-      "C": "Review of the credit approval process for distributors",
-      "D": "Examination of shipping documents for proper authorization"
+      "A": "Examination of shipping documents for proper authorization",
+      "B": "Confirmation of receivable balances with distributors",
+      "C": "Analysis of distributor sell-through data and inventory levels",
+      "D": "Review of the credit approval process for distributors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Channel stuffing pushes excess inventory to distributors who may not have actual demand. Analyzing distributor inventory levels and sell-through rates reveals whether purchases reflect genuine demand or artificial inflation of the manufacturer's sales.",
     "tip": "Channel stuffing shifts inventory, not demand—look beyond the initial sale.",
     "calculationRequired": false,
@@ -8416,12 +8416,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which analytical procedure would be most useful for identifying potential overstatement of revenue?",
     "options": {
-      "A": "Comparing current gross margin to industry averages",
-      "B": "Calculating the ratio of bad debt expense to sales",
-      "C": "Comparing days sales outstanding to prior periods and industry",
-      "D": "Comparing sales volume to production capacity"
+      "A": "Calculating the ratio of bad debt expense to sales",
+      "B": "Comparing days sales outstanding to prior periods and industry",
+      "C": "Comparing sales volume to production capacity",
+      "D": "Comparing current gross margin to industry averages"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Increasing days sales outstanding (DSO) may indicate fictitious sales recorded without corresponding collections, or extended credit terms that could signal channel stuffing or side agreements. This ratio directly relates revenue to collectibility.",
     "tip": "Increasing DSO may signal collection problems or fictitious revenue.",
     "calculationRequired": false,
@@ -8437,12 +8437,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Why might an auditor use blank confirmations (not including the balance) rather than standard positive confirmations?",
     "options": {
-      "A": "To reduce audit costs",
-      "B": "To encourage recipients to verify their records rather than simply agreeing",
-      "C": "To comply with PCAOB requirements for public companies",
-      "D": "To test the completeness assertion more effectively"
+      "A": "To comply with PCAOB requirements for public companies",
+      "B": "To test the completeness assertion more effectively",
+      "C": "To reduce audit costs",
+      "D": "To encourage recipients to verify their records rather than simply agreeing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Blank confirmations require the recipient to fill in the balance from their own records, reducing the risk that they will simply confirm a stated amount without verification. This provides more reliable evidence, though response rates may be lower.",
     "tip": "Blank confirmations force recipients to check records—stronger evidence but lower response rates.",
     "calculationRequired": false,
@@ -8458,12 +8458,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing revenue recognized under the percentage-of-completion method for a construction contract, which procedure provides the most persuasive evidence?",
     "options": {
-      "A": "Reviewing the original contract for total contract price",
-      "B": "Confirming progress billings with the customer",
-      "C": "Independently assessing the percentage of physical completion",
-      "D": "Recalculating the percentage using costs to date"
+      "A": "Independently assessing the percentage of physical completion",
+      "B": "Recalculating the percentage using costs to date",
+      "C": "Reviewing the original contract for total contract price",
+      "D": "Confirming progress billings with the customer"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Independent assessment of physical completion provides the most objective evidence about actual progress. Cost-based calculations can be manipulated by overstating costs, and customer confirmations may only verify billing, not actual completion.",
     "tip": "Physical observation provides objective evidence of progress that cost data may not reflect.",
     "calculationRequired": false,
@@ -8479,12 +8479,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing consolidated financial statements, the auditor's primary concern regarding intercompany sales is that:",
     "options": {
-      "A": "Proper transfer pricing documentation exists",
-      "B": "All intercompany transactions and balances are properly eliminated",
-      "C": "Tax implications have been correctly calculated",
-      "D": "Intercompany sales are at arm's-length prices"
+      "A": "Intercompany sales are at arm's-length prices",
+      "B": "Proper transfer pricing documentation exists",
+      "C": "All intercompany transactions and balances are properly eliminated",
+      "D": "Tax implications have been correctly calculated"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "For consolidated financial statements, intercompany transactions must be eliminated to avoid overstating both revenue and expenses. Transfer pricing and arm's-length concerns relate more to tax and segment reporting than consolidated statement accuracy.",
     "tip": "Consolidation = one economic entity; intercompany transactions net to zero.",
     "calculationRequired": false,
@@ -8500,12 +8500,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A client ships products to retailers on consignment. When should the auditor expect revenue to be recognized?",
     "options": {
-      "A": "When goods are shipped to the retailer",
-      "B": "When goods are received by the retailer",
-      "C": "When goods are sold by the retailer to end customers",
-      "D": "When payment is received from the retailer"
+      "A": "When payment is received from the retailer",
+      "B": "When goods are shipped to the retailer",
+      "C": "When goods are received by the retailer",
+      "D": "When goods are sold by the retailer to end customers"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Consignment arrangements do not transfer control to the consignee (retailer). Revenue is recognized when the consignee sells the goods to end customers, as that is when the consignor's performance obligation is satisfied.",
     "tip": "Consignment = no sale until end customer purchase. Goods remain consignor's inventory.",
     "calculationRequired": false,
@@ -8521,12 +8521,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which combination of duties creates the highest risk of misappropriation of cash receipts?",
     "options": {
-      "A": "Approving credit and shipping goods",
-      "B": "Recording sales and maintaining inventory records",
-      "C": "Receiving cash and posting to customer accounts",
-      "D": "Preparing invoices and approving write-offs"
+      "A": "Preparing invoices and approving write-offs",
+      "B": "Approving credit and shipping goods",
+      "C": "Recording sales and maintaining inventory records",
+      "D": "Receiving cash and posting to customer accounts"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "When the same person receives cash and posts to customer accounts, they can misappropriate funds and conceal the theft by manipulating account records. This is a fundamental segregation of duties violation in the revenue cycle.",
     "tip": "Never combine custody of assets with record-keeping for those assets.",
     "calculationRequired": false,
@@ -8542,12 +8542,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using electronic confirmations for accounts receivable, the auditor should be most concerned with:",
     "options": {
-      "A": "Whether electronic confirmations are acceptable under GAAS",
-      "B": "The authenticity of the respondent and security of transmission",
-      "C": "Whether the confirmation service provider is bonded",
-      "D": "The time zone differences affecting response timing"
+      "A": "The authenticity of the respondent and security of transmission",
+      "B": "Whether the confirmation service provider is bonded",
+      "C": "The time zone differences affecting response timing",
+      "D": "Whether electronic confirmations are acceptable under GAAS"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Electronic confirmations raise concerns about verifying the identity of the respondent and ensuring the security and integrity of the confirmation process. The auditor must ensure responses are from legitimate sources and have not been altered.",
     "tip": "Electronic confirmations require controls over authenticity and data integrity.",
     "calculationRequired": false,
@@ -8584,12 +8584,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor discovers that a significant portion of receivables are pledged as collateral for a loan. The auditor should primarily ensure that:",
     "options": {
-      "A": "The loan interest rate is reasonable",
-      "B": "Proper disclosure is made in the financial statements",
-      "C": "The pledged receivables are segregated in the accounting records",
-      "D": "Customer notification requirements have been met"
+      "A": "Customer notification requirements have been met",
+      "B": "The loan interest rate is reasonable",
+      "C": "Proper disclosure is made in the financial statements",
+      "D": "The pledged receivables are segregated in the accounting records"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When receivables are pledged as collateral, financial statement disclosure is required to inform users of the encumbrance on these assets. The auditor should verify the disclosure is complete and accurate.",
     "tip": "Encumbered assets require disclosure of restrictions on their use.",
     "calculationRequired": false,
@@ -8605,12 +8605,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A software company sells a bundle including software, installation, and one year of support. Under ASC 606, what should the auditor focus on when evaluating revenue recognition?",
     "options": {
-      "A": "Whether the total bundle price exceeds the standalone price of software alone",
-      "B": "The allocation of the transaction price to each performance obligation based on standalone selling prices",
-      "C": "Whether the customer could purchase the components separately",
-      "D": "The cost of providing each component of the bundle"
+      "A": "The cost of providing each component of the bundle",
+      "B": "Whether the total bundle price exceeds the standalone price of software alone",
+      "C": "The allocation of the transaction price to each performance obligation based on standalone selling prices",
+      "D": "Whether the customer could purchase the components separately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "ASC 606 requires identifying separate performance obligations and allocating the transaction price based on relative standalone selling prices. The auditor should verify proper identification of obligations and appropriate price allocation methodology.",
     "tip": "Revenue recognition follows performance—allocate bundled prices to each obligation.",
     "calculationRequired": false,
@@ -8626,12 +8626,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which procedure most directly tests the valuation assertion for accounts receivable?",
     "options": {
-      "A": "Confirming account balances with customers",
-      "B": "Evaluating the adequacy of the allowance for doubtful accounts",
-      "C": "Tracing receivables to shipping documents",
-      "D": "Testing cutoff at year-end"
+      "A": "Testing cutoff at year-end",
+      "B": "Confirming account balances with customers",
+      "C": "Evaluating the adequacy of the allowance for doubtful accounts",
+      "D": "Tracing receivables to shipping documents"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The valuation assertion addresses whether receivables are stated at net realizable value. Evaluating the allowance for doubtful accounts directly tests whether receivables are properly valued at amounts expected to be collected.",
     "tip": "Valuation = recorded at appropriate amount. For receivables, this means net of uncollectibles.",
     "calculationRequired": false,
@@ -8647,12 +8647,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test for overstatement of sales at year-end, an auditor should select a sample of:",
     "options": {
-      "A": "Shipping documents dated before year-end and trace to recorded sales",
-      "B": "Sales recorded just before year-end and examine supporting shipping documents",
-      "C": "Shipping documents dated after year-end and trace to recorded sales",
-      "D": "Credit memos issued after year-end"
+      "A": "Shipping documents dated after year-end and trace to recorded sales",
+      "B": "Credit memos issued after year-end",
+      "C": "Shipping documents dated before year-end and trace to recorded sales",
+      "D": "Sales recorded just before year-end and examine supporting shipping documents"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "To test for overstatement, select from recorded sales and verify supporting evidence. Sales recorded near year-end should be traced to shipping documents to ensure goods were actually shipped before the recording date.",
     "tip": "Test overstatement: records → support. Test understatement: support → records.",
     "calculationRequired": false,
@@ -8668,12 +8668,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor confirmed accounts receivable at an interim date. What additional procedure should be performed at year-end?",
     "options": {
-      "A": "Confirm the same accounts again at year-end",
-      "B": "Perform a roll-forward of the accounts from interim to year-end",
-      "C": "No additional procedure is necessary if controls are effective",
-      "D": "Obtain a management representation letter"
+      "A": "Perform a roll-forward of the accounts from interim to year-end",
+      "B": "No additional procedure is necessary if controls are effective",
+      "C": "Obtain a management representation letter",
+      "D": "Confirm the same accounts again at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When substantive procedures are performed at an interim date, the auditor must perform procedures to cover the remaining period. Rolling forward accounts from the interim confirmation date to year-end provides coverage for the full period.",
     "tip": "Interim testing requires bridging procedures to year-end.",
     "calculationRequired": false,
@@ -8752,12 +8752,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When would confirming receivables at a date other than year-end be most appropriate?",
     "options": {
-      "A": "When the client has requested confirmation at an earlier date",
-      "B": "When control risk is assessed as low and analytical procedures can cover the remaining period",
-      "C": "When the auditor anticipates low response rates",
-      "D": "When year-end falls on a weekend"
+      "A": "When year-end falls on a weekend",
+      "B": "When the client has requested confirmation at an earlier date",
+      "C": "When control risk is assessed as low and analytical procedures can cover the remaining period",
+      "D": "When the auditor anticipates low response rates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Confirmations can be performed at an interim date when internal controls are effective and substantive procedures can adequately cover the roll-forward period. This approach requires lower control risk and reliable analytical procedures.",
     "tip": "Interim confirmation requires strong controls and roll-forward procedures.",
     "calculationRequired": false,
@@ -8794,12 +8794,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the primary control objective for requiring supervisory approval of accounts receivable write-offs?",
     "options": {
-      "A": "To ensure bad debt expense is recorded in the proper period",
-      "B": "To prevent premature write-off of collectible accounts",
-      "C": "To prevent concealment of cash misappropriation",
-      "D": "To comply with GAAP disclosure requirements"
+      "A": "To comply with GAAP disclosure requirements",
+      "B": "To ensure bad debt expense is recorded in the proper period",
+      "C": "To prevent premature write-off of collectible accounts",
+      "D": "To prevent concealment of cash misappropriation"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Write-off authorization controls help prevent employees from misappropriating cash receipts and then writing off the accounts to conceal the theft. Independent approval ensures write-offs are legitimate uncollectible accounts.",
     "tip": "Write-off authority can be used to conceal lapping or other theft schemes.",
     "calculationRequired": false,
@@ -8815,12 +8815,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor is auditing a subscription-based software company. What unique revenue recognition consideration should the auditor focus on?",
     "options": {
-      "A": "Whether the software was delivered at contract inception",
-      "B": "The allocation of revenue over the subscription period",
-      "C": "Whether customers have made upfront payments",
-      "D": "The physical location of software servers"
+      "A": "The allocation of revenue over the subscription period",
+      "B": "Whether customers have made upfront payments",
+      "C": "The physical location of software servers",
+      "D": "Whether the software was delivered at contract inception"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Subscription revenue is recognized ratably over the service period as the performance obligation is satisfied over time. The auditor should verify that revenue is properly allocated and deferred revenue is accurately stated for unearned subscription periods.",
     "tip": "Subscription revenue = satisfied over time. Check deferred revenue accuracy.",
     "calculationRequired": false,
@@ -8836,12 +8836,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Why is physical observation of the client's inventory count important?",
     "options": {
-      "A": "To take personal responsibility for the count accuracy",
-      "B": "To obtain audit evidence about existence and condition of inventory",
-      "C": "To verify that all inventory is properly insured",
-      "D": "To determine the inventory cost flow method used"
+      "A": "To obtain audit evidence about existence and condition of inventory",
+      "B": "To verify that all inventory is properly insured",
+      "C": "To determine the inventory cost flow method used",
+      "D": "To take personal responsibility for the count accuracy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Physical observation provides direct evidence about the existence of inventory and allows the auditor to assess its condition. The auditor observes and performs test counts but does not take responsibility for the count itself.",
     "tip": "Observation tests existence and condition—the auditor watches and test counts, not controls the count.",
     "calculationRequired": false,
@@ -8857,12 +8857,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a client conducts its physical inventory count before year-end, what additional procedure should the auditor perform?",
     "options": {
-      "A": "Observe a complete recount at year-end",
-      "B": "Perform roll-forward procedures to year-end",
-      "C": "Require the client to adjust all inventory prices to year-end values",
-      "D": "No additional procedures are required"
+      "A": "No additional procedures are required",
+      "B": "Observe a complete recount at year-end",
+      "C": "Perform roll-forward procedures to year-end",
+      "D": "Require the client to adjust all inventory prices to year-end values"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When inventory is counted at an interim date, the auditor must perform roll-forward procedures to ensure the inventory balance at year-end is accurate. This includes reviewing perpetual records and testing transactions in the intervening period.",
     "tip": "Interim count requires bridging to year-end through roll-forward procedures.",
     "calculationRequired": false,
@@ -8878,12 +8878,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "During inventory observation, an auditor performs test counts primarily to:",
     "options": {
-      "A": "Determine the inventory valuation method",
-      "B": "Test the accuracy of the client's count",
-      "C": "Identify obsolete inventory items",
-      "D": "Calculate inventory turnover ratios"
+      "A": "Calculate inventory turnover ratios",
+      "B": "Determine the inventory valuation method",
+      "C": "Test the accuracy of the client's count",
+      "D": "Identify obsolete inventory items"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Test counts verify the accuracy of the client's counting procedures. The auditor selects items, counts them independently, and compares results to the client's count sheets to evaluate count reliability.",
     "tip": "Test counts = auditor's independent verification of client's count accuracy.",
     "calculationRequired": false,
@@ -8920,12 +8920,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a client uses a standard cost system for inventory, the auditor should:",
     "options": {
-      "A": "Require the client to convert to actual cost",
-      "B": "Verify that standards are reasonable and variances are properly treated",
-      "C": "Use only the standard costs for all audit tests",
-      "D": "Insist variances be written off to cost of goods sold"
+      "A": "Verify that standards are reasonable and variances are properly treated",
+      "B": "Use only the standard costs for all audit tests",
+      "C": "Insist variances be written off to cost of goods sold",
+      "D": "Require the client to convert to actual cost"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Standard costs are acceptable for financial reporting if they approximate actual costs. The auditor should verify that standards are periodically reviewed and updated, and that significant variances are appropriately allocated between inventory and cost of sales.",
     "tip": "Standard cost ≈ actual cost is acceptable; check variance allocation reasonableness.",
     "calculationRequired": false,
@@ -8941,12 +8941,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test the cutoff for inventory purchases at year-end, the auditor should:",
     "options": {
-      "A": "Confirm balances with major suppliers",
-      "B": "Examine purchase invoices for proper approval",
-      "C": "Compare receiving reports near year-end with recorded purchases and inventory",
-      "D": "Review the perpetual inventory system for mathematical accuracy"
+      "A": "Review the perpetual inventory system for mathematical accuracy",
+      "B": "Confirm balances with major suppliers",
+      "C": "Examine purchase invoices for proper approval",
+      "D": "Compare receiving reports near year-end with recorded purchases and inventory"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Cutoff testing ensures transactions are recorded in the correct period. Comparing receiving reports to recorded purchases and inventory verifies that goods received before year-end are included in inventory and payables, and vice versa.",
     "tip": "Cutoff = match physical receipt timing with recording. Check receiving reports around year-end.",
     "calculationRequired": false,
@@ -8962,12 +8962,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which procedure would be most effective for identifying obsolete or slow-moving inventory?",
     "options": {
-      "A": "Confirming inventory quantities with customers",
-      "B": "Analyzing inventory turnover by product line and aging of items",
-      "C": "Recounting all inventory items over a certain dollar value",
-      "D": "Reviewing purchase orders for the subsequent year"
+      "A": "Analyzing inventory turnover by product line and aging of items",
+      "B": "Recounting all inventory items over a certain dollar value",
+      "C": "Reviewing purchase orders for the subsequent year",
+      "D": "Confirming inventory quantities with customers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Analyzing turnover rates and aging identifies items that are not selling at normal rates and may require write-down. Slow-moving items have low turnover and have been in inventory for extended periods.",
     "tip": "Slow turnover + old age = potential obsolescence requiring write-down evaluation.",
     "calculationRequired": false,
@@ -9025,12 +9025,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When testing the cost of manufactured inventory, the auditor should:",
     "options": {
-      "A": "Rely solely on management's cost accounting reports",
-      "B": "Verify that material, labor, and overhead are properly accumulated in work-in-process",
-      "C": "Test only direct material costs as they are most significant",
-      "D": "Compare selling prices to costs for all inventory items"
+      "A": "Verify that material, labor, and overhead are properly accumulated in work-in-process",
+      "B": "Test only direct material costs as they are most significant",
+      "C": "Compare selling prices to costs for all inventory items",
+      "D": "Rely solely on management's cost accounting reports"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Manufactured inventory cost includes direct materials, direct labor, and manufacturing overhead. The auditor should test that each component is properly accumulated in WIP and finished goods, with overhead allocated using reasonable methods.",
     "tip": "Manufactured cost = DM + DL + MOH. Test all three components and allocation methods.",
     "calculationRequired": false,
@@ -9067,12 +9067,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing work-in-process inventory in a manufacturing company, the most challenging aspect is typically:",
     "options": {
-      "A": "Counting the number of units in process",
-      "B": "Determining the appropriate stage of completion for costing",
-      "C": "Identifying the direct materials used",
-      "D": "Tracing labor costs to specific jobs"
+      "A": "Identifying the direct materials used",
+      "B": "Tracing labor costs to specific jobs",
+      "C": "Counting the number of units in process",
+      "D": "Determining the appropriate stage of completion for costing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Determining stage of completion is highly judgmental and affects how much cost to allocate to WIP. The auditor must evaluate management's estimates of completion percentage, which requires understanding the production process and cost accumulation.",
     "tip": "WIP completion percentage is subjective—test management's methodology and assumptions.",
     "calculationRequired": false,
@@ -9088,12 +9088,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A client uses a perpetual inventory system with cycle counts throughout the year instead of an annual physical count. The auditor should:",
     "options": {
-      "A": "Require an annual physical count for audit purposes",
-      "B": "Evaluate the cycle counting procedures and test the perpetual records",
-      "C": "Accept the perpetual records without further testing",
-      "D": "Perform a complete physical count at year-end"
+      "A": "Evaluate the cycle counting procedures and test the perpetual records",
+      "B": "Accept the perpetual records without further testing",
+      "C": "Perform a complete physical count at year-end",
+      "D": "Require an annual physical count for audit purposes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "If cycle counting procedures are effective and the perpetual system is reliable, the auditor may accept this approach. However, the auditor must evaluate the cycle count procedures and perform tests of the perpetual records' accuracy.",
     "tip": "Cycle counting can replace annual counts if procedures are robust—test the system's reliability.",
     "calculationRequired": false,
@@ -9109,12 +9109,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A client has inventory at 50 locations. How should the auditor determine which locations to visit for inventory observation?",
     "options": {
-      "A": "Visit all 50 locations",
-      "B": "Select locations based on materiality and risk factors",
-      "C": "Only visit the corporate headquarters",
-      "D": "Randomly select exactly 10 locations"
+      "A": "Select locations based on materiality and risk factors",
+      "B": "Only visit the corporate headquarters",
+      "C": "Randomly select exactly 10 locations",
+      "D": "Visit all 50 locations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor should select locations based on significance and risk. This includes locations with high inventory values, unusual items, weak controls, or higher fraud risk. Not all locations need to be visited if sufficient coverage is achieved.",
     "tip": "Location selection = materiality + risk assessment. Cover significant amounts and high-risk sites.",
     "calculationRequired": false,
@@ -9130,12 +9130,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor notes significant unexplained differences between perpetual records and physical counts. This most likely indicates:",
     "options": {
-      "A": "The perpetual system should be abandoned",
-      "B": "Possible theft, recording errors, or inadequate controls",
-      "C": "Normal variance in any inventory system",
-      "D": "The need to increase insurance coverage"
+      "A": "Normal variance in any inventory system",
+      "B": "The need to increase insurance coverage",
+      "C": "The perpetual system should be abandoned",
+      "D": "Possible theft, recording errors, or inadequate controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Significant shrinkage (differences between book and physical counts) may indicate theft, recording errors, or control weaknesses. The auditor should investigate the causes and consider implications for internal controls and the financial statements.",
     "tip": "Significant shrinkage = investigate cause. Could be theft, errors, or control failures.",
     "calculationRequired": false,
@@ -9151,12 +9151,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Physical observation of inventory primarily provides evidence about which assertion?",
     "options": {
-      "A": "Valuation",
-      "B": "Existence",
-      "C": "Completeness",
-      "D": "Rights and obligations"
+      "A": "Existence",
+      "B": "Completeness",
+      "C": "Rights and obligations",
+      "D": "Valuation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Physical observation provides direct evidence that inventory exists. While observation can provide some information about condition (relevant to valuation), its primary purpose is confirming existence of the inventory items.",
     "tip": "Observation = you see it, so it exists. Primary assertion is existence.",
     "calculationRequired": false,
@@ -9172,12 +9172,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Before the inventory count, the auditor should review the client's:",
     "options": {
-      "A": "Audit committee charter",
-      "B": "Written inventory count instructions",
-      "C": "Insurance policies on inventory",
-      "D": "Loan agreements"
+      "A": "Insurance policies on inventory",
+      "B": "Loan agreements",
+      "C": "Audit committee charter",
+      "D": "Written inventory count instructions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should review the client's inventory count instructions before observation to understand the procedures and evaluate whether they will produce accurate counts. This helps the auditor plan appropriate observation procedures.",
     "tip": "Review count instructions beforehand to know what to expect and what to watch for.",
     "calculationRequired": false,
@@ -9193,12 +9193,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test the valuation of purchased inventory, the auditor should vouch costs to:",
     "options": {
-      "A": "Sales catalogs from the supplier",
-      "B": "Vendor invoices and freight documentation",
-      "C": "Management's cost estimates",
-      "D": "Industry price indices"
+      "A": "Management's cost estimates",
+      "B": "Industry price indices",
+      "C": "Sales catalogs from the supplier",
+      "D": "Vendor invoices and freight documentation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Vendor invoices provide evidence of actual purchase costs, and freight documentation supports capitalized transportation costs. Together, these documents verify the cost basis of purchased inventory items.",
     "tip": "Vouch costs to source documents—invoices for purchase price, freight bills for transportation.",
     "calculationRequired": false,
@@ -9214,12 +9214,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which analytical procedure would best detect potential overstatement of inventory?",
     "options": {
-      "A": "Comparing inventory turnover to prior periods and industry",
-      "B": "Calculating the quick ratio",
-      "C": "Comparing accounts payable turnover to industry",
-      "D": "Analyzing sales trends by customer"
+      "A": "Calculating the quick ratio",
+      "B": "Comparing accounts payable turnover to industry",
+      "C": "Analyzing sales trends by customer",
+      "D": "Comparing inventory turnover to prior periods and industry"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Declining inventory turnover may indicate overstatement (holding excess inventory) or obsolescence. Comparing to prior periods and industry benchmarks helps identify unusual patterns that warrant further investigation.",
     "tip": "Low turnover = inventory sitting longer. Could indicate overstatement or obsolescence.",
     "calculationRequired": false,
@@ -9235,12 +9235,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Goods shipped FOB shipping point on December 30 have not arrived at the client's warehouse by year-end. The auditor should:",
     "options": {
-      "A": "Exclude the goods from the client's inventory",
-      "B": "Include the goods in inventory if the client is the buyer",
-      "C": "Request confirmation from the shipping company",
-      "D": "Record the goods as a contingent asset"
+      "A": "Record the goods as a contingent asset",
+      "B": "Exclude the goods from the client's inventory",
+      "C": "Include the goods in inventory if the client is the buyer",
+      "D": "Request confirmation from the shipping company"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "FOB shipping point means title transfers when goods leave the seller's dock. If the client is the buyer, ownership transferred on December 30, so the goods should be included in the client's year-end inventory even though not physically received.",
     "tip": "FOB shipping point = buyer owns goods in transit. FOB destination = seller owns until delivery.",
     "calculationRequired": false,
@@ -9256,12 +9256,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following inventory fraud schemes would be most difficult to detect through physical observation alone?",
     "options": {
-      "A": "Counting empty boxes as full",
-      "B": "Including fictitious inventory at remote locations",
-      "C": "Double counting inventory items",
-      "D": "Including obsolete inventory at full cost"
+      "A": "Including fictitious inventory at remote locations",
+      "B": "Double counting inventory items",
+      "C": "Including obsolete inventory at full cost",
+      "D": "Counting empty boxes as full"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Fictitious inventory at unvisited remote locations cannot be detected through observation at other locations. This scheme requires analytical procedures, confirmations, or visits to the remote sites to detect.",
     "tip": "Remote location fraud requires coverage beyond physical observation—use confirmation and analytics.",
     "calculationRequired": false,
@@ -9298,12 +9298,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the most effective approach to auditing cost of goods sold for a manufacturing company?",
     "options": {
-      "A": "Vouch all COGS transactions to supporting documents",
-      "B": "Test the components: beginning inventory, purchases, and ending inventory",
-      "C": "Confirm COGS amounts with customers",
-      "D": "Review the income statement for unusual fluctuations only"
+      "A": "Confirm COGS amounts with customers",
+      "B": "Review the income statement for unusual fluctuations only",
+      "C": "Vouch all COGS transactions to supporting documents",
+      "D": "Test the components: beginning inventory, purchases, and ending inventory"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "COGS is calculated as beginning inventory plus purchases minus ending inventory. By testing each component, the auditor indirectly verifies COGS. This is more efficient than testing COGS transactions directly.",
     "tip": "COGS = BI + Purchases - EI. Test the inputs, and COGS is tested.",
     "calculationRequired": false,
@@ -9340,12 +9340,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A client's inventory consists primarily of precious gemstones. The auditor should consider:",
     "options": {
-      "A": "Declining the engagement due to complexity",
-      "B": "Using a specialist to assist with valuation and identification",
-      "C": "Accepting management's valuations without testing",
-      "D": "Requiring the client to convert to less complex inventory"
+      "A": "Accepting management's valuations without testing",
+      "B": "Requiring the client to convert to less complex inventory",
+      "C": "Declining the engagement due to complexity",
+      "D": "Using a specialist to assist with valuation and identification"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Specialized inventory like gemstones may require expertise the auditor lacks. Using a specialist (gemologist) to assist with identification and valuation helps the auditor obtain sufficient appropriate evidence.",
     "tip": "Specialized inventory may require a specialist—auditor evaluates but can seek expert help.",
     "calculationRequired": false,
@@ -9361,12 +9361,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "During inventory observation, the auditor notices that production continues and inventory is being moved. The auditor should:",
     "options": {
-      "A": "Stop the production process",
-      "B": "Document the controls in place to account for movement during the count",
-      "C": "Refuse to accept the count results",
-      "D": "Count only stationary inventory"
+      "A": "Refuse to accept the count results",
+      "B": "Count only stationary inventory",
+      "C": "Stop the production process",
+      "D": "Document the controls in place to account for movement during the count"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "If the client allows movement during the count, the auditor should understand and document the controls ensuring items are counted once and movement is tracked. This may include recording shipping and receiving activity during the count.",
     "tip": "If inventory moves during count, verify controls to prevent double-counting or omissions.",
     "calculationRequired": false,
@@ -9382,12 +9382,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The use of prenumbered inventory count tags helps ensure:",
     "options": {
-      "A": "All items are valued correctly",
-      "B": "The count is completed by authorized personnel",
-      "C": "All areas are counted and no items are omitted",
-      "D": "Inventory turnover is calculated accurately"
+      "A": "All areas are counted and no items are omitted",
+      "B": "Inventory turnover is calculated accurately",
+      "C": "All items are valued correctly",
+      "D": "The count is completed by authorized personnel"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Prenumbered tags, when properly controlled and accounted for, help ensure all inventory is counted (completeness). Missing tag numbers indicate areas that may have been skipped or items omitted from the count.",
     "tip": "Prenumbered tags + sequence check = completeness of count coverage.",
     "calculationRequired": false,
@@ -9403,12 +9403,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After completing test counts during inventory observation, the auditor should:",
     "options": {
-      "A": "Provide the results to management for correction",
-      "B": "Compare results to the client's count and investigate differences",
-      "C": "File the test counts for future reference only",
-      "D": "Discard results if they match the client's count"
+      "A": "Discard results if they match the client's count",
+      "B": "Provide the results to management for correction",
+      "C": "Compare results to the client's count and investigate differences",
+      "D": "File the test counts for future reference only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should compare test count results to the client's counts and investigate any differences. Differences may indicate systematic counting errors or isolated problems that affect the reliability of the entire count.",
     "tip": "Test count differences = investigate cause and assess impact on count reliability.",
     "calculationRequired": false,
@@ -9445,12 +9445,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor's documentation of inventory observation should include:",
     "options": {
-      "A": "Only discrepancies found during test counts",
-      "B": "A complete copy of all client count sheets",
-      "C": "Test counts performed, conclusions on count procedures, and any issues noted",
-      "D": "A certification that all inventory was counted"
+      "A": "A complete copy of all client count sheets",
+      "B": "Test counts performed, conclusions on count procedures, and any issues noted",
+      "C": "A certification that all inventory was counted",
+      "D": "Only discrepancies found during test counts"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Audit documentation should include test count details, the auditor's evaluation of the client's count procedures, and any issues or exceptions noted. This supports conclusions about the reliability of the inventory count.",
     "tip": "Document what you did, what you found, and your conclusions about count reliability.",
     "calculationRequired": false,
@@ -9466,12 +9466,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After the physical count, the auditor should test the compilation of inventory by:",
     "options": {
-      "A": "Observing the compilation process",
-      "B": "Tracing test counts to the final inventory listing and testing extensions",
-      "C": "Accepting the client's summary if it matches total from count sheets",
-      "D": "Reviewing the compilation only if the inventory is material"
+      "A": "Reviewing the compilation only if the inventory is material",
+      "B": "Observing the compilation process",
+      "C": "Tracing test counts to the final inventory listing and testing extensions",
+      "D": "Accepting the client's summary if it matches total from count sheets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should trace test counts to the final inventory compilation to ensure they were properly transferred. Additionally, testing extensions (quantity × price) and footings verifies mathematical accuracy of the compilation.",
     "tip": "Compilation testing = trace counts to listing + test mathematical accuracy (extensions, footings).",
     "calculationRequired": false,
@@ -9487,12 +9487,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "During observation, the auditor identifies inventory held for customers awaiting shipment. This inventory should be:",
     "options": {
-      "A": "Included in the client's inventory at cost",
-      "B": "Excluded from the client's inventory and segregated",
-      "C": "Recorded as revenue immediately",
-      "D": "Disclosed as a contingent liability"
+      "A": "Disclosed as a contingent liability",
+      "B": "Included in the client's inventory at cost",
+      "C": "Excluded from the client's inventory and segregated",
+      "D": "Recorded as revenue immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Inventory belonging to customers (already sold or held for safekeeping) should not be included in the client's inventory count. It should be segregated and clearly identified to prevent inclusion in the count.",
     "tip": "If title has passed to customer, exclude from inventory—proper segregation is key.",
     "calculationRequired": false,
@@ -9508,12 +9508,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a first-year audit, the auditor was unable to observe the prior year-end inventory count. What is the effect on the audit report if opening inventory cannot be verified?",
     "options": {
-      "A": "No effect if ending inventory is correctly stated",
-      "B": "Scope limitation affecting the opinion on the income statement",
-      "C": "Automatic adverse opinion on all financial statements",
-      "D": "Required withdrawal from the engagement"
+      "A": "Required withdrawal from the engagement",
+      "B": "No effect if ending inventory is correctly stated",
+      "C": "Scope limitation affecting the opinion on the income statement",
+      "D": "Automatic adverse opinion on all financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Inability to verify opening inventory affects cost of goods sold and net income. This may result in a qualified or disclaimer of opinion on the income statement due to scope limitation, while the balance sheet opinion may be unaffected.",
     "tip": "Opening inventory error flows to COGS and net income—may require modified opinion on income statement.",
     "calculationRequired": false,
@@ -9529,12 +9529,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which representation regarding inventory should be included in the management representation letter?",
     "options": {
-      "A": "The specific count procedures used by employees",
-      "B": "Inventory is stated at lower of cost or net realizable value",
-      "C": "The names of all vendors supplying inventory",
-      "D": "Inventory turnover ratios are reasonable"
+      "A": "The names of all vendors supplying inventory",
+      "B": "Inventory turnover ratios are reasonable",
+      "C": "The specific count procedures used by employees",
+      "D": "Inventory is stated at lower of cost or net realizable value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management representations should include assertions that inventory is stated at the lower of cost or net realizable value, that the client has title to the inventory, and that no inventory has been pledged (unless disclosed).",
     "tip": "Representation letter confirms management's assertions about valuation, ownership, and pledging.",
     "calculationRequired": false,
@@ -9550,12 +9550,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which control would most effectively prevent overstatement of inventory through improper capitalization of overhead?",
     "options": {
-      "A": "Segregation of production and accounting functions",
-      "B": "Periodic review of overhead allocation rates and bases by independent personnel",
-      "C": "Physical access controls to the production area",
-      "D": "Requiring dual signatures on inventory adjustment entries"
+      "A": "Physical access controls to the production area",
+      "B": "Requiring dual signatures on inventory adjustment entries",
+      "C": "Segregation of production and accounting functions",
+      "D": "Periodic review of overhead allocation rates and bases by independent personnel"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Overhead capitalization requires judgment about allocation rates and bases. Independent review of these calculations helps prevent intentional or unintentional overcapitalization of overhead into inventory, which would understate current expenses.",
     "tip": "Overhead allocation is judgmental—independent review prevents manipulation.",
     "calculationRequired": false,
@@ -9571,12 +9571,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the primary purpose of sending a standard bank confirmation?",
     "options": {
-      "A": "To verify the interest rate on loans",
-      "B": "To confirm account balances, loans, and other arrangements with the bank",
-      "C": "To test internal controls over cash",
-      "D": "To determine the client's creditworthiness"
+      "A": "To determine the client's creditworthiness",
+      "B": "To verify the interest rate on loans",
+      "C": "To confirm account balances, loans, and other arrangements with the bank",
+      "D": "To test internal controls over cash"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Standard bank confirmations request verification of account balances, outstanding loans, and other arrangements (like lines of credit or compensating balance requirements) directly from the bank.",
     "tip": "Bank confirmations verify balances AND reveal loan/credit arrangements.",
     "calculationRequired": false,
@@ -9592,12 +9592,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing a client's bank reconciliation, the auditor should:",
     "options": {
-      "A": "Prepare the reconciliation for the client",
-      "B": "Obtain the reconciliation and test its accuracy",
-      "C": "Accept the reconciliation if signed by management",
-      "D": "Only review reconciliations for accounts over $1 million"
+      "A": "Obtain the reconciliation and test its accuracy",
+      "B": "Accept the reconciliation if signed by management",
+      "C": "Only review reconciliations for accounts over $1 million",
+      "D": "Prepare the reconciliation for the client"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor should obtain the client-prepared bank reconciliation and test its accuracy by tracing amounts to the bank statement, verifying outstanding items, and testing the mathematical accuracy of the reconciliation.",
     "tip": "Auditor tests client's reconciliation—doesn't prepare it or accept it without verification.",
     "calculationRequired": false,
@@ -9613,12 +9613,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor obtains a cutoff bank statement to test:",
     "options": {
-      "A": "The propriety of year-end cash transfers",
-      "B": "Whether deposits in transit and outstanding checks cleared in the subsequent period",
-      "C": "The effectiveness of cash controls",
-      "D": "The accuracy of interest income"
+      "A": "The accuracy of interest income",
+      "B": "The propriety of year-end cash transfers",
+      "C": "Whether deposits in transit and outstanding checks cleared in the subsequent period",
+      "D": "The effectiveness of cash controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A cutoff bank statement (typically 7-10 days after year-end) allows the auditor to verify that deposits in transit and outstanding checks from the year-end reconciliation subsequently cleared the bank, confirming their validity.",
     "tip": "Cutoff statement = verify that year-end reconciling items subsequently cleared.",
     "calculationRequired": false,
@@ -9655,12 +9655,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A four-column proof of cash is primarily used to:",
     "options": {
-      "A": "Verify the cash balance only at year-end",
-      "B": "Detect timing differences in recording receipts and disbursements",
-      "C": "Confirm balances with the bank",
-      "D": "Test controls over cash handling"
+      "A": "Confirm balances with the bank",
+      "B": "Test controls over cash handling",
+      "C": "Verify the cash balance only at year-end",
+      "D": "Detect timing differences in recording receipts and disbursements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A four-column proof of cash reconciles the bank and book balances at the beginning and end of a period and reconciles receipts and disbursements. It helps detect both unrecorded transactions and timing manipulation.",
     "tip": "Proof of cash = comprehensive reconciliation detecting cutoff errors and unrecorded items.",
     "calculationRequired": false,
@@ -9676,12 +9676,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which control is most important for cash received through the mail?",
     "options": {
-      "A": "Cash registers with locked tapes",
-      "B": "Preparation of a prelisting before forwarding to accounting",
-      "C": "Monthly bank reconciliation by the controller",
-      "D": "Daily deposits by the accounts receivable clerk"
+      "A": "Daily deposits by the accounts receivable clerk",
+      "B": "Cash registers with locked tapes",
+      "C": "Preparation of a prelisting before forwarding to accounting",
+      "D": "Monthly bank reconciliation by the controller"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A prelisting of mail receipts, prepared by someone independent of accounts receivable, creates an independent record that can be compared to subsequent recordings and deposits, helping detect theft or diversion of receipts.",
     "tip": "Prelisting = independent record before cash reaches accounting. Key control for mail receipts.",
     "calculationRequired": false,
@@ -9697,12 +9697,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An imprest petty cash fund should always:",
     "options": {
-      "A": "Have a balance equal to the authorized fund amount",
-      "B": "Equal the sum of cash plus receipts",
-      "C": "Be reconciled only at year-end",
-      "D": "Be maintained by the accounting department"
+      "A": "Be reconciled only at year-end",
+      "B": "Be maintained by the accounting department",
+      "C": "Have a balance equal to the authorized fund amount",
+      "D": "Equal the sum of cash plus receipts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An imprest fund should always equal its authorized amount when cash plus unreimbursed receipts are combined. Cash on hand decreases as expenses are paid but is replenished to the original amount when receipts are reimbursed.",
     "tip": "Imprest fund: Cash + Receipts = Authorized Amount at all times.",
     "calculationRequired": false,
@@ -9718,12 +9718,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a client uses electronic fund transfers extensively, the auditor should be most concerned about:",
     "options": {
-      "A": "Bank service charges being excessive",
-      "B": "Unauthorized access and fraudulent transfers",
-      "C": "Slow processing of transactions",
-      "D": "The inability to trace transactions"
+      "A": "Unauthorized access and fraudulent transfers",
+      "B": "Slow processing of transactions",
+      "C": "The inability to trace transactions",
+      "D": "Bank service charges being excessive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Electronic fund transfers can be initiated quickly and remotely, increasing the risk of unauthorized access and fraudulent disbursements. Controls over authorization, authentication, and access rights are critical.",
     "tip": "EFT = fast, remote, hard to reverse. Focus on authorization and access controls.",
     "calculationRequired": false,
@@ -9739,12 +9739,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor notes several checks outstanding for more than six months. The auditor should:",
     "options": {
-      "A": "Recommend the client void the checks and adjust the books",
-      "B": "Confirm these amounts directly with the payees",
-      "C": "Investigate the reason and consider potential misstatement or fraud",
-      "D": "Accept them as normal timing differences"
+      "A": "Investigate the reason and consider potential misstatement or fraud",
+      "B": "Accept them as normal timing differences",
+      "C": "Recommend the client void the checks and adjust the books",
+      "D": "Confirm these amounts directly with the payees"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Old outstanding checks may indicate checks never mailed, fictitious disbursements, or amounts that should be escheated to the state. The auditor should investigate the cause and determine if financial statement adjustment is needed.",
     "tip": "Stale checks = red flag. May indicate fraud, errors, or escheatment obligations.",
     "calculationRequired": false,
@@ -9760,12 +9760,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a client is required to maintain compensating balances under a loan agreement, the auditor should ensure:",
     "options": {
-      "A": "The balance is maintained in a separate savings account",
-      "B": "Appropriate disclosure is made in the financial statements",
-      "C": "The compensating balance is excluded from cash",
-      "D": "Interest is earned on the compensating balance"
+      "A": "The compensating balance is excluded from cash",
+      "B": "Interest is earned on the compensating balance",
+      "C": "The balance is maintained in a separate savings account",
+      "D": "Appropriate disclosure is made in the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Compensating balance arrangements restrict the use of cash and should be disclosed in the financial statements. The disclosure helps users understand limitations on the company's access to its cash balances.",
     "tip": "Compensating balances restrict cash usage—require disclosure of the arrangement.",
     "calculationRequired": false,
@@ -9781,12 +9781,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor suspects the client may have engaged in 'window dressing' at year-end. Which procedure would best address this concern?",
     "options": {
-      "A": "Confirming all bank balances",
-      "B": "Examining significant transactions occurring just before and after year-end",
-      "C": "Reviewing the cash flow statement for unusual items",
-      "D": "Testing controls over cash disbursements"
+      "A": "Examining significant transactions occurring just before and after year-end",
+      "B": "Reviewing the cash flow statement for unusual items",
+      "C": "Testing controls over cash disbursements",
+      "D": "Confirming all bank balances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Window dressing involves arranging transactions near year-end to improve the appearance of financial statements. Examining significant transactions just before and after year-end may reveal temporary manipulations that reverse shortly after the balance sheet date.",
     "tip": "Window dressing reverses after year-end—look for transactions that temporarily improve position.",
     "calculationRequired": false,
@@ -9802,12 +9802,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When counting cash on hand, the auditor should:",
     "options": {
-      "A": "Allow the custodian to leave the room to assist others",
-      "B": "Control all cash and negotiable instruments until the count is complete",
-      "C": "Count only currency and exclude checks",
-      "D": "Accept the custodian's count if it is already documented"
+      "A": "Accept the custodian's count if it is already documented",
+      "B": "Allow the custodian to leave the room to assist others",
+      "C": "Control all cash and negotiable instruments until the count is complete",
+      "D": "Count only currency and exclude checks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "To prevent substitution or manipulation, the auditor should maintain control of all cash and negotiable instruments simultaneously during the count. Allowing items to be moved could enable covering shortages.",
     "tip": "Simultaneous control prevents substitution—count all funds at once, nothing leaves until done.",
     "calculationRequired": false,
@@ -9823,12 +9823,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing cash held in foreign currencies, the auditor must also verify:",
     "options": {
-      "A": "That foreign currency transactions are prohibited by policy",
-      "B": "The appropriateness of exchange rates used for translation",
-      "C": "That all foreign currency was converted to domestic currency",
-      "D": "Central bank approval for holding foreign currency"
+      "A": "That all foreign currency was converted to domestic currency",
+      "B": "Central bank approval for holding foreign currency",
+      "C": "That foreign currency transactions are prohibited by policy",
+      "D": "The appropriateness of exchange rates used for translation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Foreign currency cash must be translated to the reporting currency at the appropriate exchange rate (typically the year-end rate). The auditor should verify that correct rates are used and translation adjustments are properly recorded.",
     "tip": "Foreign currency = verify rate source and proper translation at year-end rate.",
     "calculationRequired": false,
@@ -9844,12 +9844,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cash that is restricted for use in building construction should be:",
     "options": {
-      "A": "Excluded from the balance sheet entirely",
-      "B": "Separately classified and disclosed based on the nature of the restriction",
-      "C": "Combined with regular cash if material",
-      "D": "Reported as an intangible asset"
+      "A": "Separately classified and disclosed based on the nature of the restriction",
+      "B": "Combined with regular cash if material",
+      "C": "Reported as an intangible asset",
+      "D": "Excluded from the balance sheet entirely"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Restricted cash should be separately classified (current or noncurrent based on when restriction expires) and disclosed. The nature and terms of the restriction should be explained to users.",
     "tip": "Restricted cash = separate classification + disclosure of restriction nature and terms.",
     "calculationRequired": false,
@@ -9865,12 +9865,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor verifies deposits in transit by:",
     "options": {
-      "A": "Confirming with customers who made payments",
-      "B": "Tracing to the cutoff bank statement showing subsequent clearance",
-      "C": "Recounting the cash on hand at year-end",
-      "D": "Comparing to budgeted receipts"
+      "A": "Recounting the cash on hand at year-end",
+      "B": "Comparing to budgeted receipts",
+      "C": "Confirming with customers who made payments",
+      "D": "Tracing to the cutoff bank statement showing subsequent clearance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Deposits in transit at year-end should appear as cleared deposits in the cutoff bank statement shortly after year-end. Tracing to the cutoff statement confirms the deposit was valid and properly recorded.",
     "tip": "Deposits in transit should clear early in the cutoff statement period.",
     "calculationRequired": false,
@@ -9907,12 +9907,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor reviews check signing authority primarily to:",
     "options": {
-      "A": "Ensure compliance with bank requirements",
-      "B": "Test that disbursements are properly authorized",
-      "C": "Verify the mathematical accuracy of checks",
-      "D": "Confirm that checks are prenumbered"
+      "A": "Test that disbursements are properly authorized",
+      "B": "Verify the mathematical accuracy of checks",
+      "C": "Confirm that checks are prenumbered",
+      "D": "Ensure compliance with bank requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Reviewing check signing authority and testing a sample of checks for proper signatures helps ensure that disbursements were authorized by appropriate personnel with authority to commit company funds.",
     "tip": "Signing authority = authorization control. Test that signers had proper authority.",
     "calculationRequired": false,
@@ -9928,12 +9928,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should request that the cutoff bank statement be:",
     "options": {
-      "A": "Sent by the bank directly to the auditor",
-      "B": "Prepared by the client's accounting department",
-      "C": "Provided only if discrepancies are found",
-      "D": "Obtained from the client's files"
+      "A": "Obtained from the client's files",
+      "B": "Sent by the bank directly to the auditor",
+      "C": "Prepared by the client's accounting department",
+      "D": "Provided only if discrepancies are found"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "To ensure reliability and prevent alteration, the cutoff bank statement should be sent directly from the bank to the auditor. This provides unaltered evidence for testing year-end reconciling items.",
     "tip": "Direct from bank = more reliable evidence. Prevents client manipulation.",
     "calculationRequired": false,
@@ -9949,12 +9949,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has a bank overdraft in one account and positive balances in accounts at other banks. How should the overdraft be reported?",
     "options": {
-      "A": "Net the overdraft against positive balances at other banks",
-      "B": "Report the overdraft as a current liability",
-      "C": "Exclude the overdraft from the financial statements",
-      "D": "Report as a reduction to stockholders' equity"
+      "A": "Report as a reduction to stockholders' equity",
+      "B": "Net the overdraft against positive balances at other banks",
+      "C": "Report the overdraft as a current liability",
+      "D": "Exclude the overdraft from the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Bank overdrafts at one bank cannot be offset against positive balances at different banks. The overdraft should be reported as a current liability unless a right of offset exists with positive balances at the same bank.",
     "tip": "Overdrafts at different banks cannot be netted—report as liability.",
     "calculationRequired": false,
@@ -9970,12 +9970,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A lockbox system improves internal control over cash receipts by:",
     "options": {
-      "A": "Allowing faster check clearing",
-      "B": "Reducing employee access to cash before deposit",
-      "C": "Eliminating the need for bank reconciliations",
-      "D": "Reducing bank service charges"
+      "A": "Reducing bank service charges",
+      "B": "Allowing faster check clearing",
+      "C": "Reducing employee access to cash before deposit",
+      "D": "Eliminating the need for bank reconciliations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Lockbox systems route customer payments directly to a bank post office box, where the bank processes deposits before the company handles the funds. This reduces the opportunity for employee theft by eliminating direct employee access to cash.",
     "tip": "Lockbox = bank handles cash first. Employees never touch receipts.",
     "calculationRequired": false,
@@ -10012,12 +10012,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which investment qualifies as a cash equivalent?",
     "options": {
-      "A": "A six-month certificate of deposit",
-      "B": "A 90-day Treasury bill purchased when it has 60 days to maturity",
-      "C": "Common stock of a publicly traded company",
-      "D": "A bond maturing in one year"
+      "A": "A 90-day Treasury bill purchased when it has 60 days to maturity",
+      "B": "Common stock of a publicly traded company",
+      "C": "A bond maturing in one year",
+      "D": "A six-month certificate of deposit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cash equivalents are highly liquid investments with original maturities of three months or less. A 90-day T-bill purchased with only 60 days remaining qualifies because the maturity from the purchase date is within three months.",
     "tip": "Cash equivalents = 3 months or less maturity from acquisition date.",
     "calculationRequired": false,
@@ -10033,12 +10033,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor suspects lapping of cash receipts. Which procedure would be most effective in detecting this scheme?",
     "options": {
-      "A": "Confirming accounts receivable at year-end",
-      "B": "Comparing remittance advices to entries in customer accounts on a surprise basis",
-      "C": "Testing the bank reconciliation for accuracy",
-      "D": "Reviewing check endorsements for propriety"
+      "A": "Comparing remittance advices to entries in customer accounts on a surprise basis",
+      "B": "Testing the bank reconciliation for accuracy",
+      "C": "Reviewing check endorsements for propriety",
+      "D": "Confirming accounts receivable at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Lapping involves misappropriating receipts and covering with subsequent receipts from other customers. Surprise comparison of remittance advices to customer accounts may reveal timing delays between when a payment was received and when it was credited to the correct account.",
     "tip": "Lapping creates timing gaps—compare receipt dates to posting dates on surprise basis.",
     "calculationRequired": false,
@@ -10054,12 +10054,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor discovers an NSF check from a customer that was redeposited after year-end and cleared. The auditor should:",
     "options": {
-      "A": "Require an adjustment to reduce cash and increase receivables",
-      "B": "Evaluate whether cash is properly stated at year-end",
-      "C": "Ignore the item since it subsequently cleared",
-      "D": "Report this as a material weakness"
+      "A": "Ignore the item since it subsequently cleared",
+      "B": "Report this as a material weakness",
+      "C": "Require an adjustment to reduce cash and increase receivables",
+      "D": "Evaluate whether cash is properly stated at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An NSF check at year-end means the recorded cash does not represent available funds. The auditor should evaluate whether an adjustment is needed to properly state cash at year-end, regardless of subsequent events.",
     "tip": "NSF at year-end = cash overstated. Consider adjustment even if subsequently cleared.",
     "calculationRequired": false,
@@ -10096,12 +10096,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing the statement of cash flows, the auditor should:",
     "options": {
-      "A": "Prepare the statement independently and compare to client's version",
-      "B": "Trace significant amounts to supporting documentation",
-      "C": "Accept the statement if it agrees with the change in cash",
-      "D": "Only review for mathematical accuracy"
+      "A": "Trace significant amounts to supporting documentation",
+      "B": "Accept the statement if it agrees with the change in cash",
+      "C": "Only review for mathematical accuracy",
+      "D": "Prepare the statement independently and compare to client's version"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor should trace significant cash flow amounts to underlying documentation and test the accuracy of classifications (operating, investing, financing). Agreement with cash change alone doesn't verify proper classification.",
     "tip": "Cash flow statement audit = verify classifications and trace significant items to support.",
     "calculationRequired": false,
@@ -10117,12 +10117,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which duty should be segregated from the bank reconciliation function?",
     "options": {
-      "A": "Preparing the check register",
-      "B": "Signing checks and handling cash",
-      "C": "Approving vendor invoices",
-      "D": "Recording fixed asset additions"
+      "A": "Approving vendor invoices",
+      "B": "Recording fixed asset additions",
+      "C": "Preparing the check register",
+      "D": "Signing checks and handling cash"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The person preparing bank reconciliations should not have access to cash or check signing authority. If these duties are combined, the person could steal cash and manipulate the reconciliation to conceal the theft.",
     "tip": "Reconciliation preparer ≠ cash handler. Segregation prevents concealment of theft.",
     "calculationRequired": false,
@@ -10138,12 +10138,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should examine voided checks to determine whether:",
     "options": {
-      "A": "The checks were properly authorized before issuance",
-      "B": "The checks are properly defaced and retained",
-      "C": "The void amounts are immaterial",
-      "D": "Voided checks are reported on the income statement"
+      "A": "The checks are properly defaced and retained",
+      "B": "The void amounts are immaterial",
+      "C": "Voided checks are reported on the income statement",
+      "D": "The checks were properly authorized before issuance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Voided checks should be defaced (signature area mutilated) to prevent subsequent use and retained in sequence to account for all check numbers. This prevents unauthorized use of supposedly voided checks.",
     "tip": "Voided checks: deface and retain. Account for all check numbers in sequence.",
     "calculationRequired": false,
@@ -10180,12 +10180,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For large wire transfers, the most critical control is:",
     "options": {
-      "A": "Documentation of the business purpose",
-      "B": "Dual authorization with callback verification",
-      "C": "Review by the internal audit department",
-      "D": "Recording in the general ledger same day"
+      "A": "Dual authorization with callback verification",
+      "B": "Review by the internal audit department",
+      "C": "Recording in the general ledger same day",
+      "D": "Documentation of the business purpose"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Wire transfers are immediate and essentially irreversible. Dual authorization ensures no single person can initiate a transfer, and callback verification (bank calling to verify with a second person) provides independent confirmation before execution.",
     "tip": "Wires are instant and permanent—dual authorization + callback prevents fraud.",
     "calculationRequired": false,
@@ -10201,12 +10201,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective control in the cash disbursement cycle is:",
     "options": {
-      "A": "Using the same person to approve invoices and sign checks",
-      "B": "Requiring supporting documents be presented with checks for signing",
-      "C": "Allowing verbal authorization for recurring payments",
-      "D": "Having the accounts payable clerk mail signed checks"
+      "A": "Requiring supporting documents be presented with checks for signing",
+      "B": "Allowing verbal authorization for recurring payments",
+      "C": "Having the accounts payable clerk mail signed checks",
+      "D": "Using the same person to approve invoices and sign checks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Requiring supporting documents (invoice, receiving report, purchase order) to be presented when checks are signed enables the signer to verify the payment is valid before signing. This prevents payment without proper support.",
     "tip": "Supporting documents reviewed at signing = verification before authorization.",
     "calculationRequired": false,
@@ -10222,12 +10222,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test the completeness of cash accounts, the auditor should:",
     "options": {
-      "A": "Confirm only accounts shown in the general ledger",
-      "B": "Review bank statements obtained from the client",
-      "C": "Inquire about accounts at banks the client has previously used",
-      "D": "Accept management's representation that all accounts are disclosed"
+      "A": "Review bank statements obtained from the client",
+      "B": "Inquire about accounts at banks the client has previously used",
+      "C": "Accept management's representation that all accounts are disclosed",
+      "D": "Confirm only accounts shown in the general ledger"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The auditor should inquire about accounts at all banks where the client has or had relationships, including closed accounts. This helps identify undisclosed accounts that might contain misappropriated funds or hidden liabilities.",
     "tip": "Ask about all bank relationships, current and former, to find undisclosed accounts.",
     "calculationRequired": false,
@@ -10243,12 +10243,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After year-end, an auditor learns that a major customer's check included in year-end deposits was returned NSF and is uncollectible. This is:",
     "options": {
-      "A": "A recognized subsequent event requiring adjustment",
-      "B": "A nonrecognized subsequent event requiring disclosure only",
-      "C": "Not relevant since it occurred after year-end",
-      "D": "A subsequent event requiring reissuance of the financial statements"
+      "A": "A nonrecognized subsequent event requiring disclosure only",
+      "B": "Not relevant since it occurred after year-end",
+      "C": "A subsequent event requiring reissuance of the financial statements",
+      "D": "A recognized subsequent event requiring adjustment"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "The customer's uncollectibility likely existed at year-end (condition existed). The NSF check and ultimate uncollectibility provide evidence about year-end conditions, requiring adjustment to reduce cash and recognize bad debt.",
     "tip": "NSF after year-end = evidence of condition at year-end if customer was already in trouble.",
     "calculationRequired": false,
@@ -10264,12 +10264,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When cash transactions are processed through IT systems, the auditor should evaluate:",
     "options": {
-      "A": "Only manual controls, as IT controls are not relevant",
-      "B": "General IT controls and application controls affecting cash processing",
-      "C": "IT controls only if the client uses cloud computing",
-      "D": "Programming language used for the cash application"
+      "A": "IT controls only if the client uses cloud computing",
+      "B": "Programming language used for the cash application",
+      "C": "Only manual controls, as IT controls are not relevant",
+      "D": "General IT controls and application controls affecting cash processing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IT general controls (access, change management, operations) and application controls (input, processing, output) affect the reliability of cash transaction processing. The auditor must evaluate these controls when cash is processed through IT systems.",
     "tip": "IT processing of cash = evaluate both general controls and application controls.",
     "calculationRequired": false,
@@ -10306,12 +10306,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Generally Accepted Government Auditing Standards (GAGAS), also known as the Yellow Book, are issued by:",
     "options": {
-      "A": "The AICPA",
-      "B": "The Government Accountability Office (GAO)",
-      "C": "The Securities and Exchange Commission",
-      "D": "The Office of Management and Budget"
+      "A": "The Office of Management and Budget",
+      "B": "The AICPA",
+      "C": "The Government Accountability Office (GAO)",
+      "D": "The Securities and Exchange Commission"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "GAGAS (Yellow Book) is issued by the Government Accountability Office (GAO), the audit arm of Congress. These standards apply to audits of government entities and organizations receiving government funds.",
     "tip": "Yellow Book = GAO. Green Book (internal control) is also from GAO.",
     "calculationRequired": false,
@@ -10327,12 +10327,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A performance audit under GAGAS primarily evaluates:",
     "options": {
-      "A": "Whether financial statements are fairly presented",
-      "B": "Program effectiveness, economy, and efficiency",
-      "C": "Compliance with tax regulations",
-      "D": "Internal control over financial reporting only"
+      "A": "Internal control over financial reporting only",
+      "B": "Whether financial statements are fairly presented",
+      "C": "Program effectiveness, economy, and efficiency",
+      "D": "Compliance with tax regulations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Performance audits evaluate whether programs achieve intended results efficiently and effectively. Unlike financial audits, they focus on program operations rather than financial statement accuracy.",
     "tip": "Performance audits = effectiveness and efficiency. Financial audits = fair presentation.",
     "calculationRequired": false,
@@ -10348,12 +10348,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the Uniform Guidance, a non-federal entity that expends how much in federal awards during its fiscal year must have a Single Audit?",
     "options": {
-      "A": "$500,000 or more",
-      "B": "$750,000 or more",
-      "C": "$1,000,000 or more",
-      "D": "$100,000 or more"
+      "A": "$100,000 or more",
+      "B": "$500,000 or more",
+      "C": "$750,000 or more",
+      "D": "$1,000,000 or more"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The Uniform Guidance requires a Single Audit for non-federal entities expending $750,000 or more in federal awards during their fiscal year. Below this threshold, other compliance requirements may still apply.",
     "tip": "$750,000 = Single Audit threshold. Key number to remember.",
     "calculationRequired": false,
@@ -10390,12 +10390,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Single Audit, the determination of major programs is based on:",
     "options": {
-      "A": "The auditor's professional judgment alone",
-      "B": "A risk-based approach considering program size and prior audit findings",
-      "C": "Federal agency designation",
-      "D": "Programs that received funding increases over the prior year"
+      "A": "A risk-based approach considering program size and prior audit findings",
+      "B": "Federal agency designation",
+      "C": "Programs that received funding increases over the prior year",
+      "D": "The auditor's professional judgment alone"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Major program determination uses a risk-based approach considering total federal expenditures (Type A/B classification), prior audit findings, and inherent risk factors. The goal is to audit high-risk programs receiving significant funding.",
     "tip": "Major programs = size (Type A) + risk assessment. Not random selection.",
     "calculationRequired": false,
@@ -10411,12 +10411,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Compliance Supplement identifies types of compliance requirements for federal programs. Which of the following is NOT a typical compliance requirement category?",
     "options": {
-      "A": "Activities allowed or unallowed",
-      "B": "Cash management",
-      "C": "Employee satisfaction",
-      "D": "Eligibility"
+      "A": "Eligibility",
+      "B": "Activities allowed or unallowed",
+      "C": "Cash management",
+      "D": "Employee satisfaction"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The Compliance Supplement identifies compliance requirements such as activities allowed, allowable costs, cash management, eligibility, matching, period of performance, procurement, and reporting. Employee satisfaction is not a compliance category.",
     "tip": "Memorize key compliance types: allowed activities, eligibility, cash management, matching, procurement, reporting.",
     "calculationRequired": false,
@@ -10453,12 +10453,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Schedule of Expenditures of Federal Awards (SEFA) should include:",
     "options": {
-      "A": "Only cash receipts from federal sources",
-      "B": "Federal awards expended during the audit period, regardless of receipt timing",
-      "C": "All revenues from government sources",
-      "D": "Only major program expenditures"
+      "A": "All revenues from government sources",
+      "B": "Only major program expenditures",
+      "C": "Only cash receipts from federal sources",
+      "D": "Federal awards expended during the audit period, regardless of receipt timing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The SEFA includes all federal awards expended during the audit period, including pass-through awards. It shows the total federal expenditures by program and identifies CFDA numbers and pass-through entities.",
     "tip": "SEFA = expenditures (not receipts) by program with CFDA numbers.",
     "calculationRequired": false,
@@ -10474,12 +10474,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Single Audit, Type A programs are generally defined as:",
     "options": {
-      "A": "Programs with prior audit findings",
-      "B": "Programs exceeding a specific dollar threshold based on total federal expenditures",
-      "C": "Programs designated as high risk by the federal government",
-      "D": "The three largest federal programs regardless of amount"
+      "A": "Programs exceeding a specific dollar threshold based on total federal expenditures",
+      "B": "Programs designated as high risk by the federal government",
+      "C": "The three largest federal programs regardless of amount",
+      "D": "Programs with prior audit findings"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Type A programs are larger programs exceeding dollar thresholds based on total federal expenditures. Type B programs are below these thresholds. The classification determines the extent of testing required.",
     "tip": "Type A = larger programs based on size thresholds. Type B = smaller programs.",
     "calculationRequired": false,
@@ -10537,12 +10537,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GAGAS, auditors performing government audits must complete how many hours of CPE related to the government environment every two years?",
     "options": {
-      "A": "40 hours",
-      "B": "24 hours",
-      "C": "80 hours",
-      "D": "20 hours"
+      "A": "80 hours",
+      "B": "20 hours",
+      "C": "40 hours",
+      "D": "24 hours"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GAGAS requires auditors to complete at least 24 hours of CPE directly related to the government environment, government auditing, or the specific environment in which the audited entity operates every two years.",
     "tip": "Yellow Book CPE = 24 hours every 2 years in government-related topics.",
     "calculationRequired": false,
@@ -10558,12 +10558,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After completing a Single Audit, the Data Collection Form and reporting package must be submitted to:",
     "options": {
-      "A": "Each federal agency that provided funding",
-      "B": "The Federal Audit Clearinghouse",
-      "C": "The Government Accountability Office",
-      "D": "The state auditor's office"
+      "A": "The Government Accountability Office",
+      "B": "The state auditor's office",
+      "C": "Each federal agency that provided funding",
+      "D": "The Federal Audit Clearinghouse"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The Data Collection Form and Single Audit reporting package must be submitted to the Federal Audit Clearinghouse (FAC) within specified deadlines. The FAC serves as the central repository for all Single Audit reports.",
     "tip": "Federal Audit Clearinghouse = central repository for all Single Audits.",
     "calculationRequired": false,
@@ -10600,12 +10600,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A pass-through entity that awards federal funds to subrecipients must:",
     "options": {
-      "A": "Perform the Single Audit for all subrecipients",
-      "B": "Monitor subrecipient compliance and ensure required audits are performed",
-      "C": "Only verify that subrecipients are registered in SAM",
-      "D": "Have no responsibility once funds are passed through"
+      "A": "Only verify that subrecipients are registered in SAM",
+      "B": "Have no responsibility once funds are passed through",
+      "C": "Perform the Single Audit for all subrecipients",
+      "D": "Monitor subrecipient compliance and ensure required audits are performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Pass-through entities must monitor subrecipient compliance with federal requirements and verify that subrecipients meeting the $750,000 threshold have required audits performed. They also must follow up on audit findings.",
     "tip": "Pass-through = responsible for monitoring subrecipients, not just distributing funds.",
     "calculationRequired": false,
@@ -10621,12 +10621,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The OMB Compliance Supplement is used by auditors primarily to:",
     "options": {
-      "A": "Determine materiality for government audits",
-      "B": "Identify compliance requirements and suggested audit procedures for federal programs",
-      "C": "Calculate the Single Audit threshold",
-      "D": "Determine which programs are Type A"
+      "A": "Determine which programs are Type A",
+      "B": "Determine materiality for government audits",
+      "C": "Identify compliance requirements and suggested audit procedures for federal programs",
+      "D": "Calculate the Single Audit threshold"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The Compliance Supplement provides program-specific information about compliance requirements and suggested audit procedures. It is the primary reference for understanding what compliance areas apply to each federal program.",
     "tip": "Compliance Supplement = guidance on what to test and how for each program.",
     "calculationRequired": false,
@@ -10642,12 +10642,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A complete audit finding in a government audit report should include which elements?",
     "options": {
-      "A": "Condition and recommendation only",
-      "B": "Condition, criteria, cause, effect, and recommendation",
-      "C": "Dollar amount of questioned costs only",
-      "D": "Management's response only"
+      "A": "Management's response only",
+      "B": "Condition and recommendation only",
+      "C": "Condition, criteria, cause, effect, and recommendation",
+      "D": "Dollar amount of questioned costs only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Complete findings include: condition (what happened), criteria (what should have happened), cause (why it happened), effect (consequence), and recommendation (how to fix it). This provides context for understanding and correcting the issue.",
     "tip": "Finding elements: Condition + Criteria + Cause + Effect + Recommendation.",
     "calculationRequired": false,
@@ -10663,12 +10663,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An entity may qualify as a low-risk auditee under the Uniform Guidance if it meets certain criteria, including:",
     "options": {
-      "A": "First-year Single Audit with no findings",
-      "B": "No material weaknesses, unmodified opinions, and timely Single Audit submissions for prior periods",
-      "C": "Federal expenditures below $1 million",
-      "D": "Exclusively state-funded programs"
+      "A": "No material weaknesses, unmodified opinions, and timely Single Audit submissions for prior periods",
+      "B": "Federal expenditures below $1 million",
+      "C": "Exclusively state-funded programs",
+      "D": "First-year Single Audit with no findings"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Low-risk auditee status requires: unmodified opinions in prior audits, no material weaknesses in internal control, no going concern issues, and timely submission of prior Single Audit packages. This status reduces testing requirements.",
     "tip": "Low-risk auditee = clean history (opinions, controls, timely filing). Reduces testing burden.",
     "calculationRequired": false,
@@ -10684,12 +10684,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The relationship between GAGAS and GAAS is that:",
     "options": {
-      "A": "GAGAS replaces GAAS entirely",
-      "B": "GAGAS incorporates GAAS and adds additional requirements",
-      "C": "GAGAS and GAAS are completely separate and unrelated",
-      "D": "GAGAS applies only to performance audits"
+      "A": "GAGAS incorporates GAAS and adds additional requirements",
+      "B": "GAGAS and GAAS are completely separate and unrelated",
+      "C": "GAGAS applies only to performance audits",
+      "D": "GAGAS replaces GAAS entirely"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "GAGAS incorporates GAAS (and AICPA attestation standards) by reference and adds additional requirements specific to government auditing, such as ethics provisions, CPE requirements, and reporting standards.",
     "tip": "GAGAS = GAAS + additional government-specific requirements.",
     "calculationRequired": false,
@@ -10705,12 +10705,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GAGAS, an audit organization must have an external peer review:",
     "options": {
-      "A": "Annually",
-      "B": "At least every three years",
-      "C": "Only when requested by the audited entity",
-      "D": "Only for first-time GAGAS audits"
+      "A": "At least every three years",
+      "B": "Only when requested by the audited entity",
+      "C": "Only for first-time GAGAS audits",
+      "D": "Annually"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "GAGAS requires audit organizations to have an external peer review at least every three years. The peer review must be conducted by an organization not affiliated with the audit organization being reviewed.",
     "tip": "GAGAS peer review = every 3 years by external reviewers.",
     "calculationRequired": false,
@@ -10726,12 +10726,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GAGAS, a management participation threat exists when:",
     "options": {
-      "A": "Management disagrees with the auditor's findings",
-      "B": "The auditor takes on management's responsibilities",
-      "C": "The audit fee is based on audit results",
-      "D": "The auditor has a financial interest in the entity"
+      "A": "The audit fee is based on audit results",
+      "B": "The auditor has a financial interest in the entity",
+      "C": "Management disagrees with the auditor's findings",
+      "D": "The auditor takes on management's responsibilities"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A management participation threat exists when auditors perform management functions, such as making decisions for the entity or performing bookkeeping services. Under GAGAS, this threat generally cannot be mitigated to an acceptable level.",
     "tip": "GAGAS: Auditor ≠ manager. Cannot do management's job and then audit it.",
     "calculationRequired": false,
@@ -10747,12 +10747,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under federal cost principles, a cost is allowable if it is:",
     "options": {
-      "A": "Approved by the entity's management",
-      "B": "Necessary, reasonable, properly allocated, and compliant with grant terms",
-      "C": "Below a specific dollar threshold",
-      "D": "Included in the entity's approved budget"
+      "A": "Below a specific dollar threshold",
+      "B": "Included in the entity's approved budget",
+      "C": "Approved by the entity's management",
+      "D": "Necessary, reasonable, properly allocated, and compliant with grant terms"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For a cost to be allowable under federal grants, it must be necessary for the program, reasonable in amount, properly allocated to the grant, and compliant with specific grant terms and federal regulations.",
     "tip": "Allowable cost = necessary + reasonable + allocable + compliant with terms.",
     "calculationRequired": false,
@@ -10768,12 +10768,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GAGAS, audit reports should be made available to:",
     "options": {
-      "A": "Only the audited entity's management",
-      "B": "The audited entity, appropriate oversight bodies, and others authorized to receive the reports",
-      "C": "Only federal funding agencies",
-      "D": "The public upon request, without restrictions"
+      "A": "The public upon request, without restrictions",
+      "B": "Only the audited entity's management",
+      "C": "The audited entity, appropriate oversight bodies, and others authorized to receive the reports",
+      "D": "Only federal funding agencies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "GAGAS requires audit reports to be distributed to the audited entity, appropriate oversight bodies (legislative bodies, boards), and others authorized to receive the reports. Some reports may be restricted distribution.",
     "tip": "GAGAS reports go to entity + oversight bodies + authorized parties.",
     "calculationRequired": false,
@@ -10852,12 +10852,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Single Audit, the auditor must test internal control over compliance for:",
     "options": {
-      "A": "All federal programs",
-      "B": "Major programs only",
-      "C": "Programs with prior findings",
-      "D": "Programs exceeding $1 million"
+      "A": "Major programs only",
+      "B": "Programs with prior findings",
+      "C": "Programs exceeding $1 million",
+      "D": "All federal programs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor must plan and perform testing of internal control over compliance for each major program sufficient to support a low assessed level of control risk. Non-major programs are not subject to the same level of internal control testing.",
     "tip": "IC over compliance testing = major programs only in Single Audit.",
     "calculationRequired": false,
@@ -10873,12 +10873,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Known questioned costs must be reported if they exceed:",
     "options": {
-      "A": "$25,000 for any one finding",
-      "B": "The greater of $25,000 or 3% of total program expenditures",
-      "C": "$10,000 or any amount for fraud",
-      "D": "5% of total federal awards"
+      "A": "5% of total federal awards",
+      "B": "$25,000 for any one finding",
+      "C": "The greater of $25,000 or 3% of total program expenditures",
+      "D": "$10,000 or any amount for fraud"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Known questioned costs exceeding $25,000 for a single finding must be reported in the Schedule of Findings and Questioned Costs. For known questioned costs under $25,000, reporting is at auditor discretion unless fraud is involved.",
     "tip": "Questioned costs reporting threshold = $25,000 per finding.",
     "calculationRequired": false,
@@ -10894,12 +10894,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "CFDA numbers are used in Single Audits to:",
     "options": {
-      "A": "Calculate the audit fee",
-      "B": "Uniquely identify federal programs",
-      "C": "Determine the auditor's liability",
-      "D": "Set the Single Audit threshold"
+      "A": "Uniquely identify federal programs",
+      "B": "Determine the auditor's liability",
+      "C": "Set the Single Audit threshold",
+      "D": "Calculate the audit fee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The Catalog of Federal Domestic Assistance (CFDA) assigns unique numbers to each federal program. These numbers are used in the SEFA and audit reports to identify specific programs tested.",
     "tip": "CFDA number = unique identifier for each federal program.",
     "calculationRequired": false,
@@ -10915,12 +10915,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Single Audit report must address prior year audit findings by:",
     "options": {
-      "A": "Repeating the findings verbatim",
-      "B": "Including a summary schedule of prior audit findings and their status",
-      "C": "Ignoring findings that are more than one year old",
-      "D": "Reporting only findings that remain uncorrected"
+      "A": "Including a summary schedule of prior audit findings and their status",
+      "B": "Ignoring findings that are more than one year old",
+      "C": "Reporting only findings that remain uncorrected",
+      "D": "Repeating the findings verbatim"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditee must prepare a summary schedule showing the status of all prior audit findings, including whether corrective action was taken, the finding is no longer valid, or management disagrees. The auditor evaluates the accuracy of this schedule.",
     "tip": "Summary schedule of prior findings = show status of each previous finding.",
     "calculationRequired": false,
@@ -10978,12 +10978,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When assessing inherent risk for major programs, the auditor should consider:",
     "options": {
-      "A": "Only the dollar amount of federal expenditures",
-      "B": "Program complexity, prior audit findings, and changes in personnel or systems",
-      "C": "Whether the program has been audited before",
-      "D": "The auditor's familiarity with the program"
+      "A": "Whether the program has been audited before",
+      "B": "The auditor's familiarity with the program",
+      "C": "Only the dollar amount of federal expenditures",
+      "D": "Program complexity, prior audit findings, and changes in personnel or systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Inherent risk factors include program complexity, degree of federal oversight, prior audit experience, changes in personnel or systems, and the extent of subrecipient involvement. These factors help identify high-risk programs for testing.",
     "tip": "Program risk = complexity + changes + history + federal oversight + subrecipients.",
     "calculationRequired": false,
@@ -10999,12 +10999,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GAGAS, when fraud is identified that affects federal awards, the auditor must:",
     "options": {
-      "A": "Report it only to entity management",
-      "B": "Report it directly to the federal awarding agency or pass-through entity",
-      "C": "Wait until the audit is complete to report",
-      "D": "Report only if the amount exceeds materiality"
+      "A": "Wait until the audit is complete to report",
+      "B": "Report only if the amount exceeds materiality",
+      "C": "Report it only to entity management",
+      "D": "Report it directly to the federal awarding agency or pass-through entity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under GAGAS and Uniform Guidance, fraud affecting federal awards must be reported directly to the federal awarding agency or pass-through entity. This is in addition to reporting in the audit report and may require immediate reporting.",
     "tip": "Fraud affecting federal awards = direct reporting to federal agency required.",
     "calculationRequired": false,
@@ -11020,12 +11020,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cluster of programs in a Single Audit is:",
     "options": {
-      "A": "Programs from different federal agencies with similar purposes",
-      "B": "Related programs that are treated as a single program for major program determination",
-      "C": "Programs that must always be audited together",
-      "D": "The largest programs by dollar amount"
+      "A": "Programs that must always be audited together",
+      "B": "The largest programs by dollar amount",
+      "C": "Programs from different federal agencies with similar purposes",
+      "D": "Related programs that are treated as a single program for major program determination"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Certain related programs are grouped into clusters and treated as a single program for major program determination and testing. Common clusters include Student Financial Assistance and Research and Development.",
     "tip": "Clusters = related programs grouped as one for audit purposes (e.g., R&D, student aid).",
     "calculationRequired": false,
@@ -11041,12 +11041,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The most effective audit procedure to test the existence assertion for property, plant, and equipment is:",
     "options": {
-      "A": "Examining invoices and purchase documents",
-      "B": "Physical inspection of selected assets",
-      "C": "Reviewing depreciation calculations",
-      "D": "Confirming balances with management"
+      "A": "Reviewing depreciation calculations",
+      "B": "Confirming balances with management",
+      "C": "Examining invoices and purchase documents",
+      "D": "Physical inspection of selected assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Physical inspection provides direct evidence that assets recorded in the accounting records actually exist. While documentation testing supports other assertions, seeing the asset confirms its existence.",
     "tip": "Existence = see it. Physical inspection is the gold standard for fixed assets.",
     "calculationRequired": false,
@@ -11062,12 +11062,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test that recorded asset additions are properly supported, an auditor would:",
     "options": {
-      "A": "Trace from the asset register to purchase invoices",
-      "B": "Trace from purchase orders to the asset register",
-      "C": "Confirm additions with the vendor",
-      "D": "Review board minutes for all additions"
+      "A": "Trace from purchase orders to the asset register",
+      "B": "Confirm additions with the vendor",
+      "C": "Review board minutes for all additions",
+      "D": "Trace from the asset register to purchase invoices"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Vouching from the asset register to supporting documentation (invoices, contracts) tests that recorded additions actually occurred and are properly supported. This tests the occurrence/existence and valuation assertions.",
     "tip": "Vouching = records → support. Tests occurrence and proper recording.",
     "calculationRequired": false,
@@ -11083,12 +11083,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When testing depreciation expense, the auditor should verify that:",
     "options": {
-      "A": "Assets are depreciated using the same method as competitors",
-      "B": "The method, useful life, and salvage value are reasonable and consistently applied",
-      "C": "Depreciation expense equals one-twelfth of original cost per month",
-      "D": "All assets are fully depreciated within five years"
+      "A": "Depreciation expense equals one-twelfth of original cost per month",
+      "B": "All assets are fully depreciated within five years",
+      "C": "Assets are depreciated using the same method as competitors",
+      "D": "The method, useful life, and salvage value are reasonable and consistently applied"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor tests that depreciation methods, useful lives, and salvage values are reasonable for the nature of the assets and are consistently applied. Changes should be accounted for appropriately.",
     "tip": "Depreciation = method + useful life + salvage value. All must be reasonable and consistent.",
     "calculationRequired": false,
@@ -11104,12 +11104,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test the completeness assertion for fixed assets, an auditor would most likely:",
     "options": {
-      "A": "Select items from the asset register and locate the physical asset",
-      "B": "Select items during physical inspection and trace to the asset register",
-      "C": "Confirm asset balances with insurance companies",
-      "D": "Review depreciation expense for reasonableness"
+      "A": "Review depreciation expense for reasonableness",
+      "B": "Select items from the asset register and locate the physical asset",
+      "C": "Select items during physical inspection and trace to the asset register",
+      "D": "Confirm asset balances with insurance companies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Completeness testing traces from the source (physical assets) to the records (asset register). Selecting assets observed during inspection and tracing to records tests whether all existing assets are recorded.",
     "tip": "Completeness = physical → records. Ensure everything that exists is recorded.",
     "calculationRequired": false,
@@ -11125,12 +11125,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor suspects improper capitalization of expenses. Which procedure would best address this concern?",
     "options": {
-      "A": "Reviewing repairs and maintenance expense for items that should be capitalized",
-      "B": "Confirming asset balances with vendors",
-      "C": "Testing depreciation calculations",
-      "D": "Reviewing the asset register for fully depreciated items"
+      "A": "Testing depreciation calculations",
+      "B": "Reviewing the asset register for fully depreciated items",
+      "C": "Reviewing repairs and maintenance expense for items that should be capitalized",
+      "D": "Confirming asset balances with vendors"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Improper capitalization can go either direction. Reviewing repairs and maintenance for items exceeding the capitalization threshold or extending asset life helps identify costs that should have been capitalized.",
     "tip": "Review expense accounts for items that should be capitalized—test the policy threshold.",
     "calculationRequired": false,
@@ -11146,12 +11146,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When testing fixed asset disposals, the auditor should verify that:",
     "options": {
-      "A": "Gains on disposal were maximized",
-      "B": "The asset, accumulated depreciation, and any gain or loss were properly recorded",
-      "C": "Disposals were approved by shareholders",
-      "D": "Replaced assets had identical useful lives"
+      "A": "Disposals were approved by shareholders",
+      "B": "Replaced assets had identical useful lives",
+      "C": "Gains on disposal were maximized",
+      "D": "The asset, accumulated depreciation, and any gain or loss were properly recorded"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Disposal testing verifies that the asset cost and related accumulated depreciation were removed, proceeds were properly recorded, and any gain or loss was correctly calculated and classified.",
     "tip": "Disposal = remove cost + remove accumulated depreciation + record proceeds + recognize gain/loss.",
     "calculationRequired": false,
@@ -11167,12 +11167,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating whether assets are impaired, the auditor should:",
     "options": {
-      "A": "Require an independent appraisal for all fixed assets",
-      "B": "Assess whether triggering events exist and evaluate management's impairment analysis",
-      "C": "Test whether market value exceeds book value for each asset",
-      "D": "Rely on management's assertion that no impairment exists"
+      "A": "Assess whether triggering events exist and evaluate management's impairment analysis",
+      "B": "Test whether market value exceeds book value for each asset",
+      "C": "Rely on management's assertion that no impairment exists",
+      "D": "Require an independent appraisal for all fixed assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor evaluates whether indicators of impairment exist (triggering events) and, if so, assesses the reasonableness of management's impairment testing methodology and conclusions, including cash flow projections.",
     "tip": "Impairment: First identify triggers, then evaluate management's analysis if triggers exist.",
     "calculationRequired": false,
@@ -11209,12 +11209,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASC 842, when auditing a client's leases, the auditor should verify that:",
     "options": {
-      "A": "All leases are classified as operating leases",
-      "B": "Right-of-use assets and lease liabilities are properly recognized and measured",
-      "C": "Lease payments equal fair rental value",
-      "D": "Leases with related parties are excluded from the balance sheet"
+      "A": "Lease payments equal fair rental value",
+      "B": "Leases with related parties are excluded from the balance sheet",
+      "C": "All leases are classified as operating leases",
+      "D": "Right-of-use assets and lease liabilities are properly recognized and measured"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under ASC 842, lessees must recognize right-of-use assets and lease liabilities for most leases. The auditor verifies proper identification of leases, classification, measurement of assets and liabilities, and disclosure.",
     "tip": "ASC 842 = almost all leases on balance sheet. Test ROU asset and liability measurement.",
     "calculationRequired": false,
@@ -11251,12 +11251,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To verify the client has rights to fixed assets, the auditor should:",
     "options": {
-      "A": "Confirm the asset's location",
-      "B": "Review titles, deeds, or lease agreements",
-      "C": "Test depreciation calculations",
-      "D": "Observe the asset during the physical count"
+      "A": "Review titles, deeds, or lease agreements",
+      "B": "Test depreciation calculations",
+      "C": "Observe the asset during the physical count",
+      "D": "Confirm the asset's location"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Rights and obligations are tested by examining evidence of ownership such as titles, deeds, vehicle registrations, or lease documents that demonstrate the client has legal rights to the recorded assets.",
     "tip": "Rights = legal documentation proving ownership (titles, deeds, leases).",
     "calculationRequired": false,
@@ -11272,12 +11272,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If fixed assets are pledged as collateral for a loan, the auditor should ensure:",
     "options": {
-      "A": "The assets are removed from the balance sheet",
-      "B": "Appropriate disclosure is made in the financial statements",
-      "C": "The loan is paid off before year-end",
-      "D": "The assets are revalued to loan value"
+      "A": "Appropriate disclosure is made in the financial statements",
+      "B": "The loan is paid off before year-end",
+      "C": "The assets are revalued to loan value",
+      "D": "The assets are removed from the balance sheet"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Assets pledged as collateral remain on the balance sheet but require disclosure of the pledge. Users need to understand that these assets may not be available to satisfy other creditors if the company defaults.",
     "tip": "Pledged assets = stay on balance sheet but require disclosure of the encumbrance.",
     "calculationRequired": false,
@@ -11293,12 +11293,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Fully depreciated assets still in use should be:",
     "options": {
-      "A": "Removed from the accounting records immediately",
-      "B": "Retained in the records until disposed of",
-      "C": "Revalued to current market value",
-      "D": "Transferred to a separate contra account"
+      "A": "Transferred to a separate contra account",
+      "B": "Removed from the accounting records immediately",
+      "C": "Retained in the records until disposed of",
+      "D": "Revalued to current market value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Fully depreciated assets still in service should remain in the accounting records at cost less accumulated depreciation (net book value of zero) until retired or disposed of. This maintains accurate records for insurance and tax purposes.",
     "tip": "Fully depreciated ≠ remove from books. Keep until physical disposal.",
     "calculationRequired": false,
@@ -11314,12 +11314,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective internal control over fixed assets is:",
     "options": {
-      "A": "Depreciating all assets over the same useful life",
-      "B": "Assigning unique identification tags to each asset",
-      "C": "Requiring board approval for all asset purchases",
-      "D": "Using the same vendor for all asset purchases"
+      "A": "Assigning unique identification tags to each asset",
+      "B": "Requiring board approval for all asset purchases",
+      "C": "Using the same vendor for all asset purchases",
+      "D": "Depreciating all assets over the same useful life"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Unique identification tags allow assets to be tracked throughout their life, facilitate physical inventories, and help prevent theft or unauthorized movement. Tags link physical assets to accounting records.",
     "tip": "Asset tags = control and tracking mechanism. Enables physical-to-records reconciliation.",
     "calculationRequired": false,
@@ -11335,12 +11335,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing capitalized interest on a self-constructed asset, the auditor should verify:",
     "options": {
-      "A": "All interest expense during the year was capitalized",
-      "B": "Interest was capitalized only during the construction period based on qualifying expenditures",
-      "C": "Interest was capitalized at the company's highest borrowing rate",
-      "D": "Capitalized interest does not exceed total construction costs"
+      "A": "Capitalized interest does not exceed total construction costs",
+      "B": "All interest expense during the year was capitalized",
+      "C": "Interest was capitalized only during the construction period based on qualifying expenditures",
+      "D": "Interest was capitalized at the company's highest borrowing rate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Interest capitalization is limited to the construction period and based on qualifying expenditures. The auditor tests that interest capitalization began when construction started and ceased when the asset was substantially complete.",
     "tip": "Capitalized interest: Only during construction, only on qualifying expenditures.",
     "calculationRequired": false,
@@ -11356,12 +11356,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using an external appraiser to value fixed assets, the auditor should:",
     "options": {
-      "A": "Accept the appraiser's value without further testing",
-      "B": "Evaluate the appraiser's competence, objectivity, and methodology",
-      "C": "Require the appraiser to be approved by the SEC",
-      "D": "Use only appraisers employed by the client"
+      "A": "Require the appraiser to be approved by the SEC",
+      "B": "Use only appraisers employed by the client",
+      "C": "Accept the appraiser's value without further testing",
+      "D": "Evaluate the appraiser's competence, objectivity, and methodology"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor must evaluate the specialist's competence and objectivity, understand the methodology used, and assess whether the appraiser's findings are appropriate audit evidence for the assertion being tested.",
     "tip": "Specialist work requires auditor evaluation of competence, objectivity, and methodology.",
     "calculationRequired": false,
@@ -11398,12 +11398,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When should an asset be depreciated using component depreciation?",
     "options": {
-      "A": "Only when required by industry regulations",
-      "B": "When major components have significantly different useful lives",
-      "C": "When the asset exceeds the capitalization threshold",
-      "D": "Only for government-funded assets"
+      "A": "When major components have significantly different useful lives",
+      "B": "When the asset exceeds the capitalization threshold",
+      "C": "Only for government-funded assets",
+      "D": "Only when required by industry regulations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Component depreciation is appropriate when major parts of an asset have significantly different useful lives. Each component is depreciated separately over its useful life, providing more accurate matching of expense.",
     "tip": "Component depreciation = when parts have materially different lives (building vs roof).",
     "calculationRequired": false,
@@ -11419,12 +11419,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A periodic physical inventory of fixed assets helps ensure:",
     "options": {
-      "A": "Depreciation is calculated correctly",
-      "B": "Recorded assets exist and unrecorded assets are identified",
-      "C": "Asset values are updated to market",
-      "D": "Insurance coverage is adequate"
+      "A": "Asset values are updated to market",
+      "B": "Insurance coverage is adequate",
+      "C": "Depreciation is calculated correctly",
+      "D": "Recorded assets exist and unrecorded assets are identified"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Physical inventory of fixed assets verifies that recorded assets exist and are in use, and may identify unrecorded assets or assets that should have been removed from the books. This is an important control activity.",
     "tip": "Physical inventory of fixed assets = existence and completeness testing by the client.",
     "calculationRequired": false,
@@ -11461,12 +11461,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The cost of a purchased fixed asset includes:",
     "options": {
-      "A": "Purchase price only",
-      "B": "Purchase price plus all costs necessary to bring the asset to its intended use",
-      "C": "Purchase price less any trade discount",
-      "D": "Fair market value at date of purchase"
+      "A": "Purchase price less any trade discount",
+      "B": "Fair market value at date of purchase",
+      "C": "Purchase price only",
+      "D": "Purchase price plus all costs necessary to bring the asset to its intended use"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Asset cost includes the purchase price and all costs necessary to prepare the asset for its intended use, such as freight, installation, testing, and site preparation. Trade discounts reduce the recorded cost.",
     "tip": "Asset cost = all costs to get it ready for intended use, not just purchase price.",
     "calculationRequired": false,
@@ -11503,12 +11503,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an asset is temporarily idle, the auditor should verify that:",
     "options": {
-      "A": "Depreciation has been suspended during the idle period",
-      "B": "Depreciation continues and impairment is considered",
-      "C": "The asset is removed from the balance sheet",
-      "D": "The asset is reclassified as inventory"
+      "A": "The asset is removed from the balance sheet",
+      "B": "The asset is reclassified as inventory",
+      "C": "Depreciation has been suspended during the idle period",
+      "D": "Depreciation continues and impairment is considered"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Temporarily idle assets continue to be depreciated as the asset is still wearing out or becoming obsolete. Additionally, idle status may be an indicator of impairment requiring evaluation.",
     "tip": "Idle assets: depreciation continues + consider impairment indicators.",
     "calculationRequired": false,
@@ -11524,12 +11524,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under IFRS, if a company uses the revaluation model for a class of PPE, the auditor should verify:",
     "options": {
-      "A": "Revaluations are performed consistently for the entire class",
-      "B": "Only increases in value are recorded",
-      "C": "Revaluations are optional and can be selective",
-      "D": "Revaluation is required annually for all assets"
+      "A": "Only increases in value are recorded",
+      "B": "Revaluations are optional and can be selective",
+      "C": "Revaluation is required annually for all assets",
+      "D": "Revaluations are performed consistently for the entire class"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Under IFRS, if the revaluation model is elected, it must be applied consistently to an entire class of assets. Revaluations must be kept sufficiently current, and increases go to OCI while decreases typically go to expense.",
     "tip": "IFRS revaluation = whole class consistently, not cherry-picking assets.",
     "calculationRequired": false,
@@ -11545,12 +11545,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Required disclosures for property, plant, and equipment include:",
     "options": {
-      "A": "Names of vendors supplying the assets",
-      "B": "Depreciation methods and useful lives by major asset class",
-      "C": "Original purchase date for each asset",
-      "D": "Insurance coverage amounts"
+      "A": "Insurance coverage amounts",
+      "B": "Names of vendors supplying the assets",
+      "C": "Depreciation methods and useful lives by major asset class",
+      "D": "Original purchase date for each asset"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PPE disclosures must include depreciation methods and useful lives used, gross carrying amounts, accumulated depreciation, and information about pledged assets or significant commitments for construction.",
     "tip": "PPE disclosures = methods, useful lives, gross amounts, accumulated depreciation, pledges.",
     "calculationRequired": false,
@@ -11566,12 +11566,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An expenditure that extends an asset's useful life beyond original estimates should be:",
     "options": {
-      "A": "Expensed immediately",
-      "B": "Capitalized as a betterment",
-      "C": "Recorded as prepaid expense",
-      "D": "Charged to accumulated depreciation"
+      "A": "Charged to accumulated depreciation",
+      "B": "Expensed immediately",
+      "C": "Capitalized as a betterment",
+      "D": "Recorded as prepaid expense"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Betterments that extend useful life or improve efficiency should be capitalized. The auditor tests whether the client properly distinguishes between routine maintenance (expense) and capital improvements (capitalize).",
     "tip": "Extends life or improves function = capitalize. Maintains existing condition = expense.",
     "calculationRequired": false,
@@ -11587,12 +11587,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing land, the auditor should note that:",
     "options": {
-      "A": "Land should be depreciated over 40 years",
-      "B": "Land is not depreciated but land improvements are",
-      "C": "Land and buildings should always be combined",
-      "D": "Land should be revalued annually to market"
+      "A": "Land and buildings should always be combined",
+      "B": "Land should be revalued annually to market",
+      "C": "Land should be depreciated over 40 years",
+      "D": "Land is not depreciated but land improvements are"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Land has an indefinite useful life and is not depreciated. However, land improvements (parking lots, landscaping, etc.) have finite lives and are depreciated separately from the land.",
     "tip": "Land = no depreciation. Land improvements = depreciate separately.",
     "calculationRequired": false,
@@ -11650,12 +11650,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing assets owned through a joint venture, the auditor should:",
     "options": {
-      "A": "Exclude such assets from the audit",
-      "B": "Verify the client's proportionate share is properly reflected per the accounting method used",
-      "C": "Require consolidation of all joint venture assets",
-      "D": "Confirm ownership only with the joint venture partner"
+      "A": "Verify the client's proportionate share is properly reflected per the accounting method used",
+      "B": "Require consolidation of all joint venture assets",
+      "C": "Confirm ownership only with the joint venture partner",
+      "D": "Exclude such assets from the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor verifies that joint venture assets are accounted for appropriately under the applicable method (equity method or proportionate consolidation if permitted). The client's share should be properly reflected in the financial statements.",
     "tip": "Joint venture assets: verify proper method and proportionate share is correctly recorded.",
     "calculationRequired": false,
@@ -11671,12 +11671,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For internally developed software, costs should be capitalized starting when:",
     "options": {
-      "A": "The project is approved by management",
-      "B": "Technological feasibility has been established",
-      "C": "The software is placed in service",
-      "D": "All development costs have been incurred"
+      "A": "The software is placed in service",
+      "B": "All development costs have been incurred",
+      "C": "The project is approved by management",
+      "D": "Technological feasibility has been established"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For software developed for sale, costs are capitalized after technological feasibility is established. For internal-use software, capitalization begins during the application development stage after the preliminary project stage.",
     "tip": "Software capitalization starts at technological feasibility (sale) or application development stage (internal).",
     "calculationRequired": false,
@@ -11692,12 +11692,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Because fixed assets typically have few transactions, auditors commonly use a rollforward approach that:",
     "options": {
-      "A": "Tests ending balances only without reference to beginning balances",
-      "B": "Reconciles beginning balances, tests additions and disposals, and proves to ending balances",
-      "C": "Relies entirely on analytical procedures",
-      "D": "Tests only the largest five assets each year"
+      "A": "Reconciles beginning balances, tests additions and disposals, and proves to ending balances",
+      "B": "Relies entirely on analytical procedures",
+      "C": "Tests only the largest five assets each year",
+      "D": "Tests ending balances only without reference to beginning balances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The rollforward approach starts with verified beginning balances, tests current year additions and disposals, and reconciles to ending balances. This is efficient because fixed asset populations change relatively little year to year.",
     "tip": "PPE rollforward: Beginning balance + additions - disposals = ending balance. Test the changes.",
     "calculationRequired": false,
@@ -11713,12 +11713,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Reviewing board minutes can provide evidence about fixed assets by revealing:",
     "options": {
-      "A": "Depreciation calculations",
-      "B": "Authorized acquisitions, disposals, or pledges of significant assets",
-      "C": "Physical location of assets",
-      "D": "Vendor payment terms"
+      "A": "Physical location of assets",
+      "B": "Vendor payment terms",
+      "C": "Depreciation calculations",
+      "D": "Authorized acquisitions, disposals, or pledges of significant assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Board minutes may reveal authorization of major capital expenditures, significant asset disposals, or decisions to pledge assets as collateral. This helps identify transactions requiring audit attention and test authorization.",
     "tip": "Board minutes = authorization evidence + identify significant transactions for testing.",
     "calculationRequired": false,
@@ -11734,12 +11734,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An asset classified as held for sale should be:",
     "options": {
-      "A": "Continued to be depreciated normally",
-      "B": "Measured at lower of carrying amount or fair value less costs to sell",
-      "C": "Removed from the balance sheet immediately",
-      "D": "Revalued to current market value"
+      "A": "Revalued to current market value",
+      "B": "Continued to be depreciated normally",
+      "C": "Measured at lower of carrying amount or fair value less costs to sell",
+      "D": "Removed from the balance sheet immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Assets held for sale are measured at the lower of carrying amount or fair value less costs to sell. Depreciation ceases once classified as held for sale. The auditor tests whether classification criteria are met.",
     "tip": "Held for sale: stop depreciation + measure at lower of book or FV less selling costs.",
     "calculationRequired": false,
@@ -11755,12 +11755,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Assets received as donations should be recorded at:",
     "options": {
-      "A": "Zero since no cost was incurred",
-      "B": "Fair value at the date of donation",
-      "C": "The donor's book value",
-      "D": "Appraised value when sold"
+      "A": "Appraised value when sold",
+      "B": "Zero since no cost was incurred",
+      "C": "Fair value at the date of donation",
+      "D": "The donor's book value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Donated assets are recorded at fair value at the date of donation, with a corresponding credit to contribution revenue (or contra expense for governmental). The auditor verifies fair value determination and proper recording.",
     "tip": "Donated assets = fair value at donation date. Must determine FV even though no cash exchanged.",
     "calculationRequired": false,
@@ -11797,12 +11797,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A component auditor is an auditor who:",
     "options": {
-      "A": "Audits only the parent company",
-      "B": "Performs work on a component for the group audit",
-      "C": "Reviews the work of the group engagement team",
-      "D": "Specializes in IT auditing"
+      "A": "Performs work on a component for the group audit",
+      "B": "Reviews the work of the group engagement team",
+      "C": "Specializes in IT auditing",
+      "D": "Audits only the parent company"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A component auditor performs audit work on the financial information of a component (subsidiary, division, branch) for purposes of the group audit, at the request of the group engagement team.",
     "tip": "Component auditor = auditor working on a piece (component) of the group.",
     "calculationRequired": false,
@@ -11818,12 +11818,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Component materiality in a group audit should be set:",
     "options": {
-      "A": "At the same amount as group materiality",
-      "B": "Lower than group materiality to reduce aggregation risk",
-      "C": "Based on the component's stand-alone financial statements",
-      "D": "Only if the component is publicly traded"
+      "A": "Lower than group materiality to reduce aggregation risk",
+      "B": "Based on the component's stand-alone financial statements",
+      "C": "Only if the component is publicly traded",
+      "D": "At the same amount as group materiality"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Component materiality must be set lower than group materiality to reduce the risk that aggregate uncorrected misstatements across components exceed group materiality. This addresses aggregation risk in the group.",
     "tip": "Component materiality < group materiality. Reduces risk of aggregate misstatements exceeding group threshold.",
     "calculationRequired": false,
@@ -11839,12 +11839,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A component is considered significant if:",
     "options": {
-      "A": "It operates in a foreign country",
-      "B": "It is individually financially significant or contains significant risks of material misstatement",
-      "C": "It was acquired during the current year",
-      "D": "It uses a different accounting software"
+      "A": "It is individually financially significant or contains significant risks of material misstatement",
+      "B": "It was acquired during the current year",
+      "C": "It uses a different accounting software",
+      "D": "It operates in a foreign country"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Components are significant either because of individual financial significance (size relative to the group) or because they contain significant risks of material misstatement to the group financial statements due to specific risks or circumstances.",
     "tip": "Significant component = significant size OR significant risks. Both criteria matter.",
     "calculationRequired": false,
@@ -11860,12 +11860,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Before accepting a group audit engagement, the group engagement partner should evaluate:",
     "options": {
-      "A": "Only the parent company's internal controls",
-      "B": "Whether it will be possible to obtain sufficient appropriate evidence about the group",
-      "C": "The number of component auditors required",
-      "D": "Whether all components are profitable"
+      "A": "Whether all components are profitable",
+      "B": "Only the parent company's internal controls",
+      "C": "Whether it will be possible to obtain sufficient appropriate evidence about the group",
+      "D": "The number of component auditors required"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The group engagement partner must determine whether sufficient appropriate audit evidence can be reasonably expected to be obtained to form an opinion on the group financial statements, considering restrictions, access, and component auditor involvement.",
     "tip": "Acceptance = can we get enough evidence across all components for group opinion?",
     "calculationRequired": false,
@@ -11881,12 +11881,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Instructions from the group engagement team to component auditors should include:",
     "options": {
-      "A": "Only the component materiality amount",
-      "B": "Work to be performed, timing, and a request for relevant communications",
-      "C": "The group audit opinion before it is issued",
-      "D": "Names of all other component auditors"
+      "A": "Names of all other component auditors",
+      "B": "Only the component materiality amount",
+      "C": "Work to be performed, timing, and a request for relevant communications",
+      "D": "The group audit opinion before it is issued"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Instructions should specify the work to be performed, timing and deadlines, component materiality, reporting requirements, and request communications about matters such as fraud, non-compliance, and significant deficiencies.",
     "tip": "Instructions = what to do, when, materiality, and what to communicate back.",
     "calculationRequired": false,
@@ -11902,12 +11902,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement team's involvement in the work of component auditors:",
     "options": {
-      "A": "Is optional if component auditors are from the same firm",
-      "B": "Increases when component risk is higher or when the component auditor is less known",
-      "C": "Is limited to reviewing the component auditor's report",
-      "D": "Requires performing all substantive procedures at each component"
+      "A": "Is limited to reviewing the component auditor's report",
+      "B": "Requires performing all substantive procedures at each component",
+      "C": "Is optional if component auditors are from the same firm",
+      "D": "Increases when component risk is higher or when the component auditor is less known"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The nature, timing, and extent of the group engagement team's involvement varies based on the significance of the component, identified risks, and the team's understanding of the component auditor's competence and independence.",
     "tip": "More involvement when: higher risk component, less familiar with component auditor.",
     "calculationRequired": false,
@@ -11923,12 +11923,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating a component auditor's competence, the group engagement team should consider:",
     "options": {
-      "A": "The size of the component auditor's firm only",
-      "B": "Professional qualifications, understanding of auditing standards, and industry expertise",
-      "C": "Whether the component auditor charges lower fees",
-      "D": "The component auditor's relationship with management"
+      "A": "Whether the component auditor charges lower fees",
+      "B": "The component auditor's relationship with management",
+      "C": "The size of the component auditor's firm only",
+      "D": "Professional qualifications, understanding of auditing standards, and industry expertise"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The group engagement team evaluates the component auditor's professional qualifications, understanding of the applicable auditing and accounting standards, industry knowledge, resources, and quality control procedures.",
     "tip": "Competence = qualifications + standards knowledge + industry expertise + QC.",
     "calculationRequired": false,
@@ -11986,12 +11986,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In auditing the consolidation process, the group engagement team should test:",
     "options": {
-      "A": "Only the parent company's accounting system",
-      "B": "Consolidation adjustments, eliminations, and reclassifications",
-      "C": "Each component's stand-alone financial statements",
-      "D": "The IT systems at all locations"
+      "A": "The IT systems at all locations",
+      "B": "Only the parent company's accounting system",
+      "C": "Consolidation adjustments, eliminations, and reclassifications",
+      "D": "Each component's stand-alone financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The group engagement team tests the consolidation process including elimination of intercompany transactions, proper accounting adjustments for different accounting policies, and reclassifications needed for group presentation.",
     "tip": "Consolidation testing = intercompany eliminations + policy adjustments + reclassifications.",
     "calculationRequired": false,
@@ -12007,12 +12007,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the group engagement team cannot obtain sufficient evidence about a significant component because of access restrictions, the auditor should:",
     "options": {
-      "A": "Exclude the component from the consolidation",
-      "B": "Consider the effect on the audit opinion, which may require modification",
-      "C": "Accept management's representations about the component",
-      "D": "Resign from the entire group engagement"
+      "A": "Resign from the entire group engagement",
+      "B": "Exclude the component from the consolidation",
+      "C": "Consider the effect on the audit opinion, which may require modification",
+      "D": "Accept management's representations about the component"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Access restrictions that prevent obtaining sufficient evidence about a significant component represent a scope limitation. The auditor should consider whether a qualified opinion or disclaimer of opinion is appropriate.",
     "tip": "Access restriction = potential scope limitation → consider modified opinion.",
     "calculationRequired": false,
@@ -12028,12 +12028,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement team should communicate to group governance:",
     "options": {
-      "A": "Only matters required to be communicated for a single entity audit",
-      "B": "Matters including an overview of the type of work performed on components",
-      "C": "Details of all component auditor work papers",
-      "D": "Component auditor billing rates"
+      "A": "Matters including an overview of the type of work performed on components",
+      "B": "Details of all component auditor work papers",
+      "C": "Component auditor billing rates",
+      "D": "Only matters required to be communicated for a single entity audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Communications with group governance include matters from a single entity audit plus group-specific matters such as overview of work performed on components, significant concerns about component auditor quality, and limitations on group audit scope.",
     "tip": "Group governance communications = standard items + overview of component work approach.",
     "calculationRequired": false,
@@ -12049,12 +12049,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current U.S. GAAS, the group auditor's report:",
     "options": {
-      "A": "Must reference all component auditors",
-      "B": "Should not reference component auditors when assuming responsibility for their work",
-      "C": "Always divides responsibility with component auditors",
-      "D": "Cannot be issued until all component reports are finalized"
+      "A": "Cannot be issued until all component reports are finalized",
+      "B": "Must reference all component auditors",
+      "C": "Should not reference component auditors when assuming responsibility for their work",
+      "D": "Always divides responsibility with component auditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When the group auditor assumes responsibility for the component auditor's work, no reference to the component auditor is made in the group audit report. The group auditor takes full responsibility for the group opinion.",
     "tip": "No reference = group auditor assumes full responsibility. Reference = divides responsibility.",
     "calculationRequired": false,
@@ -12070,12 +12070,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the group auditor decides to reference a component auditor in the audit report, the report should:",
     "options": {
-      "A": "Name the component auditor",
-      "B": "Indicate the portion of financial statements audited by the other auditor",
-      "C": "Include the component auditor's opinion",
-      "D": "Explain why the group auditor did not assume responsibility"
+      "A": "Indicate the portion of financial statements audited by the other auditor",
+      "B": "Include the component auditor's opinion",
+      "C": "Explain why the group auditor did not assume responsibility",
+      "D": "Name the component auditor"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When dividing responsibility, the report should indicate the magnitude (percentage or dollar amounts) of the portion audited by other auditors. The component auditor is not named, and this divided responsibility approach is permitted under U.S. standards.",
     "tip": "Divided responsibility: indicate magnitude of other auditor's portion, don't name them.",
     "calculationRequired": false,
@@ -12091,12 +12091,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For components that are not individually significant, the group engagement team may:",
     "options": {
-      "A": "Perform no procedures whatsoever",
-      "B": "Perform analytical procedures at the group level or select some components for testing",
-      "C": "Require full audits of all such components",
-      "D": "Ignore them in the group audit"
+      "A": "Ignore them in the group audit",
+      "B": "Perform no procedures whatsoever",
+      "C": "Perform analytical procedures at the group level or select some components for testing",
+      "D": "Require full audits of all such components"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "For non-significant components, the group engagement team may perform analytical procedures at the group level or select some components for specific procedures to achieve desired coverage. Full audits are not required.",
     "tip": "Non-significant components = analytics or selective testing. Balance coverage with efficiency.",
     "calculationRequired": false,
@@ -12133,12 +12133,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement team's documentation should include:",
     "options": {
-      "A": "All component auditor work papers",
-      "B": "Analysis of components, work performed, and communications with component auditors",
-      "C": "Only the consolidated financial statements",
-      "D": "A copy of each component's audit report"
+      "A": "Only the consolidated financial statements",
+      "B": "A copy of each component's audit report",
+      "C": "All component auditor work papers",
+      "D": "Analysis of components, work performed, and communications with component auditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Group audit documentation includes the group strategy and plan, analysis of components, determination of significant components and risks, instructions to and communications from component auditors, and conclusions reached.",
     "tip": "Group documentation = strategy + component analysis + instructions + communications + conclusions.",
     "calculationRequired": false,
@@ -12154,12 +12154,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement team's review of component auditor work should include:",
     "options": {
-      "A": "Re-performing all component auditor procedures",
-      "B": "Evaluating significant findings and conclusions and their effect on the group",
-      "C": "Only reviewing the component auditor's opinion",
-      "D": "Confirming component auditor billing was reasonable"
+      "A": "Only reviewing the component auditor's opinion",
+      "B": "Confirming component auditor billing was reasonable",
+      "C": "Re-performing all component auditor procedures",
+      "D": "Evaluating significant findings and conclusions and their effect on the group"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The group engagement team evaluates the component auditor's communications and significant findings, discusses significant matters with the component auditor or management, and determines whether further procedures are needed.",
     "tip": "Review = evaluate findings and conclusions, discuss significant matters, assess effect on group.",
     "calculationRequired": false,
@@ -12175,12 +12175,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a group audit, intercompany transactions should be:",
     "options": {
-      "A": "Reported separately in the consolidated statements",
-      "B": "Eliminated in the consolidation process",
-      "C": "Audited only at the parent company",
-      "D": "Confirmed with external parties"
+      "A": "Confirmed with external parties",
+      "B": "Reported separately in the consolidated statements",
+      "C": "Eliminated in the consolidation process",
+      "D": "Audited only at the parent company"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Intercompany transactions and balances must be eliminated in consolidation so that the group financial statements present the financial position and results as if the group were a single entity.",
     "tip": "Intercompany = eliminate. Consolidated F/S show one economic entity.",
     "calculationRequired": false,
@@ -12196,12 +12196,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a component has a different fiscal year-end than the group, the auditor should:",
     "options": {
-      "A": "Automatically exclude the component from the consolidation",
-      "B": "Consider whether adjustments are needed and perform procedures on significant transactions in the intervening period",
-      "C": "Change the component's fiscal year-end",
-      "D": "Accept the component's financial information without adjustment"
+      "A": "Consider whether adjustments are needed and perform procedures on significant transactions in the intervening period",
+      "B": "Change the component's fiscal year-end",
+      "C": "Accept the component's financial information without adjustment",
+      "D": "Automatically exclude the component from the consolidation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When component year-ends differ from the group, the auditor considers whether adjustments or additional financial information is needed, and performs procedures for significant transactions in the intervening period that could affect the group statements.",
     "tip": "Different year-ends: may need adjustments + test significant transactions in gap period.",
     "calculationRequired": false,
@@ -12217,12 +12217,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a component uses a different accounting framework than the group, the group engagement team should:",
     "options": {
-      "A": "Accept the component's financial information as reported",
-      "B": "Ensure appropriate adjustments are made to conform to the group framework",
-      "C": "Require the component to change its accounting framework",
-      "D": "Exclude the component from the group"
+      "A": "Exclude the component from the group",
+      "B": "Accept the component's financial information as reported",
+      "C": "Ensure appropriate adjustments are made to conform to the group framework",
+      "D": "Require the component to change its accounting framework"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When components use different accounting frameworks (e.g., local GAAP vs. U.S. GAAP), appropriate adjustments must be made to convert the component's financial information to the group's framework before consolidation.",
     "tip": "Different framework = convert to group GAAP before consolidating.",
     "calculationRequired": false,
@@ -12238,12 +12238,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A site visit to a component auditor may be appropriate when:",
     "options": {
-      "A": "The component is located in a different country",
-      "B": "The component is significant and there are concerns about the component auditor or specific risks",
-      "C": "The group engagement partner has travel budget available",
-      "D": "The component auditor requests a visit"
+      "A": "The group engagement partner has travel budget available",
+      "B": "The component auditor requests a visit",
+      "C": "The component is located in a different country",
+      "D": "The component is significant and there are concerns about the component auditor or specific risks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Site visits may be appropriate for significant components, especially when there are concerns about component auditor quality or significant risks exist at the component. This allows direct involvement in the component audit work.",
     "tip": "Site visit when: significant component + concerns about auditor or risks = worth the visit.",
     "calculationRequired": false,
@@ -12259,12 +12259,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Professional skepticism in a group audit requires the group engagement team to:",
     "options": {
-      "A": "Accept component auditor conclusions without question if from a reputable firm",
-      "B": "Critically evaluate evidence and communications from component auditors",
-      "C": "Assume component auditors have made errors",
-      "D": "Distrust all component auditor work"
+      "A": "Assume component auditors have made errors",
+      "B": "Distrust all component auditor work",
+      "C": "Accept component auditor conclusions without question if from a reputable firm",
+      "D": "Critically evaluate evidence and communications from component auditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Professional skepticism requires critical evaluation of component auditor communications and conclusions. The group team should not accept conclusions without appropriate evaluation, regardless of the component auditor's reputation.",
     "tip": "Skepticism = critical evaluation, not blind acceptance or blanket distrust.",
     "calculationRequired": false,
@@ -12280,12 +12280,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Component auditors should be instructed to communicate to the group engagement team:",
     "options": {
-      "A": "Only confirmed fraud cases",
-      "B": "Identified or suspected fraud involving management, employees with significant roles, or causing material misstatement",
-      "C": "Only fraud above component materiality",
-      "D": "Fraud only if management requests disclosure"
+      "A": "Fraud only if management requests disclosure",
+      "B": "Only confirmed fraud cases",
+      "C": "Identified or suspected fraud involving management, employees with significant roles, or causing material misstatement",
+      "D": "Only fraud above component materiality"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Component auditors should communicate identified or suspected fraud involving component management, employees with significant control roles, or fraud that could cause material misstatement of the group financial statements.",
     "tip": "Component auditors must report fraud indicators—management involvement or material impact.",
     "calculationRequired": false,
@@ -12301,12 +12301,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Aggregation risk in a group audit is the risk that:",
     "options": {
-      "A": "The group has too many components to audit",
-      "B": "Aggregate uncorrected misstatements and undetected misstatements exceed group materiality",
-      "C": "Component auditors use different audit software",
-      "D": "Financial statements cannot be properly consolidated"
+      "A": "Component auditors use different audit software",
+      "B": "Financial statements cannot be properly consolidated",
+      "C": "The group has too many components to audit",
+      "D": "Aggregate uncorrected misstatements and undetected misstatements exceed group materiality"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Aggregation risk is the risk that misstatements within individual components, when aggregated across the group, may exceed group materiality even though individual component misstatements do not exceed component materiality.",
     "tip": "Aggregation risk = small misstatements at each component add up to material at group level.",
     "calculationRequired": false,
@@ -12322,12 +12322,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement partner is responsible for:",
     "options": {
-      "A": "The audit work at each component",
-      "B": "The direction, supervision, and performance of the group audit and the group opinion",
-      "C": "Only the parent company audit",
-      "D": "Component auditor fee negotiations"
+      "A": "Only the parent company audit",
+      "B": "Component auditor fee negotiations",
+      "C": "The audit work at each component",
+      "D": "The direction, supervision, and performance of the group audit and the group opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The group engagement partner has overall responsibility for managing and achieving quality on the group audit engagement, including direction and supervision of the group audit and forming the opinion on group financial statements.",
     "tip": "Group partner = ultimately responsible for entire group audit, not just parent.",
     "calculationRequired": false,
@@ -12343,12 +12343,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a component auditor identifies misstatements, the group engagement team should:",
     "options": {
-      "A": "Ignore them if below component materiality",
-      "B": "Consider the effect on the group financial statements and aggregate with other misstatements",
-      "C": "Require immediate correction by component management",
-      "D": "Report them to the component's audit committee only"
+      "A": "Require immediate correction by component management",
+      "B": "Report them to the component's audit committee only",
+      "C": "Ignore them if below component materiality",
+      "D": "Consider the effect on the group financial statements and aggregate with other misstatements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The group engagement team evaluates component misstatements for their effect on the group financial statements, aggregates them with misstatements from other components, and considers whether uncorrected misstatements affect the group opinion.",
     "tip": "Aggregate component misstatements and evaluate effect on group = holistic view.",
     "calculationRequired": false,
@@ -12406,12 +12406,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a group uses a shared service center for processing transactions, the group engagement team should:",
     "options": {
-      "A": "Treat the service center as a separate component requiring full audit",
-      "B": "Consider controls at the service center and coordinate testing of relevant processes",
-      "C": "Ignore the service center if it is not a legal entity",
-      "D": "Only test transactions at individual components"
+      "A": "Only test transactions at individual components",
+      "B": "Treat the service center as a separate component requiring full audit",
+      "C": "Consider controls at the service center and coordinate testing of relevant processes",
+      "D": "Ignore the service center if it is not a legal entity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Shared service centers process transactions for multiple components, so the group engagement team must consider controls at the service center and ensure appropriate testing covers the centralized processes affecting component financial information.",
     "tip": "Shared services = test controls centrally to cover multiple components efficiently.",
     "calculationRequired": false,
@@ -12427,12 +12427,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement team should achieve sufficient coverage of the group financial statements by:",
     "options": {
-      "A": "Auditing only the five largest components",
-      "B": "Combining audits of significant components with procedures on other components",
-      "C": "Performing analytics on consolidated totals only",
-      "D": "Relying on the internal audit function"
+      "A": "Performing analytics on consolidated totals only",
+      "B": "Relying on the internal audit function",
+      "C": "Auditing only the five largest components",
+      "D": "Combining audits of significant components with procedures on other components"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sufficient coverage is achieved through a combination of audits of significant components, testing for significant risks at components, and analytical or other procedures for remaining components, providing reasonable assurance about the group.",
     "tip": "Coverage = audit significant components + selective testing + analytics for remainder.",
     "calculationRequired": false,
@@ -12448,12 +12448,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a component has a statutory audit performed for local regulatory purposes, the group engagement team:",
     "options": {
-      "A": "Can rely on it without additional procedures",
-      "B": "Should evaluate whether the statutory audit meets group audit needs and request additional procedures if necessary",
-      "C": "Must disregard the statutory audit entirely",
-      "D": "Should request the statutory auditor resign"
+      "A": "Must disregard the statutory audit entirely",
+      "B": "Should request the statutory auditor resign",
+      "C": "Can rely on it without additional procedures",
+      "D": "Should evaluate whether the statutory audit meets group audit needs and request additional procedures if necessary"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Statutory audits may not address all matters relevant to the group audit or may use different materiality. The group engagement team evaluates whether additional procedures are needed to meet group audit objectives.",
     "tip": "Statutory audit ≠ automatic group audit coverage. May need additional procedures.",
     "calculationRequired": false,
@@ -12469,12 +12469,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The group engagement team's understanding of the group should include:",
     "options": {
-      "A": "Only the parent company's operations",
-      "B": "The group structure, components, and consolidation process",
-      "C": "Names of all employees at each component",
-      "D": "Historical stock prices"
+      "A": "The group structure, components, and consolidation process",
+      "B": "Names of all employees at each component",
+      "C": "Historical stock prices",
+      "D": "Only the parent company's operations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The group engagement team must understand the group structure including which entities are included, their relative significance, how they are controlled or influenced, and the consolidation process including any centralized activities.",
     "tip": "Understand the whole group: structure + components + how it all fits together.",
     "calculationRequired": false,
@@ -12490,12 +12490,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating variable interest entities (VIEs) in a group audit, the auditor should:",
     "options": {
-      "A": "Exclude VIEs from the group since they are not subsidiaries",
-      "B": "Evaluate whether VIEs should be consolidated and test the consolidation determination",
-      "C": "Only consider VIEs if they are publicly traded",
-      "D": "Accept management's determination without testing"
+      "A": "Evaluate whether VIEs should be consolidated and test the consolidation determination",
+      "B": "Only consider VIEs if they are publicly traded",
+      "C": "Accept management's determination without testing",
+      "D": "Exclude VIEs from the group since they are not subsidiaries"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor evaluates whether the group has properly identified VIEs and determined which should be consolidated based on the primary beneficiary criteria. The consolidation determination and any VIE disclosures should be tested.",
     "tip": "VIE = test the consolidation determination, not just accept it. Primary beneficiary analysis matters.",
     "calculationRequired": false,
@@ -12511,12 +12511,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A management's specialist is an individual or organization with expertise that:",
     "options": {
-      "A": "Is engaged by the auditor to assist with the audit",
-      "B": "Is used by management to assist in preparing the financial statements",
-      "C": "Reviews the auditor's work for quality control",
-      "D": "Provides legal services to the audit firm"
+      "A": "Is used by management to assist in preparing the financial statements",
+      "B": "Reviews the auditor's work for quality control",
+      "C": "Provides legal services to the audit firm",
+      "D": "Is engaged by the auditor to assist with the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A management's specialist provides expertise to help management prepare the financial statements or develop estimates. Examples include actuaries valuing pension obligations or appraisers valuing assets.",
     "tip": "Management's specialist = helps management, not the auditor. Think actuaries, appraisers.",
     "calculationRequired": false,
@@ -12532,12 +12532,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor's specialist is engaged to:",
     "options": {
-      "A": "Prepare the client's financial statements",
-      "B": "Assist the auditor in obtaining sufficient appropriate audit evidence",
-      "C": "Manage the audit engagement",
-      "D": "Approve the audit opinion"
+      "A": "Manage the audit engagement",
+      "B": "Approve the audit opinion",
+      "C": "Prepare the client's financial statements",
+      "D": "Assist the auditor in obtaining sufficient appropriate audit evidence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An auditor's specialist is engaged by the auditor to assist in obtaining sufficient appropriate audit evidence in areas requiring specialized expertise that the auditor lacks.",
     "tip": "Auditor's specialist = helps auditor get evidence, not helps client with F/S.",
     "calculationRequired": false,
@@ -12553,12 +12553,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using work of a specialist, the auditor should evaluate the specialist's:",
     "options": {
-      "A": "Political affiliations and personal beliefs",
-      "B": "Competence, capabilities, and objectivity",
-      "C": "Fee structure compared to industry averages",
-      "D": "Length of relationship with the client"
+      "A": "Length of relationship with the client",
+      "B": "Political affiliations and personal beliefs",
+      "C": "Competence, capabilities, and objectivity",
+      "D": "Fee structure compared to industry averages"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor evaluates the specialist's competence (qualifications, certifications, experience), capabilities (ability to perform the work), and objectivity (circumstances affecting independence).",
     "tip": "Evaluate specialist: competent + capable + objective. The three C's (well, CCO).",
     "calculationRequired": false,
@@ -12574,12 +12574,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating work performed by a specialist, the auditor should:",
     "options": {
-      "A": "Accept the specialist's conclusions without question",
-      "B": "Evaluate whether the work is adequate for audit purposes",
-      "C": "Re-perform all specialist procedures",
-      "D": "Only review the specialist's credentials"
+      "A": "Only review the specialist's credentials",
+      "B": "Accept the specialist's conclusions without question",
+      "C": "Evaluate whether the work is adequate for audit purposes",
+      "D": "Re-perform all specialist procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor evaluates the adequacy of the specialist's work for audit purposes, including the appropriateness of data, methods, and assumptions used, and whether conclusions are reasonable and consistent with other evidence.",
     "tip": "Evaluate specialist work: appropriate data + methods + assumptions + reasonable conclusions.",
     "calculationRequired": false,
@@ -12595,12 +12595,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The external auditor may use work performed by internal auditors to:",
     "options": {
-      "A": "Replace all substantive testing",
-      "B": "Modify the nature, timing, or extent of planned audit procedures",
-      "C": "Eliminate the need for understanding internal control",
-      "D": "Issue a joint audit report"
+      "A": "Issue a joint audit report",
+      "B": "Replace all substantive testing",
+      "C": "Modify the nature, timing, or extent of planned audit procedures",
+      "D": "Eliminate the need for understanding internal control"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The external auditor may use internal auditor work to modify procedures, potentially reducing the extent of testing in areas where internal auditors performed relevant work. However, the external auditor retains sole responsibility for the opinion.",
     "tip": "Internal audit work can reduce external auditor's work but not replace responsibility.",
     "calculationRequired": false,
@@ -12637,12 +12637,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using an auditor's specialist, the audit report should:",
     "options": {
-      "A": "Always name the specialist and describe their work",
-      "B": "Not refer to the specialist unless the report is modified and reference would assist understanding",
-      "C": "Include the specialist's report as an appendix",
-      "D": "Divide responsibility with the specialist"
+      "A": "Divide responsibility with the specialist",
+      "B": "Always name the specialist and describe their work",
+      "C": "Not refer to the specialist unless the report is modified and reference would assist understanding",
+      "D": "Include the specialist's report as an appendix"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor's report should not refer to the work of a specialist unless doing so is relevant to understanding a modified opinion. Reference in an unmodified opinion could be misinterpreted as divided responsibility.",
     "tip": "No reference to specialist in unmodified report. Reference only for modified opinions when helpful.",
     "calculationRequired": false,
@@ -12658,12 +12658,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When determining whether to use work of internal auditors, the external auditor should evaluate:",
     "options": {
-      "A": "Only the size of the internal audit department",
-      "B": "The organizational status, objectivity, competence, and work quality of internal audit",
-      "C": "Whether internal audit reports to the CEO",
-      "D": "The internal audit budget"
+      "A": "The organizational status, objectivity, competence, and work quality of internal audit",
+      "B": "Whether internal audit reports to the CEO",
+      "C": "The internal audit budget",
+      "D": "Only the size of the internal audit department"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The external auditor evaluates factors affecting the reliability of internal audit work, including organizational status (reporting lines), policies supporting objectivity, competence, and whether internal audit applies a systematic approach.",
     "tip": "Internal audit evaluation: status + objectivity + competence + systematic approach/quality.",
     "calculationRequired": false,
@@ -12700,12 +12700,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When engaging an auditor's specialist, the auditor should reach agreement on:",
     "options": {
-      "A": "The audit opinion to be issued",
-      "B": "The nature, scope, and objectives of the specialist's work",
-      "C": "Who will sign the audit report",
-      "D": "The client's business strategy"
+      "A": "Who will sign the audit report",
+      "B": "The client's business strategy",
+      "C": "The audit opinion to be issued",
+      "D": "The nature, scope, and objectives of the specialist's work"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should agree with the specialist on the nature, scope, and objectives of work; roles and responsibilities; nature, timing, and extent of communication; and confidentiality requirements.",
     "tip": "Specialist engagement = agree on scope, objectives, roles, and communication upfront.",
     "calculationRequired": false,
@@ -12721,12 +12721,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The external auditor should not use internal auditors to perform procedures that involve:",
     "options": {
-      "A": "Any testing of internal controls",
-      "B": "Significant judgments, high risks, or matters outside their competence",
-      "C": "Any work on revenue",
-      "D": "Testing at locations other than headquarters"
+      "A": "Any work on revenue",
+      "B": "Testing at locations other than headquarters",
+      "C": "Any testing of internal controls",
+      "D": "Significant judgments, high risks, or matters outside their competence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Internal auditors should not perform procedures involving significant auditor judgment, high-risk areas requiring specialized external auditor expertise, or matters where threats to objectivity cannot be reduced to acceptable levels.",
     "tip": "Keep high-judgment, high-risk work with external auditor. Internal audit = lower-risk work.",
     "calculationRequired": false,
@@ -12742,12 +12742,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using work of a specialist, the auditor is:",
     "options": {
-      "A": "Relieved of responsibility for the related audit conclusions",
-      "B": "Solely responsible for the audit opinion",
-      "C": "Jointly responsible with the specialist",
-      "D": "Permitted to disclaim responsibility for the specialist's area"
+      "A": "Jointly responsible with the specialist",
+      "B": "Permitted to disclaim responsibility for the specialist's area",
+      "C": "Relieved of responsibility for the related audit conclusions",
+      "D": "Solely responsible for the audit opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor is solely responsible for the audit opinion. Using a specialist does not reduce this responsibility, regardless of the specialist's competence or the quality of their work.",
     "tip": "Auditor's opinion = auditor's responsibility. Period. Specialists don't share the responsibility.",
     "calculationRequired": false,
@@ -12763,12 +12763,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using internal auditors' work, the external auditor should:",
     "options": {
-      "A": "Accept it without re-performance if internal audit is competent",
-      "B": "Re-perform some of the work to evaluate its adequacy",
-      "C": "Only use work that has been reviewed by the audit committee",
-      "D": "Require internal audit to redo any work more than six months old"
+      "A": "Require internal audit to redo any work more than six months old",
+      "B": "Accept it without re-performance if internal audit is competent",
+      "C": "Re-perform some of the work to evaluate its adequacy",
+      "D": "Only use work that has been reviewed by the audit committee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The external auditor should re-perform some of the internal auditor's work to evaluate whether the work is adequate for the external auditor's purposes. The extent of re-performance depends on the assessment of internal audit quality.",
     "tip": "Re-perform some internal audit work to validate quality before relying on it.",
     "calculationRequired": false,
@@ -12826,12 +12826,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is most likely to be a management's specialist?",
     "options": {
-      "A": "The external auditor's IT specialist",
-      "B": "An actuary calculating pension obligations",
-      "C": "A tax preparer engaged by the audit firm",
-      "D": "An engagement quality reviewer"
+      "A": "An actuary calculating pension obligations",
+      "B": "A tax preparer engaged by the audit firm",
+      "C": "An engagement quality reviewer",
+      "D": "The external auditor's IT specialist"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Actuaries are commonly used by management to calculate pension and other benefit obligations for financial statement purposes. Their work helps management prepare the financial statements.",
     "tip": "Actuary for pensions = classic management's specialist. Helps prepare F/S amounts.",
     "calculationRequired": false,
@@ -12847,12 +12847,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the auditor disagrees with the findings of a management's specialist, the auditor should:",
     "options": {
-      "A": "Accept the specialist's findings since they are the expert",
-      "B": "Obtain additional evidence and consider the effect on the audit opinion",
-      "C": "Always engage a different specialist",
-      "D": "Immediately withdraw from the engagement"
+      "A": "Obtain additional evidence and consider the effect on the audit opinion",
+      "B": "Always engage a different specialist",
+      "C": "Immediately withdraw from the engagement",
+      "D": "Accept the specialist's findings since they are the expert"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When the auditor disagrees with a specialist's findings, additional evidence should be obtained, such as engaging the auditor's own specialist or performing additional procedures. The effect on the opinion must be considered.",
     "tip": "Disagreement = get more evidence. May need own specialist or different procedures.",
     "calculationRequired": false,
@@ -12868,12 +12868,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor's IT specialist may assist with:",
     "options": {
-      "A": "Signing the audit report",
-      "B": "Understanding and testing IT general controls and application controls",
-      "C": "Approving management's accounting policies",
-      "D": "Training client personnel on system usage"
+      "A": "Training client personnel on system usage",
+      "B": "Signing the audit report",
+      "C": "Understanding and testing IT general controls and application controls",
+      "D": "Approving management's accounting policies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "IT specialists assist auditors in understanding complex IT environments, evaluating IT general controls, testing application controls, and using computer-assisted audit techniques to test data.",
     "tip": "IT specialist = help understand and test IT controls and systems. Part of audit team.",
     "calculationRequired": false,
@@ -12910,12 +12910,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating litigation contingencies, the auditor may use work of the client's legal counsel by:",
     "options": {
-      "A": "Accepting oral representations without documentation",
-      "B": "Sending an inquiry letter and evaluating the response",
-      "C": "Having legal counsel sign the audit report",
-      "D": "Delegating all legal judgments to the attorney"
+      "A": "Having legal counsel sign the audit report",
+      "B": "Delegating all legal judgments to the attorney",
+      "C": "Accepting oral representations without documentation",
+      "D": "Sending an inquiry letter and evaluating the response"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor sends a letter of audit inquiry to the client's legal counsel requesting information about litigation, claims, and assessments. The response is evaluated as evidence about potential liabilities.",
     "tip": "Lawyer letter = audit inquiry about litigation. Evaluate response for F/S implications.",
     "calculationRequired": false,
@@ -12952,12 +12952,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Compared to an external specialist, a specialist who is part of the audit firm:",
     "options": {
-      "A": "Requires less evaluation of competence",
-      "B": "Is subject to the firm's quality control policies but may face self-review threats",
-      "C": "Is always more objective",
-      "D": "Cannot be used on the audit engagement"
+      "A": "Is always more objective",
+      "B": "Cannot be used on the audit engagement",
+      "C": "Requires less evaluation of competence",
+      "D": "Is subject to the firm's quality control policies but may face self-review threats"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Internal specialists are subject to the firm's quality control policies but may face self-review threats if involved in the original work being audited. Competence evaluation is still required, though procedures may differ.",
     "tip": "Internal specialist = firm QC applies, but watch for self-review threats.",
     "calculationRequired": false,
@@ -12973,12 +12973,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Audit documentation related to using a specialist should include:",
     "options": {
-      "A": "The specialist's complete work papers",
-      "B": "The auditor's evaluation of the specialist's competence, objectivity, and work",
-      "C": "Only the specialist's final conclusions",
-      "D": "Personal information about the specialist"
+      "A": "Personal information about the specialist",
+      "B": "The specialist's complete work papers",
+      "C": "The auditor's evaluation of the specialist's competence, objectivity, and work",
+      "D": "Only the specialist's final conclusions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Documentation should include the nature, scope, and objectives of the specialist's work; the auditor's evaluation of competence and objectivity; and the auditor's evaluation of the adequacy of the specialist's work.",
     "tip": "Document: what specialist did, competence/objectivity evaluation, and work quality assessment.",
     "calculationRequired": false,
@@ -13036,12 +13036,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The planned use of internal auditors affects:",
     "options": {
-      "A": "Only the audit fee negotiation",
-      "B": "The nature, timing, and extent of the external auditor's procedures",
-      "C": "Whether an audit report can be issued",
-      "D": "The type of opinion expressed"
+      "A": "Whether an audit report can be issued",
+      "B": "The type of opinion expressed",
+      "C": "Only the audit fee negotiation",
+      "D": "The nature, timing, and extent of the external auditor's procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "If internal auditors' work can be used, the external auditor may modify procedures, potentially reducing the extent of testing while maintaining appropriate audit risk. Planning considers where internal audit can contribute.",
     "tip": "Internal audit use affects external auditor's NTE = nature, timing, extent of procedures.",
     "calculationRequired": false,
@@ -13057,12 +13057,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When reading a SOC 1 report, the user auditor should pay particular attention to:",
     "options": {
-      "A": "The service organization's financial statements",
-      "B": "Complementary user entity controls that the service organization expects the user to implement",
-      "C": "The service auditor's fee for the engagement",
-      "D": "The service organization's marketing materials"
+      "A": "The service organization's marketing materials",
+      "B": "The service organization's financial statements",
+      "C": "Complementary user entity controls that the service organization expects the user to implement",
+      "D": "The service auditor's fee for the engagement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SOC 1 reports describe complementary user entity controls expected to be in place at the user entity. The user auditor must evaluate whether these controls are implemented to complete the control environment.",
     "tip": "Complementary user controls = your client's responsibility. SOC report assumes these exist.",
     "calculationRequired": false,
@@ -13078,12 +13078,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An environmental specialist might be used to assist with:",
     "options": {
-      "A": "Counting inventory at chemical companies",
-      "B": "Estimating environmental remediation liabilities",
-      "C": "Preparing sustainability reports",
-      "D": "Reviewing the company's environmental policy"
+      "A": "Estimating environmental remediation liabilities",
+      "B": "Preparing sustainability reports",
+      "C": "Reviewing the company's environmental policy",
+      "D": "Counting inventory at chemical companies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Environmental specialists help estimate the cost of remediation for contaminated sites, which can involve significant judgment about scope, methods, timing, and regulatory requirements affecting liability recognition.",
     "tip": "Environmental specialist = help estimate cleanup liability. Technical and judgmental area.",
     "calculationRequired": false,
@@ -13162,12 +13162,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing an insurance company's loss reserves, the auditor commonly uses:",
     "options": {
-      "A": "Only analytical procedures",
-      "B": "An actuary to evaluate the reasonableness of reserve estimates",
-      "C": "Confirmation with policyholders",
-      "D": "Physical inspection of claims"
+      "A": "An actuary to evaluate the reasonableness of reserve estimates",
+      "B": "Confirmation with policyholders",
+      "C": "Physical inspection of claims",
+      "D": "Only analytical procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Loss reserve estimation requires actuarial expertise. Auditors typically use actuaries to evaluate the methods, data, and assumptions used by management's actuary in developing loss and loss adjustment expense reserves.",
     "tip": "Insurance loss reserves = actuarial expertise needed. Auditor's actuary evaluates management's actuary.",
     "calculationRequired": false,
@@ -13204,12 +13204,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A forensic accounting specialist might be engaged when:",
     "options": {
-      "A": "Preparing routine year-end adjusting entries",
-      "B": "Investigating suspected fraud or complex financial analysis",
-      "C": "Performing inventory counts",
-      "D": "Reviewing depreciation schedules"
+      "A": "Reviewing depreciation schedules",
+      "B": "Preparing routine year-end adjusting entries",
+      "C": "Investigating suspected fraud or complex financial analysis",
+      "D": "Performing inventory counts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Forensic specialists are engaged for fraud investigations, complex litigation support, and situations requiring specialized investigative techniques and analysis beyond routine audit procedures.",
     "tip": "Forensic specialist = fraud investigation, complex analysis, litigation support.",
     "calculationRequired": false,
@@ -13225,12 +13225,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When planning to use work of a specialist or internal auditors, the external auditor should:",
     "options": {
-      "A": "Wait until fieldwork to decide on the work to be used",
-      "B": "Consider the timing in audit planning to ensure work will be available when needed",
-      "C": "Only coordinate timing for year-end procedures",
-      "D": "Require all specialist work to be completed before audit fieldwork begins"
+      "A": "Require all specialist work to be completed before audit fieldwork begins",
+      "B": "Wait until fieldwork to decide on the work to be used",
+      "C": "Consider the timing in audit planning to ensure work will be available when needed",
+      "D": "Only coordinate timing for year-end procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Planning should consider when specialist or internal audit work will be needed and coordinate timing accordingly. Early planning ensures work is completed in time for the auditor to evaluate and use it.",
     "tip": "Plan timing early. Need specialist/internal audit work done in time to evaluate and use.",
     "calculationRequired": false,
@@ -13246,12 +13246,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Those charged with governance are persons:",
     "options": {
-      "A": "Responsible for the day-to-day management of the entity",
-      "B": "Responsible for overseeing the strategic direction and accountability of the entity",
-      "C": "Who prepare the financial statements",
-      "D": "Who perform the audit"
+      "A": "Who perform the audit",
+      "B": "Responsible for the day-to-day management of the entity",
+      "C": "Responsible for overseeing the strategic direction and accountability of the entity",
+      "D": "Who prepare the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Those charged with governance have oversight responsibility for the entity's strategic direction and accountability, including overseeing the financial reporting process. This typically includes the board of directors or audit committee.",
     "tip": "Governance = oversight role. Management = day-to-day operations. Different responsibilities.",
     "calculationRequired": false,
@@ -13309,12 +13309,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Significant deficiencies and material weaknesses in internal control must be communicated to governance:",
     "options": {
-      "A": "Orally only",
-      "B": "In writing",
-      "C": "Only if material to the financial statements",
-      "D": "Only for public companies"
+      "A": "In writing",
+      "B": "Only if material to the financial statements",
+      "C": "Only for public companies",
+      "D": "Orally only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Significant deficiencies and material weaknesses must be communicated to governance in writing. This written communication should be made no later than 60 days following the report release date.",
     "tip": "SD and MW = written communication required. Can't just mention it orally.",
     "calculationRequired": false,
@@ -13330,12 +13330,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Communication of planned scope and timing of the audit helps governance:",
     "options": {
-      "A": "Approve the audit fee",
-      "B": "Better understand the audit approach and fulfill their oversight responsibilities",
-      "C": "Direct the auditor's work to preferred areas",
-      "D": "Reduce the extent of audit procedures"
+      "A": "Better understand the audit approach and fulfill their oversight responsibilities",
+      "B": "Direct the auditor's work to preferred areas",
+      "C": "Reduce the extent of audit procedures",
+      "D": "Approve the audit fee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Communicating planned scope and timing helps governance understand the auditor's approach, fulfill oversight responsibilities, and understand how the audit addresses risks. It facilitates effective two-way communication.",
     "tip": "Scope/timing communication = helps governance with oversight, not to direct the audit.",
     "calculationRequired": false,
@@ -13351,12 +13351,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor of an issuer must communicate to the audit committee:",
     "options": {
-      "A": "Only impaired independence situations",
-      "B": "All relationships with the entity that may bear on independence, in writing",
-      "C": "Independence only at engagement acceptance",
-      "D": "That independence is automatically maintained"
+      "A": "All relationships with the entity that may bear on independence, in writing",
+      "B": "Independence only at engagement acceptance",
+      "C": "That independence is automatically maintained",
+      "D": "Only impaired independence situations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For issuers, the auditor must communicate in writing all relationships between the firm and the entity that may bear on independence, fees charged, and confirm independence or disclose any relationships that might be thought to bear on independence.",
     "tip": "Issuers = written independence communication. All relationships, fees, and confirmation.",
     "calculationRequired": false,
@@ -13372,12 +13372,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should communicate to governance:",
     "options": {
-      "A": "Only corrected misstatements",
-      "B": "Uncorrected misstatements and the effect on the audit opinion",
-      "C": "Only material misstatements",
-      "D": "Misstatements only if management disagrees with them"
+      "A": "Misstatements only if management disagrees with them",
+      "B": "Only corrected misstatements",
+      "C": "Uncorrected misstatements and the effect on the audit opinion",
+      "D": "Only material misstatements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor communicates all uncorrected misstatements accumulated during the audit, other than those deemed trivial, and their effect (individually and in aggregate) on the opinion. Governance may request correction.",
     "tip": "Uncorrected misstatements = communicate to governance. They may push management to correct.",
     "calculationRequired": false,
@@ -13393,12 +13393,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should communicate fraud involving management to governance:",
     "options": {
-      "A": "Only if it is material",
-      "B": "Directly and on a timely basis, regardless of materiality",
-      "C": "Through management",
-      "D": "Only after concluding the investigation"
+      "A": "Directly and on a timely basis, regardless of materiality",
+      "B": "Through management",
+      "C": "Only after concluding the investigation",
+      "D": "Only if it is material"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Fraud involving management should be communicated directly to governance on a timely basis, regardless of the amount. Governance needs to know about management fraud to exercise oversight responsibility.",
     "tip": "Management fraud = tell governance directly, regardless of materiality. It's a character issue.",
     "calculationRequired": false,
@@ -13414,12 +13414,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor's communication about fraud risks should include discussion of:",
     "options": {
-      "A": "Only confirmed fraud instances",
-      "B": "The risk of management override of controls",
-      "C": "Fraud prevention training programs",
-      "D": "Employee background check procedures"
+      "A": "Employee background check procedures",
+      "B": "Only confirmed fraud instances",
+      "C": "The risk of management override of controls",
+      "D": "Fraud prevention training programs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should discuss with governance the risk of management override of controls, which exists in all entities, and the auditor's procedures to address this risk. This helps governance understand a key audit focus area.",
     "tip": "Management override = always a risk. Discuss with governance as part of fraud discussion.",
     "calculationRequired": false,
@@ -13456,12 +13456,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Significant findings from the audit that should be communicated to governance include:",
     "options": {
-      "A": "Only material misstatements that were corrected",
-      "B": "Significant qualitative aspects of accounting practices, including policies and estimates",
-      "C": "The auditor's detailed testing results for each account",
-      "D": "Names of all audit team members"
+      "A": "The auditor's detailed testing results for each account",
+      "B": "Names of all audit team members",
+      "C": "Only material misstatements that were corrected",
+      "D": "Significant qualitative aspects of accounting practices, including policies and estimates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Significant findings include qualitative aspects of accounting practices (significant policies, estimates, disclosures), significant difficulties encountered, disagreements with management, and other matters warranting governance attention.",
     "tip": "Significant findings = accounting quality, difficulties, disagreements. Not detailed test results.",
     "calculationRequired": false,
@@ -13477,12 +13477,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Significant difficulties encountered during the audit that should be communicated include:",
     "options": {
-      "A": "Staff turnover on the audit team",
-      "B": "Significant delays in management providing information or unavailability of personnel",
-      "C": "Travel delays to client locations",
-      "D": "Software compatibility issues"
+      "A": "Significant delays in management providing information or unavailability of personnel",
+      "B": "Travel delays to client locations",
+      "C": "Software compatibility issues",
+      "D": "Staff turnover on the audit team"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Significant difficulties include management delays in providing information, unavailability of expected information, unwillingness to provide representations, or efforts to restrict audit scope. These may indicate broader issues.",
     "tip": "Significant difficulties = management obstacles. May signal control or integrity concerns.",
     "calculationRequired": false,
@@ -13498,12 +13498,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For public companies, the appropriate governance body for audit communications is typically:",
     "options": {
-      "A": "The CEO",
-      "B": "The audit committee of the board of directors",
-      "C": "The CFO",
-      "D": "The internal audit department"
+      "A": "The internal audit department",
+      "B": "The CEO",
+      "C": "The audit committee of the board of directors",
+      "D": "The CFO"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "For public companies, the audit committee is typically the appropriate party to receive audit communications. The audit committee has direct oversight responsibility for the external audit and financial reporting.",
     "tip": "Public company = communicate with audit committee. They oversee the audit.",
     "calculationRequired": false,
@@ -13519,12 +13519,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When all governance members are involved in management, the auditor:",
     "options": {
-      "A": "Is exempt from governance communications",
-      "B": "Should communicate matters to those persons in their governance role",
-      "C": "Should communicate only in writing",
-      "D": "Should not accept the engagement"
+      "A": "Should communicate matters to those persons in their governance role",
+      "B": "Should communicate only in writing",
+      "C": "Should not accept the engagement",
+      "D": "Is exempt from governance communications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When governance members are also management, the auditor still communicates required matters but recognizes the individuals are being addressed in their governance capacity, not their management role.",
     "tip": "Same people, different hats. Communicate matters relevant to their governance role.",
     "calculationRequired": false,
@@ -13540,12 +13540,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the auditor identifies or suspects noncompliance with laws and regulations, communication to governance:",
     "options": {
-      "A": "Is only required if the amounts are material",
-      "B": "Should be made unless clearly inconsequential",
-      "C": "Is prohibited due to attorney-client privilege",
-      "D": "Should be made only to management first"
+      "A": "Should be made only to management first",
+      "B": "Is only required if the amounts are material",
+      "C": "Should be made unless clearly inconsequential",
+      "D": "Is prohibited due to attorney-client privilege"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Unless matters are clearly inconsequential, the auditor should communicate identified or suspected noncompliance to governance. Management involvement in the noncompliance affects who receives the communication first.",
     "tip": "Noncompliance = communicate to governance unless trivial. They need to know.",
     "calculationRequired": false,
@@ -13561,12 +13561,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Effective two-way communication between the auditor and governance involves:",
     "options": {
-      "A": "The auditor only reporting findings at year-end",
-      "B": "Both the auditor providing information and receiving input from governance",
-      "C": "Written communication only",
-      "D": "Communication through management"
+      "A": "Both the auditor providing information and receiving input from governance",
+      "B": "Written communication only",
+      "C": "Communication through management",
+      "D": "The auditor only reporting findings at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Effective communication is two-way: the auditor provides information relevant to governance oversight, and governance provides information relevant to the audit, such as knowledge of matters that may affect the audit.",
     "tip": "Two-way = auditor shares info, governance shares info. Not just one-way reporting.",
     "calculationRequired": false,
@@ -13582,12 +13582,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Significant related party transactions identified by the auditor should be communicated to governance because:",
     "options": {
-      "A": "They are always fraudulent",
-      "B": "Governance should evaluate whether they are properly accounted for and disclosed",
-      "C": "They must be eliminated from the financial statements",
-      "D": "They require audit committee pre-approval"
+      "A": "Governance should evaluate whether they are properly accounted for and disclosed",
+      "B": "They must be eliminated from the financial statements",
+      "C": "They require audit committee pre-approval",
+      "D": "They are always fraudulent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Related party transactions are communicated so governance can evaluate their business rationale, whether they are on arm's-length terms, and whether accounting and disclosure are appropriate. Governance oversight is important.",
     "tip": "Related party = governance should evaluate. Business purpose and proper accounting.",
     "calculationRequired": false,
@@ -13603,12 +13603,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Disagreements between the auditor and management about accounting treatments:",
     "options": {
-      "A": "Should remain confidential between auditor and management",
-      "B": "Should be communicated to governance even if resolved",
-      "C": "Only need to be communicated if unresolved",
-      "D": "Should result in auditor withdrawal"
+      "A": "Only need to be communicated if unresolved",
+      "B": "Should result in auditor withdrawal",
+      "C": "Should remain confidential between auditor and management",
+      "D": "Should be communicated to governance even if resolved"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Significant disagreements should be communicated to governance even if subsequently resolved. Governance should be aware of issues that arose during the audit and how they were resolved.",
     "tip": "Disagreements = communicate even if resolved. Governance should know what was debated.",
     "calculationRequired": false,
@@ -13645,12 +13645,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When substantial doubt about going concern exists, the auditor should communicate to governance:",
     "options": {
-      "A": "Only if the auditor modifies the opinion",
-      "B": "The conditions giving rise to the doubt and management's plans",
-      "C": "Only the financial impact",
-      "D": "After the audit report is issued"
+      "A": "After the audit report is issued",
+      "B": "Only if the auditor modifies the opinion",
+      "C": "The conditions giving rise to the doubt and management's plans",
+      "D": "Only the financial impact"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should communicate conditions and events that raise substantial doubt about going concern, the potential effects, and management's plans to address the conditions. Governance oversight is critical for such issues.",
     "tip": "Going concern doubt = communicate conditions, effects, and management's response plans.",
     "calculationRequired": false,
@@ -13666,12 +13666,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Regarding significant accounting estimates, the auditor should communicate:",
     "options": {
-      "A": "The exact amounts that should be recorded",
-      "B": "The process used, significant assumptions, and management's judgment",
-      "C": "Only estimates that were adjusted",
-      "D": "A comparison to industry benchmarks"
+      "A": "A comparison to industry benchmarks",
+      "B": "The exact amounts that should be recorded",
+      "C": "The process used, significant assumptions, and management's judgment",
+      "D": "Only estimates that were adjusted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor communicates management's process for making significant estimates, significant assumptions used, and any indicators of possible management bias. This helps governance oversee the subjectivity in financial reporting.",
     "tip": "Estimates communication = process + assumptions + potential bias indicators.",
     "calculationRequired": false,
@@ -13708,12 +13708,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Before issuing a modified audit opinion, the auditor should:",
     "options": {
-      "A": "Obtain governance approval of the modification",
-      "B": "Communicate the reasons and expected wording to governance",
-      "C": "Resign from the engagement",
-      "D": "Only notify the SEC"
+      "A": "Communicate the reasons and expected wording to governance",
+      "B": "Resign from the engagement",
+      "C": "Only notify the SEC",
+      "D": "Obtain governance approval of the modification"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor should communicate to governance the circumstances resulting in expected modification and the proposed wording of the modification. This allows governance to respond before the report is issued.",
     "tip": "No surprises. Communicate expected modifications and reasons before report issuance.",
     "calculationRequired": false,
@@ -13750,12 +13750,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For issuers, the auditor must communicate to the audit committee:",
     "options": {
-      "A": "Only the total audit fee",
-      "B": "Total fees billed for audit and non-audit services during the period",
-      "C": "Comparison of fees to industry benchmarks",
-      "D": "The auditor's internal cost structure"
+      "A": "Comparison of fees to industry benchmarks",
+      "B": "The auditor's internal cost structure",
+      "C": "Only the total audit fee",
+      "D": "Total fees billed for audit and non-audit services during the period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For issuers, the auditor must disclose in writing to the audit committee all fees billed for the period, broken down by category (audit fees, audit-related fees, tax fees, other fees), to help the committee assess independence.",
     "tip": "Issuers = detailed fee disclosure by category. Helps audit committee assess independence.",
     "calculationRequired": false,
@@ -13792,12 +13792,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A copy of the written management representation letter:",
     "options": {
-      "A": "Must always be provided to governance",
-      "B": "May be provided to governance if the auditor considers it appropriate",
-      "C": "Should never be shared with governance",
-      "D": "Must be approved by governance before signing"
+      "A": "Must be approved by governance before signing",
+      "B": "Must always be provided to governance",
+      "C": "May be provided to governance if the auditor considers it appropriate",
+      "D": "Should never be shared with governance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "While the representation letter is from management, the auditor may provide a copy to governance when appropriate. This can enhance governance awareness of matters management has confirmed to the auditor.",
     "tip": "Rep letter to governance = optional but can be useful for their oversight.",
     "calculationRequired": false,
@@ -13813,12 +13813,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the auditor becomes aware of a matter that is sensitive and governance itself may be involved:",
     "options": {
-      "A": "The auditor should skip the communication",
-      "B": "The auditor should consider communicating to an appropriate authority or seek legal advice",
-      "C": "The matter should only be communicated to management",
-      "D": "The auditor should resign immediately"
+      "A": "The auditor should consider communicating to an appropriate authority or seek legal advice",
+      "B": "The matter should only be communicated to management",
+      "C": "The auditor should resign immediately",
+      "D": "The auditor should skip the communication"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When governance may be involved in sensitive matters (like fraud), the auditor considers alternative actions such as communicating to a higher level (board vs. committee) or seeking legal advice about responsibilities.",
     "tip": "Governance involved = escalate within governance structure or get legal advice.",
     "calculationRequired": false,
@@ -13855,12 +13855,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A management letter containing recommendations is:",
     "options": {
-      "A": "Required by auditing standards",
-      "B": "A voluntary communication of matters the auditor believes are worthy of management's attention",
-      "C": "A substitute for governance communications",
-      "D": "Only issued when deficiencies are found"
+      "A": "A voluntary communication of matters the auditor believes are worthy of management's attention",
+      "B": "A substitute for governance communications",
+      "C": "Only issued when deficiencies are found",
+      "D": "Required by auditing standards"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A management letter is a voluntary by-product of the audit containing recommendations for improvements. It often includes operational or efficiency recommendations that don't rise to the level of required communications.",
     "tip": "Management letter = voluntary recommendations. Not required but often expected.",
     "calculationRequired": false,
@@ -13876,12 +13876,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a group audit, the group engagement team should communicate to group governance:",
     "options": {
-      "A": "Only matters from the parent company audit",
-      "B": "Matters from both parent and component audits that are relevant to group governance oversight",
-      "C": "Detailed findings from each component auditor",
-      "D": "Only component auditor qualifications"
+      "A": "Only component auditor qualifications",
+      "B": "Only matters from the parent company audit",
+      "C": "Matters from both parent and component audits that are relevant to group governance oversight",
+      "D": "Detailed findings from each component auditor"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Group governance communications should include matters arising from both the parent audit and component audits that are relevant to group governance oversight, including an overview of the planned involvement with components.",
     "tip": "Group governance = parent + component matters relevant to group oversight.",
     "calculationRequired": false,
@@ -13918,12 +13918,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When governance has a designated subcommittee (such as an audit committee), the auditor should:",
     "options": {
-      "A": "Always communicate with the full board",
-      "B": "Communicate with the subcommittee unless matters should be communicated to the full governance body",
-      "C": "Only communicate with the subcommittee chair",
-      "D": "Choose randomly between the board and subcommittee"
+      "A": "Communicate with the subcommittee unless matters should be communicated to the full governance body",
+      "B": "Only communicate with the subcommittee chair",
+      "C": "Choose randomly between the board and subcommittee",
+      "D": "Always communicate with the full board"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When a subcommittee with relevant oversight responsibility exists, communications are typically made to that subcommittee. However, some matters may warrant full board communication depending on circumstances.",
     "tip": "Subcommittee exists = communicate there unless matter requires full board attention.",
     "calculationRequired": false,
@@ -14002,12 +14002,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Responsibility for making accounting estimates rests with:",
     "options": {
-      "A": "The external auditor",
-      "B": "Management",
-      "C": "The board of directors",
-      "D": "Regulatory authorities"
+      "A": "Regulatory authorities",
+      "B": "The external auditor",
+      "C": "Management",
+      "D": "The board of directors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Management is responsible for making accounting estimates based on their knowledge of the business, industry conditions, and judgment about future events. The auditor evaluates but does not make estimates.",
     "tip": "Management makes estimates. Auditor evaluates reasonableness.",
     "calculationRequired": false,
@@ -14065,12 +14065,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An indicator of possible management bias in estimates includes:",
     "options": {
-      "A": "Estimates falling within the range supported by evidence",
-      "B": "Consistent changes that increase income over multiple periods",
-      "C": "Use of industry-standard assumptions",
-      "D": "Estimates being revised when new information emerges"
+      "A": "Use of industry-standard assumptions",
+      "B": "Estimates being revised when new information emerges",
+      "C": "Estimates falling within the range supported by evidence",
+      "D": "Consistent changes that increase income over multiple periods"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Consistent patterns of estimate changes that increase income suggest management may be biasing estimates to achieve desired results. The auditor should evaluate cumulative effects and patterns over time.",
     "tip": "Pattern of income-increasing estimates = possible bias. Look at trends over time.",
     "calculationRequired": false,
@@ -14086,12 +14086,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In the fair value hierarchy, Level 1 inputs are:",
     "options": {
-      "A": "Unobservable inputs based on management assumptions",
-      "B": "Quoted prices in active markets for identical assets or liabilities",
-      "C": "Observable inputs other than Level 1 prices",
-      "D": "Internally generated cash flow projections"
+      "A": "Quoted prices in active markets for identical assets or liabilities",
+      "B": "Observable inputs other than Level 1 prices",
+      "C": "Internally generated cash flow projections",
+      "D": "Unobservable inputs based on management assumptions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Level 1 inputs are quoted prices in active markets for identical assets or liabilities. These are the most reliable and require the least judgment. Level 2 uses observable inputs, Level 3 uses unobservable inputs.",
     "tip": "Level 1 = quoted prices for identical items in active markets. Most reliable.",
     "calculationRequired": false,
@@ -14107,12 +14107,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Level 3 fair value measurements require more audit effort because:",
     "options": {
-      "A": "They are simpler to calculate",
-      "B": "They rely heavily on management assumptions and judgment",
-      "C": "They use quoted market prices",
-      "D": "They are rarely used in practice"
+      "A": "They are rarely used in practice",
+      "B": "They are simpler to calculate",
+      "C": "They rely heavily on management assumptions and judgment",
+      "D": "They use quoted market prices"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Level 3 measurements use unobservable inputs reflecting the entity's own assumptions. The reliance on management judgment increases estimation uncertainty and the risk of material misstatement.",
     "tip": "Level 3 = most judgment, most risk, most audit work required.",
     "calculationRequired": false,
@@ -14128,12 +14128,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the auditor develops an independent estimate resulting in a range:",
     "options": {
-      "A": "Management must select a point within the auditor's range",
-      "B": "The auditor should narrow the range to evaluate reasonableness of management's estimate",
-      "C": "The range must include management's estimate to be acceptable",
-      "D": "The auditor should use the midpoint as the correct answer"
+      "A": "The auditor should narrow the range to evaluate reasonableness of management's estimate",
+      "B": "The range must include management's estimate to be acceptable",
+      "C": "The auditor should use the midpoint as the correct answer",
+      "D": "Management must select a point within the auditor's range"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When the auditor develops a range, it should be narrowed to a range where all outcomes are considered reasonable for the purpose of evaluating management's estimate. A wide range may not provide sufficient evidence.",
     "tip": "Auditor's range should be narrow enough to be useful. Wide range = insufficient evidence.",
     "calculationRequired": false,
@@ -14149,12 +14149,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A retrospective review of prior year estimates helps the auditor:",
     "options": {
-      "A": "Determine the correct current year estimate",
-      "B": "Assess the accuracy of management's estimation process and identify potential bias",
-      "C": "Eliminate the need for current year testing",
-      "D": "Calculate exact variances for disclosure"
+      "A": "Calculate exact variances for disclosure",
+      "B": "Determine the correct current year estimate",
+      "C": "Assess the accuracy of management's estimation process and identify potential bias",
+      "D": "Eliminate the need for current year testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Reviewing the outcome of prior period estimates provides insight into the reliability of management's estimation process and may reveal patterns of bias (consistently over or under estimating).",
     "tip": "Retrospective review = how did prior estimates turn out? Reveals process quality and bias.",
     "calculationRequired": false,
@@ -14170,12 +14170,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When management uses a valuation model, the auditor should test:",
     "options": {
-      "A": "Only whether the model was used consistently",
-      "B": "The appropriateness of the model, accuracy of inputs, and mathematical accuracy",
-      "C": "Whether the model is commonly used in the industry",
-      "D": "Only the final output of the model"
+      "A": "The appropriateness of the model, accuracy of inputs, and mathematical accuracy",
+      "B": "Whether the model is commonly used in the industry",
+      "C": "Only the final output of the model",
+      "D": "Only whether the model was used consistently"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Testing a valuation model involves evaluating whether the model is appropriate for the asset/liability, testing the accuracy and completeness of inputs, and verifying mathematical accuracy of calculations.",
     "tip": "Model testing = appropriate model + accurate inputs + correct math. Test all three.",
     "calculationRequired": false,
@@ -14191,12 +14191,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating significant assumptions used in estimates, the auditor should consider:",
     "options": {
-      "A": "Only whether the assumptions are mathematically consistent",
-      "B": "Whether assumptions are reasonable, supported by evidence, and internally consistent",
-      "C": "Management's preference for optimistic vs conservative assumptions",
-      "D": "Only assumptions that changed from the prior year"
+      "A": "Management's preference for optimistic vs conservative assumptions",
+      "B": "Only assumptions that changed from the prior year",
+      "C": "Only whether the assumptions are mathematically consistent",
+      "D": "Whether assumptions are reasonable, supported by evidence, and internally consistent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor evaluates whether assumptions are reasonable in light of actual results and conditions, supported by sufficient evidence, consistent with each other and other evidence, and appropriately reflect uncertainty.",
     "tip": "Test assumptions: reasonable + evidenced + internally consistent + reflect uncertainty.",
     "calculationRequired": false,
@@ -14212,12 +14212,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the client uses a third-party pricing service for fair value measurements, the auditor should:",
     "options": {
-      "A": "Accept the pricing service values without question",
-      "B": "Evaluate the pricing service's methodology and the reliability of prices provided",
-      "C": "Require management to use a different pricing service",
-      "D": "Confirm prices directly with the pricing service"
+      "A": "Confirm prices directly with the pricing service",
+      "B": "Accept the pricing service values without question",
+      "C": "Evaluate the pricing service's methodology and the reliability of prices provided",
+      "D": "Require management to use a different pricing service"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should understand and evaluate the pricing service's methodology, inputs used, and the reliability of prices. This may include understanding what sources the service uses and comparing to other pricing information.",
     "tip": "Pricing service = evaluate methodology and reliability. Don't just accept prices.",
     "calculationRequired": false,
@@ -14233,12 +14233,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Subsequent events can provide evidence about accounting estimates by:",
     "options": {
-      "A": "Eliminating the need for year-end testing",
-      "B": "Confirming or contradicting the reasonableness of year-end estimates",
-      "C": "Requiring automatic adjustment of all estimates",
-      "D": "Providing the only valid basis for estimates"
+      "A": "Providing the only valid basis for estimates",
+      "B": "Eliminating the need for year-end testing",
+      "C": "Confirming or contradicting the reasonableness of year-end estimates",
+      "D": "Requiring automatic adjustment of all estimates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Events occurring after year-end may provide information confirming or contradicting year-end estimates. However, the auditor must distinguish between conditions existing at year-end and new conditions arising after.",
     "tip": "Subsequent events can validate estimates—did things turn out as expected?",
     "calculationRequired": false,
@@ -14254,12 +14254,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The market approach to fair value uses:",
     "options": {
-      "A": "Discounted cash flow projections",
-      "B": "Replacement cost less depreciation",
-      "C": "Prices and other information from comparable market transactions",
-      "D": "Management's internal estimates only"
+      "A": "Prices and other information from comparable market transactions",
+      "B": "Management's internal estimates only",
+      "C": "Discounted cash flow projections",
+      "D": "Replacement cost less depreciation"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The market approach uses prices from market transactions involving identical or comparable assets or liabilities. This approach relies on the assumption that similar items trade at similar prices.",
     "tip": "Market approach = what did similar items sell for? Uses comparable transactions.",
     "calculationRequired": false,
@@ -14275,12 +14275,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Audit documentation for significant estimates should include:",
     "options": {
-      "A": "Only the final recorded amount",
-      "B": "Basis for conclusions about reasonableness of estimates and related disclosures",
-      "C": "A copy of management's calculation only",
-      "D": "Nothing if the estimate is within GAAP guidelines"
+      "A": "A copy of management's calculation only",
+      "B": "Nothing if the estimate is within GAAP guidelines",
+      "C": "Only the final recorded amount",
+      "D": "Basis for conclusions about reasonableness of estimates and related disclosures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Documentation should include the basis for the auditor's conclusions about reasonableness, including significant assumptions tested, evidence obtained, and evaluation of potential management bias.",
     "tip": "Document: what you tested, evidence obtained, and basis for conclusions.",
     "calculationRequired": false,
@@ -14296,12 +14296,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The income approach to fair value typically uses:",
     "options": {
-      "A": "Historical cost adjusted for inflation",
-      "B": "Discounted cash flows or other present value techniques",
-      "C": "Recent sale prices of identical assets",
-      "D": "Book value per share"
+      "A": "Book value per share",
+      "B": "Historical cost adjusted for inflation",
+      "C": "Discounted cash flows or other present value techniques",
+      "D": "Recent sale prices of identical assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The income approach converts future amounts (cash flows, earnings) to a present value. Common techniques include discounted cash flow models and option pricing models.",
     "tip": "Income approach = future cash flows to present value. DCF is most common.",
     "calculationRequired": false,
@@ -14380,12 +14380,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Fair value disclosures must include:",
     "options": {
-      "A": "Only the fair value amounts",
-      "B": "The level within the fair value hierarchy and, for Level 3, the valuation techniques and inputs",
-      "C": "The name of the appraiser used",
-      "D": "A comparison to competitor fair values"
+      "A": "The name of the appraiser used",
+      "B": "A comparison to competitor fair values",
+      "C": "Only the fair value amounts",
+      "D": "The level within the fair value hierarchy and, for Level 3, the valuation techniques and inputs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Fair value disclosures must include the hierarchy level for each class of assets/liabilities and, for Level 3 measurements, information about valuation techniques, inputs used, and sensitivity to assumption changes.",
     "tip": "Disclosure = hierarchy level + for Level 3: techniques, inputs, sensitivities.",
     "calculationRequired": false,
@@ -14422,12 +14422,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Level 2 inputs in fair value measurement include:",
     "options": {
-      "A": "Quoted prices for identical items in active markets",
-      "B": "Quoted prices for similar items or observable market data",
-      "C": "Management's own assumptions about market participants",
-      "D": "Historical cost information"
+      "A": "Historical cost information",
+      "B": "Quoted prices for identical items in active markets",
+      "C": "Quoted prices for similar items or observable market data",
+      "D": "Management's own assumptions about market participants"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Level 2 inputs include quoted prices for similar (not identical) items in active markets, quoted prices for identical/similar items in inactive markets, and observable market data like interest rates and yield curves.",
     "tip": "Level 2 = observable but not perfect Level 1 prices. Similar items or inactive markets.",
     "calculationRequired": false,
@@ -14443,12 +14443,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sensitivity analysis of an accounting estimate helps the auditor understand:",
     "options": {
-      "A": "The exact amount to record",
-      "B": "How changes in key assumptions affect the estimate's value",
-      "C": "Management's preferred outcome",
-      "D": "Whether the estimate should be disclosed"
+      "A": "How changes in key assumptions affect the estimate's value",
+      "B": "Management's preferred outcome",
+      "C": "Whether the estimate should be disclosed",
+      "D": "The exact amount to record"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sensitivity analysis shows how the estimate changes when key assumptions are varied. This helps the auditor understand which assumptions are most critical and assess the range of reasonable outcomes.",
     "tip": "Sensitivity analysis = what happens if assumptions change? Identifies critical variables.",
     "calculationRequired": false,
@@ -14464,12 +14464,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing goodwill impairment, the auditor should:",
     "options": {
-      "A": "Accept management's conclusion if an external appraiser was used",
-      "B": "Evaluate the appropriateness of the valuation method, key assumptions, and whether triggering events exist",
-      "C": "Only test if the impairment exceeds materiality",
-      "D": "Verify that goodwill equals original purchase price"
+      "A": "Only test if the impairment exceeds materiality",
+      "B": "Verify that goodwill equals original purchase price",
+      "C": "Accept management's conclusion if an external appraiser was used",
+      "D": "Evaluate the appropriateness of the valuation method, key assumptions, and whether triggering events exist"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor evaluates whether impairment triggers exist, the appropriateness of the valuation methodology (income or market approach), reasonableness of assumptions, and whether impairment is properly measured and disclosed.",
     "tip": "Goodwill impairment testing: triggers + method + assumptions + measurement + disclosure.",
     "calculationRequired": false,
@@ -14485,12 +14485,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risks of material misstatement for estimates are affected by:",
     "options": {
-      "A": "Only the dollar amount of the estimate",
-      "B": "The degree of estimation uncertainty and complexity of the estimation process",
-      "C": "Whether the estimate increased or decreased from prior year",
-      "D": "The size of the audit firm"
+      "A": "Whether the estimate increased or decreased from prior year",
+      "B": "The size of the audit firm",
+      "C": "Only the dollar amount of the estimate",
+      "D": "The degree of estimation uncertainty and complexity of the estimation process"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "RMM for estimates depends on estimation uncertainty (subjectivity, susceptibility to bias), complexity of the estimation process, and the need for specialized knowledge. Higher uncertainty and complexity increase risk.",
     "tip": "Estimate risk = uncertainty + complexity + judgment required. Not just the amount.",
     "calculationRequired": false,
@@ -14506,12 +14506,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When management uses an expert to determine fair value, the auditor should:",
     "options": {
-      "A": "Rely on the expert's conclusions without further testing",
-      "B": "Evaluate the expert's competence, objectivity, and the appropriateness of their work",
-      "C": "Engage a different expert to develop an independent value",
-      "D": "Request the expert become part of the audit team"
+      "A": "Request the expert become part of the audit team",
+      "B": "Rely on the expert's conclusions without further testing",
+      "C": "Evaluate the expert's competence, objectivity, and the appropriateness of their work",
+      "D": "Engage a different expert to develop an independent value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor evaluates the expert's qualifications, objectivity, methodology used, data inputs, and whether conclusions are reasonable. Using a management expert doesn't eliminate the auditor's responsibility.",
     "tip": "Management's expert = auditor still evaluates competence, objectivity, and work product.",
     "calculationRequired": false,
@@ -14527,12 +14527,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Accounting estimates are considered a significant fraud risk because:",
     "options": {
-      "A": "They always involve large dollar amounts",
-      "B": "The subjectivity and judgment provide opportunity for manipulation",
-      "C": "Management cannot document the basis for estimates",
-      "D": "Auditors cannot test estimates"
+      "A": "Management cannot document the basis for estimates",
+      "B": "Auditors cannot test estimates",
+      "C": "They always involve large dollar amounts",
+      "D": "The subjectivity and judgment provide opportunity for manipulation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The inherent subjectivity in estimates provides opportunity for management to manipulate amounts to achieve desired results. This makes estimates a potential vehicle for fraudulent financial reporting.",
     "tip": "Subjectivity = opportunity for manipulation. Estimates are inherently fraud-prone.",
     "calculationRequired": false,
@@ -14548,12 +14548,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When determining if a market is inactive, factors to consider include:",
     "options": {
-      "A": "The number of market participants only",
-      "B": "Significant decline in volume and activity, wide bid-ask spreads, and lack of recent transactions",
-      "C": "Whether the company frequently trades in that market",
-      "D": "Government regulation of the market"
+      "A": "Significant decline in volume and activity, wide bid-ask spreads, and lack of recent transactions",
+      "B": "Whether the company frequently trades in that market",
+      "C": "Government regulation of the market",
+      "D": "The number of market participants only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "An inactive market may be indicated by significant decline in transaction volume, wide bid-ask spreads, stale pricing, limited public information, and abnormal liquidity risk premiums.",
     "tip": "Inactive market indicators: low volume, wide spreads, stale prices, limited info.",
     "calculationRequired": false,
@@ -14569,12 +14569,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should communicate to governance about estimates:",
     "options": {
-      "A": "Only if the estimates are misstated",
-      "B": "Management's process, significant assumptions, and any indicators of possible bias",
-      "C": "Only estimates that exceed materiality",
-      "D": "A list of all estimates in the financial statements"
+      "A": "Only estimates that exceed materiality",
+      "B": "A list of all estimates in the financial statements",
+      "C": "Only if the estimates are misstated",
+      "D": "Management's process, significant assumptions, and any indicators of possible bias"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor communicates views about significant qualitative aspects of the entity's accounting practices, including significant estimates. This includes the process, assumptions, and any bias indicators.",
     "tip": "Communicate: estimate process + key assumptions + bias indicators.",
     "calculationRequired": false,
@@ -14590,12 +14590,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Fair value should be measured based on the price in:",
     "options": {
-      "A": "Any market where the asset could be sold",
-      "B": "The principal market, or if none, the most advantageous market",
-      "C": "The market with the highest price",
-      "D": "The market most convenient for management"
+      "A": "The market with the highest price",
+      "B": "The market most convenient for management",
+      "C": "Any market where the asset could be sold",
+      "D": "The principal market, or if none, the most advantageous market"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Fair value is measured in the principal market (highest volume/activity) for the asset. If no principal market exists, the most advantageous market (highest net proceeds) is used.",
     "tip": "Principal market first (most activity), then most advantageous market if no principal.",
     "calculationRequired": false,
@@ -14611,12 +14611,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The most relevant assertion for accounting estimates is typically:",
     "options": {
-      "A": "Existence",
-      "B": "Valuation",
-      "C": "Classification",
-      "D": "Rights and obligations"
+      "A": "Rights and obligations",
+      "B": "Existence",
+      "C": "Valuation",
+      "D": "Classification"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Valuation is typically the most relevant assertion for estimates because estimates involve determining appropriate amounts. However, other assertions like completeness (all necessary accruals) may also be relevant.",
     "tip": "Estimates = primarily valuation assertion. Is the amount reasonable?",
     "calculationRequired": false,
@@ -14632,12 +14632,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor may engage their own specialist for fair value measurement when:",
     "options": {
-      "A": "Management refuses to provide information",
-      "B": "The measurement is complex and requires specialized knowledge",
-      "C": "Management's estimate differs from the prior year",
-      "D": "The audit fee allows for additional expense"
+      "A": "The audit fee allows for additional expense",
+      "B": "Management refuses to provide information",
+      "C": "The measurement is complex and requires specialized knowledge",
+      "D": "Management's estimate differs from the prior year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor engages specialists when measurements are complex, require specialized knowledge the audit team lacks, or when an independent estimate is needed to evaluate management's fair value determination.",
     "tip": "Complex fair value + lack specialized knowledge = engage auditor's specialist.",
     "calculationRequired": false,
@@ -14653,12 +14653,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sufficient appropriate evidence for estimates typically includes:",
     "options": {
-      "A": "Management's representation alone",
-      "B": "Combination of testing controls, substantive procedures, and evaluation of assumptions",
-      "C": "Only comparison to industry benchmarks",
-      "D": "Only mathematical verification of calculations"
+      "A": "Only mathematical verification of calculations",
+      "B": "Management's representation alone",
+      "C": "Combination of testing controls, substantive procedures, and evaluation of assumptions",
+      "D": "Only comparison to industry benchmarks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Evidence for estimates usually comes from multiple sources: testing management's process and controls, substantive testing of inputs and calculations, evaluating assumptions, and possibly developing independent estimates.",
     "tip": "Multiple evidence sources: controls + substantive tests + assumption evaluation.",
     "calculationRequired": false,
@@ -14674,12 +14674,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When assets are transferred between fair value hierarchy levels, the auditor should:",
     "options": {
-      "A": "Assume the transfer is appropriate",
-      "B": "Evaluate the reasons for the transfer and whether it is appropriate",
-      "C": "Require independent appraisal",
-      "D": "Report the transfer as a significant deficiency"
+      "A": "Evaluate the reasons for the transfer and whether it is appropriate",
+      "B": "Require independent appraisal",
+      "C": "Report the transfer as a significant deficiency",
+      "D": "Assume the transfer is appropriate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Transfers between levels may indicate changes in market conditions or measurement approach. The auditor evaluates whether the transfer is appropriate based on the characteristics of the inputs used.",
     "tip": "Level transfers = evaluate reasons and appropriateness. Market changes or method changes?",
     "calculationRequired": false,
@@ -14695,12 +14695,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When management's estimate differs from the auditor's estimate, the auditor should:",
     "options": {
-      "A": "Automatically require adjustment to the auditor's amount",
-      "B": "Evaluate whether the difference represents a misstatement",
-      "C": "Accept management's amount if within the auditor's range",
-      "D": "Report the difference as a material weakness"
+      "A": "Accept management's amount if within the auditor's range",
+      "B": "Report the difference as a material weakness",
+      "C": "Automatically require adjustment to the auditor's amount",
+      "D": "Evaluate whether the difference represents a misstatement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When estimates differ, the auditor evaluates whether management's estimate is reasonable. If it falls within the auditor's range of reasonable outcomes, it may be acceptable. If outside the range, it's a misstatement.",
     "tip": "Within auditor's range = likely acceptable. Outside range = misstatement to evaluate.",
     "calculationRequired": false,
@@ -14716,12 +14716,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Related parties typically include:",
     "options": {
-      "A": "All customers and suppliers",
-      "B": "Parent company, subsidiaries, principal owners, and key management personnel",
-      "C": "Only entities under common ownership",
-      "D": "Independent directors only"
+      "A": "Parent company, subsidiaries, principal owners, and key management personnel",
+      "B": "Only entities under common ownership",
+      "C": "Independent directors only",
+      "D": "All customers and suppliers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Related parties include the parent company, subsidiaries, affiliates, principal owners, management, their immediate families, and entities with common ownership or management. The key is ability to influence or control.",
     "tip": "Related party = can influence decisions. Ownership, management, or family connections.",
     "calculationRequired": false,
@@ -14737,12 +14737,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Related party transactions present increased audit risk because:",
     "options": {
-      "A": "They are always fraudulent",
-      "B": "They may not be conducted at arm's length terms",
-      "C": "They are prohibited by GAAP",
-      "D": "They must always be eliminated"
+      "A": "They are prohibited by GAAP",
+      "B": "They must always be eliminated",
+      "C": "They are always fraudulent",
+      "D": "They may not be conducted at arm's length terms"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Related party transactions may lack the economic compulsion of arm's length dealing, meaning prices and terms may not reflect market conditions. This creates risk of misrepresented financial position and results.",
     "tip": "No competitive pressure = transactions may not reflect market reality.",
     "calculationRequired": false,
@@ -14758,12 +14758,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Procedures to identify related parties include:",
     "options": {
-      "A": "Confirming balances with all customers",
-      "B": "Inquiring of management and reviewing SEC filings, minutes, and significant contracts",
-      "C": "Testing all transactions over $10,000",
-      "D": "Confirming with the IRS"
+      "A": "Testing all transactions over $10,000",
+      "B": "Confirming with the IRS",
+      "C": "Confirming balances with all customers",
+      "D": "Inquiring of management and reviewing SEC filings, minutes, and significant contracts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Identification procedures include inquiry of management, review of prior workpapers, SEC filings, board minutes, significant contracts, and shareholder records. The auditor seeks to identify parties that could influence the entity.",
     "tip": "Multiple sources: inquiry + SEC filings + minutes + contracts + prior workpapers.",
     "calculationRequired": false,
@@ -14800,12 +14800,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "GAAP requires disclosure of related party transactions including:",
     "options": {
-      "A": "Only transactions over $1 million",
-      "B": "Nature of relationship, transaction description, and amounts due to/from related parties",
-      "C": "Personal information about related party individuals",
-      "D": "Only transactions with subsidiaries"
+      "A": "Only transactions with subsidiaries",
+      "B": "Only transactions over $1 million",
+      "C": "Nature of relationship, transaction description, and amounts due to/from related parties",
+      "D": "Personal information about related party individuals"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Disclosures must include the nature of the relationship, description of transactions, dollar amounts, and amounts due to or from related parties at year-end. Immaterial transactions may not require disclosure.",
     "tip": "Disclose: nature of relationship + transaction description + amounts involved.",
     "calculationRequired": false,
@@ -14821,12 +14821,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If management asserts that a related party transaction was conducted at arm's length:",
     "options": {
-      "A": "The auditor must accept this assertion",
-      "B": "The auditor should obtain evidence supporting the assertion",
-      "C": "No additional disclosure is required",
-      "D": "The transaction does not require testing"
+      "A": "The transaction does not require testing",
+      "B": "The auditor must accept this assertion",
+      "C": "The auditor should obtain evidence supporting the assertion",
+      "D": "No additional disclosure is required"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Claims about arm's length terms require supporting evidence. The auditor should compare terms to market rates, third-party transactions, or obtain other evidence that terms were indeed comparable to independent dealings.",
     "tip": "Arm's length claim requires proof. Compare to market rates or independent transactions.",
     "calculationRequired": false,
@@ -14863,12 +14863,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should inquire of management about:",
     "options": {
-      "A": "Only known related parties",
-      "B": "Names of all related parties and any transactions with them",
-      "C": "Related parties only if fraud is suspected",
-      "D": "Related parties only in the final year of engagement"
+      "A": "Related parties only in the final year of engagement",
+      "B": "Only known related parties",
+      "C": "Names of all related parties and any transactions with them",
+      "D": "Related parties only if fraud is suspected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should inquire about the identity of all related parties, the nature of relationships, whether any transactions occurred, and the types and purposes of any transactions. This is a standard risk assessment procedure.",
     "tip": "Ask management: who are related parties + did you transact with them?",
     "calculationRequired": false,
@@ -14884,12 +14884,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the auditor discovers a previously unidentified related party or transaction:",
     "options": {
-      "A": "It is not significant if discovered late in the audit",
-      "B": "The auditor should reassess whether other related parties or transactions may exist",
-      "C": "The transaction automatically requires adjustment",
-      "D": "The auditor should withdraw from the engagement"
+      "A": "The transaction automatically requires adjustment",
+      "B": "The auditor should withdraw from the engagement",
+      "C": "It is not significant if discovered late in the audit",
+      "D": "The auditor should reassess whether other related parties or transactions may exist"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Discovering unidentified related parties or transactions suggests identification procedures may not have been effective. The auditor should investigate why it wasn't identified, reassess risk, and consider whether others may exist.",
     "tip": "Surprise discovery = why wasn't it identified earlier? What else might be missing?",
     "calculationRequired": false,
@@ -14905,12 +14905,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Significant related party transactions outside the entity's normal course of business:",
     "options": {
-      "A": "Require no additional scrutiny",
-      "B": "Should be evaluated for whether they have been properly authorized and accounted for",
-      "C": "Must be disclosed as irregular",
-      "D": "Should be eliminated from the financial statements"
+      "A": "Must be disclosed as irregular",
+      "B": "Should be eliminated from the financial statements",
+      "C": "Require no additional scrutiny",
+      "D": "Should be evaluated for whether they have been properly authorized and accounted for"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Unusual related party transactions warrant heightened scrutiny. The auditor should understand the business purpose, verify proper authorization at an appropriate level, and assess whether accounting and disclosure are appropriate.",
     "tip": "Unusual related party transaction = more scrutiny on purpose, authorization, accounting.",
     "calculationRequired": false,
@@ -14968,12 +14968,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should be alert to related parties exerting dominant influence that may result in:",
     "options": {
-      "A": "Better corporate governance",
-      "B": "Transactions that primarily benefit the related party rather than the entity",
-      "C": "Increased efficiency in operations",
-      "D": "More accurate financial statements"
+      "A": "Increased efficiency in operations",
+      "B": "More accurate financial statements",
+      "C": "Better corporate governance",
+      "D": "Transactions that primarily benefit the related party rather than the entity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dominant influence by a related party may result in transactions that benefit the related party at the expense of the entity or its other stakeholders. This is a fraud risk factor requiring auditor attention.",
     "tip": "Dominant influence = risk of one-sided transactions benefiting the insider.",
     "calculationRequired": false,
@@ -15010,12 +15010,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sales to related parties create specific audit concerns about:",
     "options": {
-      "A": "Shipping costs only",
-      "B": "Whether sales are at market prices and represent genuine transfer of goods/services",
-      "C": "The credit terms only",
-      "D": "Whether the customer is publicly traded"
+      "A": "Whether sales are at market prices and represent genuine transfer of goods/services",
+      "B": "The credit terms only",
+      "C": "Whether the customer is publicly traded",
+      "D": "Shipping costs only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Related party sales may be priced above or below market, may not represent genuine economic transactions, and could be used to manipulate revenue. The auditor tests substance and pricing of such sales.",
     "tip": "Related party sales: real transaction + market price + genuine economic substance?",
     "calculationRequired": false,
@@ -15031,12 +15031,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Loans to or from related parties should be evaluated for:",
     "options": {
-      "A": "Whether the interest rate matches prime rate exactly",
-      "B": "Terms, repayment history, collectibility, and proper classification",
-      "C": "Whether the loan was publicized",
-      "D": "Whether it exceeds the company's credit limit"
+      "A": "Terms, repayment history, collectibility, and proper classification",
+      "B": "Whether the loan was publicized",
+      "C": "Whether it exceeds the company's credit limit",
+      "D": "Whether the interest rate matches prime rate exactly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Related party loans require evaluation of interest rates relative to market, repayment history and ability, collectibility (for receivables), and proper balance sheet classification (current vs noncurrent).",
     "tip": "Related party loans: market rate interest + repayment history + collectibility + classification.",
     "calculationRequired": false,
@@ -15052,12 +15052,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Review of board and committee minutes helps identify related party transactions by revealing:",
     "options": {
-      "A": "Day-to-day operating decisions",
-      "B": "Significant contracts, compensation arrangements, and transactions requiring approval",
-      "C": "Employee performance reviews",
-      "D": "Marketing strategies"
+      "A": "Marketing strategies",
+      "B": "Day-to-day operating decisions",
+      "C": "Significant contracts, compensation arrangements, and transactions requiring approval",
+      "D": "Employee performance reviews"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Board minutes may document approval of contracts with related parties, executive compensation arrangements, significant loans to officers, and other transactions that involve related parties.",
     "tip": "Board minutes = source for identifying approved related party transactions.",
     "calculationRequired": false,
@@ -15073,12 +15073,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Executive compensation is considered a related party matter because:",
     "options": {
-      "A": "It is always excessive",
-      "B": "Executives are related parties and compensation affects financial statements",
-      "C": "It is determined by shareholders",
-      "D": "It does not require disclosure"
+      "A": "Executives are related parties and compensation affects financial statements",
+      "B": "It is determined by shareholders",
+      "C": "It does not require disclosure",
+      "D": "It is always excessive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Key management personnel are related parties. Their compensation (salary, bonus, equity awards, benefits) requires proper disclosure and the auditor verifies completeness and accuracy of these disclosures.",
     "tip": "Executives = related parties. Compensation requires testing and disclosure.",
     "calculationRequired": false,
@@ -15094,12 +15094,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For SEC registrants, related party disclosure requirements:",
     "options": {
-      "A": "Are the same as for private companies",
-      "B": "Include specific disclosure rules in Regulation S-K about transactions and relationships",
-      "C": "Are optional for small reporting companies",
-      "D": "Only apply to transactions over $1 million"
+      "A": "Only apply to transactions over $1 million",
+      "B": "Are the same as for private companies",
+      "C": "Include specific disclosure rules in Regulation S-K about transactions and relationships",
+      "D": "Are optional for small reporting companies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SEC registrants have specific disclosure requirements under Regulation S-K regarding related party transactions, including disclosure of transactions exceeding certain thresholds and policies for approval of such transactions.",
     "tip": "SEC = enhanced related party disclosure under Reg S-K. More than GAAP alone.",
     "calculationRequired": false,
@@ -15115,12 +15115,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Guarantees provided to or by related parties:",
     "options": {
-      "A": "Do not require disclosure",
-      "B": "Should be evaluated for proper accounting and disclosure",
-      "C": "Are automatically eliminated in consolidation",
-      "D": "Only require disclosure if the guarantee is called"
+      "A": "Should be evaluated for proper accounting and disclosure",
+      "B": "Are automatically eliminated in consolidation",
+      "C": "Only require disclosure if the guarantee is called",
+      "D": "Do not require disclosure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Related party guarantees require evaluation for proper recognition (if performance becomes probable) and disclosure of the nature and amount. Even unexercised guarantees create contingent obligations requiring disclosure.",
     "tip": "Related party guarantees = proper accounting + disclosure regardless of whether called.",
     "calculationRequired": false,
@@ -15136,12 +15136,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Leases with related parties should be evaluated for:",
     "options": {
-      "A": "Only the lease term",
-      "B": "Whether lease terms are at market rates and transaction has economic substance",
-      "C": "The color of the leased property",
-      "D": "Whether the lease is cancellable"
+      "A": "The color of the leased property",
+      "B": "Whether the lease is cancellable",
+      "C": "Only the lease term",
+      "D": "Whether lease terms are at market rates and transaction has economic substance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Related party leases may have below or above market rates, affecting reported expenses and assets. The auditor evaluates whether terms are reasonable and whether the arrangement has genuine economic substance.",
     "tip": "Related party leases: market rate comparison + economic substance + proper classification.",
     "calculationRequired": false,
@@ -15178,12 +15178,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Special purpose entities (SPEs) or variable interest entities (VIEs) involving related parties:",
     "options": {
-      "A": "Never require consolidation",
-      "B": "Require careful evaluation of whether they should be consolidated and properly disclosed",
-      "C": "Are prohibited under GAAP",
-      "D": "Automatically pass control to the related party"
+      "A": "Automatically pass control to the related party",
+      "B": "Never require consolidation",
+      "C": "Require careful evaluation of whether they should be consolidated and properly disclosed",
+      "D": "Are prohibited under GAAP"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SPEs/VIEs involving related parties require evaluation of who is the primary beneficiary and whether consolidation is required. Related party involvement may indicate control even without majority ownership. Proper disclosure is critical.",
     "tip": "Related party SPEs: evaluate consolidation requirement + ensure complete disclosure.",
     "calculationRequired": false,
@@ -15199,12 +15199,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Intercompany transactions between a parent and subsidiary:",
     "options": {
-      "A": "Are not related party transactions",
-      "B": "Must be eliminated in consolidation but disclosed if material",
-      "C": "Should never occur",
-      "D": "Do not require any audit procedures"
+      "A": "Must be eliminated in consolidation but disclosed if material",
+      "B": "Should never occur",
+      "C": "Do not require any audit procedures",
+      "D": "Are not related party transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Parent-subsidiary transactions are related party transactions. In consolidated statements, intercompany transactions are eliminated, but material transactions may still require disclosure of the nature of the relationship and types of transactions.",
     "tip": "Intercompany = related party. Eliminate in consolidation + disclose if significant.",
     "calculationRequired": false,
@@ -15220,12 +15220,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a significant related party or transaction is discovered after the audit report is issued:",
     "options": {
-      "A": "No action is required",
-      "B": "The auditor should consider whether it affects the previously issued report",
-      "C": "The information should be saved for next year's audit",
-      "D": "The audit committee should be immediately terminated"
+      "A": "The information should be saved for next year's audit",
+      "B": "The audit committee should be immediately terminated",
+      "C": "No action is required",
+      "D": "The auditor should consider whether it affects the previously issued report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Discovery of significant undisclosed related parties or transactions after report issuance may represent a subsequently discovered fact requiring consideration of whether the financial statements need revision and the report recalled.",
     "tip": "Post-issuance discovery = consider impact on previously issued report. May need action.",
     "calculationRequired": false,
@@ -15262,12 +15262,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Professional skepticism in related party testing requires the auditor to:",
     "options": {
-      "A": "Accept management's explanations without question",
-      "B": "Consider that related party transactions may not have been disclosed or conducted at arm's length",
-      "C": "Assume all related party transactions are fraudulent",
-      "D": "Only test transactions management identifies"
+      "A": "Only test transactions management identifies",
+      "B": "Accept management's explanations without question",
+      "C": "Consider that related party transactions may not have been disclosed or conducted at arm's length",
+      "D": "Assume all related party transactions are fraudulent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Skepticism requires recognizing that related party relationships create opportunities for non-arm's length transactions and that not all relationships or transactions may be disclosed. The auditor remains alert throughout the audit.",
     "tip": "Be skeptical: undisclosed relationships? Hidden transactions? Favorable terms?",
     "calculationRequired": false,
@@ -15283,12 +15283,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Transactions with immediate family members of key management:",
     "options": {
-      "A": "Are never considered related party transactions",
-      "B": "Are considered related party transactions and require the same scrutiny",
-      "C": "Only matter if the family member is employed by the company",
-      "D": "Are automatically prohibited"
+      "A": "Only matter if the family member is employed by the company",
+      "B": "Are automatically prohibited",
+      "C": "Are never considered related party transactions",
+      "D": "Are considered related party transactions and require the same scrutiny"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Immediate family members of key management are related parties. Transactions with them receive the same scrutiny as transactions with management directly, as family members may act as conduits for improper transactions.",
     "tip": "Family of management = related party. Can be used to hide improper transactions.",
     "calculationRequired": false,
@@ -15304,12 +15304,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Management services provided by a related party should be tested for:",
     "options": {
-      "A": "Whether the services were actually performed at reasonable cost",
-      "B": "Only the payment timing",
-      "C": "Whether the related party is profitable",
-      "D": "Shareholder approval only"
+      "A": "Shareholder approval only",
+      "B": "Whether the services were actually performed at reasonable cost",
+      "C": "Only the payment timing",
+      "D": "Whether the related party is profitable"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Service arrangements with related parties require verification that services were actually rendered, pricing is reasonable compared to market alternatives, and proper accounting and disclosure have occurred.",
     "tip": "Related party services: verify services rendered + reasonable pricing + proper disclosure.",
     "calculationRequired": false,
@@ -15325,12 +15325,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The most critical assertions for related party transactions typically include:",
     "options": {
-      "A": "Only existence",
-      "B": "Completeness of identification, valuation of transactions, and presentation/disclosure",
-      "C": "Only classification",
-      "D": "Rights and obligations only"
+      "A": "Completeness of identification, valuation of transactions, and presentation/disclosure",
+      "B": "Only classification",
+      "C": "Rights and obligations only",
+      "D": "Only existence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Critical assertions include completeness (all related parties and transactions identified), valuation (transactions at appropriate amounts), and presentation/disclosure (proper description and disclosure of relationships and transactions).",
     "tip": "Key assertions: Completeness of identification + Valuation + Presentation/Disclosure.",
     "calculationRequired": false,
@@ -15367,12 +15367,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Specific procedures for significant related party transactions include:",
     "options": {
-      "A": "Only analytical review",
-      "B": "Reading underlying agreements, verifying approval, and confirming terms with the related party",
-      "C": "Accepting verbal confirmations from management",
-      "D": "Testing only transactions over $100,000"
+      "A": "Testing only transactions over $100,000",
+      "B": "Only analytical review",
+      "C": "Reading underlying agreements, verifying approval, and confirming terms with the related party",
+      "D": "Accepting verbal confirmations from management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Substantive procedures include reading agreements supporting the transaction, verifying appropriate authorization, confirming terms with the counterparty, and evaluating whether accounting matches the agreement terms.",
     "tip": "Test: read agreements + check authorization + confirm terms + verify accounting.",
     "calculationRequired": false,
@@ -15409,12 +15409,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Reliance on a related party for financial support in evaluating going concern:",
     "options": {
-      "A": "Automatically alleviates going concern doubts",
-      "B": "Requires evaluation of the related party's ability and intent to provide support",
-      "C": "Is prohibited under GAAP",
-      "D": "Only matters for public companies"
+      "A": "Only matters for public companies",
+      "B": "Automatically alleviates going concern doubts",
+      "C": "Requires evaluation of the related party's ability and intent to provide support",
+      "D": "Is prohibited under GAAP"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "If management's going concern plans rely on related party support, the auditor must evaluate the related party's financial ability to provide support and their intent to do so, including obtaining evidence of commitment.",
     "tip": "Related party support = verify ability + intent. Get evidence, not just management's word.",
     "calculationRequired": false,
@@ -15451,12 +15451,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Subsequent events are events that occur:",
     "options": {
-      "A": "During the current fiscal year",
-      "B": "Between the balance sheet date and the date of the auditor's report",
-      "C": "Only after the audit report is issued",
-      "D": "During the planning phase of the audit"
+      "A": "Between the balance sheet date and the date of the auditor's report",
+      "B": "Only after the audit report is issued",
+      "C": "During the planning phase of the audit",
+      "D": "During the current fiscal year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Subsequent events occur after the balance sheet date but before the date of the auditor's report. The auditor has responsibility to identify and evaluate these events for their effect on the financial statements.",
     "tip": "Subsequent events period = balance sheet date → auditor's report date.",
     "calculationRequired": false,
@@ -15472,12 +15472,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Type I (recognized) subsequent event is one that:",
     "options": {
-      "A": "Arises from conditions that did not exist at the balance sheet date",
-      "B": "Provides additional evidence about conditions that existed at the balance sheet date",
-      "C": "Only requires disclosure",
-      "D": "Occurs more than 90 days after year-end"
+      "A": "Only requires disclosure",
+      "B": "Occurs more than 90 days after year-end",
+      "C": "Arises from conditions that did not exist at the balance sheet date",
+      "D": "Provides additional evidence about conditions that existed at the balance sheet date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Type I events provide evidence about conditions existing at year-end, such as resolution of a contingency or bankruptcy of a customer whose receivable was already uncollectible. These require adjustment to the financial statements.",
     "tip": "Type I = condition existed at year-end. Adjust the financial statements.",
     "calculationRequired": false,
@@ -15493,12 +15493,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Type II (nonrecognized) subsequent event is one that:",
     "options": {
-      "A": "Requires adjustment to the financial statements",
-      "B": "Provides evidence about conditions arising after the balance sheet date",
-      "C": "Is not material and requires no action",
-      "D": "Invalidates the audit opinion"
+      "A": "Invalidates the audit opinion",
+      "B": "Requires adjustment to the financial statements",
+      "C": "Provides evidence about conditions arising after the balance sheet date",
+      "D": "Is not material and requires no action"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Type II events arise from conditions that occurred after year-end, such as a fire or acquisition. These do not require adjustment but may require disclosure if material to prevent misleading financial statements.",
     "tip": "Type II = condition arose after year-end. Disclose if material, don't adjust.",
     "calculationRequired": false,
@@ -15514,12 +15514,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Procedures to identify subsequent events include:",
     "options": {
-      "A": "Only reading the subsequent period's financial statements",
-      "B": "Inquiries of management, reading minutes, and reviewing subsequent accounting records",
-      "C": "Confirming all year-end balances",
-      "D": "Testing transactions only through the report date"
+      "A": "Confirming all year-end balances",
+      "B": "Testing transactions only through the report date",
+      "C": "Only reading the subsequent period's financial statements",
+      "D": "Inquiries of management, reading minutes, and reviewing subsequent accounting records"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Subsequent events procedures include inquiry of management about significant events, reading minutes, reviewing subsequent accounting records, examining cutoff, and obtaining legal counsel responses about litigation.",
     "tip": "Procedures: inquiry + read minutes + review records + read legal letters.",
     "calculationRequired": false,
@@ -15535,12 +15535,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which is an example of a Type I subsequent event?",
     "options": {
-      "A": "A major customer files for bankruptcy after year-end, confirming uncollectibility",
-      "B": "A fire destroys a warehouse after year-end",
-      "C": "A new product line is introduced in January",
-      "D": "Declaration of a dividend after year-end"
+      "A": "Declaration of a dividend after year-end",
+      "B": "A major customer files for bankruptcy after year-end, confirming uncollectibility",
+      "C": "A fire destroys a warehouse after year-end",
+      "D": "A new product line is introduced in January"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "A customer's post year-end bankruptcy may confirm that the receivable was already impaired at year-end. The condition (customer's financial distress) existed at year-end; the bankruptcy just confirms it.",
     "tip": "Customer bankruptcy after year-end usually = Type I. Confirms year-end condition.",
     "calculationRequired": false,
@@ -15556,12 +15556,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which is an example of a Type II subsequent event?",
     "options": {
-      "A": "Settlement of litigation for an amount different from the accrual",
-      "B": "Issuance of stock after year-end",
-      "C": "Collection of a receivable previously written off",
-      "D": "Discovery of a fraud that occurred before year-end"
+      "A": "Discovery of a fraud that occurred before year-end",
+      "B": "Settlement of litigation for an amount different from the accrual",
+      "C": "Issuance of stock after year-end",
+      "D": "Collection of a receivable previously written off"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Stock issuance after year-end is a new event that did not exist at year-end. It may require disclosure but not adjustment. The company's capital structure at year-end was not affected by this future event.",
     "tip": "Stock issuance, acquisition, natural disaster after year-end = Type II (disclose if material).",
     "calculationRequired": false,
@@ -15577,12 +15577,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Dual dating an audit report is used when:",
     "options": {
-      "A": "The audit is performed by two firms jointly",
-      "B": "A subsequent event occurs after the original report date and the auditor modifies the report",
-      "C": "The financial statements are restated",
-      "D": "The audit spans two fiscal years"
+      "A": "The financial statements are restated",
+      "B": "The audit spans two fiscal years",
+      "C": "The audit is performed by two firms jointly",
+      "D": "A subsequent event occurs after the original report date and the auditor modifies the report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dual dating (e.g., 'March 15, 20X1, except for Note X, as to which the date is April 2, 20X1') is used when a subsequent event disclosed requires extending the date for that specific matter while limiting responsibility for other events.",
     "tip": "Dual date = limits responsibility. Only that specific matter gets the later date.",
     "calculationRequired": false,
@@ -15598,12 +15598,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Inquiry of management about subsequent events should cover:",
     "options": {
-      "A": "Only new litigation filed after year-end",
-      "B": "Significant commitments, unusual adjustments, and changes in estimates",
-      "C": "Employee vacation schedules",
-      "D": "Marketing plans for next year"
+      "A": "Employee vacation schedules",
+      "B": "Marketing plans for next year",
+      "C": "Only new litigation filed after year-end",
+      "D": "Significant commitments, unusual adjustments, and changes in estimates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Inquiries should cover significant transactions and commitments, unusual adjustments, developments affecting estimates, significant changes in capital structure, and status of items involving subjective judgments.",
     "tip": "Ask about: commitments, unusual adjustments, estimate changes, capital changes, judgments.",
     "calculationRequired": false,
@@ -15619,12 +15619,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The attorney response letter provides evidence about subsequent events by:",
     "options": {
-      "A": "Guaranteeing no litigation will occur",
-      "B": "Identifying litigation matters that may affect the financial statements",
-      "C": "Providing legal advice to the auditor",
-      "D": "Confirming the auditor's independence"
+      "A": "Providing legal advice to the auditor",
+      "B": "Confirming the auditor's independence",
+      "C": "Guaranteeing no litigation will occur",
+      "D": "Identifying litigation matters that may affect the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The legal letter identifies pending or threatened litigation, claims, and assessments, including developments after year-end that may require adjustment or disclosure in the financial statements.",
     "tip": "Legal letter = identify litigation + subsequent developments affecting accruals/disclosures.",
     "calculationRequired": false,
@@ -15640,12 +15640,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor's report should be dated:",
     "options": {
-      "A": "As of the balance sheet date",
-      "B": "No earlier than when sufficient appropriate evidence has been obtained",
-      "C": "30 days after the balance sheet date",
-      "D": "When the financial statements are filed with the SEC"
+      "A": "30 days after the balance sheet date",
+      "B": "When the financial statements are filed with the SEC",
+      "C": "As of the balance sheet date",
+      "D": "No earlier than when sufficient appropriate evidence has been obtained"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The report date should be no earlier than when the auditor has obtained sufficient appropriate evidence, including evidence that the complete financial statements have been prepared and management has taken responsibility.",
     "tip": "Report date = when sufficient evidence obtained + F/S complete + management sign-off.",
     "calculationRequired": false,
@@ -15682,12 +15682,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The management representation letter should be dated:",
     "options": {
-      "A": "As of the balance sheet date",
-      "B": "As of the date of the auditor's report",
-      "C": "30 days before the audit report",
-      "D": "When management chooses"
+      "A": "30 days before the audit report",
+      "B": "When management chooses",
+      "C": "As of the balance sheet date",
+      "D": "As of the date of the auditor's report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The representation letter should be dated as of the date of the auditor's report, covering representations through that date, including representations about subsequent events.",
     "tip": "Rep letter date = report date. Covers through the same date as the report.",
     "calculationRequired": false,
@@ -15724,12 +15724,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an auditor reissues a report on prior period financial statements, the auditor should:",
     "options": {
-      "A": "Use the original report date without additional procedures",
-      "B": "Consider subsequent events procedures up to the new report date",
-      "C": "Only update the date if requested by management",
-      "D": "Automatically dual date the report"
+      "A": "Automatically dual date the report",
+      "B": "Use the original report date without additional procedures",
+      "C": "Consider subsequent events procedures up to the new report date",
+      "D": "Only update the date if requested by management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When reissuing a report, the auditor should perform subsequent events procedures from the original report date to the new date. Alternatively, the auditor may dual date or use the original date with appropriate disclosure.",
     "tip": "Reissuance = subsequent events procedures through new date. Or dual date.",
     "calculationRequired": false,
@@ -15745,12 +15745,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A dividend declared after year-end but before the audit report date:",
     "options": {
-      "A": "Should be recorded as a liability at year-end",
-      "B": "Is typically a Type II event requiring disclosure",
-      "C": "Requires restatement of prior years",
-      "D": "Has no accounting or disclosure impact"
+      "A": "Is typically a Type II event requiring disclosure",
+      "B": "Requires restatement of prior years",
+      "C": "Has no accounting or disclosure impact",
+      "D": "Should be recorded as a liability at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A dividend declared after year-end is a Type II event. No liability existed at year-end because the obligation arose after that date. Disclosure may be appropriate but adjustment is not required.",
     "tip": "Post year-end dividend = Type II (disclose). No liability at year-end.",
     "calculationRequired": false,
@@ -15766,12 +15766,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A natural disaster occurring after year-end that destroys significant assets is:",
     "options": {
-      "A": "A Type I event requiring adjustment",
-      "B": "A Type II event requiring disclosure if material",
-      "C": "Not a subsequent event",
-      "D": "Reason to withdraw the audit opinion"
+      "A": "Reason to withdraw the audit opinion",
+      "B": "A Type I event requiring adjustment",
+      "C": "A Type II event requiring disclosure if material",
+      "D": "Not a subsequent event"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Natural disasters occurring after year-end are Type II events because the loss did not exist at year-end. Material losses should be disclosed to prevent the financial statements from being misleading.",
     "tip": "Post year-end disaster = Type II. Disclose if material, no adjustment needed.",
     "calculationRequired": false,
@@ -15787,12 +15787,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Litigation pending at year-end is settled after year-end for significantly more than the recorded accrual. This is:",
     "options": {
-      "A": "Always a Type II event",
-      "B": "Likely a Type I event requiring adjustment to the accrual",
-      "C": "Not relevant to the year-end financial statements",
-      "D": "Evidence of management fraud"
+      "A": "Likely a Type I event requiring adjustment to the accrual",
+      "B": "Not relevant to the year-end financial statements",
+      "C": "Evidence of management fraud",
+      "D": "Always a Type II event"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Settlement of pre-existing litigation provides evidence about conditions at year-end. If the settlement significantly exceeds the accrual, it suggests the accrual was understated and adjustment may be required.",
     "tip": "Settlement of existing litigation = Type I. Provides evidence about year-end condition.",
     "calculationRequired": false,
@@ -15808,12 +15808,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Reading minutes of board and shareholder meetings after year-end helps identify:",
     "options": {
-      "A": "Only routine matters",
-      "B": "Significant transactions, commitments, and events requiring attention",
-      "C": "Employee vacation schedules",
-      "D": "Marketing strategies"
+      "A": "Employee vacation schedules",
+      "B": "Marketing strategies",
+      "C": "Only routine matters",
+      "D": "Significant transactions, commitments, and events requiring attention"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Board and shareholder minutes may reveal significant transactions, financing arrangements, authorized capital changes, acquisitions, or other events occurring after year-end that require disclosure.",
     "tip": "Post year-end minutes = source for identifying significant subsequent events.",
     "calculationRequired": false,
@@ -15829,12 +15829,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Review of accounting records after year-end helps identify:",
     "options": {
-      "A": "Only errors in the prior year",
-      "B": "Journal entries and transactions that may indicate events affecting year-end statements",
-      "C": "Budget variances for the current year",
-      "D": "Employee performance issues"
+      "A": "Budget variances for the current year",
+      "B": "Employee performance issues",
+      "C": "Only errors in the prior year",
+      "D": "Journal entries and transactions that may indicate events affecting year-end statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Subsequent accounting records may reveal adjusting entries, significant accruals, or transactions that indicate conditions existing at year-end or events requiring disclosure.",
     "tip": "Subsequent accounting records = evidence about year-end conditions and events.",
     "calculationRequired": false,
@@ -15871,12 +15871,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A significant debt refinancing after year-end that affects debt classification:",
     "options": {
-      "A": "Requires retroactive adjustment of the year-end balance sheet",
-      "B": "May affect classification of debt as current or noncurrent per GAAP guidance",
-      "C": "Has no impact on year-end financial statements",
-      "D": "Must be recognized immediately"
+      "A": "Must be recognized immediately",
+      "B": "Requires retroactive adjustment of the year-end balance sheet",
+      "C": "May affect classification of debt as current or noncurrent per GAAP guidance",
+      "D": "Has no impact on year-end financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under GAAP, subsequent refinancing may allow classification of short-term debt as long-term at year-end if certain conditions are met. The auditor evaluates whether classification criteria are satisfied.",
     "tip": "Subsequent refinancing = may allow long-term classification of short-term debt.",
     "calculationRequired": false,
@@ -15913,12 +15913,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A stock split occurring after year-end but before report issuance:",
     "options": {
-      "A": "Requires adjustment of year-end stockholders' equity",
-      "B": "Requires retroactive adjustment of earnings per share",
-      "C": "Has no effect on the financial statements",
-      "D": "Must be disclosed as an uncertainty"
+      "A": "Has no effect on the financial statements",
+      "B": "Must be disclosed as an uncertainty",
+      "C": "Requires adjustment of year-end stockholders' equity",
+      "D": "Requires retroactive adjustment of earnings per share"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Stock splits occurring before the report is issued require retroactive adjustment of earnings per share for all periods presented, to reflect the change in shares outstanding. This ensures comparability.",
     "tip": "Stock split before report = retroactively adjust EPS. Shows per-share data consistently.",
     "calculationRequired": false,
@@ -15934,12 +15934,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Documentation of subsequent events procedures should include:",
     "options": {
-      "A": "Only events requiring adjustment",
-      "B": "Procedures performed, dates covered, and conclusions reached",
-      "C": "A list of all events occurring after year-end",
-      "D": "Only negative responses from management inquiry"
+      "A": "Only negative responses from management inquiry",
+      "B": "Only events requiring adjustment",
+      "C": "Procedures performed, dates covered, and conclusions reached",
+      "D": "A list of all events occurring after year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Documentation should describe the procedures performed, the period covered by those procedures, any events identified, and the auditor's conclusions about the need for adjustment or disclosure.",
     "tip": "Document: procedures + dates covered + findings + conclusions.",
     "calculationRequired": false,
@@ -15997,12 +15997,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a quarterly review, the accountant should inquire about events occurring:",
     "options": {
-      "A": "Only during the quarter",
-      "B": "From the date of the financial information to the date of the review report",
-      "C": "Only if management volunteers information",
-      "D": "Throughout the entire fiscal year"
+      "A": "Throughout the entire fiscal year",
+      "B": "Only during the quarter",
+      "C": "From the date of the financial information to the date of the review report",
+      "D": "Only if management volunteers information"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In a review engagement, the accountant inquires about events subsequent to the date of the interim financial information that may require adjustment or disclosure, through the date of the review report.",
     "tip": "Review engagement = subsequent events inquiry too, through report date.",
     "calculationRequired": false,
@@ -16039,12 +16039,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For SEC registrants, subsequent events disclosures must be evaluated through:",
     "options": {
-      "A": "The balance sheet date",
-      "B": "The date the financial statements are issued or available to be issued",
-      "C": "60 days after year-end",
-      "D": "The date the 10-K is filed"
+      "A": "60 days after year-end",
+      "B": "The date the 10-K is filed",
+      "C": "The balance sheet date",
+      "D": "The date the financial statements are issued or available to be issued"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under GAAP, subsequent events are evaluated through the date financial statements are issued (SEC registrants) or available to be issued (non-public entities). This determines the subsequent events period.",
     "tip": "SEC registrants = evaluate through issuance date. Not just report date.",
     "calculationRequired": false,
@@ -16060,12 +16060,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Resolution of a contingency after year-end typically:",
     "options": {
-      "A": "Has no effect on year-end statements",
-      "B": "Provides evidence about the contingency's status at year-end",
-      "C": "Requires a change in accounting principle",
-      "D": "Invalidates the prior year accrual"
+      "A": "Requires a change in accounting principle",
+      "B": "Invalidates the prior year accrual",
+      "C": "Has no effect on year-end statements",
+      "D": "Provides evidence about the contingency's status at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Resolution of a contingency (like settlement or court verdict) after year-end provides evidence about conditions that existed at year-end. The resolution helps determine whether the year-end accrual was appropriate.",
     "tip": "Contingency resolution = evidence about year-end condition. Affects year-end accrual evaluation.",
     "calculationRequired": false,
@@ -16081,12 +16081,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A major restructuring announced after year-end:",
     "options": {
-      "A": "Always requires adjustment to year-end statements",
-      "B": "May require disclosure but typically not adjustment unless committed to before year-end",
-      "C": "Has no impact on the audit",
-      "D": "Requires restatement of all prior periods"
+      "A": "Requires restatement of all prior periods",
+      "B": "Always requires adjustment to year-end statements",
+      "C": "May require disclosure but typically not adjustment unless committed to before year-end",
+      "D": "Has no impact on the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Restructuring announced after year-end is typically Type II unless management was committed to a plan before year-end meeting recognition criteria. Material restructurings should be disclosed.",
     "tip": "Post year-end restructuring = usually Type II. Committed before year-end = may be Type I.",
     "calculationRequired": false,
@@ -16123,12 +16123,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Significant inventory write-downs occurring in the subsequent period:",
     "options": {
-      "A": "Never affect year-end valuation",
-      "B": "May indicate that net realizable value was below cost at year-end",
-      "C": "Only require current year recognition",
-      "D": "Are always Type II events"
+      "A": "May indicate that net realizable value was below cost at year-end",
+      "B": "Only require current year recognition",
+      "C": "Are always Type II events",
+      "D": "Never affect year-end valuation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Subsequent period write-downs may indicate inventory was already impaired at year-end. If evidence suggests NRV was below cost at year-end, adjustment may be required as a Type I event.",
     "tip": "Subsequent inventory write-down = was NRV already below cost at year-end?",
     "calculationRequired": false,
@@ -16165,12 +16165,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When previously audited financial statements are included in a securities registration statement:",
     "options": {
-      "A": "The auditor has no further responsibilities",
-      "B": "The auditor should perform certain subsequent events procedures up to the effective date",
-      "C": "Only the underwriter is responsible for subsequent events",
-      "D": "The original report date controls all responsibilities"
+      "A": "The original report date controls all responsibilities",
+      "B": "The auditor has no further responsibilities",
+      "C": "The auditor should perform certain subsequent events procedures up to the effective date",
+      "D": "Only the underwriter is responsible for subsequent events"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When financials are included in a registration statement, the auditor performs subsequent events procedures up to the effective date (or as close as practical) and may need to update the audit report.",
     "tip": "Registration statement = subsequent events through effective date. Extended responsibility.",
     "calculationRequired": false,
@@ -16228,12 +16228,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GAAP, management evaluates going concern for a period of:",
     "options": {
-      "A": "Six months from the balance sheet date",
-      "B": "One year from the date the financial statements are issued",
-      "C": "Two years from the balance sheet date",
-      "D": "An indefinite period"
+      "A": "One year from the date the financial statements are issued",
+      "B": "Two years from the balance sheet date",
+      "C": "An indefinite period",
+      "D": "Six months from the balance sheet date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under ASC 205-40, management evaluates whether there is substantial doubt about the entity's ability to continue as a going concern for one year from the date the financial statements are issued (or available to be issued).",
     "tip": "GAAP = one year from issuance date. Not from balance sheet date.",
     "calculationRequired": false,
@@ -16270,12 +16270,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which condition may raise substantial doubt about going concern?",
     "options": {
-      "A": "Strong cash flows from operations",
-      "B": "Negative trends such as recurring losses and working capital deficiencies",
-      "C": "Successful new product launches",
-      "D": "Increase in market share"
+      "A": "Increase in market share",
+      "B": "Strong cash flows from operations",
+      "C": "Negative trends such as recurring losses and working capital deficiencies",
+      "D": "Successful new product launches"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Negative trends like recurring operating losses, negative cash flows, working capital deficiencies, and loan defaults are indicators that may raise substantial doubt about going concern.",
     "tip": "Red flags: recurring losses, negative cash flow, working capital deficit, debt defaults.",
     "calculationRequired": false,
@@ -16291,12 +16291,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating going concern, the auditor should:",
     "options": {
-      "A": "Only consider conditions at the balance sheet date",
-      "B": "Evaluate conditions through the date of the auditor's report",
-      "C": "Rely entirely on management's assessment",
-      "D": "Perform procedures only if management identifies concerns"
+      "A": "Rely entirely on management's assessment",
+      "B": "Perform procedures only if management identifies concerns",
+      "C": "Only consider conditions at the balance sheet date",
+      "D": "Evaluate conditions through the date of the auditor's report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should evaluate conditions and events from the balance sheet date through the report date, considering all information obtained during the audit that may bear on the entity's ability to continue.",
     "tip": "Auditor evaluates through report date. Consider all evidence obtained.",
     "calculationRequired": false,
@@ -16312,12 +16312,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating management's plans to mitigate going concern, the auditor should consider:",
     "options": {
-      "A": "Only plans that have been fully implemented",
-      "B": "The feasibility of plans and likelihood they will be effective within the time frame",
-      "C": "All plans regardless of probability of success",
-      "D": "Only plans approved by the audit committee"
+      "A": "All plans regardless of probability of success",
+      "B": "Only plans approved by the audit committee",
+      "C": "Only plans that have been fully implemented",
+      "D": "The feasibility of plans and likelihood they will be effective within the time frame"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor evaluates whether management's plans are feasible, can be effectively implemented, and whether they will mitigate the conditions raising substantial doubt within the evaluation period.",
     "tip": "Plans must be feasible + likely to be effective + timely. Not just good intentions.",
     "calculationRequired": false,
@@ -16354,12 +16354,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When substantial doubt exists, required disclosures include:",
     "options": {
-      "A": "Only a statement that the company may not survive",
-      "B": "Principal conditions raising doubt, management's evaluation and plans, and possible effects",
-      "C": "Names of creditors who may not be paid",
-      "D": "The exact date the company will cease operations"
+      "A": "Principal conditions raising doubt, management's evaluation and plans, and possible effects",
+      "B": "Names of creditors who may not be paid",
+      "C": "The exact date the company will cease operations",
+      "D": "Only a statement that the company may not survive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Disclosures must include the principal conditions giving rise to substantial doubt, management's evaluation of those conditions and plans to address them, and the possible effects on the financial statements.",
     "tip": "Disclose: conditions + management's evaluation + plans + possible effects.",
     "calculationRequired": false,
@@ -16375,12 +16375,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If substantial doubt exists but management does not provide adequate disclosure:",
     "options": {
-      "A": "The auditor should only include an emphasis paragraph",
-      "B": "The auditor should modify the opinion due to departure from GAAP",
-      "C": "The auditor should issue an unmodified opinion",
-      "D": "The auditor should resign"
+      "A": "The auditor should issue an unmodified opinion",
+      "B": "The auditor should resign",
+      "C": "The auditor should only include an emphasis paragraph",
+      "D": "The auditor should modify the opinion due to departure from GAAP"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Inadequate disclosure of going concern conditions represents a GAAP departure. The auditor should issue a qualified or adverse opinion, depending on materiality and pervasiveness.",
     "tip": "Missing disclosure = GAAP departure = qualified or adverse opinion.",
     "calculationRequired": false,
@@ -16438,12 +16438,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "External indicators of potential going concern issues include:",
     "options": {
-      "A": "Favorable industry trends",
-      "B": "Legal proceedings or new regulations that could jeopardize operations",
-      "C": "Increased competition leading to innovation",
-      "D": "Currency fluctuations"
+      "A": "Legal proceedings or new regulations that could jeopardize operations",
+      "B": "Increased competition leading to innovation",
+      "C": "Currency fluctuations",
+      "D": "Favorable industry trends"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Legal proceedings that could result in claims the entity cannot satisfy, or new regulations that could force closure, are external factors that may raise substantial doubt about going concern.",
     "tip": "External threats: legal actions, regulation changes, market collapse.",
     "calculationRequired": false,
@@ -16480,12 +16480,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The emphasis-of-matter paragraph for going concern should:",
     "options": {
-      "A": "Provide the auditor's opinion on whether the entity will survive",
-      "B": "Refer to the relevant footnote disclosure and state the uncertainty",
-      "C": "List all conditions creating substantial doubt",
-      "D": "Include management's response to the uncertainty"
+      "A": "Refer to the relevant footnote disclosure and state the uncertainty",
+      "B": "List all conditions creating substantial doubt",
+      "C": "Include management's response to the uncertainty",
+      "D": "Provide the auditor's opinion on whether the entity will survive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The emphasis paragraph should state that substantial doubt exists about the entity's ability to continue as a going concern and refer readers to the note in the financial statements containing the related disclosures.",
     "tip": "Emphasis paragraph = state uncertainty + reference the disclosure note.",
     "calculationRequired": false,
@@ -16522,12 +16522,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Going concern conditions should be evaluated:",
     "options": {
-      "A": "Individually, with only the largest issue considered",
-      "B": "In the aggregate, considering the combined effect of all conditions",
-      "C": "Only if requested by the audit committee",
-      "D": "Separately by each audit team member"
+      "A": "Separately by each audit team member",
+      "B": "Individually, with only the largest issue considered",
+      "C": "In the aggregate, considering the combined effect of all conditions",
+      "D": "Only if requested by the audit committee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Conditions and events should be considered in the aggregate. Individual conditions may not create substantial doubt, but their combined effect might indicate the entity cannot meet obligations.",
     "tip": "Consider all conditions together. Combined effect may be significant.",
     "calculationRequired": false,
@@ -16564,12 +16564,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Going concern matters should be communicated to:",
     "options": {
-      "A": "Only management",
-      "B": "Those charged with governance",
-      "C": "Only the audit committee chair",
-      "D": "Shareholders directly"
+      "A": "Shareholders directly",
+      "B": "Only management",
+      "C": "Those charged with governance",
+      "D": "Only the audit committee chair"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should communicate to those charged with governance the events or conditions identified that may cast significant doubt on the entity's ability to continue as a going concern.",
     "tip": "Going concern = governance communication. They need to know.",
     "calculationRequired": false,
@@ -16585,12 +16585,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If management's plans successfully alleviate substantial doubt, the auditor:",
     "options": {
-      "A": "Must still include an emphasis paragraph",
-      "B": "May issue an unmodified opinion without an emphasis paragraph",
-      "C": "Should issue a qualified opinion",
-      "D": "Must disclaim an opinion"
+      "A": "May issue an unmodified opinion without an emphasis paragraph",
+      "B": "Should issue a qualified opinion",
+      "C": "Must disclaim an opinion",
+      "D": "Must still include an emphasis paragraph"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "If management's plans are probable and will effectively mitigate the conditions within the evaluation period, substantial doubt may be alleviated. No emphasis paragraph is required if no substantial doubt exists.",
     "tip": "Plans alleviate doubt = no emphasis paragraph needed. Regular unmodified opinion.",
     "calculationRequired": false,
@@ -16669,12 +16669,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Information about going concern obtained after year-end but before report date:",
     "options": {
-      "A": "Is not relevant to the evaluation",
-      "B": "Should be considered in evaluating going concern",
-      "C": "Only matters if it is positive news",
-      "D": "Requires restatement of year-end balances"
+      "A": "Should be considered in evaluating going concern",
+      "B": "Only matters if it is positive news",
+      "C": "Requires restatement of year-end balances",
+      "D": "Is not relevant to the evaluation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor considers all information obtained through the report date, including subsequent events that provide evidence about conditions existing at year-end or conditions arising subsequently that affect going concern.",
     "tip": "Subsequent information is relevant. Could improve or worsen the assessment.",
     "calculationRequired": false,
@@ -16690,12 +16690,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For private companies, going concern evaluation:",
     "options": {
-      "A": "Is not required",
-      "B": "Follows the same GAAP requirements as public companies",
-      "C": "Is only required if the company has debt",
-      "D": "Uses different criteria than public companies"
+      "A": "Follows the same GAAP requirements as public companies",
+      "B": "Is only required if the company has debt",
+      "C": "Uses different criteria than public companies",
+      "D": "Is not required"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "GAAP going concern requirements (ASC 205-40) apply to all entities, both public and private. The same evaluation criteria and disclosure requirements apply, though practical considerations may vary.",
     "tip": "GAAP going concern applies to all entities. Private companies follow same rules.",
     "calculationRequired": false,
@@ -16711,12 +16711,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The management representation letter should include representations about:",
     "options": {
-      "A": "The company's expected profitability",
-      "B": "Management's plans and their feasibility when substantial doubt exists",
-      "C": "Guarantee that the company will continue",
-      "D": "Only historical financial performance"
+      "A": "Management's plans and their feasibility when substantial doubt exists",
+      "B": "Guarantee that the company will continue",
+      "C": "Only historical financial performance",
+      "D": "The company's expected profitability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When substantial doubt exists, management should represent their evaluation, the plans they have developed, and the feasibility of those plans. This supplements but does not replace the auditor's evaluation.",
     "tip": "Management represents: their evaluation + plans + feasibility assessment.",
     "calculationRequired": false,
@@ -16774,12 +16774,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Industry-wide economic difficulties:",
     "options": {
-      "A": "Automatically create going concern doubt",
-      "B": "Should be considered when evaluating the entity's specific circumstances",
-      "C": "Are not relevant to individual company going concern",
-      "D": "Require emphasis paragraphs for all companies in the industry"
+      "A": "Should be considered when evaluating the entity's specific circumstances",
+      "B": "Are not relevant to individual company going concern",
+      "C": "Require emphasis paragraphs for all companies in the industry",
+      "D": "Automatically create going concern doubt"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Industry-wide difficulties provide context for evaluating the entity but don't automatically create substantial doubt. The auditor considers how industry conditions specifically affect the entity's ability to continue.",
     "tip": "Industry problems = context, not automatic doubt. How does it affect THIS entity?",
     "calculationRequired": false,
@@ -16795,12 +16795,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The liquidation basis of accounting should be used when:",
     "options": {
-      "A": "Any going concern doubt exists",
-      "B": "Liquidation is imminent and the going concern basis is no longer appropriate",
-      "C": "Management expects losses next year",
-      "D": "The company has net liabilities"
+      "A": "Liquidation is imminent and the going concern basis is no longer appropriate",
+      "B": "Management expects losses next year",
+      "C": "The company has net liabilities",
+      "D": "Any going concern doubt exists"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Liquidation basis accounting is required when liquidation is imminent - either through approval of a plan or other circumstances making liquidation inevitable. Going concern basis is inappropriate at that point.",
     "tip": "Liquidation basis only when liquidation is imminent. Going concern doubt ≠ liquidation.",
     "calculationRequired": false,
@@ -16837,12 +16837,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A working capital deficiency indicates going concern risk because:",
     "options": {
-      "A": "It means the company has no assets",
-      "B": "Current liabilities exceed current assets, suggesting potential difficulty meeting short-term obligations",
-      "C": "The company must liquidate immediately",
-      "D": "Long-term debt is due immediately"
+      "A": "Long-term debt is due immediately",
+      "B": "It means the company has no assets",
+      "C": "Current liabilities exceed current assets, suggesting potential difficulty meeting short-term obligations",
+      "D": "The company must liquidate immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Working capital deficiency (current liabilities exceeding current assets) suggests the entity may have difficulty meeting short-term obligations with available resources, though other factors must be considered.",
     "tip": "Working capital deficit = short-term liquidity pressure. One indicator among several.",
     "calculationRequired": false,
@@ -16858,12 +16858,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under PCAOB standards for public company audits, the auditor's going concern responsibility:",
     "options": {
-      "A": "Is less rigorous than GAAS",
-      "B": "Includes evaluating management's assessment and concluding on substantial doubt",
-      "C": "Is delegated to the audit committee",
-      "D": "Only applies to financial institutions"
+      "A": "Only applies to financial institutions",
+      "B": "Is less rigorous than GAAS",
+      "C": "Includes evaluating management's assessment and concluding on substantial doubt",
+      "D": "Is delegated to the audit committee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PCAOB standards require the auditor to evaluate whether there is substantial doubt about the entity's ability to continue as a going concern for a reasonable period, considering management's assessment and plans.",
     "tip": "PCAOB going concern: evaluate management's assessment + reach own conclusion.",
     "calculationRequired": false,
@@ -16900,12 +16900,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For startup companies with limited operating history and initial losses:",
     "options": {
-      "A": "Going concern evaluation is not required",
-      "B": "Standard going concern criteria still apply but context of stage of development is considered",
-      "C": "An emphasis paragraph is always required",
-      "D": "The auditor should disclaim an opinion"
+      "A": "The auditor should disclaim an opinion",
+      "B": "Going concern evaluation is not required",
+      "C": "Standard going concern criteria still apply but context of stage of development is considered",
+      "D": "An emphasis paragraph is always required"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Startups must still be evaluated for going concern using the same criteria. However, the auditor considers that initial losses and limited history are typical for startups, while also examining funding plans and business prospects.",
     "tip": "Startups: same criteria but consider developmental stage. Focus on funding and prospects.",
     "calculationRequired": false,
@@ -16921,12 +16921,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A written representation letter from management is obtained primarily to:",
     "options": {
-      "A": "Replace other audit evidence",
-      "B": "Confirm management's responsibility and document representations made during the audit",
-      "C": "Guarantee the accuracy of financial statements",
-      "D": "Transfer audit responsibility to management"
+      "A": "Guarantee the accuracy of financial statements",
+      "B": "Transfer audit responsibility to management",
+      "C": "Replace other audit evidence",
+      "D": "Confirm management's responsibility and document representations made during the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The representation letter confirms management's responsibility for the financial statements, acknowledges representations made during the audit, and provides written evidence of those representations.",
     "tip": "Rep letter = confirm responsibility + document oral representations in writing.",
     "calculationRequired": false,
@@ -17026,12 +17026,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Management's representation about the financial statements should include:",
     "options": {
-      "A": "That the auditor prepared them",
-      "B": "That management has fulfilled its responsibility for fair presentation in accordance with GAAP",
-      "C": "That no adjustments were needed",
-      "D": "That all estimates are exact"
+      "A": "That management has fulfilled its responsibility for fair presentation in accordance with GAAP",
+      "B": "That no adjustments were needed",
+      "C": "That all estimates are exact",
+      "D": "That the auditor prepared them"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Management represents that it has fulfilled its responsibility for preparing financial statements in accordance with the applicable framework (e.g., GAAP) and for their fair presentation.",
     "tip": "Management acknowledges responsibility for F/S preparation and fair presentation.",
     "calculationRequired": false,
@@ -17047,12 +17047,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Fraud-related representations in the letter should include:",
     "options": {
-      "A": "A guarantee that no fraud has occurred",
-      "B": "Acknowledgment of responsibility for fraud prevention and disclosure of known or suspected fraud",
-      "C": "A list of all employees who might commit fraud",
-      "D": "An insurance certificate covering fraud losses"
+      "A": "A list of all employees who might commit fraud",
+      "B": "An insurance certificate covering fraud losses",
+      "C": "A guarantee that no fraud has occurred",
+      "D": "Acknowledgment of responsibility for fraud prevention and disclosure of known or suspected fraud"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management represents its responsibility for designing and implementing programs to prevent and detect fraud, and discloses knowledge of fraud or suspected fraud affecting the entity.",
     "tip": "Fraud representations: responsibility for prevention + disclose known/suspected fraud.",
     "calculationRequired": false,
@@ -17068,12 +17068,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The completeness representation confirms that management has:",
     "options": {
-      "A": "Recorded every transaction that occurred",
-      "B": "Disclosed all known matters required to be disclosed in the financial statements",
-      "C": "Finished all accounting work before year-end",
-      "D": "Completed all internal audits"
+      "A": "Disclosed all known matters required to be disclosed in the financial statements",
+      "B": "Finished all accounting work before year-end",
+      "C": "Completed all internal audits",
+      "D": "Recorded every transaction that occurred"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The completeness representation confirms management has disclosed all matters that are required to be disclosed and that no undisclosed material transactions, events, or circumstances exist that should be reflected in the statements.",
     "tip": "Completeness = all required disclosures made, nothing material omitted.",
     "calculationRequired": false,
@@ -17089,12 +17089,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Representations about related parties should confirm:",
     "options": {
-      "A": "That no related party transactions occurred",
-      "B": "Identity of related parties and that all related party transactions have been disclosed",
-      "C": "That related parties are financially strong",
-      "D": "That related party transactions were profitable"
+      "A": "That related parties are financially strong",
+      "B": "That related party transactions were profitable",
+      "C": "That no related party transactions occurred",
+      "D": "Identity of related parties and that all related party transactions have been disclosed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management represents that all known related parties have been identified to the auditor and that all related party transactions have been properly disclosed in accordance with the financial reporting framework.",
     "tip": "Related party rep: identified all parties + disclosed all transactions.",
     "calculationRequired": false,
@@ -17110,12 +17110,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Representations regarding noncompliance with laws should include:",
     "options": {
-      "A": "That management is aware of all laws",
-      "B": "Disclosure of all known instances of noncompliance that could have material effect on financial statements",
-      "C": "That no laws apply to the company",
-      "D": "A listing of all regulatory agencies"
+      "A": "A listing of all regulatory agencies",
+      "B": "That management is aware of all laws",
+      "C": "Disclosure of all known instances of noncompliance that could have material effect on financial statements",
+      "D": "That no laws apply to the company"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Management represents that all known instances of actual or possible noncompliance with laws and regulations whose effects should be considered in preparing the financial statements have been disclosed.",
     "tip": "Noncompliance rep: disclosed all known instances with material F/S effect.",
     "calculationRequired": false,
@@ -17131,12 +17131,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Representations about accounting estimates should include:",
     "options": {
-      "A": "That all estimates will prove accurate",
-      "B": "That significant assumptions used are reasonable and appropriate in the circumstances",
-      "C": "That no estimates were used",
-      "D": "That estimates were approved by the SEC"
+      "A": "That significant assumptions used are reasonable and appropriate in the circumstances",
+      "B": "That no estimates were used",
+      "C": "That estimates were approved by the SEC",
+      "D": "That all estimates will prove accurate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Management represents that significant assumptions used in making accounting estimates are reasonable. This includes representations about methods and the reasonableness of significant assumptions underlying the estimates.",
     "tip": "Estimate rep: assumptions are reasonable, not that estimates will be exactly right.",
     "calculationRequired": false,
@@ -17152,12 +17152,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The subsequent events representation confirms that:",
     "options": {
-      "A": "No events occurred after year-end",
-      "B": "All events occurring through the rep letter date requiring adjustment or disclosure have been addressed",
-      "C": "The auditor has reviewed all subsequent events",
-      "D": "Management approved all subsequent events"
+      "A": "Management approved all subsequent events",
+      "B": "No events occurred after year-end",
+      "C": "All events occurring through the rep letter date requiring adjustment or disclosure have been addressed",
+      "D": "The auditor has reviewed all subsequent events"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Management represents that events occurring between year-end and the date of the representation letter that require adjustment or disclosure have been properly reflected or disclosed in the financial statements.",
     "tip": "Subsequent events rep: all events requiring adjustment/disclosure have been addressed.",
     "calculationRequired": false,
@@ -17173,12 +17173,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Regarding uncorrected misstatements, management represents that:",
     "options": {
-      "A": "All misstatements have been corrected",
-      "B": "The effects of uncorrected misstatements are immaterial, individually and in aggregate",
-      "C": "No misstatements were identified",
-      "D": "Misstatements are the auditor's responsibility"
+      "A": "No misstatements were identified",
+      "B": "Misstatements are the auditor's responsibility",
+      "C": "All misstatements have been corrected",
+      "D": "The effects of uncorrected misstatements are immaterial, individually and in aggregate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management represents that the effects of uncorrected misstatements (provided in summary form by the auditor) are immaterial, both individually and in aggregate, to the financial statements as a whole.",
     "tip": "Management acknowledges uncorrected misstatements and represents they are immaterial.",
     "calculationRequired": false,
@@ -17194,12 +17194,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If management refuses to provide the representation letter, the auditor should:",
     "options": {
-      "A": "Accept oral representations instead",
-      "B": "Consider the effect on the audit opinion, which may result in a disclaimer or qualified opinion",
-      "C": "Issue an unmodified opinion anyway",
-      "D": "Ask the audit committee to sign instead"
+      "A": "Ask the audit committee to sign instead",
+      "B": "Accept oral representations instead",
+      "C": "Consider the effect on the audit opinion, which may result in a disclaimer or qualified opinion",
+      "D": "Issue an unmodified opinion anyway"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Refusal to provide required written representations is a scope limitation. The auditor should consider the reasons for refusal and the effect on the opinion, which may result in a disclaimer or qualified opinion.",
     "tip": "No rep letter = scope limitation. May require disclaimer or withdrawal.",
     "calculationRequired": false,
@@ -17215,12 +17215,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Written management representations alone:",
     "options": {
-      "A": "Are the best form of audit evidence",
-      "B": "Are not sufficient appropriate evidence for matters they address",
-      "C": "Replace all other testing",
-      "D": "Are more reliable than external confirmations"
+      "A": "Are more reliable than external confirmations",
+      "B": "Are the best form of audit evidence",
+      "C": "Are not sufficient appropriate evidence for matters they address",
+      "D": "Replace all other testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Written representations are necessary but not sufficient by themselves. They provide evidence but are internally generated and must be supported by other audit evidence where such evidence can be obtained.",
     "tip": "Representations supplement but don't replace other evidence. Not stand-alone proof.",
     "calculationRequired": false,
@@ -17236,12 +17236,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If other audit evidence contradicts a management representation, the auditor should:",
     "options": {
-      "A": "Accept the representation over other evidence",
-      "B": "Investigate the discrepancy and reconsider the reliability of all management representations",
-      "C": "Issue an adverse opinion immediately",
-      "D": "Include both versions in the audit report"
+      "A": "Include both versions in the audit report",
+      "B": "Accept the representation over other evidence",
+      "C": "Investigate the discrepancy and reconsider the reliability of all management representations",
+      "D": "Issue an adverse opinion immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When evidence contradicts a representation, the auditor investigates the matter, resolves the inconsistency, and reconsiders whether other management representations are reliable. This may affect the audit opinion.",
     "tip": "Contradiction = investigate + question reliability of all representations.",
     "calculationRequired": false,
@@ -17257,12 +17257,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Beyond standard representations, the letter may include:",
     "options": {
-      "A": "Representations specific to the entity's circumstances or industry",
-      "B": "Only representations required by auditing standards",
-      "C": "Personal guarantees from management",
-      "D": "Forward-looking financial projections"
+      "A": "Only representations required by auditing standards",
+      "B": "Personal guarantees from management",
+      "C": "Forward-looking financial projections",
+      "D": "Representations specific to the entity's circumstances or industry"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "In addition to required representations, the letter may include representations specific to the entity's industry, circumstances, or particular transactions that are significant to the audit.",
     "tip": "Customize rep letter for entity-specific matters and significant transactions.",
     "calculationRequired": false,
@@ -17278,12 +17278,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For integrated audits, internal control representations should include:",
     "options": {
-      "A": "That no control deficiencies exist",
-      "B": "Management's responsibility for establishing and maintaining internal control",
-      "C": "That internal controls guarantee accurate financial statements",
-      "D": "A list of all control activities"
+      "A": "That internal controls guarantee accurate financial statements",
+      "B": "A list of all control activities",
+      "C": "That no control deficiencies exist",
+      "D": "Management's responsibility for establishing and maintaining internal control"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In an integrated audit, management represents its responsibility for establishing and maintaining effective internal control over financial reporting and its assessment of the effectiveness of that control.",
     "tip": "IC rep: acknowledges responsibility + assessment of effectiveness.",
     "calculationRequired": false,
@@ -17320,12 +17320,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When substantial doubt about going concern exists, representations should include:",
     "options": {
-      "A": "A guarantee that the company will survive",
-      "B": "Management's plans and the appropriateness of going concern disclosures",
-      "C": "Confirmation that no going concern issues exist",
-      "D": "A commitment to continue operations"
+      "A": "Management's plans and the appropriateness of going concern disclosures",
+      "B": "Confirmation that no going concern issues exist",
+      "C": "A commitment to continue operations",
+      "D": "A guarantee that the company will survive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When substantial doubt exists, management represents regarding their evaluation, their plans to address the conditions, and that required disclosures about going concern have been made.",
     "tip": "Going concern rep: plans + appropriate disclosures have been made.",
     "calculationRequired": false,
@@ -17341,12 +17341,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Representations about litigation should confirm that:",
     "options": {
-      "A": "The company will win all pending lawsuits",
-      "B": "All known actual or possible claims and litigation have been disclosed",
-      "C": "Legal costs are immaterial",
-      "D": "Management's lawyers have reviewed the financial statements"
+      "A": "All known actual or possible claims and litigation have been disclosed",
+      "B": "Legal costs are immaterial",
+      "C": "Management's lawyers have reviewed the financial statements",
+      "D": "The company will win all pending lawsuits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Management represents that all known actual and possible claims, litigation, and assessments have been disclosed and properly accounted for in accordance with the applicable financial reporting framework.",
     "tip": "Litigation rep: disclosed all known + possible claims and litigation.",
     "calculationRequired": false,
@@ -17383,12 +17383,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Management's GAAP-related representation should confirm:",
     "options": {
-      "A": "That GAAP is optional for the company",
-      "B": "That financial statements are presented in accordance with the applicable framework",
-      "C": "That the auditor selected the accounting policies",
-      "D": "That all possible accounting treatments were considered"
+      "A": "That the auditor selected the accounting policies",
+      "B": "That all possible accounting treatments were considered",
+      "C": "That GAAP is optional for the company",
+      "D": "That financial statements are presented in accordance with the applicable framework"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management represents that the financial statements are fairly presented in accordance with the applicable financial reporting framework (e.g., U.S. GAAP) and all required disclosures are made.",
     "tip": "GAAP rep: fairly presented in accordance with applicable framework.",
     "calculationRequired": false,
@@ -17404,12 +17404,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Access-related representations confirm that management has:",
     "options": {
-      "A": "Limited the auditor's access appropriately",
-      "B": "Provided unrestricted access to persons and records the auditor determined necessary",
-      "C": "Allowed access only to requested items",
-      "D": "Provided access subject to confidentiality restrictions"
+      "A": "Provided unrestricted access to persons and records the auditor determined necessary",
+      "B": "Allowed access only to requested items",
+      "C": "Provided access subject to confidentiality restrictions",
+      "D": "Limited the auditor's access appropriately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Management represents that it has provided the auditor unrestricted access to all persons within the entity from whom the auditor determined it necessary to obtain audit evidence.",
     "tip": "Access rep: unrestricted access to people + records auditor needed.",
     "calculationRequired": false,
@@ -17425,12 +17425,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For entities receiving government grants, additional representations may include:",
     "options": {
-      "A": "That grants will continue in future years",
-      "B": "Compliance with grant terms and proper recording of grant-related transactions",
-      "C": "That grant amounts are guaranteed",
-      "D": "Federal auditor approval"
+      "A": "Federal auditor approval",
+      "B": "That grants will continue in future years",
+      "C": "Compliance with grant terms and proper recording of grant-related transactions",
+      "D": "That grant amounts are guaranteed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Entities with government grants may provide additional representations about compliance with grant requirements, proper recording of grant transactions, and awareness of compliance issues.",
     "tip": "Grant recipients: additional reps about compliance and proper grant accounting.",
     "calculationRequired": false,
@@ -17446,12 +17446,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The signed management representation letter should be:",
     "options": {
-      "A": "Returned to management after the audit",
-      "B": "Included in the audit documentation",
-      "C": "Filed with the SEC",
-      "D": "Provided to shareholders"
+      "A": "Included in the audit documentation",
+      "B": "Filed with the SEC",
+      "C": "Provided to shareholders",
+      "D": "Returned to management after the audit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The signed management representation letter is audit evidence and should be included in the audit documentation. It supports the auditor's conclusions and demonstrates that required representations were obtained.",
     "tip": "Rep letter = audit evidence. File in workpapers.",
     "calculationRequired": false,
@@ -17467,12 +17467,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For quarterly review engagements, representations should:",
     "options": {
-      "A": "Not be obtained",
-      "B": "Be obtained for each interim period reviewed",
-      "C": "Only be obtained for annual audits",
-      "D": "Cover only material items"
+      "A": "Cover only material items",
+      "B": "Not be obtained",
+      "C": "Be obtained for each interim period reviewed",
+      "D": "Only be obtained for annual audits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Management representations should be obtained for each interim review, covering matters relevant to the interim financial information and the period from the last representation through the review report date.",
     "tip": "Quarterly reviews = get rep letter for each period reviewed.",
     "calculationRequired": false,
@@ -17488,12 +17488,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the CEO changed during the year, the representation letter should be signed by:",
     "options": {
-      "A": "Only the former CEO",
-      "B": "The current CEO, who represents matters for the entire period",
-      "C": "Both the former and current CEOs",
-      "D": "The board chair instead"
+      "A": "Both the former and current CEOs",
+      "B": "The board chair instead",
+      "C": "Only the former CEO",
+      "D": "The current CEO, who represents matters for the entire period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The current CEO signs and represents for the entire period covered by the financial statements, even though they may not have been CEO for the entire period. They represent to the best of their knowledge.",
     "tip": "Current management signs. They represent for entire period to best of knowledge.",
     "calculationRequired": false,
@@ -17509,12 +17509,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If management attempts to limit a representation (e.g., 'to the best of our knowledge'):",
     "options": {
-      "A": "This is acceptable for all representations",
-      "B": "The auditor should evaluate whether the limitation is appropriate for the nature of the representation",
-      "C": "The auditor should refuse to accept the letter",
-      "D": "An adverse opinion is required"
+      "A": "An adverse opinion is required",
+      "B": "This is acceptable for all representations",
+      "C": "The auditor should evaluate whether the limitation is appropriate for the nature of the representation",
+      "D": "The auditor should refuse to accept the letter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Some representations appropriately include knowledge qualifiers (e.g., fraud knowledge), while others should not. The auditor evaluates whether any limitation is appropriate given the nature of the representation.",
     "tip": "Some qualifiers OK (fraud knowledge), others not. Evaluate appropriateness.",
     "calculationRequired": false,
@@ -17593,12 +17593,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor's evaluation of management representations should include:",
     "options": {
-      "A": "Accepting all representations at face value",
-      "B": "Assessing whether representations are consistent with other audit evidence",
-      "C": "Comparing representations to industry averages",
-      "D": "Verifying only dollar amounts"
+      "A": "Assessing whether representations are consistent with other audit evidence",
+      "B": "Comparing representations to industry averages",
+      "C": "Verifying only dollar amounts",
+      "D": "Accepting all representations at face value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor evaluates whether representations are consistent with other evidence obtained. Inconsistencies may indicate potential issues with representation reliability or with the underlying audit evidence.",
     "tip": "Representations should be consistent with what audit found. Red flag if not.",
     "calculationRequired": false,
@@ -17635,12 +17635,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The management representation letter may include as an appendix:",
     "options": {
-      "A": "The complete financial statements",
-      "B": "A summary of uncorrected misstatements acknowledged by management",
-      "C": "The auditor's workpapers",
-      "D": "Competitor financial information"
+      "A": "Competitor financial information",
+      "B": "The complete financial statements",
+      "C": "A summary of uncorrected misstatements acknowledged by management",
+      "D": "The auditor's workpapers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The representation letter often includes as an appendix a summary of uncorrected misstatements that management has concluded are immaterial, documenting management's acknowledgment of these items.",
     "tip": "Appendix may include: list of uncorrected misstatements management acknowledges.",
     "calculationRequired": false,
@@ -17656,12 +17656,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of audit documentation (working papers) is to:",
     "options": {
-      "A": "Provide a basis for the auditor's report and evidence that the audit was performed in accordance with professional standards",
-      "B": "Satisfy regulatory requirements for record retention",
-      "C": "Provide information for client management",
-      "D": "Serve as legal protection for the auditor"
+      "A": "Satisfy regulatory requirements for record retention",
+      "B": "Provide information for client management",
+      "C": "Serve as legal protection for the auditor",
+      "D": "Provide a basis for the auditor's report and evidence that the audit was performed in accordance with professional standards"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "The primary purpose of audit documentation is to provide the principal support for the auditor's report and evidence that the audit was conducted in accordance with GAAS. While documentation may serve other purposes (regulatory compliance, legal protection), its primary function is supporting the audit opinion.",
     "tip": "Working papers = evidence that you did the work properly.",
     "calculationRequired": false,
@@ -17698,12 +17698,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Audit documentation should be sufficient to enable an experienced auditor with no previous connection to the audit to understand:",
     "options": {
-      "A": "Only the final conclusions reached",
-      "B": "The nature, timing, and extent of procedures performed, evidence obtained, and conclusions reached",
-      "C": "Only the significant findings and issues",
-      "D": "The client's complete business operations"
+      "A": "Only the significant findings and issues",
+      "B": "The client's complete business operations",
+      "C": "Only the final conclusions reached",
+      "D": "The nature, timing, and extent of procedures performed, evidence obtained, and conclusions reached"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Per AU-C 230, documentation should be sufficient for an experienced auditor having no previous connection with the audit to understand the nature, timing, and extent of audit procedures performed, evidence obtained, and conclusions reached. This is known as the 'experienced auditor' standard.",
     "tip": "Could a stranger auditor pick up your workpapers and understand what you did?",
     "calculationRequired": false,
@@ -17740,12 +17740,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor should assemble the final audit documentation file within:",
     "options": {
-      "A": "30 days of the report release date",
-      "B": "45 days of the report release date",
-      "C": "60 days of the report release date",
-      "D": "90 days of the report release date"
+      "A": "90 days of the report release date",
+      "B": "30 days of the report release date",
+      "C": "45 days of the report release date",
+      "D": "60 days of the report release date"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Per AU-C 230, the auditor should assemble the final audit file on a timely basis, ordinarily not more than 60 days after the report release date (documentation completion date). For issuers under PCAOB, it's 45 days.",
     "tip": "Nonissuers = 60 days to finalize; Issuers (PCAOB) = 45 days.",
     "calculationRequired": false,
@@ -17761,12 +17761,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following would most likely be included in the permanent file rather than the current file?",
     "options": {
-      "A": "Bank reconciliations for the current year",
-      "B": "Copies of significant contracts and bylaws",
-      "C": "Lead schedules for account balances",
-      "D": "Working trial balance"
+      "A": "Lead schedules for account balances",
+      "B": "Working trial balance",
+      "C": "Bank reconciliations for the current year",
+      "D": "Copies of significant contracts and bylaws"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The permanent file contains information of continuing audit significance that spans multiple years, such as corporate charter, bylaws, significant contracts, organizational charts, and internal control documentation. Current files contain evidence related to the specific year's audit.",
     "tip": "Permanent file = multi-year info (contracts, bylaws); Current file = this year's work.",
     "calculationRequired": false,
@@ -17782,12 +17782,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After the documentation completion date, the auditor discovers additional procedures were performed but not documented. The auditor should:",
     "options": {
-      "A": "Add the documentation without any notation",
-      "B": "Not add any documentation since the file is complete",
-      "C": "Document when and by whom the addition was made and the reason for making it",
-      "D": "Destroy the existing documentation and start over"
+      "A": "Not add any documentation since the file is complete",
+      "B": "Document when and by whom the addition was made and the reason for making it",
+      "C": "Destroy the existing documentation and start over",
+      "D": "Add the documentation without any notation"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "After the documentation completion date, if it becomes necessary to modify or add documentation, the auditor must document the specific reasons, when the modification was made, and who made it. The original documentation should not be deleted, and all changes must be tracked.",
     "tip": "Late additions require: what, when, who, and why documentation.",
     "calculationRequired": false,
@@ -17845,12 +17845,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When documenting significant findings or issues, the auditor should document all of the following EXCEPT:",
     "options": {
-      "A": "Actions taken to address the findings",
-      "B": "The basis for the final conclusions",
-      "C": "Discussions with parties outside the engagement team about the findings",
-      "D": "All alternative procedures that were considered but rejected"
+      "A": "All alternative procedures that were considered but rejected",
+      "B": "Actions taken to address the findings",
+      "C": "The basis for the final conclusions",
+      "D": "Discussions with parties outside the engagement team about the findings"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Documentation of significant findings should include the nature of the finding, actions taken, and basis for conclusions reached. While the auditor should document significant professional judgments, there is no requirement to document all alternative procedures that were considered but not used.",
     "tip": "Document what you did and why, not everything you thought about but didn't do.",
     "calculationRequired": false,
@@ -17887,12 +17887,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using tickmarks (audit symbols) in working papers, the auditor should:",
     "options": {
-      "A": "Use standardized symbols that are universal across all audit firms",
-      "B": "Include a legend explaining the meaning of each tickmark used",
-      "C": "Limit tickmarks to only mathematical verification procedures",
-      "D": "Avoid tickmarks in favor of written explanations for all procedures"
+      "A": "Limit tickmarks to only mathematical verification procedures",
+      "B": "Avoid tickmarks in favor of written explanations for all procedures",
+      "C": "Use standardized symbols that are universal across all audit firms",
+      "D": "Include a legend explaining the meaning of each tickmark used"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When using tickmarks, the auditor should include a legend or key explaining what each symbol means. While some tickmarks are commonly used in the profession, they are not standardized, so a legend ensures that anyone reviewing the documentation understands the work performed.",
     "tip": "Always include a tickmark legend—don't assume others know your symbols.",
     "calculationRequired": false,
@@ -17908,12 +17908,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of indexing and cross-referencing working papers is to:",
     "options": {
-      "A": "Satisfy regulatory requirements",
-      "B": "Facilitate review and demonstrate relationships between documents",
-      "C": "Reduce the volume of documentation",
-      "D": "Provide legal protection for the auditor"
+      "A": "Reduce the volume of documentation",
+      "B": "Provide legal protection for the auditor",
+      "C": "Satisfy regulatory requirements",
+      "D": "Facilitate review and demonstrate relationships between documents"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Indexing and cross-referencing allow reviewers to efficiently navigate the documentation and understand how different pieces of evidence relate to each other. This systematic organization demonstrates the logical flow of the audit and supports the conclusions reached.",
     "tip": "Index = find things quickly; Cross-reference = show how evidence connects.",
     "calculationRequired": false,
@@ -17929,12 +17929,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Oral explanations from the auditor:",
     "options": {
-      "A": "May be used as the sole support for the work performed",
-      "B": "Should be documented if they relate to significant matters",
-      "C": "Are not permitted as part of the documentation process",
-      "D": "Must be recorded and retained with the working papers"
+      "A": "Are not permitted as part of the documentation process",
+      "B": "Must be recorded and retained with the working papers",
+      "C": "May be used as the sole support for the work performed",
+      "D": "Should be documented if they relate to significant matters"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "While oral explanations may be used to clarify information in the documentation, they are not sufficient on their own as audit evidence. Significant matters discussed orally should be documented in writing. Documentation should stand on its own without requiring oral explanation.",
     "tip": "If it's significant enough to discuss, it's significant enough to document in writing.",
     "calculationRequired": false,
@@ -17950,12 +17950,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The nature and extent of audit documentation is influenced by all of the following factors EXCEPT:",
     "options": {
-      "A": "Size and complexity of the entity",
-      "B": "Nature of the audit procedures performed",
-      "C": "Assessed risks of material misstatement",
-      "D": "Number of hours budgeted for the engagement"
+      "A": "Assessed risks of material misstatement",
+      "B": "Number of hours budgeted for the engagement",
+      "C": "Size and complexity of the entity",
+      "D": "Nature of the audit procedures performed"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Documentation requirements are driven by the nature and complexity of the engagement, assessed risks, and professional judgment—not by budget considerations. The auditor must document sufficiently regardless of time constraints or budget pressures.",
     "tip": "Budget doesn't determine documentation needs—risk and complexity do.",
     "calculationRequired": false,
@@ -17971,12 +17971,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 'report release date' for documentation purposes is the date:",
     "options": {
-      "A": "The auditor's report is signed",
-      "B": "The auditor grants the entity permission to use the report",
-      "C": "The financial statements are filed with regulators",
-      "D": "The client's board approves the financial statements"
+      "A": "The auditor grants the entity permission to use the report",
+      "B": "The financial statements are filed with regulators",
+      "C": "The client's board approves the financial statements",
+      "D": "The auditor's report is signed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The report release date is defined as the date the auditor grants the entity permission to use the auditor's report in connection with the financial statements. This date is significant because it starts the clock for the documentation completion period and retention requirements.",
     "tip": "Report release date = when you give permission to use your report.",
     "calculationRequired": false,
@@ -17992,12 +17992,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the auditor uses schedules prepared by the client as part of audit documentation, the auditor should:",
     "options": {
-      "A": "Discard the client schedules and prepare independent documentation",
-      "B": "Include the client-prepared schedules and clearly indicate the source and testing performed",
-      "C": "Obtain written permission from the client to retain their schedules",
-      "D": "Use only client schedules and avoid preparing auditor-prepared working papers"
+      "A": "Obtain written permission from the client to retain their schedules",
+      "B": "Use only client schedules and avoid preparing auditor-prepared working papers",
+      "C": "Discard the client schedules and prepare independent documentation",
+      "D": "Include the client-prepared schedules and clearly indicate the source and testing performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Client-prepared schedules (PBC - Prepared by Client) may be used as audit documentation if properly controlled. The auditor should clearly indicate that the schedule was prepared by the client and document the procedures performed to test the accuracy and completeness of the client-prepared information.",
     "tip": "Mark PBC schedules clearly and document what testing you did on them.",
     "calculationRequired": false,
@@ -18055,12 +18055,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Audit programs in the working papers serve to:",
     "options": {
-      "A": "Replace the need for detailed documentation of procedures",
-      "B": "Provide a list of planned procedures and record their completion",
-      "C": "Document only those procedures that were not performed",
-      "D": "Serve as the auditor's report to the client"
+      "A": "Serve as the auditor's report to the client",
+      "B": "Replace the need for detailed documentation of procedures",
+      "C": "Provide a list of planned procedures and record their completion",
+      "D": "Document only those procedures that were not performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Audit programs list the planned procedures and serve as a control to ensure all planned procedures are completed. The programs typically include spaces to record who performed each procedure and when, providing a summary of work done. However, they supplement rather than replace detailed working papers.",
     "tip": "Audit programs = checklist of what to do + record of who did it and when.",
     "calculationRequired": false,
@@ -18076,12 +18076,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor may disclose information from audit documentation to a third party without client consent in which of the following circumstances?",
     "options": {
-      "A": "When the third party is a potential purchaser of the client's business",
-      "B": "When responding to a valid court subpoena",
-      "C": "When the auditor is negotiating a fee dispute with the client",
-      "D": "When a competitor of the client requests information"
+      "A": "When responding to a valid court subpoena",
+      "B": "When the auditor is negotiating a fee dispute with the client",
+      "C": "When a competitor of the client requests information",
+      "D": "When the third party is a potential purchaser of the client's business"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Client information in working papers is confidential and should not be disclosed without consent except in specific circumstances: response to valid subpoena or court order, peer review, quality review by a regulatory body, or as required by law or professional standards.",
     "tip": "Can disclose without consent for: subpoenas, peer review, regulatory requirements.",
     "calculationRequired": false,
@@ -18097,12 +18097,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Documentation of an engagement quality review should include:",
     "options": {
-      "A": "Only the final conclusion of the reviewer",
-      "B": "The name of the reviewer, dates of review, and matters reviewed",
-      "C": "A complete re-performance of all audit procedures",
-      "D": "The reviewer's recommendation to issue the report"
+      "A": "A complete re-performance of all audit procedures",
+      "B": "The reviewer's recommendation to issue the report",
+      "C": "Only the final conclusion of the reviewer",
+      "D": "The name of the reviewer, dates of review, and matters reviewed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Engagement quality review documentation should include identification of the reviewer, matters reviewed, dates of the review, and the basis for the reviewer's conclusion that the engagement team's significant judgments and conclusions were appropriate.",
     "tip": "EQR documentation = who, what, when, and conclusion on significant judgments.",
     "calculationRequired": false,
@@ -18118,12 +18118,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After the documentation completion date, audit documentation:",
     "options": {
-      "A": "May be deleted if it is no longer relevant",
-      "B": "Should not be deleted prior to the end of the retention period",
-      "C": "Can be deleted with engagement partner approval",
-      "D": "Must be deleted if the client requests it"
+      "A": "Must be deleted if the client requests it",
+      "B": "May be deleted if it is no longer relevant",
+      "C": "Should not be deleted prior to the end of the retention period",
+      "D": "Can be deleted with engagement partner approval"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "After the documentation completion date, audit documentation should not be deleted or discarded before the end of the specified retention period. This ensures that documentation remains available for regulatory review, litigation support, or quality review purposes.",
     "tip": "Never delete working papers—archive them until retention period ends.",
     "calculationRequired": false,
@@ -18139,12 +18139,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If after the report date the auditor becomes aware of facts that existed at the report date and performs additional procedures, the documentation should include all of the following EXCEPT:",
     "options": {
-      "A": "The circumstances encountered",
-      "B": "New audit procedures performed and evidence obtained",
-      "C": "A revised auditor's report with a new date",
-      "D": "When and by whom the changes were made and reviewed"
+      "A": "When and by whom the changes were made and reviewed",
+      "B": "The circumstances encountered",
+      "C": "New audit procedures performed and evidence obtained",
+      "D": "A revised auditor's report with a new date"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "While the auditor must document the circumstances, additional procedures, evidence, and tracking of documentation changes, a revised report is not automatically required—it depends on whether the subsequently discovered facts are material and require revision. The question asks about documentation requirements, not reporting requirements.",
     "tip": "Document the process of investigating subsequent events—report revision is a separate decision.",
     "calculationRequired": false,
@@ -18160,12 +18160,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is MOST important to document when the auditor makes a significant professional judgment?",
     "options": {
-      "A": "The time spent reaching the judgment",
-      "B": "The rationale for the judgment and alternatives considered",
-      "C": "Approval from the client's audit committee",
-      "D": "Concurrence from all engagement team members"
+      "A": "Approval from the client's audit committee",
+      "B": "Concurrence from all engagement team members",
+      "C": "The time spent reaching the judgment",
+      "D": "The rationale for the judgment and alternatives considered"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When documenting significant professional judgments, the most important element is the rationale—why the auditor reached a particular conclusion. This includes the key factors considered, alternatives evaluated, and basis for the final judgment. Time spent and team consensus are less relevant than the reasoning process.",
     "tip": "For significant judgments, document the 'why' more than the 'what.'",
     "calculationRequired": false,
@@ -18181,12 +18181,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under PCAOB standards, the engagement team must assemble complete and final audit documentation within:",
     "options": {
-      "A": "30 days after the report release date",
-      "B": "45 days after the report release date",
-      "C": "60 days after the report release date",
-      "D": "90 days after the fiscal year-end"
+      "A": "60 days after the report release date",
+      "B": "90 days after the fiscal year-end",
+      "C": "30 days after the report release date",
+      "D": "45 days after the report release date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "PCAOB AS 1215 requires that the engagement team assemble a complete and final set of audit documentation for retention within 45 days after the report release date. This is shorter than the 60-day period allowed under AICPA standards for nonissuers.",
     "tip": "PCAOB assembly = 45 days; AICPA = 60 days. Issuers have tighter deadlines.",
     "calculationRequired": false,
@@ -18223,12 +18223,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When documenting audit procedures for significant accounting estimates, the auditor should include:",
     "options": {
-      "A": "Only the final estimate accepted by the auditor",
-      "B": "The basis for the auditor's conclusions about the reasonableness of the estimate and adequacy of disclosure",
-      "C": "Management's guarantee that the estimate is accurate",
-      "D": "A statement that estimates are inherently uncertain and therefore not auditable"
+      "A": "Management's guarantee that the estimate is accurate",
+      "B": "A statement that estimates are inherently uncertain and therefore not auditable",
+      "C": "Only the final estimate accepted by the auditor",
+      "D": "The basis for the auditor's conclusions about the reasonableness of the estimate and adequacy of disclosure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Documentation for significant estimates should include the basis for the auditor's conclusion about reasonableness, including methods and assumptions evaluated, data tested, and any range of reasonable outcomes considered. The auditor evaluates reasonableness, not accuracy, of estimates.",
     "tip": "Document how you evaluated the estimate's reasonableness, not just what it was.",
     "calculationRequired": false,
@@ -18265,12 +18265,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For audit documentation related to SEC filings that include financial statements for multiple periods, the documentation must be retained:",
     "options": {
-      "A": "For seven years from the report release date only",
-      "B": "For seven years from the report release date or until all periods covered by the report exceed seven years, whichever is longer",
-      "C": "Permanently",
-      "D": "Until the issuer files its next 10-K"
+      "A": "Permanently",
+      "B": "Until the issuer files its next 10-K",
+      "C": "For seven years from the report release date only",
+      "D": "For seven years from the report release date or until all periods covered by the report exceed seven years, whichever is longer"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When an SEC filing includes comparative financial statements, documentation must be retained for all periods covered. If a 10-K includes three years of financial statements, documentation for the oldest year must be retained until that year drops off the comparative presentation plus seven years.",
     "tip": "SEC retention = 7 years from when each period leaves comparative statements.",
     "calculationRequired": false,
@@ -18286,12 +18286,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the group auditor uses the work of a component auditor, the group auditor's documentation should include:",
     "options": {
-      "A": "Complete copies of all component auditor working papers",
-      "B": "Communications with the component auditor and conclusions about the component's work",
-      "C": "Only the component auditor's report",
-      "D": "A statement that responsibility for the component was assumed by the component auditor"
+      "A": "Communications with the component auditor and conclusions about the component's work",
+      "B": "Only the component auditor's report",
+      "C": "A statement that responsibility for the component was assumed by the component auditor",
+      "D": "Complete copies of all component auditor working papers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The group auditor should document communications with component auditors, procedures performed to evaluate component auditor work, and conclusions reached. The group auditor doesn't need complete copies of all working papers but should have sufficient documentation to support involvement in the component's audit.",
     "tip": "Document component auditor communications and your evaluation of their work.",
     "calculationRequired": false,
@@ -18307,12 +18307,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the Sarbanes-Oxley Act, knowingly destroying audit documentation with intent to impede a federal investigation can result in:",
     "options": {
-      "A": "A warning letter from the SEC",
-      "B": "Suspension from practice before the SEC for one year",
-      "C": "Fines and imprisonment of up to 20 years",
-      "D": "Mandatory peer review"
+      "A": "Suspension from practice before the SEC for one year",
+      "B": "Fines and imprisonment of up to 20 years",
+      "C": "Mandatory peer review",
+      "D": "A warning letter from the SEC"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Section 802 of the Sarbanes-Oxley Act makes it a federal crime to knowingly destroy, alter, or falsify records with intent to impede a federal investigation. Penalties include fines and imprisonment up to 20 years, reflecting the seriousness of document destruction.",
     "tip": "SOX makes destroying audit docs a federal crime—up to 20 years prison.",
     "calculationRequired": false,
@@ -18328,12 +18328,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If an auditor's documentation is insufficient to demonstrate that audit procedures were performed:",
     "options": {
-      "A": "The procedures are presumed to have been performed if the auditor states they were",
-      "B": "Oral evidence from the engagement team can supplement the missing documentation",
-      "C": "There is a presumption that the procedures were not performed",
-      "D": "The client must confirm that procedures were performed"
+      "A": "Oral evidence from the engagement team can supplement the missing documentation",
+      "B": "There is a presumption that the procedures were not performed",
+      "C": "The client must confirm that procedures were performed",
+      "D": "The procedures are presumed to have been performed if the auditor states they were"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "If audit documentation does not provide evidence that procedures were performed, there is a rebuttable presumption that those procedures were not performed. This emphasizes the critical importance of contemporaneous documentation—if it's not documented, it's presumed not done.",
     "tip": "Not documented = presumed not done. Always document your work.",
     "calculationRequired": false,
@@ -18349,12 +18349,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A completion memorandum or summary of significant findings should include:",
     "options": {
-      "A": "A complete listing of all audit procedures performed",
-      "B": "Significant findings, how they were addressed, and significant professional judgments made",
-      "C": "Only those matters that resulted in adjusting journal entries",
-      "D": "A summary of all communications with the client during the engagement"
+      "A": "A summary of all communications with the client during the engagement",
+      "B": "A complete listing of all audit procedures performed",
+      "C": "Significant findings, how they were addressed, and significant professional judgments made",
+      "D": "Only those matters that resulted in adjusting journal entries"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A completion memorandum summarizes the most significant matters identified during the audit and how they were resolved. It documents significant judgments, conclusions on critical audit areas, and provides an efficient way for reviewers to understand key issues without reviewing the entire file.",
     "tip": "Completion memo = executive summary of significant issues and resolutions.",
     "calculationRequired": false,
@@ -18370,12 +18370,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For an audit of an entity with multiple locations, documentation should include:",
     "options": {
-      "A": "Identical procedures performed at each location",
-      "B": "The basis for selecting locations for testing and procedures performed at each selected location",
-      "C": "Confirmation that all locations were visited by the engagement partner",
-      "D": "Separate audit opinions for each location"
+      "A": "The basis for selecting locations for testing and procedures performed at each selected location",
+      "B": "Confirmation that all locations were visited by the engagement partner",
+      "C": "Separate audit opinions for each location",
+      "D": "Identical procedures performed at each location"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When auditing entities with multiple locations, the auditor must document the basis for selecting locations (risk assessment, materiality, coverage) and the nature and extent of procedures performed at each selected location. Not all locations need to be visited or tested, but the selection rationale must be documented.",
     "tip": "Document why you picked certain locations and what you did at each one.",
     "calculationRequired": false,
@@ -18433,12 +18433,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When searching for unrecorded liabilities, the auditor would most likely:",
     "options": {
-      "A": "Confirm the accounts payable balance with vendors",
-      "B": "Examine cash disbursements after year-end",
-      "C": "Vouch recorded payables to purchase orders",
-      "D": "Trace payables to the trial balance"
+      "A": "Examine cash disbursements after year-end",
+      "B": "Vouch recorded payables to purchase orders",
+      "C": "Trace payables to the trial balance",
+      "D": "Confirm the accounts payable balance with vendors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Examining cash disbursements after year-end is an effective procedure for detecting unrecorded liabilities. If the entity paid for goods or services after year-end that relate to the audit period, the liability should have been recorded at year-end.",
     "tip": "Look at what got paid after year-end—should those have been liabilities at year-end?",
     "calculationRequired": false,
@@ -18454,12 +18454,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing long-term debt, the auditor should examine debt agreements to identify:",
     "options": {
-      "A": "The client's overall business strategy",
-      "B": "Restrictive covenants and compliance requirements",
-      "C": "Management's personal guarantees only",
-      "D": "The auditor of the lending institution"
+      "A": "Restrictive covenants and compliance requirements",
+      "B": "Management's personal guarantees only",
+      "C": "The auditor of the lending institution",
+      "D": "The client's overall business strategy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Debt agreements often contain restrictive covenants (e.g., debt-to-equity ratios, working capital requirements) that must be monitored. Violation of covenants could result in acceleration of debt, which affects classification and going concern considerations.",
     "tip": "Read debt agreements for covenants—violations can trigger default.",
     "calculationRequired": false,
@@ -18475,12 +18475,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The number of shares of capital stock authorized can best be verified by examining:",
     "options": {
-      "A": "The stock certificate book",
-      "B": "The corporate charter or articles of incorporation",
-      "C": "Minutes of the board of directors meetings",
-      "D": "Confirmation from the stock transfer agent"
+      "A": "The corporate charter or articles of incorporation",
+      "B": "Minutes of the board of directors meetings",
+      "C": "Confirmation from the stock transfer agent",
+      "D": "The stock certificate book"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The authorized number of shares is established in the corporate charter or articles of incorporation filed with the state. This is the definitive source for verifying how many shares the company is legally permitted to issue.",
     "tip": "Authorized shares = charter/articles; Issued shares = verify with registrar or stock book.",
     "calculationRequired": false,
@@ -18496,12 +18496,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Declaration of dividends should be verified by:",
     "options": {
-      "A": "Confirming with shareholders",
-      "B": "Examining board of directors minutes",
-      "C": "Reviewing bank statements",
-      "D": "Confirming with the SEC"
+      "A": "Reviewing bank statements",
+      "B": "Confirming with the SEC",
+      "C": "Confirming with shareholders",
+      "D": "Examining board of directors minutes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dividends must be authorized by the board of directors before they can be declared and paid. The auditor should examine the board minutes to verify that dividends were properly authorized, including the amount per share and record date.",
     "tip": "Board declares dividends—check the board minutes for authorization.",
     "calculationRequired": false,
@@ -18517,12 +18517,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When testing accrued payroll at year-end, the auditor should:",
     "options": {
-      "A": "Confirm the balance with employees",
-      "B": "Recalculate based on pay rates and days worked but unpaid at year-end",
-      "C": "Trace to the subsequent year's payroll tax returns",
-      "D": "Confirm with the external payroll service provider only"
+      "A": "Confirm with the external payroll service provider only",
+      "B": "Confirm the balance with employees",
+      "C": "Recalculate based on pay rates and days worked but unpaid at year-end",
+      "D": "Trace to the subsequent year's payroll tax returns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should recalculate the accrued payroll by determining the number of days worked but unpaid at year-end and multiplying by applicable pay rates. This tests both the existence and accuracy of the accrual.",
     "tip": "Test payroll accrual by recalculating: unpaid days × pay rate.",
     "calculationRequired": false,
@@ -18538,12 +18538,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following procedures is MOST effective for identifying contingent liabilities?",
     "options": {
-      "A": "Confirming accounts payable balances",
-      "B": "Obtaining a letter from the client's legal counsel",
-      "C": "Recalculating depreciation expense",
-      "D": "Examining the fixed asset register"
+      "A": "Examining the fixed asset register",
+      "B": "Confirming accounts payable balances",
+      "C": "Obtaining a letter from the client's legal counsel",
+      "D": "Recalculating depreciation expense"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A letter of audit inquiry to the client's legal counsel is the primary procedure for identifying litigation, claims, and assessments that may represent contingent liabilities. Lawyers can identify pending or threatened claims that management may not have disclosed.",
     "tip": "Lawyer letters are key for finding contingent liabilities from lawsuits.",
     "calculationRequired": false,
@@ -18580,12 +18580,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Long-term debt that is in violation of a debt covenant should be classified as current unless:",
     "options": {
-      "A": "Management believes the violation will be resolved",
-      "B": "The creditor waives the covenant violation before the financial statements are issued",
-      "C": "The violation is immaterial",
-      "D": "The debt was originally classified as long-term"
+      "A": "The debt was originally classified as long-term",
+      "B": "Management believes the violation will be resolved",
+      "C": "The creditor waives the covenant violation before the financial statements are issued",
+      "D": "The violation is immaterial"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Debt in violation of covenants becomes callable and must be classified as current unless the creditor waives the violation (provides a grace period) before the financial statements are issued or within the grace period if it extends past the issuance date. A waiver after issuance doesn't help.",
     "tip": "Covenant violation = current debt unless waived BEFORE F/S are issued.",
     "calculationRequired": false,
@@ -18601,12 +18601,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a client uses an independent registrar and transfer agent for its stock, the auditor would most likely:",
     "options": {
-      "A": "Not test equity transactions since they are maintained externally",
-      "B": "Confirm shares outstanding with the registrar/transfer agent",
-      "C": "Examine only the stock certificate book maintained by the client",
-      "D": "Rely solely on management representations about shares outstanding"
+      "A": "Rely solely on management representations about shares outstanding",
+      "B": "Not test equity transactions since they are maintained externally",
+      "C": "Confirm shares outstanding with the registrar/transfer agent",
+      "D": "Examine only the stock certificate book maintained by the client"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "An independent registrar and transfer agent provides reliable external evidence about shares issued and outstanding. Confirming with the transfer agent is an effective substantive procedure because it provides independent third-party verification.",
     "tip": "Transfer agents provide strong external evidence for share counts.",
     "calculationRequired": false,
@@ -18622,12 +18622,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing treasury stock, the auditor should:",
     "options": {
-      "A": "Confirm the shares with shareholders",
-      "B": "Verify that acquisitions were authorized by the board and inspect certificates if held by the client",
-      "C": "Confirm with the SEC",
-      "D": "Verify that treasury stock is recorded at par value"
+      "A": "Verify that treasury stock is recorded at par value",
+      "B": "Confirm the shares with shareholders",
+      "C": "Verify that acquisitions were authorized by the board and inspect certificates if held by the client",
+      "D": "Confirm with the SEC"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Treasury stock transactions should be authorized by the board of directors. The auditor should examine board minutes for authorization and, if certificates are held by the client, inspect and count them. Treasury stock should be properly accounted for under the cost or par value method.",
     "tip": "Treasury stock = board authorization + inspect certificates if client holds them.",
     "calculationRequired": false,
@@ -18664,12 +18664,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective analytical procedure for interest expense would be to:",
     "options": {
-      "A": "Compare interest expense to the prior year",
-      "B": "Recalculate interest expense using average debt balances and applicable interest rates",
-      "C": "Confirm interest expense with lenders",
-      "D": "Trace interest payments to the general ledger"
+      "A": "Trace interest payments to the general ledger",
+      "B": "Compare interest expense to the prior year",
+      "C": "Recalculate interest expense using average debt balances and applicable interest rates",
+      "D": "Confirm interest expense with lenders"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A reasonableness test for interest expense involves recalculating expected interest using average outstanding debt balances and the weighted-average interest rate. This is a substantive analytical procedure that can be very effective for detecting misstatements in interest expense.",
     "tip": "Test interest reasonableness: Average debt × interest rate ≈ interest expense.",
     "calculationRequired": false,
@@ -18685,12 +18685,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing bond premium or discount amortization, the auditor should:",
     "options": {
-      "A": "Confirm the amortization amount with bondholders",
-      "B": "Verify the amortization method is consistently applied and recalculate the current period amortization",
-      "C": "Accept management's calculation without testing",
-      "D": "Only test amortization if it is material"
+      "A": "Only test amortization if it is material",
+      "B": "Confirm the amortization amount with bondholders",
+      "C": "Verify the amortization method is consistently applied and recalculate the current period amortization",
+      "D": "Accept management's calculation without testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should verify that the amortization method (effective interest or straight-line) is appropriate and consistently applied, and then recalculate the amortization for the period. This tests both valuation and accuracy of the carrying value of debt.",
     "tip": "Recalculate bond amortization and verify consistent method application.",
     "calculationRequired": false,
@@ -18706,12 +18706,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing lease liabilities under ASC 842, the auditor should:",
     "options": {
-      "A": "Confirm all lease payments with lessors",
-      "B": "Examine lease agreements and verify the present value calculation of lease payments",
-      "C": "Accept management's classification of leases without testing",
-      "D": "Only test leases that were newly entered into during the year"
+      "A": "Accept management's classification of leases without testing",
+      "B": "Only test leases that were newly entered into during the year",
+      "C": "Confirm all lease payments with lessors",
+      "D": "Examine lease agreements and verify the present value calculation of lease payments"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should examine lease agreements to understand terms and conditions, verify proper classification (finance vs. operating), and test the present value calculation of lease payments using an appropriate discount rate. This ensures proper recognition of right-of-use assets and lease liabilities.",
     "tip": "Test lease liability = read agreement + verify PV calculation + check discount rate.",
     "calculationRequired": false,
@@ -18748,12 +18748,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the client has loans from related parties, the auditor should be particularly concerned about:",
     "options": {
-      "A": "Whether the interest rate is competitive",
-      "B": "Proper disclosure and whether terms are at arm's length",
-      "C": "Whether the related party is creditworthy",
-      "D": "Only the existence of the loan"
+      "A": "Only the existence of the loan",
+      "B": "Whether the interest rate is competitive",
+      "C": "Proper disclosure and whether terms are at arm's length",
+      "D": "Whether the related party is creditworthy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Related party loans require careful evaluation of whether terms are at arm's length and appropriate disclosure. Non-arm's-length terms could indicate disguised equity contributions, distributions, or compensation arrangements requiring different accounting treatment.",
     "tip": "Related party debt = evaluate terms + ensure proper disclosure.",
     "calculationRequired": false,
@@ -18790,12 +18790,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing stock-based compensation expense, the auditor should:",
     "options": {
-      "A": "Confirm grants with employees",
-      "B": "Evaluate the valuation model and inputs used to determine fair value",
-      "C": "Only test grants to executives",
-      "D": "Accept the valuation since it requires specialized knowledge"
+      "A": "Only test grants to executives",
+      "B": "Accept the valuation since it requires specialized knowledge",
+      "C": "Confirm grants with employees",
+      "D": "Evaluate the valuation model and inputs used to determine fair value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should evaluate the appropriateness of the valuation model (Black-Scholes, binomial, Monte Carlo) and the reasonableness of significant inputs (expected volatility, expected term, risk-free rate, dividend yield). These inputs significantly affect the fair value calculation.",
     "tip": "Test stock comp by evaluating the valuation model and key inputs.",
     "calculationRequired": false,
@@ -18811,12 +18811,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing the current income tax liability, the auditor should:",
     "options": {
-      "A": "Confirm the liability with the IRS",
-      "B": "Recalculate the provision and compare to tax returns when available",
-      "C": "Accept the amount calculated by the client's tax department",
-      "D": "Only test if the amount increased from prior year"
+      "A": "Accept the amount calculated by the client's tax department",
+      "B": "Only test if the amount increased from prior year",
+      "C": "Confirm the liability with the IRS",
+      "D": "Recalculate the provision and compare to tax returns when available"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should recalculate the income tax provision, review supporting schedules, and when tax returns are available, compare the provision to actual amounts reported. Differences between book and tax treatment must be properly analyzed.",
     "tip": "Test tax liability by recalculating provision and comparing to returns.",
     "calculationRequired": false,
@@ -18832,12 +18832,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing additional paid-in capital, the auditor should verify that:",
     "options": {
-      "A": "The account only increases, never decreases",
-      "B": "Amounts in excess of par value on stock issuances are properly recorded",
-      "C": "The balance equals total stockholders' equity",
-      "D": "Dividends were properly charged to this account"
+      "A": "Dividends were properly charged to this account",
+      "B": "The account only increases, never decreases",
+      "C": "Amounts in excess of par value on stock issuances are properly recorded",
+      "D": "The balance equals total stockholders' equity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Additional paid-in capital represents amounts received from shareholders in excess of par value. The auditor should verify that stock issuances are properly split between capital stock (at par) and APIC (excess), and that other transactions affecting APIC (treasury stock transactions, stock compensation) are properly recorded.",
     "tip": "APIC = verify proper recording of amounts above par value.",
     "calculationRequired": false,
@@ -18853,12 +18853,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following procedures is MOST effective for identifying potential off-balance sheet arrangements?",
     "options": {
-      "A": "Confirming accounts payable",
-      "B": "Reviewing minutes, contracts, and inquiring about guarantees and commitments",
-      "C": "Testing depreciation calculations",
-      "D": "Confirming cash balances"
+      "A": "Reviewing minutes, contracts, and inquiring about guarantees and commitments",
+      "B": "Testing depreciation calculations",
+      "C": "Confirming cash balances",
+      "D": "Confirming accounts payable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Off-balance sheet arrangements (guarantees, commitments, variable interest entities) are often found through reviewing board minutes, examining contracts, and making specific inquiries of management. These arrangements may not appear in the general ledger but require disclosure or recognition.",
     "tip": "Find off-balance sheet items through minutes, contracts, and targeted inquiries.",
     "calculationRequired": false,
@@ -18895,12 +18895,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing a defined benefit pension obligation, the auditor should:",
     "options": {
-      "A": "Accept the actuary's calculations without further testing",
-      "B": "Evaluate the qualifications of the actuary and reasonableness of significant assumptions",
-      "C": "Confirm the obligation amount with plan participants",
-      "D": "Only test if the plan is underfunded"
+      "A": "Confirm the obligation amount with plan participants",
+      "B": "Only test if the plan is underfunded",
+      "C": "Accept the actuary's calculations without further testing",
+      "D": "Evaluate the qualifications of the actuary and reasonableness of significant assumptions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor should evaluate the competence, capabilities, and objectivity of the actuary. Additionally, the auditor must evaluate significant assumptions (discount rate, expected return on plan assets, mortality tables, salary increases) for reasonableness since small changes can significantly affect the obligation.",
     "tip": "Pension audit = evaluate actuary qualifications + test key assumptions.",
     "calculationRequired": false,
@@ -18916,12 +18916,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing an asset retirement obligation, the auditor should evaluate:",
     "options": {
-      "A": "Only whether the asset is still in use",
-      "B": "The reasonableness of the estimated future costs, timing, and discount rate",
-      "C": "Whether the client intends to abandon the asset",
-      "D": "Confirmation from environmental regulators"
+      "A": "The reasonableness of the estimated future costs, timing, and discount rate",
+      "B": "Whether the client intends to abandon the asset",
+      "C": "Confirmation from environmental regulators",
+      "D": "Only whether the asset is still in use"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Asset retirement obligations require estimation of future removal, restoration, or disposal costs, timing of settlement, and an appropriate credit-adjusted risk-free discount rate. The auditor should evaluate the reasonableness of all significant estimates and assumptions.",
     "tip": "ARO audit = test estimated costs, timing, and discount rate assumptions.",
     "calculationRequired": false,
@@ -18937,12 +18937,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A loss contingency should be accrued as a liability when:",
     "options": {
-      "A": "A loss is reasonably possible and estimable",
-      "B": "A loss is probable and the amount can be reasonably estimated",
-      "C": "Any lawsuit has been filed against the company",
-      "D": "Management believes a loss may occur"
+      "A": "Management believes a loss may occur",
+      "B": "A loss is reasonably possible and estimable",
+      "C": "A loss is probable and the amount can be reasonably estimated",
+      "D": "Any lawsuit has been filed against the company"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under ASC 450, a loss contingency should be accrued when the loss is probable (likely to occur) AND the amount can be reasonably estimated. If only reasonably possible, disclosure is required but no accrual. The auditor evaluates management's assessment of probability and estimate.",
     "tip": "Accrue = probable + estimable. Disclose only = reasonably possible.",
     "calculationRequired": false,
@@ -18958,12 +18958,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing derivative liabilities, the auditor should:",
     "options": {
-      "A": "Accept broker quotes as sufficient evidence",
-      "B": "Understand the terms, evaluate fair value measurements, and assess hedge accounting if applicable",
-      "C": "Only test derivatives that are in a loss position",
-      "D": "Rely on management's internal valuation without further testing"
+      "A": "Only test derivatives that are in a loss position",
+      "B": "Rely on management's internal valuation without further testing",
+      "C": "Accept broker quotes as sufficient evidence",
+      "D": "Understand the terms, evaluate fair value measurements, and assess hedge accounting if applicable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Derivative audit procedures include understanding the instrument's terms, evaluating the fair value measurement (inputs, methodology), testing hedge effectiveness if hedge accounting is applied, and verifying proper classification and disclosure. Level 2 and Level 3 fair values require additional scrutiny.",
     "tip": "Derivatives = understand terms + test fair value + evaluate hedge accounting.",
     "calculationRequired": false,
@@ -18979,12 +18979,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an equity method investee reports losses that reduce the investment to zero, the auditor should:",
     "options": {
-      "A": "Require the client to recognize additional losses regardless of other circumstances",
-      "B": "Evaluate whether the investor has guaranteed obligations or is otherwise committed to provide further support",
-      "C": "Discontinue all procedures related to the investment",
-      "D": "Confirm with the investee that no further losses are expected"
+      "A": "Evaluate whether the investor has guaranteed obligations or is otherwise committed to provide further support",
+      "B": "Discontinue all procedures related to the investment",
+      "C": "Confirm with the investee that no further losses are expected",
+      "D": "Require the client to recognize additional losses regardless of other circumstances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When equity method losses reduce the investment to zero, further losses are recognized only if the investor has guaranteed investee obligations, is otherwise committed to provide financial support, or imminent return to profitability is assured. The auditor must evaluate these factors.",
     "tip": "Investment at zero = check for guarantees or commitments before recognizing more losses.",
     "calculationRequired": false,
@@ -19000,12 +19000,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing uncertain tax positions under ASC 740-10, the auditor should:",
     "options": {
-      "A": "Accept management's assessment if they have tax counsel",
-      "B": "Evaluate whether each position meets the more-likely-than-not recognition threshold and assess measurement",
-      "C": "Only test positions that have been challenged by tax authorities",
-      "D": "Confirm uncertain positions with the IRS"
+      "A": "Confirm uncertain positions with the IRS",
+      "B": "Accept management's assessment if they have tax counsel",
+      "C": "Evaluate whether each position meets the more-likely-than-not recognition threshold and assess measurement",
+      "D": "Only test positions that have been challenged by tax authorities"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should evaluate whether each uncertain tax position meets the more-likely-than-not (>50%) recognition threshold based on technical merits. For positions that meet this threshold, the auditor evaluates the measurement (largest amount >50% likely to be realized) and assesses related disclosures.",
     "tip": "UTP = evaluate recognition threshold + test measurement of benefit to recognize.",
     "calculationRequired": false,
@@ -19021,12 +19021,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing preferred stock that is mandatorily redeemable at a fixed date, the auditor should verify:",
     "options": {
-      "A": "The stock is classified as equity since it represents ownership",
-      "B": "The stock is classified as a liability under ASC 480",
-      "C": "The stock is classified as mezzanine equity",
-      "D": "The classification depends on management's intent"
+      "A": "The classification depends on management's intent",
+      "B": "The stock is classified as equity since it represents ownership",
+      "C": "The stock is classified as a liability under ASC 480",
+      "D": "The stock is classified as mezzanine equity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under ASC 480, mandatorily redeemable financial instruments must be classified as liabilities because the issuer has an unconditional obligation to redeem the shares. The auditor should verify proper classification, measurement at fair value, and presentation as a liability.",
     "tip": "Mandatorily redeemable = liability, not equity (ASC 480).",
     "calculationRequired": false,
@@ -19042,12 +19042,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing guarantee obligations, the auditor should:",
     "options": {
-      "A": "Only evaluate guarantees that have been called",
-      "B": "Evaluate the likelihood of payment and verify proper recognition and disclosure",
-      "C": "Confirm all guarantees with the guaranteed parties",
-      "D": "Disregard guarantees made to related parties"
+      "A": "Confirm all guarantees with the guaranteed parties",
+      "B": "Disregard guarantees made to related parties",
+      "C": "Only evaluate guarantees that have been called",
+      "D": "Evaluate the likelihood of payment and verify proper recognition and disclosure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Guarantees must be initially recognized at fair value as a liability. Subsequently, the auditor evaluates whether a contingent liability should be recognized based on the probability of payment and ensures proper disclosure of terms, maximum exposure, and recourse provisions.",
     "tip": "Guarantees = initial fair value liability + ongoing contingent liability assessment.",
     "calculationRequired": false,
@@ -19063,12 +19063,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing noncontrolling interests in consolidated financial statements, the auditor should verify:",
     "options": {
-      "A": "That NCI is presented as a liability",
-      "B": "Proper calculation and presentation of NCI in equity, including attribution of net income",
-      "C": "That NCI shareholders have approved the consolidation",
-      "D": "Only the existence of minority shareholders"
+      "A": "Only the existence of minority shareholders",
+      "B": "That NCI is presented as a liability",
+      "C": "Proper calculation and presentation of NCI in equity, including attribution of net income",
+      "D": "That NCI shareholders have approved the consolidation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Noncontrolling interests must be presented in equity, separate from the parent's equity. The auditor verifies proper calculation of NCI's share of subsidiary equity and earnings, and that changes in NCI are properly accounted for (transactions with NCI recorded in equity if control is retained).",
     "tip": "NCI = equity presentation + proper allocation of subsidiary earnings.",
     "calculationRequired": false,
@@ -19084,12 +19084,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing accumulated other comprehensive income (AOCI), the auditor should:",
     "options": {
-      "A": "Only review the current year OCI activity",
-      "B": "Verify the components are properly recorded and disclosed, and test reclassification adjustments",
-      "C": "Confirm AOCI with third parties",
-      "D": "Accept the rollforward without testing underlying transactions"
+      "A": "Confirm AOCI with third parties",
+      "B": "Accept the rollforward without testing underlying transactions",
+      "C": "Only review the current year OCI activity",
+      "D": "Verify the components are properly recorded and disclosed, and test reclassification adjustments"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AOCI includes unrealized gains/losses on available-for-sale securities, pension adjustments, foreign currency translation, and cash flow hedges. The auditor tests current period OCI components, verifies proper disclosure of amounts by component, and tests reclassification adjustments from AOCI to net income.",
     "tip": "AOCI = test components, disclosure, and reclassification adjustments.",
     "calculationRequired": false,
@@ -19105,12 +19105,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a subsidiary applies push-down accounting after an acquisition, the auditor of the subsidiary should verify:",
     "options": {
-      "A": "That the parent approved the use of push-down accounting",
-      "B": "That assets and liabilities are adjusted to reflect fair values established in the acquisition",
-      "C": "That push-down accounting is required in all acquisitions",
-      "D": "Only that the election was disclosed"
+      "A": "That push-down accounting is required in all acquisitions",
+      "B": "Only that the election was disclosed",
+      "C": "That the parent approved the use of push-down accounting",
+      "D": "That assets and liabilities are adjusted to reflect fair values established in the acquisition"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When push-down accounting is applied, the subsidiary's separate financial statements are adjusted to reflect the fair values and goodwill established in the parent's acquisition. The auditor verifies proper application of acquisition-date fair values and that the election is properly disclosed.",
     "tip": "Push-down = subsidiary F/S reflect acquisition fair values and goodwill.",
     "calculationRequired": false,
@@ -19126,12 +19126,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To verify the existence of investments in marketable securities held by a custodian, the auditor would most likely:",
     "options": {
-      "A": "Review the client's investment policy",
-      "B": "Confirm the securities held with the custodian",
-      "C": "Vouch purchases to broker advices",
-      "D": "Compare market values to original cost"
+      "A": "Confirm the securities held with the custodian",
+      "B": "Vouch purchases to broker advices",
+      "C": "Compare market values to original cost",
+      "D": "Review the client's investment policy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Confirmation with the independent custodian is the primary procedure for verifying the existence of securities held externally. The custodian can confirm the quantity, description, and ownership of securities in the client's name.",
     "tip": "Securities held by custodian = confirm with custodian for existence.",
     "calculationRequired": false,
@@ -19147,12 +19147,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When securities are held by the client, the auditor should count them:",
     "options": {
-      "A": "At any time during the year",
-      "B": "Simultaneously with the cash count at year-end",
-      "C": "Only if they represent more than 50% of total assets",
-      "D": "At least one month before year-end"
+      "A": "Only if they represent more than 50% of total assets",
+      "B": "At least one month before year-end",
+      "C": "At any time during the year",
+      "D": "Simultaneously with the cash count at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When the client holds securities, they should be counted simultaneously with the cash count to prevent the client from substituting cash or securities to cover a shortage in one or the other. This simultaneous control prevents manipulation.",
     "tip": "Count securities and cash at same time—prevents moving money to cover shortages.",
     "calculationRequired": false,
@@ -19168,12 +19168,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASC 320, debt securities that management has the positive intent and ability to hold to maturity are classified as:",
     "options": {
-      "A": "Trading securities",
-      "B": "Available-for-sale securities",
-      "C": "Held-to-maturity securities",
-      "D": "Equity method investments"
+      "A": "Held-to-maturity securities",
+      "B": "Equity method investments",
+      "C": "Trading securities",
+      "D": "Available-for-sale securities"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Held-to-maturity securities are debt securities that management has both the positive intent and ability to hold until maturity. They are reported at amortized cost rather than fair value. Any sale of HTM securities (except in limited circumstances) taints the entire HTM portfolio.",
     "tip": "HTM = debt only + intent and ability to hold = amortized cost.",
     "calculationRequired": false,
@@ -19189,12 +19189,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Trading securities are reported on the balance sheet at:",
     "options": {
-      "A": "Original cost",
-      "B": "Lower of cost or market",
-      "C": "Fair value with unrealized gains and losses in net income",
-      "D": "Fair value with unrealized gains and losses in OCI"
+      "A": "Fair value with unrealized gains and losses in net income",
+      "B": "Fair value with unrealized gains and losses in OCI",
+      "C": "Original cost",
+      "D": "Lower of cost or market"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Trading securities are reported at fair value with all unrealized gains and losses recognized in net income. This differs from available-for-sale securities, where unrealized gains and losses are reported in OCI.",
     "tip": "Trading = fair value, gains/losses in income. AFS = fair value, gains/losses in OCI.",
     "calculationRequired": false,
@@ -19210,12 +19210,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The equity method of accounting is generally required when an investor has:",
     "options": {
-      "A": "Any investment in common stock",
-      "B": "Ownership of 20% to 50% of voting stock with significant influence",
-      "C": "Ownership of more than 50% of voting stock",
-      "D": "Any investment in debt securities"
+      "A": "Ownership of more than 50% of voting stock",
+      "B": "Any investment in debt securities",
+      "C": "Any investment in common stock",
+      "D": "Ownership of 20% to 50% of voting stock with significant influence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The equity method is used when the investor has significant influence over the investee, typically presumed with 20% to 50% ownership of voting stock. The investor records its share of investee earnings/losses and adjusts the investment accordingly.",
     "tip": "20-50% ownership with influence = equity method. Over 50% = consolidation.",
     "calculationRequired": false,
@@ -19252,12 +19252,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Level 1 inputs in the fair value hierarchy are:",
     "options": {
-      "A": "Unobservable inputs based on the entity's own assumptions",
-      "B": "Quoted prices in active markets for identical assets or liabilities",
-      "C": "Observable inputs other than quoted prices for identical items",
-      "D": "Discounted cash flow models developed by management"
+      "A": "Quoted prices in active markets for identical assets or liabilities",
+      "B": "Observable inputs other than quoted prices for identical items",
+      "C": "Discounted cash flow models developed by management",
+      "D": "Unobservable inputs based on the entity's own assumptions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Level 1 inputs are quoted prices (unadjusted) in active markets for identical assets or liabilities that the entity can access at the measurement date. These provide the most reliable evidence of fair value.",
     "tip": "Level 1 = quoted prices for identical items in active markets (most reliable).",
     "calculationRequired": false,
@@ -19273,12 +19273,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When investments are valued using Level 3 inputs, the auditor should:",
     "options": {
-      "A": "Accept management's valuation without further testing",
-      "B": "Perform more extensive procedures to evaluate the inputs and methodology",
-      "C": "Issue a qualified opinion due to uncertainty",
-      "D": "Require the client to use Level 1 inputs instead"
+      "A": "Perform more extensive procedures to evaluate the inputs and methodology",
+      "B": "Issue a qualified opinion due to uncertainty",
+      "C": "Require the client to use Level 1 inputs instead",
+      "D": "Accept management's valuation without further testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Level 3 inputs are unobservable and require significant judgment. The auditor should perform more extensive procedures including evaluating the valuation methodology, testing significant assumptions, and considering the need for a valuation specialist.",
     "tip": "Level 3 = unobservable inputs = requires more audit scrutiny.",
     "calculationRequired": false,
@@ -19294,12 +19294,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASU 2016-13 (CECL model), available-for-sale debt securities with declines in fair value below amortized cost:",
     "options": {
-      "A": "Always require immediate impairment recognition",
-      "B": "Require evaluation of credit losses versus non-credit losses",
-      "C": "Are never impaired",
-      "D": "Are written down to fair value through retained earnings"
+      "A": "Require evaluation of credit losses versus non-credit losses",
+      "B": "Are never impaired",
+      "C": "Are written down to fair value through retained earnings",
+      "D": "Always require immediate impairment recognition"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For AFS debt securities, declines below amortized cost must be evaluated to determine the portion attributable to credit losses (recorded through allowance account affecting earnings) versus non-credit factors (recorded in OCI). Intent and ability to hold affects the analysis.",
     "tip": "AFS decline = split between credit loss (income) and non-credit loss (OCI).",
     "calculationRequired": false,
@@ -19315,12 +19315,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing equity method investments, the auditor should:",
     "options": {
-      "A": "Confirm the investment balance with the investee",
-      "B": "Obtain and evaluate the investee's financial statements and verify the investor's share of earnings",
-      "C": "Only test if the investment is material to the financial statements",
-      "D": "Accept management's calculation without independent verification"
+      "A": "Obtain and evaluate the investee's financial statements and verify the investor's share of earnings",
+      "B": "Only test if the investment is material to the financial statements",
+      "C": "Accept management's calculation without independent verification",
+      "D": "Confirm the investment balance with the investee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor should obtain the investee's financial statements (audited if material), verify the percentage ownership, recalculate the investor's share of investee earnings/losses, and evaluate any basis differences from the acquisition.",
     "tip": "Equity method = get investee F/S + verify ownership % + recalculate income pickup.",
     "calculationRequired": false,
@@ -19336,12 +19336,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an investor owns more than 50% of the voting stock of an investee, the appropriate accounting treatment is generally:",
     "options": {
-      "A": "Cost method",
-      "B": "Equity method",
-      "C": "Consolidation of financial statements",
-      "D": "Fair value through net income"
+      "A": "Consolidation of financial statements",
+      "B": "Fair value through net income",
+      "C": "Cost method",
+      "D": "Equity method"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Majority ownership (over 50% of voting stock) typically results in control, requiring consolidation of the subsidiary's financial statements with the parent. The investment account is eliminated in consolidation and replaced with the subsidiary's assets and liabilities.",
     "tip": "Over 50% ownership = control = consolidation required.",
     "calculationRequired": false,
@@ -19357,12 +19357,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing dividend income, the auditor should:",
     "options": {
-      "A": "Confirm dividends received with the investee company",
-      "B": "Verify dividend income by reference to published dividend records",
-      "C": "Accept management's records without independent verification",
-      "D": "Only test dividends from related parties"
+      "A": "Only test dividends from related parties",
+      "B": "Confirm dividends received with the investee company",
+      "C": "Verify dividend income by reference to published dividend records",
+      "D": "Accept management's records without independent verification"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dividend income can be independently verified using published dividend information (dividend services, financial publications, or investee's investor relations). The auditor can compare recorded dividends to published records based on shares held and ex-dividend dates.",
     "tip": "Verify dividends using published dividend records—independent and reliable.",
     "calculationRequired": false,
@@ -19378,12 +19378,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A substantive test of interest income from debt securities would include:",
     "options": {
-      "A": "Confirming interest income with the SEC",
-      "B": "Recalculating expected interest income based on holdings and stated rates",
-      "C": "Accepting broker statements as sole evidence",
-      "D": "Testing only if interest income exceeds prior year"
+      "A": "Recalculating expected interest income based on holdings and stated rates",
+      "B": "Accepting broker statements as sole evidence",
+      "C": "Testing only if interest income exceeds prior year",
+      "D": "Confirming interest income with the SEC"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Interest income can be tested by recalculating expected amounts based on the face value of securities held, stated interest rates, and the holding period. This analytical procedure provides strong evidence for interest income reasonableness.",
     "tip": "Recalculate interest: face value × rate × time held = expected income.",
     "calculationRequired": false,
@@ -19399,12 +19399,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing realized gains and losses on investment sales, the auditor should:",
     "options": {
-      "A": "Only review gains since losses may indicate impairment",
-      "B": "Verify the proceeds and original cost basis, and recalculate the gain or loss",
-      "C": "Accept the broker's calculation as sufficient evidence",
-      "D": "Test only transactions over a dollar threshold"
+      "A": "Test only transactions over a dollar threshold",
+      "B": "Only review gains since losses may indicate impairment",
+      "C": "Verify the proceeds and original cost basis, and recalculate the gain or loss",
+      "D": "Accept the broker's calculation as sufficient evidence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should verify sales proceeds (from broker advices or confirmations), verify the original cost basis (from purchase records), and recalculate the gain or loss. For AFS securities, any amounts in AOCI must also be reclassified.",
     "tip": "Realized gain/loss = verify proceeds - verify cost = recalculate.",
     "calculationRequired": false,
@@ -19420,12 +19420,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing investments in related parties, the auditor should:",
     "options": {
-      "A": "Apply the same procedures as for unrelated investments",
-      "B": "Pay particular attention to valuation, arm's-length terms, and proper disclosure",
-      "C": "Rely on management's representations about the relationship",
-      "D": "Only disclose the relationship if asked by regulators"
+      "A": "Only disclose the relationship if asked by regulators",
+      "B": "Apply the same procedures as for unrelated investments",
+      "C": "Pay particular attention to valuation, arm's-length terms, and proper disclosure",
+      "D": "Rely on management's representations about the relationship"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Related party investments require heightened scrutiny regarding valuation (which may not be at arm's length), the economic substance of the transaction, and proper disclosure of the relationship and terms. These investments may not reflect market conditions.",
     "tip": "Related party investments = increased scrutiny on valuation and disclosure.",
     "calculationRequired": false,
@@ -19441,12 +19441,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a client sells held-to-maturity securities before maturity for reasons other than those specified in the standards:",
     "options": {
-      "A": "The transaction is reversed",
-      "B": "The remaining HTM portfolio may be tainted, requiring reclassification",
-      "C": "Only that specific security is affected",
-      "D": "The auditor must disclaim an opinion"
+      "A": "The remaining HTM portfolio may be tainted, requiring reclassification",
+      "B": "Only that specific security is affected",
+      "C": "The auditor must disclaim an opinion",
+      "D": "The transaction is reversed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Selling HTM securities before maturity (except for specified circumstances like credit deterioration or changes in tax law) calls into question management's intent to hold other HTM securities. This may 'taint' the portfolio, requiring reclassification to AFS.",
     "tip": "Selling HTM early can taint the whole portfolio—questions intent to hold.",
     "calculationRequired": false,
@@ -19483,12 +19483,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing investments in hedge funds or private equity funds, the auditor should:",
     "options": {
-      "A": "Accept the fund manager's NAV statement as sufficient evidence",
-      "B": "Evaluate the investee fund's financial statements and consider the qualifications of the fund auditor",
-      "C": "Require the client to divest of such investments",
-      "D": "Only confirm that the investment exists"
+      "A": "Evaluate the investee fund's financial statements and consider the qualifications of the fund auditor",
+      "B": "Require the client to divest of such investments",
+      "C": "Only confirm that the investment exists",
+      "D": "Accept the fund manager's NAV statement as sufficient evidence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For alternative investments, the auditor should evaluate the investee fund's audited financial statements (if available), consider the fund auditor's qualifications, assess the appropriateness of using NAV as fair value, and evaluate any redemption restrictions affecting valuation.",
     "tip": "Hedge fund investments = get fund F/S + evaluate fund auditor + assess NAV appropriateness.",
     "calculationRequired": false,
@@ -19546,12 +19546,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When investments are transferred between categories (e.g., from AFS to trading), the auditor should:",
     "options": {
-      "A": "Ignore the transfer since the investment still exists",
-      "B": "Evaluate the appropriateness and accounting for the transfer at fair value",
-      "C": "Require reversal of the transfer",
-      "D": "Accept management's justification without testing"
+      "A": "Require reversal of the transfer",
+      "B": "Accept management's justification without testing",
+      "C": "Ignore the transfer since the investment still exists",
+      "D": "Evaluate the appropriateness and accounting for the transfer at fair value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Transfers between categories must be evaluated for appropriateness and proper accounting. Transfers are made at fair value, and any unrealized gain or loss handling depends on the direction of transfer. Frequent transfers may indicate management attempting to manage earnings.",
     "tip": "Test transfers for appropriateness—frequent transfers may signal earnings management.",
     "calculationRequired": false,
@@ -19567,12 +19567,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a client elects the fair value option for an investment under ASC 825, the auditor should verify:",
     "options": {
-      "A": "The election was properly made at inception and fair value is reliably measurable",
-      "B": "The election can be changed at any time",
-      "C": "Only equity investments qualify for the fair value option",
-      "D": "The fair value option reduces audit procedures"
+      "A": "The fair value option reduces audit procedures",
+      "B": "The election was properly made at inception and fair value is reliably measurable",
+      "C": "The election can be changed at any time",
+      "D": "Only equity investments qualify for the fair value option"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The fair value option under ASC 825 is an irrevocable election made at inception of the instrument. The auditor should verify proper election timing, ensure fair value is reliably determinable, and test the fair value measurement including inputs and methodology.",
     "tip": "Fair value option = irrevocable election at inception + must test fair value measurement.",
     "calculationRequired": false,
@@ -19588,12 +19588,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating whether an investment in a variable interest entity (VIE) requires consolidation, the auditor should determine if the client is:",
     "options": {
-      "A": "A 50% or more owner",
-      "B": "The primary beneficiary with power to direct activities and obligation to absorb losses or receive benefits",
-      "C": "An investor in any structured entity",
-      "D": "Related to the VIE through common management"
+      "A": "An investor in any structured entity",
+      "B": "Related to the VIE through common management",
+      "C": "A 50% or more owner",
+      "D": "The primary beneficiary with power to direct activities and obligation to absorb losses or receive benefits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under the VIE model, consolidation is based on the primary beneficiary concept rather than voting control. The primary beneficiary has both the power to direct activities that most significantly impact the VIE's economic performance AND the obligation to absorb losses or receive benefits.",
     "tip": "VIE consolidation = power over significant activities + absorb losses/receive benefits.",
     "calculationRequired": false,
@@ -19630,12 +19630,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing derivative investments, the auditor should:",
     "options": {
-      "A": "Only confirm existence with the counterparty",
-      "B": "Understand the instrument's terms, verify fair value, and evaluate hedge accounting if applicable",
-      "C": "Accept management's valuation since derivatives are complex",
-      "D": "Require the client to engage a specialist"
+      "A": "Require the client to engage a specialist",
+      "B": "Only confirm existence with the counterparty",
+      "C": "Understand the instrument's terms, verify fair value, and evaluate hedge accounting if applicable",
+      "D": "Accept management's valuation since derivatives are complex"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Derivative auditing requires understanding the contractual terms, evaluating fair value measurement (including Level 2/3 inputs), testing hedge effectiveness if hedge accounting is applied, and verifying proper classification and disclosure.",
     "tip": "Derivatives = understand terms + verify fair value + test hedge accounting if used.",
     "calculationRequired": false,
@@ -19651,12 +19651,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For investments designated as hedging instruments, the auditor should:",
     "options": {
-      "A": "Accept the hedge designation without testing",
-      "B": "Evaluate whether hedge documentation exists and test hedge effectiveness",
-      "C": "Only test if the hedge is ineffective",
-      "D": "Require the client to discontinue hedge accounting"
+      "A": "Evaluate whether hedge documentation exists and test hedge effectiveness",
+      "B": "Only test if the hedge is ineffective",
+      "C": "Require the client to discontinue hedge accounting",
+      "D": "Accept the hedge designation without testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Hedge accounting requires formal documentation at inception designating the hedging relationship. The auditor should verify documentation exists, evaluate whether the hedge is expected to be and actually is highly effective, and verify proper accounting for effective and ineffective portions.",
     "tip": "Hedge accounting = verify documentation + test prospective and retrospective effectiveness.",
     "calculationRequired": false,
@@ -19672,12 +19672,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing investment real estate held for income or appreciation, the auditor should:",
     "options": {
-      "A": "Only confirm ownership through title searches",
-      "B": "Evaluate carrying value, assess for impairment, and consider fair value disclosures",
-      "C": "Accept the tax assessed value as fair value",
-      "D": "Require annual appraisals regardless of impairment indicators"
+      "A": "Accept the tax assessed value as fair value",
+      "B": "Require annual appraisals regardless of impairment indicators",
+      "C": "Only confirm ownership through title searches",
+      "D": "Evaluate carrying value, assess for impairment, and consider fair value disclosures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Investment real estate requires evaluation of carrying value (cost or fair value depending on entity type), impairment assessment based on recoverability tests, and fair value disclosures. The auditor may need to evaluate appraisals and significant valuation assumptions.",
     "tip": "Investment property = verify carrying value + test impairment + evaluate fair value disclosures.",
     "calculationRequired": false,
@@ -19693,12 +19693,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing a significant investment in a joint venture, the auditor should:",
     "options": {
-      "A": "Accept the JV financial statements without further procedures",
-      "B": "Perform procedures on the JV financial information or obtain and evaluate the JV auditor's work",
-      "C": "Only confirm the investment percentage",
-      "D": "Require the client to consolidate the joint venture"
+      "A": "Only confirm the investment percentage",
+      "B": "Require the client to consolidate the joint venture",
+      "C": "Accept the JV financial statements without further procedures",
+      "D": "Perform procedures on the JV financial information or obtain and evaluate the JV auditor's work"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For significant joint venture investments, the auditor should obtain the JV's financial information, evaluate its adequacy for the investor's reporting, and either perform procedures directly or evaluate the JV auditor's work. The equity method pickup must be verified.",
     "tip": "Significant JV = get financial info + either audit directly or evaluate JV auditor's work.",
     "calculationRequired": false,
@@ -19735,12 +19735,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the current expected credit loss (CECL) model for held-to-maturity debt securities:",
     "options": {
-      "A": "Impairment is only recognized when it is probable",
-      "B": "An allowance for expected credit losses is recognized at inception based on lifetime expected losses",
-      "C": "Fair value changes affect net income immediately",
-      "D": "No impairment testing is required"
+      "A": "No impairment testing is required",
+      "B": "Impairment is only recognized when it is probable",
+      "C": "An allowance for expected credit losses is recognized at inception based on lifetime expected losses",
+      "D": "Fair value changes affect net income immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under CECL, entities must recognize an allowance for expected credit losses on HTM securities at inception, based on lifetime expected losses rather than waiting for a triggering event. This differs from the old OTTI model that required probable loss recognition.",
     "tip": "CECL for HTM = recognize expected losses at inception (lifetime loss estimate).",
     "calculationRequired": false,
@@ -19756,12 +19756,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using net asset value (NAV) as a practical expedient for fair value measurement, the auditor should:",
     "options": {
-      "A": "Accept NAV without additional procedures",
-      "B": "Evaluate whether NAV is an appropriate measure and assess any restrictions or other factors affecting value",
-      "C": "Always require a third-party valuation",
-      "D": "Classify the investment as Level 1"
+      "A": "Classify the investment as Level 1",
+      "B": "Accept NAV without additional procedures",
+      "C": "Evaluate whether NAV is an appropriate measure and assess any restrictions or other factors affecting value",
+      "D": "Always require a third-party valuation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When using NAV as a practical expedient, the auditor should evaluate whether NAV is calculated consistently with ASC 820, assess redemption restrictions that might affect realizable value, consider timing differences between NAV date and balance sheet date, and review the fund's audited financials.",
     "tip": "NAV expedient = evaluate appropriateness + consider restrictions + timing issues.",
     "calculationRequired": false,
@@ -19777,12 +19777,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating whether an investment requires consolidation under the voting interest model, the auditor should consider:",
     "options": {
-      "A": "Only the percentage of shares owned",
-      "B": "Voting rights, potential voting rights, contractual arrangements, and ability to direct activities",
-      "C": "Whether the investee is profitable",
-      "D": "Management's preference for consolidation"
+      "A": "Management's preference for consolidation",
+      "B": "Only the percentage of shares owned",
+      "C": "Voting rights, potential voting rights, contractual arrangements, and ability to direct activities",
+      "D": "Whether the investee is profitable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Control assessment requires evaluating current voting rights, potential voting rights from convertible instruments or options, contractual arrangements that may convey control, kick-out rights, and participating rights that could overcome the presumption of control.",
     "tip": "Consolidation = evaluate all factors affecting control, not just ownership percentage.",
     "calculationRequired": false,
@@ -19798,12 +19798,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing hybrid instruments (debt with embedded derivatives), the auditor should:",
     "options": {
-      "A": "Account for the instrument as a single unit in all cases",
-      "B": "Evaluate whether the embedded derivative requires bifurcation and separate accounting",
-      "C": "Ignore the embedded feature if it is out-of-the-money",
-      "D": "Always bifurcate the derivative component"
+      "A": "Evaluate whether the embedded derivative requires bifurcation and separate accounting",
+      "B": "Ignore the embedded feature if it is out-of-the-money",
+      "C": "Always bifurcate the derivative component",
+      "D": "Account for the instrument as a single unit in all cases"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor should evaluate whether an embedded derivative meets the criteria for bifurcation: (1) the economic characteristics are not clearly and closely related to the host, (2) a separate instrument with same terms would be a derivative, and (3) the hybrid is not measured at fair value with changes in earnings.",
     "tip": "Embedded derivatives = evaluate bifurcation criteria (not clearly related + would be derivative).",
     "calculationRequired": false,
@@ -19861,12 +19861,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Generally accepted auditing standards (GAAS) are organized into:",
     "options": {
-      "A": "Two categories: field work and reporting",
-      "B": "Three categories: general standards, field work standards, and reporting standards",
-      "C": "Four categories: ethics, planning, evidence, and reporting",
-      "D": "Five categories matching the audit process"
+      "A": "Four categories: ethics, planning, evidence, and reporting",
+      "B": "Five categories matching the audit process",
+      "C": "Two categories: field work and reporting",
+      "D": "Three categories: general standards, field work standards, and reporting standards"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GAAS consists of three categories: (1) General Standards covering qualifications and conduct, (2) Standards of Field Work covering planning and evidence, and (3) Standards of Reporting covering the auditor's report requirements.",
     "tip": "GAAS = General + Field Work + Reporting (3 categories, 10 standards).",
     "calculationRequired": false,
@@ -19924,12 +19924,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which source of audit evidence is generally considered most reliable?",
     "options": {
-      "A": "Client-prepared schedules",
-      "B": "Oral representations from management",
-      "C": "Confirmations received directly from third parties",
-      "D": "Inquiry of client personnel"
+      "A": "Inquiry of client personnel",
+      "B": "Client-prepared schedules",
+      "C": "Oral representations from management",
+      "D": "Confirmations received directly from third parties"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "External evidence obtained directly by the auditor (such as confirmations from third parties) is generally more reliable than evidence generated internally by the client. Direct receipt ensures the evidence was not altered by the client.",
     "tip": "External evidence > internal evidence. Direct receipt > indirect receipt.",
     "calculationRequired": false,
@@ -19966,12 +19966,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The standard unmodified audit report includes:",
     "options": {
-      "A": "A guarantee of the accuracy of the financial statements",
-      "B": "An opinion that the financial statements are presented fairly, in all material respects",
-      "C": "A prediction of the entity's future performance",
-      "D": "An assurance that fraud does not exist"
+      "A": "An opinion that the financial statements are presented fairly, in all material respects",
+      "B": "A prediction of the entity's future performance",
+      "C": "An assurance that fraud does not exist",
+      "D": "A guarantee of the accuracy of the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The unmodified opinion states that the financial statements present fairly, in all material respects, in accordance with the applicable financial reporting framework. The auditor provides reasonable, not absolute, assurance and does not guarantee accuracy or predict the future.",
     "tip": "Unmodified opinion = 'presents fairly in all material respects.'",
     "calculationRequired": false,
@@ -19987,12 +19987,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Analytical procedures are required:",
     "options": {
-      "A": "Only during planning",
-      "B": "During planning and as a final overall review",
-      "C": "Only as substantive procedures",
-      "D": "Only when controls are ineffective"
+      "A": "Only when controls are ineffective",
+      "B": "Only during planning",
+      "C": "During planning and as a final overall review",
+      "D": "Only as substantive procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Analytical procedures are required during planning (to understand the entity and identify risk areas) and near the end of the audit as an overall review (to assess whether the financial statements are consistent with the auditor's understanding). They are optional as substantive procedures.",
     "tip": "Required analytics: planning + final review. Optional: substantive testing.",
     "calculationRequired": false,
@@ -20008,12 +20008,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Type I subsequent event:",
     "options": {
-      "A": "Occurs after year-end and requires disclosure only",
-      "B": "Provides additional evidence about conditions existing at the balance sheet date and requires adjustment",
-      "C": "Never affects the financial statements",
-      "D": "Only applies to going concern issues"
+      "A": "Provides additional evidence about conditions existing at the balance sheet date and requires adjustment",
+      "B": "Never affects the financial statements",
+      "C": "Only applies to going concern issues",
+      "D": "Occurs after year-end and requires disclosure only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Type I (recognized) subsequent events provide additional evidence about conditions that existed at the balance sheet date. These require adjustment to the financial statements. Type II events represent conditions arising after year-end and require disclosure only.",
     "tip": "Type I = condition existed at year-end = adjust F/S. Type II = arose after = disclose only.",
     "calculationRequired": false,
@@ -20050,12 +20050,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The fraud triangle consists of:",
     "options": {
-      "A": "Opportunity, rationalization, and pressure/incentive",
-      "B": "Motive, means, and method",
-      "C": "Planning, execution, and concealment",
-      "D": "Detection, prevention, and reporting"
+      "A": "Planning, execution, and concealment",
+      "B": "Detection, prevention, and reporting",
+      "C": "Opportunity, rationalization, and pressure/incentive",
+      "D": "Motive, means, and method"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "The fraud triangle identifies three conditions typically present when fraud occurs: (1) Pressure/Incentive to commit fraud, (2) Opportunity to perpetrate fraud, and (3) Rationalization/Attitude that justifies the fraudulent behavior.",
     "tip": "Fraud triangle = Pressure + Opportunity + Rationalization.",
     "calculationRequired": false,
@@ -20071,12 +20071,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sampling risk is:",
     "options": {
-      "A": "The risk of choosing an inappropriate sampling method",
-      "B": "The risk that the sample is not representative of the population",
-      "C": "The risk that the auditor makes errors in performing procedures",
-      "D": "Always eliminated by using statistical sampling"
+      "A": "The risk that the sample is not representative of the population",
+      "B": "The risk that the auditor makes errors in performing procedures",
+      "C": "Always eliminated by using statistical sampling",
+      "D": "The risk of choosing an inappropriate sampling method"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sampling risk is the risk that the auditor's conclusion based on a sample may differ from the conclusion that would be reached if the entire population were subjected to the same procedure. It exists because only a portion of the population is tested.",
     "tip": "Sampling risk = sample conclusion ≠ population conclusion. Reduced by larger samples.",
     "calculationRequired": false,
@@ -20092,12 +20092,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which assertion is tested when the auditor confirms accounts receivable?",
     "options": {
-      "A": "Completeness only",
-      "B": "Valuation only",
-      "C": "Existence, rights, and accuracy",
-      "D": "Presentation only"
+      "A": "Existence, rights, and accuracy",
+      "B": "Presentation only",
+      "C": "Completeness only",
+      "D": "Valuation only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Accounts receivable confirmations primarily test existence (the receivable exists), rights (the client owns the receivable), and accuracy (the amount is correct). Confirmations are less effective for completeness since unrecorded receivables won't be confirmed.",
     "tip": "AR confirmations test existence and accuracy—not great for completeness.",
     "calculationRequired": false,
@@ -20113,12 +20113,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The management representation letter should be dated:",
     "options": {
-      "A": "The balance sheet date",
-      "B": "The date of the auditor's report",
-      "C": "The last day of fieldwork",
-      "D": "The date the financial statements are filed"
+      "A": "The date of the auditor's report",
+      "B": "The last day of fieldwork",
+      "C": "The date the financial statements are filed",
+      "D": "The balance sheet date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The management representation letter should be dated as of the date of the auditor's report. This ensures management's representations cover the entire period up to when the auditor forms an opinion, including the subsequent events period.",
     "tip": "Rep letter date = auditor's report date (covers through opinion date).",
     "calculationRequired": false,
@@ -20260,12 +20260,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Tests of details are generally more effective than substantive analytical procedures when:",
     "options": {
-      "A": "The auditor wants to reduce audit effort",
-      "B": "Precise, item-level evidence is needed for significant risks",
-      "C": "The account has predictable relationships",
-      "D": "Internal controls are strong"
+      "A": "Internal controls are strong",
+      "B": "The auditor wants to reduce audit effort",
+      "C": "Precise, item-level evidence is needed for significant risks",
+      "D": "The account has predictable relationships"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Tests of details provide precise evidence about specific items and are more effective when addressing significant risks or when the auditor needs to verify specific amounts. Analytical procedures are better suited for accounts with predictable, stable relationships.",
     "tip": "Use tests of details for precision and significant risks; analytics for predictable relationships.",
     "calculationRequired": false,
@@ -20281,12 +20281,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A dual-purpose test is a test that:",
     "options": {
-      "A": "Uses two different sample sizes",
-      "B": "Simultaneously tests internal controls and performs substantive testing on the same transactions",
-      "C": "Is performed by two different auditors",
-      "D": "Tests two different assertions"
+      "A": "Tests two different assertions",
+      "B": "Uses two different sample sizes",
+      "C": "Simultaneously tests internal controls and performs substantive testing on the same transactions",
+      "D": "Is performed by two different auditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A dual-purpose test combines a test of control and a substantive test of details performed on the same transaction or item. It is efficient when the objectives can be achieved together, but requires careful consideration of sample size requirements for each objective.",
     "tip": "Dual-purpose = control test + substantive test on same items (efficient).",
     "calculationRequired": false,
@@ -20302,12 +20302,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing related party transactions, the auditor should:",
     "options": {
-      "A": "Accept management's identification of related parties without further inquiry",
-      "B": "Perform procedures to identify related parties and evaluate transactions for proper disclosure and arm's-length terms",
-      "C": "Only evaluate related party transactions that are unusual",
-      "D": "Confirm all related party transactions with the related parties"
+      "A": "Confirm all related party transactions with the related parties",
+      "B": "Accept management's identification of related parties without further inquiry",
+      "C": "Perform procedures to identify related parties and evaluate transactions for proper disclosure and arm's-length terms",
+      "D": "Only evaluate related party transactions that are unusual"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor should perform procedures to identify related parties beyond management's representations, understand the nature of relationships and transactions, evaluate whether terms are at arm's length, and verify proper disclosure. Related party transactions pose higher fraud risk.",
     "tip": "Related parties = identify independently + evaluate terms + verify disclosure.",
     "calculationRequired": false,
@@ -20323,12 +20323,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using the work of an auditor's specialist, the auditor should:",
     "options": {
-      "A": "Accept the specialist's findings without further evaluation",
-      "B": "Evaluate the competence and objectivity of the specialist and the appropriateness of the specialist's work",
-      "C": "Reference the specialist in the audit report",
-      "D": "Engage only specialists employed by the audit firm"
+      "A": "Engage only specialists employed by the audit firm",
+      "B": "Accept the specialist's findings without further evaluation",
+      "C": "Evaluate the competence and objectivity of the specialist and the appropriateness of the specialist's work",
+      "D": "Reference the specialist in the audit report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor must evaluate the specialist's competence, capabilities, and objectivity, understand the specialist's field, and evaluate whether the specialist's work is adequate for audit purposes. The specialist is not mentioned in an unmodified report as the auditor retains sole responsibility.",
     "tip": "Using specialist = evaluate competence/objectivity + assess adequacy of work.",
     "calculationRequired": false,
@@ -20344,12 +20344,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An emphasis-of-matter paragraph is added to the audit report when:",
     "options": {
-      "A": "The auditor wants to qualify the opinion",
-      "B": "A matter is appropriately presented but is fundamental to users' understanding of the financial statements",
-      "C": "There is a material misstatement in the financial statements",
-      "D": "The auditor disagrees with an accounting policy"
+      "A": "There is a material misstatement in the financial statements",
+      "B": "The auditor disagrees with an accounting policy",
+      "C": "The auditor wants to qualify the opinion",
+      "D": "A matter is appropriately presented but is fundamental to users' understanding of the financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An emphasis-of-matter paragraph draws attention to a matter that is appropriately presented or disclosed in the financial statements but is of such importance that it is fundamental to users' understanding. It does not modify the opinion. Examples include significant uncertainties or related party transactions.",
     "tip": "Emphasis paragraph = appropriately disclosed but fundamental to understanding (opinion not modified).",
     "calculationRequired": false,
@@ -20365,12 +20365,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the prior period was audited by a predecessor auditor whose report is not reissued, the successor auditor should:",
     "options": {
-      "A": "Re-audit the prior period",
-      "B": "Include an other-matter paragraph identifying the predecessor and the type of opinion issued",
-      "C": "Issue a disclaimer on the prior period",
-      "D": "Not refer to the prior period in any way"
+      "A": "Not refer to the prior period in any way",
+      "B": "Re-audit the prior period",
+      "C": "Include an other-matter paragraph identifying the predecessor and the type of opinion issued",
+      "D": "Issue a disclaimer on the prior period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When comparative financial statements are presented and the predecessor's report is not reissued, the successor auditor should include an other-matter paragraph stating that the prior period was audited by another auditor, the date and type of opinion, and any modifications.",
     "tip": "Predecessor not reissuing = successor adds other-matter paragraph about prior audit.",
     "calculationRequired": false,
@@ -20386,12 +20386,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating uncorrected misstatements, the auditor should consider:",
     "options": {
-      "A": "Only the quantitative amount of each misstatement",
-      "B": "The effect of misstatements individually and in aggregate, including qualitative factors",
-      "C": "Only misstatements that exceed materiality",
-      "D": "Only misstatements identified through testing, not analytical procedures"
+      "A": "The effect of misstatements individually and in aggregate, including qualitative factors",
+      "B": "Only misstatements that exceed materiality",
+      "C": "Only misstatements identified through testing, not analytical procedures",
+      "D": "Only the quantitative amount of each misstatement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor evaluates uncorrected misstatements both individually and in aggregate. Qualitative factors matter—a small misstatement may be material if it changes a trend, affects compliance with covenants, or involves fraud. All identified misstatements must be considered.",
     "tip": "Evaluate misstatements: quantitative (amount) + qualitative (nature, effect) + aggregate.",
     "calculationRequired": false,
@@ -20407,12 +20407,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A significant difference between PCAOB and AICPA auditor's reports is that PCAOB reports:",
     "options": {
-      "A": "Never mention internal control",
-      "B": "Include critical audit matters (CAMs) for large accelerated filers",
-      "C": "Do not require the auditor's signature",
-      "D": "Are addressed to management rather than shareholders"
+      "A": "Are addressed to management rather than shareholders",
+      "B": "Never mention internal control",
+      "C": "Include critical audit matters (CAMs) for large accelerated filers",
+      "D": "Do not require the auditor's signature"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PCAOB reports for large accelerated filers must include Critical Audit Matters (CAMs)—matters communicated to the audit committee that relate to significant accounts and involve especially challenging, subjective, or complex auditor judgment.",
     "tip": "PCAOB = CAMs required for large accelerated filers + integrated audit of ICFR.",
     "calculationRequired": false,
@@ -20428,12 +20428,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A SOC 1 Type 2 report differs from a Type 1 report in that the Type 2 report:",
     "options": {
-      "A": "Covers a point in time rather than a period",
-      "B": "Includes tests of operating effectiveness of controls over a period",
-      "C": "Is less detailed than Type 1",
-      "D": "Does not address internal control"
+      "A": "Is less detailed than Type 1",
+      "B": "Does not address internal control",
+      "C": "Covers a point in time rather than a period",
+      "D": "Includes tests of operating effectiveness of controls over a period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A SOC 1 Type 1 report addresses the design of controls at a point in time. A Type 2 report includes both the description and design of controls AND tests of operating effectiveness over a specified period, providing more assurance about whether controls operated effectively.",
     "tip": "Type 1 = design at a point. Type 2 = design + operating effectiveness over time.",
     "calculationRequired": false,
@@ -20449,12 +20449,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In order of highest to lowest assurance, the services are:",
     "options": {
-      "A": "Audit, review, compilation, preparation",
-      "B": "Review, audit, compilation, preparation",
-      "C": "Compilation, review, audit, preparation",
-      "D": "Audit, compilation, review, preparation"
+      "A": "Audit, compilation, review, preparation",
+      "B": "Audit, review, compilation, preparation",
+      "C": "Review, audit, compilation, preparation",
+      "D": "Compilation, review, audit, preparation"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The hierarchy from highest to lowest assurance is: Audit (reasonable assurance), Review (limited assurance), Compilation (no assurance), and Preparation (no assurance and no report required). Each service level has different procedures and reporting requirements.",
     "tip": "Assurance hierarchy: Audit > Review > Compilation > Preparation.",
     "calculationRequired": false,
@@ -20470,12 +20470,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Government Auditing Standards (Yellow Book) differ from GAAS primarily in their:",
     "options": {
-      "A": "Basic audit methodology",
-      "B": "Additional requirements for independence, CPE, peer review, and reporting on internal control and compliance",
-      "C": "Elimination of materiality considerations",
-      "D": "Different opinion types"
+      "A": "Elimination of materiality considerations",
+      "B": "Different opinion types",
+      "C": "Basic audit methodology",
+      "D": "Additional requirements for independence, CPE, peer review, and reporting on internal control and compliance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Yellow Book incorporates GAAS but adds requirements for: (1) more stringent independence rules, (2) specific CPE requirements including government-focused training, (3) peer review, and (4) additional reporting on internal control and compliance with laws and regulations.",
     "tip": "Yellow Book = GAAS + stricter independence, CPE, peer review, and compliance reporting.",
     "calculationRequired": false,
@@ -20491,12 +20491,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When performing substantive procedures at an interim date, the auditor should:",
     "options": {
-      "A": "Not perform any procedures at year-end",
-      "B": "Perform additional procedures to cover the remaining period from interim to year-end",
-      "C": "Only test high-risk areas at interim",
-      "D": "Rely solely on analytical procedures for the remaining period"
+      "A": "Perform additional procedures to cover the remaining period from interim to year-end",
+      "B": "Only test high-risk areas at interim",
+      "C": "Rely solely on analytical procedures for the remaining period",
+      "D": "Not perform any procedures at year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When substantive procedures are performed at interim, the auditor must obtain audit evidence about the remaining period. This may involve additional substantive procedures, tests of controls operating in the remaining period, or substantive analytical procedures.",
     "tip": "Interim testing requires additional procedures to cover remaining period to year-end.",
     "calculationRequired": false,
@@ -20533,12 +20533,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under common law, an auditor may be liable to a third party who is not in privity of contract if the auditor:",
     "options": {
-      "A": "Made an inadvertent error",
-      "B": "Was grossly negligent or committed fraud, depending on jurisdiction",
-      "C": "Issued an unmodified opinion",
-      "D": "Failed to detect all fraud"
+      "A": "Failed to detect all fraud",
+      "B": "Made an inadvertent error",
+      "C": "Was grossly negligent or committed fraud, depending on jurisdiction",
+      "D": "Issued an unmodified opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Auditor liability to third parties varies by jurisdiction. Some jurisdictions require privity (Ultramares doctrine), others extend liability to known or foreseen third parties (Restatement approach), and others allow suits by any foreseeable user. Gross negligence or fraud typically overcomes privity limitations.",
     "tip": "Third-party liability varies by jurisdiction—gross negligence/fraud broadens liability.",
     "calculationRequired": false,
@@ -20575,12 +20575,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When reading other information included in documents containing audited financial statements, if the auditor identifies a material inconsistency:",
     "options": {
-      "A": "The auditor must withdraw from the engagement",
-      "B": "The auditor should determine whether the financial statements or other information needs revision",
-      "C": "The auditor should ignore it since it's not part of the audited statements",
-      "D": "The auditor must issue an adverse opinion"
+      "A": "The auditor should determine whether the financial statements or other information needs revision",
+      "B": "The auditor should ignore it since it's not part of the audited statements",
+      "C": "The auditor must issue an adverse opinion",
+      "D": "The auditor must withdraw from the engagement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When a material inconsistency exists between the audited financial statements and other information, the auditor must determine which information is correct. If the financial statements require revision and management refuses, the opinion may need to be modified. If the other information is incorrect, the auditor should request correction or consider implications for the report.",
     "tip": "Material inconsistency = determine what's wrong (F/S or other info) and take appropriate action.",
     "calculationRequired": false,
@@ -20596,12 +20596,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT a type of audit procedure?",
     "options": {
-      "A": "Inspection",
-      "B": "Observation",
-      "C": "Budgeting",
-      "D": "Recalculation"
+      "A": "Budgeting",
+      "B": "Recalculation",
+      "C": "Inspection",
+      "D": "Observation"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The types of audit procedures are: inspection, observation, external confirmation, recalculation, reperformance, analytical procedures, and inquiry. Budgeting is a management function, not an audit procedure.",
     "tip": "Audit procedures: Inspect, Observe, Confirm, Recalculate, Reperform, Analyze, Inquire.",
     "calculationRequired": false,
@@ -20617,12 +20617,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The engagement partner is responsible for:",
     "options": {
-      "A": "Performing all audit procedures personally",
-      "B": "Overall quality on the audit engagement, including direction, supervision, and performance",
-      "C": "Only signing the audit report",
-      "D": "Setting the audit fee"
+      "A": "Overall quality on the audit engagement, including direction, supervision, and performance",
+      "B": "Only signing the audit report",
+      "C": "Setting the audit fee",
+      "D": "Performing all audit procedures personally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The engagement partner has overall responsibility for the audit engagement, including its performance in accordance with professional standards, the firm's quality control policies, the auditor's report, and ensuring proper direction, supervision, and review of engagement team members.",
     "tip": "Engagement partner = overall quality responsibility (direction, supervision, performance).",
     "calculationRequired": false,
@@ -20638,12 +20638,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The sufficiency of audit evidence is primarily a measure of:",
     "options": {
-      "A": "Quality of evidence",
-      "B": "Quantity of evidence",
-      "C": "Relevance of evidence",
-      "D": "Timeliness of evidence"
+      "A": "Timeliness of evidence",
+      "B": "Quality of evidence",
+      "C": "Quantity of evidence",
+      "D": "Relevance of evidence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Sufficiency is a measure of quantity—the amount of evidence obtained. Appropriateness relates to quality—the relevance and reliability of evidence. The auditor needs enough appropriate evidence to support conclusions.",
     "tip": "Sufficiency = quantity (how much). Appropriateness = quality (relevance + reliability).",
     "calculationRequired": false,
@@ -20659,12 +20659,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Tests of controls are performed to:",
     "options": {
-      "A": "Detect material misstatements in account balances",
-      "B": "Evaluate the operating effectiveness of controls in preventing or detecting misstatements",
-      "C": "Determine the appropriate audit fee",
-      "D": "Satisfy regulatory requirements"
+      "A": "Determine the appropriate audit fee",
+      "B": "Satisfy regulatory requirements",
+      "C": "Detect material misstatements in account balances",
+      "D": "Evaluate the operating effectiveness of controls in preventing or detecting misstatements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Tests of controls evaluate whether controls are operating effectively as designed to prevent or detect material misstatements. If controls are effective, the auditor can reduce the extent of substantive testing. Control testing supports the auditor's risk assessment.",
     "tip": "Tests of controls = do controls work? If yes, reduce substantive testing.",
     "calculationRequired": false,
@@ -20680,12 +20680,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor's report on financial statements is typically addressed to:",
     "options": {
-      "A": "Management of the entity",
-      "B": "The shareholders or those charged with governance",
-      "C": "The SEC",
-      "D": "The entity's legal counsel"
+      "A": "The SEC",
+      "B": "The entity's legal counsel",
+      "C": "Management of the entity",
+      "D": "The shareholders or those charged with governance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The auditor's report is typically addressed to those for whom it is prepared—usually the shareholders or those charged with governance (board of directors, audit committee). The addressee reflects who engaged the auditor and to whom the auditor reports.",
     "tip": "Report addressed to shareholders or board—who hired the auditor.",
     "calculationRequired": false,
@@ -20701,12 +20701,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An audit conducted in accordance with GAAS provides:",
     "options": {
-      "A": "Absolute assurance that the financial statements are free from material misstatement",
-      "B": "Reasonable assurance that the financial statements are free from material misstatement",
-      "C": "A guarantee that fraud will be detected",
-      "D": "Insurance against business failure"
+      "A": "Insurance against business failure",
+      "B": "Absolute assurance that the financial statements are free from material misstatement",
+      "C": "Reasonable assurance that the financial statements are free from material misstatement",
+      "D": "A guarantee that fraud will be detected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Due to inherent limitations (sampling, judgment, nature of evidence, management override of controls), an audit provides reasonable, not absolute, assurance. Even a properly planned and performed audit may not detect all material misstatements.",
     "tip": "Audit = reasonable assurance, not a guarantee. Inherent limitations exist.",
     "calculationRequired": false,
@@ -20722,12 +20722,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Revenue recognition is presumed to be a fraud risk because:",
     "options": {
-      "A": "Revenue transactions are complex",
-      "B": "There is often pressure to meet revenue targets and multiple ways to manipulate revenue",
-      "C": "Revenue is always material",
-      "D": "Revenue accounts are difficult to audit"
+      "A": "There is often pressure to meet revenue targets and multiple ways to manipulate revenue",
+      "B": "Revenue is always material",
+      "C": "Revenue accounts are difficult to audit",
+      "D": "Revenue transactions are complex"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "AU-C 240 presumes revenue recognition is a fraud risk because management often faces pressure to meet financial targets, and revenue can be manipulated through premature recognition, fictitious transactions, or improper cutoff. The auditor can rebut this presumption if circumstances warrant.",
     "tip": "Revenue fraud risk is presumed—pressure to meet targets + easy to manipulate.",
     "calculationRequired": false,
@@ -20743,12 +20743,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To address the risk of management override of controls, the auditor should:",
     "options": {
-      "A": "Increase the sample size for all tests",
-      "B": "Test the appropriateness of journal entries and evaluate accounting estimates for bias",
-      "C": "Only test automated controls",
-      "D": "Rely on management representations"
+      "A": "Test the appropriateness of journal entries and evaluate accounting estimates for bias",
+      "B": "Only test automated controls",
+      "C": "Rely on management representations",
+      "D": "Increase the sample size for all tests"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Required procedures to address management override include: (1) testing journal entries and other adjustments, (2) reviewing accounting estimates for bias, and (3) evaluating the business rationale for significant unusual transactions. These procedures are required regardless of assessed risk.",
     "tip": "Management override procedures: test journals, evaluate estimates for bias, review unusual transactions.",
     "calculationRequired": false,
@@ -20764,12 +20764,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When confirmations are not returned, the auditor should:",
     "options": {
-      "A": "Issue a qualified opinion",
-      "B": "Perform alternative procedures to obtain evidence about the assertions being tested",
-      "C": "Assume the account is correctly stated",
-      "D": "Send additional confirmations to different addresses"
+      "A": "Send additional confirmations to different addresses",
+      "B": "Issue a qualified opinion",
+      "C": "Perform alternative procedures to obtain evidence about the assertions being tested",
+      "D": "Assume the account is correctly stated"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When confirmations are not returned, the auditor should perform alternative procedures such as examining subsequent cash receipts, shipping documents, or other documentation. The nature of alternatives depends on the assertion being tested.",
     "tip": "No confirmation response = perform alternative procedures (cash receipts, invoices, etc.).",
     "calculationRequired": false,
@@ -20785,12 +20785,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If management refuses to provide required written representations, the auditor should:",
     "options": {
-      "A": "Accept oral representations instead",
-      "B": "Disclaim an opinion due to scope limitation",
-      "C": "Issue a qualified opinion",
-      "D": "Complete the audit without the representations"
+      "A": "Complete the audit without the representations",
+      "B": "Accept oral representations instead",
+      "C": "Disclaim an opinion due to scope limitation",
+      "D": "Issue a qualified opinion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Refusal to provide required written representations is a scope limitation that results in a disclaimer of opinion. The representation letter is required audit evidence, and its absence creates doubt about management's reliability and prevents the auditor from obtaining sufficient appropriate evidence.",
     "tip": "No rep letter = disclaimer (scope limitation). Required evidence is missing.",
     "calculationRequired": false,
@@ -20806,12 +20806,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Tolerable misstatement (performance materiality) is set at an amount:",
     "options": {
-      "A": "Equal to overall materiality",
-      "B": "Higher than overall materiality",
-      "C": "Lower than overall materiality to reduce sampling risk",
-      "D": "Determined after the audit is complete"
+      "A": "Determined after the audit is complete",
+      "B": "Equal to overall materiality",
+      "C": "Higher than overall materiality",
+      "D": "Lower than overall materiality to reduce sampling risk"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Performance materiality is set lower than overall materiality to reduce to an appropriately low level the probability that the aggregate of uncorrected and undetected misstatements exceeds materiality. It provides a margin for possible undetected misstatements.",
     "tip": "Performance materiality < overall materiality = margin for undetected errors.",
     "calculationRequired": false,
@@ -20827,12 +20827,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A material weakness in internal control is a deficiency, or combination of deficiencies, where:",
     "options": {
-      "A": "There is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis",
-      "B": "A misstatement has actually occurred",
-      "C": "Management has failed to correct a known error",
-      "D": "The auditor cannot complete testing of controls"
+      "A": "Management has failed to correct a known error",
+      "B": "The auditor cannot complete testing of controls",
+      "C": "There is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis",
+      "D": "A misstatement has actually occurred"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "A material weakness exists when there is a reasonable possibility that a material misstatement of the financial statements will not be prevented or detected and corrected on a timely basis. A significant deficiency is less severe but still important enough to merit attention.",
     "tip": "Material weakness = reasonable possibility of material misstatement going undetected.",
     "calculationRequired": false,
@@ -20848,12 +20848,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When observing the client's physical inventory count, the auditor should:",
     "options": {
-      "A": "Count all inventory items",
-      "B": "Observe the counting procedures and perform test counts",
-      "C": "Accept the client's count without verification",
-      "D": "Only observe the count if inventory is material"
+      "A": "Observe the counting procedures and perform test counts",
+      "B": "Accept the client's count without verification",
+      "C": "Only observe the count if inventory is material",
+      "D": "Count all inventory items"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor observes the count to evaluate the client's count procedures and performs test counts to verify accuracy. The auditor traces test counts to count records and traces recorded items back to physical inventory to test both existence and completeness.",
     "tip": "Inventory observation = watch procedures + do your own test counts (both directions).",
     "calculationRequired": false,
@@ -20869,12 +20869,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A comfort letter is issued to:",
     "options": {
-      "A": "Management of the audit client",
-      "B": "Underwriters in connection with securities offerings",
-      "C": "The SEC as part of registration requirements",
-      "D": "Shareholders upon request"
+      "A": "Shareholders upon request",
+      "B": "Management of the audit client",
+      "C": "Underwriters in connection with securities offerings",
+      "D": "The SEC as part of registration requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Comfort letters (letters for underwriters) are issued to underwriters, broker-dealers, or other parties in connection with securities offerings. They provide negative assurance on unaudited financial information and confirm certain matters in the registration statement.",
     "tip": "Comfort letters = for underwriters in securities offerings (negative assurance).",
     "calculationRequired": false,
@@ -20890,12 +20890,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Negative confirmations may be used as the sole substantive procedure when:",
     "options": {
-      "A": "The account balance is material",
-      "B": "Risk of material misstatement is low, there are many small balances, and few exceptions are expected",
-      "C": "Positive confirmations were not returned",
-      "D": "Management requests their use"
+      "A": "Management requests their use",
+      "B": "The account balance is material",
+      "C": "Risk of material misstatement is low, there are many small balances, and few exceptions are expected",
+      "D": "Positive confirmations were not returned"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Negative confirmations may be used alone only when: (1) inherent and control risk are low, (2) a large number of small balances is involved, (3) the auditor has no reason to expect recipients to disregard them, and (4) few exceptions are expected.",
     "tip": "Negative confirms alone: low risk + many small balances + expect few exceptions.",
     "calculationRequired": false,
@@ -20932,12 +20932,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An integrated audit of a public company requires the auditor to express opinions on:",
     "options": {
-      "A": "The financial statements only",
-      "B": "Both the financial statements and the effectiveness of internal control over financial reporting",
-      "C": "Internal control only",
-      "D": "The financial statements and management's competence"
+      "A": "Internal control only",
+      "B": "The financial statements and management's competence",
+      "C": "The financial statements only",
+      "D": "Both the financial statements and the effectiveness of internal control over financial reporting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under PCAOB standards, an integrated audit requires the auditor to express two opinions: one on whether the financial statements are fairly presented and one on whether the company maintained effective internal control over financial reporting as of the balance sheet date.",
     "tip": "Integrated audit (PCAOB) = opinion on F/S + opinion on ICFR.",
     "calculationRequired": false,
@@ -20953,12 +20953,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A lawyer may appropriately limit the response to an audit inquiry letter to matters:",
     "options": {
-      "A": "The lawyer considers significant",
-      "B": "To which the lawyer has devoted substantive attention",
-      "C": "That have been settled",
-      "D": "The client specifically approves for disclosure"
+      "A": "The client specifically approves for disclosure",
+      "B": "The lawyer considers significant",
+      "C": "To which the lawyer has devoted substantive attention",
+      "D": "That have been settled"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The ABA Statement of Policy allows lawyers to limit responses to matters to which they have devoted substantive attention in the form of legal consultation or representation. This acknowledges lawyers' scope of involvement varies by matter.",
     "tip": "Lawyers respond on matters they've given substantive attention to.",
     "calculationRequired": false,
@@ -20974,12 +20974,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the auditor finds misstatements in a sample, the misstatements should be:",
     "options": {
-      "A": "Only considered if they exceed materiality",
-      "B": "Projected to the population to estimate total misstatement",
-      "C": "Corrected without further analysis",
-      "D": "Ignored if individually immaterial"
+      "A": "Corrected without further analysis",
+      "B": "Ignored if individually immaterial",
+      "C": "Only considered if they exceed materiality",
+      "D": "Projected to the population to estimate total misstatement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sample misstatements should be projected (extrapolated) to the population to estimate total likely misstatement. This projection, plus any known misstatements from 100% testing, is compared to tolerable misstatement to determine if the account may be materially misstated.",
     "tip": "Project sample errors to population—estimate total error in the account.",
     "calculationRequired": false,
@@ -21016,12 +21016,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "General IT controls include:",
     "options": {
-      "A": "Input validation checks",
-      "B": "Access controls, program change controls, and computer operations controls",
-      "C": "Reasonableness tests on calculated fields",
-      "D": "Batch total comparisons"
+      "A": "Batch total comparisons",
+      "B": "Input validation checks",
+      "C": "Access controls, program change controls, and computer operations controls",
+      "D": "Reasonableness tests on calculated fields"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "General IT controls (ITGCs) apply broadly across IT systems and include: access security controls, program change and development controls, computer operations controls, and backup and recovery procedures. Application controls (input validation, batch totals) operate within specific applications.",
     "tip": "ITGCs = access, change management, operations. Application controls = input/processing/output.",
     "calculationRequired": false,
@@ -21037,12 +21037,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To test sales cutoff at year-end, the auditor should:",
     "options": {
-      "A": "Confirm year-end receivable balances",
-      "B": "Compare shipping dates on bills of lading to sales invoice dates and recording dates",
-      "C": "Review the allowance for doubtful accounts",
-      "D": "Analyze the sales return policy"
+      "A": "Analyze the sales return policy",
+      "B": "Confirm year-end receivable balances",
+      "C": "Compare shipping dates on bills of lading to sales invoice dates and recording dates",
+      "D": "Review the allowance for doubtful accounts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Sales cutoff testing involves examining shipping documents and sales invoices around year-end to verify that sales are recorded in the correct period based on when control transferred. Comparing shipping dates, invoice dates, and recording dates identifies cutoff errors.",
     "tip": "Sales cutoff = compare shipping date, invoice date, and recorded date (should align).",
     "calculationRequired": false,
@@ -21058,12 +21058,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A contingent fee arrangement for an audit engagement:",
     "options": {
-      "A": "Is permitted if disclosed in the engagement letter",
-      "B": "Is prohibited because it impairs independence",
-      "C": "Is permitted for initial audits only",
-      "D": "Is permitted if the fee is reasonable"
+      "A": "Is prohibited because it impairs independence",
+      "B": "Is permitted for initial audits only",
+      "C": "Is permitted if the fee is reasonable",
+      "D": "Is permitted if disclosed in the engagement letter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Contingent fees are prohibited for audit and review engagements because they impair independence—the auditor's compensation would be tied to the outcome, creating bias. This applies regardless of disclosure or reasonableness.",
     "tip": "Contingent fees = never OK for audits (impairs independence).",
     "calculationRequired": false,
@@ -21079,12 +21079,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Single Audit, the auditor expresses an opinion on compliance:",
     "options": {
-      "A": "With all federal laws and regulations",
-      "B": "With requirements applicable to major programs",
-      "C": "Only if compliance deficiencies are found",
-      "D": "In a separate letter to the federal government"
+      "A": "In a separate letter to the federal government",
+      "B": "With all federal laws and regulations",
+      "C": "With requirements applicable to major programs",
+      "D": "Only if compliance deficiencies are found"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In a Single Audit under the Uniform Guidance, the auditor expresses an opinion on compliance with requirements applicable to each major program. Major programs are determined based on risk assessment and dollar thresholds. Non-major programs receive limited procedures.",
     "tip": "Single Audit compliance opinion = on major programs, not all federal programs.",
     "calculationRequired": false,
@@ -21100,12 +21100,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When reporting on a specified element of financial statements (such as accounts receivable), the auditor:",
     "options": {
-      "A": "Cannot report on a single element",
-      "B": "Must also audit the complete financial statements",
-      "C": "May express an opinion on the specified element without auditing the complete financial statements",
-      "D": "Issues only a compilation report"
+      "A": "Must also audit the complete financial statements",
+      "B": "May express an opinion on the specified element without auditing the complete financial statements",
+      "C": "Issues only a compilation report",
+      "D": "Cannot report on a single element"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The auditor may report on specified elements, accounts, or items of financial statements without auditing the complete statements. The auditor applies GAAS to the specific element and expresses an opinion on whether the element is presented fairly in accordance with the applicable framework.",
     "tip": "Can audit single elements without auditing full F/S.",
     "calculationRequired": false,
@@ -21121,12 +21121,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For an initial audit engagement, the auditor should obtain sufficient evidence about opening balances by:",
     "options": {
-      "A": "Accepting prior year audited amounts without testing",
-      "B": "Reviewing the predecessor auditor's working papers and performing procedures based on circumstances",
-      "C": "Re-auditing all prior year balances",
-      "D": "Disclaiming an opinion on the current year income statement"
+      "A": "Reviewing the predecessor auditor's working papers and performing procedures based on circumstances",
+      "B": "Re-auditing all prior year balances",
+      "C": "Disclaiming an opinion on the current year income statement",
+      "D": "Accepting prior year audited amounts without testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For initial audits, the auditor should review predecessor working papers (if access is granted), perform procedures on opening balances based on assessed risk, and determine if accounting policies were consistently applied. Current year income statement opinion depends on opening balance verification.",
     "tip": "Initial audit: review predecessor papers + test opening balances as needed.",
     "calculationRequired": false,
@@ -21163,12 +21163,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When examining pro forma financial information, the accountant reports on whether:",
     "options": {
-      "A": "The pro forma adjustments are accurate predictions",
-      "B": "Management's assumptions are reasonable and pro forma adjustments are properly applied",
-      "C": "The transaction being reflected will occur",
-      "D": "The underlying historical financial statements are fairly presented"
+      "A": "Management's assumptions are reasonable and pro forma adjustments are properly applied",
+      "B": "The transaction being reflected will occur",
+      "C": "The underlying historical financial statements are fairly presented",
+      "D": "The pro forma adjustments are accurate predictions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The accountant's examination report on pro forma financial information addresses whether management's assumptions are reasonable, the pro forma adjustments give appropriate effect to those assumptions, and the pro forma column reflects proper application of adjustments to historical data.",
     "tip": "Pro forma report = assumptions reasonable + adjustments properly applied.",
     "calculationRequired": false,
@@ -21184,12 +21184,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For SEC registrants, the auditor is required to:",
     "options": {
-      "A": "Read the entire Form 10-K and consider whether other information is materially inconsistent",
-      "B": "Audit all information in the Form 10-K",
-      "C": "Only sign the audit report",
-      "D": "Review management's discussion and analysis as part of the audit"
+      "A": "Review management's discussion and analysis as part of the audit",
+      "B": "Read the entire Form 10-K and consider whether other information is materially inconsistent",
+      "C": "Audit all information in the Form 10-K",
+      "D": "Only sign the audit report"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The auditor reads other information in documents containing audited financial statements (such as Form 10-K) to identify material inconsistencies with the audited statements or material misstatements of fact. MD&A is read but not audited.",
     "tip": "Read Form 10-K for inconsistencies—other sections aren't audited but are considered.",
     "calculationRequired": false,
@@ -21205,12 +21205,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Auditor's Responsibilities section of the audit report states that the auditor's objectives include:",
     "options": {
-      "A": "Detecting all fraud and errors",
-      "B": "Obtaining reasonable assurance about whether the financial statements are free from material misstatement",
-      "C": "Guaranteeing the accuracy of the financial statements",
-      "D": "Evaluating the efficiency of management"
+      "A": "Obtaining reasonable assurance about whether the financial statements are free from material misstatement",
+      "B": "Guaranteeing the accuracy of the financial statements",
+      "C": "Evaluating the efficiency of management",
+      "D": "Detecting all fraud and errors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The auditor's responsibilities section explains that the auditor's objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from material misstatement, whether due to fraud or error, and to issue a report that includes the auditor's opinion.",
     "tip": "Auditor's responsibility = reasonable assurance on F/S being free of material misstatement.",
     "calculationRequired": false,
@@ -21226,12 +21226,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The auditor is required to communicate to the audit committee:",
     "options": {
-      "A": "Only positive findings from the audit",
-      "B": "Significant risks identified, critical accounting policies, and management judgments",
-      "C": "All immaterial errors found during testing",
-      "D": "The auditor's personal opinion of management's competence"
+      "A": "The auditor's personal opinion of management's competence",
+      "B": "Only positive findings from the audit",
+      "C": "Significant risks identified, critical accounting policies, and management judgments",
+      "D": "All immaterial errors found during testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Required communications include: significant risks, critical accounting policies and practices, significant accounting estimates and judgments, significant unusual transactions, identified or suspected fraud, difficulties encountered, disagreements with management, and other matters affecting governance oversight.",
     "tip": "Communicate to audit committee: risks, policies, estimates, fraud, difficulties, disagreements.",
     "calculationRequired": false,
@@ -21247,12 +21247,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under PCAOB AS 2201, the auditor's evaluation of internal control over financial reporting is based on:",
     "options": {
-      "A": "Management's assessment only",
-      "B": "The auditor's independent assessment as of the balance sheet date",
-      "C": "Controls over the entire year without regard to timing",
-      "D": "Only IT general controls"
+      "A": "The auditor's independent assessment as of the balance sheet date",
+      "B": "Controls over the entire year without regard to timing",
+      "C": "Only IT general controls",
+      "D": "Management's assessment only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under AS 2201, the auditor forms an independent opinion on the effectiveness of ICFR as of the balance sheet date (a point-in-time assessment). The auditor uses the same criteria as management but performs independent testing. The opinion is on effectiveness at year-end.",
     "tip": "ICFR opinion = auditor's independent assessment as of balance sheet date.",
     "calculationRequired": false,
@@ -21268,12 +21268,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "AICPA peer review is:",
     "options": {
-      "A": "Optional for all CPA firms",
-      "B": "Required for firms enrolled in AICPA practice-monitoring programs that perform accounting and auditing services",
-      "C": "Only required for firms with more than 100 partners",
-      "D": "Replaced by PCAOB inspections for all firms"
+      "A": "Only required for firms with more than 100 partners",
+      "B": "Replaced by PCAOB inspections for all firms",
+      "C": "Optional for all CPA firms",
+      "D": "Required for firms enrolled in AICPA practice-monitoring programs that perform accounting and auditing services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AICPA peer review is required for firms enrolled in AICPA practice-monitoring programs (such as membership in the PCPS or Government Audit Quality Center) that issue reports on financial statements or examinations. Most state boards also require peer review for licensure.",
     "tip": "Peer review required for AICPA program members performing A&A services.",
     "calculationRequired": false,
@@ -21289,12 +21289,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When performing a compilation engagement, the accountant:",
     "options": {
-      "A": "Must be independent of the client",
-      "B": "Is required to obtain an understanding of the client's business and industry",
-      "C": "Must test the accuracy of the financial statements",
-      "D": "Expresses reasonable assurance"
+      "A": "Must test the accuracy of the financial statements",
+      "B": "Expresses reasonable assurance",
+      "C": "Must be independent of the client",
+      "D": "Is required to obtain an understanding of the client's business and industry"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In a compilation, the accountant must obtain an understanding of the client's business, industry, and accounting principles. Independence is not required (but lack of independence must be disclosed). No assurance is expressed, and testing is not required.",
     "tip": "Compilation = understand business, no testing, no assurance, independence not required.",
     "calculationRequired": false,
@@ -21310,12 +21310,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor may report on summary financial statements only when:",
     "options": {
-      "A": "The summary is prepared by an independent third party",
-      "B": "The auditor has audited the complete financial statements from which the summary is derived",
-      "C": "Management certifies the accuracy of the summary",
-      "D": "The summary is filed with the SEC"
+      "A": "The summary is filed with the SEC",
+      "B": "The summary is prepared by an independent third party",
+      "C": "The auditor has audited the complete financial statements from which the summary is derived",
+      "D": "Management certifies the accuracy of the summary"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The auditor may report on summary financial statements only when they are derived from audited financial statements and the auditor has audited those complete statements. The report refers to the underlying audit and states whether the summary is consistent with the audited statements.",
     "tip": "Summary report requires the auditor to have audited the underlying full F/S.",
     "calculationRequired": false,

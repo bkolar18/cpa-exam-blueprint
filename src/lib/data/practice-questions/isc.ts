@@ -16,12 +16,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IT general controls (ITGCs) are best described as:",
     "options": {
-      "A": "Controls that apply only to specific applications",
-      "B": "Policies and procedures that apply to all IT systems and support the effective functioning of application controls",
-      "C": "Physical security measures for data centers only",
-      "D": "Controls implemented by end users"
+      "A": "Physical security measures for data centers only",
+      "B": "Controls implemented by end users",
+      "C": "Controls that apply only to specific applications",
+      "D": "Policies and procedures that apply to all IT systems and support the effective functioning of application controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IT general controls are broad controls that apply across the IT environment, including access controls, change management, operations, and data backup. They support the effectiveness of application controls.",
     "tip": "ITGCs = foundation for all IT controls. Think: access, changes, operations, backup.",
     "calculationRequired": false,
@@ -37,12 +37,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The three core principles of information security are commonly referred to as:",
     "options": {
-      "A": "Prevention, Detection, Correction",
-      "B": "Confidentiality, Integrity, Availability",
-      "C": "Authentication, Authorization, Accounting",
-      "D": "Encryption, Decryption, Transmission"
+      "A": "Encryption, Decryption, Transmission",
+      "B": "Prevention, Detection, Correction",
+      "C": "Confidentiality, Integrity, Availability",
+      "D": "Authentication, Authorization, Accounting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The CIA Triad represents the three fundamental principles of information security: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy and completeness), and Availability (ensuring systems and data are accessible when needed).",
     "tip": "CIA Triad = foundation of all security. Memorize: Confidentiality, Integrity, Availability.",
     "calculationRequired": false,
@@ -58,12 +58,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the difference between authentication and authorization?",
     "options": {
-      "A": "They are the same thing",
-      "B": "Authentication verifies identity; authorization determines what actions a user can perform",
-      "C": "Authorization verifies identity; authentication determines access rights",
-      "D": "Authentication is for users; authorization is for systems"
+      "A": "Authentication is for users; authorization is for systems",
+      "B": "They are the same thing",
+      "C": "Authentication verifies identity; authorization determines what actions a user can perform",
+      "D": "Authorization verifies identity; authentication determines access rights"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Authentication answers 'Who are you?' by verifying identity (passwords, biometrics, tokens). Authorization answers 'What can you do?' by determining access rights and permissions after identity is confirmed.",
     "tip": "Authentication = WHO you are. Authorization = WHAT you can do. Always in that order.",
     "calculationRequired": false,
@@ -79,12 +79,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which type of control is designed to discourage potential attackers?",
     "options": {
-      "A": "Detective control",
-      "B": "Corrective control",
-      "C": "Preventive control",
-      "D": "Deterrent control"
+      "A": "Deterrent control",
+      "B": "Detective control",
+      "C": "Corrective control",
+      "D": "Preventive control"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Deterrent controls discourage potential attackers (warning signs, visible cameras). Preventive controls stop attacks. Detective controls identify attacks. Corrective controls fix damage after an attack.",
     "tip": "Control types: Deterrent (discourage), Preventive (stop), Detective (find), Corrective (fix).",
     "calculationRequired": false,
@@ -100,12 +100,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of a firewall is to:",
     "options": {
-      "A": "Encrypt data transmissions",
-      "B": "Filter network traffic based on predetermined rules",
-      "C": "Detect malware on computers",
-      "D": "Back up important data"
+      "A": "Back up important data",
+      "B": "Encrypt data transmissions",
+      "C": "Filter network traffic based on predetermined rules",
+      "D": "Detect malware on computers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A firewall monitors and controls incoming and outgoing network traffic based on security rules. It acts as a barrier between trusted internal networks and untrusted external networks.",
     "tip": "Firewall = traffic filter. Like a security guard checking who can enter/exit a building.",
     "calculationRequired": false,
@@ -142,12 +142,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A full backup includes:",
     "options": {
-      "A": "Only files changed since the last backup",
-      "B": "All selected files regardless of when they were last backed up",
-      "C": "Only system files",
-      "D": "Only files larger than 1 MB"
+      "A": "All selected files regardless of when they were last backed up",
+      "B": "Only system files",
+      "C": "Only files larger than 1 MB",
+      "D": "Only files changed since the last backup"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A full backup copies all selected files and data, regardless of whether they have changed. Incremental backups copy only changed files since the last backup. Differential backups copy changes since the last full backup.",
     "tip": "Full = everything. Incremental = changes since last backup. Differential = changes since last full.",
     "calculationRequired": false,
@@ -163,12 +163,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Malware that disguises itself as legitimate software to trick users into installing it is called:",
     "options": {
-      "A": "Virus",
-      "B": "Worm",
-      "C": "Trojan horse",
-      "D": "Spyware"
+      "A": "Spyware",
+      "B": "Virus",
+      "C": "Worm",
+      "D": "Trojan horse"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "A Trojan horse (or Trojan) appears to be legitimate software but contains malicious code. Unlike viruses, Trojans don't replicate themselves—they rely on users to install them.",
     "tip": "Trojan = deceptive (looks safe, isn't). Virus = replicates via files. Worm = self-replicates across networks.",
     "calculationRequired": false,
@@ -184,12 +184,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Phishing attacks typically attempt to:",
     "options": {
-      "A": "Overload a server with requests",
-      "B": "Trick users into revealing sensitive information through deceptive emails or websites",
-      "C": "Physically break into data centers",
-      "D": "Intercept wireless signals"
+      "A": "Physically break into data centers",
+      "B": "Intercept wireless signals",
+      "C": "Overload a server with requests",
+      "D": "Trick users into revealing sensitive information through deceptive emails or websites"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Phishing uses deceptive emails, messages, or fake websites that appear legitimate to trick users into revealing passwords, credit card numbers, or other sensitive information.",
     "tip": "Phishing = fishing for information. Uses fake emails/websites to steal credentials.",
     "calculationRequired": false,
@@ -205,12 +205,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In Software as a Service (SaaS), who is responsible for managing the application software?",
     "options": {
-      "A": "The customer",
-      "B": "The cloud service provider",
-      "C": "A third-party consultant",
-      "D": "No one—it manages itself"
+      "A": "No one—it manages itself",
+      "B": "The customer",
+      "C": "The cloud service provider",
+      "D": "A third-party consultant"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In SaaS, the cloud provider manages everything—infrastructure, platform, and application. Customers simply use the software (e.g., Gmail, Salesforce). This differs from IaaS (customer manages more) and PaaS (customer manages applications).",
     "tip": "SaaS = provider manages all. PaaS = you manage apps. IaaS = you manage almost everything.",
     "calculationRequired": false,
@@ -226,12 +226,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A SOC 2 Type 2 report differs from a SOC 2 Type 1 report primarily because it:",
     "options": {
-      "A": "Is shorter and less detailed",
-      "B": "Tests the operating effectiveness of controls over a period of time",
-      "C": "Only covers financial reporting controls",
-      "D": "Is prepared by internal auditors"
+      "A": "Only covers financial reporting controls",
+      "B": "Is prepared by internal auditors",
+      "C": "Is shorter and less detailed",
+      "D": "Tests the operating effectiveness of controls over a period of time"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Type 1 reports describe controls at a point in time and evaluate design. Type 2 reports test whether controls operated effectively over a period (typically 6-12 months). Type 2 provides more assurance.",
     "tip": "Type 1 = design at a point in time. Type 2 = operating effectiveness over a period.",
     "calculationRequired": false,
@@ -247,12 +247,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "COBIT is best described as:",
     "options": {
-      "A": "A programming language for IT security",
-      "B": "A framework for IT governance and management",
-      "C": "A type of encryption algorithm",
-      "D": "A government regulation for data privacy"
+      "A": "A type of encryption algorithm",
+      "B": "A government regulation for data privacy",
+      "C": "A programming language for IT security",
+      "D": "A framework for IT governance and management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "COBIT (Control Objectives for Information and Related Technologies) is a framework created by ISACA for IT governance and management. It helps organizations align IT with business goals and manage IT risks.",
     "tip": "COBIT = IT governance framework from ISACA. Aligns IT with business objectives.",
     "calculationRequired": false,
@@ -268,12 +268,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Purchasing cyber insurance to cover potential data breach costs is an example of which risk response?",
     "options": {
-      "A": "Risk avoidance",
-      "B": "Risk acceptance",
-      "C": "Risk mitigation",
-      "D": "Risk transfer"
+      "A": "Risk acceptance",
+      "B": "Risk mitigation",
+      "C": "Risk transfer",
+      "D": "Risk avoidance"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Risk transfer shifts the financial impact of a risk to another party, typically through insurance or contracts. Risk avoidance eliminates the risk. Risk mitigation reduces likelihood/impact. Risk acceptance acknowledges the risk without action.",
     "tip": "Transfer = shift to another party (insurance). Avoid = eliminate. Mitigate = reduce. Accept = do nothing.",
     "calculationRequired": false,
@@ -289,12 +289,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Recovery Time Objective (RTO) measures:",
     "options": {
-      "A": "How much data can be lost",
-      "B": "The maximum acceptable time to restore operations after a disruption",
-      "C": "The cost of recovery",
-      "D": "The number of backup copies to maintain"
+      "A": "The number of backup copies to maintain",
+      "B": "How much data can be lost",
+      "C": "The maximum acceptable time to restore operations after a disruption",
+      "D": "The cost of recovery"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "RTO is the maximum acceptable downtime—how quickly systems must be restored. RPO (Recovery Point Objective) is the maximum acceptable data loss—how much data you can afford to lose (determines backup frequency).",
     "tip": "RTO = how fast to recover (time). RPO = how much data loss acceptable (point in time).",
     "calculationRequired": false,
@@ -310,12 +310,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Virtual Private Network (VPN) provides security primarily by:",
     "options": {
-      "A": "Blocking all incoming traffic",
-      "B": "Creating an encrypted tunnel for data transmission over public networks",
-      "C": "Scanning files for viruses",
-      "D": "Increasing internet speed"
+      "A": "Creating an encrypted tunnel for data transmission over public networks",
+      "B": "Scanning files for viruses",
+      "C": "Increasing internet speed",
+      "D": "Blocking all incoming traffic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A VPN creates a secure, encrypted connection (tunnel) over a public network like the internet. This protects data confidentiality and integrity when transmitting sensitive information over untrusted networks.",
     "tip": "VPN = encrypted tunnel over public internet. Protects data in transit.",
     "calculationRequired": false,
@@ -352,12 +352,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which password policy provides the strongest security?",
     "options": {
-      "A": "Minimum 6 characters, changed annually",
-      "B": "Minimum 12 characters with complexity, changed every 90 days",
-      "C": "Minimum 8 characters, no expiration",
-      "D": "No minimum length, changed monthly"
+      "A": "Minimum 8 characters, no expiration",
+      "B": "No minimum length, changed monthly",
+      "C": "Minimum 6 characters, changed annually",
+      "D": "Minimum 12 characters with complexity, changed every 90 days"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Strong password policies include minimum length (12+ characters), complexity requirements (uppercase, lowercase, numbers, special characters), and reasonable expiration periods. While too-frequent changes can lead to weak passwords, periodic rotation (90 days) balances security and usability.",
     "tip": "Longer passwords + complexity + reasonable rotation = strong policy. Too frequent changes reduce security.",
     "calculationRequired": false,
@@ -373,12 +373,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the primary purpose of a mantrap in a data center?",
     "options": {
-      "A": "Fire suppression",
-      "B": "Preventing tailgating/piggybacking",
-      "C": "Temperature control",
-      "D": "Network monitoring"
+      "A": "Network monitoring",
+      "B": "Fire suppression",
+      "C": "Preventing tailgating/piggybacking",
+      "D": "Temperature control"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A mantrap is a physical access control consisting of a small space with two doors—one must close before the other opens. This prevents tailgating (unauthorized individuals following authorized personnel through secure doors).",
     "tip": "Mantrap = anti-tailgating. Two doors, one person at a time, authentication required.",
     "calculationRequired": false,
@@ -394,12 +394,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the first step in a proper change management process?",
     "options": {
-      "A": "Implement the change in production",
-      "B": "Submit a formal change request",
-      "C": "Test the change in a development environment",
-      "D": "Document the rollback procedure"
+      "A": "Document the rollback procedure",
+      "B": "Implement the change in production",
+      "C": "Submit a formal change request",
+      "D": "Test the change in a development environment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The change management process begins with submitting a formal change request that documents what will be changed and why. This request is then reviewed, approved, tested, and finally implemented. Skipping the request step bypasses important oversight.",
     "tip": "Change process: Request → Approve → Develop → Test → Deploy → Review.",
     "calculationRequired": false,
@@ -415,12 +415,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which backup type copies only files that have changed since the last full backup?",
     "options": {
-      "A": "Full backup",
-      "B": "Incremental backup",
-      "C": "Differential backup",
-      "D": "Mirror backup"
+      "A": "Mirror backup",
+      "B": "Full backup",
+      "C": "Incremental backup",
+      "D": "Differential backup"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "A differential backup copies all files changed since the last full backup. An incremental backup copies only files changed since the last backup of any type. Differential backups grow larger over time but require only two sets (full + latest differential) for restoration.",
     "tip": "Differential = since last FULL. Incremental = since last ANY backup.",
     "calculationRequired": false,
@@ -436,12 +436,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The principle of least privilege means users should:",
     "options": {
-      "A": "Have access to all systems to improve efficiency",
-      "B": "Have only the minimum access needed to perform their jobs",
-      "C": "Share login credentials for convenience",
-      "D": "Have administrative rights by default"
+      "A": "Have only the minimum access needed to perform their jobs",
+      "B": "Share login credentials for convenience",
+      "C": "Have administrative rights by default",
+      "D": "Have access to all systems to improve efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The principle of least privilege requires that users have only the minimum access rights necessary to perform their assigned duties. This limits potential damage from errors, malicious actions, or compromised accounts.",
     "tip": "Least privilege = minimum access needed. Defense in depth principle.",
     "calculationRequired": false,
@@ -457,12 +457,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Multi-factor authentication combining a password and fingerprint scan uses which authentication factors?",
     "options": {
-      "A": "Something you know and something you have",
-      "B": "Something you know and something you are",
-      "C": "Something you have and something you are",
-      "D": "Two instances of something you know"
+      "A": "Two instances of something you know",
+      "B": "Something you know and something you have",
+      "C": "Something you know and something you are",
+      "D": "Something you have and something you are"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The three authentication factors are: something you know (password, PIN), something you have (token, smart card), and something you are (biometrics like fingerprint). A password is something you know; a fingerprint is something you are. True MFA requires factors from different categories.",
     "tip": "Know = password/PIN. Have = token/card/phone. Are = biometrics.",
     "calculationRequired": false,
@@ -478,12 +478,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "During an emergency change that bypasses normal approval procedures, what compensating control is most important?",
     "options": {
-      "A": "Disable all logging during the emergency",
-      "B": "Allow developers direct production access indefinitely",
-      "C": "Document and retrospectively review the change",
-      "D": "Skip testing to expedite implementation"
+      "A": "Allow developers direct production access indefinitely",
+      "B": "Document and retrospectively review the change",
+      "C": "Skip testing to expedite implementation",
+      "D": "Disable all logging during the emergency"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Emergency changes may bypass normal approvals but should still be documented, logged, and reviewed retrospectively. After the emergency, the change should go through formal review to ensure it was appropriate and properly implemented. Access granted during emergencies should be revoked promptly.",
     "tip": "Emergency changes need: documentation, logging, retrospective review, access revocation.",
     "calculationRequired": false,
@@ -520,12 +520,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which control ensures that batch jobs run in the correct sequence and at scheduled times?",
     "options": {
-      "A": "Access control lists",
-      "B": "Automated job scheduling software",
-      "C": "Manual operator logs",
-      "D": "Network firewalls"
+      "A": "Automated job scheduling software",
+      "B": "Manual operator logs",
+      "C": "Network firewalls",
+      "D": "Access control lists"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Automated job scheduling software controls the sequence, timing, and dependencies of batch jobs. It ensures jobs run in the correct order, handles failures, maintains logs, and reduces human error compared to manual scheduling.",
     "tip": "Job schedulers manage dependencies, timing, sequencing, and provide automated logging.",
     "calculationRequired": false,
@@ -541,12 +541,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Why should development, testing, and production environments be separated?",
     "options": {
-      "A": "To reduce hardware costs",
-      "B": "To prevent untested changes from affecting live systems",
-      "C": "To allow developers direct production access",
-      "D": "To eliminate the need for version control"
+      "A": "To prevent untested changes from affecting live systems",
+      "B": "To allow developers direct production access",
+      "C": "To eliminate the need for version control",
+      "D": "To reduce hardware costs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Environment separation ensures that development and testing activities cannot accidentally or intentionally affect production systems. Changes are promoted through controlled processes after proper testing, reducing the risk of outages and data corruption.",
     "tip": "Dev → Test → UAT → Prod. Each promotion requires approval and testing.",
     "calculationRequired": false,
@@ -562,12 +562,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the primary reason for storing backup media at an offsite location?",
     "options": {
-      "A": "To save on-premises storage space",
-      "B": "To protect against site-wide disasters",
-      "C": "To reduce backup frequency requirements",
-      "D": "To eliminate the need for encryption"
+      "A": "To reduce backup frequency requirements",
+      "B": "To eliminate the need for encryption",
+      "C": "To save on-premises storage space",
+      "D": "To protect against site-wide disasters"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Offsite storage protects backup media from site-wide disasters (fire, flood, earthquake) that could destroy both primary systems and onsite backups. The offsite location should be geographically distant enough to avoid the same disaster affecting both sites.",
     "tip": "Offsite = disaster protection. Different geographic region preferred. Encrypt media in transit.",
     "calculationRequired": false,
@@ -583,12 +583,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In role-based access control (RBAC), access permissions are assigned to:",
     "options": {
-      "A": "Individual users directly",
-      "B": "Roles, and users are assigned to roles",
-      "C": "Data classifications only",
-      "D": "Network segments"
+      "A": "Roles, and users are assigned to roles",
+      "B": "Data classifications only",
+      "C": "Network segments",
+      "D": "Individual users directly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "RBAC assigns permissions to defined roles (e.g., Accounts Payable Clerk, IT Administrator), and users are assigned to appropriate roles. This simplifies access management—when job duties change, the user is moved to a different role rather than modifying individual permissions.",
     "tip": "RBAC: User → Role → Permissions. Easier to manage than individual assignments.",
     "calculationRequired": false,
@@ -625,12 +625,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Continuous monitoring of system performance and availability is important because it:",
     "options": {
-      "A": "Eliminates the need for disaster recovery planning",
-      "B": "Enables early detection of problems before they cause outages",
-      "C": "Replaces the need for change management",
-      "D": "Allows unlimited system access"
+      "A": "Replaces the need for change management",
+      "B": "Allows unlimited system access",
+      "C": "Eliminates the need for disaster recovery planning",
+      "D": "Enables early detection of problems before they cause outages"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Continuous monitoring enables proactive identification of issues (capacity constraints, security threats, performance degradation) before they cause outages or data loss. Alerts notify administrators so corrective action can be taken promptly.",
     "tip": "Monitoring: Proactive problem detection, capacity planning, security alerting.",
     "calculationRequired": false,
@@ -646,12 +646,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which environmental control is most critical for protecting data center equipment?",
     "options": {
-      "A": "Decorative lighting",
-      "B": "HVAC systems maintaining proper temperature and humidity",
-      "C": "Open windows for ventilation",
-      "D": "Carpeted flooring"
+      "A": "Carpeted flooring",
+      "B": "Decorative lighting",
+      "C": "HVAC systems maintaining proper temperature and humidity",
+      "D": "Open windows for ventilation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "HVAC systems maintain optimal temperature (typically 64-75°F) and humidity (45-55%) for computing equipment. Excessive heat causes hardware failure; high humidity causes condensation; low humidity causes static discharge. Proper environmental controls extend equipment life and prevent outages.",
     "tip": "Data center: Temperature 64-75°F, humidity 45-55%. Monitor continuously.",
     "calculationRequired": false,
@@ -667,12 +667,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an employee transfers to a different department, access management should include:",
     "options": {
-      "A": "Only adding new access for the new role",
-      "B": "Removing old access and adding appropriate new access",
-      "C": "Keeping all existing access plus adding new access",
-      "D": "Immediately terminating all system access"
+      "A": "Keeping all existing access plus adding new access",
+      "B": "Immediately terminating all system access",
+      "C": "Only adding new access for the new role",
+      "D": "Removing old access and adding appropriate new access"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Job transfers require reviewing and removing access no longer needed (old department) while provisioning appropriate access for the new role. Failing to remove old access violates least privilege and creates segregation of duties conflicts over time (access creep).",
     "tip": "Access creep = accumulated unnecessary access. Review all access at transfers.",
     "calculationRequired": false,
@@ -688,12 +688,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Who should perform user acceptance testing (UAT)?",
     "options": {
-      "A": "The developers who wrote the code",
-      "B": "The IT operations team",
-      "C": "Business users who will use the system",
-      "D": "External auditors"
+      "A": "External auditors",
+      "B": "The developers who wrote the code",
+      "C": "The IT operations team",
+      "D": "Business users who will use the system"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "UAT is performed by business users (end users) to verify the system meets business requirements and works as expected in real-world scenarios. Developers and QA handle earlier testing phases; UAT is the final validation before production deployment.",
     "tip": "UAT = business users verify requirements are met. Final gate before go-live.",
     "calculationRequired": false,
@@ -709,12 +709,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Why should backup restoration be tested periodically?",
     "options": {
-      "A": "Testing is not necessary if backups complete successfully",
-      "B": "To verify backups can actually be restored when needed",
-      "C": "To reduce storage costs",
-      "D": "To eliminate the need for offsite storage"
+      "A": "To verify backups can actually be restored when needed",
+      "B": "To reduce storage costs",
+      "C": "To eliminate the need for offsite storage",
+      "D": "Testing is not necessary if backups complete successfully"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Successful backup completion doesn't guarantee successful restoration. Media degradation, software incompatibility, incomplete backups, or procedural errors may prevent recovery. Regular restoration testing verifies that backups are usable when actually needed.",
     "tip": "Untested backups = no backups. Test restores regularly. Document recovery procedures.",
     "calculationRequired": false,
@@ -730,12 +730,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which control is most effective for managing privileged (administrator) accounts?",
     "options": {
-      "A": "Sharing a single admin account among IT staff",
-      "B": "Individual privileged accounts with enhanced monitoring and logging",
-      "C": "Using privileged accounts for all daily activities",
-      "D": "Providing all employees with admin access"
+      "A": "Individual privileged accounts with enhanced monitoring and logging",
+      "B": "Using privileged accounts for all daily activities",
+      "C": "Providing all employees with admin access",
+      "D": "Sharing a single admin account among IT staff"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Privileged accounts require individual accountability (no sharing), enhanced monitoring and logging, restrictions on use (separate from daily accounts), and regular review. Shared admin accounts eliminate accountability; broad admin access violates least privilege.",
     "tip": "Privileged accounts: Individual, monitored, limited use, logged, regularly reviewed.",
     "calculationRequired": false,
@@ -751,12 +751,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a properly controlled change management process, who should approve changes before implementation?",
     "options": {
-      "A": "The developer who made the change",
-      "B": "An independent change advisory board or manager",
-      "C": "End users only",
-      "D": "No approval is needed for minor changes"
+      "A": "No approval is needed for minor changes",
+      "B": "The developer who made the change",
+      "C": "An independent change advisory board or manager",
+      "D": "End users only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Changes should be approved by someone independent of the developer—typically a change advisory board (CAB) or designated manager. This ensures changes are reviewed for appropriateness, tested adequately, and aligned with business needs before promotion to production.",
     "tip": "Developer ≠ Approver ≠ Implementer. Segregation prevents unauthorized changes.",
     "calculationRequired": false,
@@ -772,12 +772,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the first priority when responding to a security incident?",
     "options": {
-      "A": "Identify and punish the responsible party",
-      "B": "Contain the incident to prevent further damage",
-      "C": "Delete all logs to hide the breach",
-      "D": "Notify the media immediately"
+      "A": "Contain the incident to prevent further damage",
+      "B": "Delete all logs to hide the breach",
+      "C": "Notify the media immediately",
+      "D": "Identify and punish the responsible party"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Incident response priorities are: (1) Contain the incident to prevent spread, (2) Eradicate the threat, (3) Recover systems, (4) Conduct post-incident analysis. Preservation of evidence (logs) is critical for investigation. Attribution comes later in the process.",
     "tip": "Incident response: Contain → Eradicate → Recover → Analyze. Preserve evidence.",
     "calculationRequired": false,
@@ -793,12 +793,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which characteristic describes a false rejection rate (FRR) in biometric systems?",
     "options": {
-      "A": "Unauthorized users being granted access",
-      "B": "Authorized users being denied access",
-      "C": "System being unavailable",
-      "D": "Biometric data being stolen"
+      "A": "Biometric data being stolen",
+      "B": "Unauthorized users being granted access",
+      "C": "Authorized users being denied access",
+      "D": "System being unavailable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "FRR (Type I error) occurs when the biometric system incorrectly rejects an authorized user. FAR (Type II error/False Acceptance Rate) occurs when unauthorized users are incorrectly accepted. Lower FRR improves user convenience; lower FAR improves security.",
     "tip": "FRR = reject valid user (Type I). FAR = accept invalid user (Type II). Trade-off exists.",
     "calculationRequired": false,
@@ -814,12 +814,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective audit trail should include all of the following EXCEPT:",
     "options": {
-      "A": "User ID of who performed the action",
-      "B": "Timestamp of when the action occurred",
-      "C": "User's password in encrypted form",
-      "D": "What action was performed"
+      "A": "What action was performed",
+      "B": "User ID of who performed the action",
+      "C": "Timestamp of when the action occurred",
+      "D": "User's password in encrypted form"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Audit trails should capture who (user ID), what (action), when (timestamp), and where (system/terminal). Passwords should NEVER be logged, even encrypted, as this creates unnecessary security risk. Audit logs should identify users without exposing authentication credentials.",
     "tip": "Audit logs: who, what, when, where. Never log passwords or sensitive credentials.",
     "calculationRequired": false,
@@ -877,12 +877,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a secure software development lifecycle (SSDLC), when should security requirements be defined?",
     "options": {
-      "A": "After deployment to production",
-      "B": "During the testing phase only",
-      "C": "At the requirements and design phases, before coding",
-      "D": "Security is addressed only through penetration testing"
+      "A": "Security is addressed only through penetration testing",
+      "B": "After deployment to production",
+      "C": "During the testing phase only",
+      "D": "At the requirements and design phases, before coding"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Security should be integrated from the beginning—requirements phase defines security needs, design phase incorporates security architecture, coding follows secure practices, testing includes security testing. Addressing security late is more costly and less effective than building it in from the start.",
     "tip": "Security by design: Start at requirements. Shift left = address security earlier.",
     "calculationRequired": false,
@@ -940,12 +940,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Attribute-based access control (ABAC) differs from role-based access control (RBAC) primarily because ABAC:",
     "options": {
-      "A": "Uses only job titles for access decisions",
-      "B": "Evaluates multiple attributes (user, resource, environment) dynamically",
-      "C": "Eliminates the need for access policies",
-      "D": "Requires less administrative overhead than RBAC"
+      "A": "Eliminates the need for access policies",
+      "B": "Requires less administrative overhead than RBAC",
+      "C": "Uses only job titles for access decisions",
+      "D": "Evaluates multiple attributes (user, resource, environment) dynamically"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "ABAC makes access decisions based on multiple attributes: user attributes (department, clearance), resource attributes (classification, owner), and environmental attributes (time, location). This enables fine-grained, context-aware access control beyond static role assignments.",
     "tip": "ABAC = dynamic, attribute-based decisions. More flexible than RBAC but more complex.",
     "calculationRequired": false,
@@ -961,12 +961,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of regression testing after a system change is to:",
     "options": {
-      "A": "Test only the new functionality",
-      "B": "Verify existing functionality still works correctly",
-      "C": "Reduce the need for user acceptance testing",
-      "D": "Eliminate the change approval process"
+      "A": "Verify existing functionality still works correctly",
+      "B": "Reduce the need for user acceptance testing",
+      "C": "Eliminate the change approval process",
+      "D": "Test only the new functionality"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Regression testing verifies that existing functionality has not been broken by the new change. While new features are tested separately, regression testing ensures that modifications haven't introduced unintended side effects in previously working components.",
     "tip": "Regression testing: Did the change break existing features? Automated regression suites save time.",
     "calculationRequired": false,
@@ -982,12 +982,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which fire suppression system is most appropriate for a data center?",
     "options": {
-      "A": "Water sprinklers",
-      "B": "Clean agent (gas-based) suppression",
-      "C": "Foam suppression",
-      "D": "Dry chemical extinguishers"
+      "A": "Foam suppression",
+      "B": "Dry chemical extinguishers",
+      "C": "Water sprinklers",
+      "D": "Clean agent (gas-based) suppression"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Clean agent systems (FM-200, Novec 1230) suppress fires without damaging electronic equipment or leaving residue. Water sprinklers can destroy equipment; foam and dry chemicals leave residue requiring extensive cleanup. Clean agents are safe for occupied spaces and equipment.",
     "tip": "Data center fire suppression: Clean agents (gas). Safe for equipment and people.",
     "calculationRequired": false,
@@ -1003,12 +1003,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Security logs should be protected from modification by:",
     "options": {
-      "A": "Storing on the same system being logged",
-      "B": "Centralized, write-once logging with restricted access",
-      "C": "Allowing administrators to edit for accuracy",
-      "D": "Deleting logs older than 24 hours"
+      "A": "Centralized, write-once logging with restricted access",
+      "B": "Allowing administrators to edit for accuracy",
+      "C": "Deleting logs older than 24 hours",
+      "D": "Storing on the same system being logged"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Logs must be immutable evidence—stored on separate systems where source system administrators cannot modify them. Centralized logging with write-once/append-only storage and restricted access ensures log integrity for forensics and compliance.",
     "tip": "Log integrity: Centralized, immutable, restricted access. Attackers target logs.",
     "calculationRequired": false,
@@ -1024,12 +1024,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A \"toxic combination\" in access management refers to:",
     "options": {
-      "A": "Users with too few access rights",
-      "B": "Access rights that together violate segregation of duties",
-      "C": "Password reuse across systems",
-      "D": "Expired user accounts"
+      "A": "Access rights that together violate segregation of duties",
+      "B": "Password reuse across systems",
+      "C": "Expired user accounts",
+      "D": "Users with too few access rights"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Toxic combinations occur when a user has access rights that together create a segregation of duties conflict—for example, ability to create vendors AND approve payments. Identity governance tools can detect these conflicts and require compensating controls or access remediation.",
     "tip": "Toxic combinations: Multiple rights that enable fraud. Monitor for SOD conflicts.",
     "calculationRequired": false,
@@ -1045,12 +1045,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Automated static code analysis tools are used in secure development to:",
     "options": {
-      "A": "Replace all manual testing",
-      "B": "Identify security vulnerabilities in source code before deployment",
-      "C": "Eliminate the need for peer code reviews",
-      "D": "Automatically fix all security issues"
+      "A": "Eliminate the need for peer code reviews",
+      "B": "Automatically fix all security issues",
+      "C": "Replace all manual testing",
+      "D": "Identify security vulnerabilities in source code before deployment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Static Application Security Testing (SAST) tools analyze source code for security vulnerabilities (SQL injection, XSS, buffer overflows) without executing the program. They complement (don't replace) manual reviews, dynamic testing, and penetration testing in a comprehensive security testing strategy.",
     "tip": "SAST: Analyze code for vulnerabilities. Part of defense-in-depth, not a complete solution.",
     "calculationRequired": false,
@@ -1087,12 +1087,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary difference between a SOC Type 1 and Type 2 report is:",
     "options": {
-      "A": "Type 1 covers security; Type 2 covers availability",
-      "B": "Type 1 is at a point in time; Type 2 covers a period of time",
-      "C": "Type 1 is for public distribution; Type 2 is restricted",
-      "D": "Type 1 uses SSAE 18; Type 2 uses different standards"
+      "A": "Type 1 is at a point in time; Type 2 covers a period of time",
+      "B": "Type 1 is for public distribution; Type 2 is restricted",
+      "C": "Type 1 uses SSAE 18; Type 2 uses different standards",
+      "D": "Type 1 covers security; Type 2 covers availability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Type 1 reports assess control design and implementation at a specific point in time. Type 2 reports assess control design, implementation, AND operating effectiveness over a period (typically 6-12 months). Type 2 provides greater assurance because it tests whether controls operated effectively.",
     "tip": "Type 1 = point in time (design). Type 2 = period of time (design + operating effectiveness).",
     "calculationRequired": false,
@@ -1108,12 +1108,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Security criterion in a SOC 2 report addresses:",
     "options": {
-      "A": "System performance and response time",
-      "B": "Protection against unauthorized access",
-      "C": "Timely processing of transactions",
-      "D": "Personal information handling"
+      "A": "Timely processing of transactions",
+      "B": "Personal information handling",
+      "C": "System performance and response time",
+      "D": "Protection against unauthorized access"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The Security criterion (also called Common Criteria) addresses protection of system resources against unauthorized access. This is the only required criterion for SOC 2 and covers logical and physical access controls, system operations, change management, and risk mitigation.",
     "tip": "Security = protection against unauthorized access. Required for all SOC 2 reports.",
     "calculationRequired": false,
@@ -1129,12 +1129,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which SOC report type can be freely distributed to the general public?",
     "options": {
-      "A": "SOC 1 Type 2",
-      "B": "SOC 2 Type 2",
-      "C": "SOC 3",
-      "D": "All SOC reports can be publicly distributed"
+      "A": "All SOC reports can be publicly distributed",
+      "B": "SOC 1 Type 2",
+      "C": "SOC 2 Type 2",
+      "D": "SOC 3"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "SOC 3 reports are designed for general public distribution and contain a summary opinion on whether the service organization met trust services criteria. Unlike SOC 1 and SOC 2 reports, which contain detailed control descriptions and are restricted use, SOC 3 can be posted publicly.",
     "tip": "SOC 3 = public distribution, summary only. SOC 1 & 2 = restricted use, detailed.",
     "calculationRequired": false,
@@ -1171,12 +1171,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SOC 1 reports are performed under which attestation standard?",
     "options": {
-      "A": "SSAE 18 (AT-C 320)",
-      "B": "GAAS",
-      "C": "PCAOB AS 2201",
-      "D": "ISO 27001"
+      "A": "PCAOB AS 2201",
+      "B": "ISO 27001",
+      "C": "SSAE 18 (AT-C 320)",
+      "D": "GAAS"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "SOC 1 reports are performed under SSAE 18, specifically AT-C Section 320 (Reporting on an Examination of Controls at a Service Organization Relevant to User Entities' Internal Control Over Financial Reporting). SSAE 18 replaced SSAE 16 in 2017.",
     "tip": "SOC 1 = SSAE 18 AT-C 320. SOC 2 = SSAE 18 AT-C 105 and 205.",
     "calculationRequired": false,
@@ -1192,12 +1192,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Availability criterion in SOC 2 addresses:",
     "options": {
-      "A": "Protection of data from unauthorized disclosure",
-      "B": "System accessibility for operation and use as committed",
-      "C": "Accuracy and completeness of processing",
-      "D": "Collection and use of personal information"
+      "A": "Collection and use of personal information",
+      "B": "Protection of data from unauthorized disclosure",
+      "C": "System accessibility for operation and use as committed",
+      "D": "Accuracy and completeness of processing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Availability addresses whether the system is accessible for operation and use as committed or agreed. This includes capacity planning, disaster recovery, business continuity, and incident management to ensure systems meet availability SLAs and commitments.",
     "tip": "Availability = system accessible as promised. Focus on uptime, capacity, DR/BCP.",
     "calculationRequired": false,
@@ -1213,12 +1213,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which trust services criterion ensures that system processing is complete, valid, accurate, and authorized?",
     "options": {
-      "A": "Security",
-      "B": "Availability",
-      "C": "Processing Integrity",
-      "D": "Confidentiality"
+      "A": "Processing Integrity",
+      "B": "Confidentiality",
+      "C": "Security",
+      "D": "Availability"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Processing Integrity addresses whether system processing is complete, valid, accurate, timely, and authorized to meet the entity's objectives. It covers input validation, processing controls, and output verification to ensure data quality throughout the system.",
     "tip": "Processing Integrity = CVATA (Complete, Valid, Accurate, Timely, Authorized).",
     "calculationRequired": false,
@@ -1234,12 +1234,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a SOC 2 report, the management assertion includes statements about:",
     "options": {
-      "A": "Only the service auditor's opinion",
-      "B": "Control descriptions, suitability of design, and operating effectiveness",
-      "C": "User entity financial statements",
-      "D": "Subservice organization controls only"
+      "A": "User entity financial statements",
+      "B": "Subservice organization controls only",
+      "C": "Only the service auditor's opinion",
+      "D": "Control descriptions, suitability of design, and operating effectiveness"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management's assertion in a SOC 2 report covers: (1) description of the system is fairly presented, (2) controls are suitably designed to meet criteria, and (3) for Type 2, controls operated effectively throughout the period. This assertion is what the auditor tests.",
     "tip": "Management assertion: Description accurate + controls designed + (Type 2) controls operated effectively.",
     "calculationRequired": false,
@@ -1255,12 +1255,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using the carve-out method for subservice organizations in a SOC report:",
     "options": {
-      "A": "Subservice organization controls are included in the report",
-      "B": "Subservice organization controls are excluded from the scope",
-      "C": "The subservice organization must obtain its own SOC report",
-      "D": "Only the service organization's monitoring controls are included"
+      "A": "Only the service organization's monitoring controls are included",
+      "B": "Subservice organization controls are included in the report",
+      "C": "Subservice organization controls are excluded from the scope",
+      "D": "The subservice organization must obtain its own SOC report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The carve-out method excludes subservice organization controls from the service organization's SOC report scope. Only monitoring controls over the subservice organization are included. User entities must obtain the subservice organization's SOC report separately to evaluate those controls.",
     "tip": "Carve-out = exclude sub's controls (user must get sub's SOC). Inclusive = include sub's controls.",
     "calculationRequired": false,
@@ -1276,12 +1276,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Confidentiality criterion differs from Security because it specifically addresses:",
     "options": {
-      "A": "Physical access controls",
-      "B": "Protection of designated confidential information",
-      "C": "System availability and uptime",
-      "D": "Change management procedures"
+      "A": "Protection of designated confidential information",
+      "B": "System availability and uptime",
+      "C": "Change management procedures",
+      "D": "Physical access controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "While Security addresses overall protection from unauthorized access, Confidentiality specifically addresses protection of information designated as confidential—including identification of confidential information, access restrictions, and proper disposal. It focuses on data classification and handling.",
     "tip": "Confidentiality = designated confidential data. Security = overall protection from unauthorized access.",
     "calculationRequired": false,
@@ -1297,12 +1297,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SOC 1 and SOC 2 reports are intended primarily for:",
     "options": {
-      "A": "General public and marketing purposes",
-      "B": "User entities and their auditors",
-      "C": "Regulatory agencies only",
-      "D": "The service organization's employees"
+      "A": "User entities and their auditors",
+      "B": "Regulatory agencies only",
+      "C": "The service organization's employees",
+      "D": "General public and marketing purposes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SOC 1 and SOC 2 reports are restricted-use reports intended for user entities (customers of the service organization) and their auditors who need to understand the service organization's controls. They contain detailed control information not suitable for public distribution.",
     "tip": "SOC 1/2 = restricted use (users + their auditors). SOC 3 = public use.",
     "calculationRequired": false,
@@ -1318,12 +1318,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a SOC 2 Type 2 engagement, the service auditor tests:",
     "options": {
-      "A": "Control design only",
-      "B": "Control design and operating effectiveness over a period",
-      "C": "Financial statement assertions",
-      "D": "User entity controls"
+      "A": "Control design and operating effectiveness over a period",
+      "B": "Financial statement assertions",
+      "C": "User entity controls",
+      "D": "Control design only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SOC 2 Type 2 requires the auditor to test both the suitability of control design AND the operating effectiveness of controls over a specified period (typically 6-12 months). Testing includes inquiry, observation, inspection, and reperformance.",
     "tip": "Type 2 testing: Inquiry + observation + inspection + reperformance over the period.",
     "calculationRequired": false,
@@ -1360,12 +1360,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Privacy criterion in SOC 2 addresses controls over:",
     "options": {
-      "A": "All confidential business information",
-      "B": "Personal information collected, used, retained, disclosed, and disposed",
-      "C": "Trade secrets and intellectual property",
-      "D": "System performance metrics"
+      "A": "System performance metrics",
+      "B": "All confidential business information",
+      "C": "Personal information collected, used, retained, disclosed, and disposed",
+      "D": "Trade secrets and intellectual property"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Privacy specifically addresses personal information (PII) and covers notice, choice, collection, use, access, disclosure, security, quality, and monitoring. It aligns with privacy frameworks and addresses the full lifecycle of personal information.",
     "tip": "Privacy = PII lifecycle (collect, use, retain, disclose, dispose). Distinct from Confidentiality.",
     "calculationRequired": false,
@@ -1402,12 +1402,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SOC for Supply Chain reports are designed to address:",
     "options": {
-      "A": "Only transportation and logistics controls",
-      "B": "Controls over production and distribution of goods",
-      "C": "Financial reporting controls only",
-      "D": "IT security controls exclusively"
+      "A": "Financial reporting controls only",
+      "B": "IT security controls exclusively",
+      "C": "Only transportation and logistics controls",
+      "D": "Controls over production and distribution of goods"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SOC for Supply Chain reports address controls over production and distribution of goods across the supply chain. They help organizations evaluate their vendors' and suppliers' controls relevant to product quality, safety, and delivery, extending beyond traditional IT-focused SOC reports.",
     "tip": "SOC for Supply Chain: Production + distribution controls. Beyond just IT.",
     "calculationRequired": false,
@@ -1465,12 +1465,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A qualified opinion in a SOC report indicates that:",
     "options": {
-      "A": "All controls are operating effectively",
-      "B": "There are exceptions or limitations that are significant but not pervasive",
-      "C": "The auditor cannot form an opinion",
-      "D": "The report should not be relied upon"
+      "A": "There are exceptions or limitations that are significant but not pervasive",
+      "B": "The auditor cannot form an opinion",
+      "C": "The report should not be relied upon",
+      "D": "All controls are operating effectively"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A qualified opinion indicates exceptions or scope limitations that are significant but not pervasive to the engagement. The report is still useful, but users must consider the qualification. Pervasive issues would result in an adverse or disclaimer opinion.",
     "tip": "Qualified = significant but not pervasive issues. Adverse = pervasive. Disclaimer = can't conclude.",
     "calculationRequired": false,
@@ -1486,12 +1486,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SOC for Cybersecurity reports differ from SOC 2 reports primarily because they:",
     "options": {
-      "A": "Only cover security controls",
-      "B": "Provide entity-wide cybersecurity risk management assessment",
-      "C": "Use different attestation standards",
-      "D": "Are limited to cloud service providers"
+      "A": "Use different attestation standards",
+      "B": "Are limited to cloud service providers",
+      "C": "Only cover security controls",
+      "D": "Provide entity-wide cybersecurity risk management assessment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SOC for Cybersecurity provides an entity-wide assessment of the cybersecurity risk management program, not just specific controls over a system. It addresses how the organization identifies, protects against, and responds to cybersecurity risks across the enterprise.",
     "tip": "SOC 2 = system-level controls. SOC for Cyber = enterprise-wide cyber risk management.",
     "calculationRequired": false,
@@ -1507,12 +1507,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Points of focus in the Trust Services Criteria are best described as:",
     "options": {
-      "A": "Mandatory requirements that must all be tested",
-      "B": "Important characteristics that may help evaluate whether criteria are met",
-      "C": "Optional supplementary guidance that can be ignored",
-      "D": "Replacement for the criteria themselves"
+      "A": "Important characteristics that may help evaluate whether criteria are met",
+      "B": "Optional supplementary guidance that can be ignored",
+      "C": "Replacement for the criteria themselves",
+      "D": "Mandatory requirements that must all be tested"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Points of focus are important characteristics that help practitioners and management understand and evaluate whether the Trust Services Criteria are met. They are not separate criteria themselves but provide guidance on what to consider. Not all points of focus apply to every organization.",
     "tip": "Points of focus = guidance for criteria, not separate requirements. Apply as relevant.",
     "calculationRequired": false,
@@ -1528,12 +1528,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a SOC report uses the carve-out method, complementary subservice organization controls (CSOCs) require user entities to:",
     "options": {
-      "A": "Ignore the subservice organization's controls",
-      "B": "Obtain and evaluate the subservice organization's SOC report",
-      "C": "Request the service organization to change to inclusive method",
-      "D": "Accept the service organization's monitoring as sufficient"
+      "A": "Request the service organization to change to inclusive method",
+      "B": "Accept the service organization's monitoring as sufficient",
+      "C": "Ignore the subservice organization's controls",
+      "D": "Obtain and evaluate the subservice organization's SOC report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "With carve-out, CSOCs indicate controls the service organization expects the subservice organization to have in place. User entities must obtain and evaluate the subservice organization's SOC report to ensure these controls exist and are operating effectively.",
     "tip": "Carve-out = get both reports. Verify service org monitoring + sub's controls.",
     "calculationRequired": false,
@@ -1570,12 +1570,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A bridge letter from a service organization is used to:",
     "options": {
-      "A": "Replace a SOC 2 report entirely",
-      "B": "Provide representations about controls in the gap between report date and user's period-end",
-      "C": "Guarantee that all controls are operating effectively",
-      "D": "Eliminate the need for CUECs"
+      "A": "Provide representations about controls in the gap between report date and user's period-end",
+      "B": "Guarantee that all controls are operating effectively",
+      "C": "Eliminate the need for CUECs",
+      "D": "Replace a SOC 2 report entirely"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A bridge letter provides management representations about whether significant changes occurred to the control environment during the gap between the SOC report period-end and the user's period-end. It supplements but doesn't replace the SOC report.",
     "tip": "Bridge letter: Representations on gap period changes. Supplement, not replacement.",
     "calculationRequired": false,
@@ -1591,12 +1591,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The CC1 series in Trust Services Criteria addresses:",
     "options": {
-      "A": "Logical and physical access controls",
-      "B": "Control environment including commitment to integrity and ethical values",
-      "C": "System operations monitoring",
-      "D": "Change management procedures"
+      "A": "Change management procedures",
+      "B": "Logical and physical access controls",
+      "C": "Control environment including commitment to integrity and ethical values",
+      "D": "System operations monitoring"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CC1 covers the Control Environment—the foundation of internal control including commitment to integrity and ethics, board oversight, organizational structure, competence, and accountability. This aligns with COSO's control environment component.",
     "tip": "CC1 = Control Environment (COSO alignment). Foundation for all other controls.",
     "calculationRequired": false,
@@ -1654,12 +1654,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The CC6 series specifically addresses controls related to:",
     "options": {
-      "A": "System operations and monitoring",
-      "B": "Change management and deployment",
-      "C": "Logical and physical access",
-      "D": "Risk mitigation activities"
+      "A": "Logical and physical access",
+      "B": "Risk mitigation activities",
+      "C": "System operations and monitoring",
+      "D": "Change management and deployment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "CC6 covers Logical and Physical Access controls—including access management, authentication, physical security, and access removal. These controls ensure only authorized individuals and systems can access resources.",
     "tip": "CC6 = Access controls (logical + physical). Core security controls.",
     "calculationRequired": false,
@@ -1675,12 +1675,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "CC7 in Trust Services Criteria covers:",
     "options": {
-      "A": "Change management",
-      "B": "System operations including detection and response to security incidents",
-      "C": "Privacy notice and choice",
-      "D": "Processing integrity validation"
+      "A": "System operations including detection and response to security incidents",
+      "B": "Privacy notice and choice",
+      "C": "Processing integrity validation",
+      "D": "Change management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "CC7 addresses System Operations—managing system operations, detecting and responding to security incidents, and implementing recovery activities. This includes monitoring, vulnerability management, incident response, and business continuity.",
     "tip": "CC7 = Operations, incident detection/response, recovery. Operational security.",
     "calculationRequired": false,
@@ -1717,12 +1717,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When selecting a SOC 2 report period, the service organization should consider:",
     "options": {
-      "A": "Only internal preferences, regardless of user needs",
-      "B": "User entity fiscal years and audit timing requirements",
-      "C": "Making the period as short as possible to reduce testing",
-      "D": "Avoiding any overlap with the previous report"
+      "A": "Avoiding any overlap with the previous report",
+      "B": "Only internal preferences, regardless of user needs",
+      "C": "User entity fiscal years and audit timing requirements",
+      "D": "Making the period as short as possible to reduce testing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Service organizations should consider user entity needs when selecting report periods. Aligning with common fiscal years (calendar year-end) and providing adequate coverage for user audits maximizes report usefulness. Periods too short may not meet user needs.",
     "tip": "Align SOC period with user needs. Consider common fiscal year-ends (12/31).",
     "calculationRequired": false,
@@ -1738,12 +1738,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A SOC 2+ report differs from a standard SOC 2 report because it:",
     "options": {
-      "A": "Uses different attestation standards",
-      "B": "Includes additional criteria beyond Trust Services Criteria",
-      "C": "Can only be performed for cloud providers",
-      "D": "Eliminates the need for management assertions"
+      "A": "Includes additional criteria beyond Trust Services Criteria",
+      "B": "Can only be performed for cloud providers",
+      "C": "Eliminates the need for management assertions",
+      "D": "Uses different attestation standards"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SOC 2+ reports include Trust Services Criteria plus additional frameworks or criteria (e.g., HIPAA, CSA STAR, ISO 27001 mapping). This allows organizations to address multiple compliance requirements in a single examination, reducing audit fatigue.",
     "tip": "SOC 2+ = TSC + additional criteria (HIPAA, HITRUST, etc.). Combined assurance.",
     "calculationRequired": false,
@@ -1759,12 +1759,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When testing control operating effectiveness in a SOC 2 Type 2 engagement, the service auditor should:",
     "options": {
-      "A": "Test controls only at period-end",
-      "B": "Select samples covering the entire examination period",
-      "C": "Test only controls with documented exceptions",
-      "D": "Rely entirely on inquiry without other evidence"
+      "A": "Rely entirely on inquiry without other evidence",
+      "B": "Test controls only at period-end",
+      "C": "Select samples covering the entire examination period",
+      "D": "Test only controls with documented exceptions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Operating effectiveness testing requires evidence that controls functioned throughout the period. Samples should be selected from the entire period to provide assurance controls operated consistently. Point-in-time or period-end-only testing is insufficient for Type 2.",
     "tip": "Type 2 samples: Cover entire period. Demonstrate consistent operation throughout.",
     "calculationRequired": false,
@@ -1780,12 +1780,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In SOC engagements, materiality considerations primarily affect:",
     "options": {
-      "A": "Whether any testing is performed",
-      "B": "The nature, timing, and extent of testing procedures",
-      "C": "Whether user entities can rely on the report",
-      "D": "Only financial statement amounts"
+      "A": "The nature, timing, and extent of testing procedures",
+      "B": "Whether user entities can rely on the report",
+      "C": "Only financial statement amounts",
+      "D": "Whether any testing is performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Materiality affects the service auditor's judgment about the nature, timing, and extent of procedures. While SOC engagements don't use quantitative materiality like financial audits, professional judgment about significance affects testing decisions and evaluation of deviations.",
     "tip": "Materiality affects testing scope. Qualitative judgment about control significance.",
     "calculationRequired": false,
@@ -1801,12 +1801,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Phishing attacks typically attempt to:",
     "options": {
-      "A": "Physically damage computer hardware",
-      "B": "Trick users into revealing sensitive information through deceptive communications",
-      "C": "Encrypt files for ransom",
-      "D": "Overload servers with traffic"
+      "A": "Trick users into revealing sensitive information through deceptive communications",
+      "B": "Encrypt files for ransom",
+      "C": "Overload servers with traffic",
+      "D": "Physically damage computer hardware"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Phishing uses deceptive emails, websites, or messages to trick users into revealing credentials, personal information, or clicking malicious links. It exploits human trust rather than technical vulnerabilities. Variations include spear phishing (targeted) and whaling (executives).",
     "tip": "Phishing = social engineering via fake communications. Spear phishing = targeted attacks.",
     "calculationRequired": false,
@@ -1822,12 +1822,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of a firewall is to:",
     "options": {
-      "A": "Encrypt data at rest",
-      "B": "Control network traffic based on security rules",
-      "C": "Authenticate user identities",
-      "D": "Back up critical data"
+      "A": "Authenticate user identities",
+      "B": "Back up critical data",
+      "C": "Encrypt data at rest",
+      "D": "Control network traffic based on security rules"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Firewalls monitor and control incoming and outgoing network traffic based on predetermined security rules. They create a barrier between trusted internal networks and untrusted external networks, allowing or blocking traffic based on IP addresses, ports, and protocols.",
     "tip": "Firewall = traffic control at network boundary. Filter by rules on IP, ports, protocols.",
     "calculationRequired": false,
@@ -1843,12 +1843,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Ransomware is a type of malware that:",
     "options": {
-      "A": "Records keystrokes for password theft",
-      "B": "Encrypts files and demands payment for decryption",
-      "C": "Displays unwanted advertisements",
-      "D": "Allows unauthorized remote access"
+      "A": "Displays unwanted advertisements",
+      "B": "Allows unauthorized remote access",
+      "C": "Records keystrokes for password theft",
+      "D": "Encrypts files and demands payment for decryption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Ransomware encrypts victim files, systems, or data and demands a ransom payment (typically in cryptocurrency) for the decryption key. Modern variants may also exfiltrate data and threaten to publish it (double extortion).",
     "tip": "Ransomware = encrypt + extort. Prevention: backups, patching, user training.",
     "calculationRequired": false,
@@ -1864,12 +1864,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The CIA triad in information security stands for:",
     "options": {
-      "A": "Control, Integration, Audit",
-      "B": "Confidentiality, Integrity, Availability",
-      "C": "Compliance, Investigation, Authorization",
-      "D": "Certification, Implementation, Assessment"
+      "A": "Certification, Implementation, Assessment",
+      "B": "Control, Integration, Audit",
+      "C": "Confidentiality, Integrity, Availability",
+      "D": "Compliance, Investigation, Authorization"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CIA represents the three core security objectives: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy and consistency), and Availability (ensuring systems and data are accessible when needed).",
     "tip": "CIA triad: Confidentiality = secrecy; Integrity = accuracy; Availability = accessibility.",
     "calculationRequired": false,
@@ -1885,12 +1885,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Antivirus software protects against threats primarily by:",
     "options": {
-      "A": "Encrypting all network traffic",
-      "B": "Detecting and removing malicious software",
-      "C": "Controlling user access permissions",
-      "D": "Backing up system files"
+      "A": "Detecting and removing malicious software",
+      "B": "Controlling user access permissions",
+      "C": "Backing up system files",
+      "D": "Encrypting all network traffic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Antivirus software scans files and programs for known malware signatures and suspicious behavior. It can detect, quarantine, and remove viruses, worms, trojans, and other malware. Modern endpoint protection includes behavioral analysis beyond signature matching.",
     "tip": "Antivirus: Signature-based + behavioral detection. Keep definitions updated.",
     "calculationRequired": false,
@@ -1906,12 +1906,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Security awareness training is important because:",
     "options": {
-      "A": "It replaces the need for technical controls",
-      "B": "Users are often the weakest link in security",
-      "C": "It eliminates all security risks",
-      "D": "It is only required for IT staff"
+      "A": "It is only required for IT staff",
+      "B": "It replaces the need for technical controls",
+      "C": "Users are often the weakest link in security",
+      "D": "It eliminates all security risks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Users can unintentionally cause security breaches through phishing, weak passwords, or social engineering. Security awareness training helps employees recognize threats and follow secure practices, addressing the human element of security.",
     "tip": "People = weakest link. Training addresses social engineering, phishing, password hygiene.",
     "calculationRequired": false,
@@ -1948,12 +1948,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The key difference between IDS and IPS is that IPS can:",
     "options": {
-      "A": "Only detect threats without taking action",
-      "B": "Automatically block or prevent detected threats",
-      "C": "Monitor network traffic",
-      "D": "Generate security alerts"
+      "A": "Automatically block or prevent detected threats",
+      "B": "Monitor network traffic",
+      "C": "Generate security alerts",
+      "D": "Only detect threats without taking action"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "IDS (Intrusion Detection System) detects and alerts on threats but takes no direct action. IPS (Intrusion Prevention System) can automatically block or prevent detected threats in real-time, actively protecting the network rather than just monitoring.",
     "tip": "IDS = detect and alert. IPS = detect and block. IPS is inline; IDS monitors.",
     "calculationRequired": false,
@@ -1969,12 +1969,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Patch management is critical because:",
     "options": {
-      "A": "Patches always improve system performance",
-      "B": "Unpatched systems are vulnerable to known exploits",
-      "C": "Vendors require immediate patching for warranty",
-      "D": "Patches are optional for critical systems"
+      "A": "Patches are optional for critical systems",
+      "B": "Patches always improve system performance",
+      "C": "Unpatched systems are vulnerable to known exploits",
+      "D": "Vendors require immediate patching for warranty"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Patches fix known security vulnerabilities. Unpatched systems remain vulnerable to exploits that target these known weaknesses. Effective patch management includes timely application of security patches after appropriate testing.",
     "tip": "Known vulnerabilities + available exploits = high risk. Patch promptly after testing.",
     "calculationRequired": false,
@@ -1990,12 +1990,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Trojan horse differs from a virus because it:",
     "options": {
-      "A": "Self-replicates across networks",
-      "B": "Disguises itself as legitimate software",
-      "C": "Only affects mobile devices",
-      "D": "Requires no user interaction"
+      "A": "Disguises itself as legitimate software",
+      "B": "Only affects mobile devices",
+      "C": "Requires no user interaction",
+      "D": "Self-replicates across networks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Trojans disguise themselves as legitimate or desirable software to trick users into installing them. Unlike viruses, they don't self-replicate. They often create backdoors or download additional malware once installed.",
     "tip": "Trojan = disguised malware, no self-replication. Virus = self-replicates by attaching to files.",
     "calculationRequired": false,
@@ -2011,12 +2011,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A DDoS (Distributed Denial of Service) attack targets which element of the CIA triad?",
     "options": {
-      "A": "Confidentiality",
-      "B": "Integrity",
-      "C": "Availability",
-      "D": "Authentication"
+      "A": "Authentication",
+      "B": "Confidentiality",
+      "C": "Integrity",
+      "D": "Availability"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "DDoS attacks overwhelm systems with traffic from multiple sources, making services unavailable to legitimate users. This directly targets Availability—systems remain secure but cannot serve users. Confidentiality and integrity are not directly affected.",
     "tip": "DDoS = Availability attack. Overwhelm resources to deny service.",
     "calculationRequired": false,
@@ -2032,12 +2032,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SIEM (Security Information and Event Management) systems provide value by:",
     "options": {
-      "A": "Replacing firewalls and antivirus",
-      "B": "Aggregating and correlating security events from multiple sources",
-      "C": "Encrypting all network communications",
-      "D": "Automatically patching vulnerabilities"
+      "A": "Encrypting all network communications",
+      "B": "Automatically patching vulnerabilities",
+      "C": "Replacing firewalls and antivirus",
+      "D": "Aggregating and correlating security events from multiple sources"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SIEM systems collect and aggregate log data from various sources (firewalls, servers, applications), correlate events to identify patterns, and enable centralized monitoring, alerting, and forensic analysis. They provide visibility across the environment.",
     "tip": "SIEM = centralized logging + correlation + alerting. Single pane of glass for security.",
     "calculationRequired": false,
@@ -2074,12 +2074,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The correct sequence of incident response phases is:",
     "options": {
-      "A": "Containment, Eradication, Preparation, Recovery",
-      "B": "Preparation, Detection, Containment, Eradication, Recovery, Lessons Learned",
-      "C": "Detection, Notification, Documentation, Closure",
-      "D": "Analysis, Response, Remediation, Reporting"
+      "A": "Preparation, Detection, Containment, Eradication, Recovery, Lessons Learned",
+      "B": "Detection, Notification, Documentation, Closure",
+      "C": "Analysis, Response, Remediation, Reporting",
+      "D": "Containment, Eradication, Preparation, Recovery"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NIST incident response: (1) Preparation—develop plans and capabilities, (2) Detection and Analysis—identify and investigate, (3) Containment, Eradication, and Recovery—stop, remove threat, restore, (4) Post-Incident Activity—lessons learned and improvement.",
     "tip": "NIST IR: Prepare → Detect → Contain/Eradicate/Recover → Lessons Learned.",
     "calculationRequired": false,
@@ -2095,12 +2095,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A man-in-the-middle (MITM) attack allows an attacker to:",
     "options": {
-      "A": "Physically access data center equipment",
-      "B": "Intercept and potentially modify communications between two parties",
-      "C": "Guess passwords through trial and error",
-      "D": "Install malware through email attachments"
+      "A": "Install malware through email attachments",
+      "B": "Physically access data center equipment",
+      "C": "Intercept and potentially modify communications between two parties",
+      "D": "Guess passwords through trial and error"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "MITM attacks position the attacker between communicating parties, allowing interception, reading, and modification of traffic without either party's knowledge. Common in unsecured networks. TLS/SSL encryption helps prevent MITM attacks.",
     "tip": "MITM = intercept communications. Prevent with encryption (TLS) and certificate validation.",
     "calculationRequired": false,
@@ -2116,12 +2116,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Defense in depth security strategy means:",
     "options": {
-      "A": "Relying on a single strong control",
-      "B": "Implementing multiple layers of security controls",
-      "C": "Prioritizing physical security over logical security",
-      "D": "Focusing exclusively on perimeter defenses"
+      "A": "Prioritizing physical security over logical security",
+      "B": "Focusing exclusively on perimeter defenses",
+      "C": "Relying on a single strong control",
+      "D": "Implementing multiple layers of security controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Defense in depth uses multiple overlapping security layers so that if one control fails, others still provide protection. This includes physical, network, host, application, and data layer controls working together.",
     "tip": "Defense in depth = layered security. No single point of failure.",
     "calculationRequired": false,
@@ -2137,12 +2137,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A computer worm is distinguished from other malware by its ability to:",
     "options": {
-      "A": "Encrypt files for ransom",
-      "B": "Self-replicate and spread without user action",
-      "C": "Record user keystrokes",
-      "D": "Display unwanted advertisements"
+      "A": "Display unwanted advertisements",
+      "B": "Encrypt files for ransom",
+      "C": "Self-replicate and spread without user action",
+      "D": "Record user keystrokes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Worms are self-replicating malware that spread across networks without requiring user interaction or host files. They exploit vulnerabilities to propagate automatically, potentially causing widespread damage quickly. Examples include WannaCry and NotPetya.",
     "tip": "Worm = self-spreading, no user action needed. Virus needs host file + user action.",
     "calculationRequired": false,
@@ -2179,12 +2179,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Insider threats are particularly dangerous because insiders:",
     "options": {
-      "A": "Always have malicious intent",
-      "B": "Have legitimate access and knowledge of systems",
-      "C": "Are easier to detect than external threats",
-      "D": "Only affect physical security"
+      "A": "Have legitimate access and knowledge of systems",
+      "B": "Are easier to detect than external threats",
+      "C": "Only affect physical security",
+      "D": "Always have malicious intent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Insiders (employees, contractors, partners) have authorized access and system knowledge, making their activities harder to distinguish from normal work. Threats can be intentional (malicious) or unintentional (negligent). Detection requires behavioral analysis.",
     "tip": "Insider threat: Access + knowledge = harder to detect. Monitor behavior anomalies.",
     "calculationRequired": false,
@@ -2200,12 +2200,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Network segmentation improves security by:",
     "options": {
-      "A": "Eliminating the need for firewalls",
-      "B": "Containing breaches and limiting lateral movement",
-      "C": "Increasing network speed",
-      "D": "Replacing encryption requirements"
+      "A": "Containing breaches and limiting lateral movement",
+      "B": "Increasing network speed",
+      "C": "Replacing encryption requirements",
+      "D": "Eliminating the need for firewalls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Segmentation divides networks into isolated zones with controlled access between them. If attackers breach one segment, they cannot easily move to others. Critical systems can be isolated in secure segments with strict access controls.",
     "tip": "Segmentation = limit blast radius. Attackers can't easily move between segments.",
     "calculationRequired": false,
@@ -2263,12 +2263,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "CVSS (Common Vulnerability Scoring System) provides:",
     "options": {
-      "A": "Automatic vulnerability remediation",
-      "B": "Standardized vulnerability severity ratings",
-      "C": "List of all known vulnerabilities",
-      "D": "Penetration testing methodology"
+      "A": "Penetration testing methodology",
+      "B": "Automatic vulnerability remediation",
+      "C": "Standardized vulnerability severity ratings",
+      "D": "List of all known vulnerabilities"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CVSS provides a standardized method for rating vulnerability severity (0-10 scale). Scores consider exploitability, impact, and environmental factors. CVE (Common Vulnerabilities and Exposures) provides unique identifiers; CVSS provides severity ratings.",
     "tip": "CVE = vulnerability identifier. CVSS = severity score (0-10). Use both for prioritization.",
     "calculationRequired": false,
@@ -2305,12 +2305,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "EDR (Endpoint Detection and Response) solutions differ from traditional antivirus by:",
     "options": {
-      "A": "Only using signature-based detection",
-      "B": "Providing behavioral analysis, threat hunting, and incident response capabilities",
-      "C": "Focusing only on network traffic",
-      "D": "Replacing all other security controls"
+      "A": "Replacing all other security controls",
+      "B": "Only using signature-based detection",
+      "C": "Providing behavioral analysis, threat hunting, and incident response capabilities",
+      "D": "Focusing only on network traffic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "EDR goes beyond signature-based antivirus to provide behavioral analysis, real-time monitoring, threat hunting, and incident response capabilities at endpoints. EDR can detect and respond to sophisticated threats that evade traditional antivirus.",
     "tip": "EDR = behavioral analysis + visibility + response. Goes beyond signature-based AV.",
     "calculationRequired": false,
@@ -2326,12 +2326,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Supply chain attacks target organizations by:",
     "options": {
-      "A": "Attacking physical supply warehouses",
-      "B": "Compromising trusted third-party software or hardware",
-      "C": "Only targeting small businesses",
-      "D": "Using brute force password attacks"
+      "A": "Using brute force password attacks",
+      "B": "Attacking physical supply warehouses",
+      "C": "Compromising trusted third-party software or hardware",
+      "D": "Only targeting small businesses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Supply chain attacks compromise vendors, suppliers, or software providers to reach their customers. By inserting malware into trusted updates or hardware, attackers can access many organizations through a single breach. Examples: SolarWinds, NotPetya.",
     "tip": "Supply chain: Attack vendor to reach customers. Trusted updates become attack vector.",
     "calculationRequired": false,
@@ -2368,12 +2368,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When prioritizing vulnerability remediation, organizations should consider:",
     "options": {
-      "A": "Only the CVSS score",
-      "B": "Vulnerability severity, asset criticality, and threat context",
-      "C": "Patching all vulnerabilities simultaneously",
-      "D": "Vendor recommendations exclusively"
+      "A": "Patching all vulnerabilities simultaneously",
+      "B": "Vendor recommendations exclusively",
+      "C": "Only the CVSS score",
+      "D": "Vulnerability severity, asset criticality, and threat context"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Effective prioritization considers: vulnerability severity (CVSS), asset value and criticality, threat intelligence (active exploitation), compensating controls, and business context. A critical vulnerability on an isolated test system may be lower priority than a medium vulnerability on a payment system.",
     "tip": "Risk-based: Severity × Asset value × Threat context. Not just CVSS alone.",
     "calculationRequired": false,
@@ -2410,12 +2410,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SOAR (Security Orchestration, Automation, and Response) platforms help organizations by:",
     "options": {
-      "A": "Replacing human security analysts entirely",
-      "B": "Automating repetitive tasks and coordinating security tool responses",
-      "C": "Providing only manual incident documentation",
-      "D": "Eliminating the need for SIEM systems"
+      "A": "Providing only manual incident documentation",
+      "B": "Eliminating the need for SIEM systems",
+      "C": "Replacing human security analysts entirely",
+      "D": "Automating repetitive tasks and coordinating security tool responses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SOAR platforms automate routine security tasks (alert triage, enrichment, response actions) and orchestrate workflows across security tools. This improves response speed and consistency while freeing analysts for complex investigations. SOAR complements SIEM.",
     "tip": "SOAR = automation + orchestration. Speed response, reduce analyst burden.",
     "calculationRequired": false,
@@ -2431,12 +2431,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Credential stuffing attacks exploit:",
     "options": {
-      "A": "Software vulnerabilities in login systems",
-      "B": "Users reusing passwords across multiple sites",
-      "C": "Weak encryption algorithms",
-      "D": "Physical access to systems"
+      "A": "Users reusing passwords across multiple sites",
+      "B": "Weak encryption algorithms",
+      "C": "Physical access to systems",
+      "D": "Software vulnerabilities in login systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Credential stuffing uses stolen username/password combinations from data breaches to attempt logins on other sites. It exploits password reuse—users with the same credentials across sites are vulnerable. Mitigated by MFA, password managers, and breach detection.",
     "tip": "Credential stuffing = reused passwords from breaches. Prevent with MFA and unique passwords.",
     "calculationRequired": false,
@@ -2473,12 +2473,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Bug bounty programs provide security value by:",
     "options": {
-      "A": "Replacing internal security testing",
-      "B": "Crowdsourcing vulnerability discovery from external researchers",
-      "C": "Guaranteeing all vulnerabilities will be found",
-      "D": "Eliminating the need for responsible disclosure"
+      "A": "Guaranteeing all vulnerabilities will be found",
+      "B": "Eliminating the need for responsible disclosure",
+      "C": "Replacing internal security testing",
+      "D": "Crowdsourcing vulnerability discovery from external researchers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Bug bounties engage external security researchers to find vulnerabilities, expanding testing capacity beyond internal teams. They provide structured, legal channels for reporting and incentivize responsible disclosure. They complement, not replace, internal security testing.",
     "tip": "Bug bounty = crowdsourced security testing. Complement internal efforts.",
     "calculationRequired": false,
@@ -2515,12 +2515,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Business Email Compromise (BEC) attacks typically involve:",
     "options": {
-      "A": "Mass spam campaigns to random recipients",
-      "B": "Impersonating executives to authorize fraudulent payments",
-      "C": "Encrypting email servers for ransom",
-      "D": "Only targeting personal email accounts"
+      "A": "Encrypting email servers for ransom",
+      "B": "Only targeting personal email accounts",
+      "C": "Mass spam campaigns to random recipients",
+      "D": "Impersonating executives to authorize fraudulent payments"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "BEC attacks impersonate executives or business partners to trick employees into making unauthorized wire transfers, changing payment details, or divulging sensitive information. They use social engineering rather than malware and cause billions in losses annually.",
     "tip": "BEC = executive impersonation for fraud. Verify payment changes out-of-band.",
     "calculationRequired": false,
@@ -2536,12 +2536,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A DMZ (Demilitarized Zone) in network architecture serves to:",
     "options": {
-      "A": "Provide unrestricted internet access to internal users",
-      "B": "Host public-facing services separate from internal network",
-      "C": "Replace the need for firewalls",
-      "D": "Store backup data offsite"
+      "A": "Store backup data offsite",
+      "B": "Provide unrestricted internet access to internal users",
+      "C": "Host public-facing services separate from internal network",
+      "D": "Replace the need for firewalls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A DMZ is a network segment that hosts public-facing services (web servers, email) while remaining isolated from the internal network. This limits exposure—if DMZ systems are compromised, attackers still face barriers to reaching internal systems.",
     "tip": "DMZ = buffer zone. Public services here, protected from and protecting internal network.",
     "calculationRequired": false,
@@ -2557,12 +2557,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "HTTPS provides security over HTTP by:",
     "options": {
-      "A": "Blocking all web traffic",
-      "B": "Encrypting communications between browser and server",
-      "C": "Replacing cookies with tokens",
-      "D": "Increasing page load speed"
+      "A": "Replacing cookies with tokens",
+      "B": "Increasing page load speed",
+      "C": "Blocking all web traffic",
+      "D": "Encrypting communications between browser and server"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "HTTPS (HTTP Secure) uses TLS/SSL encryption to protect data transmitted between web browsers and servers. This prevents eavesdropping, tampering, and man-in-the-middle attacks. Users can verify server identity through certificates.",
     "tip": "HTTPS = HTTP + TLS encryption. Protects data in transit. Look for padlock icon.",
     "calculationRequired": false,
@@ -2578,12 +2578,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which wireless security protocol provides the strongest protection?",
     "options": {
-      "A": "WEP",
-      "B": "WPA",
-      "C": "WPA2 with AES",
-      "D": "Open network"
+      "A": "WPA",
+      "B": "WPA2 with AES",
+      "C": "Open network",
+      "D": "WEP"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "WPA2 with AES encryption provides strong wireless security. WEP is obsolete and easily cracked. WPA is better than WEP but has vulnerabilities. WPA3 (newest) provides even stronger security, but WPA2/AES remains widely used and secure.",
     "tip": "WPA2/AES = current standard. WEP = broken. WPA3 = newest and strongest.",
     "calculationRequired": false,
@@ -2620,12 +2620,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A VPN (Virtual Private Network) provides:",
     "options": {
-      "A": "Faster internet speeds",
-      "B": "Encrypted tunnel for secure communication over public networks",
-      "C": "Virus protection for all devices",
-      "D": "Unlimited bandwidth"
+      "A": "Encrypted tunnel for secure communication over public networks",
+      "B": "Virus protection for all devices",
+      "C": "Unlimited bandwidth",
+      "D": "Faster internet speeds"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "VPNs create encrypted tunnels over public networks (internet), allowing secure communication as if on a private network. They protect data confidentiality when using untrusted networks and enable secure remote access to corporate resources.",
     "tip": "VPN = encrypted tunnel over public internet. Enables secure remote access.",
     "calculationRequired": false,
@@ -2641,12 +2641,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Private IP addresses (like 192.168.x.x) are used for:",
     "options": {
-      "A": "Public internet servers",
-      "B": "Internal networks, not directly routable on the internet",
-      "C": "Government networks only",
-      "D": "Wireless networks exclusively"
+      "A": "Internal networks, not directly routable on the internet",
+      "B": "Government networks only",
+      "C": "Wireless networks exclusively",
+      "D": "Public internet servers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Private IP address ranges (10.x.x.x, 172.16-31.x.x, 192.168.x.x) are reserved for internal networks. They're not routable on the public internet. NAT (Network Address Translation) allows private addresses to access the internet through a public IP.",
     "tip": "Private IPs: 10.x, 172.16-31.x, 192.168.x. Use NAT to reach internet.",
     "calculationRequired": false,
@@ -2683,12 +2683,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "NetFlow data provides visibility into:",
     "options": {
-      "A": "Packet content and payload",
-      "B": "Network traffic patterns, volumes, and sources/destinations",
-      "C": "Encrypted data contents",
-      "D": "Physical network cabling"
+      "A": "Encrypted data contents",
+      "B": "Physical network cabling",
+      "C": "Packet content and payload",
+      "D": "Network traffic patterns, volumes, and sources/destinations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "NetFlow captures metadata about network traffic—source/destination IPs, ports, protocols, and volumes—without capturing full packet content. This enables traffic analysis, anomaly detection, and capacity planning while respecting privacy.",
     "tip": "NetFlow = traffic metadata (who, where, how much). Not full packet capture.",
     "calculationRequired": false,
@@ -2704,12 +2704,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "DNS spoofing attacks can redirect users to malicious sites by:",
     "options": {
-      "A": "Encrypting DNS traffic",
-      "B": "Providing false DNS resolution responses",
-      "C": "Blocking all DNS queries",
-      "D": "Speeding up DNS lookups"
+      "A": "Blocking all DNS queries",
+      "B": "Speeding up DNS lookups",
+      "C": "Encrypting DNS traffic",
+      "D": "Providing false DNS resolution responses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "DNS spoofing provides false IP address responses to DNS queries, redirecting users to malicious sites that may appear legitimate. DNSSEC and DNS over HTTPS (DoH) help prevent spoofing by authenticating DNS responses.",
     "tip": "DNS spoofing = fake resolution. DNSSEC validates responses. DoH encrypts queries.",
     "calculationRequired": false,
@@ -2746,12 +2746,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A rogue access point poses a security risk because it:",
     "options": {
-      "A": "Improves wireless coverage",
-      "B": "Can intercept traffic or provide unauthorized network access",
-      "C": "Uses too much bandwidth",
-      "D": "Is always visible to users"
+      "A": "Is always visible to users",
+      "B": "Improves wireless coverage",
+      "C": "Can intercept traffic or provide unauthorized network access",
+      "D": "Uses too much bandwidth"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Rogue access points are unauthorized wireless devices that can intercept traffic, capture credentials, or provide attackers with network access. They may be malicious or well-intentioned but insecure. Wireless monitoring tools can detect rogues.",
     "tip": "Rogue AP = unauthorized wireless. Monitor for unauthorized devices. Use WIDS/WIPS.",
     "calculationRequired": false,
@@ -2767,12 +2767,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Secure remote access should include all of the following EXCEPT:",
     "options": {
-      "A": "Multi-factor authentication",
-      "B": "VPN or encrypted connections",
-      "C": "Shared accounts for convenience",
-      "D": "Logging and monitoring of remote sessions"
+      "A": "Shared accounts for convenience",
+      "B": "Logging and monitoring of remote sessions",
+      "C": "Multi-factor authentication",
+      "D": "VPN or encrypted connections"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Secure remote access requires individual accounts (not shared) for accountability, MFA for strong authentication, VPN/encryption for confidentiality, and logging for audit trails. Shared accounts eliminate accountability and should be avoided.",
     "tip": "Remote access: MFA + encryption + individual accounts + logging. No shared accounts.",
     "calculationRequired": false,
@@ -2788,12 +2788,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SPF, DKIM, and DMARC are email security standards that help prevent:",
     "options": {
-      "A": "Encrypted email transmission",
-      "B": "Email spoofing and impersonation",
-      "C": "Large email attachments",
-      "D": "Email archiving"
+      "A": "Large email attachments",
+      "B": "Email archiving",
+      "C": "Encrypted email transmission",
+      "D": "Email spoofing and impersonation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SPF validates sending servers, DKIM provides cryptographic authentication, and DMARC defines policies for handling authentication failures. Together, they help prevent attackers from spoofing legitimate domains to send phishing emails.",
     "tip": "SPF = authorized senders. DKIM = cryptographic signature. DMARC = policy enforcement.",
     "calculationRequired": false,
@@ -2809,12 +2809,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "TLS (Transport Layer Security) operates at which layer of the OSI model?",
     "options": {
-      "A": "Network layer (Layer 3)",
-      "B": "Transport/Session layer (Layer 4-5)",
-      "C": "Data link layer (Layer 2)",
-      "D": "Physical layer (Layer 1)"
+      "A": "Data link layer (Layer 2)",
+      "B": "Physical layer (Layer 1)",
+      "C": "Network layer (Layer 3)",
+      "D": "Transport/Session layer (Layer 4-5)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "TLS operates between the transport and application layers (often described as Layer 4-5), providing encryption for application protocols like HTTP (HTTPS), SMTP, and others. It establishes secure sessions with handshake, key exchange, and symmetric encryption.",
     "tip": "TLS = encryption at transport/session layer. Protects application data.",
     "calculationRequired": false,
@@ -2830,12 +2830,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A WAF (Web Application Firewall) differs from a network firewall by:",
     "options": {
-      "A": "Operating at the network layer only",
-      "B": "Inspecting HTTP/HTTPS traffic for application-layer attacks",
-      "C": "Replacing all other security controls",
-      "D": "Only protecting email servers"
+      "A": "Replacing all other security controls",
+      "B": "Only protecting email servers",
+      "C": "Operating at the network layer only",
+      "D": "Inspecting HTTP/HTTPS traffic for application-layer attacks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "WAFs operate at Layer 7 (application layer), inspecting HTTP/HTTPS traffic for attacks like SQL injection, XSS, and CSRF. Network firewalls work at Layers 3-4. WAFs understand web application protocols and can block application-specific threats.",
     "tip": "WAF = Layer 7, HTTP-aware. Network firewall = Layers 3-4. Different threat coverage.",
     "calculationRequired": false,
@@ -2851,12 +2851,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Load balancers contribute to security by:",
     "options": {
-      "A": "Only improving performance",
-      "B": "Distributing traffic and providing DDoS mitigation",
-      "C": "Replacing firewalls entirely",
-      "D": "Storing encryption keys"
+      "A": "Distributing traffic and providing DDoS mitigation",
+      "B": "Replacing firewalls entirely",
+      "C": "Storing encryption keys",
+      "D": "Only improving performance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Load balancers distribute traffic across multiple servers, improving availability. They also help mitigate DDoS attacks by absorbing traffic, can perform SSL offloading, and hide backend server architecture from attackers.",
     "tip": "Load balancers: Distribution + availability + DDoS mitigation + SSL offload.",
     "calculationRequired": false,
@@ -2872,12 +2872,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Packet capture (pcap) tools like Wireshark are used for:",
     "options": {
-      "A": "Encrypting network traffic",
-      "B": "Capturing and analyzing network traffic at the packet level",
-      "C": "Blocking malicious traffic",
-      "D": "Managing IP addresses"
+      "A": "Managing IP addresses",
+      "B": "Encrypting network traffic",
+      "C": "Capturing and analyzing network traffic at the packet level",
+      "D": "Blocking malicious traffic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Packet capture tools record network traffic for detailed analysis—troubleshooting, security investigation, and protocol analysis. They capture full packet contents (except encrypted payloads) and are essential for network forensics.",
     "tip": "Pcap = full packet capture. Use for troubleshooting, forensics, security analysis.",
     "calculationRequired": false,
@@ -2935,12 +2935,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Exposing RDP (Remote Desktop Protocol) directly to the internet creates risk because:",
     "options": {
-      "A": "RDP uses the latest encryption",
-      "B": "It's a common target for brute force and vulnerability exploitation",
-      "C": "RDP cannot be monitored",
-      "D": "It's only available on older systems"
+      "A": "RDP cannot be monitored",
+      "B": "It's only available on older systems",
+      "C": "RDP uses the latest encryption",
+      "D": "It's a common target for brute force and vulnerability exploitation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Internet-exposed RDP is heavily targeted by automated attacks—brute force password attempts, vulnerability exploitation, and ransomware deployment. Best practice is to use VPN access to RDP or jump servers, implement MFA, and limit exposure.",
     "tip": "Never expose RDP directly to internet. Use VPN, MFA, and network-level protection.",
     "calculationRequired": false,
@@ -2956,12 +2956,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Microsegmentation enhances network security by:",
     "options": {
-      "A": "Using only physical network separation",
-      "B": "Creating granular security zones down to individual workloads",
-      "C": "Eliminating the need for firewalls",
-      "D": "Slowing network traffic for inspection"
+      "A": "Creating granular security zones down to individual workloads",
+      "B": "Eliminating the need for firewalls",
+      "C": "Slowing network traffic for inspection",
+      "D": "Using only physical network separation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Microsegmentation creates fine-grained security zones, potentially down to individual workloads or applications. This limits lateral movement more effectively than traditional segmentation, implementing Zero Trust at the network level through software-defined policies.",
     "tip": "Microsegmentation = granular zones per workload. Zero Trust network implementation.",
     "calculationRequired": false,
@@ -2977,12 +2977,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "BGP hijacking is a routing attack that can:",
     "options": {
-      "A": "Only affect local network switches",
-      "B": "Redirect internet traffic through attacker-controlled networks",
-      "C": "Improve network performance",
-      "D": "Only impact email traffic"
+      "A": "Only impact email traffic",
+      "B": "Only affect local network switches",
+      "C": "Redirect internet traffic through attacker-controlled networks",
+      "D": "Improve network performance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "BGP (Border Gateway Protocol) hijacking involves announcing illegitimate routes, redirecting internet traffic through attacker infrastructure. This enables traffic interception, eavesdropping, or denial of service at internet scale. RPKI helps validate BGP announcements.",
     "tip": "BGP hijack = false route announcements. Internet-scale impact. RPKI provides validation.",
     "calculationRequired": false,
@@ -2998,12 +2998,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "DNS tunneling is a concern because it can:",
     "options": {
-      "A": "Improve DNS resolution speed",
-      "B": "Bypass security controls to exfiltrate data or communicate with C2 servers",
-      "C": "Strengthen DNS security",
-      "D": "Only affect internal DNS servers"
+      "A": "Only affect internal DNS servers",
+      "B": "Improve DNS resolution speed",
+      "C": "Bypass security controls to exfiltrate data or communicate with C2 servers",
+      "D": "Strengthen DNS security"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "DNS tunneling encodes data in DNS queries/responses, exploiting that DNS traffic is often allowed through firewalls. Attackers use it to exfiltrate data or communicate with command-and-control servers. Detection requires DNS traffic analysis.",
     "tip": "DNS tunneling = data exfil via DNS. Often bypasses firewalls. Monitor DNS patterns.",
     "calculationRequired": false,
@@ -3040,12 +3040,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Establishing a network traffic baseline is important for:",
     "options": {
-      "A": "Setting minimum bandwidth requirements",
-      "B": "Detecting anomalies that may indicate security incidents",
-      "C": "Reducing network costs",
-      "D": "Improving user experience only"
+      "A": "Reducing network costs",
+      "B": "Improving user experience only",
+      "C": "Setting minimum bandwidth requirements",
+      "D": "Detecting anomalies that may indicate security incidents"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Baselines establish normal traffic patterns—volumes, protocols, destinations, times. Deviations from baseline may indicate security incidents: data exfiltration, lateral movement, or command-and-control activity. This enables anomaly-based detection.",
     "tip": "Baseline = normal patterns. Deviations = potential incidents. Essential for anomaly detection.",
     "calculationRequired": false,
@@ -3061,12 +3061,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SDN (Software-Defined Networking) enhances security by:",
     "options": {
-      "A": "Eliminating the need for network security",
-      "B": "Providing centralized visibility and programmable security policies",
-      "C": "Using only hardware-based controls",
-      "D": "Removing the need for network segmentation"
+      "A": "Providing centralized visibility and programmable security policies",
+      "B": "Using only hardware-based controls",
+      "C": "Removing the need for network segmentation",
+      "D": "Eliminating the need for network security"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SDN separates control plane from data plane, enabling centralized network management and programmable security policies. This allows dynamic, automated security responses, consistent policy enforcement, and improved visibility across the network.",
     "tip": "SDN = centralized control + programmability. Enables dynamic, automated security.",
     "calculationRequired": false,
@@ -3124,12 +3124,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Network device hardening should include all of the following EXCEPT:",
     "options": {
-      "A": "Disabling unused services and ports",
-      "B": "Changing default credentials",
-      "C": "Using Telnet for remote management",
-      "D": "Implementing access control lists"
+      "A": "Changing default credentials",
+      "B": "Using Telnet for remote management",
+      "C": "Implementing access control lists",
+      "D": "Disabling unused services and ports"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Telnet transmits credentials in plaintext and should never be used for management. Hardening includes: disable unused services, change default credentials, use SSH/HTTPS for management, implement ACLs, enable logging, and apply firmware updates.",
     "tip": "Never Telnet—use SSH. Hardening: disable unused, change defaults, ACLs, logging, updates.",
     "calculationRequired": false,
@@ -3145,12 +3145,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "802.1X provides network security by:",
     "options": {
-      "A": "Encrypting all network traffic",
-      "B": "Providing port-based network access control through authentication",
-      "C": "Replacing VPN requirements",
-      "D": "Only working with wireless networks"
+      "A": "Replacing VPN requirements",
+      "B": "Only working with wireless networks",
+      "C": "Encrypting all network traffic",
+      "D": "Providing port-based network access control through authentication"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "802.1X is a port-based network access control standard. Devices must authenticate (typically via RADIUS) before gaining network access. It works with both wired and wireless networks, ensuring only authorized devices connect.",
     "tip": "802.1X = authenticate before network access. Works wired and wireless. Uses RADIUS.",
     "calculationRequired": false,
@@ -3166,12 +3166,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Securing east-west traffic (lateral movement within networks) is challenging because:",
     "options": {
-      "A": "It only occurs at network perimeters",
-      "B": "Traditional perimeter security doesn't inspect internal traffic",
-      "C": "East-west traffic is always encrypted",
-      "D": "Internal networks have no security requirements"
+      "A": "Traditional perimeter security doesn't inspect internal traffic",
+      "B": "East-west traffic is always encrypted",
+      "C": "Internal networks have no security requirements",
+      "D": "It only occurs at network perimeters"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Traditional security focuses on north-south (in/out) traffic at perimeters. East-west traffic between internal systems often bypasses these controls. Attackers who breach the perimeter can move laterally. Internal segmentation and monitoring address this gap.",
     "tip": "East-west = internal lateral traffic. Perimeter security doesn't see it. Need internal controls.",
     "calculationRequired": false,
@@ -3187,12 +3187,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "NBA (Network Behavior Analysis) tools detect threats by:",
     "options": {
-      "A": "Using only signature-based detection",
-      "B": "Analyzing traffic patterns and identifying behavioral anomalies",
-      "C": "Blocking all unknown traffic",
-      "D": "Replacing firewalls"
+      "A": "Analyzing traffic patterns and identifying behavioral anomalies",
+      "B": "Blocking all unknown traffic",
+      "C": "Replacing firewalls",
+      "D": "Using only signature-based detection"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NBA tools analyze traffic patterns using machine learning and behavioral analysis to identify anomalies that may indicate threats—unusual data flows, new connections, bandwidth spikes, or protocol anomalies. This complements signature-based detection.",
     "tip": "NBA = behavioral analysis for anomalies. Detects unknown threats. Complement to signatures.",
     "calculationRequired": false,
@@ -3208,12 +3208,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "ZTNA (Zero Trust Network Access) differs from traditional VPN by:",
     "options": {
-      "A": "Providing broader network access once connected",
-      "B": "Granting application-specific access based on identity and context",
-      "C": "Using weaker encryption",
-      "D": "Only working on mobile devices"
+      "A": "Using weaker encryption",
+      "B": "Only working on mobile devices",
+      "C": "Providing broader network access once connected",
+      "D": "Granting application-specific access based on identity and context"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "ZTNA provides access to specific applications, not the entire network, based on identity verification and context (device health, location, etc.). Unlike VPNs that grant broad network access, ZTNA implements least-privilege access for each resource.",
     "tip": "ZTNA = app-specific access + continuous verification. VPN = broad network access.",
     "calculationRequired": false,
@@ -3229,12 +3229,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "TLS certificate validation prevents attacks by:",
     "options": {
-      "A": "Encrypting the certificate itself",
-      "B": "Verifying server identity through trusted certificate authorities",
-      "C": "Requiring all traffic to be inspected",
-      "D": "Blocking all encrypted traffic"
+      "A": "Verifying server identity through trusted certificate authorities",
+      "B": "Requiring all traffic to be inspected",
+      "C": "Blocking all encrypted traffic",
+      "D": "Encrypting the certificate itself"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Certificate validation verifies that a server's certificate is issued by a trusted CA, hasn't expired, isn't revoked, and matches the requested domain. This prevents man-in-the-middle attacks using fraudulent certificates.",
     "tip": "Certificate validation: trusted CA + not expired + not revoked + domain match. Prevents MITM.",
     "calculationRequired": false,
@@ -3271,12 +3271,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of encryption is to:",
     "options": {
-      "A": "Increase data processing speed",
-      "B": "Protect data confidentiality by making it unreadable without the key",
-      "C": "Compress data for storage",
-      "D": "Verify user identity"
+      "A": "Protect data confidentiality by making it unreadable without the key",
+      "B": "Compress data for storage",
+      "C": "Verify user identity",
+      "D": "Increase data processing speed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Encryption transforms readable data (plaintext) into unreadable ciphertext using cryptographic algorithms and keys. Only those with the correct decryption key can read the data, protecting confidentiality during storage and transmission.",
     "tip": "Encryption = confidentiality. Plaintext → ciphertext → plaintext (with key).",
     "calculationRequired": false,
@@ -3292,12 +3292,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Symmetric encryption uses:",
     "options": {
-      "A": "Different keys for encryption and decryption",
-      "B": "The same key for both encryption and decryption",
-      "C": "No keys at all",
-      "D": "Keys that expire after one use"
+      "A": "The same key for both encryption and decryption",
+      "B": "No keys at all",
+      "C": "Keys that expire after one use",
+      "D": "Different keys for encryption and decryption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Symmetric encryption uses a single shared secret key for both encrypting and decrypting data. It's fast and efficient but requires secure key exchange. Examples include AES and 3DES.",
     "tip": "Symmetric = same key both ways. Fast but key distribution is challenging.",
     "calculationRequired": false,
@@ -3313,12 +3313,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A hash function is used to:",
     "options": {
-      "A": "Encrypt data for secure transmission",
-      "B": "Create a fixed-length fingerprint of data for integrity verification",
-      "C": "Compress large files",
-      "D": "Generate encryption keys randomly"
+      "A": "Compress large files",
+      "B": "Generate encryption keys randomly",
+      "C": "Encrypt data for secure transmission",
+      "D": "Create a fixed-length fingerprint of data for integrity verification"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Hash functions create a fixed-length output (hash or digest) from any input. Any change to input produces a different hash, making it useful for data integrity verification. Hashes are one-way—you cannot recover the original from the hash.",
     "tip": "Hash = one-way fingerprint for integrity. Any input change = different hash.",
     "calculationRequired": false,
@@ -3355,12 +3355,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "AES (Advanced Encryption Standard) is:",
     "options": {
-      "A": "An obsolete encryption algorithm",
-      "B": "The current symmetric encryption standard using 128, 192, or 256-bit keys",
-      "C": "An asymmetric encryption algorithm",
-      "D": "A hash function"
+      "A": "An asymmetric encryption algorithm",
+      "B": "A hash function",
+      "C": "An obsolete encryption algorithm",
+      "D": "The current symmetric encryption standard using 128, 192, or 256-bit keys"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AES is the current standard for symmetric encryption, adopted by NIST in 2001. It supports 128, 192, and 256-bit key lengths. AES-256 is considered highly secure and is widely used for data encryption.",
     "tip": "AES = current symmetric standard. 128/192/256-bit keys. AES-256 for sensitive data.",
     "calculationRequired": false,
@@ -3397,12 +3397,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In asymmetric encryption, data encrypted with the public key can only be decrypted by:",
     "options": {
-      "A": "Any public key",
-      "B": "The corresponding private key",
-      "C": "The same public key",
-      "D": "A different person's private key"
+      "A": "The corresponding private key",
+      "B": "The same public key",
+      "C": "A different person's private key",
+      "D": "Any public key"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Asymmetric encryption uses mathematically related key pairs. Data encrypted with someone's public key can only be decrypted by their private key, and vice versa. This enables secure communication without pre-sharing secret keys.",
     "tip": "Public key encrypts → private key decrypts. Private key signs → public key verifies.",
     "calculationRequired": false,
@@ -3418,12 +3418,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Proper key management includes all of the following EXCEPT:",
     "options": {
-      "A": "Secure key generation using cryptographic randomness",
-      "B": "Storing keys with the encrypted data for convenience",
-      "C": "Regular key rotation based on policy",
-      "D": "Secure key destruction at end of life"
+      "A": "Secure key destruction at end of life",
+      "B": "Secure key generation using cryptographic randomness",
+      "C": "Storing keys with the encrypted data for convenience",
+      "D": "Regular key rotation based on policy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Keys should never be stored with encrypted data—if attackers access the storage, they get both. Key management includes: secure generation, protected storage (separate from data), controlled distribution, regular rotation, and secure destruction.",
     "tip": "Never store keys with encrypted data. Separate key storage is essential.",
     "calculationRequired": false,
@@ -3439,12 +3439,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Passwords should be stored using:",
     "options": {
-      "A": "Reversible encryption so they can be recovered",
-      "B": "One-way hashing with salt",
-      "C": "Plain text for easy verification",
-      "D": "Compression algorithms"
+      "A": "Plain text for easy verification",
+      "B": "Compression algorithms",
+      "C": "Reversible encryption so they can be recovered",
+      "D": "One-way hashing with salt"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Passwords should be hashed (not encrypted) with a unique salt per password. One-way hashing means passwords can't be recovered if the database is compromised. Salts prevent rainbow table attacks. Modern algorithms include bcrypt, scrypt, and Argon2.",
     "tip": "Hash passwords, don't encrypt. Use salt + slow hash (bcrypt/Argon2).",
     "calculationRequired": false,
@@ -3460,12 +3460,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Certificate Authority (CA) in PKI is responsible for:",
     "options": {
-      "A": "Encrypting all network traffic",
-      "B": "Issuing and validating digital certificates",
-      "C": "Storing encryption keys for users",
-      "D": "Generating random numbers"
+      "A": "Generating random numbers",
+      "B": "Encrypting all network traffic",
+      "C": "Issuing and validating digital certificates",
+      "D": "Storing encryption keys for users"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CAs are trusted entities that issue digital certificates binding public keys to identities. They verify identity before issuance, sign certificates, and maintain revocation lists. Browsers and systems trust certificates issued by recognized CAs.",
     "tip": "CA = trusted issuer of certificates. Validates identity and signs certificates.",
     "calculationRequired": false,
@@ -3481,12 +3481,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Full disk encryption (FDE) protects against:",
     "options": {
-      "A": "Network-based attacks",
-      "B": "Physical theft of devices when powered off",
-      "C": "Malware executing on the system",
-      "D": "Phishing attacks"
+      "A": "Malware executing on the system",
+      "B": "Phishing attacks",
+      "C": "Network-based attacks",
+      "D": "Physical theft of devices when powered off"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "FDE encrypts entire disk contents, protecting data if a device is lost or stolen while powered off. When the system is running and unlocked, data is accessible. FDE doesn't protect against attacks on running systems or authorized users.",
     "tip": "FDE = protection against physical theft when off. Running system is still vulnerable.",
     "calculationRequired": false,
@@ -3523,12 +3523,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Key escrow allows:",
     "options": {
-      "A": "Keys to be destroyed immediately after use",
-      "B": "Authorized recovery of keys through a trusted third party",
-      "C": "Keys to be shared publicly",
-      "D": "Encryption without any keys"
+      "A": "Encryption without any keys",
+      "B": "Keys to be destroyed immediately after use",
+      "C": "Authorized recovery of keys through a trusted third party",
+      "D": "Keys to be shared publicly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Key escrow stores copies of encryption keys with a trusted third party, enabling authorized recovery if keys are lost or for lawful access. It's controversial due to security risks if escrow is compromised and privacy concerns.",
     "tip": "Escrow = key backup with trusted party. Enables recovery but adds risk.",
     "calculationRequired": false,
@@ -3544,12 +3544,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A hash function's collision resistance means:",
     "options": {
-      "A": "The hash is reversible",
-      "B": "It's computationally infeasible to find two inputs with the same hash",
-      "C": "Hashes can be decrypted",
-      "D": "All inputs produce unique outputs guaranteed"
+      "A": "All inputs produce unique outputs guaranteed",
+      "B": "The hash is reversible",
+      "C": "It's computationally infeasible to find two inputs with the same hash",
+      "D": "Hashes can be decrypted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Collision resistance means it's computationally infeasible to find two different inputs producing the same hash (a collision). While collisions theoretically exist (infinite inputs, finite outputs), secure hash functions make finding them impractical.",
     "tip": "Collision = two inputs, same hash. Secure hashes make finding collisions impractical.",
     "calculationRequired": false,
@@ -3565,12 +3565,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Certificate revocation is necessary when:",
     "options": {
-      "A": "A certificate expires normally",
-      "B": "A private key is compromised before certificate expiration",
-      "C": "The public key needs to be published",
-      "D": "Network traffic increases"
+      "A": "A private key is compromised before certificate expiration",
+      "B": "The public key needs to be published",
+      "C": "Network traffic increases",
+      "D": "A certificate expires normally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Certificates must be revoked if the private key is compromised, certificate is mis-issued, or the subject is no longer trusted. Revocation (via CRL or OCSP) invalidates the certificate before its natural expiration.",
     "tip": "Revocation = invalidate before expiry. Used for key compromise or trust changes.",
     "calculationRequired": false,
@@ -3586,12 +3586,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "End-to-end encryption differs from transport encryption because:",
     "options": {
-      "A": "It uses weaker algorithms",
-      "B": "Data remains encrypted until reaching the final recipient",
-      "C": "It only works on local networks",
-      "D": "It's faster than transport encryption"
+      "A": "It's faster than transport encryption",
+      "B": "It uses weaker algorithms",
+      "C": "Data remains encrypted until reaching the final recipient",
+      "D": "It only works on local networks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "End-to-end encryption (E2EE) encrypts data from sender to recipient—intermediaries cannot read it. Transport encryption (TLS) protects data in transit but may be decrypted at intermediate points (like email servers). E2EE provides stronger privacy.",
     "tip": "E2EE = encrypted entire journey. Transport = each hop, may decrypt at servers.",
     "calculationRequired": false,
@@ -3607,12 +3607,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Non-repudiation provided by digital signatures means:",
     "options": {
-      "A": "Messages can be denied by the sender",
-      "B": "The sender cannot deny having signed the message",
-      "C": "The recipient can forward messages anonymously",
-      "D": "Encryption keys are shared publicly"
+      "A": "The sender cannot deny having signed the message",
+      "B": "The recipient can forward messages anonymously",
+      "C": "Encryption keys are shared publicly",
+      "D": "Messages can be denied by the sender"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Non-repudiation prevents denial of actions. Since only the signer possesses the private key used to create the signature, they cannot credibly deny having signed. This is crucial for contracts, transactions, and legal documents.",
     "tip": "Non-repudiation = can't deny signing. Only you have your private key.",
     "calculationRequired": false,
@@ -3628,12 +3628,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Block ciphers differ from stream ciphers by:",
     "options": {
-      "A": "Using longer keys",
-      "B": "Encrypting data in fixed-size blocks rather than bit-by-bit",
-      "C": "Being completely insecure",
-      "D": "Requiring no initialization vectors"
+      "A": "Encrypting data in fixed-size blocks rather than bit-by-bit",
+      "B": "Being completely insecure",
+      "C": "Requiring no initialization vectors",
+      "D": "Using longer keys"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Block ciphers (AES) encrypt fixed-size blocks (e.g., 128 bits). Stream ciphers encrypt data bit-by-bit or byte-by-byte. Block ciphers use modes (CBC, GCM) to handle data larger than one block. Both have appropriate use cases.",
     "tip": "Block = fixed chunks (AES). Stream = bit/byte at a time. Both have valid uses.",
     "calculationRequired": false,
@@ -3649,12 +3649,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Regular key rotation is important because it:",
     "options": {
-      "A": "Makes encryption faster",
-      "B": "Limits exposure if a key is compromised",
-      "C": "Eliminates the need for backups",
-      "D": "Simplifies key management"
+      "A": "Limits exposure if a key is compromised",
+      "B": "Eliminates the need for backups",
+      "C": "Simplifies key management",
+      "D": "Makes encryption faster"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Key rotation limits the amount of data exposed if a key is compromised and reduces the time attackers have to crack keys. Regular rotation (based on sensitivity and usage) is a key management best practice.",
     "tip": "Rotation limits damage from compromise. More sensitive = more frequent rotation.",
     "calculationRequired": false,
@@ -3670,12 +3670,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SHA-256 produces a hash output of:",
     "options": {
-      "A": "128 bits",
-      "B": "256 bits",
-      "C": "512 bits",
-      "D": "Variable length"
+      "A": "256 bits",
+      "B": "512 bits",
+      "C": "Variable length",
+      "D": "128 bits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "SHA-256 (Secure Hash Algorithm 256-bit) produces a fixed 256-bit (32-byte) output regardless of input size. It's part of the SHA-2 family and widely used for data integrity, digital signatures, and blockchain.",
     "tip": "SHA-256 = 256-bit output. SHA-512 = 512-bit. Fixed output regardless of input.",
     "calculationRequired": false,
@@ -3712,12 +3712,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When validating a certificate chain, verification proceeds:",
     "options": {
-      "A": "Only checking the end-entity certificate",
-      "B": "From end-entity certificate up to a trusted root CA",
-      "C": "Only checking the root CA",
-      "D": "Randomly selecting certificates to verify"
+      "A": "Randomly selecting certificates to verify",
+      "B": "Only checking the end-entity certificate",
+      "C": "From end-entity certificate up to a trusted root CA",
+      "D": "Only checking the root CA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Certificate chain validation verifies each certificate from the end-entity (server) up through intermediate CAs to a trusted root. Each certificate must be valid, not expired or revoked, and properly signed by the issuer above it.",
     "tip": "Chain validation: End → Intermediates → Root. All must be valid and trusted.",
     "calculationRequired": false,
@@ -3733,12 +3733,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Hardware Security Module (HSM) provides:",
     "options": {
-      "A": "Software-based key storage",
-      "B": "Tamper-resistant hardware for key generation, storage, and operations",
-      "C": "Faster network connectivity",
-      "D": "Backup power for servers"
+      "A": "Faster network connectivity",
+      "B": "Backup power for servers",
+      "C": "Software-based key storage",
+      "D": "Tamper-resistant hardware for key generation, storage, and operations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "HSMs are dedicated, tamper-resistant hardware devices that generate, store, and manage cryptographic keys. They perform crypto operations internally without exposing keys, meeting compliance requirements (PCI-DSS, FIPS 140-2).",
     "tip": "HSM = tamper-resistant key management. Keys never leave HSM. Required for high-security.",
     "calculationRequired": false,
@@ -3754,12 +3754,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "MD5 and SHA-1 are considered deprecated for cryptographic purposes because:",
     "options": {
-      "A": "They produce outputs that are too long",
-      "B": "Practical collision attacks have been demonstrated",
-      "C": "They are too slow for modern systems",
-      "D": "They require special hardware"
+      "A": "They require special hardware",
+      "B": "They produce outputs that are too long",
+      "C": "Practical collision attacks have been demonstrated",
+      "D": "They are too slow for modern systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "MD5 and SHA-1 have known collision vulnerabilities—researchers have demonstrated practical attacks creating different files with identical hashes. While still used for non-security purposes (checksums), SHA-256 or better should be used for security.",
     "tip": "MD5/SHA-1 = broken for security. Use SHA-256+. OK for non-security checksums.",
     "calculationRequired": false,
@@ -3775,12 +3775,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Transparent Data Encryption (TDE) for databases:",
     "options": {
-      "A": "Encrypts data at the application level",
-      "B": "Encrypts database files at rest without application changes",
-      "C": "Protects data in transit only",
-      "D": "Requires changes to all application queries"
+      "A": "Requires changes to all application queries",
+      "B": "Encrypts data at the application level",
+      "C": "Encrypts database files at rest without application changes",
+      "D": "Protects data in transit only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "TDE encrypts database files at the storage level transparently—applications don't need modification. Data is encrypted at rest but decrypted in memory for processing. It protects against physical theft but not from authorized database access.",
     "tip": "TDE = transparent encryption at rest. No app changes. Protects files, not authorized access.",
     "calculationRequired": false,
@@ -3817,12 +3817,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Diffie-Hellman key exchange allows two parties to:",
     "options": {
-      "A": "Share private keys over insecure channels",
-      "B": "Establish a shared secret over an insecure channel without transmitting the secret",
-      "C": "Encrypt large files directly",
-      "D": "Create digital signatures"
+      "A": "Encrypt large files directly",
+      "B": "Create digital signatures",
+      "C": "Share private keys over insecure channels",
+      "D": "Establish a shared secret over an insecure channel without transmitting the secret"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Diffie-Hellman enables two parties to create a shared secret key over an insecure channel—the secret itself is never transmitted. Each party contributes public values; combined with their private values, both derive the same secret for symmetric encryption.",
     "tip": "D-H = key agreement protocol. Shared secret without transmitting it. Enables forward secrecy.",
     "calculationRequired": false,
@@ -3859,12 +3859,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "OCSP stapling improves certificate revocation checking by:",
     "options": {
-      "A": "Eliminating the need for revocation checks",
-      "B": "Having the server provide signed, time-stamped revocation status",
-      "C": "Requiring clients to contact CAs directly",
-      "D": "Caching revocation status indefinitely"
+      "A": "Caching revocation status indefinitely",
+      "B": "Eliminating the need for revocation checks",
+      "C": "Having the server provide signed, time-stamped revocation status",
+      "D": "Requiring clients to contact CAs directly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "OCSP stapling has the server obtain and cache signed OCSP responses from the CA, providing them to clients during TLS handshake. This improves performance (fewer CA queries), privacy (clients don't reveal sites visited), and reliability.",
     "tip": "OCSP stapling: Server provides revocation status. Better performance and privacy.",
     "calculationRequired": false,
@@ -3880,12 +3880,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "GCM (Galois/Counter Mode) is preferred over CBC mode because it:",
     "options": {
-      "A": "Uses shorter keys",
-      "B": "Provides both encryption and authentication in one operation",
-      "C": "Is faster on slow processors",
-      "D": "Doesn't require initialization vectors"
+      "A": "Is faster on slow processors",
+      "B": "Doesn't require initialization vectors",
+      "C": "Uses shorter keys",
+      "D": "Provides both encryption and authentication in one operation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GCM provides authenticated encryption—both confidentiality and integrity/authentication in a single operation. CBC provides only encryption; authentication must be added separately. GCM also supports parallel processing for better performance.",
     "tip": "GCM = authenticated encryption (AEAD). CBC = encryption only, add MAC separately.",
     "calculationRequired": false,
@@ -3901,12 +3901,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Key derivation functions (KDFs) like PBKDF2 are designed to:",
     "options": {
-      "A": "Generate keys quickly",
-      "B": "Be intentionally slow to resist brute-force attacks",
-      "C": "Produce variable-length outputs",
-      "D": "Replace encryption entirely"
+      "A": "Be intentionally slow to resist brute-force attacks",
+      "B": "Produce variable-length outputs",
+      "C": "Replace encryption entirely",
+      "D": "Generate keys quickly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "KDFs are intentionally computationally expensive (slow) to derive keys from passwords. This makes brute-force attacks impractical—each guess takes significant time. PBKDF2, bcrypt, scrypt, and Argon2 add iterations/memory costs.",
     "tip": "KDFs = slow on purpose. Slows brute-force password attacks. More iterations = more security.",
     "calculationRequired": false,
@@ -3985,12 +3985,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Post-quantum cryptography is being developed because:",
     "options": {
-      "A": "Current algorithms are too slow",
-      "B": "Quantum computers could break current public-key cryptography",
-      "C": "Symmetric encryption will become obsolete",
-      "D": "Hash functions will no longer work"
+      "A": "Quantum computers could break current public-key cryptography",
+      "B": "Symmetric encryption will become obsolete",
+      "C": "Hash functions will no longer work",
+      "D": "Current algorithms are too slow"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Quantum computers threaten current public-key cryptography (RSA, ECC) through Shor's algorithm. Post-quantum algorithms (lattice-based, hash-based) are being standardized to replace vulnerable algorithms before quantum computers become practical threats.",
     "tip": "Quantum threatens RSA/ECC. Symmetric less affected. NIST standardizing PQ algorithms.",
     "calculationRequired": false,
@@ -4006,12 +4006,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data classification helps organizations by:",
     "options": {
-      "A": "Eliminating all sensitive data",
-      "B": "Applying appropriate security controls based on data sensitivity",
-      "C": "Making all data publicly available",
-      "D": "Reducing storage requirements only"
+      "A": "Applying appropriate security controls based on data sensitivity",
+      "B": "Making all data publicly available",
+      "C": "Reducing storage requirements only",
+      "D": "Eliminating all sensitive data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Data classification categorizes data by sensitivity (public, internal, confidential, restricted) enabling appropriate security controls. More sensitive data receives stronger protection, while less sensitive data has proportional controls, optimizing security resources.",
     "tip": "Classification → appropriate controls. Sensitive data = stronger protection.",
     "calculationRequired": false,
@@ -4090,12 +4090,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A data steward is responsible for:",
     "options": {
-      "A": "Physical security of data centers",
-      "B": "Managing and maintaining data quality and definitions for a data domain",
-      "C": "Writing all database queries",
-      "D": "Approving all IT purchases"
+      "A": "Approving all IT purchases",
+      "B": "Physical security of data centers",
+      "C": "Managing and maintaining data quality and definitions for a data domain",
+      "D": "Writing all database queries"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Data stewards are accountable for data quality, definitions, and proper use within their assigned data domains. They establish data standards, resolve data issues, and ensure data meets business needs. They work with data owners and IT.",
     "tip": "Data steward = day-to-day data quality and standards. Data owner = accountability.",
     "calculationRequired": false,
@@ -4111,12 +4111,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of data backup is to:",
     "options": {
-      "A": "Increase processing speed",
-      "B": "Enable recovery from data loss or corruption",
-      "C": "Reduce storage costs",
-      "D": "Improve network performance"
+      "A": "Reduce storage costs",
+      "B": "Improve network performance",
+      "C": "Increase processing speed",
+      "D": "Enable recovery from data loss or corruption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Backups create copies of data for recovery from accidental deletion, hardware failure, ransomware, or disasters. The 3-2-1 rule recommends: 3 copies, 2 different media types, 1 offsite location.",
     "tip": "Backup = recovery capability. 3-2-1 rule: 3 copies, 2 media, 1 offsite.",
     "calculationRequired": false,
@@ -4132,12 +4132,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Personally Identifiable Information (PII) includes:",
     "options": {
-      "A": "Only social security numbers",
-      "B": "Any information that can identify or be used to identify an individual",
-      "C": "Only medical records",
-      "D": "Only financial data"
+      "A": "Any information that can identify or be used to identify an individual",
+      "B": "Only medical records",
+      "C": "Only financial data",
+      "D": "Only social security numbers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "PII is any information that can directly or indirectly identify an individual—SSN, name with address, email, phone numbers, biometric data, and combinations of seemingly non-PII data. Different regulations define PII differently.",
     "tip": "PII = directly or indirectly identifies someone. Combinations matter.",
     "calculationRequired": false,
@@ -4153,12 +4153,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SQL injection attacks can be prevented primarily by:",
     "options": {
-      "A": "Using stronger passwords",
-      "B": "Using parameterized queries and input validation",
-      "C": "Encrypting database files",
-      "D": "Increasing database storage"
+      "A": "Encrypting database files",
+      "B": "Increasing database storage",
+      "C": "Using stronger passwords",
+      "D": "Using parameterized queries and input validation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SQL injection exploits improper input handling to execute malicious SQL. Parameterized queries (prepared statements) separate SQL code from data, preventing injection. Input validation, least privilege database accounts, and WAFs provide additional protection.",
     "tip": "SQL injection prevention: Parameterized queries + input validation. Never concatenate user input.",
     "calculationRequired": false,
@@ -4174,12 +4174,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data lineage documentation provides:",
     "options": {
-      "A": "Only data storage locations",
-      "B": "The origin, movement, and transformation of data throughout its lifecycle",
-      "C": "User access logs",
-      "D": "Backup schedules"
+      "A": "Backup schedules",
+      "B": "Only data storage locations",
+      "C": "The origin, movement, and transformation of data throughout its lifecycle",
+      "D": "User access logs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Data lineage tracks data from source through transformations to consumption—where it comes from, how it's modified, and where it goes. This supports data quality, impact analysis, compliance, and troubleshooting data issues.",
     "tip": "Lineage = data journey: source → transformations → destination. Essential for governance.",
     "calculationRequired": false,
@@ -4195,12 +4195,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A typical corporate data classification scheme might include:",
     "options": {
-      "A": "Only two levels: public and private",
-      "B": "Public, Internal, Confidential, and Restricted levels",
-      "C": "Classifications based only on file size",
-      "D": "No formal classification structure"
+      "A": "No formal classification structure",
+      "B": "Only two levels: public and private",
+      "C": "Public, Internal, Confidential, and Restricted levels",
+      "D": "Classifications based only on file size"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Common classification schemes include: Public (no impact if disclosed), Internal (limited impact), Confidential (significant impact), and Restricted (severe impact). Each level has corresponding handling requirements for access, storage, transmission, and disposal.",
     "tip": "Typical levels: Public → Internal → Confidential → Restricted. Controls increase with sensitivity.",
     "calculationRequired": false,
@@ -4216,12 +4216,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Input validation controls should be implemented:",
     "options": {
-      "A": "Only at the user interface level",
-      "B": "At multiple layers including client, server, and database",
-      "C": "Only in the database",
-      "D": "Only for numeric fields"
+      "A": "At multiple layers including client, server, and database",
+      "B": "Only in the database",
+      "C": "Only for numeric fields",
+      "D": "Only at the user interface level"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Defense in depth requires validation at multiple layers: client-side for user experience, server-side for security (attackers can bypass client), and database constraints as a final safeguard. Client-side validation alone is insufficient for security.",
     "tip": "Validate at all layers. Never trust client-side validation alone for security.",
     "calculationRequired": false,
@@ -4237,12 +4237,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Secure data disposal for storage media should include:",
     "options": {
-      "A": "Simply deleting files",
-      "B": "Physical destruction or cryptographic erasure",
-      "C": "Formatting the drive only",
-      "D": "Removing drive labels"
+      "A": "Formatting the drive only",
+      "B": "Removing drive labels",
+      "C": "Simply deleting files",
+      "D": "Physical destruction or cryptographic erasure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Simple deletion doesn't remove data—it marks space as available. Secure disposal requires physical destruction (shredding, degaussing) or cryptographic erasure (encrypting then destroying keys). Method depends on media type and sensitivity.",
     "tip": "Delete ≠ gone. Use shredding, degaussing, or crypto erasure for secure disposal.",
     "calculationRequired": false,
@@ -4258,12 +4258,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Database normalization helps ensure data integrity by:",
     "options": {
-      "A": "Storing all data in a single table",
-      "B": "Eliminating redundancy and update anomalies through proper table design",
-      "C": "Encrypting all database columns",
-      "D": "Increasing storage requirements"
+      "A": "Increasing storage requirements",
+      "B": "Storing all data in a single table",
+      "C": "Eliminating redundancy and update anomalies through proper table design",
+      "D": "Encrypting all database columns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Normalization structures data to eliminate redundancy and prevent anomalies (insertion, update, deletion). Data is stored once and referenced via relationships, ensuring consistency. Denormalization may be used for performance in data warehouses.",
     "tip": "Normalization = eliminate redundancy, prevent anomalies. One fact, one place.",
     "calculationRequired": false,
@@ -4300,12 +4300,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Master Data Management (MDM) helps organizations by:",
     "options": {
-      "A": "Creating duplicate records across systems",
-      "B": "Establishing a single authoritative source for key business data",
-      "C": "Eliminating all databases",
-      "D": "Reducing data security requirements"
+      "A": "Establishing a single authoritative source for key business data",
+      "B": "Eliminating all databases",
+      "C": "Reducing data security requirements",
+      "D": "Creating duplicate records across systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "MDM creates a unified, accurate, consistent source for master data (customers, products, employees) across the organization. It eliminates inconsistencies from multiple systems, improving data quality and enabling reliable analytics and reporting.",
     "tip": "MDM = single source of truth for key business data. Eliminates inconsistencies.",
     "calculationRequired": false,
@@ -4321,12 +4321,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Database Activity Monitoring (DAM) provides security by:",
     "options": {
-      "A": "Encrypting all database traffic",
-      "B": "Logging and analyzing database queries and activities",
-      "C": "Replacing database access controls",
-      "D": "Backing up database files"
+      "A": "Replacing database access controls",
+      "B": "Backing up database files",
+      "C": "Encrypting all database traffic",
+      "D": "Logging and analyzing database queries and activities"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "DAM monitors and logs database activities—who accessed what data, when, and what queries were run. It can detect anomalous behavior, potential breaches, and policy violations. DAM complements but doesn't replace access controls.",
     "tip": "DAM = visibility into database activity. Detect anomalies and policy violations.",
     "calculationRequired": false,
@@ -4342,12 +4342,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Incremental backups are faster than full backups because they:",
     "options": {
-      "A": "Use stronger compression",
-      "B": "Only copy data changed since the last backup of any type",
-      "C": "Skip encryption",
-      "D": "Don't verify backup integrity"
+      "A": "Only copy data changed since the last backup of any type",
+      "B": "Skip encryption",
+      "C": "Don't verify backup integrity",
+      "D": "Use stronger compression"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Incremental backups copy only changes since the last backup (full or incremental), requiring less time and storage. However, restoration requires the full backup plus all incrementals. Differential copies changes since last full backup.",
     "tip": "Incremental = changes since last any backup. Fast backup, slower restore.",
     "calculationRequired": false,
@@ -4363,12 +4363,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data profiling analyzes data to determine:",
     "options": {
-      "A": "Only storage costs",
-      "B": "Data structure, content patterns, quality issues, and relationships",
-      "C": "User access permissions",
-      "D": "Network bandwidth requirements"
+      "A": "User access permissions",
+      "B": "Network bandwidth requirements",
+      "C": "Only storage costs",
+      "D": "Data structure, content patterns, quality issues, and relationships"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Data profiling examines data to understand its structure, content (patterns, values, distributions), quality issues (nulls, duplicates, inconsistencies), and relationships. This informs data quality improvement, migration, and integration projects.",
     "tip": "Profiling = understand your data. Essential before quality improvement or migration.",
     "calculationRequired": false,
@@ -4405,12 +4405,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The ACID properties of database transactions include all of the following EXCEPT:",
     "options": {
-      "A": "Atomicity",
-      "B": "Consistency",
-      "C": "Availability",
-      "D": "Durability"
+      "A": "Availability",
+      "B": "Durability",
+      "C": "Atomicity",
+      "D": "Consistency"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "ACID stands for Atomicity (all-or-nothing), Consistency (valid state to valid state), Isolation (concurrent transactions don't interfere), and Durability (committed changes persist). Availability is part of CAP theorem, not ACID.",
     "tip": "ACID: Atomicity, Consistency, Isolation, Durability. Transaction integrity properties.",
     "calculationRequired": false,
@@ -4426,12 +4426,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GDPR, data subjects have the right to:",
     "options": {
-      "A": "Access only data collected in the last year",
-      "B": "Request erasure of their personal data in certain circumstances",
-      "C": "Unlimited data retention by controllers",
-      "D": "Transfer any organization's data"
+      "A": "Unlimited data retention by controllers",
+      "B": "Transfer any organization's data",
+      "C": "Access only data collected in the last year",
+      "D": "Request erasure of their personal data in certain circumstances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GDPR provides the right to erasure ('right to be forgotten') when data is no longer needed, consent is withdrawn, or processing is unlawful. Other rights include access, rectification, data portability, and objection to processing.",
     "tip": "GDPR rights: Access, rectification, erasure, portability, objection, restriction.",
     "calculationRequired": false,
@@ -4447,12 +4447,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An enterprise data catalog provides:",
     "options": {
-      "A": "Physical storage of all company data",
-      "B": "Metadata inventory enabling data discovery and understanding",
-      "C": "Automatic data quality correction",
-      "D": "Database backup functionality"
+      "A": "Metadata inventory enabling data discovery and understanding",
+      "B": "Automatic data quality correction",
+      "C": "Database backup functionality",
+      "D": "Physical storage of all company data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Data catalogs inventory metadata—data definitions, locations, owners, lineage, quality metrics, and relationships. They enable data discovery, improve understanding, support governance, and help users find and trust data for analytics.",
     "tip": "Data catalog = metadata repository. Find, understand, and trust data.",
     "calculationRequired": false,
@@ -4468,12 +4468,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Dynamic data masking differs from static data masking because:",
     "options": {
-      "A": "It permanently alters source data",
-      "B": "It masks data in real-time without modifying the underlying data",
-      "C": "It only works with encrypted data",
-      "D": "It requires separate databases for masked data"
+      "A": "It requires separate databases for masked data",
+      "B": "It permanently alters source data",
+      "C": "It masks data in real-time without modifying the underlying data",
+      "D": "It only works with encrypted data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dynamic masking applies rules at query time—data remains unchanged but unauthorized users see masked values. Static masking creates a separate copy with permanently altered data. Dynamic protects production without data duplication.",
     "tip": "Dynamic = real-time masking, no copy. Static = permanent masked copy.",
     "calculationRequired": false,
@@ -4573,12 +4573,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cryptographic erasure achieves data destruction by:",
     "options": {
-      "A": "Physically destroying storage media",
-      "B": "Destroying encryption keys, rendering encrypted data unrecoverable",
-      "C": "Overwriting data multiple times",
-      "D": "Deleting file system entries"
+      "A": "Deleting file system entries",
+      "B": "Physically destroying storage media",
+      "C": "Destroying encryption keys, rendering encrypted data unrecoverable",
+      "D": "Overwriting data multiple times"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cryptographic erasure destroys the encryption keys used to protect data. Without keys, encrypted data is unrecoverable even though it remains on media. This enables fast, secure disposal without physical destruction—useful for cloud and SSDs.",
     "tip": "Crypto erasure: Destroy keys, data becomes unrecoverable. Fast, no physical destruction.",
     "calculationRequired": false,
@@ -4594,12 +4594,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Row-level security (RLS) enables:",
     "options": {
-      "A": "Encrypting individual database rows",
-      "B": "Restricting user access to specific rows based on attributes",
-      "C": "Improving query performance",
-      "D": "Automatically backing up changed rows"
+      "A": "Automatically backing up changed rows",
+      "B": "Encrypting individual database rows",
+      "C": "Restricting user access to specific rows based on attributes",
+      "D": "Improving query performance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "RLS restricts which rows users can access based on their attributes or roles. A sales rep might only see their accounts' data while a manager sees all. RLS is enforced at the database level, providing consistent security regardless of application.",
     "tip": "RLS = row-level access control. User sees only their authorized rows.",
     "calculationRequired": false,
@@ -4615,12 +4615,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The difference between a data owner and data steward is that the owner:",
     "options": {
-      "A": "Performs daily data maintenance activities",
-      "B": "Has accountability and authority for data use decisions",
-      "C": "Writes database queries",
-      "D": "Implements physical security controls"
+      "A": "Has accountability and authority for data use decisions",
+      "B": "Writes database queries",
+      "C": "Implements physical security controls",
+      "D": "Performs daily data maintenance activities"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Data owners have accountability and decision authority for data—who can access it, how it's used, quality standards. Stewards handle day-to-day activities: quality monitoring, metadata management, issue resolution. Owners are typically business leaders.",
     "tip": "Owner = accountable, strategic authority. Steward = day-to-day quality management.",
     "calculationRequired": false,
@@ -4636,12 +4636,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "GDPR restricts personal data transfers outside the EU unless:",
     "options": {
-      "A": "The data is encrypted",
-      "B": "Adequate protection mechanisms are in place (SCCs, BCRs, adequacy decisions)",
-      "C": "The transfer is for business purposes",
-      "D": "The data is publicly available"
+      "A": "Adequate protection mechanisms are in place (SCCs, BCRs, adequacy decisions)",
+      "B": "The transfer is for business purposes",
+      "C": "The data is publicly available",
+      "D": "The data is encrypted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "GDPR requires adequate safeguards for international transfers: adequacy decisions (country deemed adequate), Standard Contractual Clauses (SCCs), Binding Corporate Rules (BCRs), or specific derogations. Organizations must verify recipient country protections.",
     "tip": "Cross-border transfer: Need adequacy, SCCs, BCRs, or derogations. Can't just send data anywhere.",
     "calculationRequired": false,
@@ -4720,12 +4720,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Pseudonymized data differs from anonymized data because pseudonymized data:",
     "options": {
-      "A": "Cannot ever be re-identified",
-      "B": "Can be re-identified using additional information held separately",
-      "C": "Provides no privacy protection",
-      "D": "Must be encrypted"
+      "A": "Provides no privacy protection",
+      "B": "Must be encrypted",
+      "C": "Cannot ever be re-identified",
+      "D": "Can be re-identified using additional information held separately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Pseudonymization replaces identifiers with pseudonyms while maintaining a key for re-identification. It's reversible. Anonymization removes the ability to identify individuals—truly anonymous data isn't personal data under GDPR. Anonymization is harder to achieve.",
     "tip": "Pseudonymized = reversible with key, still personal data. Anonymized = not reversible.",
     "calculationRequired": false,
@@ -4741,12 +4741,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Infrastructure as a Service (IaaS) provides customers with:",
     "options": {
-      "A": "Complete application software ready to use",
-      "B": "Virtualized computing resources like servers, storage, and networking",
-      "C": "Platform for developing applications only",
-      "D": "Email and office productivity tools"
+      "A": "Virtualized computing resources like servers, storage, and networking",
+      "B": "Platform for developing applications only",
+      "C": "Email and office productivity tools",
+      "D": "Complete application software ready to use"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "IaaS provides virtualized infrastructure—virtual machines, storage, networks—that customers manage. The provider manages the physical infrastructure. Customers install and manage their own operating systems and applications. Examples: AWS EC2, Azure VMs.",
     "tip": "IaaS = virtual infrastructure. Customer manages OS and above. Provider manages hardware.",
     "calculationRequired": false,
@@ -4762,12 +4762,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A public cloud is characterized by:",
     "options": {
-      "A": "Infrastructure owned and used by a single organization",
-      "B": "Multi-tenant infrastructure available to the general public",
-      "C": "Physical servers located on customer premises",
-      "D": "Resources not shared between any customers"
+      "A": "Resources not shared between any customers",
+      "B": "Infrastructure owned and used by a single organization",
+      "C": "Multi-tenant infrastructure available to the general public",
+      "D": "Physical servers located on customer premises"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Public clouds provide multi-tenant infrastructure shared among many customers, offered by providers like AWS, Azure, and Google Cloud. Resources are allocated on-demand with pay-as-you-go pricing. Economies of scale provide cost benefits.",
     "tip": "Public cloud = shared, multi-tenant, pay-as-you-go. AWS, Azure, GCP.",
     "calculationRequired": false,
@@ -4783,12 +4783,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Software as a Service (SaaS) applications are:",
     "options": {
-      "A": "Installed and managed on customer servers",
-      "B": "Fully managed by the provider and accessed via web browser",
-      "C": "Development platforms for building custom applications",
-      "D": "Virtual servers requiring customer configuration"
+      "A": "Development platforms for building custom applications",
+      "B": "Virtual servers requiring customer configuration",
+      "C": "Installed and managed on customer servers",
+      "D": "Fully managed by the provider and accessed via web browser"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SaaS delivers complete applications via the internet, managed entirely by the provider. Customers access via browser without managing infrastructure, platform, or application code. Examples: Salesforce, Microsoft 365, Workday.",
     "tip": "SaaS = ready-to-use applications. Provider manages everything. Browser access.",
     "calculationRequired": false,
@@ -4804,12 +4804,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A key advantage of cloud computing is:",
     "options": {
-      "A": "Fixed capacity that never changes",
-      "B": "Ability to scale resources up or down based on demand",
-      "C": "Complete elimination of all security risks",
-      "D": "No need for internet connectivity"
+      "A": "Ability to scale resources up or down based on demand",
+      "B": "Complete elimination of all security risks",
+      "C": "No need for internet connectivity",
+      "D": "Fixed capacity that never changes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cloud scalability allows rapid resource adjustment based on demand—adding capacity for peaks and reducing during lulls. This elasticity provides cost efficiency (pay for what you use) and agility compared to fixed on-premises capacity.",
     "tip": "Scalability = adjust resources on demand. Elastic capacity, pay for use.",
     "calculationRequired": false,
@@ -4825,12 +4825,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A private cloud provides:",
     "options": {
-      "A": "Resources shared with the general public",
-      "B": "Dedicated infrastructure for a single organization",
-      "C": "Only email services",
-      "D": "No virtualization technology"
+      "A": "Only email services",
+      "B": "No virtualization technology",
+      "C": "Resources shared with the general public",
+      "D": "Dedicated infrastructure for a single organization"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Private clouds provide dedicated infrastructure for a single organization—either on-premises or hosted by a provider. This offers more control and may address compliance requirements but reduces economies of scale compared to public cloud.",
     "tip": "Private cloud = single organization, dedicated resources. More control, less economy of scale.",
     "calculationRequired": false,
@@ -4846,12 +4846,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Platform as a Service (PaaS) provides:",
     "options": {
-      "A": "Ready-to-use applications",
-      "B": "Development platform with tools, runtime, and middleware for building applications",
-      "C": "Only virtual machines",
-      "D": "Physical server access"
+      "A": "Physical server access",
+      "B": "Ready-to-use applications",
+      "C": "Development platform with tools, runtime, and middleware for building applications",
+      "D": "Only virtual machines"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PaaS provides a platform for developing and deploying applications—including runtime, middleware, development tools, and databases. Customers focus on code while the provider manages infrastructure and platform. Examples: Heroku, Google App Engine.",
     "tip": "PaaS = development platform. Focus on code, not infrastructure. Provider manages platform.",
     "calculationRequired": false,
@@ -4867,12 +4867,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In the cloud shared responsibility model:",
     "options": {
-      "A": "The cloud provider is responsible for all security",
-      "B": "Security responsibilities are divided between provider and customer",
-      "C": "Customers are responsible for all security",
-      "D": "No party is responsible for security"
+      "A": "Customers are responsible for all security",
+      "B": "No party is responsible for security",
+      "C": "The cloud provider is responsible for all security",
+      "D": "Security responsibilities are divided between provider and customer"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Shared responsibility divides security: providers secure the cloud infrastructure (physical, network, hypervisor), customers secure what they put in the cloud (data, access, applications). Specific divisions vary by service model (IaaS vs PaaS vs SaaS).",
     "tip": "Provider: security OF the cloud. Customer: security IN the cloud.",
     "calculationRequired": false,
@@ -4888,12 +4888,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Identity and Access Management (IAM) in cloud environments is primarily the responsibility of:",
     "options": {
-      "A": "Only the cloud provider",
-      "B": "The customer for their users and applications",
-      "C": "Third-party auditors",
-      "D": "No one—it's automatic"
+      "A": "Third-party auditors",
+      "B": "No one—it's automatic",
+      "C": "Only the cloud provider",
+      "D": "The customer for their users and applications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "While providers offer IAM tools, customers are responsible for configuring access controls, managing users, implementing least privilege, and monitoring access. Poor IAM configuration is a leading cause of cloud security incidents.",
     "tip": "IAM = customer responsibility. Misconfigurations cause many cloud breaches.",
     "calculationRequired": false,
@@ -4909,12 +4909,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A hybrid cloud environment combines:",
     "options": {
-      "A": "Multiple SaaS applications",
-      "B": "Private cloud or on-premises with public cloud, with integration between them",
-      "C": "Only different public cloud providers",
-      "D": "Virtualization with physical servers"
+      "A": "Private cloud or on-premises with public cloud, with integration between them",
+      "B": "Only different public cloud providers",
+      "C": "Virtualization with physical servers",
+      "D": "Multiple SaaS applications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Hybrid cloud integrates private/on-premises infrastructure with public cloud, allowing workloads to move between them. Organizations can keep sensitive data private while leveraging public cloud for scalability and other workloads.",
     "tip": "Hybrid = private + public, integrated. Flexibility to place workloads appropriately.",
     "calculationRequired": false,
@@ -4930,12 +4930,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data residency requirements in cloud computing address:",
     "options": {
-      "A": "Data backup frequency",
-      "B": "Geographic location where data must be stored",
-      "C": "Data encryption methods",
-      "D": "Network bandwidth allocation"
+      "A": "Geographic location where data must be stored",
+      "B": "Data encryption methods",
+      "C": "Network bandwidth allocation",
+      "D": "Data backup frequency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Data residency requirements specify where data must physically reside—often mandated by regulations (GDPR for EU data). Cloud regions and availability zones help organizations comply by selecting specific geographic locations for data storage.",
     "tip": "Data residency = where data physically lives. Regulatory compliance requirement.",
     "calculationRequired": false,
@@ -4972,12 +4972,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Multi-tenancy in cloud computing creates risk because:",
     "options": {
-      "A": "Data is always unencrypted",
-      "B": "Multiple customers share underlying infrastructure",
-      "C": "Backups are never performed",
-      "D": "Network connectivity is unreliable"
+      "A": "Network connectivity is unreliable",
+      "B": "Data is always unencrypted",
+      "C": "Multiple customers share underlying infrastructure",
+      "D": "Backups are never performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Multi-tenancy means multiple customers share physical infrastructure (hypervisors, storage, networks). While providers implement strong isolation, potential risks include side-channel attacks, co-tenant attacks, and data leakage from misconfiguration.",
     "tip": "Multi-tenancy = shared infrastructure. Rely on provider isolation. Encrypt sensitive data.",
     "calculationRequired": false,
@@ -4993,12 +4993,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Vendor lock-in risk in cloud computing can be mitigated by:",
     "options": {
-      "A": "Using only one cloud provider for all services",
-      "B": "Using portable technologies and avoiding proprietary services",
-      "C": "Eliminating all documentation",
-      "D": "Never signing long-term contracts"
+      "A": "Never signing long-term contracts",
+      "B": "Using only one cloud provider for all services",
+      "C": "Using portable technologies and avoiding proprietary services",
+      "D": "Eliminating all documentation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Vendor lock-in makes it difficult and expensive to switch providers. Mitigation includes: using open standards and portable technologies, containerization, multi-cloud strategies, avoiding deep reliance on proprietary services, and maintaining data portability.",
     "tip": "Avoid lock-in: portable tech, containers, open standards, data export capabilities.",
     "calculationRequired": false,
@@ -5035,12 +5035,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud availability zones help organizations by:",
     "options": {
-      "A": "Reducing cloud costs",
-      "B": "Providing physically separate facilities for high availability and disaster recovery",
-      "C": "Eliminating the need for backups",
-      "D": "Increasing network latency"
+      "A": "Eliminating the need for backups",
+      "B": "Increasing network latency",
+      "C": "Reducing cloud costs",
+      "D": "Providing physically separate facilities for high availability and disaster recovery"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Availability zones are physically separate data centers within a region, with independent power, cooling, and networking. Deploying across zones provides high availability—if one zone fails, applications continue in others.",
     "tip": "Availability zones = fault isolation. Deploy across zones for HA/DR.",
     "calculationRequired": false,
@@ -5056,12 +5056,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud service level agreements (SLAs) typically define:",
     "options": {
-      "A": "Only pricing terms",
-      "B": "Availability guarantees, performance metrics, and remedies for non-compliance",
-      "C": "Employee responsibilities",
-      "D": "Hardware specifications"
+      "A": "Availability guarantees, performance metrics, and remedies for non-compliance",
+      "B": "Employee responsibilities",
+      "C": "Hardware specifications",
+      "D": "Only pricing terms"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cloud SLAs specify service commitments: uptime guarantees (e.g., 99.99%), performance metrics, response times for issues, and remedies (credits) if commitments aren't met. Customers should understand SLA terms and their limitations.",
     "tip": "SLA = service commitments + remedies. Understand limitations and exclusions.",
     "calculationRequired": false,
@@ -5077,12 +5077,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud misconfigurations are a leading security concern because:",
     "options": {
-      "A": "Cloud providers don't offer security features",
-      "B": "Default settings and complex options lead to insecure configurations",
-      "C": "All cloud data is automatically public",
-      "D": "Encryption is not available"
+      "A": "All cloud data is automatically public",
+      "B": "Encryption is not available",
+      "C": "Cloud providers don't offer security features",
+      "D": "Default settings and complex options lead to insecure configurations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Cloud misconfigurations (public S3 buckets, exposed databases, excessive permissions) cause many breaches. Complex settings, permissive defaults, and rapid deployment without security review contribute. Automated configuration scanning helps detect issues.",
     "tip": "Misconfiguration = #1 cloud risk. Review defaults, use scanning tools, least privilege.",
     "calculationRequired": false,
@@ -5098,12 +5098,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Serverless computing (FaaS) differs from traditional cloud by:",
     "options": {
-      "A": "Requiring customer server management",
-      "B": "Executing code in response to events without managing servers",
-      "C": "Only supporting batch processing",
-      "D": "Providing physical server access"
+      "A": "Providing physical server access",
+      "B": "Requiring customer server management",
+      "C": "Executing code in response to events without managing servers",
+      "D": "Only supporting batch processing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Serverless (Functions as a Service) executes code in response to events (HTTP requests, file uploads) without customers managing servers. Providers handle scaling, patching, and availability. You pay only for execution time. Examples: AWS Lambda, Azure Functions.",
     "tip": "Serverless = no server management. Event-driven, auto-scaling, pay per execution.",
     "calculationRequired": false,
@@ -5140,12 +5140,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cloud exit strategy should include:",
     "options": {
-      "A": "Plans for data extraction and migration if changing providers",
-      "B": "Only cost reduction measures",
-      "C": "Immediate termination of all contracts",
-      "D": "Eliminating all cloud usage"
+      "A": "Immediate termination of all contracts",
+      "B": "Eliminating all cloud usage",
+      "C": "Plans for data extraction and migration if changing providers",
+      "D": "Only cost reduction measures"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Exit strategies plan for transitioning away from a cloud provider—data extraction, application migration, timeline, and cost. Important for managing vendor risk and ensuring business continuity if switching providers becomes necessary.",
     "tip": "Exit strategy = plan B. Data portability, migration path, contractual rights.",
     "calculationRequired": false,
@@ -5161,12 +5161,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Container orchestration platforms like Kubernetes provide:",
     "options": {
-      "A": "Only container image creation",
-      "B": "Automated deployment, scaling, and management of containerized applications",
-      "C": "Physical server management",
-      "D": "Database administration"
+      "A": "Physical server management",
+      "B": "Database administration",
+      "C": "Only container image creation",
+      "D": "Automated deployment, scaling, and management of containerized applications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Kubernetes automates container deployment, scaling (up/down based on demand), load balancing, self-healing (restart failed containers), and rolling updates. It manages complex containerized applications across clusters of hosts.",
     "tip": "Kubernetes = container orchestration. Automates deployment, scaling, management.",
     "calculationRequired": false,
@@ -5182,12 +5182,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud Security Posture Management (CSPM) tools help organizations by:",
     "options": {
-      "A": "Replacing cloud provider security",
-      "B": "Continuously monitoring for misconfigurations and compliance violations",
-      "C": "Encrypting all cloud data",
-      "D": "Managing cloud billing"
+      "A": "Managing cloud billing",
+      "B": "Replacing cloud provider security",
+      "C": "Continuously monitoring for misconfigurations and compliance violations",
+      "D": "Encrypting all cloud data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CSPM tools continuously assess cloud environments for misconfigurations, compliance violations, and security risks. They automate detection of issues like public storage, excessive permissions, and missing encryption, enabling rapid remediation.",
     "tip": "CSPM = continuous cloud security assessment. Find misconfigurations automatically.",
     "calculationRequired": false,
@@ -5203,12 +5203,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A multi-cloud strategy provides benefits including:",
     "options": {
-      "A": "Simpler management and lower costs always",
-      "B": "Reduced vendor lock-in and ability to select best-of-breed services",
-      "C": "Elimination of security requirements",
-      "D": "Guaranteed uptime across all providers"
+      "A": "Reduced vendor lock-in and ability to select best-of-breed services",
+      "B": "Elimination of security requirements",
+      "C": "Guaranteed uptime across all providers",
+      "D": "Simpler management and lower costs always"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Multi-cloud uses multiple providers strategically—reducing lock-in, enabling best-of-breed selection, and potentially improving resilience. Challenges include complexity, skill requirements, and governance across providers.",
     "tip": "Multi-cloud: flexibility, reduced lock-in. But adds complexity and skill needs.",
     "calculationRequired": false,
@@ -5224,12 +5224,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud-native security requires different approaches because:",
     "options": {
-      "A": "Traditional security tools work identically in cloud",
-      "B": "Dynamic, ephemeral resources require security that adapts to rapid changes",
-      "C": "Cloud environments are inherently secure",
-      "D": "Network perimeters are unchanged"
+      "A": "Cloud environments are inherently secure",
+      "B": "Network perimeters are unchanged",
+      "C": "Traditional security tools work identically in cloud",
+      "D": "Dynamic, ephemeral resources require security that adapts to rapid changes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Cloud-native environments are dynamic—resources spin up and down, IPs change, containers are ephemeral. Security must integrate with CI/CD, use APIs, operate at cloud scale, and adapt to rapid changes. Traditional perimeter approaches don't suffice.",
     "tip": "Cloud-native = ephemeral, dynamic. Security must be API-driven, automated, adaptive.",
     "calculationRequired": false,
@@ -5245,12 +5245,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Infrastructure as Code (IaC) improves cloud security by:",
     "options": {
-      "A": "Eliminating all manual configuration",
-      "B": "Enabling version control, review, and consistent, repeatable deployments",
-      "C": "Removing the need for access controls",
-      "D": "Automatically encrypting all resources"
+      "A": "Enabling version control, review, and consistent, repeatable deployments",
+      "B": "Removing the need for access controls",
+      "C": "Automatically encrypting all resources",
+      "D": "Eliminating all manual configuration"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "IaC defines infrastructure in code files that can be version controlled, reviewed before deployment, and consistently applied. Security configurations are codified, auditable, and repeatable—reducing drift and misconfiguration from manual changes.",
     "tip": "IaC = infrastructure defined in code. Version control, review, consistency, auditability.",
     "calculationRequired": false,
@@ -5287,12 +5287,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud secrets management solutions address the risk of:",
     "options": {
-      "A": "Physical server theft",
-      "B": "Credentials and API keys exposed in code, configurations, or logs",
-      "C": "Network bandwidth limitations",
-      "D": "User interface design issues"
+      "A": "Credentials and API keys exposed in code, configurations, or logs",
+      "B": "Network bandwidth limitations",
+      "C": "User interface design issues",
+      "D": "Physical server theft"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Secrets management (HashiCorp Vault, AWS Secrets Manager) securely stores and manages credentials, API keys, certificates, and other secrets. They prevent secrets from being hardcoded, logged, or exposed—a common cause of cloud breaches.",
     "tip": "Secrets management = centralized, secure credential storage. No hardcoding secrets.",
     "calculationRequired": false,
@@ -5308,12 +5308,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud auto-scaling provides both benefits and risks because:",
     "options": {
-      "A": "Scaling only occurs manually",
-      "B": "Automatic scaling improves availability but can lead to unexpected costs",
-      "C": "Scaling reduces security",
-      "D": "Auto-scaling eliminates the need for monitoring"
+      "A": "Automatic scaling improves availability but can lead to unexpected costs",
+      "B": "Scaling reduces security",
+      "C": "Auto-scaling eliminates the need for monitoring",
+      "D": "Scaling only occurs manually"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Auto-scaling automatically adds resources for demand spikes (improving availability) and removes them when demand drops (saving costs). However, misconfigured scaling or attacks triggering scaling can create unexpected costs. Limits and alerts are essential.",
     "tip": "Auto-scaling: Set limits, monitor costs. Attacks can trigger scaling and costs.",
     "calculationRequired": false,
@@ -5329,12 +5329,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Virtual Private Clouds (VPCs) enhance security by:",
     "options": {
-      "A": "Eliminating all network connectivity",
-      "B": "Providing isolated network segments with customizable security controls",
-      "C": "Sharing networks with all cloud customers",
-      "D": "Removing encryption requirements"
+      "A": "Providing isolated network segments with customizable security controls",
+      "B": "Sharing networks with all cloud customers",
+      "C": "Removing encryption requirements",
+      "D": "Eliminating all network connectivity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "VPCs create isolated virtual networks within public cloud. Customers control IP ranges, subnets, routing, security groups, and network ACLs. VPCs can connect to on-premises via VPN or dedicated links while remaining isolated from other customers.",
     "tip": "VPC = isolated virtual network. Control subnets, routing, security groups.",
     "calculationRequired": false,
@@ -5350,12 +5350,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When auditing cloud environments, auditors should:",
     "options": {
-      "A": "Rely solely on provider certifications without additional testing",
-      "B": "Evaluate customer responsibilities, configurations, and provider attestations",
-      "C": "Ignore cloud-specific risks",
-      "D": "Audit only on-premises controls"
+      "A": "Audit only on-premises controls",
+      "B": "Rely solely on provider certifications without additional testing",
+      "C": "Evaluate customer responsibilities, configurations, and provider attestations",
+      "D": "Ignore cloud-specific risks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cloud audits must cover: provider certifications/attestations (SOC reports), customer configuration and controls, shared responsibility alignment, data protection, and cloud-specific risks. Provider certifications don't cover customer responsibilities.",
     "tip": "Cloud audit: Provider attestations + customer controls + configuration review.",
     "calculationRequired": false,
@@ -5371,12 +5371,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cloud logging services (CloudTrail, Azure Monitor) are essential for:",
     "options": {
-      "A": "Only billing purposes",
-      "B": "Security monitoring, incident investigation, and compliance evidence",
-      "C": "Replacing all other security controls",
-      "D": "Increasing application performance"
+      "A": "Increasing application performance",
+      "B": "Only billing purposes",
+      "C": "Security monitoring, incident investigation, and compliance evidence",
+      "D": "Replacing all other security controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cloud logging captures API calls, resource changes, access events, and activities. Essential for security monitoring (detect anomalies), incident investigation (forensics), compliance evidence, and troubleshooting. Enable and retain logs appropriately.",
     "tip": "Cloud logging: Enable everywhere, retain appropriately, integrate with SIEM.",
     "calculationRequired": false,
@@ -5434,12 +5434,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "FedRAMP (Federal Risk and Authorization Management Program) is:",
     "options": {
-      "A": "A cloud provider company",
-      "B": "A US government program for assessing and authorizing cloud services",
-      "C": "An encryption standard",
-      "D": "A disaster recovery methodology"
+      "A": "An encryption standard",
+      "B": "A disaster recovery methodology",
+      "C": "A cloud provider company",
+      "D": "A US government program for assessing and authorizing cloud services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "FedRAMP provides a standardized approach for security assessment, authorization, and monitoring of cloud services used by US federal agencies. FedRAMP authorization indicates the cloud service meets federal security requirements.",
     "tip": "FedRAMP = US federal cloud security certification. Required for government use.",
     "calculationRequired": false,
@@ -5455,12 +5455,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Implementing Zero Trust in cloud environments requires:",
     "options": {
-      "A": "Trusting all internal cloud traffic",
-      "B": "Continuous verification, micro-segmentation, and identity-based access regardless of network location",
-      "C": "Eliminating all cloud usage",
-      "D": "Only perimeter firewall protection"
+      "A": "Only perimeter firewall protection",
+      "B": "Trusting all internal cloud traffic",
+      "C": "Continuous verification, micro-segmentation, and identity-based access regardless of network location",
+      "D": "Eliminating all cloud usage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cloud Zero Trust verifies every access request based on identity and context, regardless of whether it originates from inside or outside the cloud network. Micro-segmentation, strong identity, continuous verification, and least privilege are key principles.",
     "tip": "Cloud Zero Trust: No implicit trust. Verify identity/context for every access.",
     "calculationRequired": false,
@@ -5476,12 +5476,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Disaster Recovery (DR) differs from Business Continuity Planning (BCP) in that DR focuses on:",
     "options": {
-      "A": "Overall business operations during disruption",
-      "B": "Recovering IT systems and infrastructure after a disaster",
-      "C": "Employee safety procedures",
-      "D": "Marketing during a crisis"
+      "A": "Marketing during a crisis",
+      "B": "Overall business operations during disruption",
+      "C": "Recovering IT systems and infrastructure after a disaster",
+      "D": "Employee safety procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "DR specifically addresses restoring IT systems, applications, and data after a disaster. BCP is broader, covering all business functions including people, processes, and facilities. DR is a subset of the overall BCP effort.",
     "tip": "DR = IT recovery. BCP = all business functions. DR is part of BCP.",
     "calculationRequired": false,
@@ -5497,12 +5497,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A hot site is a disaster recovery facility that:",
     "options": {
-      "A": "Contains only empty space for equipment",
-      "B": "Has hardware ready but requires software and data restoration",
-      "C": "Is fully equipped with hardware, software, and current data for immediate use",
-      "D": "Is located in a warm climate"
+      "A": "Has hardware ready but requires software and data restoration",
+      "B": "Is fully equipped with hardware, software, and current data for immediate use",
+      "C": "Is located in a warm climate",
+      "D": "Contains only empty space for equipment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "A hot site is a fully operational duplicate facility with hardware, software, network, and up-to-date data, ready for immediate activation. It provides the fastest recovery but is the most expensive option.",
     "tip": "Hot = ready now. Warm = hardware ready, needs data. Cold = empty space.",
     "calculationRequired": false,
@@ -5518,12 +5518,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Business Impact Analysis (BIA) identifies:",
     "options": {
-      "A": "Only IT system requirements",
-      "B": "Critical business functions and the impact of their disruption",
-      "C": "Employee vacation schedules",
-      "D": "Marketing opportunities"
+      "A": "Critical business functions and the impact of their disruption",
+      "B": "Employee vacation schedules",
+      "C": "Marketing opportunities",
+      "D": "Only IT system requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "BIA identifies critical business functions, their dependencies, and the financial, operational, and regulatory impacts of disruption over time. This drives recovery priorities and timing requirements (RTO/RPO).",
     "tip": "BIA = identify what's critical and impact of losing it. Drives recovery priorities.",
     "calculationRequired": false,
@@ -5539,12 +5539,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Recovery Time Objective (RTO) represents:",
     "options": {
-      "A": "The amount of data that can be lost",
-      "B": "The maximum acceptable downtime before recovery must be complete",
-      "C": "The frequency of backups",
-      "D": "The cost of recovery"
+      "A": "The frequency of backups",
+      "B": "The cost of recovery",
+      "C": "The amount of data that can be lost",
+      "D": "The maximum acceptable downtime before recovery must be complete"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "RTO is the maximum acceptable time between a disaster and restoration of business operations. It defines how quickly systems must be recovered. Lower RTOs require more sophisticated (and expensive) recovery solutions.",
     "tip": "RTO = downtime tolerance. How fast must we recover?",
     "calculationRequired": false,
@@ -5560,12 +5560,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Regular testing of BC/DR plans is important because:",
     "options": {
-      "A": "Plans are guaranteed to work without testing",
-      "B": "Tests validate that plans work and identify gaps before a real disaster",
-      "C": "Testing is only required by auditors",
-      "D": "Plans never need updating"
+      "A": "Testing is only required by auditors",
+      "B": "Plans never need updating",
+      "C": "Plans are guaranteed to work without testing",
+      "D": "Tests validate that plans work and identify gaps before a real disaster"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Untested plans may contain errors, outdated information, or unrealistic assumptions. Testing validates effectiveness, trains personnel, identifies gaps, and builds confidence. Plans should be tested at least annually.",
     "tip": "Untested plan = no plan. Test regularly to validate and improve.",
     "calculationRequired": false,
@@ -5581,12 +5581,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 3-2-1 backup rule recommends:",
     "options": {
-      "A": "3 backups per day, 2 servers, 1 location",
-      "B": "3 copies of data, on 2 different media types, with 1 copy offsite",
-      "C": "3 terabytes, 2 hours, 1 administrator",
-      "D": "3 years retention, 2 archives, 1 backup"
+      "A": "3 terabytes, 2 hours, 1 administrator",
+      "B": "3 years retention, 2 archives, 1 backup",
+      "C": "3 backups per day, 2 servers, 1 location",
+      "D": "3 copies of data, on 2 different media types, with 1 copy offsite"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The 3-2-1 rule recommends maintaining 3 copies of data, on 2 different types of storage media (e.g., disk and tape/cloud), with 1 copy stored offsite. This protects against various failure scenarios.",
     "tip": "3-2-1: 3 copies, 2 media types, 1 offsite. Protects against multiple failure types.",
     "calculationRequired": false,
@@ -5644,12 +5644,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A warm site differs from a hot site because a warm site:",
     "options": {
-      "A": "Has no equipment",
-      "B": "Has hardware and connectivity but requires data restoration before use",
-      "C": "Is ready for immediate activation",
-      "D": "Cannot connect to the network"
+      "A": "Is ready for immediate activation",
+      "B": "Cannot connect to the network",
+      "C": "Has no equipment",
+      "D": "Has hardware and connectivity but requires data restoration before use"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Warm sites have hardware, network connectivity, and possibly software, but don't have current data. Data must be restored from backups before operations can resume. They balance cost and recovery speed between hot and cold sites.",
     "tip": "Warm = hardware ready, data needs restoration. Balance of cost and speed.",
     "calculationRequired": false,
@@ -5665,12 +5665,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Maximum Tolerable Downtime (MTD) represents:",
     "options": {
-      "A": "The shortest possible recovery time",
-      "B": "The point beyond which business survival is at risk",
-      "C": "The backup frequency",
-      "D": "The data retention period"
+      "A": "The backup frequency",
+      "B": "The data retention period",
+      "C": "The shortest possible recovery time",
+      "D": "The point beyond which business survival is at risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "MTD (also called Maximum Acceptable Outage/MAO) is the longest time a business function can be unavailable before the organization suffers unacceptable consequences. RTO must be less than MTD to ensure viable recovery.",
     "tip": "MTD = absolute limit before unacceptable harm. RTO must be < MTD.",
     "calculationRequired": false,
@@ -5728,12 +5728,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An organization would choose a cold site when:",
     "options": {
-      "A": "Immediate recovery is critical",
-      "B": "Cost is a primary concern and longer recovery times are acceptable",
-      "C": "Zero data loss is required",
-      "D": "The organization has no IT systems"
+      "A": "Cost is a primary concern and longer recovery times are acceptable",
+      "B": "Zero data loss is required",
+      "C": "The organization has no IT systems",
+      "D": "Immediate recovery is critical"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cold sites provide only basic facilities (space, power, connectivity) without hardware or data. They're the least expensive but have the longest recovery time as equipment must be procured and configured. Suitable for less time-critical systems.",
     "tip": "Cold = empty shell, lowest cost, longest recovery. Days to activate.",
     "calculationRequired": false,
@@ -5770,12 +5770,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Failback in disaster recovery refers to:",
     "options": {
-      "A": "Initial switch to the backup site",
-      "B": "Returning operations from the backup site to the primary site",
-      "C": "Backing up data after a disaster",
-      "D": "Testing backup procedures"
+      "A": "Backing up data after a disaster",
+      "B": "Testing backup procedures",
+      "C": "Initial switch to the backup site",
+      "D": "Returning operations from the backup site to the primary site"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Failover is the switch from primary to backup during a disaster. Failback is the planned return to the primary site after it's restored. Failback requires careful planning to synchronize data and minimize additional disruption.",
     "tip": "Failover = primary to backup. Failback = return to primary. Both need planning.",
     "calculationRequired": false,
@@ -5791,12 +5791,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Dependency mapping in BIA identifies:",
     "options": {
-      "A": "Only internal IT systems",
-      "B": "All resources and systems that business processes depend on",
-      "C": "Employee skills only",
-      "D": "Competitor analysis"
+      "A": "Competitor analysis",
+      "B": "Only internal IT systems",
+      "C": "All resources and systems that business processes depend on",
+      "D": "Employee skills only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dependency mapping identifies all resources business processes depend on: IT systems, applications, data, facilities, personnel, third parties, utilities, and suppliers. Understanding dependencies is critical for comprehensive recovery planning.",
     "tip": "Map all dependencies: systems, people, vendors, utilities. Can't recover what you don't know about.",
     "calculationRequired": false,
@@ -5812,12 +5812,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A full interruption test involves:",
     "options": {
-      "A": "Only testing documentation",
-      "B": "Shutting down primary systems and running entirely from backup",
-      "C": "Discussing scenarios without system changes",
-      "D": "Testing network connectivity only"
+      "A": "Testing network connectivity only",
+      "B": "Only testing documentation",
+      "C": "Shutting down primary systems and running entirely from backup",
+      "D": "Discussing scenarios without system changes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Full interruption tests validate complete recovery capability by actually shutting down production and operating from the disaster recovery environment. This is the most thorough test but carries the highest risk and is often done during low-activity periods.",
     "tip": "Full interruption = real failover. Highest assurance but highest risk. Test off-hours.",
     "calculationRequired": false,
@@ -5896,12 +5896,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Work Recovery Time (WRT) represents:",
     "options": {
-      "A": "The same as RTO",
-      "B": "Time to verify and restore system functionality after technical recovery",
-      "C": "The backup completion time",
-      "D": "Time between full backups"
+      "A": "The backup completion time",
+      "B": "Time between full backups",
+      "C": "The same as RTO",
+      "D": "Time to verify and restore system functionality after technical recovery"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "WRT is the time needed after technical system recovery (RTO) to restore full business functionality—data verification, testing, transaction re-entry, user validation. RTO + WRT must be less than MTD for viable recovery.",
     "tip": "WRT = post-recovery work before full operations. RTO + WRT < MTD.",
     "calculationRequired": false,
@@ -5917,12 +5917,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Managing third-party BC/DR risk requires:",
     "options": {
-      "A": "Assuming vendors have adequate plans",
-      "B": "Reviewing vendor BC/DR capabilities, contractual requirements, and testing participation",
-      "C": "Eliminating all third-party relationships",
-      "D": "Only reviewing vendor financial statements"
+      "A": "Only reviewing vendor financial statements",
+      "B": "Assuming vendors have adequate plans",
+      "C": "Reviewing vendor BC/DR capabilities, contractual requirements, and testing participation",
+      "D": "Eliminating all third-party relationships"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Third-party BC/DR management includes: due diligence on vendor capabilities, contractual recovery requirements, reviewing vendor test results, including vendors in exercises, and having contingency plans for vendor failures.",
     "tip": "Vendor BC/DR: Due diligence, contracts, review tests, include in exercises, have alternatives.",
     "calculationRequired": false,
@@ -5959,12 +5959,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Recovery prioritization should be based primarily on:",
     "options": {
-      "A": "IT system complexity",
-      "B": "Business criticality, regulatory requirements, and financial impact",
-      "C": "System age",
-      "D": "Department size"
+      "A": "Department size",
+      "B": "IT system complexity",
+      "C": "Business criticality, regulatory requirements, and financial impact",
+      "D": "System age"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Prioritization considers: business criticality (impact on operations/revenue), regulatory/legal requirements (compliance obligations), financial impact over time, and dependencies. Technical factors matter but business factors drive priority.",
     "tip": "Prioritize by business impact, not technical factors. What hurts most if down?",
     "calculationRequired": false,
@@ -5980,12 +5980,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "DR testing frequency should consider:",
     "options": {
-      "A": "Only annual testing is sufficient for all systems",
-      "B": "System criticality, change frequency, and regulatory requirements",
-      "C": "Testing is only needed after major disasters",
-      "D": "Testing costs only"
+      "A": "System criticality, change frequency, and regulatory requirements",
+      "B": "Testing is only needed after major disasters",
+      "C": "Testing costs only",
+      "D": "Only annual testing is sufficient for all systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Testing frequency depends on: criticality (more critical = more frequent), change rate (frequent changes need more testing), regulatory requirements (some mandate specific testing), and risk tolerance. Critical systems may need quarterly or more frequent testing.",
     "tip": "Test based on risk: More critical = more frequent. After major changes too.",
     "calculationRequired": false,
@@ -6001,12 +6001,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "BC/DR plans should be updated when:",
     "options": {
-      "A": "Only after a disaster occurs",
-      "B": "After organizational changes, system changes, lessons learned, and at scheduled intervals",
-      "C": "Only when required by auditors",
-      "D": "Plans never need updating"
+      "A": "Only when required by auditors",
+      "B": "Plans never need updating",
+      "C": "Only after a disaster occurs",
+      "D": "After organizational changes, system changes, lessons learned, and at scheduled intervals"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Plans must stay current. Update triggers include: organizational changes (mergers, restructuring), system/infrastructure changes, post-incident lessons learned, test findings, regulatory changes, and scheduled reviews (at least annually).",
     "tip": "Update after: changes, tests, incidents. Review at least annually. Outdated plan = failed plan.",
     "calculationRequired": false,
@@ -6022,12 +6022,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Immutable backups protect against ransomware by:",
     "options": {
-      "A": "Using stronger encryption",
-      "B": "Preventing backup modification or deletion for a defined retention period",
-      "C": "Backing up more frequently",
-      "D": "Storing backups on the same system"
+      "A": "Backing up more frequently",
+      "B": "Storing backups on the same system",
+      "C": "Using stronger encryption",
+      "D": "Preventing backup modification or deletion for a defined retention period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Immutable backups cannot be modified, encrypted, or deleted—even by administrators—during the retention period. This ensures recovery capability even if attackers gain administrative access. Critical for ransomware defense.",
     "tip": "Immutable = cannot be changed or deleted. Ransomware can't touch them.",
     "calculationRequired": false,
@@ -6043,12 +6043,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Effective BC program governance requires:",
     "options": {
-      "A": "IT department ownership only",
-      "B": "Executive sponsorship, cross-functional ownership, and regular oversight",
-      "C": "Delegation to external consultants",
-      "D": "Minimal management involvement"
+      "A": "Executive sponsorship, cross-functional ownership, and regular oversight",
+      "B": "Delegation to external consultants",
+      "C": "Minimal management involvement",
+      "D": "IT department ownership only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "BC governance needs: executive sponsorship (resources, priority), cross-functional involvement (all departments), clear roles/responsibilities, regular program reviews, budget allocation, and metrics/reporting. IT alone cannot own business continuity.",
     "tip": "BC governance: Executive sponsor + cross-functional ownership. Not just IT.",
     "calculationRequired": false,
@@ -6064,12 +6064,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Reciprocal site agreements between organizations have limitations including:",
     "options": {
-      "A": "Being too formal",
-      "B": "Capacity constraints if both organizations experience disasters simultaneously",
-      "C": "Requiring too much testing",
-      "D": "Being too expensive"
+      "A": "Requiring too much testing",
+      "B": "Being too expensive",
+      "C": "Being too formal",
+      "D": "Capacity constraints if both organizations experience disasters simultaneously"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Reciprocal agreements promise mutual backup between organizations. Limitations include: capacity if both need recovery simultaneously, technology compatibility, security concerns, legal/regulatory issues, and reliability of informal arrangements.",
     "tip": "Reciprocal: Low cost but risky. What if both need it? Technology compatible?",
     "calculationRequired": false,
@@ -6085,12 +6085,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "BC/DR test documentation should include:",
     "options": {
-      "A": "Only pass/fail results",
-      "B": "Objectives, scope, participants, results, issues found, and remediation actions",
-      "C": "Just the date of the test",
-      "D": "Only failures"
+      "A": "Just the date of the test",
+      "B": "Only failures",
+      "C": "Only pass/fail results",
+      "D": "Objectives, scope, participants, results, issues found, and remediation actions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Complete test documentation includes: test objectives and scope, participants, detailed results, issues/gaps discovered, time metrics (actual vs expected), lessons learned, and action items for remediation with owners and deadlines.",
     "tip": "Document everything: objectives, results, issues, actions. Drives improvement.",
     "calculationRequired": false,
@@ -6127,12 +6127,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Quantifying business impact in BIA should include:",
     "options": {
-      "A": "Only IT replacement costs",
-      "B": "Lost revenue, regulatory penalties, reputational damage, and recovery costs over time",
-      "C": "Only immediate financial losses",
-      "D": "Technology costs only"
+      "A": "Only immediate financial losses",
+      "B": "Technology costs only",
+      "C": "Only IT replacement costs",
+      "D": "Lost revenue, regulatory penalties, reputational damage, and recovery costs over time"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Impact quantification considers: lost revenue over time, contractual penalties, regulatory fines, customer loss and reputation damage, recovery costs, and increased operating costs. Impact often increases non-linearly over time.",
     "tip": "Quantify all impacts: revenue, penalties, reputation, recovery costs. Impact grows over time.",
     "calculationRequired": false,
@@ -6148,12 +6148,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Air-gapped backup storage provides protection by:",
     "options": {
-      "A": "Using faster network connections",
-      "B": "Being physically or logically isolated from networks that malware could traverse",
-      "C": "Compressing data more efficiently",
-      "D": "Storing data in the same location"
+      "A": "Storing data in the same location",
+      "B": "Using faster network connections",
+      "C": "Being physically or logically isolated from networks that malware could traverse",
+      "D": "Compressing data more efficiently"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Air-gapped backups are isolated from network access—physically disconnected or logically isolated. Ransomware and attackers cannot reach them through network paths. Essential for ensuring recovery capability from sophisticated attacks.",
     "tip": "Air gap = no network path to backups. Attackers can't reach what's not connected.",
     "calculationRequired": false,
@@ -6169,12 +6169,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Effective BC program metrics include:",
     "options": {
-      "A": "Only the number of plans written",
-      "B": "Plan coverage, test completion, RTO/RPO achievement, issue remediation, and training completion",
-      "C": "Only IT system uptime",
-      "D": "Just budget spent"
+      "A": "Only IT system uptime",
+      "B": "Just budget spent",
+      "C": "Only the number of plans written",
+      "D": "Plan coverage, test completion, RTO/RPO achievement, issue remediation, and training completion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "BC metrics track program health: % of processes with current plans, test completion and results, actual vs target RTO/RPO, open issue remediation, training completion, time since plan updates, and incident response effectiveness.",
     "tip": "Measure BC program: coverage, testing, performance, issue closure, training.",
     "calculationRequired": false,
@@ -6190,12 +6190,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cyber resilience extends traditional DR by addressing:",
     "options": {
-      "A": "Only natural disasters",
-      "B": "Recovery from cyber attacks including clean recovery and threat eradication",
-      "C": "Only hardware failures",
-      "D": "Only power outages"
+      "A": "Only hardware failures",
+      "B": "Only power outages",
+      "C": "Only natural disasters",
+      "D": "Recovery from cyber attacks including clean recovery and threat eradication"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Cyber resilience addresses recovery from attacks: ensuring backups aren't compromised, clean recovery (not restoring malware), threat eradication before restoration, and detecting if attackers persist. Traditional DR assumed clean backups.",
     "tip": "Cyber resilience: Clean recovery, eradicate threats, validate backup integrity. Attackers may persist.",
     "calculationRequired": false,
@@ -6211,12 +6211,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IT governance ensures that:",
     "options": {
-      "A": "IT operates independently from business strategy",
-      "B": "IT investments support business objectives and manage risk appropriately",
-      "C": "IT budget is minimized at all costs",
-      "D": "IT decisions are made solely by technicians"
+      "A": "IT budget is minimized at all costs",
+      "B": "IT decisions are made solely by technicians",
+      "C": "IT operates independently from business strategy",
+      "D": "IT investments support business objectives and manage risk appropriately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IT governance provides the framework for ensuring IT investments support business objectives, resources are used responsibly, and IT-related risks are managed appropriately. It aligns IT with business strategy and ensures accountability.",
     "tip": "IT governance = IT aligned with business, risks managed, value delivered.",
     "calculationRequired": false,
@@ -6253,12 +6253,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "COBIT (Control Objectives for Information Technologies) provides:",
     "options": {
-      "A": "Only technical security controls",
-      "B": "A framework for IT governance and management",
-      "C": "Database design standards",
-      "D": "Programming languages"
+      "A": "A framework for IT governance and management",
+      "B": "Database design standards",
+      "C": "Programming languages",
+      "D": "Only technical security controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "COBIT is an IT governance framework providing principles, practices, and tools for enterprise IT governance and management. It helps organizations achieve IT objectives while managing risk and ensuring compliance.",
     "tip": "COBIT = IT governance framework. Guides IT management and governance practices.",
     "calculationRequired": false,
@@ -6274,12 +6274,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The first step in IT risk management is typically:",
     "options": {
-      "A": "Implementing controls",
-      "B": "Identifying and cataloging IT risks",
-      "C": "Accepting all risks",
-      "D": "Transferring risks"
+      "A": "Transferring risks",
+      "B": "Implementing controls",
+      "C": "Identifying and cataloging IT risks",
+      "D": "Accepting all risks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Risk management begins with identifying and cataloging risks—what could go wrong, what assets are at risk, what threats exist. You cannot manage risks you haven't identified. This creates the basis for assessment and response.",
     "tip": "Risk management starts with identification. Can't manage unknown risks.",
     "calculationRequired": false,
@@ -6316,12 +6316,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risk mitigation involves:",
     "options": {
-      "A": "Ignoring the risk",
-      "B": "Implementing controls to reduce likelihood or impact",
-      "C": "Purchasing insurance only",
-      "D": "Eliminating all IT systems"
+      "A": "Implementing controls to reduce likelihood or impact",
+      "B": "Purchasing insurance only",
+      "C": "Eliminating all IT systems",
+      "D": "Ignoring the risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Mitigation reduces risk by implementing controls that lower the likelihood of occurrence (preventive) or minimize impact if it occurs (detective, corrective). It's the most common risk response for significant but manageable risks.",
     "tip": "Mitigate = reduce risk with controls. Reduce likelihood or impact.",
     "calculationRequired": false,
@@ -6337,12 +6337,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IT strategic planning should:",
     "options": {
-      "A": "Be developed independently from business planning",
-      "B": "Align IT capabilities with business objectives and priorities",
-      "C": "Focus only on cost reduction",
-      "D": "Ignore emerging technologies"
+      "A": "Focus only on cost reduction",
+      "B": "Ignore emerging technologies",
+      "C": "Be developed independently from business planning",
+      "D": "Align IT capabilities with business objectives and priorities"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IT strategy must align with and support business strategy—enabling business objectives, prioritizing investments that deliver business value, and ensuring IT capabilities match business needs. Isolated IT planning leads to misalignment.",
     "tip": "IT strategy follows business strategy. Enable business objectives, not technology for its own sake.",
     "calculationRequired": false,
@@ -6358,12 +6358,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Quantitative risk assessment differs from qualitative by:",
     "options": {
-      "A": "Being faster to complete",
-      "B": "Using numerical values for probability and impact calculations",
-      "C": "Requiring fewer data inputs",
-      "D": "Being less accurate"
+      "A": "Requiring fewer data inputs",
+      "B": "Being less accurate",
+      "C": "Being faster to complete",
+      "D": "Using numerical values for probability and impact calculations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Quantitative assessment uses numerical values—probability percentages, dollar impacts, ALE (Annual Loss Expectancy). Qualitative uses descriptive scales (high/medium/low). Quantitative is more precise but requires more data and effort.",
     "tip": "Quantitative = numbers (ALE). Qualitative = scales (H/M/L). Use both appropriately.",
     "calculationRequired": false,
@@ -6379,12 +6379,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The relationship between policies, standards, and procedures is that:",
     "options": {
-      "A": "They are all the same thing",
-      "B": "Policies state requirements, standards specify what, procedures detail how",
-      "C": "Procedures are more important than policies",
-      "D": "Standards are optional guidelines only"
+      "A": "Procedures are more important than policies",
+      "B": "Standards are optional guidelines only",
+      "C": "They are all the same thing",
+      "D": "Policies state requirements, standards specify what, procedures detail how"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Policies state high-level requirements ('data must be protected'). Standards specify what must be done ('use AES-256 encryption'). Procedures detail how ('step 1, step 2...'). Guidelines are recommendations. This hierarchy provides governance structure.",
     "tip": "Policy = what/why. Standard = what specifically. Procedure = how. Guidelines = recommendations.",
     "calculationRequired": false,
@@ -6421,12 +6421,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "ITIL (Information Technology Infrastructure Library) focuses on:",
     "options": {
-      "A": "Only security controls",
-      "B": "IT service management best practices",
-      "C": "Programming standards",
-      "D": "Hardware specifications"
+      "A": "IT service management best practices",
+      "B": "Programming standards",
+      "C": "Hardware specifications",
+      "D": "Only security controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "ITIL provides best practices for IT service management—service strategy, design, transition, operation, and continual improvement. It focuses on delivering IT services that meet business needs efficiently and effectively.",
     "tip": "ITIL = IT service management. How to deliver IT services effectively.",
     "calculationRequired": false,
@@ -6442,12 +6442,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Annual Loss Expectancy (ALE) is calculated as:",
     "options": {
-      "A": "Asset value × Exposure factor",
-      "B": "Single Loss Expectancy × Annual Rate of Occurrence",
-      "C": "Total IT budget × Risk percentage",
-      "D": "Revenue × Downtime"
+      "A": "Revenue × Downtime",
+      "B": "Asset value × Exposure factor",
+      "C": "Single Loss Expectancy × Annual Rate of Occurrence",
+      "D": "Total IT budget × Risk percentage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "ALE = SLE × ARO. Single Loss Expectancy (SLE) is the expected loss per incident. Annual Rate of Occurrence (ARO) is how often the event is expected annually. ALE helps justify control investments by quantifying annual risk cost.",
     "tip": "ALE = SLE × ARO. Compare ALE to control cost to justify investments.",
     "calculationRequired": false,
@@ -6463,12 +6463,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Effective IT performance metrics should be:",
     "options": {
-      "A": "Focused only on technical measures",
-      "B": "Aligned with business outcomes and actionable",
-      "C": "As numerous as possible",
-      "D": "Measured only annually"
+      "A": "As numerous as possible",
+      "B": "Measured only annually",
+      "C": "Focused only on technical measures",
+      "D": "Aligned with business outcomes and actionable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IT metrics should: align with business objectives (not just technical measures), be actionable (drive improvement), be measurable consistently, and be appropriate for the audience. Quality over quantity; focus on what matters.",
     "tip": "Good metrics: Business-aligned, actionable, measurable, audience-appropriate.",
     "calculationRequired": false,
@@ -6484,12 +6484,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risk acceptance is appropriate when:",
     "options": {
-      "A": "The organization wants to ignore all risks",
-      "B": "Cost of mitigation exceeds the potential impact and risk is within tolerance",
-      "C": "No risks have been identified",
-      "D": "Controls are too difficult to implement"
+      "A": "Controls are too difficult to implement",
+      "B": "The organization wants to ignore all risks",
+      "C": "Cost of mitigation exceeds the potential impact and risk is within tolerance",
+      "D": "No risks have been identified"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Accept risk when mitigation cost exceeds benefit and the residual risk is within organizational risk tolerance. Acceptance must be a conscious, documented decision by appropriate authority—not ignoring risk.",
     "tip": "Acceptance = informed decision when cost > benefit. Document and monitor accepted risks.",
     "calculationRequired": false,
@@ -6526,12 +6526,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Residual risk is:",
     "options": {
-      "A": "Risk before any controls are applied",
-      "B": "Risk remaining after controls are implemented",
-      "C": "Risk that has been transferred",
-      "D": "Risk from previous periods"
+      "A": "Risk remaining after controls are implemented",
+      "B": "Risk that has been transferred",
+      "C": "Risk from previous periods",
+      "D": "Risk before any controls are applied"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Inherent risk exists before controls. Residual risk remains after controls are applied. Controls reduce inherent risk to residual risk. Residual risk should be within organizational risk tolerance; if not, additional controls are needed.",
     "tip": "Inherent - Controls = Residual. Residual must be within tolerance.",
     "calculationRequired": false,
@@ -6568,12 +6568,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Threat modeling helps organizations by:",
     "options": {
-      "A": "Eliminating all threats",
-      "B": "Systematically identifying and analyzing potential threats to systems",
-      "C": "Replacing security testing",
-      "D": "Documenting only known attacks"
+      "A": "Replacing security testing",
+      "B": "Documenting only known attacks",
+      "C": "Eliminating all threats",
+      "D": "Systematically identifying and analyzing potential threats to systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Threat modeling systematically identifies threats to systems—who might attack, how, what assets are targeted, and what vulnerabilities might be exploited. It informs security design and prioritizes security investments.",
     "tip": "Threat modeling: Who, why, how would they attack? Informs security design.",
     "calculationRequired": false,
@@ -6589,12 +6589,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IT compliance programs should include:",
     "options": {
-      "A": "Only annual audits",
-      "B": "Identification of requirements, controls implementation, monitoring, and reporting",
-      "C": "Ignoring non-IT regulations",
-      "D": "Compliance documentation only"
+      "A": "Compliance documentation only",
+      "B": "Only annual audits",
+      "C": "Identification of requirements, controls implementation, monitoring, and reporting",
+      "D": "Ignoring non-IT regulations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Compliance programs require: identifying applicable requirements (laws, regulations, contracts), implementing controls, continuous monitoring, reporting, and remediation of issues. It's ongoing, not just periodic audits.",
     "tip": "Compliance: Identify requirements → implement → monitor → report → remediate.",
     "calculationRequired": false,
@@ -6631,12 +6631,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Organizations adopting the NIST Cybersecurity Framework should:",
     "options": {
-      "A": "Implement all controls regardless of applicability",
-      "B": "Assess current state, identify target profile, and develop action plan",
-      "C": "Ignore existing controls",
-      "D": "Use it only for compliance documentation"
+      "A": "Assess current state, identify target profile, and develop action plan",
+      "B": "Ignore existing controls",
+      "C": "Use it only for compliance documentation",
+      "D": "Implement all controls regardless of applicability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NIST CSF adoption involves: assessing current security posture, identifying the desired target state (based on risk), performing gap analysis, and developing a prioritized action plan. It's risk-based, not one-size-fits-all.",
     "tip": "CSF adoption: Current profile → target profile → gap analysis → action plan.",
     "calculationRequired": false,
@@ -6652,12 +6652,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risk appetite differs from risk tolerance in that appetite represents:",
     "options": {
-      "A": "The same concept with different names",
-      "B": "The amount of risk an organization is willing to pursue, while tolerance is the acceptable variation",
-      "C": "Only financial measures",
-      "D": "Individual employee preferences"
+      "A": "Only financial measures",
+      "B": "Individual employee preferences",
+      "C": "The same concept with different names",
+      "D": "The amount of risk an organization is willing to pursue, while tolerance is the acceptable variation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Risk appetite is the amount and type of risk an organization is willing to accept in pursuit of objectives. Risk tolerance is the acceptable variation around objectives. Appetite is strategic; tolerance is operational boundaries.",
     "tip": "Appetite = willing to take. Tolerance = acceptable variance. Appetite is broader/strategic.",
     "calculationRequired": false,
@@ -6715,12 +6715,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An IT balanced scorecard measures performance across:",
     "options": {
-      "A": "Only financial measures",
-      "B": "Multiple perspectives including financial, customer, internal process, and learning",
-      "C": "Only technical metrics",
-      "D": "Only employee satisfaction"
+      "A": "Only employee satisfaction",
+      "B": "Only financial measures",
+      "C": "Multiple perspectives including financial, customer, internal process, and learning",
+      "D": "Only technical metrics"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "IT balanced scorecard adapts the traditional framework: financial (IT cost efficiency, value delivery), customer (user satisfaction, business alignment), internal process (operational excellence, security), and learning (innovation, skills development).",
     "tip": "Balanced scorecard: Financial + customer + process + learning. Holistic view.",
     "calculationRequired": false,
@@ -6799,12 +6799,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Continuous compliance monitoring provides advantages over periodic assessment by:",
     "options": {
-      "A": "Reducing the need for any compliance activities",
-      "B": "Detecting issues promptly and reducing point-in-time assessment burden",
-      "C": "Eliminating all compliance requirements",
-      "D": "Only working for small organizations"
+      "A": "Eliminating all compliance requirements",
+      "B": "Only working for small organizations",
+      "C": "Reducing the need for any compliance activities",
+      "D": "Detecting issues promptly and reducing point-in-time assessment burden"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Continuous monitoring detects compliance issues as they occur (not months later), enables faster remediation, provides real-time compliance visibility, and reduces the burden of periodic point-in-time assessments.",
     "tip": "Continuous monitoring: Real-time detection, faster remediation, reduced audit burden.",
     "calculationRequired": false,
@@ -6820,12 +6820,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risk-based security investment prioritization ensures:",
     "options": {
-      "A": "Equal spending on all controls",
-      "B": "Resources are allocated to address the highest risks first",
-      "C": "Only low-cost controls are implemented",
-      "D": "All risks are eliminated"
+      "A": "All risks are eliminated",
+      "B": "Equal spending on all controls",
+      "C": "Resources are allocated to address the highest risks first",
+      "D": "Only low-cost controls are implemented"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Risk-based prioritization allocates limited security resources to address the highest-impact risks first, maximizing risk reduction per dollar spent. It requires understanding risk levels and control effectiveness to make informed trade-offs.",
     "tip": "Risk-based investment: Highest risks first, maximum risk reduction per dollar.",
     "calculationRequired": false,
@@ -6862,12 +6862,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Key Risk Indicators (KRIs) differ from Key Performance Indicators (KPIs) by:",
     "options": {
-      "A": "Being identical measures",
-      "B": "Providing early warning of increasing risk levels",
-      "C": "Measuring only financial outcomes",
-      "D": "Being reported less frequently"
+      "A": "Being reported less frequently",
+      "B": "Being identical measures",
+      "C": "Providing early warning of increasing risk levels",
+      "D": "Measuring only financial outcomes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "KRIs are forward-looking metrics that provide early warning of changing risk levels—allowing proactive response before risks materialize. KPIs measure performance outcomes. Examples: failed login attempts, unpatched systems, employee turnover.",
     "tip": "KRIs = leading indicators of risk. KPIs = performance outcomes. KRIs warn before problems.",
     "calculationRequired": false,
@@ -6904,12 +6904,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risk aggregation analysis is important because:",
     "options": {
-      "A": "Individual risks are sufficient to understand",
-      "B": "Multiple smaller risks may combine to create enterprise-level impact",
-      "C": "It reduces the number of risks to manage",
-      "D": "Aggregated risks are always smaller than individual risks"
+      "A": "Aggregated risks are always smaller than individual risks",
+      "B": "Individual risks are sufficient to understand",
+      "C": "Multiple smaller risks may combine to create enterprise-level impact",
+      "D": "It reduces the number of risks to manage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Individual risks may be tolerable but combine to exceed risk appetite. Aggregation identifies: concentration risks, correlated risks that may occur together, and cumulative impact across the enterprise. Essential for enterprise risk view.",
     "tip": "Aggregation: Individual risks acceptable, combined may not be. Look at enterprise view.",
     "calculationRequired": false,
@@ -6925,12 +6925,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In the three lines model for IT governance, the second line typically includes:",
     "options": {
-      "A": "Operational management only",
-      "B": "Risk management, compliance, and security oversight functions",
-      "C": "Internal audit only",
-      "D": "External auditors"
+      "A": "External auditors",
+      "B": "Operational management only",
+      "C": "Risk management, compliance, and security oversight functions",
+      "D": "Internal audit only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "First line: Operational management owns and manages risks. Second line: Risk management, compliance, IT security—provide expertise, monitoring, and challenge. Third line: Internal audit provides independent assurance. Clear roles prevent gaps.",
     "tip": "1st line = operations. 2nd line = oversight functions. 3rd line = independent audit.",
     "calculationRequired": false,
@@ -6946,12 +6946,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Input controls are designed to ensure:",
     "options": {
-      "A": "Data is stored efficiently",
-      "B": "Data entered into a system is accurate, complete, and authorized",
-      "C": "Reports are generated quickly",
-      "D": "Users have fast login times"
+      "A": "Reports are generated quickly",
+      "B": "Users have fast login times",
+      "C": "Data is stored efficiently",
+      "D": "Data entered into a system is accurate, complete, and authorized"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Input controls validate data at entry—checking for accuracy (correct format, range, reasonableness), completeness (required fields present), and authorization (proper approval). They prevent garbage in/garbage out by catching errors early.",
     "tip": "Input controls: Accurate, complete, authorized data entry. First line of data quality.",
     "calculationRequired": false,
@@ -6988,12 +6988,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Control totals in batch processing are used to:",
     "options": {
-      "A": "Speed up processing",
-      "B": "Verify all records were processed completely and accurately",
-      "C": "Encrypt data during processing",
-      "D": "Assign sequential numbers"
+      "A": "Assign sequential numbers",
+      "B": "Speed up processing",
+      "C": "Verify all records were processed completely and accurately",
+      "D": "Encrypt data during processing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Control totals (hash totals, record counts, financial totals) are calculated before and after processing. Matching totals verify that all records were processed without additions, deletions, or alterations during batch processing.",
     "tip": "Control totals: Before = After. Ensures complete, accurate processing.",
     "calculationRequired": false,
@@ -7009,12 +7009,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Output controls ensure that:",
     "options": {
-      "A": "Reports are as long as possible",
-      "B": "Output reaches only authorized recipients in a timely manner",
-      "C": "All users receive all reports",
-      "D": "Reports are stored indefinitely"
+      "A": "All users receive all reports",
+      "B": "Reports are stored indefinitely",
+      "C": "Reports are as long as possible",
+      "D": "Output reaches only authorized recipients in a timely manner"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Output controls ensure reports and data reach authorized recipients, are protected during distribution, and are produced timely. Controls include distribution lists, secure delivery, and verification that outputs were received.",
     "tip": "Output controls: Right information, right people, right time, protected delivery.",
     "calculationRequired": false,
@@ -7051,12 +7051,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Automated approval workflows in applications provide:",
     "options": {
-      "A": "Only faster processing",
-      "B": "Enforced authorization requirements before transactions are processed",
-      "C": "Elimination of all human review",
-      "D": "Unlimited spending authority"
+      "A": "Elimination of all human review",
+      "B": "Unlimited spending authority",
+      "C": "Only faster processing",
+      "D": "Enforced authorization requirements before transactions are processed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Automated workflows ensure transactions requiring approval are routed to appropriate approvers based on defined rules (amount thresholds, transaction type). The system enforces that approvals are obtained before processing proceeds.",
     "tip": "Workflow = enforced approvals. System ensures proper authorization before processing.",
     "calculationRequired": false,
@@ -7072,12 +7072,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A validity check (or table lookup) verifies that:",
     "options": {
-      "A": "A numeric field contains only numbers",
-      "B": "An entered value exists in an approved reference table",
-      "C": "Two fields total correctly",
-      "D": "A date is in the future"
+      "A": "An entered value exists in an approved reference table",
+      "B": "Two fields total correctly",
+      "C": "A date is in the future",
+      "D": "A numeric field contains only numbers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Validity checks compare entered values against authorized reference tables—state codes against valid state list, product codes against product master, or employee IDs against employee file. Invalid codes are rejected.",
     "tip": "Validity check = lookup against master data. Code must exist to be valid.",
     "calculationRequired": false,
@@ -7093,12 +7093,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A reasonableness test flags transactions that:",
     "options": {
-      "A": "Have invalid characters",
-      "B": "Exceed expected parameters based on historical patterns or business rules",
-      "C": "Are missing required fields",
-      "D": "Have incorrect formatting"
+      "A": "Have incorrect formatting",
+      "B": "Have invalid characters",
+      "C": "Exceed expected parameters based on historical patterns or business rules",
+      "D": "Are missing required fields"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Reasonableness tests compare transactions against expected values—unusually large orders, significant variance from historical averages, or combinations that don't make business sense. They flag anomalies for review.",
     "tip": "Reasonableness = does this make sense? Flag unusual transactions for review.",
     "calculationRequired": false,
@@ -7114,12 +7114,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Duplicate checking controls prevent:",
     "options": {
-      "A": "All data entry",
-      "B": "The same transaction from being processed multiple times",
-      "C": "Users from logging in twice",
-      "D": "Backup creation"
+      "A": "The same transaction from being processed multiple times",
+      "B": "Users from logging in twice",
+      "C": "Backup creation",
+      "D": "All data entry"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Duplicate checks identify and prevent reprocessing of the same transaction—using unique identifiers, document numbers, or key field combinations. Essential for preventing double payments, duplicate orders, or redundant records.",
     "tip": "Duplicate check: Unique key comparison. Prevent double processing.",
     "calculationRequired": false,
@@ -7156,12 +7156,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Exception reports are valuable because they:",
     "options": {
-      "A": "Include all transactions for review",
-      "B": "Highlight unusual items requiring management attention",
-      "C": "Replace all other reports",
-      "D": "Are only produced annually"
+      "A": "Are only produced annually",
+      "B": "Include all transactions for review",
+      "C": "Highlight unusual items requiring management attention",
+      "D": "Replace all other reports"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Exception reports filter data to show only items outside normal parameters—large transactions, override usage, failed validations, or policy violations. They focus management attention on items requiring review without information overload.",
     "tip": "Exception reports = focus on outliers. Management by exception—review what matters.",
     "calculationRequired": false,
@@ -7177,12 +7177,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Transaction limit controls restrict:",
     "options": {
-      "A": "The number of users who can access the system",
-      "B": "The dollar amount or volume of transactions a user can process",
-      "C": "System response time",
-      "D": "Report generation frequency"
+      "A": "The dollar amount or volume of transactions a user can process",
+      "B": "System response time",
+      "C": "Report generation frequency",
+      "D": "The number of users who can access the system"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Transaction limits cap what users can authorize or process based on their authority level—dollar limits for approvals, daily transaction limits, or cumulative limits. Transactions exceeding limits require higher-level approval.",
     "tip": "Transaction limits = authority caps. Beyond limit needs higher approval.",
     "calculationRequired": false,
@@ -7198,12 +7198,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Check digit verification helps prevent:",
     "options": {
-      "A": "Unauthorized access",
-      "B": "Data entry errors such as transpositions or omissions",
-      "C": "System crashes",
-      "D": "Report distribution errors"
+      "A": "Report distribution errors",
+      "B": "Unauthorized access",
+      "C": "Data entry errors such as transpositions or omissions",
+      "D": "System crashes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Check digits are calculated values added to identification numbers. When the number is entered, the check digit is recalculated—if it doesn't match, there's an entry error. Catches transpositions (12 vs 21) and typos.",
     "tip": "Check digit = self-validating number. Catches typos and transpositions.",
     "calculationRequired": false,
@@ -7240,12 +7240,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "User prompts and immediate feedback during data entry:",
     "options": {
-      "A": "Slow down processing unnecessarily",
-      "B": "Guide users to correct input and catch errors before submission",
-      "C": "Are only aesthetic features",
-      "D": "Replace all validation controls"
+      "A": "Are only aesthetic features",
+      "B": "Replace all validation controls",
+      "C": "Slow down processing unnecessarily",
+      "D": "Guide users to correct input and catch errors before submission"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Prompts guide users on expected input format and required fields. Immediate feedback (error messages, confirmation) allows correction before submission. This catches errors at the source rather than during later processing.",
     "tip": "Prompts + feedback = user guidance. Catch errors immediately at entry point.",
     "calculationRequired": false,
@@ -7261,12 +7261,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Controls preventing users from approving their own transactions enforce:",
     "options": {
-      "A": "Faster processing",
-      "B": "Segregation of duties through system configuration",
-      "C": "Unlimited authority",
-      "D": "Manual processing only"
+      "A": "Unlimited authority",
+      "B": "Manual processing only",
+      "C": "Faster processing",
+      "D": "Segregation of duties through system configuration"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Self-approval restrictions enforce segregation of duties in applications—the person initiating a transaction cannot also approve it. The system blocks such attempts and routes to a different approver.",
     "tip": "No self-approval = system-enforced segregation. Initiator ≠ approver.",
     "calculationRequired": false,
@@ -7282,12 +7282,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cutoff controls ensure:",
     "options": {
-      "A": "All users log off at the same time",
-      "B": "Transactions are recorded in the correct accounting period",
-      "C": "System backups occur daily",
-      "D": "Reports are generated automatically"
+      "A": "Reports are generated automatically",
+      "B": "All users log off at the same time",
+      "C": "Transactions are recorded in the correct accounting period",
+      "D": "System backups occur daily"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cutoff controls ensure transactions are recorded in the proper period—critical for accurate financial statements. They manage period-end timing for receipts, shipments, and accruals to prevent manipulation of results.",
     "tip": "Cutoff = right period. Critical at period-end for accurate financials.",
     "calculationRequired": false,
@@ -7303,12 +7303,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Balancing output reports to source data verifies:",
     "options": {
-      "A": "Reports are formatted correctly",
-      "B": "Output accurately reflects processed transactions with no losses",
-      "C": "Users received the reports",
-      "D": "Reports are encrypted"
+      "A": "Users received the reports",
+      "B": "Reports are encrypted",
+      "C": "Reports are formatted correctly",
+      "D": "Output accurately reflects processed transactions with no losses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Report balancing compares output totals to input/source totals, verifying that all transactions were accurately reflected in outputs. Discrepancies indicate processing errors, data loss, or unauthorized modifications.",
     "tip": "Balance reports: Output totals = Input totals. Proves accurate, complete processing.",
     "calculationRequired": false,
@@ -7324,12 +7324,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Closed-loop verification displays:",
     "options": {
-      "A": "The user's password",
-      "B": "Related information to confirm the entered code is correct",
-      "C": "Error messages only",
-      "D": "System performance statistics"
+      "A": "Error messages only",
+      "B": "System performance statistics",
+      "C": "The user's password",
+      "D": "Related information to confirm the entered code is correct"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Closed-loop verification displays additional information when a code is entered—entering a customer number shows the customer name. The user verifies the displayed information matches expectations, catching entry errors.",
     "tip": "Closed-loop: Enter code → see related data → verify it's right. Confirms accuracy.",
     "calculationRequired": false,
@@ -7366,12 +7366,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Configurable application controls require governance because:",
     "options": {
-      "A": "They never need to change",
-      "B": "Changes to configurations can weaken or disable intended controls",
-      "C": "They replace all manual controls",
-      "D": "Configurations are always secure by default"
+      "A": "Changes to configurations can weaken or disable intended controls",
+      "B": "They replace all manual controls",
+      "C": "Configurations are always secure by default",
+      "D": "They never need to change"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Configurable controls (approval limits, validation rules, workflow settings) can be modified. Without proper change control, configurations may be weakened—raised limits, disabled validations, or bypassed approvals. Configuration changes need the same rigor as code changes.",
     "tip": "Configuration changes = control changes. Require same approval/testing as code.",
     "calculationRequired": false,
@@ -7387,12 +7387,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Interface controls between systems should include:",
     "options": {
-      "A": "Only encryption",
-      "B": "Record counts, totals reconciliation, error handling, and timing controls",
-      "C": "Manual data entry only",
-      "D": "No validation since systems are trusted"
+      "A": "Record counts, totals reconciliation, error handling, and timing controls",
+      "B": "Manual data entry only",
+      "C": "No validation since systems are trusted",
+      "D": "Only encryption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Interface controls ensure complete, accurate data transfer: record counts match, control totals balance, errors are captured and handled, timing is controlled, and data integrity is maintained. Interfaces are high-risk points for data loss.",
     "tip": "Interface controls: Counts, totals, error handling, timing. Verify complete transfer.",
     "calculationRequired": false,
@@ -7408,12 +7408,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Automated controls are generally considered more reliable than manual controls because:",
     "options": {
-      "A": "They never fail",
-      "B": "They are applied consistently without human judgment variation",
-      "C": "They require no testing",
-      "D": "They are always correctly configured"
+      "A": "They are applied consistently without human judgment variation",
+      "B": "They require no testing",
+      "C": "They are always correctly configured",
+      "D": "They never fail"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Automated controls execute consistently—same rules every time, no fatigue or judgment variation. However, they're only as good as their design and configuration. Testing validates correct setup; change control maintains reliability.",
     "tip": "Automated = consistent execution. But validate design and monitor configuration.",
     "calculationRequired": false,
@@ -7429,12 +7429,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Automated three-way matching in accounts payable compares:",
     "options": {
-      "A": "Three copies of the same invoice",
-      "B": "Purchase order, receiving report, and invoice before payment approval",
-      "C": "Three different payment methods",
-      "D": "Three approver signatures"
+      "A": "Purchase order, receiving report, and invoice before payment approval",
+      "B": "Three different payment methods",
+      "C": "Three approver signatures",
+      "D": "Three copies of the same invoice"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Three-way matching compares: purchase order (what was ordered), receiving report (what was received), and invoice (what vendor billed). Discrepancies are flagged for investigation before payment is approved. Prevents paying for unordered or unreceived goods.",
     "tip": "3-way match: PO + Receipt + Invoice. All must agree before payment.",
     "calculationRequired": false,
@@ -7450,12 +7450,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Enforcing segregation of duties in ERP systems is challenging because:",
     "options": {
-      "A": "ERP systems don't support role-based access",
-      "B": "Integrated modules may create toxic access combinations across functions",
-      "C": "ERP systems are always properly segregated by default",
-      "D": "Segregation is not important in ERP"
+      "A": "Integrated modules may create toxic access combinations across functions",
+      "B": "ERP systems are always properly segregated by default",
+      "C": "Segregation is not important in ERP",
+      "D": "ERP systems don't support role-based access"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "ERP integration means users may gain access across multiple modules (procurement, AP, inventory). This can create segregation violations (e.g., creating vendors and approving payments). Careful role design and monitoring for toxic combinations is essential.",
     "tip": "ERP integration risk: Cross-module access may violate SOD. Monitor for toxic combinations.",
     "calculationRequired": false,
@@ -7513,12 +7513,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Controls over master file changes (vendor, customer, employee files) should include:",
     "options": {
-      "A": "Allowing any user to make changes for efficiency",
-      "B": "Authorization, dual approval for sensitive changes, change logging, and periodic review",
-      "C": "No documentation of changes",
-      "D": "Changes only at year-end"
+      "A": "No documentation of changes",
+      "B": "Changes only at year-end",
+      "C": "Allowing any user to make changes for efficiency",
+      "D": "Authorization, dual approval for sensitive changes, change logging, and periodic review"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Master file changes are high-risk—new vendors, bank account changes, and pay rate modifications are common fraud vectors. Controls include: restricted access, dual approval, independent verification, change logging, and periodic review of changes.",
     "tip": "Master file changes = high fraud risk. Restrict access, dual approve, review changes.",
     "calculationRequired": false,
@@ -7534,12 +7534,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Secure report distribution controls for sensitive information should include:",
     "options": {
-      "A": "Emailing all reports to all employees",
-      "B": "Access restrictions, encryption, secure delivery, and recipient verification",
-      "C": "Printing all reports for physical distribution",
-      "D": "No controls since reports are internal"
+      "A": "No controls since reports are internal",
+      "B": "Emailing all reports to all employees",
+      "C": "Access restrictions, encryption, secure delivery, and recipient verification",
+      "D": "Printing all reports for physical distribution"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Sensitive report distribution requires: access controls limiting who can receive, encryption in transit and at rest, secure delivery methods, recipient verification, and audit trails. Especially important for PII, financial data, and confidential information.",
     "tip": "Sensitive reports: Restrict access, encrypt, verify recipients, audit distribution.",
     "calculationRequired": false,
@@ -7555,12 +7555,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cross-field validation checks help detect:",
     "options": {
-      "A": "Only formatting errors",
-      "B": "Logical inconsistencies between related data fields",
-      "C": "Network connectivity issues",
-      "D": "User password strength"
+      "A": "User password strength",
+      "B": "Only formatting errors",
+      "C": "Logical inconsistencies between related data fields",
+      "D": "Network connectivity issues"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cross-field validations check logical relationships between fields: billing address state matches zip code, hire date is before termination date, or quantity × price equals extended amount. They catch errors that single-field checks miss.",
     "tip": "Cross-field: Do related fields make sense together? Logical relationship checks.",
     "calculationRequired": false,
@@ -7597,12 +7597,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Suspense account monitoring is a control because:",
     "options": {
-      "A": "Suspense accounts should always have balances",
-      "B": "Items in suspense require investigation and clearing, indicating processing issues",
-      "C": "Suspense accounts generate the most revenue",
-      "D": "They are only used for cash transactions"
+      "A": "Suspense accounts generate the most revenue",
+      "B": "They are only used for cash transactions",
+      "C": "Suspense accounts should always have balances",
+      "D": "Items in suspense require investigation and clearing, indicating processing issues"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Suspense accounts hold transactions that couldn't be properly classified or matched. Aged items indicate processing problems or potential fraud. Regular review and clearing ensures issues are addressed and accounts don't mask errors.",
     "tip": "Monitor suspense: Items should clear quickly. Aged items = investigate.",
     "calculationRequired": false,
@@ -7618,12 +7618,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Electronic Data Interchange (EDI) controls should address:",
     "options": {
-      "A": "Only document formatting",
-      "B": "Trading partner authentication, data validation, acknowledgments, and exception handling",
-      "C": "Paper document processing",
-      "D": "Internal communications only"
+      "A": "Trading partner authentication, data validation, acknowledgments, and exception handling",
+      "B": "Paper document processing",
+      "C": "Internal communications only",
+      "D": "Only document formatting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "EDI controls include: trading partner authentication (verify sender), data validation (format and business rules), functional acknowledgments (confirm receipt), exception handling, and reconciliation between EDI and internal systems.",
     "tip": "EDI controls: Partner verification, validation, acknowledgments, exceptions, reconciliation.",
     "calculationRequired": false,
@@ -7639,12 +7639,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When application control overrides are necessary, controls should ensure:",
     "options": {
-      "A": "Overrides are allowed without documentation",
-      "B": "Overrides are authorized, documented, and reviewed",
-      "C": "All users can override any control",
-      "D": "Overrides are permanent changes"
+      "A": "Overrides are authorized, documented, and reviewed",
+      "B": "All users can override any control",
+      "C": "Overrides are permanent changes",
+      "D": "Overrides are allowed without documentation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Override controls require: restricted authority (specific roles), documentation of reason, independent approval, logging for audit trail, and periodic review. High override rates may indicate control design issues or attempted circumvention.",
     "tip": "Override controls: Authorize, document, approve, log, review. Monitor override volume.",
     "calculationRequired": false,
@@ -7660,12 +7660,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Testing IT application controls (ITACs) typically involves:",
     "options": {
-      "A": "Only reviewing documentation",
-      "B": "Configuration review, transaction testing, exception review, and access verification",
-      "C": "Financial statement analysis only",
-      "D": "Interviewing users without system access"
+      "A": "Interviewing users without system access",
+      "B": "Only reviewing documentation",
+      "C": "Configuration review, transaction testing, exception review, and access verification",
+      "D": "Financial statement analysis only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "ITAC testing includes: reviewing configurations (verify settings match design), transaction testing (trace transactions through controls), exception report review, access right verification, and for automated controls, testing once with periodic revalidation.",
     "tip": "ITAC testing: Config review + transaction testing + exception review + access verification.",
     "calculationRequired": false,
@@ -7681,12 +7681,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Blockchain technology provides:",
     "options": {
-      "A": "Centralized data storage",
-      "B": "A distributed, immutable ledger of transactions",
-      "C": "Faster processing than all traditional databases",
-      "D": "Unlimited storage capacity"
+      "A": "A distributed, immutable ledger of transactions",
+      "B": "Faster processing than all traditional databases",
+      "C": "Unlimited storage capacity",
+      "D": "Centralized data storage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Blockchain is a distributed ledger where transactions are recorded in blocks linked cryptographically. Once recorded, transactions are immutable (cannot be changed). Multiple nodes maintain copies, providing transparency and tamper resistance.",
     "tip": "Blockchain = distributed, immutable ledger. Transactions can't be altered after recording.",
     "calculationRequired": false,
@@ -7744,12 +7744,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Robotic Process Automation (RPA) is best suited for:",
     "options": {
-      "A": "Creative problem solving",
-      "B": "Repetitive, rule-based tasks across applications",
-      "C": "Physical manufacturing only",
-      "D": "Unstructured decision making"
+      "A": "Repetitive, rule-based tasks across applications",
+      "B": "Physical manufacturing only",
+      "C": "Unstructured decision making",
+      "D": "Creative problem solving"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "RPA uses software 'bots' to automate repetitive, rule-based tasks—data entry, copying data between systems, generating reports, and following defined procedures. It mimics human actions across applications without changing underlying systems.",
     "tip": "RPA = automate repetitive, rule-based tasks. Bots mimic human actions.",
     "calculationRequired": false,
@@ -7765,12 +7765,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Big data is commonly characterized by the 'three Vs':",
     "options": {
-      "A": "Vision, Value, Verification",
-      "B": "Volume, Velocity, Variety",
-      "C": "Validation, Virtualization, Visualization",
-      "D": "Vendors, Versions, Variables"
+      "A": "Vendors, Versions, Variables",
+      "B": "Vision, Value, Verification",
+      "C": "Volume, Velocity, Variety",
+      "D": "Validation, Virtualization, Visualization"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Big data's three Vs: Volume (massive amounts), Velocity (high speed of data generation and processing), Variety (diverse data types—structured, unstructured, semi-structured). Additional Vs include Veracity (accuracy) and Value.",
     "tip": "3 Vs: Volume, Velocity, Variety. Sometimes add Veracity and Value.",
     "calculationRequired": false,
@@ -7807,12 +7807,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Smart contracts on blockchain platforms:",
     "options": {
-      "A": "Are legal contracts in digital format",
-      "B": "Are self-executing code that runs automatically when conditions are met",
-      "C": "Require lawyers to execute",
-      "D": "Can only handle financial transactions"
+      "A": "Are self-executing code that runs automatically when conditions are met",
+      "B": "Require lawyers to execute",
+      "C": "Can only handle financial transactions",
+      "D": "Are legal contracts in digital format"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Smart contracts are code stored on blockchain that automatically executes when predetermined conditions are met—no intermediary needed. Applications include automatic payments, escrow, insurance claims, and supply chain verification.",
     "tip": "Smart contracts = code that auto-executes when conditions met. No middleman needed.",
     "calculationRequired": false,
@@ -7849,12 +7849,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IoT devices present security challenges including:",
     "options": {
-      "A": "Too much processing power",
-      "B": "Limited security capabilities and difficult patching",
-      "C": "Excessive encryption",
-      "D": "Too much vendor support"
+      "A": "Limited security capabilities and difficult patching",
+      "B": "Excessive encryption",
+      "C": "Too much vendor support",
+      "D": "Too much processing power"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "IoT security challenges: limited device resources for security, default credentials, difficult/impossible patching, lack of encryption, insecure protocols, and massive scale. Compromised IoT devices form botnets for attacks.",
     "tip": "IoT security: Limited resources, hard to patch, default credentials. High-risk attack surface.",
     "calculationRequired": false,
@@ -7891,12 +7891,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A key risk of data lakes is:",
     "options": {
-      "A": "Too much structure",
-      "B": "Becoming a 'data swamp' without proper governance",
-      "C": "Limited storage capacity",
-      "D": "Inability to store unstructured data"
+      "A": "Limited storage capacity",
+      "B": "Inability to store unstructured data",
+      "C": "Too much structure",
+      "D": "Becoming a 'data swamp' without proper governance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Data lakes can become 'data swamps'—ungoverned repositories of unknown, unreliable data. Without cataloging, quality controls, access management, and lifecycle governance, data becomes unusable and potentially risky.",
     "tip": "Data lake needs governance. Without it = data swamp (unusable, risky).",
     "calculationRequired": false,
@@ -7933,12 +7933,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Blockchain consensus mechanisms are needed to:",
     "options": {
-      "A": "Encrypt all transactions",
-      "B": "Enable agreement on transaction validity without central authority",
-      "C": "Speed up processing",
-      "D": "Reduce storage requirements"
+      "A": "Speed up processing",
+      "B": "Reduce storage requirements",
+      "C": "Encrypt all transactions",
+      "D": "Enable agreement on transaction validity without central authority"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Consensus mechanisms (Proof of Work, Proof of Stake, etc.) enable distributed nodes to agree on which transactions are valid without a central authority. This is what makes blockchain decentralized and trustworthy.",
     "tip": "Consensus = distributed agreement. Nodes agree on valid transactions without central authority.",
     "calculationRequired": false,
@@ -7954,12 +7954,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 'API economy' refers to:",
     "options": {
-      "A": "Government regulation of APIs",
-      "B": "Using APIs to enable new business models and partnerships",
-      "C": "Charging for API documentation",
-      "D": "Eliminating all APIs"
+      "A": "Using APIs to enable new business models and partnerships",
+      "B": "Charging for API documentation",
+      "C": "Eliminating all APIs",
+      "D": "Government regulation of APIs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The API economy involves exposing business capabilities through APIs to enable integration, partnerships, and new business models. Companies monetize data/services via APIs, create ecosystems, and enable innovation.",
     "tip": "API economy: APIs enable new business models, partnerships, revenue streams.",
     "calculationRequired": false,
@@ -7975,12 +7975,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Edge computing in IoT environments provides benefits by:",
     "options": {
-      "A": "Centralizing all processing in the cloud",
-      "B": "Processing data closer to the source, reducing latency and bandwidth",
-      "C": "Eliminating the need for any sensors",
-      "D": "Increasing network congestion"
+      "A": "Eliminating the need for any sensors",
+      "B": "Increasing network congestion",
+      "C": "Centralizing all processing in the cloud",
+      "D": "Processing data closer to the source, reducing latency and bandwidth"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Edge computing processes data near the source (at or near IoT devices) rather than sending everything to the cloud. Benefits include reduced latency for real-time decisions, lower bandwidth costs, and continued operation during connectivity issues.",
     "tip": "Edge = process locally. Lower latency, reduced bandwidth, works offline.",
     "calculationRequired": false,
@@ -7996,12 +7996,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The key difference between RPA and AI is that RPA:",
     "options": {
-      "A": "Is more intelligent than AI",
-      "B": "Follows rules while AI learns and makes decisions",
-      "C": "Requires no configuration",
-      "D": "Only works with physical robots"
+      "A": "Requires no configuration",
+      "B": "Only works with physical robots",
+      "C": "Is more intelligent than AI",
+      "D": "Follows rules while AI learns and makes decisions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "RPA follows predefined rules (if-then) to automate tasks—it doesn't learn or improve. AI learns from data and makes decisions. Intelligent automation combines RPA with AI for handling exceptions and unstructured data.",
     "tip": "RPA = rule-following. AI = learning. Combining them = intelligent automation.",
     "calculationRequired": false,
@@ -8017,12 +8017,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Natural Language Processing (NLP) enables applications to:",
     "options": {
-      "A": "Only translate between human languages",
-      "B": "Understand, interpret, and generate human language",
-      "C": "Process only spoken words",
-      "D": "Replace all written communication"
+      "A": "Understand, interpret, and generate human language",
+      "B": "Process only spoken words",
+      "C": "Replace all written communication",
+      "D": "Only translate between human languages"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NLP enables computers to understand, interpret, and generate human language. Applications include chatbots, sentiment analysis, document processing, translation, and voice assistants. It bridges human-computer interaction.",
     "tip": "NLP = computers understanding human language. Chatbots, sentiment, document processing.",
     "calculationRequired": false,
@@ -8038,12 +8038,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Predictive analytics uses historical data to:",
     "options": {
-      "A": "Only describe what happened in the past",
-      "B": "Forecast future outcomes and probabilities",
-      "C": "Replace all human decision-making",
-      "D": "Store data more efficiently"
+      "A": "Forecast future outcomes and probabilities",
+      "B": "Replace all human decision-making",
+      "C": "Store data more efficiently",
+      "D": "Only describe what happened in the past"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Predictive analytics uses statistical models and machine learning on historical data to forecast future outcomes—customer behavior, equipment failure, fraud probability, demand forecasting. It informs but doesn't replace decisions.",
     "tip": "Predictive = forecast future using past patterns. Enables proactive action.",
     "calculationRequired": false,
@@ -8059,12 +8059,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A permissioned blockchain differs from a permissionless blockchain by:",
     "options": {
-      "A": "Having no restrictions at all",
-      "B": "Restricting who can participate and validate transactions",
-      "C": "Being less secure",
-      "D": "Not using cryptography"
+      "A": "Being less secure",
+      "B": "Not using cryptography",
+      "C": "Having no restrictions at all",
+      "D": "Restricting who can participate and validate transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Permissioned blockchains restrict participation to known, authorized parties—common in business applications. Permissionless (public) blockchains like Bitcoin allow anyone to participate. Permissioned offers more control but less decentralization.",
     "tip": "Permissioned = controlled access, enterprise use. Permissionless = open to all.",
     "calculationRequired": false,
@@ -8101,12 +8101,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "AI explainability (XAI) is important for business applications because:",
     "options": {
-      "A": "AI always makes perfect decisions",
-      "B": "Stakeholders need to understand and trust AI-driven decisions",
-      "C": "It makes AI faster",
-      "D": "Regulations don't apply to AI"
+      "A": "It makes AI faster",
+      "B": "Regulations don't apply to AI",
+      "C": "AI always makes perfect decisions",
+      "D": "Stakeholders need to understand and trust AI-driven decisions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "XAI makes AI decision-making understandable to humans. This is critical for trust, regulatory compliance (right to explanation), debugging, bias detection, and accountability. Black-box AI decisions may not be acceptable for high-stakes applications.",
     "tip": "XAI = understandable AI. Essential for trust, compliance, and accountability.",
     "calculationRequired": false,
@@ -8143,12 +8143,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Industrial IoT (IIoT) in manufacturing introduces risks including:",
     "options": {
-      "A": "Only improved efficiency",
-      "B": "Expanded attack surface connecting operational technology to networks",
-      "C": "Reduced data collection",
-      "D": "Simpler security requirements"
+      "A": "Expanded attack surface connecting operational technology to networks",
+      "B": "Reduced data collection",
+      "C": "Simpler security requirements",
+      "D": "Only improved efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "IIoT connects operational technology (OT) to IT networks, expanding attack surface. Compromised industrial systems can cause physical harm, production disruption, or safety incidents. IT/OT convergence requires specialized security approaches.",
     "tip": "IIoT risk: OT connected to networks. Attacks can have physical consequences.",
     "calculationRequired": false,
@@ -8164,12 +8164,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "AI model governance should include:",
     "options": {
-      "A": "Only initial model development",
-      "B": "Model validation, monitoring for drift, documentation, and change control",
-      "C": "Avoiding any human oversight",
-      "D": "Using the same model indefinitely"
+      "A": "Avoiding any human oversight",
+      "B": "Using the same model indefinitely",
+      "C": "Only initial model development",
+      "D": "Model validation, monitoring for drift, documentation, and change control"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AI governance includes: model validation before deployment, monitoring for model drift (performance degradation over time), documentation of design/training/assumptions, change control for updates, and ongoing performance measurement.",
     "tip": "AI governance: Validate, monitor drift, document, control changes. Models degrade over time.",
     "calculationRequired": false,
@@ -8185,12 +8185,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When implementing RPA in financial processes, key control considerations include:",
     "options": {
-      "A": "No controls needed since bots are reliable",
-      "B": "Bot access rights, segregation of duties, audit trails, and exception handling",
-      "C": "Only speed of processing",
-      "D": "Eliminating all human review"
+      "A": "Only speed of processing",
+      "B": "Eliminating all human review",
+      "C": "No controls needed since bots are reliable",
+      "D": "Bot access rights, segregation of duties, audit trails, and exception handling"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Financial RPA controls include: appropriate bot access (least privilege), maintaining segregation of duties, complete audit trails of bot actions, exception handling procedures, reconciliation of bot outputs, and change management for bot scripts.",
     "tip": "Financial RPA: Access control, SOD, audit trails, exceptions, reconciliation.",
     "calculationRequired": false,
@@ -8227,12 +8227,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Current limitations of blockchain technology include:",
     "options": {
-      "A": "Perfect scalability for all use cases",
-      "B": "Scalability constraints, energy consumption, and the 'garbage in' problem",
-      "C": "Unlimited transaction speed",
-      "D": "No technical challenges"
+      "A": "Scalability constraints, energy consumption, and the 'garbage in' problem",
+      "B": "Unlimited transaction speed",
+      "C": "No technical challenges",
+      "D": "Perfect scalability for all use cases"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Blockchain limitations include: scalability (transaction throughput), energy consumption (especially Proof of Work), storage growth, 'garbage in/garbage out' (blockchain ensures integrity, not accuracy of initial input), and regulatory uncertainty.",
     "tip": "Blockchain limits: Scalability, energy, storage. Immutable doesn't mean accurate.",
     "calculationRequired": false,
@@ -8248,12 +8248,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Low-code/no-code development platforms create IT governance challenges because:",
     "options": {
-      "A": "They are always more secure than traditional development",
-      "B": "Business users can create applications without IT oversight or controls",
-      "C": "They eliminate all development work",
-      "D": "They prevent any innovation"
+      "A": "They eliminate all development work",
+      "B": "They prevent any innovation",
+      "C": "They are always more secure than traditional development",
+      "D": "Business users can create applications without IT oversight or controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Low-code/no-code enables 'citizen developers' to build applications. Risks include: shadow IT, inadequate security, poor architecture, integration issues, and lack of documentation/support. Governance frameworks are needed to balance innovation and control.",
     "tip": "Low-code risk: Shadow IT, security gaps. Need governance framework for citizen developers.",
     "calculationRequired": false,
@@ -8269,12 +8269,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Generative AI (like large language models) introduces risks including:",
     "options": {
-      "A": "Only improved productivity",
-      "B": "Data leakage, hallucinations, intellectual property issues, and misuse",
-      "C": "Reduced need for any human review",
-      "D": "Perfect accuracy in all outputs"
+      "A": "Perfect accuracy in all outputs",
+      "B": "Only improved productivity",
+      "C": "Data leakage, hallucinations, intellectual property issues, and misuse",
+      "D": "Reduced need for any human review"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Generative AI risks include: confidential data leakage to model providers, hallucinations (plausible but false outputs), IP/copyright issues, misuse for deepfakes/disinformation, and over-reliance without verification. Governance policies are essential.",
     "tip": "GenAI risks: Data leakage, hallucinations, IP issues, misuse. Verify outputs.",
     "calculationRequired": false,
@@ -8290,12 +8290,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IoT data governance challenges include:",
     "options": {
-      "A": "Only data storage",
-      "B": "Massive data volumes, data quality, ownership, retention, and privacy",
-      "C": "Unlimited processing capacity",
-      "D": "Simple data structures"
+      "A": "Simple data structures",
+      "B": "Only data storage",
+      "C": "Massive data volumes, data quality, ownership, retention, and privacy",
+      "D": "Unlimited processing capacity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "IoT data governance challenges: massive volumes requiring scalable storage/processing, variable data quality from diverse sensors, unclear ownership, retention decisions for streaming data, and privacy concerns from pervasive monitoring.",
     "tip": "IoT data governance: Volume, quality, ownership, retention, privacy. All at scale.",
     "calculationRequired": false,
@@ -8353,12 +8353,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Asset tokenization using blockchain enables:",
     "options": {
-      "A": "Only cryptocurrency transactions",
-      "B": "Fractional ownership and trading of real-world assets",
-      "C": "Eliminating all asset ownership records",
-      "D": "Only digital assets"
+      "A": "Eliminating all asset ownership records",
+      "B": "Only digital assets",
+      "C": "Only cryptocurrency transactions",
+      "D": "Fractional ownership and trading of real-world assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Tokenization represents real-world assets (real estate, art, securities) as digital tokens on blockchain. This enables fractional ownership, increased liquidity, 24/7 trading, and programmable features. Regulatory frameworks are evolving.",
     "tip": "Tokenization: Real assets as digital tokens. Fractional ownership, liquidity.",
     "calculationRequired": false,
@@ -8374,12 +8374,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Technical debt in digital transformation arises from:",
     "options": {
-      "A": "Taking time to design properly",
-      "B": "Shortcuts and quick fixes that create future maintenance burden",
-      "C": "Following best practices",
-      "D": "Over-engineering solutions"
+      "A": "Shortcuts and quick fixes that create future maintenance burden",
+      "B": "Following best practices",
+      "C": "Over-engineering solutions",
+      "D": "Taking time to design properly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Technical debt accumulates when shortcuts, quick fixes, or sub-optimal solutions are used for speed. This creates future burden—harder maintenance, integration issues, security vulnerabilities, and scaling limitations. Manage through deliberate prioritization.",
     "tip": "Tech debt: Shortcuts now = problems later. Track and manage deliberately.",
     "calculationRequired": false,
@@ -8395,12 +8395,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "AI applications in auditing include:",
     "options": {
-      "A": "Only replacing auditors entirely",
-      "B": "Anomaly detection, document analysis, risk assessment, and pattern recognition",
-      "C": "Eliminating professional judgment",
-      "D": "Only financial statement preparation"
+      "A": "Only financial statement preparation",
+      "B": "Only replacing auditors entirely",
+      "C": "Anomaly detection, document analysis, risk assessment, and pattern recognition",
+      "D": "Eliminating professional judgment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "AI augments auditing: anomaly detection in transactions, analyzing contracts and documents, predictive risk assessment, pattern recognition in large datasets, and automating routine procedures. It enhances rather than replaces auditor judgment.",
     "tip": "AI in audit: Anomaly detection, document analysis, risk prediction. Augments auditors.",
     "calculationRequired": false,
@@ -8416,12 +8416,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which IT function should be separated from application programming to maintain proper segregation of duties?",
     "options": {
-      "A": "Systems analysis",
-      "B": "Database administration",
-      "C": "Computer operations",
-      "D": "Quality assurance"
+      "A": "Computer operations",
+      "B": "Quality assurance",
+      "C": "Systems analysis",
+      "D": "Database administration"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Computer operations should be separated from application programming to prevent programmers from running unauthorized programs or modifying production data. This separation ensures that programmers cannot execute the code they write in a production environment without independent oversight.",
     "tip": "Programming (creation) should be separate from operations (execution) - the person who writes code shouldn't be able to run it in production.",
     "calculationRequired": false,
@@ -8458,12 +8458,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary purpose of network segmentation is to:",
     "options": {
-      "A": "Increase network speed",
-      "B": "Reduce the cost of network equipment",
-      "C": "Limit the spread of security breaches",
-      "D": "Simplify network administration"
+      "A": "Simplify network administration",
+      "B": "Increase network speed",
+      "C": "Reduce the cost of network equipment",
+      "D": "Limit the spread of security breaches"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Network segmentation divides a network into separate zones to limit the spread of security breaches. If one segment is compromised, the attacker's lateral movement is restricted, protecting other parts of the network and reducing the overall impact of an incident.",
     "tip": "Segmentation = containment. Like fire doors in a building - limit how far a breach can spread.",
     "calculationRequired": false,
@@ -8500,12 +8500,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Software as a Service (SaaS) model, the customer is primarily responsible for:",
     "options": {
-      "A": "Operating system patching",
-      "B": "Network security configuration",
-      "C": "User access management",
-      "D": "Database administration"
+      "A": "Network security configuration",
+      "B": "User access management",
+      "C": "Database administration",
+      "D": "Operating system patching"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "In SaaS, the cloud provider manages nearly everything including infrastructure, platform, and application. The customer's primary responsibility is managing their users, including access provisioning, authentication, and ensuring appropriate authorization levels.",
     "tip": "SaaS customers manage users and data - the provider handles everything else technical.",
     "calculationRequired": false,
@@ -8521,12 +8521,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Recovery Time Objective (RTO) represents:",
     "options": {
-      "A": "The maximum acceptable data loss measured in time",
-      "B": "The target time to restore business operations after a disaster",
-      "C": "The frequency of backup operations",
-      "D": "The time required to test recovery procedures"
+      "A": "The target time to restore business operations after a disaster",
+      "B": "The frequency of backup operations",
+      "C": "The time required to test recovery procedures",
+      "D": "The maximum acceptable data loss measured in time"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "RTO is the target duration of time within which a business process must be restored after a disaster to avoid unacceptable consequences. It defines how quickly systems need to be operational, not how much data can be lost (which is RPO).",
     "tip": "RTO = Recovery Time = how fast to get back up. RPO = Recovery Point = how much data loss is acceptable.",
     "calculationRequired": false,
@@ -8542,12 +8542,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An application control that verifies a customer ID exists in the master file before processing a transaction is an example of:",
     "options": {
-      "A": "Limit check",
-      "B": "Reasonableness check",
-      "C": "Validity check",
-      "D": "Completeness check"
+      "A": "Validity check",
+      "B": "Completeness check",
+      "C": "Limit check",
+      "D": "Reasonableness check"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "A validity check compares input data against a predefined set of valid values, such as verifying that a customer ID exists in a master file. This ensures transactions reference legitimate, existing records rather than invalid or nonexistent data.",
     "tip": "Validity = does this value exist in our approved list? Reasonableness = does this value make sense?",
     "calculationRequired": false,
@@ -8563,12 +8563,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company implements firewalls, intrusion detection systems, endpoint protection, and security awareness training. This approach demonstrates:",
     "options": {
-      "A": "Single point of failure mitigation",
-      "B": "Defense in depth",
-      "C": "Zero trust architecture",
-      "D": "Principle of least privilege"
+      "A": "Zero trust architecture",
+      "B": "Principle of least privilege",
+      "C": "Single point of failure mitigation",
+      "D": "Defense in depth"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Defense in depth uses multiple layers of security controls so that if one layer fails, others continue to provide protection. This multi-layered approach combines network, endpoint, and human controls to create comprehensive security coverage.",
     "tip": "Defense in depth = multiple layers like an onion. If attackers get past one layer, another awaits.",
     "calculationRequired": false,
@@ -8584,12 +8584,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An organization adopts COBIT to achieve which primary objective?",
     "options": {
-      "A": "Implementing specific technical security controls",
-      "B": "Aligning IT with business goals and ensuring IT governance",
-      "C": "Establishing software development methodologies",
-      "D": "Defining network architecture standards"
+      "A": "Aligning IT with business goals and ensuring IT governance",
+      "B": "Establishing software development methodologies",
+      "C": "Defining network architecture standards",
+      "D": "Implementing specific technical security controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "COBIT (Control Objectives for Information and Related Technologies) is a framework for IT governance and management that helps organizations align IT with business objectives, manage risk, and ensure value delivery. It focuses on governance rather than specific technical implementation.",
     "tip": "COBIT = governance framework for aligning IT with business. NIST = security controls. ITIL = IT service management.",
     "calculationRequired": false,
@@ -8626,12 +8626,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which Trust Services Criteria category addresses the ability of a system to operate as designed?",
     "options": {
-      "A": "Security",
-      "B": "Availability",
-      "C": "Processing Integrity",
-      "D": "Confidentiality"
+      "A": "Processing Integrity",
+      "B": "Confidentiality",
+      "C": "Security",
+      "D": "Availability"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Processing Integrity addresses whether system processing is complete, valid, accurate, timely, and authorized. This criteria ensures the system performs its intended function correctly without unauthorized modification to the processing logic or data.",
     "tip": "Processing Integrity = system does what it's supposed to do correctly. Availability = system is accessible when needed.",
     "calculationRequired": false,
@@ -8647,12 +8647,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Virtual Private Network (VPN) provides security primarily through:",
     "options": {
-      "A": "Antivirus scanning of transmitted data",
-      "B": "Creating an encrypted tunnel over public networks",
-      "C": "Filtering network traffic based on content",
-      "D": "Load balancing across multiple servers"
+      "A": "Load balancing across multiple servers",
+      "B": "Antivirus scanning of transmitted data",
+      "C": "Creating an encrypted tunnel over public networks",
+      "D": "Filtering network traffic based on content"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A VPN creates an encrypted tunnel that allows secure communication over untrusted networks like the internet. This encryption ensures that even if traffic is intercepted, the data remains protected and unreadable to unauthorized parties.",
     "tip": "VPN = encrypted tunnel through untrusted networks. Think of it as a secure pipe within a public highway.",
     "calculationRequired": false,
@@ -8668,12 +8668,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The characteristic of blockchain that makes it difficult to alter historical records is:",
     "options": {
-      "A": "Distributed consensus",
-      "B": "Smart contract execution",
-      "C": "Cryptographic hashing linking blocks",
-      "D": "Peer-to-peer networking"
+      "A": "Smart contract execution",
+      "B": "Cryptographic hashing linking blocks",
+      "C": "Peer-to-peer networking",
+      "D": "Distributed consensus"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Each block in a blockchain contains a cryptographic hash of the previous block, creating a chain. Altering any historical block would change its hash, breaking the chain and invalidating all subsequent blocks. This cryptographic linking provides immutability.",
     "tip": "Hashing creates the chain - changing one block requires recalculating all subsequent blocks, which is computationally infeasible.",
     "calculationRequired": false,
@@ -8689,12 +8689,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Digital signatures use asymmetric encryption where the sender:",
     "options": {
-      "A": "Encrypts with the recipient's public key",
-      "B": "Encrypts with the sender's private key",
-      "C": "Encrypts with a shared symmetric key",
-      "D": "Encrypts with the recipient's private key"
+      "A": "Encrypts with the sender's private key",
+      "B": "Encrypts with a shared symmetric key",
+      "C": "Encrypts with the recipient's private key",
+      "D": "Encrypts with the recipient's public key"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Digital signatures are created by encrypting (signing) a hash with the sender's private key. Recipients verify by decrypting with the sender's public key. This proves authenticity since only the sender possesses the private key needed to create the signature.",
     "tip": "Signing = sender's private key (proves identity). Encrypting for confidentiality = recipient's public key.",
     "calculationRequired": false,
@@ -8731,12 +8731,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A disaster recovery hot site includes:",
     "options": {
-      "A": "Empty space with network connectivity only",
-      "B": "Hardware and software ready for immediate operation",
-      "C": "Backup tapes stored off-site",
-      "D": "Documentation of recovery procedures only"
+      "A": "Documentation of recovery procedures only",
+      "B": "Empty space with network connectivity only",
+      "C": "Hardware and software ready for immediate operation",
+      "D": "Backup tapes stored off-site"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A hot site is a fully equipped facility with hardware, software, and often real-time data replication that can take over operations immediately or within hours. This provides the fastest recovery but at the highest cost compared to warm or cold sites.",
     "tip": "Hot = ready to go immediately. Warm = some equipment, needs setup. Cold = empty space only.",
     "calculationRequired": false,
@@ -8752,12 +8752,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Before implementing a system change in production, proper change management requires:",
     "options": {
-      "A": "Immediate deployment to meet deadlines",
-      "B": "Approval from the Change Advisory Board",
-      "C": "Notification to end users only",
-      "D": "Backup of user documentation"
+      "A": "Notification to end users only",
+      "B": "Backup of user documentation",
+      "C": "Immediate deployment to meet deadlines",
+      "D": "Approval from the Change Advisory Board"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Change management requires formal approval before implementing changes in production environments. A Change Advisory Board (CAB) or similar authority reviews changes for risk, impact, and proper testing to prevent unauthorized or poorly planned modifications.",
     "tip": "Changes need approval, testing, documentation, and rollback plans before production deployment.",
     "calculationRequired": false,
@@ -8773,12 +8773,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A control total calculated by summing customer account numbers in a batch is called a:",
     "options": {
-      "A": "Financial total",
-      "B": "Hash total",
-      "C": "Record count",
-      "D": "Limit check"
+      "A": "Hash total",
+      "B": "Record count",
+      "C": "Limit check",
+      "D": "Financial total"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A hash total is a control total of a field that would not normally be summed, such as account numbers. It has no intrinsic meaning but serves as a batch control to verify that all records were processed and none were added or lost during processing.",
     "tip": "Hash total = sum of non-summable field (like IDs) for batch verification. Financial total = sum of actual money amounts.",
     "calculationRequired": false,
@@ -8794,12 +8794,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "During a security incident, the phase focused on limiting damage and preventing further spread is:",
     "options": {
-      "A": "Identification",
-      "B": "Containment",
-      "C": "Eradication",
-      "D": "Recovery"
+      "A": "Eradication",
+      "B": "Recovery",
+      "C": "Identification",
+      "D": "Containment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Containment focuses on limiting the damage and preventing the incident from spreading further. This may include isolating affected systems, blocking malicious IP addresses, or disabling compromised accounts. It occurs after identification but before eradication.",
     "tip": "Incident response order: Preparation → Identification → Containment → Eradication → Recovery → Lessons Learned.",
     "calculationRequired": false,
@@ -8815,12 +8815,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A data retention policy should primarily be based on:",
     "options": {
-      "A": "Available storage capacity",
-      "B": "Legal, regulatory, and business requirements",
-      "C": "IT department preferences",
-      "D": "Industry average retention periods"
+      "A": "IT department preferences",
+      "B": "Industry average retention periods",
+      "C": "Available storage capacity",
+      "D": "Legal, regulatory, and business requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Data retention policies must comply with legal and regulatory requirements (e.g., tax records, healthcare data, financial records) while also meeting business operational needs. Storage capacity and industry practices are secondary considerations.",
     "tip": "Retention requirements are driven by law first (compliance), then business needs, not by storage availability.",
     "calculationRequired": false,
@@ -8857,12 +8857,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When implementing Robotic Process Automation (RPA), a key control concern is:",
     "options": {
-      "A": "Bots require physical workspace allocation",
-      "B": "Bot credentials may be shared or improperly secured",
-      "C": "Bots cannot process structured data",
-      "D": "RPA eliminates all human oversight requirements"
+      "A": "Bot credentials may be shared or improperly secured",
+      "B": "Bots cannot process structured data",
+      "C": "RPA eliminates all human oversight requirements",
+      "D": "Bots require physical workspace allocation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "RPA bots require credentials to access systems, and these credentials must be properly secured. Shared or unsecured bot credentials can lead to unauthorized access or make it difficult to track which bot performed specific actions, creating audit trail issues.",
     "tip": "Bots are digital workers needing identity management - proper credential security and activity logging are essential.",
     "calculationRequired": false,
@@ -8878,12 +8878,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A firewall configured with a 'deny all' default rule followed by specific 'allow' rules implements:",
     "options": {
-      "A": "Blacklist approach",
-      "B": "Whitelist approach",
-      "C": "Stateless inspection",
-      "D": "Deep packet inspection"
+      "A": "Stateless inspection",
+      "B": "Deep packet inspection",
+      "C": "Blacklist approach",
+      "D": "Whitelist approach"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A whitelist approach denies all traffic by default and only allows specifically approved traffic. This is more secure than a blacklist approach (allow all, deny specific) because unknown or new threats are automatically blocked.",
     "tip": "Whitelist = deny by default, allow exceptions. Blacklist = allow by default, deny known bad. Whitelist is more secure.",
     "calculationRequired": false,
@@ -8899,12 +8899,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A SOC 1 report identifies Complementary User Entity Controls (CUECs) that:",
     "options": {
-      "A": "Are implemented by the service organization only",
-      "B": "Must be implemented by user organizations for controls to be effective",
-      "C": "Replace the need for the service organization's controls",
-      "D": "Are optional enhancements beyond required controls"
+      "A": "Replace the need for the service organization's controls",
+      "B": "Are optional enhancements beyond required controls",
+      "C": "Are implemented by the service organization only",
+      "D": "Must be implemented by user organizations for controls to be effective"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "CUECs are controls that the service organization's controls assume will be in place at user organizations. For the overall control environment to be effective, user organizations must implement these controls. Auditors should verify CUEC implementation when relying on SOC reports.",
     "tip": "CUECs are your responsibility as the customer - the service provider's controls assume you're doing your part.",
     "calculationRequired": false,
@@ -8920,12 +8920,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An Advanced Persistent Threat (APT) is characterized by:",
     "options": {
-      "A": "Automated malware spreading rapidly across networks",
-      "B": "Targeted, long-term attacks by well-resourced adversaries",
-      "C": "Random opportunistic attacks seeking quick financial gain",
-      "D": "Denial of service attacks disrupting availability"
+      "A": "Denial of service attacks disrupting availability",
+      "B": "Automated malware spreading rapidly across networks",
+      "C": "Targeted, long-term attacks by well-resourced adversaries",
+      "D": "Random opportunistic attacks seeking quick financial gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "APTs are sophisticated, targeted attacks typically conducted by nation-states or organized crime groups. They use advanced techniques, maintain long-term access, and focus on specific targets for espionage, intellectual property theft, or strategic disruption.",
     "tip": "APT = Advanced (sophisticated), Persistent (long-term), Threat (targeted adversary). Think nation-state attackers.",
     "calculationRequired": false,
@@ -8941,12 +8941,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Proper cryptographic key management requires addressing all of the following EXCEPT:",
     "options": {
-      "A": "Key generation using random number generators",
-      "B": "Secure key distribution to authorized parties",
-      "C": "Permanent key retention without expiration",
-      "D": "Secure key destruction when no longer needed"
+      "A": "Permanent key retention without expiration",
+      "B": "Secure key destruction when no longer needed",
+      "C": "Key generation using random number generators",
+      "D": "Secure key distribution to authorized parties"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Proper key management includes the full lifecycle: generation, distribution, storage, rotation, and destruction. Keys should have defined expiration periods and be rotated regularly. Permanent retention without expiration increases risk if keys are compromised.",
     "tip": "Key lifecycle: Generate → Distribute → Use → Rotate → Archive → Destroy. Keys should not live forever.",
     "calculationRequired": false,
@@ -8962,12 +8962,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Cloud Security Posture Management (CSPM) tool primarily addresses:",
     "options": {
-      "A": "Encrypting data at rest in cloud storage",
-      "B": "Identifying misconfigurations and compliance violations across cloud environments",
-      "C": "Managing user authentication to cloud services",
-      "D": "Monitoring network traffic between cloud instances"
+      "A": "Monitoring network traffic between cloud instances",
+      "B": "Encrypting data at rest in cloud storage",
+      "C": "Identifying misconfigurations and compliance violations across cloud environments",
+      "D": "Managing user authentication to cloud services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "CSPM tools continuously monitor cloud environments for misconfigurations, compliance violations, and security risks. They identify issues like overly permissive access policies, unencrypted storage, and deviations from security best practices across multiple cloud platforms.",
     "tip": "CSPM = configuration and compliance scanning for cloud. CASB = controlling access and data movement to cloud services.",
     "calculationRequired": false,
@@ -8983,12 +8983,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Business Impact Analysis (BIA) is conducted to determine:",
     "options": {
-      "A": "The specific technical steps for system recovery",
-      "B": "The critical business functions and acceptable downtime thresholds",
-      "C": "The location of the disaster recovery site",
-      "D": "The vendor responsible for recovery services"
+      "A": "The critical business functions and acceptable downtime thresholds",
+      "B": "The location of the disaster recovery site",
+      "C": "The vendor responsible for recovery services",
+      "D": "The specific technical steps for system recovery"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A BIA identifies critical business processes, determines their dependencies, and establishes acceptable downtime (RTO) and data loss (RPO) thresholds. This analysis drives recovery priorities and resource allocation in the disaster recovery plan.",
     "tip": "BIA answers: What functions are critical? How long can they be down? What resources do they need? This drives the DR plan.",
     "calculationRequired": false,
@@ -9004,12 +9004,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An organization implements just-in-time privileged access, requiring administrators to request elevated permissions that automatically expire. This control addresses:",
     "options": {
-      "A": "Reducing the attack surface from standing privileged accounts",
-      "B": "Eliminating the need for audit logs",
-      "C": "Allowing unlimited administrative access",
-      "D": "Bypassing change management requirements"
+      "A": "Allowing unlimited administrative access",
+      "B": "Bypassing change management requirements",
+      "C": "Reducing the attack surface from standing privileged accounts",
+      "D": "Eliminating the need for audit logs"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Just-in-time (JIT) privileged access reduces the attack surface by eliminating standing privileged accounts. Administrators receive elevated permissions only when needed and for limited duration, reducing the window of opportunity for credential theft or misuse.",
     "tip": "JIT access = no standing admin accounts. Privileges are granted temporarily, reducing persistent attack vectors.",
     "calculationRequired": false,
@@ -9025,12 +9025,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a procurement system, automated three-way matching compares:",
     "options": {
-      "A": "Invoice, shipping document, and customer order",
-      "B": "Purchase order, receiving report, and vendor invoice",
-      "C": "Budget, actual spending, and forecast",
-      "D": "Requisition, approval, and payment"
+      "A": "Requisition, approval, and payment",
+      "B": "Invoice, shipping document, and customer order",
+      "C": "Purchase order, receiving report, and vendor invoice",
+      "D": "Budget, actual spending, and forecast"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Three-way matching compares the purchase order (what was ordered), receiving report (what was received), and vendor invoice (what is being billed). Discrepancies flag potential errors or fraud, ensuring payment only for goods actually ordered and received.",
     "tip": "Three-way match: PO (ordered) + Receiving (got it) + Invoice (billed) must agree before payment.",
     "calculationRequired": false,
@@ -9046,12 +9046,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data sovereignty concerns in cloud computing require organizations to:",
     "options": {
-      "A": "Store all data in a single global location",
-      "B": "Understand and comply with data residency laws of applicable jurisdictions",
-      "C": "Avoid using any cloud services internationally",
-      "D": "Encrypt data to eliminate legal jurisdiction requirements"
+      "A": "Encrypt data to eliminate legal jurisdiction requirements",
+      "B": "Store all data in a single global location",
+      "C": "Understand and comply with data residency laws of applicable jurisdictions",
+      "D": "Avoid using any cloud services internationally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Data sovereignty refers to data being subject to the laws of the country where it resides. Organizations must understand where cloud providers store data and ensure compliance with applicable data residency requirements, particularly for regulated data like personal information.",
     "tip": "Data sovereignty = data follows local laws. GDPR may require EU data stays in EU. Some countries require citizen data stored locally.",
     "calculationRequired": false,
@@ -9067,12 +9067,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Key Risk Indicators (KRIs) for IT differ from Key Performance Indicators (KPIs) in that KRIs:",
     "options": {
-      "A": "Measure operational efficiency and throughput",
-      "B": "Provide early warning signals of increasing risk exposure",
-      "C": "Track customer satisfaction with IT services",
-      "D": "Calculate return on IT investments"
+      "A": "Track customer satisfaction with IT services",
+      "B": "Calculate return on IT investments",
+      "C": "Measure operational efficiency and throughput",
+      "D": "Provide early warning signals of increasing risk exposure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "KRIs are metrics that provide early warning of increasing risk exposure, allowing proactive risk management. Unlike KPIs which measure performance against targets, KRIs focus on risk trends such as failed login attempts, patch compliance rates, or security incident frequency.",
     "tip": "KPI = are we performing well? KRI = are we at risk? Both are metrics but serve different purposes.",
     "calculationRequired": false,
@@ -9088,12 +9088,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When deploying AI/ML models in financial processes, governance controls should address all of the following EXCEPT:",
     "options": {
-      "A": "Model validation and testing before deployment",
-      "B": "Ongoing monitoring for model drift and bias",
-      "C": "Eliminating all human oversight of AI decisions",
-      "D": "Documentation of model logic and training data"
+      "A": "Ongoing monitoring for model drift and bias",
+      "B": "Eliminating all human oversight of AI decisions",
+      "C": "Documentation of model logic and training data",
+      "D": "Model validation and testing before deployment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "AI governance requires human oversight, not its elimination. Controls should include model validation, bias testing, drift monitoring, and documentation. Human review remains essential for high-risk decisions and for managing AI's inherent limitations and potential errors.",
     "tip": "AI needs more governance, not less. Human oversight, explainability, and bias monitoring are essential for responsible AI use.",
     "calculationRequired": false,
@@ -9109,12 +9109,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Zero trust architecture fundamentally changes traditional security by:",
     "options": {
-      "A": "Trusting all internal network traffic by default",
-      "B": "Verifying every access request regardless of network location",
-      "C": "Eliminating the need for user authentication",
-      "D": "Relying solely on perimeter firewalls for protection"
+      "A": "Relying solely on perimeter firewalls for protection",
+      "B": "Trusting all internal network traffic by default",
+      "C": "Verifying every access request regardless of network location",
+      "D": "Eliminating the need for user authentication"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Zero trust operates on the principle of 'never trust, always verify.' Unlike traditional perimeter-based security that trusts internal traffic, zero trust verifies every access request regardless of whether it originates inside or outside the network.",
     "tip": "Zero trust = no implicit trust based on network location. Every request authenticated and authorized, always.",
     "calculationRequired": false,
@@ -9130,12 +9130,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a service organization uses a subservice organization, the inclusive method in a SOC report means:",
     "options": {
-      "A": "The subservice organization's controls are excluded from the report scope",
-      "B": "The subservice organization's controls are included and tested in the report",
-      "C": "User organizations must obtain a separate report from the subservice organization",
-      "D": "The service organization assumes no responsibility for subservice controls"
+      "A": "The service organization assumes no responsibility for subservice controls",
+      "B": "The subservice organization's controls are excluded from the report scope",
+      "C": "The subservice organization's controls are included and tested in the report",
+      "D": "User organizations must obtain a separate report from the subservice organization"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under the inclusive method, the subservice organization's controls are included within the scope of the service organization's SOC report and are tested by the service auditor. Under the carve-out method, they are excluded and referenced separately.",
     "tip": "Inclusive = subservice controls tested in main report. Carve-out = subservice controls excluded, need separate report.",
     "calculationRequired": false,
@@ -9151,12 +9151,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A strong password policy should include requirements for:",
     "options": {
-      "A": "Sharing passwords among team members for efficiency",
-      "B": "Minimum length, complexity, and regular changes",
-      "C": "Using the same password across all systems",
-      "D": "Writing passwords on sticky notes for reference"
+      "A": "Minimum length, complexity, and regular changes",
+      "B": "Using the same password across all systems",
+      "C": "Writing passwords on sticky notes for reference",
+      "D": "Sharing passwords among team members for efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Strong password policies require minimum length (typically 12+ characters), complexity (mix of character types), and periodic changes. Password sharing and reuse across systems are security vulnerabilities that policies should prohibit.",
     "tip": "Modern guidance emphasizes length over complexity and discourages forced frequent changes if using long passphrases.",
     "calculationRequired": false,
@@ -9172,12 +9172,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Malware that encrypts files and demands payment for decryption is called:",
     "options": {
-      "A": "Spyware",
-      "B": "Ransomware",
-      "C": "Adware",
-      "D": "Worm"
+      "A": "Worm",
+      "B": "Spyware",
+      "C": "Ransomware",
+      "D": "Adware"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Ransomware encrypts victim files and demands payment (usually cryptocurrency) for the decryption key. This type of malware has become one of the most significant threats to organizations due to the potential for complete business disruption.",
     "tip": "Ransomware = extortion through encryption. Key defenses: backups, patching, user training, and incident response planning.",
     "calculationRequired": false,
@@ -9235,12 +9235,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Unlike encryption, cryptographic hashing is:",
     "options": {
-      "A": "Reversible to recover the original data",
-      "B": "A one-way function that cannot be reversed",
-      "C": "Only used for encrypting network traffic",
-      "D": "Designed to increase file size"
+      "A": "Designed to increase file size",
+      "B": "Reversible to recover the original data",
+      "C": "A one-way function that cannot be reversed",
+      "D": "Only used for encrypting network traffic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Hashing is a one-way function that produces a fixed-length output (hash) from input data. Unlike encryption, hashing cannot be reversed to recover the original data. Hashes are used for password storage, data integrity verification, and digital signatures.",
     "tip": "Encryption = two-way (can decrypt). Hashing = one-way (cannot unhash). Use hashing for passwords, not encryption.",
     "calculationRequired": false,
@@ -9277,12 +9277,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A SOC 1 report is most appropriate when user auditors need to:",
     "options": {
-      "A": "Evaluate general security practices of a cloud provider",
-      "B": "Assess controls relevant to user entities' internal control over financial reporting",
-      "C": "Verify compliance with privacy regulations",
-      "D": "Review system availability metrics"
+      "A": "Review system availability metrics",
+      "B": "Evaluate general security practices of a cloud provider",
+      "C": "Assess controls relevant to user entities' internal control over financial reporting",
+      "D": "Verify compliance with privacy regulations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SOC 1 reports focus on controls at a service organization that are relevant to user entities' internal control over financial reporting (ICFR). They are used by financial statement auditors to understand and rely upon controls at outsourced service providers.",
     "tip": "SOC 1 = financial reporting controls (for financial auditors). SOC 2 = operational controls (security, availability, etc.).",
     "calculationRequired": false,
@@ -9298,12 +9298,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The difference between IT policies and procedures is that policies:",
     "options": {
-      "A": "Provide detailed step-by-step instructions",
-      "B": "State high-level requirements and principles, while procedures detail how to implement them",
-      "C": "Are updated more frequently than procedures",
-      "D": "Apply only to technical staff"
+      "A": "Apply only to technical staff",
+      "B": "Provide detailed step-by-step instructions",
+      "C": "State high-level requirements and principles, while procedures detail how to implement them",
+      "D": "Are updated more frequently than procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Policies establish high-level requirements, principles, and expectations (the 'what'). Procedures provide detailed step-by-step instructions for implementing policies (the 'how'). This hierarchy ensures consistent understanding and execution.",
     "tip": "Policy = what must be done (strategic). Procedure = how to do it (tactical). Standards = specific technical requirements.",
     "calculationRequired": false,
@@ -9340,12 +9340,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An organization determines it can accept losing up to 4 hours of data in a disaster. This defines the:",
     "options": {
-      "A": "Recovery Time Objective (RTO)",
-      "B": "Recovery Point Objective (RPO)",
-      "C": "Mean Time Between Failures (MTBF)",
-      "D": "Maximum Tolerable Downtime (MTD)"
+      "A": "Recovery Point Objective (RPO)",
+      "B": "Mean Time Between Failures (MTBF)",
+      "C": "Maximum Tolerable Downtime (MTD)",
+      "D": "Recovery Time Objective (RTO)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "RPO defines the maximum acceptable amount of data loss measured in time. A 4-hour RPO means backups or replication must occur at least every 4 hours to ensure no more than 4 hours of data could be lost in a disaster.",
     "tip": "RPO = data loss tolerance (backup frequency driver). RTO = downtime tolerance (recovery speed requirement).",
     "calculationRequired": false,
@@ -9361,12 +9361,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Before deploying an application change to production, testing should occur in:",
     "options": {
-      "A": "The production environment to ensure realistic conditions",
-      "B": "A separate test environment that mirrors production",
-      "C": "Individual developer workstations only",
-      "D": "The backup disaster recovery site"
+      "A": "The backup disaster recovery site",
+      "B": "The production environment to ensure realistic conditions",
+      "C": "A separate test environment that mirrors production",
+      "D": "Individual developer workstations only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Changes should be tested in a separate environment that mirrors production configuration. Testing in production risks disrupting operations, while testing only on developer workstations may miss configuration differences and integration issues.",
     "tip": "Dev → Test → QA → Production. Each environment should increasingly mirror production settings.",
     "calculationRequired": false,
@@ -9403,12 +9403,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A DMZ (demilitarized zone) network segment is used to:",
     "options": {
-      "A": "Store highly sensitive internal data",
-      "B": "Host public-facing services while protecting the internal network",
-      "C": "Connect directly to partner networks",
-      "D": "Provide wireless access to employees"
+      "A": "Connect directly to partner networks",
+      "B": "Provide wireless access to employees",
+      "C": "Store highly sensitive internal data",
+      "D": "Host public-facing services while protecting the internal network"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A DMZ is a network segment that sits between the external internet and internal network, hosting services that need external access (web servers, email servers). This isolates public-facing systems from sensitive internal resources.",
     "tip": "DMZ = buffer zone. External users can reach DMZ services but not internal network. If DMZ is compromised, internal network remains protected.",
     "calculationRequired": false,
@@ -9466,12 +9466,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In public key infrastructure, a Certificate Authority (CA) is responsible for:",
     "options": {
-      "A": "Generating all encryption keys for users",
-      "B": "Issuing and managing digital certificates that bind public keys to identities",
-      "C": "Storing all private keys centrally",
-      "D": "Encrypting data for transmission"
+      "A": "Issuing and managing digital certificates that bind public keys to identities",
+      "B": "Storing all private keys centrally",
+      "C": "Encrypting data for transmission",
+      "D": "Generating all encryption keys for users"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A Certificate Authority verifies identities and issues digital certificates that bind public keys to those identities. This trust hierarchy enables parties who have never met to verify each other's identities through a commonly trusted CA.",
     "tip": "CA = trusted third party that vouches for identity. Like a notary for digital certificates.",
     "calculationRequired": false,
@@ -9508,12 +9508,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The key difference between SOC Type 1 and Type 2 reports is:",
     "options": {
-      "A": "Type 1 includes financial controls while Type 2 does not",
-      "B": "Type 1 reports on control design at a point in time; Type 2 tests operating effectiveness over a period",
-      "C": "Type 1 is for public distribution while Type 2 is restricted",
-      "D": "Type 1 covers security while Type 2 covers availability"
+      "A": "Type 1 covers security while Type 2 covers availability",
+      "B": "Type 1 includes financial controls while Type 2 does not",
+      "C": "Type 1 reports on control design at a point in time; Type 2 tests operating effectiveness over a period",
+      "D": "Type 1 is for public distribution while Type 2 is restricted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Type 1 reports describe controls and provide an opinion on design suitability at a specific point in time. Type 2 reports include the same plus testing of control operating effectiveness over a period (typically 6-12 months).",
     "tip": "Type 1 = design at a point in time (snapshot). Type 2 = design + operating effectiveness over a period (movie).",
     "calculationRequired": false,
@@ -9529,12 +9529,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IT risk assessment requires evaluating:",
     "options": {
-      "A": "Only the financial impact of incidents",
-      "B": "Threat likelihood, vulnerability severity, and potential impact",
-      "C": "Only external threats to the organization",
-      "D": "Historical incident frequency exclusively"
+      "A": "Historical incident frequency exclusively",
+      "B": "Only the financial impact of incidents",
+      "C": "Threat likelihood, vulnerability severity, and potential impact",
+      "D": "Only external threats to the organization"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Risk assessment evaluates threats (what could happen), vulnerabilities (weaknesses that could be exploited), likelihood (probability of occurrence), and impact (consequences if the risk materializes). This analysis informs control priorities.",
     "tip": "Risk = Threat × Vulnerability × Impact. All three components must be assessed to properly evaluate and prioritize risks.",
     "calculationRequired": false,
@@ -9634,12 +9634,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Emergency changes that bypass normal approval processes should:",
     "options": {
-      "A": "Never be documented to save time",
-      "B": "Be documented and reviewed after implementation with retroactive approval",
-      "C": "Become the standard process for all changes",
-      "D": "Only be made by junior staff"
+      "A": "Only be made by junior staff",
+      "B": "Never be documented to save time",
+      "C": "Be documented and reviewed after implementation with retroactive approval",
+      "D": "Become the standard process for all changes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Emergency changes may bypass normal approval to address urgent issues, but they must still be documented and receive retroactive review and approval. This maintains accountability and ensures the change was appropriate and properly implemented.",
     "tip": "Emergency changes need expedited approval, not no approval. Always document and review retroactively.",
     "calculationRequired": false,
@@ -9655,12 +9655,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective application audit trail should capture:",
     "options": {
-      "A": "Only successful transactions",
-      "B": "User ID, timestamp, transaction details, and before/after values for changes",
-      "C": "Only the final state of records",
-      "D": "Transaction summaries without user identification"
+      "A": "Only the final state of records",
+      "B": "Transaction summaries without user identification",
+      "C": "Only successful transactions",
+      "D": "User ID, timestamp, transaction details, and before/after values for changes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Comprehensive audit trails capture who made changes (user ID), when (timestamp), what changed (transaction type and details), and the before and after values. This enables investigation of errors, fraud, and compliance verification.",
     "tip": "Audit trail = who, what, when, before, after. Failed attempts should also be logged for security analysis.",
     "calculationRequired": false,
@@ -9676,12 +9676,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "End-to-end encryption differs from transport encryption in that:",
     "options": {
-      "A": "Data is encrypted only while stored on servers",
-      "B": "Data remains encrypted from sender to recipient, including through intermediate servers",
-      "C": "Only metadata is encrypted",
-      "D": "Encryption keys are shared with service providers"
+      "A": "Encryption keys are shared with service providers",
+      "B": "Data is encrypted only while stored on servers",
+      "C": "Data remains encrypted from sender to recipient, including through intermediate servers",
+      "D": "Only metadata is encrypted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "End-to-end encryption means data is encrypted on the sender's device and only decrypted on the recipient's device. Unlike transport encryption, intermediate servers cannot access the plaintext, even if compromised.",
     "tip": "Transport encryption = protected in transit, readable at servers. E2E = only endpoints can read, servers see ciphertext.",
     "calculationRequired": false,
@@ -9697,12 +9697,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Cloud Access Security Broker (CASB) provides:",
     "options": {
-      "A": "Physical security for cloud data centers",
-      "B": "Visibility and control over data moving to and from cloud services",
-      "C": "Unlimited cloud storage capacity",
-      "D": "Automated application development for cloud"
+      "A": "Unlimited cloud storage capacity",
+      "B": "Automated application development for cloud",
+      "C": "Physical security for cloud data centers",
+      "D": "Visibility and control over data moving to and from cloud services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A CASB sits between users and cloud services to provide visibility into cloud usage, enforce security policies, detect threats, and control data movement. CASBs help organizations maintain security and compliance as they adopt cloud services.",
     "tip": "CASB = cloud traffic cop. Monitors and controls what data goes to which cloud services and enforces policies.",
     "calculationRequired": false,
@@ -9718,12 +9718,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An organization with RTO of 4 hours and RPO of 1 hour would most appropriately use:",
     "options": {
-      "A": "Weekly tape backups and a cold site",
-      "B": "Real-time replication and a hot site",
-      "C": "Daily backups with off-site storage",
-      "D": "Manual backup procedures"
+      "A": "Real-time replication and a hot site",
+      "B": "Daily backups with off-site storage",
+      "C": "Manual backup procedures",
+      "D": "Weekly tape backups and a cold site"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A 4-hour RTO requires infrastructure ready to operate quickly (hot site). A 1-hour RPO requires near-continuous data replication, not periodic backups. Weekly or daily backups would result in unacceptable data loss.",
     "tip": "Match recovery solution to RTO/RPO. Short RPO = continuous replication. Short RTO = pre-provisioned infrastructure.",
     "calculationRequired": false,
@@ -9739,12 +9739,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a SOC engagement, the service auditor is responsible for:",
     "options": {
-      "A": "Implementing controls at the service organization",
-      "B": "Providing an independent opinion on the design and/or effectiveness of controls",
-      "C": "Guaranteeing no security breaches will occur",
-      "D": "Managing the service organization's IT operations"
+      "A": "Guaranteeing no security breaches will occur",
+      "B": "Managing the service organization's IT operations",
+      "C": "Implementing controls at the service organization",
+      "D": "Providing an independent opinion on the design and/or effectiveness of controls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The service auditor provides an independent opinion on whether controls are suitably designed (Type 1 and 2) and operating effectively (Type 2). The auditor does not implement controls or guarantee outcomes but provides reasonable assurance through testing.",
     "tip": "Auditors provide assurance, not guarantees. They test and opine on controls; management implements and operates them.",
     "calculationRequired": false,
@@ -9760,12 +9760,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Security Operations Center (SOC) is primarily responsible for:",
     "options": {
-      "A": "Developing new applications",
-      "B": "Continuous monitoring, threat detection, and incident response",
-      "C": "Managing IT project portfolios",
-      "D": "Conducting annual financial audits"
+      "A": "Managing IT project portfolios",
+      "B": "Conducting annual financial audits",
+      "C": "Developing new applications",
+      "D": "Continuous monitoring, threat detection, and incident response"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A SOC provides continuous security monitoring, analyzes alerts, detects threats, and coordinates incident response. SOC analysts use SIEM tools and threat intelligence to identify and respond to security events in real-time.",
     "tip": "SOC = 24/7 security monitoring and response. They watch for threats and coordinate response when incidents occur.",
     "calculationRequired": false,
@@ -9781,12 +9781,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Control Self-Assessment (CSA) differs from traditional auditing in that:",
     "options": {
-      "A": "It is performed entirely by external auditors",
-      "B": "Process owners assess their own controls with audit facilitation",
-      "C": "It focuses only on financial controls",
-      "D": "It eliminates the need for internal audit"
+      "A": "It focuses only on financial controls",
+      "B": "It eliminates the need for internal audit",
+      "C": "It is performed entirely by external auditors",
+      "D": "Process owners assess their own controls with audit facilitation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "CSA involves process owners and staff in assessing controls within their areas, typically facilitated by internal audit. This increases control awareness, leverages operational knowledge, and extends audit coverage while maintaining independent oversight.",
     "tip": "CSA = business owners assess their controls. Audit facilitates and validates. Increases ownership and extends coverage.",
     "calculationRequired": false,
@@ -9802,12 +9802,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GDPR, data subjects have the right to:",
     "options": {
-      "A": "Access any organization's databases freely",
-      "B": "Request deletion of their personal data under certain conditions (right to erasure)",
-      "C": "Sell their personal data to third parties",
-      "D": "Modify other people's personal data"
+      "A": "Sell their personal data to third parties",
+      "B": "Modify other people's personal data",
+      "C": "Access any organization's databases freely",
+      "D": "Request deletion of their personal data under certain conditions (right to erasure)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GDPR provides data subjects with the right to erasure (right to be forgotten), allowing them to request deletion of their personal data when it's no longer necessary, consent is withdrawn, or processing was unlawful, subject to legal retention requirements.",
     "tip": "GDPR rights: access, rectification, erasure, portability, restriction, objection. Organizations must have processes to honor these.",
     "calculationRequired": false,
@@ -9844,12 +9844,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Big data environments create governance challenges primarily because:",
     "options": {
-      "A": "They use standardized data formats exclusively",
-      "B": "They involve large volumes, variety, and velocity of data requiring new approaches to quality and security",
-      "C": "They eliminate the need for data governance",
-      "D": "They only process structured data"
+      "A": "They eliminate the need for data governance",
+      "B": "They only process structured data",
+      "C": "They use standardized data formats exclusively",
+      "D": "They involve large volumes, variety, and velocity of data requiring new approaches to quality and security"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Big data's characteristics (volume, variety, velocity, veracity) challenge traditional governance approaches. Managing data quality, lineage, security, and compliance across massive, diverse, rapidly changing datasets requires new tools and processes.",
     "tip": "Big data governance challenges: scale, variety of sources, real-time processing, data quality validation at speed.",
     "calculationRequired": false,
@@ -9865,12 +9865,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Automated application controls are generally preferred over manual controls because they:",
     "options": {
-      "A": "Are easier to circumvent when needed",
-      "B": "Operate consistently without human error or fatigue",
-      "C": "Require no testing or monitoring",
-      "D": "Can be modified without formal change management"
+      "A": "Operate consistently without human error or fatigue",
+      "B": "Require no testing or monitoring",
+      "C": "Can be modified without formal change management",
+      "D": "Are easier to circumvent when needed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Automated controls operate consistently every time without variation from human error, fatigue, or judgment. Once properly designed and tested, they provide reliable control operation. However, they still require proper change management and periodic testing.",
     "tip": "Automated = consistent execution. Manual = flexible but variable. Automated controls still need testing and monitoring.",
     "calculationRequired": false,
@@ -9907,12 +9907,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The three core principles of information security (CIA triad) are:",
     "options": {
-      "A": "Confidentiality, Integrity, Availability",
-      "B": "Control, Investigation, Assessment",
-      "C": "Compliance, Implementation, Authorization",
-      "D": "Configuration, Identity, Authentication"
+      "A": "Control, Investigation, Assessment",
+      "B": "Compliance, Implementation, Authorization",
+      "C": "Configuration, Identity, Authentication",
+      "D": "Confidentiality, Integrity, Availability"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "The CIA triad represents the three fundamental security objectives: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy and preventing unauthorized modification), and Availability (ensuring systems and data are accessible when needed).",
     "tip": "CIA triad is the foundation of security. Every security control addresses one or more of these principles.",
     "calculationRequired": false,
@@ -9928,12 +9928,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When relying on a SOC 2 Type 2 report dated six months ago, an auditor should consider:",
     "options": {
-      "A": "The report is no longer useful",
-      "B": "Whether controls have changed since the report period",
-      "C": "Only the current year's financial statements",
-      "D": "The report covers all future periods automatically"
+      "A": "The report covers all future periods automatically",
+      "B": "The report is no longer useful",
+      "C": "Whether controls have changed since the report period",
+      "D": "Only the current year's financial statements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SOC reports cover a specific period, and control environments can change. Auditors should consider changes since the report period through inquiry, bridge letters, or updated reports to ensure continued reliance is appropriate.",
     "tip": "SOC reports have a shelf life. Consider what's changed since the report period before relying on it.",
     "calculationRequired": false,
@@ -9991,12 +9991,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A sequence check in batch processing ensures that:",
     "options": {
-      "A": "All transactions are within dollar limits",
-      "B": "Records are in the expected order and none are missing",
-      "C": "Data formats are correct",
-      "D": "Calculations are accurate"
+      "A": "Calculations are accurate",
+      "B": "All transactions are within dollar limits",
+      "C": "Records are in the expected order and none are missing",
+      "D": "Data formats are correct"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Sequence checks verify that records are processed in the expected order (e.g., by document number) and identify gaps that could indicate missing transactions. This is particularly important in batch processing to ensure completeness.",
     "tip": "Sequence check catches missing records. If check numbers go 101, 102, 104 - check 103 is flagged as missing.",
     "calculationRequired": false,
@@ -10012,12 +10012,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A characteristic of symmetric encryption is that it:",
     "options": {
-      "A": "Uses different keys for encryption and decryption",
-      "B": "Uses the same key for both encryption and decryption",
-      "C": "Cannot be used for large data volumes",
-      "D": "Requires a certificate authority"
+      "A": "Uses the same key for both encryption and decryption",
+      "B": "Cannot be used for large data volumes",
+      "C": "Requires a certificate authority",
+      "D": "Uses different keys for encryption and decryption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Symmetric encryption uses the same secret key for both encryption and decryption. It is faster than asymmetric encryption and suitable for bulk data encryption, but requires secure key exchange between parties.",
     "tip": "Symmetric = same key both ways (fast, good for bulk data). Asymmetric = different keys (slower, good for key exchange).",
     "calculationRequired": false,
@@ -10033,12 +10033,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Container security concerns include:",
     "options": {
-      "A": "Containers are always isolated from the host system",
-      "B": "Vulnerable base images, misconfigurations, and shared kernel risks",
-      "C": "Containers cannot be scanned for vulnerabilities",
-      "D": "Containers automatically update themselves"
+      "A": "Containers cannot be scanned for vulnerabilities",
+      "B": "Containers automatically update themselves",
+      "C": "Containers are always isolated from the host system",
+      "D": "Vulnerable base images, misconfigurations, and shared kernel risks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Container security risks include using base images with vulnerabilities, runtime misconfigurations, exposed secrets, and the shared kernel architecture where a container escape could affect the host. Container scanning and security policies are essential.",
     "tip": "Container security: scan images, minimize base images, don't run as root, secure the orchestration platform (Kubernetes).",
     "calculationRequired": false,
@@ -10054,12 +10054,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A warm disaster recovery site typically includes:",
     "options": {
-      "A": "Only empty space with power and cooling",
-      "B": "Hardware and network infrastructure, but requires data restoration",
-      "C": "Real-time data replication and immediate failover capability",
-      "D": "No computing equipment of any kind"
+      "A": "No computing equipment of any kind",
+      "B": "Only empty space with power and cooling",
+      "C": "Hardware and network infrastructure, but requires data restoration",
+      "D": "Real-time data replication and immediate failover capability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A warm site has hardware, network infrastructure, and possibly some software, but does not have real-time data. Backup data must be restored before operations can resume, typically within hours to a day.",
     "tip": "Warm site = middle ground. Has infrastructure but not current data. Takes hours-days to activate, not minutes.",
     "calculationRequired": false,
@@ -10075,12 +10075,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "ITIL (Information Technology Infrastructure Library) primarily provides guidance on:",
     "options": {
-      "A": "Software development methodologies",
-      "B": "IT service management practices",
-      "C": "Network security configurations",
-      "D": "Financial accounting standards"
+      "A": "Network security configurations",
+      "B": "Financial accounting standards",
+      "C": "Software development methodologies",
+      "D": "IT service management practices"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "ITIL is a framework of best practices for IT service management (ITSM). It provides guidance on service strategy, design, transition, operation, and continual improvement to align IT services with business needs.",
     "tip": "ITIL = IT service management (incident, problem, change, service desk). COBIT = governance. NIST = security.",
     "calculationRequired": false,
@@ -10096,12 +10096,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To ensure backup reliability, organizations should:",
     "options": {
-      "A": "Only perform backups, as testing is unnecessary",
-      "B": "Regularly test backup restoration to verify data can be recovered",
-      "C": "Store all backups in the same location as production systems",
-      "D": "Delete backups after one week to save storage"
+      "A": "Delete backups after one week to save storage",
+      "B": "Only perform backups, as testing is unnecessary",
+      "C": "Regularly test backup restoration to verify data can be recovered",
+      "D": "Store all backups in the same location as production systems"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Backups must be tested regularly to verify that data can actually be restored. Untested backups provide false confidence - organizations have discovered corrupted or incomplete backups only when they needed them in an emergency.",
     "tip": "Untested backups are not backups. Regularly restore and verify data integrity. Store copies off-site.",
     "calculationRequired": false,
@@ -10117,12 +10117,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective vulnerability management program includes:",
     "options": {
-      "A": "Scanning once per year before audits",
-      "B": "Regular scanning, risk-based prioritization, and timely remediation",
-      "C": "Patching only critical systems",
-      "D": "Ignoring low-severity vulnerabilities permanently"
+      "A": "Patching only critical systems",
+      "B": "Ignoring low-severity vulnerabilities permanently",
+      "C": "Scanning once per year before audits",
+      "D": "Regular scanning, risk-based prioritization, and timely remediation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Effective vulnerability management requires regular scanning to identify vulnerabilities, risk-based prioritization considering exploitability and impact, timely remediation within defined SLAs, and verification that fixes are effective.",
     "tip": "Vulnerability management is continuous: scan → prioritize → remediate → verify → repeat. Not a one-time event.",
     "calculationRequired": false,
@@ -10138,12 +10138,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a SOC report, management's assertion states that:",
     "options": {
-      "A": "The auditor designed and implemented all controls",
-      "B": "The description of the system is fairly presented and controls are suitably designed",
-      "C": "All risks have been completely eliminated",
-      "D": "Users do not need to implement any controls"
+      "A": "All risks have been completely eliminated",
+      "B": "Users do not need to implement any controls",
+      "C": "The auditor designed and implemented all controls",
+      "D": "The description of the system is fairly presented and controls are suitably designed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management's assertion in a SOC report represents their statement that the system description is fairly presented and controls are suitably designed (and operating effectively for Type 2). The auditor then opines on management's assertion.",
     "tip": "Management asserts, auditor opines. Management owns the controls and assertions; auditor provides independent verification.",
     "calculationRequired": false,
@@ -10159,12 +10159,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Security Information and Event Management (SIEM) system provides:",
     "options": {
-      "A": "Antivirus protection for endpoints",
-      "B": "Centralized log collection, correlation, and security alerting",
-      "C": "Wireless network management",
-      "D": "Software deployment automation"
+      "A": "Wireless network management",
+      "B": "Software deployment automation",
+      "C": "Antivirus protection for endpoints",
+      "D": "Centralized log collection, correlation, and security alerting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SIEM systems collect logs from multiple sources, correlate events to identify patterns, generate alerts on suspicious activity, and provide forensic capabilities. They serve as the central nervous system for security monitoring.",
     "tip": "SIEM = collect logs from everywhere, correlate, alert. Essential for detecting attacks that span multiple systems.",
     "calculationRequired": false,
@@ -10180,12 +10180,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data quality is typically measured by dimensions including:",
     "options": {
-      "A": "Storage cost and processing speed only",
-      "B": "Accuracy, completeness, timeliness, and consistency",
-      "C": "File size and compression ratio",
-      "D": "Encryption strength and key length"
+      "A": "File size and compression ratio",
+      "B": "Encryption strength and key length",
+      "C": "Storage cost and processing speed only",
+      "D": "Accuracy, completeness, timeliness, and consistency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Data quality dimensions include accuracy (correct values), completeness (no missing data), timeliness (current and available when needed), consistency (same across systems), and validity (conforms to rules). These ensure data fitness for use.",
     "tip": "Data quality = fitness for purpose. Bad data leads to bad decisions regardless of how sophisticated your analytics are.",
     "calculationRequired": false,
@@ -10201,12 +10201,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An application that flags a payroll entry of 500 hours worked in one week is performing a:",
     "options": {
-      "A": "Validity check",
-      "B": "Reasonableness check",
-      "C": "Format check",
-      "D": "Check digit verification"
+      "A": "Format check",
+      "B": "Check digit verification",
+      "C": "Validity check",
+      "D": "Reasonableness check"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A reasonableness check compares data against expected ranges or logical limits. 500 hours in a week is impossible (a week has only 168 hours), so this fails the reasonableness test even though it might be a valid numeric format.",
     "tip": "Reasonableness = does this make logical sense? Validity = is it in our approved list? Different checks catch different errors.",
     "calculationRequired": false,
@@ -10222,12 +10222,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Smart contracts on blockchain platforms:",
     "options": {
-      "A": "Require manual execution for each transaction",
-      "B": "Automatically execute when predefined conditions are met",
-      "C": "Can be easily modified after deployment",
-      "D": "Do not require any programming"
+      "A": "Automatically execute when predefined conditions are met",
+      "B": "Can be easily modified after deployment",
+      "C": "Do not require any programming",
+      "D": "Require manual execution for each transaction"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Smart contracts are self-executing programs stored on blockchain that automatically execute when predetermined conditions are met. Once deployed, they are generally immutable, which means bugs cannot be easily fixed after deployment.",
     "tip": "Smart contracts = automated, immutable execution. Test thoroughly before deployment since changes are difficult or impossible.",
     "calculationRequired": false,
@@ -10243,12 +10243,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Vendor lock-in risk in cloud computing refers to:",
     "options": {
-      "A": "Physical security of data centers",
-      "B": "Difficulty migrating to another provider due to proprietary technologies or data formats",
-      "C": "Network connectivity requirements",
-      "D": "User authentication challenges"
+      "A": "User authentication challenges",
+      "B": "Physical security of data centers",
+      "C": "Difficulty migrating to another provider due to proprietary technologies or data formats",
+      "D": "Network connectivity requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Vendor lock-in occurs when an organization becomes dependent on proprietary cloud services, data formats, or APIs, making migration to another provider difficult and costly. Using open standards and maintaining portability helps mitigate this risk.",
     "tip": "Mitigate lock-in: use open standards, maintain data portability, avoid deep integration with proprietary services, have exit strategy.",
     "calculationRequired": false,
@@ -10306,12 +10306,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Perfect forward secrecy in encryption ensures that:",
     "options": {
-      "A": "Encryption can never be broken",
-      "B": "Compromise of long-term keys does not compromise past session keys",
-      "C": "All encryption uses the same key",
-      "D": "Keys never need to be changed"
+      "A": "Compromise of long-term keys does not compromise past session keys",
+      "B": "All encryption uses the same key",
+      "C": "Keys never need to be changed",
+      "D": "Encryption can never be broken"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Perfect forward secrecy (PFS) uses unique session keys derived through ephemeral key exchange. If long-term private keys are later compromised, previously recorded encrypted sessions cannot be decrypted because each session used a unique key.",
     "tip": "PFS = each session has unique keys. Even if main key is compromised later, past sessions remain protected.",
     "calculationRequired": false,
@@ -10348,12 +10348,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Implementing the principle of least privilege requires:",
     "options": {
-      "A": "Giving all users administrative access for flexibility",
-      "B": "Granting only the minimum access necessary for users to perform their job functions",
-      "C": "Removing all access restrictions",
-      "D": "Sharing accounts among team members"
+      "A": "Sharing accounts among team members",
+      "B": "Giving all users administrative access for flexibility",
+      "C": "Granting only the minimum access necessary for users to perform their job functions",
+      "D": "Removing all access restrictions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Least privilege means users receive only the minimum permissions necessary to perform their specific job functions. This limits the potential damage from compromised accounts, errors, or insider threats by restricting access to only what is needed.",
     "tip": "Start with no access, add only what's needed. Easier to grant than revoke. Review regularly for access creep.",
     "calculationRequired": false,
@@ -10369,12 +10369,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A bridge letter (gap letter) in the context of SOC reports serves to:",
     "options": {
-      "A": "Replace the need for a SOC report entirely",
-      "B": "Provide management representation about control changes since the SOC report period",
-      "C": "Certify that no incidents occurred",
-      "D": "Extend the SOC report indefinitely"
+      "A": "Extend the SOC report indefinitely",
+      "B": "Replace the need for a SOC report entirely",
+      "C": "Provide management representation about control changes since the SOC report period",
+      "D": "Certify that no incidents occurred"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A bridge letter provides management representation covering the period between the end of the SOC report and the current date. It addresses whether there have been significant changes to the control environment that would affect reliance on the SOC report.",
     "tip": "Bridge letter fills the gap between SOC report date and now. It's management's representation, not auditor assurance.",
     "calculationRequired": false,
@@ -10390,12 +10390,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Microsegmentation in network security provides value by:",
     "options": {
-      "A": "Eliminating the need for firewalls",
-      "B": "Creating granular security zones around individual workloads to limit lateral movement",
-      "C": "Increasing network bandwidth",
-      "D": "Simplifying network management"
+      "A": "Simplifying network management",
+      "B": "Eliminating the need for firewalls",
+      "C": "Creating granular security zones around individual workloads to limit lateral movement",
+      "D": "Increasing network bandwidth"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Microsegmentation creates fine-grained security boundaries around individual workloads or applications rather than just network segments. This limits lateral movement if an attacker compromises one system, containing breaches more effectively.",
     "tip": "Traditional segmentation = zones. Microsegmentation = each workload has its own security policy. Better containment.",
     "calculationRequired": false,
@@ -10411,12 +10411,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When multiple users attempt to update the same database record simultaneously, proper application controls should:",
     "options": {
-      "A": "Allow all updates regardless of conflicts",
-      "B": "Implement record locking or optimistic concurrency control to prevent data corruption",
-      "C": "Delete the record to avoid conflicts",
-      "D": "Disable multi-user access"
+      "A": "Disable multi-user access",
+      "B": "Allow all updates regardless of conflicts",
+      "C": "Implement record locking or optimistic concurrency control to prevent data corruption",
+      "D": "Delete the record to avoid conflicts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Concurrent update controls prevent data corruption when multiple users access the same record. Record locking prevents simultaneous edits, while optimistic concurrency detects conflicts at save time. Both ensure data integrity in multi-user environments.",
     "tip": "Pessimistic locking = lock before edit. Optimistic concurrency = check for changes at save. Both prevent lost updates.",
     "calculationRequired": false,
@@ -10474,12 +10474,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Effective third-party risk management requires:",
     "options": {
-      "A": "Avoiding all third-party relationships",
-      "B": "Due diligence before engagement and ongoing monitoring throughout the relationship",
-      "C": "Trusting vendor marketing materials",
-      "D": "One-time assessment at contract signing"
+      "A": "One-time assessment at contract signing",
+      "B": "Avoiding all third-party relationships",
+      "C": "Due diligence before engagement and ongoing monitoring throughout the relationship",
+      "D": "Trusting vendor marketing materials"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Third-party risk management is an ongoing process requiring due diligence before engagement (assessing security, financial stability, compliance), contractual protections, and continuous monitoring through the relationship lifecycle including periodic reassessments.",
     "tip": "Third-party risk doesn't end at contract signing. Monitor throughout the relationship and have exit strategies ready.",
     "calculationRequired": false,
@@ -10495,12 +10495,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Documentation from disaster recovery tests should include:",
     "options": {
-      "A": "Only successful results to maintain confidence",
-      "B": "Test objectives, actual results, issues identified, and corrective actions",
-      "C": "Only the names of participants",
-      "D": "A statement that testing occurred"
+      "A": "Test objectives, actual results, issues identified, and corrective actions",
+      "B": "Only the names of participants",
+      "C": "A statement that testing occurred",
+      "D": "Only successful results to maintain confidence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "DR test documentation should comprehensively capture objectives, procedures followed, actual results compared to expected, issues and gaps identified, lessons learned, and corrective actions. This enables continuous improvement and demonstrates due diligence.",
     "tip": "Document failures - they're learning opportunities. A test that finds no issues may not have been rigorous enough.",
     "calculationRequired": false,
@@ -10516,12 +10516,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Integrating threat intelligence into security operations enables organizations to:",
     "options": {
-      "A": "Eliminate all security threats",
-      "B": "Proactively identify and defend against known attack patterns and indicators of compromise",
-      "C": "Remove the need for other security controls",
-      "D": "Guarantee prevention of all attacks"
+      "A": "Proactively identify and defend against known attack patterns and indicators of compromise",
+      "B": "Remove the need for other security controls",
+      "C": "Guarantee prevention of all attacks",
+      "D": "Eliminate all security threats"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Threat intelligence provides information about threat actors, tactics, techniques, and indicators of compromise. Integrating this into security tools enables proactive defense, faster detection, and informed decision-making about emerging threats.",
     "tip": "Threat intel = know your enemy. Understand attack patterns to defend proactively, not just reactively.",
     "calculationRequired": false,
@@ -10537,12 +10537,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Tokenization differs from encryption in that tokenization:",
     "options": {
-      "A": "Uses mathematical algorithms to transform data",
-      "B": "Replaces sensitive data with non-sensitive tokens while storing original data in a secure vault",
-      "C": "Can be reversed with the correct key",
-      "D": "Maintains the mathematical relationship to original data"
+      "A": "Replaces sensitive data with non-sensitive tokens while storing original data in a secure vault",
+      "B": "Can be reversed with the correct key",
+      "C": "Maintains the mathematical relationship to original data",
+      "D": "Uses mathematical algorithms to transform data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Tokenization replaces sensitive data with random tokens that have no mathematical relationship to the original data. The original data is stored in a secure token vault. Unlike encryption, there's no key to derive the original data from the token.",
     "tip": "Encryption = reversible with key, maintains mathematical relationship. Tokenization = random substitution, vault lookup required.",
     "calculationRequired": false,
@@ -10558,12 +10558,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Risks specific to machine learning models in production include:",
     "options": {
-      "A": "ML models are always 100% accurate",
-      "B": "Model drift, adversarial attacks, and unexplainable decisions",
-      "C": "ML models do not require any maintenance",
-      "D": "ML eliminates all human bias"
+      "A": "ML models do not require any maintenance",
+      "B": "ML eliminates all human bias",
+      "C": "ML models are always 100% accurate",
+      "D": "Model drift, adversarial attacks, and unexplainable decisions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "ML models face unique risks: model drift (degrading accuracy as data patterns change), adversarial attacks (inputs designed to fool the model), lack of explainability (difficulty understanding why decisions were made), and inherited bias from training data.",
     "tip": "ML models degrade over time and can be attacked. Monitor for drift, test against adversarial inputs, ensure explainability.",
     "calculationRequired": false,
@@ -10579,12 +10579,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using a service organization's SOC report, user auditors must:",
     "options": {
-      "A": "Accept the report without any additional procedures",
-      "B": "Evaluate report scope, assess exceptions, and verify CUECs are implemented",
-      "C": "Ignore any exceptions noted in the report",
-      "D": "Only review the opinion paragraph"
+      "A": "Only review the opinion paragraph",
+      "B": "Accept the report without any additional procedures",
+      "C": "Evaluate report scope, assess exceptions, and verify CUECs are implemented",
+      "D": "Ignore any exceptions noted in the report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "User auditors must evaluate whether the SOC report covers relevant controls, assess the significance of any control exceptions, verify the period covers the audit timeframe, and confirm that required CUECs are implemented at the user organization.",
     "tip": "Don't just check the opinion. Review scope, exceptions, CUECs, and period coverage. The report is a tool, not a conclusion.",
     "calculationRequired": false,
@@ -10600,12 +10600,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A complete identity and access management lifecycle includes:",
     "options": {
-      "A": "Only provisioning new user accounts",
-      "B": "Provisioning, modification for role changes, periodic recertification, and timely deprovisioning",
-      "C": "Only deprovisioning terminated users",
-      "D": "Password management only"
+      "A": "Provisioning, modification for role changes, periodic recertification, and timely deprovisioning",
+      "B": "Only deprovisioning terminated users",
+      "C": "Password management only",
+      "D": "Only provisioning new user accounts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Complete IAM lifecycle management includes provisioning (granting initial access), modification (adjusting for transfers or role changes), recertification (periodic validation access is still appropriate), and timely deprovisioning (removing access when no longer needed).",
     "tip": "IAM is birth to death of an identity. Provisioning gets attention; deprovisioning is often neglected and creates risk.",
     "calculationRequired": false,
@@ -10621,12 +10621,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a well-designed IT control environment, the programmer who develops application code should NOT also have:",
     "options": {
-      "A": "Access to test environments",
-      "B": "Authority to document system changes",
-      "C": "Access to move code into production",
-      "D": "Permission to review user requirements"
+      "A": "Access to move code into production",
+      "B": "Permission to review user requirements",
+      "C": "Access to test environments",
+      "D": "Authority to document system changes"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Proper segregation of duties requires that developers who write code should not have the ability to migrate that code to production. This prevents unauthorized changes and reduces fraud risk. A separate change management or operations team should control production deployments.",
     "tip": "Key IT segregation: Development, testing, and production environments should have separate access controls.",
     "calculationRequired": false,
@@ -10663,12 +10663,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A company outsources its payroll processing and needs assurance for its financial statement audit. Which SOC report is most appropriate?",
     "options": {
-      "A": "SOC 1 because it addresses controls relevant to user entities' financial reporting",
-      "B": "SOC 2 because it covers security and availability",
-      "C": "SOC 3 because it's publicly available",
-      "D": "SOC for Cybersecurity because payroll involves sensitive data"
+      "A": "SOC 3 because it's publicly available",
+      "B": "SOC for Cybersecurity because payroll involves sensitive data",
+      "C": "SOC 1 because it addresses controls relevant to user entities' financial reporting",
+      "D": "SOC 2 because it covers security and availability"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "SOC 1 reports (Type I or II) address controls at a service organization relevant to user entities' internal control over financial reporting. Payroll processing directly affects financial statements, making SOC 1 appropriate.",
     "tip": "SOC 1 = ICFR-related. SOC 2 = Trust Services Criteria (security, availability, etc.). SOC 3 = general use SOC 2.",
     "calculationRequired": false,
@@ -10684,12 +10684,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A Type II SOC report differs from a Type I report primarily because it includes:",
     "options": {
-      "A": "More detailed control descriptions",
-      "B": "Tests of operating effectiveness over a period of time",
-      "C": "Management's assertion about control design",
-      "D": "The auditor's opinion on financial statements"
+      "A": "The auditor's opinion on financial statements",
+      "B": "More detailed control descriptions",
+      "C": "Tests of operating effectiveness over a period of time",
+      "D": "Management's assertion about control design"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Type I reports describe controls and their design suitability at a point in time. Type II reports include tests of operating effectiveness over a period (typically 6-12 months), providing evidence that controls operated consistently.",
     "tip": "Type I = design only, point in time. Type II = design + operating effectiveness over a period.",
     "calculationRequired": false,
@@ -10726,12 +10726,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The principle of 'defense in depth' is best described as:",
     "options": {
-      "A": "Installing the strongest single firewall available",
-      "B": "Multiple overlapping security controls at different layers",
-      "C": "Maximum encryption strength for all data",
-      "D": "Conducting penetration testing annually"
+      "A": "Conducting penetration testing annually",
+      "B": "Installing the strongest single firewall available",
+      "C": "Multiple overlapping security controls at different layers",
+      "D": "Maximum encryption strength for all data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Defense in depth involves implementing multiple layers of security controls so that if one layer fails, others provide protection. This includes physical, technical, and administrative controls at various levels of the IT infrastructure.",
     "tip": "No single control is perfect. Layer defenses: perimeter, network, host, application, data.",
     "calculationRequired": false,
@@ -10747,12 +10747,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A demilitarized zone (DMZ) network segment is designed to:",
     "options": {
-      "A": "Store the most sensitive internal data",
-      "B": "Host public-facing services while isolating them from the internal network",
-      "C": "Provide high-speed access for executives",
-      "D": "Create an encrypted tunnel to branch offices"
+      "A": "Create an encrypted tunnel to branch offices",
+      "B": "Store the most sensitive internal data",
+      "C": "Host public-facing services while isolating them from the internal network",
+      "D": "Provide high-speed access for executives"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A DMZ sits between the public internet and internal network, hosting services that must be accessible from outside (web servers, email gateways) while preventing direct external access to internal systems.",
     "tip": "DMZ = buffer zone. External users reach DMZ services, but cannot directly access internal network.",
     "calculationRequired": false,
@@ -10768,12 +10768,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A virtual private network (VPN) primarily provides:",
     "options": {
-      "A": "Faster internet connection speeds",
-      "B": "Encrypted communication tunnel over public networks",
-      "C": "Antivirus protection for remote users",
-      "D": "Load balancing for web applications"
+      "A": "Load balancing for web applications",
+      "B": "Faster internet connection speeds",
+      "C": "Encrypted communication tunnel over public networks",
+      "D": "Antivirus protection for remote users"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "VPNs create encrypted tunnels that allow secure communication over untrusted networks (like the public internet). This protects data confidentiality and integrity during transmission between remote users and corporate networks.",
     "tip": "VPN = secure tunnel. Protects data in transit but doesn't provide endpoint security.",
     "calculationRequired": false,
@@ -10789,12 +10789,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The primary challenge with symmetric encryption compared to asymmetric encryption is:",
     "options": {
-      "A": "Symmetric encryption is too slow for practical use",
-      "B": "Securely distributing the shared secret key to all parties",
-      "C": "Symmetric keys cannot be changed once created",
-      "D": "Symmetric encryption cannot handle large files"
+      "A": "Symmetric encryption cannot handle large files",
+      "B": "Symmetric encryption is too slow for practical use",
+      "C": "Securely distributing the shared secret key to all parties",
+      "D": "Symmetric keys cannot be changed once created"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Symmetric encryption uses the same key for encryption and decryption, requiring secure key distribution to all parties. Asymmetric encryption solves this with public/private key pairs but is computationally slower.",
     "tip": "Symmetric = fast but key distribution problem. Asymmetric = solves distribution but slower. Often used together.",
     "calculationRequired": false,
@@ -10810,12 +10810,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A cryptographic hash function is BEST used for:",
     "options": {
-      "A": "Encrypting sensitive data for storage",
-      "B": "Verifying data integrity and password storage",
-      "C": "Establishing secure communication channels",
-      "D": "Generating random numbers for encryption keys"
+      "A": "Verifying data integrity and password storage",
+      "B": "Establishing secure communication channels",
+      "C": "Generating random numbers for encryption keys",
+      "D": "Encrypting sensitive data for storage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Hash functions create fixed-length fingerprints of data. They verify integrity (detecting changes) and securely store passwords (storing hashes, not actual passwords). Hashing is one-way—you cannot recover original data from a hash.",
     "tip": "Hashing is one-way (cannot decrypt). Use for integrity checking and password storage, not for encrypting recoverable data.",
     "calculationRequired": false,
@@ -10831,12 +10831,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The primary purpose of a data classification scheme is to:",
     "options": {
-      "A": "Reduce storage costs by deleting unnecessary data",
-      "B": "Apply appropriate security controls based on data sensitivity",
-      "C": "Organize data for easier searching",
-      "D": "Comply with tax record retention requirements"
+      "A": "Organize data for easier searching",
+      "B": "Comply with tax record retention requirements",
+      "C": "Reduce storage costs by deleting unnecessary data",
+      "D": "Apply appropriate security controls based on data sensitivity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Data classification categorizes information by sensitivity (e.g., public, internal, confidential, restricted) to ensure appropriate protective controls are applied. Not all data needs the same level of protection.",
     "tip": "Classification drives control selection. Higher sensitivity = stronger controls. Cost-effective security.",
     "calculationRequired": false,
@@ -10852,12 +10852,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a data governance framework, the data owner is responsible for:",
     "options": {
-      "A": "Performing daily database backups",
-      "B": "Determining data classification and authorizing access",
-      "C": "Writing application code that uses the data",
-      "D": "Physically securing the data center"
+      "A": "Physically securing the data center",
+      "B": "Performing daily database backups",
+      "C": "Determining data classification and authorizing access",
+      "D": "Writing application code that uses the data"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Data owners (typically business managers) determine how data should be classified and who should have access. Data custodians (typically IT) implement technical controls. Data users follow established policies.",
     "tip": "Owner = business responsibility (what protection). Custodian = technical implementation (how to protect).",
     "calculationRequired": false,
@@ -10873,12 +10873,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In Infrastructure as a Service (IaaS), the customer is responsible for securing:",
     "options": {
-      "A": "Only the data they store",
-      "B": "The operating system, applications, and data",
-      "C": "Only the physical data center",
-      "D": "Nothing—the cloud provider handles all security"
+      "A": "Nothing—the cloud provider handles all security",
+      "B": "Only the data they store",
+      "C": "The operating system, applications, and data",
+      "D": "Only the physical data center"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In IaaS, the provider manages physical infrastructure, but customers are responsible for the operating system, middleware, applications, and data. This is more responsibility than PaaS (provider manages OS) or SaaS (provider manages everything except data).",
     "tip": "IaaS = most customer responsibility. SaaS = least customer responsibility. Shared responsibility model.",
     "calculationRequired": false,
@@ -10894,12 +10894,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A company with strict regulatory requirements that prohibit data from leaving their control would most likely choose:",
     "options": {
-      "A": "Public cloud for cost efficiency",
-      "B": "Private cloud or on-premises infrastructure",
-      "C": "Multi-cloud deployment across providers",
-      "D": "Community cloud shared with competitors"
+      "A": "Private cloud or on-premises infrastructure",
+      "B": "Multi-cloud deployment across providers",
+      "C": "Community cloud shared with competitors",
+      "D": "Public cloud for cost efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Private cloud or on-premises solutions provide maximum control over data location and access. Some regulations require data to remain within organizational control or specific geographic boundaries.",
     "tip": "Private cloud = more control, higher cost. Public cloud = less control, lower cost. Choose based on requirements.",
     "calculationRequired": false,
@@ -10915,12 +10915,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "If a company's RPO (Recovery Point Objective) is 4 hours, this means:",
     "options": {
-      "A": "Systems must be restored within 4 hours after a disaster",
-      "B": "Maximum acceptable data loss is 4 hours of transactions",
-      "C": "Backups must be stored for at least 4 hours",
-      "D": "Disaster recovery testing must occur every 4 hours"
+      "A": "Maximum acceptable data loss is 4 hours of transactions",
+      "B": "Backups must be stored for at least 4 hours",
+      "C": "Disaster recovery testing must occur every 4 hours",
+      "D": "Systems must be restored within 4 hours after a disaster"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "RPO defines the maximum acceptable data loss measured in time. A 4-hour RPO means backups must occur at least every 4 hours, as up to 4 hours of data could be lost. RTO is the time to restore operations.",
     "tip": "RPO = how much data can you afford to lose. RTO = how quickly must you recover.",
     "calculationRequired": false,
@@ -10936,12 +10936,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An incremental backup captures:",
     "options": {
-      "A": "All data every time",
-      "B": "Data changed since the last full backup",
-      "C": "Data changed since the last backup of any type",
-      "D": "Only system configuration files"
+      "A": "Data changed since the last backup of any type",
+      "B": "Only system configuration files",
+      "C": "All data every time",
+      "D": "Data changed since the last full backup"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Incremental backups capture only data changed since the last backup (full or incremental). Differential backups capture changes since the last full backup. Incremental is faster but restoration requires all increments.",
     "tip": "Incremental = changes since last backup. Differential = changes since last full. Incremental = faster backup, slower restore.",
     "calculationRequired": false,
@@ -10957,12 +10957,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A company purchases cyber insurance to address the financial impact of a data breach. This is an example of risk:",
     "options": {
-      "A": "Avoidance",
-      "B": "Mitigation",
-      "C": "Transfer",
-      "D": "Acceptance"
+      "A": "Mitigation",
+      "B": "Transfer",
+      "C": "Acceptance",
+      "D": "Avoidance"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Risk transfer shifts the financial consequences of a risk to another party (insurance company). Avoidance eliminates the activity causing risk. Mitigation reduces likelihood or impact. Acceptance means taking no action.",
     "tip": "Transfer = someone else bears the cost (insurance, outsourcing). Doesn't eliminate the risk, just the financial impact.",
     "calculationRequired": false,
@@ -10978,12 +10978,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "COBIT (Control Objectives for Information and Related Technologies) is primarily used for:",
     "options": {
-      "A": "Configuring network firewalls",
-      "B": "IT governance and management framework",
-      "C": "Programming secure applications",
-      "D": "Encrypting sensitive databases"
+      "A": "Encrypting sensitive databases",
+      "B": "Configuring network firewalls",
+      "C": "IT governance and management framework",
+      "D": "Programming secure applications"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "COBIT provides a framework for IT governance and management, helping organizations align IT with business goals, manage IT-related risks, and ensure IT resources are used responsibly. It's a management framework, not a technical tool.",
     "tip": "COBIT = governance framework (what to do). ITIL = service management (how to deliver). NIST = security controls.",
     "calculationRequired": false,
@@ -10999,12 +10999,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A control that rejects an entry if a date field contains 'February 30' is an example of:",
     "options": {
-      "A": "Range check",
-      "B": "Validity check",
-      "C": "Completeness check",
-      "D": "Authorization check"
+      "A": "Validity check",
+      "B": "Completeness check",
+      "C": "Authorization check",
+      "D": "Range check"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Validity checks ensure data matches acceptable values or formats. February 30 is an invalid date. Range checks test if values fall within limits. Completeness checks ensure required fields are filled. Authorization checks verify user permissions.",
     "tip": "Validity = does this value make sense? Range = is the number within limits? Format = correct structure?",
     "calculationRequired": false,
@@ -11020,12 +11020,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A batch control total that sums a non-financial field (like employee ID numbers) is called a:",
     "options": {
-      "A": "Financial total",
-      "B": "Hash total",
-      "C": "Record count",
-      "D": "Run-to-run total"
+      "A": "Run-to-run total",
+      "B": "Financial total",
+      "C": "Hash total",
+      "D": "Record count"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Hash totals sum fields that wouldn't normally be added (like ID numbers) to verify all records were processed. The total itself is meaningless except for control purposes. Financial totals sum monetary amounts; record counts count transactions.",
     "tip": "Hash total = sum of non-additive fields for control. The number means nothing except as a check.",
     "calculationRequired": false,
@@ -11062,12 +11062,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When auditing systems that use artificial intelligence for decision-making, a key concern is:",
     "options": {
-      "A": "AI systems are always 100% accurate",
-      "B": "Explainability and transparency of how decisions are made",
-      "C": "AI eliminates the need for human oversight",
-      "D": "AI cannot be tested using traditional audit procedures"
+      "A": "Explainability and transparency of how decisions are made",
+      "B": "AI eliminates the need for human oversight",
+      "C": "AI cannot be tested using traditional audit procedures",
+      "D": "AI systems are always 100% accurate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "AI systems can be 'black boxes' where decision logic is not easily understood. Auditors need to assess whether AI decisions are explainable, free from bias, and subject to appropriate oversight. Governance of AI systems is a growing audit focus.",
     "tip": "AI audit focus: explainability, bias detection, data quality, human oversight, model validation.",
     "calculationRequired": false,
@@ -11083,12 +11083,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The FIRST step in responding to a suspected security incident should be:",
     "options": {
-      "A": "Eradicate the threat immediately",
-      "B": "Identify and assess the scope of the incident",
-      "C": "Notify law enforcement",
-      "D": "Restore systems from backup"
+      "A": "Restore systems from backup",
+      "B": "Eradicate the threat immediately",
+      "C": "Identify and assess the scope of the incident",
+      "D": "Notify law enforcement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Incident response typically follows: Preparation → Identification → Containment → Eradication → Recovery → Lessons Learned. Before acting, you must identify what happened and assess scope. Premature eradication can destroy evidence.",
     "tip": "Don't jump to fix before understanding. Identify first, contain to prevent spread, then eradicate and recover.",
     "calculationRequired": false,
@@ -11104,12 +11104,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A critical security patch is released for a production system. The BEST approach is to:",
     "options": {
-      "A": "Apply immediately to all systems without testing",
-      "B": "Wait several months to ensure stability",
-      "C": "Test in a non-production environment before deploying",
-      "D": "Ignore patches that don't affect financial data"
+      "A": "Wait several months to ensure stability",
+      "B": "Test in a non-production environment before deploying",
+      "C": "Ignore patches that don't affect financial data",
+      "D": "Apply immediately to all systems without testing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Patches should be tested before production deployment to ensure they don't cause system issues. However, critical security patches should be prioritized and tested quickly. Balancing security urgency with stability is key.",
     "tip": "Test before deploy, but don't delay critical patches unnecessarily. Risk-based prioritization.",
     "calculationRequired": false,
@@ -11125,12 +11125,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Privileged accounts (such as administrator accounts) require which additional control?",
     "options": {
-      "A": "Less monitoring because administrators are trusted",
-      "B": "Enhanced logging and periodic access certification",
-      "C": "Permanent access without review",
-      "D": "Shared passwords for efficiency"
+      "A": "Enhanced logging and periodic access certification",
+      "B": "Permanent access without review",
+      "C": "Shared passwords for efficiency",
+      "D": "Less monitoring because administrators are trusted"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Privileged accounts pose higher risk and require enhanced controls: detailed logging of all activities, regular access reviews, principle of least privilege, and ideally just-in-time access rather than standing privileges.",
     "tip": "Higher privilege = higher risk = more controls. Log everything, review regularly, minimize standing access.",
     "calculationRequired": false,
@@ -11146,12 +11146,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The key difference between an Intrusion Detection System (IDS) and an Intrusion Prevention System (IPS) is:",
     "options": {
-      "A": "IDS is software; IPS is hardware",
-      "B": "IDS alerts on suspicious activity; IPS can block it automatically",
-      "C": "IDS is for internal networks; IPS is for external",
-      "D": "IDS monitors traffic; IPS monitors users"
+      "A": "IDS is for internal networks; IPS is for external",
+      "B": "IDS monitors traffic; IPS monitors users",
+      "C": "IDS is software; IPS is hardware",
+      "D": "IDS alerts on suspicious activity; IPS can block it automatically"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IDS passively monitors and alerts when suspicious activity is detected. IPS sits inline and can automatically block malicious traffic. IPS is more active but can cause service disruption if misconfigured.",
     "tip": "IDS = detective (alert only). IPS = preventive (alert and block). IPS requires careful tuning.",
     "calculationRequired": false,
@@ -11188,12 +11188,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A control to ensure sensitive reports are only received by authorized personnel is:",
     "options": {
-      "A": "Input validation",
-      "B": "Distribution list verification and access logging",
-      "C": "Batch processing",
-      "D": "Data encryption at rest"
+      "A": "Distribution list verification and access logging",
+      "B": "Batch processing",
+      "C": "Data encryption at rest",
+      "D": "Input validation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Output controls include verifying distribution lists, logging who accessed reports, and securing printed output. This prevents sensitive information from reaching unauthorized recipients.",
     "tip": "Output controls: who gets it, how it's delivered, how it's secured. Don't forget printed reports!",
     "calculationRequired": false,
@@ -11209,12 +11209,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Generalized audit software (GAS) is MOST useful for:",
     "options": {
-      "A": "Writing custom application code",
-      "B": "Analyzing large data sets and performing audit tests",
-      "C": "Physically securing servers",
-      "D": "Managing IT project timelines"
+      "A": "Physically securing servers",
+      "B": "Managing IT project timelines",
+      "C": "Writing custom application code",
+      "D": "Analyzing large data sets and performing audit tests"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Generalized audit software (like ACL or IDEA) allows auditors to import, analyze, and test large data populations. Common uses include identifying duplicates, testing for gaps in sequences, recalculating totals, and sampling.",
     "tip": "GAS enables 100% testing of large populations. Key techniques: stratification, duplicate detection, gap analysis, recalculation.",
     "calculationRequired": false,
@@ -11251,12 +11251,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Which environmental control is MOST important for a data center?",
     "options": {
-      "A": "Windows for natural lighting",
-      "B": "Temperature and humidity control systems",
-      "C": "Carpeted floors for comfort",
-      "D": "Open floor plan for accessibility"
+      "A": "Temperature and humidity control systems",
+      "B": "Carpeted floors for comfort",
+      "C": "Open floor plan for accessibility",
+      "D": "Windows for natural lighting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Data centers require precise temperature and humidity control to prevent equipment failure. Excessive heat causes component failure; humidity extremes cause condensation or static discharge. HVAC systems are critical infrastructure.",
     "tip": "Data center environment: temperature, humidity, fire suppression, power. Windows and carpets are actually risks.",
     "calculationRequired": false,
@@ -11293,12 +11293,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When reviewing a SOC report, 'complementary user entity controls' (CUECs) are:",
     "options": {
-      "A": "Controls the service organization expects the user to implement",
-      "B": "Additional controls the service organization provides at extra cost",
-      "C": "Controls that replace the service organization's controls",
-      "D": "Controls tested by the user entity's auditor"
+      "A": "Controls that replace the service organization's controls",
+      "B": "Controls tested by the user entity's auditor",
+      "C": "Controls the service organization expects the user to implement",
+      "D": "Additional controls the service organization provides at extra cost"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "CUECs are controls that the service organization's control environment assumes the user organization has in place. For the overall control environment to be effective, users must implement these complementary controls.",
     "tip": "SOC reports show what the service org does. CUECs show what YOU must do. Both are needed for complete controls.",
     "calculationRequired": false,
@@ -11314,12 +11314,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The MOST secure Wi-Fi encryption protocol currently recommended is:",
     "options": {
-      "A": "WEP (Wired Equivalent Privacy)",
-      "B": "WPA (Wi-Fi Protected Access)",
-      "C": "WPA2 with AES or WPA3",
-      "D": "Open networks with VPN"
+      "A": "WPA2 with AES or WPA3",
+      "B": "Open networks with VPN",
+      "C": "WEP (Wired Equivalent Privacy)",
+      "D": "WPA (Wi-Fi Protected Access)"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "WPA3 is the newest and most secure, followed by WPA2 with AES encryption. WEP is obsolete and easily cracked. WPA (original) has known vulnerabilities. Enterprise environments should use WPA2/WPA3 Enterprise with authentication servers.",
     "tip": "WEP = broken. WPA = weak. WPA2-AES or WPA3 = current standards. Enterprise mode adds individual authentication.",
     "calculationRequired": false,
@@ -11356,12 +11356,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A developer claims that unauthorized code was not added to an application. The BEST evidence to support this claim would be:",
     "options": {
-      "A": "Developer's attestation",
-      "B": "Automated version control logs showing all changes and approvals",
-      "C": "Email confirmation from the project manager",
-      "D": "Screenshot of the current code"
+      "A": "Automated version control logs showing all changes and approvals",
+      "B": "Email confirmation from the project manager",
+      "C": "Screenshot of the current code",
+      "D": "Developer's attestation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Version control systems maintain an immutable audit trail of all code changes, who made them, when, and what was changed. This provides objective evidence superior to attestations or screenshots that could be fabricated.",
     "tip": "Version control logs are tamper-evident audit trails. Essential evidence for code integrity.",
     "calculationRequired": false,
@@ -11377,12 +11377,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "To verify that all transactions in a batch were processed, the MOST effective control would be:",
     "options": {
-      "A": "Processing reports reviewed weekly",
-      "B": "Reconciliation of input and output control totals",
-      "C": "Random sampling of processed transactions",
-      "D": "User confirmation of receipt"
+      "A": "User confirmation of receipt",
+      "B": "Processing reports reviewed weekly",
+      "C": "Reconciliation of input and output control totals",
+      "D": "Random sampling of processed transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Comparing input control totals (record count, hash totals, financial totals) to output totals provides immediate verification that all items were processed. This catches missing or duplicate processing automatically.",
     "tip": "Input-output reconciliation catches: missing items, duplicates, incomplete processing. Automated and complete.",
     "calculationRequired": false,
@@ -11398,12 +11398,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When a service organization uses a subservice organization, the 'carve-out' method means:",
     "options": {
-      "A": "The subservice organization's controls are included in the report",
-      "B": "The subservice organization is excluded, requiring users to obtain separate assurance",
-      "C": "Only failed controls are excluded from the report",
-      "D": "The service organization manages all subservice activities"
+      "A": "The subservice organization is excluded, requiring users to obtain separate assurance",
+      "B": "Only failed controls are excluded from the report",
+      "C": "The service organization manages all subservice activities",
+      "D": "The subservice organization's controls are included in the report"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The carve-out method excludes the subservice organization's controls from the SOC report. User entities need to obtain their own assurance about the subservice organization's controls. The inclusive method includes them.",
     "tip": "Carve-out = excluded (get separate SOC). Inclusive = covered in the main report. Check which method was used.",
     "calculationRequired": false,
@@ -11419,12 +11419,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A company concerned about maintaining service uptime for customers should focus on which Trust Services Criterion?",
     "options": {
-      "A": "Security",
-      "B": "Availability",
-      "C": "Processing integrity",
-      "D": "Confidentiality"
+      "A": "Confidentiality",
+      "B": "Security",
+      "C": "Availability",
+      "D": "Processing integrity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Availability addresses whether systems are operational and usable as committed. Security is about protection from unauthorized access. Processing integrity is about accurate, timely, authorized processing. Confidentiality protects sensitive information.",
     "tip": "Availability = system uptime. Security = protection. Processing integrity = accuracy. Confidentiality = sensitive data. Privacy = personal data.",
     "calculationRequired": false,
@@ -11440,12 +11440,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An attacker calls the help desk pretending to be an executive who needs urgent password reset. This technique is called:",
     "options": {
-      "A": "Phishing",
-      "B": "Vishing",
-      "C": "Pretexting",
-      "D": "Baiting"
+      "A": "Baiting",
+      "B": "Phishing",
+      "C": "Vishing",
+      "D": "Pretexting"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Pretexting involves creating a fabricated scenario (pretext) to manipulate the target. Impersonating an executive to social engineer help desk staff is a classic pretexting attack. Vishing is voice phishing, but pretexting specifically emphasizes the false scenario.",
     "tip": "Pretexting = invented scenario to manipulate. Phishing = fake messages. Vishing = phone phishing. Baiting = malicious media.",
     "calculationRequired": false,
@@ -11461,12 +11461,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The MOST effective protection against ransomware damage is:",
     "options": {
-      "A": "Antivirus software alone",
-      "B": "Regular offline backups with tested restoration procedures",
-      "C": "Paying the ransom quickly",
-      "D": "Employee monitoring software"
+      "A": "Paying the ransom quickly",
+      "B": "Employee monitoring software",
+      "C": "Antivirus software alone",
+      "D": "Regular offline backups with tested restoration procedures"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Offline (air-gapped) backups protect against ransomware because they cannot be encrypted by malware. Tested restoration ensures recovery is actually possible. Antivirus helps prevent infection but doesn't guarantee recovery.",
     "tip": "Ransomware defense: Prevention (patching, training) + Recovery (offline backups). Never rely solely on prevention.",
     "calculationRequired": false,
@@ -11482,12 +11482,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Virtual LANs (VLANs) improve security by:",
     "options": {
-      "A": "Encrypting all network traffic",
-      "B": "Logically separating network segments to contain threats",
-      "C": "Eliminating the need for firewalls",
-      "D": "Increasing network speed"
+      "A": "Logically separating network segments to contain threats",
+      "B": "Eliminating the need for firewalls",
+      "C": "Increasing network speed",
+      "D": "Encrypting all network traffic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "VLANs create logical network segments that restrict broadcast domains and can limit lateral movement if one segment is compromised. They don't encrypt traffic or replace firewalls but add defense-in-depth through segmentation.",
     "tip": "VLANs = logical separation. Contain breaches, reduce broadcast traffic. Not encryption or replacement for firewalls.",
     "calculationRequired": false,
@@ -11503,12 +11503,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Zero trust architecture is based on the principle of:",
     "options": {
-      "A": "Trusting internal users by default",
-      "B": "Never trust, always verify—regardless of network location",
-      "C": "Trusting devices on the corporate network",
-      "D": "Eliminating all access controls"
+      "A": "Eliminating all access controls",
+      "B": "Trusting internal users by default",
+      "C": "Never trust, always verify—regardless of network location",
+      "D": "Trusting devices on the corporate network"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Zero trust assumes no implicit trust based on network location. Every access request must be verified regardless of whether it originates inside or outside the network perimeter. 'Never trust, always verify' is the core principle.",
     "tip": "Zero trust = no perimeter-based trust. Verify identity and authorization for every request, every time.",
     "calculationRequired": false,
@@ -11524,12 +11524,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A digital signature is created by:",
     "options": {
-      "A": "Encrypting the message with the recipient's public key",
-      "B": "Hashing the message and encrypting the hash with the sender's private key",
-      "C": "Encrypting the message with the sender's public key",
-      "D": "Using a shared symmetric key to sign the message"
+      "A": "Encrypting the message with the sender's public key",
+      "B": "Using a shared symmetric key to sign the message",
+      "C": "Encrypting the message with the recipient's public key",
+      "D": "Hashing the message and encrypting the hash with the sender's private key"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Digital signatures work by hashing the message and encrypting the hash with the sender's private key. Recipients decrypt with the sender's public key and compare hashes to verify integrity and authenticity.",
     "tip": "Digital signature: Hash + Encrypt with PRIVATE key. Verify with PUBLIC key. Proves authenticity and integrity.",
     "calculationRequired": false,
@@ -11545,12 +11545,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When an encryption key is compromised, the immediate action should be:",
     "options": {
-      "A": "Continue using the key until the scheduled rotation date",
-      "B": "Revoke the key and issue a new one immediately",
-      "C": "Notify users that encryption may be compromised",
-      "D": "Archive the key for later analysis"
+      "A": "Notify users that encryption may be compromised",
+      "B": "Archive the key for later analysis",
+      "C": "Continue using the key until the scheduled rotation date",
+      "D": "Revoke the key and issue a new one immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Compromised keys must be revoked immediately to prevent unauthorized decryption. New keys should be issued and data re-encrypted if necessary. Continuing to use a known compromised key exposes all protected data.",
     "tip": "Key compromise = immediate revocation. Don't wait for rotation schedule. Re-key critical data.",
     "calculationRequired": false,
@@ -11566,12 +11566,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A data retention policy should consider all of the following EXCEPT:",
     "options": {
-      "A": "Legal and regulatory requirements",
-      "B": "Business operational needs",
-      "C": "User preferences for keeping personal files",
-      "D": "Storage costs and data lifecycle"
+      "A": "Business operational needs",
+      "B": "User preferences for keeping personal files",
+      "C": "Storage costs and data lifecycle",
+      "D": "Legal and regulatory requirements"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Data retention policies are based on legal requirements, regulatory compliance, business needs, and cost considerations. Individual user preferences for personal files are not a driver of enterprise data retention policy.",
     "tip": "Retention drivers: Legal, regulatory, business, cost. Not individual preferences—enterprise policy governs.",
     "calculationRequired": false,
@@ -11587,12 +11587,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Data that is current and reflects the actual state of affairs describes which data quality dimension?",
     "options": {
-      "A": "Accuracy",
-      "B": "Completeness",
-      "C": "Timeliness",
-      "D": "Consistency"
+      "A": "Timeliness",
+      "B": "Consistency",
+      "C": "Accuracy",
+      "D": "Completeness"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Timeliness means data is current and available when needed for decision-making. Accuracy means data correctly represents reality. Completeness means all required data is present. Consistency means data matches across systems.",
     "tip": "Timeliness = current. Accuracy = correct. Completeness = all there. Consistency = same everywhere.",
     "calculationRequired": false,
@@ -11608,12 +11608,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a multi-tenant cloud environment, the PRIMARY security concern is:",
     "options": {
-      "A": "Higher costs than single-tenant",
-      "B": "Inadequate isolation between tenants' data and resources",
-      "C": "Slower performance during peak usage",
-      "D": "Limited customization options"
+      "A": "Inadequate isolation between tenants' data and resources",
+      "B": "Slower performance during peak usage",
+      "C": "Limited customization options",
+      "D": "Higher costs than single-tenant"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Multi-tenancy means multiple customers share infrastructure. The primary security concern is ensuring proper isolation so one tenant cannot access another's data or resources. Proper logical separation is critical.",
     "tip": "Multi-tenant risk = data leakage between tenants. Rely on provider's isolation controls. Review SOC reports.",
     "calculationRequired": false,
@@ -11650,12 +11650,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A business impact analysis (BIA) PRIMARILY helps an organization:",
     "options": {
-      "A": "Select disaster recovery vendors",
-      "B": "Identify critical business functions and prioritize recovery",
-      "C": "Calculate insurance premiums",
-      "D": "Design new IT systems"
+      "A": "Calculate insurance premiums",
+      "B": "Design new IT systems",
+      "C": "Select disaster recovery vendors",
+      "D": "Identify critical business functions and prioritize recovery"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A BIA identifies critical business functions, their dependencies, and the impact of disruption. This information is used to prioritize recovery efforts and establish appropriate RTOs and RPOs for each function.",
     "tip": "BIA = what's critical and why. Drives recovery priorities, RTO/RPO setting, resource allocation.",
     "calculationRequired": false,
@@ -11671,12 +11671,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A disaster recovery test that involves actually failing over to the backup site while users continue working is called:",
     "options": {
-      "A": "Tabletop exercise",
-      "B": "Walkthrough test",
-      "C": "Parallel test",
-      "D": "Full interruption test"
+      "A": "Walkthrough test",
+      "B": "Parallel test",
+      "C": "Full interruption test",
+      "D": "Tabletop exercise"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "A parallel test activates the backup site while the primary site continues operating. Production doesn't actually switch. A full interruption test shuts down the primary site. Tabletop and walkthrough are discussion-based.",
     "tip": "Parallel = test backup without shutting down primary. Full interruption = real failover. More realistic but more risky.",
     "calculationRequired": false,
@@ -11692,12 +11692,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "COSO Internal Control Framework focuses primarily on:",
     "options": {
-      "A": "IT-specific controls only",
-      "B": "Enterprise-wide internal control over financial reporting",
-      "C": "Cybersecurity operations",
-      "D": "Software development lifecycle"
+      "A": "Enterprise-wide internal control over financial reporting",
+      "B": "Cybersecurity operations",
+      "C": "Software development lifecycle",
+      "D": "IT-specific controls only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "COSO provides a framework for internal control across the organization, with particular focus on financial reporting reliability. COBIT focuses more specifically on IT governance. Both are complementary.",
     "tip": "COSO = enterprise internal control (including IT). COBIT = IT-focused governance. Often used together.",
     "calculationRequired": false,
@@ -11734,12 +11734,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A control that rejects an order quantity of 10,000 units when maximum allowed is 5,000 is a:",
     "options": {
-      "A": "Range check",
-      "B": "Limit check",
-      "C": "Validity check",
-      "D": "Format check"
+      "A": "Format check",
+      "B": "Range check",
+      "C": "Limit check",
+      "D": "Validity check"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A limit check tests if a value exceeds a maximum (or falls below a minimum). A range check tests if a value falls within acceptable bounds (both high and low). This example tests only a maximum, so it's a limit check.",
     "tip": "Limit = max OR min threshold. Range = between min AND max. Format = correct structure. Validity = acceptable values.",
     "calculationRequired": false,
@@ -11755,12 +11755,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "An exception report that lists all transactions over $10,000 is MOST useful for:",
     "options": {
-      "A": "Training new employees",
-      "B": "Management review of high-value or unusual transactions",
-      "C": "System performance monitoring",
-      "D": "Backup verification"
+      "A": "Backup verification",
+      "B": "Training new employees",
+      "C": "Management review of high-value or unusual transactions",
+      "D": "System performance monitoring"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Exception reports highlight items requiring attention—high-value transactions, unusual patterns, or items outside normal parameters. Management reviews these for fraud detection, error identification, and control verification.",
     "tip": "Exception reports = items needing human attention. Focus review effort on anomalies and high-risk items.",
     "calculationRequired": false,
@@ -11797,12 +11797,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A risk unique to machine learning models that affects fairness is:",
     "options": {
-      "A": "High computational cost",
-      "B": "Bias in training data leading to discriminatory outcomes",
-      "C": "Slow processing speed",
-      "D": "Requirement for constant internet connectivity"
+      "A": "Slow processing speed",
+      "B": "Requirement for constant internet connectivity",
+      "C": "High computational cost",
+      "D": "Bias in training data leading to discriminatory outcomes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "ML models learn from training data—if the data contains historical bias, the model perpetuates or amplifies it. This can lead to unfair or discriminatory decisions in areas like lending, hiring, or insurance.",
     "tip": "AI/ML risk: 'Garbage in, garbage out' includes bias. Test for fairness across protected groups.",
     "calculationRequired": false,
@@ -11818,12 +11818,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "A Security Information and Event Management (SIEM) system PRIMARILY provides:",
     "options": {
-      "A": "Antivirus protection for endpoints",
-      "B": "Centralized logging, correlation, and analysis of security events",
-      "C": "Firewall configuration management",
-      "D": "Employee security training"
+      "A": "Firewall configuration management",
+      "B": "Employee security training",
+      "C": "Antivirus protection for endpoints",
+      "D": "Centralized logging, correlation, and analysis of security events"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SIEM systems aggregate logs from multiple sources, correlate events to identify patterns, and alert on potential security incidents. They provide a centralized view of security posture and support incident investigation.",
     "tip": "SIEM = collect, correlate, alert, investigate. Central nervous system for security operations.",
     "calculationRequired": false,
@@ -11839,12 +11839,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "In a 'black box' penetration test, the tester:",
     "options": {
-      "A": "Has full knowledge of the target environment",
-      "B": "Has no prior knowledge of the target environment",
-      "C": "Works as an insider with system access",
-      "D": "Only tests physical security controls"
+      "A": "Works as an insider with system access",
+      "B": "Only tests physical security controls",
+      "C": "Has full knowledge of the target environment",
+      "D": "Has no prior knowledge of the target environment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Black box testing simulates an external attacker with no inside knowledge. White box testing provides full knowledge. Gray box provides partial knowledge. Black box tests how well defenses work against unknown threats.",
     "tip": "Black box = no knowledge (external attacker). White box = full knowledge (code review). Gray box = partial.",
     "calculationRequired": false,
@@ -11860,12 +11860,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Periodic user access reviews are important because they:",
     "options": {
-      "A": "Increase system performance",
-      "B": "Detect and remove inappropriate access accumulated over time",
-      "C": "Reduce help desk calls",
-      "D": "Eliminate the need for role-based access"
+      "A": "Detect and remove inappropriate access accumulated over time",
+      "B": "Reduce help desk calls",
+      "C": "Eliminate the need for role-based access",
+      "D": "Increase system performance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Access creep occurs as users change roles but retain old access rights. Periodic reviews ensure access remains appropriate for current job functions, following the principle of least privilege.",
     "tip": "Access reviews catch access creep. Users accumulate rights; reviews remove what's no longer needed.",
     "calculationRequired": false,
@@ -11881,12 +11881,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "DMARC, DKIM, and SPF are technologies designed to prevent:",
     "options": {
-      "A": "Malware in email attachments",
-      "B": "Email spoofing and domain impersonation",
-      "C": "Large file attachment transfers",
-      "D": "Email storage on mobile devices"
+      "A": "Large file attachment transfers",
+      "B": "Email storage on mobile devices",
+      "C": "Malware in email attachments",
+      "D": "Email spoofing and domain impersonation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SPF specifies authorized mail servers, DKIM adds digital signatures, and DMARC provides policy enforcement. Together they help prevent attackers from spoofing your domain in phishing attacks.",
     "tip": "SPF = who can send. DKIM = message signed. DMARC = what to do if SPF/DKIM fail. Defense against spoofing.",
     "calculationRequired": false,
@@ -11923,12 +11923,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "When data is transferred between two systems, the receiving system should:",
     "options": {
-      "A": "Accept all data without validation to avoid delays",
-      "B": "Validate data received against control totals and expected formats",
-      "C": "Immediately delete the sending system's copy",
-      "D": "Notify the sender that data was received without verification"
+      "A": "Immediately delete the sending system's copy",
+      "B": "Notify the sender that data was received without verification",
+      "C": "Accept all data without validation to avoid delays",
+      "D": "Validate data received against control totals and expected formats"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Interface controls ensure data is completely and accurately transferred. The receiving system should validate record counts, hash totals, and data formats before processing. This catches transmission errors and data corruption.",
     "tip": "Interface controls: Verify what you receive matches what was sent. Don't trust—verify.",
     "calculationRequired": false,
@@ -11965,12 +11965,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "Synchronous data replication ensures zero data loss but has the trade-off of:",
     "options": {
-      "A": "Lower security",
-      "B": "Increased latency due to waiting for confirmation",
-      "C": "Higher data loss than asynchronous",
-      "D": "Less reliable backup"
+      "A": "Increased latency due to waiting for confirmation",
+      "B": "Higher data loss than asynchronous",
+      "C": "Less reliable backup",
+      "D": "Lower security"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Synchronous replication waits for confirmation that data is written at the remote site before acknowledging the write. This guarantees zero data loss (RPO=0) but adds latency because each write must wait for remote confirmation.",
     "tip": "Synchronous = zero RPO, higher latency. Asynchronous = faster, some potential data loss. Choose based on requirements.",
     "calculationRequired": false,
@@ -11986,12 +11986,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "To ensure sensitive data cannot be recovered from disposed hard drives, the MOST effective method is:",
     "options": {
-      "A": "Formatting the drive",
-      "B": "Deleting all files",
-      "C": "Physical destruction or degaussing",
-      "D": "Moving files to the recycle bin"
+      "A": "Physical destruction or degaussing",
+      "B": "Moving files to the recycle bin",
+      "C": "Formatting the drive",
+      "D": "Deleting all files"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Simple deletion or formatting doesn't remove data—it only marks space as available. Physical destruction (shredding) or degaussing (magnetic erasure) ensures data cannot be recovered. These meet regulatory requirements.",
     "tip": "Delete/format = data recoverable. Degauss/shred = permanent destruction. Certificate of destruction for compliance.",
     "calculationRequired": false,
@@ -12049,12 +12049,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "The OWASP Top 10 is a resource that identifies:",
     "options": {
-      "A": "The ten best programming languages",
-      "B": "The most critical web application security risks",
-      "C": "Top ten antivirus products",
-      "D": "Best practices for network cabling"
+      "A": "Best practices for network cabling",
+      "B": "The ten best programming languages",
+      "C": "The most critical web application security risks",
+      "D": "Top ten antivirus products"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "OWASP (Open Web Application Security Project) Top 10 lists the most critical security risks to web applications, including injection flaws, broken authentication, sensitive data exposure, and others. It guides secure development.",
     "tip": "OWASP Top 10 = common web app vulnerabilities. Use for secure coding training and code review.",
     "calculationRequired": false,
@@ -12070,12 +12070,12 @@ const questions = [
     "questionFormat": "conceptual",
     "question": "APIs (Application Programming Interfaces) present security risks primarily because:",
     "options": {
-      "A": "They are only used internally",
-      "B": "They expose application functionality and data to external access",
-      "C": "They slow down system performance",
-      "D": "They require expensive licensing"
+      "A": "They expose application functionality and data to external access",
+      "B": "They slow down system performance",
+      "C": "They require expensive licensing",
+      "D": "They are only used internally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "APIs create entry points into systems and data that may be accessible over the internet. Improperly secured APIs can expose sensitive data, allow unauthorized actions, or be exploited for attacks. API security is increasingly critical.",
     "tip": "APIs = new attack surface. Require authentication, authorization, rate limiting, input validation, encryption.",
     "calculationRequired": false,

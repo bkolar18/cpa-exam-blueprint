@@ -37,12 +37,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with self-employment income must file a return if net self-employment earnings are at least:",
     "options": {
-      "A": "$100",
-      "B": "$400",
-      "C": "$600",
-      "D": "The standard deduction amount"
+      "A": "$400",
+      "B": "$600",
+      "C": "The standard deduction amount",
+      "D": "$100"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A taxpayer must file a federal income tax return if net self-employment income is $400 or more, regardless of other income or the filing threshold. This lower threshold ensures self-employment tax is paid on all qualifying self-employment income.",
     "tip": "Self-employment = $400 threshold, much lower than standard filing threshold.",
     "calculationRequired": false,
@@ -58,12 +58,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT a consequence of filing married filing separately?",
     "options": {
-      "A": "Loss of earned income credit eligibility",
-      "B": "Loss of child tax credit eligibility",
-      "C": "Reduced IRA contribution limits",
-      "D": "Lower phase-out thresholds for some deductions"
+      "A": "Reduced IRA contribution limits",
+      "B": "Lower phase-out thresholds for some deductions",
+      "C": "Loss of earned income credit eligibility",
+      "D": "Loss of child tax credit eligibility"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "IRA contribution limits are the same regardless of filing status (though deduction limits may differ). However, married filing separately results in loss of earned income credit, reduced eligibility for child tax credit, lower phase-out thresholds, and inability to deduct student loan interest.",
     "tip": "MFS loses many credits and deductions but IRA contribution limits stay the same.",
     "calculationRequired": false,
@@ -79,12 +79,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For calendar-year individual taxpayers, the original due date for Form 1040 is:",
     "options": {
-      "A": "March 15",
-      "B": "April 15",
-      "C": "April 30",
-      "D": "June 15"
+      "A": "April 30",
+      "B": "June 15",
+      "C": "March 15",
+      "D": "April 15"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Individual income tax returns (Form 1040) for calendar-year taxpayers are due April 15 following the close of the tax year. If April 15 falls on a weekend or holiday, the due date is the next business day. An automatic 6-month extension to October 15 is available.",
     "tip": "Individual returns = April 15. Extension gives 6 months to October 15.",
     "calculationRequired": false,
@@ -121,12 +121,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Estimated tax payments for individuals are due on all of the following dates EXCEPT:",
     "options": {
-      "A": "April 15",
-      "B": "June 15",
-      "C": "August 15",
-      "D": "January 15"
+      "A": "August 15",
+      "B": "January 15",
+      "C": "April 15",
+      "D": "June 15"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Estimated tax payments are due April 15, June 15, September 15, and January 15 of the following year. Note the uneven spacing - the third quarter payment is September 15, not August 15. This gives taxpayers extra time for the summer period.",
     "tip": "Estimated tax dates: 4/15, 6/15, 9/15, 1/15. Notice Q3 is September, not August.",
     "calculationRequired": false,
@@ -163,12 +163,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current rules, Form W-4 completed by employees for withholding purposes:",
     "options": {
-      "A": "Requires the employee to specify a number of allowances",
-      "B": "Uses a system based on withholding allowances",
-      "C": "Is based on factors like filing status, multiple jobs, and deductions",
-      "D": "Must be submitted annually by all employees"
+      "A": "Is based on factors like filing status, multiple jobs, and deductions",
+      "B": "Must be submitted annually by all employees",
+      "C": "Requires the employee to specify a number of allowances",
+      "D": "Uses a system based on withholding allowances"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The redesigned Form W-4 (effective 2020) eliminated withholding allowances. It now uses a system based on filing status, income from multiple jobs, dependents, and other adjustments (additional withholding or deductions). Employees only need to submit a new W-4 when circumstances change.",
     "tip": "Post-2020 W-4 eliminated 'allowances' - now based on filing status, multiple jobs, dependents, and adjustments.",
     "calculationRequired": false,
@@ -184,12 +184,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The failure to file penalty is generally:",
     "options": {
-      "A": "0.5% of unpaid tax per month, up to 25%",
-      "B": "5% of unpaid tax per month, up to 25%",
-      "C": "10% of unpaid tax per month, up to 50%",
-      "D": "A flat $500 penalty"
+      "A": "10% of unpaid tax per month, up to 50%",
+      "B": "A flat $500 penalty",
+      "C": "0.5% of unpaid tax per month, up to 25%",
+      "D": "5% of unpaid tax per month, up to 25%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The failure to file penalty is 5% of unpaid tax for each month (or part of month) the return is late, up to a maximum of 25%. This is much steeper than the failure to pay penalty (0.5% per month). If both apply, the failure to file penalty is reduced by the failure to pay penalty.",
     "tip": "File penalty (5%/month) is 10x worse than pay penalty (0.5%/month). Always file on time!",
     "calculationRequired": false,
@@ -205,12 +205,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The accuracy-related penalty for substantial understatement of income tax is:",
     "options": {
-      "A": "10% of the understatement",
-      "B": "20% of the understatement",
-      "C": "50% of the understatement",
-      "D": "75% of the understatement"
+      "A": "75% of the understatement",
+      "B": "10% of the understatement",
+      "C": "20% of the understatement",
+      "D": "50% of the understatement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The accuracy-related penalty under Section 6662 is 20% of the underpayment attributable to negligence, substantial understatement of income tax, or substantial valuation misstatement. Substantial understatement occurs when the understatement exceeds the greater of 10% of the correct tax or $5,000.",
     "tip": "Most accuracy penalties = 20%. The 75% rate is for fraud (Section 6663).",
     "calculationRequired": false,
@@ -226,12 +226,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The general statute of limitations for the IRS to assess additional tax is:",
     "options": {
-      "A": "2 years from the date of filing",
-      "B": "3 years from the later of filing or due date",
-      "C": "5 years from the date of filing",
-      "D": "7 years from the due date"
+      "A": "7 years from the due date",
+      "B": "2 years from the date of filing",
+      "C": "3 years from the later of filing or due date",
+      "D": "5 years from the date of filing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The general assessment period is 3 years from the later of the filing date or the due date (including extensions). If a return is filed early, the statute runs from the due date. Special rules extend the period to 6 years for substantial omissions and indefinitely for fraud or failure to file.",
     "tip": "General rule = 3 years from later of filing or due date. Extended to 6 years for 25%+ omission.",
     "calculationRequired": false,
@@ -247,12 +247,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The statute of limitations for IRS assessment is extended to 6 years when:",
     "options": {
-      "A": "The taxpayer files for an extension",
-      "B": "The taxpayer omits more than 25% of gross income",
-      "C": "The taxpayer claims the earned income credit",
-      "D": "The return is filed electronically"
+      "A": "The taxpayer claims the earned income credit",
+      "B": "The return is filed electronically",
+      "C": "The taxpayer files for an extension",
+      "D": "The taxpayer omits more than 25% of gross income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The assessment period extends to 6 years when the taxpayer omits gross income exceeding 25% of the gross income stated on the return. For example, if stated gross income is $100,000 and the omission is $30,000 (30%), the 6-year rule applies. Fraud creates an unlimited period.",
     "tip": "25%+ gross income omission = 6 years. Fraud = unlimited. Otherwise = 3 years.",
     "calculationRequired": false,
@@ -268,12 +268,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer may file an amended return (Form 1040-X) to claim a refund within:",
     "options": {
-      "A": "2 years from the date tax was paid",
-      "B": "3 years from filing or 2 years from payment, whichever is later",
-      "C": "3 years from the original due date only",
-      "D": "4 years from the date the return was filed"
+      "A": "4 years from the date the return was filed",
+      "B": "2 years from the date tax was paid",
+      "C": "3 years from filing or 2 years from payment, whichever is later",
+      "D": "3 years from the original due date only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A refund claim must be filed within 3 years from the filing date of the original return (including extensions) OR 2 years from the date the tax was paid, whichever is later. If filed after 3 years, the refund is limited to amounts paid within the 2 years preceding the claim.",
     "tip": "Refund claim deadline = later of 3 years from filing or 2 years from payment.",
     "calculationRequired": false,
@@ -289,12 +289,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A surviving spouse may use the qualifying surviving spouse filing status for how long after the year of the spouse's death?",
     "options": {
-      "A": "One year only",
-      "B": "Two years",
-      "C": "Three years",
-      "D": "Indefinitely if not remarried"
+      "A": "Three years",
+      "B": "Indefinitely if not remarried",
+      "C": "One year only",
+      "D": "Two years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Qualifying surviving spouse status is available for the two tax years following the year of the spouse's death, provided the taxpayer doesn't remarry, maintains a household as the principal residence for a dependent child, and pays more than half the household costs. This status allows use of MFJ tax rates and standard deduction.",
     "tip": "QSS = 2 years after death year. Must have dependent child and maintain household.",
     "calculationRequired": false,
@@ -310,12 +310,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "U.S. citizens living abroad receive an automatic extension to file their return until:",
     "options": {
-      "A": "April 15",
-      "B": "June 15",
-      "C": "August 15",
-      "D": "October 15"
+      "A": "October 15",
+      "B": "April 15",
+      "C": "June 15",
+      "D": "August 15"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "U.S. citizens and resident aliens living abroad receive an automatic 2-month extension to file (June 15) without filing Form 4868. However, interest on unpaid tax still runs from April 15. They can file Form 4868 by June 15 for an additional extension to October 15.",
     "tip": "Citizens abroad = automatic extension to June 15 for filing (but interest still starts April 15).",
     "calculationRequired": false,
@@ -352,12 +352,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following would most likely constitute reasonable cause for penalty abatement?",
     "options": {
-      "A": "Ignorance of tax law",
-      "B": "Reliance on incorrect advice from a tax professional",
-      "C": "Disagreement with the tax law",
-      "D": "Inability to pay due to voluntary financial decisions"
+      "A": "Reliance on incorrect advice from a tax professional",
+      "B": "Disagreement with the tax law",
+      "C": "Inability to pay due to voluntary financial decisions",
+      "D": "Ignorance of tax law"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Reasonable reliance on incorrect advice from a qualified tax professional can constitute reasonable cause for penalty abatement, provided the taxpayer supplied accurate information to the professional. Ignorance of law, disagreement with law, and voluntary financial decisions generally do not constitute reasonable cause.",
     "tip": "Reasonable cause = reliance on professional advice, death/serious illness, fire/disaster. Not ignorance of law.",
     "calculationRequired": false,
@@ -394,12 +394,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Tax return documentation should generally be retained for at least:",
     "options": {
-      "A": "1 year after filing",
-      "B": "3 years after filing or due date, whichever is later",
-      "C": "7 years after filing",
-      "D": "Indefinitely for all returns"
+      "A": "Indefinitely for all returns",
+      "B": "1 year after filing",
+      "C": "3 years after filing or due date, whichever is later",
+      "D": "7 years after filing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Records should be kept at least 3 years from filing or due date to match the general statute of limitations. Records supporting property basis should be kept until the property is disposed of plus the statute period. Records for worthless securities or bad debts should be kept 7 years.",
     "tip": "General rule = 3 years. Keep property basis records until disposal + 3 years. Keep employment records 4 years.",
     "calculationRequired": false,
@@ -436,12 +436,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business must file Form 1099-NEC to report payments to a non-employee service provider when payments total at least:",
     "options": {
-      "A": "$100 during the year",
-      "B": "$400 during the year",
-      "C": "$600 during the year",
-      "D": "$1,000 during the year"
+      "A": "$1,000 during the year",
+      "B": "$100 during the year",
+      "C": "$400 during the year",
+      "D": "$600 during the year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Form 1099-NEC must be filed for nonemployee compensation of $600 or more paid during the year. This includes payments to independent contractors, freelancers, and other non-employees for services. The form must be provided to the recipient by January 31 and filed with the IRS.",
     "tip": "1099-NEC threshold = $600. Same threshold applies to 1099-MISC for rent, royalties, etc.",
     "calculationRequired": false,
@@ -457,12 +457,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. person must file an FBAR (FinCEN Form 114) if the aggregate value of foreign financial accounts exceeds what amount at any time during the year?",
     "options": {
-      "A": "$5,000",
-      "B": "$10,000",
-      "C": "$50,000",
-      "D": "$100,000"
+      "A": "$50,000",
+      "B": "$100,000",
+      "C": "$5,000",
+      "D": "$10,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An FBAR must be filed if the aggregate value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. This is filed electronically with FinCEN (not the IRS) by April 15 with an automatic extension to October 15. Penalties for non-filing can be severe.",
     "tip": "FBAR = $10,000 aggregate max value at ANY point in year. Filed with FinCEN, not IRS.",
     "calculationRequired": false,
@@ -478,12 +478,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Form 8938 (FATCA reporting) differs from the FBAR in that Form 8938:",
     "options": {
-      "A": "Has a lower reporting threshold than FBAR",
-      "B": "Is filed with FinCEN",
-      "C": "Is attached to the income tax return",
-      "D": "Only covers bank accounts"
+      "A": "Only covers bank accounts",
+      "B": "Has a lower reporting threshold than FBAR",
+      "C": "Is filed with FinCEN",
+      "D": "Is attached to the income tax return"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Form 8938 is filed with the IRS as an attachment to Form 1040, while FBAR is filed separately with FinCEN. Form 8938 has higher thresholds ($50,000/$200,000 depending on residence and filing status) and covers a broader range of assets including certain foreign stocks and interests, not just bank accounts.",
     "tip": "Form 8938 = filed with 1040, higher thresholds, broader assets. FBAR = separate FinCEN filing, $10K threshold.",
     "calculationRequired": false,
@@ -499,12 +499,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The civil fraud penalty under Section 6663 equals what percentage of the underpayment attributable to fraud?",
     "options": {
-      "A": "20%",
-      "B": "50%",
-      "C": "75%",
-      "D": "100%"
+      "A": "75%",
+      "B": "100%",
+      "C": "20%",
+      "D": "50%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The civil fraud penalty is 75% of the underpayment attributable to fraud. This is significantly higher than the 20% accuracy-related penalty. The IRS must prove fraud by clear and convincing evidence. The fraud penalty preempts the accuracy-related penalty for the same underpayment.",
     "tip": "Fraud = 75% penalty + unlimited assessment period. IRS must prove by clear and convincing evidence.",
     "calculationRequired": false,
@@ -520,12 +520,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The interest rate on individual tax underpayments is:",
     "options": {
-      "A": "A flat 6% annually",
-      "B": "The federal short-term rate plus 2 percentage points",
-      "C": "The federal short-term rate plus 3 percentage points",
-      "D": "The prime rate plus 1 percentage point"
+      "A": "The prime rate plus 1 percentage point",
+      "B": "A flat 6% annually",
+      "C": "The federal short-term rate plus 2 percentage points",
+      "D": "The federal short-term rate plus 3 percentage points"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "For individual taxpayers, the underpayment interest rate is the federal short-term rate plus 3 percentage points (rounded to the nearest whole percent). The rate is adjusted quarterly. This is higher than the corporate underpayment rate (federal short-term rate plus 3%) for large corporate underpayments.",
     "tip": "Individual underpayment interest = short-term federal rate + 3%. Adjusted quarterly.",
     "calculationRequired": false,
@@ -583,12 +583,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For an individual taxpayer, a substantial understatement of income tax exists when the understatement exceeds the greater of:",
     "options": {
-      "A": "5% of tax shown on return or $2,500",
-      "B": "10% of tax shown on return or $5,000",
-      "C": "15% of tax shown on return or $7,500",
-      "D": "20% of tax shown on return or $10,000"
+      "A": "10% of tax shown on return or $5,000",
+      "B": "15% of tax shown on return or $7,500",
+      "C": "20% of tax shown on return or $10,000",
+      "D": "5% of tax shown on return or $2,500"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A substantial understatement exists when the understatement exceeds the greater of 10% of the tax required to be shown on the return or $5,000. The penalty is 20% of the underpayment attributable to the substantial understatement. Adequate disclosure with reasonable basis can reduce the understatement amount.",
     "tip": "Substantial understatement = greater of 10% of correct tax or $5,000. Results in 20% penalty.",
     "calculationRequired": false,
@@ -604,12 +604,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Traditional innocent spouse relief under Section 6015(b) requires all of the following EXCEPT:",
     "options": {
-      "A": "An understatement of tax attributable to erroneous items of the other spouse",
-      "B": "The requesting spouse did not know and had no reason to know of the understatement",
-      "C": "The requesting spouse is divorced or legally separated from the other spouse",
-      "D": "It would be inequitable to hold the requesting spouse liable"
+      "A": "The requesting spouse is divorced or legally separated from the other spouse",
+      "B": "It would be inequitable to hold the requesting spouse liable",
+      "C": "An understatement of tax attributable to erroneous items of the other spouse",
+      "D": "The requesting spouse did not know and had no reason to know of the understatement"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Traditional innocent spouse relief under 6015(b) does not require divorce or separation. Requirements are: (1) joint return filed, (2) understatement due to other spouse's erroneous items, (3) requesting spouse didn't know/have reason to know of understatement, and (4) inequitable to hold requesting spouse liable. Separation relief under 6015(c) requires living apart.",
     "tip": "6015(b) innocent spouse = no divorce required. 6015(c) separation relief = must be separated 12+ months.",
     "calculationRequired": false,
@@ -625,12 +625,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The estimated tax penalty does not apply if the total tax liability minus withholding is less than:",
     "options": {
-      "A": "$500",
-      "B": "$1,000",
-      "C": "$1,500",
-      "D": "$2,500"
+      "A": "$1,000",
+      "B": "$1,500",
+      "C": "$2,500",
+      "D": "$500"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "No estimated tax penalty applies if the balance due (tax minus withholding and credits) is less than $1,000. This de minimis exception prevents penalties for small underpayments. The $1,000 threshold applies regardless of whether the taxpayer met the safe harbor requirements.",
     "tip": "$1,000 rule: If you owe less than $1,000 at filing, no estimated tax penalty regardless of payments.",
     "calculationRequired": false,
@@ -646,12 +646,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A John Doe summons is used by the IRS to:",
     "options": {
-      "A": "Summon a specific taxpayer by name",
-      "B": "Obtain information about taxpayers whose identities are unknown",
-      "C": "Collect taxes from a defaulting taxpayer",
-      "D": "Issue a levy against a taxpayer's assets"
+      "A": "Issue a levy against a taxpayer's assets",
+      "B": "Summon a specific taxpayer by name",
+      "C": "Obtain information about taxpayers whose identities are unknown",
+      "D": "Collect taxes from a defaulting taxpayer"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A John Doe summons is used when the IRS seeks information about taxpayers whose identities are not known. It requires court approval and must show reasonable basis for believing the group has failed to comply with tax law. This tool is often used to obtain records from third parties about potentially non-compliant taxpayers.",
     "tip": "John Doe summons = fishing for unknown taxpayers. Requires court approval. Used against banks, crypto exchanges, etc.",
     "calculationRequired": false,
@@ -667,12 +667,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When both failure to file and failure to pay penalties apply for the same month:",
     "options": {
-      "A": "Both penalties apply in full",
-      "B": "Only the failure to file penalty applies",
-      "C": "Only the failure to pay penalty applies",
-      "D": "The failure to file penalty is reduced by the failure to pay penalty"
+      "A": "The failure to file penalty is reduced by the failure to pay penalty",
+      "B": "Both penalties apply in full",
+      "C": "Only the failure to file penalty applies",
+      "D": "Only the failure to pay penalty applies"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "When both penalties apply for the same month, the failure to file penalty (5%) is reduced by the failure to pay penalty (0.5%), resulting in a net 4.5% failure to file penalty plus 0.5% failure to pay penalty = 5% total for that month. This prevents double-counting the failure to pay component.",
     "tip": "Penalty stacking: 5% FTF is reduced by 0.5% FTP = 4.5% + 0.5% = 5% total per month (not 5.5%).",
     "calculationRequired": false,
@@ -688,12 +688,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The IRS generally has how long to collect an assessed tax?",
     "options": {
-      "A": "3 years from assessment",
-      "B": "6 years from assessment",
-      "C": "10 years from assessment",
-      "D": "Unlimited time"
+      "A": "10 years from assessment",
+      "B": "Unlimited time",
+      "C": "3 years from assessment",
+      "D": "6 years from assessment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The IRS has 10 years from the date of assessment to collect taxes. This is the collection statute expiration date (CSED). The period can be extended by agreement, bankruptcy, or other specified events. After the CSED, the IRS can no longer legally collect the debt.",
     "tip": "3 years to assess, 10 years to collect (CSED). Watch for events that toll the collection period.",
     "calculationRequired": false,
@@ -709,12 +709,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Failure to disclose a listed transaction on Form 8886 can result in a penalty of:",
     "options": {
-      "A": "$5,000",
-      "B": "$10,000",
-      "C": "75% of the tax benefit",
-      "D": "The greater of $200,000 or 75% of the decrease in tax"
+      "A": "75% of the tax benefit",
+      "B": "The greater of $200,000 or 75% of the decrease in tax",
+      "C": "$5,000",
+      "D": "$10,000"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "The penalty for failing to disclose a listed transaction is $200,000 for individuals ($100,000 for others) or, if greater, 75% of the decrease in tax shown on the return as a result of the transaction. Listed transactions are abusive tax avoidance transactions specifically identified by the IRS.",
     "tip": "Listed transaction disclosure penalty = greater of $200K or 75% of tax benefit. Very severe penalty.",
     "calculationRequired": false,
@@ -730,12 +730,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a community property state, when spouses file separately:",
     "options": {
-      "A": "Each spouse reports only their own earned income",
-      "B": "Each spouse reports half of the combined community income",
-      "C": "Community property rules do not apply for federal tax purposes",
-      "D": "Only the higher-earning spouse reports community income"
+      "A": "Each spouse reports half of the combined community income",
+      "B": "Community property rules do not apply for federal tax purposes",
+      "C": "Only the higher-earning spouse reports community income",
+      "D": "Each spouse reports only their own earned income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In community property states, when spouses file separately, each spouse must report half of the total community income and deductions. This includes half of the other spouse's earnings. Separate property income is reported by the spouse who owns it. Community property states include Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, Washington, and Wisconsin.",
     "tip": "Community property MFS = each reports 50% of combined community income. Can't shift income by filing separately.",
     "calculationRequired": false,
@@ -751,12 +751,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cash-method taxpayer expecting lower tax rates next year can defer income by:",
     "options": {
-      "A": "Billing customers early in December",
-      "B": "Delaying billing until January",
-      "C": "Depositing December checks in January",
-      "D": "Backdating invoices to the prior year"
+      "A": "Delaying billing until January",
+      "B": "Depositing December checks in January",
+      "C": "Backdating invoices to the prior year",
+      "D": "Billing customers early in December"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cash-method taxpayers recognize income when received. Delaying billing pushes receipt of payment into the next year, deferring income recognition. Depositing checks later doesn't help - constructive receipt occurs when payment is available. Backdating invoices is fraudulent and doesn't affect cash basis recognition.",
     "tip": "Cash basis income planning: control when you BILL, not when you deposit. Constructive receipt matters.",
     "calculationRequired": false,
@@ -772,12 +772,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The strategy of 'bunching' itemized deductions involves:",
     "options": {
-      "A": "Spreading deductions evenly across years",
-      "B": "Concentrating deductible expenses in alternate years",
-      "C": "Converting itemized deductions to business deductions",
-      "D": "Claiming the standard deduction every year"
+      "A": "Concentrating deductible expenses in alternate years",
+      "B": "Converting itemized deductions to business deductions",
+      "C": "Claiming the standard deduction every year",
+      "D": "Spreading deductions evenly across years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Bunching involves concentrating itemized deductions (like charitable contributions) into alternate years to exceed the standard deduction in those years, then taking the standard deduction in the other years. This maximizes total deductions compared to spreading expenses evenly when the standard deduction is high.",
     "tip": "Bunching = alternate year strategy. High itemized year → itemize; low year → standard deduction.",
     "calculationRequired": false,
@@ -793,12 +793,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Interest from municipal bonds is generally:",
     "options": {
-      "A": "Fully taxable at ordinary rates",
-      "B": "Taxed at capital gains rates",
-      "C": "Exempt from federal income tax",
-      "D": "Deferred until maturity"
+      "A": "Taxed at capital gains rates",
+      "B": "Exempt from federal income tax",
+      "C": "Deferred until maturity",
+      "D": "Fully taxable at ordinary rates"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Interest from municipal bonds (issued by state and local governments) is generally exempt from federal income tax. It may also be exempt from state tax if issued by the taxpayer's home state. However, some municipal bond interest (private activity bonds) may be a preference item for AMT purposes.",
     "tip": "Muni bond interest = federally tax-exempt. Compare tax-equivalent yield to taxable bonds.",
     "calculationRequired": false,
@@ -814,12 +814,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To qualify for long-term capital gain rates, an asset must be held for:",
     "options": {
-      "A": "At least 6 months",
-      "B": "More than 12 months",
-      "C": "At least 18 months",
-      "D": "More than 24 months"
+      "A": "More than 24 months",
+      "B": "At least 6 months",
+      "C": "More than 12 months",
+      "D": "At least 18 months"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Long-term capital gain treatment requires a holding period of more than one year (12 months). If sold on the one-year anniversary, the gain is still short-term. Holding one day beyond the one-year anniversary qualifies for the preferential 0%/15%/20% rates instead of ordinary income rates.",
     "tip": "LTCG = held MORE than 12 months. Sale on exact anniversary = short-term.",
     "calculationRequired": false,
@@ -835,12 +835,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer expecting to be in a higher tax bracket during retirement would generally benefit most from:",
     "options": {
-      "A": "Traditional IRA contributions",
-      "B": "Roth IRA contributions",
-      "C": "Non-deductible traditional IRA contributions",
-      "D": "Neither type of IRA"
+      "A": "Non-deductible traditional IRA contributions",
+      "B": "Neither type of IRA",
+      "C": "Traditional IRA contributions",
+      "D": "Roth IRA contributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Roth IRA contributions are made with after-tax dollars, and qualified distributions are tax-free. If a taxpayer expects higher rates in retirement, paying tax now at lower rates (Roth) is preferable to deferring tax (Traditional IRA) only to pay at higher rates later.",
     "tip": "Roth = pay tax now (good if rates rise). Traditional = pay tax later (good if rates drop). Consider future brackets.",
     "calculationRequired": false,
@@ -856,12 +856,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The kiddie tax can be avoided by investing a child's funds in:",
     "options": {
-      "A": "Corporate bonds",
-      "B": "Dividend-paying stocks",
-      "C": "Growth stocks that do not pay dividends",
-      "D": "Money market funds"
+      "A": "Growth stocks that do not pay dividends",
+      "B": "Money market funds",
+      "C": "Corporate bonds",
+      "D": "Dividend-paying stocks"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The kiddie tax applies to unearned income (interest, dividends, capital gains) above a threshold. Growth stocks that don't pay dividends produce no current income and thus avoid kiddie tax. The gain is deferred until sale, potentially when the child is no longer subject to kiddie tax rules.",
     "tip": "Kiddie tax planning: use growth stocks or Series EE/I bonds to defer income until child is older.",
     "calculationRequired": false,
@@ -877,12 +877,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cash-method taxpayer receives a check on December 30 but does not deposit it until January 3. The income is taxable in:",
     "options": {
-      "A": "January of the following year",
-      "B": "December of the current year",
-      "C": "The year the taxpayer chooses",
-      "D": "Equally between both years"
+      "A": "December of the current year",
+      "B": "The year the taxpayer chooses",
+      "C": "Equally between both years",
+      "D": "January of the following year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under constructive receipt doctrine, income is taxable when it is made available to the taxpayer without substantial limitations, not when actually received. A check received December 30 is constructively received then, even if deposited later. The taxpayer cannot defer income by delaying deposit.",
     "tip": "Constructive receipt = income available without restriction. Can't delay by not depositing a check you received.",
     "calculationRequired": false,
@@ -898,12 +898,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The key tax difference between incentive stock options (ISOs) and nonqualified stock options (NSOs) at exercise is that:",
     "options": {
-      "A": "ISOs create ordinary income at exercise; NSOs do not",
-      "B": "NSOs create ordinary income at exercise; ISOs generally do not for regular tax",
-      "C": "Both create capital gain at exercise",
-      "D": "Neither creates any tax consequence at exercise"
+      "A": "Both create capital gain at exercise",
+      "B": "Neither creates any tax consequence at exercise",
+      "C": "ISOs create ordinary income at exercise; NSOs do not",
+      "D": "NSOs create ordinary income at exercise; ISOs generally do not for regular tax"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "At exercise, NSOs create ordinary income equal to the spread (FMV minus exercise price). ISOs generally do not create regular tax income at exercise (but do create an AMT preference item). ISO holders recognize gain at sale, potentially qualifying for capital gain treatment if holding requirements are met.",
     "tip": "ISO = no regular tax at exercise (but AMT preference). NSO = ordinary income at exercise.",
     "calculationRequired": false,
@@ -940,12 +940,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 3.8% net investment income tax (NIIT) applies to individuals with modified AGI exceeding:",
     "options": {
-      "A": "$125,000 for single filers",
-      "B": "$200,000 for single filers, $250,000 for married filing jointly",
-      "C": "$250,000 for all filers",
-      "D": "$400,000 for single filers, $450,000 for married filing jointly"
+      "A": "$400,000 for single filers, $450,000 for married filing jointly",
+      "B": "$125,000 for single filers",
+      "C": "$200,000 for single filers, $250,000 for married filing jointly",
+      "D": "$250,000 for all filers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The NIIT applies to the lesser of net investment income or MAGI exceeding threshold amounts: $250,000 (MFJ), $200,000 (single/HoH), $125,000 (MFS). Net investment income includes interest, dividends, capital gains, and passive income, but not wages or active business income.",
     "tip": "NIIT = 3.8% on investment income. Thresholds: $200K single, $250K MFJ, $125K MFS. Not indexed for inflation!",
     "calculationRequired": false,
@@ -982,12 +982,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For 2024, the maximum employee elective deferral to a 401(k) plan for an employee under age 50 is:",
     "options": {
-      "A": "$7,000",
-      "B": "$15,500",
-      "C": "$23,000",
-      "D": "$69,000"
+      "A": "$15,500",
+      "B": "$23,000",
+      "C": "$69,000",
+      "D": "$7,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For 2024, the employee elective deferral limit for 401(k) plans is $23,000 (indexed for inflation). Those age 50 and over can contribute an additional $7,500 catch-up. The $69,000 is the total annual addition limit (employee + employer contributions).",
     "tip": "2024 401(k): $23,000 employee limit + $7,500 catch-up if 50+. Total additions capped at $69,000.",
     "calculationRequired": false,
@@ -1024,12 +1024,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is most likely to trigger alternative minimum tax (AMT)?",
     "options": {
-      "A": "Large mortgage interest deduction",
-      "B": "Exercise of incentive stock options with large spread",
-      "C": "Significant charitable contributions",
-      "D": "High qualified dividend income"
+      "A": "High qualified dividend income",
+      "B": "Large mortgage interest deduction",
+      "C": "Exercise of incentive stock options with large spread",
+      "D": "Significant charitable contributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Exercising ISOs creates an AMT adjustment equal to the spread (FMV minus exercise price). This is one of the most common AMT triggers. Acquisition debt interest, charitable contributions, and qualified dividends are generally not AMT preference items.",
     "tip": "ISO exercise = major AMT trigger. Plan ISO exercises to avoid or minimize AMT.",
     "calculationRequired": false,
@@ -1066,12 +1066,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the cash method, prepaid expenses are generally deductible:",
     "options": {
-      "A": "When paid, regardless of the benefit period",
-      "B": "Ratably over the period to which they relate",
-      "C": "In the earlier of when paid or when economic performance occurs",
-      "D": "Only in the year the benefit is received"
+      "A": "Ratably over the period to which they relate",
+      "B": "In the earlier of when paid or when economic performance occurs",
+      "C": "Only in the year the benefit is received",
+      "D": "When paid, regardless of the benefit period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Even for cash-method taxpayers, prepaid expenses extending beyond 12 months beyond the end of the current tax year must be capitalized and deducted over the benefit period. The 12-month rule allows current deduction if the benefit doesn't extend more than 12 months after payment.",
     "tip": "12-month rule: prepaid expense deductible if benefit doesn't extend beyond 12 months from payment date.",
     "calculationRequired": false,
@@ -1087,12 +1087,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The net unrealized appreciation (NUA) strategy for employer stock in a 401(k) involves:",
     "options": {
-      "A": "Rolling over all assets to an IRA",
-      "B": "Taking a lump-sum distribution with stock distributed in-kind",
-      "C": "Converting the 401(k) to a Roth IRA",
-      "D": "Donating the stock to charity from the 401(k)"
+      "A": "Taking a lump-sum distribution with stock distributed in-kind",
+      "B": "Converting the 401(k) to a Roth IRA",
+      "C": "Donating the stock to charity from the 401(k)",
+      "D": "Rolling over all assets to an IRA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NUA strategy involves taking a lump-sum distribution from the 401(k) with employer stock distributed in-kind rather than sold. Only the cost basis is taxed as ordinary income at distribution. The NUA (appreciation) is taxed as long-term capital gain when the stock is later sold.",
     "tip": "NUA = get LTCG treatment on employer stock appreciation instead of ordinary income. Requires in-kind distribution.",
     "calculationRequired": false,
@@ -1129,12 +1129,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The assignment of income doctrine prevents:",
     "options": {
-      "A": "Gifts of property to family members",
-      "B": "Shifting earned income by directing payment to another person",
-      "C": "Employing family members at fair market wages",
-      "D": "Transferring dividend-paying stock to children"
+      "A": "Shifting earned income by directing payment to another person",
+      "B": "Employing family members at fair market wages",
+      "C": "Transferring dividend-paying stock to children",
+      "D": "Gifts of property to family members"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The assignment of income doctrine prevents taxpayers from avoiding tax by directing earned income to another person. The person who earns income must report it. However, transferring income-producing property (shifting the 'tree' not just the 'fruit') is permitted, as is paying reasonable wages to family employees.",
     "tip": "Assignment of income: can't assign fruit, but can gift the tree. Transfer property, not just income.",
     "calculationRequired": false,
@@ -1150,12 +1150,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Capital gains invested in a Qualified Opportunity Zone Fund receive which tax benefit?",
     "options": {
-      "A": "Immediate exclusion of the original gain",
-      "B": "Deferral of the original gain and potential exclusion of future appreciation",
-      "C": "Conversion of short-term gain to long-term gain",
-      "D": "100% exclusion of all gains"
+      "A": "Conversion of short-term gain to long-term gain",
+      "B": "100% exclusion of all gains",
+      "C": "Immediate exclusion of the original gain",
+      "D": "Deferral of the original gain and potential exclusion of future appreciation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Investing capital gains in a QOZ Fund provides: (1) deferral of the original gain until December 31, 2026, or earlier disposition, and (2) exclusion of appreciation on the QOZ investment if held at least 10 years. The original gain step-up benefits expired after 2021.",
     "tip": "QOZ: defer gain until 2026, exclude appreciation after 10-year hold. Original gain step-up benefits expired.",
     "calculationRequired": false,
@@ -1171,12 +1171,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For dividends to qualify for preferential tax rates, the stock must be held for more than:",
     "options": {
-      "A": "30 days during the 61-day period around the ex-dividend date",
-      "B": "60 days during the 121-day period around the ex-dividend date",
-      "C": "90 days before the ex-dividend date",
-      "D": "120 days after the dividend payment date"
+      "A": "60 days during the 121-day period around the ex-dividend date",
+      "B": "90 days before the ex-dividend date",
+      "C": "120 days after the dividend payment date",
+      "D": "30 days during the 61-day period around the ex-dividend date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For common stock dividends to qualify for the preferential 0%/15%/20% rates, the stock must be held for more than 60 days during the 121-day period beginning 60 days before the ex-dividend date. Preferred stock has a 91-day requirement during a 181-day window for dividends on periods over 366 days.",
     "tip": "Qualified dividend holding period: >60 days in 121-day window around ex-dividend date.",
     "calculationRequired": false,
@@ -1192,12 +1192,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A strategy to reduce future required minimum distributions (RMDs) includes:",
     "options": {
-      "A": "Increasing traditional IRA contributions",
-      "B": "Converting traditional IRA assets to Roth IRA",
-      "C": "Delaying retirement",
-      "D": "Increasing current withdrawals"
+      "A": "Increasing current withdrawals",
+      "B": "Increasing traditional IRA contributions",
+      "C": "Converting traditional IRA assets to Roth IRA",
+      "D": "Delaying retirement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Roth IRAs do not have RMDs during the owner's lifetime. Converting traditional IRA assets to Roth (paying tax now) reduces future RMDs by removing those assets from accounts subject to RMD rules. This is especially valuable in lower income years when conversion tax cost is reduced.",
     "tip": "Roth conversion reduces RMDs - no lifetime RMDs for Roth IRAs. Convert in low-income years.",
     "calculationRequired": false,
@@ -1213,12 +1213,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A donor advised fund (DAF) provides flexibility in charitable giving because:",
     "options": {
-      "A": "Contributions are deductible when grants are made to charities",
-      "B": "The contribution is deductible immediately while grants can be made in future years",
-      "C": "Contributions can be revoked if the donor changes their mind",
-      "D": "The fund can make grants to individuals"
+      "A": "Contributions can be revoked if the donor changes their mind",
+      "B": "The fund can make grants to individuals",
+      "C": "Contributions are deductible when grants are made to charities",
+      "D": "The contribution is deductible immediately while grants can be made in future years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "DAFs provide immediate charitable deduction when the contribution is made, while allowing the donor to recommend grants to specific charities over time. This separates the tax benefit timing from the charitable disbursement timing. Contributions are irrevocable, and grants must go to qualified charities, not individuals.",
     "tip": "DAF = deduction now, grant later. Great for bunching in high-income years with gradual distributions.",
     "calculationRequired": false,
@@ -1255,12 +1255,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 1202 qualified small business stock (QSBS) exclusion allows taxpayers to exclude from gross income up to:",
     "options": {
-      "A": "50% of gain, capped at $5 million",
-      "B": "75% of gain, capped at $10 million",
-      "C": "100% of gain, subject to limitations",
-      "D": "$250,000 of gain per taxpayer"
+      "A": "75% of gain, capped at $10 million",
+      "B": "100% of gain, subject to limitations",
+      "C": "$250,000 of gain per taxpayer",
+      "D": "50% of gain, capped at $5 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For QSBS acquired after September 27, 2010, Section 1202 allows 100% exclusion of gain, limited to the greater of $10 million or 10 times the adjusted basis of QSBS in that corporation. The stock must be held more than 5 years and meet other requirements (C corp, active business, under $50M gross assets).",
     "tip": "QSBS = up to 100% exclusion, max of $10M or 10x basis. Must hold 5+ years, C corp, active business.",
     "calculationRequired": false,
@@ -1276,12 +1276,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "AMT paid due to timing differences (deferral items) generates:",
     "options": {
-      "A": "No future tax benefit",
-      "B": "A minimum tax credit usable in future years",
-      "C": "An ordinary loss deduction",
-      "D": "A reduction in future AMT exemption"
+      "A": "An ordinary loss deduction",
+      "B": "A reduction in future AMT exemption",
+      "C": "No future tax benefit",
+      "D": "A minimum tax credit usable in future years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AMT paid due to deferral preferences (like ISO exercises or MACRS vs. AMT depreciation) generates a minimum tax credit (MTC) that can offset regular tax in future years. Exclusion items (like private activity bond interest) do not generate MTC. The credit helps equalize taxation over time.",
     "tip": "Deferral AMT items → MTC credit for future regular tax offset. Exclusion items → no credit.",
     "calculationRequired": false,
@@ -1297,12 +1297,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 'backdoor Roth' strategy involves:",
     "options": {
-      "A": "Making excess Roth IRA contributions",
-      "B": "Making non-deductible traditional IRA contributions and converting to Roth",
-      "C": "Withdrawing from a 401(k) to fund a Roth IRA",
-      "D": "Borrowing from a Roth IRA"
+      "A": "Borrowing from a Roth IRA",
+      "B": "Making excess Roth IRA contributions",
+      "C": "Making non-deductible traditional IRA contributions and converting to Roth",
+      "D": "Withdrawing from a 401(k) to fund a Roth IRA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The backdoor Roth strategy allows high-income taxpayers who exceed Roth IRA income limits to make non-deductible traditional IRA contributions and then convert to Roth. The pro-rata rule may cause partial taxation if the taxpayer has other pre-tax IRA balances. This remains a legal strategy after Build Back Better failed to eliminate it.",
     "tip": "Backdoor Roth: nondeductible traditional IRA → convert to Roth. Beware pro-rata rule if you have pre-tax IRAs.",
     "calculationRequired": false,
@@ -1318,12 +1318,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current law, a child's unearned income subject to the kiddie tax is taxed at:",
     "options": {
-      "A": "The child's marginal rate",
-      "B": "The parent's marginal rate",
-      "C": "A flat 15% rate",
-      "D": "The estate and trust tax rates"
+      "A": "A flat 15% rate",
+      "B": "The estate and trust tax rates",
+      "C": "The child's marginal rate",
+      "D": "The parent's marginal rate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under current law (post-TCJA correction), a child's unearned income subject to the kiddie tax is taxed at the parents' marginal rate. The first threshold amount (indexed, approximately $1,300) is tax-free, the second threshold amount is taxed at the child's rate, and amounts above that are taxed at the parents' marginal rate.",
     "tip": "Kiddie tax = parent's rate (current law). Brief use of trust rates was repealed retroactively.",
     "calculationRequired": false,
@@ -1339,12 +1339,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A charitable remainder annuity trust (CRAT) provides:",
     "options": {
-      "A": "Variable payments based on trust value each year",
-      "B": "Fixed annual payments regardless of trust value",
-      "C": "All income to charity with remainder to individuals",
-      "D": "No income tax deduction at creation"
+      "A": "No income tax deduction at creation",
+      "B": "Variable payments based on trust value each year",
+      "C": "Fixed annual payments regardless of trust value",
+      "D": "All income to charity with remainder to individuals"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A CRAT pays a fixed annuity amount (at least 5% of initial fair market value) to the non-charitable beneficiary for a term or life, with the remainder going to charity. A charitable remainder unitrust (CRUT), in contrast, pays a percentage of trust value determined annually. Both provide income tax deductions at creation.",
     "tip": "CRAT = fixed payment. CRUT = variable payment based on annual value. Both give upfront deductions.",
     "calculationRequired": false,
@@ -1381,12 +1381,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a deferred Section 1031 exchange, replacement property must be identified within:",
     "options": {
-      "A": "30 days of the sale",
-      "B": "45 days of the sale",
-      "C": "90 days of the sale",
-      "D": "180 days of the sale"
+      "A": "90 days of the sale",
+      "B": "180 days of the sale",
+      "C": "30 days of the sale",
+      "D": "45 days of the sale"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In a deferred 1031 exchange, replacement property must be identified in writing within 45 days of transferring the relinquished property. The exchange must be completed within 180 days (or the due date of the tax return, if earlier). The 45-day and 180-day periods run concurrently.",
     "tip": "1031 timing: 45 days to identify, 180 days to close. Both periods start on sale of relinquished property.",
     "calculationRequired": false,
@@ -1402,12 +1402,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 'mega backdoor Roth' strategy involves:",
     "options": {
-      "A": "Contributing the maximum to a traditional IRA and converting",
-      "B": "Making after-tax 401(k) contributions and converting to Roth",
-      "C": "Contributing to multiple Roth IRAs",
-      "D": "Using SEP IRA contributions for Roth conversions"
+      "A": "Contributing to multiple Roth IRAs",
+      "B": "Using SEP IRA contributions for Roth conversions",
+      "C": "Contributing the maximum to a traditional IRA and converting",
+      "D": "Making after-tax 401(k) contributions and converting to Roth"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The mega backdoor Roth allows employees whose 401(k) plans permit after-tax contributions (beyond the regular elective deferral limit) to contribute and then convert those after-tax funds to Roth (in-plan or via rollover). This can add up to approximately $46,000 of additional Roth contributions in 2024.",
     "tip": "Mega backdoor = after-tax 401(k) contributions → Roth. Plan must allow after-tax and in-service distributions.",
     "calculationRequired": false,
@@ -1423,12 +1423,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 1045 allows deferral of gain on QSBS by:",
     "options": {
-      "A": "Investing in any qualified opportunity zone",
-      "B": "Rolling gain into replacement QSBS within 60 days",
-      "C": "Converting QSBS to S corporation stock",
-      "D": "Donating QSBS to a charitable remainder trust"
+      "A": "Donating QSBS to a charitable remainder trust",
+      "B": "Investing in any qualified opportunity zone",
+      "C": "Rolling gain into replacement QSBS within 60 days",
+      "D": "Converting QSBS to S corporation stock"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 1045 allows non-corporate taxpayers to roll over gain from the sale of QSBS held more than 6 months by purchasing replacement QSBS within 60 days. The gain is deferred and reduces the basis of the replacement stock. This can be combined with Section 1202 exclusion for the replacement stock.",
     "tip": "Section 1045 rollover: sell QSBS (held 6+ months) → reinvest in new QSBS within 60 days → defer gain.",
     "calculationRequired": false,
@@ -1486,12 +1486,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A primary tax advantage of operating as a C corporation is:",
     "options": {
-      "A": "Single level of taxation on business income",
-      "B": "Ability to accumulate earnings at lower corporate tax rates",
-      "C": "Pass-through of losses to shareholders",
-      "D": "Deductibility of dividends paid"
+      "A": "Ability to accumulate earnings at lower corporate tax rates",
+      "B": "Pass-through of losses to shareholders",
+      "C": "Deductibility of dividends paid",
+      "D": "Single level of taxation on business income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "C corporations can accumulate earnings at the flat 21% corporate rate, which may be lower than individual rates. However, this creates potential double taxation when earnings are distributed. C corps do not have pass-through taxation, and dividends paid are not deductible.",
     "tip": "C corp = 21% flat rate for accumulation. Good when shareholders are in higher individual brackets.",
     "calculationRequired": false,
@@ -1528,12 +1528,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The current federal corporate income tax rate for C corporations is:",
     "options": {
-      "A": "15%",
-      "B": "21%",
-      "C": "28%",
-      "D": "35%"
+      "A": "28%",
+      "B": "35%",
+      "C": "15%",
+      "D": "21%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The Tax Cuts and Jobs Act established a flat 21% corporate tax rate beginning in 2018, replacing the prior graduated rate structure that ranged from 15% to 35%. This flat rate applies to all taxable income regardless of amount.",
     "tip": "C corp rate = flat 21% since 2018 (TCJA). No longer graduated.",
     "calculationRequired": false,
@@ -1549,12 +1549,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Qualified dividends from a C corporation are taxed to individual shareholders at:",
     "options": {
-      "A": "Ordinary income rates",
-      "B": "Preferential capital gain rates (0%, 15%, or 20%)",
-      "C": "A flat 21% rate",
-      "D": "Self-employment tax rates"
+      "A": "Self-employment tax rates",
+      "B": "Ordinary income rates",
+      "C": "Preferential capital gain rates (0%, 15%, or 20%)",
+      "D": "A flat 21% rate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Qualified dividends (meeting holding period requirements) are taxed at preferential long-term capital gain rates: 0% for taxpayers in the 10-12% brackets, 15% for middle brackets, and 20% for the highest bracket. Ordinary dividends are taxed at regular income rates.",
     "tip": "Qualified dividends = 0%/15%/20% rates (same as LTCG). Must meet holding period requirement.",
     "calculationRequired": false,
@@ -1570,12 +1570,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For Section 351 to apply to a corporate formation, the transferors must:",
     "options": {
-      "A": "Control at least 50% of the corporation immediately after the exchange",
-      "B": "Control at least 80% of the corporation immediately after the exchange",
-      "C": "Be U.S. citizens or residents",
-      "D": "Transfer only tangible property"
+      "A": "Transfer only tangible property",
+      "B": "Control at least 50% of the corporation immediately after the exchange",
+      "C": "Control at least 80% of the corporation immediately after the exchange",
+      "D": "Be U.S. citizens or residents"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 351 provides nonrecognition treatment when property is transferred to a corporation solely in exchange for stock, if the transferors control (80% or more of voting power and total shares) the corporation immediately after the exchange. Services do not qualify as property for this purpose.",
     "tip": "Section 351 = 80% control test, immediately after exchange. Services ≠ property.",
     "calculationRequired": false,
@@ -1591,12 +1591,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation's net operating loss (NOL) arising after 2020 can offset taxable income by up to:",
     "options": {
-      "A": "50% of taxable income in any carryforward year",
-      "B": "80% of taxable income in any carryforward year",
-      "C": "100% of taxable income in any carryforward year",
-      "D": "Cannot be carried forward"
+      "A": "Cannot be carried forward",
+      "B": "50% of taxable income in any carryforward year",
+      "C": "80% of taxable income in any carryforward year",
+      "D": "100% of taxable income in any carryforward year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "For NOLs arising after December 31, 2020, the deduction is limited to 80% of taxable income (before the NOL deduction). The NOL can be carried forward indefinitely but cannot be carried back (except for certain farm losses). The 80% limit ensures some minimum tax is paid.",
     "tip": "Post-2020 NOLs: 80% limitation, indefinite carryforward, no carryback (generally).",
     "calculationRequired": false,
@@ -1612,12 +1612,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In calculating accumulated taxable income for the accumulated earnings tax, a corporation is allowed an accumulated earnings credit of at least:",
     "options": {
-      "A": "$50,000",
-      "B": "$150,000",
-      "C": "$250,000",
-      "D": "$500,000"
+      "A": "$150,000",
+      "B": "$250,000",
+      "C": "$500,000",
+      "D": "$50,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Most corporations receive a minimum accumulated earnings credit of $250,000 ($150,000 for certain personal service corporations). This allows accumulation up to these amounts without risk of the accumulated earnings tax, even without documented business needs.",
     "tip": "AET credit: $250K for most corps, $150K for personal service corps. Safe harbor for accumulation.",
     "calculationRequired": false,
@@ -1633,12 +1633,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A corporation is a personal holding company (PHC) if it meets the stock ownership test AND:",
     "options": {
-      "A": "At least 40% of adjusted ordinary gross income is PHC income",
-      "B": "At least 50% of adjusted ordinary gross income is PHC income",
-      "C": "At least 60% of adjusted ordinary gross income is PHC income",
-      "D": "At least 80% of adjusted ordinary gross income is PHC income"
+      "A": "At least 80% of adjusted ordinary gross income is PHC income",
+      "B": "At least 40% of adjusted ordinary gross income is PHC income",
+      "C": "At least 50% of adjusted ordinary gross income is PHC income",
+      "D": "At least 60% of adjusted ordinary gross income is PHC income"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "A corporation is a PHC if: (1) more than 50% of stock is owned by 5 or fewer individuals at any time during the last half of the tax year, AND (2) at least 60% of adjusted ordinary gross income is PHC income (dividends, interest, rents, royalties, personal service contracts). PHCs face a 20% tax on undistributed PHC income.",
     "tip": "PHC = 5-or-fewer own >50% + 60%+ PHC income. Pay dividends to avoid 20% PHC tax.",
     "calculationRequired": false,
@@ -1654,12 +1654,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 162(m) limits the deduction for compensation paid to covered employees of publicly traded corporations to:",
     "options": {
-      "A": "$500,000 per year",
-      "B": "$1,000,000 per year",
-      "C": "$2,000,000 per year",
-      "D": "No specific limit"
+      "A": "$2,000,000 per year",
+      "B": "No specific limit",
+      "C": "$500,000 per year",
+      "D": "$1,000,000 per year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 162(m) limits the deduction for compensation paid to covered employees of publicly traded corporations to $1 million per year. After TCJA, covered employees include CEO, CFO, and the three highest-paid officers, with no exception for performance-based compensation.",
     "tip": "162(m) = $1M cap per covered employee. Performance-based exception eliminated by TCJA.",
     "calculationRequired": false,
@@ -1675,12 +1675,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation receiving dividends from an unrelated domestic corporation in which it owns 30% of the stock is entitled to a dividends received deduction of:",
     "options": {
-      "A": "50%",
-      "B": "65%",
-      "C": "80%",
-      "D": "100%"
+      "A": "65%",
+      "B": "80%",
+      "C": "100%",
+      "D": "50%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The dividends received deduction depends on ownership percentage: 50% DRD for less than 20% ownership, 65% DRD for 20% to less than 80% ownership, and 100% DRD for 80% or more ownership (affiliated group). With 30% ownership, the 65% DRD applies.",
     "tip": "DRD: <20% ownership → 50%; 20-79% → 65%; 80%+ → 100%.",
     "calculationRequired": false,
@@ -1696,12 +1696,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a stock redemption to be treated as a sale (rather than a dividend), the distribution must:",
     "options": {
-      "A": "Be pro rata to all shareholders",
-      "B": "Meet one of several tests showing meaningful reduction in interest",
-      "C": "Be from a publicly traded corporation",
-      "D": "Be paid within one year of the board resolution"
+      "A": "Meet one of several tests showing meaningful reduction in interest",
+      "B": "Be from a publicly traded corporation",
+      "C": "Be paid within one year of the board resolution",
+      "D": "Be pro rata to all shareholders"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A redemption is treated as a sale (eligible for capital gain treatment) only if it meets one of several tests: complete termination of interest, substantially disproportionate distribution, not essentially equivalent to a dividend (meaningful reduction), or partial liquidation. Otherwise, it's taxed as a dividend to the extent of E&P.",
     "tip": "Redemption as sale requires: complete termination, substantially disproportionate, or meaningful reduction.",
     "calculationRequired": false,
@@ -1717,12 +1717,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation's charitable contribution deduction is limited to what percentage of taxable income (before certain deductions)?",
     "options": {
-      "A": "5%",
-      "B": "10%",
-      "C": "25%",
-      "D": "60%"
+      "A": "10%",
+      "B": "25%",
+      "C": "60%",
+      "D": "5%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "C corporations can deduct charitable contributions up to 10% of taxable income computed before the charitable contribution deduction, DRD, NOL deduction, and certain other items. Excess contributions can be carried forward 5 years.",
     "tip": "Corporate charitable limit = 10% of modified taxable income. 5-year carryforward for excess.",
     "calculationRequired": false,
@@ -1759,12 +1759,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 'large corporation' for estimated tax purposes cannot use the prior year's tax for safe harbor after:",
     "options": {
-      "A": "The first estimated payment",
-      "B": "The second estimated payment",
-      "C": "The third estimated payment",
-      "D": "Any estimated payment"
+      "A": "The second estimated payment",
+      "B": "The third estimated payment",
+      "C": "Any estimated payment",
+      "D": "The first estimated payment"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Large corporations (taxable income of $1 million or more in any of the 3 preceding years) can use prior year tax for only the first quarterly estimated payment. Remaining payments must be based on current year liability. Any shortfall from the first quarter must be made up in the second quarter.",
     "tip": "Large corp = prior year safe harbor only for Q1. Must use current year estimate for Q2-Q4.",
     "calculationRequired": false,
@@ -1780,12 +1780,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A major advantage of C corporation status for owner-employees is:",
     "options": {
-      "A": "Deduction of health insurance premiums above-the-line",
-      "B": "Tax-free fringe benefits even for more-than-2% shareholders",
-      "C": "No limit on retirement plan contributions",
-      "D": "Deduction of personal expenses as business expenses"
+      "A": "Deduction of personal expenses as business expenses",
+      "B": "Deduction of health insurance premiums above-the-line",
+      "C": "Tax-free fringe benefits even for more-than-2% shareholders",
+      "D": "No limit on retirement plan contributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "C corporation shareholder-employees can receive tax-free fringe benefits (health insurance, group term life up to $50,000, etc.) regardless of ownership percentage. S corp shareholders owning more than 2% cannot exclude these benefits from income. This is a significant C corp planning advantage.",
     "tip": "C corp = full fringe benefits for owner-employees. S corp >2% shareholders can't exclude health insurance.",
     "calculationRequired": false,
@@ -1801,12 +1801,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a complete liquidation of a C corporation:",
     "options": {
-      "A": "Only shareholders recognize gain or loss",
-      "B": "Only the corporation recognizes gain or loss",
-      "C": "Both corporation and shareholders may recognize gain or loss",
-      "D": "Neither party recognizes gain or loss"
+      "A": "Neither party recognizes gain or loss",
+      "B": "Only shareholders recognize gain or loss",
+      "C": "Only the corporation recognizes gain or loss",
+      "D": "Both corporation and shareholders may recognize gain or loss"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "In a complete liquidation, the corporation recognizes gain or loss as if it sold its assets at FMV (Section 336). Shareholders recognize gain or loss on the exchange of stock for liquidating distributions (Section 331). This results in potential double taxation on appreciated assets.",
     "tip": "C corp liquidation = double tax: corporate level on asset appreciation + shareholder level on stock exchange.",
     "calculationRequired": false,
@@ -1822,12 +1822,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Thin capitalization (high debt-to-equity ratio) creates risk that shareholder loans will be recharacterized as:",
     "options": {
-      "A": "Preferred stock",
-      "B": "Common stock (equity contribution)",
-      "C": "Guaranteed payments",
-      "D": "Capital leases"
+      "A": "Guaranteed payments",
+      "B": "Capital leases",
+      "C": "Preferred stock",
+      "D": "Common stock (equity contribution)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When a corporation is thinly capitalized (excessive debt relative to equity), the IRS may recharacterize shareholder loans as equity contributions. This converts deductible interest payments into nondeductible dividends and eliminates basis for loan repayment. A reasonable debt-to-equity ratio helps support debt treatment.",
     "tip": "Thin capitalization risk: loans → equity. Interest → dividend (no deduction). Document arm's-length loan terms.",
     "calculationRequired": false,
@@ -1843,12 +1843,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation may select any fiscal year-end because:",
     "options": {
-      "A": "The required taxable year rules don't apply to C corps",
-      "B": "C corps are required to use a calendar year",
-      "C": "The IRS automatically approves any fiscal year",
-      "D": "Pass-through taxation rules mandate calendar years"
+      "A": "The IRS automatically approves any fiscal year",
+      "B": "Pass-through taxation rules mandate calendar years",
+      "C": "The required taxable year rules don't apply to C corps",
+      "D": "C corps are required to use a calendar year"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "C corporations are not subject to the required taxable year rules that apply to partnerships, S corporations, and personal service corporations. They can generally select any fiscal year-end (though newly formed corporations must use the year shown on Form 1120 for the first return).",
     "tip": "C corps have fiscal year flexibility. S corps and partnerships must generally use calendar year.",
     "calculationRequired": false,
@@ -1885,12 +1885,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Section 351 exchange, if the corporation assumes liabilities in excess of the transferor's basis in property transferred:",
     "options": {
-      "A": "The entire transaction is disqualified from Section 351",
-      "B": "Only the excess is recognized as gain",
-      "C": "The excess is treated as a loan from the corporation",
-      "D": "The transferor recognizes gain equal to the excess"
+      "A": "The transferor recognizes gain equal to the excess",
+      "B": "The entire transaction is disqualified from Section 351",
+      "C": "Only the excess is recognized as gain",
+      "D": "The excess is treated as a loan from the corporation"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Under Section 357(c), if liabilities assumed exceed the transferor's basis in property transferred, the excess is recognized as gain. This prevents taxpayers from extracting tax-free cash by having the corporation assume liabilities greater than their investment. The character is determined by the property transferred.",
     "tip": "357(c): Liabilities > basis = gain. Can't extract tax-free cash through excessive liability assumption.",
     "calculationRequired": false,
@@ -1927,12 +1927,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Form 1120 for a calendar-year C corporation is due:",
     "options": {
-      "A": "March 15",
-      "B": "April 15",
-      "C": "September 15",
-      "D": "October 15"
+      "A": "April 15",
+      "B": "September 15",
+      "C": "October 15",
+      "D": "March 15"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "C corporation returns (Form 1120) are due on the 15th day of the 4th month after year-end. For calendar-year corporations, this is April 15. A 6-month extension (to October 15) is available. This differs from S corporations and partnerships, which are due March 15.",
     "tip": "C corp = April 15 due date (4th month). S corp/partnership = March 15 (3rd month).",
     "calculationRequired": false,
@@ -1948,12 +1948,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 163(j), business interest expense is generally limited to:",
     "options": {
-      "A": "50% of taxable income",
-      "B": "30% of adjusted taxable income plus business interest income",
-      "C": "The greater of $25 million or 30% of gross receipts",
-      "D": "Interest income plus 50% of depreciation"
+      "A": "30% of adjusted taxable income plus business interest income",
+      "B": "The greater of $25 million or 30% of gross receipts",
+      "C": "Interest income plus 50% of depreciation",
+      "D": "50% of taxable income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 163(j) limits business interest deductions to business interest income plus 30% of adjusted taxable income (ATI). ATI excludes interest, depreciation (through 2025), and amortization. Disallowed interest carries forward indefinitely. Small businesses (under $30M gross receipts) are exempt.",
     "tip": "163(j): Business interest limited to 30% ATI + interest income. Small business exception at $30M.",
     "calculationRequired": false,
@@ -1969,12 +1969,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After an ownership change, Section 382 limits the annual use of pre-change NOLs to:",
     "options": {
-      "A": "20% of the NOL balance",
-      "B": "The Section 382 limitation (value × long-term tax-exempt rate)",
-      "C": "50% of post-change taxable income",
-      "D": "The amount of post-change taxable income"
+      "A": "50% of post-change taxable income",
+      "B": "The amount of post-change taxable income",
+      "C": "20% of the NOL balance",
+      "D": "The Section 382 limitation (value × long-term tax-exempt rate)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "After an ownership change (more than 50% shift in ownership over 3 years), annual use of pre-change NOLs is limited to the Section 382 limitation: the corporation's value at the ownership change date multiplied by the federal long-term tax-exempt rate. This prevents trafficking in NOLs.",
     "tip": "Section 382 limit = company value × long-term tax-exempt rate. Prevents NOL trafficking after ownership changes.",
     "calculationRequired": false,
@@ -2011,12 +2011,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Type A reorganization is characterized by:",
     "options": {
-      "A": "Stock-for-stock exchange between unrelated corporations",
-      "B": "Statutory merger or consolidation",
-      "C": "Transfer of assets solely for voting stock",
-      "D": "Recapitalization of a single corporation"
+      "A": "Recapitalization of a single corporation",
+      "B": "Stock-for-stock exchange between unrelated corporations",
+      "C": "Statutory merger or consolidation",
+      "D": "Transfer of assets solely for voting stock"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A Type A reorganization is a statutory merger or consolidation under state law. It offers the most flexibility in consideration used (can include some cash and other property). Other types: Type B (stock-for-stock), Type C (assets-for-voting stock), Type D (divisive or acquisitive), Type E (recapitalization), Type F (change in form).",
     "tip": "Type A = statutory merger. Most flexible on consideration. Other letters = more restrictions on what can be exchanged.",
     "calculationRequired": false,
@@ -2032,12 +2032,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To file a consolidated return, the parent corporation must own what percentage of the subsidiary's stock?",
     "options": {
-      "A": "At least 50% of voting power",
-      "B": "More than 50% of voting power and value",
-      "C": "At least 80% of voting power and 80% of value",
-      "D": "100% of all classes of stock"
+      "A": "More than 50% of voting power and value",
+      "B": "At least 80% of voting power and 80% of value",
+      "C": "100% of all classes of stock",
+      "D": "At least 50% of voting power"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "An affiliated group eligible to file a consolidated return requires the common parent to own at least 80% of the voting power and 80% of the total value of the stock of each includible subsidiary. Once elected, all members must file consolidated. Certain corporations (S corps, foreign corps, tax-exempt entities) are excluded.",
     "tip": "Consolidated return = 80% voting + 80% value. Election binds all members once made.",
     "calculationRequired": false,
@@ -2053,12 +2053,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following increases current E&P but not taxable income?",
     "options": {
-      "A": "Depreciation in excess of straight-line",
-      "B": "Tax-exempt interest income",
-      "C": "Federal income taxes paid",
-      "D": "Dividends received deduction"
+      "A": "Tax-exempt interest income",
+      "B": "Federal income taxes paid",
+      "C": "Dividends received deduction",
+      "D": "Depreciation in excess of straight-line"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Tax-exempt interest increases E&P but not taxable income - it represents economic income available for dividends. Conversely, federal taxes reduce E&P but not taxable income. DRD reduces taxable income but not E&P. Accelerated depreciation in excess of straight-line reduces taxable income more than E&P.",
     "tip": "E&P = economic income for dividends. Add: tax-exempt income, life insurance proceeds. Subtract: federal taxes.",
     "calculationRequired": false,
@@ -2095,12 +2095,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "GILTI (Global Intangible Low-Taxed Income) represents income of controlled foreign corporations that:",
     "options": {
-      "A": "Exceeds a deemed return on tangible depreciable assets",
-      "B": "Is derived from passive investments",
-      "C": "Has already been taxed in the foreign jurisdiction",
-      "D": "Is attributable to intangible property transferred abroad"
+      "A": "Is derived from passive investments",
+      "B": "Has already been taxed in the foreign jurisdiction",
+      "C": "Is attributable to intangible property transferred abroad",
+      "D": "Exceeds a deemed return on tangible depreciable assets"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "GILTI is the excess of a CFC's tested income over 10% of its qualified business asset investment (QBAI - depreciable tangible assets). It's designed to tax income exceeding a routine return on tangible assets, presumed to be attributable to intangibles. U.S. shareholders of CFCs include GILTI in income annually.",
     "tip": "GILTI = CFC income above 10% return on tangible assets. Targets excess returns attributable to intangibles.",
     "calculationRequired": false,
@@ -2116,12 +2116,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Base Erosion and Anti-Abuse Tax (BEAT) applies to corporations with:",
     "options": {
-      "A": "Any base erosion payments to foreign affiliates",
-      "B": "Average gross receipts of $500 million+ and base erosion percentage of 3%+",
-      "C": "More than 50% foreign ownership",
-      "D": "Foreign tax credits exceeding U.S. tax liability"
+      "A": "Foreign tax credits exceeding U.S. tax liability",
+      "B": "Any base erosion payments to foreign affiliates",
+      "C": "Average gross receipts of $500 million+ and base erosion percentage of 3%+",
+      "D": "More than 50% foreign ownership"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "BEAT applies to corporations with average annual gross receipts of $500 million or more over 3 years AND a base erosion percentage of at least 3% (2% for certain banks/dealers). BEAT is a minimum tax on modified taxable income, adding back deductible payments to foreign affiliates.",
     "tip": "BEAT = minimum tax for large corps with significant deductible payments to foreign affiliates. $500M+ receipts, 3%+ erosion.",
     "calculationRequired": false,
@@ -2137,12 +2137,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a tax-free corporate spin-off under Section 355, both the distributing corporation and the spun-off subsidiary must:",
     "options": {
-      "A": "Have been in existence for at least 1 year",
-      "B": "Be engaged in an active trade or business for at least 5 years",
-      "C": "Be of approximately equal value",
-      "D": "Have no common shareholders"
+      "A": "Be of approximately equal value",
+      "B": "Have no common shareholders",
+      "C": "Have been in existence for at least 1 year",
+      "D": "Be engaged in an active trade or business for at least 5 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 355 requires both the distributing corporation and the controlled corporation to be engaged in active trades or businesses immediately after the distribution, with each business conducted for at least 5 years before the distribution. Other requirements include distribution for a valid business purpose, not principally a device to distribute E&P, and continuity of interest.",
     "tip": "Section 355 spin-off: both entities need 5-year active business, valid business purpose, not a device for E&P distribution.",
     "calculationRequired": false,
@@ -2158,12 +2158,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For stock to qualify as qualified small business stock (QSBS) under Section 1202, the issuing corporation must have aggregate gross assets not exceeding what amount at the time of issuance?",
     "options": {
-      "A": "$5 million",
-      "B": "$25 million",
-      "C": "$50 million",
-      "D": "$100 million"
+      "A": "$100 million",
+      "B": "$5 million",
+      "C": "$25 million",
+      "D": "$50 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Section 1202 QSBS requires the issuing C corporation to have aggregate gross assets not exceeding $50 million at the time of stock issuance (and immediately after). Gross assets include cash received for the stock. The corporation must also be engaged in a qualified trade or business (certain service businesses are excluded).",
     "tip": "QSBS gross asset limit = $50M at issuance. Must be C corp in qualified active business.",
     "calculationRequired": false,
@@ -2179,12 +2179,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A brother-sister controlled group exists when 5 or fewer individuals, estates, or trusts own:",
     "options": {
-      "A": "At least 50% of each corporation considering only identical ownership",
-      "B": "More than 50% of each corporation AND more than 50% identical ownership",
-      "C": "At least 80% of each corporation",
-      "D": "100% of one corporation and more than 50% of another"
+      "A": "100% of one corporation and more than 50% of another",
+      "B": "At least 50% of each corporation considering only identical ownership",
+      "C": "More than 50% of each corporation AND more than 50% identical ownership",
+      "D": "At least 80% of each corporation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A brother-sister controlled group requires: (1) 5 or fewer persons own more than 50% of each corporation's stock (voting power or value), AND (2) the same persons own more than 50% of each corporation considering only their identical ownership (the lesser percentage owned in each). Controlled groups must share certain tax benefits.",
     "tip": "Brother-sister: 5 or fewer own >50% of each + >50% identical ownership. Share brackets, AMT exemption, etc.",
     "calculationRequired": false,
@@ -2200,12 +2200,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Foreign-Derived Intangible Income (FDII) deduction benefits domestic C corporations by:",
     "options": {
-      "A": "Excluding all foreign-source income",
-      "B": "Providing a deduction for income from exports exceeding routine returns",
-      "C": "Eliminating taxation on income from intangible property",
-      "D": "Allowing deferral of tax on foreign subsidiary income"
+      "A": "Eliminating taxation on income from intangible property",
+      "B": "Allowing deferral of tax on foreign subsidiary income",
+      "C": "Excluding all foreign-source income",
+      "D": "Providing a deduction for income from exports exceeding routine returns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "FDII provides a deduction for U.S. corporations on income from serving foreign markets (exports) that exceeds a routine return on tangible assets. The deduction results in an effective tax rate of approximately 13.125% on FDII (compared to 21% regular rate). FDII mirrors GILTI as an incentive to keep intangibles in the U.S.",
     "tip": "FDII = export incentive. Effective 13.125% rate on income from serving foreign markets (vs. 21% regular rate).",
     "calculationRequired": false,
@@ -2221,12 +2221,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A primary tax advantage of S corporation status over C corporation status is:",
     "options": {
-      "A": "Ability to have unlimited shareholders",
-      "B": "Avoidance of double taxation on corporate income",
-      "C": "Lower tax rates on business income",
-      "D": "Ability to issue multiple classes of stock"
+      "A": "Avoidance of double taxation on corporate income",
+      "B": "Lower tax rates on business income",
+      "C": "Ability to issue multiple classes of stock",
+      "D": "Ability to have unlimited shareholders"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "S corporations are pass-through entities where income is taxed only at the shareholder level, avoiding the double taxation that occurs with C corporations (corporate tax plus shareholder dividend tax). S corps have shareholder limits (100), one class of stock requirement, and use individual (not corporate) tax rates.",
     "tip": "S corp = single level of tax (pass-through). C corp = potential double tax (corporate + dividend).",
     "calculationRequired": false,
@@ -2242,12 +2242,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The maximum number of shareholders an S corporation may have is:",
     "options": {
-      "A": "35",
-      "B": "75",
-      "C": "100",
-      "D": "Unlimited"
+      "A": "100",
+      "B": "Unlimited",
+      "C": "35",
+      "D": "75"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "An S corporation may have no more than 100 shareholders. Family members (within six generations of a common ancestor) can elect to be treated as a single shareholder for this purpose. Exceeding the limit terminates the S election.",
     "tip": "S corp = 100 shareholder max. Family members can elect to count as one shareholder.",
     "calculationRequired": false,
@@ -2263,12 +2263,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following may NOT be a shareholder of an S corporation?",
     "options": {
-      "A": "U.S. citizen individual",
-      "B": "Grantor trust",
-      "C": "Partnership",
-      "D": "Estate of a deceased shareholder"
+      "A": "Grantor trust",
+      "B": "Partnership",
+      "C": "Estate of a deceased shareholder",
+      "D": "U.S. citizen individual"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "S corporation shareholders must be individuals (U.S. citizens or residents), estates, certain trusts (grantor trusts, QSSTs, ESBTs), and certain tax-exempt organizations. Partnerships, corporations, and nonresident aliens cannot be S corporation shareholders.",
     "tip": "S corp shareholders: individuals, estates, certain trusts. NOT partnerships, corporations, or nonresident aliens.",
     "calculationRequired": false,
@@ -2284,12 +2284,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation shareholder-employee must receive:",
     "options": {
-      "A": "No compensation if they choose",
-      "B": "Reasonable compensation for services performed",
-      "C": "At least 50% of the corporation's net income as salary",
-      "D": "Compensation equal to distributions received"
+      "A": "Reasonable compensation for services performed",
+      "B": "At least 50% of the corporation's net income as salary",
+      "C": "Compensation equal to distributions received",
+      "D": "No compensation if they choose"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Shareholder-employees who perform services for an S corporation must receive reasonable compensation (salary subject to employment taxes) before taking distributions. The IRS may recharacterize distributions as wages if no reasonable salary is paid, resulting in back taxes and penalties.",
     "tip": "S corp owner-employees: must pay reasonable salary first. Can't take all income as distributions to avoid payroll tax.",
     "calculationRequired": false,
@@ -2305,12 +2305,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The one class of stock requirement for S corporations means:",
     "options": {
-      "A": "The corporation can only issue common stock",
-      "B": "All outstanding shares must have identical distribution and liquidation rights",
-      "C": "Shareholders cannot have different voting rights",
-      "D": "Stock cannot be transferred to new shareholders"
+      "A": "Stock cannot be transferred to new shareholders",
+      "B": "The corporation can only issue common stock",
+      "C": "All outstanding shares must have identical distribution and liquidation rights",
+      "D": "Shareholders cannot have different voting rights"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "S corporations may have only one class of stock, meaning all shares must have identical rights to distribution and liquidation proceeds. However, voting rights may differ (voting and non-voting common stock is permitted). Differences in distribution rights would create a second class of stock.",
     "tip": "One class = identical distribution and liquidation rights. Voting rights CAN differ.",
     "calculationRequired": false,
@@ -2347,12 +2347,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation shareholder's stock basis is increased by:",
     "options": {
-      "A": "Distributions received",
-      "B": "The shareholder's share of separately and nonseparately stated income",
-      "C": "The shareholder's share of nondeductible expenses",
-      "D": "The shareholder's share of losses"
+      "A": "The shareholder's share of losses",
+      "B": "Distributions received",
+      "C": "The shareholder's share of separately and nonseparately stated income",
+      "D": "The shareholder's share of nondeductible expenses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Stock basis increases for the shareholder's share of income (both separately stated items and nonseparately computed income) and additional capital contributions. Basis decreases for distributions, nondeductible expenses, and losses. Proper basis tracking is essential for determining loss deductibility and distribution taxation.",
     "tip": "S corp basis increases: income, contributions. Decreases: distributions, losses, nondeductible expenses.",
     "calculationRequired": false,
@@ -2368,12 +2368,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an S corporation with accumulated E&P makes a distribution, the distribution is treated as coming from (in order):",
     "options": {
-      "A": "E&P first, then AAA",
-      "B": "AAA first, then E&P, then other adjustments account",
-      "C": "Stock basis first, then AAA",
-      "D": "Proportionally from AAA and E&P"
+      "A": "Proportionally from AAA and E&P",
+      "B": "E&P first, then AAA",
+      "C": "AAA first, then E&P, then other adjustments account",
+      "D": "Stock basis first, then AAA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Distributions from an S corporation with accumulated E&P (from prior C corp years) come first from AAA (tax-free to extent of basis), then from accumulated E&P (taxable dividend), then from the other adjustments account, and finally from remaining stock basis. An election can be made to distribute E&P first.",
     "tip": "S corp with E&P: AAA first (tax-free), then E&P (dividend), then OAA, then basis.",
     "calculationRequired": false,
@@ -2389,12 +2389,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation shareholder obtains debt basis from:",
     "options": {
-      "A": "Corporate borrowings from third parties",
-      "B": "Direct loans from the shareholder to the corporation",
-      "C": "Shareholder guarantees of corporate debt",
-      "D": "Accounts payable of the corporation"
+      "A": "Accounts payable of the corporation",
+      "B": "Corporate borrowings from third parties",
+      "C": "Direct loans from the shareholder to the corporation",
+      "D": "Shareholder guarantees of corporate debt"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Debt basis in an S corporation comes only from direct loans from the shareholder to the corporation. Unlike partnerships, guarantees of corporate debt and back-to-back loans generally do not create basis. Debt basis allows loss deductions after stock basis is exhausted.",
     "tip": "S corp debt basis = direct shareholder loans only. Guarantees don't count (unlike partnerships).",
     "calculationRequired": false,
@@ -2410,12 +2410,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "S corporation distributions (not compensation) to shareholder-employees are:",
     "options": {
-      "A": "Subject to self-employment tax",
-      "B": "Subject to FICA and FUTA taxes",
-      "C": "Not subject to employment taxes",
-      "D": "Taxed as capital gains"
+      "A": "Not subject to employment taxes",
+      "B": "Taxed as capital gains",
+      "C": "Subject to self-employment tax",
+      "D": "Subject to FICA and FUTA taxes"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "S corporation distributions are not subject to self-employment tax or FICA/FUTA taxes. Only wages paid to shareholder-employees are subject to employment taxes. This creates a planning opportunity but also IRS scrutiny of unreasonably low salaries designed to avoid employment taxes.",
     "tip": "S corp advantage: distributions avoid employment tax. But salary must be reasonable - can't minimize to avoid taxes.",
     "calculationRequired": false,
@@ -2431,12 +2431,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The built-in gains tax applies to S corporations that:",
     "options": {
-      "A": "Have always been S corporations",
-      "B": "Converted from C corporation status and sell appreciated assets within the recognition period",
-      "C": "Receive contributions of appreciated property",
-      "D": "Make distributions of appreciated property"
+      "A": "Converted from C corporation status and sell appreciated assets within the recognition period",
+      "B": "Receive contributions of appreciated property",
+      "C": "Make distributions of appreciated property",
+      "D": "Have always been S corporations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The built-in gains (BIG) tax applies when a C corporation converts to S status and sells assets with built-in gains within the recognition period (currently 5 years). The tax is at the highest corporate rate (21%) on the net recognized built-in gain, limited to the built-in gain at conversion.",
     "tip": "BIG tax = corporate-level tax on appreciated assets sold within 5 years of C-to-S conversion.",
     "calculationRequired": false,
@@ -2452,12 +2452,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation with accumulated E&P may be subject to the excess passive income tax if passive investment income exceeds what percentage of gross receipts?",
     "options": {
-      "A": "10%",
-      "B": "25%",
-      "C": "50%",
-      "D": "75%"
+      "A": "50%",
+      "B": "75%",
+      "C": "10%",
+      "D": "25%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "S corporations with accumulated E&P (from C corp years) are subject to a corporate-level tax on excess net passive income if passive investment income exceeds 25% of gross receipts. If this occurs for three consecutive years, the S election automatically terminates.",
     "tip": "Excess passive income: >25% passive + accumulated E&P = corporate tax. 3 consecutive years = S termination.",
     "calculationRequired": false,
@@ -2473,12 +2473,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "S corporation shareholders claim the Section 199A QBI deduction:",
     "options": {
-      "A": "At the corporate level on Form 1120-S",
-      "B": "On their individual returns based on their share of qualified business income",
-      "C": "Only if the corporation has more than 100 employees",
-      "D": "As a deduction against wages received"
+      "A": "Only if the corporation has more than 100 employees",
+      "B": "As a deduction against wages received",
+      "C": "At the corporate level on Form 1120-S",
+      "D": "On their individual returns based on their share of qualified business income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The Section 199A QBI deduction is claimed by shareholders on their individual returns, not at the corporate level. The S corporation reports each shareholder's share of QBI, W-2 wages, and UBIA on Schedule K-1. Shareholders then compute their deduction subject to individual income limitations.",
     "tip": "QBI deduction is individual-level. S corp provides info on K-1; shareholder calculates deduction on personal return.",
     "calculationRequired": false,
@@ -2494,12 +2494,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Health insurance premiums paid by an S corporation for a more-than-2% shareholder-employee are:",
     "options": {
-      "A": "A tax-free fringe benefit",
-      "B": "Included in the shareholder's W-2 wages but deductible above-the-line by the shareholder",
-      "C": "Deductible by the corporation but taxable as a dividend",
-      "D": "Not deductible by either the corporation or shareholder"
+      "A": "Not deductible by either the corporation or shareholder",
+      "B": "A tax-free fringe benefit",
+      "C": "Included in the shareholder's W-2 wages but deductible above-the-line by the shareholder",
+      "D": "Deductible by the corporation but taxable as a dividend"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Health insurance premiums paid for more-than-2% S corp shareholder-employees must be included in the shareholder's W-2 (Box 1, not subject to FICA). The shareholder can then deduct the amount above-the-line on their personal return (self-employed health insurance deduction). This differs from C corp treatment.",
     "tip": ">2% S corp shareholder health insurance: reported on W-2, then deducted by shareholder. Net effect similar to sole proprietor.",
     "calculationRequired": false,
@@ -2515,12 +2515,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To voluntarily revoke an S corporation election, shareholders owning more than what percentage of shares must consent?",
     "options": {
-      "A": "25%",
-      "B": "50%",
-      "C": "67%",
-      "D": "100%"
+      "A": "100%",
+      "B": "25%",
+      "C": "50%",
+      "D": "67%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Voluntary revocation of an S election requires consent from shareholders owning more than 50% of the outstanding shares (voting and nonvoting). The revocation can specify a future effective date; otherwise, it's effective at the beginning of the following tax year if filed after the 15th day of the 3rd month.",
     "tip": "S revocation requires >50% shareholder consent. Can specify effective date.",
     "calculationRequired": false,
@@ -2536,12 +2536,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an S corporation distribution exceeds the shareholder's stock basis:",
     "options": {
-      "A": "The entire distribution is taxable as ordinary income",
-      "B": "The excess is taxable as capital gain",
-      "C": "The excess creates a negative basis",
-      "D": "The distribution is returned to the corporation"
+      "A": "The distribution is returned to the corporation",
+      "B": "The entire distribution is taxable as ordinary income",
+      "C": "The excess is taxable as capital gain",
+      "D": "The excess creates a negative basis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Distributions exceeding stock basis (for an S corp without accumulated E&P) are treated as gain from the sale of stock - typically long-term capital gain if the stock has been held more than one year. Stock basis cannot go below zero; excess distributions generate capital gain.",
     "tip": "S corp distribution > basis = capital gain (sale treatment). Basis can't go negative.",
     "calculationRequired": false,
@@ -2578,12 +2578,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation is generally required to use:",
     "options": {
-      "A": "Any fiscal year selected by the shareholders",
-      "B": "A calendar year (with limited exceptions)",
-      "C": "The tax year of its majority shareholder",
-      "D": "The same year as its parent corporation"
+      "A": "A calendar year (with limited exceptions)",
+      "B": "The tax year of its majority shareholder",
+      "C": "The same year as its parent corporation",
+      "D": "Any fiscal year selected by the shareholders"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "S corporations must generally use a calendar year unless they can establish a business purpose for a different year or elect a fiscal year under Section 444 (which requires a deposit payment to compensate for deferral). This prevents deferral of shareholder income recognition.",
     "tip": "S corps = calendar year required (generally). Section 444 fiscal year election requires deposit payment.",
     "calculationRequired": false,
@@ -2599,12 +2599,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following must be separately stated on an S corporation's Schedule K-1?",
     "options": {
-      "A": "Cost of goods sold",
-      "B": "Depreciation on business assets",
-      "C": "Charitable contributions",
-      "D": "Salaries and wages"
+      "A": "Depreciation on business assets",
+      "B": "Charitable contributions",
+      "C": "Salaries and wages",
+      "D": "Cost of goods sold"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Items that could affect shareholders' tax liability differently (based on individual circumstances) must be separately stated. These include charitable contributions, capital gains/losses, Section 1231 gains/losses, tax-exempt income, investment interest, foreign taxes, and rental activities. Items like COGS and business depreciation are part of ordinary income.",
     "tip": "Separately stated = items affecting shareholders differently. Charitable, capital gains, Section 1231, tax-exempt income, etc.",
     "calculationRequired": false,
@@ -2620,12 +2620,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If an S corporation election is inadvertently terminated, the IRS may:",
     "options": {
-      "A": "Never restore the election",
-      "B": "Grant relief if the terminating event is corrected and shareholders agree to adjustments",
-      "C": "Automatically restore the election after one year",
-      "D": "Only restore the election if no taxes were avoided"
+      "A": "Grant relief if the terminating event is corrected and shareholders agree to adjustments",
+      "B": "Automatically restore the election after one year",
+      "C": "Only restore the election if no taxes were avoided",
+      "D": "Never restore the election"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under Section 1362(f), the IRS may grant inadvertent termination relief if: (1) the termination was inadvertent, (2) steps are taken to correct the terminating event within a reasonable time, and (3) the corporation and shareholders agree to any adjustments required by the IRS.",
     "tip": "Inadvertent termination relief available if corrected quickly and adjustments accepted. Apply via PLR.",
     "calculationRequired": false,
@@ -2662,12 +2662,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The correct order for adjusting S corporation stock basis is:",
     "options": {
-      "A": "Income, distributions, nondeductible expenses, losses",
-      "B": "Income, nondeductible expenses, losses, distributions",
-      "C": "Income, losses, distributions, nondeductible expenses",
-      "D": "Distributions, income, losses, nondeductible expenses"
+      "A": "Income, losses, distributions, nondeductible expenses",
+      "B": "Distributions, income, losses, nondeductible expenses",
+      "C": "Income, distributions, nondeductible expenses, losses",
+      "D": "Income, nondeductible expenses, losses, distributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Stock basis is adjusted in this order: (1) increased for income items, (2) decreased for nondeductible, noncapital expenses (like 50% meals, penalties), (3) decreased for deductible losses and deductions, (4) decreased for distributions. This ordering can affect loss deductibility.",
     "tip": "Basis order: +income, -nondeductible expenses, -losses, -distributions. Order matters for loss limitation.",
     "calculationRequired": false,
@@ -2704,12 +2704,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An electing small business trust (ESBT) holding S corporation stock is taxed on its S corporation income at:",
     "options": {
-      "A": "The trust's normal graduated rates",
-      "B": "The highest individual marginal rate",
-      "C": "Capital gains rates only",
-      "D": "Rates applicable to the beneficiaries"
+      "A": "The highest individual marginal rate",
+      "B": "Capital gains rates only",
+      "C": "Rates applicable to the beneficiaries",
+      "D": "The trust's normal graduated rates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The S corporation income portion of an ESBT is taxed at the highest individual marginal rate (currently 37%) at the trust level, regardless of the trust's other income or distributions to beneficiaries. This is separate from the trust's other income, which is taxed normally. QBI deduction may apply.",
     "tip": "ESBT S corp income = taxed at highest individual rate (37%) at trust level. Separate from other trust income.",
     "calculationRequired": false,
@@ -2725,12 +2725,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After an S election is revoked or terminated, the corporation generally cannot re-elect S status for:",
     "options": {
-      "A": "1 year",
-      "B": "3 years",
-      "C": "5 years",
-      "D": "10 years"
+      "A": "5 years",
+      "B": "10 years",
+      "C": "1 year",
+      "D": "3 years"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "After revocation or termination, a corporation cannot make a new S election for 5 years without IRS consent. The IRS may consent to an earlier re-election if: (1) more than 50% ownership has changed, or (2) the event causing termination was not reasonably within the corporation's control.",
     "tip": "S election terminated → 5-year waiting period. IRS may consent to earlier re-election in certain circumstances.",
     "calculationRequired": false,
@@ -2746,12 +2746,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The accumulated adjustments account (AAA) differs from stock basis in that AAA:",
     "options": {
-      "A": "Can become negative",
-      "B": "Is increased by tax-exempt income",
-      "C": "Is a corporate-level account, not shareholder-level",
-      "D": "Is not reduced by nondeductible expenses"
+      "A": "Is not reduced by nondeductible expenses",
+      "B": "Can become negative",
+      "C": "Is increased by tax-exempt income",
+      "D": "Is a corporate-level account, not shareholder-level"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "AAA is a corporate-level account tracking undistributed S corp income that has been taxed to shareholders. Stock basis is shareholder-level. AAA can go negative from losses; it's not reduced by tax-exempt income (unlike basis) but is reduced by nondeductible expenses and distributions.",
     "tip": "AAA = corporate account (same for all shareholders). Basis = individual shareholder account. AAA can go negative.",
     "calculationRequired": false,
@@ -2767,12 +2767,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "IRS factors for determining reasonable S corporation shareholder-employee compensation include all of the following EXCEPT:",
     "options": {
-      "A": "Training and experience of the employee",
-      "B": "Comparable compensation in similar businesses",
-      "C": "The amount of distributions the shareholder desires",
-      "D": "Time devoted to the business"
+      "A": "The amount of distributions the shareholder desires",
+      "B": "Time devoted to the business",
+      "C": "Training and experience of the employee",
+      "D": "Comparable compensation in similar businesses"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The IRS considers factors like duties performed, training, experience, time and effort devoted, comparable compensation in similar businesses, dividend history, and economic conditions. The shareholder's desired distribution level is irrelevant - compensation must be objectively reasonable regardless of preferences.",
     "tip": "Reasonable compensation based on job duties, experience, comparables, time devoted. Not on what shareholder wants.",
     "calculationRequired": false,
@@ -2809,12 +2809,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For purposes of the at-risk rules, an S corporation shareholder's at-risk amount generally equals:",
     "options": {
-      "A": "Stock basis only",
-      "B": "Stock basis plus debt basis",
-      "C": "Stock basis plus debt basis plus share of nonrecourse debt",
-      "D": "Stock basis plus loans for which shareholder is personally liable"
+      "A": "Stock basis plus debt basis",
+      "B": "Stock basis plus debt basis plus share of nonrecourse debt",
+      "C": "Stock basis plus loans for which shareholder is personally liable",
+      "D": "Stock basis only"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "A shareholder's at-risk amount in an S corporation includes stock basis plus amounts borrowed for which the shareholder is personally liable or has pledged property (other than the S corp interest) as security. Unlike partnerships, S corp shareholders generally cannot include nonrecourse debt in their at-risk amount.",
     "tip": "At-risk in S corp = basis + personal liability debt. More restrictive than partnership at-risk rules.",
     "calculationRequired": false,
@@ -2830,12 +2830,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When converting from C to S corporation status, the optimal timing considers:",
     "options": {
-      "A": "Converting when assets have maximum appreciation",
-      "B": "Converting when the corporation has substantial accumulated E&P",
-      "C": "Converting when built-in gains are minimal or assets have declined in value",
-      "D": "Converting immediately before a planned sale of appreciated assets"
+      "A": "Converting when built-in gains are minimal or assets have declined in value",
+      "B": "Converting immediately before a planned sale of appreciated assets",
+      "C": "Converting when assets have maximum appreciation",
+      "D": "Converting when the corporation has substantial accumulated E&P"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Optimal C-to-S conversion timing minimizes built-in gains exposure by converting when asset values are low relative to basis (minimal appreciation or depreciation). Converting before a planned asset sale triggers BIG tax. Accumulated E&P creates passive income concerns. Conversion during asset depressions reduces tax exposure.",
     "tip": "C-to-S conversion: best when assets have minimal built-in gain. Avoid converting before planned asset sales.",
     "calculationRequired": false,
@@ -2851,12 +2851,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation with accumulated E&P may elect to distribute E&P before AAA by:",
     "options": {
-      "A": "Making any cash distribution",
-      "B": "Making a deemed dividend election on the return",
-      "C": "Distributing property instead of cash",
-      "D": "Having shareholders consent and making the election with a timely filed return"
+      "A": "Distributing property instead of cash",
+      "B": "Having shareholders consent and making the election with a timely filed return",
+      "C": "Making any cash distribution",
+      "D": "Making a deemed dividend election on the return"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "An S corporation can elect to treat distributions as coming from accumulated E&P first (bypassing AAA) by making the election on a timely filed return with shareholder consent. This may be desirable to purge E&P and eliminate passive income concerns, even though it creates taxable dividends.",
     "tip": "E&P bypass election: purge E&P intentionally to avoid passive income issues. Requires shareholder consent.",
     "calculationRequired": false,
@@ -2893,12 +2893,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the open account debt rules, shareholder advances to an S corporation:",
     "options": {
-      "A": "Are always treated as equity contributions",
-      "B": "May be treated as a single debt for basis purposes if properly structured",
-      "C": "Never provide debt basis",
-      "D": "Must be evidenced by formal promissory notes"
+      "A": "May be treated as a single debt for basis purposes if properly structured",
+      "B": "Never provide debt basis",
+      "C": "Must be evidenced by formal promissory notes",
+      "D": "Are always treated as equity contributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The open account debt rules (post-2014) allow shareholders to treat advances and repayments during the year as net increases or decreases to a single open account debt balance, rather than tracing each advance. The net increase at year-end provides debt basis; net decrease triggers gain. Maximum $25,000 threshold applies.",
     "tip": "Open account debt: net advances/repayments during year, simplifies tracking. $25K threshold for special treatment.",
     "calculationRequired": false,
@@ -2956,12 +2956,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A primary advantage of partnership taxation compared to C corporation taxation is:",
     "options": {
-      "A": "Limited liability for all partners",
-      "B": "Single level of taxation on business income",
-      "C": "Lower tax rates on business income",
-      "D": "Simpler tax filing requirements"
+      "A": "Single level of taxation on business income",
+      "B": "Lower tax rates on business income",
+      "C": "Simpler tax filing requirements",
+      "D": "Limited liability for all partners"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Partnerships provide pass-through taxation where income is taxed only at the partner level, avoiding double taxation. Limited liability depends on the entity type (LP, LLP, LLC), not tax classification. Tax rates depend on partner status. Partnership returns can be complex due to allocation requirements.",
     "tip": "Partnership = pass-through (no entity tax). C corp = double tax potential (entity + shareholder).",
     "calculationRequired": false,
@@ -2977,12 +2977,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Property contributions to a partnership are generally:",
     "options": {
-      "A": "Taxable events requiring gain recognition",
-      "B": "Tax-free regardless of percentage received",
-      "C": "Tax-free if the partner receives an 80% interest",
-      "D": "Taxable if liabilities are transferred"
+      "A": "Taxable if liabilities are transferred",
+      "B": "Taxable events requiring gain recognition",
+      "C": "Tax-free regardless of percentage received",
+      "D": "Tax-free if the partner receives an 80% interest"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under Section 721, property contributions to a partnership are generally tax-free without any control requirement (unlike Section 351 for corporations which requires 80% control). Partners take carryover basis in their interest. Exceptions exist for contributions of services, certain disguised sales, and debt in excess of basis.",
     "tip": "Partnership contributions = no control test (unlike Section 351). Generally tax-free regardless of % received.",
     "calculationRequired": false,
@@ -2998,12 +2998,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner's outside basis includes the partner's share of partnership:",
     "options": {
-      "A": "Gross income only",
-      "B": "Recourse and nonrecourse liabilities",
-      "C": "Expenses only",
-      "D": "Section 704(b) book capital"
+      "A": "Recourse and nonrecourse liabilities",
+      "B": "Expenses only",
+      "C": "Section 704(b) book capital",
+      "D": "Gross income only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A partner's outside basis includes capital contributions, share of income, and share of partnership liabilities (both recourse and nonrecourse under Section 752). This differs from S corporations where shareholders generally do not include their share of entity debt in basis.",
     "tip": "Partnership basis includes share of ALL partnership debt. S corp basis includes only direct shareholder loans.",
     "calculationRequired": false,
@@ -3061,12 +3061,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A general partner's distributive share of ordinary partnership income is generally:",
     "options": {
-      "A": "Exempt from self-employment tax",
-      "B": "Subject to self-employment tax",
-      "C": "Subject to FICA tax withholding",
-      "D": "Taxed at capital gains rates"
+      "A": "Subject to self-employment tax",
+      "B": "Subject to FICA tax withholding",
+      "C": "Taxed at capital gains rates",
+      "D": "Exempt from self-employment tax"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A general partner's distributive share of ordinary trade or business income is subject to self-employment tax. Limited partners are generally exempt from SE tax on their distributive share (except for guaranteed payments for services). This is a key difference from S corporation treatment.",
     "tip": "General partners = SE tax on ordinary income. Limited partners = generally exempt (except guaranteed payments).",
     "calculationRequired": false,
@@ -3082,12 +3082,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Guaranteed payments to a partner for services are:",
     "options": {
-      "A": "Deductible by the partnership and treated as self-employment income to the partner",
-      "B": "Not deductible by the partnership but treated as wages to the partner",
-      "C": "Deductible by the partnership and treated as capital gain to the partner",
-      "D": "Added to the partner's capital account"
+      "A": "Not deductible by the partnership but treated as wages to the partner",
+      "B": "Deductible by the partnership and treated as capital gain to the partner",
+      "C": "Added to the partner's capital account",
+      "D": "Deductible by the partnership and treated as self-employment income to the partner"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Guaranteed payments for services are deductible by the partnership (reducing ordinary income to other partners) and reported as ordinary/self-employment income to the receiving partner. They are determined without regard to partnership income. The partner is not treated as an employee, so no withholding applies.",
     "tip": "Guaranteed payments: deductible by partnership, SE income to partner. No employment tax withholding - partner pays SE tax.",
     "calculationRequired": false,
@@ -3103,12 +3103,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Nonrecourse liabilities of a partnership are generally allocated among partners based on:",
     "options": {
-      "A": "Capital contribution percentages",
-      "B": "Their share of partnership minimum gain",
-      "C": "Economic risk of loss",
-      "D": "Voting percentages"
+      "A": "Their share of partnership minimum gain",
+      "B": "Economic risk of loss",
+      "C": "Voting percentages",
+      "D": "Capital contribution percentages"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Nonrecourse liabilities are allocated in three tiers: (1) first to partners with minimum gain, (2) then to partners per Section 704(c) built-in gain allocation, (3) finally to all partners based on profit-sharing ratios. Since no partner bears economic risk for nonrecourse debt, it's shared based on minimum gain and profits.",
     "tip": "Nonrecourse debt allocation: minimum gain first, 704(c) second, then profit ratios. No economic risk = shared allocation.",
     "calculationRequired": false,
@@ -3124,12 +3124,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Section 754 election benefits an incoming partner who pays more than book value for a partnership interest because it:",
     "options": {
-      "A": "Allows the new partner to receive a larger share of profits",
-      "B": "Provides a stepped-up basis in partnership assets for the new partner",
-      "C": "Reduces the selling partner's gain",
-      "D": "Eliminates the requirement to file Form 1065"
+      "A": "Eliminates the requirement to file Form 1065",
+      "B": "Allows the new partner to receive a larger share of profits",
+      "C": "Provides a stepped-up basis in partnership assets for the new partner",
+      "D": "Reduces the selling partner's gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A Section 754 election allows the partnership to adjust the basis of its assets with respect to a transferee partner (Section 743(b) adjustment). This prevents the new partner from being taxed on gain already paid for in the purchase price. Without 754, the new partner would share in gain when appreciated assets are sold.",
     "tip": "Section 754 protects new partners from double tax on gain already paid for. Creates inside basis adjustment.",
     "calculationRequired": false,
@@ -3145,12 +3145,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A property contribution followed by a distribution to the contributing partner may be recharacterized as a sale if:",
     "options": {
-      "A": "The distribution occurs more than 7 years after contribution",
-      "B": "The distribution occurs within 2 years and is not subject to entrepreneurial risk",
-      "C": "The partner receives a 50% or greater interest",
-      "D": "The property was held less than one year"
+      "A": "The partner receives a 50% or greater interest",
+      "B": "The property was held less than one year",
+      "C": "The distribution occurs more than 7 years after contribution",
+      "D": "The distribution occurs within 2 years and is not subject to entrepreneurial risk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under the disguised sale rules (Section 707(a)(2)(B)), a contribution and related distribution within 2 years may be recharacterized as a sale, requiring gain recognition. A presumption of disguised sale applies if the distribution occurs within 2 years and the distribution is not subject to the entrepreneurial risks of partnership operations.",
     "tip": "Disguised sale: contribution + distribution within 2 years presumed a sale. After 2 years, presumed not a sale.",
     "calculationRequired": false,
@@ -3187,12 +3187,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Recourse liabilities of a partnership are allocated to partners who bear:",
     "options": {
-      "A": "The highest capital account balance",
-      "B": "The economic risk of loss for the liability",
-      "C": "The largest profit-sharing percentage",
-      "D": "Personal liability under state law"
+      "A": "The economic risk of loss for the liability",
+      "B": "The largest profit-sharing percentage",
+      "C": "Personal liability under state law",
+      "D": "The highest capital account balance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Recourse liabilities are allocated to partners who bear the economic risk of loss, determined by a constructive liquidation test. A partner bears economic risk of loss if they would be obligated to make payment without right of reimbursement if the partnership constructively liquidated.",
     "tip": "Recourse debt → to partner with economic risk of loss (often general partners, guarantors).",
     "calculationRequired": false,
@@ -3208,12 +3208,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a current distribution, a partner's basis in distributed property is generally:",
     "options": {
-      "A": "Fair market value of the property",
-      "B": "The partnership's basis, limited to the partner's outside basis",
-      "C": "The partnership's basis plus gain recognized",
-      "D": "Zero"
+      "A": "The partnership's basis, limited to the partner's outside basis",
+      "B": "The partnership's basis plus gain recognized",
+      "C": "Zero",
+      "D": "Fair market value of the property"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In a current distribution, the partner takes carryover basis in distributed property (partnership's basis), but this is limited to the partner's remaining outside basis after any cash distributed. This prevents creating loss through property distributions while preserving deferred gain.",
     "tip": "Property distribution basis = carryover (partnership's basis), capped at partner's remaining outside basis.",
     "calculationRequired": false,
@@ -3229,12 +3229,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a partner sells their partnership interest, ordinary income may result from the sale due to:",
     "options": {
-      "A": "Section 754 election",
-      "B": "Section 751(a) - unrealized receivables and inventory items",
-      "C": "Section 704(c) built-in gain",
-      "D": "Section 736(a) payments"
+      "A": "Section 736(a) payments",
+      "B": "Section 754 election",
+      "C": "Section 751(a) - unrealized receivables and inventory items",
+      "D": "Section 704(c) built-in gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 751(a) (hot assets) treats gain attributable to unrealized receivables (including recapture) and inventory items as ordinary income rather than capital gain. This prevents converting ordinary income to capital gain through partnership interest sales.",
     "tip": "Hot assets = ordinary income on partnership sale. Includes receivables, inventory, recapture items.",
     "calculationRequired": false,
@@ -3250,12 +3250,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a special allocation to have economic effect, the partnership agreement must provide for:",
     "options": {
-      "A": "IRS approval of the allocation",
-      "B": "Maintenance of capital accounts and liquidation according to capital account balances",
-      "C": "Equal profit and loss sharing",
-      "D": "Unanimous partner consent for each allocation"
+      "A": "Unanimous partner consent for each allocation",
+      "B": "IRS approval of the allocation",
+      "C": "Maintenance of capital accounts and liquidation according to capital account balances",
+      "D": "Equal profit and loss sharing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Economic effect requires: (1) capital accounts maintained under Section 704(b), (2) liquidating distributions made in accordance with positive capital accounts, and (3) partners with deficit balances must restore them (or have a qualified income offset). These rules ensure allocations affect real economics.",
     "tip": "Economic effect = capital account maintenance + liquidation per capital accounts + deficit restoration (or QIO).",
     "calculationRequired": false,
@@ -3292,12 +3292,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partnership must generally use the tax year of:",
     "options": {
-      "A": "Its managing partner",
-      "B": "Its majority interest partners, then principal partners, then least aggregate deferral",
-      "C": "Any year selected by the partners",
-      "D": "The calendar year in all cases"
+      "A": "The calendar year in all cases",
+      "B": "Its managing partner",
+      "C": "Its majority interest partners, then principal partners, then least aggregate deferral",
+      "D": "Any year selected by the partners"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Partnerships must use the required taxable year rules: (1) the year of majority interest partners (>50% profits and capital), (2) if no majority, the year of all principal partners (≥5% interest), (3) if principal partners differ, the year resulting in least aggregate deferral of income.",
     "tip": "Partnership year: majority interest → principal partners → least aggregate deferral. Prevents income deferral.",
     "calculationRequired": false,
@@ -3313,12 +3313,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 736(a) payments to a retiring partner are treated as:",
     "options": {
-      "A": "Capital gain to the partner",
-      "B": "Distributive share or guaranteed payment (ordinary income)",
-      "C": "Return of capital",
-      "D": "Not taxable"
+      "A": "Return of capital",
+      "B": "Not taxable",
+      "C": "Capital gain to the partner",
+      "D": "Distributive share or guaranteed payment (ordinary income)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 736(a) payments (for unstated goodwill in service partnerships and payments for future services) are treated as distributive share of partnership income or guaranteed payments - both ordinary income to the recipient. These payments are deductible by the partnership.",
     "tip": "736(a) = ordinary income (distributive share or guaranteed payment). 736(b) = capital/Section 751 treatment.",
     "calculationRequired": false,
@@ -3334,12 +3334,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a partnership assumes liabilities exceeding a contributing partner's basis in contributed property:",
     "options": {
-      "A": "No gain is recognized",
-      "B": "The excess is treated as gain from the sale of a partnership interest",
-      "C": "The partnership's basis in the property is increased",
-      "D": "The partner's capital account becomes negative"
+      "A": "The partnership's basis in the property is increased",
+      "B": "The partner's capital account becomes negative",
+      "C": "No gain is recognized",
+      "D": "The excess is treated as gain from the sale of a partnership interest"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under Section 752, when a partnership assumes liabilities, the contributing partner is treated as receiving a distribution equal to the liability relief. If this deemed distribution exceeds the partner's basis, the excess is gain from sale of the partnership interest.",
     "tip": "Liability assumption = deemed distribution to contributor. If > basis, gain recognized.",
     "calculationRequired": false,
@@ -3355,12 +3355,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a family member to be recognized as a partner for tax purposes when capital is a material income-producing factor:",
     "options": {
-      "A": "The family member must perform substantial services",
-      "B": "The family member must own capital through gift or purchase",
-      "C": "The family member must be over age 18",
-      "D": "The donor must retain a controlling interest"
+      "A": "The family member must own capital through gift or purchase",
+      "B": "The family member must be over age 18",
+      "C": "The donor must retain a controlling interest",
+      "D": "The family member must perform substantial services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under Section 704(e), a person who acquires a capital interest in a partnership where capital is material will be recognized as a partner if they actually own the interest (by gift or purchase). Donee partners must receive reasonable compensation for services before profits are allocated, and the donor's share can't be reduced below reasonable compensation.",
     "tip": "Family partnership: donee recognized if capital is material income-producing factor. Reasonable allocation required.",
     "calculationRequired": false,
@@ -3376,12 +3376,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Distributions of marketable securities from a partnership are treated as:",
     "options": {
-      "A": "Property distributions with carryover basis",
-      "B": "Cash distributions, potentially triggering gain",
-      "C": "Capital contributions by other partners",
-      "D": "Guaranteed payments"
+      "A": "Guaranteed payments",
+      "B": "Property distributions with carryover basis",
+      "C": "Cash distributions, potentially triggering gain",
+      "D": "Capital contributions by other partners"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under Section 731(c), marketable securities distributed by a partnership are generally treated as money (cash) rather than property. This can trigger gain recognition if the value exceeds the partner's basis. Exceptions apply for securities contributed by the distributee partner and certain investment partnerships.",
     "tip": "Marketable securities = treated as cash for distribution purposes. Can trigger gain like cash distribution.",
     "calculationRequired": false,
@@ -3397,12 +3397,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Section 743(b) adjustment is mandatory (without election) when:",
     "options": {
-      "A": "A new partner contributes property",
-      "B": "The partnership has a substantial built-in loss (exceeding $250,000)",
-      "C": "The partnership distributes appreciated property",
-      "D": "A partner receives a guaranteed payment"
+      "A": "The partnership has a substantial built-in loss (exceeding $250,000)",
+      "B": "The partnership distributes appreciated property",
+      "C": "A partner receives a guaranteed payment",
+      "D": "A new partner contributes property"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A Section 743(b) adjustment is mandatory when a partnership interest is transferred and the partnership has a substantial built-in loss (inside basis exceeds FMV by more than $250,000). Similarly, Section 734(b) adjustment is mandatory when a substantial basis reduction occurs. This prevents loss trafficking.",
     "tip": "Mandatory 754: >$250K built-in loss on transfer. Prevents trafficking in partnership losses.",
     "calculationRequired": false,
@@ -3418,12 +3418,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current law, a partnership continues for tax purposes unless:",
     "options": {
-      "A": "50% or more of partnership interests are transferred within 12 months",
-      "B": "All partnership operations cease completely",
-      "C": "The partnership is merged into another partnership",
-      "D": "The managing partner changes"
+      "A": "The partnership is merged into another partnership",
+      "B": "The managing partner changes",
+      "C": "50% or more of partnership interests are transferred within 12 months",
+      "D": "All partnership operations cease completely"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "After TCJA repealed technical terminations, a partnership now continues for tax purposes until operations cease completely or a partnership merger/division occurs. The old rule triggering termination on 50%+ interest transfer in 12 months was eliminated for tax years after December 31, 2017.",
     "tip": "Technical terminations repealed by TCJA. Partnership continues until operations cease or merger/division.",
     "calculationRequired": false,
@@ -3439,12 +3439,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 751(b) applies when a distribution causes a partner to:",
     "options": {
-      "A": "Receive less than their profit share",
-      "B": "Exchange an interest in hot assets for an interest in cold assets or vice versa",
-      "C": "Receive property with a basis less than fair market value",
-      "D": "Exit the partnership"
+      "A": "Exchange an interest in hot assets for an interest in cold assets or vice versa",
+      "B": "Receive property with a basis less than fair market value",
+      "C": "Exit the partnership",
+      "D": "Receive less than their profit share"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 751(b) treats a distribution as a taxable exchange to the extent a partner receives more or less than their proportionate share of Section 751 property (hot assets - unrealized receivables and inventory) in exchange for other property. This prevents converting ordinary income to capital gain through distributions.",
     "tip": "751(b) = disproportionate distributions of hot assets. Deemed exchange triggers ordinary income.",
     "calculationRequired": false,
@@ -3481,12 +3481,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Tiered partnership structures may provide tax planning benefits by:",
     "options": {
-      "A": "Eliminating the need for Section 754 elections",
-      "B": "Allowing different allocation schemes at different partnership levels",
-      "C": "Converting ordinary income to capital gain",
-      "D": "Avoiding all self-employment tax"
+      "A": "Converting ordinary income to capital gain",
+      "B": "Avoiding all self-employment tax",
+      "C": "Eliminating the need for Section 754 elections",
+      "D": "Allowing different allocation schemes at different partnership levels"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Tiered structures allow different allocation arrangements at each level. Upper-tier partnerships can aggregate multiple investments, facilitate tax-efficient carried interest structures, and provide flexibility for different investor classes. However, anti-abuse rules and look-through rules apply to prevent manipulation.",
     "tip": "Tiered partnerships = flexibility in allocation structures. Watch for look-through and anti-abuse rules.",
     "calculationRequired": false,
@@ -3502,12 +3502,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A profits interest granted to a service partner is generally:",
     "options": {
-      "A": "Taxable at fair market value upon receipt",
-      "B": "Not taxable upon receipt if Rev. Proc. 93-27 safe harbor requirements are met",
-      "C": "Treated as a guaranteed payment",
-      "D": "Subject to immediate capital gains tax"
+      "A": "Not taxable upon receipt if Rev. Proc. 93-27 safe harbor requirements are met",
+      "B": "Treated as a guaranteed payment",
+      "C": "Subject to immediate capital gains tax",
+      "D": "Taxable at fair market value upon receipt"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under Rev. Proc. 93-27 and 2001-43, a profits interest (right to future profits, not existing capital) is generally not taxable upon receipt if: (1) the interest is not related to a substantially certain stream of income, (2) the partner doesn't dispose of it within 2 years, and (3) it's not a publicly traded interest.",
     "tip": "Profits interest = generally tax-free at grant under safe harbor. Capital interest = taxable at FMV on receipt.",
     "calculationRequired": false,
@@ -3565,12 +3565,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Section 734(b) basis adjustment is made to partnership assets when:",
     "options": {
-      "A": "A new partner is admitted",
-      "B": "A partner sells their interest",
-      "C": "A distribution results in gain or basis adjustment to the distributee partner",
-      "D": "The partnership acquires new property"
+      "A": "The partnership acquires new property",
+      "B": "A new partner is admitted",
+      "C": "A partner sells their interest",
+      "D": "A distribution results in gain or basis adjustment to the distributee partner"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Section 734(b) adjustments apply when a distribution occurs and the partnership has a Section 754 election in effect (or mandatory adjustment applies). The partnership adjusts its asset basis by: gain recognized by distributee, or the difference between distributed property's carryover basis and inside basis.",
     "tip": "734(b) = distribution adjustments. 743(b) = transfer adjustments. Both require 754 election (or mandatory trigger).",
     "calculationRequired": false,
@@ -3607,12 +3607,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The partnership anti-abuse rule under Reg. 1.701-2 allows the IRS to:",
     "options": {
-      "A": "Automatically convert partnerships to C corporations",
-      "B": "Recast transactions to achieve tax results consistent with the intent of subchapter K",
-      "C": "Impose a 20% penalty on all partnership allocations",
-      "D": "Deny all deductions to partnerships"
+      "A": "Recast transactions to achieve tax results consistent with the intent of subchapter K",
+      "B": "Impose a 20% penalty on all partnership allocations",
+      "C": "Deny all deductions to partnerships",
+      "D": "Automatically convert partnerships to C corporations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The anti-abuse rule allows the IRS to recast partnership transactions that comply technically with subchapter K but produce tax results inconsistent with the intent of subchapter K. The IRS can treat the partnership as an aggregate, adjust allocations, or disregard transactions entirely.",
     "tip": "Anti-abuse rule: IRS can recast transactions that technically comply but abuse subchapter K intent.",
     "calculationRequired": false,
@@ -3649,12 +3649,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A publicly traded partnership (PTP) is generally taxed as a corporation unless:",
     "options": {
-      "A": "It has fewer than 500 partners",
-      "B": "90% or more of its gross income is qualifying income (passive-type income)",
-      "C": "It elects partnership tax treatment",
-      "D": "All partners are individuals"
+      "A": "90% or more of its gross income is qualifying income (passive-type income)",
+      "B": "It elects partnership tax treatment",
+      "C": "All partners are individuals",
+      "D": "It has fewer than 500 partners"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Publicly traded partnerships are taxed as corporations unless 90% or more of their gross income is qualifying income: interest, dividends, real property rents, gain from real property sales, and income from natural resource activities. MLPs in the oil, gas, and real estate sectors often meet this exception.",
     "tip": "PTP = taxed as C corp unless 90%+ qualifying income (passive/resource income). Most MLPs qualify.",
     "calculationRequired": false,
@@ -3670,12 +3670,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 705, a partner's outside basis is decreased by:",
     "options": {
-      "A": "Guaranteed payments received",
-      "B": "The partner's distributive share of tax-exempt income",
-      "C": "The partner's distributive share of partnership losses and nondeductible expenditures",
-      "D": "Contributions to capital"
+      "A": "The partner's distributive share of partnership losses and nondeductible expenditures",
+      "B": "Contributions to capital",
+      "C": "Guaranteed payments received",
+      "D": "The partner's distributive share of tax-exempt income"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Section 705 decreases outside basis for: distributions, the partner's share of partnership losses and deductions, and the partner's share of nondeductible expenditures (like non-allowed meals deduction, penalties) that are not capital items. Tax-exempt income increases basis; guaranteed payments don't directly affect basis.",
     "tip": "Basis decreases: distributions, losses, nondeductible non-capital items. Increases: income (including tax-exempt), contributions.",
     "calculationRequired": false,
@@ -3691,12 +3691,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After the Tax Cuts and Jobs Act, Section 1031 like-kind exchanges are limited to:",
     "options": {
-      "A": "All business property",
-      "B": "Real property only",
-      "C": "Personal property only",
-      "D": "Inventory and stock"
+      "A": "Personal property only",
+      "B": "Inventory and stock",
+      "C": "All business property",
+      "D": "Real property only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The TCJA (effective 2018) limited Section 1031 like-kind exchanges to real property only. Exchanges of personal property (equipment, vehicles, art) no longer qualify for nonrecognition treatment. Real property includes land, buildings, and certain improvements.",
     "tip": "Post-TCJA: 1031 = real property ONLY. No more personal property exchanges.",
     "calculationRequired": false,
@@ -3733,12 +3733,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 121, the maximum exclusion on the sale of a principal residence for a married couple filing jointly is:",
     "options": {
-      "A": "$250,000",
-      "B": "$500,000",
-      "C": "$750,000",
-      "D": "$1,000,000"
+      "A": "$750,000",
+      "B": "$1,000,000",
+      "C": "$250,000",
+      "D": "$500,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Married taxpayers filing jointly can exclude up to $500,000 of gain on the sale of a principal residence ($250,000 for single filers). Both spouses must meet the use test (2 of last 5 years), and at least one must meet the ownership test. Neither spouse can have used the exclusion within 2 years.",
     "tip": "Home sale exclusion: $250K single, $500K MFJ. Must meet 2-of-5-year ownership and use tests.",
     "calculationRequired": false,
@@ -3754,12 +3754,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary tax benefit of using the installment method is:",
     "options": {
-      "A": "Converting ordinary income to capital gain",
-      "B": "Eliminating gain recognition entirely",
-      "C": "Deferring gain recognition until payments are received",
-      "D": "Reducing the basis of the property sold"
+      "A": "Deferring gain recognition until payments are received",
+      "B": "Reducing the basis of the property sold",
+      "C": "Converting ordinary income to capital gain",
+      "D": "Eliminating gain recognition entirely"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The installment method allows sellers to defer gain recognition by reporting gain proportionally as payments are received over time. This spreads the tax liability, potentially keeping the seller in lower tax brackets and providing time value of money benefits.",
     "tip": "Installment sale = defer gain to match when cash received. Exception: depreciation recapture recognized in year 1.",
     "calculationRequired": false,
@@ -3775,12 +3775,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Property inherited from a decedent generally receives:",
     "options": {
-      "A": "Carryover basis from the decedent",
-      "B": "Stepped-up (or stepped-down) basis to fair market value at death",
-      "C": "Zero basis",
-      "D": "The basis the heir paid for any estate taxes"
+      "A": "Stepped-up (or stepped-down) basis to fair market value at death",
+      "B": "Zero basis",
+      "C": "The basis the heir paid for any estate taxes",
+      "D": "Carryover basis from the decedent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Property acquired from a decedent receives a stepped-up (or stepped-down) basis to fair market value at the date of death (or alternate valuation date). This eliminates income tax on appreciation during the decedent's lifetime, making inheritance tax-advantageous for appreciated assets.",
     "tip": "Inherited property = FMV basis at death. All unrealized gain disappears. Key estate planning benefit.",
     "calculationRequired": false,
@@ -3796,12 +3796,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When property with a built-in gain is gifted, the donee's basis is generally:",
     "options": {
-      "A": "Fair market value at the date of gift",
-      "B": "The donor's adjusted basis (carryover basis)",
-      "C": "Zero",
-      "D": "The higher of FMV or donor's basis"
+      "A": "The donor's adjusted basis (carryover basis)",
+      "B": "Zero",
+      "C": "The higher of FMV or donor's basis",
+      "D": "Fair market value at the date of gift"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For gifts of appreciated property, the donee takes carryover basis (donor's adjusted basis). This means the built-in gain transfers to the donee. If FMV at gift is less than donor's basis, special dual-basis rules apply for computing gain versus loss.",
     "tip": "Gift basis: appreciated property = carryover. Loss property = dual basis (FMV for loss, carryover for gain).",
     "calculationRequired": false,
@@ -3838,12 +3838,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a deferred Section 1031 exchange, replacement property must be identified within _____ days and acquired within _____ days of the relinquished property transfer:",
     "options": {
-      "A": "30 days; 90 days",
-      "B": "45 days; 180 days",
-      "C": "60 days; 180 days",
-      "D": "90 days; 365 days"
+      "A": "45 days; 180 days",
+      "B": "60 days; 180 days",
+      "C": "90 days; 365 days",
+      "D": "30 days; 90 days"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Deferred (Starker) exchanges require: (1) identification of replacement property within 45 days of transferring the relinquished property, and (2) receipt of replacement property within 180 days (or the due date of the tax return, if earlier). Both deadlines run from the relinquished property transfer.",
     "tip": "1031 timing: 45 days to identify, 180 days to close. Both start from sale of old property.",
     "calculationRequired": false,
@@ -3859,12 +3859,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 1245 depreciation recapture applies to gains on the sale of:",
     "options": {
-      "A": "Real property only",
-      "B": "Personal property (equipment, machinery) and certain real property",
-      "C": "Inventory only",
-      "D": "Goodwill and intangibles only"
+      "A": "Personal property (equipment, machinery) and certain real property",
+      "B": "Inventory only",
+      "C": "Goodwill and intangibles only",
+      "D": "Real property only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 1245 applies to personal property (equipment, machinery, vehicles) and certain real property like single-purpose agricultural structures. Gain is recaptured as ordinary income to the extent of depreciation taken, not limited to the excess over straight-line like Section 1250.",
     "tip": "Section 1245 = personal property recapture. ALL depreciation recaptured as ordinary income (up to gain).",
     "calculationRequired": false,
@@ -3880,12 +3880,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Unrecaptured Section 1250 gain on real property is taxed at a maximum rate of:",
     "options": {
-      "A": "15%",
-      "B": "20%",
-      "C": "25%",
-      "D": "28%"
+      "A": "20%",
+      "B": "25%",
+      "C": "28%",
+      "D": "15%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Unrecaptured Section 1250 gain (straight-line depreciation on real property sold at a gain) is taxed at a maximum rate of 25%. This is higher than the regular long-term capital gains rates (0%/15%/20%) but lower than ordinary income rates.",
     "tip": "Real property depreciation recapture = 25% max rate. Better than ordinary, worse than regular LTCG.",
     "calculationRequired": false,
@@ -3901,12 +3901,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Net Section 1231 gains are treated as:",
     "options": {
-      "A": "Ordinary income",
-      "B": "Long-term capital gains (subject to 5-year lookback)",
-      "C": "Short-term capital gains",
-      "D": "Self-employment income"
+      "A": "Long-term capital gains (subject to 5-year lookback)",
+      "B": "Short-term capital gains",
+      "C": "Self-employment income",
+      "D": "Ordinary income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Net Section 1231 gains are treated as long-term capital gains (preferential rates), while net Section 1231 losses are fully deductible as ordinary losses. However, the 5-year lookback rule recharacterizes gains as ordinary income to the extent of non-recaptured Section 1231 losses from the prior 5 years.",
     "tip": "Section 1231: net gain = LTCG, net loss = ordinary deduction. Lookback rule prevents manipulation.",
     "calculationRequired": false,
@@ -3922,12 +3922,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The gross profit ratio in an installment sale equals:",
     "options": {
-      "A": "Gross profit divided by selling price",
-      "B": "Gross profit divided by contract price",
-      "C": "Contract price divided by gross profit",
-      "D": "Selling price divided by adjusted basis"
+      "A": "Contract price divided by gross profit",
+      "B": "Selling price divided by adjusted basis",
+      "C": "Gross profit divided by selling price",
+      "D": "Gross profit divided by contract price"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The gross profit ratio equals gross profit (selling price minus adjusted basis) divided by the contract price. This ratio is applied to each payment received to determine the taxable gain portion. The remainder of each payment is return of basis.",
     "tip": "Gross profit ratio = Gross profit / Contract price. Apply to each payment to find taxable gain.",
     "calculationRequired": false,
@@ -3985,12 +3985,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To qualify for the full Section 121 exclusion, the taxpayer must have owned and used the property as a principal residence for at least:",
     "options": {
-      "A": "1 of the last 3 years before the sale",
-      "B": "2 of the last 5 years before the sale",
-      "C": "3 of the last 5 years before the sale",
-      "D": "The entire period of ownership"
+      "A": "The entire period of ownership",
+      "B": "1 of the last 3 years before the sale",
+      "C": "2 of the last 5 years before the sale",
+      "D": "3 of the last 5 years before the sale"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 121 requires ownership AND use as a principal residence for at least 2 of the 5 years preceding the sale. The 2 years do not need to be consecutive or the most recent 2 years. Partial exclusion may be available for those not meeting the full requirements due to health, employment, or unforeseen circumstances.",
     "tip": "Section 121: 2 of last 5 years ownership AND use. Don't have to be consecutive.",
     "calculationRequired": false,
@@ -4027,12 +4027,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Individual taxpayers may deduct net capital losses against ordinary income up to:",
     "options": {
-      "A": "$1,500 per year",
-      "B": "$3,000 per year",
-      "C": "$5,000 per year",
-      "D": "Unlimited amount"
+      "A": "Unlimited amount",
+      "B": "$1,500 per year",
+      "C": "$3,000 per year",
+      "D": "$5,000 per year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Individual taxpayers may deduct net capital losses against ordinary income up to $3,000 per year ($1,500 for married filing separately). Excess capital losses carry forward indefinitely and retain their character (short-term or long-term) in the carryforward year.",
     "tip": "$3,000 annual capital loss limit against ordinary income. Unlimited carryforward, keeps ST/LT character.",
     "calculationRequired": false,
@@ -4048,12 +4048,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Investing capital gains in a Qualified Opportunity Zone Fund provides:",
     "options": {
-      "A": "Immediate exclusion of the invested gain",
-      "B": "Deferral of invested gain and potential exclusion of appreciation after 10 years",
-      "C": "Conversion of ordinary income to capital gain",
-      "D": "100% exclusion of all gains after 5 years"
+      "A": "Conversion of ordinary income to capital gain",
+      "B": "100% exclusion of all gains after 5 years",
+      "C": "Immediate exclusion of the invested gain",
+      "D": "Deferral of invested gain and potential exclusion of appreciation after 10 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "QOZ investment provides: (1) deferral of the invested capital gain until December 31, 2026 or earlier disposition, and (2) exclusion of appreciation in the QOZ investment if held at least 10 years. The original basis step-up benefits (for 5 and 7 year holds) expired after 2021.",
     "tip": "QOZ: defer gain until 2026, exclude appreciation after 10-year hold. Step-up benefits expired.",
     "calculationRequired": false,
@@ -4069,12 +4069,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The $25,000 special allowance for rental real estate losses requires:",
     "options": {
-      "A": "Material participation in the rental activity",
-      "B": "Active participation and AGI below $150,000",
-      "C": "Status as a real estate professional",
-      "D": "The rental property to be commercial real estate"
+      "A": "The rental property to be commercial real estate",
+      "B": "Material participation in the rental activity",
+      "C": "Active participation and AGI below $150,000",
+      "D": "Status as a real estate professional"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The $25,000 rental loss allowance requires active participation (a lower standard than material participation) and phases out between $100,000 and $150,000 AGI. Active participation means meaningful involvement in management decisions like approving tenants and setting rent.",
     "tip": "$25K rental loss allowance: active participation + AGI under $150K. Phase-out starts at $100K AGI.",
     "calculationRequired": false,
@@ -4090,12 +4090,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 1244 stock allows individual shareholders to treat losses as:",
     "options": {
-      "A": "Capital losses up to $50,000",
-      "B": "Ordinary losses up to $100,000 for married filing jointly",
-      "C": "Long-term capital losses without limitation",
-      "D": "Suspended losses until future capital gains"
+      "A": "Ordinary losses up to $100,000 for married filing jointly",
+      "B": "Long-term capital losses without limitation",
+      "C": "Suspended losses until future capital gains",
+      "D": "Capital losses up to $50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 1244 allows shareholders to treat losses on qualified small business stock as ordinary losses (rather than capital losses) up to $100,000 per year for married filing jointly ($50,000 for others). This provides immediate tax benefit instead of being limited to $3,000 annual capital loss deduction.",
     "tip": "Section 1244: ordinary loss treatment up to $100K MFJ, $50K others. Must be original issue stock.",
     "calculationRequired": false,
@@ -4132,12 +4132,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a deferred like-kind exchange, a qualified intermediary (QI) is required because:",
     "options": {
-      "A": "The IRS must approve all exchanges",
-      "B": "The taxpayer cannot have actual or constructive receipt of funds",
-      "C": "The QI provides tax advice on the exchange",
-      "D": "The QI guarantees the value of replacement property"
+      "A": "The QI provides tax advice on the exchange",
+      "B": "The QI guarantees the value of replacement property",
+      "C": "The IRS must approve all exchanges",
+      "D": "The taxpayer cannot have actual or constructive receipt of funds"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A qualified intermediary holds the exchange proceeds to prevent the taxpayer from having actual or constructive receipt of funds, which would trigger immediate gain recognition. The QI facilitates the exchange by acquiring the relinquished property, holding proceeds, and acquiring replacement property for the taxpayer.",
     "tip": "QI prevents constructive receipt. Funds must go directly to QI, not taxpayer, for valid deferred exchange.",
     "calculationRequired": false,
@@ -4153,12 +4153,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a taxpayer completes a like-kind exchange with a related party, and the related party sells the property within 2 years:",
     "options": {
-      "A": "The exchange is unaffected",
-      "B": "The deferred gain is recognized by the original taxpayer",
-      "C": "The related party pays the tax on deferred gain",
-      "D": "Both parties may exclude the gain"
+      "A": "The related party pays the tax on deferred gain",
+      "B": "Both parties may exclude the gain",
+      "C": "The exchange is unaffected",
+      "D": "The deferred gain is recognized by the original taxpayer"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "If property received in a like-kind exchange with a related party is disposed of within 2 years, the deferred gain is triggered. This prevents basis-shifting transactions among related parties designed to achieve tax-free extraction of appreciated property.",
     "tip": "Related party 1031: 2-year disposition by either party triggers deferred gain. Anti-abuse rule.",
     "calculationRequired": false,
@@ -4195,12 +4195,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 1202 qualified small business stock (QSBS) exclusion requires the stock to be held for at least:",
     "options": {
-      "A": "1 year",
-      "B": "3 years",
-      "C": "5 years",
-      "D": "7 years"
+      "A": "3 years",
+      "B": "5 years",
+      "C": "7 years",
+      "D": "1 year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Section 1202 requires the QSBS to be held for more than 5 years to qualify for the exclusion (100% for stock acquired after September 27, 2010). The exclusion is limited to the greater of $10 million or 10 times the adjusted basis of QSBS in that corporation.",
     "tip": "QSBS exclusion: 5+ year hold, $10M or 10x basis cap. Must be original issue C corp stock, qualified business.",
     "calculationRequired": false,
@@ -4216,12 +4216,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 1045 allows taxpayers to rollover gain from QSBS held more than 6 months into replacement QSBS if acquired within:",
     "options": {
-      "A": "45 days",
-      "B": "60 days",
-      "C": "180 days",
-      "D": "1 year"
+      "A": "1 year",
+      "B": "45 days",
+      "C": "60 days",
+      "D": "180 days"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 1045 allows deferral of gain on QSBS held more than 6 months if the proceeds are reinvested in replacement QSBS within 60 days. The deferred gain reduces the basis of the replacement stock. This allows entrepreneurs to diversify without immediate tax.",
     "tip": "Section 1045 rollover: 6+ months held, reinvest in new QSBS within 60 days. Combine with 1202 on new stock.",
     "calculationRequired": false,
@@ -4258,12 +4258,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Capital gains subject to the 3.8% Net Investment Income Tax include:",
     "options": {
-      "A": "Gains from the sale of an active trade or business",
-      "B": "Gains from the sale of investment real estate",
-      "C": "Gains from Section 1202 QSBS (the non-excluded portion)",
-      "D": "Both B and C"
+      "A": "Gains from Section 1202 QSBS (the non-excluded portion)",
+      "B": "Both B and C",
+      "C": "Gains from the sale of an active trade or business",
+      "D": "Gains from the sale of investment real estate"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "NIIT applies to investment income including capital gains from investment assets. Gains from passive activities and investment real estate are subject to NIIT. The non-excluded portion of QSBS gains is also subject. Gains from active businesses (not passive) are generally exempt if the taxpayer materially participates.",
     "tip": "NIIT on capital gains: applies to investment/passive gains. Active business gains may be exempt.",
     "calculationRequired": false,
@@ -4300,12 +4300,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If an installment sale note does not provide adequate stated interest, the IRS will:",
     "options": {
-      "A": "Disallow the installment method",
-      "B": "Impute interest at the applicable federal rate, recharacterizing principal as interest",
-      "C": "Treat the entire gain as ordinary income",
-      "D": "Disallow any interest deduction to the buyer"
+      "A": "Treat the entire gain as ordinary income",
+      "B": "Disallow any interest deduction to the buyer",
+      "C": "Disallow the installment method",
+      "D": "Impute interest at the applicable federal rate, recharacterizing principal as interest"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "If stated interest is below the applicable federal rate (AFR), the IRS imputes interest under Section 1274 or 483. This recharacterizes part of the stated principal payments as interest, increasing the seller's ordinary interest income and reducing capital gain. Original issue discount rules may also apply.",
     "tip": "Below-market installment notes: IRS imputes interest at AFR. Increases ordinary income, reduces capital gain.",
     "calculationRequired": false,
@@ -4321,12 +4321,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cost segregation study benefits real property owners by:",
     "options": {
-      "A": "Increasing the property's depreciable basis",
-      "B": "Reclassifying building components to shorter recovery periods",
-      "C": "Converting real property to personal property for 1031 purposes",
-      "D": "Eliminating depreciation recapture on sale"
+      "A": "Eliminating depreciation recapture on sale",
+      "B": "Increasing the property's depreciable basis",
+      "C": "Reclassifying building components to shorter recovery periods",
+      "D": "Converting real property to personal property for 1031 purposes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cost segregation reclassifies building components (electrical, plumbing fixtures, carpeting) from 39-year (commercial) or 27.5-year (residential) property to 5, 7, or 15-year property. This accelerates depreciation deductions, though it increases depreciation recapture on sale.",
     "tip": "Cost segregation = accelerated depreciation via shorter-life classification. Increases recapture but provides time value.",
     "calculationRequired": false,
@@ -4342,12 +4342,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the nonqualified use rules, gain attributable to periods when a principal residence was used for rental or other nonqualifying purposes:",
     "options": {
-      "A": "Is fully excluded under Section 121",
-      "B": "May not be excluded and is taxable",
-      "C": "Is treated as Section 1231 gain",
-      "D": "Is deferred until a subsequent home sale"
+      "A": "Is treated as Section 1231 gain",
+      "B": "Is deferred until a subsequent home sale",
+      "C": "Is fully excluded under Section 121",
+      "D": "May not be excluded and is taxable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For homes with nonqualified use periods after January 1, 2009, gain allocable to those periods cannot be excluded under Section 121. The exclusion is reduced proportionally based on nonqualified use periods divided by total ownership. Exceptions exist for certain temporary absences.",
     "tip": "Nonqualified use (post-2009 rental periods) reduces Section 121 exclusion proportionally.",
     "calculationRequired": false,
@@ -4363,12 +4363,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Delaware Statutory Trusts (DSTs) are popular 1031 replacement properties because they:",
     "options": {
-      "A": "Provide guaranteed returns",
-      "B": "Are treated as direct real property ownership for tax purposes",
-      "C": "Have no minimum investment requirements",
-      "D": "Are publicly traded securities"
+      "A": "Are treated as direct real property ownership for tax purposes",
+      "B": "Have no minimum investment requirements",
+      "C": "Are publicly traded securities",
+      "D": "Provide guaranteed returns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "DSTs are structured so investors are treated as owning an undivided fractional interest in real property, qualifying for 1031 exchanges. Rev. Rul. 2004-86 provides the framework. DSTs allow smaller investors to access institutional-quality properties while deferring gain through 1031 exchanges.",
     "tip": "DST = 1031-eligible fractional real estate interest. Passive investment, treated as direct property ownership.",
     "calculationRequired": false,
@@ -4384,12 +4384,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a partner purchases a partnership interest at a premium and the partnership has no Section 754 election:",
     "options": {
-      "A": "The new partner receives stepped-up basis in partnership assets",
-      "B": "The new partner will be taxed on their share of built-in gain when assets are sold",
-      "C": "The selling partner recognizes no gain",
-      "D": "The partnership automatically terminates"
+      "A": "The partnership automatically terminates",
+      "B": "The new partner receives stepped-up basis in partnership assets",
+      "C": "The new partner will be taxed on their share of built-in gain when assets are sold",
+      "D": "The selling partner recognizes no gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Without a 754 election, the new partner's outside basis does not adjust the inside basis of partnership assets. When appreciated assets are sold, the new partner is allocated their share of gain, effectively being taxed on appreciation they already paid for. Section 754 election prevents this double taxation.",
     "tip": "No 754 election = new partner taxed on gain already paid for in purchase price. Always consider 754 election.",
     "calculationRequired": false,
@@ -4405,12 +4405,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For Section 1231 purposes, casualty gains and losses on business property are first netted separately before being included in the main Section 1231 computation. If casualty losses exceed gains:",
     "options": {
-      "A": "The net loss enters the main Section 1231 hotchpot",
-      "B": "The net loss is treated as ordinary loss and does not enter Section 1231 computation",
-      "C": "The net loss is carried forward as a capital loss",
-      "D": "The net loss offsets ordinary income dollar for dollar"
+      "A": "The net loss is treated as ordinary loss and does not enter Section 1231 computation",
+      "B": "The net loss is carried forward as a capital loss",
+      "C": "The net loss offsets ordinary income dollar for dollar",
+      "D": "The net loss enters the main Section 1231 hotchpot"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 1231(a) requires casualty gains and losses on business property to be netted first. If casualties net to a loss, the loss is fully deductible as ordinary loss and does not enter the main Section 1231 computation. If casualties net to a gain, the gain enters the Section 1231 hotchpot.",
     "tip": "Section 1231 casualty netting: net casualty loss = ordinary loss (bypasses 1231). Net gain → enters 1231 hotchpot.",
     "calculationRequired": false,
@@ -4426,12 +4426,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For 2024, the annual gift tax exclusion per donee is:",
     "options": {
-      "A": "$15,000",
-      "B": "$17,000",
-      "C": "$18,000",
-      "D": "$20,000"
+      "A": "$18,000",
+      "B": "$20,000",
+      "C": "$15,000",
+      "D": "$17,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The annual gift tax exclusion for 2024 is $18,000 per donee (indexed for inflation). A married couple can give $36,000 per donee if gift-splitting is elected. Gifts within the exclusion do not require filing Form 709 (unless gift-splitting applies).",
     "tip": "2024 annual exclusion = $18,000 per donee. Married couples = $36,000 with gift-splitting.",
     "calculationRequired": false,
@@ -4468,12 +4468,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The annual gift tax exclusion applies only to gifts of:",
     "options": {
-      "A": "Real property",
-      "B": "Cash only",
-      "C": "Present interests",
-      "D": "Future interests"
+      "A": "Future interests",
+      "B": "Real property",
+      "C": "Cash only",
+      "D": "Present interests"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The annual exclusion applies only to gifts of present interests (an unrestricted right to immediate use, possession, or enjoyment). Future interests (gifts where enjoyment is delayed) do not qualify for the annual exclusion, even if they are otherwise complete gifts.",
     "tip": "Annual exclusion = present interest only. Gifts to trusts may need Crummey powers for exclusion.",
     "calculationRequired": false,
@@ -4489,12 +4489,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The estate tax marital deduction allows:",
     "options": {
-      "A": "A $500,000 deduction for transfers to spouses",
-      "B": "An unlimited deduction for qualifying transfers to a surviving spouse",
-      "C": "A deduction only if the surviving spouse is a U.S. citizen",
-      "D": "Both B and C (unlimited but with citizenship requirement)"
+      "A": "Both B and C (unlimited but with citizenship requirement)",
+      "B": "A $500,000 deduction for transfers to spouses",
+      "C": "An unlimited deduction for qualifying transfers to a surviving spouse",
+      "D": "A deduction only if the surviving spouse is a U.S. citizen"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "The marital deduction provides an unlimited estate tax deduction for qualifying transfers to a surviving spouse who is a U.S. citizen. If the surviving spouse is not a citizen, the marital deduction is only available through a qualified domestic trust (QDOT).",
     "tip": "Unlimited marital deduction requires U.S. citizen spouse. Non-citizen → use QDOT.",
     "calculationRequired": false,
@@ -4510,12 +4510,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Portability allows a surviving spouse to:",
     "options": {
-      "A": "Transfer assets to the deceased spouse's estate",
-      "B": "Use the deceased spouse's unused exemption (DSUE)",
-      "C": "Avoid filing an estate tax return",
-      "D": "Claim an additional marital deduction"
+      "A": "Claim an additional marital deduction",
+      "B": "Transfer assets to the deceased spouse's estate",
+      "C": "Use the deceased spouse's unused exemption (DSUE)",
+      "D": "Avoid filing an estate tax return"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Portability allows the surviving spouse to use the deceased spouse's unused exemption (DSUE) amount, effectively doubling the exemption for married couples. A timely filed estate tax return (Form 706) is required to elect portability, even if no tax is owed.",
     "tip": "Portability = use deceased spouse's unused exemption. Requires timely Form 706 filing to elect.",
     "calculationRequired": false,
@@ -4531,12 +4531,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Gift-splitting allows married couples to:",
     "options": {
-      "A": "Make separate gifts from each spouse's assets",
-      "B": "Treat a gift by one spouse as made one-half by each spouse",
-      "C": "Avoid all gift tax on any amount",
-      "D": "Split the annual exclusion between donees"
+      "A": "Split the annual exclusion between donees",
+      "B": "Make separate gifts from each spouse's assets",
+      "C": "Treat a gift by one spouse as made one-half by each spouse",
+      "D": "Avoid all gift tax on any amount"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Gift-splitting (Section 2513) allows a gift made by one spouse to be treated as made one-half by each spouse. This doubles the annual exclusion ($36,000 per donee in 2024) and allows both spouses' unified credits to be used. Both spouses must consent, requiring Form 709.",
     "tip": "Gift-splitting doubles exclusion and uses both spouses' credits. Requires both to file Form 709.",
     "calculationRequired": false,
@@ -4552,12 +4552,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Payments made directly to an educational institution for tuition are:",
     "options": {
-      "A": "Subject to gift tax and use unified credit",
-      "B": "Excluded from gift tax without limit under Section 2503(e)",
-      "C": "Limited to the annual exclusion amount",
-      "D": "Deductible from the donor's income tax"
+      "A": "Deductible from the donor's income tax",
+      "B": "Subject to gift tax and use unified credit",
+      "C": "Excluded from gift tax without limit under Section 2503(e)",
+      "D": "Limited to the annual exclusion amount"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Payments made directly to educational institutions for tuition (not room/board/books) and directly to medical providers for medical care are excluded from gift tax without limit under Section 2503(e). These payments are in addition to the annual exclusion.",
     "tip": "Direct tuition/medical payments = unlimited exclusion. Must pay institution/provider directly.",
     "calculationRequired": false,
@@ -4573,12 +4573,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The gross estate for estate tax purposes includes:",
     "options": {
-      "A": "Only assets passing through probate",
-      "B": "Only assets titled in the decedent's name",
-      "C": "All assets in which the decedent had an interest, including life insurance and retirement accounts",
-      "D": "Only assets located in the United States"
+      "A": "All assets in which the decedent had an interest, including life insurance and retirement accounts",
+      "B": "Only assets located in the United States",
+      "C": "Only assets passing through probate",
+      "D": "Only assets titled in the decedent's name"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The gross estate includes all property in which the decedent had an interest at death, regardless of how it passes. This includes probate assets, jointly held property, life insurance proceeds (if decedent owned the policy), retirement accounts, revocable trusts, and property over which decedent had a general power of appointment.",
     "tip": "Gross estate = broad inclusion. Life insurance, joint property, retirement accounts all included.",
     "calculationRequired": false,
@@ -4636,12 +4636,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Crummey powers allow gifts to trusts to qualify for the annual exclusion by:",
     "options": {
-      "A": "Converting future interests to present interests through withdrawal rights",
-      "B": "Reducing the trust corpus",
-      "C": "Allowing the trustee to make distributions",
-      "D": "Establishing the trust as a grantor trust"
+      "A": "Establishing the trust as a grantor trust",
+      "B": "Converting future interests to present interests through withdrawal rights",
+      "C": "Reducing the trust corpus",
+      "D": "Allowing the trustee to make distributions"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Crummey powers give beneficiaries a temporary right to withdraw contributed amounts, converting what would be a future interest (not eligible for annual exclusion) into a present interest (eligible). Beneficiaries typically allow the withdrawal right to lapse, and the gift remains in trust.",
     "tip": "Crummey withdrawal power = present interest → annual exclusion available for trust gifts.",
     "calculationRequired": false,
@@ -4657,12 +4657,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Life insurance owned by an irrevocable life insurance trust (ILIT) is excluded from the insured's estate if:",
     "options": {
-      "A": "The insured transfers an existing policy to the trust",
-      "B": "The trust has owned the policy for more than 3 years at death",
-      "C": "The insured is a beneficiary of the trust",
-      "D": "The trust uses the annual exclusion only"
+      "A": "The insured is a beneficiary of the trust",
+      "B": "The trust uses the annual exclusion only",
+      "C": "The insured transfers an existing policy to the trust",
+      "D": "The trust has owned the policy for more than 3 years at death"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Life insurance is excluded from the insured's estate if the ILIT owns the policy and the insured has no incidents of ownership. If an existing policy is transferred to an ILIT, the insured must survive 3 years after transfer (Section 2035). Having the trust purchase a new policy avoids this issue.",
     "tip": "ILIT excludes insurance from estate. Transfer existing policy → 3-year survival requirement.",
     "calculationRequired": false,
@@ -4678,12 +4678,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Minority and marketability discounts reduce the gift/estate tax value of:",
     "options": {
-      "A": "Publicly traded securities only",
-      "B": "Real estate only",
-      "C": "Closely-held business interests",
-      "D": "Cash equivalents"
+      "A": "Closely-held business interests",
+      "B": "Cash equivalents",
+      "C": "Publicly traded securities only",
+      "D": "Real estate only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Minority discounts (for lack of control) and marketability discounts (for lack of a ready market) can significantly reduce the gift/estate tax value of closely-held business interests, family limited partnerships, and LLCs. These discounts can range from 15% to 40% or more combined.",
     "tip": "Valuation discounts = minority + marketability. Significant tax savings on family business transfers.",
     "calculationRequired": false,
@@ -4741,12 +4741,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The alternate valuation date (6 months after death) may be elected if:",
     "options": {
-      "A": "It increases estate value",
-      "B": "It decreases both the gross estate value and estate tax liability",
-      "C": "The estate includes real property",
-      "D": "The executor prefers a later valuation"
+      "A": "The estate includes real property",
+      "B": "The executor prefers a later valuation",
+      "C": "It increases estate value",
+      "D": "It decreases both the gross estate value and estate tax liability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The alternate valuation date (6 months after death) may be elected only if it decreases both the value of the gross estate AND the estate tax liability (after credits). If either would increase, the election is not available. Property distributed before 6 months is valued at distribution date.",
     "tip": "Alternate valuation: only if BOTH gross estate AND tax decrease. Not for basis step-up planning alone.",
     "calculationRequired": false,
@@ -4804,12 +4804,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A qualified personal residence trust (QPRT) allows the grantor to:",
     "options": {
-      "A": "Transfer a residence to children at a reduced gift tax value while retaining the right to live there",
-      "B": "Exclude the residence from the gross estate automatically",
-      "C": "Receive a stepped-up basis on the residence",
-      "D": "Avoid capital gains on the ultimate sale"
+      "A": "Exclude the residence from the gross estate automatically",
+      "B": "Receive a stepped-up basis on the residence",
+      "C": "Avoid capital gains on the ultimate sale",
+      "D": "Transfer a residence to children at a reduced gift tax value while retaining the right to live there"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "A QPRT transfers a personal residence to an irrevocable trust while the grantor retains the right to live there for a term of years. The taxable gift is the remainder value (discounted for retained use). If the grantor survives the term, the residence passes to beneficiaries with a reduced transfer tax cost.",
     "tip": "QPRT = discounted gift of residence. Must survive term or full value included in estate.",
     "calculationRequired": false,
@@ -4825,12 +4825,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Section 303 redemption allows an estate to redeem stock to pay estate taxes and receive:",
     "options": {
-      "A": "Ordinary income treatment",
-      "B": "Capital gain treatment",
-      "C": "Exchange (sale) treatment rather than dividend treatment",
-      "D": "Tax-free distribution treatment"
+      "A": "Exchange (sale) treatment rather than dividend treatment",
+      "B": "Tax-free distribution treatment",
+      "C": "Ordinary income treatment",
+      "D": "Capital gain treatment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Section 303 allows an estate (or beneficiary) to redeem stock from a closely-held corporation to pay estate taxes, funeral, and administration expenses and receive exchange (capital gain) treatment rather than dividend treatment. The stock must exceed 35% of the adjusted gross estate.",
     "tip": "Section 303: stock redemption for estate taxes = exchange treatment, not dividend. Requires >35% test.",
     "calculationRequired": false,
@@ -4846,12 +4846,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A charitable lead trust provides:",
     "options": {
-      "A": "Income to charity for a term, with remainder to family",
-      "B": "Income to family for a term, with remainder to charity",
-      "C": "All income and principal to charity",
-      "D": "Income to the grantor with remainder to charity"
+      "A": "Income to family for a term, with remainder to charity",
+      "B": "All income and principal to charity",
+      "C": "Income to the grantor with remainder to charity",
+      "D": "Income to charity for a term, with remainder to family"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "A charitable lead trust (CLT) pays income to charity for a specified term, with the remainder passing to non-charitable beneficiaries (typically family). The CLT provides a gift/estate tax deduction for the present value of the charitable lead interest, reducing transfer taxes on the remainder.",
     "tip": "CLT = charity first, family remainder. Opposite of CRT. Good for transferring appreciation.",
     "calculationRequired": false,
@@ -4867,12 +4867,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A trust that is fully exempt from GST tax (inclusion ratio of zero) is achieved by:",
     "options": {
-      "A": "Making distributions only to non-skip persons",
-      "B": "Allocating sufficient GST exemption to equal the transfer value",
-      "C": "Establishing the trust as a grantor trust",
-      "D": "Limiting trust duration to 21 years"
+      "A": "Establishing the trust as a grantor trust",
+      "B": "Limiting trust duration to 21 years",
+      "C": "Making distributions only to non-skip persons",
+      "D": "Allocating sufficient GST exemption to equal the transfer value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A trust's inclusion ratio determines GST tax. An inclusion ratio of zero (no GST tax) requires allocating GST exemption equal to the property's value at transfer. The applicable fraction equals GST exemption allocated divided by value of property transferred. Timely allocation is important to avoid inclusion ratio issues.",
     "tip": "Zero inclusion ratio = full GST exemption allocation. Timely allocation avoids later problems.",
     "calculationRequired": false,
@@ -4909,12 +4909,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An intentionally defective grantor trust (IDGT) is designed so that:",
     "options": {
-      "A": "The trust is included in the grantor's estate",
-      "B": "Income is taxed to the grantor but the trust is excluded from the estate",
-      "C": "All income is tax-exempt",
-      "D": "The grantor receives annuity payments"
+      "A": "Income is taxed to the grantor but the trust is excluded from the estate",
+      "B": "All income is tax-exempt",
+      "C": "The grantor receives annuity payments",
+      "D": "The trust is included in the grantor's estate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "An IDGT is structured so the grantor is treated as the owner for income tax purposes (pays tax on trust income) but the trust is complete for gift/estate tax purposes (excluded from estate). This allows tax-free growth as the grantor's payment of income tax is an additional tax-free gift.",
     "tip": "IDGT = grantor trust for income tax, complete gift for transfer tax. Grantor paying tax = additional tax-free gift.",
     "calculationRequired": false,
@@ -4972,12 +4972,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 'net gift' arrangement, where the donee agrees to pay the gift tax, results in:",
     "options": {
-      "A": "A larger taxable gift",
-      "B": "A smaller taxable gift (reduced by gift tax paid by donee)",
-      "C": "Complete elimination of gift tax",
-      "D": "Ordinary income to the donor"
+      "A": "A smaller taxable gift (reduced by gift tax paid by donee)",
+      "B": "Complete elimination of gift tax",
+      "C": "Ordinary income to the donor",
+      "D": "A larger taxable gift"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In a net gift, the donee agrees to pay the gift tax, reducing the taxable gift by the amount of tax paid (circular calculation). If the tax paid by the donee exceeds the donor's basis in the property, the donor may recognize gain to that extent (Diedrich v. Commissioner).",
     "tip": "Net gift reduces gift value but may trigger gain to donor if tax exceeds basis.",
     "calculationRequired": false,
@@ -4993,12 +4993,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A dynasty trust is designed to:",
     "options": {
-      "A": "Terminate after 21 years",
-      "B": "Provide for multiple generations while avoiding estate and GST tax at each generation",
-      "C": "Distribute all income currently to beneficiaries",
-      "D": "Qualify for the marital deduction"
+      "A": "Provide for multiple generations while avoiding estate and GST tax at each generation",
+      "B": "Distribute all income currently to beneficiaries",
+      "C": "Qualify for the marital deduction",
+      "D": "Terminate after 21 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dynasty trusts are designed to last for multiple generations (potentially perpetually in states without Rule Against Perpetuities) while avoiding estate tax at each generation. Properly structured with GST exemption, the trust corpus is never subject to estate or GST tax regardless of growth.",
     "tip": "Dynasty trust: multi-generational wealth transfer. Use GST exemption. Perpetual in some states.",
     "calculationRequired": false,
@@ -5014,12 +5014,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A qualified terminable interest property (QTIP) trust qualifies for the marital deduction while allowing:",
     "options": {
-      "A": "The donor spouse to retain the property",
-      "B": "The surviving spouse unlimited access to principal",
-      "C": "The donor spouse to control ultimate disposition to remaindermen",
-      "D": "Avoidance of estate tax on the survivor's death"
+      "A": "The donor spouse to control ultimate disposition to remaindermen",
+      "B": "Avoidance of estate tax on the survivor's death",
+      "C": "The donor spouse to retain the property",
+      "D": "The surviving spouse unlimited access to principal"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "A QTIP trust provides the surviving spouse with all income for life (mandatory) while allowing the deceased spouse to control who receives the property at the survivor's death. The property qualifies for the marital deduction at the first death but is included in the survivor's estate (or taxed to survivor's estate under Section 2044).",
     "tip": "QTIP = marital deduction + control remainder. Surviving spouse must get all income for life.",
     "calculationRequired": false,
@@ -5056,12 +5056,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Family limited partnerships (FLPs) and LLCs are used in estate planning to:",
     "options": {
-      "A": "Avoid all transfer taxes",
-      "B": "Facilitate discounted transfers of minority interests to family members",
-      "C": "Eliminate income tax on business operations",
-      "D": "Qualify assets for the marital deduction"
+      "A": "Eliminate income tax on business operations",
+      "B": "Qualify assets for the marital deduction",
+      "C": "Avoid all transfer taxes",
+      "D": "Facilitate discounted transfers of minority interests to family members"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "FLPs and LLCs allow business owners to transfer minority, non-controlling interests to family members at discounted values (minority and marketability discounts). The senior generation retains control through general partner/manager interests while transferring value at reduced gift tax cost.",
     "tip": "FLP/LLC transfers: minority interests qualify for discounts. IRS scrutinizes deathbed transfers and lack of business purpose.",
     "calculationRequired": false,
@@ -5119,12 +5119,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An installment sale to a grantor trust is an estate planning technique because:",
     "options": {
-      "A": "No gain is recognized on the sale",
-      "B": "The sale removes future appreciation from the estate while providing income to the seller",
-      "C": "The trust receives a stepped-up basis",
-      "D": "Estate taxes are eliminated on the transferred property"
+      "A": "Estate taxes are eliminated on the transferred property",
+      "B": "No gain is recognized on the sale",
+      "C": "The sale removes future appreciation from the estate while providing income to the seller",
+      "D": "The trust receives a stepped-up basis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Selling assets to a grantor trust for an installment note removes future appreciation from the seller's estate. Since the trust is a grantor trust, no gain is recognized on the sale (disregarded transaction). Interest payments may be below AFR if structured properly. The note replaces the asset value in the estate.",
     "tip": "Installment sale to IDGT = freeze value + no gain recognition (grantor trust). Appreciation benefits beneficiaries.",
     "calculationRequired": false,
@@ -5140,12 +5140,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The potential 'clawback' issue with large gifts before 2026 relates to:",
     "options": {
-      "A": "Gifts being returned to the estate",
-      "B": "Estate tax calculated on the reduced post-2025 exemption recapturing benefit of prior higher exemption",
-      "C": "Gift tax being assessed on previously exempt gifts",
-      "D": "Loss of stepped-up basis on gifted property"
+      "A": "Loss of stepped-up basis on gifted property",
+      "B": "Gifts being returned to the estate",
+      "C": "Estate tax calculated on the reduced post-2025 exemption recapturing benefit of prior higher exemption",
+      "D": "Gift tax being assessed on previously exempt gifts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When the exemption reverts to approximately $6-7 million in 2026, estates that used the higher exemption for lifetime gifts could theoretically owe estate tax on the difference. IRS regulations provide anti-clawback protection - the higher exemption will be used to calculate estate tax if the exemption was higher when gifts were made.",
     "tip": "Anti-clawback rules protect large gifts made under higher TCJA exemption. Use it or lose it before 2026.",
     "calculationRequired": false,
@@ -5161,12 +5161,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Physical presence nexus for state income tax is established when a business has:",
     "options": {
-      "A": "Only online sales to state residents",
-      "B": "Employees, property, or regular physical presence in the state",
-      "C": "A single transaction in the state",
-      "D": "Customers located in the state"
+      "A": "A single transaction in the state",
+      "B": "Customers located in the state",
+      "C": "Only online sales to state residents",
+      "D": "Employees, property, or regular physical presence in the state"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Traditional physical presence nexus requires employees, property (owned or leased), or regular physical presence in a state. This includes offices, warehouses, inventory, traveling salespeople, and service personnel. Many states now also impose economic nexus based on sales thresholds.",
     "tip": "Physical nexus = people or property in the state. Economic nexus = sales threshold (no physical presence required).",
     "calculationRequired": false,
@@ -5182,12 +5182,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The South Dakota v. Wayfair Supreme Court decision (2018) held that states may require:",
     "options": {
-      "A": "All businesses to collect sales tax regardless of nexus",
-      "B": "Remote sellers to collect sales tax based on economic nexus without physical presence",
-      "C": "Only in-state businesses to collect sales tax",
-      "D": "The federal government to administer state sales taxes"
+      "A": "Only in-state businesses to collect sales tax",
+      "B": "The federal government to administer state sales taxes",
+      "C": "All businesses to collect sales tax regardless of nexus",
+      "D": "Remote sellers to collect sales tax based on economic nexus without physical presence"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Wayfair overturned the physical presence requirement for sales tax nexus (from Quill). States can now require remote sellers to collect sales tax based on economic nexus (typically $100,000 in sales or 200 transactions). Most states have adopted economic nexus laws following Wayfair.",
     "tip": "Wayfair = economic nexus for sales tax. Physical presence no longer required. Check each state's thresholds.",
     "calculationRequired": false,
@@ -5203,12 +5203,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "State conformity to federal tax law means:",
     "options": {
-      "A": "All states use identical tax rates",
-      "B": "States adopt federal definitions of income, deductions, or taxable income as a starting point",
-      "C": "The IRS administers state taxes",
-      "D": "State taxes are deductible on federal returns"
+      "A": "The IRS administers state taxes",
+      "B": "State taxes are deductible on federal returns",
+      "C": "All states use identical tax rates",
+      "D": "States adopt federal definitions of income, deductions, or taxable income as a starting point"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "State conformity means states adopt federal definitions (AGI, taxable income, depreciation methods) as a starting point for calculating state tax. States may conform to current federal law (rolling conformity) or a fixed date (static conformity). States then add modifications.",
     "tip": "Conformity = federal starting point with state modifications. Rolling vs. static conformity varies by state.",
     "calculationRequired": false,
@@ -5224,12 +5224,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The TCJA limited the itemized deduction for state and local taxes (SALT) to:",
     "options": {
-      "A": "$5,000 for all filers",
-      "B": "$10,000 ($5,000 for married filing separately)",
-      "C": "$15,000 for joint filers",
-      "D": "No limit for primary residence property taxes"
+      "A": "No limit for primary residence property taxes",
+      "B": "$5,000 for all filers",
+      "C": "$10,000 ($5,000 for married filing separately)",
+      "D": "$15,000 for joint filers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "TCJA limited the SALT deduction to $10,000 ($5,000 for MFS) for tax years 2018-2025. This includes state and local income taxes (or sales taxes if elected) plus property taxes combined. This cap significantly impacted taxpayers in high-tax states.",
     "tip": "SALT cap = $10K total (income/sales + property taxes combined). Expires after 2025.",
     "calculationRequired": false,
@@ -5245,12 +5245,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Income apportionment formulas are used by states to:",
     "options": {
-      "A": "Determine which state receives all of a business's tax",
-      "B": "Allocate a multistate business's income among states where it has nexus",
-      "C": "Calculate federal taxable income",
-      "D": "Determine sales tax rates"
+      "A": "Calculate federal taxable income",
+      "B": "Determine sales tax rates",
+      "C": "Determine which state receives all of a business's tax",
+      "D": "Allocate a multistate business's income among states where it has nexus"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Apportionment formulas divide a multistate business's income among states where it has nexus, ensuring each state taxes only its fair share. Traditional formulas use property, payroll, and sales factors. Many states now use single sales factor apportionment.",
     "tip": "Apportionment = divide income among states. Most states moving to single sales factor.",
     "calculationRequired": false,
@@ -5266,12 +5266,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Property taxes are generally based on:",
     "options": {
-      "A": "The property owner's income",
-      "B": "The assessed value of real and personal property",
-      "C": "The original purchase price of the property",
-      "D": "Federal taxable income"
+      "A": "The original purchase price of the property",
+      "B": "Federal taxable income",
+      "C": "The property owner's income",
+      "D": "The assessed value of real and personal property"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Property taxes are ad valorem taxes based on the assessed value of property (real property and sometimes tangible personal property). Assessment methods vary by jurisdiction but typically involve market value, income approach, or cost approach. Tax = assessed value × mill rate.",
     "tip": "Property tax = assessed value × rate. Assessment methods and rates vary widely by locality.",
     "calculationRequired": false,
@@ -5287,12 +5287,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A common economic nexus threshold for sales tax collection is:",
     "options": {
-      "A": "$10,000 in sales or 50 transactions",
-      "B": "$100,000 in sales or 200 transactions",
-      "C": "$500,000 in sales or 500 transactions",
-      "D": "$1,000,000 in sales"
+      "A": "$100,000 in sales or 200 transactions",
+      "B": "$500,000 in sales or 500 transactions",
+      "C": "$1,000,000 in sales",
+      "D": "$10,000 in sales or 50 transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Following Wayfair, most states adopted the South Dakota threshold: $100,000 in sales OR 200 transactions in the state. Some states eliminated the transaction threshold or have different sales thresholds. Businesses must monitor nexus in each state where they sell.",
     "tip": "Common threshold: $100K sales or 200 transactions. But thresholds vary by state - always verify.",
     "calculationRequired": false,
@@ -5329,12 +5329,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Most states exempt from sales tax:",
     "options": {
-      "A": "All services",
-      "B": "Sales for resale and sales to exempt organizations",
-      "C": "All online purchases",
-      "D": "Purchases under $100"
+      "A": "Purchases under $100",
+      "B": "All services",
+      "C": "Sales for resale and sales to exempt organizations",
+      "D": "All online purchases"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Common sales tax exemptions include sales for resale (to avoid pyramiding tax), sales to nonprofits and government entities, manufacturing equipment, and certain necessities (groceries, prescription drugs in many states). Services are taxable in some states but exempt in others.",
     "tip": "Resale exemption prevents tax pyramiding. Nonprofits and government usually exempt. Service taxability varies.",
     "calculationRequired": false,
@@ -5392,12 +5392,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The difference between allocation and apportionment is that allocation:",
     "options": {
-      "A": "Divides income using a formula based on factors",
-      "B": "Assigns specific types of income (like interest, dividends) entirely to one state",
-      "C": "Only applies to sales tax",
-      "D": "Reduces total tax liability"
+      "A": "Only applies to sales tax",
+      "B": "Reduces total tax liability",
+      "C": "Divides income using a formula based on factors",
+      "D": "Assigns specific types of income (like interest, dividends) entirely to one state"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Allocation assigns specific categories of nonbusiness income (interest, dividends, rents, royalties, capital gains from nonbusiness assets) entirely to one state, typically the taxpayer's domicile or where the income-producing property is located. Apportionment divides business/operational income among states using a formula.",
     "tip": "Allocate = assign 100% to one state (nonbusiness income). Apportion = divide by formula (business income).",
     "calculationRequired": false,
@@ -5413,12 +5413,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A statutory resident of a state is typically an individual who:",
     "options": {
-      "A": "Was born in the state",
-      "B": "Maintains a permanent place of abode and spends more than 183 days in the state",
-      "C": "Works in the state for any period",
-      "D": "Owns property in the state"
+      "A": "Owns property in the state",
+      "B": "Was born in the state",
+      "C": "Maintains a permanent place of abode and spends more than 183 days in the state",
+      "D": "Works in the state for any period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Statutory residency rules (varying by state) typically treat an individual as a resident if they maintain a permanent place of abode in the state AND spend more than 183 days there. This can result in dual residency situations where an individual is taxed as a resident by multiple states.",
     "tip": "Statutory resident = permanent abode + 183+ days. Can be resident of multiple states simultaneously.",
     "calculationRequired": false,
@@ -5455,12 +5455,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Market-based sourcing assigns service and intangible income to:",
     "options": {
-      "A": "Where the service is performed",
-      "B": "Where the customer receives the benefit of the service",
-      "C": "The service provider's home state",
-      "D": "Equally among all states"
+      "A": "Where the customer receives the benefit of the service",
+      "B": "The service provider's home state",
+      "C": "Equally among all states",
+      "D": "Where the service is performed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Market-based sourcing assigns service income to where the customer receives the benefit (the market state), rather than where the service is performed (cost-of-performance). Most states have moved to market-based sourcing for services. This can significantly impact service businesses.",
     "tip": "Market-based = where customer is. Cost-of-performance = where work done. Major impact on service companies.",
     "calculationRequired": false,
@@ -5476,12 +5476,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Marketplace facilitator laws require:",
     "options": {
-      "A": "Individual sellers to collect sales tax on all marketplace sales",
-      "B": "The marketplace (Amazon, eBay, etc.) to collect and remit sales tax on behalf of third-party sellers",
-      "C": "Buyers to self-assess use tax on marketplace purchases",
-      "D": "Marketplaces to report seller income to the IRS"
+      "A": "Marketplaces to report seller income to the IRS",
+      "B": "Individual sellers to collect sales tax on all marketplace sales",
+      "C": "The marketplace (Amazon, eBay, etc.) to collect and remit sales tax on behalf of third-party sellers",
+      "D": "Buyers to self-assess use tax on marketplace purchases"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Marketplace facilitator laws shift sales tax collection responsibility from individual sellers to the marketplace platform (Amazon, eBay, Etsy). The marketplace collects and remits tax on sales made through its platform, simplifying compliance for small sellers.",
     "tip": "Marketplace facilitator = platform collects tax for third-party sellers. Most states have adopted these laws.",
     "calculationRequired": false,
@@ -5497,12 +5497,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A credit for taxes paid to other states prevents:",
     "options": {
-      "A": "States from imposing any income tax",
-      "B": "Double taxation when income is taxed by both a resident and nonresident state",
-      "C": "Taxpayers from claiming itemized deductions",
-      "D": "Businesses from operating in multiple states"
+      "A": "Taxpayers from claiming itemized deductions",
+      "B": "Businesses from operating in multiple states",
+      "C": "States from imposing any income tax",
+      "D": "Double taxation when income is taxed by both a resident and nonresident state"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Resident states typically provide a credit for income taxes paid to other states on income sourced to those states. This prevents double taxation when income is taxed by both the residence state (worldwide taxation) and the source state (where income is earned).",
     "tip": "Credit for other state taxes = resident state credit for nonresident taxes paid. Prevents double taxation.",
     "calculationRequired": false,
@@ -5518,12 +5518,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Public Law 86-272 protects sellers from state income tax if their only activity in a state is:",
     "options": {
-      "A": "Any type of sales activity",
-      "B": "Solicitation of orders for tangible personal property, approved outside the state",
-      "C": "Providing services to customers",
-      "D": "Maintaining a website accessible to state residents"
+      "A": "Maintaining a website accessible to state residents",
+      "B": "Any type of sales activity",
+      "C": "Solicitation of orders for tangible personal property, approved outside the state",
+      "D": "Providing services to customers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "P.L. 86-272 prohibits states from imposing income tax on sellers whose only in-state activity is soliciting orders for tangible personal property, with orders approved and shipped from outside the state. It does not apply to services, intangibles, or sales tax. Many states interpret this narrowly.",
     "tip": "P.L. 86-272 = income tax protection for mere solicitation of TPP sales. Doesn't cover services or sales tax.",
     "calculationRequired": false,
@@ -5560,12 +5560,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Business personal property taxes typically apply to:",
     "options": {
-      "A": "Real estate only",
-      "B": "Inventory only",
-      "C": "Equipment, furniture, fixtures, and sometimes inventory",
-      "D": "Intangible assets like goodwill"
+      "A": "Equipment, furniture, fixtures, and sometimes inventory",
+      "B": "Intangible assets like goodwill",
+      "C": "Real estate only",
+      "D": "Inventory only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Many states and localities impose property tax on tangible personal property used in business - equipment, furniture, fixtures, machinery, and in some states, inventory. Businesses must file personal property renditions listing taxable assets. Rates and rules vary significantly by jurisdiction.",
     "tip": "Business personal property tax = equipment, furniture, fixtures. Inventory taxable in some states. File annual renditions.",
     "calculationRequired": false,
@@ -5581,12 +5581,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Destination-based sourcing means sales tax is imposed:",
     "options": {
-      "A": "Where the seller is located",
-      "B": "Where the buyer takes delivery or receives the product",
-      "C": "At the federal level",
-      "D": "Based on the seller's choice"
+      "A": "Based on the seller's choice",
+      "B": "Where the seller is located",
+      "C": "Where the buyer takes delivery or receives the product",
+      "D": "At the federal level"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Destination-based sourcing imposes sales tax based on where the buyer takes possession or where the product is delivered. Most states use destination sourcing. Origin-based sourcing (fewer states) taxes based on where the seller is located. This affects which rate applies.",
     "tip": "Destination sourcing (most states) = buyer's location rate. Origin sourcing = seller's location rate.",
     "calculationRequired": false,
@@ -5644,12 +5644,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The classification of income as business (apportionable) versus nonbusiness (allocable) depends on:",
     "options": {
-      "A": "The source of the income",
-      "B": "Whether the income arises from the taxpayer's regular trade or business operations",
-      "C": "The amount of the income",
-      "D": "Whether the income is passive"
+      "A": "Whether the income arises from the taxpayer's regular trade or business operations",
+      "B": "The amount of the income",
+      "C": "Whether the income is passive",
+      "D": "The source of the income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Business income (apportioned) arises from the taxpayer's regular trade or business operations (transactional test) or from assets used in the business (functional test). Nonbusiness income (allocated 100% to one state) is from activities unrelated to the business. Classification significantly affects state tax.",
     "tip": "Business income = from regular operations or business assets → apportion. Nonbusiness = unrelated → allocate.",
     "calculationRequired": false,
@@ -5665,12 +5665,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A water's edge election in combined reporting limits the combined group to:",
     "options": {
-      "A": "Corporations headquartered in coastal states",
-      "B": "U.S. corporations and certain foreign corporations with U.S. connections",
-      "C": "Only corporations with physical presence in the state",
-      "D": "Corporations with sales exceeding $10 million"
+      "A": "Corporations with sales exceeding $10 million",
+      "B": "Corporations headquartered in coastal states",
+      "C": "U.S. corporations and certain foreign corporations with U.S. connections",
+      "D": "Only corporations with physical presence in the state"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Water's edge elections limit the combined group to U.S. corporations, domestic international sales corporations (DISCs), foreign sales corporations (FSCs), and foreign corporations deriving significant income from U.S. sources or connected with U.S. trade or business. This excludes purely foreign operations.",
     "tip": "Water's edge = U.S. entities + foreign with U.S. connections. Excludes purely foreign operations from combined return.",
     "calculationRequired": false,
@@ -5686,12 +5686,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Unclaimed property (escheat) laws require businesses to:",
     "options": {
-      "A": "Pay income tax on unclaimed amounts",
-      "B": "Report and remit dormant property (uncashed checks, unused gift cards) to the state",
-      "C": "Write off unclaimed amounts as bad debts",
-      "D": "Donate unclaimed property to charity"
+      "A": "Donate unclaimed property to charity",
+      "B": "Pay income tax on unclaimed amounts",
+      "C": "Report and remit dormant property (uncashed checks, unused gift cards) to the state",
+      "D": "Write off unclaimed amounts as bad debts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Escheat laws require businesses to report and remit unclaimed property (uncashed payroll checks, vendor payments, customer refunds, unused gift cards) to the state after a dormancy period. Priority rules determine which state receives the property. Non-compliance results in penalties and interest.",
     "tip": "Escheat = remit dormant property to state. Priority: owner's last known address, then state of incorporation.",
     "calculationRequired": false,
@@ -5707,12 +5707,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The sales tax treatment of software varies by state, with many states distinguishing between:",
     "options": {
-      "A": "Business and personal use software",
-      "B": "Canned (prewritten) software and custom software",
-      "C": "Expensive and inexpensive software",
-      "D": "Software sold to residents and nonresidents"
+      "A": "Expensive and inexpensive software",
+      "B": "Software sold to residents and nonresidents",
+      "C": "Business and personal use software",
+      "D": "Canned (prewritten) software and custom software"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "States often distinguish between canned (prewritten) software (often taxable as tangible personal property) and custom software (often exempt as a service). SaaS (cloud-based software) treatment varies widely - some states tax it, others don't. Delivery method (download vs. physical) may also affect taxability.",
     "tip": "Software tax varies: canned often taxable, custom often exempt. SaaS treatment inconsistent across states.",
     "calculationRequired": false,
@@ -5728,12 +5728,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Related-party add-back statutes require taxpayers to:",
     "options": {
-      "A": "Add related parties to their combined return",
-      "B": "Add back deductions for royalties, interest, or management fees paid to related parties",
-      "C": "Add back all intercompany transactions",
-      "D": "Add back federal tax deductions"
+      "A": "Add back federal tax deductions",
+      "B": "Add related parties to their combined return",
+      "C": "Add back deductions for royalties, interest, or management fees paid to related parties",
+      "D": "Add back all intercompany transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Add-back statutes combat income shifting by requiring taxpayers to add back deductions for certain payments (royalties, interest, intangible expenses, management fees) to related parties. Exceptions often exist for payments with valid business purpose, if subject to tax elsewhere, or arm's-length transactions.",
     "tip": "Add-back = reverse deductions for related-party payments. Anti-income-shifting measure. Exceptions may apply.",
     "calculationRequired": false,
@@ -5770,12 +5770,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Gross receipts taxes differ from income taxes in that gross receipts taxes:",
     "options": {
-      "A": "Allow deductions for cost of goods sold and operating expenses",
-      "B": "Apply to total revenue without deductions for expenses",
-      "C": "Only apply to profitable businesses",
-      "D": "Are deductible on federal returns"
+      "A": "Apply to total revenue without deductions for expenses",
+      "B": "Only apply to profitable businesses",
+      "C": "Are deductible on federal returns",
+      "D": "Allow deductions for cost of goods sold and operating expenses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Gross receipts taxes (like Ohio's CAT or Texas's franchise tax margin version) tax total revenue with limited or no deductions for expenses. This means unprofitable businesses still owe tax. Gross receipts taxes may still be deductible on federal returns as business taxes.",
     "tip": "Gross receipts tax = tax on revenue, not profit. Owed even if unprofitable. Ohio CAT, Texas margin tax examples.",
     "calculationRequired": false,
@@ -5791,12 +5791,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An individual can avoid statutory residency in a high-tax state by:",
     "options": {
-      "A": "Changing domicile only",
-      "B": "Spending fewer than 183 days in the state and not maintaining a permanent place of abode",
-      "C": "Filing a nonresident return",
-      "D": "Working remotely"
+      "A": "Working remotely",
+      "B": "Changing domicile only",
+      "C": "Spending fewer than 183 days in the state and not maintaining a permanent place of abode",
+      "D": "Filing a nonresident return"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "To avoid statutory residency, an individual typically must: (1) not maintain a permanent place of abode in the state, OR (2) spend fewer than 183 days in the state. Both conditions must be met to avoid statutory residency. Domicile is a separate analysis based on intent.",
     "tip": "Break statutory residency: no permanent abode OR under 183 days. Careful tracking and documentation essential.",
     "calculationRequired": false,
@@ -5812,12 +5812,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Streamlined Sales Tax (SST) Project aims to:",
     "options": {
-      "A": "Create a single national sales tax",
-      "B": "Simplify and harmonize sales tax administration across participating states",
-      "C": "Eliminate all sales tax",
-      "D": "Transfer sales tax administration to the IRS"
+      "A": "Transfer sales tax administration to the IRS",
+      "B": "Create a single national sales tax",
+      "C": "Simplify and harmonize sales tax administration across participating states",
+      "D": "Eliminate all sales tax"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The SST Project is a cooperative effort among states to simplify sales tax administration through uniform definitions, rate databases, single state-level administration, and certified service providers. Sellers using SST-certified software receive liability protection. Not all states participate.",
     "tip": "SST = voluntary state cooperation for simplified sales tax. Uniform definitions, certified providers, liability protection.",
     "calculationRequired": false,
@@ -5833,12 +5833,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Financial institutions and airlines often use special apportionment formulas because:",
     "options": {
-      "A": "They are exempt from state taxes",
-      "B": "Standard property/payroll/sales factors don't accurately reflect their economic activity",
-      "C": "They have no physical presence in any state",
-      "D": "Federal law requires special treatment"
+      "A": "They have no physical presence in any state",
+      "B": "Federal law requires special treatment",
+      "C": "They are exempt from state taxes",
+      "D": "Standard property/payroll/sales factors don't accurately reflect their economic activity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Certain industries use special apportionment formulas because standard factors don't reflect their activities. Banks may use deposits or loans. Airlines use revenue passenger miles. Railroads and trucking use mileage. Broadcasting companies may use audience factors. These better reflect economic presence.",
     "tip": "Special apportionment: banks (deposits), airlines (miles), broadcasters (audience). Standard factors don't fit all businesses.",
     "calculationRequired": false,
@@ -5854,12 +5854,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A voluntary disclosure agreement (VDA) with a state typically provides:",
     "options": {
-      "A": "Complete immunity from all state taxes",
-      "B": "Waiver of penalties and limited lookback period for unpaid taxes",
-      "C": "Guaranteed audit protection going forward",
-      "D": "Refund of previously paid taxes"
+      "A": "Waiver of penalties and limited lookback period for unpaid taxes",
+      "B": "Guaranteed audit protection going forward",
+      "C": "Refund of previously paid taxes",
+      "D": "Complete immunity from all state taxes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "VDAs allow businesses that discover unreported state tax liability to come forward voluntarily. Benefits typically include penalty waiver, limited lookback period (often 3-4 years instead of full statute), and possible interest reduction. VDAs must be initiated before the state contacts the taxpayer.",
     "tip": "VDA = penalty waiver + limited lookback for voluntary disclosure. Must contact state BEFORE they contact you.",
     "calculationRequired": false,
@@ -5896,12 +5896,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For 2024, the maximum employee elective deferral to a 401(k) plan for individuals under age 50 is:",
     "options": {
-      "A": "$7,000",
-      "B": "$15,500",
-      "C": "$23,000",
-      "D": "$30,500"
+      "A": "$15,500",
+      "B": "$23,000",
+      "C": "$30,500",
+      "D": "$7,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The 2024 elective deferral limit for 401(k), 403(b), and most 457 plans is $23,000 for participants under age 50. Participants age 50 and over can contribute an additional $7,500 catch-up contribution, for a total of $30,500.",
     "tip": "2024 401(k) limits: $23,000 base + $7,500 catch-up (age 50+) = $30,500 max.",
     "calculationRequired": false,
@@ -5917,12 +5917,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary tax difference between traditional and Roth IRAs is:",
     "options": {
-      "A": "Contribution limits are different",
-      "B": "Traditional contributions are tax-deferred; Roth contributions are after-tax but distributions are tax-free",
-      "C": "Only Roth IRAs allow investments in stocks",
-      "D": "Traditional IRAs cannot be rolled over"
+      "A": "Traditional IRAs cannot be rolled over",
+      "B": "Contribution limits are different",
+      "C": "Traditional contributions are tax-deferred; Roth contributions are after-tax but distributions are tax-free",
+      "D": "Only Roth IRAs allow investments in stocks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Traditional IRAs provide tax-deductible contributions (subject to limits) with taxable distributions. Roth IRAs use after-tax contributions but provide tax-free qualified distributions. The choice depends on current vs. future tax rates.",
     "tip": "Traditional = deduction now, taxed later. Roth = no deduction, tax-free later. Consider future tax rates.",
     "calculationRequired": false,
@@ -5980,12 +5980,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under SECURE 2.0, required minimum distributions (RMDs) from traditional IRAs must begin at age:",
     "options": {
-      "A": "70½",
-      "B": "72",
-      "C": "73 (for those born 1951-1959) or 75 (for those born 1960+)",
-      "D": "65"
+      "A": "65",
+      "B": "70½",
+      "C": "72",
+      "D": "73 (for those born 1951-1959) or 75 (for those born 1960+)"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "SECURE 2.0 increased the RMD beginning age to 73 for those born 1951-1959, and to 75 for those born in 1960 or later. RMDs are required from traditional IRAs, SEP IRAs, SIMPLE IRAs, and employer plans (with some exceptions for still-working participants).",
     "tip": "RMD age: 73 (born 1951-1959), 75 (born 1960+). First RMD by April 1 of year after reaching age.",
     "calculationRequired": false,
@@ -6064,12 +6064,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Converting a traditional IRA to a Roth IRA results in:",
     "options": {
-      "A": "No tax consequences",
-      "B": "Taxation of the converted amount as ordinary income in the year of conversion",
-      "C": "Capital gains treatment on the converted amount",
-      "D": "A 10% penalty on the converted amount"
+      "A": "Capital gains treatment on the converted amount",
+      "B": "A 10% penalty on the converted amount",
+      "C": "No tax consequences",
+      "D": "Taxation of the converted amount as ordinary income in the year of conversion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Roth conversions are taxable events - the converted amount is included in ordinary income in the year of conversion. However, the 10% early withdrawal penalty does not apply to conversions (but applies to earnings withdrawn within 5 years). There are no income limits on conversions.",
     "tip": "Roth conversion = taxable income (but no 10% penalty). No income limits on converting. Consider tax bracket.",
     "calculationRequired": false,
@@ -6085,12 +6085,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Substantially equal periodic payments (SEPP) from an IRA avoid the 10% early withdrawal penalty if:",
     "options": {
-      "A": "Payments last at least 3 years",
-      "B": "Payments are made annually based on life expectancy",
-      "C": "Payments continue for the longer of 5 years or until age 59½",
-      "D": "Payments are at least $10,000 per year"
+      "A": "Payments continue for the longer of 5 years or until age 59½",
+      "B": "Payments are at least $10,000 per year",
+      "C": "Payments last at least 3 years",
+      "D": "Payments are made annually based on life expectancy"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "SEPP payments (Section 72(t)) must continue for the longer of 5 years OR until the participant reaches age 59½. Three IRS-approved methods calculate payments: required minimum distribution, fixed amortization, and fixed annuitization. Modifying payments prematurely triggers penalties.",
     "tip": "SEPP = longer of 5 years or until 59½. Don't modify payments early - triggers back penalties.",
     "calculationRequired": false,
@@ -6106,12 +6106,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SIMPLE IRAs are available to employers with no more than:",
     "options": {
-      "A": "10 employees",
-      "B": "50 employees",
-      "C": "100 employees who earned $5,000 or more",
-      "D": "500 employees"
+      "A": "50 employees",
+      "B": "100 employees who earned $5,000 or more",
+      "C": "500 employees",
+      "D": "10 employees"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "SIMPLE IRAs are available to employers with 100 or fewer employees who earned at least $5,000 in the preceding year. Employers must make either a 2% nonelective contribution or a 3% matching contribution. The 2024 employee contribution limit is $16,000 ($19,500 with catch-up).",
     "tip": "SIMPLE = 100 or fewer employees. Required employer contribution (2% or 3% match). $16K employee limit.",
     "calculationRequired": false,
@@ -6127,12 +6127,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Employer matching contributions in a 401(k) plan may be subject to:",
     "options": {
-      "A": "Immediate vesting only",
-      "B": "A vesting schedule up to 6 years (graded) or 3 years (cliff)",
-      "C": "Never vest until retirement",
-      "D": "10-year vesting schedules"
+      "A": "Never vest until retirement",
+      "B": "10-year vesting schedules",
+      "C": "Immediate vesting only",
+      "D": "A vesting schedule up to 6 years (graded) or 3 years (cliff)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Employer matching contributions can use 3-year cliff vesting (100% vested after 3 years) or 2-6 year graded vesting. Safe harbor contributions and employee deferrals are always immediately vested. Profit-sharing contributions can use up to 6-year graded or 3-year cliff vesting.",
     "tip": "Vesting limits: 3-year cliff or 2-6 year graded. Employee deferrals always 100% vested immediately.",
     "calculationRequired": false,
@@ -6148,12 +6148,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 'backdoor Roth' strategy is used by high-income taxpayers to:",
     "options": {
-      "A": "Avoid IRA contribution limits",
-      "B": "Contribute to a Roth IRA indirectly through nondeductible traditional IRA contributions and conversion",
-      "C": "Withdraw from Roth IRAs early without penalty",
-      "D": "Receive employer matching in a Roth IRA"
+      "A": "Withdraw from Roth IRAs early without penalty",
+      "B": "Receive employer matching in a Roth IRA",
+      "C": "Avoid IRA contribution limits",
+      "D": "Contribute to a Roth IRA indirectly through nondeductible traditional IRA contributions and conversion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The backdoor Roth allows high-income taxpayers who exceed Roth contribution limits to make nondeductible traditional IRA contributions and then convert to Roth. The pro-rata rule may create taxation if the taxpayer has other pre-tax IRA balances.",
     "tip": "Backdoor Roth: nondeductible traditional → convert to Roth. Beware pro-rata rule if you have pre-tax IRAs.",
     "calculationRequired": false,
@@ -6169,12 +6169,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Required minimum distributions (RMDs) are calculated by dividing the account balance by:",
     "options": {
-      "A": "The account owner's age",
-      "B": "A flat factor of 20",
-      "C": "The applicable life expectancy factor from IRS tables",
-      "D": "The number of beneficiaries"
+      "A": "The applicable life expectancy factor from IRS tables",
+      "B": "The number of beneficiaries",
+      "C": "The account owner's age",
+      "D": "A flat factor of 20"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "RMDs are calculated by dividing the December 31 account balance of the prior year by the applicable life expectancy factor from IRS tables (Uniform Lifetime Table for most, Joint and Survivor Table if spouse beneficiary is more than 10 years younger).",
     "tip": "RMD = Prior year 12/31 balance ÷ life expectancy factor. Use Uniform Table unless spouse is 10+ years younger.",
     "calculationRequired": false,
@@ -6190,12 +6190,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A solo 401(k) allows self-employed individuals to contribute both:",
     "options": {
-      "A": "Employee deferrals and employer profit-sharing contributions",
-      "B": "IRA contributions and SEP contributions",
-      "C": "Social Security and Medicare taxes",
-      "D": "HSA contributions and FSA contributions"
+      "A": "Social Security and Medicare taxes",
+      "B": "HSA contributions and FSA contributions",
+      "C": "Employee deferrals and employer profit-sharing contributions",
+      "D": "IRA contributions and SEP contributions"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "A solo 401(k) allows self-employed individuals to make employee elective deferrals (up to $23,000 in 2024, plus catch-up) AND employer profit-sharing contributions (up to 25% of net self-employment income), for a combined maximum of $69,000 ($76,500 with catch-up).",
     "tip": "Solo 401(k) = employee deferral ($23K) + employer contribution (25% of net SE income). Max $69K total.",
     "calculationRequired": false,
@@ -6211,12 +6211,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The net unrealized appreciation (NUA) strategy for employer stock in a 401(k) provides:",
     "options": {
-      "A": "Tax-free distribution of employer stock",
-      "B": "Ordinary income treatment on the cost basis, long-term capital gain treatment on the appreciation",
-      "C": "Deferral of all taxes until the stock is sold",
-      "D": "Conversion to a Roth IRA"
+      "A": "Deferral of all taxes until the stock is sold",
+      "B": "Conversion to a Roth IRA",
+      "C": "Tax-free distribution of employer stock",
+      "D": "Ordinary income treatment on the cost basis, long-term capital gain treatment on the appreciation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "NUA allows participants to take a lump-sum distribution of employer stock in-kind. Only the cost basis is taxed as ordinary income at distribution. The NUA (appreciation) is taxed as long-term capital gain when the stock is sold, regardless of holding period post-distribution.",
     "tip": "NUA: distribute employer stock in-kind. Basis = ordinary income. Appreciation = LTCG (immediate LTCG treatment).",
     "calculationRequired": false,
@@ -6253,12 +6253,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "SECURE Act qualified birth or adoption distributions allow penalty-free withdrawals up to:",
     "options": {
-      "A": "$2,500 per parent",
-      "B": "$5,000 per parent, per event",
-      "C": "$10,000 total",
-      "D": "Unlimited amounts"
+      "A": "$5,000 per parent, per event",
+      "B": "$10,000 total",
+      "C": "Unlimited amounts",
+      "D": "$2,500 per parent"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The SECURE Act allows each parent to withdraw up to $5,000 from retirement accounts within one year of a birth or adoption without the 10% penalty. The withdrawal is still taxable income. The amount can be repaid to the plan for tax-free treatment.",
     "tip": "Birth/adoption: up to $5,000 penalty-free per parent per event. Can be repaid to restore tax-deferral.",
     "calculationRequired": false,
@@ -6274,12 +6274,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "401(k) plan loans must generally be repaid within:",
     "options": {
-      "A": "1 year",
-      "B": "3 years",
-      "C": "5 years (15 years for principal residence)",
-      "D": "10 years"
+      "A": "3 years",
+      "B": "5 years (15 years for principal residence)",
+      "C": "10 years",
+      "D": "1 year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "401(k) loans must be repaid within 5 years with substantially level payments at least quarterly. Loans for purchase of a principal residence may have a longer repayment period (often 15 years). Maximum loan is lesser of $50,000 or 50% of vested balance.",
     "tip": "401(k) loan: 5 years max (longer for home). Max $50K or 50% vested. Failure to repay = deemed distribution.",
     "calculationRequired": false,
@@ -6295,12 +6295,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A spousal IRA allows a non-working spouse to contribute based on:",
     "options": {
-      "A": "The non-working spouse's investment income",
-      "B": "The working spouse's earned income",
-      "C": "Social Security benefits",
-      "D": "Alimony received"
+      "A": "Social Security benefits",
+      "B": "Alimony received",
+      "C": "The non-working spouse's investment income",
+      "D": "The working spouse's earned income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Spousal IRAs allow a non-working or low-earning spouse to contribute to an IRA based on the couple's combined earned income (when filing jointly). Both spouses can contribute up to the annual limit if the working spouse has sufficient earned income.",
     "tip": "Spousal IRA: non-working spouse can contribute if couple has earned income (MFJ). Full contribution if income covers both.",
     "calculationRequired": false,
@@ -6337,12 +6337,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under SECURE Act rules, most non-spouse beneficiaries who inherit an IRA must:",
     "options": {
-      "A": "Take distributions over their own life expectancy",
-      "B": "Empty the account within 10 years",
-      "C": "Take a lump-sum distribution immediately",
-      "D": "Convert to a Roth IRA"
+      "A": "Convert to a Roth IRA",
+      "B": "Take distributions over their own life expectancy",
+      "C": "Empty the account within 10 years",
+      "D": "Take a lump-sum distribution immediately"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The SECURE Act eliminated the stretch IRA for most non-spouse beneficiaries. Designated beneficiaries (individuals other than eligible designated beneficiaries) must empty the inherited IRA within 10 years. Eligible designated beneficiaries (spouses, minor children, disabled/chronically ill, those within 10 years of age) can still stretch.",
     "tip": "Post-SECURE: most non-spouse beneficiaries = 10-year rule. EDBs (spouse, minor, disabled) can still stretch.",
     "calculationRequired": false,
@@ -6358,12 +6358,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A qualified charitable distribution (QCD) from an IRA allows individuals age 70½ or older to:",
     "options": {
-      "A": "Deduct contributions above normal limits",
-      "B": "Transfer up to $105,000 directly to charity, satisfying RMDs without increasing AGI",
-      "C": "Convert IRA to Roth tax-free",
-      "D": "Avoid all taxation on IRA distributions"
+      "A": "Convert IRA to Roth tax-free",
+      "B": "Avoid all taxation on IRA distributions",
+      "C": "Deduct contributions above normal limits",
+      "D": "Transfer up to $105,000 directly to charity, satisfying RMDs without increasing AGI"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "QCDs allow individuals 70½+ to transfer up to $105,000 (2024, indexed) directly from an IRA to qualified charities. The distribution satisfies RMD requirements but isn't included in AGI. This benefits taxpayers who don't itemize or want to reduce AGI for other purposes.",
     "tip": "QCD: age 70½+, direct IRA-to-charity, satisfies RMD, excludes from AGI. Max $105K (2024). No itemizing required.",
     "calculationRequired": false,
@@ -6379,12 +6379,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Defined benefit plans are attractive for older, high-income business owners because:",
     "options": {
-      "A": "Contribution limits are lower",
-      "B": "Contributions are based on promised benefit and can be significantly higher than DC limits",
-      "C": "Employees don't participate",
-      "D": "The plans are not subject to ERISA"
+      "A": "The plans are not subject to ERISA",
+      "B": "Contribution limits are lower",
+      "C": "Contributions are based on promised benefit and can be significantly higher than DC limits",
+      "D": "Employees don't participate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Defined benefit plans allow contributions based on actuarial calculations to fund a promised benefit. Older participants need larger contributions to fund the same benefit over a shorter period. This allows contribution amounts that far exceed defined contribution limits.",
     "tip": "DB plans: contributions based on promised benefit. Older owners can contribute $200K+ annually in some cases.",
     "calculationRequired": false,
@@ -6400,12 +6400,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The pro-rata rule for IRA distributions affects backdoor Roth conversions by:",
     "options": {
-      "A": "Limiting the conversion amount",
-      "B": "Requiring taxation based on the ratio of pre-tax to after-tax funds across all IRAs",
-      "C": "Preventing conversions entirely",
-      "D": "Increasing the early withdrawal penalty"
+      "A": "Increasing the early withdrawal penalty",
+      "B": "Limiting the conversion amount",
+      "C": "Requiring taxation based on the ratio of pre-tax to after-tax funds across all IRAs",
+      "D": "Preventing conversions entirely"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The pro-rata rule treats all traditional, SEP, and SIMPLE IRAs as one account. Conversions are taxed based on the ratio of pre-tax to after-tax funds across all accounts. Those with large pre-tax IRA balances may owe significant tax on backdoor Roth conversions.",
     "tip": "Pro-rata rule: can't cherry-pick after-tax funds. All traditional IRAs aggregated. Rollover pre-tax to 401(k) to isolate.",
     "calculationRequired": false,
@@ -6442,12 +6442,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For Roth IRA distributions to be qualified (tax-free), the account must be open for:",
     "options": {
-      "A": "3 years and the owner must be 55",
-      "B": "5 years and the owner must be 59½ (or meet another exception)",
-      "C": "10 years",
-      "D": "Any period if only contributions are withdrawn"
+      "A": "Any period if only contributions are withdrawn",
+      "B": "3 years and the owner must be 55",
+      "C": "5 years and the owner must be 59½ (or meet another exception)",
+      "D": "10 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Qualified Roth distributions require the 5-year holding period to be satisfied AND the distribution must be made after age 59½, death, disability, or first-time home purchase ($10,000 limit). Contributions can always be withdrawn tax-free, but earnings require qualified distribution status.",
     "tip": "Qualified Roth: 5 years AND 59½ (or death, disability, first home). Contributions always tax-free. Earnings need both requirements.",
     "calculationRequired": false,
@@ -6463,12 +6463,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A retirement plan is top-heavy when more than what percentage of benefits accrues to key employees?",
     "options": {
-      "A": "40%",
-      "B": "50%",
-      "C": "60%",
-      "D": "70%"
+      "A": "50%",
+      "B": "60%",
+      "C": "70%",
+      "D": "40%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "A plan is top-heavy when more than 60% of the aggregate account balances (DC) or present value of accrued benefits (DB) belongs to key employees (officers earning over $220,000 in 2024, 5%+ owners, 1%+ owners earning over $150,000). Top-heavy plans must provide minimum contributions to non-key employees.",
     "tip": "Top-heavy = >60% to key employees. Requires minimum 3% contribution to non-key employees.",
     "calculationRequired": false,
@@ -6484,12 +6484,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cash balance plan is a type of defined benefit plan that:",
     "options": {
-      "A": "Provides participants with a lump sum at retirement only",
-      "B": "Expresses benefits in terms of a hypothetical account balance that grows with contributions and interest credits",
-      "C": "Is funded entirely by employee contributions",
-      "D": "Cannot be combined with a 401(k)"
+      "A": "Is funded entirely by employee contributions",
+      "B": "Cannot be combined with a 401(k)",
+      "C": "Provides participants with a lump sum at retirement only",
+      "D": "Expresses benefits in terms of a hypothetical account balance that grows with contributions and interest credits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Cash balance plans are defined benefit plans that express benefits as a hypothetical account balance. Each year, the account receives a pay credit (% of salary) and an interest credit (guaranteed rate). This hybrid structure combines DB tax advantages with DC-like portability.",
     "tip": "Cash balance = DB with account-like appearance. Pay credits + interest credits. Employer bears investment risk.",
     "calculationRequired": false,
@@ -6505,12 +6505,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The still-working exception to RMDs allows participants to delay employer plan RMDs if:",
     "options": {
-      "A": "They continue working for any employer",
-      "B": "They continue working for the employer sponsoring the plan and don't own more than 5%",
-      "C": "They are under age 75",
-      "D": "The plan balance is under $100,000"
+      "A": "They continue working for the employer sponsoring the plan and don't own more than 5%",
+      "B": "They are under age 75",
+      "C": "The plan balance is under $100,000",
+      "D": "They continue working for any employer"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Participants who continue working past RMD age can delay RMDs from their current employer's plan until they retire (if they don't own more than 5% of the company). This doesn't apply to IRAs or plans from former employers. 5%+ owners cannot use this exception.",
     "tip": "Still-working exception: current employer plan only, <5% owner. Doesn't apply to IRAs or former employer plans.",
     "calculationRequired": false,
@@ -6526,12 +6526,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Excess contributions to an IRA are subject to an annual penalty of:",
     "options": {
-      "A": "5%",
-      "B": "6%",
-      "C": "10%",
-      "D": "15%"
+      "A": "10%",
+      "B": "15%",
+      "C": "5%",
+      "D": "6%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Excess IRA contributions are subject to a 6% excise tax per year until corrected. The penalty can be avoided by withdrawing the excess (plus earnings) before the tax filing deadline (including extensions). Excess contributions in one year can be absorbed by under-contributing in future years.",
     "tip": "6% annual penalty on excess contributions. Withdraw before filing deadline to avoid. Can apply to future years.",
     "calculationRequired": false,
@@ -6568,12 +6568,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a defined contribution plan terminates, participants must:",
     "options": {
-      "A": "Forfeit their account balances",
-      "B": "Receive distributions or roll over their vested account balances",
-      "C": "Continue contributing to the plan",
-      "D": "Transfer balances to Social Security"
+      "A": "Continue contributing to the plan",
+      "B": "Transfer balances to Social Security",
+      "C": "Forfeit their account balances",
+      "D": "Receive distributions or roll over their vested account balances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Upon plan termination, participants become 100% vested in their account balances and must receive distributions. They can take a lump sum (taxable), roll over to an IRA or another employer plan, or purchase an annuity. The employer must follow IRS and DOL termination procedures.",
     "tip": "Plan termination = 100% vesting. Participants receive/rollover. Follow IRS/DOL procedures.",
     "calculationRequired": false,
@@ -6589,12 +6589,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After the Tax Cuts and Jobs Act, recharacterization of Roth conversions:",
     "options": {
-      "A": "Is still permitted",
-      "B": "Is no longer permitted",
-      "C": "Is permitted only for amounts under $50,000",
-      "D": "Requires IRS approval"
+      "A": "Requires IRS approval",
+      "B": "Is still permitted",
+      "C": "Is no longer permitted",
+      "D": "Is permitted only for amounts under $50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "TCJA eliminated the ability to recharacterize Roth conversions (the 'do-over' provision). Conversions from traditional to Roth are now irrevocable. However, recharacterization of regular IRA contributions (traditional to Roth or vice versa) is still permitted before the filing deadline.",
     "tip": "Can't recharacterize Roth conversions (post-TCJA). Can still recharacterize contributions before filing deadline.",
     "calculationRequired": false,
@@ -6610,12 +6610,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The 'Rule of 55' allows penalty-free distributions from:",
     "options": {
-      "A": "Any IRA after age 55",
-      "B": "An employer plan if the participant separates from service in or after the year they turn 55",
-      "C": "All retirement accounts after 55 years of contributions",
-      "D": "Only defined benefit plans"
+      "A": "An employer plan if the participant separates from service in or after the year they turn 55",
+      "B": "All retirement accounts after 55 years of contributions",
+      "C": "Only defined benefit plans",
+      "D": "Any IRA after age 55"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The Rule of 55 allows penalty-free distributions from a 401(k) or 403(b) if the participant separates from service in or after the year they turn 55 (age 50 for public safety employees). This applies only to the plan of the employer from which they separated, not IRAs or prior employer plans.",
     "tip": "Rule of 55: penalty-free from current employer plan if separate at 55+. Doesn't apply to IRAs or old employer plans.",
     "calculationRequired": false,
@@ -6631,12 +6631,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For 2024, the Social Security wage base (maximum earnings subject to Social Security tax) is:",
     "options": {
-      "A": "$147,000",
-      "B": "$160,200",
-      "C": "$168,600",
-      "D": "Unlimited"
+      "A": "$168,600",
+      "B": "Unlimited",
+      "C": "$147,000",
+      "D": "$160,200"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The 2024 Social Security wage base is $168,600. Earnings above this amount are not subject to Social Security tax (6.2% employee/employer). Medicare tax (1.45%) has no wage base limit and applies to all wages. Additional Medicare tax (0.9%) applies above $200,000.",
     "tip": "2024 SS wage base = $168,600. Medicare = unlimited. Additional Medicare (0.9%) above $200K.",
     "calculationRequired": false,
@@ -6673,12 +6673,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The primary IRS test for determining employee vs. independent contractor status focuses on:",
     "options": {
-      "A": "The amount paid to the worker",
-      "B": "The degree of control the employer has over how work is performed",
-      "C": "Whether the worker has other clients",
-      "D": "The length of the working relationship"
+      "A": "The degree of control the employer has over how work is performed",
+      "B": "Whether the worker has other clients",
+      "C": "The length of the working relationship",
+      "D": "The amount paid to the worker"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The IRS examines the degree of control and independence in the relationship using factors in three categories: behavioral control (how work is done), financial control (business aspects), and type of relationship (contracts, benefits, permanence). Control is the key factor.",
     "tip": "Employee vs. contractor = control test. Behavioral, financial, and relationship factors. More control = employee.",
     "calculationRequired": false,
@@ -6694,12 +6694,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Federal Unemployment Tax Act (FUTA) tax is paid by:",
     "options": {
-      "A": "Employees only",
-      "B": "Employers only",
-      "C": "Both employers and employees equally",
-      "D": "The federal government"
+      "A": "Employers only",
+      "B": "Both employers and employees equally",
+      "C": "The federal government",
+      "D": "Employees only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "FUTA is paid entirely by employers - employees do not contribute. The gross rate is 6.0% on the first $7,000 of each employee's wages. Employers receive a credit (up to 5.4%) for state unemployment taxes paid, resulting in an effective rate of 0.6% for most employers.",
     "tip": "FUTA = employer only. 6.0% on first $7,000. Usually 0.6% after state credit.",
     "calculationRequired": false,
@@ -6736,12 +6736,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Form W-2 must be provided to employees by:",
     "options": {
-      "A": "December 31",
-      "B": "January 31",
-      "C": "February 28",
-      "D": "April 15"
+      "A": "February 28",
+      "B": "April 15",
+      "C": "December 31",
+      "D": "January 31"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Employers must provide Form W-2 to employees by January 31 following the calendar year. W-2s must also be filed with the Social Security Administration by January 31 (paper or electronic). Penalties apply for late or incorrect forms.",
     "tip": "W-2 deadline: January 31 to employees and SSA. W-3 transmittal also due January 31.",
     "calculationRequired": false,
@@ -6799,12 +6799,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Employers are classified as monthly or semi-weekly depositors based on:",
     "options": {
-      "A": "Their total annual revenue",
-      "B": "Employment taxes reported during a lookback period",
-      "C": "The number of employees",
-      "D": "Their industry classification"
+      "A": "Their industry classification",
+      "B": "Their total annual revenue",
+      "C": "Employment taxes reported during a lookback period",
+      "D": "The number of employees"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Deposit frequency is determined by total employment taxes reported during the lookback period (the 12-month period ending June 30 of the prior year). If taxes were $50,000 or less, the employer is a monthly depositor. Over $50,000 = semi-weekly depositor. $100,000 or more on any day = next-day deposit.",
     "tip": "Lookback period determines schedule: ≤$50K = monthly, >$50K = semi-weekly. $100K+ any day = next day deposit.",
     "calculationRequired": false,
@@ -6820,12 +6820,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 530 relief protects employers from employment tax liability for misclassified workers if:",
     "options": {
-      "A": "The workers agree to contractor status",
-      "B": "The employer had a reasonable basis for the classification and consistently treated similar workers the same way",
-      "C": "The misclassification was for less than $50,000",
-      "D": "The workers were part-time"
+      "A": "The misclassification was for less than $50,000",
+      "B": "The workers were part-time",
+      "C": "The workers agree to contractor status",
+      "D": "The employer had a reasonable basis for the classification and consistently treated similar workers the same way"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 530 provides safe harbor relief if: (1) the employer had a reasonable basis for classification (prior audit, industry practice, IRS ruling, advice of counsel), (2) the employer filed all required 1099s, and (3) the employer consistently treated similar workers the same way.",
     "tip": "Section 530 safe harbor: reasonable basis + filed 1099s + consistent treatment. Protects from back taxes.",
     "calculationRequired": false,
@@ -6862,12 +6862,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Form 941 (Employer's Quarterly Federal Tax Return) reports:",
     "options": {
-      "A": "Annual wage and tax summary",
-      "B": "Quarterly wages, tips, federal income tax withheld, and FICA taxes",
-      "C": "Only federal income tax withheld",
-      "D": "State employment taxes"
+      "A": "Quarterly wages, tips, federal income tax withheld, and FICA taxes",
+      "B": "Only federal income tax withheld",
+      "C": "State employment taxes",
+      "D": "Annual wage and tax summary"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Form 941 is filed quarterly and reports wages paid, tips reported, federal income tax withheld, and employer and employee Social Security and Medicare taxes. Small employers may file Form 944 annually instead if notified by the IRS.",
     "tip": "Form 941 = quarterly employment tax return. Reports wages, withholding, and FICA. Due end of month after quarter.",
     "calculationRequired": false,
@@ -6883,12 +6883,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The trust fund recovery penalty (TFRP) applies to:",
     "options": {
-      "A": "Late deposits of employment taxes",
-      "B": "Willful failure to collect, account for, or pay over withheld income and FICA taxes",
-      "C": "Incorrect W-2 forms",
-      "D": "Failure to file Form 941"
+      "A": "Failure to file Form 941",
+      "B": "Late deposits of employment taxes",
+      "C": "Willful failure to collect, account for, or pay over withheld income and FICA taxes",
+      "D": "Incorrect W-2 forms"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The TFRP (100% penalty) applies to responsible persons who willfully fail to collect, account for, or pay over trust fund taxes (employee's portion of FICA and withheld income tax). This penalty can be assessed personally against officers, directors, and others with authority over tax matters.",
     "tip": "TFRP = 100% personal liability on responsible persons. Applies to withheld taxes not paid over. Very serious penalty.",
     "calculationRequired": false,
@@ -6904,12 +6904,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Self-employment tax applies when net self-employment earnings are at least:",
     "options": {
-      "A": "$100",
-      "B": "$400",
-      "C": "$600",
-      "D": "$1,000"
+      "A": "$1,000",
+      "B": "$100",
+      "C": "$400",
+      "D": "$600"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Self-employment tax applies when net self-employment earnings are $400 or more. This is also the threshold that triggers a filing requirement for self-employed individuals, regardless of other income. Church employees have a different $108.28 threshold.",
     "tip": "$400 threshold for SE tax and filing requirement. Much lower than standard filing threshold.",
     "calculationRequired": false,
@@ -6946,12 +6946,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the common law test, a worker is more likely an employee if:",
     "options": {
-      "A": "The worker sets their own hours and provides their own tools",
-      "B": "The business controls what work is done and how it is done",
-      "C": "The worker has significant investment in equipment",
-      "D": "The worker provides services to multiple clients"
+      "A": "The worker provides services to multiple clients",
+      "B": "The worker sets their own hours and provides their own tools",
+      "C": "The business controls what work is done and how it is done",
+      "D": "The worker has significant investment in equipment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under the common law test, a worker is an employee if the business controls both what work is done AND how it is done. Key factors include: work schedule control, training provided, integration into operations, tools/equipment provided, and full-time requirement.",
     "tip": "Control of 'what' and 'how' = employee. Independent contractors control their own methods.",
     "calculationRequired": false,
@@ -6988,12 +6988,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Work Opportunity Tax Credit (WOTC) benefits employers who hire:",
     "options": {
-      "A": "Any new employee",
-      "B": "Members of targeted groups facing employment barriers",
-      "C": "Only veterans",
-      "D": "Employees earning above median wages"
+      "A": "Only veterans",
+      "B": "Employees earning above median wages",
+      "C": "Any new employee",
+      "D": "Members of targeted groups facing employment barriers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "WOTC provides tax credits to employers hiring individuals from targeted groups facing employment barriers: veterans, SNAP recipients, ex-felons, designated community residents, vocational rehabilitation referrals, summer youth employees, TANF recipients, and long-term unemployment recipients.",
     "tip": "WOTC = credit for hiring targeted groups. Pre-screen with Form 8850. Credit based on first-year wages.",
     "calculationRequired": false,
@@ -7030,12 +7030,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The flat federal withholding rate for supplemental wages (bonuses, commissions) up to $1 million is:",
     "options": {
-      "A": "15%",
-      "B": "22%",
-      "C": "32%",
-      "D": "37%"
+      "A": "32%",
+      "B": "37%",
+      "C": "15%",
+      "D": "22%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Employers may withhold at a flat 22% rate on supplemental wages (bonuses, commissions, overtime, severance) up to $1 million. For supplemental wages over $1 million, the mandatory rate is 37%. Alternatively, employers can aggregate supplemental with regular wages and withhold at regular rates.",
     "tip": "Supplemental wage flat rate: 22% up to $1M, 37% above $1M. Or can use aggregate method.",
     "calculationRequired": false,
@@ -7093,12 +7093,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "S corporation shareholder-employees can minimize overall taxes by:",
     "options": {
-      "A": "Paying themselves no salary and taking only distributions",
-      "B": "Paying reasonable compensation subject to FICA, with remaining profits as distributions not subject to FICA",
-      "C": "Converting to partnership status",
-      "D": "Paying maximum salary to increase Social Security benefits"
+      "A": "Paying reasonable compensation subject to FICA, with remaining profits as distributions not subject to FICA",
+      "B": "Converting to partnership status",
+      "C": "Paying maximum salary to increase Social Security benefits",
+      "D": "Paying themselves no salary and taking only distributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "S corp shareholder-employees must receive reasonable compensation (subject to FICA). However, profits distributed beyond reasonable salary are not subject to FICA/self-employment tax. The key is paying enough salary to satisfy IRS scrutiny while taking remaining profits as distributions.",
     "tip": "S corp strategy: reasonable salary (subject to FICA) + distributions (no FICA). IRS watches for too-low salaries.",
     "calculationRequired": false,
@@ -7114,12 +7114,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An accountable expense reimbursement plan requires all of the following EXCEPT:",
     "options": {
-      "A": "Business connection for the expenses",
-      "B": "Substantiation of expenses within a reasonable time",
-      "C": "Return of amounts in excess of substantiated expenses",
-      "D": "IRS pre-approval of the plan"
+      "A": "Substantiation of expenses within a reasonable time",
+      "B": "Return of amounts in excess of substantiated expenses",
+      "C": "IRS pre-approval of the plan",
+      "D": "Business connection for the expenses"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Accountable plans must have: (1) business connection, (2) adequate substantiation within reasonable time, and (3) return of excess reimbursements. No IRS approval is required. Reimbursements under accountable plans are excluded from income; nonaccountable plan payments are taxable wages.",
     "tip": "Accountable plan: business connection + substantiation + return excess. No IRS approval needed. Tax-free reimbursements.",
     "calculationRequired": false,
@@ -7135,12 +7135,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Statutory employees (such as full-time life insurance salespeople) are treated as:",
     "options": {
-      "A": "Employees for all tax purposes",
-      "B": "Employees for FICA but self-employed for income tax (can deduct expenses on Schedule C)",
-      "C": "Independent contractors for all purposes",
-      "D": "Partners in a partnership"
+      "A": "Employees for FICA but self-employed for income tax (can deduct expenses on Schedule C)",
+      "B": "Independent contractors for all purposes",
+      "C": "Partners in a partnership",
+      "D": "Employees for all tax purposes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Statutory employees are treated as employees for FICA purposes (employer withholds FICA) but can report income and deduct expenses on Schedule C like self-employed individuals. Categories include full-time life insurance salespeople, certain agent-drivers, home workers, and traveling salespeople.",
     "tip": "Statutory employees: FICA like employees, Schedule C like contractors. Best of both worlds. Checkbox on W-2.",
     "calculationRequired": false,
@@ -7156,12 +7156,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The IRS Voluntary Classification Settlement Program (VCSP) allows employers to:",
     "options": {
-      "A": "Classify all workers as contractors without consequence",
-      "B": "Prospectively reclassify workers as employees with reduced liability for past periods",
-      "C": "Avoid all employment taxes permanently",
-      "D": "Appeal worker classification decisions"
+      "A": "Appeal worker classification decisions",
+      "B": "Classify all workers as contractors without consequence",
+      "C": "Prospectively reclassify workers as employees with reduced liability for past periods",
+      "D": "Avoid all employment taxes permanently"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "VCSP allows eligible employers to reclassify workers as employees prospectively while paying only 10% of the employment tax liability for the most recent year, with no penalties or interest. Eligibility requires consistent treatment, filed 1099s, and no current audit.",
     "tip": "VCSP: voluntary reclassification with 10% of one year's liability. No penalties/interest. Must not be under audit.",
     "calculationRequired": false,
@@ -7177,12 +7177,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Employer contributions to an employee's Health Savings Account (HSA) are:",
     "options": {
-      "A": "Taxable income to the employee",
-      "B": "Excluded from income and not subject to FICA",
-      "C": "Excluded from income but subject to FICA",
-      "D": "Deductible by the employee"
+      "A": "Excluded from income and not subject to FICA",
+      "B": "Excluded from income but subject to FICA",
+      "C": "Deductible by the employee",
+      "D": "Taxable income to the employee"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Employer contributions to an employee's HSA are excluded from the employee's income AND not subject to FICA taxes (both employer and employee portions). This differs from most fringe benefits that are excluded from income but still subject to FICA. Employee contributions through payroll are also FICA-exempt.",
     "tip": "HSA employer contributions: excluded from income AND no FICA. Triple tax advantage (also tax-free growth and qualified distributions).",
     "calculationRequired": false,
@@ -7219,12 +7219,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Rental income from real estate is generally:",
     "options": {
-      "A": "Always subject to self-employment tax",
-      "B": "Never subject to self-employment tax",
-      "C": "Subject to SE tax only if the taxpayer is a real estate dealer or the rentals involve substantial services",
-      "D": "Subject to SE tax only for LLCs"
+      "A": "Never subject to self-employment tax",
+      "B": "Subject to SE tax only if the taxpayer is a real estate dealer or the rentals involve substantial services",
+      "C": "Subject to SE tax only for LLCs",
+      "D": "Always subject to self-employment tax"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Rental income is generally excluded from self-employment tax. However, SE tax applies if the taxpayer is a real estate dealer (selling property in the ordinary course of business) or provides substantial services with the rental (like a hotel). The exception for rentals is in IRC Section 1402(a)(1).",
     "tip": "Rental income generally exempt from SE tax. Exception: real estate dealers and rentals with substantial services.",
     "calculationRequired": false,
@@ -7261,12 +7261,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The employer credit for paid family and medical leave under Section 45S provides a credit of:",
     "options": {
-      "A": "100% of wages paid during leave",
-      "B": "12.5% to 25% of wages paid during leave, depending on the percentage of normal wages",
-      "C": "50% of wages up to $10,000",
-      "D": "A flat $1,000 per employee"
+      "A": "A flat $1,000 per employee",
+      "B": "100% of wages paid during leave",
+      "C": "12.5% to 25% of wages paid during leave, depending on the percentage of normal wages",
+      "D": "50% of wages up to $10,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 45S provides a credit of 12.5% of wages paid for FMLA leave if the payment is at least 50% of normal wages, increasing up to 25% if payment equals 100% of normal wages. The employer must have a written policy and provide at least 2 weeks of paid leave.",
     "tip": "Section 45S FMLA credit: 12.5-25% of wages based on pay rate. Need written policy and 2+ weeks paid leave.",
     "calculationRequired": false,
@@ -7282,12 +7282,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Employees who receive tips of $20 or more in a month must:",
     "options": {
-      "A": "Report tips directly to the IRS",
-      "B": "Report tips to their employer by the 10th of the following month",
-      "C": "Pay self-employment tax on tips",
-      "D": "Report tips only if exceeding $600 annually"
+      "A": "Pay self-employment tax on tips",
+      "B": "Report tips only if exceeding $600 annually",
+      "C": "Report tips directly to the IRS",
+      "D": "Report tips to their employer by the 10th of the following month"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Employees receiving $20 or more in tips in a month must report tips to their employer by the 10th of the following month. The employer then withholds income tax and the employee's share of FICA from wages. Employers owe FICA on reported tips and may qualify for the Section 45B tip credit.",
     "tip": "Tips $20+/month: report to employer by 10th. Employer withholds taxes. Section 45B credit for employer FICA.",
     "calculationRequired": false,
@@ -7303,12 +7303,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "U.S. citizens working abroad for a U.S. employer are generally:",
     "options": {
-      "A": "Exempt from U.S. employment taxes",
-      "B": "Subject to U.S. FICA taxes unless a totalization agreement applies",
-      "C": "Only subject to the foreign country's employment taxes",
-      "D": "Exempt from all employment taxes"
+      "A": "Subject to U.S. FICA taxes unless a totalization agreement applies",
+      "B": "Only subject to the foreign country's employment taxes",
+      "C": "Exempt from all employment taxes",
+      "D": "Exempt from U.S. employment taxes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "U.S. citizens and resident aliens working for U.S. employers abroad remain subject to U.S. FICA taxes. Totalization agreements with certain countries allow workers to be covered by only one country's system, avoiding double taxation. The foreign earned income exclusion doesn't affect FICA.",
     "tip": "U.S. expats: still subject to FICA unless totalization agreement. FEIE doesn't exclude from FICA.",
     "calculationRequired": false,
@@ -7387,12 +7387,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 409A governs:",
     "options": {
-      "A": "Qualified retirement plans",
-      "B": "Nonqualified deferred compensation arrangements",
-      "C": "Health savings accounts",
-      "D": "Stock option exercises"
+      "A": "Health savings accounts",
+      "B": "Stock option exercises",
+      "C": "Qualified retirement plans",
+      "D": "Nonqualified deferred compensation arrangements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 409A imposes strict rules on nonqualified deferred compensation, including election timing (generally before the year of service) and distribution triggers (separation, disability, death, change in control, fixed dates, or unforeseeable emergencies). Violations result in immediate income inclusion plus 20% penalty and interest.",
     "tip": "Section 409A = NQDC rules. Strict election/distribution timing. 20% penalty + interest for violations.",
     "calculationRequired": false,
@@ -7408,12 +7408,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Personal use of a company-provided vehicle is:",
     "options": {
-      "A": "Always tax-free",
-      "B": "Taxable income to the employee",
-      "C": "Deductible by the employee",
-      "D": "Tax-free if used more than 50% for business"
+      "A": "Taxable income to the employee",
+      "B": "Deductible by the employee",
+      "C": "Tax-free if used more than 50% for business",
+      "D": "Always tax-free"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Personal use of a company car is taxable compensation. The value must be included in the employee's income and is subject to federal income tax, FICA, and FUTA. Several IRS-approved methods can be used to value the benefit: annual lease value, cents-per-mile, or commuting value.",
     "tip": "Company car personal use = taxable. Use IRS valuation methods. Report on W-2.",
     "calculationRequired": false,
@@ -7450,12 +7450,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 162(m) limits the corporate deduction for compensation paid to covered employees to:",
     "options": {
-      "A": "$500,000",
-      "B": "$1,000,000",
-      "C": "$2,000,000",
-      "D": "No limit"
+      "A": "No limit",
+      "B": "$500,000",
+      "C": "$1,000,000",
+      "D": "$2,000,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 162(m) limits the deduction for compensation paid to 'covered employees' of publicly held corporations to $1 million per year. After TCJA, this applies to the CEO, CFO, and top three other officers, with no exception for performance-based pay.",
     "tip": "Section 162(m) = $1M cap on deductible pay for covered employees. Performance-based exception eliminated by TCJA.",
     "calculationRequired": false,
@@ -7471,12 +7471,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Golden parachute payments are subject to:",
     "options": {
-      "A": "No special tax treatment",
-      "B": "A 20% excise tax on excess payments and loss of corporate deduction",
-      "C": "Capital gains treatment",
-      "D": "Self-employment tax"
+      "A": "Self-employment tax",
+      "B": "No special tax treatment",
+      "C": "A 20% excise tax on excess payments and loss of corporate deduction",
+      "D": "Capital gains treatment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Excess parachute payments (change-in-control payments exceeding 3× base compensation) are subject to a 20% excise tax paid by the recipient, and the corporation loses its deduction for the excess amounts. Base amount is the average of the prior 5 years' W-2 compensation.",
     "tip": "Golden parachutes: 20% excise on excess (amount > 3× base). No deduction for excess. Applies to change-in-control payments.",
     "calculationRequired": false,
@@ -7534,12 +7534,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A rabbi trust used in nonqualified deferred compensation:",
     "options": {
-      "A": "Protects assets from employer creditors",
-      "B": "Provides income deferral while protecting assets from employer use (but not creditors)",
-      "C": "Is a qualified retirement plan",
-      "D": "Provides tax-free distributions"
+      "A": "Is a qualified retirement plan",
+      "B": "Provides tax-free distributions",
+      "C": "Protects assets from employer creditors",
+      "D": "Provides income deferral while protecting assets from employer use (but not creditors)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Rabbi trusts hold NQDC assets in an irrevocable trust, protecting from employer misuse. However, assets remain subject to employer creditors in bankruptcy (required for tax deferral). The employee has no current income because the promise is unsecured against creditors.",
     "tip": "Rabbi trust: assets protected from employer, but subject to employer's creditors. Maintains tax deferral.",
     "calculationRequired": false,
@@ -7555,12 +7555,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A qualified employee stock purchase plan (ESPP) allows employees to purchase stock at a discount of up to:",
     "options": {
-      "A": "5% of fair market value",
-      "B": "10% of fair market value",
-      "C": "15% of fair market value",
-      "D": "25% of fair market value"
+      "A": "15% of fair market value",
+      "B": "25% of fair market value",
+      "C": "5% of fair market value",
+      "D": "10% of fair market value"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Qualified ESPPs (Section 423) allow employees to purchase employer stock at up to a 15% discount from fair market value. The discount is not taxed at purchase. Holding period requirements (2 years from offering, 1 year from purchase) affect the character of gain at sale.",
     "tip": "ESPP: up to 15% discount. Discount not taxed at purchase. Holding requirements for favorable treatment.",
     "calculationRequired": false,
@@ -7576,12 +7576,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When an NSO is exercised, the employer receives a deduction equal to:",
     "options": {
-      "A": "The option exercise price",
-      "B": "The fair market value of the stock at exercise",
-      "C": "The spread (FMV minus exercise price) - the employee's ordinary income",
-      "D": "No deduction is allowed"
+      "A": "No deduction is allowed",
+      "B": "The option exercise price",
+      "C": "The fair market value of the stock at exercise",
+      "D": "The spread (FMV minus exercise price) - the employee's ordinary income"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "When an NSO is exercised, the employer receives a compensation deduction equal to the spread (FMV at exercise minus exercise price) - the same amount the employee includes as ordinary income. The employer's deduction matches the employee's income inclusion.",
     "tip": "NSO: employer deduction = employee's ordinary income (the spread). Matching treatment.",
     "calculationRequired": false,
@@ -7618,12 +7618,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 409A, distributions from nonqualified deferred compensation can be made upon all of the following EXCEPT:",
     "options": {
-      "A": "Separation from service",
-      "B": "Change in control",
-      "C": "At the employee's request at any time",
-      "D": "Unforeseeable emergency"
+      "A": "Change in control",
+      "B": "At the employee's request at any time",
+      "C": "Unforeseeable emergency",
+      "D": "Separation from service"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Section 409A limits distributions to six permissible events: separation from service, disability, death, change in control, unforeseeable emergency, and specified time/fixed schedule. Distributions cannot occur simply at the employee's request - that would trigger immediate taxation plus penalties.",
     "tip": "409A distribution triggers: separation, death, disability, change in control, fixed date, emergency. No 'at will' distributions.",
     "calculationRequired": false,
@@ -7639,12 +7639,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "De minimis fringe benefits are excludable from income because:",
     "options": {
-      "A": "They are provided to all employees equally",
-      "B": "They are so small that accounting for them is administratively impractical",
-      "C": "They are required by law",
-      "D": "They are provided by nonprofit employers"
+      "A": "They are provided by nonprofit employers",
+      "B": "They are provided to all employees equally",
+      "C": "They are so small that accounting for them is administratively impractical",
+      "D": "They are required by law"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "De minimis fringes are property or services whose value is so small that accounting for them would be unreasonable or administratively impractical. Examples include occasional personal use of copy machine, coffee, snacks, occasional meals, and flowers for illness. Cash is never de minimis.",
     "tip": "De minimis = too small to track. Coffee, snacks, occasional meals. Cash is NEVER de minimis.",
     "calculationRequired": false,
@@ -7660,12 +7660,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Stock appreciation rights (SARs) provide the employee with:",
     "options": {
-      "A": "The right to purchase stock at a fixed price",
-      "B": "The increase in stock value without actually purchasing stock",
-      "C": "Dividend payments only",
-      "D": "Guaranteed returns regardless of stock price"
+      "A": "Guaranteed returns regardless of stock price",
+      "B": "The right to purchase stock at a fixed price",
+      "C": "The increase in stock value without actually purchasing stock",
+      "D": "Dividend payments only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SARs give employees the right to receive the appreciation in stock value (difference between grant price and current FMV) in cash or stock, without requiring the employee to purchase shares. Taxed as ordinary income when exercised/settled.",
     "tip": "SARs = stock appreciation without buying. Settles in cash or shares. Ordinary income at settlement.",
     "calculationRequired": false,
@@ -7681,12 +7681,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Compensation clawback provisions allow companies to:",
     "options": {
-      "A": "Increase executive compensation",
-      "B": "Recover previously paid compensation in certain circumstances",
-      "C": "Defer all compensation until retirement",
-      "D": "Avoid Section 162(m) limitations"
+      "A": "Defer all compensation until retirement",
+      "B": "Avoid Section 162(m) limitations",
+      "C": "Increase executive compensation",
+      "D": "Recover previously paid compensation in certain circumstances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Clawback provisions allow companies to recover previously paid compensation, typically after a financial restatement or misconduct. Dodd-Frank requires public companies to have clawback policies for incentive compensation based on misstated financials. Tax treatment of recovered amounts is complex.",
     "tip": "Clawbacks: recover comp after restatement/misconduct. Dodd-Frank requires for public companies. Tax issues on recovery.",
     "calculationRequired": false,
@@ -7702,12 +7702,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The annual limit on ISOs that can vest for the first time in any year is:",
     "options": {
-      "A": "$50,000",
-      "B": "$100,000",
-      "C": "$250,000",
-      "D": "No limit"
+      "A": "$100,000",
+      "B": "$250,000",
+      "C": "No limit",
+      "D": "$50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "ISOs are limited to $100,000 in aggregate fair market value (measured at grant) that can first become exercisable in any calendar year. Amounts exceeding this limit are automatically treated as NSOs. This limit is per employee across all ISO grants.",
     "tip": "ISO $100K/year vesting limit (FMV at grant). Excess converts to NSO treatment.",
     "calculationRequired": false,
@@ -7723,12 +7723,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Section 83(b) election must be filed within:",
     "options": {
-      "A": "10 days of grant",
-      "B": "30 days of grant",
-      "C": "60 days of grant",
-      "D": "By the due date of the tax return"
+      "A": "30 days of grant",
+      "B": "60 days of grant",
+      "C": "By the due date of the tax return",
+      "D": "10 days of grant"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "An 83(b) election must be filed with the IRS within 30 days of the property transfer (grant). This is a strict deadline - late elections are invalid. A copy should be provided to the employer and attached to the tax return. There is no extension available.",
     "tip": "83(b) = 30 days from grant. Strict deadline, no extensions. File with IRS, employer, and attach to return.",
     "calculationRequired": false,
@@ -7744,12 +7744,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A supplemental executive retirement plan (SERP) is typically used to:",
     "options": {
-      "A": "Replace the company's 401(k) plan",
-      "B": "Provide retirement benefits above qualified plan limits",
-      "C": "Provide health insurance in retirement",
-      "D": "Fund Social Security benefits"
+      "A": "Provide health insurance in retirement",
+      "B": "Fund Social Security benefits",
+      "C": "Replace the company's 401(k) plan",
+      "D": "Provide retirement benefits above qualified plan limits"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SERPs provide retirement benefits beyond qualified plan limits (Section 415 limits). They are nonqualified plans that can discriminate in favor of executives. Benefits are unfunded promises (subject to creditors), and the employer receives no deduction until the executive receives payment.",
     "tip": "SERP = retirement benefits above qualified limits. Nonqualified, unfunded, can favor executives.",
     "calculationRequired": false,
@@ -7765,12 +7765,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Phantom stock provides employees with:",
     "options": {
-      "A": "Actual shares of company stock",
-      "B": "A contractual right to receive cash equal to the value of a specified number of shares",
-      "C": "Options to purchase stock",
-      "D": "Dividends on stock they don't own"
+      "A": "Options to purchase stock",
+      "B": "Dividends on stock they don't own",
+      "C": "Actual shares of company stock",
+      "D": "A contractual right to receive cash equal to the value of a specified number of shares"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Phantom stock is a contractual arrangement giving employees the right to receive cash (or sometimes stock) equal to the value of a specified number of shares at vesting or payout. No actual stock ownership occurs. Taxed as ordinary income when paid, subject to Section 409A.",
     "tip": "Phantom stock = cash value mimicking stock ownership. No actual shares. Ordinary income treatment. 409A applies.",
     "calculationRequired": false,
@@ -7828,12 +7828,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 457(b) plans for government employees differ from 457(b) plans for tax-exempt organizations in that:",
     "options": {
-      "A": "Government plans allow higher contributions",
-      "B": "Government plan assets are held in trust and protected from creditors",
-      "C": "Tax-exempt organization plans have no contribution limits",
-      "D": "Only tax-exempt organization plans are subject to 409A"
+      "A": "Tax-exempt organization plans have no contribution limits",
+      "B": "Only tax-exempt organization plans are subject to 409A",
+      "C": "Government plans allow higher contributions",
+      "D": "Government plan assets are held in trust and protected from creditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Government 457(b) plan assets must be held in trust for employees (protected from employer creditors). Tax-exempt organization 457(b) plans cannot be funded - they are unfunded promises subject to employer creditors, similar to NQDC. This difference affects security and taxation.",
     "tip": "Gov't 457(b) = funded trust, protected. Tax-exempt 457(b) = unfunded, subject to creditors. Major difference.",
     "calculationRequired": false,
@@ -7849,12 +7849,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 83(i), added by TCJA, allows certain employees to defer tax on stock compensation for up to:",
     "options": {
-      "A": "1 year",
-      "B": "3 years",
-      "C": "5 years",
-      "D": "Until the stock is sold"
+      "A": "5 years",
+      "B": "Until the stock is sold",
+      "C": "1 year",
+      "D": "3 years"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Section 83(i) allows employees of eligible private companies to elect to defer income from exercising stock options or settling RSUs for up to 5 years (or earlier if stock becomes publicly traded, employee separates, etc.). Strict eligibility requirements: 80% employee coverage, non-executives, private company.",
     "tip": "Section 83(i): 5-year deferral for private company stock comp. Strict eligibility: 80% coverage, non-execs only.",
     "calculationRequired": false,
@@ -7870,12 +7870,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A safe harbor from the golden parachute rules (Section 280G) is available if:",
     "options": {
-      "A": "Parachute payments are approved by 75% of shareholders",
-      "B": "The employee was not a 'disqualified individual'",
-      "C": "The company is a small business corporation (S corp) and payments are approved by shareholder vote",
-      "D": "Total payments don't exceed $1 million"
+      "A": "Total payments don't exceed $1 million",
+      "B": "Parachute payments are approved by 75% of shareholders",
+      "C": "The employee was not a 'disqualified individual'",
+      "D": "The company is a small business corporation (S corp) and payments are approved by shareholder vote"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "S corporations and certain private corporations can avoid 280G by obtaining shareholder approval. The safe harbor requires: (1) complete disclosure, (2) approval by more than 75% of shareholders (by voting power), and (3) no stock held by the disqualified individual or related party votes.",
     "tip": "280G safe harbor for private/S corps: 75%+ shareholder approval after full disclosure. Disqualified individual can't vote.",
     "calculationRequired": false,
@@ -7891,12 +7891,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The AMT preference item for ISO exercise equals:",
     "options": {
-      "A": "The fair market value of the stock at exercise",
-      "B": "The exercise price paid",
-      "C": "The spread (FMV minus exercise price) at exercise",
-      "D": "The gain on subsequent sale"
+      "A": "The exercise price paid",
+      "B": "The spread (FMV minus exercise price) at exercise",
+      "C": "The gain on subsequent sale",
+      "D": "The fair market value of the stock at exercise"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For AMT purposes, ISO exercise creates a preference item equal to the spread (excess of FMV over exercise price) at exercise. This can trigger AMT liability in the exercise year. The AMT basis is FMV, so the AMT preference reverses when the stock is sold.",
     "tip": "ISO AMT preference = spread at exercise. May trigger AMT. Creates AMT credit for future use.",
     "calculationRequired": false,
@@ -7912,12 +7912,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A secular trust differs from a rabbi trust in that:",
     "options": {
-      "A": "Secular trusts provide no tax deferral - assets are taxable when contributed",
-      "B": "Secular trusts are only for religious organizations",
-      "C": "Secular trusts have no funding requirements",
-      "D": "Secular trusts are subject to Section 409A"
+      "A": "Secular trusts are only for religious organizations",
+      "B": "Secular trusts have no funding requirements",
+      "C": "Secular trusts are subject to Section 409A",
+      "D": "Secular trusts provide no tax deferral - assets are taxable when contributed"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Secular trusts protect assets from employer AND employer's creditors, giving employees a secured interest. However, this security causes immediate taxation when contributions are made (constructive receipt). Secular trusts sacrifice tax deferral for asset protection.",
     "tip": "Secular trust = protected from employer's creditors BUT taxable when funded. Security vs. deferral tradeoff.",
     "calculationRequired": false,
@@ -7933,12 +7933,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A disqualifying disposition of ESPP shares results in:",
     "options": {
-      "A": "All gain treated as capital gain",
-      "B": "The discount element treated as ordinary income and remaining gain as capital gain",
-      "C": "All gain treated as ordinary income",
-      "D": "No tax consequences"
+      "A": "The discount element treated as ordinary income and remaining gain as capital gain",
+      "B": "All gain treated as ordinary income",
+      "C": "No tax consequences",
+      "D": "All gain treated as capital gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A disqualifying disposition (sale before 2 years from offering or 1 year from purchase) requires ordinary income recognition of the discount (FMV at purchase minus purchase price), reported as W-2 wages. Any additional gain or loss is capital gain/loss.",
     "tip": "ESPP disqualifying disposition: discount = ordinary income (W-2). Additional gain = capital. Qualifying = limited ordinary income.",
     "calculationRequired": false,
@@ -7954,12 +7954,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Repricing underwater stock options (reducing exercise price) can result in:",
     "options": {
-      "A": "No tax consequences",
-      "B": "The repriced option being treated as a new grant, potentially triggering Section 409A issues",
-      "C": "Immediate taxation of the spread",
-      "D": "Conversion to ISOs"
+      "A": "Immediate taxation of the spread",
+      "B": "Conversion to ISOs",
+      "C": "No tax consequences",
+      "D": "The repriced option being treated as a new grant, potentially triggering Section 409A issues"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Repricing creates a new option grant for tax purposes. If the new exercise price is below FMV at repricing, the option may be treated as deferred compensation subject to Section 409A, resulting in immediate income inclusion plus 20% penalty. Exchange programs require careful structuring.",
     "tip": "Option repricing = new grant. If below FMV = 409A disaster (immediate tax + 20%). Use exchange programs carefully.",
     "calculationRequired": false,
@@ -7996,12 +7996,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An ISO granted to a more-than-10% shareholder must have:",
     "options": {
-      "A": "An exercise price at least 110% of FMV and a term of 5 years or less",
-      "B": "An exercise price at FMV and a term of 10 years or less",
-      "C": "Immediate vesting",
-      "D": "Board approval only"
+      "A": "Board approval only",
+      "B": "An exercise price at least 110% of FMV and a term of 5 years or less",
+      "C": "An exercise price at FMV and a term of 10 years or less",
+      "D": "Immediate vesting"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "ISOs granted to employees owning more than 10% of the company must have: (1) an exercise price of at least 110% of FMV at grant, and (2) a maximum term of 5 years (vs. 10 years for other employees). These stricter requirements prevent excessive benefits to major shareholders.",
     "tip": "ISO to >10% owner: 110% of FMV exercise price, max 5-year term. More restrictive than regular ISOs.",
     "calculationRequired": false,
@@ -8017,12 +8017,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A Section 125 cafeteria plan allows employees to:",
     "options": {
-      "A": "Receive any benefits tax-free",
-      "B": "Choose between cash and qualified benefits on a pre-tax basis",
-      "C": "Defer unlimited amounts of compensation",
-      "D": "Receive employer stock tax-free"
+      "A": "Defer unlimited amounts of compensation",
+      "B": "Receive employer stock tax-free",
+      "C": "Receive any benefits tax-free",
+      "D": "Choose between cash and qualified benefits on a pre-tax basis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 125 cafeteria plans allow employees to choose between taxable cash and qualified non-taxable benefits (health insurance, FSA, dependent care). Elections are made pre-tax. Irrevocable elections must be made before the plan year begins (with limited exceptions for status changes).",
     "tip": "Cafeteria plan: pre-tax choice between cash and benefits. Must elect before year begins. Status change exceptions.",
     "calculationRequired": false,
@@ -8080,12 +8080,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An ISO can become an NSO in all of the following situations EXCEPT:",
     "options": {
-      "A": "The $100,000 annual vesting limit is exceeded",
-      "B": "The option is transferred to a family member",
-      "C": "The employee terminates and exercises more than 3 months after termination",
-      "D": "The employee holds the resulting stock past the ISO holding period"
+      "A": "The option is transferred to a family member",
+      "B": "The employee terminates and exercises more than 3 months after termination",
+      "C": "The employee holds the resulting stock past the ISO holding period",
+      "D": "The $100,000 annual vesting limit is exceeded"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "ISOs convert to NSOs when: exceeding the $100,000 vesting limit, transferring the option, exercising more than 3 months after termination (1 year for disability), or modifying terms. Holding stock past the holding period doesn't convert the option - it just enables favorable capital gains treatment.",
     "tip": "ISO → NSO: >$100K vest, transfer, late exercise, modification. Holding stock longer = good (LTCG treatment).",
     "calculationRequired": false,
@@ -8164,12 +8164,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 6166 allows estates to defer payment of estate tax attributable to closely held business interests. What percentage of the adjusted gross estate must the business interest exceed to qualify?",
     "options": {
-      "A": "25%",
-      "B": "35%",
-      "C": "50%",
-      "D": "65%"
+      "A": "35%",
+      "B": "50%",
+      "C": "65%",
+      "D": "25%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 6166 requires that the closely held business interest exceed 35% of the adjusted gross estate to qualify for the estate tax payment deferral election.",
     "tip": "Section 6166 = 35% threshold for closely held business estate tax deferral.",
     "calculationRequired": false,
@@ -8185,12 +8185,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 20% interest in a closely held business is being valued for gift tax purposes. Which discount is most likely applicable due to the size of the ownership interest?",
     "options": {
-      "A": "Key person discount",
-      "B": "Minority interest discount",
-      "C": "Portfolio discount",
-      "D": "Functional obsolescence discount"
+      "A": "Portfolio discount",
+      "B": "Functional obsolescence discount",
+      "C": "Key person discount",
+      "D": "Minority interest discount"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A minority interest discount reflects the reduced value of an ownership interest that lacks control over business decisions. A 20% interest typically cannot control major decisions and thus warrants a minority discount.",
     "tip": "Minority discounts apply to interests lacking control (typically under 50%).",
     "calculationRequired": false,
@@ -8206,12 +8206,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a business owner sells business property to a family member using an installment sale, what is the primary tax benefit compared to an outright sale?",
     "options": {
-      "A": "No gain is recognized",
-      "B": "Gain is spread over the payment period",
-      "C": "The sale is exempt from capital gains tax",
-      "D": "Depreciation recapture is eliminated"
+      "A": "Gain is spread over the payment period",
+      "B": "The sale is exempt from capital gains tax",
+      "C": "Depreciation recapture is eliminated",
+      "D": "No gain is recognized"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Installment sales allow the seller to spread gain recognition over the payment period, deferring tax. This can be advantageous for spreading income across multiple tax years and potentially lower brackets.",
     "tip": "Installment sales defer gain recognition—they don't eliminate it.",
     "calculationRequired": false,
@@ -8248,12 +8248,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A father owns 60% of a corporation and his son owns 40%. The corporation redeems all of the father's stock. Without a family attribution waiver, how is the redemption likely treated?",
     "options": {
-      "A": "Exchange treatment under Section 302(b)(3)",
-      "B": "Dividend treatment under Section 301",
-      "C": "Return of capital",
-      "D": "Tax-free reorganization"
+      "A": "Dividend treatment under Section 301",
+      "B": "Return of capital",
+      "C": "Tax-free reorganization",
+      "D": "Exchange treatment under Section 302(b)(3)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under family attribution rules (Section 318), the father is deemed to own the son's 40% even after redemption. Since he constructively owns 100% of the corporation after redemption of his direct shares, the redemption fails the complete termination test and is treated as a dividend.",
     "tip": "Family attribution can convert what appears to be a complete redemption into dividend treatment.",
     "calculationRequired": false,
@@ -8269,12 +8269,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business owner transfers $5 million of company stock to a 2-year zeroed-out GRAT. If the stock appreciates to $7 million by the end of the term and the annuity payments total $5 million, what amount passes to the remainder beneficiaries gift-tax free?",
     "options": {
-      "A": "$0",
-      "B": "$2 million",
-      "C": "$5 million",
-      "D": "$7 million"
+      "A": "$2 million",
+      "B": "$5 million",
+      "C": "$7 million",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A zeroed-out GRAT sets the annuity payments to equal the contributed value plus Section 7520 interest, resulting in zero taxable gift. The $2 million of appreciation passes to beneficiaries free of gift tax because it wasn't part of the original calculated remainder interest.",
     "tip": "GRAT effectiveness depends on assets outperforming the Section 7520 rate.",
     "calculationRequired": true,
@@ -8290,12 +8290,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 303 allows a stock redemption to be treated as a sale or exchange rather than a dividend. Which expenses does Section 303 cover?",
     "options": {
-      "A": "Business operating expenses only",
-      "B": "Estate taxes, inheritance taxes, funeral expenses, and administration expenses",
-      "C": "Any expenses incurred by the estate",
-      "D": "Only federal estate taxes"
+      "A": "Only federal estate taxes",
+      "B": "Business operating expenses only",
+      "C": "Estate taxes, inheritance taxes, funeral expenses, and administration expenses",
+      "D": "Any expenses incurred by the estate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 303 provides exchange treatment for redemptions used to pay estate taxes (federal and state), inheritance taxes, funeral expenses, and administration expenses, up to the sum of these amounts.",
     "tip": "Section 303 = exchange treatment for redemptions paying death-related taxes and expenses.",
     "calculationRequired": false,
@@ -8311,12 +8311,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer contributes $10 million of assets to a family limited partnership, retaining a 1% general partner interest and gifting 99% limited partner interests. The limited partnership interests are valued with a combined 35% discount. What is the taxable gift amount?",
     "options": {
-      "A": "$6,435,000",
-      "B": "$6,500,000",
-      "C": "$9,900,000",
-      "D": "$10,000,000"
+      "A": "$6,500,000",
+      "B": "$9,900,000",
+      "C": "$10,000,000",
+      "D": "$6,435,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "The gift is the 99% limited partner interest. Without discounts: $10M × 99% = $9.9M. With 35% combined discount: $9.9M × (1 - 0.35) = $9.9M × 0.65 = $6,435,000 taxable gift value.",
     "tip": "FLP discounts can significantly reduce transfer tax values but face IRS scrutiny.",
     "calculationRequired": true,
@@ -8332,12 +8332,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation shareholder sells stock to an ESOP and elects Section 1042 treatment. Which requirement must be met for nonrecognition?",
     "options": {
-      "A": "The ESOP must own at least 10% after the sale",
-      "B": "The ESOP must own at least 30% after the sale",
-      "C": "The seller must have held the stock for at least one year",
-      "D": "The corporation must be publicly traded"
+      "A": "The corporation must be publicly traded",
+      "B": "The ESOP must own at least 10% after the sale",
+      "C": "The ESOP must own at least 30% after the sale",
+      "D": "The seller must have held the stock for at least one year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 1042 requires the ESOP to own at least 30% of the corporation's stock immediately after the sale for the seller to elect nonrecognition treatment on the gain (by reinvesting in qualified replacement property).",
     "tip": "Section 1042: ESOP must hold 30%+ after sale; seller reinvests in qualified replacement property.",
     "calculationRequired": false,
@@ -8374,12 +8374,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent sells appreciated property to child on an installment basis. If the child resells the property within two years, what happens?",
     "options": {
-      "A": "No tax consequences to either party",
-      "B": "Parent recognizes remaining deferred gain immediately",
-      "C": "Child pays gift tax on the appreciation",
-      "D": "The original sale is voided for tax purposes"
+      "A": "Parent recognizes remaining deferred gain immediately",
+      "B": "Child pays gift tax on the appreciation",
+      "C": "The original sale is voided for tax purposes",
+      "D": "No tax consequences to either party"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under Section 453(e), if a related party disposes of property acquired in an installment sale within two years, the original seller must recognize the remaining deferred gain in the year of the second disposition.",
     "tip": "Related party installment sales: 2-year resale triggers acceleration of seller's deferred gain.",
     "calculationRequired": false,
@@ -8395,12 +8395,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An estate qualifies for Section 6166 deferral of estate tax on a closely held business. What is the maximum deferral period for the deferred tax?",
     "options": {
-      "A": "5 years interest-only, then 10 annual installments",
-      "B": "4 years interest-only, then 10 annual installments",
-      "C": "5 years total",
-      "D": "10 years total"
+      "A": "5 years total",
+      "B": "10 years total",
+      "C": "5 years interest-only, then 10 annual installments",
+      "D": "4 years interest-only, then 10 annual installments"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 6166 allows a 4-year deferral period (interest-only payments), followed by up to 10 annual installments of principal and interest, for a maximum total deferral of 14 years.",
     "tip": "Section 6166: 4 years interest-only + 10 years installments = 14 years maximum.",
     "calculationRequired": false,
@@ -8437,12 +8437,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business owner contributes appreciated stock to a charitable remainder unitrust before selling the business. What is the primary tax advantage?",
     "options": {
-      "A": "Complete avoidance of capital gains tax",
-      "B": "Deferral of capital gains as the trust sells and reinvests",
-      "C": "Immediate step-up in basis",
-      "D": "Conversion of ordinary income to capital gain"
+      "A": "Immediate step-up in basis",
+      "B": "Conversion of ordinary income to capital gain",
+      "C": "Complete avoidance of capital gains tax",
+      "D": "Deferral of capital gains as the trust sells and reinvests"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A CRT is tax-exempt, so it can sell appreciated assets without immediate tax. The gain is deferred and recognized gradually as the trust distributes income to the grantor over time, following the four-tier accounting rules.",
     "tip": "CRT provides deferral, not elimination—gain is recognized as distributions are received.",
     "calculationRequired": false,
@@ -8500,12 +8500,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A corporation owns a $2 million key person life insurance policy on its CEO and pays $30,000 in annual premiums. How are the premiums treated for tax purposes?",
     "options": {
-      "A": "Deductible as ordinary business expense",
-      "B": "Not deductible; death proceeds generally tax-free",
-      "C": "Deductible; death proceeds fully taxable",
-      "D": "Capitalized and amortized over policy term"
+      "A": "Deductible; death proceeds fully taxable",
+      "B": "Capitalized and amortized over policy term",
+      "C": "Deductible as ordinary business expense",
+      "D": "Not deductible; death proceeds generally tax-free"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Premiums paid by a business on life insurance where the business is the beneficiary are not deductible. However, the death proceeds are generally received tax-free under Section 101(a), subject to the corporate-owned life insurance rules for policies on employees.",
     "tip": "Key person insurance: premiums non-deductible, proceeds generally tax-free.",
     "calculationRequired": false,
@@ -8521,12 +8521,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which statement about private annuity transactions for succession planning is correct under current law?",
     "options": {
-      "A": "Gain is spread ratably over the annuitant's life expectancy",
-      "B": "All gain must be recognized in the year of transfer",
-      "C": "Private annuities are prohibited under current tax law",
-      "D": "Only straight-line amortization of gain is permitted"
+      "A": "All gain must be recognized in the year of transfer",
+      "B": "Private annuities are prohibited under current tax law",
+      "C": "Only straight-line amortization of gain is permitted",
+      "D": "Gain is spread ratably over the annuitant's life expectancy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Since 2006, regulations require the full gain on a private annuity sale to be recognized in the year of the exchange, eliminating the prior tax deferral benefit. This significantly reduced the attractiveness of private annuities for succession planning.",
     "tip": "Private annuities lost their deferral benefit in 2006—full gain recognized at transfer.",
     "calculationRequired": false,
@@ -8563,12 +8563,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Chapter 14 (Section 2701), when a senior family member transfers common stock while retaining preferred stock with a discretionary dividend right, how is the retained preferred valued for gift tax?",
     "options": {
-      "A": "At fair market value using traditional methods",
-      "B": "At zero unless it qualifies as a qualified payment right",
-      "C": "At face value of the preferred stock",
-      "D": "At the greater of face or fair market value"
+      "A": "At zero unless it qualifies as a qualified payment right",
+      "B": "At face value of the preferred stock",
+      "C": "At the greater of face or fair market value",
+      "D": "At fair market value using traditional methods"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 2701 values discretionary rights (like preferred stock with discretionary dividends) at zero unless they are 'qualified payment rights' (cumulative dividends at a fixed rate). This prevents artificial reduction of gift values through retained interests.",
     "tip": "Section 2701: Non-qualified retained interests = zero value, increasing the taxable gift.",
     "calculationRequired": false,
@@ -8584,12 +8584,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation is 100% owned by an ESOP. What is a primary tax benefit of this structure?",
     "options": {
-      "A": "The corporation can deduct dividends paid",
-      "B": "The corporation's income passes through to a tax-exempt trust",
-      "C": "Capital gains are converted to ordinary income",
-      "D": "The corporation becomes exempt from payroll taxes"
+      "A": "Capital gains are converted to ordinary income",
+      "B": "The corporation becomes exempt from payroll taxes",
+      "C": "The corporation can deduct dividends paid",
+      "D": "The corporation's income passes through to a tax-exempt trust"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When an ESOP owns 100% of an S corporation, all income passes through to the tax-exempt ESOP trust, effectively eliminating current income tax on corporate earnings. This makes S corp ESOPs extremely tax-efficient.",
     "tip": "100% S corp ESOP = income flows to tax-exempt trust, creating significant tax savings.",
     "calculationRequired": false,
@@ -8605,12 +8605,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business owner sells stock to a child using a self-canceling installment note (SCIN). What happens if the seller dies before all payments are received?",
     "options": {
-      "A": "Remaining payments are included in seller's estate",
-      "B": "The note obligation is canceled and not included in the estate",
-      "C": "The buyer must make remaining payments to the estate",
-      "D": "The transaction is unwound for tax purposes"
+      "A": "The buyer must make remaining payments to the estate",
+      "B": "The transaction is unwound for tax purposes",
+      "C": "Remaining payments are included in seller's estate",
+      "D": "The note obligation is canceled and not included in the estate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A SCIN cancels at the seller's death, so remaining payments are not made and the note is not included in the seller's estate. However, SCINs require a risk premium (higher interest or principal) to account for this mortality risk.",
     "tip": "SCIN = note cancels at death; premium required for early termination risk.",
     "calculationRequired": false,
@@ -8626,12 +8626,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 2703, a buy-sell agreement price will be respected for estate tax valuation purposes only if it meets all of the following EXCEPT:",
     "options": {
-      "A": "It is a bona fide business arrangement",
-      "B": "It is not a device to transfer property to family for less than full consideration",
-      "C": "Its terms are comparable to arm's-length transactions",
-      "D": "It was executed more than three years before death"
+      "A": "It was executed more than three years before death",
+      "B": "It is a bona fide business arrangement",
+      "C": "It is not a device to transfer property to family for less than full consideration",
+      "D": "Its terms are comparable to arm's-length transactions"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Section 2703 requires that buy-sell agreements be (1) bona fide business arrangements, (2) not testamentary devices, and (3) comparable to arm's-length transactions. There is no three-year holding period requirement.",
     "tip": "Section 2703: bona fide + not a device + arm's-length comparable = respected valuation.",
     "calculationRequired": false,
@@ -8668,12 +8668,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner dies owning a 25% partnership interest. The partnership has a Section 754 election in place. The deceased partner's share of inside basis is $200,000, and the estate's outside basis (after step-up) is $500,000. What adjustment is made?",
     "options": {
-      "A": "$300,000 step-up to the deceased partner's share of partnership assets",
-      "B": "$300,000 step-down to partnership assets",
-      "C": "$500,000 increase to all partners' shares",
-      "D": "No adjustment—754 only applies to sales"
+      "A": "$300,000 step-down to partnership assets",
+      "B": "$500,000 increase to all partners' shares",
+      "C": "No adjustment—754 only applies to sales",
+      "D": "$300,000 step-up to the deceased partner's share of partnership assets"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Under Section 754/743(b), when a partner dies and receives a stepped-up outside basis, the partnership adjusts the deceased partner's share of inside basis to match. Here, a $300,000 step-up ($500,000 - $200,000) applies to the successor's share of partnership assets.",
     "tip": "754 election on death: Inside basis adjusts to match stepped-up outside basis.",
     "calculationRequired": true,
@@ -8689,12 +8689,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation shareholder sells stock to an ESOP and elects Section 1042 treatment, purchasing qualified replacement property (QRP). If the shareholder later sells the QRP, what is the tax treatment?",
     "options": {
-      "A": "The original deferred gain is recognized plus any gain on QRP",
-      "B": "Only the gain on QRP above its cost basis is recognized",
-      "C": "The entire sale proceeds are tax-free",
-      "D": "Only the original deferred gain is recognized"
+      "A": "Only the original deferred gain is recognized",
+      "B": "The original deferred gain is recognized plus any gain on QRP",
+      "C": "Only the gain on QRP above its cost basis is recognized",
+      "D": "The entire sale proceeds are tax-free"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The seller's basis in QRP is reduced by the deferred gain from the ESOP sale. When QRP is sold, the low basis results in recognition of both the original deferred gain and any appreciation in the QRP itself.",
     "tip": "Section 1042: Deferred gain reduces QRP basis, recognized on ultimate sale.",
     "calculationRequired": false,
@@ -8731,12 +8731,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An estate includes stock worth $4 million in a closely held business. The gross estate is $10 million, with estate taxes and expenses totaling $3 million. What is the maximum redemption eligible for Section 303 exchange treatment?",
     "options": {
-      "A": "$3 million",
-      "B": "$4 million",
-      "C": "$10 million",
-      "D": "$1 million"
+      "A": "$1 million",
+      "B": "$3 million",
+      "C": "$4 million",
+      "D": "$10 million"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Section 303 exchange treatment is limited to the sum of estate taxes, inheritance taxes, funeral expenses, and administration expenses—here totaling $3 million. Even though $4 million of stock is available, only $3 million of redemption proceeds qualifies for exchange treatment.",
     "tip": "Section 303 cap = death taxes + funeral + administration expenses actually paid.",
     "calculationRequired": true,
@@ -8773,12 +8773,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A corporation owns life insurance on 50 employees as part of key person and buy-sell planning. Under the corporate-owned life insurance (COLI) rules, death proceeds are tax-free only if:",
     "options": {
-      "A": "The insured was a director, highly compensated employee, or highest-paid 35% of employees",
-      "B": "The policy was purchased before the employee's 35th birthday",
-      "C": "Total coverage does not exceed $1 million per employee",
-      "D": "The corporation has fewer than 100 employees"
+      "A": "Total coverage does not exceed $1 million per employee",
+      "B": "The corporation has fewer than 100 employees",
+      "C": "The insured was a director, highly compensated employee, or highest-paid 35% of employees",
+      "D": "The policy was purchased before the employee's 35th birthday"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Under the COLI rules (Section 101(j)), employer-owned life insurance proceeds are tax-free only if the insured was a director, highly compensated employee, or among the highest-paid 35% of employees, and notice and consent requirements were met before issuance.",
     "tip": "COLI tax-free proceeds: must be director, HCE, or top 35% + notice/consent required.",
     "calculationRequired": false,
@@ -8815,12 +8815,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business owner wants to transfer a $20 million business to children while minimizing transfer taxes. The owner implements a freeze partnership (retaining preferred, gifting common), sells additional interests to an IDGT, and uses annual exclusion gifts. Which statement about this combined approach is correct?",
     "options": {
-      "A": "The IDGT sale is taxable because it follows the freeze partnership",
-      "B": "Future appreciation on common interests and IDGT assets shifts estate tax-free",
-      "C": "Annual exclusion gifts are not permitted after creating a freeze partnership",
-      "D": "The preferred interest must be distributed before death to avoid estate inclusion"
+      "A": "Future appreciation on common interests and IDGT assets shifts estate tax-free",
+      "B": "Annual exclusion gifts are not permitted after creating a freeze partnership",
+      "C": "The preferred interest must be distributed before death to avoid estate inclusion",
+      "D": "The IDGT sale is taxable because it follows the freeze partnership"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "This multi-technique approach successfully shifts future appreciation out of the estate. The freeze locks the senior generation's value in preferred interests while common interests (and IDGT assets) appreciate outside the estate. Annual exclusion gifts can continue independently.",
     "tip": "Combined succession strategies compound benefits: freeze + IDGT + annual exclusion gifts.",
     "calculationRequired": false,
@@ -8836,12 +8836,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For 2024, what is the maximum deduction for cash contributions to public charities as a percentage of adjusted gross income?",
     "options": {
-      "A": "20%",
-      "B": "30%",
-      "C": "50%",
-      "D": "60%"
+      "A": "50%",
+      "B": "60%",
+      "C": "20%",
+      "D": "30%"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Cash contributions to public charities (50% limit organizations) are deductible up to 60% of AGI. This limit was made permanent after initially being introduced as a temporary provision.",
     "tip": "Cash to public charity = 60% AGI limit; appreciated capital gain property = 30% AGI limit.",
     "calculationRequired": false,
@@ -8899,12 +8899,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a cash contribution of $300, what documentation is required to claim a charitable deduction?",
     "options": {
-      "A": "No documentation required",
-      "B": "A canceled check or receipt from the charity",
-      "C": "A written acknowledgment from the charity",
-      "D": "A qualified appraisal"
+      "A": "A written acknowledgment from the charity",
+      "B": "A qualified appraisal",
+      "C": "No documentation required",
+      "D": "A canceled check or receipt from the charity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Cash contributions of any amount require documentation (bank record, receipt, etc.). Written acknowledgments from the charity are required for single contributions of $250 or more. A $300 contribution requires a written acknowledgment.",
     "tip": "$250+ single contribution = written acknowledgment from charity required.",
     "calculationRequired": false,
@@ -8941,12 +8941,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer pays $500 to a charity for a dinner where the meal value is $75. What is the deductible charitable contribution?",
     "options": {
-      "A": "$0",
-      "B": "$75",
-      "C": "$425",
-      "D": "$500"
+      "A": "$75",
+      "B": "$425",
+      "C": "$500",
+      "D": "$0"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "When a taxpayer receives something of value in return for a payment to charity (quid pro quo), only the excess over the value received is deductible. $500 - $75 = $425 deductible.",
     "tip": "Quid pro quo: Deduction = payment minus value received.",
     "calculationRequired": true,
@@ -8983,12 +8983,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer contributes $100,000 to a donor advised fund (DAF) in December 2024. The taxpayer recommends grants to specific charities in 2025. When is the charitable deduction available?",
     "options": {
-      "A": "2024, when contributed to the DAF",
-      "B": "2025, when grants are recommended",
-      "C": "When the charities actually receive the grants",
-      "D": "Split between 2024 and 2025"
+      "A": "2025, when grants are recommended",
+      "B": "When the charities actually receive the grants",
+      "C": "Split between 2024 and 2025",
+      "D": "2024, when contributed to the DAF"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "The charitable deduction is available when the contribution is made to the DAF sponsoring organization, not when grants are subsequently made to charities. The DAF contribution is complete and irrevocable in 2024.",
     "tip": "DAF deduction = year of contribution to DAF, not year of grant distribution.",
     "calculationRequired": false,
@@ -9025,12 +9025,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Cash contributions to a private foundation are generally limited to what percentage of AGI?",
     "options": {
-      "A": "20%",
-      "B": "30%",
-      "C": "50%",
-      "D": "60%"
+      "A": "30%",
+      "B": "50%",
+      "C": "60%",
+      "D": "20%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cash contributions to private foundations are limited to 30% of AGI (compared to 60% for public charities). Appreciated property contributions to private foundations are limited to 20% of AGI and generally valued at basis rather than FMV.",
     "tip": "Private foundation limits: 30% cash, 20% property (usually at basis).",
     "calculationRequired": false,
@@ -9046,12 +9046,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A charitable lead annuity trust (CLAT) provides income to charity for 15 years, then remainder to the grantor's children. What is the primary transfer tax benefit?",
     "options": {
-      "A": "Income tax deduction for annual payments to charity",
-      "B": "Reduced gift tax value because charity receives income first",
-      "C": "Estate tax deduction for the full value transferred",
-      "D": "Elimination of capital gains on appreciated assets"
+      "A": "Reduced gift tax value because charity receives income first",
+      "B": "Estate tax deduction for the full value transferred",
+      "C": "Elimination of capital gains on appreciated assets",
+      "D": "Income tax deduction for annual payments to charity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A non-grantor CLAT reduces the taxable gift to the present value of the remainder interest after the charity's income interest. This can be significantly less than the full value transferred, especially with longer terms or higher payout rates.",
     "tip": "CLT = charity gets income first, reducing gift/estate tax on remainder to family.",
     "calculationRequired": false,
@@ -9067,12 +9067,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An art collector donates a painting worth $100,000 (basis $20,000) to an art museum that will display it. The collector held the painting for 5 years. What is the deductible amount?",
     "options": {
-      "A": "$20,000",
-      "B": "$50,000",
-      "C": "$80,000",
-      "D": "$100,000"
+      "A": "$50,000",
+      "B": "$80,000",
+      "C": "$100,000",
+      "D": "$20,000"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "When tangible personal property is donated to a charity that will use it for its exempt purpose (related use), the deduction is fair market value. The museum displaying art is a related use. If the museum sold the painting, only basis would be deductible.",
     "tip": "Tangible property: Related use = FMV deduction; unrelated use = basis only.",
     "calculationRequired": false,
@@ -9088,12 +9088,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells property with a basis of $40,000 and FMV of $100,000 to a charity for $60,000. What is the charitable deduction?",
     "options": {
-      "A": "$0",
-      "B": "$40,000",
-      "C": "$60,000",
-      "D": "$100,000"
+      "A": "$40,000",
+      "B": "$60,000",
+      "C": "$100,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The charitable deduction in a bargain sale equals FMV minus the sale price: $100,000 - $60,000 = $40,000. The taxpayer must also recognize gain on the sale portion, allocating basis proportionally.",
     "tip": "Bargain sale deduction = FMV minus amount received. Basis must be allocated.",
     "calculationRequired": true,
@@ -9109,12 +9109,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer makes a bargain sale to a charity, selling property with a basis of $40,000 and FMV of $100,000 for $60,000. What gain must the taxpayer recognize?",
     "options": {
-      "A": "$0",
-      "B": "$20,000",
-      "C": "$36,000",
-      "D": "$60,000"
+      "A": "$20,000",
+      "B": "$36,000",
+      "C": "$60,000",
+      "D": "$0"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Basis is allocated: Sale portion = 60% ($60K/$100K), so allocated basis = $40,000 × 60% = $24,000. Gain = $60,000 - $24,000 = $36,000. The gift portion uses the remaining $16,000 of basis.",
     "tip": "Bargain sale gain: Allocate basis proportionally between sale and gift portions.",
     "calculationRequired": true,
@@ -9130,12 +9130,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A landowner donates a conservation easement that reduces property value from $2 million to $500,000. The easement restricts development and is granted to a land trust in perpetuity. What is the deductible amount?",
     "options": {
-      "A": "$500,000",
-      "B": "$1,500,000",
-      "C": "$2,000,000",
-      "D": "Fair market value of the easement as appraised"
+      "A": "$2,000,000",
+      "B": "Fair market value of the easement as appraised",
+      "C": "$500,000",
+      "D": "$1,500,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A qualified conservation contribution is deductible at the reduction in property value caused by the easement. Here, $2,000,000 - $500,000 = $1,500,000. The easement must be perpetual and for qualified conservation purposes.",
     "tip": "Conservation easement deduction = before value minus after value.",
     "calculationRequired": true,
@@ -9151,12 +9151,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A charitable remainder trust must satisfy the 10% remainder test. What does this requirement specify?",
     "options": {
-      "A": "The charity must receive at least 10% of trust income annually",
-      "B": "The present value of the charitable remainder must be at least 10% of initial contribution",
-      "C": "The payout rate cannot exceed 10%",
-      "D": "At least 10% of trust assets must be invested in charitable bonds"
+      "A": "The payout rate cannot exceed 10%",
+      "B": "At least 10% of trust assets must be invested in charitable bonds",
+      "C": "The charity must receive at least 10% of trust income annually",
+      "D": "The present value of the charitable remainder must be at least 10% of initial contribution"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A CRT must be structured so the present value of the charitable remainder interest is at least 10% of the net fair market value of assets contributed. This prevents CRTs from being structured to minimize the charitable benefit.",
     "tip": "CRT 10% test: Present value of charity's remainder must be ≥10% of contribution.",
     "calculationRequired": false,
@@ -9172,12 +9172,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Distributions from a charitable remainder trust to the income beneficiary are taxed using a four-tier system. Which type of income is distributed first?",
     "options": {
-      "A": "Tax-exempt income",
-      "B": "Ordinary income",
-      "C": "Capital gains",
-      "D": "Return of principal"
+      "A": "Ordinary income",
+      "B": "Capital gains",
+      "C": "Return of principal",
+      "D": "Tax-exempt income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "CRT distributions follow four tiers: (1) ordinary income, (2) capital gains, (3) other income (tax-exempt), (4) corpus/principal. Each tier is exhausted before moving to the next, with income taxed at highest rates first.",
     "tip": "CRT four-tier: Ordinary → Capital gain → Tax-exempt → Corpus. Worst-in, first-out.",
     "calculationRequired": false,
@@ -9193,12 +9193,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer donates inventory with a basis of $10,000 and FMV of $25,000 to a public charity. What is the charitable deduction?",
     "options": {
-      "A": "$10,000",
-      "B": "$17,500",
-      "C": "$25,000",
-      "D": "$35,000"
+      "A": "$35,000",
+      "B": "$10,000",
+      "C": "$17,500",
+      "D": "$25,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Inventory is ordinary income property. The deduction for ordinary income property is limited to the lower of FMV or basis. Since selling the inventory would produce ordinary income (not capital gain), the deduction is limited to $10,000 basis.",
     "tip": "Ordinary income property (inventory, short-term assets) = deduction limited to basis.",
     "calculationRequired": false,
@@ -9214,12 +9214,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A pooled income fund differs from a charitable remainder trust in that:",
     "options": {
-      "A": "PIFs can have only one donor",
-      "B": "PIFs pay income based on fund performance, not a fixed amount or percentage",
-      "C": "PIFs provide larger charitable deductions",
-      "D": "PIFs can invest in tax-exempt bonds"
+      "A": "PIFs provide larger charitable deductions",
+      "B": "PIFs can invest in tax-exempt bonds",
+      "C": "PIFs can have only one donor",
+      "D": "PIFs pay income based on fund performance, not a fixed amount or percentage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Pooled income funds combine contributions from multiple donors and pay each donor's income beneficiary a pro-rata share of actual fund income. PIFs cannot invest in tax-exempt securities. CRTs pay fixed amounts (CRAT) or fixed percentages (CRUT).",
     "tip": "PIF = actual income (variable); CRT = fixed annuity or unitrust percentage.",
     "calculationRequired": false,
@@ -9235,12 +9235,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer donates artwork claimed to be worth $75,000 to a museum. Which substantiation requirement applies?",
     "options": {
-      "A": "Written acknowledgment only",
-      "B": "Qualified appraisal and appraisal summary (Form 8283)",
-      "C": "Canceled check or receipt",
-      "D": "No special requirements for art donations"
+      "A": "Canceled check or receipt",
+      "B": "No special requirements for art donations",
+      "C": "Written acknowledgment only",
+      "D": "Qualified appraisal and appraisal summary (Form 8283)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Non-cash contributions over $5,000 require a qualified appraisal by a qualified appraiser, and the taxpayer must attach Form 8283 (Noncash Charitable Contributions) Section B to the tax return.",
     "tip": "Non-cash >$5,000 = qualified appraisal + Form 8283 Section B required.",
     "calculationRequired": false,
@@ -9256,12 +9256,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with $200,000 AGI wants to donate long-term appreciated stock worth $80,000 (basis $30,000) to a public charity. Without an election, the deduction is limited to $60,000 (30% AGI). What option is available?",
     "options": {
-      "A": "No options—must use 30% limit",
-      "B": "Elect to use basis ($30,000) and claim full deduction with 50% limit",
-      "C": "Elect to use basis ($30,000) and claim full deduction with 60% limit",
-      "D": "Carry forward the full $80,000 to future years"
+      "A": "Elect to use basis ($30,000) and claim full deduction with 60% limit",
+      "B": "Carry forward the full $80,000 to future years",
+      "C": "No options—must use 30% limit",
+      "D": "Elect to use basis ($30,000) and claim full deduction with 50% limit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A taxpayer can elect to reduce the deduction to basis, which increases the AGI limit from 30% to 50% for capital gain property. Here, electing basis deduction ($30,000) allows full current deduction under the 50% limit ($100,000).",
     "tip": "Capital gain property election: Choose basis deduction for 50% limit vs FMV at 30% limit.",
     "calculationRequired": true,
@@ -9277,12 +9277,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A married taxpayer normally donates $15,000 annually to charity. With a $29,200 standard deduction (2024) and $20,000 of other itemized deductions, which strategy maximizes tax benefit?",
     "options": {
-      "A": "Donate $15,000 each year and take standard deduction",
-      "B": "Donate $15,000 each year and itemize",
-      "C": "Bunch two years of donations into one year, alternating between itemizing and standard deduction",
-      "D": "Spread donations evenly is always optimal"
+      "A": "Bunch two years of donations into one year, alternating between itemizing and standard deduction",
+      "B": "Spread donations evenly is always optimal",
+      "C": "Donate $15,000 each year and take standard deduction",
+      "D": "Donate $15,000 each year and itemize"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Bunching $30,000 of donations in one year creates $50,000 itemized deductions (exceeding standard deduction by $20,800), while taking the $29,200 standard deduction the other year. Total benefit exceeds annual itemizing or standard deduction approach.",
     "tip": "Bunching: Concentrate deductions to exceed standard deduction in alternate years.",
     "calculationRequired": true,
@@ -9319,12 +9319,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A private foundation must distribute what minimum amount annually to avoid an excise tax?",
     "options": {
-      "A": "All current year income",
-      "B": "5% of net investment assets",
-      "C": "The greater of income or 5% of assets",
-      "D": "10% of contributions received"
+      "A": "The greater of income or 5% of assets",
+      "B": "10% of contributions received",
+      "C": "All current year income",
+      "D": "5% of net investment assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Private foundations must make qualifying distributions of approximately 5% of net investment assets annually to avoid a 30% excise tax on undistributed income. This is separate from the 1.39% excise tax on net investment income.",
     "tip": "Private foundation minimum distribution = 5% of investment assets annually.",
     "calculationRequired": false,
@@ -9340,12 +9340,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A net income with makeup charitable remainder unitrust (NIMCRUT) distributes:",
     "options": {
-      "A": "A fixed percentage of trust assets annually",
-      "B": "The lesser of trust income or the unitrust percentage, with makeup in later high-income years",
-      "C": "Only net income regardless of unitrust percentage",
-      "D": "The greater of trust income or unitrust percentage"
+      "A": "Only net income regardless of unitrust percentage",
+      "B": "The greater of trust income or unitrust percentage",
+      "C": "A fixed percentage of trust assets annually",
+      "D": "The lesser of trust income or the unitrust percentage, with makeup in later high-income years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A NIMCRUT pays the lesser of actual trust income or the unitrust percentage in low-income years, but allows makeup of shortfalls in later years when trust income exceeds the unitrust percentage. This provides flexibility for assets that don't produce current income.",
     "tip": "NIMCRUT: Lesser of income/unitrust amount, with makeup provision for shortfalls.",
     "calculationRequired": false,
@@ -9382,12 +9382,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A grantor creates a grantor charitable lead annuity trust (CLAT) and contributes $2 million. The present value of the annuity stream to charity is $1.4 million. What are the income tax consequences?",
     "options": {
-      "A": "No current deduction; annual deductions as payments are made",
-      "B": "$1.4 million current deduction; grantor taxed on trust income during the term",
-      "C": "$2 million current deduction; no further tax consequences",
-      "D": "$600,000 current deduction for the remainder interest"
+      "A": "$2 million current deduction; no further tax consequences",
+      "B": "$600,000 current deduction for the remainder interest",
+      "C": "No current deduction; annual deductions as payments are made",
+      "D": "$1.4 million current deduction; grantor taxed on trust income during the term"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A grantor CLAT provides an immediate income tax deduction equal to the present value of the charity's income interest ($1.4M). However, the grantor is taxed on all trust income during the trust term as owner of a grantor trust.",
     "tip": "Grantor CLAT: Upfront deduction for charity's interest, but grantor taxed on trust income.",
     "calculationRequired": false,
@@ -9403,12 +9403,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer contributes stock (basis $100,000, FMV $500,000) to a CRUT. The trust sells the stock and reinvests in bonds yielding 5%. What is the tax treatment of the first $25,000 distribution?",
     "options": {
-      "A": "Tax-free return of principal",
-      "B": "Long-term capital gain",
-      "C": "Ordinary income",
-      "D": "Partially capital gain, partially ordinary income"
+      "A": "Ordinary income",
+      "B": "Partially capital gain, partially ordinary income",
+      "C": "Tax-free return of principal",
+      "D": "Long-term capital gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under the four-tier system, the $400,000 capital gain from the stock sale is in tier 2. The $25,000 bond income (tier 1 ordinary income) is less than the distribution, but capital gains accumulated first. The distribution comes from the undistributed capital gain tier.",
     "tip": "CRT tiers carry accumulated amounts. Large embedded gains are distributed over time.",
     "calculationRequired": false,
@@ -9445,12 +9445,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer wants to donate $50,000 to charity and owns: (1) stock held 2 years with $50,000 FMV and $10,000 basis, and (2) stock held 2 years with $50,000 FMV and $45,000 basis. Which should be donated for optimal tax benefit?",
     "options": {
-      "A": "Either stock—the result is the same",
-      "B": "Stock 1 (low basis)—maximizes tax benefit",
-      "C": "Stock 2 (high basis)—avoids capital gains",
-      "D": "Sell both stocks and donate cash"
+      "A": "Stock 1 (low basis)—maximizes tax benefit",
+      "B": "Stock 2 (high basis)—avoids capital gains",
+      "C": "Sell both stocks and donate cash",
+      "D": "Either stock—the result is the same"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Donating highly appreciated stock (Stock 1) provides a $50,000 deduction while avoiding $40,000 of capital gain. Stock 2 should be sold (only $5,000 gain recognized) to generate cash or be held. Donating low-basis stock maximizes the tax benefit.",
     "tip": "Donate low-basis appreciated stock; sell high-basis stock. Maximize bypassed gain.",
     "calculationRequired": true,
@@ -9487,12 +9487,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer in the 37% tax bracket has highly appreciated stock worth $1 million (basis $200,000). Compared to a testamentary bequest, what is the approximate additional tax benefit of a lifetime gift (assuming full use of the deduction)?",
     "options": {
-      "A": "No additional benefit",
-      "B": "$160,000 (capital gains avoided)",
-      "C": "$370,000 (income tax deduction)",
-      "D": "$530,000 (income tax deduction plus capital gains avoided)"
+      "A": "$160,000 (capital gains avoided)",
+      "B": "$370,000 (income tax deduction)",
+      "C": "$530,000 (income tax deduction plus capital gains avoided)",
+      "D": "No additional benefit"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Lifetime gifts provide an income tax deduction ($1M × 37% = $370,000) plus avoid capital gains ($800,000 × 20% = $160,000). A testamentary bequest provides only estate tax savings (same as the income tax deduction economically) without the capital gains benefit.",
     "tip": "Lifetime charitable gift = income tax deduction + capital gains bypass. Bequest only provides one benefit.",
     "calculationRequired": true,
@@ -9529,12 +9529,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 65-year-old donor wants to fund a CRT with $2 million of stock expected to appreciate significantly. The donor wants retirement income that grows with inflation. Which trust type is most appropriate?",
     "options": {
-      "A": "CRAT—provides stable, predictable income",
-      "B": "CRUT—payments increase as trust value grows",
-      "C": "NIMCRUT—defers income until retirement",
-      "D": "Pooled income fund—professional management"
+      "A": "Pooled income fund—professional management",
+      "B": "CRAT—provides stable, predictable income",
+      "C": "CRUT—payments increase as trust value grows",
+      "D": "NIMCRUT—defers income until retirement"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A CRUT pays a fixed percentage of annually revalued assets, so if assets appreciate, payments increase. This provides inflation protection. A CRAT pays a fixed dollar amount regardless of growth. For expected appreciation and inflation protection, CRUT is preferred.",
     "tip": "CRUT for growth/inflation protection; CRAT for fixed, predictable payments.",
     "calculationRequired": false,
@@ -9571,12 +9571,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The research and development (R&D) tax credit under Section 41 applies to qualified research expenses. Which of the following is a component of the regular credit calculation?",
     "options": {
-      "A": "20% of all research spending",
-      "B": "20% of qualified research expenses over a base amount",
-      "C": "100% of research expenses up to $1 million",
-      "D": "50% of research expenses exceeding prior year"
+      "A": "50% of research expenses exceeding prior year",
+      "B": "20% of all research spending",
+      "C": "20% of qualified research expenses over a base amount",
+      "D": "100% of research expenses up to $1 million"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The regular R&D credit is 20% of qualified research expenses (QREs) that exceed a base amount calculated using historical research spending relative to gross receipts. There is also a 14% alternative simplified credit.",
     "tip": "R&D credit: 20% of QREs over base amount (regular) or 14% simplified method.",
     "calculationRequired": false,
@@ -9613,12 +9613,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which education credit can be claimed for an unlimited number of years for the same student?",
     "options": {
-      "A": "American Opportunity Credit",
-      "B": "Lifetime Learning Credit",
-      "C": "Hope Credit",
-      "D": "Both A and B"
+      "A": "Hope Credit",
+      "B": "Both A and B",
+      "C": "American Opportunity Credit",
+      "D": "Lifetime Learning Credit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The Lifetime Learning Credit has no limit on the number of years it can be claimed. The American Opportunity Credit is limited to 4 tax years per student for undergraduate education.",
     "tip": "Lifetime Learning = unlimited years; American Opportunity = max 4 years.",
     "calculationRequired": false,
@@ -9634,12 +9634,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer paid $5,000 in foreign income taxes on $20,000 of foreign source income. The taxpayer's U.S. tax on this income would be $4,400 (22% bracket). What is the maximum foreign tax credit?",
     "options": {
-      "A": "$4,400",
-      "B": "$5,000",
-      "C": "$600",
-      "D": "$9,400"
+      "A": "$600",
+      "B": "$9,400",
+      "C": "$4,400",
+      "D": "$5,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "The foreign tax credit is limited to the U.S. tax attributable to foreign source income. Even though $5,000 was paid, the credit is limited to $4,400 (the U.S. tax). The excess $600 can be carried back 1 year or forward 10 years.",
     "tip": "FTC limited to U.S. tax on foreign income. Excess can be carried over.",
     "calculationRequired": true,
@@ -9655,12 +9655,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following disqualifies a taxpayer from claiming the earned income credit?",
     "options": {
-      "A": "Self-employment income",
-      "B": "Investment income exceeding $11,000 (2024)",
-      "C": "Filing as head of household",
-      "D": "Having no qualifying children"
+      "A": "Investment income exceeding $11,000 (2024)",
+      "B": "Filing as head of household",
+      "C": "Having no qualifying children",
+      "D": "Self-employment income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Investment income exceeding the threshold ($11,000 for 2024) disqualifies a taxpayer from the EIC. Self-employment income qualifies as earned income, head of household is a valid filing status, and childless taxpayers may qualify for a smaller credit.",
     "tip": "EIC disqualifier: Investment income over threshold (adjusted annually).",
     "calculationRequired": false,
@@ -9676,12 +9676,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The general business credit combines multiple credits into one. What happens if the credit exceeds the limitation in the current year?",
     "options": {
-      "A": "The excess is lost",
-      "B": "The excess is carried back 1 year, then forward 20 years",
-      "C": "The excess converts to a refund",
-      "D": "The excess is carried forward only, for 5 years"
+      "A": "The excess is carried forward only, for 5 years",
+      "B": "The excess is lost",
+      "C": "The excess is carried back 1 year, then forward 20 years",
+      "D": "The excess converts to a refund"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "General business credit carrybacks go back 1 year, and carryforwards extend 20 years. Credits are applied in chronological order. Some credits (like R&D) have special rules for startups.",
     "tip": "General business credit: 1 year back, 20 years forward carryover.",
     "calculationRequired": false,
@@ -9697,12 +9697,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A homeowner installs a qualifying solar electric system in 2024 for $30,000. What is the residential clean energy credit?",
     "options": {
-      "A": "$7,500 (25%)",
-      "B": "$9,000 (30%)",
-      "C": "$6,000 (20%)",
-      "D": "$3,000 (10%)"
+      "A": "$6,000 (20%)",
+      "B": "$3,000 (10%)",
+      "C": "$7,500 (25%)",
+      "D": "$9,000 (30%)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The residential clean energy credit (formerly residential energy efficient property credit) is 30% of qualified expenditures for solar electric, solar water heating, fuel cells, small wind, geothermal heat pumps, and battery storage through 2032.",
     "tip": "Residential solar credit: 30% through 2032, then phases down.",
     "calculationRequired": true,
@@ -9718,12 +9718,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An employer hires a qualified veteran and pays $12,000 in first-year wages. What is the maximum work opportunity tax credit for this hire?",
     "options": {
-      "A": "$2,400",
-      "B": "$4,800",
-      "C": "$9,600",
-      "D": "$12,000"
+      "A": "$12,000",
+      "B": "$2,400",
+      "C": "$4,800",
+      "D": "$9,600"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "For most target groups, WOTC is 40% of qualified first-year wages up to $6,000 ($2,400 max). For certain veterans, the credit can be 40% of up to $24,000 ($9,600 max). The standard $12,000 in wages for a qualified veteran yields $4,800 to $9,600 depending on veteran category.",
     "tip": "WOTC: 40% of qualified wages; caps vary by target group (higher for veterans).",
     "calculationRequired": true,
@@ -9739,12 +9739,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which expense qualifies for the Section 41 research credit?",
     "options": {
-      "A": "Marketing research for new product launch",
-      "B": "Wages for engineers developing new manufacturing process",
-      "C": "Research conducted outside the United States",
-      "D": "Adaptation of existing product for specific customer"
+      "A": "Research conducted outside the United States",
+      "B": "Adaptation of existing product for specific customer",
+      "C": "Marketing research for new product launch",
+      "D": "Wages for engineers developing new manufacturing process"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Qualified research expenses include wages for employees performing qualified research activities, supplies used in research, and contract research expenses. Research must be technological in nature and involve uncertainty. Marketing research, foreign research, and customer adaptation generally don't qualify.",
     "tip": "R&D credit requires: technological uncertainty, experimentation process, permitted purpose.",
     "calculationRequired": false,
@@ -9781,12 +9781,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A developer receives a $2 million allocation of low-income housing tax credits (LIHTC). How long is the credit period?",
     "options": {
-      "A": "5 years",
-      "B": "10 years",
-      "C": "15 years",
-      "D": "30 years"
+      "A": "15 years",
+      "B": "30 years",
+      "C": "5 years",
+      "D": "10 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "LIHTC provides credits over a 10-year credit period. The property must remain in compliance for a 15-year compliance period plus an extended use period. The credit is approximately 9% (new construction) or 4% (acquisition/rehabilitation) of qualified basis annually.",
     "tip": "LIHTC: 10-year credit period; 15-year initial compliance period.",
     "calculationRequired": false,
@@ -9802,12 +9802,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A small business with $800,000 in gross receipts and 20 employees spends $8,000 on ADA accessibility improvements. What is the disabled access credit?",
     "options": {
-      "A": "$4,000",
-      "B": "$3,750",
-      "C": "$5,000",
-      "D": "$8,000"
+      "A": "$3,750",
+      "B": "$5,000",
+      "C": "$8,000",
+      "D": "$4,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The disabled access credit is 50% of eligible expenditures between $250 and $10,250 (max credit $5,000). For $8,000 spent: ($8,000 - $250) × 50% = $3,875. However, eligible expenditures cap at $10,250, so: ($8,000 - $250) × 50% = $3,875. The answer is $3,750 using the formula correctly.",
     "tip": "Disabled access credit: 50% × (expenditures between $250 and $10,250).",
     "calculationRequired": true,
@@ -9823,12 +9823,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For the clean vehicle credit under Section 30D, which requirement must a new electric vehicle meet to qualify for the full $7,500 credit?",
     "options": {
-      "A": "Final assembly in North America only",
-      "B": "Battery component and critical mineral sourcing requirements",
-      "C": "Purchase price under $50,000",
-      "D": "Manufacturer has sold fewer than 200,000 vehicles"
+      "A": "Battery component and critical mineral sourcing requirements",
+      "B": "Purchase price under $50,000",
+      "C": "Manufacturer has sold fewer than 200,000 vehicles",
+      "D": "Final assembly in North America only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The IRA restructured the credit into two $3,750 components: one for meeting battery component requirements (assembly in North America) and one for critical mineral requirements (sourcing from US or free trade partners). Both requirements must be met for the full $7,500.",
     "tip": "EV credit: $3,750 for battery components + $3,750 for critical minerals = $7,500 max.",
     "calculationRequired": false,
@@ -9844,12 +9844,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A small employer with 8 employees and average annual wages of $25,000 provides health insurance. What is the maximum credit percentage for coverage purchased through the SHOP marketplace?",
     "options": {
-      "A": "25%",
-      "B": "35%",
-      "C": "50%",
-      "D": "100%"
+      "A": "100%",
+      "B": "25%",
+      "C": "35%",
+      "D": "50%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Small employers with fewer than 25 full-time equivalent employees and average wages below $56,000 (indexed) can claim up to 50% of premiums paid for coverage purchased through the SHOP marketplace (35% for tax-exempt employers).",
     "tip": "Small employer health credit: Up to 50% of premiums (SHOP marketplace required for max credit).",
     "calculationRequired": false,
@@ -9865,12 +9865,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An investor makes a $1 million qualified equity investment in a Community Development Entity (CDE) for the new markets tax credit. What is the total credit over the 7-year credit period?",
     "options": {
-      "A": "$200,000",
-      "B": "$300,000",
-      "C": "$390,000",
-      "D": "$500,000"
+      "A": "$500,000",
+      "B": "$200,000",
+      "C": "$300,000",
+      "D": "$390,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "NMTC provides a 39% credit over 7 years: 5% in years 1-3 (15% total) and 6% in years 4-7 (24% total). For a $1 million investment: $1M × 39% = $390,000 total credit.",
     "tip": "NMTC: 5% × 3 years + 6% × 4 years = 39% total over 7 years.",
     "calculationRequired": true,
@@ -9886,12 +9886,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A startup company with $3 million in gross receipts generates $40,000 in R&D credits but has no income tax liability. Under Section 41, what can the startup elect?",
     "options": {
-      "A": "Refundable credit payment",
-      "B": "Offset against payroll tax liability up to $500,000",
-      "C": "Carryforward only",
-      "D": "Sale of credits to another taxpayer"
+      "A": "Sale of credits to another taxpayer",
+      "B": "Refundable credit payment",
+      "C": "Offset against payroll tax liability up to $500,000",
+      "D": "Carryforward only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Qualified small businesses (under $5M gross receipts, no more than 5 years of gross receipts) can elect to apply up to $500,000 of R&D credit against payroll tax liability. This provides immediate benefit when the company has no income tax liability.",
     "tip": "Startup R&D credit: Offset payroll tax (up to $500K) if <$5M gross receipts.",
     "calculationRequired": false,
@@ -9907,12 +9907,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer received $6,000 in advance premium tax credits during 2024 based on estimated income. Actual income resulted in a credit of only $4,500. What happens at tax filing?",
     "options": {
-      "A": "The excess is forgiven",
-      "B": "The taxpayer repays $1,500 (subject to caps)",
-      "C": "The excess converts to a penalty",
-      "D": "The taxpayer's health coverage is retroactively cancelled"
+      "A": "The taxpayer repays $1,500 (subject to caps)",
+      "B": "The excess converts to a penalty",
+      "C": "The taxpayer's health coverage is retroactively cancelled",
+      "D": "The excess is forgiven"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Excess advance premium tax credits must be repaid when filing the tax return, subject to repayment caps based on household income (ranging from $350 to $3,000 for individuals, or unlimited above 400% FPL). Here, $1,500 would be added to tax liability.",
     "tip": "Excess advance PTC: Repay at filing, subject to income-based caps.",
     "calculationRequired": true,
@@ -9928,12 +9928,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer incurs $10,000 of qualified adoption expenses in 2023 and the adoption becomes final in 2024. When is the credit claimed?",
     "options": {
-      "A": "2023, when expenses were paid",
-      "B": "2024, when adoption became final",
-      "C": "Split between 2023 and 2024",
-      "D": "Taxpayer's choice of either year"
+      "A": "Split between 2023 and 2024",
+      "B": "Taxpayer's choice of either year",
+      "C": "2023, when expenses were paid",
+      "D": "2024, when adoption became final"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For domestic adoptions, qualified expenses paid before the year the adoption becomes final are claimed in the year the adoption is finalized. Expenses paid in the year of finalization or later are claimed in that year.",
     "tip": "Adoption credit timing: Pre-finalization expenses claimed in year adoption finalizes.",
     "calculationRequired": false,
@@ -9949,12 +9949,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business places a $1 million solar energy system in service in 2024. The base investment tax credit (ITC) is 6%, but can be increased to 30% by meeting which requirement?",
     "options": {
-      "A": "Using domestic materials",
-      "B": "Meeting prevailing wage and apprenticeship requirements",
-      "C": "Operating in a low-income area",
-      "D": "Being a tax-exempt entity"
+      "A": "Meeting prevailing wage and apprenticeship requirements",
+      "B": "Operating in a low-income area",
+      "C": "Being a tax-exempt entity",
+      "D": "Using domestic materials"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The IRA provides a base 6% ITC for clean energy property. Meeting prevailing wage and apprenticeship requirements increases the credit 5x to 30%. Additional bonuses exist for domestic content, energy communities, and low-income.",
     "tip": "Business energy ITC: 6% base → 30% with prevailing wage/apprenticeship.",
     "calculationRequired": false,
@@ -9970,12 +9970,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A married couple with AGI of $50,000 pays $8,000 in child care expenses for their two children under age 13 so both spouses can work. What is their child and dependent care credit?",
     "options": {
-      "A": "$600",
-      "B": "$1,200",
-      "C": "$1,600",
-      "D": "$2,400"
+      "A": "$2,400",
+      "B": "$600",
+      "C": "$1,200",
+      "D": "$1,600"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Maximum eligible expenses are $6,000 for two or more dependents. At $50,000 AGI, the credit percentage is 20%. Credit = $6,000 × 20% = $1,200. Even though they paid $8,000, expenses are capped.",
     "tip": "Child care credit: Max $3K (1 child)/$6K (2+) × 20-35% based on AGI.",
     "calculationRequired": true,
@@ -9991,12 +9991,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer invests $500,000 of capital gains into a qualified opportunity fund (QOF) in 2024. What tax benefit is available if the investment is held for 10 years?",
     "options": {
-      "A": "50% exclusion of original deferred gain",
-      "B": "Complete exclusion of appreciation in the QOF investment",
-      "C": "Tax credit equal to 10% of investment",
-      "D": "Both exclusion of appreciation and step-up in original gain basis"
+      "A": "Tax credit equal to 10% of investment",
+      "B": "Both exclusion of appreciation and step-up in original gain basis",
+      "C": "50% exclusion of original deferred gain",
+      "D": "Complete exclusion of appreciation in the QOF investment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For QOF investments held at least 10 years, appreciation in the QOF investment is permanently excluded from income. The basis step-ups (10% at 5 years, 15% at 7 years) expired for new investments but the 10-year appreciation exclusion remains.",
     "tip": "QOZ 10-year hold: Appreciation in QOF investment permanently excluded.",
     "calculationRequired": false,
@@ -10054,12 +10054,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When multiple nonrefundable credits apply, which credit is generally applied first?",
     "options": {
-      "A": "Child tax credit",
-      "B": "Foreign tax credit",
-      "C": "General business credit",
-      "D": "Alternative minimum tax foreign tax credit"
+      "A": "General business credit",
+      "B": "Alternative minimum tax foreign tax credit",
+      "C": "Child tax credit",
+      "D": "Foreign tax credit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Nonrefundable credits are applied in a specific order. Foreign tax credit is applied first (to the extent of limitation), followed by other personal credits (child tax credit, education credits, etc.), then general business credit, which can only reduce tax to tentative minimum tax.",
     "tip": "Credit order: Foreign tax → Personal credits → General business credit.",
     "calculationRequired": false,
@@ -10075,12 +10075,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A student qualifies for both the American Opportunity Credit (AOC) and Lifetime Learning Credit (LLC). Which comparison is correct?",
     "options": {
-      "A": "AOC has higher income phase-out thresholds than LLC",
-      "B": "LLC provides a larger maximum credit than AOC",
-      "C": "AOC is partially refundable; LLC is nonrefundable",
-      "D": "LLC requires at least half-time enrollment; AOC does not"
+      "A": "AOC is partially refundable; LLC is nonrefundable",
+      "B": "LLC requires at least half-time enrollment; AOC does not",
+      "C": "AOC has higher income phase-out thresholds than LLC",
+      "D": "LLC provides a larger maximum credit than AOC"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The AOC is partially refundable (40% of credit, up to $1,000). The LLC is entirely nonrefundable. AOC maximum is $2,500; LLC maximum is $2,000. AOC requires at least half-time enrollment; LLC has no enrollment intensity requirement.",
     "tip": "AOC: $2,500, 40% refundable, 4-year limit. LLC: $2,000, nonrefundable, unlimited years.",
     "calculationRequired": false,
@@ -10096,12 +10096,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An employer builds an on-site child care facility costing $200,000 and incurs $60,000 in annual operating expenses. What is the employer-provided child care credit?",
     "options": {
-      "A": "$25,000 (25% of facility cost)",
-      "B": "$50,000 (25% of facility cost)",
-      "C": "$65,000 (25% of facility + 10% of expenses)",
-      "D": "$150,000 (maximum credit)"
+      "A": "$150,000 (maximum credit)",
+      "B": "$25,000 (25% of facility cost)",
+      "C": "$50,000 (25% of facility cost)",
+      "D": "$65,000 (25% of facility + 10% of expenses)"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The Section 45F credit is 25% of qualified child care facility expenditures plus 10% of qualified child care resource and referral expenditures. Credit = ($200,000 × 25%) + ($60,000 × 10%) = $50,000 + $6,000 = $56,000, capped at $150,000.",
     "tip": "Employer child care credit: 25% facility costs + 10% resource/referral costs (max $150K).",
     "calculationRequired": true,
@@ -10117,12 +10117,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has average QREs over the prior 3 years of $1 million and current year QREs of $1.5 million. Using the alternative simplified credit method, what is the R&D credit?",
     "options": {
-      "A": "$70,000",
-      "B": "$100,000",
-      "C": "$105,000",
-      "D": "$140,000"
+      "A": "$140,000",
+      "B": "$70,000",
+      "C": "$100,000",
+      "D": "$105,000"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "The alternative simplified credit is 14% of QREs exceeding 50% of the average QREs for the 3 preceding years. Credit = 14% × ($1,500,000 - $500,000) = 14% × $1,000,000 = $140,000. If no QREs in prior years, credit is 6% of current QREs.",
     "tip": "ASC: 14% × (current QREs - 50% of 3-year average QREs).",
     "calculationRequired": true,
@@ -10138,12 +10138,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $200,000 worldwide taxable income, including $50,000 of foreign source income. U.S. tax before credits is $44,000. Foreign taxes paid were $15,000. What is the FTC limitation and allowable credit?",
     "options": {
-      "A": "Limitation $11,000; credit $11,000",
-      "B": "Limitation $11,000; credit $15,000",
-      "C": "Limitation $15,000; credit $15,000",
-      "D": "Limitation $44,000; credit $15,000"
+      "A": "Limitation $15,000; credit $15,000",
+      "B": "Limitation $44,000; credit $15,000",
+      "C": "Limitation $11,000; credit $11,000",
+      "D": "Limitation $11,000; credit $15,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "FTC limitation = U.S. tax × (foreign source income / worldwide income) = $44,000 × ($50,000 / $200,000) = $44,000 × 25% = $11,000. The credit is limited to $11,000 even though $15,000 was paid. Excess $4,000 can be carried over.",
     "tip": "FTC limit = U.S. tax × (foreign source income ÷ worldwide income).",
     "calculationRequired": true,
@@ -10159,12 +10159,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 100-unit apartment building has eligible basis of $10 million. 60 units are set aside for low-income tenants at 60% of area median income. What is the qualified basis for LIHTC purposes?",
     "options": {
-      "A": "$6 million",
-      "B": "$10 million",
-      "C": "$4 million",
-      "D": "$8 million"
+      "A": "$8 million",
+      "B": "$6 million",
+      "C": "$10 million",
+      "D": "$4 million"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Qualified basis equals eligible basis multiplied by the applicable fraction (lesser of unit fraction or floor space fraction). With 60 of 100 units set aside, the applicable fraction is 60%. Qualified basis = $10M × 60% = $6 million.",
     "tip": "LIHTC qualified basis = eligible basis × applicable fraction (low-income units/total units).",
     "calculationRequired": true,
@@ -10180,12 +10180,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has regular tax liability of $100,000 and tentative minimum tax of $85,000. What is the general business credit limitation?",
     "options": {
-      "A": "$15,000",
-      "B": "$75,000",
-      "C": "$85,000",
-      "D": "$100,000"
+      "A": "$100,000",
+      "B": "$15,000",
+      "C": "$75,000",
+      "D": "$85,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The general business credit cannot reduce regular tax liability below the tentative minimum tax (plus 25% of regular tax over $25,000 for some components). Here, the limitation is $100,000 - $85,000 = $15,000.",
     "tip": "GBC limit: Regular tax - tentative minimum tax (simplified). Cannot push into AMT.",
     "calculationRequired": true,
@@ -10222,12 +10222,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A solar project placed in service in an energy community qualifies for the base 6% ITC plus prevailing wage/apprenticeship bonus (24%) and domestic content bonus (10%). What is the maximum ITC percentage?",
     "options": {
-      "A": "30%",
-      "B": "40%",
-      "C": "50%",
-      "D": "60%"
+      "A": "50%",
+      "B": "60%",
+      "C": "30%",
+      "D": "40%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Maximum ITC: 6% base + 24% (wage/apprenticeship, 5x multiplier to 30%) + 10% domestic content + 10% energy community = 50%. Low-income bonuses can add more for certain projects. The base starts at 6% and wage/apprenticeship brings it to 30%, not additive to 6%.",
     "tip": "ITC stacking: 30% (base + W&A) + 10% domestic + 10% energy community = 50% max typically.",
     "calculationRequired": true,
@@ -10243,12 +10243,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the Inflation Reduction Act, which clean energy credit can be transferred to an unrelated third party for cash?",
     "options": {
-      "A": "Residential clean energy credit",
-      "B": "Clean vehicle credit (personal)",
-      "C": "Investment tax credit for business solar",
-      "D": "Premium tax credit"
+      "A": "Investment tax credit for business solar",
+      "B": "Premium tax credit",
+      "C": "Residential clean energy credit",
+      "D": "Clean vehicle credit (personal)"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The IRA allows certain business energy credits (ITC, PTC, etc.) to be transferred to unrelated parties for cash. Personal/individual credits like the residential energy credit and personal clean vehicle credit cannot be transferred this way.",
     "tip": "IRA transferability: Business energy credits only. Personal credits excluded.",
     "calculationRequired": false,
@@ -10264,12 +10264,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer claimed a $100,000 investment tax credit on solar property placed in service in year 1. The property is sold in year 4. What amount of credit is recaptured?",
     "options": {
-      "A": "$0",
-      "B": "$20,000",
-      "C": "$40,000",
-      "D": "$100,000"
+      "A": "$100,000",
+      "B": "$0",
+      "C": "$20,000",
+      "D": "$40,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "ITC recapture applies if property is disposed of within 5 years. Recapture decreases 20% per year. Year 4 disposition: 2 years remaining out of 5 = 40% recapture. No wait, the recapture is 20% per year after year 1. So by year 4: Years 2, 3, 4 passed = 60% vested, 40% recapture? Actually: Recapture = (5 - years held) / 5 × credit. (5-4)/5 = 20% recapture = $20,000.",
     "tip": "ITC recapture: Credit × (5 - years held) / 5 if disposed within 5 years.",
     "calculationRequired": true,
@@ -10285,12 +10285,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $50,000 of R&D credits and $30,000 of foreign tax credits. Regular tax is $60,000 and tentative minimum tax is $55,000. Which statement correctly describes the credit optimization?",
     "options": {
-      "A": "All $80,000 of credits can be used",
-      "B": "FTC is applied first, then R&D credit limited to $5,000",
-      "C": "R&D credit is applied first as part of general business credit",
-      "D": "Only FTC can be used; R&D credit is fully carried forward"
+      "A": "R&D credit is applied first as part of general business credit",
+      "B": "Only FTC can be used; R&D credit is fully carried forward",
+      "C": "All $80,000 of credits can be used",
+      "D": "FTC is applied first, then R&D credit limited to $5,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Foreign tax credit is applied first (limited by the FTC limitation formula). General business credit (including R&D) is then limited by the TMT barrier: $60,000 - $55,000 = $5,000. So FTC uses $30,000 (assuming sufficient limit), then only $5,000 of R&D credit can be used, with $45,000 carried over.",
     "tip": "Credit order matters: FTC first, then GBC limited by TMT. Plan around limitations.",
     "calculationRequired": true,
@@ -10327,12 +10327,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is an AMT preference item that is added back to taxable income when computing alternative minimum taxable income (AMTI)?",
     "options": {
-      "A": "Charitable contributions",
-      "B": "Private activity bond interest (non-exempt facility)",
-      "C": "Standard deduction",
-      "D": "Personal exemptions"
+      "A": "Private activity bond interest (non-exempt facility)",
+      "B": "Standard deduction",
+      "C": "Personal exemptions",
+      "D": "Charitable contributions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Interest on private activity bonds (other than for exempt facilities) is tax-exempt for regular tax but is an AMT preference item. It must be added back when computing AMTI.",
     "tip": "Private activity bond interest is a key AMT preference—tax-exempt for regular tax, taxable for AMT.",
     "calculationRequired": false,
@@ -10369,12 +10369,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What are the AMT tax rates for individuals?",
     "options": {
-      "A": "20% and 28%",
-      "B": "26% and 28%",
-      "C": "15% and 20%",
-      "D": "28% flat rate"
+      "A": "15% and 20%",
+      "B": "28% flat rate",
+      "C": "20% and 28%",
+      "D": "26% and 28%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Individual AMT is computed at 26% on the first $220,700 of AMTI over the exemption (2024, MFJ), and 28% on AMTI exceeding that amount. Capital gains retain their preferential rates.",
     "tip": "Individual AMT rates: 26% then 28%. Capital gains keep preferential rates.",
     "calculationRequired": false,
@@ -10390,12 +10390,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For AMT purposes, state and local taxes (SALT) deducted for regular tax purposes:",
     "options": {
-      "A": "Remain fully deductible",
-      "B": "Are limited to $10,000",
-      "C": "Are not deductible at all",
-      "D": "Are partially deductible based on income"
+      "A": "Are limited to $10,000",
+      "B": "Are not deductible at all",
+      "C": "Are partially deductible based on income",
+      "D": "Remain fully deductible"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "SALT deductions (income, property, sales taxes) are not allowed for AMT purposes. This is one of the largest AMT adjustments for individuals in high-tax states.",
     "tip": "SALT: $10K cap for regular tax, completely disallowed for AMT.",
     "calculationRequired": false,
@@ -10411,12 +10411,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer paid $15,000 in AMT due to timing differences (such as ISO exercise). In a future year when regular tax exceeds tentative minimum tax, what relief is available?",
     "options": {
-      "A": "No relief—AMT paid is final",
-      "B": "The AMT credit can offset regular tax",
-      "C": "A refund is issued automatically",
-      "D": "The AMT is deductible on Schedule A"
+      "A": "A refund is issued automatically",
+      "B": "The AMT is deductible on Schedule A",
+      "C": "No relief—AMT paid is final",
+      "D": "The AMT credit can offset regular tax"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "AMT paid on timing (deferral) items creates an AMT credit that can be used in future years when regular tax exceeds tentative minimum tax. This prevents permanent double taxation on timing items.",
     "tip": "AMT credit: Relief for timing-related AMT. Usable when regular tax > TMT in future years.",
     "calculationRequired": false,
@@ -10432,12 +10432,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An employee exercises incentive stock options (ISOs), paying $10 per share when the FMV is $50 per share, for 1,000 shares. What is the AMT adjustment?",
     "options": {
-      "A": "$0—ISOs have no AMT impact",
-      "B": "$10,000 positive adjustment",
-      "C": "$40,000 positive adjustment",
-      "D": "$50,000 positive adjustment"
+      "A": "$40,000 positive adjustment",
+      "B": "$50,000 positive adjustment",
+      "C": "$0—ISOs have no AMT impact",
+      "D": "$10,000 positive adjustment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "ISO exercise creates an AMT adjustment equal to the bargain element (FMV minus exercise price). Here: ($50 - $10) × 1,000 = $40,000 positive adjustment to AMTI. This is the most common cause of AMT for tech employees.",
     "tip": "ISO AMT adjustment = (FMV - exercise price) × shares. Major AMT trigger.",
     "calculationRequired": true,
@@ -10453,12 +10453,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For real property placed in service after 1998, what is the AMT depreciation adjustment?",
     "options": {
-      "A": "Use 150% declining balance instead of MACRS",
-      "B": "Use straight-line over 40 years",
-      "C": "No adjustment—same depreciation for regular and AMT",
-      "D": "Use ADS recovery period"
+      "A": "Use straight-line over 40 years",
+      "B": "No adjustment—same depreciation for regular and AMT",
+      "C": "Use ADS recovery period",
+      "D": "Use 150% declining balance instead of MACRS"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For real property placed in service after 1998, there is no AMT depreciation adjustment—the same straight-line method applies for both regular tax and AMT. Prior rules required longer recovery periods for AMT.",
     "tip": "Post-1998 real property: No AMT depreciation adjustment. Same for regular and AMT.",
     "calculationRequired": false,
@@ -10474,12 +10474,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer deducts interest on a home equity loan used to pay off credit card debt. For AMT purposes, this interest is:",
     "options": {
-      "A": "Fully deductible",
-      "B": "Not deductible",
-      "C": "Deductible up to $100,000 of debt",
-      "D": "Deductible only if itemized for regular tax"
+      "A": "Deductible up to $100,000 of debt",
+      "B": "Deductible only if itemized for regular tax",
+      "C": "Fully deductible",
+      "D": "Not deductible"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Home equity interest is only deductible if used to buy, build, or substantially improve the home (acquisition debt). Interest on home equity debt used for other purposes (like paying credit cards) is not deductible for either regular tax or AMT under current law.",
     "tip": "Home interest deduction requires acquisition debt use—not just home equity debt.",
     "calculationRequired": false,
@@ -10516,12 +10516,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $50,000 AGI and $6,000 in medical expenses. What is the medical expense deduction for AMT purposes?",
     "options": {
-      "A": "$0",
-      "B": "$1,250",
-      "C": "$2,250",
-      "D": "$6,000"
+      "A": "$1,250",
+      "B": "$2,250",
+      "C": "$6,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For AMT, the medical expense floor is 7.5% of AGI (same as regular tax after TCJA). Deduction = $6,000 - (7.5% × $50,000) = $6,000 - $3,750 = $2,250. Wait, that's the regular tax amount. For AMT, the floor was historically 10% but is now 7.5%. So: $6,000 - $3,750 = $2,250 for both.",
     "tip": "Medical deduction floor: 7.5% of AGI for both regular tax and AMT (post-TCJA).",
     "calculationRequired": true,
@@ -10537,12 +10537,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under TCJA (2018-2025), a taxpayer who claims the standard deduction for regular tax purposes has what AMT impact?",
     "options": {
-      "A": "Must add back the standard deduction for AMT",
-      "B": "No AMT adjustment needed",
-      "C": "Can claim the standard deduction or itemize for AMT",
-      "D": "Must itemize for AMT regardless of regular tax choice"
+      "A": "Must itemize for AMT regardless of regular tax choice",
+      "B": "Must add back the standard deduction for AMT",
+      "C": "No AMT adjustment needed",
+      "D": "Can claim the standard deduction or itemize for AMT"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under TCJA, the AMT exemption was increased significantly and standard deduction filers are unlikely to owe AMT. The standard deduction is not an AMT preference item. The higher exemption and other changes largely eliminated AMT for standard deduction filers.",
     "tip": "TCJA raised AMT exemption dramatically—standard deduction filers rarely owe AMT now.",
     "calculationRequired": false,
@@ -10558,12 +10558,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An investor in the 35% tax bracket considering private activity bonds should be aware that:",
     "options": {
-      "A": "Interest is fully tax-exempt for all purposes",
-      "B": "Interest may trigger AMT, reducing the effective yield",
-      "C": "Bonds are not available to individual investors",
-      "D": "Interest is taxable for both regular tax and AMT"
+      "A": "Bonds are not available to individual investors",
+      "B": "Interest is taxable for both regular tax and AMT",
+      "C": "Interest is fully tax-exempt for all purposes",
+      "D": "Interest may trigger AMT, reducing the effective yield"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Private activity bond interest is generally exempt from regular tax but is an AMT preference. Investors subject to AMT may find the effective yield reduced because the interest creates AMT liability.",
     "tip": "PABs: Tax-free for regular tax, but AMT preference. Check AMT status before investing.",
     "calculationRequired": false,
@@ -10579,12 +10579,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The corporate alternative minimum tax reinstated by the Inflation Reduction Act applies to corporations with average annual adjusted financial statement income exceeding:",
     "options": {
-      "A": "$10 million",
-      "B": "$100 million",
-      "C": "$500 million",
-      "D": "$1 billion"
+      "A": "$1 billion",
+      "B": "$10 million",
+      "C": "$100 million",
+      "D": "$500 million"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "The 15% corporate AMT (CAMT) under the IRA applies to corporations with average annual adjusted financial statement income (AFSI) exceeding $1 billion over a 3-year period. It uses book income as the base.",
     "tip": "Corporate AMT (2023+): 15% on book income for companies with >$1B average AFSI.",
     "calculationRequired": false,
@@ -10642,12 +10642,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $50,000 of AMT credit carryforward from prior years. In 2024, regular tax is $80,000 and tentative minimum tax is $60,000. How much AMT credit can be used?",
     "options": {
-      "A": "$0",
-      "B": "$20,000",
-      "C": "$50,000",
-      "D": "$60,000"
+      "A": "$60,000",
+      "B": "$0",
+      "C": "$20,000",
+      "D": "$50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The AMT credit can reduce regular tax only to the level of tentative minimum tax. Here, regular tax ($80,000) minus TMT ($60,000) = $20,000 maximum credit usage. The remaining $30,000 credit carries forward.",
     "tip": "AMT credit use = Regular tax - TMT. Cannot reduce tax below TMT.",
     "calculationRequired": true,
@@ -10663,12 +10663,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For an investor regularly subject to AMT, which type of municipal bond is most advantageous?",
     "options": {
-      "A": "Private activity bonds with highest yield",
-      "B": "General obligation bonds from any state",
-      "C": "Essential function municipal bonds",
-      "D": "Any tax-exempt bond—all are equivalent for AMT"
+      "A": "Essential function municipal bonds",
+      "B": "Any tax-exempt bond—all are equivalent for AMT",
+      "C": "Private activity bonds with highest yield",
+      "D": "General obligation bonds from any state"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Essential function (governmental purpose) municipal bonds are exempt from both regular tax and AMT. For AMT-sensitive investors, these provide true tax-free income. Private activity bonds create AMT exposure despite being regular tax-exempt.",
     "tip": "AMT investors: Choose essential function/governmental munis, not private activity bonds.",
     "calculationRequired": false,
@@ -10747,12 +10747,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An AMT NOL can offset what percentage of AMTI (before the NOL deduction)?",
     "options": {
-      "A": "80%",
-      "B": "90%",
-      "C": "100%",
-      "D": "80% for post-2017 losses, 100% for pre-2018 losses"
+      "A": "90%",
+      "B": "100%",
+      "C": "80% for post-2017 losses, 100% for pre-2018 losses",
+      "D": "80%"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Post-2017 NOLs can offset only 80% of taxable income (and AMTI) due to TCJA limitations. Pre-2018 NOLs could offset 90% of AMTI. The 80% limit applies to both regular tax and AMT for current losses.",
     "tip": "AMT NOL limit: 80% of AMTI for post-2017 losses (same as regular tax limit).",
     "calculationRequired": false,
@@ -10768,12 +10768,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An employee exercises ISOs and sells the stock on the same day (disqualifying disposition). What is the AMT consequence?",
     "options": {
-      "A": "$40,000 AMT adjustment (same as if held)",
-      "B": "No AMT adjustment—disqualifying disposition eliminates it",
-      "C": "AMT adjustment reduced to 50%",
-      "D": "AMT adjustment equals capital gain"
+      "A": "No AMT adjustment—disqualifying disposition eliminates it",
+      "B": "AMT adjustment reduced to 50%",
+      "C": "AMT adjustment equals capital gain",
+      "D": "$40,000 AMT adjustment (same as if held)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A same-day sale (disqualifying disposition) converts the ISO to ordinary income treatment. Since there's no longer a timing difference between regular tax and AMT, no AMT adjustment is created.",
     "tip": "ISO same-day sale = disqualifying disposition = no AMT adjustment (but ordinary income).",
     "calculationRequired": false,
@@ -10789,12 +10789,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "How are charitable contributions treated for AMT purposes?",
     "options": {
-      "A": "Not deductible for AMT",
-      "B": "Same deduction as regular tax",
-      "C": "Limited to 20% of AMTI",
-      "D": "Deductible only for cash contributions"
+      "A": "Same deduction as regular tax",
+      "B": "Limited to 20% of AMTI",
+      "C": "Deductible only for cash contributions",
+      "D": "Not deductible for AMT"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Charitable contributions are allowed as a deduction for both regular tax and AMT. There is no AMT adjustment for charitable contributions—they're treated the same under both systems.",
     "tip": "Charitable deductions: Same for regular tax and AMT. No adjustment needed.",
     "calculationRequired": false,
@@ -10810,12 +10810,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Interest on a mortgage used to acquire a primary residence is deductible for AMT purposes on debt up to:",
     "options": {
-      "A": "$100,000",
-      "B": "$750,000",
-      "C": "$1,000,000",
-      "D": "No limit for AMT"
+      "A": "$1,000,000",
+      "B": "No limit for AMT",
+      "C": "$100,000",
+      "D": "$750,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under TCJA, acquisition debt interest is deductible on mortgages up to $750,000 (for loans after 12/15/2017) for both regular tax and AMT. Pre-TCJA loans up to $1,000,000 are grandfathered.",
     "tip": "Acquisition debt interest: Same limits for regular tax and AMT ($750K post-TCJA).",
     "calculationRequired": false,
@@ -10852,12 +10852,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An employee exercises ISOs in March when FMV is $100/share (exercise price $20). By December 31, the stock price drops to $30. The bargain element for AMT is based on:",
     "options": {
-      "A": "$100 FMV at exercise",
-      "B": "$30 year-end FMV",
-      "C": "Average of $100 and $30",
-      "D": "The lower of exercise date or year-end FMV (Section 83(b) election)"
+      "A": "The lower of exercise date or year-end FMV (Section 83(b) election)",
+      "B": "$100 FMV at exercise",
+      "C": "$30 year-end FMV",
+      "D": "Average of $100 and $30"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The AMT adjustment is based on FMV at exercise date ($100 - $20 = $80/share). The year-end decline doesn't reduce the AMT adjustment. This creates the painful 'AMT trap' where tax is owed on gains that evaporated.",
     "tip": "ISO AMT trap: Adjustment based on exercise-date FMV. Stock decline doesn't help.",
     "calculationRequired": false,
@@ -10873,12 +10873,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the corporate alternative minimum tax (CAMT), which adjustment applies to book income to arrive at adjusted financial statement income (AFSI)?",
     "options": {
-      "A": "Add back state and local taxes",
-      "B": "Adjust for depreciation using ADS",
-      "C": "Adjust for covered benefit plan contributions",
-      "D": "Add back percentage depletion"
+      "A": "Adjust for depreciation using ADS",
+      "B": "Adjust for covered benefit plan contributions",
+      "C": "Add back percentage depletion",
+      "D": "Add back state and local taxes"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "AFSI adjustments include items like pension contributions (difference between book expense and actual contributions), financial statement NOLs, and adjustments for certain tax credits. Depreciation is generally based on book amounts, not ADS.",
     "tip": "CAMT: Starts with book income, with limited adjustments (pension, NOLs, certain credits).",
     "calculationRequired": false,
@@ -10915,12 +10915,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $100,000 AMT credit carryforward. To maximize credit usage, the taxpayer should:",
     "options": {
-      "A": "Accelerate income to create regular tax liability",
-      "B": "Defer deductions to increase regular tax relative to TMT",
-      "C": "Make estimated payments equal to prior year AMT",
-      "D": "Both A and B are valid strategies"
+      "A": "Both A and B are valid strategies",
+      "B": "Accelerate income to create regular tax liability",
+      "C": "Defer deductions to increase regular tax relative to TMT",
+      "D": "Make estimated payments equal to prior year AMT"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "AMT credit is usable when regular tax exceeds TMT. Both accelerating income (increases regular tax) and deferring deductions (increases regular tax more than TMT) can increase the gap and allow more credit usage.",
     "tip": "AMT credit strategy: Widen the gap between regular tax and TMT in credit years.",
     "calculationRequired": false,
@@ -10936,12 +10936,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Before 2018 (when corporate AMT was repealed) and after 2022 (new CAMT), what is the gross receipts test for the current corporate AMT?",
     "options": {
-      "A": "$5 million average over 3 years",
-      "B": "$7.5 million average over 3 years",
-      "C": "$1 billion average adjusted financial statement income",
-      "D": "No gross receipts test—applies to all C corporations"
+      "A": "$1 billion average adjusted financial statement income",
+      "B": "No gross receipts test—applies to all C corporations",
+      "C": "$5 million average over 3 years",
+      "D": "$7.5 million average over 3 years"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The new CAMT (2023+) applies to corporations with average annual AFSI exceeding $1 billion over 3 years. This is much higher than the old corporate AMT exemption thresholds. Very few corporations are subject to CAMT.",
     "tip": "New CAMT (2023+): Only applies to largest corporations ($1B+ average AFSI).",
     "calculationRequired": false,
@@ -10957,12 +10957,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A high-income taxpayer in a high-tax state wants to model AMT exposure. Which factor is LEAST likely to trigger AMT under current law (2018-2025)?",
     "options": {
-      "A": "Large ISO exercises",
-      "B": "High state and local tax deductions",
-      "C": "Significant private activity bond interest",
-      "D": "Multiple personal exemptions"
+      "A": "High state and local tax deductions",
+      "B": "Significant private activity bond interest",
+      "C": "Multiple personal exemptions",
+      "D": "Large ISO exercises"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "TCJA eliminated personal exemptions (2018-2025), so this is not an AMT factor during this period. SALT disallowance (B), ISO exercises (A), and private activity bond interest (C) remain significant AMT triggers.",
     "tip": "Post-TCJA AMT triggers: ISOs, SALT (already limited), PAB interest. Not personal exemptions.",
     "calculationRequired": false,
@@ -10978,12 +10978,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An employee exercises ISOs and pays AMT on the bargain element. When the stock is eventually sold (qualifying disposition), the basis for AMT purposes is:",
     "options": {
-      "A": "The exercise price only",
-      "B": "The exercise price plus the bargain element (FMV at exercise)",
-      "C": "Fair market value at sale",
-      "D": "Original exercise price plus AMT paid"
+      "A": "The exercise price plus the bargain element (FMV at exercise)",
+      "B": "Fair market value at sale",
+      "C": "Original exercise price plus AMT paid",
+      "D": "The exercise price only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For AMT, basis includes the bargain element since that amount was included in AMTI at exercise. This higher basis reduces the AMT gain on sale and helps recover the AMT previously paid through the AMT credit mechanism.",
     "tip": "ISO AMT basis = Exercise price + bargain element. Creates AMT credit on sale.",
     "calculationRequired": false,
@@ -10999,12 +10999,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For AMT purposes, long-term capital gains are taxed at:",
     "options": {
-      "A": "26% or 28% (regular AMT rates)",
-      "B": "The same preferential rates as regular tax (0%/15%/20%)",
-      "C": "20% flat rate",
-      "D": "28% collectibles rate for all gains"
+      "A": "20% flat rate",
+      "B": "28% collectibles rate for all gains",
+      "C": "26% or 28% (regular AMT rates)",
+      "D": "The same preferential rates as regular tax (0%/15%/20%)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Capital gains retain their preferential rates (0%, 15%, 20%) for AMT purposes. They are not subject to the 26%/28% AMT rates. Net investment income tax (3.8%) may still apply based on modified AGI.",
     "tip": "Capital gains: Same preferential rates for both regular tax and AMT.",
     "calculationRequired": false,
@@ -11041,12 +11041,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 469, a passive activity is generally defined as:",
     "options": {
-      "A": "Any investment activity",
-      "B": "A trade or business in which the taxpayer does not materially participate",
-      "C": "Any activity that generates portfolio income",
-      "D": "Real estate activities only"
+      "A": "Real estate activities only",
+      "B": "Any investment activity",
+      "C": "A trade or business in which the taxpayer does not materially participate",
+      "D": "Any activity that generates portfolio income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A passive activity is a trade or business in which the taxpayer does not materially participate, or a rental activity (with certain exceptions). Portfolio income (interest, dividends) is not passive activity income.",
     "tip": "Passive = trade/business without material participation OR rental activity.",
     "calculationRequired": false,
@@ -11062,12 +11062,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The most commonly used material participation test requires participation of more than:",
     "options": {
-      "A": "100 hours per year",
-      "B": "250 hours per year",
-      "C": "500 hours per year",
-      "D": "750 hours per year"
+      "A": "250 hours per year",
+      "B": "500 hours per year",
+      "C": "750 hours per year",
+      "D": "100 hours per year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The most straightforward material participation test requires more than 500 hours of participation in the activity during the tax year. There are seven tests, but 500 hours is most commonly used.",
     "tip": "500+ hours = material participation (primary test). Other tests exist for complex situations.",
     "calculationRequired": false,
@@ -11125,12 +11125,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a taxpayer fully disposes of a passive activity in a taxable transaction, what happens to suspended passive losses?",
     "options": {
-      "A": "They are lost permanently",
-      "B": "They continue to be limited to passive income",
-      "C": "They become fully deductible against any income",
-      "D": "They convert to capital losses"
+      "A": "They continue to be limited to passive income",
+      "B": "They become fully deductible against any income",
+      "C": "They convert to capital losses",
+      "D": "They are lost permanently"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Upon complete disposition in a fully taxable transaction, all suspended passive losses from that activity become deductible against any income (active, passive, or portfolio). This is the primary 'release valve' for trapped losses.",
     "tip": "Full disposition = suspended losses released against all income types.",
     "calculationRequired": false,
@@ -11146,12 +11146,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To qualify as a real estate professional, a taxpayer must spend what percentage of their personal services in real property trades or businesses?",
     "options": {
-      "A": "More than 25%",
-      "B": "More than 50%",
-      "C": "More than 75%",
-      "D": "100%"
+      "A": "More than 75%",
+      "B": "100%",
+      "C": "More than 25%",
+      "D": "More than 50%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "To be a real estate professional, more than 50% of personal services performed during the year must be in real property trades or businesses in which the taxpayer materially participates, AND total hours must exceed 750.",
     "tip": "REP test: >50% of services + >750 hours in real property businesses.",
     "calculationRequired": false,
@@ -11167,12 +11167,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT one of the seven material participation tests?",
     "options": {
-      "A": "Participation for more than 500 hours during the year",
-      "B": "Participation constitutes substantially all participation in the activity",
-      "C": "Participation for more than 100 hours if no one else participates more",
-      "D": "Ownership of more than 50% of the activity"
+      "A": "Participation constitutes substantially all participation in the activity",
+      "B": "Participation for more than 100 hours if no one else participates more",
+      "C": "Ownership of more than 50% of the activity",
+      "D": "Participation for more than 500 hours during the year"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Ownership percentage is not a material participation test. The seven tests focus on participation hours, not ownership. One can own 100% of an activity and still be passive if participation is insufficient.",
     "tip": "Material participation = hours and involvement, not ownership percentage.",
     "calculationRequired": false,
@@ -11188,12 +11188,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer owns three businesses and wants to group them as a single activity for passive loss purposes. Which factor is NOT relevant to grouping?",
     "options": {
-      "A": "Common ownership",
-      "B": "Common management",
-      "C": "Geographic location",
-      "D": "The taxpayer's personal wealth"
+      "A": "Geographic location",
+      "B": "The taxpayer's personal wealth",
+      "C": "Common ownership",
+      "D": "Common management"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Grouping is based on appropriate economic units considering common ownership, management, location, and business type/interdependence. Personal wealth is irrelevant to whether activities constitute an appropriate economic unit.",
     "tip": "Grouping factors: ownership, management, location, business interdependence—not personal wealth.",
     "calculationRequired": false,
@@ -11209,12 +11209,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the primary difference between 'active participation' and 'material participation' for rental real estate?",
     "options": {
-      "A": "Active participation requires more hours",
-      "B": "Active participation is a lower standard that allows the $25,000 allowance",
-      "C": "Material participation applies only to commercial property",
-      "D": "There is no difference—the terms are interchangeable"
+      "A": "There is no difference—the terms are interchangeable",
+      "B": "Active participation requires more hours",
+      "C": "Active participation is a lower standard that allows the $25,000 allowance",
+      "D": "Material participation applies only to commercial property"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Active participation is a lower standard requiring only meaningful involvement in management decisions (approving tenants, terms, repairs). Material participation requires meeting one of seven tests (typically 500+ hours). Active participation enables the $25,000 allowance.",
     "tip": "Active < Material. Active = meaningful involvement for $25K allowance. Material = 500+ hours.",
     "calculationRequired": false,
@@ -11293,12 +11293,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer owns a building personally and rents it to their S corporation in which they materially participate. The rental income is treated as:",
     "options": {
-      "A": "Passive income that can absorb passive losses",
-      "B": "Nonpassive income under the self-rental rule",
-      "C": "Portfolio income",
-      "D": "Self-employment income"
+      "A": "Portfolio income",
+      "B": "Self-employment income",
+      "C": "Passive income that can absorb passive losses",
+      "D": "Nonpassive income under the self-rental rule"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under the self-rental rule, rental income from property rented to a trade or business in which the taxpayer materially participates is recharacterized as nonpassive. This prevents using passive rental income to absorb other passive losses.",
     "tip": "Self-rental income = nonpassive if rented to business with material participation.",
     "calculationRequired": false,
@@ -11314,12 +11314,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A limited partner can satisfy material participation only through which tests?",
     "options": {
-      "A": "Any of the seven tests",
-      "B": "The 500-hour test, the facts and circumstances test, or five-of-ten-years test",
-      "C": "Only the 500-hour test",
-      "D": "Limited partners can never materially participate"
+      "A": "The 500-hour test, the facts and circumstances test, or five-of-ten-years test",
+      "B": "Only the 500-hour test",
+      "C": "Limited partners can never materially participate",
+      "D": "Any of the seven tests"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Limited partners can only use three of the seven material participation tests: (1) 500+ hours, (2) material participation in 5 of prior 10 years, or (3) personal service activity with material participation in any 3 prior years. The 100-hour test and others are unavailable.",
     "tip": "Limited partners: Only 500-hour, 5-of-10 years, or 3-year personal service tests apply.",
     "calculationRequired": false,
@@ -11335,12 +11335,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Rental activity is NOT automatically treated as passive if the average rental period is:",
     "options": {
-      "A": "One year or less",
-      "B": "30 days or less",
-      "C": "7 days or less",
-      "D": "Never—all rentals are automatically passive"
+      "A": "7 days or less",
+      "B": "Never—all rentals are automatically passive",
+      "C": "One year or less",
+      "D": "30 days or less"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Rentals with an average period of 7 days or less are not automatically passive (e.g., hotel operations). If significant personal services are provided, rentals averaging 30 days or less also escape automatic passive treatment.",
     "tip": "≤7 days average rental = not automatically passive. Consider material participation.",
     "calculationRequired": false,
@@ -11356,12 +11356,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells a passive activity using an installment sale. When are suspended losses released?",
     "options": {
-      "A": "Entirely in the year of sale",
-      "B": "Pro rata as installment payments are received",
-      "C": "Not until all payments are received",
-      "D": "Suspended losses are forfeited in installment sales"
+      "A": "Not until all payments are received",
+      "B": "Suspended losses are forfeited in installment sales",
+      "C": "Entirely in the year of sale",
+      "D": "Pro rata as installment payments are received"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When a passive activity is sold on installment, suspended losses are released proportionately as gain is recognized. Each year, losses equal to the gain recognized (gross profit ratio × payments) become deductible.",
     "tip": "Installment sale: Suspended losses released pro rata with gain recognition.",
     "calculationRequired": false,
@@ -11377,12 +11377,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has two activities: one profitable and one generating losses. When is grouping most beneficial for passive loss utilization?",
     "options": {
-      "A": "When both activities are passive",
-      "B": "When the profitable activity is nonpassive and loss activity is passive",
-      "C": "When grouped to achieve material participation in the combined activity",
-      "D": "Grouping is never beneficial for losses"
+      "A": "Grouping is never beneficial for losses",
+      "B": "When both activities are passive",
+      "C": "When the profitable activity is nonpassive and loss activity is passive",
+      "D": "When grouped to achieve material participation in the combined activity"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Strategic grouping can help achieve material participation when hours in individual activities are insufficient but combined hours exceed 500. This converts activities from passive to nonpassive, allowing loss deduction.",
     "tip": "Group activities to aggregate hours for material participation. Plan carefully—generally irrevocable.",
     "calculationRequired": false,
@@ -11398,12 +11398,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has three significant participation activities with 150, 200, and 175 hours respectively. The combined activity income is $30,000. How is this income treated?",
     "options": {
-      "A": "All passive income",
-      "B": "All nonpassive income due to combined hours exceeding 500",
-      "C": "Recharacterized as nonpassive to the extent of passive losses from other activities",
-      "D": "Portfolio income"
+      "A": "Recharacterized as nonpassive to the extent of passive losses from other activities",
+      "B": "Portfolio income",
+      "C": "All passive income",
+      "D": "All nonpassive income due to combined hours exceeding 500"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Income from significant participation activities (100+ hours but not material participation) is recharacterized from passive to nonpassive to the extent of other passive losses. This limits 'PAL stacking' strategies.",
     "tip": "SPA income recharacterization: Passive income becomes nonpassive to offset passive losses.",
     "calculationRequired": false,
@@ -11461,12 +11461,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer gifts a passive activity with $100,000 of suspended losses to their child. What happens to the suspended losses?",
     "options": {
-      "A": "Losses transfer to the child",
-      "B": "Losses are released and deductible by the donor",
-      "C": "Losses are added to the property's basis",
-      "D": "Losses are lost permanently"
+      "A": "Losses are lost permanently",
+      "B": "Losses transfer to the child",
+      "C": "Losses are released and deductible by the donor",
+      "D": "Losses are added to the property's basis"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "When a passive activity is gifted, suspended losses are added to the donee's basis in the property rather than being released. This differs from a sale, where losses are fully deductible, or death, where losses are lost.",
     "tip": "Gift of passive activity: Suspended losses → donee's basis. No current deduction.",
     "calculationRequired": false,
@@ -11503,12 +11503,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Passive activity income is subject to the 3.8% net investment income tax (NIIT). A real estate professional's rental income is:",
     "options": {
-      "A": "Always subject to NIIT",
-      "B": "Exempt from NIIT if derived in ordinary course of a real property trade or business",
-      "C": "Subject to NIIT only if MAGI exceeds $250,000",
-      "D": "Never subject to NIIT"
+      "A": "Exempt from NIIT if derived in ordinary course of a real property trade or business",
+      "B": "Subject to NIIT only if MAGI exceeds $250,000",
+      "C": "Never subject to NIIT",
+      "D": "Always subject to NIIT"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "REP rental income may be exempt from NIIT if derived in the ordinary course of a trade or business. This requires material participation and REP status. Without REP status, rental income is generally net investment income.",
     "tip": "REP + material participation = potential NIIT exemption for rental income.",
     "calculationRequired": false,
@@ -11545,12 +11545,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The low-income housing credit (LIHTC) has a special rule regarding passive activity limitations. This rule allows:",
     "options": {
-      "A": "Full deduction against any income",
-      "B": "Offset of up to $25,000 of regular tax from non-passive income",
-      "C": "Exemption from passive credit rules entirely",
-      "D": "Carryforward for 30 years instead of 20"
+      "A": "Exemption from passive credit rules entirely",
+      "B": "Carryforward for 30 years instead of 20",
+      "C": "Full deduction against any income",
+      "D": "Offset of up to $25,000 of regular tax from non-passive income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "LIHTC benefits from a special $25,000 equivalent allowance similar to the rental loss allowance. This allows the credit to offset tax on non-passive income up to the equivalent of $25,000 of deductions, subject to phase-out.",
     "tip": "LIHTC: Special $25K equivalent allowance for passive credit offset.",
     "calculationRequired": false,
@@ -11566,12 +11566,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A working interest in an oil and gas property held directly (not through a limited partnership) is:",
     "options": {
-      "A": "Always passive",
-      "B": "Never passive, regardless of participation",
-      "C": "Passive unless material participation is met",
-      "D": "Passive only if the taxpayer is a limited partner"
+      "A": "Never passive, regardless of participation",
+      "B": "Passive unless material participation is met",
+      "C": "Passive only if the taxpayer is a limited partner",
+      "D": "Always passive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A working interest in oil and gas held without limitation on liability (not through LP or LLC) is never passive, regardless of participation level. This exception recognizes the operating nature and liability exposure of working interests.",
     "tip": "Oil/gas working interest (unlimited liability) = never passive. No participation required.",
     "calculationRequired": false,
@@ -11608,12 +11608,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer dies with $100,000 of suspended passive losses and the activity has a $150,000 basis step-up. What happens to the suspended losses?",
     "options": {
-      "A": "All $100,000 is deductible on the final return",
-      "B": "$50,000 is deductible; $50,000 is lost",
-      "C": "All $100,000 is lost due to the step-up",
-      "D": "Losses transfer to the estate or beneficiary"
+      "A": "Losses transfer to the estate or beneficiary",
+      "B": "All $100,000 is deductible on the final return",
+      "C": "$50,000 is deductible; $50,000 is lost",
+      "D": "All $100,000 is lost due to the step-up"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "At death, suspended passive losses are deductible only to the extent they exceed the basis step-up. Here: Step-up of $150,000 exceeds the $100,000 suspended loss concept. Actually, losses allowed = suspended losses - step-up amount. If step-up > losses, remainder is lost.",
     "tip": "Death: Suspended losses reduced by step-up. Excess losses allowed; absorbed losses lost.",
     "calculationRequired": true,
@@ -11629,12 +11629,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A non-REP taxpayer owns rental property and spends 800 hours on rental activities. Can the taxpayer treat rental losses as nonpassive?",
     "options": {
-      "A": "Yes—800 hours exceeds the 750-hour threshold",
-      "B": "No—must be a real estate professional for rental to be nonpassive",
-      "C": "Yes—but only with the $25,000 allowance",
-      "D": "No—rental activities are always passive for non-REPs"
+      "A": "Yes—but only with the $25,000 allowance",
+      "B": "No—rental activities are always passive for non-REPs",
+      "C": "Yes—800 hours exceeds the 750-hour threshold",
+      "D": "No—must be a real estate professional for rental to be nonpassive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For rentals, material participation alone doesn't convert passive to nonpassive. The taxpayer must qualify as a real estate professional (>750 hours AND >50% of services in real property trades) for rental losses to be nonpassive.",
     "tip": "Rentals require REP status for nonpassive treatment. Material participation alone isn't enough.",
     "calculationRequired": false,
@@ -11650,12 +11650,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer materially participated in an activity in 2022 but was passive in 2019-2021, accumulating $60,000 of suspended losses. In 2024, the activity generates $40,000 of income. How is the income and suspended loss treated?",
     "options": {
-      "A": "All $40,000 is nonpassive; suspended losses remain suspended",
-      "B": "Current income is nonpassive but releases $40,000 of suspended losses",
-      "C": "$40,000 suspended loss offsets the income; $20,000 remains suspended",
-      "D": "All income and losses are passive"
+      "A": "$40,000 suspended loss offsets the income; $20,000 remains suspended",
+      "B": "All income and losses are passive",
+      "C": "All $40,000 is nonpassive; suspended losses remain suspended",
+      "D": "Current income is nonpassive but releases $40,000 of suspended losses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When material participation converts an activity from passive to nonpassive, current income is nonpassive but suspended losses from passive years can offset that income. $40,000 of suspended loss is released, leaving $20,000 still suspended.",
     "tip": "Former passive activity: Current income is nonpassive; releases prior suspended losses.",
     "calculationRequired": true,
@@ -11671,12 +11671,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $20,000 of passive losses from a publicly traded partnership (PTP) and $30,000 of passive income from a non-PTP passive activity. How are the losses used?",
     "options": {
-      "A": "PTP losses offset the non-PTP income",
-      "B": "PTP losses can only offset income from that same PTP",
-      "C": "PTP losses offset portfolio income first",
-      "D": "PTP losses are not subject to passive activity rules"
+      "A": "PTP losses are not subject to passive activity rules",
+      "B": "PTP losses offset the non-PTP income",
+      "C": "PTP losses can only offset income from that same PTP",
+      "D": "PTP losses offset portfolio income first"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "PTP losses can only offset income from the same PTP. They cannot offset other passive income, active income, or portfolio income. Each PTP is essentially its own 'basket' for loss limitation purposes.",
     "tip": "PTP losses = same-PTP income only. Cannot cross-offset with other passive income.",
     "calculationRequired": false,
@@ -11692,12 +11692,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer converts rental property to personal use. What happens to $80,000 of suspended passive losses?",
     "options": {
-      "A": "Losses become deductible against any income",
-      "B": "Losses are added to the property's basis",
-      "C": "Losses remain suspended until sale",
-      "D": "Losses are lost permanently"
+      "A": "Losses remain suspended until sale",
+      "B": "Losses are lost permanently",
+      "C": "Losses become deductible against any income",
+      "D": "Losses are added to the property's basis"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Converting rental property to personal use is not a disposition that releases suspended losses. The losses remain suspended until the property is sold in a taxable transaction. Personal use doesn't trigger the release mechanism.",
     "tip": "Conversion to personal use: Losses stay suspended. Only sale/taxable disposition releases them.",
     "calculationRequired": false,
@@ -11713,12 +11713,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has three passive activities: A has $30,000 loss, B has $20,000 loss, C has $25,000 income. Net passive loss is $25,000. If Activity A is sold and has $30,000 suspended loss, how much is released?",
     "options": {
-      "A": "$30,000",
-      "B": "$25,000",
-      "C": "$15,000",
-      "D": "$45,000"
+      "A": "$45,000",
+      "B": "$30,000",
+      "C": "$25,000",
+      "D": "$15,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Suspended losses are allocated among activities with losses based on their proportion. A's share: $30K / ($30K + $20K) × $25K net loss = 60% × $25K = $15,000 suspended from A. On disposition, only A's allocated suspended loss ($15,000) plus current loss ($30,000) is released.",
     "tip": "Suspended loss allocation is proportional. Only the sold activity's allocated portion is released.",
     "calculationRequired": true,
@@ -11734,12 +11734,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells passive activity business property, generating a Section 1231 gain. Is this gain passive or nonpassive?",
     "options": {
-      "A": "Always nonpassive as Section 1231 gain",
-      "B": "Passive if the activity is passive",
-      "C": "Portfolio income",
-      "D": "Depends on holding period"
+      "A": "Depends on holding period",
+      "B": "Always nonpassive as Section 1231 gain",
+      "C": "Passive if the activity is passive",
+      "D": "Portfolio income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 1231 gain from disposition of property used in a passive activity retains its passive character. The character as 1231 gain (potentially capital gain) is separate from its passive/nonpassive classification.",
     "tip": "Section 1231 gain: Passive character follows the activity. Tax character is separate issue.",
     "calculationRequired": false,
@@ -11755,12 +11755,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A high-income taxpayer has substantial passive losses from rental activities and wants to utilize them currently. Which strategy combination is most effective?",
     "options": {
-      "A": "Increase participation hours in non-rental businesses",
-      "B": "Qualify as real estate professional and elect single-activity treatment",
-      "C": "Convert losses to at-risk carryforwards",
-      "D": "Gift properties to release suspended losses"
+      "A": "Convert losses to at-risk carryforwards",
+      "B": "Gift properties to release suspended losses",
+      "C": "Increase participation hours in non-rental businesses",
+      "D": "Qualify as real estate professional and elect single-activity treatment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "REP status converts rental activities from per se passive to activities where material participation matters. Combined with single-activity election, 500+ total hours across all rentals enables full loss deduction. This is the most powerful strategy for rental investors.",
     "tip": "REP + single activity election = most powerful strategy for high rental losses.",
     "calculationRequired": false,
@@ -11818,12 +11818,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An owner materially participates in their business and wants to minimize self-employment tax. Which entity type provides the best opportunity?",
     "options": {
-      "A": "LLC taxed as partnership",
-      "B": "LLC taxed as sole proprietorship",
-      "C": "S corporation",
-      "D": "All entities have the same SE tax"
+      "A": "S corporation",
+      "B": "All entities have the same SE tax",
+      "C": "LLC taxed as partnership",
+      "D": "LLC taxed as sole proprietorship"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "S corporation distributions to shareholders are not subject to self-employment tax. Only reasonable wages are subject to payroll taxes. LLCs taxed as partnerships or sole proprietorships subject all SE income to SE tax.",
     "tip": "S corp SE tax savings: Only wages subject to payroll tax, not distributions.",
     "calculationRequired": false,
@@ -11839,12 +11839,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Section 199A qualified business income deduction is available to owners of which entity types?",
     "options": {
-      "A": "C corporations only",
-      "B": "Pass-through entities only (S corps, partnerships, sole proprietorships)",
-      "C": "S corporations only",
-      "D": "All business entities"
+      "A": "Pass-through entities only (S corps, partnerships, sole proprietorships)",
+      "B": "S corporations only",
+      "C": "All business entities",
+      "D": "C corporations only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 199A provides up to a 20% deduction on qualified business income from pass-through entities (S corps, partnerships, LLCs, sole proprietorships). C corporation income is not eligible.",
     "tip": "Section 199A = pass-through entities only. C corp income doesn't qualify.",
     "calculationRequired": false,
@@ -11881,12 +11881,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation shareholder wants to deduct a loss. Which limitation applies first?",
     "options": {
-      "A": "Passive activity limitation",
-      "B": "At-risk limitation",
-      "C": "Stock and debt basis limitation",
-      "D": "Excess business loss limitation"
+      "A": "Excess business loss limitation",
+      "B": "Passive activity limitation",
+      "C": "At-risk limitation",
+      "D": "Stock and debt basis limitation"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "S corp loss limitations apply in order: (1) stock and debt basis, (2) at-risk, (3) passive activity, (4) excess business loss (Section 461(l)). Losses must clear each hurdle to be deductible.",
     "tip": "S corp loss order: Basis → At-risk → Passive → Excess business loss.",
     "calculationRequired": false,
@@ -11923,12 +11923,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer owns qualified small business stock (QSBS) for more than 5 years. Under Section 1202, what percentage of gain may be excluded?",
     "options": {
-      "A": "50%",
-      "B": "75%",
-      "C": "100%",
-      "D": "Depends on acquisition date"
+      "A": "75%",
+      "B": "100%",
+      "C": "Depends on acquisition date",
+      "D": "50%"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "QSBS exclusion depends on acquisition date: 50% for stock acquired before Feb 2009, 75% for Feb 2009-Sept 2010, and 100% for stock acquired after Sept 27, 2010. The 5-year holding period must be met.",
     "tip": "QSBS exclusion: 100% for post-Sept 2010 acquisitions. Earlier dates have lower exclusions.",
     "calculationRequired": false,
@@ -11944,12 +11944,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer owns two companies that transact with each other. What standard must intercompany transactions meet to avoid IRS adjustment?",
     "options": {
-      "A": "Fair value standard",
-      "B": "Arm's length standard",
-      "C": "Book value standard",
-      "D": "Cost-plus standard only"
+      "A": "Arm's length standard",
+      "B": "Book value standard",
+      "C": "Cost-plus standard only",
+      "D": "Fair value standard"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Related party transactions must reflect arm's length pricing—what unrelated parties would charge in comparable circumstances. The IRS can reallocate income under Section 482 if prices don't meet this standard.",
     "tip": "Related party pricing = arm's length. IRS Section 482 authority to reallocate income.",
     "calculationRequired": false,
@@ -11965,12 +11965,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation shareholder-employee receives only distributions (no salary). What is the tax risk?",
     "options": {
-      "A": "No risk—distributions are never subject to payroll tax",
-      "B": "IRS may recharacterize distributions as wages subject to payroll taxes",
-      "C": "The corporation loses S election",
-      "D": "Distributions become taxable dividends"
+      "A": "IRS may recharacterize distributions as wages subject to payroll taxes",
+      "B": "The corporation loses S election",
+      "C": "Distributions become taxable dividends",
+      "D": "No risk—distributions are never subject to payroll tax"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Shareholder-employees must receive reasonable compensation for services. The IRS may recharacterize distributions as wages, subjecting them to employment taxes plus penalties and interest. Taking only distributions is a common audit target.",
     "tip": "S corp reasonable compensation required. IRS targets all-distribution arrangements.",
     "calculationRequired": false,
@@ -11986,12 +11986,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation converts to S corporation status. Which built-in gains concern arises?",
     "options": {
-      "A": "All gains are immediately taxable",
-      "B": "Built-in gains recognized within 5 years are subject to corporate-level tax",
-      "C": "Gains are never taxable after conversion",
-      "D": "Only real estate gains are taxable"
+      "A": "Only real estate gains are taxable",
+      "B": "All gains are immediately taxable",
+      "C": "Built-in gains recognized within 5 years are subject to corporate-level tax",
+      "D": "Gains are never taxable after conversion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The built-in gains tax (Section 1374) imposes corporate-level tax on built-in gains recognized within 5 years of C-to-S conversion (reduced from 10 years). This prevents avoiding C corp tax by converting before selling appreciated assets.",
     "tip": "BIG tax: 5-year recognition period for built-in gains on C-to-S conversion.",
     "calculationRequired": false,
@@ -12049,12 +12049,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A father owns 100% of Corporation A and his son owns 100% of Corporation B. Under Section 318 attribution rules, are A and B related parties?",
     "options": {
-      "A": "No—no direct common ownership",
-      "B": "Yes—father is attributed son's ownership",
-      "C": "Only if both corporations are C corporations",
-      "D": "Only if the son is a minor"
+      "A": "Only if both corporations are C corporations",
+      "B": "Only if the son is a minor",
+      "C": "No—no direct common ownership",
+      "D": "Yes—father is attributed son's ownership"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under Section 318, stock owned by a child is attributed to their parents (and vice versa). The father is deemed to own 100% of both corporations, creating a controlled group and related party status.",
     "tip": "Family attribution: Parent ↔ child, spouse ↔ spouse. Creates deemed ownership.",
     "calculationRequired": false,
@@ -12070,12 +12070,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation accumulates $500,000 beyond the accumulated earnings credit. What tax consequence may apply?",
     "options": {
-      "A": "No consequence for retained earnings",
-      "B": "20% accumulated earnings tax on unreasonable accumulations",
-      "C": "Forced distribution as dividend",
-      "D": "Loss of corporate status"
+      "A": "Loss of corporate status",
+      "B": "No consequence for retained earnings",
+      "C": "20% accumulated earnings tax on unreasonable accumulations",
+      "D": "Forced distribution as dividend"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The accumulated earnings tax is 20% of accumulated taxable income if a corporation accumulates earnings beyond reasonable business needs to avoid shareholder-level dividend tax. The $250,000 base credit applies.",
     "tip": "AET: 20% penalty tax on accumulations beyond reasonable business needs.",
     "calculationRequired": false,
@@ -12091,12 +12091,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A holding company charges management fees to its operating subsidiaries. For the fees to be deductible by subsidiaries, they must be:",
     "options": {
-      "A": "Any amount agreed upon by the parties",
-      "B": "Reasonable and for actual services rendered",
-      "C": "Less than 10% of subsidiary revenue",
-      "D": "Approved by the IRS in advance"
+      "A": "Less than 10% of subsidiary revenue",
+      "B": "Approved by the IRS in advance",
+      "C": "Any amount agreed upon by the parties",
+      "D": "Reasonable and for actual services rendered"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Management fees between related parties must be reasonable in amount and for actual services rendered. The IRS can disallow deductions for excessive fees that don't reflect arm's length value or actual services.",
     "tip": "Intercompany fees: Must be reasonable + actual services. Document thoroughly.",
     "calculationRequired": false,
@@ -12112,12 +12112,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A corporation owns a single-member LLC. For federal tax purposes, the LLC is:",
     "options": {
-      "A": "A separate taxpayer",
-      "B": "Disregarded—treated as division of the corporation",
-      "C": "Automatically an S corporation",
-      "D": "A partnership with the corporation as partner"
+      "A": "Automatically an S corporation",
+      "B": "A partnership with the corporation as partner",
+      "C": "A separate taxpayer",
+      "D": "Disregarded—treated as division of the corporation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A single-member LLC owned by a corporation is disregarded for federal tax purposes. Its income, deductions, and assets are reported as if directly owned by the corporate parent. This simplifies reporting while maintaining state law liability protection.",
     "tip": "Single-member LLC = disregarded entity. Reports on owner's return. State law protection remains.",
     "calculationRequired": false,
@@ -12133,12 +12133,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A professional receives $150,000 from a partnership. $100,000 is a guaranteed payment for services. Which statement is correct?",
     "options": {
-      "A": "All $150,000 is subject to self-employment tax",
-      "B": "Only the $100,000 guaranteed payment is subject to SE tax",
-      "C": "Neither amount is subject to SE tax",
-      "D": "All $150,000 is wage income subject to withholding"
+      "A": "All $150,000 is wage income subject to withholding",
+      "B": "All $150,000 is subject to self-employment tax",
+      "C": "Only the $100,000 guaranteed payment is subject to SE tax",
+      "D": "Neither amount is subject to SE tax"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "A general partner's share of partnership income (both guaranteed payments and distributive share) is generally subject to self-employment tax if from a trade or business. Partners are not employees—no withholding applies.",
     "tip": "General partners: All partnership income subject to SE tax (trade/business).",
     "calculationRequired": false,
@@ -12154,12 +12154,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a corporate spin-off to qualify as tax-free under Section 355, which requirement must be met?",
     "options": {
-      "A": "The distributed subsidiary must have been owned for at least 6 months",
-      "B": "Control of the subsidiary must be distributed to shareholders",
-      "C": "The parent must retain at least 20% ownership",
-      "D": "Shareholder approval by 90% vote"
+      "A": "The parent must retain at least 20% ownership",
+      "B": "Shareholder approval by 90% vote",
+      "C": "The distributed subsidiary must have been owned for at least 6 months",
+      "D": "Control of the subsidiary must be distributed to shareholders"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Tax-free spin-offs under Section 355 require distribution of 'control' (80% of voting and value) to shareholders. Additional requirements include active trade or business for 5 years and valid business purpose.",
     "tip": "Section 355: Distribute 80%+ control, 5-year active business, business purpose required.",
     "calculationRequired": false,
@@ -12175,12 +12175,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An owner makes a $50,000 loan to their business entity. How does this affect loss deduction basis in an S corp versus a partnership?",
     "options": {
-      "A": "Increases basis equally in both entity types",
-      "B": "Increases S corp basis only if direct loan to corporation",
-      "C": "Increases partnership basis regardless of loan structure",
-      "D": "Both B and C are correct"
+      "A": "Increases partnership basis regardless of loan structure",
+      "B": "Both B and C are correct",
+      "C": "Increases basis equally in both entity types",
+      "D": "Increases S corp basis only if direct loan to corporation"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "S corp basis increases only for direct shareholder loans to the corporation. Partnership basis increases for the partner's share of all partnership liabilities, including bank loans to the partnership. This makes partnerships more favorable for loss deduction capacity.",
     "tip": "S corp: Only direct loans increase basis. Partnership: Share of ALL liabilities increases basis.",
     "calculationRequired": false,
@@ -12196,12 +12196,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An individual owns Section 1244 stock that becomes worthless. What is the tax treatment of the $80,000 loss?",
     "options": {
-      "A": "Long-term capital loss",
-      "B": "Ordinary loss up to $50,000 (single) or $100,000 (married)",
-      "C": "Fully ordinary loss with no limit",
-      "D": "Short-term capital loss"
+      "A": "Fully ordinary loss with no limit",
+      "B": "Short-term capital loss",
+      "C": "Long-term capital loss",
+      "D": "Ordinary loss up to $50,000 (single) or $100,000 (married)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 1244 allows ordinary loss treatment (not capital loss) on small business stock up to $50,000 for single filers or $100,000 for married filing jointly per year. Excess loss is capital loss. The $80,000 loss would be $50,000 ordinary (single) or fully ordinary (MFJ).",
     "tip": "Section 1244: Ordinary loss up to $50K/$100K per year. Valuable for startup failures.",
     "calculationRequired": true,
@@ -12217,12 +12217,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A closely held C corporation's income is primarily from investments. What additional tax may apply?",
     "options": {
-      "A": "No additional tax for investment income",
-      "B": "20% personal holding company tax on undistributed PHC income",
-      "C": "3.8% net investment income tax",
-      "D": "Alternative minimum tax"
+      "A": "3.8% net investment income tax",
+      "B": "Alternative minimum tax",
+      "C": "No additional tax for investment income",
+      "D": "20% personal holding company tax on undistributed PHC income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Personal holding company (PHC) tax of 20% applies to undistributed PHC income if more than 50% owned by 5 or fewer individuals and 60%+ of adjusted ordinary gross income is PHC income (dividends, interest, rent under certain conditions, royalties).",
     "tip": "PHC tax: 20% on undistributed income for investment-heavy closely held C corps.",
     "calculationRequired": false,
@@ -12238,12 +12238,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When can affiliated C corporations file a consolidated return?",
     "options": {
-      "A": "Any corporations under common control",
-      "B": "Parent owns 80%+ of vote and value of subsidiaries",
-      "C": "50%+ common ownership",
-      "D": "Only publicly traded corporations"
+      "A": "50%+ common ownership",
+      "B": "Only publicly traded corporations",
+      "C": "Any corporations under common control",
+      "D": "Parent owns 80%+ of vote and value of subsidiaries"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Consolidated returns require an affiliated group where a common parent owns directly or indirectly 80%+ of voting power and 80%+ of value of each subsidiary's stock. S corps and certain other entities cannot be included.",
     "tip": "Consolidated return: 80%+ vote AND value. Allows offsetting profits and losses.",
     "calculationRequired": false,
@@ -12259,12 +12259,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A qualified opportunity fund (QOF) must be organized as which type of entity?",
     "options": {
-      "A": "C corporation only",
-      "B": "Partnership only",
-      "C": "Corporation or partnership (including LLC)",
-      "D": "Tax-exempt organization"
+      "A": "Corporation or partnership (including LLC)",
+      "B": "Tax-exempt organization",
+      "C": "C corporation only",
+      "D": "Partnership only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "A QOF can be organized as a corporation or partnership (including an LLC taxed as either). The fund must hold at least 90% of its assets in qualified opportunity zone property. Most QOFs are structured as partnerships for pass-through treatment.",
     "tip": "QOF: Corp or partnership OK. Most use partnership for pass-through + investor flexibility.",
     "calculationRequired": false,
@@ -12280,12 +12280,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Corporation A owns 80% of Corporation B. Corporation B owns 60% of Corporation C. Under Section 318, what percentage of C does A constructively own?",
     "options": {
-      "A": "60%",
-      "B": "48%",
-      "C": "80%",
-      "D": "140%"
+      "A": "80%",
+      "B": "140%",
+      "C": "60%",
+      "D": "48%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Stock owned by a corporation is attributed proportionally to its shareholders. A owns 80% of B, which owns 60% of C. A's constructive ownership of C = 80% × 60% = 48%.",
     "tip": "Entity-to-owner attribution: Proportional. 80% × 60% = 48% constructive ownership.",
     "calculationRequired": true,
@@ -12301,12 +12301,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After a corporation with $2 million NOL undergoes an ownership change, what limits the use of the NOL?",
     "options": {
-      "A": "NOL is completely forfeited",
-      "B": "Section 382 limits annual NOL use based on company value times long-term tax-exempt rate",
-      "C": "NOL can only offset 50% of income",
-      "D": "5-year waiting period before NOL can be used"
+      "A": "Section 382 limits annual NOL use based on company value times long-term tax-exempt rate",
+      "B": "NOL can only offset 50% of income",
+      "C": "5-year waiting period before NOL can be used",
+      "D": "NOL is completely forfeited"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 382 limits annual NOL usage after an ownership change (>50% shift in 3 years). The limit equals the corporation's value times the long-term tax-exempt rate. This prevents 'trafficking' in loss corporations.",
     "tip": "Section 382: Annual NOL limit = Corp value × long-term exempt rate. Anti-loss-trafficking.",
     "calculationRequired": false,
@@ -12322,12 +12322,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A tax-exempt investor uses a 'blocker corporation' to invest in a partnership generating UBTI. What is the primary tax benefit?",
     "options": {
-      "A": "Eliminates all taxation on the investment",
-      "B": "Converts UBTI to dividend income taxable only when distributed",
-      "C": "Allows faster depreciation deductions",
-      "D": "Provides Section 199A deduction"
+      "A": "Allows faster depreciation deductions",
+      "B": "Provides Section 199A deduction",
+      "C": "Eliminates all taxation on the investment",
+      "D": "Converts UBTI to dividend income taxable only when distributed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A C corporation blocker converts partnership UBTI into corporate income taxed at corporate rates. Tax-exempt investors receive only dividends (not UBTI) when distributed. This 'blocks' UBTI from the exempt investor at the cost of corporate-level tax.",
     "tip": "Blocker corp: Converts UBTI to dividends. Tax cost = corporate tax rate on income.",
     "calculationRequired": false,
@@ -12364,12 +12364,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation converts from Delaware to Texas incorporation. Under what type of reorganization is this tax-free?",
     "options": {
-      "A": "Type A (merger)",
-      "B": "Type B (stock-for-stock)",
-      "C": "Type D (divisive)",
-      "D": "Type F (mere change in form)"
+      "A": "Type B (stock-for-stock)",
+      "B": "Type D (divisive)",
+      "C": "Type F (mere change in form)",
+      "D": "Type A (merger)"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "A Type F reorganization covers 'mere changes in identity, form, or place of organization.' Changing state of incorporation without changing business operations qualifies. No gain or loss is recognized.",
     "tip": "Type F: Identity/form/place changes. Useful for redomiciliation, conversion, etc.",
     "calculationRequired": false,
@@ -12406,12 +12406,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An 'Up-C' structure used in IPOs involves:",
     "options": {
-      "A": "Converting partnership to C corporation before IPO",
-      "B": "Creating a C corporation parent that holds partnership units",
-      "C": "Merging multiple partnerships into one",
-      "D": "Electing S corporation status after going public"
+      "A": "Electing S corporation status after going public",
+      "B": "Converting partnership to C corporation before IPO",
+      "C": "Creating a C corporation parent that holds partnership units",
+      "D": "Merging multiple partnerships into one"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Up-C structure creates a C corporation holding company that IPOs while the underlying business remains a partnership. Original owners keep partnership units, preserving pass-through treatment. Public shareholders own C corp stock.",
     "tip": "Up-C: C corp shell for IPO, partnership underneath. Preserves pass-through for founders.",
     "calculationRequired": false,
@@ -12427,12 +12427,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells QSBS held for 4 years (not meeting the 5-year exclusion). Under Section 1045, gain may be deferred if:",
     "options": {
-      "A": "Deferral is automatic for all QSBS",
-      "B": "Proceeds are reinvested in other QSBS within 60 days",
-      "C": "The stock was held for at least 3 years",
-      "D": "No deferral is available for stock held less than 5 years"
+      "A": "No deferral is available for stock held less than 5 years",
+      "B": "Deferral is automatic for all QSBS",
+      "C": "Proceeds are reinvested in other QSBS within 60 days",
+      "D": "The stock was held for at least 3 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 1045 allows deferral (not exclusion) of QSBS gain if held for at least 6 months and proceeds are reinvested in other QSBS within 60 days. This is useful when the 5-year holding period for exclusion hasn't been met.",
     "tip": "Section 1045: Defer QSBS gain by reinvesting in other QSBS within 60 days. 6-month min hold.",
     "calculationRequired": false,
@@ -12469,12 +12469,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A shareholder advances $500,000 to their closely held corporation with no fixed repayment terms, interest rate below market, and repayment subordinated to other creditors. The IRS may recharacterize this as:",
     "options": {
-      "A": "Valid debt in all cases",
-      "B": "Equity contribution",
-      "C": "Hybrid instrument",
-      "D": "Gift to the corporation"
+      "A": "Gift to the corporation",
+      "B": "Valid debt in all cases",
+      "C": "Equity contribution",
+      "D": "Hybrid instrument"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The IRS examines multiple factors to distinguish debt from equity: fixed maturity, interest rate, debt-equity ratio, repayment terms, subordination. Here, the factors suggest equity. Recharacterization makes interest non-deductible and repayments potentially dividends.",
     "tip": "Debt-equity factors: Maturity, rate, ratio, terms, subordination. Document loans properly.",
     "calculationRequired": false,
@@ -12490,12 +12490,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A high-income professional wants to minimize tax while protecting assets and preserving flexibility. Which structure best accomplishes these goals?",
     "options": {
-      "A": "Sole proprietorship for simplicity",
-      "B": "S corporation operating company with LLC holding company for real estate",
-      "C": "C corporation to avoid pass-through income",
-      "D": "General partnership for loss flow-through"
+      "A": "General partnership for loss flow-through",
+      "B": "Sole proprietorship for simplicity",
+      "C": "S corporation operating company with LLC holding company for real estate",
+      "D": "C corporation to avoid pass-through income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "S corp minimizes SE tax and provides pass-through treatment. Separate LLC for real estate provides asset protection and rental losses (potentially deductible with REP status). This combination addresses self-employment, pass-through, and liability goals.",
     "tip": "Common optimal structure: S corp for operations (SE tax savings) + LLC for real estate (protection).",
     "calculationRequired": false,
@@ -12511,12 +12511,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. citizen living in France earns $150,000 in wages from a French employer. For U.S. tax purposes, this income is:",
     "options": {
-      "A": "Not taxable because earned abroad",
-      "B": "Taxable because U.S. citizens are taxed on worldwide income",
-      "C": "Taxable only if remitted to the U.S.",
-      "D": "Exempt under the U.S.-France tax treaty"
+      "A": "Exempt under the U.S.-France tax treaty",
+      "B": "Not taxable because earned abroad",
+      "C": "Taxable because U.S. citizens are taxed on worldwide income",
+      "D": "Taxable only if remitted to the U.S."
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "U.S. citizens and residents are taxed on worldwide income regardless of where it is earned or where they reside. Relief from double taxation comes through the foreign earned income exclusion or foreign tax credit, not exemption.",
     "tip": "U.S. citizens: Worldwide taxation. Location of income doesn't matter. Relief through FEIE or FTC.",
     "calculationRequired": false,
@@ -12532,12 +12532,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The foreign earned income exclusion (FEIE) for 2024 allows qualifying individuals to exclude approximately:",
     "options": {
-      "A": "$75,000",
-      "B": "$95,000",
-      "C": "$126,500",
-      "D": "$150,000"
+      "A": "$126,500",
+      "B": "$150,000",
+      "C": "$75,000",
+      "D": "$95,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The 2024 FEIE is $126,500 (indexed annually). This exclusion applies to foreign earned income for U.S. citizens or residents who meet either the bona fide residence test or physical presence test.",
     "tip": "FEIE 2024: ~$126,500. Requires bona fide residence OR 330 days physical presence test.",
     "calculationRequired": false,
@@ -12574,12 +12574,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer can claim the foreign tax credit for taxes paid on income that is also excluded under the foreign earned income exclusion:",
     "options": {
-      "A": "True—both benefits can be claimed on the same income",
-      "B": "False—cannot claim FTC on excluded income",
-      "C": "Only if taxes exceed 25% of income",
-      "D": "Only for self-employment taxes"
+      "A": "Only if taxes exceed 25% of income",
+      "B": "Only for self-employment taxes",
+      "C": "True—both benefits can be claimed on the same income",
+      "D": "False—cannot claim FTC on excluded income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "No foreign tax credit can be claimed for taxes paid on income excluded under FEIE. Taxpayers must choose which benefit to apply. For high-tax countries, FTC may be more beneficial than FEIE.",
     "tip": "FEIE and FTC: Cannot double-dip. Choose which benefit to claim on foreign income.",
     "calculationRequired": false,
@@ -12595,12 +12595,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. person must file FinCEN Form 114 (FBAR) if the aggregate value of foreign financial accounts exceeded what amount at any time during the year?",
     "options": {
-      "A": "$10,000",
-      "B": "$50,000",
-      "C": "$100,000",
-      "D": "$200,000"
+      "A": "$50,000",
+      "B": "$100,000",
+      "C": "$200,000",
+      "D": "$10,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "FBAR filing is required if aggregate foreign financial accounts exceed $10,000 at any point during the year. This is separate from FATCA Form 8938, which has higher thresholds. Penalties for non-filing are severe.",
     "tip": "FBAR threshold: $10,000 aggregate maximum value. Much lower than FATCA thresholds.",
     "calculationRequired": false,
@@ -12616,12 +12616,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In addition to the foreign earned income exclusion, a qualifying expatriate may also exclude or deduct:",
     "options": {
-      "A": "All foreign living expenses",
-      "B": "Qualified foreign housing amounts above a base amount",
-      "C": "Foreign education expenses",
-      "D": "Transportation to and from the U.S."
+      "A": "Qualified foreign housing amounts above a base amount",
+      "B": "Foreign education expenses",
+      "C": "Transportation to and from the U.S.",
+      "D": "All foreign living expenses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The foreign housing exclusion (employees) or deduction (self-employed) allows exclusion of qualified housing expenses above a base amount (16% of FEIE) up to a cap (typically 30% of FEIE, higher in expensive cities).",
     "tip": "Housing exclusion: Expenses above base amount (16% of FEIE), capped at 30% typically.",
     "calculationRequired": false,
@@ -12637,12 +12637,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. taxpayer living in the U.S. must file Form 8938 (Statement of Specified Foreign Financial Assets) if foreign assets exceed what threshold (unmarried, living in U.S.)?",
     "options": {
-      "A": "$10,000 at any time",
-      "B": "$50,000 at year end or $75,000 at any time",
-      "C": "$100,000 at any time",
-      "D": "$200,000 at year end"
+      "A": "$50,000 at year end or $75,000 at any time",
+      "B": "$100,000 at any time",
+      "C": "$200,000 at year end",
+      "D": "$10,000 at any time"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Form 8938 thresholds for unmarried taxpayers living in the U.S.: $50,000 on last day of year or $75,000 at any time during the year. Thresholds are higher for those living abroad or married filing jointly.",
     "tip": "Form 8938 (U.S. resident, single): $50K year-end OR $75K any time. Higher thresholds abroad.",
     "calculationRequired": false,
@@ -12658,12 +12658,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $100,000 foreign source income out of $200,000 total income. U.S. tax before credits is $50,000. Foreign taxes paid were $30,000. What is the maximum foreign tax credit?",
     "options": {
-      "A": "$25,000",
-      "B": "$30,000",
-      "C": "$50,000",
-      "D": "$20,000"
+      "A": "$50,000",
+      "B": "$20,000",
+      "C": "$25,000",
+      "D": "$30,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "FTC limitation = U.S. tax × (foreign source income / worldwide income) = $50,000 × ($100,000 / $200,000) = $25,000. Even though $30,000 was paid, only $25,000 can be credited. The $5,000 excess carries over.",
     "tip": "FTC limit = U.S. tax × (foreign income / total income). Excess credits carry 1 back, 10 forward.",
     "calculationRequired": true,
@@ -12679,12 +12679,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which factor is most important in establishing bona fide residence in a foreign country for FEIE purposes?",
     "options": {
-      "A": "Number of days present",
-      "B": "Intent to make the foreign country the permanent home",
-      "C": "Citizenship in the foreign country",
-      "D": "Owning property in the foreign country"
+      "A": "Owning property in the foreign country",
+      "B": "Number of days present",
+      "C": "Intent to make the foreign country the permanent home",
+      "D": "Citizenship in the foreign country"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Bona fide residence focuses on the taxpayer's intent and establishment of a home in the foreign country. Factors include maintaining a permanent home, family location, possessions, bank accounts, and social ties. Length of stay matters but intent is paramount.",
     "tip": "Bona fide residence = intent + establishing home. All facts and circumstances matter.",
     "calculationRequired": false,
@@ -12700,12 +12700,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. person owns shares in a foreign mutual fund. This investment is likely classified as:",
     "options": {
-      "A": "Qualified foreign corporation",
-      "B": "Passive foreign investment company (PFIC)",
-      "C": "Controlled foreign corporation (CFC)",
-      "D": "Foreign personal holding company"
+      "A": "Controlled foreign corporation (CFC)",
+      "B": "Foreign personal holding company",
+      "C": "Qualified foreign corporation",
+      "D": "Passive foreign investment company (PFIC)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Foreign mutual funds are typically PFICs because they meet the 75% passive income test or 50% passive assets test. PFIC rules impose harsh taxation—either current inclusion, excess distribution regime, or QEF/mark-to-market elections.",
     "tip": "Foreign mutual funds = usually PFIC. Very unfavorable tax treatment without QEF election.",
     "calculationRequired": false,
@@ -12721,12 +12721,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A person is treated as a resident of both the U.S. and Canada under each country's domestic law. Under the U.S.-Canada tax treaty, where is residence determined?",
     "options": {
-      "A": "Country of citizenship",
-      "B": "Country where more time is spent",
-      "C": "Tie-breaker rules based on permanent home, center of vital interests, habitual abode",
-      "D": "The taxpayer chooses"
+      "A": "Country where more time is spent",
+      "B": "Tie-breaker rules based on permanent home, center of vital interests, habitual abode",
+      "C": "The taxpayer chooses",
+      "D": "Country of citizenship"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Tax treaties use tie-breaker rules: permanent home, center of vital interests (economic and personal ties), habitual abode, nationality. These are applied sequentially until residence is determined in one country.",
     "tip": "Treaty tie-breaker: Permanent home → vital interests → habitual abode → nationality.",
     "calculationRequired": false,
@@ -12763,12 +12763,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. citizen renounces citizenship with $5 million in unrealized gains on worldwide assets. Under the exit tax rules, what happens?",
     "options": {
-      "A": "No tax until assets are sold",
-      "B": "Mark-to-market taxation with exemption for first ~$866,000 (2024)",
-      "C": "Immediate 30% tax on all assets",
-      "D": "Tax deferral until death"
+      "A": "Immediate 30% tax on all assets",
+      "B": "Tax deferral until death",
+      "C": "No tax until assets are sold",
+      "D": "Mark-to-market taxation with exemption for first ~$866,000 (2024)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Covered expatriates are subject to mark-to-market taxation on worldwide assets upon renouncing citizenship. The first ~$866,000 (2024, indexed) of gain is exempt. Deferred compensation and certain trust interests have special rules.",
     "tip": "Exit tax: Mark-to-market with ~$866K exemption. Applies to 'covered expatriates.'",
     "calculationRequired": false,
@@ -12805,12 +12805,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. beneficiary receives a $50,000 distribution from a foreign trust. Which form must be filed?",
     "options": {
-      "A": "Form 8938 only",
-      "B": "FBAR only",
-      "C": "Form 3520",
-      "D": "No form required for distributions"
+      "A": "Form 3520",
+      "B": "No form required for distributions",
+      "C": "Form 8938 only",
+      "D": "FBAR only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Form 3520 must be filed by U.S. beneficiaries receiving distributions from foreign trusts. Penalties for non-filing can be severe (up to 35% of gross distribution). Form 3520-A is filed by the trust itself.",
     "tip": "Foreign trust distribution to U.S. person = Form 3520 required. Severe penalties for non-filing.",
     "calculationRequired": false,
@@ -12826,12 +12826,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. resident performs services for a U.S. employer while physically present in Japan. The compensation is:",
     "options": {
-      "A": "U.S. source income",
-      "B": "Foreign source income",
-      "C": "Split based on time in each location",
-      "D": "Source depends on employer location"
+      "A": "Source depends on employer location",
+      "B": "U.S. source income",
+      "C": "Foreign source income",
+      "D": "Split based on time in each location"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Personal services income is sourced where the services are performed, regardless of employer location or residence. Services performed in Japan generate foreign source income, which may qualify for FEIE or affect FTC calculations.",
     "tip": "Services income: Source = where performed. Not where employer located or payment received.",
     "calculationRequired": false,
@@ -12847,12 +12847,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. individual shareholder owns 30% of a controlled foreign corporation (CFC). They must include in income their share of:",
     "options": {
-      "A": "All CFC income",
-      "B": "Only distributed dividends",
-      "C": "Subpart F income and GILTI",
-      "D": "Nothing until the CFC is sold"
+      "A": "Nothing until the CFC is sold",
+      "B": "All CFC income",
+      "C": "Only distributed dividends",
+      "D": "Subpart F income and GILTI"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "U.S. shareholders of CFCs must include their share of Subpart F income (certain passive and tainted income) and GILTI (Global Intangible Low-Taxed Income) currently, regardless of distribution. Individuals don't get the Section 250 GILTI deduction.",
     "tip": "CFC individual shareholders: Include Subpart F + GILTI. No Section 250 deduction (unlike C corps).",
     "calculationRequired": false,
@@ -12868,12 +12868,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer excludes $126,500 under FEIE and has $50,000 additional taxable income. At what rate is the $50,000 taxed?",
     "options": {
-      "A": "Starting at the lowest bracket",
-      "B": "At the rate that would apply if FEIE income were included",
-      "C": "Flat 20% rate",
-      "D": "Depends on filing status"
+      "A": "Flat 20% rate",
+      "B": "Depends on filing status",
+      "C": "Starting at the lowest bracket",
+      "D": "At the rate that would apply if FEIE income were included"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "FEIE-excluded income is used to determine the tax rate ('stacking rule'). The $50,000 is taxed as if it were the top portion of $176,500 total income, pushing it into higher brackets than if FEIE income were ignored.",
     "tip": "FEIE stacking: Excluded income affects tax rate on remaining income. Higher effective rates.",
     "calculationRequired": false,
@@ -12889,12 +12889,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A green card holder who has never been to the U.S. in the current year has what U.S. tax filing obligation?",
     "options": {
-      "A": "No filing required if not present in U.S.",
-      "B": "Must file on worldwide income as a resident",
-      "C": "Only U.S. source income is taxable",
-      "D": "Filing required only if income exceeds $200,000"
+      "A": "Filing required only if income exceeds $200,000",
+      "B": "No filing required if not present in U.S.",
+      "C": "Must file on worldwide income as a resident",
+      "D": "Only U.S. source income is taxable"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Green card holders (lawful permanent residents) are U.S. tax residents regardless of physical presence. They must file and report worldwide income. Residence continues until the green card is officially abandoned or revoked.",
     "tip": "Green card = U.S. tax resident. Worldwide income taxable regardless of where living.",
     "calculationRequired": false,
@@ -12910,12 +12910,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A foreign national was in the U.S. for 100 days in 2024, 120 days in 2023, and 150 days in 2022. Do they meet the substantial presence test for 2024?",
     "options": {
-      "A": "Yes—total days exceed 183",
-      "B": "No—calculated days are under 183",
-      "C": "Depends on visa type",
-      "D": "Yes—any year over 100 days triggers residence"
+      "A": "No—calculated days are under 183",
+      "B": "Depends on visa type",
+      "C": "Yes—any year over 100 days triggers residence",
+      "D": "Yes—total days exceed 183"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Substantial presence calculation: 2024 days (100 × 1) + 2023 days (120 × 1/3 = 40) + 2022 days (150 × 1/6 = 25) = 100 + 40 + 25 = 165 days. Must be 183+ to meet the test. This person is NOT a resident under this test.",
     "tip": "SPT formula: Year 1 full + Year 2 ÷ 3 + Year 3 ÷ 6 ≥ 183 days.",
     "calculationRequired": true,
@@ -12931,12 +12931,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. citizen owns rental property in Spain generating $30,000 annual income. How is this reported?",
     "options": {
-      "A": "Not reportable if reinvested in Spain",
-      "B": "Schedule E with FTC available for Spanish taxes paid",
-      "C": "Form 8938 only",
-      "D": "Only if funds are brought to the U.S."
+      "A": "Schedule E with FTC available for Spanish taxes paid",
+      "B": "Form 8938 only",
+      "C": "Only if funds are brought to the U.S.",
+      "D": "Not reportable if reinvested in Spain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Foreign rental income is reported on Schedule E like domestic rentals. Foreign taxes paid (Spanish income tax) generate a foreign tax credit. FATCA reporting (Form 8938) may also apply if the property meets asset thresholds.",
     "tip": "Foreign rental: Schedule E reporting + FTC for foreign taxes. May also need Form 8938.",
     "calculationRequired": false,
@@ -12973,12 +12973,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. person receives €50,000 when EUR/USD = 1.10. When converted to USD at EUR/USD = 1.20, what is the tax treatment?",
     "options": {
-      "A": "No gain—same euros received",
-      "B": "$5,000 ordinary currency gain",
-      "C": "$5,000 capital gain",
-      "D": "Depends on holding period"
+      "A": "Depends on holding period",
+      "B": "No gain—same euros received",
+      "C": "$5,000 ordinary currency gain",
+      "D": "$5,000 capital gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Foreign currency gain/loss on personal transactions is generally ordinary income/loss under Section 988. The €50,000 was worth $55,000 when received and $60,000 when converted, resulting in $5,000 ordinary gain.",
     "tip": "Foreign currency gain/loss = ordinary income/loss (Section 988). Not capital gain.",
     "calculationRequired": true,
@@ -13036,12 +13036,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. person owns 15% of a CFC. Are they required to file Form 5471?",
     "options": {
-      "A": "No—only 10%+ shareholders file",
-      "B": "Yes—all CFC shareholders must file",
-      "C": "Depends on category of filer",
-      "D": "Only if they receive distributions"
+      "A": "Only if they receive distributions",
+      "B": "No—only 10%+ shareholders file",
+      "C": "Yes—all CFC shareholders must file",
+      "D": "Depends on category of filer"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Form 5471 filing depends on category of filer. Category 4 filers (U.S. persons who 'control' a CFC—generally 10%+ with 50% U.S. shareholder test met) must file. A 15% shareholder is a U.S. shareholder but may not be a Category 4 filer depending on total U.S. ownership.",
     "tip": "Form 5471: Multiple categories with different requirements. 10% = U.S. shareholder, but not all file.",
     "calculationRequired": false,
@@ -13057,12 +13057,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer claimed FEIE in prior years but now wants to revoke the election and use FTC instead. What is the consequence?",
     "options": {
-      "A": "Can switch freely each year",
-      "B": "Must wait 5 years before re-electing FEIE without IRS consent",
-      "C": "Cannot revoke once elected",
-      "D": "Revocation requires amended returns for all prior years"
+      "A": "Revocation requires amended returns for all prior years",
+      "B": "Can switch freely each year",
+      "C": "Must wait 5 years before re-electing FEIE without IRS consent",
+      "D": "Cannot revoke once elected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Revoking FEIE is allowed, but if revoked, the taxpayer cannot re-elect FEIE for 5 years without IRS consent. This prevents year-by-year arbitrage between FEIE and FTC. Consider long-term planning before electing.",
     "tip": "FEIE revocation: 5-year lockout from re-election without IRS consent.",
     "calculationRequired": false,
@@ -13099,12 +13099,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells PFIC stock for $100,000 gain without a QEF or mark-to-market election. The holding period is 4 years. How is the gain taxed under the default regime?",
     "options": {
-      "A": "Long-term capital gain at 20%",
-      "B": "Ordinary income at marginal rates",
-      "C": "Allocated over holding period with interest charges at highest marginal rate",
-      "D": "50% ordinary income, 50% capital gain"
+      "A": "50% ordinary income, 50% capital gain",
+      "B": "Long-term capital gain at 20%",
+      "C": "Ordinary income at marginal rates",
+      "D": "Allocated over holding period with interest charges at highest marginal rate"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The default PFIC regime allocates excess distributions (including gains) over the holding period. Prior year allocations are taxed at highest rate in effect for those years plus an interest charge. Current year allocation is ordinary income.",
     "tip": "Default PFIC: Gain allocated over holding period + highest rates + interest charges. Very punitive.",
     "calculationRequired": false,
@@ -13120,12 +13120,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. citizen participates in a UK pension plan. For U.S. tax purposes, employer contributions to the plan are:",
     "options": {
-      "A": "Always tax-deferred like U.S. plans",
-      "B": "Currently taxable unless a treaty exemption applies",
-      "C": "Never taxable to U.S. persons",
-      "D": "Taxable only upon distribution"
+      "A": "Taxable only upon distribution",
+      "B": "Always tax-deferred like U.S. plans",
+      "C": "Currently taxable unless a treaty exemption applies",
+      "D": "Never taxable to U.S. persons"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Foreign pensions don't automatically qualify for U.S. tax deferral. Employer contributions may be currently taxable. Some treaties (like U.S.-UK) provide limited deferral. PFIC rules may also apply to foreign pension investments.",
     "tip": "Foreign pensions: Generally taxable currently unless treaty provides deferral. Complex rules.",
     "calculationRequired": false,
@@ -13204,12 +13204,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An individual moving to the U.S. owns appreciated foreign assets. What planning strategy should be considered before becoming a U.S. resident?",
     "options": {
-      "A": "Sell assets and recognize gain while still nonresident",
-      "B": "Wait until U.S. resident to get stepped-up basis",
-      "C": "Transfer assets to a foreign trust",
-      "D": "There is no planning opportunity"
+      "A": "Wait until U.S. resident to get stepped-up basis",
+      "B": "Transfer assets to a foreign trust",
+      "C": "There is no planning opportunity",
+      "D": "Sell assets and recognize gain while still nonresident"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Pre-immigration planning involves recognizing gain on appreciated assets before becoming a U.S. resident (when only U.S. source income is taxable). This provides a 'step up' in basis. Once resident, worldwide gains are taxable.",
     "tip": "Pre-immigration: Recognize foreign gains before U.S. residency. Creates basis step-up.",
     "calculationRequired": false,
@@ -13246,12 +13246,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 17-year-old dependent has $1,500 in wages and $600 in interest income. Must they file a tax return for 2024?",
     "options": {
-      "A": "No—total income is below standard deduction",
-      "B": "Yes—unearned income exceeds $1,300",
-      "C": "No—dependents don't file returns",
-      "D": "Yes—wages exceed $500"
+      "A": "Yes—wages exceed $500",
+      "B": "No—total income is below standard deduction",
+      "C": "Yes—unearned income exceeds $1,300",
+      "D": "No—dependents don't file returns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dependents must file if unearned income exceeds $1,300 (2024). Interest of $600 is under this threshold. However, total income must also be evaluated. For dependents, the filing threshold is the greater of $1,300 or earned income + $450, up to standard deduction.",
     "tip": "Dependent filing: Unearned > $1,300, or earned > standard deduction triggers filing requirement.",
     "calculationRequired": false,
@@ -13267,12 +13267,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which entity can be a shareholder of an S corporation?",
     "options": {
-      "A": "A C corporation",
-      "B": "A partnership",
-      "C": "A grantor trust",
-      "D": "A nonresident alien"
+      "A": "A grantor trust",
+      "B": "A nonresident alien",
+      "C": "A C corporation",
+      "D": "A partnership"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Eligible S corp shareholders include individuals, estates, certain trusts (grantor trusts, QSSTs, ESBTs), and tax-exempt organizations. C corporations, partnerships, and nonresident aliens cannot be S corp shareholders.",
     "tip": "S corp eligible shareholders: Individuals, estates, qualifying trusts. No corps, partnerships, or NRAs.",
     "calculationRequired": false,
@@ -13309,12 +13309,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A married taxpayer covered by an employer retirement plan wants to deduct a traditional IRA contribution. At what income level does the deduction begin to phase out for 2024 (MFJ)?",
     "options": {
-      "A": "$77,000",
-      "B": "$123,000",
-      "C": "$146,000",
-      "D": "$230,000"
+      "A": "$230,000",
+      "B": "$77,000",
+      "C": "$123,000",
+      "D": "$146,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "For MFJ taxpayers where the contributing spouse is covered by a retirement plan, the traditional IRA deduction phases out at $123,000-$143,000 MAGI for 2024. If only the other spouse is covered, higher thresholds apply.",
     "tip": "Traditional IRA phase-out (MFJ, covered by plan): $123K-$143K for 2024.",
     "calculationRequired": false,
@@ -13330,12 +13330,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the gift tax annual exclusion for 2024?",
     "options": {
-      "A": "$15,000",
-      "B": "$16,000",
-      "C": "$17,000",
-      "D": "$18,000"
+      "A": "$18,000",
+      "B": "$15,000",
+      "C": "$16,000",
+      "D": "$17,000"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "The 2024 gift tax annual exclusion is $18,000 per donee. This allows unlimited recipients without using unified credit or filing gift tax returns (unless gift-splitting with spouse).",
     "tip": "2024 annual exclusion: $18,000 per donee. Indexed for inflation.",
     "calculationRequired": false,
@@ -13351,12 +13351,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The child tax credit begins to phase out for married filing jointly taxpayers when modified AGI exceeds:",
     "options": {
-      "A": "$200,000",
-      "B": "$400,000",
-      "C": "$150,000",
-      "D": "$250,000"
+      "A": "$150,000",
+      "B": "$250,000",
+      "C": "$200,000",
+      "D": "$400,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The child tax credit phases out at $400,000 for MFJ ($200,000 for all other filing statuses). The credit is reduced by $50 for each $1,000 (or part thereof) of MAGI over the threshold.",
     "tip": "Child tax credit phase-out: $400K MFJ, $200K others. Reduces $50 per $1K over threshold.",
     "calculationRequired": false,
@@ -13372,12 +13372,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner's outside basis is $50,000. The partnership allocates $30,000 of income and makes a $20,000 cash distribution. What is the partner's ending basis?",
     "options": {
-      "A": "$50,000",
-      "B": "$60,000",
-      "C": "$80,000",
-      "D": "$100,000"
+      "A": "$60,000",
+      "B": "$80,000",
+      "C": "$100,000",
+      "D": "$50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Beginning basis $50,000 + income allocation $30,000 = $80,000. Less distribution $20,000 = $60,000 ending basis. Income increases basis; distributions decrease basis (but not below zero).",
     "tip": "Partner basis: + income, - losses, + contributions, - distributions. Cannot go below zero.",
     "calculationRequired": true,
@@ -13393,12 +13393,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the federal estate tax exemption (basic exclusion amount) for 2024?",
     "options": {
-      "A": "$5.49 million",
-      "B": "$12.06 million",
-      "C": "$13.61 million",
-      "D": "$27.22 million"
+      "A": "$12.06 million",
+      "B": "$13.61 million",
+      "C": "$27.22 million",
+      "D": "$5.49 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The 2024 basic exclusion amount is $13.61 million per individual (indexed). Married couples can shelter $27.22 million combined with portability. This amount is scheduled to drop significantly after 2025 under TCJA sunset.",
     "tip": "2024 estate exemption: $13.61M per person. Will decrease substantially after 2025.",
     "calculationRequired": false,
@@ -13414,12 +13414,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells property with a $600,000 sales price and $200,000 basis for $100,000 down and $500,000 note. What gross profit percentage applies to each payment?",
     "options": {
-      "A": "33.3%",
-      "B": "50%",
-      "C": "66.7%",
-      "D": "100%"
+      "A": "66.7%",
+      "B": "100%",
+      "C": "33.3%",
+      "D": "50%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Gross profit = $600,000 - $200,000 = $400,000. Gross profit percentage = $400,000 / $600,000 = 66.7%. This percentage applies to each principal payment (not interest) to determine recognized gain.",
     "tip": "Installment sale: Gross profit % = Gain / Contract price. Applies to principal payments.",
     "calculationRequired": true,
@@ -13435,12 +13435,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A married filing jointly taxpayer has $400,000 in wages. How much additional Medicare tax (0.9%) is owed?",
     "options": {
-      "A": "$0",
-      "B": "$1,350",
-      "C": "$2,250",
-      "D": "$3,600"
+      "A": "$2,250",
+      "B": "$3,600",
+      "C": "$0",
+      "D": "$1,350"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The 0.9% additional Medicare tax applies to wages exceeding $250,000 for MFJ ($200,000 for single). Tax = ($400,000 - $250,000) × 0.9% = $150,000 × 0.9% = $1,350.",
     "tip": "Additional Medicare tax: 0.9% on wages over $250K (MFJ) / $200K (single).",
     "calculationRequired": true,
@@ -13456,12 +13456,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Most states have moved to which apportionment formula for multistate businesses?",
     "options": {
-      "A": "Three-factor equally weighted",
-      "B": "Single sales factor",
-      "C": "Two-factor payroll and property",
-      "D": "Throwback rule only"
+      "A": "Throwback rule only",
+      "B": "Three-factor equally weighted",
+      "C": "Single sales factor",
+      "D": "Two-factor payroll and property"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Most states have adopted single sales factor apportionment, which bases taxable income solely on where sales occur. This benefits businesses with significant property and payroll in one state but sales in many states.",
     "tip": "Single sales factor trend: Most states now. Benefits companies with operations concentrated in one state.",
     "calculationRequired": false,
@@ -13477,12 +13477,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 409A, when can deferred compensation be distributed without penalty?",
     "options": {
-      "A": "Anytime at employee's request",
-      "B": "Only upon specified events like separation from service, disability, or death",
-      "C": "After 5 years of deferral",
-      "D": "At age 59½"
+      "A": "At age 59½",
+      "B": "Anytime at employee's request",
+      "C": "Only upon specified events like separation from service, disability, or death",
+      "D": "After 5 years of deferral"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 409A limits distributions to specified events: separation from service, disability, death, specified time or schedule, change in control, or unforeseeable emergency. Violation results in income inclusion plus 20% penalty.",
     "tip": "409A distributions: Only at specified events. 20% penalty + income inclusion for violations.",
     "calculationRequired": false,
@@ -13561,12 +13561,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partnership has inventory and substantially appreciated unrealized receivables. These are referred to as:",
     "options": {
-      "A": "Capital assets",
-      "B": "Section 751 'hot' assets",
-      "C": "Section 1231 assets",
-      "D": "Passive assets"
+      "A": "Section 751 'hot' assets",
+      "B": "Section 1231 assets",
+      "C": "Passive assets",
+      "D": "Capital assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 751 'hot' assets include unrealized receivables and substantially appreciated inventory. Sales or exchanges involving these assets convert what would be capital gain into ordinary income.",
     "tip": "Hot assets (751): Inventory + unrealized receivables = ordinary income on sale/exchange.",
     "calculationRequired": false,
@@ -13582,12 +13582,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For research expenses to qualify for the Section 41 credit, the research must meet a four-part test. Which is NOT one of the requirements?",
     "options": {
-      "A": "Technological in nature",
-      "B": "Undertaken to eliminate uncertainty",
-      "C": "Process of experimentation",
-      "D": "Performed in the United States"
+      "A": "Process of experimentation",
+      "B": "Performed in the United States",
+      "C": "Technological in nature",
+      "D": "Undertaken to eliminate uncertainty"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "The four-part test: (1) permitted purpose (new/improved function, performance, quality, reliability), (2) technological in nature, (3) elimination of uncertainty, (4) process of experimentation. U.S. location is a separate requirement, not part of the four-part test.",
     "tip": "R&D four-part test: Purpose, technology, uncertainty, experimentation. U.S. location is separate.",
     "calculationRequired": false,
@@ -13603,12 +13603,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A beneficiary inherits stock with a decedent's basis of $100,000 and date of death FMV of $500,000. What is the beneficiary's basis?",
     "options": {
-      "A": "$100,000",
-      "B": "$300,000",
-      "C": "$500,000",
-      "D": "$600,000"
+      "A": "$300,000",
+      "B": "$500,000",
+      "C": "$600,000",
+      "D": "$100,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Inherited property generally receives a basis equal to fair market value at date of death (or alternate valuation date). The $400,000 of appreciation is never taxed due to the step-up.",
     "tip": "Step-up at death: Basis = FMV. Unrealized gain escapes income tax entirely.",
     "calculationRequired": false,
@@ -13624,12 +13624,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation with no accumulated E&P distributes $100,000 to its sole shareholder with $60,000 stock basis. How is the distribution treated?",
     "options": {
-      "A": "All $100,000 is dividend income",
-      "B": "$60,000 tax-free return of basis; $40,000 capital gain",
-      "C": "All $100,000 is capital gain",
-      "D": "$100,000 tax-free return of capital"
+      "A": "$100,000 tax-free return of capital",
+      "B": "All $100,000 is dividend income",
+      "C": "$60,000 tax-free return of basis; $40,000 capital gain",
+      "D": "All $100,000 is capital gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "With no E&P, distributions first reduce stock basis (tax-free) and then are treated as gain from sale of stock. $60,000 is return of basis, $40,000 excess is capital gain.",
     "tip": "S corp distributions (no E&P): Tax-free to extent of basis; excess = capital gain.",
     "calculationRequired": true,
@@ -13645,12 +13645,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 163(j), business interest expense is generally limited to what percentage of adjusted taxable income?",
     "options": {
-      "A": "10%",
-      "B": "30%",
-      "C": "50%",
-      "D": "No limitation"
+      "A": "50%",
+      "B": "No limitation",
+      "C": "10%",
+      "D": "30%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 163(j) limits the deduction for business interest expense to 30% of adjusted taxable income (ATI), plus floor plan financing interest and business interest income. Disallowed interest carries forward indefinitely.",
     "tip": "Section 163(j): Business interest limited to 30% of ATI. Small business exemption applies.",
     "calculationRequired": false,
@@ -13708,12 +13708,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells stock for a $10,000 loss and buys substantially identical stock 20 days later. What is the tax consequence?",
     "options": {
-      "A": "$10,000 loss is deductible",
-      "B": "Loss is disallowed and added to basis of new stock",
-      "C": "Loss is limited to $3,000",
-      "D": "Loss is deferred until the new stock is sold"
+      "A": "Loss is disallowed and added to basis of new stock",
+      "B": "Loss is limited to $3,000",
+      "C": "Loss is deferred until the new stock is sold",
+      "D": "$10,000 loss is deductible"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The wash sale rule disallows losses when substantially identical securities are purchased within 30 days before or after the sale. The disallowed loss is added to the basis of the replacement stock.",
     "tip": "Wash sale: 30-day window. Disallowed loss → added to basis of replacement stock.",
     "calculationRequired": false,
@@ -13729,12 +13729,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A single taxpayer has $300,000 MAGI including $50,000 of net investment income. What is the NIIT liability?",
     "options": {
-      "A": "$0",
-      "B": "$1,900",
-      "C": "$3,800",
-      "D": "$11,400"
+      "A": "$1,900",
+      "B": "$3,800",
+      "C": "$11,400",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NIIT is 3.8% on the lesser of net investment income or MAGI over threshold ($200,000 single). MAGI over threshold = $100,000. Net investment income = $50,000. NIIT = 3.8% × $50,000 (lesser amount) = $1,900.",
     "tip": "NIIT: 3.8% × lesser of (NII or MAGI over threshold). Thresholds: $250K MFJ, $200K single.",
     "calculationRequired": true,
@@ -13750,12 +13750,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer contributes $50,000 to a donor advised fund in December. Grant recommendations to charities are made the following year. What is the 2024 charitable deduction?",
     "options": {
-      "A": "$0—deduction when grants are made",
-      "B": "$50,000 in the year of contribution",
-      "C": "Split between years",
-      "D": "Deferred until grants are distributed"
+      "A": "$50,000 in the year of contribution",
+      "B": "Split between years",
+      "C": "Deferred until grants are distributed",
+      "D": "$0—deduction when grants are made"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Charitable deductions for DAF contributions are taken in the year of contribution, not when grants are recommended. The contribution is irrevocable when made, qualifying for immediate deduction.",
     "tip": "DAF deduction: Year of contribution. Immediate deduction, flexible grant timing.",
     "calculationRequired": false,
@@ -13792,12 +13792,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cash-basis taxpayer receives a check dated December 28, 2024. The taxpayer doesn't cash it until January 3, 2025. When is the income recognized?",
     "options": {
-      "A": "2024—when check was received",
-      "B": "2025—when check was cashed",
-      "C": "Can choose either year",
-      "D": "2024 only if check clears in 2024"
+      "A": "2025—when check was cashed",
+      "B": "Can choose either year",
+      "C": "2024 only if check clears in 2024",
+      "D": "2024—when check was received"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Under the constructive receipt doctrine, income is taxable when it's made available without substantial limitation. Receipt of a valid check constitutes constructive receipt regardless of when deposited, unless the check is postdated or subject to conditions.",
     "tip": "Constructive receipt: Income taxable when available. Check received = income in that year.",
     "calculationRequired": false,
@@ -13813,12 +13813,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A calendar-year partner receives guaranteed payments from a fiscal-year partnership (year-end March 31). When does the partner report guaranteed payments made in April through December?",
     "options": {
-      "A": "When received by the partner",
-      "B": "When the partnership's fiscal year ends",
-      "C": "Calendar year when paid",
-      "D": "Prorated between two years"
+      "A": "Prorated between two years",
+      "B": "When received by the partner",
+      "C": "When the partnership's fiscal year ends",
+      "D": "Calendar year when paid"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Partners report their distributive share (including guaranteed payments) when the partnership year ends. Guaranteed payments from April-December are reported when the partnership's year ends in March of the following year.",
     "tip": "Partnership items: Reported when partnership year ends, not when received. Year-end alignment matters.",
     "calculationRequired": false,
@@ -13834,12 +13834,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 30% interest in a $10 million closely held business is valued for gift tax. Appraisers apply a 25% combined discount. What is the gift tax value?",
     "options": {
-      "A": "$3,000,000",
-      "B": "$2,250,000",
-      "C": "$2,500,000",
-      "D": "$7,500,000"
+      "A": "$2,250,000",
+      "B": "$2,500,000",
+      "C": "$7,500,000",
+      "D": "$3,000,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Undiscounted value = $10M × 30% = $3M. With 25% combined discount: $3M × (1 - 25%) = $3M × 75% = $2,250,000 gift tax value. Minority and marketability discounts can significantly reduce transfer values.",
     "tip": "Valuation discounts: Minority + marketability can reduce values 20-40%+ combined.",
     "calculationRequired": true,
@@ -13855,12 +13855,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation converts to S status with $500,000 of net unrealized built-in gains. In year 3, the S corp sells an asset with $100,000 built-in gain. What is the BIG tax?",
     "options": {
-      "A": "$0—5-year period applies",
-      "B": "$21,000 (21% corporate rate)",
-      "C": "$35,000 (35% rate)",
-      "D": "Pass-through to shareholders only"
+      "A": "$21,000 (21% corporate rate)",
+      "B": "$35,000 (35% rate)",
+      "C": "Pass-through to shareholders only",
+      "D": "$0—5-year period applies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Built-in gains recognized within 5 years of C-to-S conversion are subject to corporate-level tax at 21%. The tax applies to the lesser of recognized gain or net unrealized built-in gain. BIG tax = $100,000 × 21% = $21,000.",
     "tip": "BIG tax: 21% corporate tax on gains within 5 years of C-to-S conversion.",
     "calculationRequired": true,
@@ -13876,12 +13876,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An executive receives restricted stock worth $100,000 (no cost) subject to 4-year vesting. What happens if an 83(b) election is made and the executive leaves after 2 years, forfeiting the stock?",
     "options": {
-      "A": "No tax consequence—election eliminates all risk",
-      "B": "Loss deduction for $100,000",
-      "C": "No deduction allowed; tax paid on original inclusion is lost",
-      "D": "Amended return to recover tax paid"
+      "A": "Amended return to recover tax paid",
+      "B": "No tax consequence—election eliminates all risk",
+      "C": "Loss deduction for $100,000",
+      "D": "No deduction allowed; tax paid on original inclusion is lost"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "If stock is forfeited after an 83(b) election, no deduction is allowed for the forfeiture. The tax paid on the original inclusion is not recoverable. This is the risk of 83(b)—paying tax on property that may never vest.",
     "tip": "83(b) risk: Forfeiture = no deduction, no recovery of tax paid. Evaluate vesting likelihood.",
     "calculationRequired": false,
@@ -13897,12 +13897,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has excess foreign tax credits that cannot be used in the current year. What is the carryover period?",
     "options": {
-      "A": "Forward 5 years only",
-      "B": "Back 1 year, forward 10 years",
-      "C": "Forward 20 years only",
-      "D": "No carryover—lost if not used"
+      "A": "No carryover—lost if not used",
+      "B": "Forward 5 years only",
+      "C": "Back 1 year, forward 10 years",
+      "D": "Forward 20 years only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Unused foreign tax credits can be carried back 1 year and forward 10 years. Credits are applied in chronological order (FIFO). The carryover period is shorter than NOLs (indefinite) or general business credits (1 back, 20 forward).",
     "tip": "FTC carryover: 1 year back, 10 years forward. Applied in order earned (FIFO).",
     "calculationRequired": false,
@@ -13918,12 +13918,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A simple trust has DNI of $30,000 and distributes $40,000 to the beneficiary. How much is taxable to the beneficiary?",
     "options": {
-      "A": "$30,000",
-      "B": "$40,000",
-      "C": "$10,000",
-      "D": "$0"
+      "A": "$0",
+      "B": "$30,000",
+      "C": "$40,000",
+      "D": "$10,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Beneficiaries are taxed on the lesser of actual distributions or DNI. The trust cannot distribute more taxable income than it has (DNI). The beneficiary reports $30,000; the additional $10,000 is tax-free distribution of corpus.",
     "tip": "Beneficiary income: Lesser of distribution or DNI. Excess = tax-free corpus distribution.",
     "calculationRequired": false,
@@ -13939,12 +13939,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with $500,000 taxable income has $200,000 QBI from a non-SSTB, but the business pays no W-2 wages and owns no qualified property. What is the Section 199A deduction?",
     "options": {
-      "A": "$40,000 (20% of QBI)",
-      "B": "$0 (limited by W-2 wages/property)",
-      "C": "$100,000 (20% of taxable income)",
-      "D": "$25,000 (partial phase-in)"
+      "A": "$0 (limited by W-2 wages/property)",
+      "B": "$100,000 (20% of taxable income)",
+      "C": "$25,000 (partial phase-in)",
+      "D": "$40,000 (20% of QBI)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Above the threshold ($364,200 MFJ), the deduction is limited to the greater of: (1) 50% of W-2 wages, or (2) 25% of W-2 wages + 2.5% of qualified property. With no wages and no property, both limits are $0.",
     "tip": "Above threshold: W-2 wages or property required for QBI deduction. Zero wages = zero deduction.",
     "calculationRequired": false,
@@ -13960,12 +13960,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Type A reorganization, target shareholders receive 60% stock and 40% cash. What are the tax consequences?",
     "options": {
-      "A": "Fully tax-free reorganization",
-      "B": "Fully taxable sale",
-      "C": "Tax-free for stock portion; boot triggers gain recognition up to realized gain",
-      "D": "Dividend treatment for all consideration"
+      "A": "Tax-free for stock portion; boot triggers gain recognition up to realized gain",
+      "B": "Dividend treatment for all consideration",
+      "C": "Fully tax-free reorganization",
+      "D": "Fully taxable sale"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Continuity of interest is met (40%+ stock). The stock received is tax-free. The cash 'boot' triggers gain recognition to the extent of realized gain. Loss is never recognized in reorganizations even with boot.",
     "tip": "Reorg with boot: Stock = tax-free; boot = gain recognized (not exceeding realized gain).",
     "calculationRequired": false,
@@ -14023,12 +14023,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the maximum employee elective deferral to a 401(k) plan for 2024 for a taxpayer under age 50?",
     "options": {
-      "A": "$7,000",
-      "B": "$15,500",
-      "C": "$23,000",
-      "D": "$30,500"
+      "A": "$30,500",
+      "B": "$7,000",
+      "C": "$15,500",
+      "D": "$23,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The 2024 employee 401(k) deferral limit is $23,000 (under age 50). Those 50+ can contribute an additional $7,500 catch-up, for a total of $30,500.",
     "tip": "2024 401(k): $23,000 + $7,500 catch-up (50+). Total employee + employer: $69,000.",
     "calculationRequired": false,
@@ -14044,12 +14044,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After 2022, business meals at restaurants are generally deductible at what percentage?",
     "options": {
-      "A": "0%",
-      "B": "50%",
-      "C": "80%",
-      "D": "100%"
+      "A": "50%",
+      "B": "80%",
+      "C": "100%",
+      "D": "0%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Business meals are generally 50% deductible (returned to normal after the temporary 100% deduction for 2021-2022). Entertainment expenses remain non-deductible.",
     "tip": "Business meals: 50% deductible (post-2022). Entertainment: 0% deductible.",
     "calculationRequired": false,
@@ -14086,12 +14086,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A married couple selling their primary residence can exclude up to what amount of gain under Section 121?",
     "options": {
-      "A": "$125,000",
-      "B": "$250,000",
-      "C": "$500,000",
-      "D": "$750,000"
+      "A": "$500,000",
+      "B": "$750,000",
+      "C": "$125,000",
+      "D": "$250,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Married couples filing jointly can exclude up to $500,000 of gain on a primary residence ($250,000 for single filers). Requirements: owned and used as primary residence for 2 of prior 5 years.",
     "tip": "Section 121: $500K MFJ, $250K single. 2-of-5-year ownership and use test.",
     "calculationRequired": false,
@@ -14107,12 +14107,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A married taxpayer gifts $50,000 to their child. With spouse's consent to split gifts, what is the taxable gift (after annual exclusions)?",
     "options": {
-      "A": "$0",
-      "B": "$14,000",
-      "C": "$32,000",
-      "D": "$50,000"
+      "A": "$32,000",
+      "B": "$50,000",
+      "C": "$0",
+      "D": "$14,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Gift-splitting treats the gift as $25,000 from each spouse. Annual exclusion per spouse per donee is $18,000 (2024). Taxable gift = ($25,000 - $18,000) × 2 = $14,000 total.",
     "tip": "Gift-splitting: Halves the gift. Each spouse uses their own annual exclusion.",
     "calculationRequired": true,
@@ -14128,12 +14128,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A calendar-year corporation wants S corp status for 2024. By when must Form 2553 be filed?",
     "options": {
-      "A": "December 31, 2023",
-      "B": "March 15, 2024",
-      "C": "April 15, 2024",
-      "D": "September 15, 2024"
+      "A": "September 15, 2024",
+      "B": "December 31, 2023",
+      "C": "March 15, 2024",
+      "D": "April 15, 2024"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "S elections must be filed by the 15th day of the 3rd month of the tax year (March 15 for calendar-year corporations). Late elections may qualify for relief under Rev. Proc. 2013-30.",
     "tip": "S election: Due by 2 months, 15 days into the tax year. Late relief available.",
     "calculationRequired": false,
@@ -14170,12 +14170,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer pays $6,000 in qualifying education expenses. What is the maximum American Opportunity Credit?",
     "options": {
-      "A": "$1,200",
-      "B": "$2,000",
-      "C": "$2,500",
-      "D": "$6,000"
+      "A": "$6,000",
+      "B": "$1,200",
+      "C": "$2,000",
+      "D": "$2,500"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "AOC = 100% of first $2,000 + 25% of next $2,000 = $2,000 + $500 = $2,500 maximum. Additional expenses don't increase the credit. 40% ($1,000) is refundable.",
     "tip": "AOC: $2,500 max (100% of $2K + 25% of next $2K). 40% refundable.",
     "calculationRequired": true,
@@ -14191,12 +14191,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with $100,000 AGI donates $70,000 cash to a public charity. What is the current year deduction?",
     "options": {
-      "A": "$50,000",
-      "B": "$60,000",
-      "C": "$70,000",
-      "D": "$30,000"
+      "A": "$30,000",
+      "B": "$50,000",
+      "C": "$60,000",
+      "D": "$70,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cash donations to public charities are limited to 60% of AGI. Deduction = $100,000 × 60% = $60,000. The remaining $10,000 carries forward for up to 5 years.",
     "tip": "Cash to public charity: 60% AGI limit. Excess carries forward 5 years.",
     "calculationRequired": true,
@@ -14212,12 +14212,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Many states enacted pass-through entity taxes (PTET) to work around which federal limitation?",
     "options": {
-      "A": "Section 163(j) interest limitation",
-      "B": "$10,000 SALT deduction cap",
-      "C": "Passive activity loss rules",
-      "D": "Section 199A income limits"
+      "A": "Passive activity loss rules",
+      "B": "Section 199A income limits",
+      "C": "Section 163(j) interest limitation",
+      "D": "$10,000 SALT deduction cap"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "PTETs allow pass-through entities to pay state tax at the entity level, generating a federal business deduction. This bypasses the $10,000 individual SALT cap since the deduction is at the entity level.",
     "tip": "PTET: State tax paid at entity level = federal business deduction. Workaround for $10K SALT cap.",
     "calculationRequired": false,
@@ -14254,12 +14254,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When is income recognized on a nonqualified stock option (NSO)?",
     "options": {
-      "A": "Grant date",
-      "B": "Vesting date",
-      "C": "Exercise date",
-      "D": "Sale date"
+      "A": "Exercise date",
+      "B": "Sale date",
+      "C": "Grant date",
+      "D": "Vesting date"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "NSOs trigger ordinary income at exercise equal to the bargain element (FMV minus exercise price). This differs from ISOs, which defer taxation until sale (if holding periods are met).",
     "tip": "NSO: Ordinary income at exercise. ISO: No income at exercise (if holding periods met).",
     "calculationRequired": false,
@@ -14275,12 +14275,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A simple trust is required to:",
     "options": {
-      "A": "Accumulate all income",
-      "B": "Distribute all income currently and make no charitable contributions from corpus",
-      "C": "Distribute all corpus",
-      "D": "Make discretionary distributions"
+      "A": "Make discretionary distributions",
+      "B": "Accumulate all income",
+      "C": "Distribute all income currently and make no charitable contributions from corpus",
+      "D": "Distribute all corpus"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Simple trusts must distribute all income currently (no accumulation), cannot make charitable contributions from corpus, and cannot distribute corpus. All other trusts are complex trusts.",
     "tip": "Simple trust: All income distributed currently, no charitable gifts from corpus, no corpus distributions.",
     "calculationRequired": false,
@@ -14296,12 +14296,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Stock becomes worthless in 2024. When is the loss deductible and what is the holding period determination?",
     "options": {
-      "A": "2024; holding period ends on actual worthlessness date",
-      "B": "2024; treated as sold on last day of the tax year",
-      "C": "When the company liquidates",
-      "D": "When the stock is formally cancelled"
+      "A": "When the stock is formally cancelled",
+      "B": "2024; holding period ends on actual worthlessness date",
+      "C": "2024; treated as sold on last day of the tax year",
+      "D": "When the company liquidates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Worthless securities are treated as sold for zero on the last day of the tax year in which they become worthless. This affects holding period—stock could become long-term by year-end even if it became worthless mid-year.",
     "tip": "Worthless securities: Deemed sold December 31 of worthless year. May affect ST/LT character.",
     "calculationRequired": false,
@@ -14317,12 +14317,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which type of income is generally included in personal holding company income?",
     "options": {
-      "A": "Manufacturing income",
-      "B": "Dividends, interest, and royalties",
-      "C": "Sales revenue",
-      "D": "Service income from contracts"
+      "A": "Dividends, interest, and royalties",
+      "B": "Sales revenue",
+      "C": "Service income from contracts",
+      "D": "Manufacturing income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "PHC income includes passive investment income: dividends, interest, royalties, and certain rents. If PHC income exceeds 60% of adjusted ordinary gross income and 5 or fewer individuals own 50%+ stock, the 20% PHC tax applies.",
     "tip": "PHC income: Passive investment types (dividends, interest, royalties, certain rents).",
     "calculationRequired": false,
@@ -14338,12 +14338,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer converts $100,000 from a traditional IRA (all pre-tax) to a Roth IRA. What is the tax consequence?",
     "options": {
-      "A": "No current tax; tax-free at distribution",
-      "B": "$100,000 included in ordinary income; future qualified distributions tax-free",
-      "C": "10% penalty plus ordinary income",
-      "D": "Capital gain treatment on conversion"
+      "A": "10% penalty plus ordinary income",
+      "B": "Capital gain treatment on conversion",
+      "C": "No current tax; tax-free at distribution",
+      "D": "$100,000 included in ordinary income; future qualified distributions tax-free"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Roth conversions include the converted amount in ordinary income (no 10% penalty for conversion itself). Future qualified distributions from the Roth are tax-free. The 5-year clock starts on conversion.",
     "tip": "Roth conversion: Ordinary income now, tax-free later. No 10% penalty on conversion itself.",
     "calculationRequired": false,
@@ -14359,12 +14359,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with prior year AGI of $180,000 wants to avoid underpayment penalties. What percentage of current year tax must be paid through withholding and estimates?",
     "options": {
-      "A": "90% of current year",
-      "B": "100% of prior year",
-      "C": "110% of prior year or 90% of current year",
-      "D": "100% of current year"
+      "A": "100% of prior year",
+      "B": "110% of prior year or 90% of current year",
+      "C": "100% of current year",
+      "D": "90% of current year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "For taxpayers with prior year AGI exceeding $150,000 MFJ ($75K MFS), the safe harbor is 110% of prior year tax (or 90% of current year). Below $150K, 100% of prior year tax satisfies the safe harbor.",
     "tip": "High-income safe harbor (>$150K AGI): 110% of prior year tax OR 90% of current year tax.",
     "calculationRequired": false,
@@ -14380,12 +14380,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Can a non-working spouse's hours be counted toward a taxpayer's real estate professional status?",
     "options": {
-      "A": "Yes—spouses combine hours",
-      "B": "No—each spouse must independently qualify",
-      "C": "Only for the 750-hour test, not the 50% test",
-      "D": "Only if filing jointly"
+      "A": "No—each spouse must independently qualify",
+      "B": "Only for the 750-hour test, not the 50% test",
+      "C": "Only if filing jointly",
+      "D": "Yes—spouses combine hours"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Each spouse must independently meet the REP tests. One spouse's hours cannot be combined with the other's for the >750 hour or >50% tests. However, either spouse qualifying allows joint return rental losses to be non-passive.",
     "tip": "REP: Each spouse qualifies independently. One qualifying spouse benefits joint return.",
     "calculationRequired": false,
@@ -14401,12 +14401,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When is the FBAR (FinCEN 114) due for calendar year taxpayers?",
     "options": {
-      "A": "April 15 (no extension)",
-      "B": "April 15 with automatic extension to October 15",
-      "C": "June 15",
-      "D": "Same as tax return deadline"
+      "A": "Same as tax return deadline",
+      "B": "April 15 (no extension)",
+      "C": "April 15 with automatic extension to October 15",
+      "D": "June 15"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "FBAR is due April 15 with an automatic extension to October 15 (no request needed). This aligns with the tax return extended deadline. FBAR is filed electronically through FinCEN, not with the IRS.",
     "tip": "FBAR: April 15, auto-extended to October 15. Filed with FinCEN, not IRS.",
     "calculationRequired": false,
@@ -14422,12 +14422,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A decedent leaves $20 million to their U.S. citizen spouse. What is the estate tax marital deduction?",
     "options": {
-      "A": "$0",
-      "B": "$13.61 million",
-      "C": "$20 million",
-      "D": "$6.39 million"
+      "A": "$20 million",
+      "B": "$6.39 million",
+      "C": "$0",
+      "D": "$13.61 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The marital deduction is unlimited for property passing to a U.S. citizen spouse in a qualifying manner. The entire $20 million qualifies, resulting in no estate tax on the first death.",
     "tip": "Marital deduction: Unlimited to U.S. citizen spouse. Non-citizen spouse requires QDOT.",
     "calculationRequired": false,
@@ -14443,12 +14443,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the maximum Section 179 deduction for 2024?",
     "options": {
-      "A": "$500,000",
-      "B": "$1,000,000",
-      "C": "$1,160,000",
-      "D": "$2,890,000"
+      "A": "$2,890,000",
+      "B": "$500,000",
+      "C": "$1,000,000",
+      "D": "$1,160,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The 2024 Section 179 limit is $1,160,000, with a phase-out beginning at $2,890,000 of property placed in service. The deduction is limited to taxable income from active business.",
     "tip": "2024 Section 179: $1,160,000 max. Phases out dollar-for-dollar over $2,890,000.",
     "calculationRequired": false,
@@ -14485,12 +14485,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The premium tax credit is available to taxpayers who:",
     "options": {
-      "A": "Have any health insurance",
-      "B": "Purchase coverage through a Marketplace exchange and meet income requirements",
-      "C": "Are enrolled in employer-sponsored insurance",
-      "D": "Have Medicare or Medicaid"
+      "A": "Have Medicare or Medicaid",
+      "B": "Have any health insurance",
+      "C": "Purchase coverage through a Marketplace exchange and meet income requirements",
+      "D": "Are enrolled in employer-sponsored insurance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The premium tax credit is available for coverage purchased through a Health Insurance Marketplace (exchange) by taxpayers with household income between 100-400% of FPL (no upper limit through 2025 under IRA extension).",
     "tip": "PTC: Marketplace coverage required. Income limits currently extended through 2025.",
     "calculationRequired": false,
@@ -14506,12 +14506,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business property is destroyed by fire. Insurance proceeds exceed basis. To defer gain under Section 1033, replacement property must be acquired within:",
     "options": {
-      "A": "1 year",
-      "B": "2 years after the close of the first tax year in which gain is realized",
-      "C": "3 years",
-      "D": "180 days"
+      "A": "2 years after the close of the first tax year in which gain is realized",
+      "B": "3 years",
+      "C": "180 days",
+      "D": "1 year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 1033 requires replacement within 2 years after the close of the first tax year in which gain is realized (3 years for condemned real property). Replacement property must be similar or related in service or use.",
     "tip": "Section 1033: Replace within 2 years of year-end of gain realization (3 years for condemned realty).",
     "calculationRequired": false,
@@ -14527,12 +14527,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner contributes property and receives a distribution within 2 years. Under what circumstances is this treated as a disguised sale?",
     "options": {
-      "A": "Never—contributions and distributions are always separate",
-      "B": "If the distribution is fact-dependent on the contribution and not a reasonable return on capital",
-      "C": "Only if formally documented as a sale",
-      "D": "Always—any distribution within 2 years is a sale"
+      "A": "Always—any distribution within 2 years is a sale",
+      "B": "Never—contributions and distributions are always separate",
+      "C": "If the distribution is fact-dependent on the contribution and not a reasonable return on capital",
+      "D": "Only if formally documented as a sale"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 707 disguised sale rules examine whether transfers within 2 years are interdependent. Distributions within 2 years are presumed related to contributions, but can be rebutted. Entrepreneurial risk and debt-financed distributions have safe harbors.",
     "tip": "Disguised sale: Contribution + distribution within 2 years presumed sale. Facts and circumstances analysis.",
     "calculationRequired": false,
@@ -14548,12 +14548,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A grandparent makes a $15 million taxable transfer to a grandchild. What is the GST tax rate?",
     "options": {
-      "A": "Equal to the highest estate tax rate (40%)",
-      "B": "30%",
-      "C": "50%",
-      "D": "Varies by amount transferred"
+      "A": "50%",
+      "B": "Varies by amount transferred",
+      "C": "Equal to the highest estate tax rate (40%)",
+      "D": "30%"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "The GST tax rate is a flat rate equal to the highest estate/gift tax rate (currently 40%). The $13.61 million GST exemption (2024) can shield transfers; amounts above are taxed at 40% in addition to any gift or estate tax.",
     "tip": "GST tax: Flat 40% (highest estate rate). Separate $13.61M exemption from estate exemption.",
     "calculationRequired": false,
@@ -14569,12 +14569,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation has taxable income of $500,000. Federal taxes paid were $105,000 and it received $50,000 of tax-exempt bond interest. What is current E&P?",
     "options": {
-      "A": "$395,000",
-      "B": "$445,000",
-      "C": "$500,000",
-      "D": "$550,000"
+      "A": "$445,000",
+      "B": "$500,000",
+      "C": "$550,000",
+      "D": "$395,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "E&P starts with taxable income and adjusts for economic reality. Add back tax-exempt income ($50,000), subtract federal taxes paid ($105,000). E&P = $500,000 + $50,000 - $105,000 = $445,000.",
     "tip": "E&P: Taxable income + tax-exempt income - federal taxes - other adjustments.",
     "calculationRequired": true,
@@ -14590,12 +14590,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Assets in a rabbi trust established for deferred compensation are:",
     "options": {
-      "A": "Taxable to the employee when contributed",
-      "B": "Subject to claims of the employer's general creditors",
-      "C": "Protected from employer creditors",
-      "D": "Immediately vested for the employee"
+      "A": "Protected from employer creditors",
+      "B": "Immediately vested for the employee",
+      "C": "Taxable to the employee when contributed",
+      "D": "Subject to claims of the employer's general creditors"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Rabbi trusts provide security against employer change-of-heart but remain subject to general creditors in bankruptcy. This maintains the tax deferral (not currently taxable) while providing some security. Secular trusts protect from creditors but trigger current taxation.",
     "tip": "Rabbi trust: Subject to employer creditors = tax deferral. Creditor protection = current taxation.",
     "calculationRequired": false,
@@ -14611,12 +14611,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer owns two businesses: one with $200,000 QBI and $50,000 W-2 wages, another with $100,000 QBI and $100,000 W-2 wages. Taxable income is $500,000. What is the benefit of aggregating?",
     "options": {
-      "A": "Higher W-2 wages available for the combined limitation",
-      "B": "Lower taxable income threshold",
-      "C": "Avoidance of SSTB rules",
-      "D": "No benefit from aggregation"
+      "A": "No benefit from aggregation",
+      "B": "Higher W-2 wages available for the combined limitation",
+      "C": "Lower taxable income threshold",
+      "D": "Avoidance of SSTB rules"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Aggregation allows combining W-2 wages and qualified property across businesses. Without aggregation, business 1 is limited by its low W-2 wages. Aggregated, total QBI is $300,000 with $150,000 combined wages, allowing higher deduction.",
     "tip": "199A aggregation: Combines W-2 wages and property for limitation calculation. Often beneficial.",
     "calculationRequired": false,
@@ -14632,12 +14632,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is Subpart F income that must be included by a U.S. shareholder of a CFC?",
     "options": {
-      "A": "Manufacturing income from the CFC's country",
-      "B": "Foreign base company sales income from related party transactions",
-      "C": "Active business income earned locally",
-      "D": "Reinvested earnings"
+      "A": "Reinvested earnings",
+      "B": "Manufacturing income from the CFC's country",
+      "C": "Foreign base company sales income from related party transactions",
+      "D": "Active business income earned locally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Foreign base company sales income (buying from or selling to related parties where goods are manufactured and sold outside the CFC's country) is Subpart F income. Active local manufacturing and local sales are generally not Subpart F.",
     "tip": "Subpart F: Passive income + base company income (sales, services to related parties).",
     "calculationRequired": false,
@@ -14653,12 +14653,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A single taxpayer has $400,000 of business losses and $100,000 of business income. Under Section 461(l), how much business loss is currently deductible?",
     "options": {
-      "A": "$289,000 (loss limited to income + threshold)",
-      "B": "$305,000",
-      "C": "$400,000 (full loss)",
-      "D": "$100,000 (limited to income)"
+      "A": "$305,000",
+      "B": "$400,000 (full loss)",
+      "C": "$100,000 (limited to income)",
+      "D": "$289,000 (loss limited to income + threshold)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 461(l) limits excess business losses to $305,000 (single, 2024) plus business income. Net business loss allowed = $100,000 + $305,000 = $405,000, which exceeds the $300,000 net loss. Full $300,000 net loss is allowed. Actually: threshold is $305K, net business loss = $300K, which is under threshold, so full loss allowed.",
     "tip": "Excess business loss: Limited to ~$305K (single) / ~$610K (MFJ) plus business income.",
     "calculationRequired": true,
@@ -14674,12 +14674,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An intentionally defective grantor trust (IDGT) is 'defective' because:",
     "options": {
-      "A": "It doesn't qualify for income tax benefits",
-      "B": "It is ignored for income tax but recognized for estate/gift tax",
-      "C": "It fails to meet trust requirements",
-      "D": "It is included in the grantor's estate"
+      "A": "It fails to meet trust requirements",
+      "B": "It is included in the grantor's estate",
+      "C": "It doesn't qualify for income tax benefits",
+      "D": "It is ignored for income tax but recognized for estate/gift tax"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "IDGTs are 'defective' for income tax (grantor taxed on trust income) but 'effective' for estate/gift tax (assets removed from estate). This allows sales to the trust without gain recognition while removing appreciation from the estate.",
     "tip": "IDGT: Income tax = grantor's. Estate/gift = trust's. Intentional mismatch for planning.",
     "calculationRequired": false,
@@ -14695,12 +14695,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For Section 351 nonrecognition treatment, transferors must have 'control' immediately after the exchange. Control requires ownership of:",
     "options": {
-      "A": "More than 50% of voting stock",
-      "B": "At least 80% of voting stock and 80% of all other classes",
-      "C": "Any amount of stock if there's a business purpose",
-      "D": "100% of the corporation"
+      "A": "100% of the corporation",
+      "B": "More than 50% of voting stock",
+      "C": "At least 80% of voting stock and 80% of all other classes",
+      "D": "Any amount of stock if there's a business purpose"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 351 requires transferors (as a group) to control the corporation immediately after the exchange. Control means at least 80% of voting power and 80% of shares of each other class of stock.",
     "tip": "Section 351 control: 80% voting + 80% of each class. Group can aggregate to meet threshold.",
     "calculationRequired": false,
@@ -14758,12 +14758,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A donor with $10,000 basis and $25,000 FMV gifts property. No gift tax is paid. What is the donee's basis for gain purposes?",
     "options": {
-      "A": "$0",
-      "B": "$10,000",
-      "C": "$17,500",
-      "D": "$25,000"
+      "A": "$17,500",
+      "B": "$25,000",
+      "C": "$0",
+      "D": "$10,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "For gifts of appreciated property, the donee takes carryover basis (donor's basis) for gain purposes. The donee's basis is $10,000. FMV at gift is used only to determine loss basis if FMV is below donor's basis.",
     "tip": "Gift basis (appreciated property): Carryover donor's basis. Holding period tacks on.",
     "calculationRequired": false,
@@ -14800,12 +14800,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which type of income qualifies for the earned income credit?",
     "options": {
-      "A": "Investment income",
-      "B": "Wages and self-employment income",
-      "C": "Pension distributions",
-      "D": "Social Security benefits"
+      "A": "Wages and self-employment income",
+      "B": "Pension distributions",
+      "C": "Social Security benefits",
+      "D": "Investment income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "EIC is based on earned income: wages, salaries, tips, and net self-employment income. Investment income disqualifies the credit if it exceeds the threshold. Passive income doesn't qualify.",
     "tip": "EIC = earned income only. Investment income threshold disqualifies if exceeded.",
     "calculationRequired": false,
@@ -14821,12 +14821,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the first spouse to die uses only $5 million of their $13.61 million estate exemption, what can the surviving spouse use under portability?",
     "options": {
-      "A": "Only their own exemption",
-      "B": "Their exemption plus the deceased spouse's unused exclusion (DSUE)",
-      "C": "Double their own exemption",
-      "D": "The deceased spouse's full exemption"
+      "A": "The deceased spouse's full exemption",
+      "B": "Only their own exemption",
+      "C": "Their exemption plus the deceased spouse's unused exclusion (DSUE)",
+      "D": "Double their own exemption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Portability allows the surviving spouse to use their own exemption plus the DSUE (deceased spouse's unused exclusion). If $5M was used, DSUE = $8.61M. Surviving spouse can use $13.61M + $8.61M = $22.22M total.",
     "tip": "Portability: Surviving spouse gets DSUE. Requires timely estate return for first death.",
     "calculationRequired": false,
@@ -14842,12 +14842,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation shareholder lends $50,000 directly to the corporation. How does this affect loss deduction capacity?",
     "options": {
-      "A": "No effect—only stock basis counts",
-      "B": "Creates debt basis allowing additional loss deduction",
-      "C": "Converts to stock basis automatically",
-      "D": "Only affects at-risk amount"
+      "A": "Creates debt basis allowing additional loss deduction",
+      "B": "Converts to stock basis automatically",
+      "C": "Only affects at-risk amount",
+      "D": "No effect—only stock basis counts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Direct shareholder loans to an S corporation create debt basis, which allows loss deductions after stock basis is exhausted. Debt basis is restored before stock basis when income flows through.",
     "tip": "S corp debt basis: Direct loans only. Bank loans TO corp don't create shareholder basis.",
     "calculationRequired": false,
@@ -14863,12 +14863,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner with $30,000 basis receives a $40,000 cash distribution. What is the tax consequence?",
     "options": {
-      "A": "No gain recognized",
-      "B": "$10,000 capital gain",
-      "C": "$40,000 ordinary income",
-      "D": "$10,000 ordinary income"
+      "A": "$10,000 capital gain",
+      "B": "$40,000 ordinary income",
+      "C": "$10,000 ordinary income",
+      "D": "No gain recognized"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Cash distributions exceeding basis trigger capital gain (not ordinary income). Gain = $40,000 - $30,000 = $10,000 capital gain. The partner's basis is reduced to zero.",
     "tip": "Partnership cash distribution > basis = capital gain. Property distributions generally no gain.",
     "calculationRequired": true,
@@ -14926,12 +14926,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An activity is presumed to be a business (not a hobby) if it produces a profit in how many of the last 5 years?",
     "options": {
-      "A": "1 of 5 years",
-      "B": "2 of 5 years",
-      "C": "3 of 5 years",
-      "D": "4 of 5 years"
+      "A": "3 of 5 years",
+      "B": "4 of 5 years",
+      "C": "1 of 5 years",
+      "D": "2 of 5 years"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The safe harbor presumes business (not hobby) status if profitable in 3 of the last 5 years (2 of 7 for horse breeding/racing). This is rebuttable—all facts and circumstances are considered.",
     "tip": "Hobby presumption: 3 of 5 years profitable = presumed business. IRS can still challenge.",
     "calculationRequired": false,
@@ -14947,12 +14947,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A corporation has an NOL in 2024. Under current law, the NOL can offset what percentage of taxable income in future years?",
     "options": {
-      "A": "80%",
-      "B": "90%",
-      "C": "100%",
-      "D": "50%"
+      "A": "50%",
+      "B": "80%",
+      "C": "90%",
+      "D": "100%"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Post-2017 NOLs can offset 80% of taxable income in carryforward years (indefinite carryforward, no carryback for most NOLs). Pre-2018 NOLs had different rules (2-year back, 20-year forward, 100% offset).",
     "tip": "Post-2017 NOL: 80% of taxable income, indefinite carryforward, no carryback.",
     "calculationRequired": false,
@@ -14968,12 +14968,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer donates publicly traded stock (held 3 years, basis $10,000, FMV $50,000) to a public charity. What is the deduction and AGI limitation?",
     "options": {
-      "A": "$10,000 deduction, 60% limit",
-      "B": "$50,000 deduction, 30% limit",
-      "C": "$50,000 deduction, 60% limit",
-      "D": "$40,000 deduction, 30% limit"
+      "A": "$50,000 deduction, 30% limit",
+      "B": "$50,000 deduction, 60% limit",
+      "C": "$40,000 deduction, 30% limit",
+      "D": "$10,000 deduction, 60% limit"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Long-term capital gain property donated to public charities is deductible at FMV ($50,000) subject to a 30% of AGI limit. The taxpayer can elect to reduce the deduction to basis and use the 60% limit instead.",
     "tip": "Appreciated LTCG property to public charity: FMV deduction at 30% limit. Election for basis at 60%.",
     "calculationRequired": false,
@@ -15010,12 +15010,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "After South Dakota v. Wayfair, states can require sales tax collection based on:",
     "options": {
-      "A": "Physical presence only",
-      "B": "Economic nexus (sales volume or transaction count)",
-      "C": "Headquarters location only",
-      "D": "Employee residence only"
+      "A": "Headquarters location only",
+      "B": "Employee residence only",
+      "C": "Physical presence only",
+      "D": "Economic nexus (sales volume or transaction count)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Wayfair (2018) overruled physical presence requirement. States can now require sales tax collection based on economic nexus thresholds (typically $100,000 sales or 200 transactions in the state).",
     "tip": "Wayfair: Economic nexus for sales tax. Physical presence no longer required.",
     "calculationRequired": false,
@@ -15031,12 +15031,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer sells stock with a $20,000 loss to their sibling. What is the tax consequence?",
     "options": {
-      "A": "Loss is deductible",
-      "B": "Loss is disallowed; sibling gets no basis adjustment",
-      "C": "Loss is disallowed; sibling can use it to reduce gain on subsequent sale",
-      "D": "Loss is suspended until sibling sells"
+      "A": "Loss is suspended until sibling sells",
+      "B": "Loss is deductible",
+      "C": "Loss is disallowed; sibling gets no basis adjustment",
+      "D": "Loss is disallowed; sibling can use it to reduce gain on subsequent sale"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Section 267 disallows losses on sales to related parties. However, if the related party subsequently sells at a gain, the previously disallowed loss can offset that gain (but not create or increase a loss).",
     "tip": "Section 267 loss: Disallowed to seller. Related buyer can use to reduce later gain, not losses.",
     "calculationRequired": false,
@@ -15052,12 +15052,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has $94,000 in traditional IRA (all pre-tax) and makes a $6,000 nondeductible contribution, then converts $6,000 to Roth. How much is taxable?",
     "options": {
-      "A": "$0 (only nondeductible amount converted)",
-      "B": "$5,640 (pro-rata portion)",
-      "C": "$6,000 (full conversion)",
-      "D": "$564 (6% of conversion)"
+      "A": "$6,000 (full conversion)",
+      "B": "$564 (6% of conversion)",
+      "C": "$0 (only nondeductible amount converted)",
+      "D": "$5,640 (pro-rata portion)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Pro-rata rule applies: Nondeductible portion = $6,000 / $100,000 total = 6%. Taxable portion of $6,000 conversion = 94% × $6,000 = $5,640. Cannot cherry-pick only nondeductible amounts.",
     "tip": "Backdoor Roth: Pro-rata rule. All IRAs aggregated. Consider emptying traditional IRA first.",
     "calculationRequired": true,
@@ -15073,12 +15073,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Trusts and estates reach the highest marginal tax bracket (37%) at approximately what income level for 2024?",
     "options": {
-      "A": "$14,450",
-      "B": "$50,000",
-      "C": "$100,000",
-      "D": "$609,350"
+      "A": "$100,000",
+      "B": "$609,350",
+      "C": "$14,450",
+      "D": "$50,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Trusts and estates have highly compressed brackets. The 37% rate begins at approximately $14,450 (2024) compared to $609,350 for single individuals. This creates incentive to distribute income to lower-bracket beneficiaries.",
     "tip": "Trust brackets: 37% at ~$14K. Very compressed. Plan distributions to beneficiaries.",
     "calculationRequired": false,
@@ -15094,12 +15094,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with $20,000 annual itemized deductions and a $29,200 standard deduction (MFJ 2024) should consider:",
     "options": {
-      "A": "Always itemizing",
-      "B": "Always taking standard deduction",
-      "C": "Bunching deductions into alternate years",
-      "D": "Splitting deductions equally"
+      "A": "Always taking standard deduction",
+      "B": "Bunching deductions into alternate years",
+      "C": "Splitting deductions equally",
+      "D": "Always itemizing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Bunching concentrates deductible expenses (especially charitable contributions) into alternate years to exceed the standard deduction in 'bunching' years while taking standard deduction in off years. Maximizes total deductions over time.",
     "tip": "Bunching: Concentrate deductions to exceed standard deduction some years. Maximizes benefit.",
     "calculationRequired": false,
@@ -15136,12 +15136,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Employer-provided health insurance premiums are:",
     "options": {
-      "A": "Taxable income to employees",
-      "B": "Excluded from employee income and deductible by employer",
-      "C": "Nondeductible by employer",
-      "D": "Subject to Social Security tax"
+      "A": "Subject to Social Security tax",
+      "B": "Taxable income to employees",
+      "C": "Excluded from employee income and deductible by employer",
+      "D": "Nondeductible by employer"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Health insurance is a tax-advantaged fringe benefit. Premiums are excluded from employee income (including FICA) and deductible by the employer. This makes employer health coverage very tax-efficient.",
     "tip": "Employer health insurance: Excluded from employee income, deductible by employer. Triple tax benefit.",
     "calculationRequired": false,
@@ -15157,12 +15157,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a grantor dies during the GRAT term, what happens to the trust assets?",
     "options": {
-      "A": "Assets pass to remainder beneficiaries free of estate tax",
-      "B": "A portion of assets is included in the grantor's estate",
-      "C": "All assets are included in the grantor's estate",
-      "D": "Assets revert to a charitable organization"
+      "A": "Assets revert to a charitable organization",
+      "B": "Assets pass to remainder beneficiaries free of estate tax",
+      "C": "A portion of assets is included in the grantor's estate",
+      "D": "All assets are included in the grantor's estate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "If the grantor dies during the GRAT term, Section 2036 includes the portion of trust necessary to produce the remaining annuity payments (using the Section 7520 rate at death). This is the mortality risk of GRATs.",
     "tip": "GRAT mortality risk: Die during term = inclusion for remaining annuity value.",
     "calculationRequired": false,
@@ -15178,12 +15178,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A business has $2 million gross receipts, including $180,000 from SSTB activities. Is the entire business treated as an SSTB?",
     "options": {
-      "A": "Yes—any SSTB income taints the whole business",
-      "B": "No—SSTB portion is below the 10% de minimis threshold",
-      "C": "No—SSTB rules only apply to service businesses",
-      "D": "Yes—SSTB portion exceeds $100,000"
+      "A": "No—SSTB portion is below the 10% de minimis threshold",
+      "B": "No—SSTB rules only apply to service businesses",
+      "C": "Yes—SSTB portion exceeds $100,000",
+      "D": "Yes—any SSTB income taints the whole business"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The de minimis rule: If gross receipts ≤$25M, SSTB activities must exceed 10% to taint the business. If >$25M, threshold is 5%. Here: $180,000 / $2,000,000 = 9%, below 10%, so business is NOT an SSTB.",
     "tip": "SSTB de minimis: <10% (under $25M) or <5% (over $25M) SSTB receipts = not tainted.",
     "calculationRequired": true,
@@ -15199,12 +15199,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. corporation pays dividends to a UK resident shareholder. Without a treaty, the withholding rate is 30%. Under the U.S.-UK treaty, the rate may be reduced to:",
     "options": {
-      "A": "5% for substantial shareholders",
-      "B": "15% standard rate",
-      "C": "0% in all cases",
-      "D": "Both A and B depending on ownership"
+      "A": "15% standard rate",
+      "B": "0% in all cases",
+      "C": "Both A and B depending on ownership",
+      "D": "5% for substantial shareholders"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Tax treaties typically reduce withholding on dividends. The U.S.-UK treaty provides 5% for substantial shareholders (10%+ ownership) and 15% for portfolio investors. Treaties require Form W-8BEN to claim reduced rates.",
     "tip": "Treaty withholding: Typically 5% (substantial) or 15% (portfolio). Claim via W-8BEN.",
     "calculationRequired": false,
@@ -15220,12 +15220,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Once activities are grouped for passive activity purposes, can they be regrouped?",
     "options": {
-      "A": "Yes—taxpayer can regroup freely each year",
-      "B": "No—grouping elections are irrevocable",
-      "C": "Yes—but only with a material change in facts and circumstances",
-      "D": "Only upon IRS approval"
+      "A": "No—grouping elections are irrevocable",
+      "B": "Yes—but only with a material change in facts and circumstances",
+      "C": "Only upon IRS approval",
+      "D": "Yes—taxpayer can regroup freely each year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Grouping elections are generally binding once made, but regrouping is allowed if facts and circumstances materially change (such as ownership or management changes). Consistency is required absent material change.",
     "tip": "Passive activity grouping: Generally irrevocable. Regrouping only for material changes.",
     "calculationRequired": false,
@@ -15241,12 +15241,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For stock to qualify as QSBS under Section 1202, the issuing corporation must have aggregate gross assets not exceeding:",
     "options": {
-      "A": "$1 million",
-      "B": "$10 million",
-      "C": "$50 million",
-      "D": "$100 million"
+      "A": "$10 million",
+      "B": "$50 million",
+      "C": "$100 million",
+      "D": "$1 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "QSBS requires the C corporation to have aggregate gross assets of $50 million or less at issuance and immediately after the stock is issued. The stock must be acquired at original issuance and held for 5+ years for full exclusion.",
     "tip": "QSBS: $50M gross asset limit, C corp, original issuance, 5-year hold for 100% exclusion.",
     "calculationRequired": false,
@@ -15262,12 +15262,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Type A reorganization, a shareholder receives stock worth $80,000 and cash of $20,000. The shareholder's basis in the old stock was $50,000. What is the recognized gain?",
     "options": {
-      "A": "$0",
-      "B": "$20,000",
-      "C": "$50,000",
-      "D": "$30,000"
+      "A": "$20,000",
+      "B": "$50,000",
+      "C": "$30,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Realized gain = $100,000 received - $50,000 basis = $50,000. Boot triggers gain recognition, but limited to the lesser of boot or realized gain. Boot = $20,000; realized gain = $50,000. Recognized gain = $20,000.",
     "tip": "Reorganization boot: Gain recognized = lesser of boot received or realized gain.",
     "calculationRequired": true,
@@ -15283,12 +15283,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner receives $100,000 cash in complete liquidation of their partnership interest. Their outside basis is $120,000. What is the tax result?",
     "options": {
-      "A": "$20,000 capital gain",
-      "B": "$20,000 capital loss",
-      "C": "$20,000 ordinary loss",
-      "D": "No gain or loss recognized"
+      "A": "$20,000 ordinary loss",
+      "B": "No gain or loss recognized",
+      "C": "$20,000 capital gain",
+      "D": "$20,000 capital loss"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In a liquidating distribution, gain is recognized only if cash exceeds basis. If cash is less than basis (and only cash is received), a capital loss is recognized. Loss = $100,000 - $120,000 = $20,000 capital loss.",
     "tip": "Partnership liquidation: Cash < basis = capital loss (if only money/751 property received).",
     "calculationRequired": true,
@@ -15325,12 +15325,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A deferred compensation plan violates Section 409A. What are the tax consequences to the employee?",
     "options": {
-      "A": "Ordinary income only",
-      "B": "Income inclusion plus 20% penalty plus interest",
-      "C": "Capital gain treatment",
-      "D": "10% early withdrawal penalty"
+      "A": "Capital gain treatment",
+      "B": "10% early withdrawal penalty",
+      "C": "Ordinary income only",
+      "D": "Income inclusion plus 20% penalty plus interest"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Section 409A violations result in: (1) immediate income inclusion of all vested deferred compensation, (2) 20% additional tax penalty, and (3) premium interest from the date of deferral. Very severe consequences.",
     "tip": "409A violation: Income + 20% penalty + interest. Extremely punitive—ensure compliance.",
     "calculationRequired": false,
@@ -15346,12 +15346,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation with accumulated E&P has passive investment income exceeding 25% of gross receipts. What are the consequences?",
     "options": {
-      "A": "No consequence",
-      "B": "Corporate-level tax on excess passive income",
-      "C": "Automatic termination of S election",
-      "D": "Both B, and termination if excessive passive income continues for 3 consecutive years"
+      "A": "Both B, and termination if excessive passive income continues for 3 consecutive years",
+      "B": "No consequence",
+      "C": "Corporate-level tax on excess passive income",
+      "D": "Automatic termination of S election"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "S corps with E&P and >25% passive income face: (1) corporate tax on excess net passive income, and (2) termination of S status if this continues for 3 consecutive years. Solution: distribute E&P or reduce passive income.",
     "tip": "S corp passive income: >25% with E&P = tax + possible termination after 3 years.",
     "calculationRequired": false,
@@ -15367,12 +15367,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A charitable remainder trust sells highly appreciated stock for $1 million gain. When is the gain taxed?",
     "options": {
-      "A": "Immediately to the trust",
-      "B": "Immediately to the income beneficiary",
-      "C": "To the charity when received",
-      "D": "To income beneficiaries as distributions are made (tier system)"
+      "A": "To income beneficiaries as distributions are made (tier system)",
+      "B": "Immediately to the trust",
+      "C": "Immediately to the income beneficiary",
+      "D": "To the charity when received"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "CRTs are tax-exempt, so no immediate tax on the gain. The gain is distributed to income beneficiaries under the four-tier system as distributions are made: ordinary income first, then capital gains, then other income, then corpus.",
     "tip": "CRT: Tax-exempt entity. Gain taxed to beneficiaries via four-tier distribution system over time.",
     "calculationRequired": false,
@@ -15388,12 +15388,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An individual U.S. shareholder of a CFC has a GILTI inclusion of $100,000. What is the effective tax rate without a Section 962 election (assume 37% bracket)?",
     "options": {
-      "A": "10.5% (same as corporate)",
-      "B": "21%",
-      "C": "37%",
-      "D": "26.25%"
+      "A": "26.25%",
+      "B": "10.5% (same as corporate)",
+      "C": "21%",
+      "D": "37%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Individual CFC shareholders pay ordinary income rates on GILTI without the Section 250 deduction (which is available only to C corporations). At the 37% bracket, the effective rate is 37%. Section 962 election can reduce this.",
     "tip": "GILTI for individuals: Full ordinary rates without Section 962. Consider Section 962 election.",
     "calculationRequired": false,
@@ -15409,12 +15409,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer owns an LLC that rents property to their S corporation (where they materially participate). The rental LLC generates $50,000 income and the taxpayer has $30,000 passive losses from other activities. What is the result?",
     "options": {
-      "A": "Net passive income of $20,000",
-      "B": "Self-rental income is nonpassive; $30,000 passive loss suspended",
-      "C": "All income and losses are passive",
-      "D": "$50,000 passive income offsets $30,000 losses; $20,000 taxable"
+      "A": "All income and losses are passive",
+      "B": "$50,000 passive income offsets $30,000 losses; $20,000 taxable",
+      "C": "Net passive income of $20,000",
+      "D": "Self-rental income is nonpassive; $30,000 passive loss suspended"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Self-rental income (rental to a business where taxpayer materially participates) is recharacterized as nonpassive. The $50,000 cannot absorb other passive losses. The $30,000 passive loss remains suspended.",
     "tip": "Self-rental rule: Income from property rented to your active business = nonpassive.",
     "calculationRequired": false,
@@ -15451,12 +15451,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To qualify for head of household filing status, an unmarried taxpayer must:",
     "options": {
-      "A": "Have any dependent",
-      "B": "Pay more than half the cost of maintaining a home for a qualifying person",
-      "C": "Be over age 65",
-      "D": "Have income under $100,000"
+      "A": "Have income under $100,000",
+      "B": "Have any dependent",
+      "C": "Pay more than half the cost of maintaining a home for a qualifying person",
+      "D": "Be over age 65"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Head of household requires being unmarried, paying more than half the cost of maintaining a home, and having a qualifying person (usually a dependent) live with you for more than half the year. Parents can qualify even if not living with taxpayer.",
     "tip": "HOH: Unmarried + >50% home costs + qualifying person living with you (parent exception exists).",
     "calculationRequired": false,
@@ -15472,12 +15472,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the simplified method for home office deduction, what is the maximum deduction for 2024?",
     "options": {
-      "A": "$1,000",
-      "B": "$1,500",
-      "C": "$3,000",
-      "D": "$5,000"
+      "A": "$3,000",
+      "B": "$5,000",
+      "C": "$1,000",
+      "D": "$1,500"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The simplified method allows $5 per square foot of home office space, up to 300 square feet maximum. Maximum deduction = 300 × $5 = $1,500. No actual expenses need to be tracked.",
     "tip": "Home office simplified: $5/sq ft × 300 max sq ft = $1,500 maximum.",
     "calculationRequired": false,
@@ -15514,12 +15514,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT a capital asset?",
     "options": {
-      "A": "Personal automobile",
-      "B": "Investment stocks",
-      "C": "Business inventory",
-      "D": "Vacation home"
+      "A": "Vacation home",
+      "B": "Personal automobile",
+      "C": "Investment stocks",
+      "D": "Business inventory"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Capital assets include all property except specific exclusions: inventory, depreciable business property, real property used in business, accounts receivable, and certain creative works. Inventory held for sale to customers is NOT a capital asset.",
     "tip": "Capital asset = everything EXCEPT inventory, business property, receivables, creative works.",
     "calculationRequired": false,
@@ -15577,12 +15577,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A partner contributes property with FMV of $100,000 and basis of $40,000 to a partnership. What is the partnership's basis in the property?",
     "options": {
-      "A": "$40,000",
-      "B": "$70,000",
-      "C": "$100,000",
-      "D": "$0"
+      "A": "$100,000",
+      "B": "$0",
+      "C": "$40,000",
+      "D": "$70,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "The partnership takes carryover basis in contributed property equal to the contributing partner's basis ($40,000). The partner's outside basis equals the property's basis contributed. No gain is recognized on contribution.",
     "tip": "Partnership contribution: Partnership takes carryover basis. Partner gets basis equal to property contributed.",
     "calculationRequired": false,
@@ -15598,12 +15598,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Income earned by a revocable living trust during the grantor's lifetime is taxed to:",
     "options": {
-      "A": "The trust at trust rates",
-      "B": "The grantor on their individual return",
-      "C": "The beneficiaries",
-      "D": "No one until distribution"
+      "A": "The grantor on their individual return",
+      "B": "The beneficiaries",
+      "C": "No one until distribution",
+      "D": "The trust at trust rates"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Revocable trusts are grantor trusts. All income is reported on the grantor's individual return using their SSN. The trust doesn't file a separate return during the grantor's lifetime (or files informational return only).",
     "tip": "Revocable trust: Grantor trust. Income taxed to grantor on Form 1040.",
     "calculationRequired": false,
@@ -15619,12 +15619,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation pays $12,000 for health insurance for a shareholder who owns 25% of the stock. How is this treated?",
     "options": {
-      "A": "Tax-free fringe benefit",
-      "B": "Included in W-2 wages but deductible by shareholder",
-      "C": "Dividend to shareholder",
-      "D": "Not deductible by corporation"
+      "A": "Not deductible by corporation",
+      "B": "Tax-free fringe benefit",
+      "C": "Included in W-2 wages but deductible by shareholder",
+      "D": "Dividend to shareholder"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Health insurance for >2% S corp shareholders must be included in W-2 wages (subject to income tax, not FICA). The shareholder can then deduct the premium as self-employed health insurance on page 1 of Form 1040.",
     "tip": ">2% S corp shareholder health insurance: W-2 inclusion, then self-employed deduction.",
     "calculationRequired": false,
@@ -15640,12 +15640,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For 2024, a married couple filing jointly can have long-term capital gains taxed at 0% if their taxable income doesn't exceed:",
     "options": {
-      "A": "$44,625",
-      "B": "$89,250",
-      "C": "$94,050",
-      "D": "$553,850"
+      "A": "$553,850",
+      "B": "$44,625",
+      "C": "$89,250",
+      "D": "$94,050"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The 0% LTCG rate applies to MFJ taxpayers with taxable income up to $94,050 (2024). From $94,050 to $583,750, the 15% rate applies. Above that, the 20% rate applies (plus potential 3.8% NIIT).",
     "tip": "2024 LTCG brackets (MFJ): 0% to $94K, 15% to $583K, 20% above. Plus potential NIIT.",
     "calculationRequired": false,
@@ -15682,12 +15682,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer age 72 with $15,000 in itemizable deductions makes a $10,000 QCD from their IRA. What is the tax benefit compared to taking a distribution and donating cash?",
     "options": {
-      "A": "No difference",
-      "B": "QCD excludes income; cash donation provides no benefit if using standard deduction",
-      "C": "Cash donation provides larger deduction",
-      "D": "QCD reduces RMD amount"
+      "A": "QCD excludes income; cash donation provides no benefit if using standard deduction",
+      "B": "Cash donation provides larger deduction",
+      "C": "QCD reduces RMD amount",
+      "D": "No difference"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "QCDs exclude the distribution from income entirely. If the taxpayer takes the standard deduction ($29,200 MFJ), a cash donation provides no tax benefit. QCDs provide benefit regardless of itemizing status.",
     "tip": "QCD advantage: Excludes income entirely. Benefits standard deduction users most.",
     "calculationRequired": false,
@@ -15703,12 +15703,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation with E&P of $30,000 distributes $50,000 to its sole shareholder (basis $15,000). How is the distribution taxed?",
     "options": {
-      "A": "All dividend",
-      "B": "$30,000 dividend, $15,000 return of capital, $5,000 capital gain",
-      "C": "$30,000 dividend, $20,000 capital gain",
-      "D": "All return of capital"
+      "A": "$30,000 dividend, $20,000 capital gain",
+      "B": "All return of capital",
+      "C": "All dividend",
+      "D": "$30,000 dividend, $15,000 return of capital, $5,000 capital gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Distributions come from: (1) E&P = dividend, (2) stock basis = tax-free return of capital, (3) excess = capital gain. Here: $30,000 dividend + $15,000 return of basis + $5,000 capital gain.",
     "tip": "C corp distribution ordering: E&P (dividend) → basis (tax-free) → excess (capital gain).",
     "calculationRequired": true,
@@ -15745,12 +15745,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A complex trust wants to treat a January distribution as made in the prior year. This election under Section 663(b) must be made within:",
     "options": {
-      "A": "30 days of year-end",
-      "B": "65 days of year-end",
-      "C": "90 days of year-end",
-      "D": "By the extended return due date"
+      "A": "By the extended return due date",
+      "B": "30 days of year-end",
+      "C": "65 days of year-end",
+      "D": "90 days of year-end"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The 65-day rule allows trustees to elect to treat distributions made within 65 days after year-end as made on the last day of the prior year. This helps distribute income to beneficiaries and avoid compressed trust rates.",
     "tip": "65-day rule: Distributions by March 6 can be treated as prior year. Avoids trust taxation.",
     "calculationRequired": false,
@@ -15766,12 +15766,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under a state's throwback rule, sales of tangible personal property shipped to a state where the seller is not taxable are:",
     "options": {
-      "A": "Excluded from all state taxation",
-      "B": "Thrown back to the state of origin",
-      "C": "Allocated to the customer's state",
-      "D": "Split between states"
+      "A": "Split between states",
+      "B": "Excluded from all state taxation",
+      "C": "Thrown back to the state of origin",
+      "D": "Allocated to the customer's state"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Throwback rules assign 'nowhere' sales (sales to states where seller has no nexus) back to the state of shipment origin. This prevents sales from escaping state taxation entirely.",
     "tip": "Throwback: Nowhere sales assigned to origin state. Some states also have 'throwout' rules.",
     "calculationRequired": false,
@@ -15787,12 +15787,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 55-year-old participant in a 401(k) plan can make additional catch-up contributions of how much in 2024?",
     "options": {
-      "A": "$1,000",
-      "B": "$3,500",
-      "C": "$7,500",
-      "D": "$10,000"
+      "A": "$10,000",
+      "B": "$1,000",
+      "C": "$3,500",
+      "D": "$7,500"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "401(k) catch-up contributions for those 50+ are $7,500 for 2024. Combined with the $23,000 regular limit, maximum employee deferral is $30,500. IRA catch-up is only $1,000.",
     "tip": "2024 catch-up: 401(k) = $7,500; IRA = $1,000. Both for age 50+.",
     "calculationRequired": false,
@@ -15829,12 +15829,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The energy efficient home improvement credit under Section 25C has an annual limit of:",
     "options": {
-      "A": "$500",
-      "B": "$1,200",
-      "C": "$2,000",
-      "D": "$3,200"
+      "A": "$2,000",
+      "B": "$3,200",
+      "C": "$500",
+      "D": "$1,200"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "The Section 25C credit provides up to $1,200 annually for most improvements (insulation, windows, doors) plus an additional $2,000 for heat pumps/water heaters. Total maximum = $3,200 annually.",
     "tip": "Section 25C: $1,200 general + $2,000 heat pump = $3,200 max per year. Annual reset.",
     "calculationRequired": false,
@@ -15850,12 +15850,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A passive activity with $100,000 suspended losses is sold for $200,000 gain using an installment sale (40% received in year 1). How much suspended loss is released in year 1?",
     "options": {
-      "A": "$100,000",
-      "B": "$40,000",
-      "C": "$80,000",
-      "D": "$0 until final payment"
+      "A": "$40,000",
+      "B": "$80,000",
+      "C": "$0 until final payment",
+      "D": "$100,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Suspended passive losses are released proportionately with gain recognition in installment sales. Year 1: 40% of gain recognized = 40% × $100,000 suspended loss = $40,000 released.",
     "tip": "Installment sale of PAL activity: Losses released pro rata with gain recognition.",
     "calculationRequired": true,
@@ -15871,12 +15871,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. person who is a 15% partner in a foreign partnership must file Form 8865 if they:",
     "options": {
-      "A": "Have any interest in a foreign partnership",
-      "B": "Control the partnership or made certain transfers",
-      "C": "Received distributions exceeding $10,000",
-      "D": "Form 8865 is never required for 15% partners"
+      "A": "Received distributions exceeding $10,000",
+      "B": "Form 8865 is never required for 15% partners",
+      "C": "Have any interest in a foreign partnership",
+      "D": "Control the partnership or made certain transfers"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Form 8865 is required for U.S. persons who control foreign partnerships, have certain acquisition/disposition thresholds, or make transfers exceeding $100,000. A 15% partner without control may not have a filing requirement.",
     "tip": "Form 8865: Controlling U.S. persons, transfers >$100K, acquisitions/dispositions. Not all partners file.",
     "calculationRequired": false,
@@ -15892,12 +15892,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The alternate valuation date for estate tax purposes is:",
     "options": {
-      "A": "One year after death",
-      "B": "Six months after death",
-      "C": "Date assets are distributed",
-      "D": "Executor's choice of any date"
+      "A": "Executor's choice of any date",
+      "B": "One year after death",
+      "C": "Six months after death",
+      "D": "Date assets are distributed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Estates can elect to value assets 6 months after death (or date of earlier disposition) instead of date of death. The election is only available if it reduces both estate value and estate tax liability.",
     "tip": "Alternate valuation: 6 months post-death. Must reduce both estate value AND tax.",
     "calculationRequired": false,
@@ -15913,12 +15913,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which business can generally use the cash method of accounting?",
     "options": {
-      "A": "Any business with gross receipts under $29 million",
-      "B": "Only sole proprietorships",
-      "C": "C corporations with over $50 million revenue",
-      "D": "Tax shelters regardless of size"
+      "A": "C corporations with over $50 million revenue",
+      "B": "Tax shelters regardless of size",
+      "C": "Any business with gross receipts under $29 million",
+      "D": "Only sole proprietorships"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Businesses with average annual gross receipts of $29 million or less (2024, indexed) for the prior 3 years can use the cash method. This includes farming, services, and small manufacturing. Tax shelters and certain inventory businesses have restrictions.",
     "tip": "Cash method: Available to businesses ≤$29M average gross receipts (3-year test).",
     "calculationRequired": false,
@@ -15955,12 +15955,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The statute of limitations for assessment extends from 3 to 6 years if the taxpayer:",
     "options": {
-      "A": "Files an amended return",
-      "B": "Omits more than 25% of gross income",
-      "C": "Claims a refund",
-      "D": "Has foreign income"
+      "A": "Has foreign income",
+      "B": "Files an amended return",
+      "C": "Omits more than 25% of gross income",
+      "D": "Claims a refund"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The 6-year statute applies when gross income is understated by more than 25%. For 6-year purposes, gross income includes cost basis overstatements that reduce reported gain. Fraud has no statute of limitations.",
     "tip": "6-year statute: >25% gross income omission. No limit for fraud.",
     "calculationRequired": false,
@@ -15976,12 +15976,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a Section 1031 exchange, replacement property must be identified within:",
     "options": {
-      "A": "30 days",
-      "B": "45 days",
-      "C": "90 days",
-      "D": "180 days"
+      "A": "45 days",
+      "B": "90 days",
+      "C": "180 days",
+      "D": "30 days"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Replacement property must be identified within 45 days of the sale. The property must be acquired within 180 days (or by tax return due date if earlier). The 3-property rule or 200% rule limits identification options.",
     "tip": "1031 timing: 45 days to identify, 180 days to close. 3-property or 200% rule.",
     "calculationRequired": false,
@@ -15997,12 +15997,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current law, when does a partnership terminate for tax purposes?",
     "options": {
-      "A": "When 50%+ of interests are sold within 12 months",
-      "B": "Only when business operations cease or there is only one partner",
-      "C": "Upon any partner's death",
-      "D": "When original partners no longer hold majority"
+      "A": "Only when business operations cease or there is only one partner",
+      "B": "Upon any partner's death",
+      "C": "When original partners no longer hold majority",
+      "D": "When 50%+ of interests are sold within 12 months"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "TCJA eliminated the technical termination rule (50% sale in 12 months). Partnerships now only terminate when: (1) no business continues, or (2) only one partner remains. This simplifies continuation of tax attributes.",
     "tip": "Post-TCJA: No more technical terminations. Only business cessation or single partner ends partnership.",
     "calculationRequired": false,
@@ -16018,12 +16018,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Section 2032A allows farmland to be valued at its actual use value rather than highest and best use. What is the maximum reduction from FMV for 2024?",
     "options": {
-      "A": "$500,000",
-      "B": "$750,000",
-      "C": "$1,000,000",
-      "D": "$1,390,000"
+      "A": "$1,000,000",
+      "B": "$1,390,000",
+      "C": "$500,000",
+      "D": "$750,000"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Section 2032A allows special use valuation with maximum reduction of $1,390,000 (2024, indexed) from fair market value. Requirements include material participation, 50% qualified real property, 25% business test, and qualified heir rules.",
     "tip": "Section 2032A: Up to $1.39M reduction. Strict qualification and recapture rules.",
     "calculationRequired": false,
@@ -16039,12 +16039,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An S corporation inadvertently becomes ineligible (e.g., issues second class of stock). What relief is available?",
     "options": {
-      "A": "None—termination is automatic and permanent",
-      "B": "IRS can waive termination if inadvertent and corrected",
-      "C": "Election can be renewed after 1 year",
-      "D": "Shareholders must pay penalty to maintain election"
+      "A": "Election can be renewed after 1 year",
+      "B": "Shareholders must pay penalty to maintain election",
+      "C": "None—termination is automatic and permanent",
+      "D": "IRS can waive termination if inadvertent and corrected"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The IRS can provide relief for inadvertent terminations under Section 1362(f) if: (1) the termination was inadvertent, (2) steps are taken to correct the issue, and (3) shareholders agree to adjustments. Private letter ruling typically required.",
     "tip": "Inadvertent S termination: IRS relief available. Correct promptly and request PLR.",
     "calculationRequired": false,
@@ -16060,12 +16060,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 280G, an excess parachute payment triggers:",
     "options": {
-      "A": "Nondeductibility only",
-      "B": "20% excise tax on executive only",
-      "C": "Nondeductibility by corporation and 20% excise tax on executive",
-      "D": "Recharacterization as dividend"
+      "A": "Nondeductibility by corporation and 20% excise tax on executive",
+      "B": "Recharacterization as dividend",
+      "C": "Nondeductibility only",
+      "D": "20% excise tax on executive only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Excess parachute payments (payments exceeding 3× base amount) result in: (1) no corporate deduction for excess amounts, and (2) 20% excise tax paid by the executive. Both penalties apply, creating significant tax cost.",
     "tip": "Golden parachute: >3× base = no deduction + 20% excise. Double penalty.",
     "calculationRequired": false,
@@ -16081,12 +16081,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The base erosion and anti-abuse tax (BEAT) applies to corporations with average annual gross receipts exceeding:",
     "options": {
-      "A": "$25 million",
-      "B": "$100 million",
-      "C": "$500 million",
-      "D": "$1 billion"
+      "A": "$500 million",
+      "B": "$1 billion",
+      "C": "$25 million",
+      "D": "$100 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "BEAT applies to corporations with average annual gross receipts of $500 million+ and base erosion percentage of 3%+ (2% for banks). It's a minimum tax on modified taxable income at 10% (12.5% for 2026+).",
     "tip": "BEAT: $500M+ gross receipts, 3%+ base erosion. Minimum tax on deductible related-party payments.",
     "calculationRequired": false,
@@ -16123,12 +16123,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For wash sale purposes, which of the following is NOT considered substantially identical to stock sold at a loss?",
     "options": {
-      "A": "The same stock",
-      "B": "An option to acquire the same stock",
-      "C": "Stock in a different company in the same industry",
-      "D": "A contract to acquire the same stock"
+      "A": "A contract to acquire the same stock",
+      "B": "The same stock",
+      "C": "An option to acquire the same stock",
+      "D": "Stock in a different company in the same industry"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Substantially identical means the same security or rights to acquire it. Stock in a different company, even in the same industry or tracking the same index, is generally NOT substantially identical. ETFs tracking same index may raise questions.",
     "tip": "Substantially identical: Same stock or rights to acquire it. Different company = not identical.",
     "calculationRequired": false,
@@ -16144,12 +16144,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For Section 382 purposes, an ownership change occurs when 5% shareholders increase their ownership by more than:",
     "options": {
-      "A": "25 percentage points over 3 years",
-      "B": "50 percentage points over 3 years",
-      "C": "75 percentage points over 5 years",
-      "D": "Any change in ownership"
+      "A": "Any change in ownership",
+      "B": "25 percentage points over 3 years",
+      "C": "50 percentage points over 3 years",
+      "D": "75 percentage points over 5 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "An ownership change occurs when the percentage of stock owned by 5% shareholders increases by more than 50 percentage points over a 3-year testing period. This triggers the Section 382 NOL limitation.",
     "tip": "Section 382: >50% ownership shift by 5% shareholders in 3 years = ownership change.",
     "calculationRequired": false,
@@ -16165,12 +16165,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under SECURE 2.0, employer matching contributions to a 401(k) can now be designated as:",
     "options": {
-      "A": "Pre-tax only",
-      "B": "Roth contributions (employee's choice)",
-      "C": "After-tax non-Roth only",
-      "D": "Employer matching cannot be Roth"
+      "A": "After-tax non-Roth only",
+      "B": "Employer matching cannot be Roth",
+      "C": "Pre-tax only",
+      "D": "Roth contributions (employee's choice)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "SECURE 2.0 allows employers to offer employees the option to receive matching or nonelective contributions as Roth contributions (taxable when contributed). Previously, employer contributions were always pre-tax.",
     "tip": "SECURE 2.0: Roth employer match option. Employee can elect taxable match for tax-free growth.",
     "calculationRequired": false,
@@ -16186,12 +16186,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the 2024 standard deduction for a married couple filing jointly (both under 65)?",
     "options": {
-      "A": "$14,600",
-      "B": "$21,900",
-      "C": "$29,200",
-      "D": "$32,300"
+      "A": "$21,900",
+      "B": "$29,200",
+      "C": "$32,300",
+      "D": "$14,600"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The 2024 standard deduction for MFJ is $29,200. For single filers it's $14,600, and for head of household it's $21,900. Additional amounts apply for taxpayers 65+ or blind.",
     "tip": "2024 standard deduction: $29,200 MFJ, $14,600 single, $21,900 HOH.",
     "calculationRequired": false,
@@ -16207,12 +16207,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the FUTA tax wage base?",
     "options": {
-      "A": "$7,000",
-      "B": "$12,000",
-      "C": "$15,000",
-      "D": "$168,600"
+      "A": "$12,000",
+      "B": "$15,000",
+      "C": "$168,600",
+      "D": "$7,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "FUTA applies to the first $7,000 of wages per employee per year. The gross rate is 6.0%, but a 5.4% credit applies if state unemployment taxes are paid timely, resulting in a net 0.6% rate.",
     "tip": "FUTA: $7,000 wage base, 6% gross rate, 0.6% net with state credit.",
     "calculationRequired": false,
@@ -16270,12 +16270,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The lifetime gift tax exemption uses the same exemption amount as:",
     "options": {
-      "A": "Annual exclusion",
-      "B": "Estate tax exemption",
-      "C": "Generation-skipping tax exemption",
-      "D": "Both B and C"
+      "A": "Estate tax exemption",
+      "B": "Generation-skipping tax exemption",
+      "C": "Both B and C",
+      "D": "Annual exclusion"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "The gift, estate, and GST exemptions are all unified at $13.61 million (2024). Lifetime taxable gifts reduce the estate tax exemption dollar-for-dollar. GST has a separate but equal exemption.",
     "tip": "Unified exemption: Gift = Estate = GST ($13.61M each for 2024).",
     "calculationRequired": false,
@@ -16291,12 +16291,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Foreign taxes paid can be treated as either:",
     "options": {
-      "A": "A credit or a deduction",
-      "B": "Only a credit",
-      "C": "Only a deduction",
-      "D": "A credit or excluded from income"
+      "A": "A credit or excluded from income",
+      "B": "A credit or a deduction",
+      "C": "Only a credit",
+      "D": "Only a deduction"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Taxpayers can elect to treat foreign income taxes as either a credit (reducing tax dollar-for-dollar up to the limit) or an itemized deduction (reducing taxable income). The credit is usually more beneficial.",
     "tip": "Foreign taxes: Credit or deduction election. Credit usually better.",
     "calculationRequired": false,
@@ -16354,12 +16354,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For divorce agreements executed after December 31, 2018, alimony payments are:",
     "options": {
-      "A": "Deductible by payor, taxable to recipient",
-      "B": "Not deductible by payor, not taxable to recipient",
-      "C": "50% deductible by payor",
-      "D": "Taxable to both parties"
+      "A": "50% deductible by payor",
+      "B": "Taxable to both parties",
+      "C": "Deductible by payor, taxable to recipient",
+      "D": "Not deductible by payor, not taxable to recipient"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "TCJA eliminated the alimony deduction for post-2018 divorce agreements. The payor cannot deduct payments, and the recipient doesn't include them in income. Pre-2019 agreements retain old rules unless modified.",
     "tip": "Post-2018 alimony: No deduction, no inclusion. Pre-2019 agreements grandfathered.",
     "calculationRequired": false,
@@ -16375,12 +16375,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "What is the bonus depreciation percentage for qualified property placed in service in 2024?",
     "options": {
-      "A": "100%",
-      "B": "80%",
-      "C": "60%",
-      "D": "40%"
+      "A": "60%",
+      "B": "40%",
+      "C": "100%",
+      "D": "80%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Bonus depreciation is phasing out: 100% (2017-2022), 80% (2023), 60% (2024), 40% (2025), 20% (2026), 0% (2027+). Used property can qualify if new to the taxpayer.",
     "tip": "2024 bonus depreciation: 60%. Phases down 20% per year until 2027.",
     "calculationRequired": false,
@@ -16396,12 +16396,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Charitable bequests in an estate are:",
     "options": {
-      "A": "Limited to 60% of the estate",
-      "B": "Unlimited deduction from the gross estate",
-      "C": "Subject to the same limits as income tax charitable deductions",
-      "D": "Not deductible"
+      "A": "Not deductible",
+      "B": "Limited to 60% of the estate",
+      "C": "Unlimited deduction from the gross estate",
+      "D": "Subject to the same limits as income tax charitable deductions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The estate tax charitable deduction is unlimited. Bequests to qualified charities are fully deductible from the gross estate, regardless of size. This differs from income tax limitations.",
     "tip": "Estate charitable deduction: Unlimited. No AGI-type limits.",
     "calculationRequired": false,
@@ -16417,12 +16417,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The federal corporate income tax rate under TCJA is:",
     "options": {
-      "A": "15% - 35% graduated",
-      "B": "21% flat rate",
-      "C": "28% flat rate",
-      "D": "35% flat rate"
+      "A": "21% flat rate",
+      "B": "28% flat rate",
+      "C": "35% flat rate",
+      "D": "15% - 35% graduated"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "TCJA established a flat 21% corporate rate, replacing the prior graduated rates (15%-35%). This rate applies to all taxable income regardless of amount. Personal service corporations also pay 21%.",
     "tip": "Corporate rate: Flat 21% under TCJA. No more graduated rates.",
     "calculationRequired": false,
@@ -16438,12 +16438,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The AMT exemption phases out at what rate as AMTI increases above the threshold?",
     "options": {
-      "A": "10%",
-      "B": "25%",
-      "C": "50%",
-      "D": "75%"
+      "A": "25%",
+      "B": "50%",
+      "C": "75%",
+      "D": "10%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The AMT exemption phases out at 25% of AMTI exceeding the threshold. For MFJ, the exemption ($133,300 for 2024) begins phasing out at $1,218,700 and is fully eliminated at around $1,752,000.",
     "tip": "AMT exemption phase-out: 25% of AMTI over threshold. Fully eliminated at high income.",
     "calculationRequired": false,
@@ -16459,12 +16459,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Private foundations must distribute approximately what percentage of net investment assets annually?",
     "options": {
-      "A": "3%",
-      "B": "5%",
-      "C": "10%",
-      "D": "No minimum requirement"
+      "A": "5%",
+      "B": "10%",
+      "C": "No minimum requirement",
+      "D": "3%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Private foundations must make qualifying distributions of approximately 5% of net investment assets annually to avoid an excise tax on undistributed income. Qualifying distributions include grants and administrative expenses.",
     "tip": "Private foundation: ~5% annual distribution required. Excise tax on undistributed income.",
     "calculationRequired": false,
@@ -16543,12 +16543,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer has Section 1231 gains of $50,000 and Section 1231 losses of $20,000. How is the net gain treated?",
     "options": {
-      "A": "All ordinary income",
-      "B": "Long-term capital gain (subject to lookback)",
-      "C": "Short-term capital gain",
-      "D": "50% ordinary, 50% capital"
+      "A": "Short-term capital gain",
+      "B": "50% ordinary, 50% capital",
+      "C": "All ordinary income",
+      "D": "Long-term capital gain (subject to lookback)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Net Section 1231 gains are treated as long-term capital gains. However, the 5-year lookback rule recharacterizes gain as ordinary income to the extent of prior Section 1231 losses that offset ordinary income.",
     "tip": "Section 1231: Net gains = LTCG (subject to 5-year lookback). Net losses = ordinary.",
     "calculationRequired": false,
@@ -16564,12 +16564,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A >2% S corporation shareholder-employee cannot receive which benefit tax-free?",
     "options": {
-      "A": "Retirement plan contributions",
-      "B": "Group term life insurance over $50,000",
-      "C": "Meals and lodging for employer convenience",
-      "D": "All of the above are taxable"
+      "A": "All of the above are taxable",
+      "B": "Retirement plan contributions",
+      "C": "Group term life insurance over $50,000",
+      "D": "Meals and lodging for employer convenience"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Over-2% shareholders cannot receive certain fringe benefits tax-free: health insurance, group term life over $50K, and some others. Retirement contributions are allowed. The cost becomes W-2 income but may be deductible elsewhere.",
     "tip": ">2% S corp shareholder: Health insurance and group term life taxable. Retirement OK.",
     "calculationRequired": false,
@@ -16606,12 +16606,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer with significant investment income should:",
     "options": {
-      "A": "Increase W-4 allowances",
-      "B": "Make estimated tax payments or increase W-4 withholding",
-      "C": "Wait until year-end to pay",
-      "D": "Investment income is not subject to estimated payments"
+      "A": "Investment income is not subject to estimated payments",
+      "B": "Increase W-4 allowances",
+      "C": "Make estimated tax payments or increase W-4 withholding",
+      "D": "Wait until year-end to pay"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Investment income is not subject to withholding, so taxpayers must make estimated payments or increase W-4 withholding to avoid underpayment penalties. Withholding is treated as paid evenly throughout the year.",
     "tip": "Investment income: Plan for estimated payments. Increasing W-4 withholding is an alternative.",
     "calculationRequired": false,
@@ -16627,12 +16627,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The TCJA transition tax (Section 965) applied to:",
     "options": {
-      "A": "Future CFC earnings",
-      "B": "Accumulated deferred foreign earnings of CFCs",
-      "C": "GILTI inclusions",
-      "D": "Foreign tax credits"
+      "A": "Foreign tax credits",
+      "B": "Future CFC earnings",
+      "C": "Accumulated deferred foreign earnings of CFCs",
+      "D": "GILTI inclusions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Section 965 imposed a one-time transition tax on accumulated post-1986 deferred foreign earnings of CFCs (and certain foreign corporations) when the U.S. moved to a territorial system. Rates were 15.5% for cash and 8% for non-cash assets.",
     "tip": "Section 965: One-time transition tax on deferred foreign earnings. 15.5% cash, 8% other.",
     "calculationRequired": false,
@@ -16648,12 +16648,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Suspended passive losses carry forward:",
     "options": {
-      "A": "For 5 years",
-      "B": "For 20 years",
-      "C": "Indefinitely until used or activity disposed",
-      "D": "Until the next profitable year only"
+      "A": "Until the next profitable year only",
+      "B": "For 5 years",
+      "C": "For 20 years",
+      "D": "Indefinitely until used or activity disposed"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Suspended passive losses carry forward indefinitely until offset by passive income or released upon complete disposition of the activity. There is no time limit on the carryforward.",
     "tip": "Passive loss carryforward: Indefinite. Released on disposition of activity.",
     "calculationRequired": false,
@@ -16669,12 +16669,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the centralized partnership audit rules (BBA), who represents the partnership in IRS audits?",
     "options": {
-      "A": "Tax matters partner",
-      "B": "Partnership representative",
-      "C": "Managing partner",
-      "D": "All partners jointly"
+      "A": "All partners jointly",
+      "B": "Tax matters partner",
+      "C": "Partnership representative",
+      "D": "Managing partner"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The BBA replaced the tax matters partner with the partnership representative, who has sole authority to act on behalf of the partnership in audits and proceedings. Partners have limited ability to challenge representative actions.",
     "tip": "BBA audits: Partnership representative has sole authority. Must be designated annually.",
     "calculationRequired": false,
@@ -16690,12 +16690,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is a fully refundable tax credit?",
     "options": {
-      "A": "Child and dependent care credit",
-      "B": "Foreign tax credit",
-      "C": "Earned income credit",
-      "D": "Lifetime learning credit"
+      "A": "Earned income credit",
+      "B": "Lifetime learning credit",
+      "C": "Child and dependent care credit",
+      "D": "Foreign tax credit"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The earned income credit is fully refundable—the full credit is paid even if it exceeds tax liability. The child tax credit is partially refundable ($1,700). The others are nonrefundable.",
     "tip": "Refundable credits: EIC (full), child tax credit (partial), additional child tax credit, AOC (40%).",
     "calculationRequired": false,
@@ -16711,12 +16711,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A taxpayer materially participated in activity A last year (releasing prior suspended losses). This year, they do not materially participate. The activity generates income. How is the income treated?",
     "options": {
-      "A": "All nonpassive",
-      "B": "All passive",
-      "C": "Split between passive and nonpassive",
-      "D": "Depends on prior year's income"
+      "A": "Split between passive and nonpassive",
+      "B": "Depends on prior year's income",
+      "C": "All nonpassive",
+      "D": "All passive"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Each year's material participation is determined independently. Without material participation this year, the activity is passive, and income is passive. Prior year status doesn't carry over.",
     "tip": "Material participation: Determined annually. Each year stands on its own.",
     "calculationRequired": false,
@@ -16732,12 +16732,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A QTIP trust provides the surviving spouse with:",
     "options": {
-      "A": "Full control over trust assets",
-      "B": "All income for life but no control over remainder",
-      "C": "Ability to change beneficiaries",
-      "D": "Tax-free distributions"
+      "A": "All income for life but no control over remainder",
+      "B": "Ability to change beneficiaries",
+      "C": "Tax-free distributions",
+      "D": "Full control over trust assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "QTIP trusts give the surviving spouse all income for life, but the first spouse to die controls where the remainder goes (often to children from prior marriage). QTIP qualifies for marital deduction but is included in survivor's estate.",
     "tip": "QTIP: Income to spouse for life; donor controls remainder. Marital deduction now, estate inclusion at second death.",
     "calculationRequired": false,
@@ -16753,12 +16753,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Section 1061, for a carried interest to receive long-term capital gain treatment, the underlying assets must be held for:",
     "options": {
-      "A": "More than 1 year",
-      "B": "More than 2 years",
-      "C": "More than 3 years",
-      "D": "More than 5 years"
+      "A": "More than 2 years",
+      "B": "More than 3 years",
+      "C": "More than 5 years",
+      "D": "More than 1 year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Section 1061 requires a 3-year holding period (instead of 1 year) for gains attributable to carried interests to qualify for LTCG rates. This affects private equity, venture capital, and hedge fund managers.",
     "tip": "Carried interest: 3-year hold for LTCG. Regular investments still 1 year.",
     "calculationRequired": false,
@@ -16774,12 +16774,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A C corporation distributes appreciated property (basis $30,000, FMV $100,000) as a dividend. What are the tax consequences to the corporation?",
     "options": {
-      "A": "No gain recognized",
-      "B": "$70,000 gain recognized",
-      "C": "$100,000 gain recognized",
-      "D": "Gain deferred until shareholder sells"
+      "A": "$100,000 gain recognized",
+      "B": "Gain deferred until shareholder sells",
+      "C": "No gain recognized",
+      "D": "$70,000 gain recognized"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under Section 311(b), a C corporation recognizes gain on distributions of appreciated property as if the property were sold at FMV. Gain = $100,000 - $30,000 = $70,000. The shareholder receives dividend income of $100,000 (FMV).",
     "tip": "C corp property distribution: Corp recognizes gain as if sold at FMV. Shareholder dividend = FMV.",
     "calculationRequired": true,
@@ -16816,12 +16816,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The throwback rules for accumulation distributions from domestic trusts were:",
     "options": {
-      "A": "Expanded by TCJA",
-      "B": "Repealed for domestic trusts, but apply to foreign trusts",
-      "C": "Still in full effect for all trusts",
-      "D": "Only applicable to simple trusts"
+      "A": "Repealed for domestic trusts, but apply to foreign trusts",
+      "B": "Still in full effect for all trusts",
+      "C": "Only applicable to simple trusts",
+      "D": "Expanded by TCJA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The throwback rules (taxing beneficiaries on accumulated income plus interest) were repealed for domestic trusts in 1997. They still apply to foreign trusts, making distributions of accumulated income potentially very expensive.",
     "tip": "Throwback rules: Repealed for domestic trusts. Still apply to foreign trusts.",
     "calculationRequired": false,
@@ -16837,12 +16837,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 'top-hat' nonqualified deferred compensation plan is exempt from most ERISA requirements because it covers:",
     "options": {
-      "A": "All employees equally",
-      "B": "Only management or highly compensated employees",
-      "C": "Union employees only",
-      "D": "Part-time employees"
+      "A": "Union employees only",
+      "B": "Part-time employees",
+      "C": "All employees equally",
+      "D": "Only management or highly compensated employees"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Top-hat plans are unfunded plans maintained primarily for management or highly compensated employees. They're exempt from ERISA's participation, vesting, and funding rules, allowing flexibility in design.",
     "tip": "Top-hat plan: Management/HCE only. Exempt from most ERISA rules. Must be unfunded.",
     "calculationRequired": false,
@@ -16858,12 +16858,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the codified economic substance doctrine, a transaction lacking economic substance can result in:",
     "options": {
-      "A": "Recharacterization only",
-      "B": "20% or 40% strict liability penalty",
-      "C": "Criminal prosecution only",
-      "D": "No penalty if disclosed"
+      "A": "20% or 40% strict liability penalty",
+      "B": "Criminal prosecution only",
+      "C": "No penalty if disclosed",
+      "D": "Recharacterization only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Section 6662(b)(6) imposes a 20% penalty (40% if not adequately disclosed) for transactions lacking economic substance. The penalty is strict liability—no reasonable cause defense. The doctrine requires meaningful change to economic position plus business purpose.",
     "tip": "Economic substance: 20% penalty (40% undisclosed). No reasonable cause defense. Strict liability.",
     "calculationRequired": false,
@@ -16879,12 +16879,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a consolidated return, gain from intercompany sales between group members is:",
     "options": {
-      "A": "Recognized immediately",
-      "B": "Deferred until the property leaves the group",
-      "C": "Eliminated permanently",
-      "D": "Split between buyer and seller"
+      "A": "Eliminated permanently",
+      "B": "Split between buyer and seller",
+      "C": "Recognized immediately",
+      "D": "Deferred until the property leaves the group"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Intercompany transactions are deferred in consolidated returns. Gain is recognized when a triggering event occurs (property leaves the group, member leaves group, etc.). This prevents tax on internal transfers.",
     "tip": "Consolidated intercompany gains: Deferred until triggered (asset or member leaves group).",
     "calculationRequired": false,
@@ -16900,12 +16900,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which TCJA provision is scheduled to sunset after 2025?",
     "options": {
-      "A": "21% corporate rate",
-      "B": "Doubled estate tax exemption",
-      "C": "Section 163(j) interest limitation",
-      "D": "GILTI rules"
+      "A": "Section 163(j) interest limitation",
+      "B": "GILTI rules",
+      "C": "21% corporate rate",
+      "D": "Doubled estate tax exemption"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Many individual TCJA provisions sunset after 2025: the doubled estate exemption (returns to ~$6M), increased standard deduction, $10K SALT cap, suspended personal exemptions, etc. The 21% corporate rate is permanent.",
     "tip": "TCJA sunset (2026): Estate exemption drops, SALT cap expires, individual rates revert. Corp rate stays.",
     "calculationRequired": false,

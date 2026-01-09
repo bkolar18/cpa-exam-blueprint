@@ -58,12 +58,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has annual credit sales of $1,825,000 and average accounts receivable of $150,000. What is the company's days sales outstanding (DSO)?",
     "options": {
-      "A": "15 days",
-      "B": "30 days",
-      "C": "45 days",
-      "D": "60 days"
+      "A": "60 days",
+      "B": "15 days",
+      "C": "30 days",
+      "D": "45 days"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "DSO = (Average accounts receivable / Credit sales) × 365 = ($150,000 / $1,825,000) × 365 = 30 days. This indicates the average number of days to collect receivables.",
     "tip": "DSO = (Average A/R ÷ Annual credit sales) × 365. Lower DSO means faster collection.",
     "calculationRequired": true,
@@ -121,12 +121,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT a component of the DuPont analysis of return on equity?",
     "options": {
-      "A": "Net profit margin",
-      "B": "Asset turnover",
-      "C": "Current ratio",
-      "D": "Financial leverage"
+      "A": "Current ratio",
+      "B": "Financial leverage",
+      "C": "Net profit margin",
+      "D": "Asset turnover"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The DuPont analysis decomposes ROE into three components: (1) Net profit margin (profitability), (2) Asset turnover (efficiency), and (3) Financial leverage (equity multiplier). The current ratio is a liquidity measure, not part of DuPont analysis.",
     "tip": "DuPont ROE = Net profit margin × Asset turnover × Equity multiplier (or Total assets/Equity).",
     "calculationRequired": false,
@@ -142,12 +142,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has cost of goods sold of $720,000, beginning inventory of $80,000, and ending inventory of $100,000. What is the inventory turnover ratio?",
     "options": {
-      "A": "7.2 times",
-      "B": "8.0 times",
-      "C": "9.0 times",
-      "D": "10.0 times"
+      "A": "9.0 times",
+      "B": "10.0 times",
+      "C": "7.2 times",
+      "D": "8.0 times"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Inventory turnover = COGS / Average inventory. Average inventory = ($80,000 + $100,000) / 2 = $90,000. Inventory turnover = $720,000 / $90,000 = 8.0 times.",
     "tip": "Use average inventory (beginning + ending) ÷ 2 in the denominator for more accurate measurement.",
     "calculationRequired": true,
@@ -184,12 +184,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company reports operating income of $350,000, interest expense of $50,000, and income tax expense of $75,000. What is the times interest earned ratio?",
     "options": {
-      "A": "4.5 times",
-      "B": "5.5 times",
-      "C": "6.0 times",
-      "D": "7.0 times"
+      "A": "7.0 times",
+      "B": "4.5 times",
+      "C": "5.5 times",
+      "D": "6.0 times"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Times interest earned = EBIT / Interest expense = $350,000 / $50,000 = 7.0 times. This ratio measures a company's ability to meet its interest obligations from operating income.",
     "tip": "TIE uses EBIT (operating income), not net income. Taxes are irrelevant because interest is paid before taxes.",
     "calculationRequired": true,
@@ -226,12 +226,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a common-size balance sheet, each line item is expressed as a percentage of:",
     "options": {
-      "A": "Net income",
-      "B": "Net sales",
-      "C": "Total assets",
-      "D": "Total liabilities"
+      "A": "Total assets",
+      "B": "Total liabilities",
+      "C": "Net income",
+      "D": "Net sales"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "In a common-size balance sheet, each line item is expressed as a percentage of total assets. This facilitates comparison across companies of different sizes and helps identify the relative composition of assets, liabilities, and equity.",
     "tip": "Common-size balance sheet uses total assets as base; common-size income statement uses net sales as base.",
     "calculationRequired": false,
@@ -247,12 +247,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has operating cash flow of $500,000, capital expenditures of $120,000, and dividends paid of $60,000. What is the free cash flow to the firm (FCFF)?",
     "options": {
-      "A": "$320,000",
-      "B": "$380,000",
-      "C": "$440,000",
-      "D": "$500,000"
+      "A": "$440,000",
+      "B": "$500,000",
+      "C": "$320,000",
+      "D": "$380,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Free cash flow to firm = Operating cash flow - Capital expenditures = $500,000 - $120,000 = $380,000. Dividends are not deducted from FCFF because they represent distributions to equity holders, not reinvestment needs.",
     "tip": "FCFF = Operating cash flow - CapEx. FCFE (free cash flow to equity) would further subtract debt payments and add net borrowing.",
     "calculationRequired": true,
@@ -268,12 +268,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has net sales of $2,400,000, net income of $180,000, and average total assets of $1,500,000. What is the total asset turnover ratio?",
     "options": {
-      "A": "0.12 times",
-      "B": "1.20 times",
-      "C": "1.60 times",
-      "D": "13.33 times"
+      "A": "13.33 times",
+      "B": "0.12 times",
+      "C": "1.20 times",
+      "D": "1.60 times"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Total asset turnover = Net sales / Average total assets = $2,400,000 / $1,500,000 = 1.60 times. This ratio measures how efficiently a company uses its assets to generate sales.",
     "tip": "Asset turnover uses sales (not income) in the numerator. Higher turnover indicates better asset utilization.",
     "calculationRequired": true,
@@ -289,12 +289,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has cash of $50,000, marketable securities of $30,000, accounts receivable of $120,000, inventory of $100,000, and current liabilities of $200,000. What is the cash ratio?",
     "options": {
-      "A": "0.25",
-      "B": "0.40",
-      "C": "1.00",
-      "D": "1.50"
+      "A": "1.50",
+      "B": "0.25",
+      "C": "0.40",
+      "D": "1.00"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cash ratio = (Cash + Marketable securities) / Current liabilities = ($50,000 + $30,000) / $200,000 = $80,000 / $200,000 = 0.40. This is the most conservative liquidity ratio.",
     "tip": "Cash ratio excludes both inventory AND receivables. It measures immediate liquidity using only cash and near-cash items.",
     "calculationRequired": true,
@@ -310,12 +310,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company's operating margin decreased from 18% to 15% while its gross margin remained constant at 40%. This most likely indicates:",
     "options": {
-      "A": "An increase in cost of goods sold",
-      "B": "An increase in operating expenses",
-      "C": "A decrease in sales revenue",
-      "D": "An increase in interest expense"
+      "A": "An increase in interest expense",
+      "B": "An increase in cost of goods sold",
+      "C": "An increase in operating expenses",
+      "D": "A decrease in sales revenue"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "If gross margin remained constant while operating margin decreased, the change must be due to increased operating expenses (SG&A). Gross margin would change if COGS changed. Interest expense is below operating income and wouldn't affect operating margin.",
     "tip": "Operating margin = (Gross profit - Operating expenses) / Sales. Changes between gross and operating margins indicate operating expense changes.",
     "calculationRequired": false,
@@ -331,12 +331,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company's sales were $500,000 in Year 1 and $650,000 in Year 2. In a horizontal analysis using Year 1 as the base year, what is the percentage change in sales?",
     "options": {
-      "A": "23%",
-      "B": "30%",
-      "C": "77%",
-      "D": "130%"
+      "A": "130%",
+      "B": "23%",
+      "C": "30%",
+      "D": "77%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Percentage change = (Current year - Base year) / Base year × 100 = ($650,000 - $500,000) / $500,000 × 100 = $150,000 / $500,000 × 100 = 30%.",
     "tip": "Horizontal analysis compares financial data over time. The formula is (Current - Base) / Base × 100.",
     "calculationRequired": true,
@@ -352,12 +352,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has net income of $90,000, preferred dividends of $10,000, beginning common equity of $350,000, and ending common equity of $450,000. What is the return on common equity?",
     "options": {
-      "A": "20.0%",
-      "B": "22.5%",
-      "C": "25.7%",
-      "D": "26.7%"
+      "A": "25.7%",
+      "B": "26.7%",
+      "C": "20.0%",
+      "D": "22.5%"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Return on common equity = (Net income - Preferred dividends) / Average common equity = ($90,000 - $10,000) / [($350,000 + $450,000) / 2] = $80,000 / $400,000 = 20.0%.",
     "tip": "ROCE uses income available to common shareholders (net income less preferred dividends) divided by average common equity.",
     "calculationRequired": true,
@@ -373,12 +373,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has days inventory outstanding (DIO) of 45 days and days sales outstanding (DSO) of 35 days. What is the company's operating cycle?",
     "options": {
-      "A": "10 days",
-      "B": "35 days",
-      "C": "45 days",
-      "D": "80 days"
+      "A": "80 days",
+      "B": "10 days",
+      "C": "35 days",
+      "D": "45 days"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Operating cycle = DIO + DSO = 45 days + 35 days = 80 days. The operating cycle measures the time from purchasing inventory to collecting cash from customers.",
     "tip": "Operating cycle = Days inventory + Days receivables. Cash conversion cycle = Operating cycle - Days payables.",
     "calculationRequired": true,
@@ -394,12 +394,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company's ROA is 10% and its cost of debt after-tax is 6%. If the company increases its debt-to-equity ratio, which of the following will most likely occur?",
     "options": {
-      "A": "ROE will decrease",
-      "B": "ROE will increase",
-      "C": "ROE will remain unchanged",
-      "D": "ROA will increase"
+      "A": "ROE will remain unchanged",
+      "B": "ROA will increase",
+      "C": "ROE will decrease",
+      "D": "ROE will increase"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Since ROA (10%) exceeds the after-tax cost of debt (6%), positive financial leverage exists. Increasing debt will magnify returns to equity holders, causing ROE to increase. This is known as favorable financial leverage.",
     "tip": "Favorable leverage occurs when ROA > after-tax cost of debt. In this case, more debt increases ROE. Unfavorable leverage has the opposite effect.",
     "calculationRequired": false,
@@ -415,12 +415,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has cash flow from operations of $240,000, current liabilities of $300,000, and total liabilities of $500,000. What is the operating cash flow ratio?",
     "options": {
-      "A": "0.48",
-      "B": "0.60",
-      "C": "0.80",
-      "D": "1.25"
+      "A": "0.60",
+      "B": "0.80",
+      "C": "1.25",
+      "D": "0.48"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Operating cash flow ratio = Cash flow from operations / Current liabilities = $240,000 / $300,000 = 0.80. This measures a company's ability to cover current liabilities with operating cash flow.",
     "tip": "Operating cash flow ratio uses current liabilities, not total liabilities. A ratio above 1.0 indicates strong short-term liquidity from operations.",
     "calculationRequired": true,
@@ -457,12 +457,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has purchases of $840,000, beginning accounts payable of $60,000, and ending accounts payable of $80,000. What is the accounts payable turnover?",
     "options": {
-      "A": "10.5 times",
-      "B": "12.0 times",
-      "C": "14.0 times",
-      "D": "16.0 times"
+      "A": "14.0 times",
+      "B": "16.0 times",
+      "C": "10.5 times",
+      "D": "12.0 times"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Accounts payable turnover = Purchases / Average accounts payable. Average A/P = ($60,000 + $80,000) / 2 = $70,000. Turnover = $840,000 / $70,000 = 12.0 times.",
     "tip": "A/P turnover uses purchases (not COGS) and average payables. Days payable = 365 ÷ A/P turnover.",
     "calculationRequired": true,
@@ -478,12 +478,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has EBIT of $400,000, a tax rate of 25%, total debt of $1,200,000, and total equity of $800,000. What is the return on invested capital (ROIC)?",
     "options": {
-      "A": "12.0%",
-      "B": "15.0%",
-      "C": "17.5%",
-      "D": "20.0%"
+      "A": "15.0%",
+      "B": "17.5%",
+      "C": "20.0%",
+      "D": "12.0%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "ROIC = EBIT × (1 - Tax rate) / Invested capital. NOPAT = $400,000 × 0.75 = $300,000. Invested capital = Debt + Equity = $1,200,000 + $800,000 = $2,000,000. ROIC = $300,000 / $2,000,000 = 15.0%.",
     "tip": "ROIC = NOPAT / Invested capital. NOPAT (net operating profit after tax) = EBIT × (1 - tax rate).",
     "calculationRequired": true,
@@ -499,12 +499,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has operating cash flow of $600,000, capital expenditures of $200,000, debt repayments of $100,000, and dividends of $50,000. What is the cash flow adequacy ratio?",
     "options": {
-      "A": "1.20",
-      "B": "1.50",
-      "C": "1.71",
-      "D": "2.00"
+      "A": "2.00",
+      "B": "1.20",
+      "C": "1.50",
+      "D": "1.71"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Cash flow adequacy ratio = Operating cash flow / (Capital expenditures + Debt repayments + Dividends) = $600,000 / ($200,000 + $100,000 + $50,000) = $600,000 / $350,000 = 1.71.",
     "tip": "Cash flow adequacy measures whether operating cash flow covers major cash needs. A ratio above 1.0 indicates the company generates sufficient cash from operations.",
     "calculationRequired": true,
@@ -520,12 +520,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has total stockholders' equity of $3,000,000, preferred stock of $500,000, and 500,000 common shares outstanding. What is the book value per common share?",
     "options": {
-      "A": "$5.00",
-      "B": "$6.00",
-      "C": "$7.00",
-      "D": "$10.00"
+      "A": "$7.00",
+      "B": "$10.00",
+      "C": "$5.00",
+      "D": "$6.00"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Book value per common share = (Total stockholders' equity - Preferred stock) / Common shares outstanding = ($3,000,000 - $500,000) / 500,000 = $2,500,000 / 500,000 = $5.00.",
     "tip": "Book value per share uses common equity only. Subtract preferred stock from total equity before dividing by common shares.",
     "calculationRequired": true,
@@ -562,12 +562,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In the extended (5-factor) DuPont analysis, which additional factors break down net profit margin?",
     "options": {
-      "A": "Operating profit margin and current ratio",
-      "B": "Tax burden and interest burden",
-      "C": "Gross margin and asset turnover",
-      "D": "Quick ratio and inventory turnover"
+      "A": "Gross margin and asset turnover",
+      "B": "Quick ratio and inventory turnover",
+      "C": "Operating profit margin and current ratio",
+      "D": "Tax burden and interest burden"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The extended 5-factor DuPont breaks net profit margin into: (1) Tax burden (Net income/EBT), (2) Interest burden (EBT/EBIT), and (3) Operating profit margin (EBIT/Sales). Combined with asset turnover and equity multiplier, this provides deeper insight into ROE drivers.",
     "tip": "5-factor DuPont: Tax burden × Interest burden × Operating margin × Asset turnover × Equity multiplier = ROE.",
     "calculationRequired": false,
@@ -583,12 +583,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has net income of $500,000 and operating cash flow of $350,000. Beginning total assets were $2,000,000 and ending total assets were $2,400,000. What is the balance sheet-based aggregate accruals ratio?",
     "options": {
-      "A": "3.4%",
-      "B": "6.8%",
-      "C": "14.3%",
-      "D": "22.7%"
+      "A": "6.8%",
+      "B": "14.3%",
+      "C": "22.7%",
+      "D": "3.4%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Aggregate accruals = Net income - Operating cash flow = $500,000 - $350,000 = $150,000. Average total assets = ($2,000,000 + $2,400,000) / 2 = $2,200,000. Accruals ratio = $150,000 / $2,200,000 = 6.8%. Higher ratios suggest lower earnings quality.",
     "tip": "Accruals ratio = (NI - OCF) / Average assets. Higher positive accruals may indicate aggressive accounting or future earnings reversals.",
     "calculationRequired": true,
@@ -604,12 +604,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has the following data: COGS $1,460,000; Credit sales $2,190,000; Purchases $1,500,000; Average inventory $200,000; Average A/R $150,000; Average A/P $125,000. What is the cash conversion cycle?",
     "options": {
-      "A": "44 days",
-      "B": "50 days",
-      "C": "74 days",
-      "D": "80 days"
+      "A": "50 days",
+      "B": "74 days",
+      "C": "80 days",
+      "D": "44 days"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "DIO = (Avg inventory / COGS) × 365 = ($200,000 / $1,460,000) × 365 = 50 days. DSO = (Avg A/R / Credit sales) × 365 = ($150,000 / $2,190,000) × 365 = 25 days. DPO = (Avg A/P / Purchases) × 365 = ($125,000 / $1,500,000) × 365 = 30 days. CCC = DIO + DSO - DPO = 50 + 25 - 30 = 45 days, which rounds to 44 days.",
     "tip": "CCC = Days inventory + Days receivables - Days payables. A shorter CCC means the company converts inventory to cash more quickly.",
     "calculationRequired": true,
@@ -625,12 +625,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has ROE of 18% and pays out 40% of its earnings as dividends. What is the company's sustainable growth rate?",
     "options": {
-      "A": "7.2%",
-      "B": "10.8%",
-      "C": "14.4%",
-      "D": "18.0%"
+      "A": "10.8%",
+      "B": "14.4%",
+      "C": "18.0%",
+      "D": "7.2%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Sustainable growth rate = ROE × Retention ratio. Retention ratio = 1 - Dividend payout ratio = 1 - 0.40 = 0.60 (60%). SGR = 18% × 0.60 = 10.8%. This is the maximum growth rate achievable without external financing.",
     "tip": "SGR = ROE × (1 - Dividend payout ratio). This represents growth funded entirely by retained earnings.",
     "calculationRequired": true,
@@ -646,12 +646,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has two segments. Segment A has revenues of $5M, operating income of $750K, and identifiable assets of $3M. Segment B has revenues of $3M, operating income of $600K, and identifiable assets of $2M. Which statement is correct?",
     "options": {
-      "A": "Segment A is more profitable on all metrics",
-      "B": "Segment A has higher operating margin but lower asset turnover",
-      "C": "Segment B has higher operating margin and higher return on assets",
-      "D": "Both segments have identical return on assets"
+      "A": "Both segments have identical return on assets",
+      "B": "Segment A is more profitable on all metrics",
+      "C": "Segment A has higher operating margin but lower asset turnover",
+      "D": "Segment B has higher operating margin and higher return on assets"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Segment A: Operating margin = $750K/$5M = 15%; ROA = $750K/$3M = 25%. Segment B: Operating margin = $600K/$3M = 20%; ROA = $600K/$2M = 30%. Segment B has both higher operating margin (20% vs 15%) and higher ROA (30% vs 25%).",
     "tip": "Segment analysis requires comparing multiple metrics. A larger segment isn't necessarily more efficient or profitable.",
     "calculationRequired": true,
@@ -667,12 +667,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In Altman's Z-score model for predicting bankruptcy, which ratio has the highest coefficient (weight)?",
     "options": {
-      "A": "Working capital / Total assets",
-      "B": "Retained earnings / Total assets",
-      "C": "EBIT / Total assets",
-      "D": "Sales / Total assets"
+      "A": "EBIT / Total assets",
+      "B": "Sales / Total assets",
+      "C": "Working capital / Total assets",
+      "D": "Retained earnings / Total assets"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "In Altman's original Z-score formula: Z = 1.2(WC/TA) + 1.4(RE/TA) + 3.3(EBIT/TA) + 0.6(MVE/TL) + 1.0(Sales/TA). While EBIT/TA has coefficient 3.3 which appears highest, Sales/TA coefficient is 1.0. Actually, EBIT/TA at 3.3 IS the highest coefficient.",
     "tip": "Z-score formula: 1.2(WC/TA) + 1.4(RE/TA) + 3.3(EBIT/TA) + 0.6(MVE/TL) + 1.0(Sales/TA). Z > 2.99 = safe; Z < 1.81 = distress.",
     "calculationRequired": false,
@@ -688,12 +688,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has NOPAT of $800,000, total capital of $5,000,000, and WACC of 12%. What is the economic value added (EVA)?",
     "options": {
-      "A": "$200,000",
-      "B": "$400,000",
-      "C": "$600,000",
-      "D": "$800,000"
+      "A": "$400,000",
+      "B": "$600,000",
+      "C": "$800,000",
+      "D": "$200,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "EVA = NOPAT - (Capital × WACC) = $800,000 - ($5,000,000 × 0.12) = $800,000 - $600,000 = $200,000. Positive EVA indicates the company is creating value above its cost of capital.",
     "tip": "EVA = NOPAT - Capital charge. Capital charge = Invested capital × WACC. Positive EVA means returns exceed the cost of capital.",
     "calculationRequired": true,
@@ -709,12 +709,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which combination of trends would most strongly suggest potential revenue recognition issues?",
     "options": {
-      "A": "Decreasing DSO and increasing inventory turnover",
-      "B": "Increasing DSO and increasing deferred revenue",
-      "C": "Increasing DSO, decreasing deferred revenue, and revenue growth exceeding industry peers",
-      "D": "Stable DSO with increasing gross margins"
+      "A": "Stable DSO with increasing gross margins",
+      "B": "Decreasing DSO and increasing inventory turnover",
+      "C": "Increasing DSO and increasing deferred revenue",
+      "D": "Increasing DSO, decreasing deferred revenue, and revenue growth exceeding industry peers"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Increasing DSO (slower collections) combined with decreasing deferred revenue (recognizing revenue earlier) and revenue growth exceeding peers suggests aggressive revenue recognition. This combination indicates the company may be booking revenue prematurely or recording questionable sales.",
     "tip": "Red flags: Rising receivables faster than sales, declining allowances, channel stuffing indicators, unusual quarter-end spikes.",
     "calculationRequired": false,
@@ -730,12 +730,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company's ROE increased from 12% to 18% while ROA remained constant at 8%. Its net profit margin decreased slightly. Which factor most likely explains the ROE increase?",
     "options": {
-      "A": "Improved asset efficiency",
-      "B": "Increased financial leverage",
-      "C": "Better expense management",
-      "D": "Higher sales volume"
+      "A": "Increased financial leverage",
+      "B": "Better expense management",
+      "C": "Higher sales volume",
+      "D": "Improved asset efficiency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Using DuPont: ROE = ROA × Equity multiplier. If ROA is constant at 8% but ROE increased from 12% to 18%, the equity multiplier must have increased from 1.5 to 2.25. This indicates increased financial leverage (more debt relative to equity). Declining profit margin rules out expense management, and constant ROA rules out asset efficiency improvements.",
     "tip": "When ROE increases but ROA stays flat, the driver is leverage. ROE = Net margin × Asset turnover × Equity multiplier.",
     "calculationRequired": false,
@@ -751,12 +751,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under U.S. GAAP, all business combinations must be accounted for using which method?",
     "options": {
-      "A": "Pooling of interests method",
-      "B": "Acquisition method",
-      "C": "Equity method",
-      "D": "Cost method"
+      "A": "Equity method",
+      "B": "Cost method",
+      "C": "Pooling of interests method",
+      "D": "Acquisition method"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "ASC 805 requires all business combinations to be accounted for using the acquisition method. The pooling of interests method was eliminated in 2001. The equity method applies to significant influence investments, not controlling interests.",
     "tip": "The acquisition method replaced pooling of interests. It requires fair value measurement of all identifiable assets and liabilities acquired.",
     "calculationRequired": false,
@@ -772,12 +772,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a business combination, assets acquired and liabilities assumed are measured at fair value as of:",
     "options": {
-      "A": "The date the acquisition agreement is signed",
-      "B": "The acquisition date",
-      "C": "The date due diligence is completed",
-      "D": "The fiscal year-end following acquisition"
+      "A": "The date due diligence is completed",
+      "B": "The fiscal year-end following acquisition",
+      "C": "The date the acquisition agreement is signed",
+      "D": "The acquisition date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under ASC 805, assets acquired and liabilities assumed in a business combination are measured at their fair values as of the acquisition date, which is the date the acquirer obtains control of the acquiree.",
     "tip": "The acquisition date is when the acquirer obtains control. This is typically the closing date, not the announcement date.",
     "calculationRequired": false,
@@ -793,12 +793,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Company A pays $500,000 to acquire Company B. The fair value of Company B's identifiable net assets is $400,000. What amount of goodwill should Company A record?",
     "options": {
-      "A": "$0",
-      "B": "$100,000",
-      "C": "$400,000",
-      "D": "$500,000"
+      "A": "$100,000",
+      "B": "$400,000",
+      "C": "$500,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Goodwill = Consideration transferred - Fair value of identifiable net assets = $500,000 - $400,000 = $100,000. Goodwill represents the premium paid above the fair value of net assets acquired.",
     "tip": "Goodwill = Purchase price - Fair value of net identifiable assets. Remember: goodwill is tested for impairment, not amortized under U.S. GAAP.",
     "calculationRequired": true,
@@ -835,12 +835,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A parent company generally must consolidate a subsidiary when it owns more than what percentage of the subsidiary's voting stock?",
     "options": {
-      "A": "20%",
-      "B": "25%",
-      "C": "50%",
-      "D": "80%"
+      "A": "50%",
+      "B": "80%",
+      "C": "20%",
+      "D": "25%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Consolidation is generally required when a parent owns more than 50% of a subsidiary's voting stock, indicating control. Ownership of 20-50% typically results in equity method accounting (significant influence).",
     "tip": "Control = >50% voting ownership (generally). Significant influence = 20-50%. Less than 20% = cost/fair value method.",
     "calculationRequired": false,
@@ -856,12 +856,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the fair value of net identifiable assets acquired exceeds the consideration transferred, the acquirer should recognize:",
     "options": {
-      "A": "Negative goodwill as an asset",
-      "B": "A gain in other comprehensive income",
-      "C": "A gain in earnings",
-      "D": "A reduction of acquired assets"
+      "A": "A gain in other comprehensive income",
+      "B": "A gain in earnings",
+      "C": "A reduction of acquired assets",
+      "D": "Negative goodwill as an asset"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under ASC 805, a bargain purchase occurs when the fair value of net identifiable assets exceeds consideration transferred. After reassessing the fair values, any remaining excess is recognized as a gain in earnings on the acquisition date.",
     "tip": "Bargain purchase: reassess all valuations first, then recognize remaining excess as a gain in earnings, not OCI.",
     "calculationRequired": false,
@@ -877,12 +877,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Legal and accounting fees directly related to a business combination should be:",
     "options": {
-      "A": "Capitalized as part of goodwill",
-      "B": "Added to the cost of assets acquired",
-      "C": "Expensed as incurred",
-      "D": "Deferred and amortized over 5 years"
+      "A": "Expensed as incurred",
+      "B": "Deferred and amortized over 5 years",
+      "C": "Capitalized as part of goodwill",
+      "D": "Added to the cost of assets acquired"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Under ASC 805, acquisition-related costs such as finder's fees, legal, accounting, and other professional fees must be expensed as incurred. They are not part of the consideration transferred and cannot be capitalized.",
     "tip": "Acquisition costs are expensed (except stock issuance costs which reduce equity). This changed from prior GAAP which allowed capitalization.",
     "calculationRequired": false,
@@ -919,12 +919,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following acquired intangible assets must be recognized separately from goodwill in a business combination?",
     "options": {
-      "A": "Workforce in place",
-      "B": "Customer relationships meeting the contractual-legal criterion",
-      "C": "Going concern value",
-      "D": "Synergies from the combination"
+      "A": "Synergies from the combination",
+      "B": "Workforce in place",
+      "C": "Customer relationships meeting the contractual-legal criterion",
+      "D": "Going concern value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Customer relationships that meet the contractual-legal criterion (or separability criterion) must be recognized separately from goodwill. Workforce in place, going concern value, and expected synergies are subsumed into goodwill.",
     "tip": "Intangibles recognized separately if they meet: (1) contractual-legal criterion OR (2) separability criterion. Otherwise included in goodwill.",
     "calculationRequired": false,
@@ -940,12 +940,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent Company sold inventory to its 100%-owned subsidiary for $100,000. The inventory cost Parent $70,000 and remains in Subsidiary's inventory at year-end. What is the consolidation adjustment for unrealized profit?",
     "options": {
-      "A": "Reduce consolidated inventory by $30,000",
-      "B": "Reduce consolidated inventory by $70,000",
-      "C": "Reduce consolidated inventory by $100,000",
-      "D": "No adjustment needed"
+      "A": "No adjustment needed",
+      "B": "Reduce consolidated inventory by $30,000",
+      "C": "Reduce consolidated inventory by $70,000",
+      "D": "Reduce consolidated inventory by $100,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Unrealized intercompany profit = $100,000 - $70,000 = $30,000. This profit must be eliminated from both inventory and retained earnings in consolidation since the goods haven't been sold to outside parties.",
     "tip": "Eliminate 100% of unrealized intercompany profit regardless of NCI percentage. The profit is realized when sold externally.",
     "calculationRequired": true,
@@ -961,12 +961,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Noncontrolling interest in a subsidiary should be presented in the consolidated balance sheet:",
     "options": {
-      "A": "As a liability",
-      "B": "Between liabilities and equity",
-      "C": "Within stockholders' equity, separate from parent's equity",
-      "D": "As a deduction from goodwill"
+      "A": "As a deduction from goodwill",
+      "B": "As a liability",
+      "C": "Between liabilities and equity",
+      "D": "Within stockholders' equity, separate from parent's equity"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Under ASC 810, noncontrolling interest is presented within equity in the consolidated balance sheet, but separate from the parent's equity. It represents the equity in a subsidiary not attributable to the parent.",
     "tip": "NCI is equity, not a liability. Present it separately within the equity section of consolidated balance sheet.",
     "calculationRequired": false,
@@ -982,12 +982,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "How long is the measurement period during which an acquirer may adjust the provisional amounts recognized for a business combination?",
     "options": {
-      "A": "6 months from acquisition date",
-      "B": "Up to 1 year from acquisition date",
-      "C": "18 months from acquisition date",
-      "D": "Until the next fiscal year-end"
+      "A": "Up to 1 year from acquisition date",
+      "B": "18 months from acquisition date",
+      "C": "Until the next fiscal year-end",
+      "D": "6 months from acquisition date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The measurement period is the period after the acquisition date during which the acquirer may adjust provisional amounts. It cannot exceed one year from the acquisition date.",
     "tip": "Measurement period max = 1 year. Adjustments affect goodwill; they're recorded as if made at acquisition date.",
     "calculationRequired": false,
@@ -1003,12 +1003,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent acquires 80% of Subsidiary for $800,000. The fair value of Subsidiary's identifiable net assets is $900,000. The fair value of the 20% NCI is $180,000. What is total goodwill under the full goodwill method?",
     "options": {
-      "A": "$0",
-      "B": "$80,000",
-      "C": "$100,000",
-      "D": "$180,000"
+      "A": "$180,000",
+      "B": "$0",
+      "C": "$80,000",
+      "D": "$100,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Full goodwill = (Consideration + Fair value of NCI) - Fair value of identifiable net assets = ($800,000 + $180,000) - $900,000 = $980,000 - $900,000 = $80,000.",
     "tip": "Full goodwill method: Total implied value = Parent's consideration + NCI fair value. Goodwill = Total implied value - Net assets FV.",
     "calculationRequired": true,
@@ -1045,12 +1045,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which party is required to consolidate a variable interest entity (VIE)?",
     "options": {
-      "A": "The entity with the largest investment in the VIE",
-      "B": "The primary beneficiary of the VIE",
-      "C": "The entity that created the VIE",
-      "D": "All variable interest holders proportionately"
+      "A": "The entity that created the VIE",
+      "B": "All variable interest holders proportionately",
+      "C": "The entity with the largest investment in the VIE",
+      "D": "The primary beneficiary of the VIE"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The primary beneficiary must consolidate the VIE. The primary beneficiary is the party that has (1) power to direct the VIE's most significant activities and (2) the obligation to absorb losses or right to receive benefits that could be significant to the VIE.",
     "tip": "Primary beneficiary test: Power over significant activities + significant economic interest (losses or benefits).",
     "calculationRequired": false,
@@ -1066,12 +1066,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Prior to a business combination, Parent had a $50,000 accounts receivable from Target Company. At acquisition, the receivable was determined to be fully collectible. How should this be treated?",
     "options": {
-      "A": "The receivable is eliminated in consolidation with no gain or loss",
-      "B": "The receivable remains as an asset on consolidated books",
-      "C": "The receivable is treated as part of consideration transferred",
-      "D": "A settlement gain or loss must be recognized separately"
+      "A": "The receivable is treated as part of consideration transferred",
+      "B": "A settlement gain or loss must be recognized separately",
+      "C": "The receivable is eliminated in consolidation with no gain or loss",
+      "D": "The receivable remains as an asset on consolidated books"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "After the combination, the intercompany receivable/payable must be eliminated in consolidation. Since it was fully collectible (at book value), no gain or loss results. The settlement is separate from the acquisition accounting.",
     "tip": "Preexisting relationships are settled at acquisition. Any difference between book and settlement amount is recognized separately from goodwill.",
     "calculationRequired": false,
@@ -1108,12 +1108,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Company A holds a 30% equity investment in Company B with a carrying value of $300,000. Company A acquires an additional 40% for $500,000, gaining control. The fair value of the previously held 30% is $350,000. What gain should Company A recognize?",
     "options": {
-      "A": "$0",
-      "B": "$50,000",
-      "C": "$150,000",
-      "D": "$200,000"
+      "A": "$150,000",
+      "B": "$200,000",
+      "C": "$0",
+      "D": "$50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In a step acquisition, the previously held equity interest is remeasured to fair value at acquisition date. Gain = Fair value - Carrying value = $350,000 - $300,000 = $50,000. This gain is recognized in earnings.",
     "tip": "Step acquisition: remeasure previously held interest to FV, recognize gain/loss. Then apply acquisition method using FV of all interests.",
     "calculationRequired": true,
@@ -1129,12 +1129,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under push-down accounting, where are the fair value adjustments from a business combination recorded?",
     "options": {
-      "A": "Only in the parent's separate financial statements",
-      "B": "Only in the consolidated financial statements",
-      "C": "In the subsidiary's separate financial statements",
-      "D": "In a memorandum record only"
+      "A": "In the subsidiary's separate financial statements",
+      "B": "In a memorandum record only",
+      "C": "Only in the parent's separate financial statements",
+      "D": "Only in the consolidated financial statements"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Push-down accounting allows or requires the acquired subsidiary to reflect the acquirer's purchase price adjustments in its own separate financial statements. Assets and liabilities are adjusted to fair value and goodwill is recorded on the subsidiary's books.",
     "tip": "Push-down = acquisition adjustments recorded on subsidiary's books. Optional under ASC 805-50 when substantially all ownership changes.",
     "calculationRequired": false,
@@ -1150,12 +1150,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a business combination, in-process research and development (IPR&D) should be:",
     "options": {
-      "A": "Expensed immediately",
-      "B": "Recognized as an indefinite-lived intangible until project completion or abandonment",
-      "C": "Included in goodwill",
-      "D": "Recognized only if successful completion is probable"
+      "A": "Included in goodwill",
+      "B": "Recognized only if successful completion is probable",
+      "C": "Expensed immediately",
+      "D": "Recognized as an indefinite-lived intangible until project completion or abandonment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under ASC 805, acquired IPR&D is recognized as an indefinite-lived intangible asset at fair value. It is not amortized until the project is complete (then amortized) or abandoned (then impaired). This differs from internally developed R&D which is expensed.",
     "tip": "Acquired IPR&D = indefinite-lived intangible. Test for impairment annually. Upon completion, reclassify to finite-lived and begin amortization.",
     "calculationRequired": false,
@@ -1213,12 +1213,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent owns 70% of Subsidiary. Subsidiary sold inventory to Parent for $150,000 (cost $120,000). Parent resold 60% externally before year-end. What unrealized profit is eliminated and how is it allocated between parent and NCI?",
     "options": {
-      "A": "$12,000 total; $8,400 parent, $3,600 NCI",
-      "B": "$30,000 total; $21,000 parent, $9,000 NCI",
-      "C": "$12,000 total; $12,000 parent only",
-      "D": "$30,000 total; $30,000 parent only"
+      "A": "$30,000 total; $30,000 parent only",
+      "B": "$12,000 total; $8,400 parent, $3,600 NCI",
+      "C": "$30,000 total; $21,000 parent, $9,000 NCI",
+      "D": "$12,000 total; $12,000 parent only"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Total profit = $150,000 - $120,000 = $30,000. Remaining in inventory = 40% × $30,000 = $12,000 unrealized. Upstream sale allocation: Parent's share = $12,000 × 70% = $8,400; NCI share = $12,000 × 30% = $3,600.",
     "tip": "Upstream unrealized profit is allocated based on ownership percentages because the subsidiary (which has NCI) is the seller.",
     "calculationRequired": true,
@@ -1234,12 +1234,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a reverse acquisition, which entity is typically identified as the accounting acquirer?",
     "options": {
-      "A": "The legal acquirer (issuing entity)",
-      "B": "The legal acquiree (being acquired)",
-      "C": "The larger entity by revenues",
-      "D": "The entity with more employees"
+      "A": "The entity with more employees",
+      "B": "The legal acquirer (issuing entity)",
+      "C": "The legal acquiree (being acquired)",
+      "D": "The larger entity by revenues"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In a reverse acquisition, the legal acquiree is identified as the accounting acquirer for financial reporting purposes. This often occurs when a smaller public shell company legally acquires a larger private operating company through a share exchange.",
     "tip": "Reverse acquisition: legal form ≠ economic substance. The company whose owners control the combined entity is the accounting acquirer.",
     "calculationRequired": false,
@@ -1255,12 +1255,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent sold equipment to Subsidiary for $90,000. The equipment had a book value of $60,000 and 5 years remaining useful life. After one year, what is the net consolidation adjustment?",
     "options": {
-      "A": "Reduce equipment by $30,000; reduce depreciation expense by $6,000",
-      "B": "Reduce equipment by $30,000; increase depreciation expense by $6,000",
-      "C": "Reduce equipment by $24,000 net",
-      "D": "Reduce equipment by $36,000 net"
+      "A": "Reduce equipment by $24,000 net",
+      "B": "Reduce equipment by $36,000 net",
+      "C": "Reduce equipment by $30,000; reduce depreciation expense by $6,000",
+      "D": "Reduce equipment by $30,000; increase depreciation expense by $6,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Initial profit = $90,000 - $60,000 = $30,000. Excess depreciation per year = $30,000 / 5 = $6,000. After 1 year, unrealized profit remaining = $30,000 - $6,000 = $24,000. Equipment is reduced by $24,000 (net of accumulated depreciation adjustment).",
     "tip": "Intercompany profit on fixed assets is realized through depreciation. Each year's excess depreciation reduces remaining unrealized profit.",
     "calculationRequired": true,
@@ -1276,12 +1276,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the equity method, Parent reported $150,000 income from its subsidiary investment. During consolidation, which of the following occurs?",
     "options": {
-      "A": "The $150,000 equity income remains on consolidated income statement",
-      "B": "The $150,000 is replaced by subsidiary's individual revenues and expenses",
-      "C": "The $150,000 is added to subsidiary's net income",
-      "D": "The $150,000 is reclassified to other comprehensive income"
+      "A": "The $150,000 is reclassified to other comprehensive income",
+      "B": "The $150,000 equity income remains on consolidated income statement",
+      "C": "The $150,000 is replaced by subsidiary's individual revenues and expenses",
+      "D": "The $150,000 is added to subsidiary's net income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In consolidation, the parent's equity method income is eliminated and replaced by line-by-line consolidation of the subsidiary's revenues and expenses. The investment account is also eliminated against the subsidiary's equity.",
     "tip": "Equity method income is a single-line pickup. Consolidation expands this to full revenue/expense presentation, then eliminates the investment.",
     "calculationRequired": false,
@@ -1297,12 +1297,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following distinguishes an asset acquisition from a business combination?",
     "options": {
-      "A": "Asset acquisitions require fair value allocation while business combinations do not",
-      "B": "Asset acquisitions do not result in goodwill while business combinations may",
-      "C": "Business combinations must use the equity method",
-      "D": "Asset acquisitions require pushdown accounting"
+      "A": "Asset acquisitions do not result in goodwill while business combinations may",
+      "B": "Business combinations must use the equity method",
+      "C": "Asset acquisitions require pushdown accounting",
+      "D": "Asset acquisitions require fair value allocation while business combinations do not"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In an asset acquisition, the purchase price is allocated to assets acquired based on relative fair values. No goodwill is recognized; any excess becomes additional cost basis. Business combinations may result in goodwill (or a bargain purchase gain).",
     "tip": "Asset acquisition: allocate cost based on relative FV, no goodwill. Business combination: FV allocation with goodwill for excess.",
     "calculationRequired": false,
@@ -1318,12 +1318,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent acquires Target by paying $2,000,000 cash, issuing 100,000 shares (market value $15/share), and providing contingent consideration with acquisition-date fair value of $300,000. Parent also paid $150,000 in legal fees. What is the total consideration transferred?",
     "options": {
-      "A": "$3,450,000",
-      "B": "$3,650,000",
-      "C": "$3,800,000",
-      "D": "$3,950,000"
+      "A": "$3,800,000",
+      "B": "$3,950,000",
+      "C": "$3,450,000",
+      "D": "$3,650,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Consideration = Cash + Stock FV + Contingent consideration FV = $2,000,000 + (100,000 × $15) + $300,000 = $2,000,000 + $1,500,000 + $300,000 = $3,800,000. Legal fees ($150,000) are expensed, not part of consideration.",
     "tip": "Include: cash, stock at FV, contingent consideration at FV. Exclude: transaction costs (expensed separately).",
     "calculationRequired": true,
@@ -1339,12 +1339,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Subsidiary has 10,000 common shares and 2,000 preferred shares ($100 par, 8% cumulative). Parent owns 8,000 common shares and all preferred shares. Subsidiary net income is $150,000. What is NCI's share of net income?",
     "options": {
-      "A": "$26,800",
-      "B": "$30,000",
-      "C": "$33,200",
-      "D": "$46,800"
+      "A": "$33,200",
+      "B": "$46,800",
+      "C": "$26,800",
+      "D": "$30,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Preferred dividend = 2,000 × $100 × 8% = $16,000 (all to parent). Income to common = $150,000 - $16,000 = $134,000. NCI owns 2,000/10,000 = 20% of common. NCI income = $134,000 × 20% = $26,800.",
     "tip": "Deduct preferred dividends from net income, then allocate remaining income based on common stock ownership percentages.",
     "calculationRequired": true,
@@ -1360,12 +1360,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A reporting unit has a carrying amount of $5,000,000 including goodwill of $800,000. The fair value of the reporting unit is determined to be $4,500,000. What impairment loss is recognized?",
     "options": {
-      "A": "$0",
-      "B": "$500,000",
-      "C": "$800,000",
-      "D": "$300,000"
+      "A": "$500,000",
+      "B": "$800,000",
+      "C": "$300,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under the simplified goodwill impairment test, impairment = Carrying amount - Fair value of reporting unit = $5,000,000 - $4,500,000 = $500,000. However, impairment is limited to the carrying amount of goodwill ($800,000). Since $500,000 < $800,000, record $500,000 impairment.",
     "tip": "Simplified test: Impairment = Carrying value - FV, but limited to goodwill balance. No longer required to calculate implied goodwill.",
     "calculationRequired": true,
@@ -1381,12 +1381,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent owned 80% of Subsidiary (carrying value $400,000) and sells 50% of its total interest for $300,000 cash. The fair value of the remaining 30% retained is $180,000, and the fair value of NCI at deconsolidation date is $120,000. Subsidiary's net assets fair value is $500,000. What gain or loss does Parent recognize?",
     "options": {
-      "A": "$80,000 gain",
-      "B": "$180,000 gain",
-      "C": "$50,000 loss",
-      "D": "$100,000 gain"
+      "A": "$50,000 loss",
+      "B": "$100,000 gain",
+      "C": "$80,000 gain",
+      "D": "$180,000 gain"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Deconsolidation gain = FV of consideration received + FV of retained interest - Carrying amount of subsidiary's net assets attributable to parent. = $300,000 + $180,000 - (80% × $500,000 carrying) = $300,000 + $180,000 - $400,000 = $80,000 gain.",
     "tip": "On loss of control: recognize gain/loss = (Cash + FV retained interest) - Carrying value of parent's share of subsidiary net assets.",
     "calculationRequired": true,
@@ -1402,12 +1402,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent owns 80% of Subsidiary and purchases an additional 10% from NCI for $150,000. Subsidiary's total equity is $1,000,000. How is the transaction recorded?",
     "options": {
-      "A": "Recognize $50,000 gain in earnings",
-      "B": "Recognize $50,000 loss in earnings",
-      "C": "Decrease parent's equity by $50,000",
-      "D": "Increase goodwill by $50,000"
+      "A": "Increase goodwill by $50,000",
+      "B": "Recognize $50,000 gain in earnings",
+      "C": "Recognize $50,000 loss in earnings",
+      "D": "Decrease parent's equity by $50,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "NCI book value purchased = 10% × $1,000,000 = $100,000. Price paid = $150,000. Difference = $50,000 decrease in parent's equity (APIC or retained earnings). Ownership changes that don't affect control are equity transactions, not P&L.",
     "tip": "No gain/loss when control is maintained. Difference between price and book value adjusts equity (typically APIC).",
     "calculationRequired": true,
@@ -1423,12 +1423,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Company X acquires Company Y for $800,000. Identifiable assets acquired have fair value of $1,200,000 and liabilities assumed have fair value of $300,000. After reassessing all valuations, what does Company X record?",
     "options": {
-      "A": "Goodwill of $100,000",
-      "B": "Gain of $100,000",
-      "C": "Reduction of asset values by $100,000",
-      "D": "Deferred gain of $100,000"
+      "A": "Gain of $100,000",
+      "B": "Reduction of asset values by $100,000",
+      "C": "Deferred gain of $100,000",
+      "D": "Goodwill of $100,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Net identifiable assets FV = $1,200,000 - $300,000 = $900,000. Consideration = $800,000. Excess of net assets over consideration = $900,000 - $800,000 = $100,000 bargain purchase gain recognized in earnings.",
     "tip": "Bargain purchase: First reassess all FVs. Remaining excess is recognized as a gain in earnings immediately.",
     "calculationRequired": true,
@@ -1444,12 +1444,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In Year 1, Parent sold land to Subsidiary for $100,000 (cost $60,000). In Year 3, Subsidiary sold the land externally for $120,000. What consolidation entry is needed in Year 3?",
     "options": {
-      "A": "Reduce gain on sale by $40,000",
-      "B": "Increase gain on sale by $40,000",
-      "C": "Reduce beginning retained earnings by $40,000 and increase gain by $40,000",
-      "D": "No adjustment needed"
+      "A": "Increase gain on sale by $40,000",
+      "B": "Reduce beginning retained earnings by $40,000 and increase gain by $40,000",
+      "C": "No adjustment needed",
+      "D": "Reduce gain on sale by $40,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Year 1-2: Unrealized $40,000 profit deferred (Dr. RE, Cr. Land). Year 3: Land sold externally, so profit is now realized. Entry reverses: Dr. Land (or Gain) $40,000, Cr. Beginning RE $40,000. Net effect: recognize the previously deferred profit.",
     "tip": "When intercompany asset is sold externally, reverse the deferral. Debit beginning RE (prior unrealized profit), credit to recognize gain.",
     "calculationRequired": true,
@@ -1465,12 +1465,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Acquirer pays $2,500,000 for Target. Target's book values: Assets $1,800,000, Liabilities $600,000. Fair value adjustments: Land +$200,000, Equipment +$100,000, Customer list (not on books) $150,000, Contingent liability $50,000. What is goodwill?",
     "options": {
-      "A": "$500,000",
-      "B": "$700,000",
-      "C": "$900,000",
-      "D": "$1,100,000"
+      "A": "$700,000",
+      "B": "$900,000",
+      "C": "$1,100,000",
+      "D": "$500,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "BV net assets = $1,800,000 - $600,000 = $1,200,000. FV adjustments: Land +$200,000, Equipment +$100,000, Customer list +$150,000, Contingent liability -$50,000 = net +$400,000. FV net assets = $1,200,000 + $400,000 = $1,600,000. Goodwill = Purchase price - FV net assets = $2,500,000 - $1,600,000 = $900,000.",
     "tip": "Add FV adjustments for undervalued assets and new intangibles. Subtract additional liabilities identified. Goodwill = Price - FV net assets.",
     "calculationRequired": true,
@@ -1486,12 +1486,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which governmental fund is used to account for all financial resources except those required to be accounted for in another fund?",
     "options": {
-      "A": "Special revenue fund",
-      "B": "Capital projects fund",
-      "C": "General fund",
-      "D": "Debt service fund"
+      "A": "General fund",
+      "B": "Debt service fund",
+      "C": "Special revenue fund",
+      "D": "Capital projects fund"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "The general fund is the chief operating fund of a governmental entity. It accounts for all financial resources not required to be reported in another fund. Every government must have a general fund.",
     "tip": "General fund = 'catch-all' fund. If resources don't fit elsewhere, they go here.",
     "calculationRequired": false,
@@ -1507,12 +1507,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is a proprietary fund?",
     "options": {
-      "A": "Special revenue fund",
-      "B": "Agency fund",
-      "C": "Enterprise fund",
-      "D": "Permanent fund"
+      "A": "Enterprise fund",
+      "B": "Permanent fund",
+      "C": "Special revenue fund",
+      "D": "Agency fund"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Proprietary funds include enterprise funds and internal service funds. They use accrual accounting similar to commercial enterprises. Enterprise funds account for activities that provide goods or services to external users for a fee.",
     "tip": "Proprietary funds = business-like activities. Two types: Enterprise (external) and Internal Service (internal).",
     "calculationRequired": false,
@@ -1528,12 +1528,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Governmental funds use which measurement focus and basis of accounting?",
     "options": {
-      "A": "Economic resources and accrual basis",
-      "B": "Current financial resources and modified accrual basis",
-      "C": "Economic resources and modified accrual basis",
-      "D": "Current financial resources and cash basis"
+      "A": "Current financial resources and cash basis",
+      "B": "Economic resources and accrual basis",
+      "C": "Current financial resources and modified accrual basis",
+      "D": "Economic resources and modified accrual basis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Governmental funds (general, special revenue, capital projects, debt service, permanent) use current financial resources measurement focus and modified accrual basis of accounting in their fund financial statements.",
     "tip": "Governmental funds: Current financial resources + Modified accrual. Proprietary funds: Economic resources + Full accrual.",
     "calculationRequired": false,
@@ -1570,12 +1570,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Pension trust funds are classified as which type of fund?",
     "options": {
-      "A": "Governmental fund",
-      "B": "Proprietary fund",
-      "C": "Fiduciary fund",
-      "D": "Special revenue fund"
+      "A": "Fiduciary fund",
+      "B": "Special revenue fund",
+      "C": "Governmental fund",
+      "D": "Proprietary fund"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Pension trust funds are fiduciary funds used to account for resources held in trust for pension plan participants. Fiduciary funds include pension trust, investment trust, private-purpose trust, and custodial funds.",
     "tip": "Fiduciary funds hold resources in a trustee capacity for others. They are NOT included in government-wide statements.",
     "calculationRequired": false,
@@ -1591,12 +1591,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An encumbrance represents:",
     "options": {
-      "A": "An actual expenditure",
-      "B": "A commitment for future spending",
-      "C": "Revenue that has been earned",
-      "D": "A liability that has been incurred"
+      "A": "Revenue that has been earned",
+      "B": "A liability that has been incurred",
+      "C": "An actual expenditure",
+      "D": "A commitment for future spending"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An encumbrance is a commitment related to unperformed contracts for goods or services. It represents an estimated amount that will be spent when the commitment is fulfilled. Encumbrances help prevent overspending appropriations.",
     "tip": "Encumbrance = commitment/reservation of budget. When goods arrive, reverse encumbrance and record expenditure.",
     "calculationRequired": false,
@@ -1612,12 +1612,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under modified accrual accounting, revenues are recognized when they are:",
     "options": {
-      "A": "Earned",
-      "B": "Measurable and available",
-      "C": "Collected in cash",
-      "D": "Appropriated by the governing body"
+      "A": "Measurable and available",
+      "B": "Collected in cash",
+      "C": "Appropriated by the governing body",
+      "D": "Earned"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under modified accrual accounting, revenues are recognized when they are both measurable (amount can be determined) and available (collectible within the current period or soon enough thereafter to pay current liabilities, typically 60 days).",
     "tip": "Modified accrual revenue: Measurable + Available. 'Available' typically means collected within 60 days of year-end.",
     "calculationRequired": false,
@@ -1633,12 +1633,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A city levies property taxes of $10,000,000 in fiscal year 2024. It expects to collect $9,600,000 in 2024 and $300,000 in the first 60 days of 2025. The remaining $100,000 is estimated to be uncollectible. What amount should be recognized as property tax revenue for 2024?",
     "options": {
-      "A": "$9,600,000",
-      "B": "$9,900,000",
-      "C": "$10,000,000",
-      "D": "$9,500,000"
+      "A": "$9,500,000",
+      "B": "$9,600,000",
+      "C": "$9,900,000",
+      "D": "$10,000,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Property tax revenue = Amount expected to be collected during the year + Amount expected within 60 days after year-end = $9,600,000 + $300,000 = $9,900,000. The $100,000 estimated uncollectible is not recognized as revenue.",
     "tip": "Property tax revenue = Levy - Estimated uncollectible - Amount not available (>60 days). Deferred inflows for taxes collected in advance.",
     "calculationRequired": true,
@@ -1654,12 +1654,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GASB standards, how should infrastructure assets (roads, bridges) be reported in government-wide financial statements?",
     "options": {
-      "A": "They are not capitalized",
-      "B": "They are expensed when acquired",
-      "C": "They are capitalized and depreciated or use the modified approach",
-      "D": "They are reported only in the notes"
+      "A": "They are reported only in the notes",
+      "B": "They are not capitalized",
+      "C": "They are expensed when acquired",
+      "D": "They are capitalized and depreciated or use the modified approach"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Infrastructure assets must be capitalized in government-wide statements. Governments can either depreciate these assets or use the modified approach (maintain assets at a condition level and expense preservation costs instead of depreciation).",
     "tip": "Modified approach for infrastructure: No depreciation if (1) asset management system exists and (2) assets maintained at established condition level.",
     "calculationRequired": false,
@@ -1675,12 +1675,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which fund balance classification represents amounts constrained by external parties such as grantors?",
     "options": {
-      "A": "Nonspendable",
-      "B": "Restricted",
-      "C": "Committed",
-      "D": "Assigned"
+      "A": "Assigned",
+      "B": "Nonspendable",
+      "C": "Restricted",
+      "D": "Committed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Restricted fund balance represents amounts constrained for specific purposes by external parties (creditors, grantors, contributors) or by constitutional provisions or enabling legislation. Committed is constrained by the government's highest decision-making authority.",
     "tip": "Hierarchy: Nonspendable → Restricted (external) → Committed (highest authority) → Assigned (intended use) → Unassigned (residual).",
     "calculationRequired": false,
@@ -1717,12 +1717,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In the government-wide Statement of Activities, program revenues are:",
     "options": {
-      "A": "Reported separately from expenses",
-      "B": "Netted against the expenses of the program they relate to",
-      "C": "Combined with general revenues",
-      "D": "Reported only in the notes"
+      "A": "Combined with general revenues",
+      "B": "Reported only in the notes",
+      "C": "Reported separately from expenses",
+      "D": "Netted against the expenses of the program they relate to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The Statement of Activities uses a net expense/revenue format. Program revenues (charges for services, operating grants, capital grants) are deducted from program expenses to show net cost of each function. General revenues are reported separately after the net cost.",
     "tip": "Program revenues reduce program costs directly. General revenues (taxes, unrestricted grants) support all programs.",
     "calculationRequired": false,
@@ -1759,12 +1759,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a debt service fund using modified accrual accounting, principal and interest on long-term debt are recognized as expenditures when:",
     "options": {
-      "A": "The debt is issued",
-      "B": "The obligation is incurred",
-      "C": "Due and payable (legally due)",
-      "D": "Cash is paid"
+      "A": "The obligation is incurred",
+      "B": "Due and payable (legally due)",
+      "C": "Cash is paid",
+      "D": "The debt is issued"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under modified accrual, debt service expenditures (principal and interest) are recognized when due and payable—typically the debt service payment date. This differs from accrual accounting where interest is recognized as it accrues.",
     "tip": "Debt service exception: Don't accrue interest between payment dates in governmental funds. Recognize when legally due.",
     "calculationRequired": false,
@@ -1780,12 +1780,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a government issues general obligation bonds to finance capital projects, the proceeds are reported in the capital projects fund as:",
     "options": {
-      "A": "Revenue",
-      "B": "Other financing source",
-      "C": "Long-term liability",
-      "D": "Deferred inflow"
+      "A": "Deferred inflow",
+      "B": "Revenue",
+      "C": "Other financing source",
+      "D": "Long-term liability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Bond proceeds are reported as other financing sources in governmental funds, not revenues. The long-term liability is not reported in the fund statements (current financial resources focus) but appears in government-wide statements.",
     "tip": "Governmental funds don't report long-term debt. Bond proceeds = Other Financing Source. Debt appears in government-wide statements.",
     "calculationRequired": false,
@@ -1801,12 +1801,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GASB standards, a transaction that is within management's control and either unusual or infrequent is classified as:",
     "options": {
-      "A": "An extraordinary item",
-      "B": "A special item",
-      "C": "An other financing source or use",
-      "D": "A prior period adjustment"
+      "A": "A special item",
+      "B": "An other financing source or use",
+      "C": "A prior period adjustment",
+      "D": "An extraordinary item"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Special items are significant transactions or events within management's control that are either unusual in nature or infrequent in occurrence. Unlike prior FASB guidance, GASB still uses the special item classification.",
     "tip": "Special item = Management control + (unusual OR infrequent). Reported separately in Statement of Activities.",
     "calculationRequired": false,
@@ -1843,12 +1843,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following would be reported as a deferred outflow of resources?",
     "options": {
-      "A": "Property taxes received in advance",
-      "B": "Loss on debt refunding",
-      "C": "Unearned grant revenue",
-      "D": "Gain on debt refunding"
+      "A": "Unearned grant revenue",
+      "B": "Gain on debt refunding",
+      "C": "Property taxes received in advance",
+      "D": "Loss on debt refunding"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A loss on debt refunding (difference between reacquisition price and net carrying amount) is reported as a deferred outflow of resources and amortized over the shorter of remaining life of old debt or new debt.",
     "tip": "Deferred outflows = consumption of net assets applicable to future periods. Deferred inflows = acquisition of net assets applicable to future.",
     "calculationRequired": false,
@@ -1864,12 +1864,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GASB 75, a government sponsoring a single-employer OPEB plan should report:",
     "options": {
-      "A": "Only current year contributions as expense",
-      "B": "Total OPEB liability on the statement of net position",
-      "C": "Net OPEB liability (total OPEB liability less plan fiduciary net position)",
-      "D": "OPEB expense equal to the annual required contribution"
+      "A": "Total OPEB liability on the statement of net position",
+      "B": "Net OPEB liability (total OPEB liability less plan fiduciary net position)",
+      "C": "OPEB expense equal to the annual required contribution",
+      "D": "Only current year contributions as expense"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under GASB 75, governments report the net OPEB liability, which equals total OPEB liability minus the OPEB plan's fiduciary net position (plan assets). This parallels pension accounting under GASB 68.",
     "tip": "Net OPEB liability = Total OPEB liability - Plan net position. Similar to pension: unfunded portion goes on balance sheet.",
     "calculationRequired": false,
@@ -1906,12 +1906,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which financial statements are required for enterprise funds?",
     "options": {
-      "A": "Balance sheet and statement of revenues, expenditures, and changes in fund balance",
-      "B": "Statement of net position, statement of revenues, expenses, and changes in net position, and statement of cash flows",
-      "C": "Statement of financial position and statement of activities",
-      "D": "Statement of net position and budgetary comparison"
+      "A": "Statement of net position, statement of revenues, expenses, and changes in net position, and statement of cash flows",
+      "B": "Statement of financial position and statement of activities",
+      "C": "Statement of net position and budgetary comparison",
+      "D": "Balance sheet and statement of revenues, expenditures, and changes in fund balance"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Proprietary funds (enterprise and internal service) require three statements: Statement of Net Position, Statement of Revenues, Expenses, and Changes in Net Position, and Statement of Cash Flows using the direct method.",
     "tip": "Proprietary funds require a cash flow statement using DIRECT method. This differs from commercial entities which can use indirect.",
     "calculationRequired": false,
@@ -1927,12 +1927,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A government establishes a print shop that provides printing services exclusively to other departments within the same government. This should be accounted for in:",
     "options": {
-      "A": "General fund",
-      "B": "Enterprise fund",
-      "C": "Internal service fund",
-      "D": "Special revenue fund"
+      "A": "Special revenue fund",
+      "B": "General fund",
+      "C": "Enterprise fund",
+      "D": "Internal service fund"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Internal service funds account for activities that provide goods or services to other departments within the same government on a cost-reimbursement basis. Enterprise funds serve external customers.",
     "tip": "Internal service = serves internal customers (other departments). Enterprise = serves external customers (public).",
     "calculationRequired": false,
@@ -1948,12 +1948,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When converting governmental fund financial statements to government-wide financial statements, which adjustment is required?",
     "options": {
-      "A": "Add depreciation expense and capital assets",
-      "B": "Remove capital assets and long-term debt",
-      "C": "Convert from accrual to modified accrual",
-      "D": "Eliminate interfund receivables and payables"
+      "A": "Eliminate interfund receivables and payables",
+      "B": "Add depreciation expense and capital assets",
+      "C": "Remove capital assets and long-term debt",
+      "D": "Convert from accrual to modified accrual"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Converting to government-wide requires adding capital assets and related depreciation, adding long-term debt, recognizing accrued interest, and eliminating internal service fund activity (if governmental). Government-wide uses full accrual.",
     "tip": "Key conversions: Add capital assets/depreciation, add long-term liabilities, adjust for accrual basis revenue/expense recognition.",
     "calculationRequired": false,
@@ -1990,12 +1990,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A citizen donates $1,000,000 to a city, stipulating that the principal must remain intact and only earnings can be used for park maintenance. This should be reported in:",
     "options": {
-      "A": "General fund",
-      "B": "Special revenue fund",
-      "C": "Permanent fund",
-      "D": "Private-purpose trust fund"
+      "A": "Special revenue fund",
+      "B": "Permanent fund",
+      "C": "Private-purpose trust fund",
+      "D": "General fund"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "A permanent fund is a governmental fund that reports resources where the principal must be preserved and only earnings can be spent for the benefit of the government or its citizens. Private-purpose trusts benefit individuals or private organizations.",
     "tip": "Permanent fund: Principal preserved, earnings benefit government/public. Private-purpose trust: Benefits individuals/private organizations.",
     "calculationRequired": false,
@@ -2011,12 +2011,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Why are fiduciary funds excluded from government-wide financial statements?",
     "options": {
-      "A": "They are immaterial",
-      "B": "The resources are not available to support the government's programs",
-      "C": "They use different accounting standards",
-      "D": "They are reported in the notes only"
+      "A": "The resources are not available to support the government's programs",
+      "B": "They use different accounting standards",
+      "C": "They are reported in the notes only",
+      "D": "They are immaterial"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Fiduciary fund resources are held in trust for others (pension participants, external parties) and cannot be used to finance the government's operations or programs. Therefore, they are excluded from government-wide statements but reported separately.",
     "tip": "Fiduciary = holding for others. Not the government's resources, so excluded from government-wide. Reported separately.",
     "calculationRequired": false,
@@ -2032,12 +2032,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A component unit should be blended (rather than discretely presented) in the primary government's financial statements when:",
     "options": {
-      "A": "The component unit is fiscally dependent on the primary government",
-      "B": "The component unit's governing body is substantially the same as the primary government's OR it provides services entirely to the primary government",
-      "C": "The primary government appoints a voting majority of the component unit's board",
-      "D": "The component unit has a separate legal status"
+      "A": "The component unit's governing body is substantially the same as the primary government's OR it provides services entirely to the primary government",
+      "B": "The primary government appoints a voting majority of the component unit's board",
+      "C": "The component unit has a separate legal status",
+      "D": "The component unit is fiscally dependent on the primary government"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Blending is required when: (1) The component unit's governing body is substantively the same as the primary government's, (2) the component unit provides services entirely or almost entirely to the primary government, or (3) the component unit's debt will be repaid entirely by the primary government.",
     "tip": "Blended = component unit reported as if part of primary government. Discrete = component unit shown in separate column.",
     "calculationRequired": false,
@@ -2053,12 +2053,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GASB 87, a government enters into a 5-year building lease with annual payments of $100,000. The government's incremental borrowing rate is 5%. At lease commencement, the government should recognize:",
     "options": {
-      "A": "Rent expense of $100,000",
-      "B": "A lease liability and intangible right-to-use asset at present value",
-      "C": "A capital asset and long-term debt equal to total payments",
-      "D": "An operating lease footnote disclosure only"
+      "A": "An operating lease footnote disclosure only",
+      "B": "Rent expense of $100,000",
+      "C": "A lease liability and intangible right-to-use asset at present value",
+      "D": "A capital asset and long-term debt equal to total payments"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under GASB 87, lessees recognize a lease liability and an intangible right-to-use lease asset at the present value of lease payments. There is no operating lease classification—essentially all leases are treated similarly to finance leases.",
     "tip": "GASB 87: Single model for lessees. Recognize intangible asset and lease liability at PV of payments (unless short-term exemption applies).",
     "calculationRequired": false,
@@ -2074,12 +2074,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A government's pension expense under GASB 68 includes which of the following?",
     "options": {
-      "A": "Service cost plus amortization of deferred amounts only",
-      "B": "Service cost, interest on liability, projected earnings on assets, and amortization of deferred outflows/inflows",
-      "C": "Employer contributions to the pension plan",
-      "D": "Actuarially determined contribution (ADC) only"
+      "A": "Actuarially determined contribution (ADC) only",
+      "B": "Service cost plus amortization of deferred amounts only",
+      "C": "Service cost, interest on liability, projected earnings on assets, and amortization of deferred outflows/inflows",
+      "D": "Employer contributions to the pension plan"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "GASB 68 pension expense includes: (1) Service cost, (2) Interest on total pension liability, (3) Expected return on plan investments (reduction), (4) Amortization of deferred outflows and inflows, and (5) Changes in benefit terms or assumptions recognized immediately.",
     "tip": "Pension expense ≠ Contributions. It's an accrual measure based on actuarial calculations, similar to ASC 715 for private companies.",
     "calculationRequired": false,
@@ -2095,12 +2095,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A city's general fund has the following: Cash $500,000; Receivables $200,000; Inventories $50,000 (consumption method); Accounts payable $150,000; Deferred inflows $100,000. What is total fund balance?",
     "options": {
-      "A": "$450,000",
-      "B": "$500,000",
-      "C": "$550,000",
-      "D": "$600,000"
+      "A": "$550,000",
+      "B": "$600,000",
+      "C": "$450,000",
+      "D": "$500,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Fund balance = Assets - Liabilities - Deferred inflows = ($500,000 + $200,000 + $50,000) - $150,000 - $100,000 = $750,000 - $250,000 = $500,000. Note: Inventory is included as an asset under consumption method.",
     "tip": "Fund balance equation: Assets - Liabilities - Deferred inflows (or + Deferred outflows) = Fund balance.",
     "calculationRequired": true,
@@ -2116,12 +2116,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A government reports governmental fund balance of $5,000,000. Capital assets (net) are $12,000,000; long-term debt is $8,000,000; accrued interest payable is $200,000. What is the net position of governmental activities (ignoring other adjustments)?",
     "options": {
-      "A": "$8,800,000",
-      "B": "$9,000,000",
-      "C": "$13,000,000",
-      "D": "$17,000,000"
+      "A": "$9,000,000",
+      "B": "$13,000,000",
+      "C": "$17,000,000",
+      "D": "$8,800,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Net position = Fund balance + Capital assets - Long-term debt - Accrued liabilities = $5,000,000 + $12,000,000 - $8,000,000 - $200,000 = $8,800,000.",
     "tip": "Reconciliation adds back items not in governmental funds: capital assets (add), long-term debt (subtract), accrued items (adjust).",
     "calculationRequired": true,
@@ -2137,12 +2137,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A governmental fund is classified as a major fund if total assets, liabilities, revenues, or expenditures are at least what percentage of the corresponding total for all governmental funds AND at least what percentage of the total for all governmental and enterprise funds combined?",
     "options": {
-      "A": "5% and 10%",
-      "B": "10% and 5%",
-      "C": "10% and 10%",
-      "D": "5% and 5%"
+      "A": "5% and 5%",
+      "B": "5% and 10%",
+      "C": "10% and 5%",
+      "D": "10% and 10%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A fund is major if any element (assets, liabilities, revenues, or expenditures/expenses) is: (1) ≥10% of the corresponding total for its category (all governmental funds or all enterprise funds), AND (2) ≥5% of the combined total for both governmental and enterprise funds.",
     "tip": "Major fund test: 10% of category + 5% of combined total. General fund is always major. Others by test or management judgment.",
     "calculationRequired": false,
@@ -2158,12 +2158,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A government issues bonds on behalf of a private company to provide financing for the company's manufacturing facility. The government has no obligation to repay the bonds. How should the government report this conduit debt?",
     "options": {
-      "A": "As long-term debt on the statement of net position",
-      "B": "As a liability with a corresponding receivable",
-      "C": "In note disclosures only; not on the face of financial statements",
-      "D": "As a deferred inflow of resources"
+      "A": "As a deferred inflow of resources",
+      "B": "As long-term debt on the statement of net position",
+      "C": "As a liability with a corresponding receivable",
+      "D": "In note disclosures only; not on the face of financial statements"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Under GASB 91, conduit debt obligations where the government has no commitment (explicit or moral) are not reported as liabilities. They are disclosed in the notes, including total amount outstanding and description of the arrangements.",
     "tip": "Conduit debt: Government is a conduit, not obligated to repay. Disclose only unless there's a commitment beyond conduit role.",
     "calculationRequired": false,
@@ -2179,12 +2179,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A government issues special assessment bonds to finance street improvements. The government is obligated in some manner for the debt. How should the debt and improvement be reported?",
     "options": {
-      "A": "Infrastructure asset and liability in government-wide statements only",
-      "B": "Infrastructure asset in capital projects fund and liability in debt service fund",
-      "C": "Infrastructure asset in government-wide statements; liability in both fund and government-wide statements",
-      "D": "Infrastructure in government-wide; liability in government-wide; activity recorded in capital projects and debt service funds"
+      "A": "Infrastructure asset in government-wide statements; liability in both fund and government-wide statements",
+      "B": "Infrastructure in government-wide; liability in government-wide; activity recorded in capital projects and debt service funds",
+      "C": "Infrastructure asset and liability in government-wide statements only",
+      "D": "Infrastructure asset in capital projects fund and liability in debt service fund"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "When obligated for special assessment debt: (1) Capital projects fund records project costs; (2) Debt service fund handles debt payments; (3) Infrastructure is capitalized in government-wide; (4) Long-term liability appears in government-wide statements.",
     "tip": "Special assessment with government obligation: Treat like general debt. Without obligation: may not report liability, disclose in notes.",
     "calculationRequired": false,
@@ -2221,12 +2221,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current GAAP, how many classifications of net assets do not-for-profit organizations use?",
     "options": {
-      "A": "One",
-      "B": "Two",
-      "C": "Three",
-      "D": "Four"
+      "A": "Four",
+      "B": "One",
+      "C": "Two",
+      "D": "Three"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under ASU 2016-14, not-for-profit organizations classify net assets into two categories: (1) Net assets without donor restrictions and (2) Net assets with donor restrictions. The previous three-category system (unrestricted, temporarily restricted, permanently restricted) was eliminated.",
     "tip": "Two categories now: With donor restrictions and Without donor restrictions. Old system had three (unrestricted, temp restricted, perm restricted).",
     "calculationRequired": false,
@@ -2263,12 +2263,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which financial statement is required for not-for-profit organizations but NOT for commercial entities?",
     "options": {
-      "A": "Statement of Financial Position",
-      "B": "Statement of Activities",
-      "C": "Statement of Functional Expenses",
-      "D": "Statement of Cash Flows"
+      "A": "Statement of Cash Flows",
+      "B": "Statement of Financial Position",
+      "C": "Statement of Activities",
+      "D": "Statement of Functional Expenses"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The Statement of Functional Expenses (or equivalent disclosure) is required for NFPs, showing expenses by both natural classification and functional classification. This is unique to NFPs and health care entities.",
     "tip": "NFP unique: Statement of Functional Expenses shows expenses by function (program, management, fundraising) and nature (salaries, rent, etc.).",
     "calculationRequired": false,
@@ -2305,12 +2305,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A donor gives $100,000 to a museum with the stipulation that the funds be used to acquire artwork. This contribution should be classified as:",
     "options": {
-      "A": "Net assets without donor restrictions",
-      "B": "Net assets with donor restrictions",
-      "C": "A liability",
-      "D": "Deferred revenue"
+      "A": "Net assets with donor restrictions",
+      "B": "A liability",
+      "C": "Deferred revenue",
+      "D": "Net assets without donor restrictions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The contribution has a purpose restriction (must be used to acquire artwork), making it net assets with donor restrictions. When the artwork is purchased, the restriction is satisfied and a reclassification is made to net assets without donor restrictions.",
     "tip": "Donor-imposed purpose or time restriction = Net assets with donor restrictions. No restriction = Without donor restrictions.",
     "calculationRequired": false,
@@ -2326,12 +2326,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is considered a program service expense for a not-for-profit educational institution?",
     "options": {
-      "A": "Fundraising costs",
-      "B": "Administrative salaries",
-      "C": "Classroom instruction costs",
-      "D": "Accounting fees"
+      "A": "Classroom instruction costs",
+      "B": "Accounting fees",
+      "C": "Fundraising costs",
+      "D": "Administrative salaries"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Program service expenses are costs directly related to the organization's mission. For an educational institution, classroom instruction costs are program services. Fundraising and administration are supporting services.",
     "tip": "Three functional categories: Program services (mission), Management & General (admin), Fundraising. Program costs relate to the exempt purpose.",
     "calculationRequired": false,
@@ -2368,12 +2368,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A donor establishes a permanent endowment of $1,000,000 with a not-for-profit, stipulating that principal must be maintained and only income can be used for scholarships. How should this gift be classified?",
     "options": {
-      "A": "Net assets without donor restrictions",
-      "B": "Net assets with donor restrictions – time restricted",
-      "C": "Net assets with donor restrictions – perpetual in nature",
-      "D": "A liability until earnings are distributed"
+      "A": "A liability until earnings are distributed",
+      "B": "Net assets without donor restrictions",
+      "C": "Net assets with donor restrictions – time restricted",
+      "D": "Net assets with donor restrictions – perpetual in nature"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "A permanent endowment where the principal must be maintained in perpetuity is classified as net assets with donor restrictions that are perpetual in nature. The earnings may be restricted or unrestricted depending on donor stipulation.",
     "tip": "Perpetual restrictions (endowments) are a subset of 'with donor restrictions.' The old term 'permanently restricted' is now 'perpetual in nature.'",
     "calculationRequired": false,
@@ -2389,12 +2389,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP receives an unconditional pledge of $100,000 per year for 3 years. The discount rate is 5%. What should be recorded as contribution revenue in year 1? (PV factor for annuity of 3 years at 5% = 2.723)",
     "options": {
-      "A": "$100,000",
-      "B": "$272,300",
-      "C": "$285,900",
-      "D": "$300,000"
+      "A": "$300,000",
+      "B": "$100,000",
+      "C": "$272,300",
+      "D": "$285,900"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Multi-year pledges are recorded at present value. Revenue = $100,000 × 2.723 = $272,300. In subsequent years, the discount amortization is recorded as additional contribution revenue.",
     "tip": "Multi-year pledges: Record at PV when received. Interest accretion in later years is contribution revenue, not interest income.",
     "calculationRequired": true,
@@ -2410,12 +2410,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP received a time-restricted gift of $50,000 in Year 1 to be used in Year 2. In Year 2, the organization spent the funds. What entry is required in Year 2?",
     "options": {
-      "A": "No entry needed",
-      "B": "Debit expense, Credit cash",
-      "C": "Debit net assets with donor restrictions, Credit net assets without donor restrictions (reclassification)",
-      "D": "Debit contribution revenue, Credit cash"
+      "A": "Debit net assets with donor restrictions, Credit net assets without donor restrictions (reclassification)",
+      "B": "Debit contribution revenue, Credit cash",
+      "C": "No entry needed",
+      "D": "Debit expense, Credit cash"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "When a time or purpose restriction is satisfied, a reclassification is made from net assets with donor restrictions to net assets without donor restrictions. This is shown on the Statement of Activities as 'Net assets released from restrictions.'",
     "tip": "Restriction satisfied → Reclassify: Debit With Restrictions, Credit Without Restrictions. The expense is recorded separately against unrestricted.",
     "calculationRequired": false,
@@ -2431,12 +2431,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A pharmaceutical company donates medications with a fair value of $500,000 to a healthcare NFP. The NFP uses the medications in its programs. How should this be recorded?",
     "options": {
-      "A": "Contribution revenue and inventory at cost to the donor",
-      "B": "Contribution revenue and inventory at fair value",
-      "C": "No entry until medications are used",
-      "D": "A liability until medications are distributed"
+      "A": "No entry until medications are used",
+      "B": "A liability until medications are distributed",
+      "C": "Contribution revenue and inventory at cost to the donor",
+      "D": "Contribution revenue and inventory at fair value"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Contributed nonfinancial assets (in-kind gifts) are recorded at fair value at the date of gift. The NFP records contribution revenue and either inventory or expense (if used immediately) at the $500,000 fair value.",
     "tip": "In-kind gifts at FV. Note: ASU 2020-07 requires specific disclosures about contributed nonfinancial assets.",
     "calculationRequired": false,
@@ -2452,12 +2452,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP receives $75,000 to pass through to another specified organization with no variance power. How should the NFP record this receipt?",
     "options": {
-      "A": "Contribution revenue of $75,000",
-      "B": "A liability of $75,000",
-      "C": "Contribution revenue with donor restriction",
-      "D": "An agency transaction with no revenue effect"
+      "A": "Contribution revenue with donor restriction",
+      "B": "An agency transaction with no revenue effect",
+      "C": "Contribution revenue of $75,000",
+      "D": "A liability of $75,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When an NFP receives funds to pass through to a specified beneficiary and has no variance power (cannot redirect the funds), it acts as an agent. The receipt is recorded as a liability, not revenue. When disbursed, the liability is reduced.",
     "tip": "Agent vs. donee: If no variance power and beneficiary specified = agent (liability). If variance power or beneficiary not specified = revenue.",
     "calculationRequired": false,
@@ -2473,12 +2473,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP professional association collects annual membership dues of $24,000 from a member on January 1 for the calendar year membership. As of March 31, how much should be recognized as revenue?",
     "options": {
-      "A": "$0",
-      "B": "$6,000",
-      "C": "$18,000",
-      "D": "$24,000"
+      "A": "$18,000",
+      "B": "$24,000",
+      "C": "$0",
+      "D": "$6,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Membership dues that provide benefits over a period should be recognized ratably over the membership period. 3 months / 12 months × $24,000 = $6,000. The remaining $18,000 is deferred revenue.",
     "tip": "Exchange portion of dues: recognize over period. Contribution portion (if any): recognize when received.",
     "calculationRequired": true,
@@ -2515,12 +2515,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A corporation pays $100,000 to an NFP for a table sponsorship at a gala dinner. The fair value of the dinner and benefits received is $15,000. How should the NFP record this transaction?",
     "options": {
-      "A": "Exchange revenue of $100,000",
-      "B": "Contribution revenue of $100,000",
-      "C": "Exchange revenue of $15,000 and contribution revenue of $85,000",
-      "D": "Contribution revenue of $15,000 and exchange revenue of $85,000"
+      "A": "Contribution revenue of $100,000",
+      "B": "Exchange revenue of $15,000 and contribution revenue of $85,000",
+      "C": "Contribution revenue of $15,000 and exchange revenue of $85,000",
+      "D": "Exchange revenue of $100,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "This is a quid pro quo transaction. The portion equal to fair value of benefits provided ($15,000) is exchange revenue; the excess ($85,000) is a contribution. The NFP must disclose the amount deductible as a charitable contribution.",
     "tip": "Quid pro quo: Separate exchange portion (FV of goods/services) from contribution portion (excess payment).",
     "calculationRequired": true,
@@ -2536,12 +2536,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP receives a cost-reimbursement grant from the government for $300,000 to provide job training. In Year 1, the NFP incurs $200,000 of eligible costs. How much grant revenue should be recognized in Year 1?",
     "options": {
-      "A": "$0",
-      "B": "$100,000",
-      "C": "$200,000",
-      "D": "$300,000"
+      "A": "$100,000",
+      "B": "$200,000",
+      "C": "$300,000",
+      "D": "$0"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Cost-reimbursement grants are conditional contributions. Revenue is recognized when conditions are met (eligible costs incurred). Since $200,000 of eligible expenses were incurred, $200,000 of grant revenue is recognized.",
     "tip": "Cost-reimbursement grants are conditional. Revenue = qualifying expenditures incurred, up to grant amount.",
     "calculationRequired": false,
@@ -2557,12 +2557,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "On an NFP's Statement of Activities, expenses are reported:",
     "options": {
-      "A": "As decreases in net assets with donor restrictions",
-      "B": "As decreases in net assets without donor restrictions",
-      "C": "Split between restricted and unrestricted based on funding source",
-      "D": "As direct reductions of contribution revenue"
+      "A": "Split between restricted and unrestricted based on funding source",
+      "B": "As direct reductions of contribution revenue",
+      "C": "As decreases in net assets with donor restrictions",
+      "D": "As decreases in net assets without donor restrictions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Expenses are always reported as decreases in net assets without donor restrictions. Donor restrictions affect how contributions are reported, but when the funds are spent, the related restriction is released and the expense reduces unrestricted net assets.",
     "tip": "All expenses reduce net assets without donor restrictions. Release restrictions first (reclassification), then record expense against unrestricted.",
     "calculationRequired": false,
@@ -2578,12 +2578,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP's board of directors designates $500,000 of unrestricted funds for future building improvements. How should this be classified?",
     "options": {
-      "A": "Net assets with donor restrictions",
-      "B": "Net assets without donor restrictions with disclosure of the designation",
-      "C": "A liability for future construction",
-      "D": "A separate board-designated net asset category"
+      "A": "A liability for future construction",
+      "B": "A separate board-designated net asset category",
+      "C": "Net assets with donor restrictions",
+      "D": "Net assets without donor restrictions with disclosure of the designation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Board designations are internal designations, not donor restrictions. The funds remain classified as net assets without donor restrictions. The designation should be disclosed but does not change the classification.",
     "tip": "Board designation ≠ donor restriction. Still report as 'without donor restrictions' but may disclose the board's intent.",
     "calculationRequired": false,
@@ -2620,12 +2620,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP holds a charity auction that generates $80,000 in revenue. Direct costs of the event are $25,000. How should this be reported on the Statement of Activities?",
     "options": {
-      "A": "Net revenue of $55,000",
-      "B": "Gross revenue of $80,000 and gross expenses of $25,000",
-      "C": "Contribution revenue of $80,000 only",
-      "D": "Fundraising expense of $25,000 only"
+      "A": "Fundraising expense of $25,000 only",
+      "B": "Net revenue of $55,000",
+      "C": "Gross revenue of $80,000 and gross expenses of $25,000",
+      "D": "Contribution revenue of $80,000 only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Special events should be reported at gross amounts—revenue and direct costs separately. The direct costs are typically shown either as fundraising expense or as a direct offset to special event revenue with the net shown, but gross presentation is preferred.",
     "tip": "Report special event revenue and direct costs separately (gross). Can show direct costs as offset to revenue with net disclosed.",
     "calculationRequired": false,
@@ -2641,12 +2641,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASU 2016-14, NFPs must disclose:",
     "options": {
-      "A": "Only total cash and investments",
-      "B": "Qualitative and quantitative information about liquidity and availability of resources",
-      "C": "A full cash flow forecast for the next year",
-      "D": "Only board-designated amounts"
+      "A": "Only board-designated amounts",
+      "B": "Only total cash and investments",
+      "C": "Qualitative and quantitative information about liquidity and availability of resources",
+      "D": "A full cash flow forecast for the next year"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "ASU 2016-14 requires NFPs to provide qualitative information about how they manage liquidity and quantitative information about financial assets available within one year to meet general expenditures.",
     "tip": "Liquidity disclosure: Qualitative (how liquidity is managed) + Quantitative (financial assets available within 1 year for general expenditures).",
     "calculationRequired": false,
@@ -2662,12 +2662,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP's executive director spends 60% of time on program activities, 30% on administration, and 10% on fundraising. The director's $150,000 salary should be allocated:",
     "options": {
-      "A": "100% to management and general",
-      "B": "$90,000 program, $45,000 M&G, $15,000 fundraising",
-      "C": "100% to program services",
-      "D": "$75,000 program, $75,000 supporting services"
+      "A": "$75,000 program, $75,000 supporting services",
+      "B": "100% to management and general",
+      "C": "$90,000 program, $45,000 M&G, $15,000 fundraising",
+      "D": "100% to program services"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Expenses that benefit multiple functions should be allocated using a reasonable method. Time spent is a common allocation basis. Program = $150,000 × 60% = $90,000; M&G = $150,000 × 30% = $45,000; Fundraising = $150,000 × 10% = $15,000.",
     "tip": "Allocate shared costs using reasonable, consistent methodology. Common bases: time, space, FTEs, direct costs.",
     "calculationRequired": true,
@@ -2725,12 +2725,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP receives unconditional pledges of $500,000. Based on historical experience, 10% of pledges are expected to be uncollectible. Net pledge revenue recorded should be:",
     "options": {
-      "A": "$500,000 with no allowance",
-      "B": "$450,000 (net of allowance)",
-      "C": "$0 until collected",
-      "D": "$500,000 less a contra-liability"
+      "A": "$0 until collected",
+      "B": "$500,000 less a contra-liability",
+      "C": "$500,000 with no allowance",
+      "D": "$450,000 (net of allowance)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Pledges are recorded at their net realizable value. Gross pledges of $500,000 less 10% allowance for uncollectible pledges ($50,000) = $450,000 net contribution revenue.",
     "tip": "Record pledges at net realizable value. Allowance for uncollectibles reduces the receivable and revenue recognized.",
     "calculationRequired": true,
@@ -2767,12 +2767,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under UPMIFA (as adopted by most states), an NFP may spend from an endowment fund:",
     "options": {
-      "A": "Only realized gains, never principal",
-      "B": "Only income such as dividends and interest",
-      "C": "Amounts prudent considering the fund's purposes and the organization's needs",
-      "D": "Only amounts specifically authorized by the original donor"
+      "A": "Only amounts specifically authorized by the original donor",
+      "B": "Only realized gains, never principal",
+      "C": "Only income such as dividends and interest",
+      "D": "Amounts prudent considering the fund's purposes and the organization's needs"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "UPMIFA allows spending from endowments based on a prudent standard considering factors such as the fund's purposes, preservation of purchasing power, economic conditions, and the organization's overall resources and needs.",
     "tip": "UPMIFA: Prudence standard for spending. Consider multiple factors. Replaces historical dollar value maintenance requirement.",
     "calculationRequired": false,
@@ -2788,12 +2788,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP sends a mailing that includes an educational message about health issues and a request for donations. For joint costs to be allocated to program expense, which criteria must be met?",
     "options": {
-      "A": "The mailing must be sent to previous donors only",
-      "B": "Purpose, audience, and content criteria must all be met",
-      "C": "The fundraising request must be less than 50% of the mailing",
-      "D": "The educational content must be reviewed by an independent party"
+      "A": "The educational content must be reviewed by an independent party",
+      "B": "The mailing must be sent to previous donors only",
+      "C": "Purpose, audience, and content criteria must all be met",
+      "D": "The fundraising request must be less than 50% of the mailing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under ASC 958-720, joint costs can be allocated to program only if all three criteria are met: (1) Purpose criterion - accomplishes program objectives, (2) Audience criterion - selected based on need for program content, (3) Content criterion - calls to action that support program goals.",
     "tip": "All 3 criteria required: Purpose (program function), Audience (need-based selection), Content (specific call to action). If any fails, all costs = fundraising.",
     "calculationRequired": false,
@@ -2830,12 +2830,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A not-for-profit healthcare organization provides $2,000,000 of services to patients who qualify for charity care (measured at charges). How should this be reported?",
     "options": {
-      "A": "As revenue with an offsetting bad debt expense",
-      "B": "As revenue with an offsetting contractual adjustment",
-      "C": "Not as revenue; disclosed in the notes at cost",
-      "D": "As contribution revenue received from patients"
+      "A": "As contribution revenue received from patients",
+      "B": "As revenue with an offsetting bad debt expense",
+      "C": "As revenue with an offsetting contractual adjustment",
+      "D": "Not as revenue; disclosed in the notes at cost"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Charity care does not qualify as revenue because there is no expectation of payment. It is not recorded as revenue or receivable. Instead, the cost of charity care is disclosed in the notes, along with the organization's charity care policy.",
     "tip": "Charity care ≠ revenue (no expectation of payment). Disclose charity care policy and cost in notes. Different from bad debts (expected payment).",
     "calculationRequired": false,
@@ -2851,12 +2851,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Two not-for-profit organizations of similar size combine in a merger of equals with neither being the acquirer. Under ASC 958-805, this is accounted for as:",
     "options": {
-      "A": "An acquisition using fair value",
-      "B": "A merger using carryover basis",
-      "C": "Pooling of interests",
-      "D": "A combination using the equity method"
+      "A": "A combination using the equity method",
+      "B": "An acquisition using fair value",
+      "C": "A merger using carryover basis",
+      "D": "Pooling of interests"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "NFP combinations can be either a merger (carryover basis, no acquirer) or an acquisition (fair value, acquirer identified). A merger of equals uses carryover basis for all assets and liabilities with no goodwill recognized.",
     "tip": "NFP combinations: Merger = carryover basis, no goodwill. Acquisition = fair value, goodwill possible. Determine if acquirer exists.",
     "calculationRequired": false,
@@ -2872,12 +2872,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP receives a $900,000 gift restricted for building construction. In Year 1, the NFP capitalizes the building at $900,000. The building has a 30-year life. The donor did not stipulate how long the building must be used. What reclassification occurs in Year 1?",
     "options": {
-      "A": "Reclassify $30,000 from restricted to unrestricted",
-      "B": "Reclassify $900,000 from restricted to unrestricted when construction is complete",
-      "C": "No reclassification; keep $900,000 in restricted permanently",
-      "D": "Either reclassify in full when placed in service OR over the asset's useful life (policy choice)"
+      "A": "Either reclassify in full when placed in service OR over the asset's useful life (policy choice)",
+      "B": "Reclassify $30,000 from restricted to unrestricted",
+      "C": "Reclassify $900,000 from restricted to unrestricted when construction is complete",
+      "D": "No reclassification; keep $900,000 in restricted permanently"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "For gifts restricted for acquisition of long-lived assets, the NFP chooses a policy: (1) Release restriction when asset is placed in service (reclassify full amount), or (2) Release over the asset's useful life (matches depreciation). Policy must be consistent.",
     "tip": "Gifts for capital assets: Policy choice for release timing. Either all at once when placed in service, or ratably over useful life.",
     "calculationRequired": false,
@@ -2893,12 +2893,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP has the following: Contribution revenue without restrictions $800,000; Contribution revenue with restrictions $300,000; Program expenses $600,000; Supporting expenses $200,000; Net assets released from restrictions $150,000. What is the change in net assets without donor restrictions?",
     "options": {
-      "A": "$150,000",
-      "B": "$300,000",
-      "C": "$150,000 increase",
-      "D": "$0"
+      "A": "$150,000 increase",
+      "B": "$0",
+      "C": "$150,000",
+      "D": "$300,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Change in unrestricted = Unrestricted revenues + Releases - Expenses = $800,000 + $150,000 - $600,000 - $200,000 = $150,000 increase. The $300,000 restricted contribution affects restricted net assets, not unrestricted.",
     "tip": "Unrestricted change = Unrestricted revenue + Releases from restriction - All expenses. Restricted change = Restricted revenue - Releases.",
     "calculationRequired": true,
@@ -2914,12 +2914,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A donor establishes a $1,000,000 endowment with instructions that principal be maintained and income be used for scholarships. In Year 1, the endowment earns $40,000 dividends and $60,000 unrealized gains. How should the $100,000 total return be classified?",
     "options": {
-      "A": "All $100,000 in net assets with donor restrictions",
-      "B": "$40,000 without restrictions, $60,000 with restrictions",
-      "C": "Classification depends on state law (UPMIFA) and any donor stipulations regarding gains",
-      "D": "All $100,000 in net assets without donor restrictions"
+      "A": "Classification depends on state law (UPMIFA) and any donor stipulations regarding gains",
+      "B": "All $100,000 in net assets without donor restrictions",
+      "C": "All $100,000 in net assets with donor restrictions",
+      "D": "$40,000 without restrictions, $60,000 with restrictions"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Classification of endowment returns depends on (1) explicit donor stipulations about gains, (2) state law (UPMIFA), and (3) the organization's interpretation. If donor is silent on gains, state law governs. Returns may be restricted or unrestricted.",
     "tip": "Endowment returns: Check donor stipulation first, then state law. Donor can restrict gains; if silent, state law (usually UPMIFA) applies.",
     "calculationRequired": false,
@@ -2956,12 +2956,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASC 830, the functional currency is defined as:",
     "options": {
-      "A": "The currency of the country where the parent is located",
-      "B": "The currency of the primary economic environment in which the entity operates",
-      "C": "The U.S. dollar for all multinational companies",
-      "D": "The currency in which financial statements are presented"
+      "A": "The currency in which financial statements are presented",
+      "B": "The currency of the country where the parent is located",
+      "C": "The currency of the primary economic environment in which the entity operates",
+      "D": "The U.S. dollar for all multinational companies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The functional currency is the currency of the primary economic environment in which the entity operates—typically the currency in which the entity generates and expends cash. This may differ from the reporting currency or local currency.",
     "tip": "Functional = where entity primarily operates. Reporting = presentation currency. Local = country where entity is located. These may all differ.",
     "calculationRequired": false,
@@ -2977,12 +2977,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a U.S. company purchases inventory from a German supplier for €100,000 when the exchange rate is $1.10/€, the inventory should be recorded at:",
     "options": {
-      "A": "€100,000",
-      "B": "$100,000",
-      "C": "$110,000",
-      "D": "Fair market value regardless of exchange rate"
+      "A": "Fair market value regardless of exchange rate",
+      "B": "€100,000",
+      "C": "$100,000",
+      "D": "$110,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Foreign currency transactions are recorded in the functional currency (USD for a U.S. company) using the exchange rate at the transaction date. €100,000 × $1.10 = $110,000.",
     "tip": "Always record in functional currency using spot rate at transaction date. The foreign currency amount is converted, not carried forward.",
     "calculationRequired": true,
@@ -2998,12 +2998,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The spot exchange rate represents:",
     "options": {
-      "A": "The rate for immediate delivery of currencies",
-      "B": "The average rate over the reporting period",
-      "C": "The rate agreed upon for future delivery",
-      "D": "The historical rate when an asset was acquired"
+      "A": "The rate agreed upon for future delivery",
+      "B": "The historical rate when an asset was acquired",
+      "C": "The rate for immediate delivery of currencies",
+      "D": "The average rate over the reporting period"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "The spot rate is the exchange rate for immediate exchange of currencies. Forward rates are agreed-upon rates for future delivery. Historical rates are past spot rates at specific transaction dates.",
     "tip": "Spot = immediate exchange. Forward = future exchange at agreed rate. Historical = spot rate at original transaction.",
     "calculationRequired": false,
@@ -3019,12 +3019,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company has a €50,000 account payable. The rate was $1.12/€ at transaction date and $1.15/€ at payment date. What is the exchange gain or loss?",
     "options": {
-      "A": "$1,500 gain",
-      "B": "$1,500 loss",
-      "C": "$2,500 gain",
-      "D": "$2,500 loss"
+      "A": "$2,500 loss",
+      "B": "$1,500 gain",
+      "C": "$1,500 loss",
+      "D": "$2,500 gain"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Original liability = €50,000 × $1.12 = $56,000. Amount paid = €50,000 × $1.15 = $57,500. The company paid $1,500 more than recorded, resulting in a $1,500 loss.",
     "tip": "For payables: If foreign currency strengthens, you pay more = loss. For receivables: If foreign currency weakens, you receive less = loss.",
     "calculationRequired": true,
@@ -3040,12 +3040,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the current rate method of translation, assets and liabilities are translated using:",
     "options": {
-      "A": "Historical exchange rates",
-      "B": "The exchange rate at the balance sheet date",
-      "C": "The average exchange rate for the period",
-      "D": "The exchange rate at acquisition date"
+      "A": "The average exchange rate for the period",
+      "B": "The exchange rate at acquisition date",
+      "C": "Historical exchange rates",
+      "D": "The exchange rate at the balance sheet date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under the current rate method (used when functional currency differs from reporting currency), all assets and liabilities are translated using the current exchange rate at the balance sheet date.",
     "tip": "Current rate method: Assets/liabilities at current rate, equity at historical, revenues/expenses at average. Used when functional ≠ reporting currency.",
     "calculationRequired": false,
@@ -3061,12 +3061,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the current rate method, the cumulative translation adjustment (CTA) is reported in:",
     "options": {
-      "A": "Net income",
-      "B": "Other comprehensive income (accumulated OCI)",
-      "C": "Retained earnings directly",
-      "D": "As a separate liability"
+      "A": "Other comprehensive income (accumulated OCI)",
+      "B": "Retained earnings directly",
+      "C": "As a separate liability",
+      "D": "Net income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Translation adjustments under the current rate method are reported in other comprehensive income and accumulate in the equity section as accumulated other comprehensive income (AOCI). They bypass the income statement.",
     "tip": "Translation (current rate method) → OCI. Remeasurement (temporal method) → Income statement. This is a key distinction.",
     "calculationRequired": false,
@@ -3082,12 +3082,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the temporal (remeasurement) method, which assets are translated at historical exchange rates?",
     "options": {
-      "A": "All assets",
-      "B": "Monetary assets only",
-      "C": "Inventory carried at cost and fixed assets",
-      "D": "Only cash and receivables"
+      "A": "Inventory carried at cost and fixed assets",
+      "B": "Only cash and receivables",
+      "C": "All assets",
+      "D": "Monetary assets only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Under the temporal method, nonmonetary assets carried at historical cost (inventory at cost, prepaid expenses, fixed assets, intangibles) are translated at historical rates. Monetary assets and liabilities use current rates.",
     "tip": "Temporal method: Monetary items at current rate. Nonmonetary items at cost use historical rate. Inventory at market uses current rate.",
     "calculationRequired": false,
@@ -3166,12 +3166,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the current rate method, revenues and expenses are typically translated using:",
     "options": {
-      "A": "The exchange rate at the transaction date",
-      "B": "The exchange rate at the balance sheet date",
-      "C": "The weighted-average exchange rate for the period",
-      "D": "The historical rate when the related asset was acquired"
+      "A": "The weighted-average exchange rate for the period",
+      "B": "The historical rate when the related asset was acquired",
+      "C": "The exchange rate at the transaction date",
+      "D": "The exchange rate at the balance sheet date"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Under the current rate method, revenues and expenses are translated at the exchange rate when recognized, which in practice is often the weighted-average rate for the period as a practical expedient.",
     "tip": "Current rate method revenues/expenses: Theoretically at transaction dates, practically at weighted average for the period.",
     "calculationRequired": false,
@@ -3208,12 +3208,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. parent makes a long-term loan to its foreign subsidiary that is denominated in the subsidiary's functional currency and not expected to be settled in the foreseeable future. Exchange gains/losses on this loan are:",
     "options": {
-      "A": "Recognized in the parent's net income",
-      "B": "Recognized in other comprehensive income as part of CTA",
-      "C": "Deferred until the loan is repaid",
-      "D": "Allocated between income and OCI"
+      "A": "Recognized in other comprehensive income as part of CTA",
+      "B": "Deferred until the loan is repaid",
+      "C": "Allocated between income and OCI",
+      "D": "Recognized in the parent's net income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under ASC 830, exchange gains/losses on intercompany foreign currency transactions that are long-term in nature and not expected to be settled in the foreseeable future are reported in OCI (CTA), not in income.",
     "tip": "Long-term intercompany loans not expected to be settled = treated as part of net investment; exchange gains/losses to OCI (CTA).",
     "calculationRequired": false,
@@ -3229,12 +3229,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a foreign subsidiary operates in a highly inflationary economy, its functional currency is:",
     "options": {
-      "A": "The local currency",
-      "B": "The reporting currency of the parent",
-      "C": "A stable foreign currency chosen by management",
-      "D": "Determined using normal functional currency indicators"
+      "A": "Determined using normal functional currency indicators",
+      "B": "The local currency",
+      "C": "The reporting currency of the parent",
+      "D": "A stable foreign currency chosen by management"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under ASC 830, if a foreign entity operates in a highly inflationary economy (cumulative inflation of approximately 100% or more over 3 years), its functional currency is the reporting currency of the parent. The temporal method is used.",
     "tip": "Highly inflationary = 100%+ cumulative inflation over 3 years. Functional currency becomes parent's currency; use temporal method.",
     "calculationRequired": false,
@@ -3250,12 +3250,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company has a subsidiary in Mexico that maintains its books in pesos but has the USD as its functional currency. The parent reports in USD. What translation process is required?",
     "options": {
-      "A": "Translate from pesos to USD using current rate method",
-      "B": "Remeasure from pesos to USD using temporal method only",
-      "C": "First remeasure to USD, then translate to USD (same currency)",
-      "D": "No translation needed since books are in local currency"
+      "A": "No translation needed since books are in local currency",
+      "B": "Translate from pesos to USD using current rate method",
+      "C": "Remeasure from pesos to USD using temporal method only",
+      "D": "First remeasure to USD, then translate to USD (same currency)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When the local currency (pesos) differs from the functional currency (USD), and the functional currency equals the reporting currency (USD), only remeasurement using the temporal method is needed. No translation step follows.",
     "tip": "If local ≠ functional: Remeasure first. If functional ≠ reporting: Translate second. Here functional = reporting, so only remeasurement.",
     "calculationRequired": false,
@@ -3271,12 +3271,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the temporal method, cost of goods sold is translated using:",
     "options": {
-      "A": "The average rate for the period",
-      "B": "The current rate at year-end",
-      "C": "Historical rates based on when inventory was acquired",
-      "D": "The rate when the sale was made"
+      "A": "The current rate at year-end",
+      "B": "Historical rates based on when inventory was acquired",
+      "C": "The rate when the sale was made",
+      "D": "The average rate for the period"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under the temporal method, cost of goods sold is derived from inventory, which is carried at historical cost. Therefore, COGS is translated at historical rates from when the inventory was purchased.",
     "tip": "Temporal COGS: Based on historical inventory costs, so uses historical rates. This differs from current rate method which uses average rates.",
     "calculationRequired": false,
@@ -3292,12 +3292,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company hedges its net investment in a foreign subsidiary using a forward contract. Where are the effective gains/losses on the hedging instrument reported?",
     "options": {
-      "A": "In net income immediately",
-      "B": "In other comprehensive income as part of CTA",
-      "C": "As an adjustment to the investment account",
-      "D": "Deferred until the subsidiary is sold"
+      "A": "As an adjustment to the investment account",
+      "B": "Deferred until the subsidiary is sold",
+      "C": "In net income immediately",
+      "D": "In other comprehensive income as part of CTA"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In a net investment hedge, the effective portion of gains/losses on the hedging instrument is reported in OCI as part of the cumulative translation adjustment. This offsets translation gains/losses on the net investment.",
     "tip": "Net investment hedge: Effective portion to OCI (CTA). Reclassified to income when subsidiary is sold or investment liquidated.",
     "calculationRequired": false,
@@ -3334,12 +3334,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the current rate method, common stock of a foreign subsidiary is translated at:",
     "options": {
-      "A": "The current exchange rate",
-      "B": "The average exchange rate",
-      "C": "The historical exchange rate when issued",
-      "D": "The rate at acquisition by the parent"
+      "A": "The historical exchange rate when issued",
+      "B": "The rate at acquisition by the parent",
+      "C": "The current exchange rate",
+      "D": "The average exchange rate"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Under the current rate method, equity accounts (common stock, APIC) are translated at historical rates—the exchange rate when the stock was issued. Retained earnings is a composite of historically translated amounts.",
     "tip": "Equity items at historical rates under current rate method. This creates part of the translation adjustment (CTA) balancing amount.",
     "calculationRequired": false,
@@ -3355,12 +3355,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company enters into a forward contract to purchase €1,000,000 in 90 days to hedge a forecasted purchase of equipment. At inception, the forward rate equals the spot rate. How should the forward contract be initially recorded?",
     "options": {
-      "A": "No entry; disclose in notes only",
-      "B": "Record at fair value (zero if forward = spot)",
-      "C": "Record the notional amount as an asset and liability",
-      "D": "Record the expected cash flow as a receivable"
+      "A": "Record at fair value (zero if forward = spot)",
+      "B": "Record the notional amount as an asset and liability",
+      "C": "Record the expected cash flow as a receivable",
+      "D": "No entry; disclose in notes only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Forward contracts are derivatives recorded at fair value. At inception, if the forward rate equals the spot rate, the fair value is typically zero. Subsequent changes in fair value are recognized as the rates change.",
     "tip": "All derivatives at fair value, including forward contracts. At inception with market rates, FV ≈ 0. Changes in FV recorded each period.",
     "calculationRequired": false,
@@ -3376,12 +3376,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company sells goods to a Canadian customer for CAD 100,000 on 11/1. Rates are: 11/1 $0.75/CAD, 12/31 $0.78/CAD, 1/31 (collection) $0.76/CAD. What is the total exchange gain/loss recognized in Year 1?",
     "options": {
-      "A": "$3,000 gain",
-      "B": "$3,000 loss",
-      "C": "$1,000 gain",
-      "D": "$1,000 loss"
+      "A": "$1,000 loss",
+      "B": "$3,000 gain",
+      "C": "$3,000 loss",
+      "D": "$1,000 gain"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Year 1 gain = Receivable remeasured at 12/31 - Original = (CAD 100,000 × $0.78) - (CAD 100,000 × $0.75) = $78,000 - $75,000 = $3,000 gain. The Year 2 settlement effect is recorded in Year 2.",
     "tip": "Remeasure at each balance sheet date. Gain/loss for that period only. Settlement gain/loss in period collected.",
     "calculationRequired": true,
@@ -3418,12 +3418,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A foreign subsidiary has assets of FC 1,000,000 and liabilities of FC 400,000. The current rate is $1.50/FC, historical rate for equity is $1.40/FC. Under the current rate method, what are total assets in USD?",
     "options": {
-      "A": "$1,400,000",
-      "B": "$1,500,000",
-      "C": "$600,000",
-      "D": "$900,000"
+      "A": "$600,000",
+      "B": "$900,000",
+      "C": "$1,400,000",
+      "D": "$1,500,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Under the current rate method, all assets are translated at the current rate: FC 1,000,000 × $1.50 = $1,500,000. The historical rate applies to equity components, not assets.",
     "tip": "Current rate method: ALL assets and liabilities at current rate. Don't mix up with equity translation rules.",
     "calculationRequired": true,
@@ -3439,12 +3439,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. importer has a €500,000 account payable. To minimize foreign exchange risk, the company should:",
     "options": {
-      "A": "Do nothing; payables are not exposed to exchange risk",
-      "B": "Enter into a forward contract to sell euros",
-      "C": "Enter into a forward contract to buy euros",
-      "D": "Convert the payable to USD immediately"
+      "A": "Enter into a forward contract to sell euros",
+      "B": "Enter into a forward contract to buy euros",
+      "C": "Convert the payable to USD immediately",
+      "D": "Do nothing; payables are not exposed to exchange risk"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The company is exposed to the euro strengthening (would have to pay more USD). Buying euros forward locks in the exchange rate and eliminates the exposure. Selling euros would increase exposure.",
     "tip": "Payable in FC: Exposed if FC strengthens. Hedge by buying FC forward. Receivable in FC: Exposed if FC weakens. Hedge by selling FC forward.",
     "calculationRequired": false,
@@ -3460,12 +3460,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A change in an entity's functional currency is accounted for:",
     "options": {
-      "A": "Retrospectively with restatement of prior periods",
-      "B": "Prospectively from the date of change",
-      "C": "As an error correction",
-      "D": "As an extraordinary item"
+      "A": "As an extraordinary item",
+      "B": "Retrospectively with restatement of prior periods",
+      "C": "Prospectively from the date of change",
+      "D": "As an error correction"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A change in functional currency is accounted for prospectively from the date of change. Previously translated amounts are not restated. The translated amounts at the change date become the new historical basis.",
     "tip": "Functional currency change = prospective. New historical basis is established; no restatement of prior periods.",
     "calculationRequired": false,
@@ -3481,12 +3481,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a parent company sells its entire investment in a foreign subsidiary, the cumulative translation adjustment (CTA) related to that subsidiary is:",
     "options": {
-      "A": "Left in accumulated OCI",
-      "B": "Reclassified to net income as part of gain/loss on sale",
-      "C": "Transferred directly to retained earnings",
-      "D": "Written off against goodwill"
+      "A": "Written off against goodwill",
+      "B": "Left in accumulated OCI",
+      "C": "Reclassified to net income as part of gain/loss on sale",
+      "D": "Transferred directly to retained earnings"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Upon sale or substantially complete liquidation of a foreign entity, the CTA accumulated in AOCI is reclassified to net income. It becomes part of the gain or loss on disposal reported in the income statement.",
     "tip": "CTA remains in OCI until disposal. On sale of subsidiary, reclassify CTA to income (realized). Partial sales may trigger partial reclassification.",
     "calculationRequired": false,
@@ -3502,12 +3502,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A foreign subsidiary has: Beginning net assets FC 800,000; Net income FC 200,000; Dividends FC 50,000. Rates: Beginning $1.20, Average $1.25, Ending $1.30, Dividend date $1.28. Under current rate method, what is the translation adjustment?",
     "options": {
-      "A": "$45,000 gain",
-      "B": "$70,000 gain",
-      "C": "$89,000 gain",
-      "D": "$120,000 gain"
+      "A": "$89,000 gain",
+      "B": "$120,000 gain",
+      "C": "$45,000 gain",
+      "D": "$70,000 gain"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Ending net assets = 800,000 + 200,000 - 50,000 = FC 950,000 @ $1.30 = $1,235,000. Beginning @ $1.20 = $960,000. Income @ $1.25 = $250,000. Dividends @ $1.28 = $64,000. Expected ending = $960,000 + $250,000 - $64,000 = $1,146,000. CTA = $1,235,000 - $1,146,000 = $89,000 gain.",
     "tip": "CTA = Actual translated ending equity - Expected ending equity from rolling forward beginning equity with translated income and dividends.",
     "calculationRequired": true,
@@ -3586,12 +3586,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has a firm commitment to purchase equipment for €2M in 3 months and hedges with a forward contract. This is designated as a fair value hedge. How are the gains/losses reported?",
     "options": {
-      "A": "Hedging instrument gain/loss to OCI; firm commitment stays off-book",
-      "B": "Both hedging instrument and firm commitment fair value changes in earnings",
-      "C": "Both to OCI until equipment is received",
-      "D": "Hedging instrument to earnings; firm commitment to OCI"
+      "A": "Hedging instrument to earnings; firm commitment to OCI",
+      "B": "Hedging instrument gain/loss to OCI; firm commitment stays off-book",
+      "C": "Both hedging instrument and firm commitment fair value changes in earnings",
+      "D": "Both to OCI until equipment is received"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In a fair value hedge, both the hedging instrument and the hedged item (firm commitment) are marked to fair value with changes in earnings. The firm commitment becomes a recognized asset/liability at its fair value.",
     "tip": "Fair value hedge: Both sides to earnings (they should offset if effective). Firm commitment gets recorded on balance sheet in a FV hedge.",
     "calculationRequired": false,
@@ -3607,12 +3607,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. parent sells inventory to its foreign subsidiary for FC 100,000 (cost FC 60,000). The inventory remains on the subsidiary's books at year-end. The rate was $1.20 at sale and $1.25 at year-end. In consolidation, unrealized profit is eliminated at:",
     "options": {
-      "A": "FC 40,000 × $1.20 = $48,000",
-      "B": "FC 40,000 × $1.25 = $50,000",
-      "C": "The U.S. dollar amount of profit recorded by parent",
-      "D": "Depends on whether parent or subsidiary is the seller"
+      "A": "The U.S. dollar amount of profit recorded by parent",
+      "B": "Depends on whether parent or subsidiary is the seller",
+      "C": "FC 40,000 × $1.20 = $48,000",
+      "D": "FC 40,000 × $1.25 = $50,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Intercompany profit elimination in consolidation uses the profit as recorded by the selling entity in its functional currency. If the U.S. parent sold the goods, the elimination is based on the U.S. dollar profit recorded by the parent.",
     "tip": "Eliminate intercompany profit at the selling entity's recorded amount. Translation of subsidiary's inventory doesn't change the elimination amount.",
     "calculationRequired": false,
@@ -3628,12 +3628,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A subsidiary has the following in its functional currency (USD) environment: Beginning cash FC 100,000; ending cash FC 150,000. Beginning rate $0.80, ending rate $0.85, average rate $0.82. Under temporal method, the remeasurement effect on cash is:",
     "options": {
-      "A": "$5,000 gain from the beginning balance",
-      "B": "$7,500 gain from ending balance measurement",
-      "C": "Included in overall remeasurement gain/loss calculation",
-      "D": "Zero; cash is not remeasured"
+      "A": "$7,500 gain from ending balance measurement",
+      "B": "Included in overall remeasurement gain/loss calculation",
+      "C": "Zero; cash is not remeasured",
+      "D": "$5,000 gain from the beginning balance"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under the temporal method, the remeasurement gain/loss is a balancing figure that makes the balance sheet balance. Cash (monetary) is remeasured at current rates, but the gain/loss is computed as a plug, not item by item.",
     "tip": "Remeasurement gain/loss is calculated as a residual after translating all items. It's not computed transaction by transaction.",
     "calculationRequired": false,
@@ -3691,12 +3691,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASC 815, a derivative instrument must have all of the following characteristics EXCEPT:",
     "options": {
-      "A": "An underlying and a notional amount",
-      "B": "Little or no initial net investment",
-      "C": "Physical settlement requirement",
-      "D": "Net settlement capability"
+      "A": "Little or no initial net investment",
+      "B": "Physical settlement requirement",
+      "C": "Net settlement capability",
+      "D": "An underlying and a notional amount"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "A derivative must have: (1) an underlying and notional amount (or payment provision), (2) little or no initial net investment, and (3) net settlement capability. Physical settlement is NOT required; derivatives can be net settled.",
     "tip": "Three key characteristics: underlying + notional, little/no initial investment, net settlement. Remember these to identify derivatives.",
     "calculationRequired": false,
@@ -3712,12 +3712,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "How are all derivative instruments initially and subsequently measured under ASC 815?",
     "options": {
-      "A": "Historical cost",
-      "B": "Lower of cost or market",
-      "C": "Fair value",
-      "D": "Amortized cost"
+      "A": "Lower of cost or market",
+      "B": "Fair value",
+      "C": "Amortized cost",
+      "D": "Historical cost"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under ASC 815, all derivative instruments are measured at fair value, both at initial recognition and subsequently. Changes in fair value are recognized each period.",
     "tip": "Derivatives ALWAYS at fair value on balance sheet. The question is WHERE changes in FV are reported (income vs. OCI).",
     "calculationRequired": false,
@@ -3733,12 +3733,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A forward contract is:",
     "options": {
-      "A": "A standardized exchange-traded agreement",
-      "B": "A customized agreement to buy or sell an asset at a specified future date and price",
-      "C": "An option to purchase an asset",
-      "D": "A contract that can only be used for hedging"
+      "A": "An option to purchase an asset",
+      "B": "A contract that can only be used for hedging",
+      "C": "A standardized exchange-traded agreement",
+      "D": "A customized agreement to buy or sell an asset at a specified future date and price"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A forward contract is a customized, over-the-counter agreement between two parties to buy or sell an asset at a specified price on a future date. Unlike futures, forwards are not standardized or exchange-traded.",
     "tip": "Forward = customized, OTC. Futures = standardized, exchange-traded. Both obligate delivery at future date and price.",
     "calculationRequired": false,
@@ -3754,12 +3754,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A call option gives the holder the right to:",
     "options": {
-      "A": "Sell an asset at a specified price",
-      "B": "Buy an asset at a specified price",
-      "C": "Exchange one currency for another",
-      "D": "Receive fixed interest payments"
+      "A": "Exchange one currency for another",
+      "B": "Receive fixed interest payments",
+      "C": "Sell an asset at a specified price",
+      "D": "Buy an asset at a specified price"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A call option gives the holder the right (but not obligation) to buy an underlying asset at a specified strike price. A put option gives the right to sell. The holder pays a premium for this right.",
     "tip": "Call = right to buy (Call it in). Put = right to sell (Put it away). Premium is paid upfront for the right.",
     "calculationRequired": false,
@@ -3796,12 +3796,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a typical 'plain vanilla' interest rate swap, what is exchanged?",
     "options": {
-      "A": "Principal amounts between parties",
-      "B": "Fixed interest payments for floating interest payments",
-      "C": "Equity securities for debt securities",
-      "D": "One currency for another currency"
+      "A": "Fixed interest payments for floating interest payments",
+      "B": "Equity securities for debt securities",
+      "C": "One currency for another currency",
+      "D": "Principal amounts between parties"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In a plain vanilla interest rate swap, one party pays a fixed interest rate while receiving a floating rate, and the counterparty does the opposite. Only net interest payments are exchanged; principal (notional) is not exchanged.",
     "tip": "Interest rate swap: Fixed for floating (or vice versa). No principal exchange. Notional is for calculation only.",
     "calculationRequired": false,
@@ -3817,12 +3817,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A fair value hedge is used to hedge:",
     "options": {
-      "A": "The variability of cash flows from a forecasted transaction",
-      "B": "The exposure to changes in fair value of a recognized asset, liability, or firm commitment",
-      "C": "The foreign currency exposure of a net investment in a foreign operation",
-      "D": "Only interest rate risk on debt instruments"
+      "A": "The exposure to changes in fair value of a recognized asset, liability, or firm commitment",
+      "B": "The foreign currency exposure of a net investment in a foreign operation",
+      "C": "Only interest rate risk on debt instruments",
+      "D": "The variability of cash flows from a forecasted transaction"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A fair value hedge hedges exposure to changes in the fair value of a recognized asset or liability, or an unrecognized firm commitment. Both the hedging instrument and hedged item are marked to fair value with changes in earnings.",
     "tip": "Fair value hedge: Hedged item has fair value exposure (existing asset/liability or firm commitment). Both sides to income.",
     "calculationRequired": false,
@@ -3838,12 +3838,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A cash flow hedge is used to hedge:",
     "options": {
-      "A": "Changes in fair value of a recognized asset",
-      "B": "Variability in cash flows from a forecasted transaction or floating-rate debt",
-      "C": "The translation exposure of a foreign subsidiary",
-      "D": "Changes in the fair value of inventory"
+      "A": "Variability in cash flows from a forecasted transaction or floating-rate debt",
+      "B": "The translation exposure of a foreign subsidiary",
+      "C": "Changes in the fair value of inventory",
+      "D": "Changes in fair value of a recognized asset"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A cash flow hedge hedges exposure to variability in expected cash flows attributable to a particular risk, such as a forecasted transaction or variable-rate debt. Effective gains/losses go to OCI until the hedged item affects earnings.",
     "tip": "Cash flow hedge: Hedges variable/uncertain cash flows. Forecasted transactions and variable rate debt are common examples.",
     "calculationRequired": false,
@@ -3880,12 +3880,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current ASC 815 hedge accounting rules, which statement about effectiveness testing is correct?",
     "options": {
-      "A": "A hedge must be exactly 100% effective",
-      "B": "The 80-125% effectiveness threshold still applies for all hedges",
-      "C": "Qualitative assessment may be used if hedge is expected to be highly effective",
-      "D": "Effectiveness testing is no longer required"
+      "A": "The 80-125% effectiveness threshold still applies for all hedges",
+      "B": "Qualitative assessment may be used if hedge is expected to be highly effective",
+      "C": "Effectiveness testing is no longer required",
+      "D": "A hedge must be exactly 100% effective"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under ASU 2017-12 changes to ASC 815, entities may perform only a qualitative assessment of effectiveness if it can be demonstrated that the hedge is highly effective. The bright-line 80-125% test was removed as a requirement.",
     "tip": "Post-2017 changes: Qualitative assessment allowed. 80-125% no longer bright-line requirement. Focus on 'highly effective' expectation.",
     "calculationRequired": false,
@@ -3901,12 +3901,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a fair value hedge of a recognized asset, the hedged asset is:",
     "options": {
-      "A": "Kept at historical cost",
-      "B": "Adjusted for changes in fair value attributable to the hedged risk",
-      "C": "Reported at lower of cost or market",
-      "D": "Eliminated from the balance sheet"
+      "A": "Adjusted for changes in fair value attributable to the hedged risk",
+      "B": "Reported at lower of cost or market",
+      "C": "Eliminated from the balance sheet",
+      "D": "Kept at historical cost"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In a fair value hedge, the carrying amount of the hedged item is adjusted for fair value changes attributable to the hedged risk. Both the hedging instrument and hedged item fair value changes are recognized in earnings.",
     "tip": "Fair value hedge: Basis of hedged item is adjusted. This is unique to fair value hedges. The offset appears in the same income statement line.",
     "calculationRequired": false,
@@ -3922,12 +3922,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company purchases a call option for $5,000 to hedge a forecasted inventory purchase. The option is designated as a cash flow hedge excluding time value. The time value at year-end is $3,000. How is the $2,000 decline in time value reported?",
     "options": {
-      "A": "In net income",
-      "B": "In OCI as part of the hedge",
-      "C": "As an adjustment to inventory when purchased",
-      "D": "It is not recognized until the option expires"
+      "A": "In OCI as part of the hedge",
+      "B": "As an adjustment to inventory when purchased",
+      "C": "It is not recognized until the option expires",
+      "D": "In net income"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "When time value is excluded from the hedge relationship, changes in time value are recognized in current earnings. Only intrinsic value changes would go to OCI in this cash flow hedge. The $2,000 time value decay goes to income.",
     "tip": "Options: Can exclude time value from hedge. If excluded, time value changes go to income. Intrinsic value is the hedge.",
     "calculationRequired": false,
@@ -3964,12 +3964,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company holds a derivative for speculation (not designated as a hedge). How are changes in fair value reported?",
     "options": {
-      "A": "In other comprehensive income",
-      "B": "In net income each period",
-      "C": "Deferred until the derivative is settled",
-      "D": "As a direct adjustment to equity"
+      "A": "In net income each period",
+      "B": "Deferred until the derivative is settled",
+      "C": "As a direct adjustment to equity",
+      "D": "In other comprehensive income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Derivatives not designated as hedges are measured at fair value with all changes in fair value recognized in net income each period. This is the default treatment for derivatives.",
     "tip": "No hedge designation = all fair value changes to income. Hedge accounting is an EXCEPTION to the default rule.",
     "calculationRequired": false,
@@ -4006,12 +4006,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An embedded derivative must be bifurcated (separated) from the host contract when:",
     "options": {
-      "A": "Always, for all embedded derivatives",
-      "B": "The economic characteristics are clearly and closely related to the host",
-      "C": "The economic characteristics are NOT clearly and closely related to the host, and other criteria are met",
-      "D": "Never; embedded derivatives remain part of the host"
+      "A": "The economic characteristics are NOT clearly and closely related to the host, and other criteria are met",
+      "B": "Never; embedded derivatives remain part of the host",
+      "C": "Always, for all embedded derivatives",
+      "D": "The economic characteristics are clearly and closely related to the host"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "An embedded derivative must be bifurcated when: (1) economic characteristics are NOT clearly and closely related to the host, (2) a separate instrument with the same terms would be a derivative, and (3) the hybrid is not measured at fair value through earnings.",
     "tip": "Bifurcate when embedded derivative is 'unrelated' to host. Example: equity conversion in debt (unrelated). Interest rate provision in debt (related).",
     "calculationRequired": false,
@@ -4027,12 +4027,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following can be used as a hedging instrument in a net investment hedge?",
     "options": {
-      "A": "Only forward contracts",
-      "B": "Forward contracts, options, and foreign currency debt",
-      "C": "Only options",
-      "D": "Interest rate swaps"
+      "A": "Forward contracts, options, and foreign currency debt",
+      "B": "Only options",
+      "C": "Interest rate swaps",
+      "D": "Only forward contracts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A net investment hedge can use derivative instruments (forwards, options) or nonderivative instruments such as foreign currency denominated debt. The hedging instrument must be denominated in the subsidiary's functional currency.",
     "tip": "Net investment hedge unique: Can use FC debt (nonderivative) as hedging instrument. This is an exception to normal hedge accounting rules.",
     "calculationRequired": false,
@@ -4048,12 +4048,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a company voluntarily discontinues cash flow hedge accounting, the balance in AOCI related to the hedge should be:",
     "options": {
-      "A": "Immediately reclassified to earnings",
-      "B": "Remain in AOCI and reclassified when the forecasted transaction affects earnings",
-      "C": "Written off against retained earnings",
-      "D": "Transferred to the hedged item's cost basis"
+      "A": "Written off against retained earnings",
+      "B": "Transferred to the hedged item's cost basis",
+      "C": "Immediately reclassified to earnings",
+      "D": "Remain in AOCI and reclassified when the forecasted transaction affects earnings"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "When cash flow hedge accounting is discontinued but the forecasted transaction is still expected to occur, the amount in AOCI remains there and is reclassified to earnings when the forecasted transaction affects earnings.",
     "tip": "Voluntary discontinuation: AOCI remains, follows normal reclassification timing. If forecast no longer probable: reclassify to income immediately.",
     "calculationRequired": false,
@@ -4069,12 +4069,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A basis swap involves:",
     "options": {
-      "A": "Exchanging fixed for floating interest rates",
-      "B": "Exchanging one floating rate index for another floating rate index",
-      "C": "Exchanging principal amounts at maturity",
-      "D": "Exchanging stock for bonds"
+      "A": "Exchanging stock for bonds",
+      "B": "Exchanging fixed for floating interest rates",
+      "C": "Exchanging one floating rate index for another floating rate index",
+      "D": "Exchanging principal amounts at maturity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A basis swap involves exchanging payments based on different floating rate indices (e.g., LIBOR for Prime rate, or LIBOR for SOFR). Both legs are floating rates but referenced to different benchmarks.",
     "tip": "Basis swap: Floating for floating with different benchmarks. Used to change the floating rate index exposure.",
     "calculationRequired": false,
@@ -4132,12 +4132,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An airline hedges its expected fuel purchases for the next 12 months using crude oil futures. This hedge would most likely be designated as:",
     "options": {
-      "A": "A fair value hedge of existing inventory",
-      "B": "A cash flow hedge of a forecasted transaction",
-      "C": "A net investment hedge",
-      "D": "A speculation transaction"
+      "A": "A speculation transaction",
+      "B": "A fair value hedge of existing inventory",
+      "C": "A cash flow hedge of a forecasted transaction",
+      "D": "A net investment hedge"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Hedging forecasted fuel purchases (a forecasted transaction) is a cash flow hedge. The airline is hedging the variability in future cash flows from price changes. It's not fair value because no asset is currently recognized.",
     "tip": "Forecasted purchase/sale = cash flow hedge. Existing inventory/firm commitment = fair value hedge.",
     "calculationRequired": false,
@@ -4153,12 +4153,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A swaption is:",
     "options": {
-      "A": "A mandatory swap agreement",
-      "B": "An option to enter into a swap agreement at a future date",
-      "C": "A swap that can be terminated early",
-      "D": "A combination of two swaps"
+      "A": "A swap that can be terminated early",
+      "B": "A combination of two swaps",
+      "C": "A mandatory swap agreement",
+      "D": "An option to enter into a swap agreement at a future date"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A swaption is an option that gives the holder the right (but not obligation) to enter into an interest rate swap at a specified future date at specified terms. The holder pays a premium for this optionality.",
     "tip": "Swaption = option on a swap. Payer swaption: right to pay fixed. Receiver swaption: right to receive fixed.",
     "calculationRequired": false,
@@ -4174,12 +4174,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under ASU 2017-12, the 'last-of-layer' method allows companies to:",
     "options": {
-      "A": "Hedge only the last payment of a debt instrument",
-      "B": "Designate a hedge for a portion of a closed portfolio that is not expected to prepay",
-      "C": "Apply hedge accounting to the final year of a multi-year hedge",
-      "D": "Use LIFO accounting for derivative instruments"
+      "A": "Designate a hedge for a portion of a closed portfolio that is not expected to prepay",
+      "B": "Apply hedge accounting to the final year of a multi-year hedge",
+      "C": "Use LIFO accounting for derivative instruments",
+      "D": "Hedge only the last payment of a debt instrument"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The last-of-layer method allows hedging a stated amount of a closed portfolio of prepayable assets that is not expected to be affected by prepayments. This helps address prepayment risk in fair value hedges of portfolios.",
     "tip": "Last-of-layer: Hedge the bottom layer of a portfolio expected to remain. Useful for mortgage portfolios with prepayment uncertainty.",
     "calculationRequired": false,
@@ -4216,12 +4216,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the portfolio layer method (ASU 2022-01), fair value hedge basis adjustments for a closed portfolio are:",
     "options": {
-      "A": "Allocated to individual assets in the portfolio",
-      "B": "Maintained in a separate basis adjustment account",
-      "C": "Immediately recognized in earnings",
-      "D": "Allocated to goodwill"
+      "A": "Maintained in a separate basis adjustment account",
+      "B": "Immediately recognized in earnings",
+      "C": "Allocated to goodwill",
+      "D": "Allocated to individual assets in the portfolio"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under the portfolio layer method, basis adjustments from fair value hedges are maintained in a separate basis adjustment account rather than being allocated to individual assets. This simplifies tracking and amortization.",
     "tip": "Portfolio layer method: Basis adjustment stays pooled, not traced to specific assets. Amortized over remaining life.",
     "calculationRequired": false,
@@ -4237,12 +4237,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company hedges $10M of fixed-rate debt with a receive-fixed, pay-floating swap. Interest rates decrease, causing the debt's fair value to increase by $200,000 and the swap to decrease by $190,000. What is the net income effect?",
     "options": {
-      "A": "$10,000 loss (ineffectiveness)",
-      "B": "$10,000 gain (ineffectiveness)",
-      "C": "$200,000 loss",
-      "D": "$0"
+      "A": "$200,000 loss",
+      "B": "$0",
+      "C": "$10,000 loss (ineffectiveness)",
+      "D": "$10,000 gain (ineffectiveness)"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "In a fair value hedge, both the hedged item and hedging instrument changes go to income. Debt FV increase = $200,000 loss on debt (basis adjustment). Swap decrease = $190,000 loss. Total = $390,000 loss. No wait: Debt FV UP = loss to holder? If rates down, fixed debt worth MORE (liability increases). The $200,000 FV increase in liability = $200,000 loss. Swap pays fixed, rates down = swap has $190,000 loss. Net = $10,000 ineffectiveness loss.",
     "tip": "Fair value hedge: Both changes to income. Ineffectiveness = difference between two. Here: $200K loss + $190K loss offset issue - actually debt increase = $200K loss, swap decrease = $190K loss. Net $390K loss unless swap gains offset.",
     "calculationRequired": true,
@@ -4258,12 +4258,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company designates a forward contract as a cash flow hedge of a forecasted inventory purchase. The forward gains $25,000 in value. The inventory is purchased, held, and then sold. When is the $25,000 gain recognized in earnings?",
     "options": {
-      "A": "When the forward contract settles",
-      "B": "When the inventory is purchased",
-      "C": "When the inventory is sold",
-      "D": "Ratably over the inventory holding period"
+      "A": "Ratably over the inventory holding period",
+      "B": "When the forward contract settles",
+      "C": "When the inventory is purchased",
+      "D": "When the inventory is sold"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "In a cash flow hedge, the gain goes to OCI. When inventory is purchased, the OCI amount is reclassified and included in inventory cost basis. When inventory is sold, the adjusted cost flows through COGS, recognizing the hedging gain in earnings.",
     "tip": "Cash flow hedge of forecasted purchase: OCI → Basis adjustment in asset → Recognized when asset affects earnings (sale for inventory).",
     "calculationRequired": false,
@@ -4279,12 +4279,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company creates a zero-cost collar by purchasing a put option and selling a call option on its forecasted commodity sales. This strategy:",
     "options": {
-      "A": "Eliminates all price risk",
-      "B": "Establishes a price floor and ceiling, with no net premium",
-      "C": "Speculates on price increases",
-      "D": "Cannot qualify for hedge accounting"
+      "A": "Speculates on price increases",
+      "B": "Cannot qualify for hedge accounting",
+      "C": "Eliminates all price risk",
+      "D": "Establishes a price floor and ceiling, with no net premium"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A zero-cost collar combines a purchased put (protection against price decreases) and a written call (gives up upside above strike). The premiums offset, creating zero net cost. The company has a guaranteed price range (floor to ceiling).",
     "tip": "Collar: Put + sold call. Zero cost when premiums offset. Caps both downside and upside. Can qualify for hedge accounting if properly structured.",
     "calculationRequired": false,
@@ -4300,12 +4300,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For a cash flow hedge of a forecasted transaction, the transaction must be:",
     "options": {
-      "A": "Possible",
-      "B": "Reasonably possible",
-      "C": "Probable",
-      "D": "Virtually certain"
+      "A": "Reasonably possible",
+      "B": "Probable",
+      "C": "Virtually certain",
+      "D": "Possible"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "A forecasted transaction must be probable to qualify for cash flow hedge accounting. If the transaction is no longer probable, the hedge must be discontinued and amounts in AOCI are reclassified to earnings immediately.",
     "tip": "Probable = likely to occur. If forecast becomes not probable, discontinue hedge and reclassify AOCI to income immediately.",
     "calculationRequired": false,
@@ -4384,12 +4384,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT a required disclosure for derivative instruments under ASC 815?",
     "options": {
-      "A": "Fair value of derivatives by type and balance sheet location",
-      "B": "Gains and losses on derivatives by hedge type and income statement location",
-      "C": "Notional amounts of derivatives",
-      "D": "Internal valuation models and assumptions used"
+      "A": "Gains and losses on derivatives by hedge type and income statement location",
+      "B": "Notional amounts of derivatives",
+      "C": "Internal valuation models and assumptions used",
+      "D": "Fair value of derivatives by type and balance sheet location"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Required disclosures include fair values, balance sheet location, gains/losses by type and income statement location, and notional amounts. While fair value measurement disclosures exist under ASC 820, detailed internal models are not specifically required under ASC 815.",
     "tip": "Key disclosures: Location on B/S and I/S, fair values, notional amounts, gains/losses by hedge type. Objectives and strategies for using derivatives.",
     "calculationRequired": false,
@@ -4405,12 +4405,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company hedges a 3-year variable-rate loan with a pay-fixed swap. In Year 1, the swap has a $30,000 gain (effective). In Year 2, the swap has a $20,000 loss (effective). Year 1 and Year 2 interest expense (before hedging) is $100,000 and $110,000 respectively. What is reported interest expense in Year 1 and Year 2 with hedge accounting?",
     "options": {
-      "A": "Year 1: $70,000; Year 2: $130,000",
-      "B": "Year 1: $100,000; Year 2: $110,000",
-      "C": "Year 1: $130,000; Year 2: $90,000",
-      "D": "Year 1: $70,000; Year 2: $90,000"
+      "A": "Year 1: $100,000; Year 2: $110,000",
+      "B": "Year 1: $130,000; Year 2: $90,000",
+      "C": "Year 1: $70,000; Year 2: $90,000",
+      "D": "Year 1: $70,000; Year 2: $130,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "In a cash flow hedge of variable-rate debt, the effective swap gain/loss is reclassified from OCI to interest expense. Year 1: $100,000 - $30,000 gain = $70,000 effective interest. Year 2: $110,000 + $20,000 loss = $130,000 effective interest.",
     "tip": "Cash flow hedge of debt: Swap gain reduces interest expense, swap loss increases it. Result approximates fixed-rate interest.",
     "calculationRequired": true,
@@ -4426,12 +4426,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Capital budgeting is the process of:",
     "options": {
-      "A": "Preparing the annual operating budget",
-      "B": "Evaluating and selecting long-term investment projects",
-      "C": "Managing day-to-day cash flows",
-      "D": "Determining the optimal capital structure"
+      "A": "Managing day-to-day cash flows",
+      "B": "Determining the optimal capital structure",
+      "C": "Preparing the annual operating budget",
+      "D": "Evaluating and selecting long-term investment projects"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Capital budgeting is the process of planning, evaluating, and selecting long-term investment projects. These decisions typically involve significant capital expenditures with benefits extending over multiple years.",
     "tip": "Capital budgeting = long-term investment decisions. Distinguished from operating budgets (short-term) and capital structure (financing mix).",
     "calculationRequired": false,
@@ -4447,12 +4447,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project costs $100,000 and generates annual cash flows of $25,000. What is the payback period?",
     "options": {
-      "A": "2 years",
-      "B": "3 years",
-      "C": "4 years",
-      "D": "5 years"
+      "A": "4 years",
+      "B": "5 years",
+      "C": "2 years",
+      "D": "3 years"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Payback period = Initial investment / Annual cash flow = $100,000 / $25,000 = 4 years. This is the time required to recover the initial investment through cash inflows.",
     "tip": "Payback = Investment ÷ Annual cash flow (if even flows). For uneven flows, cumulate until investment is recovered.",
     "calculationRequired": true,
@@ -4468,12 +4468,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project with a positive net present value (NPV) should generally be:",
     "options": {
-      "A": "Rejected because it exceeds the cost of capital",
-      "B": "Accepted because it adds value to the firm",
-      "C": "Deferred until NPV becomes negative",
-      "D": "Accepted only if payback period is less than 3 years"
+      "A": "Accepted only if payback period is less than 3 years",
+      "B": "Rejected because it exceeds the cost of capital",
+      "C": "Accepted because it adds value to the firm",
+      "D": "Deferred until NPV becomes negative"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A positive NPV indicates that the project's returns exceed the required rate of return (cost of capital), adding value to shareholders. Positive NPV projects should generally be accepted.",
     "tip": "NPV rule: Accept if NPV > 0 (adds value). Reject if NPV < 0 (destroys value). NPV = 0 means return equals required return.",
     "calculationRequired": false,
@@ -4489,12 +4489,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The present value of $1,000 to be received in 2 years at a 10% discount rate is approximately:",
     "options": {
-      "A": "$800",
-      "B": "$826",
-      "C": "$909",
-      "D": "$1,000"
+      "A": "$826",
+      "B": "$909",
+      "C": "$1,000",
+      "D": "$800"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "PV = FV / (1 + r)^n = $1,000 / (1.10)^2 = $1,000 / 1.21 = $826.45 ≈ $826. This is the value today of a future cash flow.",
     "tip": "PV = FV ÷ (1+r)^n. Money today is worth more than money in the future due to earning potential.",
     "calculationRequired": true,
@@ -4573,12 +4573,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project has an initial cost of $200,000 and present value of future cash flows of $250,000. What is the profitability index?",
     "options": {
-      "A": "0.80",
-      "B": "1.00",
-      "C": "1.25",
-      "D": "1.50"
+      "A": "1.25",
+      "B": "1.50",
+      "C": "0.80",
+      "D": "1.00"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Profitability Index = PV of future cash flows / Initial investment = $250,000 / $200,000 = 1.25. A PI greater than 1.0 indicates an acceptable project.",
     "tip": "PI = PV of inflows ÷ Initial cost. Accept if PI > 1.0. Useful for capital rationing to rank projects.",
     "calculationRequired": true,
@@ -4594,12 +4594,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project costs $100,000, has a 5-year life with no salvage value, and generates average annual net income of $12,000. What is the accounting rate of return using average investment?",
     "options": {
-      "A": "12%",
-      "B": "24%",
-      "C": "20%",
-      "D": "10%"
+      "A": "24%",
+      "B": "20%",
+      "C": "10%",
+      "D": "12%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Average investment = ($100,000 + $0) / 2 = $50,000. ARR = Average net income / Average investment = $12,000 / $50,000 = 24%.",
     "tip": "ARR = Average accounting income ÷ Average investment. Average investment = (Beginning + Ending) ÷ 2. Uses accounting income, not cash flows.",
     "calculationRequired": true,
@@ -4636,12 +4636,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When ranking mutually exclusive projects, NPV and IRR may give conflicting rankings due to:",
     "options": {
-      "A": "Using different discount rates",
-      "B": "Differences in project size or timing of cash flows",
-      "C": "NPV ignoring the time value of money",
-      "D": "IRR being expressed as a dollar amount"
+      "A": "IRR being expressed as a dollar amount",
+      "B": "Using different discount rates",
+      "C": "Differences in project size or timing of cash flows",
+      "D": "NPV ignoring the time value of money"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "NPV and IRR can conflict when comparing mutually exclusive projects of different sizes or with different cash flow timing patterns. NPV is generally preferred because it measures absolute value creation.",
     "tip": "Conflicts arise from: Different scales, different timing, multiple IRRs (non-normal cash flows). When in conflict, use NPV.",
     "calculationRequired": false,
@@ -4657,12 +4657,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has annual depreciation of $50,000 and a tax rate of 30%. What is the annual tax shield from depreciation?",
     "options": {
-      "A": "$15,000",
-      "B": "$35,000",
-      "C": "$50,000",
-      "D": "$65,000"
+      "A": "$35,000",
+      "B": "$50,000",
+      "C": "$65,000",
+      "D": "$15,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Depreciation tax shield = Depreciation × Tax rate = $50,000 × 30% = $15,000. This represents the tax savings from the depreciation deduction.",
     "tip": "Tax shield = Deduction × Tax rate. Depreciation is non-cash but provides real cash savings through reduced taxes.",
     "calculationRequired": true,
@@ -4678,12 +4678,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project has revenues of $500,000, cash operating costs of $300,000, depreciation of $80,000, and a 25% tax rate. What is the operating cash flow?",
     "options": {
-      "A": "$90,000",
-      "B": "$120,000",
-      "C": "$170,000",
-      "D": "$200,000"
+      "A": "$200,000",
+      "B": "$90,000",
+      "C": "$120,000",
+      "D": "$170,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Operating income = $500,000 - $300,000 - $80,000 = $120,000. Taxes = $120,000 × 25% = $30,000. Net income = $90,000. OCF = Net income + Depreciation = $90,000 + $80,000 = $170,000.",
     "tip": "OCF = (Rev - Cash costs - Depr)(1-T) + Depr, or = Net income + Depreciation. Add back non-cash depreciation.",
     "calculationRequired": true,
@@ -4699,12 +4699,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Equipment with a book value of $20,000 is sold for $35,000. The tax rate is 30%. What is the after-tax cash flow from the sale?",
     "options": {
-      "A": "$24,500",
-      "B": "$30,500",
-      "C": "$35,000",
-      "D": "$39,500"
+      "A": "$39,500",
+      "B": "$24,500",
+      "C": "$30,500",
+      "D": "$35,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Gain on sale = $35,000 - $20,000 = $15,000. Tax on gain = $15,000 × 30% = $4,500. After-tax cash flow = $35,000 - $4,500 = $30,500.",
     "tip": "After-tax salvage = Sale price - Tax on gain (or + tax savings on loss). Tax is on difference between sale price and book value.",
     "calculationRequired": true,
@@ -4720,12 +4720,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project requires an initial working capital investment of $30,000 that will be recovered at the end of the 5-year project. In the NPV calculation, this working capital:",
     "options": {
-      "A": "Is only a cash outflow at the beginning",
-      "B": "Is a cash outflow at the beginning and inflow at the end",
-      "C": "Should be ignored as it is not a capital expenditure",
-      "D": "Is expensed evenly over the project life"
+      "A": "Is expensed evenly over the project life",
+      "B": "Is only a cash outflow at the beginning",
+      "C": "Is a cash outflow at the beginning and inflow at the end",
+      "D": "Should be ignored as it is not a capital expenditure"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Working capital is a cash outflow when invested (Year 0) and a cash inflow when recovered at project end (Year 5). Both should be included in the NPV calculation at their respective times.",
     "tip": "Working capital: Invest at start (outflow), recover at end (inflow). Remember to include both in project cash flows.",
     "calculationRequired": false,
@@ -4762,12 +4762,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sensitivity analysis in capital budgeting involves:",
     "options": {
-      "A": "Calculating the project's beta",
-      "B": "Changing one variable at a time to see its effect on NPV",
-      "C": "Running Monte Carlo simulations",
-      "D": "Adjusting the discount rate for risk"
+      "A": "Adjusting the discount rate for risk",
+      "B": "Calculating the project's beta",
+      "C": "Changing one variable at a time to see its effect on NPV",
+      "D": "Running Monte Carlo simulations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Sensitivity analysis examines how changes in individual input variables (sales volume, price, costs, etc.) affect the project's NPV or IRR, helping identify which variables the project is most sensitive to.",
     "tip": "Sensitivity = one variable at a time. Scenario = multiple variables change together. Monte Carlo = probability distributions.",
     "calculationRequired": false,
@@ -4804,12 +4804,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Using MACRS depreciation rather than straight-line depreciation for a capital project will typically:",
     "options": {
-      "A": "Decrease NPV due to higher early expenses",
-      "B": "Increase NPV due to higher early tax shields",
-      "C": "Have no effect on NPV",
-      "D": "Decrease IRR"
+      "A": "Increase NPV due to higher early tax shields",
+      "B": "Have no effect on NPV",
+      "C": "Decrease IRR",
+      "D": "Decrease NPV due to higher early expenses"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "MACRS provides accelerated depreciation, creating larger tax shields in earlier years. Due to time value of money, earlier cash flows are worth more, increasing NPV compared to straight-line depreciation.",
     "tip": "Accelerated depreciation → Earlier tax shields → Higher present value of tax savings → Higher NPV. Timing matters!",
     "calculationRequired": false,
@@ -4825,12 +4825,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project may have multiple IRRs when:",
     "options": {
-      "A": "The project has a very long life",
-      "B": "The cash flows change sign more than once",
-      "C": "The discount rate is very high",
-      "D": "The project is very large"
+      "A": "The discount rate is very high",
+      "B": "The project is very large",
+      "C": "The project has a very long life",
+      "D": "The cash flows change sign more than once"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Multiple IRRs can occur when cash flows change sign more than once (non-normal cash flows). For example, an initial outflow, followed by inflows, followed by a large outflow. Use NPV in these cases.",
     "tip": "Multiple IRRs: Possible when cash flows change sign >1 time. Also possible: no IRR at all. NPV is more reliable in these cases.",
     "calculationRequired": false,
@@ -4846,12 +4846,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under capital rationing, the best method to select projects is to rank them by:",
     "options": {
-      "A": "NPV from highest to lowest",
-      "B": "IRR from highest to lowest",
-      "C": "Profitability index from highest to lowest",
-      "D": "Payback period from shortest to longest"
+      "A": "Payback period from shortest to longest",
+      "B": "NPV from highest to lowest",
+      "C": "IRR from highest to lowest",
+      "D": "Profitability index from highest to lowest"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Under capital rationing (limited funds), projects should be ranked by profitability index to maximize total value creation per dollar invested. NPV alone doesn't account for investment size differences.",
     "tip": "Capital rationing: Use PI to rank. PI = Value per dollar invested. Select highest PI projects until capital exhausted.",
     "calculationRequired": false,
@@ -4888,12 +4888,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If nominal cash flows are used in capital budgeting analysis, the discount rate should be:",
     "options": {
-      "A": "The real rate of return",
-      "B": "The nominal (market) rate of return",
-      "C": "Zero to avoid double-counting inflation",
-      "D": "The inflation rate"
+      "A": "The nominal (market) rate of return",
+      "B": "Zero to avoid double-counting inflation",
+      "C": "The inflation rate",
+      "D": "The real rate of return"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Consistency is required: nominal cash flows must be discounted at nominal rates, and real cash flows at real rates. Mixing nominal cash flows with real rates (or vice versa) produces incorrect NPVs.",
     "tip": "Be consistent: Nominal with nominal, Real with real. Nominal rate ≈ Real rate + Inflation. Don't mix!",
     "calculationRequired": false,
@@ -4909,12 +4909,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When evaluating whether to replace old equipment with new equipment, the relevant cash flows include:",
     "options": {
-      "A": "Original cost of the old equipment",
-      "B": "Incremental cash flows from the new equipment and sale value of old equipment",
-      "C": "Only the cost of the new equipment",
-      "D": "Book value of old equipment as a cash outflow"
+      "A": "Only the cost of the new equipment",
+      "B": "Book value of old equipment as a cash outflow",
+      "C": "Original cost of the old equipment",
+      "D": "Incremental cash flows from the new equipment and sale value of old equipment"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Replacement analysis uses incremental cash flows: additional revenues or cost savings from new equipment, the after-tax sale proceeds from old equipment, and the cost of new equipment. Original cost is sunk.",
     "tip": "Replacement: Focus on incremental changes. Include: Sale of old (after-tax), cost of new, differences in operating cash flows.",
     "calculationRequired": false,
@@ -4930,12 +4930,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The crossover rate between two projects is the discount rate at which:",
     "options": {
-      "A": "Both projects have zero NPV",
-      "B": "Both projects have the same NPV",
-      "C": "Both projects have the same IRR",
-      "D": "Both projects have the same payback period"
+      "A": "Both projects have the same payback period",
+      "B": "Both projects have zero NPV",
+      "C": "Both projects have the same NPV",
+      "D": "Both projects have the same IRR"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The crossover rate is the discount rate where two projects have equal NPVs. Below this rate, one project is preferred; above it, the other is preferred. It's found by calculating IRR of the difference in cash flows.",
     "tip": "Crossover rate: Where NPV profiles intersect. Calculate IRR of incremental cash flows (Project A minus Project B).",
     "calculationRequired": false,
@@ -4951,12 +4951,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Mutually exclusive projects are those where:",
     "options": {
-      "A": "Accepting one has no effect on the other",
-      "B": "Accepting one precludes accepting the other",
-      "C": "Both must be accepted or rejected together",
-      "D": "The projects must be from different divisions"
+      "A": "Both must be accepted or rejected together",
+      "B": "The projects must be from different divisions",
+      "C": "Accepting one has no effect on the other",
+      "D": "Accepting one precludes accepting the other"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Mutually exclusive projects are alternatives where accepting one means the other cannot be accepted—for example, choosing between two locations for a plant. Independent projects can be evaluated separately.",
     "tip": "Mutually exclusive: Either/or decision. Independent: Separate decisions. Contingent: One depends on another.",
     "calculationRequired": false,
@@ -4972,12 +4972,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project costs $80,000 and generates cash flows of $30,000 in Year 1, $40,000 in Year 2, and $35,000 in Year 3. At 12% discount rate, what is the NPV? (PV factors: Year 1 = 0.893, Year 2 = 0.797, Year 3 = 0.712)",
     "options": {
-      "A": "$5,130",
-      "B": "$6,420",
-      "C": "$9,580",
-      "D": "$25,000"
+      "A": "$25,000",
+      "B": "$5,130",
+      "C": "$6,420",
+      "D": "$9,580"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "PV of Year 1 = $30,000 × 0.893 = $26,790. PV of Year 2 = $40,000 × 0.797 = $31,880. PV of Year 3 = $35,000 × 0.712 = $24,920. Total PV = $83,590. NPV = $83,590 - $80,000 = $3,590. Hmm, let me recalculate to match an option.",
     "tip": "For uneven cash flows, discount each year separately and sum. NPV = Sum of PV of inflows - Initial investment.",
     "calculationRequired": true,
@@ -4993,12 +4993,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Modified Internal Rate of Return (MIRR) addresses which problem with traditional IRR?",
     "options": {
-      "A": "It uses a more appropriate reinvestment rate assumption",
-      "B": "It ignores the time value of money",
-      "C": "It cannot handle negative cash flows",
-      "D": "It produces values in percentages instead of dollars"
+      "A": "It ignores the time value of money",
+      "B": "It cannot handle negative cash flows",
+      "C": "It produces values in percentages instead of dollars",
+      "D": "It uses a more appropriate reinvestment rate assumption"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "MIRR assumes intermediate cash flows are reinvested at the cost of capital rather than at the IRR itself. This is more realistic because reinvesting all flows at the IRR is often impractical.",
     "tip": "MIRR: Reinvests at WACC (realistic). IRR: Reinvests at IRR (often unrealistic). MIRR also avoids multiple IRR problem.",
     "calculationRequired": false,
@@ -5014,12 +5014,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company's WACC is 10%. A project in a new, riskier line of business should be evaluated using:",
     "options": {
-      "A": "The company's WACC of 10%",
-      "B": "A discount rate higher than 10% to reflect project risk",
-      "C": "A discount rate lower than 10% to encourage innovation",
-      "D": "The risk-free rate"
+      "A": "The risk-free rate",
+      "B": "The company's WACC of 10%",
+      "C": "A discount rate higher than 10% to reflect project risk",
+      "D": "A discount rate lower than 10% to encourage innovation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Projects with risk higher than the company average should use a higher discount rate. Using the company WACC for all projects would lead to accepting too many high-risk projects and rejecting low-risk ones.",
     "tip": "Match discount rate to project risk, not company risk. High-risk project → higher rate. Low-risk project → lower rate.",
     "calculationRequired": false,
@@ -5035,12 +5035,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The economic life of an asset is the period that:",
     "options": {
-      "A": "Equals the asset's physical life",
-      "B": "Minimizes the equivalent annual cost",
-      "C": "Equals the tax depreciation period",
-      "D": "Maximizes accounting income"
+      "A": "Maximizes accounting income",
+      "B": "Equals the asset's physical life",
+      "C": "Minimizes the equivalent annual cost",
+      "D": "Equals the tax depreciation period"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Economic life is the period that minimizes the equivalent annual cost (EAC) of owning and operating the asset. This may be shorter than physical life due to increasing maintenance costs and declining efficiency.",
     "tip": "Economic life ≤ Physical life. Find the replacement cycle that minimizes EAC (equivalent annual cost).",
     "calculationRequired": false,
@@ -5077,12 +5077,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Equipment costs $100,000, has a 4-year life, no salvage, and uses straight-line depreciation. It generates $40,000 annual pre-tax operating cash savings. Tax rate is 25%. What is annual after-tax operating cash flow?",
     "options": {
-      "A": "$30,000",
-      "B": "$36,250",
-      "C": "$40,000",
-      "D": "$46,250"
+      "A": "$36,250",
+      "B": "$40,000",
+      "C": "$46,250",
+      "D": "$30,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Depreciation = $100,000/4 = $25,000. Taxable savings = $40,000 - $25,000 = $15,000. Tax = $15,000 × 25% = $3,750. After-tax operating CF = $40,000 - $3,750 = $36,250, OR = ($40,000 × 0.75) + ($25,000 × 0.25) = $30,000 + $6,250 = $36,250.",
     "tip": "After-tax OCF = Pre-tax savings × (1-T) + Depreciation × T, or = (Savings - Depreciation)(1-T) + Depreciation.",
     "calculationRequired": true,
@@ -5098,12 +5098,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project has fixed costs of $200,000, variable costs of $8 per unit, selling price of $20 per unit, and requires initial investment of $500,000. At what annual unit sales does NPV break-even occur (assuming 5-year life, 10% discount rate, PV factor = 3.791)?",
     "options": {
-      "A": "16,667 units",
-      "B": "27,676 units",
-      "C": "10,989 units",
-      "D": "18,519 units"
+      "A": "27,676 units",
+      "B": "10,989 units",
+      "C": "18,519 units",
+      "D": "16,667 units"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Annual CF needed for NPV=0: $500,000 / 3.791 = $131,876. Contribution margin = $20 - $8 = $12. Units needed: ($131,876 + $200,000) / $12 = $331,876 / $12 = 27,656 ≈ 27,676 units.",
     "tip": "NPV break-even: Annual CF needed = Investment ÷ PV annuity factor. Then solve for units using contribution margin.",
     "calculationRequired": true,
@@ -5161,12 +5161,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The weighted average cost of capital (WACC) represents:",
     "options": {
-      "A": "The cost of the company's most expensive source of financing",
-      "B": "The average cost of all the company's financing sources weighted by their proportions",
-      "C": "The return required by equity investors only",
-      "D": "The interest rate on the company's bank loans"
+      "A": "The return required by equity investors only",
+      "B": "The interest rate on the company's bank loans",
+      "C": "The cost of the company's most expensive source of financing",
+      "D": "The average cost of all the company's financing sources weighted by their proportions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "WACC is the average cost of all forms of financing (debt, equity, preferred stock) weighted by their proportion in the company's capital structure. It represents the minimum return a company must earn to satisfy all investors.",
     "tip": "WACC = (Weight of debt × Cost of debt × (1-T)) + (Weight of equity × Cost of equity). Represents required return.",
     "calculationRequired": false,
@@ -5182,12 +5182,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has a pre-tax cost of debt of 8% and a tax rate of 25%. What is the after-tax cost of debt?",
     "options": {
-      "A": "2%",
-      "B": "6%",
-      "C": "8%",
-      "D": "10%"
+      "A": "10%",
+      "B": "2%",
+      "C": "6%",
+      "D": "8%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "After-tax cost of debt = Pre-tax cost × (1 - Tax rate) = 8% × (1 - 0.25) = 8% × 0.75 = 6%. Interest is tax-deductible, reducing the effective cost.",
     "tip": "After-tax cost of debt = rd × (1-T). Interest expense reduces taxable income, creating a tax shield.",
     "calculationRequired": true,
@@ -5224,12 +5224,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When calculating WACC, the weights for debt and equity should typically be based on:",
     "options": {
-      "A": "Historical book values",
-      "B": "Target market value weights",
-      "C": "Original issue prices",
-      "D": "Tax basis of securities"
+      "A": "Target market value weights",
+      "B": "Original issue prices",
+      "C": "Tax basis of securities",
+      "D": "Historical book values"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "WACC calculations should use target market value weights, as these reflect the current economic cost of capital. Book values may differ significantly from market values and don't represent current financing costs.",
     "tip": "Use market value weights (or target weights) for WACC. Book values may be outdated and don't reflect current values.",
     "calculationRequired": false,
@@ -5266,12 +5266,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The cost of preferred stock is calculated as:",
     "options": {
-      "A": "Dividend divided by market price",
-      "B": "Dividend divided by par value",
-      "C": "Market price divided by dividend",
-      "D": "Par value divided by market price"
+      "A": "Par value divided by market price",
+      "B": "Dividend divided by market price",
+      "C": "Dividend divided by par value",
+      "D": "Market price divided by dividend"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Cost of preferred stock = Annual dividend / Market price. Preferred dividends are not tax-deductible, so there is no tax adjustment (unlike debt).",
     "tip": "rp = Dp / P0. No tax adjustment because preferred dividends are not tax-deductible. Use market price, not par value.",
     "calculationRequired": false,
@@ -5287,12 +5287,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has 40% debt at 6% after-tax cost and 60% equity at 12% cost. What is the WACC?",
     "options": {
-      "A": "7.2%",
-      "B": "9.0%",
-      "C": "9.6%",
-      "D": "18.0%"
+      "A": "9.6%",
+      "B": "18.0%",
+      "C": "7.2%",
+      "D": "9.0%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "WACC = (Weight of debt × After-tax cost of debt) + (Weight of equity × Cost of equity) = (0.40 × 6%) + (0.60 × 12%) = 2.4% + 7.2% = 9.6%.",
     "tip": "WACC = wd × rd(1-T) + we × re. Remember: debt cost should already be after-tax, or multiply by (1-T).",
     "calculationRequired": true,
@@ -5308,12 +5308,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The risk-free rate is 3%, the market return is 11%, and a stock's beta is 1.2. Using CAPM, what is the cost of equity?",
     "options": {
-      "A": "9.6%",
-      "B": "12.6%",
-      "C": "13.2%",
-      "D": "16.2%"
+      "A": "13.2%",
+      "B": "16.2%",
+      "C": "9.6%",
+      "D": "12.6%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "CAPM: re = Rf + β(Rm - Rf) = 3% + 1.2(11% - 3%) = 3% + 1.2(8%) = 3% + 9.6% = 12.6%.",
     "tip": "CAPM: re = Rf + β(Market risk premium). Market risk premium = Rm - Rf. Don't forget to subtract Rf from Rm first.",
     "calculationRequired": true,
@@ -5329,12 +5329,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A stock pays a dividend of $2 per share, expected to grow at 5% annually. The stock price is $40. What is the cost of equity using the dividend growth model?",
     "options": {
-      "A": "5%",
-      "B": "10%",
-      "C": "10.25%",
-      "D": "10.5%"
+      "A": "10.25%",
+      "B": "10.5%",
+      "C": "5%",
+      "D": "10%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "re = (D1 / P0) + g. D1 = $2 × 1.05 = $2.10. re = ($2.10 / $40) + 5% = 5.25% + 5% = 10.25%.",
     "tip": "DDM: re = D1/P0 + g. Use NEXT year's dividend (D1), not current dividend (D0). D1 = D0 × (1+g).",
     "calculationRequired": true,
@@ -5350,12 +5350,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has current assets of $500,000 and current liabilities of $300,000. Net working capital is:",
     "options": {
-      "A": "$200,000",
-      "B": "$300,000",
-      "C": "$500,000",
-      "D": "$800,000"
+      "A": "$300,000",
+      "B": "$500,000",
+      "C": "$800,000",
+      "D": "$200,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Net working capital = Current assets - Current liabilities = $500,000 - $300,000 = $200,000. NWC represents the portion of current assets financed by long-term capital.",
     "tip": "NWC = CA - CL. Positive NWC means short-term assets exceed short-term liabilities. Often required for project investments.",
     "calculationRequired": true,
@@ -5392,12 +5392,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "All else equal, increasing financial leverage will:",
     "options": {
-      "A": "Decrease both expected returns and risk to equity holders",
-      "B": "Increase both expected returns and risk to equity holders",
-      "C": "Increase returns but decrease risk",
-      "D": "Have no effect on equity holders"
+      "A": "Increase both expected returns and risk to equity holders",
+      "B": "Increase returns but decrease risk",
+      "C": "Have no effect on equity holders",
+      "D": "Decrease both expected returns and risk to equity holders"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Financial leverage amplifies both returns and risk for equity holders. More debt means fixed interest payments, leaving more variable returns (and losses) for equity. This increases both expected return and risk.",
     "tip": "Leverage = Double-edged sword. Magnifies both gains and losses for equity. More debt = higher re and higher equity beta.",
     "calculationRequired": false,
@@ -5413,12 +5413,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has days inventory outstanding of 45, days sales outstanding of 30, and days payable outstanding of 25. What is the cash conversion cycle?",
     "options": {
-      "A": "10 days",
-      "B": "50 days",
-      "C": "75 days",
-      "D": "100 days"
+      "A": "100 days",
+      "B": "10 days",
+      "C": "50 days",
+      "D": "75 days"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cash conversion cycle = DIO + DSO - DPO = 45 + 30 - 25 = 50 days. This is the time between paying suppliers and collecting from customers.",
     "tip": "CCC = Days inventory + Days receivables - Days payables. Lower CCC = less working capital needed = better.",
     "calculationRequired": true,
@@ -5539,12 +5539,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has NOPAT of $500,000, invested capital of $4,000,000, and WACC of 10%. What is EVA?",
     "options": {
-      "A": "$100,000",
-      "B": "$200,000",
-      "C": "$400,000",
-      "D": "$500,000"
+      "A": "$400,000",
+      "B": "$500,000",
+      "C": "$100,000",
+      "D": "$200,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "EVA = NOPAT - (Capital × WACC) = $500,000 - ($4,000,000 × 10%) = $500,000 - $400,000 = $100,000. Positive EVA indicates value creation above the cost of capital.",
     "tip": "EVA = NOPAT - Capital charge. Capital charge = Invested capital × WACC. Positive EVA = creating shareholder value.",
     "calculationRequired": true,
@@ -5581,12 +5581,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For an existing bond, the cost of debt should be based on:",
     "options": {
-      "A": "The coupon rate stated on the bond",
-      "B": "The historical interest rate when issued",
-      "C": "The current yield to maturity",
-      "D": "The prime rate"
+      "A": "The historical interest rate when issued",
+      "B": "The current yield to maturity",
+      "C": "The prime rate",
+      "D": "The coupon rate stated on the bond"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The cost of debt should reflect current market conditions, represented by the yield to maturity on existing bonds. The coupon rate is the historical rate and doesn't reflect current costs.",
     "tip": "Cost of debt = Current YTM (market rate), not coupon rate. YTM reflects what investors currently require.",
     "calculationRequired": false,
@@ -5602,12 +5602,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Economic Order Quantity (EOQ) model minimizes:",
     "options": {
-      "A": "Inventory levels only",
-      "B": "Ordering costs only",
-      "C": "Total inventory costs (ordering + carrying)",
-      "D": "Purchase price of inventory"
+      "A": "Ordering costs only",
+      "B": "Total inventory costs (ordering + carrying)",
+      "C": "Purchase price of inventory",
+      "D": "Inventory levels only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "EOQ minimizes the total of ordering costs (which decrease with larger orders) and carrying costs (which increase with larger orders). The optimal point is where marginal ordering cost equals marginal carrying cost.",
     "tip": "EOQ = √(2DS/H) where D=demand, S=order cost, H=holding cost. At EOQ, total ordering cost = total carrying cost.",
     "calculationRequired": false,
@@ -5623,12 +5623,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under the pecking order theory, companies prefer financing sources in which order?",
     "options": {
-      "A": "Debt, retained earnings, new equity",
-      "B": "Retained earnings, debt, new equity",
-      "C": "New equity, debt, retained earnings",
-      "D": "All sources are equally preferred"
+      "A": "Retained earnings, debt, new equity",
+      "B": "New equity, debt, retained earnings",
+      "C": "All sources are equally preferred",
+      "D": "Debt, retained earnings, new equity"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Pecking order theory suggests companies prefer: (1) internal financing (retained earnings), (2) debt, (3) new equity. This is due to information asymmetry—external financing signals management may think the stock is overvalued.",
     "tip": "Pecking order: Internal first (no signal), then debt (less information-sensitive), equity last (negative signal).",
     "calculationRequired": false,
@@ -5665,12 +5665,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The EBIT-EPS break-even point between two financing alternatives occurs where:",
     "options": {
-      "A": "Both alternatives have zero EPS",
-      "B": "EPS is the same under both alternatives",
-      "C": "Both alternatives have maximum EBIT",
-      "D": "Interest expense equals zero"
+      "A": "Interest expense equals zero",
+      "B": "Both alternatives have zero EPS",
+      "C": "EPS is the same under both alternatives",
+      "D": "Both alternatives have maximum EBIT"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The EBIT-EPS break-even point is the level of EBIT where EPS is identical under two different financing alternatives. Above this point, one alternative provides higher EPS; below it, the other does.",
     "tip": "EBIT-EPS analysis: Compare debt vs. equity financing. Break-even is where EPS is equal. Above/below, one dominates.",
     "calculationRequired": false,
@@ -5707,12 +5707,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has: Debt (30% of capital, 7% pre-tax cost), Preferred stock (10% of capital, 9% cost), Common equity (60% of capital, 14% cost). Tax rate is 30%. What is WACC?",
     "options": {
-      "A": "10.17%",
-      "B": "10.77%",
-      "C": "11.37%",
-      "D": "12.00%"
+      "A": "12.00%",
+      "B": "10.17%",
+      "C": "10.77%",
+      "D": "11.37%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "WACC = (0.30 × 7% × 0.70) + (0.10 × 9%) + (0.60 × 14%) = 1.47% + 0.90% + 8.40% = 10.77%. Only debt cost is tax-adjusted.",
     "tip": "With preferred stock: WACC = wd×rd(1-T) + wp×rp + we×re. Preferred has no tax adjustment (dividends not deductible).",
     "calculationRequired": true,
@@ -5749,12 +5749,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company with overall WACC of 10% is evaluating a project in a different industry with higher risk. The company should use:",
     "options": {
-      "A": "The company's WACC of 10%",
-      "B": "A risk-adjusted rate based on comparable companies in the new industry",
-      "C": "The risk-free rate",
-      "D": "A lower rate to encourage diversification"
+      "A": "A lower rate to encourage diversification",
+      "B": "The company's WACC of 10%",
+      "C": "A risk-adjusted rate based on comparable companies in the new industry",
+      "D": "The risk-free rate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Projects in different industries should use a discount rate appropriate to their risk. The pure play approach uses betas from comparable companies in the project's industry, adjusted for the company's capital structure.",
     "tip": "Pure play approach: Find comparable firm, unlever its beta, relever for your capital structure, calculate project-specific WACC.",
     "calculationRequired": false,
@@ -5770,12 +5770,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Modigliani-Miller with corporate taxes, the value of a levered firm equals:",
     "options": {
-      "A": "The value of an unlevered firm",
-      "B": "The value of an unlevered firm plus the present value of tax shields",
-      "C": "The value of an unlevered firm minus the present value of tax shields",
-      "D": "The market value of debt only"
+      "A": "The market value of debt only",
+      "B": "The value of an unlevered firm",
+      "C": "The value of an unlevered firm plus the present value of tax shields",
+      "D": "The value of an unlevered firm minus the present value of tax shields"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "MM Proposition I with taxes: VL = VU + (T × D), where the tax shield = corporate tax rate × debt. Debt financing adds value through the tax deductibility of interest.",
     "tip": "MM with taxes: VL = VU + PV(tax shields). Implies 100% debt is optimal. Real world: balanced by bankruptcy costs.",
     "calculationRequired": false,
@@ -5791,12 +5791,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has DOL of 3.0 and DFL of 2.0. What is the degree of total leverage?",
     "options": {
-      "A": "1.0",
-      "B": "1.5",
-      "C": "5.0",
-      "D": "6.0"
+      "A": "1.5",
+      "B": "5.0",
+      "C": "6.0",
+      "D": "1.0"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Degree of Total Leverage = DOL × DFL = 3.0 × 2.0 = 6.0. This means a 1% change in sales will cause a 6% change in EPS, combining both operating and financial leverage effects.",
     "tip": "DTL = DOL × DFL. Measures total sensitivity of EPS to sales changes. Higher DTL = more risk but more upside potential.",
     "calculationRequired": true,
@@ -5812,12 +5812,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Adjusted Present Value (APV) method calculates project value as:",
     "options": {
-      "A": "NPV using WACC as discount rate",
-      "B": "Base-case NPV (all equity) plus present value of financing effects",
-      "C": "NPV using cost of equity only",
-      "D": "NPV minus the cost of financial distress"
+      "A": "NPV using cost of equity only",
+      "B": "NPV minus the cost of financial distress",
+      "C": "NPV using WACC as discount rate",
+      "D": "Base-case NPV (all equity) plus present value of financing effects"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "APV separates the investment decision from the financing decision: APV = Base NPV (discounted at unlevered cost of equity) + PV of financing effects (tax shields, issuance costs, etc.).",
     "tip": "APV = NPV if all-equity financed + PV of financing side effects. Useful when capital structure changes over project life.",
     "calculationRequired": false,
@@ -5833,12 +5833,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Direct costs of financial distress include all of the following EXCEPT:",
     "options": {
-      "A": "Legal fees for bankruptcy proceedings",
-      "B": "Administrative costs of reorganization",
-      "C": "Lost sales due to customer concerns about company viability",
-      "D": "Accounting and investment banking fees"
+      "A": "Administrative costs of reorganization",
+      "B": "Lost sales due to customer concerns about company viability",
+      "C": "Accounting and investment banking fees",
+      "D": "Legal fees for bankruptcy proceedings"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Direct costs are out-of-pocket expenses (legal, administrative, accounting fees). Lost sales due to customer concerns is an indirect cost—it's an opportunity cost, not a direct cash expenditure for the distress process.",
     "tip": "Direct costs: Legal, admin, professional fees. Indirect: Lost customers, employee turnover, supplier issues, suboptimal decisions.",
     "calculationRequired": false,
@@ -5875,12 +5875,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has FCFF of $100,000 growing at 4% perpetually. WACC is 12%. What is the firm's enterprise value?",
     "options": {
-      "A": "$833,333",
-      "B": "$1,250,000",
-      "C": "$1,300,000",
-      "D": "$2,500,000"
+      "A": "$1,300,000",
+      "B": "$2,500,000",
+      "C": "$833,333",
+      "D": "$1,250,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Using the growing perpetuity formula: Enterprise Value = FCFF1 / (WACC - g) = $100,000 × 1.04 / (0.12 - 0.04) = $104,000 / 0.08 = $1,300,000.",
     "tip": "Firm value = FCFF₁ / (WACC - g). Use NEXT year's FCFF. FCFF valuation gives enterprise value; subtract debt for equity value.",
     "calculationRequired": true,
@@ -5896,12 +5896,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following would cause the demand curve for a product to shift to the right?",
     "options": {
-      "A": "A decrease in the price of the product",
-      "B": "An increase in consumer income (for a normal good)",
-      "C": "An increase in production costs",
-      "D": "A decrease in the number of sellers"
+      "A": "An increase in production costs",
+      "B": "A decrease in the number of sellers",
+      "C": "A decrease in the price of the product",
+      "D": "An increase in consumer income (for a normal good)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "An increase in consumer income shifts the demand curve right for normal goods (people want to buy more at each price). A price change causes movement along the curve, not a shift. Production costs and number of sellers affect supply.",
     "tip": "Demand shifters: Income, tastes, prices of related goods, expectations, population. Price changes = movement ALONG curve.",
     "calculationRequired": false,
@@ -5917,12 +5917,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a perfectly competitive market, individual firms are:",
     "options": {
-      "A": "Price makers who set market prices",
-      "B": "Price takers who accept the market price",
-      "C": "Able to differentiate their products",
-      "D": "Protected by significant barriers to entry"
+      "A": "Able to differentiate their products",
+      "B": "Protected by significant barriers to entry",
+      "C": "Price makers who set market prices",
+      "D": "Price takers who accept the market price"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "In perfect competition, firms are price takers because there are many sellers of identical products. No single firm can influence the market price. They must accept the prevailing market price.",
     "tip": "Perfect competition: Many firms, identical products, no barriers, perfect information. Firms are price takers.",
     "calculationRequired": false,
@@ -5959,12 +5959,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Gross Domestic Product (GDP) measures:",
     "options": {
-      "A": "The total value of all goods produced by a country's citizens worldwide",
-      "B": "The market value of all final goods and services produced within a country",
-      "C": "The total stock of capital in an economy",
-      "D": "The government's total budget expenditures"
+      "A": "The total stock of capital in an economy",
+      "B": "The government's total budget expenditures",
+      "C": "The total value of all goods produced by a country's citizens worldwide",
+      "D": "The market value of all final goods and services produced within a country"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GDP measures the market value of all final goods and services produced within a country's borders during a specific period. It includes production by foreigners within the country but excludes production by citizens abroad.",
     "tip": "GDP = production within borders (domestic). GNP = production by citizens (national). GDP = C + I + G + (X-M).",
     "calculationRequired": false,
@@ -6022,12 +6022,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When the Federal Reserve wants to stimulate the economy, it typically:",
     "options": {
-      "A": "Increases the federal funds rate",
-      "B": "Sells government securities",
-      "C": "Lowers interest rates and buys government securities",
-      "D": "Increases reserve requirements"
+      "A": "Sells government securities",
+      "B": "Lowers interest rates and buys government securities",
+      "C": "Increases reserve requirements",
+      "D": "Increases the federal funds rate"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "To stimulate the economy (expansionary monetary policy), the Fed lowers interest rates and buys securities (injecting money into the economy). This encourages borrowing and spending. The opposite actions are contractionary.",
     "tip": "Expansionary: Lower rates, buy securities, lower reserve requirements. Contractionary: Opposite. Remember the impact on money supply.",
     "calculationRequired": false,
@@ -6064,12 +6064,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A monopolist maximizes profit by producing where:",
     "options": {
-      "A": "Price equals marginal cost",
-      "B": "Marginal revenue equals marginal cost",
-      "C": "Price equals average total cost",
-      "D": "Total revenue is maximized"
+      "A": "Total revenue is maximized",
+      "B": "Price equals marginal cost",
+      "C": "Marginal revenue equals marginal cost",
+      "D": "Price equals average total cost"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Like all firms, a monopolist maximizes profit where marginal revenue equals marginal cost (MR = MC). However, unlike perfect competition, the monopolist's price is higher than marginal revenue because it faces a downward-sloping demand curve.",
     "tip": "Profit maximization: MR = MC for all firms. Monopoly: P > MR (must lower price to sell more). Results in deadweight loss.",
     "calculationRequired": false,
@@ -6085,12 +6085,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the U.S. dollar appreciates relative to the Euro, what is the likely effect on U.S. exports to Europe?",
     "options": {
-      "A": "U.S. exports become cheaper for Europeans, increasing demand",
-      "B": "U.S. exports become more expensive for Europeans, decreasing demand",
-      "C": "No effect on exports",
-      "D": "U.S. imports from Europe decrease"
+      "A": "U.S. exports become more expensive for Europeans, decreasing demand",
+      "B": "No effect on exports",
+      "C": "U.S. imports from Europe decrease",
+      "D": "U.S. exports become cheaper for Europeans, increasing demand"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When the dollar appreciates (strengthens), it takes more Euros to buy a dollar. This makes U.S. goods more expensive for Europeans, reducing demand for U.S. exports. Conversely, imports become cheaper for Americans.",
     "tip": "Strong dollar: Hurts exports (more expensive abroad), helps imports (cheaper to buy foreign goods). Weak dollar: Opposite.",
     "calculationRequired": false,
@@ -6106,12 +6106,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Fisher equation states that the nominal interest rate equals:",
     "options": {
-      "A": "The real rate minus expected inflation",
-      "B": "The real rate plus expected inflation",
-      "C": "The inflation rate only",
-      "D": "The risk-free rate plus a default premium"
+      "A": "The real rate plus expected inflation",
+      "B": "The inflation rate only",
+      "C": "The risk-free rate plus a default premium",
+      "D": "The real rate minus expected inflation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The Fisher equation: Nominal rate = Real rate + Expected inflation (approximately). This shows that lenders require compensation for both the time value of money (real rate) and purchasing power loss (inflation).",
     "tip": "Fisher: i ≈ r + π (nominal ≈ real + inflation). More precisely: (1+i) = (1+r)(1+π). Know both forms.",
     "calculationRequired": false,
@@ -6127,12 +6127,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An accountant earning $100,000 per year quits to start a business. If the business earns $120,000 in revenue with $50,000 in explicit costs, the economic profit is:",
     "options": {
-      "A": "$70,000",
-      "B": "$20,000",
-      "C": "-$30,000",
-      "D": "$120,000"
+      "A": "$20,000",
+      "B": "-$30,000",
+      "C": "$120,000",
+      "D": "$70,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Economic profit = Total revenue - Explicit costs - Implicit costs (opportunity cost). Economic profit = $120,000 - $50,000 - $100,000 = -$30,000. The accountant would be better off keeping the job.",
     "tip": "Economic profit includes opportunity costs. Accounting profit ignores them. Negative economic profit = resources better used elsewhere.",
     "calculationRequired": true,
@@ -6148,12 +6148,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A product with income elasticity of -0.5 is classified as:",
     "options": {
-      "A": "A normal good",
-      "B": "A luxury good",
-      "C": "An inferior good",
-      "D": "A Giffen good"
+      "A": "A Giffen good",
+      "B": "A normal good",
+      "C": "A luxury good",
+      "D": "An inferior good"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Negative income elasticity means demand decreases as income rises—characteristic of inferior goods. Examples include generic brands or low-quality goods that consumers buy less of when they can afford better alternatives.",
     "tip": "Income elasticity: Positive = normal good (>1 = luxury). Negative = inferior good. As income rises, buy more normal goods, less inferior.",
     "calculationRequired": false,
@@ -6169,12 +6169,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Unemployment caused by workers transitioning between jobs is called:",
     "options": {
-      "A": "Cyclical unemployment",
-      "B": "Structural unemployment",
-      "C": "Frictional unemployment",
-      "D": "Seasonal unemployment"
+      "A": "Structural unemployment",
+      "B": "Frictional unemployment",
+      "C": "Seasonal unemployment",
+      "D": "Cyclical unemployment"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Frictional unemployment is temporary unemployment that occurs when workers are between jobs—searching for new positions, entering the workforce, or relocating. It exists even in a healthy economy.",
     "tip": "Frictional: Between jobs (temporary). Structural: Skills mismatch. Cyclical: Due to recession. Natural rate = Frictional + Structural.",
     "calculationRequired": false,
@@ -6211,12 +6211,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A country has a comparative advantage in producing a good when it:",
     "options": {
-      "A": "Can produce more of the good than any other country",
-      "B": "Can produce the good at a lower opportunity cost than other countries",
-      "C": "Has the most advanced technology",
-      "D": "Has the lowest labor costs"
+      "A": "Can produce the good at a lower opportunity cost than other countries",
+      "B": "Has the most advanced technology",
+      "C": "Has the lowest labor costs",
+      "D": "Can produce more of the good than any other country"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Comparative advantage exists when a country can produce a good at a lower opportunity cost than another country. This is the basis for mutually beneficial trade, even when one country has absolute advantage in all goods.",
     "tip": "Comparative advantage = lower opportunity cost. Absolute advantage = can produce more. Trade benefits all based on comparative advantage.",
     "calculationRequired": false,
@@ -6232,12 +6232,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following would shift the aggregate demand curve to the left?",
     "options": {
-      "A": "Increased government spending",
-      "B": "A decrease in personal income taxes",
-      "C": "An increase in interest rates",
-      "D": "Increased consumer confidence"
+      "A": "A decrease in personal income taxes",
+      "B": "An increase in interest rates",
+      "C": "Increased consumer confidence",
+      "D": "Increased government spending"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Higher interest rates reduce investment spending and consumer borrowing, decreasing aggregate demand (leftward shift). Government spending increases, tax cuts, and improved confidence all shift AD rightward.",
     "tip": "AD shifters: C, I, G, NX. Higher interest rates reduce I and some C, shifting AD left. Lower rates shift AD right.",
     "calculationRequired": false,
@@ -6253,12 +6253,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If total cost increases from $1,000 to $1,150 when output increases from 100 to 110 units, the marginal cost per unit is:",
     "options": {
-      "A": "$10.00",
-      "B": "$10.45",
-      "C": "$15.00",
-      "D": "$11.50"
+      "A": "$11.50",
+      "B": "$10.00",
+      "C": "$10.45",
+      "D": "$15.00"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Marginal cost = Change in total cost / Change in quantity = ($1,150 - $1,000) / (110 - 100) = $150 / 10 = $15.00 per unit.",
     "tip": "MC = ΔTC / ΔQ. Marginal cost is the cost of producing one more unit. Crucial for profit maximization decisions.",
     "calculationRequired": true,
@@ -6274,12 +6274,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the reserve requirement is 10%, what is the maximum money multiplier?",
     "options": {
-      "A": "1",
-      "B": "5",
-      "C": "10",
-      "D": "100"
+      "A": "10",
+      "B": "100",
+      "C": "1",
+      "D": "5"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Money multiplier = 1 / Reserve requirement = 1 / 0.10 = 10. This means each dollar of reserves can support up to $10 in deposits through the banking system.",
     "tip": "Money multiplier = 1 / RR. If RR = 10%, multiplier = 10. $1 deposited can create up to $10 in money supply.",
     "calculationRequired": true,
@@ -6316,12 +6316,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An improvement in production technology will cause:",
     "options": {
-      "A": "Movement along the supply curve",
-      "B": "The supply curve to shift right (increase)",
-      "C": "The supply curve to shift left (decrease)",
-      "D": "The demand curve to shift right"
+      "A": "The supply curve to shift right (increase)",
+      "B": "The supply curve to shift left (decrease)",
+      "C": "The demand curve to shift right",
+      "D": "Movement along the supply curve"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Improved technology lowers production costs, allowing firms to supply more at every price level. This shifts the entire supply curve to the right, representing an increase in supply.",
     "tip": "Supply shifters: Input prices, technology, expectations, number of sellers, taxes/subsidies. Price change = movement along curve.",
     "calculationRequired": false,
@@ -6358,12 +6358,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is a leading economic indicator?",
     "options": {
-      "A": "GDP",
-      "B": "Unemployment rate",
-      "C": "Stock market indices",
-      "D": "Consumer spending"
+      "A": "Unemployment rate",
+      "B": "Stock market indices",
+      "C": "Consumer spending",
+      "D": "GDP"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Stock market indices are leading indicators—they tend to change before the overall economy changes. GDP and unemployment are lagging indicators (change after the economy). Consumer spending is roughly coincident.",
     "tip": "Leading: Predict future (stock prices, building permits, hours worked). Lagging: Confirm trends (unemployment, CPI). Coincident: Move with economy (GDP, income).",
     "calculationRequired": false,
@@ -6400,12 +6400,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The law of diminishing marginal returns states that:",
     "options": {
-      "A": "Total output always decreases with more inputs",
-      "B": "Eventually, additional units of a variable input yield smaller increases in output",
-      "C": "Costs always increase proportionally with output",
-      "D": "Firms should never hire additional workers"
+      "A": "Costs always increase proportionally with output",
+      "B": "Firms should never hire additional workers",
+      "C": "Total output always decreases with more inputs",
+      "D": "Eventually, additional units of a variable input yield smaller increases in output"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Diminishing marginal returns means that as more of a variable input (like labor) is added to fixed inputs (like capital), eventually each additional unit of the variable input produces less additional output.",
     "tip": "Diminishing returns: MP eventually decreases as variable input increases (with fixed inputs). Total output still increases, just at a decreasing rate.",
     "calculationRequired": false,
@@ -6442,12 +6442,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A firm practicing third-degree price discrimination:",
     "options": {
-      "A": "Charges each customer their maximum willingness to pay",
-      "B": "Charges different prices based on quantity purchased",
-      "C": "Charges different prices to different market segments",
-      "D": "Sells all units at the same price"
+      "A": "Sells all units at the same price",
+      "B": "Charges each customer their maximum willingness to pay",
+      "C": "Charges different prices based on quantity purchased",
+      "D": "Charges different prices to different market segments"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Third-degree price discrimination charges different prices to different customer groups (students, seniors, etc.) based on differing price elasticities. First-degree is charging each person their max; second-degree is quantity discounts.",
     "tip": "1st degree: Perfect (each person's max). 2nd degree: Quantity-based (bulk discounts). 3rd degree: Market segments (student discounts).",
     "calculationRequired": false,
@@ -6484,12 +6484,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The cross-price elasticity of demand between butter and margarine is +2.5. This indicates that butter and margarine are:",
     "options": {
-      "A": "Complements",
-      "B": "Substitutes",
-      "C": "Unrelated goods",
-      "D": "Inferior goods"
+      "A": "Inferior goods",
+      "B": "Complements",
+      "C": "Substitutes",
+      "D": "Unrelated goods"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Positive cross-price elasticity means that when the price of one good rises, demand for the other increases—the definition of substitutes. Negative cross elasticity indicates complements.",
     "tip": "Cross elasticity: Positive = substitutes (price up for A → demand up for B). Negative = complements (price up for A → demand down for B).",
     "calculationRequired": false,
@@ -6526,12 +6526,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Nominal GDP is $20 trillion and the GDP deflator is 125. What is real GDP?",
     "options": {
-      "A": "$15 trillion",
-      "B": "$16 trillion",
-      "C": "$20 trillion",
-      "D": "$25 trillion"
+      "A": "$16 trillion",
+      "B": "$20 trillion",
+      "C": "$25 trillion",
+      "D": "$15 trillion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Real GDP = Nominal GDP / (GDP Deflator/100) = $20 trillion / 1.25 = $16 trillion. Real GDP removes the effect of price changes to show actual output.",
     "tip": "Real GDP = Nominal GDP / Price index (as decimal). Deflator of 125 = prices 25% higher than base year.",
     "calculationRequired": true,
@@ -6547,12 +6547,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the marginal propensity to consume (MPC) is 0.8, what is the spending multiplier?",
     "options": {
-      "A": "0.8",
-      "B": "1.25",
-      "C": "4.0",
-      "D": "5.0"
+      "A": "4.0",
+      "B": "5.0",
+      "C": "0.8",
+      "D": "1.25"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Spending multiplier = 1 / (1 - MPC) = 1 / (1 - 0.8) = 1 / 0.2 = 5.0. This means each dollar of new spending generates $5 in total economic activity.",
     "tip": "Multiplier = 1 / (1-MPC) = 1 / MPS. Higher MPC = higher multiplier. $1 spending creates $5 total with MPC of 0.8.",
     "calculationRequired": true,
@@ -6568,12 +6568,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An inverted yield curve (short-term rates higher than long-term rates) typically signals:",
     "options": {
-      "A": "Expected economic expansion",
-      "B": "Expected economic recession",
-      "C": "Stable economic conditions",
-      "D": "High inflation expectations"
+      "A": "Expected economic recession",
+      "B": "Stable economic conditions",
+      "C": "High inflation expectations",
+      "D": "Expected economic expansion"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "An inverted yield curve historically has been a reliable predictor of recessions. It suggests investors expect interest rates (and economic activity) to decline in the future, so they accept lower long-term rates.",
     "tip": "Normal curve: Upward sloping (LT > ST). Inverted: Downward (ST > LT) = recession signal. Flat: Uncertainty or transition.",
     "calculationRequired": false,
@@ -6589,12 +6589,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A pure public good is characterized by:",
     "options": {
-      "A": "Excludability and rivalry",
-      "B": "Non-excludability and non-rivalry",
-      "C": "Excludability and non-rivalry",
-      "D": "Non-excludability and rivalry"
+      "A": "Non-excludability and non-rivalry",
+      "B": "Excludability and non-rivalry",
+      "C": "Non-excludability and rivalry",
+      "D": "Excludability and rivalry"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Pure public goods are non-excludable (can't prevent people from consuming) and non-rivalrous (one person's consumption doesn't reduce availability for others). National defense and lighthouses are classic examples.",
     "tip": "Public goods: Non-excludable + Non-rival → Free rider problem → Government provision often needed. Private goods: Excludable + Rival.",
     "calculationRequired": false,
@@ -6610,12 +6610,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "According to purchasing power parity (PPP), if a basket of goods costs $100 in the US and €80 in Europe, the implied exchange rate should be:",
     "options": {
-      "A": "$0.80/€",
-      "B": "$1.00/€",
-      "C": "$1.25/€",
-      "D": "$1.80/€"
+      "A": "$1.00/€",
+      "B": "$1.25/€",
+      "C": "$1.80/€",
+      "D": "$0.80/€"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "PPP exchange rate = US price / Foreign price = $100 / €80 = $1.25/€. This is the rate at which purchasing power is equal across countries. Actual rates may differ due to trade barriers, non-traded goods, etc.",
     "tip": "PPP: Exchange rates should equalize purchasing power. E = P_domestic / P_foreign. Big Mac Index is a fun example.",
     "calculationRequired": true,
@@ -6631,12 +6631,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is NOT one of the three primary approaches to business valuation?",
     "options": {
-      "A": "Income approach",
-      "B": "Market approach",
-      "C": "Cost approach",
-      "D": "Regulatory approach"
+      "A": "Cost approach",
+      "B": "Regulatory approach",
+      "C": "Income approach",
+      "D": "Market approach"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "The three primary approaches to business valuation are: (1) Income approach (based on expected cash flows), (2) Market approach (based on comparable transactions), and (3) Asset-based/Cost approach (based on asset values).",
     "tip": "Three approaches: Income (DCF, capitalization), Market (comparable companies/transactions), Asset/Cost (liquidation, adjusted book value).",
     "calculationRequired": false,
@@ -6652,12 +6652,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The discounted cash flow (DCF) method values a business based on:",
     "options": {
-      "A": "Historical earnings only",
-      "B": "The present value of expected future cash flows",
-      "C": "The book value of assets",
-      "D": "Recent transaction prices"
+      "A": "The present value of expected future cash flows",
+      "B": "The book value of assets",
+      "C": "Recent transaction prices",
+      "D": "Historical earnings only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "The DCF method calculates business value as the present value of expected future cash flows, discounted at an appropriate rate that reflects the risk of those cash flows.",
     "tip": "DCF: Project future cash flows, then discount to present value. Value today = PV of all future expected benefits.",
     "calculationRequired": false,
@@ -6673,12 +6673,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The guideline public company method values a business by:",
     "options": {
-      "A": "Using the target company's own historical stock prices",
-      "B": "Applying valuation multiples from similar publicly traded companies",
-      "C": "Calculating replacement cost of assets",
-      "D": "Forecasting future dividends"
+      "A": "Forecasting future dividends",
+      "B": "Using the target company's own historical stock prices",
+      "C": "Applying valuation multiples from similar publicly traded companies",
+      "D": "Calculating replacement cost of assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The guideline public company method uses valuation multiples (P/E, EV/EBITDA, etc.) from comparable publicly traded companies and applies them to the subject company's financial metrics.",
     "tip": "Guideline public company: Find comparable public companies, calculate their multiples, apply to subject company. Adjust for differences.",
     "calculationRequired": false,
@@ -6715,12 +6715,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Enterprise value (EV) is calculated as:",
     "options": {
-      "A": "Market capitalization only",
-      "B": "Market capitalization plus debt minus cash",
-      "C": "Total assets minus total liabilities",
-      "D": "Net income times P/E ratio"
+      "A": "Market capitalization plus debt minus cash",
+      "B": "Total assets minus total liabilities",
+      "C": "Net income times P/E ratio",
+      "D": "Market capitalization only"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Enterprise value = Market capitalization + Total debt - Cash and cash equivalents (+ Preferred stock + Minority interest, if applicable). EV represents the total value of a firm to all capital providers.",
     "tip": "EV = Equity value + Debt - Cash. Represents what a buyer would pay to acquire the entire firm (and assume its debt).",
     "calculationRequired": false,
@@ -6736,12 +6736,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a DCF valuation, terminal value represents:",
     "options": {
-      "A": "The value at the end of the first year",
-      "B": "The present value of cash flows beyond the forecast period",
-      "C": "The liquidation value of assets",
-      "D": "The cost to terminate the business"
+      "A": "The cost to terminate the business",
+      "B": "The value at the end of the first year",
+      "C": "The present value of cash flows beyond the forecast period",
+      "D": "The liquidation value of assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Terminal value captures the value of all cash flows beyond the explicit forecast period. It typically represents a significant portion of total value and can be calculated using the perpetuity growth method or exit multiple method.",
     "tip": "Terminal value often = 60-80% of total DCF value. Two methods: Gordon growth (CF × (1+g) / (r-g)) or Exit multiple (EBITDA × multiple).",
     "calculationRequired": false,
@@ -6757,12 +6757,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A control premium is applied when:",
     "options": {
-      "A": "Valuing a minority interest in a private company",
-      "B": "Valuing a controlling interest that provides the ability to direct company operations",
-      "C": "The company has high debt levels",
-      "D": "The company's stock is publicly traded"
+      "A": "The company has high debt levels",
+      "B": "The company's stock is publicly traded",
+      "C": "Valuing a minority interest in a private company",
+      "D": "Valuing a controlling interest that provides the ability to direct company operations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "A control premium reflects the additional value a buyer would pay for a controlling interest that provides the ability to direct company strategy, operations, and capital allocation decisions.",
     "tip": "Control premium: Added for control (power to direct). DLOC (Discount for lack of control): Applied to minority interests.",
     "calculationRequired": false,
@@ -6778,12 +6778,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A discount for lack of marketability (DLOM) is applied because:",
     "options": {
-      "A": "The company has poor marketing",
-      "B": "Private company shares cannot be easily sold on a public exchange",
-      "C": "The company operates in a declining market",
-      "D": "Management lacks marketing expertise"
+      "A": "Private company shares cannot be easily sold on a public exchange",
+      "B": "The company operates in a declining market",
+      "C": "Management lacks marketing expertise",
+      "D": "The company has poor marketing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "DLOM reflects the reduced value of an interest due to the inability to quickly convert it to cash at minimal cost. Private company shares lack the liquidity of publicly traded shares.",
     "tip": "DLOM: Applied to private companies/illiquid interests. Studies suggest 15-35% range is common. More restricted = higher discount.",
     "calculationRequired": false,
@@ -6799,12 +6799,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The capitalization of earnings method is most appropriate when:",
     "options": {
-      "A": "The company is experiencing rapid growth",
-      "B": "Earnings are expected to remain relatively stable or grow at a constant rate",
-      "C": "The company has significant non-operating assets",
-      "D": "Historical earnings are negative"
+      "A": "Historical earnings are negative",
+      "B": "The company is experiencing rapid growth",
+      "C": "Earnings are expected to remain relatively stable or grow at a constant rate",
+      "D": "The company has significant non-operating assets"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The capitalization method (Value = Earnings / Capitalization rate) assumes a single representative earnings level that continues indefinitely. It's best suited for mature, stable companies with predictable earnings.",
     "tip": "Capitalization: V = E / (r - g). Use when earnings are stable. For variable growth, use multi-stage DCF instead.",
     "calculationRequired": false,
@@ -6820,12 +6820,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Free cash flow to the firm (FCFF) equals:",
     "options": {
-      "A": "Net income plus depreciation",
-      "B": "EBIT(1-T) + Depreciation - Capital expenditures - Change in working capital",
-      "C": "Operating cash flow from the statement of cash flows",
-      "D": "Dividends plus share repurchases"
+      "A": "EBIT(1-T) + Depreciation - Capital expenditures - Change in working capital",
+      "B": "Operating cash flow from the statement of cash flows",
+      "C": "Dividends plus share repurchases",
+      "D": "Net income plus depreciation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "FCFF = EBIT(1-T) + Depreciation - CapEx - Δ Working Capital. This represents cash flow available to all capital providers (debt and equity holders) before financing costs.",
     "tip": "FCFF: Available to all investors (debt + equity). FCFE: Available to equity only (subtract interest and debt payments).",
     "calculationRequired": false,
@@ -6862,12 +6862,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has EBITDA of $10 million, debt of $25 million, and cash of $5 million. Using an EV/EBITDA multiple of 8x, what is the equity value?",
     "options": {
-      "A": "$55 million",
-      "B": "$60 million",
-      "C": "$80 million",
-      "D": "$100 million"
+      "A": "$80 million",
+      "B": "$100 million",
+      "C": "$55 million",
+      "D": "$60 million"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Enterprise value = EBITDA × Multiple = $10M × 8 = $80M. Equity value = EV - Debt + Cash = $80M - $25M + $5M = $60 million.",
     "tip": "EV multiples give enterprise value. Convert to equity: Equity = EV - Debt + Cash (- Preferred - Minority interest if applicable).",
     "calculationRequired": true,
@@ -6883,12 +6883,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Fair market value is defined as:",
     "options": {
-      "A": "The value to a specific buyer with synergies",
-      "B": "The price at which property would change hands between a willing buyer and seller, neither being under compulsion",
-      "C": "The liquidation value of assets",
-      "D": "Book value per accounting records"
+      "A": "The price at which property would change hands between a willing buyer and seller, neither being under compulsion",
+      "B": "The liquidation value of assets",
+      "C": "Book value per accounting records",
+      "D": "The value to a specific buyer with synergies"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Fair market value is the price at which property would change hands between a willing buyer and willing seller, both having reasonable knowledge of relevant facts and neither being under any compulsion to buy or sell.",
     "tip": "FMV: Hypothetical transaction, willing parties, no compulsion. Investment value: Specific buyer's value (may include synergies).",
     "calculationRequired": false,
@@ -6925,12 +6925,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When normalizing earnings for valuation purposes, which adjustment would be appropriate?",
     "options": {
-      "A": "Remove all depreciation expense",
-      "B": "Adjust owner's compensation to market rate",
-      "C": "Ignore one-time gains and losses",
-      "D": "Both B and C"
+      "A": "Ignore one-time gains and losses",
+      "B": "Both B and C",
+      "C": "Remove all depreciation expense",
+      "D": "Adjust owner's compensation to market rate"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Normalizing adjustments include adjusting owner compensation to market rates (common in private companies where owners may over/under-pay themselves) and removing non-recurring items to reflect sustainable earnings.",
     "tip": "Common normalizations: Owner's comp to market, remove nonrecurring items, adjust above/below-market rent, eliminate personal expenses.",
     "calculationRequired": false,
@@ -6967,12 +6967,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Using the Gordon growth model, if the final year free cash flow is $10 million, the discount rate is 12%, and the perpetual growth rate is 3%, the terminal value is:",
     "options": {
-      "A": "$83.3 million",
-      "B": "$111.1 million",
-      "C": "$114.4 million",
-      "D": "$333.3 million"
+      "A": "$114.4 million",
+      "B": "$333.3 million",
+      "C": "$83.3 million",
+      "D": "$111.1 million"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Terminal value = FCF × (1 + g) / (r - g) = $10M × 1.03 / (0.12 - 0.03) = $10.3M / 0.09 = $114.4 million.",
     "tip": "Gordon growth: TV = CF(1+g) / (r-g). Don't forget to grow the final year CF by (1+g). Growth rate must be < discount rate.",
     "calculationRequired": true,
@@ -6988,12 +6988,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The guideline transaction method differs from the guideline public company method because it:",
     "options": {
-      "A": "Uses book value instead of market value",
-      "B": "Uses multiples from actual acquisition transactions, which may include control premiums",
-      "C": "Ignores market data entirely",
-      "D": "Is only used for public companies"
+      "A": "Ignores market data entirely",
+      "B": "Is only used for public companies",
+      "C": "Uses book value instead of market value",
+      "D": "Uses multiples from actual acquisition transactions, which may include control premiums"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The guideline transaction method uses multiples from actual M&A transactions involving comparable companies. These transactions typically include control premiums paid by acquirers, unlike trading multiples from public markets.",
     "tip": "Transaction multiples often higher than trading multiples due to control premium. Adjust if valuing minority interest.",
     "calculationRequired": false,
@@ -7009,12 +7009,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a financial model, working capital is typically projected as:",
     "options": {
-      "A": "A fixed dollar amount each year",
-      "B": "A percentage of revenue or using days calculations",
-      "C": "Equal to the prior year",
-      "D": "Zero for simplicity"
+      "A": "Equal to the prior year",
+      "B": "Zero for simplicity",
+      "C": "A fixed dollar amount each year",
+      "D": "A percentage of revenue or using days calculations"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Working capital components (A/R, inventory, A/P) are typically projected as a percentage of revenue or using days outstanding calculations (DSO, DIO, DPO) that are tied to operating activity levels.",
     "tip": "Model WC using days or % of revenue. A/R = Revenue × (DSO/365). Inventory = COGS × (DIO/365). A/P = Purchases × (DPO/365).",
     "calculationRequired": false,
@@ -7051,12 +7051,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The relief-from-royalty method values an intangible asset by:",
     "options": {
-      "A": "Estimating replacement cost",
-      "B": "Calculating the present value of royalty payments the owner avoids by owning the asset",
-      "C": "Using book value from acquisition accounting",
-      "D": "Multiplying revenue by a standard multiple"
+      "A": "Multiplying revenue by a standard multiple",
+      "B": "Estimating replacement cost",
+      "C": "Calculating the present value of royalty payments the owner avoids by owning the asset",
+      "D": "Using book value from acquisition accounting"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The relief-from-royalty method values an intangible (trademark, patent) based on the royalty payments the owner saves by owning rather than licensing the asset. Value = PV of hypothetical royalty payments avoided.",
     "tip": "Relief-from-royalty: Value = PV of avoided royalties. Rate based on comparable licensing agreements. Common for trademarks, technology.",
     "calculationRequired": false,
@@ -7072,12 +7072,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When selecting comparable companies, which factor is LEAST important?",
     "options": {
-      "A": "Industry and business model similarity",
-      "B": "Size and growth characteristics",
-      "C": "Geographic location of headquarters",
-      "D": "Profitability and risk profile"
+      "A": "Size and growth characteristics",
+      "B": "Geographic location of headquarters",
+      "C": "Profitability and risk profile",
+      "D": "Industry and business model similarity"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Key factors for comparable selection include industry, business model, size, growth, profitability, and risk characteristics. Geographic headquarters location is less important than the markets served and where operations occur.",
     "tip": "Good comparables: Similar industry, size, growth, margins, risk. Perfect comparables rarely exist—document adjustments made.",
     "calculationRequired": false,
@@ -7135,12 +7135,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A circular reference in a financial model can occur when:",
     "options": {
-      "A": "Revenue is projected to grow",
-      "B": "Interest expense depends on debt, which depends on cash flow, which depends on interest",
-      "C": "Depreciation is calculated using straight-line method",
-      "D": "Tax is calculated as a percentage of pre-tax income"
+      "A": "Interest expense depends on debt, which depends on cash flow, which depends on interest",
+      "B": "Depreciation is calculated using straight-line method",
+      "C": "Tax is calculated as a percentage of pre-tax income",
+      "D": "Revenue is projected to grow"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Circular references occur when calculations depend on each other. A common example: Interest expense depends on debt balance, which depends on cash available for debt paydown, which depends on interest expense.",
     "tip": "Common circularity: Debt schedule → Interest → Net income → Cash flow → Debt paydown → Debt schedule. Solve with iteration or break the circle.",
     "calculationRequired": false,
@@ -7156,12 +7156,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Valuing an early-stage startup is challenging because:",
     "options": {
-      "A": "The company has too many assets",
-      "B": "There is significant uncertainty in projections and limited operating history",
-      "C": "Market multiples are too high",
-      "D": "Accounting standards prohibit it"
+      "A": "Market multiples are too high",
+      "B": "Accounting standards prohibit it",
+      "C": "The company has too many assets",
+      "D": "There is significant uncertainty in projections and limited operating history"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Startups are difficult to value due to limited operating history, uncertain future cash flows, high failure rates, and rapid changes in business model. Traditional DCF may require significant adjustments or alternative methods.",
     "tip": "Startup valuation: Consider venture capital method, option pricing, scenario analysis. High uncertainty requires multiple approaches.",
     "calculationRequired": false,
@@ -7198,12 +7198,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has enterprise value of $500M, debt of $150M, cash of $30M, preferred stock of $20M, and minority interest of $10M. What is the equity value?",
     "options": {
-      "A": "$350 million",
-      "B": "$360 million",
-      "C": "$380 million",
-      "D": "$490 million"
+      "A": "$490 million",
+      "B": "$350 million",
+      "C": "$360 million",
+      "D": "$380 million"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Equity value = EV - Debt + Cash - Preferred - Minority interest = $500M - $150M + $30M - $20M - $10M = $350 million.",
     "tip": "EV to Equity bridge: EV - Debt + Cash - Preferred - Minority interest (+ Options if using treasury method).",
     "calculationRequired": true,
@@ -7219,12 +7219,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When using market value weights for WACC in a DCF valuation, a circularity exists because:",
     "options": {
-      "A": "The tax rate affects interest expense",
-      "B": "The equity value being calculated is needed to determine equity weight",
-      "C": "Debt has a different maturity than equity",
-      "D": "The risk-free rate changes over time"
+      "A": "Debt has a different maturity than equity",
+      "B": "The risk-free rate changes over time",
+      "C": "The tax rate affects interest expense",
+      "D": "The equity value being calculated is needed to determine equity weight"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Circularity arises because market value WACC requires equity value for the weight calculation, but equity value is what the DCF is trying to determine. This is solved iteratively or by using target capital structure.",
     "tip": "Solution: Use target capital structure weights, iterate until WACC and value converge, or use initial estimate and refine.",
     "calculationRequired": false,
@@ -7240,12 +7240,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a purchase price allocation, which approach is typically used to value customer relationships?",
     "options": {
-      "A": "Cost approach (replacement cost)",
-      "B": "Income approach (multi-period excess earnings method)",
-      "C": "Market approach (comparable sales)",
-      "D": "Asset approach (book value)"
+      "A": "Market approach (comparable sales)",
+      "B": "Asset approach (book value)",
+      "C": "Cost approach (replacement cost)",
+      "D": "Income approach (multi-period excess earnings method)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Customer relationships are typically valued using the multi-period excess earnings method (MPEEM), which isolates the cash flows attributable to the customer asset after deducting contributory asset charges.",
     "tip": "MPEEM: Value primary intangible by isolating its cash flows. Other intangibles valued using relief-from-royalty, cost, or with/without methods.",
     "calculationRequired": false,
@@ -7261,12 +7261,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company with valuable patents that may or may not be commercialized might be better valued using:",
     "options": {
-      "A": "Traditional DCF only",
-      "B": "Book value of patents",
-      "C": "Real options approach that captures the value of flexibility",
-      "D": "Comparable company P/E multiples"
+      "A": "Book value of patents",
+      "B": "Real options approach that captures the value of flexibility",
+      "C": "Comparable company P/E multiples",
+      "D": "Traditional DCF only"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Real options valuation captures the value of managerial flexibility—the option to commercialize, expand, delay, or abandon. This is particularly relevant for patents, R&D, and projects with significant uncertainty.",
     "tip": "Real options add value when: High uncertainty, managerial flexibility exists, decision can be delayed. Black-Scholes or binomial models can be used.",
     "calculationRequired": false,
@@ -7282,12 +7282,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sum-of-the-parts (SOTP) valuation is most appropriate when:",
     "options": {
-      "A": "A company has a single line of business",
-      "B": "A conglomerate has multiple business segments with different risk/return profiles",
-      "C": "The company has no segments reported",
-      "D": "All segments have identical growth rates"
+      "A": "All segments have identical growth rates",
+      "B": "A company has a single line of business",
+      "C": "A conglomerate has multiple business segments with different risk/return profiles",
+      "D": "The company has no segments reported"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "SOTP valuation is used for diversified companies with distinct business segments that have different growth rates, margins, and risk profiles. Each segment is valued separately using appropriate methods and summed.",
     "tip": "SOTP: Value each segment separately with appropriate multiples/discount rates, then add. Useful for identifying conglomerate discount.",
     "calculationRequired": false,
@@ -7303,12 +7303,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Using the mid-year convention in DCF valuation assumes:",
     "options": {
-      "A": "All cash flows occur at the beginning of each year",
-      "B": "All cash flows occur at the end of each year",
-      "C": "Cash flows are received evenly throughout the year",
-      "D": "Only the first year uses mid-year discounting"
+      "A": "All cash flows occur at the end of each year",
+      "B": "Cash flows are received evenly throughout the year",
+      "C": "Only the first year uses mid-year discounting",
+      "D": "All cash flows occur at the beginning of each year"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The mid-year convention assumes cash flows are received evenly throughout the year (on average, mid-year), rather than all at year-end. This increases present value because cash is received sooner on average.",
     "tip": "Mid-year: Discount periods are 0.5, 1.5, 2.5... instead of 1, 2, 3. PV is higher. More realistic for operating companies.",
     "calculationRequired": false,
@@ -7324,12 +7324,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The Weighted Average Return Method (WARM) is used in fair value measurement to:",
     "options": {
-      "A": "Calculate cost of capital",
-      "B": "Calibrate discount rates so the purchase price reconciles to the fair value of acquired assets",
-      "C": "Determine tax depreciation",
-      "D": "Estimate market multiples"
+      "A": "Estimate market multiples",
+      "B": "Calculate cost of capital",
+      "C": "Calibrate discount rates so the purchase price reconciles to the fair value of acquired assets",
+      "D": "Determine tax depreciation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "WARM is used in purchase price allocations to ensure that the discount rates used for individual intangible assets are consistent with the overall transaction IRR. The weighted average return across all assets should reconcile to the deal IRR.",
     "tip": "WARM: Ensures discount rate consistency in PPA. Higher-risk intangibles should have higher rates than tangible assets.",
     "calculationRequired": false,
@@ -7366,12 +7366,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Descriptive analytics answers the question:",
     "options": {
-      "A": "Why did it happen?",
-      "B": "What happened?",
-      "C": "What will happen?",
-      "D": "What should we do?"
+      "A": "What should we do?",
+      "B": "Why did it happen?",
+      "C": "What happened?",
+      "D": "What will happen?"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Descriptive analytics summarizes historical data to answer 'what happened?' It includes reports, dashboards, and data visualization that describe past performance and trends.",
     "tip": "Descriptive: What happened? Diagnostic: Why? Predictive: What will happen? Prescriptive: What should we do?",
     "calculationRequired": false,
@@ -7387,12 +7387,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "For the data set {10, 12, 12, 14, 15, 18, 25}, the median is:",
     "options": {
-      "A": "12",
-      "B": "14",
-      "C": "15",
-      "D": "15.14"
+      "A": "15.14",
+      "B": "12",
+      "C": "14",
+      "D": "15"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "The median is the middle value when data is ordered. With 7 values, the median is the 4th value = 14. (For even number of values, average the two middle values.)",
     "tip": "Median = middle value (50th percentile). More robust than mean for skewed data. Mode = most frequent value.",
     "calculationRequired": true,
@@ -7408,12 +7408,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "To show the composition of sales by product category as part of a whole, the best chart type is:",
     "options": {
-      "A": "Line chart",
-      "B": "Scatter plot",
-      "C": "Pie chart or stacked bar chart",
-      "D": "Histogram"
+      "A": "Histogram",
+      "B": "Line chart",
+      "C": "Scatter plot",
+      "D": "Pie chart or stacked bar chart"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Pie charts and stacked bar charts effectively show parts of a whole (composition). Line charts show trends over time, scatter plots show relationships, and histograms show frequency distributions.",
     "tip": "Composition: Pie/stacked bar. Trend: Line chart. Relationship: Scatter. Distribution: Histogram. Comparison: Bar chart.",
     "calculationRequired": false,
@@ -7450,12 +7450,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is an example of unstructured data?",
     "options": {
-      "A": "A spreadsheet of sales transactions",
-      "B": "Customer emails and social media posts",
-      "C": "A relational database",
-      "D": "A general ledger report"
+      "A": "Customer emails and social media posts",
+      "B": "A relational database",
+      "C": "A general ledger report",
+      "D": "A spreadsheet of sales transactions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Unstructured data lacks a predefined format—examples include emails, documents, videos, and social media. Structured data is organized in databases with defined fields and relationships.",
     "tip": "Structured: Databases, spreadsheets (organized). Unstructured: Text, images, video (no predefined format). Semi-structured: JSON, XML.",
     "calculationRequired": false,
@@ -7492,12 +7492,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a simple linear regression equation Y = a + bX, the coefficient 'b' represents:",
     "options": {
-      "A": "The Y-intercept",
-      "B": "The change in Y for each unit change in X",
-      "C": "The correlation coefficient",
-      "D": "The coefficient of determination"
+      "A": "The change in Y for each unit change in X",
+      "B": "The correlation coefficient",
+      "C": "The coefficient of determination",
+      "D": "The Y-intercept"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "In Y = a + bX, 'b' is the slope—it represents the change in the dependent variable (Y) for each one-unit change in the independent variable (X). 'a' is the Y-intercept.",
     "tip": "Slope (b): Change in Y per unit X. Intercept (a): Y value when X=0. Higher slope = stronger relationship.",
     "calculationRequired": false,
@@ -7513,12 +7513,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An R-squared (coefficient of determination) of 0.85 means:",
     "options": {
-      "A": "85% of data points lie exactly on the regression line",
-      "B": "85% of the variation in Y is explained by the variation in X",
-      "C": "The correlation is 0.85",
-      "D": "There is an 85% probability the prediction is correct"
+      "A": "The correlation is 0.85",
+      "B": "There is an 85% probability the prediction is correct",
+      "C": "85% of data points lie exactly on the regression line",
+      "D": "85% of the variation in Y is explained by the variation in X"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "R-squared represents the proportion of variance in the dependent variable that is explained by the independent variable(s). An R² of 0.85 means 85% of Y's variation is explained by X.",
     "tip": "R² ranges from 0 to 1. Higher = better fit. R² = r² (correlation coefficient squared) in simple regression.",
     "calculationRequired": false,
@@ -7534,12 +7534,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A high correlation between two variables:",
     "options": {
-      "A": "Proves that one variable causes the other",
-      "B": "Indicates an association but does not prove causation",
-      "C": "Means the variables are identical",
-      "D": "Is only valid if R-squared exceeds 1.0"
+      "A": "Means the variables are identical",
+      "B": "Is only valid if R-squared exceeds 1.0",
+      "C": "Proves that one variable causes the other",
+      "D": "Indicates an association but does not prove causation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Correlation measures the strength and direction of a relationship between variables, but does not prove causation. High correlation could be due to a third variable, coincidence, or true causation.",
     "tip": "Correlation ≠ Causation. To establish causation: Need controlled experiments, time sequence, mechanism, rule out confounders.",
     "calculationRequired": false,
@@ -7576,12 +7576,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Supervised machine learning uses:",
     "options": {
-      "A": "Unlabeled data to find hidden patterns",
-      "B": "Labeled data with known outcomes to train predictive models",
-      "C": "Real-time data streams only",
-      "D": "No training data"
+      "A": "Labeled data with known outcomes to train predictive models",
+      "B": "Real-time data streams only",
+      "C": "No training data",
+      "D": "Unlabeled data to find hidden patterns"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Supervised learning uses labeled data (input-output pairs) to train models that can predict outcomes for new data. Examples include classification (spam detection) and regression (price prediction).",
     "tip": "Supervised: Labeled data (knows answers). Unsupervised: Unlabeled (finds patterns). Reinforcement: Learns from feedback.",
     "calculationRequired": false,
@@ -7618,12 +7618,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "ETL in data analytics stands for:",
     "options": {
-      "A": "Evaluate, Test, Launch",
-      "B": "Extract, Transform, Load",
-      "C": "Enter, Transmit, Link",
-      "D": "Execute, Track, Log"
+      "A": "Extract, Transform, Load",
+      "B": "Enter, Transmit, Link",
+      "C": "Execute, Track, Log",
+      "D": "Evaluate, Test, Launch"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "ETL refers to Extract (pull data from sources), Transform (clean, format, and prepare data), and Load (put data into target system like a data warehouse). It's fundamental to data integration.",
     "tip": "ETL: Extract from sources → Transform (clean, standardize) → Load to warehouse/analytics platform. Key for data integration.",
     "calculationRequired": false,
@@ -7639,12 +7639,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An effective analytics dashboard should:",
     "options": {
-      "A": "Include as much data as possible on one screen",
-      "B": "Focus on key metrics with clear visualization aligned to business objectives",
-      "C": "Use as many different chart types as possible",
-      "D": "Show raw data rather than summaries"
+      "A": "Show raw data rather than summaries",
+      "B": "Include as much data as possible on one screen",
+      "C": "Focus on key metrics with clear visualization aligned to business objectives",
+      "D": "Use as many different chart types as possible"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Effective dashboards are focused, showing key metrics that align with business objectives using appropriate visualizations. They should be clear, actionable, and avoid information overload.",
     "tip": "Good dashboard: Clear KPIs, appropriate charts, minimal clutter, tells a story. Avoid: Too many metrics, confusing visuals, 3D charts.",
     "calculationRequired": false,
@@ -7660,12 +7660,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In hypothesis testing, a p-value of 0.03 (with α = 0.05) indicates:",
     "options": {
-      "A": "Fail to reject the null hypothesis",
-      "B": "Reject the null hypothesis",
-      "C": "The test is inconclusive",
-      "D": "The sample size is too small"
+      "A": "Reject the null hypothesis",
+      "B": "The test is inconclusive",
+      "C": "The sample size is too small",
+      "D": "Fail to reject the null hypothesis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "If p-value (0.03) < significance level α (0.05), we reject the null hypothesis. The result is statistically significant—there's only a 3% probability of observing this result if the null hypothesis were true.",
     "tip": "p-value < α: Reject H₀ (significant). p-value > α: Fail to reject H₀. Lower p-value = stronger evidence against H₀.",
     "calculationRequired": false,
@@ -7702,12 +7702,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data governance primarily addresses:",
     "options": {
-      "A": "Only cybersecurity threats",
-      "B": "Policies, procedures, and standards for managing data as an asset",
-      "C": "Hardware maintenance",
-      "D": "Employee compensation"
+      "A": "Hardware maintenance",
+      "B": "Employee compensation",
+      "C": "Only cybersecurity threats",
+      "D": "Policies, procedures, and standards for managing data as an asset"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Data governance establishes policies, procedures, roles, and standards for managing data quality, security, privacy, and compliance. It ensures data is treated as a valuable organizational asset.",
     "tip": "Data governance: Who can access data, data quality standards, retention policies, compliance. Key for analytics reliability.",
     "calculationRequired": false,
@@ -7723,12 +7723,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Robotic Process Automation (RPA) is best suited for:",
     "options": {
-      "A": "Tasks requiring complex judgment and creativity",
-      "B": "High-volume, rule-based, repetitive tasks",
-      "C": "Tasks with constantly changing rules",
-      "D": "Strategic decision-making"
+      "A": "Tasks with constantly changing rules",
+      "B": "Strategic decision-making",
+      "C": "Tasks requiring complex judgment and creativity",
+      "D": "High-volume, rule-based, repetitive tasks"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "RPA automates repetitive, rule-based tasks like data entry, reconciliations, and report generation. It follows predefined rules and works best for structured, predictable processes.",
     "tip": "RPA best for: Rule-based, repetitive, high-volume, structured data tasks. Not for: Judgment, creativity, unstructured problems.",
     "calculationRequired": false,
@@ -7744,12 +7744,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When analyzing data, outliers should typically be:",
     "options": {
-      "A": "Always removed automatically",
-      "B": "Always included regardless of impact",
-      "C": "Investigated to determine if they are errors or valid extreme values",
-      "D": "Used to replace the mean"
+      "A": "Used to replace the mean",
+      "B": "Always removed automatically",
+      "C": "Always included regardless of impact",
+      "D": "Investigated to determine if they are errors or valid extreme values"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Outliers should be investigated—they may be data errors (requiring correction/removal) or valid extreme values (potentially important insights). Automatic removal without investigation can lead to poor analysis.",
     "tip": "Outliers: Investigate first. Error → correct/remove. Valid → consider impact, possibly use robust statistics or separate analysis.",
     "calculationRequired": false,
@@ -7765,12 +7765,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A 3-period moving average forecast for the next period, given the last three periods' sales of 100, 110, and 120, would be:",
     "options": {
-      "A": "100",
-      "B": "110",
-      "C": "115",
-      "D": "120"
+      "A": "110",
+      "B": "115",
+      "C": "120",
+      "D": "100"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Moving average = Sum of periods / Number of periods = (100 + 110 + 120) / 3 = 330 / 3 = 110. This becomes the forecast for the next period.",
     "tip": "Moving average: Simple smoothing technique. Weights all periods equally. More periods = smoother (slower response to changes).",
     "calculationRequired": true,
@@ -7786,12 +7786,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Data normalization is performed to:",
     "options": {
-      "A": "Delete duplicate records",
-      "B": "Scale variables to a common range for comparison",
-      "C": "Increase database storage requirements",
-      "D": "Add random noise to data"
+      "A": "Add random noise to data",
+      "B": "Delete duplicate records",
+      "C": "Scale variables to a common range for comparison",
+      "D": "Increase database storage requirements"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Normalization scales data to a common range (e.g., 0-1 or z-scores), enabling fair comparison across variables with different units or scales. Important for many machine learning algorithms.",
     "tip": "Normalization methods: Min-max (0-1), Z-score (mean=0, SD=1). Required when variables have different scales.",
     "calculationRequired": false,
@@ -7807,12 +7807,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In management accounting, total sales variance can be decomposed into:",
     "options": {
-      "A": "Fixed and variable components",
-      "B": "Price variance and volume variance",
-      "C": "Direct and indirect variances",
-      "D": "Past and future variances"
+      "A": "Past and future variances",
+      "B": "Fixed and variable components",
+      "C": "Price variance and volume variance",
+      "D": "Direct and indirect variances"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Total sales variance = Price variance (actual vs. budgeted price × actual quantity) + Volume variance (actual vs. budgeted quantity × budgeted price). This breakdown identifies whether price or volume caused the variance.",
     "tip": "Sales variance = Price variance + Volume variance. Similar decomposition for materials: Price + Usage. For labor: Rate + Efficiency.",
     "calculationRequired": false,
@@ -7828,12 +7828,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Sentiment analysis is a text analytics technique used to:",
     "options": {
-      "A": "Count word frequency only",
-      "B": "Determine the emotional tone or opinion expressed in text",
-      "C": "Translate text between languages",
-      "D": "Correct spelling errors"
+      "A": "Correct spelling errors",
+      "B": "Count word frequency only",
+      "C": "Determine the emotional tone or opinion expressed in text",
+      "D": "Translate text between languages"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Sentiment analysis uses natural language processing to identify and classify the emotional tone (positive, negative, neutral) or opinions expressed in text data like reviews, social media, or survey responses.",
     "tip": "Sentiment analysis: Extract opinions from text. Used for: Customer feedback, social media monitoring, brand perception.",
     "calculationRequired": false,
@@ -7849,12 +7849,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The '3 Vs' commonly used to describe big data are:",
     "options": {
-      "A": "Value, Verify, Validate",
-      "B": "Volume, Velocity, Variety",
-      "C": "Visible, Variable, Voluntary",
-      "D": "Virtual, Visual, Verbal"
+      "A": "Volume, Velocity, Variety",
+      "B": "Visible, Variable, Voluntary",
+      "C": "Virtual, Visual, Verbal",
+      "D": "Value, Verify, Validate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Big data is characterized by Volume (large amounts), Velocity (high speed of generation/processing), and Variety (diverse types and sources). Some add Veracity (uncertainty) and Value as additional Vs.",
     "tip": "3 Vs: Volume (size), Velocity (speed), Variety (types). Extended: Veracity (quality/uncertainty), Value (business worth).",
     "calculationRequired": false,
@@ -7891,12 +7891,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Continuous auditing and continuous monitoring differ in that:",
     "options": {
-      "A": "They are exactly the same",
-      "B": "Continuous auditing is performed by management; continuous monitoring by auditors",
-      "C": "Continuous monitoring is performed by management; continuous auditing by auditors",
-      "D": "Neither uses technology"
+      "A": "Continuous monitoring is performed by management; continuous auditing by auditors",
+      "B": "Neither uses technology",
+      "C": "They are exactly the same",
+      "D": "Continuous auditing is performed by management; continuous monitoring by auditors"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Continuous monitoring is performed by management to monitor controls and operations. Continuous auditing is performed by internal or external auditors to provide assurance on an ongoing basis.",
     "tip": "Monitoring: Management responsibility (first line). Auditing: Auditor responsibility (third line). Both use automated tools.",
     "calculationRequired": false,
@@ -7912,12 +7912,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In multiple regression, multicollinearity refers to:",
     "options": {
-      "A": "The dependent variable being highly correlated with error terms",
-      "B": "High correlation among independent variables",
-      "C": "Non-linear relationships",
-      "D": "A large number of observations"
+      "A": "A large number of observations",
+      "B": "The dependent variable being highly correlated with error terms",
+      "C": "High correlation among independent variables",
+      "D": "Non-linear relationships"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Multicollinearity occurs when independent variables are highly correlated with each other, making it difficult to isolate each variable's effect on the dependent variable. It inflates standard errors and can make coefficients unreliable.",
     "tip": "Multicollinearity: Independent variables correlated. Detect with VIF (>10 is concerning). Solutions: Remove variables, combine, use regularization.",
     "calculationRequired": false,
@@ -7933,12 +7933,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Overfitting in a predictive model means:",
     "options": {
-      "A": "The model is too simple to capture patterns",
-      "B": "The model performs well on training data but poorly on new data",
-      "C": "The model has too few variables",
-      "D": "The training data set is too large"
+      "A": "The training data set is too large",
+      "B": "The model is too simple to capture patterns",
+      "C": "The model performs well on training data but poorly on new data",
+      "D": "The model has too few variables"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Overfitting occurs when a model learns the training data too well, including noise, and fails to generalize to new data. It results in excellent training performance but poor predictive performance on unseen data.",
     "tip": "Overfitting: Model memorizes training data. Prevent with: Cross-validation, regularization, simpler models, more training data.",
     "calculationRequired": false,
@@ -7954,12 +7954,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In a confusion matrix, precision is calculated as:",
     "options": {
-      "A": "True Positives / (True Positives + False Negatives)",
-      "B": "True Positives / (True Positives + False Positives)",
-      "C": "(True Positives + True Negatives) / Total",
-      "D": "False Positives / Total Negatives"
+      "A": "(True Positives + True Negatives) / Total",
+      "B": "False Positives / Total Negatives",
+      "C": "True Positives / (True Positives + False Negatives)",
+      "D": "True Positives / (True Positives + False Positives)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Precision = TP / (TP + FP)—the proportion of positive predictions that are actually correct. It answers: 'Of all items predicted positive, how many are truly positive?' Recall (Sensitivity) = TP / (TP + FN).",
     "tip": "Precision: TP/(TP+FP) = correct positive predictions. Recall: TP/(TP+FN) = catching all positives. F1 = harmonic mean of both.",
     "calculationRequired": false,
@@ -7975,12 +7975,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Deep learning neural networks differ from traditional machine learning because they:",
     "options": {
-      "A": "Cannot process images",
-      "B": "Automatically learn features from raw data without manual feature engineering",
-      "C": "Are simpler and faster to train",
-      "D": "Do not require any training data"
+      "A": "Are simpler and faster to train",
+      "B": "Do not require any training data",
+      "C": "Cannot process images",
+      "D": "Automatically learn features from raw data without manual feature engineering"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Deep learning models (multiple-layer neural networks) automatically learn hierarchical feature representations from raw data. Traditional ML often requires manual feature engineering. Deep learning excels at unstructured data (images, text, audio).",
     "tip": "Deep learning: Automatic feature extraction, multiple layers. Best for: Images, speech, text. Requires: Large data, computational power.",
     "calculationRequired": false,
@@ -7996,12 +7996,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A key characteristic of blockchain technology for financial applications is:",
     "options": {
-      "A": "Transactions can be easily modified or deleted",
-      "B": "Centralized control by a single authority",
-      "C": "Immutable, distributed ledger providing transparency and traceability",
-      "D": "No encryption is used"
+      "A": "No encryption is used",
+      "B": "Transactions can be easily modified or deleted",
+      "C": "Centralized control by a single authority",
+      "D": "Immutable, distributed ledger providing transparency and traceability"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Blockchain provides an immutable (tamper-resistant), distributed ledger where transactions are transparent, traceable, and verified by network consensus. This is valuable for financial applications requiring trust and audit trails.",
     "tip": "Blockchain: Distributed, immutable, transparent. Uses: Cryptocurrency, smart contracts, supply chain, audit trails.",
     "calculationRequired": false,
@@ -8017,12 +8017,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Using simple exponential smoothing with α = 0.3, if the previous forecast was 100 and actual demand was 120, the new forecast is:",
     "options": {
-      "A": "100",
-      "B": "106",
-      "C": "114",
-      "D": "120"
+      "A": "106",
+      "B": "114",
+      "C": "120",
+      "D": "100"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Exponential smoothing: New forecast = α(Actual) + (1-α)(Previous forecast) = 0.3(120) + 0.7(100) = 36 + 70 = 106.",
     "tip": "Exponential smoothing: F(t) = α×Actual + (1-α)×Previous forecast. Higher α = more weight on recent data. Good for stable data.",
     "calculationRequired": true,
@@ -8038,12 +8038,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Algorithmic bias in AI/ML models used for business decisions is primarily caused by:",
     "options": {
-      "A": "Computer hardware limitations",
-      "B": "Biased training data or biased model design",
-      "C": "Models that are too simple",
-      "D": "Excessive computational power"
+      "A": "Models that are too simple",
+      "B": "Excessive computational power",
+      "C": "Computer hardware limitations",
+      "D": "Biased training data or biased model design"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Algorithmic bias often originates from biased training data (historical discrimination reflected in data) or biased model design (features that proxy for protected characteristics). This can perpetuate or amplify existing biases.",
     "tip": "AI bias sources: Training data, feature selection, model design, evaluation metrics. Important for: Lending, hiring, criminal justice applications.",
     "calculationRequired": false,
@@ -8059,12 +8059,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An advantage of decision tree models compared to neural networks is:",
     "options": {
-      "A": "Decision trees always have higher accuracy",
-      "B": "Decision trees are more interpretable and explainable",
-      "C": "Decision trees require more training data",
-      "D": "Decision trees can only handle numerical data"
+      "A": "Decision trees are more interpretable and explainable",
+      "B": "Decision trees require more training data",
+      "C": "Decision trees can only handle numerical data",
+      "D": "Decision trees always have higher accuracy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Decision trees are 'white box' models—you can see and explain the rules used for predictions. Neural networks are 'black boxes' with less interpretable internal workings. This interpretability is important for regulated industries.",
     "tip": "Decision trees: Interpretable, handles mixed data, fast. Limitations: Prone to overfitting, unstable. Ensembles (Random Forest) improve accuracy.",
     "calculationRequired": false,
@@ -8080,12 +8080,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Monte Carlo simulation in financial analysis:",
     "options": {
-      "A": "Uses deterministic formulas to calculate exact outcomes",
-      "B": "Generates probability distributions by running thousands of scenarios with random inputs",
-      "C": "Is only useful for simple two-variable problems",
-      "D": "Cannot handle uncertainty in inputs"
+      "A": "Is only useful for simple two-variable problems",
+      "B": "Cannot handle uncertainty in inputs",
+      "C": "Uses deterministic formulas to calculate exact outcomes",
+      "D": "Generates probability distributions by running thousands of scenarios with random inputs"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Monte Carlo simulation uses random sampling from probability distributions for input variables to generate thousands of possible outcomes. This produces a probability distribution of results, capturing uncertainty and risk.",
     "tip": "Monte Carlo: Random sampling, many iterations. Output: Distribution of outcomes. Uses: Risk analysis, option pricing, forecasting with uncertainty.",
     "calculationRequired": false,
@@ -8101,12 +8101,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has current assets of $800,000 and current liabilities of $500,000. The working capital is:",
     "options": {
-      "A": "$300,000",
-      "B": "$500,000",
-      "C": "$800,000",
-      "D": "$1,300,000"
+      "A": "$500,000",
+      "B": "$800,000",
+      "C": "$1,300,000",
+      "D": "$300,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Working capital = Current assets - Current liabilities = $800,000 - $500,000 = $300,000. This represents the cushion available to meet short-term obligations.",
     "tip": "Working capital is an absolute dollar measure. Current ratio (CA/CL) expresses the same relationship as a ratio.",
     "calculationRequired": true,
@@ -8122,12 +8122,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Resources accumulated for the payment of principal and interest on long-term debt are reported in:",
     "options": {
-      "A": "General fund",
-      "B": "Capital projects fund",
-      "C": "Debt service fund",
-      "D": "Enterprise fund"
+      "A": "Capital projects fund",
+      "B": "Debt service fund",
+      "C": "Enterprise fund",
+      "D": "General fund"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Debt service funds account for financial resources accumulated and used for the payment of principal and interest on long-term general obligation debt.",
     "tip": "Debt service = paying off debt. Capital projects = building things. General = operations. Enterprise = business-like activities.",
     "calculationRequired": false,
@@ -8143,12 +8143,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Funds set aside by a not-for-profit's board for a specific purpose are classified as:",
     "options": {
-      "A": "Net assets with donor restrictions",
-      "B": "Net assets without donor restrictions",
-      "C": "Liabilities",
-      "D": "Temporarily restricted"
+      "A": "Net assets without donor restrictions",
+      "B": "Liabilities",
+      "C": "Temporarily restricted",
+      "D": "Net assets with donor restrictions"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Board designations are internal and do not create donor restrictions. The funds remain classified as net assets without donor restrictions with appropriate disclosure of the board's intent.",
     "tip": "Only DONOR-imposed restrictions create restricted net assets. Board = internal = unrestricted (but disclosed).",
     "calculationRequired": false,
@@ -8164,12 +8164,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under current U.S. GAAP, goodwill is:",
     "options": {
-      "A": "Amortized over 40 years",
-      "B": "Amortized over its useful life",
-      "C": "Tested for impairment at least annually",
-      "D": "Written off immediately"
+      "A": "Written off immediately",
+      "B": "Amortized over 40 years",
+      "C": "Amortized over its useful life",
+      "D": "Tested for impairment at least annually"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Under ASC 350, goodwill is not amortized but must be tested for impairment at least annually at the reporting unit level, or more frequently if indicators suggest impairment may exist.",
     "tip": "Public companies: Annual impairment test required. Private companies: Can elect to amortize over 10 years (accounting alternative).",
     "calculationRequired": false,
@@ -8206,12 +8206,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The expenditure approach to calculating GDP uses the formula:",
     "options": {
-      "A": "C + S + T",
-      "B": "C + I + G + (X-M)",
-      "C": "W + R + I + P",
-      "D": "GNP + Net foreign income"
+      "A": "W + R + I + P",
+      "B": "GNP + Net foreign income",
+      "C": "C + S + T",
+      "D": "C + I + G + (X-M)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "GDP (expenditure approach) = Consumption (C) + Investment (I) + Government spending (G) + Net exports (Exports - Imports). This measures total spending on final goods and services.",
     "tip": "GDP = C + I + G + NX. The income approach sums wages, rents, interest, and profits to reach the same total.",
     "calculationRequired": false,
@@ -8227,12 +8227,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project has an IRR of 15% and the company's cost of capital is 12%. The project should be:",
     "options": {
-      "A": "Rejected because IRR exceeds cost of capital",
-      "B": "Accepted because IRR exceeds cost of capital",
-      "C": "Rejected because IRR is positive",
-      "D": "Deferred until cost of capital increases"
+      "A": "Accepted because IRR exceeds cost of capital",
+      "B": "Rejected because IRR is positive",
+      "C": "Deferred until cost of capital increases",
+      "D": "Rejected because IRR exceeds cost of capital"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Accept projects when IRR exceeds the required rate of return (cost of capital). The 15% IRR exceeds the 12% hurdle rate, meaning the project adds value.",
     "tip": "IRR rule: Accept if IRR > required return. This is equivalent to NPV > 0 at the required return.",
     "calculationRequired": false,
@@ -8248,12 +8248,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has $4 million debt and $6 million equity at market value. The weight of debt in WACC is:",
     "options": {
-      "A": "40%",
-      "B": "60%",
-      "C": "67%",
-      "D": "150%"
+      "A": "67%",
+      "B": "150%",
+      "C": "40%",
+      "D": "60%"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Weight of debt = Debt / (Debt + Equity) = $4M / ($4M + $6M) = $4M / $10M = 40%.",
     "tip": "WACC weights should be based on market values, not book values. Total capital = D + E.",
     "calculationRequired": true,
@@ -8332,12 +8332,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent owns 70% of Subsidiary. Subsidiary reports net income of $100,000. The noncontrolling interest share of income is:",
     "options": {
-      "A": "$0",
-      "B": "$30,000",
-      "C": "$70,000",
-      "D": "$100,000"
+      "A": "$30,000",
+      "B": "$70,000",
+      "C": "$100,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "NCI owns 30% (100% - 70%). NCI share of income = 30% × $100,000 = $30,000. This is shown as a separate line item on the consolidated income statement.",
     "tip": "NCI % = 100% - Parent's %. NCI income = Subsidiary income × NCI %. Deducted to get income attributable to parent.",
     "calculationRequired": true,
@@ -8353,12 +8353,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In government-wide financial statements, net position is classified into:",
     "options": {
-      "A": "Restricted, unrestricted, and committed",
-      "B": "Net investment in capital assets, restricted, and unrestricted",
-      "C": "Governmental, proprietary, and fiduciary",
-      "D": "Assets, liabilities, and fund balance"
+      "A": "Net investment in capital assets, restricted, and unrestricted",
+      "B": "Governmental, proprietary, and fiduciary",
+      "C": "Assets, liabilities, and fund balance",
+      "D": "Restricted, unrestricted, and committed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Government-wide net position has three components: (1) Net investment in capital assets, (2) Restricted (by external constraints), and (3) Unrestricted.",
     "tip": "Net position (government-wide) ≠ Fund balance (governmental funds). Different classifications and terminology.",
     "calculationRequired": false,
@@ -8374,12 +8374,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A contribution is conditional when it includes:",
     "options": {
-      "A": "A donor's request for a specific use",
-      "B": "A barrier that must be overcome and a right of return/release",
-      "C": "Any restriction on timing",
-      "D": "A pledge to be paid over multiple years"
+      "A": "A pledge to be paid over multiple years",
+      "B": "A donor's request for a specific use",
+      "C": "A barrier that must be overcome and a right of return/release",
+      "D": "Any restriction on timing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A conditional contribution has: (1) a barrier the recipient must overcome (not merely administrative), AND (2) either a right of return of assets or right of release from the obligation if conditions are not met.",
     "tip": "Conditional = barrier + right of return/release. Don't recognize until condition substantially met. Restricted ≠ Conditional.",
     "calculationRequired": false,
@@ -8395,12 +8395,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The cumulative translation adjustment from translating foreign subsidiary financial statements is reported in:",
     "options": {
-      "A": "Net income",
-      "B": "Accumulated other comprehensive income",
-      "C": "Additional paid-in capital",
-      "D": "Foreign currency reserve"
+      "A": "Accumulated other comprehensive income",
+      "B": "Additional paid-in capital",
+      "C": "Foreign currency reserve",
+      "D": "Net income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under the current rate method, the translation adjustment is reported in other comprehensive income and accumulated in AOCI within stockholders' equity until the foreign entity is sold.",
     "tip": "Translation (current rate) → OCI/AOCI. Remeasurement (temporal) → Net income. On disposal of sub, CTA reclassifies to income.",
     "calculationRequired": false,
@@ -8416,12 +8416,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A correlation coefficient of -0.85 indicates:",
     "options": {
-      "A": "A weak positive relationship",
-      "B": "A strong negative relationship",
-      "C": "No relationship",
-      "D": "A perfect positive relationship"
+      "A": "A strong negative relationship",
+      "B": "No relationship",
+      "C": "A perfect positive relationship",
+      "D": "A weak positive relationship"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "A correlation of -0.85 indicates a strong negative (inverse) relationship—as one variable increases, the other tends to decrease. The absolute value (0.85) indicates strength; the sign indicates direction.",
     "tip": "Correlation: -1 to +1. Sign = direction. Absolute value = strength. |r| > 0.7 generally considered strong.",
     "calculationRequired": false,
@@ -8437,12 +8437,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If a company raises prices by 10% and quantity demanded falls by 20%, demand is:",
     "options": {
-      "A": "Inelastic",
-      "B": "Elastic",
-      "C": "Unit elastic",
-      "D": "Perfectly inelastic"
+      "A": "Elastic",
+      "B": "Unit elastic",
+      "C": "Perfectly inelastic",
+      "D": "Inelastic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Elasticity = % change in quantity / % change in price = -20% / 10% = -2. Since |elasticity| > 1, demand is elastic—consumers are very responsive to price changes.",
     "tip": "|E| > 1 = elastic (responsive). |E| < 1 = inelastic (not responsive). |E| = 1 = unit elastic.",
     "calculationRequired": true,
@@ -8458,12 +8458,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A weakness of the payback period method is that it:",
     "options": {
-      "A": "Is too complex to calculate",
-      "B": "Ignores cash flows after the payback period",
-      "C": "Requires knowledge of the cost of capital",
-      "D": "Cannot be used for projects with uneven cash flows"
+      "A": "Ignores cash flows after the payback period",
+      "B": "Requires knowledge of the cost of capital",
+      "C": "Cannot be used for projects with uneven cash flows",
+      "D": "Is too complex to calculate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Payback ignores cash flows that occur after the initial investment is recovered. A project with large cash flows after payback may be rejected, while one with nothing after payback may be accepted.",
     "tip": "Payback limitations: Ignores time value of money, ignores post-payback cash flows, arbitrary cutoff. Use with NPV for better decisions.",
     "calculationRequired": false,
@@ -8479,12 +8479,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A put option with a strike price of $50 is exercised when the stock price is $45. The intrinsic value per share is:",
     "options": {
-      "A": "$0",
-      "B": "$5",
-      "C": "$45",
-      "D": "$50"
+      "A": "$50",
+      "B": "$0",
+      "C": "$5",
+      "D": "$45"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Put option intrinsic value = Strike price - Stock price = $50 - $45 = $5. The put allows selling at $50 when the market price is only $45.",
     "tip": "Put intrinsic value = Max(Strike - Stock, 0). Call intrinsic value = Max(Stock - Strike, 0). 'In the money' when intrinsic > 0.",
     "calculationRequired": true,
@@ -8500,12 +8500,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "EV/EBITDA multiples are often preferred over P/E multiples because:",
     "options": {
-      "A": "They are simpler to calculate",
-      "B": "They are unaffected by capital structure, depreciation policies, and tax rates",
-      "C": "They require fewer data points",
-      "D": "P/E cannot be negative"
+      "A": "P/E cannot be negative",
+      "B": "They are simpler to calculate",
+      "C": "They are unaffected by capital structure, depreciation policies, and tax rates",
+      "D": "They require fewer data points"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "EV/EBITDA is capital structure neutral (no interest effect), unaffected by depreciation methods, and pre-tax. This allows better comparison across companies with different capital structures and accounting policies.",
     "tip": "EV/EBITDA: Capital structure neutral, pre-depreciation, pre-tax. Better for comparability. P/E affected by leverage, D&A, taxes.",
     "calculationRequired": false,
@@ -8542,12 +8542,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "In preparing consolidated financial statements, intercompany sales and purchases are:",
     "options": {
-      "A": "Added together",
-      "B": "Eliminated in their entirety",
-      "C": "Reported at net amount",
-      "D": "Only eliminated if material"
+      "A": "Reported at net amount",
+      "B": "Only eliminated if material",
+      "C": "Added together",
+      "D": "Eliminated in their entirety"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Intercompany revenues and expenses are eliminated in full to avoid double-counting. From a consolidated perspective, these are internal transfers, not transactions with outside parties.",
     "tip": "Eliminate 100% of intercompany transactions regardless of ownership %. This applies to sales, loans, dividends, etc.",
     "calculationRequired": false,
@@ -8563,12 +8563,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When a government records its adopted budget, the entry includes a credit to:",
     "options": {
-      "A": "Revenues",
-      "B": "Estimated revenues",
-      "C": "Appropriations",
-      "D": "Expenditures"
+      "A": "Expenditures",
+      "B": "Revenues",
+      "C": "Estimated revenues",
+      "D": "Appropriations"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "The budgetary entry debits Estimated Revenues (a budgetary asset), credits Appropriations (budgetary liability representing authorized spending), and records the difference in Budgetary Fund Balance.",
     "tip": "Budget entry: Dr. Estimated Revenues, Cr. Appropriations, Dr/Cr Budgetary Fund Balance (plug). Reversed at year-end.",
     "calculationRequired": false,
@@ -8605,12 +8605,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The salary of a not-for-profit's development director who oversees fundraising is classified as:",
     "options": {
-      "A": "Program expense",
-      "B": "Management and general expense",
-      "C": "Fundraising expense",
-      "D": "Supporting services - other"
+      "A": "Management and general expense",
+      "B": "Fundraising expense",
+      "C": "Supporting services - other",
+      "D": "Program expense"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "The development director's salary directly relates to fundraising activities and should be classified as fundraising expense. Program relates to mission; management and general is administrative overhead.",
     "tip": "Fundraising: Costs to solicit contributions. Program: Mission activities. Management & General: Admin, accounting, HR, etc.",
     "calculationRequired": false,
@@ -8626,12 +8626,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Legal fees incurred to complete a business combination are:",
     "options": {
-      "A": "Added to goodwill",
-      "B": "Capitalized as part of the investment",
-      "C": "Expensed as incurred",
-      "D": "Deferred and amortized"
+      "A": "Capitalized as part of the investment",
+      "B": "Expensed as incurred",
+      "C": "Deferred and amortized",
+      "D": "Added to goodwill"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Under ASC 805, acquisition-related costs such as legal, advisory, and accounting fees must be expensed as incurred. They are not part of the consideration transferred for accounting purposes.",
     "tip": "Acquisition costs = expense. Stock issuance costs = reduce equity proceeds. This changed from prior GAAP.",
     "calculationRequired": false,
@@ -8668,12 +8668,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company enters a cash flow hedge of a forecasted purchase. The hedge has a $40,000 gain. When is this gain reclassified from OCI to earnings?",
     "options": {
-      "A": "Immediately when the gain occurs",
-      "B": "When the hedged purchase occurs",
-      "C": "When the purchased item affects earnings (e.g., when sold or depreciated)",
-      "D": "At the end of the fiscal year"
+      "A": "When the hedged purchase occurs",
+      "B": "When the purchased item affects earnings (e.g., when sold or depreciated)",
+      "C": "At the end of the fiscal year",
+      "D": "Immediately when the gain occurs"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "In a cash flow hedge, gains/losses in OCI are reclassified to earnings when the hedged item affects earnings. For inventory, this is when sold (through COGS); for equipment, through depreciation.",
     "tip": "Cash flow hedge: OCI until hedged item hits P&L. Inventory: When sold. Equipment: Over depreciation life. Forecasted revenue: When earned.",
     "calculationRequired": false,
@@ -8689,12 +8689,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project requires $200,000 initial investment and $20,000 working capital. It generates $80,000 annual after-tax cash flow for 4 years. Working capital is recovered at the end. At 10% discount rate, approximate NPV is (PV annuity factor = 3.17, PV single sum Year 4 = 0.683):",
     "options": {
-      "A": "$37,260",
-      "B": "$53,600",
-      "C": "$67,260",
-      "D": "$73,600"
+      "A": "$73,600",
+      "B": "$37,260",
+      "C": "$53,600",
+      "D": "$67,260"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "PV of cash flows = $80,000 × 3.17 = $253,600. PV of working capital recovery = $20,000 × 0.683 = $13,660. Total PV = $267,260. NPV = $267,260 - $200,000 - $20,000 = $47,260. Closest is A at $37,260 with rounding.",
     "tip": "Include working capital: Outflow at start, recovery at end (discounted). Often overlooked in quick calculations.",
     "calculationRequired": true,
@@ -8710,12 +8710,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GASB 68, a government employer in a cost-sharing pension plan reports:",
     "options": {
-      "A": "No pension liability",
-      "B": "Its proportionate share of the collective net pension liability",
-      "C": "Only the pension contributions made",
-      "D": "The total net pension liability of all participants"
+      "A": "Only the pension contributions made",
+      "B": "The total net pension liability of all participants",
+      "C": "No pension liability",
+      "D": "Its proportionate share of the collective net pension liability"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Cost-sharing employers report their proportionate share of the collective net pension liability, determined based on the employer's contributions relative to total contributions of all participating employers.",
     "tip": "Cost-sharing plan: Proportionate share of collective liability. Single/agent plan: Total liability for the plan.",
     "calculationRequired": false,
@@ -8752,12 +8752,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent owns 80% of Sub. Sub sells inventory to Parent for $100,000 (cost $70,000). At year-end, 40% remains in Parent's inventory. What is the unrealized profit allocated to NCI?",
     "options": {
-      "A": "$0",
-      "B": "$2,400",
-      "C": "$6,000",
-      "D": "$12,000"
+      "A": "$2,400",
+      "B": "$6,000",
+      "C": "$12,000",
+      "D": "$0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Total profit = $100,000 - $70,000 = $30,000. Unrealized = 40% × $30,000 = $12,000. This is an upstream sale (sub to parent), so NCI bears 20%: $12,000 × 20% = $2,400.",
     "tip": "Upstream: NCI shares in unrealized profit (based on ownership %). Downstream (parent to sub): 100% to parent.",
     "calculationRequired": true,
@@ -8773,12 +8773,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An unlevered beta is 0.9. If a company has D/E of 0.5 and tax rate of 30%, the relevered (levered) beta is:",
     "options": {
-      "A": "0.63",
-      "B": "0.90",
-      "C": "1.22",
-      "D": "1.35"
+      "A": "1.35",
+      "B": "0.63",
+      "C": "0.90",
+      "D": "1.22"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Levered beta = Unlevered beta × [1 + (1-T)(D/E)] = 0.9 × [1 + (0.70)(0.5)] = 0.9 × [1 + 0.35] = 0.9 × 1.35 = 1.215 ≈ 1.22.",
     "tip": "βL = βU × [1 + (1-T)(D/E)]. Higher leverage increases equity beta (more risky to equity holders).",
     "calculationRequired": true,
@@ -8794,12 +8794,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An NFP is the income beneficiary of a charitable lead trust administered by a third party. The NFP should:",
     "options": {
-      "A": "Record the full trust assets",
-      "B": "Record a contribution receivable for the present value of expected income distributions",
-      "C": "Record nothing until cash is received",
-      "D": "Record a liability for the trust"
+      "A": "Record a liability for the trust",
+      "B": "Record the full trust assets",
+      "C": "Record a contribution receivable for the present value of expected income distributions",
+      "D": "Record nothing until cash is received"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "When an NFP has an unconditional right to receive income distributions from a trust administered by a third party, it recognizes a receivable and contribution revenue at the present value of expected future distributions.",
     "tip": "Beneficial interest in third-party trust: Record at PV of expected benefits. Adjust periodically for changes in assumptions.",
     "calculationRequired": false,
@@ -8815,12 +8815,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. parent has a subsidiary in a country experiencing 110% cumulative inflation over 3 years. The subsidiary's functional currency becomes:",
     "options": {
-      "A": "The local currency",
-      "B": "The reporting currency (USD)",
-      "C": "A stable third country currency",
-      "D": "Management's choice"
+      "A": "The reporting currency (USD)",
+      "B": "A stable third country currency",
+      "C": "Management's choice",
+      "D": "The local currency"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under ASC 830, when cumulative inflation is approximately 100% or more over 3 years, the economy is highly inflationary. The functional currency becomes the reporting currency (USD), and the temporal method is used.",
     "tip": "Highly inflationary = 100%+ over 3 years. Functional currency = parent's currency. Use temporal method (remeasurement).",
     "calculationRequired": false,
@@ -8836,12 +8836,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company reports net income of $180,000 and average stockholders' equity of $1,200,000. What is the return on equity (ROE)?",
     "options": {
-      "A": "15%",
-      "B": "12%",
-      "C": "18%",
-      "D": "20%"
+      "A": "20%",
+      "B": "15%",
+      "C": "12%",
+      "D": "18%"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "ROE = Net Income / Average Stockholders' Equity = $180,000 / $1,200,000 = 15%. This ratio measures the return generated on shareholders' investment in the company.",
     "tip": "ROE uses average equity (beginning + ending ÷ 2) when both amounts are available.",
     "calculationRequired": true,
@@ -8857,12 +8857,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following would be classified as restricted fund balance in a governmental fund?",
     "options": {
-      "A": "Amounts set aside by the governing body for future capital projects",
-      "B": "Amounts constrained by creditors through debt covenants",
-      "C": "Amounts available to spend for any purpose",
-      "D": "Amounts encumbered for outstanding purchase orders"
+      "A": "Amounts encumbered for outstanding purchase orders",
+      "B": "Amounts set aside by the governing body for future capital projects",
+      "C": "Amounts constrained by creditors through debt covenants",
+      "D": "Amounts available to spend for any purpose"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Restricted fund balance represents amounts constrained by external parties (creditors, grantors, contributors, laws of other governments). Amounts set aside by the governing body are committed, available amounts are unassigned, and encumbrances are committed or assigned.",
     "tip": "Restricted = external constraints; Committed = governing body action; Assigned = intended use.",
     "calculationRequired": false,
@@ -8878,12 +8878,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent Company acquires 100% of Subsidiary for $5,000,000 cash. The fair value of Subsidiary's identifiable net assets is $4,200,000. What amount of goodwill should Parent recognize?",
     "options": {
-      "A": "$5,000,000",
-      "B": "$4,200,000",
-      "C": "$800,000",
-      "D": "$0"
+      "A": "$800,000",
+      "B": "$0",
+      "C": "$5,000,000",
+      "D": "$4,200,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Goodwill = Consideration transferred - Fair value of identifiable net assets = $5,000,000 - $4,200,000 = $800,000. Goodwill represents the excess of purchase price over the fair value of identifiable net assets acquired.",
     "tip": "Goodwill = Purchase price - FV of net assets. If negative, recognize a bargain purchase gain.",
     "calculationRequired": true,
@@ -8899,12 +8899,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A nonprofit receives a pledge of $100,000 contingent on the nonprofit raising an additional $200,000 in matching funds within one year. How should this pledge be recorded when received?",
     "options": {
-      "A": "Contribution revenue of $100,000",
-      "B": "Deferred revenue of $100,000",
-      "C": "No entry until the condition is met",
-      "D": "Contribution revenue of $300,000"
+      "A": "Contribution revenue of $300,000",
+      "B": "Contribution revenue of $100,000",
+      "C": "Deferred revenue of $100,000",
+      "D": "No entry until the condition is met"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "This is a conditional promise to give because it contains a barrier (matching requirement) and a right of return/release. Conditional promises are not recognized as revenue until the conditions are substantially met. No entry is made until the nonprofit raises the matching funds.",
     "tip": "Conditional = barrier + right of return. Recognize only when conditions are substantially met.",
     "calculationRequired": false,
@@ -8920,12 +8920,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project requires an initial investment of $240,000 and generates equal annual cash inflows of $60,000. What is the payback period?",
     "options": {
-      "A": "3 years",
-      "B": "4 years",
-      "C": "5 years",
-      "D": "6 years"
+      "A": "6 years",
+      "B": "3 years",
+      "C": "4 years",
+      "D": "5 years"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Payback period = Initial investment / Annual cash inflow = $240,000 / $60,000 = 4 years. The payback period measures how long it takes to recover the initial investment from operating cash flows.",
     "tip": "For even cash flows: Payback = Initial investment ÷ Annual cash flow.",
     "calculationRequired": true,
@@ -8941,12 +8941,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company issues bonds at a 7% interest rate. If the company's marginal tax rate is 30%, what is the after-tax cost of debt?",
     "options": {
-      "A": "7.0%",
-      "B": "4.9%",
-      "C": "2.1%",
-      "D": "9.1%"
+      "A": "2.1%",
+      "B": "9.1%",
+      "C": "7.0%",
+      "D": "4.9%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "After-tax cost of debt = Pre-tax rate × (1 - Tax rate) = 7% × (1 - 0.30) = 7% × 0.70 = 4.9%. Interest expense is tax-deductible, reducing the effective cost of debt financing.",
     "tip": "After-tax cost of debt = Rate × (1 - Tax rate). The tax shield reduces the effective cost.",
     "calculationRequired": true,
@@ -8962,12 +8962,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company purchased inventory from a German supplier for €500,000 when the exchange rate was $1.12/€. At year-end, the payable remains unpaid and the rate is $1.15/€. What foreign currency adjustment should be recorded?",
     "options": {
-      "A": "Transaction gain of $15,000",
-      "B": "Transaction loss of $15,000",
-      "C": "No adjustment required",
-      "D": "Other comprehensive income of $15,000"
+      "A": "Transaction loss of $15,000",
+      "B": "No adjustment required",
+      "C": "Other comprehensive income of $15,000",
+      "D": "Transaction gain of $15,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Original payable: €500,000 × $1.12 = $560,000. Year-end remeasurement: €500,000 × $1.15 = $575,000. The payable increased by $15,000 ($575,000 - $560,000), resulting in a transaction loss. When the dollar weakens (more dollars per euro), payables denominated in foreign currency increase.",
     "tip": "For payables: dollar weakening = loss (pay more $). For receivables: dollar weakening = gain.",
     "calculationRequired": true,
@@ -8983,12 +8983,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company designates a derivative as a cash flow hedge of a forecasted inventory purchase. At year-end, the derivative has a fair value gain of $50,000 and the hedge is 100% effective. How should the gain be recorded?",
     "options": {
-      "A": "Derivative asset and gain in net income",
-      "B": "Derivative asset and other comprehensive income",
-      "C": "No entry until the inventory is purchased",
-      "D": "Derivative asset and contra-inventory"
+      "A": "Derivative asset and other comprehensive income",
+      "B": "No entry until the inventory is purchased",
+      "C": "Derivative asset and contra-inventory",
+      "D": "Derivative asset and gain in net income"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "For effective cash flow hedges, the gain or loss on the derivative is recorded in other comprehensive income (OCI), not net income. The derivative is marked to fair value with the offset to AOCI. The amount in AOCI is reclassified to earnings when the hedged transaction affects earnings.",
     "tip": "Cash flow hedge: Effective portion → OCI. Reclassify to earnings when hedged item hits P&L.",
     "calculationRequired": false,
@@ -9004,12 +9004,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A target company has EBITDA of $8,000,000. Comparable companies trade at an average EV/EBITDA multiple of 7.5x. If the target has $10,000,000 in debt and $2,000,000 in cash, what is the estimated equity value?",
     "options": {
-      "A": "$60,000,000",
-      "B": "$52,000,000",
-      "C": "$68,000,000",
-      "D": "$48,000,000"
+      "A": "$68,000,000",
+      "B": "$48,000,000",
+      "C": "$60,000,000",
+      "D": "$52,000,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Enterprise Value = EBITDA × Multiple = $8,000,000 × 7.5 = $60,000,000. Equity Value = EV - Debt + Cash = $60,000,000 - $10,000,000 + $2,000,000 = $52,000,000. Enterprise value represents total firm value (debt + equity), so we subtract debt and add excess cash to derive equity value.",
     "tip": "Equity Value = EV - Net Debt. Net Debt = Total Debt - Cash.",
     "calculationRequired": true,
@@ -9025,12 +9025,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A regression model predicts sales revenue (in thousands) based on advertising spend (in thousands): Revenue = 150 + 3.5(Advertising). If advertising increases from $50,000 to $60,000, what is the predicted increase in revenue?",
     "options": {
-      "A": "$35,000",
-      "B": "$350,000",
-      "C": "$3,500",
-      "D": "$10,000"
+      "A": "$10,000",
+      "B": "$35,000",
+      "C": "$350,000",
+      "D": "$3,500"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "The coefficient 3.5 means for each $1,000 increase in advertising, revenue increases by $3,500. Advertising increase = $60,000 - $50,000 = $10,000 (or 10 in thousands). Revenue increase = 3.5 × 10 = 35 (in thousands) = $35,000.",
     "tip": "Coefficient = change in Y per 1-unit change in X. Match units between calculation and interpretation.",
     "calculationRequired": true,
@@ -9046,12 +9046,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "If the Federal Reserve wants to combat inflation, which action would be most appropriate?",
     "options": {
-      "A": "Lower the federal funds rate",
-      "B": "Purchase government securities",
-      "C": "Increase the discount rate",
-      "D": "Lower reserve requirements"
+      "A": "Lower reserve requirements",
+      "B": "Lower the federal funds rate",
+      "C": "Purchase government securities",
+      "D": "Increase the discount rate"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "To combat inflation, the Fed pursues contractionary monetary policy. Increasing the discount rate makes borrowing more expensive, reducing money supply and cooling economic activity. Lowering the fed funds rate, buying securities, and lowering reserve requirements are all expansionary actions that would worsen inflation.",
     "tip": "Contractionary = fight inflation (raise rates, sell securities). Expansionary = stimulate growth (lower rates, buy securities).",
     "calculationRequired": false,
@@ -9067,12 +9067,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has a profit margin of 8%, asset turnover of 1.5, and equity multiplier of 2.0. What is the company's return on equity using DuPont analysis?",
     "options": {
-      "A": "12%",
-      "B": "24%",
-      "C": "16%",
-      "D": "18%"
+      "A": "24%",
+      "B": "16%",
+      "C": "18%",
+      "D": "12%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Three-way DuPont: ROE = Profit Margin × Asset Turnover × Equity Multiplier = 8% × 1.5 × 2.0 = 24%. This decomposition shows how profitability, efficiency, and leverage combine to determine shareholder returns.",
     "tip": "DuPont ROE = (NI/Sales) × (Sales/Assets) × (Assets/Equity). Each ratio tells a different story.",
     "calculationRequired": true,
@@ -9088,12 +9088,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A city issues a purchase order for $25,000 of supplies. When the supplies arrive, the actual invoice is $24,500. What entry is made to budgetary accounts upon receipt?",
     "options": {
-      "A": "Debit Reserve for Encumbrances $25,000, Credit Encumbrances $25,000",
-      "B": "Debit Encumbrances $24,500, Credit Reserve for Encumbrances $24,500",
-      "C": "Debit Expenditures $25,000, Credit Vouchers Payable $25,000",
-      "D": "Debit Reserve for Encumbrances $24,500, Credit Encumbrances $24,500"
+      "A": "Debit Encumbrances $24,500, Credit Reserve for Encumbrances $24,500",
+      "B": "Debit Expenditures $25,000, Credit Vouchers Payable $25,000",
+      "C": "Debit Reserve for Encumbrances $24,500, Credit Encumbrances $24,500",
+      "D": "Debit Reserve for Encumbrances $25,000, Credit Encumbrances $25,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "When goods are received, the original encumbrance must be reversed for the full encumbered amount ($25,000), not the actual amount. The reversal entry is: Debit Reserve for Encumbrances, Credit Encumbrances for $25,000. A separate entry records the actual expenditure at $24,500.",
     "tip": "Always reverse encumbrances at the original amount, regardless of actual cost. Then record actual expenditure separately.",
     "calculationRequired": false,
@@ -9109,12 +9109,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent sold inventory to Subsidiary for $180,000 that cost Parent $150,000. At year-end, Subsidiary still holds 40% of this inventory. What consolidation adjustment is required?",
     "options": {
-      "A": "Reduce inventory by $12,000 and reduce cost of goods sold by $12,000",
-      "B": "Reduce inventory by $30,000 and reduce sales by $30,000",
-      "C": "Reduce inventory by $12,000 and increase cost of goods sold by $12,000",
-      "D": "Reduce inventory by $72,000 and reduce cost of goods sold by $72,000"
+      "A": "Reduce inventory by $12,000 and increase cost of goods sold by $12,000",
+      "B": "Reduce inventory by $72,000 and reduce cost of goods sold by $72,000",
+      "C": "Reduce inventory by $12,000 and reduce cost of goods sold by $12,000",
+      "D": "Reduce inventory by $30,000 and reduce sales by $30,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Intercompany profit = $180,000 - $150,000 = $30,000. Unrealized profit = $30,000 × 40% = $12,000. The elimination reduces ending inventory (removing unrealized markup) and increases cost of goods sold (reversing unrealized profit recognition). DR Cost of Goods Sold $12,000, CR Inventory $12,000.",
     "tip": "Eliminate unrealized profit in ending inventory: % remaining × intercompany gross profit.",
     "calculationRequired": true,
@@ -9130,12 +9130,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A nonprofit's executive director spends 60% of time on program activities and 40% on general management. The director's salary is $200,000. How should this be reported in functional expense presentation?",
     "options": {
-      "A": "Program services $200,000",
-      "B": "Management and general $200,000",
-      "C": "Program services $120,000; Management and general $80,000",
-      "D": "Fundraising $200,000"
+      "A": "Fundraising $200,000",
+      "B": "Program services $200,000",
+      "C": "Management and general $200,000",
+      "D": "Program services $120,000; Management and general $80,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Joint costs that serve multiple functions should be allocated. The director's salary is allocated based on time spent: Program services = $200,000 × 60% = $120,000; Management and general = $200,000 × 40% = $80,000. This reflects the actual functional nature of the expense.",
     "tip": "Allocate joint costs using reasonable methods (time, effort, output). Document allocation methodology.",
     "calculationRequired": true,
@@ -9193,12 +9193,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Company A enters into a swap to pay fixed 5% and receive LIBOR on a $10,000,000 notional amount. If LIBOR is 4.5% at settlement, what is the net payment?",
     "options": {
-      "A": "Company A receives $50,000",
-      "B": "Company A pays $50,000",
-      "C": "Company A pays $500,000",
-      "D": "Company A receives $500,000"
+      "A": "Company A pays $500,000",
+      "B": "Company A receives $500,000",
+      "C": "Company A receives $50,000",
+      "D": "Company A pays $50,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Company A pays: Fixed 5% × $10,000,000 = $500,000. Company A receives: LIBOR 4.5% × $10,000,000 = $450,000. Net payment by Company A = $500,000 - $450,000 = $50,000. Since the fixed rate exceeds LIBOR, the fixed-rate payer makes a net payment.",
     "tip": "Fixed payer pays when fixed > floating; receives when floating > fixed.",
     "calculationRequired": true,
@@ -9214,12 +9214,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company's Year 5 free cash flow is projected at $2,000,000. The WACC is 10% and the perpetual growth rate is 3%. What is the terminal value at the end of Year 5?",
     "options": {
-      "A": "$20,000,000",
-      "B": "$28,571,429",
-      "C": "$29,428,571",
-      "D": "$66,666,667"
+      "A": "$66,666,667",
+      "B": "$20,000,000",
+      "C": "$28,571,429",
+      "D": "$29,428,571"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Terminal Value = Year 5 FCF × (1 + g) / (WACC - g) = $2,000,000 × 1.03 / (0.10 - 0.03) = $2,060,000 / 0.07 = $29,428,571. The Gordon Growth Model calculates the value of all cash flows beyond the explicit forecast period.",
     "tip": "Terminal value uses Year 5 FCF grown one period: FCF₅ × (1+g) / (WACC - g).",
     "calculationRequired": true,
@@ -9235,12 +9235,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When planning a statistical sample for substantive testing, which factor would increase the required sample size?",
     "options": {
-      "A": "Lower desired confidence level",
-      "B": "Higher tolerable misstatement",
-      "C": "Lower expected population deviation rate",
-      "D": "Lower acceptable risk of incorrect acceptance"
+      "A": "Lower acceptable risk of incorrect acceptance",
+      "B": "Lower desired confidence level",
+      "C": "Higher tolerable misstatement",
+      "D": "Lower expected population deviation rate"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Lower acceptable risk of incorrect acceptance (higher confidence) requires a larger sample size to achieve more precise results. Lower confidence levels, higher tolerable misstatement, and lower expected deviation rates all decrease required sample size.",
     "tip": "Lower risk = higher confidence = larger sample. Higher tolerance = smaller sample needed.",
     "calculationRequired": false,
@@ -9277,12 +9277,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company reports operating cash flow of $850,000 and capital expenditures of $200,000. If depreciation was $150,000, what is free cash flow to the firm?",
     "options": {
-      "A": "$650,000",
-      "B": "$800,000",
-      "C": "$500,000",
-      "D": "$1,000,000"
+      "A": "$500,000",
+      "B": "$1,000,000",
+      "C": "$650,000",
+      "D": "$800,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Free Cash Flow = Operating Cash Flow - Capital Expenditures = $850,000 - $200,000 = $650,000. Depreciation is already excluded from operating cash flow (added back in indirect method), so no adjustment is needed. FCF represents cash available to all capital providers.",
     "tip": "FCF = Operating CF - CapEx. Depreciation is already in operating CF; don't double-count.",
     "calculationRequired": true,
@@ -9298,12 +9298,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has a target capital structure of 60% equity and 40% debt. The cost of equity is 12% and the after-tax cost of debt is 5%. What is the WACC?",
     "options": {
-      "A": "8.5%",
-      "B": "9.2%",
-      "C": "10.0%",
-      "D": "7.8%"
+      "A": "10.0%",
+      "B": "7.8%",
+      "C": "8.5%",
+      "D": "9.2%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "WACC = (Weight of Equity × Cost of Equity) + (Weight of Debt × After-tax Cost of Debt) = (0.60 × 12%) + (0.40 × 5%) = 7.2% + 2.0% = 9.2%. WACC represents the blended cost of all capital sources.",
     "tip": "WACC uses market value weights and after-tax cost of debt.",
     "calculationRequired": true,
@@ -9319,12 +9319,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A city assesses property taxes in January, which are due March 1. Collections are: 60% in March, 30% in April, and 10% in June. Under modified accrual, how much revenue is recognized in the fiscal year ending March 31?",
     "options": {
-      "A": "60% of the levy",
-      "B": "90% of the levy",
-      "C": "100% of the levy",
-      "D": "0% of the levy"
+      "A": "0% of the levy",
+      "B": "60% of the levy",
+      "C": "90% of the levy",
+      "D": "100% of the levy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Under modified accrual, revenues are recognized when measurable and available. 'Available' means collected within the period or soon enough after (typically 60 days) to pay current liabilities. March collections (60%) plus April collections within 60 days (30%) = 90% is available. June collections are not available for the March 31 fiscal year.",
     "tip": "Available = collected in period or within 60 days after. Beyond 60 days = deferred.",
     "calculationRequired": false,
@@ -9340,12 +9340,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which party is required to consolidate a variable interest entity (VIE)?",
     "options": {
-      "A": "The party with the largest equity investment",
-      "B": "The party that created the VIE",
-      "C": "The primary beneficiary with power and economic exposure",
-      "D": "The party with majority voting rights"
+      "A": "The primary beneficiary with power and economic exposure",
+      "B": "The party with majority voting rights",
+      "C": "The party with the largest equity investment",
+      "D": "The party that created the VIE"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "A VIE must be consolidated by its primary beneficiary—the entity that has both: (1) power to direct the activities that most significantly affect the VIE's economic performance, and (2) the obligation to absorb losses or right to receive benefits that could be significant. Voting rights and equity investment size are not the determining factors for VIEs.",
     "tip": "VIE primary beneficiary = power over significant activities + significant economic interest (risk/reward).",
     "calculationRequired": false,
@@ -9403,12 +9403,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An appraiser values 100% of a company at $50,000,000 using DCF. To value a 30% minority interest, a 25% minority discount and 20% marketability discount apply. What is the value of the 30% interest?",
     "options": {
-      "A": "$15,000,000",
-      "B": "$11,250,000",
-      "C": "$9,000,000",
-      "D": "$12,000,000"
+      "A": "$12,000,000",
+      "B": "$15,000,000",
+      "C": "$11,250,000",
+      "D": "$9,000,000"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Pro-rata value: $50,000,000 × 30% = $15,000,000. Apply minority discount: $15,000,000 × (1 - 0.25) = $11,250,000. Apply marketability discount: $11,250,000 × (1 - 0.20) = $9,000,000. Discounts are applied sequentially, not added together.",
     "tip": "Apply discounts multiplicatively: Value × (1-DLOC) × (1-DLOM). Order doesn't matter mathematically.",
     "calculationRequired": true,
@@ -9424,12 +9424,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project has an expected cash flow of $500,000 with a risk-adjusted discount rate of 15%. Alternatively, the certainty equivalent factor is 0.85 with a risk-free rate of 5%. Using certainty equivalent, what is the present value?",
     "options": {
-      "A": "$434,783",
-      "B": "$404,762",
-      "C": "$425,000",
-      "D": "$500,000"
+      "A": "$425,000",
+      "B": "$500,000",
+      "C": "$434,783",
+      "D": "$404,762"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Certainty equivalent method: PV = (Expected CF × CE factor) / (1 + Risk-free rate) = ($500,000 × 0.85) / 1.05 = $425,000 / 1.05 = $404,762. This approach adjusts the cash flow for risk, then discounts at the risk-free rate, producing equivalent results to risk-adjusted discounting.",
     "tip": "Certainty equivalent: Risk-adjust the cash flow, then discount at risk-free rate.",
     "calculationRequired": true,
@@ -9508,12 +9508,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under Modigliani-Miller with corporate taxes, a company has an unlevered value of $80,000,000. If it takes on $30,000,000 of perpetual debt at a 25% tax rate, what is the levered firm value?",
     "options": {
-      "A": "$80,000,000",
-      "B": "$87,500,000",
-      "C": "$110,000,000",
-      "D": "$72,500,000"
+      "A": "$87,500,000",
+      "B": "$110,000,000",
+      "C": "$72,500,000",
+      "D": "$80,000,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Under M&M with taxes: Levered Value = Unlevered Value + (Tax Rate × Debt) = $80,000,000 + (0.25 × $30,000,000) = $80,000,000 + $7,500,000 = $87,500,000. The tax shield from interest deductions increases firm value by the present value of tax savings.",
     "tip": "M&M with taxes: VL = VU + (T × D). Tax shield = Tax rate × Debt (for perpetual debt).",
     "calculationRequired": true,
@@ -9529,12 +9529,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which scenario most strongly suggests low earnings quality requiring further investigation?",
     "options": {
-      "A": "Operating cash flow consistently exceeds net income",
-      "B": "Revenue growth matches industry peers",
-      "C": "Accounts receivable growing faster than revenue for three years",
-      "D": "Gross margin stable over five years"
+      "A": "Revenue growth matches industry peers",
+      "B": "Accounts receivable growing faster than revenue for three years",
+      "C": "Gross margin stable over five years",
+      "D": "Operating cash flow consistently exceeds net income"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Accounts receivable growing faster than revenue suggests potential revenue recognition issues—recording sales that may not be collectible, channel stuffing, or aggressive revenue recognition. This is a classic earnings quality red flag. OCF exceeding net income indicates high quality. Matching peer growth and stable margins are positive indicators.",
     "tip": "Watch for divergence: AR growth > revenue growth, inventory growth > COGS growth. Suggest potential manipulation.",
     "calculationRequired": false,
@@ -9571,12 +9571,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has current assets of $500,000 (including $80,000 inventory and $20,000 prepaid expenses) and current liabilities of $250,000. What is the quick ratio?",
     "options": {
-      "A": "2.00",
-      "B": "1.60",
-      "C": "1.68",
-      "D": "1.52"
+      "A": "1.60",
+      "B": "1.68",
+      "C": "1.52",
+      "D": "2.00"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Quick ratio = (Current Assets - Inventory - Prepaids) / Current Liabilities = ($500,000 - $80,000 - $20,000) / $250,000 = $400,000 / $250,000 = 1.60. The quick ratio excludes less liquid current assets like inventory and prepaid expenses.",
     "tip": "Quick ratio excludes inventory and prepaids—they can't be quickly converted to cash.",
     "calculationRequired": true,
@@ -9592,12 +9592,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which activity would most appropriately be accounted for in an enterprise fund?",
     "options": {
-      "A": "Property tax collection",
-      "B": "Police department operations",
-      "C": "Municipal water utility",
-      "D": "Road maintenance"
+      "A": "Municipal water utility",
+      "B": "Road maintenance",
+      "C": "Property tax collection",
+      "D": "Police department operations"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Enterprise funds account for activities that charge fees for goods or services to external users and operate similar to private businesses. A municipal water utility charges customers for water services. Property taxes, police, and road maintenance are governmental activities typically in the general fund.",
     "tip": "Enterprise fund = business-type activities charging external customers for services.",
     "calculationRequired": false,
@@ -9613,12 +9613,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "When recording assets acquired in a business combination, at what value should equipment be recorded?",
     "options": {
-      "A": "Seller's book value",
-      "B": "Seller's original cost",
-      "C": "Fair value at acquisition date",
-      "D": "Lower of book value or fair value"
+      "A": "Lower of book value or fair value",
+      "B": "Seller's book value",
+      "C": "Seller's original cost",
+      "D": "Fair value at acquisition date"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Under the acquisition method, all identifiable assets acquired (including equipment) are recorded at fair value as of the acquisition date. The seller's book value or original cost is irrelevant; only current fair value matters for the acquirer's books.",
     "tip": "Acquisition method = all assets and liabilities at fair value on acquisition date.",
     "calculationRequired": false,
@@ -9634,12 +9634,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A nonprofit receives a $50,000 donation with no stipulations. How should this be classified?",
     "options": {
-      "A": "Net assets with donor restrictions - purpose",
-      "B": "Net assets with donor restrictions - time",
-      "C": "Net assets without donor restrictions",
-      "D": "Deferred revenue"
+      "A": "Deferred revenue",
+      "B": "Net assets with donor restrictions - purpose",
+      "C": "Net assets with donor restrictions - time",
+      "D": "Net assets without donor restrictions"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Donations received without any donor-imposed restrictions are classified as net assets without donor restrictions. The nonprofit has complete discretion over how to use these funds. Restrictions must come from the donor, not from the nonprofit's own designations.",
     "tip": "No donor stipulations = without donor restrictions. Board designations don't create restrictions.",
     "calculationRequired": false,
@@ -9655,12 +9655,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Using the expenditure approach, GDP equals:",
     "options": {
-      "A": "Wages + Rent + Interest + Profits",
-      "B": "C + I + G + (X - M)",
-      "C": "Total output × Average price level",
-      "D": "National income + Depreciation"
+      "A": "Total output × Average price level",
+      "B": "National income + Depreciation",
+      "C": "Wages + Rent + Interest + Profits",
+      "D": "C + I + G + (X - M)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "The expenditure approach calculates GDP as: Consumption (C) + Investment (I) + Government spending (G) + Net exports (Exports - Imports). Option A is the income approach. The expenditure approach measures total spending on final goods and services.",
     "tip": "GDP = C + I + G + NX. This measures total spending in the economy.",
     "calculationRequired": false,
@@ -9676,12 +9676,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Transaction amounts are: $100, $150, $175, $200, $450. What is the median?",
     "options": {
-      "A": "$175",
-      "B": "$200",
-      "C": "$215",
-      "D": "$187.50"
+      "A": "$200",
+      "B": "$215",
+      "C": "$187.50",
+      "D": "$175"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "The median is the middle value when data is ordered. With 5 values ordered from low to high: $100, $150, $175, $200, $450, the middle (3rd) value is $175. The median is less affected by the outlier ($450) than the mean ($215).",
     "tip": "Median = middle value (odd count) or average of two middle values (even count).",
     "calculationRequired": true,
@@ -9697,12 +9697,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. parent has a German subsidiary. The subsidiary sells primarily in Europe, incurs most expenses in euros, and finances operations locally. What is the subsidiary's functional currency?",
     "options": {
-      "A": "U.S. dollar (parent's currency)",
-      "B": "Euro (local currency)",
-      "C": "Either, based on management election",
-      "D": "A weighted average of both currencies"
+      "A": "Either, based on management election",
+      "B": "A weighted average of both currencies",
+      "C": "U.S. dollar (parent's currency)",
+      "D": "Euro (local currency)"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Functional currency is determined by economic factors, not management election. Key indicators favor the euro: sales market (Europe), expense incurrence (euros), and financing (local). When the local environment is the primary economic environment, the local currency (euro) is the functional currency.",
     "tip": "Functional currency = currency of primary economic environment. Analyze sales, expenses, financing.",
     "calculationRequired": false,
@@ -9739,12 +9739,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has normalized earnings of $400,000. Comparable companies indicate a capitalization rate of 16%. What is the indicated value using single-period capitalization?",
     "options": {
-      "A": "$2,500,000",
-      "B": "$640,000",
-      "C": "$64,000",
-      "D": "$4,000,000"
+      "A": "$64,000",
+      "B": "$4,000,000",
+      "C": "$2,500,000",
+      "D": "$640,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Capitalized earnings value = Normalized Earnings / Capitalization Rate = $400,000 / 0.16 = $2,500,000. This single-period capitalization method assumes stable, perpetual earnings and is a simplified alternative to multi-period DCF.",
     "tip": "Value = Earnings / Cap Rate. Cap rate = discount rate - growth rate.",
     "calculationRequired": true,
@@ -9781,12 +9781,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The risk-free rate is 3%, market return is 10%, and a stock's beta is 1.4. What is the required return using CAPM?",
     "options": {
-      "A": "10.0%",
-      "B": "12.8%",
-      "C": "14.0%",
-      "D": "11.2%"
+      "A": "14.0%",
+      "B": "11.2%",
+      "C": "10.0%",
+      "D": "12.8%"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "CAPM: Required Return = Risk-free rate + Beta × (Market return - Risk-free rate) = 3% + 1.4 × (10% - 3%) = 3% + 1.4 × 7% = 3% + 9.8% = 12.8%. The higher beta reflects higher systematic risk, requiring higher return.",
     "tip": "CAPM = Rf + β(Rm - Rf). Market risk premium = Rm - Rf.",
     "calculationRequired": true,
@@ -9802,12 +9802,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has annual credit sales of $3,650,000 and average accounts receivable of $300,000. What is the days sales outstanding (DSO)?",
     "options": {
-      "A": "30 days",
-      "B": "36.5 days",
-      "C": "12.17 days",
-      "D": "40 days"
+      "A": "36.5 days",
+      "B": "12.17 days",
+      "C": "40 days",
+      "D": "30 days"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "DSO = (Average AR / Credit Sales) × 365 = ($300,000 / $3,650,000) × 365 = 0.0822 × 365 = 30 days. Alternatively: AR Turnover = $3,650,000 / $300,000 = 12.17, then DSO = 365 / 12.17 = 30 days. This measures average collection period.",
     "tip": "DSO = 365 / AR Turnover. Lower DSO = faster collection.",
     "calculationRequired": true,
@@ -9823,12 +9823,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A city records capital outlay expenditure of $500,000 in its general fund. How does this appear in the government-wide statement of activities?",
     "options": {
-      "A": "Expense of $500,000",
-      "B": "No expense; capitalize as asset",
-      "C": "Expense equal to current year depreciation only",
-      "D": "Other financing use of $500,000"
+      "A": "No expense; capitalize as asset",
+      "B": "Expense equal to current year depreciation only",
+      "C": "Other financing use of $500,000",
+      "D": "Expense of $500,000"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Government-wide statements use full accrual accounting. Capital outlays are not expensed; they are capitalized as capital assets. The asset is then depreciated over its useful life. Fund statements use modified accrual where capital outlays are expenditures, requiring reconciliation between the two bases.",
     "tip": "Fund → government-wide: Capitalize assets, record depreciation, eliminate short-term focus.",
     "calculationRequired": false,
@@ -9844,12 +9844,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Parent acquires 80% of Subsidiary for $1,600,000. The fair value of Subsidiary's identifiable net assets is $1,800,000 and fair value of NCI is $400,000. What amount of goodwill is recorded?",
     "options": {
-      "A": "$200,000",
-      "B": "$0",
-      "C": "$240,000",
-      "D": "$280,000"
+      "A": "$280,000",
+      "B": "$200,000",
+      "C": "$0",
+      "D": "$240,000"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Using full goodwill method: Total implied value = Consideration + NCI FV = $1,600,000 + $400,000 = $2,000,000. Goodwill = Total value - FV of net assets = $2,000,000 - $1,800,000 = $200,000. This goodwill is attributable to both parent and NCI.",
     "tip": "Full goodwill method: GW = (Consideration + NCI FV) - FV net assets.",
     "calculationRequired": true,
@@ -9865,12 +9865,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A CPA donates 50 hours of accounting services (normal billing rate $150/hour) to a nonprofit. The services enhance nonfinancial assets and require specialized skills. What is recorded?",
     "options": {
-      "A": "No entry for donated services",
-      "B": "In-kind contribution revenue of $7,500",
-      "C": "Accounts receivable of $7,500",
-      "D": "Prepaid services of $7,500"
+      "A": "Accounts receivable of $7,500",
+      "B": "Prepaid services of $7,500",
+      "C": "No entry for donated services",
+      "D": "In-kind contribution revenue of $7,500"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Donated services are recognized when they (1) create or enhance nonfinancial assets, or (2) require specialized skills and would otherwise be purchased. CPA services meet both criteria. Value = 50 hours × $150 = $7,500. Record contribution revenue and corresponding expense.",
     "tip": "Donated services: Recognize if specialized skills AND (enhance assets OR would typically be purchased).",
     "calculationRequired": true,
@@ -9886,12 +9886,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A foreign subsidiary's net assets are €2,000,000. The beginning rate was $1.10/€ and ending rate is $1.15/€. Assuming no other changes, what translation adjustment arises?",
     "options": {
-      "A": "$100,000 gain in OCI",
-      "B": "$100,000 loss in OCI",
-      "C": "$100,000 gain in net income",
-      "D": "No translation adjustment"
+      "A": "$100,000 gain in net income",
+      "B": "No translation adjustment",
+      "C": "$100,000 gain in OCI",
+      "D": "$100,000 loss in OCI"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "When translating a foreign subsidiary (where local = functional currency), the CTA captures rate changes on net assets. Beginning value: €2,000,000 × $1.10 = $2,200,000. Ending value: €2,000,000 × $1.15 = $2,300,000. Difference = $100,000 gain in OCI (dollar weakened, foreign net assets worth more dollars).",
     "tip": "Dollar weakening = CTA gain (foreign assets worth more $). CTA goes to OCI, not earnings.",
     "calculationRequired": true,
@@ -9907,12 +9907,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "The correlation between sales and advertising expense is 0.85. Which interpretation is correct?",
     "options": {
-      "A": "Advertising causes 85% of sales",
-      "B": "There is a strong positive linear relationship",
-      "C": "Advertising explains 85% of sales variation",
-      "D": "Each $1 of advertising generates $0.85 of sales"
+      "A": "Each $1 of advertising generates $0.85 of sales",
+      "B": "Advertising causes 85% of sales",
+      "C": "There is a strong positive linear relationship",
+      "D": "Advertising explains 85% of sales variation"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "A correlation of 0.85 indicates a strong positive linear relationship—as advertising increases, sales tend to increase. Correlation does not imply causation. R² (0.85² = 0.72) would indicate variation explained. The coefficient of determination, not correlation, measures explanatory power.",
     "tip": "Correlation measures relationship strength (-1 to +1). R² = explained variation. Correlation ≠ causation.",
     "calculationRequired": false,
@@ -9928,12 +9928,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which characteristic best describes monopolistic competition?",
     "options": {
-      "A": "Homogeneous products and price-taking behavior",
-      "B": "Single seller with no close substitutes",
-      "C": "Many sellers with differentiated products",
-      "D": "Few large firms with interdependent pricing"
+      "A": "Few large firms with interdependent pricing",
+      "B": "Homogeneous products and price-taking behavior",
+      "C": "Single seller with no close substitutes",
+      "D": "Many sellers with differentiated products"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Monopolistic competition features many sellers offering differentiated products (branding, quality, features). Firms have some market power but face competition from substitutes. Option A describes perfect competition, B describes monopoly, and D describes oligopoly.",
     "tip": "Monopolistic competition = many firms + differentiated products. Some pricing power, low barriers.",
     "calculationRequired": false,
@@ -9949,12 +9949,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A call option has a strike price of $50 and the underlying stock trades at $58. The option premium is $10. What is the intrinsic value?",
     "options": {
-      "A": "$10",
-      "B": "$8",
-      "C": "$2",
-      "D": "$0"
+      "A": "$0",
+      "B": "$10",
+      "C": "$8",
+      "D": "$2"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Intrinsic value of a call = Stock Price - Strike Price (if positive) = $58 - $50 = $8. The remaining $2 of the $10 premium is time value. A call has intrinsic value when stock price exceeds strike price (in-the-money).",
     "tip": "Call intrinsic value = Max(Stock - Strike, 0). Put = Max(Strike - Stock, 0).",
     "calculationRequired": true,
@@ -9970,12 +9970,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which factor would increase the discount for lack of marketability (DLOM)?",
     "options": {
-      "A": "Strong dividend history",
-      "B": "Anticipated IPO within 1 year",
-      "C": "No restrictions on share transfers",
-      "D": "No expectation of a liquidity event"
+      "A": "Anticipated IPO within 1 year",
+      "B": "No restrictions on share transfers",
+      "C": "No expectation of a liquidity event",
+      "D": "Strong dividend history"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "DLOM compensates for inability to quickly sell shares at fair value. No expected liquidity event increases holding period uncertainty, justifying a larger DLOM. Dividends provide interim returns (lower DLOM), anticipated IPO means near-term liquidity (lower DLOM), and no transfer restrictions ease sales (lower DLOM).",
     "tip": "Higher DLOM: longer holding period, no dividends, transfer restrictions, volatile earnings.",
     "calculationRequired": false,
@@ -10033,12 +10033,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has EBIT of $750,000 and interest expense of $150,000. What is the times interest earned ratio?",
     "options": {
-      "A": "4.0",
-      "B": "5.0",
-      "C": "6.0",
-      "D": "3.5"
+      "A": "3.5",
+      "B": "4.0",
+      "C": "5.0",
+      "D": "6.0"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Times Interest Earned = EBIT / Interest Expense = $750,000 / $150,000 = 5.0. This coverage ratio indicates the company earns 5 times its required interest payments, suggesting adequate ability to service debt from operating earnings.",
     "tip": "TIE = EBIT / Interest. Higher is better. < 1.5 may signal financial distress.",
     "calculationRequired": true,
@@ -10054,12 +10054,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A county collects property taxes on behalf of other governments and remits collections monthly. Which fund should be used?",
     "options": {
-      "A": "General fund",
-      "B": "Agency fund (now custodial fund)",
-      "C": "Special revenue fund",
-      "D": "Investment trust fund"
+      "A": "Agency fund (now custodial fund)",
+      "B": "Special revenue fund",
+      "C": "Investment trust fund",
+      "D": "General fund"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Custodial funds (formerly agency funds) are used when a government collects resources for other entities in a purely custodial capacity. The county acts as a collection agent for other governments, not managing its own resources. Assets equal liabilities in fiduciary relationships.",
     "tip": "Custodial fund = pass-through/collection agent. No government resources involved.",
     "calculationRequired": false,
@@ -10096,12 +10096,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A U.S. company has a subsidiary in a highly inflationary economy where the local currency is the stated functional currency. What accounting treatment is required?",
     "options": {
-      "A": "Use local currency as functional and translate at current rate",
-      "B": "Use the U.S. dollar as functional currency and remeasure",
-      "C": "Restate financial statements for inflation before translation",
-      "D": "Exclude subsidiary from consolidation"
+      "A": "Use the U.S. dollar as functional currency and remeasure",
+      "B": "Restate financial statements for inflation before translation",
+      "C": "Exclude subsidiary from consolidation",
+      "D": "Use local currency as functional and translate at current rate"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "When a foreign entity operates in a highly inflationary economy (cumulative inflation ≥ 100% over 3 years), the reporting currency (U.S. dollar) must be used as the functional currency. Remeasurement using the temporal method is required, with gains/losses in earnings.",
     "tip": "Highly inflationary = use parent's currency as functional. Remeasure, don't translate.",
     "calculationRequired": false,
@@ -10117,12 +10117,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A bond contains an embedded call option allowing the issuer to repurchase at par. Under what condition must the embedded derivative be bifurcated?",
     "options": {
-      "A": "Always bifurcate embedded derivatives",
-      "B": "Never bifurcate if host is a debt instrument",
-      "C": "Bifurcate if not clearly and closely related to debt host",
-      "D": "Bifurcate only if fair value exceeds 10% of host"
+      "A": "Bifurcate if not clearly and closely related to debt host",
+      "B": "Bifurcate only if fair value exceeds 10% of host",
+      "C": "Always bifurcate embedded derivatives",
+      "D": "Never bifurcate if host is a debt instrument"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "An embedded derivative must be separated (bifurcated) from the host contract if: (1) the combined instrument is not measured at fair value with changes in earnings, (2) the embedded derivative would be a derivative on its own, and (3) the economic characteristics are not clearly and closely related to the host. A plain call at par in a debt host is usually closely related and not bifurcated.",
     "tip": "Bifurcate embedded derivative if not clearly and closely related. Equity conversion in debt = not related.",
     "calculationRequired": false,
@@ -10159,12 +10159,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A project has NPV of -$500,000 using traditional DCF. However, the company can abandon the project after Year 2 and sell assets for $2,000,000 (salvage value exceeds book value). How does this affect the project evaluation?",
     "options": {
-      "A": "The project should still be rejected based on negative NPV",
-      "B": "The abandonment option adds value that may make the project acceptable",
-      "C": "Abandonment options cannot be quantified",
-      "D": "Salvage value is already included in traditional NPV"
+      "A": "Salvage value is already included in traditional NPV",
+      "B": "The project should still be rejected based on negative NPV",
+      "C": "The abandonment option adds value that may make the project acceptable",
+      "D": "Abandonment options cannot be quantified"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Traditional DCF may undervalue projects with embedded options. The abandonment option provides downside protection—if outcomes are unfavorable, management can exit and recover value. This flexibility has value that should be added to static NPV, potentially making the project worthwhile.",
     "tip": "Real options (expand, abandon, delay) add value beyond static NPV. Consider flexibility value.",
     "calculationRequired": false,
@@ -10180,12 +10180,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "An auditor wants to identify unusual journal entries without predefined categories of fraud. Which technique is most appropriate?",
     "options": {
-      "A": "Supervised classification using labeled fraud examples",
-      "B": "Linear regression predicting fraud probability",
-      "C": "Unsupervised clustering to detect anomalies",
-      "D": "Decision tree with fraud/not-fraud outcomes"
+      "A": "Linear regression predicting fraud probability",
+      "B": "Unsupervised clustering to detect anomalies",
+      "C": "Decision tree with fraud/not-fraud outcomes",
+      "D": "Supervised classification using labeled fraud examples"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Without predefined fraud categories (labeled data), unsupervised learning is appropriate. Clustering algorithms can group similar entries and identify outliers that don't fit normal patterns. Supervised methods (classification, regression, decision trees) require labeled training data with known outcomes.",
     "tip": "No labels/categories = unsupervised learning. Known outcomes = supervised learning.",
     "calculationRequired": false,
@@ -10201,12 +10201,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Which of the following is a leading economic indicator?",
     "options": {
-      "A": "Unemployment rate",
-      "B": "Personal income levels",
-      "C": "Average weekly manufacturing hours",
-      "D": "GDP growth rate"
+      "A": "GDP growth rate",
+      "B": "Unemployment rate",
+      "C": "Personal income levels",
+      "D": "Average weekly manufacturing hours"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Average weekly manufacturing hours is a leading indicator—it changes before the economy changes direction. Manufacturers adjust hours before hiring/firing, providing an early signal. Unemployment is a lagging indicator (changes after the economy turns). Personal income and GDP are coincident indicators.",
     "tip": "Leading = predicts economy. Coincident = moves with economy. Lagging = follows economy.",
     "calculationRequired": false,
@@ -10222,12 +10222,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A donor-restricted endowment with original gift value of $1,000,000 has a current fair value of $900,000 due to market losses. Under UPMIFA, how should the $100,000 deficiency be reported?",
     "options": {
-      "A": "As a liability on the statement of financial position",
-      "B": "As a reduction of net assets without donor restrictions",
-      "C": "As a reduction of net assets with donor restrictions",
-      "D": "As an extraordinary loss in the statement of activities"
+      "A": "As a reduction of net assets with donor restrictions",
+      "B": "As an extraordinary loss in the statement of activities",
+      "C": "As a liability on the statement of financial position",
+      "D": "As a reduction of net assets without donor restrictions"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Under UPMIFA, underwater endowments (fair value below original gift) are reported entirely within net assets with donor restrictions. The deficiency reduces this category. Organizations must disclose the amount of underwater endowments and their policies for spending from underwater funds.",
     "tip": "Underwater endowment = reduce net assets with donor restrictions. Disclose original gift and deficiency.",
     "calculationRequired": false,
@@ -10243,12 +10243,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A comparable company has equity beta of 1.4, debt-to-equity ratio of 0.5, and tax rate of 30%. What is the unlevered (asset) beta?",
     "options": {
-      "A": "1.04",
-      "B": "1.40",
-      "C": "0.93",
-      "D": "1.89"
+      "A": "1.89",
+      "B": "1.04",
+      "C": "1.40",
+      "D": "0.93"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Unlevered beta = Levered beta / [1 + (1 - Tax rate) × D/E] = 1.4 / [1 + (1 - 0.30) × 0.5] = 1.4 / [1 + 0.35] = 1.4 / 1.35 = 1.04. Unlevering removes the effect of financial leverage to reveal business risk only.",
     "tip": "Unlever: βU = βL / [1 + (1-T) × D/E]. Relever: βL = βU × [1 + (1-T) × D/E].",
     "calculationRequired": true,
@@ -10264,12 +10264,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "Under GASB 75, how is the total OPEB liability measured?",
     "options": {
-      "A": "Projected benefit obligation using corporate bond rates",
-      "B": "Accumulated postretirement benefit obligation",
-      "C": "Entry age normal actuarial cost method with specified discount rate",
-      "D": "Cash basis of benefits paid during the year"
+      "A": "Entry age normal actuarial cost method with specified discount rate",
+      "B": "Cash basis of benefits paid during the year",
+      "C": "Projected benefit obligation using corporate bond rates",
+      "D": "Accumulated postretirement benefit obligation"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "GASB 75 requires governments to measure total OPEB liability using the entry age normal actuarial cost method. The discount rate is based on the expected return on plan investments (if assets are projected to cover payments) or a high-quality municipal bond rate. This differs from private sector GAAP approaches.",
     "tip": "GASB 75: Entry age normal method. Discount rate depends on whether plan is funded.",
     "calculationRequired": false,
@@ -10285,12 +10285,12 @@ const questions = [
     "questionFormat": "MCQ",
     "question": "A company has ROE of 15% and pays out 40% of earnings as dividends. What is the sustainable growth rate?",
     "options": {
-      "A": "15%",
-      "B": "6%",
-      "C": "9%",
-      "D": "21%"
+      "A": "6%",
+      "B": "9%",
+      "C": "21%",
+      "D": "15%"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Sustainable Growth Rate = ROE × Retention Ratio = ROE × (1 - Payout Ratio) = 15% × (1 - 0.40) = 15% × 0.60 = 9%. This represents the maximum growth rate achievable without external equity financing, assuming stable capital structure and profitability.",
     "tip": "Sustainable growth = ROE × (1 - dividend payout ratio). Higher retention = higher sustainable growth.",
     "calculationRequired": true,
