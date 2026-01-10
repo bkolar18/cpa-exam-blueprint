@@ -159,16 +159,16 @@ export default function AboutPage() {
                 All tiers include unlimited access until you pass - no time limits, no pressure:
               </p>
               <ul className="space-y-2 text-green-700 dark:text-green-400">
-                <li className="flex items-start space-x-2">
-                  <span className="font-bold">Free:</span>
+                <li className="flex items-start">
+                  <span className="font-bold w-20 flex-shrink-0">Free:</span>
                   <span>50 questions for FAR section</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="font-bold">Standard:</span>
+                <li className="flex items-start">
+                  <span className="font-bold w-20 flex-shrink-0">Standard:</span>
                   <span>3,000+ questions across all 4 core sections (FAR, AUD, REG, TCP)</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="font-bold">Pro:</span>
+                <li className="flex items-start">
+                  <span className="font-bold w-20 flex-shrink-0">Pro:</span>
                   <span>6,000+ questions across all 6 sections including discipline sections (BAR, ISC)</span>
                 </li>
               </ul>
@@ -255,8 +255,8 @@ export default function AboutPage() {
                 <tr>
                   <td className="py-4 px-3 text-[var(--foreground)] font-medium">Task-Based Simulations</td>
                   <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
-                    <svg className="w-5 h-5 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                   </td>
                   <td className="py-4 px-3 text-center">
@@ -399,7 +399,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
             <p className="text-sm text-[var(--muted)]">
-              <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA and unlimited access until you pass on all tiers - all for <strong>95% less</strong>. The main differences are we don&apos;t have video lectures or task-based simulations. If you learn best from reading and practice, we&apos;re the smart choice.
+              <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, task-based simulations, and unlimited access until you pass on all tiers - all for <strong>95% less</strong>. The main difference is we don&apos;t have video lectures. If you learn best from reading and practice, we&apos;re the smart choice.
             </p>
             <p className="text-xs text-[var(--muted)] mt-3 opacity-70">
               *Features and pricing are based on publicly available information as of January 2025. Verify current offerings directly with each provider before purchasing.
