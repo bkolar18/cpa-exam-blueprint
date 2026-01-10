@@ -1,0 +1,140 @@
+================================================================================
+CPA EXAM BLUEPRINT - CURRENT STATUS & NEXT SESSION INSTRUCTIONS
+================================================================================
+Date: 2026-01-10 (Updated)
+Purpose: Instructions for resuming work in the next session
+
+================================================================================
+WHAT WE ACCOMPLISHED TODAY (2026-01-10)
+================================================================================
+
+SESSION SUMMARY:
+Today we completed three major tasks:
+1. Fixed dark mode styling on state requirements pages
+2. Massively expanded the TBS question bank from 300 to 500+ questions
+3. Updated site language and documentation to reflect 500+ TBS
+
+--------------------------------------------------------------------------------
+1. DARK MODE FIX - State Requirements Pages
+--------------------------------------------------------------------------------
+
+ISSUE: Individual state requirement page bubbles were hard to read in dark mode
+
+FILES MODIFIED:
+- src/app/state-requirements/[state]/page.tsx
+  * Added dark:bg-gray-800 to all white card backgrounds
+  * Updated colored bubbles (green/red/purple/amber) with dark mode variants
+  * Example: bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700
+
+- src/app/state-requirements/StateSelector.tsx
+  * Added dark mode classes to dropdown container
+  * Updated search input with dark mode styles
+  * Updated state list items with dark mode hover/background
+
+STATUS: COMPLETE
+
+--------------------------------------------------------------------------------
+2. TBS QUESTION BANK EXPANSION - COMPLETED
+--------------------------------------------------------------------------------
+
+OBJECTIVE: Expand TBS from 300 to 500+ total questions (150 new)
+
+FINAL DISTRIBUTION:
+| Section | Original | Added | Total | ID Range |
+|---------|----------|-------|-------|----------|
+| FAR     | 50       | 25    | 75+   | tbs-far-001 to tbs-far-086 |
+| AUD     | 50       | 25    | 75+   | tbs-aud-001 to tbs-aud-086 |
+| REG     | 50       | 25    | 75+   | tbs-reg-001 to tbs-reg-086 |
+| TCP     | 50       | 25    | 75+   | tbs-tcp-001 to tbs-tcp-075 |
+| BAR     | 50       | 25    | 75+   | tbs-bar-001 to tbs-bar-075 |
+| ISC     | 50       | 25    | 75+   | tbs-isc-001 to tbs-isc-075 |
+| TOTAL   | 300      | 150   | 500+  |          |
+
+FILES MODIFIED:
+- src/lib/data/tbs/far-tbs.ts - 75+ FAR TBS questions
+- src/lib/data/tbs/aud-tbs.ts - 75+ AUD TBS questions
+- src/lib/data/tbs/reg-tbs.ts - 75+ REG TBS questions
+- src/lib/data/tbs/tcp-tbs.ts - 75+ TCP TBS questions
+- src/lib/data/tbs/bar-tbs.ts - 75+ BAR TBS questions
+- src/lib/data/tbs/isc-tbs.ts - 75+ ISC TBS questions
+- src/lib/data/tbs/index.ts - Central exports
+
+DOCUMENTATION CREATED:
+- docs/TBS_EXPANSION_2026-01-10.md - Complete documentation of expansion
+  * All errors encountered and resolutions
+  * Type reference and best practices
+  * Verification commands
+
+COMMITS:
+- b8ce9b4: TBS expansion (57,046 lines)
+- 0cfcfd0: Documentation (393 lines)
+
+STATUS: COMPLETE
+
+--------------------------------------------------------------------------------
+3. SITE LANGUAGE UPDATES - IN PROGRESS
+--------------------------------------------------------------------------------
+
+Updated TBS counts across documentation to reflect 500+ TBS:
+- CLAUDE_CONTEXT.txt - Updated to 500+ TBS
+- CURRENT_STATUS_2026-01-10.txt - This file (updated)
+
+Remaining updates:
+- Dashboard simulations page header text
+- About page (if TBS count mentioned)
+- Pricing page (if TBS count mentioned)
+
+================================================================================
+PROJECT STATE SUMMARY
+================================================================================
+
+PHASE 1 (Free Tools): COMPLETE
+PHASE 2 (Content & Authority): COMPLETE
+PHASE 3 (CPA Academy): COMPLETE
+PHASE 3.5 (Question Expansion): COMPLETE
+  - MCQs: 5,810 total across all 6 sections
+  - TBS: 500+ total across all 6 sections
+PHASE 4 (Email Nurturing): NOT STARTED
+PHASE 5 (AI Features): NOT STARTED
+
+================================================================================
+KEY METRICS
+================================================================================
+
+Practice Questions:
+- MCQs: 5,810 total
+- TBS: 500+ total
+- Combined: 6,300+ practice questions
+
+TBS Distribution:
+- ~25% easy, ~60% medium, ~15% hard per section
+- Types: numeric_entry, dropdown, document_review, research, reconciliation, journal_entry
+
+================================================================================
+IMMEDIATE NEXT STEPS
+================================================================================
+
+1. Update dashboard simulations page to show 500+ TBS count
+2. Commit and push documentation updates
+3. Consider adding TBS count to pricing/about pages
+
+================================================================================
+COMMANDS TO RUN
+================================================================================
+
+cd "C:\Users\brenn\Documents\Coding Projects\CPA Exam Site\cpa-exam-blueprint"
+npm run dev              # Start development server
+npx tsc --noEmit --skipLibCheck  # Verify TypeScript compilation
+npm run build            # Full production build
+git push                 # Deploy to Vercel
+
+================================================================================
+IMPORTANT DOCUMENTATION
+================================================================================
+
+- docs/TBS_EXPANSION_2026-01-10.md - TBS expansion documentation
+- docs/tbs-system-architecture.md - TBS creation guidelines
+- src/lib/data/tbs/tbs-research-guide.md - TBS research guide
+- CLAUDE_CONTEXT.txt - Comprehensive project context
+
+================================================================================

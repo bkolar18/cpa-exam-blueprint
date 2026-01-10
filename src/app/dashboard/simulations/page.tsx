@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { sampleTBSQuestions } from "@/lib/data/tbs/sample-tbs";
+import { allTBSQuestions } from "@/lib/data/tbs";
 
 export default function SimulationsPage() {
   // Group TBS by section
-  const tbsBySection = sampleTBSQuestions.reduce((acc, tbs) => {
+  const tbsBySection = allTBSQuestions.reduce((acc, tbs) => {
     if (!acc[tbs.section]) acc[tbs.section] = [];
     acc[tbs.section].push(tbs);
     return acc;
-  }, {} as Record<string, typeof sampleTBSQuestions>);
+  }, {} as Record<string, typeof allTBSQuestions>);
 
   // Difficulty colors removed - hiding difficulty from students to let adaptive model handle question selection
 
@@ -36,9 +36,14 @@ export default function SimulationsPage() {
     <div className="p-6 max-w-6xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-          Task-Based Simulations
-        </h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+            Task-Based Simulations
+          </h1>
+          <span className="px-3 py-1 bg-[var(--primary)] text-white text-sm font-semibold rounded-full">
+            {allTBSQuestions.length}+ Available
+          </span>
+        </div>
         <p className="text-gray-600 dark:text-gray-400">
           Practice with realistic CPA exam simulations. TBS make up 50% of most exam sections.
         </p>
@@ -126,18 +131,22 @@ export default function SimulationsPage() {
         ))}
       </div>
 
-      {/* Coming Soon Notice */}
-      <div className="mt-8 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl p-6 text-center">
-        <svg className="w-12 h-12 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
-          More Simulations Coming Soon
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400">
-          We&apos;re building a comprehensive library of TBS covering all exam sections and topics.
-          Check back soon for additional simulations!
-        </p>
+      {/* TBS Summary Stats */}
+      <div className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-1">
+              Comprehensive TBS Library
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              {allTBSQuestions.length}+ Task-Based Simulations across all 6 CPA exam sections with realistic scenarios.
+            </p>
+          </div>
+          <div className="text-right">
+            <div className="text-3xl font-bold text-[var(--primary)]">{allTBSQuestions.length}+</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400">Total TBS</div>
+          </div>
+        </div>
       </div>
     </div>
   );

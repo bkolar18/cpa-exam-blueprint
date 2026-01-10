@@ -1,7 +1,7 @@
 ================================================================================
 CPA EXAM BLUEPRINT - CLAUDE CONTEXT
 ================================================================================
-Last Updated: 2026-01-08
+Last Updated: 2026-01-10
 
 This is a comprehensive context file for Claude Code sessions. It contains
 complete project history, workflow preferences, golden rules, and detailed
@@ -23,8 +23,11 @@ TABLE OF CONTENTS
 10. API REFERENCE
 11. STYLING GUIDE
 12. PRACTICE QUESTIONS SYSTEM
+   12.5 EXAM SIMULATION SYSTEM
+   12.6 TBS (TASK-BASED SIMULATION) SYSTEM (NEW 2026-01-10)
 13. GAMIFICATION SYSTEM
 14. FUTURE ROADMAP
+15. KEY DOCUMENTS REFERENCE
 
 ================================================================================
 1. PROJECT IDENTITY
@@ -59,8 +62,9 @@ TARGET AUDIENCE:
 VALUE PROPOSITION:
 - Free personalized study plans (competitors charge for this)
 - Free tools (score calendar, NTS tracker, calculator)
-- State-specific requirement guides (22 states)
-- 5,810 practice questions across all 6 sections
+- State-specific requirement guides (55 states/jurisdictions)
+- 5,810 MCQ practice questions across all 6 sections
+- 500+ TBS (Task-Based Simulation) questions across all 6 sections
 - Exam simulation mode with timed tests and pause functionality
 - User dashboard with progress tracking and gamification
 - Guidance from "licensed CPAs" (authority positioning)
@@ -290,8 +294,20 @@ cpa-exam-blueprint/
             │   ├── bar.ts        # 100 BAR questions
             │   └── isc.ts        # 100 ISC questions
             │
+            ├── tbs/                     # TBS QUESTIONS (NEW 2026-01-10!)
+            │   ├── types.ts             # TBS type definitions
+            │   ├── tbs-research-guide.md # Research & creation guidelines
+            │   ├── far-tbs.ts           # 19 FAR TBS (need 10 more)
+            │   ├── aud-tbs.ts           # 29 AUD TBS
+            │   ├── reg-tbs.ts           # 30 REG TBS
+            │   ├── tcp-tbs.ts           # 21 TCP TBS
+            │   ├── bar-tbs.ts           # 21 BAR TBS
+            │   ├── isc-tbs.ts           # 12 ISC TBS
+            │   ├── sample-tbs.ts        # 58 original sample TBS
+            │   └── index.ts             # Central exports
+            │
             ├── score-release-dates.ts  # 2025-2026 release schedule
-            ├── state-requirements.ts   # 22 states requirements data
+            ├── state-requirements.ts   # 55 states/jurisdictions data
             ├── blog-posts.ts           # Blog post metadata
             └── success-stories.ts      # Success story data
 
@@ -402,13 +418,27 @@ PHASE 3: CPA Academy / Dashboard (Completed 2026-01-05, Enhanced 2026-01-08)
 - Surgent promotional banner (per-account, 30-day reappearance)
 - State requirements expanded to 22 states
 
-PHASE 3.5: Question Bank Expansion (In Progress as of 2026-01-08)
+PHASE 3.5: Question Bank Expansion (In Progress as of 2026-01-10)
 -----------------------------------------------------------------
+MCQ Questions:
 - Expanded from 600 to 5,810 questions
 - 176 question batch files in docs/question-batches/
 - Difficulty distribution analysis and tracking
 - Target: 50-60% medium difficulty (currently at 49.2%)
 - See docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md for full breakdown
+
+TBS Questions (NEW - Added 2026-01-10):
+- Created comprehensive TBS folder structure: src/lib/data/tbs/
+- 500+ total TBS questions (expanded from 58 sample to 500+)
+- Target: 500 total - COMPLETED January 2026
+- Created TBS research guide with complexity levels
+- TBS types: Numeric Entry, Document Review, Journal Entry, Dropdown, Research
+- Complexity distribution: 40% simple, 45% moderate, 15% complex
+- See src/lib/data/tbs/tbs-research-guide.md for full details
+
+Dark Mode Fix (2026-01-10):
+- Fixed state requirements pages for dark mode readability
+- Updated [state]/page.tsx and StateSelector.tsx
 
 PHASE 4: Email Nurturing (NOT STARTED)
 --------------------------------------
@@ -849,6 +879,74 @@ handleEndExam(): void   // Submits exam early from paused state
 ```
 
 ================================================================================
+12.6 TBS (TASK-BASED SIMULATION) SYSTEM (NEW 2026-01-10)
+================================================================================
+
+OVERVIEW:
+TBS questions simulate the actual CPA exam format with multi-step scenarios,
+exhibits, and various response types. Created to complement MCQ practice.
+
+LOCATION: src/lib/data/tbs/
+
+FILES:
+- types.ts: TBSQuestion, TBSExhibit, TBSRequirement interfaces
+- tbs-research-guide.md: Research documentation and creation guidelines
+- far-tbs.ts: 19 FAR TBS questions
+- aud-tbs.ts: 29 AUD TBS questions
+- reg-tbs.ts: 30 REG TBS questions
+- tcp-tbs.ts: 21 TCP TBS questions
+- bar-tbs.ts: 21 BAR TBS questions
+- isc-tbs.ts: 12 ISC TBS questions
+- sample-tbs.ts: 58 original sample TBS
+- index.ts: Central exports and helper functions
+
+CURRENT STATUS (2026-01-10):
+- Total TBS: 500+ questions (COMPLETED January 2026)
+- All 6 sections: FAR, AUD, REG, TCP, BAR, ISC (~75+ each)
+- Distribution: ~25% easy, ~60% medium, ~15% hard per section
+
+TBS TYPES:
+- numeric_entry: Calculate and enter numeric values
+- document_review: Review documents, identify errors/issues
+- journal_entry: Create journal entries with debits/credits
+- dropdown: Select from option lists
+- research: Find authoritative literature citations
+
+COMPLEXITY LEVELS:
+| Level    | Requirements | Exhibits | Time Est. | Distribution |
+|----------|--------------|----------|-----------|--------------|
+| Simple   | 3-5          | 1-2      | 8-12 min  | 40%          |
+| Moderate | 5-7          | 2-3      | 12-16 min | 45%          |
+| Complex  | 7-10         | 3-4      | 16-22 min | 15%          |
+
+TBS QUESTION STRUCTURE:
+```typescript
+interface TBSQuestion {
+  id: string;                    // e.g., "tbs-far-012"
+  section: SectionCode;          // FAR, AUD, REG, TCP, BAR, ISC
+  tbsType: TBSType;              // numeric_entry, document_review, etc.
+  topic: string;                 // e.g., "Leases"
+  subtopic: string;              // e.g., "Lessee Accounting - Operating Lease"
+  difficulty: Difficulty;        // easy, medium, hard
+  skillLevel: SkillLevel;        // remembering_understanding, application, analysis, evaluation
+  contentArea: string;           // e.g., "FAR-III"
+  title: string;                 // Display title
+  scenarioText: string;          // Main scenario description
+  timeEstimateMinutes: number;   // Estimated completion time
+  maxScorePoints: number;        // Total points available
+  exhibits: TBSExhibit[];        // Tables, documents, memos
+  requirements: TBSRequirement[]; // Individual questions/tasks
+  journalAccounts?: JournalAccount[]; // For journal_entry type
+}
+```
+
+HELPER FUNCTIONS:
+```typescript
+getAllTBSQuestions(): TBSQuestion[]     // Get all TBS across sections
+getTBSBySection(section): TBSQuestion[] // Get TBS for specific section
+```
+
+================================================================================
 13. GAMIFICATION SYSTEM
 ================================================================================
 
@@ -882,9 +980,20 @@ STORAGE:
 ================================================================================
 
 IMMEDIATE (Ready to Start):
-- [ ] Continue adding medium questions (~336 more needed for 55% target)
+
+**CRITICAL: Before creating ANY TBS, read docs/tbs-system-architecture.md**
+
+TBS EXPANSION - COMPLETED (January 2026):
+- [x] Phase 1: Reached 200 TBS
+- [x] Phase 2: Expanded to 350 TBS
+- [x] Phase 3: Expanded to 500+ TBS (75+ per section)
+      See docs/TBS_EXPANSION_2026-01-10.md for full documentation
+      Complexity: 40% simple, 45% moderate, 15% complex
+      See CURRENT_STATUS_2026-01-10.txt for full ID numbering
+
+PHASE 3 - Other tasks:
+- [ ] Continue adding medium MCQ questions (~336 more needed for 55% target)
       Priority sections: FAR (46%), REG (47%)
-      ISC is now at 50% (target minimum reached)
 - [ ] Phase 4: Email Nurturing
   - [ ] Design 7-email welcome sequence
   - [ ] Set up email automation (Resend + cron or external service)
@@ -918,37 +1027,72 @@ WISHLIST:
 KEY DOCUMENTS REFERENCE
 ================================================================================
 
-1. docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md (CRITICAL - Updated 01/08)
-   - Complete breakdown of all 5,810 questions
+**MUST READ FIRST (Before creating ANY TBS):**
+
+1. **docs/tbs-system-architecture.md** (CRITICAL - READ FIRST!)
+   - Complete TBS creation guidelines and standards
+   - TypeScript interfaces and type definitions
+   - Exhibit structure templates
+   - Quality requirements and validation rules
+   - FOLLOW THIS DOCUMENT PRECISELY FOR ALL TBS CREATION
+
+**Session Context:**
+
+2. **CURRENT_STATUS_2026-01-10.txt** (CRITICAL)
+   - Detailed instructions for resuming current work
+   - TBS Expansion: COMPLETED - 500+ TBS across all 6 sections
+   - See docs/TBS_EXPANSION_2026-01-10.md for documentation
+   - Distribution targets and ID numbering
+   - READ THIS for immediate pickup
+
+3. **src/lib/data/tbs/tbs-research-guide.md**
+   - CPA exam TBS research and background
+   - Complexity level definitions (40% simple, 45% moderate, 15% complex)
+   - Topic priorities by section
+   - TBS type descriptions and best practices
+
+**TBS Question Files:**
+
+4. **src/lib/data/tbs/*.ts** (TBS FILES)
+   - types.ts: TBS type definitions (TBSQuestion, TBSExhibit, TBSRequirement)
+   - far-tbs.ts: 19 FAR TBS (need 10 more for Phase 1, then ~33 more for Phase 2)
+   - aud-tbs.ts: 29 AUD TBS (need ~33 more for Phase 2)
+   - reg-tbs.ts: 30 REG TBS (need ~33 more for Phase 2)
+   - tcp-tbs.ts: 21 TCP TBS (need ~17 more for Phase 2)
+   - bar-tbs.ts: 21 BAR TBS (need ~17 more for Phase 2)
+   - isc-tbs.ts: 12 ISC TBS (need ~17 more for Phase 2)
+   - sample-tbs.ts: 58 original sample TBS
+   - index.ts: Central exports and helper functions
+
+**MCQ Reference:**
+
+5. docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md (Updated 01/08)
+   - Complete breakdown of all 5,810 MCQ questions
    - Distribution by section, difficulty, and batch
    - Gap analysis for reaching target distribution
    - Lists all 176 question batch files
-   - READ THIS for question bank status
 
-2. docs/question-batches/ (Question JSON files)
+6. docs/question-batches/ (MCQ JSON files)
    - Contains all question batch JSON files organized by section
    - Format: {section}-batch-{number}-{topic}.json
-   - Recent additions: far-054, far-055, reg-035, reg-036, isc-015, isc-016
 
-3. CPA Exam Blueprint - Business Overview.txt
+**Other Reference:**
+
+7. CPA Exam Blueprint - Business Overview.txt
    - Complete business description for Surgent team
    - Marketing funnel explanation
-   - Feature breakdown in plain English
-   - READ THIS to understand the "why" behind the site
 
-4. cpa claude responses.txt
+8. cpa claude responses.txt
    - All strategic planning responses
    - Technical decisions and explanations
-   - Session summaries
 
-5. SESSION_PROMPT.txt
+9. SESSION_PROMPT.txt
    - Quick start guide for new sessions
    - Current state overview
-   - Immediate next steps
 
-6. SESSION_LOG.txt
-   - Detailed session-by-session accomplishments
-   - Commits and technical details
+10. SESSION_LOG.txt
+    - Detailed session-by-session accomplishments
+    - Commits and technical details
 
 ================================================================================
 END OF CONTEXT FILE
