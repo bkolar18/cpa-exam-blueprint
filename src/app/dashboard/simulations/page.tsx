@@ -1,151 +1,280 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import { allTBSQuestions } from "@/lib/data/tbs";
+import { allTBSQuestions, tbsStatistics } from "@/lib/data/tbs";
+import { TBSSectionCard, TBSSearchBar, TBSListItem } from "@/components/tbs/TBSLibrary";
+import { useTBSProgress } from "@/hooks/useTBSProgress";
+import type { TBSType } from "@/components/tbs/TBSLibrary";
+
+const sections: { code: string; name: string }[] = [
+  { code: "FAR", name: "Financial Accounting & Reporting" },
+  { code: "AUD", name: "Auditing & Attestation" },
+  { code: "REG", name: "Regulation" },
+  { code: "TCP", name: "Tax Compliance & Planning" },
+  { code: "BAR", name: "Business Analysis & Reporting" },
+  { code: "ISC", name: "Information Systems & Controls" },
+];
 
 export default function SimulationsPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const { data: progressData, isLoading: progressLoading, getStatus, getBestScore } = useTBSProgress();
+
   // Group TBS by section
-  const tbsBySection = allTBSQuestions.reduce((acc, tbs) => {
-    if (!acc[tbs.section]) acc[tbs.section] = [];
-    acc[tbs.section].push(tbs);
-    return acc;
-  }, {} as Record<string, typeof allTBSQuestions>);
+  const tbsBySection = useMemo(() => {
+    return allTBSQuestions.reduce((acc, tbs) => {
+      if (!acc[tbs.section]) acc[tbs.section] = [];
+      acc[tbs.section].push(tbs);
+      return acc;
+    }, {} as Record<string, typeof allTBSQuestions>);
+  }, []);
 
-  // Difficulty colors removed - hiding difficulty from students to let adaptive model handle question selection
+  // Filter TBS by search query
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return null;
 
-  const getTBSTypeLabel = (type: string) => {
-    switch (type) {
-      case "journal_entry":
-        return "Journal Entry";
-      case "numeric_entry":
-        return "Numeric Entry";
-      case "document_review":
-        return "Document Review";
-      case "research":
-        return "Research";
-      case "reconciliation":
-        return "Reconciliation";
-      case "written_communication":
-        return "Written Communication";
-      default:
-        return type;
+    const query = searchQuery.toLowerCase();
+    return allTBSQuestions
+      .filter(
+        (tbs) =>
+          tbs.title.toLowerCase().includes(query) ||
+          tbs.topic.toLowerCase().includes(query) ||
+          (tbs.subtopic && tbs.subtopic.toLowerCase().includes(query))
+      )
+      .slice(0, 20); // Limit to 20 results
+  }, [searchQuery]);
+
+  // Calculate section stats
+  const getSectionStats = (sectionCode: string) => {
+    const sectionTBS = tbsBySection[sectionCode] || [];
+    const completedCount = sectionTBS.filter((tbs) =>
+      progressData.completedTBSIds.has(tbs.id)
+    ).length;
+
+    // Calculate average score for completed TBS in this section
+    let totalScore = 0;
+    let scoreCount = 0;
+    for (const tbs of sectionTBS) {
+      const score = progressData.bestScoreByTBS.get(tbs.id);
+      if (score !== undefined) {
+        totalScore += score;
+        scoreCount++;
+      }
     }
+    const averageScore = scoreCount > 0 ? totalScore / scoreCount : null;
+
+    return { totalCount: sectionTBS.length, completedCount, averageScore };
   };
+
+  // Overall stats
+  const overallStats = useMemo(() => {
+    const totalTBS = allTBSQuestions.length;
+    const completedTBS = progressData.completedTBSIds.size;
+    const averageScore = progressData.stats?.averageScore ?? null;
+    return { totalTBS, completedTBS, averageScore };
+  }, [progressData]);
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-            Task-Based Simulations
-          </h1>
+      <div className="mb-6">
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-1">
+              Task-Based Simulations
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Practice with realistic CPA exam simulations. TBS make up 50% of most exam sections.
+            </p>
+          </div>
           <span className="px-3 py-1 bg-[var(--primary)] text-white text-sm font-semibold rounded-full">
             {allTBSQuestions.length}+ Available
           </span>
         </div>
-        <p className="text-gray-600 dark:text-gray-400">
-          Practice with realistic CPA exam simulations. TBS make up 50% of most exam sections.
-        </p>
       </div>
 
+      {/* Stats Overview */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Total Simulations</p>
+          <p className="text-3xl font-bold text-[var(--primary)]">{overallStats.totalTBS}</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Completed</p>
+          <p className="text-3xl font-bold text-green-600 dark:text-green-400">
+            {progressLoading ? "—" : overallStats.completedTBS}
+          </p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Average Score</p>
+          <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+            {progressLoading
+              ? "—"
+              : overallStats.averageScore !== null
+                ? `${Math.round(overallStats.averageScore)}%`
+                : "—"}
+          </p>
+        </div>
+      </div>
+
+      {/* Search Bar */}
+      <div className="mb-6">
+        <TBSSearchBar
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Search by title, topic, or subtopic..."
+        />
+      </div>
+
+      {/* Search Results */}
+      {searchResults && (
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              Search Results ({searchResults.length})
+            </h2>
+            <button
+              onClick={() => setSearchQuery("")}
+              className="text-sm text-[var(--primary)] hover:underline"
+            >
+              Clear search
+            </button>
+          </div>
+          {searchResults.length > 0 ? (
+            <div className="space-y-3">
+              {searchResults.map((tbs) => (
+                <TBSListItem
+                  key={tbs.id}
+                  id={tbs.id}
+                  title={tbs.title}
+                  topic={tbs.topic}
+                  subtopic={tbs.subtopic}
+                  tbsType={tbs.tbsType as TBSType}
+                  timeEstimateMinutes={tbs.timeEstimateMinutes}
+                  maxScorePoints={tbs.maxScorePoints}
+                  exhibitCount={tbs.exhibits.length}
+                  status={getStatus(tbs.id)}
+                  bestScore={getBestScore(tbs.id)}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+              <svg
+                className="w-12 h-12 text-gray-400 mx-auto mb-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+              <p className="text-gray-600 dark:text-gray-400">
+                No simulations found matching &quot;{searchQuery}&quot;
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Section Cards Grid */}
+      {!searchResults && (
+        <>
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              Browse by Section
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {sections.map((section) => {
+              const stats = getSectionStats(section.code);
+              const sectionTBS = tbsBySection[section.code] || [];
+              const previewItems = sectionTBS.slice(0, 3).map((tbs) => ({
+                id: tbs.id,
+                title: tbs.title,
+                topic: tbs.topic,
+                subtopic: tbs.subtopic,
+                tbsType: tbs.tbsType as TBSType,
+                timeEstimateMinutes: tbs.timeEstimateMinutes,
+                maxScorePoints: tbs.maxScorePoints,
+                exhibitCount: tbs.exhibits.length,
+              }));
+
+              return (
+                <TBSSectionCard
+                  key={section.code}
+                  sectionCode={section.code}
+                  sectionName={section.name}
+                  totalCount={stats.totalCount}
+                  completedCount={stats.completedCount}
+                  averageScore={stats.averageScore}
+                  previewItems={previewItems}
+                  getStatus={getStatus}
+                  getBestScore={getBestScore}
+                />
+              );
+            })}
+          </div>
+        </>
+      )}
+
       {/* Info Banner */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-8">
-        <div className="flex items-start space-x-3">
-          <svg className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-5">
+        <div className="flex items-start gap-3">
+          <svg
+            className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
           <div>
             <h3 className="text-sm font-semibold text-blue-800 dark:text-blue-200">
               About Task-Based Simulations
             </h3>
             <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-              TBS are case-study style questions that test your ability to apply knowledge to realistic scenarios.
-              Unlike MCQs, you can earn partial credit on TBS questions. Each simulation includes exhibits
-              (documents, tables, memos) that you&apos;ll need to analyze to complete the requirements.
+              TBS are case-study style questions that test your ability to apply knowledge to
+              realistic scenarios. Unlike MCQs, you can earn partial credit on TBS questions.
+              Each simulation includes exhibits (documents, tables, memos) that you&apos;ll need
+              to analyze to complete the requirements.
             </p>
           </div>
         </div>
       </div>
 
-      {/* TBS by Section */}
-      <div className="space-y-8">
-        {Object.entries(tbsBySection).map(([section, questions]) => (
-          <div key={section}>
-            <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4 flex items-center">
-              <span className="px-2 py-1 bg-[var(--primary)] text-white text-sm font-bold rounded mr-3">
-                {section}
+      {/* TBS Type Legend */}
+      <div className="mt-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+        <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3">
+          Simulation Types
+        </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {[
+            { code: "NE", label: "Numeric Entry", count: tbsStatistics.byType.numeric_entry },
+            { code: "JE", label: "Journal Entry", count: tbsStatistics.byType.journal_entry },
+            { code: "DR", label: "Document Review", count: tbsStatistics.byType.document_review },
+            { code: "RS", label: "Research", count: tbsStatistics.byType.research },
+          ].map((type) => (
+            <div
+              key={type.code}
+              className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+            >
+              <span className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium">
+                {type.code}
               </span>
-              {section === "FAR" && "Financial Accounting & Reporting"}
-              {section === "AUD" && "Auditing & Attestation"}
-              {section === "REG" && "Regulation"}
-              {section === "TCP" && "Tax Compliance & Planning"}
-              {section === "BAR" && "Business Analysis & Reporting"}
-              {section === "ISC" && "Information Systems & Controls"}
-            </h2>
-
-            <div className="grid gap-4">
-              {questions.map((tbs) => (
-                <Link
-                  key={tbs.id}
-                  href={`/dashboard/simulations/${tbs.id}`}
-                  className="block bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 hover:border-[var(--primary)] hover:shadow-md transition-all"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-2 mb-2">
-                        {/* Difficulty badge removed - let adaptive model handle question selection */}
-                        <span className="px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded">
-                          {getTBSTypeLabel(tbs.tbsType)}
-                        </span>
-                        <span className="text-xs text-gray-500 dark:text-gray-500">
-                          ~{tbs.timeEstimateMinutes} min
-                        </span>
-                      </div>
-                      <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200">
-                        {tbs.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        {tbs.topic}
-                        {tbs.subtopic && ` - ${tbs.subtopic}`}
-                      </p>
-                    </div>
-                    <div className="flex items-center space-x-2 ml-4">
-                      <div className="text-right">
-                        <div className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                          {tbs.maxScorePoints} pts
-                        </div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400">
-                          {tbs.exhibits.length} exhibit{tbs.exhibits.length !== 1 ? "s" : ""}
-                        </div>
-                      </div>
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+              <span>{type.label}</span>
+              <span className="text-gray-400 dark:text-gray-500">({type.count})</span>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {/* TBS Summary Stats */}
-      <div className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-1">
-              Comprehensive TBS Library
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {allTBSQuestions.length}+ Task-Based Simulations across all 6 CPA exam sections with realistic scenarios.
-            </p>
-          </div>
-          <div className="text-right">
-            <div className="text-3xl font-bold text-[var(--primary)]">{allTBSQuestions.length}+</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400">Total TBS</div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

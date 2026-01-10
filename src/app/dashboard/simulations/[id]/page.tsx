@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { TBSContainer } from "@/components/tbs";
-import { getSampleTBSById } from "@/lib/data/tbs/sample-tbs";
+import { getTBSById } from "@/lib/data/tbs";
 import { TBSAttempt } from "@/lib/data/tbs/types";
 
 export default function TBSPracticePage() {
@@ -10,7 +10,7 @@ export default function TBSPracticePage() {
   const router = useRouter();
   const tbsId = params.id as string;
 
-  const tbs = getSampleTBSById(tbsId);
+  const tbs = getTBSById(tbsId);
 
   if (!tbs) {
     return (

@@ -82,6 +82,11 @@ export function getTBSBySection(
   }
 }
 
+// Helper function to get a TBS by ID from all TBS questions
+export function getTBSById(id: string) {
+  return allTBSQuestions.find((tbs) => tbs.id === id);
+}
+
 // Helper function to get random TBS questions for practice
 export function getRandomTBS(count: number, section?: string) {
   const pool = section
