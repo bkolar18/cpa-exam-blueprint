@@ -335,11 +335,15 @@ export default function SectionPracticePage() {
   if (!hasQuestions) {
     return (
       <div className="space-y-6">
-        <div className="flex items-center space-x-2 text-sm text-[var(--muted)]">
-          <Link href="/dashboard/practice" className="hover:text-[var(--primary)]">Practice</Link>
-          <span>/</span>
-          <span>{section}</span>
-        </div>
+        <Link
+          href="/dashboard/practice"
+          className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-[var(--primary)] dark:hover:text-[var(--primary)] transition-colors"
+        >
+          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Practice
+        </Link>
 
         <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-8 text-center">
           <div className="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -368,12 +372,16 @@ export default function SectionPracticePage() {
 
   return (
     <div className="space-y-6">
-      {/* Breadcrumb */}
-      <div className="flex items-center space-x-2 text-sm text-[var(--muted)]">
-        <Link href="/dashboard/practice" className="hover:text-[var(--primary)]">Practice</Link>
-        <span>/</span>
-        <span className="text-[var(--foreground)]">{section}</span>
-      </div>
+      {/* Back Button */}
+      <Link
+        href="/dashboard/practice"
+        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-[var(--primary)] dark:hover:text-[var(--primary)] transition-colors"
+      >
+        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Practice
+      </Link>
 
       {quizState === 'setup' && (
         <>

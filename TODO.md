@@ -9,6 +9,15 @@
 (none)
 
 ### Completed
+- [x] Fix dark mode text readability in dashboard bubbles
+  - Updated QuickActionCard: title to text-gray-900/dark:text-white, description to text-gray-600/dark:text-gray-300
+  - Updated StatCard: label and sublabel to text-gray-600/dark:text-gray-300
+  - Updated Recent Study Sessions: heading, session text, and empty state message
+- [x] Rename "Multiple Choice Questions" to "Multiple Choice" in Study dropdown
+  - Updated both groupedItems and allNavItems arrays in DashboardNav
+- [x] Add back button functionality to nested pages
+  - Added back arrow + "Back to Practice" link in practice/[section] and practice/history pages
+  - Simulations and flashcards already had back buttons
 - [x] Update Overview page: refresh the 6 action bubbles with new features
   - Replaced old actions with: Practice MCQs, TBS Simulations, Exam Simulation, Exam Readiness, Flashcards, Accolades
   - Added color-coded icons (blue, purple, orange, green, teal, yellow)

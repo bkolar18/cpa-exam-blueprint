@@ -17,7 +17,7 @@ const groupedItems = [
     label: "Study",
     icon: "book",
     items: [
-      { href: "/dashboard/practice", label: "Multiple Choice Questions", icon: "practice" },
+      { href: "/dashboard/practice", label: "Multiple Choice", icon: "practice" },
       { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
       { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
       { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
@@ -42,7 +42,7 @@ const settingsItem = { href: "/dashboard/settings", label: "Settings", icon: "se
 // All items flat for mobile
 const allNavItems = [
   { href: "/dashboard", label: "Overview", icon: "home" },
-  { href: "/dashboard/practice", label: "Multiple Choice Questions", icon: "practice" },
+  { href: "/dashboard/practice", label: "Multiple Choice", icon: "practice" },
   { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
   { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
   { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },

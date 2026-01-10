@@ -335,7 +335,7 @@ export default function DashboardPage() {
       {/* Recent Activity */}
       <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-[var(--foreground)]">Recent Study Sessions</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Study Sessions</h2>
           <Link
             href="/dashboard/practice"
             className="text-sm font-medium text-[var(--primary)] hover:text-[var(--primary-dark)] flex items-center gap-1"
@@ -355,23 +355,23 @@ export default function DashboardPage() {
                     <span className="text-sm font-bold text-[var(--primary)]">{session.section}</span>
                   </div>
                   <div>
-                    <p className="font-medium text-[var(--foreground)]">
+                    <p className="font-medium text-gray-900 dark:text-white">
                       {session.hours < 1
                         ? `${Math.round(session.hours * 60)} minutes`
                         : `${session.hours} hours`}
                     </p>
-                    <p className="text-sm text-[var(--muted)]">{new Date(session.date).toLocaleDateString()}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">{new Date(session.date).toLocaleDateString()}</p>
                   </div>
                 </div>
                 {session.notes && (
-                  <p className="text-sm text-[var(--muted)] max-w-xs truncate">{session.notes}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xs truncate">{session.notes}</p>
                 )}
               </div>
             ))}
           </div>
         ) : (
           <div className="text-center py-8">
-            <p className="text-[var(--muted)] mb-4">No study sessions logged yet</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">No study sessions logged yet</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/dashboard/study-log" className="btn-primary inline-block">
                 Log Your First Session
@@ -407,9 +407,9 @@ function StatCard({
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-5">
-      <p className="text-sm text-[var(--muted)] mb-1">{label}</p>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">{label}</p>
       <p className={`text-3xl font-bold ${colors[color]}`}>{value}</p>
-      <p className="text-sm text-[var(--muted)] mt-1">{sublabel}</p>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{sublabel}</p>
     </div>
   );
 }
@@ -538,8 +538,8 @@ function QuickActionCard({
       <div className={`w-12 h-12 ${style.bg} rounded-xl flex items-center justify-center ${style.text} mb-4 ${style.hover} group-hover:text-white transition-colors`}>
         {icons[icon]}
       </div>
-      <h3 className="font-semibold text-[var(--foreground)] mb-1">{title}</h3>
-      <p className="text-sm text-[var(--muted)]">{description}</p>
+      <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{title}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-300">{description}</p>
     </Link>
   );
 }
