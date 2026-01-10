@@ -361,8 +361,8 @@
         "D": "The taxpayer itemizes deductions"
       },
       "correctAnswer": "B",
-      "explanation": "Under TCJA, personal casualty losses are deductible only if attributable to a federally declared disaster. The $100 per-casualty floor and 10% of AGI floor still apply. Non-disaster personal casualty losses can only offset personal casualty gains. Business casualty losses are still fully deductible.",
-      "tip": "Post-TCJA: personal casualty losses only from federally declared disasters. Still subject to $100 and 10% AGI floors.",
+      "explanation": "Under TCJA, personal casualty losses are deductible only if attributable to a federally declared disaster. The $500 per-casualty floor (increased from $100 by TCJA under IRC §165(h)(5)) and 10% of AGI floor still apply. Non-disaster personal casualty losses can only offset personal casualty gains. Business casualty losses are still fully deductible.",
+      "tip": "Post-TCJA: personal casualty losses only from federally declared disasters. Still subject to $500 and 10% AGI floors.",
       "calculationRequired": false,
       "timeEstimateSeconds": 60
     },

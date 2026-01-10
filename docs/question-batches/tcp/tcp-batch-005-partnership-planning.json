@@ -479,16 +479,16 @@
       "conceptTested": "Partnership Continuation Rules",
       "difficulty": "hard",
       "questionFormat": "MCQ",
-      "question": "Under current law, a partnership continues for tax purposes unless:",
+      "question": "Under current law (post-TCJA), which of the following will NOT cause a partnership to terminate for tax purposes?",
       "options": {
         "A": "50% or more of partnership interests are transferred within 12 months",
-        "B": "All partnership operations cease completely",
+        "B": "All partnership operations cease and assets are distributed",
         "C": "The partnership is merged into another partnership",
-        "D": "The managing partner changes"
+        "D": "The partnership is divided into multiple partnerships"
       },
-      "correctAnswer": "B",
-      "explanation": "After TCJA repealed technical terminations, a partnership now continues for tax purposes until operations cease completely or a partnership merger/division occurs. The old rule triggering termination on 50%+ interest transfer in 12 months was eliminated for tax years after December 31, 2017.",
-      "tip": "Technical terminations repealed by TCJA. Partnership continues until operations cease or merger/division.",
+      "correctAnswer": "A",
+      "explanation": "After TCJA repealed technical terminations (effective for tax years after December 31, 2017), a 50%+ transfer of partnership interests within 12 months no longer terminates a partnership for tax purposes. A partnership now terminates only when: (1) operations cease and assets are distributed, or (2) a merger or division occurs.",
+      "tip": "TCJA repealed technical terminations. 50%+ transfer no longer triggers termination.",
       "calculationRequired": false,
       "timeEstimateSeconds": 75
     },

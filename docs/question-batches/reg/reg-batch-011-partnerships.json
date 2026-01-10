@@ -277,8 +277,8 @@
         "D": "Depreciation expense"
       },
       "correctAnswer": "C",
-      "explanation": "Items that could affect partners differently must be separately stated. Section 1231 gains/losses retain their character when passed through and may be affected by each partner's other 1231 transactions. Cost of goods sold, wages, and depreciation are included in ordinary income/loss calculation.",
-      "tip": "Separately stated: Capital gains/losses, 1231, charitable, foreign taxes, tax-exempt income, etc.",
+      "explanation": "Items that could affect partners differently must be separately stated. Section 1231 gains/losses retain their character when passed through and may be affected by each partner's other 1231 transactions. Cost of goods sold, wages, and regular MACRS depreciation are included in the ordinary income/loss calculation (though §179 expense and certain AMT depreciation adjustments are separately stated).",
+      "tip": "Separately stated: Capital gains/losses, 1231, charitable, §179, foreign taxes, tax-exempt income.",
       "calculationRequired": false,
       "timeEstimateSeconds": 60
     },
@@ -466,8 +466,8 @@
         "D": "Loss sharing ratios only"
       },
       "correctAnswer": "B",
-      "explanation": "Nonrecourse liabilities (where no partner bears economic risk of loss) are allocated in a three-tier approach: (1) to partners with Section 704(c) minimum gain, (2) to partners per partnership minimum gain, (3) based on profit sharing ratios.",
-      "tip": "Nonrecourse debt = profit ratios (simplified). Recourse debt = economic risk of loss.",
+      "explanation": "Nonrecourse liabilities (where no partner bears economic risk of loss) are allocated under Reg. §1.752-3 in a three-tier approach: (1) first, to partners with Section 704(c) minimum gain, (2) second, to partners based on their share of partnership minimum gain, (3) third, the remainder is allocated based on profit sharing ratios. For CPA exam purposes, profit ratios are often used as a simplified answer.",
+      "tip": "Nonrecourse debt: Full rule is 3-tier (§1.752-3), but exam often simplifies to profit ratios.",
       "calculationRequired": false,
       "timeEstimateSeconds": 60
     },
@@ -487,8 +487,8 @@
         "D": "$30,000"
       },
       "correctAnswer": "B",
-      "explanation": "When debt assumed exceeds basis, gain is recognized for the excess. The partner is relieved of $60,000 debt but gets back (60% relief if 40% owner, but assume 100% for simplicity means full relief minus share = treated as distribution). If 100% owner: relief = $60,000 treated as distribution. Distribution exceeds $50,000 basis by $10,000 = gain recognized.",
-      "tip": "Contribution with debt: Relief > basis = gain. Treat debt relief as cash distribution.",
+      "explanation": "Under IRC §752, when a partner contributes property subject to a liability, the partnership's assumption of the debt is treated as a cash distribution to the contributing partner. Here, assuming the partner has no share of the liability allocated back after contribution, the partner is relieved of the full $60,000 liability. Since the debt relief ($60,000) exceeds the partner's basis in contributed property ($50,000), gain is recognized on the excess: $60,000 - $50,000 = $10,000.",
+      "tip": "Contribution with debt: Under §752, debt relief = deemed cash distribution. Gain if relief > basis.",
       "calculationRequired": true,
       "timeEstimateSeconds": 120
     },

@@ -130,8 +130,8 @@
         "D": "100% of AGI"
       },
       "correctAnswer": "C",
-      "explanation": "Cash contributions to public charities (50% organizations) are deductible up to 60% of AGI under TCJA (increased from 50%). Contributions of appreciated property are limited to 30% of AGI. Lower limits apply to private foundations.",
-      "tip": "Charitable cash: 60% AGI limit. Appreciated property: 30% AGI limit.",
+      "explanation": "Cash contributions to public charities (50% organizations) are deductible up to 60% of AGI under TCJA through 2025 (increased from 50%). Contributions of appreciated property are limited to 30% of AGI. Lower limits apply to private foundations.",
+      "tip": "Charitable cash: 60% AGI limit (through 2025). Appreciated property: 30% AGI limit.",
       "calculationRequired": false,
       "timeEstimateSeconds": 45
     },
@@ -214,8 +214,8 @@
         "D": "The taxpayer has insurance"
       },
       "correctAnswer": "B",
-      "explanation": "TCJA limits personal casualty loss deductions to losses from federally declared disasters only (2018-2025). The loss must exceed $100 per casualty and total losses must exceed 10% of AGI. Casualty gains can offset non-disaster losses.",
-      "tip": "Personal casualty loss: federal disaster only (TCJA). Still need $100 + 10% AGI floors.",
+      "explanation": "TCJA limits personal casualty loss deductions to losses from federally declared disasters only (2018-2025). The loss must exceed $500 per casualty (increased from $100 by TCJA under IRC §165(h)(5)) and total losses must exceed 10% of AGI. Casualty gains can offset non-disaster losses.",
+      "tip": "Personal casualty loss: federal disaster only (TCJA). Still need $500 + 10% AGI floors.",
       "calculationRequired": false,
       "timeEstimateSeconds": 60
     },
@@ -524,12 +524,12 @@
       "question": "A taxpayer donating appreciated capital gain property may elect to:",
       "options": {
         "A": "Increase the AGI limitation by paying additional tax",
-        "B": "Deduct basis instead of FMV to use the 50% (now 60%) AGI limit instead of 30%",
+        "B": "Deduct basis instead of FMV to use the higher cash contribution AGI limit (60%) instead of 30%",
         "C": "Carry back the excess deduction",
         "D": "Treat the property as ordinary income property"
       },
       "correctAnswer": "B",
-      "explanation": "Donors of appreciated capital gain property can elect to deduct basis (rather than FMV) to qualify for the higher AGI limitation (60% for cash/property at basis vs. 30% for FMV of appreciated property). This may benefit taxpayers with large donations relative to AGI.",
+      "explanation": "Donors of appreciated capital gain property can elect to deduct basis (rather than FMV) to qualify for the higher AGI limitation that applies to cash contributions (60% through 2025) instead of the 30% limit for FMV of appreciated property. Electing basis treatment allows use of the cash contribution AGI limits. This may benefit taxpayers with large donations relative to AGI.",
       "tip": "Appreciated property election: use basis for higher AGI limit. Good if high donation relative to income.",
       "calculationRequired": false,
       "timeEstimateSeconds": 75
