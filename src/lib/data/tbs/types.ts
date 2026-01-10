@@ -11,6 +11,7 @@ export type TBSType =
   | 'numeric_entry'        // Free-response calculations
   | 'document_review'      // Analyze documents, select corrections
   | 'journal_entry'        // Record transactions with debits/credits
+  | 'dropdown'             // Option list / dropdown selections
   | 'research'             // Search authoritative literature
   | 'reconciliation'       // Bank/account reconciliations
   | 'written_communication'; // Draft business correspondence
