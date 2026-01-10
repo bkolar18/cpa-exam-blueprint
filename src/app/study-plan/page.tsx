@@ -182,10 +182,10 @@ export default function StudyPlanPage() {
       case 1:
         return (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-[var(--foreground)]">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Are you working full-time?
             </h2>
-            <p className="text-[var(--muted)]">
+            <p className="text-gray-600 dark:text-gray-300">
               This helps us create a realistic study schedule for you.
             </p>
             <div className="grid grid-cols-2 gap-4">
@@ -196,12 +196,12 @@ export default function StudyPlanPage() {
                 }}
                 className={`p-6 border-2 rounded-xl text-left transition-all hover:border-[var(--primary)] ${
                   formData.workingFullTime === "yes"
-                    ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
-                    : "border-[var(--border)]"
+                    ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                    : "border-gray-200 dark:border-gray-600"
                 }`}
               >
-                <span className="text-lg font-semibold">Yes</span>
-                <p className="text-sm text-[var(--muted)] mt-1">
+                <span className="text-lg font-semibold text-gray-900 dark:text-white">Yes</span>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                   I work 40+ hours per week
                 </p>
               </button>
@@ -212,12 +212,12 @@ export default function StudyPlanPage() {
                 }}
                 className={`p-6 border-2 rounded-xl text-left transition-all hover:border-[var(--primary)] ${
                   formData.workingFullTime === "no"
-                    ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
-                    : "border-[var(--border)]"
+                    ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                    : "border-gray-200 dark:border-gray-600"
                 }`}
               >
-                <span className="text-lg font-semibold">No</span>
-                <p className="text-sm text-[var(--muted)] mt-1">
+                <span className="text-lg font-semibold text-gray-900 dark:text-white">No</span>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                   I can study full-time
                 </p>
               </button>
@@ -228,10 +228,10 @@ export default function StudyPlanPage() {
       case 2:
         return (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-[var(--foreground)]">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               How many hours per week can you dedicate to studying?
             </h2>
-            <p className="text-[var(--muted)]">
+            <p className="text-gray-600 dark:text-gray-300">
               Be realistic - consistency beats intensity.
             </p>
             <div className="grid grid-cols-2 gap-4">
@@ -249,12 +249,12 @@ export default function StudyPlanPage() {
                   }}
                   className={`p-6 border-2 rounded-xl text-left transition-all hover:border-[var(--primary)] ${
                     formData.hoursPerWeek === option.value
-                      ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
-                      : "border-[var(--border)]"
+                      ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                 >
-                  <span className="text-lg font-semibold">{option.label}</span>
-                  <p className="text-sm text-[var(--muted)] mt-1">{option.desc}</p>
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white">{option.label}</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{option.desc}</p>
                 </button>
               ))}
             </div>
@@ -264,10 +264,10 @@ export default function StudyPlanPage() {
       case 3:
         return (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-[var(--foreground)]">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               What&apos;s your accounting background?
             </h2>
-            <p className="text-[var(--muted)]">
+            <p className="text-gray-600 dark:text-gray-300">
               This helps us recommend the best section order for you.
             </p>
             <div className="space-y-4">
@@ -296,12 +296,12 @@ export default function StudyPlanPage() {
                   }}
                   className={`w-full p-6 border-2 rounded-xl text-left transition-all hover:border-[var(--primary)] ${
                     formData.accountingBackground === option.value
-                      ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
-                      : "border-[var(--border)]"
+                      ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                 >
-                  <span className="text-lg font-semibold">{option.label}</span>
-                  <p className="text-sm text-[var(--muted)] mt-1">{option.desc}</p>
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white">{option.label}</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{option.desc}</p>
                 </button>
               ))}
             </div>
@@ -311,10 +311,10 @@ export default function StudyPlanPage() {
       case 4:
         return (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-[var(--foreground)]">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Which discipline section will you take?
             </h2>
-            <p className="text-[var(--muted)]">
+            <p className="text-gray-600 dark:text-gray-300">
               Under CPA Evolution, you choose one discipline section (BAR, TCP, or ISC) to complete alongside the three core sections.
             </p>
             <div className="space-y-4">
@@ -328,8 +328,8 @@ export default function StudyPlanPage() {
                     }}
                     className={`w-full p-6 border-2 rounded-xl text-left transition-all hover:border-[var(--primary)] ${
                       formData.disciplineSection === code
-                        ? "border-[var(--primary)] bg-[var(--primary)] bg-opacity-5"
-                        : "border-[var(--border)]"
+                        ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                        : "border-gray-200 dark:border-gray-600"
                     }`}
                   >
                     <div className="flex items-start justify-between">
@@ -341,10 +341,10 @@ export default function StudyPlanPage() {
                           >
                             {code}
                           </span>
-                          <span className="text-lg font-semibold">{section.name}</span>
+                          <span className="text-lg font-semibold text-gray-900 dark:text-white">{section.name}</span>
                         </div>
-                        <p className="text-sm text-[var(--muted)] mt-2">{section.description}</p>
-                        <p className="text-sm text-[var(--muted)] mt-1">
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{section.description}</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                           <strong>Best for:</strong> {section.bestFor}
                         </p>
                       </div>
@@ -360,14 +360,14 @@ export default function StudyPlanPage() {
                         >
                           {section.passRate}%
                         </div>
-                        <div className="text-xs text-[var(--muted)]">Pass Rate</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">Pass Rate</div>
                       </div>
                     </div>
                   </button>
                 )
               )}
             </div>
-            <div className="bg-[var(--card)] rounded-lg p-4 text-sm text-[var(--muted)]">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-sm text-gray-600 dark:text-gray-300">
               <strong>Note:</strong> Discipline sections are only offered during quarterly testing windows (January, April, July, October).
             </div>
           </div>
@@ -376,10 +376,10 @@ export default function StudyPlanPage() {
       case 5:
         return (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-[var(--foreground)]">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Get your personalized study plan
             </h2>
-            <p className="text-[var(--muted)]">
+            <p className="text-gray-600 dark:text-gray-300">
               Enter your email to receive your customized CPA study plan with
               section order, weekly schedule, and study tips.
             </p>
@@ -389,7 +389,7 @@ export default function StudyPlanPage() {
                 placeholder="Enter your email address"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className="w-full p-4 border-2 border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
+                className="w-full p-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:border-[var(--primary)] focus:outline-none transition-colors"
               />
               <button
                 onClick={handleSubmit}
@@ -398,7 +398,7 @@ export default function StudyPlanPage() {
               >
                 {isSubmitting ? "Generating Your Plan..." : "Get My Free Study Plan"}
               </button>
-              <p className="text-sm text-[var(--muted)] text-center">
+              <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                 We respect your privacy. No spam, ever.
               </p>
             </div>
@@ -414,10 +414,10 @@ export default function StudyPlanPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-[var(--foreground)]">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                 Your Personalized CPA Study Plan
               </h2>
-              <p className="text-[var(--muted)] mt-2">
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
                 We&apos;ve also sent this to {formData.email}
               </p>
             </div>
@@ -425,8 +425,8 @@ export default function StudyPlanPage() {
             {studyPlan && (
               <div className="space-y-6">
                 {/* Section Order */}
-                <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Recommended Section Order
                   </h3>
                   <div className="flex flex-wrap items-center justify-center gap-2">
@@ -439,12 +439,12 @@ export default function StudyPlanPage() {
                           >
                             <span className="text-white font-bold text-sm">{section}</span>
                           </div>
-                          <span className="text-xs text-[var(--muted)] mt-1 block">
+                          <span className="text-xs text-gray-500 dark:text-gray-400 mt-1 block">
                             {index === 0 ? "Start" : index === 3 ? "Finish" : `Step ${index + 1}`}
                           </span>
                         </div>
                         {index < studyPlan.sectionOrder.length - 1 && (
-                          <svg className="w-6 h-6 text-[var(--muted)] mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-6 h-6 text-gray-400 dark:text-gray-500 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         )}
@@ -454,12 +454,12 @@ export default function StudyPlanPage() {
                 </div>
 
                 {/* Discipline Section Info */}
-                <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Your Discipline Section: {studyPlan.disciplineInfo.section}
                   </h3>
                   <div className="grid md:grid-cols-3 gap-4 text-center">
-                    <div className="bg-[var(--card)] rounded-lg p-4">
+                    <div className="bg-white dark:bg-gray-600 rounded-lg p-4">
                       <div
                         className={`text-2xl font-bold ${
                           studyPlan.disciplineInfo.passRate >= 70
@@ -471,10 +471,10 @@ export default function StudyPlanPage() {
                       >
                         {studyPlan.disciplineInfo.passRate}%
                       </div>
-                      <div className="text-sm text-[var(--muted)]">Pass Rate</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">Pass Rate</div>
                     </div>
-                    <div className="bg-[var(--card)] rounded-lg p-4 md:col-span-2">
-                      <div className="text-sm text-[var(--foreground)]">
+                    <div className="bg-white dark:bg-gray-600 rounded-lg p-4 md:col-span-2">
+                      <div className="text-sm text-gray-900 dark:text-white">
                         <strong>Testing Windows:</strong> {studyPlan.disciplineInfo.testingWindow}
                       </div>
                     </div>
@@ -482,24 +482,24 @@ export default function StudyPlanPage() {
                 </div>
 
                 {/* Weekly Schedule */}
-                <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Weekly Study Schedule
                   </h3>
-                  <p className="text-[var(--foreground)]">{studyPlan.weeklySchedule}</p>
+                  <p className="text-gray-900 dark:text-white">{studyPlan.weeklySchedule}</p>
                 </div>
 
                 {/* Estimated Completion */}
-                <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Estimated Timeline
                   </h3>
-                  <p className="text-[var(--foreground)]">{studyPlan.estimatedCompletion}</p>
+                  <p className="text-gray-900 dark:text-white">{studyPlan.estimatedCompletion}</p>
                 </div>
 
                 {/* Tips */}
-                <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Study Tips
                   </h3>
                   <ul className="space-y-3">
@@ -508,18 +508,18 @@ export default function StudyPlanPage() {
                         <svg className="w-5 h-5 text-[var(--secondary)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-[var(--foreground)]">{tip}</span>
+                        <span className="text-gray-900 dark:text-white">{tip}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 {/* CTA */}
-                <div className="bg-[var(--card)] p-6 rounded-xl border border-[var(--border)] text-center">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+                <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600 text-center">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Ready to start studying?
                   </h3>
-                  <p className="text-[var(--muted)] mb-4">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
                     Track your progress and unlock achievements with your CPA Academy dashboard.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -542,16 +542,16 @@ export default function StudyPlanPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--card)] py-12">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Progress bar */}
         {step <= totalSteps && (
           <div className="mb-8">
-            <div className="flex justify-between text-sm text-[var(--muted)] mb-2">
+            <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
               <span>Step {step} of {totalSteps}</span>
               <span>{Math.round((step / totalSteps) * 100)}% complete</span>
             </div>
-            <div className="h-2 bg-[var(--border)] rounded-full overflow-hidden">
+            <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
               <div
                 className="h-full bg-[var(--primary)] transition-all duration-300"
                 style={{ width: `${(step / totalSteps) * 100}%` }}
@@ -564,7 +564,7 @@ export default function StudyPlanPage() {
         {step > 1 && step <= totalSteps && (
           <button
             onClick={() => setStep(step - 1)}
-            className="flex items-center text-[var(--muted)] hover:text-[var(--foreground)] mb-6 transition-colors"
+            className="flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-6 transition-colors"
           >
             <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -574,12 +574,12 @@ export default function StudyPlanPage() {
         )}
 
         {/* Content */}
-        <div className="bg-white rounded-2xl p-8 shadow-sm border border-[var(--border)]">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-200 dark:border-gray-700">
           {renderStepContent()}
         </div>
 
         {/* Trust signal */}
-        <p className="text-center text-sm text-[var(--muted)] mt-6">
+        <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
           Study planning tools developed by an accounting graduate
         </p>
       </div>

@@ -140,7 +140,7 @@ export default function StudyHoursCalculatorPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--card)]">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -156,15 +156,15 @@ export default function StudyHoursCalculatorPage() {
       {/* Calculator Section */}
       <section className="py-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[var(--border)]">
-            <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-200 dark:border-gray-700">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Calculate Your Study Schedule
             </h2>
 
             <div className="space-y-6">
               {/* Section Selection */}
               <div>
-                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
                   Which section are you studying for?
                 </label>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -186,7 +186,7 @@ export default function StudyHoursCalculatorPage() {
 
               {/* Exam Date */}
               <div>
-                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
                   When is your exam date?
                 </label>
                 <input
@@ -194,19 +194,19 @@ export default function StudyHoursCalculatorPage() {
                   value={examDate}
                   onChange={(e) => setExamDate(e.target.value)}
                   min={new Date().toISOString().split("T")[0]}
-                  className="w-full px-4 py-3 border-2 border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
                 />
               </div>
 
               {/* Hours Per Week */}
               <div>
-                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
                   How many hours per week can you study?
                 </label>
                 <select
                   value={hoursPerWeek}
                   onChange={(e) => setHoursPerWeek(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
                 >
                   <option value="">Select hours per week</option>
                   <option value="10">10 hours (light schedule)</option>
@@ -220,7 +220,7 @@ export default function StudyHoursCalculatorPage() {
 
               {/* Background */}
               <div>
-                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
                   What&apos;s your accounting background?
                 </label>
                 <div className="space-y-2">
@@ -239,7 +239,7 @@ export default function StudyHoursCalculatorPage() {
                       }`}
                     >
                       <span className="font-medium">{option.label}</span>
-                      <span className={`text-sm ml-2 ${accountingBackground === option.value ? "text-white/80" : "text-[var(--muted)]"}`}>- {option.desc}</span>
+                      <span className={`text-sm ml-2 ${accountingBackground === option.value ? "text-white/80" : "text-gray-600 dark:text-gray-400"}`}>- {option.desc}</span>
                     </button>
                   ))}
                 </div>
@@ -277,24 +277,24 @@ export default function StudyHoursCalculatorPage() {
               </div>
 
               {/* Detailed Breakdown */}
-              <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
-                <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Your {selectedSection} Study Plan
                 </h3>
 
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">Recommended Study Hours</span>
-                    <span className="font-semibold text-[var(--foreground)]">
+                  <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">Recommended Study Hours</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">
                       {sectionData[selectedSection].recommendedHours} hours
                     </span>
                   </div>
 
-                  <div className="flex justify-between items-center py-3 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">
+                  <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">
                       Adjusted for Your Background
                     </span>
-                    <span className="font-semibold text-[var(--foreground)]">
+                    <span className="font-semibold text-gray-900 dark:text-white">
                       {accountingBackground === "strong"
                         ? Math.round(sectionData[selectedSection].recommendedHours * 0.8)
                         : accountingBackground === "limited"
@@ -304,23 +304,23 @@ export default function StudyHoursCalculatorPage() {
                     </span>
                   </div>
 
-                  <div className="flex justify-between items-center py-3 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">Weeks Needed</span>
-                    <span className="font-semibold text-[var(--foreground)]">
+                  <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">Weeks Needed</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">
                       {result.weeksNeeded} weeks
                     </span>
                   </div>
 
-                  <div className="flex justify-between items-center py-3 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">Average Hours Per Day</span>
-                    <span className="font-semibold text-[var(--foreground)]">
+                  <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">Average Hours Per Day</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">
                       {result.hoursPerDay.toFixed(1)} hours
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-[var(--muted)]">Section Pass Rate</span>
-                    <span className="font-semibold text-[var(--foreground)]">
+                    <span className="text-gray-600 dark:text-gray-400">Section Pass Rate</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">
                       {sectionData[selectedSection].passRate}%
                     </span>
                   </div>
@@ -328,8 +328,8 @@ export default function StudyHoursCalculatorPage() {
               </div>
 
               {/* Section Comparison */}
-              <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
-                <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   All Sections Comparison
                 </h3>
                 <div className="space-y-3">
@@ -344,8 +344,8 @@ export default function StudyHoursCalculatorPage() {
                         </div>
                         <div className="flex-1">
                           <div className="flex justify-between items-center mb-1">
-                            <span className="font-medium text-[var(--foreground)]">{section.name}</span>
-                            <span className="text-sm text-[var(--muted)]">{section.recommendedHours}h</span>
+                            <span className="font-medium text-gray-900 dark:text-white">{section.name}</span>
+                            <span className="text-sm text-gray-600 dark:text-gray-400">{section.recommendedHours}h</span>
                           </div>
                           <div className="w-full bg-[var(--border)] rounded-full h-2">
                             <div
@@ -364,11 +364,11 @@ export default function StudyHoursCalculatorPage() {
               </div>
 
               {/* CTA */}
-              <div className="bg-[var(--card)] rounded-xl p-6 border border-[var(--border)] text-center">
-                <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+              <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-700 text-center">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   Need a Complete Study Plan?
                 </h3>
-                <p className="text-[var(--muted)] mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Get a personalized study schedule for all four sections based on your unique situation.
                 </p>
                 <Link href="/study-plan" className="btn-primary inline-block">
@@ -381,21 +381,21 @@ export default function StudyHoursCalculatorPage() {
       </section>
 
       {/* Info Section */}
-      <section className="py-12 bg-white border-t border-[var(--border)]">
+      <section className="py-12 bg-white border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             How We Calculate Study Hours
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 Industry Recommendations
               </h3>
-              <p className="text-[var(--foreground)] mb-4">
+              <p className="text-gray-900 dark:text-white mb-4">
                 Our study hour estimates are based on data from CPA review courses and successful candidates:
               </p>
-              <ul className="space-y-2 text-[var(--foreground)]">
+              <ul className="space-y-2 text-gray-900 dark:text-white">
                 <li>• <strong>FAR:</strong> 300-400 hours (largest content area)</li>
                 <li>• <strong>AUD:</strong> 250-300 hours</li>
                 <li>• <strong>REG:</strong> 250-300 hours</li>
@@ -403,11 +403,11 @@ export default function StudyHoursCalculatorPage() {
               </ul>
             </div>
 
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 Factors That Affect Your Timeline
               </h3>
-              <ul className="space-y-3 text-[var(--foreground)]">
+              <ul className="space-y-3 text-gray-900 dark:text-white">
                 <li className="flex items-start space-x-2">
                   <svg className="w-5 h-5 text-[var(--secondary)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

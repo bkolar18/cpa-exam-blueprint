@@ -52,7 +52,7 @@ export default function StateSelector({ states }: StateSelectorProps) {
           onClick={() => setIsOpen(!isOpen)}
           className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-xl text-white text-lg font-medium text-left cursor-pointer focus:outline-none focus:border-white/50 transition-all hover:bg-white/20 flex items-center justify-between"
         >
-          <span className="text-white/80">Select your state...</span>
+          <span className="text-white/80">Select your state or territory...</span>
           <svg
             className={`w-6 h-6 text-white transition-transform ${isOpen ? "rotate-180" : ""}`}
             fill="none"
@@ -110,7 +110,7 @@ export default function StateSelector({ states }: StateSelectorProps) {
         )}
       </div>
       <p className="text-sm text-white/60 mt-3">
-        Or scroll down to browse all {states.length} states
+        Or scroll down to browse all {states.length} jurisdictions
       </p>
     </div>
   );

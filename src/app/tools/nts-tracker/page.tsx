@@ -120,7 +120,7 @@ export default function NTSTrackerPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--card)]">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -136,24 +136,24 @@ export default function NTSTrackerPage() {
       {/* Calculator Section */}
       <section className="py-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[var(--border)]">
-            <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm border border-gray-200 dark:border-gray-700">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               When does your NTS expire?
             </h2>
 
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
                   NTS Issue Date
                 </label>
-                <p className="text-sm text-[var(--muted)] mb-3">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   Enter the date your Notice to Schedule was issued (found on your NTS document)
                 </p>
                 <input
                   type="date"
                   value={ntsDate}
                   onChange={(e) => setNtsDate(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
                 />
               </div>
 
@@ -214,32 +214,32 @@ export default function NTSTrackerPage() {
               </div>
 
               {/* Key Dates */}
-              <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
-                <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Important Dates
                 </h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">NTS Issued</span>
-                    <span className="font-medium text-[var(--foreground)]">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">NTS Issued</span>
+                    <span className="font-medium text-gray-900 dark:text-white">
                       {formatDate(new Date(ntsDate))}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">30 Days Before</span>
-                    <span className="font-medium text-[var(--foreground)]">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">30 Days Before</span>
+                    <span className="font-medium text-gray-900 dark:text-white">
                       {formatDate(new Date(expirationDate.getTime() - 30 * 24 * 60 * 60 * 1000))}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-[var(--border)]">
-                    <span className="text-[var(--muted)]">14 Days Before</span>
-                    <span className="font-medium text-[var(--foreground)]">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                    <span className="text-gray-600 dark:text-gray-400">14 Days Before</span>
+                    <span className="font-medium text-gray-900 dark:text-white">
                       {formatDate(new Date(expirationDate.getTime() - 14 * 24 * 60 * 60 * 1000))}
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-2">
-                    <span className="text-[var(--muted)]">7 Days Before</span>
-                    <span className="font-medium text-[var(--foreground)]">
+                    <span className="text-gray-600 dark:text-gray-400">7 Days Before</span>
+                    <span className="font-medium text-gray-900 dark:text-white">
                       {formatDate(new Date(expirationDate.getTime() - 7 * 24 * 60 * 60 * 1000))}
                     </span>
                   </div>
@@ -248,11 +248,11 @@ export default function NTSTrackerPage() {
 
               {/* Email Subscription */}
               {!isSubscribed ? (
-                <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
-                  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Get Expiration Reminders
                   </h3>
-                  <p className="text-[var(--muted)] mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
                     We&apos;ll email you at 30, 14, and 7 days before your NTS expires.
                   </p>
                   <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
@@ -261,7 +261,7 @@ export default function NTSTrackerPage() {
                       placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 px-4 py-3 border-2 border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none"
+                      className="flex-1 px-4 py-3 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:border-[var(--primary)] focus:outline-none"
                       required
                     />
                     <button
@@ -282,8 +282,8 @@ export default function NTSTrackerPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-[var(--foreground)]">Reminders Set!</p>
-                      <p className="text-sm text-[var(--muted)]">
+                      <p className="font-semibold text-gray-900 dark:text-white">Reminders Set!</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
                         We&apos;ll notify you before your NTS expires.
                       </p>
                     </div>
@@ -296,36 +296,36 @@ export default function NTSTrackerPage() {
       </section>
 
       {/* Info Section */}
-      <section className="py-12 bg-white border-t border-[var(--border)]">
+      <section className="py-12 bg-white border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             About Your Notice to Schedule (NTS)
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 What is an NTS?
               </h3>
-              <p className="text-[var(--foreground)]">
+              <p className="text-gray-900 dark:text-white">
                 Your Notice to Schedule (NTS) is authorization from your state board to take the CPA exam. Once issued, you have <strong>6 months</strong> to schedule and take your exam section.
               </p>
             </div>
 
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 What happens if it expires?
               </h3>
-              <p className="text-[var(--foreground)]">
+              <p className="text-gray-900 dark:text-white">
                 If your NTS expires before you take the exam, you&apos;ll need to <strong>reapply and pay the fees again</strong>. There are no refunds for unused NTS periods.
               </p>
             </div>
 
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 Best Practices
               </h3>
-              <ul className="space-y-2 text-[var(--foreground)]">
+              <ul className="space-y-2 text-gray-900 dark:text-white">
                 <li className="flex items-start space-x-2">
                   <svg className="w-5 h-5 text-[var(--secondary)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -347,11 +347,11 @@ export default function NTSTrackerPage() {
               </ul>
             </div>
 
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 NTS Fees by State
               </h3>
-              <p className="text-[var(--foreground)] mb-3">
+              <p className="text-gray-900 dark:text-white mb-3">
                 NTS fees vary by state, typically ranging from $50-$200 per section. Check your state board for exact fees.
               </p>
               <Link
@@ -367,7 +367,7 @@ export default function NTSTrackerPage() {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-[var(--muted)] mb-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               Ready to create your study plan?
             </p>
             <Link href="/study-plan" className="btn-primary inline-block">

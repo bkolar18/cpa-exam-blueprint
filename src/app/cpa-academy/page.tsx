@@ -117,10 +117,10 @@ export default function CPAAcademyPage() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Everything You Need to Pass
             </h2>
-            <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Our free dashboard gives you all the tools to stay organized, motivated,
               and on track to becoming a CPA.
             </p>
@@ -130,15 +130,15 @@ export default function CPAAcademyPage() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 border border-[var(--border)] hover:shadow-lg transition-shadow"
+                className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow"
               >
                 <div className="w-14 h-14 bg-[var(--primary)]/10 rounded-xl flex items-center justify-center text-[var(--primary)] mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[var(--muted)]">
+                <p className="text-gray-600 dark:text-gray-300">
                   {feature.description}
                 </p>
               </div>
@@ -148,14 +148,14 @@ export default function CPAAcademyPage() {
       </section>
 
       {/* Screenshot/Preview Section */}
-      <section className="py-20 bg-[var(--card)]">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[var(--foreground)] mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Stay Motivated with Gamification
               </h2>
-              <p className="text-lg text-[var(--muted)] mb-6">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                 Studying for the CPA exam is a marathon, not a sprint. Our achievement
                 system keeps you engaged with badges, streaks, and milestones that
                 celebrate your progress.
@@ -167,7 +167,7 @@ export default function CPAAcademyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-[var(--foreground)]">Earn badges for study hour milestones</span>
+                  <span className="text-gray-900 dark:text-white">Earn badges for study hour milestones</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -175,7 +175,7 @@ export default function CPAAcademyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-[var(--foreground)]">Unlock hidden achievements for special accomplishments</span>
+                  <span className="text-gray-900 dark:text-white">Unlock hidden achievements for special accomplishments</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -183,7 +183,7 @@ export default function CPAAcademyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-[var(--foreground)]">Build and maintain study streaks</span>
+                  <span className="text-gray-900 dark:text-white">Build and maintain study streaks</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -191,42 +191,42 @@ export default function CPAAcademyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-[var(--foreground)]">Unlock exclusive rewards as you progress</span>
+                  <span className="text-gray-900 dark:text-white">Unlock exclusive rewards as you progress</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-xl border border-[var(--border)] p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 shadow-lg">
               <div className="space-y-4">
                 {/* Mock achievement cards */}
-                <div className="flex items-center space-x-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                <div className="flex items-center space-x-4 p-4 bg-green-50 dark:bg-green-900/30 rounded-lg border border-green-200 dark:border-green-800">
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-xl">
                     ✓
                   </div>
                   <div>
-                    <div className="font-bold text-green-700">First Steps</div>
-                    <div className="text-sm text-green-600">Log your first study session</div>
+                    <div className="font-bold text-green-700 dark:text-green-300">First Steps</div>
+                    <div className="text-sm text-green-600 dark:text-green-400">Log your first study session</div>
                   </div>
-                  <div className="ml-auto font-bold text-green-600">+15 pts</div>
+                  <div className="ml-auto font-bold text-green-600 dark:text-green-400">+15 pts</div>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg border border-gray-200 opacity-60">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-xl">
+                <div className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 opacity-60">
+                  <div className="w-12 h-12 bg-gray-300 dark:bg-gray-500 rounded-full flex items-center justify-center text-gray-500 dark:text-gray-300 text-xl">
                     🔒
                   </div>
                   <div>
-                    <div className="font-bold text-gray-600">Century Club</div>
-                    <div className="text-sm text-gray-500">Log 100 total study hours</div>
+                    <div className="font-bold text-gray-600 dark:text-gray-300">Century Club</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">Log 100 total study hours</div>
                   </div>
-                  <div className="ml-auto font-bold text-gray-400">+30 pts</div>
+                  <div className="ml-auto font-bold text-gray-400 dark:text-gray-500">+30 pts</div>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg border border-gray-200 opacity-60">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-xl">
+                <div className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 opacity-60">
+                  <div className="w-12 h-12 bg-gray-300 dark:bg-gray-500 rounded-full flex items-center justify-center text-gray-500 dark:text-gray-300 text-xl">
                     🔒
                   </div>
                   <div>
-                    <div className="font-bold text-gray-600">Night Owl</div>
-                    <div className="text-sm text-gray-500 italic">???</div>
+                    <div className="font-bold text-gray-600 dark:text-gray-300">Night Owl</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 italic">???</div>
                   </div>
-                  <div className="ml-auto font-bold text-gray-400">+15 pts</div>
+                  <div className="ml-auto font-bold text-gray-400 dark:text-gray-500">+15 pts</div>
                 </div>
               </div>
             </div>
@@ -237,10 +237,10 @@ export default function CPAAcademyPage() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-lg text-[var(--muted)] mb-8">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             Join thousands of CPA candidates using CPA Academy to stay organized and motivated.
           </p>
           {!loading && (
@@ -268,7 +268,7 @@ export default function CPAAcademyPage() {
               )}
             </>
           )}
-          <p className="mt-4 text-sm text-[var(--muted)]">
+          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
             100% free. No credit card required.
           </p>
         </div>

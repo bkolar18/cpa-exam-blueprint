@@ -104,7 +104,7 @@ export default function ScoreReleaseCalendarPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--card)]">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,11 +152,11 @@ export default function ScoreReleaseCalendarPage() {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-8 border-b border-[var(--border)]">
+      <section className="py-8 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Next Core Release */}
-            <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,8 +164,8 @@ export default function ScoreReleaseCalendarPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[var(--foreground)]">Next Core Section Release</h3>
-                  <p className="text-sm text-[var(--muted)]">FAR, AUD, REG</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Next Core Section Release</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">FAR, AUD, REG</p>
                 </div>
               </div>
               {nextCoreRelease && (
@@ -176,7 +176,7 @@ export default function ScoreReleaseCalendarPage() {
             </div>
 
             {/* Next Discipline Release */}
-            <div className="bg-white rounded-xl p-6 border border-[var(--border)]">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-10 h-10 bg-[var(--secondary)] rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,8 +184,8 @@ export default function ScoreReleaseCalendarPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[var(--foreground)]">Next Discipline Release</h3>
-                  <p className="text-sm text-[var(--muted)]">BAR, TCP, ISC</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Next Discipline Release</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">BAR, TCP, ISC</p>
                 </div>
               </div>
               {nextDisciplineRelease && (
@@ -194,7 +194,7 @@ export default function ScoreReleaseCalendarPage() {
                     {formatDate(nextDisciplineRelease.date)}
                   </p>
                   {nextDisciplineRelease.testingWindow && (
-                    <p className="text-sm text-[var(--muted)] mt-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                       {nextDisciplineRelease.testingWindow}
                     </p>
                   )}
@@ -206,14 +206,14 @@ export default function ScoreReleaseCalendarPage() {
       </section>
 
       {/* Email Subscription */}
-      <section className="py-8 bg-white border-b border-[var(--border)]">
+      <section className="py-8 bg-white border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           {!isSubscribed ? (
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                 Get Score Release Reminders
               </h2>
-              <p className="text-[var(--muted)] mb-6">
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
                 We&apos;ll email you 3 days before each score release so you&apos;re never caught off guard.
               </p>
               <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -222,7 +222,7 @@ export default function ScoreReleaseCalendarPage() {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 border-2 border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none"
+                  className="flex-1 px-4 py-3 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:border-[var(--primary)] focus:outline-none"
                   required
                 />
                 <button
@@ -233,7 +233,7 @@ export default function ScoreReleaseCalendarPage() {
                   {isSubmitting ? "Subscribing..." : "Notify Me"}
                 </button>
               </form>
-              <p className="text-sm text-[var(--muted)] mt-3">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-3">
                 No spam. Unsubscribe anytime.
               </p>
             </div>
@@ -244,10 +244,10 @@ export default function ScoreReleaseCalendarPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                 You&apos;re All Set!
               </h2>
-              <p className="text-[var(--muted)]">
+              <p className="text-gray-600 dark:text-gray-400">
                 We&apos;ll notify you before each score release date.
               </p>
             </div>
@@ -259,7 +259,7 @@ export default function ScoreReleaseCalendarPage() {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-            <h2 className="text-2xl font-bold text-[var(--foreground)]">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Upcoming Score Releases
             </h2>
             <div className="flex space-x-2">
@@ -274,7 +274,7 @@ export default function ScoreReleaseCalendarPage() {
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     filter === option.value
                       ? "bg-[var(--primary)] text-white"
-                      : "bg-white text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--card)]"
+                      : "bg-white text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:bg-gray-700"
                   }`}
                 >
                   {option.label}
@@ -287,7 +287,7 @@ export default function ScoreReleaseCalendarPage() {
             {upcomingReleases.map((release, index) => (
               <div
                 key={`${release.date}-${release.type}`}
-                className={`bg-white rounded-xl p-6 border border-[var(--border)] ${
+                className={`bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 ${
                   index === 0 ? "ring-2 ring-[var(--primary)]" : ""
                 }`}
               >
@@ -308,16 +308,16 @@ export default function ScoreReleaseCalendarPage() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[var(--foreground)]">
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
                         {formatDate(release.date)}
                       </h3>
-                      <p className="text-sm text-[var(--muted)]">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
                         {release.type === "core"
                           ? "Core Section Release"
                           : "Discipline Section Release"}
                       </p>
                       {release.testingWindow && (
-                        <p className="text-sm text-[var(--muted)]">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           {release.testingWindow}
                         </p>
                       )}
@@ -339,7 +339,7 @@ export default function ScoreReleaseCalendarPage() {
                   </div>
                 </div>
                 {index === 0 && (
-                  <div className="mt-4 pt-4 border-t border-[var(--border)]">
+                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                     <span className="inline-flex items-center text-sm text-[var(--primary)] font-medium">
                       <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
@@ -354,7 +354,7 @@ export default function ScoreReleaseCalendarPage() {
 
           {upcomingReleases.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-[var(--muted)]">
+              <p className="text-gray-600 dark:text-gray-400">
                 No upcoming releases found for the selected filter.
               </p>
             </div>
@@ -363,18 +363,18 @@ export default function ScoreReleaseCalendarPage() {
       </section>
 
       {/* Info Section */}
-      <section className="py-12 bg-white border-t border-[var(--border)]">
+      <section className="py-12 bg-white border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Understanding CPA Exam Score Releases
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
                 Core Sections (FAR, AUD, REG)
               </h3>
-              <ul className="space-y-3 text-[var(--foreground)]">
+              <ul className="space-y-3 text-gray-900 dark:text-white">
                 <li className="flex items-start space-x-2">
                   <svg className="w-5 h-5 text-[var(--secondary)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -396,11 +396,11 @@ export default function ScoreReleaseCalendarPage() {
               </ul>
             </div>
 
-            <div className="bg-[var(--card)] rounded-xl p-6">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-[var(--secondary)] mb-4">
                 Discipline Sections (BAR, TCP, ISC)
               </h3>
-              <ul className="space-y-3 text-[var(--foreground)]">
+              <ul className="space-y-3 text-gray-900 dark:text-white">
                 <li className="flex items-start space-x-2">
                   <svg className="w-5 h-5 text-[var(--primary)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -424,7 +424,7 @@ export default function ScoreReleaseCalendarPage() {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-[var(--muted)] mb-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               Ready to start preparing for your exam?
             </p>
             <Link href="/study-plan" className="btn-primary inline-block">
