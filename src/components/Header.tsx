@@ -10,6 +10,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sectionsOpen, setSectionsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  // Mobile accordion states
+  const [mobileExamOpen, setMobileExamOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   const sections = [
     { name: "FAR", description: "Financial Accounting & Reporting", href: "/sections/far" },
@@ -239,92 +242,106 @@ export default function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-[var(--border)]">
-            <div className="flex flex-col space-y-4">
-              {/* Exam Sections */}
-              <div className="space-y-2">
-                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
-                  Exam Sections
-                </span>
-                {sections.map((section) => (
-                  <Link
-                    key={section.name}
-                    href={section.href}
-                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {section.name} - {section.description}
-                  </Link>
-                ))}
-              </div>
-
-              {/* Study Hub */}
-              <div className="space-y-2">
-                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
-                  Study Hub
-                </span>
-                <Link
-                  href="/cpa-academy"
-                  className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
-                  onClick={() => setMobileMenuOpen(false)}
+            <div className="flex flex-col space-y-1">
+              {/* Exam Sections - Collapsible */}
+              <div>
+                <button
+                  onClick={() => setMobileExamOpen(!mobileExamOpen)}
+                  className="w-full flex items-center justify-between py-3 text-[var(--foreground)] font-medium"
                 >
-                  CPA Academy
-                </Link>
-              </div>
-
-              {/* Free Tools */}
-              <div className="space-y-2">
-                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
-                  Free Tools
-                </span>
-                {resources.tools.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <span>Exam Sections</span>
+                  <svg
+                    className={`w-5 h-5 transition-transform ${mobileExamOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    {item.name}
-                  </Link>
-                ))}
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {mobileExamOpen && (
+                  <div className="pb-2 pl-4 space-y-2">
+                    {sections.map((section) => (
+                      <Link
+                        key={section.name}
+                        href={section.href}
+                        className="block py-1 text-[var(--muted-foreground)] hover:text-[var(--primary)]"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span className="font-medium text-[var(--foreground)]">{section.name}</span>
+                        <span className="text-sm"> - {section.description}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
 
-              {/* Guides */}
-              <div className="space-y-2">
-                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
-                  Guides
-                </span>
-                {resources.guides.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
-                    onClick={() => setMobileMenuOpen(false)}
+              {/* Resources - Collapsible */}
+              <div>
+                <button
+                  onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+                  className="w-full flex items-center justify-between py-3 text-[var(--foreground)] font-medium"
+                >
+                  <span>Resources</span>
+                  <svg
+                    className={`w-5 h-5 transition-transform ${mobileResourcesOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    {item.name}
-                  </Link>
-                ))}
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {mobileResourcesOpen && (
+                  <div className="pb-2 pl-4 space-y-2">
+                    <Link
+                      href="/cpa-academy"
+                      className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      CPA Academy
+                    </Link>
+                    <div className="pt-2 border-t border-[var(--border)]">
+                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Tools</span>
+                      {resources.tools.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="pt-2 border-t border-[var(--border)]">
+                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Guides</span>
+                      {resources.guides.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <Link
+                      href="/blog"
+                      className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Blog
+                    </Link>
+                  </div>
+                )}
               </div>
 
-              {/* Learn */}
-              <div className="space-y-2">
-                <span className="text-[var(--primary)] text-sm font-bold uppercase tracking-wider">
-                  Learn
-                </span>
-                {resources.learn.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block pl-4 text-[var(--foreground)] hover:text-[var(--primary)]"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-
+              {/* Direct links */}
               <Link
                 href="/about"
-                className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
+                className="py-3 text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
@@ -335,7 +352,7 @@ export default function Header() {
                   {user ? (
                     <Link
                       href="/dashboard"
-                      className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium flex items-center space-x-2"
+                      className="py-3 text-[var(--foreground)] hover:text-[var(--primary)] font-medium flex items-center space-x-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -346,7 +363,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href="/login"
-                      className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
+                      className="py-3 text-[var(--foreground)] hover:text-[var(--primary)] font-medium"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Log In / Sign Up
@@ -355,13 +372,15 @@ export default function Header() {
                 </>
               )}
 
-              <Link
-                href="/study-plan"
-                className="btn-primary text-center"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Build My Study Plan
-              </Link>
+              <div className="pt-2">
+                <Link
+                  href="/study-plan"
+                  className="btn-primary text-center block"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Build My Study Plan
+                </Link>
+              </div>
             </div>
           </div>
         )}
