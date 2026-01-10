@@ -159,16 +159,16 @@ export default function AboutPage() {
                 All tiers include unlimited access until you pass - no time limits, no pressure:
               </p>
               <ul className="space-y-2 text-green-700 dark:text-green-400">
-                <li className="flex items-start">
-                  <span className="font-bold w-20 flex-shrink-0">Free:</span>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold w-[68px] flex-shrink-0">Free:</span>
                   <span>50 questions for FAR section</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="font-bold w-20 flex-shrink-0">Standard:</span>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold w-[68px] flex-shrink-0">Standard:</span>
                   <span>3,000+ questions across all 4 core sections (FAR, AUD, REG, TCP)</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="font-bold w-20 flex-shrink-0">Pro:</span>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold w-[68px] flex-shrink-0">Pro:</span>
                   <span>6,000+ questions across all 6 sections including discipline sections (BAR, ISC)</span>
                 </li>
               </ul>
