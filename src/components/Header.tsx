@@ -48,13 +48,18 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Meridian CPA Review"
-              width={40}
-              height={40}
-              className="w-10 h-10"
+              width={44}
+              height={44}
+              className="w-11 h-11"
             />
-            <span className="text-xl font-bold text-[var(--primary)]">
-              Meridian CPA Review
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold bg-gradient-to-r from-[var(--primary)] to-blue-600 bg-clip-text text-transparent">
+                Meridian
+              </span>
+              <span className="text-xs font-semibold text-[var(--muted)] -mt-0.5 tracking-wide">
+                CPA Review
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

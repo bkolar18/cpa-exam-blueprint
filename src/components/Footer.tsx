@@ -11,11 +11,14 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="Meridian CPA Review"
-              width={24}
-              height={24}
-              className="w-6 h-6"
+              width={28}
+              height={28}
+              className="w-7 h-7"
             />
-            <span className="text-sm font-semibold">Meridian CPA Review</span>
+            <div className="flex flex-col">
+              <span className="text-sm font-bold text-white">Meridian</span>
+              <span className="text-xs text-gray-400 -mt-0.5">CPA Review</span>
+            </div>
           </div>
 
           {/* Quick Links */}
