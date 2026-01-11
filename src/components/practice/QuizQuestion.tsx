@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from"react";
+import { useState, useEffect } from"react";
 import { PracticeQuestion } from"@/lib/data/practice-questions";
+import { useAuth } from"@/components/auth/AuthProvider";
+import { createClient } from"@/lib/supabase/client";
 import FeedbackButton from"./FeedbackButton";
 
 interface QuizQuestionProps {
@@ -21,8 +23,81 @@ export default function QuizQuestion({
  onNext,
  isLast,
 }: QuizQuestionProps) {
+ const { user } = useAuth();
+ const supabase = createClient();
  const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | null>(null);
  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+ // Notes state
+ const [showNotes, setShowNotes] = useState(false);
+ const [note, setNote] = useState("");
+ const [savedNote, setSavedNote] = useState("");
+ const [isSaving, setIsSaving] = useState(false);
+ const [isLoadingNote, setIsLoadingNote] = useState(false);
+
+ // Load existing note when question changes or after submission
+ useEffect(() => {
+ if (!user || !supabase || !hasSubmitted) return;
+
+ const loadNote = async () => {
+ setIsLoadingNote(true);
+ try {
+ const { data } = await supabase
+ .from('question_notes')
+ .select('note')
+ .eq('user_id', user.id)
+ .eq('question_id', question.id)
+ .single();
+
+ if (data) {
+ setNote(data.note);
+ setSavedNote(data.note);
+ }
+ } catch {
+ // No note exists
+ } finally {
+ setIsLoadingNote(false);
+ }
+ };
+
+ loadNote();
+ }, [user, supabase, question.id, hasSubmitted]);
+
+ // Reset state when question changes
+ useEffect(() => {
+ setNote("");
+ setSavedNote("");
+ setShowNotes(false);
+ }, [question.id]);
+
+ const handleSaveNote = async () => {
+ if (!user || !supabase || !note.trim()) return;
+
+ setIsSaving(true);
+ try {
+ await supabase
+ .from('question_notes')
+ .upsert({
+ user_id: user.id,
+ question_id: question.id,
+ section: question.section,
+ topic: question.topic,
+ subtopic: question.subtopic || null,
+ note: note.trim(),
+ is_starred: false,
+ confidence: null,
+ updated_at: new Date().toISOString(),
+ }, {
+ onConflict: 'user_id,question_id'
+ });
+
+ setSavedNote(note.trim());
+ } catch (error) {
+ console.error('Failed to save note:', error);
+ } finally {
+ setIsSaving(false);
+ }
+ };
 
  const handleSelectAnswer = (answer: 'A' | 'B' | 'C' | 'D') => {
  if (hasSubmitted) return;
@@ -173,6 +248,68 @@ export default function QuizQuestion({
  <p className="text-sm text-[var(--primary)] font-medium">
  <span className="font-bold">Tip:</span> {question.tip}
  </p>
+ </div>
+ )}
+
+ {/* Quick Notes Section */}
+ {user && (
+ <div className="mt-4 pt-4 border-t border-[var(--border)]">
+ {!showNotes ? (
+ <button
+ onClick={() => setShowNotes(true)}
+ className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200"
+ >
+ <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+ </svg>
+ {savedNote ? 'View/Edit Note' : 'Add Note'}
+ {savedNote && (
+ <span className="text-green-600 dark:text-green-400 text-xs">(saved)</span>
+ )}
+ </button>
+ ) : (
+ <div className="space-y-3">
+ <div className="flex items-center justify-between">
+ <span className="text-sm font-medium text-[var(--foreground)] flex items-center gap-2">
+ <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+ </svg>
+ Your Note
+ </span>
+ <button
+ onClick={() => setShowNotes(false)}
+ className="text-xs text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+ >
+ Hide
+ </button>
+ </div>
+ {isLoadingNote ? (
+ <div className="text-sm text-gray-500">Loading...</div>
+ ) : (
+ <>
+ <textarea
+ value={note}
+ onChange={(e) => setNote(e.target.value)}
+ placeholder="Add a note about this question (rules, formulas, reminders)..."
+ className="w-full p-3 text-sm border border-[var(--border)] rounded-lg bg-white dark:bg-[var(--card-hover)] text-[var(--foreground)] placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+ rows={2}
+ />
+ <div className="flex items-center justify-between">
+ <span className="text-xs text-gray-500 dark:text-gray-400">
+ Notes are saved to your My Notes hub
+ </span>
+ <button
+ onClick={handleSaveNote}
+ disabled={isSaving || !note.trim() || note.trim() === savedNote}
+ className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+ >
+ {isSaving ? 'Saving...' : savedNote ? 'Update Note' : 'Save Note'}
+ </button>
+ </div>
+ </>
+ )}
+ </div>
+ )}
  </div>
  )}
 
