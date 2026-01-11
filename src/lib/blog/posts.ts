@@ -29,7 +29,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     slug: realSlug,
     title: data.title || '',
     description: data.description || '',
-    author: data.author || 'CPA Exam Blueprint Team',
+    author: data.author || 'Meridian CPA Review Team',
     publishedAt: data.publishedAt || new Date().toISOString(),
     updatedAt: data.updatedAt,
     category: data.category || 'study-tips',

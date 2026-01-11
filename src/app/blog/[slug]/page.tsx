@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${post.title} | CPA Exam Blueprint`,
+    title: `${post.title} | Meridian CPA Review`,
     description: post.description,
     openGraph: {
       title: post.title,

@@ -1,7 +1,7 @@
 import SectionPage from "@/components/SectionPage";
 
 export const metadata = {
-  title: "FAR Section Guide | CPA Exam Blueprint",
+  title: "FAR Section Guide | Meridian CPA Review",
   description: "Master the FAR (Financial Accounting & Reporting) section of the CPA exam with study strategies, key topics, and practical tips.",
 };
 

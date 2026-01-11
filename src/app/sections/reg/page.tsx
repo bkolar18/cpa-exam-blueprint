@@ -1,7 +1,7 @@
 import SectionPage from "@/components/SectionPage";
 
 export const metadata = {
-  title: "REG Section Guide | CPA Exam Blueprint",
+  title: "REG Section Guide | Meridian CPA Review",
   description: "Master the REG (Regulation) section of the CPA exam with study strategies, key topics, and practical tips.",
 };
 

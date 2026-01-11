@@ -1,7 +1,7 @@
 import SectionPage from "@/components/SectionPage";
 
 export const metadata = {
-  title: "AUD Section Guide | CPA Exam Blueprint",
+  title: "AUD Section Guide | Meridian CPA Review",
   description: "Master the AUD (Auditing & Attestation) section of the CPA exam with study strategies, key topics, and practical tips.",
 };
 

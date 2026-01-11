@@ -416,7 +416,7 @@ export function generateSegmentEmailHtml(email: SegmentEmail): string {
       ${ctaHtml}
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint — Affordable CPA exam study tools</p>
+      <p>Meridian CPA Review — Affordable CPA exam study tools</p>
       <p><a href="https://cpaexamblueprint.com">cpaexamblueprint.com</a></p>
     </div>
   </div>

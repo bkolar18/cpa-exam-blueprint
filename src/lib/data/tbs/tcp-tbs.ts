@@ -1445,9 +1445,9 @@ export const tcpIncomeTimingTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "dropdown",
-        correctOptionId: "opt-pay-current",
+        correctOptionId: "opt-pay-next",
       },
-      explanation: "Deduct at 32% now rather than 35% later? No - defer to higher bracket year",
+      explanation: "Defer deduction to higher bracket year (35%) to maximize tax benefit. Deducting at 35% saves more tax than deducting at 32%.",
       dropdownOptions: [
         { id: "opt-pay-current", order: 1, text: "Pay in current year (32% bracket)", isCorrect: false },
         { id: "opt-pay-next", order: 2, text: "Pay in January (35% bracket)", isCorrect: true },
@@ -1997,10 +1997,10 @@ export const tcpInstallmentPlanningTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 55.56,
+        value: 50,
         tolerance: 1,
       },
-      explanation: "$500,000 Section 1231 gain / $900,000 contract price = 55.56%",
+      explanation: "$500,000 Section 1231 gain / $1,000,000 contract price = 50%",
     },
     {
       id: "req-annual-1231-gain",
@@ -2013,7 +2013,7 @@ export const tcpInstallmentPlanningTBS: TBSQuestion = {
         value: 100000,
         tolerance: 1000,
       },
-      explanation: "$180,000 payment × 55.56% = $100,000 per year",
+      explanation: "$200,000 payment × 50% = $100,000 Section 1231 gain per year",
     },
     {
       id: "req-year1-total-gain",

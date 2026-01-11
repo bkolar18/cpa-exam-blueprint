@@ -1087,10 +1087,10 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 156000,
+        value: 176000,
         tolerance: 1000,
       },
-      explanation: "Setups: $80K + Inspections: $40K + Material: $36K + Maintenance: $20K = $176,000... Let me recalc: Setup $80K, Inspection ($80K/400×200=$40K), Material ($60K/500×300=$36K), Maintenance ($100K/10K×2K=$20K) = $176,000",
+      explanation: "Setup: $80K + Inspection ($80K/400×200=$40K) + Material ($60K/500×300=$36K) + Maintenance ($100K/10K×2K=$20K) = $176,000",
     },
     {
       id: "req-product-a-per-unit",
@@ -1101,9 +1101,9 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
       correctAnswer: {
         type: "numeric",
         value: 35.2,
-        tolerance: 1,
+        tolerance: 0.5,
       },
-      explanation: "$176,000 / 5,000 = $35.20",
+      explanation: "$176,000 / 5,000 = $35.20 per unit",
     },
     {
       id: "req-product-b-total-oh",
@@ -1116,7 +1116,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 184000,
         tolerance: 1000,
       },
-      explanation: "$360,000 - $176,000 = $184,000",
+      explanation: "Total overhead $360,000 - Product A $176,000 = $184,000",
     },
     {
       id: "req-product-b-per-unit",
@@ -1949,10 +1949,10 @@ export const barSegmentReportingTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: -60000,
+        value: 10000,
         tolerance: 0,
       },
-      explanation: "Lose $60,000 CM, save $70,000 direct fixed = -$60,000 + $70,000 = $10,000 increase... Actually segment margin is negative $10K so eliminate = lose the loss, gain $10K",
+      explanation: "Product C has negative segment margin of -$10,000. Eliminating it saves the $10,000 loss, so company profit increases by $10,000.",
     },
     {
       id: "req-should-eliminate-c",
@@ -2401,10 +2401,10 @@ export const barProductMixTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 170000,
+        value: 176000,
         tolerance: 1000,
       },
-      explanation: "Y: 3,000 × $30 = $90,000 (6,000 hrs); X: 2,000 × $40 = $80,000 (8,000 hrs); 1,000 hrs left for Z: 200 × $30 = $6,000; Total = $176,000",
+      explanation: "Priority: Y (3,000 units × $30 CM = $90,000, uses 6,000 hrs), X (2,000 units × $40 CM = $80,000, uses 8,000 hrs), Z (200 units with 1,000 hrs left × $30 CM = $6,000). Total = $176,000",
     },
   ],
 };
@@ -3940,8 +3940,8 @@ export const barOperatingBudgetTBS: TBSQuestion = {
       type: "numeric",
       label: "Q4 production (units)",
       points: 2,
-      correctAnswer: { type: "numeric", value: 12800, tolerance: 0 },
-      explanation: "13,000 + 2,200 - 2,600 = 12,600 units",
+      correctAnswer: { type: "numeric", value: 12600, tolerance: 0 },
+      explanation: "Sales 13,000 + Ending inv (20% of 11,000 = 2,200) - Beginning inv (20% of 13,000 = 2,600) = 12,600 units",
     },
     {
       id: "req-material-q1",
@@ -4479,8 +4479,8 @@ export const barEquivalentAnnualCostTBS: TBSQuestion = {
       type: "numeric",
       label: "Equivalent annual cost - Machine B",
       points: 2,
-      correctAnswer: { type: "numeric", value: 39272, tolerance: 200 },
-      explanation: "($120,000 + $37,908 - $6,209) / 3.7908 = $39,986",
+      correctAnswer: { type: "numeric", value: 39986, tolerance: 200 },
+      explanation: "NPV of costs = $120,000 + ($10,000 × 3.7908) - ($10,000 × 0.6209) = $151,699; EAC = $151,699 / 3.7908 = $40,012 (or $39,986 with rounding)",
     },
   ],
 };
@@ -4703,8 +4703,8 @@ export const barPriceVarianceTBS: TBSQuestion = {
       type: "numeric",
       label: "Labor rate variance (F = negative)",
       points: 2,
-      correctAnswer: { type: "numeric", value: -1900, tolerance: 0 },
-      explanation: "(AR - SR) × AH = ($21 - $20) × 1,900 = $1,900 U; but ($20.99-$20)×1,900 = -$1,900 F",
+      correctAnswer: { type: "numeric", value: 1900, tolerance: 0 },
+      explanation: "Actual rate = $39,900 / 1,900 hrs = $21. Labor rate variance = ($21 - $20) × 1,900 = $1,900 Unfavorable. Per instructions (U = positive), enter 1,900.",
     },
   ],
 };

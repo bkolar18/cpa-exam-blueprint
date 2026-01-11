@@ -1,7 +1,7 @@
 import SectionPage from "@/components/SectionPage";
 
 export const metadata = {
-  title: "TCP Section Guide | CPA Exam Blueprint",
+  title: "TCP Section Guide | Meridian CPA Review",
   description: "Master the TCP (Tax Compliance & Planning) section of the CPA exam with study strategies, key topics, and practical tips.",
 };
 

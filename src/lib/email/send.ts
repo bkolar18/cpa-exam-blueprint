@@ -7,7 +7,7 @@ import { segmentEmails, SegmentEmail, SegmentType } from './segment-content';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email configuration
-const FROM_EMAIL = process.env.EMAIL_FROM || 'CPA Exam Blueprint <hello@cpaexamblueprint.com>';
+const FROM_EMAIL = process.env.EMAIL_FROM || 'Meridian CPA Review <hello@cpaexamblueprint.com>';
 const REPLY_TO = process.env.EMAIL_REPLY_TO || 'support@cpaexamblueprint.com';
 
 export interface SendEmailResult {
@@ -190,7 +190,7 @@ function generateSegmentEmailHtml(email: SegmentEmail): string {
       ${ctaHtml}
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint — Affordable CPA exam study tools</p>
+      <p>Meridian CPA Review — Affordable CPA exam study tools</p>
       <p><a href="https://cpaexamblueprint.com">cpaexamblueprint.com</a></p>
       <p style="margin-top: 16px; font-size: 12px;">
         <a href="https://cpaexamblueprint.com/unsubscribe">Unsubscribe</a>

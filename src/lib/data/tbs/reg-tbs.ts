@@ -3452,10 +3452,10 @@ export const regMultiStateTaxTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 6000,
+        value: 7000,
         tolerance: 0,
       },
-      explanation: "$120,000 (total worldwide) × 5% = $6,000",
+      explanation: "Worldwide income = State A ($80,000 + $20,000) + State B ($40,000) = $140,000. State A tax = $140,000 × 5% = $7,000",
     },
     {
       id: "req-state-b-tax",
@@ -3504,10 +3504,10 @@ export const regMultiStateTaxTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 4000,
+        value: 5000,
         tolerance: 0,
       },
-      explanation: "$6,000 - $2,000 = $4,000",
+      explanation: "$7,000 - $2,000 = $5,000",
     },
   ],
 };
@@ -4110,10 +4110,10 @@ export const regHobbyLossTBS: TBSQuestion = {
       points: 2,
       correctAnswer: {
         type: "numeric",
-        value: 12500,
+        value: 0,
         tolerance: 0,
       },
-      explanation: "Hobby expenses limited to hobby income = $12,500. Cannot create a loss.",
+      explanation: "Under TCJA (2018+), hobby expenses are NO LONGER deductible. The 2% miscellaneous itemized deduction was eliminated. Hobby income is fully taxable with no offsetting deductions.",
     },
     {
       id: "req-net-taxable",
@@ -4123,10 +4123,10 @@ export const regHobbyLossTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 0,
+        value: 12500,
         tolerance: 0,
       },
-      explanation: "Income ($12,500) - Limited expenses ($12,500) = $0 net taxable",
+      explanation: "Post-TCJA: All hobby income ($12,500) is taxable. No expenses are deductible since hobby expenses were eliminated as miscellaneous itemized deductions.",
     },
   ],
 };
@@ -4817,10 +4817,10 @@ export const regPartnershipSpecialAllocationTBS: TBSQuestion = {
       points: 2,
       correctAnswer: {
         type: "numeric",
-        value: 309800,
+        value: 293600,
         tolerance: 0,
       },
-      explanation: "$200,000 + $72,000 + $45,000 + $4,800 (exempt) - $3,200 (charity) - $25,000 (dist) = $293,600... Actually: $200,000 + $72,000 + $45,000 + ($12,000 × 40%) - ($8,000 × 40%) - ($50,000 × 50%) = $200,000 + $72,000 + $45,000 + $4,800 - $3,200 - $25,000 = $293,600",
+      explanation: "Beginning $200,000 + Ordinary $72,000 + Sec 1231 $45,000 + Exempt ($12,000 × 40% = $4,800) - Charity ($8,000 × 40% = $3,200) - Distribution ($50,000 × 50% = $25,000) = $293,600",
     },
     {
       id: "req-b-ending-capital",
@@ -4830,10 +4830,10 @@ export const regPartnershipSpecialAllocationTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 179400,
+        value: 169400,
         tolerance: 0,
       },
-      explanation: "$120,000 + $63,000 + $60,000 + $4,200 (exempt) - $2,800 (charity) - $15,000 (dist) = $229,400... Wait: guaranteed payments don't increase capital. $120,000 + $63,000 + $4,200 - $2,800 - $15,000 = $169,400",
+      explanation: "Beginning $120,000 + Ordinary $63,000 + Exempt ($12,000 × 35% = $4,200) - Charity ($8,000 × 35% = $2,800) - Distribution ($50,000 × 30% = $15,000) = $169,400. Note: Guaranteed payments do not increase capital account.",
     },
   ],
 };
@@ -6153,7 +6153,7 @@ export const regTaxPenaltiesTBS: TBSQuestion = {
   ],
 };
 
-// Circular 230 Covered Opinions
+// Circular 230 Written Advice Standards (Updated for current regulations - covered opinion rules removed in 2014)
 export const regCircular230OpinionsTBS: TBSQuestion = {
   id: "tbs-reg-061",
   section: "REG",
@@ -6164,7 +6164,7 @@ export const regCircular230OpinionsTBS: TBSQuestion = {
   skillLevel: "analysis",
   contentArea: "REG-I",
   title: "Circular 230 Written Advice Standards",
-  scenarioText: `A tax practitioner is providing written tax advice to clients. Analyze each scenario to determine the applicable Circular 230 requirements for written advice.`,
+  scenarioText: `A tax practitioner is providing written tax advice to clients. Under current Circular 230 Section 10.37, analyze each scenario to determine the applicable requirements for written advice. Note: The covered opinion rules were removed in 2014 and replaced with general competence standards.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 5,
   exhibits: [
@@ -6197,10 +6197,10 @@ export const regCircular230OpinionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-standard-a",
       },
-      explanation: "Standard written advice - must not give opinion known to be incorrect, consider relevant facts, relate law to facts",
+      explanation: "Under Section 10.37, practitioner must: (1) base advice on reasonable factual assumptions, (2) reasonably consider all relevant facts known, (3) use reasonable efforts to identify facts, (4) not rely on unreasonable assumptions, (5) relate law to facts appropriately",
       dropdownOptions: [
-        { id: "opt-standard-a", order: 1, text: "Standard written advice requirements", isCorrect: true },
-        { id: "opt-covered-a", order: 2, text: "Covered opinion requirements", isCorrect: false },
+        { id: "opt-standard-a", order: 1, text: "Section 10.37 written advice standards apply", isCorrect: true },
+        { id: "opt-heightened-a", order: 2, text: "Heightened due diligence required", isCorrect: false },
         { id: "opt-none-a", order: 3, text: "No specific requirements", isCorrect: false },
       ],
     },
@@ -6212,13 +6212,13 @@ export const regCircular230OpinionsTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "dropdown",
-        correctOptionId: "opt-covered-b",
+        correctOptionId: "opt-standard-b",
       },
-      explanation: "Covered opinion - concerns marketed tax shelter and reaches MLTN conclusion on penalties",
+      explanation: "Tax shelter advice requires heightened due diligence under Section 10.37(c). Practitioner must not advise a position unless there is a reasonable basis and must consider likelihood of audit and disclosure.",
       dropdownOptions: [
-        { id: "opt-standard-b", order: 1, text: "Standard written advice", isCorrect: false },
-        { id: "opt-covered-b", order: 2, text: "Covered opinion - reliance opinion", isCorrect: true },
-        { id: "opt-limited-b", order: 3, text: "Limited scope opinion", isCorrect: false },
+        { id: "opt-standard-b", order: 1, text: "Section 10.37 standards with heightened diligence", isCorrect: true },
+        { id: "opt-basic-b", order: 2, text: "Basic written advice only", isCorrect: false },
+        { id: "opt-none-b", order: 3, text: "No Circular 230 requirements", isCorrect: false },
       ],
     },
     {
@@ -6229,12 +6229,12 @@ export const regCircular230OpinionsTBS: TBSQuestion = {
       points: 2,
       correctAnswer: {
         type: "dropdown",
-        correctOptionId: "opt-covered-c",
+        correctOptionId: "opt-standard-c",
       },
-      explanation: "Covered opinion - principal purpose of avoidance or evasion triggers covered opinion requirements",
+      explanation: "When tax avoidance is principal purpose, Section 10.37 requires heightened due diligence. Practitioner must consider likelihood of audit and penalty exposure when providing advice.",
       dropdownOptions: [
-        { id: "opt-standard-c", order: 1, text: "Standard written advice", isCorrect: false },
-        { id: "opt-covered-c", order: 2, text: "Covered opinion requirements apply", isCorrect: true },
+        { id: "opt-standard-c", order: 1, text: "Section 10.37 with heightened due diligence", isCorrect: true },
+        { id: "opt-basic-c", order: 2, text: "Basic written advice standards only", isCorrect: false },
         { id: "opt-none-c", order: 3, text: "No specific requirements", isCorrect: false },
       ],
     },

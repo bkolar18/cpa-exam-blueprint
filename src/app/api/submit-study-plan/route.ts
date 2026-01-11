@@ -38,7 +38,7 @@ export async function POST(request: Request) {
 
     // Send study plan to user
     await resend.emails.send({
-      from: "CPA Exam Blueprint <onboarding@resend.dev>",
+      from: "Meridian CPA Review <onboarding@resend.dev>",
       to: [data.email],
       subject: "Your Personalized CPA Study Plan",
       html: `
@@ -93,12 +93,12 @@ export async function POST(request: Request) {
 
       <div class="cta">
         <p>Ready to start studying?</p>
-        <a href="https://cpa-exam-blueprint.vercel.app/signup" class="button" style="color: #ffffff !important; text-decoration: none;">Create Your Account</a>
-        <a href="https://cpa-exam-blueprint.vercel.app/dashboard" class="button-secondary" style="color: #ffffff !important; text-decoration: none;">Go to Dashboard</a>
+        <a href="https://meridian-cpa-review.vercel.app/signup" class="button" style="color: #ffffff !important; text-decoration: none;">Create Your Account</a>
+        <a href="https://meridian-cpa-review.vercel.app/dashboard" class="button-secondary" style="color: #ffffff !important; text-decoration: none;">Go to Dashboard</a>
       </div>
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint - Affordable CPA exam study tools</p>
+      <p>Meridian CPA Review - Affordable CPA exam study tools</p>
       <p>You received this because you requested a study plan at cpaexamblueprint.com</p>
     </div>
   </div>
@@ -124,7 +124,7 @@ export async function POST(request: Request) {
       if (segmentEmail) {
         try {
           await resend.emails.send({
-            from: "CPA Exam Blueprint <onboarding@resend.dev>",
+            from: "Meridian CPA Review <onboarding@resend.dev>",
             to: [data.email],
             subject: segmentEmail.subject,
             html: generateSegmentEmailHtml(segmentEmail),
@@ -139,7 +139,7 @@ export async function POST(request: Request) {
     // Send notification to admin with segment info
     const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
     await resend.emails.send({
-      from: "CPA Exam Blueprint <onboarding@resend.dev>",
+      from: "Meridian CPA Review <onboarding@resend.dev>",
       to: [adminEmail],
       subject: `New Lead: ${data.email}`,
       html: `

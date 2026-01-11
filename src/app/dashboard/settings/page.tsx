@@ -89,7 +89,7 @@ export default function SettingsPage() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Profile Section */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Profile</h2>
 
           <div className="space-y-4">
@@ -143,7 +143,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Appearance */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Appearance</h2>
 
           <div className="flex items-center justify-between">
@@ -158,7 +158,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Study Preferences */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-[var(--border)] dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
           <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Study Preferences</h2>
 
           <div className="space-y-4">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "CPA Exam While Working Full Time | CPA Exam Blueprint",
+  title: "CPA Exam While Working Full Time | Meridian CPA Review",
   description: "Learn how to pass the CPA exam while working full time. Real strategies from CPAs who did it themselves.",
 };
 

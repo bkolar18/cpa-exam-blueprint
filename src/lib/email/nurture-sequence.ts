@@ -1,4 +1,4 @@
-// Email Nurture Sequence for CPA Exam Blueprint
+// Email Nurture Sequence for Meridian CPA Review
 // 7-email welcome sequence sent over 30 days
 
 export interface NurtureEmail {
@@ -205,7 +205,7 @@ export const nurtureSequence: NurtureEmail[] = [
       ],
       quote: {
         text: "Every expert was once a beginner. Every CPA once sat where you're sitting now.",
-        author: "CPA Exam Blueprint Team"
+        author: "Meridian CPA Review Team"
       },
       callToAction: {
         text: "Continue Studying",
@@ -370,7 +370,7 @@ export function generateNurtureEmailHtml(email: NurtureEmail): string {
   <div class="wrapper">
     <div class="header">
       <h1>${email.content.headline}</h1>
-      <p class="subtitle">CPA Exam Blueprint</p>
+      <p class="subtitle">Meridian CPA Review</p>
     </div>
     <div class="content">
       ${email.content.body.map(p => `<p>${p}</p>`).join('')}
@@ -382,10 +382,10 @@ export function generateNurtureEmailHtml(email: NurtureEmail): string {
       ${ctaHtml}
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint — Affordable CPA exam study tools</p>
+      <p>Meridian CPA Review — Affordable CPA exam study tools</p>
       <p><a href="https://cpaexamblueprint.com">cpaexamblueprint.com</a></p>
       <p style="margin-top: 16px; font-size: 12px;">
-        You received this email because you created a study plan at CPA Exam Blueprint.<br>
+        You received this email because you created a study plan at Meridian CPA Review.<br>
         <a href="https://cpaexamblueprint.com/unsubscribe">Unsubscribe</a>
       </p>
     </div>

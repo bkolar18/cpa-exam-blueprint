@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: "CPA Exam Blueprint <onboarding@resend.dev>",
+      from: "Meridian CPA Review <onboarding@resend.dev>",
       to: [data.email],
       subject: "NTS Expiration Reminders Confirmed",
       html: `
@@ -95,11 +95,11 @@ export async function POST(request: Request) {
 
       <div class="cta">
         <p>Need a study plan?</p>
-        <a href="https://cpa-exam-blueprint.vercel.app/study-plan" class="button">Get Your Free Study Plan</a>
+        <a href="https://meridian-cpa-review.vercel.app/study-plan" class="button">Get Your Free Study Plan</a>
       </div>
     </div>
     <div class="footer">
-      <p>CPA Exam Blueprint - Affordable CPA exam study tools</p>
+      <p>Meridian CPA Review - Affordable CPA exam study tools</p>
       <p>You can unsubscribe at any time by replying to this email.</p>
     </div>
   </div>
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
     // Notify admin of new subscriber
     const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
     await resend.emails.send({
-      from: "CPA Exam Blueprint <onboarding@resend.dev>",
+      from: "Meridian CPA Review <onboarding@resend.dev>",
       to: [adminEmail],
       subject: `New NTS Tracker Subscriber: ${data.email}`,
       html: `

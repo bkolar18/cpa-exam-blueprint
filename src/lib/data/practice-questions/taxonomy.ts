@@ -1,5 +1,5 @@
-// CPA Exam Blueprint Taxonomy
-// Based on AICPA CPA Exam Blueprints (2024)
+// Meridian CPA Review Taxonomy
+// Based on AICPA Meridian CPA Reviews (2024)
 // Study hours and question targets based on industry recommendations
 
 export interface SubtopicInfo {

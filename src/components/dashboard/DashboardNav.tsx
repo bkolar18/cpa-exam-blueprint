@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { useState, useRef, useEffect } from "react";
@@ -19,6 +20,7 @@ const groupedItems = [
     items: [
       { href: "/dashboard/practice", label: "Multiple Choice", icon: "practice" },
       { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
+      { href: "/dashboard/flashcards", label: "Notecards", icon: "cards" },
       { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
       { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
       { href: "/dashboard/flagged-questions", label: "Flagged Questions", icon: "flag" },
@@ -44,6 +46,7 @@ const allNavItems = [
   { href: "/dashboard", label: "Overview", icon: "home" },
   { href: "/dashboard/practice", label: "Multiple Choice", icon: "practice" },
   { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
+  { href: "/dashboard/flashcards", label: "Notecards", icon: "cards" },
   { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
   { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
   { href: "/dashboard/flagged-questions", label: "Flagged Questions", icon: "flag" },
@@ -126,6 +129,11 @@ const icons: Record<string, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
     </svg>
   ),
+  cards: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+    </svg>
+  ),
   chevronDown: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -180,7 +188,7 @@ function NavDropdown({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-48 bg-[var(--background)] rounded-lg shadow-lg border border-[var(--border)] py-1 z-50">
+        <div className="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-[var(--card)] rounded-lg shadow-lg border border-[var(--border)] py-1 z-50">
           {items.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -216,11 +224,15 @@ export default function DashboardNav() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">CPA</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Meridian CPA Academy"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
             <span className="text-xl font-bold text-[var(--primary)]">
-              Dashboard
+              Meridian CPA Academy
             </span>
           </Link>
 

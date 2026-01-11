@@ -5377,11 +5377,11 @@ export const iscBusinessImpactTBS: TBSQuestion = {
       points: 2,
       dropdownOptions: [
         { id: "4hours", order: 1, text: "< 4 hours", isCorrect: false },
-        { id: "24hours", order: 2, text: "< 24 hours", isCorrect: true },
-        { id: "72hours", order: 3, text: "< 72 hours", isCorrect: false },
+        { id: "24hours", order: 2, text: "< 24 hours", isCorrect: false },
+        { id: "72hours", order: 3, text: "< 72 hours", isCorrect: true },
       ],
-      correctAnswer: { type: "dropdown", correctOptionId: "24hours" },
-      explanation: "Priority = ($0 + $100,000 + $30,000) / $100,000 = 1.3, but regulatory penalty pushes to RTO < 24 hours",
+      correctAnswer: { type: "dropdown", correctOptionId: "72hours" },
+      explanation: "Priority = ($0 + $100,000 + $30,000) / $100,000 = 1.3. Per the scoring formula, systems with Priority Score < 2 require RTO < 72 hours.",
     },
   ],
 };

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,10 +8,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Brand */}
           <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
-              <span className="text-[var(--primary)] font-bold text-xs">CPA</span>
-            </div>
-            <span className="text-sm font-semibold">CPA Exam Blueprint</span>
+            <Image
+              src="/logo.png"
+              alt="Meridian CPA Review"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
+            <span className="text-sm font-semibold">Meridian CPA Review</span>
           </div>
 
           {/* Quick Links */}
@@ -48,7 +53,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-gray-400 text-xs">
-            &copy; {new Date().getFullYear()} CPA Exam Blueprint
+            &copy; {new Date().getFullYear()} Meridian CPA Review
           </p>
         </div>
       </div>

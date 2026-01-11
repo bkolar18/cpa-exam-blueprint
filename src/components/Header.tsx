@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { ThemeToggleSimple } from "@/components/theme/ThemeToggle";
@@ -44,11 +45,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">CPA</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Meridian CPA Review"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
             <span className="text-xl font-bold text-[var(--primary)]">
-              CPA Exam Blueprint
+              Meridian CPA Review
             </span>
           </Link>
 
@@ -132,7 +137,7 @@ export default function Header() {
                           href="/cpa-academy"
                           className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
                         >
-                          CPA Academy
+                          Meridian CPA Academy
                         </Link>
                       </div>
                       {/* Free Tools Section */}
@@ -299,7 +304,7 @@ export default function Header() {
                       className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      CPA Academy
+                      Meridian CPA Academy
                     </Link>
                     <div className="pt-2 border-t border-[var(--border)]">
                       <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Tools</span>

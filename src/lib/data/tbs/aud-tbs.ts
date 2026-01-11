@@ -9890,13 +9890,13 @@ Required: Evaluate each situation regarding component auditor work.`,
       points: 1,
       correctAnswer: {
         type: "dropdown",
-        correctOptionId: "opt-ref-no",
+        correctOptionId: "opt-ref-yes",
       },
-      explanation: "Under GAAS, reference to component auditors is generally not permitted",
+      explanation: "Under current GAAS (AU-C 600), the group auditor may reference a component auditor only when the component auditor performs an audit of a component's financial statements prepared using the same financial reporting framework. When making reference, responsibility is divided.",
       dropdownOptions: [
-        { id: "opt-ref-yes", order: 1, text: "Yes - divide responsibility", isCorrect: false },
-        { id: "opt-ref-no", order: 2, text: "No - group auditor takes full responsibility", isCorrect: true },
-        { id: "opt-ref-optional", order: 3, text: "Optional based on group auditor preference", isCorrect: false },
+        { id: "opt-ref-yes", order: 1, text: "Yes - if specific criteria are met and responsibility is divided", isCorrect: true },
+        { id: "opt-ref-no", order: 2, text: "No - never permitted under GAAS", isCorrect: false },
+        { id: "opt-ref-optional", order: 3, text: "Always at group auditor's discretion", isCorrect: false },
       ],
     },
     {

@@ -703,7 +703,7 @@ Review the schedule of temporary differences and select the correct classificati
         value: 16000,
         tolerance: 0,
       },
-      explanation: "DTL items: Prepaid Insurance ($24,000) + Unearned Revenue ($40,000) = $64,000 × 25% = $16,000",
+      explanation: "DTL items: Prepaid Insurance ($24,000 × 25% = $6,000) - an asset with book basis > tax basis creates taxable temp diff. Unearned Revenue ($40,000 × 25% = $10,000) - a liability with book basis < tax basis (received but not yet revenue for books, already taxable) creates taxable temp diff. Total DTL = $6,000 + $10,000 = $16,000.",
     },
   ],
 };
@@ -793,7 +793,7 @@ Review the asset information and impairment analysis in the exhibits. Prepare an
         amount: 250000,
         tolerance: 0,
       },
-      explanation: "The impairment loss reduces the carrying amount of the asset. This can be recorded as a credit to accumulated depreciation or directly to the asset account.",
+      explanation: "The impairment loss reduces the carrying amount of the asset. Under ASC 360-10-35-17, there are two acceptable methods: (1) credit Equipment directly, or (2) credit Accumulated Depreciation. Both achieve the same net carrying value. The credit to Accumulated Depreciation is shown here as it maintains the original cost and depreciation records separately, which some entities prefer for asset tracking purposes.",
     },
   ],
   journalAccounts: [
@@ -2540,10 +2540,10 @@ export const tcpGiftTaxTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 3000,
+        value: 0,
         tolerance: 0,
       },
-      explanation: "Susan's $20,000 gift to grandson exceeds $17,000 annual exclusion by $3,000. This is taxable (unless Susan elects to split with Robert, making it $10,000 each, both under exclusion).",
+      explanation: "With gift splitting elected (consistent with son and daughter gifts), Susan's $20,000 gift is treated as $10,000 from each spouse. Since $10,000 is under the $17,000 annual exclusion per donee, no taxable gift results. Without gift splitting, the taxable amount would be $3,000 ($20,000 - $17,000).",
     },
     {
       id: "req-tuition-taxable",
@@ -5205,7 +5205,7 @@ export const regDepreciationTBS: TBSQuestion = {
   skillLevel: "application",
   contentArea: "REG-III",
   title: "MACRS Depreciation Calculations",
-  scenarioText: `Oakwood Manufacturing placed several assets in service during Year 1. Calculate the MACRS depreciation deduction for each asset, assuming the half-year convention applies unless otherwise noted.`,
+  scenarioText: `Oakwood Manufacturing placed several assets in service during Year 1. Calculate the MACRS depreciation deduction for each asset. Note: Since more than 40% of assets were placed in service in Q4, the mid-quarter convention applies to ALL assets placed in service this year.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 5,
   exhibits: [
@@ -5254,10 +5254,10 @@ export const regDepreciationTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 12000,
+        value: 21000,
         tolerance: 0,
       },
-      explanation: "Computer (5-year, half-year): $60,000 × 20% = $12,000",
+      explanation: "Computer (5-year, Mid-Q1): $60,000 × 35% = $21,000 (mid-quarter applies to all assets)",
     },
     {
       id: "req-furniture",
@@ -5267,10 +5267,10 @@ export const regDepreciationTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 3573,
+        value: 4463,
         tolerance: 5,
       },
-      explanation: "Furniture (7-year, half-year): $25,000 × 14.29% = $3,572.50, rounded to $3,573",
+      explanation: "Furniture (7-year, Mid-Q3 - July): $25,000 × 17.85% = $4,462.50 ≈ $4,463",
     },
     {
       id: "req-equipment",
@@ -5293,10 +5293,10 @@ export const regDepreciationTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 9000,
+        value: 15750,
         tolerance: 0,
       },
-      explanation: "Truck (5-year, half-year): $45,000 × 20% = $9,000",
+      explanation: "Truck (5-year, Mid-Q1 - February): $45,000 × 35% = $15,750",
     },
     {
       id: "req-total",
@@ -5306,10 +5306,10 @@ export const regDepreciationTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 29928,
+        value: 46568,
         tolerance: 10,
       },
-      explanation: "Total = $12,000 + $3,573 + $5,355 + $9,000 = $29,928",
+      explanation: "Total = $21,000 + $4,463 + $5,355 + $15,750 = $46,568 (all using mid-quarter convention)",
     },
   ],
 };
@@ -5935,10 +5935,10 @@ export const barStandardCostingTBS: TBSQuestion = {
         type: "journal",
         accountId: "acc-wip",
         accountName: "Work in Process Inventory",
-        amount: 274400,
+        amount: 275000,
         tolerance: 0,
       },
-      explanation: "WIP at actual = Materials ($100,800) + Labor ($101,400) + VOH ($41,600) + FOH ($31,200) = $275,000. Actually: (21,000 × $4.80) + (5,200 × $19.50) + $41,600 + $31,200 = $100,800 + $101,400 + $72,800 = $274,400",
+      explanation: "WIP at actual = Materials (21,000 × $4.80 = $100,800) + Labor (5,200 × $19.50 = $101,400) + VOH ($41,600) + FOH ($31,200) = $275,000",
     },
   ],
   journalAccounts: [

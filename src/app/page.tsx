@@ -72,8 +72,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Personalized Study Guidance */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-[var(--border)] dark:border-gray-700 hover-lift">
-              <div className="w-12 h-12 bg-[var(--primary)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-[var(--card)] p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-[var(--primary)] bg-opacity-10 dark:bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
@@ -81,14 +81,14 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
                 Personalized Study Plans
               </h3>
-              <p className="text-[var(--muted)]">
+              <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)]">
                 Get a customized study schedule based on your work schedule, background, and timeline.
               </p>
             </div>
 
             {/* Section Strategies */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-[var(--border)] dark:border-gray-700 hover-lift">
-              <div className="w-12 h-12 bg-[var(--secondary)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-[var(--card)] p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-[var(--secondary)] bg-opacity-10 dark:bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-[var(--secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
@@ -96,14 +96,14 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
                 Section-by-Section Strategies
               </h3>
-              <p className="text-[var(--muted)]">
+              <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)]">
                 Deep-dive into FAR, AUD, REG, and TCP with targeted strategies for each section.
               </p>
             </div>
 
             {/* Progress Tracking */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-[var(--border)] dark:border-gray-700 hover-lift">
-              <div className="w-12 h-12 bg-[var(--accent)] bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-[var(--card)] p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-[var(--accent)] bg-opacity-10 dark:bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
@@ -111,22 +111,22 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
                 Progress Tracking
               </h3>
-              <p className="text-[var(--muted)]">
+              <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)]">
                 Track your study hours, earn badges, and stay motivated with streaks.
               </p>
             </div>
 
             {/* Time-Saving Frameworks */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-[var(--border)] dark:border-gray-700 hover-lift">
-              <div className="w-12 h-12 bg-purple-500 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-[var(--card)] p-6 rounded-xl border border-[var(--border)] hover-lift">
+              <div className="w-12 h-12 bg-purple-500 bg-opacity-10 dark:bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-purple-500 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
                 Time-Saving Frameworks
               </h3>
-              <p className="text-[var(--muted)]">
+              <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)]">
                 Skip the trial and error. Follow proven frameworks that actually work.
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CPA Academy Promo */}
+      {/* Meridian CPA Academy Promo */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -143,7 +143,7 @@ export default function Home() {
                 Free Study Dashboard
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Track Your Progress with CPA Academy
+                Track Your Progress with Meridian CPA Academy
               </h2>
               <p className="text-xl text-blue-100 mb-6">
                 Your personal command center for conquering the CPA exam. Log study hours,
@@ -256,11 +256,11 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-[var(--border)] dark:border-gray-700 shadow-lg">
+            <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] shadow-lg">
               <h3 className="text-2xl font-bold text-[var(--foreground)] mb-4">
                 We Answer These Questions Before Selling Anything
               </h3>
-              <p className="text-[var(--muted)] mb-6">
+              <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)] mb-6">
                 Our goal is to give you clarity and confidence first. Build your free personalized study plan and get the answers you need.
               </p>
               <Link
@@ -296,7 +296,7 @@ export default function Home() {
               <Link
                 key={section.name}
                 href={section.href}
-                className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-[var(--border)] dark:border-gray-700 hover-lift text-center"
+                className="group bg-[var(--card)] p-6 rounded-xl border border-[var(--border)] hover-lift text-center"
               >
                 <div className={`w-16 h-16 ${section.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <span className="text-white font-bold text-xl">{section.name}</span>
@@ -304,7 +304,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
                   {section.title}
                 </h3>
-                <p className="text-[var(--muted)] text-sm mt-2">
+                <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)] text-sm mt-2">
                   Learn what it takes to pass
                 </p>
               </Link>
