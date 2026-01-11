@@ -1,4 +1,4 @@
-import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+import { createBrowserClient } from '@supabase/ssr'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 let supabaseClient: SupabaseClient | null = null;
@@ -16,7 +16,9 @@ export function createClient(): SupabaseClient | null {
     return null;
   }
 
-  supabaseClient = createSupabaseClient(supabaseUrl, supabaseAnonKey);
+  // Use createBrowserClient from @supabase/ssr to ensure auth state
+  // is stored in cookies that server-side API routes can read
+  supabaseClient = createBrowserClient(supabaseUrl, supabaseAnonKey);
   return supabaseClient;
 }
 
