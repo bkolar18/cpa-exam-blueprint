@@ -15,6 +15,14 @@ interface StudySessionRow {
  notes: string | null;
 }
 
+// Type for section readiness data
+interface SectionReadinessData {
+ section: string;
+ attempted: number;
+ correct: number;
+ accuracy: number;
+}
+
 export default function DashboardPage() {
  const searchParams = useSearchParams();
  const isVerified = searchParams.get("verified") ==="true";
@@ -22,6 +30,7 @@ export default function DashboardPage() {
  const [sectionProgress, setSectionProgress] = useState<{ status: string }[]>([]);
  const [recentSessions, setRecentSessions] = useState<StudySessionRow[]>([]);
  const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
+ const [readinessData, setReadinessData] = useState<SectionReadinessData[]>([]);
  const [loading, setLoading] = useState(true);
  const [showUpgradePromo, setShowUpgradePromo] = useState(false);
  const supabase = createClient();
@@ -93,6 +102,30 @@ export default function DashboardPage() {
  .eq("user_id", user.id)
  .eq("status","active");
  if (ntsData) setNtsEntries(ntsData);
+
+ // Fetch practice attempts for readiness summary
+ const { data: attempts } = await supabase
+ .from("practice_attempts")
+ .select("section, is_correct")
+ .eq("user_id", user.id);
+
+ if (attempts && attempts.length > 0) {
+ // Calculate readiness per section
+ const sections = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
+ const sectionStats: SectionReadinessData[] = sections
+ .map(section => {
+ const sectionAttempts = attempts.filter(a => a.section === section);
+ const correct = sectionAttempts.filter(a => a.is_correct).length;
+ return {
+ section,
+ attempted: sectionAttempts.length,
+ correct,
+ accuracy: sectionAttempts.length > 0 ? Math.round((correct / sectionAttempts.length) * 100) : 0
+ };
+ })
+ .filter(s => s.attempted > 0); // Only show sections with attempts
+ setReadinessData(sectionStats);
+ }
 
  setLoading(false);
  };
@@ -332,54 +365,91 @@ export default function DashboardPage() {
  />
  </div>
 
- {/* Recent Activity */}
+ {/* Exam Readiness Summary */}
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
  <div className="flex items-center justify-between mb-4">
- <h2 className="text-lg font-semibold text-[var(--foreground)]">Recent Study Sessions</h2>
+ <h2 className="text-lg font-semibold text-[var(--foreground)]">Exam Readiness</h2>
  <Link
- href="/dashboard/practice"
+ href="/dashboard/readiness"
  className="text-sm font-medium text-[var(--primary)] hover:text-[var(--primary-dark)] flex items-center gap-1"
  >
- <svg className="w-4 h-4"fill="none"stroke="currentColor"viewBox="0 0 24 24">
- <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+ <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
  </svg>
- Start Practice Session
+ View Full Dashboard
  </Link>
  </div>
- {recentSessions && recentSessions.length > 0 ? (
- <div className="space-y-3">
- {recentSessions.slice(0, 5).map((session) => (
- <div key={session.id} className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-0">
- <div className="flex items-center space-x-3">
- <div className="w-10 h-10 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center">
- <span className="text-sm font-bold text-[var(--primary)]">{session.section}</span>
- </div>
- <div>
- <p className="font-medium text-[var(--foreground)]">
- {session.hours < 1
- ? `${Math.round(session.hours * 60)} minutes`
- : `${session.hours} hours`}
+ {readinessData.length > 0 ? (
+ <div className="space-y-4">
+ {/* Overall Stats */}
+ <div className="grid grid-cols-3 gap-4 mb-4">
+ <div className="text-center p-3 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-lg">
+ <p className="text-2xl font-bold text-[var(--primary)]">
+ {readinessData.reduce((sum, s) => sum + s.attempted, 0)}
  </p>
- <p className="text-sm text-[var(--muted)]">{new Date(session.date).toLocaleDateString()}</p>
+ <p className="text-xs text-[var(--muted)]">Questions Attempted</p>
+ </div>
+ <div className="text-center p-3 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-lg">
+ <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+ {readinessData.reduce((sum, s) => sum + s.correct, 0)}
+ </p>
+ <p className="text-xs text-[var(--muted)]">Correct Answers</p>
+ </div>
+ <div className="text-center p-3 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-lg">
+ <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+ {readinessData.length > 0
+ ? Math.round(readinessData.reduce((sum, s) => sum + s.accuracy, 0) / readinessData.length)
+ : 0}%
+ </p>
+ <p className="text-xs text-[var(--muted)]">Avg Accuracy</p>
  </div>
  </div>
- {session.notes && (
- <p className="text-sm text-[var(--muted)] max-w-xs truncate">{session.notes}</p>
- )}
+ {/* Section Breakdown */}
+ <div className="space-y-3">
+ {readinessData.map((section) => (
+ <div key={section.section} className="flex items-center gap-4">
+ <div className="w-12 h-12 bg-[var(--primary)]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+ <span className="text-sm font-bold text-[var(--primary)]">{section.section}</span>
+ </div>
+ <div className="flex-1 min-w-0">
+ <div className="flex items-center justify-between mb-1">
+ <span className="text-sm font-medium text-[var(--foreground)]">
+ {section.attempted} questions
+ </span>
+ <span className={`text-sm font-bold ${
+ section.accuracy >= 75 ? 'text-green-600 dark:text-green-400' :
+ section.accuracy >= 50 ? 'text-yellow-600 dark:text-yellow-400' :
+ 'text-red-600 dark:text-red-400'
+ }`}>
+ {section.accuracy}%
+ </span>
+ </div>
+ <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+ <div
+ className={`h-full transition-all duration-300 ${
+ section.accuracy >= 75 ? 'bg-green-500' :
+ section.accuracy >= 50 ? 'bg-yellow-500' :
+ 'bg-red-400'
+ }`}
+ style={{ width: `${section.accuracy}%` }}
+ />
+ </div>
+ </div>
  </div>
  ))}
  </div>
+ </div>
  ) : (
  <div className="text-center py-8">
- <p className="text-[var(--muted)] mb-4">No study sessions logged yet</p>
- <div className="flex flex-col sm:flex-row gap-3 justify-center">
- <Link href="/dashboard/study-log"className="btn-primary inline-block">
- Log Your First Session
- </Link>
- <Link href="/dashboard/practice"className="btn-secondary inline-block">
+ <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+ <svg className="w-8 h-8 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+ </svg>
+ </div>
+ <p className="text-[var(--muted)] mb-4">Start practicing to track your exam readiness</p>
+ <Link href="/dashboard/practice" className="btn-primary inline-block">
  Start Practice Quiz
  </Link>
- </div>
  </div>
  )}
  </div>
