@@ -7506,6 +7506,514 @@ export const barStatePensionTBS: TBSQuestion = {
   ]
 };
 
+// =============================================================================
+// BAR-I CONTENT AREA EXPANSION (tbs-bar-076 through tbs-bar-079)
+// Business Analysis
+// =============================================================================
+
+export const barFinancialForecastingTBS: TBSQuestion = {
+  id: "tbs-bar-076",
+  section: "BAR",
+  tbsType: "numeric_entry",
+  topic: "Financial Forecasting",
+  subtopic: "Pro Forma Financial Statements",
+  difficulty: "medium",
+  skillLevel: "analysis",
+  contentArea: "BAR-I",
+  title: "Pro Forma Income Statement Development",
+  scenarioText: `Oakridge Electronics Inc. is developing pro forma financial statements for the next fiscal year. The CFO has provided the following baseline data and assumptions for forecasting.
+
+Required: Calculate key pro forma values based on the growth assumptions.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-baseline",
+      order: 1,
+      title: "Baseline Data and Assumptions",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Current Year and Forecast Assumptions",
+        headers: ["Item", "Current Year", "Assumption"],
+        rows: [
+          { cells: ["Revenue", "$8,500,000", "Growth rate: 12%"] },
+          { cells: ["Cost of goods sold", "$5,100,000", "60% of revenue"] },
+          { cells: ["Operating expenses", "$1,700,000", "Fixed + 8% of revenue"] },
+          { cells: ["Fixed operating expenses", "$1,020,000", "Increase 5%"] },
+          { cells: ["Interest expense", "$180,000", "No change"] },
+          { cells: ["Tax rate", "25%", "No change"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-forecast-rev",
+      order: 1,
+      type: "numeric",
+      label: "Forecasted revenue",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 9520000,
+        tolerance: 0,
+      },
+      explanation: "$8,500,000 × 1.12 = $9,520,000",
+    },
+    {
+      id: "req-forecast-cogs",
+      order: 2,
+      type: "numeric",
+      label: "Forecasted cost of goods sold",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 5712000,
+        tolerance: 0,
+      },
+      explanation: "$9,520,000 × 60% = $5,712,000",
+    },
+    {
+      id: "req-forecast-gross",
+      order: 3,
+      type: "numeric",
+      label: "Forecasted gross profit",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 3808000,
+        tolerance: 0,
+      },
+      explanation: "$9,520,000 - $5,712,000 = $3,808,000",
+    },
+    {
+      id: "req-forecast-opex",
+      order: 4,
+      type: "numeric",
+      label: "Forecasted operating expenses (fixed × 1.05 + 8% of revenue)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 1832600,
+        tolerance: 100,
+      },
+      explanation: "$1,020,000 × 1.05 + ($9,520,000 × 8%) = $1,071,000 + $761,600 = $1,832,600",
+    },
+    {
+      id: "req-forecast-ebit",
+      order: 5,
+      type: "numeric",
+      label: "Forecasted EBIT",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 1975400,
+        tolerance: 100,
+      },
+      explanation: "$3,808,000 - $1,832,600 = $1,975,400",
+    },
+    {
+      id: "req-forecast-net",
+      order: 6,
+      type: "numeric",
+      label: "Forecasted net income",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 1346550,
+        tolerance: 200,
+      },
+      explanation: "($1,975,400 - $180,000) × (1 - 0.25) = $1,795,400 × 0.75 = $1,346,550",
+    },
+  ],
+};
+
+export const barDataAnalyticsTBS: TBSQuestion = {
+  id: "tbs-bar-077",
+  section: "BAR",
+  tbsType: "dropdown",
+  topic: "Data Analytics",
+  subtopic: "Data Analysis Techniques",
+  difficulty: "medium",
+  skillLevel: "analysis",
+  contentArea: "BAR-I",
+  title: "Data Analytics in Business Decision-Making",
+  scenarioText: `Sterling Retail Corp is implementing data analytics to improve business decisions. As a consultant, evaluate the appropriate analytics techniques for each business situation.
+
+Required: Match each scenario with the most appropriate analytics approach.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-analytics-types",
+      order: 1,
+      title: "Analytics Types Reference",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Types of Business Analytics",
+        paragraphs: [
+          "Descriptive Analytics: What happened? (historical data summary)",
+          "Diagnostic Analytics: Why did it happen? (root cause analysis)",
+          "Predictive Analytics: What will happen? (forecasting, trends)",
+          "Prescriptive Analytics: What should we do? (optimization, recommendations)",
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-sales-forecast",
+      order: 1,
+      type: "dropdown",
+      label: "Forecasting next quarter sales based on historical patterns",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-predictive",
+      },
+      explanation: "Forecasting uses predictive analytics to project future outcomes",
+      dropdownOptions: [
+        { id: "opt-descriptive", order: 1, text: "Descriptive Analytics", isCorrect: false },
+        { id: "opt-diagnostic", order: 2, text: "Diagnostic Analytics", isCorrect: false },
+        { id: "opt-predictive", order: 3, text: "Predictive Analytics", isCorrect: true },
+        { id: "opt-prescriptive", order: 4, text: "Prescriptive Analytics", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-revenue-decline",
+      order: 2,
+      type: "dropdown",
+      label: "Understanding why revenue declined in a specific region",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-diagnostic",
+      },
+      explanation: "Diagnostic analytics identifies root causes of observed outcomes",
+      dropdownOptions: [
+        { id: "opt-descriptive", order: 1, text: "Descriptive Analytics", isCorrect: false },
+        { id: "opt-diagnostic", order: 2, text: "Diagnostic Analytics", isCorrect: true },
+        { id: "opt-predictive", order: 3, text: "Predictive Analytics", isCorrect: false },
+        { id: "opt-prescriptive", order: 4, text: "Prescriptive Analytics", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-kpi-dashboard",
+      order: 3,
+      type: "dropdown",
+      label: "Creating a dashboard showing current KPI performance vs targets",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-descriptive",
+      },
+      explanation: "Dashboards showing current performance summarize what has happened",
+      dropdownOptions: [
+        { id: "opt-descriptive", order: 1, text: "Descriptive Analytics", isCorrect: true },
+        { id: "opt-diagnostic", order: 2, text: "Diagnostic Analytics", isCorrect: false },
+        { id: "opt-predictive", order: 3, text: "Predictive Analytics", isCorrect: false },
+        { id: "opt-prescriptive", order: 4, text: "Prescriptive Analytics", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-inventory-opt",
+      order: 4,
+      type: "dropdown",
+      label: "Determining optimal inventory levels for each product SKU",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-prescriptive",
+      },
+      explanation: "Optimization problems require prescriptive analytics to determine best actions",
+      dropdownOptions: [
+        { id: "opt-descriptive", order: 1, text: "Descriptive Analytics", isCorrect: false },
+        { id: "opt-diagnostic", order: 2, text: "Diagnostic Analytics", isCorrect: false },
+        { id: "opt-predictive", order: 3, text: "Predictive Analytics", isCorrect: false },
+        { id: "opt-prescriptive", order: 4, text: "Prescriptive Analytics", isCorrect: true },
+      ],
+    },
+    {
+      id: "req-churn-predict",
+      order: 5,
+      type: "dropdown",
+      label: "Identifying customers likely to cancel their subscriptions",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-predictive",
+      },
+      explanation: "Predicting future customer behavior is predictive analytics",
+      dropdownOptions: [
+        { id: "opt-descriptive", order: 1, text: "Descriptive Analytics", isCorrect: false },
+        { id: "opt-diagnostic", order: 2, text: "Diagnostic Analytics", isCorrect: false },
+        { id: "opt-predictive", order: 3, text: "Predictive Analytics", isCorrect: true },
+        { id: "opt-prescriptive", order: 4, text: "Prescriptive Analytics", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-pricing",
+      order: 6,
+      type: "dropdown",
+      label: "Recommending price points to maximize profit margins",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-prescriptive",
+      },
+      explanation: "Pricing optimization recommends specific actions, making it prescriptive",
+      dropdownOptions: [
+        { id: "opt-descriptive", order: 1, text: "Descriptive Analytics", isCorrect: false },
+        { id: "opt-diagnostic", order: 2, text: "Diagnostic Analytics", isCorrect: false },
+        { id: "opt-predictive", order: 3, text: "Predictive Analytics", isCorrect: false },
+        { id: "opt-prescriptive", order: 4, text: "Prescriptive Analytics", isCorrect: true },
+      ],
+    },
+  ],
+};
+
+export const barFinancialModelingTBS: TBSQuestion = {
+  id: "tbs-bar-078",
+  section: "BAR",
+  tbsType: "numeric_entry",
+  topic: "Financial Modeling",
+  subtopic: "Scenario Analysis",
+  difficulty: "hard",
+  skillLevel: "evaluation",
+  contentArea: "BAR-I",
+  title: "Financial Model Scenario Analysis",
+  scenarioText: `Horizon Ventures is evaluating a new product launch using financial modeling. Develop scenario analyses to support the investment decision.
+
+Required: Calculate key financial metrics under different scenarios.`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-scenarios",
+      order: 1,
+      title: "Scenario Parameters",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Product Launch Scenarios",
+        headers: ["Parameter", "Base Case", "Optimistic", "Pessimistic"],
+        rows: [
+          { cells: ["Unit sales", "50,000", "70,000", "35,000"] },
+          { cells: ["Price per unit", "$120", "$130", "$105"] },
+          { cells: ["Variable cost per unit", "$65", "$60", "$70"] },
+          { cells: ["Fixed costs", "$1,800,000", "$1,800,000", "$1,800,000"] },
+          { cells: ["Probability", "50%", "25%", "25%"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-base-contrib",
+      order: 1,
+      type: "numeric",
+      label: "Base case contribution margin total",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 2750000,
+        tolerance: 0,
+      },
+      explanation: "50,000 × ($120 - $65) = 50,000 × $55 = $2,750,000",
+    },
+    {
+      id: "req-base-profit",
+      order: 2,
+      type: "numeric",
+      label: "Base case operating profit",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 950000,
+        tolerance: 0,
+      },
+      explanation: "$2,750,000 - $1,800,000 = $950,000",
+    },
+    {
+      id: "req-optimistic-profit",
+      order: 3,
+      type: "numeric",
+      label: "Optimistic case operating profit",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 3100000,
+        tolerance: 0,
+      },
+      explanation: "70,000 × ($130 - $60) - $1,800,000 = $4,900,000 - $1,800,000 = $3,100,000",
+    },
+    {
+      id: "req-pessimistic-profit",
+      order: 4,
+      type: "numeric",
+      label: "Pessimistic case operating profit",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: -575000,
+        tolerance: 0,
+      },
+      explanation: "35,000 × ($105 - $70) - $1,800,000 = $1,225,000 - $1,800,000 = -$575,000",
+    },
+    {
+      id: "req-expected-value",
+      order: 5,
+      type: "numeric",
+      label: "Expected value of operating profit",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 1106250,
+        tolerance: 100,
+      },
+      explanation: "$950,000 × 0.50 + $3,100,000 × 0.25 + (-$575,000) × 0.25 = $475,000 + $775,000 - $143,750 = $1,106,250",
+    },
+    {
+      id: "req-downside-risk",
+      order: 6,
+      type: "dropdown",
+      label: "What is the probability-weighted downside risk?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-25-loss",
+      },
+      explanation: "25% probability of $575,000 loss in pessimistic scenario",
+      dropdownOptions: [
+        { id: "opt-50-base", order: 1, text: "50% chance of base case", isCorrect: false },
+        { id: "opt-25-loss", order: 2, text: "25% chance of $575,000 loss", isCorrect: true },
+        { id: "opt-no-risk", order: 3, text: "No downside risk - expected value positive", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const barTrendAnalysisTBS: TBSQuestion = {
+  id: "tbs-bar-079",
+  section: "BAR",
+  tbsType: "numeric_entry",
+  topic: "Trend Analysis",
+  subtopic: "Financial Trend Analysis",
+  difficulty: "medium",
+  skillLevel: "analysis",
+  contentArea: "BAR-I",
+  title: "Multi-Year Financial Trend Analysis",
+  scenarioText: `Cascade Industries has provided five years of financial data for trend analysis. Analyze the trends and calculate year-over-year growth rates.
+
+Required: Perform trend analysis calculations.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-trend-data",
+      order: 1,
+      title: "Five-Year Financial Data",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Historical Financial Performance",
+        headers: ["Metric", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5"],
+        rows: [
+          { cells: ["Revenue", "$4,200,000", "$4,620,000", "$5,082,000", "$5,590,200", "$6,149,220"] },
+          { cells: ["Net Income", "$336,000", "$369,600", "$406,560", "$447,216", "$491,938"] },
+          { cells: ["Total Assets", "$3,500,000", "$3,850,000", "$4,235,000", "$4,658,500", "$5,124,350"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-revenue-cagr",
+      order: 1,
+      type: "numeric",
+      label: "Revenue compound annual growth rate (CAGR) as percentage",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 10,
+        tolerance: 0.5,
+      },
+      explanation: "CAGR = (($6,149,220/$4,200,000)^(1/4)) - 1 = (1.464)^0.25 - 1 = 10%",
+    },
+    {
+      id: "req-year5-trend",
+      order: 2,
+      type: "numeric",
+      label: "Year 5 revenue as percentage of Year 1 (trend index)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 146.4,
+        tolerance: 0.5,
+      },
+      explanation: "$6,149,220 / $4,200,000 × 100 = 146.4%",
+    },
+    {
+      id: "req-net-margin-y1",
+      order: 3,
+      type: "numeric",
+      label: "Year 1 net profit margin percentage",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 8,
+        tolerance: 0,
+      },
+      explanation: "$336,000 / $4,200,000 × 100 = 8.0%",
+    },
+    {
+      id: "req-net-margin-y5",
+      order: 4,
+      type: "numeric",
+      label: "Year 5 net profit margin percentage",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 8,
+        tolerance: 0.1,
+      },
+      explanation: "$491,938 / $6,149,220 × 100 = 8.0%",
+    },
+    {
+      id: "req-asset-growth",
+      order: 5,
+      type: "numeric",
+      label: "Average year-over-year asset growth rate percentage",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 10,
+        tolerance: 0.5,
+      },
+      explanation: "Each year assets grow by 10%: ($5,124,350/$3,500,000)^0.25 - 1 = 10%",
+    },
+    {
+      id: "req-roa-trend",
+      order: 6,
+      type: "dropdown",
+      label: "What is the trend in return on assets (ROA)?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-stable",
+      },
+      explanation: "ROA remains stable at ~9.6% (net income and assets both growing at 10%)",
+      dropdownOptions: [
+        { id: "opt-increasing", order: 1, text: "Increasing trend", isCorrect: false },
+        { id: "opt-stable", order: 2, text: "Stable/constant trend", isCorrect: true },
+        { id: "opt-decreasing", order: 3, text: "Decreasing trend", isCorrect: false },
+      ],
+    },
+  ],
+};
+
 // Add Batch 2 and Batch 3 questions to the export array
 barTBSQuestions.push(
   barCashConversionTBS,
@@ -7522,5 +8030,10 @@ barTBSQuestions.push(
   barByproductAccountingTBS,
   barFinancialLeverageTBS,
   barForeignCurrencyTBS,
-  barStatePensionTBS
+  barStatePensionTBS,
+  // BAR-I Content Area Expansion (tbs-bar-076 through tbs-bar-079)
+  barFinancialForecastingTBS,
+  barDataAnalyticsTBS,
+  barFinancialModelingTBS,
+  barTrendAnalysisTBS
 );

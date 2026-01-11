@@ -72,6 +72,10 @@ export default function TBSContainer({
  const [showHints, setShowHints] = useState(false);
  // Confirmation modal for incomplete submissions
  const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+ // Confirmation modal for exit session
+ const [showExitConfirm, setShowExitConfirm] = useState(false);
+ // Track if session is being saved
+ const [isSavingSession, setIsSavingSession] = useState(false);
  // Tool visibility
  const [showCalculator, setShowCalculator] = useState(false);
  const [showScratchPad, setShowScratchPad] = useState(false);
@@ -593,6 +597,69 @@ export default function TBSContainer({
  setTimeout(() => setFocusRequirementId(null), 100);
  }, []);
 
+ // Handle exit session - show confirmation modal
+ const handleExitSession = useCallback(() => {
+ setShowExitConfirm(true);
+ }, []);
+
+ // Save progress and exit
+ const handleSaveAndExit = useCallback(async () => {
+ if (!user || !supabase) {
+   // No auth - just exit without saving
+   setShowExitConfirm(false);
+   onReturnToLibrary?.();
+   return;
+ }
+
+ setIsSavingSession(true);
+ try {
+   // Save current progress as incomplete attempt
+   const attemptId = crypto.randomUUID();
+   await supabase.from("tbs_attempts").upsert({
+   id: attemptId,
+   user_id: user.id,
+   tbs_id: tbs.id,
+   section: tbs.section,
+   started_at: startTime.toISOString(),
+   time_spent_seconds: elapsedSeconds,
+   responses,
+   is_complete: false,
+   }, {
+   onConflict: 'user_id,tbs_id',
+   ignoreDuplicates: false,
+   });
+
+   // Also save scratch pad notes if any
+   if (scratchPadNotes.trim()) {
+   await supabase.from("question_notes").upsert({
+     user_id: user.id,
+     question_id: `tbs_${tbs.id}`,
+     section: tbs.section,
+     topic: tbs.topic,
+     subtopic: tbs.subtopic || null,
+     note: `[Simulation: ${tbs.title}]\n\n${scratchPadNotes.trim()}`,
+     is_starred: false,
+     confidence: null,
+     updated_at: new Date().toISOString(),
+   }, {
+     onConflict: 'user_id,question_id'
+   });
+   }
+ } catch (error) {
+   console.error("Failed to save TBS session:", error);
+ } finally {
+   setIsSavingSession(false);
+   setShowExitConfirm(false);
+   onReturnToLibrary?.();
+ }
+ }, [user, supabase, tbs, startTime, elapsedSeconds, responses, scratchPadNotes, onReturnToLibrary]);
+
+ // Exit without saving
+ const handleExitWithoutSaving = useCallback(() => {
+ setShowExitConfirm(false);
+ onReturnToLibrary?.();
+ }, [onReturnToLibrary]);
+
  const completionStatus = getCompletionStatus();
 
  // Determine which content to show
@@ -693,7 +760,7 @@ export default function TBSContainer({
  onSubmit={handleSubmitAttempt}
  onPrevious={onPrevious}
  onNext={onNext}
- onReturnToLibrary={onReturnToLibrary}
+ onReturnToLibrary={isSubmitted ? onReturnToLibrary : handleExitSession}
  />
 
  {/* Instructions - hide in review mode */}
@@ -779,6 +846,76 @@ export default function TBSContainer({
  </button>
  </div>
  </div>
+ </div>
+ )}
+
+ {/* Exit Session Confirmation Modal */}
+ {showExitConfirm && (
+ <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+   <div className="bg-white dark:bg-[var(--card)] rounded-xl shadow-xl max-w-md w-full mx-4 overflow-hidden">
+   <div className="p-6">
+     <div className="flex items-center gap-3 mb-4">
+     <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+       <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+       </svg>
+     </div>
+     <h3 className="text-lg font-semibold text-gray-800 dark:text-[var(--foreground)]">
+       Exit Simulation
+     </h3>
+     </div>
+     <p className="text-gray-600 dark:text-[var(--muted)] mb-4">
+     Would you like to save your progress before exiting? You can resume this simulation later.
+     </p>
+     <div className="bg-gray-50 dark:bg-[var(--background)] rounded-lg p-3 mb-4">
+     <div className="flex justify-between text-sm">
+       <span className="text-gray-500 dark:text-[var(--muted)]">Progress:</span>
+       <span className="font-medium text-gray-700 dark:text-[var(--muted-light)]">
+       {completionStatus.answered}/{completionStatus.total} answered
+       </span>
+     </div>
+     <div className="flex justify-between text-sm mt-1">
+       <span className="text-gray-500 dark:text-[var(--muted)]">Time spent:</span>
+       <span className="font-medium text-gray-700 dark:text-[var(--muted-light)]">
+       {Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, '0')}
+       </span>
+     </div>
+     </div>
+   </div>
+   <div className="px-6 py-4 bg-gray-50 dark:bg-[var(--background)] flex flex-col sm:flex-row gap-3">
+     <button
+     onClick={handleExitWithoutSaving}
+     className="flex-1 px-4 py-2 text-sm font-medium text-gray-700 dark:text-[var(--muted-light)] hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors border border-gray-300 dark:border-gray-600"
+     >
+     Exit Without Saving
+     </button>
+     <button
+     onClick={handleSaveAndExit}
+     disabled={isSavingSession}
+     className="flex-1 px-4 py-2 text-sm font-medium bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white rounded-lg transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+     >
+     {isSavingSession ? (
+       <>
+       <svg className="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+       </svg>
+       Saving...
+       </>
+     ) : (
+       'Save & Exit'
+     )}
+     </button>
+   </div>
+   <button
+     onClick={() => setShowExitConfirm(false)}
+     className="absolute top-4 right-4 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded transition-colors"
+   >
+     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+     </svg>
+   </button>
+   </div>
  </div>
  )}
  </div>

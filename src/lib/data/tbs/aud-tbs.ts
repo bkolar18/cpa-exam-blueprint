@@ -10725,6 +10725,713 @@ Required: Determine the appropriate action for each compilation scenario.`,
   ],
 };
 
+// =============================================================================
+// AUD-II CONTENT AREA EXPANSION (tbs-aud-087 through tbs-aud-091)
+// Assessing Risk and Developing a Planned Response
+// =============================================================================
+
+export const audRiskAssessmentProceduresTBS: TBSQuestion = {
+  id: "tbs-aud-087",
+  section: "AUD",
+  tbsType: "dropdown",
+  topic: "Risk Assessment",
+  subtopic: "Risk Assessment Procedures",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-II",
+  title: "Risk Assessment Procedures and Responses",
+  scenarioText: `You are planning the audit of Clearwater Manufacturing Inc., a mid-size company that produces industrial equipment. During your planning phase, you must perform risk assessment procedures to identify and assess risks of material misstatement.
+
+Required: Evaluate the appropriateness of each risk assessment procedure and determine the proper auditor response.`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-client-info",
+      order: 1,
+      title: "Client Background",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Clearwater Manufacturing Inc.",
+        paragraphs: [
+          "Annual revenue: $45 million",
+          "Industry: Industrial equipment manufacturing",
+          "New ERP system implemented 6 months ago",
+          "Significant management turnover in past year",
+          "Complex revenue recognition due to long-term contracts",
+          "Prior year had a material weakness in inventory controls",
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-inquiry-only",
+      order: 1,
+      type: "dropdown",
+      label: "Is inquiry of management alone sufficient for risk assessment?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-inquiry-no",
+      },
+      explanation: "Inquiry alone is not sufficient; must be combined with other procedures like observation, inspection, and analytical procedures",
+      dropdownOptions: [
+        { id: "opt-inquiry-yes", order: 1, text: "Yes - management is the most knowledgeable source", isCorrect: false },
+        { id: "opt-inquiry-no", order: 2, text: "No - must combine with observation, inspection, and analytics", isCorrect: true },
+        { id: "opt-inquiry-depends", order: 3, text: "Yes - if management has been reliable in prior years", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-erp-risk",
+      order: 2,
+      type: "dropdown",
+      label: "New ERP system implementation indicates which risk consideration?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-erp-control",
+      },
+      explanation: "New systems often have untested controls and increased risk of processing errors",
+      dropdownOptions: [
+        { id: "opt-erp-inherent", order: 1, text: "Lower inherent risk due to automation", isCorrect: false },
+        { id: "opt-erp-control", order: 2, text: "Increased control risk due to untested controls", isCorrect: true },
+        { id: "opt-erp-detection", order: 3, text: "Lower detection risk from better audit trail", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-mgmt-turnover",
+      order: 3,
+      type: "dropdown",
+      label: "Management turnover requires which auditor response?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-turnover-assess",
+      },
+      explanation: "Turnover may indicate control environment issues and requires reassessment of management integrity and competence",
+      dropdownOptions: [
+        { id: "opt-turnover-ignore", order: 1, text: "No impact if financial results are stable", isCorrect: false },
+        { id: "opt-turnover-assess", order: 2, text: "Reassess control environment and management integrity", isCorrect: true },
+        { id: "opt-turnover-decline", order: 3, text: "Decline the engagement due to instability", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-prior-mw",
+      order: 4,
+      type: "dropdown",
+      label: "Prior year material weakness in inventory controls requires?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-mw-remediation",
+      },
+      explanation: "Must evaluate whether management has remediated the material weakness and design appropriate tests",
+      dropdownOptions: [
+        { id: "opt-mw-ignore", order: 1, text: "Not relevant if different auditor performed prior audit", isCorrect: false },
+        { id: "opt-mw-remediation", order: 2, text: "Evaluate remediation and test inventory controls", isCorrect: true },
+        { id: "opt-mw-disclaim", order: 3, text: "Issue disclaimer on inventory balances", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-revenue-sig",
+      order: 5,
+      type: "dropdown",
+      label: "Complex revenue recognition typically represents a?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-rev-significant",
+      },
+      explanation: "Revenue recognition is presumed to be a significant risk requiring special audit consideration",
+      dropdownOptions: [
+        { id: "opt-rev-normal", order: 1, text: "Normal risk requiring standard substantive tests", isCorrect: false },
+        { id: "opt-rev-significant", order: 2, text: "Significant risk requiring special audit consideration", isCorrect: true },
+        { id: "opt-rev-low", order: 3, text: "Low risk if adequate disclosures are made", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-discussion",
+      order: 6,
+      type: "dropdown",
+      label: "The audit team brainstorming session should focus on?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-discuss-mmiss",
+      },
+      explanation: "Team discussion should emphasize how and where financial statements might be materially misstated due to fraud or error",
+      dropdownOptions: [
+        { id: "opt-discuss-efficiency", order: 1, text: "How to complete the audit most efficiently", isCorrect: false },
+        { id: "opt-discuss-mmiss", order: 2, text: "How and where material misstatement could occur", isCorrect: true },
+        { id: "opt-discuss-fees", order: 3, text: "How to maximize billing on the engagement", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const audMaterialityApplicationTBS: TBSQuestion = {
+  id: "tbs-aud-088",
+  section: "AUD",
+  tbsType: "numeric_entry",
+  topic: "Planning",
+  subtopic: "Materiality Determination",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-II",
+  title: "Materiality Calculation and Application",
+  scenarioText: `You are establishing materiality for the audit of Riverside Services Corp. Based on firm guidelines and professional judgment, calculate the appropriate materiality levels.
+
+Financial Data:
+- Total Revenue: $28,000,000
+- Net Income Before Tax: $1,400,000
+- Total Assets: $22,000,000
+- Total Equity: $8,500,000
+
+Firm Guidelines:
+- For service companies, use 5% of net income before tax or 0.5% of revenue
+- Performance materiality is typically 50-75% of overall materiality
+- Trivial threshold for accumulating misstatements is typically 5% of materiality
+
+Required: Calculate the materiality levels.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-materiality-guide",
+      order: 1,
+      title: "Materiality Guidelines",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Common Materiality Benchmarks",
+        paragraphs: [
+          "Net Income Before Tax: 3-5% (for-profit entities)",
+          "Revenue: 0.5-1% (revenue-focused or non-profit)",
+          "Total Assets: 0.5-1% (asset-intensive industries)",
+          "Total Equity: 1-5% (for non-profit entities)",
+          "Use judgment to select appropriate benchmark",
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-mat-income",
+      order: 1,
+      type: "numeric",
+      label: "Materiality based on 5% of net income before tax ($)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 70000,
+        tolerance: 0,
+      },
+      explanation: "$1,400,000 × 5% = $70,000",
+    },
+    {
+      id: "req-mat-revenue",
+      order: 2,
+      type: "numeric",
+      label: "Materiality based on 0.5% of revenue ($)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 140000,
+        tolerance: 0,
+      },
+      explanation: "$28,000,000 × 0.5% = $140,000",
+    },
+    {
+      id: "req-mat-selected",
+      order: 3,
+      type: "dropdown",
+      label: "Which benchmark should be selected for a service company?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-lower-mat",
+      },
+      explanation: "When two benchmarks give different results, auditors typically select the lower amount to be more conservative",
+      dropdownOptions: [
+        { id: "opt-higher-mat", order: 1, text: "$140,000 - higher provides more audit efficiency", isCorrect: false },
+        { id: "opt-lower-mat", order: 2, text: "$70,000 - lower is more conservative and appropriate", isCorrect: true },
+        { id: "opt-average-mat", order: 3, text: "$105,000 - average of both benchmarks", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-perf-mat",
+      order: 4,
+      type: "numeric",
+      label: "Performance materiality at 60% of overall materiality ($)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 42000,
+        tolerance: 0,
+      },
+      explanation: "$70,000 × 60% = $42,000",
+    },
+    {
+      id: "req-trivial",
+      order: 5,
+      type: "numeric",
+      label: "Trivial threshold at 5% of overall materiality ($)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 3500,
+        tolerance: 0,
+      },
+      explanation: "$70,000 × 5% = $3,500",
+    },
+    {
+      id: "req-perf-purpose",
+      order: 6,
+      type: "dropdown",
+      label: "Performance materiality is set lower to?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-perf-aggregate",
+      },
+      explanation: "Performance materiality accounts for the possibility that aggregate misstatements could exceed overall materiality",
+      dropdownOptions: [
+        { id: "opt-perf-save", order: 1, text: "Reduce audit time and costs", isCorrect: false },
+        { id: "opt-perf-aggregate", order: 2, text: "Account for undetected and projected misstatements", isCorrect: true },
+        { id: "opt-perf-client", order: 3, text: "Satisfy client expectations for precision", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const audUnderstandingEntityTBS: TBSQuestion = {
+  id: "tbs-aud-089",
+  section: "AUD",
+  tbsType: "dropdown",
+  topic: "Risk Assessment",
+  subtopic: "Understanding the Entity",
+  difficulty: "medium",
+  skillLevel: "analysis",
+  contentArea: "AUD-II",
+  title: "Understanding the Entity and Its Environment",
+  scenarioText: `You are beginning the audit of TechStart Solutions, a technology startup that provides cloud-based software services. As part of risk assessment, you must obtain an understanding of the entity and its environment.
+
+Required: Evaluate each aspect of understanding the entity and determine its relevance to risk assessment.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-entity-info",
+      order: 1,
+      title: "TechStart Solutions Overview",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Company Information",
+        paragraphs: [
+          "Founded 3 years ago, rapid growth phase",
+          "Revenue model: Monthly subscription fees (SaaS)",
+          "Key performance metric: Monthly Recurring Revenue (MRR)",
+          "Significant deferred revenue from annual contracts",
+          "Heavy investment in R&D (40% of revenue)",
+          "Venture capital funded, pursuing Series C",
+          "Industry experiencing consolidation",
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-revenue-model",
+      order: 1,
+      type: "dropdown",
+      label: "SaaS subscription revenue model primarily affects?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-rev-timing",
+      },
+      explanation: "Subscription models create timing/cutoff issues and deferred revenue recognition complexities",
+      dropdownOptions: [
+        { id: "opt-rev-existence", order: 1, text: "Existence of revenue - may not have real customers", isCorrect: false },
+        { id: "opt-rev-timing", order: 2, text: "Timing/cutoff of revenue recognition", isCorrect: true },
+        { id: "opt-rev-valuation", order: 3, text: "Valuation of accounts receivable", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-growth",
+      order: 2,
+      type: "dropdown",
+      label: "Rapid growth phase suggests increased risk of?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-growth-controls",
+      },
+      explanation: "Rapid growth often outpaces control implementation, leading to control deficiencies",
+      dropdownOptions: [
+        { id: "opt-growth-fraud", order: 1, text: "Employee fraud due to stretched resources", isCorrect: false },
+        { id: "opt-growth-controls", order: 2, text: "Inadequate internal controls over financial reporting", isCorrect: true },
+        { id: "opt-growth-gc", order: 3, text: "Going concern issues from cash burn", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-vc-funding",
+      order: 3,
+      type: "dropdown",
+      label: "Venture capital funding pursuing Series C indicates?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-vc-incentive",
+      },
+      explanation: "Fundraising creates incentive to present favorable financial results to investors",
+      dropdownOptions: [
+        { id: "opt-vc-stable", order: 1, text: "Stable financial position reducing risk", isCorrect: false },
+        { id: "opt-vc-incentive", order: 2, text: "Potential management bias in financial reporting", isCorrect: true },
+        { id: "opt-vc-oversight", order: 3, text: "Strong board oversight reducing control risk", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-industry",
+      order: 4,
+      type: "dropdown",
+      label: "Industry consolidation is relevant to assessing?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-ind-gc",
+      },
+      explanation: "Consolidation may threaten viability of smaller players, affecting going concern",
+      dropdownOptions: [
+        { id: "opt-ind-fraud", order: 1, text: "Fraud risk from competitive pressure", isCorrect: false },
+        { id: "opt-ind-gc", order: 2, text: "Going concern and business model viability", isCorrect: true },
+        { id: "opt-ind-controls", order: 3, text: "Internal control effectiveness", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-rd-spend",
+      order: 5,
+      type: "dropdown",
+      label: "High R&D spending (40% of revenue) requires focus on?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-rd-capitalize",
+      },
+      explanation: "Significant R&D spending raises questions about proper capitalization vs. expensing treatment",
+      dropdownOptions: [
+        { id: "opt-rd-payroll", order: 1, text: "Payroll accuracy for R&D employees", isCorrect: false },
+        { id: "opt-rd-capitalize", order: 2, text: "Proper capitalization vs. expensing of development costs", isCorrect: true },
+        { id: "opt-rd-disclosure", order: 3, text: "Adequate disclosure of R&D activities", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-kpi",
+      order: 6,
+      type: "dropdown",
+      label: "MRR as a key performance metric requires the auditor to?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-kpi-understand",
+      },
+      explanation: "Understanding KPIs helps identify pressures and potential manipulation targets",
+      dropdownOptions: [
+        { id: "opt-kpi-ignore", order: 1, text: "Ignore - non-GAAP metrics outside audit scope", isCorrect: false },
+        { id: "opt-kpi-understand", order: 2, text: "Understand how it influences management behavior", isCorrect: true },
+        { id: "opt-kpi-audit", order: 3, text: "Audit and opine on MRR accuracy", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const audControlEnvironmentTBS: TBSQuestion = {
+  id: "tbs-aud-090",
+  section: "AUD",
+  tbsType: "dropdown",
+  topic: "Internal Controls",
+  subtopic: "Control Environment Assessment",
+  difficulty: "medium",
+  skillLevel: "evaluation",
+  contentArea: "AUD-II",
+  title: "Control Environment Evaluation",
+  scenarioText: `You are evaluating the control environment of Harper Distribution Company as part of your risk assessment procedures. The control environment sets the tone of an organization and influences the control consciousness of its people.
+
+Required: Assess each aspect of Harper's control environment and determine its effect on risk assessment.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-control-env",
+      order: 1,
+      title: "Control Environment Observations",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Harper Distribution - Control Environment",
+        paragraphs: [
+          "Board of Directors: 5 members, 3 are independent, meets quarterly",
+          "Audit Committee: 2 independent members, both have financial expertise",
+          "CEO/CFO: Same person serves in both roles",
+          "Written code of ethics exists but no formal acknowledgment process",
+          "HR policies documented but inconsistently applied",
+          "Previous auditor resigned citing disagreement over accounting treatment",
+          "Management frequently overrides budget approval limits",
+          "Bonus structure heavily tied to meeting revenue targets",
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-dual-role",
+      order: 1,
+      type: "dropdown",
+      label: "CEO/CFO dual role represents?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-dual-weakness",
+      },
+      explanation: "Lack of separation between operations and financial reporting increases risk of override and errors",
+      dropdownOptions: [
+        { id: "opt-dual-efficient", order: 1, text: "Efficient governance appropriate for company size", isCorrect: false },
+        { id: "opt-dual-weakness", order: 2, text: "Significant control environment weakness", isCorrect: true },
+        { id: "opt-dual-neutral", order: 3, text: "Neutral factor if adequate board oversight exists", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-auditor-resign",
+      order: 2,
+      type: "dropdown",
+      label: "Previous auditor resignation requires?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-resign-communicate",
+      },
+      explanation: "Must communicate with predecessor auditor to understand circumstances before accepting engagement",
+      dropdownOptions: [
+        { id: "opt-resign-ignore", order: 1, text: "No action needed - common in competitive market", isCorrect: false },
+        { id: "opt-resign-communicate", order: 2, text: "Communicate with predecessor auditor per standards", isCorrect: true },
+        { id: "opt-resign-decline", order: 3, text: "Automatically decline the engagement", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-mgmt-override",
+      order: 3,
+      type: "dropdown",
+      label: "Frequent management override of budget limits indicates?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-override-fraud",
+      },
+      explanation: "Pattern of override suggests weak tone at the top and increased fraud risk",
+      dropdownOptions: [
+        { id: "opt-override-normal", order: 1, text: "Normal business flexibility in operations", isCorrect: false },
+        { id: "opt-override-fraud", order: 2, text: "Increased fraud risk and weak tone at the top", isCorrect: true },
+        { id: "opt-override-budget", order: 3, text: "Budgets are set too conservatively", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-incentive",
+      order: 4,
+      type: "dropdown",
+      label: "Bonus structure tied to revenue targets creates?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-incent-pressure",
+      },
+      explanation: "Aggressive incentive compensation creates pressure element of fraud triangle for revenue manipulation",
+      dropdownOptions: [
+        { id: "opt-incent-alignment", order: 1, text: "Good alignment of management and shareholder interests", isCorrect: false },
+        { id: "opt-incent-pressure", order: 2, text: "Pressure to misstate revenue (fraud triangle element)", isCorrect: true },
+        { id: "opt-incent-motivation", order: 3, text: "Motivation for operational efficiency", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-ethics-code",
+      order: 5,
+      type: "dropdown",
+      label: "Ethics code without acknowledgment process suggests?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-ethics-weak",
+      },
+      explanation: "Lack of formal acknowledgment reduces accountability and may indicate code is not taken seriously",
+      dropdownOptions: [
+        { id: "opt-ethics-adequate", order: 1, text: "Adequate - existence of code is sufficient", isCorrect: false },
+        { id: "opt-ethics-weak", order: 2, text: "Weakened commitment to ethical values", isCorrect: true },
+        { id: "opt-ethics-immaterial", order: 3, text: "Immaterial to control environment assessment", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-audit-committee",
+      order: 6,
+      type: "dropdown",
+      label: "Audit committee composition represents?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-ac-positive",
+      },
+      explanation: "Independent audit committee with financial expertise is a positive control environment factor",
+      dropdownOptions: [
+        { id: "opt-ac-negative", order: 1, text: "Weakness - should have 3+ independent members", isCorrect: false },
+        { id: "opt-ac-positive", order: 2, text: "Positive factor - independent members with expertise", isCorrect: true },
+        { id: "opt-ac-neutral", order: 3, text: "Neutral - standard governance requirement", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const audPlannedResponseTBS: TBSQuestion = {
+  id: "tbs-aud-091",
+  section: "AUD",
+  tbsType: "dropdown",
+  topic: "Risk Assessment",
+  subtopic: "Planned Audit Response",
+  difficulty: "hard",
+  skillLevel: "evaluation",
+  contentArea: "AUD-II",
+  title: "Developing Planned Responses to Assessed Risks",
+  scenarioText: `Based on your risk assessment of Global Retail Corp., you have identified several risks of material misstatement. You must now develop appropriate audit responses to address these identified risks.
+
+Required: For each identified risk, determine the most appropriate planned response.`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-risks-identified",
+      order: 1,
+      title: "Identified Risks of Material Misstatement",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Global Retail Corp. - Assessed Risks",
+        paragraphs: [
+          "1. Inventory obsolescence risk due to fast-changing consumer preferences (RMM: High)",
+          "2. Revenue recognition cutoff errors at year-end for e-commerce sales (RMM: Moderate)",
+          "3. Weak controls over journal entry approval (Control Risk: High)",
+          "4. Complex lease accounting under new standard (Inherent Risk: High)",
+          "5. Related party transactions with offshore entities (Fraud Risk: Significant)",
+          "6. IT general controls have not been tested (Control Risk: High for IT-dependent controls)",
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-inventory-response",
+      order: 1,
+      type: "dropdown",
+      label: "For high inventory obsolescence risk, the primary response is?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-inv-substantive",
+      },
+      explanation: "High inherent risk with judgmental estimates requires extensive substantive procedures, not just controls testing",
+      dropdownOptions: [
+        { id: "opt-inv-controls", order: 1, text: "Test controls over inventory valuation", isCorrect: false },
+        { id: "opt-inv-substantive", order: 2, text: "Substantive testing of obsolescence reserve and aging analysis", isCorrect: true },
+        { id: "opt-inv-inquiry", order: 3, text: "Inquiry of management about obsolescence policies", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-cutoff-response",
+      order: 2,
+      type: "dropdown",
+      label: "For e-commerce revenue cutoff risk, the best approach is?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-cutoff-test",
+      },
+      explanation: "Cutoff testing before and after year-end directly addresses the specific cutoff risk",
+      dropdownOptions: [
+        { id: "opt-cutoff-analytics", order: 1, text: "Analytical procedures comparing to prior year", isCorrect: false },
+        { id: "opt-cutoff-test", order: 2, text: "Test transactions around year-end for proper period", isCorrect: true },
+        { id: "opt-cutoff-confirm", order: 3, text: "Confirm sales with major customers", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-journal-response",
+      order: 3,
+      type: "dropdown",
+      label: "Weak journal entry controls require?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-je-testing",
+      },
+      explanation: "When controls are weak, auditors must increase substantive testing of journal entries",
+      dropdownOptions: [
+        { id: "opt-je-rely", order: 1, text: "Rely on compensating controls in other areas", isCorrect: false },
+        { id: "opt-je-testing", order: 2, text: "Expanded journal entry testing as fraud procedure", isCorrect: true },
+        { id: "opt-je-recommend", order: 3, text: "Recommend control improvement to management", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-lease-response",
+      order: 4,
+      type: "dropdown",
+      label: "Complex lease accounting with high inherent risk requires?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-lease-specialist",
+      },
+      explanation: "Complex accounting standards may require specialist involvement and detailed recalculation",
+      dropdownOptions: [
+        { id: "opt-lease-inquiry", order: 1, text: "Inquiry about management's implementation process", isCorrect: false },
+        { id: "opt-lease-specialist", order: 2, text: "Specialist involvement and independent recalculation", isCorrect: true },
+        { id: "opt-lease-disclosure", order: 3, text: "Focus on disclosure review only", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-rpt-response",
+      order: 5,
+      type: "dropdown",
+      label: "Significant fraud risk from related party transactions requires?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-rpt-procedures",
+      },
+      explanation: "Significant fraud risk requires procedures specifically responsive to the identified risk, including senior involvement",
+      dropdownOptions: [
+        { id: "opt-rpt-disclosure", order: 1, text: "Review adequacy of related party disclosures", isCorrect: false },
+        { id: "opt-rpt-procedures", order: 2, text: "Senior auditor involvement with targeted procedures", isCorrect: true },
+        { id: "opt-rpt-confirm", order: 3, text: "Confirm transactions with related parties", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-itgc-response",
+      order: 6,
+      type: "dropdown",
+      label: "If ITGCs are not tested, the effect on the audit plan is?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-itgc-substantive",
+      },
+      explanation: "Without ITGC testing, cannot rely on IT-dependent automated controls; must use fully substantive approach",
+      dropdownOptions: [
+        { id: "opt-itgc-test", order: 1, text: "Must test ITGCs before any other procedures", isCorrect: false },
+        { id: "opt-itgc-substantive", order: 2, text: "Cannot rely on automated controls; substantive only approach", isCorrect: true },
+        { id: "opt-itgc-outsource", order: 3, text: "Outsource IT audit to specialists", isCorrect: false },
+      ],
+    },
+  ],
+};
+
 // Export all AUD TBS questions
 export const audTBSQuestions: TBSQuestion[] = [
   audReportModificationsTBS,
@@ -10807,4 +11514,10 @@ export const audTBSQuestions: TBSQuestion[] = [
   audSubsidiaryReconciliationTBS,
   audEthicsIndependenceTBS,
   audSSARSCompilationTBS,
+  // AUD-II Content Area Expansion (tbs-aud-087 through tbs-aud-091)
+  audRiskAssessmentProceduresTBS,
+  audMaterialityApplicationTBS,
+  audUnderstandingEntityTBS,
+  audControlEnvironmentTBS,
+  audPlannedResponseTBS,
 ];

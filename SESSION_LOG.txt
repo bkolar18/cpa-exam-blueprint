@@ -11,6 +11,137 @@ IMPORTANT REMINDERS:
 - Only push to GitHub when committing actual code changes
 
 ================================================================================
+SESSION: 2026-01-10 (Dark Mode Fix + TBS Question Bank Expansion)
+================================================================================
+
+OBJECTIVES:
+- Fix dark mode styling on state requirements pages (bubbles unreadable)
+- Expand TBS question bank from 58 to 200 total questions
+- Research CPA exam TBS format and document best practices
+- Create TBS questions distributed across all 6 sections
+
+ACCOMPLISHED:
+
+1. Dark Mode Fix - State Requirements Pages
+   - Issue: Individual state requirement page bubbles were hard to read in dark mode
+   - Fixed src/app/state-requirements/[state]/page.tsx:
+     * Added dark:bg-gray-800 to all white card backgrounds
+     * Updated colored bubbles (green/red/purple/amber) with dark mode variants
+     * Example: bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700
+   - Fixed src/app/state-requirements/StateSelector.tsx:
+     * Added dark mode classes to dropdown container
+     * Updated search input with dark mode styles
+     * Updated state list items with dark mode hover/background
+
+2. TBS Research & Documentation
+   - Created comprehensive TBS research guide: src/lib/data/tbs/tbs-research-guide.md
+   - Sources: Gleim, Becker, iPassTheCPAExam, AICPA, CPA Journal
+   - Documented TBS types: Numeric Entry, Document Review, Journal Entry, Dropdown, Research
+   - Added complexity levels section:
+     * Simple (40%): 3-5 requirements, 1-2 exhibits, 8-12 min
+     * Moderate (45%): 5-7 requirements, 2-3 exhibits, 12-16 min
+     * Complex (15%): 7-10 requirements, 3-4 exhibits, 16-22 min
+   - Documented TBS distribution targets per section
+
+3. TBS Type System Created
+   - Created src/lib/data/tbs/types.ts with comprehensive interfaces:
+     * TBSQuestion: Main question interface
+     * TBSExhibit: Exhibit content (table, text, memo, financial_statement)
+     * TBSRequirement: Individual requirements with correct answers
+     * TBSType: Union type for question types
+   - Added 'dropdown' TBS type to TBSType union
+
+4. TBS Question Files Created (132 new questions)
+   - Created src/lib/data/tbs/far-tbs.ts (19 questions)
+     Topics: Leases (ASC 842), Consolidations, NCI, Pensions, Government Accounting,
+     Revenue Recognition (ASC 606), Income Taxes, Bonds, Treasury Stock, Cash Flow,
+     Research, Document Review, Inventory, Receivables, Intangibles, EPS
+
+   - Created src/lib/data/tbs/aud-tbs.ts (29 questions)
+     Topics: Audit Reports, Sampling, Internal Controls, Risk Assessment,
+     Subsequent Events, Ethics, Audit Evidence, Research, Review Engagements,
+     Materiality, Going Concern, Group Audits, SOC Reports, Fraud
+
+   - Created src/lib/data/tbs/reg-tbs.ts (30 questions)
+     Topics: Individual Tax, Property Transactions, Like-Kind Exchanges,
+     Corporate Tax, S-Corp, Partnership, Estate/Gift Tax, Business Law,
+     Circular 230, Research, Entity Selection, Depreciation
+
+   - Created src/lib/data/tbs/tcp-tbs.ts (21 questions)
+     Topics: Tax Planning, Multi-State Tax, Retirement Planning,
+     Estate Planning, Business Succession, Passive Activities,
+     International Tax, Entity Restructuring
+
+   - Created src/lib/data/tbs/bar-tbs.ts (21 questions)
+     Topics: Financial Analysis, Cost Accounting, Variance Analysis,
+     Budgeting, Capital Budgeting, Data Analytics, Derivatives,
+     Ratio Analysis, Process Costing
+
+   - Created src/lib/data/tbs/isc-tbs.ts (12 questions)
+     Topics: IT Controls, SOC Reports, Cybersecurity, Data Analytics,
+     Cloud Computing, Disaster Recovery, Change Management,
+     Access Controls, Encryption
+
+5. TBS Index File Created
+   - Created src/lib/data/tbs/index.ts
+   - Central exports for all TBS questions
+   - Helper functions: getAllTBSQuestions(), getTBSBySection()
+   - Imports from all section files
+
+6. TypeScript Compilation Verified
+   - Ran: npx tsc --noEmit --skipLibCheck
+   - All files compile successfully
+
+TECHNICAL DETAILS:
+- Files created: 9 new files in src/lib/data/tbs/
+- Files modified: 2 (state requirements dark mode)
+- New TBS questions: 132 (across 6 section files)
+- Total TBS now: 190 (58 sample + 132 new)
+- Target: 200 (need 10 more FAR questions)
+
+TBS QUESTION DISTRIBUTION:
+| Section | New  | Sample | Total |
+|---------|------|--------|-------|
+| FAR     | 19   | 0      | 19    |
+| AUD     | 29   | 0      | 29    |
+| REG     | 30   | 0      | 30    |
+| TCP     | 21   | 0      | 21    |
+| BAR     | 21   | 0      | 21    |
+| ISC     | 12   | 0      | 12    |
+| SAMPLE  | 0    | 58     | 58    |
+|---------|------|--------|-------|
+| TOTAL   | 132  | 58     | 190   |
+
+COMMITS:
+- (Pending - session ended before push)
+
+BLOCKERS/ISSUES:
+- None encountered
+- TypeScript compilation passes
+
+NEXT SESSION PRIORITIES:
+
+**CRITICAL: Read docs/tbs-system-architecture.md before creating ANY TBS**
+
+PHASE 1: Add 10 FAR TBS to reach 200 total
+- IDs: tbs-far-031 to tbs-far-040
+- File: src/lib/data/tbs/far-tbs.ts
+- Topics: PPE Impairment, Business Combinations, Contingencies,
+  Stock Compensation, Foreign Currency, Segment Reporting, Fair Value,
+  NFP Revenue, Enterprise Fund, Subsequent Events
+
+PHASE 2: Expand to 350 total TBS (150 more after Phase 1)
+- Add ~33 FAR, ~33 AUD, ~33 REG TBS
+- Add ~17 TCP, ~17 BAR, ~17 ISC TBS
+- Type distribution: 45% numeric, 25% document review, 15% journal, 10% dropdown, 5% research
+- Complexity: 40% simple, 45% moderate, 15% complex
+- See CURRENT_STATUS_2026-01-10.txt for full ID numbering
+
+PHASE 3: Other tasks
+- Commit and push all TBS changes
+- Consider Phase 4: Email Nurturing or continue MCQ medium questions
+
+================================================================================
 SESSION: 2026-01-08 (Exam Simulation Pause + 210 Medium Questions)
 ================================================================================
 

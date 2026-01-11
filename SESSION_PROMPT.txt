@@ -1,7 +1,7 @@
 ================================================================================
 CPA EXAM BLUEPRINT - SESSION PROMPT
 ================================================================================
-Last Updated: 2026-01-08
+Last Updated: 2026-01-10
 
 IMPORTANT: Read this file at the start of each session to understand project
 context and continue work seamlessly.
@@ -32,14 +32,14 @@ Repo: https://github.com/bkolar18/cpa-exam-blueprint
 Live: https://cpa-exam-blueprint.vercel.app
 
 ================================================================================
-CURRENT PROJECT STATE (as of 2026-01-08)
+CURRENT PROJECT STATE (as of 2026-01-10)
 ================================================================================
 
 Phase 1 (Free Tools) - COMPLETE
 - Score Release Calendar with countdown timer
 - NTS Expiration Tracker with email reminders
 - Study Hours Calculator for all 6 sections
-- State Requirements Guide (22 states)
+- State Requirements Guide (55 states/jurisdictions)
 - Enhanced Study Plan quiz with discipline sections
 
 Phase 2 (Content & Authority) - COMPLETE
@@ -56,50 +56,137 @@ Phase 3 (CPA Academy / Dashboard) - COMPLETE
 - Section progress management
 - NTS tracking in dashboard
 - Gamification (points, badges, achievements)
-- 5,810 practice questions across all 6 sections
+- 5,810 MCQ practice questions across all 6 sections
 - Practice history and accuracy tracking
 - Surgent promotional banner (per-account, 30-day reappearance)
-- **NEW** Exam Simulation Mode with pause functionality
+- Exam Simulation Mode with pause functionality
 
 Phase 3.5 (Question Bank Expansion) - IN PROGRESS
-- 5,810 total questions (up from 600 original)
-- 176 question batch files
-- Difficulty distribution: 17% easy, 49% medium, 33% hard
-- Target: 50-60% medium questions
+- MCQs: 5,810 total (176 batch files) - 49.2% medium (near 50-60% target)
+- TBS: 190/200 total - NEED 10 MORE FAR QUESTIONS
+- Dark mode fixes completed for state requirements pages
 
 Phase 4 (Email Nurturing) - NOT STARTED
 Phase 5 (AI Features) - NOT STARTED
 
 ================================================================================
-KEY NEW DOCUMENTS TO READ
+KEY DOCUMENTS TO READ (Updated 2026-01-10)
 ================================================================================
 
-1. **docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md** (CRITICAL - Updated 01/08)
-   - Complete breakdown of all 5,810 questions
-   - Distribution by section, difficulty, and batch
-   - Gap analysis for reaching target distribution
-   - Lists all 176 question batch files
+**MUST READ FIRST (Before creating ANY TBS):**
 
-2. **docs/question-batches/** (Question JSON files)
-   - Contains all question batch JSON files organized by section
-   - Format: {section}-batch-{number}-{topic}.json
-   - Recent additions: far-054, far-055, reg-035, reg-036, isc-015, isc-016
+1. **docs/tbs-system-architecture.md** (CRITICAL - READ FIRST!)
+   - Complete TBS creation guidelines and standards
+   - TypeScript interfaces and type definitions
+   - Exhibit structure templates
+   - Quality requirements and validation rules
+   - FOLLOW THIS DOCUMENT PRECISELY FOR ALL TBS CREATION
 
-3. **CPA Exam Blueprint - Business Overview.txt**
+**Session Context Files:**
+
+2. **CURRENT_STATUS_2026-01-10.txt** (CRITICAL)
+   - Detailed instructions for resuming current work
+   - Phase 1 & Phase 2 TBS expansion plan
+   - Distribution targets for 350 total TBS
+
+3. **src/lib/data/tbs/tbs-research-guide.md**
+   - CPA exam TBS research and background
+   - Complexity level definitions (40% simple, 45% moderate, 15% complex)
+   - Topic priorities by section
+
+**TBS Files:**
+
+4. **src/lib/data/tbs/*.ts** (TBS question files)
+   - types.ts: TBS type definitions
+   - far-tbs.ts: 19 FAR TBS (need 10 more for Phase 1)
+   - aud-tbs.ts: 29 AUD TBS
+   - reg-tbs.ts: 30 REG TBS
+   - tcp-tbs.ts: 21 TCP TBS
+   - bar-tbs.ts: 21 BAR TBS
+   - isc-tbs.ts: 12 ISC TBS
+   - index.ts: Central exports
+
+**Other Reference:**
+
+5. **docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md**
+   - Complete breakdown of all 5,810 MCQ questions
+
+6. **CPA Exam Blueprint - Business Overview.txt**
    - Complete business description for Surgent partnership
-   - Explains site purpose, all features, marketing funnel
-
-4. **cpa claude responses.txt**
-   - Strategic consulting recommendations
-   - Session summaries and technical decisions
-
-5. **CLAUDE_CONTEXT.txt**
-   - Complete project history and context
-   - Database schema (Supabase)
-   - All data models and types
 
 ================================================================================
-PRACTICE QUESTIONS STATUS (as of 2026-01-08)
+IMMEDIATE NEXT STEPS (Pick up here!)
+================================================================================
+
+**CRITICAL: READ THIS FIRST**
+Before creating ANY TBS questions, you MUST read:
+  docs/tbs-system-architecture.md
+This contains complete TBS creation guidelines. Follow it precisely.
+
+--------------------------------------------------------------------------------
+PHASE 1: ADD 10 FAR TBS TO REACH 200 TOTAL
+--------------------------------------------------------------------------------
+
+File: src/lib/data/tbs/far-tbs.ts
+Current: 19 questions (IDs tbs-far-012 through tbs-far-030)
+Needed: 10 more (IDs tbs-far-031 through tbs-far-040)
+
+Suggested Topics:
+1. Property Plant & Equipment - Impairment Testing
+2. Business Combinations - Purchase Price Allocation
+3. Contingencies and Commitments
+4. Stock Compensation (ASC 718)
+5. Foreign Currency Translation
+6. Segment Reporting
+7. Fair Value Measurements (ASC 820)
+8. NFP Revenue Recognition
+9. Governmental - Enterprise Fund
+10. Subsequent Events
+
+After adding:
+1. Update export array at bottom of far-tbs.ts
+2. Run: npx tsc --noEmit --skipLibCheck
+3. Verify total = 200
+
+--------------------------------------------------------------------------------
+PHASE 2: EXPAND TO 350 TOTAL TBS (150 more after Phase 1)
+--------------------------------------------------------------------------------
+
+After Phase 1, expand library from 200 to 350 total TBS.
+
+Distribution for 150 new TBS (maintain proportional):
+| Section | Add  | New Total |
+|---------|------|-----------|
+| FAR     | ~33  | 62        |
+| AUD     | ~33  | 62        |
+| REG     | ~33  | 63        |
+| TCP     | ~17  | 38        |
+| BAR     | ~17  | 38        |
+| ISC     | ~17  | 29        |
+
+Type Distribution: 45% numeric, 25% document review, 15% journal, 10% dropdown, 5% research
+Complexity: 40% simple, 45% moderate, 15% complex
+
+See CURRENT_STATUS_2026-01-10.txt for full details and ID numbering.
+
+================================================================================
+TBS QUESTION STATUS (as of 2026-01-10)
+================================================================================
+
+| Section | Questions | File Location              |
+|---------|-----------|----------------------------|
+| FAR     | 19        | src/lib/data/tbs/far-tbs.ts |
+| AUD     | 29        | src/lib/data/tbs/aud-tbs.ts |
+| REG     | 30        | src/lib/data/tbs/reg-tbs.ts |
+| TCP     | 21        | src/lib/data/tbs/tcp-tbs.ts |
+| BAR     | 21        | src/lib/data/tbs/bar-tbs.ts |
+| ISC     | 12        | src/lib/data/tbs/isc-tbs.ts |
+| SAMPLE  | 58        | src/lib/data/tbs/sample-tbs.ts |
+|---------|-----------|----------------------------|
+| TOTAL   | 190       | Need 10 more for 200       |
+
+================================================================================
+MCQ PRACTICE QUESTIONS STATUS (as of 2026-01-10)
 ================================================================================
 
 **Total Questions: 5,810 across 176 batch files**
@@ -113,64 +200,27 @@ PRACTICE QUESTIONS STATUS (as of 2026-01-08)
 | BAR     | 490       | 14      | 17%   | 56%  | 27%   |
 | ISC     | 560       | 16      | 15%   | 50%  | 35%   |
 
-**Difficulty Distribution:**
-- Easy: 1,013 (17.4%) - On target (15-20%)
-- Medium: 2,860 (49.2%) - Near target (50-60%), need ~336 more
-- Hard: 1,937 (33.3%) - Above target (25-30%)
-
 **Question File Locations:**
 - Original 600: src/lib/data/practice-questions/{section}.ts
 - Batch JSON files: docs/question-batches/{section}/
 
 ================================================================================
-RECENT ACCOMPLISHMENTS (Session 2026-01-08)
+RECENT ACCOMPLISHMENTS (Session 2026-01-10)
 ================================================================================
 
-1. **Exam Simulation Pause Button**
-   - Added pause/resume functionality to exam simulation mode
-   - Timer stops when paused, resumes correctly
-   - Shows paused overlay with progress summary
-   - Options: Resume exam or End & Submit early
-   - File: src/app/dashboard/exam-simulation/[section]/page.tsx
+1. **Dark Mode Fix - State Requirements Pages**
+   - Fixed bubbles/cards that were unreadable in dark mode
+   - Updated [state]/page.tsx with dark: classes for all cards
+   - Updated StateSelector.tsx dropdown with dark mode support
 
-2. **Medium Difficulty Questions Added (210 total)**
-   Round 1 - Conceptual (105 questions):
-   - far-batch-054-medium-conceptual.json (35 questions)
-   - reg-batch-035-medium-conceptual.json (35 questions)
-   - isc-batch-015-medium-conceptual.json (35 questions)
-
-   Round 2 - Application (105 questions):
-   - far-batch-055-medium-application.json (35 questions)
-   - reg-batch-036-medium-application.json (35 questions)
-   - isc-batch-016-medium-application.json (35 questions)
-
-3. **Question Error Fixes**
-   - reg-med-008: Fixed Section 351 control test answer (B→C)
-   - far-med2-015: Fixed EPS calculation answer (B→D, $4.90)
-
-4. **Updated Distribution Analysis**
-   - docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md fully updated
-   - New totals: 5,810 questions, 49.2% medium
-
-================================================================================
-IMMEDIATE NEXT STEPS (Pick up from here)
-================================================================================
-
-**Option A: Continue Adding Medium Questions**
-- Need ~336 more medium questions to reach 55% target
-- Priority sections: FAR (46%), REG (47%)
-- ISC is now at 50% (at target minimum)
-- Could add AUD medium questions (currently at 52% - already good)
-
-**Option B: Phase 4 - Email Nurturing**
-- Design 7-email welcome sequence
-- Set up email automation
-- Implement segment-based content delivery
-
-**Option C: Other Enhancements**
-- Add remaining 28 states to requirements guide
-- More blog posts for SEO
-- Expand exam simulation features
+2. **TBS Question Bank Expansion (190/200)**
+   - Created comprehensive TBS research guide with complexity levels
+   - Created new TBS folder structure: src/lib/data/tbs/
+   - Created 6 new section TBS files (far, aud, reg, tcp, bar, isc)
+   - Created types.ts with TBSQuestion interface
+   - Created index.ts with central exports
+   - Added 'dropdown' TBS type to types
+   - Total: 190 TBS (58 sample + 132 new)
 
 ================================================================================
 DATABASE STATUS (Supabase - ACTIVE)
@@ -190,73 +240,51 @@ CORE PROJECT STRUCTURE
 
 src/
 ├── app/
-│   ├── api/
-│   │   ├── submit-study-plan/       # Lead capture endpoint
-│   │   ├── subscribe-score-release/ # Score calendar subscriptions
-│   │   └── subscribe-nts/           # NTS tracker subscriptions
+│   ├── api/                         # API routes
 │   ├── auth/callback/               # Supabase auth callback
 │   ├── blog/                        # MDX blog (8 articles)
 │   ├── cpa-academy/                 # CPA Academy landing page
 │   ├── dashboard/                   # User dashboard (requires auth)
-│   │   ├── practice/                # Practice questions
-│   │   │   ├── [section]/           # Section-specific practice
-│   │   │   └── history/             # Review past attempts
-│   │   ├── exam-simulation/         # Exam simulation mode
-│   │   │   └── [section]/           # Section-specific exam (with pause)
-│   │   ├── study-log/               # Log study sessions
-│   │   ├── sections/                # Track section progress
-│   │   ├── nts/                     # Manage NTS entries
-│   │   ├── accolades/               # Badges and achievements
-│   │   └── settings/                # User preferences
-│   ├── guides/                      # Exam day, failed section
-│   ├── sections/                    # FAR, AUD, REG, TCP pages
-│   ├── state-requirements/          # 22 state requirement pages
-│   ├── success-stories/             # 5 success stories
-│   ├── tools/                       # Free tools (3)
-│   ├── login/, signup/              # Authentication pages
-│   └── recommended-program/         # Surgent affiliate page
+│   │   ├── practice/                # MCQ practice questions
+│   │   ├── exam-simulation/         # Timed exams with pause
+│   │   └── ...
+│   ├── state-requirements/          # 55 state/jurisdiction pages
+│   │   ├── [state]/page.tsx         # Dynamic state pages (dark mode fixed)
+│   │   └── StateSelector.tsx        # Dropdown (dark mode fixed)
+│   └── ...
 ├── components/
 │   ├── auth/AuthProvider.tsx        # Auth context with profile
-│   ├── Header.tsx, Footer.tsx
-│   └── dashboard/                   # Dashboard components
+│   └── ...
 └── lib/
     ├── supabase/                    # Supabase client & types
     ├── gamification/                # Points, badges, achievements
     └── data/
-        ├── practice-questions/      # Original 600 questions (6 files)
-        ├── score-release-dates.ts
-        └── state-requirements.ts
+        ├── practice-questions/      # Original 600 MCQs (6 files)
+        ├── tbs/                     # TBS QUESTIONS (NEW!)
+        │   ├── types.ts             # TBS type definitions
+        │   ├── tbs-research-guide.md # Research & creation guidelines
+        │   ├── far-tbs.ts           # 19 FAR TBS (need 10 more)
+        │   ├── aud-tbs.ts           # 29 AUD TBS
+        │   ├── reg-tbs.ts           # 30 REG TBS
+        │   ├── tcp-tbs.ts           # 21 TCP TBS
+        │   ├── bar-tbs.ts           # 21 BAR TBS
+        │   ├── isc-tbs.ts           # 12 ISC TBS
+        │   ├── sample-tbs.ts        # 58 original sample TBS
+        │   └── index.ts             # Central exports
+        └── ...
 
 docs/
-├── DIFFICULTY-DISTRIBUTION-ANALYSIS.md  # Question stats (READ THIS)
-└── question-batches/                     # 5,200+ additional questions
-    ├── far/                              # 55 batch files
-    ├── aud/                              # 29 batch files
-    ├── reg/                              # 36 batch files
-    ├── tcp/                              # 23 batch files
-    ├── bar/                              # 14 batch files
-    └── isc/                              # 16 batch files
-
-================================================================================
-ENVIRONMENT VARIABLES (Required)
-================================================================================
-
-.env.local:
-- RESEND_API_KEY (email sending)
-- EMAIL_TO (admin notification email)
-- NEXT_PUBLIC_SUPABASE_URL (Supabase project URL)
-- NEXT_PUBLIC_SUPABASE_ANON_KEY (Supabase anon key)
-- ANTHROPIC_API_KEY (for data extraction - scraper)
-
-Vercel Environment Variables: Must mirror .env.local
+├── DIFFICULTY-DISTRIBUTION-ANALYSIS.md  # MCQ stats
+└── question-batches/                    # 5,200+ additional MCQs
 
 ================================================================================
 COMMANDS
 ================================================================================
 
 cd "C:\Users\brenn\Documents\Coding Projects\CPA Exam Site\cpa-exam-blueprint"
-npm run dev      # Start dev server
-npm run build    # Production build (always run before committing)
-git push         # Deploy to Vercel (auto)
+npm run dev                      # Start dev server
+npm run build                    # Production build
+npx tsc --noEmit --skipLibCheck  # TypeScript check only
+git push                         # Deploy to Vercel (auto)
 
 ================================================================================

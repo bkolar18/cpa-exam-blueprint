@@ -177,6 +177,41 @@ export default function WorkArea({
  />
  );
 
+ case"dropdown":
+ // Dropdown selection TBS - multiple dropdown questions
+ return (
+ <div className="h-full flex flex-col">
+ <div className="p-4 border-b border-gray-200 bg-gray-50 dark:bg-[var(--background)]">
+ <h3 className="text-lg font-semibold text-gray-800 dark:text-[var(--foreground)]">
+ Selection Questions
+ </h3>
+ <p className="text-sm text-gray-600 dark:text-[var(--muted)] mt-1">
+ Select the appropriate answer for each question below
+ </p>
+ </div>
+ <div className="flex-1 overflow-auto p-4">
+ {dropdownRequirements.length > 0 ? (
+ <div className="space-y-4">
+ {dropdownRequirements.map((req) => (
+ <DropdownSelect
+ key={req.id}
+ requirement={req}
+ response={safeResponses[req.id] as DropdownResponse | null}
+ onResponseChange={(response) => onResponseChange(req.id, response)}
+ isSubmitted={isSubmitted}
+ showCorrectAnswer={true}
+ />
+ ))}
+ </div>
+ ) : (
+ <p className="text-gray-500 dark:text-[var(--muted)]">
+ No selection questions found for this simulation.
+ </p>
+ )}
+ </div>
+ </div>
+ );
+
  case"document_review":
  // Document review uses dropdown selections
  return (

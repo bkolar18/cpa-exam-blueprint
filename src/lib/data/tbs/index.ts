@@ -23,8 +23,9 @@ export { iscTBSQuestions } from "./isc-tbs";
 export { sampleTBSQuestions } from "./sample-tbs";
 
 // Combined array of all TBS questions
+// Note: sampleTBSQuestions excluded as it contains duplicate IDs from original development
+// The section-specific files (far-tbs, aud-tbs, etc.) now contain the canonical questions
 export const allTBSQuestions = [
-  ...sampleTBSQuestions, // Original 58 questions
   ...farTBSQuestions,
   ...audTBSQuestions,
   ...regTBSQuestions,

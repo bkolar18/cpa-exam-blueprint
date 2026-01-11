@@ -1,12 +1,60 @@
 # CPA Exam Blueprint - TODO
 
-## 2026-01-09
+## 2026-01-11
 
-### In Progress
-(none)
+### Completed Today
+- [x] Implement dropdown question functionality for TBS
+  - Added `case "dropdown"` handler in WorkArea.tsx
+  - Uses existing DropdownSelect component for rendering dropdown questions
+  - Now properly renders dropdown selection TBS questions (previously showed "under development")
+- [x] Build automated TBS validation script (`scripts/validate-tbs.js`)
+  - Checks for duplicate IDs, missing fields, invalid enums
+  - Validates content area matches section
+  - Flags potentially outdated content (years, tax keywords)
+  - **Found & fixed**: sample-tbs.ts had duplicate IDs with section files (excluded from allTBSQuestions)
+- [x] Create AICPA Blueprint alignment checker (`scripts/check-blueprint-alignment.js`)
+  - Compares content area distribution against AICPA weight ranges
+  - Identified alignment issues in FAR-I, AUD-II, TCP-II, BAR-I
+- [x] Add TBS questions to align with AICPA Blueprint weights
+  - **FAR-I**: Added 5 questions (tbs-far-087 through tbs-far-091)
+    - Conceptual framework, qualitative characteristics, recognition/measurement
+    - FAR-I now at 26% (within 25-35% target)
+  - **AUD-II**: Added 5 questions (tbs-aud-087 through tbs-aud-091)
+    - Risk assessment procedures, materiality, understanding entity, control environment
+    - AUD-II improved from 19% to 24%
+  - **TCP-II**: Added 8 questions (tbs-tcp-076 through tbs-tcp-083)
+    - C corp taxation, partnership basis, S corp eligibility, business deductions
+    - TCP-II improved from 20% to 28%
+  - **BAR-I**: Added 4 questions (tbs-bar-076 through tbs-bar-079)
+    - Financial forecasting, data analytics, financial modeling, trend analysis
+    - BAR-I now at 41% (within 40-50% target)
+  - **Total TBS questions**: 472 (was 450)
 
 ### Pending
-(none)
+- [ ] Run TBS migration in Supabase SQL Editor (required for TBS tracking to work)
+  - File: `supabase/migrations/20260110_fix_tbs_attempts_schema.sql`
+  - Adds `section` column to `tbs_attempts`
+  - Changes `tbs_id` from UUID to TEXT (frontend uses string IDs)
+  - Drops foreign key constraint to `tbs_questions` table
+- [ ] Further AICPA alignment refinements (minor gaps remain)
+  - AUD-I: 14% (needs 15%+)
+  - AUD-II: 24% (needs 25%+)
+  - AUD-IV: 24% (over 20% max - consider redistributing)
+  - TCP-II: 28% (needs 30%+)
+  - BAR-II: 34% (needs 35%+)
+  - BAR-III: 25% (over 20% max - consider redistributing)
+
+### Completed Today
+- [x] Fix auth session causing logout on page refresh
+  - Root cause: getUser() called on every mount, cleared auth on any error
+  - Now trusts local session, only clears on explicit invalid/expired errors
+- [x] Add "Save to My Notes" button in TBS scratch pad
+- [x] Add inline notes during MCQ quiz sessions
+- [x] Fix TBS progress tracking code (added section column to insert)
+- [x] Fix scratch pad notes saving (changed to upsert)
+- [x] Fix scratch pad first character position bug (CSS placeholder issue)
+
+## 2026-01-09
 
 ### Completed
 - [x] Fix dark mode text readability in dashboard bubbles
