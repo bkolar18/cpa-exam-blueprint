@@ -19,6 +19,13 @@ import {
  PracticeQuestion,
  SectionCode,
 } from"@/lib/data/practice-questions";
+import {
+ selectAdaptiveQuestions,
+ buildHistoryFromAttempts,
+ buildTopicPerformance,
+ getSelectionInsights,
+ type UserQuestionHistory,
+} from"@/lib/adaptive/question-selector";
 import type { SectionCode as DBSectionCode } from"@/lib/supabase/types";
 
 interface QuizResult {
@@ -81,8 +88,47 @@ export default function SectionPracticePage() {
  const [savedSession, setSavedSession] = useState<SavedSession | null>(null);
  const [showExitConfirm, setShowExitConfirm] = useState(false);
 
+ // Adaptive question selection
+ const [userHistory, setUserHistory] = useState<Map<string, UserQuestionHistory>>(new Map());
+ const [historyLoaded, setHistoryLoaded] = useState(false);
+ const [selectionInsights, setSelectionInsights] = useState<{
+   reviewingMissed: number;
+   newQuestions: number;
+   lowCoverageTopics: string[];
+   spacedReview: number;
+ } | null>(null);
+
  // Quiz timing
  const quizStartTime = useRef<Date | null>(null);
+
+ // Fetch user's practice history for adaptive selection
+ useEffect(() => {
+ const fetchHistory = async () => {
+   if (!user || !supabase) {
+     setHistoryLoaded(true);
+     return;
+   }
+
+   try {
+     const { data: attempts } = await supabase
+       .from('practice_attempts')
+       .select('question_id, is_correct, created_at')
+       .eq('user_id', user.id)
+       .eq('section', section);
+
+     if (attempts && attempts.length > 0) {
+       const history = buildHistoryFromAttempts(attempts);
+       setUserHistory(history);
+     }
+   } catch (error) {
+     console.error('Failed to fetch practice history:', error);
+   }
+
+   setHistoryLoaded(true);
+ };
+
+ fetchHistory();
+ }, [user, supabase, section]);
 
  // Check for saved session on mount
  useEffect(() => {
@@ -194,12 +240,31 @@ export default function SectionPracticePage() {
  }, [selectedTopic]);
 
  const startQuiz = () => {
- const options: { topic?: string; subtopic?: string } = {};
- if (selectedTopic !== 'all') options.topic = selectedTopic;
- if (selectedSubtopic !== 'all') options.subtopic = selectedSubtopic;
- // Difficulty filter removed - let adaptive model handle question selection
+ const allSectionQuestions = getQuestionsBySection(section);
+ const adaptiveOptions: { topic?: string; subtopic?: string } = {};
+ if (selectedTopic !== 'all') adaptiveOptions.topic = selectedTopic;
+ if (selectedSubtopic !== 'all') adaptiveOptions.subtopic = selectedSubtopic;
 
- const quizQuestions = getRandomQuestions(section, questionCount, options);
+ let quizQuestions: PracticeQuestion[];
+
+ // Use adaptive selection if user has history, otherwise fall back to random
+ if (userHistory.size > 0) {
+   quizQuestions = selectAdaptiveQuestions(
+     allSectionQuestions,
+     questionCount,
+     userHistory,
+     adaptiveOptions
+   );
+
+   // Generate insights about the selection
+   const topicPerformance = buildTopicPerformance(allSectionQuestions, userHistory);
+   const insights = getSelectionInsights(quizQuestions, userHistory, topicPerformance);
+   setSelectionInsights(insights);
+ } else {
+   // Fall back to random selection for new users
+   quizQuestions = getRandomQuestions(section, questionCount, adaptiveOptions);
+   setSelectionInsights(null);
+ }
 
  if (quizQuestions.length === 0) {
  alert('No questions available with the selected filters. Please try different options.');
@@ -503,6 +568,21 @@ export default function SectionPracticePage() {
 
  {/* Difficulty filter removed - let adaptive model handle question selection */}
  </div>
+
+ {/* Adaptive Learning Indicator */}
+ {historyLoaded && userHistory.size > 0 && (
+   <div className="mt-4 p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
+     <div className="flex items-center gap-2">
+       <svg className="w-5 h-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+       </svg>
+       <span className="font-medium text-purple-800 dark:text-purple-200">Adaptive Learning Active</span>
+     </div>
+     <p className="mt-1 text-sm text-purple-600 dark:text-purple-300">
+       Questions will be selected based on your past performance, prioritizing areas where you need more practice.
+     </p>
+   </div>
+ )}
 
  <button
  onClick={startQuiz}
