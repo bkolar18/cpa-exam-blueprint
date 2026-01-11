@@ -6,6 +6,7 @@ import { useAuth } from"@/components/auth/AuthProvider";
 import Link from"next/link";
 import { allTaxonomies, type SectionTaxonomy } from"@/lib/data/practice-questions/taxonomy";
 import { getQuestionsBySection, getQuestionsByTopic } from"@/lib/data/practice-questions";
+import { getTBSBySection, type TBSQuestion } from"@/lib/data/tbs";
 import type { SectionCode } from"@/lib/supabase/types";
 
 // Core sections always shown
@@ -43,6 +44,16 @@ interface TBSStats {
  uniqueTBSCompleted: number;
 }
 
+interface TBSTopicStats {
+ topic: string;
+ weight: number;
+ attempted: number; // unique TBS attempted
+ completed: number; // unique TBS completed
+ totalTBS: number; // total TBS available for this topic
+ averageScore: number | null;
+ coverage: number; // percentage of TBS attempted
+}
+
 interface SectionReadiness {
  section: SectionCode;
  overallScore: number;
@@ -55,6 +66,7 @@ interface SectionReadiness {
  simulationCount: number;
  // TBS stats
  tbsStats: TBSStats;
+ tbsTopicStats: TBSTopicStats[];
 }
 
 interface ConfidenceData {
@@ -95,6 +107,7 @@ function getNextMilestone(score: number) {
 export default function ReadinessDashboardPage() {
  const { user, profile, loading: authLoading } = useAuth();
  const [selectedSection, setSelectedSection] = useState<SectionCode>("FAR");
+ const [activeTab, setActiveTab] = useState<'mcq' | 'tbs'>('mcq');
  const [readinessData, setReadinessData] = useState<Record<string, SectionReadiness>>({});
  const [confidenceData, setConfidenceData] = useState<ConfidenceData[]>([]);
  const [loading, setLoading] = useState(true);
@@ -288,6 +301,41 @@ export default function ReadinessDashboardPage() {
  uniqueTBSCompleted: new Set(completedTBS.map(t => t.tbs_id)).size,
  };
 
+ // Calculate TBS topic stats
+ const allTBSForSection = getTBSBySection(section as "FAR" | "AUD" | "REG" | "TCP" | "BAR" | "ISC");
+ const tbsTopicStats: TBSTopicStats[] = taxonomy.topics.map(topic => {
+ // Get TBS questions for this topic
+ const topicTBS = allTBSForSection.filter(tbs => tbs.topic === topic.name);
+ const totalTBS = topicTBS.length;
+
+ // Get attempts for TBS in this topic
+ const topicTBSIds = new Set(topicTBS.map(tbs => tbs.id));
+ const topicTBSAttempts = sectionTBSAttempts.filter(a => topicTBSIds.has(a.tbs_id));
+ const topicCompletedAttempts = topicTBSAttempts.filter(a => a.is_complete);
+
+ // Unique TBS attempted and completed
+ const uniqueAttempted = new Set(topicTBSAttempts.map(a => a.tbs_id)).size;
+ const uniqueCompleted = new Set(topicCompletedAttempts.map(a => a.tbs_id)).size;
+
+ // Average score from completed attempts
+ const scores = topicCompletedAttempts
+ .map(a => a.score_percentage)
+ .filter((s): s is number => s !== null);
+ const averageScore = scores.length > 0
+ ? Math.round(scores.reduce((sum, s) => sum + s, 0) / scores.length)
+ : null;
+
+ return {
+ topic: topic.name,
+ weight: topic.weight,
+ attempted: uniqueAttempted,
+ completed: uniqueCompleted,
+ totalTBS,
+ averageScore,
+ coverage: totalTBS > 0 ? Math.min(100, Math.round((uniqueAttempted / totalTBS) * 100)) : 0,
+ };
+ });
+
  readiness[section] = {
  section: section as SectionCode,
  overallScore,
@@ -303,6 +351,7 @@ export default function ReadinessDashboardPage() {
  : null,
  simulationCount: simulations.length,
  tbsStats,
+ tbsTopicStats,
  };
  }
 
@@ -431,7 +480,7 @@ export default function ReadinessDashboardPage() {
  <button
  key={section}
  onClick={() => setSelectedSection(section)}
- className={`px-4 py-3 rounded-xl font-medium transition-all min-w-[72px] ${
+ className={`px-4 py-3 rounded-xl font-medium transition-all w-[100px] text-center ${
  selectedSection === section
  ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
  : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
@@ -575,15 +624,42 @@ export default function ReadinessDashboardPage() {
  </div>
  </div>
 
- {/* Readiness Radar - Topic Breakdown */}
+ {/* Tab Toggle for MCQ / TBS */}
+ <div className="flex gap-2 mb-6">
+ <button
+ onClick={() => setActiveTab('mcq')}
+ className={`px-6 py-3 rounded-lg font-medium transition-all ${
+ activeTab === 'mcq'
+ ? 'bg-[var(--primary)] text-white shadow-md'
+ : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
+ }`}
+ >
+ MCQ Progress
+ </button>
+ <button
+ onClick={() => setActiveTab('tbs')}
+ className={`px-6 py-3 rounded-lg font-medium transition-all ${
+ activeTab === 'tbs'
+ ? 'bg-[var(--primary)] text-white shadow-md'
+ : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
+ }`}
+ >
+ TBS Progress
+ </button>
+ </div>
+
+ {/* MCQ Topic Readiness */}
+ {activeTab === 'mcq' && (
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
- <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Topic Readiness</h2>
+ <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">MCQ Topic Readiness</h2>
  <p className="text-sm text-[var(--muted)] mb-6">
  Each topic is weighted by its importance on the actual exam (shown in parentheses)
  </p>
 
  <div className="space-y-4">
- {currentReadiness.topicStats.map((stat) => {
+ {currentReadiness.topicStats
+ .filter((stat) => stat.totalQuestions > 0 || stat.attempted > 0)
+ .map((stat) => {
  return (
  <div key={stat.topic} className="space-y-2">
  <div className="flex items-center justify-between">
@@ -636,6 +712,78 @@ export default function ReadinessDashboardPage() {
  })}
  </div>
  </div>
+ )}
+
+ {/* TBS Topic Readiness */}
+ {activeTab === 'tbs' && (
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
+ <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">TBS Topic Readiness</h2>
+ <p className="text-sm text-[var(--muted)] mb-6">
+ Task-Based Simulations completed by topic
+ </p>
+
+ <div className="space-y-4">
+ {currentReadiness.tbsTopicStats
+ .filter((stat) => stat.totalTBS > 0 || stat.attempted > 0)
+ .map((stat) => {
+ return (
+ <div key={stat.topic} className="space-y-2">
+ <div className="flex items-center justify-between">
+ <div className="flex-1 min-w-0">
+ <span className="font-medium text-[var(--foreground)] text-sm truncate block">
+ {stat.topic}
+ </span>
+ <span className="text-xs text-[var(--muted)]">
+ {stat.weight}% of exam • {stat.attempted} / {stat.totalTBS} TBS
+ </span>
+ </div>
+ <div className="text-right ml-4">
+ <span className={`text-lg font-bold ${
+ stat.averageScore !== null && stat.averageScore >= 75 ? 'text-green-600 dark:text-green-400' :
+ stat.averageScore !== null && stat.averageScore >= 50 ? 'text-yellow-600 dark:text-yellow-400' :
+ stat.averageScore !== null ? 'text-red-600 dark:text-red-400' :
+ 'text-gray-400'
+ }`}>
+ {stat.averageScore !== null ? `${stat.averageScore}% avg` : '--'}
+ </span>
+ </div>
+ </div>
+
+ {/* Progress bar for TBS - width represents TBS completed, color based on coverage */}
+ <div className="h-3 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
+ <div
+ className={`h-full transition-all duration-300 ${
+ stat.coverage >= 70 ? 'bg-green-500' :
+ stat.coverage >= 25 ? 'bg-yellow-500' :
+ stat.coverage > 0 ? 'bg-red-400' :
+ 'bg-gray-300 dark:bg-[var(--border)]'
+ }`}
+ style={{ width: `${stat.coverage}%` }}
+ />
+ </div>
+
+ {/* Coverage indicator */}
+ {stat.coverage < 50 && stat.attempted > 0 && (
+ <p className="text-xs text-orange-600 dark:text-orange-400">
+ Need more practice ({stat.totalTBS - stat.attempted} more TBS available)
+ </p>
+ )}
+ {stat.attempted === 0 && stat.totalTBS > 0 && (
+ <p className="text-xs text-gray-500 dark:text-gray-400">
+ Not yet practiced - start here to improve your score
+ </p>
+ )}
+ </div>
+ );
+ })}
+ {currentReadiness.tbsTopicStats.filter(s => s.totalTBS > 0).length === 0 && (
+ <p className="text-sm text-[var(--muted)] text-center py-8">
+ No TBS questions available for {selectedSection} yet.
+ </p>
+ )}
+ </div>
+ </div>
+ )}
 
  {/* Confidence Calibration */}
  {confidenceData.length > 0 && (
