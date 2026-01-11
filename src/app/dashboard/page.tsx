@@ -5,6 +5,8 @@ import { useSearchParams } from"next/navigation";
 import Link from"next/link";
 import { createClient } from"@/lib/supabase/client";
 import { useAuth } from"@/components/auth/AuthProvider";
+import { getQuestionsBySection } from"@/lib/data/practice-questions";
+import type { SectionCode } from"@/lib/supabase/types";
 
 // Type for study session from Supabase
 interface StudySessionRow {
@@ -18,9 +20,11 @@ interface StudySessionRow {
 // Type for section readiness data
 interface SectionReadinessData {
  section: string;
- attempted: number;
+ attempted: number; // unique questions attempted
  correct: number;
  accuracy: number;
+ totalQuestions: number;
+ coverage: number; // percentage of questions attempted
 }
 
 // Type for saved practice session
@@ -143,21 +147,41 @@ export default function DashboardPage() {
  // Fetch practice attempts for readiness summary
  const { data: attempts } = await supabase
  .from("practice_attempts")
- .select("section, is_correct")
+ .select("section, question_id, is_correct")
  .eq("user_id", user.id);
 
  if (attempts && attempts.length > 0) {
  // Calculate readiness per section
- const sections = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
+ const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
  const sectionStats: SectionReadinessData[] = sections
  .map(section => {
  const sectionAttempts = attempts.filter(a => a.section === section);
- const correct = sectionAttempts.filter(a => a.is_correct).length;
+
+ // Count unique questions attempted
+ const uniqueQuestionIds = new Set(sectionAttempts.map(a => a.question_id));
+ const uniqueAttempted = uniqueQuestionIds.size;
+
+ // Count correct (if any attempt was correct, count as correct)
+ const questionResults = new Map<string, boolean>();
+ sectionAttempts.forEach(a => {
+ const current = questionResults.get(a.question_id);
+ if (current !== true) {
+ questionResults.set(a.question_id, a.is_correct);
+ }
+ });
+ const correctQuestions = [...questionResults.values()].filter(v => v).length;
+
+ // Get total questions for this section
+ const totalQuestions = getQuestionsBySection(section).length;
+ const coverage = totalQuestions > 0 ? Math.round((uniqueAttempted / totalQuestions) * 100) : 0;
+
  return {
  section,
- attempted: sectionAttempts.length,
- correct,
- accuracy: sectionAttempts.length > 0 ? Math.round((correct / sectionAttempts.length) * 100) : 0
+ attempted: uniqueAttempted,
+ correct: correctQuestions,
+ accuracy: uniqueAttempted > 0 ? Math.round((correctQuestions / uniqueAttempted) * 100) : 0,
+ totalQuestions,
+ coverage,
  };
  })
  .filter(s => s.attempted > 0); // Only show sections with attempts
@@ -487,12 +511,13 @@ export default function DashboardPage() {
  <div className="flex-1 min-w-0">
  <div className="flex items-center justify-between mb-1">
  <span className="text-sm font-medium text-[var(--foreground)]">
- {section.attempted} questions
+ {section.attempted} / {section.totalQuestions} questions
  </span>
  <span className={`text-sm font-bold ${
  section.accuracy >= 75 ? 'text-green-600 dark:text-green-400' :
  section.accuracy >= 50 ? 'text-yellow-600 dark:text-yellow-400' :
- 'text-red-600 dark:text-red-400'
+ section.accuracy > 0 ? 'text-red-600 dark:text-red-400' :
+ 'text-gray-400'
  }`}>
  {section.accuracy}%
  </span>
@@ -500,11 +525,11 @@ export default function DashboardPage() {
  <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
  <div
  className={`h-full transition-all duration-300 ${
- section.accuracy >= 75 ? 'bg-green-500' :
- section.accuracy >= 50 ? 'bg-yellow-500' :
+ section.coverage >= 70 ? 'bg-green-500' :
+ section.coverage >= 25 ? 'bg-yellow-500' :
  'bg-red-400'
  }`}
- style={{ width: `${section.accuracy}%` }}
+ style={{ width: `${section.coverage}%` }}
  />
  </div>
  </div>

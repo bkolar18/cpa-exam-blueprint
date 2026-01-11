@@ -597,8 +597,8 @@ export default function ReadinessDashboardPage() {
  </div>
  <div className="text-right ml-4">
  <span className={`text-lg font-bold ${
- stat.accuracy >= 80 ? 'text-green-600 dark:text-green-400' :
- stat.accuracy >= 60 ? 'text-yellow-600 dark:text-yellow-400' :
+ stat.accuracy >= 75 ? 'text-green-600 dark:text-green-400' :
+ stat.accuracy >= 50 ? 'text-yellow-600 dark:text-yellow-400' :
  stat.accuracy > 0 ? 'text-red-600 dark:text-red-400' :
  'text-gray-400'
  }`}>
@@ -607,13 +607,13 @@ export default function ReadinessDashboardPage() {
  </div>
  </div>
 
- {/* Progress bar for topic - width represents questions completed */}
+ {/* Progress bar for topic - width represents questions completed, color based on coverage */}
  <div className="h-3 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
  <div
  className={`h-full transition-all duration-300 ${
- stat.accuracy >= 80 ? 'bg-green-500' :
- stat.accuracy >= 60 ? 'bg-yellow-500' :
- stat.accuracy > 0 ? 'bg-red-400' :
+ stat.coverage >= 70 ? 'bg-green-500' :
+ stat.coverage >= 25 ? 'bg-yellow-500' :
+ stat.coverage > 0 ? 'bg-red-400' :
  'bg-gray-300 dark:bg-[var(--border)]'
  }`}
  style={{ width: `${stat.coverage}%` }}
