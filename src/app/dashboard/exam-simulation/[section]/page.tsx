@@ -367,7 +367,7 @@ export default function ExamSimulationSectionPage() {
  <span>/</span>
  <span>{section}</span>
  </div>
- <div className="bg-white rounded-xl border border-[var(--border)] p-8 text-center">
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-8 text-center">
  <h2 className="text-xl font-bold text-[var(--foreground)] mb-2">Coming Soon!</h2>
  <p className="text-[var(--muted)] mb-6">
  Exam simulation for {sectionName} is currently being developed.
@@ -407,7 +407,7 @@ export default function ExamSimulationSectionPage() {
  </div>
  </div>
 
- <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
  <h2 className="text-lg font-semibold text-[var(--foreground)] mb-6">Select Exam Length</h2>
 
  <div className="grid md:grid-cols-3 gap-4 mb-6">
@@ -524,7 +524,7 @@ export default function ExamSimulationSectionPage() {
  </div>
 
  {/* Question Navigation */}
- <div className="bg-white rounded-xl border border-[var(--border)] p-4">
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-4">
  <div className="flex flex-wrap gap-2">
  {questions.map((_, i) => (
  <button
@@ -549,7 +549,7 @@ export default function ExamSimulationSectionPage() {
  </div>
 
  {/* Question */}
- <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
  <div className="flex items-center justify-between mb-4">
  <span className="text-sm text-[var(--muted)]">
  Question {currentIndex + 1} of {questions.length}
@@ -624,7 +624,7 @@ export default function ExamSimulationSectionPage() {
  if (examState === 'paused') {
  return (
  <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
- <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center">
+ <div className="bg-white dark:bg-[var(--card)] rounded-2xl p-8 max-w-md w-full mx-4 text-center">
  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
  <svg className="w-8 h-8 text-orange-500"fill="currentColor"viewBox="0 0 20 20">
  <path fillRule="evenodd"d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z"clipRule="evenodd"/>

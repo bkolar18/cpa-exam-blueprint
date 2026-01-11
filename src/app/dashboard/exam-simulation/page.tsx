@@ -102,7 +102,7 @@ export default function ExamSimulationPage() {
       </div>
 
       {/* Exam vs Practice Comparison */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Exam Simulation vs. Practice Mode</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
@@ -200,7 +200,7 @@ export default function ExamSimulationPage() {
             return (
               <div
                 key={section.code}
-                className={`bg-white rounded-xl border p-5 transition-all duration-200 ${
+                className={`bg-white dark:bg-[var(--card)] rounded-xl border p-5 transition-all duration-200 ${
                   hasQuestions
                     ? "border-[var(--border)] hover:border-orange-400 hover:shadow-md"
                     : "border-[var(--border)] opacity-75"
@@ -260,7 +260,7 @@ export default function ExamSimulationPage() {
       </div>
 
       {/* Tips Section */}
-      <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+      <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Exam Day Tips</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="flex items-start space-x-3">

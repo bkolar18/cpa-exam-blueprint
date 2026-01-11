@@ -182,7 +182,7 @@ export default function FailedSectionGuidePage() {
             ))}
           </div>
 
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
             <h3 className="font-semibold text-[var(--foreground)] mb-4">How to Read Your Performance Report</h3>
             <div className="space-y-4">
               <div>
@@ -295,7 +295,7 @@ export default function FailedSectionGuidePage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             The Mental Game
           </h2>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6 space-y-4">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6 space-y-4">
             <div>
               <h3 className="font-semibold text-[var(--foreground)] mb-2">Reframe the Failure</h3>
               <p className="text-[var(--muted)]">

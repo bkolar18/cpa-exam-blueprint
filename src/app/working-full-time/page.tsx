@@ -27,7 +27,7 @@ export default function WorkingFullTimePage() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* The Reality */}
-            <div className="bg-white p-8 rounded-xl border border-[var(--border)]">
+            <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
                 The Reality of Studying While Working
               </h2>
@@ -78,7 +78,7 @@ export default function WorkingFullTimePage() {
             </div>
 
             {/* Time Management Strategies */}
-            <div className="bg-white p-8 rounded-xl border border-[var(--border)]">
+            <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
                 Time Management Strategies That Work
               </h2>
@@ -127,7 +127,7 @@ export default function WorkingFullTimePage() {
             </div>
 
             {/* Busy Season Strategy */}
-            <div className="bg-white p-8 rounded-xl border border-[var(--border)]">
+            <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
                 Surviving Busy Season
               </h2>
@@ -157,7 +157,7 @@ export default function WorkingFullTimePage() {
             </div>
 
             {/* Study Tips */}
-            <div className="bg-white p-8 rounded-xl border border-[var(--border)]">
+            <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
                 Tips from Working Professionals
               </h2>
@@ -193,7 +193,7 @@ export default function WorkingFullTimePage() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* CTA Card */}
-            <div className="bg-white p-6 rounded-xl border border-[var(--border)]">
+            <div className="bg-white dark:bg-[var(--card)] p-6 rounded-xl border border-[var(--border)]">
               <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
                 Get Your Personalized Schedule
               </h3>
