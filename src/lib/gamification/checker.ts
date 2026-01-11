@@ -271,7 +271,12 @@ export async function checkAchievements(
   switch (context.trigger) {
     case 'study_session': {
       // First session achievement
-      const firstSession = achievements.find((a) => a.code === 'first_session');
+      const firstSession = achievements.find((a) =>
+        a.code === 'first_session' ||
+        a.code === 'first_study' ||
+        a.code === 'getting_started' ||
+        (a.category === 'study_hours' && a.name && a.name.toLowerCase().includes('first'))
+      );
       if (firstSession) {
         await unlockAchievement(firstSession);
       }
@@ -401,7 +406,12 @@ export async function checkAchievements(
       }
 
       // Check first practice session achievement
-      const firstPractice = achievements.find((a) => a.code === 'first_practice');
+      const firstPractice = achievements.find((a) =>
+        a.code === 'first_practice' ||
+        a.code === 'first_quiz' ||
+        a.code === 'first_mcq' ||
+        (a.category === 'practice' && a.name && a.name.toLowerCase().includes('first'))
+      );
       if (firstPractice) {
         await unlockAchievement(firstPractice);
       }
@@ -438,21 +448,40 @@ export async function checkAchievements(
     case 'profile_update': {
       // Check profile complete achievement
       if (context.profileComplete) {
-        const profileComplete = achievements.find((a) => a.code === 'profile_complete');
+        const profileComplete = achievements.find((a) =>
+          a.code === 'profile_complete' ||
+          a.code === 'complete_profile' ||
+          a.code === 'profile_setup' ||
+          (a.category === 'account' && a.name && a.name.toLowerCase().includes('profile'))
+        );
         if (profileComplete) await unlockAchievement(profileComplete);
       }
 
       // Check discipline chosen achievement
       if (context.disciplineChosen) {
-        const disciplineChosen = achievements.find((a) => a.code === 'discipline_chosen');
+        const disciplineChosen = achievements.find((a) =>
+          a.code === 'discipline_chosen' ||
+          a.code === 'choose_discipline' ||
+          a.code === 'discipline_selected' ||
+          a.code === 'path_chosen' ||
+          (a.category === 'account' && a.name && a.name.toLowerCase().includes('discipline'))
+        );
         if (disciplineChosen) await unlockAchievement(disciplineChosen);
       }
       break;
     }
 
     case 'nts_add': {
-      const ntsAdded = achievements.find((a) => a.code === 'nts_added');
-      if (ntsAdded) await unlockAchievement(ntsAdded);
+      // Try multiple possible codes for NTS achievement
+      const ntsAchievement = achievements.find((a) =>
+        a.code === 'nts_added' ||
+        a.code === 'nts_add' ||
+        a.code === 'first_nts' ||
+        a.code === 'add_nts' ||
+        a.code === 'nts_tracker' ||
+        (a.name && a.name.toLowerCase().includes('nts'))
+      );
+      if (ntsAchievement) await unlockAchievement(ntsAchievement);
       break;
     }
 
