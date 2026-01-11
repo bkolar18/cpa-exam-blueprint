@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from"react";
 import { createClient } from"@/lib/supabase/client";
 import { useAuth } from"@/components/auth/AuthProvider";
-import { useSearchParams } from"next/navigation";
+import { useSearchParams, useRouter } from"next/navigation";
 import Link from"next/link";
 import { getQuestionById } from"@/lib/data/practice-questions";
 
@@ -87,11 +87,19 @@ function createSessionFromAttempts(attempts: PracticeAttempt[]): Session {
 function PracticeHistoryContent() {
  const { user, loading: authLoading } = useAuth();
  const searchParams = useSearchParams();
+ const router = useRouter();
  const sessionIdParam = searchParams.get("session");
  const [sessions, setSessions] = useState<Session[]>([]);
  const [selectedSession, setSelectedSession] = useState<Session | null>(null);
  const [loading, setLoading] = useState(true);
  const supabase = createClient();
+
+ // Handle back to all sessions - clear URL param and state
+ const handleBackToSessions = () => {
+   setSelectedSession(null);
+   // Clear the session param from URL without full page reload
+   router.replace('/dashboard/practice/history', { scroll: false });
+ };
 
  useEffect(() => {
  if (authLoading) return;
@@ -188,7 +196,7 @@ function PracticeHistoryContent() {
  // Session Detail View
  <div className="space-y-6">
  <button
- onClick={() => setSelectedSession(null)}
+ onClick={handleBackToSessions}
  className="flex items-center text-[var(--primary)] hover:text-[var(--primary-dark)] font-medium"
  >
  <svg className="w-4 h-4 mr-2"fill="none"stroke="currentColor"viewBox="0 0 24 24">

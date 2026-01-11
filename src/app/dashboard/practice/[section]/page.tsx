@@ -44,6 +44,14 @@ type QuizState = 'setup' | 'quiz' | 'results';
 
 const SAVED_SESSION_KEY = 'cpa-practice-session';
 
+// Get local date in YYYY-MM-DD format (avoids timezone issues with toISOString)
+function getLocalDateString(date: Date = new Date()): string {
+ const year = date.getFullYear();
+ const month = String(date.getMonth() + 1).padStart(2, '0');
+ const day = String(date.getDate()).padStart(2, '0');
+ return `${year}-${month}-${day}`;
+}
+
 const sectionNames: Record<string, string> = {
  far: 'Financial Accounting & Reporting',
  aud: 'Auditing & Attestation',
@@ -235,7 +243,7 @@ export default function SectionPracticePage() {
  const sessionData = {
  user_id: user.id,
  section: section as DBSectionCode,
- date: new Date().toISOString().split('T')[0],
+ date: getLocalDateString(),
  hours: Math.max(0.25, durationHours), // Minimum 15 minutes credit
  notes: `Practice quiz: ${quizResults.length} questions, ${accuracy}% accuracy. Topics: ${topicsCovered.join(', ')}`,
  topics_covered: topicsCovered,

@@ -158,17 +158,17 @@ export default function AboutPage() {
  <p className="text-green-700 dark:text-green-400 mb-4">
  All tiers include unlimited access until you pass - no time limits, no pressure:
  </p>
- <ul className="space-y-2 text-green-700 dark:text-green-400">
- <li className="flex items-start gap-2">
- <span className="font-bold w-[68px] flex-shrink-0">Free:</span>
+ <ul className="space-y-4 text-green-700 dark:text-green-400">
+ <li className="flex items-start gap-4">
+ <span className="font-bold w-[80px] flex-shrink-0">Free:</span>
  <span>50 questions for FAR section</span>
  </li>
- <li className="flex items-start gap-2">
- <span className="font-bold w-[68px] flex-shrink-0">Standard:</span>
+ <li className="flex items-start gap-4">
+ <span className="font-bold w-[80px] flex-shrink-0">Standard:</span>
  <span>3,000+ questions across all 4 core sections (FAR, AUD, REG, TCP)</span>
  </li>
- <li className="flex items-start gap-2">
- <span className="font-bold w-[68px] flex-shrink-0">Pro:</span>
+ <li className="flex items-start gap-4">
+ <span className="font-bold w-[80px] flex-shrink-0">Pro:</span>
  <span>6,000+ questions across all 6 sections including discipline sections (BAR, ISC)</span>
  </li>
  </ul>
@@ -193,29 +193,17 @@ export default function AboutPage() {
  <th className="text-center py-4 px-3 font-semibold text-[var(--primary)] bg-[var(--primary)]/5">
  <div className="flex flex-col items-center">
  <span>Meridian CPA Review</span>
- <span className="text-xs font-normal mt-1">
- <span className="line-through text-[var(--muted)]">$99-$199</span>{""}
- <span className="text-[var(--primary)] font-semibold">$79-$149</span>
- </span>
+ <span className="text-xs font-normal text-[var(--primary)] mt-1">Free during beta</span>
  </div>
  </th>
  <th className="text-center py-4 px-3 font-semibold text-[var(--foreground)]">
- <div className="flex flex-col items-center">
  <span>Becker</span>
- <span className="text-xs font-normal text-[var(--muted)] mt-1">$2,499-$3,799</span>
- </div>
  </th>
  <th className="text-center py-4 px-3 font-semibold text-[var(--foreground)]">
- <div className="flex flex-col items-center">
  <span>Surgent</span>
- <span className="text-xs font-normal text-[var(--muted)] mt-1">$1,599-$2,999</span>
- </div>
  </th>
  <th className="text-center py-4 px-3 font-semibold text-[var(--foreground)]">
- <div className="flex flex-col items-center">
  <span>Roger CPA</span>
- <span className="text-xs font-normal text-[var(--muted)] mt-1">$1,899-$3,499</span>
- </div>
  </th>
  </tr>
  </thead>
@@ -255,25 +243,11 @@ export default function AboutPage() {
  <tr>
  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Task-Based Simulations</td>
  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
- <svg className="w-5 h-5 text-green-500 mx-auto"fill="currentColor"viewBox="0 0 20 20">
- <path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/>
- </svg>
+ <span className="text-[var(--foreground)] font-semibold">200+</span>
  </td>
- <td className="py-4 px-3 text-center">
- <svg className="w-5 h-5 text-green-500 mx-auto"fill="currentColor"viewBox="0 0 20 20">
- <path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/>
- </svg>
- </td>
- <td className="py-4 px-3 text-center">
- <svg className="w-5 h-5 text-green-500 mx-auto"fill="currentColor"viewBox="0 0 20 20">
- <path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/>
- </svg>
- </td>
- <td className="py-4 px-3 text-center">
- <svg className="w-5 h-5 text-green-500 mx-auto"fill="currentColor"viewBox="0 0 20 20">
- <path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/>
- </svg>
- </td>
+ <td className="py-4 px-3 text-center text-[var(--foreground)]">400+</td>
+ <td className="py-4 px-3 text-center text-[var(--foreground)]">500+</td>
+ <td className="py-4 px-3 text-center text-[var(--foreground)]">400+</td>
  </tr>
  <tr>
  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Progress Tracking</td>
@@ -376,33 +350,15 @@ export default function AboutPage() {
  <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
  <td className="py-4 px-3 text-center text-[var(--foreground)]">Unlimited</td>
  </tr>
- <tr className="bg-gray-50 dark:bg-[var(--card-hover)]/50">
- <td className="py-4 px-3 text-[var(--foreground)] font-bold">Price</td>
- <td className="py-4 px-3 text-center bg-[var(--primary)]/10">
- <div className="flex flex-col items-center gap-1">
- <span className="text-sm line-through text-[var(--muted)]">$99-$199</span>
- <span className="text-xl font-bold text-[var(--primary)]">$79-$149</span>
- </div>
- </td>
- <td className="py-4 px-3 text-center">
- <span className="text-lg font-semibold text-[var(--foreground)]">$2,499-$3,799</span>
- </td>
- <td className="py-4 px-3 text-center">
- <span className="text-lg font-semibold text-[var(--foreground)]">$1,599-$2,999</span>
- </td>
- <td className="py-4 px-3 text-center">
- <span className="text-lg font-semibold text-[var(--foreground)]">$1,899-$3,499</span>
- </td>
- </tr>
- </tbody>
+  </tbody>
  </table>
  </div>
  <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
  <p className="text-sm text-[var(--muted)]">
- <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, task-based simulations, and unlimited access until you pass on all tiers - all for <strong>95% less</strong>. The main difference is we don&apos;t have video lectures. If you learn best from reading and practice, we&apos;re the smart choice.
+ <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, 200+ task-based simulations, and unlimited access until you pass. The main difference is we don&apos;t have video lectures. If you learn best from reading and practice, we&apos;re the smart choice.
  </p>
  <p className="text-xs text-[var(--muted)] mt-3 opacity-70">
- *Features and pricing are based on publicly available information as of January 2025. Verify current offerings directly with each provider before purchasing.
+ *Features are based on publicly available information as of January 2025. Verify current offerings directly with each provider.
  </p>
  </div>
  </div>

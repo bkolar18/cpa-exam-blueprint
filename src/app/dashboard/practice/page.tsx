@@ -7,6 +7,84 @@ import type { PracticeAttempt, SectionCode } from "@/lib/supabase/types";
 import Link from "next/link";
 import { sectionHasQuestions, getQuestionCount } from "@/lib/data/practice-questions";
 
+interface PracticeSession {
+  id: string;
+  section: string;
+  date: Date;
+  attempts: PracticeAttempt[];
+  correctCount: number;
+  totalCount: number;
+  accuracy: number;
+  totalTimeSeconds: number;
+  topics: string[];
+}
+
+// Group attempts into sessions (attempts within 30 minutes of each other)
+function groupIntoSessions(attempts: PracticeAttempt[]): PracticeSession[] {
+  if (attempts.length === 0) return [];
+
+  const sessions: PracticeSession[] = [];
+  let currentSession: PracticeAttempt[] = [];
+  let lastTime: Date | null = null;
+
+  // Sort by created_at ascending to group properly
+  const sorted = [...attempts].sort(
+    (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+  );
+
+  for (const attempt of sorted) {
+    const attemptTime = new Date(attempt.created_at);
+
+    if (lastTime === null || attemptTime.getTime() - lastTime.getTime() < 30 * 60 * 1000) {
+      // Same session (within 30 minutes)
+      currentSession.push(attempt);
+    } else {
+      // New session
+      if (currentSession.length > 0) {
+        sessions.push(createSessionFromAttempts(currentSession));
+      }
+      currentSession = [attempt];
+    }
+    lastTime = attemptTime;
+  }
+
+  // Don't forget the last session
+  if (currentSession.length > 0) {
+    sessions.push(createSessionFromAttempts(currentSession));
+  }
+
+  // Return newest first
+  return sessions.reverse();
+}
+
+function createSessionFromAttempts(attempts: PracticeAttempt[]): PracticeSession {
+  const correctCount = attempts.filter((a) => a.is_correct).length;
+  const topics = [...new Set(attempts.map((a) => a.topic).filter(Boolean))] as string[];
+  const totalTimeSeconds = attempts.reduce((sum, a) => sum + (a.time_spent_seconds || 0), 0);
+
+  return {
+    id: attempts[0].id,
+    section: attempts[0].section,
+    date: new Date(attempts[0].created_at),
+    attempts,
+    correctCount,
+    totalCount: attempts.length,
+    accuracy: Math.round((correctCount / attempts.length) * 100),
+    totalTimeSeconds,
+    topics,
+  };
+}
+
+// Format seconds to hours and minutes
+function formatSeconds(seconds: number): string {
+  if (seconds === 0) return "0m";
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.round((seconds % 3600) / 60);
+  if (hours === 0) return `${minutes}m`;
+  if (minutes === 0) return `${hours}h`;
+  return `${hours}h ${minutes}m`;
+}
+
 const sections: { code: SectionCode; name: string; topics: string[] }[] = [
   {
     code: "FAR",
@@ -43,6 +121,7 @@ const sections: { code: SectionCode; name: string; topics: string[] }[] = [
 export default function PracticePage() {
   const { user, profile, loading: authLoading } = useAuth();
   const [attempts, setAttempts] = useState<PracticeAttempt[]>([]);
+  const [practiceSessions, setPracticeSessions] = useState<PracticeSession[]>([]);
   const [loading, setLoading] = useState(true);
   const supabase = createClient();
 
@@ -69,6 +148,9 @@ export default function PracticePage() {
 
     if (!error && data) {
       setAttempts(data as PracticeAttempt[]);
+      // Group attempts into sessions
+      const grouped = groupIntoSessions(data as PracticeAttempt[]);
+      setPracticeSessions(grouped);
     }
     setLoading(false);
   };
@@ -86,7 +168,7 @@ export default function PracticePage() {
     return { totalQuestions, correctAnswers, accuracy };
   };
 
-  const recentAttempts = attempts.slice(0, 5);
+  const recentSessions = practiceSessions.slice(0, 5);
   const totalQuestions = attempts.length;
   const totalCorrect = attempts.filter((a) => a.is_correct).length;
   const overallAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
@@ -282,40 +364,73 @@ export default function PracticePage() {
         </div>
       </div>
 
-      {/* Recent Attempts */}
-      {recentAttempts.length > 0 && (
+      {/* Recent Sessions */}
+      {recentSessions.length > 0 && (
         <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
           <div className="p-6 border-b border-[var(--border)]">
-            <h2 className="text-lg font-semibold text-[var(--foreground)]">Recent Questions</h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg font-semibold text-[var(--foreground)]">Recent Sessions</h2>
+              <Link
+                href="/dashboard/practice/history"
+                className="text-sm text-[var(--primary)] hover:underline"
+              >
+                View Full History →
+              </Link>
+            </div>
+            <p className="text-sm text-[var(--muted)] mt-1">
+              Click on a session to review your answers
+            </p>
           </div>
           <div className="divide-y divide-[var(--border)] dark:divide-[var(--border)]">
-            {recentAttempts.map((attempt) => (
-              <div key={attempt.id} className="p-4 flex items-center justify-between">
+            {recentSessions.map((session) => (
+              <Link
+                key={session.id}
+                href={`/dashboard/practice/history?session=${session.id}`}
+                className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+              >
                 <div className="flex items-center space-x-4">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                    attempt.is_correct ? "bg-green-100 dark:bg-green-900/50" : "bg-red-100 dark:bg-red-900/50"
-                  }`}>
-                    <span className={`text-sm font-bold ${
-                      attempt.is_correct ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
-                    }`}>{attempt.section}</span>
+                  <div className="w-12 h-12 bg-[var(--primary)] rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">{session.section}</span>
                   </div>
                   <div>
                     <p className="font-medium text-[var(--foreground)]">
-                      {attempt.topic || "General Practice"}
+                      {session.totalCount} Questions
+                      {session.totalTimeSeconds > 0 && (
+                        <span className="text-[var(--muted)] font-normal ml-2">
+                          ({formatSeconds(session.totalTimeSeconds)})
+                        </span>
+                      )}
                     </p>
                     <p className="text-sm text-[var(--muted)]">
-                      {new Date(attempt.created_at).toLocaleDateString()}
+                      {session.date.toLocaleDateString("en-US", {
+                        weekday: "short",
+                        month: "short",
+                        day: "numeric",
+                        hour: "numeric",
+                        minute: "2-digit",
+                      })}
                     </p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <span className={`px-2 py-1 rounded text-sm font-medium ${
-                    attempt.is_correct ? "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300" : "bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300"
-                  }`}>
-                    {attempt.is_correct ? "Correct" : "Incorrect"}
-                  </span>
+
+                <div className="flex items-center space-x-4">
+                  <div className="text-right">
+                    <p className={`text-lg font-bold ${
+                      session.accuracy >= 80 ? "text-green-600 dark:text-green-400" :
+                      session.accuracy >= 60 ? "text-yellow-600 dark:text-yellow-400" :
+                      "text-red-600 dark:text-red-400"
+                    }`}>
+                      {session.accuracy}%
+                    </p>
+                    <p className="text-xs text-[var(--muted)]">
+                      {session.correctCount}/{session.totalCount}
+                    </p>
+                  </div>
+                  <svg className="w-5 h-5 text-[var(--muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

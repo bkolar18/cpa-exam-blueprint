@@ -37,6 +37,7 @@ interface TBSStats {
  averageScore: number | null;
  averageTimeMinutes: number | null;
  uniqueTBSAttempted: number;
+ uniqueTBSCompleted: number;
 }
 
 interface SectionReadiness {
@@ -131,12 +132,12 @@ export default function ReadinessDashboardPage() {
  .select("*")
  .eq("user_id", user.id);
 
- // Fetch confidence ratings from notes
+ // Fetch confidence ratings from notes - filter for notes that have a confidence rating
  const { data: notes } = await supabase
  .from("question_notes")
  .select("topic, confidence")
  .eq("user_id", user.id)
- .not("confidence","is", null);
+ .neq("confidence", null);
 
  // Fetch TBS attempts - section is stored directly on tbs_attempts
  const { data: tbsAttempts } = await supabase
@@ -250,6 +251,7 @@ export default function ReadinessDashboardPage() {
  ? Math.round((tbsTimes.reduce((sum, t) => sum + t, 0) / tbsTimes.length) / 60)
  : null,
  uniqueTBSAttempted: new Set(sectionTBSAttempts.map(t => t.tbs_id)).size,
+ uniqueTBSCompleted: new Set(completedTBS.map(t => t.tbs_id)).size,
  };
 
  readiness[section] = {
@@ -395,7 +397,7 @@ export default function ReadinessDashboardPage() {
  <button
  key={section}
  onClick={() => setSelectedSection(section)}
- className={`px-4 py-3 rounded-xl font-medium transition-all ${
+ className={`px-4 py-3 rounded-xl font-medium transition-all min-w-[72px] ${
  selectedSection === section
  ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
  : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
@@ -521,9 +523,9 @@ export default function ReadinessDashboardPage() {
  </div>
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
  <p className="text-sm text-[var(--muted)]">TBS Completed</p>
- <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{currentReadiness.tbsStats.completedAttempts}</p>
+ <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{currentReadiness.tbsStats.uniqueTBSCompleted}</p>
  <p className="text-xs text-[var(--muted)]">
- {currentReadiness.tbsStats.uniqueTBSAttempted} unique TBS
+ {currentReadiness.tbsStats.completedAttempts} attempt{currentReadiness.tbsStats.completedAttempts !== 1 ? 's' : ''}
  </p>
  </div>
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
@@ -548,8 +550,10 @@ export default function ReadinessDashboardPage() {
 
  <div className="space-y-4">
  {currentReadiness.topicStats.map((stat) => {
- const topicMilestone = getMilestone(stat.accuracy * (stat.coverage / 100));
- const effectiveScore = Math.round(stat.accuracy * Math.min(1, stat.coverage / 50));
+ // Calculate target questions for this topic based on weight
+ // Assume ~100 target questions per section, scaled by topic weight
+ const targetQuestions = Math.max(5, Math.round((stat.weight / 100) * 100));
+ const completionPercent = Math.min(100, Math.round((stat.attempted / targetQuestions) * 100));
 
  return (
  <div key={stat.topic} className="space-y-2">
@@ -559,7 +563,7 @@ export default function ReadinessDashboardPage() {
  {stat.topic}
  </span>
  <span className="text-xs text-[var(--muted)]">
- {stat.weight}% of exam • {stat.attempted} practiced • {stat.coverage}% coverage
+ {stat.weight}% of exam • {stat.attempted} / {targetQuestions} questions
  </span>
  </div>
  <div className="text-right ml-4">
@@ -569,12 +573,12 @@ export default function ReadinessDashboardPage() {
  stat.accuracy > 0 ? 'text-red-600 dark:text-red-400' :
  'text-gray-400'
  }`}>
- {stat.accuracy > 0 ? `${stat.accuracy}%` : '--'}
+ {stat.accuracy > 0 ? `${stat.accuracy}% accuracy` : '--'}
  </span>
  </div>
  </div>
 
- {/* Progress bar for topic */}
+ {/* Progress bar for topic - width represents questions completed */}
  <div className="h-3 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
  <div
  className={`h-full transition-all duration-300 ${
@@ -583,14 +587,14 @@ export default function ReadinessDashboardPage() {
  stat.accuracy > 0 ? 'bg-red-400' :
  'bg-gray-300 dark:bg-[var(--border)]'
  }`}
- style={{ width: `${stat.accuracy}%` }}
+ style={{ width: `${completionPercent}%` }}
  />
  </div>
 
  {/* Coverage indicator */}
- {stat.coverage < 50 && stat.attempted > 0 && (
+ {completionPercent < 50 && stat.attempted > 0 && (
  <p className="text-xs text-orange-600 dark:text-orange-400">
- Need more practice in this topic ({50 - stat.coverage}% more coverage recommended)
+ Need more practice ({targetQuestions - stat.attempted} more questions recommended)
  </p>
  )}
  {stat.attempted === 0 && (

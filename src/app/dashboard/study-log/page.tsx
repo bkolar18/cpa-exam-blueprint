@@ -9,6 +9,14 @@ import type { StudySession, SectionCode } from"@/lib/supabase/types";
 
 const sections: SectionCode[] = ["FAR","AUD","REG","TCP","BAR","ISC"];
 
+// Get local date in YYYY-MM-DD format (avoids timezone issues with toISOString)
+function getLocalDateString(date: Date = new Date()): string {
+ const year = date.getFullYear();
+ const month = String(date.getMonth() + 1).padStart(2, '0');
+ const day = String(date.getDate()).padStart(2, '0');
+ return `${year}-${month}-${day}`;
+}
+
 interface PracticeAttempt {
  id: string;
  question_id: string;
@@ -99,7 +107,7 @@ export default function StudyLogPage() {
  const [showForm, setShowForm] = useState(false);
  const [formData, setFormData] = useState({
  section:"FAR"as SectionCode,
- date: new Date().toISOString().split("T")[0],
+ date: getLocalDateString(),
  hours:"",
  notes:"",
  });
@@ -172,7 +180,7 @@ export default function StudyLogPage() {
 
  setFormData({
  section:"FAR",
- date: new Date().toISOString().split("T")[0],
+ date: getLocalDateString(),
  hours:"",
  notes:"",
  });
@@ -218,13 +226,16 @@ export default function StudyLogPage() {
  };
 
  // Calculate weekly stats from both manual sessions and practice
- const thisWeekStart = new Date();
- thisWeekStart.setDate(thisWeekStart.getDate() - thisWeekStart.getDay());
+ // Get this week's start date as a string in local time (YYYY-MM-DD format)
+ const now = new Date();
+ const thisWeekStart = new Date(now);
+ thisWeekStart.setDate(now.getDate() - now.getDay());
  thisWeekStart.setHours(0, 0, 0, 0);
+ const thisWeekStartString = getLocalDateString(thisWeekStart);
 
- // Manual session hours
+ // Manual session hours - compare date strings to avoid timezone issues
  const thisWeekManualSessions = sessions.filter(
- (s) => new Date(s.date) >= thisWeekStart
+ (s) => s.date >= thisWeekStartString
  );
  const weeklyManualHours = thisWeekManualSessions.reduce((sum, s) => sum + Number(s.hours), 0);
  const totalManualHours = sessions.reduce((sum, s) => sum + Number(s.hours), 0);
@@ -241,11 +252,14 @@ export default function StudyLogPage() {
  const totalTotalHours = totalManualHours + (totalPracticeSeconds / 3600);
 
  // Group manual sessions by week
+ // Use date strings to avoid timezone issues when grouping
  const groupedSessions = sessions.reduce((groups, session) => {
- const date = new Date(session.date);
+ // Parse the date string parts directly to avoid timezone conversion
+ const [year, month, day] = session.date.split('-').map(Number);
+ const date = new Date(year, month - 1, day); // month is 0-indexed
  const weekStart = new Date(date);
  weekStart.setDate(date.getDate() - date.getDay());
- const weekKey = weekStart.toISOString().split("T")[0];
+ const weekKey = getLocalDateString(weekStart);
 
  if (!groups[weekKey]) {
  groups[weekKey] = [];

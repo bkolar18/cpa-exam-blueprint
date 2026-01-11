@@ -301,10 +301,10 @@ export default function ScoreReleaseCalendarPage() {
  }`}
  >
  <span className="text-white text-lg font-bold">
- {formatShortDate(release.date).split("")[1]}
+ {formatShortDate(release.date).split(" ")[1]}
  </span>
  <span className="text-white/80 text-xs">
- {formatShortDate(release.date).split("")[0]}
+ {formatShortDate(release.date).split(" ")[0]}
  </span>
  </div>
  <div>
