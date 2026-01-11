@@ -149,7 +149,7 @@ export default function DashboardPage() {
  {/* Welcome Section */}
  <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] rounded-2xl p-8 text-white">
  <h1 className="text-3xl font-bold mb-2">
- Welcome back{profile?.full_name ? `, ${profile.full_name.split("")[0]}` :""}!
+ Welcome back{profile?.full_name ? `, ${profile.full_name.split(" ")[0]}` :""}!
  </h1>
  <p className="text-white/80">
  {weeklyHours > 0

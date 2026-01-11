@@ -442,7 +442,7 @@ export default function ExamSimulationSectionPage() {
  </p>
  )}
  {config.tbsCount > 0 && !hasTBS && (
- <p className="text-xs text-gray-500 mt-1">
+ <p className="text-xs text-gray-500 dark:text-[var(--muted)] mt-1">
  (TBS not available for this section yet)
  </p>
  )}
@@ -596,7 +596,7 @@ export default function ExamSimulationSectionPage() {
  <button
  onClick={handlePrevious}
  disabled={currentIndex === 0}
- className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200"
+ className="px-4 py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200"
  >
  ← Previous
  </button>
@@ -611,7 +611,7 @@ export default function ExamSimulationSectionPage() {
  <button
  onClick={handleNext}
  disabled={currentIndex === questions.length - 1}
- className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200"
+ className="px-4 py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200"
  >
  Next →
  </button>
@@ -668,7 +668,7 @@ export default function ExamSimulationSectionPage() {
  handleFinishExam();
  }
  }}
- className="w-full py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+ className="w-full py-3 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
  >
  End Exam & Submit
  </button>
@@ -816,7 +816,7 @@ export default function ExamSimulationSectionPage() {
  <div className="flex space-x-4">
  <button
  onClick={() => setExamState('exam')}
- className="flex-1 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200"
+ className="flex-1 py-3 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600"
  >
  Back to Exam
  </button>
@@ -996,7 +996,7 @@ export default function ExamSimulationSectionPage() {
  </button>
  <Link
  href="/dashboard/exam-simulation"
- className="flex-1 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 text-center"
+ className="flex-1 py-3 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 text-center"
  >
  Back to Exam Selection
  </Link>

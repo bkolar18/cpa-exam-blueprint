@@ -346,19 +346,19 @@ export default function AnalyticsPage() {
  onChange={(e) => setDateRange(e.target.value as DateRange)}
  className="px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/50"
  >
- <option value="7d"className="text-gray-900">Last 7 days</option>
- <option value="30d"className="text-gray-900">Last 30 days</option>
- <option value="90d"className="text-gray-900">Last 90 days</option>
- <option value="all"className="text-gray-900">All time</option>
+ <option value="7d"className="text-gray-900 dark:text-white">Last 7 days</option>
+ <option value="30d"className="text-gray-900 dark:text-white">Last 30 days</option>
+ <option value="90d"className="text-gray-900 dark:text-white">Last 90 days</option>
+ <option value="all"className="text-gray-900 dark:text-white">All time</option>
  </select>
  <select
  value={selectedSection}
  onChange={(e) => setSelectedSection(e.target.value as SectionCode | 'all')}
  className="px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/50"
  >
- <option value="all"className="text-gray-900">All Sections</option>
+ <option value="all"className="text-gray-900 dark:text-white">All Sections</option>
  {sections.map(section => (
- <option key={section} value={section} className="text-gray-900">{section}</option>
+ <option key={section} value={section} className="text-gray-900 dark:text-white">{section}</option>
  ))}
  </select>
  </div>

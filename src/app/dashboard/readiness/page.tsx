@@ -520,7 +520,7 @@ export default function ReadinessDashboardPage() {
  </p>
  )}
  {stat.attempted === 0 && (
- <p className="text-xs text-gray-500">
+ <p className="text-xs text-gray-500 dark:text-gray-400">
  Not yet practiced - start here to improve your score
  </p>
  )}
@@ -619,7 +619,7 @@ export default function ReadinessDashboardPage() {
  ? 'bg-green-500 text-white'
  : isCovered
  ? 'bg-yellow-500 text-white'
- : 'bg-gray-300 dark:bg-[var(--border)] text-gray-500'
+ : 'bg-gray-300 dark:bg-[var(--border)] text-gray-500 dark:text-gray-400'
  }`}>
  {isWellCovered ? (
  <svg className="w-4 h-4"fill="none"stroke="currentColor"viewBox="0 0 24 24">

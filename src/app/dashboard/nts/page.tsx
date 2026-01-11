@@ -302,7 +302,7 @@ export default function NTSPage() {
  orange:"bg-orange-100 text-orange-700 border-orange-200",
  yellow:"bg-yellow-100 text-yellow-700 border-yellow-200",
  green:"bg-green-100 text-green-700 border-green-200",
- gray:"bg-gray-100 text-gray-700 border-gray-200",
+ gray:"bg-gray-100 text-gray-700 dark:text-gray-200 border-gray-200",
  };
 
  return (
@@ -387,7 +387,7 @@ export default function NTSPage() {
 
  <div className="flex items-center space-x-4">
  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
- entry.status ==="used"?"bg-green-100 text-green-700":"bg-gray-200 text-gray-600"
+ entry.status ==="used"?"bg-green-100 text-green-700":"bg-gray-200 text-gray-600 dark:text-gray-300"
  }`}>
  {entry.status ==="used"?"Exam Taken":"Expired"}
  </span>

@@ -44,16 +44,16 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2.5">
             <Image
               src="/logo.png"
               alt="Meridian CPA Review"
-              width={44}
-              height={44}
-              className="w-11 h-11"
+              width={36}
+              height={36}
+              className="w-9 h-9 dark:brightness-0 dark:invert"
             />
             <div className="flex flex-col">
-              <span className="text-lg font-bold bg-gradient-to-r from-[var(--primary)] to-blue-600 bg-clip-text text-transparent">
+              <span className="text-lg font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-cyan-400">
                 Meridian
               </span>
               <span className="text-xs font-semibold text-[var(--muted)] -mt-0.5 tracking-wide">

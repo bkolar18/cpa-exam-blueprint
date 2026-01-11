@@ -248,7 +248,7 @@ export default function ExamSimulationPage() {
                 ) : (
                   <button
                     disabled
-                    className="w-full px-4 py-2 bg-gray-100 text-gray-400 rounded-lg cursor-not-allowed text-sm"
+                    className="w-full px-4 py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-400 dark:text-[var(--muted)] rounded-lg cursor-not-allowed text-sm"
                   >
                     Coming Soon
                   </button>

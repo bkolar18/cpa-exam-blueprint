@@ -13,7 +13,7 @@ export default function Footer() {
               alt="Meridian CPA Review"
               width={28}
               height={28}
-              className="w-7 h-7"
+              className="w-7 h-7 brightness-0 invert"
             />
             <div className="flex flex-col">
               <span className="text-sm font-bold text-white">Meridian</span>
