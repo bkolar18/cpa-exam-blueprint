@@ -692,6 +692,13 @@ export default function ScratchPad({
  color: #9ca3af;
  pointer-events: none;
  white-space: pre-line;
+ position: absolute;
+ top: 12px;
+ left: 12px;
+ right: 12px;
+ }
+ [contenteditable] {
+ position: relative;
  }
  `}</style>
  </div>
