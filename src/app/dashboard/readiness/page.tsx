@@ -227,10 +227,10 @@ export default function ReadinessDashboardPage() {
  is_complete: boolean;
  score_percentage: number | null;
  time_spent_seconds: number | null;
- tbs_questions: { section: string };
+ tbs_questions: { section: string }[];  // Array from Supabase join
  }
  const sectionTBSAttempts = ((tbsAttempts || []) as TBSAttemptRow[]).filter(
- t => t.tbs_questions?.section === section
+ t => t.tbs_questions?.[0]?.section === section
  );
  const completedTBS = sectionTBSAttempts.filter(t => t.is_complete);
  const tbsScores = completedTBS
