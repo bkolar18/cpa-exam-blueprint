@@ -75,9 +75,33 @@ export default function QuizQuestion({
 
  setIsSaving(true);
  try {
- await supabase
+ // First try to find existing note
+ const { data: existing } = await supabase
  .from('question_notes')
- .upsert({
+ .select('id')
+ .eq('user_id', user.id)
+ .eq('question_id', question.id)
+ .single();
+
+ if (existing) {
+ // Update existing note
+ const { error } = await supabase
+ .from('question_notes')
+ .update({
+ note: note.trim(),
+ updated_at: new Date().toISOString(),
+ })
+ .eq('id', existing.id);
+
+ if (error) {
+ console.error('Failed to update note:', error);
+ return;
+ }
+ } else {
+ // Insert new note
+ const { error } = await supabase
+ .from('question_notes')
+ .insert({
  user_id: user.id,
  question_id: question.id,
  section: question.section,
@@ -86,10 +110,13 @@ export default function QuizQuestion({
  note: note.trim(),
  is_starred: false,
  confidence: null,
- updated_at: new Date().toISOString(),
- }, {
- onConflict: 'user_id,question_id'
  });
+
+ if (error) {
+ console.error('Failed to insert note:', error);
+ return;
+ }
+ }
 
  setSavedNote(note.trim());
  } catch (error) {
