@@ -42,24 +42,23 @@ export async function GET(request: Request) {
     }
 
     // Fallback: Calculate stats manually
+    // Note: We query tbs_attempts directly since frontend TBS IDs are strings
+    // that don't exist in tbs_questions table. The section is stored directly
+    // in tbs_attempts for this reason.
     let attemptsQuery = supabase
       .from('tbs_attempts')
       .select(`
         id,
         tbs_id,
+        section,
         is_complete,
         score_percentage,
-        time_spent_seconds,
-        tbs_questions!inner (
-          section,
-          tbs_type,
-          topic
-        )
+        time_spent_seconds
       `)
       .eq('user_id', user.id);
 
     if (section) {
-      attemptsQuery = attemptsQuery.eq('tbs_questions.section', section);
+      attemptsQuery = attemptsQuery.eq('section', section);
     }
 
     const { data: attempts, error: attemptsError } = await attemptsQuery;
@@ -87,52 +86,14 @@ export async function GET(request: Request) {
       ? completedWithTime.reduce((sum, a) => sum + (a.time_spent_seconds || 0), 0) / completedWithTime.length / 60
       : null;
 
-    // Calculate score by type
-    const scoreByType: Record<string, { total: number; count: number }> = {};
-    for (const attempt of completedWithScores) {
-      // tbs_questions comes back as an object when using !inner join
-      const tbsQuestion = attempt.tbs_questions as unknown as { tbs_type: string; topic: string; section: string } | null;
-      const tbsType = tbsQuestion?.tbs_type;
-      if (tbsType) {
-        if (!scoreByType[tbsType]) {
-          scoreByType[tbsType] = { total: 0, count: 0 };
-        }
-        scoreByType[tbsType].total += attempt.score_percentage || 0;
-        scoreByType[tbsType].count++;
-      }
-    }
-
+    // Note: scoreByType and scoreByTopic require TBS metadata (type, topic)
+    // which isn't stored in tbs_attempts. For now, return empty objects.
+    // A future enhancement could store tbs_type and topic in tbs_attempts
+    // or look up from local TBS data.
     const scoreByTypeAverages: Record<string, number> = {};
-    for (const [type, data] of Object.entries(scoreByType)) {
-      scoreByTypeAverages[type] = Math.round((data.total / data.count) * 100) / 100;
-    }
-
-    // Calculate score by topic
-    const scoreByTopic: Record<string, { total: number; count: number }> = {};
-    for (const attempt of completedWithScores) {
-      const tbsQuestion = attempt.tbs_questions as unknown as { tbs_type: string; topic: string; section: string } | null;
-      const topic = tbsQuestion?.topic;
-      if (topic) {
-        if (!scoreByTopic[topic]) {
-          scoreByTopic[topic] = { total: 0, count: 0 };
-        }
-        scoreByTopic[topic].total += attempt.score_percentage || 0;
-        scoreByTopic[topic].count++;
-      }
-    }
-
     const scoreByTopicAverages: Record<string, number> = {};
-    for (const [topic, data] of Object.entries(scoreByTopic)) {
-      scoreByTopicAverages[topic] = Math.round((data.total / data.count) * 100) / 100;
-    }
-
-    // Find strong and weak topics
-    const topicScores = Object.entries(scoreByTopicAverages)
-      .map(([topic, score]) => ({ topic, score }))
-      .sort((a, b) => b.score - a.score);
-
-    const strongTopics = topicScores.filter(t => t.score >= 75).map(t => t.topic).slice(0, 3);
-    const weakTopics = topicScores.filter(t => t.score < 75).map(t => t.topic).slice(-3);
+    const strongTopics: string[] = [];
+    const weakTopics: string[] = [];
 
     return NextResponse.json({
       stats: {

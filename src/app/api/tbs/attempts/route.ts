@@ -153,18 +153,11 @@ export async function GET(request: Request) {
     const limit = parseInt(searchParams.get('limit') || '20');
     const offset = parseInt(searchParams.get('offset') || '0');
 
-    // Build query
+    // Build query - select all columns from tbs_attempts directly
+    // since frontend TBS IDs don't exist in tbs_questions table
     let query = supabase
       .from('tbs_attempts')
-      .select(`
-        *,
-        tbs_questions (
-          title,
-          section,
-          tbs_type,
-          topic
-        )
-      `, { count: 'exact' })
+      .select('*', { count: 'exact' })
       .eq('user_id', user.id)
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
@@ -184,13 +177,15 @@ export async function GET(request: Request) {
     }
 
     // Transform to frontend format
+    // Note: section is stored directly in tbs_attempts; title/type/topic
+    // would need to be looked up from frontend TBS data if needed
     const transformedAttempts = attempts?.map(a => ({
       id: a.id,
       tbsId: a.tbs_id,
-      tbsTitle: a.tbs_questions?.title,
-      section: a.tbs_questions?.section,
-      tbsType: a.tbs_questions?.tbs_type,
-      topic: a.tbs_questions?.topic,
+      tbsTitle: null, // Not stored in database; look up from frontend data if needed
+      section: a.section, // Stored directly in tbs_attempts
+      tbsType: null, // Not stored in database
+      topic: null, // Not stored in database
       startedAt: a.started_at,
       completedAt: a.completed_at,
       timeSpentSeconds: a.time_spent_seconds,
