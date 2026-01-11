@@ -6,6 +6,7 @@ import { useAuth } from "@/components/auth/AuthProvider";
 import type { PracticeAttempt, SectionCode } from "@/lib/supabase/types";
 import Link from "next/link";
 import { sectionHasQuestions, getQuestionCount } from "@/lib/data/practice-questions";
+import { MCQSectionCard } from "@/components/practice/MCQSectionCard";
 
 interface PracticeSession {
   id: string;
@@ -250,117 +251,25 @@ export default function PracticePage() {
       {/* Section Cards */}
       <div>
         <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Practice by Section</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleSections.map((section) => {
             const stats = getSectionStats(section.code);
-            const isCore = ["FAR", "AUD", "REG"].includes(section.code);
             const hasQuestions = sectionHasQuestions(section.code);
             const questionCount = getQuestionCount(section.code);
 
             return (
-              <div
+              <MCQSectionCard
                 key={section.code}
-                className={`bg-white dark:bg-[var(--card)] rounded-xl border p-5 transition-all duration-200 ${
-                  hasQuestions
-                    ? "border-[var(--border)] hover:border-[var(--primary)] hover:shadow-md"
-                    : "border-[var(--border)] opacity-75"
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                    hasQuestions ? "bg-[var(--primary)]" : "bg-gray-300 dark:bg-[var(--border)]"
-                  }`}>
-                    <span className="text-white font-bold">{section.code}</span>
-                  </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      isCore ? "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300" : "bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300"
-                    }`}>
-                      {isCore ? "Core" : "Discipline"}
-                    </span>
-                    {hasQuestions && (
-                      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
-                        {questionCount} questions
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <h3 className="font-semibold text-[var(--foreground)] mb-1">{section.code}</h3>
-                <p className="text-sm text-[var(--muted)] mb-4">{section.name}</p>
-
-                {stats.totalQuestions > 0 ? (
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-[var(--muted)]">Accuracy</span>
-                      <span className="font-medium text-[var(--foreground)]">{stats.accuracy}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-[var(--card-hover)] rounded-full h-2">
-                      <div
-                        className="bg-[var(--primary)] h-2 rounded-full"
-                        style={{ width: `${stats.accuracy}%` }}
-                      />
-                    </div>
-                    <p className="text-xs text-[var(--muted)]">
-                      {stats.correctAnswers}/{stats.totalQuestions} correct
-                    </p>
-                  </div>
-                ) : (
-                  <div className="text-center py-4">
-                    <p className="text-sm text-[var(--muted)]">
-                      {hasQuestions ? "No attempts yet" : "Questions coming soon"}
-                    </p>
-                  </div>
-                )}
-
-                {hasQuestions ? (
-                  <Link
-                    href={`/dashboard/practice/${section.code.toLowerCase()}`}
-                    className="w-full mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded-lg text-sm font-medium hover:bg-[var(--primary-dark)] transition-colors flex items-center justify-center"
-                  >
-                    Start Practice
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                ) : (
-                  <button
-                    disabled
-                    className="w-full mt-4 px-4 py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-400 dark:text-[var(--muted)] rounded-lg cursor-not-allowed text-sm"
-                  >
-                    Coming Soon
-                  </button>
-                )}
-              </div>
+                sectionCode={section.code}
+                sectionName={section.name}
+                totalQuestions={questionCount}
+                attemptedCount={stats.totalQuestions}
+                correctCount={stats.correctAnswers}
+                averageAccuracy={stats.totalQuestions > 0 ? stats.accuracy : null}
+                hasQuestions={hasQuestions}
+              />
             );
           })}
-        </div>
-      </div>
-
-      {/* Topics Preview */}
-      <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
-        <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Topics Covered</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleSections.filter(s => sectionHasQuestions(s.code)).map((section) => (
-            <div key={section.code}>
-              <h3 className="font-medium text-[var(--foreground)] mb-2 flex items-center">
-                <span className="w-8 h-8 bg-[var(--primary)] text-white rounded-lg flex items-center justify-center text-xs font-bold mr-2">
-                  {section.code}
-                </span>
-                {section.name}
-              </h3>
-              <ul className="space-y-1 ml-10">
-                {section.topics.map((topic) => (
-                  <li key={topic} className="text-sm text-[var(--muted)] flex items-center">
-                    <svg className="w-4 h-4 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {topic}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </div>
 

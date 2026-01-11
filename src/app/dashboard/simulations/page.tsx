@@ -5,6 +5,7 @@ import Link from"next/link";
 import { allTBSQuestions, tbsStatistics } from"@/lib/data/tbs";
 import { TBSSectionCard, TBSSearchBar, TBSListItem } from"@/components/tbs/TBSLibrary";
 import { useTBSProgress } from"@/hooks/useTBSProgress";
+import { useAuth } from"@/components/auth/AuthProvider";
 import type { TBSType } from"@/components/tbs/TBSLibrary";
 
 const sections: { code: string; name: string }[] = [
@@ -18,7 +19,14 @@ const sections: { code: string; name: string }[] = [
 
 export default function SimulationsPage() {
  const [searchQuery, setSearchQuery] = useState("");
+ const { profile } = useAuth();
  const { data: progressData, isLoading: progressLoading, getStatus, getBestScore } = useTBSProgress();
+
+ // Filter sections based on user's discipline choice
+ const disciplineChoice = profile?.discipline_choice;
+ const visibleSections = sections.filter(
+   (s) => ["FAR", "AUD", "REG"].includes(s.code) || s.code === disciplineChoice || !disciplineChoice
+ );
 
  // Group TBS by section
  const tbsBySection = useMemo(() => {
@@ -29,20 +37,22 @@ export default function SimulationsPage() {
  }, {} as Record<string, typeof allTBSQuestions>);
  }, []);
 
- // Filter TBS by search query
+ // Filter TBS by search query (only from visible sections)
  const searchResults = useMemo(() => {
  if (!searchQuery.trim()) return null;
 
  const query = searchQuery.toLowerCase();
+ const visibleCodes = visibleSections.map(s => s.code);
  return allTBSQuestions
  .filter(
  (tbs) =>
- tbs.title.toLowerCase().includes(query) ||
+ visibleCodes.includes(tbs.section) &&
+ (tbs.title.toLowerCase().includes(query) ||
  tbs.topic.toLowerCase().includes(query) ||
- (tbs.subtopic && tbs.subtopic.toLowerCase().includes(query))
+ (tbs.subtopic && tbs.subtopic.toLowerCase().includes(query)))
  )
  .slice(0, 20); // Limit to 20 results
- }, [searchQuery]);
+ }, [searchQuery, visibleSections]);
 
  // Calculate section stats
  const getSectionStats = (sectionCode: string) => {
@@ -66,13 +76,27 @@ export default function SimulationsPage() {
  return { totalCount: sectionTBS.length, completedCount, averageScore };
  };
 
- // Overall stats
+ // Overall stats (filtered by visible sections)
  const overallStats = useMemo(() => {
- const totalTBS = allTBSQuestions.length;
- const completedTBS = progressData.completedTBSIds.size;
- const averageScore = progressData.stats?.averageScore ?? null;
+ const visibleCodes = visibleSections.map(s => s.code);
+ const visibleTBS = allTBSQuestions.filter(q => visibleCodes.includes(q.section));
+ const totalTBS = visibleTBS.length;
+ const completedTBS = visibleTBS.filter(q => progressData.completedTBSIds.has(q.id)).length;
+
+ // Calculate average score for visible sections only
+ let totalScore = 0;
+ let scoreCount = 0;
+ for (const tbs of visibleTBS) {
+   const score = progressData.bestScoreByTBS.get(tbs.id);
+   if (score !== undefined) {
+     totalScore += score;
+     scoreCount++;
+   }
+ }
+ const averageScore = scoreCount > 0 ? totalScore / scoreCount : null;
+
  return { totalTBS, completedTBS, averageScore };
- }, [progressData]);
+ }, [progressData, visibleSections]);
 
  return (
  <div className="p-6 max-w-6xl mx-auto">
@@ -190,7 +214,7 @@ export default function SimulationsPage() {
  </h2>
  </div>
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
- {sections.map((section) => {
+ {visibleSections.map((section) => {
  const stats = getSectionStats(section.code);
  const sectionTBS = tbsBySection[section.code] || [];
  const previewItems = sectionTBS.slice(0, 3).map((tbs) => ({
