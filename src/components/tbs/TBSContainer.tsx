@@ -476,12 +476,14 @@ export default function TBSContainer({
  };
 
  // Save the TBS attempt to database for progress tracking
+ // Note: We store section directly since frontend TBS IDs are strings, not UUIDs
  if (user && supabase) {
  try {
  await supabase.from("tbs_attempts").insert({
  id: attemptId,
  user_id: user.id,
  tbs_id: tbs.id,
+ section: tbs.section, // Store section directly for easy querying
  started_at: startTime.toISOString(),
  completed_at: completedAt.toISOString(),
  time_spent_seconds: elapsedSeconds,
@@ -501,7 +503,8 @@ export default function TBSContainer({
  if (user && supabase && scratchPadNotes.trim()) {
  try {
  // Use tbs_ prefix to identify simulation notes
- const noteData = {
+ // Use upsert to handle both new and existing notes
+ await supabase.from("question_notes").upsert({
  user_id: user.id,
  question_id: `tbs_${tbs.id}`,
  section: tbs.section,
@@ -510,9 +513,10 @@ export default function TBSContainer({
  note: `[Simulation: ${tbs.title}]\n\n${scratchPadNotes.trim()}`,
  is_starred: false,
  confidence: null,
- };
-
- await supabase.from("question_notes").insert(noteData);
+ updated_at: new Date().toISOString(),
+ }, {
+ onConflict: 'user_id,question_id'
+ });
  } catch (error) {
  console.error("Failed to save scratch pad notes:", error);
  }

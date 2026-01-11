@@ -138,16 +138,16 @@ export default function ReadinessDashboardPage() {
  .eq("user_id", user.id)
  .not("confidence","is", null);
 
- // Fetch TBS attempts with question section info
+ // Fetch TBS attempts - section is stored directly on tbs_attempts
  const { data: tbsAttempts } = await supabase
  .from("tbs_attempts")
  .select(`
  id,
  tbs_id,
+ section,
  is_complete,
  score_percentage,
- time_spent_seconds,
- tbs_questions!inner(section)
+ time_spent_seconds
  `)
  .eq("user_id", user.id);
 
@@ -224,13 +224,13 @@ export default function ReadinessDashboardPage() {
  interface TBSAttemptRow {
  id: string;
  tbs_id: string;
+ section: string;
  is_complete: boolean;
  score_percentage: number | null;
  time_spent_seconds: number | null;
- tbs_questions: { section: string }[];  // Array from Supabase join
  }
  const sectionTBSAttempts = ((tbsAttempts || []) as TBSAttemptRow[]).filter(
- t => t.tbs_questions?.[0]?.section === section
+ t => t.section === section
  );
  const completedTBS = sectionTBSAttempts.filter(t => t.is_complete);
  const tbsScores = completedTBS
