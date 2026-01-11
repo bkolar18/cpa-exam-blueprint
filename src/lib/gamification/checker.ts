@@ -116,6 +116,45 @@ export async function getTotalStudyHours(userId: string): Promise<number> {
   return Object.values(hours).reduce((sum, h) => sum + h, 0);
 }
 
+// Get total practice questions answered by a user
+export async function getTotalQuestionsAnswered(userId: string): Promise<number> {
+  const supabase = createClient();
+  if (!supabase) return 0;
+
+  const { count, error } = await supabase
+    .from('practice_attempts')
+    .select('*', { count: 'exact', head: true })
+    .eq('user_id', userId);
+
+  if (error) {
+    console.error('Error fetching question count:', error);
+    return 0;
+  }
+
+  return count || 0;
+}
+
+// Get unique practice questions answered correctly by a user
+export async function getUniqueCorrectQuestions(userId: string): Promise<number> {
+  const supabase = createClient();
+  if (!supabase) return 0;
+
+  const { data, error } = await supabase
+    .from('practice_attempts')
+    .select('question_id')
+    .eq('user_id', userId)
+    .eq('is_correct', true);
+
+  if (error) {
+    console.error('Error fetching correct questions:', error);
+    return 0;
+  }
+
+  // Count unique question IDs
+  const uniqueIds = new Set(data?.map(a => a.question_id) || []);
+  return uniqueIds.size;
+}
+
 // Check and update badge progress
 export async function updateBadgeProgress(
   userId: string,
@@ -298,6 +337,41 @@ export async function checkAchievements(
     }
 
     case 'practice_session': {
+      // Check question count achievements (e.g., "Warm Up" - answer 10 questions)
+      const totalQuestions = await getTotalQuestionsAnswered(context.userId);
+
+      // Find achievements by category 'practice' and requirement_type 'count'
+      // This dynamically checks based on what's in the database rather than hardcoded codes
+      const practiceCountAchievements = achievements.filter(
+        (a) => a.category === 'practice' && a.requirement_type === 'count' && a.requirement_value
+      );
+
+      for (const achievement of practiceCountAchievements) {
+        if (totalQuestions >= (achievement.requirement_value || 0)) {
+          await unlockAchievement(achievement);
+        }
+      }
+
+      // Also check by common code patterns as fallback
+      const questionCountAchievements = [
+        { code: 'warm_up', count: 10 },
+        { code: 'warmup', count: 10 },
+        { code: 'getting_started', count: 25 },
+        { code: 'practice_makes_perfect', count: 50 },
+        { code: 'question_crusher', count: 100 },
+        { code: 'century_club', count: 100 },
+        { code: 'question_machine', count: 250 },
+        { code: 'practice_warrior', count: 500 },
+        { code: 'question_master', count: 1000 },
+      ];
+
+      for (const { code, count } of questionCountAchievements) {
+        if (totalQuestions >= count) {
+          const achievement = achievements.find((a) => a.code === code);
+          if (achievement) await unlockAchievement(achievement);
+        }
+      }
+
       // Check accuracy achievements
       if (context.accuracy !== undefined && context.section) {
         const accuracyAchievements = achievements.filter(
@@ -320,9 +394,18 @@ export async function checkAchievements(
         }
       }
 
-      // Check speed demon achievement
-      // (50 questions in under 30 min with 70%+ accuracy)
-      // This would need duration context
+      // Check perfect score achievement (100% in a session with 10+ questions)
+      if (context.accuracy === 100 && context.questionsAttempted && context.questionsAttempted >= 10) {
+        const perfectSession = achievements.find((a) => a.code === 'perfect_session');
+        if (perfectSession) await unlockAchievement(perfectSession);
+      }
+
+      // Check first practice session achievement
+      const firstPractice = achievements.find((a) => a.code === 'first_practice');
+      if (firstPractice) {
+        await unlockAchievement(firstPractice);
+      }
+
       break;
     }
 
