@@ -11,9 +11,9 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="Meridian CPA Review"
-              width={28}
-              height={28}
-              className="w-7 h-7 brightness-0 invert"
+              width={32}
+              height={32}
+              className="w-8 h-8 brightness-0 invert"
             />
             <div className="flex flex-col">
               <span className="text-sm font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Meridian</span>

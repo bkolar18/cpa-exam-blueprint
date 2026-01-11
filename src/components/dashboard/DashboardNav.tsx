@@ -227,9 +227,9 @@ export default function DashboardNav() {
             <Image
               src="/logo.png"
               alt="Meridian CPA Academy"
-              width={48}
-              height={48}
-              className="w-12 h-12 dark:brightness-0 dark:invert"
+              width={56}
+              height={56}
+              className="w-14 h-14 dark:brightness-0 dark:invert"
             />
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
