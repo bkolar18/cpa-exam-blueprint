@@ -79,7 +79,7 @@ export default function ExamSimulationPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-[var(--foreground)]">Exam Simulation</h1>
-          <p className="text-[var(--muted)]">Test yourself under real exam conditions</p>
+          <p className="text-[var(--muted)]">Practice MCQs and TBS under real exam conditions</p>
         </div>
       </div>
 
@@ -89,8 +89,8 @@ export default function ExamSimulationPage() {
           <div>
             <h2 className="text-2xl font-bold mb-2">Simulate Real Exam Conditions</h2>
             <p className="text-white/80 max-w-xl">
-              Practice with timed exams that match the CPA exam format. Questions are selected
-              using a realistic distribution that mirrors the actual CPA exam.
+              Practice with timed MCQs that match the CPA exam format. The real exam includes both
+              Multiple Choice Questions (MCQs) and Task-Based Simulations (TBS) — practice both to be fully prepared.
             </p>
           </div>
           <div className="hidden md:block">
@@ -231,8 +231,9 @@ export default function ExamSimulationPage() {
 
                 {/* Exam Info */}
                 <div className="text-xs text-[var(--muted)] mb-4 space-y-1">
-                  <p>Real exam: {section.examInfo.testlets} testlets, ~{section.examInfo.questionsPerTestlet} MCQ each</p>
-                  <p>Time limit: {section.examInfo.timeMinutes / 60} hours</p>
+                  <p>Real exam: {section.examInfo.testlets} testlets (MCQs + TBS)</p>
+                  <p>MCQs: 50% of score • TBS: 50% of score</p>
+                  <p>Time limit: {section.examInfo.timeMinutes / 60} hours total</p>
                 </div>
 
                 {hasQuestions ? (
@@ -269,7 +270,7 @@ export default function ExamSimulationPage() {
             </div>
             <div>
               <p className="font-medium text-[var(--foreground)]">Pace Yourself</p>
-              <p className="text-sm text-[var(--muted)]">Aim for ~2 minutes per MCQ. Don't spend too long on any single question.</p>
+              <p className="text-sm text-[var(--muted)]">Aim for ~2 minutes per MCQ. Budget 15-20 minutes per TBS.</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
@@ -278,7 +279,7 @@ export default function ExamSimulationPage() {
             </div>
             <div>
               <p className="font-medium text-[var(--foreground)]">Flag & Move On</p>
-              <p className="text-sm text-[var(--muted)]">If unsure, flag the question and come back. Don't get stuck.</p>
+              <p className="text-sm text-[var(--muted)]">If unsure, flag the question and come back. Don&apos;t get stuck.</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
@@ -287,7 +288,7 @@ export default function ExamSimulationPage() {
             </div>
             <div>
               <p className="font-medium text-[var(--foreground)]">Answer Everything</p>
-              <p className="text-sm text-[var(--muted)]">No penalty for guessing. Never leave a question blank.</p>
+              <p className="text-sm text-[var(--muted)]">No penalty for guessing. Never leave MCQs or TBS fields blank.</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
@@ -295,25 +296,41 @@ export default function ExamSimulationPage() {
               <span className="text-orange-600 font-bold text-sm">4</span>
             </div>
             <div>
-              <p className="font-medium text-[var(--foreground)]">Review Flagged</p>
-              <p className="text-sm text-[var(--muted)]">Use remaining time to review flagged questions only.</p>
+              <p className="font-medium text-[var(--foreground)]">TBS Partial Credit</p>
+              <p className="text-sm text-[var(--muted)]">Unlike MCQs, TBS award partial credit. Answer what you can!</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Link to Practice Mode */}
-      <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
+      {/* Link to TBS Simulations */}
+      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-semibold text-blue-800">Not ready for a timed exam?</h3>
-            <p className="text-sm text-blue-600">Practice mode lets you learn at your own pace with instant feedback.</p>
+            <h3 className="font-semibold text-purple-800 dark:text-purple-200">Practice Task-Based Simulations</h3>
+            <p className="text-sm text-purple-600 dark:text-purple-300">TBS make up 50% of your exam score. Practice realistic case studies with exhibits.</p>
+          </div>
+          <Link
+            href="/dashboard/simulations"
+            className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+          >
+            Go to TBS Practice
+          </Link>
+        </div>
+      </div>
+
+      {/* Link to Practice Mode */}
+      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800 p-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="font-semibold text-blue-800 dark:text-blue-200">Not ready for a timed exam?</h3>
+            <p className="text-sm text-blue-600 dark:text-blue-300">Practice mode lets you learn MCQs at your own pace with instant feedback.</p>
           </div>
           <Link
             href="/dashboard/practice"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
           >
-            Go to Practice Mode
+            Go to MCQ Practice
           </Link>
         </div>
       </div>
