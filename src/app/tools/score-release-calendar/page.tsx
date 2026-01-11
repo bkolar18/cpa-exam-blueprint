@@ -206,7 +206,7 @@ export default function ScoreReleaseCalendarPage() {
  </section>
 
  {/* Email Subscription */}
- <section className="py-8 bg-white border-b border-gray-200">
+ <section className="py-8 bg-white dark:bg-[var(--background)] border-b border-gray-200 dark:border-[var(--border)]">
  <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
  {!isSubscribed ? (
  <div className="text-center">
@@ -274,7 +274,7 @@ export default function ScoreReleaseCalendarPage() {
  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
  filter === option.value
  ?"bg-[var(--primary)] text-white"
- :"bg-white text-[var(--foreground)] border border-gray-200 hover:bg-gray-100 dark:bg-[var(--card-hover)]"
+ :"bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-gray-200 dark:border-[var(--border)] hover:bg-gray-100 dark:hover:bg-[var(--card-hover)]"
  }`}
  >
  {option.label}
@@ -363,7 +363,7 @@ export default function ScoreReleaseCalendarPage() {
  </section>
 
  {/* Info Section */}
- <section className="py-12 bg-white border-t border-gray-200">
+ <section className="py-12 bg-white dark:bg-[var(--background)] border-t border-gray-200 dark:border-[var(--border)]">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8 text-center">
  Understanding CPA Exam Score Releases

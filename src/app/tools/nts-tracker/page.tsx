@@ -296,7 +296,7 @@ export default function NTSTrackerPage() {
  </section>
 
  {/* Info Section */}
- <section className="py-12 bg-white border-t border-gray-200">
+ <section className="py-12 bg-white dark:bg-[var(--background)] border-t border-gray-200 dark:border-[var(--border)]">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8 text-center">
  About Your Notice to Schedule (NTS)

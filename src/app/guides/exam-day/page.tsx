@@ -131,7 +131,7 @@ export default function ExamDayGuidePage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Quick Navigation */}
-        <nav className="bg-gradient-to-br from-[var(--card)] to-white rounded-2xl p-6 md:p-8 mb-12 border border-[var(--border)] shadow-sm">
+        <nav className="bg-gradient-to-br from-[var(--card)] to-white dark:to-[var(--background)] rounded-2xl p-6 md:p-8 mb-12 border border-[var(--border)] shadow-sm">
           <h2 className="font-bold text-lg text-[var(--foreground)] mb-6 flex items-center gap-2">
             <svg className="w-5 h-5 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -140,14 +140,14 @@ export default function ExamDayGuidePage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              { label: 'Week Before Checklist', href: '#week-before', icon: '📅', color: 'bg-blue-50 hover:bg-blue-100 border-blue-200' },
-              { label: 'Day Before Checklist', href: '#day-before', icon: '🌙', color: 'bg-purple-50 hover:bg-purple-100 border-purple-200' },
-              { label: 'What to Bring', href: '#what-to-bring', icon: '🎒', color: 'bg-green-50 hover:bg-green-100 border-green-200' },
-              { label: 'Exam Day Timeline', href: '#timeline', icon: '⏰', color: 'bg-orange-50 hover:bg-orange-100 border-orange-200' },
-              { label: 'Prometric Procedures', href: '#prometric', icon: '🏢', color: 'bg-cyan-50 hover:bg-cyan-100 border-cyan-200' },
-              { label: 'Exam Interface', href: '#interface', icon: '💻', color: 'bg-indigo-50 hover:bg-indigo-100 border-indigo-200' },
-              { label: 'Time Management', href: '#time-management', icon: '⏱️', color: 'bg-rose-50 hover:bg-rose-100 border-rose-200' },
-              { label: 'After the Exam', href: '#after-exam', icon: '🎉', color: 'bg-emerald-50 hover:bg-emerald-100 border-emerald-200' },
+              { label: 'Week Before Checklist', href: '#week-before', icon: '📅', color: 'bg-blue-50 hover:bg-blue-100 border-blue-200 dark:bg-blue-950/40 dark:hover:bg-blue-900/40 dark:border-blue-800' },
+              { label: 'Day Before Checklist', href: '#day-before', icon: '🌙', color: 'bg-purple-50 hover:bg-purple-100 border-purple-200 dark:bg-purple-950/40 dark:hover:bg-purple-900/40 dark:border-purple-800' },
+              { label: 'What to Bring', href: '#what-to-bring', icon: '🎒', color: 'bg-green-50 hover:bg-green-100 border-green-200 dark:bg-green-950/40 dark:hover:bg-green-900/40 dark:border-green-800' },
+              { label: 'Exam Day Timeline', href: '#timeline', icon: '⏰', color: 'bg-orange-50 hover:bg-orange-100 border-orange-200 dark:bg-orange-950/40 dark:hover:bg-orange-900/40 dark:border-orange-800' },
+              { label: 'Prometric Procedures', href: '#prometric', icon: '🏢', color: 'bg-cyan-50 hover:bg-cyan-100 border-cyan-200 dark:bg-cyan-950/40 dark:hover:bg-cyan-900/40 dark:border-cyan-800' },
+              { label: 'Exam Interface', href: '#interface', icon: '💻', color: 'bg-indigo-50 hover:bg-indigo-100 border-indigo-200 dark:bg-indigo-950/40 dark:hover:bg-indigo-900/40 dark:border-indigo-800' },
+              { label: 'Time Management', href: '#time-management', icon: '⏱️', color: 'bg-rose-50 hover:bg-rose-100 border-rose-200 dark:bg-rose-950/40 dark:hover:bg-rose-900/40 dark:border-rose-800' },
+              { label: 'After the Exam', href: '#after-exam', icon: '🎉', color: 'bg-emerald-50 hover:bg-emerald-100 border-emerald-200 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/40 dark:border-emerald-800' },
             ].map((item) => (
               <a
                 key={item.href}
@@ -174,7 +174,7 @@ export default function ExamDayGuidePage() {
           <p className="text-[var(--muted)] mb-6">
             The week before your exam is about finalizing your preparation and reducing stress, not cramming.
           </p>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
             <ul className="space-y-3">
               {checklistItems.weekBefore.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -194,7 +194,7 @@ export default function ExamDayGuidePage() {
           <p className="text-[var(--muted)] mb-6">
             Trust your preparation. Last-minute cramming does more harm than good.
           </p>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
             <ul className="space-y-3">
               {checklistItems.dayBefore.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -212,8 +212,8 @@ export default function ExamDayGuidePage() {
             What to Bring (and Leave Behind)
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-green-50 rounded-xl border border-green-200 p-6">
-              <h3 className="font-semibold text-green-800 mb-4 flex items-center gap-2">
+            <div className="bg-green-50 dark:bg-green-950/40 rounded-xl border border-green-200 dark:border-green-800 p-6">
+              <h3 className="font-semibold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -221,12 +221,12 @@ export default function ExamDayGuidePage() {
               </h3>
               <ul className="space-y-2">
                 {checklistItems.whatToBring.map((item, index) => (
-                  <li key={index} className="text-green-700">{item}</li>
+                  <li key={index} className="text-green-700 dark:text-green-300">{item}</li>
                 ))}
               </ul>
             </div>
-            <div className="bg-red-50 rounded-xl border border-red-200 p-6">
-              <h3 className="font-semibold text-red-800 mb-4 flex items-center gap-2">
+            <div className="bg-red-50 dark:bg-red-950/40 rounded-xl border border-red-200 dark:border-red-800 p-6">
+              <h3 className="font-semibold text-red-800 dark:text-red-300 mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                 </svg>
@@ -234,13 +234,13 @@ export default function ExamDayGuidePage() {
               </h3>
               <ul className="space-y-2">
                 {checklistItems.whatToLeave.map((item, index) => (
-                  <li key={index} className="text-red-700">{item}</li>
+                  <li key={index} className="text-red-700 dark:text-red-300">{item}</li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <p className="text-yellow-800 text-sm">
+          <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+            <p className="text-yellow-800 dark:text-yellow-300 text-sm">
               <strong>Pro tip:</strong> Leave valuables in your car, not the Prometric locker. Lockers are small and you can&apos;t access them during the exam.
             </p>
           </div>
@@ -277,7 +277,7 @@ export default function ExamDayGuidePage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Prometric Check-In Procedures
           </h2>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6 space-y-6">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6 space-y-6">
             <div>
               <h3 className="font-semibold text-[var(--foreground)] mb-2">1. ID Verification</h3>
               <p className="text-[var(--muted)]">
@@ -316,7 +316,7 @@ export default function ExamDayGuidePage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Exam Interface Overview
           </h2>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold text-[var(--foreground)] mb-2">Calculator</h3>
@@ -344,8 +344,8 @@ export default function ExamDayGuidePage() {
               </div>
             </div>
           </div>
-          <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-blue-800 text-sm">
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-lg">
+            <p className="text-blue-800 dark:text-blue-300 text-sm">
               <strong>Important:</strong> Take the AICPA sample tests at <a href="https://aicpa.org" className="underline" target="_blank" rel="noopener noreferrer">aicpa.org</a> to familiarize yourself with the exact interface before exam day.
             </p>
           </div>
@@ -357,7 +357,7 @@ export default function ExamDayGuidePage() {
             Time Management Strategies
           </h2>
           <div className="space-y-6">
-            <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+            <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
               <h3 className="font-semibold text-[var(--foreground)] mb-4">General Time Guidelines</h3>
               <ul className="space-y-2 text-[var(--muted)]">
                 <li>• <strong>MCQs:</strong> Average 1.5 minutes per question</li>
@@ -367,7 +367,7 @@ export default function ExamDayGuidePage() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+            <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
               <h3 className="font-semibold text-[var(--foreground)] mb-4">If You&apos;re Running Out of Time</h3>
               <ul className="space-y-2 text-[var(--muted)]">
                 <li>• Never leave a question blank - guess if needed</li>
@@ -384,7 +384,7 @@ export default function ExamDayGuidePage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Taking Breaks
           </h2>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
             <p className="text-[var(--muted)] mb-4">
               You get one official 15-minute break that doesn&apos;t count against your exam time. This occurs after the first set of TBS questions.
             </p>
@@ -415,7 +415,7 @@ export default function ExamDayGuidePage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             After the Exam
           </h2>
-          <div className="bg-white rounded-xl border border-[var(--border)] p-6 space-y-4">
+          <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6 space-y-4">
             <div>
               <h3 className="font-semibold text-[var(--foreground)] mb-2">Immediately After</h3>
               <p className="text-[var(--muted)]">

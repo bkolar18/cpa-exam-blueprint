@@ -10,19 +10,19 @@ const scoreRanges = [
     range: '0-49',
     status: 'Significant Gap',
     description: 'Major content gaps exist. Consider a full re-study with a different approach.',
-    color: 'bg-red-100 text-red-800 border-red-200',
+    color: 'bg-red-100 dark:bg-red-950/40 text-red-800 dark:text-red-300 border-red-200 dark:border-red-800',
   },
   {
     range: '50-64',
     status: 'Moderate Gap',
     description: 'Core concepts need reinforcement. Focus on weak areas identified in your report.',
-    color: 'bg-orange-100 text-orange-800 border-orange-200',
+    color: 'bg-orange-100 dark:bg-orange-950/40 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-800',
   },
   {
     range: '65-74',
     status: 'Almost There',
     description: 'You&apos;re close! Targeted review of weak areas should get you over the line.',
-    color: 'bg-yellow-100 text-yellow-800 border-yellow-200',
+    color: 'bg-yellow-100 dark:bg-yellow-950/40 text-yellow-800 dark:text-yellow-300 border-yellow-200 dark:border-yellow-800',
   },
 ];
 
@@ -131,28 +131,28 @@ export default function FailedSectionGuidePage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Empathy Section */}
         <section className="mb-12">
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-            <h2 className="text-xl font-semibold text-blue-900 mb-3">
+          <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
+            <h2 className="text-xl font-semibold text-blue-900 dark:text-blue-200 mb-3">
               First, Take a Breath
             </h2>
-            <p className="text-blue-800 mb-4">
+            <p className="text-blue-800 dark:text-blue-300 mb-4">
               Failing a CPA exam section is disappointing, but it&apos;s not the end of your CPA journey. Here are some facts to put things in perspective:
             </p>
-            <ul className="space-y-2 text-blue-700">
+            <ul className="space-y-2 text-blue-700 dark:text-blue-300">
               <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span><strong>Pass rates range from 33-64%</strong> depending on the section. Many candidates need multiple attempts.</span>
               </li>
               <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span><strong>Nearly every CPA has failed at least one section.</strong> It&apos;s part of the journey for most.</span>
               </li>
               <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span><strong>You now have valuable data</strong> about what you need to improve.</span>
@@ -217,7 +217,7 @@ export default function FailedSectionGuidePage() {
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             {commonMistakes.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl border border-[var(--border)] p-4">
+              <div key={index} className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-4">
                 <div className="flex items-start gap-3">
                   <div className="text-2xl">{item.icon}</div>
                   <div>
@@ -273,14 +273,14 @@ export default function FailedSectionGuidePage() {
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Managing the 18-Month Clock
           </h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
-            <p className="text-yellow-800 mb-4">
+          <div className="bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6">
+            <p className="text-yellow-800 dark:text-yellow-300 mb-4">
               Remember: Your 18-month clock started when you passed your first section. If you fail a section, you need to pass it before any previously passed sections expire.
             </p>
             <div className="space-y-3">
               <div>
-                <h4 className="font-semibold text-yellow-900">Priority Order for Retakes:</h4>
-                <ol className="list-decimal list-inside text-yellow-800 mt-2 space-y-1">
+                <h4 className="font-semibold text-yellow-900 dark:text-yellow-200">Priority Order for Retakes:</h4>
+                <ol className="list-decimal list-inside text-yellow-800 dark:text-yellow-300 mt-2 space-y-1">
                   <li>If a passed section is about to expire, prioritize that section area knowledge</li>
                   <li>If you have plenty of time, focus on the failed section</li>
                   <li>Some candidates strategically take a different section first if they&apos;re more confident</li>
