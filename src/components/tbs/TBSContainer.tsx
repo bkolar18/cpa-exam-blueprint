@@ -715,6 +715,11 @@ export default function TBSContainer({
  onClose={() => setShowScratchPad(false)}
  initialNotes={scratchPadNotes}
  onNotesChange={setScratchPadNotes}
+ tbsId={tbs.id}
+ tbsTitle={tbs.title}
+ tbsSection={tbs.section}
+ tbsTopic={tbs.topic}
+ tbsSubtopic={tbs.subtopic}
  />
 
  {/* Formula Sheet */}

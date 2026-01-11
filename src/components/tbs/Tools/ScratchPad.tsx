@@ -1,12 +1,20 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from"react";
+import { useAuthOptional } from"@/components/auth/AuthProvider";
+import { createClient } from"@/lib/supabase/client";
 
 interface ScratchPadProps {
  isOpen: boolean;
  onClose: () => void;
  initialNotes?: string;
  onNotesChange?: (notes: string) => void;
+ // TBS context for saving notes
+ tbsId?: string;
+ tbsTitle?: string;
+ tbsSection?: string;
+ tbsTopic?: string;
+ tbsSubtopic?: string | null;
 }
 
 type ResizeEdge ="n"|"s"|"e"|"w"|"ne"|"nw"|"se"|"sw"| null;
@@ -26,7 +34,19 @@ const FONT_SIZES = [
  { label:"X-Large", value:"20px"},
 ];
 
-export default function ScratchPad({ isOpen, onClose, initialNotes ="", onNotesChange }: ScratchPadProps) {
+export default function ScratchPad({
+ isOpen,
+ onClose,
+ initialNotes = "",
+ onNotesChange,
+ tbsId,
+ tbsTitle,
+ tbsSection,
+ tbsTopic,
+ tbsSubtopic,
+}: ScratchPadProps) {
+ const { user } = useAuthOptional();
+ const supabase = createClient();
  const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
  const [size, setSize] = useState({ width: 400, height: 450 });
  const [isDragging, setIsDragging] = useState(false);
@@ -34,11 +54,50 @@ export default function ScratchPad({ isOpen, onClose, initialNotes ="", onNotesC
  const [isMinimized, setIsMinimized] = useState(false);
  const [showHighlightPicker, setShowHighlightPicker] = useState(false);
  const [showFontSizePicker, setShowFontSizePicker] = useState(false);
+ const [isSaving, setIsSaving] = useState(false);
+ const [lastSaved, setLastSaved] = useState<Date | null>(null);
  const dragOffset = useRef({ x: 0, y: 0 });
  const resizeStart = useRef({ x: 0, y: 0, width: 0, height: 0, posX: 0, posY: 0 });
  const panelRef = useRef<HTMLDivElement>(null);
  const editorRef = useRef<HTMLDivElement>(null);
  const initializedRef = useRef(false);
+
+ // Save note to database
+ const handleSaveNote = useCallback(async () => {
+ if (!user || !supabase || !editorRef.current) return;
+
+ const noteContent = editorRef.current.innerText.trim();
+ if (!noteContent) return;
+
+ setIsSaving(true);
+ try {
+ // Use tbsId if provided, otherwise generate a unique ID based on timestamp
+ const questionId = tbsId ? `tbs_${tbsId}` : `tbs_scratch_${Date.now()}`;
+ const notePrefix = tbsTitle ? `[Simulation: ${tbsTitle}]\n\n` : '[Scratch Pad Note]\n\n';
+
+ await supabase
+ .from('question_notes')
+ .upsert({
+ user_id: user.id,
+ question_id: questionId,
+ section: tbsSection || 'FAR',
+ topic: tbsTopic || 'General',
+ subtopic: tbsSubtopic || null,
+ note: `${notePrefix}${noteContent}`,
+ is_starred: false,
+ confidence: null,
+ updated_at: new Date().toISOString(),
+ }, {
+ onConflict: 'user_id,question_id'
+ });
+
+ setLastSaved(new Date());
+ } catch (error) {
+ console.error('Failed to save note:', error);
+ } finally {
+ setIsSaving(false);
+ }
+ }, [user, supabase, tbsId, tbsTitle, tbsSection, tbsTopic, tbsSubtopic]);
 
  // Initialize position to center of viewport when first opened
  useEffect(() => {
@@ -594,9 +653,31 @@ export default function ScratchPad({ isOpen, onClose, initialNotes ="", onNotesC
 
  {/* Info footer */}
  <div className="px-3 py-2 bg-blue-50 dark:bg-blue-900/20 border-t border-blue-200 dark:border-blue-800 flex items-center justify-between">
- <p className="text-xs text-blue-600 dark:text-blue-400">
- Notes will be saved to My Notes on submission
- </p>
+ <div className="flex items-center gap-2">
+ {user ? (
+ <>
+ <button
+ onClick={handleSaveNote}
+ disabled={isSaving}
+ className="px-3 py-1.5 text-xs bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 transition-colors flex items-center gap-1.5 font-medium"
+ >
+ <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+ </svg>
+ {isSaving ? 'Saving...' : 'Save to My Notes'}
+ </button>
+ {lastSaved && (
+ <span className="text-xs text-green-600 dark:text-green-400 font-medium">
+ Saved!
+ </span>
+ )}
+ </>
+ ) : (
+ <span className="text-xs text-blue-600 dark:text-blue-400">
+ Sign in to save notes
+ </span>
+ )}
+ </div>
  <span className="text-xs text-gray-400 dark:text-[var(--muted)]">
  Drag edges to resize
  </span>
