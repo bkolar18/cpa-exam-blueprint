@@ -635,12 +635,19 @@ export default function MyNotesPage() {
  </div>
  </div>
 
- {/* Question preview */}
- {note.question && (
+ {/* Question/Simulation preview */}
+ {note.question ? (
  <p className="text-sm text-[var(--muted)] mb-2 line-clamp-2 italic">
  &quot;{note.question.question}&quot;
  </p>
- )}
+ ) : note.question_id.startsWith('tbs_') ? (
+ <p className="text-sm text-[var(--muted)] mb-2 flex items-center gap-1">
+ <svg className="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+ </svg>
+ <span className="font-medium text-purple-600 dark:text-purple-400">Task-Based Simulation</span>
+ </p>
+ ) : null}
 
  {/* Note content */}
  {editingNoteId === note.id ? (

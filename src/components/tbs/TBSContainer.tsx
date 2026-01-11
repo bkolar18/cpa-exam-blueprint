@@ -452,12 +452,15 @@ export default function TBSContainer({
  setGradingResult(result);
  setIsSubmitted(true);
 
+ const attemptId = crypto.randomUUID();
+ const completedAt = new Date();
+
  const attempt: TBSAttempt = {
- id: crypto.randomUUID(),
+ id: attemptId,
  userId: user?.id ||"",
  tbsId: tbs.id,
  startedAt: startTime,
- completedAt: new Date(),
+ completedAt,
  timeSpentSeconds: elapsedSeconds,
  responses,
  scoreEarned: result.earnedPoints,
@@ -471,6 +474,28 @@ export default function TBSContainer({
  })),
  isComplete: true,
  };
+
+ // Save the TBS attempt to database for progress tracking
+ if (user && supabase) {
+ try {
+ await supabase.from("tbs_attempts").insert({
+ id: attemptId,
+ user_id: user.id,
+ tbs_id: tbs.id,
+ started_at: startTime.toISOString(),
+ completed_at: completedAt.toISOString(),
+ time_spent_seconds: elapsedSeconds,
+ responses,
+ score_earned: result.earnedPoints,
+ max_score: result.totalPoints,
+ score_percentage: result.percentage,
+ grading_details: attempt.gradingDetails,
+ is_complete: true,
+ });
+ } catch (error) {
+ console.error("Failed to save TBS attempt:", error);
+ }
+ }
 
  // Save scratch pad notes to the notes hub if there's content
  if (user && supabase && scratchPadNotes.trim()) {
@@ -508,7 +533,7 @@ export default function TBSContainer({
  userId: user.id,
  section: tbs.section as "FAR" | "AUD" | "REG" | "TCP" | "BAR" | "ISC",
  tbsScore: result.percentage,
- tbsCompleteCount: (tbsCompleteCount || 0) + 1, // +1 for current attempt
+ tbsCompleteCount: tbsCompleteCount || 0, // Already includes just-inserted attempt
  tbsType: tbs.tbsType,
  });
  } catch (error) {

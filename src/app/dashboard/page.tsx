@@ -23,6 +23,22 @@ interface SectionReadinessData {
  accuracy: number;
 }
 
+// Type for saved practice session
+interface SavedPracticeSession {
+ section: string;
+ questionIds: string[];
+ currentIndex: number;
+ results: Array<{
+ questionId: string;
+ selectedAnswer: 'A' | 'B' | 'C' | 'D';
+ isCorrect: boolean;
+ }>;
+ startTime: string;
+ savedAt: string;
+}
+
+const SAVED_SESSION_KEY = 'cpa-practice-session';
+
 export default function DashboardPage() {
  const searchParams = useSearchParams();
  const isVerified = searchParams.get("verified") ==="true";
@@ -33,6 +49,7 @@ export default function DashboardPage() {
  const [readinessData, setReadinessData] = useState<SectionReadinessData[]>([]);
  const [loading, setLoading] = useState(true);
  const [showUpgradePromo, setShowUpgradePromo] = useState(false);
+ const [savedPracticeSession, setSavedPracticeSession] = useState<SavedPracticeSession | null>(null);
  const supabase = createClient();
 
  // Determine user's subscription tier (default to 'free' if not set)
@@ -52,6 +69,26 @@ export default function DashboardPage() {
  }
  }
  }, [isPro]);
+
+ // Check for saved practice session in localStorage
+ useEffect(() => {
+ if (typeof window !=="undefined") {
+ const saved = localStorage.getItem(SAVED_SESSION_KEY);
+ if (saved) {
+ try {
+ const parsed: SavedPracticeSession = JSON.parse(saved);
+ setSavedPracticeSession(parsed);
+ } catch {
+ localStorage.removeItem(SAVED_SESSION_KEY);
+ }
+ }
+ }
+ }, []);
+
+ const discardSavedSession = () => {
+ localStorage.removeItem(SAVED_SESSION_KEY);
+ setSavedPracticeSession(null);
+ };
 
  const dismissUpgradePromo = () => {
  setShowUpgradePromo(false);
@@ -212,6 +249,42 @@ export default function DashboardPage() {
  className="inline-block mt-3 text-sm font-medium text-amber-800 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-200"
  >
  Complete Setup &rarr;
+ </Link>
+ </div>
+ </div>
+ </div>
+ )}
+
+ {/* Resume Practice Session Banner */}
+ {savedPracticeSession && (
+ <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
+ <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+ <div className="flex items-start space-x-4">
+ <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center flex-shrink-0">
+ <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+ </svg>
+ </div>
+ <div>
+ <h3 className="font-semibold text-blue-800 dark:text-blue-300">Resume Practice Session</h3>
+ <p className="text-blue-700 dark:text-blue-400 text-sm mt-1">
+ You have an unfinished {savedPracticeSession.section} quiz ({savedPracticeSession.results.length}/{savedPracticeSession.questionIds.length} questions completed)
+ </p>
+ </div>
+ </div>
+ <div className="flex items-center space-x-3 ml-14 md:ml-0">
+ <button
+ onClick={discardSavedSession}
+ className="px-4 py-2 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-800 rounded-lg transition-colors text-sm font-medium"
+ >
+ Discard
+ </button>
+ <Link
+ href={`/dashboard/practice/${savedPracticeSession.section.toLowerCase()}`}
+ className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+ >
+ Resume Quiz
  </Link>
  </div>
  </div>
