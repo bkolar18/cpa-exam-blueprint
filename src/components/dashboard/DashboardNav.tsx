@@ -232,10 +232,10 @@ export default function DashboardNav() {
               className="w-12 h-12 dark:brightness-0 dark:invert"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-cyan-400">
+              <span className="text-xl font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
                 Meridian
               </span>
-              <span className="text-xs font-semibold text-[var(--muted)] -mt-0.5 tracking-wide">
+              <span className="text-xs font-semibold text-[var(--muted)] dark:text-gray-300 -mt-0.5 tracking-wide">
                 CPA Academy
               </span>
             </div>

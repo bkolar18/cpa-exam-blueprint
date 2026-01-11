@@ -16,8 +16,8 @@ export default function Footer() {
               className="w-7 h-7 brightness-0 invert"
             />
             <div className="flex flex-col">
-              <span className="text-sm font-bold text-white">Meridian</span>
-              <span className="text-xs text-gray-400 -mt-0.5">CPA Review</span>
+              <span className="text-sm font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Meridian</span>
+              <span className="text-xs text-gray-300 -mt-0.5">CPA Review</span>
             </div>
           </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Exam Sections */}
           <div className="flex items-center gap-3 text-xs">
-            <span className="text-gray-400">Sections:</span>
+            <span className="text-gray-300">Sections:</span>
             <Link href="/sections/far" className="text-gray-300 hover:text-white transition-colors">
               FAR
             </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-gray-400 text-xs">
+          <p className="text-gray-300 text-xs">
             &copy; {new Date().getFullYear()} Meridian CPA Review
           </p>
         </div>
