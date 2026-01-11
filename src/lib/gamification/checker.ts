@@ -377,6 +377,60 @@ export async function checkAchievements(
       // Could check for streak maintenance here
       break;
     }
+
+    case 'tbs_complete': {
+      // First TBS achievement
+      const firstTBS = achievements.find((a) => a.code === 'first_tbs');
+      if (firstTBS) {
+        await unlockAchievement(firstTBS);
+      }
+
+      // Check TBS count achievements
+      if (context.tbsCompleteCount !== undefined) {
+        const tbsCountAchievements = [
+          { code: 'tbs_complete_5', count: 5 },
+          { code: 'tbs_complete_10', count: 10 },
+          { code: 'tbs_complete_25', count: 25 },
+          { code: 'tbs_complete_50', count: 50 },
+        ];
+
+        for (const { code, count } of tbsCountAchievements) {
+          if (context.tbsCompleteCount >= count) {
+            const achievement = achievements.find((a) => a.code === code);
+            if (achievement) await unlockAchievement(achievement);
+          }
+        }
+      }
+
+      // Check TBS perfect score achievement (100%)
+      if (context.tbsScore !== undefined && context.tbsScore >= 100) {
+        const perfectTBS = achievements.find((a) => a.code === 'tbs_perfect');
+        if (perfectTBS) await unlockAchievement(perfectTBS);
+      }
+
+      // Check TBS high score achievement (90%+)
+      if (context.tbsScore !== undefined && context.tbsScore >= 90) {
+        const highScoreTBS = achievements.find((a) => a.code === 'tbs_high_score');
+        if (highScoreTBS) await unlockAchievement(highScoreTBS);
+      }
+
+      // Check TBS type-specific achievements
+      if (context.tbsType && context.tbsScore !== undefined && context.tbsScore >= 80) {
+        const typeAchievements: Record<string, string> = {
+          'journal_entry': 'tbs_je_master',
+          'document_review': 'tbs_doc_master',
+          'numeric_entry': 'tbs_calc_master',
+          'research': 'tbs_research_master',
+        };
+
+        const achievementCode = typeAchievements[context.tbsType];
+        if (achievementCode) {
+          const typeAchievement = achievements.find((a) => a.code === achievementCode);
+          if (typeAchievement) await unlockAchievement(typeAchievement);
+        }
+      }
+      break;
+    }
   }
 
   return notifications;

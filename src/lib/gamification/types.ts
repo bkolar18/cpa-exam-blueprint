@@ -3,8 +3,8 @@
 export type Tier = 'bronze' | 'silver' | 'gold' | 'platinum';
 export type SectionCode = 'FAR' | 'AUD' | 'REG' | 'TCP' | 'BAR' | 'ISC';
 
-export type BadgeCategory = 'study_hours' | 'practice' | 'section' | 'account';
-export type AchievementCategory = 'practice' | 'account' | 'streak' | 'accuracy' | 'special' | 'speed' | 'section' | 'study_hours';
+export type BadgeCategory = 'study_hours' | 'practice' | 'section' | 'account' | 'tbs';
+export type AchievementCategory = 'practice' | 'account' | 'streak' | 'accuracy' | 'special' | 'speed' | 'section' | 'study_hours' | 'tbs';
 
 export type RequirementType = 'hours' | 'percentage' | 'count' | 'boolean' | 'special' | 'time_range';
 
@@ -152,7 +152,8 @@ export type AchievementTrigger =
   | 'section_update'
   | 'profile_update'
   | 'nts_add'
-  | 'login';
+  | 'login'
+  | 'tbs_complete';
 
 export interface AchievementCheckContext {
   trigger: AchievementTrigger;
@@ -165,6 +166,10 @@ export interface AchievementCheckContext {
   sessionTime?: Date;
   profileComplete?: boolean;
   disciplineChosen?: boolean;
+  // TBS specific
+  tbsScore?: number;
+  tbsCompleteCount?: number;
+  tbsType?: string;
 }
 
 // Notification types

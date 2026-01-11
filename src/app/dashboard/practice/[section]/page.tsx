@@ -56,7 +56,7 @@ const sectionNames: Record<string, string> = {
 export default function SectionPracticePage() {
  const params = useParams();
  const router = useRouter();
- const { user } = useAuth();
+ const { user, refreshProfile } = useAuth();
  const supabase = createClient();
  const { onStudySessionLogged } = useStudySessionAchievements();
  const { onPracticeSessionCompleted } = usePracticeSessionAchievements();
@@ -254,6 +254,9 @@ export default function SectionPracticePage() {
 
  console.log('Study session logged successfully:', data);
  setStudySessionLogged(true);
+
+ // Refresh profile to update streak in global context
+ await refreshProfile();
 
  // Fetch updated profile to get current streak
  const { data: profileData } = await supabase

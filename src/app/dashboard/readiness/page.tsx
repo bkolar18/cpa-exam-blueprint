@@ -31,6 +31,14 @@ interface TopicStats {
  coverage: number; // percentage of expected questions attempted
 }
 
+interface TBSStats {
+ totalAttempts: number;
+ completedAttempts: number;
+ averageScore: number | null;
+ averageTimeMinutes: number | null;
+ uniqueTBSAttempted: number;
+}
+
 interface SectionReadiness {
  section: SectionCode;
  overallScore: number;
@@ -41,6 +49,8 @@ interface SectionReadiness {
  coveragePercent: number;
  simulationAvg: number | null;
  simulationCount: number;
+ // TBS stats
+ tbsStats: TBSStats;
 }
 
 interface ConfidenceData {
@@ -128,6 +138,19 @@ export default function ReadinessDashboardPage() {
  .eq("user_id", user.id)
  .not("confidence","is", null);
 
+ // Fetch TBS attempts with question section info
+ const { data: tbsAttempts } = await supabase
+ .from("tbs_attempts")
+ .select(`
+ id,
+ tbs_id,
+ is_complete,
+ score_percentage,
+ time_spent_seconds,
+ tbs_questions!inner(section)
+ `)
+ .eq("user_id", user.id);
+
  // Process data for each section (fetch all, display will be filtered)
  const readiness: Record<string, SectionReadiness> = {};
 
@@ -197,6 +220,38 @@ export default function ReadinessDashboardPage() {
  const totalAttempted = sectionAttempts.length;
  const totalCorrect = sectionAttempts.filter(a => a.is_correct).length;
 
+ // Calculate TBS stats for this section
+ interface TBSAttemptRow {
+ id: string;
+ tbs_id: string;
+ is_complete: boolean;
+ score_percentage: number | null;
+ time_spent_seconds: number | null;
+ tbs_questions: { section: string };
+ }
+ const sectionTBSAttempts = ((tbsAttempts || []) as TBSAttemptRow[]).filter(
+ t => t.tbs_questions?.section === section
+ );
+ const completedTBS = sectionTBSAttempts.filter(t => t.is_complete);
+ const tbsScores = completedTBS
+ .map(t => t.score_percentage)
+ .filter((s): s is number => s !== null);
+ const tbsTimes = completedTBS
+ .map(t => t.time_spent_seconds)
+ .filter((t): t is number => t !== null);
+
+ const tbsStats: TBSStats = {
+ totalAttempts: sectionTBSAttempts.length,
+ completedAttempts: completedTBS.length,
+ averageScore: tbsScores.length > 0
+ ? Math.round(tbsScores.reduce((sum, s) => sum + s, 0) / tbsScores.length)
+ : null,
+ averageTimeMinutes: tbsTimes.length > 0
+ ? Math.round((tbsTimes.reduce((sum, t) => sum + t, 0) / tbsTimes.length) / 60)
+ : null,
+ uniqueTBSAttempted: new Set(sectionTBSAttempts.map(t => t.tbs_id)).size,
+ };
+
  readiness[section] = {
  section: section as SectionCode,
  overallScore,
@@ -211,6 +266,7 @@ export default function ReadinessDashboardPage() {
  ? Math.round(simulations.reduce((sum, s) => sum + s.accuracy, 0) / simulations.length)
  : null,
  simulationCount: simulations.length,
+ tbsStats,
  };
  }
 
@@ -441,13 +497,13 @@ export default function ReadinessDashboardPage() {
  </div>
 
  {/* Stats Overview */}
- <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+ <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
- <p className="text-sm text-[var(--muted)]">Questions Practiced</p>
+ <p className="text-sm text-[var(--muted)]">MCQs Practiced</p>
  <p className="text-2xl font-bold text-[var(--primary)]">{currentReadiness.totalAttempted}</p>
  </div>
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
- <p className="text-sm text-[var(--muted)]">Accuracy</p>
+ <p className="text-sm text-[var(--muted)]">MCQ Accuracy</p>
  <p className="text-2xl font-bold text-green-600 dark:text-green-400">{currentReadiness.avgAccuracy}%</p>
  </div>
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
@@ -462,6 +518,24 @@ export default function ReadinessDashboardPage() {
  <p className="text-xs text-[var(--muted)]">
  {currentReadiness.simulationCount} simulation{currentReadiness.simulationCount !== 1 ? 's' : ''}
  </p>
+ </div>
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
+ <p className="text-sm text-[var(--muted)]">TBS Completed</p>
+ <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{currentReadiness.tbsStats.completedAttempts}</p>
+ <p className="text-xs text-[var(--muted)]">
+ {currentReadiness.tbsStats.uniqueTBSAttempted} unique TBS
+ </p>
+ </div>
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
+ <p className="text-sm text-[var(--muted)]">TBS Avg Score</p>
+ <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+ {currentReadiness.tbsStats.averageScore !== null ? `${currentReadiness.tbsStats.averageScore}%` : '--'}
+ </p>
+ {currentReadiness.tbsStats.averageTimeMinutes !== null && (
+ <p className="text-xs text-[var(--muted)]">
+ ~{currentReadiness.tbsStats.averageTimeMinutes} min avg
+ </p>
+ )}
  </div>
  </div>
 

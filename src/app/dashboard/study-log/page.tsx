@@ -90,7 +90,7 @@ function createSessionFromAttempts(attempts: PracticeAttempt[]): PracticeSession
 }
 
 export default function StudyLogPage() {
- const { user, loading: authLoading } = useAuth();
+ const { user, loading: authLoading, refreshProfile } = useAuth();
  const { onStudySessionLogged } = useStudySessionAchievements();
  const [sessions, setSessions] = useState<StudySession[]>([]);
  const [practiceSessions, setPracticeSessions] = useState<PracticeSession[]>([]);
@@ -166,6 +166,9 @@ export default function StudyLogPage() {
  if (!error) {
  // Trigger achievement check
  await onStudySessionLogged(formData.section, parseFloat(formData.hours));
+
+ // Refresh profile to update streak display
+ await refreshProfile();
 
  setFormData({
  section:"FAR",

@@ -178,6 +178,20 @@ export async function POST(request: Request, { params }: RouteParams) {
       );
     }
 
+    // Get TBS type and section for achievement checking
+    const { data: tbsInfo } = await supabase
+      .from('tbs_questions')
+      .select('tbs_type, section')
+      .eq('id', attempt.tbs_id)
+      .single();
+
+    // Get user's total completed TBS count for achievement checking
+    const { count: tbsCompleteCount } = await supabase
+      .from('tbs_attempts')
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', user.id)
+      .eq('is_complete', true);
+
     return NextResponse.json({
       success: true,
       result: {
@@ -187,6 +201,13 @@ export async function POST(request: Request, { params }: RouteParams) {
         details: gradingDetails,
         timeTaken: timeSpentSeconds,
         completedAt: new Date().toISOString(),
+      },
+      // Include achievement context for client-side achievement check
+      achievementContext: {
+        tbsScore: scorePercentage,
+        tbsCompleteCount: tbsCompleteCount || 0,
+        tbsType: tbsInfo?.tbs_type || undefined,
+        section: tbsInfo?.section || undefined,
       },
     });
   } catch (error) {

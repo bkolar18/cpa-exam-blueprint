@@ -16,6 +16,7 @@ import ReviewScreen from"./Navigation/ReviewScreen";
 import useUndoRedo from"./Tools/useUndoRedo";
 import { useAuthOptional } from"@/components/auth/AuthProvider";
 import { createClient } from"@/lib/supabase/client";
+import { checkAchievements } from"@/lib/gamification/checker";
 
 interface TBSContainerProps {
  tbs: TBSQuestion;
@@ -489,6 +490,29 @@ export default function TBSContainer({
  await supabase.from("question_notes").insert(noteData);
  } catch (error) {
  console.error("Failed to save scratch pad notes:", error);
+ }
+ }
+
+ // Check TBS achievements
+ if (user && supabase) {
+ try {
+ // Get total completed TBS count for achievement checking
+ const { count: tbsCompleteCount } = await supabase
+ .from("tbs_attempts")
+ .select("id", { count: "exact", head: true })
+ .eq("user_id", user.id)
+ .eq("is_complete", true);
+
+ await checkAchievements({
+ trigger: "tbs_complete",
+ userId: user.id,
+ section: tbs.section as "FAR" | "AUD" | "REG" | "TCP" | "BAR" | "ISC",
+ tbsScore: result.percentage,
+ tbsCompleteCount: (tbsCompleteCount || 0) + 1, // +1 for current attempt
+ tbsType: tbs.tbsType,
+ });
+ } catch (error) {
+ console.error("Failed to check TBS achievements:", error);
  }
  }
 
