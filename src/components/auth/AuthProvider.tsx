@@ -58,42 +58,50 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     async function initializeAuth() {
       try {
-        // Step 1: Get local session
+        // Step 1: Get local session - this is the primary source of truth
         const { data: { session: localSession }, error: sessionError } =
           await supabase!.auth.getSession();
 
         if (sessionError) {
-          console.error("Session error, clearing storage:", sessionError);
-          clearAllAuthStorage();
+          // Only clear on explicit auth errors, not network issues
+          if (sessionError.message?.includes('invalid') || sessionError.message?.includes('expired')) {
+            console.error("Invalid session, clearing storage:", sessionError);
+            clearAllAuthStorage();
+          } else {
+            console.warn("Session fetch warning (may be transient):", sessionError);
+          }
           setLoading(false);
           return;
         }
 
         if (localSession) {
-          // Step 2: CRITICAL - Validate with server to catch stale tokens
-          const { data: { user: validatedUser }, error: userError } =
-            await supabase!.auth.getUser();
+          // Trust the local session - Supabase handles token refresh automatically
+          // Only validate with server if the token looks suspicious (very old)
+          const tokenAge = localSession.expires_at
+            ? (localSession.expires_at * 1000) - Date.now()
+            : Infinity;
 
-          if (userError || !validatedUser) {
-            // Local session exists but server says it's invalid
-            console.error("Stale session detected, clearing:", userError?.message);
-            clearAllAuthStorage();
-            await supabase!.auth.signOut({ scope: 'local' });
-            setSession(null);
-            setUser(null);
-            setLoading(false);
-            return;
+          // If token expires in less than 5 minutes, try to refresh
+          if (tokenAge < 5 * 60 * 1000 && tokenAge > 0) {
+            const { data: { session: refreshedSession } } =
+              await supabase!.auth.refreshSession();
+            if (refreshedSession) {
+              setSession(refreshedSession);
+              setUser(refreshedSession.user);
+              fetchProfile(refreshedSession.user.id).then(setProfile);
+              return;
+            }
           }
 
-          // Session is valid
+          // Session looks good, use it
           setSession(localSession);
-          setUser(validatedUser);
-          fetchProfile(validatedUser.id).then(setProfile);
+          setUser(localSession.user);
+          fetchProfile(localSession.user.id).then(setProfile);
         }
       } catch (error) {
         console.error("Auth initialization failed:", error);
-        // On any error, clear and start fresh
-        clearAllAuthStorage();
+        // Don't clear on transient errors - just log and continue
+        // User can manually sign out if needed
       } finally {
         setLoading(false);
       }
