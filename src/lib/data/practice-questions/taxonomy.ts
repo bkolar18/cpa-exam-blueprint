@@ -49,7 +49,7 @@ export const farTaxonomy: SectionTaxonomy = {
         { name: 'Income Statement Presentation', weight: 20 },
         { name: 'Statement of Cash Flows', weight: 25 },
         { name: 'Statement of Comprehensive Income', weight: 15 },
-        { name: 'Statement of Stockholders Equity', weight: 10 },
+        { name: "Statement of Stockholders' Equity", weight: 10 },
         { name: 'Notes to Financial Statements', weight: 10 },
       ],
     },
@@ -131,7 +131,7 @@ export const farTaxonomy: SectionTaxonomy = {
       ],
     },
     {
-      name: 'Stockholders Equity',
+      name: "Stockholders' Equity",
       weight: 6,
       subtopics: [
         { name: 'Common & Preferred Stock', weight: 25 },
@@ -142,7 +142,7 @@ export const farTaxonomy: SectionTaxonomy = {
       ],
     },
     {
-      name: 'Stock Compensation',
+      name: 'Stock-Based Compensation',
       weight: 4,
       subtopics: [
         { name: 'Stock Options', weight: 40 },
