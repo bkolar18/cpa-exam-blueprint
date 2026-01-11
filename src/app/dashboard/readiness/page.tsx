@@ -5,6 +5,7 @@ import { createClient } from"@/lib/supabase/client";
 import { useAuth } from"@/components/auth/AuthProvider";
 import Link from"next/link";
 import { allTaxonomies, type SectionTaxonomy } from"@/lib/data/practice-questions/taxonomy";
+import { getQuestionsBySection, getQuestionsByTopic } from"@/lib/data/practice-questions";
 import type { SectionCode } from"@/lib/supabase/types";
 
 // Core sections always shown
@@ -25,10 +26,12 @@ interface PracticeAttempt {
 interface TopicStats {
  topic: string;
  weight: number;
- attempted: number;
+ attempted: number; // unique questions attempted
+ totalAttempts: number; // total attempts (may repeat same question)
  correct: number;
  accuracy: number;
- coverage: number; // percentage of expected questions attempted
+ coverage: number; // percentage of questions attempted
+ totalQuestions: number; // actual questions available for this topic
 }
 
 interface TBSStats {
@@ -162,17 +165,37 @@ export default function ReadinessDashboardPage() {
  // Calculate topic-level stats
  const topicStats: TopicStats[] = taxonomy.topics.map(topic => {
  const topicAttempts = sectionAttempts.filter(a => a.topic === topic.name);
- const correct = topicAttempts.filter(a => a.is_correct).length;
- const attempted = topicAttempts.length;
- const expectedQuestions = Math.round((topic.weight / 100) * taxonomy.targetQuestions);
+
+ // Get unique question IDs attempted
+ const uniqueQuestionIds = new Set(topicAttempts.map(a => a.question_id));
+ const uniqueAttempted = uniqueQuestionIds.size;
+ const totalAttempts = topicAttempts.length;
+
+ // Count correct - for accuracy, use best attempt per question
+ // Group by question_id and check if any attempt was correct
+ const questionResults = new Map<string, boolean>();
+ topicAttempts.forEach(a => {
+ const current = questionResults.get(a.question_id);
+ // If any attempt was correct, mark as correct
+ if (current !== true) {
+ questionResults.set(a.question_id, a.is_correct);
+ }
+ });
+ const correctQuestions = [...questionResults.values()].filter(v => v).length;
+
+ // Get actual question count for this topic from the question bank
+ const actualTopicQuestions = getQuestionsByTopic(section as SectionCode, topic.name);
+ const totalQuestions = actualTopicQuestions.length;
 
  return {
  topic: topic.name,
  weight: topic.weight,
- attempted,
- correct,
- accuracy: attempted > 0 ? Math.round((correct / attempted) * 100) : 0,
- coverage: Math.min(100, Math.round((attempted / Math.max(expectedQuestions, 1)) * 100)),
+ attempted: uniqueAttempted,
+ totalAttempts,
+ correct: correctQuestions,
+ accuracy: uniqueAttempted > 0 ? Math.round((correctQuestions / uniqueAttempted) * 100) : 0,
+ coverage: totalQuestions > 0 ? Math.min(100, Math.round((uniqueAttempted / totalQuestions) * 100)) : 0,
+ totalQuestions,
  };
  });
 
@@ -218,8 +241,19 @@ export default function ReadinessDashboardPage() {
  simulations.push({ accuracy: Math.round((correct / currentSim.length) * 100) });
  }
 
- const totalAttempted = sectionAttempts.length;
- const totalCorrect = sectionAttempts.filter(a => a.is_correct).length;
+ // Count unique questions attempted for the section
+ const uniqueSectionQuestionIds = new Set(sectionAttempts.map(a => a.question_id));
+ const totalAttempted = uniqueSectionQuestionIds.size;
+
+ // Count correct questions (if any attempt was correct, count as correct)
+ const sectionQuestionResults = new Map<string, boolean>();
+ sectionAttempts.forEach(a => {
+ const current = sectionQuestionResults.get(a.question_id);
+ if (current !== true) {
+ sectionQuestionResults.set(a.question_id, a.is_correct);
+ }
+ });
+ const totalCorrect = [...sectionQuestionResults.values()].filter(v => v).length;
 
  // Calculate TBS stats for this section
  interface TBSAttemptRow {
@@ -550,11 +584,6 @@ export default function ReadinessDashboardPage() {
 
  <div className="space-y-4">
  {currentReadiness.topicStats.map((stat) => {
- // Calculate target questions for this topic based on weight
- // Assume ~100 target questions per section, scaled by topic weight
- const targetQuestions = Math.max(5, Math.round((stat.weight / 100) * 100));
- const completionPercent = Math.min(100, Math.round((stat.attempted / targetQuestions) * 100));
-
  return (
  <div key={stat.topic} className="space-y-2">
  <div className="flex items-center justify-between">
@@ -563,7 +592,7 @@ export default function ReadinessDashboardPage() {
  {stat.topic}
  </span>
  <span className="text-xs text-[var(--muted)]">
- {stat.weight}% of exam • {stat.attempted} / {targetQuestions} questions
+ {stat.weight}% of exam • {stat.attempted} / {stat.totalQuestions} questions
  </span>
  </div>
  <div className="text-right ml-4">
@@ -587,14 +616,14 @@ export default function ReadinessDashboardPage() {
  stat.accuracy > 0 ? 'bg-red-400' :
  'bg-gray-300 dark:bg-[var(--border)]'
  }`}
- style={{ width: `${completionPercent}%` }}
+ style={{ width: `${stat.coverage}%` }}
  />
  </div>
 
  {/* Coverage indicator */}
- {completionPercent < 50 && stat.attempted > 0 && (
+ {stat.coverage < 50 && stat.attempted > 0 && (
  <p className="text-xs text-orange-600 dark:text-orange-400">
- Need more practice ({targetQuestions - stat.attempted} more questions recommended)
+ Need more practice ({stat.totalQuestions - stat.attempted} more questions available)
  </p>
  )}
  {stat.attempted === 0 && (
