@@ -2,7 +2,7 @@ import Link from"next/link";
 
 export const metadata = {
  title:"About Us | Meridian CPA Review",
- description:"Learn about Meridian CPA Review - affordable CPA exam prep with 6,000+ practice questions, progress tracking, and unlimited access until you pass at a fraction of the cost.",
+ description:"Learn about Meridian CPA Review - affordable CPA exam prep with 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
  About Meridian CPA Review
  </h1>
  <p className="text-xl text-gray-200">
- Comprehensive CPA exam prep with 6,000+ practice questions - everything you need to pass at a fraction of the cost.
+ Comprehensive CPA exam prep with 6,000+ practice questions and 500+ task-based simulations - everything you need to pass.
  </p>
  </div>
  </div>
@@ -39,7 +39,7 @@ export default function AboutPage() {
  <h2 className="text-2xl font-bold text-white">Our Mission</h2>
  </div>
  <p className="text-xl text-white/90 leading-relaxed max-w-3xl">
- We believe CPA exam preparation shouldn&apos;t cost $2,000-$3,500. Our mission is to provide everything you need to pass - 6,000+ practice questions, study tools, progress tracking, and unlimited access until you pass - at a fraction of what the big review courses charge.
+ We believe CPA exam preparation should be accessible to everyone. Our mission is to provide everything you need to pass - 6,000+ practice questions, 500+ task-based simulations, study tools, progress tracking, and unlimited access until you pass.
  </p>
  </div>
  </div>
@@ -60,13 +60,13 @@ export default function AboutPage() {
  </div>
  <div className="space-y-4 text-amber-800 dark:text-amber-300 text-lg leading-relaxed">
  <p>
- Meridian CPA Review was created because we saw a gap in the market: candidates who couldn&apos;t afford premium review courses but still deserved quality study materials.
+ Meridian CPA Review was created because we saw a gap in the market: candidates who deserved quality study materials with a modern, focused approach to CPA exam preparation.
  </p>
  <p>
- The big CPA review courses charge $2,000-$3,500 for their programs. Not everyone has that kind of money to spend on exam prep, especially when you&apos;re already paying for exam fees, applications, and potentially retakes.
+ We believe the best way to prepare for the CPA exam is through active practice - answering questions, working through simulations, and getting immediate feedback on your performance.
  </p>
  <p className="font-medium text-amber-900 dark:text-amber-200">
- We built Meridian CPA Review to prove you don&apos;t need to spend thousands to pass. With 6,000+ practice questions covering all CPA exam topics, progress tracking, and unlimited access until you pass on all tiers, we offer everything you need at 95% less than the competition.
+ With 6,000+ practice questions, 500+ task-based simulations covering all CPA exam topics, intelligent progress tracking, and unlimited access until you pass, we offer everything you need to succeed - completely free during our beta period.
  </p>
  </div>
  </div>
@@ -154,26 +154,30 @@ export default function AboutPage() {
  </svg>
  </div>
  <div>
- <h3 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2">Unlimited Access Until You Pass</h3>
+ <h3 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2">Free During Beta - Full Access</h3>
  <p className="text-green-700 dark:text-green-400 mb-4">
- All tiers include unlimited access until you pass - no time limits, no pressure:
+ During our beta period, you get complete access to everything - no time limits, no pressure:
  </p>
- <ul className="space-y-4 text-green-700 dark:text-green-400">
- <li className="flex items-start gap-4">
- <span className="font-bold w-[80px] flex-shrink-0">Free:</span>
- <span>50 questions for FAR section</span>
+ <ul className="space-y-3 text-green-700 dark:text-green-400">
+ <li className="flex items-start gap-3">
+ <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"fill="currentColor"viewBox="0 0 20 20"><path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/></svg>
+ <span>6,000+ practice questions across all six CPA exam sections</span>
  </li>
- <li className="flex items-start gap-4">
- <span className="font-bold w-[80px] flex-shrink-0">Standard:</span>
- <span>3,000+ questions across all 4 core sections (FAR, AUD, REG, TCP)</span>
+ <li className="flex items-start gap-3">
+ <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"fill="currentColor"viewBox="0 0 20 20"><path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/></svg>
+ <span>500+ task-based simulations with instant scoring</span>
  </li>
- <li className="flex items-start gap-4">
- <span className="font-bold w-[80px] flex-shrink-0">Pro:</span>
- <span>6,000+ questions across all 6 sections including discipline sections (BAR, ISC)</span>
+ <li className="flex items-start gap-3">
+ <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"fill="currentColor"viewBox="0 0 20 20"><path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/></svg>
+ <span>SmartPath adaptive learning algorithm</span>
+ </li>
+ <li className="flex items-start gap-3">
+ <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"fill="currentColor"viewBox="0 0 20 20"><path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/></svg>
+ <span>Progress tracking, gamification, and study analytics</span>
  </li>
  </ul>
  <p className="mt-4 text-green-700 dark:text-green-400 text-sm">
- Like other CPA review providers, our questions are based on the official Meridian CPA Reviews published by the AICPA. Study at your own pace with no time pressure.
+ Like other CPA review providers, our questions are based on the official CPA Exam Blueprints published by the AICPA. Study at your own pace with no time pressure.
  </p>
  </div>
  </div>
@@ -243,7 +247,7 @@ export default function AboutPage() {
  <tr>
  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Task-Based Simulations</td>
  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
- <span className="text-[var(--foreground)] font-semibold">200+</span>
+ <span className="text-[var(--foreground)] font-semibold">500+</span>
  </td>
  <td className="py-4 px-3 text-center text-[var(--foreground)]">400+</td>
  <td className="py-4 px-3 text-center text-[var(--foreground)]">500+</td>
@@ -355,7 +359,7 @@ export default function AboutPage() {
  </div>
  <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
  <p className="text-sm text-[var(--muted)]">
- <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, 200+ task-based simulations, and unlimited access until you pass. The main difference is we don&apos;t have video lectures. If you learn best from reading and practice, we&apos;re the smart choice.
+ <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, 500+ task-based simulations (matching Surgent!), and unlimited access until you pass. The main difference is we don&apos;t have video lectures. If you learn best from reading and practice, we&apos;re the smart choice.
  </p>
  <p className="text-xs text-[var(--muted)] mt-3 opacity-70">
  *Features are based on publicly available information as of January 2025. Verify current offerings directly with each provider.
@@ -406,13 +410,13 @@ export default function AboutPage() {
  <div className="bg-[var(--primary)] p-8 rounded-xl text-white text-center">
  <h2 className="text-2xl font-bold mb-4">Ready to Start Studying?</h2>
  <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
- Get access to 6,000+ practice questions, progress tracking, and unlimited access until you pass - starting at just $79.
+ Get access to 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass - free during beta.
  </p>
  <Link
- href="/pricing"
+ href="/signup"
  className="inline-block bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
  >
- View Pricing Plans
+ Create Free Account
  </Link>
  </div>
  </div>

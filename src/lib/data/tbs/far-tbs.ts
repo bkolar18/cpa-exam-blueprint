@@ -9435,6 +9435,931 @@ export const farFullFinancialStatementsTBS: TBSQuestion = {
   ],
 };
 
+// =============================================================================
+// PHASE 4 EXPANSION - Journal Entry TBS (tbs-far-092 through tbs-far-101)
+// =============================================================================
+
+// FAR-092: Bond Premium Amortization Journal Entry
+export const farBondPremiumJETBS: TBSQuestion = {
+  id: "tbs-far-092",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Bonds and Long-Term Debt",
+  subtopic: "Bond Premium Amortization",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "FAR-III",
+  title: "Bond Interest and Premium Amortization Entry",
+  scenarioText: `On January 1, Year 1, Coastal Corporation issued $500,000 of 8% bonds at 104 (premium). The bonds pay interest semi-annually on June 30 and December 31. The bonds mature in 5 years. Coastal uses the effective interest method with a market rate of 7%.
+
+Required: Prepare the journal entry for the June 30, Year 1 interest payment.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-bond-data",
+      order: 1,
+      title: "Bond Information",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Bond Issue Details",
+        headers: ["Item", "Amount"],
+        rows: [
+          { cells: ["Face Value", "$500,000"] },
+          { cells: ["Issue Price (104%)", "$520,000"] },
+          { cells: ["Premium", "$20,000"] },
+          { cells: ["Stated Rate (annual)", "8%"] },
+          { cells: ["Market Rate (annual)", "7%"] },
+          { cells: ["Semi-annual Cash Payment", "$20,000"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-interest-expense",
+      order: 1,
+      type: "numeric",
+      label: "Interest Expense (using effective interest method)",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 18200, tolerance: 10 },
+      explanation: "Interest expense = Carrying value × Market rate = $520,000 × 3.5% = $18,200",
+    },
+    {
+      id: "req-premium-amort",
+      order: 2,
+      type: "numeric",
+      label: "Premium Amortization for the period",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 1800, tolerance: 10 },
+      explanation: "Premium amortization = Cash payment - Interest expense = $20,000 - $18,200 = $1,800",
+    },
+    {
+      id: "req-je-debit",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit account and amount",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "int-expense", accountName: "Interest Expense", amount: 18200, tolerance: 10 },
+      explanation: "Debit Interest Expense for the effective interest amount",
+    },
+    {
+      id: "req-je-debit-premium",
+      order: 4,
+      type: "journal_debit",
+      label: "Debit to Premium on Bonds Payable",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "premium-bp", accountName: "Premium on Bonds Payable", amount: 1800, tolerance: 10 },
+      explanation: "Debit Premium on Bonds Payable for amortization",
+    },
+    {
+      id: "req-je-credit",
+      order: 5,
+      type: "journal_credit",
+      label: "Credit account and amount",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 20000, tolerance: 0 },
+      explanation: "Credit Cash for the actual payment ($500,000 × 4% = $20,000)",
+    },
+  ],
+  journalAccounts: [
+    { id: "int-expense", name: "Interest Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "premium-bp", name: "Premium on Bonds Payable", type: "liability", normalBalance: "credit", isDistractor: false },
+    { id: "cash", name: "Cash", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "bonds-payable", name: "Bonds Payable", type: "liability", normalBalance: "credit", isDistractor: true },
+    { id: "int-payable", name: "Interest Payable", type: "liability", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+// FAR-093: Revenue Recognition Journal Entry - Contract Asset/Liability
+export const farRevenueJETBS: TBSQuestion = {
+  id: "tbs-far-093",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Revenue Recognition",
+  subtopic: "Contract Assets and Liabilities",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "FAR-III",
+  title: "Revenue Recognition with Performance Obligations",
+  scenarioText: `TechServe Inc. enters into a contract on March 1, Year 1 to provide software and one year of support services for $120,000. The standalone selling prices are:
+• Software license: $90,000 (transferred at contract inception)
+• Support services: $45,000 (provided over 12 months)
+
+The customer pays $60,000 upfront with the remaining $60,000 due in 6 months.
+
+Required: Prepare the journal entry at contract inception (March 1, Year 1).`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-allocation",
+      order: 1,
+      title: "Revenue Allocation",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Transaction Price Allocation",
+        headers: ["Performance Obligation", "Standalone Price", "Allocation %", "Allocated Amount"],
+        rows: [
+          { cells: ["Software License", "$90,000", "66.67%", "$80,000"] },
+          { cells: ["Support Services", "$45,000", "33.33%", "$40,000"] },
+          { cells: ["Total", "$135,000", "100%", "$120,000"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-software-revenue",
+      order: 1,
+      type: "numeric",
+      label: "Revenue recognized for software at inception",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 80000, tolerance: 100 },
+      explanation: "Software revenue = $120,000 × ($90,000/$135,000) = $80,000 recognized immediately",
+    },
+    {
+      id: "req-deferred-revenue",
+      order: 2,
+      type: "numeric",
+      label: "Deferred revenue (Contract Liability) at inception",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 40000, tolerance: 100 },
+      explanation: "Support services revenue deferred = $120,000 × ($45,000/$135,000) = $40,000",
+    },
+    {
+      id: "req-je-debit-cash",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit Cash received",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 60000, tolerance: 0 },
+      explanation: "Customer paid $60,000 upfront",
+    },
+    {
+      id: "req-je-debit-ar",
+      order: 4,
+      type: "journal_debit",
+      label: "Debit Accounts Receivable",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "ar", accountName: "Accounts Receivable", amount: 60000, tolerance: 0 },
+      explanation: "Remaining $60,000 due in 6 months",
+    },
+    {
+      id: "req-je-credit-revenue",
+      order: 5,
+      type: "journal_credit",
+      label: "Credit Revenue (software)",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "revenue", accountName: "Revenue", amount: 80000, tolerance: 100 },
+      explanation: "Recognize software revenue at point in time",
+    },
+    {
+      id: "req-je-credit-deferred",
+      order: 6,
+      type: "journal_credit",
+      label: "Credit Deferred Revenue (support)",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "def-rev", accountName: "Deferred Revenue", amount: 40000, tolerance: 100 },
+      explanation: "Support services recognized over time",
+    },
+  ],
+  journalAccounts: [
+    { id: "cash", name: "Cash", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "ar", name: "Accounts Receivable", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "revenue", name: "Revenue", type: "revenue", normalBalance: "credit", isDistractor: false },
+    { id: "def-rev", name: "Deferred Revenue", type: "liability", normalBalance: "credit", isDistractor: false },
+    { id: "contract-asset", name: "Contract Asset", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "unearned-rev", name: "Unearned Revenue", type: "liability", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+// FAR-094: Stock Compensation Journal Entry
+export const farStockCompJETBS: TBSQuestion = {
+  id: "tbs-far-094",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Equity",
+  subtopic: "Stock-Based Compensation",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "FAR-III",
+  title: "Stock Option Compensation Expense",
+  scenarioText: `On January 1, Year 1, Nexus Corp granted 10,000 stock options to executives. The options vest over 3 years (cliff vesting) and have a grant-date fair value of $15 per option. All options are expected to vest.
+
+At the end of Year 1, Nexus estimates that 10% of the options will be forfeited. At the end of Year 2, Nexus revises this estimate to 5% expected forfeitures.
+
+Required: Calculate and record the compensation expense for Year 1 and Year 2.`,
+  timeEstimateMinutes: 15,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-option-data",
+      order: 1,
+      title: "Stock Option Details",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Option Grant Information",
+        headers: ["Item", "Value"],
+        rows: [
+          { cells: ["Options Granted", "10,000"] },
+          { cells: ["Grant-Date Fair Value per Option", "$15"] },
+          { cells: ["Total Fair Value", "$150,000"] },
+          { cells: ["Vesting Period", "3 years (cliff)"] },
+          { cells: ["Year 1 Forfeiture Estimate", "10%"] },
+          { cells: ["Year 2 Forfeiture Estimate (revised)", "5%"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-year1-expense",
+      order: 1,
+      type: "numeric",
+      label: "Year 1 Compensation Expense",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 45000, tolerance: 100 },
+      explanation: "Year 1: ($150,000 × 90% expected to vest) / 3 years = $45,000",
+    },
+    {
+      id: "req-year2-cumulative",
+      order: 2,
+      type: "numeric",
+      label: "Cumulative expense through Year 2 (revised estimate)",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 95000, tolerance: 100 },
+      explanation: "With 5% forfeitures: ($150,000 × 95%) × 2/3 = $95,000 cumulative",
+    },
+    {
+      id: "req-year2-expense",
+      order: 3,
+      type: "numeric",
+      label: "Year 2 Compensation Expense",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 50000, tolerance: 100 },
+      explanation: "$95,000 cumulative - $45,000 Year 1 = $50,000 (includes catch-up)",
+    },
+    {
+      id: "req-je-y1-debit",
+      order: 4,
+      type: "journal_debit",
+      label: "Year 1: Debit Compensation Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "comp-exp", accountName: "Compensation Expense", amount: 45000, tolerance: 100 },
+      explanation: "Debit expense for Year 1 portion",
+    },
+    {
+      id: "req-je-y1-credit",
+      order: 5,
+      type: "journal_credit",
+      label: "Year 1: Credit APIC-Stock Options",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "apic-options", accountName: "APIC-Stock Options", amount: 45000, tolerance: 100 },
+      explanation: "Credit APIC for equity-classified award",
+    },
+    {
+      id: "req-je-y2-debit",
+      order: 6,
+      type: "journal_debit",
+      label: "Year 2: Debit Compensation Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "comp-exp", accountName: "Compensation Expense", amount: 50000, tolerance: 100 },
+      explanation: "Year 2 expense includes catch-up adjustment",
+    },
+  ],
+  journalAccounts: [
+    { id: "comp-exp", name: "Compensation Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "apic-options", name: "APIC-Stock Options", type: "equity", normalBalance: "credit", isDistractor: false },
+    { id: "stock-options-liability", name: "Stock Options Liability", type: "liability", normalBalance: "credit", isDistractor: true },
+    { id: "common-stock", name: "Common Stock", type: "equity", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+// FAR-095: Pension Expense Journal Entry
+export const farPensionJETBS: TBSQuestion = {
+  id: "tbs-far-095",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Pensions",
+  subtopic: "Pension Expense Components",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "FAR-III",
+  title: "Defined Benefit Pension Expense",
+  scenarioText: `Pinnacle Industries has a defined benefit pension plan. For Year 1, the following information is available:
+
+Service cost: $180,000
+Interest cost (PBO × discount rate): $95,000
+Expected return on plan assets: $72,000
+Amortization of prior service cost: $15,000
+Amortization of net actuarial loss: $8,000
+
+Required: Calculate net pension expense and prepare the journal entry.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-pension-components",
+      order: 1,
+      title: "Pension Cost Components",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Year 1 Pension Information",
+        headers: ["Component", "Amount", "Effect on Expense"],
+        rows: [
+          { cells: ["Service Cost", "$180,000", "Increase"] },
+          { cells: ["Interest Cost", "$95,000", "Increase"] },
+          { cells: ["Expected Return on Plan Assets", "$72,000", "Decrease"] },
+          { cells: ["Prior Service Cost Amortization", "$15,000", "Increase"] },
+          { cells: ["Net Actuarial Loss Amortization", "$8,000", "Increase"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-gross-expense",
+      order: 1,
+      type: "numeric",
+      label: "Total expense components (before EROA offset)",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 298000, tolerance: 0 },
+      explanation: "$180,000 + $95,000 + $15,000 + $8,000 = $298,000",
+    },
+    {
+      id: "req-net-expense",
+      order: 2,
+      type: "numeric",
+      label: "Net Pension Expense",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 226000, tolerance: 0 },
+      explanation: "$298,000 - $72,000 (EROA) = $226,000",
+    },
+    {
+      id: "req-je-debit-expense",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit Pension Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "pension-exp", accountName: "Pension Expense", amount: 226000, tolerance: 0 },
+      explanation: "Net pension cost recorded as expense",
+    },
+    {
+      id: "req-je-debit-oci",
+      order: 4,
+      type: "journal_debit",
+      label: "Debit OCI (amortizations)",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "oci", accountName: "Other Comprehensive Income", amount: 23000, tolerance: 0 },
+      explanation: "Amortize PSC ($15,000) + actuarial loss ($8,000) = $23,000 from AOCI",
+    },
+    {
+      id: "req-je-credit-liability",
+      order: 5,
+      type: "journal_credit",
+      label: "Credit Pension Liability (or Asset)",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "pension-liability", accountName: "Pension Liability", amount: 249000, tolerance: 0 },
+      explanation: "Net effect on funded status = $226,000 + $23,000 = $249,000",
+    },
+  ],
+  journalAccounts: [
+    { id: "pension-exp", name: "Pension Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "oci", name: "Other Comprehensive Income", type: "equity", normalBalance: "credit", isDistractor: false },
+    { id: "pension-liability", name: "Pension Liability", type: "liability", normalBalance: "credit", isDistractor: false },
+    { id: "cash", name: "Cash", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "plan-assets", name: "Plan Assets", type: "asset", normalBalance: "debit", isDistractor: true },
+  ],
+};
+
+// FAR-096: Investment Impairment Journal Entry
+export const farInvestmentImpairmentJETBS: TBSQuestion = {
+  id: "tbs-far-096",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Investments",
+  subtopic: "Impairment of Held-to-Maturity Securities",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "FAR-III",
+  title: "Held-to-Maturity Debt Security Impairment",
+  scenarioText: `Stellar Corp holds a corporate bond classified as held-to-maturity with the following information at December 31, Year 1:
+
+Amortized cost: $485,000
+Fair value: $420,000
+Expected credit loss: $35,000
+
+Management has determined a credit loss exists but does not intend to sell and will not be required to sell before recovery.
+
+Required: Record the impairment entry under ASC 326.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 4,
+  exhibits: [
+    {
+      id: "exhibit-htm-impairment",
+      order: 1,
+      title: "Investment Details",
+      type: "table",
+      content: {
+        type: "table",
+        title: "HTM Security Information",
+        headers: ["Item", "Amount"],
+        rows: [
+          { cells: ["Amortized Cost", "$485,000"] },
+          { cells: ["Fair Value", "$420,000"] },
+          { cells: ["Total Unrealized Loss", "$65,000"] },
+          { cells: ["Credit-Related Loss", "$35,000"] },
+          { cells: ["Non-Credit Loss (in OCI)", "$30,000"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-credit-loss",
+      order: 1,
+      type: "numeric",
+      label: "Credit loss to be recognized in earnings",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 35000, tolerance: 0 },
+      explanation: "Credit loss component recognized in earnings",
+    },
+    {
+      id: "req-oci-loss",
+      order: 2,
+      type: "numeric",
+      label: "Non-credit loss in OCI",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 30000, tolerance: 0 },
+      explanation: "$65,000 total - $35,000 credit = $30,000 in OCI",
+    },
+    {
+      id: "req-je-debit-loss",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit Credit Loss Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "credit-loss", accountName: "Credit Loss Expense", amount: 35000, tolerance: 0 },
+      explanation: "Credit loss recognized in income statement",
+    },
+    {
+      id: "req-je-credit-allowance",
+      order: 4,
+      type: "journal_credit",
+      label: "Credit Allowance for Credit Losses",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "allowance-cl", accountName: "Allowance for Credit Losses", amount: 35000, tolerance: 0 },
+      explanation: "Contra asset account for HTM securities",
+    },
+  ],
+  journalAccounts: [
+    { id: "credit-loss", name: "Credit Loss Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "allowance-cl", name: "Allowance for Credit Losses", type: "asset", normalBalance: "credit", isDistractor: false },
+    { id: "oci", name: "Other Comprehensive Income", type: "equity", normalBalance: "credit", isDistractor: true },
+    { id: "investment-htm", name: "Investment - HTM", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "impairment-loss", name: "Impairment Loss", type: "expense", normalBalance: "debit", isDistractor: true },
+  ],
+};
+
+// FAR-097: Lease Termination Journal Entry
+export const farLeaseTerminationJETBS: TBSQuestion = {
+  id: "tbs-far-097",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Leases",
+  subtopic: "Lease Termination",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "FAR-III",
+  title: "Finance Lease Early Termination",
+  scenarioText: `Atlas Manufacturing terminates a finance lease early on June 30, Year 3. At termination:
+
+Right-of-use asset carrying value: $125,000
+Lease liability balance: $140,000
+Termination payment to lessor: $135,000
+
+Required: Prepare the journal entry to record the lease termination.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 4,
+  exhibits: [
+    {
+      id: "exhibit-termination",
+      order: 1,
+      title: "Lease Termination Data",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Balances at Termination",
+        headers: ["Account", "Balance"],
+        rows: [
+          { cells: ["ROU Asset", "$125,000"] },
+          { cells: ["Lease Liability", "$140,000"] },
+          { cells: ["Cash Payment", "$135,000"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-gain-loss",
+      order: 1,
+      type: "numeric",
+      label: "Gain or (Loss) on termination",
+      points: 1,
+      correctAnswer: { type: "numeric", value: -20000, tolerance: 0 },
+      explanation: "Liability relieved ($140,000) - ROU removed ($125,000) - Cash paid ($135,000) = ($20,000) loss",
+    },
+    {
+      id: "req-je-debit-liability",
+      order: 2,
+      type: "journal_debit",
+      label: "Debit Lease Liability",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "lease-liability", accountName: "Lease Liability", amount: 140000, tolerance: 0 },
+      explanation: "Remove lease liability from books",
+    },
+    {
+      id: "req-je-credit-rou",
+      order: 3,
+      type: "journal_credit",
+      label: "Credit ROU Asset",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "rou-asset", accountName: "Right-of-Use Asset", amount: 125000, tolerance: 0 },
+      explanation: "Remove ROU asset from books",
+    },
+    {
+      id: "req-je-credit-cash",
+      order: 4,
+      type: "journal_credit",
+      label: "Credit Cash",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 135000, tolerance: 0 },
+      explanation: "Cash paid to terminate lease",
+    },
+  ],
+  journalAccounts: [
+    { id: "lease-liability", name: "Lease Liability", type: "liability", normalBalance: "credit", isDistractor: false },
+    { id: "rou-asset", name: "Right-of-Use Asset", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "cash", name: "Cash", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "loss-termination", name: "Loss on Lease Termination", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "gain-termination", name: "Gain on Lease Termination", type: "revenue", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+// FAR-098: Government Fund Transfer Journal Entry
+export const farGovernmentFundTransferJETBS: TBSQuestion = {
+  id: "tbs-far-098",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "State and Local Government",
+  subtopic: "Interfund Transactions",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "FAR-IV",
+  title: "Interfund Transfer Entry",
+  scenarioText: `The City of Riverside approves a transfer of $500,000 from the General Fund to the Capital Projects Fund for a new fire station. This is a routine transfer authorized by the budget.
+
+Required: Record the journal entries for BOTH funds using the modified accrual basis.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 4,
+  exhibits: [
+    {
+      id: "exhibit-transfer-info",
+      order: 1,
+      title: "Transfer Authorization",
+      type: "memo",
+      content: {
+        type: "memo",
+        from: "City Council",
+        to: "Finance Department",
+        date: "October 15, Year 1",
+        subject: "Interfund Transfer Approval",
+        body: "Approved: Transfer of $500,000 from General Fund to Capital Projects Fund for Fire Station #7 construction project. This is an operating transfer, not a loan.",
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-gf-debit",
+      order: 1,
+      type: "journal_debit",
+      label: "General Fund: Debit account",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "other-financing-uses", accountName: "Other Financing Uses - Transfers Out", amount: 500000, tolerance: 0 },
+      explanation: "Transfers out are other financing uses in governmental funds",
+    },
+    {
+      id: "req-gf-credit",
+      order: 2,
+      type: "journal_credit",
+      label: "General Fund: Credit Cash",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 500000, tolerance: 0 },
+      explanation: "Cash transferred to Capital Projects Fund",
+    },
+    {
+      id: "req-cpf-debit",
+      order: 3,
+      type: "journal_debit",
+      label: "Capital Projects Fund: Debit Cash",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 500000, tolerance: 0 },
+      explanation: "Cash received from General Fund",
+    },
+    {
+      id: "req-cpf-credit",
+      order: 4,
+      type: "journal_credit",
+      label: "Capital Projects Fund: Credit account",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "other-financing-sources", accountName: "Other Financing Sources - Transfers In", amount: 500000, tolerance: 0 },
+      explanation: "Transfers in are other financing sources in governmental funds",
+    },
+  ],
+  journalAccounts: [
+    { id: "other-financing-uses", name: "Other Financing Uses - Transfers Out", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "other-financing-sources", name: "Other Financing Sources - Transfers In", type: "revenue", normalBalance: "credit", isDistractor: false },
+    { id: "cash", name: "Cash", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "due-from-gf", name: "Due from General Fund", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "due-to-cpf", name: "Due to Capital Projects Fund", type: "liability", normalBalance: "credit", isDistractor: true },
+    { id: "fund-balance", name: "Fund Balance", type: "equity", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+// FAR-099: NFP Contribution with Donor Restriction Journal Entry
+export const farNFPContributionJETBS: TBSQuestion = {
+  id: "tbs-far-099",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Not-for-Profit Accounting",
+  subtopic: "Contributions with Donor Restrictions",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "FAR-IV",
+  title: "Donor-Restricted Contribution and Release",
+  scenarioText: `Community Arts Foundation, a not-for-profit organization, receives the following contributions during Year 1:
+
+1. Cash donation of $100,000 restricted by the donor to purchase art supplies for children's programs
+2. During Year 1, $40,000 of art supplies were purchased using these restricted funds
+
+Required: Prepare the journal entries for both transactions.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-contribution",
+      order: 1,
+      title: "Contribution Details",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Year 1 Contributions",
+        headers: ["Item", "Amount", "Restriction"],
+        rows: [
+          { cells: ["Cash received", "$100,000", "Purpose-restricted: art supplies"] },
+          { cells: ["Art supplies purchased", "$40,000", "Restriction satisfied"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-entry1-debit",
+      order: 1,
+      type: "journal_debit",
+      label: "Contribution received: Debit Cash",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 100000, tolerance: 0 },
+      explanation: "Cash received from donor",
+    },
+    {
+      id: "req-entry1-credit",
+      order: 2,
+      type: "journal_credit",
+      label: "Contribution received: Credit Contribution Revenue - With Donor Restrictions",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "contrib-wr", accountName: "Contribution Revenue - With Donor Restrictions", amount: 100000, tolerance: 0 },
+      explanation: "Purpose-restricted contribution increases net assets with donor restrictions",
+    },
+    {
+      id: "req-entry2-debit-expense",
+      order: 3,
+      type: "journal_debit",
+      label: "Purchase supplies: Debit Program Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "program-exp", accountName: "Program Expense", amount: 40000, tolerance: 0 },
+      explanation: "Art supplies purchased for programs",
+    },
+    {
+      id: "req-entry2-credit-cash",
+      order: 4,
+      type: "journal_credit",
+      label: "Purchase supplies: Credit Cash",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "cash", accountName: "Cash", amount: 40000, tolerance: 0 },
+      explanation: "Cash paid for supplies",
+    },
+    {
+      id: "req-entry3-release",
+      order: 5,
+      type: "numeric",
+      label: "Amount reclassified from 'with restrictions' to 'without restrictions'",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 40000, tolerance: 0 },
+      explanation: "When restriction is satisfied, $40,000 released from donor restrictions",
+    },
+  ],
+  journalAccounts: [
+    { id: "cash", name: "Cash", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "contrib-wr", name: "Contribution Revenue - With Donor Restrictions", type: "revenue", normalBalance: "credit", isDistractor: false },
+    { id: "program-exp", name: "Program Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "na-released", name: "Net Assets Released from Restrictions", type: "equity", normalBalance: "debit", isDistractor: false },
+    { id: "contrib-wor", name: "Contribution Revenue - Without Donor Restrictions", type: "revenue", normalBalance: "credit", isDistractor: true },
+    { id: "supplies", name: "Supplies Inventory", type: "asset", normalBalance: "debit", isDistractor: true },
+  ],
+};
+
+// FAR-100: Deferred Tax Asset Valuation Journal Entry
+export const farDTAValuationJETBS: TBSQuestion = {
+  id: "tbs-far-100",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Income Taxes",
+  subtopic: "Deferred Tax Asset Valuation Allowance",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "FAR-III",
+  title: "DTA Valuation Allowance Adjustment",
+  scenarioText: `Horizon Tech has a deferred tax asset of $800,000 from net operating loss carryforwards. Due to recent operating losses, management has determined that it is "more likely than not" that only $500,000 of the DTA will be realized.
+
+At the beginning of Year 1, Horizon had a valuation allowance of $200,000. Based on Year 1 analysis, the required valuation allowance is now $300,000.
+
+Required: Calculate and record the Year 1 adjustment to the valuation allowance.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 4,
+  exhibits: [
+    {
+      id: "exhibit-dta-analysis",
+      order: 1,
+      title: "DTA Realization Analysis",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Deferred Tax Asset Assessment",
+        headers: ["Item", "Amount"],
+        rows: [
+          { cells: ["Gross DTA", "$800,000"] },
+          { cells: ["Amount expected to be realized", "$500,000"] },
+          { cells: ["Required Valuation Allowance", "$300,000"] },
+          { cells: ["Beginning Valuation Allowance", "$200,000"] },
+          { cells: ["Increase Needed", "$100,000"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-va-increase",
+      order: 1,
+      type: "numeric",
+      label: "Increase in valuation allowance required",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 100000, tolerance: 0 },
+      explanation: "$300,000 required - $200,000 existing = $100,000 increase",
+    },
+    {
+      id: "req-ending-va",
+      order: 2,
+      type: "numeric",
+      label: "Ending valuation allowance balance",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 300000, tolerance: 0 },
+      explanation: "Required valuation allowance per analysis",
+    },
+    {
+      id: "req-je-debit",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit Income Tax Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "tax-expense", accountName: "Income Tax Expense", amount: 100000, tolerance: 0 },
+      explanation: "Increasing valuation allowance increases tax expense",
+    },
+    {
+      id: "req-je-credit",
+      order: 4,
+      type: "journal_credit",
+      label: "Credit Valuation Allowance",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "va-dta", accountName: "Valuation Allowance - DTA", amount: 100000, tolerance: 0 },
+      explanation: "Contra asset account to DTA",
+    },
+  ],
+  journalAccounts: [
+    { id: "tax-expense", name: "Income Tax Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "va-dta", name: "Valuation Allowance - DTA", type: "asset", normalBalance: "credit", isDistractor: false },
+    { id: "dta", name: "Deferred Tax Asset", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "dtl", name: "Deferred Tax Liability", type: "liability", normalBalance: "credit", isDistractor: true },
+    { id: "tax-benefit", name: "Income Tax Benefit", type: "revenue", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+// FAR-101: Asset Retirement Obligation Journal Entry
+export const farAROJETBS: TBSQuestion = {
+  id: "tbs-far-101",
+  section: "FAR",
+  tbsType: "journal_entry",
+  topic: "Long-Lived Assets",
+  subtopic: "Asset Retirement Obligations",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "FAR-III",
+  title: "ARO Initial Recognition and Accretion",
+  scenarioText: `Energy Corp installs equipment on January 1, Year 1 that will require removal at the end of its 20-year useful life. The estimated future removal cost is $500,000. The credit-adjusted risk-free rate is 6%.
+
+Required: Calculate the initial ARO and Year 1 accretion expense. Round PV factor to 4 decimals.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-aro-data",
+      order: 1,
+      title: "ARO Information",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Asset Retirement Obligation Data",
+        headers: ["Item", "Value"],
+        rows: [
+          { cells: ["Future Retirement Cost", "$500,000"] },
+          { cells: ["Years to Retirement", "20"] },
+          { cells: ["Credit-Adjusted Risk-Free Rate", "6%"] },
+          { cells: ["PV Factor (20 periods, 6%)", "0.3118"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-initial-aro",
+      order: 1,
+      type: "numeric",
+      label: "Initial ARO liability (present value)",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 155900, tolerance: 500 },
+      explanation: "$500,000 × 0.3118 = $155,900 (rounded)",
+    },
+    {
+      id: "req-accretion",
+      order: 2,
+      type: "numeric",
+      label: "Year 1 Accretion Expense",
+      points: 1,
+      correctAnswer: { type: "numeric", value: 9354, tolerance: 50 },
+      explanation: "$155,900 × 6% = $9,354",
+    },
+    {
+      id: "req-je-initial-debit",
+      order: 3,
+      type: "journal_debit",
+      label: "Initial recognition: Debit Equipment (ARO asset)",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "equipment", accountName: "Equipment", amount: 155900, tolerance: 500 },
+      explanation: "Capitalize ARO as part of asset cost",
+    },
+    {
+      id: "req-je-initial-credit",
+      order: 4,
+      type: "journal_credit",
+      label: "Initial recognition: Credit ARO Liability",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "aro-liability", accountName: "Asset Retirement Obligation", amount: 155900, tolerance: 500 },
+      explanation: "Record liability at present value",
+    },
+    {
+      id: "req-je-accretion-debit",
+      order: 5,
+      type: "journal_debit",
+      label: "Year 1 accretion: Debit Accretion Expense",
+      points: 1,
+      correctAnswer: { type: "journal", accountId: "accretion-exp", accountName: "Accretion Expense", amount: 9354, tolerance: 50 },
+      explanation: "Interest expense on ARO liability",
+    },
+  ],
+  journalAccounts: [
+    { id: "equipment", name: "Equipment", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "aro-liability", name: "Asset Retirement Obligation", type: "liability", normalBalance: "credit", isDistractor: false },
+    { id: "accretion-exp", name: "Accretion Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "depr-exp", name: "Depreciation Expense", type: "expense", normalBalance: "debit", isDistractor: true },
+    { id: "accum-depr", name: "Accumulated Depreciation", type: "asset", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
 // Export all FAR TBS questions
 export const farTBSQuestions: TBSQuestion[] = [
   farOperatingLeaseTBS,
@@ -9524,4 +10449,15 @@ export const farTBSQuestions: TBSQuestion[] = [
   farFinancialStatementElementsTBS,
   farGAAPHierarchyTBS,
   farFullFinancialStatementsTBS,
+  // Phase 4 expansion - Journal Entry TBS (tbs-far-092 through tbs-far-101)
+  farBondPremiumJETBS,
+  farRevenueJETBS,
+  farStockCompJETBS,
+  farPensionJETBS,
+  farInvestmentImpairmentJETBS,
+  farLeaseTerminationJETBS,
+  farGovernmentFundTransferJETBS,
+  farNFPContributionJETBS,
+  farDTAValuationJETBS,
+  farAROJETBS,
 ];
