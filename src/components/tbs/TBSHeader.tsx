@@ -540,7 +540,6 @@ export default function TBSHeader({
  </button>
  </div>
  </div>
- </div>
 
  {/* Time Warning Banner - shown on both mobile and desktop */}
  {!isSubmitted && remainingSeconds <= 60 && remainingSeconds > 0 && (
