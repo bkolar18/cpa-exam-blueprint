@@ -32,7 +32,7 @@ export default function Home() {
       </section>
 
       {/* Trust Signals */}
-      <section className="py-12 bg-[var(--card)] border-b border-[var(--border)]">
+      <section className="py-12 bg-[var(--card)] border-b border-[var(--border)] animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-8 text-center">
             <div className="flex items-center space-x-2">
@@ -61,7 +61,7 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4 animate-fade-in-up">
               Everything You Need to Pass the CPA Exam
             </h2>
             <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
@@ -142,7 +142,7 @@ export default function Home() {
               <span className="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
                 Free Study Dashboard
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-up">
                 Track Your Progress with Meridian CPA Academy
               </h2>
               <p className="text-xl text-blue-100 mb-6">
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-6 animate-fade-in-up">
                 Feeling Overwhelmed by the CPA Exam?
               </h2>
               <p className="text-lg text-[var(--muted)] mb-8">
@@ -278,7 +278,7 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4 animate-fade-in-up">
               Master Each CPA Exam Section
             </h2>
             <p className="text-lg text-[var(--muted)]">
@@ -316,7 +316,7 @@ export default function Home() {
       {/* CTA */}
       <section className="py-16 bg-[var(--primary)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 animate-fade-in-up">
             Ready to Start Studying?
           </h2>
           <p className="text-gray-200 mb-8 text-lg">

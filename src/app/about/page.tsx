@@ -12,10 +12,10 @@ export default function AboutPage() {
  <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="max-w-3xl">
- <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+ <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-up">
  About Meridian CPA Review
  </h1>
- <p className="text-xl text-gray-200">
+ <p className="text-xl text-gray-200 animate-fade-in-up animate-delay-100">
  Comprehensive CPA exam prep with 6,000+ practice questions and 500+ task-based simulations - everything you need to pass.
  </p>
  </div>
@@ -24,7 +24,7 @@ export default function AboutPage() {
 
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
  {/* Mission Statement */}
- <div className="relative bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] p-8 md:p-10 rounded-2xl mb-12 overflow-hidden">
+ <div className="relative bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] p-8 md:p-10 rounded-2xl mb-12 overflow-hidden animate-fade-in-up">
  {/* Decorative elements */}
  <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"/>
  <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"/>
@@ -45,7 +45,7 @@ export default function AboutPage() {
  </div>
 
  {/* The Story */}
- <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 p-8 md:p-10 rounded-2xl border border-amber-200 dark:border-amber-800 mb-12 overflow-hidden">
+ <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 p-8 md:p-10 rounded-2xl border border-amber-200 dark:border-amber-800 mb-12 overflow-hidden animate-fade-in-up">
  {/* Decorative quote */}
  <div className="absolute top-4 right-8 text-amber-200/50 dark:text-amber-700/30 text-8xl font-serif">&ldquo;</div>
 
@@ -74,7 +74,7 @@ export default function AboutPage() {
 
  {/* What We Offer */}
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)] mb-12">
- <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">What We Offer</h2>
+ <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 animate-fade-in-up">What We Offer</h2>
  <div className="grid md:grid-cols-2 gap-6">
  <div className="flex items-start space-x-4">
  <div className="w-10 h-10 bg-[var(--primary)] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -105,8 +105,8 @@ export default function AboutPage() {
  </svg>
  </div>
  <div>
- <h3 className="font-semibold text-[var(--foreground)] mb-1">SmartPath Adaptive Learning</h3>
- <p className="text-[var(--muted)] text-sm">Our intelligent algorithm analyzes your performance and prioritizes questions in areas where you need the most practice.</p>
+ <h3 className="font-semibold text-[var(--foreground)] mb-1">Prime Meridian Score</h3>
+ <p className="text-[var(--muted)] text-sm">Track your exam readiness with our AICPA-weighted scoring system that shows exactly where you stand and what to focus on next.</p>
  </div>
  </div>
  <div className="flex items-start space-x-4">
@@ -154,7 +154,7 @@ export default function AboutPage() {
  </svg>
  </div>
  <div>
- <h3 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2">Free During Beta - Full Access</h3>
+ <h3 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2 animate-fade-in-up">Free During Beta - Full Access</h3>
  <p className="text-green-700 dark:text-green-400 mb-4">
  During our beta period, you get complete access to everything - no time limits, no pressure:
  </p>
@@ -169,7 +169,7 @@ export default function AboutPage() {
  </li>
  <li className="flex items-start gap-3">
  <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"fill="currentColor"viewBox="0 0 20 20"><path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/></svg>
- <span>SmartPath adaptive learning algorithm</span>
+ <span>Prime Meridian adaptive learning algorithm</span>
  </li>
  <li className="flex items-start gap-3">
  <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"fill="currentColor"viewBox="0 0 20 20"><path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/></svg>
@@ -185,7 +185,7 @@ export default function AboutPage() {
 
  {/* Comparison Table */}
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)] mb-12">
- <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">How We Compare</h2>
+ <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2 animate-fade-in-up">How We Compare</h2>
  <p className="text-[var(--muted)] mb-6">
  Here&apos;s an honest comparison with major CPA review providers. Choose what fits your budget and needs.
  </p>
@@ -378,7 +378,7 @@ export default function AboutPage() {
 
  {/* Our Commitment */}
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-[var(--border)] mb-12">
- <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Our Commitment to You</h2>
+ <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 animate-fade-in-up">Our Commitment to You</h2>
  <div className="space-y-4">
  <div className="flex items-start space-x-3">
  <svg className="w-5 h-5 text-[var(--secondary)] mt-0.5 flex-shrink-0"fill="currentColor"viewBox="0 0 20 20">
@@ -417,7 +417,7 @@ export default function AboutPage() {
 
  {/* CTA */}
  <div className="bg-[var(--primary)] p-8 rounded-xl text-white text-center">
- <h2 className="text-2xl font-bold mb-4">Ready to Start Studying?</h2>
+ <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">Ready to Start Studying?</h2>
  <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
  Get access to 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass - free during beta.
  </p>

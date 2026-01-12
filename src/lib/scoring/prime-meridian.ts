@@ -261,8 +261,21 @@ export interface PrimeMeridianResult {
 
 // Configuration
 const CONFIG = {
-  MIN_QUESTIONS_PER_CONTENT_AREA: 10, // Minimum questions needed for full weight
-  MIN_TBS_PER_SECTION: 3, // Minimum TBS needed for full weight
+  /**
+   * Minimum questions needed per AICPA content area for full weight.
+   * With ~1000 MCQs per section and 4-5 content areas (~200-250 MCQs each),
+   * and students recommended to do 1000-2000 MCQs per section, 50 questions
+   * per content area provides a meaningful minimum threshold.
+   *
+   * Below this threshold, students receive a coverage penalty:
+   * coverageFactor = questionsAttempted / MIN_QUESTIONS_PER_CONTENT_AREA
+   */
+  MIN_QUESTIONS_PER_CONTENT_AREA: 50,
+  /**
+   * Minimum TBS completions needed for full weight in TBS scoring.
+   * With 50 TBS per section target, 10 provides reasonable coverage.
+   */
+  MIN_TBS_PER_SECTION: 10,
   RECENCY_HALF_LIFE_DAYS: 30, // Performance from 30 days ago counts half as much
   DIFFICULTY_WEIGHTS: {
     easy: 0.8,
@@ -272,6 +285,12 @@ const CONFIG = {
   MCQ_WEIGHT: 0.5, // 50% of final score
   TBS_WEIGHT: 0.5, // 50% of final score
   RECOMMENDED_SCORE: 75,
+  /**
+   * Minimum total questions before Prime Meridian score is considered meaningful.
+   * With 4-5 content areas at 50 questions each, 100 is a reasonable threshold
+   * to indicate the student has started building comprehensive coverage.
+   */
+  MIN_TOTAL_QUESTIONS_FOR_MEANINGFUL_SCORE: 100,
 };
 
 /**
@@ -546,7 +565,7 @@ export function calculatePrimeMeridianScore(
 
   // Determine if there's enough data for a meaningful score
   const totalQuestions = contentAreaScores.reduce((sum, ca) => sum + ca.questionsAttempted, 0);
-  const hasEnoughData = totalQuestions >= 20 || hasTBSData;
+  const hasEnoughData = totalQuestions >= CONFIG.MIN_TOTAL_QUESTIONS_FOR_MEANINGFUL_SCORE || hasTBSData;
 
   return {
     overallScore,
@@ -624,3 +643,72 @@ export function getPrimeMeridianMilestone(score: number): PrimeMeridianMilestone
 }
 
 export { CONFIG as PRIME_MERIDIAN_CONFIG };
+
+/**
+ * Color Coding Standards for Readiness Display
+ *
+ * These standards ensure consistent visual feedback across all readiness
+ * components (AICPA Content Area Breakdown, MCQ Topic Readiness, TBS Topic Readiness).
+ *
+ * COVERAGE (Bar Width & Color) - Represents practice volume
+ * ============================================================
+ * Bar width = (questionsAttempted / totalAvailable) * 100
+ * Bar color based on coverage percentage:
+ *   - >= 70% coverage: green  (bg-green-500) - Well covered
+ *   - >= 25% coverage: yellow (bg-yellow-500) - In progress
+ *   - > 0% coverage:   red    (bg-red-400) - Just started
+ *   - 0% coverage:     gray   (bg-gray-300 dark:bg-gray-600) - Not started
+ *
+ * ACCURACY (Text Color) - Represents performance quality
+ * ============================================================
+ * Accuracy = (correctAnswers / questionsAttempted) * 100
+ * Text color based on accuracy percentage:
+ *   - >= 75% accuracy: green  (text-green-600 dark:text-green-400) - Strong
+ *   - >= 50% accuracy: yellow (text-yellow-600 dark:text-yellow-400) - Developing
+ *   - > 0% accuracy:   red    (text-red-600 dark:text-red-400) - Needs work
+ *   - No data:         gray   (text-gray-400) - Not started
+ */
+export const READINESS_COLOR_THRESHOLDS = {
+  coverage: {
+    excellent: 70,  // >= 70% = green
+    moderate: 25,   // >= 25% = yellow
+    low: 0,         // > 0% = red, 0% = gray
+  },
+  accuracy: {
+    strong: 75,     // >= 75% = green
+    developing: 50, // >= 50% = yellow
+    needsWork: 0,   // > 0% = red, no data = gray
+  },
+} as const;
+
+/**
+ * Get coverage bar color class based on coverage percentage
+ */
+export function getCoverageBarColor(coveragePercent: number): string {
+  if (coveragePercent >= READINESS_COLOR_THRESHOLDS.coverage.excellent) {
+    return 'bg-green-500';
+  }
+  if (coveragePercent >= READINESS_COLOR_THRESHOLDS.coverage.moderate) {
+    return 'bg-yellow-500';
+  }
+  if (coveragePercent > 0) {
+    return 'bg-red-400';
+  }
+  return 'bg-gray-300 dark:bg-gray-600';
+}
+
+/**
+ * Get accuracy text color class based on accuracy percentage
+ */
+export function getAccuracyTextColor(accuracy: number | null): string {
+  if (accuracy === null || accuracy === 0) {
+    return 'text-gray-400';
+  }
+  if (accuracy >= READINESS_COLOR_THRESHOLDS.accuracy.strong) {
+    return 'text-green-600 dark:text-green-400';
+  }
+  if (accuracy >= READINESS_COLOR_THRESHOLDS.accuracy.developing) {
+    return 'text-yellow-600 dark:text-yellow-400';
+  }
+  return 'text-red-600 dark:text-red-400';
+}

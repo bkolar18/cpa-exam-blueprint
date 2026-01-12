@@ -5,6 +5,8 @@ import {
   type PrimeMeridianResult,
   getPrimeMeridianMilestone,
   PRIME_MERIDIAN_CONFIG,
+  getCoverageBarColor,
+  getAccuracyTextColor,
 } from "@/lib/scoring/prime-meridian";
 
 interface PrimeMeridianScoreProps {
@@ -234,64 +236,81 @@ export default function PrimeMeridianScore({
             AICPA Content Area Breakdown
           </h3>
           <p className="text-sm text-[var(--muted)] mb-4">
-            Performance weighted by official AICPA exam blueprint percentages
+            Coverage weighted by official AICPA exam blueprint percentages. Bar shows practice volume, text shows accuracy.
           </p>
 
           <div className="space-y-4">
             {result.contentAreaScores.map((area) => {
-              const scoreColor =
-                area.rawScore >= 75 ? "text-green-600 dark:text-green-400" :
-                area.rawScore >= 60 ? "text-yellow-600 dark:text-yellow-400" :
-                area.rawScore > 0 ? "text-red-600 dark:text-red-400" :
-                "text-gray-400";
+              // Coverage = questions attempted toward minimum threshold (50 per area)
+              // Capped at 100% to show "threshold met" status
+              const coveragePercent = Math.min(
+                100,
+                Math.round((area.questionsAttempted / PRIME_MERIDIAN_CONFIG.MIN_QUESTIONS_PER_CONTENT_AREA) * 100)
+              );
 
-              const barColor =
-                area.rawScore >= 75 ? "bg-green-500" :
-                area.rawScore >= 60 ? "bg-yellow-500" :
-                area.rawScore > 0 ? "bg-red-400" :
-                "bg-gray-300 dark:bg-gray-600";
+              // Use standardized color functions from prime-meridian.ts
+              const accuracyColor = getAccuracyTextColor(area.rawScore > 0 ? area.rawScore : null);
+              const barColor = getCoverageBarColor(coveragePercent);
 
               return (
                 <div key={area.contentArea} className="space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium text-[var(--foreground)] text-sm">
-                          {area.contentArea}
-                        </span>
-                        <span className="text-xs px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-[var(--muted)]">
-                          {area.weight}%
-                        </span>
-                        {!area.minThresholdMet && area.questionsAttempted > 0 && (
-                          <span className="text-xs px-2 py-0.5 rounded bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">
-                            Low coverage
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-xs text-[var(--muted)] truncate">
+                      <span className="font-medium text-[var(--foreground)] text-sm truncate block">
                         {area.name}
-                      </p>
+                      </span>
+                      <span className="text-xs text-[var(--muted)]">
+                        {area.weight}% of exam • {area.questionsAttempted} / {PRIME_MERIDIAN_CONFIG.MIN_QUESTIONS_PER_CONTENT_AREA} questions
+                      </span>
                     </div>
                     <div className="text-right ml-4">
-                      <span className={`text-lg font-bold ${scoreColor}`}>
-                        {area.rawScore > 0 ? `${area.rawScore}%` : '--'}
+                      <span className={`text-lg font-bold ${accuracyColor}`}>
+                        {area.rawScore > 0 ? `${area.rawScore}% accuracy` : '--'}
                       </span>
-                      <p className="text-xs text-[var(--muted)]">
-                        {area.questionsAttempted} questions
-                      </p>
                     </div>
                   </div>
 
-                  {/* Progress bar */}
-                  <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  {/* Progress bar - width represents coverage, color based on coverage percentage */}
+                  <div className="h-3 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
                     <div
                       className={`h-full ${barColor} transition-all duration-300`}
-                      style={{ width: `${area.rawScore}%` }}
+                      style={{ width: `${coveragePercent}%` }}
                     />
                   </div>
+
+                  {/* Coverage indicator messages */}
+                  {coveragePercent < 50 && area.questionsAttempted > 0 && (
+                    <p className="text-xs text-orange-600 dark:text-orange-400">
+                      Need more practice ({PRIME_MERIDIAN_CONFIG.MIN_QUESTIONS_PER_CONTENT_AREA - area.questionsAttempted} more questions recommended)
+                    </p>
+                  )}
+                  {area.questionsAttempted === 0 && (
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      Not yet practiced - start here to improve your score
+                    </p>
+                  )}
                 </div>
               );
             })}
+          </div>
+
+          {/* Legend for color coding */}
+          <div className="mt-6 pt-4 border-t border-[var(--border)]">
+            <p className="text-xs text-[var(--muted)] mb-2 font-medium">Coverage Legend (Bar Color)</p>
+            <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--muted)]">
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+                <span>≥70% (Well covered)</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <span>≥25% (In progress)</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <span>&lt;25% (Just started)</span>
+              </div>
+            </div>
           </div>
         </div>
       )}

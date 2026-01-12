@@ -1,12 +1,18 @@
 "use client";
 
-import { useState, useEffect } from"react";
-import { useSearchParams } from"next/navigation";
-import Link from"next/link";
-import { createClient } from"@/lib/supabase/client";
-import { useAuth } from"@/components/auth/AuthProvider";
-import { getQuestionsBySection } from"@/lib/data/practice-questions";
-import type { SectionCode } from"@/lib/supabase/types";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/components/auth/AuthProvider";
+import { getQuestionsBySection } from "@/lib/data/practice-questions";
+import type { SectionCode } from "@/lib/supabase/types";
+import {
+  calculatePrimeMeridianScore,
+  type PracticeAttemptData,
+  type TBSAttemptData,
+  getPrimeMeridianMilestone,
+} from "@/lib/scoring/prime-meridian";
 
 // Type for study session from Supabase
 interface StudySessionRow {
@@ -49,9 +55,10 @@ export default function DashboardPage() {
  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
  const [sectionProgress, setSectionProgress] = useState<{ status: string }[]>([]);
  const [recentSessions, setRecentSessions] = useState<StudySessionRow[]>([]);
- const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
- const [readinessData, setReadinessData] = useState<SectionReadinessData[]>([]);
- const [loading, setLoading] = useState(true);
+  const [ntsEntries, setNtsEntries] = useState<{ id: string }[]>([]);
+  const [readinessData, setReadinessData] = useState<SectionReadinessData[]>([]);
+  const [overallPrimeMeridian, setOverallPrimeMeridian] = useState(0);
+  const [loading, setLoading] = useState(true);
  const [showUpgradePromo, setShowUpgradePromo] = useState(false);
  const [savedPracticeSession, setSavedPracticeSession] = useState<SavedPracticeSession | null>(null);
  const supabase = createClient();
@@ -145,48 +152,78 @@ export default function DashboardPage() {
  if (ntsData) setNtsEntries(ntsData);
 
  // Fetch practice attempts for readiness summary
- const { data: attempts } = await supabase
- .from("practice_attempts")
- .select("section, question_id, is_correct")
- .eq("user_id", user.id);
+    const { data: attempts } = await supabase
+      .from("practice_attempts")
+      .select("section, question_id, topic, is_correct, created_at")
+      .eq("user_id", user.id);
 
- if (attempts && attempts.length > 0) {
- // Calculate readiness per section
- const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
- const sectionStats: SectionReadinessData[] = sections
- .map(section => {
- const sectionAttempts = attempts.filter(a => a.section === section);
+    // Fetch TBS attempts for Prime Meridian calculation
+    const { data: tbsAttempts } = await supabase
+      .from("tbs_attempts")
+      .select("tbs_id, section, is_complete, score_percentage")
+      .eq("user_id", user.id);
 
- // Count unique questions attempted
- const uniqueQuestionIds = new Set(sectionAttempts.map(a => a.question_id));
- const uniqueAttempted = uniqueQuestionIds.size;
+    // Calculate readiness per section and Prime Meridian
+    const sections: SectionCode[] = ["FAR", "AUD", "REG", "TCP", "BAR", "ISC"];
+    const sectionStats: SectionReadinessData[] = [];
+    let totalPMScore = 0;
+    let sectionsWithData = 0;
 
- // Count correct (if any attempt was correct, count as correct)
- const questionResults = new Map<string, boolean>();
- sectionAttempts.forEach(a => {
- const current = questionResults.get(a.question_id);
- if (current !== true) {
- questionResults.set(a.question_id, a.is_correct);
- }
- });
- const correctQuestions = [...questionResults.values()].filter(v => v).length;
+    for (const section of sections) {
+      const sectionAttempts = (attempts || []).filter(a => a.section === section);
 
- // Get total questions for this section
- const totalQuestions = getQuestionsBySection(section).length;
- const coverage = totalQuestions > 0 ? Math.round((uniqueAttempted / totalQuestions) * 100) : 0;
+      // Count unique questions attempted
+      const uniqueQuestionIds = new Set(sectionAttempts.map(a => a.question_id));
+      const uniqueAttempted = uniqueQuestionIds.size;
 
- return {
- section,
- attempted: uniqueAttempted,
- correct: correctQuestions,
- accuracy: uniqueAttempted > 0 ? Math.round((correctQuestions / uniqueAttempted) * 100) : 0,
- totalQuestions,
- coverage,
- };
- })
- .filter(s => s.attempted > 0); // Only show sections with attempts
- setReadinessData(sectionStats);
- }
+      // Count correct (if any attempt was correct, count as correct)
+      const questionResults = new Map<string, boolean>();
+      sectionAttempts.forEach(a => {
+        const current = questionResults.get(a.question_id);
+        if (current !== true) {
+          questionResults.set(a.question_id, a.is_correct);
+        }
+      });
+      const correctQuestions = [...questionResults.values()].filter(v => v).length;
+
+      // Get total questions for this section
+      const totalQuestions = getQuestionsBySection(section).length;
+      const coverage = totalQuestions > 0 ? Math.round((uniqueAttempted / totalQuestions) * 100) : 0;
+
+      if (uniqueAttempted > 0) {
+        sectionStats.push({
+          section,
+          attempted: uniqueAttempted,
+          correct: correctQuestions,
+          accuracy: uniqueAttempted > 0 ? Math.round((correctQuestions / uniqueAttempted) * 100) : 0,
+          totalQuestions,
+          coverage,
+        });
+
+        // Calculate Prime Meridian for this section
+        const mcqData: PracticeAttemptData[] = sectionAttempts.map(a => ({
+          question_id: a.question_id,
+          topic: a.topic || null,
+          is_correct: a.is_correct,
+          created_at: a.created_at,
+        }));
+        const tbsData: TBSAttemptData[] = ((tbsAttempts || []) as { tbs_id: string; section: string; is_complete: boolean; score_percentage: number | null }[])
+          .filter(t => t.section === section)
+          .map(t => ({
+            tbs_id: t.tbs_id,
+            section: t.section,
+            is_complete: t.is_complete,
+            score_percentage: t.score_percentage,
+            created_at: new Date().toISOString(),
+          }));
+        const pmResult = calculatePrimeMeridianScore(mcqData, tbsData, section);
+        totalPMScore += pmResult.overallScore;
+        sectionsWithData++;
+      }
+    }
+
+    setReadinessData(sectionStats);
+    setOverallPrimeMeridian(sectionsWithData > 0 ? Math.round(totalPMScore / sectionsWithData) : 0);
 
  setLoading(false);
  };
@@ -393,12 +430,15 @@ export default function DashboardPage() {
  sublabel={profile?.weekly_study_hours ? `Goal: ${profile.weekly_study_hours}h` :"Set a goal"}
  color="blue"
  />
- <StatCard
- label="Questions Mastered"
- value={readinessData.reduce((sum, s) => sum + s.correct, 0).toString()}
- sublabel={readinessData.length > 0 ? `${Math.round(readinessData.reduce((sum, s) => sum + s.accuracy, 0) / readinessData.length)}% accuracy` : "Start practicing"}
- color="green"
- />
+ <Link href="/dashboard/readiness" className="block">
+            <StatCard
+              label="Prime Meridian"
+              value={overallPrimeMeridian.toString()}
+              sublabel={overallPrimeMeridian >= 75 ? "Recommended reached!" : overallPrimeMeridian > 0 ? `${75 - overallPrimeMeridian} to 75` : "Start practicing"}
+              color="green"
+              highlighted={overallPrimeMeridian >= 75}
+            />
+          </Link>
  <StatCard
  label="Active NTS"
  value={activeNTS.toString()}
@@ -556,30 +596,43 @@ export default function DashboardPage() {
 }
 
 function StatCard({
- label,
- value,
- sublabel,
- color,
+  label,
+  value,
+  sublabel,
+  color,
+  highlighted = false,
 }: {
- label: string;
- value: string;
- sublabel: string;
- color:"blue"|"green"|"purple"|"orange";
+  label: string;
+  value: string;
+  sublabel: string;
+  color: "blue" | "green" | "purple" | "orange";
+  highlighted?: boolean;
 }) {
- const colors = {
- blue:"text-blue-700 dark:text-blue-400",
- green:"text-green-700 dark:text-green-400",
- purple:"text-purple-700 dark:text-purple-400",
- orange:"text-orange-700 dark:text-orange-400",
- };
+  const colors = {
+    blue: "text-blue-700 dark:text-blue-400",
+    green: "text-green-700 dark:text-green-400",
+    purple: "text-purple-700 dark:text-purple-400",
+    orange: "text-orange-700 dark:text-orange-400",
+  };
 
- return (
- <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
- <p className="text-sm text-[var(--muted)] mb-1">{label}</p>
- <p className={`text-3xl font-bold ${colors[color]}`}>{value}</p>
- <p className="text-sm text-[var(--muted)] mt-1">{sublabel}</p>
- </div>
- );
+  return (
+    <div className={`rounded-xl border p-5 transition-all ${
+      highlighted
+        ? "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border-emerald-300 dark:border-emerald-700 shadow-md ring-2 ring-emerald-200 dark:ring-emerald-800"
+        : "bg-white dark:bg-[var(--card)] border-[var(--border)]"
+    }`}>
+      <div className="flex items-center justify-between">
+        <p className="text-sm text-[var(--muted)] mb-1">{label}</p>
+        {highlighted && (
+          <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+          </svg>
+        )}
+      </div>
+      <p className={`text-3xl font-bold ${highlighted ? "text-emerald-600 dark:text-emerald-400" : colors[color]}`}>{value}</p>
+      <p className={`text-sm mt-1 ${highlighted ? "text-emerald-700 dark:text-emerald-300 font-medium" : "text-[var(--muted)]"}`}>{sublabel}</p>
+    </div>
+  );
 }
 
 function QuickActionCard({
