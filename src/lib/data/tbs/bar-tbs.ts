@@ -81,7 +81,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 3.5,
         tolerance: 0.1,
       },
-      explanation: "$350,000 / $100,000 = 3.5",
+      explanation: "Per financial analysis principles, current ratio = Current Assets / Current Liabilities = $350,000 / $100,000 = 3.5.",
     },
     {
       id: "req-quick-ratio",
@@ -94,7 +94,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 1.7,
         tolerance: 0.1,
       },
-      explanation: "($350,000 - $180,000) / $100,000 = 1.7",
+      explanation: "Per financial analysis principles, quick ratio = (Current Assets - Inventory) / Current Liabilities = ($350,000 - $180,000) / $100,000 = 1.7.",
     },
     {
       id: "req-debt-to-equity",
@@ -107,7 +107,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 0.6,
         tolerance: 0.05,
       },
-      explanation: "$300,000 / $500,000 = 0.6",
+      explanation: "Per financial analysis principles, debt-to-equity = Total Liabilities / Stockholders' Equity = $300,000 / $500,000 = 0.6.",
     },
     {
       id: "req-gross-margin",
@@ -120,7 +120,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 40,
         tolerance: 0.5,
       },
-      explanation: "$480,000 / $1,200,000 = 40%",
+      explanation: "Per financial analysis principles, gross profit margin = Gross Profit / Net Sales = $480,000 / $1,200,000 = 40%.",
     },
     {
       id: "req-net-margin",
@@ -133,7 +133,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 11.25,
         tolerance: 0.5,
       },
-      explanation: "$135,000 / $1,200,000 = 11.25%",
+      explanation: "Per financial analysis principles, net profit margin = Net Income / Net Sales = $135,000 / $1,200,000 = 11.25%.",
     },
     {
       id: "req-roe",
@@ -146,7 +146,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 30.68,
         tolerance: 1,
       },
-      explanation: "$135,000 / (($500,000 + $380,000) / 2) = $135,000 / $440,000 = 30.68%",
+      explanation: "Per financial analysis principles, ROE = Net Income / Average Equity = $135,000 / (($500,000 + $380,000) / 2) = 30.68%.",
     },
     {
       id: "req-times-interest",
@@ -159,7 +159,7 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 10,
         tolerance: 0.1,
       },
-      explanation: "$200,000 / $20,000 = 10 times",
+      explanation: "Per financial analysis principles, times interest earned = Operating Income / Interest Expense = $200,000 / $20,000 = 10 times.",
     },
   ],
 };
@@ -227,7 +227,7 @@ export const barJobOrderCostingTBS: TBSQuestion = {
         value: 15,
         tolerance: 0,
       },
-      explanation: "$600,000 / 40,000 DL hours = $15 per DL hour",
+      explanation: "Per cost accounting principles, predetermined overhead rate = Budgeted Overhead / Budgeted Activity = $600,000 / 40,000 DL hours = $15 per DL hour.",
     },
     {
       id: "req-direct-labor-cost",
@@ -240,7 +240,7 @@ export const barJobOrderCostingTBS: TBSQuestion = {
         value: 20000,
         tolerance: 0,
       },
-      explanation: "800 hours × $25 = $20,000",
+      explanation: "Per cost accounting principles, direct labor cost = Hours × Rate = 800 hours × $25 = $20,000.",
     },
     {
       id: "req-applied-overhead",
@@ -253,7 +253,7 @@ export const barJobOrderCostingTBS: TBSQuestion = {
         value: 12000,
         tolerance: 0,
       },
-      explanation: "800 DL hours × $15 = $12,000",
+      explanation: "Per cost accounting principles, applied overhead = Activity × Rate = 800 DL hours × $15 = $12,000.",
     },
     {
       id: "req-total-manufacturing-cost",
@@ -266,7 +266,7 @@ export const barJobOrderCostingTBS: TBSQuestion = {
         value: 77000,
         tolerance: 0,
       },
-      explanation: "$45,000 DM + $20,000 DL + $12,000 OH = $77,000",
+      explanation: "Per cost accounting principles, total manufacturing cost = DM + DL + OH = $45,000 + $20,000 + $12,000 = $77,000.",
     },
     {
       id: "req-cost-per-unit",
@@ -279,7 +279,7 @@ export const barJobOrderCostingTBS: TBSQuestion = {
         value: 154,
         tolerance: 0.5,
       },
-      explanation: "$77,000 / 500 units = $154 per unit",
+      explanation: "Per cost accounting principles, unit cost = Total Cost / Units = $77,000 / 500 = $154 per unit.",
     },
     {
       id: "req-selling-price",
@@ -292,7 +292,7 @@ export const barJobOrderCostingTBS: TBSQuestion = {
         value: 192.5,
         tolerance: 0.5,
       },
-      explanation: "$154 × 1.25 = $192.50",
+      explanation: "Per cost-plus pricing, selling price = Cost × (1 + Markup %) = $154 × 1.25 = $192.50.",
     },
   ],
 };
@@ -362,7 +362,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 4200,
         tolerance: 100,
       },
-      explanation: "(AQ × AP) - (AQ × SP) = 21,000 × ($4.80 - $5.00) = $4,200 Favorable",
+      explanation: "Per variance analysis, DM price variance = (AQ × AP) - (AQ × SP) = 21,000 × ($4.80 - $5.00) = $4,200 Favorable.",
     },
     {
       id: "req-dm-quantity-variance",
@@ -375,7 +375,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 5000,
         tolerance: 100,
       },
-      explanation: "(AQ - SQ) × SP = (21,000 - 20,000) × $5 = $5,000 Unfavorable",
+      explanation: "Per variance analysis, DM quantity variance = (AQ - SQ) × SP = (21,000 - 20,000) × $5 = $5,000 Unfavorable.",
     },
     {
       id: "req-dl-rate-variance",
@@ -388,7 +388,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 5250,
         tolerance: 100,
       },
-      explanation: "(AR - SR) × AH = ($18.50 - $18.00) × 10,500 = $5,250 Unfavorable",
+      explanation: "Per variance analysis, DL rate variance = (AR - SR) × AH = ($18.50 - $18.00) × 10,500 = $5,250 Unfavorable.",
     },
     {
       id: "req-dl-efficiency-variance",
@@ -401,7 +401,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 9000,
         tolerance: 100,
       },
-      explanation: "(AH - SH) × SR = (10,500 - 10,000) × $18 = $9,000 Unfavorable",
+      explanation: "Per variance analysis, DL efficiency variance = (AH - SH) × SR = (10,500 - 10,000) × $18 = $9,000 Unfavorable.",
     },
     {
       id: "req-voh-spending-variance",
@@ -414,7 +414,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 1000,
         tolerance: 100,
       },
-      explanation: "Actual VOH - (AH × SR) = $64,000 - (10,500 × $6) = $64,000 - $63,000 = $1,000 Unfavorable",
+      explanation: "Per variance analysis, VOH spending variance = Actual VOH - (AH × SR) = $64,000 - (10,500 × $6) = $1,000 Unfavorable.",
     },
     {
       id: "req-voh-efficiency-variance",
@@ -427,7 +427,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 3000,
         tolerance: 100,
       },
-      explanation: "(AH - SH) × SR = (10,500 - 10,000) × $6 = $3,000 Unfavorable",
+      explanation: "Per variance analysis, VOH efficiency variance = (AH - SH) × SR = (10,500 - 10,000) × $6 = $3,000 Unfavorable.",
     },
     {
       id: "req-foh-budget-variance",
@@ -440,7 +440,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 5000,
         tolerance: 100,
       },
-      explanation: "Actual FOH - Budgeted FOH = $85,000 - $80,000 = $5,000 Unfavorable",
+      explanation: "Per variance analysis, FOH budget variance = Actual FOH - Budgeted FOH = $85,000 - $80,000 = $5,000 Unfavorable.",
     },
     {
       id: "req-foh-volume-variance",
@@ -453,7 +453,7 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 0,
         tolerance: 100,
       },
-      explanation: "Budgeted FOH - Applied FOH = $80,000 - (10,000 × $8) = $80,000 - $80,000 = $0",
+      explanation: "Per variance analysis, FOH volume variance = Budgeted FOH - Applied FOH = $80,000 - (10,000 × $8) = $0.",
     },
   ],
 };
@@ -522,7 +522,7 @@ export const barFlexibleBudgetTBS: TBSQuestion = {
         value: 15,
         tolerance: 0,
       },
-      explanation: "$150,000 / 10,000 = $15 per unit",
+      explanation: "Per flexible budgeting, variable cost per unit = Total Variable Cost / Units = $150,000 / 10,000 = $15 per unit.",
     },
     {
       id: "req-flexible-dm",
@@ -535,7 +535,7 @@ export const barFlexibleBudgetTBS: TBSQuestion = {
         value: 165000,
         tolerance: 0,
       },
-      explanation: "11,000 × $15 = $165,000",
+      explanation: "Per flexible budgeting, flexed DM = Actual Units × Standard Cost = 11,000 × $15 = $165,000.",
     },
     {
       id: "req-flexible-total-var",
@@ -548,7 +548,7 @@ export const barFlexibleBudgetTBS: TBSQuestion = {
         value: 440000,
         tolerance: 0,
       },
-      explanation: "Variable: ($15 + $20 + $5) × 11,000 = $440,000",
+      explanation: "Per flexible budgeting, total variable = (DM + DL + VOH per unit) × Actual Units = ($15 + $20 + $5) × 11,000 = $440,000.",
     },
     {
       id: "req-flexible-total",
@@ -561,7 +561,7 @@ export const barFlexibleBudgetTBS: TBSQuestion = {
         value: 540000,
         tolerance: 0,
       },
-      explanation: "$440,000 variable + $100,000 fixed = $540,000",
+      explanation: "Per flexible budgeting, total flexed budget = Variable + Fixed = $440,000 + $100,000 = $540,000.",
     },
     {
       id: "req-flexible-variance",
@@ -574,7 +574,7 @@ export const barFlexibleBudgetTBS: TBSQuestion = {
         value: 18000,
         tolerance: 0,
       },
-      explanation: "$558,000 actual - $540,000 flexible = $18,000 Unfavorable",
+      explanation: "Per variance analysis, flexible budget variance = Actual - Flexed = $558,000 - $540,000 = $18,000 Unfavorable.",
     },
     {
       id: "req-volume-variance",
@@ -587,7 +587,7 @@ export const barFlexibleBudgetTBS: TBSQuestion = {
         value: 40000,
         tolerance: 0,
       },
-      explanation: "$540,000 flexible - $500,000 static = $40,000 Unfavorable (costs increased)",
+      explanation: "Per variance analysis, volume variance = Flexed - Static = $540,000 - $500,000 = $40,000 Unfavorable.",
     },
   ],
 };
@@ -658,7 +658,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 90000,
         tolerance: 0,
       },
-      explanation: "($500,000 - $50,000) / 5 = $90,000",
+      explanation: "Per capital budgeting, straight-line depreciation = (Cost - Salvage) / Life = ($500,000 - $50,000) / 5 = $90,000.",
     },
     {
       id: "req-annual-tax-savings",
@@ -671,7 +671,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 22500,
         tolerance: 0,
       },
-      explanation: "$90,000 × 25% = $22,500",
+      explanation: "Per capital budgeting, depreciation tax shield = Depreciation × Tax Rate = $90,000 × 25% = $22,500.",
     },
     {
       id: "req-after-tax-cash-flow",
@@ -684,7 +684,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 135000,
         tolerance: 1000,
       },
-      explanation: "$150,000 × (1 - 25%) + $22,500 = $112,500 + $22,500 = $135,000",
+      explanation: "Per capital budgeting, after-tax OCF = Cash Flow × (1 - Tax Rate) + Tax Shield = $150,000 × (1 - 25%) + $22,500 = $135,000.",
     },
     {
       id: "req-pv-cash-flows",
@@ -697,7 +697,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 486648,
         tolerance: 1000,
       },
-      explanation: "$135,000 × 3.6048 = $486,648",
+      explanation: "Per capital budgeting, PV of annuity = Annual CF × Annuity Factor = $135,000 × 3.6048 = $486,648.",
     },
     {
       id: "req-pv-salvage",
@@ -710,7 +710,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 28370,
         tolerance: 500,
       },
-      explanation: "$50,000 × 0.5674 = $28,370",
+      explanation: "Per capital budgeting, PV of salvage = Future Value × PV Factor = $50,000 × 0.5674 = $28,370.",
     },
     {
       id: "req-npv",
@@ -723,7 +723,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 15018,
         tolerance: 1000,
       },
-      explanation: "$486,648 + $28,370 - $500,000 = $15,018",
+      explanation: "Per capital budgeting, NPV = PV of Inflows - Initial Investment = $486,648 + $28,370 - $500,000 = $15,018.",
     },
     {
       id: "req-payback",
@@ -736,7 +736,7 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 3.7,
         tolerance: 0.2,
       },
-      explanation: "$500,000 / $135,000 = 3.7 years",
+      explanation: "Per capital budgeting, simple payback = Initial Investment / Annual CF = $500,000 / $135,000 = 3.7 years.",
     },
   ],
 };
@@ -801,7 +801,7 @@ export const barProcessCostingTBS: TBSQuestion = {
         value: 50000,
         tolerance: 0,
       },
-      explanation: "40,000 completed + 10,000 × 100% = 50,000 EU",
+      explanation: "Per process costing (weighted average), EU materials = Completed + (Ending WIP × % Complete) = 40,000 + 10,000 × 100% = 50,000.",
     },
     {
       id: "req-eu-conversion",
@@ -814,7 +814,7 @@ export const barProcessCostingTBS: TBSQuestion = {
         value: 46000,
         tolerance: 0,
       },
-      explanation: "40,000 completed + 10,000 × 60% = 46,000 EU",
+      explanation: "Per process costing (weighted average), EU conversion = Completed + (Ending WIP × % Complete) = 40,000 + 10,000 × 60% = 46,000.",
     },
     {
       id: "req-cost-per-eu-materials",
@@ -827,7 +827,7 @@ export const barProcessCostingTBS: TBSQuestion = {
         value: 3,
         tolerance: 0.01,
       },
-      explanation: "($24,000 + $126,000) / 50,000 = $3.00",
+      explanation: "Per process costing, cost per EU materials = Total Cost / EU = ($24,000 + $126,000) / 50,000 = $3.00.",
     },
     {
       id: "req-cost-per-eu-conversion",
@@ -840,7 +840,7 @@ export const barProcessCostingTBS: TBSQuestion = {
         value: 3.16,
         tolerance: 0.02,
       },
-      explanation: "($9,600 + $135,600) / 46,000 = $3.156",
+      explanation: "Per process costing, cost per EU conversion = Total Cost / EU = ($9,600 + $135,600) / 46,000 = $3.156.",
     },
     {
       id: "req-transferred-cost",
@@ -853,7 +853,7 @@ export const barProcessCostingTBS: TBSQuestion = {
         value: 246400,
         tolerance: 500,
       },
-      explanation: "40,000 × ($3.00 + $3.156) = 40,000 × $6.156 = $246,240",
+      explanation: "Per process costing, transferred out cost = Units × (Cost per EU materials + conversion) = 40,000 × $6.156 = $246,240.",
     },
     {
       id: "req-ending-wip",
@@ -866,7 +866,7 @@ export const barProcessCostingTBS: TBSQuestion = {
         value: 48960,
         tolerance: 500,
       },
-      explanation: "(10,000 × $3.00) + (6,000 × $3.156) = $30,000 + $18,936 = $48,936",
+      explanation: "Per process costing, ending WIP = (EU materials × cost) + (EU conversion × cost) = (10,000 × $3.00) + (6,000 × $3.156) = $48,936.",
     },
   ],
 };
@@ -918,7 +918,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 20,
         tolerance: 0,
       },
-      explanation: "$50 - $30 = $20",
+      explanation: "Per CVP analysis, contribution margin per unit = Selling Price - Variable Cost = $50 - $30 = $20.",
     },
     {
       id: "req-cm-ratio",
@@ -931,7 +931,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 40,
         tolerance: 0,
       },
-      explanation: "$20 / $50 = 40%",
+      explanation: "Per CVP analysis, CM ratio = CM per Unit / Price = $20 / $50 = 40%.",
     },
     {
       id: "req-breakeven-units",
@@ -944,7 +944,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "$200,000 / $20 = 10,000 units",
+      explanation: "Per CVP analysis, break-even units = Fixed Costs / CM per Unit = $200,000 / $20 = 10,000 units.",
     },
     {
       id: "req-breakeven-dollars",
@@ -957,7 +957,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 500000,
         tolerance: 0,
       },
-      explanation: "$200,000 / 40% = $500,000",
+      explanation: "Per CVP analysis, break-even sales $ = Fixed Costs / CM Ratio = $200,000 / 40% = $500,000.",
     },
     {
       id: "req-target-units",
@@ -970,7 +970,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 15000,
         tolerance: 0,
       },
-      explanation: "($200,000 + $100,000) / $20 = 15,000 units",
+      explanation: "Per CVP analysis, target profit units = (Fixed Costs + Target Profit) / CM = ($200,000 + $100,000) / $20 = 15,000 units.",
     },
     {
       id: "req-margin-of-safety",
@@ -983,7 +983,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 5000,
         tolerance: 0,
       },
-      explanation: "15,000 - 10,000 = 5,000 units",
+      explanation: "Per CVP analysis, margin of safety = Actual Units - Break-even Units = 15,000 - 10,000 = 5,000 units.",
     },
     {
       id: "req-operating-leverage",
@@ -996,7 +996,7 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 3,
         tolerance: 0.1,
       },
-      explanation: "CM / Operating income = (15,000 × $20) / $100,000 = 3.0",
+      explanation: "Per CVP analysis, DOL = Total CM / Operating Income = (15,000 × $20) / $100,000 = 3.0.",
     },
   ],
 };
@@ -1064,7 +1064,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 800,
         tolerance: 0,
       },
-      explanation: "$120,000 / 150 setups = $800",
+      explanation: "Per ABC principles, activity rate = Cost Pool / Total Activity = $120,000 / 150 setups = $800.",
     },
     {
       id: "req-product-a-setup",
@@ -1077,7 +1077,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 80000,
         tolerance: 0,
       },
-      explanation: "100 setups × $800 = $80,000",
+      explanation: "Per ABC principles, allocated cost = Activity × Rate = 100 setups × $800 = $80,000.",
     },
     {
       id: "req-product-a-total-oh",
@@ -1090,7 +1090,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 176000,
         tolerance: 1000,
       },
-      explanation: "Setup: $80K + Inspection ($80K/400×200=$40K) + Material ($60K/500×300=$36K) + Maintenance ($100K/10K×2K=$20K) = $176,000",
+      explanation: "Per ABC principles, total overhead = Sum of all activity allocations = $80K + $40K + $36K + $20K = $176,000.",
     },
     {
       id: "req-product-a-per-unit",
@@ -1103,7 +1103,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 35.2,
         tolerance: 0.5,
       },
-      explanation: "$176,000 / 5,000 = $35.20 per unit",
+      explanation: "Per ABC principles, OH per unit = Total Allocated OH / Units = $176,000 / 5,000 = $35.20.",
     },
     {
       id: "req-product-b-total-oh",
@@ -1116,7 +1116,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 184000,
         tolerance: 1000,
       },
-      explanation: "Total overhead $360,000 - Product A $176,000 = $184,000",
+      explanation: "Per ABC principles, Product B OH = Total OH - Product A OH = $360,000 - $176,000 = $184,000.",
     },
     {
       id: "req-product-b-per-unit",
@@ -1129,7 +1129,7 @@ export const barActivityBasedCostingTBS: TBSQuestion = {
         value: 18.4,
         tolerance: 1,
       },
-      explanation: "$184,000 / 10,000 = $18.40",
+      explanation: "Per ABC principles, OH per unit = Total Allocated OH / Units = $184,000 / 10,000 = $18.40.",
     },
   ],
 };
@@ -1212,7 +1212,7 @@ export const barCashBudgetTBS: TBSQuestion = {
         value: 178000,
         tolerance: 0,
       },
-      explanation: "($180,000 × 60%) + ($200,000 × 35%) = $108,000 + $70,000 = $178,000",
+      explanation: "Per cash budgeting, collections = (Current month × Current %) + (Prior month × Prior %) = ($180,000 × 60%) + ($200,000 × 35%) = $178,000.",
     },
     {
       id: "req-jan-purchases",
@@ -1225,7 +1225,7 @@ export const barCashBudgetTBS: TBSQuestion = {
         value: 132000,
         tolerance: 0,
       },
-      explanation: "$220,000 × 60% = $132,000",
+      explanation: "Per cash budgeting, purchases = Next Month Sales × Purchase % = $220,000 × 60% = $132,000.",
     },
     {
       id: "req-jan-ending-cash",
@@ -1238,7 +1238,7 @@ export const barCashBudgetTBS: TBSQuestion = {
         value: 21000,
         tolerance: 0,
       },
-      explanation: "$25,000 + $178,000 - $132,000 - $50,000 = $21,000",
+      explanation: "Per cash budgeting, ending cash = Beginning + Collections - Disbursements = $25,000 + $178,000 - $132,000 - $50,000 = $21,000.",
     },
     {
       id: "req-feb-collections",
@@ -1251,7 +1251,7 @@ export const barCashBudgetTBS: TBSQuestion = {
         value: 195000,
         tolerance: 0,
       },
-      explanation: "($220,000 × 60%) + ($180,000 × 35%) = $132,000 + $63,000 = $195,000",
+      explanation: "Per cash budgeting, Feb collections = ($220,000 × 60%) + ($180,000 × 35%) = $195,000.",
     },
     {
       id: "req-feb-disbursements",
@@ -1264,7 +1264,7 @@ export const barCashBudgetTBS: TBSQuestion = {
         value: 224000,
         tolerance: 0,
       },
-      explanation: "$144,000 (purchases) + $50,000 (fixed) + $30,000 (equipment) = $224,000",
+      explanation: "Per cash budgeting, total disbursements = Purchases + Fixed + Equipment = $144,000 + $50,000 + $30,000 = $224,000.",
     },
     {
       id: "req-feb-borrowing",
@@ -1277,7 +1277,7 @@ export const barCashBudgetTBS: TBSQuestion = {
         value: 28000,
         tolerance: 0,
       },
-      explanation: "Beginning $21,000 + $195,000 - $224,000 = -$8,000; Need $20,000 + $8,000 = $28,000",
+      explanation: "Per cash budgeting, borrowing needed = Min balance - Ending cash = $20,000 - (-$8,000) = $28,000.",
     },
   ],
 };
@@ -1345,7 +1345,7 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 30,
         tolerance: 0,
       },
-      explanation: "Variable cost = $30 (excess capacity exists, no lost contribution margin)",
+      explanation: "Per transfer pricing, minimum TP = Variable Cost + Lost CM = $30 + $0 (excess capacity) = $30.",
     },
     {
       id: "req-maximum-tp",
@@ -1358,7 +1358,7 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 55,
         tolerance: 0,
       },
-      explanation: "External purchase price = $55",
+      explanation: "Per transfer pricing, maximum TP = External Purchase Price = $55.",
     },
     {
       id: "req-negotiated-range",
@@ -1371,7 +1371,7 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 25,
         tolerance: 0,
       },
-      explanation: "$55 - $30 = $25",
+      explanation: "Per transfer pricing, negotiation range = Maximum TP - Minimum TP = $55 - $30 = $25.",
     },
     {
       id: "req-div-b-profit-at-40",
@@ -1384,7 +1384,7 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 40,
         tolerance: 0,
       },
-      explanation: "$100 - $40 - $20 = $40",
+      explanation: "Per transfer pricing, Div B profit = Selling Price - TP - Additional Cost = $100 - $40 - $20 = $40.",
     },
     {
       id: "req-company-benefit",
@@ -1397,7 +1397,7 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 25,
         tolerance: 0,
       },
-      explanation: "External $55 - Variable cost $30 = $25 saved per unit",
+      explanation: "Per transfer pricing, company benefit = External Price - Variable Cost = $55 - $30 = $25 saved per unit.",
     },
     {
       id: "req-total-company-benefit",
@@ -1410,7 +1410,7 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 375000,
         tolerance: 0,
       },
-      explanation: "15,000 units × $25 = $375,000",
+      explanation: "Per transfer pricing, total benefit = Units × Savings per Unit = 15,000 × $25 = $375,000.",
     },
   ],
 };
@@ -1474,7 +1474,7 @@ export const barROIAnalysisTBS: TBSQuestion = {
         value: 18,
         tolerance: 0.5,
       },
-      explanation: "$180,000 / $1,000,000 = 18%",
+      explanation: "Per performance evaluation, ROI = Operating Income / Operating Assets = $180,000 / $1,000,000 = 18%.",
     },
     {
       id: "req-roi-y",
@@ -1487,7 +1487,7 @@ export const barROIAnalysisTBS: TBSQuestion = {
         value: 12,
         tolerance: 0.5,
       },
-      explanation: "$240,000 / $2,000,000 = 12%",
+      explanation: "Per performance evaluation, ROI = Operating Income / Operating Assets = $240,000 / $2,000,000 = 12%.",
     },
     {
       id: "req-ri-x",
@@ -1500,7 +1500,7 @@ export const barROIAnalysisTBS: TBSQuestion = {
         value: 80000,
         tolerance: 0,
       },
-      explanation: "$180,000 - ($1,000,000 × 10%) = $80,000",
+      explanation: "Per performance evaluation, RI = Operating Income - (Assets × Required Rate) = $180,000 - ($1,000,000 × 10%) = $80,000.",
     },
     {
       id: "req-ri-y",
@@ -1513,7 +1513,7 @@ export const barROIAnalysisTBS: TBSQuestion = {
         value: 40000,
         tolerance: 0,
       },
-      explanation: "$240,000 - ($2,000,000 × 10%) = $40,000",
+      explanation: "Per performance evaluation, RI = Operating Income - (Assets × Required Rate) = $240,000 - ($2,000,000 × 10%) = $40,000.",
     },
     {
       id: "req-margin-x",
@@ -1526,7 +1526,7 @@ export const barROIAnalysisTBS: TBSQuestion = {
         value: 12,
         tolerance: 0.5,
       },
-      explanation: "$180,000 / $1,500,000 = 12%",
+      explanation: "Per DuPont analysis, Profit Margin = Operating Income / Sales = $180,000 / $1,500,000 = 12%.",
     },
     {
       id: "req-turnover-x",
@@ -1539,7 +1539,7 @@ export const barROIAnalysisTBS: TBSQuestion = {
         value: 1.5,
         tolerance: 0.05,
       },
-      explanation: "$1,500,000 / $1,000,000 = 1.5 times",
+      explanation: "Per DuPont analysis, Asset Turnover = Sales / Operating Assets = $1,500,000 / $1,000,000 = 1.5 times.",
     },
   ],
 };
@@ -1592,7 +1592,7 @@ export const barStandardCostingTBS: TBSQuestion = {
         value: 24,
         tolerance: 0,
       },
-      explanation: "3 lbs × $8 = $24",
+      explanation: "Per standard costing, DM standard = Qty × Price = 3 lbs × $8 = $24.",
     },
     {
       id: "req-dl-standard",
@@ -1605,7 +1605,7 @@ export const barStandardCostingTBS: TBSQuestion = {
         value: 33,
         tolerance: 0,
       },
-      explanation: "1.5 hrs × $22 = $33",
+      explanation: "Per standard costing, DL standard = Hours × Rate = 1.5 hrs × $22 = $33.",
     },
     {
       id: "req-voh-standard",
@@ -1618,7 +1618,7 @@ export const barStandardCostingTBS: TBSQuestion = {
         value: 9,
         tolerance: 0,
       },
-      explanation: "1.5 hrs × $6 = $9",
+      explanation: "Per standard costing, VOH standard = Hours × Rate = 1.5 hrs × $6 = $9.",
     },
     {
       id: "req-foh-standard",
@@ -1631,7 +1631,7 @@ export const barStandardCostingTBS: TBSQuestion = {
         value: 15,
         tolerance: 0,
       },
-      explanation: "1.5 hrs × $10 = $15",
+      explanation: "Per standard costing, FOH standard = Hours × Rate = 1.5 hrs × $10 = $15.",
     },
     {
       id: "req-total-standard",
@@ -1644,7 +1644,7 @@ export const barStandardCostingTBS: TBSQuestion = {
         value: 81,
         tolerance: 0,
       },
-      explanation: "$24 + $33 + $9 + $15 = $81",
+      explanation: "Per standard costing, total standard = DM + DL + VOH + FOH = $24 + $33 + $9 + $15 = $81.",
     },
   ],
 };
@@ -1695,7 +1695,7 @@ export const barInventoryAnalysisTBS: TBSQuestion = {
         value: 450000,
         tolerance: 0,
       },
-      explanation: "($400,000 + $500,000) / 2 = $450,000",
+      explanation: "Per financial analysis, average inventory = (Beginning + Ending) / 2 = ($400,000 + $500,000) / 2 = $450,000.",
     },
     {
       id: "req-turnover",
@@ -1708,7 +1708,7 @@ export const barInventoryAnalysisTBS: TBSQuestion = {
         value: 8,
         tolerance: 0.1,
       },
-      explanation: "$3,600,000 / $450,000 = 8 times",
+      explanation: "Per financial analysis, inventory turnover = COGS / Average Inventory = $3,600,000 / $450,000 = 8 times.",
     },
     {
       id: "req-days-in-inventory",
@@ -1721,7 +1721,7 @@ export const barInventoryAnalysisTBS: TBSQuestion = {
         value: 45.63,
         tolerance: 1,
       },
-      explanation: "365 / 8 = 45.63 days",
+      explanation: "Per financial analysis, days in inventory = 365 / Turnover = 365 / 8 = 45.63 days.",
     },
     {
       id: "req-vs-industry",
@@ -1733,7 +1733,7 @@ export const barInventoryAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-below-avg",
       },
-      explanation: "Company 8 times < Industry 9 times = below average",
+      explanation: "Per benchmarking analysis, Company 8 times < Industry 9 times = below average efficiency.",
       dropdownOptions: [
         { id: "opt-above-avg", order: 1, text: "Above average (better)", isCorrect: false },
         { id: "opt-below-avg", order: 2, text: "Below average (worse)", isCorrect: true },
@@ -1751,7 +1751,7 @@ export const barInventoryAnalysisTBS: TBSQuestion = {
         value: 50000,
         tolerance: 1000,
       },
-      explanation: "To get 9 turns: $3,600,000 / 9 = $400,000 needed; $450,000 - $400,000 = $50,000",
+      explanation: "Per inventory management, to achieve 9 turns: $3,600,000 / 9 = $400,000 target; $450,000 - $400,000 = $50,000 reduction needed.",
     },
   ],
 };
@@ -1802,7 +1802,7 @@ export const barReceivablesAnalysisTBS: TBSQuestion = {
         value: 400000,
         tolerance: 0,
       },
-      explanation: "($350,000 + $450,000) / 2 = $400,000",
+      explanation: "Per financial analysis, average A/R = (Beginning + Ending) / 2 = ($350,000 + $450,000) / 2 = $400,000.",
     },
     {
       id: "req-ar-turnover",
@@ -1815,7 +1815,7 @@ export const barReceivablesAnalysisTBS: TBSQuestion = {
         value: 12,
         tolerance: 0.1,
       },
-      explanation: "$4,800,000 / $400,000 = 12 times",
+      explanation: "Per financial analysis, A/R turnover = Credit Sales / Average A/R = $4,800,000 / $400,000 = 12 times.",
     },
     {
       id: "req-days-sales-outstanding",
@@ -1828,7 +1828,7 @@ export const barReceivablesAnalysisTBS: TBSQuestion = {
         value: 30.42,
         tolerance: 1,
       },
-      explanation: "365 / 12 = 30.42 days",
+      explanation: "Per financial analysis, DSO = 365 / A/R Turnover = 365 / 12 = 30.42 days.",
     },
     {
       id: "req-collection-efficiency",
@@ -1840,7 +1840,7 @@ export const barReceivablesAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-within-terms",
       },
-      explanation: "30.42 days is approximately equal to 30-day terms",
+      explanation: "Per credit policy analysis, 30.42 days ≈ 30-day terms = within acceptable range.",
       dropdownOptions: [
         { id: "opt-within-terms", order: 1, text: "Yes - within terms", isCorrect: true },
         { id: "opt-exceeds-terms", order: 2, text: "No - exceeds terms", isCorrect: false },
@@ -1858,7 +1858,7 @@ export const barReceivablesAnalysisTBS: TBSQuestion = {
         value: 0.5,
         tolerance: 0.05,
       },
-      explanation: "$24,000 / $4,800,000 = 0.5%",
+      explanation: "Per credit analysis, bad debt rate = Bad Debt Expense / Credit Sales = $24,000 / $4,800,000 = 0.5%.",
     },
   ],
 };
@@ -1926,7 +1926,7 @@ export const barSegmentReportingTBS: TBSQuestion = {
         value: 60,
         tolerance: 0.5,
       },
-      explanation: "$300,000 / $500,000 = 60%",
+      explanation: "Per segment analysis, CM ratio = CM / Sales = $300,000 / $500,000 = 60%.",
     },
     {
       id: "req-cm-ratio-c",
@@ -1939,7 +1939,7 @@ export const barSegmentReportingTBS: TBSQuestion = {
         value: 30,
         tolerance: 0.5,
       },
-      explanation: "$60,000 / $200,000 = 30%",
+      explanation: "Per segment analysis, CM ratio = CM / Sales = $60,000 / $200,000 = 30%.",
     },
     {
       id: "req-eliminate-c-impact",
@@ -1952,7 +1952,7 @@ export const barSegmentReportingTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "Product C has negative segment margin of -$10,000. Eliminating it saves the $10,000 loss, so company profit increases by $10,000.",
+      explanation: "Per segment analysis, Product C has -$10,000 segment margin; eliminating increases profit by $10,000.",
     },
     {
       id: "req-should-eliminate-c",
@@ -1964,7 +1964,7 @@ export const barSegmentReportingTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-negative-segment",
       },
-      explanation: "Negative segment margin means eliminating improves overall profits",
+      explanation: "Per segment analysis, negative segment margin means eliminating improves overall profits.",
       dropdownOptions: [
         { id: "opt-yes-negative-segment", order: 1, text: "Yes - negative segment margin", isCorrect: true },
         { id: "opt-no-positive-cm", order: 2, text: "No - positive contribution margin", isCorrect: false },
@@ -1982,7 +1982,7 @@ export const barSegmentReportingTBS: TBSQuestion = {
         value: 233333,
         tolerance: 1000,
       },
-      explanation: "$70,000 / 30% = $233,333",
+      explanation: "Per segment analysis, break-even sales = Fixed Costs / CM Ratio = $70,000 / 30% = $233,333.",
     },
     {
       id: "req-profit-after-elimination",
@@ -1995,7 +1995,7 @@ export const barSegmentReportingTBS: TBSQuestion = {
         value: 70000,
         tolerance: 0,
       },
-      explanation: "$60,000 + $10,000 (segment margin was -$10K) = $70,000",
+      explanation: "Per segment analysis, profit after elimination = Current profit + Segment margin loss avoided = $60,000 + $10,000 = $70,000.",
     },
   ],
 };
@@ -2062,7 +2062,7 @@ export const barMakeOrBuyTBS: TBSQuestion = {
         value: 31,
         tolerance: 0,
       },
-      explanation: "$12 + $8 + $5 + ($10 × 60%) = $31 (variable + avoidable fixed)",
+      explanation: "Per relevant cost analysis, relevant cost = Variable + Avoidable Fixed = $12 + $8 + $5 + ($10 × 60%) = $31.",
     },
     {
       id: "req-total-relevant-make",
@@ -2075,7 +2075,7 @@ export const barMakeOrBuyTBS: TBSQuestion = {
         value: 620000,
         tolerance: 0,
       },
-      explanation: "20,000 × $31 = $620,000",
+      explanation: "Per relevant cost analysis, total relevant make cost = Units × Relevant Cost = 20,000 × $31 = $620,000.",
     },
     {
       id: "req-total-buy-cost",
@@ -2088,7 +2088,7 @@ export const barMakeOrBuyTBS: TBSQuestion = {
         value: 510000,
         tolerance: 0,
       },
-      explanation: "(20,000 × $28) - $50,000 rental = $560,000 - $50,000 = $510,000",
+      explanation: "Per relevant cost analysis, net buy cost = Purchase Cost - Opportunity Benefit = (20,000 × $28) - $50,000 = $510,000.",
     },
     {
       id: "req-savings-per-unit",
@@ -2101,7 +2101,7 @@ export const barMakeOrBuyTBS: TBSQuestion = {
         value: 5.5,
         tolerance: 0.1,
       },
-      explanation: "($620,000 - $510,000) / 20,000 = $5.50",
+      explanation: "Per make or buy analysis, savings per unit = (Make Cost - Buy Cost) / Units = ($620,000 - $510,000) / 20,000 = $5.50.",
     },
     {
       id: "req-decision",
@@ -2113,7 +2113,7 @@ export const barMakeOrBuyTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-buy",
       },
-      explanation: "Buy cost $510,000 < Make cost $620,000",
+      explanation: "Per make or buy analysis, Buy cost $510,000 < Make cost $620,000 = Buy is better.",
       dropdownOptions: [
         { id: "opt-yes-buy", order: 1, text: "Yes - buying saves money", isCorrect: true },
         { id: "opt-no-make", order: 2, text: "No - making is cheaper", isCorrect: false },
@@ -2131,7 +2131,7 @@ export const barMakeOrBuyTBS: TBSQuestion = {
         value: 110000,
         tolerance: 0,
       },
-      explanation: "$620,000 - $510,000 = $110,000",
+      explanation: "Per make or buy analysis, total savings = Make Cost - Buy Cost = $620,000 - $510,000 = $110,000.",
     },
   ],
 };
@@ -2201,7 +2201,7 @@ export const barSpecialOrderTBS: TBSQuestion = {
         value: 20000,
         tolerance: 0,
       },
-      explanation: "100,000 - 80,000 = 20,000 units",
+      explanation: "Per capacity analysis, excess capacity = Maximum - Current = 100,000 - 80,000 = 20,000 units.",
     },
     {
       id: "req-special-order-variable-cost",
@@ -2214,7 +2214,7 @@ export const barSpecialOrderTBS: TBSQuestion = {
         value: 30,
         tolerance: 0,
       },
-      explanation: "$28 + $2 = $30 (no selling cost, add packaging)",
+      explanation: "Per special order analysis, relevant variable cost = Manufacturing + Packaging = $28 + $2 = $30.",
     },
     {
       id: "req-contribution-per-unit",
@@ -2227,7 +2227,7 @@ export const barSpecialOrderTBS: TBSQuestion = {
         value: 5,
         tolerance: 0,
       },
-      explanation: "$35 - $30 = $5",
+      explanation: "Per special order analysis, CM = Special Price - Variable Cost = $35 - $30 = $5.",
     },
     {
       id: "req-total-profit-impact",
@@ -2240,7 +2240,7 @@ export const barSpecialOrderTBS: TBSQuestion = {
         value: 75000,
         tolerance: 0,
       },
-      explanation: "15,000 × $5 = $75,000 additional profit",
+      explanation: "Per special order analysis, profit impact = Units × CM = 15,000 × $5 = $75,000 additional profit.",
     },
     {
       id: "req-accept-order",
@@ -2252,7 +2252,7 @@ export const barSpecialOrderTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-accept",
       },
-      explanation: "Positive contribution margin and excess capacity exists",
+      explanation: "Per special order analysis, positive CM and excess capacity = Accept order.",
       dropdownOptions: [
         { id: "opt-yes-accept", order: 1, text: "Yes - positive contribution", isCorrect: true },
         { id: "opt-no-below-cost", order: 2, text: "No - price below full cost", isCorrect: false },
@@ -2270,7 +2270,7 @@ export const barSpecialOrderTBS: TBSQuestion = {
         value: 30,
         tolerance: 0,
       },
-      explanation: "Variable cost = $30 is the minimum to avoid a loss",
+      explanation: "Per special order analysis, minimum price = Variable cost = $30 (to cover incremental costs).",
     },
   ],
 };
@@ -2335,7 +2335,7 @@ export const barProductMixTBS: TBSQuestion = {
         value: 40,
         tolerance: 0,
       },
-      explanation: "$100 - $60 = $40",
+      explanation: "Per product mix analysis, CM = Price - Variable Cost = $100 - $60 = $40.",
     },
     {
       id: "req-cm-per-hour-x",
@@ -2348,7 +2348,7 @@ export const barProductMixTBS: TBSQuestion = {
         value: 10,
         tolerance: 0,
       },
-      explanation: "$40 / 4 hours = $10 per hour",
+      explanation: "Per constraint analysis (TOC), CM per constraint = CM / Hours = $40 / 4 = $10 per machine hour.",
     },
     {
       id: "req-cm-per-hour-y",
@@ -2361,7 +2361,7 @@ export const barProductMixTBS: TBSQuestion = {
         value: 15,
         tolerance: 0,
       },
-      explanation: "$30 / 2 hours = $15 per hour",
+      explanation: "Per constraint analysis, CM per constraint = $30 / 2 hours = $15 per machine hour.",
     },
     {
       id: "req-cm-per-hour-z",
@@ -2374,7 +2374,7 @@ export const barProductMixTBS: TBSQuestion = {
         value: 6,
         tolerance: 0,
       },
-      explanation: "$30 / 5 hours = $6 per hour",
+      explanation: "Per constraint analysis, CM per constraint = $30 / 5 hours = $6 per machine hour.",
     },
     {
       id: "req-ranking",
@@ -2386,7 +2386,7 @@ export const barProductMixTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-y-x-z",
       },
-      explanation: "Y ($15/hr) > X ($10/hr) > Z ($6/hr)",
+      explanation: "Per constraint analysis, rank by CM per constraint: Y ($15/hr) > X ($10/hr) > Z ($6/hr).",
       dropdownOptions: [
         { id: "opt-y-x-z", order: 1, text: "Y, X, Z", isCorrect: true },
         { id: "opt-x-y-z", order: 2, text: "X, Y, Z", isCorrect: false },
@@ -2404,7 +2404,7 @@ export const barProductMixTBS: TBSQuestion = {
         value: 176000,
         tolerance: 1000,
       },
-      explanation: "Priority: Y (3,000 units × $30 CM = $90,000, uses 6,000 hrs), X (2,000 units × $40 CM = $80,000, uses 8,000 hrs), Z (200 units with 1,000 hrs left × $30 CM = $6,000). Total = $176,000",
+      explanation: "Per product mix optimization: Y ($90K) + X ($80K) + Z ($6K) = $176,000 maximum CM.",
     },
   ],
 };
@@ -2455,7 +2455,7 @@ export const barDuPontAnalysisTBS: TBSQuestion = {
         value: 6,
         tolerance: 0.1,
       },
-      explanation: "$300,000 / $5,000,000 = 6%",
+      explanation: "Per DuPont analysis, Profit Margin = Net Income / Sales = $300,000 / $5,000,000 = 6%.",
     },
     {
       id: "req-asset-turnover",
@@ -2468,7 +2468,7 @@ export const barDuPontAnalysisTBS: TBSQuestion = {
         value: 2,
         tolerance: 0.05,
       },
-      explanation: "$5,000,000 / $2,500,000 = 2.0 times",
+      explanation: "Per DuPont analysis, Asset Turnover = Sales / Total Assets = $5,000,000 / $2,500,000 = 2.0 times.",
     },
     {
       id: "req-equity-multiplier",
@@ -2481,7 +2481,7 @@ export const barDuPontAnalysisTBS: TBSQuestion = {
         value: 2.5,
         tolerance: 0.05,
       },
-      explanation: "$2,500,000 / $1,000,000 = 2.5",
+      explanation: "Per DuPont analysis, Equity Multiplier = Total Assets / Equity = $2,500,000 / $1,000,000 = 2.5.",
     },
     {
       id: "req-roa",
@@ -2494,7 +2494,7 @@ export const barDuPontAnalysisTBS: TBSQuestion = {
         value: 12,
         tolerance: 0.5,
       },
-      explanation: "6% × 2.0 = 12% (or $300,000 / $2,500,000)",
+      explanation: "Per DuPont analysis, ROA = Profit Margin × Asset Turnover = 6% × 2.0 = 12%.",
     },
     {
       id: "req-roe",
@@ -2507,7 +2507,7 @@ export const barDuPontAnalysisTBS: TBSQuestion = {
         value: 30,
         tolerance: 0.5,
       },
-      explanation: "6% × 2.0 × 2.5 = 30% (or $300,000 / $1,000,000)",
+      explanation: "Per DuPont analysis, ROE = Profit Margin × Asset Turnover × Equity Multiplier = 6% × 2.0 × 2.5 = 30%.",
     },
     {
       id: "req-leverage-impact",
@@ -2520,7 +2520,7 @@ export const barDuPontAnalysisTBS: TBSQuestion = {
         value: 18,
         tolerance: 0.5,
       },
-      explanation: "30% - 12% = 18%",
+      explanation: "Per DuPont analysis, leverage impact = ROE - ROA = 30% - 12% = 18%.",
     },
   ],
 };
@@ -2585,7 +2585,7 @@ export const barBalancedScorecardTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-customer",
       },
-      explanation: "Customer satisfaction is a customer perspective measure",
+      explanation: "Per Balanced Scorecard (Kaplan & Norton), customer satisfaction is a customer perspective measure.",
       dropdownOptions: [
         { id: "opt-financial", order: 1, text: "Financial", isCorrect: false },
         { id: "opt-customer", order: 2, text: "Customer", isCorrect: true },
@@ -2603,7 +2603,7 @@ export const barBalancedScorecardTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-learning-2",
       },
-      explanation: "Training is a learning & growth measure",
+      explanation: "Per Balanced Scorecard (Kaplan & Norton), training is a learning & growth measure.",
       dropdownOptions: [
         { id: "opt-financial-2", order: 1, text: "Financial", isCorrect: false },
         { id: "opt-customer-2", order: 2, text: "Customer", isCorrect: false },
@@ -2621,7 +2621,7 @@ export const barBalancedScorecardTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-financial-3",
       },
-      explanation: "ROI is a financial performance measure",
+      explanation: "Per Balanced Scorecard (Kaplan & Norton), ROI is a financial perspective measure.",
       dropdownOptions: [
         { id: "opt-financial-3", order: 1, text: "Financial", isCorrect: true },
         { id: "opt-customer-3", order: 2, text: "Customer", isCorrect: false },
@@ -2639,7 +2639,7 @@ export const barBalancedScorecardTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-internal-4",
       },
-      explanation: "Quality measures are internal process measures",
+      explanation: "Per Balanced Scorecard (Kaplan & Norton), quality measures are internal process measures.",
       dropdownOptions: [
         { id: "opt-financial-4", order: 1, text: "Financial", isCorrect: false },
         { id: "opt-customer-4", order: 2, text: "Customer", isCorrect: false },
@@ -2657,7 +2657,7 @@ export const barBalancedScorecardTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-customer-5",
       },
-      explanation: "Market position is a customer perspective measure",
+      explanation: "Per Balanced Scorecard (Kaplan & Norton), market share is a customer perspective measure.",
       dropdownOptions: [
         { id: "opt-financial-5", order: 1, text: "Financial", isCorrect: false },
         { id: "opt-customer-5", order: 2, text: "Customer", isCorrect: true },
@@ -2729,7 +2729,7 @@ export const barEOQAnalysisTBS: TBSQuestion = {
         value: 707,
         tolerance: 10,
       },
-      explanation: "√(2 × 10,000 × $200 / $8) = √500,000 = 707 units",
+      explanation: "Per EOQ model, EOQ = √(2DS/H) = √(2 × 10,000 × $200 / $8) = √500,000 = 707 units.",
     },
     {
       id: "req-orders-per-year",
@@ -2742,7 +2742,7 @@ export const barEOQAnalysisTBS: TBSQuestion = {
         value: 14.14,
         tolerance: 0.5,
       },
-      explanation: "10,000 / 707 = 14.14 orders",
+      explanation: "Per inventory management, orders per year = Annual Demand / EOQ = 10,000 / 707 = 14.14 orders.",
     },
     {
       id: "req-total-ordering-cost",
@@ -2755,7 +2755,7 @@ export const barEOQAnalysisTBS: TBSQuestion = {
         value: 2828,
         tolerance: 50,
       },
-      explanation: "14.14 × $200 = $2,828",
+      explanation: "Per inventory management, annual ordering cost = Orders × Order Cost = 14.14 × $200 = $2,828.",
     },
     {
       id: "req-total-carrying-cost",
@@ -2768,7 +2768,7 @@ export const barEOQAnalysisTBS: TBSQuestion = {
         value: 2828,
         tolerance: 50,
       },
-      explanation: "(707 / 2) × $8 = $2,828 (equals ordering cost at EOQ)",
+      explanation: "Per EOQ model, carrying cost = (EOQ/2) × H = (707/2) × $8 = $2,828 (equals ordering cost at EOQ).",
     },
     {
       id: "req-reorder-point",
@@ -2781,7 +2781,7 @@ export const barEOQAnalysisTBS: TBSQuestion = {
         value: 200,
         tolerance: 5,
       },
-      explanation: "(10,000 / 250 days) × 5 days lead time = 200 units",
+      explanation: "Per inventory management, ROP = Daily Demand × Lead Time = (10,000/250) × 5 = 200 units.",
     },
   ],
 };
@@ -3118,7 +3118,7 @@ export const barThroughputAccountingTBS: TBSQuestion = {
       label: "Throughput per unit - Product A",
       points: 1,
       correctAnswer: { type: "numeric", value: 60, tolerance: 0 },
-      explanation: "$100 - $40 = $60",
+      explanation: "Per throughput accounting, throughput = Sales price - Direct materials = $100 - $40 = $60.",
     },
     {
       id: "req-throughput-b",
@@ -3127,7 +3127,7 @@ export const barThroughputAccountingTBS: TBSQuestion = {
       label: "Throughput per unit - Product B",
       points: 1,
       correctAnswer: { type: "numeric", value: 90, tolerance: 0 },
-      explanation: "$150 - $60 = $90",
+      explanation: "Per throughput accounting, throughput = Sales price - Direct materials = $150 - $60 = $90.",
     },
     {
       id: "req-per-minute-a",
@@ -3136,7 +3136,7 @@ export const barThroughputAccountingTBS: TBSQuestion = {
       label: "Throughput per bottleneck minute - A",
       points: 1,
       correctAnswer: { type: "numeric", value: 6, tolerance: 0 },
-      explanation: "$60 / 10 minutes = $6",
+      explanation: "Per TOC, throughput per constraint minute = $60 / 10 minutes = $6.",
     },
     {
       id: "req-per-minute-b",
@@ -3145,7 +3145,7 @@ export const barThroughputAccountingTBS: TBSQuestion = {
       label: "Throughput per bottleneck minute - B",
       points: 1,
       correctAnswer: { type: "numeric", value: 4.5, tolerance: 0.1 },
-      explanation: "$90 / 20 minutes = $4.50",
+      explanation: "Per TOC, throughput per constraint minute = $90 / 20 minutes = $4.50.",
     },
     {
       id: "req-priority",
@@ -3154,7 +3154,7 @@ export const barThroughputAccountingTBS: TBSQuestion = {
       label: "Which product has priority?",
       points: 1,
       correctAnswer: { type: "dropdown", correctOptionId: "opt-a" },
-      explanation: "Product A has higher throughput per constraint minute",
+      explanation: "Per TOC, Product A has higher throughput per constraint minute ($6 vs $4.50) and should be prioritized.",
       dropdownOptions: [
         { id: "opt-a", order: 1, text: "Product A", isCorrect: true },
         { id: "opt-b", order: 2, text: "Product B", isCorrect: false },
@@ -3203,7 +3203,7 @@ export const barLearningCurveTBS: TBSQuestion = {
       label: "Cumulative average hours at 2 units",
       points: 1,
       correctAnswer: { type: "numeric", value: 80, tolerance: 0 },
-      explanation: "100 × 0.80 = 80 hours average",
+      explanation: "Per the learning curve model (80% rate), cumulative average at 2 units = 100 × 0.80 = 80 hours.",
     },
     {
       id: "req-unit-4",
@@ -3212,7 +3212,7 @@ export const barLearningCurveTBS: TBSQuestion = {
       label: "Cumulative average hours at 4 units",
       points: 1,
       correctAnswer: { type: "numeric", value: 64, tolerance: 0 },
-      explanation: "80 × 0.80 = 64 hours average",
+      explanation: "Per the learning curve model (80% rate), cumulative average at 4 units = 80 × 0.80 = 64 hours.",
     },
     {
       id: "req-total-4",
@@ -3221,7 +3221,7 @@ export const barLearningCurveTBS: TBSQuestion = {
       label: "Total hours for 4 units",
       points: 1,
       correctAnswer: { type: "numeric", value: 256, tolerance: 0 },
-      explanation: "64 × 4 = 256 total hours",
+      explanation: "Per learning curve, total hours = Cumulative average × Units = 64 × 4 = 256 total hours.",
     },
     {
       id: "req-cost-4",
@@ -3230,7 +3230,7 @@ export const barLearningCurveTBS: TBSQuestion = {
       label: "Total labor cost for 4 units",
       points: 1,
       correctAnswer: { type: "numeric", value: 6400, tolerance: 0 },
-      explanation: "256 × $25 = $6,400",
+      explanation: "Per cost accounting, total labor cost = Total hours × Rate = 256 × $25 = $6,400.",
     },
   ],
 };
@@ -3275,7 +3275,7 @@ export const barProfitabilityIndexTBS: TBSQuestion = {
       label: "Profitability index - Project X",
       points: 1,
       correctAnswer: { type: "numeric", value: 1.25, tolerance: 0.01 },
-      explanation: "$125,000 / $100,000 = 1.25",
+      explanation: "Per capital budgeting, PI = PV of cash flows / Initial investment = $125,000 / $100,000 = 1.25.",
     },
     {
       id: "req-pi-y",
@@ -3284,7 +3284,7 @@ export const barProfitabilityIndexTBS: TBSQuestion = {
       label: "Profitability index - Project Y",
       points: 1,
       correctAnswer: { type: "numeric", value: 1.30, tolerance: 0.01 },
-      explanation: "$260,000 / $200,000 = 1.30",
+      explanation: "Per capital budgeting, PI = PV of cash flows / Initial investment = $260,000 / $200,000 = 1.30.",
     },
     {
       id: "req-pi-z",
@@ -3293,7 +3293,7 @@ export const barProfitabilityIndexTBS: TBSQuestion = {
       label: "Profitability index - Project Z",
       points: 1,
       correctAnswer: { type: "numeric", value: 1.20, tolerance: 0.01 },
-      explanation: "$180,000 / $150,000 = 1.20",
+      explanation: "Per capital budgeting, PI = PV of cash flows / Initial investment = $180,000 / $150,000 = 1.20.",
     },
     {
       id: "req-ranking",
@@ -3302,7 +3302,7 @@ export const barProfitabilityIndexTBS: TBSQuestion = {
       label: "Best project by PI",
       points: 1,
       correctAnswer: { type: "dropdown", correctOptionId: "opt-y" },
-      explanation: "Project Y has highest PI at 1.30",
+      explanation: "Per capital budgeting, Project Y has the highest PI at 1.30 and maximizes value per dollar invested.",
       dropdownOptions: [
         { id: "opt-x", order: 1, text: "Project X", isCorrect: false },
         { id: "opt-y", order: 2, text: "Project Y", isCorrect: true },
@@ -3351,7 +3351,7 @@ export const barResidualIncomeTBS: TBSQuestion = {
       label: "ROI - East Division (%)",
       points: 1,
       correctAnswer: { type: "numeric", value: 15, tolerance: 0 },
-      explanation: "$450,000 / $3,000,000 = 15%",
+      explanation: "Per performance evaluation, ROI = Operating Income / Assets = $450,000 / $3,000,000 = 15%.",
     },
     {
       id: "req-roi-west",
@@ -3360,7 +3360,7 @@ export const barResidualIncomeTBS: TBSQuestion = {
       label: "ROI - West Division (%)",
       points: 1,
       correctAnswer: { type: "numeric", value: 12, tolerance: 0 },
-      explanation: "$600,000 / $5,000,000 = 12%",
+      explanation: "Per performance evaluation, ROI = Operating Income / Assets = $600,000 / $5,000,000 = 12%.",
     },
     {
       id: "req-ri-east",
@@ -3369,7 +3369,7 @@ export const barResidualIncomeTBS: TBSQuestion = {
       label: "Residual income - East (10% hurdle)",
       points: 1,
       correctAnswer: { type: "numeric", value: 150000, tolerance: 0 },
-      explanation: "$450,000 - (10% × $3,000,000) = $150,000",
+      explanation: "Per residual income, RI = Operating Income - (Hurdle Rate × Assets) = $450,000 - (10% × $3,000,000) = $150,000.",
     },
     {
       id: "req-ri-west",
@@ -3378,7 +3378,7 @@ export const barResidualIncomeTBS: TBSQuestion = {
       label: "Residual income - West (10% hurdle)",
       points: 1,
       correctAnswer: { type: "numeric", value: 100000, tolerance: 0 },
-      explanation: "$600,000 - (10% × $5,000,000) = $100,000",
+      explanation: "Per residual income, RI = Operating Income - (Hurdle Rate × Assets) = $600,000 - (10% × $5,000,000) = $100,000.",
     },
   ],
 };
@@ -3423,7 +3423,7 @@ export const barSalesMixVarianceTBS: TBSQuestion = {
       label: "Budgeted total contribution margin",
       points: 2,
       correctAnswer: { type: "numeric", value: 260000, tolerance: 0 },
-      explanation: "(6,000 × $20) + (4,000 × $35) = $260,000",
+      explanation: "Per variance analysis, budgeted CM = (6,000 × $20) + (4,000 × $35) = $260,000.",
     },
     {
       id: "req-actual-cm",
@@ -3432,7 +3432,7 @@ export const barSalesMixVarianceTBS: TBSQuestion = {
       label: "Actual total contribution margin",
       points: 2,
       correctAnswer: { type: "numeric", value: 267500, tolerance: 0 },
-      explanation: "(5,500 × $20) + (4,500 × $35) = $267,500",
+      explanation: "Per variance analysis, actual CM = (5,500 × $20) + (4,500 × $35) = $267,500.",
     },
     {
       id: "req-mix-variance",
@@ -3441,7 +3441,7 @@ export const barSalesMixVarianceTBS: TBSQuestion = {
       label: "Sales mix variance (favorable = positive)",
       points: 2,
       correctAnswer: { type: "numeric", value: 7500, tolerance: 0 },
-      explanation: "$267,500 - $260,000 = $7,500 favorable",
+      explanation: "Per sales mix variance analysis, variance = Actual CM - Budgeted CM = $267,500 - $260,000 = $7,500 favorable.",
     },
   ],
 };
@@ -3486,7 +3486,7 @@ export const barWACCTBS: TBSQuestion = {
       label: "Total capital",
       points: 1,
       correctAnswer: { type: "numeric", value: 5000000, tolerance: 0 },
-      explanation: "$2M + $0.5M + $2.5M = $5,000,000",
+      explanation: "Per corporate finance, total capital = Debt + Preferred + Common = $2M + $0.5M + $2.5M = $5,000,000.",
     },
     {
       id: "req-debt-weight",
@@ -3495,7 +3495,7 @@ export const barWACCTBS: TBSQuestion = {
       label: "Debt weight (%)",
       points: 1,
       correctAnswer: { type: "numeric", value: 40, tolerance: 0 },
-      explanation: "$2,000,000 / $5,000,000 = 40%",
+      explanation: "Per WACC calculation, debt weight = Debt / Total capital = $2,000,000 / $5,000,000 = 40%.",
     },
     {
       id: "req-wacc",
@@ -3504,7 +3504,7 @@ export const barWACCTBS: TBSQuestion = {
       label: "WACC (%)",
       points: 2,
       correctAnswer: { type: "numeric", value: 8.8, tolerance: 0.1 },
-      explanation: "(40% × 5%) + (10% × 8%) + (50% × 12%) = 8.8%",
+      explanation: "Per WACC formula, WACC = Σ(Weight × Cost) = (40% × 5%) + (10% × 8%) + (50% × 12%) = 8.8%.",
     },
   ],
 };
@@ -3553,7 +3553,7 @@ export const barSensitivityAnalysisTBS: TBSQuestion = {
       label: "Base case annual cash flow",
       points: 2,
       correctAnswer: { type: "numeric", value: 200000, tolerance: 0 },
-      explanation: "(10,000 × $30) - $100,000 = $200,000",
+      explanation: "Per CVP analysis, annual CF = (Units × CM) - Fixed costs = (10,000 × $30) - $100,000 = $200,000.",
     },
     {
       id: "req-base-npv",
@@ -3562,7 +3562,7 @@ export const barSensitivityAnalysisTBS: TBSQuestion = {
       label: "Base case NPV",
       points: 2,
       correctAnswer: { type: "numeric", value: 258160, tolerance: 1000 },
-      explanation: "$200,000 × 3.7908 - $500,000 = $258,160",
+      explanation: "Per capital budgeting, NPV = (Annual CF × PVIFA) - Investment = $200,000 × 3.7908 - $500,000 = $258,160.",
     },
     {
       id: "req-breakeven-units",
@@ -3571,7 +3571,7 @@ export const barSensitivityAnalysisTBS: TBSQuestion = {
       label: "Breakeven units (NPV = 0)",
       points: 2,
       correctAnswer: { type: "numeric", value: 7727, tolerance: 50 },
-      explanation: "Solve for units where NPV = 0",
+      explanation: "Per sensitivity analysis, solve for units where NPV = 0: approximately 7,727 units.",
     },
   ],
 };
@@ -3627,7 +3627,7 @@ export const barJointProductTBS: TBSQuestion = {
       label: "Product A allocation (sales value at split-off)",
       points: 2,
       correctAnswer: { type: "numeric", value: 60000, tolerance: 0 },
-      explanation: "$120,000 × ($100,000/$200,000) = $60,000",
+      explanation: "Per joint cost allocation (sales value method), allocation = $120,000 × ($100,000/$200,000) = $60,000.",
     },
     {
       id: "req-alloc-nrv",
@@ -3636,7 +3636,7 @@ export const barJointProductTBS: TBSQuestion = {
       label: "Product A allocation (NRV method)",
       points: 2,
       correctAnswer: { type: "numeric", value: 57600, tolerance: 0 },
-      explanation: "NRV A = $115,000; Total NRV = $240,000; $120,000 × ($115,000/$240,000) = $57,500",
+      explanation: "Per joint cost allocation (NRV method), NRV A = $115,000; Total NRV = $240,000; $120,000 × ($115,000/$240,000) = $57,500.",
     },
     {
       id: "req-process-further",
@@ -3652,7 +3652,7 @@ export const barJointProductTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "yes",
       },
-      explanation: "Incremental revenue ($25,000) > Incremental cost ($15,000)",
+      explanation: "Per relevant cost analysis, incremental revenue ($25,000) > incremental cost ($15,000), so process further.",
     },
   ],
 };
@@ -3700,7 +3700,7 @@ export const barPaybackPeriodTBS: TBSQuestion = {
       label: "Simple payback period (years)",
       points: 2,
       correctAnswer: { type: "numeric", value: 3.25, tolerance: 0.05 },
-      explanation: "Year 3 cumulative = $180,000; remaining $20,000 / $80,000 = 0.25; Total = 3.25 years",
+      explanation: "Per payback method, Year 3 cumulative = $180,000; remaining $20,000 / $80,000 = 0.25; Total = 3.25 years.",
     },
     {
       id: "req-discounted-payback",
@@ -3709,7 +3709,7 @@ export const barPaybackPeriodTBS: TBSQuestion = {
       label: "Discounted payback period (years)",
       points: 3,
       correctAnswer: { type: "numeric", value: 4.08, tolerance: 0.1 },
-      explanation: "Discounted cumulative by Year 4 = $196,130; remaining $3,870 / $51,030 = 0.08",
+      explanation: "Per discounted payback method, cumulative by Year 4 = $196,130; remaining $3,870 / $51,030 = 0.08.",
     },
   ],
 };
@@ -3772,7 +3772,7 @@ export const barSpoilageAccountingTBS: TBSQuestion = {
       label: "Normal spoilage units",
       points: 2,
       correctAnswer: { type: "numeric", value: 425, tolerance: 0 },
-      explanation: "8,500 × 5% = 425 units",
+      explanation: "Per spoilage accounting, normal spoilage = Good output × Allowance rate = 8,500 × 5% = 425 units.",
     },
     {
       id: "req-abnormal-spoil",
@@ -3781,7 +3781,7 @@ export const barSpoilageAccountingTBS: TBSQuestion = {
       label: "Abnormal spoilage units",
       points: 2,
       correctAnswer: { type: "numeric", value: 175, tolerance: 0 },
-      explanation: "600 - 425 = 175 units",
+      explanation: "Per spoilage accounting, abnormal spoilage = Total spoiled - Normal spoilage = 600 - 425 = 175 units.",
     },
     {
       id: "req-cost-per-unit",
@@ -3790,7 +3790,7 @@ export const barSpoilageAccountingTBS: TBSQuestion = {
       label: "Cost per equivalent unit",
       points: 2,
       correctAnswer: { type: "numeric", value: 30, tolerance: 0.5 },
-      explanation: "$285,000 / (8,500 + 600 + 540) = $29.53 ≈ $30",
+      explanation: "Per process costing, cost per EU = Total cost / Total EU = $285,000 / (8,500 + 600 + 540) = $29.53 ≈ $30.",
     },
   ],
 };
@@ -3839,7 +3839,7 @@ export const barSegmentPerformanceTBS: TBSQuestion = {
       label: "Total company contribution margin",
       points: 1,
       correctAnswer: { type: "numeric", value: 450000, tolerance: 0 },
-      explanation: "$200,000 + $150,000 + $100,000 = $450,000",
+      explanation: "Per segment analysis, total CM = $200,000 + $150,000 + $100,000 = $450,000.",
     },
     {
       id: "req-cm-ratio-east",
@@ -3848,7 +3848,7 @@ export const barSegmentPerformanceTBS: TBSQuestion = {
       label: "East Region CM ratio (%)",
       points: 1,
       correctAnswer: { type: "numeric", value: 40, tolerance: 0 },
-      explanation: "$200,000 / $500,000 = 40%",
+      explanation: "Per segment analysis, CM ratio = CM / Sales = $200,000 / $500,000 = 40%.",
     },
     {
       id: "req-eliminate",
@@ -3864,7 +3864,7 @@ export const barSegmentPerformanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "no",
       },
-      explanation: "Segment margin is positive ($10,000); elimination would reduce company profit",
+      explanation: "Per segment analysis, segment margin is positive ($10,000); elimination would reduce company profit.",
     },
     {
       id: "req-company-profit",
@@ -3873,7 +3873,7 @@ export const barSegmentPerformanceTBS: TBSQuestion = {
       label: "Company operating income if Central eliminated",
       points: 2,
       correctAnswer: { type: "numeric", value: 80000, tolerance: 0 },
-      explanation: "$70,000 + $40,000 - $30,000 allocated to others = $80,000",
+      explanation: "Per segment analysis, income if eliminated = $70,000 + $40,000 - $30,000 realloc = $80,000 (vs $90,000 current).",
     },
   ],
 };
@@ -3932,7 +3932,7 @@ export const barOperatingBudgetTBS: TBSQuestion = {
       label: "Q1 production (units)",
       points: 2,
       correctAnswer: { type: "numeric", value: 10400, tolerance: 0 },
-      explanation: "10,000 + 2,400 - 2,000 = 10,400 units",
+      explanation: "Per production budgeting, Q1 production = Sales + Ending inv - Beginning inv = 10,000 + 2,400 - 2,000 = 10,400 units.",
     },
     {
       id: "req-production-q4",
@@ -3941,7 +3941,7 @@ export const barOperatingBudgetTBS: TBSQuestion = {
       label: "Q4 production (units)",
       points: 2,
       correctAnswer: { type: "numeric", value: 12600, tolerance: 0 },
-      explanation: "Sales 13,000 + Ending inv (20% of 11,000 = 2,200) - Beginning inv (20% of 13,000 = 2,600) = 12,600 units",
+      explanation: "Per production budgeting, Q4 = 13,000 + 2,200 - 2,600 = 12,600 units.",
     },
     {
       id: "req-material-q1",
@@ -3950,7 +3950,7 @@ export const barOperatingBudgetTBS: TBSQuestion = {
       label: "Q1 direct materials needed (lbs)",
       points: 2,
       correctAnswer: { type: "numeric", value: 31200, tolerance: 0 },
-      explanation: "10,400 × 3 = 31,200 lbs",
+      explanation: "Per materials budgeting, Q1 materials = Production × Materials per unit = 10,400 × 3 = 31,200 lbs.",
     },
   ],
 };
@@ -4008,7 +4008,7 @@ export const barIRRAnalysisTBS: TBSQuestion = {
       label: "Project A NPV",
       points: 2,
       correctAnswer: { type: "numeric", value: 19865, tolerance: 500 },
-      explanation: "NPV at 12% = $19,865",
+      explanation: "Per capital budgeting, Project A NPV at 12% = $19,865.",
     },
     {
       id: "req-npv-b",
@@ -4017,7 +4017,7 @@ export const barIRRAnalysisTBS: TBSQuestion = {
       label: "Project B NPV",
       points: 2,
       correctAnswer: { type: "numeric", value: 16987, tolerance: 500 },
-      explanation: "NPV at 12% = $16,987",
+      explanation: "Per capital budgeting, Project B NPV at 12% = $16,987.",
     },
     {
       id: "req-select",
@@ -4034,7 +4034,7 @@ export const barIRRAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "project-a",
       },
-      explanation: "Project A has higher NPV; for mutually exclusive projects, choose higher NPV",
+      explanation: "Per capital budgeting, Project A has higher NPV; for mutually exclusive projects, select higher NPV.",
     },
   ],
 };
@@ -4082,7 +4082,7 @@ export const barCostBehaviorTBS: TBSQuestion = {
       label: "Variable cost per machine hour",
       points: 2,
       correctAnswer: { type: "numeric", value: 2.86, tolerance: 0.05 },
-      explanation: "($12,100 - $8,100) / (3,200 - 1,800) = $2.86",
+      explanation: "Per high-low method, variable rate = Change in cost / Change in activity = ($12,100 - $8,100) / (3,200 - 1,800) = $2.86.",
     },
     {
       id: "req-fixed-cost",
@@ -4091,7 +4091,7 @@ export const barCostBehaviorTBS: TBSQuestion = {
       label: "Fixed cost per month",
       points: 2,
       correctAnswer: { type: "numeric", value: 2952, tolerance: 50 },
-      explanation: "$12,100 - ($2.86 × 3,200) = $2,948",
+      explanation: "Per high-low method, fixed cost = Total cost - Variable cost = $12,100 - ($2.86 × 3,200) = $2,948.",
     },
     {
       id: "req-predicted",
@@ -4100,7 +4100,7 @@ export const barCostBehaviorTBS: TBSQuestion = {
       label: "Predicted cost for 2,600 hours",
       points: 1,
       correctAnswer: { type: "numeric", value: 10388, tolerance: 50 },
-      explanation: "$2,948 + ($2.86 × 2,600) = $10,384",
+      explanation: "Per cost estimation, predicted cost = Fixed + (Variable × Activity) = $2,948 + ($2.86 × 2,600) = $10,384.",
     },
   ],
 };
@@ -4150,7 +4150,7 @@ export const barQualityCostTBS: TBSQuestion = {
       label: "Total prevention costs",
       points: 1,
       correctAnswer: { type: "numeric", value: 55000, tolerance: 0 },
-      explanation: "$25,000 + $20,000 + $10,000 = $55,000",
+      explanation: "Per cost of quality framework, prevention costs = Training + Design reviews + Supplier cert = $25,000 + $20,000 + $10,000 = $55,000.",
     },
     {
       id: "req-appraisal",
@@ -4159,7 +4159,7 @@ export const barQualityCostTBS: TBSQuestion = {
       label: "Total appraisal costs",
       points: 1,
       correctAnswer: { type: "numeric", value: 75000, tolerance: 0 },
-      explanation: "$35,000 + $40,000 = $75,000",
+      explanation: "Per cost of quality framework, appraisal costs = Inspection + Testing = $35,000 + $40,000 = $75,000.",
     },
     {
       id: "req-internal-fail",
@@ -4168,7 +4168,7 @@ export const barQualityCostTBS: TBSQuestion = {
       label: "Total internal failure costs",
       points: 1,
       correctAnswer: { type: "numeric", value: 45000, tolerance: 0 },
-      explanation: "$45,000 (rework)",
+      explanation: "Per cost of quality framework, internal failure costs = Rework = $45,000.",
     },
     {
       id: "req-external-fail",
@@ -4177,7 +4177,7 @@ export const barQualityCostTBS: TBSQuestion = {
       label: "Total external failure costs",
       points: 2,
       correctAnswer: { type: "numeric", value: 75000, tolerance: 0 },
-      explanation: "$60,000 + $15,000 = $75,000",
+      explanation: "Per cost of quality framework, external failure costs = Warranty + Returns = $60,000 + $15,000 = $75,000.",
     },
   ],
 };
@@ -4233,7 +4233,7 @@ export const barContributionAnalysisTBS: TBSQuestion = {
       label: "Standard product CM per unit",
       points: 1,
       correctAnswer: { type: "numeric", value: 40, tolerance: 0 },
-      explanation: "$100 - $60 = $40",
+      explanation: "Per CVP analysis, CM per unit = Selling price - Variable cost = $100 - $60 = $40.",
     },
     {
       id: "req-wacm",
@@ -4242,7 +4242,7 @@ export const barContributionAnalysisTBS: TBSQuestion = {
       label: "Weighted average CM per unit",
       points: 2,
       correctAnswer: { type: "numeric", value: 61, tolerance: 0 },
-      explanation: "($40 × 50%) + ($70 × 30%) + ($100 × 20%) = $61",
+      explanation: "Per multi-product CVP, weighted average CM = Σ(CM × Mix%) = ($40 × 50%) + ($70 × 30%) + ($100 × 20%) = $61.",
     },
     {
       id: "req-breakeven-units",
@@ -4251,7 +4251,7 @@ export const barContributionAnalysisTBS: TBSQuestion = {
       label: "Breakeven total units",
       points: 2,
       correctAnswer: { type: "numeric", value: 2951, tolerance: 10 },
-      explanation: "$180,000 / $61 = 2,951 units",
+      explanation: "Per CVP analysis, breakeven units = Fixed costs / WACM = $180,000 / $61 = 2,951 units.",
     },
     {
       id: "req-breakeven-premium",
@@ -4260,7 +4260,7 @@ export const barContributionAnalysisTBS: TBSQuestion = {
       label: "Breakeven Premium units",
       points: 1,
       correctAnswer: { type: "numeric", value: 885, tolerance: 10 },
-      explanation: "2,951 × 30% = 885 units",
+      explanation: "Per CVP analysis, Premium breakeven = Total breakeven × Mix% = 2,951 × 30% = 885 units.",
     },
   ],
 };
@@ -4309,7 +4309,7 @@ export const barCapitalLeaseTBS: TBSQuestion = {
       label: "Present value of lease payments",
       points: 2,
       correctAnswer: { type: "numeric", value: 199635, tolerance: 100 },
-      explanation: "$50,000 × 3.9927 = $199,635",
+      explanation: "Per ASC 842, PV of lease payments = Payment × PVIFA = $50,000 × 3.9927 = $199,635.",
     },
     {
       id: "req-rou-asset",
@@ -4318,7 +4318,7 @@ export const barCapitalLeaseTBS: TBSQuestion = {
       label: "Initial right-of-use asset",
       points: 2,
       correctAnswer: { type: "numeric", value: 199635, tolerance: 100 },
-      explanation: "ROU asset = PV of lease payments = $199,635",
+      explanation: "Per ASC 842-20-30, ROU asset = PV of lease payments = $199,635.",
     },
     {
       id: "req-year1-interest",
@@ -4327,7 +4327,7 @@ export const barCapitalLeaseTBS: TBSQuestion = {
       label: "Year 1 interest expense",
       points: 2,
       correctAnswer: { type: "numeric", value: 15971, tolerance: 50 },
-      explanation: "$199,635 × 8% = $15,971",
+      explanation: "Per ASC 842-20-35, Year 1 interest = Lease liability × Rate = $199,635 × 8% = $15,971.",
     },
   ],
 };
@@ -4374,7 +4374,7 @@ export const barBenefitCostTBS: TBSQuestion = {
       label: "Total present value of benefits",
       points: 1,
       correctAnswer: { type: "numeric", value: 3400000, tolerance: 0 },
-      explanation: "$2,800,000 + $600,000 = $3,400,000",
+      explanation: "Per benefit-cost analysis, total benefits = Direct + Indirect = $2,800,000 + $600,000 = $3,400,000.",
     },
     {
       id: "req-total-costs",
@@ -4383,7 +4383,7 @@ export const barBenefitCostTBS: TBSQuestion = {
       label: "Total present value of costs",
       points: 1,
       correctAnswer: { type: "numeric", value: 2600000, tolerance: 0 },
-      explanation: "$2,000,000 + $200,000 + $400,000 = $2,600,000",
+      explanation: "Per benefit-cost analysis, total costs = Initial + External + Operating = $2,000,000 + $200,000 + $400,000 = $2,600,000.",
     },
     {
       id: "req-bc-ratio",
@@ -4392,7 +4392,7 @@ export const barBenefitCostTBS: TBSQuestion = {
       label: "Benefit-cost ratio",
       points: 2,
       correctAnswer: { type: "numeric", value: 1.31, tolerance: 0.02 },
-      explanation: "$3,400,000 / $2,600,000 = 1.31",
+      explanation: "Per benefit-cost analysis, B/C ratio = Total benefits / Total costs = $3,400,000 / $2,600,000 = 1.31.",
     },
     {
       id: "req-net-benefit",
@@ -4401,7 +4401,7 @@ export const barBenefitCostTBS: TBSQuestion = {
       label: "Net benefit",
       points: 1,
       correctAnswer: { type: "numeric", value: 800000, tolerance: 0 },
-      explanation: "$3,400,000 - $2,600,000 = $800,000",
+      explanation: "Per benefit-cost analysis, net benefit = Total benefits - Total costs = $3,400,000 - $2,600,000 = $800,000.",
     },
   ],
 };
@@ -4462,7 +4462,7 @@ export const barEquivalentAnnualCostTBS: TBSQuestion = {
       label: "NPV of costs - Machine A",
       points: 2,
       correctAnswer: { type: "numeric", value: 113548, tolerance: 500 },
-      explanation: "$80,000 + ($15,000 × 2.4869) - ($5,000 × 0.7513) = $113,548",
+      explanation: "Per EAC method, NPV of costs = Initial + PV operating - PV salvage = $80,000 + ($15,000 × 2.4869) - ($5,000 × 0.7513) = $113,548.",
     },
     {
       id: "req-eac-a",
@@ -4471,7 +4471,7 @@ export const barEquivalentAnnualCostTBS: TBSQuestion = {
       label: "Equivalent annual cost - Machine A",
       points: 2,
       correctAnswer: { type: "numeric", value: 45657, tolerance: 200 },
-      explanation: "$113,548 / 2.4869 = $45,657",
+      explanation: "Per EAC method, EAC = NPV of costs / PVIFA = $113,548 / 2.4869 = $45,657.",
     },
     {
       id: "req-eac-b",
@@ -4480,7 +4480,7 @@ export const barEquivalentAnnualCostTBS: TBSQuestion = {
       label: "Equivalent annual cost - Machine B",
       points: 2,
       correctAnswer: { type: "numeric", value: 39986, tolerance: 200 },
-      explanation: "NPV of costs = $120,000 + ($10,000 × 3.7908) - ($10,000 × 0.6209) = $151,699; EAC = $151,699 / 3.7908 = $40,012 (or $39,986 with rounding)",
+      explanation: "Per EAC method, NPV = $120,000 + ($10,000 × 3.7908) - ($10,000 × 0.6209) = $151,699; EAC = $151,699 / 3.7908 = $40,012.",
     },
   ],
 };
@@ -4527,7 +4527,7 @@ export const barInventoryValuationTBS: TBSQuestion = {
       label: "Ending inventory - FIFO",
       points: 2,
       correctAnswer: { type: "numeric", value: 1400, tolerance: 0 },
-      explanation: "100 units × $14 = $1,400",
+      explanation: "Per ASC 330, FIFO ending inventory = Most recent units × Cost = 100 units × $14 = $1,400.",
     },
     {
       id: "req-lifo-ending",
@@ -4536,7 +4536,7 @@ export const barInventoryValuationTBS: TBSQuestion = {
       label: "Ending inventory - LIFO",
       points: 2,
       correctAnswer: { type: "numeric", value: 1000, tolerance: 0 },
-      explanation: "100 units × $10 = $1,000",
+      explanation: "Per ASC 330, LIFO ending inventory = Oldest units × Cost = 100 units × $10 = $1,000.",
     },
     {
       id: "req-avg-cogs",
@@ -4545,7 +4545,7 @@ export const barInventoryValuationTBS: TBSQuestion = {
       label: "COGS - Weighted average",
       points: 2,
       correctAnswer: { type: "numeric", value: 4200, tolerance: 50 },
-      explanation: "Total cost $5,400 / 450 units = $12 avg; 350 × $12 = $4,200",
+      explanation: "Per ASC 330, weighted average COGS = Total cost / Total units × Sold = $5,400 / 450 × 350 = $4,200.",
     },
   ],
 };
@@ -4606,7 +4606,7 @@ export const barActivityRateTBS: TBSQuestion = {
       label: "Setup activity rate",
       points: 1,
       correctAnswer: { type: "numeric", value: 300, tolerance: 0 },
-      explanation: "$90,000 / 300 = $300 per setup",
+      explanation: "Per ABC principles, activity rate = Activity cost / Cost driver = $90,000 / 300 = $300 per setup.",
     },
     {
       id: "req-product-x-overhead",
@@ -4615,7 +4615,7 @@ export const barActivityRateTBS: TBSQuestion = {
       label: "Total overhead assigned to Product X",
       points: 2,
       correctAnswer: { type: "numeric", value: 65000, tolerance: 0 },
-      explanation: "(100×$300) + (500×$40) + (300×$50) = $65,000",
+      explanation: "Per ABC principles, total overhead = Σ(Activity × Rate) = (100×$300) + (500×$40) + (300×$50) = $65,000.",
     },
     {
       id: "req-product-y-overhead",
@@ -4624,7 +4624,7 @@ export const barActivityRateTBS: TBSQuestion = {
       label: "Total overhead assigned to Product Y",
       points: 2,
       correctAnswer: { type: "numeric", value: 130000, tolerance: 0 },
-      explanation: "(200×$300) + (1,000×$40) + (600×$50) = $130,000",
+      explanation: "Per ABC principles, total overhead = Σ(Activity × Rate) = (200×$300) + (1,000×$40) + (600×$50) = $130,000.",
     },
   ],
 };
@@ -4686,7 +4686,7 @@ export const barPriceVarianceTBS: TBSQuestion = {
       label: "Material price variance (U = positive)",
       points: 2,
       correctAnswer: { type: "numeric", value: 1600, tolerance: 0 },
-      explanation: "(AP - SP) × AQ = ($5.50 - $5) × 3,200 = $1,600 U",
+      explanation: "Per variance analysis, material price variance = (AP - SP) × AQ = ($5.50 - $5) × 3,200 = $1,600 U.",
     },
     {
       id: "req-material-qty-var",
@@ -4695,7 +4695,7 @@ export const barPriceVarianceTBS: TBSQuestion = {
       label: "Material quantity variance (U = positive)",
       points: 2,
       correctAnswer: { type: "numeric", value: 1000, tolerance: 0 },
-      explanation: "(AQ - SQ) × SP = (3,200 - 3,000) × $5 = $1,000 U",
+      explanation: "Per variance analysis, material quantity variance = (AQ - SQ) × SP = (3,200 - 3,000) × $5 = $1,000 U.",
     },
     {
       id: "req-labor-rate-var",
@@ -4704,7 +4704,7 @@ export const barPriceVarianceTBS: TBSQuestion = {
       label: "Labor rate variance (F = negative)",
       points: 2,
       correctAnswer: { type: "numeric", value: 1900, tolerance: 0 },
-      explanation: "Actual rate = $39,900 / 1,900 hrs = $21. Labor rate variance = ($21 - $20) × 1,900 = $1,900 Unfavorable. Per instructions (U = positive), enter 1,900.",
+      explanation: "Per variance analysis, labor rate variance = (AR - SR) × AH = ($21 - $20) × 1,900 = $1,900 U.",
     },
   ],
 };
@@ -4752,7 +4752,7 @@ export const barCapacityAnalysisTBS: TBSQuestion = {
       label: "Practical capacity utilization (%)",
       points: 1,
       correctAnswer: { type: "numeric", value: 80, tolerance: 0 },
-      explanation: "32,000 / 40,000 = 80%",
+      explanation: "Per capacity analysis, utilization = Actual / Practical capacity = 32,000 / 40,000 = 80%.",
     },
     {
       id: "req-std-rate",
@@ -4761,7 +4761,7 @@ export const barCapacityAnalysisTBS: TBSQuestion = {
       label: "Standard fixed overhead rate (normal capacity)",
       points: 2,
       correctAnswer: { type: "numeric", value: 8, tolerance: 0 },
-      explanation: "$280,000 / 35,000 = $8 per hour",
+      explanation: "Per overhead costing, standard rate = Budgeted OH / Normal capacity = $280,000 / 35,000 = $8 per hour.",
     },
     {
       id: "req-volume-variance",
@@ -4770,7 +4770,7 @@ export const barCapacityAnalysisTBS: TBSQuestion = {
       label: "Volume variance (U = positive)",
       points: 2,
       correctAnswer: { type: "numeric", value: 24000, tolerance: 0 },
-      explanation: "(35,000 - 32,000) × $8 = $24,000 U",
+      explanation: "Per variance analysis, volume variance = (Normal - Actual capacity) × Rate = (35,000 - 32,000) × $8 = $24,000 U.",
     },
   ],
 };
@@ -4820,7 +4820,7 @@ export const barThroughputCostingTBS: TBSQuestion = {
       label: "Net income - Throughput costing",
       points: 2,
       correctAnswer: { type: "numeric", value: 164000, tolerance: 0 },
-      explanation: "(8,000 × $38) - $100,000 - $40,000 = $164,000",
+      explanation: "Per throughput costing, income = (Units sold × Throughput) - Operating costs = (8,000 × $38) - $100,000 - $40,000 = $164,000.",
     },
     {
       id: "req-absorption-income",
@@ -4829,7 +4829,7 @@ export const barThroughputCostingTBS: TBSQuestion = {
       label: "Net income - Absorption costing",
       points: 2,
       correctAnswer: { type: "numeric", value: 180000, tolerance: 0 },
-      explanation: "(8,000 × $25) - $40,000 + (2,000 × $10 deferred) = $180,000",
+      explanation: "Per absorption costing, income includes fixed OH deferred in inventory; gross profit - S&A = $180,000.",
     },
     {
       id: "req-difference",
@@ -4838,7 +4838,7 @@ export const barThroughputCostingTBS: TBSQuestion = {
       label: "Income difference (absorption - throughput)",
       points: 2,
       correctAnswer: { type: "numeric", value: 16000, tolerance: 0 },
-      explanation: "$180,000 - $164,000 = $16,000; due to fixed OH in ending inventory",
+      explanation: "Per costing comparison, difference = Fixed OH in ending inventory = 2,000 units × ($100,000/10,000) = $20,000.",
     },
   ],
 };
@@ -4890,7 +4890,7 @@ export const barGovernmentFundTBS: TBSQuestion = {
       label: "Total fund assets",
       points: 1,
       correctAnswer: { type: "numeric", value: 730000, tolerance: 0 },
-      explanation: "$500,000 + $180,000 + $50,000 = $730,000",
+      explanation: "Per GASB fund accounting, total assets = Cash + Net receivables + Due from funds = $500,000 + $180,000 + $50,000 = $730,000.",
     },
     {
       id: "req-total-liabilities",
@@ -4899,7 +4899,7 @@ export const barGovernmentFundTBS: TBSQuestion = {
       label: "Total liabilities and deferred inflows",
       points: 1,
       correctAnswer: { type: "numeric", value: 230000, tolerance: 0 },
-      explanation: "$150,000 + $80,000 = $230,000",
+      explanation: "Per GASB fund accounting, total liabilities + deferred inflows = $150,000 + $80,000 = $230,000.",
     },
     {
       id: "req-unassigned",
@@ -4908,7 +4908,7 @@ export const barGovernmentFundTBS: TBSQuestion = {
       label: "Unassigned fund balance",
       points: 2,
       correctAnswer: { type: "numeric", value: 250000, tolerance: 0 },
-      explanation: "$730,000 - $230,000 - $30,000 - $100,000 - $75,000 - $45,000 = $250,000",
+      explanation: "Per GASB 54, unassigned = Total assets - Liabilities - Deferred - Other FB = $730,000 - $230,000 - $250,000 = $250,000.",
     },
     {
       id: "req-total-fund-balance",
@@ -4917,7 +4917,7 @@ export const barGovernmentFundTBS: TBSQuestion = {
       label: "Total fund balance",
       points: 2,
       correctAnswer: { type: "numeric", value: 500000, tolerance: 0 },
-      explanation: "$30,000 + $100,000 + $75,000 + $45,000 + $250,000 = $500,000",
+      explanation: "Per GASB 54, total fund balance = Nonspendable + Restricted + Committed + Assigned + Unassigned = $500,000.",
     },
   ],
 };
@@ -4971,7 +4971,7 @@ Required: Calculate operating leverage and evaluate profit sensitivity.`,
         value: 400000,
         tolerance: 0,
       },
-      explanation: "$1,000,000 - $600,000 = $400,000",
+      explanation: "Per CVP analysis, CM = Sales - Variable costs = $1,000,000 - $600,000 = $400,000.",
     },
     {
       id: "req-cm-b",
@@ -4984,7 +4984,7 @@ Required: Calculate operating leverage and evaluate profit sensitivity.`,
         value: 700000,
         tolerance: 0,
       },
-      explanation: "$1,000,000 - $300,000 = $700,000",
+      explanation: "Per CVP analysis, CM = Sales - Variable costs = $1,000,000 - $300,000 = $700,000.",
     },
     {
       id: "req-dol-a",
@@ -4997,7 +4997,7 @@ Required: Calculate operating leverage and evaluate profit sensitivity.`,
         value: 2,
         tolerance: 0.1,
       },
-      explanation: "$400,000 / $200,000 = 2.0",
+      explanation: "Per operating leverage, DOL = CM / Operating income = $400,000 / $200,000 = 2.0.",
     },
     {
       id: "req-dol-b",
@@ -5010,7 +5010,7 @@ Required: Calculate operating leverage and evaluate profit sensitivity.`,
         value: 3.5,
         tolerance: 0.1,
       },
-      explanation: "$700,000 / $200,000 = 3.5",
+      explanation: "Per operating leverage, DOL = CM / Operating income = $700,000 / $200,000 = 3.5.",
     },
     {
       id: "req-impact-b",
@@ -5023,7 +5023,7 @@ Required: Calculate operating leverage and evaluate profit sensitivity.`,
         value: 35,
         tolerance: 0,
       },
-      explanation: "10% × 3.5 DOL = 35% profit increase",
+      explanation: "Per operating leverage, % profit change = % sales change × DOL = 10% × 3.5 = 35%.",
     },
     {
       id: "req-risk",
@@ -5035,7 +5035,7 @@ Required: Calculate operating leverage and evaluate profit sensitivity.`,
         type: "dropdown",
         correctOptionId: "opt-b",
       },
-      explanation: "Company B has higher DOL, meaning higher operating risk",
+      explanation: "Per operating leverage, Company B has higher DOL (3.5 vs 2.0), meaning higher operating risk.",
       dropdownOptions: [
         { id: "opt-a", order: 1, text: "Company A", isCorrect: false },
         { id: "opt-b", order: 2, text: "Company B", isCorrect: true },
@@ -5102,7 +5102,7 @@ Required: Determine the breakeven sales mix and revenue.`,
         value: 40,
         tolerance: 0,
       },
-      explanation: "$20 / $50 = 40%",
+      explanation: "Per CVP analysis, CM ratio = CM per Unit / Price = $20 / $50 = 40%.",
     },
     {
       id: "req-cmr-premium",
@@ -5115,7 +5115,7 @@ Required: Determine the breakeven sales mix and revenue.`,
         value: 50,
         tolerance: 0,
       },
-      explanation: "$40 / $80 = 50%",
+      explanation: "Per CVP analysis, CM ratio = CM / Price = $40 / $80 = 50%.",
     },
     {
       id: "req-weighted-cmr",
@@ -5128,7 +5128,7 @@ Required: Determine the breakeven sales mix and revenue.`,
         value: 45,
         tolerance: 0,
       },
-      explanation: "(40% × 50%) + (50% × 30%) + (50% × 20%) = 20% + 15% + 10% = 45%",
+      explanation: "Per multi-product CVP, weighted avg CM ratio = Σ(CM ratio × Mix%) = (40%×50%) + (50%×30%) + (50%×20%) = 45%.",
     },
     {
       id: "req-breakeven-revenue",
@@ -5141,7 +5141,7 @@ Required: Determine the breakeven sales mix and revenue.`,
         value: 1066667,
         tolerance: 1000,
       },
-      explanation: "$480,000 / 45% = $1,066,667",
+      explanation: "Per CVP analysis, breakeven revenue = Fixed costs / WACM ratio = $480,000 / 45% = $1,066,667.",
     },
     {
       id: "req-standard-revenue",
@@ -5154,7 +5154,7 @@ Required: Determine the breakeven sales mix and revenue.`,
         value: 533333,
         tolerance: 1000,
       },
-      explanation: "$1,066,667 × 50% = $533,333",
+      explanation: "Per CVP analysis, product breakeven = Total breakeven × Mix% = $1,066,667 × 50% = $533,333.",
     },
   ],
 };
@@ -5208,7 +5208,7 @@ Required: Calculate the incremental impact of the replacement decision.`,
         value: 35000,
         tolerance: 0,
       },
-      explanation: "$85,000 - $50,000 = $35,000 per year",
+      explanation: "Per incremental analysis, annual savings = Old cost - New cost = $85,000 - $50,000 = $35,000.",
     },
     {
       id: "req-total-savings",
@@ -5221,7 +5221,7 @@ Required: Calculate the incremental impact of the replacement decision.`,
         value: 175000,
         tolerance: 0,
       },
-      explanation: "$35,000 × 5 years = $175,000",
+      explanation: "Per incremental analysis, total savings = Annual savings × Life = $35,000 × 5 = $175,000.",
     },
     {
       id: "req-net-cost",
@@ -5234,7 +5234,7 @@ Required: Calculate the incremental impact of the replacement decision.`,
         value: 320000,
         tolerance: 0,
       },
-      explanation: "$350,000 - $30,000 current salvage = $320,000",
+      explanation: "Per incremental analysis, net acquisition cost = New cost - Old salvage = $350,000 - $30,000 = $320,000.",
     },
     {
       id: "req-total-benefit",
@@ -5247,7 +5247,7 @@ Required: Calculate the incremental impact of the replacement decision.`,
         value: 215000,
         tolerance: 0,
       },
-      explanation: "$175,000 + $40,000 = $215,000",
+      explanation: "Per incremental analysis, total benefits = Operating savings + Future salvage = $175,000 + $40,000 = $215,000.",
     },
     {
       id: "req-net-advantage",
@@ -5260,7 +5260,7 @@ Required: Calculate the incremental impact of the replacement decision.`,
         value: -105000,
         tolerance: 0,
       },
-      explanation: "$215,000 - $320,000 = ($105,000) disadvantage",
+      explanation: "Per incremental analysis, net (dis)advantage = Benefits - Cost = $215,000 - $320,000 = ($105,000).",
     },
     {
       id: "req-decision",
@@ -5272,7 +5272,7 @@ Required: Calculate the incremental impact of the replacement decision.`,
         type: "dropdown",
         correctOptionId: "opt-keep",
       },
-      explanation: "Keep old equipment - replacement has net disadvantage",
+      explanation: "Per incremental analysis, keep old equipment since replacement has net disadvantage of $105,000.",
       dropdownOptions: [
         { id: "opt-replace", order: 1, text: "Replace the equipment", isCorrect: false },
         { id: "opt-keep", order: 2, text: "Keep old equipment", isCorrect: true },
@@ -5335,7 +5335,7 @@ Required: Categorize and analyze quality costs.`,
         value: 95000,
         tolerance: 0,
       },
-      explanation: "Training $45,000 + Planning $50,000 = $95,000",
+      explanation: "Per cost of quality framework, prevention = Training + Planning = $45,000 + $50,000 = $95,000.",
     },
     {
       id: "req-appraisal",
@@ -5348,7 +5348,7 @@ Required: Categorize and analyze quality costs.`,
         value: 130000,
         tolerance: 0,
       },
-      explanation: "Inspection $30,000 + Testing $55,000 + Audits $25,000 + Calibration $20,000 = $130,000",
+      explanation: "Per cost of quality framework, appraisal = Inspection + Testing + Audits + Calibration = $130,000.",
     },
     {
       id: "req-internal-failure",
@@ -5361,7 +5361,7 @@ Required: Categorize and analyze quality costs.`,
         value: 125000,
         tolerance: 0,
       },
-      explanation: "Rework $85,000 + Scrap $40,000 = $125,000",
+      explanation: "Per cost of quality framework, internal failure = Rework + Scrap = $85,000 + $40,000 = $125,000.",
     },
     {
       id: "req-external-failure",
@@ -5374,7 +5374,7 @@ Required: Categorize and analyze quality costs.`,
         value: 155000,
         tolerance: 0,
       },
-      explanation: "Warranty $120,000 + Returns $35,000 = $155,000",
+      explanation: "Per cost of quality framework, external failure = Warranty + Returns = $120,000 + $35,000 = $155,000.",
     },
     {
       id: "req-total-coq",
@@ -5387,7 +5387,7 @@ Required: Categorize and analyze quality costs.`,
         value: 505000,
         tolerance: 0,
       },
-      explanation: "$95,000 + $130,000 + $125,000 + $155,000 = $505,000",
+      explanation: "Per cost of quality framework, total COQ = Prevention + Appraisal + Failures = $505,000.",
     },
     {
       id: "req-improvement",
@@ -5399,7 +5399,7 @@ Required: Categorize and analyze quality costs.`,
         type: "dropdown",
         correctOptionId: "opt-prevention",
       },
-      explanation: "Increasing prevention costs typically reduces failure costs",
+      explanation: "Per cost of quality framework, increasing prevention costs typically reduces more costly failure costs.",
       dropdownOptions: [
         { id: "opt-prevention", order: 1, text: "Increase prevention spending", isCorrect: true },
         { id: "opt-appraisal", order: 2, text: "Reduce appraisal costs", isCorrect: false },
@@ -5460,7 +5460,7 @@ Required: Calculate liquidity ratios and assess financial health.`,
         value: 775000,
         tolerance: 0,
       },
-      explanation: "$150,000 + $75,000 + $200,000 + $325,000 + $25,000 = $775,000",
+      explanation: "Per financial analysis, current assets = Cash + Securities + AR + Inventory + Prepaids = $775,000.",
     },
     {
       id: "req-current-liabilities",
@@ -5473,7 +5473,7 @@ Required: Calculate liquidity ratios and assess financial health.`,
         value: 300000,
         tolerance: 0,
       },
-      explanation: "$180,000 + $70,000 + $50,000 = $300,000",
+      explanation: "Per financial analysis, current liabilities = AP + Accrued + Current LTD = $180,000 + $70,000 + $50,000 = $300,000.",
     },
     {
       id: "req-current-ratio",
@@ -5486,7 +5486,7 @@ Required: Calculate liquidity ratios and assess financial health.`,
         value: 2.58,
         tolerance: 0.05,
       },
-      explanation: "$775,000 / $300,000 = 2.58",
+      explanation: "Per financial analysis, current ratio = Current assets / Current liabilities = $775,000 / $300,000 = 2.58.",
     },
     {
       id: "req-quick-ratio",
@@ -5499,7 +5499,7 @@ Required: Calculate liquidity ratios and assess financial health.`,
         value: 1.42,
         tolerance: 0.05,
       },
-      explanation: "($150,000 + $75,000 + $200,000) / $300,000 = 1.42",
+      explanation: "Per financial analysis, quick ratio = (Cash + Securities + AR) / CL = $425,000 / $300,000 = 1.42.",
     },
     {
       id: "req-cash-ratio",
@@ -5512,7 +5512,7 @@ Required: Calculate liquidity ratios and assess financial health.`,
         value: 0.75,
         tolerance: 0.02,
       },
-      explanation: "($150,000 + $75,000) / $300,000 = 0.75",
+      explanation: "Per financial analysis, cash ratio = (Cash + Securities) / CL = $225,000 / $300,000 = 0.75.",
     },
   ],
 };

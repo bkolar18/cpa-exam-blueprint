@@ -470,7 +470,7 @@ export default function ReadinessDashboardPage() {
  </div>
 
  {/* Section Selector */}
- <div className="flex flex-wrap gap-2">
+ <div className="grid grid-cols-4 sm:flex sm:flex-wrap gap-2">
  {visibleSections.map((section) => {
  const data = readinessData[section];
  const score = data?.overallScore || 0;
@@ -480,14 +480,14 @@ export default function ReadinessDashboardPage() {
  <button
  key={section}
  onClick={() => setSelectedSection(section)}
- className={`px-4 py-3 rounded-xl font-medium transition-all w-[100px] text-center ${
+ className={`px-2 sm:px-4 py-2 sm:py-3 rounded-xl font-medium transition-all sm:w-[100px] text-center ${
  selectedSection === section
  ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
  : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
  }`}
  >
- <div className="text-lg font-bold">{section}</div>
- <div className={`text-xs ${selectedSection === section ? 'text-white/80' : 'text-[var(--muted)]'}`}>
+ <div className="text-base sm:text-lg font-bold">{section}</div>
+ <div className={`text-[10px] sm:text-xs ${selectedSection === section ? 'text-white/80' : 'text-[var(--muted)]'}`}>
  {score > 0 ? `${score}%` : 'Not started'}
  </div>
  </button>
@@ -551,14 +551,17 @@ export default function ReadinessDashboardPage() {
  {/* Score indicator */}
  <div
  className="absolute top-10 flex flex-col items-center"
- style={{ left: `${currentReadiness.overallScore}%`, transform: 'translateX(-50%)' }}
+ style={{
+ left: `${Math.max(10, Math.min(90, currentReadiness.overallScore))}%`,
+ transform: 'translateX(-50%)'
+ }}
  >
  <div className="text-2xl font-bold text-[var(--foreground)]">{currentReadiness.overallScore}%</div>
  </div>
  </div>
 
  {/* Milestone Labels */}
- <div className="flex justify-between text-xs text-[var(--muted)] mt-8 mb-4">
+ <div className="hidden sm:flex justify-between text-xs text-[var(--muted)] mt-8 mb-4">
  {milestones.map((milestone) => (
  <div
  key={milestone.threshold}
@@ -568,6 +571,12 @@ export default function ReadinessDashboardPage() {
  {milestone.label}
  </div>
  ))}
+ </div>
+ {/* Mobile milestone - just show current */}
+ <div className="sm:hidden mt-8 mb-4 text-center">
+ <span className={`text-sm font-medium px-3 py-1 rounded-full ${currentMilestone.color} text-white`}>
+ {currentMilestone.label}
+ </span>
  </div>
 
  {/* Motivational Message */}

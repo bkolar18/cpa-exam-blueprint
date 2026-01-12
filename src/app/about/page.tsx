@@ -60,7 +60,7 @@ export default function AboutPage() {
  </div>
  <div className="space-y-4 text-amber-800 dark:text-amber-300 text-lg leading-relaxed">
  <p>
- Meridian CPA Review was created because we saw a gap in the market: candidates who deserved quality study materials with a modern, focused approach to CPA exam preparation.
+ Meridian CPA Review was created because we saw too many candidates struggling to afford quality study materials. With traditional CPA review courses costing $2,500-$3,000 or more, many aspiring CPAs are forced to choose between financial strain and their career goals.
  </p>
  <p>
  We believe the best way to prepare for the CPA exam is through active practice - answering questions, working through simulations, and getting immediate feedback on your performance.
@@ -212,6 +212,15 @@ export default function AboutPage() {
  </tr>
  </thead>
  <tbody className="divide-y divide-[var(--border)]">
+ <tr>
+ <td className="py-4 px-3 text-[var(--foreground)] font-medium">Price</td>
+ <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+ <span className="text-[var(--foreground)] font-semibold">Free (Beta)</span>
+ </td>
+ <td className="py-4 px-3 text-center text-[var(--foreground)]">$2,499-$5,999</td>
+ <td className="py-4 px-3 text-center text-[var(--foreground)]">$1,599-$2,999</td>
+ <td className="py-4 px-3 text-center text-[var(--foreground)]">$1,899-$3,099</td>
+ </tr>
  <tr>
  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Practice Questions</td>
  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">

@@ -73,7 +73,7 @@ export const iscITGCAccessControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-inadequate-length",
       },
-      explanation: "6 characters is below the 8-12 character minimum recommended",
+      explanation: "Per NIST SP 800-63B, 6 characters is below the minimum recommended password length of 8+ characters.",
       dropdownOptions: [
         { id: "opt-adequate-length", order: 1, text: "Adequate - meets requirements", isCorrect: false },
         { id: "opt-inadequate-length", order: 2, text: "Inadequate - should be 8+ characters", isCorrect: true },
@@ -90,7 +90,7 @@ export const iscITGCAccessControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-inadequate-term",
       },
-      explanation: "5 business days is too long; same-day disablement is best practice",
+      explanation: "Per COBIT/NIST guidelines, 5 business days is too long; same-day account disablement is required to prevent unauthorized access.",
       dropdownOptions: [
         { id: "opt-adequate-term", order: 1, text: "Adequate - reasonable timeframe", isCorrect: false },
         { id: "opt-inadequate-term", order: 2, text: "Inadequate - should be same-day", isCorrect: true },
@@ -107,7 +107,7 @@ export const iscITGCAccessControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-accountability",
       },
-      explanation: "Shared accounts eliminate individual accountability for actions",
+      explanation: "Per TSC CC6.1 and NIST AC-2, shared accounts eliminate individual accountability, violating access control principles.",
       dropdownOptions: [
         { id: "opt-efficiency", order: 1, text: "Reduced efficiency", isCorrect: false },
         { id: "opt-accountability", order: 2, text: "Loss of accountability", isCorrect: true },
@@ -124,7 +124,7 @@ export const iscITGCAccessControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-credential-theft",
       },
-      explanation: "Stolen credentials provide full remote access without additional verification",
+      explanation: "Per NIST SP 800-63B, without MFA, stolen credentials provide full remote access without additional verification factors.",
       dropdownOptions: [
         { id: "opt-slow-access", order: 1, text: "Slow access times", isCorrect: false },
         { id: "opt-credential-theft", order: 2, text: "Credential theft enables unauthorized access", isCorrect: true },
@@ -141,7 +141,7 @@ export const iscITGCAccessControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-manipulation",
       },
-      explanation: "Manual logs can be altered or omitted; automated logging ensures integrity",
+      explanation: "Per TSC CC7.2 and NIST AU-3, manual logs can be altered or omitted; automated logging ensures integrity and completeness.",
       dropdownOptions: [
         { id: "opt-time-consuming", order: 1, text: "Time consuming for users", isCorrect: false },
         { id: "opt-manipulation", order: 2, text: "Susceptible to manipulation", isCorrect: true },
@@ -158,7 +158,7 @@ export const iscITGCAccessControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-quarterly",
       },
-      explanation: "Privileged access should be reviewed quarterly, not annually",
+      explanation: "Per COBIT DSS05.04 and SOX best practices, privileged access should be reviewed quarterly due to elevated risk.",
       dropdownOptions: [
         { id: "opt-annually", order: 1, text: "Annually - current policy is adequate", isCorrect: false },
         { id: "opt-quarterly", order: 2, text: "Quarterly", isCorrect: true },
@@ -230,7 +230,7 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-soc1-type2",
       },
-      explanation: "SOC 1 Type II covers financial reporting controls with operating effectiveness testing",
+      explanation: "Per SSAE 18/AT-C 320, SOC 1 Type II covers controls relevant to user entities' ICFR with operating effectiveness testing.",
       dropdownOptions: [
         { id: "opt-soc1-type1", order: 1, text: "SOC 1 Type I", isCorrect: false },
         { id: "opt-soc1-type2", order: 2, text: "SOC 1 Type II", isCorrect: true },
@@ -248,7 +248,7 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-soc2-type2-b",
       },
-      explanation: "SOC 2 Type II covers security trust services criteria with effectiveness testing",
+      explanation: "Per AT-C 205, SOC 2 Type II covers Trust Services Criteria (security, availability, etc.) with operating effectiveness testing.",
       dropdownOptions: [
         { id: "opt-soc1-type2-b", order: 1, text: "SOC 1 Type II", isCorrect: false },
         { id: "opt-soc2-type1-b", order: 2, text: "SOC 2 Type I", isCorrect: false },
@@ -266,7 +266,7 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-soc3-c",
       },
-      explanation: "SOC 3 is designed for public distribution and marketing use",
+      explanation: "Per AT-C 205, SOC 3 is a general use report designed for public distribution and marketing purposes.",
       dropdownOptions: [
         { id: "opt-soc1-type2-c", order: 1, text: "SOC 1 Type II", isCorrect: false },
         { id: "opt-soc2-type2-c", order: 2, text: "SOC 2 Type II", isCorrect: false },
@@ -283,7 +283,7 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type2-period",
       },
-      explanation: "Type II tests operating effectiveness over a period (typically 6-12 months)",
+      explanation: "Per SSAE 18, Type II reports test operating effectiveness over a period (typically 6-12 months) vs. Type I point-in-time.",
       dropdownOptions: [
         { id: "opt-type1-period", order: 1, text: "Type I - tests over a period", isCorrect: false },
         { id: "opt-type2-period", order: 2, text: "Type II - tests over a period", isCorrect: true },
@@ -300,7 +300,7 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type1-design",
       },
-      explanation: "Type I reports assess control design at a point in time",
+      explanation: "Per SSAE 18, Type I reports assess control design and implementation at a point in time (suitable for quick assessments).",
       dropdownOptions: [
         { id: "opt-type1-design", order: 1, text: "SOC 2 Type I", isCorrect: true },
         { id: "opt-type2-design", order: 2, text: "SOC 2 Type II", isCorrect: false },
@@ -317,7 +317,7 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-inclusive-carve",
       },
-      explanation: "Inclusive vs carve-out method affects scope of controls tested",
+      explanation: "Per SSAE 18, inclusive vs carve-out method determines whether subservice organization controls are included in scope.",
       dropdownOptions: [
         { id: "opt-ignore", order: 1, text: "Ignore - not relevant", isCorrect: false },
         { id: "opt-inclusive-carve", order: 2, text: "Inclusive vs carve-out method", isCorrect: true },
@@ -388,7 +388,7 @@ export const iscCybersecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-spear-phishing",
       },
-      explanation: "Targeted phishing impersonating executive is spear phishing/BEC",
+      explanation: "Per NIST/FBI guidance, targeted phishing impersonating an executive is spear phishing/Business Email Compromise (BEC).",
       dropdownOptions: [
         { id: "opt-spear-phishing", order: 1, text: "Spear phishing/Business Email Compromise", isCorrect: true },
         { id: "opt-malware", order: 2, text: "Malware infection", isCorrect: false },
@@ -405,7 +405,7 @@ export const iscCybersecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ddos",
       },
-      explanation: "Distributed denial of service from multiple sources",
+      explanation: "Per NIST SP 800-61, a flood of traffic from multiple sources is a Distributed Denial of Service (DDoS) attack.",
       dropdownOptions: [
         { id: "opt-dos", order: 1, text: "Simple Denial of Service", isCorrect: false },
         { id: "opt-ddos", order: 2, text: "Distributed Denial of Service (DDoS)", isCorrect: true },
@@ -422,7 +422,7 @@ export const iscCybersecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ransomware",
       },
-      explanation: "Encrypting files and demanding payment is ransomware",
+      explanation: "Per CISA guidance, malware that encrypts files and demands payment for decryption is classified as ransomware.",
       dropdownOptions: [
         { id: "opt-virus", order: 1, text: "Computer virus", isCorrect: false },
         { id: "opt-ransomware", order: 2, text: "Ransomware", isCorrect: true },
@@ -439,7 +439,7 @@ export const iscCybersecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-input-validation",
       },
-      explanation: "Input validation and parameterized queries prevent SQL injection",
+      explanation: "Per OWASP guidelines, input validation and parameterized queries are the primary preventive controls for SQL injection.",
       dropdownOptions: [
         { id: "opt-firewall", order: 1, text: "Network firewall", isCorrect: false },
         { id: "opt-input-validation", order: 2, text: "Input validation/parameterized queries", isCorrect: true },
@@ -456,7 +456,7 @@ export const iscCybersecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-insider-threat",
       },
-      explanation: "Malicious insider with authorized access is an insider threat",
+      explanation: "Per NIST SP 800-53, a malicious actor with legitimate authorized access represents an insider threat.",
       dropdownOptions: [
         { id: "opt-external-hacker", order: 1, text: "External hacker", isCorrect: false },
         { id: "opt-insider-threat", order: 2, text: "Insider threat", isCorrect: true },
@@ -473,7 +473,7 @@ export const iscCybersecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-encryption-tls",
       },
-      explanation: "TLS/SSL encryption protects data in transit",
+      explanation: "Per NIST SP 800-52 and TSC CC6.7, TLS/SSL encryption protects data confidentiality and integrity in transit.",
       dropdownOptions: [
         { id: "opt-firewall-6", order: 1, text: "Firewall rules", isCorrect: false },
         { id: "opt-encryption-tls", order: 2, text: "TLS/SSL encryption", isCorrect: true },
@@ -547,7 +547,7 @@ export const iscDataAnalyticsTBS: TBSQuestion = {
         value: 6.33,
         tolerance: 0.1,
       },
-      explanation: "2,850 / 45,000 = 6.33%",
+      explanation: "Per data analytics, threshold analysis: 2,850 / 45,000 = 6.33% of invoices just below approval threshold.",
     },
     {
       id: "req-duplicate-rate",
@@ -560,7 +560,7 @@ export const iscDataAnalyticsTBS: TBSQuestion = {
         value: 0.28,
         tolerance: 0.02,
       },
-      explanation: "127 / 45,000 = 0.28%",
+      explanation: "Per data analytics, duplicate rate = Duplicates / Total = 127 / 45,000 = 0.28%.",
     },
     {
       id: "req-duplicate-multiple",
@@ -573,7 +573,7 @@ export const iscDataAnalyticsTBS: TBSQuestion = {
         value: 2.8,
         tolerance: 0.1,
       },
-      explanation: "0.28% / 0.1% = 2.8 times normal",
+      explanation: "Per data analytics, rate comparison = Actual rate / Normal rate = 0.28% / 0.1% = 2.8 times normal.",
     },
     {
       id: "req-new-vendor-pct",
@@ -586,7 +586,7 @@ export const iscDataAnalyticsTBS: TBSQuestion = {
         value: 0.76,
         tolerance: 0.05,
       },
-      explanation: "340 / 45,000 = 0.76%",
+      explanation: "Per data analytics, new vendor percentage = New vendor payments / Total = 340 / 45,000 = 0.76%.",
     },
     {
       id: "req-threshold-risk",
@@ -598,7 +598,7 @@ export const iscDataAnalyticsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-split-invoices",
       },
-      explanation: "Concentration below approval threshold suggests invoice splitting",
+      explanation: "Per fraud analytics, concentration of invoices just below approval threshold is a red flag for invoice splitting fraud.",
       dropdownOptions: [
         { id: "opt-normal-business", order: 1, text: "Normal business operations", isCorrect: false },
         { id: "opt-split-invoices", order: 2, text: "Invoice splitting to avoid approval", isCorrect: true },
@@ -615,7 +615,7 @@ export const iscDataAnalyticsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-benford",
       },
-      explanation: "Benford's Law analysis detects unnatural digit distributions",
+      explanation: "Per AICPA audit data analytics guidance, Benford's Law analysis detects unnatural digit distributions indicating manipulation.",
       dropdownOptions: [
         { id: "opt-ratio", order: 1, text: "Ratio analysis", isCorrect: false },
         { id: "opt-benford", order: 2, text: "Benford's Law analysis", isCorrect: true },
@@ -691,7 +691,7 @@ export const iscChangeManagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-no-documentation",
       },
-      explanation: "Verbal approval lacks documentation and audit trail",
+      explanation: "Per COBIT BAI06.01, verbal approval lacks documentation and audit trail required for change control evidence.",
       dropdownOptions: [
         { id: "opt-too-slow", order: 1, text: "Process is too slow", isCorrect: false },
         { id: "opt-no-documentation", order: 2, text: "No documented approval evidence", isCorrect: true },
@@ -708,7 +708,7 @@ export const iscChangeManagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-dev-migrates",
       },
-      explanation: "Developer should not migrate their own code to production",
+      explanation: "Per COBIT BAI06.01 and SOX requirements, developers should not migrate their own code to production (SOD violation).",
       dropdownOptions: [
         { id: "opt-none", order: 1, text: "No SOD violation", isCorrect: false },
         { id: "opt-dev-migrates", order: 2, text: "Developer migrates to production", isCorrect: true },
@@ -725,7 +725,7 @@ export const iscChangeManagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-test-after-prod",
       },
-      explanation: "QA testing after production deployment defeats the purpose",
+      explanation: "Per ITIL/COBIT change management, QA testing must occur before production deployment; post-deployment testing defeats control purpose.",
       dropdownOptions: [
         { id: "opt-dev-tests", order: 1, text: "Developer performs testing", isCorrect: false },
         { id: "opt-test-after-prod", order: 2, text: "Testing occurs after production deployment", isCorrect: true },
@@ -742,7 +742,7 @@ export const iscChangeManagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-extended-outage",
       },
-      explanation: "Failed changes without rollback plan cause extended service disruption",
+      explanation: "Per ITIL service management, failed changes without documented rollback procedures cause extended service disruption.",
       dropdownOptions: [
         { id: "opt-cost", order: 1, text: "Higher project costs", isCorrect: false },
         { id: "opt-extended-outage", order: 2, text: "Extended service disruption", isCorrect: true },
@@ -759,7 +759,7 @@ export const iscChangeManagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-post-doc",
       },
-      explanation: "Emergency changes need expedited process but must document afterward",
+      explanation: "Per COBIT BAI06.01, emergency changes require expedited approval but must include post-implementation documentation and review.",
       dropdownOptions: [
         { id: "opt-eliminate", order: 1, text: "Eliminate emergency changes", isCorrect: false },
         { id: "opt-post-doc", order: 2, text: "Require post-implementation documentation and review", isCorrect: true },
@@ -776,7 +776,7 @@ export const iscChangeManagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-too-long",
       },
-      explanation: "30 days is too long; documentation should be contemporaneous",
+      explanation: "Per COBIT/SOX requirements, 30 days is too long; documentation should be contemporaneous to ensure accuracy and completeness.",
       dropdownOptions: [
         { id: "opt-adequate", order: 1, text: "Adequate - provides flexibility", isCorrect: false },
         { id: "opt-too-long", order: 2, text: "Too long - may forget details", isCorrect: true },
@@ -850,7 +850,7 @@ export const iscERPSystemsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-too-high",
       },
-      explanation: "15% is too high; typically 1-5% is appropriate",
+      explanation: "Per ERP control best practices, 15% tolerance is too high; typically 1-5% is appropriate to prevent payment fraud.",
       dropdownOptions: [
         { id: "opt-appropriate", order: 1, text: "Appropriate for the industry", isCorrect: false },
         { id: "opt-too-high", order: 2, text: "Too high - increases payment risk", isCorrect: true },
@@ -867,7 +867,7 @@ export const iscERPSystemsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-process-issue",
       },
-      explanation: "High exception rate despite high tolerance suggests process problems",
+      explanation: "Per process analytics, high exception rate (35%) despite high tolerance (15%) suggests underlying process or data quality issues.",
       dropdownOptions: [
         { id: "opt-normal", order: 1, text: "Normal business operations", isCorrect: false },
         { id: "opt-process-issue", order: 2, text: "Process or data quality issues", isCorrect: true },
@@ -884,7 +884,7 @@ export const iscERPSystemsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-fraud-risk",
       },
-      explanation: "Manual SOD enforcement is error-prone and increases fraud risk",
+      explanation: "Per COBIT DSS05.04, manual SOD enforcement is error-prone; system-enforced SOD reduces fraud and error risk.",
       dropdownOptions: [
         { id: "opt-efficiency", order: 1, text: "Reduced efficiency", isCorrect: false },
         { id: "opt-fraud-risk", order: 2, text: "Increased fraud risk", isCorrect: true },
@@ -901,7 +901,7 @@ export const iscERPSystemsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-fictitious-vendor",
       },
-      explanation: "Uncontrolled vendor master changes enable fictitious vendor fraud",
+      explanation: "Per COSO/fraud prevention guidance, uncontrolled vendor master changes enable fictitious vendor fraud schemes.",
       dropdownOptions: [
         { id: "opt-data-errors", order: 1, text: "Data entry errors only", isCorrect: false },
         { id: "opt-fictitious-vendor", order: 2, text: "Fictitious vendor fraud", isCorrect: true },
@@ -918,7 +918,7 @@ export const iscERPSystemsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-config-changes",
       },
-      explanation: "Configuration and master data changes also need logging",
+      explanation: "Per NIST AU-2 and TSC CC7.2, audit logging must include configuration and master data changes, not just transactions.",
       dropdownOptions: [
         { id: "opt-adequate", order: 1, text: "Adequate - financial is most important", isCorrect: false },
         { id: "opt-config-changes", order: 2, text: "Misses configuration/master data changes", isCorrect: true },
@@ -935,7 +935,7 @@ export const iscERPSystemsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-cutoff-errors",
       },
-      explanation: "Extended adjustment period increases cutoff and manipulation risk",
+      explanation: "Per financial control best practices, extended soft close periods (10 days) increase cutoff errors and manipulation risk.",
       dropdownOptions: [
         { id: "opt-adequate-close", order: 1, text: "Adequate for adjustments", isCorrect: false },
         { id: "opt-cutoff-errors", order: 2, text: "Cutoff errors and manipulation risk", isCorrect: true },
@@ -1427,7 +1427,7 @@ export const iscCloudSecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-customer-iaas",
       },
-      explanation: "In IaaS, customer is responsible for OS management including patching",
+      explanation: "Per the cloud shared responsibility model (NIST SP 500-292), in IaaS the customer is responsible for OS management including patching.",
       dropdownOptions: [
         { id: "opt-provider-iaas", order: 1, text: "Cloud provider", isCorrect: false },
         { id: "opt-customer-iaas", order: 2, text: "Customer", isCorrect: true },
@@ -1444,7 +1444,7 @@ export const iscCloudSecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-provider-saas",
       },
-      explanation: "In SaaS, provider manages the application including security patches",
+      explanation: "Per the cloud shared responsibility model, in SaaS the provider manages the application including security patches; customer only manages data and access.",
       dropdownOptions: [
         { id: "opt-provider-saas", order: 1, text: "Cloud provider", isCorrect: true },
         { id: "opt-customer-saas", order: 2, text: "Customer", isCorrect: false },
@@ -1461,7 +1461,7 @@ export const iscCloudSecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-data-location",
       },
-      explanation: "Financial regulations often have data residency requirements",
+      explanation: "Per GDPR, SOX, and various financial regulations, data residency/location requirements are critical compliance concerns for cloud-hosted financial data.",
       dropdownOptions: [
         { id: "opt-cost", order: 1, text: "Cost management", isCorrect: false },
         { id: "opt-data-location", order: 2, text: "Data residency/location requirements", isCorrect: true },
@@ -1478,7 +1478,7 @@ export const iscCloudSecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-encryption-access",
       },
-      explanation: "PII requires encryption at rest and in transit plus strict access controls",
+      explanation: "Per NIST SP 800-122 (PII guidance) and TSC CC6.1, PII requires encryption at rest and in transit plus strict access controls.",
       dropdownOptions: [
         { id: "opt-firewall", order: 1, text: "Network firewall", isCorrect: false },
         { id: "opt-encryption-access", order: 2, text: "Encryption and access controls", isCorrect: true },
@@ -1495,7 +1495,7 @@ export const iscCloudSecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-soc-report",
       },
-      explanation: "SOC 2 reports provide independent assurance over cloud provider controls",
+      explanation: "Per AICPA/AT-C 205, SOC 2 Type II reports provide independent assurance over cloud provider controls relevant to Trust Services Criteria.",
       dropdownOptions: [
         { id: "opt-marketing", order: 1, text: "Marketing materials", isCorrect: false },
         { id: "opt-soc-report", order: 2, text: "SOC 2 Type II report", isCorrect: true },
@@ -1512,7 +1512,7 @@ export const iscCloudSecurityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-data-portability",
       },
-      explanation: "Data portability and exit provisions ensure ability to change providers",
+      explanation: "Per cloud governance best practices, data portability and exit provisions are critical contract elements to avoid vendor lock-in and ensure business continuity.",
       dropdownOptions: [
         { id: "opt-unlimited-use", order: 1, text: "Unlimited user licenses", isCorrect: false },
         { id: "opt-data-portability", order: 2, text: "Data portability and exit provisions", isCorrect: true },
@@ -1584,7 +1584,7 @@ export const iscCOSOFrameworkTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-control-env",
       },
-      explanation: "Board oversight is a key element of control environment",
+      explanation: "Per COSO 2013 Framework, board oversight is a key principle of the Control Environment component (Principle 2).",
       dropdownOptions: [
         { id: "opt-control-env", order: 1, text: "Control Environment", isCorrect: true },
         { id: "opt-risk-assess", order: 2, text: "Risk Assessment", isCorrect: false },
@@ -1601,7 +1601,7 @@ export const iscCOSOFrameworkTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-control-act",
       },
-      explanation: "Three-way match is a control activity that addresses payment risk",
+      explanation: "Per COSO 2013, three-way match (PO/receipt/invoice) is a Control Activity that mitigates payment risk (Principle 10: transaction-level controls).",
       dropdownOptions: [
         { id: "opt-risk-assess-2", order: 1, text: "Risk Assessment", isCorrect: false },
         { id: "opt-control-act", order: 2, text: "Control Activities", isCorrect: true },
@@ -1618,7 +1618,7 @@ export const iscCOSOFrameworkTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-risk-assess-3",
       },
-      explanation: "Identifying and analyzing fraud risk is risk assessment",
+      explanation: "Per COSO 2013 Principle 8, identifying and analyzing fraud risk is part of the Risk Assessment component.",
       dropdownOptions: [
         { id: "opt-control-env-3", order: 1, text: "Control Environment", isCorrect: false },
         { id: "opt-risk-assess-3", order: 2, text: "Risk Assessment", isCorrect: true },
@@ -1635,7 +1635,7 @@ export const iscCOSOFrameworkTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-monitoring-4",
       },
-      explanation: "Exception reports are ongoing monitoring of control effectiveness",
+      explanation: "Per COSO 2013 Principle 16, exception reports are ongoing evaluations (Monitoring component) that assess control operating effectiveness.",
       dropdownOptions: [
         { id: "opt-control-act-4", order: 1, text: "Control Activities", isCorrect: false },
         { id: "opt-info-comm-4", order: 2, text: "Information & Communication", isCorrect: false },
@@ -1652,7 +1652,7 @@ export const iscCOSOFrameworkTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-control-env-5",
       },
-      explanation: "Ethics training supports the control environment (tone at top)",
+      explanation: "Per COSO 2013 Principle 1, ethics training supports the Control Environment by demonstrating commitment to integrity and ethical values.",
       dropdownOptions: [
         { id: "opt-control-env-5", order: 1, text: "Control Environment", isCorrect: true },
         { id: "opt-control-act-5", order: 2, text: "Control Activities", isCorrect: false },
@@ -1723,7 +1723,7 @@ export const iscITAuditProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-inspection-access",
       },
-      explanation: "Inspect access request forms and compare to system access",
+      explanation: "Per IT audit standards, inspection of authorization documentation provides evidence that access was properly approved before provisioning.",
       dropdownOptions: [
         { id: "opt-inquiry-access", order: 1, text: "Inquiry of IT manager", isCorrect: false },
         { id: "opt-inspection-access", order: 2, text: "Inspect authorization documentation", isCorrect: true },
@@ -1740,7 +1740,7 @@ export const iscITAuditProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-inspection-change",
       },
-      explanation: "Inspect test plans, results, and sign-offs for sample of changes",
+      explanation: "Per COBIT BAI06 and IT audit guidance, inspection of test documentation and approvals provides evidence of proper change testing.",
       dropdownOptions: [
         { id: "opt-inquiry-change", order: 1, text: "Inquiry of developers", isCorrect: false },
         { id: "opt-inspection-change", order: 2, text: "Inspect test documentation and approvals", isCorrect: true },
@@ -1757,7 +1757,7 @@ export const iscITAuditProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-analytics-batch",
       },
-      explanation: "Analyze batch job logs for entire period to identify failures",
+      explanation: "Per data analytics audit techniques, analyzing batch job logs for the entire period provides comprehensive coverage to identify all failures.",
       dropdownOptions: [
         { id: "opt-inquiry-batch", order: 1, text: "Inquiry of operations staff", isCorrect: false },
         { id: "opt-observation-batch", order: 2, text: "Observe one batch job running", isCorrect: false },
@@ -1774,7 +1774,7 @@ export const iscITAuditProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-inspect-review",
       },
-      explanation: "Inspect evidence of privileged access reviews being performed",
+      explanation: "Per NIST AC-2 and TSC CC6.2, inspection of privileged access review documentation provides evidence that monitoring controls are operating.",
       dropdownOptions: [
         { id: "opt-inquiry-priv", order: 1, text: "Inquiry of security manager", isCorrect: false },
         { id: "opt-inspect-review", order: 2, text: "Inspect review documentation and follow-up", isCorrect: true },
@@ -1791,7 +1791,7 @@ export const iscITAuditProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-reperform-restore",
       },
-      explanation: "Reperform a restore to verify backups are actually recoverable",
+      explanation: "Per NIST CP-10 and business continuity best practices, reperforming a test restore provides the strongest evidence that backups are actually recoverable.",
       dropdownOptions: [
         { id: "opt-inquiry-backup", order: 1, text: "Inquiry of backup administrator", isCorrect: false },
         { id: "opt-inspect-logs", order: 2, text: "Inspect backup completion logs", isCorrect: false },
@@ -1849,7 +1849,7 @@ export const iscDatabaseSecurityTBS: TBSQuestion = {
         { id: "medium-risk", order: 3, text: "Medium - compensating controls may exist", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Default credentials are widely known and targeted by attackers",
+      explanation: "Per CIS Benchmarks and NIST hardening guidelines, default credentials are widely known and present an immediate, critical exploitation risk.",
     },
     {
       id: "req-encryption-rest",
@@ -1863,7 +1863,7 @@ export const iscDatabaseSecurityTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - physical security compensates", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Without encryption at rest, data is exposed if storage media is accessed",
+      explanation: "Per NIST SC-28 and PCI DSS, without encryption at rest, data is exposed if storage media is stolen or improperly disposed.",
     },
     {
       id: "req-audit-logging",
@@ -1877,7 +1877,7 @@ export const iscDatabaseSecurityTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Excessive - generates too many logs", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "inadequate" },
-      explanation: "Logging only failed logins misses successful unauthorized access",
+      explanation: "Per NIST AU-2 and TSC CC7.2, logging only failed logins misses successful unauthorized access; comprehensive audit logging is required.",
     },
     {
       id: "req-priority-fix",
@@ -1891,7 +1891,7 @@ export const iscDatabaseSecurityTBS: TBSQuestion = {
         { id: "enable-encryption", order: 3, text: "Enable encryption at rest", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "change-defaults" },
-      explanation: "Default passwords present immediate exploitation risk",
+      explanation: "Per security remediation priorities, default passwords present immediate exploitation risk and should be addressed before other control gaps.",
     },
   ],
 };
@@ -1944,7 +1944,7 @@ export const iscIncidentResponseTBS: TBSQuestion = {
         { id: "investigate-source", order: 3, text: "Investigate external IP address", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "contain-incident" },
-      explanation: "Containment prevents further damage; must stop ongoing access first",
+      explanation: "Per NIST SP 800-61 (Incident Response Guide), containment is the first priority to prevent further damage before investigation.",
     },
     {
       id: "req-breach-type",
@@ -1958,7 +1958,7 @@ export const iscIncidentResponseTBS: TBSQuestion = {
         { id: "minor-incident", order: 3, text: "Minor incident - internal review only", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "data-breach" },
-      explanation: "PII exfiltration constitutes a reportable data breach",
+      explanation: "Per state breach notification laws and GDPR, PII exfiltration to external parties constitutes a reportable data breach.",
     },
     {
       id: "req-notification",
@@ -1972,7 +1972,7 @@ export const iscIncidentResponseTBS: TBSQuestion = {
         { id: "optional", order: 3, text: "Notification is discretionary", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "affected-individuals" },
-      explanation: "Most state breach laws require notification when PII is compromised",
+      explanation: "Per state breach notification laws (all 50 states), affected individuals must be notified when unencrypted PII is compromised.",
     },
     {
       id: "req-evidence",
@@ -1986,7 +1986,7 @@ export const iscIncidentResponseTBS: TBSQuestion = {
         { id: "interview-admin", order: 3, text: "Interview the database administrator", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "preserve-logs" },
-      explanation: "Logs provide forensic evidence; must be preserved before rotation",
+      explanation: "Per NIST SP 800-61 and forensic best practices, logs provide critical evidence and must be preserved immediately before automatic rotation or deletion.",
     },
   ],
 };
@@ -2040,7 +2040,7 @@ export const iscSOC2AnalysisTBS: TBSQuestion = {
         { id: "old-report", order: 3, text: "Report is outdated", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "no-testing" },
-      explanation: "Type 1 only tests design, not operating effectiveness over time",
+      explanation: "Per AT-C 205/SSAE 18, Type 1 reports only test design at a point in time, not operating effectiveness over a period.",
     },
     {
       id: "req-carve-out",
@@ -2054,7 +2054,7 @@ export const iscSOC2AnalysisTBS: TBSQuestion = {
         { id: "enhanced", order: 3, text: "Enhanced - more detailed coverage", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "gap-coverage" },
-      explanation: "Carve-out excludes subservice org controls from scope",
+      explanation: "Per AT-C 320, carve-out method excludes subservice organization controls from the report scope; user must separately assess those controls.",
     },
     {
       id: "req-cuec",
@@ -2068,7 +2068,7 @@ export const iscSOC2AnalysisTBS: TBSQuestion = {
         { id: "covered", order: 3, text: "Already covered by provider controls", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "required" },
-      explanation: "CUECs are essential; service controls depend on user implementation",
+      explanation: "Per SOC reporting standards, Complementary User Entity Controls (CUECs) are assumed in the service organization's control design; users must implement them.",
     },
     {
       id: "req-exceptions",
@@ -2082,7 +2082,7 @@ export const iscSOC2AnalysisTBS: TBSQuestion = {
         { id: "reject-provider", order: 3, text: "Reject provider due to exceptions", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "assess-impact" },
-      explanation: "Exceptions require assessment of materiality and risk mitigation",
+      explanation: "Per user entity guidance, control exceptions require assessment of their materiality, impact, and whether compensating controls exist.",
     },
   ],
 };
@@ -2150,7 +2150,7 @@ export const iscEncryptionTBS: TBSQuestion = {
         { id: "best-practice", order: 3, text: "Best practice for compatibility", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "vulnerable" },
-      explanation: "TLS 1.0 has known vulnerabilities; 1.2 or 1.3 required",
+      explanation: "Per NIST SP 800-52 and PCI DSS, TLS 1.0 has known vulnerabilities (BEAST, POODLE); TLS 1.2 or 1.3 is required.",
     },
     {
       id: "req-3des",
@@ -2164,7 +2164,7 @@ export const iscEncryptionTBS: TBSQuestion = {
         { id: "overkill", order: 3, text: "Overkill - single DES sufficient", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "deprecated" },
-      explanation: "3DES is deprecated due to small block size vulnerabilities",
+      explanation: "Per NIST SP 800-131A, 3DES is deprecated due to small 64-bit block size vulnerabilities (Sweet32 attack); migration to AES required.",
     },
     {
       id: "req-key-storage",
@@ -2178,7 +2178,7 @@ export const iscEncryptionTBS: TBSQuestion = {
         { id: "medium-risk", order: 3, text: "Medium - acceptable with access controls", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Keys stored with data defeats encryption purpose if server compromised",
+      explanation: "Per NIST key management guidelines, storing keys on the same server as encrypted data defeats encryption if the server is compromised.",
     },
     {
       id: "req-key-backup",
@@ -2192,7 +2192,7 @@ export const iscEncryptionTBS: TBSQuestion = {
         { id: "redundant", order: 3, text: "Redundant - keys can be regenerated", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "security-risk" },
-      explanation: "Keys should be backed up separately from encrypted data",
+      explanation: "Per NIST SP 800-57, encryption keys should be backed up separately from encrypted data to prevent both being compromised together.",
     },
   ],
 };
@@ -2245,7 +2245,7 @@ export const iscIdentityManagementTBS: TBSQuestion = {
         { id: "external-audit", order: 3, text: "External auditors - independence required", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "data-owners" },
-      explanation: "Data owners understand legitimate business need for access",
+      explanation: "Per NIST AC-2 and access control best practices, data/application owners should perform access reviews as they understand legitimate business need.",
     },
     {
       id: "req-deprovision",
@@ -2259,7 +2259,7 @@ export const iscIdentityManagementTBS: TBSQuestion = {
         { id: "aggressive", order: 3, text: "Too aggressive - consider 5 days", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "too-slow" },
-      explanation: "3 days creates window for unauthorized access by terminated employee",
+      explanation: "Per NIST PS-4 and TSC CC6.2, account deprovisioning should occur same-day; 3 days creates a window for unauthorized access by terminated employees.",
     },
     {
       id: "req-privileged-access",
@@ -2273,7 +2273,7 @@ export const iscIdentityManagementTBS: TBSQuestion = {
         { id: "fewer-reviews", order: 3, text: "Less frequent reviews for efficiency", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "jit-access" },
-      explanation: "Standing privileged access increases risk; JIT reduces attack surface",
+      explanation: "Per NIST AC-2(2) and privileged access management best practices, just-in-time (JIT) time-limited access reduces attack surface vs. standing privileges.",
     },
     {
       id: "req-contractor",
@@ -2287,7 +2287,7 @@ export const iscIdentityManagementTBS: TBSQuestion = {
         { id: "too-restrictive", order: 3, text: "Too restrictive - limits productivity", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "missing-controls" },
-      explanation: "Contractor access should have automatic expiration and enhanced review",
+      explanation: "Per NIST PS-7 and third-party access controls, contractor access should have automatic expiration dates and enhanced monitoring/review.",
     },
   ],
 };
@@ -2341,7 +2341,7 @@ export const iscVendorRiskTBS: TBSQuestion = {
         { id: "sla-weak", order: 3, text: "SLA availability target is too low", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "no-ongoing" },
-      explanation: "Critical vendors require annual reassessment; 3 years is too long",
+      explanation: "Per third-party risk management guidance and regulatory expectations, critical/high-risk vendors require annual reassessment; 3 years creates unacceptable risk.",
     },
     {
       id: "req-soc-report",
@@ -2355,7 +2355,7 @@ export const iscVendorRiskTBS: TBSQuestion = {
         { id: "adequate", order: 3, text: "Adequate for payroll services", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "outdated" },
-      explanation: "SOC reports should be obtained annually; 2 years is stale",
+      explanation: "Per vendor due diligence best practices, SOC reports should be obtained annually; a 2-year-old report does not provide current assurance.",
     },
     {
       id: "req-risk-level",
@@ -2369,7 +2369,7 @@ export const iscVendorRiskTBS: TBSQuestion = {
         { id: "medium", order: 3, text: "Medium - standard business service", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high" },
-      explanation: "Access to PII and financial data makes this a critical vendor",
+      explanation: "Per vendor risk tiering methodologies, access to sensitive PII and financial data classifies this as a high/critical risk vendor requiring enhanced oversight.",
     },
     {
       id: "req-action",
@@ -2383,7 +2383,7 @@ export const iscVendorRiskTBS: TBSQuestion = {
         { id: "increase-insurance", order: 3, text: "Request increased insurance coverage", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "request-soc" },
-      explanation: "Obtain current attestation and perform risk reassessment",
+      explanation: "Per vendor management best practices, the immediate action is to request current SOC attestation and conduct a comprehensive risk reassessment.",
     },
   ],
 };
@@ -2435,7 +2435,7 @@ export const iscAppSecurityTBS: TBSQuestion = {
         { id: "headers", order: 3, text: "Security headers - easy fix", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "sql-injection" },
-      explanation: "SQL injection has highest CVSS and can lead to data breach",
+      explanation: "Per OWASP and CVSSv3 prioritization, SQL injection (CVSS 9.8 Critical) has highest severity and can lead to complete database compromise.",
     },
     {
       id: "req-sql-risk",
@@ -2449,7 +2449,7 @@ export const iscAppSecurityTBS: TBSQuestion = {
         { id: "defacement", order: 3, text: "Website defacement", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "data-breach" },
-      explanation: "SQL injection allows attackers to query/modify database",
+      explanation: "Per OWASP Top 10, SQL injection's primary risk is unauthorized data access/exfiltration, potentially exposing entire database contents.",
     },
     {
       id: "req-xss-control",
@@ -2463,7 +2463,7 @@ export const iscAppSecurityTBS: TBSQuestion = {
         { id: "encryption", order: 3, text: "Data encryption", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "output-encoding" },
-      explanation: "Proper encoding prevents script injection; WAF is compensating",
+      explanation: "Per OWASP XSS Prevention Cheat Sheet, input validation and output encoding are primary controls; WAF is a compensating (not preventive) control.",
     },
     {
       id: "req-info-disclosure",
@@ -2477,7 +2477,7 @@ export const iscAppSecurityTBS: TBSQuestion = {
         { id: "immediate", order: 3, text: "Remediate immediately", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "schedule" },
-      explanation: "Low severity items should be tracked and remediated in normal cycle",
+      explanation: "Per vulnerability management best practices, low severity items should be tracked and scheduled for remediation in normal development cycles.",
     },
   ],
 };
@@ -2530,7 +2530,7 @@ export const iscSDLCTBS: TBSQuestion = {
         { id: "no-concern", order: 3, text: "Agile methodology requires flexibility", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "dev-deploy" },
-      explanation: "Developers deploying own code violates segregation of duties",
+      explanation: "Per COBIT BAI06.01 and SOX IT controls, developers should not deploy their own code to production (segregation of duties violation).",
     },
     {
       id: "req-hotfix",
@@ -2544,7 +2544,7 @@ export const iscSDLCTBS: TBSQuestion = {
         { id: "low-risk", order: 3, text: "Low - hotfixes are small changes", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Bypassing review allows unauthorized or erroneous changes",
+      explanation: "Per secure SDLC principles, bypassing code review (even for hotfixes) allows unauthorized or erroneous changes without independent verification.",
     },
     {
       id: "req-testing",
@@ -2558,7 +2558,7 @@ export const iscSDLCTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Current testing is excessive", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "integration-required" },
-      explanation: "Unit tests alone miss integration and end-to-end issues",
+      explanation: "Per software testing best practices, unit tests alone miss integration and end-to-end issues; integration testing should be mandatory.",
     },
     {
       id: "req-rollback",
@@ -2572,7 +2572,7 @@ export const iscSDLCTBS: TBSQuestion = {
         { id: "overkill", order: 3, text: "Automated rollback is overkill", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "no-automation" },
-      explanation: "Manual rollback is slow and may cause extended outages",
+      explanation: "Per DevOps and deployment best practices, manual rollback procedures are slow, error-prone, and may cause extended service outages.",
     },
   ],
 };
@@ -2624,7 +2624,7 @@ export const iscNetworkSegmentationTBS: TBSQuestion = {
         { id: "low-risk", order: 3, text: "Low - developers are trusted", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Dev access to prod enables unauthorized changes and data access",
+      explanation: "Per COBIT and SOX IT controls, development access to production enables unauthorized changes and data access, violating segregation of duties.",
     },
     {
       id: "req-pci-flat",
@@ -2638,7 +2638,7 @@ export const iscNetworkSegmentationTBS: TBSQuestion = {
         { id: "best-practice", order: 3, text: "Best practice for PCI environments", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "violation" },
-      explanation: "PCI-DSS requires segmentation within cardholder data environment",
+      explanation: "Per PCI-DSS requirement 1.3, network segmentation within the cardholder data environment (CDE) is required to limit scope and reduce risk.",
     },
     {
       id: "req-corporate-access",
@@ -2652,7 +2652,7 @@ export const iscNetworkSegmentationTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard corporate network design", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "lateral-movement" },
-      explanation: "Flat access from corporate allows attackers to reach sensitive systems",
+      explanation: "Per NIST SC-7 and zero-trust principles, flat corporate access enables lateral movement if a workstation is compromised.",
     },
     {
       id: "req-improvement",
@@ -2666,7 +2666,7 @@ export const iscNetworkSegmentationTBS: TBSQuestion = {
         { id: "remove-dev", order: 3, text: "Remove development zone", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "zero-trust" },
-      explanation: "Zero-trust eliminates implicit trust between zones",
+      explanation: "Per NIST SP 800-207 (Zero Trust Architecture), zero-trust eliminates implicit trust between zones and verifies every access request.",
     },
   ],
 };
@@ -2719,7 +2719,7 @@ export const iscAuditLogsTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard practice for most organizations", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "tampering" },
-      explanation: "Local storage allows attackers to modify/delete evidence",
+      explanation: "Per NIST AU-9, local log storage allows attackers with system access to modify or delete evidence; centralized logging is required.",
     },
     {
       id: "req-retention",
@@ -2733,7 +2733,7 @@ export const iscAuditLogsTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Excessive - causes storage issues", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "insufficient" },
-      explanation: "Breaches often discovered months later; need longer retention",
+      explanation: "Per NIST AU-11 and incident response guidance, breaches are often discovered months later; 90+ days retention is typical minimum.",
     },
     {
       id: "req-review",
@@ -2747,7 +2747,7 @@ export const iscAuditLogsTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Excessive - daily would be better", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "ineffective" },
-      explanation: "Manual review cannot scale; automated correlation needed",
+      explanation: "Per security operations best practices, manual log review cannot scale to handle high volumes; automated correlation and alerting is required.",
     },
     {
       id: "req-improvement",
@@ -2761,7 +2761,7 @@ export const iscAuditLogsTBS: TBSQuestion = {
         { id: "standardize-format", order: 3, text: "Standardize log formats", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "implement-siem" },
-      explanation: "SIEM provides centralized storage, correlation, and real-time alerting",
+      explanation: "Per NIST SI-4 and TSC CC7.2, a SIEM provides centralized storage, automated correlation, and real-time alerting for security events.",
     },
   ],
 };
@@ -2814,7 +2814,7 @@ export const iscDisasterRecoveryTBS: TBSQuestion = {
         { id: "optimal", order: 3, text: "Optimal - fast recovery time", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Building-wide disaster would destroy both production and backups",
+      explanation: "Per NIST CP-6 and business continuity best practices, backups in the same building are vulnerable to site-wide disasters (fire, flood, etc.).",
     },
     {
       id: "req-rpo-alignment",
@@ -2828,7 +2828,7 @@ export const iscDisasterRecoveryTBS: TBSQuestion = {
         { id: "exceeds", order: 3, text: "Exceeds requirements unnecessarily", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "aligned" },
-      explanation: "Hourly incremental backups support 4-hour RPO",
+      explanation: "Per recovery planning, hourly incremental backups support a 4-hour RPO by ensuring maximum data loss is within the defined objective.",
     },
     {
       id: "req-dr-site",
@@ -2842,7 +2842,7 @@ export const iscDisasterRecoveryTBS: TBSQuestion = {
         { id: "definitely", order: 3, text: "Definitely - modern automation enables fast recovery", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "unlikely" },
-      explanation: "Cold sites require hardware procurement and configuration",
+      explanation: "Per DR planning guidance, cold sites typically require 48-72 hours for hardware procurement, installation, and configuration to achieve operational status.",
     },
     {
       id: "req-testing",
@@ -2856,7 +2856,7 @@ export const iscDisasterRecoveryTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Excessive - testing is expensive", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "inadequate" },
-      explanation: "Tabletop exercises don't validate actual recovery capability",
+      explanation: "Per NIST CP-4 and DR testing standards, tabletop exercises alone don't validate actual recovery capability; functional failover testing is required annually.",
     },
   ],
 };
@@ -2910,7 +2910,7 @@ export const iscMobileSecurityTBS: TBSQuestion = {
         { id: "balanced", order: 3, text: "Balanced approach to security and usability", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Unmanaged BYOD devices cannot be secured or wiped if lost",
+      explanation: "Per mobile security best practices, unmanaged BYOD devices cannot be secured, remotely wiped, or monitored for compliance if lost or compromised.",
     },
     {
       id: "req-pin-strength",
@@ -2924,7 +2924,7 @@ export const iscMobileSecurityTBS: TBSQuestion = {
         { id: "strong", order: 3, text: "Strong - prevents casual access", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "weak" },
-      explanation: "4-digit PINs have only 10,000 combinations; easily brute-forced",
+      explanation: "Per NIST SP 800-63B, 4-digit PINs have only 10,000 combinations and are easily brute-forced; 6+ digits or alphanumeric is recommended.",
     },
     {
       id: "req-encryption",
@@ -2938,7 +2938,7 @@ export const iscMobileSecurityTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Policy is too restrictive", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "byod-gap" },
-      explanation: "BYOD devices can access corporate data without encryption requirement",
+      explanation: "Per NIST SC-28 and data protection requirements, BYOD devices accessing corporate data should be required to have encryption enabled.",
     },
     {
       id: "req-vpn",
@@ -2952,7 +2952,7 @@ export const iscMobileSecurityTBS: TBSQuestion = {
         { id: "appropriate", order: 3, text: "Appropriate for modern cloud apps", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "risky" },
-      explanation: "Without VPN, sensitive data may traverse untrusted networks",
+      explanation: "Per NIST SC-8, without mandatory VPN, sensitive corporate traffic may traverse untrusted public networks without encryption.",
     },
   ],
 };
@@ -3005,7 +3005,7 @@ export const iscPenetrationTestingTBS: TBSQuestion = {
         { id: "webserver", order: 3, text: "Unpatched web server - critical CVE", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "firewall" },
-      explanation: "Firewall compromise gives attacker control of network perimeter",
+      explanation: "Per security prioritization, firewall with default credentials is highest priority as compromise gives attackers control of the network perimeter.",
     },
     {
       id: "req-smtp-impact",
@@ -3019,7 +3019,7 @@ export const iscPenetrationTestingTBS: TBSQuestion = {
         { id: "critical", order: 3, text: "Critical - direct data breach", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Open relay damages reputation and enables phishing campaigns",
+      explanation: "Per email security standards, an open SMTP relay damages domain reputation and enables attackers to send spam/phishing from your domain.",
     },
     {
       id: "req-low-findings",
@@ -3033,7 +3033,7 @@ export const iscPenetrationTestingTBS: TBSQuestion = {
         { id: "immediate", order: 3, text: "Remediate immediately after critical items", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "track" },
-      explanation: "Low findings should be tracked but don't require emergency response",
+      explanation: "Per vulnerability management practices, low-risk findings should be tracked and remediated in normal patching cycles rather than ignored.",
     },
     {
       id: "req-test-frequency",
@@ -3047,7 +3047,7 @@ export const iscPenetrationTestingTBS: TBSQuestion = {
         { id: "biennial", order: 3, text: "Every two years for cost efficiency", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "annual-plus" },
-      explanation: "Annual testing with additional tests after significant changes",
+      explanation: "Per PCI-DSS and security testing best practices, annual penetration testing is recommended, with additional testing after significant infrastructure changes.",
     },
   ],
 };
@@ -3114,7 +3114,7 @@ export const iscDataClassificationTBS: TBSQuestion = {
         { id: "lower", order: 3, text: "Could be Internal with encryption", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "no" },
-      explanation: "PII breach has significant regulatory and reputation impact",
+      explanation: "Per GDPR/CCPA and data protection regulations, PII should be classified as Restricted due to significant breach notification requirements and reputation impact.",
     },
     {
       id: "req-labeling",
@@ -3128,7 +3128,7 @@ export const iscDataClassificationTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - labels are cosmetic", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Without labels, sensitive data may be shared inappropriately",
+      explanation: "Per data governance best practices, without visible classification labels users cannot identify appropriate handling requirements for sensitive data.",
     },
     {
       id: "req-classification-owner",
@@ -3142,7 +3142,7 @@ export const iscDataClassificationTBS: TBSQuestion = {
         { id: "appropriate", order: 3, text: "Appropriate with training", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "inconsistent" },
-      explanation: "Users may under-classify for convenience; data owners should verify",
+      explanation: "Per data classification frameworks, users may under-classify for convenience; data owners should verify and approve classification levels.",
     },
     {
       id: "req-dlp",
@@ -3156,7 +3156,7 @@ export const iscDataClassificationTBS: TBSQuestion = {
         { id: "redundant", order: 3, text: "Redundant - encryption is enough", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "essential" },
-      explanation: "DLP prevents unauthorized sharing and validates classification",
+      explanation: "Per data protection strategy, DLP is essential to enforce classification rules, prevent unauthorized sharing, and detect misclassified data.",
     },
   ],
 };
@@ -3209,7 +3209,7 @@ export const iscAPISecurityTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable with HTTPS", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "URL parameters appear in logs, referrer headers, and history",
+      explanation: "Per OWASP API Security guidelines, API keys in URL parameters are high-risk as they appear in server logs, referrer headers, and browser history.",
     },
     {
       id: "req-rate-limiting",
@@ -3223,7 +3223,7 @@ export const iscAPISecurityTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - WAF handles this", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Unlimited requests enable credential stuffing and resource exhaustion",
+      explanation: "Per OWASP API Security Top 10, lack of rate limiting enables credential stuffing, brute force attacks, and resource exhaustion (DoS).",
     },
     {
       id: "req-validation",
@@ -3237,7 +3237,7 @@ export const iscAPISecurityTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable with WAF protection", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Attackers bypass client validation; server must validate all input",
+      explanation: "Per OWASP input validation guidance, client-side validation is easily bypassed; server-side validation is required to prevent injection attacks.",
     },
     {
       id: "req-error-messages",
@@ -3251,7 +3251,7 @@ export const iscAPISecurityTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard API behavior", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "info-leak" },
-      explanation: "Detailed errors reveal stack traces and system information",
+      explanation: "Per OWASP secure error handling, detailed error messages can reveal stack traces, system paths, and other information useful to attackers.",
     },
   ],
 };
@@ -3304,7 +3304,7 @@ export const iscPhysicalSecurityTBS: TBSQuestion = {
         { id: "low", order: 3, text: "Low - cameras provide monitoring", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high" },
-      explanation: "Unescorted visitors can install rogue devices or steal data",
+      explanation: "Per NIST PE-7 and physical security best practices, unescorted visitors can install rogue devices, steal data, or observe sensitive information.",
     },
     {
       id: "req-rack-locks",
@@ -3318,7 +3318,7 @@ export const iscPhysicalSecurityTBS: TBSQuestion = {
         { id: "adequate", order: 3, text: "Adequate - room is secured", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "risky" },
-      explanation: "Unlocked racks allow unauthorized hardware or data access",
+      explanation: "Per NIST PE-5 and data center standards, unlocked server racks allow unauthorized hardware access, enabling physical attacks or data theft.",
     },
     {
       id: "req-media",
@@ -3332,7 +3332,7 @@ export const iscPhysicalSecurityTBS: TBSQuestion = {
         { id: "minor", order: 3, text: "Minor - encrypted data is protected", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "data-breach" },
-      explanation: "Drives should be destroyed immediately; stored drives are vulnerable",
+      explanation: "Per NIST MP-6 media sanitization requirements, drives containing sensitive data should be destroyed immediately; stored drives remain vulnerable to theft.",
     },
     {
       id: "req-camera",
@@ -3346,7 +3346,7 @@ export const iscPhysicalSecurityTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Current coverage is sufficient", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "insufficient" },
-      explanation: "Internal activity at racks is not captured",
+      explanation: "Per physical security standards, entrance-only cameras miss internal activity at server racks where data theft or tampering could occur.",
     },
   ],
 };
@@ -3399,7 +3399,7 @@ export const iscITGovernanceTBS: TBSQuestion = {
         { id: "optimal", order: 3, text: "Optimal reporting structure", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "conflict" },
-      explanation: "IT strategic priorities may conflict with CFO's cost focus",
+      explanation: "Per IT governance best practices, CIO reporting to CFO can create conflict where IT strategic priorities are subordinated to cost-cutting objectives.",
     },
     {
       id: "req-steering",
@@ -3413,7 +3413,7 @@ export const iscITGovernanceTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable for small organizations", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "risky" },
-      explanation: "IT decisions without business input may not align with needs",
+      explanation: "Per COBIT governance principles, IT decisions made without a steering committee lack business input and may not align with organizational needs.",
     },
     {
       id: "req-metrics",
@@ -3427,7 +3427,7 @@ export const iscITGovernanceTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - qualitative assessment is sufficient", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Without metrics, IT value and issues cannot be quantified",
+      explanation: "Per COBIT MEA01, without defined metrics, IT performance, value delivery, and emerging issues cannot be objectively measured or communicated.",
     },
     {
       id: "req-framework",
@@ -3441,7 +3441,7 @@ export const iscITGovernanceTBS: TBSQuestion = {
         { id: "none", order: 3, text: "Continue without framework", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "cobit" },
-      explanation: "COBIT provides comprehensive IT governance framework",
+      explanation: "Per industry standards, COBIT or ITIL provide comprehensive IT governance frameworks that align IT with business objectives and ensure value delivery.",
     },
   ],
 };
@@ -3494,7 +3494,7 @@ export const iscConfigManagementTBS: TBSQuestion = {
         { id: "efficient", order: 3, text: "Efficient and cost-effective", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Spreadsheets lack integrity controls and automation capability",
+      explanation: "Per ITIL/COBIT configuration management, spreadsheets lack version control, integrity validation, and automation; a proper CMDB tool is required.",
     },
     {
       id: "req-baselines",
@@ -3508,7 +3508,7 @@ export const iscConfigManagementTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - each system is unique", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Without baselines, secure configuration cannot be enforced",
+      explanation: "Per CIS Benchmarks and NIST CM-2, without defined security baselines, consistent secure configuration cannot be enforced or verified.",
     },
     {
       id: "req-drift",
@@ -3522,7 +3522,7 @@ export const iscConfigManagementTBS: TBSQuestion = {
         { id: "minor", order: 3, text: "Minor inconvenience", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Configuration drift from baseline introduces security gaps",
+      explanation: "Per NIST CM-3 and security hardening standards, without drift detection, unauthorized configuration changes go undetected, introducing security gaps.",
     },
     {
       id: "req-relationships",
@@ -3536,7 +3536,7 @@ export const iscConfigManagementTBS: TBSQuestion = {
         { id: "minor", order: 3, text: "Minor - relationships are obvious", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "impact-analysis" },
-      explanation: "Without relationships, change impacts cannot be assessed",
+      explanation: "Per ITIL configuration management, without CI relationship mapping, change impact analysis cannot be performed to assess downstream effects.",
     },
   ],
 };
@@ -3589,7 +3589,7 @@ export const iscPatchManagementTBS: TBSQuestion = {
         { id: "appropriate", order: 3, text: "Appropriate risk-based approach", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Critical patches need emergency deployment within 24-48 hours",
+      explanation: "Per vulnerability management best practices, critical patches with active exploits need emergency deployment within 24-48 hours, not monthly cycles.",
     },
     {
       id: "req-compliance",
@@ -3603,7 +3603,7 @@ export const iscPatchManagementTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable with exceptions documented", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "concerning" },
-      explanation: "Each unpatched server represents potential breach point",
+      explanation: "Per patch compliance standards, 85% compliance means 15% of servers remain vulnerable; each unpatched server is a potential breach vector.",
     },
     {
       id: "req-third-party",
@@ -3617,7 +3617,7 @@ export const iscPatchManagementTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable - users update their apps", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high" },
-      explanation: "Java, Adobe, browsers are common attack vectors",
+      explanation: "Per vulnerability research, third-party applications (Java, Adobe, browsers) are among the most exploited attack vectors and must be in patch scope.",
     },
     {
       id: "req-exceptions",
@@ -3631,7 +3631,7 @@ export const iscPatchManagementTBS: TBSQuestion = {
         { id: "appropriate", order: 3, text: "Appropriate - exceptions shouldn't exist", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "risky" },
-      explanation: "Undocumented exceptions aren't tracked or remediated",
+      explanation: "Per patch management frameworks, undocumented exceptions accumulate risk over time as they aren't tracked, reviewed, or remediated.",
     },
   ],
 };
@@ -3685,7 +3685,7 @@ export const iscCloudPostureTBS: TBSQuestion = {
         { id: "manageable", order: 3, text: "Manageable with monitoring", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Public S3 buckets have caused major data breaches",
+      explanation: "Per AWS security best practices and data breach analysis, publicly accessible S3 buckets are a leading cause of cloud data exposures.",
     },
     {
       id: "req-root-account",
@@ -3699,7 +3699,7 @@ export const iscCloudPostureTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable with MFA", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Root access bypasses all controls and cannot be restricted",
+      explanation: "Per AWS security guidance, the root account should only be used for initial setup and emergencies; daily use bypasses IAM controls and audit trails.",
     },
     {
       id: "req-security-groups",
@@ -3713,7 +3713,7 @@ export const iscCloudPostureTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable for remote work", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "SSH/RDP open to internet enables brute force attacks",
+      explanation: "Per CIS AWS Benchmarks, security groups allowing 0.0.0.0/0 on SSH/RDP expose instances to internet-wide brute force and credential attacks.",
     },
     {
       id: "req-cloudtrail",
@@ -3727,7 +3727,7 @@ export const iscCloudPostureTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Data events generate too many logs", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "gap" },
-      explanation: "Data events capture S3 access and Lambda invocations",
+      explanation: "Per AWS logging best practices, data events in CloudTrail capture critical S3 object access and Lambda invocations needed for security monitoring.",
     },
   ],
 };
@@ -3780,7 +3780,7 @@ export const iscSOC1UnderstandingTBS: TBSQuestion = {
         { id: "compliance", order: 3, text: "Demonstrate regulatory compliance", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "icfr" },
-      explanation: "SOC 1 is designed for controls relevant to financial reporting",
+      explanation: "Per SSAE 18/AT-C 320, SOC 1 reports are designed to support user auditors' assessment of controls relevant to internal control over financial reporting.",
     },
     {
       id: "req-type2-benefit",
@@ -3794,7 +3794,7 @@ export const iscSOC1UnderstandingTBS: TBSQuestion = {
         { id: "broader-scope", order: 3, text: "Broader scope of IT general controls", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "operating-effectiveness" },
-      explanation: "Type 2 tests that controls operated effectively during the period",
+      explanation: "Per SOC reporting standards, Type 2 reports test that controls operated effectively over a period, not just that they are designed properly at a point in time.",
     },
     {
       id: "req-cuec-responsibility",
@@ -3808,7 +3808,7 @@ export const iscSOC1UnderstandingTBS: TBSQuestion = {
         { id: "auditor", order: 3, text: "External auditor", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "user-entity" },
-      explanation: "CUECs must be implemented by the user entity for controls to work",
+      explanation: "Per SOC report guidance, Complementary User Entity Controls (CUECs) must be implemented by the user entity for the service organization's controls to function as intended.",
     },
     {
       id: "req-distribution",
@@ -3822,7 +3822,7 @@ export const iscSOC1UnderstandingTBS: TBSQuestion = {
         { id: "regulators", order: 3, text: "Regulators and management only", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "restricted" },
-      explanation: "SOC 1 is restricted to users and their auditors",
+      explanation: "Per SSAE 18, SOC 1 reports are restricted-use reports intended only for management, user entities, and their financial statement auditors.",
     },
   ],
 };
@@ -3875,7 +3875,7 @@ export const iscRansomwareResponseTBS: TBSQuestion = {
         { id: "restore", order: 3, text: "Begin restoring from backup", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "isolate" },
-      explanation: "Containment prevents further encryption and preserves evidence",
+      explanation: "Per NIST SP 800-61 and CISA guidance, containment (isolating affected systems) is the first priority to prevent spread and preserve forensic evidence.",
     },
     {
       id: "req-ransom-payment",
@@ -3889,7 +3889,7 @@ export const iscRansomwareResponseTBS: TBSQuestion = {
         { id: "negotiate", order: 3, text: "Negotiate lower amount then pay", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "avoid" },
-      explanation: "Payment funds criminals; no guarantee of decryption; may violate OFAC",
+      explanation: "Per FBI and CISA guidance, ransom payment is discouraged: it funds criminal enterprises, provides no guarantee of decryption, and may violate OFAC sanctions.",
     },
     {
       id: "req-backup-concern",
@@ -3903,7 +3903,7 @@ export const iscRansomwareResponseTBS: TBSQuestion = {
         { id: "minor", order: 3, text: "Minor issue - manual re-entry possible", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "data-loss" },
-      explanation: "7 days of data loss may be unacceptable for business operations",
+      explanation: "Per business continuity planning, 7 days of data loss likely exceeds acceptable RPO and represents significant business transaction and operational data loss.",
     },
     {
       id: "req-notification",
@@ -3917,7 +3917,7 @@ export const iscRansomwareResponseTBS: TBSQuestion = {
         { id: "after-recovery", order: 3, text: "Notify after recovery is complete", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "multiple" },
-      explanation: "Insurance requires notice; FBI recommended; regulators if data breach",
+      explanation: "Per incident response requirements, cyber insurance typically requires prompt notice; FBI reporting is recommended; regulators must be notified if data breach occurred.",
     },
   ],
 };
@@ -3970,7 +3970,7 @@ export const iscPrivacyImpactTBS: TBSQuestion = {
         { id: "optional", order: 3, text: "Optional - depends on volume", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "yes" },
-      explanation: "Profiling, location data, and ML processing trigger PIA requirements",
+      explanation: "Per GDPR Article 35, processing involving profiling, location data, and automated decision-making (ML) triggers mandatory Data Protection Impact Assessment requirements.",
     },
     {
       id: "req-retention",
@@ -3984,7 +3984,7 @@ export const iscPrivacyImpactTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard industry practice", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "violation" },
-      explanation: "GDPR and privacy laws require retention limits tied to purpose",
+      explanation: "Per GDPR's data minimization principle (Article 5), personal data retention must be limited to what is necessary for the specified purpose; indefinite retention violates this.",
     },
     {
       id: "req-third-party",
@@ -3998,7 +3998,7 @@ export const iscPrivacyImpactTBS: TBSQuestion = {
         { id: "notice", order: 3, text: "Privacy notice mention only", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "consent" },
-      explanation: "Third-party sharing requires consent and contractual safeguards",
+      explanation: "Per GDPR Articles 6-7 and CCPA, sharing personal data with third parties requires explicit consent or legitimate basis plus data processing agreements.",
     },
     {
       id: "req-rights",
@@ -4012,7 +4012,7 @@ export const iscPrivacyImpactTBS: TBSQuestion = {
         { id: "optional", order: 3, text: "Optional enhancement", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "must-support" },
-      explanation: "Privacy laws require honoring data subject rights",
+      explanation: "Per GDPR (Articles 15-22) and CCPA, data subjects have rights to access, deletion, and opt-out that must be supported regardless of processing purpose.",
     },
   ],
 };
@@ -4064,7 +4064,7 @@ export const iscRiskAssessmentTBS: TBSQuestion = {
         { id: "depends", order: 3, text: "Depends on business requirements", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "no" },
-      explanation: "High likelihood risks should typically be mitigated, not accepted",
+      explanation: "Per risk management frameworks (NIST/COSO ERM), high likelihood risks should typically be mitigated rather than accepted, regardless of medium impact.",
     },
     {
       id: "req-transfer",
@@ -4078,7 +4078,7 @@ export const iscRiskAssessmentTBS: TBSQuestion = {
         { id: "outsource", order: 3, text: "Outsource to another vendor", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "insurance" },
-      explanation: "Risk transfer uses insurance or contracts to shift financial impact",
+      explanation: "Per risk management terminology, risk transfer involves using insurance policies or contractual provisions to shift the financial impact to another party.",
     },
     {
       id: "req-avoid",
@@ -4092,7 +4092,7 @@ export const iscRiskAssessmentTBS: TBSQuestion = {
         { id: "strong-controls", order: 3, text: "Implement stronger controls", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "eliminate" },
-      explanation: "Risk avoidance means eliminating the risk-causing activity",
+      explanation: "Per NIST risk response options, risk avoidance means eliminating the activity or condition that creates the risk (not ignoring regulations).",
     },
     {
       id: "req-highest-priority",
@@ -4106,7 +4106,7 @@ export const iscRiskAssessmentTBS: TBSQuestion = {
         { id: "system-outage", order: 3, text: "System outage - high likelihood", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "compliance" },
-      explanation: "Highest risk score (16) should be highest priority",
+      explanation: "Per risk prioritization methodology, the highest risk score (16 = High Likelihood x High Impact) should receive highest priority for attention and resources.",
     },
   ],
 };
@@ -4159,7 +4159,7 @@ export const iscEDRTBS: TBSQuestion = {
         { id: "medium", order: 3, text: "Medium - investigate during business hours", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Off-hours activity, encoded commands, and C2 connection indicate compromise",
+      explanation: "Per threat detection indicators, off-hours activity, encoded PowerShell commands, and C2 connection attempts are critical indicators of compromise (IOCs).",
     },
     {
       id: "req-c2-indicator",
@@ -4173,7 +4173,7 @@ export const iscEDRTBS: TBSQuestion = {
         { id: "network-error", order: 3, text: "Network misconfiguration", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "malware" },
-      explanation: "C2 (command and control) communication indicates active threat",
+      explanation: "Per threat intelligence, command and control (C2) communication indicates malware has established a connection with attacker infrastructure for commands.",
     },
     {
       id: "req-immediate-action",
@@ -4187,7 +4187,7 @@ export const iscEDRTBS: TBSQuestion = {
         { id: "monitor", order: 3, text: "Continue monitoring for more evidence", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "isolate" },
-      explanation: "Isolation prevents lateral movement while investigation proceeds",
+      explanation: "Per NIST SP 800-61, network isolation prevents lateral movement and data exfiltration while preserving evidence for investigation.",
     },
     {
       id: "req-evidence",
@@ -4201,7 +4201,7 @@ export const iscEDRTBS: TBSQuestion = {
         { id: "access-logs", order: 3, text: "Building access logs", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "memory-image" },
-      explanation: "Memory contains volatile evidence of malware and attacker activity",
+      explanation: "Per digital forensics best practices, memory imaging is critical as volatile memory contains evidence of running malware, encryption keys, and attacker tools.",
     },
   ],
 };
@@ -4254,7 +4254,7 @@ export const iscDAMTBS: TBSQuestion = {
         { id: "minor", order: 3, text: "Minor - only DBAs see logs", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Logging PII creates another location where sensitive data can be exposed",
+      explanation: "Per data protection principles, logging PII in clear text creates additional exposure risk; sensitive data in logs should be masked or tokenized.",
     },
     {
       id: "req-batch-processing",
@@ -4268,7 +4268,7 @@ export const iscDAMTBS: TBSQuestion = {
         { id: "efficient", order: 3, text: "Efficient use of resources", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "delayed" },
-      explanation: "Batch processing means threats aren't detected until next run",
+      explanation: "Per security monitoring best practices, hourly batch processing creates detection delays; real-time monitoring is needed to detect and respond to threats promptly.",
     },
     {
       id: "req-select-only",
@@ -4282,7 +4282,7 @@ export const iscDAMTBS: TBSQuestion = {
         { id: "appropriate", order: 3, text: "Appropriate for read-focused threats", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "gap" },
-      explanation: "Data modification (DML) activities are also security-relevant",
+      explanation: "Per database security monitoring, monitoring only SELECT queries misses critical INSERT, UPDATE, DELETE activities that could indicate data tampering or destruction.",
     },
     {
       id: "req-baseline",
@@ -4296,7 +4296,7 @@ export const iscDAMTBS: TBSQuestion = {
         { id: "none", order: 3, text: "Baselines are optional", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Without baseline, unusual query patterns go undetected",
+      explanation: "Per behavioral analytics, without an established baseline of normal activity, anomalous query patterns and potential insider threats cannot be detected.",
     },
   ],
 };
@@ -4348,7 +4348,7 @@ export const iscSecureCodingTBS: TBSQuestion = {
         { id: "waf", order: 3, text: "Web application firewall", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "parameterized" },
-      explanation: "Parameterized queries prevent SQL injection by separating code from data",
+      explanation: "Per OWASP SQL Injection Prevention Cheat Sheet, parameterized queries (prepared statements) prevent SQL injection by separating code from data.",
     },
     {
       id: "req-md5-issue",
@@ -4362,7 +4362,7 @@ export const iscSecureCodingTBS: TBSQuestion = {
         { id: "slow", order: 3, text: "Too slow for authentication", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "broken" },
-      explanation: "MD5 has known collisions; modern algorithms like bcrypt are required",
+      explanation: "Per NIST SP 800-131A and OWASP, MD5 is cryptographically broken with known collisions; password-specific algorithms like bcrypt, scrypt, or Argon2 are required.",
     },
     {
       id: "req-hardcoded-key",
@@ -4376,7 +4376,7 @@ export const iscSecureCodingTBS: TBSQuestion = {
         { id: "obfuscate", order: 3, text: "Obfuscate the code", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "secrets-manager" },
-      explanation: "Secrets should never be in code; use external secrets management",
+      explanation: "Per secure coding standards, secrets should never be hardcoded; use environment variables, secrets managers (AWS Secrets Manager, HashiCorp Vault), or key vaults.",
     },
     {
       id: "req-error-messages",
@@ -4390,7 +4390,7 @@ export const iscSecureCodingTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard debugging practice", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "info-disclosure" },
-      explanation: "Detailed errors reveal stack traces and system details",
+      explanation: "Per OWASP error handling guidance, detailed error messages can reveal stack traces, paths, and system configuration details useful for reconnaissance.",
     },
   ],
 };
@@ -4443,7 +4443,7 @@ export const iscTrustServicesTBS: TBSQuestion = {
         { id: "depends", order: 3, text: "Depends on service type", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "required" },
-      explanation: "Security (Common Criteria) is mandatory for all SOC 2 engagements",
+      explanation: "Per AICPA TSC, Security (Common Criteria) is mandatory for all SOC 2 engagements; other criteria (Availability, Confidentiality, Processing Integrity, Privacy) are optional.",
     },
     {
       id: "req-availability",
@@ -4457,7 +4457,7 @@ export const iscTrustServicesTBS: TBSQuestion = {
         { id: "optional", order: 3, text: "Optional nice-to-have", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "yes" },
-      explanation: "99.9% SLA commitment makes Availability criteria essential",
+      explanation: "Per SOC 2 scoping guidance, a 99.9% SLA commitment and 24/7 operations make Availability criteria essential for demonstrating control over uptime commitments.",
     },
     {
       id: "req-confidentiality",
@@ -4471,7 +4471,7 @@ export const iscTrustServicesTBS: TBSQuestion = {
         { id: "redundant", order: 3, text: "Redundant with Privacy criteria", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "yes" },
-      explanation: "PHI confidentiality requirements warrant inclusion",
+      explanation: "Per HIPAA and TSC mapping, PHI requires explicit confidentiality controls; the Confidentiality criteria demonstrates these controls to healthcare customers.",
     },
     {
       id: "req-privacy",
@@ -4485,7 +4485,7 @@ export const iscTrustServicesTBS: TBSQuestion = {
         { id: "covered", order: 3, text: "Covered by Confidentiality", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "yes" },
-      explanation: "PHI processing involves personal information requiring Privacy criteria",
+      explanation: "Per AICPA Privacy criteria, PHI contains personal health information requiring Privacy controls for collection, use, retention, disclosure, and disposal.",
     },
   ],
 };
@@ -4537,7 +4537,7 @@ export const iscSLMTBS: TBSQuestion = {
         { id: "poor", order: 3, text: "Poor - unacceptable for production", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "average" },
-      explanation: "99.5% allows significant downtime; 99.9%+ is preferred for critical systems",
+      explanation: "Per service level benchmarks, 99.5% availability allows ~3.6 hours monthly downtime; 99.9% (~43 min/month) or higher is standard for mission-critical systems.",
     },
     {
       id: "req-no-penalty",
@@ -4551,7 +4551,7 @@ export const iscSLMTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable - availability is more important", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Without penalties, SLA targets are aspirational, not contractual",
+      explanation: "Per contract best practices, SLA metrics without penalties are merely aspirational goals; financial consequences create provider accountability.",
     },
     {
       id: "req-security-notification",
@@ -4565,7 +4565,7 @@ export const iscSLMTBS: TBSQuestion = {
         { id: "fast", order: 3, text: "Too fast - investigation needed first", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "slow" },
-      explanation: "Security incidents should be communicated within hours, not days",
+      explanation: "Per incident response best practices, while GDPR allows 72 hours for breach notification to authorities, customers need faster notification to take protective actions.",
     },
     {
       id: "req-business-hours",
@@ -4579,7 +4579,7 @@ export const iscSLMTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard support model", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "gap" },
-      explanation: "Weekend or overnight issues won't be addressed timely",
+      explanation: "Per ITIL service management, business-hours-only support creates a gap where critical issues occurring overnight or weekends won't be addressed until the next business day.",
     },
   ],
 };
@@ -4632,7 +4632,7 @@ export const iscBlockchainTBS: TBSQuestion = {
         { id: "standard", order: 3, text: "Standard blockchain practice", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high-risk" },
-      explanation: "Decentralized key management creates weakest-link vulnerability",
+      explanation: "Per blockchain security principles, decentralized key management across partners creates a 'weakest link' vulnerability where security depends on the least secure participant.",
     },
     {
       id: "req-smart-contract",
@@ -4646,7 +4646,7 @@ export const iscBlockchainTBS: TBSQuestion = {
         { id: "low", order: 3, text: "Low - code can be updated", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Smart contract bugs on immutable blockchain are difficult to fix",
+      explanation: "Per blockchain audit guidance, smart contract bugs on immutable blockchains cannot be patched like traditional software; errors can result in permanent financial losses.",
     },
     {
       id: "req-oracle",
@@ -4660,7 +4660,7 @@ export const iscBlockchainTBS: TBSQuestion = {
         { id: "minor", order: 3, text: "Minor operational concern", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "trust" },
-      explanation: "Oracles can be compromised or provide false data",
+      explanation: "Per blockchain security analysis, oracles introduce centralized trust points that can be compromised or manipulated, undermining blockchain's decentralized trust model.",
     },
     {
       id: "req-immutability",
@@ -4674,7 +4674,7 @@ export const iscBlockchainTBS: TBSQuestion = {
         { id: "neutral", order: 3, text: "Neutral - depends on data type", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "challenge" },
-      explanation: "GDPR right to erasure conflicts with blockchain immutability",
+      explanation: "Per GDPR Article 17 (Right to Erasure), blockchain immutability creates compliance challenges since personal data cannot be deleted once recorded on-chain.",
     },
   ],
 };
@@ -4729,7 +4729,7 @@ export const iscZeroTrustTBS: TBSQuestion = {
         { id: "moderate", order: 3, text: "Moderate - acceptable interim state", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "critical" },
-      explanation: "Zero Trust requires verification regardless of network location",
+      explanation: "Per NIST SP 800-207 (Zero Trust Architecture), the core principle is 'never trust, always verify' regardless of network location; VPN-only protection violates this.",
     },
     {
       id: "req-auth-improvement",
@@ -4743,7 +4743,7 @@ export const iscZeroTrustTBS: TBSQuestion = {
         { id: "medium", order: 3, text: "Medium - add MFA at login only", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high" },
-      explanation: "Zero Trust requires continuous authentication, not just at session start",
+      explanation: "Per NIST Zero Trust principles, authentication must be continuous throughout the session, not just at login; user/device posture should be reevaluated for each access request.",
     },
     {
       id: "req-microseg",
@@ -4757,7 +4757,7 @@ export const iscZeroTrustTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Excessive - adds unnecessary complexity", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "insufficient" },
-      explanation: "True microsegmentation requires workload-level isolation beyond VLANs",
+      explanation: "Per Zero Trust microsegmentation principles, VLAN-based separation is insufficient; true microsegmentation requires application/workload-level isolation with east-west traffic controls.",
     },
   ],
 };
@@ -4893,7 +4893,7 @@ export const iscSOCBridgeLetterTBS: TBSQuestion = {
         { id: "acceptable", order: 3, text: "Acceptable - within management discretion", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "inaccurate" },
-      explanation: "Database migration and new access control system are significant changes",
+      explanation: "Per SOC bridge letter requirements, database migration and new access control systems are significant changes that contradict the 'no significant changes' assertion.",
     },
     {
       id: "req-most-concerning",
@@ -4907,7 +4907,7 @@ export const iscSOCBridgeLetterTBS: TBSQuestion = {
         { id: "database", order: 3, text: "Database migration - infrastructure change", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "access-control" },
-      explanation: "Access control changes directly affect SOC 2 control environment",
+      explanation: "Per SOC 2 scope considerations, access control system changes directly affect the control environment and security criteria tested in the report.",
     },
     {
       id: "req-auditor-response",
@@ -4921,7 +4921,7 @@ export const iscSOCBridgeLetterTBS: TBSQuestion = {
         { id: "disclaim", order: 3, text: "Disclaim reliance on service organization", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "additional" },
-      explanation: "Material changes require additional audit procedures or updated report",
+      explanation: "Per user auditor guidance (AU-C 402), material changes in the bridge period require additional procedures, inquiry of service organization, or an updated SOC report.",
     },
   ],
 };
@@ -4989,7 +4989,7 @@ export const iscPrivilegedAccessTBS: TBSQuestion = {
         { id: "excessive", order: 3, text: "Excessive - too frequent rotation", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "inadequate" },
-      explanation: "90-day rotation allowed terminated admin to retain access",
+      explanation: "Per PAM best practices, 90-day password rotation is inadequate for privileged accounts; Incident 1 demonstrates credentials remained valid after termination.",
     },
     {
       id: "req-service-account",
@@ -5003,7 +5003,7 @@ export const iscPrivilegedAccessTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - service accounts need stability", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "significant" },
-      explanation: "Static service account passwords enabled lateral movement attack",
+      explanation: "Per NIST SP 800-53 (AC-2) and PAM guidance, static service account passwords enabled the Incident 2 lateral movement; managed/rotated credentials are required.",
     },
     {
       id: "req-breakglass",
@@ -5017,7 +5017,7 @@ export const iscPrivilegedAccessTBS: TBSQuestion = {
         { id: "documentation", order: 3, text: "Documentation - procedures unclear", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "detection" },
-      explanation: "48-hour detection delay indicates alert monitoring failure",
+      explanation: "Per PAM control requirements, break-glass account usage should trigger immediate alerts; the 48-hour detection delay in Incident 3 indicates monitoring failure.",
     },
   ],
 };
@@ -5175,7 +5175,7 @@ export const iscSecurityAwarenessTBS: TBSQuestion = {
         { id: "none", order: 3, text: "None - 15% click rate is acceptable", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "template" },
-      explanation: "Using same template doesn't test real-world social engineering tactics",
+      explanation: "Per security awareness best practices, using the same phishing template allows users to recognize patterns rather than developing actual threat detection skills.",
     },
     {
       id: "req-executive-risk",
@@ -5189,7 +5189,7 @@ export const iscSecurityAwarenessTBS: TBSQuestion = {
         { id: "medium", order: 3, text: "Medium - acceptable business accommodation", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "high" },
-      explanation: "Executives are high-value targets for spear-phishing and whaling attacks",
+      explanation: "Per threat intelligence and FBI guidance, executives are high-value targets for spear-phishing and whaling attacks; exempting them creates significant organizational risk.",
     },
     {
       id: "req-trend-concern",
@@ -5203,7 +5203,7 @@ export const iscSecurityAwarenessTBS: TBSQuestion = {
         { id: "incidents", order: 3, text: "Declining incident reports", isCorrect: false },
       ],
       correctAnswer: { type: "dropdown", correctOptionId: "social" },
-      explanation: "50% increase in social engineering attacks suggests awareness gaps",
+      explanation: "Per security metrics analysis, the 50% increase in social engineering attacks (12→18) despite training indicates awareness gaps not being addressed by the current program.",
     },
   ],
 };
