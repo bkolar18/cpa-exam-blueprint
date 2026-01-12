@@ -221,6 +221,31 @@ export default function ScratchPad({
  }
  }, [onNotesChange]);
 
+ // Track if this is the first input (for cursor fix)
+ const isFirstInput = useRef(true);
+
+ // Handle focus to fix cursor position on first interaction
+ const handleFocus = useCallback(() => {
+ if (editorRef.current && editorRef.current.innerHTML === "") {
+ isFirstInput.current = true;
+ // Ensure cursor is at the start when editor is empty
+ const selection = window.getSelection();
+ const range = document.createRange();
+ range.setStart(editorRef.current, 0);
+ range.collapse(true);
+ selection?.removeAllRanges();
+ selection?.addRange(range);
+ }
+ }, []);
+
+ // Handle beforeinput to fix the first character cursor issue
+ const handleBeforeInput = useCallback(() => {
+ if (editorRef.current && isFirstInput.current && editorRef.current.innerHTML === "") {
+ // Clear any placeholder-related state before first input
+ isFirstInput.current = false;
+ }
+ }, []);
+
  // Handle keydown for auto-bullets
  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
  if (e.key ==="Enter") {
@@ -641,6 +666,7 @@ export default function ScratchPad({
  contentEditable
  onInput={handleContentChange}
  onKeyDown={handleKeyDown}
+ onFocus={handleFocus}
  className="flex-1 p-3 text-sm text-gray-800 dark:text-[var(--foreground)] bg-yellow-50/50 dark:bg-[var(--background)] overflow-auto focus:outline-none"
  style={{ minHeight: 100 }}
  data-placeholder="Type your notes here...
@@ -685,20 +711,14 @@ export default function ScratchPad({
  </>
  )}
 
- {/* Placeholder styles */}
+ {/* Placeholder styles - using display:block to avoid cursor issues */}
  <style jsx>{`
  [contenteditable]:empty:before {
  content: attr(data-placeholder);
  color: #9ca3af;
  pointer-events: none;
  white-space: pre-line;
- position: absolute;
- top: 12px;
- left: 12px;
- right: 12px;
- }
- [contenteditable] {
- position: relative;
+ display: block;
  }
  `}</style>
  </div>
