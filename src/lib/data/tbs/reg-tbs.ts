@@ -9483,6 +9483,607 @@ Required: Research and cite the appropriate IRC section regarding like-kind exch
   ],
 };
 
+// =============================================================================
+// Phase 4 expansion - Journal Entry and Reconciliation TBS (tbs-reg-087 through tbs-reg-091)
+// =============================================================================
+
+export const regPartnerBasisAdjustmentTBS: TBSQuestion = {
+  id: "tbs-reg-087",
+  section: "REG",
+  tbsType: "journal_entry",
+  topic: "Partnership Taxation",
+  subtopic: "Partner Basis Adjustments",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "REG-V",
+  title: "Partner Basis Adjustment Journal Entry",
+  scenarioText: `Partner A has a 30% interest in ABC Partnership. At the beginning of Year 1, Partner A's outside basis was $150,000. During Year 1, the following occurred:
+
+• Partnership ordinary income: $200,000
+• Partnership tax-exempt interest: $10,000
+• Partnership charitable contributions: $15,000
+• Cash distributions to Partner A: $45,000
+• Partner A's share of partnership liabilities increased by $30,000
+
+Required: Determine Partner A's ending outside basis and prepare the adjustments.`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-partnership-info",
+      order: 1,
+      title: "Partnership Information",
+      type: "table",
+      content: {
+        type: "table",
+        title: "ABC Partnership - Year 1 Activity",
+        headers: ["Item", "Partnership Total", "Partner A Share (30%)"],
+        rows: [
+          { cells: ["Ordinary Income", "$200,000", "$60,000"] },
+          { cells: ["Tax-Exempt Interest", "$10,000", "$3,000"] },
+          { cells: ["Charitable Contributions", "$15,000", "$4,500"] },
+          { cells: ["Cash Distributions", "$150,000", "$45,000"] },
+          { cells: ["Increase in Liabilities", "$100,000", "$30,000"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-income-increase",
+      order: 1,
+      type: "numeric",
+      label: "Increase in basis from ordinary income (Partner A's share)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 60000,
+        tolerance: 0,
+      },
+      explanation: "$200,000 × 30% = $60,000 - ordinary income increases basis",
+    },
+    {
+      id: "req-exempt-increase",
+      order: 2,
+      type: "numeric",
+      label: "Increase in basis from tax-exempt income",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 3000,
+        tolerance: 0,
+      },
+      explanation: "$10,000 × 30% = $3,000 - tax-exempt income also increases basis",
+    },
+    {
+      id: "req-charitable-decrease",
+      order: 3,
+      type: "numeric",
+      label: "Decrease in basis from charitable contributions",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 4500,
+        tolerance: 0,
+      },
+      explanation: "$15,000 × 30% = $4,500 - separately stated deductions decrease basis",
+    },
+    {
+      id: "req-distribution-decrease",
+      order: 4,
+      type: "numeric",
+      label: "Decrease in basis from cash distribution",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 45000,
+        tolerance: 0,
+      },
+      explanation: "Cash distributions reduce basis dollar for dollar",
+    },
+    {
+      id: "req-ending-basis",
+      order: 5,
+      type: "numeric",
+      label: "Partner A's ending outside basis",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 193500,
+        tolerance: 0,
+      },
+      explanation: "$150,000 + $60,000 + $3,000 + $30,000 - $4,500 - $45,000 = $193,500",
+    },
+  ],
+};
+
+export const regSCorpDistributionTBS: TBSQuestion = {
+  id: "tbs-reg-088",
+  section: "REG",
+  tbsType: "journal_entry",
+  topic: "S Corporation Taxation",
+  subtopic: "S Corp Distributions",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "REG-V",
+  title: "S Corporation Distribution Analysis",
+  scenarioText: `Sarah is the sole shareholder of XYZ S Corporation. At the beginning of Year 1:
+• Stock basis: $50,000
+• AAA (Accumulated Adjustments Account): $80,000
+• AE&P (Accumulated Earnings & Profits from C corp years): $25,000
+
+During Year 1:
+• S corp ordinary income: $40,000
+• Tax-exempt interest: $5,000
+• Cash distributions: $100,000
+
+Required: Determine the tax treatment of the distribution and ending account balances.`,
+  timeEstimateMinutes: 16,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-scorp-accounts",
+      order: 1,
+      title: "Beginning Balances",
+      type: "table",
+      content: {
+        type: "table",
+        title: "XYZ S Corporation - Account Balances",
+        headers: ["Account", "Beginning Balance"],
+        rows: [
+          { cells: ["Stock Basis", "$50,000"] },
+          { cells: ["AAA", "$80,000"] },
+          { cells: ["AE&P (from C corp years)", "$25,000"] },
+          { cells: ["OAA (Other Adjustments Account)", "$0"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-aaa-before-dist",
+      order: 1,
+      type: "numeric",
+      label: "AAA balance before distributions (after Year 1 income)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 120000,
+        tolerance: 0,
+      },
+      explanation: "$80,000 + $40,000 = $120,000 (ordinary income increases AAA, tax-exempt does not)",
+    },
+    {
+      id: "req-dist-from-aaa",
+      order: 2,
+      type: "numeric",
+      label: "Distribution treated as tax-free from AAA",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 95000,
+        tolerance: 0,
+      },
+      explanation: "Stock basis = $50,000 + $40,000 + $5,000 = $95,000. Distribution from AAA limited to stock basis",
+    },
+    {
+      id: "req-dist-from-aep",
+      order: 3,
+      type: "numeric",
+      label: "Distribution treated as dividend from AE&P",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 5000,
+        tolerance: 0,
+      },
+      explanation: "Remaining $5,000 ($100,000 - $95,000) comes from AE&P as dividend",
+    },
+    {
+      id: "req-ending-aaa",
+      order: 4,
+      type: "numeric",
+      label: "Ending AAA balance",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 25000,
+        tolerance: 0,
+      },
+      explanation: "$120,000 - $95,000 = $25,000 remaining in AAA",
+    },
+    {
+      id: "req-ending-basis",
+      order: 5,
+      type: "numeric",
+      label: "Ending stock basis",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 0,
+        tolerance: 0,
+      },
+      explanation: "Basis reduced to zero after $95,000 tax-free distribution",
+    },
+    {
+      id: "req-ending-aep",
+      order: 6,
+      type: "numeric",
+      label: "Ending AE&P balance",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 20000,
+        tolerance: 0,
+      },
+      explanation: "$25,000 - $5,000 dividend = $20,000",
+    },
+  ],
+};
+
+export const regPropertyContributionBasisTBS: TBSQuestion = {
+  id: "tbs-reg-089",
+  section: "REG",
+  tbsType: "journal_entry",
+  topic: "Corporate Taxation",
+  subtopic: "Section 351 Contributions",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "REG-V",
+  title: "Section 351 Property Contribution Basis",
+  scenarioText: `Three individuals form NewCo Corporation under Section 351:
+
+• Alex contributes equipment with FMV $100,000 and adjusted basis $60,000 for 40% stock
+• Beth contributes land with FMV $75,000 and adjusted basis $90,000 for 30% stock
+• Chris contributes cash $75,000 for 30% stock
+
+Required: Calculate the basis consequences for all parties.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-contributions",
+      order: 1,
+      title: "Property Contributions",
+      type: "table",
+      content: {
+        type: "table",
+        title: "NewCo Formation - Section 351",
+        headers: ["Shareholder", "Property", "FMV", "Adj Basis", "Stock %"],
+        rows: [
+          { cells: ["Alex", "Equipment", "$100,000", "$60,000", "40%"] },
+          { cells: ["Beth", "Land", "$75,000", "$90,000", "30%"] },
+          { cells: ["Chris", "Cash", "$75,000", "$75,000", "30%"] },
+          { cells: ["Total", "", "$250,000", "$225,000", "100%"], isBold: true },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-alex-stock-basis",
+      order: 1,
+      type: "numeric",
+      label: "Alex's stock basis",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 60000,
+        tolerance: 0,
+      },
+      explanation: "In Sec 351, shareholder's stock basis = adjusted basis of property contributed = $60,000",
+    },
+    {
+      id: "req-beth-stock-basis",
+      order: 2,
+      type: "numeric",
+      label: "Beth's stock basis",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 90000,
+        tolerance: 0,
+      },
+      explanation: "Beth's stock basis = her adjusted basis in land = $90,000 (even though FMV is lower)",
+    },
+    {
+      id: "req-corp-equipment-basis",
+      order: 3,
+      type: "numeric",
+      label: "NewCo's basis in equipment from Alex",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 60000,
+        tolerance: 0,
+      },
+      explanation: "Corporation takes transferred basis = Alex's $60,000 adjusted basis",
+    },
+    {
+      id: "req-corp-land-basis",
+      order: 4,
+      type: "numeric",
+      label: "NewCo's basis in land from Beth",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 90000,
+        tolerance: 0,
+      },
+      explanation: "Corporation takes transferred basis = Beth's $90,000 adjusted basis",
+    },
+    {
+      id: "req-builtin-loss",
+      order: 5,
+      type: "dropdown",
+      label: "What is the built-in loss on Beth's land?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-15000",
+      },
+      explanation: "Built-in loss = Basis ($90,000) - FMV ($75,000) = $15,000",
+      dropdownOptions: [
+        { id: "opt-15000", order: 1, text: "$15,000 built-in loss", isCorrect: true },
+        { id: "opt-no-loss", order: 2, text: "No built-in loss recognized", isCorrect: false },
+        { id: "opt-40000", order: 3, text: "$40,000 built-in gain", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const regTaxAccountReconciliationTBS: TBSQuestion = {
+  id: "tbs-reg-090",
+  section: "REG",
+  tbsType: "reconciliation",
+  topic: "Tax Return Preparation",
+  subtopic: "Schedule M-1 Reconciliation",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "REG-V",
+  title: "Schedule M-1 Book-Tax Reconciliation",
+  scenarioText: `You are preparing the tax return for Midwest Manufacturing Corp. The company reported net income per books of $500,000. You need to complete Schedule M-1 to reconcile book income to taxable income.
+
+Required: Identify the book-tax differences and calculate taxable income.`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-book-income",
+      order: 1,
+      title: "Book Income Statement",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Midwest Manufacturing Corp - Year 1",
+        headers: ["Item", "Amount"],
+        rows: [
+          { cells: ["Net Income per Books", "$500,000"] },
+        ],
+      },
+    },
+    {
+      id: "exhibit-adjustments",
+      order: 2,
+      title: "Identified Differences",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Book-Tax Differences",
+        headers: ["Item", "Book Amount", "Tax Amount", "Difference"],
+        rows: [
+          { cells: ["Federal income tax expense", "$105,000", "$0", "$105,000"] },
+          { cells: ["Depreciation expense", "$80,000", "$120,000", "$40,000"] },
+          { cells: ["Meals expense (100% vs 50%)", "$20,000", "$10,000", "$10,000"] },
+          { cells: ["Tax-exempt interest income", "$15,000", "$0", "$15,000"] },
+          { cells: ["Life insurance premium (key person)", "$8,000", "$0", "$8,000"] },
+          { cells: ["Charitable contributions", "$25,000", "$25,000", "$0"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-fed-tax-adj",
+      order: 1,
+      type: "dropdown",
+      label: "Federal income tax expense on M-1 is",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-add-back",
+      },
+      explanation: "Federal income tax is never deductible - add back to book income",
+      dropdownOptions: [
+        { id: "opt-add-back", order: 1, text: "Added back (increase to taxable income)", isCorrect: true },
+        { id: "opt-deduct", order: 2, text: "Deducted (decrease to taxable income)", isCorrect: false },
+        { id: "opt-no-adj", order: 3, text: "No adjustment required", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-depreciation-adj",
+      order: 2,
+      type: "numeric",
+      label: "M-1 adjustment for depreciation (enter as positive if deduction, negative if add-back)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: -40000,
+        tolerance: 0,
+      },
+      explanation: "Tax depreciation ($120,000) exceeds book ($80,000), so subtract $40,000 from book income",
+    },
+    {
+      id: "req-meals-adj",
+      order: 3,
+      type: "numeric",
+      label: "M-1 adjustment for meals expense",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 10000,
+        tolerance: 0,
+      },
+      explanation: "50% of meals ($10,000) is not deductible - add back to book income",
+    },
+    {
+      id: "req-exempt-adj",
+      order: 4,
+      type: "numeric",
+      label: "M-1 adjustment for tax-exempt interest",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: -15000,
+        tolerance: 0,
+      },
+      explanation: "Tax-exempt interest is in book income but not taxable - subtract from book income",
+    },
+    {
+      id: "req-life-ins-adj",
+      order: 5,
+      type: "numeric",
+      label: "M-1 adjustment for life insurance premium",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 8000,
+        tolerance: 0,
+      },
+      explanation: "Life insurance premiums for key person coverage are not deductible - add back",
+    },
+    {
+      id: "req-taxable-income",
+      order: 6,
+      type: "numeric",
+      label: "Taxable income (before special deductions)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 568000,
+        tolerance: 0,
+      },
+      explanation: "$500,000 + $105,000 - $40,000 + $10,000 - $15,000 + $8,000 = $568,000",
+    },
+  ],
+};
+
+export const regBookTaxDifferenceReconciliationTBS: TBSQuestion = {
+  id: "tbs-reg-091",
+  section: "REG",
+  tbsType: "reconciliation",
+  topic: "Tax Return Preparation",
+  subtopic: "Temporary vs Permanent Differences",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "REG-V",
+  title: "Book-Tax Difference Classification",
+  scenarioText: `You are reviewing the book-tax differences for Pacific Corp to determine which are temporary (creating deferred taxes) and which are permanent. The corporate tax rate is 21%.
+
+Required: Classify each difference and calculate the deferred tax impact.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-differences",
+      order: 1,
+      title: "Year 1 Book-Tax Differences",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Pacific Corp - Book-Tax Differences",
+        headers: ["Item", "Book", "Tax", "Difference"],
+        rows: [
+          { cells: ["Depreciation", "$50,000", "$80,000", "$30,000 (Tax > Book)"] },
+          { cells: ["Warranty expense (accrued)", "$25,000", "$15,000", "$10,000 (Book > Tax)"] },
+          { cells: ["Municipal bond interest", "$20,000", "$0", "$20,000 (Not taxable)"] },
+          { cells: ["Fines and penalties", "$5,000", "$0", "$5,000 (Not deductible)"] },
+          { cells: ["Installment sale gain", "$0", "$40,000", "$40,000 (Tax > Book)"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-depreciation-type",
+      order: 1,
+      type: "dropdown",
+      label: "Depreciation difference is",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-temp-dtl",
+      },
+      explanation: "Accelerated tax depreciation creates a temporary difference and deferred tax liability (DTL)",
+      dropdownOptions: [
+        { id: "opt-temp-dtl", order: 1, text: "Temporary - creates DTL", isCorrect: true },
+        { id: "opt-temp-dta", order: 2, text: "Temporary - creates DTA", isCorrect: false },
+        { id: "opt-permanent", order: 3, text: "Permanent difference", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-warranty-type",
+      order: 2,
+      type: "dropdown",
+      label: "Warranty expense difference is",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-temp-dta",
+      },
+      explanation: "Book expense exceeds tax deduction - will reverse when paid - creates DTA",
+      dropdownOptions: [
+        { id: "opt-temp-dta", order: 1, text: "Temporary - creates DTA", isCorrect: true },
+        { id: "opt-temp-dtl", order: 2, text: "Temporary - creates DTL", isCorrect: false },
+        { id: "opt-permanent", order: 3, text: "Permanent difference", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-muni-type",
+      order: 3,
+      type: "dropdown",
+      label: "Municipal bond interest is",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-permanent",
+      },
+      explanation: "Tax-exempt income is a permanent difference - never taxable",
+      dropdownOptions: [
+        { id: "opt-permanent", order: 1, text: "Permanent difference", isCorrect: true },
+        { id: "opt-temp-dta", order: 2, text: "Temporary - creates DTA", isCorrect: false },
+        { id: "opt-temp-dtl", order: 3, text: "Temporary - creates DTL", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-net-temp-diff",
+      order: 4,
+      type: "numeric",
+      label: "Net temporary differences (enter positive if net taxable/DTL)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 60000,
+        tolerance: 0,
+      },
+      explanation: "Depreciation $30,000 DTL + Installment $40,000 DTL - Warranty $10,000 DTA = $60,000 net DTL",
+    },
+    {
+      id: "req-deferred-tax",
+      order: 5,
+      type: "numeric",
+      label: "Net deferred tax liability at 21%",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 12600,
+        tolerance: 0,
+      },
+      explanation: "$60,000 × 21% = $12,600 net deferred tax liability",
+    },
+  ],
+};
+
 // Export all REG TBS questions
 export const regTBSQuestions: TBSQuestion[] = [
   regAGICalculationTBS,
@@ -9563,4 +10164,10 @@ export const regTBSQuestions: TBSQuestion[] = [
   regForeignPartnershipTBS,
   regFormSalesTBS,
   regResearchSection1031TBS,
+  // Phase 4 expansion - Journal Entry and Reconciliation TBS (tbs-reg-087 through tbs-reg-091)
+  regPartnerBasisAdjustmentTBS,
+  regSCorpDistributionTBS,
+  regPropertyContributionBasisTBS,
+  regTaxAccountReconciliationTBS,
+  regBookTaxDifferenceReconciliationTBS,
 ];

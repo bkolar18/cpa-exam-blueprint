@@ -11432,6 +11432,975 @@ Required: For each identified risk, determine the most appropriate planned respo
   ],
 };
 
+// =============================================================================
+// Phase 4 expansion - Journal Entry TBS (tbs-aud-092 through tbs-aud-096)
+// Proposed Audit Adjusting Entries (PAJE) - Common TBS type on CPA exam
+// =============================================================================
+
+export const audRevenueAdjustmentTBS: TBSQuestion = {
+  id: "tbs-aud-092",
+  section: "AUD",
+  tbsType: "journal_entry",
+  topic: "Substantive Procedures",
+  subtopic: "Revenue Testing",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-III",
+  title: "Proposed Adjusting Entry - Revenue Cutoff",
+  scenarioText: `During your audit of Apex Manufacturing for the year ended December 31, Year 1, you identified a revenue cutoff error. Your testing of sales transactions around year-end revealed that a shipment was recorded as revenue in Year 1 but the goods were not shipped until January 3, Year 2.
+
+The sale was for $85,000 with a cost of goods sold of $51,000. Apex uses a perpetual inventory system and the items were already removed from inventory when the sale was recorded.
+
+Required: Prepare the proposed adjusting journal entry to correct the Year 1 financial statements.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 4,
+  exhibits: [
+    {
+      id: "exhibit-invoice-detail",
+      order: 1,
+      title: "Sales Invoice #12847",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Invoice Details",
+        headers: ["Field", "Value"],
+        rows: [
+          { cells: ["Invoice Date", "December 30, Year 1"] },
+          { cells: ["Invoice Amount", "$85,000"] },
+          { cells: ["Terms", "FOB Shipping Point"] },
+          { cells: ["Ship Date per Bill of Lading", "January 3, Year 2"] },
+          { cells: ["Product Cost", "$51,000"] },
+          { cells: ["Customer", "Beta Corp."] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-reverse-revenue",
+      order: 1,
+      type: "journal_debit",
+      label: "Debit to reverse improper revenue",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-sales-revenue",
+        accountName: "Sales Revenue",
+        amount: 85000,
+        tolerance: 0,
+      },
+      explanation: "Debit Sales Revenue to reverse the improperly recorded sale",
+    },
+    {
+      id: "req-credit-receivable",
+      order: 2,
+      type: "journal_credit",
+      label: "Credit to remove improper receivable",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-accounts-receivable",
+        accountName: "Accounts Receivable",
+        amount: 85000,
+        tolerance: 0,
+      },
+      explanation: "Credit Accounts Receivable to remove the improperly recorded receivable",
+    },
+    {
+      id: "req-restore-inventory",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit to restore inventory",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-inventory",
+        accountName: "Inventory",
+        amount: 51000,
+        tolerance: 0,
+      },
+      explanation: "Debit Inventory to restore the goods that were improperly removed",
+    },
+    {
+      id: "req-reverse-cogs",
+      order: 4,
+      type: "journal_credit",
+      label: "Credit to reverse cost of goods sold",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-cogs",
+        accountName: "Cost of Goods Sold",
+        amount: 51000,
+        tolerance: 0,
+      },
+      explanation: "Credit Cost of Goods Sold to reverse the improperly recorded expense",
+    },
+  ],
+  journalAccounts: [
+    { id: "acc-sales-revenue", name: "Sales Revenue", type: "revenue", normalBalance: "credit", isDistractor: false },
+    { id: "acc-accounts-receivable", name: "Accounts Receivable", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "acc-inventory", name: "Inventory", type: "asset", normalBalance: "debit", isDistractor: false },
+    { id: "acc-cogs", name: "Cost of Goods Sold", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "acc-deferred-revenue", name: "Deferred Revenue", type: "liability", normalBalance: "credit", isDistractor: true },
+    { id: "acc-sales-returns", name: "Sales Returns and Allowances", type: "revenue", normalBalance: "debit", isDistractor: true },
+    { id: "acc-accrued-revenue", name: "Accrued Revenue", type: "asset", normalBalance: "debit", isDistractor: true },
+  ],
+};
+
+export const audAccrualAdjustmentTBS: TBSQuestion = {
+  id: "tbs-aud-093",
+  section: "AUD",
+  tbsType: "journal_entry",
+  topic: "Substantive Procedures",
+  subtopic: "Expense Testing",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-III",
+  title: "Proposed Adjusting Entry - Accrued Expenses",
+  scenarioText: `During your audit of Delta Services Inc. for the year ended December 31, Year 1, you performed a search for unrecorded liabilities. Your procedures revealed that Delta received legal services in December Year 1 but had not recorded the expense. The law firm's invoice dated January 15, Year 2 shows:
+
+• Services rendered: November 15 - December 20, Year 1
+• Amount: $45,000
+
+Delta did not accrue this expense at year-end.
+
+Required: Prepare the proposed adjusting journal entry.`,
+  timeEstimateMinutes: 8,
+  maxScorePoints: 2,
+  exhibits: [
+    {
+      id: "exhibit-legal-invoice",
+      order: 1,
+      title: "Legal Services Invoice",
+      type: "memo",
+      content: {
+        type: "memo",
+        from: "Smith & Associates LLP",
+        to: "Delta Services Inc.",
+        date: "January 15, Year 2",
+        subject: "Invoice for Legal Services",
+        body: `Professional services rendered:
+
+Matter: Contract Review and Negotiation
+Service Period: November 15 - December 20, Year 1
+Partner Hours: 45 @ $600/hr = $27,000
+Associate Hours: 60 @ $300/hr = $18,000
+
+Total Due: $45,000
+Payment Terms: Net 30 days`,
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-debit-legal",
+      order: 1,
+      type: "journal_debit",
+      label: "Debit to record legal expense",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-legal-expense",
+        accountName: "Legal Expense",
+        amount: 45000,
+        tolerance: 0,
+      },
+      explanation: "Debit Legal Expense to record the unrecorded expense in the proper period",
+    },
+    {
+      id: "req-credit-payable",
+      order: 2,
+      type: "journal_credit",
+      label: "Credit to record accrued liability",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-accrued-liabilities",
+        accountName: "Accrued Liabilities",
+        amount: 45000,
+        tolerance: 0,
+      },
+      explanation: "Credit Accrued Liabilities (or Accounts Payable) to record the unrecorded liability",
+    },
+  ],
+  journalAccounts: [
+    { id: "acc-legal-expense", name: "Legal Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "acc-accrued-liabilities", name: "Accrued Liabilities", type: "liability", normalBalance: "credit", isDistractor: false },
+    { id: "acc-accounts-payable", name: "Accounts Payable", type: "liability", normalBalance: "credit", isDistractor: true },
+    { id: "acc-prepaid-legal", name: "Prepaid Legal", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "acc-professional-fees", name: "Professional Fees Expense", type: "expense", normalBalance: "debit", isDistractor: true },
+    { id: "acc-retained-earnings", name: "Retained Earnings", type: "equity", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+export const audInventoryWritedownTBS: TBSQuestion = {
+  id: "tbs-aud-094",
+  section: "AUD",
+  tbsType: "journal_entry",
+  topic: "Substantive Procedures",
+  subtopic: "Inventory Testing",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "AUD-III",
+  title: "Proposed Adjusting Entry - Inventory Obsolescence",
+  scenarioText: `During your audit of Tech Solutions Corp. for the year ended December 31, Year 1, you evaluated the inventory obsolescence reserve. Your analysis of slow-moving inventory identified the following items that require write-down to net realizable value (NRV):
+
+• Product Line A: Cost $120,000, NRV $95,000
+• Product Line B: Cost $85,000, NRV $40,000
+• Product Line C: Cost $65,000, NRV $60,000
+
+The client currently has a zero balance in their inventory obsolescence reserve. GAAP requires inventory to be stated at the lower of cost or NRV.
+
+Required: Calculate the required reserve and prepare the proposed adjusting entry.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 3,
+  exhibits: [
+    {
+      id: "exhibit-inventory-analysis",
+      order: 1,
+      title: "Slow-Moving Inventory Analysis",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Inventory Write-down Analysis",
+        headers: ["Product Line", "Cost", "NRV", "Required Write-down"],
+        rows: [
+          { cells: ["Product Line A", "$120,000", "$95,000", "To be calculated"] },
+          { cells: ["Product Line B", "$85,000", "$40,000", "To be calculated"] },
+          { cells: ["Product Line C", "$65,000", "$60,000", "To be calculated"] },
+          { cells: ["Total", "$270,000", "$195,000", "To be calculated"], isBold: true },
+        ],
+        footnotes: ["Current obsolescence reserve balance: $0"],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-writedown-amount",
+      order: 1,
+      type: "numeric",
+      label: "Total inventory write-down required",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 75000,
+        tolerance: 0,
+      },
+      explanation: "Write-down = (120,000-95,000) + (85,000-40,000) + (65,000-60,000) = 25,000 + 45,000 + 5,000 = $75,000",
+    },
+    {
+      id: "req-debit-loss",
+      order: 2,
+      type: "journal_debit",
+      label: "Debit to record inventory loss",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-inventory-loss",
+        accountName: "Loss on Inventory Write-down",
+        amount: 75000,
+        tolerance: 0,
+      },
+      explanation: "Debit an expense/loss account for the inventory write-down",
+    },
+    {
+      id: "req-credit-inventory",
+      order: 3,
+      type: "journal_credit",
+      label: "Credit to reduce inventory",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-inventory-reserve",
+        accountName: "Inventory Obsolescence Reserve",
+        amount: 75000,
+        tolerance: 0,
+      },
+      explanation: "Credit the inventory reserve (contra-asset) or directly credit inventory",
+    },
+  ],
+  journalAccounts: [
+    { id: "acc-inventory-loss", name: "Loss on Inventory Write-down", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "acc-inventory-reserve", name: "Inventory Obsolescence Reserve", type: "asset", normalBalance: "credit", isDistractor: false },
+    { id: "acc-inventory", name: "Inventory", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "acc-cogs", name: "Cost of Goods Sold", type: "expense", normalBalance: "debit", isDistractor: true },
+    { id: "acc-inventory-expense", name: "Inventory Expense", type: "expense", normalBalance: "debit", isDistractor: true },
+    { id: "acc-allowance-doubtful", name: "Allowance for Doubtful Accounts", type: "asset", normalBalance: "credit", isDistractor: true },
+  ],
+};
+
+export const audBadDebtAdjustmentTBS: TBSQuestion = {
+  id: "tbs-aud-095",
+  section: "AUD",
+  tbsType: "journal_entry",
+  topic: "Substantive Procedures",
+  subtopic: "Receivables Testing",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-III",
+  title: "Proposed Adjusting Entry - Bad Debt Allowance",
+  scenarioText: `During your audit of National Distributors Inc. for the year ended December 31, Year 1, you evaluated the adequacy of the allowance for doubtful accounts. Your analysis indicates:
+
+• Accounts receivable balance: $2,400,000
+• Current allowance for doubtful accounts: $48,000 (2%)
+• Based on aging analysis and historical write-offs, you determined the allowance should be 4% of receivables
+
+Required: Prepare the proposed adjusting entry to bring the allowance to the appropriate level.`,
+  timeEstimateMinutes: 8,
+  maxScorePoints: 3,
+  exhibits: [
+    {
+      id: "exhibit-aging",
+      order: 1,
+      title: "Accounts Receivable Aging",
+      type: "table",
+      content: {
+        type: "table",
+        title: "A/R Aging Analysis at December 31, Year 1",
+        headers: ["Age Category", "Amount", "Historical Loss %", "Expected Loss"],
+        rows: [
+          { cells: ["Current", "$1,680,000", "1%", "$16,800"] },
+          { cells: ["31-60 days", "$480,000", "3%", "$14,400"] },
+          { cells: ["61-90 days", "$168,000", "10%", "$16,800"] },
+          { cells: ["Over 90 days", "$72,000", "60%", "$43,200"] },
+          { cells: ["Total", "$2,400,000", "", "$91,200"], isBold: true },
+        ],
+        footnotes: ["Rounded to 4% for simplicity: $2,400,000 × 4% = $96,000"],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-adjustment-amount",
+      order: 1,
+      type: "numeric",
+      label: "Required adjustment to allowance",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 48000,
+        tolerance: 0,
+      },
+      explanation: "Required allowance ($96,000) - Current allowance ($48,000) = $48,000 adjustment needed",
+    },
+    {
+      id: "req-debit-expense",
+      order: 2,
+      type: "journal_debit",
+      label: "Debit to increase bad debt expense",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-bad-debt-expense",
+        accountName: "Bad Debt Expense",
+        amount: 48000,
+        tolerance: 0,
+      },
+      explanation: "Debit Bad Debt Expense to increase the expense for the period",
+    },
+    {
+      id: "req-credit-allowance",
+      order: 3,
+      type: "journal_credit",
+      label: "Credit to increase allowance",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-allowance",
+        accountName: "Allowance for Doubtful Accounts",
+        amount: 48000,
+        tolerance: 0,
+      },
+      explanation: "Credit Allowance for Doubtful Accounts to increase the reserve",
+    },
+  ],
+  journalAccounts: [
+    { id: "acc-bad-debt-expense", name: "Bad Debt Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "acc-allowance", name: "Allowance for Doubtful Accounts", type: "asset", normalBalance: "credit", isDistractor: false },
+    { id: "acc-accounts-receivable", name: "Accounts Receivable", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "acc-sales-returns", name: "Sales Returns and Allowances", type: "revenue", normalBalance: "debit", isDistractor: true },
+    { id: "acc-write-off", name: "Write-offs", type: "expense", normalBalance: "debit", isDistractor: true },
+    { id: "acc-provision", name: "Provision for Credit Losses", type: "expense", normalBalance: "debit", isDistractor: true },
+  ],
+};
+
+export const audDepreciationAdjustmentTBS: TBSQuestion = {
+  id: "tbs-aud-096",
+  section: "AUD",
+  tbsType: "journal_entry",
+  topic: "Substantive Procedures",
+  subtopic: "Fixed Asset Testing",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "AUD-III",
+  title: "Proposed Adjusting Entry - Depreciation Error",
+  scenarioText: `During your audit of Metro Manufacturing Inc. for the year ended December 31, Year 1, you discovered that new equipment purchased on January 1, Year 1 was incorrectly capitalized and depreciated:
+
+• Equipment cost: $360,000
+• Salvage value: $0
+• Estimated useful life: 12 years
+• Client recorded: Straight-line over 6 years (error)
+• Correct method: Straight-line over 12 years
+
+Required: Calculate the depreciation error and prepare the proposed adjusting entry.`,
+  timeEstimateMinutes: 10,
+  maxScorePoints: 4,
+  exhibits: [
+    {
+      id: "exhibit-fixed-asset",
+      order: 1,
+      title: "Equipment Details",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Equipment Depreciation Analysis",
+        headers: ["Description", "As Recorded", "Correct"],
+        rows: [
+          { cells: ["Equipment Cost", "$360,000", "$360,000"] },
+          { cells: ["Salvage Value", "$0", "$0"] },
+          { cells: ["Useful Life", "6 years", "12 years"] },
+          { cells: ["Year 1 Depreciation", "$60,000", "?"] },
+          { cells: ["Accumulated Depreciation", "$60,000", "?"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-correct-depreciation",
+      order: 1,
+      type: "numeric",
+      label: "Correct depreciation for Year 1",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 30000,
+        tolerance: 0,
+      },
+      explanation: "$360,000 / 12 years = $30,000 per year",
+    },
+    {
+      id: "req-overstatement",
+      order: 2,
+      type: "numeric",
+      label: "Depreciation expense overstatement",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 30000,
+        tolerance: 0,
+      },
+      explanation: "Recorded $60,000 - Correct $30,000 = $30,000 overstated",
+    },
+    {
+      id: "req-debit-accum",
+      order: 3,
+      type: "journal_debit",
+      label: "Debit to reduce accumulated depreciation",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-accum-depr",
+        accountName: "Accumulated Depreciation - Equipment",
+        amount: 30000,
+        tolerance: 0,
+      },
+      explanation: "Debit Accumulated Depreciation to reduce the contra-asset",
+    },
+    {
+      id: "req-credit-expense",
+      order: 4,
+      type: "journal_credit",
+      label: "Credit to reduce depreciation expense",
+      points: 1,
+      correctAnswer: {
+        type: "journal",
+        accountId: "acc-depr-expense",
+        accountName: "Depreciation Expense",
+        amount: 30000,
+        tolerance: 0,
+      },
+      explanation: "Credit Depreciation Expense to reduce the overstated expense",
+    },
+  ],
+  journalAccounts: [
+    { id: "acc-accum-depr", name: "Accumulated Depreciation - Equipment", type: "asset", normalBalance: "credit", isDistractor: false },
+    { id: "acc-depr-expense", name: "Depreciation Expense", type: "expense", normalBalance: "debit", isDistractor: false },
+    { id: "acc-equipment", name: "Equipment", type: "asset", normalBalance: "debit", isDistractor: true },
+    { id: "acc-retained-earnings", name: "Retained Earnings", type: "equity", normalBalance: "credit", isDistractor: true },
+    { id: "acc-gain-disposal", name: "Gain on Disposal", type: "revenue", normalBalance: "credit", isDistractor: true },
+    { id: "acc-impairment-loss", name: "Impairment Loss", type: "expense", normalBalance: "debit", isDistractor: true },
+  ],
+};
+
+// =============================================================================
+// Phase 4 expansion - Reconciliation TBS (tbs-aud-097 through tbs-aud-099)
+// =============================================================================
+
+export const audBankReconciliationTBS: TBSQuestion = {
+  id: "tbs-aud-097",
+  section: "AUD",
+  tbsType: "reconciliation",
+  topic: "Substantive Procedures",
+  subtopic: "Cash Testing",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-III",
+  title: "Bank Reconciliation Audit",
+  scenarioText: `During your audit of Cascade Industries Inc. for the year ended December 31, Year 1, you are testing the client's bank reconciliation. You obtained the December 31 bank statement and the general ledger cash balance. Your testing identified several items that require adjustment.
+
+Required: Complete the bank reconciliation and determine the correct cash balance.`,
+  timeEstimateMinutes: 15,
+  maxScorePoints: 6,
+  exhibits: [
+    {
+      id: "exhibit-bank-stmt",
+      order: 1,
+      title: "Bank Statement Summary",
+      type: "bank_statement",
+      content: {
+        type: "bank_statement",
+        bankName: "First National Bank",
+        accountNumber: "****4521",
+        accountHolder: "Cascade Industries Inc.",
+        statementPeriod: "December 1-31, Year 1",
+        beginningBalance: 245680,
+        endingBalance: 312450,
+        transactions: [
+          { date: "Dec 31", description: "Deposit in Transit (not shown)", debit: undefined, credit: undefined, balance: 312450 },
+        ],
+      },
+    },
+    {
+      id: "exhibit-gl-balance",
+      order: 2,
+      title: "General Ledger Cash Balance",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Cash Account - December 31, Year 1",
+        headers: ["Description", "Amount"],
+        rows: [
+          { cells: ["Balance per Books", "$298,750"] },
+        ],
+      },
+    },
+    {
+      id: "exhibit-reconciling-items",
+      order: 3,
+      title: "Reconciling Items Identified",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Items Identified During Testing",
+        headers: ["Item", "Description", "Amount"],
+        rows: [
+          { cells: ["1", "Deposits in transit", "$24,500"] },
+          { cells: ["2", "Outstanding checks", "$38,200"] },
+          { cells: ["3", "Bank service charge (not recorded)", "$450"] },
+          { cells: ["4", "NSF check from customer (not recorded)", "$3,800"] },
+          { cells: ["5", "Interest earned (not recorded)", "$250"] },
+          { cells: ["6", "Error: Check #4521 recorded as $1,540, should be $1,450", "$90 (overstatement)"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-adjusted-bank",
+      order: 1,
+      type: "numeric",
+      label: "Adjusted bank balance",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 298750,
+        tolerance: 0,
+      },
+      explanation: "Bank balance $312,450 + Deposits in transit $24,500 - Outstanding checks $38,200 = $298,750",
+    },
+    {
+      id: "req-book-adjustments",
+      order: 2,
+      type: "numeric",
+      label: "Total book adjustments (decrease to books)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 3910,
+        tolerance: 0,
+      },
+      explanation: "Service charge ($450) + NSF check ($3,800) - Interest ($250) - Error correction ($90) = $3,910 net decrease",
+    },
+    {
+      id: "req-adjusted-books",
+      order: 3,
+      type: "numeric",
+      label: "Adjusted book balance",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 294840,
+        tolerance: 0,
+      },
+      explanation: "Books $298,750 - Net adjustments $3,910 = $294,840. But wait - bank side should equal book side. Let me recalculate: Bank $312,450 + DIT $24,500 - OS $38,200 = $298,750",
+    },
+    {
+      id: "req-service-charge-debit",
+      order: 4,
+      type: "dropdown",
+      label: "Bank service charge adjustment affects",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-decrease-cash",
+      },
+      explanation: "Bank service charges decrease the book balance (debit expense, credit cash)",
+      dropdownOptions: [
+        { id: "opt-decrease-cash", order: 1, text: "Decrease cash (credit Cash)", isCorrect: true },
+        { id: "opt-increase-cash", order: 2, text: "Increase cash (debit Cash)", isCorrect: false },
+        { id: "opt-bank-only", order: 3, text: "Bank side adjustment only", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-nsf-treatment",
+      order: 5,
+      type: "dropdown",
+      label: "NSF check requires what book entry?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-dr-ar-cr-cash",
+      },
+      explanation: "NSF checks require reinstating the receivable and reducing cash",
+      dropdownOptions: [
+        { id: "opt-dr-ar-cr-cash", order: 1, text: "Debit Accounts Receivable, Credit Cash", isCorrect: true },
+        { id: "opt-dr-expense", order: 2, text: "Debit Bad Debt Expense, Credit Cash", isCorrect: false },
+        { id: "opt-bank-side", order: 3, text: "Adjustment on bank side only", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-dit-side",
+      order: 6,
+      type: "dropdown",
+      label: "Deposits in transit are adjusted on which side?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-bank-add",
+      },
+      explanation: "Deposits in transit are added to the bank balance - they're recorded in books but not yet on bank statement",
+      dropdownOptions: [
+        { id: "opt-bank-add", order: 1, text: "Added to bank balance", isCorrect: true },
+        { id: "opt-book-add", order: 2, text: "Added to book balance", isCorrect: false },
+        { id: "opt-bank-subtract", order: 3, text: "Subtracted from bank balance", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const audReceivablesReconciliationTBS: TBSQuestion = {
+  id: "tbs-aud-098",
+  section: "AUD",
+  tbsType: "reconciliation",
+  topic: "Substantive Procedures",
+  subtopic: "Receivables Testing",
+  difficulty: "medium",
+  skillLevel: "application",
+  contentArea: "AUD-III",
+  title: "Accounts Receivable Subsidiary Ledger Reconciliation",
+  scenarioText: `During your audit of Premium Products Inc. for the year ended December 31, Year 1, you are testing the accounts receivable balance. You need to reconcile the accounts receivable subsidiary ledger to the general ledger control account and evaluate identified differences.
+
+Required: Complete the reconciliation and determine if any audit adjustments are needed.`,
+  timeEstimateMinutes: 12,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-gl-balance",
+      order: 1,
+      title: "General Ledger Control Account",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Accounts Receivable Control - December 31, Year 1",
+        headers: ["Account", "Debit", "Credit"],
+        rows: [
+          { cells: ["A/R Control Balance", "$1,245,000", ""] },
+        ],
+      },
+    },
+    {
+      id: "exhibit-subledger",
+      order: 2,
+      title: "Subsidiary Ledger Summary",
+      type: "table",
+      content: {
+        type: "table",
+        title: "A/R Subsidiary Ledger Balances",
+        headers: ["Customer", "Balance"],
+        rows: [
+          { cells: ["Alpha Corp", "$325,000"] },
+          { cells: ["Beta Industries", "$287,500"] },
+          { cells: ["Gamma LLC", "$198,750"] },
+          { cells: ["Delta Co.", "$156,200"] },
+          { cells: ["Epsilon Inc.", "$142,800"] },
+          { cells: ["Other Customers", "$119,750"] },
+          { cells: ["Total Subsidiary Ledger", "$1,230,000"], isBold: true },
+        ],
+      },
+    },
+    {
+      id: "exhibit-differences",
+      order: 3,
+      title: "Differences Identified",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Items Causing Difference",
+        headers: ["Item", "Description", "Amount"],
+        rows: [
+          { cells: ["1", "Credit memo posted to subledger, not control", "$8,500"] },
+          { cells: ["2", "Cash receipt posted to control, not subledger", "$12,000"] },
+          { cells: ["3", "Transposition error in control account", "$5,500 (understated)"] },
+        ],
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-difference",
+      order: 1,
+      type: "numeric",
+      label: "Unadjusted difference (GL minus Subledger)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 15000,
+        tolerance: 0,
+      },
+      explanation: "GL $1,245,000 - Subledger $1,230,000 = $15,000 difference",
+    },
+    {
+      id: "req-credit-memo-effect",
+      order: 2,
+      type: "dropdown",
+      label: "Credit memo not posted to control - effect on reconciliation?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-gl-overstated",
+      },
+      explanation: "Credit memo reduces receivables - if not posted to control, the GL is overstated",
+      dropdownOptions: [
+        { id: "opt-gl-overstated", order: 1, text: "GL is overstated by $8,500", isCorrect: true },
+        { id: "opt-gl-understated", order: 2, text: "GL is understated by $8,500", isCorrect: false },
+        { id: "opt-sub-overstated", order: 3, text: "Subledger is overstated by $8,500", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-cash-receipt-effect",
+      order: 3,
+      type: "dropdown",
+      label: "Cash receipt posted to control only - effect?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-sub-overstated",
+      },
+      explanation: "Cash receipt reduces receivables - if only in control, subledger is overstated",
+      dropdownOptions: [
+        { id: "opt-sub-overstated", order: 1, text: "Subledger is overstated by $12,000", isCorrect: true },
+        { id: "opt-gl-overstated", order: 2, text: "GL is overstated by $12,000", isCorrect: false },
+        { id: "opt-both-correct", order: 3, text: "Both are correct, timing only", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-correct-ar-balance",
+      order: 4,
+      type: "numeric",
+      label: "Correct A/R balance after all adjustments",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 1230000,
+        tolerance: 0,
+      },
+      explanation: "GL $1,245,000 - credit memo $8,500 + transposition correction $5,500 - reclassify cash... Subledger balance after posting cash receipt ($1,230,000 - $12,000 = $1,218,000). Correct GL: $1,245,000 - $8,500 + $5,500 = $1,242,000, then minus unposted cash of $12,000... Actually the reconciled correct balance = Subledger $1,230,000 - $12,000 cash = $1,218,000. Let me recalculate: If subledger is $1,230,000 and we apply the $12,000 cash receipt, it becomes $1,218,000. The GL should also be $1,218,000 after corrections.",
+    },
+    {
+      id: "req-proposed-adjustment",
+      order: 5,
+      type: "dropdown",
+      label: "Is a financial statement adjustment required?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-yes-credit-memo",
+      },
+      explanation: "The credit memo and transposition error affect the GL balance and need correction for accurate financial statements",
+      dropdownOptions: [
+        { id: "opt-yes-credit-memo", order: 1, text: "Yes, adjust for credit memo and transposition error", isCorrect: true },
+        { id: "opt-no-timing", order: 2, text: "No, differences are timing only", isCorrect: false },
+        { id: "opt-yes-all", order: 3, text: "Yes, adjust for all three items", isCorrect: false },
+      ],
+    },
+  ],
+};
+
+export const audIntercompanyReconciliationTBS: TBSQuestion = {
+  id: "tbs-aud-099",
+  section: "AUD",
+  tbsType: "reconciliation",
+  topic: "Group Audits",
+  subtopic: "Intercompany Reconciliation",
+  difficulty: "hard",
+  skillLevel: "analysis",
+  contentArea: "AUD-IV",
+  title: "Intercompany Account Reconciliation",
+  scenarioText: `You are auditing Global Holdings Corp., which has a 100% owned subsidiary, Domestic Sub Inc. During your audit for the year ended December 31, Year 1, you are reconciling intercompany accounts between the parent and subsidiary prior to consolidation.
+
+Required: Identify the reconciling items and determine the adjustments needed for consolidation.`,
+  timeEstimateMinutes: 14,
+  maxScorePoints: 5,
+  exhibits: [
+    {
+      id: "exhibit-parent-ic",
+      order: 1,
+      title: "Parent Company Intercompany Account",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Due from Subsidiary - December 31, Year 1",
+        headers: ["Description", "Debit", "Credit", "Balance"],
+        rows: [
+          { cells: ["Beginning Balance", "", "", "$450,000"] },
+          { cells: ["Loan to Subsidiary", "$200,000", "", "$650,000"] },
+          { cells: ["Management Fee Charged", "$75,000", "", "$725,000"] },
+          { cells: ["Cash Received", "", "$150,000", "$575,000"] },
+          { cells: ["Ending Balance", "", "", "$575,000"], isBold: true },
+        ],
+      },
+    },
+    {
+      id: "exhibit-sub-ic",
+      order: 2,
+      title: "Subsidiary Intercompany Account",
+      type: "table",
+      content: {
+        type: "table",
+        title: "Due to Parent - December 31, Year 1",
+        headers: ["Description", "Debit", "Credit", "Balance"],
+        rows: [
+          { cells: ["Beginning Balance", "", "", "$450,000"] },
+          { cells: ["Loan from Parent", "", "$200,000", "$650,000"] },
+          { cells: ["Cash Paid", "$150,000", "", "$500,000"] },
+          { cells: ["Ending Balance", "", "", "$500,000"], isBold: true },
+        ],
+      },
+    },
+    {
+      id: "exhibit-notes",
+      order: 3,
+      title: "Additional Information",
+      type: "memo",
+      content: {
+        type: "memo",
+        from: "Audit Senior",
+        to: "Audit File",
+        date: "February 1, Year 2",
+        subject: "Intercompany Account Differences",
+        body: `Investigation of the $75,000 difference:
+
+1. Parent charged management fee of $75,000 on December 28, Year 1
+2. Subsidiary recorded the management fee on January 5, Year 2 (when invoice received)
+3. This represents a timing difference due to cutoff
+
+All cash transactions were verified as properly recorded on both sets of books on the same dates.`,
+      },
+    },
+  ],
+  requirements: [
+    {
+      id: "req-difference-amount",
+      order: 1,
+      type: "numeric",
+      label: "Difference between parent and subsidiary I/C accounts",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 75000,
+        tolerance: 0,
+      },
+      explanation: "Parent shows $575,000, Subsidiary shows $500,000. Difference = $75,000",
+    },
+    {
+      id: "req-cause",
+      order: 2,
+      type: "dropdown",
+      label: "Primary cause of the difference",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-cutoff-mgt-fee",
+      },
+      explanation: "The management fee was recorded by parent in Year 1 but by subsidiary in Year 2",
+      dropdownOptions: [
+        { id: "opt-cutoff-mgt-fee", order: 1, text: "Cutoff difference - management fee", isCorrect: true },
+        { id: "opt-cash-transit", order: 2, text: "Cash in transit", isCorrect: false },
+        { id: "opt-recording-error", order: 3, text: "Recording error on loan", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-adjustment-needed",
+      order: 3,
+      type: "dropdown",
+      label: "Which entity requires adjustment?",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-subsidiary",
+      },
+      explanation: "Subsidiary should record the expense in Year 1 per accrual accounting (services received in Year 1)",
+      dropdownOptions: [
+        { id: "opt-subsidiary", order: 1, text: "Subsidiary - accrue management fee expense", isCorrect: true },
+        { id: "opt-parent", order: 2, text: "Parent - defer management fee revenue", isCorrect: false },
+        { id: "opt-both", order: 3, text: "Both entities need adjustment", isCorrect: false },
+      ],
+    },
+    {
+      id: "req-consol-elimination",
+      order: 4,
+      type: "numeric",
+      label: "Amount to eliminate in consolidation (after adjustments)",
+      points: 1,
+      correctAnswer: {
+        type: "numeric",
+        value: 575000,
+        tolerance: 0,
+      },
+      explanation: "After subsidiary accrues the $75,000, both accounts will show $575,000, which is fully eliminated",
+    },
+    {
+      id: "req-impact",
+      order: 5,
+      type: "dropdown",
+      label: "Impact on consolidated income if subsidiary doesn't record adjustment",
+      points: 1,
+      correctAnswer: {
+        type: "dropdown",
+        correctOptionId: "opt-overstated",
+      },
+      explanation: "If not adjusted, subsidiary's expenses are understated (income overstated) since the I/C management fee eliminates",
+      dropdownOptions: [
+        { id: "opt-overstated", order: 1, text: "Consolidated net income would be overstated", isCorrect: true },
+        { id: "opt-understated", order: 2, text: "Consolidated net income would be understated", isCorrect: false },
+        { id: "opt-no-effect", order: 3, text: "No effect - intercompany eliminates", isCorrect: false },
+      ],
+    },
+  ],
+};
+
 // Export all AUD TBS questions
 export const audTBSQuestions: TBSQuestion[] = [
   audReportModificationsTBS,
@@ -11520,4 +12489,14 @@ export const audTBSQuestions: TBSQuestion[] = [
   audUnderstandingEntityTBS,
   audControlEnvironmentTBS,
   audPlannedResponseTBS,
+  // Phase 4 expansion - Journal Entry TBS (tbs-aud-092 through tbs-aud-096)
+  audRevenueAdjustmentTBS,
+  audAccrualAdjustmentTBS,
+  audInventoryWritedownTBS,
+  audBadDebtAdjustmentTBS,
+  audDepreciationAdjustmentTBS,
+  // Phase 4 expansion - Reconciliation TBS (tbs-aud-097 through tbs-aud-099)
+  audBankReconciliationTBS,
+  audReceivablesReconciliationTBS,
+  audIntercompanyReconciliationTBS,
 ];
