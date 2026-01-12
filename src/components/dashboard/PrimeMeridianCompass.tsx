@@ -2,7 +2,6 @@
 
 import { useMemo } from "react";
 import { getPrimeMeridianMilestone } from "@/lib/scoring/prime-meridian";
-import Image from "next/image";
 
 interface PrimeMeridianCompassProps {
   score: number;
@@ -12,14 +11,10 @@ interface PrimeMeridianCompassProps {
 }
 
 /**
- * Prime Meridian Compass Rose Display
+ * Prime Meridian Compass Display
  *
- * Uses the official Meridian compass rose logo with a dynamic needle overlay.
- * Features:
- * - Official compass rose SVG as background
- * - Dynamic clock-hand needle pointing to current score percentage
- * - Color-coded needle based on score milestone
- * - Score display below compass
+ * Circular gauge design matching the section Prime Meridian scores
+ * with a subtle 4-point star background for branding.
  */
 export default function PrimeMeridianCompass({
   score,
@@ -32,155 +27,134 @@ export default function PrimeMeridianCompass({
   // Size configurations
   const sizeConfig = {
     sm: {
-      width: 64,
-      height: 64,
+      svgSize: 72,
+      radius: 28,
+      strokeWidth: 5,
+      fontSize: "text-lg",
       labelSize: "text-[8px]",
-      scoreSize: "text-base",
-      needleLength: 22,
-      needleWidth: 2.5,
-      hubSize: 4,
-      innerHub: 2,
+      starSize: 0.4, // relative to svgSize
     },
     md: {
-      width: 100,
-      height: 100,
+      svgSize: 100,
+      radius: 40,
+      strokeWidth: 6,
+      fontSize: "text-2xl",
       labelSize: "text-xs",
-      scoreSize: "text-lg",
-      needleLength: 36,
-      needleWidth: 3.5,
-      hubSize: 6,
-      innerHub: 3,
+      starSize: 0.45,
     },
     lg: {
-      width: 140,
-      height: 140,
+      svgSize: 130,
+      radius: 52,
+      strokeWidth: 8,
+      fontSize: "text-3xl",
       labelSize: "text-sm",
-      scoreSize: "text-xl",
-      needleLength: 50,
-      needleWidth: 4.5,
-      hubSize: 8,
-      innerHub: 4,
+      starSize: 0.5,
     },
   };
 
   const config = sizeConfig[size];
-  const centerX = config.width / 2;
-  const centerY = config.height / 2;
-
-  // Score to angle: 0% = top (0°), 25% = right (90°), 50% = bottom (180°), 75% = left (270°)
+  const center = config.svgSize / 2;
+  const circumference = 2 * Math.PI * config.radius;
   const scorePercentage = Math.min(100, Math.max(0, score));
-  const needleAngle = (scorePercentage / 100) * 360;
+  const strokeDashoffset = circumference - (scorePercentage / 100) * circumference;
 
-  // Get needle color based on score
-  const getNeedleColor = (s: number) => {
+  // Get gauge color based on score
+  const getGaugeColor = (s: number) => {
     if (s >= 75) return "#10b981"; // emerald-500
-    if (s >= 60) return "#84cc16"; // lime-500
-    if (s >= 40) return "#eab308"; // yellow-500
-    if (s >= 20) return "#f97316"; // orange-500
+    if (s >= 65) return "#eab308"; // yellow-500
+    if (s >= 50) return "#f97316"; // orange-500
     return "#ef4444"; // red-500
   };
 
-  const needleColor = getNeedleColor(score);
+  const gaugeColor = getGaugeColor(score);
 
-  // Create needle path (clock hand style - diamond shape)
-  const createNeedlePath = () => {
-    const needleLength = config.needleLength;
-    const needleWidth = config.needleWidth;
-    const tailLength = needleLength * 0.25;
+  // Create 4-point star path
+  const createStarPath = () => {
+    const starRadius = config.svgSize * config.starSize;
+    const innerRadius = starRadius * 0.15; // Very thin star
+    const points: string[] = [];
 
-    const rad = (needleAngle - 90) * (Math.PI / 180);
-    const tipX = centerX + Math.cos(rad) * needleLength;
-    const tipY = centerY + Math.sin(rad) * needleLength;
-
-    // Tail (opposite direction)
-    const tailRad = (needleAngle + 90) * (Math.PI / 180);
-    const tailX = centerX + Math.cos(tailRad) * tailLength;
-    const tailY = centerY + Math.sin(tailRad) * tailLength;
-
-    // Side points for diamond shape
-    const perpRad1 = needleAngle * (Math.PI / 180);
-    const perpRad2 = (needleAngle + 180) * (Math.PI / 180);
-    const sideX1 = centerX + Math.cos(perpRad1) * needleWidth;
-    const sideY1 = centerY + Math.sin(perpRad1) * needleWidth;
-    const sideX2 = centerX + Math.cos(perpRad2) * needleWidth;
-    const sideY2 = centerY + Math.sin(perpRad2) * needleWidth;
-
-    return `M ${tipX} ${tipY} L ${sideX1} ${sideY1} L ${tailX} ${tailY} L ${sideX2} ${sideY2} Z`;
+    // 4 points: top, right, bottom, left
+    for (let i = 0; i < 8; i++) {
+      const angle = (i * 45 - 90) * (Math.PI / 180);
+      const radius = i % 2 === 0 ? starRadius : innerRadius;
+      const x = center + Math.cos(angle) * radius;
+      const y = center + Math.sin(angle) * radius;
+      points.push(`${i === 0 ? 'M' : 'L'} ${x} ${y}`);
+    }
+    return points.join(' ') + ' Z';
   };
 
   return (
     <div className={`relative inline-flex flex-col items-center ${className}`}>
-      {/* Compass container */}
-      <div
-        className="relative"
-        style={{ width: config.width, height: config.height }}
+      <svg
+        width={config.svgSize}
+        height={config.svgSize}
+        className="transform -rotate-90"
       >
-        {/* Compass rose background image */}
-        <Image
-          src="/compass-rose.svg"
-          alt="Compass Rose"
-          width={config.width}
-          height={config.height}
-          className="absolute inset-0"
-          priority
+        {/* 4-point star background - very subtle */}
+        <path
+          d={createStarPath()}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+          className="text-gray-200 dark:text-gray-700 opacity-60"
+          transform={`rotate(90, ${center}, ${center})`}
         />
 
-        {/* Dynamic needle overlay */}
-        <svg
-          width={config.width}
-          height={config.height}
-          viewBox={`0 0 ${config.width} ${config.height}`}
-          className="absolute inset-0"
-          style={{ zIndex: 10 }}
-        >
-          {/* Needle shadow for depth */}
-          <path
-            d={createNeedlePath()}
-            fill="rgba(0,0,0,0.2)"
-            transform="translate(1, 1)"
-            className="transition-all duration-700 ease-out"
-          />
+        {/* Background circle */}
+        <circle
+          cx={center}
+          cy={center}
+          r={config.radius}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={config.strokeWidth}
+          className="text-gray-200 dark:text-gray-700"
+        />
 
-          {/* Main needle */}
-          <path
-            d={createNeedlePath()}
-            fill={needleColor}
-            stroke="#1e3a5f"
-            strokeWidth="0.5"
-            className="transition-all duration-700 ease-out"
-            style={{
-              filter: `drop-shadow(0 1px 2px ${needleColor}50)`,
-            }}
-          />
+        {/* 75 marker (recommended score) */}
+        <line
+          x1={center}
+          y1={center - config.radius + config.strokeWidth / 2 - 2}
+          x2={center}
+          y2={center - config.radius - config.strokeWidth / 2 - 4}
+          stroke="#10b981"
+          strokeWidth="2"
+          transform={`rotate(${75 * 3.6}, ${center}, ${center})`}
+          className="opacity-70"
+        />
 
-          {/* Center hub - outer ring */}
-          <circle
-            cx={centerX}
-            cy={centerY}
-            r={config.hubSize}
-            fill="#1e3a5f"
-          />
+        {/* Progress arc */}
+        <circle
+          cx={center}
+          cy={center}
+          r={config.radius}
+          fill="none"
+          stroke={gaugeColor}
+          strokeWidth={config.strokeWidth}
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          className="transition-all duration-700 ease-out"
+        />
+      </svg>
 
-          {/* Center hub - inner colored dot */}
-          <circle
-            cx={centerX}
-            cy={centerY}
-            r={config.innerHub}
-            fill={needleColor}
-          />
-        </svg>
-      </div>
-
-      {/* Score and label below */}
-      <div className="flex flex-col items-center mt-1">
-        <div
-          className={`font-bold tabular-nums ${config.scoreSize}`}
-          style={{ color: needleColor }}
-        >
+      {/* Center content - positioned absolutely */}
+      <div
+        className="absolute flex flex-col items-center justify-center"
+        style={{
+          top: 0,
+          left: 0,
+          width: config.svgSize,
+          height: config.svgSize,
+        }}
+      >
+        <div className={`${config.fontSize} font-bold`} style={{ color: gaugeColor }}>
           {score}
         </div>
         {showLabel && (
-          <div className={`${config.labelSize} text-[var(--muted)] font-medium -mt-0.5`}>
+          <div className={`${config.labelSize} text-[var(--muted)] -mt-0.5`}>
             Prime Meridian
           </div>
         )}
