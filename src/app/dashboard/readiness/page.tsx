@@ -1,13 +1,20 @@
 "use client";
 
-import { useState, useEffect, useMemo } from"react";
-import { createClient } from"@/lib/supabase/client";
-import { useAuth } from"@/components/auth/AuthProvider";
-import Link from"next/link";
-import { allTaxonomies, type SectionTaxonomy } from"@/lib/data/practice-questions/taxonomy";
-import { getQuestionsBySection, getQuestionsByTopic } from"@/lib/data/practice-questions";
-import { getTBSBySection, type TBSQuestion } from"@/lib/data/tbs";
-import type { SectionCode } from"@/lib/supabase/types";
+import { useState, useEffect, useMemo } from "react";
+import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/components/auth/AuthProvider";
+import Link from "next/link";
+import { allTaxonomies, type SectionTaxonomy } from "@/lib/data/practice-questions/taxonomy";
+import { getQuestionsBySection, getQuestionsByTopic } from "@/lib/data/practice-questions";
+import { getTBSBySection, type TBSQuestion } from "@/lib/data/tbs";
+import type { SectionCode } from "@/lib/supabase/types";
+import {
+  calculatePrimeMeridianScore,
+  type PrimeMeridianResult,
+  type PracticeAttemptData,
+  type TBSAttemptData,
+} from "@/lib/scoring/prime-meridian";
+import PrimeMeridianScore from "@/components/dashboard/PrimeMeridianScore";
 
 // Core sections always shown
 const coreSections: SectionCode[] = ["FAR","AUD","REG"];
@@ -55,18 +62,20 @@ interface TBSTopicStats {
 }
 
 interface SectionReadiness {
- section: SectionCode;
- overallScore: number;
- topicStats: TopicStats[];
- totalAttempted: number;
- totalCorrect: number;
- avgAccuracy: number;
- coveragePercent: number;
- simulationAvg: number | null;
- simulationCount: number;
- // TBS stats
- tbsStats: TBSStats;
- tbsTopicStats: TBSTopicStats[];
+  section: SectionCode;
+  overallScore: number;
+  topicStats: TopicStats[];
+  totalAttempted: number;
+  totalCorrect: number;
+  avgAccuracy: number;
+  coveragePercent: number;
+  simulationAvg: number | null;
+  simulationCount: number;
+  // TBS stats
+  tbsStats: TBSStats;
+  tbsTopicStats: TBSTopicStats[];
+  // Prime Meridian
+  primeMeridian: PrimeMeridianResult;
 }
 
 interface ConfidenceData {
@@ -336,23 +345,40 @@ export default function ReadinessDashboardPage() {
  };
  });
 
- readiness[section] = {
- section: section as SectionCode,
- overallScore,
- topicStats,
- totalAttempted,
- totalCorrect,
- avgAccuracy: totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0,
- coveragePercent: Math.round(
- topicStats.reduce((sum, t) => sum + t.coverage, 0) / topicStats.length
- ),
- simulationAvg: simulations.length > 0
- ? Math.round(simulations.reduce((sum, s) => sum + s.accuracy, 0) / simulations.length)
- : null,
- simulationCount: simulations.length,
- tbsStats,
- tbsTopicStats,
- };
+ // Calculate Prime Meridian score
+      const mcqAttemptsForPM: PracticeAttemptData[] = sectionAttempts.map(a => ({
+        question_id: a.question_id,
+        topic: a.topic,
+        is_correct: a.is_correct,
+        created_at: a.created_at,
+      }));
+      const tbsAttemptsForPM: TBSAttemptData[] = (sectionTBSAttempts as TBSAttemptRow[]).map(t => ({
+        tbs_id: t.tbs_id,
+        section: t.section,
+        is_complete: t.is_complete,
+        score_percentage: t.score_percentage,
+        created_at: new Date().toISOString(), // TBS attempts don't have created_at in current schema
+      }));
+      const primeMeridian = calculatePrimeMeridianScore(mcqAttemptsForPM, tbsAttemptsForPM, section as SectionCode);
+
+      readiness[section] = {
+        section: section as SectionCode,
+        overallScore,
+        topicStats,
+        totalAttempted,
+        totalCorrect,
+        avgAccuracy: totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0,
+        coveragePercent: Math.round(
+          topicStats.reduce((sum, t) => sum + t.coverage, 0) / topicStats.length
+        ),
+        simulationAvg: simulations.length > 0
+          ? Math.round(simulations.reduce((sum, s) => sum + s.accuracy, 0) / simulations.length)
+          : null,
+        simulationCount: simulations.length,
+        tbsStats,
+        tbsTopicStats,
+        primeMeridian,
+      };
  }
 
  setReadinessData(readiness);
@@ -438,61 +464,81 @@ export default function ReadinessDashboardPage() {
  const currentMilestone = currentReadiness ? getMilestone(currentReadiness.overallScore) : milestones[0];
  const nextMilestone = currentReadiness ? getNextMilestone(currentReadiness.overallScore) : milestones[1];
 
- // Calculate overall readiness across visible studied sections only
- const studiedSections = visibleSections
- .map(s => readinessData[s])
- .filter((r): r is SectionReadiness => r !== undefined && r.totalAttempted > 0);
- const overallReadiness = studiedSections.length > 0
- ? Math.round(studiedSections.reduce((sum, r) => sum + r.overallScore, 0) / studiedSections.length)
- : 0;
+ // Calculate overall Prime Meridian across visible studied sections only
+  const studiedSections = visibleSections
+    .map(s => readinessData[s])
+    .filter((r): r is SectionReadiness => r !== undefined && r.totalAttempted > 0);
+  const overallPrimeMeridian = studiedSections.length > 0
+    ? Math.round(studiedSections.reduce((sum, r) => sum + r.primeMeridian.overallScore, 0) / studiedSections.length)
+    : 0;
 
  return (
  <div className="space-y-6">
  {/* Header */}
- <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
- <div className="flex items-center justify-between">
- <div className="flex items-center space-x-4">
- <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
- <svg className="w-7 h-7"fill="none"stroke="currentColor"viewBox="0 0 24 24">
- <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
- </svg>
- </div>
- <div>
- <h1 className="text-2xl font-bold">Exam Readiness Dashboard</h1>
- <p className="text-white/80">Track your preparation progress across all topics</p>
- </div>
- </div>
- <div className="text-right">
- <div className="text-4xl font-bold">{overallReadiness}%</div>
- <div className="text-white/80 text-sm">Overall Readiness</div>
- </div>
- </div>
- </div>
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Exam Readiness Dashboard</h1>
+              <p className="text-white/80">Track your Prime Meridian score across all sections</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-4xl font-bold">{overallPrimeMeridian}</div>
+            <div className="text-white/80 text-sm">Prime Meridian</div>
+            {overallPrimeMeridian > 0 && overallPrimeMeridian < 75 && (
+              <div className="text-white/60 text-xs mt-1">{75 - overallPrimeMeridian} to recommended</div>
+            )}
+            {overallPrimeMeridian >= 75 && (
+              <div className="text-emerald-300 text-xs mt-1 flex items-center justify-end gap-1">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                </svg>
+                Recommended
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
 
  {/* Section Selector */}
- <div className="grid grid-cols-4 sm:flex sm:flex-wrap gap-2">
- {visibleSections.map((section) => {
- const data = readinessData[section];
- const score = data?.overallScore || 0;
- const milestone = getMilestone(score);
+      <div className="grid grid-cols-4 sm:flex sm:flex-wrap gap-2">
+        {visibleSections.map((section) => {
+          const data = readinessData[section];
+          const pmScore = data?.primeMeridian?.overallScore || 0;
+          const isRecommended = pmScore >= 75;
 
- return (
- <button
- key={section}
- onClick={() => setSelectedSection(section)}
- className={`px-2 sm:px-4 py-2 sm:py-3 rounded-xl font-medium transition-all sm:w-[100px] text-center ${
- selectedSection === section
- ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
- : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
- }`}
- >
- <div className="text-base sm:text-lg font-bold">{section}</div>
- <div className={`text-[10px] sm:text-xs ${selectedSection === section ? 'text-white/80' : 'text-[var(--muted)]'}`}>
- {score > 0 ? `${score}%` : 'Not started'}
- </div>
- </button>
- );
- })}
+          return (
+            <button
+              key={section}
+              onClick={() => setSelectedSection(section)}
+              className={`px-2 sm:px-4 py-2 sm:py-3 rounded-xl font-medium transition-all sm:w-[100px] text-center ${
+                selectedSection === section
+                  ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
+                  : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
+              }`}
+            >
+              <div className="text-base sm:text-lg font-bold">{section}</div>
+              <div className={`text-[10px] sm:text-xs ${selectedSection === section ? 'text-white/80' : 'text-[var(--muted)]'}`}>
+                {pmScore > 0 ? (
+                  <span className="flex items-center justify-center gap-1">
+                    {pmScore}
+                    {isRecommended && (
+                      <svg className={`w-3 h-3 ${selectedSection === section ? 'text-white' : 'text-emerald-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                      </svg>
+                    )}
+                  </span>
+                ) : 'Not started'}
+              </div>
+            </button>
+          );
+        })}
 
  {/* Show hint when discipline not selected */}
  {!profile?.discipline_choice && (
@@ -510,87 +556,13 @@ export default function ReadinessDashboardPage() {
  </div>
 
  {currentReadiness && (
- <>
- {/* Main Readiness Score with Milestone Progress */}
- <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
- <div className="flex items-center justify-between mb-4">
- <h2 className="text-lg font-semibold text-[var(--foreground)]">
- {selectedSection} Readiness Score
- </h2>
- <div className={`hidden sm:block px-3 py-1 rounded-full text-sm font-medium text-white ${currentMilestone.color}`}>
- {currentMilestone.label}
- </div>
- </div>
-
- {/* Big Progress Bar with Milestones */}
- <div className="relative mb-6">
- <div className="h-8 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
- <div
- className={`h-full ${currentMilestone.color} transition-all duration-500`}
- style={{ width: `${currentReadiness.overallScore}%` }}
- />
- </div>
-
- {/* Milestone markers */}
- <div className="absolute top-0 left-0 right-0 h-8 flex items-center">
- {milestones.slice(1).map((milestone, i) => (
- <div
- key={milestone.threshold}
- className="absolute flex flex-col items-center"
- style={{ left: `${milestone.threshold}%`, transform: 'translateX(-50%)' }}
- >
- <div className={`w-1 h-8 ${
- currentReadiness.overallScore >= milestone.threshold
- ? 'bg-white/50'
- : 'bg-gray-400 dark:bg-[var(--border)]'
- }`} />
- </div>
- ))}
- </div>
-
- {/* Score indicator - hidden on mobile, shown centered below on mobile */}
- <div
- className="hidden sm:flex absolute top-10 flex-col items-center"
- style={{
- left: `${Math.max(10, Math.min(90, currentReadiness.overallScore))}%`,
- transform: 'translateX(-50%)'
- }}
- >
- <div className="text-2xl font-bold text-[var(--foreground)]">{currentReadiness.overallScore}%</div>
- </div>
- </div>
-
- {/* Mobile: Score and milestone centered */}
- <div className="sm:hidden mt-4 mb-4 text-center">
- <div className="text-3xl font-bold text-[var(--foreground)] mb-2">{currentReadiness.overallScore}%</div>
- <span className={`text-sm font-medium px-3 py-1 rounded-full ${currentMilestone.color} text-white`}>
- {currentMilestone.label}
- </span>
- </div>
-
- {/* Desktop: Milestone Labels */}
- <div className="hidden sm:flex justify-between text-xs text-[var(--muted)] mt-8 mb-4">
- {milestones.map((milestone) => (
- <div
- key={milestone.threshold}
- className={`text-center ${currentReadiness.overallScore >= milestone.threshold ? 'font-medium text-[var(--foreground)]' : ''}`}
- style={{ width: '16%' }}
- >
- {milestone.label}
- </div>
- ))}
- </div>
-
- {/* Motivational Message */}
- <div className="bg-gray-50 dark:bg-[var(--card-hover)]/50 rounded-lg p-4 text-center">
- <p className="text-[var(--foreground)] font-medium">{currentMilestone.message}</p>
- {nextMilestone && (
- <p className="text-sm text-[var(--muted)] mt-1">
- {nextMilestone.threshold - currentReadiness.overallScore} points to reach &quot;{nextMilestone.label}&quot;
- </p>
- )}
- </div>
- </div>
+        <>
+          {/* Prime Meridian Score */}
+          <PrimeMeridianScore
+            result={currentReadiness.primeMeridian}
+            section={selectedSection}
+            showDetails={true}
+          />
 
  {/* Stats Overview */}
  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -973,11 +945,7 @@ export default function ReadinessDashboardPage() {
  </div>
  )}
 
- {/* Disclaimer */}
- <p className="text-xs text-[var(--muted)] text-center mt-6">
- This readiness score is based on your practice performance and is intended as a study aid only.
- It does not guarantee any particular outcome on the actual CPA exam.
- </p>
+ {/* Note: Prime Meridian component includes its own disclaimer */}
  </>
  )}
  </div>

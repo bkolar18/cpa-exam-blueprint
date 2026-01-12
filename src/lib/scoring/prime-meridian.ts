@@ -1,0 +1,626 @@
+/**
+ * Prime Meridian Score Calculation
+ *
+ * A comprehensive exam readiness score that combines:
+ * - AICPA Blueprint content area weighting
+ * - MCQ and TBS performance (50/50 split like real exam)
+ * - Difficulty multipliers (hard questions worth more)
+ * - Recency weighting (recent performance matters more)
+ * - Minimum practice thresholds per content area
+ *
+ * Target: 75 (recommended score before taking the exam)
+ */
+
+import type { SectionCode } from "@/lib/supabase/types";
+
+// AICPA Blueprint Weight Allocations (2025-2026)
+// Using midpoint of ranges for calculation
+export const AICPA_CONTENT_AREA_WEIGHTS: Record<string, Record<string, { min: number; max: number; mid: number; name: string }>> = {
+  FAR: {
+    'FAR-I': { min: 25, max: 35, mid: 30, name: 'Conceptual Framework, Standard-Setting, Financial Reporting' },
+    'FAR-II': { min: 30, max: 40, mid: 35, name: 'Select Financial Statement Accounts' },
+    'FAR-III': { min: 20, max: 30, mid: 25, name: 'Select Transactions' },
+    'FAR-IV': { min: 5, max: 15, mid: 10, name: 'State and Local Governments' }
+  },
+  AUD: {
+    'AUD-I': { min: 15, max: 25, mid: 20, name: 'Ethics, Professional Responsibilities, General Principles' },
+    'AUD-II': { min: 25, max: 35, mid: 30, name: 'Assessing Risk and Developing a Planned Response' },
+    'AUD-III': { min: 30, max: 40, mid: 35, name: 'Performing Further Procedures and Obtaining Evidence' },
+    'AUD-IV': { min: 10, max: 20, mid: 15, name: 'Forming Conclusions and Reporting' }
+  },
+  REG: {
+    'REG-I': { min: 10, max: 20, mid: 15, name: 'Ethics, Professional Responsibilities, Federal Tax Procedures' },
+    'REG-II': { min: 15, max: 25, mid: 20, name: 'Business Law' },
+    'REG-III': { min: 12, max: 22, mid: 17, name: 'Federal Taxation of Property Transactions' },
+    'REG-IV': { min: 22, max: 32, mid: 27, name: 'Federal Taxation of Individuals' },
+    'REG-V': { min: 18, max: 28, mid: 23, name: 'Federal Taxation of Entities' }
+  },
+  TCP: {
+    'TCP-I': { min: 35, max: 45, mid: 40, name: 'Tax Compliance and Planning for Individuals' },
+    'TCP-II': { min: 30, max: 40, mid: 35, name: 'Tax Compliance and Planning for Entities' },
+    'TCP-III': { min: 7, max: 17, mid: 12, name: 'Tax Compliance and Planning for Property Transactions' },
+    'TCP-IV': { min: 8, max: 18, mid: 13, name: 'Special Tax Topics' }
+  },
+  BAR: {
+    'BAR-I': { min: 40, max: 50, mid: 45, name: 'Business Analysis' },
+    'BAR-II': { min: 35, max: 45, mid: 40, name: 'Technical Accounting and Reporting' },
+    'BAR-III': { min: 10, max: 20, mid: 15, name: 'State and Local Governments' }
+  },
+  ISC: {
+    'ISC-I': { min: 35, max: 45, mid: 40, name: 'Information Systems and Data Management' },
+    'ISC-II': { min: 35, max: 45, mid: 40, name: 'Security, Confidentiality, and Privacy' },
+    'ISC-III': { min: 15, max: 25, mid: 20, name: 'SOC Engagements' }
+  }
+};
+
+// Map topics to AICPA content areas
+// This mapping connects our taxonomy topics to AICPA blueprint content areas
+export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
+  FAR: {
+    // FAR-I: Conceptual Framework, Standard-Setting, Financial Reporting
+    'Conceptual Framework & Standards': 'FAR-I',
+    'Financial Statement Presentation': 'FAR-I',
+    'Statement of Cash Flows': 'FAR-I',
+    'IFRS': 'FAR-I',
+    'Fair Value': 'FAR-I',
+    'Accounting Changes and Error Corrections': 'FAR-I',
+
+    // FAR-II: Select Financial Statement Accounts
+    'Inventory': 'FAR-II',
+    'Property, Plant & Equipment': 'FAR-II',
+    'Intangible Assets': 'FAR-II',
+    'Investments': 'FAR-II',
+    'Liabilities': 'FAR-II',
+    'Long-term Debt': 'FAR-II',
+    "Stockholders' Equity": 'FAR-II',
+    'Revenue Recognition': 'FAR-II',
+    'Income Taxes': 'FAR-II',
+    'Pensions': 'FAR-II',
+    'Earnings Per Share': 'FAR-II',
+    'Stock-Based Compensation': 'FAR-II',
+
+    // FAR-III: Select Transactions
+    'Leases': 'FAR-III',
+    'Business Combinations': 'FAR-III',
+    'Consolidations': 'FAR-III',
+    'Derivatives': 'FAR-III',
+    'Foreign Currency': 'FAR-III',
+
+    // FAR-IV: State and Local Governments
+    'Government Accounting': 'FAR-IV',
+    'Not-for-Profit Accounting': 'FAR-IV',
+  },
+  AUD: {
+    // AUD-I: Ethics, Professional Responsibilities, General Principles
+    'Professional Ethics': 'AUD-I',
+    'Quality Control': 'AUD-I',
+
+    // AUD-II: Assessing Risk and Developing a Planned Response
+    'Audit Planning': 'AUD-II',
+    'Risk Assessment': 'AUD-II',
+    'Internal Control': 'AUD-II',
+    'Fraud': 'AUD-II',
+
+    // AUD-III: Performing Further Procedures and Obtaining Evidence
+    'Audit Evidence': 'AUD-III',
+    'Audit Sampling': 'AUD-III',
+    'Revenue and Receivables': 'AUD-III',
+    'Inventory Auditing': 'AUD-III',
+    'Using Work of Others': 'AUD-III',
+    'Audit Documentation': 'AUD-III',
+    'Management Representations': 'AUD-III',
+    'Subsequent Events': 'AUD-III',
+    'Going Concern': 'AUD-III',
+    'Group Audits': 'AUD-III',
+    'Comprehensive Review': 'AUD-III',
+
+    // AUD-IV: Forming Conclusions and Reporting
+    'Audit Reports': 'AUD-IV',
+    'Governance Communications': 'AUD-IV',
+    'SSARS': 'AUD-IV',
+    'Attestation Engagements': 'AUD-IV',
+    'Government Auditing': 'AUD-IV',
+  },
+  REG: {
+    // REG-I: Ethics, Professional Responsibilities, Federal Tax Procedures
+    'Professional Ethics - Circular 230': 'REG-I',
+    'Tax Procedures': 'REG-I',
+    'Tax Research': 'REG-I',
+
+    // REG-II: Business Law
+    'Business Law': 'REG-II',
+    'Business Law - Contracts': 'REG-II',
+    'Business Law - Agency': 'REG-II',
+    'Business Law - Business Structures': 'REG-II',
+    'Business Law - Bankruptcy': 'REG-II',
+    'Business Law - Securities Regulation': 'REG-II',
+    'Debtor-Creditor': 'REG-II',
+
+    // REG-III: Federal Taxation of Property Transactions
+    'Property Transactions': 'REG-III',
+
+    // REG-IV: Federal Taxation of Individuals
+    'Individual Taxation': 'REG-IV',
+    'Employment Tax': 'REG-IV',
+    'Gift and Estate Tax': 'REG-IV',
+    'Estates and Trusts': 'REG-IV',
+
+    // REG-V: Federal Taxation of Entities
+    'C Corporations': 'REG-V',
+    'S Corporations': 'REG-V',
+    'Partnerships': 'REG-V',
+    'Business Entities': 'REG-V',
+    'International Tax': 'REG-V',
+  },
+  TCP: {
+    // TCP-I: Tax Compliance and Planning for Individuals
+    'Individual Tax Compliance': 'TCP-I',
+    'Tax Planning': 'TCP-I',
+    'Retirement Planning': 'TCP-I',
+    'Compensation Planning': 'TCP-I',
+    'Estate and Gift Planning': 'TCP-I',
+    'Charitable Giving': 'TCP-I',
+    'International Individual Tax': 'TCP-I',
+    'AMT Planning': 'TCP-I',
+
+    // TCP-II: Tax Compliance and Planning for Entities
+    'C Corporation Planning': 'TCP-II',
+    'S Corporation Planning': 'TCP-II',
+    'Partnership Planning': 'TCP-II',
+    'Multi-Entity Planning': 'TCP-II',
+    'Business Succession Planning': 'TCP-II',
+    'Employment Tax': 'TCP-II',
+    'State and Local Tax': 'TCP-II',
+
+    // TCP-III: Tax Compliance and Planning for Property Transactions
+    'Property Planning': 'TCP-III',
+    'Passive Activity': 'TCP-III',
+
+    // TCP-IV: Special Tax Topics
+    'Tax Credits': 'TCP-IV',
+  },
+  BAR: {
+    // BAR-I: Business Analysis
+    'Financial Statement Analysis': 'BAR-I',
+    'Capital Budgeting': 'BAR-I',
+    'Cost of Capital': 'BAR-I',
+    'Business Valuation': 'BAR-I',
+    'Economic Concepts': 'BAR-I',
+    'Data Analytics': 'BAR-I',
+
+    // BAR-II: Technical Accounting and Reporting
+    'Foreign Currency': 'BAR-II',
+    'Derivatives': 'BAR-II',
+    'Business Combinations': 'BAR-II',
+    'Consolidations': 'BAR-II',
+
+    // BAR-III: State and Local Governments
+    'Government Accounting': 'BAR-III',
+    'Not-for-Profit Accounting': 'BAR-III',
+  },
+  ISC: {
+    // ISC-I: Information Systems and Data Management
+    'Data Management': 'ISC-I',
+    'Emerging Technologies': 'ISC-I',
+    'Cloud Computing': 'ISC-I',
+    'IT Governance': 'ISC-I',
+    'Comprehensive Review': 'ISC-I',
+
+    // ISC-II: Security, Confidentiality, and Privacy
+    'Cybersecurity': 'ISC-II',
+    'IT General Controls': 'ISC-II',
+    'Network Security': 'ISC-II',
+    'Application Controls': 'ISC-II',
+    'Encryption': 'ISC-II',
+    'Disaster Recovery': 'ISC-II',
+    'Business Continuity': 'ISC-II',
+    'IT Risk Management': 'ISC-II',
+
+    // ISC-III: SOC Engagements
+    'SOC Reports': 'ISC-III',
+  }
+};
+
+// Types
+export interface PracticeAttemptData {
+  question_id: string;
+  topic: string | null;
+  is_correct: boolean;
+  created_at: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
+}
+
+export interface TBSAttemptData {
+  tbs_id: string;
+  section: string;
+  is_complete: boolean;
+  score_percentage: number | null;
+  created_at: string;
+}
+
+export interface ContentAreaScore {
+  contentArea: string;
+  name: string;
+  weight: number;
+  rawScore: number;
+  weightedScore: number;
+  questionsAttempted: number;
+  minThresholdMet: boolean;
+}
+
+export interface PrimeMeridianResult {
+  overallScore: number;
+  mcqScore: number;
+  tbsScore: number;
+  mcqWeight: number;
+  tbsWeight: number;
+  contentAreaScores: ContentAreaScore[];
+  hasEnoughData: boolean;
+  recommendedActions: string[];
+}
+
+// Configuration
+const CONFIG = {
+  MIN_QUESTIONS_PER_CONTENT_AREA: 10, // Minimum questions needed for full weight
+  MIN_TBS_PER_SECTION: 3, // Minimum TBS needed for full weight
+  RECENCY_HALF_LIFE_DAYS: 30, // Performance from 30 days ago counts half as much
+  DIFFICULTY_WEIGHTS: {
+    easy: 0.8,
+    medium: 1.0,
+    hard: 1.3,
+  },
+  MCQ_WEIGHT: 0.5, // 50% of final score
+  TBS_WEIGHT: 0.5, // 50% of final score
+  RECOMMENDED_SCORE: 75,
+};
+
+/**
+ * Get the AICPA content area for a given topic
+ */
+export function getContentArea(section: string, topic: string | null): string | null {
+  if (!topic) return null;
+  const sectionMapping = TOPIC_TO_CONTENT_AREA[section];
+  if (!sectionMapping) return null;
+  return sectionMapping[topic] || null;
+}
+
+/**
+ * Calculate recency weight using exponential decay
+ * More recent attempts are weighted higher
+ */
+function calculateRecencyWeight(createdAt: string): number {
+  const daysSince = (Date.now() - new Date(createdAt).getTime()) / (1000 * 60 * 60 * 24);
+  // Exponential decay with configurable half-life
+  return Math.exp(-daysSince * Math.LN2 / CONFIG.RECENCY_HALF_LIFE_DAYS);
+}
+
+/**
+ * Calculate difficulty weight
+ */
+function getDifficultyWeight(difficulty?: 'easy' | 'medium' | 'hard'): number {
+  return CONFIG.DIFFICULTY_WEIGHTS[difficulty || 'medium'];
+}
+
+/**
+ * Calculate MCQ score for a section using AICPA content area weighting
+ */
+function calculateMCQScore(
+  attempts: PracticeAttemptData[],
+  section: SectionCode
+): { score: number; contentAreaScores: ContentAreaScore[] } {
+  const contentAreaWeights = AICPA_CONTENT_AREA_WEIGHTS[section];
+  if (!contentAreaWeights) {
+    return { score: 0, contentAreaScores: [] };
+  }
+
+  const contentAreaScores: ContentAreaScore[] = [];
+  let totalWeightedScore = 0;
+  let totalWeight = 0;
+
+  for (const [areaCode, areaInfo] of Object.entries(contentAreaWeights)) {
+    // Get attempts for this content area
+    const areaAttempts = attempts.filter(a => {
+      const attemptArea = getContentArea(section, a.topic);
+      return attemptArea === areaCode;
+    });
+
+    // Group by question_id and calculate best performance with recency weighting
+    const questionResults = new Map<string, {
+      isCorrect: boolean;
+      weight: number;
+    }>();
+
+    // Sort by date to process older attempts first
+    const sortedAttempts = [...areaAttempts].sort(
+      (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+    );
+
+    for (const attempt of sortedAttempts) {
+      const recencyWeight = calculateRecencyWeight(attempt.created_at);
+      const difficultyWeight = getDifficultyWeight(attempt.difficulty);
+      const totalAttemptWeight = difficultyWeight * (0.5 + 0.5 * recencyWeight);
+
+      const existing = questionResults.get(attempt.question_id);
+
+      // Keep the correct answer if any attempt was correct
+      // Otherwise, use the most recent attempt's weight
+      if (!existing) {
+        questionResults.set(attempt.question_id, {
+          isCorrect: attempt.is_correct,
+          weight: totalAttemptWeight,
+        });
+      } else {
+        questionResults.set(attempt.question_id, {
+          isCorrect: existing.isCorrect || attempt.is_correct,
+          weight: totalAttemptWeight, // Use more recent weight
+        });
+      }
+    }
+
+    // Calculate raw score for this content area
+    let weightedCorrect = 0;
+    let weightedTotal = 0;
+
+    for (const result of questionResults.values()) {
+      if (result.isCorrect) {
+        weightedCorrect += result.weight;
+      }
+      weightedTotal += result.weight;
+    }
+
+    const questionsAttempted = questionResults.size;
+    const minThresholdMet = questionsAttempted >= CONFIG.MIN_QUESTIONS_PER_CONTENT_AREA;
+
+    // Calculate raw score (0-100)
+    const rawScore = weightedTotal > 0 ? (weightedCorrect / weightedTotal) * 100 : 0;
+
+    // Apply coverage penalty if below minimum threshold
+    const coverageFactor = minThresholdMet ? 1 : questionsAttempted / CONFIG.MIN_QUESTIONS_PER_CONTENT_AREA;
+    const adjustedScore = rawScore * coverageFactor;
+
+    // Apply AICPA weight
+    const weightedScore = adjustedScore * (areaInfo.mid / 100);
+
+    contentAreaScores.push({
+      contentArea: areaCode,
+      name: areaInfo.name,
+      weight: areaInfo.mid,
+      rawScore: Math.round(rawScore),
+      weightedScore,
+      questionsAttempted,
+      minThresholdMet,
+    });
+
+    totalWeightedScore += weightedScore;
+    totalWeight += areaInfo.mid / 100;
+  }
+
+  const finalScore = totalWeight > 0 ? totalWeightedScore / totalWeight : 0;
+
+  return {
+    score: Math.round(finalScore),
+    contentAreaScores,
+  };
+}
+
+/**
+ * Calculate TBS score for a section
+ */
+function calculateTBSScore(attempts: TBSAttemptData[], section: SectionCode): number {
+  // Only count completed TBS with scores
+  const completedAttempts = attempts.filter(
+    a => a.section === section && a.is_complete && a.score_percentage !== null
+  );
+
+  if (completedAttempts.length === 0) {
+    return 0;
+  }
+
+  // Group by TBS ID and take best score with recency weighting
+  const tbsResults = new Map<string, { score: number; recencyWeight: number }>();
+
+  for (const attempt of completedAttempts) {
+    const recencyWeight = calculateRecencyWeight(attempt.created_at);
+    const existing = tbsResults.get(attempt.tbs_id);
+
+    if (!existing || attempt.score_percentage! > existing.score) {
+      tbsResults.set(attempt.tbs_id, {
+        score: attempt.score_percentage!,
+        recencyWeight,
+      });
+    }
+  }
+
+  // Calculate weighted average
+  let weightedScore = 0;
+  let totalWeight = 0;
+
+  for (const result of tbsResults.values()) {
+    const weight = 0.5 + 0.5 * result.recencyWeight;
+    weightedScore += result.score * weight;
+    totalWeight += weight;
+  }
+
+  const rawScore = totalWeight > 0 ? weightedScore / totalWeight : 0;
+
+  // Apply coverage penalty if below minimum TBS threshold
+  const coverageFactor = tbsResults.size >= CONFIG.MIN_TBS_PER_SECTION
+    ? 1
+    : tbsResults.size / CONFIG.MIN_TBS_PER_SECTION;
+
+  return Math.round(rawScore * coverageFactor);
+}
+
+/**
+ * Generate recommended actions based on scores
+ */
+function generateRecommendedActions(
+  contentAreaScores: ContentAreaScore[],
+  mcqScore: number,
+  tbsScore: number,
+  hasTBSData: boolean
+): string[] {
+  const actions: string[] = [];
+
+  // Check for content areas below threshold
+  const lowCoverageAreas = contentAreaScores.filter(ca => !ca.minThresholdMet && ca.weight >= 15);
+  if (lowCoverageAreas.length > 0) {
+    const areaNames = lowCoverageAreas.slice(0, 2).map(ca => ca.name.split(',')[0]).join(' and ');
+    actions.push(`Practice more MCQs in ${areaNames} to meet minimum coverage`);
+  }
+
+  // Check for weak content areas
+  const weakAreas = contentAreaScores.filter(ca => ca.rawScore < 60 && ca.questionsAttempted >= 5);
+  if (weakAreas.length > 0) {
+    const weakestArea = weakAreas.sort((a, b) => a.rawScore - b.rawScore)[0];
+    actions.push(`Focus on improving ${weakestArea.name.split(',')[0]} (currently ${weakestArea.rawScore}%)`);
+  }
+
+  // TBS recommendations
+  if (!hasTBSData) {
+    actions.push('Start practicing Task-Based Simulations to build complete exam readiness');
+  } else if (tbsScore < 60) {
+    actions.push('Continue practicing TBS questions to improve simulation performance');
+  }
+
+  // Overall score recommendations
+  if (mcqScore < CONFIG.RECOMMENDED_SCORE && mcqScore >= 60) {
+    const pointsNeeded = CONFIG.RECOMMENDED_SCORE - mcqScore;
+    actions.push(`${pointsNeeded} more points needed to reach recommended score of ${CONFIG.RECOMMENDED_SCORE}`);
+  }
+
+  return actions.slice(0, 3); // Max 3 recommendations
+}
+
+/**
+ * Main function to calculate Prime Meridian score
+ */
+export function calculatePrimeMeridianScore(
+  mcqAttempts: PracticeAttemptData[],
+  tbsAttempts: TBSAttemptData[],
+  section: SectionCode
+): PrimeMeridianResult {
+  // Calculate MCQ component
+  const { score: mcqScore, contentAreaScores } = calculateMCQScore(mcqAttempts, section);
+
+  // Calculate TBS component
+  const tbsScore = calculateTBSScore(tbsAttempts, section);
+
+  // Determine weights based on what data is available
+  const hasMCQData = mcqAttempts.length > 0;
+  const hasTBSData = tbsAttempts.filter(a => a.section === section && a.is_complete).length > 0;
+
+  let mcqWeight: number;
+  let tbsWeight: number;
+  let overallScore: number;
+
+  if (hasMCQData && hasTBSData) {
+    // Both MCQ and TBS data - use 50/50 split
+    mcqWeight = CONFIG.MCQ_WEIGHT;
+    tbsWeight = CONFIG.TBS_WEIGHT;
+    overallScore = Math.round(mcqScore * mcqWeight + tbsScore * tbsWeight);
+  } else if (hasMCQData) {
+    // Only MCQ data
+    mcqWeight = 1;
+    tbsWeight = 0;
+    overallScore = mcqScore;
+  } else if (hasTBSData) {
+    // Only TBS data
+    mcqWeight = 0;
+    tbsWeight = 1;
+    overallScore = tbsScore;
+  } else {
+    // No data
+    mcqWeight = 0.5;
+    tbsWeight = 0.5;
+    overallScore = 0;
+  }
+
+  // Generate recommendations
+  const recommendedActions = generateRecommendedActions(
+    contentAreaScores,
+    mcqScore,
+    tbsScore,
+    hasTBSData
+  );
+
+  // Determine if there's enough data for a meaningful score
+  const totalQuestions = contentAreaScores.reduce((sum, ca) => sum + ca.questionsAttempted, 0);
+  const hasEnoughData = totalQuestions >= 20 || hasTBSData;
+
+  return {
+    overallScore,
+    mcqScore,
+    tbsScore,
+    mcqWeight,
+    tbsWeight,
+    contentAreaScores,
+    hasEnoughData,
+    recommendedActions,
+  };
+}
+
+/**
+ * Get milestone information for a given score
+ */
+export interface PrimeMeridianMilestone {
+  level: 'building' | 'developing' | 'approaching' | 'recommended' | 'strong';
+  label: string;
+  color: string;
+  bgColor: string;
+  message: string;
+  isRecommended: boolean;
+}
+
+export function getPrimeMeridianMilestone(score: number): PrimeMeridianMilestone {
+  if (score >= 85) {
+    return {
+      level: 'strong',
+      label: 'Strong',
+      color: 'text-green-600 dark:text-green-400',
+      bgColor: 'bg-green-500',
+      message: 'Excellent preparation! You\'ve exceeded our recommended score.',
+      isRecommended: false,
+    };
+  }
+  if (score >= 75) {
+    return {
+      level: 'recommended',
+      label: 'Recommended',
+      color: 'text-emerald-600 dark:text-emerald-400',
+      bgColor: 'bg-emerald-500',
+      message: 'You\'ve reached our recommended score. Students at this level typically feel well-prepared.',
+      isRecommended: true,
+    };
+  }
+  if (score >= 65) {
+    return {
+      level: 'approaching',
+      label: 'Approaching',
+      color: 'text-yellow-600 dark:text-yellow-400',
+      bgColor: 'bg-yellow-500',
+      message: `${75 - score} points away from our recommended score of 75.`,
+      isRecommended: false,
+    };
+  }
+  if (score >= 50) {
+    return {
+      level: 'developing',
+      label: 'Developing',
+      color: 'text-orange-600 dark:text-orange-400',
+      bgColor: 'bg-orange-500',
+      message: 'Building a solid foundation. Keep practicing consistently.',
+      isRecommended: false,
+    };
+  }
+  return {
+    level: 'building',
+    label: 'Building',
+    color: 'text-red-500 dark:text-red-400',
+    bgColor: 'bg-red-400',
+    message: 'Just getting started! Every question helps build your knowledge.',
+    isRecommended: false,
+  };
+}
+
+export { CONFIG as PRIME_MERIDIAN_CONFIG };
