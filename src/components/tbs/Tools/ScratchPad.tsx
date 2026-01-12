@@ -56,7 +56,6 @@ export default function ScratchPad({
  const [showFontSizePicker, setShowFontSizePicker] = useState(false);
  const [isSaving, setIsSaving] = useState(false);
  const [lastSaved, setLastSaved] = useState<Date | null>(null);
- const [isEmpty, setIsEmpty] = useState(true);
  const dragOffset = useRef({ x: 0, y: 0 });
  const resizeStart = useRef({ x: 0, y: 0, width: 0, height: 0, posX: 0, posY: 0 });
  const panelRef = useRef<HTMLDivElement>(null);
@@ -114,11 +113,9 @@ export default function ScratchPad({
  if (isOpen && editorRef.current && !initializedRef.current) {
  if (initialNotes) {
  editorRef.current.innerHTML = initialNotes;
- setIsEmpty(false);
  } else {
- // Start empty - the placeholder overlay handles display
+ // Start empty - the placeholder uses CSS :empty selector
  editorRef.current.innerHTML = "";
- setIsEmpty(true);
  }
  initializedRef.current = true;
  }
@@ -222,14 +219,9 @@ export default function ScratchPad({
  };
  }, [isDragging, resizeEdge, size.width, size.height, position]);
 
- // Handle content change
+ // Handle content change - no state updates to avoid re-renders during typing
  const handleContentChange = useCallback(() => {
  if (editorRef.current) {
- const text = editorRef.current.innerText.trim();
- const html = editorRef.current.innerHTML;
- // Check if truly empty (just <br> or empty)
- const editorIsEmpty = !text || html === "<br>" || html === "";
- setIsEmpty(editorIsEmpty);
  onNotesChange?.(editorRef.current.innerHTML);
  }
  }, [onNotesChange]);
@@ -290,7 +282,6 @@ export default function ScratchPad({
  if (editorRef.current?.textContent?.trim() && !confirm("Clear all notes?")) return;
  if (editorRef.current) {
  editorRef.current.innerHTML = "";
- setIsEmpty(true);
  editorRef.current.focus();
  handleContentChange();
  }
@@ -649,23 +640,16 @@ export default function ScratchPad({
  </button>
  </div>
 
- {/* Rich Text Editor with placeholder overlay */}
- <div className="relative flex-1" style={{ minHeight: 100 }}>
- {/* Placeholder - always rendered, visibility controlled by opacity to avoid DOM changes */}
- <div
- className="absolute inset-0 p-3 text-sm text-gray-400 pointer-events-none select-none whitespace-pre-line transition-opacity"
- style={{ opacity: isEmpty ? 1 : 0 }}
- >
- Type your notes here...{"\n\n"}• Use formatting tools above{"\n"}• Create bullet or numbered lists{"\n"}• Highlight important info{"\n"}• Notes save to My Notes on submission
- </div>
+ {/* Rich Text Editor - placeholder handled via CSS only, no React state */}
  <div
  ref={editorRef}
  contentEditable
  onInput={handleContentChange}
  onKeyDown={handleKeyDown}
- className="absolute inset-0 p-3 text-sm text-gray-800 dark:text-[var(--foreground)] bg-yellow-50/50 dark:bg-[var(--background)] overflow-auto focus:outline-none"
+ data-placeholder="Type your notes here..."
+ className="scratch-editor flex-1 p-3 text-sm text-gray-800 dark:text-[var(--foreground)] bg-yellow-50/50 dark:bg-[var(--background)] overflow-auto focus:outline-none"
+ style={{ minHeight: 100 }}
  />
- </div>
 
  {/* Info footer */}
  <div className="px-3 py-2 bg-blue-50 dark:bg-blue-900/20 border-t border-blue-200 dark:border-blue-800 flex items-center justify-between">
@@ -701,6 +685,14 @@ export default function ScratchPad({
  </>
  )}
 
+ {/* CSS for placeholder - using sibling selector to avoid any React re-renders */}
+ <style>{`
+ .scratch-editor:empty::before {
+ content: attr(data-placeholder);
+ color: #9ca3af;
+ pointer-events: none;
+ }
+ `}</style>
  </div>
  );
 }
