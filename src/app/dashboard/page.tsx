@@ -432,7 +432,7 @@ export default function DashboardPage() {
  color="blue"
  />
  <Link href="/dashboard/readiness" className="block">
-            <div className={`rounded-xl border p-4 transition-all hover:shadow-lg ${
+            <div className={`rounded-xl border p-3 transition-all hover:shadow-lg ${
               overallPrimeMeridian >= 75
                 ? "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border-emerald-300 dark:border-emerald-700 ring-2 ring-emerald-200 dark:ring-emerald-800"
                 : "bg-white dark:bg-[var(--card)] border-[var(--border)] hover:border-[var(--primary)]"
@@ -441,15 +441,15 @@ export default function DashboardPage() {
                 <PrimeMeridianCompass
                   score={overallPrimeMeridian}
                   size="sm"
-                  showLabel={true}
+                  showLabel={false}
                 />
               </div>
-              <p className={`text-xs text-center mt-2 ${
+              <p className={`text-[10px] text-center ${
                 overallPrimeMeridian >= 75
                   ? "text-emerald-700 dark:text-emerald-300 font-medium"
                   : "text-[var(--muted)]"
               }`}>
-                {overallPrimeMeridian >= 75 ? "Recommended reached!" : overallPrimeMeridian > 0 ? `${75 - overallPrimeMeridian} to 75` : "Start practicing"}
+                {overallPrimeMeridian >= 75 ? "Recommended!" : overallPrimeMeridian > 0 ? `${75 - overallPrimeMeridian} to goal` : "Start practicing"}
               </p>
             </div>
           </Link>
