@@ -156,22 +156,42 @@ export default function PracticePage() {
     setLoading(false);
   };
 
+  // Calculate stats using BEST attempt per question (matching readiness dashboard and Prime Meridian)
   const getSectionStats = (sectionCode: SectionCode) => {
     const sectionAttempts = attempts.filter((a) => a.section === sectionCode);
     if (sectionAttempts.length === 0) {
-      return { totalQuestions: 0, correctAnswers: 0, accuracy: 0 };
+      return { totalQuestions: 0, correctAnswers: 0, accuracy: 0, totalAttempts: 0 };
     }
 
-    const totalQuestions = sectionAttempts.length;
-    const correctAnswers = sectionAttempts.filter((a) => a.is_correct).length;
-    const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+    // Group by question_id and check if any attempt was correct (best attempt logic)
+    const questionResults = new Map<string, boolean>();
+    sectionAttempts.forEach(a => {
+      const current = questionResults.get(a.question_id);
+      // If any attempt was correct, mark as correct
+      if (current !== true) {
+        questionResults.set(a.question_id, a.is_correct);
+      }
+    });
 
-    return { totalQuestions, correctAnswers, accuracy };
+    const uniqueQuestions = questionResults.size;
+    const correctQuestions = [...questionResults.values()].filter(v => v).length;
+    const accuracy = uniqueQuestions > 0 ? Math.round((correctQuestions / uniqueQuestions) * 100) : 0;
+
+    return { totalQuestions: uniqueQuestions, correctAnswers: correctQuestions, accuracy, totalAttempts: sectionAttempts.length };
   };
 
   const recentSessions = practiceSessions.slice(0, 5);
-  const totalQuestions = attempts.length;
-  const totalCorrect = attempts.filter((a) => a.is_correct).length;
+
+  // Calculate overall stats using BEST attempt per question (matching readiness dashboard)
+  const questionResults = new Map<string, boolean>();
+  attempts.forEach(a => {
+    const current = questionResults.get(a.question_id);
+    if (current !== true) {
+      questionResults.set(a.question_id, a.is_correct);
+    }
+  });
+  const totalQuestions = questionResults.size;
+  const totalCorrect = [...questionResults.values()].filter(v => v).length;
   const overallAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
 
   const disciplineChoice = profile?.discipline_choice;
