@@ -493,17 +493,9 @@ export default function ReadinessDashboardPage() {
           <div className="flex items-center gap-3 sm:gap-4">
             <PrimeMeridianCompass
               score={overallPrimeMeridian}
-              size="sm"
-              showLabel={false}
-              variant="light"
-              className="sm:hidden"
-            />
-            <PrimeMeridianCompass
-              score={overallPrimeMeridian}
               size="md"
               showLabel={false}
               variant="light"
-              className="hidden sm:block"
             />
             <div className="text-left sm:text-right">
               <div className="text-white/80 text-xs sm:text-sm font-medium">Overall Prime Meridian</div>
