@@ -1,54 +1,53 @@
 "use client";
 
-import { useMemo } from "react";
 import { getPrimeMeridianMilestone } from "@/lib/scoring/prime-meridian";
 
 interface PrimeMeridianCompassProps {
   score: number;
   size?: "sm" | "md" | "lg";
   showLabel?: boolean;
+  /** Use light colors for dark/colored backgrounds like the purple banner */
+  variant?: "default" | "light";
   className?: string;
 }
 
 /**
  * Prime Meridian Compass Display
  *
- * Circular gauge design matching the section Prime Meridian scores
- * with a subtle 4-point star background for branding.
+ * Circular gauge design matching the section Prime Meridian scores.
+ * Use variant="light" for colored backgrounds like the purple banner.
  */
 export default function PrimeMeridianCompass({
   score,
   size = "md",
   showLabel = true,
+  variant = "default",
   className = "",
 }: PrimeMeridianCompassProps) {
-  const milestone = useMemo(() => getPrimeMeridianMilestone(score), [score]);
+  const milestone = getPrimeMeridianMilestone(score);
 
-  // Size configurations
+  // Size configurations matching PrimeMeridianCompact
   const sizeConfig = {
     sm: {
-      svgSize: 72,
+      svgSize: 64,
       radius: 28,
       strokeWidth: 5,
-      fontSize: "text-lg",
+      fontSize: "text-base",
       labelSize: "text-[8px]",
-      starSize: 0.4, // relative to svgSize
     },
     md: {
-      svgSize: 100,
-      radius: 40,
+      svgSize: 80,
+      radius: 36,
       strokeWidth: 6,
-      fontSize: "text-2xl",
+      fontSize: "text-lg",
       labelSize: "text-xs",
-      starSize: 0.45,
     },
     lg: {
-      svgSize: 130,
-      radius: 52,
-      strokeWidth: 8,
-      fontSize: "text-3xl",
+      svgSize: 100,
+      radius: 44,
+      strokeWidth: 7,
+      fontSize: "text-xl",
       labelSize: "text-sm",
-      starSize: 0.5,
     },
   };
 
@@ -68,96 +67,59 @@ export default function PrimeMeridianCompass({
 
   const gaugeColor = getGaugeColor(score);
 
-  // Create 4-point star path
-  const createStarPath = () => {
-    const starRadius = config.svgSize * config.starSize;
-    const innerRadius = starRadius * 0.15; // Very thin star
-    const points: string[] = [];
-
-    // 4 points: top, right, bottom, left
-    for (let i = 0; i < 8; i++) {
-      const angle = (i * 45 - 90) * (Math.PI / 180);
-      const radius = i % 2 === 0 ? starRadius : innerRadius;
-      const x = center + Math.cos(angle) * radius;
-      const y = center + Math.sin(angle) * radius;
-      points.push(`${i === 0 ? 'M' : 'L'} ${x} ${y}`);
-    }
-    return points.join(' ') + ' Z';
-  };
+  // Colors based on variant
+  const bgStrokeColor = variant === "light" ? "rgba(255,255,255,0.3)" : undefined;
+  const bgStrokeClass = variant === "light" ? "" : "text-gray-200 dark:text-gray-700";
+  const scoreColorClass = variant === "light" ? "text-white" : milestone.color;
 
   return (
     <div className={`relative inline-flex flex-col items-center ${className}`}>
-      <svg
-        width={config.svgSize}
-        height={config.svgSize}
-        className="transform -rotate-90"
-      >
-        {/* 4-point star background - very subtle */}
-        <path
-          d={createStarPath()}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-          className="text-gray-200 dark:text-gray-700 opacity-60"
-          transform={`rotate(90, ${center}, ${center})`}
-        />
+      <div className="relative">
+        <svg
+          width={config.svgSize}
+          height={config.svgSize}
+          className="transform -rotate-90"
+        >
+          {/* Background circle */}
+          <circle
+            cx={center}
+            cy={center}
+            r={config.radius}
+            fill="none"
+            stroke={bgStrokeColor || "currentColor"}
+            strokeWidth={config.strokeWidth}
+            className={bgStrokeClass}
+          />
 
-        {/* Background circle */}
-        <circle
-          cx={center}
-          cy={center}
-          r={config.radius}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={config.strokeWidth}
-          className="text-gray-200 dark:text-gray-700"
-        />
+          {/* Progress arc */}
+          <circle
+            cx={center}
+            cy={center}
+            r={config.radius}
+            fill="none"
+            stroke={gaugeColor}
+            strokeWidth={config.strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={strokeDashoffset}
+            className="transition-all duration-500"
+          />
+        </svg>
 
-        {/* 75 marker (recommended score) */}
-        <line
-          x1={center}
-          y1={center - config.radius + config.strokeWidth / 2 - 2}
-          x2={center}
-          y2={center - config.radius - config.strokeWidth / 2 - 4}
-          stroke="#10b981"
-          strokeWidth="2"
-          transform={`rotate(${75 * 3.6}, ${center}, ${center})`}
-          className="opacity-70"
-        />
-
-        {/* Progress arc */}
-        <circle
-          cx={center}
-          cy={center}
-          r={config.radius}
-          fill="none"
-          stroke={gaugeColor}
-          strokeWidth={config.strokeWidth}
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={strokeDashoffset}
-          className="transition-all duration-700 ease-out"
-        />
-      </svg>
-
-      {/* Center content - positioned absolutely */}
-      <div
-        className="absolute flex flex-col items-center justify-center"
-        style={{
-          top: 0,
-          left: 0,
-          width: config.svgSize,
-          height: config.svgSize,
-        }}
-      >
-        <div className={`${config.fontSize} font-bold`} style={{ color: gaugeColor }}>
-          {score}
+        {/* Center content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span
+            className={`${config.fontSize} font-bold ${scoreColorClass}`}
+            style={variant === "light" ? { color: gaugeColor } : undefined}
+          >
+            {score}
+          </span>
+          {showLabel && (
+            <span className={`${config.labelSize} ${variant === "light" ? "text-white/80" : "text-[var(--muted)]"} -mt-0.5`}>
+              Prime Meridian
+            </span>
+          )}
         </div>
-        {showLabel && (
-          <div className={`${config.labelSize} text-[var(--muted)] -mt-0.5`}>
-            Prime Meridian
-          </div>
-        )}
       </div>
     </div>
   );

@@ -495,6 +495,7 @@ export default function ReadinessDashboardPage() {
               score={overallPrimeMeridian}
               size="md"
               showLabel={false}
+              variant="light"
             />
             <div className="text-right">
               <div className="text-white/80 text-sm font-medium">Overall Prime Meridian</div>
