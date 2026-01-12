@@ -229,13 +229,7 @@ export default function ScratchPad({
  const html = editorRef.current.innerHTML;
  // Check if truly empty (just <br> or empty)
  const editorIsEmpty = !text || html === "<br>" || html === "";
-
- // Use requestAnimationFrame to defer the state update
- // This prevents the re-render from interfering with cursor position
- requestAnimationFrame(() => {
  setIsEmpty(editorIsEmpty);
- });
-
  onNotesChange?.(editorRef.current.innerHTML);
  }
  }, [onNotesChange]);
@@ -657,12 +651,13 @@ export default function ScratchPad({
 
  {/* Rich Text Editor with placeholder overlay */}
  <div className="relative flex-1" style={{ minHeight: 100 }}>
- {/* Placeholder - shown when editor is empty */}
- {isEmpty && (
- <div className="absolute inset-0 p-3 text-sm text-gray-400 pointer-events-none select-none whitespace-pre-line">
+ {/* Placeholder - always rendered, visibility controlled by opacity to avoid DOM changes */}
+ <div
+ className="absolute inset-0 p-3 text-sm text-gray-400 pointer-events-none select-none whitespace-pre-line transition-opacity"
+ style={{ opacity: isEmpty ? 1 : 0 }}
+ >
  Type your notes here...{"\n\n"}• Use formatting tools above{"\n"}• Create bullet or numbered lists{"\n"}• Highlight important info{"\n"}• Notes save to My Notes on submission
  </div>
- )}
  <div
  ref={editorRef}
  contentEditable
