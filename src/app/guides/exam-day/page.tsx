@@ -1,9 +1,7 @@
-import Link from 'next/link';
+"use client";
 
-export const metadata = {
-  title: 'CPA Exam Day Walkthrough | What to Expect at Prometric',
-  description: 'Complete guide to CPA exam day: what to bring, Prometric procedures, exam interface tips, time management strategies, and what to do after your exam.',
-};
+import Link from 'next/link';
+import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 const checklistItems = {
   weekBefore: [
@@ -167,6 +165,7 @@ export default function ExamDayGuidePage() {
         </nav>
 
         {/* Week Before */}
+        <FadeInOnScroll direction="up">
         <section id="week-before" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Week Before the Exam
@@ -185,8 +184,10 @@ export default function ExamDayGuidePage() {
             </ul>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* Day Before */}
+        <FadeInOnScroll direction="up" delay={100}>
         <section id="day-before" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Day Before the Exam
@@ -205,8 +206,10 @@ export default function ExamDayGuidePage() {
             </ul>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* What to Bring */}
+        <FadeInOnScroll direction="up" delay={200}>
         <section id="what-to-bring" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             What to Bring (and Leave Behind)
@@ -245,8 +248,10 @@ export default function ExamDayGuidePage() {
             </p>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* Timeline */}
+        <FadeInOnScroll direction="up">
         <section id="timeline" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Exam Day Timeline
@@ -271,8 +276,10 @@ export default function ExamDayGuidePage() {
             ))}
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* Prometric Procedures */}
+        <FadeInOnScroll direction="up" delay={100}>
         <section id="prometric" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Prometric Check-In Procedures
@@ -310,8 +317,10 @@ export default function ExamDayGuidePage() {
             </div>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* Exam Interface */}
+        <FadeInOnScroll direction="up" delay={200}>
         <section id="interface" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Exam Interface Overview
@@ -350,8 +359,10 @@ export default function ExamDayGuidePage() {
             </p>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* Time Management */}
+        <FadeInOnScroll direction="up">
         <section id="time-management" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Time Management Strategies
@@ -378,8 +389,10 @@ export default function ExamDayGuidePage() {
             </div>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* Breaks */}
+        <FadeInOnScroll direction="up" delay={100}>
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             Taking Breaks
@@ -409,8 +422,10 @@ export default function ExamDayGuidePage() {
             </div>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* After the Exam */}
+        <FadeInOnScroll direction="up" delay={200}>
         <section id="after-exam" className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">
             After the Exam
@@ -442,8 +457,10 @@ export default function ExamDayGuidePage() {
             </div>
           </div>
         </section>
+        </FadeInOnScroll>
 
         {/* CTA */}
+        <FadeInOnScroll direction="up">
         <section className="bg-[var(--card)] rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Track Your Score Release Date
@@ -460,6 +477,7 @@ export default function ExamDayGuidePage() {
             </Link>
           </div>
         </section>
+        </FadeInOnScroll>
       </div>
     </div>
   );

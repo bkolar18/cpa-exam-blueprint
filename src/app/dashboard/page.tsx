@@ -13,6 +13,7 @@ import {
   type TBSAttemptData,
   getPrimeMeridianMilestone,
 } from "@/lib/scoring/prime-meridian";
+import PrimeMeridianCompass from "@/components/dashboard/PrimeMeridianCompass";
 
 // Type for study session from Supabase
 interface StudySessionRow {
@@ -431,13 +432,26 @@ export default function DashboardPage() {
  color="blue"
  />
  <Link href="/dashboard/readiness" className="block">
-            <StatCard
-              label="Prime Meridian"
-              value={overallPrimeMeridian.toString()}
-              sublabel={overallPrimeMeridian >= 75 ? "Recommended reached!" : overallPrimeMeridian > 0 ? `${75 - overallPrimeMeridian} to 75` : "Start practicing"}
-              color="green"
-              highlighted={overallPrimeMeridian >= 75}
-            />
+            <div className={`rounded-xl border p-4 transition-all hover:shadow-lg ${
+              overallPrimeMeridian >= 75
+                ? "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border-emerald-300 dark:border-emerald-700 ring-2 ring-emerald-200 dark:ring-emerald-800"
+                : "bg-white dark:bg-[var(--card)] border-[var(--border)] hover:border-[var(--primary)]"
+            }`}>
+              <div className="flex items-center justify-center">
+                <PrimeMeridianCompass
+                  score={overallPrimeMeridian}
+                  size="sm"
+                  showLabel={true}
+                />
+              </div>
+              <p className={`text-xs text-center mt-2 ${
+                overallPrimeMeridian >= 75
+                  ? "text-emerald-700 dark:text-emerald-300 font-medium"
+                  : "text-[var(--muted)]"
+              }`}>
+                {overallPrimeMeridian >= 75 ? "Recommended reached!" : overallPrimeMeridian > 0 ? `${75 - overallPrimeMeridian} to 75` : "Start practicing"}
+              </p>
+            </div>
           </Link>
  <StatCard
  label="Active NTS"

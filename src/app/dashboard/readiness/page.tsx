@@ -15,6 +15,7 @@ import {
   type TBSAttemptData,
 } from "@/lib/scoring/prime-meridian";
 import PrimeMeridianScore from "@/components/dashboard/PrimeMeridianScore";
+import PrimeMeridianCompass from "@/components/dashboard/PrimeMeridianCompass";
 
 // Core sections always shown
 const coreSections: SectionCode[] = ["FAR","AUD","REG"];
@@ -488,40 +489,29 @@ export default function ReadinessDashboardPage() {
               <p className="text-white/80">Track your Prime Meridian score across all sections</p>
             </div>
           </div>
-          {/* Overall Prime Meridian Score - Eye-catching display */}
-          <div className="text-right">
-            <div className="relative inline-block">
-              <div className={`text-5xl font-black tabular-nums ${
-                overallPrimeMeridian >= 75
-                  ? 'text-emerald-300'
-                  : overallPrimeMeridian >= 50
-                    ? 'text-white'
-                    : 'text-white/90'
-              }`}>
-                {overallPrimeMeridian}
-              </div>
-              {overallPrimeMeridian >= 75 && (
-                <div className="absolute -top-1 -right-3">
-                  <svg className="w-5 h-5 text-emerald-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+          {/* Overall Prime Meridian Score - Compass Rose Display */}
+          <div className="flex items-center gap-4">
+            <PrimeMeridianCompass
+              score={overallPrimeMeridian}
+              size="md"
+              showLabel={false}
+            />
+            <div className="text-right">
+              <div className="text-white/80 text-sm font-medium">Overall Prime Meridian</div>
+              {overallPrimeMeridian > 0 && overallPrimeMeridian < 75 && (
+                <div className="mt-1 inline-flex items-center gap-1.5 px-2 py-0.5 bg-white/20 rounded-full text-xs">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                   </svg>
+                  {75 - overallPrimeMeridian} to 75
+                </div>
+              )}
+              {overallPrimeMeridian >= 75 && (
+                <div className="mt-1 inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-400/30 rounded-full text-xs text-emerald-200">
+                  Recommended reached!
                 </div>
               )}
             </div>
-            <div className="text-white/80 text-sm font-medium">Overall Prime Meridian</div>
-            {overallPrimeMeridian > 0 && overallPrimeMeridian < 75 && (
-              <div className="mt-1 inline-flex items-center gap-1.5 px-2 py-0.5 bg-white/20 rounded-full text-xs">
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-                </svg>
-                {75 - overallPrimeMeridian} to 75
-              </div>
-            )}
-            {overallPrimeMeridian >= 75 && (
-              <div className="mt-1 inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-400/30 rounded-full text-xs text-emerald-200">
-                Recommended reached!
-              </div>
-            )}
           </div>
         </div>
       </div>

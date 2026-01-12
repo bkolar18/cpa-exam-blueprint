@@ -1,4 +1,7 @@
-import Link from"next/link";
+"use client";
+
+import Link from "next/link";
+import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 interface SectionPageProps {
  name: string;
@@ -72,6 +75,7 @@ export default function SectionPage({
  {/* Main Content */}
  <div className="lg:col-span-2 space-y-8">
  {/* What This Section Tests */}
+ <FadeInOnScroll direction="up">
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-gray-200">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
  What This Section Tests
@@ -90,8 +94,10 @@ export default function SectionPage({
  ))}
  </div>
  </div>
+ </FadeInOnScroll>
 
  {/* Why Candidates Fail */}
+ <FadeInOnScroll direction="up" delay={100}>
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-gray-200">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
  Why Candidates Fail {name}
@@ -110,8 +116,10 @@ export default function SectionPage({
  ))}
  </ul>
  </div>
+ </FadeInOnScroll>
 
  {/* What to Prioritize */}
+ <FadeInOnScroll direction="up" delay={200}>
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-gray-200">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
  What to Prioritize
@@ -130,8 +138,10 @@ export default function SectionPage({
  ))}
  </ul>
  </div>
+ </FadeInOnScroll>
 
  {/* CPA Study Advice */}
+ <FadeInOnScroll direction="up" delay={300}>
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-gray-200">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
  Proven Study Strategies
@@ -149,11 +159,13 @@ export default function SectionPage({
  ))}
  </div>
  </div>
+ </FadeInOnScroll>
  </div>
 
  {/* Sidebar */}
  <div className="space-y-6">
  {/* CTA Card */}
+ <FadeInOnScroll direction="right" delay={100}>
  <div className="bg-white dark:bg-[var(--card)] p-6 rounded-xl border border-gray-200">
  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
  Get Your {name} Study Plan
@@ -175,8 +187,10 @@ export default function SectionPage({
  Start Practicing
  </Link>
  </div>
+ </FadeInOnScroll>
 
  {/* Other Sections */}
+ <FadeInOnScroll direction="right" delay={200}>
  <div className="bg-white dark:bg-[var(--card)] p-6 rounded-xl border border-gray-200">
  <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
  Other CPA Sections
@@ -203,6 +217,7 @@ export default function SectionPage({
  ))}
  </div>
  </div>
+ </FadeInOnScroll>
  </div>
  </div>
  </div>
