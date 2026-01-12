@@ -130,6 +130,30 @@ export default function TBSContainer({
  return () => clearInterval(saveInterval);
  }, [responses, isSubmitted]);
 
+ // Load TBS flag state from database
+ useEffect(() => {
+ const loadTbsFlag = async () => {
+ if (!user || !supabase) return;
+
+ try {
+ const { data } = await supabase
+ .from('question_flags')
+ .select('flag_return_to')
+ .eq('user_id', user.id)
+ .eq('question_id', tbs.id)
+ .single();
+
+ if (data?.flag_return_to) {
+ setIsFlagged(true);
+ }
+ } catch {
+ // No flag exists yet
+ }
+ };
+
+ loadTbsFlag();
+ }, [user, supabase, tbs.id]);
+
  // Keyboard shortcuts
  useEffect(() => {
  if (isSubmitted) return;
@@ -180,7 +204,43 @@ export default function TBSContainer({
  // Flag for Review: Alt+R
  if (e.altKey && e.key ==="r") {
  e.preventDefault();
- setIsFlagged((prev) => !prev);
+ // Toggle flag with database persistence
+ setIsFlagged((prev) => {
+ const newValue = !prev;
+ // Persist to database asynchronously
+ if (user && supabase) {
+ (async () => {
+ try {
+ const { data: existing } = await supabase
+ .from('question_flags')
+ .select('id')
+ .eq('user_id', user.id)
+ .eq('question_id', tbs.id)
+ .single();
+
+ if (existing) {
+ await supabase
+ .from('question_flags')
+ .update({ flag_return_to: newValue, updated_at: new Date().toISOString() })
+ .eq('user_id', user.id)
+ .eq('question_id', tbs.id);
+ } else {
+ await supabase.from('question_flags').insert({
+ user_id: user.id,
+ question_id: tbs.id,
+ section: tbs.section,
+ topic: tbs.topic,
+ subtopic: tbs.subtopic || null,
+ flag_return_to: newValue,
+ });
+ }
+ } catch (error) {
+ console.error('Failed to toggle TBS flag:', error);
+ }
+ })();
+ }
+ return newValue;
+ });
  return;
  }
 
@@ -451,7 +511,13 @@ export default function TBSContainer({
  // Handle confirmed submission
  const handleSubmitConfirmed = useCallback(async () => {
  setShowSubmitConfirm(false);
+
+ // Only show results screen in practice mode
+ // During exam simulations, let the parent handle the transition
+ if (isPracticeMode) {
  setViewMode("results");
+ }
+
  const result = gradeTBS();
  setGradingResult(result);
  setIsSubmitted(true);
@@ -550,7 +616,7 @@ export default function TBSContainer({
  }
 
  onComplete?.(attempt);
- }, [gradeTBS, tbs, startTime, elapsedSeconds, responses, onComplete, user, supabase, scratchPadNotes]);
+ }, [gradeTBS, tbs, startTime, elapsedSeconds, responses, onComplete, user, supabase, scratchPadNotes, isPracticeMode]);
 
  // Handle pause (practice mode only)
  const handlePauseToggle = useCallback(() => {
@@ -559,10 +625,49 @@ export default function TBSContainer({
  }
  }, [isPracticeMode]);
 
- // Handle flag toggle
- const handleFlagToggle = useCallback(() => {
- setIsFlagged((prev) => !prev);
- }, []);
+ // Handle flag toggle with database persistence
+ const handleFlagToggle = useCallback(async () => {
+ const newValue = !isFlagged;
+ setIsFlagged(newValue);
+
+ if (!user || !supabase) return;
+
+ try {
+ // Check if record exists
+ const { data: existing } = await supabase
+ .from('question_flags')
+ .select('id')
+ .eq('user_id', user.id)
+ .eq('question_id', tbs.id)
+ .single();
+
+ if (existing) {
+ // Update existing
+ await supabase
+ .from('question_flags')
+ .update({
+ flag_return_to: newValue,
+ updated_at: new Date().toISOString(),
+ })
+ .eq('user_id', user.id)
+ .eq('question_id', tbs.id);
+ } else {
+ // Insert new - TBS flags use the question_flags table with tbs.id
+ await supabase.from('question_flags').insert({
+ user_id: user.id,
+ question_id: tbs.id,
+ section: tbs.section,
+ topic: tbs.topic,
+ subtopic: tbs.subtopic || null,
+ flag_return_to: newValue,
+ });
+ }
+ } catch (error) {
+ console.error('Failed to toggle TBS flag:', error);
+ // Revert on error
+ setIsFlagged(!newValue);
+ }
+ }, [isFlagged, user, supabase, tbs.id, tbs.section, tbs.topic, tbs.subtopic]);
 
  // Handle hints toggle
  const handleHintsToggle = useCallback(() => {

@@ -59,25 +59,43 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
   FAR: {
     // FAR-I: Conceptual Framework, Standard-Setting, Financial Reporting
     'Conceptual Framework & Standards': 'FAR-I',
+    'Conceptual Framework': 'FAR-I',
+    'Standard Setting': 'FAR-I',
     'Financial Statement Presentation': 'FAR-I',
+    'Financial Statements': 'FAR-I',
+    'Financial Statement Disclosures': 'FAR-I',
     'Statement of Cash Flows': 'FAR-I',
+    'Segment Reporting': 'FAR-I',
     'IFRS': 'FAR-I',
     'Fair Value': 'FAR-I',
     'Accounting Changes and Error Corrections': 'FAR-I',
+    'Accounting Changes': 'FAR-I',
+    'Subsequent Events': 'FAR-I',
 
     // FAR-II: Select Financial Statement Accounts
     'Inventory': 'FAR-II',
     'Property, Plant & Equipment': 'FAR-II',
+    'Property, Plant, and Equipment': 'FAR-II',
     'Intangible Assets': 'FAR-II',
     'Investments': 'FAR-II',
+    'Receivables': 'FAR-II',
+    'Cash and Cash Equivalents': 'FAR-II',
     'Liabilities': 'FAR-II',
     'Long-term Debt': 'FAR-II',
+    'Long-Term Debt': 'FAR-II',
+    'Long-term Liabilities': 'FAR-II',
+    'Long-Term Liabilities': 'FAR-II',
+    'Bonds and Long-Term Debt': 'FAR-II',
+    'Contingencies': 'FAR-II',
     "Stockholders' Equity": 'FAR-II',
+    'Equity': 'FAR-II',
     'Revenue Recognition': 'FAR-II',
     'Income Taxes': 'FAR-II',
     'Pensions': 'FAR-II',
+    'Employee Benefits': 'FAR-II',
     'Earnings Per Share': 'FAR-II',
     'Stock-Based Compensation': 'FAR-II',
+    'Stock Compensation': 'FAR-II',
 
     // FAR-III: Select Transactions
     'Leases': 'FAR-III',
@@ -88,17 +106,25 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
 
     // FAR-IV: State and Local Governments
     'Government Accounting': 'FAR-IV',
+    'State and Local Governments': 'FAR-IV',
+    'State and Local Government': 'FAR-IV',
     'Not-for-Profit Accounting': 'FAR-IV',
+    'Not-for-Profit Entities': 'FAR-IV',
   },
   AUD: {
     // AUD-I: Ethics, Professional Responsibilities, General Principles
     'Professional Ethics': 'AUD-I',
+    'Professional Responsibilities': 'AUD-I',
+    'Professional Responsibilities & Ethics': 'AUD-I',
+    'Professional Standards': 'AUD-I',
     'Quality Control': 'AUD-I',
 
     // AUD-II: Assessing Risk and Developing a Planned Response
     'Audit Planning': 'AUD-II',
+    'Planning': 'AUD-II',
     'Risk Assessment': 'AUD-II',
     'Internal Control': 'AUD-II',
+    'Internal Controls': 'AUD-II',
     'Fraud': 'AUD-II',
 
     // AUD-III: Performing Further Procedures and Obtaining Evidence
@@ -109,21 +135,31 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
     'Using Work of Others': 'AUD-III',
     'Audit Documentation': 'AUD-III',
     'Management Representations': 'AUD-III',
+    'Substantive Procedures': 'AUD-III',
+    'Analytical Procedures': 'AUD-III',
+    'Evidence & Procedures': 'AUD-III',
     'Subsequent Events': 'AUD-III',
     'Going Concern': 'AUD-III',
     'Group Audits': 'AUD-III',
+    'Related Parties': 'AUD-III',
     'Comprehensive Review': 'AUD-III',
+    'Completing the Audit': 'AUD-III',
 
     // AUD-IV: Forming Conclusions and Reporting
     'Audit Reports': 'AUD-IV',
+    'Special Reports': 'AUD-IV',
+    'Communications': 'AUD-IV',
     'Governance Communications': 'AUD-IV',
     'SSARS': 'AUD-IV',
     'Attestation Engagements': 'AUD-IV',
+    'Other Attestation Engagements': 'AUD-IV',
+    'Other Engagements': 'AUD-IV',
     'Government Auditing': 'AUD-IV',
   },
   REG: {
     // REG-I: Ethics, Professional Responsibilities, Federal Tax Procedures
     'Professional Ethics - Circular 230': 'REG-I',
+    'Ethics & Professional Responsibility': 'REG-I',
     'Tax Procedures': 'REG-I',
     'Tax Research': 'REG-I',
 
@@ -138,24 +174,31 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
 
     // REG-III: Federal Taxation of Property Transactions
     'Property Transactions': 'REG-III',
+    'Federal Taxation of Property': 'REG-III',
 
     // REG-IV: Federal Taxation of Individuals
     'Individual Taxation': 'REG-IV',
     'Employment Tax': 'REG-IV',
     'Gift and Estate Tax': 'REG-IV',
+    'Gift & Estate Tax': 'REG-IV',
     'Estates and Trusts': 'REG-IV',
 
     // REG-V: Federal Taxation of Entities
     'C Corporations': 'REG-V',
     'S Corporations': 'REG-V',
+    'Corporate Taxation': 'REG-V',
     'Partnerships': 'REG-V',
+    'Partnership Taxation': 'REG-V',
     'Business Entities': 'REG-V',
+    'Federal Taxation of Entities': 'REG-V',
     'International Tax': 'REG-V',
   },
   TCP: {
     // TCP-I: Tax Compliance and Planning for Individuals
     'Individual Tax Compliance': 'TCP-I',
+    'Individual Tax Planning': 'TCP-I',
     'Tax Planning': 'TCP-I',
+    'Tax Planning Strategies': 'TCP-I',
     'Retirement Planning': 'TCP-I',
     'Compensation Planning': 'TCP-I',
     'Estate and Gift Planning': 'TCP-I',
@@ -164,6 +207,7 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
     'AMT Planning': 'TCP-I',
 
     // TCP-II: Tax Compliance and Planning for Entities
+    'Entity Tax Planning': 'TCP-II',
     'C Corporation Planning': 'TCP-II',
     'S Corporation Planning': 'TCP-II',
     'Partnership Planning': 'TCP-II',
@@ -174,6 +218,7 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
 
     // TCP-III: Tax Compliance and Planning for Property Transactions
     'Property Planning': 'TCP-III',
+    'Property Transactions Planning': 'TCP-III',
     'Passive Activity': 'TCP-III',
 
     // TCP-IV: Special Tax Topics
@@ -182,28 +227,64 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
   BAR: {
     // BAR-I: Business Analysis
     'Financial Statement Analysis': 'BAR-I',
+    'Financial Analysis': 'BAR-I',
     'Capital Budgeting': 'BAR-I',
     'Cost of Capital': 'BAR-I',
     'Business Valuation': 'BAR-I',
     'Economic Concepts': 'BAR-I',
     'Data Analytics': 'BAR-I',
+    'Cost Accounting': 'BAR-I',
+    'Budgeting': 'BAR-I',
+    'Performance Evaluation': 'BAR-I',
+    'Performance Measurement': 'BAR-I',
+    'Decision Analysis': 'BAR-I',
+    'Operations Management': 'BAR-I',
+    'Cost Estimation': 'BAR-I',
+    'Cost Management': 'BAR-I',
+    'Cost Analysis': 'BAR-I',
+    'Variance Analysis': 'BAR-I',
+    'CVP Analysis': 'BAR-I',
+    'Cost-Volume-Profit': 'BAR-I',
+    'Working Capital Management': 'BAR-I',
+    'Transfer Pricing': 'BAR-I',
+    'Quality Management': 'BAR-I',
+    'Segment Analysis': 'BAR-I',
+    'Target Costing': 'BAR-I',
+    'Risk Analysis': 'BAR-I',
+    'Process Costing': 'BAR-I',
+    'Joint and Byproduct Costing': 'BAR-I',
+    'Financial Forecasting': 'BAR-I',
+    'Financial Modeling': 'BAR-I',
+    'Trend Analysis': 'BAR-I',
+    'Managerial Accounting': 'BAR-I',
+    'Corporate Finance': 'BAR-I',
 
     // BAR-II: Technical Accounting and Reporting
     'Foreign Currency': 'BAR-II',
     'Derivatives': 'BAR-II',
     'Business Combinations': 'BAR-II',
     'Consolidations': 'BAR-II',
+    'Technical Accounting': 'BAR-II',
+    'International Accounting': 'BAR-II',
 
     // BAR-III: State and Local Governments
     'Government Accounting': 'BAR-III',
+    'Governmental Accounting': 'BAR-III',
     'Not-for-Profit Accounting': 'BAR-III',
   },
   ISC: {
     // ISC-I: Information Systems and Data Management
     'Data Management': 'ISC-I',
+    'Data Governance': 'ISC-I',
+    'Information Systems': 'ISC-I',
+    'System Operations': 'ISC-I',
     'Emerging Technologies': 'ISC-I',
+    'Emerging Technology': 'ISC-I',
     'Cloud Computing': 'ISC-I',
     'IT Governance': 'ISC-I',
+    'IT Operations': 'ISC-I',
+    'IT Service Management': 'ISC-I',
+    'IT Audit': 'ISC-I',
     'Comprehensive Review': 'ISC-I',
 
     // ISC-II: Security, Confidentiality, and Privacy
@@ -211,13 +292,38 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
     'IT General Controls': 'ISC-II',
     'Network Security': 'ISC-II',
     'Application Controls': 'ISC-II',
+    'Application Security': 'ISC-II',
     'Encryption': 'ISC-II',
+    'Cryptography': 'ISC-II',
     'Disaster Recovery': 'ISC-II',
     'Business Continuity': 'ISC-II',
     'IT Risk Management': 'ISC-II',
+    'Risk Management': 'ISC-II',
+    'Security Monitoring': 'ISC-II',
+    'Endpoint Security': 'ISC-II',
+    'Security Testing': 'ISC-II',
+    'Physical Security': 'ISC-II',
+    'Cloud Security': 'ISC-II',
+    'Incident Response': 'ISC-II',
+    'Privacy': 'ISC-II',
+    'Data Security': 'ISC-II',
+    'Data Protection': 'ISC-II',
+    'Security Architecture': 'ISC-II',
+    'Security Management': 'ISC-II',
+    'Security Governance': 'ISC-II',
+    'Access Controls': 'ISC-II',
+    'Identity and Access Management': 'ISC-II',
+    'Authentication': 'ISC-II',
+    'Vendor Management': 'ISC-II',
+    'Third Party Risk': 'ISC-II',
+    'Security Training': 'ISC-II',
+    'Vulnerability Management': 'ISC-II',
+    'Security & Privacy': 'ISC-II',
 
     // ISC-III: SOC Engagements
     'SOC Reports': 'ISC-III',
+    'SOC Engagements': 'ISC-III',
+    'System & Organization Controls (SOC)': 'ISC-III',
   }
 };
 
@@ -491,8 +597,7 @@ function generateRecommendedActions(
   // Check for weak content areas
   const weakAreas = contentAreaScores.filter(ca => ca.rawScore < 60 && ca.questionsAttempted >= 5);
   if (weakAreas.length > 0) {
-    const weakestArea = weakAreas.sort((a, b) => a.rawScore - b.rawScore)[0];
-    actions.push(`Focus on improving ${weakestArea.name.split(',')[0]} (currently ${weakestArea.rawScore}%)`);
+    actions.push('Review content areas where your accuracy is below 60%');
   }
 
   // TBS recommendations

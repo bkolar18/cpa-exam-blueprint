@@ -1,5 +1,93 @@
 # CPA Exam Blueprint - TODO
 
+## 2026-01-12
+
+### Current Tasks (Prime Meridian Refinements)
+
+#### 1. Replace Section-Specific Tip with General Tip
+**Status:** ✅ COMPLETED
+**File:** `src/lib/scoring/prime-meridian.ts` (lines 476-512)
+**Issue:** The tip "Focus on improving Select Transactions (currently 45%)" is too section-specific and confusing
+**Solution:** Replace with a more general tip like "Focus on your weakest content areas" without specific names
+**Implementation:**
+- Modify `generateRecommendedActions()` function
+- Change weak area tip from `"Focus on improving ${weakestArea.name.split(',')[0]} (currently ${weakestArea.rawScore}%)"` to `"Review content areas where your accuracy is below 60%"`
+
+#### 2. Remove MCQ/TBS Score Percentage Displays
+**Status:** ✅ COMPLETED
+**File:** `src/components/dashboard/PrimeMeridianScore.tsx` (lines 147-171)
+**Issue:** The "MCQ Score 15%" and "TBS Score 4%" displays confuse users who don't understand what they represent
+**Solution:** Remove the MCQ/TBS breakdown boxes entirely
+**Implementation:**
+- Delete the entire "MCQ / TBS Breakdown" section (lines 147-171)
+- Keep the overall Prime Meridian score visible
+
+#### 3. Fix TBS Topic Classification Issue
+**Status:** ✅ COMPLETED
+**Files:**
+- `src/lib/scoring/prime-meridian.ts` (TOPIC_TO_CONTENT_AREA mapping, lines 58-222)
+- `src/app/dashboard/readiness/page.tsx` (TBS Progress section)
+**Issue:** 3 TBS completed but only 1 shows in TBS Progress section - topics not mapped correctly
+**Root Cause:** TBS files use topics like "Employee Benefits", "Long-term Liabilities", "State and Local Governments" but these aren't in TOPIC_TO_CONTENT_AREA mapping
+**Solution:** Expand TOPIC_TO_CONTENT_AREA to include all TBS topics
+**Missing FAR mappings to add:**
+- "Employee Benefits" → "FAR-II"
+- "Long-term Liabilities" → "FAR-II"
+- "State and Local Governments" → "FAR-IV" (normalize from "Government Accounting")
+
+**Missing BAR mappings to add:**
+- "Financial Analysis" → "BAR-I"
+- "Cost Accounting" → "BAR-I"
+- "Budgeting" → "BAR-I"
+- "Performance Evaluation" → "BAR-I"
+- "Decision Analysis" → "BAR-I"
+- "Operations Management" → "BAR-I"
+- "Cost Estimation" → "BAR-I"
+- "Cost Management" → "BAR-I"
+
+#### 4. Categorize Untiered Badges and Fix Tracking
+**Status:** ✅ COMPLETED (SQL migration created - needs to be run in Supabase)
+**Files:**
+- `Supabase SQL's/supabase-gamification-schema.sql` (badge/achievement definitions)
+- `src/lib/gamification/checker.ts` (achievement trigger logic)
+- **NEW:** `supabase/migrations/20260112_add_practice_achievements.sql`
+**Issue:** User reports 17 badges without tier classification and "complete your first practice question" not awarding
+**Investigation Findings:**
+- All badges in SQL have tiers defined
+- Practice question achievements were MISSING from the database
+- The checker.ts now includes `first_question` code lookup
+
+**Solution Implemented:**
+1. Created SQL migration file with 9 new practice achievements (all properly tiered):
+   - `first_question` (bronze, 10 pts) - Answer 1 question
+   - `warm_up` (bronze, 15 pts) - Answer 10 questions
+   - `getting_started` (bronze, 20 pts) - Answer 25 questions
+   - `practice_makes_perfect` (silver, 30 pts) - Answer 50 questions
+   - `century_club` (silver, 40 pts) - Answer 100 questions
+   - `question_machine` (gold, 60 pts) - Answer 250 questions
+   - `practice_warrior` (gold, 90 pts) - Answer 500 questions
+   - `question_master` (platinum, 150 pts) - Answer 1000 questions
+   - `perfect_session` (gold, hidden, 75 pts) - 100% in 10+ question session
+2. Updated checker.ts to recognize `first_question` code
+3. User needs to run the SQL migration in Supabase SQL Editor
+
+**ACTION REQUIRED:**
+Run the SQL file in Supabase SQL Editor:
+`supabase/migrations/20260112_add_practice_achievements.sql`
+
+### Completed Today
+
+- [x] Sync TBS tracking between Readiness Dashboard and Simulations page
+  - Changed to use best score per TBS
+  - Only count TBS that exist in local data
+- [x] Sync MCQ tracking between Practice page and Readiness Dashboard
+  - Changed to use best attempt per question
+- [x] Fix mobile display issues on Readiness Dashboard
+- [x] Add resume simulation banner on Simulations page
+- [x] Implement mobile-responsive TBS simulation layout (SplitView tabs, TBSHeader)
+
+---
+
 ## 2026-01-11
 
 ### Completed Today

@@ -5,6 +5,7 @@ import { PracticeQuestion } from"@/lib/data/practice-questions";
 import { useAuth } from"@/components/auth/AuthProvider";
 import { createClient } from"@/lib/supabase/client";
 import FeedbackButton from"./FeedbackButton";
+import FlagQuestionButton from"./FlagQuestionButton";
 import QuestionFlags from"./QuestionFlags";
 
 interface QuestionReviewProps {
@@ -448,8 +449,15 @@ export default function QuestionReview({
  </div>
  )}
 
- {/* Feedback Button */}
- <div className="mt-4 pt-4 border-t border-[var(--border)] flex justify-end">
+ {/* Flag and Report Buttons */}
+ <div className="mt-4 pt-4 border-t border-[var(--border)] flex justify-end gap-2">
+ <FlagQuestionButton
+ questionId={question.id}
+ section={question.section}
+ topic={question.topic}
+ subtopic={question.subtopic}
+ variant="default"
+ />
  <FeedbackButton
  questionId={question.id}
  section={question.section}

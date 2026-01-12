@@ -4,6 +4,7 @@ import { useState } from"react";
 import Link from"next/link";
 import { PracticeQuestion } from"@/lib/data/practice-questions";
 import FeedbackButton from"./FeedbackButton";
+import FlagQuestionButton from"./FlagQuestionButton";
 import QuestionReview from"./QuestionReview";
 
 interface QuizResult {
@@ -201,6 +202,13 @@ export default function QuizResults({
  </div>
  </div>
  <div className="flex items-center space-x-2 ml-4">
+ <FlagQuestionButton
+ questionId={result.question.id}
+ section={result.question.section}
+ topic={result.question.topic}
+ subtopic={result.question.subtopic}
+ variant="compact"
+ />
  <FeedbackButton
  questionId={result.question.id}
  section={result.question.section}

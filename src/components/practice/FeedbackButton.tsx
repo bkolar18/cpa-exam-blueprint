@@ -44,7 +44,7 @@ export default function FeedbackButton({
  className={`${baseStyles[variant]} ${className}`}
  title="Report an issue with this question"
  >
- <FlagIcon className={variant === 'compact' ? 'w-3.5 h-3.5' : 'w-4 h-4'} />
+ <WarningIcon className={variant === 'compact' ? 'w-3.5 h-3.5' : 'w-4 h-4'} />
  {variant !== 'compact' && <span>Report Issue</span>}
  </button>
 
@@ -58,7 +58,7 @@ export default function FeedbackButton({
  );
 }
 
-function FlagIcon({ className = '' }: { className?: string }) {
+function WarningIcon({ className = '' }: { className?: string }) {
  return (
  <svg
  className={className}
@@ -70,7 +70,7 @@ function FlagIcon({ className = '' }: { className?: string }) {
  <path
  strokeLinecap="round"
  strokeLinejoin="round"
- d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+ d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
  />
  </svg>
  );

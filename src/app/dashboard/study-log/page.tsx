@@ -41,6 +41,22 @@ interface PracticeSession {
  topics: string[];
 }
 
+interface ExamSimulationHistory {
+ id: string;
+ section: string;
+ exam_type: 'mini' | 'mixed' | 'realistic';
+ started_at: string;
+ completed_at: string | null;
+ mcq_count: number;
+ mcq_correct: number;
+ mcq_score_percentage: number | null;
+ tbs_count: number;
+ tbs_score_percentage: number | null;
+ total_score_percentage: number | null;
+ time_limit_seconds: number;
+ time_spent_seconds: number;
+}
+
 // Group attempts into sessions (attempts within 30 minutes of each other)
 function groupIntoSessions(attempts: PracticeAttempt[]): PracticeSession[] {
  if (attempts.length === 0) return [];
@@ -112,7 +128,9 @@ export default function StudyLogPage() {
  notes:"",
  });
  const [submitting, setSubmitting] = useState(false);
- const [activeTab, setActiveTab] = useState<'manual' | 'practice'>('practice');
+ const [activeTab, setActiveTab] = useState<'manual' | 'practice' | 'exam'>('practice');
+ const [examSimulations, setExamSimulations] = useState<ExamSimulationHistory[]>([]);
+ const [visibleExamSimulations, setVisibleExamSimulations] = useState(5);
  const supabase = createClient();
 
  useEffect(() => {
@@ -152,6 +170,19 @@ export default function StudyLogPage() {
  if (attemptData) {
  const grouped = groupIntoSessions(attemptData as PracticeAttempt[]);
  setPracticeSessions(grouped);
+ }
+
+ // Fetch exam simulation history
+ const { data: examData } = await supabase
+ .from("exam_simulation_history")
+ .select("id, section, exam_type, started_at, completed_at, mcq_count, mcq_correct, mcq_score_percentage, tbs_count, tbs_score_percentage, total_score_percentage, time_limit_seconds, time_spent_seconds")
+ .eq("user_id", user.id)
+ .not("completed_at", "is", null)
+ .order("completed_at", { ascending: false })
+ .limit(50);
+
+ if (examData) {
+ setExamSimulations(examData as ExamSimulationHistory[]);
  }
 
  setLoading(false);
@@ -271,6 +302,21 @@ export default function StudyLogPage() {
  // Show more practice sessions
  const handleShowMorePractice = () => {
  setVisiblePracticeSessions(prev => prev + 10);
+ };
+
+ // Show more exam simulations
+ const handleShowMoreExams = () => {
+ setVisibleExamSimulations(prev => prev + 10);
+ };
+
+ // Get exam type label
+ const getExamTypeLabel = (type: string) => {
+ switch (type) {
+ case 'mini': return 'MCQ Only';
+ case 'mixed': return 'Mixed';
+ case 'realistic': return 'Realistic';
+ default: return type;
+ }
  };
 
  if (loading) {
@@ -416,6 +462,16 @@ export default function StudyLogPage() {
  Practice History ({practiceSessions.length})
  </button>
  <button
+ onClick={() => setActiveTab('exam')}
+ className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+ activeTab === 'exam'
+ ? 'border-[var(--primary)] text-[var(--primary)]'
+ : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
+ }`}
+ >
+ Exam Simulations ({examSimulations.length})
+ </button>
+ <button
  onClick={() => setActiveTab('manual')}
  className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
  activeTab === 'manual'
@@ -520,6 +576,108 @@ export default function StudyLogPage() {
  className="text-[var(--primary)] hover:text-[var(--primary-dark)] font-medium text-sm"
  >
  Show More ({practiceSessions.length - visiblePracticeSessions} remaining)
+ </button>
+ </div>
+ )}
+ </>
+ )}
+ </div>
+ )}
+
+ {/* Exam Simulations Tab */}
+ {activeTab === 'exam' && (
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
+ <div className="p-6 border-b border-[var(--border)]">
+ <div className="flex items-center justify-between">
+ <h2 className="text-lg font-semibold text-[var(--foreground)]">Exam Simulations</h2>
+ <Link
+ href="/dashboard/exam-simulation"
+ className="text-sm text-[var(--primary)] hover:underline"
+ >
+ Start New Exam →
+ </Link>
+ </div>
+ <p className="text-sm text-[var(--muted)] mt-1">
+ Review your past exam simulations
+ </p>
+ </div>
+
+ {examSimulations.length === 0 ? (
+ <div className="p-12 text-center">
+ <div className="w-16 h-16 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-full flex items-center justify-center mx-auto mb-4">
+ <svg className="w-8 h-8 text-[var(--muted)]"fill="none"stroke="currentColor"viewBox="0 0 24 24">
+ <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+ </svg>
+ </div>
+ <p className="text-[var(--muted)] mb-4">No exam simulations completed yet</p>
+ <Link href="/dashboard/exam-simulation"className="btn-primary inline-block">
+ Start an Exam
+ </Link>
+ </div>
+ ) : (
+ <>
+ <div className="divide-y divide-[var(--border)] dark:divide-[var(--border)]">
+ {examSimulations.slice(0, visibleExamSimulations).map((exam) => (
+ <Link
+ key={exam.id}
+ href={`/dashboard/exam-simulation/history/${exam.id}`}
+ className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+ >
+ <div className="flex items-center space-x-4">
+ <div className="w-12 h-12 bg-[var(--primary)] rounded-lg flex items-center justify-center">
+ <span className="text-white font-bold text-sm">{exam.section}</span>
+ </div>
+ <div>
+ <p className="font-medium text-[var(--foreground)]">
+ {getExamTypeLabel(exam.exam_type)}
+ <span className="text-[var(--muted)] font-normal ml-2">
+ ({exam.mcq_count} MCQ{exam.tbs_count > 0 ? ` + ${exam.tbs_count} TBS` : ''})
+ </span>
+ </p>
+ <p className="text-sm text-[var(--muted)]">
+ {exam.completed_at && new Date(exam.completed_at).toLocaleDateString("en-US", {
+ weekday:"short",
+ month:"short",
+ day:"numeric",
+ hour:"numeric",
+ minute:"2-digit",
+ })}
+ <span className="mx-2">•</span>
+ {formatSeconds(exam.time_spent_seconds)}
+ </p>
+ </div>
+ </div>
+ <div className="flex items-center space-x-4">
+ <div className="text-right">
+ <p className={`text-lg font-bold ${
+ (exam.total_score_percentage || 0) >= 75
+ ? 'text-green-600 dark:text-green-400'
+ : (exam.total_score_percentage || 0) >= 50
+ ? 'text-yellow-600 dark:text-yellow-400'
+ : 'text-red-600 dark:text-red-400'
+ }`}>
+ {exam.total_score_percentage?.toFixed(0) || 0}%
+ </p>
+ <p className="text-xs text-[var(--muted)]">
+ {exam.mcq_correct}/{exam.mcq_count} MCQ
+ </p>
+ </div>
+ <svg className="w-5 h-5 text-[var(--muted)]"fill="none"stroke="currentColor"viewBox="0 0 24 24">
+ <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9 5l7 7-7 7"/>
+ </svg>
+ </div>
+ </Link>
+ ))}
+ </div>
+
+ {/* Show More Button */}
+ {visibleExamSimulations < examSimulations.length && (
+ <div className="p-4 text-center border-t border-[var(--border)]">
+ <button
+ onClick={handleShowMoreExams}
+ className="text-[var(--primary)] hover:text-[var(--primary-dark)] font-medium text-sm"
+ >
+ Show More ({examSimulations.length - visibleExamSimulations} remaining)
  </button>
  </div>
  )}

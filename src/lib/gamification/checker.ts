@@ -408,6 +408,7 @@ export async function checkAchievements(
       // Check first practice session achievement
       const firstPractice = achievements.find((a) =>
         a.code === 'first_practice' ||
+        a.code === 'first_question' ||
         a.code === 'first_quiz' ||
         a.code === 'first_mcq' ||
         (a.category === 'practice' && a.name && a.name.toLowerCase().includes('first'))

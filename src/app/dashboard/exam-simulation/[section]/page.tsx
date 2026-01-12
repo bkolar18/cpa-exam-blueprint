@@ -29,7 +29,7 @@ interface TBSResult {
  attempt: TBSAttempt;
 }
 
-type ExamState = 'setup' | 'exam' | 'tbs' | 'paused' | 'review' | 'results';
+type ExamState = 'setup' | 'exam' | 'mcq-review' | 'tbs' | 'paused' | 'review' | 'results';
 type TestletType = 'mcq' | 'tbs';
 
 const sectionNames: Record<string, string> = {
@@ -66,37 +66,252 @@ const EXAM_CONFIGS = {
  },
 };
 
-// Target distribution for realistic exam simulation
-const TARGET_DISTRIBUTION = { easy: 0.17, medium: 0.55, hard: 0.28 };
+// Target difficulty distribution for realistic exam simulation
+const TARGET_DIFFICULTY = { easy: 0.17, medium: 0.55, hard: 0.28 };
 
-function getExamQuestions(allQuestions: PracticeQuestion[], count: number): PracticeQuestion[] {
- // Calculate target counts for each difficulty
- const easyCount = Math.round(count * TARGET_DISTRIBUTION.easy);
- const mediumCount = Math.round(count * TARGET_DISTRIBUTION.medium);
- const hardCount = count - easyCount - mediumCount;
+// AICPA Blueprint Content Area Weights by Section (using midpoint of ranges)
+// Source: AICPA CPA Exam Blueprint 2025-2026
+const CONTENT_AREA_WEIGHTS: Record<string, { area: string; weight: number; topics: string[] }[]> = {
+  FAR: [
+    {
+      area: 'FAR-I',
+      weight: 0.30, // 25-35%
+      topics: ['Conceptual Framework & Standards', 'Financial Statement Presentation', 'IFRS', 'Statement of Cash Flows', 'Earnings Per Share']
+    },
+    {
+      area: 'FAR-II',
+      weight: 0.35, // 30-40%
+      topics: ['Inventory', 'Property, Plant & Equipment', 'Investments', 'Intangible Assets', 'Liabilities', "Stockholders' Equity", 'Long-term Debt', 'Leases', 'Fair Value']
+    },
+    {
+      area: 'FAR-III',
+      weight: 0.25, // 20-30%
+      topics: ['Revenue Recognition', 'Business Combinations', 'Consolidations', 'Foreign Currency', 'Derivatives', 'Stock-Based Compensation', 'Pensions', 'Income Taxes', 'Accounting Changes and Error Corrections']
+    },
+    {
+      area: 'FAR-IV',
+      weight: 0.10, // 5-15%
+      topics: ['Government Accounting', 'Not-for-Profit Accounting']
+    },
+  ],
+  AUD: [
+    {
+      area: 'AUD-I',
+      weight: 0.20, // 15-25%
+      topics: ['Professional Ethics', 'Quality Control', 'Governance Communications', 'Management Representations']
+    },
+    {
+      area: 'AUD-II',
+      weight: 0.30, // 25-35%
+      topics: ['Risk Assessment', 'Audit Planning', 'Internal Control', 'Fraud']
+    },
+    {
+      area: 'AUD-III',
+      weight: 0.35, // 30-40%
+      topics: ['Audit Evidence', 'Audit Sampling', 'Revenue and Receivables', 'Inventory Auditing', 'Using Work of Others', 'Audit Documentation', 'Subsequent Events', 'Going Concern', 'Group Audits']
+    },
+    {
+      area: 'AUD-IV',
+      weight: 0.15, // 10-20%
+      topics: ['Audit Reports', 'SSARS', 'Attestation Engagements', 'Government Auditing', 'Comprehensive Review']
+    },
+  ],
+  REG: [
+    {
+      area: 'REG-I',
+      weight: 0.15, // 10-20%
+      topics: ['Professional Ethics - Circular 230', 'Tax Procedures', 'Tax Research']
+    },
+    {
+      area: 'REG-II',
+      weight: 0.20, // 15-25%
+      topics: ['Business Law', 'Business Law - Contracts', 'Business Law - Agency', 'Business Law - Business Structures', 'Business Law - Bankruptcy', 'Business Law - Securities Regulation', 'Debtor-Creditor']
+    },
+    {
+      area: 'REG-III',
+      weight: 0.10, // 5-15%
+      topics: ['Property Transactions']
+    },
+    {
+      area: 'REG-IV',
+      weight: 0.27, // 22-32%
+      topics: ['Individual Taxation', 'Employment Tax', 'Gift and Estate Tax', 'Estates and Trusts']
+    },
+    {
+      area: 'REG-V',
+      weight: 0.28, // 23-33%
+      topics: ['C Corporations', 'S Corporations', 'Partnerships', 'Business Entities', 'International Tax']
+    },
+  ],
+  TCP: [
+    {
+      area: 'TCP-I',
+      weight: 0.35, // 30-40%
+      topics: ['Individual Tax Compliance', 'Tax Planning', 'Retirement Planning', 'Compensation Planning', 'Charitable Giving', 'AMT Planning', 'International Individual Tax']
+    },
+    {
+      area: 'TCP-II',
+      weight: 0.35, // 30-40%
+      topics: ['C Corporation Planning', 'S Corporation Planning', 'Partnership Planning', 'Multi-Entity Planning', 'State and Local Tax', 'Employment Tax', 'Business Succession Planning']
+    },
+    {
+      area: 'TCP-III',
+      weight: 0.15, // 10-20%
+      topics: ['Tax Credits', 'Estate and Gift Planning', 'Passive Activity']
+    },
+    {
+      area: 'TCP-IV',
+      weight: 0.15, // 10-20%
+      topics: ['Property Planning']
+    },
+  ],
+  BAR: [
+    {
+      area: 'BAR-I',
+      weight: 0.45, // 40-50%
+      topics: ['Financial Statement Analysis', 'Cost of Capital', 'Capital Budgeting', 'Business Valuation', 'Economic Concepts', 'Data Analytics']
+    },
+    {
+      area: 'BAR-II',
+      weight: 0.40, // 35-45%
+      topics: ['Foreign Currency', 'Derivatives', 'Business Combinations', 'Consolidations']
+    },
+    {
+      area: 'BAR-III',
+      weight: 0.15, // 10-20%
+      topics: ['Government Accounting', 'Not-for-Profit Accounting']
+    },
+  ],
+  ISC: [
+    {
+      area: 'ISC-I',
+      weight: 0.40, // 35-45%
+      topics: ['Data Management', 'IT General Controls', 'Application Controls', 'IT Governance', 'Emerging Technologies', 'Cloud Computing', 'Comprehensive Review']
+    },
+    {
+      area: 'ISC-II',
+      weight: 0.40, // 35-45%
+      topics: ['Cybersecurity', 'Network Security', 'Encryption', 'Disaster Recovery', 'Business Continuity', 'IT Risk Management']
+    },
+    {
+      area: 'ISC-III',
+      weight: 0.20, // 15-25%
+      topics: ['SOC Reports']
+    },
+  ],
+};
 
- // Group questions by difficulty
- const easy = allQuestions.filter(q => q.difficulty === 'easy');
- const medium = allQuestions.filter(q => q.difficulty === 'medium');
- const hard = allQuestions.filter(q => q.difficulty === 'hard');
+// Helper to get content area for a question based on topic
+function getContentAreaForQuestion(question: PracticeQuestion, section: string): string | null {
+  const sectionAreas = CONTENT_AREA_WEIGHTS[section];
+  if (!sectionAreas) return null;
 
- // Shuffle and select
- const shuffle = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
+  for (const area of sectionAreas) {
+    if (area.topics.some(t =>
+      question.topic.toLowerCase().includes(t.toLowerCase()) ||
+      t.toLowerCase().includes(question.topic.toLowerCase())
+    )) {
+      return area.area;
+    }
+  }
+  return null; // Uncategorized
+}
 
- const selectedEasy = shuffle(easy).slice(0, Math.min(easyCount, easy.length));
- const selectedMedium = shuffle(medium).slice(0, Math.min(mediumCount, medium.length));
- const selectedHard = shuffle(hard).slice(0, Math.min(hardCount, hard.length));
+function getExamQuestions(allQuestions: PracticeQuestion[], count: number, section: string): PracticeQuestion[] {
+  const shuffle = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
 
- // Combine and shuffle the final selection
- let selected = [...selectedEasy, ...selectedMedium, ...selectedHard];
+  const sectionAreas = CONTENT_AREA_WEIGHTS[section];
 
- // If we don't have enough, fill with any available questions
- if (selected.length < count) {
- const remaining = shuffle(allQuestions.filter(q => !selected.includes(q)));
- selected = [...selected, ...remaining.slice(0, count - selected.length)];
- }
+  // If no content area config for this section, fall back to difficulty-only selection
+  if (!sectionAreas) {
+    return getQuestionsByDifficultyOnly(allQuestions, count);
+  }
 
- return shuffle(selected).slice(0, count);
+  // Group questions by content area
+  const questionsByArea: Record<string, PracticeQuestion[]> = {};
+  const uncategorized: PracticeQuestion[] = [];
+
+  for (const q of allQuestions) {
+    const area = getContentAreaForQuestion(q, section);
+    if (area) {
+      if (!questionsByArea[area]) questionsByArea[area] = [];
+      questionsByArea[area].push(q);
+    } else {
+      uncategorized.push(q);
+    }
+  }
+
+  // Calculate target counts per content area
+  const selected: PracticeQuestion[] = [];
+
+  for (const areaConfig of sectionAreas) {
+    const targetCount = Math.round(count * areaConfig.weight);
+    const availableForArea = questionsByArea[areaConfig.area] || [];
+
+    if (availableForArea.length === 0) continue;
+
+    // Within each content area, also balance by difficulty
+    const easyTarget = Math.round(targetCount * TARGET_DIFFICULTY.easy);
+    const mediumTarget = Math.round(targetCount * TARGET_DIFFICULTY.medium);
+    const hardTarget = targetCount - easyTarget - mediumTarget;
+
+    const easy = shuffle(availableForArea.filter(q => q.difficulty === 'easy'));
+    const medium = shuffle(availableForArea.filter(q => q.difficulty === 'medium'));
+    const hard = shuffle(availableForArea.filter(q => q.difficulty === 'hard'));
+
+    // Select from each difficulty level
+    const selectedFromArea = [
+      ...easy.slice(0, Math.min(easyTarget, easy.length)),
+      ...medium.slice(0, Math.min(mediumTarget, medium.length)),
+      ...hard.slice(0, Math.min(hardTarget, hard.length)),
+    ];
+
+    // If we didn't get enough from difficulty balancing, fill with any from this area
+    if (selectedFromArea.length < targetCount) {
+      const remaining = shuffle(availableForArea.filter(q => !selectedFromArea.includes(q)));
+      selectedFromArea.push(...remaining.slice(0, targetCount - selectedFromArea.length));
+    }
+
+    selected.push(...selectedFromArea.slice(0, targetCount));
+  }
+
+  // If we still need more questions, add from uncategorized or any remaining
+  if (selected.length < count) {
+    const allRemaining = shuffle([
+      ...uncategorized,
+      ...allQuestions.filter(q => !selected.includes(q))
+    ]);
+    selected.push(...allRemaining.slice(0, count - selected.length));
+  }
+
+  // Final shuffle and trim to exact count
+  return shuffle(selected).slice(0, count);
+}
+
+// Fallback for sections without content area mapping
+function getQuestionsByDifficultyOnly(allQuestions: PracticeQuestion[], count: number): PracticeQuestion[] {
+  const easyCount = Math.round(count * TARGET_DIFFICULTY.easy);
+  const mediumCount = Math.round(count * TARGET_DIFFICULTY.medium);
+  const hardCount = count - easyCount - mediumCount;
+
+  const easy = allQuestions.filter(q => q.difficulty === 'easy');
+  const medium = allQuestions.filter(q => q.difficulty === 'medium');
+  const hard = allQuestions.filter(q => q.difficulty === 'hard');
+
+  const shuffle = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
+
+  const selectedEasy = shuffle(easy).slice(0, Math.min(easyCount, easy.length));
+  const selectedMedium = shuffle(medium).slice(0, Math.min(mediumCount, medium.length));
+  const selectedHard = shuffle(hard).slice(0, Math.min(hardCount, hard.length));
+
+  let selected = [...selectedEasy, ...selectedMedium, ...selectedHard];
+
+  if (selected.length < count) {
+    const remaining = shuffle(allQuestions.filter(q => !selected.includes(q)));
+    selected = [...selected, ...remaining.slice(0, count - selected.length)];
+  }
+
+  return shuffle(selected).slice(0, count);
 }
 
 function formatTime(seconds: number): string {
@@ -173,7 +388,7 @@ export default function ExamSimulationSectionPage() {
  const startExam = () => {
  const config = EXAM_CONFIGS[selectedConfig];
  const allQuestions = getQuestionsBySection(section);
- const examQuestions = getExamQuestions(allQuestions, Math.min(config.questions, allQuestions.length));
+ const examQuestions = getExamQuestions(allQuestions, Math.min(config.questions, allQuestions.length), section);
 
  if (examQuestions.length === 0) {
  alert('No questions available. Please try again later.');
@@ -244,7 +459,12 @@ export default function ExamSimulationSectionPage() {
 
  const handleReviewExam = () => {
  recordQuestionTime();
- // If there are TBS questions, transition to TBS phase first
+ // Go to MCQ review screen first - user can review all MCQ answers before TBS or final submit
+ setExamState('mcq-review');
+ };
+
+ // After reviewing MCQ, continue to TBS or final review
+ const handleContinueFromMCQReview = () => {
  if (tbsQuestions.length > 0 && currentTbsIndex < tbsQuestions.length) {
  setExamState('tbs');
  } else {
@@ -287,8 +507,22 @@ export default function ExamSimulationSectionPage() {
  if (timerRef.current) clearInterval(timerRef.current);
  recordQuestionTime();
 
+ const config = EXAM_CONFIGS[selectedConfig];
+ const startTimestamp = new Date(Date.now() - (config.timeMinutes * 60 - timeRemaining) * 1000);
+ const timeSpent = config.timeMinutes * 60 - timeRemaining;
+
+ // Calculate scores
+ const mcqCorrect = questions.filter((q, i) => answers[i] === q.correctAnswer).length;
+ const mcqPercentage = questions.length > 0 ? (mcqCorrect / questions.length) * 100 : 0;
+ const tbsTotalPoints = tbsResults.reduce((sum, r) => sum + (r.attempt.maxScore || 0), 0);
+ const tbsEarnedPoints = tbsResults.reduce((sum, r) => sum + (r.attempt.scoreEarned || 0), 0);
+ const tbsPercentage = tbsTotalPoints > 0 ? (tbsEarnedPoints / tbsTotalPoints) * 100 : 0;
+ const hasOnlyMCQ = tbsResults.length === 0;
+ const totalPercentage = hasOnlyMCQ ? mcqPercentage : (mcqPercentage + tbsPercentage) / 2;
+
  // Save results
  if (user && supabase) {
+ // Save individual MCQ attempts
  for (let i = 0; i < questions.length; i++) {
  const q = questions[i];
  const selected = answers[i];
@@ -309,10 +543,50 @@ export default function ExamSimulationSectionPage() {
  console.error('Failed to save attempt:', error);
  }
  }
+
+ // Save complete exam history for later review
+ try {
+ const mcqResponses = questions.map((q, i) => ({
+ questionId: q.id,
+ selectedAnswer: answers[i] || null,
+ isCorrect: answers[i] === q.correctAnswer,
+ timeSpent: questionTimes[i] || 0,
+ }));
+
+ const tbsResponseData = tbsResults.map(r => ({
+ tbsId: r.tbs.id,
+ responses: r.attempt.responses,
+ scoreEarned: r.attempt.scoreEarned || 0,
+ maxScore: r.attempt.maxScore || 0,
+ timeSpent: r.attempt.timeSpentSeconds || 0,
+ }));
+
+ await supabase.from('exam_simulation_history').insert({
+ user_id: user.id,
+ section: section,
+ exam_type: selectedConfig,
+ started_at: startTimestamp.toISOString(),
+ completed_at: new Date().toISOString(),
+ mcq_count: questions.length,
+ mcq_correct: mcqCorrect,
+ mcq_score_percentage: Math.round(mcqPercentage * 100) / 100,
+ tbs_count: tbsResults.length,
+ tbs_score_percentage: tbsResults.length > 0 ? Math.round(tbsPercentage * 100) / 100 : null,
+ total_score_percentage: Math.round(totalPercentage * 100) / 100,
+ time_limit_seconds: config.timeMinutes * 60,
+ time_spent_seconds: timeSpent,
+ mcq_responses: mcqResponses,
+ tbs_responses: tbsResponseData,
+ mcq_question_ids: questions.map(q => q.id),
+ tbs_question_ids: tbsResults.map(r => r.tbs.id),
+ });
+ } catch (error) {
+ console.error('Failed to save exam history:', error);
+ }
  }
 
  setExamState('results');
- }, [questions, answers, questionTimes, user, supabase]);
+ }, [questions, answers, questionTimes, user, supabase, selectedConfig, timeRemaining, tbsResults, section]);
 
  const getResults = (): ExamResult[] => {
  return questions.map((q, i) => ({
@@ -519,6 +793,12 @@ export default function ExamSimulationSectionPage() {
  </svg>
  <span>Pause</span>
  </button>
+ <button
+ onClick={handleReviewExam}
+ className="px-4 py-1.5 bg-white text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-colors"
+ >
+ Review & Submit MCQ Section
+ </button>
  </div>
  </div>
  </div>
@@ -601,12 +881,9 @@ export default function ExamSimulationSectionPage() {
  ← Previous
  </button>
 
- <button
- onClick={handleReviewExam}
- className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 font-medium"
- >
- Review & Submit
- </button>
+ <span className="text-sm text-[var(--muted)]">
+ Question {currentIndex + 1} of {questions.length}
+ </span>
 
  <button
  onClick={handleNext}
@@ -682,6 +959,118 @@ export default function ExamSimulationSectionPage() {
  );
  }
 
+ // MCQ Review State - Review all MCQ answers before TBS or final submit
+ if (examState === 'mcq-review') {
+ const unansweredMCQ = questions.length - Object.keys(answers).length;
+ const flaggedList = Array.from(flagged);
+
+ return (
+ <div className="space-y-6">
+ {/* Header */}
+ <div className={`sticky top-16 z-40 rounded-xl p-4 ${
+ timeRemaining < 300 ? 'bg-red-500' : 'bg-orange-500'
+ } text-white`}>
+ <div className="flex items-center justify-between">
+ <div className="flex items-center space-x-4">
+ <h2 className="text-xl font-bold">Review MCQ Answers</h2>
+ </div>
+ <div className="flex items-center space-x-4">
+ <span className="text-2xl font-mono font-bold">{formatTime(timeRemaining)}</span>
+ </div>
+ </div>
+ </div>
+
+ {/* MCQ Review Card */}
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
+ <div className="flex items-center justify-between mb-6">
+ <h3 className="text-lg font-semibold text-[var(--foreground)]">MCQ Section Summary</h3>
+ <div className="flex gap-4">
+ <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+ {Object.keys(answers).length} answered
+ </span>
+ {unansweredMCQ > 0 && (
+ <span className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">
+ {unansweredMCQ} unanswered
+ </span>
+ )}
+ {flaggedList.length > 0 && (
+ <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
+ {flaggedList.length} flagged
+ </span>
+ )}
+ </div>
+ </div>
+
+ {/* Question Grid */}
+ <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-2 mb-6">
+ {questions.map((q, i) => (
+ <button
+ key={i}
+ onClick={() => { setExamState('exam'); handleNavigate(i); }}
+ className={`p-2 rounded-lg text-sm font-medium transition-all hover:scale-105 ${
+ i === currentIndex
+ ? 'bg-orange-500 text-white'
+ : answers[i]
+ ? flagged.has(i)
+ ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 border-2 border-yellow-400'
+ : 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
+ : flagged.has(i)
+ ? 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-300 border-2 border-yellow-400'
+ : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
+ }`}
+ title={`Q${i + 1}: ${q.topic} - ${answers[i] ? `Answered: ${answers[i]}` : 'Unanswered'}${flagged.has(i) ? ' (Flagged)' : ''}`}
+ >
+ {i + 1}
+ </button>
+ ))}
+ </div>
+
+ {/* Legend */}
+ <div className="flex flex-wrap gap-4 text-sm border-t border-[var(--border)] pt-4">
+ <div className="flex items-center gap-2">
+ <div className="w-4 h-4 rounded bg-green-100 dark:bg-green-900/30"></div>
+ <span className="text-[var(--muted)]">Answered</span>
+ </div>
+ <div className="flex items-center gap-2">
+ <div className="w-4 h-4 rounded bg-gray-100 dark:bg-gray-700"></div>
+ <span className="text-[var(--muted)]">Unanswered</span>
+ </div>
+ <div className="flex items-center gap-2">
+ <div className="w-4 h-4 rounded bg-yellow-100 dark:bg-yellow-900/30 border-2 border-yellow-400"></div>
+ <span className="text-[var(--muted)]">Flagged</span>
+ </div>
+ </div>
+ </div>
+
+ {/* Warning for unanswered */}
+ {unansweredMCQ > 0 && (
+ <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+ <p className="text-red-800 dark:text-red-300 font-medium">
+ ⚠️ You have {unansweredMCQ} unanswered question{unansweredMCQ > 1 ? 's' : ''}.
+ Remember: no penalty for guessing on the CPA exam!
+ </p>
+ </div>
+ )}
+
+ {/* Action Buttons */}
+ <div className="flex gap-4">
+ <button
+ onClick={() => setExamState('exam')}
+ className="flex-1 py-3 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600"
+ >
+ ← Back to Questions
+ </button>
+ <button
+ onClick={handleContinueFromMCQReview}
+ className="flex-1 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600"
+ >
+ {tbsQuestions.length > 0 ? 'Continue to TBS →' : 'Submit Exam'}
+ </button>
+ </div>
+ </div>
+ );
+ }
+
  // TBS State - Task-Based Simulations
  if (examState === 'tbs' && tbsQuestions.length > 0) {
  const currentTbs = tbsQuestions[currentTbsIndex];
@@ -713,7 +1102,7 @@ export default function ExamSimulationSectionPage() {
  </div>
  </div>
 
- {/* TBS Container */}
+ {/* TBS Container - No library button during exam simulation */}
  <TBSContainer
  tbs={currentTbs}
  testletIndex={currentTbsIndex + 1}
@@ -722,7 +1111,6 @@ export default function ExamSimulationSectionPage() {
  onPrevious={currentTbsIndex > 0 ? handlePreviousTBS : undefined}
  onNext={currentTbsIndex < tbsQuestions.length - 1 ? handleNextTBS : undefined}
  isPracticeMode={false}
- onReturnToLibrary={handleReturnToMCQ}
  />
  </div>
  );
@@ -942,13 +1330,13 @@ export default function ExamSimulationSectionPage() {
  </div>
  <div className="divide-y divide-[var(--border)]">
  {results.map((result, i) => (
- <div key={i} className={`p-4 ${result.isCorrect ? 'bg-green-50/50' : 'bg-red-50/50'}`}>
+ <div key={i} className={`p-4 ${result.isCorrect ? 'bg-green-50/50 dark:bg-green-900/20' : 'bg-red-50/50 dark:bg-red-900/20'}`}>
  <div className="flex items-start justify-between mb-2">
  <span className="text-sm font-medium text-[var(--muted)]">
  Q{i + 1} • {result.question.topic}
  </span>
  <span className={`px-2 py-1 rounded text-xs font-medium ${
- result.isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+ result.isCorrect ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300' : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300'
  }`}>
  {result.isCorrect ? 'Correct' : 'Incorrect'}
  </span>
@@ -957,23 +1345,23 @@ export default function ExamSimulationSectionPage() {
  <div className="text-sm space-y-1">
  <p>
  <span className="text-[var(--muted)]">Your answer:</span>{' '}
- <span className={result.isCorrect ? 'text-green-700' : 'text-red-700'}>
+ <span className={result.isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}>
  {result.selectedAnswer || 'Not answered'}: {result.selectedAnswer ? result.question.options[result.selectedAnswer] : '-'}
  </span>
  </p>
  {!result.isCorrect && (
  <p>
  <span className="text-[var(--muted)]">Correct answer:</span>{' '}
- <span className="text-green-700">
+ <span className="text-green-700 dark:text-green-400">
  {result.question.correctAnswer}: {result.question.options[result.question.correctAnswer]}
  </span>
  </p>
  )}
  </div>
- <div className="mt-3 p-3 bg-blue-50 rounded-lg">
- <p className="text-sm text-blue-800">{result.question.explanation}</p>
+ <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+ <p className="text-sm text-blue-800 dark:text-blue-200">{result.question.explanation}</p>
  {result.question.tip && (
- <p className="text-sm text-blue-600 mt-2">💡 {result.question.tip}</p>
+ <p className="text-sm text-blue-600 dark:text-blue-300 mt-2">💡 {result.question.tip}</p>
  )}
  </div>
  </div>

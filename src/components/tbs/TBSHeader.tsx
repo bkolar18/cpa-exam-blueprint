@@ -128,7 +128,8 @@ export default function TBSHeader({
        </span>
      </div>
 
-     {/* Timer and Pause */}
+     {/* Timer and Pause - Only show in practice mode */}
+     {isPracticeMode && (
      <div className="flex items-center gap-2">
        {isPaused ? (
          <span className="text-xs font-medium text-yellow-600 dark:text-yellow-400 px-2 py-0.5 bg-yellow-50 dark:bg-yellow-900/20 rounded">
@@ -159,6 +160,7 @@ export default function TBSHeader({
          </button>
        )}
      </div>
+     )}
    </div>
 
    {/* Row 2: Progress, Tools, and Actions */}
@@ -458,9 +460,10 @@ export default function TBSHeader({
  )}
  </div>
 
- {/* Right: Timer and Actions */}
+ {/* Right: Timer and Actions - Timer only in practice mode */}
  <div className="flex items-center space-x-3">
- {/* Timer */}
+ {/* Timer - Hide during exam simulation since exam has its own timer */}
+ {isPracticeMode && (
  <div className="flex items-center space-x-1.5">
  {isPaused ? (
  <span className="text-xs font-medium text-yellow-600 dark:text-yellow-400">
@@ -477,8 +480,8 @@ export default function TBSHeader({
  </>
  )}
 
- {/* Pause Button (Practice Mode Only) */}
- {isPracticeMode && !isSubmitted && (
+ {/* Pause Button */}
+ {!isSubmitted && (
  <button
  onClick={onPauseToggle}
  className="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]"
@@ -497,6 +500,7 @@ export default function TBSHeader({
  </button>
  )}
  </div>
+ )}
 
  {/* Divider */}
  <div className="h-5 w-px bg-gray-200 dark:bg-[var(--card-hover)]"/>

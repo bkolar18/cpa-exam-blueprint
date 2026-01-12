@@ -144,32 +144,6 @@ export default function PrimeMeridianScore({
 
             <p className="text-[var(--muted)] mb-4">{milestone.message}</p>
 
-            {/* MCQ / TBS Breakdown */}
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              {result.mcqWeight > 0 && (
-                <div className="bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg px-4 py-2">
-                  <div className="text-xs text-[var(--muted)]">MCQ Score</div>
-                  <div className="text-xl font-bold text-blue-600 dark:text-blue-400">
-                    {result.mcqScore}%
-                  </div>
-                  <div className="text-xs text-[var(--muted)]">
-                    {Math.round(result.mcqWeight * 100)}% of total
-                  </div>
-                </div>
-              )}
-              {result.tbsWeight > 0 && (
-                <div className="bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg px-4 py-2">
-                  <div className="text-xs text-[var(--muted)]">TBS Score</div>
-                  <div className="text-xl font-bold text-purple-600 dark:text-purple-400">
-                    {result.tbsScore}%
-                  </div>
-                  <div className="text-xs text-[var(--muted)]">
-                    {Math.round(result.tbsWeight * 100)}% of total
-                  </div>
-                </div>
-              )}
-            </div>
-
             {/* Recommended Score Callout */}
             {result.overallScore < PRIME_MERIDIAN_CONFIG.RECOMMENDED_SCORE && (
               <div className="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
