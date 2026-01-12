@@ -4072,7 +4072,7 @@ export const regHobbyLossTBS: TBSQuestion = {
         value: 12500,
         tolerance: 0,
       },
-      explanation: "$8,500 + $2,400 + $1,600 = $12,500",
+      explanation: "Per IRC §61, gross income from activity: $8,500 + $2,400 + $1,600 = $12,500.",
     },
     {
       id: "req-total-expenses",
@@ -4085,7 +4085,7 @@ export const regHobbyLossTBS: TBSQuestion = {
         value: 20200,
         tolerance: 0,
       },
-      explanation: "$4,200 + $6,800 + $3,500 + $2,100 + $1,200 + $2,400 = $20,200",
+      explanation: "Per IRC §162/§183, total expenses: $4,200 + $6,800 + $3,500 + $2,100 + $1,200 + $2,400 = $20,200.",
     },
     {
       id: "req-hobby-classification",
@@ -4097,7 +4097,7 @@ export const regHobbyLossTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-hobby",
       },
-      explanation: "Activity is presumed hobby since no profit in 3 of past 5 years (fails 3-of-5 test)",
+      explanation: "Per IRC §183(d), activity presumed hobby since no profit in 3 of past 5 years (fails 3-of-5 presumption test).",
       dropdownOptions: [
         { id: "opt-business", order: 1, text: "Business activity", isCorrect: false },
         { id: "opt-hobby", order: 2, text: "Hobby (IRC 183 applies)", isCorrect: true },
@@ -4115,7 +4115,7 @@ export const regHobbyLossTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Under TCJA (2018+), hobby expenses are NO LONGER deductible. The 2% miscellaneous itemized deduction was eliminated. Hobby income is fully taxable with no offsetting deductions.",
+      explanation: "Per IRC §67(g), TCJA suspended miscellaneous itemized deductions through 2025 − hobby expenses are not deductible. Income fully taxable.",
     },
     {
       id: "req-net-taxable",
@@ -4128,7 +4128,7 @@ export const regHobbyLossTBS: TBSQuestion = {
         value: 12500,
         tolerance: 0,
       },
-      explanation: "Post-TCJA: All hobby income ($12,500) is taxable. No expenses are deductible since hobby expenses were eliminated as miscellaneous itemized deductions.",
+      explanation: "Per IRC §183 and §67(g), all hobby income ($12,500) is taxable with no offsetting deductions under TCJA.",
     },
   ],
 };
@@ -4196,7 +4196,7 @@ export const regNOLCarryforwardTBS: TBSQuestion = {
         value: 123700,
         tolerance: 0,
       },
-      explanation: "$125,000 + $3,500 + $2,200 + $8,000 - $15,000 = $123,700",
+      explanation: "Per IRC §63, taxable income before NOL: $125,000 + $3,500 + $2,200 + $8,000 − $15,000 = $123,700.",
     },
     {
       id: "req-nol-limitation",
@@ -4209,7 +4209,7 @@ export const regNOLCarryforwardTBS: TBSQuestion = {
         value: 98960,
         tolerance: 1,
       },
-      explanation: "Post-2020 NOLs limited to 80% of taxable income: $123,700 × 80% = $98,960",
+      explanation: "Per IRC §172(a)(2), post-2020 NOLs limited to 80% of taxable income: $123,700 × 80% = $98,960.",
     },
     {
       id: "req-nol-used",
@@ -4222,7 +4222,7 @@ export const regNOLCarryforwardTBS: TBSQuestion = {
         value: 77000,
         tolerance: 0,
       },
-      explanation: "Available NOL ($77,000) < 80% limit ($98,960), so use entire $77,000",
+      explanation: "Per IRC §172, available NOL ($77,000) < 80% limit ($98,960), so entire $77,000 is deductible.",
     },
     {
       id: "req-remaining-carryforward",
@@ -4235,7 +4235,7 @@ export const regNOLCarryforwardTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Entire NOL was used, no remaining carryforward",
+      explanation: "Per IRC §172(b), entire NOL was used − no remaining carryforward to future years.",
     },
     {
       id: "req-final-taxable",
@@ -4248,7 +4248,7 @@ export const regNOLCarryforwardTBS: TBSQuestion = {
         value: 46700,
         tolerance: 0,
       },
-      explanation: "$123,700 - $77,000 = $46,700",
+      explanation: "Per IRC §172, final taxable income = $123,700 − $77,000 NOL deduction = $46,700.",
     },
   ],
 };
@@ -4314,7 +4314,7 @@ export const regKiddieTaxTBS: TBSQuestion = {
         value: 4200,
         tolerance: 0,
       },
-      explanation: "Earned income = wages = $4,200",
+      explanation: "Per IRC §1(g), earned income = wages from employment = $4,200.",
     },
     {
       id: "req-unearned-income",
@@ -4327,7 +4327,7 @@ export const regKiddieTaxTBS: TBSQuestion = {
         value: 13500,
         tolerance: 0,
       },
-      explanation: "$8,500 + $1,800 + $3,200 = $13,500",
+      explanation: "Per IRC §1(g), unearned income: dividends + interest + capital gains = $8,500 + $1,800 + $3,200 = $13,500.",
     },
     {
       id: "req-net-unearned",
@@ -4340,7 +4340,7 @@ export const regKiddieTaxTBS: TBSQuestion = {
         value: 11000,
         tolerance: 0,
       },
-      explanation: "$13,500 - $2,500 threshold = $11,000 subject to kiddie tax",
+      explanation: "Per IRC §1(g)(4), net unearned income = $13,500 − $2,500 threshold = $11,000 subject to kiddie tax.",
     },
     {
       id: "req-kiddie-tax",
@@ -4353,7 +4353,7 @@ export const regKiddieTaxTBS: TBSQuestion = {
         value: 3520,
         tolerance: 1,
       },
-      explanation: "$11,000 × 32% = $3,520 kiddie tax",
+      explanation: "Per IRC §1(g), kiddie tax = net unearned income × parent's rate: $11,000 × 32% = $3,520.",
     },
   ],
 };
