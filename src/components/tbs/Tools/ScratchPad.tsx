@@ -229,7 +229,13 @@ export default function ScratchPad({
  const html = editorRef.current.innerHTML;
  // Check if truly empty (just <br> or empty)
  const editorIsEmpty = !text || html === "<br>" || html === "";
+
+ // Use requestAnimationFrame to defer the state update
+ // This prevents the re-render from interfering with cursor position
+ requestAnimationFrame(() => {
  setIsEmpty(editorIsEmpty);
+ });
+
  onNotesChange?.(editorRef.current.innerHTML);
  }
  }, [onNotesChange]);
