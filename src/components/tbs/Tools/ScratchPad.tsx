@@ -116,8 +116,8 @@ export default function ScratchPad({
  editorRef.current.innerHTML = initialNotes;
  setIsEmpty(false);
  } else {
- // Start with a <br> to fix cursor positioning bug
- editorRef.current.innerHTML = "<br>";
+ // Start empty - the placeholder overlay handles display
+ editorRef.current.innerHTML = "";
  setIsEmpty(true);
  }
  initializedRef.current = true;
@@ -230,28 +230,9 @@ export default function ScratchPad({
  // Check if truly empty (just <br> or empty)
  const editorIsEmpty = !text || html === "<br>" || html === "";
  setIsEmpty(editorIsEmpty);
-
- // If editor becomes empty, ensure it has a <br> for proper cursor positioning
- if (editorIsEmpty && html === "") {
- editorRef.current.innerHTML = "<br>";
- }
-
  onNotesChange?.(editorRef.current.innerHTML);
  }
  }, [onNotesChange]);
-
- // Handle focus - position cursor correctly
- const handleFocus = useCallback(() => {
- if (editorRef.current) {
- const selection = window.getSelection();
- const range = document.createRange();
- // Position cursor at start of content
- range.setStart(editorRef.current, 0);
- range.collapse(true);
- selection?.removeAllRanges();
- selection?.addRange(range);
- }
- }, []);
 
  // Handle keydown for auto-bullets
  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -308,7 +289,7 @@ export default function ScratchPad({
  const handleClear = useCallback(() => {
  if (editorRef.current?.textContent?.trim() && !confirm("Clear all notes?")) return;
  if (editorRef.current) {
- editorRef.current.innerHTML = "<br>";
+ editorRef.current.innerHTML = "";
  setIsEmpty(true);
  editorRef.current.focus();
  handleContentChange();
@@ -681,7 +662,6 @@ export default function ScratchPad({
  contentEditable
  onInput={handleContentChange}
  onKeyDown={handleKeyDown}
- onFocus={handleFocus}
  className="absolute inset-0 p-3 text-sm text-gray-800 dark:text-[var(--foreground)] bg-yellow-50/50 dark:bg-[var(--background)] overflow-auto focus:outline-none"
  />
  </div>
