@@ -91,7 +91,7 @@ Note: The supplementary information was subjected to audit procedures applied in
         type: "dropdown",
         correctOptionId: "opt-adverse",
       },
-      explanation: "When a GAAP departure is both material AND pervasive, an adverse opinion is required, not qualified",
+      explanation: "Per AU-C 705.09, when a GAAP departure is both material AND pervasive, an adverse opinion is required",
       dropdownOptions: [
         { id: "opt-qualified", order: 1, text: "Qualified opinion (as drafted)", isCorrect: false },
         { id: "opt-adverse", order: 2, text: "Adverse opinion", isCorrect: true },
@@ -109,7 +109,7 @@ Note: The supplementary information was subjected to audit procedures applied in
         type: "dropdown",
         correctOptionId: "opt-pervasive",
       },
-      explanation: "The effect is described as pervasive, which requires an adverse rather than qualified opinion",
+      explanation: "Per AU-C 705.08, pervasive effects require adverse opinion; material but not pervasive requires qualified",
       dropdownOptions: [
         { id: "opt-material", order: 1, text: "Material but not pervasive", isCorrect: false },
         { id: "opt-pervasive", order: 2, text: "Material and pervasive", isCorrect: true },
@@ -127,7 +127,7 @@ Note: The supplementary information was subjected to audit procedures applied in
         type: "dropdown",
         correctOptionId: "opt-appropriate",
       },
-      explanation: "An EOM paragraph is appropriate for significant uncertainties when disclosure is adequate and no modification is needed",
+      explanation: "Per AU-C 706.06, EOM paragraph is appropriate for significant uncertainties when disclosure is adequate",
       dropdownOptions: [
         { id: "opt-appropriate", order: 1, text: "Yes, EOM is appropriate as drafted", isCorrect: true },
         { id: "opt-qualified", order: 2, text: "No, should be qualified opinion", isCorrect: false },
@@ -145,7 +145,7 @@ Note: The supplementary information was subjected to audit procedures applied in
         type: "dropdown",
         correctOptionId: "opt-unmod-eom",
       },
-      explanation: "With adequate disclosure of a contingency, an unmodified opinion with EOM paragraph is appropriate",
+      explanation: "Per AU-C 706.06, with adequate disclosure, unmodified opinion with EOM paragraph is appropriate for contingencies",
       dropdownOptions: [
         { id: "opt-unmod-eom", order: 1, text: "Unmodified with EOM paragraph", isCorrect: true },
         { id: "opt-qualified-eom", order: 2, text: "Qualified with EOM paragraph", isCorrect: false },
@@ -163,7 +163,7 @@ Note: The supplementary information was subjected to audit procedures applied in
         type: "dropdown",
         correctOptionId: "opt-audited-procedures",
       },
-      explanation: "If the supplementary info was subjected to audit procedures, the report should say it was audited and give an opinion",
+      explanation: "Per AU-C 725.09, if supplementary info was subjected to audit procedures, report should state it was audited",
       dropdownOptions: [
         { id: "opt-no-error", order: 1, text: "No error - paragraph is appropriate", isCorrect: false },
         { id: "opt-audited-procedures", order: 2, text: "Should state it was audited and provide opinion", isCorrect: true },
@@ -181,7 +181,7 @@ Note: The supplementary information was subjected to audit procedures applied in
         type: "dropdown",
         correctOptionId: "opt-fairly-stated",
       },
-      explanation: "When supplementary information is audited, the auditor should state whether it is fairly stated in relation to the financial statements as a whole",
+      explanation: "Per AU-C 725.09, auditor states whether supplementary info is fairly stated in relation to F/S as a whole",
       dropdownOptions: [
         { id: "opt-presents-fairly", order: 1, text: "Presents fairly in all material respects", isCorrect: false },
         { id: "opt-fairly-stated", order: 2, text: "Fairly stated in all material respects in relation to the financial statements as a whole", isCorrect: true },
@@ -268,7 +268,7 @@ Required: Determine the sample size and evaluate the results.`,
         value: 124,
         tolerance: 0,
       },
-      explanation: "From table: 5% risk, 7% tolerable rate, 2% expected rate = 124 items",
+      explanation: "Per AU-C 530, sample size depends on risk of incorrect acceptance, tolerable rate, and expected deviation. From table: 124 items",
     },
     {
       id: "req-max-deviations",
@@ -281,7 +281,7 @@ Required: Determine the sample size and evaluate the results.`,
         value: 3,
         tolerance: 0,
       },
-      explanation: "From evaluation table at sample size 124: 3 deviations yields 6.2% upper limit, which is below 7% tolerable rate",
+      explanation: "Per AU-C 530.A22, 3 deviations at n=124 yields 6.2% upper deviation limit, below 7% tolerable rate − control is effective",
     },
     {
       id: "req-scenario-2-deviations",
@@ -293,7 +293,7 @@ Required: Determine the sample size and evaluate the results.`,
         type: "dropdown",
         correctOptionId: "opt-yes-rely",
       },
-      explanation: "2 deviations at sample size 124 = 5.0% upper limit, which is below 7% tolerable rate",
+      explanation: "Per AU-C 530.A22, 2 deviations at n=124 yields 5.0% upper deviation limit, below 7% tolerable − rely on control",
       dropdownOptions: [
         { id: "opt-yes-rely", order: 1, text: "Yes - upper deviation limit is below tolerable rate", isCorrect: true },
         { id: "opt-no-exceed", order: 2, text: "No - upper deviation limit exceeds tolerable rate", isCorrect: false },
@@ -310,7 +310,7 @@ Required: Determine the sample size and evaluate the results.`,
         type: "dropdown",
         correctOptionId: "opt-cannot-rely",
       },
-      explanation: "4 deviations at sample size 124 = 7.3% upper limit, which exceeds 7% tolerable rate",
+      explanation: "Per AU-C 530.A22, 4 deviations at n=124 yields 7.3% upper deviation limit, exceeding 7% tolerable − cannot rely",
       dropdownOptions: [
         { id: "opt-can-rely", order: 1, text: "Can rely on the control", isCorrect: false },
         { id: "opt-cannot-rely", order: 2, text: "Cannot rely on the control", isCorrect: true },
@@ -328,7 +328,7 @@ Required: Determine the sample size and evaluate the results.`,
         value: 2.4,
         tolerance: 0.1,
       },
-      explanation: "Sample deviation rate = 3 / 124 = 2.4%",
+      explanation: "Per AU-C 530, sample deviation rate = actual deviations / sample size = 3 / 124 = 2.4%",
     },
   ],
 };
@@ -545,7 +545,7 @@ Required: Determine whether each deficiency is a control deficiency, significant
         type: "dropdown",
         correctOptionId: "opt-mw-2",
       },
-      explanation: "Inability to rely on ITGCs affects the ability to rely on all automated controls, representing pervasive risk - typically a material weakness",
+      explanation: "Per AS 2201.62, ITGC failures affecting multiple automated controls are typically pervasive − material weakness",
       dropdownOptions: [
         { id: "opt-cd-2", order: 1, text: "Control deficiency", isCorrect: false },
         { id: "opt-sd-2", order: 2, text: "Significant deficiency", isCorrect: false },
@@ -562,7 +562,7 @@ Required: Determine whether each deficiency is a control deficiency, significant
         type: "dropdown",
         correctOptionId: "opt-cd-3",
       },
-      explanation: "While lack of independent review is a deficiency, no errors were noted. This is a control deficiency but not significant given no actual issues.",
+      explanation: "Per AU-C 265.A10, deficiency without observed errors or reasonable possibility of material misstatement is a control deficiency only",
       dropdownOptions: [
         { id: "opt-cd-3", order: 1, text: "Control deficiency", isCorrect: true },
         { id: "opt-sd-3", order: 2, text: "Significant deficiency", isCorrect: false },
@@ -579,7 +579,7 @@ Required: Determine whether each deficiency is a control deficiency, significant
         type: "dropdown",
         correctOptionId: "opt-mw-4",
       },
-      explanation: "Management override that resulted in a material misstatement ($500,000 exceeds $200,000 materiality) is a material weakness",
+      explanation: "Per AS 2201.A7, management override resulting in material misstatement ($500,000 > $200,000 materiality) is a material weakness",
       dropdownOptions: [
         { id: "opt-cd-4", order: 1, text: "Control deficiency", isCorrect: false },
         { id: "opt-sd-4", order: 2, text: "Significant deficiency", isCorrect: false },
@@ -596,7 +596,7 @@ Required: Determine whether each deficiency is a control deficiency, significant
         type: "dropdown",
         correctOptionId: "opt-cd-5",
       },
-      explanation: "The annual physical count by an independent team is a compensating control that mitigates the segregation issue - control deficiency only",
+      explanation: "Per AU-C 265.A12, compensating controls (annual physical count by independent team) mitigate deficiency − control deficiency only",
       dropdownOptions: [
         { id: "opt-cd-5", order: 1, text: "Control deficiency", isCorrect: true },
         { id: "opt-sd-5", order: 2, text: "Significant deficiency", isCorrect: false },
@@ -613,7 +613,7 @@ Required: Determine whether each deficiency is a control deficiency, significant
         type: "dropdown",
         correctOptionId: "opt-mw-6",
       },
-      explanation: "Failure to identify a GAAP pronouncement resulting in a material misstatement ($800,000 exceeds materiality) is a material weakness",
+      explanation: "Per AS 2201.A7, failure to identify GAAP pronouncement resulting in material misstatement ($800,000) is a material weakness",
       dropdownOptions: [
         { id: "opt-cd-6", order: 1, text: "Control deficiency", isCorrect: false },
         { id: "opt-sd-6", order: 2, text: "Significant deficiency", isCorrect: false },
@@ -688,7 +688,7 @@ Required: Calculate the detection risk for each area.`,
         type: "dropdown",
         correctOptionId: "opt-low-ir",
       },
-      explanation: "Simple transactions, low volume, low fraud susceptibility = Low inherent risk",
+      explanation: "Per AU-C 315.A126, simple transactions with low volume and low fraud susceptibility indicate low inherent risk",
       dropdownOptions: [
         { id: "opt-low-ir", order: 1, text: "Low (20%)", isCorrect: true },
         { id: "opt-mod-ir", order: 2, text: "Moderate (50%)", isCorrect: false },
@@ -706,7 +706,7 @@ Required: Calculate the detection risk for each area.`,
         value: 125,
         tolerance: 5,
       },
-      explanation: "DR = 5% / (20% × 20%) = 5% / 4% = 125%. Since DR > 100%, minimal testing needed.",
+      explanation: "Per AU-C 330, DR = AR / (IR × CR). DR = 5% / (20% × 20%) = 125%. DR > 100% means minimal testing needed.",
     },
     {
       id: "req-revenue-ir",
@@ -718,7 +718,7 @@ Required: Calculate the detection risk for each area.`,
         type: "dropdown",
         correctOptionId: "opt-high-ir-rev",
       },
-      explanation: "Complex contracts, high fraud susceptibility = High inherent risk",
+      explanation: "Per AU-C 315.A126, complex contracts with high fraud susceptibility indicate high inherent risk (100%)",
       dropdownOptions: [
         { id: "opt-low-ir-rev", order: 1, text: "Low (20%)", isCorrect: false },
         { id: "opt-mod-ir-rev", order: 2, text: "Moderate (50%)", isCorrect: false },
@@ -736,7 +736,7 @@ Required: Calculate the detection risk for each area.`,
         value: 5,
         tolerance: 0,
       },
-      explanation: "DR = 5% / (100% × 100%) = 5%. Very low detection risk = extensive testing required.",
+      explanation: "Per AU-C 330, DR = AR / (IR × CR) = 5% / (100% × 100%) = 5%. Very low DR requires extensive testing.",
     },
     {
       id: "req-inventory-dr",
@@ -749,7 +749,7 @@ Required: Calculate the detection risk for each area.`,
         value: 20,
         tolerance: 0,
       },
-      explanation: "DR = 5% / (50% × 50%) = 5% / 25% = 20%",
+      explanation: "Per AU-C 330, DR = AR / (IR × CR) = 5% / (50% × 50%) = 20%. Moderate risks allow moderate detection risk.",
     },
     {
       id: "req-most-testing",
@@ -761,7 +761,7 @@ Required: Calculate the detection risk for each area.`,
         type: "dropdown",
         correctOptionId: "opt-revenue-most",
       },
-      explanation: "Revenue has the lowest detection risk (5%), requiring the most substantive testing",
+      explanation: "Per AU-C 330.07, lower detection risk requires more persuasive evidence. Revenue's 5% DR demands the most testing.",
       dropdownOptions: [
         { id: "opt-cash-most", order: 1, text: "Cash", isCorrect: false },
         { id: "opt-revenue-most", order: 2, text: "Revenue", isCorrect: true },
@@ -819,7 +819,7 @@ export const audSubsequentEventsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type1-a",
       },
-      explanation: "The receivable existed at year-end; the bankruptcy provides evidence about conditions that existed at year-end (collectibility) - Type I",
+      explanation: "Per AU-C 560.09, conditions existing at balance sheet date (receivable collectibility) require adjustment − Type I recognized event.",
       dropdownOptions: [
         { id: "opt-type1-a", order: 1, text: "Type I - Recognized event (adjust F/S)", isCorrect: true },
         { id: "opt-type2-a", order: 2, text: "Type II - Nonrecognized event (disclose only)", isCorrect: false },
@@ -836,7 +836,7 @@ export const audSubsequentEventsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type2-b",
       },
-      explanation: "The fire occurred after year-end and doesn't relate to conditions at year-end - Type II requiring disclosure",
+      explanation: "Per AU-C 560.10, events arising after year-end (fire) are Type II − disclose if material but do not adjust.",
       dropdownOptions: [
         { id: "opt-type1-b", order: 1, text: "Type I - Recognized event (adjust F/S)", isCorrect: false },
         { id: "opt-type2-b", order: 2, text: "Type II - Nonrecognized event (disclose only)", isCorrect: true },
@@ -853,7 +853,7 @@ export const audSubsequentEventsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type1-c",
       },
-      explanation: "Settlement provides evidence about the amount of liability that existed at year-end - Type I adjustment needed",
+      explanation: "Per AU-C 560.09, settlement provides evidence about liability existing at year-end − Type I, adjust to $800,000.",
       dropdownOptions: [
         { id: "opt-type1-c", order: 1, text: "Type I - Recognized event (adjust F/S)", isCorrect: true },
         { id: "opt-type2-c", order: 2, text: "Type II - Nonrecognized event (disclose only)", isCorrect: false },
@@ -871,7 +871,7 @@ export const audSubsequentEventsTBS: TBSQuestion = {
         value: 200000,
         tolerance: 0,
       },
-      explanation: "Adjustment = Settlement $800,000 - Accrued $600,000 = $200,000 additional expense/liability",
+      explanation: "Per AU-C 560.09, adjust accrual to settlement amount: $800,000 − $600,000 = $200,000 additional expense.",
     },
     {
       id: "req-event-d-type",
@@ -883,7 +883,7 @@ export const audSubsequentEventsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type2-d",
       },
-      explanation: "New transaction occurring after year-end - Type II requiring disclosure if material",
+      explanation: "Per AU-C 560.10, new transactions after year-end (acquisition) are Type II − disclose only if material.",
       dropdownOptions: [
         { id: "opt-type1-d", order: 1, text: "Type I - Recognized event (adjust F/S)", isCorrect: false },
         { id: "opt-type2-d", order: 2, text: "Type II - Nonrecognized event (disclose only)", isCorrect: true },
@@ -900,7 +900,7 @@ export const audSubsequentEventsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type1-e",
       },
-      explanation: "Discovery of an error in the financial statements requires adjustment - Type I",
+      explanation: "Per AU-C 560.09 and ASC 250, discovery of errors in prior period amounts requires restatement − Type I adjustment.",
       dropdownOptions: [
         { id: "opt-type1-e", order: 1, text: "Type I - Recognized event (adjust F/S)", isCorrect: true },
         { id: "opt-type2-e", order: 2, text: "Type II - Nonrecognized event (disclose only)", isCorrect: false },
@@ -959,7 +959,7 @@ export const audIndependenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-impaired-1",
       },
-      explanation: "Covered member (includes spouse) direct financial interest impairs independence regardless of amount",
+      explanation: "Per AICPA ET 1.240.010, any direct financial interest by a covered member (including spouse) impairs independence regardless of materiality.",
       dropdownOptions: [
         { id: "opt-impaired-1", order: 1, text: "Independence is impaired", isCorrect: true },
         { id: "opt-not-impaired-1", order: 2, text: "Independence is not impaired", isCorrect: false },
@@ -976,7 +976,7 @@ export const audIndependenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-impaired-2",
       },
-      explanation: "IT director is a key position; close relative in key position impairs independence",
+      explanation: "Per AICPA ET 1.270.100, close relative in key position (IT director) impairs independence when team member can influence IT areas.",
       dropdownOptions: [
         { id: "opt-impaired-2", order: 1, text: "Independence is impaired", isCorrect: true },
         { id: "opt-not-impaired-2", order: 2, text: "Independence is not impaired", isCorrect: false },
@@ -993,7 +993,7 @@ export const audIndependenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-impaired-3",
       },
-      explanation: "Tax preparation is permitted for audit clients if no management decisions are made and preapproved by audit committee",
+      explanation: "Per SEC Rule 2-01(c)(4) and AICPA guidance, tax compliance services are permitted if preapproved and no management decisions are made.",
       dropdownOptions: [
         { id: "opt-impaired-3", order: 1, text: "Independence is impaired", isCorrect: false },
         { id: "opt-not-impaired-3", order: 2, text: "Independence is not impaired", isCorrect: true },
@@ -1010,7 +1010,7 @@ export const audIndependenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-impaired-4",
       },
-      explanation: "Employment negotiations with an audit client impair independence; must be removed from engagement",
+      explanation: "Per AICPA ET 1.279, employment negotiations with audit client impair independence − member must be removed from engagement immediately.",
       dropdownOptions: [
         { id: "opt-impaired-4", order: 1, text: "Independence is impaired", isCorrect: true },
         { id: "opt-not-impaired-4", order: 2, text: "Independence is not impaired - starts after report issued", isCorrect: false },
@@ -1027,7 +1027,7 @@ export const audIndependenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-impaired-5",
       },
-      explanation: "Diversified mutual fund holdings under 5% of fund or firm's net worth do not impair independence",
+      explanation: "Per AICPA ET 1.240.020, diversified mutual fund holdings (under 5% of fund) are indirect interests that do not impair independence.",
       dropdownOptions: [
         { id: "opt-impaired-5", order: 1, text: "Independence is impaired", isCorrect: false },
         { id: "opt-not-impaired-5", order: 2, text: "Independence is not impaired", isCorrect: true },
@@ -1044,7 +1044,7 @@ export const audIndependenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-impaired-6",
       },
-      explanation: "Tax partner is not on audit engagement; daughter in non-key position does not impair independence",
+      explanation: "Per AICPA ET 1.270, close relative of non-engagement partner in non-key position (clerk) does not impair independence.",
       dropdownOptions: [
         { id: "opt-impaired-6", order: 1, text: "Independence is impaired", isCorrect: false },
         { id: "opt-not-impaired-6", order: 2, text: "Independence is not impaired", isCorrect: true },
@@ -1103,7 +1103,7 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-highly-reliable",
       },
-      explanation: "Bank confirmations are highly reliable - external source, directly obtained, documentary evidence",
+      explanation: "Per AU-C 500.08, external confirmations obtained directly are highly reliable − independent source, documentary evidence.",
       dropdownOptions: [
         { id: "opt-highly-reliable", order: 1, text: "Highly reliable and appropriate", isCorrect: true },
         { id: "opt-mod-reliable", order: 2, text: "Moderately reliable", isCorrect: false },
@@ -1121,7 +1121,7 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-appropriate-2",
       },
-      explanation: "Examining invoices tests occurrence/existence, not cutoff. Cutoff requires examining transactions near period-end with shipping dates.",
+      explanation: "Per AU-C 500.A5, cutoff assertion requires examining transactions near period-end with shipping/delivery dates, not just invoices.",
       dropdownOptions: [
         { id: "opt-highly-reliable-2", order: 1, text: "Highly reliable and appropriate", isCorrect: false },
         { id: "opt-mod-reliable-2", order: 2, text: "Moderately reliable", isCorrect: false },
@@ -1139,7 +1139,7 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-mod-reliable-3",
       },
-      explanation: "Recalculation is appropriate for accuracy, but using client-provided data limits reliability - should verify underlying data",
+      explanation: "Per AU-C 500.A31, recalculation tests accuracy, but client-prepared data limits reliability unless underlying information is tested.",
       dropdownOptions: [
         { id: "opt-highly-reliable-3", order: 1, text: "Highly reliable and appropriate", isCorrect: false },
         { id: "opt-mod-reliable-3", order: 2, text: "Appropriate but limited - relies on client data", isCorrect: true },
@@ -1157,7 +1157,7 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-highly-reliable-4",
       },
-      explanation: "Title documents are external, legal documents - highly reliable for testing rights and obligations",
+      explanation: "Per AU-C 500.08, external legal documents (title deeds) are highly reliable for testing rights and obligations assertion.",
       dropdownOptions: [
         { id: "opt-highly-reliable-4", order: 1, text: "Highly reliable and appropriate", isCorrect: true },
         { id: "opt-mod-reliable-4", order: 2, text: "Moderately reliable", isCorrect: false },
@@ -1175,7 +1175,7 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-appropriate-5",
       },
-      explanation: "Tracing from source documents (shipping) to records (invoices) tests completeness - appropriate procedure",
+      explanation: "Per AU-C 500.A6, tracing from source documents (shipping) to accounting records tests completeness assertion.",
       dropdownOptions: [
         { id: "opt-appropriate-5", order: 1, text: "Appropriate for completeness", isCorrect: true },
         { id: "opt-tests-existence", order: 2, text: "Tests existence, not completeness", isCorrect: false },
@@ -1193,7 +1193,7 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-appropriate-6",
       },
-      explanation: "Attorney letters are required audit evidence for litigation - external, professional source",
+      explanation: "Per AU-C 501.21, attorney letters are required corroborating evidence for litigation and claims − external, professional source.",
       dropdownOptions: [
         { id: "opt-appropriate-6", order: 1, text: "Highly appropriate - required evidence", isCorrect: true },
         { id: "opt-corroborate-6", order: 2, text: "Needs corroboration with other evidence", isCorrect: false },
@@ -1261,7 +1261,7 @@ Please help me locate the relevant PCAOB Auditing Standard.`,
           { source: "PCAOB", topicCode: "AS 2401 Consideration of Fraud" },
         ],
       },
-      explanation: "PCAOB AS 2401 'Consideration of Fraud in a Financial Statement Audit' addresses the auditor's responsibility for detecting fraud in audits of issuers.",
+      explanation: "Per PCAOB AS 2401, 'Consideration of Fraud in a Financial Statement Audit' addresses the auditor's responsibility for fraud in issuer audits.",
     },
   ],
 };
@@ -1312,7 +1312,7 @@ export const audReviewEngagementProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required",
       },
-      explanation: "Inquiry is a primary procedure in a review engagement - required",
+      explanation: "Per AR-C 90.24, inquiries of management about significant matters are required review procedures.",
       dropdownOptions: [
         { id: "opt-required", order: 1, text: "Required procedure", isCorrect: true },
         { id: "opt-permitted", order: 2, text: "Permitted but not required", isCorrect: false },
@@ -1329,7 +1329,7 @@ export const audReviewEngagementProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-typical",
       },
-      explanation: "Confirmations are audit procedures, not typically performed in reviews unless accountant becomes aware of concerns",
+      explanation: "Per AR-C 90.A42, confirmations are audit-level procedures, not required for reviews unless concerns arise.",
       dropdownOptions: [
         { id: "opt-required-2", order: 1, text: "Required procedure", isCorrect: false },
         { id: "opt-not-typical", order: 2, text: "Not typically performed (audit procedure)", isCorrect: true },
@@ -1346,7 +1346,7 @@ export const audReviewEngagementProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-3",
       },
-      explanation: "Analytical procedures are a primary procedure in reviews - required",
+      explanation: "Per AR-C 90.24, analytical procedures are required review procedures along with inquiries.",
       dropdownOptions: [
         { id: "opt-required-3", order: 1, text: "Required procedure", isCorrect: true },
         { id: "opt-permitted-3", order: 2, text: "Permitted but not required", isCorrect: false },
@@ -1363,7 +1363,7 @@ export const audReviewEngagementProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-typical-4",
       },
-      explanation: "Physical observation is an audit procedure, not typically performed in reviews",
+      explanation: "Per AR-C 90.A42, physical observation is an audit-level procedure, not required for reviews.",
       dropdownOptions: [
         { id: "opt-required-4", order: 1, text: "Required procedure", isCorrect: false },
         { id: "opt-not-typical-4", order: 2, text: "Not typically performed (audit procedure)", isCorrect: true },
@@ -1380,7 +1380,7 @@ export const audReviewEngagementProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-5",
       },
-      explanation: "Management representations are required in a review engagement",
+      explanation: "Per AR-C 90.39, written management representations are required for a review engagement.",
       dropdownOptions: [
         { id: "opt-required-5", order: 1, text: "Required procedure", isCorrect: true },
         { id: "opt-permitted-5", order: 2, text: "Permitted but not required", isCorrect: false },
@@ -1454,7 +1454,7 @@ Required: Determine planning materiality and performance materiality.`,
         value: 337500,
         tolerance: 5000,
       },
-      explanation: "$45,000,000 × 0.75% = $337,500",
+      explanation: "Per AU-C 320.A3, revenue is a common benchmark. $45,000,000 × 0.75% = $337,500.",
     },
     {
       id: "req-mat-income",
@@ -1467,7 +1467,7 @@ Required: Determine planning materiality and performance materiality.`,
         value: 135000,
         tolerance: 0,
       },
-      explanation: "$2,700,000 × 5% = $135,000",
+      explanation: "Per AU-C 320.A3, net income basis at 5%: $2,700,000 × 5% = $135,000.",
     },
     {
       id: "req-planning-mat",
@@ -1480,7 +1480,7 @@ Required: Determine planning materiality and performance materiality.`,
         value: 300000,
         tolerance: 50000,
       },
-      explanation: "For a stable manufacturer, revenue or assets-based materiality is typically used. Range of $250,000-$350,000 is reasonable.",
+      explanation: "Per AU-C 320.A3-.A4, for stable entities, revenue or assets basis is appropriate. $250,000-$350,000 is reasonable.",
     },
     {
       id: "req-perf-mat-pct",
@@ -1493,7 +1493,7 @@ Required: Determine planning materiality and performance materiality.`,
         value: 65,
         tolerance: 15,
       },
-      explanation: "Performance materiality is typically 50-75% of planning materiality. 60-70% is common.",
+      explanation: "Per AU-C 320.09, performance materiality is set below overall materiality. 50-75% is common practice.",
     },
     {
       id: "req-perf-mat-amt",
@@ -1506,7 +1506,7 @@ Required: Determine planning materiality and performance materiality.`,
         value: 195000,
         tolerance: 50000,
       },
-      explanation: "Using 65% of $300,000 = $195,000",
+      explanation: "Per AU-C 320.09, performance materiality at 65% of planning: $300,000 × 65% = $195,000.",
     },
   ],
 };
@@ -1556,7 +1556,7 @@ export const audGoingConcernEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-doubt",
       },
-      explanation: "Multiple indicators suggest substantial doubt exists: recurring losses, negative working capital, covenant violation, major customer loss",
+      explanation: "Per AU-C 570.12, recurring losses, negative working capital, covenant violations, and customer loss are adverse conditions indicating substantial doubt.",
       dropdownOptions: [
         { id: "opt-yes-doubt", order: 1, text: "Yes - substantial doubt exists", isCorrect: true },
         { id: "opt-no-doubt", order: 2, text: "No - conditions are not severe enough", isCorrect: false },
@@ -1573,7 +1573,7 @@ export const audGoingConcernEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-partially",
       },
-      explanation: "Plans provide some mitigation but are not definitive - cost cuts are uncertain, parent support is conditional",
+      explanation: "Per AU-C 570.16, management plans must be evaluated for feasibility. Conditional parent support and uncertain cost cuts provide only partial mitigation.",
       dropdownOptions: [
         { id: "opt-fully", order: 1, text: "Yes - plans fully alleviate doubt", isCorrect: false },
         { id: "opt-partially", order: 2, text: "Partially - some uncertainty remains", isCorrect: true },
@@ -1590,7 +1590,7 @@ export const audGoingConcernEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ability-intent",
       },
-      explanation: "Must evaluate parent's ability (financial capacity) and intent (commitment documentation) to provide support",
+      explanation: "Per AU-C 570.A23, evaluate parent's financial ability and the binding nature of the commitment to provide support.",
       dropdownOptions: [
         { id: "opt-letter-sufficient", order: 1, text: "Commitment letter is sufficient", isCorrect: false },
         { id: "opt-ability-intent", order: 2, text: "Evidence of parent's financial ability and binding nature of commitment", isCorrect: true },
@@ -1607,7 +1607,7 @@ export const audGoingConcernEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-full-disclosure",
       },
-      explanation: "When substantial doubt exists, disclosure of conditions and management's plans is required even if doubt is alleviated",
+      explanation: "Per ASC 205-40-50, when substantial doubt exists, disclose conditions, evaluation, and plans even if doubt is alleviated.",
       dropdownOptions: [
         { id: "opt-no-disclosure", order: 1, text: "No disclosure if doubt is alleviated", isCorrect: false },
         { id: "opt-full-disclosure", order: 2, text: "Disclose conditions, management's evaluation, and plans", isCorrect: true },
@@ -1624,7 +1624,7 @@ export const audGoingConcernEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-eom-paragraph",
       },
-      explanation: "When substantial doubt exists and disclosure is adequate, add Emphasis of Matter paragraph (unmodified opinion)",
+      explanation: "Per AU-C 570.22, if substantial doubt exists with adequate disclosure, issue unmodified opinion with Emphasis of Matter paragraph.",
       dropdownOptions: [
         { id: "opt-unmodified", order: 1, text: "Unmodified opinion, no additional paragraph", isCorrect: false },
         { id: "opt-eom-paragraph", order: 2, text: "Unmodified opinion with Emphasis of Matter paragraph", isCorrect: true },
@@ -1642,7 +1642,7 @@ export const audGoingConcernEvaluationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-qualified-adverse",
       },
-      explanation: "If required going concern disclosures are not made, modify opinion for departure from GAAP (qualified or adverse)",
+      explanation: "Per AU-C 570.23, inadequate going concern disclosure is a GAAP departure requiring qualified or adverse opinion.",
       dropdownOptions: [
         { id: "opt-eom-only", order: 1, text: "Emphasis of Matter paragraph only", isCorrect: false },
         { id: "opt-qualified-adverse", order: 2, text: "Qualified or adverse opinion for disclosure deficiency", isCorrect: true },
@@ -1701,7 +1701,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-decline-a",
       },
-      explanation: "Per AU-C 210.07, management integrity is a precondition for an audit engagement; predecessor's indication of integrity concerns is a strong reason to decline",
+      explanation: "Per AU-C 210.07, management integrity is a precondition for acceptance. Predecessor's resignation citing integrity concerns warrants declining.",
       dropdownOptions: [
         { id: "opt-accept-a", order: 1, text: "Accept - predecessor's concerns may be unfounded", isCorrect: false },
         { id: "opt-decline-a", order: 2, text: "Decline - management integrity is essential", isCorrect: true },
@@ -1718,7 +1718,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-accept-b",
       },
-      explanation: "Per ET §1.220, prior tax services do not automatically impair independence for audit services; new audit engagement is acceptable",
+      explanation: "Per AICPA ET 1.220, prior tax services for a non-attest client do not impair independence for a new audit engagement.",
       dropdownOptions: [
         { id: "opt-accept-b", order: 1, text: "Accept - prior tax work does not impair independence", isCorrect: true },
         { id: "opt-decline-b", order: 2, text: "Decline - prior relationship creates conflict", isCorrect: false },
@@ -1735,7 +1735,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-accept-c",
       },
-      explanation: "Per AU-C 210.06 and AU-C 620, using specialists/consultants to supplement firm expertise is appropriate when firm retains responsibility; firm can accept",
+      explanation: "Per AU-C 620, using specialists to supplement firm expertise is appropriate when firm retains responsibility for the audit.",
       dropdownOptions: [
         { id: "opt-accept-c", order: 1, text: "Accept - specialists can supplement firm expertise", isCorrect: true },
         { id: "opt-decline-c", order: 2, text: "Decline - firm lacks competence", isCorrect: false },
@@ -1752,7 +1752,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-decline-d",
       },
-      explanation: "Per AU-C 210.A14 and QC 10.27, firm cannot compromise audit quality for fee; insufficient time to perform adequate procedures precludes acceptance",
+      explanation: "Per AU-C 220.14, firm cannot compromise audit quality. Insufficient time for adequate procedures precludes acceptance.",
       dropdownOptions: [
         { id: "opt-accept-d", order: 1, text: "Accept - premium fee compensates for time pressure", isCorrect: false },
         { id: "opt-decline-d", order: 2, text: "Decline - cannot perform adequate procedures", isCorrect: true },
@@ -1769,7 +1769,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-independence-e",
       },
-      explanation: "Per ET §1.210.010 (fee concentration threat) and ET §1.220, 45% of firm revenue from one client creates undue influence threat to independence; must address concentration first",
+      explanation: "Per AICPA ET 1.210.010, significant fee concentration (45% of revenue) creates undue influence threat. Must address before accepting referral.",
       dropdownOptions: [
         { id: "opt-accept-e", order: 1, text: "Accept - referral is normal business", isCorrect: false },
         { id: "opt-decline-e", order: 2, text: "Decline - creates undue influence", isCorrect: false },
@@ -1786,7 +1786,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-decline-f",
       },
-      explanation: "Per ET §1.220 and §1.270, close personal relationship creates familiarity threat and equity interest creates financial interest impairment - multiple independence threats require declining",
+      explanation: "Per AICPA ET 1.270 and 1.240, close friendship (familiarity) plus equity compensation (financial interest) create multiple independence threats − decline.",
       dropdownOptions: [
         { id: "opt-accept-f", order: 1, text: "Accept - can maintain objectivity", isCorrect: false },
         { id: "opt-decline-f", order: 2, text: "Decline - multiple independence threats", isCorrect: true },
@@ -1845,7 +1845,7 @@ export const audSubstantiveProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-confirm-ar",
       },
-      explanation: "Confirmation provides external evidence that receivables exist and are valid obligations",
+      explanation: "Per AU-C 505, positive confirmations provide external evidence that receivables exist and represent valid obligations.",
       dropdownOptions: [
         { id: "opt-confirm-ar", order: 1, text: "Send positive confirmations to customers", isCorrect: true },
         { id: "opt-recalc-ar", order: 2, text: "Recalculate aged receivables schedule", isCorrect: false },
@@ -1863,7 +1863,7 @@ export const audSubstantiveProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-lcnrv-test",
       },
-      explanation: "Testing lower of cost or NRV directly addresses valuation assertion",
+      explanation: "Per AU-C 501.10 and ASC 330, comparing cost to NRV directly tests inventory valuation assertion.",
       dropdownOptions: [
         { id: "opt-observe-count", order: 1, text: "Observe physical inventory count", isCorrect: false },
         { id: "opt-lcnrv-test", order: 2, text: "Compare cost to current selling prices less costs to sell", isCorrect: true },
@@ -1881,7 +1881,7 @@ export const audSubstantiveProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-trace-shipping",
       },
-      explanation: "Tracing from shipping documents to recorded sales tests that all shipments were recorded",
+      explanation: "Per AU-C 500.A6, tracing from source (shipping docs) to records tests completeness − ensures all shipments were recorded.",
       dropdownOptions: [
         { id: "opt-vouch-invoices", order: 1, text: "Vouch recorded sales to invoices", isCorrect: false },
         { id: "opt-trace-shipping", order: 2, text: "Trace shipping documents to sales invoices", isCorrect: true },
@@ -1899,7 +1899,7 @@ export const audSubstantiveProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-physical-inspect",
       },
-      explanation: "Physical inspection provides direct evidence of existence",
+      explanation: "Per AU-C 500.A14, physical inspection provides direct, highly persuasive evidence of asset existence.",
       dropdownOptions: [
         { id: "opt-vouch-additions", order: 1, text: "Vouch additions to vendor invoices", isCorrect: false },
         { id: "opt-physical-inspect", order: 2, text: "Physically inspect selected assets", isCorrect: true },
@@ -1917,7 +1917,7 @@ export const audSubstantiveProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-search-unrecorded",
       },
-      explanation: "Search for unrecorded liabilities examines subsequent payments for items that should have been accrued",
+      explanation: "Per AU-C 330.A53, search for unrecorded liabilities via subsequent disbursements tests completeness of payables.",
       dropdownOptions: [
         { id: "opt-confirm-ap", order: 1, text: "Confirm balances with vendors", isCorrect: false },
         { id: "opt-vouch-ap", order: 2, text: "Vouch recorded payables to invoices", isCorrect: false },
@@ -1935,7 +1935,7 @@ export const audSubstantiveProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-bank-confirm",
       },
-      explanation: "Bank confirmation provides external evidence of both existence and ownership",
+      explanation: "Per AU-C 505, bank confirmation is external evidence providing assurance of both existence and rights (ownership).",
       dropdownOptions: [
         { id: "opt-count-cash", order: 1, text: "Count cash on hand", isCorrect: false },
         { id: "opt-bank-confirm", order: 2, text: "Obtain bank confirmation", isCorrect: true },
@@ -1995,7 +1995,7 @@ export const audFraudProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-pressure",
       },
-      explanation: "Compensation tied to targets creates pressure/incentive to manipulate results",
+      explanation: "Per AU-C 240.A26, compensation tied to financial targets creates pressure (incentive) element of fraud triangle.",
       dropdownOptions: [
         { id: "opt-pressure", order: 1, text: "Pressure/Incentive", isCorrect: true },
         { id: "opt-opportunity", order: 2, text: "Opportunity", isCorrect: false },
@@ -2012,7 +2012,7 @@ export const audFraudProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-override-risk",
       },
-      explanation: "CEO dominance increases risk of management override of controls",
+      explanation: "Per AU-C 240.32, CEO dominance over governance increases risk of management override of controls.",
       dropdownOptions: [
         { id: "opt-segregation", order: 1, text: "Inadequate segregation of duties", isCorrect: false },
         { id: "opt-override-risk", order: 2, text: "Management override risk", isCorrect: true },
@@ -2029,7 +2029,7 @@ export const audFraudProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-scrutinize-rpt",
       },
-      explanation: "Related party transactions require increased scrutiny and evaluation of business purpose",
+      explanation: "Per AU-C 550.20, related party transactions require extended procedures to evaluate business purpose and arm's-length pricing.",
       dropdownOptions: [
         { id: "opt-standard-audit", order: 1, text: "Standard audit procedures are sufficient", isCorrect: false },
         { id: "opt-scrutinize-rpt", order: 2, text: "Extended procedures to evaluate business purpose and pricing", isCorrect: true },
@@ -2046,7 +2046,7 @@ export const audFraudProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-opportunity-4",
       },
-      explanation: "Inadequate segregation provides opportunity for asset misappropriation",
+      explanation: "Per AU-C 240.A30, inadequate segregation of duties provides opportunity element for asset misappropriation fraud.",
       dropdownOptions: [
         { id: "opt-pressure-4", order: 1, text: "Pressure/Incentive", isCorrect: false },
         { id: "opt-opportunity-4", order: 2, text: "Opportunity", isCorrect: true },
@@ -2063,7 +2063,7 @@ export const audFraudProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-revenue-focus",
       },
-      explanation: "Unusual profitability vs industry suggests heightened revenue manipulation risk",
+      explanation: "Per AU-C 240.A5, unusual profitability relative to industry conditions suggests heightened revenue manipulation risk.",
       dropdownOptions: [
         { id: "opt-standard-proc", order: 1, text: "Standard procedures are appropriate", isCorrect: false },
         { id: "opt-revenue-focus", order: 2, text: "Focus substantive procedures on revenue recognition", isCorrect: true },
@@ -2080,7 +2080,7 @@ export const audFraudProceduresTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-test-entries",
       },
-      explanation: "AU-C 240 requires testing journal entries for fraud; manual entries are higher risk",
+      explanation: "Per AU-C 240.33, auditor must test journal entries for override risk; manual entries require unpredictable selection.",
       dropdownOptions: [
         { id: "opt-rely-controls", order: 1, text: "Rely on management review controls", isCorrect: false },
         { id: "opt-test-entries", order: 2, text: "Test manual entries with unpredictable selection", isCorrect: true },
@@ -2138,7 +2138,7 @@ export const audDocumentationRequirementsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-insufficient-1",
       },
-      explanation: "Documentation must include sample selection criteria, population size, and specific items tested",
+      explanation: "Per AU-C 230.08, documentation must include sample selection, population, and identifying characteristics of items tested.",
       dropdownOptions: [
         { id: "opt-sufficient-1", order: 1, text: "Documentation is sufficient", isCorrect: false },
         { id: "opt-insufficient-1", order: 2, text: "Insufficient - lacks sample details and specific items", isCorrect: true },
@@ -2155,7 +2155,7 @@ export const audDocumentationRequirementsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-improper-2",
       },
-      explanation: "After report issuance, only administrative changes are permitted; adding explanations violates standards",
+      explanation: "Per AU-C 230.16, after report release only administrative changes allowed. Substantive additions violate standards.",
       dropdownOptions: [
         { id: "opt-proper-2", order: 1, text: "Proper - explains auditor's reasoning", isCorrect: false },
         { id: "opt-improper-2", order: 2, text: "Improper - cannot add substantive documentation after issuance", isCorrect: true },
@@ -2172,7 +2172,7 @@ export const audDocumentationRequirementsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-deficient-3",
       },
-      explanation: "Evidence supporting procedures must be retained in the file",
+      explanation: "Per AU-C 230.08-.09, documentary evidence supporting procedures must be retained in the audit file.",
       dropdownOptions: [
         { id: "opt-acceptable-3", order: 1, text: "Acceptable - reference is sufficient", isCorrect: false },
         { id: "opt-deficient-3", order: 2, text: "Deficient - evidence must be included in file", isCorrect: true },
@@ -2189,7 +2189,7 @@ export const audDocumentationRequirementsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-nonissuer-4",
       },
-      explanation: "GAAS requires file completion within 60 days; PCAOB requires 45 days. 45 days meets both standards.",
+      explanation: "Per AU-C 230.15, GAAS requires 60 days; per AS 1215.15, PCAOB requires 45 days. Meeting 45 days satisfies both.",
       dropdownOptions: [
         { id: "opt-compliant-4", order: 1, text: "Compliant with both nonissuer and issuer standards", isCorrect: true },
         { id: "opt-nonissuer-4", order: 2, text: "Compliant with PCAOB (issuer) but not GAAS", isCorrect: false },
@@ -2206,7 +2206,7 @@ export const audDocumentationRequirementsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-meets-std-5",
       },
-      explanation: "Documentation should enable an experienced auditor to understand the work - this meets the standard",
+      explanation: "Per AU-C 230.08, documentation must enable an experienced auditor with no prior connection to understand the work performed.",
       dropdownOptions: [
         { id: "opt-meets-std-5", order: 1, text: "Meets documentation standards", isCorrect: true },
         { id: "opt-not-relevant-5", order: 2, text: "Not a relevant test of documentation", isCorrect: false },
@@ -2263,7 +2263,7 @@ export const audSpecialPurposeFrameworksTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ocboa-cash",
       },
-      explanation: "Cash basis is a special purpose framework (formerly OCBOA)",
+      explanation: "Per AU-C 800.07, cash basis is a special purpose framework. Report must describe framework and restrict use.",
       dropdownOptions: [
         { id: "opt-gaap", order: 1, text: "GAAP financial statements", isCorrect: false },
         { id: "opt-ocboa-cash", order: 2, text: "Special purpose framework - cash basis", isCorrect: true },
@@ -2280,7 +2280,7 @@ export const audSpecialPurposeFrameworksTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-regulatory",
       },
-      explanation: "Regulatory basis accounting is a special purpose framework",
+      explanation: "Per AU-C 800.07, regulatory basis is a special purpose framework. Report may be general or restricted use depending on distribution.",
       dropdownOptions: [
         { id: "opt-gaap-reg", order: 1, text: "GAAP with regulatory disclosures", isCorrect: false },
         { id: "opt-regulatory", order: 2, text: "Special purpose framework - regulatory basis", isCorrect: true },
@@ -2297,7 +2297,7 @@ export const audSpecialPurposeFrameworksTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-contractual",
       },
-      explanation: "Contractual basis is a special purpose framework",
+      explanation: "Per AU-C 800.07, contractual basis is a special purpose framework. Report must include restricted-use paragraph.",
       dropdownOptions: [
         { id: "opt-gaap-contract", order: 1, text: "GAAP financial statements", isCorrect: false },
         { id: "opt-contractual", order: 2, text: "Special purpose framework - contractual basis", isCorrect: true },
@@ -2314,7 +2314,7 @@ export const audSpecialPurposeFrameworksTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-tax-spf",
       },
-      explanation: "Income tax basis is a special purpose framework",
+      explanation: "Per AU-C 800.07, income tax basis is a special purpose framework with similar reporting requirements.",
       dropdownOptions: [
         { id: "opt-gaap-tax", order: 1, text: "GAAP with tax disclosures", isCorrect: false },
         { id: "opt-tax-spf", order: 2, text: "Special purpose framework - tax basis", isCorrect: true },
@@ -2331,7 +2331,7 @@ export const audSpecialPurposeFrameworksTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-emphasis-para",
       },
-      explanation: "SPF reports must include an emphasis-of-matter paragraph describing the framework",
+      explanation: "Per AU-C 800.16, SPF reports require emphasis-of-matter paragraph describing the applicable framework.",
       dropdownOptions: [
         { id: "opt-no-additional", order: 1, text: "No additional paragraphs required", isCorrect: false },
         { id: "opt-emphasis-para", order: 2, text: "Emphasis-of-matter paragraph describing the framework", isCorrect: true },
@@ -2348,7 +2348,7 @@ export const audSpecialPurposeFrameworksTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-restrict-needed",
       },
-      explanation: "Contractual basis reports should include alert restricting use to specified parties",
+      explanation: "Per AU-C 800.19, contractual basis reports require alert restricting use to specified parties to the contract.",
       dropdownOptions: [
         { id: "opt-no-restrict", order: 1, text: "No restriction required for any SPF", isCorrect: false },
         { id: "opt-restrict-needed", order: 2, text: "Alert required for contractual basis (restrict to parties)", isCorrect: true },
@@ -2406,7 +2406,7 @@ export const audGroupAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-a",
       },
-      explanation: "With work reviewed and no issues, group auditor can take full responsibility",
+      explanation: "Per AU-C 600.23, when group auditor reviews component work and is satisfied, full responsibility can be taken.",
       dropdownOptions: [
         { id: "opt-yes-a", order: 1, text: "Yes - can take full responsibility", isCorrect: true },
         { id: "opt-no-a", order: 2, text: "No - must make reference to component auditor", isCorrect: false },
@@ -2423,7 +2423,7 @@ export const audGroupAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-evaluate-b",
       },
-      explanation: "New component auditor relationship requires evaluation of competence and independence",
+      explanation: "Per AU-C 600.19, new component auditor requires evaluation of competence, independence, and ethical requirements.",
       dropdownOptions: [
         { id: "opt-standard-b", order: 1, text: "Standard procedures are sufficient", isCorrect: false },
         { id: "opt-evaluate-b", order: 2, text: "Evaluate competence, independence, and review workpapers", isCorrect: true },
@@ -2440,7 +2440,7 @@ export const audGroupAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-alternative-c",
       },
-      explanation: "Must perform alternative procedures or evaluate if limitation is material",
+      explanation: "Per AU-C 600.41, when access is restricted, perform alternative procedures or evaluate if limitation is material.",
       dropdownOptions: [
         { id: "opt-accept-c", order: 1, text: "Accept component auditor's report without review", isCorrect: false },
         { id: "opt-alternative-c", order: 2, text: "Perform alternative procedures or evaluate scope limitation", isCorrect: true },
@@ -2457,7 +2457,7 @@ export const audGroupAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-still-eval-d",
       },
-      explanation: "Network membership doesn't eliminate need to evaluate component auditor",
+      explanation: "Per AU-C 600.A45, network membership does not eliminate requirement to evaluate component auditor's work.",
       dropdownOptions: [
         { id: "opt-automatic-d", order: 1, text: "Automatic reliance permitted on network firm", isCorrect: false },
         { id: "opt-still-eval-d", order: 2, text: "Still required to evaluate and review work", isCorrect: true },
@@ -2474,7 +2474,7 @@ export const audGroupAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-analytical-e",
       },
-      explanation: "For immaterial components, analytical procedures at group level are typically sufficient",
+      explanation: "Per AU-C 600.26, for immaterial components, analytical procedures at group level are typically sufficient.",
       dropdownOptions: [
         { id: "opt-no-proc-e", order: 1, text: "No procedures required", isCorrect: false },
         { id: "opt-analytical-e", order: 2, text: "Analytical procedures at group level", isCorrect: true },
@@ -2491,7 +2491,7 @@ export const audGroupAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-significant-ref",
       },
-      explanation: "Reference to component auditor permitted when component is significant and group auditor takes responsibility for their own work only",
+      explanation: "Per AU-C 600.A79, reference to component auditor is permitted when component is significant and properly evaluated.",
       dropdownOptions: [
         { id: "opt-never-ref", order: 1, text: "Never - must take full responsibility", isCorrect: false },
         { id: "opt-significant-ref", order: 2, text: "When component is significant and decision is properly made", isCorrect: true },
@@ -2564,7 +2564,7 @@ Client Information:
         value: 6864000,
         tolerance: 10000,
       },
-      explanation: "150 × 40 × 52 × $22.00 = $6,864,000",
+      explanation: "Per AU-C 520, develop expectation: 150 employees × 40 hrs × 52 weeks × $22 = $6,864,000.",
     },
     {
       id: "req-total-payroll-base",
@@ -2577,7 +2577,7 @@ Client Information:
         value: 8580000,
         tolerance: 10000,
       },
-      explanation: "$6,864,000 × 1.25 = $8,580,000",
+      explanation: "Per AU-C 520, add benefits to develop total expectation: $6,864,000 × 1.25 = $8,580,000.",
     },
     {
       id: "req-wage-increase-amount",
@@ -2590,7 +2590,7 @@ Client Information:
         value: 214500,
         tolerance: 5000,
       },
-      explanation: "Half year at 5% increase = $8,580,000 × 5% × 0.5 = $214,500",
+      explanation: "Per AU-C 520.A8, adjust expectation for known changes: $8,580,000 × 5% × 0.5 = $214,500.",
     },
     {
       id: "req-expected-total",
@@ -2603,7 +2603,7 @@ Client Information:
         value: 8794500,
         tolerance: 15000,
       },
-      explanation: "$8,580,000 + $214,500 = $8,794,500",
+      explanation: "Per AU-C 520, total expected payroll: $8,580,000 + $214,500 = $8,794,500.",
     },
     {
       id: "req-difference",
@@ -2616,7 +2616,7 @@ Client Information:
         value: 405500,
         tolerance: 15000,
       },
-      explanation: "$9,200,000 - $8,794,500 = $405,500",
+      explanation: "Per AU-C 520.A18, calculate difference: $9,200,000 − $8,794,500 = $405,500 unexplained variance.",
     },
     {
       id: "req-conclusion",
@@ -2628,7 +2628,7 @@ Client Information:
         type: "dropdown",
         correctOptionId: "opt-investigate",
       },
-      explanation: "Significant unexplained difference requires investigation and additional procedures",
+      explanation: "Per AU-C 520.07, unexplained differences exceeding threshold require investigation and additional procedures.",
       dropdownOptions: [
         { id: "opt-reasonable", order: 1, text: "Recorded amount appears reasonable", isCorrect: false },
         { id: "opt-investigate", order: 2, text: "Significant difference - investigate further", isCorrect: true },
@@ -2686,7 +2686,7 @@ export const audGovernanceCommunicationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-1",
       },
-      explanation: "Significant audit adjustments are required to be communicated to governance",
+      explanation: "Per AU-C 260.13, significant audit adjustments are required communications to those charged with governance.",
       dropdownOptions: [
         { id: "opt-required-1", order: 1, text: "Required communication", isCorrect: true },
         { id: "opt-optional-1", order: 2, text: "Optional communication", isCorrect: false },
@@ -2703,7 +2703,7 @@ export const audGovernanceCommunicationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-writing-timely",
       },
-      explanation: "Material weaknesses must be communicated in writing within 60 days of report release",
+      explanation: "Per AU-C 265.11, material weaknesses must be communicated in writing within 60 days of report release.",
       dropdownOptions: [
         { id: "opt-oral-only", order: 1, text: "Oral communication is sufficient", isCorrect: false },
         { id: "opt-writing-timely", order: 2, text: "Written communication required, timely basis", isCorrect: true },
@@ -2720,7 +2720,7 @@ export const audGovernanceCommunicationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-3",
       },
-      explanation: "Significant accounting policies and practices are required communications",
+      explanation: "Per AU-C 260.13, significant accounting policies and practices are required communications to governance.",
       dropdownOptions: [
         { id: "opt-required-3", order: 1, text: "Required communication", isCorrect: true },
         { id: "opt-only-new-3", order: 2, text: "Only if new policies adopted", isCorrect: false },
@@ -2737,7 +2737,7 @@ export const audGovernanceCommunicationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-4",
       },
-      explanation: "Disagreements with management are required to be communicated even if resolved",
+      explanation: "Per AU-C 260.13, disagreements with management must be communicated to governance even if resolved.",
       dropdownOptions: [
         { id: "opt-required-4", order: 1, text: "Required - even if resolved", isCorrect: true },
         { id: "opt-only-unresolved", order: 2, text: "Only if unresolved", isCorrect: false },
@@ -2754,7 +2754,7 @@ export const audGovernanceCommunicationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-5",
       },
-      explanation: "Uncorrected misstatements, even if immaterial, must be communicated to governance",
+      explanation: "Per AU-C 260.13 and 450.12, all uncorrected misstatements must be communicated to governance regardless of materiality.",
       dropdownOptions: [
         { id: "opt-required-5", order: 1, text: "Required - all uncorrected misstatements", isCorrect: true },
         { id: "opt-only-material", order: 2, text: "Only if material", isCorrect: false },
@@ -2813,7 +2813,7 @@ export const audRelatedPartiesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-rpt-disclose-1",
       },
-      explanation: "This is a related party transaction requiring disclosure; terms are not at arm's length",
+      explanation: "Per AU-C 550.26 and ASC 850, related party lease above market requires disclosure including terms that differ from arm's length.",
       dropdownOptions: [
         { id: "opt-not-rpt-1", order: 1, text: "Not a related party transaction", isCorrect: false },
         { id: "opt-rpt-disclose-1", order: 2, text: "Related party - requires disclosure of terms", isCorrect: true },
@@ -2830,7 +2830,7 @@ export const audRelatedPartiesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-rpt-2",
       },
-      explanation: "CFO serving on board creates related party relationship regardless of price",
+      explanation: "Per ASC 850-10-50, CFO board membership creates related party relationship requiring disclosure regardless of pricing.",
       dropdownOptions: [
         { id: "opt-not-rpt-2", order: 1, text: "Not related party - market price", isCorrect: false },
         { id: "opt-rpt-2", order: 2, text: "Related party - requires disclosure", isCorrect: true },
@@ -2847,7 +2847,7 @@ export const audRelatedPartiesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-significant-3",
       },
-      explanation: "Interest-free loan with no terms is significant related party transaction requiring extensive disclosure",
+      explanation: "Per AU-C 550.19 and ASC 850, interest-free loan is significant RPT requiring evaluation of business purpose and extended disclosure.",
       dropdownOptions: [
         { id: "opt-standard-3", order: 1, text: "Standard related party disclosure", isCorrect: false },
         { id: "opt-significant-3", order: 2, text: "Significant - extended disclosure and possible substance evaluation", isCorrect: true },
@@ -2864,7 +2864,7 @@ export const audRelatedPartiesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-rpt-terms-4",
       },
-      explanation: "Sale to relative at below market terms is a related party transaction",
+      explanation: "Per ASC 850, sale to CEO's relative at below market is related party transaction requiring disclosure of terms.",
       dropdownOptions: [
         { id: "opt-not-rpt-4", order: 1, text: "Not related party - brother-in-law is distant", isCorrect: false },
         { id: "opt-rpt-terms-4", order: 2, text: "Related party - disclose terms differ from market", isCorrect: true },
@@ -2881,7 +2881,7 @@ export const audRelatedPartiesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-unlikely-rpt-5",
       },
-      explanation: "Employment of relative in non-influential position typically does not create related party relationship",
+      explanation: "Per ASC 850-10-20, non-influential position (admin assistant) typically does not create related party relationship.",
       dropdownOptions: [
         { id: "opt-rpt-5", order: 1, text: "Related party transaction", isCorrect: false },
         { id: "opt-unlikely-rpt-5", order: 2, text: "Unlikely to be related party - no influence", isCorrect: true },
@@ -2898,7 +2898,7 @@ export const audRelatedPartiesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-skeptical-6",
       },
-      explanation: "Professional skepticism required - must continue to be alert throughout audit",
+      explanation: "Per AU-C 550.15, maintain professional skepticism and remain alert for related parties throughout the audit.",
       dropdownOptions: [
         { id: "opt-accept-6", order: 1, text: "Accept management representation", isCorrect: false },
         { id: "opt-skeptical-6", order: 2, text: "Continue to be alert throughout audit", isCorrect: true },
@@ -2964,7 +2964,7 @@ Please help me locate the correct AU-C section.`,
           { source: "AICPA", topicCode: "AU-C 500 Audit Evidence" },
         ],
       },
-      explanation: "AU-C Section 500, Audit Evidence, establishes requirements and guidance regarding audit evidence in a financial statement audit.",
+      explanation: "Per AU-C 500, Audit Evidence, establishes requirements for sufficient appropriate audit evidence in financial statement audits.",
     },
   ],
 };
@@ -3017,7 +3017,7 @@ export const audComplianceAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-required",
       },
-      explanation: "Federal expenditures of $2.5M exceed $1M threshold - Single Audit required",
+      explanation: "Per 2 CFR 200.501, federal expenditures of $2.5M exceed $1M threshold requiring Single Audit.",
       dropdownOptions: [
         { id: "opt-yes-required", order: 1, text: "Yes - exceeds threshold", isCorrect: true },
         { id: "opt-no-req", order: 2, text: "No - below threshold", isCorrect: false },
@@ -3034,7 +3034,7 @@ export const audComplianceAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-type-a",
       },
-      explanation: "Program exceeds $750,000 Type A threshold - classified as Type A",
+      explanation: "Per 2 CFR 200.518, program exceeding $750,000 Type A threshold is classified as Type A program.",
       dropdownOptions: [
         { id: "opt-type-a", order: 1, text: "Type A program", isCorrect: true },
         { id: "opt-type-b", order: 2, text: "Type B program", isCorrect: false },
@@ -3051,7 +3051,7 @@ export const audComplianceAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-high-risk",
       },
-      explanation: "Prior year findings indicate high risk - affects major program determination",
+      explanation: "Per 2 CFR 200.519, prior year findings indicate high risk affecting major program determination.",
       dropdownOptions: [
         { id: "opt-no-impact", order: 1, text: "No impact on current year", isCorrect: false },
         { id: "opt-high-risk", order: 2, text: "Program is high risk - likely major program", isCorrect: true },
@@ -3068,7 +3068,7 @@ export const audComplianceAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-four-reports",
       },
-      explanation: "Single Audit requires: F/S opinion, compliance opinion, internal control report, schedule of expenditures",
+      explanation: "Per 2 CFR 200.515, Single Audit requires: F/S opinion, compliance opinion, IC over compliance report, and SEFA.",
       dropdownOptions: [
         { id: "opt-fs-only", order: 1, text: "Financial statement opinion only", isCorrect: false },
         { id: "opt-four-reports", order: 2, text: "Four reports: F/S, compliance, IC over compliance, SEFA", isCorrect: true },
@@ -3085,7 +3085,7 @@ export const audComplianceAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-fac",
       },
-      explanation: "Single Audit must be submitted to Federal Audit Clearinghouse (FAC)",
+      explanation: "Per 2 CFR 200.512, Single Audit must be submitted to Federal Audit Clearinghouse (FAC) within 30 days.",
       dropdownOptions: [
         { id: "opt-agency", order: 1, text: "Each federal awarding agency", isCorrect: false },
         { id: "opt-fac", order: 2, text: "Federal Audit Clearinghouse (FAC)", isCorrect: true },
@@ -3145,7 +3145,7 @@ export const audSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-soc1",
       },
-      explanation: "SOC 1 reports on controls relevant to user entities' financial reporting - appropriate for payroll",
+      explanation: "Per SSAE 18, SOC 1 reports on controls relevant to user entities' financial reporting − appropriate for payroll processing.",
       dropdownOptions: [
         { id: "opt-yes-soc1", order: 1, text: "Yes - SOC 1 is for financial reporting controls", isCorrect: true },
         { id: "opt-need-soc2", order: 2, text: "No - need SOC 2 for payroll", isCorrect: false },
@@ -3162,7 +3162,7 @@ export const audSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-operating-eff",
       },
-      explanation: "Type II tests operating effectiveness over a period; Type I only tests design at a point in time",
+      explanation: "Per SSAE 18, Type II tests operating effectiveness over a period; Type I only assesses design at a point in time.",
       dropdownOptions: [
         { id: "opt-no-diff", order: 1, text: "No significant difference", isCorrect: false },
         { id: "opt-operating-eff", order: 2, text: "Tests operating effectiveness, not just design", isCorrect: true },
@@ -3179,7 +3179,7 @@ export const audSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-bridge-proc",
       },
-      explanation: "Gap period requires additional procedures to bridge to year-end",
+      explanation: "Per AU-C 402.A26, gap between SOC report date and year-end requires bridging procedures to extend reliance.",
       dropdownOptions: [
         { id: "opt-no-concern", order: 1, text: "No concern - report is recent enough", isCorrect: false },
         { id: "opt-bridge-proc", order: 2, text: "Must perform bridging procedures for gap period", isCorrect: true },
@@ -3196,7 +3196,7 @@ export const audSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-evaluate",
       },
-      explanation: "Must evaluate impact of exceptions on client's financial statements",
+      explanation: "Per AU-C 402.16, auditor must evaluate impact of service organization control exceptions on client's financial statements.",
       dropdownOptions: [
         { id: "opt-ignore", order: 1, text: "Ignore - service auditor said non-material", isCorrect: false },
         { id: "opt-evaluate", order: 2, text: "Evaluate impact on client's financial statements", isCorrect: true },
@@ -3213,7 +3213,7 @@ export const audSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-client-test",
       },
-      explanation: "CUECs are client's responsibility - auditor must test if planning to rely on system",
+      explanation: "Per AU-C 402.14, CUECs are client's responsibility. Auditor must test if relying on overall control system.",
       dropdownOptions: [
         { id: "opt-service-org", order: 1, text: "Service organization's responsibility", isCorrect: false },
         { id: "opt-client-test", order: 2, text: "Client must implement; auditor tests if relying", isCorrect: true },
@@ -3230,7 +3230,7 @@ export const audSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-if-procedures",
       },
-      explanation: "Can reduce testing only if SOC report is satisfactory AND bridging procedures performed",
+      explanation: "Per AU-C 402.18, reduced substantive testing requires satisfactory SOC report AND bridging procedures to year-end.",
       dropdownOptions: [
         { id: "opt-yes-unmod", order: 1, text: "Yes - unmodified opinion allows full reliance", isCorrect: false },
         { id: "opt-if-procedures", order: 2, text: "Yes - if bridging procedures support reliance", isCorrect: true },
@@ -3287,7 +3287,7 @@ export const audInternalControlComponentsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-control-act",
       },
-      explanation: "Segregation of duties is a control activity",
+      explanation: "Per COSO Principle 10, segregation of duties is a control activity that mitigates risk of error or fraud.",
       dropdownOptions: [
         { id: "opt-env", order: 1, text: "Control Environment", isCorrect: false },
         { id: "opt-risk", order: 2, text: "Risk Assessment", isCorrect: false },
@@ -3306,7 +3306,7 @@ export const audInternalControlComponentsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-env-2",
       },
-      explanation: "Commitment to ethics is part of control environment",
+      explanation: "Per COSO Principle 1, commitment to integrity and ethical values is foundational to the control environment.",
       dropdownOptions: [
         { id: "opt-env-2", order: 1, text: "Control Environment", isCorrect: true },
         { id: "opt-risk-2", order: 2, text: "Risk Assessment", isCorrect: false },
@@ -3325,7 +3325,7 @@ export const audInternalControlComponentsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-monitor-3",
       },
-      explanation: "Internal audit evaluating controls is a monitoring activity",
+      explanation: "Per COSO Principle 16, internal audit evaluating controls is a key monitoring activity.",
       dropdownOptions: [
         { id: "opt-env-3", order: 1, text: "Control Environment", isCorrect: false },
         { id: "opt-risk-3", order: 2, text: "Risk Assessment", isCorrect: false },
@@ -3344,7 +3344,7 @@ export const audInternalControlComponentsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-risk-4",
       },
-      explanation: "Identifying fraud risk is part of risk assessment",
+      explanation: "Per COSO Principle 8, identifying fraud risk is part of the risk assessment component.",
       dropdownOptions: [
         { id: "opt-env-4", order: 1, text: "Control Environment", isCorrect: false },
         { id: "opt-risk-4", order: 2, text: "Risk Assessment", isCorrect: true },
@@ -3363,7 +3363,7 @@ export const audInternalControlComponentsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-info-5",
       },
-      explanation: "Accounting system capturing data is information and communication",
+      explanation: "Per COSO Principle 13, accounting systems capturing transaction data are part of information and communication.",
       dropdownOptions: [
         { id: "opt-env-5", order: 1, text: "Control Environment", isCorrect: false },
         { id: "opt-risk-5", order: 2, text: "Risk Assessment", isCorrect: false },
@@ -3422,7 +3422,7 @@ export const audCompilationEngagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-none",
       },
-      explanation: "Compilation provides NO assurance",
+      explanation: "Per AR-C 80.06, a compilation provides no assurance on the financial statements.",
       dropdownOptions: [
         { id: "opt-reasonable", order: 1, text: "Reasonable assurance", isCorrect: false },
         { id: "opt-limited", order: 2, text: "Limited assurance", isCorrect: false },
@@ -3439,7 +3439,7 @@ export const audCompilationEngagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-understand",
       },
-      explanation: "Accountant must obtain understanding of entity and accounting practices",
+      explanation: "Per AR-C 80.10, accountant must obtain understanding of the entity and its accounting practices.",
       dropdownOptions: [
         { id: "opt-not-required", order: 1, text: "Not required", isCorrect: false },
         { id: "opt-required-understand", order: 2, text: "Required - general understanding", isCorrect: true },
@@ -3456,7 +3456,7 @@ export const audCompilationEngagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-disclose",
       },
-      explanation: "Disclosures can be omitted if noted in compilation report",
+      explanation: "Per AR-C 80.22, substantially all disclosures may be omitted if clearly indicated in the accountant's report.",
       dropdownOptions: [
         { id: "opt-never", order: 1, text: "Never - violates GAAP", isCorrect: false },
         { id: "opt-yes-disclose", order: 2, text: "Yes - if disclosed in accountant's report", isCorrect: true },
@@ -3473,7 +3473,7 @@ export const audCompilationEngagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-disclose-gc",
       },
-      explanation: "If aware of GC doubt, encourage disclosure; if not disclosed, consider modification",
+      explanation: "Per AR-C 80.21, if aware of going concern doubt, request disclosure; consider report modification if not disclosed.",
       dropdownOptions: [
         { id: "opt-ignore-gc", order: 1, text: "No responsibility in compilation", isCorrect: false },
         { id: "opt-disclose-gc", order: 2, text: "Request disclosure; consider report modification", isCorrect: true },
@@ -3490,7 +3490,7 @@ export const audCompilationEngagementTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-req-ind",
       },
-      explanation: "Independence not required but lack must be disclosed in report",
+      explanation: "Per AR-C 80.24, independence is not required for compilation but lack thereof must be disclosed in the report.",
       dropdownOptions: [
         { id: "opt-required-ind", order: 1, text: "Required", isCorrect: false },
         { id: "opt-not-req-ind", order: 2, text: "Not required - disclose lack in report", isCorrect: true },
@@ -3548,7 +3548,7 @@ export const audAccountingEstimatesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-test-method",
       },
-      explanation: "Should test reasonableness of percentages by comparing to actual write-offs",
+      explanation: "Per AU-C 540.13, test reasonableness of allowance percentages by comparing to actual historical loss rates.",
       dropdownOptions: [
         { id: "opt-accept", order: 1, text: "Accept - standard methodology", isCorrect: false },
         { id: "opt-test-method", order: 2, text: "Test percentages against actual historical loss rates", isCorrect: true },
@@ -3565,7 +3565,7 @@ export const audAccountingEstimatesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-evaluate-rate",
       },
-      explanation: "Must evaluate whether discount rate is appropriate for company's risk",
+      explanation: "Per AU-C 540.15, evaluate whether discount rate assumption is appropriate for the company's specific risk profile.",
       dropdownOptions: [
         { id: "opt-accept-rate", order: 1, text: "Accept - within normal range", isCorrect: false },
         { id: "opt-evaluate-rate", order: 2, text: "Evaluate appropriateness for company's risk profile", isCorrect: true },
@@ -3582,7 +3582,7 @@ export const audAccountingEstimatesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-lower-risk",
       },
-      explanation: "Consistent historical experience and simple methodology = lower estimation risk",
+      explanation: "Per AU-C 540.A53, consistent historical experience with simple methodology indicates lower estimation uncertainty.",
       dropdownOptions: [
         { id: "opt-high-risk", order: 1, text: "High risk - requires significant testing", isCorrect: false },
         { id: "opt-lower-risk", order: 2, text: "Lower risk - consistent history supports estimate", isCorrect: true },
@@ -3599,7 +3599,7 @@ export const audAccountingEstimatesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-evaluate-bias",
       },
-      explanation: "Lower discount rate increases liability - evaluate if management bias exists",
+      explanation: "Per AU-C 540.21, evaluate if lower discount rate (increasing liability) indicates potential management bias.",
       dropdownOptions: [
         { id: "opt-accept-actuary", order: 1, text: "Accept - actuary is specialist", isCorrect: false },
         { id: "opt-evaluate-bias", order: 2, text: "Evaluate rate selection for potential management bias", isCorrect: true },
@@ -3616,7 +3616,7 @@ export const audAccountingEstimatesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-consider-new",
       },
-      explanation: "New product line may accelerate obsolescence of existing products",
+      explanation: "Per AU-C 540.13, consider if new product line changes assumptions and accelerates existing inventory obsolescence.",
       dropdownOptions: [
         { id: "opt-accept-hist", order: 1, text: "Accept - historical basis is appropriate", isCorrect: false },
         { id: "opt-consider-new", order: 2, text: "Consider if new products accelerate existing obsolescence", isCorrect: true },
@@ -3633,7 +3633,7 @@ export const audAccountingEstimatesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-combination",
       },
-      explanation: "Standards allow combination of approaches based on circumstances",
+      explanation: "Per AU-C 540.12, auditor may use combination of testing approaches based on estimation risk and circumstances.",
       dropdownOptions: [
         { id: "opt-develop-own", order: 1, text: "Always develop independent estimate", isCorrect: false },
         { id: "opt-test-process", order: 2, text: "Only test management's process", isCorrect: false },
@@ -3689,7 +3689,7 @@ export const audProspectiveFinancialsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-general-use",
       },
-      explanation: "Forecasts can be for general use",
+      explanation: "Per AT-C 305.11, forecasts based on expected conditions may be distributed for general use.",
       dropdownOptions: [
         { id: "opt-general-use", order: 1, text: "General use - any third party", isCorrect: true },
         { id: "opt-limited-only", order: 2, text: "Limited use - only specified parties", isCorrect: false },
@@ -3706,7 +3706,7 @@ export const audProspectiveFinancialsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-limited-proj",
       },
-      explanation: "Projections should be restricted to parties who understand hypothetical assumptions",
+      explanation: "Per AT-C 305.11, projections using hypothetical assumptions should be restricted to parties with direct knowledge.",
       dropdownOptions: [
         { id: "opt-general-proj", order: 1, text: "General use - any third party", isCorrect: false },
         { id: "opt-limited-proj", order: 2, text: "Limited use - parties with direct knowledge of assumptions", isCorrect: true },
@@ -3723,7 +3723,7 @@ export const audProspectiveFinancialsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-limited-exam",
       },
-      explanation: "Examination provides limited assurance that assumptions are reasonable",
+      explanation: "Per AT-C 305.26, examination provides limited assurance that assumptions are suitably supported.",
       dropdownOptions: [
         { id: "opt-reasonable-exam", order: 1, text: "Reasonable assurance results will occur", isCorrect: false },
         { id: "opt-limited-exam", order: 2, text: "Limited assurance assumptions are reasonable", isCorrect: true },
@@ -3740,7 +3740,7 @@ export const audProspectiveFinancialsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-compile",
       },
-      explanation: "Compilation of prospective financials is permitted (no assurance)",
+      explanation: "Per AT-C 305.48, compilation of prospective financials is permitted and provides no assurance.",
       dropdownOptions: [
         { id: "opt-yes-compile", order: 1, text: "Yes - compilation provides no assurance", isCorrect: true },
         { id: "opt-no-compile", order: 2, text: "No - only examination is permitted", isCorrect: false },
@@ -3757,7 +3757,7 @@ export const audProspectiveFinancialsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-aup",
       },
-      explanation: "Agreed-upon procedures can be performed on prospective financials",
+      explanation: "Per AT-C 215, agreed-upon procedures may be performed on prospective financials with specified parties.",
       dropdownOptions: [
         { id: "opt-yes-aup", order: 1, text: "Yes - with specified parties", isCorrect: true },
         { id: "opt-no-aup", order: 2, text: "No - not permitted for prospective statements", isCorrect: false },
@@ -3814,7 +3814,7 @@ export const audIntegratedAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-differ",
       },
-      explanation: "ICFR and F/S opinions are separate; can have different modifications",
+      explanation: "Per AS 2201.86, ICFR and F/S opinions are separate and may have different opinion types.",
       dropdownOptions: [
         { id: "opt-yes-differ", order: 1, text: "Yes - separate opinions may differ", isCorrect: true },
         { id: "opt-must-match", order: 2, text: "No - must be the same opinion type", isCorrect: false },
@@ -3831,7 +3831,7 @@ export const audIntegratedAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-adverse-icfr",
       },
-      explanation: "Material weakness requires adverse opinion on ICFR",
+      explanation: "Per AS 2201.87, existence of material weakness requires an adverse opinion on ICFR.",
       dropdownOptions: [
         { id: "opt-qualified-icfr", order: 1, text: "Qualified opinion on ICFR", isCorrect: false },
         { id: "opt-adverse-icfr", order: 2, text: "Adverse opinion on ICFR", isCorrect: true },
@@ -3848,7 +3848,7 @@ export const audIntegratedAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-depends-fs",
       },
-      explanation: "F/S opinion depends on whether misstatement exists, not presence of weakness",
+      explanation: "Per AS 2201.88, F/S opinion depends on whether F/S are misstated, not solely on presence of control weakness.",
       dropdownOptions: [
         { id: "opt-also-adverse", order: 1, text: "Must also be adverse", isCorrect: false },
         { id: "opt-depends-fs", order: 2, text: "Depends on whether F/S are misstated", isCorrect: true },
@@ -3865,7 +3865,7 @@ export const audIntegratedAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-writing-sd",
       },
-      explanation: "Significant deficiencies must be communicated in writing to management and audit committee",
+      explanation: "Per AS 2201.78, significant deficiencies must be communicated in writing to management and audit committee.",
       dropdownOptions: [
         { id: "opt-oral-sd", order: 1, text: "Oral communication sufficient", isCorrect: false },
         { id: "opt-writing-sd", order: 2, text: "Written communication required", isCorrect: true },
@@ -3882,7 +3882,7 @@ export const audIntegratedAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-required-walk",
       },
-      explanation: "Walkthroughs are required for each significant process in integrated audits",
+      explanation: "Per AS 2201.37, walkthroughs are required for each significant class of transactions in integrated audits.",
       dropdownOptions: [
         { id: "opt-optional-walk", order: 1, text: "Optional - auditor judgment", isCorrect: false },
         { id: "opt-required-walk", order: 2, text: "Required for each significant process", isCorrect: true },
@@ -3899,7 +3899,7 @@ export const audIntegratedAuditTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-some-reliance",
       },
-      explanation: "Can use management's testing but with limitations based on risk",
+      explanation: "Per AS 2201.16, auditor may use management's testing with limitations based on control risk and objectivity.",
       dropdownOptions: [
         { id: "opt-no-reliance", order: 1, text: "Cannot use management's testing", isCorrect: false },
         { id: "opt-some-reliance", order: 2, text: "May use with limitations based on control risk", isCorrect: true },
@@ -3967,7 +3967,7 @@ Required: Determine appropriate confirmation procedures for each area.`,
         type: "dropdown",
         correctOptionId: "opt-ar-stratified",
       },
-      explanation: "Stratified sampling focusing on large balances is most efficient given concentration",
+      explanation: "Per AU-C 505.07, stratified positive confirmations emphasizing large balances is most efficient given concentration.",
       dropdownOptions: [
         { id: "opt-ar-stratified", order: 1, text: "Positive confirmations - stratified sample emphasizing large balances", isCorrect: true },
         { id: "opt-ar-negative", order: 2, text: "Negative confirmations to all customers", isCorrect: false },
@@ -3985,7 +3985,7 @@ Required: Determine appropriate confirmation procedures for each area.`,
         type: "dropdown",
         correctOptionId: "opt-bank-all",
       },
-      explanation: "All bank accounts should be confirmed, including zero balance and foreign accounts",
+      explanation: "Per AU-C 505, all bank accounts should be confirmed regardless of balance, including foreign currency accounts.",
       dropdownOptions: [
         { id: "opt-bank-all", order: 1, text: "Confirm all 8 accounts", isCorrect: true },
         { id: "opt-bank-material", order: 2, text: "Confirm only material balance accounts", isCorrect: false },
@@ -4003,7 +4003,7 @@ Required: Determine appropriate confirmation procedures for each area.`,
         type: "dropdown",
         correctOptionId: "opt-ap-alternative",
       },
-      explanation: "AP confirmations are less effective than alternative procedures due to understatement risk",
+      explanation: "Per AU-C 505.A6, AP confirmations are less effective for completeness. Alternative procedures (vendor statements) are preferred.",
       dropdownOptions: [
         { id: "opt-ap-confirm", order: 1, text: "Confirm as management suggests", isCorrect: false },
         { id: "opt-ap-alternative", order: 2, text: "Alternative procedures (vendor statements, subsequent payments) preferred", isCorrect: true },
@@ -4020,7 +4020,7 @@ Required: Determine appropriate confirmation procedures for each area.`,
         type: "dropdown",
         correctOptionId: "opt-legal-all",
       },
-      explanation: "Attorney letters should cover all litigation matters, both as defendant and plaintiff",
+      explanation: "Per AU-C 501.21, attorney letter inquiry should cover all litigation matters regardless of party position.",
       dropdownOptions: [
         { id: "opt-legal-defendant", order: 1, text: "Only matters where company is defendant", isCorrect: false },
         { id: "opt-legal-all", order: 2, text: "All litigation matters (defendant and plaintiff)", isCorrect: true },
@@ -4037,7 +4037,7 @@ Required: Determine appropriate confirmation procedures for each area.`,
         type: "dropdown",
         correctOptionId: "opt-rp-confirm-plus",
       },
-      explanation: "Related party transactions require confirmation plus additional procedures due to higher risk",
+      explanation: "Per AU-C 550.20, related party transactions require confirmation plus additional procedures to evaluate terms and substance.",
       dropdownOptions: [
         { id: "opt-rp-standard", order: 1, text: "Standard positive confirmation only", isCorrect: false },
         { id: "opt-rp-confirm-plus", order: 2, text: "Confirmation plus review of supporting documentation and terms", isCorrect: true },
@@ -4054,7 +4054,7 @@ Required: Determine appropriate confirmation procedures for each area.`,
         type: "dropdown",
         correctOptionId: "opt-nonresp-alternative",
       },
-      explanation: "Non-responses require alternative audit procedures to obtain sufficient evidence",
+      explanation: "Per AU-C 505.12, non-responses require alternative procedures (subsequent cash receipts, shipping docs) to obtain sufficient evidence.",
       dropdownOptions: [
         { id: "opt-nonresp-accept", order: 1, text: "Accept the recorded balance without further work", isCorrect: false },
         { id: "opt-nonresp-alternative", order: 2, text: "Perform alternative procedures (cash receipts, shipping docs)", isCorrect: true },
