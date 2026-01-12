@@ -241,10 +241,10 @@ export const farConsolidationEliminationsTBS: TBSQuestion = {
 During Year 1:
 • Sub reported net income of $80,000
 • Sub declared and paid dividends of $20,000
-• Parent sold inventory to Sub for $50,000 (cost was $35,000)
+• Parent sold inventory to Sub for $50,000 (cost was $35,000) — DOWNSTREAM sale (parent to subsidiary)
 • 40% of this inventory remains in Sub's ending inventory
 
-Required: Prepare the elimination entries for the Year 1 consolidated worksheet.`,
+Required: Per ASC 810, prepare the elimination entries for the Year 1 consolidated worksheet. Note: For downstream sales, 100% of unrealized profit is eliminated against parent.`,
   timeEstimateMinutes: 18,
   maxScorePoints: 8,
   exhibits: [
@@ -367,7 +367,7 @@ Required: Prepare the elimination entries for the Year 1 consolidated worksheet.
         value: 6000,
         tolerance: 0,
       },
-      explanation: "Unrealized profit = ($50,000 - $35,000) × 40% = $15,000 × 40% = $6,000",
+      explanation: "Unrealized profit = ($50,000 - $35,000) × 40% = $15,000 × 40% = $6,000. For downstream sales (parent to sub), 100% of unrealized profit is eliminated against parent (no allocation to NCI). For upstream sales (sub to parent), unrealized profit would be allocated between parent and NCI.",
     },
     {
       id: "req-elim-dividend",
@@ -3713,7 +3713,7 @@ export const farSubsequentEventsTBS: TBSQuestion = {
 
 6. February 20: Acquired a competitor company for $15,000,000.
 
-Required: Determine the proper accounting treatment for each event.`,
+Required: Per ASC 855-10-25-1 through 25-3, determine the proper accounting treatment for each event. For Type I events, the condition must have existed at the balance sheet date; for Type II events, the condition arose after the balance sheet date.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 6,
   exhibits: [
@@ -3744,7 +3744,7 @@ Required: Determine the proper accounting treatment for each event.`,
         type: "dropdown",
         correctOptionId: "opt-lawsuit-adjust",
       },
-      explanation: "Condition existed at year-end (Type I) - adjust accrual to $500,000",
+      explanation: "Per ASC 855-10-25-1, the lawsuit condition (product defect) existed at the balance sheet date (Type I recognized event) - adjust accrual to $500,000",
       dropdownOptions: [
         { id: "opt-lawsuit-adjust", order: 1, text: "Type I - Adjust financial statements", isCorrect: true },
         { id: "opt-lawsuit-disclose", order: 2, text: "Type II - Disclose only", isCorrect: false },
@@ -3761,7 +3761,7 @@ Required: Determine the proper accounting treatment for each event.`,
         type: "dropdown",
         correctOptionId: "opt-fire-disclose",
       },
-      explanation: "Condition arose after year-end (Type II) - disclose only",
+      explanation: "Per ASC 855-10-25-3, the fire condition arose after the balance sheet date (Type II nonrecognized event) - disclose only, do not adjust",
       dropdownOptions: [
         { id: "opt-fire-adjust", order: 1, text: "Type I - Adjust financial statements", isCorrect: false },
         { id: "opt-fire-disclose", order: 2, text: "Type II - Disclose only", isCorrect: true },
@@ -3778,7 +3778,7 @@ Required: Determine the proper accounting treatment for each event.`,
         type: "dropdown",
         correctOptionId: "opt-bonds-disclose",
       },
-      explanation: "New financing is Type II - disclose only",
+      explanation: "Per ASC 855-10-25-3, bond issuance condition arose after the balance sheet date (Type II nonrecognized event) - disclose only",
       dropdownOptions: [
         { id: "opt-bonds-adjust", order: 1, text: "Type I - Adjust financial statements", isCorrect: false },
         { id: "opt-bonds-disclose", order: 2, text: "Type II - Disclose only", isCorrect: true },
@@ -3795,7 +3795,7 @@ Required: Determine the proper accounting treatment for each event.`,
         type: "dropdown",
         correctOptionId: "opt-bankr-adjust",
       },
-      explanation: "Customer difficulty existed at year-end (Type I) - adjust allowance/write off",
+      explanation: "Per ASC 855-10-25-1, customer financial difficulty condition existed at the balance sheet date (Type I recognized event) - adjust allowance/write off",
       dropdownOptions: [
         { id: "opt-bankr-adjust", order: 1, text: "Type I - Adjust financial statements", isCorrect: true },
         { id: "opt-bankr-disclose", order: 2, text: "Type II - Disclose only", isCorrect: false },
@@ -3812,7 +3812,7 @@ Required: Determine the proper accounting treatment for each event.`,
         type: "dropdown",
         correctOptionId: "opt-split-retroactive",
       },
-      explanation: "Stock splits are given retroactive treatment in EPS calculations and disclosed",
+      explanation: "Per ASC 260-10-55-12 and ASC 855-10-50, stock splits are given retroactive treatment in EPS calculations and disclosed as subsequent events",
       dropdownOptions: [
         { id: "opt-split-adjust", order: 1, text: "Type I - Adjust financial statements", isCorrect: false },
         { id: "opt-split-retroactive", order: 2, text: "Retroactive adjustment to EPS and disclosure", isCorrect: true },
@@ -3829,7 +3829,7 @@ Required: Determine the proper accounting treatment for each event.`,
         type: "dropdown",
         correctOptionId: "opt-acq-disclose",
       },
-      explanation: "Acquisition after year-end is Type II - disclose only",
+      explanation: "Per ASC 855-10-25-3 and ASC 805-10-50, acquisition condition arose after the balance sheet date (Type II nonrecognized event) - disclose only",
       dropdownOptions: [
         { id: "opt-acq-adjust", order: 1, text: "Type I - Adjust financial statements", isCorrect: false },
         { id: "opt-acq-disclose", order: 2, text: "Type II - Disclose only", isCorrect: true },
@@ -7227,7 +7227,9 @@ export const farIntercompanyInventoryTBS: TBSQuestion = {
   skillLevel: "analysis",
   contentArea: "FAR-III",
   title: "Intercompany Inventory Profit Elimination",
-  scenarioText: `Prepare consolidation elimination entries for intercompany inventory transactions between Parent Co. and its 80%-owned subsidiary.`,
+  scenarioText: `Prepare consolidation elimination entries for intercompany inventory transactions between Parent Co. and its 80%-owned subsidiary.
+
+Journal Entry Structure: For elimination entries, debits increase expense/asset accounts (or decrease revenue/liability/equity) and credits decrease expense/asset accounts (or increase revenue/liability/equity). Enter positive amounts for both debits and credits.`,
   timeEstimateMinutes: 14,
   maxScorePoints: 6,
   exhibits: [

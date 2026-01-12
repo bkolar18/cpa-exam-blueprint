@@ -5219,7 +5219,9 @@ export const iscAuditSamplingTBS: TBSQuestion = {
   skillLevel: "application",
   contentArea: "ISC-III",
   title: "IT Audit Sample Size Determination",
-  scenarioText: `Determine appropriate sample sizes for IT general controls testing based on control frequency and risk assessment.`,
+  scenarioText: `Determine appropriate sample sizes for IT general controls testing based on control frequency and risk assessment.
+
+Per AU-C 530 (Audit Sampling), sample sizes depend on: (1) acceptable level of sampling risk (related to control risk assessment), (2) tolerable rate of deviation, and (3) expected population deviation rate. For IT controls, frequency of occurrence and risk level are key determinants. Higher risk = larger samples needed to achieve sufficient assurance.`,
   timeEstimateMinutes: 11,
   maxScorePoints: 5,
   exhibits: [
@@ -5268,7 +5270,7 @@ export const iscAuditSamplingTBS: TBSQuestion = {
       label: "User access review sample size?",
       points: 1,
       correctAnswer: { type: "numeric", value: 2, tolerance: 0 },
-      explanation: "Quarterly + High Risk = 2 samples",
+      explanation: "Per AU-C 530: Quarterly (4 occurrences) + High Risk requires 2 samples to achieve sufficient assurance given low tolerable deviation",
     },
     {
       id: "req-backup",
@@ -5277,7 +5279,7 @@ export const iscAuditSamplingTBS: TBSQuestion = {
       label: "Backup verification sample size?",
       points: 1,
       correctAnswer: { type: "numeric", value: 25, tolerance: 0 },
-      explanation: "Daily + Moderate Risk = 25 samples",
+      explanation: "Per AU-C 530: Daily (250 occurrences) + Moderate Risk = 25 samples; larger population with moderate risk allows larger tolerable deviation",
     },
     {
       id: "req-change",
@@ -5286,7 +5288,7 @@ export const iscAuditSamplingTBS: TBSQuestion = {
       label: "Change approval sample size?",
       points: 2,
       correctAnswer: { type: "numeric", value: 60, tolerance: 0 },
-      explanation: "Multiple daily + High Risk = 60 samples",
+      explanation: "Per AU-C 530: Multiple daily (500+ occurrences) + High Risk = 60 samples; high frequency with high risk requires lower tolerable deviation and more samples",
     },
     {
       id: "req-firewall",
@@ -5295,7 +5297,7 @@ export const iscAuditSamplingTBS: TBSQuestion = {
       label: "Firewall rule review sample size?",
       points: 1,
       correctAnswer: { type: "numeric", value: 3, tolerance: 0 },
-      explanation: "Monthly + Moderate Risk = 3 samples",
+      explanation: "Per AU-C 530: Monthly (12 occurrences) + Moderate Risk = 3 samples; moderate frequency and risk allows higher tolerable deviation with smaller sample",
     },
   ],
 };

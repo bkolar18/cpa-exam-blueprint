@@ -1381,7 +1381,9 @@ export const regCircular230TBS: TBSQuestion = {
   skillLevel: "evaluation",
   contentArea: "REG-I",
   title: "Circular 230 Requirements",
-  scenarioText: `Evaluate each scenario to determine if the tax practitioner is in compliance with Circular 230 requirements.`,
+  scenarioText: `Evaluate each scenario to determine if the tax practitioner is in compliance with Circular 230 requirements.
+
+Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (contingent fees), §10.33 (best practices), §10.34 (standards for advising positions), §10.35 (competence), §10.37 (written advice requirements).`,
   timeEstimateMinutes: 12,
   maxScorePoints: 6,
   exhibits: [
@@ -1450,7 +1452,7 @@ export const regCircular230TBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-permitted-3",
       },
-      explanation: "Contingent fees ARE permitted for IRS examination matters (but NOT for return preparation)",
+      explanation: "Per Circular 230 §10.27, contingent fees ARE permitted for: (1) IRS examination/audit representation, (2) claim for refund/credit, and (3) judicial proceedings. Contingent fees are PROHIBITED for return preparation and amended returns not claiming refunds.",
       dropdownOptions: [
         { id: "opt-prohibited-3", order: 1, text: "Prohibited - contingent fees never allowed", isCorrect: false },
         { id: "opt-permitted-3", order: 2, text: "Permitted - allowed for examinations", isCorrect: true },

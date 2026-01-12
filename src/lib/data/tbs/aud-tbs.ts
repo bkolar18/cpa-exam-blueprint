@@ -476,9 +476,9 @@ export const audControlDeficiencyTBS: TBSQuestion = {
   skillLevel: "evaluation",
   contentArea: "AUD-II",
   title: "Classification of Control Deficiencies",
-  scenarioText: `During an integrated audit of Granite Manufacturing, you identified the following control deficiencies. Evaluate each deficiency and classify it appropriately.
+  scenarioText: `During an integrated audit of Granite Manufacturing, you identified the following control deficiencies. Evaluate each deficiency and classify it per AS 2201/AU-C 265.
 
-Required: Determine whether each deficiency is a control deficiency, significant deficiency, or material weakness.`,
+Required: Determine whether each deficiency is a control deficiency, significant deficiency, or material weakness. Remember: A material weakness exists when there is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 6,
   exhibits: [
@@ -528,7 +528,7 @@ Required: Determine whether each deficiency is a control deficiency, significant
         type: "dropdown",
         correctOptionId: "opt-sd-1",
       },
-      explanation: "While this represents poor segregation of duties, the actual misstatement ($50,000) was below materiality. It's a significant deficiency given the lack of compensating controls.",
+      explanation: "Per AS 2201.A7, while this represents poor segregation of duties with no compensating controls, the actual misstatement ($50,000) was below materiality ($200,000). It is a significant deficiency because, despite the control weakness, there is NOT a reasonable possibility of a material misstatement based on the actual amounts involved. A MW requires a reasonable possibility of material misstatement.",
       dropdownOptions: [
         { id: "opt-cd-1", order: 1, text: "Control deficiency", isCorrect: false },
         { id: "opt-sd-1", order: 2, text: "Significant deficiency", isCorrect: true },
@@ -1666,7 +1666,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
   skillLevel: "evaluation",
   contentArea: "AUD-I",
   title: "Engagement Acceptance Considerations",
-  scenarioText: `Your firm is considering whether to accept new audit engagements. Evaluate each situation and determine whether the firm should accept the engagement.`,
+  scenarioText: `Your firm is considering whether to accept new audit engagements per AU-C 210 (Terms of Engagement) and AICPA Code of Professional Conduct (ET §1.220 – Independence). Evaluate each situation and determine whether the firm should accept the engagement.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 6,
   exhibits: [
@@ -1701,7 +1701,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-decline-a",
       },
-      explanation: "Management integrity is fundamental - if predecessor indicates lack of integrity, this is a strong reason to decline",
+      explanation: "Per AU-C 210.07, management integrity is a precondition for an audit engagement; predecessor's indication of integrity concerns is a strong reason to decline",
       dropdownOptions: [
         { id: "opt-accept-a", order: 1, text: "Accept - predecessor's concerns may be unfounded", isCorrect: false },
         { id: "opt-decline-a", order: 2, text: "Decline - management integrity is essential", isCorrect: true },
@@ -1718,7 +1718,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-accept-b",
       },
-      explanation: "Prior tax services do not impair independence; new audit engagement is acceptable",
+      explanation: "Per ET §1.220, prior tax services do not automatically impair independence for audit services; new audit engagement is acceptable",
       dropdownOptions: [
         { id: "opt-accept-b", order: 1, text: "Accept - prior tax work does not impair independence", isCorrect: true },
         { id: "opt-decline-b", order: 2, text: "Decline - prior relationship creates conflict", isCorrect: false },
@@ -1735,7 +1735,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-accept-c",
       },
-      explanation: "Using specialists/consultants to supplement firm expertise is appropriate - firm can accept",
+      explanation: "Per AU-C 210.06 and AU-C 620, using specialists/consultants to supplement firm expertise is appropriate when firm retains responsibility; firm can accept",
       dropdownOptions: [
         { id: "opt-accept-c", order: 1, text: "Accept - specialists can supplement firm expertise", isCorrect: true },
         { id: "opt-decline-c", order: 2, text: "Decline - firm lacks competence", isCorrect: false },
@@ -1752,7 +1752,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-decline-d",
       },
-      explanation: "Cannot compromise audit quality for fee - insufficient time to perform adequate procedures",
+      explanation: "Per AU-C 210.A14 and QC 10.27, firm cannot compromise audit quality for fee; insufficient time to perform adequate procedures precludes acceptance",
       dropdownOptions: [
         { id: "opt-accept-d", order: 1, text: "Accept - premium fee compensates for time pressure", isCorrect: false },
         { id: "opt-decline-d", order: 2, text: "Decline - cannot perform adequate procedures", isCorrect: true },
@@ -1769,7 +1769,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-independence-e",
       },
-      explanation: "Fee concentration threatens independence - 45% exceeds thresholds; must address concentration first",
+      explanation: "Per ET §1.210.010 (fee concentration threat) and ET §1.220, 45% of firm revenue from one client creates undue influence threat to independence; must address concentration first",
       dropdownOptions: [
         { id: "opt-accept-e", order: 1, text: "Accept - referral is normal business", isCorrect: false },
         { id: "opt-decline-e", order: 2, text: "Decline - creates undue influence", isCorrect: false },
@@ -1786,7 +1786,7 @@ export const audEngagementAcceptanceTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-decline-f",
       },
-      explanation: "Close personal relationship plus equity interest creates independence impairment",
+      explanation: "Per ET §1.220 and §1.270, close personal relationship creates familiarity threat and equity interest creates financial interest impairment - multiple independence threats require declining",
       dropdownOptions: [
         { id: "opt-accept-f", order: 1, text: "Accept - can maintain objectivity", isCorrect: false },
         { id: "opt-decline-f", order: 2, text: "Decline - multiple independence threats", isCorrect: true },
@@ -7067,9 +7067,9 @@ export const audFraudRiskFactorsTBS: TBSQuestion = {
   skillLevel: "analysis",
   contentArea: "AUD-II",
   title: "Fraud Risk Factor Evaluation",
-  scenarioText: `You are planning the audit of Apex Distribution Inc. and must evaluate fraud risk factors as part of the risk assessment process. Information has been gathered from various sources including inquiry, observation, and analytical procedures.
+  scenarioText: `You are planning the audit of Apex Distribution Inc. and must evaluate fraud risk factors as part of the risk assessment process per AU-C 240. Information has been gathered from various sources including inquiry, observation, and analytical procedures.
 
-Required: Evaluate the fraud risk factors and determine appropriate audit responses.`,
+Required: Per AU-C 240.17–.29, evaluate the fraud risk factors (incentive/pressure, opportunity, and rationalization/attitude) and determine appropriate audit responses.`,
   timeEstimateMinutes: 16,
   maxScorePoints: 7,
   exhibits: [
@@ -7159,7 +7159,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-incentive-bonus",
       },
-      explanation: "Management bonus tied to targets creates direct pressure to misstate results",
+      explanation: "Per AU-C 240.A25, management compensation tied to targets creates direct pressure/incentive to misstate results",
       dropdownOptions: [
         { id: "opt-incentive-bonus", order: 1, text: "Management compensation tied to financial targets", isCorrect: true },
         { id: "opt-incentive-cash", order: 2, text: "High volume of cash transactions", isCorrect: false },
@@ -7176,7 +7176,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-opp-governance",
       },
-      explanation: "Weak board composition and lack of audit committee creates significant opportunity through inadequate oversight",
+      explanation: "Per AU-C 240.A26, weak board composition and lack of audit committee creates significant opportunity through inadequate oversight",
       dropdownOptions: [
         { id: "opt-opp-staff", order: 1, text: "Reduced accounting staff", isCorrect: false },
         { id: "opt-opp-governance", order: 2, text: "Weak governance - board dominated by CEO/family", isCorrect: true },
@@ -7193,7 +7193,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-att-reluctant",
       },
-      explanation: "Management reluctance to provide access suggests attitude concerns about auditor scrutiny",
+      explanation: "Per AU-C 240.A27, management reluctance to provide access suggests rationalization/attitude concerns about auditor scrutiny",
       dropdownOptions: [
         { id: "opt-att-cfo", order: 1, text: "Sudden CFO departure", isCorrect: false },
         { id: "opt-att-reluctant", order: 2, text: "Reluctance to provide access to contracts", isCorrect: true },
@@ -7210,7 +7210,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-rev-significant",
       },
-      explanation: "Multiple indicators suggest significant fraud risk in revenue: unusual terms, bill-and-hold inventory, related party growth",
+      explanation: "Per AU-C 240.26–.27, multiple indicators suggest significant fraud risk in revenue: unusual terms, bill-and-hold inventory, related party growth require heightened scrutiny",
       dropdownOptions: [
         { id: "opt-rev-low", order: 1, text: "Low - routine transactions", isCorrect: false },
         { id: "opt-rev-moderate", order: 2, text: "Moderate - some unusual transactions", isCorrect: false },
@@ -7227,7 +7227,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-bh-criteria",
       },
-      explanation: "Bill-and-hold arrangements have specific revenue recognition criteria that must be verified",
+      explanation: "Per AU-C 240.A44, bill-and-hold arrangements have specific revenue recognition criteria (ASC 606-10-55-83) that must be verified as a fraud response",
       dropdownOptions: [
         { id: "opt-bh-accept", order: 1, text: "Accept as normal business practice", isCorrect: false },
         { id: "opt-bh-criteria", order: 2, text: "Verify bill-and-hold criteria are met for revenue recognition", isCorrect: true },
@@ -7244,7 +7244,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-resp-unpredictable",
       },
-      explanation: "Increased professional skepticism and unpredictable audit procedures are appropriate responses",
+      explanation: "Per AU-C 240.29, unpredictable audit procedures and heightened professional skepticism are required responses to identified fraud risks",
       dropdownOptions: [
         { id: "opt-resp-standard", order: 1, text: "Standard audit procedures with increased sample sizes", isCorrect: false },
         { id: "opt-resp-unpredictable", order: 2, text: "Unpredictable audit procedures and heightened skepticism", isCorrect: true },
@@ -7261,7 +7261,7 @@ Required: Evaluate the fraud risk factors and determine appropriate audit respon
         type: "dropdown",
         correctOptionId: "opt-je-review",
       },
-      explanation: "Late adjusting entries require additional scrutiny and understanding of purpose",
+      explanation: "Per AU-C 240.32, late adjusting entries require additional scrutiny as part of journal entry testing for potential management override of controls",
       dropdownOptions: [
         { id: "opt-je-ignore", order: 1, text: "Accept if properly approved", isCorrect: false },
         { id: "opt-je-review", order: 2, text: "Examine entries in detail and inquire about purpose", isCorrect: true },
@@ -9509,9 +9509,9 @@ export const audLawyerLetterTBS: TBSQuestion = {
   skillLevel: "application",
   contentArea: "AUD-III",
   title: "Attorney Letter Evaluation",
-  scenarioText: `You received responses to inquiry letters sent to outside legal counsel for Apex Industries. Evaluate each response for adequacy of audit evidence.
+  scenarioText: `You received responses to inquiry letters sent to outside legal counsel for Apex Industries per AU-C 501.21–.25. Evaluate each response for adequacy of audit evidence regarding litigation, claims, and assessments.
 
-Required: Determine the appropriate audit response to each attorney letter situation.`,
+Required: Per AU-C 501, determine the appropriate audit response to each attorney letter situation, distinguishing between scope limitations and inherent uncertainties.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 6,
   exhibits: [
@@ -9544,7 +9544,7 @@ Required: Determine the appropriate audit response to each attorney letter situa
         type: "dropdown",
         correctOptionId: "opt-a-sufficient",
       },
-      explanation: "Complete response with probability assessments is sufficient audit evidence",
+      explanation: "Per AU-C 501.23, complete response with probability and range assessments provides sufficient appropriate audit evidence for litigation matters",
       dropdownOptions: [
         { id: "opt-a-insufficient", order: 1, text: "Insufficient - need second opinion", isCorrect: false },
         { id: "opt-a-sufficient", order: 2, text: "Sufficient - complete with probability assessments", isCorrect: true },
@@ -9561,7 +9561,7 @@ Required: Determine the appropriate audit response to each attorney letter situa
         type: "dropdown",
         correctOptionId: "opt-b-limitation",
       },
-      explanation: "Refusal to assess likelihood creates scope limitation for that matter",
+      explanation: "Per AU-C 501.24, refusal to assess likelihood is a scope limitation (not inherent uncertainty); auditor must consider alternatives or report implications",
       dropdownOptions: [
         { id: "opt-b-accept", order: 1, text: "Accept - attorneys sometimes cannot opine", isCorrect: false },
         { id: "opt-b-limitation", order: 2, text: "Scope limitation - consider implications and alternatives", isCorrect: true },
@@ -9578,7 +9578,7 @@ Required: Determine the appropriate audit response to each attorney letter situa
         type: "dropdown",
         correctOptionId: "opt-c-inadequate",
       },
-      explanation: "Fee limitation may exclude significant matters; need unrestricted response",
+      explanation: "Per AU-C 501.22, fee limitation may exclude material matters; auditor should request unrestricted response or evaluate scope limitation impact",
       dropdownOptions: [
         { id: "opt-c-adequate", order: 1, text: "Adequate - large matters are more significant", isCorrect: false },
         { id: "opt-c-inadequate", order: 2, text: "Inadequate - request unrestricted response or evaluate impact", isCorrect: true },
@@ -9595,7 +9595,7 @@ Required: Determine the appropriate audit response to each attorney letter situa
         type: "dropdown",
         correctOptionId: "opt-d-serious",
       },
-      explanation: "Non-response from environmental counsel is serious given typical significance",
+      explanation: "Per AU-C 501.25, non-response from counsel specializing in a high-risk area (environmental) constitutes a serious scope limitation requiring management inquiry and potential report modification",
       dropdownOptions: [
         { id: "opt-d-accept", order: 1, text: "Accept - if no environmental issues known", isCorrect: false },
         { id: "opt-d-serious", order: 2, text: "Serious scope limitation - consider management inquiry and report impact", isCorrect: true },
@@ -9612,7 +9612,7 @@ Required: Determine the appropriate audit response to each attorney letter situa
         type: "dropdown",
         correctOptionId: "opt-e-adequate",
       },
-      explanation: "Confirmation that list is complete and no unbilled matters is adequate",
+      explanation: "Per AU-C 501.23, confirmation that matter list is complete with no additional unbilled work provides adequate audit evidence when no litigation exists",
       dropdownOptions: [
         { id: "opt-e-inadequate", order: 1, text: "Inadequate - need probability assessments", isCorrect: false },
         { id: "opt-e-adequate", order: 2, text: "Adequate - confirms no matters beyond those listed", isCorrect: true },
@@ -9629,7 +9629,7 @@ Required: Determine the appropriate audit response to each attorney letter situa
         type: "dropdown",
         correctOptionId: "opt-overall-qualified",
       },
-      explanation: "Material scope limitation may require qualified opinion or disclaimer",
+      explanation: "Per AU-C 705, material scope limitation from inability to obtain sufficient evidence may require qualified opinion or disclaimer depending on pervasiveness",
       dropdownOptions: [
         { id: "opt-overall-unmodified", order: 1, text: "Unmodified - other attorneys responded", isCorrect: false },
         { id: "opt-overall-qualified", order: 2, text: "Qualified or disclaimer depending on materiality", isCorrect: true },
