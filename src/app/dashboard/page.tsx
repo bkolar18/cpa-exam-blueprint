@@ -394,9 +394,9 @@ export default function DashboardPage() {
  color="blue"
  />
  <StatCard
- label="Sections Passed"
- value={`${sectionsPassed}/4`}
- sublabel={sectionsInProgress > 0 ? `${sectionsInProgress} in progress` :"Start studying"}
+ label="Questions Mastered"
+ value={readinessData.reduce((sum, s) => sum + s.correct, 0).toString()}
+ sublabel={readinessData.length > 0 ? `${Math.round(readinessData.reduce((sum, s) => sum + s.accuracy, 0) / readinessData.length)}% accuracy` : "Start practicing"}
  color="green"
  />
  <StatCard

@@ -548,9 +548,9 @@ export default function ReadinessDashboardPage() {
  ))}
  </div>
 
- {/* Score indicator */}
+ {/* Score indicator - hidden on mobile, shown centered below on mobile */}
  <div
- className="absolute top-10 flex flex-col items-center"
+ className="hidden sm:flex absolute top-10 flex-col items-center"
  style={{
  left: `${Math.max(10, Math.min(90, currentReadiness.overallScore))}%`,
  transform: 'translateX(-50%)'
@@ -560,7 +560,15 @@ export default function ReadinessDashboardPage() {
  </div>
  </div>
 
- {/* Milestone Labels */}
+ {/* Mobile: Score and milestone centered */}
+ <div className="sm:hidden mt-4 mb-4 text-center">
+ <div className="text-3xl font-bold text-[var(--foreground)] mb-2">{currentReadiness.overallScore}%</div>
+ <span className={`text-sm font-medium px-3 py-1 rounded-full ${currentMilestone.color} text-white`}>
+ {currentMilestone.label}
+ </span>
+ </div>
+
+ {/* Desktop: Milestone Labels */}
  <div className="hidden sm:flex justify-between text-xs text-[var(--muted)] mt-8 mb-4">
  {milestones.map((milestone) => (
  <div
@@ -571,12 +579,6 @@ export default function ReadinessDashboardPage() {
  {milestone.label}
  </div>
  ))}
- </div>
- {/* Mobile milestone - just show current */}
- <div className="sm:hidden mt-8 mb-4 text-center">
- <span className={`text-sm font-medium px-3 py-1 rounded-full ${currentMilestone.color} text-white`}>
- {currentMilestone.label}
- </span>
  </div>
 
  {/* Motivational Message */}
