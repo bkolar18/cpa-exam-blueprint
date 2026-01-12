@@ -76,7 +76,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 173000,
         tolerance: 0,
       },
-      explanation: "$95,000 + $78,000 = $173,000 (401k and health insurance already excluded from W-2)",
+      explanation: "Per IRC §61, gross wages are $95,000 + $78,000 = $173,000 (401k and health insurance already excluded from W-2).",
     },
     {
       id: "req-total-interest-dividends",
@@ -89,7 +89,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 4450,
         tolerance: 0,
       },
-      explanation: "$1,250 interest + $3,200 dividends = $4,450",
+      explanation: "Per IRC §61, interest and dividends are taxable: $1,250 + $3,200 = $4,450.",
     },
     {
       id: "req-state-refund",
@@ -101,7 +101,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-taxable",
       },
-      explanation: "State tax refund is taxable if taxpayer itemized in prior year and received tax benefit",
+      explanation: "Per IRC §111, state tax refund is taxable under tax benefit rule if taxpayer itemized and received benefit.",
       dropdownOptions: [
         { id: "opt-yes-taxable", order: 1, text: "Yes - included in gross income", isCorrect: true },
         { id: "opt-no-standard", order: 2, text: "No - took standard deduction", isCorrect: false },
@@ -119,7 +119,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 191900,
         tolerance: 0,
       },
-      explanation: "$173,000 + $4,450 + $850 + $5,000 + $8,400 = $191,700 + gambling $5,000 - No, wait. Wages + Interest/Div + State refund + Gambling + Rental = $173,000 + $4,450 + $850 + $5,000 + $8,400 = $191,700. But alimony for 2018 divorce is deductible (pre-2019 divorce). So $191,700.",
+      explanation: "Per IRC §61, total gross income includes wages, interest, dividends, state refund, gambling, rental: $173,000 + $4,450 + $850 + $5,000 + $8,400 = $191,700.",
     },
     {
       id: "req-above-line-deductions",
@@ -132,7 +132,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 20300,
         tolerance: 0,
       },
-      explanation: "Student loan interest $1,800 + Alimony $12,000 (2018 divorce) + IRA $6,500 = $20,300",
+      explanation: "Per IRC §62, above-the-line deductions: student loan interest (§221) $1,800 + alimony (§215, pre-2019 divorce) $12,000 + IRA (§219) $6,500 = $20,300.",
     },
     {
       id: "req-gambling-treatment",
@@ -144,7 +144,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-itemized-limited",
       },
-      explanation: "Gambling losses are itemized deductions limited to gambling winnings",
+      explanation: "Per IRC §165(d), gambling losses are itemized deductions limited to the extent of gambling winnings.",
       dropdownOptions: [
         { id: "opt-above-line", order: 1, text: "Above-the-line deduction", isCorrect: false },
         { id: "opt-itemized-limited", order: 2, text: "Itemized deduction limited to winnings", isCorrect: true },
@@ -162,7 +162,7 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 171400,
         tolerance: 0,
       },
-      explanation: "Gross Income $191,700 - Adjustments $20,300 = $171,400",
+      explanation: "Per IRC §62, AGI = Gross Income − Above-the-line deductions: $191,700 − $20,300 = $171,400.",
     },
   ],
 };
@@ -233,7 +233,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         value: 2625,
         tolerance: 0,
       },
-      explanation: "$16,500 - (7.5% × $185,000 = $13,875) = $2,625",
+      explanation: "Per IRC §213, medical expenses exceed 7.5% AGI floor: $16,500 − ($185,000 × 7.5%) = $2,625.",
     },
     {
       id: "req-salt-deduction",
@@ -246,7 +246,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "State + property ($14,200 + $8,500 = $22,700) capped at $10,000",
+      explanation: "Per IRC §164(b)(6), SALT deduction ($14,200 + $8,500 = $22,700) is capped at $10,000.",
     },
     {
       id: "req-mortgage-interest",
@@ -259,7 +259,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         value: 18000,
         tolerance: 0,
       },
-      explanation: "Full $18,000 deductible - loan under $750,000 acquisition debt limit",
+      explanation: "Per IRC §163(h)(3), full $18,000 deductible − loan under $750,000 acquisition debt limit.",
     },
     {
       id: "req-charity-deduction",
@@ -272,7 +272,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         value: 9200,
         tolerance: 0,
       },
-      explanation: "Cash $8,000 + Clothing FMV $1,200 = $9,200 (under 60% AGI limit)",
+      explanation: "Per IRC §170, charitable contributions: cash $8,000 + clothing FMV $1,200 = $9,200 (under 60% AGI limit).",
     },
     {
       id: "req-casualty-deduction",
@@ -285,7 +285,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Net loss $10,000 - $100 - (10% × $185,000) = $10,000 - $100 - $18,500 = negative, so $0",
+      explanation: "Per IRC §165(h), casualty loss (federally declared disaster): $10,000 − $100 − (10% × $185,000) = negative, so $0.",
     },
     {
       id: "req-total-itemized",
@@ -298,7 +298,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         value: 42325,
         tolerance: 100,
       },
-      explanation: "$2,625 + $10,000 + $18,000 + $9,200 + $2,500 = $42,325 (investment interest limited to NII)",
+      explanation: "Per IRC §67/163, total itemized: $2,625 + $10,000 + $18,000 + $9,200 + $2,500 (limited to NII) = $42,325.",
     },
     {
       id: "req-should-itemize",
@@ -310,7 +310,7 @@ export const regItemizedDeductionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-itemize",
       },
-      explanation: "Itemized deductions $42,325 > Standard deduction $29,200",
+      explanation: "Per IRC §63, compare itemized ($42,325) to standard deduction ($29,200). Itemize for greater benefit.",
       dropdownOptions: [
         { id: "opt-itemize", order: 1, text: "Itemize - provides greater benefit", isCorrect: true },
         { id: "opt-standard", order: 2, text: "Standard deduction - provides greater benefit", isCorrect: false },
@@ -369,7 +369,7 @@ export const regPropertyBasisTBS: TBSQuestion = {
         value: 104300,
         tolerance: 0,
       },
-      explanation: "$100,000 + $3,500 closing + $800 title = $104,300. Points are deductible, not added to basis.",
+      explanation: "Per IRC §1012, basis includes purchase price plus capitalized costs: $100,000 + $3,500 + $800 = $104,300. Points are deductible per §163.",
     },
     {
       id: "req-prop-b-basis",
@@ -382,7 +382,7 @@ export const regPropertyBasisTBS: TBSQuestion = {
         value: 180000,
         tolerance: 0,
       },
-      explanation: "Inherited property receives stepped-up basis to FMV at date of death = $180,000",
+      explanation: "Per IRC §1014, inherited property receives stepped-up basis to FMV at date of death = $180,000.",
     },
     {
       id: "req-prop-b-character",
@@ -394,7 +394,7 @@ export const regPropertyBasisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ltcg",
       },
-      explanation: "Inherited property is automatically long-term regardless of holding period",
+      explanation: "Per IRC §1223(9), inherited property is deemed held long-term regardless of actual holding period.",
       dropdownOptions: [
         { id: "opt-ltcg", order: 1, text: "Long-term capital gain", isCorrect: true },
         { id: "opt-stcg", order: 2, text: "Short-term capital gain", isCorrect: false },
@@ -412,7 +412,7 @@ export const regPropertyBasisTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "FMV at gift < donor basis, so dual basis rules apply. Gain basis $30,000, loss basis $25,000. Sold at $27,000 = no gain or loss (in between).",
+      explanation: "Per IRC §1015, FMV < donor basis triggers dual basis: gain basis $30,000, loss basis $25,000. Sale at $27,000 = no gain/loss.",
     },
     {
       id: "req-prop-d-basis",
@@ -425,7 +425,7 @@ export const regPropertyBasisTBS: TBSQuestion = {
         value: 25000,
         tolerance: 0,
       },
-      explanation: "Carryover basis $20,000 + gift tax on appreciation. Appreciation = $45,000 - $20,000 = $25,000. Gift tax allocation = $5,000 × ($25,000/$25,000) = $5,000. Basis = $20,000 + $5,000 = $25,000.",
+      explanation: "Per IRC §1015(d), carryover basis + gift tax on appreciation: $20,000 + ($5,000 × $25,000/$25,000) = $25,000.",
     },
     {
       id: "req-prop-e-basis",
@@ -438,7 +438,7 @@ export const regPropertyBasisTBS: TBSQuestion = {
         value: 105000,
         tolerance: 0,
       },
-      explanation: "Old basis $75,000 + boot paid $30,000 = $105,000 (no gain recognized as boot was paid, not received)",
+      explanation: "Per IRC §1031, like-kind basis = old basis + boot paid: $75,000 + $30,000 = $105,000 (no gain when boot paid).",
     },
   ],
 };
@@ -506,7 +506,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: 15000,
         tolerance: 0,
       },
-      explanation: "$45,000 - $30,000 = $15,000 LTCG (held > 1 year)",
+      explanation: "Per IRC §1222, $45,000 − $30,000 = $15,000 LTCG (held > 1 year).",
     },
     {
       id: "req-stock-b-loss",
@@ -519,7 +519,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: 6000,
         tolerance: 0,
       },
-      explanation: "$12,000 - $18,000 = -$6,000 STCL (held < 1 year)",
+      explanation: "Per IRC §1222, $12,000 − $18,000 = −$6,000 STCL (held ≤ 1 year).",
     },
     {
       id: "req-stock-c-rate",
@@ -531,7 +531,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-28-pct",
       },
-      explanation: "Collectibles are taxed at maximum 28% rate",
+      explanation: "Per IRC §1(h)(4), collectibles gains are taxed at a maximum 28% rate.",
       dropdownOptions: [
         { id: "opt-15-pct", order: 1, text: "15%", isCorrect: false },
         { id: "opt-20-pct", order: 2, text: "20%", isCorrect: false },
@@ -550,7 +550,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: 14000,
         tolerance: 0,
       },
-      explanation: "$8,000 - $22,000 = -$14,000 LTCL",
+      explanation: "Per IRC §1222, $8,000 − $22,000 = −$14,000 LTCL (held > 1 year).",
     },
     {
       id: "req-qsbs-exclusion",
@@ -563,7 +563,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: 400000,
         tolerance: 0,
       },
-      explanation: "100% exclusion for QSBS held 5+ years (acquired after 2010). Gain = $400,000, fully excludable.",
+      explanation: "Per IRC §1202, 100% exclusion for QSBS held 5+ years (acquired after 2010). Gain = $400,000, fully excludable.",
     },
     {
       id: "req-net-stcg",
@@ -576,7 +576,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: -10000,
         tolerance: 0,
       },
-      explanation: "STCL $6,000 + Carryforward $4,000 = -$10,000 net STCL",
+      explanation: "Per IRC §1212, net STCL: current year −$6,000 + carryforward −$4,000 = −$10,000.",
     },
     {
       id: "req-net-ltcg",
@@ -589,7 +589,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: 14000,
         tolerance: 0,
       },
-      explanation: "LTCG: Stock A $15,000 + Collectibles $13,000 - Stock D $14,000 = $14,000",
+      explanation: "Per IRC §1222, net LTCG (excluding QSBS): $15,000 + $13,000 − $14,000 = $14,000.",
     },
     {
       id: "req-net-result",
@@ -602,7 +602,7 @@ export const regCapitalGainsLossesTBS: TBSQuestion = {
         value: 4000,
         tolerance: 0,
       },
-      explanation: "Net STCL $10,000 offsets LTCG $14,000 = $4,000 net LTCG",
+      explanation: "Per IRC §1222, net STCL $10,000 offsets LTCG $14,000 = $4,000 net LTCG.",
     },
   ],
 };
@@ -671,7 +671,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-control",
       },
-      explanation: "Alice + Bob = 800/1000 = 80%. Services don't count as property, but stock received for services counts in denominator.",
+      explanation: "Per IRC §351(a) and §368(c), Alice + Bob = 800/1000 = 80%. Services excluded from property definition.",
       dropdownOptions: [
         { id: "opt-yes-control", order: 1, text: "Yes - property transferors have 80%+", isCorrect: true },
         { id: "opt-no-control", order: 2, text: "No - property transferors have less than 80%", isCorrect: false },
@@ -689,7 +689,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "No boot received, so no gain recognized despite $60,000 realized gain",
+      explanation: "Per IRC §351(a), no boot received = no gain recognized despite $60,000 realized gain.",
     },
     {
       id: "req-alice-basis",
@@ -702,7 +702,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         value: 40000,
         tolerance: 0,
       },
-      explanation: "Substituted basis = $40,000 (property basis) + $0 gain recognized - $0 boot",
+      explanation: "Per IRC §358, substituted basis = property basis + gain recognized − boot: $40,000 + $0 − $0 = $40,000.",
     },
     {
       id: "req-bob-gain",
@@ -715,7 +715,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         value: 20000,
         tolerance: 0,
       },
-      explanation: "Lesser of gain realized ($40,000) or boot received ($20,000) = $20,000",
+      explanation: "Per IRC §351(b), gain recognized = lesser of realized gain ($40,000) or boot ($20,000) = $20,000.",
     },
     {
       id: "req-bob-basis",
@@ -728,7 +728,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         value: 80000,
         tolerance: 0,
       },
-      explanation: "$80,000 (property basis) + $20,000 (gain recognized) - $20,000 (boot) = $80,000",
+      explanation: "Per IRC §358, basis = $80,000 + $20,000 (gain) − $20,000 (boot) = $80,000.",
     },
     {
       id: "req-carol-income",
@@ -741,7 +741,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         value: 50000,
         tolerance: 0,
       },
-      explanation: "Services = ordinary compensation income of $50,000 (FMV of stock received)",
+      explanation: "Per IRC §61, services = ordinary compensation income of $50,000 (FMV of stock received).",
     },
     {
       id: "req-corp-basis-land",
@@ -754,7 +754,7 @@ export const regCorporateFormationTBS: TBSQuestion = {
         value: 100000,
         tolerance: 0,
       },
-      explanation: "Carryover basis $80,000 + gain recognized by Bob $20,000 = $100,000",
+      explanation: "Per IRC §362, corporation's basis = transferor's basis + gain recognized: $80,000 + $20,000 = $100,000.",
     },
   ],
 };
@@ -823,7 +823,7 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 188500,
         tolerance: 500,
       },
-      explanation: "Taxable income $150,000 - Fed tax $31,500 + Municipal interest $10,000 - Penalties $5,000 + Life insurance $50,000 + Depreciation add-back $15,000 = $188,500",
+      explanation: "Per IRC §312, current E&P = taxable income $150K − tax $31.5K + tax-exempt $10K − penalties $5K + life ins $50K + deprec adj $15K = $188,500.",
     },
     {
       id: "req-april-dividend",
@@ -836,7 +836,7 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 100000,
         tolerance: 0,
       },
-      explanation: "Full $100,000 is dividend - sufficient E&P (current + accumulated)",
+      explanation: "Per IRC §316, full $100,000 is dividend − sufficient current + accumulated E&P available.",
     },
     {
       id: "req-oct-dividend",
@@ -849,7 +849,7 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 150000,
         tolerance: 0,
       },
-      explanation: "Full $150,000 is dividend - still have $288,500 total E&P ($200,000 + $188,500 - $100,000 = $288,500)",
+      explanation: "Per IRC §316, full $150,000 is dividend. Remaining E&P = $200K + $188.5K − $100K = $288,500.",
     },
     {
       id: "req-return-capital",
@@ -862,7 +862,7 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "All distributions covered by E&P - no return of capital",
+      explanation: "Per IRC §301(c), all distributions covered by E&P − no return of capital.",
     },
     {
       id: "req-ending-ep",
@@ -875,7 +875,7 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 138500,
         tolerance: 500,
       },
-      explanation: "$200,000 + $188,500 - $100,000 - $150,000 = $138,500",
+      explanation: "Per IRC §312, ending accumulated E&P = $200K + $188.5K − $100K − $150K = $138,500.",
     },
     {
       id: "req-tom-basis",
@@ -888,7 +888,7 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 50000,
         tolerance: 0,
       },
-      explanation: "Basis unchanged at $50,000 - all distributions were dividends, no return of capital",
+      explanation: "Per IRC §301(c), basis unchanged at $50,000 − all distributions were dividends (no return of capital).",
     },
   ],
 };
@@ -963,7 +963,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 140000,
         tolerance: 0,
       },
-      explanation: "$75,000 + $60,000 ordinary + $5,000 tax-exempt = $140,000. Guaranteed payment doesn't affect basis.",
+      explanation: "Per IRC §705(a)(1), basis increases for income: $75,000 + $60,000 ordinary + $5,000 tax-exempt = $140,000. Guaranteed payments don't affect basis.",
     },
     {
       id: "req-basis-after-deductions",
@@ -976,7 +976,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 117000,
         tolerance: 0,
       },
-      explanation: "$140,000 - $8,000 charity - $15,000 Sec 179 = $117,000",
+      explanation: "Per IRC §705(a)(2), basis decreases for deductions: $140,000 − $8,000 charity − $15,000 Sec 179 = $117,000.",
     },
     {
       id: "req-distribution-taxable",
@@ -989,7 +989,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Cash $50,000 < Basis $117,000, so no gain recognized",
+      explanation: "Per IRC §731(a)(1), gain recognized only if cash exceeds basis. Cash $50,000 < basis $117,000 = no gain.",
     },
     {
       id: "req-basis-after-dist",
@@ -1002,7 +1002,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 67000,
         tolerance: 0,
       },
-      explanation: "$117,000 - $50,000 = $67,000",
+      explanation: "Per IRC §733, basis reduced by cash distributed: $117,000 − $50,000 = $67,000.",
     },
     {
       id: "req-debt-adjustment",
@@ -1015,7 +1015,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 15000,
         tolerance: 0,
       },
-      explanation: "+$25,000 recourse - $10,000 nonrecourse = +$15,000",
+      explanation: "Per IRC §752, liabilities affect basis: +$25,000 recourse − $10,000 nonrecourse decrease = +$15,000 net.",
     },
     {
       id: "req-ending-basis",
@@ -1028,7 +1028,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 82000,
         tolerance: 0,
       },
-      explanation: "$67,000 + $15,000 debt adjustment = $82,000",
+      explanation: "Per IRC §705, ending basis = $67,000 + $15,000 debt adjustment = $82,000.",
     },
     {
       id: "req-guaranteed-treatment",
@@ -1040,7 +1040,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ordinary-income",
       },
-      explanation: "Guaranteed payments are ordinary income to partner, regardless of partnership character",
+      explanation: "Per IRC §707(c), guaranteed payments are ordinary income to partner, subject to self-employment tax.",
       dropdownOptions: [
         { id: "opt-ordinary-income", order: 1, text: "Ordinary income (self-employment)", isCorrect: true },
         { id: "opt-distribution", order: 2, text: "Tax-free distribution", isCorrect: false },
@@ -1057,7 +1057,7 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-generally-no",
       },
-      explanation: "Nonrecourse debt generally doesn't increase at-risk basis (exception for qualified nonrecourse financing)",
+      explanation: "Per IRC §465(b)(6), nonrecourse debt generally not included in at-risk basis (exception for qualified nonrecourse real estate financing).",
       dropdownOptions: [
         { id: "opt-yes", order: 1, text: "Yes - all partnership debt included", isCorrect: false },
         { id: "opt-generally-no", order: 2, text: "No - generally not included", isCorrect: true },
@@ -1138,7 +1138,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         value: 78000,
         tolerance: 0,
       },
-      explanation: "$45,000 + $30,000 + $3,000 = $78,000",
+      explanation: "Per IRC §1367(a)(1), stock basis increases for income: $45,000 + $30,000 + $3,000 = $78,000.",
     },
     {
       id: "req-stock-basis-dist",
@@ -1151,7 +1151,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         value: 53000,
         tolerance: 0,
       },
-      explanation: "$78,000 - $25,000 = $53,000",
+      explanation: "Per IRC §1367(a)(2)(A), stock basis reduced by distributions: $78,000 − $25,000 = $53,000.",
     },
     {
       id: "req-deductible-items",
@@ -1164,7 +1164,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         value: 18000,
         tolerance: 0,
       },
-      explanation: "$12,000 + $6,000 = $18,000",
+      explanation: "Per IRC §1367(a)(2), deductible items: $12,000 Sec 179 + $6,000 charity = $18,000 total.",
     },
     {
       id: "req-ending-stock-basis",
@@ -1177,7 +1177,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         value: 35000,
         tolerance: 0,
       },
-      explanation: "$53,000 - $18,000 = $35,000",
+      explanation: "Per IRC §1367, ending stock basis: $53,000 − $18,000 = $35,000.",
     },
     {
       id: "req-loan-repay-gain",
@@ -1190,7 +1190,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Debt basis $20,000 > Repayment $15,000, so no gain",
+      explanation: "Per IRC §1367(b)(2), loan repayment is gain only if it exceeds debt basis. $20,000 > $15,000 = no gain.",
     },
     {
       id: "req-ending-debt-basis",
@@ -1203,7 +1203,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         value: 5000,
         tolerance: 0,
       },
-      explanation: "$20,000 - $15,000 repayment = $5,000",
+      explanation: "Per IRC §1367, debt basis reduced by repayment: $20,000 − $15,000 = $5,000.",
     },
     {
       id: "req-corp-debt-basis",
@@ -1215,7 +1215,7 @@ export const regSCorpBasisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-no-corp-debt",
       },
-      explanation: "Unlike partnerships, S corp shareholders only get basis for DIRECT loans to the corporation",
+      explanation: "Per IRC §1366(d)(1), S corp shareholders only get debt basis for direct loans from shareholder to corporation, unlike partnership liability sharing.",
       dropdownOptions: [
         { id: "opt-yes-corp-debt", order: 1, text: "Yes - like partnerships", isCorrect: false },
         { id: "opt-no-corp-debt", order: 2, text: "No - only direct shareholder loans", isCorrect: true },
@@ -1293,7 +1293,7 @@ export const regGiftTaxTBS: TBSQuestion = {
         value: 32000,
         tolerance: 0,
       },
-      explanation: "$50,000 - $18,000 annual exclusion = $32,000",
+      explanation: "Per IRC §2503(b), taxable gift = $50,000 − $18,000 annual exclusion = $32,000.",
     },
     {
       id: "req-daughter-taxable",
@@ -1306,7 +1306,7 @@ export const regGiftTaxTBS: TBSQuestion = {
         value: 57000,
         tolerance: 0,
       },
-      explanation: "$75,000 - $18,000 = $57,000",
+      explanation: "Per IRC §2503(b), taxable gift = $75,000 − $18,000 annual exclusion = $57,000.",
     },
     {
       id: "req-grandson-taxable",
@@ -1319,7 +1319,7 @@ export const regGiftTaxTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Educational exclusion - tuition paid directly to institution is unlimited",
+      explanation: "Per IRC §2503(e), qualified tuition paid directly to educational institution is excluded − unlimited amount.",
     },
     {
       id: "req-granddaughter-taxable",
@@ -1332,7 +1332,7 @@ export const regGiftTaxTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Medical exclusion - bills paid directly to provider are unlimited",
+      explanation: "Per IRC §2503(e), medical expenses paid directly to provider are excluded − unlimited amount.",
     },
     {
       id: "req-total-taxable-gifts",
@@ -1345,7 +1345,7 @@ export const regGiftTaxTBS: TBSQuestion = {
         value: 89000,
         tolerance: 0,
       },
-      explanation: "$32,000 + $57,000 = $89,000 (political and charitable not taxable gifts)",
+      explanation: "Per IRC §2501, total taxable gifts = $32,000 + $57,000 = $89,000 (political and charitable are not taxable gifts).",
     },
     {
       id: "req-tax-owed",
@@ -1357,7 +1357,7 @@ export const regGiftTaxTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-no-unified",
       },
-      explanation: "Taxable gifts reduce lifetime exemption but no tax owed until exemption exhausted",
+      explanation: "Per IRC §2505, unified credit offsets gift tax − taxable gifts reduce lifetime exemption but no tax owed until exemption exhausted.",
       dropdownOptions: [
         { id: "opt-yes-tax", order: 1, text: "Yes - tax due on taxable gifts", isCorrect: false },
         { id: "opt-no-unified", order: 2, text: "No - covered by unified credit", isCorrect: true },
@@ -1418,7 +1418,7 @@ Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (conting
         type: "dropdown",
         correctOptionId: "opt-violation-1",
       },
-      explanation: "Practitioner cannot rely solely on oral assurances; must make reasonable inquiries for documentation",
+      explanation: "Per Circular 230 §10.34(d), practitioner cannot rely solely on oral assurances − must make reasonable inquiries for supporting documentation.",
       dropdownOptions: [
         { id: "opt-compliant-1", order: 1, text: "Compliant - client representation is sufficient", isCorrect: false },
         { id: "opt-violation-1", order: 2, text: "Violation - must make reasonable inquiries", isCorrect: true },
@@ -1435,7 +1435,7 @@ Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (conting
         type: "dropdown",
         correctOptionId: "opt-advise-2",
       },
-      explanation: "Must advise client of error and consequences; cannot be required to file amended but may need to withdraw",
+      explanation: "Per Circular 230 §10.21, practitioner must advise client of error and consequences − cannot require client to amend but may need to withdraw from engagement.",
       dropdownOptions: [
         { id: "opt-must-amend-2", order: 1, text: "Must file amended return", isCorrect: false },
         { id: "opt-advise-2", order: 2, text: "Advise client; consider withdrawal if continued", isCorrect: true },
@@ -1469,7 +1469,7 @@ Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (conting
         type: "dropdown",
         correctOptionId: "opt-violation-4",
       },
-      explanation: "Written advice must consider all relevant facts; time pressure is not an excuse",
+      explanation: "Per Circular 230 §10.37, written advice must consider all relevant facts − time pressure is not an excuse for incomplete analysis.",
       dropdownOptions: [
         { id: "opt-compliant-4", order: 1, text: "Compliant if facts were reasonable", isCorrect: false },
         { id: "opt-violation-4", order: 2, text: "Violation - must consider all relevant facts", isCorrect: true },
@@ -1486,7 +1486,7 @@ Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (conting
         type: "dropdown",
         correctOptionId: "opt-violation-5",
       },
-      explanation: "Cannot disclose confidential information without client consent (with limited exceptions)",
+      explanation: "Per IRC §7216, cannot disclose confidential tax return information without client consent (limited exceptions for subpoenas, court orders).",
       dropdownOptions: [
         { id: "opt-compliant-5", order: 1, text: "Compliant - subcontractor is agent", isCorrect: false },
         { id: "opt-violation-5", order: 2, text: "Violation - requires client consent", isCorrect: true },
@@ -1503,7 +1503,7 @@ Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (conting
         type: "dropdown",
         correctOptionId: "opt-compliant-6",
       },
-      explanation: "Substantial authority (>35%) allows position without disclosure; realistic possibility (>33%) is minimum",
+      explanation: "Per Circular 230 §10.34, substantial authority (>35%) allows position without disclosure; realistic possibility (>33%) is minimum standard.",
       dropdownOptions: [
         { id: "opt-compliant-6", order: 1, text: "Compliant - substantial authority met", isCorrect: true },
         { id: "opt-need-disclose-6", order: 2, text: "Must disclose on Form 8275", isCorrect: false },
@@ -1569,7 +1569,7 @@ Needed: Primary IRC citation for the Modified Accelerated Cost Recovery System (
           { source: "IRC", topicCode: "26 USC 168" },
         ],
       },
-      explanation: "IRC Section 168 provides the rules for the Accelerated Cost Recovery System (MACRS depreciation).",
+      explanation: "Per IRC §168, the Accelerated Cost Recovery System (MACRS) provides depreciation rules for tangible property.",
     },
   ],
 };
@@ -1622,7 +1622,7 @@ export const regContractFormationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-valid-1",
       },
-      explanation: "Jerry's counteroffer was accepted by Tom - valid contract at $14,000",
+      explanation: "Per common law contract principles, Jerry's counteroffer terminated Tom's offer − Tom's acceptance formed contract at $14,000.",
       dropdownOptions: [
         { id: "opt-valid-1", order: 1, text: "Valid contract at $14,000", isCorrect: true },
         { id: "opt-invalid-1", order: 2, text: "No contract - terms unclear", isCorrect: false },
@@ -1639,7 +1639,7 @@ export const regContractFormationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-unenforceable-2",
       },
-      explanation: "Gratuitous promise lacks consideration - generally unenforceable",
+      explanation: "Per common law, gratuitous promise lacks consideration − generally unenforceable absent detrimental reliance.",
       dropdownOptions: [
         { id: "opt-valid-2", order: 1, text: "Valid contract", isCorrect: false },
         { id: "opt-unenforceable-2", order: 2, text: "Unenforceable - no consideration", isCorrect: true },
@@ -1656,7 +1656,7 @@ export const regContractFormationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-enforceable-3",
       },
-      explanation: "Although UCC requires writing for goods $500+, full performance removes from Statute of Frauds",
+      explanation: "Per UCC §2-201, goods $500+ require writing, but full performance exception applies − contract enforceable.",
       dropdownOptions: [
         { id: "opt-void-3", order: 1, text: "Void - exceeds $500 UCC limit", isCorrect: false },
         { id: "opt-enforceable-3", order: 2, text: "Enforceable - fully performed", isCorrect: true },
@@ -1673,7 +1673,7 @@ export const regContractFormationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-liable-4",
       },
-      explanation: "Minors are liable for reasonable value of necessities",
+      explanation: "Per common law, minors are liable for reasonable value of necessities (food, clothing, shelter, medical care).",
       dropdownOptions: [
         { id: "opt-void-4", order: 1, text: "Void - minor cannot contract", isCorrect: false },
         { id: "opt-liable-4", order: 2, text: "Minor liable for reasonable value", isCorrect: true },
@@ -1690,7 +1690,7 @@ export const regContractFormationTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-voidable-5",
       },
-      explanation: "Contract voidable by intoxicated party if unable to understand transaction",
+      explanation: "Per common law, contract is voidable by intoxicated party if unable to understand nature of transaction.",
       dropdownOptions: [
         { id: "opt-void-5", order: 1, text: "Void from inception", isCorrect: false },
         { id: "opt-valid-5", order: 2, text: "Valid and enforceable", isCorrect: false },
@@ -1745,7 +1745,7 @@ export const regAgencyLawTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-principal-only",
       },
-      explanation: "For disclosed principal, only principal is liable on contract",
+      explanation: "Per Restatement of Agency, for disclosed principal, only principal is liable on contract − agent is not party.",
       dropdownOptions: [
         { id: "opt-agent-only", order: 1, text: "Sue agent only", isCorrect: false },
         { id: "opt-principal-only", order: 2, text: "Sue principal only", isCorrect: true },
@@ -1762,7 +1762,7 @@ export const regAgencyLawTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-employer-liable",
       },
-      explanation: "Respondeat superior - employer liable for employee torts in scope of employment",
+      explanation: "Per respondeat superior doctrine, employer vicariously liable for employee torts committed within scope of employment.",
       dropdownOptions: [
         { id: "opt-employee-only", order: 1, text: "Employee only liable", isCorrect: false },
         { id: "opt-employer-liable", order: 2, text: "Both employer and employee liable", isCorrect: true },
@@ -1779,7 +1779,7 @@ export const regAgencyLawTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ratification",
       },
-      explanation: "Accepting benefits constitutes ratification, binding principal to contract",
+      explanation: "Per Restatement of Agency, accepting benefits constitutes ratification − principal bound to entire contract.",
       dropdownOptions: [
         { id: "opt-void", order: 1, text: "Contract remains void", isCorrect: false },
         { id: "opt-ratification", order: 2, text: "Contract ratified - principal bound", isCorrect: true },
@@ -1796,7 +1796,7 @@ export const regAgencyLawTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-both-liable",
       },
-      explanation: "For undisclosed principal, both agent and principal liable until election made",
+      explanation: "Per Restatement of Agency, for undisclosed principal, both agent and principal are liable until third party elects to proceed against one.",
       dropdownOptions: [
         { id: "opt-agent-liable", order: 1, text: "Agent only liable", isCorrect: false },
         { id: "opt-principal-liable", order: 2, text: "Principal only liable", isCorrect: false },
@@ -1813,7 +1813,7 @@ export const regAgencyLawTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-apparent",
       },
-      explanation: "Apparent authority - principal bound if third party reasonably believed agent had authority",
+      explanation: "Per Restatement of Agency, apparent authority binds principal if third party reasonably believed agent had authority and principal failed to notify.",
       dropdownOptions: [
         { id: "opt-not-bound", order: 1, text: "Principal not bound - agency terminated", isCorrect: false },
         { id: "opt-apparent", order: 2, text: "Principal bound under apparent authority", isCorrect: true },
@@ -1830,7 +1830,7 @@ export const regAgencyLawTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-not-bound",
       },
-      explanation: "Agent clearly exceeded scope - principal not bound unless ratifies",
+      explanation: "Per Restatement of Agency, agent exceeded scope of authority − principal not bound unless ratifies the unauthorized act.",
       dropdownOptions: [
         { id: "opt-bound", order: 1, text: "Principal bound - agency existed", isCorrect: false },
         { id: "opt-not-bound", order: 2, text: "Principal not bound - exceeded authority", isCorrect: true },
@@ -1905,7 +1905,7 @@ export const regSelfEmploymentTaxTBS: TBSQuestion = {
         value: 135000,
         tolerance: 0,
       },
-      explanation: "$180,000 - $45,000 = $135,000",
+      explanation: "Per IRC §162, net self-employment income = gross receipts − business expenses: $180,000 − $45,000 = $135,000.",
     },
     {
       id: "req-se-earnings",
@@ -1918,7 +1918,7 @@ export const regSelfEmploymentTaxTBS: TBSQuestion = {
         value: 124673,
         tolerance: 100,
       },
-      explanation: "$135,000 × 92.35% = $124,672.50",
+      explanation: "Per IRC §1402(a), net SE earnings = net income × 92.35%: $135,000 × 92.35% = $124,672.50.",
     },
     {
       id: "req-ss-wages-remaining",
@@ -1931,7 +1931,7 @@ export const regSelfEmploymentTaxTBS: TBSQuestion = {
         value: 143600,
         tolerance: 0,
       },
-      explanation: "$168,600 - $25,000 = $143,600",
+      explanation: "Per IRC §1401, SS wage base reduced by W-2 wages: $168,600 − $25,000 = $143,600 remaining.",
     },
     {
       id: "req-total-se-tax",
@@ -1944,7 +1944,7 @@ export const regSelfEmploymentTaxTBS: TBSQuestion = {
         value: 19082,
         tolerance: 50,
       },
-      explanation: "SS: $124,673 × 12.4% = $15,459 + Medicare: $124,673 × 2.9% = $3,615 = $19,074",
+      explanation: "Per IRC §1401, SE tax = SS ($124,673 × 12.4% = $15,459) + Medicare ($124,673 × 2.9% = $3,615) = $19,074.",
     },
     {
       id: "req-se-deduction",
@@ -1957,7 +1957,7 @@ export const regSelfEmploymentTaxTBS: TBSQuestion = {
         value: 9541,
         tolerance: 50,
       },
-      explanation: "$19,082 × 50% = $9,541 (employer portion deductible)",
+      explanation: "Per IRC §164(f), above-the-line deduction = 50% of SE tax: $19,082 × 50% = $9,541 (employer portion).",
     },
   ],
 };
@@ -2027,7 +2027,7 @@ export const regAMTCalculationTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "Only $10,000 was deducted for regular tax (SALT cap), so add back $10,000",
+      explanation: "Per IRC §56, SALT not deductible for AMT. Regular tax limited to $10,000 (§164(b)(6)), so add back $10,000.",
     },
     {
       id: "req-amti-before-exemption",
@@ -2040,7 +2040,7 @@ export const regAMTCalculationTBS: TBSQuestion = {
         value: 443000,
         tolerance: 0,
       },
-      explanation: "$350,000 + $10,000 SALT + $75,000 ISO + $8,000 PAB interest = $443,000",
+      explanation: "Per IRC §55-56, AMTI = $350,000 + $10,000 SALT + $75,000 ISO bargain (§56(b)(3)) + $8,000 PAB interest = $443,000.",
     },
     {
       id: "req-amt-exemption",
@@ -2053,7 +2053,7 @@ export const regAMTCalculationTBS: TBSQuestion = {
         value: 133300,
         tolerance: 0,
       },
-      explanation: "Full exemption available - AMTI below phaseout threshold",
+      explanation: "Per IRC §55(d), full exemption of $133,300 available − AMTI below $1,218,700 phaseout threshold.",
     },
     {
       id: "req-amt-taxable",
@@ -2066,7 +2066,7 @@ export const regAMTCalculationTBS: TBSQuestion = {
         value: 309700,
         tolerance: 0,
       },
-      explanation: "$443,000 - $133,300 = $309,700",
+      explanation: "Per IRC §55, AMT taxable income = AMTI − exemption: $443,000 − $133,300 = $309,700.",
     },
     {
       id: "req-tentative-amt",
@@ -2079,7 +2079,7 @@ export const regAMTCalculationTBS: TBSQuestion = {
         value: 82236,
         tolerance: 200,
       },
-      explanation: "$220,700 × 26% = $57,382 + ($309,700 - $220,700) × 28% = $24,920 = $82,302",
+      explanation: "Per IRC §55(b), tentative AMT = ($220,700 × 26% = $57,382) + ($89,000 × 28% = $24,920) = $82,302.",
     },
     {
       id: "req-amt-liability",
@@ -2092,7 +2092,7 @@ export const regAMTCalculationTBS: TBSQuestion = {
         value: 13893,
         tolerance: 200,
       },
-      explanation: "$82,302 - $68,409 = $13,893 AMT owed",
+      explanation: "Per IRC §55(a), AMT = tentative AMT − regular tax: $82,302 − $68,409 = $13,893 AMT owed.",
     },
   ],
 };
@@ -2160,7 +2160,7 @@ export const regLikKindExchangeTBS: TBSQuestion = {
         value: 170000,
         tolerance: 0,
       },
-      explanation: "FMV relinquished $450,000 - Basis $280,000 = $170,000 gain realized",
+      explanation: "Per IRC §1001, gain realized = amount realized − adjusted basis: $450,000 − $280,000 = $170,000.",
     },
     {
       id: "req-net-debt-relief",
@@ -2173,7 +2173,7 @@ export const regLikKindExchangeTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Old mortgage $100,000 - New mortgage $150,000 = -$50,000 (net debt assumed, not relief)",
+      explanation: "Per IRC §1031, net debt relief = old mortgage − new mortgage: $100,000 − $150,000 = −$50,000 (net assumption, not relief).",
     },
     {
       id: "req-boot-paid",
@@ -2186,7 +2186,7 @@ export const regLikKindExchangeTBS: TBSQuestion = {
         value: 70000,
         tolerance: 0,
       },
-      explanation: "Cash $20,000 + Net debt assumed $50,000 = $70,000 boot paid",
+      explanation: "Per IRC §1031(b), boot paid = cash + net debt assumed: $20,000 + $50,000 = $70,000.",
     },
     {
       id: "req-gain-recognized",
@@ -2199,7 +2199,7 @@ export const regLikKindExchangeTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "No boot received (only paid), so no gain recognized",
+      explanation: "Per IRC §1031(b), gain recognized only to extent of boot received − no boot received, so $0 gain recognized.",
     },
     {
       id: "req-new-basis",
@@ -2212,7 +2212,7 @@ export const regLikKindExchangeTBS: TBSQuestion = {
         value: 350000,
         tolerance: 0,
       },
-      explanation: "$280,000 + $70,000 boot paid = $350,000",
+      explanation: "Per IRC §1031(d), basis = old basis + boot paid: $280,000 + $70,000 = $350,000.",
     },
     {
       id: "req-deferred-gain",
@@ -2225,7 +2225,7 @@ export const regLikKindExchangeTBS: TBSQuestion = {
         value: 170000,
         tolerance: 0,
       },
-      explanation: "Full $170,000 gain deferred (FMV $520,000 - Basis $350,000 = $170,000)",
+      explanation: "Per IRC §1031, full $170,000 gain deferred: FMV $520,000 − basis $350,000 = $170,000 built-in gain.",
     },
   ],
 };
@@ -2291,7 +2291,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-non-passive",
       },
-      explanation: "Material participation = non-passive income (cannot offset passive losses)",
+      explanation: "Per IRC §469(c), material participation results in non-passive income − cannot be offset by passive losses.",
       dropdownOptions: [
         { id: "opt-passive", order: 1, text: "Passive income", isCorrect: false },
         { id: "opt-non-passive", order: 2, text: "Non-passive income", isCorrect: true },
@@ -2309,7 +2309,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "-$18,000 + $8,000 = -$10,000 net rental loss",
+      explanation: "Per IRC §469, rental activities grouped: −$18,000 + $8,000 = −$10,000 net rental loss.",
     },
     {
       id: "req-rental-allowance",
@@ -2322,7 +2322,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "AGI $95,000 < $100,000, so full $25,000 available. Only $10,000 loss, fully deductible.",
+      explanation: "Per IRC §469(i), $25,000 allowance available (AGI $95,000 < $100,000 phaseout). $10,000 loss fully deductible.",
     },
     {
       id: "req-partnership-deductible",
@@ -2335,7 +2335,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "No passive income to offset (S Corp is non-passive). Partnership loss suspended.",
+      explanation: "Per IRC §469(a), passive losses only offset passive income − no passive income available, so partnership loss suspended.",
     },
     {
       id: "req-total-deductible",
@@ -2348,7 +2348,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "Only rental $10,000 under special allowance. Partnership loss suspended.",
+      explanation: "Per IRC §469(i), only $10,000 rental loss deductible under active participation allowance. Partnership loss fully suspended.",
     },
     {
       id: "req-rental-carryforward",
@@ -2361,7 +2361,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         value: 12000,
         tolerance: 0,
       },
-      explanation: "Prior suspended $12,000 remains (current loss fully used by allowance)",
+      explanation: "Per IRC §469(b), prior suspended $12,000 carries forward − current loss fully absorbed by allowance.",
     },
     {
       id: "req-partnership-carryforward",
@@ -2374,7 +2374,7 @@ export const regPassiveLossesTBS: TBSQuestion = {
         value: 40000,
         tolerance: 0,
       },
-      explanation: "Prior $15,000 + Current $25,000 = $40,000 suspended",
+      explanation: "Per IRC §469(b), suspended losses carry forward: prior $15,000 + current $25,000 = $40,000 total.",
     },
   ],
 };
@@ -2438,7 +2438,7 @@ export const regDepreciationRecaptureTBS: TBSQuestion = {
         value: 55000,
         tolerance: 0,
       },
-      explanation: "$80,000 - ($120,000 - $95,000) = $80,000 - $25,000 = $55,000 gain",
+      explanation: "Per IRC §1001, gain = sale price − adjusted basis: $80,000 − ($120,000 − $95,000) = $55,000.",
     },
     {
       id: "req-equipment-1245",
@@ -2451,7 +2451,7 @@ export const regDepreciationRecaptureTBS: TBSQuestion = {
         value: 55000,
         tolerance: 0,
       },
-      explanation: "Lesser of gain ($55,000) or depreciation ($95,000) = $55,000 ordinary",
+      explanation: "Per IRC §1245, recapture = lesser of gain ($55,000) or depreciation ($95,000) = $55,000 ordinary income.",
     },
     {
       id: "req-building-gain",
@@ -2464,7 +2464,7 @@ export const regDepreciationRecaptureTBS: TBSQuestion = {
         value: 70000,
         tolerance: 0,
       },
-      explanation: "$320,000 - ($400,000 - $150,000) = $320,000 - $250,000 = $70,000 gain",
+      explanation: "Per IRC §1001, gain = sale price − adjusted basis: $320,000 − ($400,000 − $150,000) = $70,000.",
     },
     {
       id: "req-building-unrecaptured",
@@ -2477,7 +2477,7 @@ export const regDepreciationRecaptureTBS: TBSQuestion = {
         value: 70000,
         tolerance: 0,
       },
-      explanation: "Lesser of gain ($70,000) or straight-line depreciation ($150,000) = $70,000 at 25%",
+      explanation: "Per IRC §1(h)(1)(E), unrecaptured §1250 = lesser of gain ($70,000) or straight-line depreciation ($150,000) = $70,000 at 25% max rate.",
     },
     {
       id: "req-furniture-gain",
@@ -2490,7 +2490,7 @@ export const regDepreciationRecaptureTBS: TBSQuestion = {
         value: 12000,
         tolerance: 0,
       },
-      explanation: "$12,000 - ($50,000 - $50,000) = $12,000 - $0 = $12,000 gain",
+      explanation: "Per IRC §1001, gain = sale price − basis: $12,000 − ($50,000 − $50,000) = $12,000 gain (fully depreciated).",
     },
     {
       id: "req-total-ordinary",
@@ -2503,7 +2503,7 @@ export const regDepreciationRecaptureTBS: TBSQuestion = {
         value: 67000,
         tolerance: 0,
       },
-      explanation: "Equipment $55,000 + Furniture $12,000 = $67,000 ordinary (Sec 1245)",
+      explanation: "Per IRC §1245, total ordinary recapture = Equipment $55,000 + Furniture $12,000 = $67,000.",
     },
   ],
 };
@@ -2553,7 +2553,7 @@ export const regEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-smllc",
       },
-      explanation: "Single-member LLC provides liability protection, minimal compliance, flexible",
+      explanation: "Per Reg. §301.7701-3, single-member LLC is disregarded for tax − provides liability protection with minimal compliance.",
       dropdownOptions: [
         { id: "opt-sole", order: 1, text: "Sole proprietorship", isCorrect: false },
         { id: "opt-smllc", order: 2, text: "Single-member LLC (disregarded entity)", isCorrect: true },
@@ -2570,7 +2570,7 @@ export const regEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ccorp-b",
       },
-      explanation: "C Corp allows retained earnings at 21% rate, professional corporation for liability",
+      explanation: "Per IRC §11, C Corporation allows retained earnings at flat 21% rate − professional corporation provides liability protection.",
       dropdownOptions: [
         { id: "opt-partnership-b", order: 1, text: "General partnership", isCorrect: false },
         { id: "opt-ccorp-b", order: 2, text: "C Corporation (professional corporation)", isCorrect: true },
@@ -2587,7 +2587,7 @@ export const regEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ccorp-c",
       },
-      explanation: "C Corp required for most VC funding and going public",
+      explanation: "Per securities regulations, C Corporation structure required for most VC funding and IPO − allows multiple stock classes.",
       dropdownOptions: [
         { id: "opt-llc-c", order: 1, text: "LLC", isCorrect: false },
         { id: "opt-scorp-c", order: 2, text: "S Corporation", isCorrect: false },
@@ -2604,7 +2604,7 @@ export const regEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-partnership-d",
       },
-      explanation: "Partnership or LLC allows flexible ownership transfers and income allocation",
+      explanation: "Per IRC §704, partnership/LLC allows flexible special allocations for income splitting among family members.",
       dropdownOptions: [
         { id: "opt-sole-d", order: 1, text: "Sole proprietorship", isCorrect: false },
         { id: "opt-partnership-d", order: 2, text: "Family LLC taxed as partnership", isCorrect: true },
@@ -2621,7 +2621,7 @@ export const regEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-llp-e",
       },
-      explanation: "LLP provides liability protection while maintaining partnership tax treatment",
+      explanation: "Per state LLP statutes and IRC Subchapter K, LLP provides liability protection while maintaining pass-through taxation.",
       dropdownOptions: [
         { id: "opt-gp-e", order: 1, text: "General partnership", isCorrect: false },
         { id: "opt-llp-e", order: 2, text: "Limited liability partnership", isCorrect: true },
@@ -2638,7 +2638,7 @@ export const regEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-llc-f",
       },
-      explanation: "LLC taxed as partnership allows pass-through of losses (subject to passive rules)",
+      explanation: "Per IRC §469 and Subchapter K, LLC taxed as partnership allows pass-through of losses (subject to passive activity and at-risk rules).",
       dropdownOptions: [
         { id: "opt-ccorp-f", order: 1, text: "C Corporation", isCorrect: false },
         { id: "opt-scorp-f", order: 2, text: "S Corporation", isCorrect: false },
@@ -2698,7 +2698,7 @@ Needed: Primary IRC citation for the nonrecognition provision that allows deferr
           { source: "IRC", topicCode: "26 USC 351" },
         ],
       },
-      explanation: "IRC Section 351 provides for nonrecognition of gain or loss on transfers to controlled corporations.",
+      explanation: "Per IRC §351, no gain or loss is recognized on transfers of property to a corporation solely in exchange for stock if transferors control corporation immediately after.",
     },
   ],
 };
@@ -2790,7 +2790,7 @@ export const regEstateTaxTBS: TBSQuestion = {
         value: 8300000,
         tolerance: 0,
       },
-      explanation: "$850,000 + $2,500,000 + $1,000,000 + $750,000 + $3,000,000 + $200,000 = $8,300,000",
+      explanation: "Per IRC §2031, gross estate includes all property owned at death: $850K + $2,500K + $1,000K + $750K + $3,000K + $200K = $8,300,000.",
     },
     {
       id: "req-deductions",
@@ -2803,7 +2803,7 @@ export const regEstateTaxTBS: TBSQuestion = {
         value: 450000,
         tolerance: 0,
       },
-      explanation: "$300,000 + $50,000 + $25,000 + $75,000 = $450,000",
+      explanation: "Per IRC §2053, deductible debts and expenses: $300K + $50K + $25K + $75K = $450,000.",
     },
     {
       id: "req-marital-deduction",
@@ -2816,7 +2816,7 @@ export const regEstateTaxTBS: TBSQuestion = {
         value: 2600000,
         tolerance: 0,
       },
-      explanation: "Residence $850,000 + IRA $750,000 + Investment $1,000,000 = $2,600,000 to spouse",
+      explanation: "Per IRC §2056, unlimited marital deduction: Residence $850K + IRA $750K + Investment $1,000K = $2,600,000 to spouse.",
     },
     {
       id: "req-charitable-deduction",
@@ -2829,7 +2829,7 @@ export const regEstateTaxTBS: TBSQuestion = {
         value: 100000,
         tolerance: 0,
       },
-      explanation: "$100,000 cash to charity",
+      explanation: "Per IRC §2055, charitable deduction = $100,000 cash bequest to qualified charity.",
     },
     {
       id: "req-taxable-estate",
@@ -2842,7 +2842,7 @@ export const regEstateTaxTBS: TBSQuestion = {
         value: 5150000,
         tolerance: 0,
       },
-      explanation: "$8,300,000 - $450,000 - $2,600,000 - $100,000 = $5,150,000",
+      explanation: "Per IRC §2051, taxable estate = gross estate − deductions: $8,300K − $450K − $2,600K − $100K = $5,150,000.",
     },
     {
       id: "req-estate-tax-before-credit",
@@ -2855,7 +2855,7 @@ export const regEstateTaxTBS: TBSQuestion = {
         value: 2260000,
         tolerance: 5000,
       },
-      explanation: "($5,150,000 + $500,000) × 40% = $2,260,000 tentative tax",
+      explanation: "Per IRC §2001, tentative tax on taxable estate + prior gifts: ($5,150K + $500K) × 40% = $2,260,000.",
     },
   ],
 };
@@ -2924,7 +2924,7 @@ export const regNIITTBS: TBSQuestion = {
         value: 465000,
         tolerance: 0,
       },
-      explanation: "$285,000 + $15,000 + $25,000 + $40,000 + $30,000 + $50,000 + $20,000 = $465,000",
+      explanation: "Per IRC §1411, MAGI includes all income: $285K + $15K + $25K + $40K + $30K + $50K + $20K = $465,000.",
     },
     {
       id: "req-net-investment-income",
@@ -2937,7 +2937,7 @@ export const regNIITTBS: TBSQuestion = {
         value: 110000,
         tolerance: 0,
       },
-      explanation: "$15,000 + $25,000 + $40,000 + $30,000 = $110,000 (excludes wages, active S corp, guaranteed payment)",
+      explanation: "Per IRC §1411(c), NII = investment income only: $15K + $25K + $40K + $30K = $110,000 (excludes wages, active business, guaranteed payments).",
     },
     {
       id: "req-excess-over-threshold",
@@ -2950,7 +2950,7 @@ export const regNIITTBS: TBSQuestion = {
         value: 215000,
         tolerance: 0,
       },
-      explanation: "$465,000 - $250,000 = $215,000",
+      explanation: "Per IRC §1411(b), MAGI excess over MFJ threshold: $465,000 − $250,000 = $215,000.",
     },
     {
       id: "req-niit-base",
@@ -2963,7 +2963,7 @@ export const regNIITTBS: TBSQuestion = {
         value: 110000,
         tolerance: 0,
       },
-      explanation: "Lesser of $110,000 (NII) or $215,000 (excess) = $110,000",
+      explanation: "Per IRC §1411(a), NIIT base = lesser of NII ($110,000) or excess over threshold ($215,000) = $110,000.",
     },
     {
       id: "req-niit-amount",
@@ -2976,7 +2976,7 @@ export const regNIITTBS: TBSQuestion = {
         value: 4180,
         tolerance: 10,
       },
-      explanation: "$110,000 × 3.8% = $4,180",
+      explanation: "Per IRC §1411(a)(1), NIIT = 3.8% × base: $110,000 × 3.8% = $4,180.",
     },
   ],
 };
@@ -3058,7 +3058,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 85.8,
         tolerance: 1,
       },
-      explanation: "($450,000 - $364,200) / $100,000 = 85.8% phase-out",
+      explanation: "Per IRC §199A(d), phase-out = (taxable income − threshold) / range: ($450,000 − $364,200) / $100,000 = 85.8%.",
     },
     {
       id: "req-manufacturing-deduction",
@@ -3071,7 +3071,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 24000,
         tolerance: 0,
       },
-      explanation: "Basic: $120,000 × 20% = $24,000; W-2 limit: Greater of 50% × $200,000 = $100,000 OR 25% × $200,000 + 2.5% × $500,000 = $62,500. Not limited.",
+      explanation: "Per IRC §199A(b), QBI deduction = 20% × $120,000 = $24,000. W-2 limit (greater of 50% wages or 25% wages + 2.5% UBIA) not limiting.",
     },
     {
       id: "req-consulting-deduction",
@@ -3084,7 +3084,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 5112,
         tolerance: 100,
       },
-      explanation: "Allowable QBI: $180,000 × (1 - 85.8%) = $25,560; Deduction: $25,560 × 20% = $5,112",
+      explanation: "Per IRC §199A(d), SSTB QBI reduced: $180,000 × (1 − 85.8%) = $25,560; deduction = $25,560 × 20% = $5,112.",
     },
     {
       id: "req-realestate-deduction",
@@ -3097,7 +3097,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 16000,
         tolerance: 0,
       },
-      explanation: "Basic: $80,000 × 20% = $16,000; W-2 limit: Greater of 50% × $30,000 = $15,000 OR 25% × $30,000 + 2.5% × $800,000 = $27,500. Not limited.",
+      explanation: "Per IRC §199A(b), QBI deduction = 20% × $80,000 = $16,000. W-2/UBIA limit (greater of 50% wages or 25% wages + 2.5% UBIA) not limiting.",
     },
     {
       id: "req-combined-qbi",
@@ -3110,7 +3110,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 45112,
         tolerance: 100,
       },
-      explanation: "$24,000 + $5,112 + $16,000 = $45,112",
+      explanation: "Per IRC §199A, combined QBI deduction: $24,000 + $5,112 + $16,000 = $45,112.",
     },
     {
       id: "req-overall-limit",
@@ -3123,7 +3123,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 90000,
         tolerance: 0,
       },
-      explanation: "$450,000 × 20% = $90,000",
+      explanation: "Per IRC §199A(a)(2), overall limitation = 20% of taxable income: $450,000 × 20% = $90,000.",
     },
     {
       id: "req-final-deduction",
@@ -3136,7 +3136,7 @@ export const regQBIDeductionTBS: TBSQuestion = {
         value: 45112,
         tolerance: 100,
       },
-      explanation: "Lesser of $45,112 (combined) or $90,000 (overall limit) = $45,112",
+      explanation: "Per IRC §199A(a), final deduction = lesser of combined ($45,112) or overall limit ($90,000) = $45,112.",
     },
   ],
 };
@@ -3207,7 +3207,7 @@ export const regInstallmentSaleTBS: TBSQuestion = {
         value: 270000,
         tolerance: 0,
       },
-      explanation: "$500,000 - $200,000 - $30,000 = $270,000",
+      explanation: "Per IRC §453, gross profit = selling price − basis − expenses: $500,000 − $200,000 − $30,000 = $270,000.",
     },
     {
       id: "req-gross-profit-ratio",
@@ -3220,7 +3220,7 @@ export const regInstallmentSaleTBS: TBSQuestion = {
         value: 54,
         tolerance: 0.5,
       },
-      explanation: "$270,000 / $500,000 = 54%",
+      explanation: "Per IRC §453, gross profit ratio = gross profit / contract price: $270,000 / $500,000 = 54%.",
     },
     {
       id: "req-year1-gain",
@@ -3233,7 +3233,7 @@ export const regInstallmentSaleTBS: TBSQuestion = {
         value: 54000,
         tolerance: 0,
       },
-      explanation: "$100,000 × 54% = $54,000",
+      explanation: "Per IRC §453, gain recognized = payment × GP ratio: $100,000 × 54% = $54,000.",
     },
     {
       id: "req-year2-gain",
@@ -3246,7 +3246,7 @@ export const regInstallmentSaleTBS: TBSQuestion = {
         value: 81000,
         tolerance: 0,
       },
-      explanation: "$150,000 × 54% = $81,000",
+      explanation: "Per IRC §453, gain recognized = payment × GP ratio: $150,000 × 54% = $81,000.",
     },
     {
       id: "req-year1-total-income",
@@ -3259,7 +3259,7 @@ export const regInstallmentSaleTBS: TBSQuestion = {
         value: 79000,
         tolerance: 0,
       },
-      explanation: "$54,000 gain + $25,000 interest = $79,000",
+      explanation: "Per IRC §453, installment gain + ordinary interest: $54,000 + $25,000 = $79,000 total income.",
     },
     {
       id: "req-verify-total",
@@ -3272,7 +3272,7 @@ export const regInstallmentSaleTBS: TBSQuestion = {
         value: 270000,
         tolerance: 0,
       },
-      explanation: "$54,000 + $81,000 + $81,000 + $54,000 = $270,000 (equals gross profit)",
+      explanation: "Per IRC §453, total recognized gain equals gross profit: $54K + $81K + $81K + $54K = $270,000.",
     },
   ],
 };
@@ -3341,7 +3341,7 @@ export const regCasualtyLossTBS: TBSQuestion = {
         value: 120000,
         tolerance: 0,
       },
-      explanation: "$400,000 - $280,000 = $120,000",
+      explanation: "Per IRC §165, decline in FMV = FMV before − FMV after: $400,000 − $280,000 = $120,000.",
     },
     {
       id: "req-loss-before-limits",
@@ -3354,7 +3354,7 @@ export const regCasualtyLossTBS: TBSQuestion = {
         value: 120000,
         tolerance: 0,
       },
-      explanation: "Lesser of $120,000 (FMV decline) or $350,000 (basis) = $120,000",
+      explanation: "Per IRC §165(b), casualty loss = lesser of FMV decline ($120,000) or adjusted basis ($350,000) = $120,000.",
     },
     {
       id: "req-after-insurance",
@@ -3367,7 +3367,7 @@ export const regCasualtyLossTBS: TBSQuestion = {
         value: 30000,
         tolerance: 0,
       },
-      explanation: "$120,000 - $90,000 = $30,000",
+      explanation: "Per IRC §165(a), loss reduced by insurance recovery: $120,000 − $90,000 = $30,000.",
     },
     {
       id: "req-after-100-floor",
@@ -3380,7 +3380,7 @@ export const regCasualtyLossTBS: TBSQuestion = {
         value: 29900,
         tolerance: 0,
       },
-      explanation: "$30,000 - $100 = $29,900",
+      explanation: "Per IRC §165(h)(1), $100 per-casualty floor: $30,000 − $100 = $29,900.",
     },
     {
       id: "req-deductible-loss",
@@ -3393,7 +3393,7 @@ export const regCasualtyLossTBS: TBSQuestion = {
         value: 14900,
         tolerance: 0,
       },
-      explanation: "$29,900 - ($150,000 × 10%) = $29,900 - $15,000 = $14,900",
+      explanation: "Per IRC §165(h)(2), 10% AGI floor: $29,900 − ($150,000 × 10%) = $29,900 − $15,000 = $14,900 deductible.",
     },
   ],
 };
@@ -3457,7 +3457,7 @@ export const regMultiStateTaxTBS: TBSQuestion = {
         value: 7000,
         tolerance: 0,
       },
-      explanation: "Worldwide income = State A ($80,000 + $20,000) + State B ($40,000) = $140,000. State A tax = $140,000 × 5% = $7,000",
+      explanation: "Per state tax law, resident state taxes worldwide income: ($80K + $20K + $40K) × 5% = $7,000.",
     },
     {
       id: "req-state-b-tax",
@@ -3470,7 +3470,7 @@ export const regMultiStateTaxTBS: TBSQuestion = {
         value: 2400,
         tolerance: 0,
       },
-      explanation: "$40,000 × 6% = $2,400",
+      explanation: "Per state tax law, non-resident state taxes source income: $40,000 × 6% = $2,400.",
     },
     {
       id: "req-state-a-tax-on-state-b-income",
@@ -3483,7 +3483,7 @@ export const regMultiStateTaxTBS: TBSQuestion = {
         value: 2000,
         tolerance: 0,
       },
-      explanation: "$40,000 × 5% = $2,000",
+      explanation: "Per state credit rules, State A tax on State B income: $40,000 × 5% = $2,000.",
     },
     {
       id: "req-credit-allowed",
@@ -3496,7 +3496,7 @@ export const regMultiStateTaxTBS: TBSQuestion = {
         value: 2000,
         tolerance: 0,
       },
-      explanation: "Lesser of $2,400 (paid to B) or $2,000 (A's tax on B income) = $2,000",
+      explanation: "Per state credit rules, credit = lesser of tax paid ($2,400) or resident state tax on that income ($2,000) = $2,000.",
     },
     {
       id: "req-state-a-net-tax",
@@ -3509,7 +3509,7 @@ export const regMultiStateTaxTBS: TBSQuestion = {
         value: 5000,
         tolerance: 0,
       },
-      explanation: "$7,000 - $2,000 = $5,000",
+      explanation: "Per state credit rules, net State A tax = $7,000 − $2,000 credit = $5,000.",
     },
   ],
 };
@@ -3574,7 +3574,7 @@ export const regSecuredTransactionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-possession",
       },
-      explanation: "Perfection by possession is valid under UCC Article 9",
+      explanation: "Per UCC §9-313, perfection by possession is a valid method for tangible collateral including equipment.",
       dropdownOptions: [
         { id: "opt-yes-possession", order: 1, text: "Yes - by possession", isCorrect: true },
         { id: "opt-no-filing", order: 2, text: "No - must file", isCorrect: false },
@@ -3591,7 +3591,7 @@ export const regSecuredTransactionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes-pmsi",
       },
-      explanation: "Filed within 20 days of delivery (Feb 1 - Jan 25 = 7 days)",
+      explanation: "Per UCC §9-324(a), PMSI in equipment has priority if perfected within 20 days of delivery (Feb 1 − Jan 25 = 7 days).",
       dropdownOptions: [
         { id: "opt-yes-pmsi", order: 1, text: "Yes - filed within 20 days", isCorrect: true },
         { id: "opt-no-late", order: 2, text: "No - filed too late", isCorrect: false },
@@ -3608,7 +3608,7 @@ export const regSecuredTransactionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-supplier-d",
       },
-      explanation: "PMSI has superpriority over earlier filed security interests",
+      explanation: "Per UCC §9-324(a), PMSI in equipment has superpriority over earlier perfected security interests.",
       dropdownOptions: [
         { id: "opt-bank-a", order: 1, text: "Bank A - filed March 1", isCorrect: false },
         { id: "opt-bank-b", order: 2, text: "Bank B - possessed February 15", isCorrect: false },
@@ -3626,7 +3626,7 @@ export const regSecuredTransactionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-bank-c-second",
       },
-      explanation: "Among non-PMSI creditors, first to file or perfect wins (Bank C filed January 10)",
+      explanation: "Per UCC §9-322(a), among non-PMSI creditors, first to file or perfect has priority (Bank C filed January 10).",
       dropdownOptions: [
         { id: "opt-bank-a-second", order: 1, text: "Bank A", isCorrect: false },
         { id: "opt-bank-b-second", order: 2, text: "Bank B", isCorrect: false },
@@ -3643,7 +3643,7 @@ export const regSecuredTransactionsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-bank-b-third",
       },
-      explanation: "Bank B perfected by possession on February 15, before Bank A filed",
+      explanation: "Per UCC §9-322(a), Bank B perfected by possession on February 15, before Bank A filed on March 1.",
       dropdownOptions: [
         { id: "opt-bank-a-third", order: 1, text: "Bank A", isCorrect: false },
         { id: "opt-bank-b-third", order: 2, text: "Bank B", isCorrect: true },
@@ -3732,7 +3732,7 @@ export const regTaxCreditsTBS: TBSQuestion = {
         value: 2,
         tolerance: 0,
       },
-      explanation: "Children under 17: Child 1 (age 8) and Child 2 (age 14). Child 3 is 19.",
+      explanation: "Per IRC §24(c), qualifying child must be under 17: Child 1 (age 8) and Child 2 (age 14) qualify. Child 3 (age 19) does not.",
     },
     {
       id: "req-ctc-amount",
@@ -3745,7 +3745,7 @@ export const regTaxCreditsTBS: TBSQuestion = {
         value: 4000,
         tolerance: 0,
       },
-      explanation: "2 children × $2,000 = $4,000 (no phase-out, under $400,000 threshold)",
+      explanation: "Per IRC §24(a), CTC = 2 children × $2,000 = $4,000 (no phase-out − MAGI under $400,000 MFJ threshold).",
     },
     {
       id: "req-aoc-qualified-expenses",
@@ -3758,7 +3758,7 @@ export const regTaxCreditsTBS: TBSQuestion = {
         value: 11200,
         tolerance: 0,
       },
-      explanation: "$15,000 + $1,200 - $5,000 = $11,200 (room/board not qualified)",
+      explanation: "Per IRC §25A(f), qualified expenses (tuition + books) less scholarship: $15,000 + $1,200 − $5,000 = $11,200 (room/board excluded).",
     },
     {
       id: "req-aoc-before-phaseout",
@@ -3771,7 +3771,7 @@ export const regTaxCreditsTBS: TBSQuestion = {
         value: 2500,
         tolerance: 0,
       },
-      explanation: "100% × $2,000 + 25% × $2,000 = $2,500 max (expenses exceed $4,000)",
+      explanation: "Per IRC §25A(i), AOC = 100% of first $2,000 + 25% of next $2,000 = $2,500 max (expenses exceed $4,000).",
     },
     {
       id: "req-aoc-after-phaseout",
@@ -3784,7 +3784,7 @@ export const regTaxCreditsTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "At MAGI of $180,000, AOC is fully phased out for MFJ",
+      explanation: "Per IRC §25A(d), at MAGI of $180,000, AOC is fully phased out for MFJ (phase-out range $160,000−$180,000).",
     },
     {
       id: "req-total-credits",
@@ -3797,7 +3797,7 @@ export const regTaxCreditsTBS: TBSQuestion = {
         value: 4000,
         tolerance: 0,
       },
-      explanation: "CTC $4,000 + AOC $0 = $4,000",
+      explanation: "Per IRC §§24 and 25A, total credits = CTC $4,000 + AOC $0 = $4,000.",
     },
   ],
 };
@@ -3864,7 +3864,7 @@ export const regBankruptcyTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-chapter-11",
       },
-      explanation: "Chapter 11 allows business reorganization while continuing operations",
+      explanation: "Per 11 USC §1101, Chapter 11 allows business reorganization while debtor continues operations as 'debtor in possession.'",
       dropdownOptions: [
         { id: "opt-chapter-7", order: 1, text: "Chapter 7 - Liquidation", isCorrect: false },
         { id: "opt-chapter-11", order: 2, text: "Chapter 11 - Reorganization", isCorrect: true },
@@ -3881,7 +3881,7 @@ export const regBankruptcyTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-secured",
       },
-      explanation: "Secured creditors are paid first from their collateral",
+      explanation: "Per 11 USC §506, secured creditors have priority claim on their collateral before any distribution to unsecured creditors.",
       dropdownOptions: [
         { id: "opt-secured", order: 1, text: "Secured creditors (from collateral)", isCorrect: true },
         { id: "opt-admin", order: 2, text: "Administrative expenses", isCorrect: false },
@@ -3899,7 +3899,7 @@ export const regBankruptcyTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-admin-first",
       },
-      explanation: "Administrative expenses (including attorney fees) are first priority unsecured",
+      explanation: "Per 11 USC §507(a)(2), administrative expenses (including attorney fees) are first priority among unsecured claims.",
       dropdownOptions: [
         { id: "opt-admin-first", order: 1, text: "Administrative expenses", isCorrect: true },
         { id: "opt-wages-first", order: 2, text: "Employee wages", isCorrect: false },
@@ -3917,7 +3917,7 @@ export const regBankruptcyTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-wages-over-taxes",
       },
-      explanation: "Employee wages (earned within 180 days) are second priority, taxes are eighth",
+      explanation: "Per 11 USC §507(a)(4), employee wages (earned within 180 days) are fourth priority; taxes are eighth under §507(a)(8).",
       dropdownOptions: [
         { id: "opt-wages-over-taxes", order: 1, text: "Employee wages", isCorrect: true },
         { id: "opt-taxes-over-wages", order: 2, text: "IRS taxes", isCorrect: false },
@@ -3934,7 +3934,7 @@ export const regBankruptcyTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-general-unsecured",
       },
-      explanation: "Trade creditors are general unsecured creditors, paid last after all priorities",
+      explanation: "Per 11 USC §507 and §726, trade creditors are general unsecured creditors, paid last after all priority claims.",
       dropdownOptions: [
         { id: "opt-priority-unsecured", order: 1, text: "Priority unsecured", isCorrect: false },
         { id: "opt-general-unsecured", order: 2, text: "General unsecured", isCorrect: true },
@@ -3995,7 +3995,7 @@ Needed: Primary IRC citation for the at-risk limitation rules that may limit the
           { source: "IRC", topicCode: "26 USC 465" },
         ],
       },
-      explanation: "IRC Section 465 limits loss deductions to the amount the taxpayer has at risk in the activity.",
+      explanation: "Per IRC §465, loss deductions are limited to the amount the taxpayer has at risk in the activity (cash + adjusted basis of property + recourse debt).",
     },
   ],
 };
