@@ -15,6 +15,7 @@ interface PrimeMeridianCompassProps {
  * Prime Meridian Compass Display
  *
  * Circular gauge design matching the section Prime Meridian scores.
+ * Includes milestone markers at 50, 65, 85 and a green 75 badge.
  * Use variant="light" for colored backgrounds like the purple banner.
  */
 export default function PrimeMeridianCompass({
@@ -26,28 +27,40 @@ export default function PrimeMeridianCompass({
 }: PrimeMeridianCompassProps) {
   const milestone = getPrimeMeridianMilestone(score);
 
-  // Size configurations matching PrimeMeridianCompact
+  // Size configurations matching section Prime Meridian design
   const sizeConfig = {
     sm: {
       svgSize: 64,
-      radius: 28,
+      radius: 26,
       strokeWidth: 5,
       fontSize: "text-base",
       labelSize: "text-[8px]",
+      badgeSize: 16,
+      badgeFont: "text-[8px]",
+      badgeOffset: 30,
+      markerLength: 4,
     },
     md: {
       svgSize: 80,
-      radius: 36,
+      radius: 32,
       strokeWidth: 6,
       fontSize: "text-lg",
       labelSize: "text-xs",
+      badgeSize: 20,
+      badgeFont: "text-[9px]",
+      badgeOffset: 38,
+      markerLength: 5,
     },
     lg: {
       svgSize: 100,
-      radius: 44,
+      radius: 40,
       strokeWidth: 7,
       fontSize: "text-xl",
       labelSize: "text-sm",
+      badgeSize: 24,
+      badgeFont: "text-[10px]",
+      badgeOffset: 48,
+      markerLength: 6,
     },
   };
 
@@ -70,7 +83,13 @@ export default function PrimeMeridianCompass({
   // Colors based on variant
   const bgStrokeColor = variant === "light" ? "rgba(255,255,255,0.3)" : undefined;
   const bgStrokeClass = variant === "light" ? "" : "text-gray-200 dark:text-gray-700";
-  const scoreColorClass = variant === "light" ? "text-white" : milestone.color;
+  const markerClass = variant === "light" ? "text-white/50" : "text-gray-400 dark:text-gray-500";
+
+  // Calculate 75 badge position
+  const angle75 = 75 * 3.6; // degrees
+  const rad75 = (angle75 - 90) * (Math.PI / 180);
+  const badge75X = center + Math.cos(rad75) * config.badgeOffset;
+  const badge75Y = center + Math.sin(rad75) * config.badgeOffset;
 
   return (
     <div className={`relative inline-flex flex-col items-center ${className}`}>
@@ -91,6 +110,18 @@ export default function PrimeMeridianCompass({
             className={bgStrokeClass}
           />
 
+          {/* 75 marker line (behind progress) */}
+          <line
+            x1={center}
+            y1={center - config.radius + config.strokeWidth / 2}
+            x2={center}
+            y2={center - config.radius - config.strokeWidth / 2 - 2}
+            stroke="#10b981"
+            strokeWidth="2"
+            transform={`rotate(${75 * 3.6}, ${center}, ${center})`}
+            className="opacity-70"
+          />
+
           {/* Progress arc */}
           <circle
             cx={center}
@@ -104,13 +135,28 @@ export default function PrimeMeridianCompass({
             strokeDashoffset={strokeDashoffset}
             className="transition-all duration-500"
           />
+
+          {/* Milestone markers at 50, 65, 85 */}
+          {[50, 65, 85].map((mark) => (
+            <line
+              key={mark}
+              x1={center}
+              y1={center - config.radius + config.strokeWidth / 2}
+              x2={center}
+              y2={center - config.radius + config.strokeWidth / 2 + config.markerLength}
+              stroke="currentColor"
+              strokeWidth="1.5"
+              transform={`rotate(${mark * 3.6}, ${center}, ${center})`}
+              className={markerClass}
+            />
+          ))}
         </svg>
 
         {/* Center content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span
-            className={`${config.fontSize} font-bold ${scoreColorClass}`}
-            style={variant === "light" ? { color: gaugeColor } : undefined}
+            className={`${config.fontSize} font-bold`}
+            style={{ color: gaugeColor }}
           >
             {score}
           </span>
@@ -119,6 +165,23 @@ export default function PrimeMeridianCompass({
               Prime Meridian
             </span>
           )}
+        </div>
+
+        {/* 75 Badge */}
+        <div
+          className={`absolute flex items-center justify-center rounded-full font-bold shadow-sm ${config.badgeFont} ${
+            variant === "light"
+              ? "bg-emerald-400 text-white border border-white/50"
+              : "bg-emerald-500 text-white border-2 border-white dark:border-gray-800"
+          }`}
+          style={{
+            width: config.badgeSize,
+            height: config.badgeSize,
+            top: badge75Y - config.badgeSize / 2,
+            left: badge75X - config.badgeSize / 2,
+          }}
+        >
+          75
         </div>
       </div>
     </div>

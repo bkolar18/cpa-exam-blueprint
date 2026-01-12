@@ -432,19 +432,27 @@ export default function DashboardPage() {
  color="blue"
  />
  <Link href="/dashboard/readiness" className="block">
-            <div className={`rounded-xl border p-3 transition-all hover:shadow-lg ${
+            <div className={`rounded-xl border p-5 transition-all ${
               overallPrimeMeridian >= 75
-                ? "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border-emerald-300 dark:border-emerald-700 ring-2 ring-emerald-200 dark:ring-emerald-800"
-                : "bg-white dark:bg-[var(--card)] border-[var(--border)] hover:border-[var(--primary)]"
+                ? "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border-emerald-300 dark:border-emerald-700 shadow-md ring-2 ring-emerald-200 dark:ring-emerald-800"
+                : "bg-white dark:bg-[var(--card)] border-[var(--border)]"
             }`}>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-[var(--muted)] mb-1">Prime Meridian</p>
+                {overallPrimeMeridian >= 75 && (
+                  <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                )}
+              </div>
+              <div className="flex items-center justify-center py-1">
                 <PrimeMeridianCompass
                   score={overallPrimeMeridian}
                   size="sm"
                   showLabel={false}
                 />
               </div>
-              <p className={`text-[10px] text-center ${
+              <p className={`text-xs ${
                 overallPrimeMeridian >= 75
                   ? "text-emerald-700 dark:text-emerald-300 font-medium"
                   : "text-[var(--muted)]"
