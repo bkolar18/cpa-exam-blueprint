@@ -705,6 +705,25 @@ export default function ReadinessDashboardPage() {
  );
  })}
  </div>
+
+ {/* Coverage Legend */}
+ <div className="mt-6 pt-4 border-t border-[var(--border)]">
+   <p className="text-xs text-[var(--muted)] mb-2 font-medium">Coverage Legend (Bar Color)</p>
+   <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--muted)]">
+     <div className="flex items-center gap-1.5">
+       <div className="w-3 h-3 rounded-full bg-green-500" />
+       <span>≥70% (Well covered)</span>
+     </div>
+     <div className="flex items-center gap-1.5">
+       <div className="w-3 h-3 rounded-full bg-yellow-500" />
+       <span>≥25% (In progress)</span>
+     </div>
+     <div className="flex items-center gap-1.5">
+       <div className="w-3 h-3 rounded-full bg-red-400" />
+       <span>&lt;25% (Just started)</span>
+     </div>
+   </div>
+ </div>
  </div>
  )}
 

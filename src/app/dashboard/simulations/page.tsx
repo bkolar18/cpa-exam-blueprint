@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useMemo } from"react";
-import Link from"next/link";
-import { allTBSQuestions, tbsStatistics } from"@/lib/data/tbs";
-import { TBSSectionCard, TBSSearchBar, TBSListItem } from"@/components/tbs/TBSLibrary";
-import { useTBSProgress } from"@/hooks/useTBSProgress";
-import { useAuth } from"@/components/auth/AuthProvider";
-import type { TBSType } from"@/components/tbs/TBSLibrary";
+import { useState, useMemo } from "react";
+import Link from "next/link";
+import { allTBSQuestions, tbsStatistics } from "@/lib/data/tbs";
+import { TBSSectionCard, TBSSearchBar, TBSListItem } from "@/components/tbs/TBSLibrary";
+import { useTBSProgress } from "@/hooks/useTBSProgress";
+import { useAuth } from "@/components/auth/AuthProvider";
+import type { TBSType } from "@/components/tbs/TBSLibrary";
 
 const sections: { code: string; name: string }[] = [
  { code:"FAR", name:"Financial Accounting & Reporting"},
@@ -98,8 +98,63 @@ export default function SimulationsPage() {
  return { totalTBS, completedTBS, averageScore };
  }, [progressData, visibleSections]);
 
+ // Get in-progress simulations (not yet completed)
+ const inProgressSimulations = useMemo(() => {
+   const visibleCodes = visibleSections.map(s => s.code);
+   return allTBSQuestions.filter(
+     q => visibleCodes.includes(q.section) && progressData.inProgressTBSIds.has(q.id)
+   );
+ }, [progressData.inProgressTBSIds, visibleSections]);
+
  return (
  <div className="p-6 max-w-6xl mx-auto">
+ {/* Resume In-Progress Simulation Banner */}
+ {inProgressSimulations.length > 0 && (
+   <div className="mb-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+       <div className="flex items-start space-x-4">
+         <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/50 rounded-full flex items-center justify-center flex-shrink-0">
+           <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+           </svg>
+         </div>
+         <div>
+           <h3 className="font-semibold text-amber-800 dark:text-amber-300">Resume Simulation</h3>
+           <p className="text-amber-700 dark:text-amber-400 text-sm mt-1">
+             {inProgressSimulations.length === 1
+               ? `You have an unfinished simulation: "${inProgressSimulations[0].title}"`
+               : `You have ${inProgressSimulations.length} unfinished simulations`}
+           </p>
+         </div>
+       </div>
+       <div className="flex items-center space-x-3 ml-14 md:ml-0">
+         {inProgressSimulations.length === 1 ? (
+           <Link
+             href={`/dashboard/simulations/${inProgressSimulations[0].id}`}
+             className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors text-sm font-medium"
+           >
+             Resume
+           </Link>
+         ) : (
+           <div className="flex flex-wrap gap-2">
+             {inProgressSimulations.slice(0, 3).map((tbs) => (
+               <Link
+                 key={tbs.id}
+                 href={`/dashboard/simulations/${tbs.id}`}
+                 className="px-3 py-1.5 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors text-xs font-medium"
+                 title={tbs.title}
+               >
+                 {tbs.title.length > 20 ? tbs.title.slice(0, 20) + '...' : tbs.title}
+               </Link>
+             ))}
+           </div>
+         )}
+       </div>
+     </div>
+   </div>
+ )}
+
  {/* Header */}
  <div className="mb-6">
  <div className="flex items-center justify-between flex-wrap gap-4">

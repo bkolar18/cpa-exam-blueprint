@@ -98,8 +98,161 @@ export default function TBSHeader({
  const timeColor = getTimeColor(elapsedSeconds, timeLimit);
 
  return (
- <header className="bg-white dark:bg-[var(--card)] border-b border-gray-200 px-3 py-1 flex-shrink-0">
- <div className="flex items-center justify-between">
+ <header className="bg-white dark:bg-[var(--card)] border-b border-gray-200 flex-shrink-0">
+ {/* Mobile: Two-row compact layout */}
+ <div className="md:hidden">
+   {/* Row 1: Navigation and Timer */}
+   <div className="flex items-center justify-between px-2 py-1.5 border-b border-gray-100 dark:border-[var(--border)]">
+     <div className="flex items-center gap-2">
+       {/* Return to Library Button */}
+       {onReturnToLibrary && (
+         <button
+           onClick={onReturnToLibrary}
+           className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-[var(--muted-light)]"
+           title="Return to Simulation Library"
+         >
+           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
+           </svg>
+         </button>
+       )}
+
+       {/* Section Badge */}
+       <span className="px-2 py-0.5 bg-[var(--primary)] text-white text-xs font-semibold rounded">
+         {section}
+       </span>
+
+       {/* TBS Index */}
+       <span className="text-xs font-medium text-gray-600 dark:text-[var(--muted-light)]">
+         {testletIndex}/{testletTotal}
+       </span>
+     </div>
+
+     {/* Timer and Pause */}
+     <div className="flex items-center gap-2">
+       {isPaused ? (
+         <span className="text-xs font-medium text-yellow-600 dark:text-yellow-400 px-2 py-0.5 bg-yellow-50 dark:bg-yellow-900/20 rounded">
+           PAUSED
+         </span>
+       ) : (
+         <span className={`text-sm font-mono font-semibold ${timeColor}`}>
+           {formatTime(remainingSeconds)}
+         </span>
+       )}
+
+       {isPracticeMode && !isSubmitted && (
+         <button
+           onClick={onPauseToggle}
+           className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]"
+           title={isPaused ? "Resume" : "Pause"}
+         >
+           {isPaused ? (
+             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+             </svg>
+           ) : (
+             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+             </svg>
+           )}
+         </button>
+       )}
+     </div>
+   </div>
+
+   {/* Row 2: Progress, Tools, and Actions */}
+   <div className="flex items-center justify-between px-2 py-1.5">
+     {/* Progress */}
+     <div className="flex items-center gap-2">
+       <div className="w-16 h-1.5 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
+         <div
+           className={`h-full transition-all duration-300 ${
+             completionStatus.isComplete ? "bg-green-500" : "bg-[var(--primary)]"
+           }`}
+           style={{ width: `${completionStatus.percentage}%` }}
+         />
+       </div>
+       <span className="text-xs text-gray-600 dark:text-[var(--muted)]">
+         {completionStatus.answered}/{completionStatus.total}
+       </span>
+     </div>
+
+     {/* Tools and Actions */}
+     <div className="flex items-center gap-1">
+       {/* Calculator */}
+       {onCalculatorToggle && !isSubmitted && (
+         <button
+           onClick={onCalculatorToggle}
+           className={`p-1.5 rounded-lg transition-colors ${
+             showCalculator
+               ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+               : "hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]"
+           }`}
+           title="Calculator"
+         >
+           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+           </svg>
+         </button>
+       )}
+
+       {/* Scratch Pad */}
+       {onScratchPadToggle && !isSubmitted && (
+         <button
+           onClick={onScratchPadToggle}
+           className={`p-1.5 rounded-lg transition-colors ${
+             showScratchPad
+               ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400"
+               : "hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]"
+           }`}
+           title="Scratch Pad"
+         >
+           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+           </svg>
+         </button>
+       )}
+
+       {/* Flag */}
+       <button
+         onClick={onFlagToggle}
+         disabled={isSubmitted}
+         className={`p-1.5 rounded-lg transition-colors disabled:opacity-50 ${
+           isFlagged
+             ? "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400"
+             : "hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]"
+         }`}
+         title="Flag for review"
+       >
+         <svg className="w-5 h-5" fill={isFlagged ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+         </svg>
+       </button>
+
+       {/* Divider */}
+       <div className="h-5 w-px bg-gray-200 dark:bg-[var(--card-hover)] mx-1"/>
+
+       {/* Submit Button */}
+       <button
+         onClick={onSubmit}
+         disabled={isSubmitted}
+         className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
+           isSubmitted
+             ? "bg-gray-200 dark:bg-[var(--card-hover)] text-gray-500 dark:text-[var(--muted)] cursor-not-allowed"
+             : completionStatus.isComplete
+             ? "bg-green-600 hover:bg-green-700 text-white"
+             : "bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white"
+         }`}
+       >
+         {isSubmitted ? "Submitted" : "Submit"}
+       </button>
+     </div>
+   </div>
+ </div>
+
+ {/* Desktop: Original single-row layout */}
+ <div className="hidden md:flex items-center justify-between px-3 py-1">
  {/* Left: Section and Navigation */}
  <div className="flex items-center space-x-3">
  {/* Return to Library Button */}
@@ -112,7 +265,7 @@ export default function TBSHeader({
  <svg className="w-4 h-4"fill="none"stroke="currentColor"viewBox="0 0 24 24">
  <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
  </svg>
- <span className="hidden sm:inline">Library</span>
+ <span>Library</span>
  </button>
  )}
 
@@ -387,11 +540,12 @@ export default function TBSHeader({
  </button>
  </div>
  </div>
+ </div>
 
- {/* Time Warning Banner */}
+ {/* Time Warning Banner - shown on both mobile and desktop */}
  {!isSubmitted && remainingSeconds <= 60 && remainingSeconds > 0 && (
- <div className="mt-2 px-3 py-2 bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg">
- <p className="text-sm text-red-700 dark:text-red-300 font-medium text-center">
+ <div className="mx-2 md:mx-3 my-1 px-3 py-2 bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg">
+ <p className="text-xs md:text-sm text-red-700 dark:text-red-300 font-medium text-center">
  Less than 1 minute remaining! Submit your answers now.
  </p>
  </div>
@@ -399,8 +553,8 @@ export default function TBSHeader({
 
  {/* Time Expired Banner */}
  {!isSubmitted && remainingSeconds <= 0 && (
- <div className="mt-2 px-3 py-2 bg-red-600 rounded-lg">
- <p className="text-sm text-white font-medium text-center">
+ <div className="mx-2 md:mx-3 my-1 px-3 py-2 bg-red-600 rounded-lg">
+ <p className="text-xs md:text-sm text-white font-medium text-center">
  Time has expired. Please submit your answers.
  </p>
  </div>

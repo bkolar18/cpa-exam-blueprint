@@ -725,7 +725,7 @@ export default function TBSContainer({
  };
 
  return (
- <div className="flex flex-col h-screen bg-gray-50 dark:bg-[var(--background)]">
+ <div className="flex flex-col h-[100dvh] bg-gray-50 dark:bg-[var(--background)]">
  {/* Header */}
  <TBSHeader
  section={tbs.section}
