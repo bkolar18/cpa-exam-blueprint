@@ -476,29 +476,37 @@ export default function ReadinessDashboardPage() {
  return (
  <div className="space-y-6">
  {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-4 sm:p-6 text-white">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
               </svg>
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Exam Readiness Dashboard</h1>
-              <p className="text-white/80">Track your Prime Meridian score across all sections</p>
+              <h1 className="text-xl sm:text-2xl font-bold">Exam Readiness Dashboard</h1>
+              <p className="text-white/80 text-sm sm:text-base">Track your Prime Meridian score across all sections</p>
             </div>
           </div>
           {/* Overall Prime Meridian Score - Compass Rose Display */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <PrimeMeridianCompass
+              score={overallPrimeMeridian}
+              size="sm"
+              showLabel={false}
+              variant="light"
+              className="sm:hidden"
+            />
             <PrimeMeridianCompass
               score={overallPrimeMeridian}
               size="md"
               showLabel={false}
               variant="light"
+              className="hidden sm:block"
             />
-            <div className="text-right">
-              <div className="text-white/80 text-sm font-medium">Overall Prime Meridian</div>
+            <div className="text-left sm:text-right">
+              <div className="text-white/80 text-xs sm:text-sm font-medium">Overall Prime Meridian</div>
               {overallPrimeMeridian > 0 && overallPrimeMeridian < 75 && (
                 <div className="mt-1 inline-flex items-center gap-1.5 px-2 py-0.5 bg-white/20 rounded-full text-xs">
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -452,7 +452,7 @@ export default function DashboardPage() {
                   showLabel={false}
                 />
               </div>
-              <p className={`text-xs ${
+              <p className={`text-xs text-center ${
                 overallPrimeMeridian >= 75
                   ? "text-emerald-700 dark:text-emerald-300 font-medium"
                   : "text-[var(--muted)]"
