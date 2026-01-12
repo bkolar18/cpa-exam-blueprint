@@ -1,0 +1,51 @@
+Next steps:
+
+- it looks like its tracking now, there might be some differences between the exam readiness tbs tracking and the simulation page tracking (the simulation page is correct) can we make sure the exam readiness dashboard and simulation page tbs tracking is consistent site wide?
+
+- upcoming score releases on score release calendar page look like this: a
+J
+Monday, January 12, 2026
+Core Section Release
+
+FAR
+AUD
+REG
+Next Release, im not sure why its showing aJ and i dont remember whaty was supposed to be there
+
+- This page still isn't getting notes to be saved there: https://cpa-exam-blueprint.vercel.app/dashboard/my-notes, do extensive research into whats happening there. 
+
+- Console shows this error: 65ed887afdc8bc78.js:37  GET https://ibyxxuxcevcdmgnazqme.supabase.co/rest/v1/question_notes?select=topic%2Cconfidence&user_id=eq.c2f9cd91-3c6b-4cbb-abc5-d88be0567d79&confidence=not.is.null 400 (Bad Request)
+
+- In this section on the about page "Unlimited Access Until You Pass
+All tiers include unlimited access until you pass - no time limits, no pressure:
+
+Free:
+50 questions for FAR section
+Standard:
+3,000+ questions across all 4 core sections (FAR, AUD, REG, TCP)
+Pro:
+6,000+ questions across all 6 sections including discipline sections (BAR, ISC)
+Like other CPA review providers, our questions are based on the official Meridian CPA Reviews published by the AICPA. Study at your own pace with no time pressure." we need to add more space between the words Free Standard and Pro, and their respective descriptions.
+
+- In the How We Compare section on the about page, show Task-Based Simulations like we show Practice Questions ( show 500+ for us because we'll add a few more to get up to 500, and the actual TBS counts for the other providers)
+
+- Lets hide pricing details for now and the pricing page. I want to give out the product to people for free first to test it and get peoples thoughts before putting a price tag on it.
+
+- On the home page, replace mentions of 95% less with our task-based simulation details.
+
+- On the Practice page for MCQs, lets change the recent questions section to the recent sessions section (use the same section from the Study Log page with the same features)
+
+- On the study log, in the recent sessions section, when I click into a recent session, the back to all sessions button does not work and I stay on the same page when its clicked
+
+- Also on the study log page, This Week says 0h studied, is that because it resets on Sundays?
+
+- Study Streak is resetting to 1 day every day (first time i study each day i get the notification saying i have a one day streak instead of increasing by one each consecutive day)
+
+- On the exam readiness dashboard, the FAR selector box is smaller than the others, lets make them the same size
+
+- Also on the exam readiness dashboard, in the topic readiness section there are bars that indicate your average percent correct for a given section, can we make those bars represent the quantity of questions completed instead? We should still have keep the colored accuracy percentages visible (green is good, red is bad) but also add the word accuracy after the percentages (e.g. 100% would be green and it would read as "100% accuracy") Make sure these changes also apply to the exam readiness section on the overview page.
+
+
+
+
+

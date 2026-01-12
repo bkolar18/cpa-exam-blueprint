@@ -517,7 +517,7 @@ export default function ReadinessDashboardPage() {
  <h2 className="text-lg font-semibold text-[var(--foreground)]">
  {selectedSection} Readiness Score
  </h2>
- <div className={`px-3 py-1 rounded-full text-sm font-medium text-white ${currentMilestone.color}`}>
+ <div className={`hidden sm:block px-3 py-1 rounded-full text-sm font-medium text-white ${currentMilestone.color}`}>
  {currentMilestone.label}
  </div>
  </div>

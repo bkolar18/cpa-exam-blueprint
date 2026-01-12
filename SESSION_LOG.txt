@@ -11,6 +11,80 @@ IMPORTANT REMINDERS:
 - Only push to GitHub when committing actual code changes
 
 ================================================================================
+SESSION: 2026-01-11 (Auth Cookie Fix + TBS Tracking + Exit Session)
+================================================================================
+
+OBJECTIVES:
+- Fix dark mode on 5 pages with colored sections
+- Investigate and fix TBS API 401 Unauthorized errors
+- Fix TBS progress tracking (Completed/Average Score not displaying)
+- Fix notes not appearing in My Notes tab
+- Add TBS Exit Session feature (save progress and resume later)
+
+ACCOMPLISHED:
+
+1. Dark Mode Fixes - 5 Pages
+   - src/app/tools/study-hours-calculator/page.tsx
+     * "How We Calculate Study Hours" section - added dark:bg-blue-950/40, dark:border-blue-800
+   - src/app/tools/nts-tracker/page.tsx
+     * "About Your Notice to Schedule" section - added dark:bg-green-950/40, dark:border-green-800
+   - src/app/tools/score-release-calendar/page.tsx
+     * Two colored sections - added dark:bg-blue-950/40 and dark:bg-green-950/40
+   - src/app/guides/exam-day/page.tsx
+     * Multiple colored boxes - added dark variants for blue, green, yellow, amber, red, purple
+   - src/app/guides/failed-section/page.tsx
+     * Multiple colored boxes - added dark variants for all colored backgrounds
+
+2. Auth Cookie Fix (CRITICAL)
+   - Problem: Client used localStorage auth (supabase-js), server expected cookies (ssr)
+   - Fix: Changed src/lib/supabase/client.ts to use createBrowserClient from @supabase/ssr
+   - Fix: Updated src/lib/supabase/middleware.ts to properly refresh sessions
+   - Impact: Users must LOG OUT and LOG BACK IN to get new cookie-based session
+   - This also fixes notes not appearing in My Notes tab
+
+3. TBS Progress Tracking Fix
+   - Problem: Stats/Attempts APIs used INNER JOIN with tbs_questions table
+   - Issue: Frontend TBS IDs (like "far-i-1-1-je") don't exist in tbs_questions table
+   - Fix: Removed JOINs from both API routes, query tbs_attempts directly
+   - Fix: Use section column stored directly in tbs_attempts
+   - Files: api/tbs/stats/route.ts, api/tbs/attempts/route.ts
+
+4. TBS Exit Session Feature
+   - Added exit confirmation modal to TBSContainer.tsx
+   - "Save & Exit" - saves responses as incomplete attempt with time spent
+   - "Exit Without Saving" - exits without database save
+   - Progress summary shows questions answered and time spent
+   - Uses Supabase upsert with onConflict: 'user_id,tbs_id'
+
+5. Database Migration Required
+   - User must run SQL migration in Supabase for TBS tracking to work
+   - Migration adds section column, changes tbs_id from UUID to TEXT
+   - Removes foreign key constraint on tbs_id
+   - See SESSION_PROMPT.txt for full SQL script
+
+TECHNICAL DETAILS:
+- Files changed: 9
+- Auth architecture: localStorage → cookie-based auth
+- API fix: Removed tbs_questions JOINs from 2 routes
+- New feature: TBS Exit Session modal with save functionality
+
+COMMITS:
+- b0a6249: Dark mode fixes on 5 pages
+- 0b14343: Auth cookie fix (createBrowserClient)
+- 41ee480: TBS progress tracking fix (removed JOINs)
+- 131107d: TBS Exit Session feature
+
+BLOCKERS/ISSUES:
+- User must run SQL migration in Supabase SQL Editor
+- User must log out and log back in after auth fix
+
+NEXT SESSION PRIORITIES:
+1. Verify TBS tracking works after migration + re-login
+2. TBS Expansion: ~190 → 350 total TBS
+3. MCQ medium difficulty expansion (49.2% → 55% target)
+4. Phase 4: Email Nurturing
+
+================================================================================
 SESSION: 2026-01-10 (Dark Mode Fix + TBS Question Bank Expansion)
 ================================================================================
 

@@ -1,7 +1,7 @@
 ================================================================================
 CPA EXAM BLUEPRINT - SESSION PROMPT
 ================================================================================
-Last Updated: 2026-01-10
+Last Updated: 2026-01-11
 
 IMPORTANT: Read this file at the start of each session to understand project
 context and continue work seamlessly.
@@ -32,7 +32,7 @@ Repo: https://github.com/bkolar18/cpa-exam-blueprint
 Live: https://cpa-exam-blueprint.vercel.app
 
 ================================================================================
-CURRENT PROJECT STATE (as of 2026-01-10)
+CURRENT PROJECT STATE (as of 2026-01-11)
 ================================================================================
 
 Phase 1 (Free Tools) - COMPLETE
@@ -50,7 +50,7 @@ Phase 2 (Content & Authority) - COMPLETE
 
 Phase 3 (CPA Academy / Dashboard) - COMPLETE
 - Supabase database integration (PostgreSQL)
-- User authentication (email/password)
+- User authentication (email/password) - NOW USING COOKIE-BASED AUTH
 - User dashboard with study tracking
 - Study session logging with streaks
 - Section progress management
@@ -60,17 +60,60 @@ Phase 3 (CPA Academy / Dashboard) - COMPLETE
 - Practice history and accuracy tracking
 - Surgent promotional banner (per-account, 30-day reappearance)
 - Exam Simulation Mode with pause functionality
+- TBS (Task-Based Simulations) practice with progress tracking
+- TBS Exit Session feature (save & resume)
 
 Phase 3.5 (Question Bank Expansion) - IN PROGRESS
 - MCQs: 5,810 total (176 batch files) - 49.2% medium (near 50-60% target)
-- TBS: 190/200 total - NEED 10 MORE FAR QUESTIONS
-- Dark mode fixes completed for state requirements pages
+- TBS: 190+ total - distributed across all 6 sections
+- Dark mode fixes completed for all pages
 
 Phase 4 (Email Nurturing) - NOT STARTED
 Phase 5 (AI Features) - NOT STARTED
 
 ================================================================================
-KEY DOCUMENTS TO READ (Updated 2026-01-10)
+CRITICAL: DATABASE MIGRATION REQUIRED FOR TBS TRACKING
+================================================================================
+
+**RUN THIS SQL IN SUPABASE SQL EDITOR BEFORE TBS TRACKING WILL WORK:**
+
+```sql
+-- Step 1: Add section column if it doesn't exist
+ALTER TABLE tbs_attempts
+ADD COLUMN IF NOT EXISTS section TEXT CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC'));
+
+-- Step 2: Drop the foreign key constraint on tbs_id
+DO $$
+DECLARE
+    fk_name TEXT;
+BEGIN
+    SELECT conname INTO fk_name
+    FROM pg_constraint
+    WHERE conrelid = 'tbs_attempts'::regclass
+    AND contype = 'f'
+    AND confrelid = 'tbs_questions'::regclass;
+
+    IF fk_name IS NOT NULL THEN
+        EXECUTE format('ALTER TABLE tbs_attempts DROP CONSTRAINT %I', fk_name);
+    END IF;
+END $$;
+
+-- Step 3: Change tbs_id from UUID to TEXT
+ALTER TABLE tbs_attempts
+ALTER COLUMN tbs_id TYPE TEXT USING tbs_id::TEXT;
+
+-- Step 4: Create indexes for faster queries
+CREATE INDEX IF NOT EXISTS idx_tbs_attempts_section ON tbs_attempts(section);
+CREATE INDEX IF NOT EXISTS idx_tbs_attempts_user_section ON tbs_attempts(user_id, section);
+```
+
+This migration is required because:
+- Frontend TBS IDs are strings like "far-i-1-1-je"
+- Database was expecting UUID foreign keys to tbs_questions table
+- We now store section directly in tbs_attempts for easy querying
+
+================================================================================
+KEY DOCUMENTS TO READ (Updated 2026-01-11)
 ================================================================================
 
 **MUST READ FIRST (Before creating ANY TBS):**
@@ -80,110 +123,94 @@ KEY DOCUMENTS TO READ (Updated 2026-01-10)
    - TypeScript interfaces and type definitions
    - Exhibit structure templates
    - Quality requirements and validation rules
-   - FOLLOW THIS DOCUMENT PRECISELY FOR ALL TBS CREATION
 
 **Session Context Files:**
 
-2. **CURRENT_STATUS_2026-01-10.txt** (CRITICAL)
-   - Detailed instructions for resuming current work
+2. **CURRENT_STATUS_2026-01-10.txt** (Reference for TBS expansion plan)
    - Phase 1 & Phase 2 TBS expansion plan
    - Distribution targets for 350 total TBS
 
-3. **src/lib/data/tbs/tbs-research-guide.md**
-   - CPA exam TBS research and background
-   - Complexity level definitions (40% simple, 45% moderate, 15% complex)
-   - Topic priorities by section
+3. **TODO.md** - Current project task list
 
 **TBS Files:**
 
 4. **src/lib/data/tbs/*.ts** (TBS question files)
    - types.ts: TBS type definitions
-   - far-tbs.ts: 19 FAR TBS (need 10 more for Phase 1)
-   - aud-tbs.ts: 29 AUD TBS
-   - reg-tbs.ts: 30 REG TBS
-   - tcp-tbs.ts: 21 TCP TBS
-   - bar-tbs.ts: 21 BAR TBS
-   - isc-tbs.ts: 12 ISC TBS
+   - far-tbs.ts, aud-tbs.ts, reg-tbs.ts, tcp-tbs.ts, bar-tbs.ts, isc-tbs.ts
    - index.ts: Central exports
 
-**Other Reference:**
+**Auth & API Files (Recently Updated):**
 
-5. **docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md**
-   - Complete breakdown of all 5,810 MCQ questions
-
-6. **CPA Exam Blueprint - Business Overview.txt**
-   - Complete business description for Surgent partnership
+5. **src/lib/supabase/client.ts** - Browser client (uses createBrowserClient for cookie auth)
+6. **src/lib/supabase/middleware.ts** - Session refresh middleware
+7. **src/app/api/tbs/stats/route.ts** - TBS stats API (queries tbs_attempts directly)
+8. **src/app/api/tbs/attempts/route.ts** - TBS attempts API (no tbs_questions JOIN)
 
 ================================================================================
 IMMEDIATE NEXT STEPS (Pick up here!)
 ================================================================================
 
-**CRITICAL: READ THIS FIRST**
-Before creating ANY TBS questions, you MUST read:
-  docs/tbs-system-architecture.md
-This contains complete TBS creation guidelines. Follow it precisely.
+**PRIORITY 1: Verify TBS Tracking Works**
+1. User needs to run the SQL migration above in Supabase
+2. User needs to log out and log back in (to get cookie-based auth)
+3. Test completing a TBS and verifying progress appears on simulations page
 
---------------------------------------------------------------------------------
-PHASE 1: ADD 10 FAR TBS TO REACH 200 TOTAL
---------------------------------------------------------------------------------
+**PRIORITY 2: TBS Expansion (if time permits)**
+- Current: ~190 TBS
+- Target: 350 TBS
+- See CURRENT_STATUS_2026-01-10.txt for distribution plan
 
-File: src/lib/data/tbs/far-tbs.ts
-Current: 19 questions (IDs tbs-far-012 through tbs-far-030)
-Needed: 10 more (IDs tbs-far-031 through tbs-far-040)
-
-Suggested Topics:
-1. Property Plant & Equipment - Impairment Testing
-2. Business Combinations - Purchase Price Allocation
-3. Contingencies and Commitments
-4. Stock Compensation (ASC 718)
-5. Foreign Currency Translation
-6. Segment Reporting
-7. Fair Value Measurements (ASC 820)
-8. NFP Revenue Recognition
-9. Governmental - Enterprise Fund
-10. Subsequent Events
-
-After adding:
-1. Update export array at bottom of far-tbs.ts
-2. Run: npx tsc --noEmit --skipLibCheck
-3. Verify total = 200
-
---------------------------------------------------------------------------------
-PHASE 2: EXPAND TO 350 TOTAL TBS (150 more after Phase 1)
---------------------------------------------------------------------------------
-
-After Phase 1, expand library from 200 to 350 total TBS.
-
-Distribution for 150 new TBS (maintain proportional):
-| Section | Add  | New Total |
-|---------|------|-----------|
-| FAR     | ~33  | 62        |
-| AUD     | ~33  | 62        |
-| REG     | ~33  | 63        |
-| TCP     | ~17  | 38        |
-| BAR     | ~17  | 38        |
-| ISC     | ~17  | 29        |
-
-Type Distribution: 45% numeric, 25% document review, 15% journal, 10% dropdown, 5% research
-Complexity: 40% simple, 45% moderate, 15% complex
-
-See CURRENT_STATUS_2026-01-10.txt for full details and ID numbering.
+**PRIORITY 3: Other Tasks**
+- Continue MCQ medium difficulty expansion (49.2% → 55% target)
+- Phase 4: Email Nurturing
+- Phase 5: AI Features
 
 ================================================================================
-TBS QUESTION STATUS (as of 2026-01-10)
+RECENT FIXES (2026-01-11) - IMPORTANT CONTEXT
+================================================================================
+
+1. **Auth Cookie Fix (CRITICAL)**
+   - Changed from localStorage-based auth to cookie-based auth
+   - src/lib/supabase/client.ts: Uses createBrowserClient from @supabase/ssr
+   - src/lib/supabase/middleware.ts: Properly refreshes sessions
+   - Users must LOG OUT and LOG BACK IN to get new cookie-based session
+
+2. **TBS Progress Tracking Fix**
+   - Issue: Stats/Attempts APIs used INNER JOIN with tbs_questions
+   - Problem: Frontend TBS IDs don't exist in tbs_questions table
+   - Fix: Query tbs_attempts directly, use section column stored there
+   - Files: api/tbs/stats/route.ts, api/tbs/attempts/route.ts
+
+3. **TBS Exit Session Feature**
+   - New modal when exiting incomplete TBS
+   - "Save & Exit" - saves responses as incomplete attempt
+   - "Exit Without Saving" - exits without saving
+   - Shows progress summary (questions answered, time spent)
+   - src/components/tbs/TBSContainer.tsx
+
+4. **Notes Not Appearing in My Notes**
+   - Related to auth cookie issue - should be fixed after re-login
+
+5. **Dark Mode Fixes (5 pages)**
+   - Study Hours Calculator, NTS Tracker, Score Release Calendar
+   - Exam Day Walkthrough, Failed Section Guide
+   - All colored sections now have proper dark: variants
+
+================================================================================
+TBS QUESTION STATUS (as of 2026-01-11)
 ================================================================================
 
 | Section | Questions | File Location              |
 |---------|-----------|----------------------------|
-| FAR     | 19        | src/lib/data/tbs/far-tbs.ts |
-| AUD     | 29        | src/lib/data/tbs/aud-tbs.ts |
-| REG     | 30        | src/lib/data/tbs/reg-tbs.ts |
-| TCP     | 21        | src/lib/data/tbs/tcp-tbs.ts |
-| BAR     | 21        | src/lib/data/tbs/bar-tbs.ts |
-| ISC     | 12        | src/lib/data/tbs/isc-tbs.ts |
+| FAR     | ~25+      | src/lib/data/tbs/far-tbs.ts |
+| AUD     | ~30+      | src/lib/data/tbs/aud-tbs.ts |
+| REG     | ~30       | src/lib/data/tbs/reg-tbs.ts |
+| TCP     | ~25+      | src/lib/data/tbs/tcp-tbs.ts |
+| BAR     | ~25+      | src/lib/data/tbs/bar-tbs.ts |
+| ISC     | ~12       | src/lib/data/tbs/isc-tbs.ts |
 | SAMPLE  | 58        | src/lib/data/tbs/sample-tbs.ts |
 |---------|-----------|----------------------------|
-| TOTAL   | 190       | Need 10 more for 200       |
+| TOTAL   | ~190+     | Target: 350                |
 
 ================================================================================
 MCQ PRACTICE QUESTIONS STATUS (as of 2026-01-10)
@@ -200,28 +227,6 @@ MCQ PRACTICE QUESTIONS STATUS (as of 2026-01-10)
 | BAR     | 490       | 14      | 17%   | 56%  | 27%   |
 | ISC     | 560       | 16      | 15%   | 50%  | 35%   |
 
-**Question File Locations:**
-- Original 600: src/lib/data/practice-questions/{section}.ts
-- Batch JSON files: docs/question-batches/{section}/
-
-================================================================================
-RECENT ACCOMPLISHMENTS (Session 2026-01-10)
-================================================================================
-
-1. **Dark Mode Fix - State Requirements Pages**
-   - Fixed bubbles/cards that were unreadable in dark mode
-   - Updated [state]/page.tsx with dark: classes for all cards
-   - Updated StateSelector.tsx dropdown with dark mode support
-
-2. **TBS Question Bank Expansion (190/200)**
-   - Created comprehensive TBS research guide with complexity levels
-   - Created new TBS folder structure: src/lib/data/tbs/
-   - Created 6 new section TBS files (far, aud, reg, tcp, bar, isc)
-   - Created types.ts with TBSQuestion interface
-   - Created index.ts with central exports
-   - Added 'dropdown' TBS type to types
-   - Total: 190 TBS (58 sample + 132 new)
-
 ================================================================================
 DATABASE STATUS (Supabase - ACTIVE)
 ================================================================================
@@ -233,6 +238,8 @@ The database is fully integrated and active. Key tables:
 - nts_entries (Notice to Schedule tracking)
 - practice_attempts (questions, user answers)
 - user_badges (earned achievements)
+- question_notes (MCQ and TBS notes)
+- tbs_attempts (TBS progress tracking) - NEEDS MIGRATION
 
 ================================================================================
 CORE PROJECT STRUCTURE
@@ -240,42 +247,30 @@ CORE PROJECT STRUCTURE
 
 src/
 ├── app/
-│   ├── api/                         # API routes
-│   ├── auth/callback/               # Supabase auth callback
-│   ├── blog/                        # MDX blog (8 articles)
-│   ├── cpa-academy/                 # CPA Academy landing page
-│   ├── dashboard/                   # User dashboard (requires auth)
-│   │   ├── practice/                # MCQ practice questions
-│   │   ├── exam-simulation/         # Timed exams with pause
+│   ├── api/
+│   │   └── tbs/                    # TBS API routes (recently fixed)
+│   │       ├── attempts/           # GET/POST attempts
+│   │       └── stats/              # GET stats
+│   ├── auth/callback/              # Supabase auth callback
+│   ├── dashboard/
+│   │   ├── simulations/            # TBS practice (with progress tracking)
+│   │   ├── my-notes/               # User notes hub
 │   │   └── ...
-│   ├── state-requirements/          # 55 state/jurisdiction pages
-│   │   ├── [state]/page.tsx         # Dynamic state pages (dark mode fixed)
-│   │   └── StateSelector.tsx        # Dropdown (dark mode fixed)
 │   └── ...
 ├── components/
-│   ├── auth/AuthProvider.tsx        # Auth context with profile
-│   └── ...
+│   ├── auth/AuthProvider.tsx       # Auth context (cookie-based)
+│   └── tbs/
+│       └── TBSContainer.tsx        # TBS UI (includes Exit Session)
 └── lib/
-    ├── supabase/                    # Supabase client & types
-    ├── gamification/                # Points, badges, achievements
+    ├── supabase/
+    │   ├── client.ts               # Browser client (createBrowserClient)
+    │   ├── middleware.ts           # Session refresh
+    │   └── server.ts               # Server client
     └── data/
-        ├── practice-questions/      # Original 600 MCQs (6 files)
-        ├── tbs/                     # TBS QUESTIONS (NEW!)
-        │   ├── types.ts             # TBS type definitions
-        │   ├── tbs-research-guide.md # Research & creation guidelines
-        │   ├── far-tbs.ts           # 19 FAR TBS (need 10 more)
-        │   ├── aud-tbs.ts           # 29 AUD TBS
-        │   ├── reg-tbs.ts           # 30 REG TBS
-        │   ├── tcp-tbs.ts           # 21 TCP TBS
-        │   ├── bar-tbs.ts           # 21 BAR TBS
-        │   ├── isc-tbs.ts           # 12 ISC TBS
-        │   ├── sample-tbs.ts        # 58 original sample TBS
-        │   └── index.ts             # Central exports
-        └── ...
-
-docs/
-├── DIFFICULTY-DISTRIBUTION-ANALYSIS.md  # MCQ stats
-└── question-batches/                    # 5,200+ additional MCQs
+        └── tbs/                    # TBS question files
+            ├── types.ts
+            ├── far-tbs.ts, aud-tbs.ts, etc.
+            └── index.ts
 
 ================================================================================
 COMMANDS

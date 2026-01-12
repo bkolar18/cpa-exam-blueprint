@@ -1,0 +1,601 @@
+================================================================================
+CPA EXAM BLUEPRINT - IMPLEMENTATION PLAN
+Date: 2026-01-11
+================================================================================
+
+This document provides comprehensive implementation plans for all issues
+identified in "Next steps.txt". Each issue includes root cause analysis,
+affected files, and step-by-step implementation instructions.
+
+================================================================================
+ISSUE #1: TBS Tracking Consistency Between Pages
+================================================================================
+
+PROBLEM:
+TBS tracking shows different values between the Exam Readiness dashboard and
+the Simulations page.
+
+ROOT CAUSE:
+Both pages fetch TBS data correctly from tbs_attempts table, but they use
+different calculation methods:
+
+1. Exam Readiness (readiness/page.tsx):
+   - Direct Supabase query in useEffect
+   - Calculates stats client-side per section
+   - Uses completed attempts for average score
+
+2. Simulations Page (simulations/page.tsx):
+   - Uses useTBSProgress() hook
+   - Calls /api/tbs/stats and /api/tbs/attempts endpoints
+   - Uses progressData.completedTBSIds.size for completed count
+
+AFFECTED FILES:
+- src/app/dashboard/readiness/page.tsx (lines 142-253)
+- src/app/dashboard/simulations/page.tsx
+- src/hooks/useTBSProgress.ts
+
+IMPLEMENTATION PLAN:
+1. Standardize on the API-based approach (same as simulations page)
+2. Update readiness/page.tsx to use useTBSProgress() hook instead of direct query
+3. OR: Ensure both calculate exactly the same way
+
+SPECIFIC CHANGES:
+Option A (Recommended): Use useTBSProgress hook in readiness page
+- Import useTBSProgress in readiness/page.tsx
+- Replace direct tbsAttempts query with hook data
+- Map hook's progressData to existing tbsStats interface
+
+Option B: Ensure calculations match
+- Both must filter by is_complete for completed count
+- Both must use score_percentage average for completed attempts only
+- Both must count unique tbs_id for uniqueTBSAttempted
+
+================================================================================
+ISSUE #2: Score Release Calendar "aJ" Bug
+================================================================================
+
+PROBLEM:
+Upcoming score releases show "aJ" before the date instead of proper month/day.
+
+ROOT CAUSE:
+Lines 303-308 in score-release-calendar/page.tsx:
+```javascript
+{formatShortDate(release.date).split("")[1]}  // Gets "a" (2nd char of "Jan")
+{formatShortDate(release.date).split("")[0]}  // Gets "J" (1st char of "Jan")
+```
+
+The code splits by empty string "" (individual characters) instead of " " (space).
+formatShortDate returns "Jan 12" but split("") gives ["J","a","n"," ","1","2"]
+
+AFFECTED FILE:
+- src/app/tools/score-release-calendar/page.tsx (lines 303-308)
+
+IMPLEMENTATION PLAN:
+Fix the split to use space separator:
+
+BEFORE (lines 303-308):
+```jsx
+<span className="text-white text-lg font-bold">
+  {formatShortDate(release.date).split("")[1]}
+</span>
+<span className="text-white/80 text-xs">
+  {formatShortDate(release.date).split("")[0]}
+</span>
+```
+
+AFTER:
+```jsx
+<span className="text-white text-lg font-bold">
+  {formatShortDate(release.date).split(" ")[1]}
+</span>
+<span className="text-white/80 text-xs">
+  {formatShortDate(release.date).split(" ")[0]}
+</span>
+```
+
+This will correctly display:
+- Day number (e.g., "12") in bold
+- Month abbreviation (e.g., "Jan") below in smaller text
+
+================================================================================
+ISSUE #3: My Notes Page Not Saving + 400 Error
+================================================================================
+
+PROBLEM:
+1. Notes not appearing in My Notes tab
+2. Console error: GET /rest/v1/question_notes?...&confidence=not.is.null 400
+
+ROOT CAUSE:
+The 400 error comes from readiness/page.tsx line 139:
+```javascript
+.not("confidence", "is", null)
+```
+
+This Supabase filter syntax is invalid. The ".not()" method with "is" operator
+is not producing the correct PostgREST query.
+
+AFFECTED FILES:
+- src/app/dashboard/readiness/page.tsx (line 139)
+- src/app/dashboard/my-notes/page.tsx (may have secondary effects)
+
+IMPLEMENTATION PLAN:
+
+Step 1: Fix the invalid filter in readiness/page.tsx (line 139)
+BEFORE:
+```javascript
+.not("confidence", "is", null)
+```
+
+AFTER (Option A - Use neq):
+```javascript
+.neq('confidence', null)
+```
+
+AFTER (Option B - Use filter method):
+```javascript
+.filter('confidence', 'not.is', null)
+```
+
+Step 2: Verify My Notes page works after auth fix
+- User must log out and log back in (cookie-based auth from previous session)
+- The My Notes page query (select('*')) is valid and should work
+
+================================================================================
+ISSUE #4: About Page Pricing Tier Spacing
+================================================================================
+
+PROBLEM:
+In the "Unlimited Access Until You Pass" section, need more space between
+"Free", "Standard", "Pro" labels and their descriptions.
+
+AFFECTED FILE:
+- src/app/about/page.tsx (lines 161-173)
+
+CURRENT CODE (lines 161-173):
+```jsx
+<ul className="space-y-2 text-green-700 dark:text-green-400">
+  <li className="flex items-start gap-2">
+    <span className="font-bold w-[68px] flex-shrink-0">Free:</span>
+    <span>50 questions for FAR section</span>
+  </li>
+  ...
+</ul>
+```
+
+IMPLEMENTATION PLAN:
+Increase spacing between list items:
+
+AFTER:
+```jsx
+<ul className="space-y-4 text-green-700 dark:text-green-400">
+  <li className="flex items-start gap-3">
+    <span className="font-bold w-[80px] flex-shrink-0">Free:</span>
+    <span>50 questions for FAR section</span>
+  </li>
+  ...
+</ul>
+```
+
+Changes:
+- space-y-2 -> space-y-4 (more vertical gap between items)
+- gap-2 -> gap-3 (more horizontal gap between label and description)
+- w-[68px] -> w-[80px] (slightly wider label area)
+
+================================================================================
+ISSUE #5: Add TBS to "How We Compare" Section
+================================================================================
+
+PROBLEM:
+The comparison table on About page shows only checkmarks for TBS.
+Need to show actual TBS counts like we do for Practice Questions.
+
+AFFECTED FILE:
+- src/app/about/page.tsx (lines 255-277 - TBS row)
+
+CURRENT CODE (TBS row):
+Shows only checkmarks (✓) for all providers
+
+IMPLEMENTATION PLAN:
+
+Update the Task-Based Simulations row to show counts:
+
+```jsx
+<tr>
+  <td className="py-4 px-3 text-[var(--foreground)] font-medium">Task-Based Simulations</td>
+  <td className="py-4 px-3 text-center bg-[var(--primary)]/5">
+    <span className="text-[var(--foreground)] font-semibold">500+</span>
+  </td>
+  <td className="py-4 px-3 text-center text-[var(--foreground)]">400+</td>
+  <td className="py-4 px-3 text-center text-[var(--foreground)]">500+</td>
+  <td className="py-4 px-3 text-center text-[var(--foreground)]">400+</td>
+</tr>
+```
+
+Note: Verify competitor TBS counts before implementing:
+- Becker: ~400 TBS
+- Surgent: ~500 TBS
+- Roger: ~400 TBS
+- Our target: 500+ (need to add ~310 more to reach this from current ~190)
+
+================================================================================
+ISSUE #6: Hide Pricing Page and Details
+================================================================================
+
+PROBLEM:
+User wants to hide pricing for beta testing period.
+
+AFFECTED FILES:
+- src/app/pricing/page.tsx (hide entire page)
+- src/app/about/page.tsx (hide price columns in comparison table)
+- src/components/Header.tsx (remove Pricing link if present)
+- src/app/page.tsx (remove any pricing CTAs)
+
+IMPLEMENTATION PLAN:
+
+Option A (Quick): Redirect pricing page
+1. In src/app/pricing/page.tsx, add redirect:
+```jsx
+import { redirect } from 'next/navigation';
+
+export default function PricingPage() {
+  redirect('/about');
+}
+```
+
+Option B (Full): Hide pricing elements
+1. pricing/page.tsx - Replace with "Coming Soon" or redirect
+2. about/page.tsx comparison table:
+   - Remove price row (line 379-396)
+   - Remove price subheaders under provider names (lines 196-219)
+   - Update "Bottom line" text (line 402)
+3. Header - Remove Pricing link from navigation
+4. Any CTAs mentioning specific prices - update to "Free during beta"
+
+================================================================================
+ISSUE #7: Replace "95% Less" with TBS Details on Home Page
+================================================================================
+
+PROBLEM:
+Home page hero and trust signals mention "95% Less Than Big Courses" which
+relates to pricing. Replace with TBS information.
+
+AFFECTED FILE:
+- src/app/page.tsx (lines 13-14 hero, line 54 trust signal)
+
+CURRENT (line 13-14):
+```jsx
+<p className="text-xl md:text-2xl text-gray-200 mb-8">
+  6,000+ practice questions, progress tracking, and unlimited access
+  until you pass — for 95% less than the big names.
+</p>
+```
+
+CURRENT (line 54):
+```jsx
+<span>95% Less Than Big Courses</span>
+```
+
+IMPLEMENTATION PLAN:
+
+Hero text (line 13-14):
+```jsx
+<p className="text-xl md:text-2xl text-gray-200 mb-8">
+  6,000+ practice questions, 500+ task-based simulations, progress tracking,
+  and unlimited access until you pass.
+</p>
+```
+
+Trust signal (line 54):
+```jsx
+<span>500+ Task-Based Simulations</span>
+```
+
+================================================================================
+ISSUE #8: Replace Recent Questions with Recent Sessions on Practice Page
+================================================================================
+
+PROBLEM:
+Practice page shows "Recent Questions" but should show "Recent Sessions" like
+the Study Log page does.
+
+AFFECTED FILE:
+- src/app/dashboard/practice/page.tsx (around line 89 and below)
+
+CURRENT CODE:
+Shows `recentAttempts` - last 5 individual question attempts
+
+IMPLEMENTATION PLAN:
+
+1. Import the session grouping logic from Study Log or create shared utility
+2. Group attempts into sessions (attempts within 30 min = 1 session)
+3. Display sessions instead of individual questions:
+   - Section badge
+   - Date/time
+   - Questions answered: X correct of Y total
+   - Time spent
+   - Topics covered
+   - Click to view session details
+
+Use same RecentSessionsSection component pattern from study-log/page.tsx:
+- Group by 30-minute windows
+- Show session summary cards
+- Link to session detail view
+
+================================================================================
+ISSUE #9: Fix "Back to All Sessions" Button on Study Log
+================================================================================
+
+PROBLEM:
+When clicking into a recent session from Study Log, the "Back to all sessions"
+button doesn't work.
+
+AFFECTED FILE:
+- src/app/dashboard/study-log/page.tsx (session detail view)
+- OR: src/app/dashboard/practice/history/[sessionId]/page.tsx
+
+INVESTIGATION NEEDED:
+1. Identify where session detail view is rendered
+2. Check if "Back" button uses client-side navigation or page reload
+3. Verify the button's onClick handler or Link href
+
+LIKELY FIX:
+If button uses onClick with router.back():
+```jsx
+onClick={() => router.back()}
+```
+
+Change to explicit navigation:
+```jsx
+onClick={() => router.push('/dashboard/study-log')}
+```
+
+Or if it's a Link component, verify href is correct:
+```jsx
+<Link href="/dashboard/study-log">Back to all sessions</Link>
+```
+
+================================================================================
+ISSUE #10: Study Log "This Week" Shows 0h
+================================================================================
+
+PROBLEM:
+"This Week" stat shows 0h studied, possibly resetting on Sundays.
+
+AFFECTED FILE:
+- src/app/dashboard/study-log/page.tsx (lines 220-241)
+
+CURRENT CODE ANALYSIS (lines 220-228):
+```javascript
+const thisWeekStart = new Date();
+thisWeekStart.setDate(thisWeekStart.getDate() - thisWeekStart.getDay());
+thisWeekStart.setHours(0, 0, 0, 0);
+```
+
+This sets week start to SUNDAY (getDay() returns 0 for Sunday).
+On Sunday, getDay() = 0, so thisWeekStart = today at midnight.
+On Monday, getDay() = 1, so thisWeekStart = yesterday (Sunday).
+
+POSSIBLE ISSUES:
+1. If practice_attempts dates are stored in UTC but compared to local time
+2. If no sessions logged since the calculated Sunday
+
+IMPLEMENTATION PLAN:
+
+Step 1: Add debug logging to verify date calculations
+Step 2: Check if this is a timezone issue:
+```javascript
+// Current: Uses local timezone
+const thisWeekStart = new Date();
+
+// Fix: Be explicit about timezone handling
+// OR use UTC consistently
+```
+
+Step 3: Verify the filter logic:
+```javascript
+const thisWeekManualSessions = sessions.filter(
+  (s) => new Date(s.date) >= thisWeekStart
+);
+```
+- Ensure s.date comparison handles timezone correctly
+
+================================================================================
+ISSUE #11: Study Streak Resetting to 1 Day
+================================================================================
+
+PROBLEM:
+Study streak resets to 1 day every day instead of incrementing for consecutive
+days of studying.
+
+AFFECTED FILES:
+- Database trigger: update_study_streak() in PostgreSQL
+- src/lib/gamification/checker.ts (lines 277-292)
+
+ROOT CAUSE ANALYSIS:
+The streak is updated by a PostgreSQL trigger on study_sessions INSERT.
+The trigger logic (from fix-streak-counter-v2.sql):
+```sql
+IF last_date IS NOT NULL THEN
+  date_diff := NEW.date::DATE - last_date::DATE;
+ELSE
+  date_diff := NULL;
+END IF;
+
+-- date_diff = 0: same day, no change
+-- date_diff = 1: consecutive day, increment
+-- date_diff > 1: gap, reset to 1
+```
+
+POSSIBLE ISSUES:
+1. NEW.date might be using a different date format than expected
+2. Timezone mismatch between app and database
+3. The trigger might not be firing correctly
+4. last_study_date not being updated properly
+
+IMPLEMENTATION PLAN:
+
+Step 1: Debug trigger by checking current values
+```sql
+SELECT id, current_streak, longest_streak, last_study_date
+FROM profiles
+WHERE id = 'user-uuid';
+```
+
+Step 2: Check recent study_sessions dates
+```sql
+SELECT date, created_at FROM study_sessions
+WHERE user_id = 'user-uuid'
+ORDER BY date DESC LIMIT 5;
+```
+
+Step 3: If issue is timezone-related:
+- Ensure dates are compared in same timezone
+- Consider using DATE type instead of TIMESTAMP for date comparison
+
+Step 4: Potential fix in trigger:
+```sql
+-- Ensure we're comparing dates properly
+date_diff := (NEW.date AT TIME ZONE 'UTC')::DATE -
+             (last_date AT TIME ZONE 'UTC')::DATE;
+```
+
+================================================================================
+ISSUE #12: FAR Selector Box Size on Exam Readiness Dashboard
+================================================================================
+
+PROBLEM:
+FAR section button appears smaller than other section buttons.
+
+AFFECTED FILE:
+- src/app/dashboard/readiness/page.tsx (lines 388-410)
+
+CURRENT CODE (lines 395-408):
+```jsx
+<button
+  key={section}
+  onClick={() => setSelectedSection(section)}
+  className={`px-4 py-3 rounded-xl font-medium transition-all ${
+    selectedSection === section
+      ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
+      : 'bg-white dark:bg-[var(--card)] ...'
+  }`}
+>
+  <div className="text-lg font-bold">{section}</div>
+  <div className={`text-xs ...`}>
+    {score > 0 ? `${score}%` : 'Not started'}
+  </div>
+</button>
+```
+
+ANALYSIS:
+All buttons use same classes. FAR might appear smaller if:
+1. Its score text is shorter ("0%" vs "Not started")
+2. Content difference affects natural sizing
+
+IMPLEMENTATION PLAN:
+Add fixed minimum width to ensure consistent sizing:
+
+```jsx
+<button
+  key={section}
+  className={`px-4 py-3 rounded-xl font-medium transition-all min-w-[80px] ${
+    ...
+  }`}
+>
+```
+
+Or use a grid layout instead of flex:
+```jsx
+<div className="grid grid-cols-4 md:grid-cols-7 gap-2">
+  {visibleSections.map((section) => (
+    <button className="...">
+```
+
+================================================================================
+ISSUE #13: Topic Readiness Bars - Show Quantity Instead of Accuracy
+================================================================================
+
+PROBLEM:
+Topic readiness bars represent accuracy percentage. User wants:
+- Bars to represent quantity of questions completed
+- Keep colored accuracy percentages visible
+- Add "accuracy" text after percentages (e.g., "100% accuracy")
+
+AFFECTED FILES:
+- src/app/dashboard/readiness/page.tsx (lines 549-604)
+- src/app/dashboard/page.tsx (overview page - if has similar section)
+
+CURRENT CODE (lines 577-588):
+```jsx
+{/* Progress bar for topic */}
+<div className="h-3 bg-gray-200 dark:bg-[var(--card-hover)] rounded-full overflow-hidden">
+  <div
+    className={`h-full transition-all duration-300 ${
+      stat.accuracy >= 80 ? 'bg-green-500' :
+      stat.accuracy >= 60 ? 'bg-yellow-500' :
+      stat.accuracy > 0 ? 'bg-red-400' :
+      'bg-gray-300 dark:bg-[var(--border)]'
+    }`}
+    style={{ width: `${stat.accuracy}%` }}
+  />
+</div>
+```
+
+IMPLEMENTATION PLAN:
+
+Step 1: Change bar width to represent completion percentage
+- Calculate: completed / target_for_topic * 100
+- Need to define target questions per topic
+
+Step 2: Update accuracy display text
+```jsx
+<span className={`text-lg font-bold ${...}`}>
+  {stat.accuracy > 0 ? `${stat.accuracy}% accuracy` : '--'}
+</span>
+```
+
+Step 3: Update bar width calculation
+```jsx
+// Calculate completion as percentage of target
+const targetQuestions = Math.round((stat.weight / 100) * 100); // e.g., 100 questions per section
+const completionPercent = Math.min(100, (stat.attempted / targetQuestions) * 100);
+
+<div
+  style={{ width: `${completionPercent}%` }}
+  className={/* color based on accuracy, not completion */}
+/>
+```
+
+Step 4: Update sublabel to show quantity
+```jsx
+<span className="text-xs text-[var(--muted)]">
+  {stat.attempted} / {targetQuestions} questions • {stat.coverage}% coverage
+</span>
+```
+
+Step 5: Apply same changes to overview page if applicable
+
+================================================================================
+SUMMARY - PRIORITY ORDER
+================================================================================
+
+HIGH PRIORITY (User-facing bugs):
+1. #2 - Score Calendar "aJ" bug (simple fix)
+2. #3 - My Notes 400 error (blocking functionality)
+3. #11 - Study Streak resetting (affects gamification)
+4. #9 - Back button not working (navigation broken)
+
+MEDIUM PRIORITY (UX improvements):
+5. #1 - TBS tracking consistency
+6. #10 - This Week 0h issue
+7. #12 - FAR box size
+8. #13 - Topic readiness bars
+
+LOW PRIORITY (Content changes):
+9. #4 - About page spacing
+10. #5 - Add TBS to comparison
+11. #6 - Hide pricing
+12. #7 - Replace 95% less
+13. #8 - Recent Sessions on Practice page
+
+================================================================================
