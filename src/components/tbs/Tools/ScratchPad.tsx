@@ -56,6 +56,7 @@ export default function ScratchPad({
  const [showFontSizePicker, setShowFontSizePicker] = useState(false);
  const [isSaving, setIsSaving] = useState(false);
  const [lastSaved, setLastSaved] = useState<Date | null>(null);
+ const [isEmpty, setIsEmpty] = useState(true);
  const dragOffset = useRef({ x: 0, y: 0 });
  const resizeStart = useRef({ x: 0, y: 0, width: 0, height: 0, posX: 0, posY: 0 });
  const panelRef = useRef<HTMLDivElement>(null);
@@ -110,8 +111,15 @@ export default function ScratchPad({
 
  // Initialize editor content
  useEffect(() => {
- if (isOpen && editorRef.current && !initializedRef.current && initialNotes) {
+ if (isOpen && editorRef.current && !initializedRef.current) {
+ if (initialNotes) {
  editorRef.current.innerHTML = initialNotes;
+ setIsEmpty(false);
+ } else {
+ // Start with a <br> to fix cursor positioning bug
+ editorRef.current.innerHTML = "<br>";
+ setIsEmpty(true);
+ }
  initializedRef.current = true;
  }
  }, [isOpen, initialNotes]);
@@ -217,32 +225,31 @@ export default function ScratchPad({
  // Handle content change
  const handleContentChange = useCallback(() => {
  if (editorRef.current) {
+ const text = editorRef.current.innerText.trim();
+ const html = editorRef.current.innerHTML;
+ // Check if truly empty (just <br> or empty)
+ const editorIsEmpty = !text || html === "<br>" || html === "";
+ setIsEmpty(editorIsEmpty);
+
+ // If editor becomes empty, ensure it has a <br> for proper cursor positioning
+ if (editorIsEmpty && html === "") {
+ editorRef.current.innerHTML = "<br>";
+ }
+
  onNotesChange?.(editorRef.current.innerHTML);
  }
  }, [onNotesChange]);
 
- // Track if this is the first input (for cursor fix)
- const isFirstInput = useRef(true);
-
- // Handle focus to fix cursor position on first interaction
+ // Handle focus - position cursor correctly
  const handleFocus = useCallback(() => {
- if (editorRef.current && editorRef.current.innerHTML === "") {
- isFirstInput.current = true;
- // Ensure cursor is at the start when editor is empty
+ if (editorRef.current) {
  const selection = window.getSelection();
  const range = document.createRange();
+ // Position cursor at start of content
  range.setStart(editorRef.current, 0);
  range.collapse(true);
  selection?.removeAllRanges();
  selection?.addRange(range);
- }
- }, []);
-
- // Handle beforeinput to fix the first character cursor issue
- const handleBeforeInput = useCallback(() => {
- if (editorRef.current && isFirstInput.current && editorRef.current.innerHTML === "") {
- // Clear any placeholder-related state before first input
- isFirstInput.current = false;
  }
  }, []);
 
@@ -301,7 +308,8 @@ export default function ScratchPad({
  const handleClear = useCallback(() => {
  if (editorRef.current?.textContent?.trim() && !confirm("Clear all notes?")) return;
  if (editorRef.current) {
- editorRef.current.innerHTML ="";
+ editorRef.current.innerHTML = "<br>";
+ setIsEmpty(true);
  editorRef.current.focus();
  handleContentChange();
  }
@@ -660,22 +668,23 @@ export default function ScratchPad({
  </button>
  </div>
 
- {/* Rich Text Editor */}
+ {/* Rich Text Editor with placeholder overlay */}
+ <div className="relative flex-1" style={{ minHeight: 100 }}>
+ {/* Placeholder - shown when editor is empty */}
+ {isEmpty && (
+ <div className="absolute inset-0 p-3 text-sm text-gray-400 pointer-events-none select-none whitespace-pre-line">
+ Type your notes here...{"\n\n"}• Use formatting tools above{"\n"}• Create bullet or numbered lists{"\n"}• Highlight important info{"\n"}• Notes save to My Notes on submission
+ </div>
+ )}
  <div
  ref={editorRef}
  contentEditable
  onInput={handleContentChange}
  onKeyDown={handleKeyDown}
  onFocus={handleFocus}
- className="flex-1 p-3 text-sm text-gray-800 dark:text-[var(--foreground)] bg-yellow-50/50 dark:bg-[var(--background)] overflow-auto focus:outline-none"
- style={{ minHeight: 100 }}
- data-placeholder="Type your notes here...
-
-• Use formatting tools above
-• Create bullet or numbered lists
-• Highlight important info
-• Notes save to My Notes on submission"
+ className="absolute inset-0 p-3 text-sm text-gray-800 dark:text-[var(--foreground)] bg-yellow-50/50 dark:bg-[var(--background)] overflow-auto focus:outline-none"
  />
+ </div>
 
  {/* Info footer */}
  <div className="px-3 py-2 bg-blue-50 dark:bg-blue-900/20 border-t border-blue-200 dark:border-blue-800 flex items-center justify-between">
@@ -711,16 +720,6 @@ export default function ScratchPad({
  </>
  )}
 
- {/* Placeholder styles - using display:block to avoid cursor issues */}
- <style jsx>{`
- [contenteditable]:empty:before {
- content: attr(data-placeholder);
- color: #9ca3af;
- pointer-events: none;
- white-space: pre-line;
- display: block;
- }
- `}</style>
  </div>
  );
 }
