@@ -291,31 +291,50 @@ export default function ReadinessDashboardPage() {
  t => t.section === section
  );
  const completedTBS = sectionTBSAttempts.filter(t => t.is_complete);
- const tbsScores = completedTBS
- .map(t => t.score_percentage)
- .filter((s): s is number => s !== null);
- const tbsTimes = completedTBS
+
+ // Get the local TBS data for this section to ensure we only count TBS that exist in our data
+ const localTBSForSection = getTBSBySection(section as "FAR" | "AUD" | "REG" | "TCP" | "BAR" | "ISC");
+ const localTBSIds = new Set(localTBSForSection.map(tbs => tbs.id));
+
+ // Filter to only TBS that exist in local data
+ const completedTBSInLocalData = completedTBS.filter(t => localTBSIds.has(t.tbs_id));
+
+ // Calculate BEST score per TBS (matching simulations page calculation)
+ const bestScoreByTBS = new Map<string, number>();
+ for (const attempt of completedTBSInLocalData) {
+   if (attempt.score_percentage !== null) {
+     const currentBest = bestScoreByTBS.get(attempt.tbs_id);
+     if (currentBest === undefined || attempt.score_percentage > currentBest) {
+       bestScoreByTBS.set(attempt.tbs_id, attempt.score_percentage);
+     }
+   }
+ }
+ const bestScores = Array.from(bestScoreByTBS.values());
+
+ const tbsTimes = completedTBSInLocalData
  .map(t => t.time_spent_seconds)
  .filter((t): t is number => t !== null);
 
+ // Count unique TBS completed that exist in local data
+ const uniqueTBSCompletedInLocalData = new Set(completedTBSInLocalData.map(t => t.tbs_id)).size;
+
  const tbsStats: TBSStats = {
  totalAttempts: sectionTBSAttempts.length,
- completedAttempts: completedTBS.length,
- averageScore: tbsScores.length > 0
- ? Math.round(tbsScores.reduce((sum, s) => sum + s, 0) / tbsScores.length)
+ completedAttempts: completedTBSInLocalData.length,
+ averageScore: bestScores.length > 0
+ ? Math.round(bestScores.reduce((sum, s) => sum + s, 0) / bestScores.length)
  : null,
  averageTimeMinutes: tbsTimes.length > 0
  ? Math.round((tbsTimes.reduce((sum, t) => sum + t, 0) / tbsTimes.length) / 60)
  : null,
- uniqueTBSAttempted: new Set(sectionTBSAttempts.map(t => t.tbs_id)).size,
- uniqueTBSCompleted: new Set(completedTBS.map(t => t.tbs_id)).size,
+ uniqueTBSAttempted: new Set(sectionTBSAttempts.filter(t => localTBSIds.has(t.tbs_id)).map(t => t.tbs_id)).size,
+ uniqueTBSCompleted: uniqueTBSCompletedInLocalData,
  };
 
- // Calculate TBS topic stats
- const allTBSForSection = getTBSBySection(section as "FAR" | "AUD" | "REG" | "TCP" | "BAR" | "ISC");
+ // Calculate TBS topic stats (reuse localTBSForSection from above)
  const tbsTopicStats: TBSTopicStats[] = taxonomy.topics.map(topic => {
  // Get TBS questions for this topic
- const topicTBS = allTBSForSection.filter(tbs => tbs.topic === topic.name);
+ const topicTBS = localTBSForSection.filter(tbs => tbs.topic === topic.name);
  const totalTBS = topicTBS.length;
 
  // Get attempts for TBS in this topic
@@ -327,12 +346,19 @@ export default function ReadinessDashboardPage() {
  const uniqueAttempted = new Set(topicTBSAttempts.map(a => a.tbs_id)).size;
  const uniqueCompleted = new Set(topicCompletedAttempts.map(a => a.tbs_id)).size;
 
- // Average score from completed attempts
- const scores = topicCompletedAttempts
- .map(a => a.score_percentage)
- .filter((s): s is number => s !== null);
- const averageScore = scores.length > 0
- ? Math.round(scores.reduce((sum, s) => sum + s, 0) / scores.length)
+ // Calculate BEST score per TBS for this topic (matching simulations page)
+ const topicBestScores = new Map<string, number>();
+ for (const attempt of topicCompletedAttempts) {
+   if (attempt.score_percentage !== null) {
+     const currentBest = topicBestScores.get(attempt.tbs_id);
+     if (currentBest === undefined || attempt.score_percentage > currentBest) {
+       topicBestScores.set(attempt.tbs_id, attempt.score_percentage);
+     }
+   }
+ }
+ const bestScoresArray = Array.from(topicBestScores.values());
+ const averageScore = bestScoresArray.length > 0
+ ? Math.round(bestScoresArray.reduce((sum, s) => sum + s, 0) / bestScoresArray.length)
  : null;
 
  return {
