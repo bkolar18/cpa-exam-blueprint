@@ -969,7 +969,7 @@ export default function ReadinessDashboardPage() {
  )}
  </div>
  <span className={`text-sm truncate ${
- isCovered ? 'text-[var(--foreground)]' : 'text-[var(--muted)]'
+ (isWellCovered || isInProgress || isJustStarted) ? 'text-[var(--foreground)]' : 'text-[var(--muted)]'
  }`}>
  {stat.topic.length > 25 ? stat.topic.substring(0, 25) + '...' : stat.topic}
  </span>

@@ -480,7 +480,7 @@ export default function ExamHistoryPage() {
                       <div className="space-y-3">
                         <h4 className="font-medium text-[var(--foreground)]">Scenario</h4>
                         <div className="p-3 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-lg border border-[var(--border)]">
-                          <p className="text-sm text-[var(--foreground)]">{tbsQuestion.scenario.slice(0, 500)}{tbsQuestion.scenario.length > 500 ? '...' : ''}</p>
+                          <p className="text-sm text-[var(--foreground)]">{tbsQuestion.scenarioText.slice(0, 500)}{tbsQuestion.scenarioText.length > 500 ? '...' : ''}</p>
                         </div>
 
                         <h4 className="font-medium text-[var(--foreground)] mt-4">Requirements Summary</h4>
