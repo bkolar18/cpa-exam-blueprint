@@ -16,7 +16,7 @@ export default function WorkingFullTimePage() {
               Preparing for the CPA Exam While Working Full Time
             </h1>
             <p className="text-xl text-gray-200">
-              Real strategies from candidates who balanced busy season, client deadlines, and CPA exam prep. It&apos;s challenging, but absolutely doable.
+              Practical strategies for balancing busy season, client deadlines, and CPA exam prep.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function WorkingFullTimePage() {
                     1. Morning Study Sessions
                   </h3>
                   <p className="text-[var(--muted)]">
-                    Wake up 1-2 hours earlier than usual. Your mind is fresh, there are no distractions, and you start each day having already made progress. This is the #1 strategy recommended by CPAs who passed while working.
+                    Wake up 1-2 hours earlier than usual. Your mind is fresh, there are no distractions, and you start each day having already made progress.
                   </p>
                 </div>
                 <div>

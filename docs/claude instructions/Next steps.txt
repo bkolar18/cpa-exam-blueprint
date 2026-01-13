@@ -1,76 +1,43 @@
 Next steps:
 
-- need to update https://cpa-exam-blueprint.vercel.app/signup to reflect that we are free during beta, remove mentions of pricing
+- lets change: not yet exam ready to exam not yet recommended. (if this blurb changes to exam ready at some point we should make sure to change that language to not imply guarantees, instead have something like "excellent coverage achieved". 
 
-- change the 95% less than big names, dont want to discuss pricing
+- lets also change the sentence: Students who reach 80 on Meridian typically pass their section. because we do not want to insinuate that this means they will pass. it should be, Students who reach an 80 on Meridian are generally well-prepared for their section.
 
-- https://cpa-exam-blueprint.vercel.app/signup need to update "Comprehensive coverage across all 6 CPA exam sections", "Track your study hours, quiz scores, and section progress", and other subtext like that to be visible in dark mode. any text in the color of those two quotes is too difficult to be seen in dark mode
+- on the meridian academy page we need to change Join thousands of CPA candidates using Meridian CPA Academy to stay organized and motivated. to Join CPA candidates using Meridian to stay organized and focused throughout their exam prep.
 
-- when im on the simulation section of an exam simulation, when i hit pause and then hit resume exam, it returns me to the mcq section not the sim section, and if i had any answers marked off in the sim page they were reset to defaults because of this
+- the How many hours per week can you study? drop down options cant be seen in dark mode, need to change the text color, https://cpa-exam-blueprint.vercel.app/tools/study-hours-calculator
 
-- when on simulation section of an exam simulation, immediately after submitting a tbs, theres a brief window where users can see which answers they got correct/incorrect and the subsequent explanations before the next page renders. can we make sure that doesn't happen or is that a limitation?
+- lets change “Two forms of ID required”
 
-- when you submit the exam in an exam simulation, it takes several seconds to see the results page but there is no indication that its loading, leading myself and other users to keep clicking the submit button. can you implement a loading graphic so users know the submission button works?
+This is the biggest risk.
 
-- also on the exam simulation results page, we should allow users to go back into the tbs's and review the results from the tbs results page (same page i mentioned before was popping up briefly during the exam)
+“Prepare your ID documents (two forms required)”
+“Secondary ID: Credit card with signature or another government ID”
 
-- similarly to the exam simulation results page, we should allow users to revisit their tbs's from the study log, right now we just see this: TBS 1
+⚠️ Problem:
+For the CPA exam, only one valid, government-issued ID with photo and signature is required (driver’s license or passport). A second ID is not universally required anymore and varies by Prometric exam/program.
 
-ID: tbs-aud-007
+If a candidate shows up thinking they must have two IDs and panics, that’s bad. on this page https://cpa-exam-blueprint.vercel.app/guides/exam-day
 
-2/5
+and Score release timing certainty
 
-40%
+“Core section scores are released every 1–2 weeks.”
 
-TBS 2
+⚠️ This is generally true, but NASBA release windows still vary.
 
-ID: tbs-aud-006
+✅ Safer:
 
-0/4
+Core section scores are typically released every 1–2 weeks, depending on testing volume.
 
-0%
+- change this Real strategies from candidates who balanced busy season, client deadlines, and CPA exam prep. It's challenging, but absolutely doable. to Practical strategies for balancing busy season, client deadlines, and CPA exam prep. on https://cpa-exam-blueprint.vercel.app/working-full-time. also remove this This is the #1 strategy recommended by CPAs who passed while working.
 
-TBS 3
+- https://cpa-exam-blueprint.vercel.app/blog on this page, replace instances of CPA Exam Blueprint Team to Meridian CPA Review
 
-ID: tbs-aud-006
+- search the site for references of tips from experienced candidates, or any references of advice or strategies or testimonials from candidates. we have had no candidates use our platform and dont want to make claims we cant substantiate. some examples of this are here https://cpa-exam-blueprint.vercel.app/blog/far-section-complete-study-guide. replace instances of these with more appropriate language or remove the sections entirely. This is okay - "FAR is challenging, but thousands of candidates complete it every quarter. The difference in outcomes usually comes down to preparation quality, not intelligence." but this is not Final Tips from Experienced Candidates
+"I scheduled FAR first and gave it the most time. Don't underestimate it." because that quote is fabricated. We should change tips from experienced candidates on the study guide pages to Practical Study tips and change the wuotes to general tips
 
-1/4
-
-25%
-
-TBS 4
-
-ID: tbs-aud-006. also, there were only two tbs's in this exam simulation but its showing four for some reason in the study log.
-
-- the prime meridian graphic needs to be updated to reflect our updated 80 score threshold on the overview page and on the exam readiness dashboard banner
-
-- the study streak achievement doesn't appear to be linked to exam simulations. double check that its linked to tbs's as well (and other activity based achievements)
-
-- also ensure that the study streak achievement banner only pops up once a day, right now its popping up every time i complete a mcq study session
-
-- in the configure your quiz screen there are two dropdowns called topics and subtopics. when a student selects a topic, the subtopics dropdown should change to reflect only subtopics of the chosen topic, to ensure that students dont try to choose a topic with a subtopic that doesn't correlate to that topic.
-
-- add a report an issue button (with the triangle with exclamation point icon) to all tbs's
-
-- on authoritative literature tbs's, the answer is appearing below the Enter Your Citation words (eg the answer is Circular 230 Citation, and it literally says that on the page and in the instructions). this is a huge issue and you need to do comprehensive research into our questions/codebase in order to rectify that issue.
-
-- also, when i choose the correct source but put the incorrect citation number, i do not get partial credit, this is also a major issue for research tbs's. we need to ensure we are giving partial credit when appropriate
-
-- when i complete a mcq study session, it doesn't immediately appear in the recent sessions section
-
-- i was awarded REG sharp achievement when i got a 40% on a reg mcq study session when the threshold should be a 75%
-
-- flagged questions are still not appearing here https://cpa-exam-blueprint.vercel.app/dashboard/flagged-questions
-
-- when students go to the study log to review an exam simulation, we should let them add notes to the mcq questions
-
-- i tried searching for a sim i saw on an exam simulation in the simulations page on our dashboard and it didn't appear even though i used keywords that appeared in the problem (used the rule reference from the research problem). it also doesn't appear in the list of available research problems in the simulation page
-
-
-
-
-
-
+- add a FAQ page to the website and add a link to it under the Learn section of the resources drop down
 
 
 

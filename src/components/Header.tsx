@@ -36,6 +36,7 @@ export default function Header() {
     ],
     learn: [
       { name: "Blog", href: "/blog" },
+      { name: "FAQ", href: "/faq" },
     ],
   };
 
@@ -337,13 +338,23 @@ export default function Header() {
                         </Link>
                       ))}
                     </div>
-                    <Link
-                      href="/blog"
-                      className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Blog
-                    </Link>
+                    <div className="pt-2 border-t border-[var(--border)]">
+                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Learn</span>
+                      <Link
+                        href="/blog"
+                        className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Blog
+                      </Link>
+                      <Link
+                        href="/faq"
+                        className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        FAQ
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>

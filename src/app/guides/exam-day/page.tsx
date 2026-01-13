@@ -11,7 +11,7 @@ const checklistItems = {
     'Review the AICPA sample tests one more time',
     'Focus on weak areas but avoid cramming new material',
     'Get your sleep schedule consistent (aim for 7-8 hours)',
-    'Prepare your ID documents (two forms required)',
+    'Prepare your valid ID document (government-issued photo ID with signature)',
   ],
   dayBefore: [
     'Stop studying by early evening - rest your brain',
@@ -23,8 +23,7 @@ const checklistItems = {
     'Review your confirmation email one more time',
   ],
   whatToBring: [
-    'Primary ID: Valid driver\'s license or passport',
-    'Secondary ID: Credit card with signature or another government ID',
+    'Valid government-issued photo ID with signature (driver\'s license or passport)',
     'Confirmation email (printed or on phone - just in case)',
   ],
   whatToLeave: [
@@ -288,7 +287,7 @@ export default function ExamDayGuidePage() {
             <div>
               <h3 className="font-semibold text-[var(--foreground)] mb-2">1. ID Verification</h3>
               <p className="text-[var(--muted)]">
-                You&apos;ll need two forms of ID. Your primary ID (driver&apos;s license or passport) must have your photo and signature. The name must exactly match your NTS - even middle names matter.
+                You&apos;ll need a valid government-issued photo ID with your signature (driver&apos;s license or passport). The name must exactly match your NTS - even middle names matter.
               </p>
             </div>
             <div>
@@ -452,7 +451,7 @@ export default function ExamDayGuidePage() {
             <div>
               <h3 className="font-semibold text-[var(--foreground)] mb-2">Score Release</h3>
               <p className="text-[var(--muted)]">
-                Core section scores are released every 1-2 weeks. Discipline section scores are released quarterly. Check our Score Release Calendar for specific dates.
+                Core section scores are typically released every 1-2 weeks, depending on testing volume. Discipline section scores are released quarterly. Check our Score Release Calendar for specific dates.
               </p>
             </div>
           </div>

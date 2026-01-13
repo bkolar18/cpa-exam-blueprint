@@ -241,7 +241,7 @@ export default function CPAAcademyPage() {
  Ready to Get Started?
  </h2>
  <p className="text-lg text-gray-600 dark:text-[var(--muted-light)] mb-8">
- Join thousands of CPA candidates using Meridian CPA Academy to stay organized and motivated.
+ Join CPA candidates using Meridian to stay organized and focused throughout their exam prep.
  </p>
  {!loading && (
  <>

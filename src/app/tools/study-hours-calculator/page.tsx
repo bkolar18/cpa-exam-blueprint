@@ -206,15 +206,15 @@ export default function StudyHoursCalculatorPage() {
  <select
  value={hoursPerWeek}
  onChange={(e) => setHoursPerWeek(e.target.value)}
- className="w-full px-4 py-3 border-2 border-gray-200 dark:border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
+ className="w-full px-4 py-3 border-2 border-gray-200 dark:border-[var(--border)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors bg-white dark:bg-[var(--card)] text-[var(--foreground)]"
  >
- <option value="">Select hours per week</option>
- <option value="10">10 hours (light schedule)</option>
- <option value="15">15 hours (part-time)</option>
- <option value="20">20 hours (moderate)</option>
- <option value="25">25 hours (committed)</option>
- <option value="30">30 hours (intensive)</option>
- <option value="40">40 hours (full-time)</option>
+ <option value="" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">Select hours per week</option>
+ <option value="10" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">10 hours (light schedule)</option>
+ <option value="15" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">15 hours (part-time)</option>
+ <option value="20" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">20 hours (moderate)</option>
+ <option value="25" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">25 hours (committed)</option>
+ <option value="30" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">30 hours (intensive)</option>
+ <option value="40" className="bg-white dark:bg-[var(--card)] text-[var(--foreground)]">40 hours (full-time)</option>
  </select>
  </div>
 
