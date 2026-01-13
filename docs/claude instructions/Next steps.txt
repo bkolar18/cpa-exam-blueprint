@@ -1,19 +1,71 @@
 Next steps:
 
-- "Quality content. Our practice questions are created using AI technology based on official CPA exam blueprints, with automated review for accuracy and relevance." lets replace this blurb on our about page with "Quality Content
-Our practice questions are original and created using AI-assisted workflows guided by the official CPA Exam Blueprints. The blueprints inform topic coverage, structure, and skill weighting, while each question undergoes automated validation checks for relevance, logical consistency, and alignment with exam concepts."
+- need to update https://cpa-exam-blueprint.vercel.app/signup to reflect that we are free during beta, remove mentions of pricing
 
-and then add a footer at the bottom of the table:
-Meridian CPA Review is an independent exam preparation platform and is not affiliated with the AICPA or NASBA.
+- change the 95% less than big names, dont want to discuss pricing
 
-- lets also add a FAQ to our FAQ page or section (if we have one, if not, create one): How are questions created?
+- https://cpa-exam-blueprint.vercel.app/signup need to update "Comprehensive coverage across all 6 CPA exam sections", "Track your study hours, quiz scores, and section progress", and other subtext like that to be visible in dark mode. any text in the color of those two quotes is too difficult to be seen in dark mode
 
-Questions are generated through AI-assisted processes guided by the CPA Exam Blueprints, which define tested topics and skill levels. All questions are original, designed for practice purposes, and periodically reviewed and refined based on performance data and user feedback.
+- when im on the simulation section of an exam simulation, when i hit pause and then hit resume exam, it returns me to the mcq section not the sim section, and if i had any answers marked off in the sim page they were reset to defaults because of this
 
-- lets change our main homepage title from “Pass the CPA Exam Without Breaking the Bank” to “Smart CPA Exam Prep — Without the High Price Tag”
+- when on simulation section of an exam simulation, immediately after submitting a tbs, theres a brief window where users can see which answers they got correct/incorrect and the subsequent explanations before the next page renders. can we make sure that doesn't happen or is that a limitation?
 
-- lets also alter this blurb to make sure we dont sound like we are guaranteeing passage of the exam: Everything You Need to Pass the CPA Exam
-Stop wasting time on Reddit rabbit holes and comparison paralysis. Get organized study materials without the $2,000+ price tag. also change the "stop wasint time..." sentence to something more compelling about our robust study dashboard
+- when you submit the exam in an exam simulation, it takes several seconds to see the results page but there is no indication that its loading, leading myself and other users to keep clicking the submit button. can you implement a loading graphic so users know the submission button works?
+
+- also on the exam simulation results page, we should allow users to go back into the tbs's and review the results from the tbs results page (same page i mentioned before was popping up briefly during the exam)
+
+- similarly to the exam simulation results page, we should allow users to revisit their tbs's from the study log, right now we just see this: TBS 1
+
+ID: tbs-aud-007
+
+2/5
+
+40%
+
+TBS 2
+
+ID: tbs-aud-006
+
+0/4
+
+0%
+
+TBS 3
+
+ID: tbs-aud-006
+
+1/4
+
+25%
+
+TBS 4
+
+ID: tbs-aud-006. also, there were only two tbs's in this exam simulation but its showing four for some reason in the study log.
+
+- the prime meridian graphic needs to be updated to reflect our updated 80 score threshold on the overview page and on the exam readiness dashboard banner
+
+- the study streak achievement doesn't appear to be linked to exam simulations. double check that its linked to tbs's as well (and other activity based achievements)
+
+- also ensure that the study streak achievement banner only pops up once a day, right now its popping up every time i complete a mcq study session
+
+- in the configure your quiz screen there are two dropdowns called topics and subtopics. when a student selects a topic, the subtopics dropdown should change to reflect only subtopics of the chosen topic, to ensure that students dont try to choose a topic with a subtopic that doesn't correlate to that topic.
+
+- add a report an issue button (with the triangle with exclamation point icon) to all tbs's
+
+- on authoritative literature tbs's, the answer is appearing below the Enter Your Citation words (eg the answer is Circular 230 Citation, and it literally says that on the page and in the instructions). this is a huge issue and you need to do comprehensive research into our questions/codebase in order to rectify that issue.
+
+- also, when i choose the correct source but put the incorrect citation number, i do not get partial credit, this is also a major issue for research tbs's. we need to ensure we are giving partial credit when appropriate
+
+- when i complete a mcq study session, it doesn't immediately appear in the recent sessions section
+
+- i was awarded REG sharp achievement when i got a 40% on a reg mcq study session when the threshold should be a 75%
+
+- flagged questions are still not appearing here https://cpa-exam-blueprint.vercel.app/dashboard/flagged-questions
+
+- when students go to the study log to review an exam simulation, we should let them add notes to the mcq questions
+
+- i tried searching for a sim i saw on an exam simulation in the simulations page on our dashboard and it didn't appear even though i used keywords that appeared in the problem (used the rule reference from the research problem). it also doesn't appear in the list of available research problems in the simulation page
+
 
 
 

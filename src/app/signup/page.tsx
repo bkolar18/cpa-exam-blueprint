@@ -130,7 +130,7 @@ export default function SignupPage() {
  </div>
  <div>
  <h3 className="text-white font-semibold mb-1">6,000+ Practice Questions</h3>
- <p className="text-gray-400 text-sm">Comprehensive coverage across all 6 CPA exam sections</p>
+ <p className="text-gray-300 text-sm">Comprehensive coverage across all 6 CPA exam sections</p>
  </div>
  </div>
 
@@ -142,7 +142,7 @@ export default function SignupPage() {
  </div>
  <div>
  <h3 className="text-white font-semibold mb-1">Smart Progress Tracking</h3>
- <p className="text-gray-400 text-sm">Track your study hours, quiz scores, and section progress</p>
+ <p className="text-gray-300 text-sm">Track your study hours, quiz scores, and section progress</p>
  </div>
  </div>
 
@@ -154,7 +154,7 @@ export default function SignupPage() {
  </div>
  <div>
  <h3 className="text-white font-semibold mb-1">Unlimited Access</h3>
- <p className="text-gray-400 text-sm">All tiers include unlimited access with no expiration</p>
+ <p className="text-gray-300 text-sm">Full access to all features with no expiration</p>
  </div>
  </div>
 
@@ -165,8 +165,8 @@ export default function SignupPage() {
  </svg>
  </div>
  <div>
- <h3 className="text-white font-semibold mb-1">95% Less Than Big Names</h3>
- <p className="text-gray-400 text-sm">Premium prep materials at a fraction of the cost</p>
+ <h3 className="text-white font-semibold mb-1">Free During Beta</h3>
+ <p className="text-gray-300 text-sm">Full access to all features while we&apos;re in beta</p>
  </div>
  </div>
  </div>
@@ -176,15 +176,15 @@ export default function SignupPage() {
  <div className="grid grid-cols-3 gap-4 text-center">
  <div>
  <div className="text-2xl font-bold text-white">6,000+</div>
- <div className="text-sm text-gray-400">Questions</div>
+ <div className="text-sm text-gray-300">Questions</div>
  </div>
  <div>
  <div className="text-2xl font-bold text-white">6</div>
- <div className="text-sm text-gray-400">Sections</div>
+ <div className="text-sm text-gray-300">Sections</div>
  </div>
  <div>
- <div className="text-2xl font-bold text-white">$79</div>
- <div className="text-sm text-gray-400">Starting at</div>
+ <div className="text-2xl font-bold text-white">Free</div>
+ <div className="text-sm text-gray-300">During Beta</div>
  </div>
  </div>
  </div>

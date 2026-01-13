@@ -1526,10 +1526,10 @@ export const regResearchIRCTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-I",
-  title: "Research - Depreciation Rules",
-  scenarioText: `A client purchased equipment for their business and needs to understand the depreciation rules. Find the relevant IRC section.
+  title: "Research - Business Asset Cost Recovery",
+  scenarioText: `A client purchased equipment for their business and needs to understand how to recover the cost of tangible property over time for tax purposes.
 
-Required: Cite the IRC section that provides the general rules for depreciation deductions (cost recovery).`,
+Required: Cite the IRC section that establishes the cost recovery system for tangible depreciable property placed in service in a trade or business.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -1543,12 +1543,12 @@ Required: Cite the IRC section that provides the general rules for depreciation 
         from: "Tax Associate",
         to: "Tax Manager",
         date: "Current Date",
-        subject: "Depreciation Authority",
+        subject: "Business Equipment Cost Recovery",
         body: `Client: ABC Manufacturing, Inc.
 
-Issue: Client purchased $500,000 of manufacturing equipment. They want to know the general rules for claiming depreciation deductions.
+Issue: Client purchased $500,000 of manufacturing equipment. They want to know the general rules for recovering the cost of this tangible business property over time.
 
-Needed: Primary IRC citation for the Modified Accelerated Cost Recovery System (MACRS) depreciation rules.`,
+Needed: Primary IRC citation that governs the accelerated cost recovery system used for most tangible depreciable business assets.`,
       },
     },
   ],
@@ -2657,10 +2657,10 @@ export const regResearchIRCSection351TBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-V",
-  title: "Research - Corporate Formation Nonrecognition",
-  scenarioText: `A client is forming a corporation and wants to understand the nonrecognition rules for property transfers.
+  title: "Research - Property Transfer to Corporation",
+  scenarioText: `A client is starting a new business and plans to transfer appreciated property (land and equipment) to a newly formed corporation in exchange for all of the stock. The client wants to know if they can defer recognizing the built-in gain.
 
-Required: Cite the IRC section that provides for nonrecognition on transfers to controlled corporations.`,
+Required: Cite the IRC section that governs the tax treatment when a taxpayer transfers property to a corporation in exchange for stock.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -2674,10 +2674,10 @@ Required: Cite the IRC section that provides for nonrecognition on transfers to 
         from: "Tax Associate",
         to: "Tax Partner",
         date: "Current Date",
-        subject: "Corporate Formation Authority",
-        body: `Our client is transferring appreciated property to a newly formed corporation in exchange for 100% of the stock.
+        subject: "Incorporation Transaction Tax Treatment",
+        body: `Our client is transferring appreciated property worth $500,000 (basis $200,000) to a newly formed corporation in exchange for 100% of the stock.
 
-Needed: Primary IRC citation for the nonrecognition provision that allows deferral of gain on property transfers to controlled corporations.`,
+Needed: The IRC section that addresses whether gain must be recognized when property is contributed to a corporation in exchange for stock, and under what conditions deferral is available.`,
       },
     },
   ],
@@ -3954,10 +3954,10 @@ export const regResearchAtRiskTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-IV",
-  title: "Research - At-Risk Limitation Rules",
-  scenarioText: `A client invested in a limited partnership and wants to understand the limitations on loss deductions.
+  title: "Research - Loss Limitation Based on Economic Exposure",
+  scenarioText: `A client invested cash in a limited partnership that also has substantial nonrecourse financing. The client's share of partnership losses exceeds their cash investment. Research the IRC provisions that may limit the deductibility of these losses.
 
-Required: Cite the IRC section that limits loss deductions to amounts the taxpayer has at risk.`,
+Required: Cite the IRC section that limits loss deductions based on the taxpayer's actual economic investment in an activity.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -3970,11 +3970,11 @@ Required: Cite the IRC section that limits loss deductions to amounts the taxpay
         type: "memo",
         from: "Tax Associate",
         to: "Tax Partner",
-        subject: "At-Risk Limitation Authority",
+        subject: "Loss Deduction Limitation Research",
         date: "Current Date",
         body: `Our client invested $100,000 cash in a limited partnership. The partnership has $500,000 of nonrecourse debt. The client's share of partnership losses is $150,000.
 
-Needed: Primary IRC citation for the at-risk limitation rules that may limit the client's ability to deduct the full loss.`,
+Needed: Primary IRC citation for the rules that limit loss deductions based on the taxpayer's actual economic exposure to loss.`,
       },
     },
   ],
@@ -5264,7 +5264,7 @@ Required: Cite the primary IRC section that defines who is an employee for emplo
         date: "Current Date",
         body: `The IRS is challenging our client's classification of 15 workers as independent contractors. We need the primary IRC authority that defines "employee" for FICA purposes.
 
-Please provide the IRC section citation that establishes the common law rules for determining employee status.`,
+Please provide the IRC section citation that establishes the definition and criteria for determining employee status for employment tax purposes.`,
       },
     },
   ],
@@ -5902,8 +5902,8 @@ export const regResearchSection754TBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-V",
-  title: "Research - Partnership Basis Adjustment Election",
-  scenarioText: `A partnership is considering making an election to adjust the basis of partnership property when a partnership interest is transferred. Find the applicable IRC authority.`,
+  title: "Research - Partnership Property Basis Election",
+  scenarioText: `A partnership interest is being sold to a new partner at a price different from the selling partner's share of the partnership's inside basis. The partnership wants to elect to allow the new partner's share of partnership asset basis to reflect their purchase price. Research the IRC provisions that allow this election.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -5916,11 +5916,11 @@ export const regResearchSection754TBS: TBSQuestion = {
         type: "memo",
         from: "Tax Associate",
         to: "Tax Partner",
-        subject: "Partnership Basis Adjustment Election",
+        subject: "Partnership Interest Transfer - Basis Election",
         date: "Current Date",
-        body: `Our client, ABC Partnership, is selling a 25% interest to a new partner. The selling partner's share of inside basis is lower than the purchase price. The partnership wants to elect to adjust the basis of partnership assets to reflect the new partner's purchase price.
+        body: `Our client, ABC Partnership, is selling a 25% interest to a new partner. The selling partner's share of inside basis is lower than the purchase price. The partnership wants to make an election that allows the partnership's asset basis to be adjusted for the benefit of the new partner.
 
-Required: Cite the IRC section that allows a partnership to elect optional basis adjustments when a partnership interest is transferred.`,
+Required: Cite the IRC section that provides for an election allowing partnerships to adjust the basis of partnership property upon transfers of partnership interests.`,
       },
     },
   ],
@@ -7456,10 +7456,10 @@ export const regResearchTaxableIncomeTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "REG-II",
-  title: "Research: Corporate Taxable Income",
-  scenarioText: `You are researching IRC provisions related to corporate taxable income calculations. The client needs citations for specific rules.
+  title: "Research: Corporate Tax Provisions",
+  scenarioText: `You are researching IRC provisions for a corporate client. The client needs citations for fundamental tax concepts that apply to corporate taxpayers, including income recognition, deductions unique to corporations, and loss carryforward rules.
 
-Required: Cite the appropriate IRC sections for each corporate income tax issue.`,
+Required: Research and cite the appropriate IRC sections for each corporate tax issue described.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 3,
   exhibits: [
@@ -9397,10 +9397,10 @@ export const regResearchSection1031TBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "REG-III",
-  title: "Like-Kind Exchange Requirements",
-  scenarioText: `A client wants to complete a Section 1031 like-kind exchange but is unsure about the timing requirements and what property qualifies.
+  title: "Tax-Deferred Property Exchange Research",
+  scenarioText: `A client sold investment real estate and wants to defer recognition of the gain by acquiring replacement property. Research the IRC provisions that allow for nonrecognition treatment when exchanging similar types of property.
 
-Required: Research and cite the appropriate IRC section regarding like-kind exchange requirements.`,
+Required: Cite the IRC section governing tax-deferred exchanges of qualifying property.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [

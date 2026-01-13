@@ -8,7 +8,7 @@
  * - Recency weighting (recent performance matters more)
  * - Minimum practice thresholds per content area
  *
- * Target: 75 (recommended score before taking the exam)
+ * Target: 80 (recommended score before taking the exam)
  */
 
 import type { SectionCode } from "@/lib/supabase/types";

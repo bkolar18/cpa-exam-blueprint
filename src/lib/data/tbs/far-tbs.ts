@@ -1574,18 +1574,16 @@ export const farResearchLeaseTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "FAR-III",
-  title: "Research - Lease Classification Criteria",
-  scenarioText: `A client is entering into a new lease agreement and needs guidance on how to classify the lease under current GAAP. The lease is for manufacturing equipment with the following characteristics:
+  title: "Research - Long-Term Asset Usage Agreement",
+  scenarioText: `A client is entering into a multi-year agreement to use manufacturing equipment owned by another party. The client wants to understand how to account for this arrangement under current GAAP—specifically, how to determine whether the arrangement should be recorded as an asset with a corresponding liability or treated differently.
 
-• The lease term is 8 years
-• The equipment has a remaining economic life of 10 years
-• There is no transfer of ownership at the end of the lease
-• There is no purchase option
-• The present value of lease payments equals 85% of the equipment's fair value
+• The arrangement term is 8 years
+• The equipment has a remaining useful life of 10 years
+• There is no transfer of ownership at the end of the arrangement
+• There is no option to purchase the equipment
+• The present value of payments equals 85% of the equipment's fair value
 
-The client wants to know the authoritative guidance for lease classification criteria.
-
-Required: Cite the specific ASC paragraph that contains the lease classification criteria for lessees.`,
+Required: Cite the specific ASC paragraph that provides the criteria for determining the accounting treatment for such arrangements.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -1599,10 +1597,10 @@ Required: Cite the specific ASC paragraph that contains the lease classification
         from: "Tax Partner",
         to: "Audit Staff",
         date: "Current Date",
-        subject: "Lease Classification Research",
-        body: `Please research the authoritative guidance for lease classification. The client specifically wants the citation that lists the criteria for when a lessee should classify a lease as a finance lease versus an operating lease.
+        subject: "Asset Usage Arrangement Research",
+        body: `Please research the authoritative guidance for determining how to account for long-term arrangements where a client uses another party's asset. The client needs the citation that lists the criteria for determining the appropriate accounting model.
 
-Focus on the five classification criteria in ASC 842.`,
+Find the ASC paragraph that specifies when such arrangements should be recorded as an asset and liability versus expensed over time.`,
       },
     },
   ],
@@ -8394,8 +8392,8 @@ export const farResearchLeaseClassTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "FAR-III",
-  title: "Research: Lease Classification Criteria",
-  scenarioText: `Using the FASB Accounting Standards Codification, identify the authoritative guidance for lease classification criteria for lessees.`,
+  title: "Research: Right-of-Use Asset Accounting",
+  scenarioText: `Using the FASB Accounting Standards Codification, identify the authoritative guidance for determining how a company that obtains the right to use another party's asset should account for the arrangement.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 4,
   exhibits: [
@@ -8408,8 +8406,8 @@ export const farResearchLeaseClassTBS: TBSQuestion = {
         type: "text",
         title: "Research Task",
         paragraphs: [
-          "Your supervisor has asked you to locate the specific ASC paragraph that describes when a lessee should classify a lease as a finance lease versus an operating lease.",
-          "Identify the criteria used to determine if a lease transfers substantially all risks and rewards of ownership.",
+          "Your supervisor has asked you to locate the specific ASC paragraph that describes the criteria for determining the accounting model for arrangements involving the right to use another party's property.",
+          "Identify the criteria used to determine if such an arrangement transfers substantially all risks and rewards of ownership.",
         ],
       },
     },

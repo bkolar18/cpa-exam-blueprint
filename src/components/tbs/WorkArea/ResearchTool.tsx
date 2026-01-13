@@ -8,6 +8,7 @@ interface ResearchToolProps {
  responses: Record<string, CitationResponse>;
  onResponseChange: (requirementId: string, response: CitationResponse) => void;
  isSubmitted: boolean;
+ showCorrectAnswer?: boolean; // Show correct answer after submission (default: true for practice mode)
 }
 
 // External links to authoritative sources - matches real CPA exam format
@@ -48,6 +49,7 @@ export default function ResearchTool({
  responses,
  onResponseChange,
  isSubmitted,
+ showCorrectAnswer = true,
 }: ResearchToolProps) {
  // Ensure responses is never null to prevent crashes
  const safeResponses = responses || {};
@@ -196,8 +198,8 @@ export default function ResearchTool({
  )}
  </div>
 
- {/* Show correct answer after submission */}
- {isSubmitted && isIncorrect && (
+ {/* Show correct answer after submission (only in practice mode) */}
+ {isSubmitted && isIncorrect && showCorrectAnswer && (
  <div className="mt-2 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
  <p className="text-sm text-green-800 dark:text-green-200">
  <span className="font-medium">Correct citation:</span> {correctAnswer.source} {correctAnswer.topicCode}

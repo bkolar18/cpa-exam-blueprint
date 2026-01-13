@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { allTBSQuestions, tbsStatistics } from "@/lib/data/tbs";
+import { allTBSQuestions } from "@/lib/data/tbs";
 import { TBSSectionCard, TBSSearchBar, TBSListItem } from "@/components/tbs/TBSLibrary";
 import { useTBSProgress } from "@/hooks/useTBSProgress";
 import { useAuth } from "@/components/auth/AuthProvider";
@@ -49,7 +49,8 @@ export default function SimulationsPage() {
  visibleCodes.includes(tbs.section) &&
  (tbs.title.toLowerCase().includes(query) ||
  tbs.topic.toLowerCase().includes(query) ||
- (tbs.subtopic && tbs.subtopic.toLowerCase().includes(query)))
+ (tbs.subtopic && tbs.subtopic.toLowerCase().includes(query)) ||
+ tbs.tbsType.toLowerCase().includes(query))
  )
  .slice(0, 20); // Limit to 20 results
  }, [searchQuery, visibleSections]);
@@ -97,6 +98,18 @@ export default function SimulationsPage() {
 
  return { totalTBS, completedTBS, averageScore };
  }, [progressData, visibleSections]);
+
+ // Visible type stats (filtered by user's visible sections)
+ const visibleTypeStats = useMemo(() => {
+   const visibleCodes = visibleSections.map(s => s.code);
+   const visibleTBS = allTBSQuestions.filter(q => visibleCodes.includes(q.section));
+   return {
+     numeric_entry: visibleTBS.filter(q => q.tbsType === "numeric_entry").length,
+     journal_entry: visibleTBS.filter(q => q.tbsType === "journal_entry").length,
+     document_review: visibleTBS.filter(q => q.tbsType === "document_review").length,
+     research: visibleTBS.filter(q => q.tbsType === "research").length,
+   };
+ }, [visibleSections]);
 
  // Get in-progress simulations (not yet completed)
  const inProgressSimulations = useMemo(() => {
@@ -338,10 +351,10 @@ export default function SimulationsPage() {
  </h3>
  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
  {[
- { code:"NE", label:"Numeric Entry", count: tbsStatistics.byType.numeric_entry },
- { code:"JE", label:"Journal Entry", count: tbsStatistics.byType.journal_entry },
- { code:"DR", label:"Document Review", count: tbsStatistics.byType.document_review },
- { code:"RS", label:"Research", count: tbsStatistics.byType.research },
+ { code:"NE", label:"Numeric Entry", count: visibleTypeStats.numeric_entry },
+ { code:"JE", label:"Journal Entry", count: visibleTypeStats.journal_entry },
+ { code:"DR", label:"Document Review", count: visibleTypeStats.document_review },
+ { code:"RS", label:"Research", count: visibleTypeStats.research },
  ].map((type) => (
  <div
  key={type.code}

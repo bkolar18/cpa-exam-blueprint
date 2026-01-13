@@ -15,6 +15,7 @@ interface WorkAreaProps {
   onResponseChange: (requirementId: string, response: UserResponse) => void;
   isSubmitted: boolean;
   showHints?: boolean;
+  showCorrectAnswer?: boolean; // Show correct answers after submission (practice mode = true, exam mode = false)
   focusRequirementId?: string | null;
 }
 
@@ -24,6 +25,7 @@ export default function WorkArea({
   onResponseChange,
   isSubmitted,
   showHints = false,
+  showCorrectAnswer = true,
   focusRequirementId,
 }: WorkAreaProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -110,7 +112,7 @@ export default function WorkArea({
                       response={safeResponses[req.id] as DropdownResponse | null}
                       onResponseChange={(response) => onResponseChange(req.id, response)}
                       isSubmitted={isSubmitted}
-                      showCorrectAnswer={true}
+                      showCorrectAnswer={showCorrectAnswer}
                     />
                   ))}
                 </div>
@@ -231,7 +233,7 @@ export default function WorkArea({
                       response={safeResponses[req.id] as DropdownResponse | null}
                       onResponseChange={(response) => onResponseChange(req.id, response)}
                       isSubmitted={isSubmitted}
-                      showCorrectAnswer={true}
+                      showCorrectAnswer={showCorrectAnswer}
                     />
                   ))}
                 </div>
@@ -266,7 +268,7 @@ export default function WorkArea({
                       response={safeResponses[req.id] as DropdownResponse | null}
                       onResponseChange={(response) => onResponseChange(req.id, response)}
                       isSubmitted={isSubmitted}
-                      showCorrectAnswer={true}
+                      showCorrectAnswer={showCorrectAnswer}
                     />
                   ))}
                 </div>
@@ -313,6 +315,7 @@ export default function WorkArea({
             responses={citationResponses}
             onResponseChange={(reqId, response) => onResponseChange(reqId, response)}
             isSubmitted={isSubmitted}
+            showCorrectAnswer={showCorrectAnswer}
           />
         );
 

@@ -2889,10 +2889,10 @@ export const tcpResearchTaxPlanningTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-I",
-  title: "Research - Qualified Business Income Deduction",
-  scenarioText: `A client is asking about the deduction for qualified business income from pass-through entities.
+  title: "Research - Pass-Through Business Deduction",
+  scenarioText: `A client who owns a sole proprietorship wants to reduce their taxable income. They've heard that owners of non-corporate businesses may be entitled to deduct a portion of their business profits on their individual tax return.
 
-Required: Cite the IRC section that provides for the 20% qualified business income deduction.`,
+Required: Cite the IRC section that provides for a deduction available to owners of pass-through entities based on their business income.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -2905,11 +2905,11 @@ Required: Cite the IRC section that provides for the 20% qualified business inco
         type: "memo",
         from: "Tax Associate",
         to: "Tax Manager",
-        subject: "QBI Deduction Authority",
+        subject: "Pass-Through Business Deduction Authority",
         date: "Current Date",
-        body: `Our client operates several pass-through businesses and wants to understand the QBI deduction introduced by the Tax Cuts and Jobs Act.
+        body: `Our client operates several pass-through businesses (S corps and partnerships) and wants to understand a deduction introduced by the Tax Cuts and Jobs Act that allows non-corporate business owners to reduce their taxable income.
 
-Needed: The primary IRC section number that provides for the deduction for qualified business income from pass-through entities (the "20% deduction").`,
+Needed: The primary IRC section number that provides for a deduction based on income from pass-through entities.`,
       },
     },
   ],
@@ -3362,7 +3362,7 @@ export const tcpRetirementPlanSelectionTBS: TBSQuestion = {
   ],
 };
 
-// Research - Section 83(b)
+// Research - Restricted Property Income Election
 export const tcpResearch83bTBS: TBSQuestion = {
   id: "tbs-tcp-028",
   section: "TCP",
@@ -3372,8 +3372,10 @@ export const tcpResearch83bTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-I",
-  title: "Research - Section 83(b) Election",
-  scenarioText: `Find the IRC section for electing to include restricted stock in income before vesting.`,
+  title: "Research - Restricted Property Income Election",
+  scenarioText: `An employee received restricted stock that will vest over several years. Rather than recognizing income as each portion vests, they want to make an election to include the entire value in income at the time of grant.
+
+Required: Find the IRC section that allows a taxpayer to elect to include the value of property transferred in connection with services in income before it is substantially vested.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -3386,9 +3388,9 @@ export const tcpResearch83bTBS: TBSQuestion = {
         type: "memo",
         from: "Tax Associate",
         to: "Tax Partner",
-        subject: "Restricted Stock Election",
+        subject: "Restricted Stock Timing Election",
         date: "Current Date",
-        body: "Client received restricted stock vesting over 4 years. Wants to recognize income now. Find the IRC section for this election.",
+        body: "Client received restricted stock vesting over 4 years. They believe the stock will appreciate significantly and want to accelerate income recognition to the grant date. Find the IRC section that permits this election.",
       },
     },
   ],
@@ -4192,18 +4194,20 @@ export const tcpPartnershipLiquidationTBS: TBSQuestion = {
   ],
 };
 
-// Research - Section 121
+// Research - Primary Residence Sale
 export const tcpResearch121TBS: TBSQuestion = {
   id: "tbs-tcp-041",
   section: "TCP",
   tbsType: "research",
   topic: "Tax Research",
-  subtopic: "Home Sale Exclusion",
+  subtopic: "Personal Residence",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-III",
-  title: "Research - Home Sale Gain Exclusion",
-  scenarioText: `Find the IRC section for excluding gain on sale of principal residence.`,
+  title: "Research - Personal Residence Sale",
+  scenarioText: `A married couple is selling the home they have lived in for the past 5 years. The sale will result in a substantial gain. They want to know if any of the gain can be sheltered from taxation.
+
+Required: Find the IRC section that provides relief from taxation on the sale of a taxpayer's primary home.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -4216,9 +4220,9 @@ export const tcpResearch121TBS: TBSQuestion = {
         type: "memo",
         from: "Tax Associate",
         to: "Tax Partner",
-        subject: "Home Sale Exclusion",
+        subject: "Personal Residence Sale Tax Treatment",
         date: "Current Date",
-        body: "Client selling home with $400,000 gain. Need IRC section for exclusion.",
+        body: "A client who has owned and lived in their home for 5 years is selling it for a $400,000 gain. They believe there may be a provision that allows them to avoid paying tax on some or all of this gain. Find the relevant IRC section.",
       },
     },
   ],
@@ -4747,18 +4751,20 @@ export const tcpCLTPlanningTBS: TBSQuestion = {
   ],
 };
 
-// Research - Section 1031
+// Research - Real Property Exchange Deferral
 export const tcpResearch1031TBS: TBSQuestion = {
   id: "tbs-tcp-049",
   section: "TCP",
   tbsType: "research",
   topic: "Tax Research",
-  subtopic: "Like-Kind Exchanges",
+  subtopic: "Property Exchanges",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-III",
-  title: "Research - Like-Kind Exchange Requirements",
-  scenarioText: `Find the IRC section governing like-kind exchanges.`,
+  title: "Research - Investment Property Exchange",
+  scenarioText: `A client owns a commercial building they want to sell. However, they don't want to pay tax on the gain right away. Instead, they plan to use the proceeds to purchase another investment property. They've heard there may be a way to defer the gain.
+
+Required: Find the IRC section that allows taxpayers to defer gain recognition when exchanging real property held for investment or business use.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -4771,9 +4777,9 @@ export const tcpResearch1031TBS: TBSQuestion = {
         type: "memo",
         from: "Tax Associate",
         to: "Tax Partner",
-        subject: "Like-Kind Exchange",
+        subject: "Investment Property Sale and Replacement",
         date: "Current Date",
-        body: "Client wants to exchange investment real estate and defer gain. Need IRC section.",
+        body: "Client wants to sell a commercial building and reinvest in another property without recognizing gain. Find the IRC section that provides for deferral when exchanging investment real estate.",
       },
     },
   ],
@@ -6033,20 +6039,20 @@ Required: Calculate regular tax and AMT implications.`,
   ],
 };
 
-// Section 280A Research
+// Research - Business Use of Residence
 export const tcpResearchSec280ATBS: TBSQuestion = {
   id: "tbs-tcp-059",
   section: "TCP",
   tbsType: "research",
   topic: "Tax Planning",
-  subtopic: "Home Office",
+  subtopic: "Business Use of Residence",
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "TCP-I",
-  title: "Home Office Deduction Rules",
-  scenarioText: `A client uses part of their home for business purposes and wants to understand the deduction limitations and requirements.
+  title: "Research - Business Use of Personal Residence",
+  scenarioText: `A self-employed client uses a portion of their personal residence exclusively for business. They want to understand the rules and limitations for deducting expenses related to business use of a dwelling unit.
 
-Required: Research and cite the appropriate IRC section governing home office deductions.`,
+Required: Research and cite the IRC section that addresses the deductibility of expenses when a taxpayer uses their dwelling for both personal and business purposes.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [
@@ -6686,10 +6692,10 @@ export const tcpResearchSection83TBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "TCP-I",
-  title: "Section 83(b) Election Analysis",
-  scenarioText: `An executive received restricted stock with vesting conditions. Research the requirements for a Section 83(b) election and its implications.
+  title: "Restricted Stock Income Election Research",
+  scenarioText: `An executive received company stock subject to vesting requirements as part of a compensation package. The shares are subject to forfeiture if employment terminates before vesting is complete. Research the tax treatment of property received for services when subject to restrictions, including any available elections to accelerate income recognition.
 
-Required: Cite the appropriate IRC section and analyze election benefits.`,
+Required: Cite the IRC section governing property transfers in connection with services and analyze the available elections.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [
@@ -7759,10 +7765,10 @@ export const tcpResearchSection643TBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "TCP-IV",
-  title: "Distributable Net Income Calculation",
-  scenarioText: `A trust is determining the taxable character of distributions to beneficiaries. Research the DNI rules.
+  title: "Trust Distribution Character Research",
+  scenarioText: `A trust is making distributions to its beneficiaries and must determine how to characterize the income for tax purposes. The trustee needs to understand the rules for determining which types of income (dividends, interest, capital gains) flow through to beneficiaries and in what character.
 
-Required: Cite the appropriate IRC section and calculate DNI components.`,
+Required: Cite the IRC section that defines the income measure used to determine the character and amount of taxable distributions to trust beneficiaries.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [

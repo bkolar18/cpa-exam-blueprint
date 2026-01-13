@@ -124,8 +124,20 @@ export function AchievementProvider({ children }: { children: React.ReactNode })
     setNotifications((prev) => prev.filter((_, i) => i !== index));
   }, []);
 
-  // Show streak notification
+  // Show streak notification - only once per day
   const showStreakNotification = useCallback((streakDays: number) => {
+    // Check if we've already shown a streak notification today
+    const today = new Date().toDateString();
+    const lastStreakNotificationDate = localStorage.getItem('lastStreakNotificationDate');
+
+    if (lastStreakNotificationDate === today) {
+      // Already shown today, skip
+      console.log('[Achievements] Streak notification already shown today, skipping');
+      return;
+    }
+
+    // Show the notification and record the date
+    localStorage.setItem('lastStreakNotificationDate', today);
     setNotifications((prev) => [
       ...prev,
       { type: "streak" as const, streakDays },

@@ -524,22 +524,43 @@ export async function checkAchievements(
 
       // Check accuracy achievements
       if (context.accuracy !== undefined && context.section) {
+        // Debug: Log accuracy check parameters
+        console.log(`[Achievements] Checking accuracy achievements: section=${context.section}, accuracy=${context.accuracy}%`);
+
         const accuracyAchievements = achievements.filter(
           (a) =>
             a.category === 'accuracy' &&
             a.requirement_type === 'percentage' &&
             a.requirement_value &&
+            a.requirement_value > 0 && // Ensure valid threshold
             context.accuracy! >= a.requirement_value
         );
 
+        // Debug: Log matched achievements
+        if (accuracyAchievements.length > 0) {
+          console.log(`[Achievements] Accuracy achievements matched:`,
+            accuracyAchievements.map(a => `${a.code} (threshold: ${a.requirement_value}%)`));
+        }
+
         for (const achievement of accuracyAchievements) {
           const meta = achievement.requirement_metadata as { section?: string } | null;
-          if (
+
+          // Validate section match
+          const sectionMatches =
             !meta?.section ||
             meta.section === context.section ||
-            (meta.section === 'discipline' && ['TCP', 'BAR', 'ISC'].includes(context.section))
-          ) {
+            (meta.section === 'discipline' && ['TCP', 'BAR', 'ISC'].includes(context.section));
+
+          // Additional safeguard: for section-specific Sharp achievements, require 75%+ minimum
+          const isSharpAchievement = achievement.code?.includes('accuracy_75') ||
+                                      achievement.name?.includes('Sharp');
+          const meetsMinimumThreshold = !isSharpAchievement || context.accuracy! >= 75;
+
+          if (sectionMatches && meetsMinimumThreshold) {
+            console.log(`[Achievements] Unlocking accuracy achievement: ${achievement.code} for section ${context.section} with ${context.accuracy}% accuracy`);
             await unlockAchievement(achievement);
+          } else if (sectionMatches && !meetsMinimumThreshold) {
+            console.log(`[Achievements] BLOCKED: ${achievement.code} - Sharp achievements require 75%+ (got ${context.accuracy}%)`);
           }
         }
       }

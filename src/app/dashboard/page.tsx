@@ -118,6 +118,23 @@ export default function DashboardPage() {
  fetchDashboardData();
  }, [user, authLoading]);
 
+ // Refetch data when page becomes visible (user returns from another page)
+ useEffect(() => {
+ const handleVisibilityChange = () => {
+ if (document.visibilityState === 'visible' && user && !authLoading) {
+ // Small delay to ensure any pending writes complete
+ setTimeout(() => {
+ fetchDashboardData();
+ }, 500);
+ }
+ };
+
+ document.addEventListener('visibilitychange', handleVisibilityChange);
+ return () => {
+ document.removeEventListener('visibilitychange', handleVisibilityChange);
+ };
+ }, [user, authLoading]);
+
  const fetchDashboardData = async () => {
  if (!supabase || !user) {
  setLoading(false);

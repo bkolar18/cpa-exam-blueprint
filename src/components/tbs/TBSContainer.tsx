@@ -16,6 +16,7 @@ import ReviewScreen from"./Navigation/ReviewScreen";
 import useUndoRedo from"./Tools/useUndoRedo";
 import { useAuthOptional } from"@/components/auth/AuthProvider";
 import { createClient } from"@/lib/supabase/client";
+import FeedbackButton from"@/components/practice/FeedbackButton";
 import { checkAchievements } from"@/lib/gamification/checker";
 
 interface TBSContainerProps {
@@ -68,6 +69,8 @@ export default function TBSContainer({
  const [isSubmitted, setIsSubmitted] = useState(false);
  const [isPaused, setIsPaused] = useState(false);
  const [isFlagged, setIsFlagged] = useState(false);
+ // Transitioning state for exam mode - shows loading overlay to prevent seeing results
+ const [isTransitioning, setIsTransitioning] = useState(false);
  // Hints toggle - default hidden, only available in practice mode
  const [showHints, setShowHints] = useState(false);
  // Confirmation modal for incomplete submissions
@@ -467,7 +470,10 @@ export default function TBSContainer({
  pointsEarned = requirement.points;
  feedback = addExplanation("Correct citation!");
  } else {
- feedback = addExplanation(`Incorrect. The correct citation is ${correctAnswer.source} ${correctAnswer.topicCode}.`);
+ // Only show correct answer in practice mode
+ feedback = isPracticeMode
+ ? addExplanation(`Incorrect. The correct citation is ${correctAnswer.source} ${correctAnswer.topicCode}.`)
+ : addExplanation("Incorrect citation.");
  }
  }
  break;
@@ -511,6 +517,11 @@ export default function TBSContainer({
  // Handle confirmed submission
  const handleSubmitConfirmed = useCallback(async () => {
  setShowSubmitConfirm(false);
+
+ // In exam mode, show transitioning overlay immediately to prevent seeing results
+ if (!isPracticeMode) {
+ setIsTransitioning(true);
+ }
 
  // Only show results screen in practice mode
  // During exam simulations, let the parent handle the transition
@@ -769,6 +780,21 @@ export default function TBSContainer({
 
  // Determine which content to show
  const renderContent = () => {
+ // Show transitioning overlay in exam mode to prevent seeing results
+ if (isTransitioning) {
+ return (
+ <div className="flex flex-col items-center justify-center h-full bg-gray-50 dark:bg-[var(--background)]">
+ <div className="text-center">
+ <svg className="animate-spin h-12 w-12 mx-auto mb-4 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+ <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+ <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+ </svg>
+ <p className="text-lg font-medium text-gray-700 dark:text-gray-300">Processing submission...</p>
+ </div>
+ </div>
+ );
+ }
+
  if (viewMode ==="results"&& gradingResult) {
  return (
  <TBSResults
@@ -819,6 +845,7 @@ export default function TBSContainer({
  onResponseChange={handleResponseChange}
  isSubmitted={isSubmitted}
  showHints={showHints}
+ showCorrectAnswer={isPracticeMode}
  focusRequirementId={focusRequirementId}
  />
  }
@@ -867,6 +894,15 @@ export default function TBSContainer({
  onNext={onNext}
  onReturnToLibrary={isPracticeMode ? (isSubmitted ? onReturnToLibrary : handleExitSession) : undefined}
  />
+
+ {/* Report Issue Button - positioned at top right of content area */}
+ <div className="flex justify-end px-3 py-1 bg-gray-50 dark:bg-[var(--background)]">
+ <FeedbackButton
+ questionId={tbs.id}
+ section={tbs.section}
+ variant="compact"
+ />
+ </div>
 
  {/* Instructions - hide in review mode */}
  {viewMode !=="review"&& (

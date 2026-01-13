@@ -1217,10 +1217,10 @@ export const audResearchPCAOBTBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "AUD-I",
-  title: "Research - Auditor's Responsibility for Fraud",
-  scenarioText: `A staff auditor is unsure about the auditor's responsibility when fraud is detected during an audit of an issuer (public company). They need to find the authoritative guidance on this matter.
+  title: "Research - Issuer Audit Misstatement Detection",
+  scenarioText: `A staff auditor discovered suspicious activities during an audit of a publicly traded company that may indicate intentional misstatement of the financial statements. They need to find the authoritative PCAOB guidance regarding the auditor's responsibilities when encountering potential intentional misstatements.
 
-Required: Cite the PCAOB Auditing Standard that addresses the auditor's consideration of fraud.`,
+Required: Cite the PCAOB Auditing Standard that addresses the auditor's responsibility related to detecting intentional misstatements in financial statements.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -1234,12 +1234,12 @@ Required: Cite the PCAOB Auditing Standard that addresses the auditor's consider
         from: "Staff Auditor",
         to: "Senior Auditor",
         date: "Current Date",
-        subject: "Fraud Consideration Guidance",
-        body: `During the audit of ABC Public Company, we discovered what may be fraudulent activity. I need to find the PCAOB standard that discusses:
+        subject: "Intentional Misstatement Guidance Research",
+        body: `During the audit of ABC Public Company, we discovered what may be intentional manipulation of financial data. I need to find the PCAOB standard that discusses:
 
-1. The auditor's responsibility to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement due to fraud
+1. The auditor's responsibility to plan and perform the audit to detect material misstatements caused by intentional acts
 
-2. Required procedures when fraud is suspected
+2. Required procedures when intentional misstatement is suspected
 
 Please help me locate the relevant PCAOB Auditing Standard.`,
       },
@@ -2921,10 +2921,10 @@ export const audResearchAICPATBS: TBSQuestion = {
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "AUD-I",
-  title: "Research - Audit Evidence Requirements",
-  scenarioText: `A staff auditor needs to understand the professional standards regarding audit evidence. Find the authoritative guidance that establishes requirements for sufficient appropriate audit evidence.
+  title: "Research - Substantive Procedures Guidance",
+  scenarioText: `A staff auditor needs to understand the professional standards regarding the information the auditor uses to support the audit opinion. Research the AICPA guidance that establishes requirements for obtaining and evaluating information to support conclusions in a financial statement audit.
 
-Required: Cite the AICPA auditing standard that addresses audit evidence.`,
+Required: Cite the AICPA AU-C section that addresses the nature and sufficiency of information supporting the auditor's conclusions.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -2938,11 +2938,11 @@ Required: Cite the AICPA auditing standard that addresses audit evidence.`,
         from: "Staff Auditor",
         to: "Senior",
         date: "Current Date",
-        subject: "Evidence Standards",
+        subject: "Information Standards for Audit Conclusions",
         body: `I need to cite the professional standard that addresses:
-1. The concept of sufficient appropriate audit evidence
-2. The nature of audit evidence
-3. Procedures for obtaining audit evidence
+1. The concept of sufficient appropriate information to support the audit opinion
+2. The nature and characteristics of information used by auditors
+3. Procedures for obtaining information to support conclusions
 
 Please help me locate the correct AU-C section.`,
       },
@@ -10105,10 +10105,10 @@ export const audResearchIssuerRequirementsTBS: TBSQuestion = {
   difficulty: "hard",
   skillLevel: "analysis",
   contentArea: "AUD-IV",
-  title: "Research: PCAOB Issuer Requirements",
-  scenarioText: `Your firm has been engaged to audit SecureTech Corp, a publicly traded company. The engagement partner has asked you to research specific PCAOB requirements that differ from AICPA standards.
+  title: "Research: Public Company Audit Standards",
+  scenarioText: `Your firm has been engaged to audit SecureTech Corp, a publicly traded company. The engagement partner has asked you to research several PCAOB requirements unique to issuer audits.
 
-Required: Research the applicable PCAOB standards and cite the relevant guidance.`,
+Required: Research the applicable PCAOB standards and cite the relevant guidance for each topic described.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 3,
   exhibits: [

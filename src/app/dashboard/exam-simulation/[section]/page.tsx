@@ -15,6 +15,10 @@ import { getSampleTBSBySection } from"@/lib/data/tbs/sample-tbs";
 import { TBSQuestion, TBSAttempt } from"@/lib/data/tbs/types";
 import { TBSContainer } from"@/components/tbs";
 import type { SectionCode as DBSectionCode } from"@/lib/supabase/types";
+import {
+  useStudySessionAchievements,
+  usePracticeSessionAchievements,
+} from"@/components/gamification/AchievementProvider";
 
 interface ExamResult {
  question: PracticeQuestion;
@@ -325,6 +329,8 @@ export default function ExamSimulationSectionPage() {
  const router = useRouter();
  const { user } = useAuth();
  const supabase = createClient();
+ const { onStudySessionLogged } = useStudySessionAchievements();
+ const { onPracticeSessionCompleted } = usePracticeSessionAchievements();
 
  const sectionParam = params.section as string;
  const section = sectionParam.toUpperCase() as SectionCode;
@@ -345,6 +351,12 @@ export default function ExamSimulationSectionPage() {
  const [tbsQuestions, setTbsQuestions] = useState<TBSQuestion[]>([]);
  const [currentTbsIndex, setCurrentTbsIndex] = useState(0);
  const [tbsResults, setTbsResults] = useState<TBSResult[]>([]);
+
+ // Track state before pausing for proper resume
+ const [pausedFromState, setPausedFromState] = useState<ExamState | null>(null);
+
+ // Submission loading state
+ const [isSubmitting, setIsSubmitting] = useState(false);
 
  // Timer ref
  const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -377,12 +389,16 @@ export default function ExamSimulationSectionPage() {
  const handlePause = () => {
  recordQuestionTime();
  if (timerRef.current) clearInterval(timerRef.current);
+ // Save current state before pausing so we can restore it on resume
+ setPausedFromState(examState);
  setExamState('paused');
  };
 
  const handleResume = () => {
  setQuestionStartTime(Date.now());
- setExamState('exam');
+ // Restore to the state we were in before pausing (MCQ or TBS)
+ setExamState(pausedFromState === 'tbs' ? 'tbs' : 'exam');
+ setPausedFromState(null);
  };
 
  const startExam = () => {
@@ -504,6 +520,8 @@ export default function ExamSimulationSectionPage() {
  };
 
  const handleFinishExam = useCallback(async () => {
+ // Show loading state to prevent multiple clicks
+ setIsSubmitting(true);
  if (timerRef.current) clearInterval(timerRef.current);
  recordQuestionTime();
 
@@ -583,10 +601,32 @@ export default function ExamSimulationSectionPage() {
  } catch (error) {
  console.error('Failed to save exam history:', error);
  }
+
+ // Trigger achievement checks for exam simulations
+ try {
+ // Fetch current streak from profile
+ const { data: profileData } = await supabase
+ .from('profiles')
+ .select('current_streak')
+ .eq('id', user.id)
+ .single();
+
+ const currentStreak = profileData?.current_streak || 0;
+
+ // Log study session (time in hours) - this updates the streak
+ const studyHours = timeSpent / 3600; // Convert seconds to hours
+ await onStudySessionLogged(section as DBSectionCode, Math.max(0.25, studyHours), currentStreak > 0, currentStreak);
+
+ // Trigger accuracy achievements for MCQ portion
+ await onPracticeSessionCompleted(section as DBSectionCode, mcqCorrect, questions.length);
+ } catch (error) {
+ console.error('Failed to trigger achievement checks:', error);
+ }
  }
 
+ setIsSubmitting(false);
  setExamState('results');
- }, [questions, answers, questionTimes, user, supabase, selectedConfig, timeRemaining, tbsResults, section]);
+ }, [questions, answers, questionTimes, user, supabase, selectedConfig, timeRemaining, tbsResults, section, onStudySessionLogged, onPracticeSessionCompleted]);
 
  const getResults = (): ExamResult[] => {
  return questions.map((q, i) => ({
@@ -1062,9 +1102,18 @@ export default function ExamSimulationSectionPage() {
  </button>
  <button
  onClick={handleContinueFromMCQReview}
- className="flex-1 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600"
+ disabled={tbsQuestions.length === 0 && isSubmitting}
+ className={`flex-1 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 ${tbsQuestions.length === 0 && isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
  >
- {tbsQuestions.length > 0 ? 'Continue to TBS →' : 'Submit Exam'}
+ {tbsQuestions.length > 0 ? 'Continue to TBS →' : (isSubmitting ? (
+ <span className="flex items-center justify-center gap-2">
+ <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+ <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+ <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+ </svg>
+ Submitting...
+ </span>
+ ) : 'Submit Exam')}
  </button>
  </div>
  </div>
@@ -1218,9 +1267,18 @@ export default function ExamSimulationSectionPage() {
  </button>
  <button
  onClick={handleFinishExam}
- className="flex-1 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600"
+ disabled={isSubmitting}
+ className={`flex-1 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
  >
- Submit Exam
+ {isSubmitting ? (
+ <span className="flex items-center justify-center gap-2">
+ <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+ <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+ <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+ </svg>
+ Submitting...
+ </span>
+ ) : 'Submit Exam'}
  </button>
  </div>
  </div>

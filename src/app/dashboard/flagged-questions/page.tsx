@@ -68,11 +68,27 @@ export default function FlaggedQuestionsPage() {
 
  if (error) throw error;
 
+ // Debug: Log the raw data from database
+ console.log("[FlaggedQuestions] Raw flags from DB:", data?.length || 0, "flags");
+ if (data && data.length > 0) {
+ console.log("[FlaggedQuestions] Sample flag IDs:", data.slice(0, 3).map((f: QuestionFlag) => f.question_id));
+ }
+
  // Enrich with question data
- const enriched: FlaggedQuestion[] = (data || []).map((flag: QuestionFlag) => ({
+ const enriched: FlaggedQuestion[] = (data || []).map((flag: QuestionFlag) => {
+ const question = getQuestionById(flag.question_id);
+ if (!question) {
+ console.warn("[FlaggedQuestions] Question not found for ID:", flag.question_id);
+ }
+ return {
  ...flag,
- question: getQuestionById(flag.question_id),
- }));
+ question,
+ };
+ });
+
+ // Debug: Count how many questions were found
+ const foundCount = enriched.filter(f => f.question).length;
+ console.log(`[FlaggedQuestions] Found ${foundCount}/${enriched.length} questions in static data`);
 
  setFlaggedQuestions(enriched);
  } catch (error) {
@@ -368,7 +384,14 @@ export default function FlaggedQuestionsPage() {
  </div>
  </div>
  ) : (
- <p className="text-[var(--muted)] italic">Question not found</p>
+ <div className="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg">
+ <p className="text-amber-700 dark:text-amber-300 text-sm">
+ Question data unavailable (ID: {fq.question_id})
+ </p>
+ <p className="text-xs text-[var(--muted)] mt-1">
+ Flagged {new Date(fq.updated_at).toLocaleDateString()} • This question may have been updated or removed.
+ </p>
+ </div>
  )}
  </div>
  ))
