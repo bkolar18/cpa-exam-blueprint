@@ -7,10 +7,6 @@ export const metadata = {
 
 const faqs = [
   {
-    question: "How are questions created?",
-    answer: "Questions are generated through AI-assisted processes guided by the CPA Exam Blueprints, which define tested topics and skill levels. All questions are original, designed for practice purposes, and periodically reviewed and refined based on performance data and user feedback.",
-  },
-  {
     question: "Is Meridian CPA Review affiliated with the AICPA or NASBA?",
     answer: "No. Meridian CPA Review is an independent exam preparation platform and is not affiliated with the AICPA, NASBA, or any state board of accountancy. Our content is based on the publicly available CPA Exam Blueprints.",
   },
@@ -29,6 +25,10 @@ const faqs = [
   {
     question: "Do you offer video lectures?",
     answer: "No, we focus on active learning through practice questions and simulations. If you prefer learning through video lectures, you may want to supplement with another review course. Many candidates use Meridian alongside other resources.",
+  },
+  {
+    question: "How are questions created?",
+    answer: "Questions are generated through AI-assisted processes guided by the CPA Exam Blueprints, which define tested topics and skill levels. All questions are original, designed for practice purposes, and periodically reviewed and refined based on performance data and user feedback.",
   },
   {
     question: "How long do I have access?",
