@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     question: "How long do I have access?",
-    answer: "All tiers include unlimited access until you pass. There's no time limit or expiration date on your account.",
+    answer: "All tiers include unlimited access with no expiration. There's no time limit on your account — study at your own pace.",
   },
   {
     question: "Can I use Meridian CPA Review on mobile devices?",

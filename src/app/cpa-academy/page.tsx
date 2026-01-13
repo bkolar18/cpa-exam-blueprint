@@ -118,7 +118,7 @@ export default function CPAAcademyPage() {
  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-16">
  <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
- Everything You Need to Pass
+ Everything You Need to Prepare
  </h2>
  <p className="text-lg text-gray-600 dark:text-[var(--muted-light)] max-w-2xl mx-auto">
  Our free dashboard gives you all the tools to stay organized, motivated,

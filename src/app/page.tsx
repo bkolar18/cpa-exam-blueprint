@@ -11,7 +11,7 @@ export default function Home() {
               Smart CPA Exam Prep — Without the High Price Tag
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-up animate-delay-100">
-              6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass.
+              6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access with no expiration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-200">
               <Link
@@ -45,7 +45,7 @@ export default function Home() {
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-[var(--foreground)] font-medium">Unlimited Access Until You Pass</span>
+              <span className="text-[var(--foreground)] font-medium">Unlimited Access — No Expiration</span>
             </div>
             <div className="flex items-center space-x-2">
               <svg className="w-6 h-6 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
@@ -65,7 +65,7 @@ export default function Home() {
               Built From the CPA Exam Blueprints — Not Guesswork
             </h2>
             <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-              Practice questions, simulations, and adaptive study plans engineered to match how the CPA exam is actually tested.
+              Practice questions, simulations, and adaptive study plans engineered to reflect how CPA exam topics and skills are tested.
             </p>
           </div>
 
@@ -145,7 +145,7 @@ export default function Home() {
                 Track Your Progress with Meridian CPA Academy
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                Your personal command center for conquering the CPA exam. Log study hours,
+                Your personal command center for staying organized and exam-ready. Log study hours,
                 earn achievements, and stay motivated throughout your journey.
               </p>
               <ul className="space-y-3 mb-8">
@@ -304,7 +304,7 @@ export default function Home() {
                   {section.title}
                 </h3>
                 <p className="text-[var(--muted-light)] dark:text-[var(--muted-light)] text-sm mt-2">
-                  Learn what it takes to pass
+                  Learn how to prepare effectively
                 </p>
               </Link>
             ))}

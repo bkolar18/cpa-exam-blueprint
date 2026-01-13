@@ -388,8 +388,8 @@ export default function DashboardPage() {
  </h3>
  <p className="text-purple-100 text-sm">
  {isFree
- ?"Get 3,000+ questions across all core sections with unlimited access until you pass, or go Pro for 6,000+ questions across all 6 sections!"
- :"Unlock all 6,000+ practice questions, adaptive learning, and all 6 exam sections with unlimited access until you pass."}
+ ?"Get 3,000+ questions across all core sections with unlimited access, or go Pro for 6,000+ questions across all 6 sections!"
+ :"Unlock all 6,000+ practice questions, adaptive learning, and all 6 exam sections with unlimited access — no expiration."}
  </p>
  </div>
  <div className="flex flex-col sm:flex-row gap-3">
