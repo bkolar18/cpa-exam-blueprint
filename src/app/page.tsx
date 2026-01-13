@@ -62,10 +62,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4 animate-fade-in-up">
-              Comprehensive Tools for CPA Exam Success
+              Built From the CPA Exam Blueprints — Not Guesswork
             </h2>
             <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-              Our study dashboard tracks your progress, identifies weak areas, and keeps you organized — all in one place, without the $2,000+ price tag.
+              Practice questions, simulations, and adaptive study plans engineered to match how the CPA exam is actually tested.
             </p>
           </div>
 
