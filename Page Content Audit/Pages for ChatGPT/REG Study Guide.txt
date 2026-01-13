@@ -1,0 +1,271 @@
+REG Section: Complete Study Guide for 2025 | Meridian CPA Review
+Meridian CPA Review
+Meridian
+CPA Review
+
+Exam Sections
+
+Resources
+About
+Dashboard
+Build My Study Plan
+
+Back to Blog
+Section Guides
+7 min read
+REG Section: Complete Study Guide for 2025
+Everything you need to pass the Regulation section - federal taxation, business law, ethics, and strategic study tips from successful candidates.
+
+CPA Exam Blueprint Team
+•
+January 4, 2026
+The Regulation (REG) section tests federal taxation, business law, and professional ethics. With the highest pass rate among core sections (58-64%), it's often recommended as a confidence-builder - but don't underestimate the volume of content.
+
+REG at a Glance
+Metric	Details
+Testing	Continuous (year-round)
+Duration	4 hours
+Questions	72 MCQs + 8 TBS
+Pass Rate	58-64%
+Study Hours	80-110 recommended
+Exam Structure
+REG consists of 5 testlets:
+
+Testlet	Content	Count
+1	Multiple Choice Questions	36 MCQs
+2	Multiple Choice Questions	36 MCQs
+3	Task-Based Simulations	2 TBS
+4	Task-Based Simulations	3 TBS
+5	Task-Based Simulations	3 TBS
+Scoring Breakdown:
+
+MCQs: 50% of total score
+TBS: 50% of total score
+Content Areas
+Area 1: Ethics, Professional Responsibilities & Federal Tax Procedures (10-20%)
+Foundational requirements for tax practice:
+
+Circular 230 - Treasury regulations for tax practitioners
+Tax return preparer penalties
+IRS audit procedures and appeals
+Privilege and confidentiality
+Taxpayer rights and responsibilities
+Pro tip: Circular 230 is heavily tested. Know the difference between "must," "should," and "may" provisions.
+
+Area 2: Business Law (10-20%)
+Core legal concepts:
+
+Contracts - Formation, performance, breach, remedies
+Debtor-creditor relationships - Bankruptcy, secured transactions
+Agency - Authority, liability, termination
+Business structure law - Partnerships, corporations, LLCs
+Federal regulations - Employment law, securities (basic)
+Pro tip: Business law is conceptual. Focus on understanding principles rather than memorizing specific cases.
+
+Area 3: Federal Taxation of Property Transactions (12-22%)
+How property is taxed:
+
+Basis calculations - Original, adjusted, carryover, stepped-up
+Gains and losses - Recognition, characterization, deferral
+Like-kind exchanges - Section 1031 requirements
+Installment sales
+Depreciation recapture - Section 1245, 1250
+Pro tip: Basis questions appear frequently. Master the formulas for calculating basis in all scenarios.
+
+Area 4: Federal Taxation of Individuals (15-25%)
+Form 1040 and individual tax:
+
+Gross income - What's included, what's excluded
+Deductions - Above-the-line, itemized, standard
+Credits - Child tax credit, education credits, earned income credit
+Filing status and exemptions
+Alternative minimum tax (AMT)
+Self-employment tax
+Pro tip: Print a blank Form 1040 and reference it while studying. Visualizing where items go helps retention.
+
+Area 5: Federal Taxation of Entities (28-38%)
+This is the largest content area:
+
+C Corporations:
+
+Formation and basis
+Operating rules
+Distributions and dividends
+Accumulated earnings tax
+S Corporations:
+
+Election requirements
+Shareholder basis
+Pass-through taxation
+Built-in gains tax
+Partnerships:
+
+Formation and basis
+Partner's distributive share
+Distributions
+Special allocations
+Tax-Exempt Organizations:
+
+Qualification requirements
+Unrelated business income
+Private foundations
+Pro tip: Entity taxation is 28-38% of your exam. Spend proportional study time here, especially on S corps and partnerships.
+
+2025-2026 Tax Law Updates
+OBBBA Provisions (Effective July 2026)
+The One Big Beautiful Bill Act (OBBBA) will be incorporated into REG and TCP starting July 1, 2026:
+
+Old provisions expiring in 2025 remain testable through June 30, 2026
+New provisions effective 2024-2025 appear on exams starting July 1, 2026
+Strategy: If you're taking REG before July 2026, you won't need to study OBBBA changes. If taking after, ensure your review materials are updated.
+
+Time Management Strategy
+Testlet	Time Allocation
+Testlet 1 (36 MCQs)	~48 minutes
+Testlet 2 (36 MCQs)	~48 minutes
+Testlet 3 (2 TBS)	~36 minutes
+Testlet 4 (3 TBS)	~54 minutes
+Testlet 5 (3 TBS)	~54 minutes
+Total	4 hours
+Study Strategy by Phase
+Phase 1: Foundation (Weeks 1-3)
+Build tax fundamentals:
+
+Start with individual taxation - It's most intuitive and builds foundation
+Print Form 1040 - Reference it constantly
+Learn tax formula flow - Gross income → AGI → Taxable income → Tax liability
+Complete 30-40 MCQs per topic
+Phase 2: Entity Focus (Weeks 4-6)
+Tackle the largest content area:
+
+Master basis calculations - They appear in every entity type
+Create comparison charts - C corp vs S corp vs Partnership
+Focus on formation and liquidation - High-value topics
+Practice entity-specific TBS
+Phase 3: Business Law & Review (Weeks 7-8)
+Round out your knowledge:
+
+Dedicate time to business law - Don't skip it for more tax
+Review Circular 230 thoroughly
+Take full practice exams
+Focus on weak areas identified in practice
+Must-Know Formulas
+Individual Tax Formula
+Gross Income
+- Adjustments (Above-the-line deductions)
+= Adjusted Gross Income (AGI)
+- Greater of: Standard Deduction OR Itemized Deductions
+= Taxable Income
+× Tax Rate
+= Tax Liability
+- Credits
++ Other Taxes (SE tax, AMT)
+= Total Tax
+- Payments/Withholding
+= Tax Due or Refund
+Partnership Basis
+Initial Basis (cash + FMV of property contributed)
++ Share of income
++ Share of tax-exempt income
++ Increase in share of liabilities
+- Distributions received
+- Share of losses
+- Share of nondeductible expenses
+- Decrease in share of liabilities
+= Adjusted Basis
+S Corporation Shareholder Basis
+Initial Basis
++ Share of income
++ Share of tax-exempt income
+- Distributions
+- Share of losses (limited to basis)
+- Share of nondeductible expenses
+= Adjusted Basis
+Note: S corp basis does NOT include share of liabilities (unlike partnerships).
+
+Common Mistakes to Avoid
+Mistake 1: Neglecting Business Law
+Business law is 10-20% of the exam. Candidates who skip it lose easy points on conceptual questions.
+
+Mistake 2: Confusing Entity Rules
+S corps, partnerships, and C corps have different rules for:
+
+Basis calculations
+Loss limitations
+Distribution taxation
+Create comparison charts to keep them straight.
+
+Mistake 3: Not Memorizing Limitations
+Know the dollar thresholds:
+
+Section 179 limits
+Charitable contribution limits by entity type
+NOL carryforward rules
+Passive activity loss limits
+Mistake 4: Ignoring Ethics
+Circular 230 questions are straightforward if you've studied. Don't sacrifice free points.
+
+High-Yield Topics
+Based on exam feedback, prioritize:
+
+Basis calculations (all entity types)
+Individual deductions (itemized vs. standard, limits)
+S corporation taxation (eligibility, basis, AAA)
+Partnership distributions (cash and property)
+Like-kind exchanges (Section 1031)
+Depreciation and recapture
+Circular 230 (practitioner responsibilities)
+Contract formation and breach
+Entity Comparison Quick Reference
+Feature	C Corp	S Corp	Partnership
+Taxation	Entity level	Pass-through	Pass-through
+Basis includes liabilities	No	No	Yes
+Max shareholders/partners	Unlimited	100	Unlimited
+Shareholder types	Any	Restricted	Any
+Distributions taxed	Yes (dividends)	No (up to basis)	No (up to basis)
+Fiscal year	Flexible	Calendar (usually)	Varies
+Tips from CPAs Who Passed
+"Basis, basis, basis. If you know basis calculations cold, you'll pass."
+
+"I made flashcards for every tax threshold and limit. They were invaluable."
+
+"Don't underestimate business law. I almost did and it cost me points."
+
+"Print Form 1040 and write on it while studying. It helps visualize the flow."
+
+"Entity taxation is huge. I spent 40% of my study time there."
+
+REG and TCP Synergy
+If you choose TCP (Tax Compliance and Planning) as your discipline section:
+
+There's significant content overlap with REG
+Consider taking them close together
+TCP goes deeper into planning and compliance
+Ready to Start?
+REG rewards methodical study of tax rules and formulas. Master basis calculations, understand entity taxation differences, and don't neglect business law or ethics.
+
+With consistent effort and strategic focus, REG's high pass rate can work in your favor. Build your study plan and get started.
+
+Tags
+REG
+taxation
+business law
+study guide
+section guides
+Ready to Start Studying?
+Get a personalized study plan tailored to your schedule and goals.
+
+Build My Free Study Plan
+Meridian CPA Review
+Meridian
+CPA Review
+Study Plan
+CPA While Working
+Get Started
+About
+Sections:
+FAR
+AUD
+REG
+TCP
+© 2026 Meridian CPA Review

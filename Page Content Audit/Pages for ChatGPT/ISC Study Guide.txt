@@ -1,0 +1,249 @@
+ISC Section: Complete Study Guide for 2025 | Meridian CPA Review
+Meridian CPA Review
+Meridian
+CPA Review
+
+Exam Sections
+
+Resources
+About
+Dashboard
+Build My Study Plan
+
+Back to Blog
+Section Guides
+8 min read
+ISC Section: Complete Study Guide for 2025
+Master the Information Systems and Controls discipline section with this comprehensive guide covering exam format, content areas, study strategies, and practical tips.
+
+CPA Exam Blueprint Team
+•
+January 8, 2026
+The Information Systems and Controls (ISC) section tests your knowledge of IT concepts, system controls, data management, and cybersecurity. This discipline section is ideal for candidates interested in IT audit, cybersecurity, or technology-focused accounting roles.
+
+ISC at a Glance
+Metric	Details
+Testing	Continuous (year-round)
+Duration	4 hours
+Questions	68 MCQs + 7 TBS
+Pass Rate	48-52%
+Study Hours	120-150 recommended
+Who Should Choose ISC?
+ISC is well-suited for candidates who:
+
+Have IT or systems background
+Interested in IT audit or cybersecurity careers
+Work with ERP systems or data analytics
+Want to differentiate themselves in a tech-driven profession
+Enjoy logical, process-oriented thinking
+Exam Structure
+ISC consists of 5 testlets:
+
+Testlet	Content	Count
+1	Multiple Choice Questions	34 MCQs
+2	Multiple Choice Questions	34 MCQs
+3	Task-Based Simulations	2 TBS
+4	Task-Based Simulations	2 TBS
+5	Task-Based Simulations	3 TBS
+Scoring Breakdown:
+
+MCQs: 50% of total score
+TBS: 50% of total score
+Content Areas
+Area 1: Information Systems and Data Management (35-45%)
+The largest content area covers core IT concepts:
+
+System architecture - Hardware, software, networks, cloud computing
+Database management - DBMS concepts, SQL basics, data integrity
+Data governance - Data quality, master data management, data lifecycle
+Data analytics - Data extraction, analysis tools, visualization
+Emerging technologies - AI, blockchain, robotic process automation (RPA)
+Pro tip: You don't need to be a programmer, but understand how data flows through systems and what controls ensure its integrity.
+
+Area 2: Security, Confidentiality, and Privacy (35-45%)
+Equally weighted with Area 1, this covers cybersecurity:
+
+Security frameworks - NIST, COBIT, ISO 27001
+Access controls - Authentication, authorization, identity management
+Network security - Firewalls, encryption, intrusion detection
+Cybersecurity threats - Malware, phishing, social engineering, ransomware
+Incident response - Detection, containment, recovery, lessons learned
+Privacy requirements - GDPR, CCPA, data protection principles
+Pro tip: Know the major security frameworks and their purposes. Questions often ask you to identify appropriate controls for given scenarios.
+
+Area 3: Considerations for System and Organization Controls (SOC) Engagements (10-20%)
+This area focuses on attestation engagements:
+
+SOC 1 reports - Controls relevant to financial reporting
+SOC 2 reports - Trust services criteria (security, availability, processing integrity, confidentiality, privacy)
+SOC 3 reports - General use reports
+SOC for Cybersecurity - Organization-wide cybersecurity risk management
+Report types - Type I vs. Type II differences
+Carve-out vs. inclusive methods
+Pro tip: Understand when each SOC report type is appropriate and what each trust services criteria means.
+
+Key Concepts to Master
+The SOC Report Framework
+Report	Purpose	Users
+SOC 1	Financial reporting controls	Auditors of user entities
+SOC 2	Trust services criteria	Management, regulators, specific users
+SOC 3	General seal of approval	Public, marketing purposes
+SOC for Cybersecurity	Cybersecurity risk program	Board, management, stakeholders
+Type I vs. Type II Reports
+Aspect	Type I	Type II
+Point in time	Yes	No
+Period covered	Single date	Typically 6-12 months
+Operating effectiveness	Not tested	Tested
+User preference	Less valued	More valued
+The CIA Triad + Availability
+Fundamental security concepts:
+
+Confidentiality - Data accessible only to authorized users
+Integrity - Data accurate and unaltered
+Availability - Systems accessible when needed
+(Privacy) - Personal data handled appropriately
+Control Categories
+Category	Examples
+Preventive	Access controls, encryption, input validation
+Detective	Log monitoring, reconciliations, audit trails
+Corrective	Backup restoration, patch management, incident response
+Time Management Strategy
+Testlet	Time Allocation
+Testlet 1 (34 MCQs)	~55 minutes
+Testlet 2 (34 MCQs)	~55 minutes
+Testlet 3 (2 TBS)	~30 minutes
+Testlet 4 (2 TBS)	~30 minutes
+Testlet 5 (3 TBS)	~45 minutes
+Total	4 hours
+MCQ Pacing: Aim for 1.5 minutes per question. TBS Pacing: Aim for 15 minutes per simulation.
+
+Study Strategy by Phase
+Phase 1: Foundation (Weeks 1-4)
+Build your IT knowledge base:
+
+Learn IT fundamentals - Don't skip basics if you lack IT background
+Study security frameworks - NIST Cybersecurity Framework is essential
+Understand SOC engagements - Know when each report type applies
+Complete MCQs by topic - 25-30 per study session
+Create terminology flashcards - ISC has significant vocabulary
+Phase 2: Deep Dive (Weeks 5-8)
+Intensify your practice:
+
+Increase MCQ volume - 50-75 per day
+Focus on security scenarios - Apply controls to real-world situations
+Practice SOC engagement questions - These are high-yield TBS topics
+Study cyber incident scenarios - Detection, response, and recovery
+Phase 3: Review (Weeks 9-10)
+Final preparation:
+
+Take 2-3 full practice exams - Under timed conditions
+Review security frameworks - Know NIST, COBIT, ISO 27001 purposes
+Refresh SOC report differences - Type I vs. II, SOC 1 vs. 2 vs. 3
+Practice emerging technology questions - AI, blockchain, RPA scenarios
+Technical Concepts You'll Need
+Network Security Basics
+Firewall - Controls traffic between networks
+Encryption - Protects data in transit and at rest
+VPN - Secure remote access
+IDS/IPS - Intrusion detection and prevention
+DMZ - Buffer zone between public and private networks
+Authentication Methods
+Single-factor - Password only
+Multi-factor (MFA) - Something you know + have + are
+SSO - Single sign-on across systems
+Biometrics - Fingerprint, facial recognition
+Cloud Computing Models
+Model	Provider Manages	Customer Manages
+IaaS	Infrastructure	OS, apps, data
+PaaS	Infrastructure + OS	Apps, data
+SaaS	Everything	Data only
+Common Mistakes to Avoid
+Mistake 1: Ignoring IT Fundamentals
+Even if you're not technical:
+
+Understand how databases work
+Know basic network concepts
+Learn common security terminology
+Mistake 2: Memorizing Without Understanding
+ISC tests application, not just recall:
+
+Understand why controls are implemented
+Know how to select appropriate controls for scenarios
+Apply frameworks to real situations
+Mistake 3: Overlooking SOC Engagements
+Area 3 is smaller but still 10-20% of your exam:
+
+Know the differences between SOC 1, 2, and 3
+Understand Type I vs. Type II
+Practice report-reading TBS
+Mistake 4: Underestimating Study Time
+ISC covers a broad range of technical topics:
+
+Budget more time if you lack IT background
+Don't rush through unfamiliar concepts
+Practice until terminology feels natural
+Study Resources
+Free Resources
+NIST Cybersecurity Framework - Core reading for security concepts
+AICPA SOC Resources - Official guidance on SOC engagements
+ISACA Resources - COBIT framework overview
+AICPA Blueprints - Official exam content guide
+High-Yield Topics for Final Review
+Security frameworks (NIST, COBIT, ISO 27001)
+SOC 1 vs. SOC 2 vs. SOC 3 differences
+Type I vs. Type II reports
+Access control methods
+Network security controls
+Incident response steps
+Cloud computing models and risks
+Emerging technology concepts (AI, blockchain, RPA)
+Tips from CPAs Who Passed
+"I had no IT background, but treating ISC like learning a new language worked. Flashcards were essential."
+
+"SOC engagement questions felt like mini-case studies. Practice applying concepts to scenarios."
+
+"Know your frameworks. NIST Cybersecurity Framework questions were everywhere."
+
+"The TBS required understanding how controls address specific risks. Don't just memorize control lists."
+
+"ISC rewards logical thinking. If you can trace through how a control prevents a threat, you'll do well."
+
+ISC and Your Career
+Passing ISC positions you for growing career opportunities:
+
+IT Audit - Directly applicable to system audits
+Cybersecurity - Demonstrates security knowledge
+ERP Implementation - Understanding system controls
+Data Analytics - Data governance and management expertise
+Risk Advisory - Technology risk consulting
+As technology becomes more central to accounting, ISC-certified CPAs are increasingly valuable.
+
+Ready to Start?
+ISC rewards candidates who understand how technology and controls work together. Focus on security concepts (they're heavily weighted), master the SOC engagement framework, and practice applying controls to scenarios.
+
+Build your study plan, embrace the technical content, and you'll be prepared for exam day.
+
+Tags
+ISC
+information systems
+IT audit
+discipline section
+study guide
+section guides
+Ready to Start Studying?
+Get a personalized study plan tailored to your schedule and goals.
+
+Build My Free Study Plan
+Meridian CPA Review
+Meridian
+CPA Review
+Study Plan
+CPA While Working
+Get Started
+About
+Sections:
+FAR
+AUD
+REG
+TCP
+© 2026 Meridian CPA Review

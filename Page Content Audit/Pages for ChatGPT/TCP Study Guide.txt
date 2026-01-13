@@ -1,0 +1,245 @@
+TCP Section: Complete Study Guide for 2025 | Meridian CPA Review
+Meridian CPA Review
+Meridian
+CPA Review
+
+Exam Sections
+
+Resources
+About
+Dashboard
+Build My Study Plan
+
+Back to Blog
+Section Guides
+8 min read
+TCP Section: Complete Study Guide for 2025
+Master the Tax Compliance and Planning discipline section with this comprehensive guide covering exam format, content areas, study strategies, and practical tips.
+
+CPA Exam Blueprint Team
+•
+January 8, 2026
+The Tax Compliance and Planning (TCP) section is one of three discipline sections introduced with CPA Evolution. With the highest pass rate among all CPA exam sections, TCP is an excellent choice for candidates with a tax background or those who enjoy detailed, rules-based content.
+
+TCP at a Glance
+Metric	Details
+Testing	Continuous (year-round)
+Duration	4 hours
+Questions	68 MCQs + 7 TBS
+Pass Rate	75-80% (Highest of all sections)
+Study Hours	100-120 recommended
+Why TCP Has the Highest Pass Rate
+TCP consistently achieves the highest pass rates for several reasons:
+
+Self-selection - Candidates choosing TCP typically have tax experience
+Familiar content - Many topics overlap with REG
+Practical application - Real-world tax scenarios are easier to grasp
+Clear rules - Tax law, while complex, follows defined rules
+Exam Structure
+TCP consists of 5 testlets:
+
+Testlet	Content	Count
+1	Multiple Choice Questions	34 MCQs
+2	Multiple Choice Questions	34 MCQs
+3	Task-Based Simulations	2 TBS
+4	Task-Based Simulations	2 TBS
+5	Task-Based Simulations	3 TBS
+Scoring Breakdown:
+
+MCQs: 50% of total score
+TBS: 50% of total score
+Content Areas
+Area 1: Tax Compliance and Planning for Individuals (30-40%)
+The largest content area focuses on individual taxation:
+
+Filing status and dependents - Determination rules, phase-outs
+Gross income - Recognition, exclusions, timing
+Deductions - Above-the-line, itemized, standard
+Credits - Child tax credit, education credits, earned income credit
+Alternative Minimum Tax (AMT) - Calculations, adjustments, preferences
+Tax planning strategies - Timing income/deductions, retirement planning
+Pro tip: Master the Form 1040 flow. Understanding how items flow through the return helps you answer complex questions efficiently.
+
+Area 2: Entity Tax Compliance (25-35%)
+Focus on business entity taxation:
+
+C Corporations - Formation, operations, distributions, liquidation
+S Corporations - Eligibility, built-in gains, AAA tracking
+Partnerships - Formation, allocations, distributions, basis
+LLCs - Check-the-box rules, default classification
+Consolidated returns - Eligibility, intercompany transactions
+Pro tip: Know the key differences between entity types. Questions often require comparing tax treatment across C corps, S corps, and partnerships.
+
+Area 3: Entity Tax Planning (15-25%)
+Strategic tax considerations for businesses:
+
+Choice of entity - Tax implications of different structures
+Compensation planning - Reasonable compensation, fringe benefits
+Retirement plans - Qualified vs. non-qualified, contribution limits
+State tax considerations - Nexus, apportionment, SALT deduction
+Multi-jurisdictional issues - Interstate commerce, tax treaties
+Pro tip: Entity choice questions are high-yield. Be ready to recommend the optimal entity structure based on given facts.
+
+Area 4: Property Transactions (10-20%)
+Tax treatment of property:
+
+Basis determination - Cost, gift, inheritance, like-kind exchange
+Gain/loss recognition - Realized vs. recognized, installment sales
+Section 1231, 1245, 1250 - Depreciation recapture rules
+Like-kind exchanges - Qualifying property, boot, basis
+Involuntary conversions - Deferral requirements
+Pro tip: Section 1231 netting is frequently tested. Master the "hotchpot" rules and how they interact with recapture.
+
+TCP vs. REG: Key Differences
+If you've already passed REG, here's what's different in TCP:
+
+Topic	REG Coverage	TCP Focus
+Individual tax	Moderate	Deep dive, complex scenarios
+Business entities	Basics	Advanced planning, choice of entity
+Tax planning	Limited	Extensive strategy focus
+Ethics	Circular 230	Not tested
+Business law	Tested	Not tested
+TCP goes deeper on tax topics while dropping the business law and ethics content from REG.
+
+Time Management Strategy
+Testlet	Time Allocation
+Testlet 1 (34 MCQs)	~55 minutes
+Testlet 2 (34 MCQs)	~55 minutes
+Testlet 3 (2 TBS)	~30 minutes
+Testlet 4 (2 TBS)	~30 minutes
+Testlet 5 (3 TBS)	~45 minutes
+Total	4 hours
+MCQ Pacing: Aim for 1.5 minutes per question. TBS Pacing: Aim for 15 minutes per simulation.
+
+Study Strategy by Phase
+Phase 1: Foundation (Weeks 1-3)
+Build your tax knowledge base:
+
+Review individual taxation thoroughly - This is 30-40% of your exam
+Create entity comparison charts - C corp vs. S corp vs. Partnership
+Complete 25-30 MCQs per topic - Focus on understanding, not memorization
+Bookmark IRC sections - Know where to find key rules
+Phase 2: Deep Dive (Weeks 4-6)
+Intensify your practice:
+
+Increase MCQ volume - 50-75 per day
+Focus on property transactions - Basis calculations are TBS favorites
+Practice multi-step problems - TCP TBS often require several calculations
+Work through tax return simulations - Get comfortable with form-based questions
+Phase 3: Review (Weeks 7-8)
+Final preparation:
+
+Take 2-3 full practice exams - Under timed conditions
+Focus on weak areas - Your practice exam results will guide you
+Review phase-outs and limits - These change frequently
+Refresh individual tax basics - Don't let the largest area go stale
+Must-Know Concepts
+Individual Tax Formula
+Memorize this flow:
+
+Gross Income
+- Above-the-Line Deductions
+= Adjusted Gross Income (AGI)
+- Greater of (Itemized or Standard Deduction)
+= Taxable Income
+× Tax Rates
+= Tax Before Credits
+- Credits
+= Tax Liability
+Entity Comparison Quick Reference
+Feature	C Corp	S Corp	Partnership
+Taxation	Entity level	Pass-through	Pass-through
+Basis for losses	N/A	Stock + debt	Capital + share of liabilities
+Self-employment tax	N/A	No (distributions)	Yes (general partners)
+Special allocations	No	No	Yes
+Ownership restrictions	None	100 shareholders, US only	Flexible
+Key Phase-Outs to Know
+Child tax credit phase-out thresholds
+Earned income credit thresholds by filing status
+Education credit phase-outs
+Qualified business income (QBI) deduction thresholds
+Common Mistakes to Avoid
+Mistake 1: Overlooking Filing Status Rules
+Filing status affects everything. Know:
+
+Head of household requirements
+Married filing separately limitations
+Qualifying widow(er) rules
+Mistake 2: Confusing Basis Rules
+Each entity type has different basis rules:
+
+Stock basis for S corps (no debt basis to shareholder)
+Inside vs. outside basis for partnerships
+Boot and carryover basis in like-kind exchanges
+Mistake 3: Ignoring Limitations
+Many deductions and credits have limits:
+
+At-risk limitations
+Passive activity loss rules
+Net operating loss carryforward rules
+Mistake 4: Rushing Through TBS
+TCP TBS often have multiple exhibits and require careful reading:
+
+Tax returns to analyze
+Multiple years to compare
+Planning scenarios to evaluate
+Study Resources
+Free IRS Materials
+Publication 17 - Individual tax guide
+Publication 334 - Small business tax guide
+Instructions for Form 1040 - Line-by-line guidance
+Instructions for business returns - 1120, 1120-S, 1065
+High-Yield Topics for Final Review
+Individual tax credits and their phase-outs
+S corporation basis and AAA tracking
+Partnership special allocations and distributions
+Like-kind exchange calculations
+Section 1231/1245/1250 character rules
+Choice of entity analysis
+Retirement plan contribution limits
+Tips from CPAs Who Passed
+"If you passed REG, TCP felt like a deeper dive on the same topics. Use that foundation."
+
+"The TBS felt very practical - like preparing an actual tax return. Practice with real forms."
+
+"Phase-outs are tested constantly. Make flash cards for all the income limits."
+
+"Entity choice questions are common. Know the pros and cons of each structure."
+
+"TCP had the highest pass rate for a reason - the content is learnable if you put in the time."
+
+TCP and Your Career
+Passing TCP signals strong tax competency to employers:
+
+Public accounting - Tax departments value TCP-certified candidates
+Corporate tax - Demonstrates comprehensive tax knowledge
+Tax planning roles - Strategic planning skills are directly tested
+Entrepreneurship - Understanding entity choice helps advise clients
+Ready to Start?
+TCP rewards candidates who understand tax concepts deeply and can apply them to real-world scenarios. Focus on the individual tax content area (it's the largest), master entity comparisons, and practice form-based simulations.
+
+With the highest pass rate of all CPA exam sections, TCP is achievable with focused preparation. Build your study plan and start practicing.
+
+Tags
+TCP
+tax
+discipline section
+study guide
+section guides
+Ready to Start Studying?
+Get a personalized study plan tailored to your schedule and goals.
+
+Build My Free Study Plan
+Meridian CPA Review
+Meridian
+CPA Review
+Study Plan
+CPA While Working
+Get Started
+About
+Sections:
+FAR
+AUD
+REG
+TCP
+© 2026 Meridian CPA Review

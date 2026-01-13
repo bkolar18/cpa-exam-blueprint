@@ -1909,8 +1909,8 @@ const questions = [
       "D": "The entity satisfies a performance obligation by transferring control of a good or service"
     },
     "correctAnswer": "D",
-    "explanation": "Under ASC 606, revenue is recognized when (or as) an entity satisfies a performance obligation by transferring a promised good or service (an asset) to a customer. Transfer of control is the key criterion, not cash receipt, contract signing, or invoicing.",
-    "tip": "Revenue recognition = control transferred to customer."
+    "explanation": "Per ASC 606-10-25-23, revenue is recognized when (or as) an entity satisfies a performance obligation by transferring control of a promised good or service to a customer. Control includes the ability to direct use of the asset and obtain substantially all remaining benefits. Why other answers are wrong: (A) Issuing an invoice is a billing event, not a transfer of control—control may transfer before or after invoicing; (B) Cash basis accounting is not permitted under GAAP—revenue recognition is based on performance, not cash flows; (C) Contract signing creates the agreement but doesn't transfer control of goods/services. The key is CONTROL transfer, which can occur at a point in time or over time.",
+    "tip": "ASC 606: Revenue = control transferred. Control = direct use + obtain benefits. NOT based on invoicing or cash receipt."
   },
   {
     "id": "far-rev-004",
@@ -1928,8 +1928,8 @@ const questions = [
       "D": "It has a standalone selling price greater than zero"
     },
     "correctAnswer": "C",
-    "explanation": "A good or service is distinct if both criteria are met: (1) the customer can benefit from it on its own or together with readily available resources (capable of being distinct), AND (2) the promise to transfer it is separately identifiable from other promises in the contract (distinct within the context of the contract).",
-    "tip": "Distinct = capable of being distinct + separately identifiable in the contract."
+    "explanation": "Per ASC 606-10-25-19, a good or service is distinct if BOTH criteria are met: (1) Capable of being distinct—the customer can benefit from it on its own or with readily available resources; (2) Distinct within the contract—the promise is separately identifiable from other promises. Why other answers are wrong: (A) Being a line item is a presentation choice, not a distinctness criterion—bundled items may be listed separately but not be distinct; (B) This describes the 'unit of account' concept for assets under ASC 360, not performance obligation distinctness; (D) Having a price greater than zero doesn't determine distinctness—a free item bundled with a purchase may still be distinct. The two-part test focuses on customer benefit and contract context.",
+    "tip": "Distinct requires BOTH: (1) Customer can benefit separately + (2) Separately identifiable in contract. Two-part test."
   },
   {
     "id": "far-rev-005",
@@ -1947,8 +1947,8 @@ const questions = [
       "D": "Twelve separate performance obligations (one per month)"
     },
     "correctAnswer": "A",
-    "explanation": "Under ASC 606, a series of distinct goods or services that are substantially the same and have the same pattern of transfer to the customer are treated as a single performance obligation. Since each monthly cleaning service is distinct and substantially the same, the series is accounted for as one performance obligation.",
-    "tip": "Series of substantially same distinct services = one performance obligation."
+    "explanation": "Per ASC 606-10-25-14(b), a series of distinct goods or services that are substantially the same AND have the same pattern of transfer is treated as a SINGLE performance obligation. This 'series guidance' applies when: (1) each good/service is distinct, (2) each is substantially the same, and (3) each transfers to the customer the same way (e.g., over time with same progress measure). Why other answers are wrong: (B) Splitting into two 6-month periods has no basis in the guidance—there's no mid-contract break point; (C) Payment timing doesn't determine performance obligations—it only affects when cash is received; (D) Although each month's service is distinct individually, the series provision consolidates them into one obligation for efficiency. This simplifies revenue recognition over time.",
+    "tip": "Series guidance: Substantially same + same pattern of transfer = ONE performance obligation. Simplifies recurring services."
   },
   {
     "id": "far-rev-006",
@@ -1966,8 +1966,8 @@ const questions = [
       "D": "The residual method for all allocations"
     },
     "correctAnswer": "B",
-    "explanation": "ASC 606 requires allocating the transaction price to performance obligations based on their relative standalone selling prices. The standalone selling price is the price at which an entity would sell a promised good or service separately to a customer. If not directly observable, it must be estimated.",
-    "tip": "Allocate based on relative standalone selling prices."
+    "explanation": "Per ASC 606-10-32-28, transaction price is allocated to each performance obligation based on relative standalone selling prices (SSP). The SSP is the price at which an entity would sell the good or service SEPARATELY to a customer. This allocation ensures revenue is recognized in proportion to the value delivered. Why other answers are wrong: (A) Cost-based allocation is not permitted—value to customer (SSP) matters, not entity's cost; (C) Equal allocation ignores that performance obligations may have different values—a product worth $500 shouldn't receive same allocation as a service worth $100; (D) Residual method is only permitted when SSP is highly variable or uncertain, and only for one item in the contract—it's not the default. Observable SSP is preferred; estimate if not directly observable.",
+    "tip": "Allocate transaction price using RELATIVE SSP. Formula: (Item SSP ÷ Total SSP) × Transaction Price."
   },
   {
     "id": "far-rev-007",
@@ -1985,8 +1985,8 @@ const questions = [
       "D": "Management's best guess approach"
     },
     "correctAnswer": "D",
-    "explanation": "ASC 606 specifies three acceptable methods for estimating standalone selling price: (1) adjusted market assessment approach, (2) expected cost plus a margin approach, and (3) residual approach (when price is highly variable or uncertain). 'Management's best guess' is not an acceptable method—estimates must be based on one of the specified approaches.",
-    "tip": "Estimation methods: market assessment, cost-plus margin, or residual (limited)."
+    "explanation": "Per ASC 606-10-32-33/34, when SSP is not directly observable, entities must estimate using one of three methods: (1) Adjusted market assessment—evaluate what customers would pay based on market; (2) Expected cost plus margin—forecast costs and add appropriate margin; (3) Residual approach—only if price is highly variable or uncertain. Why other answers are wrong: (A), (B), (D) are all partial statements—ASC 606 permits all three methods, not just one; 'Management's best guess' is not a valid approach because it lacks the rigor required by GAAP. The estimation must be based on observable inputs and reasonable assumptions. Preference: directly observable SSP > market assessment/cost-plus > residual (most restrictive).",
+    "tip": "Three SSP estimation methods: Market assessment, Cost + margin, Residual (only if highly variable). 'Best guess' is NOT acceptable."
   },
   {
     "id": "far-rev-008",
@@ -2025,8 +2025,8 @@ const questions = [
       "D": "Only the expected value method"
     },
     "correctAnswer": "B",
-    "explanation": "Variable consideration is estimated using either (1) the expected value method (probability-weighted amounts) or (2) the most likely amount method (single most likely outcome). The entity should use whichever method better predicts the amount of consideration to which it will be entitled. The same method should be used consistently for similar contracts.",
-    "tip": "Expected value OR most likely amount—use whichever predicts better."
+    "explanation": "Per ASC 606-10-32-8, variable consideration is estimated using either: (1) Expected value—probability-weighted sum of possible outcomes (best for large number of similar contracts), or (2) Most likely amount—single most likely outcome (best when only two possible outcomes, e.g., achieve bonus or not). Why other answers are wrong: (A) Only expected value is too narrow—most likely amount is equally valid; (C) Lowest amount is overly conservative and not representative of expected outcomes—it would understate revenue; (D) Only most likely amount is too narrow—expected value may be more appropriate for portfolios. The method that better PREDICTS the ultimate amount should be selected and applied consistently to similar contracts.",
+    "tip": "Variable consideration: Expected value (probability-weighted) OR Most likely amount. Choose method that PREDICTS better."
   },
   {
     "id": "far-rev-010",
@@ -2044,8 +2044,8 @@ const questions = [
       "D": "The customer has agreed to the amount in writing"
     },
     "correctAnswer": "C",
-    "explanation": "Variable consideration is included in the transaction price only to the extent that it is probable that a significant reversal in the amount of cumulative revenue recognized will not occur when the uncertainty is resolved. This constraint prevents entities from recognizing revenue that may need to be reversed later.",
-    "tip": "Constraint: include variable consideration only if significant reversal is NOT probable."
+    "explanation": "Per ASC 606-10-32-11, the 'constraint' on variable consideration requires including variable amounts ONLY to the extent that it is probable a significant revenue reversal will NOT occur when uncertainty is resolved. This prevents premature revenue recognition. Why other answers are wrong: (A) 'Fixed and determinable' is not the criterion—variable consideration is inherently NOT fixed, but can still be recognized; (B) Cash receipt is irrelevant—accrual accounting doesn't depend on cash flows; (D) Written customer agreement is not required—variable consideration often arises from estimates without explicit customer agreement. Factors increasing reversal risk: experience with similar contracts, length until resolution, amount/range of possible outcomes.",
+    "tip": "Constraint = include only if significant reversal is NOT PROBABLE. Conservative approach to variable consideration."
   },
   {
     "id": "far-rev-011",
@@ -2063,8 +2063,8 @@ const questions = [
       "D": "Rights of return"
     },
     "correctAnswer": "C",
-    "explanation": "A fixed cash selling price is not variable consideration. Variable consideration includes discounts, rebates, refunds, credits, price concessions, incentives, performance bonuses, penalties, and rights of return. These amounts are uncertain because they depend on future events or conditions.",
-    "tip": "Variable consideration = amounts that can change based on future events."
+    "explanation": "Per ASC 606-10-32-5, variable consideration includes amounts that can change based on future events or conditions. A fixed cash selling price is NOT variable—it is certain and determinable. Why other answers are wrong: (A) Volume discounts ARE variable—the discount amount depends on quantities purchased, which is uncertain at contract inception; (B) Performance bonuses ARE variable—the amount depends on achieving specified targets; (D) Rights of return ARE variable—the number of returns affects final consideration. Examples of variable consideration: rebates, refunds, credits, price concessions, incentives, royalties, penalties, and contingent amounts.",
+    "tip": "Variable consideration = amounts contingent on future events. Fixed price ≠ variable. Discounts, bonuses, returns = variable."
   },
   {
     "id": "far-rev-012",
@@ -2103,8 +2103,8 @@ const questions = [
       "D": "The modification extends the contract term"
     },
     "correctAnswer": "C",
-    "explanation": "A modification is treated as a separate contract if both conditions are met: (1) the modification adds distinct goods or services, AND (2) the price for the added goods or services reflects their standalone selling prices. If both criteria are not met, the modification is accounted for as part of the existing contract.",
-    "tip": "Separate contract = adds distinct goods/services at standalone selling prices."
+    "explanation": "Per ASC 606-10-25-12, a contract modification is treated as a SEPARATE contract only if BOTH conditions are met: (1) the modification adds DISTINCT goods or services, AND (2) the price for the added goods/services reflects their standalone selling prices (SSP). If either condition fails, it's part of the existing contract. Why other answers are wrong: (A) Any change is too broad—modifications that don't add distinct items at SSP require different accounting; (B) Price reduction doesn't create a separate contract—it modifies the existing contract; (D) Term extension alone doesn't qualify—must add distinct items at SSP. Three modification outcomes: separate contract, cumulative catch-up, or prospective adjustment.",
+    "tip": "Modification = separate contract ONLY if: (1) Adds DISTINCT goods/services + (2) At standalone selling prices. Both required."
   },
   {
     "id": "far-rev-014",
@@ -2122,8 +2122,8 @@ const questions = [
       "D": "By recording a gain or loss immediately"
     },
     "correctAnswer": "B",
-    "explanation": "When a modification is not a separate contract and remaining goods/services are distinct from those already transferred, it is accounted for prospectively. The entity reallocates the remaining transaction price (including the modification) to the remaining performance obligations. No restatement of prior periods is required.",
-    "tip": "Distinct remaining goods = prospective reallocation of remaining price."
+    "explanation": "Per ASC 606-10-25-13, when a modification is NOT a separate contract and remaining goods/services ARE distinct, account for it prospectively—terminate the old contract and create a new one with: (1) remaining performance obligations from original contract plus new obligations, and (2) remaining transaction price plus modification price. Why other answers are wrong: (A) While conceptually a new contract is created, this describes the cumulative catch-up method used when remaining goods are NOT distinct; (C) Prior period restatement is not permitted for contract modifications under ASC 606; (D) Gains/losses are not recorded separately—they're embedded in the new allocation. No cumulative catch-up adjustment to revenue previously recognized.",
+    "tip": "Modification + distinct remaining goods = PROSPECTIVE treatment. Reallocate remaining price to remaining obligations. No catch-up."
   },
   {
     "id": "far-rev-015",
@@ -2141,8 +2141,8 @@ const questions = [
       "D": "Never takes physical possession of the goods"
     },
     "correctAnswer": "C",
-    "explanation": "An entity is a principal if it controls the specified good or service before transfer to the customer. Control is evidenced by the ability to direct the use of and obtain substantially all remaining benefits from the asset. Agents facilitate sales but do not control the goods/services. Principals recognize gross revenue; agents recognize net (commission) revenue.",
-    "tip": "Principal = controls goods before transfer. Agent = facilitates for commission."
+    "explanation": "Per ASC 606-10-55-36, an entity is a PRINCIPAL if it controls the good or service BEFORE transfer to the customer. Control indicators include: (1) primary responsibility for fulfillment, (2) inventory risk, and (3) discretion in establishing prices. Why other answers are wrong: (A) Having NO inventory risk suggests being an agent, not a principal; (B) Receiving a commission indicates agent status—agents earn commissions, principals earn margins; (D) Never taking physical possession suggests agent status, though possession alone isn't determinative. Principals recognize GROSS revenue; agents recognize NET revenue (commission only). This distinction significantly impacts revenue presentation.",
+    "tip": "Principal = controls goods BEFORE transfer (recognizes GROSS). Agent = facilitates (recognizes NET commission only)."
   },
   {
     "id": "far-rev-016",
@@ -2160,8 +2160,8 @@ const questions = [
       "D": "Gross revenue for the full booking amount"
     },
     "correctAnswer": "A",
-    "explanation": "TravelCo is an agent because it does not control the hotel rooms before transfer to customers—the hotels set prices, bear inventory risk, and are primarily responsible for fulfillment. As an agent, TravelCo recognizes only its commission (15%) as revenue, not the gross booking amount.",
-    "tip": "Agents recognize commission only (net); principals recognize gross revenue."
+    "explanation": "Per ASC 606-10-55-36/39, TravelCo is an AGENT because it does not control hotel rooms before transfer to customers. Agent indicators present: (1) Hotels set prices (no pricing discretion), (2) Hotels bear inventory risk (unsold rooms), (3) Hotels are primarily responsible for fulfillment (providing the stay). Why other answers are wrong: (B) Gross revenue less COGS is principal treatment—not applicable to agents; (C) Timing of recognition (completion of stay) is a separate issue from gross vs net—agents still recognize on transfer; (D) Gross revenue would overstate TravelCo's economic activity—it only facilitates $15 of value per $100 booking. As agent, TravelCo recognizes ONLY its 15% commission as revenue.",
+    "tip": "Agent indicators: No price control + No inventory risk + Not primary responsible = NET revenue (commission only)."
   },
   {
     "id": "far-rev-017",
@@ -2179,8 +2179,8 @@ const questions = [
       "D": "The customer simultaneously receives and consumes benefits, OR the entity's performance creates or enhances an asset the customer controls, OR the entity's performance creates an asset with no alternative use and the entity has an enforceable right to payment for performance completed"
     },
     "correctAnswer": "D",
-    "explanation": "Revenue is recognized over time if one of three criteria is met: (1) customer simultaneously receives and consumes benefits (e.g., cleaning services), (2) entity's performance creates or enhances an asset controlled by the customer (e.g., building on customer's land), or (3) entity's performance creates an asset with no alternative use AND entity has enforceable right to payment for work completed.",
-    "tip": "Over time: simultaneous consumption, customer controls asset, OR no alternative use + payment right."
+    "explanation": "Per ASC 606-10-25-27, revenue is recognized OVER TIME if ANY of three criteria is met: (1) Customer simultaneously receives and consumes benefits as entity performs (e.g., daily cleaning services—no asset created); (2) Entity's performance creates or enhances an asset customer CONTROLS (e.g., construction on customer's land); (3) Asset has no alternative use to entity AND entity has enforceable right to payment for performance completed to date. Why other answers are wrong: (A) Percentage-of-completion is a METHOD, not a criterion—it's used after determining over-time recognition applies; (B) Payment timing doesn't affect recognition pattern—it only affects cash flows; (C) Contract term exceeding one year is irrelevant—short-term services can still be over-time. If NO criteria met → point in time recognition.",
+    "tip": "Over time if ANY: (1) Simultaneous consumption, (2) Customer controls asset created, (3) No alternative use + right to payment."
   },
   {
     "id": "far-rev-018",
@@ -2198,8 +2198,8 @@ const questions = [
       "D": "Either input or output methods, as appropriate to the nature of the performance obligation"
     },
     "correctAnswer": "D",
-    "explanation": "ASC 606 permits either input methods (measuring inputs like costs, labor hours, machine hours) or output methods (measuring outputs like units produced, milestones reached, surveys of work performed). The entity should select the method that best depicts the transfer of goods or services to the customer.",
-    "tip": "Input methods OR output methods—choose what best depicts transfer of control."
+    "explanation": "Per ASC 606-10-55-17/21, either INPUT or OUTPUT methods may be used to measure progress for over-time recognition. Input methods: costs incurred, labor hours, machine hours, time elapsed. Output methods: units produced, milestones reached, surveys of performance, appraisals. Why other answers are wrong: (A) Straight-line may be appropriate but only if it depicts transfer of control (e.g., stand-ready obligations)—it's not universally acceptable; (B) Input-only ignores valid output methods; (C) Output-only ignores valid input methods like cost-to-cost. The entity selects the method that best depicts the transfer of goods/services. Consistency is required for similar contracts.",
+    "tip": "Measure progress: Input (costs, hours) OR Output (units, milestones). Choose method that BEST depicts transfer of control."
   },
   {
     "id": "far-rev-019",
@@ -2238,8 +2238,8 @@ const questions = [
       "D": "Warranties are never separate performance obligations"
     },
     "correctAnswer": "B",
-    "explanation": "An assurance-type warranty (promising the product meets agreed-upon specifications) is NOT a separate performance obligation—it's accounted for under ASC 460 (contingency). A service-type warranty (providing a service beyond the assurance that the product meets specifications, such as extended coverage) IS a separate performance obligation with allocated revenue.",
-    "tip": "Assurance warranty = accrue liability. Service warranty = separate performance obligation."
+    "explanation": "Per ASC 606-10-55-30/33, warranty treatment depends on whether it's assurance-type or service-type. Assurance-type: promises product meets agreed-upon specifications—NOT a separate performance obligation; accounted for as a contingent liability under ASC 460. Service-type: provides a service BEYOND fixing defects (e.g., extended coverage, additional services)—IS a separate performance obligation with allocated revenue. Why other answers are wrong: (A) Warranty period length doesn't determine classification—it's about what the warranty provides; (C) Assurance warranties are NOT separate obligations; (D) Service warranties ARE separate obligations. Indicators of service-type: customer can purchase warranty separately, covers defects arising after shipment, provides additional services.",
+    "tip": "Assurance warranty = accrued liability (ASC 460). Service warranty = separate performance obligation (ASC 606)."
   },
   {
     "id": "far-rev-021",
@@ -2257,8 +2257,8 @@ const questions = [
       "D": "Are capitalized if expected to be recovered and amortized over the period of benefit"
     },
     "correctAnswer": "D",
-    "explanation": "Incremental costs of obtaining a contract (costs that would not have been incurred if the contract was not obtained, such as sales commissions) are capitalized if the entity expects to recover those costs. They are amortized on a systematic basis consistent with the transfer of goods/services. A practical expedient allows expensing if amortization period is one year or less.",
-    "tip": "Capitalize contract acquisition costs if recoverable; amortize over benefit period."
+    "explanation": "Per ASC 606-10-25-1, incremental costs of obtaining a contract are capitalized if the entity EXPECTS TO RECOVER them. Incremental costs are those that would NOT have been incurred if the contract wasn't obtained (e.g., sales commissions). Amortize systematically over the period of benefit. Why other answers are wrong: (A) Contract term exceeding one year is NOT the criterion—it's whether costs are recoverable and the practical expedient applies to amortization period, not contract term; (B) Costs are NOT offset against transaction price—they're recorded as an asset; (C) Expensing is not required—capitalization is permitted. Practical expedient: expense if amortization period ≤ 1 year. Non-incremental costs (salaries) are expensed as incurred.",
+    "tip": "Capitalize incremental contract acquisition costs if RECOVERABLE. Practical expedient: expense if amortization ≤ 1 year."
   },
   {
     "id": "far-rev-022",
@@ -2276,8 +2276,8 @@ const questions = [
       "D": "Are incurred before the contract is signed"
     },
     "correctAnswer": "A",
-    "explanation": "Costs to fulfill a contract are capitalized if all three criteria are met: (1) relate directly to an identified contract, (2) generate or enhance resources used to satisfy performance obligations, and (3) are expected to be recovered. General and administrative costs and wasted materials are expensed as incurred.",
-    "tip": "Capitalize fulfillment costs: direct to contract + enhance resources + recoverable."
+    "explanation": "Per ASC 606-10-25-6, costs to fulfill a contract are capitalized if ALL THREE criteria are met: (1) Relate directly to an identified contract (or specific anticipated contract), (2) Generate or enhance resources used to satisfy performance obligations, and (3) Are expected to be recovered. Why other answers are wrong: (B) G&A costs are specifically excluded—they're expensed as incurred regardless of contract; (C) 10% threshold has no basis in the standard—the three criteria apply regardless of amount; (D) Pre-contract costs can be capitalized if criteria are met (for specific anticipated contract). Examples of capitalizable fulfillment costs: direct labor, direct materials, setup costs. Always expensed: G&A, wasted materials, abnormal waste.",
+    "tip": "Fulfillment cost capitalization: ALL THREE required—(1) Direct to contract + (2) Enhance resources + (3) Recoverable."
   },
   {
     "id": "far-rev-023",
@@ -2295,8 +2295,8 @@ const questions = [
       "D": "When cash is received"
     },
     "correctAnswer": "B",
-    "explanation": "Sales-based and usage-based royalties for licenses of intellectual property have a special constraint. Revenue is recognized when (or as) the later of: (1) the subsequent sale or usage occurs, or (2) the performance obligation to which the royalty relates has been satisfied. This exception prevents recognition based on estimates of future sales.",
-    "tip": "Royalties on IP licenses: recognize at later of sale/usage or performance obligation satisfied."
+    "explanation": "Per ASC 606-10-55-65, sales-based and usage-based royalties for licenses of intellectual property have a SPECIAL EXCEPTION to the variable consideration guidance. Revenue is recognized at the LATER of: (1) subsequent sale or usage occurs, or (2) performance obligation satisfied (in part or whole). Why other answers are wrong: (A) Recognition at contract inception based on estimates is specifically prohibited for IP royalties—this prevents premature revenue recognition; (C) Equal allocation over license term ignores actual sales/usage patterns; (D) Cash basis is not permitted under GAAP. This exception exists because future sales/usage are inherently uncertain and highly variable. The royalty exception applies ONLY to IP licenses—product royalties follow standard variable consideration guidance.",
+    "tip": "IP royalty exception: Recognize at LATER of sale/usage OR performance obligation satisfied. Cannot estimate upfront."
   },
   {
     "id": "far-rev-024",
@@ -2314,8 +2314,8 @@ const questions = [
       "D": "It depends on the standalone selling prices"
     },
     "correctAnswer": "B",
-    "explanation": "When installation involves significant customization, the license and installation are not separately identifiable—they are inputs to a combined output. The updates, if distinct (customer can benefit separately), are a separate obligation. Result: two performance obligations—(1) customized software solution and (2) update services.",
-    "tip": "Significant customization/integration = combined performance obligation."
+    "explanation": "Per ASC 606-10-25-21, when promised goods/services are inputs to a combined item, they are NOT separately identifiable and form ONE performance obligation. Significant customization/modification indicates high integration—the license and installation are inputs to a combined 'customized software solution.' The updates, however, remain distinct if the customer can benefit separately. Why other answers are wrong: (A) Three separate obligations ignores the integration between license and customization; (C) One obligation assumes updates are also integrated—but standard updates are typically distinct; (D) SSP doesn't determine number of obligations—distinctness does. Key principle: Significant customization/modification/integration = combined obligation.",
+    "tip": "Significant customization = combined performance obligation. Updates often remain distinct = separate obligation."
   },
   {
     "id": "far-rev-025",
@@ -2333,8 +2333,8 @@ const questions = [
       "D": "The license term is greater than one year"
     },
     "correctAnswer": "A",
-    "explanation": "A license provides a 'right to access' (recognized over time) if all three criteria are met: (1) the licensor undertakes activities that significantly affect the IP, (2) the customer is exposed to positive or negative effects of those activities, and (3) those activities do not transfer a good or service to the customer. Otherwise, it's a 'right to use' (recognized at point in time).",
-    "tip": "Right to access = over time. Right to use = point in time."
+    "explanation": "Per ASC 606-10-55-58, a license provides a 'right to ACCESS' (revenue recognized OVER TIME) if ALL THREE criteria are met: (1) Licensor's activities significantly affect the IP to which the customer has rights, (2) Customer is exposed to positive or negative effects of those activities, and (3) Those activities do NOT transfer a separate good or service to the customer. If ANY criterion fails = 'right to USE' (revenue recognized at POINT IN TIME). Why other answers are wrong: (B) Fixed fee vs royalty is a payment term, not a recognition determinant; (C) Exclusivity doesn't affect classification; (D) License term length doesn't determine access vs use. Example: franchise license where franchisor actively manages brand = right to access. Perpetual software license with no ongoing support = right to use.",
+    "tip": "Right to ACCESS (over time): ALL THREE—significant activities + customer exposed + no separate good/service. Otherwise = right to USE (point in time)."
   },
   {
     "id": "far-rev-026",
@@ -2373,8 +2373,8 @@ const questions = [
       "D": "When interest is explicitly charged"
     },
     "correctAnswer": "C",
-    "explanation": "A significant financing component exists when timing of payments differs significantly from transfer timing AND provides a significant financing benefit to either party. Practical expedient: no adjustment needed if period between transfer and payment is one year or less. Interest may need to be imputed even if not explicitly stated.",
-    "tip": "Significant financing component: adjust transaction price for time value of money."
+    "explanation": "Per ASC 606-10-32-15, a significant financing component exists when: (1) Timing of payments differs significantly from timing of transfer, AND (2) This difference provides a significant financing BENEFIT to either party. The transaction price is adjusted for time value of money. Why other answers are wrong: (A) Installment payments alone don't create financing component if timing matches transfer; (B) 30-day terms are typical and not 'significant'; (D) Explicit interest isn't required—imputation may be necessary. Practical expedient: No adjustment if period between transfer and payment ≤ 1 year. Customer pays early = entity imputes interest expense; customer pays late = entity imputes interest income.",
+    "tip": "Significant financing: payment timing differs significantly from transfer + financing benefit. Practical expedient: ≤ 1 year = no adjustment."
   },
   {
     "id": "far-rev-028",
@@ -2664,8 +2664,8 @@ const questions = [
       "D": "Both cost of goods sold and ending inventory are lower"
     },
     "correctAnswer": "B",
-    "explanation": "During rising prices, LIFO assigns the newest (higher) costs to COGS, resulting in higher COGS and lower net income compared to FIFO. Ending inventory reflects the oldest (lower) costs, so it is valued lower. This provides a tax benefit but understates inventory on the balance sheet.",
-    "tip": "Rising prices + LIFO = higher COGS, lower income, lower ending inventory."
+    "explanation": "Per ASC 330, during rising prices, LIFO (Last-In, First-Out) assigns the NEWEST (higher) costs to COGS, resulting in higher COGS and LOWER net income compared to FIFO. Ending inventory reflects the OLDEST (lower) costs, so it is valued lower on the balance sheet. Why other answers are wrong: (A) This is the opposite of correct—LIFO has HIGHER COGS and LOWER ending inventory during rising prices; (C) Both higher is impossible—if COGS is higher, inventory must be lower (accounting identity); (D) Both lower is impossible for the same reason. Key effect: LIFO provides TAX BENEFIT (lower taxable income) during inflation but understates inventory value.",
+    "tip": "Rising prices: LIFO = Higher COGS, Lower profit, Lower ending inventory. Tax benefit but understated balance sheet."
   },
   {
     "id": "far-inv-003",
@@ -2746,8 +2746,8 @@ const questions = [
       "D": "If LIFO is used for tax purposes, it must also be used for financial reporting"
     },
     "correctAnswer": "D",
-    "explanation": "The LIFO conformity rule (IRC Section 472) requires that if a company uses LIFO for tax purposes, it must also use LIFO in its primary financial statements (books). This prevents companies from getting LIFO tax benefits while reporting higher income to shareholders using FIFO.",
-    "tip": "LIFO for taxes = must use LIFO for financial reporting too."
+    "explanation": "Per IRC Section 472, the LIFO conformity rule requires that if a company uses LIFO for tax purposes, it MUST also use LIFO in its primary financial statements. This prevents companies from obtaining LIFO tax benefits (lower taxable income) while reporting higher income to shareholders using FIFO. Why other answers are wrong: (A) Turnover rate has no relation to LIFO eligibility; (B) LIFO disclosure is required IF used, but not if another method is used; (C) Companies may use LIFO for some inventory pools and other methods for different pools—the conformity rule applies to items using LIFO, not all inventory. Exception: Supplemental FIFO data may be disclosed in notes.",
+    "tip": "LIFO conformity: Use LIFO for taxes → MUST use for GAAP financial statements. Prevents having it both ways."
   },
   {
     "id": "far-inv-007",
@@ -2765,8 +2765,8 @@ const questions = [
       "D": "A contra-asset account that reduces inventory to market value"
     },
     "correctAnswer": "C",
-    "explanation": "The LIFO reserve (or LIFO allowance) is the difference between inventory reported under LIFO and what it would be under FIFO or current cost. During rising prices, LIFO inventory is lower, so the reserve represents the cumulative difference. It must be disclosed and allows analysts to convert LIFO to FIFO for comparability.",
-    "tip": "LIFO reserve = FIFO inventory − LIFO inventory."
+    "explanation": "Per ASC 330-10-50-1, the LIFO reserve (or LIFO allowance) is the difference between inventory valued at LIFO and what it would be under FIFO or current cost. **Formula:** LIFO Reserve = FIFO Inventory − LIFO Inventory. During rising prices, LIFO inventory is LOWER, so the reserve is positive. Why other answers are wrong: (A) Replacement cost excess describes a different concept; (B) 'Reserve for future sales' is not an accounting concept—all inventory is for future sale; (D) Contra-asset for market value describes inventory valuation allowances, not LIFO reserve. LIFO reserve disclosure allows analysts to convert LIFO to FIFO: FIFO Inventory = LIFO Inventory + LIFO Reserve.",
+    "tip": "LIFO Reserve = FIFO − LIFO. Disclosure requirement. Use to convert: FIFO = LIFO + Reserve."
   },
   {
     "id": "far-inv-008",
@@ -2784,8 +2784,8 @@ const questions = [
       "D": "A company adopts LIFO for the first time"
     },
     "correctAnswer": "B",
-    "explanation": "LIFO liquidation occurs when sales exceed purchases, causing the company to dip into older LIFO layers with lower costs. This results in lower COGS (matching old low costs against current revenues), higher gross profit, and higher taxes—the opposite of the intended LIFO benefit. Companies often disclose the effect of LIFO liquidations.",
-    "tip": "LIFO liquidation = selling into old layers, artificially boosting profit."
+    "explanation": "Per ASC 330-10-50-2, a LIFO liquidation occurs when units sold exceed units purchased, causing the company to 'dip into' older LIFO layers with LOWER costs. This results in: (1) Lower COGS (old low costs matched with current revenues), (2) Higher gross profit and net income, (3) Higher taxes—the OPPOSITE of LIFO's intended benefit. Why other answers are wrong: (A) Switching from LIFO to FIFO is a change in accounting method, not liquidation; (C) Writing down to market is an LCM/LC-NRV adjustment; (D) Adopting LIFO initially creates base layers, not liquidation. Companies must DISCLOSE the effect of material LIFO liquidations on income.",
+    "tip": "LIFO liquidation: Sell MORE than buy → dip into old low-cost layers → artificially HIGHER profit. Disclosure required."
   },
   {
     "id": "far-inv-009",
@@ -2803,8 +2803,8 @@ const questions = [
       "D": "Estimated selling price less costs of completion and disposal"
     },
     "correctAnswer": "D",
-    "explanation": "Net realizable value is the estimated selling price in the ordinary course of business, less reasonably predictable costs of completion, disposal, and transportation. This represents the net amount the entity expects to realize from selling the inventory.",
-    "tip": "NRV = Selling price − Costs to complete and sell."
+    "explanation": "Per ASC 330-10-35-1B, net realizable value (NRV) is the estimated selling price in the ordinary course of business LESS reasonably predictable costs of completion, disposal, and transportation. **Formula:** NRV = Estimated Selling Price − Costs to Complete − Costs to Sell. Why other answers are wrong: (A) Fair market value is a different concept used for other assets (not inventory valuation); (B) Historical cost adjusted for inflation is not used under GAAP; (C) Replacement cost is an input to the traditional LCM floor/ceiling calculation but is NOT NRV. NRV represents the net cash the entity EXPECTS to receive from selling inventory.",
+    "tip": "NRV = Selling Price − Completion Costs − Selling Costs. NOT fair value or replacement cost."
   },
   {
     "id": "far-inv-010",
@@ -2843,8 +2843,8 @@ const questions = [
       "D": "Replacement cost, with a ceiling of NRV and a floor of NRV minus normal profit margin"
     },
     "correctAnswer": "D",
-    "explanation": "Under the legacy LCM rule (still applicable for LIFO and retail method), market is replacement cost, but it cannot exceed NRV (ceiling) or be less than NRV minus a normal profit margin (floor). This range prevents both overstating and understating inventory. Other methods use the simplified LC-NRV approach.",
-    "tip": "LIFO/retail: Market = replacement cost, bounded by NRV ceiling and NRV−profit floor."
+    "explanation": "Per ASC 330-10-35-1C, for inventory using LIFO or the retail inventory method, the traditional lower of cost or MARKET (LCM) rule still applies. Market is defined as REPLACEMENT COST, but bounded by: Ceiling = NRV (cannot exceed), Floor = NRV − Normal Profit Margin (cannot be less than). Why other answers are wrong: (A) Fair value is not used for LCM calculation; (B) Higher of replacement cost or NRV reverses the ceiling concept; (C) NRV only applies to other methods—LIFO/retail use the floor/ceiling approach. The ceiling prevents overstating inventory; the floor prevents excessive losses that would overstate future profits. Most GAAP inventory now uses simplified LC-NRV (ASC Update 2015-11).",
+    "tip": "LIFO/Retail LCM: Market = Replacement cost, with Ceiling (NRV) and Floor (NRV − normal profit)."
   },
   {
     "id": "far-inv-012",
@@ -2862,8 +2862,8 @@ const questions = [
       "D": "The write-down cannot be reversed; the reduced amount becomes the new cost basis"
     },
     "correctAnswer": "D",
-    "explanation": "Under US GAAP, once inventory is written down to NRV (or market), that reduced amount becomes the new cost basis. Subsequent recoveries in value are not recognized—the write-down is not reversed. This differs from IFRS, which permits reversal of previous write-downs.",
-    "tip": "US GAAP: No reversal of inventory write-downs. New cost = written-down amount."
+    "explanation": "Per ASC 330-10-35-14, under US GAAP, once inventory is written down to NRV (or market), that reduced amount becomes the NEW COST BASIS. Subsequent recoveries in value are NOT recognized—write-downs CANNOT be reversed. Why other answers are wrong: (A) Revaluing to fair market value is not permitted—that would be a reversal; (B) OCI treatment is not applicable to inventory; (C) Reversal up to original cost is the IFRS treatment (IAS 2), not US GAAP. Key GAAP vs IFRS difference: US GAAP prohibits reversal; IFRS permits reversal up to original cost. US GAAP is more conservative in this regard.",
+    "tip": "US GAAP: NO reversal of inventory write-downs. Written-down value = new permanent cost basis. IFRS differs."
   },
   {
     "id": "far-inv-013",
@@ -2923,8 +2923,8 @@ const questions = [
       "D": "Replacement cost dollars"
     },
     "correctAnswer": "C",
-    "explanation": "Dollar-value LIFO measures inventory in pools of dollars rather than specific units, using price indices to identify real increases in inventory quantity versus price changes. This simplifies LIFO application for companies with many inventory items and allows better matching of current costs with current revenues.",
-    "tip": "Dollar-value LIFO: track layers in base-year dollars using price indices."
+    "explanation": "Per ASC 330-10-30-16, dollar-value LIFO measures inventory in pools of DOLLARS rather than specific units, using price indices to separate real quantity increases from price changes. **Process:** Convert current year inventory to base-year dollars using price index, then identify layers. Why other answers are wrong: (A) NRV is for valuation, not cost flow; (B) Specific unit LIFO tracks individual items—dollar-value aggregates into pools; (D) Replacement cost is used in LCM, not dollar-value LIFO. Advantages: (1) Simplifies LIFO for companies with many items, (2) Prevents LIFO liquidation from product changes, (3) Better matches current costs with current revenues.",
+    "tip": "Dollar-value LIFO: Pools in BASE-YEAR dollars, use price index to identify real quantity changes vs price changes."
   },
   {
     "id": "far-inv-016",
@@ -2942,8 +2942,8 @@ const questions = [
       "D": "Debit Loss on Purchase Commitment $25,000, Credit Liability for Purchase Commitment $25,000"
     },
     "correctAnswer": "D",
-    "explanation": "When market value falls below a firm purchase commitment price, a loss should be recognized in the period of decline. The entry debits a loss and credits a liability (or contra-asset) for the expected loss. When inventory is later received, it's recorded at market value ($75,000) with the commitment liability eliminated.",
-    "tip": "Firm commitment + market decline = recognize loss and liability immediately."
+    "explanation": "Per ASC 330-10-35-17, when market value falls below a firm (noncancelable) purchase commitment price, a loss MUST be recognized in the period of decline. **Journal Entry:** Dr. Loss on Purchase Commitment $25,000; Cr. Liability for Purchase Commitment $25,000. Why other answers are wrong: (A) Recording inventory at $75,000 with a $25,000 gain is incorrect—the loss must be recognized in the decline period, not when received; (B) Debiting Inventory $25,000 is wrong because inventory isn't received yet; (C) Waiting until receipt violates matching principle—the loss exists now. When inventory is later received: Dr. Inventory $75,000, Dr. Liability $25,000; Cr. Cash/A/P $100,000.",
+    "tip": "Firm purchase commitment: Recognize LOSS when market declines below commitment price. Don't wait for delivery."
   },
   {
     "id": "far-inv-017",
@@ -2961,8 +2961,8 @@ const questions = [
       "D": "Year 1 understated, Year 2 overstated"
     },
     "correctAnswer": "D",
-    "explanation": "If ending inventory is understated, COGS is overstated (goods available − understated ending = overstated COGS), so Year 1 net income is understated. In Year 2, the understated ending inventory becomes understated beginning inventory, causing COGS to be understated and Year 2 net income to be overstated. The errors self-correct over two periods.",
-    "tip": "Inventory errors reverse: understated ending → understated Y1 income, overstated Y2."
+    "explanation": "Per ASC 250 principles, inventory errors affect COGS and reverse over two periods. **Analysis:** Year 1: Understated EI → Overstated COGS (BI + Purchases − EI↓ = COGS↑) → Understated Net Income. Year 2: That understated EI becomes understated BI → Understated COGS (BI↓ + Purchases − EI = COGS↓) → Overstated Net Income. Why other answers are wrong: (A), (B), (C) all have incorrect combinations. Key insight: The Year 1 understatement EXACTLY offsets in Year 2—errors self-correct. COGS formula: COGS = Beginning Inventory + Purchases − Ending Inventory.",
+    "tip": "Inventory errors SELF-CORRECT over 2 years. EI understated: Y1 income↓, Y2 income↑ by same amount."
   },
   {
     "id": "far-inv-018",
@@ -2980,8 +2980,8 @@ const questions = [
       "D": "No effect—the error has self-corrected"
     },
     "correctAnswer": "D",
-    "explanation": "Inventory errors self-correct over two years. The understated Year 1 ending inventory caused Year 1 income to be understated and Year 2 income to be overstated by the same amount. By Year 3, the cumulative effect on retained earnings is zero. Only a Year 2 ending inventory error would affect Year 3 beginning retained earnings.",
-    "tip": "Inventory errors self-correct over 2 years. Effect on RE = 0 after correction period."
+    "explanation": "Per ASC 250, inventory errors self-correct over TWO years because ending inventory becomes next year's beginning inventory. **Analysis:** Year 1 EI understated → Year 1 NI understated by X → Year 1 ending RE understated by X. Year 2 BI (=Year 1 EI) understated → Year 2 NI overstated by X → Year 2 ending RE correct. By Year 3, cumulative effect = 0. Why other answers are wrong: (A) More information isn't needed—the self-correction principle applies; (B) Overstated would occur only if the error hadn't reversed; (C) Understated would mean the error persisted. The error affects cash flow statement but DOES self-correct in retained earnings.",
+    "tip": "Inventory errors self-correct by end of SECOND year. After correction period: NO effect on retained earnings."
   },
   {
     "id": "far-inv-019",
@@ -2999,8 +2999,8 @@ const questions = [
       "D": "High-volume, low-cost items"
     },
     "correctAnswer": "A",
-    "explanation": "Specific identification tracks the actual cost of each individual item sold. It's practical and appropriate for unique, high-value items where each unit can be identified (cars, jewelry, art, custom equipment). It's impractical for high-volume, interchangeable items where tracking individual units is not cost-effective.",
-    "tip": "Specific identification = unique, identifiable, high-value items."
+    "explanation": "Per ASC 330-10-30-7, specific identification tracks the ACTUAL cost of each individual item sold and is most appropriate for unique, high-value items that can be individually identified (automobiles, jewelry, art, real estate, custom equipment). Why other answers are wrong: (B) Perishable goods typically use FIFO because oldest items should be sold first—specific ID is unnecessary; (C) Commodities are interchangeable and traded at market prices—specific ID doesn't apply; (D) High-volume, low-cost items make specific ID impractical and costly—FIFO/LIFO/average methods are used. Specific ID is required when items are not interchangeable or when goods are segregated for specific projects.",
+    "tip": "Specific identification: Unique + High-value + Individually identifiable. NOT for interchangeable/commodity items."
   },
   {
     "id": "far-inv-020",
@@ -3037,8 +3037,8 @@ const questions = [
       "D": "Only to categories of similar items"
     },
     "correctAnswer": "C",
-    "explanation": "LC-NRV can be applied at the individual item level, category/class level, or total inventory level. The method chosen should be applied consistently. Item-by-item application is most conservative and commonly used. Category or total application may be used when items are interrelated or for practical reasons.",
-    "tip": "LC-NRV: apply to items, categories, or total—be consistent."
+    "explanation": "Per ASC 330-10-35-8, lower of cost or NRV may be applied to individual items, categories of inventory, or total inventory. Item-by-item application is most conservative and produces the lowest inventory value. Category or total application may be used when items are interrelated or for practical reasons. The key requirement is consistency in application. Why other answers are wrong: (A) Total inventory only is too restrictive—item-level is often preferred; (B) Individual items only ignores that ASC 330 permits flexibility; (D) Categories only fails to recognize all three options are available.",
+    "tip": "LC-NRV levels: items, categories, or total. Item-by-item = most conservative."
   },
   {
     "id": "far-inv-022",
@@ -3056,8 +3056,8 @@ const questions = [
       "D": "LIFO is required under both US GAAP and IFRS"
     },
     "correctAnswer": "A",
-    "explanation": "LIFO is permitted under US GAAP but is prohibited under IFRS (IAS 2). This is a significant difference between the two frameworks. Companies using LIFO for US reporting must use a different method for IFRS reporting if they have dual reporting requirements.",
-    "tip": "LIFO: allowed under US GAAP, prohibited under IFRS."
+    "explanation": "Under US GAAP (ASC 330), LIFO is a permitted inventory cost flow assumption. Under IFRS (IAS 2), LIFO is explicitly prohibited. This is one of the most significant differences between US GAAP and IFRS for inventory. Companies with dual reporting requirements must convert LIFO inventory to FIFO or weighted average for IFRS statements. Why other answers are wrong: (B) LIFO IS permitted under US GAAP; (C) Reverses the rule—IFRS prohibits it, US GAAP permits it; (D) Neither framework requires LIFO; it's just an option under US GAAP.",
+    "tip": "LIFO: US GAAP = allowed, IFRS = prohibited. Major GAAP vs IFRS difference."
   },
   {
     "id": "far-inv-023",
@@ -3075,8 +3075,8 @@ const questions = [
       "D": "Year-end financial statement preparation"
     },
     "correctAnswer": "A",
-    "explanation": "The gross profit method is an estimation technique used when a physical count is impractical. Common uses include preparing interim financial statements, estimating inventory lost in a fire or theft (for insurance claims), and testing reasonableness of inventory balances. It's not precise enough for year-end GAAP statements.",
-    "tip": "Gross profit method = estimation tool for interim periods or loss claims."
+    "explanation": "The gross profit method estimates ending inventory using historical gross profit percentages. It's commonly used for: (1) interim financial statements when physical counts are impractical, (2) insurance claims for inventory destroyed by fire, theft, or casualty, and (3) testing reasonableness of physical inventory counts. It's an estimation technique—not precise enough for year-end audited GAAP statements. Why other answers are wrong: (B) Tax reporting requires actual inventory counts or specific identification; (C) LIFO reserves require comparison of actual LIFO vs FIFO costs; (D) Year-end statements require physical counts or perpetual records, not estimates.",
+    "tip": "Gross profit method = estimation only. Used for interim statements and casualty loss claims."
   },
   {
     "id": "far-inv-024",
@@ -3094,8 +3094,8 @@ const questions = [
       "D": "The raw materials' replacement cost has declined"
     },
     "correctAnswer": "A",
-    "explanation": "Raw materials are not written down merely because their replacement cost has fallen. They should be written down only when the decline in price indicates that the cost of the finished goods will exceed their NRV (i.e., the finished products will be sold at a loss). If finished goods can still be sold at a profit, raw materials remain at cost.",
-    "tip": "Write down raw materials only if finished goods NRV is below total production cost."
+    "explanation": "Per ASC 330-10-35-15, raw materials held for production should NOT be written down below cost merely because replacement cost has declined. The test is whether the finished goods in which they'll be used will be salable at or above their cost. Only when the decline indicates finished goods will be sold at a loss should raw materials be written down. Why other answers are wrong: (B) Conservatism doesn't require automatic write-downs—it requires evidence of impairment; (C) Holding period is irrelevant to NRV testing; (D) Replacement cost decline alone is insufficient—must look at finished goods profitability.",
+    "tip": "Raw materials: Write down only if finished goods NRV < total production cost. Don't write down just because replacement cost dropped."
   },
   {
     "id": "far-inv-025",
@@ -3113,8 +3113,8 @@ const questions = [
       "D": "LIFO only"
     },
     "correctAnswer": "A",
-    "explanation": "Under FIFO, perpetual and periodic systems yield identical results because the oldest costs are always assigned to COGS regardless of when the calculation is made. LIFO and weighted average can yield different results because the timing of cost assignments matters—perpetual updates continuously while periodic calculates at period-end.",
-    "tip": "FIFO: perpetual = periodic. LIFO & average: perpetual ≠ periodic."
+    "explanation": "Under FIFO, perpetual and periodic inventory systems produce identical COGS and ending inventory. This occurs because FIFO always assigns the oldest (first-in) costs to COGS regardless of when the calculation is performed. For LIFO and weighted average, timing matters: perpetual systems assign costs at each sale, while periodic systems calculate once at period-end—producing different results. Why other answers are wrong: (B) Weighted average differs because perpetual recalculates after each purchase (moving average), while periodic calculates one average; (C) Not all methods—LIFO and average differ; (D) LIFO differs significantly between perpetual and periodic.",
+    "tip": "FIFO: perpetual = periodic (oldest costs always go to COGS). LIFO/Average: perpetual ≠ periodic."
   },
   {
     "id": "far-inv-026",
@@ -3132,8 +3132,8 @@ const questions = [
       "D": "Reverse the loss by crediting a gain account"
     },
     "correctAnswer": "A",
-    "explanation": "If market prices recover before the inventory is received, the previously recognized loss should be recovered (reversed) to the extent of the original loss. The recovery is recognized in the period the price increases. The inventory is then recorded at market value (up to the commitment price) when received.",
-    "tip": "Purchase commitment losses can be reversed if market recovers before delivery."
+    "explanation": "Per ASC 330-10-35-17, if market prices recover before delivery on a firm purchase commitment, the previously recognized loss should be recovered to the extent of the original loss. The recovery is recognized in the period when prices increase. When the inventory is eventually received, it's recorded at the commitment price (or lower market if still impaired). Why other answers are wrong: (B) Recording at original commitment price ignores the accounting already performed; (C) The loss is NOT permanent—recovery is permitted if prices increase before delivery; (D) The recovery is a reversal of the loss, not a separate gain—it reduces the liability previously recorded.",
+    "tip": "Purchase commitment losses: Can recover if market rebounds BEFORE delivery. Not permanent."
   },
   {
     "id": "far-inv-027",
@@ -3151,8 +3151,8 @@ const questions = [
       "D": "Inventory understated, accounts payable understated, net income correct"
     },
     "correctAnswer": "D",
-    "explanation": "FOB shipping point means title passed when goods were shipped, so they should be included in the buyer's inventory and accounts payable. Omitting both understates inventory and accounts payable by the same amount. However, net income is unaffected because both the asset and liability were omitted by equal amounts—the error affects the balance sheet but not COGS or income.",
-    "tip": "FOB shipping point = buyer owns in-transit goods. Omitting both sides: no income effect."
+    "explanation": "FOB shipping point means title transfers when goods are shipped, so the buyer owns goods in transit. Both inventory and accounts payable should have been recorded. Omitting both: (1) Inventory is understated, (2) Accounts payable is understated, (3) Net income is CORRECT because the offsetting errors don't affect COGS—the goods weren't sold, and the purchase wasn't recorded. Why other answers are wrong: (A) Net income would only be understated if COGS were overstated, which didn't happen; (B) A/P is understated, not inventory correct; (C) Inventory is understated, not overstated.",
+    "tip": "FOB shipping point = buyer owns in-transit goods. Omitting both inventory and A/P = no income effect."
   },
   {
     "id": "far-inv-028",
@@ -3170,8 +3170,8 @@ const questions = [
       "D": "Freight-in costs"
     },
     "correctAnswer": "A",
-    "explanation": "Inventory cost includes all costs to bring inventory to its present location and condition: purchase price, import duties, freight-in, and handling costs. Storage costs for finished goods awaiting sale are period costs expensed as incurred. Storage is only capitalized if necessary in the production process (e.g., aging wine).",
-    "tip": "Capitalize costs to acquire and prepare. Expense storage of finished goods."
+    "explanation": "Per ASC 330-10-30-1, inventory cost includes all costs to acquire, convert, and bring inventory to its present location and condition: purchase price (net of discounts), import duties, freight-in, handling, and conversion costs. Storage costs for finished goods awaiting sale are period costs—expensed as incurred. Exception: Storage is capitalized only if required in the production process (e.g., aging cheese or wine). Why other answers are wrong: (B) Import duties are capitalizable acquisition costs; (C) Purchase price less trade discounts is the basis of inventory cost; (D) Freight-in is capitalizable—it brings goods to their location.",
+    "tip": "Capitalize: purchase + freight-in + duties + handling. Expense: storage of finished goods (unless part of production)."
   },
   {
     "id": "far-inv-029",
@@ -3189,8 +3189,8 @@ const questions = [
       "D": "A method that can only be used with LIFO"
     },
     "correctAnswer": "B",
-    "explanation": "Excluding markdowns from the denominator increases the retail total used to calculate the ratio, resulting in a lower cost-to-retail percentage. This lower ratio, applied to ending inventory at retail, produces a lower ending inventory value—approximating lower of cost or market. Including markdowns approximates average cost.",
-    "tip": "Exclude markdowns = lower ratio = LCM result. Include markdowns = average cost."
+    "explanation": "In the retail inventory method, the cost-to-retail ratio = Cost ÷ Retail. Excluding net markdowns from the denominator results in a smaller retail total, which produces a LOWER cost-to-retail ratio. Applying this lower ratio to ending inventory at retail yields a lower (more conservative) ending inventory value—approximating lower of cost or market (LCM). Including markdowns produces the average cost method. Why other answers are wrong: (A) Excluding markdowns produces a LOWER ratio, not higher; (C) Excluding markdowns definitely changes the result; (D) This technique works with FIFO retail, average cost retail, or conventional retail—not LIFO specific.",
+    "tip": "Retail method: Exclude markdowns = lower ratio = LCM. Include markdowns = average cost."
   },
   {
     "id": "far-inv-030",
@@ -3208,8 +3208,8 @@ const questions = [
       "D": "As part of cost of goods sold or as a separate operating expense"
     },
     "correctAnswer": "D",
-    "explanation": "Inventory write-downs to NRV are typically reported as part of cost of goods sold. Alternatively, if material, they may be shown as a separate line item within operating expenses. They are not reported in OCI or as extraordinary items (which no longer exist under US GAAP).",
-    "tip": "Inventory write-downs = COGS or separate operating expense."
+    "explanation": "Per ASC 330-10-50-1, inventory write-downs to NRV are typically included in cost of goods sold. Alternatively, if material, they may be presented as a separate line item within operating expenses. The write-down is an operating item related to normal business activities. Why other answers are wrong: (A) Extraordinary items were eliminated under US GAAP in 2015 (ASU 2015-01); (B) Inventory write-downs are operating items, not reported below operating income; (C) OCI is for specific items like unrealized gains on AFS securities and pension adjustments—not inventory write-downs.",
+    "tip": "Inventory write-downs: Report in COGS or separate operating expense. NOT extraordinary (eliminated) or OCI."
   },
   {
     "id": "far-ppe-001",
