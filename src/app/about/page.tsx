@@ -382,6 +382,9 @@ export default function AboutPage() {
  <p className="text-xs text-[var(--muted)] mt-3 opacity-70">
  *Features are based on publicly available information as of January 2025. Verify current offerings directly with each provider.
  </p>
+ <p className="text-xs text-[var(--muted)] mt-4 pt-4 border-t border-[var(--border)] opacity-70">
+ Meridian CPA Review is an independent exam preparation platform and is not affiliated with the AICPA or NASBA.
+ </p>
  </div>
  </div>
 
@@ -402,7 +405,7 @@ export default function AboutPage() {
  <path fillRule="evenodd"d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"clipRule="evenodd"/>
  </svg>
  <p className="text-[var(--muted)]">
- <strong className="text-[var(--foreground)]">Quality content.</strong> Our practice questions are created using AI technology based on official Meridian CPA Reviews, with automated review for accuracy and relevance.
+ <strong className="text-[var(--foreground)]">Quality content.</strong> Our practice questions are original and created using AI-assisted workflows guided by the official CPA Exam Blueprints. The blueprints inform topic coverage, structure, and skill weighting, while each question undergoes automated validation checks for relevance, logical consistency, and alignment with exam concepts.
  </p>
  </div>
  <div className="flex items-start space-x-3">

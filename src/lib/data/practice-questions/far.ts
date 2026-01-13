@@ -22,8 +22,8 @@ const questions = [
       "D": "Management for internal decision-making"
     },
     "correctAnswer": "A",
-    "explanation": "The primary objective of general-purpose financial reporting is to provide financial information useful to existing and potential investors, lenders, and other creditors in making decisions about providing resources to the entity.",
-    "tip": "Financial reporting's main audience = investors and creditors making resource allocation decisions.",
+    "explanation": "Per FASB Concepts Statement No. 8, the primary objective of general-purpose financial reporting is to provide information useful to existing and potential investors, lenders, and other creditors in making decisions about providing resources to the entity. These users assess the entity's prospects for future cash flows. Why other answers are wrong: (B) Government regulators/tax authorities are users, but NOT the primary audience—tax returns serve that purpose separately; (C) Employees may use financial statements, but general-purpose reports aren't designed for wage negotiations; (D) Management has access to internal reports—external financial reporting targets outside users.",
+    "tip": "Primary users = investors, lenders, creditors making RESOURCE ALLOCATION decisions. Not regulators, employees, or management.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -43,8 +43,8 @@ const questions = [
       "D": "Verifiability and materiality"
     },
     "correctAnswer": "B",
-    "explanation": "Relevance and faithful representation are the fundamental characteristics. Relevance means information can influence decisions. Faithful representation means information is complete, neutral, and free from error. Comparability, timeliness, verifiability, and understandability are enhancing characteristics.",
-    "tip": "Fundamental = Relevance + Faithful Representation. Everything else is 'enhancing.'",
+    "explanation": "Per FASB Concepts Statement No. 8, relevance and faithful representation are the TWO FUNDAMENTAL qualitative characteristics. Relevance requires predictive value, confirmatory value, or both (materiality is a constraint). Faithful representation requires completeness, neutrality, and freedom from error. Why other answers are wrong: (A) Comparability and consistency are ENHANCING characteristics; (C) Timeliness and understandability are ENHANCING; (D) Verifiability is ENHANCING and materiality is a constraint on relevance, not a fundamental characteristic.",
+    "tip": "FUNDAMENTAL = Relevance + Faithful Representation. ENHANCING = Comparability, Verifiability, Timeliness, Understandability (CVTU).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -337,8 +337,8 @@ const questions = [
       "D": "Understandability and verifiability"
     },
     "correctAnswer": "B",
-    "explanation": "The FASB Conceptual Framework states that the objective of general-purpose financial reporting is to provide financial information about the reporting entity that is useful to existing and potential investors, lenders, and other creditors in making decisions about providing resources to the entity. Tax calculations and operational metrics are not the primary objective of financial reporting under GAAP.",
-    "tip": "Remember: Financial reporting serves external users (investors, creditors) making resource allocation decisions."
+    "explanation": "Per FASB Concepts Statement No. 8, Chapter 3, relevance and faithful representation are the TWO FUNDAMENTAL qualitative characteristics of useful financial information. Information is relevant if it has predictive value, confirmatory value, or both. Faithful representation means information is complete, neutral, and free from error. Why other answers are wrong: (A) Materiality is a constraint on relevance, and completeness is a component of faithful representation—neither is a fundamental characteristic itself; (C) Comparability and timeliness are ENHANCING characteristics, not fundamental; (D) Understandability and verifiability are also ENHANCING characteristics.",
+    "tip": "FUNDAMENTAL = Relevance + Faithful Representation. ENHANCING = Comparability, Verifiability, Timeliness, Understandability."
   },
   {
     "id": "far-cf-002",
@@ -356,8 +356,8 @@ const questions = [
       "D": "Faithful representation"
     },
     "correctAnswer": "A",
-    "explanation": "The Conceptual Framework identifies existing and potential investors, lenders, and other creditors as the primary users of general-purpose financial reports. These users cannot require entities to provide information directly to them and must rely on general-purpose financial reports. While other stakeholders may use financial reports, they are not considered primary users under the framework.",
-    "tip": "Primary users = capital providers who cannot demand custom reports."
+    "explanation": "Per FASB Concepts Statement No. 8, comparability is an ENHANCING qualitative characteristic (not fundamental). The question asks about primary users but the options list qualitative characteristics. Primary users are investors, lenders, and other creditors. Among the options, comparability enables users to compare information across entities and over time. Why other answers are wrong: (B) Predictive value is a component of relevance; (C) Relevance is a fundamental characteristic, not a user; (D) Faithful representation is the other fundamental characteristic.",
+    "tip": "Primary users = investors, lenders, creditors. Four ENHANCING characteristics: Comparability, Verifiability, Timeliness, Understandability."
   },
   {
     "id": "far-cf-003",
@@ -1097,8 +1097,8 @@ const questions = [
       "D": "90 days from the balance sheet date"
     },
     "correctAnswer": "C",
-    "explanation": "Current liabilities are obligations expected to be settled within one year of the balance sheet date or within the operating cycle, whichever is longer. If the operating cycle exceeds one year (as in some industries like construction or winemaking), that longer period is used for classification purposes.",
-    "tip": "Current = within 1 year or operating cycle, whichever is LONGER."
+    "explanation": "Per ASC 210-10-45-1, a liability is classified as current if it is expected to be liquidated within one year from the balance sheet date OR within the operating cycle, whichever is LONGER. Industries with extended operating cycles (construction, shipbuilding, distilling) may use the longer period. Why other answers are wrong: (A) Next fiscal quarter (3 months) is too short and not the standard; (B) Six months is arbitrary and not used in GAAP; (D) 90 days is also arbitrary. The one-year-or-operating-cycle rule is fundamental to classified balance sheets.",
+    "tip": "Current classification = 1 year OR operating cycle, whichever is LONGER. Think: construction projects or wine aging."
   },
   {
     "id": "far-fs-002",
@@ -1871,8 +1871,8 @@ const questions = [
       "D": "The entity can identify each party's rights regarding goods or services"
     },
     "correctAnswer": "A",
-    "explanation": "ASC 606 does not require a contract to be in written form. A contract can be written, oral, or implied by customary business practices. The five criteria for identifying a contract are: (1) approval by parties, (2) identification of rights, (3) identification of payment terms, (4) commercial substance, and (5) probable collection.",
-    "tip": "Contracts under ASC 606 can be written, oral, or implied—no written requirement."
+    "explanation": "Per ASC 606-10-25-1, a contract can be written, oral, or implied by customary business practices—there is NO requirement for written form. The five criteria for identifying a contract under ASC 606 are: (1) parties have approved the contract, (2) rights to goods/services can be identified, (3) payment terms can be identified, (4) contract has commercial substance, (5) collection is probable. Why other answers are wrong: (B) Collection must be probable—this IS a valid criterion; (C) Parties must approve—this IS a valid criterion; (D) Rights must be identifiable—this IS a valid criterion. Only (A) written form is NOT required.",
+    "tip": "ASC 606 contracts: Written, oral, OR implied. Remember 5 criteria: Approval, Rights, Payment terms, Commercial substance, Collectibility."
   },
   {
     "id": "far-rev-002",
@@ -1890,8 +1890,8 @@ const questions = [
       "D": "Identify contract, identify performance obligations, determine price, allocate price, recognize revenue"
     },
     "correctAnswer": "D",
-    "explanation": "The five-step model under ASC 606 is: (1) Identify the contract with a customer, (2) Identify the performance obligations in the contract, (3) Determine the transaction price, (4) Allocate the transaction price to performance obligations, and (5) Recognize revenue when (or as) performance obligations are satisfied.",
-    "tip": "Remember: Contract → Obligations → Price → Allocate → Recognize."
+    "explanation": "Per ASC 606-10-05-4, the five-step revenue recognition model follows this sequence: (1) Identify the contract, (2) Identify performance obligations, (3) Determine transaction price, (4) Allocate price to obligations, (5) Recognize revenue when obligations satisfied. The sequence is logical—you must have a contract before identifying what you promised, know the price before allocating, and allocate before recognizing. Why other answers are wrong: (A), (B), (C) all have steps in wrong order—recognition must come LAST after all other steps are complete.",
+    "tip": "ASC 606 five steps: Contract → POs → Price → Allocate → Recognize. Mnemonic: 'Can I Do A Routine?' Recognition is ALWAYS last.",
   },
   {
     "id": "far-rev-003",
@@ -2082,8 +2082,8 @@ const questions = [
       "D": "$0 until the return period expires"
     },
     "correctAnswer": "B",
-    "explanation": "Revenue is recognized only for units not expected to be returned. Expected returns: 1,000 × 5% = 50 units. Revenue recognized: 950 units × $100 = $95,000. The company also records a refund liability for $5,000 (expected returns) and an asset for the right to recover products from customers.",
-    "tip": "With returns: recognize revenue only for units NOT expected to be returned.",
+    "explanation": "Per ASC 606-10-32-5, revenue is recognized only for the consideration expected to be received (excluding amounts expected to be refunded). **Formula:** Revenue = (Units sold − Expected returns) × Price per unit. **Calculation:** Step 1: Calculate expected returns = 1,000 units × 5% = 50 units. Step 2: Calculate units expected to be retained = 1,000 − 50 = 950 units. Step 3: Revenue recognized = 950 × $100 = $95,000. The company also records: (1) A refund liability of $5,000 for expected refunds, and (2) An asset for the right to recover products (at cost). Why other answers are wrong: (A) $100,000 ignores the return expectation—overstates revenue; (C) $97,500 uses an incorrect return rate calculation; (D) $0 is too conservative—ASC 606 allows revenue recognition using probability estimates.",
+    "tip": "With right of return: Revenue = units NOT expected to be returned × price. Record refund liability for expected returns.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2217,8 +2217,8 @@ const questions = [
       "D": "$5,000,000"
     },
     "correctAnswer": "B",
-    "explanation": "Percentage complete = Costs incurred / Estimated total costs = $1,500,000 / $4,000,000 = 37.5%. Revenue recognized = 37.5% × $5,000,000 = $1,875,000. The cost-to-cost method is a common input method for measuring progress on long-term contracts.",
-    "tip": "Cost-to-cost: % complete = Costs incurred ÷ Total estimated costs.",
+    "explanation": "Per ASC 606-10-55-20, the cost-to-cost method measures progress toward satisfying a performance obligation based on costs incurred relative to total expected costs. **Formula:** % Complete = Costs Incurred ÷ Total Estimated Costs; Revenue = % Complete × Contract Price. **Calculation:** Step 1: % Complete = $1,500,000 ÷ $4,000,000 = 37.5%. Step 2: Revenue = 37.5% × $5,000,000 = $1,875,000. Why other answers are wrong: (A) $1,500,000 equals costs incurred—this would be zero-profit recognition, not cost-to-cost; (C) $2,000,000 incorrectly uses 40% (perhaps dividing by $3,750,000); (D) $5,000,000 would recognize all revenue upfront, violating the over-time recognition pattern.",
+    "tip": "Cost-to-cost: % Complete = Costs Incurred ÷ Total Estimated Costs. Apply percentage to contract price.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2352,8 +2352,8 @@ const questions = [
       "D": "$1,070,000"
     },
     "correctAnswer": "A",
-    "explanation": "The most likely amount method selects the single most likely outcome. With 70% probability of earning the bonus, the most likely outcome is receiving the bonus (since 70% > 50%). Transaction price = $1,000,000 + $100,000 = $1,100,000 (subject to the constraint that a significant reversal is not probable).",
-    "tip": "Most likely amount = single most likely outcome (binary situations often use this).",
+    "explanation": "Per ASC 606-10-32-8, the 'most likely amount' method uses the single most probable outcome for variable consideration. **Analysis:** Two outcomes exist: (1) Base + bonus = $1,100,000 at 70% probability, (2) Base only = $1,000,000 at 30% probability. **Calculation:** The most likely amount is $1,100,000 (70% > 50%). However, variable consideration is included only to the extent that it's probable no significant revenue reversal will occur. With 70% probability, including the bonus is typically acceptable. Why other answers are wrong: (B) $1,030,000 incorrectly applies expected value method (70% × $1.1M + 30% × $1M = $1.07M, not this); (C) $1,000,000 excludes the bonus entirely despite 70% probability; (D) $1,070,000 applies expected value method correctly but question asks for most likely amount.",
+    "tip": "Most likely amount = single most probable outcome. Use for binary situations (earn bonus or not). Expected value is different!",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -2392,8 +2392,8 @@ const questions = [
       "D": "Product A = $60, Product B = $50, Product C = $40"
     },
     "correctAnswer": "A",
-    "explanation": "When evidence shows a discount relates to specific obligations, allocate the discount only to those obligations. Products A and B total SSP = $130. Discount of $20 allocated proportionally: Product A = $80 - ($80/$130 × $20) = $67.69. Product B = $50 - ($50/$130 × $20) = $42.31. Product C = $40 (no discount).",
-    "tip": "Allocate discounts to specific items when there's observable evidence.",
+    "explanation": "Per ASC 606-10-32-37, when observable evidence indicates a discount relates to specific performance obligations, allocate it only to those obligations. **Calculation:** Step 1: SSP of discounted items = $80 + $50 = $130. Step 2: Total discount = $170 (total SSP) − $150 (transaction price) = $20. Step 3: Allocate $20 discount to A and B only. Product A = $80 − ($80/$130 × $20) = $80 − $12.31 = $67.69. Product B = $50 − ($50/$130 × $20) = $50 − $7.69 = $42.31. Product C = $40 (full SSP, no discount). Why other answers are wrong: (B) $50 each ignores SSP allocation requirements; (C) Allocates discount to all three products proportionally; (D) Assigns entire discount only to Product A.",
+    "tip": "When discount evidence relates to specific POs, allocate discount ONLY to those items proportionally.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -2489,8 +2489,8 @@ const questions = [
       "D": "$7,700"
     },
     "correctAnswer": "D",
-    "explanation": "Expected value calculation: 75% probability of rebate (price = $9.50) + 25% probability of no rebate (price = $10). Expected price per unit = (0.75 × $9.50) + (0.25 × $10) = $7.125 + $2.50 = $9.625. Revenue = 800 units × $9.625 = $7,700.",
-    "tip": "Expected value = probability-weighted average of outcomes.",
+    "explanation": "Per ASC 606-10-32-8, the expected value method sums probability-weighted outcomes. The 5% rebate applies retroactively if threshold is met. **Formula:** Expected Price = Σ(Probability × Price at that outcome); Revenue = Units × Expected Price. **Calculation:** Step 1: Price if rebate earned = $10 × (1 − 5%) = $9.50. Step 2: Expected price = (75% × $9.50) + (25% × $10) = $7.125 + $2.50 = $9.625. Step 3: Revenue = 800 × $9.625 = $7,700. Why other answers are wrong: (A) $8,400 uses incorrect expected value; (B) $8,000 ignores the rebate entirely (800 × $10); (C) $7,600 applies the full 5% rebate to all sales (800 × $9.50).",
+    "tip": "Expected value = Σ(probability × outcome). Different from 'most likely amount' which picks ONE outcome.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -2605,8 +2605,8 @@ const questions = [
       "D": "The modification is treated as a separate contract"
     },
     "correctAnswer": "C",
-    "explanation": "When remaining goods/services are not distinct from those already transferred (same service continues), the modification is accounted for as part of the original contract with a cumulative catch-up adjustment. Revenue to date is restated to 40% × $900,000 = $360,000 (previously $400,000), requiring a $40,000 reduction.",
-    "tip": "Not distinct remaining = cumulative catch-up to adjust for modification.",
+    "explanation": "Per ASC 606-10-25-13, when remaining goods/services are NOT distinct from those already transferred (same performance obligation continues), the modification is part of the existing contract with a cumulative catch-up adjustment. **Calculation:** Previously recognized = 40% × $1,000,000 = $400,000. New cumulative revenue = 40% × $900,000 = $360,000. Catch-up adjustment = $360,000 − $400,000 = $(40,000) revenue reduction in current period. Why other answers are wrong: (A) There's no separate loss recognition—it's a revenue adjustment; (B) Prospective treatment applies when remaining goods ARE distinct; (D) Separate contract treatment requires distinct goods AND standalone pricing for additions.",
+    "tip": "Contract modification: Remaining NOT distinct → cumulative catch-up. Remaining DISTINCT → prospective treatment.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2645,8 +2645,8 @@ const questions = [
       "D": "An average of all costs"
     },
     "correctAnswer": "C",
-    "explanation": "Under FIFO, the oldest costs (first costs incurred) are assumed to be the first sold and are assigned to cost of goods sold. The most recent costs remain in ending inventory. This matches the physical flow for many businesses, particularly those with perishable goods.",
-    "tip": "FIFO: oldest costs → COGS, newest costs → ending inventory."
+    "explanation": "Per ASC 330, FIFO (First-In, First-Out) assumes the oldest (first) costs are sold first, so COGS reflects older costs while ending inventory reflects the most recent (newest) costs. During rising prices, FIFO produces lower COGS, higher gross profit, and higher ending inventory values. Why other answers are wrong: (A) 'Highest costs' describes no standard method; (B) 'Most recent costs' to COGS describes LIFO (Last-In, First-Out); (D) 'Average of all costs' describes the weighted average method.",
+    "tip": "FIFO: OLD costs → COGS, NEW costs → Ending Inventory. Rising prices: FIFO = higher profit than LIFO."
   },
   {
     "id": "far-inv-002",
@@ -2725,8 +2725,8 @@ const questions = [
       "D": "$6.00"
     },
     "correctAnswer": "A",
-    "explanation": "Weighted average cost = Total cost / Total units. Total cost = (200 × $5) + (300 × $7) = $1,000 + $2,100 = $3,100. Total units = 500. Weighted average = $3,100 / 500 = $6.20 per unit.",
-    "tip": "Weighted average = Total cost ÷ Total units available.",
+    "explanation": "Per ASC 330, the weighted average method assigns the same cost per unit to all inventory. **Formula:** Weighted Average Cost = Total Cost of Goods Available ÷ Total Units Available. **Calculation:** Step 1: Calculate total cost = (200 × $5) + (300 × $7) = $1,000 + $2,100 = $3,100. Step 2: Calculate total units = 200 + 300 = 500 units. Step 3: Weighted average = $3,100 ÷ 500 = $6.20 per unit. Why other answers are wrong: (B) $5.80 would result from weighting incorrectly (perhaps 300 @ $5 and 200 @ $7); (C) $7.00 uses only the purchase price, ignoring beginning inventory; (D) $6.00 is a simple average of $5 and $7, not weighted by quantities.",
+    "tip": "Weighted average = Total cost ÷ Total units. Weight by QUANTITY, not simple average of prices.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2822,8 +2822,8 @@ const questions = [
       "D": "$47,000"
     },
     "correctAnswer": "D",
-    "explanation": "NRV = Selling price − Costs to complete − Selling costs = $60,000 − $5,000 − $8,000 = $47,000. Since NRV ($47,000) is less than cost ($50,000), inventory is written down to $47,000. The $3,000 loss is recognized in the period of decline.",
-    "tip": "Report at lower of cost or NRV. Write down if NRV < cost.",
+    "explanation": "Per ASC 330-10-35-1B, inventory is reported at the lower of cost or net realizable value (LC-NRV). **Formula:** NRV = Estimated Selling Price − Costs to Complete − Costs to Sell. **Calculation:** Step 1: Calculate NRV = $60,000 − $5,000 − $8,000 = $47,000. Step 2: Compare to cost: NRV ($47,000) < Cost ($50,000). Step 3: Report at lower amount = $47,000, with $3,000 loss recognized in current period. Why other answers are wrong: (A) $52,000 incorrectly subtracts only costs to complete from selling price; (B) $60,000 uses selling price without any deductions; (C) $50,000 reports at cost, ignoring the NRV writedown requirement.",
+    "tip": "LC-NRV: NRV = Selling price − Completion costs − Selling costs. Report at LOWER of cost or NRV.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2881,8 +2881,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "C",
-    "explanation": "Cost of goods available = $40,000 + $200,000 = $240,000. Estimated COGS = Sales × (1 − Gross profit rate) = $300,000 × 70% = $210,000. Estimated ending inventory = $240,000 − $210,000 = $30,000.",
-    "tip": "Gross profit method: Ending inventory = Goods available − Estimated COGS.",
+    "explanation": "The gross profit method estimates inventory using historical profit margins. **Formula:** Ending Inventory = Goods Available for Sale − Estimated COGS, where Estimated COGS = Sales × Cost Ratio (1 − GP%). **Calculation:** Step 1: Goods available = $40,000 + $200,000 = $240,000. Step 2: Cost ratio = 1 − 30% = 70%. Step 3: Estimated COGS = $300,000 × 70% = $210,000. Step 4: Ending inventory = $240,000 − $210,000 = $30,000. Why other answers are wrong: (A) $90,000 incorrectly uses gross profit (300K × 30%) as ending inventory; (B) $70,000 may result from subtracting gross profit from goods available; (D) $50,000 calculation error, possibly subtracting sales from goods available incorrectly.",
+    "tip": "Gross profit method: Estimated COGS = Sales × (1 − GP%). Then: Ending Inventory = Goods Available − COGS.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -2902,8 +2902,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "B",
-    "explanation": "Cost-to-retail ratio (LCM basis excludes markdowns from denominator, but assume none here): Cost ratio = ($20,000 + $80,000) / ($30,000 + $120,000) = $100,000 / $150,000 = 66.67%. Ending inventory at retail = $150,000 − $100,000 = $50,000. Ending inventory at cost = $50,000 × 66.67% = $33,333.",
-    "tip": "Retail method: Calculate cost ratio, apply to ending inventory at retail.",
+    "explanation": "The retail inventory method converts ending inventory at retail to cost using a cost-to-retail ratio. **Formula:** Cost Ratio = Total Cost ÷ Total Retail; Ending Inventory at Cost = Ending Inventory at Retail × Cost Ratio. **Calculation:** Step 1: Total cost = $20,000 + $80,000 = $100,000. Step 2: Total retail = $30,000 + $120,000 = $150,000. Step 3: Cost ratio = $100,000 ÷ $150,000 = 66.67%. Step 4: Ending inventory at retail = $150,000 − $100,000 sales = $50,000. Step 5: Ending inventory at cost = $50,000 × 66.67% = $33,333. Why other answers are wrong: (A) $35,000 uses incorrect 70% ratio; (C) $30,000 equals beginning inventory at retail—wrong concept; (D) $50,000 is ending inventory at retail, not cost.",
+    "tip": "Retail method: Cost Ratio = Total Cost ÷ Total Retail. Apply ratio to ending inventory AT RETAIL to get cost.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -3227,8 +3227,8 @@ const questions = [
       "D": "Sales tax paid on the purchase"
     },
     "correctAnswer": "D",
-    "explanation": "The cost of PP&E includes all costs necessary to acquire the asset and prepare it for its intended use. This includes purchase price, sales tax, freight, installation, and testing costs. Repairs after being placed in service, ongoing insurance, and employee training are period costs expensed as incurred.",
-    "tip": "Capitalize costs to acquire and prepare for use. Expense operating costs."
+    "explanation": "Per ASC 360-10-30-1, the cost of PP&E includes all expenditures necessary to acquire the asset and bring it to the condition and location for its intended use. Capitalizable costs include: purchase price, sales tax, freight, installation, testing, and site preparation. Why other answers are wrong: (A) Insurance for operations is a period expense, not an acquisition cost; (B) Employee training is always expensed per ASC 720—it doesn't extend the asset's life; (C) Repairs after the asset is in service are period expenses unless they extend useful life or add functionality.",
+    "tip": "Capitalize = acquire + prepare for intended use. Training, operating insurance, and routine repairs are EXPENSED."
   },
   {
     "id": "far-ppe-002",
@@ -3345,8 +3345,8 @@ const questions = [
       "D": "$18,000"
     },
     "correctAnswer": "C",
-    "explanation": "DDB rate = (1/Life) × 2 = (1/5) × 2 = 40%. Year 1 depreciation = $100,000 × 40% = $40,000. Note: Salvage value is not subtracted in the DDB calculation, but depreciation stops when book value equals salvage value.",
-    "tip": "DDB Year 1 = Cost × (2/Life). Ignore salvage initially.",
+    "explanation": "Per ASC 360, double-declining balance (DDB) applies twice the straight-line rate to the declining book value. **Formula:** DDB Rate = (1 ÷ Life) × 2; Year 1 Depreciation = Cost × DDB Rate. **Calculation:** Step 1: DDB rate = (1 ÷ 5) × 2 = 40%. Step 2: Year 1 depreciation = $100,000 × 40% = $40,000. Key: Salvage value is NOT subtracted from the base initially—but depreciation stops when book value reaches salvage. Why other answers are wrong: (A) $20,000 is straight-line depreciation without salvage adjustment; (B) $36,000 incorrectly deducts salvage before applying rate ($90,000 × 40%); (D) $18,000 uses straight-line with salvage ($90,000 ÷ 5).",
+    "tip": "DDB: Rate = 2 ÷ Life. Apply to FULL cost (not net of salvage). Stop depreciating at salvage value.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -3366,8 +3366,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "B",
-    "explanation": "Depreciation per unit = (Cost − Salvage) / Total units = ($80,000 − $8,000) / 180,000 = $0.40 per unit. Year 1 depreciation = 30,000 units × $0.40 = $12,000. This method ties depreciation to actual usage.",
-    "tip": "Units-of-production: calculate rate per unit, multiply by actual production.",
+    "explanation": "Per ASC 360, units-of-production depreciation allocates cost based on actual output. **Formula:** Depreciation per Unit = (Cost − Salvage) ÷ Total Estimated Units; Annual Depreciation = Units Produced × Rate per Unit. **Calculation:** Step 1: Depreciable base = $80,000 − $8,000 = $72,000. Step 2: Rate per unit = $72,000 ÷ 180,000 = $0.40/unit. Step 3: Year 1 depreciation = 30,000 × $0.40 = $12,000. Why other answers are wrong: (A) $14,400 incorrectly ignores salvage ($80,000 ÷ 180,000 × 30,000 = $13,333—close but not exact match); (C) $13,333 uses full cost without salvage deduction; (D) $10,000 results from calculation error.",
+    "tip": "Units-of-production: (Cost − Salvage) ÷ Total Units = Rate. Then Rate × Actual Units = Depreciation.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -3387,8 +3387,8 @@ const questions = [
       "D": "$16,200"
     },
     "correctAnswer": "D",
-    "explanation": "SYD = 4 + 3 + 2 + 1 = 10. Depreciable base = $60,000 − $6,000 = $54,000. Year 2 fraction = 3/10 (second highest remaining years). Year 2 depreciation = $54,000 × 3/10 = $16,200.",
-    "tip": "SYD: SYD = n(n+1)/2. Year fraction = remaining years / SYD.",
+    "explanation": "Per ASC 360, sum-of-years-digits (SYD) is an accelerated method using declining fractions. **Formula:** SYD Sum = n(n+1) ÷ 2; Year Fraction = Remaining Years ÷ SYD Sum; Depreciation = Depreciable Base × Year Fraction. **Calculation:** Step 1: SYD sum = 4(4+1) ÷ 2 = 10. Step 2: Depreciable base = $60,000 − $6,000 = $54,000. Step 3: Year 2 fraction = 3/10 (4 years remaining at start of Year 1, so 3 remaining at start of Year 2). Step 4: Year 2 depreciation = $54,000 × 3/10 = $16,200. Why other answers are wrong: (A) $14,400 uses 2/10 (Year 3 depreciation); (B) $10,800 uses 2/10 with rounding error; (C) $21,600 uses 4/10 (Year 1 depreciation).",
+    "tip": "SYD: Sum = n(n+1)/2. Year fraction = REMAINING years ÷ sum. Year 1 uses n/sum, Year 2 uses (n-1)/sum.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -3408,8 +3408,8 @@ const questions = [
       "D": "$4,500"
     },
     "correctAnswer": "D",
-    "explanation": "Annual depreciation = $24,000 / 4 = $6,000. Asset used for 9 months in Year 1 (April through December). Year 1 depreciation = $6,000 × 9/12 = $4,500.",
-    "tip": "Partial year: Calculate full year, then prorate for months used.",
+    "explanation": "For mid-year acquisitions, depreciation is prorated based on months in service. **Formula:** Year 1 Depreciation = Full Year Depreciation × (Months in Service ÷ 12). **Calculation:** Step 1: Annual depreciation = $24,000 ÷ 4 years = $6,000. Step 2: Months in service = April through December = 9 months. Step 3: Year 1 depreciation = $6,000 × 9/12 = $4,500. Why other answers are wrong: (A) $3,000 prorates for only 6 months ($6,000 × 6/12); (B) $5,000 prorates for 10 months; (C) $6,000 is the full year amount without proration.",
+    "tip": "Partial year depreciation = Full year × (months used ÷ 12). Count months FROM acquisition date.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -3467,8 +3467,8 @@ const questions = [
       "D": "$70,000"
     },
     "correctAnswer": "C",
-    "explanation": "Step 1 (Recoverability test): Compare carrying value ($500,000) to undiscounted cash flows ($450,000). Since $500,000 > $450,000, the asset is impaired. Step 2 (Measurement): Impairment loss = Carrying value − Fair value = $500,000 − $380,000 = $120,000.",
-    "tip": "Step 1: undiscounted CF test. Step 2: measure loss using fair value.",
+    "explanation": "Per ASC 360-10-35, long-lived asset impairment uses a two-step approach. **Step 1 (Recoverability Test):** Compare carrying value to UNDISCOUNTED future cash flows. If carrying value > undiscounted CFs, asset is impaired. **Step 2 (Measurement):** Impairment loss = Carrying value − Fair value. **Calculation:** Step 1: $500,000 (CV) > $450,000 (undiscounted CFs) → Impaired. Step 2: Loss = $500,000 − $380,000 = $120,000. Why other answers are wrong: (A) $0 would apply if undiscounted CFs exceeded carrying value (no impairment); (B) $50,000 uses undiscounted CFs for measurement ($500K − $450K); (D) $70,000 incorrectly calculates the difference between CFs and fair value.",
+    "tip": "Two-step impairment: Step 1 uses UNDISCOUNTED cash flows (trigger test). Step 2 uses FAIR VALUE (measurement).",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -3545,8 +3545,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "C",
-    "explanation": "Accretion expense increases the ARO liability over time to its future settlement amount. Year 1 accretion = Opening liability × Credit-adjusted risk-free rate = $100,000 × 6% = $6,000. This is reported as an operating expense (not interest expense).",
-    "tip": "Accretion = ARO liability × Credit-adjusted rate. It's an operating expense.",
+    "explanation": "Per ASC 410-20, an asset retirement obligation (ARO) is recorded at present value and accretes over time. **Formula:** Accretion Expense = Beginning ARO Liability × Credit-Adjusted Risk-Free Rate. **Calculation:** Accretion = $100,000 × 6% = $6,000. The ARO liability increases by $6,000 to $106,000 at year-end. Accretion is classified as an operating expense (not interest expense) because it represents the passage of time on an operating liability. Why other answers are wrong: (A) $10,000 uses an incorrect rate (10%); (B) $3,000 uses half the rate; (D) $0 incorrectly assumes no accretion occurs.",
+    "tip": "ARO Accretion = Beginning ARO × Credit-adjusted rate. Classified as OPERATING expense, not interest.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -3585,8 +3585,8 @@ const questions = [
       "D": "$5,000 loss"
     },
     "correctAnswer": "C",
-    "explanation": "Book value of asset given = $50,000 − $30,000 = $20,000. Total consideration received = Fair value of asset received + Cash = $25,000 (implied from FV given). Gain = FV received − Book value given = $25,000 − $20,000 = $5,000 gain. With commercial substance, full gain is recognized.",
-    "tip": "Commercial substance: Gain/loss = Fair value received − Book value given.",
+    "explanation": "Per ASC 845, exchanges with commercial substance are measured at fair value and full gain/loss is recognized. **Formula:** Gain/Loss = Fair Value of Asset Given − Book Value of Asset Given. **Calculation:** Step 1: Book value = Cost − Accumulated depreciation = $50,000 − $30,000 = $20,000. Step 2: Fair value of asset given = $25,000. Step 3: Gain = $25,000 − $20,000 = $5,000 gain. The $3,000 cash received is boot and does not change the gain calculation—it's simply part of the exchange consideration. Why other answers are wrong: (A) $8,000 incorrectly calculates gain; (B) $3,000 confuses boot received with gain; (D) $5,000 loss reverses the sign—book value was below fair value, so it's a gain.",
+    "tip": "Commercial substance exchanges: Gain = FV given − Book value given. Recognize FULL gain/loss.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -3625,8 +3625,8 @@ const questions = [
       "D": "$500,000"
     },
     "correctAnswer": "A",
-    "explanation": "In a lump-sum (basket) purchase, allocate based on relative fair values. Total appraised value = $250,000 + $500,000 = $750,000. Building allocation = ($500,000 / $750,000) × $600,000 = 66.67% × $600,000 = $400,000.",
-    "tip": "Basket purchase: allocate based on relative fair/appraised values.",
+    "explanation": "Per ASC 805, lump-sum (basket) purchases are allocated using relative fair values. **Formula:** Asset Allocation = (Asset FV ÷ Total FV) × Purchase Price. **Calculation:** Step 1: Total appraised value = $250,000 + $500,000 = $750,000. Step 2: Building's relative FV = $500,000 ÷ $750,000 = 66.67%. Step 3: Building allocation = 66.67% × $600,000 = $400,000. Land receives the remaining $200,000 (33.33% × $600,000). Why other answers are wrong: (B) $350,000 results from an incorrect allocation percentage; (C) $300,000 appears to be half the purchase price; (D) $500,000 uses the appraised value directly instead of allocating proportionally.",
+    "tip": "Basket purchase: Allocation = (Individual FV ÷ Total FV) × Purchase price. Never use appraised values directly.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -3821,8 +3821,8 @@ const questions = [
       "D": "Estimated based on the company's stock price"
     },
     "correctAnswer": "B",
-    "explanation": "Goodwill is recognized only when acquired in a business combination. It represents the excess of the purchase price over the fair value of identifiable net assets acquired. Internally developed goodwill cannot be recognized because it cannot be reliably measured and is not separable from the business.",
-    "tip": "Goodwill = purchased only (from business combinations). No internal goodwill."
+    "explanation": "Per ASC 350-20-25-1, goodwill is recognized ONLY when acquired in a business combination—it is the residual after allocating the purchase price to identifiable assets and liabilities at fair value. Internally generated goodwill cannot be capitalized because it fails the recognition criteria (not separable, not reliably measurable). Why other answers are wrong: (A) Internally developed goodwill is prohibited from recognition; (C) Goodwill cannot be purchased separately—it only arises in business combinations; (D) Stock price is not a basis for recognizing goodwill.",
+    "tip": "Goodwill = ACQUIRED in business combination ONLY. Formula: Purchase Price − Fair Value of Identifiable Net Assets."
   },
   {
     "id": "far-int-002",
@@ -4302,8 +4302,8 @@ const questions = [
       "D": "They will mature within one year"
     },
     "correctAnswer": "A",
-    "explanation": "Held-to-maturity classification requires both positive intent and ability to hold the securities until maturity. If either is lacking, the securities must be classified as available-for-sale (or trading if held for short-term profit). Selling HTM securities before maturity can taint the entire portfolio.",
-    "tip": "HTM = intent AND ability to hold to maturity."
+    "explanation": "Per ASC 320-10-25-1, debt securities are classified as held-to-maturity only if the entity has both the positive intent AND ability to hold them to maturity. HTM securities are reported at amortized cost (not fair value). Selling HTM before maturity without a valid exception 'taints' the classification. Why other answers are wrong: (B) Public trading is not required—private placement bonds can be HTM; (C) Fixed vs. variable interest doesn't determine classification; (D) Maturity date doesn't determine classification—even 30-year bonds can be HTM if intent and ability exist.",
+    "tip": "HTM requires INTENT + ABILITY. Reported at amortized cost. Selling early taints the portfolio."
   },
   {
     "id": "far-inv-sec-002",
@@ -4793,8 +4793,8 @@ const questions = [
       "D": "Present value of lease payments equals substantially all of the fair value of the asset"
     },
     "correctAnswer": "C",
-    "explanation": "A cancelable lease without penalty would not typically meet finance lease criteria. Finance lease criteria include: (1) ownership transfer, (2) purchase option reasonably certain to be exercised, (3) lease term for major part of economic life, (4) present value substantially equals fair value, and (5) specialized asset with no alternative use to lessor.",
-    "tip": "Finance lease: ownership transfer, BPO, major part of life, substantially all FV, or specialized."
+    "explanation": "Per ASC 842-10-25-2, a lease is classified as a finance lease if it meets ANY ONE of five criteria. A cancelable lease without penalty would NOT be a finance lease because it indicates the lessee is not effectively obtaining control of the asset. The five criteria are: (1) Ownership transfer, (2) Purchase option reasonably certain, (3) Lease term ≥ major part of economic life (≈75%), (4) PV of payments ≥ substantially all of FV (≈90%), (5) Specialized asset with no alternative use. Why other answers are wrong: (A), (B), (D) are ALL valid finance lease criteria—meeting any one classifies as finance.",
+    "tip": "Finance lease if ANY ONE: Transfer, Purchase option, ≥75% life, ≥90% FV, or Specialized. Remember: 75% and 90% thresholds."
   },
   {
     "id": "far-lease-002",
@@ -4812,8 +4812,8 @@ const questions = [
       "D": "Only a right-of-use asset"
     },
     "correctAnswer": "A",
-    "explanation": "Under ASC 842, lessees recognize both a right-of-use (ROU) asset and a lease liability for virtually all leases, regardless of classification. This is a significant change from ASC 840, where operating leases were off-balance sheet. The difference between finance and operating leases is in subsequent measurement and expense recognition.",
-    "tip": "ASC 842: ALL leases (finance and operating) go on the balance sheet."
+    "explanation": "Per ASC 842-20-25-1, lessees recognize both a right-of-use (ROU) asset and a lease liability for virtually ALL leases, regardless of classification. This was the major change from ASC 840. Why other answers are wrong: (B) Operating leases DO require asset/liability recognition under ASC 842—this was true under old ASC 840 rules but not anymore; (C) Only a lease liability would leave the balance sheet unbalanced—both asset and liability are required; (D) Only an ROU asset ignores the obligation to make lease payments. The difference between finance and operating is in subsequent measurement and expense pattern, not initial recognition.",
+    "tip": "ASC 842: ALL leases go on balance sheet. Finance vs operating only affects expense PATTERN."
   },
   {
     "id": "far-lease-003",
@@ -4831,8 +4831,8 @@ const questions = [
       "D": "Total undiscounted lease payments"
     },
     "correctAnswer": "C",
-    "explanation": "The ROU asset is initially measured at: (1) the initial measurement of the lease liability (present value of payments), plus (2) lease payments made before commencement, plus (3) initial direct costs incurred, minus (4) lease incentives received. This applies to both finance and operating leases.",
-    "tip": "ROU asset = Lease liability + Prepayments + Initial costs − Incentives."
+    "explanation": "Per ASC 842-20-30-1, the ROU asset is initially measured at: (1) initial lease liability (PV of payments), plus (2) prepayments made before commencement, plus (3) initial direct costs, minus (4) lease incentives received. Why other answers are wrong: (A) Fair value of the underlying asset is NOT used for lessee measurement—that's a lessor concept; (B) PV of payments alone ignores required adjustments for prepayments, initial costs, and incentives; (D) Undiscounted payments ignore time value of money—ASC 842 requires present value. Same initial measurement applies to both finance and operating leases.",
+    "tip": "ROU asset = Lease liability + Prepayments + Initial direct costs − Incentives received."
   },
   {
     "id": "far-lease-004",
@@ -4850,8 +4850,8 @@ const questions = [
       "D": "Variable expense based on usage"
     },
     "correctAnswer": "C",
-    "explanation": "Finance leases result in front-loaded total expense because interest expense is higher in early years (calculated on declining principal) while depreciation is typically straight-line. The ROU asset is depreciated over the shorter of the lease term or useful life, and interest on the lease liability is recognized using the effective interest method.",
-    "tip": "Finance lease expense: Depreciation (SL) + Interest (front-loaded) = higher early expense."
+    "explanation": "Per ASC 842-20-35-1, finance leases recognize TWO separate expenses: (1) depreciation on the ROU asset (typically straight-line), and (2) interest expense on the lease liability (effective interest method). This results in front-loaded total expense because interest is higher in early years. Why other answers are wrong: (A) Interest expense only ignores the ROU asset depreciation requirement; (B) Single straight-line expense is the OPERATING lease pattern, not finance; (D) Variable expense based on usage isn't the standard ASC 842 model. Finance lease treatment resembles purchasing an asset with borrowed funds.",
+    "tip": "Finance lease = Depreciation (SL) + Interest (front-loaded). Higher total expense early."
   },
   {
     "id": "far-lease-005",
@@ -4869,8 +4869,8 @@ const questions = [
       "D": "No expense until payments are made"
     },
     "correctAnswer": "C",
-    "explanation": "Operating leases result in straight-line lease expense over the lease term, similar to the old rent expense treatment. Although the liability uses effective interest (creating variable interest) and the ROU amortization varies, the combined effect equals straight-line total expense.",
-    "tip": "Operating lease: straight-line total expense (like old rent expense)."
+    "explanation": "Per ASC 842-20-25-6, operating leases recognize a SINGLE straight-line lease expense over the lease term. Although the accounting records interest on the liability and amortization of the ROU asset separately, these are calculated so the combined total is straight-line. Why other answers are wrong: (A) Variable expense based on fair value isn't the ASC 842 model; (B) Front-loaded expense is the FINANCE lease pattern, not operating; (D) Expenses aren't deferred until cash payment—accrual accounting still applies. This maintains consistency with old operating lease treatment under ASC 840.",
+    "tip": "Operating lease = straight-line TOTAL expense. Interest + amortization combine to equal SL."
   },
   {
     "id": "far-lease-006",
@@ -4888,8 +4888,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "A",
-    "explanation": "Lease liability = Present value of lease payments. Using the present value of ordinary annuity factor: $10,000 × 4.2124 = $42,124. The lessee uses its incremental borrowing rate unless the rate implicit in the lease is readily determinable.",
-    "tip": "Lease liability = PV of payments at lessee's incremental borrowing rate.",
+    "explanation": "Per ASC 842-20-30-1, lease liability = present value of lease payments. **Formula:** Lease Liability = Payment × PV Annuity Factor. **Calculation:** $10,000 × 4.2124 = $42,124. The lessee uses its incremental borrowing rate unless the rate implicit in the lease is readily determinable. Why other answers are wrong: (B) $44,651 would use PV factor of 4.4651 (wrong rate or period); (C) $47,170 uses an even higher factor; (D) $50,000 is undiscounted total ($10,000 × 5) ignoring time value of money. Always discount lease payments to present value.",
+    "tip": "Lease liability = PV of payments. Use lessee's incremental borrowing rate (unless implicit rate known).",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -4909,8 +4909,8 @@ const questions = [
       "D": "$2,400"
     },
     "correctAnswer": "C",
-    "explanation": "Year 1 interest expense = Opening liability × Interest rate = $42,124 × 6% = $2,527.44, rounded to $2,527. The payment of $10,000 minus interest of $2,527 = $7,473 reduction in principal. Ending liability = $42,124 − $7,473 = $34,651.",
-    "tip": "Interest expense = Opening liability × Rate.",
+    "explanation": "Per ASC 842-20-35-1, interest on lease liability uses the effective interest method. **Formula:** Interest = Opening Liability × Interest Rate. **Calculation:** $42,124 × 6% = $2,527.44 ≈ $2,527. The $10,000 payment covers $2,527 interest + $7,473 principal reduction. Ending liability = $42,124 − $7,473 = $34,651. Why other answers are wrong: (A) $6,000 may apply 6% to something other than opening liability; (B) $2,107 may apply 5% rate; (D) $2,400 may use a flat calculation. Interest is FRONT-LOADED—highest in Year 1, declining each year as principal decreases.",
+    "tip": "Interest expense = Opening liability × Rate. Front-loaded: highest interest in Year 1.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -4930,8 +4930,8 @@ const questions = [
       "D": "The lessor retains substantially all risks and rewards"
     },
     "correctAnswer": "B",
-    "explanation": "A lessor classifies a lease as sales-type if any of the five criteria are met (same as lessee finance lease criteria) and collectibility of payments is probable. If criteria are met but collectibility is not probable, the lease is accounted for under the operating lease model until payments are received.",
-    "tip": "Lessor: sales-type = meets criteria + probable collection."
+    "explanation": "Per ASC 842-10-25-2, a lessor classifies a lease as sales-type if ANY of the five finance lease criteria are met AND collectibility of payments is probable. The five criteria are: transfer of ownership, purchase option reasonably certain, ≥75% of economic life, PV ≥90% of fair value, or specialized nature. Why other answers are wrong: (A) Lease term <1 year may qualify for short-term exemption but isn't a sales-type criterion; (C) If NO criteria are met, it's an operating lease; (D) Retaining risks/rewards describes an operating lease, not sales-type. If collectibility is NOT probable, use operating lease method until payments received.",
+    "tip": "Lessor sales-type: ANY of 5 criteria met + collectibility probable."
   },
   {
     "id": "far-lease-009",
@@ -4949,8 +4949,8 @@ const questions = [
       "D": "No finance lease criteria are met"
     },
     "correctAnswer": "A",
-    "explanation": "A direct financing lease meets finance lease criteria and collectibility is probable, but there is no manufacturer's or dealer's profit at lease inception (the fair value of the underlying asset equals its cost or carrying amount). If there is selling profit, it's a sales-type lease.",
-    "tip": "Direct financing: meets criteria + probable collection + no selling profit."
+    "explanation": "Per ASC 842-10-25-3, a direct financing lease requires: (1) finance lease criteria met, (2) collectibility probable, AND (3) NO manufacturer's/dealer's profit (fair value = cost or carrying amount). The lessor acts as a financing intermediary, not as a seller. Why other answers are wrong: (B) Exactly 75% of economic life is just one criterion—doesn't determine direct vs sales-type; (C) A bargain purchase option is one of the five criteria but doesn't distinguish direct financing from sales-type; (D) If no criteria are met, it's an operating lease, not direct financing. If there IS selling profit, classify as sales-type instead.",
+    "tip": "Direct financing = criteria met + collectible + NO selling profit. Lessor = financing intermediary."
   },
   {
     "id": "far-lease-010",
@@ -4968,8 +4968,8 @@ const questions = [
       "D": "Qualify as a sale under ASC 606 (revenue recognition) criteria"
     },
     "correctAnswer": "D",
-    "explanation": "For sale-leaseback treatment, the transfer must qualify as a sale under ASC 606 (control transfers to the buyer-lessor). If sale criteria are not met (e.g., seller-lessee has repurchase option at fixed price), it's a failed sale accounted for as a financing arrangement.",
-    "tip": "Sale-leaseback: must qualify as a sale under ASC 606."
+    "explanation": "Per ASC 842-40-25-1, for sale-leaseback treatment, the asset transfer MUST qualify as a sale under ASC 606 (control transfers to buyer-lessor). Key is whether control transfers—if seller-lessee retains control (e.g., repurchase option at fixed price), it's a failed sale accounted for as financing. Why other answers are wrong: (A) A gain is the RESULT of proper sale treatment, not a prerequisite; (B) No minimum lease term is required for sale qualification; (C) Related party involvement may require scrutiny but doesn't preclude sale treatment. The ASC 606 control transfer test is paramount.",
+    "tip": "Sale-leaseback: control must transfer to buyer per ASC 606. Otherwise = failed sale (financing)."
   },
   {
     "id": "far-lease-011",
@@ -5276,8 +5276,8 @@ const questions = [
       "D": "The stated interest rate is less than the market rate"
     },
     "correctAnswer": "D",
-    "explanation": "A bond is issued at a discount when the stated (coupon) rate is less than the market (effective) rate. Investors pay less than face value to compensate for the lower-than-market coupon payments. The discount is amortized to interest expense over the bond's life, increasing expense above cash paid.",
-    "tip": "Stated rate < Market rate = Discount. Stated rate > Market rate = Premium."
+    "explanation": "Per ASC 835, a bond is issued at a discount when its stated (coupon) rate is LESS than the market (effective) rate at issuance. Investors require compensation for below-market interest payments, so they pay less than face value. The discount is amortized to interest expense over the bond term, making interest expense HIGHER than cash interest paid. Why other answers are wrong: (A) Call provisions don't directly determine premium/discount; (B) Equal rates result in issuance AT PAR; (C) Stated rate > market rate results in a PREMIUM (investors pay MORE than face).",
+    "tip": "Stated < Market = DISCOUNT. Stated > Market = PREMIUM. Stated = Market = PAR."
   },
   {
     "id": "far-liab-002",
@@ -5765,8 +5765,8 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "C",
-    "explanation": "Total proceeds = 10,000 × $15 = $150,000. Common Stock (at par) = 10,000 × $1 = $10,000. Additional Paid-in Capital = $150,000 − $10,000 = $140,000. APIC represents the amount received above par value.",
-    "tip": "APIC = Total proceeds − Par value of shares issued.",
+    "explanation": "Stock issuance splits proceeds between Common Stock (at par) and APIC (excess over par). **Calculation:** Total proceeds = 10,000 × $15 = $150,000. Common Stock = 10,000 × $1 par = $10,000. APIC = $150,000 − $10,000 = $140,000. Why other answers are wrong: (A) $15,000 would be 1,000 shares at $15 (wrong share count); (B) $10,000 is the par value credited to Common Stock, not APIC; (D) $150,000 is total proceeds—must subtract par to get APIC. Entry: Dr. Cash $150,000; Cr. Common Stock $10,000; Cr. APIC $140,000.",
+    "tip": "APIC = Total proceeds − Par value. Split issuance: Cash = Common Stock (par) + APIC (excess).",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -5786,8 +5786,8 @@ const questions = [
       "D": "Additional Paid-in Capital"
     },
     "correctAnswer": "B",
-    "explanation": "When no-par stock has no stated value, the entire proceeds from issuance are credited to the Common Stock account. There is no Additional Paid-in Capital because there is no par or stated value to separate from the proceeds.",
-    "tip": "No-par, no stated value: all proceeds to Common Stock."
+    "explanation": "When common stock has no par value AND no stated value, the entire issuance proceeds are credited to Common Stock. There is no APIC because there is nothing to separate out (par/stated value). This simplifies equity accounting. Why other answers are wrong: (A) Retained Earnings is for accumulated profits, not stock issuance proceeds; (C) Treasury Stock is for repurchased shares, not issuances; (D) APIC only exists when there's a par or stated value to create an 'excess' amount.",
+    "tip": "No par + no stated value = ALL proceeds to Common Stock. If par/stated exists, excess goes to APIC."
   },
   {
     "id": "far-eq-003",
@@ -5805,8 +5805,8 @@ const questions = [
       "D": "The book value of the company's equity"
     },
     "correctAnswer": "C",
-    "explanation": "When stock is issued for non-cash consideration (services, assets), the transaction is recorded at fair value. Use the fair value of the consideration received if it can be reliably measured; otherwise, use the fair value of the equity instruments issued.",
-    "tip": "Stock for services: fair value of services (if measurable) or stock."
+    "explanation": "Per ASC 718 and ASC 845, non-cash stock issuances are recorded at FAIR VALUE—preferably the fair value of goods/services received if reliably measurable, otherwise the fair value of stock issued. Why other answers are wrong: (A) Zero ignores the economic substance—services have value even without cash; (B) Par value ignores the true value exchanged—would understate the transaction; (D) Book value of equity is irrelevant to fair value of specific services received. Both an expense (or asset) and equity are recorded at fair value.",
+    "tip": "Stock for non-cash: Use fair value of consideration received (if reliable) OR fair value of stock issued."
   },
   {
     "id": "far-eq-004",
@@ -5824,8 +5824,8 @@ const questions = [
       "D": "$25,000"
     },
     "correctAnswer": "C",
-    "explanation": "Under the cost method, Treasury Stock is debited at the cost of repurchase: 1,000 shares × $20 = $20,000. Par value is not relevant to the entry. Treasury Stock is a contra-equity account reducing total stockholders' equity.",
-    "tip": "Cost method: Debit Treasury Stock at purchase price (not par).",
+    "explanation": "Under the cost method, Treasury Stock is debited at COST (purchase price), ignoring par value. **Calculation:** 1,000 shares × $20 = $20,000. Entry: Dr. Treasury Stock $20,000; Cr. Cash $20,000. Why other answers are wrong: (A) $5,000 is par value (1,000 × $5)—that's for the PAR VALUE method; (B) $15,000 is excess over par—irrelevant under cost method; (D) $25,000 has no basis in the facts. Treasury Stock is a contra-equity account (reduces total stockholders' equity).",
+    "tip": "Cost method: Debit Treasury Stock at purchase price. Par value method: Debit at par.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -5845,8 +5845,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "A",
-    "explanation": "Cash received = 1,000 × $25 = $25,000. Treasury Stock credit (at cost) = 1,000 × $20 = $20,000. Excess = $25,000 − $20,000 = $5,000, credited to Paid-in Capital from Treasury Stock (not gain—no gain/loss on treasury transactions).",
-    "tip": "Reissue treasury above cost: excess goes to APIC-Treasury Stock.",
+    "explanation": "When treasury stock is reissued ABOVE cost, the excess goes to APIC-Treasury Stock (never to income—no gain/loss on treasury transactions). **Calculation:** Cash = 1,000 × $25 = $25,000. Treasury Stock credit = 1,000 × $20 = $20,000. Excess = $5,000 to APIC-Treasury. Entry: Dr. Cash $25,000; Cr. Treasury Stock $20,000; Cr. APIC-TS $5,000. Why other answers are wrong: (B) $20,000 is the treasury stock credit, not APIC; (C) $25,000 is total cash received; (D) $0 ignores the excess over cost. Key: No gain on treasury transactions—excess goes to equity.",
+    "tip": "Treasury reissued above cost: Excess → APIC-Treasury Stock. NEVER record gain on treasury transactions.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -5866,8 +5866,8 @@ const questions = [
       "D": "$4,000 to Retained Earnings"
     },
     "correctAnswer": "C",
-    "explanation": "Cash = 500 × $22 = $11,000. Treasury Stock credit = 500 × $30 = $15,000. Shortfall = $4,000. First reduce APIC-Treasury to zero: debit $2,000. Remainder ($2,000) debited to Retained Earnings. No loss is reported (equity transactions don't go through income).",
-    "tip": "Reissue below cost: reduce APIC-Treasury first, then Retained Earnings.",
+    "explanation": "When treasury stock is reissued BELOW cost, first exhaust APIC-Treasury Stock, then charge Retained Earnings. **Calculation:** Cash = 500 × $22 = $11,000. Treasury Stock credit = 500 × $30 = $15,000. Shortfall = $4,000. APIC-TS available: $2,000 (exhausted). Remaining $2,000 to Retained Earnings. Why other answers are wrong: (A) No loss is recognized—treasury transactions don't affect income; (B) Only $2,000 of APIC-TS is available to use; (D) Can't debit RE for full amount when APIC-TS exists. Entry: Dr. Cash $11,000; Dr. APIC-TS $2,000; Dr. RE $2,000; Cr. Treasury Stock $15,000.",
+    "tip": "Treasury below cost: Exhaust APIC-Treasury FIRST, then charge Retained Earnings. Never record a loss.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -5887,8 +5887,8 @@ const questions = [
       "D": "Fair market value of the shares issued"
     },
     "correctAnswer": "D",
-    "explanation": "Small stock dividends (typically < 20-25%) are recorded at fair market value. Retained Earnings is debited for the fair value; Common Stock is credited for par value; and APIC is credited for the excess. This capitalization of retained earnings recognizes the market's expected dilution.",
-    "tip": "Small stock dividend = fair value. Large stock dividend = par value."
+    "explanation": "Per accounting guidance, small stock dividends (<20-25% of outstanding shares) are recorded at FAIR MARKET VALUE. Entry: Dr. Retained Earnings (FMV), Cr. Common Stock (par), Cr. APIC (excess). This capitalizes retained earnings at FMV because the market expects minimal dilution. Why other answers are wrong: (A) Book value isn't used for stock dividends; (B) An entry IS required for stock dividends; (C) Par value is used for LARGE stock dividends (≥25%), not small. The 20-25% threshold reflects where significant market price dilution is expected.",
+    "tip": "Small stock dividend (<20-25%): FMV. Large stock dividend (≥25%): par value. Threshold = expected dilution."
   },
   {
     "id": "far-eq-008",
@@ -5906,8 +5906,8 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "D",
-    "explanation": "New shares issued = 100,000 × 10% = 10,000 shares. Small dividend, so use fair value. Retained Earnings debit = 10,000 × $15 = $150,000. Common Stock credit = 10,000 × $2 = $20,000. APIC credit = $130,000.",
-    "tip": "Small dividend: RE debit = shares × market price.",
+    "explanation": "Small stock dividend (10% < 20-25%) uses fair market value. **Calculation:** New shares = 100,000 × 10% = 10,000. RE debit = 10,000 × $15 FMV = $150,000. Common Stock credit = 10,000 × $2 par = $20,000. APIC credit = $150,000 − $20,000 = $130,000. Why other answers are wrong: (A) $130,000 is APIC credit, not RE debit; (B) $170,000 has no basis; (C) $20,000 is the par value for Common Stock credit, not RE. Entry: Dr. RE $150,000; Cr. Common Stock $20,000; Cr. APIC $130,000. Total equity unchanged—just reclassification within equity.",
+    "tip": "Small stock dividend: RE debit = shares × FMV. Common Stock = shares × par. APIC = difference.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -5927,8 +5927,8 @@ const questions = [
       "D": "Par value (or stated value) of the shares issued"
     },
     "correctAnswer": "D",
-    "explanation": "Large stock dividends (25% or more) are recorded at par value. Retained Earnings is debited and Common Stock is credited for the par value of shares issued. No APIC is recorded because the transfer equals only the legal minimum required.",
-    "tip": "Large stock dividend = par value. Small = market value."
+    "explanation": "Large stock dividends (≥25% of outstanding shares) are recorded at PAR VALUE only. Entry: Dr. Retained Earnings (par), Cr. Common Stock (par). No APIC because only the legal minimum is capitalized. Why other answers are wrong: (A) Book value isn't used for stock dividends; (B) Average of par/market has no support in GAAP; (C) FMV is for SMALL stock dividends (<20-25%). Rationale: Large dividends significantly dilute market price, so using FMV would overstate the capitalization of retained earnings.",
+    "tip": "Large stock dividend (≥25%): par value only (no APIC). Small (<20-25%): FMV."
   },
   {
     "id": "far-eq-010",
@@ -5946,8 +5946,8 @@ const questions = [
       "D": "Total stockholders' equity is doubled"
     },
     "correctAnswer": "A",
-    "explanation": "A stock split increases shares outstanding while proportionally reducing par value per share. Total stockholders' equity remains unchanged. No journal entry is required—only a memo entry noting the change in shares and par value. Total par value of outstanding shares remains the same.",
-    "tip": "Stock split: more shares, lower par, same total equity. No journal entry."
+    "explanation": "A stock split increases shares and proportionally reduces par value—total par value unchanged. Example: 2-for-1 split doubles shares, halves par per share. NO journal entry required—only memo entry. Why other answers are wrong: (B) Retained earnings is NOT reduced in a stock split (that's a stock dividend effect); (C) APIC doesn't change in a split; (D) Total equity is NOT doubled—it stays the same. Stock splits are purely mechanical changes to share count and par value. Contrast with stock dividends, which DO transfer from RE to paid-in capital.",
+    "tip": "Stock split: Shares ↑, Par per share ↓, Total par unchanged. NO journal entry. RE and total equity unchanged."
   },
   {
     "id": "far-eq-011",
@@ -5965,8 +5965,8 @@ const questions = [
       "D": "Restricts a portion of retained earnings, signaling it is not available for dividends"
     },
     "correctAnswer": "D",
-    "explanation": "Appropriating retained earnings is a disclosure mechanism that restricts a portion of retained earnings to signal it is not available for dividends (e.g., for plant expansion or loan covenants). It does not set aside cash—it's merely a segregation within equity. Total equity is unchanged.",
-    "tip": "Appropriation = restriction within equity. Does not set aside cash."
+    "explanation": "An appropriation of retained earnings is a DISCLOSURE mechanism that restricts a portion of RE, signaling it's unavailable for dividends (e.g., for debt covenants, contingencies, or planned expansion). It does NOT set aside cash—it's merely a reclassification within equity. Why other answers are wrong: (A) Total equity is UNCHANGED—it's just a segregation within RE; (B) Bondholder approval isn't required for appropriations; (C) No cash is set aside—appropriations are accounting entries only. Entry: Dr. Retained Earnings, Cr. Appropriated Retained Earnings. When purpose fulfilled, reverse the entry.",
+    "tip": "Appropriation = restriction within RE (no cash set aside). Total equity unchanged. Reverse when purpose fulfilled."
   },
   {
     "id": "far-eq-012",
@@ -5984,8 +5984,8 @@ const questions = [
       "D": "$22.00"
     },
     "correctAnswer": "B",
-    "explanation": "Equity available to common = Total equity − Preferred stockholders' claim. Preferred claim = 1,000 × $500 = $500,000. Common equity = $5,000,000 − $500,000 = $4,500,000. Book value per share = $4,500,000 / 200,000 = $22.50.",
-    "tip": "BV per common share = (Total equity − Preferred claims) ÷ Common shares.",
+    "explanation": "Book value per common share removes preferred claims before dividing by common shares. **Calculation:** Preferred claim = 1,000 × $500 liquidation preference = $500,000. Common equity = $5,000,000 − $500,000 = $4,500,000. BVPS = $4,500,000 ÷ 200,000 = $22.50. Why other answers are wrong: (A) $25.00 ignores preferred claim ($5M ÷ 200K); (C) $24.75 uses incorrect preferred amount; (D) $22.00 uses incorrect calculation. If cumulative preferred has dividends in arrears, those would also be subtracted from equity available to common.",
+    "tip": "BVPS = (Total equity − Preferred liquidation value − Dividends in arrears) ÷ Common shares.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -6005,8 +6005,8 @@ const questions = [
       "D": "$180,000"
     },
     "correctAnswer": "D",
-    "explanation": "Annual preferred dividend = 10,000 × $100 × 6% = $60,000. Cumulative dividends in arrears (2 years) = $120,000. Current year = $60,000. Total to preferred = $180,000. Remaining $20,000 goes to common shareholders.",
-    "tip": "Cumulative preferred: pay all arrears before common gets anything.",
+    "explanation": "Cumulative preferred must receive ALL arrears plus current year before common receives anything. **Calculation:** Annual preferred = 10,000 × $100 × 6% = $60,000. Arrears (Years 1-2) = $60,000 × 2 = $120,000. Current (Year 3) = $60,000. Total to preferred = $180,000. Common gets $200,000 − $180,000 = $20,000. Why other answers are wrong: (A) $200,000 ignores common's share; (B) $60,000 is only current year, ignoring arrears; (C) $120,000 is only arrears, ignoring current year. Non-cumulative preferred would only receive current year ($60,000).",
+    "tip": "Cumulative preferred: Arrears + Current year before common. Non-cumulative: Current year only.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -6026,8 +6026,8 @@ const questions = [
       "D": "Preferred shareholders must vote on all corporate matters"
     },
     "correctAnswer": "A",
-    "explanation": "Fully participating preferred shares in dividends beyond their stated rate. After preferred receives its stated dividend and common receives an equivalent rate, any additional dividends are shared proportionally between preferred and common based on total par values.",
-    "tip": "Participating preferred: shares in dividends above stated rate."
+    "explanation": "Fully participating preferred shares in dividends BEYOND the stated rate. Process: (1) Preferred gets stated dividend, (2) Common gets equivalent rate, (3) Remaining dividends split proportionally by total par value. Why other answers are wrong: (B) Government doesn't guarantee preferred dividends—that's not a stock feature; (C) Conversion rights are a separate feature (convertible preferred), not participating; (D) Preferred typically has LIMITED or NO voting rights. Partially participating means preferred shares up to a cap (e.g., an extra 2%); fully participating has no cap.",
+    "tip": "Fully participating: shares all excess dividends proportionally. Partially participating: shares up to a cap."
   },
   {
     "id": "far-eq-015",
@@ -6045,8 +6045,8 @@ const questions = [
       "D": "No entry is made until shares are reissued"
     },
     "correctAnswer": "C",
-    "explanation": "The par value method records Treasury Stock at par value. APIC related to the original issuance is debited, and any excess of original issue price over reacquisition cost goes to Paid-in Capital from Retirement. If reacquisition cost exceeds original issue price, Retained Earnings is debited for the difference.",
-    "tip": "Par value method: Treasury Stock at par, adjust APIC and RE."
+    "explanation": "Under the par value method, Treasury Stock is debited at PAR VALUE, and the original APIC from issuance is reversed. If cost < original issue price, credit APIC-Retirement. If cost > original issue price, debit Retained Earnings for excess. Why other answers are wrong: (A) Par value method differs from cost method—cost method debits at purchase price; (B) Treasury Stock is debited at PAR, not cost; (D) An entry IS required at acquisition, not just reissuance. Par value method 'retires' shares conceptually but keeps them available for reissuance.",
+    "tip": "Par value method: Treasury Stock at par, reverse original APIC, plug difference to APIC-Retirement or RE."
   },
   {
     "id": "far-eq-016",
@@ -6064,8 +6064,8 @@ const questions = [
       "D": "Shares outstanding reduced to one-fourth, par value quadrupled"
     },
     "correctAnswer": "D",
-    "explanation": "A reverse split reduces shares outstanding while proportionally increasing par value per share. In a 1-for-4 split, shareholders receive 1 new share for every 4 old shares. Total stockholders' equity remains unchanged. Companies often do reverse splits to increase stock price.",
-    "tip": "Reverse split: fewer shares, higher par, same total equity."
+    "explanation": "A reverse stock split REDUCES shares and proportionally INCREASES par per share—opposite of a regular split. In 1-for-4 reverse: receive 1 new share for 4 old shares. Shares = 1/4 original; Par = 4× original. No journal entry—memo only. Why other answers are wrong: (A) Retained earnings is UNCHANGED in any split; (B) Total equity is UNCHANGED; (C) That describes a regular 4-for-1 split, not a reverse split. Purpose: Companies do reverse splits to raise stock price above minimum exchange requirements (e.g., $1 minimum).",
+    "tip": "Reverse split: Shares ÷ ratio, Par × ratio. 1-for-4 = shares become 1/4, par quadruples. Memo entry only."
   },
   {
     "id": "far-eq-017",
@@ -6083,8 +6083,8 @@ const questions = [
       "D": "Date of declaration"
     },
     "correctAnswer": "D",
-    "explanation": "A liability (Dividends Payable) is recorded on the date of declaration when the board of directors formally declares the dividend. The date of record determines who receives the dividend. The payment date is when cash is distributed and the liability is satisfied.",
-    "tip": "Declaration date: record liability. Payment date: pay and eliminate liability."
+    "explanation": "A liability (Dividends Payable) is recorded on the DATE OF DECLARATION when the board formally commits to paying the dividend. Why other answers are wrong: (A) Date of record only determines which shareholders receive the dividend—no accounting entry; (B) Payment date ELIMINATES the liability, doesn't create it; (C) Ex-dividend date is a stock exchange date (typically 1 business day before record date)—no accounting entry. Three key dates: Declaration (record liability), Record (determine recipients), Payment (pay and eliminate liability).",
+    "tip": "Declaration: Dr. RE (or Dividends), Cr. Dividends Payable. Payment: Dr. Dividends Payable, Cr. Cash."
   },
   {
     "id": "far-eq-018",
@@ -6102,8 +6102,8 @@ const questions = [
       "D": "Preference in dividends over common stock"
     },
     "correctAnswer": "B",
-    "explanation": "Preferred stockholders typically do not have voting rights (or limited voting rights), which is a major trade-off for their dividend and liquidation preferences. Preferred stock usually has a fixed dividend rate and receives priority over common stock in both dividends and liquidation.",
-    "tip": "Preferred: dividend and liquidation preference, but usually no voting."
+    "explanation": "Preferred stockholders typically do NOT have voting rights (or very limited voting rights)—this is the trade-off for their dividend and liquidation preferences. Why other answers ARE typical features: (A) Liquidation preference over common IS typical—preferred gets paid first in liquidation; (C) Fixed dividend rate IS typical—stated as % of par; (D) Dividend preference over common IS typical—preferred receives dividends before common. Preferred is 'hybrid' security—debt-like features (fixed dividend) but equity classification.",
+    "tip": "Preferred: Fixed dividend, dividend preference, liquidation preference, but usually NO voting rights."
   },
   {
     "id": "far-eq-019",
@@ -6121,8 +6121,8 @@ const questions = [
       "D": "A gain or loss is recognized in net income"
     },
     "correctAnswer": "C",
-    "explanation": "When retiring treasury stock under the cost method, debit Common Stock (at par), debit APIC (proportionally for original issuance), credit Treasury Stock (at cost), and debit or credit the difference to APIC from Retirement (if excess) or Retained Earnings (if deficit). No gain or loss is recorded.",
-    "tip": "Treasury retirement: reduce CS and APIC, plug to APIC-Retirement or RE."
+    "explanation": "When retiring treasury stock (cost method), reduce Common Stock at par, reduce original APIC, credit Treasury Stock at cost, and plug the difference. If cost < original issue price: Credit APIC-Retirement. If cost > original issue price: Debit Retained Earnings. Why other answers are wrong: (A) A journal entry IS required—shares change from treasury to authorized-but-unissued; (B) Other accounts ARE affected; (D) No gain/loss recognized—treasury transactions never affect income. This is called 'constructive retirement.'",
+    "tip": "Treasury retirement: Dr. Common Stock (par), Dr. APIC (original), Cr. Treasury Stock (cost), plug to APIC or RE."
   },
   {
     "id": "far-eq-020",
@@ -6140,8 +6140,8 @@ const questions = [
       "D": "Dividends in arrears are added to preferred stock on the balance sheet"
     },
     "correctAnswer": "B",
-    "explanation": "Although dividends in arrears are not recorded as a liability until declared, they represent a claim by preferred shareholders that must be satisfied before common shareholders receive anything. For book value calculations, dividends in arrears reduce the equity available to common.",
-    "tip": "BV per share: subtract preferred claims including dividends in arrears."
+    "explanation": "Dividends in arrears (unpaid cumulative preferred dividends) are NOT liabilities until declared, but they represent a priority claim that must be paid before common receives anything. For BVPS calculations, subtract dividends in arrears from equity available to common. Why other answers are wrong: (A) Ignoring arrears would overstate common's book value; (C) Arrears REDUCE book value available to common, not increase; (D) Arrears aren't recorded on the balance sheet until declared—they're only disclosed in notes. Formula: BVPS = (Total equity − Preferred liquidation − Dividends in arrears) ÷ Common shares.",
+    "tip": "BVPS: Subtract preferred claims INCLUDING dividends in arrears. Arrears disclosed in notes, not on balance sheet."
   },
   {
     "id": "far-tax-001",
@@ -6159,8 +6159,8 @@ const questions = [
       "D": "Taxes payable exceed tax expense in the current period"
     },
     "correctAnswer": "C",
-    "explanation": "A deferred tax liability (DTL) arises when taxable income is less than book income in the current period due to temporary differences, meaning more taxes will be paid in future periods. This occurs when book income exceeds taxable income temporarily (e.g., accelerated tax depreciation creating lower taxable income now).",
-    "tip": "DTL: taxable now < book now. Future taxes will be higher."
+    "explanation": "Per ASC 740, a deferred tax liability (DTL) arises from taxable temporary differences—when book income exceeds taxable income NOW, but will reverse in the future (e.g., accelerated tax depreciation). The DTL represents future tax obligations. **Key insight:** Tax expense (on I/S) exceeds taxes payable (on return) when creating a DTL. Why other answers are wrong: (A) NOL carryforwards create deferred tax ASSETS, not liabilities; (B) Permanent differences do NOT create deferred taxes—they never reverse; (D) Taxes payable > tax expense creates a deferred tax ASSET.",
+    "tip": "DTL: Book income > Taxable income NOW. Example: Accelerated tax depreciation. More tax due LATER."
   },
   {
     "id": "far-tax-002",
@@ -6178,8 +6178,8 @@ const questions = [
       "D": "Tax rates are expected to decrease"
     },
     "correctAnswer": "A",
-    "explanation": "A deferred tax asset (DTA) arises when taxable income exceeds book income in the current period due to temporary differences, meaning lower taxes will be paid in future periods. Examples include accrued expenses deductible for tax when paid, or net operating loss carryforwards.",
-    "tip": "DTA: taxable now > book now. Future taxes will be lower."
+    "explanation": "Per ASC 740, a deferred tax asset (DTA) arises when taxable income EXCEEDS book income in the current period due to temporary differences. This means the company paid MORE taxes now and will pay LESS later (future tax benefit). Examples: warranty expense accrued for book but deducted when paid for tax, bad debt expense, NOL carryforwards. Why other answers are wrong: (B) Permanent differences don't create DTAs/DTLs—only temporary differences do; (C) Estimated tax payments are just timing of cash, not a deferred tax item; (D) Expected rate changes don't create DTAs—they only affect measurement of existing DTAs/DTLs.",
+    "tip": "DTA: Taxable income > Book income NOW → Future tax benefit. Examples: warranty, bad debt, NOLs."
   },
   {
     "id": "far-tax-003",
@@ -6197,8 +6197,8 @@ const questions = [
       "D": "Fines and penalties"
     },
     "correctAnswer": "A",
-    "explanation": "Depreciation differences (using accelerated methods for tax and straight-line for book, or different useful lives) create temporary differences that reverse over the asset's life. The other items are permanent differences—they never reverse because they are either never taxable or never deductible.",
-    "tip": "Temporary = reverses over time. Permanent = never reverses."
+    "explanation": "Per ASC 740, depreciation differences create TEMPORARY differences because they reverse over the asset's life—total depreciation is the same, just timing differs. Why other answers are wrong (all are PERMANENT differences): (B) Officer life insurance premiums where company is beneficiary are NEVER deductible; (C) Municipal bond interest is NEVER taxable; (D) Fines/penalties are NEVER deductible. Permanent differences affect ETR but don't create deferred taxes. Temporary differences create DTAs/DTLs because they reverse.",
+    "tip": "Temporary = reverses (depreciation, warranty). Permanent = never reverses (muni interest, fines, officer life ins)."
   },
   {
     "id": "far-tax-004",
@@ -6216,8 +6216,8 @@ const questions = [
       "D": "Tax-exempt municipal bond interest"
     },
     "correctAnswer": "B",
-    "explanation": "Warranty expense is a temporary difference—accrued for book in one period but deducted for tax when paid in a later period. The difference reverses when payments are made. Municipal interest, fines, and officer life insurance premiums are permanent differences that never reverse.",
-    "tip": "Permanent: municipal interest (tax-free), fines (not deductible), officer life insurance."
+    "explanation": "Per ASC 740, warranty expense is a TEMPORARY difference—accrued for book when estimated but deducted for tax when PAID. The difference reverses when payments are made, creating a DTA initially. Why other answers are permanent: (A) Fines/penalties are NEVER tax-deductible; (C) Officer life insurance premiums (company beneficiary) are NEVER deductible; (D) Municipal bond interest is NEVER taxable. Permanent differences affect effective tax rate but DON'T create deferred taxes. Only temporary differences create DTAs/DTLs.",
+    "tip": "Warranty = TEMPORARY (reverses when paid). Fines, muni interest, officer life insurance = PERMANENT."
   },
   {
     "id": "far-tax-005",
@@ -6235,8 +6235,8 @@ const questions = [
       "D": "$10,000 deferred tax liability"
     },
     "correctAnswer": "D",
-    "explanation": "Book basis ($100,000) exceeds tax basis ($60,000) by $40,000. This means more depreciation was taken for tax, so future taxable income will exceed book income. Deferred tax liability = $40,000 × 25% = $10,000.",
-    "tip": "DTL when book basis > tax basis for assets. DTA when book > tax for liabilities.",
+    "explanation": "Per ASC 740, when book basis of an asset EXCEEDS tax basis, a DTL results (more tax deductions already taken = more taxes due later). **Calculation:** Temporary difference = $100,000 − $60,000 = $40,000. DTL = $40,000 × 25% = $10,000. Why other answers are wrong: (A) $40,000 is the temporary difference, not the deferred tax (must multiply by rate); (B) $15,000 may use wrong rate or wrong difference; (C) DTA is wrong direction—book > tax basis for assets creates DTL. Rule: For assets, book basis > tax basis = DTL. For liabilities, book basis > tax basis = DTA.",
+    "tip": "Asset: Book basis > Tax basis = DTL. Liability: Book basis > Tax basis = DTA. Multiply difference by rate.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -6256,8 +6256,8 @@ const questions = [
       "D": "It is more likely than not that some or all of the DTA will not be realized"
     },
     "correctAnswer": "D",
-    "explanation": "A valuation allowance reduces a DTA to the amount that is more likely than not (>50% probability) to be realized. Factors considered include future taxable income, tax planning strategies, and the nature and timing of reversals. The allowance is a contra-asset, reducing net DTA.",
-    "tip": "Valuation allowance: DTA × probability of non-realization (>50% chance of not realizing)."
+    "explanation": "Per ASC 740-10-30-5, a valuation allowance reduces a DTA when it's MORE LIKELY THAN NOT (>50% probability) that some or all of the DTA will NOT be realized. It's a contra-asset reducing the net DTA. Factors: future taxable income, tax planning strategies, reversing DTLs, carryback availability. Why other answers are wrong: (A) Having taxable temporary differences may actually SUPPORT realization (source of income); (B) DTA exceeding DTL doesn't automatically require allowance; (C) Expected rate decreases affect measurement, not valuation allowance need. The allowance reflects uncertainty about future realization.",
+    "tip": "Valuation allowance when >50% likely DTA WON'T be realized. It's a contra-asset to DTA."
   },
   {
     "id": "far-tax-007",
@@ -6275,8 +6275,8 @@ const questions = [
       "D": "Future reversal of existing taxable temporary differences (DTLs)"
     },
     "correctAnswer": "B",
-    "explanation": "Tax-exempt income does not generate taxable income and cannot be used to realize DTAs. The four sources for DTA realization are: (1) reversal of existing DTLs, (2) projected future taxable income, (3) taxable income in carryback years (if carryback allowed), and (4) tax planning strategies.",
-    "tip": "Four sources: DTL reversal, future taxable income, carryback, tax planning."
+    "explanation": "Per ASC 740-10-30-18, the four sources of future taxable income for DTA realization are: (1) future reversal of existing DTLs, (2) projected future taxable income (excluding reversals), (3) taxable income in carryback years (if allowed), and (4) tax-planning strategies. Why (B) is NOT a source: Tax-exempt municipal bond interest is NEVER taxable, so it cannot generate taxable income to absorb deductible temporary differences. Why other answers ARE valid sources: (A) Projected income is a legitimate source; (C) Tax planning strategies count; (D) DTL reversals generate future taxable income.",
+    "tip": "4 sources for DTA realization: DTL reversal, future taxable income, carryback, tax planning. NOT tax-exempt income!"
   },
   {
     "id": "far-tax-008",
@@ -6294,8 +6294,8 @@ const questions = [
       "D": "Each revenue and expense account"
     },
     "correctAnswer": "B",
-    "explanation": "Intraperiod tax allocation allocates total income tax expense or benefit for a period among continuing operations, discontinued operations, other comprehensive income, and items charged/credited directly to equity (such as prior period adjustments). Each component shows its own tax effect.",
-    "tip": "Intraperiod: allocate tax to continuing ops, discontinued, OCI, and equity items."
+    "explanation": "Per ASC 740-20-45, intraperiod tax allocation allocates total income tax expense/benefit WITHIN a single period among: (1) continuing operations, (2) discontinued operations, (3) other comprehensive income (OCI), and (4) items charged directly to equity. Each component shows its own tax effect. Why other answers are wrong: (A) Allocating only to continuing ops ignores other components; (C) Quarterly allocation is INTERPERIOD, not intraperiod; (D) Allocating to each revenue/expense is too granular—allocation is by financial statement component. Intra = within one period; Inter = between periods.",
+    "tip": "Intraperiod = allocate tax WITHIN period to: continuing ops, discontinued, OCI, equity items."
   },
   {
     "id": "far-tax-009",
@@ -6313,8 +6313,8 @@ const questions = [
       "D": "The company's tax advisor confirms the position"
     },
     "correctAnswer": "B",
-    "explanation": "The two-step model requires: (1) Recognition—a tax position is recognized only if it is more likely than not to be sustained upon examination. (2) Measurement—if recognized, measure at the largest amount that is greater than 50% likely to be realized. Positions not meeting the threshold are not recognized.",
-    "tip": "Uncertain tax positions: recognize if >50% likely to be sustained."
+    "explanation": "Per ASC 740-10-25, uncertain tax positions use a TWO-STEP model: (1) RECOGNITION—is it more likely than not (>50%) to be sustained upon examination? If yes, proceed to step 2. If no, don't recognize. (2) MEASUREMENT—measure at the largest amount that is >50% likely to be realized. Why other answers are wrong: (A) 'Possible' is too low a threshold—must be >50% likely; (C) IRS approval isn't required—assessment is based on technical merits; (D) Tax advisor confirmation isn't the standard—it's probability-based. The threshold is 'more likely than not' = greater than 50%.",
+    "tip": "Uncertain tax positions: (1) Recognize if >50% likely to be sustained, (2) Measure at largest amount >50% likely."
   },
   {
     "id": "far-tax-010",
@@ -6332,8 +6332,8 @@ const questions = [
       "D": "The highest marginal tax rate"
     },
     "correctAnswer": "C",
-    "explanation": "Deferred taxes are measured using the enacted tax rate(s) expected to apply in the periods when the deferred amounts are expected to be realized or settled. Changes in tax rates require remeasurement of existing deferred taxes, with the adjustment recognized in income from continuing operations.",
-    "tip": "Use enacted rate expected at reversal. Adjust DTAs/DTLs when rates change."
+    "explanation": "Per ASC 740-10-30-8, deferred taxes are measured using the ENACTED tax rate expected to apply when the temporary difference reverses. Must be ENACTED (signed into law), not just proposed or expected. When rates change, remeasure existing DTAs/DTLs with adjustment through income from continuing operations. Why other answers are wrong: (A) Historical rate average ignores future rates when differences reverse; (B) Rate when originated is backward-looking—must use rate at reversal; (D) Highest marginal rate may not apply to the specific reversal. Key: Use enacted rate at expected reversal date.",
+    "tip": "Use ENACTED rate expected at REVERSAL. When rates change, remeasure DTAs/DTLs through income."
   },
   {
     "id": "far-tax-011",
@@ -6351,8 +6351,8 @@ const questions = [
       "D": "Reduce DTL by $16,000 and recognize a tax benefit"
     },
     "correctAnswer": "D",
-    "explanation": "Original temporary difference = $100,000 / 25% = $400,000. New DTL = $400,000 × 21% = $84,000. Adjustment = $100,000 − $84,000 = $16,000 reduction in DTL. The credit to DTL is offset by a debit to tax expense (benefit).",
-    "tip": "Rate change: remeasure DTAs/DTLs, adjust through income.",
+    "explanation": "Per ASC 740-10-35-4, when tax rates change, remeasure existing DTAs/DTLs immediately. **Calculation:** Step 1: Find temporary difference: $100,000 ÷ 25% = $400,000. Step 2: Remeasure at new rate: $400,000 × 21% = $84,000. Step 3: Adjustment = $100,000 − $84,000 = $16,000 REDUCTION. Entry: Dr DTL $16,000, Cr Tax Benefit $16,000. Why other answers are wrong: (A) Increase is wrong direction—lower rate = lower DTL; (B) $4,000 uses wrong calculation; (C) No waiting—adjust immediately when rate is enacted. Rate decrease → DTL decreases (benefit) / DTA decreases (expense).",
+    "tip": "Rate change: Remeasure immediately. Lower rate → lower DTL (benefit). Higher rate → higher DTL (expense).",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -6549,8 +6549,8 @@ const questions = [
       "D": "Net income and profitability"
     },
     "correctAnswer": "A",
-    "explanation": "Governmental fund accounting emphasizes fiscal accountability—demonstrating that resources were used in compliance with budgets and legal requirements. It focuses on current financial resources (resources available to pay current liabilities) rather than profitability or economic resources.",
-    "tip": "Government funds = fiscal accountability + current financial resources."
+    "explanation": "Per GASB standards, governmental fund accounting emphasizes fiscal accountability—demonstrating compliance with budgets and legal restrictions. It uses the current financial resources measurement focus (spendable resources) and modified accrual basis. This differs from commercial accounting's focus on profitability. Why other answers are wrong: (B) Cash flows from operations is a commercial focus; (C) ROI is an investor metric, not government accountability; (D) Net income and profitability are commercial measures—governments aren't profit-oriented.",
+    "tip": "Governmental funds = Fiscal accountability + Current financial resources + Modified accrual. NOT profitability."
   },
   {
     "id": "far-gov-002",
@@ -6568,8 +6568,8 @@ const questions = [
       "D": "Cash measurement focus"
     },
     "correctAnswer": "C",
-    "explanation": "Governmental funds (General, Special Revenue, Capital Projects, Debt Service, Permanent) use the current financial resources measurement focus. This means only current assets and current liabilities are reported, and the focus is on resources available to pay near-term obligations.",
-    "tip": "Governmental funds = current financial resources. Proprietary/fiduciary = economic resources."
+    "explanation": "Per GASB standards, the five governmental fund types (General, Special Revenue, Capital Projects, Debt Service, Permanent) use the current financial resources measurement focus. This reports only current assets and current liabilities—focusing on spendable resources available for near-term obligations. Why other answers are wrong: (A) 'Accrual measurement focus' isn't a GASB term—it conflates basis and focus; (B) Economic resources focus is used by proprietary and fiduciary funds, not governmental funds; (D) Cash measurement focus would be pure cash basis, which isn't GAAP for governments. Current financial resources + modified accrual go together for governmental funds.",
+    "tip": "Governmental funds = current financial resources + modified accrual. Proprietary = economic resources + full accrual."
   },
   {
     "id": "far-gov-003",
@@ -6587,8 +6587,8 @@ const questions = [
       "D": "Cash is received"
     },
     "correctAnswer": "C",
-    "explanation": "Under modified accrual, revenues are recognized when measurable (amount can be determined) and available (collectible within the current period or soon enough thereafter to pay current liabilities, typically 60 days). This is more restrictive than full accrual.",
-    "tip": "Modified accrual revenue: measurable + available (typically 60 days)."
+    "explanation": "Per GASB standards, under modified accrual, revenues are recognized when MEASURABLE (amount can be determined) AND AVAILABLE (collectible within the current period or soon enough thereafter to pay current liabilities—typically 60 days after year-end). Why other answers are wrong: (A) Billed to taxpayers ignores collectibility—some billed taxes may never be collected; (B) Earned and receivable is the full accrual standard, not modified accrual; (D) Cash received is cash basis, not modified accrual. Modified accrual is MORE restrictive than full accrual because of the 'available' criterion.",
+    "tip": "Modified accrual revenue: measurable + available (typically 60 days). More restrictive than full accrual."
   },
   {
     "id": "far-gov-004",
@@ -6606,8 +6606,8 @@ const questions = [
       "D": "Enterprise activities"
     },
     "correctAnswer": "B",
-    "explanation": "The General Fund is the primary operating fund, used to account for all financial resources not required to be accounted for in another fund. It typically records property taxes, most governmental expenditures, and general operations.",
-    "tip": "General Fund = catchall for resources not in another fund."
+    "explanation": "Per GASB standards, the General Fund is the primary operating fund—the 'catchall' for all financial resources NOT required to be accounted for in another fund. It records property taxes, sales taxes, general government operations, and most day-to-day expenditures. Why other answers are wrong: (A) Long-term debt payments are in Debt Service Funds; (C) Capital asset acquisitions are in Capital Projects Funds; (D) Enterprise activities are in proprietary (Enterprise) funds. Every government has a General Fund; it's the only fund type that's always required.",
+    "tip": "General Fund = catchall/residual. Required for ALL governments. Property taxes typically here."
   },
   {
     "id": "far-gov-005",
@@ -6625,8 +6625,8 @@ const questions = [
       "D": "Pension plan assets"
     },
     "correctAnswer": "C",
-    "explanation": "Special Revenue Funds account for resources that are legally restricted or committed for specific purposes other than debt service or capital projects. Examples include grants restricted for parks, gas tax revenues restricted for roads, or federal grants for specific programs.",
-    "tip": "Special Revenue = legally restricted revenue for specific purposes."
+    "explanation": "Per GASB standards, Special Revenue Funds account for resources legally restricted or committed for SPECIFIC PURPOSES other than debt service or capital projects. Examples: gas taxes restricted for roads, federal grants for education programs, hotel taxes for tourism promotion. Why other answers are wrong: (A) Internal service activities use Internal Service Funds (proprietary); (B) Enterprise activities use Enterprise Funds (proprietary); (D) Pension plan assets are in Pension Trust Funds (fiduciary). Key: Special Revenue = restricted for specific OPERATING purposes, not debt or capital.",
+    "tip": "Special Revenue = restricted revenue for specific operating purposes (not debt or capital)."
   },
   {
     "id": "far-gov-006",
@@ -6644,8 +6644,8 @@ const questions = [
       "D": "Depreciation of capital assets"
     },
     "correctAnswer": "A",
-    "explanation": "Capital Projects Funds account for resources used for acquiring or constructing major capital facilities other than those financed by proprietary or fiduciary funds. They track construction spending but do not record the capital assets themselves (which go on government-wide statements).",
-    "tip": "Capital Projects Fund = tracks construction/acquisition spending."
+    "explanation": "Per GASB standards, Capital Projects Funds account for financial resources used to acquire or construct MAJOR capital facilities (other than proprietary/fiduciary fund capital). They track the spending on construction projects but do NOT record the capital assets themselves—those appear on government-wide statements. Why other answers are wrong: (B) Working capital for operations is General Fund; (C) Enterprise equipment goes in Enterprise Fund capital; (D) Depreciation isn't recorded in governmental funds (only in government-wide statements). Capital Projects Fund = tracks spending; asset recorded in government-wide statements.",
+    "tip": "Capital Projects Fund = spending on major construction. Assets recorded in government-wide statements only."
   },
   {
     "id": "far-gov-007",
@@ -6663,8 +6663,8 @@ const questions = [
       "D": "Short-term operating loans"
     },
     "correctAnswer": "C",
-    "explanation": "Debt Service Funds account for resources accumulated to pay principal and interest on general long-term debt. They receive transfers from other funds or dedicated tax revenues and use those resources to make debt payments.",
-    "tip": "Debt Service Fund = pays principal and interest on long-term debt."
+    "explanation": "Per GASB standards, Debt Service Funds account for resources accumulated to pay PRINCIPAL AND INTEREST on general long-term debt. They receive transfers from other funds or dedicated tax revenues (e.g., property tax millage dedicated to debt). Why other answers are wrong: (A) Enterprise fund debt is paid from Enterprise Fund resources, not Debt Service Fund; (B) Issuing new bonds isn't a fund purpose—proceeds may flow through but the fund's purpose is PAYING debt; (D) Short-term operating loans are typically in General Fund. Debt Service = accumulating resources + paying general long-term debt.",
+    "tip": "Debt Service Fund = accumulates resources + pays principal/interest on general long-term debt."
   },
   {
     "id": "far-gov-008",
@@ -6682,8 +6682,8 @@ const questions = [
       "D": "Full accrual (economic resources focus)"
     },
     "correctAnswer": "D",
-    "explanation": "Government-wide statements (Statement of Net Position and Statement of Activities) use full accrual accounting and economic resources measurement focus, similar to commercial accounting. This provides an overall picture of the government's financial position and operations, including capital assets and long-term liabilities.",
-    "tip": "Government-wide = full accrual, economic resources (like commercial)."
+    "explanation": "Per GASB 34, government-wide statements (Statement of Net Position and Statement of Activities) use FULL ACCRUAL accounting and ECONOMIC RESOURCES measurement focus—similar to commercial accounting. This provides the 'big picture' of government finances, including capital assets and long-term debt. Why other answers are wrong: (A) Budgetary basis is used for budget-to-actual comparisons, not government-wide statements; (B) Modified accrual is used for governmental FUND statements, not government-wide; (C) Cash basis isn't GAAP. Government-wide = economic resources + full accrual; Fund statements = varies by fund type.",
+    "tip": "Government-wide = full accrual + economic resources (like commercial). Reports ALL assets/liabilities."
   },
   {
     "id": "far-gov-009",
@@ -6701,8 +6701,8 @@ const questions = [
       "D": "Reserved and unreserved fund balance"
     },
     "correctAnswer": "C",
-    "explanation": "Government-wide net position has three categories: (1) Net investment in capital assets (capital assets minus related debt), (2) Restricted (externally restricted by creditors, grantors, laws, or constitutional provisions), and (3) Unrestricted (all other net position).",
-    "tip": "Net position: invested in capital assets, restricted, unrestricted."
+    "explanation": "Per GASB 34, government-wide net position has THREE categories: (1) Net investment in capital assets (capital assets minus related debt and unspent bond proceeds), (2) Restricted (externally restricted by creditors, grantors, or laws), and (3) Unrestricted (all other net position). Why other answers are wrong: (A) Committed, assigned, unassigned are FUND BALANCE categories (governmental funds), not net position; (B) Retained earnings and contributed capital are commercial equity terms; (D) Reserved/unreserved was the old GASB fund balance terminology, now replaced. Net position = government-wide equity; Fund balance = governmental fund equity.",
+    "tip": "Net position (gov-wide): invested in capital assets, restricted, unrestricted. Fund balance (funds) is different!"
   },
   {
     "id": "far-gov-010",
@@ -6720,8 +6720,8 @@ const questions = [
       "D": "Debit Cash, Credit Revenue"
     },
     "correctAnswer": "A",
-    "explanation": "When the budget is adopted: Debit Estimated Revenues (expected inflows), Credit Appropriations (authorized spending), and debit or credit Budgetary Fund Balance for the difference. If Estimated Revenues > Appropriations, credit Fund Balance. If Appropriations > Estimated Revenues, debit Fund Balance.",
-    "tip": "Budget entry: Dr Estimated Revenues, Cr Appropriations, plug to Budgetary FB."
+    "explanation": "Per GASB standards, when the budget is adopted: Debit Estimated Revenues (expected inflows), Credit Appropriations (authorized spending limits), and debit or credit Budgetary Fund Balance for the difference. If Estimated Revenues > Appropriations, credit Budgetary Fund Balance (surplus budget). If Appropriations > Estimated Revenues, debit Budgetary Fund Balance (deficit budget). Why other answers are wrong: (B) Expenditures/Encumbrances are recorded when orders are placed, not at budget adoption; (C) Budgets ARE recorded in governmental fund accounting—they're not just memoranda; (D) Cash/Revenue records actual transactions, not budgeted amounts. Budgetary accounts use 'estimated' prefix to distinguish from actual accounts.",
+    "tip": "Budget entry: Dr Estimated Revenues, Cr Appropriations, plug Budgetary FB. These are BUDGETARY (not actual) accounts."
   },
   {
     "id": "far-gov-011",
@@ -6739,8 +6739,8 @@ const questions = [
       "D": "Depreciation on capital assets"
     },
     "correctAnswer": "C",
-    "explanation": "An encumbrance is recorded when a commitment (like a purchase order) is made. It reserves a portion of the appropriation for the commitment. When goods/services are received, the encumbrance is reversed and an expenditure is recorded. Encumbrances provide budgetary control.",
-    "tip": "Encumbrance = commitment (PO). Reversed when goods received and expenditure recorded."
+    "explanation": "Per GASB standards, an encumbrance is recorded when a commitment (purchase order, contract) is made, reserving part of the appropriation for that commitment. When goods/services are received, the encumbrance is REVERSED and an actual expenditure is recorded. Encumbrances provide BUDGETARY CONTROL. Why other answers are wrong: (A) Interest on long-term debt is an expenditure/expense, not a commitment; (B) An actual expenditure is recorded when goods/services are received—encumbrance is only the commitment; (D) Depreciation isn't recorded in governmental funds at all. Encumbrance accounting is unique to governmental accounting.",
+    "tip": "Encumbrance = commitment/PO (reserves appropriation). Reversed when goods received → then record expenditure."
   },
   {
     "id": "far-gov-012",
@@ -6758,8 +6758,8 @@ const questions = [
       "D": "Record an expenditure in the fund; capitalize the asset in government-wide statements"
     },
     "correctAnswer": "D",
-    "explanation": "In governmental funds (using modified accrual), capital asset purchases are recorded as expenditures because the focus is on current financial resources. The asset is capitalized only in the government-wide statements, which use full accrual and economic resources measurement focus.",
-    "tip": "Governmental funds: expense (expenditure). Government-wide: capitalize."
+    "explanation": "Per GASB standards, in governmental funds (modified accrual, current financial resources focus), capital asset purchases are recorded as EXPENDITURES—resources flowed out. The asset is capitalized ONLY in government-wide statements (full accrual, economic resources focus). Why other answers are wrong: (A) Prepaid asset is for items like prepaid insurance, not capital assets; (B) An entry IS required—the cash outflow must be recorded; (C) Recording and depreciating the asset is commercial treatment, not governmental fund treatment. Key: Governmental funds don't report long-term assets or liabilities.",
+    "tip": "Governmental funds = expenditure (outflow). Government-wide = capitalize asset. Two different statements!"
   },
   {
     "id": "far-gov-013",
@@ -6777,8 +6777,8 @@ const questions = [
       "D": "No entry until the bonds mature"
     },
     "correctAnswer": "B",
-    "explanation": "Governmental funds do not report long-term liabilities. Bond proceeds are reported as 'Other Financing Sources' in the Capital Projects Fund. The liability (Bonds Payable) is reported only in the government-wide statements. This maintains the current financial resources focus.",
-    "tip": "Bond proceeds in governmental funds = Other Financing Source (not liability)."
+    "explanation": "Per GASB standards, governmental funds do NOT report long-term liabilities due to current financial resources focus. Bond proceeds are reported as 'Other Financing Sources—Proceeds of Bonds' (an inflow category similar to revenue). The Bonds Payable liability appears ONLY in government-wide statements. Why other answers are wrong: (A) Crediting Bonds Payable records a long-term liability, which governmental funds don't report; (C) This entry makes no sense—paying bonds at issuance; (D) An entry IS required when cash is received. 'Other Financing Sources' captures non-revenue inflows (bonds, transfers in, asset sales).",
+    "tip": "Bond proceeds in governmental funds = Other Financing Source (not Bonds Payable liability)."
   },
   {
     "id": "far-gov-014",
@@ -6796,8 +6796,8 @@ const questions = [
       "D": "Nonspendable"
     },
     "correctAnswer": "B",
-    "explanation": "GASB 54 establishes five fund balance categories: Nonspendable, Restricted, Committed, Assigned, and Unassigned. 'Unappropriated' is not a GASB 54 category. These categories show the extent to which the government is bound to use resources for specific purposes.",
-    "tip": "GASB 54 fund balance: Nonspendable, Restricted, Committed, Assigned, Unassigned."
+    "explanation": "Per GASB 54, governmental fund balance has FIVE categories: Nonspendable (not in spendable form or legally required to remain intact), Restricted (externally imposed constraints), Committed (government's highest-level formal action), Assigned (intended use by government), and Unassigned (residual amounts in General Fund). Why other answers are wrong: (A) Restricted IS a valid GASB 54 category; (C) Committed IS a valid GASB 54 category; (D) Nonspendable IS a valid GASB 54 category. 'Unappropriated' was used under old terminology but is NOT a GASB 54 category. Mnemonic: 'Never Run Carelessly Around Uneven ground' (NRCAU).",
+    "tip": "GASB 54 fund balance: Nonspendable, Restricted, Committed, Assigned, Unassigned. NOT 'unappropriated.'"
   },
   {
     "id": "far-gov-015",
@@ -6815,8 +6815,8 @@ const questions = [
       "D": "Resources held by the government as trustee or agent for others"
     },
     "correctAnswer": "D",
-    "explanation": "Fiduciary funds account for resources held by the government in a trustee or custodial capacity for parties outside the government. Examples include pension trust funds, investment trust funds, private-purpose trust funds, and custodial funds. These are not available for the government's own programs.",
-    "tip": "Fiduciary = holding resources for others (not government's own use)."
+    "explanation": "Per GASB standards, fiduciary funds account for resources held by the government as TRUSTEE OR AGENT for parties OUTSIDE the government (individuals, private organizations, other governments). Types include: Pension Trust Funds, Investment Trust Funds, Private-Purpose Trust Funds, and Custodial Funds. Why other answers are wrong: (A) Business-type activities use Enterprise Funds (proprietary); (B) Internal service operations use Internal Service Funds (proprietary); (C) General operations use the General Fund. Fiduciary funds are NOT included in government-wide statements because the resources aren't the government's.",
+    "tip": "Fiduciary = resources held for OTHERS. Not on government-wide statements (not government's resources)."
   },
   {
     "id": "far-gov-016",
@@ -6834,8 +6834,8 @@ const questions = [
       "D": "Eliminate all intergovernmental revenues"
     },
     "correctAnswer": "B",
-    "explanation": "The reconciliation adds items not in governmental funds: add capital assets (net of depreciation), add other long-term assets, subtract long-term liabilities (bonds, compensated absences), and adjust for accrual-based revenues/expenses. This converts current financial resources to economic resources focus.",
-    "tip": "Reconciliation: + capital assets, − long-term liabilities, adjust for accrual items."
+    "explanation": "Per GASB 34, the reconciliation converts governmental fund balance (current financial resources) to government-wide net position (economic resources). Key adjustments: ADD capital assets (net of accumulated depreciation), ADD other long-term assets, SUBTRACT long-term liabilities (bonds payable, compensated absences, net pension liability), adjust revenues/expenses for accrual timing. Why other answers are wrong: (A) Subtracting capital assets and adding liabilities is backwards; (C) Reconciliation IS required due to different measurement focuses; (D) Intergovernmental revenues aren't eliminated in reconciliation. The reconciliation is a REQUIRED schedule in the financial statements.",
+    "tip": "Reconciliation: + capital assets, + long-term assets, − long-term liabilities, ± accrual adjustments."
   },
   {
     "id": "far-gov-017",
@@ -6853,8 +6853,8 @@ const questions = [
       "D": "The related liability is incurred (if measurable)"
     },
     "correctAnswer": "D",
-    "explanation": "Under modified accrual, expenditures are generally recognized when the related fund liability is incurred, assuming the amount is measurable. Unlike expenses under full accrual, expenditures include both operating costs and capital outlays. Some exceptions exist for items like debt service.",
-    "tip": "Expenditures: when liability is incurred (modified accrual)."
+    "explanation": "Per GASB standards, under modified accrual, expenditures are generally recognized when the related fund LIABILITY is incurred (assuming measurable). Unlike full accrual expenses, expenditures include capital outlays and debt principal. Exceptions: debt service is typically recognized when DUE (not when incurred). Why other answers are wrong: (A) Appropriation is authorization to spend, not actual spending; (B) Budget adoption creates budgetary accounts, not expenditures; (C) Cash payment is cash basis, not modified accrual. Expenditure recognition is more restrictive than accrual expense recognition.",
+    "tip": "Expenditure = when liability incurred (measurable). Exception: debt service when DUE."
   },
   {
     "id": "far-gov-018",
@@ -6872,8 +6872,8 @@ const questions = [
       "D": "Employee pension benefits"
     },
     "correctAnswer": "C",
-    "explanation": "Permanent Funds account for resources that are legally restricted such that only earnings (not principal) may be used for purposes supporting government programs. They differ from private-purpose trusts where the beneficiaries are outside parties.",
-    "tip": "Permanent Fund = principal preserved, earnings support government programs."
+    "explanation": "Per GASB standards, Permanent Funds account for resources where the PRINCIPAL must be preserved (legally restricted) but EARNINGS may be used for purposes supporting GOVERNMENT programs or citizens. They're governmental funds (not fiduciary) because the beneficiaries are the government's constituents. Why other answers are wrong: (A) Not all restricted resources—just those with principal preservation requirements; (B) Enterprise operations use Enterprise Funds; (D) Employee pension benefits use Pension Trust Funds (fiduciary). Key distinction: Permanent Fund benefits GOVERNMENT programs; Private-Purpose Trust benefits OUTSIDE parties.",
+    "tip": "Permanent Fund = principal preserved + earnings for GOVERNMENT programs. (vs. Private-Purpose Trust = outside parties)"
   },
   {
     "id": "far-gov-019",
@@ -7024,8 +7024,8 @@ const questions = [
       "D": "The grant date"
     },
     "correctAnswer": "D",
-    "explanation": "ASC 718 requires that compensation cost for employee stock options be measured at the grant date based on the fair value of the award. The grant date is when the employer and employee have a mutual understanding of the key terms and conditions.",
-    "tip": "Grant date = measurement date for employee awards.",
+    "explanation": "Per ASC 718-10-30-2, compensation cost for employee stock options is measured at GRANT DATE fair value. The grant date is when there's a mutual understanding of key terms between employer and employee. The fair value is then recognized over the requisite service (vesting) period. Why other answers are wrong: (A) Vesting date is when the employee earns the award—not the measurement date; (B) Settlement date is when the award is settled in cash or shares; (C) Exercise date is when the employee chooses to purchase shares—irrelevant for measurement.",
+    "tip": "Employee awards: Measure at GRANT DATE, recognize over SERVICE (vesting) period. Nonemployee: different rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7444,8 +7444,8 @@ const questions = [
       "D": "The pooling of interests method"
     },
     "correctAnswer": "A",
-    "explanation": "ASC 805 requires all business combinations to be accounted for using the acquisition method. The pooling of interests method was eliminated in 2001.",
-    "tip": "Business combinations = acquisition method only.",
+    "explanation": "Per ASC 805-10-05-4, all business combinations within scope must use the acquisition method. This requires: (1) identifying the acquirer, (2) determining acquisition date, (3) recognizing/measuring identifiable assets, liabilities, and any NCI, (4) recognizing goodwill or bargain purchase gain. Why other answers are wrong: (B) Equity method is for significant influence (20-50%); (C) Cost method applies to insignificant investments; (D) Pooling of interests was eliminated by FASB in 2001—no longer permitted.",
+    "tip": "Business combinations = ACQUISITION METHOD only. Pooling eliminated in 2001. Steps: Identify acquirer, date, assets/liabilities, goodwill.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7633,8 +7633,8 @@ const questions = [
       "D": "Only those with a definite useful life"
     },
     "correctAnswer": "B",
-    "explanation": "Intangible assets are recognized separately from goodwill if they meet the contractual-legal criterion OR the separability criterion (can be separated and sold, transferred, licensed, rented, or exchanged).",
-    "tip": "Identifiable intangibles: contractual-legal OR separable.",
+    "explanation": "Per ASC 805-20-25-10, intangible assets acquired in a business combination must be recognized separately from goodwill if they meet EITHER the contractual-legal criterion OR the separability criterion. Separability means they can be sold, transferred, licensed, or exchanged. Why other answers are wrong: (A) Contractual is only ONE criterion—separability also qualifies; (C) Previous recording is irrelevant—many identifiable intangibles (customer lists, trade names) weren't on acquiree's books; (D) Indefinite-lived intangibles (trademarks) can also be separately identified. If neither criterion is met, the value remains in goodwill.",
+    "tip": "Identifiable intangibles: Contractual-legal OR Separable. Either criterion qualifies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7654,8 +7654,8 @@ const questions = [
       "D": "Are recognized separately if they meet the separability criterion"
     },
     "correctAnswer": "D",
-    "explanation": "Customer relationships acquired in a business combination are recognized separately from goodwill if they are separable—meaning they can be separated from the entity and sold, transferred, or licensed.",
-    "tip": "Customer relationships = separable intangible asset.",
+    "explanation": "Per ASC 805, customer relationships acquired in a business combination are recognized separately from goodwill if they meet the SEPARABILITY criterion—they can be sold, licensed, or transferred (even if the acquirer doesn't intend to do so). Why other answers are wrong: (A) Customer relationships CAN be recognized—they're commonly identified; (B) Immediate expensing isn't allowed for assets with value; (C) Not always goodwill—if separable, recognize separately. Customer relationships often have definite useful lives based on expected customer attrition.",
+    "tip": "Customer relationships: Separable intangible → Recognize separately. Amortize over expected life.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7675,8 +7675,8 @@ const questions = [
       "D": "$1,000,000"
     },
     "correctAnswer": "D",
-    "explanation": "Total implied value = Consideration ($8,000,000) + NCI at FV ($2,000,000) = $10,000,000. Goodwill = $10,000,000 - FV of net assets ($9,000,000) = $1,000,000.",
-    "tip": "Full goodwill = (Consideration + NCI FV) - FV of net assets.",
+    "explanation": "Under U.S. GAAP full goodwill method, goodwill = (Consideration + NCI at FV) − FV of net assets. **Calculation:** Total value = $8,000,000 + $2,000,000 = $10,000,000. Goodwill = $10,000,000 − $9,000,000 = $1,000,000. Why other answers are wrong: (A) $1,200,000 may use a different calculation method; (B) $2,000,000 equals NCI, not goodwill; (C) $800,000 may exclude NCI's share of goodwill. GAAP requires full (100%) goodwill; NCI gets its share. IFRS allows either full or proportionate (partial) goodwill.",
+    "tip": "GAAP: Full goodwill = (Consideration + NCI FV) − FV of net assets. NCI measured at FV.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -7696,8 +7696,8 @@ const questions = [
       "D": "Proportionate share of identifiable net assets only"
     },
     "correctAnswer": "C",
-    "explanation": "Under U.S. GAAP (ASC 805), NCI must be measured at fair value. This results in recognizing 100% of goodwill (full goodwill method). Note: IFRS allows either fair value or proportionate share.",
-    "tip": "GAAP: NCI at fair value (full goodwill). IFRS: choice.",
+    "explanation": "Per ASC 805-20-30-1, under U.S. GAAP, NCI must be measured at FAIR VALUE. This results in recognizing 100% of goodwill (full goodwill method), including NCI's share. Why other answers are wrong: (A) The parenthetical is correct—GAAP allows fair value ONLY (not choice); (B) Book value isn't used for NCI measurement; (D) Proportionate share is an IFRS option, not GAAP. Key GAAP vs. IFRS difference: GAAP = NCI at FV only (full goodwill). IFRS = choice of FV or proportionate share (partial goodwill).",
+    "tip": "GAAP: NCI at FV only (full goodwill). IFRS: FV OR proportionate share (choice).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7717,8 +7717,8 @@ const questions = [
       "D": "Recorded as if known at the acquisition date (retrospectively)"
     },
     "correctAnswer": "D",
-    "explanation": "Measurement period adjustments are recorded retrospectively as if the adjustment was known at the acquisition date. This includes adjusting goodwill and any related amortization/depreciation.",
-    "tip": "Measurement period: retrospective adjustments (as if known at acquisition).",
+    "explanation": "Per ASC 805-10-25-17, measurement period adjustments are recorded RETROSPECTIVELY as if the new information was known at the acquisition date. Goodwill and prior period financial statements are adjusted. Why other answers are wrong: (A) Adjustments ARE permitted during measurement period (up to 1 year); (B) Retained earnings adjustments apply to error corrections, not measurement period; (C) Prospective treatment applies AFTER the measurement period, not during. Adjustments must reflect facts existing at acquisition date, not subsequent events.",
+    "tip": "Measurement period: Retrospective adjustment (as if known at acquisition date). Max 1 year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7738,8 +7738,8 @@ const questions = [
       "D": "One year from acquisition date"
     },
     "correctAnswer": "D",
-    "explanation": "The measurement period ends when the acquirer has obtained all necessary information about facts and circumstances that existed at acquisition date, or one year from the acquisition date, whichever is earlier.",
-    "tip": "Measurement period: maximum 1 year.",
+    "explanation": "Per ASC 805-10-25-18, the measurement period ends when the acquirer obtains all necessary information about facts and circumstances existing at acquisition date, OR one year from acquisition, WHICHEVER IS EARLIER. Why other answers are wrong: (A) 18 months exceeds the maximum; (B) Two years exceeds the maximum; (C) 6 months may be sufficient but isn't the maximum—1 year is. During the measurement period, provisional amounts can be adjusted retrospectively; after 1 year, changes are treated as corrections or new information.",
+    "tip": "Measurement period: Maximum 1 YEAR. Ends earlier if all information obtained.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7759,8 +7759,8 @@ const questions = [
       "D": "Included in goodwill"
     },
     "correctAnswer": "C",
-    "explanation": "IPR&D acquired in a business combination is recognized as an indefinite-lived intangible asset (tested for impairment, not amortized) until the project is completed (becomes definite-lived) or abandoned (expensed).",
-    "tip": "IPR&D = indefinite-lived until completed or abandoned.",
+    "explanation": "Per ASC 805-20-25-14, in-process R&D acquired in a business combination is recognized as an INDEFINITE-LIVED intangible asset. It's not amortized but tested for impairment annually until: (1) completed → becomes definite-lived and amortized, or (2) abandoned → impaired to zero. Why other answers are wrong: (A) No amortization until completed; (B) Immediate expensing was OLD GAAP (pre-ASC 805); (D) IPR&D meets separability criterion—not included in goodwill. This differs from internal R&D, which is generally expensed as incurred.",
+    "tip": "IPR&D acquired: Indefinite-lived intangible. Completed → Amortize. Abandoned → Impair.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7780,8 +7780,8 @@ const questions = [
       "D": "Retained at its original cost basis"
     },
     "correctAnswer": "A",
-    "explanation": "When an acquirer obtains control in a step acquisition, the previously held equity interest is remeasured to its acquisition-date fair value, with any resulting gain or loss recognized in earnings.",
-    "tip": "Step acquisition: remeasure old investment to FV, recognize gain/loss.",
+    "explanation": "Per ASC 805-10-25-10, when control is achieved in a step acquisition, the previously held equity interest is REMEASURED to acquisition-date fair value. Any gain or loss (FV minus carrying amount) is recognized in earnings. Why other answers are wrong: (B) Write-off is incorrect—the investment is remeasured, not eliminated; (C) Proportionate book value isn't used—FV is required; (D) Historical cost isn't retained—must remeasure to FV. This creates a 'fresh start' where 100% is measured at acquisition-date values.",
+    "tip": "Step acquisition: Remeasure old investment to FV. Gain/loss to earnings. Fresh start at acquisition date.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7801,8 +7801,8 @@ const questions = [
       "D": "Added to goodwill"
     },
     "correctAnswer": "C",
-    "explanation": "The effective settlement of a preexisting relationship is accounted for separately from the business combination. Any gain or loss on settlement is recognized in earnings and not included in determining goodwill.",
-    "tip": "Preexisting relationships: account separately, not part of consideration.",
+    "explanation": "Per ASC 805-10-25-20, settlement of a preexisting relationship (favorable/unfavorable contracts, lawsuits) is accounted for SEPARATELY from the business combination. Any gain or loss goes to earnings, not goodwill. Why other answers are wrong: (A) Settlement cannot be ignored—it has economic substance; (B) Not included in consideration—consideration is what's paid FOR the business; (D) Not added to goodwill—goodwill only captures residual after identifiable assets/liabilities. Example: If acquirer had unfavorable contract with acquiree, settling it creates a gain (relief from obligation).",
+    "tip": "Preexisting relationships: Account SEPARATELY. G/L to earnings, not goodwill.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7822,8 +7822,8 @@ const questions = [
       "D": "The book basis of acquired assets/liabilities equals tax basis"
     },
     "correctAnswer": "A",
-    "explanation": "Deferred taxes are recognized when the fair values assigned to acquired assets and liabilities differ from their tax bases, creating temporary differences. These are recorded at the acquisition date.",
-    "tip": "FV ≠ tax basis = deferred tax in acquisition accounting.",
+    "explanation": "Per ASC 805-740-25, deferred taxes are recognized in acquisition accounting when fair values assigned to acquired assets/liabilities DIFFER from their tax bases, creating temporary differences. Why other answers are wrong: (B) No election—deferred taxes are mandatory when temporary differences exist; (C) Goodwill rarely creates DTLs under GAAP (exception: tax-deductible goodwill); (D) Equal bases means NO temporary difference, so no deferred tax. Example: Inventory with FV $100 but tax basis $60 creates $40 temporary difference × tax rate = DTL.",
+    "tip": "Acquisition accounting: FV ≠ Tax basis → Record DTA/DTL. No election—mandatory.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7843,8 +7843,8 @@ const questions = [
       "D": "Amortized over 40 years"
     },
     "correctAnswer": "B",
-    "explanation": "Under GAAP, goodwill is not amortized. Instead, it is tested for impairment at least annually or more frequently if events indicate possible impairment.",
-    "tip": "Goodwill: no amortization, annual impairment test.",
+    "explanation": "Per ASC 350-20-35-1, goodwill is NOT amortized under GAAP. Instead, it is tested for impairment at least ANNUALLY (or more frequently if triggering events occur). Impairment is measured by comparing carrying amount to fair value of the reporting unit. Why other answers are wrong: (A) 10-year amortization is an alternative for private companies who elect it; (C) Immediate write-off ignores goodwill's future benefit; (D) 40-year amortization was old GAAP (pre-SFAS 142). Note: Private companies may elect to amortize goodwill over 10 years with simplified impairment testing.",
+    "tip": "Goodwill: No amortization (public), annual impairment test. Private company alternative: 10-year amortization.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7864,8 +7864,8 @@ const questions = [
       "D": "$500,000"
     },
     "correctAnswer": "A",
-    "explanation": "Book value net assets = $3,000,000 - $1,500,000 = $1,500,000. FV adjustments: +$50,000 +$200,000 +$100,000 = +$350,000. FV of net assets = $1,850,000. Goodwill = $2,500,000 - $1,850,000 = $650,000.",
-    "tip": "Goodwill = Consideration - (BV net assets + FV adjustments).",
+    "explanation": "Goodwill = Consideration − FV of identifiable net assets acquired. **Calculation:** Step 1: Book value net assets = $3,000,000 − $1,500,000 = $1,500,000. Step 2: FV adjustments = +$50,000 (inventory) +$200,000 (equipment) +$100,000 (trademark) = +$350,000. Step 3: FV of net assets = $1,500,000 + $350,000 = $1,850,000. Step 4: Goodwill = $2,500,000 − $1,850,000 = $650,000. Why other answers are wrong: (B) $850,000 may exclude one adjustment; (C) $1,000,000 may ignore all FV adjustments; (D) $500,000 may use wrong calculation. Entry debits all assets at FV, credits liabilities at FV, credits cash, with goodwill as plug.",
+    "tip": "Goodwill = Consideration − FV of net assets. FV net assets = Book value + All FV adjustments.",
     "calculationRequired": true,
     "timeEstimateSeconds": 150
   },
@@ -7969,8 +7969,8 @@ const questions = [
       "D": "Significant influence over another entity"
     },
     "correctAnswer": "C",
-    "explanation": "Consolidation is required when a parent has a controlling financial interest in a subsidiary. Control is generally evidenced by ownership of more than 50% of voting shares or through variable interest entity (VIE) relationships.",
-    "tip": "Control = consolidation. Significant influence = equity method.",
+    "explanation": "Per ASC 810-10-15, consolidation is required when a parent has a controlling financial interest in another entity. Control is typically >50% voting ownership or being the primary beneficiary of a VIE. All intercompany transactions are eliminated in consolidation. Why other answers are wrong: (A) Debt investments don't create control—these are accounted for under ASC 320; (B) 20% ownership suggests significant influence, requiring equity method (ASC 323); (D) Significant influence = equity method, NOT consolidation.",
+    "tip": "Consolidation = CONTROL (>50% or VIE primary beneficiary). Significant influence (20-50%) = Equity method.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7990,8 +7990,8 @@ const questions = [
       "D": "50% or more of voting shares"
     },
     "correctAnswer": "C",
-    "explanation": "Under the voting interest model, a parent is presumed to have control when it owns more than 50% of the voting shares (majority ownership).",
-    "tip": ">50% voting shares = control under voting interest model.",
+    "explanation": "Per ASC 810, under the voting interest model, control is presumed when a parent owns MORE THAN 50% of voting shares (majority ownership). This triggers consolidation requirements. Why other answers are wrong: (A) 100% is sufficient but not required—>50% is enough; (B) 20% suggests significant influence threshold (equity method), not control; (D) 50% exactly is NOT control—must be MORE than 50%. Note: Control can also arise through VIE model where the entity is primary beneficiary regardless of voting ownership.",
+    "tip": ">50% voting shares = control (consolidate). Exactly 50% ≠ control. VIE uses different criteria.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8011,8 +8011,8 @@ const questions = [
       "D": "The subsidiary's retained earnings only"
     },
     "correctAnswer": "A",
-    "explanation": "The investment in subsidiary account on the parent's books is eliminated against the subsidiary's equity accounts (common stock, APIC, retained earnings) to avoid double-counting.",
-    "tip": "Investment ↔ Sub's equity = eliminated in consolidation.",
+    "explanation": "Per ASC 810, the parent's Investment in Subsidiary account is eliminated against the subsidiary's EQUITY accounts (Common Stock, APIC, Retained Earnings) to avoid double-counting. The subsidiary's equity represents the same net assets as the parent's investment. Why other answers are wrong: (B) Eliminating against total assets would remove the sub's assets, leaving nothing to consolidate; (C) Parent's RE is unaffected by the elimination entry; (D) Sub's RE alone is incomplete—must eliminate against ALL equity components. Any excess = goodwill or bargain purchase gain.",
+    "tip": "Elimination: Investment vs. Sub's entire equity (CS + APIC + RE). Excess = goodwill.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8032,8 +8032,8 @@ const questions = [
       "D": "GAAP prohibits related party transactions"
     },
     "correctAnswer": "C",
-    "explanation": "Intercompany transactions are eliminated because consolidated financial statements present the economic entity as a single unit. An entity cannot sell to itself or owe money to itself.",
-    "tip": "Consolidated entity = one unit, can't transact with itself.",
+    "explanation": "Per ASC 810-10-45-1, intercompany transactions are eliminated because consolidated statements present the economic entity as a SINGLE UNIT. Just as a company cannot sell to itself or owe itself money, intercompany transactions must be removed. Why other answers are wrong: (A) Tax reduction isn't the reason—eliminations are for fair presentation; (B) Intercompany transactions are legal and common; (D) GAAP doesn't prohibit related party transactions—just requires disclosure and proper consolidation. Common eliminations: sales/COGS, receivables/payables, interest, dividends.",
+    "tip": "Consolidation = single economic unit. Eliminate all intercompany balances and transactions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8053,8 +8053,8 @@ const questions = [
       "D": "$12,000"
     },
     "correctAnswer": "D",
-    "explanation": "Total profit = $100,000 - $70,000 = $30,000. Unrealized profit (in ending inventory) = $30,000 × 40% = $12,000. The $18,000 on sold inventory is realized.",
-    "tip": "Unrealized profit = Total profit × % still in inventory.",
+    "explanation": "Only the UNSOLD portion of intercompany inventory contains unrealized profit. **Calculation:** Total profit = $100,000 − $70,000 = $30,000. Unsold = 40%. Unrealized profit = $30,000 × 40% = $12,000. Realized profit (sold to outsiders) = $30,000 × 60% = $18,000. Why other answers are wrong: (A) $28,000 may misapply 40% to something else; (B) $30,000 is TOTAL profit, not unrealized; (C) $40,000 may be 40% of sales, not profit. The $12,000 unrealized profit is eliminated by reducing both inventory and consolidated net income.",
+    "tip": "Unrealized profit = Total profit × % still in inventory. Only eliminate unrealized portion.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -8074,8 +8074,8 @@ const questions = [
       "D": "Goodwill"
     },
     "correctAnswer": "B",
-    "explanation": "In downstream sales (parent to sub), the parent made the sale, so 100% of unrealized profit is eliminated against the parent's (controlling) share of consolidated income. NCI is unaffected.",
-    "tip": "Downstream = parent sold, parent absorbs 100% of unrealized profit.",
+    "explanation": "In DOWNSTREAM sales (parent sells to subsidiary), the PARENT made the sale and recorded the profit. Therefore, 100% of unrealized profit is eliminated against the parent's (controlling) share of consolidated income. NCI is NOT affected because the subsidiary didn't make the sale. Why other answers are wrong: (A) Sub's net income isn't reduced—parent made the sale; (C) NCI isn't affected in downstream sales; (D) Goodwill is unrelated to intercompany profit elimination. Contrast with UPSTREAM (sub to parent) where profit is split between controlling and NCI.",
+    "tip": "Downstream (P→S): 100% to controlling interest. Upstream (S→P): Split by ownership %.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8095,8 +8095,8 @@ const questions = [
       "D": "70% against controlling interest, 30% against NCI"
     },
     "correctAnswer": "D",
-    "explanation": "In upstream sales (sub to parent), the subsidiary made the profit. Unrealized profit is allocated proportionally: 70% against controlling interest and 30% against noncontrolling interest.",
-    "tip": "Upstream = sub sold, profit split by ownership %.",
+    "explanation": "In UPSTREAM sales (subsidiary sells to parent), the SUBSIDIARY made the profit. Unrealized profit is allocated proportionally based on ownership: 70% to controlling interest, 30% to NCI. This reflects that the sub's profit belongs proportionally to all shareholders. Why other answers are wrong: (A) 100% to NCI ignores controlling interest's share; (B) 70% to NCI is backwards—parent owns 70%, NCI owns 30%; (C) 100% to parent ignores NCI's share of sub's profit. Key: The SELLER's ownership structure determines allocation.",
+    "tip": "Upstream: Profit split = ownership %. Here 70% controlling, 30% NCI. Seller's structure matters.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8116,8 +8116,8 @@ const questions = [
       "D": "A liability"
     },
     "correctAnswer": "A",
-    "explanation": "Noncontrolling interest is presented in the equity section of the consolidated balance sheet, separately from the parent's stockholders' equity.",
-    "tip": "NCI = equity, shown separately from parent's equity.",
+    "explanation": "Per ASC 810-10-45-16, noncontrolling interest is presented as a COMPONENT OF EQUITY on the consolidated balance sheet, separately from the parent's stockholders' equity. This reflects that NCI represents outside ownership in consolidated subsidiaries. Why other answers are wrong: (B) NCI is not an asset—it represents ownership claims; (C) Mezzanine presentation is for redeemable preferred stock, not NCI; (D) NCI is not a liability—it's an ownership interest. NCI is also allocated its share of consolidated net income on the income statement.",
+    "tip": "NCI = equity (separate from parent's equity). Also receives share of consolidated net income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8137,8 +8137,8 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "C",
-    "explanation": "Beginning NCI: $130,000. NCI share of income (20%): $20,000. NCI share of dividends (20%): ($4,000). Ending NCI: $130,000 + $20,000 - $4,000 = $146,000.",
-    "tip": "NCI = Beginning + NCI% of income - NCI% of dividends.",
+    "explanation": "NCI is updated each period for its share of subsidiary income and dividends. **Calculation:** Beginning NCI: $130,000. + NCI share of income (20% × $100,000): +$20,000. − NCI share of dividends (20% × $20,000): −$4,000. Ending NCI = $130,000 + $20,000 − $4,000 = $146,000. Why other answers are wrong: (A) $126,000 may subtract income instead of adding; (B) $130,000 ignores post-acquisition changes; (D) $150,000 ignores dividend reduction. NCI increases with income, decreases with dividends—just like parent's equity.",
+    "tip": "NCI rollforward: Beginning + NCI% of income − NCI% of dividends = Ending NCI.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -8158,8 +8158,8 @@ const questions = [
       "D": "Decrease of $6,000"
     },
     "correctAnswer": "D",
-    "explanation": "Unrealized gain = $80,000 - $50,000 = $30,000. Sub depreciates at $80,000/5 = $16,000. Correct depreciation = $50,000/5 = $10,000. Adjustment: reduce depreciation by $6,000 ($16,000 - $10,000).",
-    "tip": "Intercompany fixed asset: reduce depreciation to realize gain over life.",
+    "explanation": "Intercompany gain on equipment is eliminated, then realized through depreciation adjustment over remaining life. **Calculation:** Unrealized gain = $80,000 − $50,000 = $30,000. Sub's depreciation = $80,000 ÷ 5 = $16,000. Correct depreciation = $50,000 ÷ 5 = $10,000. Adjustment = $16,000 − $10,000 = $6,000 DECREASE. Why other answers are wrong: (A) $30,000 is total unrealized gain, not annual adjustment; (B) Adjustment IS needed due to inflated depreciable base; (C) Increase is wrong direction—must reduce inflated depreciation. The $6,000 annual decrease realizes $6,000 of the $30,000 gain each year.",
+    "tip": "Intercompany fixed asset: DECREASE depreciation to realize gain over remaining life.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -8179,8 +8179,8 @@ const questions = [
       "D": "A constructive retirement of debt"
     },
     "correctAnswer": "D",
-    "explanation": "When one member of a consolidated group holds bonds issued by another member, the bonds are considered constructively retired from the consolidated entity's perspective. The intercompany bond investment and payable are eliminated.",
-    "tip": "Affiliate buys affiliate's bonds = constructive retirement.",
+    "explanation": "Per ASC 810, when one member of a consolidated group holds bonds issued by another member, the bonds are considered CONSTRUCTIVELY RETIRED from the consolidated entity's perspective. The entity has effectively used cash to retire its own debt. Why other answers are wrong: (A) Intercompany loan implies new borrowing, not retirement of existing debt; (B) Adjustment IS required—must eliminate bond investment and payable; (C) AFS treatment ignores the intercompany nature. Elimination creates a constructive gain or loss if carrying values differ.",
+    "tip": "Affiliate buys affiliate's bonds = constructive retirement. Eliminate investment and payable; recognize G/L.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8200,8 +8200,8 @@ const questions = [
       "D": "Gain of $485,000"
     },
     "correctAnswer": "B",
-    "explanation": "Constructive retirement gain/loss = Carrying value of debt - Purchase price = $485,000 - $470,000 = $15,000 gain. The entity effectively retired debt for less than its carrying amount.",
-    "tip": "Constructive gain = Debt carrying value - Price paid by affiliate.",
+    "explanation": "Constructive retirement occurs when one affiliate purchases another's bonds from outsiders. **Calculation:** Gain/Loss = Carrying value of debt − Purchase price = $485,000 − $470,000 = $15,000 GAIN. The consolidated entity effectively retired debt for less than carrying amount. Why other answers are wrong: (A) Loss would occur if purchase price > carrying value; (C) Gain/loss IS recognized when carrying values differ; (D) $485,000 is carrying value, not gain. Entry eliminates both the bond payable ($485,000) and bond investment ($470,000), with $15,000 gain to consolidated income.",
+    "tip": "Constructive G/L = Debt carrying value − Purchase price. Paid less = Gain. Paid more = Loss.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -8809,8 +8809,8 @@ const questions = [
       "D": "Involves importing or exporting goods"
     },
     "correctAnswer": "C",
-    "explanation": "A foreign currency transaction is one denominated or requiring settlement in a currency other than the entity's functional currency. The location of the other party is not the determining factor.",
-    "tip": "Foreign currency = denominated in other than functional currency.",
+    "explanation": "Per ASC 830-10-20, a foreign currency transaction is one denominated or requiring settlement in a currency other than the entity's functional currency. The counterparty's location is irrelevant—a US company could have a USD transaction with a Japanese company, or a JPY transaction with a US company. Why other answers are wrong: (A) Payment timing doesn't define foreign currency transactions; (B) Transacting with a foreign company doesn't automatically mean foreign currency—it depends on settlement currency; (D) Import/export refers to trade, not currency denomination.",
+    "tip": "Foreign currency = denominated in currency OTHER THAN functional currency. Location of counterparty is irrelevant.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9229,8 +9229,8 @@ const questions = [
       "D": "Statement of retained earnings"
     },
     "correctAnswer": "B",
-    "explanation": "NFPs prepare a statement of financial position (similar to a balance sheet), statement of activities, statement of cash flows, and for health and welfare organizations, a statement of functional expenses.",
-    "tip": "NFPs: Statement of Financial Position (not balance sheet).",
+    "explanation": "Per ASC 958, NFPs must prepare: (1) Statement of Financial Position, (2) Statement of Activities, (3) Statement of Cash Flows, and (4) Statement of Functional Expenses (required for all NFPs, optional presentation within activities statement). NFPs use unique terminology—'net assets' instead of equity. Why other answers are wrong: (A) 'Balance sheet' is commercial terminology; (C) NFPs have no stockholders, so no stockholders' equity statement; (D) NFPs have no 'retained earnings'—they have net assets.",
+    "tip": "NFP statements: Financial Position, Activities, Cash Flows, Functional Expenses. Use 'net assets,' NOT equity/retained earnings.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9250,8 +9250,8 @@ const questions = [
       "D": "Unrestricted, temporarily restricted, permanently restricted"
     },
     "correctAnswer": "A",
-    "explanation": "Under ASU 2016-14, NFPs use two classes of net assets: (1) net assets with donor restrictions and (2) net assets without donor restrictions.",
-    "tip": "Two classes: with donor restrictions, without donor restrictions.",
+    "explanation": "Per ASU 2016-14, NFPs classify net assets into only TWO categories: (1) net assets WITH donor restrictions and (2) net assets WITHOUT donor restrictions. This simplified the previous three-category model. Why other answers are wrong: (B) Current/noncurrent is a balance sheet classification, not a net asset classification; (C) Operating/non-operating may describe activities but isn't a net asset classification; (D) Unrestricted/temporarily restricted/permanently restricted was the OLD three-class system replaced by ASU 2016-14. The new two-class system provides clearer information about liquidity and restrictions.",
+    "tip": "ASU 2016-14: TWO classes only—with donor restrictions, without donor restrictions (not the old 3 classes).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9271,8 +9271,8 @@ const questions = [
       "D": "Purpose or time restrictions imposed by donors"
     },
     "correctAnswer": "D",
-    "explanation": "Net assets with donor restrictions arise from explicit donor-imposed restrictions (purpose or time). Board-designated funds are internally restricted and remain in net assets without donor restrictions.",
-    "tip": "Donor-imposed = with restrictions. Board-designated = without restrictions.",
+    "explanation": "Per ASC 958, net assets WITH donor restrictions arise from explicit DONOR-IMPOSED purpose or time restrictions. The restriction must come from the donor, not from the organization internally. Why other answers are wrong: (A) Management-imposed limits are internal decisions, not donor restrictions; (B) Legal/industry requirements aren't donor restrictions—they're regulatory; (C) Board-designated restrictions are INTERNAL decisions and remain in 'without donor restrictions.' Key: Only EXTERNAL donor stipulations create the 'with donor restrictions' classification.",
+    "tip": "Donor-imposed (external) = with restrictions. Board-designated (internal) = without restrictions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9292,8 +9292,8 @@ const questions = [
       "D": "Over the period of the pledge"
     },
     "correctAnswer": "B",
-    "explanation": "Unconditional promises to give are recognized as contribution revenue when the promise is made, at fair value (present value if due in more than one year).",
-    "tip": "Unconditional pledge = revenue when promised.",
+    "explanation": "Per ASC 958-605, unconditional promises to give (pledges) are recognized as contribution revenue WHEN THE PROMISE IS MADE, measured at fair value (present value if due beyond one year). No waiting for cash receipt. Why other answers are wrong: (A) Waiting for cash is cash basis, not accrual; (C) Purpose fulfillment affects reclassification, not initial recognition; (D) Recognizing over time is amortization, not appropriate for pledges. Unconditional = no barriers to receiving the gift. If multi-year, record at present value and recognize discount amortization as contribution revenue.",
+    "tip": "Unconditional pledge = revenue when PROMISED (not when cash received). PV if >1 year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9313,8 +9313,8 @@ const questions = [
       "D": "Is always for a larger amount"
     },
     "correctAnswer": "A",
-    "explanation": "A conditional promise depends on a barrier being overcome (future uncertain event) and a right of return/release exists. Unconditional promises may have restrictions but no barriers.",
-    "tip": "Conditional = barrier + right of return. Unconditional = no barrier.",
+    "explanation": "Per ASC 958-605, a CONDITIONAL promise requires BOTH: (1) a barrier—a future uncertain event must occur, AND (2) a right of return (assets) or release (future payments) if the barrier isn't met. Unconditional promises may have purpose/time RESTRICTIONS but NO BARRIERS. Why other answers are wrong: (B) Written form isn't required for either type; (C) Purpose restrictions can exist for both conditional and unconditional promises; (D) Amount has nothing to do with conditional vs unconditional. Key distinction: Condition = barrier to receiving; Restriction = limitation on spending after receipt.",
+    "tip": "Conditional = barrier + right of return/release. Restriction ≠ condition. Don't confuse them!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9334,8 +9334,8 @@ const questions = [
       "D": "The conditions are substantially met or explicitly waived"
     },
     "correctAnswer": "D",
-    "explanation": "Conditional contributions are recognized when the conditions (barriers) are substantially met or explicitly waived by the donor. Until then, receipts are recorded as refundable advances.",
-    "tip": "Conditional: recognize when barrier is overcome.",
+    "explanation": "Per ASC 958-605, conditional contributions are recognized as revenue WHEN CONDITIONS ARE SUBSTANTIALLY MET or explicitly waived by the donor. Until then, cash received is recorded as a REFUNDABLE ADVANCE (liability), not revenue. Why other answers are wrong: (A) Cash receipt alone doesn't trigger recognition if conditions aren't met; (B) Fiscal year-end is arbitrary—conditions must be met; (C) Promise alone doesn't trigger recognition for conditional contributions (that's unconditional treatment). Conditional contributions require demonstrating the barrier has been overcome before recognizing revenue.",
+    "tip": "Conditional: revenue when barrier overcome. Until then, cash received = refundable advance (liability).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9355,8 +9355,8 @@ const questions = [
       "D": "Create or enhance nonfinancial assets OR require specialized skills and would typically be purchased"
     },
     "correctAnswer": "D",
-    "explanation": "Contributed services are recognized if they (1) create or enhance nonfinancial assets, or (2) require specialized skills, are provided by individuals possessing those skills, and would typically need to be purchased.",
-    "tip": "Contributed services: enhance assets OR specialized skills that would be purchased.",
+    "explanation": "Per ASC 958-605-25-16, contributed services are recognized as revenue if they: (1) Create or enhance nonfinancial assets (like a volunteer building a fence), OR (2) Require specialized skills (accounting, legal, medical), are provided by persons with those skills, and would typically need to be purchased if not donated. Why other answers are wrong: (A) No dollar threshold exists for contributed services; (B) Regular/recurring basis isn't a recognition criterion; (C) Licensed professionals is too narrow—specialized skills don't require licensure. Both criteria require measuring fair value of the services contributed.",
+    "tip": "Contributed services: (1) enhance assets OR (2) specialized skills + would typically be purchased.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9376,8 +9376,8 @@ const questions = [
       "D": "Recognized at fair value"
     },
     "correctAnswer": "A",
-    "explanation": "General volunteer services that don't require specialized skills and wouldn't typically be purchased are not recognized as contribution revenue, though they may be disclosed.",
-    "tip": "General volunteering = no revenue recognition.",
+    "explanation": "Per ASC 958-605, general volunteer services (ushering, stuffing envelopes, serving food) that don't require specialized skills and wouldn't typically be purchased are NOT recognized as contribution revenue. They may be disclosed in notes but aren't recorded in the financial statements. Why other answers are wrong: (B) Footnote disclosure is optional, not required; (C) Minimum wage valuation isn't used for non-recognized services; (D) Fair value recognition applies only to services meeting the recognition criteria. General volunteering is valuable but doesn't meet GAAP recognition requirements.",
+    "tip": "General volunteering = NO revenue recognition. May disclose in notes but not in financial statements.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9397,8 +9397,8 @@ const questions = [
       "D": "Deferred revenue"
     },
     "correctAnswer": "C",
-    "explanation": "Contributions with donor-imposed time or purpose restrictions are reported as revenue increasing net assets with donor restrictions. When restrictions are met, amounts are reclassified.",
-    "tip": "Donor restriction = revenue in restricted class.",
+    "explanation": "Per ASC 958-605, contributions with donor-imposed time or purpose restrictions are reported as REVENUE increasing net assets WITH DONOR RESTRICTIONS. It's still revenue (not a liability), just classified in the restricted column. When restrictions are satisfied, amounts are RECLASSIFIED to without restrictions. Why other answers are wrong: (A) Not a liability—the contribution is revenue, just restricted; (B) Cannot be reported as 'without restrictions' if donor imposed restrictions; (D) Deferred revenue applies to exchange transactions, not contributions. Restrictions affect classification, not whether it's revenue.",
+    "tip": "Donor restrictions = revenue WITH donor restrictions. Still revenue! Reclassify when restriction met.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9418,8 +9418,8 @@ const questions = [
       "D": "A gain"
     },
     "correctAnswer": "C",
-    "explanation": "When restrictions are satisfied, a reclassification entry moves amounts from 'with donor restrictions' to 'without donor restrictions' (net assets released from restrictions).",
-    "tip": "Restriction satisfied = reclassification between net asset classes.",
+    "explanation": "Per ASC 958-605, when a time or purpose restriction is satisfied, the NFP records a RECLASSIFICATION—'net assets released from restrictions.' This decreases 'with donor restrictions' and increases 'without donor restrictions.' It's a transfer between net asset classes, not new revenue or expense. Why other answers are wrong: (A) Not an expense reduction—no expense is involved; (B) Not additional revenue—the contribution was already recognized; (D) Not a gain—it's a reclassification, not a performance event. The release is shown on the Statement of Activities in both columns (decrease restricted, increase unrestricted).",
+    "tip": "Restriction satisfied = reclassification (net assets released). NOT new revenue or expense.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10069,8 +10069,8 @@ const questions = [
       "D": "Changes in an entity's equity"
     },
     "correctAnswer": "C",
-    "explanation": "The statement of cash flows provides information about cash receipts and payments during a period, helping users assess an entity's ability to generate cash and meet obligations.",
-    "tip": "Cash flow statement = cash in and cash out.",
+    "explanation": "Per ASC 230-10-10-1, the statement of cash flows provides information about an entity's cash receipts (inflows) and cash payments (outflows) during a period, classified into operating, investing, and financing activities. It helps users assess liquidity, solvency, and financial flexibility. Why other answers are wrong: (A) Financial position at a point in time is the balance sheet; (B) Profitability is shown on the income statement; (D) Changes in equity are shown in the statement of stockholders' equity.",
+    "tip": "SCF = Cash IN and Cash OUT, classified as Operating, Investing, Financing. Links balance sheet changes to cash.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11224,8 +11224,8 @@ const questions = [
       "D": "Only companies that pay dividends"
     },
     "correctAnswer": "B",
-    "explanation": "EPS is required for public entities with common stock or potential common stock (like options, warrants, convertible securities) trading in a public market.",
-    "tip": "EPS required: public companies with common or potential common stock.",
+    "explanation": "Per ASC 260-10-15-2, EPS disclosure is required ONLY for public business entities whose common stock or potential common stock (options, warrants, convertibles) trades in a public market. Private companies are not required to present EPS but may elect to do so. Why other answers are wrong: (A) Private companies are NOT required to report EPS; (C) Revenue size doesn't determine EPS requirement—public vs. private does; (D) Dividends are irrelevant to EPS reporting requirements.",
+    "tip": "EPS required: PUBLIC entities with common stock or POTENTIAL common stock. Private companies = optional.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11245,8 +11245,8 @@ const questions = [
       "D": "Operating income ÷ Total shares issued"
     },
     "correctAnswer": "B",
-    "explanation": "Basic EPS = (Net income - Preferred dividends) ÷ Weighted-average common shares outstanding. Preferred dividends reduce income available to common shareholders.",
-    "tip": "Basic EPS: (NI - Preferred dividends) ÷ Weighted-avg shares.",
+    "explanation": "Per ASC 260, Basic EPS = (Net income − Preferred dividends) ÷ Weighted-average common shares outstanding. Preferred dividends are subtracted because they reduce income available to COMMON shareholders. Why other answers are wrong: (A) Ending shares ignores share changes during year—must use weighted-average; (C) Beginning shares also ignores mid-year changes; (D) Operating income ignores non-operating items, and 'total shares issued' includes treasury stock. Two key elements: (1) subtract preferred dividends from numerator, (2) use weighted-average shares in denominator.",
+    "tip": "Basic EPS: (NI − Preferred dividends) ÷ Weighted-avg common shares. Both elements are critical.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11266,8 +11266,8 @@ const questions = [
       "D": "100,000"
     },
     "correctAnswer": "B",
-    "explanation": "100,000 × 3/12 = 25,000 (Jan-Mar). 120,000 × 9/12 = 90,000 (Apr-Dec). Total = 115,000. Or: 100,000 + (20,000 × 9/12) = 115,000.",
-    "tip": "Weight shares by months outstanding.",
+    "explanation": "Weighted-average shares weights each share count by the fraction of the year it was outstanding. **Calculation:** Method 1: 100,000 × 3/12 = 25,000 (Jan-Mar) + 120,000 × 9/12 = 90,000 (Apr-Dec) = 115,000. Method 2: 100,000 + (20,000 × 9/12) = 100,000 + 15,000 = 115,000. Why other answers are wrong: (A) 110,000 may use 6 months instead of 9; (C) 120,000 is ending shares, ignoring weighting; (D) 100,000 is beginning shares, ignoring the April issuance. Stock splits and stock dividends are retroactively applied to all prior periods.",
+    "tip": "Weight shares by months outstanding. Splits/dividends = retroactive adjustment.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -11308,8 +11308,8 @@ const questions = [
       "D": "Only dividends actually declared"
     },
     "correctAnswer": "A",
-    "explanation": "For cumulative preferred, the current period's dividend requirement is deducted from net income whether or not declared, because cumulative dividends are owed regardless.",
-    "tip": "Cumulative preferred: deduct annual requirement even if not declared.",
+    "explanation": "Per ASC 260-10-45-11, for cumulative preferred stock, the FULL annual dividend requirement is deducted from net income WHETHER OR NOT declared. This is because cumulative dividends accumulate as a claim against the company. Why other answers are wrong: (B) Zero ignores the legal obligation—arrears still affect common shareholders' claim; (C) Cash paid may not equal the full requirement; (D) 'Declared' rule applies to NONCUMULATIVE preferred, not cumulative. Key distinction: Cumulative = deduct annual requirement; Noncumulative = deduct only if declared.",
+    "tip": "Cumulative preferred: Deduct annual requirement regardless of declaration. Noncumulative: Deduct only declared.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11329,8 +11329,8 @@ const questions = [
       "D": "Cumulative dividends in arrears"
     },
     "correctAnswer": "B",
-    "explanation": "For noncumulative preferred, only dividends actually declared during the period are deducted. If not declared, noncumulative dividends are lost.",
-    "tip": "Noncumulative: deduct only what's declared.",
+    "explanation": "Per ASC 260-10-45-11, for noncumulative preferred stock, ONLY dividends actually declared during the period are deducted in EPS. If not declared, noncumulative dividends are forfeited—they do NOT accumulate. Why other answers are wrong: (A) Full annual amount applies to CUMULATIVE preferred, not noncumulative; (C) Three-year average has no basis in GAAP; (D) Arrears concept doesn't apply to noncumulative—undeclared dividends are lost forever. Key: Noncumulative preferred holders take the risk of non-declaration.",
+    "tip": "Noncumulative: Deduct ONLY dividends declared. Undeclared = forfeited (no arrears concept).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11350,8 +11350,8 @@ const questions = [
       "D": "EPS using ending shares only"
     },
     "correctAnswer": "C",
-    "explanation": "Diluted EPS shows the worst-case (lowest) EPS assuming all dilutive convertible securities and stock options are converted/exercised.",
-    "tip": "Diluted EPS = worst case if all dilutive securities convert.",
+    "explanation": "Per ASC 260, diluted EPS reflects the WORST-CASE (lowest) EPS by assuming all potentially dilutive securities (options, warrants, convertible debt/preferred) are converted or exercised. This shows stockholders the maximum potential dilution. Why other answers are wrong: (A) EPS before preferred dividends isn't a GAAP concept; (B) MAXIMUM EPS is the opposite—diluted shows minimum; (D) Ending shares ignores weighted-average requirement. Only DILUTIVE securities are included; antidilutive securities (that would increase EPS) are excluded.",
+    "tip": "Diluted EPS = worst-case/lowest EPS. Include only dilutive securities; exclude antidilutive.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11371,8 +11371,8 @@ const questions = [
       "D": "It has no effect on EPS"
     },
     "correctAnswer": "C",
-    "explanation": "A security is antidilutive if including it increases EPS (or decreases loss per share). Antidilutive securities are excluded from diluted EPS.",
-    "tip": "Antidilutive = increases EPS (exclude from diluted).",
+    "explanation": "Per ASC 260-10-45-17, a security is ANTIDILUTIVE if including it would INCREASE EPS (or decrease loss per share). Antidilutive securities are EXCLUDED from diluted EPS because including them would misrepresent the worst-case scenario. Why other answers are wrong: (A) Convertibility doesn't determine dilutive vs. antidilutive; (B) DECREASING EPS means it IS dilutive (include it); (D) No effect is still included if not harmful. Test each security individually; even if some are dilutive, others may be antidilutive and excluded.",
+    "tip": "Antidilutive = INCREASES EPS → Exclude. Dilutive = DECREASES EPS → Include.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11392,8 +11392,8 @@ const questions = [
       "D": "Option shares minus shares assumed repurchased with proceeds"
     },
     "correctAnswer": "D",
-    "explanation": "Treasury stock method: assume options exercised, use proceeds to buy back shares at average market price. Net shares added = options exercised - shares repurchased.",
-    "tip": "Treasury stock method: net new shares = options - buyback.",
+    "explanation": "Per ASC 260-10-45-22, the treasury stock method assumes: (1) options are exercised, (2) proceeds are used to repurchase shares at average market price. Net shares added = Options exercised − Shares repurchased. Why other answers are wrong: (A) Exercise price determines proceeds, not shares added; (B) Fair value is used for repurchase price, but answer is incomplete; (C) ALL option shares ignores the assumed buyback. Formula: Proceeds = Options × Exercise price. Repurchased = Proceeds ÷ Avg market price. Net shares = Options − Repurchased.",
+    "tip": "Treasury stock: Net shares = Options − (Proceeds ÷ Avg market price). Only net increase is added.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11413,8 +11413,8 @@ const questions = [
       "D": "8,000"
     },
     "correctAnswer": "C",
-    "explanation": "Proceeds = 10,000 × $20 = $200,000. Shares repurchased = $200,000 ÷ $25 = 8,000. Net shares added = 10,000 - 8,000 = 2,000.",
-    "tip": "Net shares = Options - (Proceeds ÷ Market price).",
+    "explanation": "Treasury stock method calculates net incremental shares. **Calculation:** Proceeds = 10,000 × $20 = $200,000. Shares repurchased = $200,000 ÷ $25 = 8,000. Net shares added = 10,000 − 8,000 = 2,000. Why other answers are wrong: (A) 10,000 ignores the assumed buyback; (B) 0 would occur if exercise price = market price; (D) 8,000 is shares repurchased, not net addition. Options are dilutive only when exercise price < market price (options are 'in the money'). Here $20 < $25, so dilutive.",
+    "tip": "Net shares = Options − (Proceeds ÷ Market price). In the money (EP < MP) = dilutive.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -11434,8 +11434,8 @@ const questions = [
       "D": "Exercise price is below average market price"
     },
     "correctAnswer": "C",
-    "explanation": "When exercise price > average market price, options are 'out of the money.' Including them would reduce shares (company would buy back more than issued), which is antidilutive.",
-    "tip": "Exercise price > market price = antidilutive (exclude).",
+    "explanation": "Stock options are antidilutive when exercise price EXCEEDS average market price ('out of the money'). In this case, proceeds would buy back MORE shares than issued, reducing the denominator and increasing EPS. Why other answers are wrong: (A) Time to expiration doesn't affect the dilutive test; (B) Equal prices result in zero net shares—not truly antidilutive but not included either; (D) Exercise price BELOW market = 'in the money' = DILUTIVE (include them). Mnemonic: Out of the money = Out of the calculation.",
+    "tip": "Out of the money (EP > MP) = antidilutive → EXCLUDE. In the money (EP < MP) = dilutive → INCLUDE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11455,8 +11455,8 @@ const questions = [
       "D": "Adding shares only; no income adjustment"
     },
     "correctAnswer": "A",
-    "explanation": "If-converted method: assume bonds converted at beginning of period. Add back interest expense (net of tax) to numerator; add converted shares to denominator.",
-    "tip": "Convertible bonds: add back interest (net of tax) + add shares.",
+    "explanation": "Per ASC 260-10-45-40, the if-converted method for convertible bonds assumes conversion at the BEGINNING of period (or issue date if later). Adjustments: (1) ADD BACK interest expense (net of tax) to numerator—bonds would be eliminated; (2) ADD converted shares to denominator. Why other answers are wrong: (B) Subtracting interest is backwards—no bonds = no interest expense; (C) Must assume conversion even if not actually converted; (D) Income adjustment IS required because interest expense would be eliminated. Net-of-tax means Interest × (1 − Tax rate).",
+    "tip": "Convertible bonds: Add back interest (net of tax) to numerator + Add shares to denominator.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11749,8 +11749,8 @@ const questions = [
       "D": "The present value of future cash flows"
     },
     "correctAnswer": "B",
-    "explanation": "ASC 820 defines fair value as the exit price—the price to sell an asset or transfer a liability in an orderly transaction between market participants at the measurement date.",
-    "tip": "Fair value = exit price (selling/transferring, not buying).",
+    "explanation": "Per ASC 820-10-20, fair value is the EXIT PRICE—the price to sell an asset or transfer a liability in an orderly transaction between market participants at the measurement date. Key: It's a market-based measurement, not entity-specific. Why other answers are wrong: (A) Historical cost adjusted for depreciation is book value, not fair value; (C) Replacement cost is an ENTRY price (cost to buy), not exit price; (D) Present value may be used to ESTIMATE fair value but isn't the definition itself.",
+    "tip": "Fair value = EXIT price (to SELL asset or TRANSFER liability). Market participant perspective, not entity-specific.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12694,8 +12694,8 @@ const questions = [
       "D": "30 days after year-end"
     },
     "correctAnswer": "B",
-    "explanation": "The subsequent event period extends from the balance sheet date until the financial statements are issued (SEC filers) or available to be issued (non-SEC filers).",
-    "tip": "Subsequent event period: balance sheet date → issuance date.",
+    "explanation": "Per ASC 855-10-25-1, the subsequent event period runs from the balance sheet date until financial statements are issued (SEC filers) or available to be issued (non-SEC filers). Events during this period may require adjustment or disclosure. Why other answers are wrong: (A) Year-end is the START of the period, not the end; (C) Board meeting doesn't define the period end; (D) 30 days is arbitrary—the actual issuance date determines the period.",
+    "tip": "Subsequent event period: Balance sheet date → F/S issued (SEC) or available to be issued (non-SEC). Two types: Recognized or Disclosed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13219,8 +13219,8 @@ const questions = [
       "D": "A government regulatory agency"
     },
     "correctAnswer": "B",
-    "explanation": "Related parties include affiliates, principal owners, management, members of their immediate families, and entities in which the company has investments with significant influence.",
-    "tip": "Related parties: affiliates, owners, management, their families.",
+    "explanation": "Per ASC 850-10-20, related parties include: (1) affiliates under common ownership/control, (2) principal owners (>10% ownership), (3) management, (4) immediate family members of owners/management, (5) equity method investees, and (6) any party that can significantly influence the entity. Why other answers are wrong: (A) Competitors are not related parties unless there's common ownership; (C) Major suppliers with arm's-length transactions are NOT related parties; (D) Government agencies are not related parties.",
+    "tip": "Related parties: Affiliates, >10% owners, management, their families, equity investees. Key = influence, not just transaction volume.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13345,8 +13345,8 @@ const questions = [
       "D": "The entity will continue operating for the foreseeable future"
     },
     "correctAnswer": "D",
-    "explanation": "Going concern assumes the entity will continue operating for the foreseeable future without the intent or necessity to liquidate, cease trading, or seek protection from creditors.",
-    "tip": "Going concern = entity will keep operating.",
+    "explanation": "Per ASC 205-40, the going concern assumption means the entity is expected to continue operating for at least one year from the date financial statements are issued (or available to be issued). Management must evaluate and disclose substantial doubt about going concern. Why other answers are wrong: (A) Profitability is not required—many startups operate at losses; (B) Unlimited resources is unrealistic and not part of the definition; (C) Expected liquidation within one year would trigger going concern doubt, not support it.",
+    "tip": "Going concern = continue operating for 12+ months from F/S issuance. Management must assess and disclose substantial doubt.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13639,8 +13639,8 @@ const questions = [
       "D": "Requires no initial net investment or a small one relative to similar contracts"
     },
     "correctAnswer": "B",
-    "explanation": "Derivatives have: (1) underlying and notional, (2) little or no initial net investment, and (3) net settlement capability. Physical settlement is not required; net settlement distinguishes derivatives.",
-    "tip": "Derivative: underlying + little investment + net settlement.",
+    "explanation": "Per ASC 815-10-15-83, a derivative has THREE characteristics: (1) One or more underlyings and notional amounts, (2) Little or no initial net investment (leverage), (3) Net settlement capability. Physical settlement is NOT required—in fact, the ability to settle net (or by equivalent means) is what distinguishes derivatives. Why other answers are wrong: (A) Net settlement IS a characteristic; (C) Underlying/notional IS a characteristic; (D) Little initial investment IS a characteristic. Only (B) physical settlement is NOT required.",
+    "tip": "Derivative = (1) Underlying + Notional, (2) Little/no investment, (3) NET settlement. Physical settlement NOT required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14164,8 +14164,8 @@ const questions = [
       "D": "Explicitly includes prudence (conservatism) as a component of faithful representation"
     },
     "correctAnswer": "D",
-    "explanation": "The IFRS conceptual framework explicitly includes prudence (the exercise of caution under uncertainty) as supporting faithful representation. GAAP removed conservatism as a specific qualitative characteristic.",
-    "tip": "IFRS: prudence in framework. GAAP: removed conservatism.",
+    "explanation": "The IFRS Conceptual Framework (2018) explicitly includes prudence (exercising caution under uncertainty) as supporting neutral faithful representation. US GAAP removed conservatism as a standalone characteristic in its 2010 framework update. Why other answers are wrong: (A) Both GAAP and IFRS recognize assets and liabilities; (B) Both use accrual basis, not cash basis; (C) IFRS absolutely has a conceptual framework (since 1989, updated 2018). Only prudence/conservatism is a real framework difference.",
+    "tip": "IFRS: PRUDENCE explicitly in framework. GAAP: REMOVED conservatism in 2010. Both use accrual basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -19330,8 +19330,8 @@ const questions = [
       "D": "The bonds are callable"
     },
     "correctAnswer": "C",
-    "explanation": "When the stated (coupon) rate exceeds the market rate, investors pay more than face value (premium) to earn the higher stated interest.",
-    "tip": "Stated > Market = Premium; Stated < Market = Discount.",
+    "explanation": "Per ASC 835, bonds sell at a premium when the stated (coupon) rate EXCEEDS the market (effective) rate. Investors pay MORE than face value to secure the higher-than-market interest payments. The premium is then amortized over the bond's life, reducing interest expense below cash paid. Why other answers are wrong: (A) Stated = market results in issuance AT PAR (face value); (B) Stated < market results in a DISCOUNT; (D) Callable features affect pricing but don't define premium/discount.",
+    "tip": "PREMIUM: Stated > Market (investors pay MORE). DISCOUNT: Stated < Market (investors pay LESS). PAR: Stated = Market.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -19372,8 +19372,8 @@ const questions = [
       "D": "$5,000"
     },
     "correctAnswer": "B",
-    "explanation": "Interest expense = $480,000 × 6% = $28,800. Cash interest = $500,000 × 5% = $25,000. Discount amortization = $28,800 - $25,000 = $3,800.",
-    "tip": "Discount amortization = Interest expense - Cash interest paid.",
+    "explanation": "Under the effective interest method, discount amortization = Interest expense − Cash paid. **Calculation:** Interest expense = Carrying value × Market rate = $480,000 × 6% = $28,800. Cash interest = Face value × Stated rate = $500,000 × 5% = $25,000. Discount amortization = $28,800 − $25,000 = $3,800. Why other answers are wrong: (A) $25,000 is the cash interest, not amortization; (C) $4,800 may use incorrect rate; (D) $5,000 may be a straight-line calculation. The $3,800 increases carrying value for Year 2 calculations.",
+    "tip": "Discount amortization = Interest expense − Cash paid. Increases carrying value each period.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -19393,8 +19393,8 @@ const questions = [
       "D": "Equals the cash interest payments"
     },
     "correctAnswer": "B",
-    "explanation": "Premium amortization reduces interest expense below cash paid. Total interest expense = Total cash paid - Premium.",
-    "tip": "Premium: interest expense < cash paid.",
+    "explanation": "When bonds are issued at a premium, the premium is AMORTIZED, reducing interest expense below cash interest paid each period. Total interest cost = Total cash paid − Premium received. Why other answers are wrong: (A) Expense EXCEEDING cash is the DISCOUNT pattern (expense > cash); (C) Expense doesn't vary randomly—it follows the effective interest pattern; (D) Expense EQUALS cash only when issued at PAR. Premium amortization: Dr. Premium, Cr. Interest Expense (reduces expense). Discount amortization: Dr. Interest Expense, Cr. Discount (increases expense).",
+    "tip": "Premium: Interest expense < Cash paid. Discount: Interest expense > Cash paid. Par: Expense = Cash.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -19414,8 +19414,8 @@ const questions = [
       "D": "Reported as a direct deduction from the carrying amount of the debt"
     },
     "correctAnswer": "D",
-    "explanation": "Bond issuance costs are presented as a direct deduction from the carrying amount of the bond liability (similar to a discount) and amortized over the bond term.",
-    "tip": "Issuance costs = deduction from bond liability, amortized like discount.",
+    "explanation": "Per ASC 835-30, bond issuance costs (legal fees, underwriting, printing) are presented as a DIRECT DEDUCTION from the carrying amount of the debt liability. They're amortized over the bond term using effective interest method, effectively increasing interest expense. Why other answers are wrong: (A) Adding to face value would increase the liability incorrectly; (B) Immediate expensing was old GAAP treatment, no longer allowed; (C) Recording as a separate asset is no longer permitted under current GAAP. Issuance costs reduce initial carrying value like a discount.",
+    "tip": "Issuance costs = deduction from bond liability (like additional discount). Amortize over bond term.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -19435,8 +19435,8 @@ const questions = [
       "D": "$5,000 gain"
     },
     "correctAnswer": "A",
-    "explanation": "Loss = Reacquisition price - Carrying value = $490,000 - $485,000 = $5,000 loss.",
-    "tip": "Extinguishment G/L = Carrying value - Price paid (gain if positive).",
+    "explanation": "Per ASC 470-50, gain/loss on debt extinguishment = Carrying value − Reacquisition price. **Calculation:** Carrying value = $500,000 − $15,000 discount = $485,000. Reacquisition price = $490,000. Loss = $490,000 − $485,000 = $5,000. Why other answers are wrong: (B) $10,000 gain reverses the calculation; (C) $10,000 loss may use face value; (D) $5,000 gain has wrong direction. Rule: If you pay MORE than carrying value = LOSS. If you pay LESS than carrying value = GAIN. Loss is recognized in income from continuing operations.",
+    "tip": "Extinguishment: Pay > Carrying = Loss. Pay < Carrying = Gain. Report in continuing operations.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -19456,8 +19456,8 @@ const questions = [
       "D": "$60,000"
     },
     "correctAnswer": "C",
-    "explanation": "Call price = $1,000,000 × 102% = $1,020,000. Loss = $1,020,000 - $980,000 = $40,000.",
-    "tip": "Call at 102 = pay 102% of face value.",
+    "explanation": "When bonds are called, compare the call price to carrying value to determine gain/loss. **Calculation:** Call price = $1,000,000 × 102% = $1,020,000. Carrying value = $980,000. Loss = $1,020,000 − $980,000 = $40,000. Why other answers are wrong: (A) $0 ignores the call premium and discount; (B) $20,000 only considers the unamortized discount ($1,000,000 − $980,000); (D) $60,000 may add instead of calculating difference. The 'call at 102' means paying a 2% call premium above face value.",
+    "tip": "Call price = Face × Call % (e.g., 102% = 1.02). Loss = Call price − Carrying value if positive.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -19477,8 +19477,8 @@ const questions = [
       "D": "$192,000"
     },
     "correctAnswer": "C",
-    "explanation": "Common stock = 4,000 × $10 = $40,000. Carrying value used as total equity. APIC = $192,000 - $40,000 = $152,000. No gain or loss on conversion.",
-    "tip": "Book value conversion: Equity = carrying value; no G/L.",
+    "explanation": "Under the BOOK VALUE method, the bond's carrying value becomes the total equity recorded—NO gain or loss is recognized. **Calculation:** Common Stock = 4,000 shares × $10 par = $40,000. Total equity = Carrying value = $192,000. APIC = $192,000 − $40,000 = $152,000. Entry: Dr. Bonds Payable $192,000; Cr. Common Stock $40,000; Cr. APIC $152,000. Why other answers are wrong: (A) $0 APIC ignores excess over par; (B) $40,000 is just Common Stock; (D) $192,000 is total equity, not just APIC. Book value method is GAAP; market value method is theoretical alternative.",
+    "tip": "Book value method: Total equity = Bond carrying value. No gain/loss. APIC = Carrying value − Par value.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -19498,8 +19498,8 @@ const questions = [
       "D": "Credited to APIC"
     },
     "correctAnswer": "C",
-    "explanation": "The fair value of additional consideration given to induce conversion is recognized as an expense (debt conversion expense).",
-    "tip": "Induced conversion sweetener = expense.",
+    "explanation": "Per ASC 470-20, when an issuer offers additional consideration (a 'sweetener') to induce bondholders to convert, the fair value of that additional consideration is recognized as EXPENSE—specifically, debt conversion expense. Why other answers are wrong: (A) Not a reduction to conversion price—the sweetener is separately valued; (B) Cannot be ignored—it has economic substance; (D) Not credited to APIC—it's an expense, not an equity transaction. The regular conversion still uses book value method; only the sweetener is expensed.",
+    "tip": "Induced conversion: Sweetener FV = Expense. Regular conversion = Book value method (no gain/loss).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -19519,8 +19519,8 @@ const questions = [
       "D": "$530,000"
     },
     "correctAnswer": "B",
-    "explanation": "Total FV = $480,000 + $40,000 = $520,000. Bond allocation = $530,000 × ($480,000 ÷ $520,000) = $530,000 × 0.9231 = $489,231.",
-    "tip": "Detachable warrants: allocate based on relative FV.",
+    "explanation": "Per ASC 470-20, when bonds are issued with DETACHABLE warrants, allocate proceeds based on RELATIVE FAIR VALUES. **Calculation:** Total FV = $480,000 + $40,000 = $520,000. Bond allocation = $530,000 × ($480,000 ÷ $520,000) = $530,000 × 92.31% = $489,231. Warrant allocation = $530,000 × ($40,000 ÷ $520,000) = $40,769. Why other answers are wrong: (A) $480,000 uses bond FV directly, ignoring relative allocation; (C) $490,000 is a rough estimate; (D) $530,000 is total proceeds. Note: NON-detachable warrants don't require separate allocation.",
+    "tip": "Detachable warrants: Allocate by relative FV. Non-detachable: No allocation (all to debt).",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -19540,8 +19540,8 @@ const questions = [
       "D": "The creditor grants a concession due to the debtor's financial difficulty"
     },
     "correctAnswer": "B",
-    "explanation": "ASU 2022-02 eliminated TDR accounting for creditors and debtors. Now, all loan modifications are evaluated under general modification guidance. Debtors apply ASC 470-50 modification vs. extinguishment tests.",
-    "tip": "ASU 2022-02 eliminated TDR designation; use general mod guidance.",
+    "explanation": "Per ASU 2022-02 (effective 2023), the TDR designation and specific accounting model were ELIMINATED. Now all loan modifications follow general modification guidance under ASC 470-50 (10% cash flow test for extinguishment vs. modification). Why other answers are wrong: (A) This was the OLD TDR rule for debtors—no longer applicable; (C) Not every modification triggers gain recognition; (D) Creditor concession was part of old TDR definition—no longer used. The change simplifies accounting by removing the TDR 'label' and applying consistent modification rules.",
+    "tip": "ASU 2022-02: TDR accounting eliminated. Use ASC 470-50 (10% test) for all loan modifications.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22144,8 +22144,8 @@ const questions = [
       "D": "The operating cycle only"
     },
     "correctAnswer": "B",
-    "explanation": "Current assets are expected to be realized within one year or the operating cycle, whichever is longer. For most companies, this is one year.",
-    "tip": "Current = 1 year or operating cycle, whichever is longer.",
+    "explanation": "Per ASC 210-10-45, current assets are those expected to be realized (converted to cash), sold, or consumed within one year OR the operating cycle, whichever is LONGER. Industries with extended operating cycles (construction, winemaking, shipbuilding) may have longer current asset periods. Why other answers are wrong: (A) 'Shorter' is incorrect—it's whichever is LONGER; (C) One year regardless ignores industries with extended cycles; (D) Operating cycle only ignores that one year is the minimum benchmark.",
+    "tip": "Current asset = realized within 1 YEAR or OPERATING CYCLE, whichever is LONGER. Same rule applies to current liabilities.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -30649,8 +30649,8 @@ const questions = [
       "D": "Assets - Liabilities = Revenue"
     },
     "correctAnswer": "A",
-    "explanation": "The basic accounting equation is Assets = Liabilities + Equity. This fundamental equation must always balance and forms the basis for double-entry bookkeeping.",
-    "tip": "A = L + E. This equation must always balance after every transaction.",
+    "explanation": "The basic accounting equation is Assets = Liabilities + Equity (A = L + E). This equation must ALWAYS balance and forms the foundation of double-entry bookkeeping. Every transaction affects at least two accounts while maintaining the equation's balance. Equity can be expanded to include Contributed Capital and Retained Earnings. Why other answers are wrong: (B) A = L - E is mathematically incorrect; (C) A + L = E is wrong arrangement; (D) A - L = Revenue confuses the income statement with balance sheet equation.",
+    "tip": "A = L + E must ALWAYS balance. Expanded: A = L + Contributed Capital + Retained Earnings. Double-entry = each transaction affects 2+ accounts.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },

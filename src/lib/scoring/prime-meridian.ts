@@ -327,6 +327,79 @@ export const TOPIC_TO_CONTENT_AREA: Record<string, Record<string, string>> = {
   }
 };
 
+/**
+ * Reverse mapping: Get taxonomy topics for each AICPA content area.
+ * This helps students find what topics to practice when a gap is identified.
+ *
+ * Example: FAR-IV gap -> Practice "Government Accounting" and "Not-for-Profit Accounting"
+ */
+export function getTopicsForContentArea(section: string, contentArea: string): string[] {
+  const sectionMapping = TOPIC_TO_CONTENT_AREA[section];
+  if (!sectionMapping) return [];
+
+  // Find all topics that map to this content area
+  const topics = new Set<string>();
+  for (const [topic, area] of Object.entries(sectionMapping)) {
+    if (area === contentArea) {
+      topics.add(topic);
+    }
+  }
+
+  // Filter to only include topics that exist in our taxonomy (avoid aliases)
+  // These are the "canonical" topic names that appear in the quiz configuration
+  const canonicalTopics: Record<string, string[]> = {
+    FAR: [
+      'Conceptual Framework & Standards', 'Financial Statement Presentation', 'Statement of Cash Flows',
+      'IFRS', 'Fair Value', 'Accounting Changes and Error Corrections', 'Inventory',
+      'Property, Plant & Equipment', 'Intangible Assets', 'Investments', 'Liabilities',
+      'Long-term Debt', "Stockholders' Equity", 'Revenue Recognition', 'Income Taxes',
+      'Pensions', 'Earnings Per Share', 'Stock-Based Compensation', 'Leases',
+      'Business Combinations', 'Consolidations', 'Derivatives', 'Foreign Currency',
+      'Government Accounting', 'Not-for-Profit Accounting'
+    ],
+    AUD: [
+      'Professional Ethics', 'Quality Control', 'Audit Planning', 'Risk Assessment',
+      'Internal Control', 'Fraud', 'Audit Evidence', 'Audit Sampling',
+      'Revenue and Receivables', 'Inventory Auditing', 'Using Work of Others',
+      'Audit Documentation', 'Management Representations', 'Going Concern',
+      'Group Audits', 'Comprehensive Review', 'Audit Reports', 'Governance Communications',
+      'SSARS', 'Attestation Engagements', 'Government Auditing', 'Subsequent Events'
+    ],
+    REG: [
+      'Professional Ethics - Circular 230', 'Tax Procedures', 'Tax Research',
+      'Business Law', 'Business Law - Contracts', 'Business Law - Agency',
+      'Business Law - Business Structures', 'Business Law - Bankruptcy',
+      'Business Law - Securities Regulation', 'Debtor-Creditor', 'Property Transactions',
+      'Individual Taxation', 'Employment Tax', 'Gift and Estate Tax', 'Estates and Trusts',
+      'C Corporations', 'S Corporations', 'Partnerships', 'Business Entities', 'International Tax'
+    ],
+    TCP: [
+      'Tax Planning', 'Retirement Planning', 'Compensation Planning', 'Estate and Gift Planning',
+      'Charitable Giving', 'International Individual Tax', 'AMT Planning', 'Individual Tax Compliance',
+      'C Corporation Planning', 'S Corporation Planning', 'Partnership Planning',
+      'Multi-Entity Planning', 'Business Succession Planning', 'Employment Tax',
+      'State and Local Tax', 'Property Planning', 'Passive Activity', 'Tax Credits'
+    ],
+    BAR: [
+      'Financial Statement Analysis', 'Capital Budgeting', 'Cost of Capital',
+      'Business Valuation', 'Economic Concepts', 'Data Analytics', 'Foreign Currency',
+      'Derivatives', 'Business Combinations', 'Consolidations', 'Government Accounting',
+      'Not-for-Profit Accounting'
+    ],
+    ISC: [
+      'Data Management', 'Emerging Technologies', 'Cloud Computing', 'IT Governance',
+      'Comprehensive Review', 'Cybersecurity', 'IT General Controls', 'Network Security',
+      'Application Controls', 'Encryption', 'Disaster Recovery', 'Business Continuity',
+      'IT Risk Management', 'SOC Reports'
+    ]
+  };
+
+  const sectionCanonical = canonicalTopics[section] || [];
+  const result = Array.from(topics).filter(t => sectionCanonical.includes(t));
+
+  return result;
+}
+
 // Types
 export interface PracticeAttemptData {
   question_id: string;

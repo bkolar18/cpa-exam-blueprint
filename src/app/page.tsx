@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-              Pass the CPA Exam Without Breaking the Bank
+              Smart CPA Exam Prep — Without the High Price Tag
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-up animate-delay-100">
               6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass.
@@ -62,11 +62,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4 animate-fade-in-up">
-              Everything You Need to Pass the CPA Exam
+              Comprehensive Tools for CPA Exam Success
             </h2>
             <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-              Stop wasting time on Reddit rabbit holes and comparison paralysis.
-              Get organized study materials without the $2,000+ price tag.
+              Our study dashboard tracks your progress, identifies weak areas, and keeps you organized — all in one place, without the $2,000+ price tag.
             </p>
           </div>
 

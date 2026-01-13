@@ -193,6 +193,22 @@ interface PrimeMeridianResult {
 }
 ```
 
+### AICPA Content Area to Practice Topic Mapping
+
+When a content area gap is detected, we need to show students which practice topics they should select in the Quiz Configuration page. This mapping helps bridge the terminology gap between AICPA blueprint terminology and our taxonomy topic names.
+
+**Function:** `getTopicsForContentArea(section: string, contentArea: string): string[]`
+
+| Content Area | Practice Topics (Quiz Config) |
+|--------------|-------------------------------|
+| FAR-I: Conceptual Framework | Conceptual Framework & Standards, Financial Statement Presentation, Statement of Cash Flows, IFRS, Fair Value, Accounting Changes and Error Corrections |
+| FAR-II: Select Financial Statement Accounts | Inventory, Property Plant & Equipment, Intangible Assets, Investments, Liabilities, Long-term Debt, Stockholders' Equity, Revenue Recognition, Income Taxes, Pensions, Earnings Per Share, Stock-Based Compensation |
+| FAR-III: Select Transactions | Leases, Business Combinations, Consolidations, Derivatives, Foreign Currency |
+| FAR-IV: State and Local Governments | **Government Accounting**, **Not-for-Profit Accounting** |
+| BAR-III: State and Local Governments | **Government Accounting**, **Not-for-Profit Accounting** |
+
+**Implementation:** When displaying content area gaps in `PrimeMeridianScore.tsx`, the component calls `getTopicsForContentArea()` to show clickable practice topic tags, helping students quickly find the relevant topics in Quiz Configuration.
+
 ---
 
 ## Admin Analytics

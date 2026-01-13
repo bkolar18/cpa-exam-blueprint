@@ -1,12 +1,21 @@
 Next steps:
 
-- looks like the library with back arrow is still visible on the simulation page during an exam simulation. we need to remove it
+- "Quality content. Our practice questions are created using AI technology based on official CPA exam blueprints, with automated review for accuracy and relevance." lets replace this blurb on our about page with "Quality Content
+Our practice questions are original and created using AI-assisted workflows guided by the official CPA Exam Blueprints. The blueprints inform topic coverage, structure, and skill weighting, while each question undergoes automated validation checks for relevance, logical consistency, and alignment with exam concepts."
 
-- when i submit the first simulation on an exam simulation, it brings me to the next sim but locks the top tool bar (cant go back to the other sim, the submit button says Submitted, and the second sim is locked (cant input answers)
+and then add a footer at the bottom of the table:
+Meridian CPA Review is an independent exam preparation platform and is not affiliated with the AICPA or NASBA.
 
-- mcq questions are still unreadable in exam simulations in dark mode when selected/clicked on (cell fills white which is the color of the text)
+- lets also add a FAQ to our FAQ page or section (if we have one, if not, create one): How are questions created?
 
-- need to add pause button to TBS section of exam simulation
+Questions are generated through AI-assisted processes guided by the CPA Exam Blueprints, which define tested topics and skill levels. All questions are original, designed for practice purposes, and periodically reviewed and refined based on performance data and user feedback.
+
+- lets change our main homepage title from “Pass the CPA Exam Without Breaking the Bank” to “Smart CPA Exam Prep — Without the High Price Tag”
+
+- lets also alter this blurb to make sure we dont sound like we are guaranteeing passage of the exam: Everything You Need to Pass the CPA Exam
+Stop wasting time on Reddit rabbit holes and comparison paralysis. Get organized study materials without the $2,000+ price tag. also change the "stop wasint time..." sentence to something more compelling about our robust study dashboard
+
+
 
 
 

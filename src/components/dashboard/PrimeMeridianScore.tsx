@@ -7,6 +7,7 @@ import {
   PRIME_MERIDIAN_CONFIG,
   getCoverageBarColor,
   getAccuracyTextColor,
+  getTopicsForContentArea,
 } from "@/lib/scoring/prime-meridian";
 
 interface PrimeMeridianScoreProps {
@@ -215,18 +216,43 @@ export default function PrimeMeridianScore({
             These content areas are below the {PRIME_MERIDIAN_CONFIG.CONTENT_AREA_MINIMUM}% minimum. The CPA exam will test these areas - address them before scheduling.
           </p>
           <div className="space-y-3">
-            {result.contentAreaGaps.map((gap) => (
-              <div key={gap.contentArea} className="flex items-center justify-between bg-white dark:bg-red-900/30 rounded-lg p-3">
-                <div>
-                  <div className="font-medium text-red-800 dark:text-red-200">{gap.name.split(',')[0]}</div>
-                  <div className="text-xs text-red-600 dark:text-red-400">{gap.questionsAttempted} questions attempted</div>
+            {result.contentAreaGaps.map((gap) => {
+              const practiceTopics = getTopicsForContentArea(section, gap.contentArea);
+              return (
+                <div key={gap.contentArea} className="bg-white dark:bg-red-900/30 rounded-lg p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <div>
+                      <div className="font-medium text-red-800 dark:text-red-200">{gap.name.split(',')[0]}</div>
+                      <div className="text-xs text-red-600 dark:text-red-400">{gap.questionsAttempted} questions attempted</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-bold text-red-700 dark:text-red-300">{gap.score}%</div>
+                      <div className="text-xs text-red-600 dark:text-red-400">Need +{gap.pointsToThreshold} pts</div>
+                    </div>
+                  </div>
+                  {practiceTopics.length > 0 && (
+                    <div className="mt-3 pt-3 border-t border-red-200 dark:border-red-700">
+                      <div className="text-xs font-medium text-red-700 dark:text-red-300 mb-2 flex items-center gap-1">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                        Practice these topics in Quiz Configuration:
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {practiceTopics.map((topic) => (
+                          <span
+                            key={topic}
+                            className="px-2 py-0.5 bg-red-100 dark:bg-red-800/50 text-red-700 dark:text-red-200 rounded text-xs font-medium"
+                          >
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="text-right">
-                  <div className="text-lg font-bold text-red-700 dark:text-red-300">{gap.score}%</div>
-                  <div className="text-xs text-red-600 dark:text-red-400">Need +{gap.pointsToThreshold} pts</div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}

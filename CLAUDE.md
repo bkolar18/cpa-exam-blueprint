@@ -12,6 +12,12 @@
    - Database schema for analytics tables
    - Key thresholds quick reference
 
+2. **`docs/TOPIC-MAPPING.md`** - Topic structure & AICPA mapping:
+   - Visual diagrams of AICPA Content Areas → Taxonomy Topics
+   - How Prime Meridian gaps map to Quiz Configuration topics
+   - Quick reference for "State and Local Governments" and similar mappings
+   - Key files: `prime-meridian.ts`, `taxonomy.ts`, `PrimeMeridianScore.tsx`
+
 ---
 
 ## TBS Question Development Rules
