@@ -94,8 +94,8 @@ const milestones = [
  { threshold: 20, label:"Foundation", color:"bg-red-400", message:"Keep practicing! Every question helps"},
  { threshold: 40, label:"Building", color:"bg-orange-400", message:"Making progress! Stay consistent"},
  { threshold: 60, label:"Developing", color:"bg-yellow-400", message:"Getting stronger! Keep pushing"},
- { threshold: 75, label:"Proficient", color:"bg-lime-400", message:"Solid foundation - consider a practice simulation"},
- { threshold: 85, label:"Strong", color:"bg-green-500", message:"Well prepared - you've put in the work!"},
+ { threshold: 80, label:"Strong Coverage", color:"bg-lime-400", message:"Recommended level reached - you're prepared!"},
+ { threshold: 90, label:"Excellent Coverage", color:"bg-green-500", message:"Excellent preparation - you've put in the work!"},
 ];
 
 function getMilestone(score: number) {
@@ -160,12 +160,9 @@ export default function ReadinessDashboardPage() {
  .select("*")
  .eq("user_id", user.id);
 
- // Fetch confidence ratings from notes - filter for notes that have a confidence rating
- const { data: notes } = await supabase
- .from("question_notes")
- .select("topic, confidence")
- .eq("user_id", user.id)
- .neq("confidence", null);
+ // Note: Confidence calibration feature not yet implemented
+ // The question_notes table doesn't have a confidence column yet
+ const notes: { topic: string; confidence: number }[] = [];
 
  // Fetch TBS attempts - section is stored directly on tbs_attempts
  const { data: tbsAttempts } = await supabase
@@ -333,10 +330,46 @@ export default function ReadinessDashboardPage() {
  uniqueTBSCompleted: uniqueTBSCompletedInLocalData,
  };
 
+ // Helper function to match TBS to taxonomy topics (fuzzy matching)
+ // TBS may use subtopic names or variations, so we match if the TBS topic contains the taxonomy topic name or vice versa
+ const tbsMatchesTopic = (tbsTopic: string, taxonomyTopic: string): boolean => {
+   const tbsLower = tbsTopic.toLowerCase();
+   const taxLower = taxonomyTopic.toLowerCase();
+   // Exact match
+   if (tbsLower === taxLower) return true;
+   // Partial match (topic contains taxonomy topic name or vice versa)
+   if (tbsLower.includes(taxLower) || taxLower.includes(tbsLower)) return true;
+   // Special mappings for common variations
+   const mappings: Record<string, string[]> = {
+     'government accounting': ['state and local government', 'governmental', 'budgetary', 'fiduciary', 'modified accrual', 'government-wide', 'interfund', 'proprietary fund', 'capital assets'],
+     'not-for-profit accounting': ['nfp', 'not-for-profit', 'contributions', 'donor restriction'],
+     'property, plant & equipment': ['depreciation', 'asset retirement', 'capitalized interest', 'long-lived assets', 'impairment'],
+     'long-term debt': ['bonds', 'bond', 'convertible debt', 'debt restructuring', 'long-term liabilities'],
+     "stockholders' equity": ['treasury stock', 'stock dividend', 'stock compensation', 'stock option', 'stock-based', 'earnings per share', 'equity'],
+     'income taxes': ['deferred tax', 'tax asset', 'tax liabilities'],
+     'investments': ['equity method', 'debt securities', 'fair value', 'held-to-maturity', 'hedge', 'derivatives'],
+     'statement of cash flows': ['cash flow', 'operating activities', 'investing activities', 'cash and cash equivalents'],
+     'revenue recognition': ['contract', 'performance obligation', 'transaction'],
+     'financial statement presentation': ['balance sheet', 'comprehensive income', 'interim', 'segment', 'discontinued', 'subsequent events', 'related party', 'disclosure', 'conceptual framework', 'gaap', 'standard setting', 'qualitative', 'elements of financial'],
+     'consolidations': ['intercompany', 'noncontrolling', 'variable interest', 'business combination', 'acquisition', 'purchase price'],
+     'inventory': ['fifo', 'lifo', 'lower of cost', 'inventory costing'],
+     'leases': ['lease', 'lessee', 'lessor', 'sale-leaseback'],
+     'employee benefits': ['pension', 'defined benefit', 'employee'],
+     'receivables': ['allowance', 'doubtful accounts', 'receivable'],
+     'intangibles': ['intangible', 'goodwill', 'amortization'],
+   };
+   for (const [taxonomyKey, keywords] of Object.entries(mappings)) {
+     if (taxLower.includes(taxonomyKey) || taxonomyKey.includes(taxLower)) {
+       if (keywords.some(kw => tbsLower.includes(kw))) return true;
+     }
+   }
+   return false;
+ };
+
  // Calculate TBS topic stats (reuse localTBSForSection from above)
  const tbsTopicStats: TBSTopicStats[] = taxonomy.topics.map(topic => {
- // Get TBS questions for this topic
- const topicTBS = localTBSForSection.filter(tbs => tbs.topic === topic.name);
+ // Get TBS questions for this topic using fuzzy matching
+ const topicTBS = localTBSForSection.filter(tbs => tbsMatchesTopic(tbs.topic, topic.name));
  const totalTBS = topicTBS.length;
 
  // Get attempts for TBS in this topic
@@ -530,15 +563,15 @@ export default function ReadinessDashboardPage() {
             />
             <div className="text-left sm:text-right">
               <div className="text-white/80 text-xs sm:text-sm font-medium">Overall Prime Meridian</div>
-              {overallPrimeMeridian > 0 && overallPrimeMeridian < 75 && (
+              {overallPrimeMeridian > 0 && overallPrimeMeridian < 80 && (
                 <div className="mt-1 inline-flex items-center gap-1.5 px-2 py-0.5 bg-white/20 rounded-full text-xs">
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                   </svg>
-                  {75 - overallPrimeMeridian} to 75
+                  {80 - overallPrimeMeridian} to 80
                 </div>
               )}
-              {overallPrimeMeridian >= 75 && (
+              {overallPrimeMeridian >= 80 && (
                 <div className="mt-1 inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-400/30 rounded-full text-xs text-emerald-200">
                   Recommended reached!
                 </div>
@@ -553,7 +586,7 @@ export default function ReadinessDashboardPage() {
         {visibleSections.map((section) => {
           const data = readinessData[section];
           const pmScore = data?.primeMeridian?.overallScore || 0;
-          const isRecommended = pmScore >= 75;
+          const isRecommended = pmScore >= 80;
 
           return (
             <button
@@ -673,10 +706,10 @@ export default function ReadinessDashboardPage() {
  </button>
  </div>
 
- {/* MCQ Topic Readiness */}
+ {/* MCQ Topic Preparation */}
  {activeTab === 'mcq' && (
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
- <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">MCQ Topic Readiness</h2>
+ <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">MCQ Topic Preparation</h2>
  <p className="text-sm text-[var(--muted)] mb-6">
  Each topic is weighted by its importance on the actual exam (shown in parentheses)
  </p>
@@ -714,7 +747,7 @@ export default function ReadinessDashboardPage() {
  className={`h-full transition-all duration-300 ${
  stat.coverage >= 70 ? 'bg-green-500' :
  stat.coverage >= 25 ? 'bg-yellow-500' :
- stat.coverage > 0 ? 'bg-red-400' :
+ stat.coverage > 0 ? 'bg-orange-400' :
  'bg-gray-300 dark:bg-[var(--border)]'
  }`}
  style={{ width: `${stat.coverage}%` }}
@@ -722,7 +755,7 @@ export default function ReadinessDashboardPage() {
  </div>
 
  {/* Coverage indicator */}
- {stat.coverage < 50 && stat.attempted > 0 && (
+ {stat.coverage < 70 && stat.attempted > 0 && (
  <p className="text-xs text-orange-600 dark:text-orange-400">
  Need more practice ({stat.totalQuestions - stat.attempted} more questions available)
  </p>
@@ -758,10 +791,10 @@ export default function ReadinessDashboardPage() {
  </div>
  )}
 
- {/* TBS Topic Readiness */}
+ {/* TBS Topic Preparation */}
  {activeTab === 'tbs' && (
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
- <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">TBS Topic Readiness</h2>
+ <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">TBS Topic Preparation</h2>
  <p className="text-sm text-[var(--muted)] mb-6">
  Task-Based Simulations completed by topic
  </p>
@@ -799,7 +832,7 @@ export default function ReadinessDashboardPage() {
  className={`h-full transition-all duration-300 ${
  stat.coverage >= 70 ? 'bg-green-500' :
  stat.coverage >= 25 ? 'bg-yellow-500' :
- stat.coverage > 0 ? 'bg-red-400' :
+ stat.coverage > 0 ? 'bg-orange-400' :
  'bg-gray-300 dark:bg-[var(--border)]'
  }`}
  style={{ width: `${stat.coverage}%` }}
@@ -807,7 +840,7 @@ export default function ReadinessDashboardPage() {
  </div>
 
  {/* Coverage indicator */}
- {stat.coverage < 50 && stat.attempted > 0 && (
+ {stat.coverage < 70 && stat.attempted > 0 && (
  <p className="text-xs text-orange-600 dark:text-orange-400">
  Need more practice ({stat.totalTBS - stat.attempted} more TBS available)
  </p>
@@ -899,8 +932,9 @@ export default function ReadinessDashboardPage() {
 
  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
  {currentReadiness.topicStats.map((stat) => {
- const isCovered = stat.attempted >= 5;
- const isWellCovered = stat.coverage >= 50;
+ const isWellCovered = stat.coverage >= 70;
+ const isInProgress = stat.coverage >= 25 && stat.coverage < 70;
+ const isJustStarted = stat.coverage > 0 && stat.coverage < 25;
 
  return (
  <div
@@ -908,23 +942,27 @@ export default function ReadinessDashboardPage() {
  className={`p-3 rounded-lg border flex items-center space-x-2 ${
  isWellCovered
  ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20'
- : isCovered
+ : isInProgress
  ? 'border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/20'
+ : isJustStarted
+ ? 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'
  : 'border-gray-200 bg-gray-50 dark:bg-[var(--card)]'
  }`}
  >
  <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
  isWellCovered
  ? 'bg-green-500 text-white'
- : isCovered
+ : isInProgress
  ? 'bg-yellow-500 text-white'
+ : isJustStarted
+ ? 'bg-orange-400 text-white'
  : 'bg-gray-300 dark:bg-[var(--border)] text-gray-500 dark:text-gray-400'
  }`}>
  {isWellCovered ? (
  <svg className="w-4 h-4"fill="none"stroke="currentColor"viewBox="0 0 24 24">
  <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M5 13l4 4L19 7"/>
  </svg>
- ) : isCovered ? (
+ ) : isInProgress || isJustStarted ? (
  <span className="text-xs font-bold">~</span>
  ) : (
  <span className="text-xs font-bold">?</span>
@@ -940,14 +978,18 @@ export default function ReadinessDashboardPage() {
  })}
  </div>
 
- <div className="mt-4 flex items-center justify-center space-x-6 text-xs text-[var(--muted)]">
+ <div className="mt-4 flex items-center justify-center flex-wrap gap-4 text-xs text-[var(--muted)]">
  <div className="flex items-center space-x-1">
  <div className="w-3 h-3 rounded-full bg-green-500"/>
- <span>Well covered (50%+)</span>
+ <span>≥70% (Well covered)</span>
  </div>
  <div className="flex items-center space-x-1">
  <div className="w-3 h-3 rounded-full bg-yellow-500"/>
- <span>Started (5+ questions)</span>
+ <span>≥25% (In progress)</span>
+ </div>
+ <div className="flex items-center space-x-1">
+ <div className="w-3 h-3 rounded-full bg-orange-400"/>
+ <span>&lt;25% (Just started)</span>
  </div>
  <div className="flex items-center space-x-1">
  <div className="w-3 h-3 rounded-full bg-gray-300 dark:bg-[var(--border)]"/>
@@ -970,7 +1012,7 @@ export default function ReadinessDashboardPage() {
  Start Practicing {selectedSection}
  </Link>
  </div>
- ) : currentReadiness.overallScore < 75 ? (
+ ) : currentReadiness.overallScore < 80 ? (
  <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 text-white text-center">
  <h3 className="text-xl font-bold mb-2">Keep Pushing!</h3>
  <p className="text-white/80 mb-4">

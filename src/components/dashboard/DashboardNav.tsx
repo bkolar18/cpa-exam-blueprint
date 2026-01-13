@@ -31,7 +31,7 @@ const groupedItems = [
     label: "Progress",
     icon: "chart",
     items: [
-      { href: "/dashboard/readiness", label: "Exam Readiness", icon: "readiness" },
+      { href: "/dashboard/readiness", label: "Exam Preparation", icon: "readiness" },
       { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
       { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
     ],

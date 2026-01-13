@@ -30,6 +30,12 @@ interface Session {
  topics: string[];
 }
 
+interface QuestionNote {
+ id: string;
+ question_id: string;
+ note: string;
+}
+
 // Group attempts into sessions (attempts within 30 minutes of each other)
 function groupIntoSessions(attempts: PracticeAttempt[]): Session[] {
  if (attempts.length === 0) return [];
@@ -92,6 +98,10 @@ function PracticeHistoryContent() {
  const [sessions, setSessions] = useState<Session[]>([]);
  const [selectedSession, setSelectedSession] = useState<Session | null>(null);
  const [loading, setLoading] = useState(true);
+ const [notes, setNotes] = useState<Map<string, QuestionNote>>(new Map());
+ const [editingNote, setEditingNote] = useState<string | null>(null);
+ const [noteText, setNoteText] = useState("");
+ const [savingNote, setSavingNote] = useState(false);
  const supabase = createClient();
 
  // Handle back to all sessions - clear URL param and state
@@ -138,6 +148,109 @@ function PracticeHistoryContent() {
  }
  setLoading(false);
  };
+
+ // Fetch notes for questions in the selected session
+ const fetchNotesForSession = async (session: Session) => {
+ if (!supabase || !user) return;
+
+ const questionIds = session.attempts.map(a => a.question_id);
+ const { data, error } = await supabase
+ .from("question_notes")
+ .select("id, question_id, note")
+ .eq("user_id", user.id)
+ .in("question_id", questionIds);
+
+ if (!error && data) {
+ const notesMap = new Map<string, QuestionNote>();
+ data.forEach((note: QuestionNote) => {
+ notesMap.set(note.question_id, note);
+ });
+ setNotes(notesMap);
+ }
+ };
+
+ // Save note for a question
+ const saveNote = async (questionId: string, attempt: PracticeAttempt) => {
+ if (!supabase || !user || !noteText.trim()) return;
+
+ setSavingNote(true);
+ const existingNote = notes.get(questionId);
+ const question = getQuestionById(questionId);
+
+ if (existingNote) {
+ // Update existing note
+ const { error } = await supabase
+ .from("question_notes")
+ .update({ note: noteText.trim(), updated_at: new Date().toISOString() })
+ .eq("id", existingNote.id);
+
+ if (!error) {
+ setNotes(prev => {
+ const newNotes = new Map(prev);
+ newNotes.set(questionId, { ...existingNote, note: noteText.trim() });
+ return newNotes;
+ });
+ }
+ } else {
+ // Insert new note
+ const { data, error } = await supabase
+ .from("question_notes")
+ .insert({
+ user_id: user.id,
+ question_id: questionId,
+ section: attempt.section,
+ topic: attempt.topic || question?.topic || 'Unknown',
+ subtopic: question?.subtopic || null,
+ note: noteText.trim(),
+ })
+ .select("id, question_id, note")
+ .single();
+
+ if (!error && data) {
+ setNotes(prev => {
+ const newNotes = new Map(prev);
+ newNotes.set(questionId, data as QuestionNote);
+ return newNotes;
+ });
+ }
+ }
+
+ setSavingNote(false);
+ setEditingNote(null);
+ setNoteText("");
+ };
+
+ // Delete a note
+ const deleteNote = async (questionId: string) => {
+ if (!supabase || !user) return;
+
+ const existingNote = notes.get(questionId);
+ if (!existingNote) return;
+
+ setSavingNote(true);
+ const { error } = await supabase
+ .from("question_notes")
+ .delete()
+ .eq("id", existingNote.id);
+
+ if (!error) {
+ setNotes(prev => {
+ const newNotes = new Map(prev);
+ newNotes.delete(questionId);
+ return newNotes;
+ });
+ }
+ setSavingNote(false);
+ setEditingNote(null);
+ setNoteText("");
+ };
+
+ // Fetch notes when a session is selected
+ useEffect(() => {
+ if (selectedSession && user) {
+ fetchNotesForSession(selectedSession);
+ }
+ }, [selectedSession, user]);
 
  if (loading) {
  return (
@@ -315,6 +428,75 @@ function PracticeHistoryContent() {
  <p className="text-sm text-[var(--primary)] mt-2">
  <span className="font-medium">Tip:</span> {question.tip}
  </p>
+ )}
+ </div>
+
+ {/* Notes Section */}
+ <div className="mt-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-700">
+ {editingNote === attempt.question_id ? (
+ <div className="space-y-2">
+ <textarea
+ value={noteText}
+ onChange={(e) => setNoteText(e.target.value)}
+ placeholder="Add your notes about this question..."
+ rows={3}
+ className="w-full px-3 py-2 text-sm rounded-lg border border-[var(--border)] bg-white dark:bg-[var(--card)] text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none resize-none"
+ autoFocus
+ />
+ <div className="flex items-center gap-2">
+ <button
+ onClick={() => saveNote(attempt.question_id, attempt)}
+ disabled={savingNote || !noteText.trim()}
+ className="px-3 py-1 text-sm font-medium bg-[var(--primary)] text-white rounded-lg hover:bg-[var(--primary-dark)] disabled:opacity-50 transition-colors"
+ >
+ {savingNote ? "Saving..." : "Save Note"}
+ </button>
+ <button
+ onClick={() => {
+ setEditingNote(null);
+ setNoteText("");
+ }}
+ className="px-3 py-1 text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+ >
+ Cancel
+ </button>
+ {notes.get(attempt.question_id) && (
+ <button
+ onClick={() => deleteNote(attempt.question_id)}
+ disabled={savingNote}
+ className="px-3 py-1 text-sm font-medium text-red-600 hover:text-red-700 ml-auto transition-colors"
+ >
+ Delete
+ </button>
+ )}
+ </div>
+ </div>
+ ) : notes.get(attempt.question_id) ? (
+ <div>
+ <div className="flex items-start justify-between mb-1">
+ <p className="text-sm font-medium text-yellow-800 dark:text-yellow-300">Your Notes:</p>
+ <button
+ onClick={() => {
+ setEditingNote(attempt.question_id);
+ setNoteText(notes.get(attempt.question_id)?.note || "");
+ }}
+ className="text-xs text-yellow-700 dark:text-yellow-400 hover:underline"
+ >
+ Edit
+ </button>
+ </div>
+ <p className="text-sm text-yellow-900 dark:text-yellow-200">{notes.get(attempt.question_id)?.note}</p>
+ </div>
+ ) : (
+ <button
+ onClick={() => setEditingNote(attempt.question_id)}
+ className="flex items-center gap-2 text-sm text-yellow-700 dark:text-yellow-400 hover:text-yellow-800 dark:hover:text-yellow-300"
+ >
+ <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+ </svg>
+ Add note for this question
+ </button>
  )}
  </div>
  </>

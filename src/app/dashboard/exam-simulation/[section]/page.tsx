@@ -358,6 +358,9 @@ export default function ExamSimulationSectionPage() {
  // Submission loading state
  const [isSubmitting, setIsSubmitting] = useState(false);
 
+ // TBS Review modal state
+ const [reviewingTbsIndex, setReviewingTbsIndex] = useState<number | null>(null);
+
  // Timer ref
  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -1369,6 +1372,13 @@ export default function ExamSimulationSectionPage() {
  {result.tbs.topic} • {result.tbs.tbsType.replace('_', ' ')}
  </p>
  </div>
+ <div className="flex items-center gap-3">
+ <button
+ onClick={() => setReviewingTbsIndex(i)}
+ className="px-3 py-1 text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors"
+ >
+ Review
+ </button>
  <div className="text-right">
  <span className={`px-3 py-1 rounded-lg text-sm font-medium ${
  isPassing
@@ -1380,6 +1390,7 @@ export default function ExamSimulationSectionPage() {
  <p className="text-xs text-[var(--muted)] mt-1">
  {result.attempt.scoreEarned}/{result.attempt.maxScore} pts
  </p>
+ </div>
  </div>
  </div>
  </div>
@@ -1434,6 +1445,117 @@ export default function ExamSimulationSectionPage() {
  ))}
  </div>
  </div>
+
+ {/* TBS Review Modal */}
+ {reviewingTbsIndex !== null && tbsResults[reviewingTbsIndex] && (
+ <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+ {/* Modal Header */}
+ <div className="p-4 border-b border-[var(--border)] flex items-center justify-between">
+ <div>
+ <h3 className="text-lg font-semibold text-[var(--foreground)]">
+ TBS Review: {tbsResults[reviewingTbsIndex].tbs.title}
+ </h3>
+ <p className="text-sm text-[var(--muted)]">
+ {tbsResults[reviewingTbsIndex].tbs.topic} • {tbsResults[reviewingTbsIndex].tbs.tbsType.replace('_', ' ')}
+ </p>
+ </div>
+ <button
+ onClick={() => setReviewingTbsIndex(null)}
+ className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+ >
+ <svg className="w-5 h-5 text-[var(--muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ </button>
+ </div>
+
+ {/* Modal Content */}
+ <div className="flex-1 overflow-auto p-4 space-y-4">
+ {/* Score Summary */}
+ <div className={`rounded-lg p-4 text-center ${
+ (tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0) >= 75
+ ? 'bg-green-100 dark:bg-green-900/30'
+ : 'bg-red-100 dark:bg-red-900/30'
+ }`}>
+ <p className={`text-3xl font-bold ${
+ (tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0) >= 75
+ ? 'text-green-700 dark:text-green-300'
+ : 'text-red-700 dark:text-red-300'
+ }`}>
+ {tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0}%
+ </p>
+ <p className="text-sm text-[var(--muted)] mt-1">
+ {tbsResults[reviewingTbsIndex].attempt.scoreEarned}/{tbsResults[reviewingTbsIndex].attempt.maxScore} points earned
+ </p>
+ </div>
+
+ {/* Grading Details */}
+ {tbsResults[reviewingTbsIndex].attempt.gradingDetails && (
+ <div className="space-y-3">
+ <h4 className="font-medium text-[var(--foreground)]">Question-by-Question Review</h4>
+ {tbsResults[reviewingTbsIndex].attempt.gradingDetails?.map((detail, idx) => (
+ <div key={idx} className={`p-3 rounded-lg border ${
+ detail.isCorrect
+ ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800'
+ : detail.isPartialCredit
+ ? 'bg-yellow-50 dark:bg-yellow-900/10 border-yellow-200 dark:border-yellow-800'
+ : 'bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-800'
+ }`}>
+ <div className="flex items-start justify-between mb-2">
+ <div className="flex items-center gap-2">
+ {detail.isCorrect ? (
+ <span className="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs">✓</span>
+ ) : detail.isPartialCredit ? (
+ <span className="w-6 h-6 rounded-full bg-yellow-500 text-white flex items-center justify-center text-xs">~</span>
+ ) : (
+ <span className="w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center text-xs">✗</span>
+ )}
+ <span className="font-medium text-[var(--foreground)]">{detail.requirementLabel}</span>
+ </div>
+ <span className={`text-sm font-medium ${
+ detail.isCorrect
+ ? 'text-green-600 dark:text-green-400'
+ : detail.isPartialCredit
+ ? 'text-yellow-600 dark:text-yellow-400'
+ : 'text-red-600 dark:text-red-400'
+ }`}>
+ {detail.pointsEarned}/{detail.pointsPossible} pts
+ </span>
+ </div>
+ <p className="text-sm text-[var(--muted)] mb-2">{detail.feedback}</p>
+ <div className="text-sm space-y-1">
+ <p>
+ <span className="text-[var(--muted)]">Your answer:</span>{' '}
+ <span className={detail.isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}>
+ {detail.userAnswer || '(not answered)'}
+ </span>
+ </p>
+ {!detail.isCorrect && (
+ <p>
+ <span className="text-[var(--muted)]">Correct answer:</span>{' '}
+ <span className="text-green-700 dark:text-green-400">{detail.correctAnswer}</span>
+ </p>
+ )}
+ </div>
+ </div>
+ ))}
+ </div>
+ )}
+ </div>
+
+ {/* Modal Footer */}
+ <div className="p-4 border-t border-[var(--border)]">
+ <button
+ onClick={() => setReviewingTbsIndex(null)}
+ className="w-full py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+ >
+ Close Review
+ </button>
+ </div>
+ </div>
+ </div>
+ )}
 
  {/* Actions */}
  <div className="flex space-x-4">

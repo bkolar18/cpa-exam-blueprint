@@ -470,11 +470,11 @@ export default function DashboardPage() {
                 />
               </div>
               <p className={`text-xs text-center ${
-                overallPrimeMeridian >= 75
+                overallPrimeMeridian >= 80
                   ? "text-emerald-700 dark:text-emerald-300 font-medium"
                   : "text-[var(--muted)]"
               }`}>
-                {overallPrimeMeridian >= 75 ? "Recommended!" : overallPrimeMeridian > 0 ? `${75 - overallPrimeMeridian} to goal` : "Start practicing"}
+                {overallPrimeMeridian >= 80 ? "Recommended!" : overallPrimeMeridian > 0 ? `${80 - overallPrimeMeridian} to goal` : "Start practicing"}
               </p>
             </div>
           </Link>

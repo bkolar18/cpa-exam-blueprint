@@ -38,6 +38,7 @@ export default function SimulationsPage() {
  }, []);
 
  // Filter TBS by search query (only from visible sections)
+ // Searches: title, topic, subtopic, type, scenario text, and requirement labels
  const searchResults = useMemo(() => {
  if (!searchQuery.trim()) return null;
 
@@ -50,7 +51,10 @@ export default function SimulationsPage() {
  (tbs.title.toLowerCase().includes(query) ||
  tbs.topic.toLowerCase().includes(query) ||
  (tbs.subtopic && tbs.subtopic.toLowerCase().includes(query)) ||
- tbs.tbsType.toLowerCase().includes(query))
+ tbs.tbsType.toLowerCase().includes(query) ||
+ tbs.scenarioText?.toLowerCase().includes(query) ||
+ tbs.contentArea?.toLowerCase().includes(query) ||
+ tbs.requirements?.some(req => req.label?.toLowerCase().includes(query)))
  )
  .slice(0, 20); // Limit to 20 results
  }, [searchQuery, visibleSections]);
@@ -99,15 +103,34 @@ export default function SimulationsPage() {
  return { totalTBS, completedTBS, averageScore };
  }, [progressData, visibleSections]);
 
- // Visible type stats (filtered by user's visible sections)
+ // Map extended TBS types to the 4 core types for display
+ const getCoreType = (tbsType: string): 'numeric_entry' | 'journal_entry' | 'document_review' | 'research' => {
+   switch (tbsType) {
+     case 'numeric_entry':
+     case 'reconciliation': // Reconciliation involves calculations
+       return 'numeric_entry';
+     case 'journal_entry':
+       return 'journal_entry';
+     case 'document_review':
+     case 'dropdown': // Dropdown is selecting after document analysis
+     case 'written_communication': // Written comm involves analyzing and responding
+       return 'document_review';
+     case 'research':
+       return 'research';
+     default:
+       return 'document_review';
+   }
+ };
+
+ // Visible type stats (filtered by user's visible sections, consolidated to 4 core types)
  const visibleTypeStats = useMemo(() => {
    const visibleCodes = visibleSections.map(s => s.code);
    const visibleTBS = allTBSQuestions.filter(q => visibleCodes.includes(q.section));
    return {
-     numeric_entry: visibleTBS.filter(q => q.tbsType === "numeric_entry").length,
-     journal_entry: visibleTBS.filter(q => q.tbsType === "journal_entry").length,
-     document_review: visibleTBS.filter(q => q.tbsType === "document_review").length,
-     research: visibleTBS.filter(q => q.tbsType === "research").length,
+     numeric_entry: visibleTBS.filter(q => getCoreType(q.tbsType) === "numeric_entry").length,
+     journal_entry: visibleTBS.filter(q => getCoreType(q.tbsType) === "journal_entry").length,
+     document_review: visibleTBS.filter(q => getCoreType(q.tbsType) === "document_review").length,
+     research: visibleTBS.filter(q => getCoreType(q.tbsType) === "research").length,
    };
  }, [visibleSections]);
 
@@ -349,7 +372,7 @@ export default function SimulationsPage() {
  <h3 className="text-sm font-semibold text-gray-800 dark:text-[var(--foreground)] mb-3">
  Simulation Types
  </h3>
- <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+ <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
  {[
  { code:"NE", label:"Numeric Entry", count: visibleTypeStats.numeric_entry },
  { code:"JE", label:"Journal Entry", count: visibleTypeStats.journal_entry },
