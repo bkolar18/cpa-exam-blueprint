@@ -3,7 +3,7 @@
 export type Tier = 'bronze' | 'silver' | 'gold' | 'platinum';
 export type SectionCode = 'FAR' | 'AUD' | 'REG' | 'TCP' | 'BAR' | 'ISC';
 
-export type BadgeCategory = 'study_hours' | 'practice' | 'section' | 'account' | 'tbs';
+export type BadgeCategory = 'study_hours' | 'practice' | 'section' | 'account' | 'tbs' | 'streak' | 'accuracy' | 'special';
 export type AchievementCategory = 'practice' | 'account' | 'streak' | 'accuracy' | 'special' | 'speed' | 'section' | 'study_hours' | 'tbs';
 
 export type RequirementType = 'hours' | 'percentage' | 'count' | 'boolean' | 'special' | 'time_range';
@@ -170,6 +170,8 @@ export interface AchievementCheckContext {
   tbsScore?: number;
   tbsCompleteCount?: number;
   tbsType?: string;
+  // Practice specific
+  consecutiveCorrect?: number;
 }
 
 // Notification types

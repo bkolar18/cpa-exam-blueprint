@@ -19,9 +19,11 @@ interface PrimeMeridianScoreProps {
  * Prime Meridian Score Display Component
  *
  * Features:
- * - Circular gauge with 75 prominently marked as recommended
+ * - Circular gauge with 80 prominently marked as recommended (stricter standards)
  * - Color-coded progress (red -> yellow -> green)
- * - Content area breakdown
+ * - Content area gaps highlighted
+ * - Consistency warnings
+ * - Time and engagement insights
  * - Recommended actions
  */
 export default function PrimeMeridianScore({
@@ -38,11 +40,11 @@ export default function PrimeMeridianScore({
   const circumference = 2 * Math.PI * 90; // radius = 90
   const strokeDashoffset = circumference - (scorePercentage / 100) * circumference;
 
-  // Calculate color based on score
+  // Calculate color based on score (updated for stricter thresholds)
   const getGaugeColor = (score: number) => {
-    if (score >= 75) return "#10b981"; // emerald-500
-    if (score >= 65) return "#eab308"; // yellow-500
-    if (score >= 50) return "#f97316"; // orange-500
+    if (score >= 80) return "#10b981"; // emerald-500 (was 75)
+    if (score >= 70) return "#eab308"; // yellow-500 (was 65)
+    if (score >= 55) return "#f97316"; // orange-500 (was 50)
     return "#ef4444"; // red-500
   };
 
@@ -67,7 +69,7 @@ export default function PrimeMeridianScore({
                 className="text-gray-200 dark:text-gray-700"
               />
 
-              {/* 75 marker (recommended score) - render before progress so it's behind */}
+              {/* 80 marker (recommended score) - render before progress so it's behind */}
               <line
                 x1="110"
                 y1="20"
@@ -75,7 +77,7 @@ export default function PrimeMeridianScore({
                 y2="8"
                 stroke="#10b981"
                 strokeWidth="3"
-                transform={`rotate(${75 * 3.6}, 110, 110)`}
+                transform={`rotate(${80 * 3.6}, 110, 110)`}
                 className="opacity-80"
               />
 
@@ -93,8 +95,8 @@ export default function PrimeMeridianScore({
                 className="transition-all duration-1000 ease-out"
               />
 
-              {/* Milestone markers at 50, 65, 75, 85 */}
-              {[50, 65, 85].map((mark) => (
+              {/* Milestone markers at 55, 70, 80, 85 (updated thresholds) */}
+              {[55, 70, 85].map((mark) => (
                 <line
                   key={mark}
                   x1="110"
@@ -117,17 +119,17 @@ export default function PrimeMeridianScore({
               <div className="text-sm text-[var(--muted)] mt-1">Prime Meridian</div>
             </div>
 
-            {/* 75 Badge */}
+            {/* 80 Badge (stricter recommended score) */}
             <div
               className="absolute w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-lg border-2 border-white dark:border-gray-800"
               style={{
                 top: "50%",
                 left: "50%",
-                transform: `rotate(${75 * 3.6}deg) translateY(-102px) rotate(-${75 * 3.6}deg)`,
+                transform: `rotate(${80 * 3.6}deg) translateY(-102px) rotate(-${80 * 3.6}deg)`,
                 transformOrigin: "center center",
               }}
             >
-              75
+              80
             </div>
           </div>
 
@@ -144,6 +146,25 @@ export default function PrimeMeridianScore({
 
             <p className="text-[var(--muted)] mb-4">{milestone.message}</p>
 
+            {/* Readiness Assessment - Shows why they're not ready */}
+            {!result.readinessAssessment.isReady && result.readinessAssessment.reasons.length > 0 && (
+              <div className="mt-4 p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
+                <div className="flex items-center gap-2 mb-2">
+                  <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span className="text-sm font-medium text-amber-800 dark:text-amber-200">
+                    Not Yet Exam Ready
+                  </span>
+                </div>
+                <ul className="text-xs text-amber-700 dark:text-amber-300 space-y-1">
+                  {result.readinessAssessment.reasons.map((reason, i) => (
+                    <li key={i}>• {reason}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {/* Recommended Score Callout */}
             {result.overallScore < PRIME_MERIDIAN_CONFIG.RECOMMENDED_SCORE && (
               <div className="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
@@ -156,30 +177,74 @@ export default function PrimeMeridianScore({
                   </span>
                 </div>
                 <p className="text-xs text-emerald-700 dark:text-emerald-300 mt-1">
-                  We recommend reaching 75 before scheduling your exam, as students at this level typically feel well-prepared.
+                  We grade conservatively. Students who reach 80 on Meridian typically pass their section.
                 </p>
               </div>
             )}
 
             {/* Reached Recommended Score */}
-            {result.overallScore >= PRIME_MERIDIAN_CONFIG.RECOMMENDED_SCORE && (
+            {result.readinessAssessment.isReady && (
               <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
                 <div className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-sm font-medium text-green-800 dark:text-green-200">
-                    Recommended score achieved!
+                    Exam Ready!
                   </span>
                 </div>
                 <p className="text-xs text-green-700 dark:text-green-300 mt-1">
-                  You&apos;ve reached our recommended preparation level. Consider scheduling your exam when you feel ready.
+                  You&apos;ve met our strict readiness criteria. Consider scheduling your exam.
                 </p>
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* Content Area Gaps - Prominent Warning */}
+      {showDetails && result.hasGaps && (
+        <div className="bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-200 dark:border-red-800 p-6">
+          <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-4 flex items-center gap-2">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            Content Area Gaps Detected
+          </h3>
+          <p className="text-sm text-red-700 dark:text-red-300 mb-4">
+            These content areas are below the {PRIME_MERIDIAN_CONFIG.CONTENT_AREA_MINIMUM}% minimum. The CPA exam will test these areas - address them before scheduling.
+          </p>
+          <div className="space-y-3">
+            {result.contentAreaGaps.map((gap) => (
+              <div key={gap.contentArea} className="flex items-center justify-between bg-white dark:bg-red-900/30 rounded-lg p-3">
+                <div>
+                  <div className="font-medium text-red-800 dark:text-red-200">{gap.name.split(',')[0]}</div>
+                  <div className="text-xs text-red-600 dark:text-red-400">{gap.questionsAttempted} questions attempted</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-lg font-bold text-red-700 dark:text-red-300">{gap.score}%</div>
+                  <div className="text-xs text-red-600 dark:text-red-400">Need +{gap.pointsToThreshold} pts</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Consistency Warning */}
+      {showDetails && !result.consistency.isConsistent && result.consistency.inconsistentAreas.length > 0 && (
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl border border-yellow-200 dark:border-yellow-800 p-6">
+          <h3 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+            </svg>
+            Inconsistent Performance
+          </h3>
+          <p className="text-sm text-yellow-700 dark:text-yellow-300">
+            Your performance varies significantly across topics. The CPA exam will find weak spots. Focus on: {result.consistency.inconsistentAreas.join(', ')}.
+          </p>
+        </div>
+      )}
 
       {/* Recommended Actions */}
       {showDetails && result.recommendedActions.length > 0 && (
@@ -205,8 +270,8 @@ export default function PrimeMeridianScore({
 
       {/* Disclaimer */}
       <p className="text-xs text-[var(--muted)] text-center px-4">
-        The Prime Meridian score is designed to help guide your study efforts based on AICPA exam blueprint weightings.
-        We recommend reaching a score of 75 before scheduling your exam, as this indicates strong coverage across all tested areas.
+        The Prime Meridian score uses stricter thresholds than most review courses to better prepare you for exam day.
+        We recommend reaching a score of 80 with no content area below 70% before scheduling your exam.
         This score is for guidance only and does not predict or guarantee any particular outcome on the CPA exam.
       </p>
     </div>
@@ -228,9 +293,9 @@ export function PrimeMeridianCompact({
   const strokeDashoffset = circumference - (Math.min(100, score) / 100) * circumference;
 
   const getGaugeColor = (s: number) => {
-    if (s >= 75) return "#10b981";
-    if (s >= 65) return "#eab308";
-    if (s >= 50) return "#f97316";
+    if (s >= 80) return "#10b981"; // Updated for stricter thresholds
+    if (s >= 70) return "#eab308";
+    if (s >= 55) return "#f97316";
     return "#ef4444";
   };
 
@@ -267,8 +332,8 @@ export function PrimeMeridianCompact({
       <div>
         <div className="text-sm font-medium text-[var(--foreground)]">{section}</div>
         <div className={`text-xs ${milestone.color}`}>{milestone.label}</div>
-        {score < 75 && (
-          <div className="text-xs text-[var(--muted)]">{75 - score} to 75</div>
+        {score < 80 && (
+          <div className="text-xs text-[var(--muted)]">{80 - score} to 80</div>
         )}
       </div>
     </div>

@@ -356,7 +356,7 @@ export default function ExamSimulationSectionPage() {
 
  // Timer effect - only runs when exam is active (not paused)
  useEffect(() => {
- if (examState === 'exam' && timeRemaining > 0) {
+ if ((examState === 'exam' || examState === 'tbs') && timeRemaining > 0) {
  timerRef.current = setInterval(() => {
  setTimeRemaining(prev => {
  if (prev <= 1) {
@@ -696,7 +696,7 @@ export default function ExamSimulationSectionPage() {
  className={`p-4 rounded-xl border-2 text-left transition-all ${
  selectedConfig === key
  ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
- : 'border-[var(--border)] hover:border-orange-300'
+ : 'border-[var(--border)] hover:border-orange-300 dark:hover:border-orange-600'
  }`}
  >
  <div className="flex items-center justify-between mb-1">
@@ -860,8 +860,8 @@ export default function ExamSimulationSectionPage() {
  onClick={() => handleSelectAnswer(option)}
  className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
  answers[currentIndex] === option
- ? 'border-orange-500 bg-orange-50'
- : 'border-[var(--border)] hover:border-orange-300'
+ ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/30 dark:text-[var(--foreground)]'
+ : 'border-[var(--border)] hover:border-orange-300 dark:hover:border-orange-600'
  }`}
  >
  <span className="font-semibold mr-3">{option}.</span>
@@ -1091,9 +1091,16 @@ export default function ExamSimulationSectionPage() {
  <div className="flex items-center space-x-4">
  <span className="text-sm">
  {formatTime(timeRemaining)} remaining
- </span>
- <button
- onClick={handleReturnToMCQ}
+	</span>
+	<button
+		onClick={handlePause}
+		className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm"
+		title="Pause Exam"
+	>
+		⏸ Pause
+	</button>
+	<button
+		onClick={handleReturnToMCQ}
  className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm"
  >
  ← Back to MCQ
@@ -1104,7 +1111,8 @@ export default function ExamSimulationSectionPage() {
 
  {/* TBS Container - No library button during exam simulation */}
  <TBSContainer
- tbs={currentTbs}
+ key={currentTbs.id}
+	tbs={currentTbs}
  testletIndex={currentTbsIndex + 1}
  testletTotal={tbsQuestions.length}
  onComplete={handleTBSComplete}

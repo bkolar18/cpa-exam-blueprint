@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from"react";
+import { useState, useEffect, useRef } from"react";
 import { PracticeQuestion } from"@/lib/data/practice-questions";
 import { useAuth } from"@/components/auth/AuthProvider";
 import { createClient } from"@/lib/supabase/client";
@@ -12,7 +12,7 @@ interface QuizQuestionProps {
  questionNumber: number;
  totalQuestions: number;
  onAnswer: (selectedAnswer: 'A' | 'B' | 'C' | 'D', isCorrect: boolean) => void;
- onNext: () => void;
+ onNext: (explanationViewSeconds?: number) => void;
  isLast: boolean;
 }
 
@@ -127,6 +127,9 @@ export default function QuizQuestion({
  }
  };
 
+ // Track when explanation becomes visible (after submit)
+ const submitTime = useRef<Date | null>(null);
+
  const handleSelectAnswer = (answer: 'A' | 'B' | 'C' | 'D') => {
  if (hasSubmitted) return;
  setSelectedAnswer(answer);
@@ -137,12 +140,21 @@ export default function QuizQuestion({
  const isCorrect = selectedAnswer === question.correctAnswer;
  onAnswer(selectedAnswer, isCorrect);
  setHasSubmitted(true);
+ // Start timing explanation view
+ submitTime.current = new Date();
  };
 
  const handleNext = () => {
+ // Calculate how long user spent viewing explanation
+ let explanationViewSeconds: number | undefined;
+ if (submitTime.current) {
+   explanationViewSeconds = Math.round((Date.now() - submitTime.current.getTime()) / 1000);
+ }
+
  setSelectedAnswer(null);
  setHasSubmitted(false);
- onNext();
+ submitTime.current = null;
+ onNext(explanationViewSeconds);
  };
 
  // Difficulty colors removed - hiding difficulty from students

@@ -35,6 +35,37 @@ export interface AdaptiveSelectionOptions {
   lowCoverageWeight?: number;      // Priority for low-coverage topics
   neverAttemptedWeight?: number;   // Priority for never-attempted questions
   spacedRepetitionWeight?: number; // Priority for questions not seen recently
+  // Enable difficulty escalation based on user performance
+  enableDifficultyEscalation?: boolean;
+}
+
+/**
+ * Difficulty distribution based on user accuracy.
+ * Higher performers get more hard questions to prepare for exam rigor.
+ */
+export interface DifficultyMix {
+  easy: number;   // 0-1 proportion
+  medium: number; // 0-1 proportion
+  hard: number;   // 0-1 proportion
+}
+
+/**
+ * Calculate the appropriate difficulty mix based on user's overall accuracy.
+ * - High performers (85%+): Mostly hard questions
+ * - Medium performers (70-84%): Balanced toward hard
+ * - Building skills (<70%): More easy/medium to build confidence
+ */
+export function calculateDifficultyMix(accuracy: number): DifficultyMix {
+  if (accuracy >= 85) {
+    // High performer - challenge them
+    return { easy: 0.1, medium: 0.3, hard: 0.6 };
+  } else if (accuracy >= 70) {
+    // Medium performer - balanced toward hard
+    return { easy: 0.2, medium: 0.4, hard: 0.4 };
+  } else {
+    // Building skills - more accessible questions
+    return { easy: 0.3, medium: 0.5, hard: 0.2 };
+  }
 }
 
 const DEFAULT_WEIGHTS = {
@@ -161,7 +192,25 @@ export function buildTopicPerformance(
 }
 
 /**
+ * Calculate user's overall accuracy from history
+ */
+function calculateOverallAccuracy(history: Map<string, UserQuestionHistory>): number {
+  if (history.size === 0) return 50; // Default to medium for new users
+
+  let correct = 0;
+  let total = 0;
+
+  for (const entry of history.values()) {
+    total++;
+    if (entry.isCorrect) correct++;
+  }
+
+  return total > 0 ? Math.round((correct / total) * 100) : 50;
+}
+
+/**
  * Select questions adaptively based on user history
+ * With optional difficulty escalation based on performance
  */
 export function selectAdaptiveQuestions(
   allQuestions: PracticeQuestion[],
@@ -199,6 +248,62 @@ export function selectAdaptiveQuestions(
     score: calculateQuestionPriority(question, history, topicPerformance, weights),
   }));
 
+  // Apply difficulty escalation if enabled and user has history
+  const enableEscalation = options?.enableDifficultyEscalation !== false; // Default to true
+  if (enableEscalation && history.size >= 10) {
+    const accuracy = calculateOverallAccuracy(history);
+    const difficultyMix = calculateDifficultyMix(accuracy);
+
+    // Group questions by difficulty
+    const byDifficulty = {
+      easy: scoredQuestions.filter(sq => sq.question.difficulty === 'easy'),
+      medium: scoredQuestions.filter(sq => sq.question.difficulty === 'medium' || !sq.question.difficulty),
+      hard: scoredQuestions.filter(sq => sq.question.difficulty === 'hard'),
+    };
+
+    // Sort each group by priority
+    byDifficulty.easy.sort((a, b) => b.score - a.score);
+    byDifficulty.medium.sort((a, b) => b.score - a.score);
+    byDifficulty.hard.sort((a, b) => b.score - a.score);
+
+    // Calculate target counts for each difficulty
+    const targetCounts = {
+      easy: Math.round(count * difficultyMix.easy),
+      medium: Math.round(count * difficultyMix.medium),
+      hard: Math.round(count * difficultyMix.hard),
+    };
+
+    // Select questions from each difficulty group
+    const selected: PracticeQuestion[] = [];
+
+    // Add questions by difficulty, filling gaps if a category doesn't have enough
+    const addFromGroup = (group: typeof byDifficulty.easy, target: number) => {
+      const toAdd = Math.min(target, group.length);
+      for (let i = 0; i < toAdd && selected.length < count; i++) {
+        selected.push(group[i].question);
+      }
+    };
+
+    addFromGroup(byDifficulty.hard, targetCounts.hard);
+    addFromGroup(byDifficulty.medium, targetCounts.medium);
+    addFromGroup(byDifficulty.easy, targetCounts.easy);
+
+    // Fill remaining slots with highest priority remaining questions
+    const usedIds = new Set(selected.map(q => q.id));
+    const remaining = scoredQuestions
+      .filter(sq => !usedIds.has(sq.question.id))
+      .sort((a, b) => b.score - a.score);
+
+    for (const sq of remaining) {
+      if (selected.length >= count) break;
+      selected.push(sq.question);
+    }
+
+    // Shuffle the selected questions so user doesn't always see hardest first
+    return shuffleArray(selected);
+  }
+
+  // Standard selection without difficulty escalation
   // Sort by score (highest first)
   scoredQuestions.sort((a, b) => b.score - a.score);
 

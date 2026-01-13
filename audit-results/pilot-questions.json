@@ -1,0 +1,913 @@
+{
+  "generatedAt": "2026-01-13T03:51:43.849Z",
+  "totalQuestions": 100,
+  "summary": {
+    "shortExplanations": 30,
+    "calculations": 30,
+    "diverse": 40
+  },
+  "questions": [
+    {
+      "id": "far-calc1-008",
+      "category": "short_explanation",
+      "topic": "Leases",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 45
+    },
+    {
+      "id": "far-calc2-035",
+      "category": "short_explanation",
+      "topic": "Not-for-Profit Accounting",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 45
+    },
+    {
+      "id": "far-calc1-035",
+      "category": "short_explanation",
+      "topic": "Ratios",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 57
+    },
+    {
+      "id": "far-fsp-022",
+      "category": "short_explanation",
+      "topic": "Income Statement",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 61
+    },
+    {
+      "id": "far-calc1-025",
+      "category": "short_explanation",
+      "topic": "Consolidations",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 63
+    },
+    {
+      "id": "far-fund1-023",
+      "category": "short_explanation",
+      "topic": "Basic Concepts",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 64
+    },
+    {
+      "id": "far-calc2-008",
+      "category": "short_explanation",
+      "topic": "Revenue Recognition",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 65
+    },
+    {
+      "id": "far-debt-001",
+      "category": "short_explanation",
+      "topic": "Long-term Debt",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 66
+    },
+    {
+      "id": "far-fund2-034",
+      "category": "short_explanation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 66
+    },
+    {
+      "id": "far-oci-019",
+      "category": "short_explanation",
+      "topic": "Stockholders' Equity",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 68
+    },
+    {
+      "id": "far-calc1-015",
+      "category": "short_explanation",
+      "topic": "Ratios",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 68
+    },
+    {
+      "id": "far-calc1-016",
+      "category": "short_explanation",
+      "topic": "Ratios",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 68
+    },
+    {
+      "id": "far-calc2-013",
+      "category": "short_explanation",
+      "topic": "Stockholders' Equity",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 68
+    },
+    {
+      "id": "far-tax-adv-010",
+      "category": "short_explanation",
+      "topic": "Income Taxes",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 69
+    },
+    {
+      "id": "far-calc2-018",
+      "category": "short_explanation",
+      "topic": "Statement of Cash Flows",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 69
+    },
+    {
+      "id": "far-fund2-033",
+      "category": "short_explanation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 70
+    },
+    {
+      "id": "far-eps-004",
+      "category": "short_explanation",
+      "topic": "Earnings Per Share",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 72
+    },
+    {
+      "id": "far-calc1-002",
+      "category": "short_explanation",
+      "topic": "Long-term Debt",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 72
+    },
+    {
+      "id": "far-debt-003",
+      "category": "short_explanation",
+      "topic": "Long-term Debt",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 73
+    },
+    {
+      "id": "far-calc2-024",
+      "category": "short_explanation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 73
+    },
+    {
+      "id": "far-calc2-028",
+      "category": "short_explanation",
+      "topic": "Income Taxes",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 73
+    },
+    {
+      "id": "far-fund2-032",
+      "category": "short_explanation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 73
+    },
+    {
+      "id": "far-fi-018",
+      "category": "short_explanation",
+      "topic": "Investments",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 74
+    },
+    {
+      "id": "far-fund1-032",
+      "category": "short_explanation",
+      "topic": "Basic Concepts",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 74
+    },
+    {
+      "id": "far-calc-015",
+      "category": "short_explanation",
+      "topic": "Statement of Cash Flows",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 75
+    },
+    {
+      "id": "far-calc-018",
+      "category": "short_explanation",
+      "topic": "Long-term Debt",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 75
+    },
+    {
+      "id": "far-calc1-017",
+      "category": "short_explanation",
+      "topic": "Ratios",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 75
+    },
+    {
+      "id": "far-fund3-014",
+      "category": "short_explanation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 75
+    },
+    {
+      "id": "far-calc1-011",
+      "category": "short_explanation",
+      "topic": "Pensions",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 76
+    },
+    {
+      "id": "far-calc1-004",
+      "category": "short_explanation",
+      "topic": "Inventory",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 78
+    },
+    {
+      "id": "far-fs-002",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 217
+    },
+    {
+      "id": "far-fs-007",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 224
+    },
+    {
+      "id": "far-fs-017",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 316
+    },
+    {
+      "id": "far-fs-024",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 272
+    },
+    {
+      "id": "far-fs-030",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 199
+    },
+    {
+      "id": "far-fs-031",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 255
+    },
+    {
+      "id": "far-fs-036",
+      "category": "calculation",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 286
+    },
+    {
+      "id": "far-rev-008",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 260
+    },
+    {
+      "id": "far-rev-012",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "hard",
+      "format": "scenario",
+      "explanationLength": 291
+    },
+    {
+      "id": "far-rev-019",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 245
+    },
+    {
+      "id": "far-rev-026",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "hard",
+      "format": "scenario",
+      "explanationLength": 306
+    },
+    {
+      "id": "far-rev-028",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "hard",
+      "format": "scenario",
+      "explanationLength": 310
+    },
+    {
+      "id": "far-rev-033",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "hard",
+      "format": "scenario",
+      "explanationLength": 237
+    },
+    {
+      "id": "far-rev-039",
+      "category": "calculation",
+      "topic": "Revenue Recognition",
+      "difficulty": "hard",
+      "format": "scenario",
+      "explanationLength": 320
+    },
+    {
+      "id": "far-inv-003",
+      "category": "calculation",
+      "topic": "Inventory",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 305
+    },
+    {
+      "id": "far-inv-004",
+      "category": "calculation",
+      "topic": "Inventory",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 216
+    },
+    {
+      "id": "far-inv-005",
+      "category": "calculation",
+      "topic": "Inventory",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 183
+    },
+    {
+      "id": "far-inv-010",
+      "category": "calculation",
+      "topic": "Inventory",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 237
+    },
+    {
+      "id": "far-inv-013",
+      "category": "calculation",
+      "topic": "Inventory",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 194
+    },
+    {
+      "id": "far-inv-014",
+      "category": "calculation",
+      "topic": "Inventory",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 294
+    },
+    {
+      "id": "far-ppe-005",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 302
+    },
+    {
+      "id": "far-ppe-006",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "easy",
+      "format": "calculation",
+      "explanationLength": 192
+    },
+    {
+      "id": "far-ppe-007",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 213
+    },
+    {
+      "id": "far-ppe-008",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 204
+    },
+    {
+      "id": "far-ppe-009",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 177
+    },
+    {
+      "id": "far-ppe-010",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 149
+    },
+    {
+      "id": "far-ppe-013",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "hard",
+      "format": "scenario",
+      "explanationLength": 254
+    },
+    {
+      "id": "far-ppe-017",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 249
+    },
+    {
+      "id": "far-ppe-019",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "hard",
+      "format": "calculation",
+      "explanationLength": 283
+    },
+    {
+      "id": "far-ppe-021",
+      "category": "calculation",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "medium",
+      "format": "calculation",
+      "explanationLength": 215
+    },
+    {
+      "id": "far-000-001",
+      "category": "diverse",
+      "topic": "FAR Foundations",
+      "difficulty": "easy",
+      "format": "MCQ",
+      "explanationLength": 230
+    },
+    {
+      "id": "far-cf-001",
+      "category": "diverse",
+      "topic": "Conceptual Framework & Standards",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 405
+    },
+    {
+      "id": "far-fs-001",
+      "category": "diverse",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 305
+    },
+    {
+      "id": "far-rev-001",
+      "category": "diverse",
+      "topic": "Revenue Recognition",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 332
+    },
+    {
+      "id": "far-inv-001",
+      "category": "diverse",
+      "topic": "Inventory",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 268
+    },
+    {
+      "id": "far-ppe-001",
+      "category": "diverse",
+      "topic": "Property, Plant & Equipment",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 305
+    },
+    {
+      "id": "far-int-001",
+      "category": "diverse",
+      "topic": "Intangible Assets",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 302
+    },
+    {
+      "id": "far-inv-sec-001",
+      "category": "diverse",
+      "topic": "Investments",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 305
+    },
+    {
+      "id": "far-lease-001",
+      "category": "diverse",
+      "topic": "Leases",
+      "difficulty": "medium",
+      "format": "conceptual",
+      "explanationLength": 355
+    },
+    {
+      "id": "far-liab-001",
+      "category": "diverse",
+      "topic": "Liabilities",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 298
+    },
+    {
+      "id": "far-eq-002",
+      "category": "diverse",
+      "topic": "Stockholders' Equity",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 224
+    },
+    {
+      "id": "far-tax-001",
+      "category": "diverse",
+      "topic": "Income Taxes",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 321
+    },
+    {
+      "id": "far-gov-001",
+      "category": "diverse",
+      "topic": "Government Accounting",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 291
+    },
+    {
+      "id": "far-stock-001",
+      "category": "diverse",
+      "topic": "Stock-Based Compensation",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 244
+    },
+    {
+      "id": "far-buscom-001",
+      "category": "diverse",
+      "topic": "Business Combinations",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 148
+    },
+    {
+      "id": "far-consol-001",
+      "category": "diverse",
+      "topic": "Consolidations",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 228
+    },
+    {
+      "id": "far-forex-001",
+      "category": "diverse",
+      "topic": "Foreign Currency",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 195
+    },
+    {
+      "id": "far-nfp-001",
+      "category": "diverse",
+      "topic": "Not-for-Profit Accounting",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 204
+    },
+    {
+      "id": "far-scf-001",
+      "category": "diverse",
+      "topic": "Statement of Cash Flows",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 178
+    },
+    {
+      "id": "far-changes-001",
+      "category": "diverse",
+      "topic": "Accounting Changes and Error Corrections",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 224
+    },
+    {
+      "id": "far-eps-001",
+      "category": "diverse",
+      "topic": "Earnings Per Share",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 156
+    },
+    {
+      "id": "far-fv-001",
+      "category": "diverse",
+      "topic": "Fair Value",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 174
+    },
+    {
+      "id": "far-subseq-001",
+      "category": "diverse",
+      "topic": "Subsequent Events",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 162
+    },
+    {
+      "id": "far-rp-001",
+      "category": "diverse",
+      "topic": "Related Parties",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 180
+    },
+    {
+      "id": "far-rp-007",
+      "category": "diverse",
+      "topic": "Going Concern",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 179
+    },
+    {
+      "id": "far-deriv-001",
+      "category": "diverse",
+      "topic": "Derivatives",
+      "difficulty": "medium",
+      "format": "conceptual",
+      "explanationLength": 201
+    },
+    {
+      "id": "far-ifrs-001",
+      "category": "diverse",
+      "topic": "IFRS",
+      "difficulty": "medium",
+      "format": "conceptual",
+      "explanationLength": 209
+    },
+    {
+      "id": "far-pen-adv-001",
+      "category": "diverse",
+      "topic": "Pensions",
+      "difficulty": "medium",
+      "format": "conceptual",
+      "explanationLength": 124
+    },
+    {
+      "id": "far-debt-002",
+      "category": "diverse",
+      "topic": "Long-term Debt",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 135
+    },
+    {
+      "id": "far-fsp-001",
+      "category": "diverse",
+      "topic": "Balance Sheet",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 141
+    },
+    {
+      "id": "far-fsp-005",
+      "category": "diverse",
+      "topic": "Income Statement",
+      "difficulty": "hard",
+      "format": "conceptual",
+      "explanationLength": 174
+    },
+    {
+      "id": "far-sec-001",
+      "category": "diverse",
+      "topic": "SEC Reporting",
+      "difficulty": "medium",
+      "format": "conceptual",
+      "explanationLength": 138
+    },
+    {
+      "id": "far-review-002",
+      "category": "diverse",
+      "topic": "Cash and Cash Equivalents",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 248
+    },
+    {
+      "id": "far-fund1-001",
+      "category": "diverse",
+      "topic": "Basic Concepts",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 159
+    },
+    {
+      "id": "far-fund3-001",
+      "category": "diverse",
+      "topic": "Revenue and Receivables",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 199
+    },
+    {
+      "id": "far-fund4-032",
+      "category": "diverse",
+      "topic": "Ratios",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 207
+    },
+    {
+      "id": "far-000-002",
+      "category": "diverse",
+      "topic": "FAR Foundations",
+      "difficulty": "easy",
+      "format": "MCQ",
+      "explanationLength": 307
+    },
+    {
+      "id": "far-cf-002",
+      "category": "diverse",
+      "topic": "Conceptual Framework & Standards",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 396
+    },
+    {
+      "id": "far-fs-003",
+      "category": "diverse",
+      "topic": "Financial Statement Presentation",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 305
+    },
+    {
+      "id": "far-rev-002",
+      "category": "diverse",
+      "topic": "Revenue Recognition",
+      "difficulty": "easy",
+      "format": "conceptual",
+      "explanationLength": 316
+    }
+  ],
+  "questionIds": [
+    "far-calc1-008",
+    "far-calc2-035",
+    "far-calc1-035",
+    "far-fsp-022",
+    "far-calc1-025",
+    "far-fund1-023",
+    "far-calc2-008",
+    "far-debt-001",
+    "far-fund2-034",
+    "far-oci-019",
+    "far-calc1-015",
+    "far-calc1-016",
+    "far-calc2-013",
+    "far-tax-adv-010",
+    "far-calc2-018",
+    "far-fund2-033",
+    "far-eps-004",
+    "far-calc1-002",
+    "far-debt-003",
+    "far-calc2-024",
+    "far-calc2-028",
+    "far-fund2-032",
+    "far-fi-018",
+    "far-fund1-032",
+    "far-calc-015",
+    "far-calc-018",
+    "far-calc1-017",
+    "far-fund3-014",
+    "far-calc1-011",
+    "far-calc1-004",
+    "far-fs-002",
+    "far-fs-007",
+    "far-fs-017",
+    "far-fs-024",
+    "far-fs-030",
+    "far-fs-031",
+    "far-fs-036",
+    "far-rev-008",
+    "far-rev-012",
+    "far-rev-019",
+    "far-rev-026",
+    "far-rev-028",
+    "far-rev-033",
+    "far-rev-039",
+    "far-inv-003",
+    "far-inv-004",
+    "far-inv-005",
+    "far-inv-010",
+    "far-inv-013",
+    "far-inv-014",
+    "far-ppe-005",
+    "far-ppe-006",
+    "far-ppe-007",
+    "far-ppe-008",
+    "far-ppe-009",
+    "far-ppe-010",
+    "far-ppe-013",
+    "far-ppe-017",
+    "far-ppe-019",
+    "far-ppe-021",
+    "far-000-001",
+    "far-cf-001",
+    "far-fs-001",
+    "far-rev-001",
+    "far-inv-001",
+    "far-ppe-001",
+    "far-int-001",
+    "far-inv-sec-001",
+    "far-lease-001",
+    "far-liab-001",
+    "far-eq-002",
+    "far-tax-001",
+    "far-gov-001",
+    "far-stock-001",
+    "far-buscom-001",
+    "far-consol-001",
+    "far-forex-001",
+    "far-nfp-001",
+    "far-scf-001",
+    "far-changes-001",
+    "far-eps-001",
+    "far-fv-001",
+    "far-subseq-001",
+    "far-rp-001",
+    "far-rp-007",
+    "far-deriv-001",
+    "far-ifrs-001",
+    "far-pen-adv-001",
+    "far-debt-002",
+    "far-fsp-001",
+    "far-fsp-005",
+    "far-sec-001",
+    "far-review-002",
+    "far-fund1-001",
+    "far-fund3-001",
+    "far-fund4-032",
+    "far-000-002",
+    "far-cf-002",
+    "far-fs-003",
+    "far-rev-002"
+  ]
+}

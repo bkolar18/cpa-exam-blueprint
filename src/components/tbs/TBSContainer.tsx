@@ -865,7 +865,7 @@ export default function TBSContainer({
  onSubmit={handleSubmitAttempt}
  onPrevious={onPrevious}
  onNext={onNext}
- onReturnToLibrary={isSubmitted ? onReturnToLibrary : handleExitSession}
+ onReturnToLibrary={isPracticeMode ? (isSubmitted ? onReturnToLibrary : handleExitSession) : undefined}
  />
 
  {/* Instructions - hide in review mode */}

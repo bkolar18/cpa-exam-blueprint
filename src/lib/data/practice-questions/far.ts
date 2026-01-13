@@ -1116,8 +1116,8 @@ const questions = [
       "D": "$180,000"
     },
     "correctAnswer": "A",
-    "explanation": "Working capital is calculated as current assets minus current liabilities. Working capital = $450,000 - $180,000 = $270,000. This represents the net amount of liquid resources available to meet short-term obligations.",
-    "tip": "Working capital = Current assets − Current liabilities.",
+    "explanation": "Working capital measures short-term liquidity. **Formula:** Working Capital = Current Assets − Current Liabilities. **Calculation:** $450,000 − $180,000 = $270,000. Why other answers are wrong: (B) $630,000 incorrectly adds the amounts; (C) $450,000 is current assets only; (D) $180,000 is current liabilities only. Positive working capital indicates the company can meet short-term obligations; negative working capital may signal liquidity concerns.",
+    "tip": "Working Capital = CA − CL. Positive = can meet short-term obligations; negative = potential liquidity issue.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -1213,8 +1213,8 @@ const questions = [
       "D": "45%"
     },
     "correctAnswer": "B",
-    "explanation": "Gross profit = Net sales − Cost of goods sold = $800,000 − $520,000 = $280,000. Gross profit margin = Gross profit ÷ Net sales = $280,000 ÷ $800,000 = 35%. This measures the percentage of revenue retained after direct costs.",
-    "tip": "Gross profit margin = (Sales − COGS) ÷ Sales.",
+    "explanation": "Gross profit margin shows profitability after direct costs. **Calculation:** Step 1: Gross profit = $800,000 − $520,000 = $280,000. Step 2: Gross profit margin = $280,000 ÷ $800,000 = 35%. Why other answers are wrong: (A) 54% appears arbitrary; (C) 65% is COGS/Sales ratio; (D) 45% might use incorrect calculation. A 35% margin means 35 cents of each sales dollar is gross profit.",
+    "tip": "Gross Profit Margin = Gross Profit ÷ Sales = (Sales − COGS) ÷ Sales.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -1405,8 +1405,8 @@ const questions = [
       "D": "$220,000"
     },
     "correctAnswer": "D",
-    "explanation": "Start with net income: $200,000. Add depreciation (non-cash): +$30,000. Subtract increase in A/R (cash not collected): -$15,000. Add decrease in inventory (cash conserved): +$10,000. Subtract decrease in A/P (cash paid out): -$5,000. Cash from operations = $200,000 + $30,000 - $15,000 + $10,000 - $5,000 = $220,000.",
-    "tip": "Add non-cash expenses and decreases in assets; subtract increases in assets and decreases in liabilities.",
+    "explanation": "Per ASC 230, the indirect method reconciles net income to operating cash flows. **Calculation:** Net income $200,000 + Depreciation $30,000 (non-cash) − AR increase $15,000 (used cash) + Inventory decrease $10,000 (source) − AP decrease $5,000 (used cash) = $220,000. Why other answers are wrong: (A) $230,000 may incorrectly add AP decrease; (B) $200,000 ignores all adjustments; (C) $180,000 may incorrectly subtract inventory decrease. Key rule: Asset increases use cash; liability increases provide cash.",
+    "tip": "Indirect CFO: NI + Depreciation − Asset increases + Asset decreases + Liability increases − Liability decreases.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -1540,8 +1540,8 @@ const questions = [
       "D": "$620,000"
     },
     "correctAnswer": "C",
-    "explanation": "Ending retained earnings = Beginning RE + Net income − Dividends declared. Ending RE = $500,000 + $120,000 − $30,000 = $590,000. Retained earnings increases with net income and decreases with dividends declared (and certain other items like some prior period adjustments).",
-    "tip": "RE ending = RE beginning + Net income − Dividends.",
+    "explanation": "Retained earnings accumulates undistributed profits over time. **Formula:** Ending RE = Beginning RE + Net Income − Dividends. **Calculation:** $500,000 + $120,000 − $30,000 = $590,000. Why other answers are wrong: (A) $470,000 may subtract both NI and dividends; (B) $650,000 ignores dividends; (D) $620,000 may add dividends. Dividends declared (not paid) reduce RE. Prior period adjustments also affect RE directly.",
+    "tip": "RE = Beginning + Net Income − Dividends Declared. Use dividends DECLARED, not paid.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -1656,8 +1656,8 @@ const questions = [
       "D": "$305,000"
     },
     "correctAnswer": "D",
-    "explanation": "Cost of goods sold = Beginning inventory + Purchases − Ending inventory. COGS = $80,000 + $320,000 − $95,000 = $305,000. This formula calculates the cost of inventory actually sold during the period.",
-    "tip": "COGS = Beginning inventory + Purchases − Ending inventory.",
+    "explanation": "Per ASC 330, COGS represents the cost of inventory sold during the period. **Formula:** COGS = Beginning Inventory + Purchases − Ending Inventory. **Calculation:** $80,000 + $320,000 − $95,000 = $305,000. Why other answers are wrong: (A) $400,000 = BI + Purchases, ignoring EI; (B) $335,000 calculation error; (C) $295,000 may add instead of subtract. Another way: Goods available for sale ($400,000) − Ending inventory ($95,000) = COGS ($305,000).",
+    "tip": "COGS = Beginning Inventory + Purchases − Ending Inventory. Or: Goods Available − Ending Inventory.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -1677,8 +1677,8 @@ const questions = [
       "D": "$350,000"
     },
     "correctAnswer": "D",
-    "explanation": "Free cash flow (a non-GAAP measure) is commonly calculated as cash from operating activities minus capital expenditures. FCF = $500,000 − $150,000 = $350,000. This represents cash available for discretionary purposes after maintaining productive capacity.",
-    "tip": "Free cash flow = Operating cash flow − Capital expenditures.",
+    "explanation": "Free cash flow (a non-GAAP measure) represents cash available for discretionary purposes. **Formula:** FCF = Operating Cash Flow − Capital Expenditures. **Calculation:** $500,000 − $150,000 = $350,000. Why other answers are wrong: (A) $500,000 is CFO only; (B) $150,000 is CapEx only; (C) $650,000 incorrectly adds instead of subtracts. FCF is widely used by analysts to assess dividend-paying capacity, debt repayment ability, and acquisition potential.",
+    "tip": "FCF = CFO − CapEx. This non-GAAP metric shows cash available after maintaining productive capacity.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -1774,8 +1774,8 @@ const questions = [
       "D": "$200,000"
     },
     "correctAnswer": "D",
-    "explanation": "Operating income = Net sales − COGS − Operating expenses. Operating income = $1,000,000 − $600,000 − $120,000 − $80,000 = $200,000. Interest expense is a non-operating expense and is excluded from operating income. Gross profit is $400,000; operating income is after operating expenses.",
-    "tip": "Operating income = Gross profit − Operating expenses (exclude interest).",
+    "explanation": "Operating income measures profitability from core operations. **Calculation:** Gross profit = $1,000,000 − $600,000 = $400,000. Operating income = $400,000 − $120,000 − $80,000 = $200,000. Why other answers are wrong: (A) $280,000 may include interest subtraction; (B) $400,000 is gross profit, not operating income; (C) $170,000 incorrectly subtracts interest. Interest expense ($30,000) is NON-operating and excluded from operating income.",
+    "tip": "Operating Income = Gross Profit − Operating Expenses. Excludes interest and income taxes.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2004,8 +2004,8 @@ const questions = [
       "D": "$600"
     },
     "correctAnswer": "A",
-    "explanation": "Allocation is based on relative standalone selling prices. Total standalone prices = $600 + $400 = $1,000. Product allocation = ($600 / $1,000) × $900 = $540. Service allocation = ($400 / $1,000) × $900 = $360. The discount of $100 is allocated proportionally.",
-    "tip": "Allocation = (Item SSP / Total SSP) × Transaction price.",
+    "explanation": "Per ASC 606-10-32-28, when a contract has multiple performance obligations, allocate the transaction price based on relative standalone selling prices (SSP). **Calculation:** Total SSP = $600 + $400 = $1,000. Product: ($600 ÷ $1,000) × $900 = $540. Service: ($400 ÷ $1,000) × $900 = $360. Why other answers are wrong: (B) $500 may use 50/50 split; (C) $450 may use different allocation; (D) $600 ignores the discount allocation. The $100 discount is allocated proportionally.",
+    "tip": "Allocation = (Item SSP ÷ Total SSP) × Transaction Price. Discounts allocated proportionally to all obligations.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -2683,8 +2683,8 @@ const questions = [
       "D": "$2,800"
     },
     "correctAnswer": "A",
-    "explanation": "Total units = 100 + 150 + 200 = 450. Units sold = 300. Ending inventory = 150 units. Under FIFO, ending inventory consists of the most recent purchases: 150 units from Purchase 2 @ $14 = $2,100. (All 200 from Purchase 2, but only 150 remain; actually: 200 - 50 from Purchase 2 = 150 units × $14 = $2,100).",
-    "tip": "FIFO ending inventory = most recent costs. Work backward from latest purchase.",
+    "explanation": "Per ASC 330, under FIFO, the oldest costs are expensed to COGS first. **Calculation:** Total units = 450, Sold = 300, Remaining = 150 units. FIFO ending inventory comes from the most recent purchase: 150 units × $14 = $2,100. Why other answers are wrong: (B) $2,000 may mix unit costs; (C) $1,500 = 150 × $10 (that's LIFO); (D) $2,800 would require 200 units. FIFO assigns recent costs to balance sheet inventory.",
+    "tip": "FIFO ending inventory = most recent costs remaining. FIFO COGS = oldest costs sold first.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -2704,8 +2704,8 @@ const questions = [
       "D": "$1,700"
     },
     "correctAnswer": "A",
-    "explanation": "Under LIFO, the newest costs go to COGS first. Units sold: 200 from Purchase 2 + 100 from Purchase 1 = 300. Ending inventory = 100 units from beginning @ $10 + 50 units from Purchase 1 @ $12 = $1,000 + $600 = $1,600.",
-    "tip": "LIFO ending inventory = oldest costs. Work forward from beginning inventory.",
+    "explanation": "Per ASC 330, under LIFO, the newest costs are expensed to COGS first. **Calculation:** Sold 300 units from newest first: 200 @ $14 + 100 @ $12 = all from purchases. Ending = 100 beginning @ $10 + 50 from Purchase 1 @ $12 = $1,000 + $600 = $1,600. Why other answers are wrong: (B) $1,500 = 150 × $10; (C) $2,100 is FIFO ending; (D) $1,700 calculation error. LIFO assigns old costs to inventory, new costs to COGS.",
+    "tip": "LIFO ending inventory = oldest costs remaining. LIFO COGS = newest costs sold first.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -3303,8 +3303,8 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "D",
-    "explanation": "First, use the specific construction loan: $1,500,000 × 8% = $120,000. Remaining expenditures: $2,000,000 − $1,500,000 = $500,000. Apply weighted average rate of other debt: $500,000 × 6% = $30,000. Total capitalizable interest = $120,000 + $30,000 = $150,000. (Cannot exceed actual interest incurred.)",
-    "tip": "Use specific borrowings first, then weighted average rate for excess.",
+    "explanation": "Per ASC 835-20, capitalizable interest uses specific borrowings first, then weighted average rate for excess. **Calculation:** Step 1: Specific loan: $1,500,000 × 8% = $120,000. Step 2: Excess AAE: $2,000,000 − $1,500,000 = $500,000 × 6% = $30,000. Total = $150,000. Why other answers are wrong: (A) $160,000 may use wrong rate; (B) $180,000 may apply 8% to all; (C) $120,000 is specific loan interest only. Capitalizable interest cannot exceed actual interest incurred.",
+    "tip": "Interest capitalization: Specific borrowings at actual rate first, then weighted average for excess AAE.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -3324,8 +3324,8 @@ const questions = [
       "D": "$12,500"
     },
     "correctAnswer": "A",
-    "explanation": "Straight-line depreciation = (Cost − Salvage value) / Useful life = ($50,000 − $5,000) / 5 years = $45,000 / 5 = $9,000 per year. The depreciable base is the cost less estimated salvage value.",
-    "tip": "SL depreciation = (Cost − Salvage) ÷ Life.",
+    "explanation": "Per ASC 360, straight-line depreciation allocates cost evenly over useful life. **Formula:** Annual Depreciation = (Cost − Salvage) ÷ Life. **Calculation:** ($50,000 − $5,000) ÷ 5 = $9,000 per year. Why other answers are wrong: (B) $10,000 ignores salvage ($50,000 ÷ 5); (C) $11,000 calculation error; (D) $12,500 ignores salvage and uses 4-year life. The depreciable base excludes estimated salvage value.",
+    "tip": "SL Depreciation = (Cost − Salvage) ÷ Life. Depreciable base excludes salvage value.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -11287,8 +11287,8 @@ const questions = [
       "D": "$5.50"
     },
     "correctAnswer": "B",
-    "explanation": "Basic EPS = ($500,000 - $50,000) ÷ 100,000 = $450,000 ÷ 100,000 = $4.50.",
-    "tip": "Always subtract preferred dividends from net income.",
+    "explanation": "Per ASC 260, basic EPS is calculated using income available to common shareholders. **Formula:** Basic EPS = (Net Income − Preferred Dividends) ÷ Weighted-Average Common Shares. **Calculation:** ($500,000 − $50,000) ÷ 100,000 = $4.50. Why other answers are wrong: (A) $4.00 might result from an error; (C) $5.00 ignores preferred dividends ($500,000 ÷ 100,000); (D) $5.50 adds preferred dividends instead of subtracting. Preferred dividends must ALWAYS be subtracted, whether declared or not (for cumulative preferred).",
+    "tip": "Basic EPS = (NI − Preferred Dividends) ÷ Common Shares. ALWAYS subtract preferred dividends.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -14983,8 +14983,8 @@ const questions = [
       "D": "$183,000"
     },
     "correctAnswer": "D",
-    "explanation": "CFO = $150,000 + $40,000 - $10,000 - $20,000 + $15,000 + $8,000 = $183,000.",
-    "tip": "Add depreciation, subtract gain, adjust for WC changes.",
+    "explanation": "Per ASC 230, operating cash flows under the indirect method start with net income, then adjust for non-cash items and working capital changes. **Calculation:** Net income $150,000 + Depreciation $40,000 (non-cash) − Gain $10,000 (investing) − AR increase $20,000 (used cash) + AP increase $15,000 (source of cash) + Inventory decrease $8,000 (source of cash) = $183,000. Why other answers are wrong: (A) (B) (C) result from incorrect signs on adjustments. Rule: Asset increases use cash; liability increases provide cash.",
+    "tip": "Indirect CFO: +Depreciation, −Gains, +Asset decreases, +Liability increases.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -15046,8 +15046,8 @@ const questions = [
       "D": "$96,000"
     },
     "correctAnswer": "D",
-    "explanation": "Interest expense = Carrying value × Market rate = $960,000 × 10% = $96,000.",
-    "tip": "Interest expense = Carrying value × Effective (market) rate.",
+    "explanation": "Under the effective interest method, interest expense reflects the true cost of borrowing. **Formula:** Interest Expense = Carrying Value × Market Rate. **Calculation:** $960,000 × 10% = $96,000. Why other answers are wrong: (A) $100,000 uses face value × market rate; (B) $76,000 appears to use incorrect base; (C) $80,000 is cash payment (face × stated: $1,000,000 × 8%). The $16,000 difference ($96,000 − $80,000) is discount amortization, which increases the carrying value.",
+    "tip": "Interest expense = Carrying value × Market rate. Cash = Face × Stated rate.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -19309,8 +19309,8 @@ const questions = [
       "D": "$1,030,000"
     },
     "correctAnswer": "D",
-    "explanation": "Issue price = Face value × Price = $1,000,000 × 103% = $1,030,000.",
-    "tip": "Issue at 103 = 103% of face value.",
+    "explanation": "Bond pricing quotes are expressed as a percentage of face value. A price of 103 means 103% of face value. **Calculation:** Cash received = $1,000,000 × 103% = $1,030,000. The $30,000 premium arises because the stated rate exceeds the market rate. Why other answers are wrong: (A) $970,000 would be a discount (price of 97); (B) $1,000,000 would be par (price of 100); (C) $1,003,000 misreads 103 as $1,000,000 + $3,000. The premium is amortized over the bond term, reducing interest expense.",
+    "tip": "Bond price of 103 = 103% of face value = premium. Price > 100 = premium; price < 100 = discount.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -19351,8 +19351,8 @@ const questions = [
       "D": "$8,000"
     },
     "correctAnswer": "A",
-    "explanation": "Interest expense = Carrying value × Market rate = $95,000 × 10% = $9,500.",
-    "tip": "Effective interest: expense = carrying value × market rate.",
+    "explanation": "Under the effective interest method, interest expense reflects the true cost of borrowing based on the market rate at issuance. **Formula:** Interest Expense = Carrying Value × Market Rate. **Calculation:** $95,000 × 10% = $9,500. Why other answers are wrong: (B) $10,000 incorrectly uses face value; (C) $10,500 appears arbitrary; (D) $8,000 is cash interest (face × stated rate: $100,000 × 8%). Discount amortization = $9,500 − $8,000 = $1,500, increasing carrying value each period.",
+    "tip": "Effective interest method: Expense uses market rate and carrying value. Cash uses stated rate and face value.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -21031,8 +21031,8 @@ const questions = [
       "D": "$5,000"
     },
     "correctAnswer": "A",
-    "explanation": "Interest income = Amortized cost × Effective rate = $96,000 × 6% = $5,760.",
-    "tip": "Interest income = carrying value × effective rate (market rate at purchase).",
+    "explanation": "Per ASC 320, interest income on debt securities is recognized using the effective interest method, applying the market rate at purchase to the carrying (amortized cost) value. **Formula:** Interest Income = Amortized Cost × Effective Rate. **Calculation:** $96,000 × 6% = $5,760. Why other answers are wrong: (B) $6,000 uses face value at effective rate; (C) $6,400 miscalculates; (D) $5,000 is cash received (face × stated: $100,000 × 5%). The $760 difference ($5,760 − $5,000) is discount amortization.",
+    "tip": "Bond interest income = Carrying value × Effective rate. Cash received = Face × Stated rate.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -21787,8 +21787,8 @@ const questions = [
       "D": "$40,000"
     },
     "correctAnswer": "D",
-    "explanation": "APIC = (Issue price - Par) × Shares = ($18 - $10) × 5,000 = $40,000.",
-    "tip": "APIC = excess over par × shares issued.",
+    "explanation": "Additional Paid-In Capital (APIC) represents amounts received above par value when stock is issued. **Formula:** APIC = (Issue Price − Par Value) × Shares. **Calculation:** ($18 − $10) × 5,000 = $8 × 5,000 = $40,000. Why other answers are wrong: (A) $50,000 is par value portion (5,000 × $10); (B) $90,000 is total proceeds (5,000 × $18); (C) $100,000 appears to be an arbitrary calculation. Common Stock is credited at par ($50,000), and APIC receives the excess ($40,000).",
+    "tip": "APIC = (Issue price − Par) × Shares. Total proceeds split between Common Stock (par) and APIC (excess).",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -22585,8 +22585,8 @@ const questions = [
       "D": "$120,000"
     },
     "correctAnswer": "A",
-    "explanation": "Gross profit = Sales - COGS = $800,000 - $480,000 = $320,000.",
-    "tip": "Gross profit = Revenue - COGS.",
+    "explanation": "Gross profit measures profitability before operating expenses. **Formula:** Gross Profit = Sales − COGS. **Calculation:** $800,000 − $480,000 = $320,000. Why other answers are wrong: (B) $600,000 incorrectly subtracts operating expenses from sales; (C) $800,000 is total sales, not profit; (D) $120,000 incorrectly deducts both COGS and operating expenses. Operating expenses are deducted from gross profit to calculate operating income, not gross profit.",
+    "tip": "Gross profit = Sales − COGS only. Operating expenses are deducted later for operating income.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -22963,8 +22963,8 @@ const questions = [
       "D": "$79,000"
     },
     "correctAnswer": "C",
-    "explanation": "DTA for NOL = NOL carryforward × Tax rate = $100,000 × 21% = $21,000.",
-    "tip": "NOL DTA = NOL carryforward × current tax rate.",
+    "explanation": "Per ASC 740, a deferred tax asset (DTA) is recognized for the future tax benefit of an NOL carryforward. **Formula:** DTA = NOL Carryforward × Tax Rate. **Calculation:** $100,000 × 21% = $21,000. Why other answers are wrong: (A) $100,000 is the NOL itself, not the tax benefit; (B) $121,000 incorrectly adds the NOL and DTA; (D) $79,000 appears to be NOL minus DTA. A valuation allowance reduces DTA if it's more-likely-than-not (>50%) that some benefit won't be realized.",
+    "tip": "NOL DTA = NOL × Tax Rate. May need valuation allowance if realization is doubtful (>50%).",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -23494,7 +23494,7 @@ const questions = [
     "timeEstimateSeconds": 120
   },
   {
-    "id": "far-cf-001",
+    "id": "far-cf-041",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23515,7 +23515,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-002",
+    "id": "far-cf-042",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23536,7 +23536,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-003",
+    "id": "far-cf-043",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Basic Accounting",
@@ -23557,7 +23557,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-004",
+    "id": "far-cf-044",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Basic Accounting",
@@ -23578,7 +23578,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-005",
+    "id": "far-cf-045",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Basic Accounting",
@@ -23599,7 +23599,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-006",
+    "id": "far-cf-046",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Basic Accounting",
@@ -23620,7 +23620,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-cf-007",
+    "id": "far-cf-047",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Basic Accounting",
@@ -23641,7 +23641,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-008",
+    "id": "far-cf-048",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23662,7 +23662,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-009",
+    "id": "far-cf-049",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23683,7 +23683,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-cf-010",
+    "id": "far-cf-050",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23704,7 +23704,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-011",
+    "id": "far-cf-051",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23725,7 +23725,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-012",
+    "id": "far-cf-052",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23746,7 +23746,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-013",
+    "id": "far-cf-053",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23767,7 +23767,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-cf-014",
+    "id": "far-cf-054",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23788,7 +23788,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-cf-015",
+    "id": "far-cf-055",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23809,7 +23809,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-016",
+    "id": "far-cf-056",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23830,7 +23830,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-017",
+    "id": "far-cf-057",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23851,7 +23851,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-018",
+    "id": "far-cf-058",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23872,7 +23872,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-cf-019",
+    "id": "far-cf-059",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23893,7 +23893,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-020",
+    "id": "far-cf-060",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -23914,7 +23914,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-021",
+    "id": "far-cf-061",
     "section": "FAR",
     "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Accounting Changes & Errors",
@@ -23935,7 +23935,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-022",
+    "id": "far-cf-062",
     "section": "FAR",
     "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Accounting Changes & Errors",
@@ -23956,7 +23956,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-cf-023",
+    "id": "far-cf-063",
     "section": "FAR",
     "topic": "Accounting Changes and Error Corrections",
     "subtopic": "Accounting Changes & Errors",
@@ -23977,7 +23977,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-cf-024",
+    "id": "far-cf-064",
     "section": "FAR",
     "topic": "Fair Value",
     "subtopic": "Conceptual Framework",
@@ -23998,7 +23998,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-025",
+    "id": "far-cf-065",
     "section": "FAR",
     "topic": "Fair Value",
     "subtopic": "Conceptual Framework",
@@ -24019,7 +24019,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-026",
+    "id": "far-cf-066",
     "section": "FAR",
     "topic": "Fair Value",
     "subtopic": "Conceptual Framework",
@@ -24040,7 +24040,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-027",
+    "id": "far-cf-067",
     "section": "FAR",
     "topic": "Fair Value",
     "subtopic": "Fair Value",
@@ -24061,7 +24061,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-cf-028",
+    "id": "far-cf-068",
     "section": "FAR",
     "topic": "Financial Statement Presentation",
     "subtopic": "Fair Value",
@@ -24082,7 +24082,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-cf-029",
+    "id": "far-cf-069",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -24103,7 +24103,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-cf-030",
+    "id": "far-cf-070",
     "section": "FAR",
     "topic": "Conceptual Framework & Standards",
     "subtopic": "Conceptual Framework",
@@ -24160,8 +24160,8 @@ const questions = [
       "D": "$9,700"
     },
     "correctAnswer": "B",
-    "explanation": "Interest expense = Carrying value × Market rate = $97,000 × 8% = $7,760.",
-    "tip": "Interest expense = carrying value × effective rate.",
+    "explanation": "Under the effective interest method, interest expense equals the carrying value times the market (effective) rate. **Formula:** Interest Expense = Carrying Value × Market Rate. **Calculation:** $97,000 × 8% = $7,760. Why other answers are wrong: (A) $6,000 is cash paid (face × stated rate: $100,000 × 6%); (C) $8,000 would be face × market rate; (D) $9,700 incorrectly uses 10% or miscalculates. The discount amortization = Expense − Cash paid = $7,760 − $6,000 = $1,760.",
+    "tip": "Effective interest: Expense = Carrying value × Market rate. Cash = Face × Stated rate.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -24202,8 +24202,8 @@ const questions = [
       "D": "$800"
     },
     "correctAnswer": "C",
-    "explanation": "FIFO: ending inventory is from most recent purchases. 80 units × $14 = $1,120.",
-    "tip": "FIFO ending: most recent costs remain.",
+    "explanation": "Per ASC 330, under FIFO (First-In, First-Out), the oldest costs are expensed to COGS, leaving the newest (most recent) costs in ending inventory. **Calculation:** 300 units purchased, 220 sold, 80 remain. Ending inventory = 80 units from the most recent $14 purchase = $1,120. Why other answers are wrong: (A) $960 would be 80 × $12 (second layer); (B) $1,040 appears to mix layers; (D) $800 would be 80 × $10 (oldest layer—that's LIFO). FIFO assigns recent costs to balance sheet, oldest costs to income statement.",
+    "tip": "FIFO ending inventory = newest (most recent) costs. FIFO COGS = oldest costs.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -24286,8 +24286,8 @@ const questions = [
       "D": "$168,480"
     },
     "correctAnswer": "D",
-    "explanation": "Lease liability = $40,000 × 4.212 = $168,480.",
-    "tip": "Lease liability = payment × PV annuity factor.",
+    "explanation": "Per ASC 842, the lease liability is measured at the present value of lease payments not yet paid. **Formula:** Lease Liability = Annual Payment × PV Annuity Factor. **Calculation:** $40,000 × 4.212 = $168,480. Why other answers are wrong: (A) $184,000 results from using an incorrect PV factor of 4.6; (B) $200,000 is the simple sum of payments without discounting ($40,000 × 5); (C) $212,000 results from using an incorrect PV factor of 5.3. The time value of money requires discounting future payments to present value.",
+    "tip": "Lease liability = Payment × PV annuity factor. Always discount—never use simple sum of payments.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -24349,8 +24349,8 @@ const questions = [
       "D": "$100,000"
     },
     "correctAnswer": "D",
-    "explanation": "Pension expense = $80,000 + $60,000 - $55,000 + $10,000 + $5,000 = $100,000.",
-    "tip": "NPPC = S + I - R + PSC amort + G/L amort.",
+    "explanation": "Per ASC 715, net periodic pension cost (NPPC) has multiple components. **Formula:** NPPC = Service Cost + Interest Cost − Expected Return + PSC Amortization + G/L Amortization. **Calculation:** $80,000 + $60,000 − $55,000 + $10,000 + $5,000 = $100,000. Why other answers are wrong: (A) $110,000 may omit the return offset; (B) $200,000 adds all components without subtracting return; (C) $90,000 may have calculation errors. Only service cost is reported in operating expenses; other components go in other income/expense.",
+    "tip": "NPPC = Service + Interest − Return + Amortizations. Only service cost = operating; rest = non-operating.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -24433,8 +24433,8 @@ const questions = [
       "D": "0.67"
     },
     "correctAnswer": "B",
-    "explanation": "D/E = Total liabilities / Total equity = $600,000 / $400,000 = 1.50.",
-    "tip": "D/E = Liabilities / Equity.",
+    "explanation": "The debt-to-equity ratio measures financial leverage—how much debt vs. equity finances the company. **Formula:** D/E = Total Liabilities ÷ Total Equity. **Calculation:** $600,000 ÷ $400,000 = 1.50. Why other answers are wrong: (A) 1.00 would require equal liabilities and equity; (C) 2.50 would require liabilities of $1,000,000; (D) 0.67 is equity/liabilities (inverted). A D/E of 1.5 means $1.50 in debt for every $1.00 of equity—higher leverage means higher financial risk.",
+    "tip": "D/E = Liabilities ÷ Equity. Higher ratio = more financial leverage = more risk.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -24454,8 +24454,8 @@ const questions = [
       "D": "8%"
     },
     "correctAnswer": "D",
-    "explanation": "ROA = Net income / Average total assets = $80,000 / $1,000,000 = 8%.",
-    "tip": "ROA = NI / Average assets.",
+    "explanation": "Return on Assets (ROA) measures how efficiently a company uses its assets to generate profit. **Formula:** ROA = Net Income ÷ Average Total Assets. **Calculation:** $80,000 ÷ $1,000,000 = 8%. Why other answers are wrong: (A) 12% would require NI of $120,000; (B) 16% would require NI of $160,000; (C) 4% would require NI of $40,000. Use AVERAGE assets (not ending) to match the period of income. Higher ROA = better asset utilization.",
+    "tip": "ROA = NI ÷ Average Assets. Use AVERAGE assets to match the income period.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -24475,8 +24475,8 @@ const questions = [
       "D": "16%"
     },
     "correctAnswer": "D",
-    "explanation": "ROE = Net income / Average stockholders' equity = $80,000 / $500,000 = 16%.",
-    "tip": "ROE = NI / Average equity.",
+    "explanation": "Return on Equity (ROE) measures how effectively management uses shareholders' investment to generate profit. **Formula:** ROE = Net Income ÷ Average Stockholders' Equity. **Calculation:** $80,000 ÷ $500,000 = 16%. Why other answers are wrong: (A) 20% would require NI of $100,000; (B) 8% would require NI of $40,000; (C) 12% would require NI of $60,000. ROE is a key metric for investors—higher is generally better, but must be compared within industry context.",
+    "tip": "ROE = NI ÷ Average Equity. Use AVERAGE equity to match the income period. Key investor metric.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -24643,8 +24643,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "D",
-    "explanation": "NCI % = 100% - 80% = 20%. NCI share = 20% × $250,000 = $50,000.",
-    "tip": "NCI income = NCI % × Subsidiary net income.",
+    "explanation": "Per ASC 810, noncontrolling interest (NCI) represents the portion of a subsidiary not owned by the parent. **Calculation:** NCI % = 100% − 80% = 20%. NCI share = 20% × $250,000 = $50,000. Why other answers are wrong: (A) $100,000 would be 40% ownership, not 20%; (B) $200,000 represents parent's 80% share; (C) $250,000 is total subsidiary income, not NCI's share. NCI income is reported separately on the consolidated income statement.",
+    "tip": "NCI share = NCI % × Subsidiary net income. NCI % = 100% − Parent's ownership %.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -24853,8 +24853,8 @@ const questions = [
       "D": "45 days"
     },
     "correctAnswer": "B",
-    "explanation": "DSO = 365 / AR turnover = 365 / 12 = 30.4 days ≈ 30 days.",
-    "tip": "DSO = 365 / AR turnover.",
+    "explanation": "Days Sales Outstanding (DSO) measures the average collection period. **Formula:** DSO = 365 ÷ AR Turnover. **Calculation:** 365 ÷ 12 = 30.4 days ≈ 30 days. Why other answers are wrong: (A) 24 days would require turnover of ~15; (C) 36 days would require turnover of ~10; (D) 45 days would require turnover of ~8. DSO indicates how quickly a company collects cash from credit sales—lower is better for liquidity.",
+    "tip": "DSO = 365 ÷ AR Turnover. Lower DSO = faster collection = better liquidity.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -25021,8 +25021,8 @@ const questions = [
       "D": "$480,000"
     },
     "correctAnswer": "B",
-    "explanation": "Refund liability = Sales × Return rate = $500,000 × 4% = $20,000.",
-    "tip": "Refund liability = expected returns × selling price.",
+    "explanation": "Per ASC 606, when customers have a right to return products, the entity recognizes a refund liability for expected returns. **Formula:** Refund Liability = Sales × Expected Return Rate. **Calculation:** $500,000 × 4% = $20,000. Why other answers are wrong: (A) $500,000 is total sales, not the refund portion; (C) $40,000 incorrectly doubles the return rate; (D) $480,000 represents net expected sales (sales minus expected returns), not the liability. The refund liability is a current liability.",
+    "tip": "Refund liability = Sales × Expected return rate. Reduces revenue recognized.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -25126,8 +25126,8 @@ const questions = [
       "D": "$20"
     },
     "correctAnswer": "A",
-    "explanation": "2-for-1 split doubles shares and halves par. New par = $10 / 2 = $5.",
-    "tip": "Stock split: shares × multiplier, par ÷ multiplier.",
+    "explanation": "In a stock split, shares increase proportionally while par value decreases inversely—total par value of common stock stays the same. **Calculation:** 2-for-1 split: Shares = 100,000 × 2 = 200,000. Par value = $10 ÷ 2 = $5. Total par remains $1,000,000. Why other answers are wrong: (B) $10 assumes no change; (C) $15 increases par incorrectly; (D) $20 doubles instead of halving. Unlike stock dividends, splits have no effect on retained earnings or total equity.",
+    "tip": "Stock split: Shares multiply, par divides. Total equity and retained earnings unchanged.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -25231,8 +25231,8 @@ const questions = [
       "D": "$250,000"
     },
     "correctAnswer": "A",
-    "explanation": "Cash paid = $200,000 - $25,000 trade-in = $175,000 investing outflow.",
-    "tip": "Equipment purchase: report net cash paid.",
+    "explanation": "Per ASC 230, the statement of cash flows reports actual cash flows. When equipment is acquired with a trade-in, only the net cash paid is reported. **Calculation:** Cash outflow = $200,000 − $25,000 trade-in = $175,000. Why other answers are wrong: (B) $200,000 ignores the trade-in offset; (C) $225,000 incorrectly adds instead of subtracting; (D) $250,000 is arbitrary. The trade-in is a noncash exchange; only the cash portion flows through investing activities.",
+    "tip": "Equipment purchase with trade-in: Report NET cash paid only. Trade-in is noncash.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -25357,8 +25357,8 @@ const questions = [
       "D": "$6,720"
     },
     "correctAnswer": "C",
-    "explanation": "Year 2 accretion = Year 1 ending balance × Rate = $106,000 × 6% = $6,360.",
-    "tip": "Accretion = Beginning liability × Credit-adjusted rate.",
+    "explanation": "Per ASC 410-20, an Asset Retirement Obligation (ARO) accretes each period using the credit-adjusted risk-free rate from initial measurement. **Formula:** Accretion Expense = Beginning ARO Balance × Credit-Adjusted Rate. **Calculation:** $106,000 × 6% = $6,360. Why other answers are wrong: (A) $12,000 might double the rate; (B) $6,000 uses original balance, not current; (D) $6,720 appears to use a different base. Accretion compounds—each year's expense builds on the prior year's ending balance.",
+    "tip": "ARO accretion = Beginning period balance × Credit-adjusted rate. Expense compounds each year.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -25441,8 +25441,8 @@ const questions = [
       "D": "21.0%"
     },
     "correctAnswer": "D",
-    "explanation": "Effective rate = Tax expense / Pretax income = $105,000 / $500,000 = 21%.",
-    "tip": "Effective rate = Tax expense ÷ Pretax income.",
+    "explanation": "The effective tax rate shows the actual percentage of pretax income paid as taxes, which may differ from the statutory rate due to permanent differences, credits, and other adjustments. **Formula:** Effective Rate = Tax Expense ÷ Pretax Income. **Calculation:** $105,000 ÷ $500,000 = 21%. Why other answers are wrong: (A) 25% would require tax of $125,000; (B) 28% would require tax of $140,000; (C) 17.5% would require tax of $87,500. Companies disclose effective rate reconciliations in tax footnotes.",
+    "tip": "Effective Tax Rate = Tax Expense ÷ Pretax Income. May differ from statutory rate due to permanent differences.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -25588,8 +25588,8 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "A",
-    "explanation": "Program services = $500,000 × 70% = $350,000.",
-    "tip": "Functional expenses = Total × Category %.",
+    "explanation": "Per ASC 958-720, not-for-profit entities must report expenses by functional classification: program services, management/general, and fundraising. **Calculation:** Program services = $500,000 × 70% = $350,000. Why other answers are wrong: (B) $50,000 is fundraising (10%); (C) $100,000 is management (20%); (D) $150,000 confuses management + fundraising. Program services are the activities that fulfill the organization's mission and typically consume the largest portion of expenses.",
+    "tip": "NFP functional expenses: Program services (mission), Management (admin), Fundraising (donor activities).",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -26224,7 +26224,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-001",
+    "id": "far-gov-adv-036",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26245,7 +26245,7 @@ const questions = [
     "timeEstimateSeconds": 150
   },
   {
-    "id": "far-gov-adv-002",
+    "id": "far-gov-adv-037",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26266,7 +26266,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-003",
+    "id": "far-gov-adv-038",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26287,7 +26287,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-004",
+    "id": "far-gov-adv-039",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26308,7 +26308,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-005",
+    "id": "far-gov-adv-040",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26329,7 +26329,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-006",
+    "id": "far-gov-adv-041",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Revenue Recognition",
@@ -26350,7 +26350,7 @@ const questions = [
     "timeEstimateSeconds": 120
   },
   {
-    "id": "far-gov-adv-007",
+    "id": "far-gov-adv-042",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26371,7 +26371,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-008",
+    "id": "far-gov-adv-043",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26392,7 +26392,7 @@ const questions = [
     "timeEstimateSeconds": 150
   },
   {
-    "id": "far-gov-adv-009",
+    "id": "far-gov-adv-044",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26413,7 +26413,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-010",
+    "id": "far-gov-adv-045",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26434,7 +26434,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-011",
+    "id": "far-gov-adv-046",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26455,7 +26455,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-012",
+    "id": "far-gov-adv-047",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26476,7 +26476,7 @@ const questions = [
     "timeEstimateSeconds": 120
   },
   {
-    "id": "far-gov-adv-013",
+    "id": "far-gov-adv-048",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Pensions & Benefits",
@@ -26497,7 +26497,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-014",
+    "id": "far-gov-adv-049",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26518,7 +26518,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-015",
+    "id": "far-gov-adv-050",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26539,7 +26539,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-016",
+    "id": "far-gov-adv-051",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26560,7 +26560,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-017",
+    "id": "far-gov-adv-052",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26581,7 +26581,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-018",
+    "id": "far-gov-adv-053",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26602,7 +26602,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-019",
+    "id": "far-gov-adv-054",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26623,7 +26623,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-020",
+    "id": "far-gov-adv-055",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26644,7 +26644,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-021",
+    "id": "far-gov-adv-056",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26665,7 +26665,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-022",
+    "id": "far-gov-adv-057",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Debt & Liabilities",
@@ -26686,7 +26686,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-023",
+    "id": "far-gov-adv-058",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26707,7 +26707,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-024",
+    "id": "far-gov-adv-059",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26728,7 +26728,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-025",
+    "id": "far-gov-adv-060",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26749,7 +26749,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-026",
+    "id": "far-gov-adv-061",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26770,7 +26770,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-027",
+    "id": "far-gov-adv-062",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26791,7 +26791,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-028",
+    "id": "far-gov-adv-063",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26812,7 +26812,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-gov-adv-029",
+    "id": "far-gov-adv-064",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26833,7 +26833,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-gov-adv-030",
+    "id": "far-gov-adv-065",
     "section": "FAR",
     "topic": "Government Accounting",
     "subtopic": "Governmental Accounting",
@@ -26959,7 +26959,7 @@ const questions = [
     "timeEstimateSeconds": 120
   },
   {
-    "id": "far-nfp-adv-001",
+    "id": "far-nfp-adv-036",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -26980,7 +26980,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-002",
+    "id": "far-nfp-adv-037",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27001,7 +27001,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-003",
+    "id": "far-nfp-adv-038",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27022,7 +27022,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-004",
+    "id": "far-nfp-adv-039",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27043,7 +27043,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-005",
+    "id": "far-nfp-adv-040",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27064,7 +27064,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-006",
+    "id": "far-nfp-adv-041",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27085,7 +27085,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-007",
+    "id": "far-nfp-adv-042",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Governmental Accounting",
@@ -27106,7 +27106,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-008",
+    "id": "far-nfp-adv-043",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27127,7 +27127,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-009",
+    "id": "far-nfp-adv-044",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27148,7 +27148,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-010",
+    "id": "far-nfp-adv-045",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27169,7 +27169,7 @@ const questions = [
     "timeEstimateSeconds": 120
   },
   {
-    "id": "far-nfp-adv-011",
+    "id": "far-nfp-adv-046",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Cash Flows",
@@ -27190,7 +27190,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-012",
+    "id": "far-nfp-adv-047",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27211,7 +27211,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-013",
+    "id": "far-nfp-adv-048",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27232,7 +27232,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-014",
+    "id": "far-nfp-adv-049",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27253,7 +27253,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-015",
+    "id": "far-nfp-adv-050",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27274,7 +27274,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-016",
+    "id": "far-nfp-adv-051",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27295,7 +27295,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-017",
+    "id": "far-nfp-adv-052",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27316,7 +27316,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-018",
+    "id": "far-nfp-adv-053",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27337,7 +27337,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-019",
+    "id": "far-nfp-adv-054",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Consolidations",
@@ -27358,7 +27358,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-020",
+    "id": "far-nfp-adv-055",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27379,7 +27379,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-021",
+    "id": "far-nfp-adv-056",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27400,7 +27400,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-022",
+    "id": "far-nfp-adv-057",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27421,7 +27421,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-023",
+    "id": "far-nfp-adv-058",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27442,7 +27442,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-nfp-adv-024",
+    "id": "far-nfp-adv-059",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -27463,7 +27463,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-nfp-adv-025",
+    "id": "far-nfp-adv-060",
     "section": "FAR",
     "topic": "Not-for-Profit Accounting",
     "subtopic": "Not-for-Profit Accounting",
@@ -28429,7 +28429,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-ifrs-001",
+    "id": "far-ifrs-036",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Inventory",
@@ -28450,7 +28450,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-ifrs-002",
+    "id": "far-ifrs-037",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Inventory",
@@ -28471,7 +28471,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-003",
+    "id": "far-ifrs-038",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Property, Plant & Equipment",
@@ -28492,7 +28492,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-004",
+    "id": "far-ifrs-039",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Property, Plant & Equipment",
@@ -28513,7 +28513,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-005",
+    "id": "far-ifrs-040",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Intangibles & Goodwill",
@@ -28534,7 +28534,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-006",
+    "id": "far-ifrs-041",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Intangibles & Goodwill",
@@ -28555,7 +28555,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-ifrs-007",
+    "id": "far-ifrs-042",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Intangibles & Goodwill",
@@ -28576,7 +28576,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-008",
+    "id": "far-ifrs-043",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Intangibles & Goodwill",
@@ -28597,7 +28597,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-009",
+    "id": "far-ifrs-044",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "IFRS Differences",
@@ -28618,7 +28618,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-010",
+    "id": "far-ifrs-045",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Leases",
@@ -28639,7 +28639,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-ifrs-011",
+    "id": "far-ifrs-046",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Revenue Recognition",
@@ -28660,7 +28660,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-012",
+    "id": "far-ifrs-047",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Contingencies",
@@ -28681,7 +28681,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-013",
+    "id": "far-ifrs-048",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Contingencies",
@@ -28702,7 +28702,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-014",
+    "id": "far-ifrs-049",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Financial Instruments",
@@ -28723,7 +28723,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-ifrs-015",
+    "id": "far-ifrs-050",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Financial Instruments",
@@ -28744,7 +28744,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-ifrs-016",
+    "id": "far-ifrs-051",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Stock-Based Compensation",
@@ -28765,7 +28765,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-017",
+    "id": "far-ifrs-052",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Consolidations",
@@ -28786,7 +28786,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-018",
+    "id": "far-ifrs-053",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Consolidations",
@@ -28807,7 +28807,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-019",
+    "id": "far-ifrs-054",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Investments",
@@ -28828,7 +28828,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-020",
+    "id": "far-ifrs-055",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Financial Statements",
@@ -28849,7 +28849,7 @@ const questions = [
     "timeEstimateSeconds": 45
   },
   {
-    "id": "far-ifrs-021",
+    "id": "far-ifrs-056",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Financial Statements",
@@ -28870,7 +28870,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-022",
+    "id": "far-ifrs-057",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Cash Flows",
@@ -28891,7 +28891,7 @@ const questions = [
     "timeEstimateSeconds": 75
   },
   {
-    "id": "far-ifrs-023",
+    "id": "far-ifrs-058",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Property, Plant & Equipment",
@@ -28912,7 +28912,7 @@ const questions = [
     "timeEstimateSeconds": 60
   },
   {
-    "id": "far-ifrs-024",
+    "id": "far-ifrs-059",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Pensions & Benefits",
@@ -28933,7 +28933,7 @@ const questions = [
     "timeEstimateSeconds": 90
   },
   {
-    "id": "far-ifrs-025",
+    "id": "far-ifrs-060",
     "section": "FAR",
     "topic": "IFRS",
     "subtopic": "Income Taxes",
@@ -31111,8 +31111,8 @@ const questions = [
       "D": "$75,000"
     },
     "correctAnswer": "A",
-    "explanation": "Net income = Revenues - Expenses = $100,000 - $75,000 = $25,000.",
-    "tip": "Net Income = Revenues - Expenses",
+    "explanation": "Net income is the bottom line of the income statement, representing profit after all expenses. **Formula:** Net Income = Revenues − Expenses. **Calculation:** $100,000 − $75,000 = $25,000. Why other answers are wrong: (B) $100,000 is revenues only (before expenses); (C) $175,000 incorrectly adds revenues and expenses; (D) $75,000 represents expenses, not profit. Net income flows to retained earnings on the balance sheet.",
+    "tip": "Net Income = Revenues − Expenses. This amount increases retained earnings.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -31300,8 +31300,8 @@ const questions = [
       "D": "$200,000"
     },
     "correctAnswer": "B",
-    "explanation": "Gross Profit = Sales - Cost of Goods Sold = $200,000 - $120,000 = $80,000.",
-    "tip": "Gross Profit = Sales - COGS",
+    "explanation": "Gross profit represents the profit from core operations before operating expenses. **Formula:** Gross Profit = Sales − Cost of Goods Sold. **Calculation:** $200,000 − $120,000 = $80,000. Why other answers are wrong: (A) $120,000 is COGS, not gross profit; (C) $320,000 incorrectly adds sales and COGS; (D) $200,000 is total sales, not profit. The gross profit margin here is 40% ($80,000 ÷ $200,000).",
+    "tip": "Gross Profit = Sales − COGS. This figure does NOT include operating expenses.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -32035,8 +32035,8 @@ const questions = [
       "D": "$166"
     },
     "correctAnswer": "B",
-    "explanation": "Annual interest = Principal × Rate × Time = $10,000 × 6% × 1 year = $600.",
-    "tip": "Interest = Principal × Rate × Time",
+    "explanation": "Simple interest is calculated on the principal amount only. **Formula:** Interest = Principal × Rate × Time. **Calculation:** $10,000 × 6% × 1 = $600. Why other answers are wrong: (A) $60 misplaces the decimal (0.6%); (C) $6,000 would be 60% rate; (D) $166 appears to be monthly interest divided incorrectly. For partial years, multiply by the fraction of year outstanding (e.g., 3 months = 3/12).",
+    "tip": "Simple Interest = Principal × Rate × Time. For partial years, use fraction of year.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -32056,8 +32056,8 @@ const questions = [
       "D": "25%"
     },
     "correctAnswer": "A",
-    "explanation": "Gross profit margin = Gross Profit / Sales = $40,000 / $100,000 = 40%.",
-    "tip": "Gross Profit Margin = Gross Profit / Sales",
+    "explanation": "Gross profit margin measures profitability at the gross profit level as a percentage of sales. **Formula:** Gross Profit Margin = Gross Profit ÷ Sales. **Calculation:** $40,000 ÷ $100,000 = 40%. Why other answers are wrong: (B) 60% is COGS/Sales ratio (not gross profit); (C) 150% is GP/COGS (wrong base); (D) 25% would require GP of $25,000. A 40% margin means the company retains 40 cents of each sales dollar after covering cost of goods sold.",
+    "tip": "Gross Profit Margin = GP ÷ Sales. Represents % of revenue retained after COGS.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -32077,8 +32077,8 @@ const questions = [
       "D": "5%"
     },
     "correctAnswer": "A",
-    "explanation": "Net profit margin = Net Income / Sales = $20,000 / $200,000 = 10%.",
-    "tip": "Net Profit Margin = Net Income / Sales",
+    "explanation": "Net profit margin measures overall profitability as a percentage of sales. **Formula:** Net Profit Margin = Net Income ÷ Sales. **Calculation:** $20,000 ÷ $200,000 = 10%. Why other answers are wrong: (B) 20% would require net income of $40,000; (C) 1% would require net income of $2,000; (D) 5% would require net income of $10,000. A higher net profit margin indicates better efficiency at converting sales into actual profit. Industry benchmarks vary widely.",
+    "tip": "Net Profit Margin = Net Income ÷ Sales. Higher = more efficient at converting sales to profit.",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -32392,8 +32392,8 @@ const questions = [
       "D": "$104,000"
     },
     "correctAnswer": "B",
-    "explanation": "Book value = Cost - Accumulated Depreciation = $80,000 - $24,000 = $56,000.",
-    "tip": "Book value (or carrying amount) = Cost minus accumulated depreciation.",
+    "explanation": "Per ASC 360, the carrying amount (book value) of an asset equals its historical cost less accumulated depreciation. **Formula:** Book Value = Cost − Accumulated Depreciation. **Calculation:** $80,000 − $24,000 = $56,000. Why other answers are wrong: (A) $24,000 is accumulated depreciation, not book value; (C) $80,000 is original cost, ignoring depreciation; (D) $104,000 incorrectly adds cost and depreciation. Book value represents the undepreciated portion of the asset.",
+    "tip": "Book Value = Cost − Accumulated Depreciation. Also called 'carrying amount' or 'net book value.'",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },

@@ -3910,3 +3910,31 @@ Then refresh the page - the promo should appear.
 If you want it per-account (probably makes more sense), I can move the dismissed state to the user's profile in Supabase. That way new accounts always see it, and dismissing it persists across devices for that specific user.
 
 ---
+
+Should we make our question explanations more robust?
+=====================================================
+
+Good question. The MCQ audit found that **89% of explanations (5,423 of 6,065)** lack authoritative references. Here's what we could improve:
+
+| Enhancement | Current State | Benefit |
+|-------------|---------------|---------|
+| **Authoritative refs** | 11% have ASC/IRC/AU-C citations | Aligns with CPA exam style, builds citation familiarity |
+| **Distractor explanations** | Most only explain correct answer | Helps understand common misconceptions |
+| **Calculation steps** | Many skip intermediate steps | Shows work like exam graders expect |
+| **Memory tips** | ~60% have tips | Aids retention |
+
+**Scope consideration:** 6,065 MCQs is substantial. We could:
+1. **Full enhancement** - Update all 6,065 (major effort)
+2. **Priority sections** - Focus on FAR/REG first (highest weight sections)
+3. **Calculation questions only** - 441 questions that most need step-by-step
+4. **Sample batch** - Do 50-100 as a template, then scale
+
+Before planning this, let me ask:
+
+1. **What's most important to you?** Adding authoritative references, distractor explanations, or calculation steps?
+
+2. **Do you want this done now or is it a future improvement?** This would be a significant undertaking.
+
+3. **Any specific sections or topics to prioritize?** (e.g., FAR leases, REG tax calculations)
+
+---

@@ -116,7 +116,7 @@ export const regAGICalculationTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "numeric",
-        value: 191900,
+        value: 191700,
         tolerance: 0,
       },
       explanation: "Per IRC §61, total gross income includes wages, interest, dividends, state refund, gambling, rental: $173,000 + $4,450 + $850 + $5,000 + $8,400 = $191,700.",

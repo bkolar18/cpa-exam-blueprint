@@ -1,5 +1,19 @@
 # Claude Code Development Guidelines
 
+## Core Documentation (Read Each Session)
+
+**At the start of each session, read these core documentation files:**
+
+1. **`docs/ANALYTICS.md`** - Analytics system documentation including:
+   - Prime Meridian score calculation (formulas, AICPA weights, thresholds)
+   - Admin and user analytics
+   - Gamification system (badges, achievements, points)
+   - Adaptive question selection algorithm
+   - Database schema for analytics tables
+   - Key thresholds quick reference
+
+---
+
 ## TBS Question Development Rules
 
 ### Batch Size Limit

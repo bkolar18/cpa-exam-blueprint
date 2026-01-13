@@ -100,6 +100,8 @@ export default function SectionPracticePage() {
 
  // Quiz timing
  const quizStartTime = useRef<Date | null>(null);
+ // Per-question timing for time analytics
+ const questionStartTime = useRef<Date | null>(null);
 
  // Fetch user's practice history for adaptive selection
  useEffect(() => {
@@ -195,6 +197,7 @@ export default function SectionPracticePage() {
  setCurrentQuestionIndex(savedSession.currentIndex);
  setResults(resumedResults);
  quizStartTime.current = new Date(savedSession.startTime);
+ questionStartTime.current = new Date(); // Start timing current question
  setQuizState('quiz');
  setSavedSession(null);
  };
@@ -276,6 +279,7 @@ export default function SectionPracticePage() {
  setResults([]);
  setStudySessionLogged(false);
  quizStartTime.current = new Date();
+ questionStartTime.current = new Date(); // Start timing first question
  setQuizState('quiz');
  };
 
@@ -359,6 +363,12 @@ export default function SectionPracticePage() {
  const handleAnswer = async (selectedAnswer: 'A' | 'B' | 'C' | 'D', isCorrect: boolean) => {
  const currentQuestion = questions[currentQuestionIndex];
 
+ // Calculate time spent on this question
+ const now = new Date();
+ const timeSpentSeconds = questionStartTime.current
+   ? Math.round((now.getTime() - questionStartTime.current.getTime()) / 1000)
+   : null;
+
  // Add to results
  setResults(prev => [...prev, {
  question: currentQuestion,
@@ -377,6 +387,8 @@ export default function SectionPracticePage() {
  selected_answer: selectedAnswer,
  correct_answer: currentQuestion.correctAnswer,
  is_correct: isCorrect,
+ time_spent_seconds: timeSpentSeconds,
+ difficulty: currentQuestion.difficulty || 'medium',
  });
  } catch (error) {
  console.error('Failed to save practice attempt:', error);
@@ -384,9 +396,28 @@ export default function SectionPracticePage() {
  }
  };
 
- const handleNext = () => {
+ const handleNext = async (explanationViewSeconds?: number) => {
+ // Update the practice_attempt with explanation view time if available
+ if (user && supabase && explanationViewSeconds !== undefined) {
+   const currentQuestion = questions[currentQuestionIndex];
+   try {
+     // Update the most recent attempt for this question by this user
+     await supabase
+       .from('practice_attempts')
+       .update({ explanation_view_seconds: explanationViewSeconds })
+       .eq('user_id', user.id)
+       .eq('question_id', currentQuestion.id)
+       .order('created_at', { ascending: false })
+       .limit(1);
+   } catch (error) {
+     console.error('Failed to update explanation view time:', error);
+   }
+ }
+
  if (currentQuestionIndex < questions.length - 1) {
  setCurrentQuestionIndex(prev => prev + 1);
+ // Start timing the next question
+ questionStartTime.current = new Date();
  } else {
  setQuizState('results');
  }
@@ -397,6 +428,7 @@ export default function SectionPracticePage() {
  setResults([]);
  setStudySessionLogged(false);
  quizStartTime.current = new Date();
+ questionStartTime.current = new Date(); // Start timing first question
  setQuizState('quiz');
  };
 

@@ -30,6 +30,8 @@ interface PracticeAttempt {
  is_correct: boolean;
  time_spent_seconds: number | null;
  created_at: string;
+ difficulty?: 'easy' | 'medium' | 'hard';
+ explanation_view_seconds?: number | null;
 }
 
 interface TopicStats {
@@ -378,6 +380,9 @@ export default function ReadinessDashboardPage() {
         topic: a.topic,
         is_correct: a.is_correct,
         created_at: a.created_at,
+        difficulty: a.difficulty,
+        time_spent_seconds: a.time_spent_seconds,
+        explanation_view_seconds: a.explanation_view_seconds,
       }));
       const tbsAttemptsForPM: TBSAttemptData[] = (sectionTBSAttempts as TBSAttemptRow[]).map(t => ({
         tbs_id: t.tbs_id,

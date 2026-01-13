@@ -334,6 +334,40 @@ export interface PracticeAttemptData {
   is_correct: boolean;
   created_at: string;
   difficulty?: 'easy' | 'medium' | 'hard';
+  time_spent_seconds?: number | null;
+  explanation_view_seconds?: number | null;
+}
+
+/**
+ * Time analytics for detecting suspicious patterns.
+ * Fast correct answers may indicate pattern recognition vs. understanding.
+ */
+export interface TimeAnalytics {
+  /** Average time spent per question in seconds */
+  averageTimeSeconds: number;
+  /** Number of correct answers in under 10 seconds */
+  fastCorrectCount: number;
+  /** Percentage of answers that were suspiciously fast and correct */
+  fastCorrectPercentage: number;
+  /** True if >20% of correct answers were suspiciously fast */
+  suspiciousPatternDetected: boolean;
+  /** Total questions with time data */
+  questionsWithTimeData: number;
+}
+
+/**
+ * Engagement metrics for explanation viewing behavior.
+ * Low engagement indicates the student may not be learning from mistakes.
+ */
+export interface EngagementMetrics {
+  /** Percentage of incorrect answers where explanation was viewed (5+ seconds) */
+  explanationViewRate: number;
+  /** Average seconds spent viewing explanations after incorrect answers */
+  averageViewDurationSeconds: number;
+  /** Number of incorrect answers with engagement data */
+  incorrectWithData: number;
+  /** True if student is engaging well (>50% view rate for incorrect answers) */
+  isEngaged: boolean;
 }
 
 export interface TBSAttemptData {
@@ -354,6 +388,47 @@ export interface ContentAreaScore {
   minThresholdMet: boolean;
 }
 
+/**
+ * Represents a content area that falls below the minimum threshold.
+ * These gaps must be addressed before the student is considered exam-ready.
+ */
+export interface ContentAreaGap {
+  contentArea: string;
+  name: string;
+  score: number;
+  threshold: number;
+  questionsAttempted: number;
+  pointsToThreshold: number;
+}
+
+/**
+ * Readiness assessment result - determines if student is truly exam-ready.
+ */
+export interface ReadinessAssessment {
+  isReady: boolean;
+  reasons: string[];
+  overallScoreMet: boolean;
+  noContentAreaGaps: boolean;
+  isConsistent: boolean;
+}
+
+/**
+ * Consistency metrics - measures variance in performance across content areas.
+ * High variance indicates the student has weak spots the CPA exam will find.
+ */
+export interface ConsistencyMetrics {
+  /** Standard deviation of content area scores */
+  standardDeviation: number;
+  /** Coefficient of variation = stdDev / mean (0-1 scale, lower is better) */
+  coefficientOfVariation: number;
+  /** True if CV < 0.25 (consistent performance) */
+  isConsistent: boolean;
+  /** Content areas that are > 1.5 stdDev below the mean */
+  inconsistentAreas: string[];
+  /** Average score across all content areas with sufficient data */
+  averageScore: number;
+}
+
 export interface PrimeMeridianResult {
   overallScore: number;
   mcqScore: number;
@@ -363,6 +438,17 @@ export interface PrimeMeridianResult {
   contentAreaScores: ContentAreaScore[];
   hasEnoughData: boolean;
   recommendedActions: string[];
+  // Gap detection fields
+  contentAreaGaps: ContentAreaGap[];
+  hasGaps: boolean;
+  // Consistency metrics
+  consistency: ConsistencyMetrics;
+  // Time analytics (available when time data exists)
+  timeAnalytics: TimeAnalytics;
+  // Engagement metrics (how well student reviews explanations)
+  engagement: EngagementMetrics;
+  // Overall readiness assessment
+  readinessAssessment: ReadinessAssessment;
 }
 
 // Configuration
@@ -390,7 +476,24 @@ const CONFIG = {
   },
   MCQ_WEIGHT: 0.5, // 50% of final score
   TBS_WEIGHT: 0.5, // 50% of final score
-  RECOMMENDED_SCORE: 75,
+  /**
+   * Recommended score threshold - raised from 75 to 80 for stricter standards.
+   * We grade conservatively because the CPA exam is unforgiving.
+   * If Meridian says you're ready at 80+, you actually are.
+   */
+  RECOMMENDED_SCORE: 80,
+  /**
+   * Minimum score required for each AICPA content area.
+   * Even if overall score is high, any content area below this
+   * threshold will block "Recommended" status and flag as a gap.
+   * The CPA exam will find your weak areas - we help you find them first.
+   */
+  CONTENT_AREA_MINIMUM: 70,
+  /**
+   * Minimum questions per content area before gap detection applies.
+   * We need sufficient data (10+ questions) to reliably identify weaknesses.
+   */
+  MIN_QUESTIONS_FOR_GAP_DETECTION: 10,
   /**
    * Minimum total questions before Prime Meridian score is considered meaningful.
    * With 4-5 content areas at 50 questions each, 100 is a reasonable threshold
@@ -398,6 +501,213 @@ const CONFIG = {
    */
   MIN_TOTAL_QUESTIONS_FOR_MEANINGFUL_SCORE: 100,
 };
+
+/**
+ * Identify content areas that fall below the minimum threshold.
+ * Only applies to areas with sufficient practice data (10+ questions).
+ */
+export function identifyContentAreaGaps(
+  contentAreaScores: ContentAreaScore[]
+): ContentAreaGap[] {
+  return contentAreaScores
+    .filter(ca =>
+      ca.questionsAttempted >= CONFIG.MIN_QUESTIONS_FOR_GAP_DETECTION &&
+      ca.rawScore < CONFIG.CONTENT_AREA_MINIMUM
+    )
+    .map(ca => ({
+      contentArea: ca.contentArea,
+      name: ca.name,
+      score: ca.rawScore,
+      threshold: CONFIG.CONTENT_AREA_MINIMUM,
+      questionsAttempted: ca.questionsAttempted,
+      pointsToThreshold: CONFIG.CONTENT_AREA_MINIMUM - ca.rawScore,
+    }))
+    .sort((a, b) => a.score - b.score); // Sort by weakest first
+}
+
+/**
+ * Calculate consistency metrics across content areas.
+ * High variance indicates weak spots that the CPA exam will find.
+ */
+export function calculateConsistencyMetrics(
+  contentAreaScores: ContentAreaScore[]
+): ConsistencyMetrics {
+  // Only consider areas with sufficient data
+  const validAreas = contentAreaScores.filter(
+    ca => ca.questionsAttempted >= CONFIG.MIN_QUESTIONS_FOR_GAP_DETECTION
+  );
+
+  // Default values for insufficient data
+  if (validAreas.length < 2) {
+    return {
+      standardDeviation: 0,
+      coefficientOfVariation: 0,
+      isConsistent: true,
+      inconsistentAreas: [],
+      averageScore: validAreas.length === 1 ? validAreas[0].rawScore : 0,
+    };
+  }
+
+  const scores = validAreas.map(ca => ca.rawScore);
+  const mean = scores.reduce((sum, s) => sum + s, 0) / scores.length;
+
+  // Calculate variance and standard deviation
+  const variance = scores.reduce((sum, s) => sum + Math.pow(s - mean, 2), 0) / scores.length;
+  const stdDev = Math.sqrt(variance);
+
+  // Coefficient of variation (normalized measure of dispersion)
+  const cv = mean > 0 ? stdDev / mean : 0;
+
+  // Identify areas that are significantly below the mean (> 1.5 stdDev)
+  const inconsistentAreas = validAreas
+    .filter(ca => ca.rawScore < mean - 1.5 * stdDev)
+    .map(ca => ca.name.split(',')[0]); // Use short name
+
+  return {
+    standardDeviation: Math.round(stdDev * 10) / 10,
+    coefficientOfVariation: Math.round(cv * 100) / 100,
+    isConsistent: cv < 0.25, // Less than 25% coefficient of variation = consistent
+    inconsistentAreas,
+    averageScore: Math.round(mean),
+  };
+}
+
+/**
+ * Analyze time patterns to detect suspicious answering behavior.
+ * Fast correct answers (< 10 seconds) may indicate pattern recognition
+ * rather than genuine understanding.
+ */
+export function analyzeTimePatterns(
+  attempts: PracticeAttemptData[]
+): TimeAnalytics {
+  // Filter to only attempts with time data
+  const attemptsWithTime = attempts.filter(
+    a => a.time_spent_seconds !== null && a.time_spent_seconds !== undefined && a.time_spent_seconds > 0
+  );
+
+  if (attemptsWithTime.length === 0) {
+    return {
+      averageTimeSeconds: 0,
+      fastCorrectCount: 0,
+      fastCorrectPercentage: 0,
+      suspiciousPatternDetected: false,
+      questionsWithTimeData: 0,
+    };
+  }
+
+  // Calculate average time
+  const totalTime = attemptsWithTime.reduce((sum, a) => sum + (a.time_spent_seconds || 0), 0);
+  const averageTimeSeconds = Math.round(totalTime / attemptsWithTime.length);
+
+  // Count fast correct answers (< 10 seconds = suspiciously fast)
+  const FAST_THRESHOLD_SECONDS = 10;
+  const fastCorrect = attemptsWithTime.filter(
+    a => a.is_correct && (a.time_spent_seconds || 0) < FAST_THRESHOLD_SECONDS
+  );
+
+  const correctAnswers = attemptsWithTime.filter(a => a.is_correct);
+  const fastCorrectPercentage = correctAnswers.length > 0
+    ? Math.round((fastCorrect.length / correctAnswers.length) * 100)
+    : 0;
+
+  return {
+    averageTimeSeconds,
+    fastCorrectCount: fastCorrect.length,
+    fastCorrectPercentage,
+    suspiciousPatternDetected: fastCorrectPercentage > 20, // >20% suspiciously fast
+    questionsWithTimeData: attemptsWithTime.length,
+  };
+}
+
+/**
+ * Analyze engagement with explanations.
+ * Good engagement = spending time reviewing explanations for incorrect answers.
+ */
+export function analyzeEngagement(
+  attempts: PracticeAttemptData[]
+): EngagementMetrics {
+  // Focus on incorrect answers with explanation view data
+  const incorrectAttempts = attempts.filter(a => !a.is_correct);
+  const incorrectWithData = incorrectAttempts.filter(
+    a => a.explanation_view_seconds !== null && a.explanation_view_seconds !== undefined
+  );
+
+  if (incorrectWithData.length === 0) {
+    return {
+      explanationViewRate: 0,
+      averageViewDurationSeconds: 0,
+      incorrectWithData: 0,
+      isEngaged: true, // Default to true when no data (don't penalize)
+    };
+  }
+
+  // Count explanations viewed for 5+ seconds as "engaged"
+  const ENGAGEMENT_THRESHOLD_SECONDS = 5;
+  const viewedCount = incorrectWithData.filter(
+    a => (a.explanation_view_seconds || 0) >= ENGAGEMENT_THRESHOLD_SECONDS
+  ).length;
+
+  const explanationViewRate = Math.round((viewedCount / incorrectWithData.length) * 100);
+
+  // Calculate average view duration for incorrect answers
+  const totalViewTime = incorrectWithData.reduce(
+    (sum, a) => sum + (a.explanation_view_seconds || 0), 0
+  );
+  const averageViewDurationSeconds = Math.round(totalViewTime / incorrectWithData.length);
+
+  return {
+    explanationViewRate,
+    averageViewDurationSeconds,
+    incorrectWithData: incorrectWithData.length,
+    isEngaged: explanationViewRate >= 50, // 50%+ engagement = good
+  };
+}
+
+/**
+ * Assess overall exam readiness using strict criteria.
+ * A student is only truly ready when:
+ * 1. Overall score meets the recommended threshold (80+)
+ * 2. No content area with sufficient data is below the floor (70%)
+ * 3. Performance is consistent across content areas
+ */
+export function assessReadiness(
+  overallScore: number,
+  contentAreaGaps: ContentAreaGap[],
+  consistency: ConsistencyMetrics
+): ReadinessAssessment {
+  const reasons: string[] = [];
+
+  const overallScoreMet = overallScore >= CONFIG.RECOMMENDED_SCORE;
+  const noContentAreaGaps = contentAreaGaps.length === 0;
+  const isConsistent = consistency.isConsistent;
+
+  if (!overallScoreMet) {
+    const pointsNeeded = CONFIG.RECOMMENDED_SCORE - overallScore;
+    reasons.push(`Overall score ${overallScore}% is ${pointsNeeded} points below the recommended ${CONFIG.RECOMMENDED_SCORE}%`);
+  }
+
+  if (!noContentAreaGaps) {
+    const gapCount = contentAreaGaps.length;
+    const worstGap = contentAreaGaps[0]; // Already sorted by weakest
+    if (gapCount === 1) {
+      reasons.push(`${worstGap.name.split(',')[0]} is at ${worstGap.score}%, needs ${worstGap.pointsToThreshold} more points to reach ${CONFIG.CONTENT_AREA_MINIMUM}%`);
+    } else {
+      reasons.push(`${gapCount} content areas are below ${CONFIG.CONTENT_AREA_MINIMUM}% minimum`);
+    }
+  }
+
+  if (!isConsistent && consistency.inconsistentAreas.length > 0) {
+    reasons.push(`Performance varies significantly - ${consistency.inconsistentAreas.join(', ')} below average`);
+  }
+
+  return {
+    isReady: overallScoreMet && noContentAreaGaps && isConsistent,
+    reasons,
+    overallScoreMet,
+    noContentAreaGaps,
+    isConsistent,
+  };
+}
 
 /**
  * Get the AICPA content area for a given topic
@@ -578,6 +888,7 @@ function calculateTBSScore(attempts: TBSAttemptData[], section: SectionCode): nu
 
 /**
  * Generate recommended actions based on scores
+ * Updated to use stricter gap detection thresholds
  */
 function generateRecommendedActions(
   contentAreaScores: ContentAreaScore[],
@@ -587,23 +898,28 @@ function generateRecommendedActions(
 ): string[] {
   const actions: string[] = [];
 
-  // Check for content areas below threshold
+  // Check for content area gaps (areas below 70% with sufficient data) - HIGHEST PRIORITY
+  const gapAreas = contentAreaScores.filter(
+    ca => ca.questionsAttempted >= CONFIG.MIN_QUESTIONS_FOR_GAP_DETECTION &&
+          ca.rawScore < CONFIG.CONTENT_AREA_MINIMUM
+  );
+  if (gapAreas.length > 0) {
+    const weakestArea = gapAreas.sort((a, b) => a.rawScore - b.rawScore)[0];
+    const pointsNeeded = CONFIG.CONTENT_AREA_MINIMUM - weakestArea.rawScore;
+    actions.push(`Focus on ${weakestArea.name.split(',')[0]} (${weakestArea.rawScore}%) - need ${pointsNeeded} more points`);
+  }
+
+  // Check for content areas below coverage threshold
   const lowCoverageAreas = contentAreaScores.filter(ca => !ca.minThresholdMet && ca.weight >= 15);
   if (lowCoverageAreas.length > 0) {
     const areaNames = lowCoverageAreas.slice(0, 2).map(ca => ca.name.split(',')[0]).join(' and ');
     actions.push(`Practice more MCQs in ${areaNames} to meet minimum coverage`);
   }
 
-  // Check for weak content areas
-  const weakAreas = contentAreaScores.filter(ca => ca.rawScore < 60 && ca.questionsAttempted >= 5);
-  if (weakAreas.length > 0) {
-    actions.push('Review content areas where your accuracy is below 60%');
-  }
-
   // TBS recommendations
   if (!hasTBSData) {
     actions.push('Start practicing Task-Based Simulations to build complete exam readiness');
-  } else if (tbsScore < 60) {
+  } else if (tbsScore < 70) {
     actions.push('Continue practicing TBS questions to improve simulation performance');
   }
 
@@ -672,6 +988,22 @@ export function calculatePrimeMeridianScore(
   const totalQuestions = contentAreaScores.reduce((sum, ca) => sum + ca.questionsAttempted, 0);
   const hasEnoughData = totalQuestions >= CONFIG.MIN_TOTAL_QUESTIONS_FOR_MEANINGFUL_SCORE || hasTBSData;
 
+  // Identify content area gaps (areas below 70% with sufficient data)
+  const contentAreaGaps = identifyContentAreaGaps(contentAreaScores);
+  const hasGaps = contentAreaGaps.length > 0;
+
+  // Calculate consistency metrics (variance across content areas)
+  const consistency = calculateConsistencyMetrics(contentAreaScores);
+
+  // Analyze time patterns for suspicious answering behavior
+  const timeAnalytics = analyzeTimePatterns(mcqAttempts);
+
+  // Analyze engagement with explanations
+  const engagement = analyzeEngagement(mcqAttempts);
+
+  // Assess overall readiness using strict criteria (score + gaps + consistency)
+  const readinessAssessment = assessReadiness(overallScore, contentAreaGaps, consistency);
+
   return {
     overallScore,
     mcqScore,
@@ -681,6 +1013,12 @@ export function calculatePrimeMeridianScore(
     contentAreaScores,
     hasEnoughData,
     recommendedActions,
+    contentAreaGaps,
+    hasGaps,
+    consistency,
+    timeAnalytics,
+    engagement,
+    readinessAssessment,
   };
 }
 
@@ -697,6 +1035,8 @@ export interface PrimeMeridianMilestone {
 }
 
 export function getPrimeMeridianMilestone(score: number): PrimeMeridianMilestone {
+  // Stricter thresholds: We grade conservatively because the CPA exam is unforgiving.
+  // If Meridian says you're ready, you actually are.
   if (score >= 85) {
     return {
       level: 'strong',
@@ -707,27 +1047,30 @@ export function getPrimeMeridianMilestone(score: number): PrimeMeridianMilestone
       isRecommended: false,
     };
   }
-  if (score >= 75) {
+  // Raised from 75 to 80 for stricter standards
+  if (score >= 80) {
     return {
       level: 'recommended',
       label: 'Recommended',
       color: 'text-emerald-600 dark:text-emerald-400',
       bgColor: 'bg-emerald-500',
-      message: 'You\'ve reached our recommended score. Students at this level typically feel well-prepared.',
+      message: 'You\'ve reached our recommended score. Students at this level typically pass.',
       isRecommended: true,
     };
   }
-  if (score >= 65) {
+  // Raised from 65 to 70 for stricter standards
+  if (score >= 70) {
     return {
       level: 'approaching',
       label: 'Approaching',
       color: 'text-yellow-600 dark:text-yellow-400',
       bgColor: 'bg-yellow-500',
-      message: `${75 - score} points away from our recommended score of 75.`,
+      message: `${80 - score} points away from our recommended score of 80.`,
       isRecommended: false,
     };
   }
-  if (score >= 50) {
+  // Raised from 50 to 55 for stricter standards
+  if (score >= 55) {
     return {
       level: 'developing',
       label: 'Developing',

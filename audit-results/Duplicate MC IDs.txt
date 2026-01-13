@@ -1,0 +1,29 @@
+Duplicate MCQ IDs - RESOLVED
+=============================
+Generated: January 12, 2026
+Status: FIXED
+
+All 110 duplicate MCQ IDs have been renamed.
+
+CHANGES MADE
+------------
+The second occurrence of each duplicate series was renamed:
+
+far-cf Series (30 IDs):
+  far-cf-001 through far-cf-030 → far-cf-041 through far-cf-070
+
+far-gov-adv Series (30 IDs):
+  far-gov-adv-001 through far-gov-adv-030 → far-gov-adv-036 through far-gov-adv-065
+
+far-nfp-adv Series (25 IDs):
+  far-nfp-adv-001 through far-nfp-adv-025 → far-nfp-adv-036 through far-nfp-adv-060
+
+far-ifrs Series (25 IDs):
+  far-ifrs-001 through far-ifrs-025 → far-ifrs-036 through far-ifrs-060
+
+VERIFICATION
+------------
+MCQ audit script confirmed 0 duplicate_id issues for FAR section.
+
+File modified: src/lib/data/practice-questions/far.ts
+Fix script: scripts/fix-duplicate-mcq-ids.js

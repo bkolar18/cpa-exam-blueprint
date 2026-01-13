@@ -134,6 +134,31 @@ export async function getTotalQuestionsAnswered(userId: string): Promise<number>
   return count || 0;
 }
 
+// Get practice questions answered per section
+export async function getQuestionsPerSection(userId: string): Promise<Record<string, number>> {
+  const supabase = createClient();
+  if (!supabase) return {};
+
+  const { data, error } = await supabase
+    .from('practice_attempts')
+    .select('section')
+    .eq('user_id', userId);
+
+  if (error) {
+    console.error('Error fetching section question counts:', error);
+    return {};
+  }
+
+  const counts: Record<string, number> = {};
+  (data || []).forEach((attempt) => {
+    if (attempt.section) {
+      counts[attempt.section] = (counts[attempt.section] || 0) + 1;
+    }
+  });
+
+  return counts;
+}
+
 // Get unique practice questions answered correctly by a user
 export async function getUniqueCorrectQuestions(userId: string): Promise<number> {
   const supabase = createClient();
@@ -155,31 +180,95 @@ export async function getUniqueCorrectQuestions(userId: string): Promise<number>
   return uniqueIds.size;
 }
 
-// Check and update badge progress
+// Check and update badge progress for all badge types
 export async function updateBadgeProgress(
   userId: string,
-  section?: SectionCode
+  section?: SectionCode,
+  context?: {
+    totalQuestions?: number;
+    sectionQuestions?: Record<string, number>;
+    currentStreak?: number;
+    consecutiveCorrect?: number;
+    studyHour?: number; // hour of day (0-23)
+    isWeekend?: boolean;
+  }
 ): Promise<AchievementNotification[]> {
   const supabase = createClient();
   if (!supabase) return [];
 
   const notifications: AchievementNotification[] = [];
-  const hours = await getUserStudyHours(userId);
   const badges = await getAllBadges();
   const userBadges = await getUserBadges(userId);
 
-  // Filter badges by section if provided
-  const relevantBadges = section
-    ? badges.filter((b) => b.requirement_section === section)
-    : badges.filter((b) => b.category === 'study_hours');
+  // Get data for progress calculation
+  const hours = await getUserStudyHours(userId);
+  const totalQuestions = context?.totalQuestions ?? await getTotalQuestionsAnswered(userId);
+  const sectionQuestions = context?.sectionQuestions ?? await getQuestionsPerSection(userId);
 
-  for (const badge of relevantBadges) {
+  // Get streak from profile if not provided
+  let currentStreak = context?.currentStreak;
+  if (currentStreak === undefined) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('current_streak')
+      .eq('id', userId)
+      .single();
+    currentStreak = profile?.current_streak || 0;
+  }
+
+  // Helper to calculate progress for a badge
+  const calculateProgress = (badge: Badge): number => {
+    const reqValue = badge.requirement_value || 0;
+    if (reqValue === 0) return 0;
+
+    switch (badge.category) {
+      case 'study_hours':
+        const sectionHours = badge.requirement_section
+          ? hours[badge.requirement_section] || 0
+          : Object.values(hours).reduce((sum, h) => sum + h, 0);
+        return Math.min(100, (sectionHours / reqValue) * 100);
+
+      case 'practice':
+        // Check if it's a section-specific badge
+        if (badge.requirement_section) {
+          const sectionCount = sectionQuestions[badge.requirement_section] || 0;
+          return Math.min(100, (sectionCount / reqValue) * 100);
+        }
+        // General practice question count
+        return Math.min(100, (totalQuestions / reqValue) * 100);
+
+      case 'streak':
+        return Math.min(100, ((currentStreak || 0) / reqValue) * 100);
+
+      case 'accuracy':
+        // Consecutive correct - need context
+        if (context?.consecutiveCorrect !== undefined) {
+          return Math.min(100, (context.consecutiveCorrect / reqValue) * 100);
+        }
+        return 0;
+
+      case 'special':
+        // Time-based badges - check if condition met
+        if (badge.code === 'early_bird' && context?.studyHour !== undefined) {
+          return context.studyHour < 6 ? 100 : 0;
+        }
+        if (badge.code === 'night_owl' && context?.studyHour !== undefined) {
+          return context.studyHour >= 22 ? 100 : 0;
+        }
+        if (badge.code === 'weekend_warrior' && context?.isWeekend) {
+          return 100;
+        }
+        return 0;
+
+      default:
+        return 0;
+    }
+  };
+
+  // Process all badges
+  for (const badge of badges) {
     const userBadge = userBadges.find((ub) => ub.badge_id === badge.id);
-    const sectionHours = badge.requirement_section
-      ? hours[badge.requirement_section] || 0
-      : 0;
-    const requiredHours = badge.requirement_value || 0;
-    const progress = Math.min(100, (sectionHours / requiredHours) * 100);
+    const progress = calculateProgress(badge);
     const isEarned = progress >= 100;
 
     if (userBadge) {
@@ -309,9 +398,9 @@ export async function checkAchievements(
         }
       }
 
-      // Check marathon achievement (8+ hours in a day)
-      if (context.hours && context.hours >= 8) {
-        const marathon = achievements.find((a) => a.code === 'marathon');
+      // Check marathon achievement (4+ hours in a day)
+      if (context.hours && context.hours >= 4) {
+        const marathon = achievements.find((a) => a.code === 'marathon' || a.code === 'marathon_runner');
         if (marathon) {
           await unlockAchievement(marathon);
         }
@@ -325,18 +414,50 @@ export async function checkAchievements(
         .single();
 
       if (profile?.current_streak) {
+        // 3-day streak
+        if (profile.current_streak >= 3) {
+          const streak3 = achievements.find((a) =>
+            a.code === 'daily_dedication' ||
+            (a.category === 'streak' && a.requirement_value === 3)
+          );
+          if (streak3) await unlockAchievement(streak3);
+        }
+        // 7-day streak
         if (profile.current_streak >= 7) {
-          const streak7 = achievements.find((a) => a.code === 'week_streak_7');
+          const streak7 = achievements.find((a) =>
+            a.code === 'week_streak_7' ||
+            a.code === 'week_warrior' ||
+            a.code === 'dedicated' ||
+            (a.category === 'streak' && a.requirement_value === 7)
+          );
           if (streak7) await unlockAchievement(streak7);
         }
+        // 30-day streak
         if (profile.current_streak >= 30) {
-          const streak30 = achievements.find((a) => a.code === 'week_streak_30');
+          const streak30 = achievements.find((a) =>
+            a.code === 'week_streak_30' ||
+            a.code === 'month_master' ||
+            a.code === 'committed' ||
+            (a.category === 'streak' && a.requirement_value === 30)
+          );
           if (streak30) await unlockAchievement(streak30);
         }
       }
 
-      // Update badge progress for section
-      const badgeNotifications = await updateBadgeProgress(context.userId, context.section);
+      // Update badge progress for section (including streak and time-based badges)
+      const studyHour = context.sessionTime ? context.sessionTime.getHours() : new Date().getHours();
+      const dayOfWeek = context.sessionTime ? context.sessionTime.getDay() : new Date().getDay();
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+
+      const badgeNotifications = await updateBadgeProgress(
+        context.userId,
+        context.section,
+        {
+          currentStreak: profile?.current_streak,
+          studyHour,
+          isWeekend,
+        }
+      );
       notifications.push(...badgeNotifications);
       break;
     }
@@ -374,6 +495,30 @@ export async function checkAchievements(
         if (totalQuestions >= count) {
           const achievement = achievements.find((a) => a.code === code);
           if (achievement) await unlockAchievement(achievement);
+        }
+      }
+
+      // Check section explorer achievements (50 questions per section)
+      const sectionCounts = await getQuestionsPerSection(context.userId);
+      const sectionExplorerMap: Record<string, string[]> = {
+        'FAR': ['far_explorer', 'FAR Explorer'],
+        'AUD': ['aud_explorer', 'AUD Explorer'],
+        'REG': ['reg_explorer', 'REG Explorer'],
+        'TCP': ['tcp_explorer', 'TCP Explorer'],
+        'BAR': ['bar_explorer', 'BAR Explorer'],
+        'ISC': ['isc_explorer', 'ISC Explorer'],
+      };
+
+      for (const [section, identifiers] of Object.entries(sectionExplorerMap)) {
+        const count = sectionCounts[section] || 0;
+        if (count >= 50) {
+          // Find achievement by code or name
+          const explorer = achievements.find((a) =>
+            identifiers.includes(a.code) ||
+            identifiers.includes(a.name) ||
+            (a.requirement_metadata as { section?: string } | null)?.section === section
+          );
+          if (explorer) await unlockAchievement(explorer);
         }
       }
 
@@ -416,6 +561,18 @@ export async function checkAchievements(
       if (firstPractice) {
         await unlockAchievement(firstPractice);
       }
+
+      // Update badge progress for practice badges (reuse sectionCounts from above)
+      const badgeNotifications = await updateBadgeProgress(
+        context.userId,
+        context.section,
+        {
+          totalQuestions,
+          sectionQuestions: sectionCounts,
+          consecutiveCorrect: context.consecutiveCorrect,
+        }
+      );
+      notifications.push(...badgeNotifications);
 
       break;
     }

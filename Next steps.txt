@@ -1,59 +1,12 @@
 Next steps:
 
-- On MCQs, theres a report button that looks like a flag. Lets change the report function to a triangle with an exclamation point in the middle. Lets then add a flag option to each question since we have a flagged questions page for students to come back to. Make sure MCQs are properly linked to the Flagged Questions page (similar to the My Notes page). Also, ensure that TBS flagged questions are linked properly because i just tested that feature and the question did not appear on the Flagged Questions page
+- looks like the library with back arrow is still visible on the simulation page during an exam simulation. we need to remove it
 
-- For exam simulations, ensure there is a proper mix of questions from various topics. I just did an exam simulation with no calculation questions at all, it was all terminology or conceptual.
+- when i submit the first simulation on an exam simulation, it brings me to the next sim but locks the top tool bar (cant go back to the other sim, the submit button says Submitted, and the second sim is locked (cant input answers)
 
-- Also for exam simulations with TBS's, when I submit the first TBS, I am met with a results screen. we should remove the results screen during an exam simulation and just move on to the next sim once the first is submitted. (or move directly to the Review Before Submitting page if only one TBS)
+- mcq questions are still unreadable in exam simulations in dark mode when selected/clicked on (cell fills white which is the color of the text)
 
-- I did a sim called Attributes Sampling for Tests of Controls. I had two answer options: Enter Your Answers
-Enter numeric values. Use negative numbers or parentheses for negative amounts.
-
-Required Sample Size
-$
-
-Sample Deviation Rate (%)
-$
-
-but the review button said I needed four answers: Answer Status
-
-1.
-Required Sample Size
-(1 pt)
-Complete
-
-2.
-Sample Deviation Rate (%)
-(1 pt)
-Complete
-
-3.
-Is Upper Deviation Limit likely to exceed Tolerable Rate?
-(1 pt)
-Unanswered
-
-4.
-Sampling Conclusion
-(2 pts) unanswered. there was nowhere to answer the second two questions. we need to ensure that that does not happen. 
-
-- On the exam simulation review page, the MCQ Review section is hard to read because the whole section has a gray background in dark mode. Make sure it is legible in dark mode. 
-
-- For exam simulations, we should allow users to review recent exams (add to study log page automatically upon completion)
-
-- also on exam simulations, the review and submit button just brings you straight to the sims. either allow the user to review their answers or change the button to just say Submit. Also add the words MCQ Section to the button so they dont think its for each individual MCQ and move the button to the top ribbon with the timer (button on the top ribbon, says Review & Submit MCQ Section, or Submit MCQ Section).
-
-- on exam simulations, remove the library button on sims
-
-- on exam simulations, when im highlighting an MCQ question in dark mode, it becomes unreadable (box is highlighted white, text is white)
-
-- on exam simulations remove the individual timer from simulations (should only be the exam timer on). also allow users to pause the exam timer when theyre on sims.
-
-
-- supabase add practice achievements got this error: Error: Failed to run sql query: ERROR: 23505: duplicate key value violates unique constraint "achievements_name_key" DETAIL: Key (name)=(First Steps) already exists.
-
-- supabase email nurture tracking has a destructive query, should i run it?
-
-
+- need to add pause button to TBS section of exam simulation
 
 
 
