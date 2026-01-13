@@ -48,7 +48,7 @@ export default function QuizQuestion({
  .select('note')
  .eq('user_id', user.id)
  .eq('question_id', question.id)
- .single();
+ .maybeSingle();
 
  if (data) {
  setNote(data.note);
@@ -82,7 +82,7 @@ export default function QuizQuestion({
  .select('id')
  .eq('user_id', user.id)
  .eq('question_id', question.id)
- .single();
+ .maybeSingle();
 
  if (existing) {
  // Update existing note

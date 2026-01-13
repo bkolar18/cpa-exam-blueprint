@@ -144,7 +144,7 @@ export default function TBSContainer({
  .select('flag_return_to')
  .eq('user_id', user.id)
  .eq('question_id', tbs.id)
- .single();
+ .maybeSingle();
 
  if (data?.flag_return_to) {
  setIsFlagged(true);
@@ -219,7 +219,7 @@ export default function TBSContainer({
  .select('id')
  .eq('user_id', user.id)
  .eq('question_id', tbs.id)
- .single();
+ .maybeSingle();
 
  if (existing) {
  await supabase
@@ -650,7 +650,7 @@ export default function TBSContainer({
  .select('id')
  .eq('user_id', user.id)
  .eq('question_id', tbs.id)
- .single();
+ .maybeSingle();
 
  if (existing) {
  // Update existing

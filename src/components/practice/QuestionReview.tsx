@@ -64,7 +64,7 @@ export default function QuestionReview({
  .select('note, is_starred, confidence')
  .eq('user_id', user.id)
  .eq('question_id', question.id)
- .single();
+ .maybeSingle();
 
  if (data && !error) {
  setNote(data.note);

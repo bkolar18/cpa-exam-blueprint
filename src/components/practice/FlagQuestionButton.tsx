@@ -41,7 +41,7 @@ export default function FlagQuestionButton({
           .select('flag_return_to')
           .eq('user_id', user.id)
           .eq('question_id', questionId)
-          .single();
+          .maybeSingle();
 
         if (data && !error) {
           setIsFlagged(data.flag_return_to || false);
@@ -71,7 +71,7 @@ export default function FlagQuestionButton({
         .select('id')
         .eq('user_id', user.id)
         .eq('question_id', questionId)
-        .single();
+        .maybeSingle();
 
       if (existing) {
         // Update existing

@@ -86,7 +86,7 @@ export default function QuestionFlags({
  .select("flag_return_to, flag_difficult, flag_easy")
  .eq("user_id", user.id)
  .eq("question_id", questionId)
- .single();
+ .maybeSingle();
 
  if (data && !error) {
  setFlags({
@@ -120,7 +120,7 @@ export default function QuestionFlags({
  .select("id")
  .eq("user_id", user.id)
  .eq("question_id", questionId)
- .single();
+ .maybeSingle();
 
  if (existing) {
  // Update existing
