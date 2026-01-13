@@ -148,7 +148,7 @@ export default function StudyHoursCalculatorPage() {
  Study Hours Calculator
  </h1>
  <p className="text-xl text-white/80 max-w-2xl mx-auto">
- Find out exactly how many hours per day you need to study to pass your CPA exam section.
+ Find out exactly how many hours per day you need to prepare for your CPA exam section.
  </p>
  </div>
  </section>

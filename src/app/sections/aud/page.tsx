@@ -40,7 +40,7 @@ export default function AUDPage() {
         "Master audit report modifications - know when each type applies and exact wording",
         "Focus on internal control concepts - COSO framework appears throughout the exam",
         "Learn the differences between audits, reviews, compilations, and attestation engagements",
-        "Practice document review simulations - these are increasingly common on the exam",
+        "Practice document review simulations - these appear frequently in recent exam formats",
       ]}
       studyAdvice={[
         "AUD is a great section to take early if you're working in audit. The concepts will be familiar, and passing it reinforces what you do at work every day.",

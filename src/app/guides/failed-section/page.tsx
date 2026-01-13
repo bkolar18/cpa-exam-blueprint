@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'I Failed the CPA Exam - Now What? | Recovery Guide for Retakers',
-  description: 'Failed a CPA exam section? Learn how to analyze your score report, adjust your study approach, and come back stronger. Practical advice from CPAs who have been there.',
+  description: 'Failed a CPA exam section? Learn how to analyze your score report, adjust your study approach, and come back stronger. Practical advice from candidates who have been there.',
 };
 
 const scoreRanges = [

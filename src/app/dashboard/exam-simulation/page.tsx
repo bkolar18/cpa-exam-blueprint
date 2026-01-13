@@ -89,7 +89,7 @@ export default function ExamSimulationPage() {
           <div>
             <h2 className="text-2xl font-bold mb-2">Simulate Real Exam Conditions</h2>
             <p className="text-white/80 max-w-xl">
-              Practice with timed MCQs that match the CPA exam format. The real exam includes both
+              Practice with timed MCQs that reflect the CPA exam format. The real exam includes both
               Multiple Choice Questions (MCQs) and Task-Based Simulations (TBS) — practice both to be fully prepared.
             </p>
           </div>

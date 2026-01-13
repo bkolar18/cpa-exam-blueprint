@@ -47,7 +47,7 @@ export const segmentEmails: Record<string, SegmentEmail> = {
       body: [
         "You mentioned you're working full-time while studying for the CPA exam. You're in good company—most candidates are balancing the same challenge.",
         "The key isn't finding more time. It's protecting the time you have and using it effectively.",
-        "I've compiled our best resources specifically for working professionals. These strategies come from CPAs who passed while working demanding jobs.",
+        "I've compiled our best resources specifically for working professionals. These strategies come from candidates who studied while working demanding jobs.",
         "Remember: consistent, moderate effort beats sporadic intensity. Even 10 focused hours per week compounds over time."
       ],
       callToAction: {

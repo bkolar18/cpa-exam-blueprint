@@ -100,10 +100,10 @@ export default function SectionPage({
  <FadeInOnScroll direction="up" delay={100}>
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-gray-200">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
- Why Candidates Fail {name}
+ Why Candidates Commonly Struggle with {name}
  </h2>
  <p className="text-gray-600 dark:text-[var(--muted)] mb-6">
- Based on our experience as CPAs, here are the most common reasons candidates struggle:
+ Based on common candidate patterns we've observed, here are the most common reasons candidates struggle:
  </p>
  <ul className="space-y-4">
  {whyCandidatesFail.map((reason, index) => (
@@ -144,7 +144,7 @@ export default function SectionPage({
  <FadeInOnScroll direction="up" delay={300}>
  <div className="bg-white dark:bg-[var(--card)] p-8 rounded-xl border border-gray-200">
  <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
- Proven Study Strategies
+ Effective Study Strategies
  </h2>
  <div className="space-y-6">
  {studyAdvice.map((advice, index) => (

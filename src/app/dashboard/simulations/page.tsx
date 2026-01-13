@@ -163,7 +163,7 @@ export default function SimulationsPage() {
  Task-Based Simulations
  </h1>
  <p className="text-gray-600 dark:text-[var(--muted)]">
- Practice with realistic CPA exam simulations. TBS make up 50% of most exam sections.
+ Practice with exam-style CPA simulations. TBS make up 50% of most exam sections.
  </p>
  </div>
  <span className="px-3 py-1 bg-[var(--primary)] text-white text-sm font-semibold rounded-full">

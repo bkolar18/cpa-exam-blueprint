@@ -31,7 +31,7 @@ export default function TCPPage() {
       whyCandidatesFail={[
         "Treating TCP like another version of REG - this section emphasizes planning over compliance",
         "Not understanding the practical application of tax concepts to client scenarios",
-        "Ignoring retirement plan rules - these are heavily tested and require detailed knowledge",
+        "Ignoring retirement plan rules - these are frequently emphasized and require detailed knowledge",
         "Failing to consider multiple tax years in planning scenarios",
         "Struggling with open-ended planning simulations that require judgment",
       ]}
@@ -45,7 +45,7 @@ export default function TCPPage() {
       studyAdvice={[
         "TCP requires you to think like a tax advisor, not just a tax preparer. Every question should prompt you to ask: What would I recommend to this client and why?",
         "If you've worked in tax, draw on that experience. TCP tests practical knowledge that experienced tax professionals use daily. Your work experience is valuable here.",
-        "Create comparison charts for retirement plans: contribution limits, catch-up provisions, distribution rules, and employer matching. These details are heavily tested.",
+        "Create comparison charts for retirement plans: contribution limits, catch-up provisions, distribution rules, and employer matching. These details are frequently emphasized.",
         "Entity selection questions often have multiple acceptable answers. Focus on understanding the trade-offs rather than looking for one right answer.",
         "Practice simulations that require you to analyze a client's situation and recommend planning strategies. The exam increasingly tests application over memorization.",
       ]}

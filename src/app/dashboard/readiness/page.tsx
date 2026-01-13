@@ -516,7 +516,7 @@ export default function ReadinessDashboardPage() {
               </svg>
             </div>
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold">Exam Readiness Dashboard</h1>
+              <h1 className="text-xl sm:text-2xl font-bold">Exam Preparation Dashboard</h1>
               <p className="text-white/80 text-sm sm:text-base">Track your Prime Meridian score across all sections</p>
             </div>
           </div>

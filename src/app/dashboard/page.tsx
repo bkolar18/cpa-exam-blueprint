@@ -504,7 +504,7 @@ export default function DashboardPage() {
  <QuickActionCard
  href="/dashboard/readiness"
  icon="sections"
- title="Exam Readiness"
+ title="Exam Preparation"
  description="Track your progress across all sections"
  color="green"
  />
@@ -524,10 +524,10 @@ export default function DashboardPage() {
  />
  </div>
 
- {/* Exam Readiness Summary */}
+ {/* Exam Preparation Summary */}
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
  <div className="flex items-center justify-between mb-4">
- <h2 className="text-lg font-semibold text-[var(--foreground)]">Exam Readiness</h2>
+ <h2 className="text-lg font-semibold text-[var(--foreground)]">Exam Preparation</h2>
  <Link
  href="/dashboard/readiness"
  className="text-sm font-medium text-[var(--primary)] hover:text-[var(--primary-dark)] flex items-center gap-1"

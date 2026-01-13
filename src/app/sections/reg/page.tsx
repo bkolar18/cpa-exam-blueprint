@@ -39,7 +39,7 @@ export default function REGPage() {
         "Master basis calculations - original basis, adjusted basis, and basis in property received",
         "Understand individual tax calculation flow from gross income to taxable income to tax",
         "Focus on entity taxation differences - when income is taxed and how it flows to owners",
-        "Don't skip business law - contracts and agency are heavily tested and often easier points",
+        "Don't skip business law - contracts and agency are frequently emphasized and often more approachable",
         "Practice property transaction calculations until they're automatic",
       ]}
       studyAdvice={[

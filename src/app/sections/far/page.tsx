@@ -37,13 +37,13 @@ export default function FARPage() {
       ]}
       whatToPrioritize={[
         "Master financial statement preparation - this is the foundation for everything else",
-        "Focus heavily on revenue recognition and leases - these are heavily tested new standards",
+        "Focus heavily on revenue recognition and leases - these standards receive significant exam coverage",
         "Practice consolidation simulations repeatedly until they become second nature",
         "Don't skip governmental and NFP accounting - they're easier points than most think",
         "Understand the conceptual framework - it helps you reason through unfamiliar problems",
       ]}
       studyAdvice={[
-        "FAR should typically be your first section if you have a strong accounting background. The material is fresh from your coursework, and passing FAR first builds confidence for the other sections.",
+        "FAR should typically be your first section if you have a strong accounting background. The material is fresh from your coursework, and starting with FAR often helps build confidence for the remaining sections.",
         "Create a formula sheet for bond amortization, pension calculations, and lease computations. You'll use these formulas repeatedly, and having them memorized saves precious time on exam day.",
         "Don't just read about consolidations - work through 20-30 practice simulations. The elimination entries need to become automatic muscle memory.",
         "Governmental accounting seems overwhelming at first, but it's actually more straightforward than GAAP in many ways. Focus on understanding fund types and modified accrual basis.",

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "CPA Exam While Working Full Time | Meridian CPA Review",
-  description: "Learn how to pass the CPA exam while working full time. Real strategies from CPAs who did it themselves.",
+  description: "Learn how to prepare for the CPA exam while working full time. Real strategies from candidates who did it themselves.",
 };
 
 export default function WorkingFullTimePage() {
@@ -13,10 +13,10 @@ export default function WorkingFullTimePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Passing the CPA Exam While Working Full Time
+              Preparing for the CPA Exam While Working Full Time
             </h1>
             <p className="text-xl text-gray-200">
-              Real strategies from CPAs who balanced busy season, client deadlines, and CPA exam prep. It&apos;s challenging, but absolutely doable.
+              Real strategies from candidates who balanced busy season, client deadlines, and CPA exam prep. It&apos;s challenging, but absolutely doable.
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function WorkingFullTimePage() {
                 The Reality of Studying While Working
               </h2>
               <p className="text-[var(--muted)] mb-6">
-                Let&apos;s be honest: passing the CPA exam while working full time is one of the hardest things you&apos;ll do in your career. But thousands of candidates do it every year, and you can too.
+                Let&apos;s be honest: preparing for and taking the CPA exam while working full time is one of the hardest things you&apos;ll do in your career. But thousands of candidates do it every year, and you can too.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">

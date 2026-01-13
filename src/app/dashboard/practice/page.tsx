@@ -217,7 +217,7 @@ export default function PracticePage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-[var(--foreground)]">Practice Questions</h1>
-          <p className="text-[var(--muted)]">Test your knowledge and track your progress</p>
+          <p className="text-[var(--muted)]">Practice applying concepts and track your progress</p>
         </div>
         {attempts.length > 0 && (
           <Link
