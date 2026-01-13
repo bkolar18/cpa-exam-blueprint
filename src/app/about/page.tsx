@@ -2,7 +2,7 @@ import Link from"next/link";
 
 export const metadata = {
  title:"About Us | Meridian CPA Review",
- description:"Learn about Meridian CPA Review - affordable CPA exam prep with 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass.",
+ description:"Learn about Meridian CPA Review - affordable CPA exam prep with 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access with no expiration.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
  About Meridian CPA Review
  </h1>
  <p className="text-xl text-gray-200 animate-fade-in-up animate-delay-100">
- Comprehensive CPA exam prep with 6,000+ practice questions and 500+ task-based simulations - everything you need to pass.
+ Comprehensive CPA exam prep with 6,000+ practice questions and 500+ task-based simulations — built to help you prepare confidently for exam day.
  </p>
  </div>
  </div>
@@ -39,7 +39,7 @@ export default function AboutPage() {
  <h2 className="text-2xl font-bold text-white">Our Mission</h2>
  </div>
  <p className="text-xl text-white/90 leading-relaxed max-w-3xl">
- We believe CPA exam preparation should be accessible to everyone. Our mission is to provide everything you need to pass - 6,000+ practice questions, 500+ task-based simulations, study tools, progress tracking, and unlimited access until you pass.
+ We believe CPA exam preparation should be accessible to everyone. Our mission is to provide affordable, practice-driven tools that help candidates prepare effectively for the CPA exam — 6,000+ practice questions, 500+ task-based simulations, study tools, progress tracking, and unlimited access with no expiration.
  </p>
  </div>
  </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
  We believe the best way to prepare for the CPA exam is through active practice - answering questions, working through simulations, and getting immediate feedback on your performance.
  </p>
  <p className="font-medium text-amber-900 dark:text-amber-200">
- With 6,000+ practice questions, 500+ task-based simulations covering all CPA exam topics, intelligent progress tracking, and unlimited access until you pass, we offer everything you need to succeed - completely free during our beta period.
+ With 6,000+ practice questions, 500+ task-based simulations covering all CPA exam topics, intelligent progress tracking, and unlimited access with no expiration, we offer everything you need to prepare effectively — completely free during our beta period.
  </p>
  </div>
  </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
  </div>
  <div>
  <h3 className="font-semibold text-[var(--foreground)] mb-1">Prime Meridian Adaptive Learning</h3>
- <p className="text-[var(--muted)] text-sm">Our intelligent algorithm analyzes your performance, identifies weak areas, and guides your study path with AICPA-weighted scoring.</p>
+ <p className="text-[var(--muted)] text-sm">Our intelligent algorithm analyzes your performance, identifies weak areas, and guides your study path with AICPA blueprint–weighted scoring.</p>
  </div>
  </div>
  <div className="flex items-start space-x-4">
@@ -139,7 +139,7 @@ export default function AboutPage() {
  </div>
  <div>
  <h3 className="font-semibold text-[var(--foreground)] mb-1">Unlimited Access</h3>
- <p className="text-[var(--muted)] text-sm">All tiers include unlimited access until you pass - study at your own pace.</p>
+ <p className="text-[var(--muted)] text-sm">All tiers include unlimited access with no expiration — study at your own pace.</p>
  </div>
  </div>
  </div>
@@ -377,7 +377,7 @@ export default function AboutPage() {
  </div>
  <div className="mt-6 p-4 bg-[var(--card)] rounded-lg">
  <p className="text-sm text-[var(--muted)]">
- <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer the same number of practice questions as Roger CPA, 500+ task-based simulations (matching Surgent!), and unlimited access until you pass. The main difference is we don&apos;t have video lectures. If you learn best from reading and practice, we&apos;re the smart choice.
+ <strong className="text-[var(--foreground)]">Bottom line:</strong> We offer a practice-focused alternative for candidates who learn best through questions and simulations. With 6,000+ MCQs, 500+ TBS, and unlimited access with no expiration, the main difference is we don&apos;t have video lectures. If you learn best by doing, we&apos;re the smart choice.
  </p>
  <p className="text-xs text-[var(--muted)] mt-3 opacity-70">
  *Features are based on publicly available information as of January 2025. Verify current offerings directly with each provider.
@@ -431,7 +431,7 @@ export default function AboutPage() {
  <div className="bg-[var(--primary)] p-8 rounded-xl text-white text-center">
  <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">Ready to Start Studying?</h2>
  <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
- Get access to 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access until you pass - free during beta.
+ Get access to 6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access with no expiration — free during beta.
  </p>
  <Link
  href="/signup"
