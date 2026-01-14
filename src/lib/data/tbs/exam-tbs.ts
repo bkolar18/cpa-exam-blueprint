@@ -1488,7 +1488,28 @@ Please evaluate these results and provide guidance on the conclusion.`,
         value: 93,
         tolerance: 0,
       },
-      explanation: "From the sample size table, with 1% expected deviation rate and 5% tolerable deviation rate at 5% risk, sample size = 93",
+      explanation: `**Answer:** 93
+
+**How to Read the Sample Size Table (Exhibit 2):**
+1. Find the row for Expected Deviation Rate: **1.00%**
+2. Find the column for Tolerable Deviation Rate: **5%**
+3. The intersection gives the sample size: **93**
+
+**Understanding the Parameters (per AU-C 530):**
+
+• **Expected Deviation Rate (1%):** The auditor's estimate of deviations in the population based on prior experience or professional judgment.
+
+• **Tolerable Deviation Rate (5%):** The maximum rate of deviations the auditor will accept and still conclude the control is operating effectively.
+
+• **Risk of Assessing Control Risk Too Low (5%):** The risk that the sample supports the conclusion that control risk is lower than it actually is. Also called "risk of overreliance."
+
+**Why Sample Size Increases When:**
+• Expected deviation rate increases (need more items to estimate)
+• Tolerable rate decreases (need more precision)
+• Risk of overreliance decreases (need more confidence)
+
+**Common Mistake:**
+Confusing the 5% RACRTL with the 5% tolerable rate. They are different parameters that both happen to be 5% in this problem.`,
     },
     {
       id: "req-sample-deviation-rate",
@@ -1501,7 +1522,30 @@ Please evaluate these results and provide guidance on the conclusion.`,
         value: 2.15,
         tolerance: 0.05,
       },
-      explanation: "Sample deviation rate = 2 deviations / 93 items = 2.15%",
+      explanation: `**Answer:** 2.15%
+
+**Calculation:**
+Sample Deviation Rate = Number of Deviations ÷ Sample Size
+Sample Deviation Rate = 2 ÷ 93 = **2.15%** (or 2.1505%)
+
+**From Exhibit 3 - Sample Results:**
+• Sample Size: 93 purchase orders
+• Deviations Found: 2
+
+**What Counts as a Deviation:**
+Both items found ARE deviations regardless of dollar amount:
+• $150 supply order signed by unauthorized employee ✓
+• $2,500 equipment purchase with forged signature ✓
+
+**Important Note (AU-C 530.A23):**
+In attributes sampling, each deviation is weighted equally — the dollar amount is irrelevant. A $150 deviation counts the same as a $2,500 deviation because we're testing the RATE of control failures, not their magnitude.
+
+**Comparison to Expectation:**
+• Expected Deviation Rate: 1%
+• Actual Sample Deviation Rate: 2.15%
+• Result: Actual exceeds expected by more than double
+
+This is a warning sign that the control may not be operating as effectively as expected.`,
     },
     {
       id: "req-upper-deviation",
@@ -1513,7 +1557,29 @@ Please evaluate these results and provide guidance on the conclusion.`,
         type: "dropdown",
         correctOptionId: "opt-udl-yes",
       },
-      explanation: "With 2 deviations in a sample of 93 at 5% risk, the upper deviation limit would be approximately 6.2%. This exceeds the tolerable rate of 5%.",
+      explanation: `**Correct Selection:** Yes - UDL exceeds tolerable rate
+
+**What is the Upper Deviation Limit (UDL)?**
+The UDL is the maximum rate of deviations in the population that the auditor can conclude exists, at the specified confidence level. It accounts for sampling risk.
+
+**Estimating the UDL:**
+With 2 deviations in a sample of 93 at 95% confidence (5% RACRTL), the UDL is approximately **6.2%**.
+
+**How to Estimate (without full evaluation table):**
+UDL ≈ Sample Deviation Rate + Allowance for Sampling Risk
+UDL ≈ 2.15% + ~4% = ~6.2%
+
+**Comparison:**
+• Tolerable Deviation Rate: 5%
+• Estimated UDL: 6.2%
+• Result: **UDL (6.2%) > Tolerable Rate (5%)**
+
+**Why This Matters (AU-C 530.13):**
+When the UDL exceeds the tolerable rate, the auditor CANNOT conclude that the control is operating effectively at the desired level of assurance. Sampling risk is too high.
+
+**Why Not "No" or "Equal":**
+• "No": Would require UDL ≤ 5%, but with 2 deviations in 93 items, UDL is definitely above 5%
+• "Equal": Extremely unlikely — exact equality is rare in practice`,
       dropdownOptions: [
         { id: "opt-udl-yes", order: 1, text: "Yes - UDL exceeds tolerable rate", isCorrect: true },
         { id: "opt-udl-no", order: 2, text: "No - UDL is within tolerable rate", isCorrect: false },
@@ -1530,7 +1596,36 @@ Please evaluate these results and provide guidance on the conclusion.`,
         type: "dropdown",
         correctOptionId: "opt-conc-ineffective",
       },
-      explanation: "Since the actual deviation rate (2.15%) exceeded the expected deviation rate (1%) and the upper deviation limit exceeds the tolerable rate, the auditor should conclude the control is not operating effectively.",
+      explanation: `**Correct Selection:** Control is not operating effectively
+
+**This is the KEY conclusion — worth 2 points!**
+
+**Decision Framework (AU-C 530.14):**
+| If UDL is... | Then conclude... |
+|--------------|------------------|
+| ≤ Tolerable Rate | Control IS operating effectively |
+| > Tolerable Rate | Control is NOT operating effectively |
+
+**Our Results:**
+• UDL (~6.2%) > Tolerable Rate (5%)
+• **Conclusion: Control is NOT operating effectively**
+
+**Why Other Options Are Wrong:**
+
+• **"Control is operating effectively":** Only valid if UDL ≤ Tolerable Rate. Here UDL exceeds tolerable rate.
+
+• **"Expand sample size":** Not appropriate. The results already show the control is ineffective. Expanding the sample would just confirm this at greater cost. (Note: Expanding might be appropriate if results were borderline, but 2.15% actual vs. 1% expected is not borderline.)
+
+• **"Results are inconclusive":** Attributes sampling provides a clear conclusion — either the control is effective or it isn't. "Inconclusive" is not a valid sampling conclusion.
+
+**Audit Impact:**
+Since the control over purchase order approvals is not operating effectively, the auditor must:
+1. Reassess control risk (likely increase to maximum)
+2. Modify the nature, timing, and extent of substantive procedures
+3. Consider whether the deficiency is a significant deficiency or material weakness
+
+**Exam Tip:**
+The CPA exam often tests your ability to reach the correct conclusion from sampling results. Remember: UDL > Tolerable = NOT effective. Don't overthink it.`,
       dropdownOptions: [
         { id: "opt-conc-effective", order: 1, text: "Control is operating effectively", isCorrect: false },
         { id: "opt-conc-ineffective", order: 2, text: "Control is not operating effectively", isCorrect: true },
@@ -2127,7 +2222,30 @@ export const regContractsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-a-no",
       },
-      explanation: "No contract was formed. Under common law, an offer can be revoked anytime before acceptance unless supported by consideration (an option contract). Seller's sale to the third party was an effective revocation by conduct.",
+      explanation: `**Correct Selection:** No - Offer was effectively revoked
+
+**Legal Rule — Revocation of Offers (Common Law):**
+Under common law, an offer can be revoked at ANY TIME before acceptance, even if the offeror promised to keep it open, UNLESS:
+1. There is an option contract (consideration paid to keep offer open), OR
+2. Promissory estoppel applies (detrimental reliance)
+
+**Timeline Analysis:**
+• Monday: Seller offers to sell widgets, "open for 10 days"
+• Wednesday: Seller sells to third party (revocation by conduct)
+• Thursday: Buyer attempts to accept
+
+**Why No Contract:**
+Seller's sale to the third party on Wednesday was an **indirect revocation** — an act inconsistent with the offer that terminates it. Even though Buyer didn't receive direct notice, Seller's conduct terminated the offer.
+
+**Why "10 days" Doesn't Help Buyer:**
+The promise to keep the offer open for 10 days was NOT supported by consideration. A bare promise to hold an offer open is not binding under common law.
+
+**Compare to Scenario C:**
+This is common law (services/widgets not under UCC context), not UCC. The UCC Firm Offer Rule (Scenario C) only applies to merchants selling GOODS.
+
+**Why Other Options Are Wrong:**
+• "Yes - Valid acceptance": Offer was terminated before acceptance
+• "Voidable by Seller": Voidable implies a contract exists; here no contract was formed`,
       dropdownOptions: [
         { id: "opt-a-yes", order: 1, text: "Yes - Buyer's acceptance was valid", isCorrect: false },
         { id: "opt-a-no", order: 2, text: "No - Offer was effectively revoked", isCorrect: true },
@@ -2144,7 +2262,30 @@ export const regContractsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-b-no",
       },
-      explanation: "Under the pre-existing duty rule, a promise to pay more for something a party is already obligated to do is not enforceable because there is no new consideration. Homeowner's promise to pay more is not binding.",
+      explanation: `**Correct Selection:** No - Lacks consideration for modification
+
+**Legal Rule — Pre-Existing Duty Rule:**
+A promise to do what one is ALREADY legally obligated to do is NOT valid consideration. Therefore, a contract modification that only benefits one party is unenforceable.
+
+**Analysis:**
+• Original contract: Contractor builds garage for $25,000
+• Modification: Contractor demands $28,000 to complete the same work
+• Homeowner's promise to pay extra: NOT enforceable
+
+**Why Not Enforceable:**
+Contractor is already legally bound to build the garage. His "promise" to do so in exchange for more money is not NEW consideration — it's the same duty he already has. This is classic **economic duress** disguised as modification.
+
+**Exceptions (Not Present Here):**
+1. **Mutual rescission + new contract:** Both parties agree to cancel original contract and enter a new one
+2. **Unforeseen circumstances:** Genuinely unforeseeable events (soil conditions were discoverable through due diligence)
+3. **UCC §2-209:** Modifications to goods contracts don't require consideration (but this is a SERVICE contract)
+
+**Why Other Options Are Wrong:**
+• "Written modification is valid": Writing alone doesn't cure lack of consideration
+• "Enforceable for $3,000 only": The entire modification fails, not just part of it
+
+**Exam Tip:**
+Distinguish service contracts (common law, need consideration for modification) from goods contracts (UCC, no consideration needed for good-faith modification).`,
       dropdownOptions: [
         { id: "opt-b-yes", order: 1, text: "Yes - Written modification is valid", isCorrect: false },
         { id: "opt-b-no", order: 2, text: "No - Lacks consideration for modification", isCorrect: true },
@@ -2161,7 +2302,41 @@ export const regContractsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c-no",
       },
-      explanation: "Under UCC 2-205 (Firm Offer Rule), a signed written offer by a merchant to buy or sell goods that states it will be held open is irrevocable for the stated period (up to 3 months) without consideration. Supplier is bound by the offer.",
+      explanation: `**Correct Selection:** No - UCC Firm Offer Rule applies
+
+**Legal Rule — UCC §2-205 (Firm Offer Rule):**
+An offer by a MERCHANT to buy or sell GOODS is IRREVOCABLE if:
+1. Made in a signed WRITING, AND
+2. States it will be held open
+
+No consideration is required! The offer is irrevocable for the stated period (up to 3 months max).
+
+**Analysis:**
+✓ Merchant: Supplier is a merchant (deals in goods)
+✓ Goods: Sale of goods for $10,000
+✓ Signed writing: Offer was signed and in writing
+✓ States period: "Open for 15 days"
+✓ Within 3-month limit: 15 days < 3 months
+
+**All elements met → Firm Offer is IRREVOCABLE**
+
+**Timeline:**
+• June 1: Supplier makes firm offer (irrevocable for 15 days)
+• June 8: Supplier sells to another party (BREACH!)
+• June 8: Merchant accepts (valid acceptance)
+• Result: Contract formed; Supplier is liable for breach
+
+**Why Different from Scenario A:**
+| Scenario A | Scenario C |
+|------------|------------|
+| Common law | UCC Article 2 |
+| Services/unspecified | Goods |
+| Oral or informal offer | Signed written offer |
+| Revocable anytime | Firm offer irrevocable |
+
+**Why Other Options Are Wrong:**
+• "Offer was revocable": Firm Offer Rule makes it irrevocable
+• "Depends on unique goods": Uniqueness is irrelevant; rule applies to all goods`,
       dropdownOptions: [
         { id: "opt-c-yes", order: 1, text: "Yes - Offer was revocable", isCorrect: false },
         { id: "opt-c-no", order: 2, text: "No - UCC Firm Offer Rule applies", isCorrect: true },
@@ -2178,7 +2353,33 @@ export const regContractsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-d-car",
       },
-      explanation: "A minor may disaffirm a contract and must return any property received. However, the minor is entitled to full refund regardless of use, wear and tear, or depreciation (majority rule). Minor returns the car as-is and gets full $15,000 back.",
+      explanation: `**Correct Selection:** The car in its current condition
+
+**Legal Rule — Minor's Right to Disaffirm:**
+Contracts with minors (under 18) are VOIDABLE at the minor's option. When a minor disaffirms:
+1. Minor must return any property still in their possession
+2. Minor receives full refund of payments made
+3. Minor is NOT liable for depreciation, wear, or damage (majority rule)
+
+**Analysis:**
+• Minor is 17 (under 18) → contract is voidable
+• Minor drove car for 2 months, 3,000 miles → car has depreciated
+• Minor disaffirms → returns car AS-IS, gets $15,000 back
+
+**Why Minor Gets Full Refund:**
+The majority rule protects minors from being held to adult contracts. The policy is that adults dealing with minors assume the risk of disaffirmance.
+
+**Minority Rule (Some States):**
+Some jurisdictions require minors to compensate for "benefit received" or depreciation. The CPA exam typically tests the majority rule unless stated otherwise.
+
+**Exceptions — Cannot Disaffirm:**
+1. Contracts for necessaries (food, shelter, medical care)
+2. Contracts ratified after reaching majority (age 18)
+3. Misrepresentation of age (in some states)
+
+**Why Other Options Are Wrong:**
+• "Car plus depreciation": Majority rule doesn't require depreciation payment
+• "Nothing": Minor must return property received; can't keep both car AND money`,
       dropdownOptions: [
         { id: "opt-d-car", order: 1, text: "The car in its current condition", isCorrect: true },
         { id: "opt-d-value", order: 2, text: "The car plus compensation for depreciation", isCorrect: false },
@@ -2195,7 +2396,35 @@ export const regContractsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-e-no",
       },
-      explanation: "A contract for the sale of land that lacks an essential term (price) is unenforceable. Unlike UCC contracts for goods where a reasonable price can be implied, real estate contracts require the price to be stated or determinable by the contract terms.",
+      explanation: `**Correct Selection:** No - Missing essential term (price)
+
+**Legal Rule — Essential Terms for Real Estate Contracts:**
+A contract for the sale of land must include all ESSENTIAL TERMS:
+1. Identification of the parties
+2. Description of the property
+3. **PRICE or method to determine price**
+4. Signatures (for Statute of Frauds)
+
+**Why This Contract Fails:**
+The contract lacks a specified price, and there is no formula or method in the contract to determine the price. The parties' intent to "negotiate later" is not sufficient.
+
+**Real Estate vs. UCC (Goods):**
+| Real Estate (Common Law) | Goods (UCC) |
+|--------------------------|-------------|
+| Price MUST be stated | Price can be omitted |
+| Court won't imply FMV | Court implies "reasonable price" |
+| Strict on essential terms | Gap-fillers available |
+
+**Why Can't Court Imply FMV?**
+Real estate is unique. Courts are reluctant to "make a contract" for the parties when they clearly intended to negotiate a key term. This is not a minor missing term — price is fundamental.
+
+**Why "Statute of Frauds" is Wrong:**
+The Statute of Frauds requires land contracts to be in WRITING and signed. This contract IS signed. The issue is the missing PRICE term, which is a separate contract formation problem.
+
+**Exam Tip:**
+The CPA exam tests the distinction between:
+• Statute of Frauds (must be in writing) — this contract passes
+• Essential terms (must include price) — this contract FAILS`,
       dropdownOptions: [
         { id: "opt-e-yes", order: 1, text: "Yes - Court will imply fair market value", isCorrect: false },
         { id: "opt-e-no", order: 2, text: "No - Missing essential term (price)", isCorrect: true },
@@ -2828,7 +3057,37 @@ export const tcpEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-sstb-yes",
       },
-      explanation: "Yes, medical practices are Specified Service Trades or Businesses (SSTBs). At $350,000 income, Dr. Mitchell exceeds the threshold where QBI deduction begins to phase out for SSTBs, potentially eliminating the deduction entirely.",
+      explanation: `**Correct Selection:** Yes - QBI deduction is limited or eliminated
+
+**What is an SSTB? (IRC §199A(d)(2)):**
+Specified Service Trades or Businesses include:
+• Health (medical, dental, veterinary)
+• Law
+• Accounting
+• Actuarial science
+• Performing arts
+• Consulting
+• Athletics
+• Financial services
+• Brokerage services
+
+**SSTB Income Thresholds (2024):**
+| Filing Status | Phase-out Begins | Phase-out Complete |
+|---------------|------------------|-------------------|
+| Single | $191,950 | $241,950 |
+| MFJ | $383,900 | $483,900 |
+
+**Dr. Mitchell's Situation:**
+• Income: $350,000
+• Filing status: Likely single (one owner)
+• Result: Well above phase-out threshold → **No QBI deduction**
+
+**Why This Matters for Entity Selection:**
+Since the QBI deduction is unavailable anyway, the 20% deduction shouldn't factor into the entity choice. This makes the S Corporation SE tax savings even MORE valuable.
+
+**Why Other Options Are Wrong:**
+• "Full 20% available": Only if income below $191,950 for SSTB
+• "Partial at reduced rate": Only in phase-out range; $350K exceeds full phase-out`,
       dropdownOptions: [
         { id: "opt-sstb-yes", order: 1, text: "Yes - QBI deduction is limited or eliminated", isCorrect: true },
         { id: "opt-sstb-no", order: 2, text: "No - Full 20% QBI deduction available", isCorrect: false },
@@ -2845,7 +3104,46 @@ export const tcpEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-entity-scorp",
       },
-      explanation: "An S Corporation would likely provide the best result. It offers liability protection, allows reasonable salary to reduce self-employment taxes on distributions, and avoids double taxation. As an SSTB, QBI benefits are limited anyway, so pass-through taxation with salary/distribution planning is optimal.",
+      explanation: `**Correct Selection:** S Corporation
+
+**This is the KEY question — worth 2 points!**
+
+**Why S Corp is Best for Dr. Mitchell:**
+
+| Factor | S Corp Advantage |
+|--------|------------------|
+| Liability protection | ✓ Yes (corporate shield) |
+| SE tax savings | ✓ Major benefit |
+| Pass-through taxation | ✓ No double taxation |
+| Retirement plans | ✓ Can establish 401(k), defined benefit |
+| Single owner eligible | ✓ Yes |
+
+**S Corp Tax Savings Calculation:**
+• Total income: $350,000
+• Reasonable salary: $200,000 → Subject to FICA (15.3% up to wage base, then 2.9% Medicare)
+• Distribution: $150,000 → NO self-employment tax!
+• SE tax saved: ~$22,950 (15.3% × $150,000)
+
+**Why NOT Other Entities:**
+
+**Sole Proprietorship:**
+All $350,000 subject to SE tax. No liability protection. Poor choice for high-income professional.
+
+**C Corporation:**
+Double taxation problem:
+• Corporate tax: $350,000 × 21% = $73,500
+• After-tax earnings: $276,500
+• If distributed as dividends: Additional 20% + 3.8% NIIT = ~$65,825 more tax
+• Total effective rate could exceed 45%
+
+**Single-Member LLC (Disregarded):**
+Tax-wise, same as sole proprietorship. All income subject to SE tax. Provides liability protection but no tax advantage.
+
+**Exam Tip:**
+For high-income service professionals (doctors, lawyers, accountants), S Corps typically win because:
+1. QBI deduction often unavailable (SSTB)
+2. SE tax savings are substantial
+3. Pass-through avoids double taxation`,
       dropdownOptions: [
         { id: "opt-entity-sole", order: 1, text: "Sole Proprietorship", isCorrect: false },
         { id: "opt-entity-scorp", order: 2, text: "S Corporation", isCorrect: true },
@@ -2863,7 +3161,39 @@ export const tcpEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-adv-se",
       },
-      explanation: "The primary advantage is self-employment tax savings. In an S Corp, only the reasonable salary is subject to FICA/Medicare taxes. Distributions of remaining profits avoid self-employment tax, potentially saving significant amounts.",
+      explanation: `**Correct Selection:** Self-employment tax savings on distributions
+
+**The S Corp SE Tax Strategy:**
+
+**Sole Proprietorship:**
+ALL net self-employment income is subject to SE tax:
+• Social Security: 12.4% (up to wage base ~$168,600 in 2024)
+• Medicare: 2.9% (no limit)
+• Additional Medicare: 0.9% (over $200,000 single)
+
+**S Corporation:**
+ONLY reasonable salary is subject to employment taxes:
+• Salary → Subject to FICA (employer + employee = 15.3%)
+• Distributions → NOT subject to SE or FICA taxes
+
+**Savings Illustration:**
+| Item | Sole Prop | S Corp |
+|------|-----------|--------|
+| Income | $350,000 | $350,000 |
+| Salary | N/A | $200,000 |
+| Distribution | N/A | $150,000 |
+| SE/FICA on salary | ~$26,775 | ~$26,775 |
+| SE on distribution | ~$22,950 | $0 |
+| **Total employment tax** | **~$49,725** | **~$26,775** |
+| **Savings** | | **~$22,950** |
+
+**IRS Scrutiny Warning:**
+The salary must be "reasonable" for services performed. Unreasonably low salaries invite IRS challenge.
+
+**Why Other Options Are Wrong:**
+• "Lower marginal rate": Same individual rates apply to both
+• "Higher QBI deduction": QBI rules apply equally (and phased out here anyway)
+• "Income deferral": Both are pass-through; no significant deferral difference`,
       dropdownOptions: [
         { id: "opt-adv-rate", order: 1, text: "Lower marginal tax rate", isCorrect: false },
         { id: "opt-adv-se", order: 2, text: "Self-employment tax savings on distributions", isCorrect: true },
@@ -2881,7 +3211,39 @@ export const tcpEntitySelectionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-dis-double",
       },
-      explanation: "The main disadvantage is double taxation - corporate income is taxed at 21%, then dividends are taxed again at the shareholder level. While the lower corporate rate is attractive, extracting profits triggers additional tax.",
+      explanation: `**Correct Selection:** Double taxation on distributed profits
+
+**The Double Taxation Problem:**
+
+**Level 1 — Corporate Tax:**
+Corporate income taxed at flat 21% rate
+$350,000 × 21% = $73,500 corporate tax
+After-tax: $276,500
+
+**Level 2 — Dividend Tax (if distributed):**
+Qualified dividends taxed at 0%/15%/20% + 3.8% NIIT
+At Dr. Mitchell's income: 20% + 3.8% = 23.8%
+$276,500 × 23.8% = $65,807 additional tax
+
+**Combined Effective Rate:**
+Total tax: $73,500 + $65,807 = $139,307
+Effective rate: $139,307 ÷ $350,000 = **39.8%**
+
+Compare to S Corp (37% marginal + SE on salary only): ~**32-35% effective**
+
+**When C Corps CAN Make Sense:**
+1. Reinvesting profits indefinitely (no distribution)
+2. Planning to go public
+3. Need multiple classes of stock
+4. Foreign investors or entity shareholders
+
+**Dr. Mitchell's Situation:**
+Plans to extract income for living expenses and retirement → Double taxation is costly
+
+**Why Other Options Are Wrong:**
+• "No liability protection": C Corps DO provide liability protection
+• "Administrative complexity only": Complexity exists but isn't the MAIN disadvantage
+• "Cannot establish retirement plans": C Corps CAN have retirement plans (actually more generous limits)`,
       dropdownOptions: [
         { id: "opt-dis-double", order: 1, text: "Double taxation on distributed profits", isCorrect: true },
         { id: "opt-dis-liability", order: 2, text: "No liability protection", isCorrect: false },
@@ -3456,7 +3818,27 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 2.25,
         tolerance: 0.01,
       },
-      explanation: "Current Ratio = Current Assets / Current Liabilities = $450,000 / $200,000 = 2.25",
+      explanation: `**Answer:** 2.25
+
+**Formula:**
+Current Ratio = Current Assets ÷ Current Liabilities
+
+**Calculation:**
+Current Ratio = $450,000 ÷ $200,000 = **2.25**
+
+**Interpretation:**
+• A current ratio of 2.25 means Horizon has $2.25 in current assets for every $1.00 of current liabilities
+• Generally, a ratio above 1.0 indicates good short-term liquidity
+• A ratio of 2.0+ is often considered strong
+
+**Industry Context:**
+"Good" ratios vary by industry:
+• Retail: 1.5 - 2.0 (faster inventory turnover)
+• Manufacturing: 1.5 - 3.0 (more inventory)
+• Utilities: 1.0 - 1.5 (stable cash flows)
+
+**Common Mistake:**
+Using TOTAL assets instead of CURRENT assets. The current ratio specifically measures SHORT-TERM liquidity.`,
     },
     {
       id: "req-quick-ratio",
@@ -3469,7 +3851,37 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 1.50,
         tolerance: 0.01,
       },
-      explanation: "Quick Ratio = (Current Assets - Inventory) / Current Liabilities = ($450,000 - $150,000) / $200,000 = 1.50",
+      explanation: `**Answer:** 1.50
+
+**Formula:**
+Quick Ratio = (Current Assets − Inventory) ÷ Current Liabilities
+
+**Calculation:**
+Quick Ratio = ($450,000 − $150,000) ÷ $200,000
+Quick Ratio = $300,000 ÷ $200,000 = **1.50**
+
+**Why Exclude Inventory?**
+Inventory is the LEAST liquid current asset because:
+1. Must be sold first (takes time)
+2. May need to be discounted to sell quickly
+3. May become obsolete
+
+The quick ratio tests if the company can pay current liabilities WITHOUT selling inventory.
+
+**Interpretation:**
+• Quick ratio of 1.50 means $1.50 of liquid assets per $1.00 of current liabilities
+• Generally, 1.0+ is considered adequate
+• Horizon's quick ratio (1.50) is healthy
+
+**Comparison to Current Ratio:**
+| Ratio | Value | Difference |
+|-------|-------|------------|
+| Current | 2.25 | Includes inventory |
+| Quick | 1.50 | Excludes inventory |
+| Gap | 0.75 | Due to $150K inventory |
+
+**Common Mistake:**
+Only excluding inventory. In some versions, prepaid expenses are also excluded since they can't be converted to cash.`,
     },
     {
       id: "req-debt-equity",
@@ -3482,7 +3894,37 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 0.67,
         tolerance: 0.01,
       },
-      explanation: "Debt-to-Equity = Total Liabilities / Total Equity = $480,000 / $720,000 = 0.67",
+      explanation: `**Answer:** 0.67 (or 0.667)
+
+**Formula:**
+Debt-to-Equity = Total Liabilities ÷ Total Stockholders' Equity
+
+**Calculation:**
+D/E = $480,000 ÷ $720,000 = **0.667** (rounded to 0.67)
+
+**Interpretation:**
+• D/E of 0.67 means $0.67 of debt for every $1.00 of equity
+• Lower ratios indicate less financial leverage (less risky)
+• Horizon is primarily financed by equity (conservative structure)
+
+**Balance Sheet Verification:**
+Total Assets = Total Liabilities + Equity
+$1,200,000 = $480,000 + $720,000 ✓
+
+**Leverage Analysis:**
+| Metric | Calculation | Result |
+|--------|-------------|--------|
+| Debt-to-Equity | $480K ÷ $720K | 0.67 |
+| Debt-to-Assets | $480K ÷ $1.2M | 40% |
+| Equity Ratio | $720K ÷ $1.2M | 60% |
+
+**Industry Benchmarks:**
+• <1.0: Conservative leverage
+• 1.0 - 2.0: Moderate leverage
+• >2.0: Aggressive leverage (higher risk)
+
+**Common Mistake:**
+Using only long-term debt instead of TOTAL liabilities. The standard D/E ratio uses all liabilities.`,
     },
     {
       id: "req-inventory-turnover",
@@ -3495,7 +3937,37 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 12.0,
         tolerance: 0.1,
       },
-      explanation: "Inventory Turnover = COGS / Average Inventory = $1,680,000 / $140,000 = 12.0 times",
+      explanation: `**Answer:** 12.0 times
+
+**Formula:**
+Inventory Turnover = Cost of Goods Sold ÷ Average Inventory
+
+**Calculation:**
+Turnover = $1,680,000 ÷ $140,000 = **12.0 times**
+
+**Interpretation:**
+• Horizon sells and replaces its inventory 12 times per year
+• Days in inventory = 365 ÷ 12 = ~30 days
+• This is a GOOD turnover rate for most industries
+
+**Why Use COGS (not Sales)?**
+Inventory is recorded at COST, not selling price. Using sales would inflate the ratio due to markup.
+
+**Why Use AVERAGE Inventory?**
+Average smooths out seasonal fluctuations:
+Average = (Beginning Inventory + Ending Inventory) ÷ 2
+
+Note: The problem provides average inventory ($140,000), not the ending balance.
+
+**Common Mistakes:**
+1. Using Net Sales instead of COGS — overstates turnover
+2. Using ending inventory instead of average — may distort results
+3. Confusing turnover (times) with days (365 ÷ turnover)
+
+**Industry Comparison:**
+• Grocery: 15-20 times (perishable goods)
+• Manufacturing: 6-12 times
+• Jewelry: 1-2 times (slow-moving luxury goods)`,
     },
     {
       id: "req-return-equity",
@@ -3508,7 +3980,44 @@ export const barRatioAnalysisTBS: TBSQuestion = {
         value: 26.67,
         tolerance: 0.1,
       },
-      explanation: "ROE = Net Income / Total Equity = $192,000 / $720,000 = 26.67%",
+      explanation: `**Answer:** 26.67%
+
+**Formula:**
+ROE = Net Income ÷ Total Stockholders' Equity
+
+**Calculation:**
+ROE = $192,000 ÷ $720,000 = 0.2667 = **26.67%**
+
+**Interpretation:**
+• For every $1.00 of equity invested, Horizon generates $0.27 in profit
+• 26.67% ROE is EXCELLENT (above most benchmarks)
+• Indicates strong profitability relative to shareholder investment
+
+**ROE Benchmarks:**
+• <10%: Below average
+• 10-15%: Average
+• 15-20%: Good
+• >20%: Excellent
+
+**DuPont Analysis (ROE Decomposition):**
+ROE = Net Profit Margin × Asset Turnover × Equity Multiplier
+
+For Horizon:
+• Net Profit Margin = $192K ÷ $2.4M = 8%
+• Asset Turnover = $2.4M ÷ $1.2M = 2.0
+• Equity Multiplier = $1.2M ÷ $720K = 1.67
+• ROE = 8% × 2.0 × 1.67 = **26.7%** ✓
+
+**DuPont Insight:**
+Horizon's strong ROE comes from:
+1. Decent profit margin (8%)
+2. High asset efficiency (2.0 turnover)
+3. Moderate leverage (1.67 multiplier)
+
+**Common Mistakes:**
+• Using average equity instead of ending (both acceptable, but be consistent)
+• Confusing ROE with ROA (Return on ASSETS)
+• Expressing as decimal instead of percentage`,
     },
   ],
 };

@@ -1,7 +1,7 @@
 # TBS Explanation Enhancement Plan
 
 **Created:** January 13, 2026
-**Status:** Pending - Awaiting Pilot
+**Status:** Pilot Complete - Ready for Validation
 **Scope:** 58 Exam TBS questions in exam-tbs.ts
 
 ---
@@ -332,16 +332,16 @@ After pilot validation:
 ## Progress Tracking
 
 ### Pilot Phase (10 TBS)
-- [ ] tbs-far-001 enhanced
-- [ ] tbs-far-002 enhanced
-- [ ] tbs-aud-001 enhanced
-- [ ] tbs-far-003 enhanced
-- [ ] tbs-far-004 enhanced
-- [ ] tbs-far-005 enhanced
-- [ ] tbs-aud-002 enhanced
-- [ ] tbs-reg-001 enhanced
-- [ ] tbs-tcp-001 enhanced
-- [ ] tbs-bar-001 enhanced
+- [x] tbs-far-001 enhanced (Finance Lease - Journal Entry)
+- [x] tbs-far-002 enhanced (LCNRV - Numeric Entry)
+- [x] tbs-aud-001 enhanced (Audit Report - Document Review)
+- [x] tbs-far-003 enhanced (Revenue Recognition - Research)
+- [x] tbs-far-004 enhanced (Government Funds - Numeric)
+- [x] tbs-far-005 enhanced (Deferred Taxes - Numeric)
+- [x] tbs-aud-002 enhanced (Audit Sampling - Numeric)
+- [x] tbs-reg-001 enhanced (Business Contracts - Dropdown)
+- [x] tbs-tcp-001 enhanced (Tax Planning - Numeric)
+- [x] tbs-bar-001 enhanced (Ratio Analysis - Numeric)
 - [ ] Pilot validation complete
 
 ### Full Enhancement Phase
