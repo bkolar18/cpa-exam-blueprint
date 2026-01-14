@@ -86,7 +86,27 @@ Please prepare the appropriate journal entry to record this finance lease at inc
         amount: 210620,
         tolerance: 10,
       },
-      explanation: "The ROU asset is recorded at the present value of lease payments: $50,000 × 4.2124 = $210,620",
+      explanation: `**Correct Entry:** Dr. Right-of-Use Asset — $210,620
+
+**Calculation (per ASC 842-20-30-1):**
+Step 1: Identify the discount rate
+  → Use the implicit rate (6%) since it is known to the lessee. Per ASC 842-20-30-2, use the rate implicit in the lease if determinable; otherwise use the lessee's incremental borrowing rate.
+
+Step 2: Find the present value factor (from Exhibit 1)
+  → 5-period ordinary annuity at 6% = 4.2124
+
+Step 3: Calculate present value of lease payments
+  → $50,000 × 4.2124 = $210,620
+
+**Why Right-of-Use Asset (not Equipment or Prepaid Rent):**
+• Equipment: Only debited when the lessee purchases the asset outright. A finance lease transfers the right to USE the asset, not ownership of the asset itself.
+• Prepaid Rent: This was the pre-ASC 842 treatment. Under current GAAP, lessees recognize an ROU asset, not prepaid rent.
+• Lease Expense: Only used in operating leases for periodic expense recognition, not at inception.
+
+**Common Mistakes:**
+• Using the incremental borrowing rate (7%) when the implicit rate is known — would yield $205,010
+• Recording at fair value ($210,000) instead of PV of payments
+• Debiting Cash for the first payment (no payment at inception — payments are at year-end)`,
     },
     {
       id: "req-credit-entry",
@@ -101,7 +121,23 @@ Please prepare the appropriate journal entry to record this finance lease at inc
         amount: 210620,
         tolerance: 10,
       },
-      explanation: "The lease liability equals the present value of lease payments: $50,000 × 4.2124 = $210,620",
+      explanation: `**Correct Entry:** Cr. Lease Liability — $210,620
+
+**Authoritative Basis (ASC 842-20-30-1):**
+At lease commencement, a lessee shall recognize a lease liability measured at the present value of the lease payments not yet paid, discounted using the appropriate rate.
+
+**Why Lease Liability (not Notes Payable or Accounts Payable):**
+• Notes Payable: Used for formal borrowing arrangements (loans), not lease obligations. The lease liability account specifically tracks the lessee's obligation to make lease payments.
+• Accounts Payable: Used for trade payables due within normal operating cycles, not long-term lease obligations.
+• Cash: No cash changes hands at inception — payments begin at year-end.
+
+**Key Concept — Finance vs. Operating Lease at Inception:**
+Both lease types recognize an ROU asset and lease liability at inception. The difference is in subsequent accounting:
+• Finance lease: Amortize ROU asset + record interest expense (front-loaded expense pattern)
+• Operating lease: Single lease expense on straight-line basis
+
+**Amount Verification:**
+The lease liability equals the ROU asset at inception ($210,620) because there are no initial direct costs, prepayments, or incentives in this scenario.`,
     },
   ],
   journalAccounts: [
@@ -165,7 +201,28 @@ Required: Calculate the value at which each inventory item should be reported on
         value: 2500,
         tolerance: 0,
       },
-      explanation: "Product A: Cost ($25) < NRV ($30 - $3 = $27), so use Cost. 100 × $25 = $2,500",
+      explanation: `**Answer:** $2,500
+
+**Formula (per ASC 330-10-35-1B):**
+Inventory = Lower of Cost or Net Realizable Value (LCNRV)
+NRV = Selling Price − Cost to Complete and Sell
+
+**Calculation:**
+Step 1: Calculate NRV
+  NRV = $30 (selling price) − $3 (cost to sell) = $27
+
+Step 2: Compare Cost vs. NRV
+  Cost ($25) < NRV ($27)
+  → Use the LOWER value: Cost of $25
+
+Step 3: Calculate total value
+  100 units × $25 = $2,500
+
+**Why Use Cost Here:**
+Since cost ($25) is lower than NRV ($27), no write-down is needed. The inventory can be sold at a profit, so it's reported at its original cost.
+
+**Common Mistake:**
+Using selling price ($30) instead of NRV ($27). Always deduct costs to sell from selling price to get NRV.`,
       hint: "Compare cost to NRV (Selling Price - Cost to Sell)",
     },
     {
@@ -179,7 +236,31 @@ Required: Calculate the value at which each inventory item should be reported on
         value: 7200,
         tolerance: 0,
       },
-      explanation: "Product B: Cost ($40) > NRV ($38 - $2 = $36), so use NRV. 200 × $36 = $7,200",
+      explanation: `**Answer:** $7,200
+
+**This is the KEY item — requires a write-down!**
+
+**Calculation:**
+Step 1: Calculate NRV
+  NRV = $38 (selling price) − $2 (cost to sell) = $36
+
+Step 2: Compare Cost vs. NRV
+  Cost ($40) > NRV ($36)
+  → Use the LOWER value: NRV of $36
+
+Step 3: Calculate total value
+  200 units × $36 = $7,200
+
+**Why a Write-Down is Required (ASC 330-10-35-1B):**
+When NRV falls below cost, a write-down is REQUIRED. Product B will be sold at a loss ($36 NRV vs. $40 cost), so we must recognize this impairment immediately. This reflects the conservatism principle — recognize losses when probable.
+
+**Loss Recognized:**
+Per-unit loss = $40 − $36 = $4
+Total write-down = 200 × $4 = $800
+
+**Common Mistakes:**
+• Using cost ($40 × 200 = $8,000) — ignores the impairment
+• Using selling price ($38 × 200 = $7,600) — must deduct cost to sell`,
       hint: "Remember to use the lower of the two values",
     },
     {
@@ -193,7 +274,24 @@ Required: Calculate the value at which each inventory item should be reported on
         value: 9000,
         tolerance: 0,
       },
-      explanation: "Product C: Cost ($60) < NRV ($75 - $5 = $70), so use Cost. 150 × $60 = $9,000",
+      explanation: `**Answer:** $9,000
+
+**Calculation:**
+Step 1: Calculate NRV
+  NRV = $75 (selling price) − $5 (cost to sell) = $70
+
+Step 2: Compare Cost vs. NRV
+  Cost ($60) < NRV ($70)
+  → Use the LOWER value: Cost of $60
+
+Step 3: Calculate total value
+  150 units × $60 = $9,000
+
+**Why Use Cost Here:**
+Product C has the highest profit margin. Cost ($60) is well below NRV ($70), indicating healthy profitability. No write-down needed.
+
+**Note on LCNRV Application:**
+LCNRV is applied on an item-by-item basis (or by category if items are similar). You cannot offset Product B's loss against Product C's gain.`,
     },
     {
       id: "req-total",
@@ -206,7 +304,29 @@ Required: Calculate the value at which each inventory item should be reported on
         value: 18700,
         tolerance: 0,
       },
-      explanation: "Total = $2,500 + $7,200 + $9,000 = $18,700",
+      explanation: `**Answer:** $18,700
+
+**Summary of LCNRV Analysis:**
+
+| Item | Units | Cost | NRV | Use | Total |
+|------|-------|------|-----|-----|-------|
+| Product A | 100 | $25 | $27 | Cost | $2,500 |
+| Product B | 200 | $40 | $36 | NRV | $7,200 |
+| Product C | 150 | $60 | $70 | Cost | $9,000 |
+| **Total** | | | | | **$18,700** |
+
+**Without LCNRV (at Cost):**
+$2,500 + $8,000 + $9,000 = $19,500
+
+**Inventory Write-Down Required:**
+$19,500 − $18,700 = $800 (all from Product B)
+
+**Journal Entry for Write-Down:**
+Dr. Cost of Goods Sold (or Loss on Inventory Write-Down) $800
+  Cr. Inventory $800
+
+**Key Takeaway:**
+Only Product B required a write-down because it was the only item where cost exceeded NRV. The LCNRV rule ensures inventory is not carried above its recoverable amount.`,
     },
   ],
 };
@@ -270,7 +390,18 @@ Required: Review the highlighted items in the report and select the correct word
         type: "dropdown",
         correctOptionId: "opt-1a",
       },
-      explanation: "The standard phrase is 'accounting principles generally accepted in the United States of America'",
+      explanation: `**Correct Selection:** "accounting principles generally accepted in the United States of America"
+
+**Authoritative Basis (AU-C 700.A36):**
+The standard audit report must use this exact phrasing when referring to the applicable financial reporting framework. This is the required language per AICPA Professional Standards.
+
+**Why Other Options Are Wrong:**
+• "U.S. GAAP": While commonly used in practice, this abbreviation is NOT acceptable in formal audit reports. The full phrase must be used.
+• "International Financial Reporting Standards": ABC Company is a U.S. entity following U.S. GAAP, not IFRS. This would only be correct for entities that have adopted IFRS.
+• "generally accepted accounting standards": This phrase is incorrect — it's "accounting PRINCIPLES," not "accounting standards."
+
+**Exam Tip:**
+Document review TBS often test exact wording. The audit report has very specific language requirements — abbreviations and paraphrasing are not acceptable.`,
       dropdownOptions: [
         { id: "opt-1a", order: 1, text: "accounting principles generally accepted in the United States of America", isCorrect: true },
         { id: "opt-1b", order: 2, text: "U.S. GAAP", isCorrect: false },
@@ -288,7 +419,19 @@ Required: Review the highlighted items in the report and select the correct word
         type: "dropdown",
         correctOptionId: "opt-2a",
       },
-      explanation: "Non-public company audits follow 'auditing standards generally accepted in the United States of America'",
+      explanation: `**Correct Selection:** "auditing standards generally accepted in the United States of America"
+
+**Authoritative Basis (AU-C 700.35):**
+For non-issuers (non-public companies), the audit report states that the audit was conducted in accordance with "auditing standards generally accepted in the United States of America" (GAAS).
+
+**Why Other Options Are Wrong:**
+• "standards of the PCAOB": PCAOB standards apply to ISSUERS (public companies) only. ABC Company is described as a "non-public entity," so PCAOB standards don't apply.
+• "International Standards on Auditing": ISA is used internationally, not for U.S. GAAS audits. A U.S. auditor following ISA would need to specifically state this.
+• "AICPA audit standards": While the AICPA issues the standards, the report doesn't reference "AICPA" directly — it uses the full formal phrase.
+
+**Key Distinction:**
+• Non-issuers (private companies): "auditing standards generally accepted in the United States of America" (AU-C)
+• Issuers (SEC registrants): "standards of the PCAOB" (AS)`,
       dropdownOptions: [
         { id: "opt-2a", order: 1, text: "auditing standards generally accepted in the United States of America", isCorrect: true },
         { id: "opt-2b", order: 2, text: "standards of the PCAOB", isCorrect: false },
@@ -306,7 +449,24 @@ Required: Review the highlighted items in the report and select the correct word
         type: "dropdown",
         correctOptionId: "opt-3a",
       },
-      explanation: "Audits provide 'reasonable' assurance, not absolute assurance",
+      explanation: `**Correct Selection:** "reasonable"
+
+**Authoritative Basis (AU-C 200.A45):**
+An audit provides REASONABLE assurance, which is a high level of assurance but not absolute. Reasonable assurance is obtained when the auditor has obtained sufficient appropriate audit evidence to reduce audit risk to an acceptably low level.
+
+**Why Other Options Are Wrong:**
+• "absolute": Absolute assurance is NOT attainable due to inherent limitations of an audit:
+  (1) Use of testing/sampling rather than examining 100% of transactions
+  (2) Inherent limitations of internal control
+  (3) Audit evidence is persuasive, not conclusive
+  (4) Use of professional judgment
+• "limited": This describes REVIEW engagements (AR-C 90), not audits. Reviews provide negative assurance ("nothing came to our attention...")
+• "moderate": This is not a recognized assurance level in professional standards.
+
+**Assurance Level Hierarchy:**
+1. Reasonable assurance — Audit (highest)
+2. Limited assurance — Review
+3. No assurance — Compilation`,
       dropdownOptions: [
         { id: "opt-3a", order: 1, text: "reasonable", isCorrect: true },
         { id: "opt-3b", order: 2, text: "absolute", isCorrect: false },
@@ -324,7 +484,18 @@ Required: Review the highlighted items in the report and select the correct word
         type: "dropdown",
         correctOptionId: "opt-4a",
       },
-      explanation: "Management is responsible for statements free from 'material' misstatement",
+      explanation: `**Correct Selection:** "material"
+
+**Authoritative Basis (AU-C 200.06):**
+Management is responsible for financial statements that are free from MATERIAL misstatement. Materiality is defined as the magnitude of an omission or misstatement that could influence the economic decisions of users.
+
+**Why Other Options Are Wrong:**
+• "any": Financial statements are NOT required to be free from ANY misstatement. Immaterial errors are acceptable — requiring perfection would be impractical and cost-prohibitive.
+• "significant": While "significant" is used in some contexts, the audit report specifically uses "material" — these terms are not interchangeable.
+• "all": Same issue as "any" — this implies zero tolerance for misstatement, which is not the standard.
+
+**Key Concept — Materiality:**
+Materiality is determined by the auditor based on professional judgment, considering both quantitative (dollar amount) and qualitative factors (nature of the item, circumstances). What matters is whether the misstatement would influence user decisions.`,
       dropdownOptions: [
         { id: "opt-4a", order: 1, text: "material", isCorrect: true },
         { id: "opt-4b", order: 2, text: "any", isCorrect: false },
@@ -342,7 +513,18 @@ Required: Review the highlighted items in the report and select the correct word
         type: "dropdown",
         correctOptionId: "opt-5a",
       },
-      explanation: "The auditor's objective is to obtain 'reasonable' assurance",
+      explanation: `**Correct Selection:** "reasonable"
+
+**Authoritative Basis (AU-C 200.11):**
+The overall objectives of the auditor are to obtain REASONABLE assurance about whether the financial statements as a whole are free from material misstatement and to report on the financial statements in accordance with the auditor's findings.
+
+**Why Other Options Are Wrong:**
+• "absolute": As discussed in Dropdown 3, absolute assurance is unattainable. This is repeated in the Auditor's Responsibilities section to reinforce the concept.
+• "complete": Not a recognized assurance level. The auditor doesn't provide "complete" assurance — they provide reasonable assurance based on sufficient appropriate evidence.
+• "sufficient": "Sufficient" describes audit EVIDENCE, not assurance level. The auditor obtains "sufficient appropriate audit evidence" to achieve "reasonable assurance."
+
+**Exam Strategy:**
+Both Dropdown 3 and Dropdown 5 test the same concept (reasonable assurance). The CPA exam often repeats key concepts in different contexts within the same TBS to ensure you understand the principle, not just memorize answers.`,
       dropdownOptions: [
         { id: "opt-5a", order: 1, text: "reasonable", isCorrect: true },
         { id: "opt-5b", order: 2, text: "absolute", isCorrect: false },
@@ -416,7 +598,37 @@ Please advise on the proper revenue recognition treatment.`,
           { source: "FASB", topicCode: "ASC 606-10-25-20" },
         ],
       },
-      explanation: "ASC 606-10-25-19 through 25-22 describe the criteria for determining if a promised good or service is distinct. Specifically, 606-10-25-19 states that a good or service is distinct if both (a) the customer can benefit from the good or service on its own or together with other readily available resources, and (b) the promise to transfer the good or service is separately identifiable from other promises in the contract.",
+      explanation: `**Correct Citation:** ASC 606-10-25-19 (or 606-10-25-20)
+
+**How to Navigate to This Citation:**
+1. Start in ASC 606 (Revenue from Contracts with Customers)
+2. Go to 606-10 (Overall)
+3. Navigate to 25 (Recognition)
+4. Look for paragraphs 19-22 which address "Distinct Within the Context of the Contract"
+
+**What ASC 606-10-25-19 Says:**
+A good or service is **distinct** if BOTH criteria are met:
+**(a) Capable of being distinct:** The customer can benefit from the good or service either:
+    • On its own, OR
+    • Together with other readily available resources
+
+**(b) Distinct within the contract:** The promise to transfer the good or service is separately identifiable from other promises in the contract (ASC 606-10-25-21 provides indicators)
+
+**Applying This to Henderson Software:**
+• Software license: Likely distinct — customer can use software on its own
+• Implementation services: May NOT be distinct if highly customized (significantly modifies/customizes the software per 606-10-25-21(b))
+• Technical support: Likely distinct — support is available from other providers
+
+**Common Research Mistakes:**
+• Citing 606-10-25-1 (general recognition) instead of 25-19 (distinct criteria)
+• Citing 606-10-15 (scope) instead of 606-10-25 (recognition)
+• Not including the full ASC reference format
+
+**Exam Tip:**
+For research TBS, acceptable citation formats typically include:
+• "606-10-25-19" (abbreviated)
+• "ASC 606-10-25-19" (with ASC prefix)
+• "FASB ASC 606-10-25-19" (full formal)`,
       hint: "Look in ASC 606, Revenue from Contracts with Customers, specifically in the section about performance obligations",
     },
   ],
@@ -509,7 +721,25 @@ Please ensure closing entries properly update all fund balance accounts.`,
         value: 2850000,
         tolerance: 0,
       },
-      explanation: "Total Revenues = Property Taxes ($2,100,000) + Intergovernmental ($600,000) + Licenses & Permits ($150,000) = $2,850,000",
+      explanation: `**Answer:** $2,850,000
+
+**Calculation (from Exhibit 1 - Trial Balance):**
+| Revenue Source | Amount |
+|----------------|--------|
+| Property Taxes | $2,100,000 |
+| Intergovernmental | $600,000 |
+| Licenses & Permits | $150,000 |
+| **Total Revenues** | **$2,850,000** |
+
+**Government Accounting Context (GASB 54):**
+Under modified accrual accounting, revenues are recognized when they are both MEASURABLE and AVAILABLE. "Available" means collectible within the current period or soon enough thereafter to pay current liabilities (typically 60 days).
+
+**Note on Budgetary vs. Actual:**
+• Estimated Revenues (budget): $2,800,000
+• Actual Revenues: $2,850,000
+• Favorable variance: $50,000
+
+The actual revenues exceeded the budget, which is a positive result for the General Fund.`,
     },
     {
       id: "req-total-expenditures",
@@ -522,7 +752,27 @@ Please ensure closing entries properly update all fund balance accounts.`,
         value: 2750000,
         tolerance: 0,
       },
-      explanation: "Total Expenditures = General Government ($800,000) + Public Safety ($1,200,000) + Public Works ($550,000) + Capital Outlay ($200,000) = $2,750,000",
+      explanation: `**Answer:** $2,750,000
+
+**Calculation (from Exhibit 1 - Trial Balance):**
+| Expenditure Category | Amount |
+|---------------------|--------|
+| General Government | $800,000 |
+| Public Safety | $1,200,000 |
+| Public Works | $550,000 |
+| Capital Outlay | $200,000 |
+| **Total Expenditures** | **$2,750,000** |
+
+**Government Accounting Context:**
+Under modified accrual, expenditures (not expenses!) are recognized when the fund liability is incurred. In governmental funds, we use "expenditures" because we track current financial resources, not economic resources.
+
+**Budgetary Comparison:**
+• Appropriations (budget): $2,750,000
+• Actual Expenditures: $2,750,000
+• Variance: $0 (exactly on budget)
+
+**Common Mistake:**
+Don't confuse the budgetary accounts (Estimated Revenues/Appropriations) with actual revenues/expenditures. Budgetary accounts are closed separately.`,
     },
     {
       id: "req-net-change",
@@ -535,7 +785,26 @@ Please ensure closing entries properly update all fund balance accounts.`,
         value: 100000,
         tolerance: 0,
       },
-      explanation: "Net Change = Total Revenues ($2,850,000) - Total Expenditures ($2,750,000) = $100,000 increase",
+      explanation: `**Answer:** $100,000 increase
+
+**Calculation:**
+Net Change = Total Revenues − Total Expenditures
+Net Change = $2,850,000 − $2,750,000 = **$100,000**
+
+**What This Means:**
+The General Fund's total fund balance increased by $100,000 during the year. This represents an INFLOW of current financial resources — the city collected more than it spent.
+
+**Closing Entry (Operating Accounts):**
+Dr. Revenues - Property Taxes $2,100,000
+Dr. Revenues - Intergovernmental $600,000
+Dr. Revenues - Licenses & Permits $150,000
+  Cr. Expenditures - General Government $800,000
+  Cr. Expenditures - Public Safety $1,200,000
+  Cr. Expenditures - Public Works $550,000
+  Cr. Expenditures - Capital Outlay $200,000
+  Cr. Fund Balance - Unassigned $100,000
+
+**Note:** The budgetary accounts (Estimated Revenues, Appropriations, Budgetary Fund Balance) are closed in a separate entry.`,
     },
     {
       id: "req-fb-assigned",
@@ -548,7 +817,26 @@ Please ensure closing entries properly update all fund balance accounts.`,
         value: 75000,
         tolerance: 0,
       },
-      explanation: "Per the City Manager memo, Assigned fund balance is now $75,000 for next year's capital projects",
+      explanation: `**Answer:** $75,000
+
+**Source:** Exhibit 2 - City Manager Memo
+"Assigned: Next year's capital projects - $75,000 (increased from $25,000)"
+
+**Fund Balance Classifications (GASB 54):**
+**Assigned** fund balance represents amounts constrained by the government's INTENT to use for specific purposes. Unlike restricted or committed, assigned amounts:
+• Can be established by someone OTHER than the governing body (e.g., City Manager)
+• Do NOT require formal action to remove the constraint
+• Represent management's intended use of resources
+
+**Change Analysis:**
+Beginning Assigned: $25,000
+Ending Assigned: $75,000
+Increase: $50,000
+
+This $50,000 increase represents funds set aside for next year's capital projects. The increase came from Unassigned fund balance.
+
+**Common Mistake:**
+Reading the beginning balance ($25,000) from the trial balance instead of the updated ending balance ($75,000) from the memo.`,
     },
     {
       id: "req-fb-unassigned",
@@ -561,7 +849,43 @@ Please ensure closing entries properly update all fund balance accounts.`,
         value: 230000,
         tolerance: 0,
       },
-      explanation: "Beginning Unassigned ($180,000) + Net Change ($100,000) - Increase in Assigned ($50,000) = $230,000. The $50,000 moved from Unassigned to Assigned.",
+      explanation: `**Answer:** $230,000
+
+**This is the KEY calculation — worth 2 points!**
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Beginning Unassigned (Trial Balance) | $180,000 |
+| + Net Change in Fund Balance | +$100,000 |
+| − Transfer to Assigned ($75,000 − $25,000) | −$50,000 |
+| **Ending Unassigned** | **$230,000** |
+
+**Step-by-Step Logic:**
+1. Start with beginning Unassigned: $180,000
+2. Add the $100,000 surplus (revenues exceeded expenditures)
+3. Subtract $50,000 that was reclassified to Assigned per City Manager memo
+4. Result: $230,000
+
+**Fund Balance Hierarchy (GASB 54):**
+The hierarchy determines what happens to the $100,000 surplus:
+1. Nonspendable — No change (no prepaid/inventory)
+2. Restricted — No change ($50,000)
+3. Committed — No change ($100,000)
+4. Assigned — Increased by $50,000 to $75,000
+5. Unassigned — Absorbs remainder
+
+**Verification (Total Fund Balance):**
+| Category | Beginning | Ending |
+|----------|-----------|--------|
+| Nonspendable | $0 | $0 |
+| Restricted | $50,000 | $50,000 |
+| Committed | $100,000 | $100,000 |
+| Assigned | $25,000 | $75,000 |
+| Unassigned | $180,000 | $230,000 |
+| **Total** | **$355,000** | **$455,000** |
+
+Change: $455,000 − $355,000 = $100,000 ✓ (matches net change)`,
     },
   ],
 };
@@ -640,7 +964,28 @@ Review the schedule of temporary differences and select the correct classificati
         type: "dropdown",
         correctOptionId: "opt-dep-dta",
       },
-      explanation: "Book basis ($400,000) < Tax basis ($550,000) for an asset creates a deductible temporary difference = DTA. The company took more tax depreciation, so future tax deductions will be lower.",
+      explanation: `**Correct Selection:** Deferred Tax Asset
+
+**Analysis (per ASC 740-10-25):**
+• Asset type: Equipment (an ASSET)
+• Book basis: $400,000
+• Tax basis: $550,000
+• Book < Tax for an asset = **Deductible temporary difference = DTA**
+
+**What This Means:**
+The company has taken MORE depreciation for tax purposes (accelerated depreciation) than for book purposes. The tax basis ($550,000) is higher because less has been deducted for tax.
+
+In FUTURE years:
+• Tax depreciation will be LOWER (tax basis depletes faster initially)
+• Book depreciation will be HIGHER (remaining book basis spread over same period)
+• This will create future TAX DEDUCTIONS → DTA
+
+**Memory Aid:**
+"More tax depreciation NOW = Higher tax payments LATER"
+When you accelerate tax depreciation, you pay less tax now but more later. The DTA represents the future tax benefit from having already "used up" accelerated deductions.
+
+**Why Not DTL:**
+A DTL would mean higher FUTURE taxable income. But here, future taxable income will actually be LOWER because the tax basis has already been partially depleted through accelerated depreciation.`,
       dropdownOptions: [
         { id: "opt-dep-dta", order: 1, text: "Deferred Tax Asset", isCorrect: true },
         { id: "opt-dep-dtl", order: 2, text: "Deferred Tax Liability", isCorrect: false },
@@ -657,7 +1002,29 @@ Review the schedule of temporary differences and select the correct classificati
         type: "dropdown",
         correctOptionId: "opt-war-dta",
       },
-      explanation: "Warranty reserve is a liability. Book basis ($80,000) > Tax basis ($0) for a liability creates a deductible temporary difference = DTA. The expense is recognized for books but deductible for tax when paid.",
+      explanation: `**Correct Selection:** Deferred Tax Asset
+
+**Analysis:**
+• Account type: Warranty Reserve (a LIABILITY)
+• Book basis: $80,000 (expense recognized when estimated)
+• Tax basis: $0 (deductible only when paid)
+• Book > Tax for a LIABILITY = **Deductible temporary difference = DTA**
+
+**The Logic:**
+For GAAP, warranty expense is recognized when the sale occurs (matching principle). For TAX, warranty costs are deductible only when actually paid.
+
+**Future Tax Impact:**
+When warranty claims are paid in future years:
+• For books: No expense (already recognized)
+• For tax: DEDUCTION available
+• Result: Lower future taxable income → DTA
+
+**Common Confusion:**
+Students often confuse liability treatment. Remember:
+• For ASSETS: Book > Tax = DTL; Book < Tax = DTA
+• For LIABILITIES: Book > Tax = DTA; Book < Tax = DTL (opposite!)
+
+**Why?** A higher book liability means more expense was recognized for books than deducted for tax. That "extra" book expense creates future tax deductions.`,
       dropdownOptions: [
         { id: "opt-war-dta", order: 1, text: "Deferred Tax Asset", isCorrect: true },
         { id: "opt-war-dtl", order: 2, text: "Deferred Tax Liability", isCorrect: false },
@@ -674,7 +1041,28 @@ Review the schedule of temporary differences and select the correct classificati
         type: "dropdown",
         correctOptionId: "opt-pre-dtl",
       },
-      explanation: "Prepaid insurance is an asset. Book basis ($24,000) > Tax basis ($0) for an asset creates a taxable temporary difference = DTL. The company deducted the full amount for tax, but will expense for books in future.",
+      explanation: `**Correct Selection:** Deferred Tax Liability
+
+**Analysis:**
+• Account type: Prepaid Insurance (an ASSET)
+• Book basis: $24,000 (asset on books, will expense over time)
+• Tax basis: $0 (already deducted for tax when paid)
+• Book > Tax for an ASSET = **Taxable temporary difference = DTL**
+
+**The Logic:**
+For TAX purposes, insurance was deducted when paid (cash basis for certain items). For BOOK purposes, it's recorded as a prepaid asset and expensed over the coverage period.
+
+**Future Tax Impact:**
+When the prepaid is expensed for books:
+• For books: Insurance expense recognized
+• For tax: NO deduction (already taken)
+• Result: Higher future taxable income → DTL
+
+**This is the ONLY DTL in this problem (along with unearned revenue):**
+Most items in this TBS create DTAs because they represent expenses recognized for books before being deductible for tax. Prepaid insurance is the opposite — deducted for tax before being expensed for books.
+
+**Common Mistake:**
+Assuming all prepaid items create DTAs. Prepaids are ASSETS, and when book basis > tax basis for assets, you get a DTL.`,
       dropdownOptions: [
         { id: "opt-pre-dta", order: 1, text: "Deferred Tax Asset", isCorrect: false },
         { id: "opt-pre-dtl", order: 2, text: "Deferred Tax Liability", isCorrect: true },
@@ -692,7 +1080,29 @@ Review the schedule of temporary differences and select the correct classificati
         value: 118750,
         tolerance: 0,
       },
-      explanation: "DTA items: Depreciation ($150,000 × 25% = $37,500) + Warranty ($80,000 × 25% = $20,000) + Bad Debt ($45,000 × 25% = $11,250) + Pension ($200,000 × 25% = $50,000) = $118,750. Note: Unearned revenue creates a DTL, not DTA.",
+      explanation: `**Answer:** $118,750
+
+**DTA Items (Deductible Temporary Differences):**
+| Item | Difference | × Rate | = DTA |
+|------|------------|--------|-------|
+| Depreciation | $150,000 | 25% | $37,500 |
+| Warranty Reserve | $80,000 | 25% | $20,000 |
+| Bad Debt Allowance | $45,000 | 25% | $11,250 |
+| Pension Liability | $200,000 | 25% | $50,000 |
+| **Total DTA** | | | **$118,750** |
+
+**Why Each Creates a DTA:**
+• **Depreciation:** Book < Tax basis (asset) → Future tax deductions
+• **Warranty Reserve:** Book > Tax basis (liability) → Future tax deductions when paid
+• **Bad Debt Allowance:** Book > Tax basis (contra-asset treated like liability) → Deductible when written off
+• **Pension Liability:** Book > Tax basis (liability) → Deductible when contributions made
+
+**Items NOT Included:**
+• Prepaid Insurance → Creates DTL (not DTA)
+• Unearned Revenue → Creates DTL (not DTA)
+
+**ASC 740 Note:**
+All deferred taxes are classified as NONCURRENT on the balance sheet, regardless of when they reverse.`,
     },
     {
       id: "req-total-dtl",
@@ -705,7 +1115,40 @@ Review the schedule of temporary differences and select the correct classificati
         value: 16000,
         tolerance: 0,
       },
-      explanation: "DTL items: Prepaid Insurance ($24,000 × 25% = $6,000) - an asset with book basis > tax basis creates taxable temp diff. Unearned Revenue ($40,000 × 25% = $10,000) - a liability with book basis < tax basis (received but not yet revenue for books, already taxable) creates taxable temp diff. Total DTL = $6,000 + $10,000 = $16,000.",
+      explanation: `**Answer:** $16,000
+
+**DTL Items (Taxable Temporary Differences):**
+| Item | Difference | × Rate | = DTL |
+|------|------------|--------|-------|
+| Prepaid Insurance | $24,000 | 25% | $6,000 |
+| Unearned Revenue | $40,000 | 25% | $10,000 |
+| **Total DTL** | | | **$16,000** |
+
+**Why Each Creates a DTL:**
+
+**Prepaid Insurance ($6,000):**
+• Book basis ($24,000) > Tax basis ($0) for an ASSET
+• Tax deduction already taken; book expense in future
+• Future: Higher taxable income → DTL
+
+**Unearned Revenue ($10,000):**
+• Book basis ($60,000) < Tax basis ($100,000) for a LIABILITY
+• Cash received: $100,000 taxable for tax, only $60,000 unearned for books
+• The $40,000 difference was already taxed but not yet recognized as book revenue
+• Future: Book revenue recognition with NO additional tax → DTL
+
+Wait — why does unearned revenue create a DTL if $40,000 was already taxed?
+
+**Corrected Understanding:**
+The $40,000 difference means book has recognized MORE revenue than tax has taxed. Book basis < Tax basis for a liability means:
+• Book recognized revenue faster → higher book income NOW
+• Tax will recognize this revenue LATER → higher taxable income LATER
+• Result: DTL
+
+**Net Deferred Tax Position:**
+DTA: $118,750
+DTL: $16,000
+Net DTA: $102,750`,
     },
   ],
 };
