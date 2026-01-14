@@ -11,14 +11,14 @@ export default function Home() {
               Smart CPA Exam Prep — Without the High Price Tag
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-up animate-delay-100">
-              6,000+ practice questions, 500+ task-based simulations, progress tracking, and unlimited access with no expiration.
+              Free during beta • No credit card required
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-200">
               <Link
-                href="/study-plan"
+                href="/signup"
                 className="bg-white text-[var(--primary)] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
-                Build My Free CPA Study Plan
+                Create Free Account
               </Link>
               <Link
                 href="/about"
@@ -319,7 +319,7 @@ export default function Home() {
             Ready to Start Studying?
           </h2>
           <p className="text-gray-200 mb-8 text-lg">
-            Get access to 6,000+ practice questions and 500+ task-based simulations — free during beta.
+            Free during beta • No credit card required
           </p>
           <Link
             href="/signup"
