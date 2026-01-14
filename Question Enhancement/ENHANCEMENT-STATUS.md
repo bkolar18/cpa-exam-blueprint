@@ -33,7 +33,7 @@ All 58 exam TBS questions have been enhanced with:
 
 | Section | Total Questions | Enhanced | Remaining | Status |
 |---------|-----------------|----------|-----------|--------|
-| FAR | ~1,835 | ~266 | ~1,569 | In Progress |
+| FAR | ~1,835 | ~319 | ~1,516 | In Progress |
 | AUD | 1,015 | 0 | 1,015 | Pending |
 | REG | 1,345 | 0 | 1,345 | Pending |
 | TCP | 805 | 0 | 805 | Pending |
@@ -59,16 +59,17 @@ All 58 exam TBS questions have been enhanced with:
 6. Inventory questions (far-inv-002 through far-inv-030) - ~27 questions
 7. **PP&E questions (far-ppe-001 through far-ppe-030) - 30 questions** ✓ (Jan 14, 2026)
 8. **Intangibles questions (far-int-001 through far-int-025) - 25 questions** ✓ (Jan 14, 2026)
-9. **Investments questions started (far-inv-sec-001)** ✓ (Jan 14, 2026)
+9. **Investments questions (far-inv-sec-001 through far-inv-sec-025) - 25 questions** ✓ (Jan 14, 2026)
+10. **Leases questions (far-lease-001 through far-lease-003) - 3 questions** ✓ (previously enhanced)
 
 ---
 
 ## Where to Continue
 
 ### Next Questions to Enhance
-Continue with **Investments questions** starting at `far-inv-sec-002`:
-- `far-inv-sec-001` has been enhanced
-- Start from `far-inv-sec-002` (line ~4309 in far.ts)
+Continue with **Leases questions** starting at `far-lease-004`:
+- `far-lease-001` through `far-lease-003` have been enhanced
+- Start from `far-lease-004` (line ~4838 in far.ts)
 
 ### How to Find Next Batch
 Run grep to find questions needing enhancement:
