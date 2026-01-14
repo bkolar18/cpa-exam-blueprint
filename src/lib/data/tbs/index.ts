@@ -1,30 +1,42 @@
 // TBS Question Bank Index
 // Consolidates all Task-Based Simulation exports from section-specific files
+//
+// IMPORTANT: Two separate TBS banks exist:
+// 1. PRACTICE TBS (far-tbs, aud-tbs, etc.) - shown in TBS dashboard for drilling
+// 2. EXAM TBS (exam-tbs) - used ONLY in exam simulations, never shown in practice
+//
+// This separation ensures students see fresh questions during exam simulations
 
 // Export types
 export * from "./types";
 
-// Import section-specific TBS arrays
+// Import section-specific TBS arrays (PRACTICE bank)
 import { farTBSQuestions } from "./far-tbs";
 import { audTBSQuestions } from "./aud-tbs";
 import { regTBSQuestions } from "./reg-tbs";
 import { tcpTBSQuestions } from "./tcp-tbs";
 import { barTBSQuestions } from "./bar-tbs";
 import { iscTBSQuestions } from "./isc-tbs";
-import { sampleTBSQuestions } from "./sample-tbs";
 
-// Re-export section arrays for individual use
+// Import exam TBS bank (separate from practice)
+import { examTBSQuestions } from "./exam-tbs";
+
+// Re-export section arrays for individual use (PRACTICE bank)
 export { farTBSQuestions } from "./far-tbs";
 export { audTBSQuestions } from "./aud-tbs";
 export { regTBSQuestions } from "./reg-tbs";
 export { tcpTBSQuestions } from "./tcp-tbs";
 export { barTBSQuestions } from "./bar-tbs";
 export { iscTBSQuestions } from "./isc-tbs";
-export { sampleTBSQuestions } from "./sample-tbs";
 
-// Combined array of all TBS questions
-// Note: sampleTBSQuestions excluded as it contains duplicate IDs from original development
-// The section-specific files (far-tbs, aud-tbs, etc.) now contain the canonical questions
+// Re-export exam TBS bank and helpers
+export { examTBSQuestions, getExamTBSById, getExamTBSBySection } from "./exam-tbs";
+
+// Legacy alias for backward compatibility
+export { sampleTBSQuestions } from "./exam-tbs";
+
+// Combined array of all PRACTICE TBS questions (shown in TBS dashboard)
+// Note: examTBSQuestions are kept separate and not included here
 export const allTBSQuestions = [
   ...farTBSQuestions,
   ...audTBSQuestions,
@@ -83,11 +95,11 @@ export function getTBSBySection(
   }
 }
 
-// Helper function to get a TBS by ID from all TBS questions
-// Also checks sampleTBSQuestions for legacy IDs (tbs-*-001 through tbs-*-011)
+// Helper function to get a TBS by ID from ALL TBS banks
+// Searches practice TBS first, then exam TBS (for historical exam reviews)
 export function getTBSById(id: string) {
   return allTBSQuestions.find((tbs) => tbs.id === id)
-    || sampleTBSQuestions.find((tbs) => tbs.id === id);
+    || examTBSQuestions.find((tbs) => tbs.id === id);
 }
 
 // Helper function to get random TBS questions for practice

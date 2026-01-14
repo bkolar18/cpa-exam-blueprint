@@ -11,7 +11,7 @@ import {
  PracticeQuestion,
  SectionCode,
 } from"@/lib/data/practice-questions";
-import { getSampleTBSBySection } from"@/lib/data/tbs/sample-tbs";
+import { getExamTBSBySection } from"@/lib/data/tbs/exam-tbs";
 import { TBSQuestion, TBSAttempt } from"@/lib/data/tbs/types";
 import { TBSContainer } from"@/components/tbs";
 import type { SectionCode as DBSectionCode } from"@/lib/supabase/types";
@@ -366,7 +366,7 @@ export default function ExamSimulationSectionPage() {
 
  const hasQuestions = sectionHasQuestions(section);
  const totalAvailable = getQuestionsBySection(section).length;
- const availableTBS = getSampleTBSBySection(section);
+ const availableTBS = getExamTBSBySection(section);
  const hasTBS = availableTBS.length > 0;
 
  // Timer effect - only runs when exam is active (not paused)

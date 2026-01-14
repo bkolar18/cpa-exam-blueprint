@@ -2,14 +2,14 @@
 
 import { useState } from"react";
 import { TBSContainer } from"@/components/tbs";
-import { sampleTBSQuestions, getSampleTBSById } from"@/lib/data/tbs/sample-tbs";
+import { examTBSQuestions, getExamTBSById } from"@/lib/data/tbs/exam-tbs";
 import { TBSAttempt } from"@/lib/data/tbs/types";
 
 export default function TestTBSPage() {
  const [selectedTBS, setSelectedTBS] = useState<string | null>(null);
  const [lastAttempt, setLastAttempt] = useState<TBSAttempt | null>(null);
 
- const tbs = selectedTBS ? getSampleTBSById(selectedTBS) : null;
+ const tbs = selectedTBS ? getExamTBSById(selectedTBS) : null;
 
  const handleComplete = (attempt: TBSAttempt) => {
  console.log("TBS attempt completed:", attempt);
@@ -90,7 +90,7 @@ export default function TestTBSPage() {
 
  {/* TBS List */}
  <div className="space-y-4">
- {sampleTBSQuestions.map((tbsItem) => (
+ {examTBSQuestions.map((tbsItem) => (
  <button
  key={tbsItem.id}
  onClick={() => setSelectedTBS(tbsItem.id)}
