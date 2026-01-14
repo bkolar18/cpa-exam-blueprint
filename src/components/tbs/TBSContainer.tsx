@@ -1,23 +1,24 @@
 "use client";
 
-import { useState, useCallback, useEffect } from"react";
-import { TBSQuestion, TBSAttempt, UserResponse } from"@/lib/data/tbs/types";
-import TBSHeader from"./TBSHeader";
-import TBSInstructions from"./TBSInstructions";
-import SplitView from"./Tools/SplitView";
-import ExhibitPanel from"./ExhibitPanel/ExhibitPanel";
-import WorkArea from"./WorkArea/WorkArea";
-import TBSResults from"./Results/TBSResults";
-import Calculator from"./Tools/Calculator";
-import ScratchPad from"./Tools/ScratchPad";
-import FormulaSheet from"./Tools/FormulaSheet";
-import KeyboardShortcutsHelp from"./Tools/KeyboardShortcutsHelp";
-import ReviewScreen from"./Navigation/ReviewScreen";
-import useUndoRedo from"./Tools/useUndoRedo";
-import { useAuthOptional } from"@/components/auth/AuthProvider";
-import { createClient } from"@/lib/supabase/client";
-import FeedbackButton from"@/components/practice/FeedbackButton";
-import { checkAchievements } from"@/lib/gamification/checker";
+import { useState, useCallback, useEffect, useMemo } from "react";
+import { TBSQuestion, TBSAttempt, UserResponse } from "@/lib/data/tbs/types";
+import TBSHeader from "./TBSHeader";
+import TBSInstructions from "./TBSInstructions";
+import SplitView from "./Tools/SplitView";
+import ExhibitPanel from "./ExhibitPanel/ExhibitPanel";
+import WorkArea from "./WorkArea/WorkArea";
+import TBSResults from "./Results/TBSResults";
+import Calculator from "./Tools/Calculator";
+import ScratchPad from "./Tools/ScratchPad";
+import FormulaSheet from "./Tools/FormulaSheet";
+import KeyboardShortcutsHelp from "./Tools/KeyboardShortcutsHelp";
+import ReviewScreen from "./Navigation/ReviewScreen";
+import useUndoRedo from "./Tools/useUndoRedo";
+import { useAuthOptional } from "@/components/auth/AuthProvider";
+import { createClient } from "@/lib/supabase/client";
+import FeedbackButton from "@/components/practice/FeedbackButton";
+import { checkAchievements } from "@/lib/gamification/checker";
+import { NavigatorFloatingPanel, NavigatorFAB, type NavigatorQuestionContext } from "@/components/navigator";
 
 interface TBSContainerProps {
  tbs: TBSQuestion;
@@ -96,6 +97,8 @@ export default function TBSContainer({
  const [showScratchPad, setShowScratchPad] = useState(false);
  const [showFormulaSheet, setShowFormulaSheet] = useState(false);
  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+ // Navigator visibility (only in practice mode or review mode)
+ const [showNavigator, setShowNavigator] = useState(false);
  // Focus requirement (for jumping from review screen)
  const [focusRequirementId, setFocusRequirementId] = useState<string | null>(null);
 
@@ -121,6 +124,22 @@ export default function TBSContainer({
  feedback: string;
  }>;
  } | null>(null);
+
+ // Build Navigator question context for TBS
+ const navigatorContext: NavigatorQuestionContext = useMemo(() => ({
+  questionId: tbs.id,
+  questionText: `${tbs.title}\n\n${tbs.scenarioText}`,
+  topic: tbs.topic,
+  subtopic: tbs.subtopic,
+  section: tbs.section,
+  difficulty: tbs.difficulty,
+  questionType: 'tbs',
+  // In review mode or after submission, we can share more context
+  isCorrect: isSubmitted && gradingResult ? gradingResult.percentage >= 70 : undefined,
+ }), [tbs.id, tbs.title, tbs.scenarioText, tbs.topic, tbs.subtopic, tbs.section, tbs.difficulty, isSubmitted, gradingResult]);
+
+ // Navigator mode: practice during work, review after submission
+ const navigatorMode = isSubmitted ? 'review' : 'practice';
 
  // Timer effect - disabled in review mode
  useEffect(() => {
@@ -577,6 +596,7 @@ export default function TBSContainer({
  user_id: user.id,
  tbs_id: tbs.id,
  section: tbs.section, // Store section directly for easy querying
+ exam_history_id: null, // Standalone TBS practice, not part of exam simulation
  started_at: startTime.toISOString(),
  completed_at: completedAt.toISOString(),
  time_spent_seconds: elapsedSeconds,
@@ -962,6 +982,29 @@ export default function TBSContainer({
  onClose={() => setShowKeyboardHelp(false)}
  isPracticeMode={isPracticeMode}
  />
+
+ {/* Meridian Navigator - Only show in practice mode or review mode, not during exam simulations */}
+ {(isPracticeMode || reviewMode) && (
+ <>
+   <NavigatorFloatingPanel
+    isOpen={showNavigator}
+    onClose={() => setShowNavigator(false)}
+    section={tbs.section as "FAR" | "AUD" | "REG" | "TCP" | "BAR" | "ISC"}
+    topic={tbs.topic}
+    questionContext={navigatorContext}
+    mode={navigatorMode}
+    initialMessage={
+     isSubmitted
+      ? `I can help you understand your results on this simulation. You scored ${gradingResult?.percentage || 0}%. Would you like me to explain any specific concept or walk through a particular requirement?`
+      : "I'm here to help with this simulation. I'll give you hints and guidance without revealing answers. What concept or requirement would you like help understanding?"
+    }
+   />
+   <NavigatorFAB
+    isOpen={showNavigator}
+    onClick={() => setShowNavigator(!showNavigator)}
+   />
+ </>
+ )}
 
  {/* Confirmation Modal for Incomplete Submission */}
  {showSubmitConfirm && (

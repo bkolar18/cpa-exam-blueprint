@@ -14,6 +14,7 @@ import {
   getPrimeMeridianMilestone,
 } from "@/lib/scoring/prime-meridian";
 import PrimeMeridianCompass from "@/components/dashboard/PrimeMeridianCompass";
+import AIFeaturesCard from "@/components/dashboard/AIFeaturesCard";
 
 // Type for study session from Supabase
 interface StudySessionRow {
@@ -540,6 +541,9 @@ export default function DashboardPage() {
  color="yellow"
  />
  </div>
+
+ {/* AI-Powered Features Section */}
+ <AIFeaturesCard isBeta={true} />
 
  {/* Exam Preparation Summary */}
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">

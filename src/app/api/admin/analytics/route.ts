@@ -48,17 +48,20 @@ export async function GET(request: NextRequest) {
       sessionsResult,
       attemptsResult,
       streaksResult,
+      aiUsageResult,
     ] = await Promise.all([
       supabase.from('profiles').select('id, created_at, subscription_tier'),
       supabase.from('practice_sessions').select('id, user_id, section, created_at').gte('created_at', startDate.toISOString()),
       supabase.from('practice_attempts').select('id, user_id, question_id, section, topic, is_correct, created_at').gte('created_at', startDate.toISOString()),
       supabase.from('study_streaks').select('user_id, current_streak'),
+      supabase.from('ai_feature_usage').select('id, user_id, feature, period_type, period_key, usage_count, last_used_at, created_at').gte('created_at', startDate.toISOString()),
     ]);
 
     const profiles = profilesResult.data || [];
     const sessions = sessionsResult.data || [];
     const attempts = attemptsResult.data || [];
     const streaks = streaksResult.data || [];
+    const aiUsage = aiUsageResult.data || [];
 
     // Calculate signups over time
     const signupsByDate: Record<string, number> = {};
@@ -178,6 +181,65 @@ export async function GET(request: NextRequest) {
       count,
     }));
 
+    // =============================================
+    // AI Feature Usage Analytics
+    // =============================================
+
+    // AI usage by feature
+    const aiFeatureStats: Record<string, { totalUses: number; uniqueUsers: Set<string> }> = {};
+    aiUsage.forEach(u => {
+      if (!aiFeatureStats[u.feature]) {
+        aiFeatureStats[u.feature] = { totalUses: 0, uniqueUsers: new Set() };
+      }
+      aiFeatureStats[u.feature].totalUses += u.usage_count;
+      aiFeatureStats[u.feature].uniqueUsers.add(u.user_id);
+    });
+
+    const aiUsageByFeature = Object.entries(aiFeatureStats).map(([feature, stats]) => ({
+      feature,
+      totalUses: stats.totalUses,
+      uniqueUsers: stats.uniqueUsers.size,
+    })).sort((a, b) => b.totalUses - a.totalUses);
+
+    // AI usage over time (daily aggregation)
+    const aiUsageByDate: Record<string, { total: number; users: Set<string> }> = {};
+    aiUsage.forEach(u => {
+      const date = new Date(u.created_at).toISOString().split('T')[0];
+      if (!aiUsageByDate[date]) {
+        aiUsageByDate[date] = { total: 0, users: new Set() };
+      }
+      aiUsageByDate[date].total += u.usage_count;
+      aiUsageByDate[date].users.add(u.user_id);
+    });
+
+    const aiUsageOverTime = Object.entries(aiUsageByDate)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([date, stats]) => ({
+        date,
+        count: stats.total,
+        uniqueUsers: stats.users.size,
+      }));
+
+    // Total AI stats
+    const totalAiUses = aiUsage.reduce((acc, u) => acc + u.usage_count, 0);
+    const uniqueAiUsers = new Set(aiUsage.map(u => u.user_id)).size;
+
+    // AI feature display names mapping
+    const featureDisplayNames: Record<string, string> = {
+      navigator: 'Meridian Navigator',
+      study_guide: 'AI Study Guide',
+      flashcard: 'Flashcard Generator',
+      exam_debrief: 'Exam Debrief',
+      pre_exam_assessment: 'Pre-Exam Assessment',
+      weekly_email: 'Weekly Progress Email',
+    };
+
+    // Format AI usage by feature with display names
+    const aiUsageByFeatureFormatted = aiUsageByFeature.map(item => ({
+      ...item,
+      displayName: featureDisplayNames[item.feature] || item.feature,
+    }));
+
     return NextResponse.json({
       signupsOverTime,
       activeUsersOverTime,
@@ -187,6 +249,11 @@ export async function GET(request: NextRequest) {
       topTopics,
       peakUsageTimes,
       streakDistribution,
+      // AI Feature Analytics
+      aiUsageByFeature: aiUsageByFeatureFormatted,
+      aiUsageOverTime,
+      totalAiUses,
+      uniqueAiUsers,
     });
   } catch (error) {
     console.error('Error in analytics API:', error);

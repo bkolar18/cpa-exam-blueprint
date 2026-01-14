@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from"react";
-import { PracticeQuestion } from"@/lib/data/practice-questions";
-import { useAuth } from"@/components/auth/AuthProvider";
-import { createClient } from"@/lib/supabase/client";
-import FeedbackButton from"./FeedbackButton";
-import FlagQuestionButton from"./FlagQuestionButton";
+import { useState, useEffect, useRef } from "react";
+import { PracticeQuestion } from "@/lib/data/practice-questions";
+import { useAuth } from "@/components/auth/AuthProvider";
+import { createClient } from "@/lib/supabase/client";
+import FeedbackButton from "./FeedbackButton";
+import FlagQuestionButton from "./FlagQuestionButton";
+import { NavigatorChat, NavigatorToggleButton, type NavigatorQuestionContext } from "@/components/navigator";
 
 interface QuizQuestionProps {
  question: PracticeQuestion;
@@ -35,6 +36,9 @@ export default function QuizQuestion({
  const [savedNote, setSavedNote] = useState("");
  const [isSaving, setIsSaving] = useState(false);
  const [isLoadingNote, setIsLoadingNote] = useState(false);
+
+ // Navigator state
+ const [showNavigator, setShowNavigator] = useState(false);
 
  // Load existing note when question changes or after submission
  useEffect(() => {
@@ -69,7 +73,24 @@ export default function QuizQuestion({
  setNote("");
  setSavedNote("");
  setShowNotes(false);
+ setShowNavigator(false);
  }, [question.id]);
+
+ // Build Navigator question context
+ const navigatorContext: NavigatorQuestionContext = {
+  questionId: question.id,
+  questionText: question.question,
+  options: ['A', 'B', 'C', 'D'].map(opt => question.options[opt as 'A' | 'B' | 'C' | 'D']),
+  correctAnswer: hasSubmitted ? question.correctAnswer : undefined,
+  explanation: hasSubmitted ? question.explanation : undefined,
+  topic: question.topic,
+  subtopic: question.subtopic,
+  section: question.section,
+  difficulty: question.difficulty,
+  questionType: 'mcq',
+  userAnswer: hasSubmitted && selectedAnswer ? selectedAnswer : undefined,
+  isCorrect: hasSubmitted && selectedAnswer ? selectedAnswer === question.correctAnswer : undefined,
+ };
 
  const handleSaveNote = async () => {
  if (!user || !supabase || !note.trim()) return;
@@ -234,6 +255,35 @@ export default function QuizQuestion({
  ))}
  </div>
 
+ {/* Practice Mode Navigator (before submission) */}
+ {!hasSubmitted && (
+ <div className="mt-4 pt-4 border-t border-[var(--border)]">
+   <div className="flex items-center justify-between mb-2">
+    <span className="text-sm text-[var(--muted)]">Need a hint?</span>
+    <NavigatorToggleButton
+     isOpen={showNavigator}
+     onClick={() => setShowNavigator(!showNavigator)}
+     mode="practice"
+     size="sm"
+     compact
+    />
+   </div>
+   {showNavigator && (
+    <NavigatorChat
+     section={question.section}
+     topic={question.topic}
+     questionContext={navigatorContext}
+     mode="practice"
+     isOpen={showNavigator}
+     onClose={() => setShowNavigator(false)}
+     variant="inline"
+     initialMessage="I'm in hint mode - I'll guide you toward the answer without giving it away. What concept are you unsure about?"
+     placeholder="Ask for a hint..."
+    />
+   )}
+ </div>
+ )}
+
  {/* Submit / Next Button */}
  {!hasSubmitted ? (
  <button
@@ -354,20 +404,45 @@ export default function QuizQuestion({
  )}
 
  {/* Flag and Report Buttons */}
- <div className="mt-4 pt-4 border-t border-[var(--border)] dark:border-[var(--border)] flex justify-end gap-2">
- <FlagQuestionButton
- questionId={question.id}
- section={question.section}
- topic={question.topic}
- subtopic={question.subtopic}
- variant="default"
+ <div className="mt-4 pt-4 border-t border-[var(--border)] dark:border-[var(--border)] flex items-center justify-between gap-2">
+ <NavigatorToggleButton
+   isOpen={showNavigator}
+   onClick={() => setShowNavigator(!showNavigator)}
+   mode="review"
+   size="sm"
  />
- <FeedbackButton
- questionId={question.id}
- section={question.section}
- variant="default"
- />
+ <div className="flex gap-2">
+   <FlagQuestionButton
+   questionId={question.id}
+   section={question.section}
+   topic={question.topic}
+   subtopic={question.subtopic}
+   variant="default"
+   />
+   <FeedbackButton
+   questionId={question.id}
+   section={question.section}
+   variant="default"
+   />
  </div>
+ </div>
+
+ {/* Meridian Navigator - Review Mode */}
+ {showNavigator && (
+ <div className="mt-4">
+   <NavigatorChat
+    section={question.section}
+    topic={question.topic}
+    questionContext={navigatorContext}
+    mode="review"
+    isOpen={showNavigator}
+    onClose={() => setShowNavigator(false)}
+    variant="inline"
+    initialMessage={`I see you ${selectedAnswer === question.correctAnswer ? 'got this one right' : 'missed this one'}. I can help explain the concept further, walk through why each answer is right or wrong, or connect this to related topics. What would you like to explore?`}
+    placeholder="Ask about this question..."
+   />
+ </div>
+ )}
  </div>
  )}
  </div>
