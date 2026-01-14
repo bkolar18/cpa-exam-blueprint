@@ -1223,7 +1223,34 @@ Review the asset information and impairment analysis in the exhibits. Prepare an
         amount: 250000,
         tolerance: 0,
       },
-      explanation: "Step 1: Carrying amount ($1,200,000) > Undiscounted cash flows ($1,100,000), so asset is impaired. Step 2: Impairment loss = Carrying amount ($1,200,000) - Fair value ($950,000) = $250,000",
+      explanation: `**Correct Entry:** Dr. Impairment Loss — $250,000
+
+**Two-Step Impairment Test (ASC 360-10-35-17):**
+
+**Step 1: Recoverability Test (Pass/Fail)**
+Compare carrying amount to UNDISCOUNTED future cash flows:
+• Carrying amount: $1,200,000
+• Undiscounted cash flows: $1,100,000
+• Result: $1,200,000 > $1,100,000 → **IMPAIRED** (proceed to Step 2)
+
+**Step 2: Measurement (How Much)**
+Impairment Loss = Carrying Amount − Fair Value
+• Carrying amount: $1,200,000
+• Fair value: $950,000
+• **Impairment loss = $250,000**
+
+**Why Impairment Loss (not Depreciation Expense or Loss on Disposal):**
+• Depreciation Expense: Records systematic allocation over useful life, not a one-time write-down
+• Loss on Disposal: Only used when asset is actually sold or abandoned, not when held for use
+
+**Common Mistakes:**
+• Using discounted (not undiscounted) cash flows in Step 1 — would give different impairment threshold
+• Measuring loss as carrying amount minus undiscounted CFs ($100,000 wrong answer)
+• Confusing ASC 360 (long-lived assets) with ASC 350 (goodwill impairment)
+
+**Key Distinction:**
+Step 1 uses UNDISCOUNTED cash flows (easier threshold to pass)
+Step 2 uses FAIR VALUE (actual measurement of loss)`,
     },
     {
       id: "req-impairment-credit",
@@ -1238,7 +1265,36 @@ Review the asset information and impairment analysis in the exhibits. Prepare an
         amount: 250000,
         tolerance: 0,
       },
-      explanation: "The impairment loss reduces the carrying amount of the asset. Under ASC 360-10-35-17, there are two acceptable methods: (1) credit Equipment directly, or (2) credit Accumulated Depreciation. Both achieve the same net carrying value. The credit to Accumulated Depreciation is shown here as it maintains the original cost and depreciation records separately, which some entities prefer for asset tracking purposes.",
+      explanation: `**Correct Entry:** Cr. Accumulated Depreciation — Equipment — $250,000
+
+**Recording the Impairment (ASC 360-10-35-17):**
+The impairment loss reduces the asset's carrying amount from $1,200,000 to $950,000 (fair value).
+
+**Two Acceptable Methods:**
+| Method | Entry | New Carrying Amount |
+|--------|-------|---------------------|
+| Credit Asset directly | Cr. Equipment $250,000 | $2,000,000 - $800,000 - $250,000 = $950,000 |
+| Credit Accum. Depr. | Cr. Accum. Depr. $250,000 | $2,000,000 - $1,050,000 = $950,000 |
+
+Both methods result in the same $950,000 carrying amount.
+
+**Why Credit Accumulated Depreciation:**
+Many entities prefer this method because:
+• Preserves original cost on books (asset tracking)
+• Maintains depreciation history
+• Separates routine depreciation from impairment charges
+
+**Why NOT Other Credits:**
+• Equipment (direct credit): Acceptable alternative, but changes original cost record
+• Notes Payable or Cash: Impairment is a non-cash adjustment — no liability created or cash paid
+• Other Expense: Wrong account type — the debit side records the expense
+
+**Future Depreciation:**
+After impairment, depreciate the NEW carrying amount ($950,000) over the REMAINING useful life (6 years):
+• Annual depreciation = $950,000 ÷ 6 = $158,333
+
+**Exam Tip:**
+ASC 360 impairments are NOT reversible for assets held for use. Once written down, the new basis becomes the asset's cost for future depreciation.`,
     },
   ],
   journalAccounts: [
@@ -1323,7 +1379,26 @@ Review the intercompany transaction information in the exhibits and calculate th
         value: 500000,
         tolerance: 0,
       },
-      explanation: "Eliminate the full $500,000 intercompany sale (debit Sales, credit COGS)",
+      explanation: `**Answer:** $500,000
+
+**Consolidation Principle (ASC 810-10-45):**
+ALL intercompany transactions must be eliminated in consolidation. The consolidated entity cannot sell to itself.
+
+**Elimination Entry:**
+Dr. Sales Revenue     $500,000
+    Cr. Cost of Goods Sold     $500,000
+
+**Why Full Amount (Not Profit Only):**
+We eliminate the ENTIRE intercompany sale and purchase, not just the profit markup. This is because:
+• Parent's $500,000 sale to Sub must be removed from consolidated Sales
+• Sub's $500,000 purchase from Parent must be removed from consolidated COGS
+• Result: Consolidated statements show only external transactions
+
+**Common Mistake:**
+Eliminating only the profit ($150,000). The profit elimination is a SEPARATE entry for unrealized profit in ending inventory.
+
+**Exam Tip:**
+Intercompany sales/COGS elimination is always 100% — it doesn't matter what percentage the parent owns.`,
     },
     {
       id: "req-unrealized-profit",
@@ -1336,7 +1411,37 @@ Review the intercompany transaction information in the exhibits and calculate th
         value: 60000,
         tolerance: 0,
       },
-      explanation: "Gross profit rate = ($500,000 - $350,000) / $500,000 = 30%. Remaining inventory = 40% × $500,000 = $200,000. Unrealized profit = $200,000 × 30% = $60,000",
+      explanation: `**Answer:** $60,000
+
+**Three-Step Calculation:**
+
+**Step 1: Calculate Gross Profit Rate**
+Gross Profit Rate = (Sales Price − Cost) ÷ Sales Price
+= ($500,000 − $350,000) ÷ $500,000
+= $150,000 ÷ $500,000 = **30%**
+
+**Step 2: Determine Intercompany Inventory Remaining**
+Inventory remaining = 40% × $500,000 intercompany sale = **$200,000**
+(From Exhibit 1: "40% of intercompany inventory remains in Subsidiary's ending inventory")
+
+**Step 3: Calculate Unrealized Profit**
+Unrealized Profit = Remaining Inventory × Gross Profit Rate
+= $200,000 × 30% = **$60,000**
+
+**Why This Must Be Eliminated (ASC 810-10-45):**
+The $60,000 profit is "unrealized" because the inventory hasn't been sold to an outside party yet. From the consolidated entity's perspective, no profit has been earned — the goods are still on hand.
+
+**Elimination Entry:**
+Dr. Cost of Goods Sold     $60,000
+    Cr. Inventory               $60,000
+
+**Common Mistakes:**
+• Using cost ($350,000) instead of selling price ($500,000) as the base for remaining inventory
+• Forgetting to apply the 40% remaining percentage
+• Calculating profit rate as markup on cost (42.9%) instead of gross profit on sales (30%)
+
+**Downstream vs. Upstream:**
+This is a DOWNSTREAM sale (Parent → Subsidiary). Entire unrealized profit is eliminated against Parent. If upstream, profit elimination would be split: 80% to Parent, 20% to NCI.`,
     },
     {
       id: "req-interest-elim",
@@ -1349,7 +1454,37 @@ Review the intercompany transaction information in the exhibits and calculate th
         value: 6000,
         tolerance: 0,
       },
-      explanation: "Interest = $200,000 × 6% × 6/12 = $6,000. Eliminate interest income and expense (debit Interest Income, credit Interest Expense)",
+      explanation: `**Answer:** $6,000
+
+**Calculation:**
+Interest = Principal × Rate × Time
+= $200,000 × 6% × (6 months ÷ 12 months)
+= $200,000 × 0.06 × 0.5 = **$6,000**
+
+**From Exhibit 1:**
+"Subsidiary borrowed $200,000 from Parent at 6% on July 1, Year 1"
+• Loan period in Year 1: July 1 to December 31 = 6 months
+
+**Elimination Entry:**
+Dr. Interest Income      $6,000
+    Cr. Interest Expense      $6,000
+
+**Why Eliminate (ASC 810-10-45):**
+The consolidated entity cannot have interest income and expense with itself. From a consolidated perspective:
+• Parent's $12,000 interest income includes $6,000 intercompany
+• Subsidiary's $6,000 interest expense is 100% intercompany
+• After elimination: Only external interest remains
+
+**Also Eliminate the Loan Balance:**
+Dr. Note Payable to Parent     $200,000
+    Cr. Note Receivable from Sub     $200,000
+
+**Common Mistake:**
+Using 12 months instead of 6 months — would give $12,000 (wrong)
+
+**Verification from Exhibit 2:**
+• Parent shows Interest Income: $12,000 (includes intercompany)
+• Subsidiary shows Interest Expense: $6,000 (matches our calculation)`,
     },
     {
       id: "req-dividend-elim",
@@ -1362,7 +1497,33 @@ Review the intercompany transaction information in the exhibits and calculate th
         value: 64000,
         tolerance: 0,
       },
-      explanation: "Parent's share = 80% × $80,000 = $64,000 dividend to eliminate",
+      explanation: `**Answer:** $64,000
+
+**Calculation:**
+Parent's Share of Dividend = Ownership % × Total Dividend
+= 80% × $80,000 = **$64,000**
+
+**Verification from Exhibit 2:**
+Parent's Dividend Income: $64,000 ✓ (matches our calculation)
+
+**Elimination Entry:**
+Dr. Dividend Income          $64,000
+    Cr. Dividends Declared       $64,000
+
+**Why Eliminate Parent's Share (ASC 810-10-45):**
+From the consolidated perspective:
+• Subsidiary's dividend is just cash moving within the consolidated entity
+• Parent's dividend income is not "real" income to the consolidated group
+• Only dividends paid to OUTSIDE shareholders (NCI) represent actual distributions
+
+**Equity Method Consideration:**
+If Parent uses equity method for its investment:
+• Parent already recorded $64,000 as reduction of Investment in Subsidiary
+• The elimination removes the dividend from Parent's income
+• This prevents double-counting the subsidiary's earnings
+
+**Common Mistake:**
+Eliminating 100% of dividends. The NCI's share ($16,000) is NOT eliminated — it represents actual cash leaving the consolidated entity.`,
     },
     {
       id: "req-nci-dividend",
@@ -1375,7 +1536,35 @@ Review the intercompany transaction information in the exhibits and calculate th
         value: 16000,
         tolerance: 0,
       },
-      explanation: "Noncontrolling interest share = 20% × $80,000 = $16,000 dividend",
+      explanation: `**Answer:** $16,000
+
+**Calculation:**
+NCI Share of Dividend = NCI % × Total Dividend
+= 20% × $80,000 = **$16,000**
+
+**Why NCI Gets 20%:**
+• Parent owns 80% of Subsidiary
+• Noncontrolling interest (NCI) owns remaining 20%
+• Dividends are distributed proportionally to ALL shareholders
+
+**This Amount is NOT Eliminated:**
+Unlike Parent's share, the NCI's dividend:
+• Represents actual cash leaving the consolidated entity
+• Goes to shareholders outside the consolidated group
+• Is recorded as a reduction to NCI in the consolidated equity section
+
+**Presentation in Consolidated Statement of Changes in Equity:**
+Dividends declared to NCI reduce the NCI equity account, similar to how dividends to Parent's shareholders reduce retained earnings.
+
+**Key Distinction:**
+| Shareholder | Amount | Treatment |
+|-------------|--------|-----------|
+| Parent (80%) | $64,000 | Eliminated (intercompany) |
+| NCI (20%) | $16,000 | NOT eliminated (external) |
+| Total | $80,000 | |
+
+**Exam Tip:**
+Always calculate both Parent and NCI shares of dividends — the exam often tests both in the same problem.`,
     },
     {
       id: "req-consolidated-inventory",
@@ -1388,7 +1577,41 @@ Review the intercompany transaction information in the exhibits and calculate th
         value: 1040000,
         tolerance: 0,
       },
-      explanation: "Combined inventory = $680,000 + $420,000 = $1,100,000. Less unrealized profit = $1,100,000 - $60,000 = $1,040,000",
+      explanation: `**Answer:** $1,040,000
+
+**Two-Step Calculation:**
+
+**Step 1: Combine Inventory Balances**
+Parent Inventory + Subsidiary Inventory
+= $680,000 + $420,000 = **$1,100,000**
+
+**Step 2: Eliminate Unrealized Profit**
+Combined Inventory − Unrealized Profit
+= $1,100,000 − $60,000 = **$1,040,000**
+
+**Why Reduce by Unrealized Profit:**
+The Subsidiary's inventory includes goods purchased from Parent at $200,000 (40% of $500,000). But Parent sold these at a 30% markup, meaning $60,000 of that value is Parent's unrealized profit.
+
+From a consolidated perspective, inventory should be at the ORIGINAL cost to the consolidated entity ($350,000 × 40% = $140,000), not the intercompany transfer price ($200,000).
+
+**Elimination Entry Effect on Inventory:**
+Dr. Cost of Goods Sold     $60,000
+    Cr. Inventory               $60,000
+
+This removes the markup and restates inventory at cost to the consolidated entity.
+
+**Common Mistakes:**
+• Forgetting to eliminate unrealized profit (answer of $1,100,000)
+• Eliminating all intercompany inventory instead of just profit
+• Using wrong profit percentage (30% GP rate, not 42.9% markup)
+
+**Verification:**
+| Item | Amount |
+|------|--------|
+| Parent external inventory | $680,000 |
+| Sub external inventory | $220,000 |
+| Sub intercompany at cost | $140,000 |
+| **Total at cost** | **$1,040,000** |`,
     },
   ],
 };
@@ -1728,7 +1951,35 @@ Management believes these plans will adequately address the conditions you have 
         type: "dropdown",
         correctOptionId: "opt-sd-yes",
       },
-      explanation: "The combination of negative working capital, significant losses, negative operating cash flows, loan covenant concerns, and loss of major customer creates substantial doubt about going concern.",
+      explanation: `**Correct Selection:** Yes, substantial doubt exists
+
+**AU-C 570 Framework:**
+Substantial doubt exists when conditions and events, considered in the aggregate, indicate it is probable the entity will be unable to meet its obligations as they become due within one year of the financial statement date.
+
+**Conditions Present (from Exhibits):**
+| Indicator | Status | Significance |
+|-----------|--------|--------------|
+| Negative working capital | $(420,000) | Cannot pay current debts |
+| Net loss | $(850,000) | Significant deterioration |
+| Negative operating cash flow | $(290,000) | Core business unprofitable |
+| Loan covenant concerns | Lender worried | Potential default |
+| Major customer bankruptcy | 35% of revenue | Severe revenue loss |
+| Credit line nearly exhausted | $400K of $500K used | Limited borrowing capacity |
+
+**Why "Yes" is Correct:**
+Multiple SERIOUS indicators exist simultaneously:
+• Financial: Losses, negative cash flow, negative working capital
+• Operational: Lost major customer (35% of revenue!)
+• External: Lender expressing concern about covenants
+
+One or two minor indicators might not create substantial doubt. This combination clearly does.
+
+**Why Other Options Are Wrong:**
+• "No, conditions do not create substantial doubt": The evidence is overwhelming — this is not a close call
+• "Cannot determine": Sufficient information is provided; the auditor must make a judgment
+
+**Exam Tip:**
+Look for the PATTERN, not just individual indicators. Multiple concurrent problems = substantial doubt.`,
       dropdownOptions: [
         { id: "opt-sd-yes", order: 1, text: "Yes, substantial doubt exists", isCorrect: true },
         { id: "opt-sd-no", order: 2, text: "No, conditions do not create substantial doubt", isCorrect: false },
@@ -1745,7 +1996,43 @@ Management believes these plans will adequately address the conditions you have 
         type: "dropdown",
         correctOptionId: "opt-mp-no",
       },
-      explanation: "Management's plans are not adequately supported: asset sale has only non-binding LOI, new financing has no commitment, and customer replacement has no signed contracts. Only the cost reduction has been implemented. Plans are not probable of being implemented.",
+      explanation: `**Correct Selection:** No - Plans are not adequately supported
+
+**This is worth 2 points — careful analysis required!**
+
+**AU-C 570.13 Evaluation Criteria:**
+Management's plans are considered mitigating if:
+1. It is PROBABLE the plans can be implemented, AND
+2. It is PROBABLE the plans will mitigate the conditions
+
+**Analysis of Each Plan (from Exhibit 3):**
+
+| Plan | Status | Probability Assessment |
+|------|--------|----------------------|
+| Cost reduction ($400K) | ✓ Already implemented | **PROBABLE** — already done |
+| Asset sale ($750K) | Letter of intent (non-binding) | **NOT probable** — no commitment |
+| New financing ($1M) | "Positive discussions" only | **NOT probable** — no commitment |
+| New customers | Actively pursuing, no contracts | **NOT probable** — speculative |
+
+**Why Plans Are Inadequate:**
+• Only ONE plan is implemented (cost reduction)
+• $400,000 savings is insufficient to overcome:
+  - $(850,000) net loss
+  - Loss of 35% of revenue from bankrupt customer
+  - $(290,000) negative cash flow
+• Remaining plans have NO firm commitments
+
+**The "Probable" Standard:**
+• Non-binding LOI ≠ probable (seller can walk away)
+• "Positive discussions" ≠ probable (lender hasn't approved)
+• "Pursuing customers" ≠ probable (no signed contracts)
+
+**Why Other Options Are Wrong:**
+• "Yes, plans adequately mitigate": Only implemented plan is insufficient; others are speculative
+• "Partially mitigate but require monitoring": AU-C 570 doesn't have a partial standard — either alleviated or not
+
+**Exam Tip:**
+Focus on whether plans are COMMITTED vs. merely CONTEMPLATED. Intentions don't count — firm commitments do.`,
       dropdownOptions: [
         { id: "opt-mp-yes", order: 1, text: "Yes, plans adequately mitigate the doubt", isCorrect: false },
         { id: "opt-mp-no", order: 2, text: "No, plans are not adequately supported", isCorrect: true },
@@ -1762,7 +2049,36 @@ Management believes these plans will adequately address the conditions you have 
         type: "dropdown",
         correctOptionId: "opt-disc-full",
       },
-      explanation: "When substantial doubt exists that is not alleviated by management's plans, the company must disclose the conditions giving rise to substantial doubt and management's plans.",
+      explanation: `**Correct Selection:** Disclose conditions and management's plans
+
+**ASC 205-40 Disclosure Requirements:**
+When substantial doubt exists (whether or not alleviated), the entity must disclose:
+
+**Required Disclosures:**
+1. Principal conditions that raised substantial doubt
+2. Management's evaluation of the significance of those conditions
+3. Management's plans to mitigate the conditions
+4. If doubt is NOT alleviated: Statement that substantial doubt exists
+
+**What to Disclose in This Case:**
+• Negative working capital of $(420,000)
+• Net loss of $(850,000) and negative operating cash flows
+• Loan covenant concerns from principal lender
+• Loss of major customer (35% of revenue)
+• Description of cost reduction, asset sale, and financing plans
+
+**Why Other Options Are Wrong:**
+
+• **"No disclosure required":** Disclosure is ALWAYS required when substantial doubt exists, regardless of whether plans alleviate it.
+
+• **"Disclose only management's plans":** Must also disclose the CONDITIONS that created the doubt. Users need to understand both the problem and the proposed solution.
+
+**Exam Tip:**
+Going concern disclosures are required when:
+- Substantial doubt EXISTS (regardless of mitigation), OR
+- Substantial doubt WAS alleviated by management's plans
+
+The only time NO disclosure is needed is when conditions never raised substantial doubt in the first place.`,
       dropdownOptions: [
         { id: "opt-disc-none", order: 1, text: "No disclosure required", isCorrect: false },
         { id: "opt-disc-full", order: 2, text: "Disclose conditions and management's plans", isCorrect: true },
@@ -1779,7 +2095,46 @@ Management believes these plans will adequately address the conditions you have 
         type: "dropdown",
         correctOptionId: "opt-rep-eom",
       },
-      explanation: "When substantial doubt about going concern exists and is not alleviated, the auditor must include an emphasis-of-matter paragraph (or separate section) in the audit report, assuming adequate disclosure is made. An unmodified opinion can still be issued if disclosures are adequate.",
+      explanation: `**Correct Selection:** Unmodified opinion with emphasis-of-matter paragraph
+
+**This is worth 2 points — key exam concept!**
+
+**AU-C 570.24-25 Decision Tree:**
+
+| Situation | Disclosure | Report Modification |
+|-----------|------------|---------------------|
+| Doubt exists, NOT alleviated | Adequate | Unmodified + EOM |
+| Doubt exists, NOT alleviated | Inadequate | Qualified or Adverse |
+| Doubt alleviated by plans | Adequate | Unmodified (no EOM required) |
+
+**Our Situation:**
+• Substantial doubt: YES
+• Plans alleviate doubt: NO (plans not adequately supported)
+• Disclosure assumed: ADEQUATE
+• Result: **Unmodified opinion WITH Emphasis-of-Matter paragraph**
+
+**Why Unmodified (Not Qualified or Disclaimer):**
+Going concern is about the entity's SITUATION, not the financial statements' conformity with GAAP:
+• If disclosures are adequate → Financial statements FAIRLY present the situation
+• Fair presentation = unmodified opinion
+• EOM draws attention to the going concern but doesn't modify the opinion
+
+**Emphasis-of-Matter Paragraph Content:**
+The paragraph references the note disclosing:
+• Conditions creating substantial doubt
+• Management's plans
+• That substantial doubt exists about the entity's ability to continue as a going concern
+
+**Why Other Options Are Wrong:**
+
+• **"Unmodified with no modification":** EOM is REQUIRED when doubt is NOT alleviated (AU-C 570.24)
+
+• **"Qualified opinion":** Only if disclosures are INADEQUATE (not the case here)
+
+• **"Disclaimer of opinion":** Only if auditor cannot obtain sufficient evidence to conclude on going concern (extremely rare)
+
+**Memory Aid:**
+"Adequate disclosure + going concern doubt = Unmodified + EOM"`,
       dropdownOptions: [
         { id: "opt-rep-unmod", order: 1, text: "Unmodified opinion with no modification", isCorrect: false },
         { id: "opt-rep-eom", order: 2, text: "Unmodified opinion with emphasis-of-matter paragraph", isCorrect: true },
@@ -1840,7 +2195,37 @@ Review the situations described in the exhibits and determine whether each would
         type: "dropdown",
         correctOptionId: "opt-a-impaired",
       },
-      explanation: "Any direct financial interest in an audit client by a covered member or their immediate family impairs independence, regardless of materiality.",
+      explanation: `**Correct Selection:** Independence is impaired
+
+**AICPA Code ET 1.240.010 (Direct Financial Interests):**
+A covered member's independence is impaired if the covered member or their immediate family has ANY direct financial interest in the client.
+
+**Key Facts:**
+• Engagement partner's SPOUSE owns stock = Immediate family
+• Stock ownership = DIRECT financial interest
+• Amount ($3,500) and materiality (0.18% of net worth) are IRRELEVANT
+
+**The "Bright Line" Rule:**
+| Type of Interest | Materiality Matters? | Independence Impact |
+|------------------|---------------------|---------------------|
+| Direct financial interest | NO | Always impaired |
+| Indirect financial interest | YES | Depends on materiality |
+
+**Why Materiality Doesn't Apply:**
+Direct financial interests (owning shares directly) are prohibited REGARDLESS of:
+• Dollar amount ($3,500 vs. $3.5 million)
+• Percentage of portfolio
+• Significance to net worth
+
+**Why Other Options Are Wrong:**
+• "Independence is not impaired": Would only be true for INDIRECT interests below materiality threshold
+• "Impaired unless safeguards applied": No safeguard can cure a direct financial interest — must divest
+
+**Resolution Required:**
+The spouse must dispose of the stock BEFORE the engagement can be accepted.
+
+**Exam Tip:**
+"Spouse" = Immediate family = Same rules as the member themselves. Any direct financial interest = automatic impairment.`,
       dropdownOptions: [
         { id: "opt-a-impaired", order: 1, text: "Independence is impaired", isCorrect: true },
         { id: "opt-a-not-impaired", order: 2, text: "Independence is not impaired", isCorrect: false },
@@ -1857,7 +2242,41 @@ Review the situations described in the exhibits and determine whether each would
         type: "dropdown",
         correctOptionId: "opt-b-impaired",
       },
-      explanation: "A close relative (parent) in a key position at the client impairs independence for a covered member on the engagement. VP of Sales is typically considered a key position.",
+      explanation: `**Correct Selection:** Independence is impaired
+
+**AICPA Code ET 1.260.020 (Close Relatives in Key Positions):**
+Independence is impaired if a covered member has a close relative (parent, sibling, nondependent child) in a KEY POSITION at the client.
+
+**Analysis:**
+| Factor | Status |
+|--------|--------|
+| Staff member on engagement | Covered member ✓ |
+| Father = Close relative | Yes (parent) ✓ |
+| VP of Sales = Key position | Yes ✓ |
+
+**What is a "Key Position"?**
+A position with:
+• Primary responsibility for significant accounting functions, OR
+• Ability to exercise influence over the financial statements
+
+VP of Sales typically qualifies because:
+• Controls revenue recognition decisions
+• Influences sales returns and allowances
+• Affects accounts receivable estimates
+• May have side agreements affecting revenue
+
+**Why "Impaired" (Not "Apply Safeguards"):**
+For close relatives in KEY positions, no safeguards are sufficient. The ONLY solution is to:
+• Remove the staff member from the engagement team, OR
+• Not accept the engagement
+
+**Why Other Options Are Wrong:**
+• "Not impaired": Close relative + key position = automatic impairment
+• "Safeguards": Unlike non-key positions, safeguards cannot cure this
+
+**Exam Tip:**
+Close relative in KEY position = impaired
+Close relative in NON-key position = evaluate threats, apply safeguards`,
       dropdownOptions: [
         { id: "opt-b-impaired", order: 1, text: "Independence is impaired", isCorrect: true },
         { id: "opt-b-not-impaired", order: 2, text: "Independence is not impaired", isCorrect: false },
@@ -1874,7 +2293,44 @@ Review the situations described in the exhibits and determine whether each would
         type: "dropdown",
         correctOptionId: "opt-c-not-impaired",
       },
-      explanation: "Bookkeeping services do not impair independence for non-issuers if: (1) the client accepts responsibility, (2) the CPA doesn't make management decisions, and (3) all underlying transactions are authorized by management. Posting management-prepared entries and preparing statements from client's trial balance meets these criteria.",
+      explanation: `**Correct Selection:** Independence is not impaired
+
+**AICPA Code ET 1.295.040 (Bookkeeping Services):**
+Bookkeeping services DO NOT impair independence for NON-ISSUERS if certain safeguards are met.
+
+**Analysis of the Services:**
+| Service | Independence Concern? |
+|---------|----------------------|
+| Posting adjusting entries prepared by management | No — client-prepared entries |
+| Preparing monthly F/S from client's trial balance | No — ministerial function |
+
+**Required Safeguards (All Met Here):**
+1. ✓ Client takes responsibility for F/S (management prepared entries)
+2. ✓ CPA doesn't make management decisions (just posting/compiling)
+3. ✓ Underlying data authorized by management (entries from management)
+4. ✓ CPA doesn't perform management functions
+
+**Why NOT Impaired:**
+The CPA is performing MINISTERIAL tasks:
+• Posting = data entry function
+• Preparing statements from trial balance = compilation
+
+Management retains responsibility for:
+• What entries to record
+• Authorization of transactions
+• Approval of final statements
+
+**Key Distinction — Issuer vs. Non-Issuer:**
+| Entity Type | Bookkeeping Allowed? |
+|-------------|---------------------|
+| Non-issuer (AICPA) | Yes, with safeguards |
+| Issuer (SEC/PCAOB) | NO — prohibited |
+
+This is a NON-ISSUER → AICPA rules apply.
+
+**Why Other Options Are Wrong:**
+• "Impaired": Only if CPA makes management decisions or for issuers
+• "Safeguards required": Safeguards are built into the service description — already met`,
       dropdownOptions: [
         { id: "opt-c-impaired", order: 1, text: "Independence is impaired", isCorrect: false },
         { id: "opt-c-not-impaired", order: 2, text: "Independence is not impaired", isCorrect: true },
@@ -1891,7 +2347,44 @@ Review the situations described in the exhibits and determine whether each would
         type: "dropdown",
         correctOptionId: "opt-d-not-impaired",
       },
-      explanation: "Since the manager with the close relative relationship will have no involvement in the engagement, independence is not impaired. The threat is eliminated by removing the individual from the engagement team.",
+      explanation: `**Correct Selection:** Independence is not impaired
+
+**AICPA Conceptual Framework Approach:**
+When a threat to independence exists, evaluate whether safeguards can reduce the threat to an acceptable level.
+
+**Key Fact:**
+"The manager will have NO involvement in the audit engagement"
+
+**Analysis:**
+| Factor | Status |
+|--------|--------|
+| Manager's brother at client | Close relative |
+| IT Director = Key position | Yes (controls IT systems) |
+| Manager on engagement? | **NO — removed** |
+
+**Why NOT Impaired:**
+The threat is ELIMINATED because:
+• Manager is NOT a covered member for this engagement
+• Manager has no role in the audit
+• Manager cannot influence the audit opinion
+
+**The Safeguard Applied:**
+Removing the individual from the engagement team is a recognized safeguard that can eliminate the threat entirely.
+
+**Compare to Situation B:**
+| Situation | On Engagement? | Result |
+|-----------|----------------|--------|
+| B: Staff member (father VP) | YES | Impaired |
+| D: Manager (brother IT Dir) | NO | Not impaired |
+
+**Why Other Options Are Wrong:**
+• "Impaired": Only if the person with the relationship is ON the engagement
+• "Safeguards": The safeguard (removal from team) is already in place
+
+**Exam Tip:**
+The key question is always: "Is the person with the threatening relationship INVOLVED in the engagement?"
+- Yes → likely impaired
+- No → threat eliminated`,
       dropdownOptions: [
         { id: "opt-d-impaired", order: 1, text: "Independence is impaired", isCorrect: false },
         { id: "opt-d-not-impaired", order: 2, text: "Independence is not impaired", isCorrect: true },
@@ -1908,7 +2401,44 @@ Review the situations described in the exhibits and determine whether each would
         type: "dropdown",
         correctOptionId: "opt-e-not-impaired",
       },
-      explanation: "Tax compliance services, including recommending tax positions, do not impair independence for non-issuers as long as management reviews and approves the returns. This is a routine service for audit clients.",
+      explanation: `**Correct Selection:** Independence is not impaired
+
+**AICPA Code ET 1.295.110 (Tax Services):**
+Tax compliance services do NOT impair independence for non-issuers when proper safeguards are in place.
+
+**Analysis:**
+| Tax Service | Independence Impact |
+|-------------|---------------------|
+| Preparing federal/state returns | Permitted |
+| Recommending tax positions | Permitted |
+| Making uncertain tax position determinations | Permitted (with management approval) |
+
+**Why NOT Impaired:**
+Tax services are fundamentally different from bookkeeping because:
+• Tax returns are separate from financial statements
+• Client reviews and signs the returns
+• CPA is acting as tax advisor, not management
+
+**Required Safeguards (Assumed Met):**
+1. Management reviews and approves tax returns before filing
+2. Client takes responsibility for tax positions
+3. CPA informs client of results and basis for recommendations
+
+**What WOULD Impair Independence:**
+• Representing client in court (advocacy)
+• Signing return under power of attorney without client review
+• Making executive decisions about positions without management approval
+
+**Key Point — "Determining" vs. "Recommending":**
+The scenario says firm "determined" positions to take. This is acceptable if:
+• CPA recommends positions
+• Management evaluates and approves
+• Client takes responsibility
+
+**Exam Tip:**
+Tax services rarely impair independence for non-issuers. The exam typically tests scenarios where:
+- CPA acts as advocate in court, OR
+- CPA signs without client review`,
       dropdownOptions: [
         { id: "opt-e-impaired", order: 1, text: "Independence is impaired", isCorrect: false },
         { id: "opt-e-not-impaired", order: 2, text: "Independence is not impaired", isCorrect: true },
@@ -1986,7 +2516,40 @@ Review the audit findings in the exhibits and prepare the adjusting journal entr
         amount: 60000,
         tolerance: 0,
       },
-      explanation: "The sale should not be recognized until goods reach the customer (FOB destination = title passes on delivery). Debit Sales to reverse the premature revenue recognition.",
+      explanation: `**Correct Entry:** Dr. Sales Revenue — $60,000
+
+**Cutoff Error Analysis (ASC 606):**
+
+**Key Facts:**
+• Shipped December 30, Year 1
+• Terms: FOB DESTINATION
+• Arrived at customer: January 3, Year 2
+• Meridian recorded sale on December 30 — **ERROR**
+
+**FOB Destination = Title Passes on DELIVERY:**
+| Shipping Term | Title Passes When | Risk of Loss |
+|---------------|-------------------|--------------|
+| FOB Destination | Goods arrive at buyer | Seller bears transit risk |
+| FOB Shipping Point | Goods leave seller | Buyer bears transit risk |
+
+**Why Sale Was Recorded Too Early:**
+Control did NOT transfer until January 3 (when goods arrived).
+• December 30: Goods still in transit → No sale yet
+• January 3: Goods delivered → Now recognize sale (Year 2)
+
+**Adjusting Entry (Debit Side):**
+Dr. Sales Revenue     $60,000
+    (Reverse premature revenue recognition)
+
+**Why NOT Debit Inventory or COGS:**
+The question states Meridian uses a periodic system. In periodic inventory:
+• COGS is calculated at year-end, not entry by entry
+• The inventory physical count will capture goods in transit
+• A separate entry may be needed for inventory, but this requirement asks only about revenue
+
+**Common Mistakes:**
+• Debiting COGS (periodic system — COGS determined at year-end)
+• Using cost ($45,000) instead of sales price ($60,000)`,
     },
     {
       id: "req-finding1-credit",
@@ -2001,7 +2564,38 @@ Review the audit findings in the exhibits and prepare the adjusting journal entr
         amount: 60000,
         tolerance: 0,
       },
-      explanation: "Credit Accounts Receivable to reverse the receivable that should not have been recorded.",
+      explanation: `**Correct Entry:** Cr. Accounts Receivable — $60,000
+
+**Complete Revenue Reversal Entry:**
+Dr. Sales Revenue          $60,000
+    Cr. Accounts Receivable      $60,000
+
+**Why Credit Accounts Receivable:**
+When the sale was incorrectly recorded, Meridian debited A/R. Since the sale shouldn't have been recognized:
+• Sales → reversed (debited)
+• A/R → reversed (credited)
+
+**Why NOT Credit Inventory:**
+In a PERIODIC inventory system:
+• Inventory is not reduced when sales are recorded
+• Ending inventory is determined by physical count
+• COGS = Beginning Inventory + Purchases − Ending Inventory
+• The physical count will include goods in transit (FOB destination = still owned by seller)
+
+**Why NOT Credit Deferred Revenue:**
+• Deferred revenue would imply cash was received in advance
+• This was a credit sale — customer hasn't paid yet
+• The receivable should simply be removed
+
+**Year 2 Treatment:**
+In Year 2, when goods arrive (January 3):
+Dr. Accounts Receivable    $60,000
+    Cr. Sales Revenue           $60,000
+
+**Exam Tip:**
+Cutoff adjustments for FOB destination:
+- Shipped before year-end, ARRIVES after = Seller's inventory, no sale
+- FOB shipping point would be the opposite`,
     },
     {
       id: "req-finding2-debit",
@@ -2016,7 +2610,43 @@ Review the audit findings in the exhibits and prepare the adjusting journal entr
         amount: 15000,
         tolerance: 0,
       },
-      explanation: "Services were rendered in December, so the expense should be recorded in Year 1 per the matching principle.",
+      explanation: `**Correct Entry:** Dr. Consulting Expense — $15,000
+
+**Accrual Accounting (ASC 405):**
+Expenses are recognized when INCURRED, not when paid.
+
+**Key Facts:**
+• Invoice date: December 28, Year 1
+• Services rendered: December Year 1
+• Payment date: January 15, Year 2
+• Invoice NOT recorded — **ERROR**
+
+**Why Expense in Year 1:**
+| Question | Answer |
+|----------|--------|
+| When were services performed? | December Year 1 |
+| When was benefit received? | December Year 1 |
+| When should expense be recognized? | **Year 1** |
+
+The payment date is irrelevant for accrual accounting.
+
+**Adjusting Entry (Debit Side):**
+Dr. Consulting Expense     $15,000
+    (Record expense when incurred)
+
+**Why NOT Debit Prepaid Expense:**
+• Prepaid is for amounts paid BEFORE service is received
+• Here, service was received in December; no payment made yet
+• This is an ACCRUED expense, not a prepaid expense
+
+**Impact on Financial Statements:**
+• Income Statement: Expenses understated by $15,000
+• Balance Sheet: Liabilities understated by $15,000
+• Net effect: Both income and equity overstated
+
+**Common Mistakes:**
+• Recording expense when paid (cash basis error)
+• Using wrong expense account`,
     },
     {
       id: "req-finding2-credit",
@@ -2031,7 +2661,41 @@ Review the audit findings in the exhibits and prepare the adjusting journal entr
         amount: 15000,
         tolerance: 0,
       },
-      explanation: "Credit Accounts Payable to record the liability for services received but not yet paid.",
+      explanation: `**Correct Entry:** Cr. Accounts Payable — $15,000
+
+**Complete Accrual Entry:**
+Dr. Consulting Expense     $15,000
+    Cr. Accounts Payable         $15,000
+
+**Why Credit Accounts Payable:**
+• Invoice received = obligation to pay vendor
+• A/P captures amounts owed to suppliers for goods/services received
+• The invoice is dated December 28 and relates to December services
+
+**Why Accounts Payable (Not Accrued Expenses):**
+| Account | Use When |
+|---------|----------|
+| Accounts Payable | Invoice received from vendor |
+| Accrued Expenses | No invoice yet, estimate liability |
+
+Since the invoice was received, A/P is the correct account.
+
+**Note:** Some entities use "Accrued Expenses" for all uninvoiced liabilities and A/P only after invoice entry. Either is acceptable if applied consistently. The key is recognizing the LIABILITY.
+
+**When Entry Reverses (Year 2):**
+When paid on January 15, Year 2:
+Dr. Accounts Payable     $15,000
+    Cr. Cash                    $15,000
+
+**Summary of Finding 2:**
+| Error | Correction |
+|-------|------------|
+| Expense not recorded | Debit Consulting Expense |
+| Liability not recorded | Credit Accounts Payable |
+| Net income overstated | Entry reduces income |
+
+**Exam Tip:**
+Accrued expenses increase expenses (debit) and liabilities (credit). Always think: "What do we OWE?"`,
     },
   ],
   journalAccounts: [
@@ -2105,7 +2769,28 @@ Select the correct wording for each highlighted section of the report.`,
         type: "dropdown",
         correctOptionId: "opt-1-gaap",
       },
-      explanation: "The standard phrase for the financial reporting framework is 'accounting principles generally accepted in the United States of America'.",
+      explanation: `**Correct Selection:** Accounting principles generally accepted in the United States of America
+
+**AR-C 90 Review Report Requirements:**
+The management's responsibility paragraph must identify the applicable financial reporting framework.
+
+**Why This Wording:**
+• "Accounting principles generally accepted in the United States of America" is the STANDARD phrase for US GAAP
+• Must match the framework used to prepare the financial statements
+• Using different wording (like abbreviations) could create confusion
+
+**Why Other Options Are Wrong:**
+
+• **IFRS:** Would only be correct if the entity prepared statements under International standards. This is a US LLC using US GAAP.
+
+• **GAAS:** "Generally accepted auditing standards" relates to AUDIT procedures, not the financial reporting framework. This is about how statements are PREPARED, not how they're AUDITED.
+
+• **SSARS:** "Statements on Standards for Accounting and Review Services" is the professional standard the ACCOUNTANT follows, not the framework management uses for financial statements.
+
+**Exam Tip:**
+The report must clearly distinguish between:
+- Framework for F/S preparation: US GAAP, IFRS, tax basis, etc.
+- Standards for the engagement: SSARS (review), GAAS (audit)`,
       dropdownOptions: [
         { id: "opt-1-gaap", order: 1, text: "accounting principles generally accepted in the United States of America", isCorrect: true },
         { id: "opt-1-ifrs", order: 2, text: "International Financial Reporting Standards", isCorrect: false },
@@ -2123,7 +2808,38 @@ Select the correct wording for each highlighted section of the report.`,
         type: "dropdown",
         correctOptionId: "opt-2-limited",
       },
-      explanation: "A review engagement provides limited assurance (negative assurance), not reasonable assurance like an audit.",
+      explanation: `**Correct Selection:** Limited
+
+**AR-C 90.03 — Objective of a Review:**
+The objective is to obtain LIMITED assurance as a basis for reporting whether the accountant is aware of any material modifications.
+
+**Assurance Level Comparison:**
+| Engagement Type | Assurance Level | Expression |
+|-----------------|-----------------|------------|
+| Audit | Reasonable | Positive opinion |
+| Review | **Limited** | Negative conclusion |
+| Compilation | None | No assurance |
+
+**Why "Limited" (Not "Reasonable"):**
+• Review procedures are less extensive than audit procedures
+• Inquiry and analytical procedures only (no substantive testing)
+• Cannot obtain same level of certainty as an audit
+
+**Why "Negative" Assurance:**
+The conclusion states what the accountant is NOT aware of:
+"We are not aware of any material modifications..."
+vs. Audit positive assurance: "The statements present fairly..."
+
+**Why Other Options Are Wrong:**
+
+• **Reasonable:** That's audit assurance — requires substantive procedures, testing of controls, confirmations, etc.
+
+• **Absolute:** No engagement provides absolute assurance. Even audits only provide "reasonable" assurance due to inherent limitations.
+
+• **Moderate:** Not a recognized assurance level in professional standards.
+
+**Memory Aid:**
+"Review = Limited = Less = Negative conclusion"`,
       dropdownOptions: [
         { id: "opt-2-reasonable", order: 1, text: "reasonable", isCorrect: false },
         { id: "opt-2-limited", order: 2, text: "limited", isCorrect: true },
@@ -2141,7 +2857,41 @@ Select the correct wording for each highlighted section of the report.`,
         type: "dropdown",
         correctOptionId: "opt-3-analytical",
       },
-      explanation: "Review engagements primarily consist of inquiry and analytical procedures.",
+      explanation: `**Correct Selection:** Analytical procedures
+
+**AR-C 90.25 — Review Procedures:**
+A review of financial statements consists PRIMARILY of:
+1. Inquiry of management and others
+2. **Analytical procedures**
+
+**What Are Analytical Procedures?**
+• Comparisons of financial data (current vs. prior year)
+• Ratio analysis
+• Trend analysis
+• Comparison to industry benchmarks
+• Comparison to budgets or expectations
+
+**Why "Analytical Procedures":**
+The report states the review "includes primarily applying [BLANK] to financial data" — this directly describes analytical procedures (applying analysis to the numbers).
+
+**Why Other Options Are Wrong:**
+
+• **Substantive tests:** These are AUDIT procedures (testing transactions, balances). Reviews don't include substantive testing of underlying transactions.
+
+• **Tests of controls:** These evaluate internal control operating effectiveness — an AUDIT procedure, not performed in reviews.
+
+• **Inspection procedures:** Examination of documents/records is primarily an audit procedure. While accountants may look at documents during inquiry, "inspection" is not the primary procedure.
+
+**Key Distinction:**
+| Audit | Review |
+|-------|--------|
+| Substantive tests | Inquiry |
+| Tests of controls | Analytical procedures |
+| Confirmations | (No confirmations) |
+| Physical observation | (No physical procedures) |
+
+**Memory Aid:**
+Review = "I & A" = Inquiry and Analytical procedures`,
       dropdownOptions: [
         { id: "opt-3-substantive", order: 1, text: "substantive tests", isCorrect: false },
         { id: "opt-3-analytical", order: 2, text: "analytical procedures", isCorrect: true },
@@ -2159,7 +2909,38 @@ Select the correct wording for each highlighted section of the report.`,
         type: "dropdown",
         correctOptionId: "opt-4-opinion",
       },
-      explanation: "In a review engagement, the accountant does not express an opinion (that's for audits). The review report provides a conclusion with limited assurance.",
+      explanation: `**Correct Selection:** An audit opinion
+
+**This is a KEY exam concept!**
+
+**The Sentence in Context:**
+"A review...does not enable us to obtain assurance that we would become aware of all significant matters. Accordingly, we do not express [BLANK]."
+
+**Why "An Audit Opinion":**
+The report is explaining what a review DOESN'T provide:
+• We don't express an AUDIT OPINION
+• Because we didn't perform audit procedures
+• Only audits result in opinions
+
+**Review vs. Audit Report Language:**
+| Audit Report | Review Report |
+|--------------|---------------|
+| "In our OPINION..." | "We are not aware of..." |
+| Positive expression | Negative expression |
+| Express opinion | Express CONCLUSION |
+
+**Why Other Options Are Wrong:**
+
+• **"A conclusion":** Reviews DO express a conclusion! That's exactly what the final paragraph contains. The accountant is saying "we don't express an opinion" — but they DO express a conclusion.
+
+• **"Any assurance":** Reviews DO provide LIMITED assurance. The report specifically states procedures are performed to obtain limited assurance. The accountant is NOT saying "no assurance."
+
+• **"Findings":** "Findings" isn't standard terminology for either audits or reviews. Both express opinions/conclusions, not findings.
+
+**Memory Aid:**
+Audit = Opinion
+Review = Conclusion
+(NOT the same thing!)`,
       dropdownOptions: [
         { id: "opt-4-opinion", order: 1, text: "an audit opinion", isCorrect: true },
         { id: "opt-4-conclusion", order: 2, text: "a conclusion", isCorrect: false },
@@ -2506,7 +3287,39 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 107000,
         tolerance: 0,
       },
-      explanation: "Gross Income = Wages ($85,000) + Interest ($1,200) + Dividends ($2,500) + State refund ($800) + Alimony ($12,000, pre-2019 divorce) + Unemployment ($3,500) + Gambling ($2,000) = $107,000. Municipal bond interest is excluded from gross income.",
+      explanation: `**Answer:** $107,000
+
+**IRC §61 — Gross Income Calculation:**
+
+| Income Item | Amount | Included? | Reason |
+|-------------|--------|-----------|--------|
+| Wages (W-2) | $85,000 | ✓ Yes | Compensation for services |
+| Savings interest | $1,200 | ✓ Yes | Taxable interest |
+| Qualified dividends | $2,500 | ✓ Yes | Taxable (preferential rate) |
+| State tax refund | $800 | ✓ Yes | Tax benefit rule — itemized last year |
+| Alimony received | $12,000 | ✓ Yes | Pre-2019 divorce = taxable |
+| Unemployment | $3,500 | ✓ Yes | Always taxable |
+| Municipal bond interest | $1,500 | ✗ No | Tax-exempt per IRC §103 |
+| Gambling winnings | $2,000 | ✓ Yes | Taxable income |
+
+**Calculation:**
+$85,000 + $1,200 + $2,500 + $800 + $12,000 + $3,500 + $2,000 = **$107,000**
+
+**Key Exclusions:**
+• **Municipal bond interest ($1,500):** Excluded under IRC §103. This is the most tested exclusion on the CPA exam.
+
+**Key Inclusion — Alimony:**
+| Divorce Date | Alimony Treatment |
+|--------------|-------------------|
+| Before 2019 | Taxable to recipient, deductible by payer |
+| After 2018 | NOT taxable or deductible (property settlement) |
+
+Divorce finalized 2015 → OLD rules apply → **Taxable**
+
+**Common Mistakes:**
+• Excluding state refund (only excluded if didn't itemize last year)
+• Excluding alimony (check divorce date!)
+• Including municipal bond interest`,
     },
     {
       id: "req-ira-deduction",
@@ -2519,7 +3332,41 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 6500,
         tolerance: 0,
       },
-      explanation: "Maria can deduct the full $6,500 IRA contribution. While she has an employer plan, her income may be below the phase-out threshold, and the question states she is eligible.",
+      explanation: `**Answer:** $6,500
+
+**IRC §219 — Traditional IRA Deduction:**
+
+**Contribution Limits (2024):**
+| Age | Limit |
+|-----|-------|
+| Under 50 | $7,000 |
+| 50 and over | $8,000 (catch-up) |
+
+Maria is under 50 → Maximum contribution = $7,000
+Maria contributed $6,500 → Full amount deductible per question
+
+**Active Participant Phase-Out (Single, 2024):**
+| MAGI | Deduction |
+|------|-----------|
+| Below $77,000 | Full deduction |
+| $77,000 - $87,000 | Partial deduction |
+| Above $87,000 | No deduction |
+
+**Note:** The question states Maria is "eligible," meaning we assume she's within the deduction limits.
+
+**Why Full Amount:**
+• Contributed $6,500
+• Under contribution limit
+• Question states eligible (no phase-out)
+• **Full $6,500 is deductible**
+
+**Common Mistakes:**
+• Using the catch-up limit when taxpayer is under 50
+• Not checking if covered by employer plan (affects phase-out)
+• Confusing Traditional IRA (deductible) with Roth IRA (not deductible)
+
+**Exam Tip:**
+IRA contribution = above-the-line deduction (adjustment to income, available even if not itemizing)`,
     },
     {
       id: "req-student-loan",
@@ -2532,7 +3379,43 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 2200,
         tolerance: 0,
       },
-      explanation: "Student loan interest is deductible up to $2,500. Maria paid $2,200, which is fully deductible since the question states it is fully deductible.",
+      explanation: `**Answer:** $2,200
+
+**IRC §221 — Student Loan Interest Deduction:**
+
+**Deduction Limit:** Lesser of:
+• Amount paid, OR
+• $2,500 maximum
+
+Maria paid $2,200 < $2,500 → **Full amount deductible**
+
+**MAGI Phase-Out (Single, 2024):**
+| MAGI | Deduction |
+|------|-----------|
+| Below $75,000 | Full deduction |
+| $75,000 - $90,000 | Partial deduction |
+| Above $90,000 | No deduction |
+
+**Per the question:** "Assume fully deductible" → No phase-out applies
+
+**Requirements for Deduction:**
+✓ Paid interest on qualified education loan
+✓ Legally obligated to pay
+✓ Not claimed as dependent on another return
+✓ Filing status: Single, MFS (if lived apart), HOH, QSS, or MFJ
+
+**Key Points:**
+• Above-the-line deduction (no need to itemize)
+• Interest only — not principal payments
+• Qualified expenses: tuition, room & board, books, etc.
+
+**Common Mistakes:**
+• Using $2,500 when amount paid is less
+• Forgetting MAGI phase-out for high earners
+• Including principal payments (only interest is deductible)
+
+**Exam Tip:**
+Student loan interest is always an ADJUSTMENT (above-the-line), not an itemized deduction.`,
     },
     {
       id: "req-total-adjustments",
@@ -2545,7 +3428,42 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 12550,
         tolerance: 0,
       },
-      explanation: "Total adjustments = IRA ($6,500) + Student loan interest ($2,200) + HSA ($3,850) = $12,550",
+      explanation: `**Answer:** $12,550
+
+**IRC §62 — Adjustments to Income ("Above-the-Line" Deductions):**
+
+| Adjustment | Amount | Reference |
+|------------|--------|-----------|
+| Traditional IRA | $6,500 | IRC §219 |
+| Student loan interest | $2,200 | IRC §221 |
+| HSA contribution | $3,850 | IRC §223 |
+| **Total** | **$12,550** | |
+
+**Calculation:**
+$6,500 + $2,200 + $3,850 = **$12,550**
+
+**HSA Contribution (IRC §223):**
+• Maximum for self-only coverage (2024): $4,150
+• Maria contributed $3,850 → Below limit, fully deductible
+• Requirement: Must have qualifying HDHP (High Deductible Health Plan) ✓
+
+**Why These Are "Adjustments" (Not Itemized Deductions):**
+• Reduce AGI directly
+• Available even if using standard deduction
+• Appear on Schedule 1 (Form 1040)
+• Sometimes called "above-the-line" deductions
+
+**Items NOT Included:**
+• Self-employment tax: $0 (Maria has no SE income)
+• Educator expenses: $0 (none incurred)
+
+**Common Mistakes:**
+• Including itemized deductions (medical, SALT) — those are below-the-line
+• Forgetting HSA (frequently tested!)
+• Double-counting items
+
+**Exam Tip:**
+Key adjustments to memorize: IRA, HSA, student loan interest, self-employment tax (1/2), alimony paid (pre-2019), educator expenses ($300)`,
     },
     {
       id: "req-agi",
@@ -2558,7 +3476,52 @@ export const regAGICalculationTBS: TBSQuestion = {
         value: 94450,
         tolerance: 0,
       },
-      explanation: "AGI = Gross Income ($107,000) - Total Adjustments ($12,550) = $94,450",
+      explanation: `**Answer:** $94,450
+
+**AGI Formula:**
+Adjusted Gross Income = Gross Income − Adjustments to Income
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Gross Income | $107,000 |
+| Less: Adjustments | ($12,550) |
+| **AGI** | **$94,450** |
+
+$107,000 − $12,550 = **$94,450**
+
+**Why AGI Matters:**
+AGI is the "gatekeeper" for many tax benefits:
+• Medical expense threshold (7.5% of AGI)
+• Miscellaneous deduction thresholds
+• Phase-outs for credits and deductions
+• Roth IRA contribution eligibility
+• Student loan interest phase-out
+
+**The AGI "Waterfall":**
+\`\`\`
+Gross Income (all sources)
+- Adjustments to Income
+= Adjusted Gross Income (AGI)
+- Standard Deduction OR Itemized Deductions
+= Taxable Income
+\`\`\`
+
+**Verification:**
+| Item | Amount |
+|------|--------|
+| Wages | $85,000 |
+| Interest | $1,200 |
+| Dividends | $2,500 |
+| State refund | $800 |
+| Alimony | $12,000 |
+| Unemployment | $3,500 |
+| Gambling | $2,000 |
+| **Gross Income** | **$107,000** |
+| Less: IRA | ($6,500) |
+| Less: Student loan | ($2,200) |
+| Less: HSA | ($3,850) |
+| **AGI** | **$94,450** |`,
     },
   ],
 };
@@ -2629,7 +3592,35 @@ David has no capital loss limitation due to insufficient income - the full carry
         value: -6000,
         tolerance: 0,
       },
-      explanation: "STCG: Gamma ($6,000 - $9,000 = -$3,000) + Echo ($4,500 - $7,500 = -$3,000) = -$6,000 net short-term loss",
+      explanation: `**Answer:** $(6,000) — Net Short-Term Capital Loss
+
+**Holding Period Rule (IRC §1222):**
+| Holding Period | Classification |
+|----------------|----------------|
+| ≤ 1 year | Short-term |
+| > 1 year | Long-term |
+
+**Short-Term Transactions (from Exhibit 1):**
+
+| Stock | Purchase | Sale | Held | Proceeds | Basis | Gain/(Loss) |
+|-------|----------|------|------|----------|-------|-------------|
+| Gamma | 11/10/Yr1 | 12/05/Yr1 | 25 days | $6,000 | $9,000 | **(3,000)** |
+| Echo | 09/15/Yr1 | 11/22/Yr1 | 68 days | $4,500 | $7,500 | **(3,000)** |
+
+**Calculation:**
+Gamma: $6,000 − $9,000 = $(3,000) loss
+Echo: $4,500 − $7,500 = $(3,000) loss
+**Net STCL = $(6,000)**
+
+**Why These Are Short-Term:**
+Both stocks purchased and sold within same year → clearly ≤ 1 year holding.
+
+**Common Mistakes:**
+• Confusing which stocks are ST vs. LT (check dates carefully!)
+• Subtracting wrong direction (proceeds − basis, not basis − proceeds)
+
+**Exam Tip:**
+Count holding period from day AFTER purchase to day of sale. Over 1 year = long-term.`,
     },
     {
       id: "req-ltcg",
@@ -2642,7 +3633,31 @@ David has no capital loss limitation due to insufficient income - the full carry
         value: 8000,
         tolerance: 0,
       },
-      explanation: "LTCG: Alpha ($15,000 - $10,000 = $5,000) + Beta ($8,000 - $12,000 = -$4,000) + Delta ($25,000 - $18,000 = $7,000) = $8,000 net long-term gain",
+      explanation: `**Answer:** $8,000 — Net Long-Term Capital Gain (Before Carryover)
+
+**Long-Term Transactions (from Exhibit 1):**
+
+| Stock | Purchase | Sale | Held | Proceeds | Basis | Gain/(Loss) |
+|-------|----------|------|------|----------|-------|-------------|
+| Alpha | 03/15/Yr0 | 02/20/Yr1 | 11+ mo | $15,000 | $10,000 | **$5,000** |
+| Beta | 06/01/Yr0 | 08/15/Yr1 | 14+ mo | $8,000 | $12,000 | **(4,000)** |
+| Delta | 01/20/Yr0 | 07/30/Yr1 | 18+ mo | $25,000 | $18,000 | **$7,000** |
+
+**Calculation:**
+Alpha: $15,000 − $10,000 = $5,000 gain
+Beta: $8,000 − $12,000 = $(4,000) loss
+Delta: $25,000 − $18,000 = $7,000 gain
+**Net LTCG = $8,000** (before carryover)
+
+**Why These Are Long-Term:**
+• Alpha: Mar Yr0 → Feb Yr1 = 11 months, but crosses the 1-year mark
+• Beta: Jun Yr0 → Aug Yr1 = 14 months > 1 year ✓
+• Delta: Jan Yr0 → Jul Yr1 = 18 months > 1 year ✓
+
+**Note:** This is BEFORE applying the $2,000 LTCL carryover from Year 0. The next requirement applies the carryover.
+
+**Common Mistake:**
+Including the carryover in this calculation (it's asked separately).`,
     },
     {
       id: "req-ltcg-after-carryover",
@@ -2655,7 +3670,35 @@ David has no capital loss limitation due to insufficient income - the full carry
         value: 6000,
         tolerance: 0,
       },
-      explanation: "Net LTCG after carryover = $8,000 - $2,000 (LTCL carryover) = $6,000",
+      explanation: `**Answer:** $6,000 — Net Long-Term Capital Gain After Carryover
+
+**Capital Loss Carryover Rules (IRC §1212):**
+
+**From Exhibit 2 (Prior Year):**
+• LTCL carryover from Year 0: $2,000
+• STCL carryover: $0
+
+**Application:**
+| Item | Amount |
+|------|--------|
+| Net LTCG (before carryover) | $8,000 |
+| Less: LTCL carryover | $(2,000) |
+| **Net LTCG (after carryover)** | **$6,000** |
+
+**Carryover Character Preservation:**
+Capital loss carryovers retain their character:
+• LTCL carryover → applied against LTCG first
+• STCL carryover → applied against STCG first
+
+**Why Apply Carryover to LTCG:**
+The $2,000 carryover was a LONG-TERM loss, so it offsets LONG-TERM gains first (preserving the tax rate advantage).
+
+**Carryover Period:**
+• Individual taxpayers: Capital losses carry forward INDEFINITELY
+• Corporations: Capital losses carry back 3 years, forward 5 years
+
+**Common Mistake:**
+Applying LTCL carryover against STCG first — wrong order. Apply like-kind first (LT to LT).`,
     },
     {
       id: "req-net-capital",
@@ -2668,7 +3711,43 @@ David has no capital loss limitation due to insufficient income - the full carry
         value: 0,
         tolerance: 0,
       },
-      explanation: "Net STCL (-$6,000) offsets Net LTCG ($6,000) = $0 net capital gain/loss",
+      explanation: `**Answer:** $0 — Net Capital Gain/Loss
+
+**Capital Gain/Loss Netting (IRC §1222):**
+
+**Step-by-Step Netting:**
+| Category | Amount |
+|----------|--------|
+| Net STCL | $(6,000) |
+| Net LTCG (after carryover) | $6,000 |
+| **Overall Net** | **$0** |
+
+$(6,000) + $6,000 = **$0**
+
+**The Netting Process:**
+1. First, net within each category (ST vs. ST, LT vs. LT)
+2. Then, net across categories if one is a gain and one is a loss
+3. Result is overall net capital gain or loss
+
+**Our Situation:**
+• Net STCL $(6,000) — from Gamma and Echo sales
+• Net LTCG $6,000 — from Alpha, Beta, Delta after carryover
+• Cross-netting: STCL offsets LTCG exactly
+
+**Tax Implications:**
+Since overall net is $0:
+• No capital gain to report
+• No capital loss to deduct against ordinary income
+• No capital loss carryover to next year
+
+**Why This Result Is "Neutral":**
+David's short-term losses exactly offset his long-term gains. While he "lost" on short-term positions, those losses sheltered his long-term gains from tax.
+
+**Alternative Scenarios:**
+| Net Result | Tax Treatment |
+|------------|---------------|
+| Net gain | Report as capital gain (LT at preferential rates) |
+| Net loss | Deduct up to $3,000 vs. ordinary income; carry forward excess |`,
     },
     {
       id: "req-deductible",
@@ -2681,7 +3760,42 @@ David has no capital loss limitation due to insufficient income - the full carry
         value: 0,
         tolerance: 0,
       },
-      explanation: "Since the overall result is $0 (gains offset losses), there is no net capital loss to deduct against ordinary income (max $3,000).",
+      explanation: `**Answer:** $0 — Capital Loss Deductible Against Ordinary Income
+
+**IRC §1211(b) — Capital Loss Deduction Limit:**
+
+**The Rule:**
+Individual taxpayers may deduct net capital losses against ordinary income up to $3,000 per year ($1,500 if MFS).
+
+**But First, You Need a Net Capital Loss!**
+
+**Our Calculation:**
+| Item | Amount |
+|------|--------|
+| Overall net capital gain/loss | $0 |
+| Maximum deductible | N/A |
+| **Actual deduction** | **$0** |
+
+**Why $0:**
+David has no net capital loss to deduct. His losses EXACTLY offset his gains:
+• STCL $(6,000) + LTCG $6,000 = $0
+
+Since there's no remaining loss, there's nothing to deduct against ordinary income.
+
+**If He Had a Net Loss:**
+| Net Loss | Deductible This Year | Carryforward |
+|----------|---------------------|--------------|
+| $(2,000) | $2,000 | $0 |
+| $(5,000) | $3,000 | $2,000 |
+| $(10,000) | $3,000 | $7,000 |
+
+**Common Mistakes:**
+• Applying $3,000 limit when there's no net loss
+• Confusing gross losses with net losses
+• Forgetting to net ST and LT before applying limit
+
+**Exam Tip:**
+The $3,000 limit only applies when you have a NET capital loss after all netting is complete.`,
     },
   ],
 };
@@ -2753,7 +3867,26 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 150000,
         tolerance: 0,
       },
-      explanation: "Total distributions = $60,000 + $90,000 = $150,000",
+      explanation: `**Answer:** $150,000
+
+**From Exhibit 1:**
+| Distribution | Date | Amount |
+|--------------|------|--------|
+| First distribution | March 15 | $60,000 |
+| Second distribution | September 30 | $90,000 |
+| **Total** | | **$150,000** |
+
+**Calculation:**
+$60,000 + $90,000 = **$150,000**
+
+**Why Track Total Distributions:**
+The total is compared to available E&P to determine how much is treated as:
+1. Dividend (to extent of E&P)
+2. Return of capital (to extent of basis)
+3. Capital gain (excess over basis)
+
+**Key Observation:**
+Total distributions ($150,000) EXCEED total E&P ($130,000), meaning some portion will be non-dividend treatment.`,
     },
     {
       id: "req-dividend-portion",
@@ -2766,7 +3899,40 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 130000,
         tolerance: 0,
       },
-      explanation: "Dividend = Current E&P ($45,000) + Accumulated E&P ($85,000) = $130,000. Current E&P is allocated pro-rata, but total dividend is limited to total E&P available.",
+      explanation: `**Answer:** $130,000 — Total Dividend Income
+
+**IRC §316 — Definition of Dividend:**
+A dividend is a distribution from E&P. The dividend amount is LIMITED to total E&P available.
+
+**E&P Analysis:**
+| E&P Source | Amount |
+|------------|--------|
+| Current E&P | $45,000 |
+| Accumulated E&P | $85,000 |
+| **Total E&P Available** | **$130,000** |
+
+**Distribution Ordering (IRC §316):**
+1. **Current E&P first:** Allocated PRO-RATA to all distributions during the year
+2. **Accumulated E&P second:** Applied in CHRONOLOGICAL order
+3. Excess over E&P → Return of capital / Capital gain
+
+**Application to Janet:**
+| Item | Amount |
+|------|--------|
+| Total distributions | $150,000 |
+| Total E&P available | $130,000 |
+| **Dividend portion** | **$130,000** |
+
+**Current E&P Pro-Rata Allocation (for timing purposes):**
+• March distribution: $60,000 ÷ $150,000 × $45,000 = $18,000 from current E&P
+• September distribution: $90,000 ÷ $150,000 × $45,000 = $27,000 from current E&P
+• Remaining = from accumulated E&P
+
+**Why Pro-Rata Matters:**
+If current E&P is positive but accumulated E&P is negative (deficit), the pro-rata allocation determines which distributions are dividends.
+
+**Common Mistake:**
+Treating ALL $150,000 as dividend — must cap at E&P available.`,
     },
     {
       id: "req-return-of-capital",
@@ -2779,7 +3945,46 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 20000,
         tolerance: 0,
       },
-      explanation: "Amount exceeding E&P = $150,000 - $130,000 = $20,000. This reduces Janet's basis from $25,000 to $5,000. Since it doesn't exceed basis, it's tax-free return of capital.",
+      explanation: `**Answer:** $20,000 — Tax-Free Return of Capital
+
+**IRC §301(c)(2) — Return of Capital:**
+Distributions in excess of E&P reduce the shareholder's stock basis, tax-free.
+
+**Calculation:**
+| Item | Amount |
+|------|--------|
+| Total distributions | $150,000 |
+| Less: Dividend portion | $(130,000) |
+| **Excess over E&P** | **$20,000** |
+
+**Tax Treatment of Excess:**
+| Question | Answer |
+|----------|--------|
+| Excess over E&P | $20,000 |
+| Janet's stock basis | $25,000 |
+| Does excess exceed basis? | No ($20,000 < $25,000) |
+| Tax treatment | **Tax-free return of capital** |
+
+**Effect on Janet's Basis:**
+| Item | Amount |
+|------|--------|
+| Beginning basis | $25,000 |
+| Less: Return of capital | $(20,000) |
+| **Ending basis** | **$5,000** |
+
+**Why Tax-Free:**
+Return of capital is simply getting your investment back. It reduces basis, but there's no gain until basis reaches zero.
+
+**The Ordering Rules (IRC §301(c)):**
+\`\`\`
+Distribution
+├── (1) Dividend (from E&P) → Taxable as dividend
+├── (2) Return of Capital (reduces basis) → Tax-free
+└── (3) Capital Gain (excess over basis) → Taxable gain
+\`\`\`
+
+**Common Mistake:**
+Treating return of capital as taxable — it's only taxable if it exceeds basis.`,
     },
     {
       id: "req-capital-gain",
@@ -2792,7 +3997,43 @@ export const regCorporateDistributionsTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Excess over basis would be capital gain. Return of capital ($20,000) < Basis ($25,000), so no capital gain.",
+      explanation: `**Answer:** $0 — Capital Gain
+
+**IRC §301(c)(3) — Capital Gain on Distributions:**
+Any distribution in excess of BOTH E&P and basis is treated as capital gain.
+
+**Calculation:**
+| Item | Amount |
+|------|--------|
+| Total distributions | $150,000 |
+| Less: Dividend (from E&P) | $(130,000) |
+| Less: Return of capital (reduces basis to $0) | $(25,000) max |
+| **Actual return of capital** | $(20,000) |
+| **Capital gain** | **$0** |
+
+**Why No Capital Gain:**
+| Test | Result |
+|------|--------|
+| Excess over E&P | $20,000 |
+| Janet's basis | $25,000 |
+| Excess over basis? | No — $20,000 < $25,000 |
+| Capital gain | **$0** |
+
+The return of capital ($20,000) is fully absorbed by Janet's basis ($25,000), leaving $5,000 basis remaining.
+
+**Alternative Scenario — If Capital Gain Applied:**
+If distributions were $160,000 instead:
+• Dividend: $130,000
+• Return of capital: $25,000 (reduces basis to $0)
+• Capital gain: $5,000 (excess over basis)
+
+**Complete Summary for Janet:**
+| Category | Amount | Tax Treatment |
+|----------|--------|---------------|
+| Dividend income | $130,000 | Ordinary income (or qualified dividend rate) |
+| Return of capital | $20,000 | Tax-free (reduces basis) |
+| Capital gain | $0 | N/A |
+| **Total distributed** | **$150,000** | |`,
     },
   ],
 };
@@ -2865,7 +4106,34 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 90000,
         tolerance: 0,
       },
-      explanation: "Basis increases: Ordinary income ($80,000) + Tax-exempt interest ($4,000) + Sec 1231 gain ($6,000) = $90,000. Note: Guaranteed payments are included in ordinary income but do not separately increase basis.",
+      explanation: `**Answer:** $90,000 — Basis Increase from Income Items
+
+**IRC §705(a)(1) — Items That INCREASE Partner Basis:**
+
+| Income Item | Total Partnership | Kevin's 40% | Increases Basis? |
+|-------------|-------------------|-------------|------------------|
+| Ordinary business income | $200,000 | $80,000 | ✓ Yes |
+| Tax-exempt interest | $10,000 | $4,000 | ✓ Yes |
+| Section 1231 gain | $15,000 | $6,000 | ✓ Yes |
+| Guaranteed payments | $30,000 | $30,000 | ✗ No (see below) |
+
+**Calculation:**
+$80,000 + $4,000 + $6,000 = **$90,000**
+
+**Why Guaranteed Payments Don't Separately Increase Basis:**
+Guaranteed payments are already INCLUDED in the partnership's ordinary income deduction. Kevin received $30,000 as compensation, which:
+• Is deductible by the partnership (reduces ordinary income available to partners)
+• Is taxable to Kevin as ordinary income (like salary)
+• Does NOT separately increase Kevin's basis
+
+**Why Tax-Exempt Interest Increases Basis:**
+Even though tax-exempt interest isn't taxable, it still represents an economic inflow to the partnership. If it didn't increase basis:
+• Partner would have phantom gain on sale
+• Double taxation of the same economic value
+
+**Common Mistakes:**
+• Adding guaranteed payments again (already in ordinary income)
+• Excluding tax-exempt income (must include for basis purposes)`,
     },
     {
       id: "req-deduction-decrease",
@@ -2878,7 +4146,38 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 3200,
         tolerance: 0,
       },
-      explanation: "Basis decreases from deductions: Charitable contributions ($3,200). This is a separately stated item that reduces basis.",
+      explanation: `**Answer:** $3,200 — Basis Decrease from Deductions
+
+**IRC §705(a)(2) — Items That DECREASE Partner Basis:**
+
+| Deduction Item | Total Partnership | Kevin's 40% |
+|----------------|-------------------|-------------|
+| Charitable contributions | $8,000 | **$3,200** |
+
+**Calculation:**
+$8,000 × 40% = **$3,200**
+
+**Why Charitable Contributions Reduce Basis:**
+Charitable contributions are a SEPARATELY STATED item (IRC §702(a)):
+• Not included in partnership ordinary income
+• Passed through to partners on Schedule K-1
+• Each partner claims their share as an itemized deduction
+• MUST reduce partner's basis (to prevent double tax benefit)
+
+**Separately Stated Items (IRC §702(a)):**
+These pass through separately and reduce basis:
+• Charitable contributions
+• Capital gains/losses
+• Section 1231 gains/losses
+• Tax-exempt income (increases basis)
+• Investment interest
+• Foreign taxes
+
+**Why This Differs from Ordinary Deductions:**
+Ordinary deductions are already reflected in ordinary income. Separately stated items must be tracked separately because they may have special limitations at the partner level (e.g., charitable contribution % limits).
+
+**Common Mistake:**
+Forgetting to reduce basis for charitable contributions because they're "below-the-line" itemized deductions.`,
     },
     {
       id: "req-distribution-decrease",
@@ -2891,7 +4190,39 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 25000,
         tolerance: 0,
       },
-      explanation: "Cash distributions reduce basis: $25,000",
+      explanation: `**Answer:** $25,000 — Basis Decrease from Distributions
+
+**IRC §733 — Effect of Distributions on Basis:**
+Cash distributions reduce the partner's outside basis dollar-for-dollar.
+
+**From Exhibit 1:**
+Cash distribution to Kevin: **$25,000**
+
+**Why Distributions Reduce Basis:**
+When a partner receives cash from the partnership:
+• The partnership's assets decrease
+• Kevin's share of those assets decreases
+• His basis must decrease to reflect this
+
+**Tax Treatment of Cash Distributions (IRC §731):**
+| Situation | Tax Result |
+|-----------|------------|
+| Distribution ≤ Basis | Tax-free (reduces basis) |
+| Distribution > Basis | Gain recognized on excess |
+
+**Our Situation:**
+Kevin's basis before distribution is high enough ($75,000 + income items − deductions) to absorb the $25,000 distribution without recognizing gain.
+
+**Ordering of Basis Adjustments (IRC §705):**
+1. First: Increase for income items
+2. Second: Decrease for loss/deduction items
+3. Third: Decrease for distributions
+4. Finally: Adjust for liability changes
+
+This ordering ensures partners know if distributions create gain.
+
+**Common Mistake:**
+Taxing distributions — most partnership distributions are tax-free (just reduce basis).`,
     },
     {
       id: "req-liability-adjustment",
@@ -2904,7 +4235,40 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 8000,
         tolerance: 0,
       },
-      explanation: "Liability changes: Recourse increase ($40,000 × 40% = $16,000 increase) + Nonrecourse decrease ($20,000 × 40% = $8,000 decrease) = Net $8,000 increase",
+      explanation: `**Answer:** $8,000 — Net Basis INCREASE from Liabilities
+
+**IRC §752 — Treatment of Liabilities:**
+Changes in a partner's share of partnership liabilities affect basis:
+• INCREASE in share = treated as cash contribution = INCREASES basis
+• DECREASE in share = treated as cash distribution = DECREASES basis
+
+**From Exhibit 2 — Liability Changes:**
+
+| Liability Type | Beginning | Ending | Change | Kevin's 40% |
+|----------------|-----------|--------|--------|-------------|
+| Recourse | $100,000 | $140,000 | +$40,000 | **+$16,000** |
+| Nonrecourse | $50,000 | $30,000 | −$20,000 | **−$8,000** |
+| **Net Change** | | | | **+$8,000** |
+
+**Calculation:**
+• Recourse increase: $40,000 × 40% = +$16,000 (basis increases)
+• Nonrecourse decrease: $20,000 × 40% = −$8,000 (basis decreases)
+• **Net effect: +$8,000**
+
+**Why Liabilities Affect Basis:**
+Partnership liabilities are shared by partners. When the partnership borrows:
+• Partners are responsible for repayment (directly or through the partnership)
+• This increases their "at risk" amount
+• Allows larger loss deductions
+
+**Recourse vs. Nonrecourse Allocation:**
+| Type | Allocated Based On |
+|------|---------------------|
+| Recourse | Economic risk of loss (usually profit/loss ratio) |
+| Nonrecourse | Profit-sharing ratio |
+
+**Common Mistake:**
+Treating liability increases as decreases (or vice versa). Remember: MORE debt = MORE basis.`,
     },
     {
       id: "req-ending-basis",
@@ -2917,7 +4281,49 @@ export const regPartnershipBasisTBS: TBSQuestion = {
         value: 144800,
         tolerance: 0,
       },
-      explanation: "Ending basis = Beginning ($75,000) + Income items ($90,000) - Deductions ($3,200) - Distributions ($25,000) + Net liability change ($8,000) = $144,800",
+      explanation: `**Answer:** $144,800 — Kevin's Ending Basis
+
+**This is worth 2 points — the comprehensive calculation!**
+
+**Partner Basis Formula (IRC §705):**
+
+\`\`\`
+Beginning Outside Basis
++ Income items (ordinary income, gains, tax-exempt)
+- Deduction items (losses, charitable contributions)
+- Distributions (cash and property)
++/- Liability changes (net effect)
+= Ending Outside Basis
+\`\`\`
+
+**Complete Calculation:**
+
+| Item | Amount | Reference |
+|------|--------|-----------|
+| Beginning basis | $75,000 | Given |
+| + Ordinary income | $80,000 | 40% × $200,000 |
+| + Tax-exempt interest | $4,000 | 40% × $10,000 |
+| + Section 1231 gain | $6,000 | 40% × $15,000 |
+| − Charitable contributions | $(3,200) | 40% × $8,000 |
+| − Cash distribution | $(25,000) | Given |
+| + Net liability increase | $8,000 | +$16,000 − $8,000 |
+| **Ending basis** | **$144,800** | |
+
+**Verification:**
+$75,000 + $90,000 − $3,200 − $25,000 + $8,000 = **$144,800**
+
+**Why Basis Matters:**
+1. **Loss Limitations:** Can't deduct losses in excess of basis
+2. **Distribution Gains:** Distributions exceeding basis are taxable
+3. **Sale Gain/Loss:** Basis determines gain on sale of partnership interest
+
+**Common Mistakes:**
+• Forgetting tax-exempt income (increases basis even though not taxable)
+• Double-counting guaranteed payments
+• Getting liability direction wrong (increase = increase basis)
+
+**Exam Tip:**
+Build a basis schedule working through each component systematically.`,
     },
   ],
 };
@@ -2978,7 +4384,39 @@ Key question: What is the minimum confidence level required for a practitioner t
           { source: "Treasury", topicCode: "31 CFR 10.34" },
         ],
       },
-      explanation: "Circular 230 Section 10.34 establishes the standards for tax return positions. It requires that a practitioner must have a reasonable belief that the position has a realistic possibility of being sustained on its merits, or that there is a reasonable basis for the position and it is disclosed. For undisclosed positions, the 'substantial authority' or 'more likely than not' standards may apply depending on the type of position.",
+      explanation: `**Correct Citation:** Circular 230 Section 10.34
+
+**Alternative Acceptable Citations:**
+• 10.34
+• Circ. 230 §10.34
+• 31 CFR 10.34
+
+**What Section 10.34 Establishes:**
+
+**Standard for Tax Return Positions:**
+
+| Position Type | Minimum Standard |
+|---------------|------------------|
+| Undisclosed position | "Substantial authority" (approximately 40% confidence) |
+| Disclosed position | "Reasonable basis" (approximately 20% confidence) |
+| Listed transactions/tax shelters | "More likely than not" (>50% confidence) |
+
+**Key Provisions of Section 10.34:**
+1. Practitioner must not willfully, recklessly, or through gross incompetence sign a return with unreasonable positions
+2. Practitioner must inform client of penalties for positions lacking substantial authority
+3. Practitioner must advise client of disclosure opportunities
+
+**How to Find This on the Exam:**
+1. Navigate to IRS Circular 230 (Title 31, Part 10)
+2. Look in Subpart B: Duties and Restrictions
+3. Find Section 10.34: Standards with respect to tax returns and documents
+
+**Why This Matters for the Scenario:**
+The tax manager is asking about the minimum confidence level for signing a return. Section 10.34 answers this directly — practitioners need "reasonable belief" the position has a realistic possibility of being sustained.
+
+**Common Mistakes:**
+• Citing IRC sections (this is Treasury guidance, not IRC)
+• Citing AICPA SSTS (these are professional, not regulatory standards)`,
       hint: "Look in Circular 230, specifically the section dealing with standards with respect to tax returns and documents.",
     },
   ],
@@ -3324,7 +4762,37 @@ export const tcpGiftTaxTBS: TBSQuestion = {
         value: 46000,
         tolerance: 0,
       },
-      explanation: "Total to son: $80,000. With gift splitting, treated as $40,000 each. Each spouse uses $17,000 exclusion = $23,000 taxable per spouse = $46,000 total taxable.",
+      explanation: `**Answer:** $46,000 — Total Taxable Gift to Son
+
+**IRC §2503 — Annual Exclusion & Gift Splitting:**
+
+**Gift to Son:**
+| Donor | Amount Given |
+|-------|--------------|
+| Robert | $40,000 |
+| Susan | $40,000 |
+| **Total** | **$80,000** |
+
+**With Gift Splitting Elected (IRC §2513):**
+Each spouse treated as making half of total:
+• Robert: $40,000 (treated as $40,000 with splitting)
+• Susan: $40,000 (treated as $40,000 with splitting)
+
+**Annual Exclusion Application:**
+| Spouse | Gift | Exclusion | Taxable |
+|--------|------|-----------|---------|
+| Robert | $40,000 | $(17,000) | $23,000 |
+| Susan | $40,000 | $(17,000) | $23,000 |
+| **Total Taxable** | | | **$46,000** |
+
+**Calculation:**
+$80,000 total − $34,000 (2 × $17,000 exclusions) = **$46,000**
+
+**Why Gift Splitting Helps:**
+Without splitting, only ONE $17,000 exclusion per spouse's own gifts. With splitting, BOTH spouses get exclusions for each donee.
+
+**Common Mistake:**
+Using only one $17,000 exclusion instead of two.`,
     },
     {
       id: "req-daughter-taxable",
@@ -3337,7 +4805,33 @@ export const tcpGiftTaxTBS: TBSQuestion = {
         value: 16000,
         tolerance: 0,
       },
-      explanation: "Total to daughter: $50,000. With gift splitting, treated as $25,000 each. Each spouse uses $17,000 exclusion = $8,000 taxable per spouse = $16,000 total taxable.",
+      explanation: `**Answer:** $16,000 — Total Taxable Gift to Daughter
+
+**Gift to Daughter:**
+| Donor | Amount Given |
+|-------|--------------|
+| Robert | $25,000 |
+| Susan | $25,000 |
+| **Total** | **$50,000** |
+
+**With Gift Splitting:**
+Each spouse already gave exactly half, so splitting doesn't change amounts.
+
+**Annual Exclusion Application:**
+| Spouse | Gift | Exclusion | Taxable |
+|--------|------|-----------|---------|
+| Robert | $25,000 | $(17,000) | $8,000 |
+| Susan | $25,000 | $(17,000) | $8,000 |
+| **Total Taxable** | | | **$16,000** |
+
+**Calculation:**
+$50,000 total − $34,000 exclusions = **$16,000**
+
+**Compare to Son's Gift:**
+• Son: $80,000 → $46,000 taxable
+• Daughter: $50,000 → $16,000 taxable
+
+The exclusions are the same ($34,000), but daughter received less.`,
     },
     {
       id: "req-grandson-utma",
@@ -3350,7 +4844,38 @@ export const tcpGiftTaxTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "With gift splitting elected (consistent with son and daughter gifts), Susan's $20,000 gift is treated as $10,000 from each spouse. Since $10,000 is under the $17,000 annual exclusion per donee, no taxable gift results. Without gift splitting, the taxable amount would be $3,000 ($20,000 - $17,000).",
+      explanation: `**Answer:** $0 — Taxable Gift to Grandson (UTMA)
+
+**Gift to Grandson:**
+Susan only: $20,000 to UTMA account
+
+**With Gift Splitting Elected:**
+| Treated As | Amount |
+|------------|--------|
+| From Robert | $10,000 |
+| From Susan | $10,000 |
+| **Total** | $20,000 |
+
+**Annual Exclusion Application:**
+| Spouse | Gift | Exclusion | Taxable |
+|--------|------|-----------|---------|
+| Robert | $10,000 | $(17,000) | $0 |
+| Susan | $10,000 | $(17,000) | $0 |
+| **Total Taxable** | | | **$0** |
+
+Since each spouse's treated gift ($10,000) is UNDER the exclusion ($17,000), no taxable gift results.
+
+**Without Gift Splitting:**
+Susan: $20,000 − $17,000 = $3,000 taxable
+
+**Why Split Matters Here:**
+Gift splitting converted ONE $20,000 gift into TWO $10,000 gifts, allowing both exclusions to apply.
+
+**UTMA Note:**
+UTMA (Uniform Transfers to Minors Act) accounts are completed gifts — the donor cannot take the money back. Gift tax rules apply normally.
+
+**Common Mistake:**
+Forgetting to apply gift splitting to this gift when it was elected for other gifts.`,
     },
     {
       id: "req-tuition-taxable",
@@ -3363,7 +4888,40 @@ export const tcpGiftTaxTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Direct payments to educational institutions for tuition qualify for the unlimited educational exclusion, regardless of amount. The $35,000 is not a taxable gift.",
+      explanation: `**Answer:** $0 — Direct Tuition Payment
+
+**IRC §2503(e) — Unlimited Educational Exclusion:**
+
+**Requirements for Exclusion:**
+1. ✓ Payment made DIRECTLY to educational institution
+2. ✓ Payment is for TUITION only
+3. ✓ Amount unlimited
+
+**Robert's Payment:**
+$35,000 paid directly to grandson's college = **$0 taxable**
+
+**Why Unlimited:**
+The educational exclusion is UNLIMITED and does NOT count against:
+• Annual exclusion ($17,000)
+• Lifetime exemption
+• The donor's taxable gifts
+
+**What's NOT Covered:**
+| Expense | Covered by §2503(e)? |
+|---------|---------------------|
+| Tuition | ✓ Yes |
+| Room & Board | ✗ No |
+| Books | ✗ No |
+| Fees | ✗ No |
+
+**Key Requirement — DIRECT Payment:**
+Must pay school directly. If Robert gave $35,000 to grandson who then paid tuition, it would be a taxable gift (above $17,000 exclusion).
+
+**Compare to Medical Exclusion:**
+Similar unlimited exclusion for direct payments to medical providers for medical care.
+
+**Exam Tip:**
+"Direct to provider for specific purpose = unlimited exclusion"`,
     },
     {
       id: "req-return-required",
@@ -3375,7 +4933,39 @@ export const tcpGiftTaxTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-return-yes",
       },
-      explanation: "Yes, a gift tax return is required because: (1) gifts exceed the annual exclusion for some recipients, and (2) the couple needs to report gift splitting election even if no tax is due.",
+      explanation: `**Correct Selection:** Yes - Form 709 required
+
+**When Is Form 709 Required?**
+
+**Always Required When:**
+1. ✓ Gifts to any donee exceed annual exclusion ($17,000)
+2. ✓ Gift splitting is elected
+3. Gifts of future interests (even if < $17,000)
+4. Charitable gifts requiring deduction allocation
+
+**This Scenario:**
+| Reason | Applies? |
+|--------|----------|
+| Gifts > $17,000 to son | ✓ Yes |
+| Gifts > $17,000 to daughter | ✓ Yes |
+| Gift splitting elected | ✓ Yes (both spouses must file) |
+
+**Even Though:**
+• No gift TAX is due (lifetime exemption applies)
+• Some gifts were fully excluded
+
+**Key Point — Gift Splitting:**
+When gift splitting is elected, BOTH spouses must file Form 709, even if only one spouse made gifts.
+
+**What Doesn't Require Filing:**
+• Gifts ≤ $17,000 per donee (if no splitting needed)
+• Unlimited exclusion gifts (tuition, medical)
+• Charitable gifts (unlimited deduction, but may need to file for other gifts)
+• Spouse gifts (unlimited marital deduction)
+• Political contributions (not gifts for gift tax purposes)
+
+**Exam Tip:**
+Gift splitting ALWAYS requires Form 709, even if resulting taxable gifts are $0.`,
       dropdownOptions: [
         { id: "opt-return-yes", order: 1, text: "Yes - Form 709 required", isCorrect: true },
         { id: "opt-return-no", order: 2, text: "No - All gifts excluded", isCorrect: false },
