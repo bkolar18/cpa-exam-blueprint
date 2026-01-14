@@ -11,7 +11,7 @@ export default function Home() {
               Smart CPA Exam Prep — Without the High Price Tag
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-up animate-delay-100">
-              Free during beta • No credit card required
+              6,000+ practice questions, 500+ task-based simulations, adaptive progress tracking, and unlimited access with no expiration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-200">
               <Link
@@ -27,6 +27,9 @@ export default function Home() {
                 About Us
               </Link>
             </div>
+            <p className="text-lg text-gray-200 mt-6 animate-fade-in-up animate-delay-300">
+              Free during beta — no credit card required
+            </p>
           </div>
         </div>
       </section>

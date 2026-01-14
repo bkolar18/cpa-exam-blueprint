@@ -1,9 +1,33 @@
-# MCQ Explanation Enhancement - Status Update
+# Question Explanation Enhancement - Status Update
 
-**Last Updated:** January 13, 2026
-**File:** `src/lib/data/practice-questions/far.ts`
+**Last Updated:** January 14, 2026
 
 ---
+
+## TBS Enhancement Status
+
+| Section | Total TBS | Enhanced | Status |
+|---------|-----------|----------|--------|
+| FAR | 11 | 11 | **Complete** |
+| AUD | 11 | 11 | **Complete** |
+| REG | 10 | 10 | **Complete** |
+| TCP | 9 | 9 | **Complete** |
+| BAR | 9 | 9 | **Complete** |
+| ISC | 8 | 8 | **Complete** |
+| **Total** | **58** | **58** | **100%** |
+
+All 58 exam TBS questions have been enhanced with:
+- Authoritative references (ASC, IRC, AU-C)
+- Step-by-step calculations for numeric entries
+- Why wrong options are wrong for dropdowns
+- Common mistake warnings
+- Exam tips
+
+---
+
+## MCQ Enhancement Status
+
+**File:** `src/lib/data/practice-questions/far.ts`
 
 ## Overall Progress
 

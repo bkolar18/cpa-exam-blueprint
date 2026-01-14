@@ -1,7 +1,15 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import Anthropic from '@anthropic-ai/sdk';
-import { getFeatureLimit, IS_BETA, type SubscriptionTier } from '@/lib/ai/beta-limits';
+import { getFeatureLimit, type SubscriptionTier, BETA_LIMITS } from '@/lib/ai/beta-limits';
+
+// Force dynamic to prevent caching
+export const dynamic = 'force-dynamic';
+
+// Read IS_BETA at request time, not module load time
+function isBetaPeriod(): boolean {
+  return process.env.IS_BETA_PERIOD === 'true';
+}
 
 // Types
 interface NavigatorMessage {
@@ -170,14 +178,14 @@ function buildSystemPrompt(
 
 /**
  * Check and update usage limits
- * Uses beta limits configuration for flexible tier/beta period handling
  */
 async function checkAndUpdateUsage(
   supabase: Awaited<ReturnType<typeof createClient>>,
   userId: string,
   tier: string
 ): Promise<{ allowed: boolean; remaining: number; limit: number; isBeta: boolean }> {
-  const dailyLimit = getFeatureLimit('navigator', tier as SubscriptionTier);
+  const IS_BETA = isBetaPeriod();
+  const dailyLimit = IS_BETA ? BETA_LIMITS.navigator : getFeatureLimit('navigator', tier as SubscriptionTier);
   const today = new Date().toISOString().split('T')[0];
 
   if (!supabase) {
@@ -426,10 +434,12 @@ export async function POST(request: Request) {
 }
 
 /**
- * GET /api/navigator/usage
+ * GET /api/navigator
  * Get current usage stats for the Navigator
  */
 export async function GET() {
+  const IS_BETA = isBetaPeriod();
+
   try {
     const supabase = await createClient();
 
@@ -461,7 +471,9 @@ export async function GET() {
       .single();
 
     const tier = (profile?.subscription_tier || 'free') as SubscriptionTier;
-    const dailyLimit = getFeatureLimit('navigator', tier);
+
+    // During beta, use beta limits regardless of tier
+    const dailyLimit = IS_BETA ? BETA_LIMITS.navigator : getFeatureLimit('navigator', tier);
     const today = new Date().toISOString().split('T')[0];
 
     // Get today's usage

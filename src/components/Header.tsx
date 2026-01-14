@@ -20,6 +20,8 @@ export default function Header() {
     { name: "AUD", description: "Auditing & Attestation", href: "/sections/aud" },
     { name: "REG", description: "Regulation", href: "/sections/reg" },
     { name: "TCP", description: "Tax Compliance & Planning", href: "/sections/tcp" },
+    { name: "BAR", description: "Business Analysis & Reporting", href: "/sections/bar" },
+    { name: "ISC", description: "Information Systems & Controls", href: "/sections/isc" },
   ];
 
   const resources = {
@@ -200,12 +202,6 @@ export default function Header() {
             >
               About
             </Link>
-
-            {/* Free Beta Microcopy */}
-            <div className="hidden lg:flex flex-col items-center text-xs text-[var(--muted)] -mx-1">
-              <span>Free during beta</span>
-              <span>No credit card required</span>
-            </div>
 
             {!loading && (
               <>

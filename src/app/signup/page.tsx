@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from"react";
-import Link from"next/link";
-import { useRouter } from"next/navigation";
-import { createClient } from"@/lib/supabase/client";
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 
 export default function SignupPage() {
  const [email, setEmail] = useState("");
@@ -104,13 +105,22 @@ export default function SignupPage() {
  {/* Left side - Features */}
  <div className="hidden lg:flex lg:w-1/2 flex-col justify-center px-12 py-12">
  <div className="max-w-md">
- <Link href="/"className="inline-flex items-center space-x-2 mb-8">
- <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
- <span className="text-white font-bold text-lg">CPA</span>
+ <Link href="/" className="inline-flex items-center space-x-3 mb-8">
+ <Image
+   src="/logo.png"
+   alt="Meridian CPA Review"
+   width={48}
+   height={48}
+   className="w-12 h-12 brightness-0 invert"
+ />
+ <div className="flex flex-col">
+   <span className="text-2xl font-bold text-white">
+     Meridian
+   </span>
+   <span className="text-xs font-semibold text-gray-300 -mt-0.5 tracking-wide">
+     CPA Review
+   </span>
  </div>
- <span className="text-2xl font-bold text-white">
- Meridian CPA Review
- </span>
  </Link>
 
  <h2 className="text-4xl font-bold text-white mb-4">
@@ -196,13 +206,22 @@ export default function SignupPage() {
  <div className="max-w-md w-full">
  <div className="bg-white dark:bg-[var(--card)] rounded-2xl shadow-2xl p-8">
  <div className="text-center mb-8">
- <Link href="/"className="lg:hidden inline-flex items-center space-x-2 mb-6">
- <div className="w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
- <span className="text-white font-bold text-sm">CPA</span>
+ <Link href="/" className="lg:hidden inline-flex items-center space-x-3 mb-6 justify-center">
+ <Image
+   src="/logo.png"
+   alt="Meridian CPA Review"
+   width={48}
+   height={48}
+   className="w-12 h-12 dark:brightness-0 dark:invert"
+ />
+ <div className="flex flex-col items-start">
+   <span className="text-xl font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
+     Meridian
+   </span>
+   <span className="text-xs font-semibold text-[var(--muted)] dark:text-gray-300 -mt-0.5 tracking-wide">
+     CPA Review
+   </span>
  </div>
- <span className="text-xl font-bold text-[var(--primary)]">
- Meridian CPA Review
- </span>
  </Link>
  <h1 className="text-2xl font-bold text-[var(--foreground)]">
  Create Your Free Account
@@ -308,8 +327,8 @@ export default function SignupPage() {
  </button>
 
  <p className="text-center text-[var(--muted)] mt-6">
- Already have an account?{""}
- <Link href="/login"className="text-[var(--primary)] font-medium hover:underline">
+ Already have an account?{" "}
+ <Link href="/login" className="text-[var(--primary)] font-medium hover:underline">
  Sign in
  </Link>
  </p>

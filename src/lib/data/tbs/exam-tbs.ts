@@ -12988,7 +12988,30 @@ export const barStandardCostingTBS: TBSQuestion = {
         amount: 270000,
         tolerance: 0,
       },
-      explanation: "Finished Goods at standard = 10,000 units × $27.00 = $270,000",
+      explanation: `**Correct Entry:** Dr. Finished Goods Inventory — $270,000
+
+**Calculation:**
+Finished Goods = Units Completed × Standard Cost per Unit
+= 10,000 units × $27.00/unit = **$270,000**
+
+**Why Standard Cost (not Actual Cost):**
+In a standard cost system, inventory accounts (Raw Materials, WIP, Finished Goods) are maintained at STANDARD cost. This allows variances to be isolated and analyzed separately.
+
+**Standard Cost Breakdown (per unit):**
+• Direct Materials: 2 lbs × $5.00 = $10.00
+• Direct Labor: 0.5 hrs × $20.00 = $10.00
+• Variable Overhead: 0.5 hrs × $8.00 = $4.00
+• Fixed Overhead: 0.5 hrs × $6.00 = $3.00
+• **Total Standard Cost = $27.00**
+
+**Why NOT Other Accounts:**
+• Raw Materials: Only debited when materials are purchased
+• Cost of Goods Sold: Only used when goods are SOLD, not when completed
+• Work in Process: This is the CREDIT side (transferring OUT of WIP)
+
+**Common Mistakes:**
+• Using actual cost per unit instead of standard cost
+• Forgetting to multiply by units completed`,
     },
     {
       id: "req-wip-credit",
@@ -13003,7 +13026,37 @@ export const barStandardCostingTBS: TBSQuestion = {
         amount: 275000,
         tolerance: 0,
       },
-      explanation: "WIP at actual = Materials (21,000 × $4.80 = $100,800) + Labor (5,200 × $19.50 = $101,400) + VOH ($41,600) + FOH ($31,200) = $275,000",
+      explanation: `**Correct Entry:** Cr. Work in Process Inventory — $275,000
+
+**Calculation (Actual Costs Accumulated in WIP):**
+| Cost Element | Actual Quantity | Actual Rate | Actual Cost |
+|--------------|-----------------|-------------|-------------|
+| Materials | 21,000 lbs | $4.80 | $100,800 |
+| Labor | 5,200 hrs | $19.50 | $101,400 |
+| Variable OH | — | — | $41,600 |
+| Fixed OH | — | — | $31,200 |
+| **Total** | | | **$275,000** |
+
+**Why Credit WIP at Actual Cost:**
+Throughout the month, WIP was debited for ACTUAL costs incurred (per the footnote). When transferring completed units, we credit WIP for the same actual costs to remove them from the account.
+
+**The Variance Question:**
+Notice that:
+• Finished Goods (Debit): $270,000 (at standard)
+• WIP (Credit): $275,000 (at actual)
+• **Difference: $5,000 UNFAVORABLE variance** (actual > standard)
+
+This variance should be recorded separately, but the TBS is testing the basic transfer entry. The $5,000 unfavorable variance indicates actual costs exceeded standard costs.
+
+**Variance Breakdown (for reference):**
+• Materials: Standard $100,000 vs Actual $100,800 = $800 U
+• Labor: Standard $100,000 vs Actual $101,400 = $1,400 U
+• Variable OH: Standard $40,000 vs Actual $41,600 = $1,600 U
+• Fixed OH: Standard $30,000 vs Actual $31,200 = $1,200 U
+
+**Common Mistakes:**
+• Crediting WIP at standard cost (would leave unrecorded variances in WIP)
+• Confusing which account uses standard vs actual`,
     },
   ],
   journalAccounts: [
@@ -13085,7 +13138,30 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 35,
         tolerance: 0,
       },
-      explanation: "With excess capacity (70% used, 30,000 units available > 15,000 needed), minimum TP = Variable cost = $35. No opportunity cost since no external sales would be lost.",
+      explanation: `**Answer:** $35
+
+**Transfer Pricing Formula:**
+Minimum Transfer Price = Variable Cost + Opportunity Cost per Unit
+
+**Calculation:**
+• Variable Cost: $35 per unit
+• Opportunity Cost: $0 (excess capacity exists)
+
+**Why Zero Opportunity Cost:**
+Current capacity utilization = 70% of 100,000 = 70,000 units
+Available capacity = 30,000 units
+Internal demand = 15,000 units
+**Excess capacity (30,000) > Internal demand (15,000)** ✓
+
+Since Component Division can fulfill all 15,000 internal units WITHOUT sacrificing any external sales, there is NO opportunity cost. The seller's minimum acceptable price is simply the variable cost of $35.
+
+**Why NOT Include Fixed Costs:**
+Fixed costs are irrelevant for this decision because they will be incurred regardless of whether the internal transfer occurs. Only incremental costs (variable costs) matter for the minimum TP.
+
+**Common Mistakes:**
+• Adding contribution margin as opportunity cost when excess capacity exists
+• Including fixed overhead ($3.00) in minimum price
+• Using full cost ($35 + allocated fixed) instead of variable cost only`,
     },
     {
       id: "req-max-tp",
@@ -13098,7 +13174,29 @@ export const barTransferPricingTBS: TBSQuestion = {
         value: 58,
         tolerance: 0,
       },
-      explanation: "Maximum TP = Assembly Division's alternative purchase price = $58 from external supplier",
+      explanation: `**Answer:** $58
+
+**Maximum Transfer Price Concept:**
+The buyer's maximum acceptable transfer price = The cost of the next best alternative
+
+**Analysis:**
+Assembly Division can either:
+1. Buy internally from Component Division, OR
+2. Buy externally at $58 per unit
+
+The Assembly Division will NEVER pay more than $58 internally because they can always get the same component externally for that price.
+
+**Why $58 (not $60 or other amounts):**
+• $60 is the Component Division's external SELLING price — irrelevant to the buyer
+• $58 is Assembly Division's alternative PURCHASE price — this sets their ceiling
+
+**Economic Logic:**
+At any price above $58, Assembly Division is worse off buying internally and should go external. At exactly $58, they're indifferent. Below $58, internal transfer benefits Assembly Division.
+
+**Key Insight:**
+The negotiation range exists because:
+• Seller's minimum ($35) < Buyer's maximum ($58)
+• Any price in this range benefits BOTH divisions compared to no transfer`,
     },
     {
       id: "req-tp-range",
@@ -13110,7 +13208,29 @@ export const barTransferPricingTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-yes",
       },
-      explanation: "Yes - The negotiation range is $35 to $58, providing room for a mutually beneficial transfer price.",
+      explanation: `**Correct Answer:** Yes - negotiation range exists
+
+**Transfer Pricing Negotiation Range:**
+| Party | Position | Amount |
+|-------|----------|--------|
+| Seller's Minimum | Variable cost + Opportunity cost | $35 |
+| Buyer's Maximum | External purchase price | $58 |
+| **Range** | $58 - $35 | **$23 per unit** |
+
+**Why Transfer Is Beneficial:**
+Since Min ($35) < Max ($58), a mutually acceptable price exists. The $23 range represents potential savings that can be split between divisions.
+
+**Impact Analysis at $45 Transfer Price (example):**
+• Component Division: Earns $10 contribution ($45 - $35 variable cost)
+• Assembly Division: Saves $13 vs external ($58 - $45)
+• Both divisions benefit compared to no internal transfer
+
+**Why Other Options Are Wrong:**
+• "No - min exceeds max": This would only occur if seller had to give up profitable external sales (opportunity cost) that pushed minimum above $58
+• "Indifferent": There's clearly value to be captured ($23/unit × 15,000 units = $345,000 total)
+
+**Company-Wide Perspective:**
+Internal transfer saves the company $23 × 15,000 = $345,000 compared to Assembly Division buying externally. This is pure profit improvement for the consolidated entity.`,
       dropdownOptions: [
         { id: "opt-yes", order: 1, text: "Yes - negotiation range exists", isCorrect: true },
         { id: "opt-no", order: 2, text: "No - min exceeds max", isCorrect: false },
@@ -13211,7 +13331,31 @@ export const iscDatabaseControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-s1-input",
       },
-      explanation: "This is an input validation control (specifically a reasonableness check) - it ensures data entered falls within acceptable parameters.",
+      explanation: `**Correct Answer:** Input Validation Control
+
+**Control Classification:**
+This is an INPUT VALIDATION control, specifically a **reasonableness check** (also called a limit check or range check).
+
+**How It Works:**
+The system checks if the transaction date is:
+• Not in the future (can't record future transactions)
+• Not more than 30 days old (prevents backdating)
+
+**Why Input Validation (not other types):**
+• **Access Control**: Controls WHO can access data, not WHAT data is accepted
+• **Audit Trail Control**: Records what happened AFTER entry, doesn't prevent bad entries
+• **Backup/Recovery Control**: Deals with data restoration, not data entry rules
+
+**Types of Input Validation Controls:**
+| Type | Example | This Scenario |
+|------|---------|---------------|
+| Range/Limit Check | Amount must be $0-$10,000 | ✓ Date range |
+| Validity Check | State must be valid 2-letter code | |
+| Completeness Check | All required fields must be filled | |
+| Format Check | Phone must be ###-###-#### | |
+
+**Exam Tip:**
+Reasonableness checks are PREVENTIVE controls — they stop bad data from entering the system rather than detecting it afterward.`,
       dropdownOptions: [
         { id: "opt-s1-input", order: 1, text: "Input Validation Control", isCorrect: true },
         { id: "opt-s1-access", order: 2, text: "Access Control", isCorrect: false },
@@ -13229,7 +13373,32 @@ export const iscDatabaseControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-s2-access",
       },
-      explanation: "This is an access control - it controls who can access data and what they can do (authentication and authorization).",
+      explanation: `**Correct Answer:** Access Control
+
+**Control Classification:**
+This is an ACCESS CONTROL with two components:
+1. **Authentication**: Verify identity (employee ID + password)
+2. **Authorization**: Define what actions are permitted (role-based permissions)
+
+**The Two-Step Access Process:**
+| Step | Question Answered | Mechanism in Scenario |
+|------|-------------------|----------------------|
+| Authentication | "Who are you?" | Employee ID + password |
+| Authorization | "What can you do?" | Role-based permissions |
+
+**Why Access Control (not other types):**
+• **Input Validation**: Checks DATA quality, not USER identity
+• **Audit Trail**: Records AFTER access occurs, doesn't control access
+• **Encryption**: Protects data IN TRANSIT or AT REST, not access rights
+
+**Common Access Control Methods:**
+• Role-Based Access Control (RBAC) — described in this scenario
+• Discretionary Access Control (DAC)
+• Mandatory Access Control (MAC)
+• Attribute-Based Access Control (ABAC)
+
+**Exam Tip:**
+Access controls are PREVENTIVE — they stop unauthorized access before it happens. Audit trails are DETECTIVE — they identify unauthorized access after it occurs.`,
       dropdownOptions: [
         { id: "opt-s2-input", order: 1, text: "Input Validation Control", isCorrect: false },
         { id: "opt-s2-access", order: 2, text: "Access Control", isCorrect: true },
@@ -13247,7 +13416,38 @@ export const iscDatabaseControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-s3-audit",
       },
-      explanation: "This is an audit trail control - it maintains a record of all changes for accountability and investigation purposes.",
+      explanation: `**Correct Answer:** Audit Trail Control
+
+**Control Classification:**
+This is an AUDIT TRAIL control (also called transaction logging or change tracking).
+
+**What's Being Logged:**
+| Data Element | Purpose |
+|--------------|---------|
+| Operation Type (INSERT/UPDATE/DELETE) | Know what changed |
+| User ID | Accountability — who made the change |
+| Timestamp | When the change occurred |
+| (Implied) Before/After values | What specifically changed |
+
+**Why Audit Trail (not other types):**
+• **Input Validation**: Prevents bad data ENTRY; this logs data AFTER entry
+• **Access Control**: Controls WHO can access; this tracks WHAT they did
+• **Backup/Recovery**: Restores data; this provides evidence for investigation
+
+**Key Characteristics of Audit Trails:**
+• DETECTIVE control (not preventive) — identifies issues after they occur
+• Supports forensic investigation
+• Enables accountability and non-repudiation
+• Required for SOX compliance on financial systems
+
+**Common Audit Trail Uses:**
+• Fraud investigation — who changed what and when
+• Error correction — identify source of incorrect data
+• Regulatory compliance — demonstrate control over data integrity
+• Performance analysis — track system activity patterns
+
+**Exam Tip:**
+Audit trails alone don't PREVENT fraud — they help DETECT it. For prevention, combine with access controls and segregation of duties.`,
       dropdownOptions: [
         { id: "opt-s3-input", order: 1, text: "Input Validation Control", isCorrect: false },
         { id: "opt-s3-access", order: 2, text: "Access Control", isCorrect: false },
@@ -13265,7 +13465,35 @@ export const iscDatabaseControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-s4-backup",
       },
-      explanation: "This is a backup/recovery control - it ensures data can be restored in case of system failure or data loss.",
+      explanation: `**Correct Answer:** Backup/Recovery Control
+
+**Control Classification:**
+This is a BACKUP/RECOVERY control — part of business continuity and disaster recovery planning.
+
+**Backup Strategy Analysis:**
+| Component | Implementation | Best Practice |
+|-----------|---------------|---------------|
+| Daily Incremental | 2 AM automated | ✓ Off-peak timing |
+| Weekly Full | Stored offsite | ✓ Geographic separation |
+| Automation | No manual intervention | ✓ Consistent execution |
+
+**Why Backup/Recovery (not other types):**
+• **Input Validation**: Controls data ENTRY quality, not data preservation
+• **Access Control**: Controls WHO accesses data, not data recovery
+• **Audit Trail**: Tracks CHANGES to data, not data restoration capability
+
+**The 3-2-1 Backup Rule:**
+• **3** copies of data (production + 2 backups)
+• **2** different storage media types
+• **1** copy stored offsite (demonstrated in this scenario)
+
+**Key Backup/Recovery Concepts:**
+• RPO (Recovery Point Objective): Maximum acceptable data loss (tied to backup frequency)
+• RTO (Recovery Time Objective): Maximum acceptable downtime
+• Daily backups = RPO of up to 24 hours of potential data loss
+
+**Exam Tip:**
+Offsite storage protects against site-wide disasters (fire, flood). Without offsite backups, a disaster could destroy both production data AND backup copies.`,
       dropdownOptions: [
         { id: "opt-s4-input", order: 1, text: "Input Validation Control", isCorrect: false },
         { id: "opt-s4-access", order: 2, text: "Access Control", isCorrect: false },
@@ -13283,7 +13511,40 @@ export const iscDatabaseControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-s5-ref",
       },
-      explanation: "This is a referential integrity control (a type of input validation) - it ensures foreign key relationships are maintained.",
+      explanation: `**Correct Answer:** Referential Integrity Control
+
+**Control Classification:**
+This is a REFERENTIAL INTEGRITY control — a specific type of database control that maintains relationships between tables.
+
+**How Referential Integrity Works:**
+The Orders table has a Customer_ID field (foreign key) that MUST match a valid ID in the Customers table (primary key).
+
+| Orders Table | → References → | Customers Table |
+|--------------|----------------|-----------------|
+| Customer_ID (FK) | Must exist in | Customer_ID (PK) |
+
+**Why Referential Integrity (not general Input Validation):**
+While both are validation controls, referential integrity specifically:
+• Enforces RELATIONSHIPS between tables
+• Prevents orphaned records
+• Maintains database consistency
+
+General input validation (range checks, format checks) doesn't involve cross-table relationships.
+
+**Database Integrity Types:**
+| Type | What It Ensures | Example |
+|------|-----------------|---------|
+| **Referential** | FK matches existing PK | ✓ This scenario |
+| Entity | Primary key is unique and not null | CustomerID must be unique |
+| Domain | Values fall within valid range | State must be valid code |
+
+**Why NOT Other Options:**
+• **Input Validation**: Too general — this is specifically about table relationships
+• **Audit Trail**: Tracks changes, doesn't prevent invalid entries
+• **Access Control**: Controls WHO accesses data, not data relationships
+
+**Exam Tip:**
+Referential integrity is enforced at the DATABASE level, not the application level. Even direct database access must comply with these constraints.`,
       dropdownOptions: [
         { id: "opt-s5-input", order: 1, text: "Input Validation Control", isCorrect: false },
         { id: "opt-s5-ref", order: 2, text: "Referential Integrity Control", isCorrect: true },
@@ -13342,7 +13603,34 @@ export const iscBusinessContinuityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-a-mtpd",
       },
-      explanation: "This is Maximum Tolerable Period of Disruption (MTPD) - the maximum time a business can tolerate disruption before significant harm occurs.",
+      explanation: `**Correct Answer:** Maximum Tolerable Period of Disruption (MTPD)
+
+**Definition:**
+MTPD is the maximum time a business process can be unavailable before the organization suffers **significant, potentially unrecoverable harm**.
+
+**Key Phrase Identification:**
+"maximum amount of time... before... **significant harm** to the organization"
+→ This is the defining characteristic of MTPD
+
+**MTPD vs RTO Distinction:**
+| Metric | Definition | Relationship |
+|--------|------------|--------------|
+| MTPD | When damage becomes unacceptable | Sets the outer boundary |
+| RTO | Target recovery time | Must be LESS than MTPD |
+
+MTPD > RTO always (you must recover BEFORE unacceptable damage occurs)
+
+**Why Other Options Are Wrong:**
+• **RTO**: Target time to RESUME operations — not when harm occurs
+• **RPO**: About DATA loss tolerance, not downtime tolerance
+• **MSLO**: About SERVICE LEVEL during recovery, not duration
+
+**Example:**
+If payroll must run every 2 weeks, MTPD might be 14 days.
+RTO should be set at 7 days to provide safety margin.
+
+**Exam Tip:**
+Think of MTPD as the "danger zone" threshold — you must recover (RTO) well before reaching it.`,
       dropdownOptions: [
         { id: "opt-a-rto", order: 1, text: "Recovery Time Objective (RTO)", isCorrect: false },
         { id: "opt-a-rpo", order: 2, text: "Recovery Point Objective (RPO)", isCorrect: false },
@@ -13360,7 +13648,38 @@ export const iscBusinessContinuityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-b-rpo",
       },
-      explanation: "This is Recovery Point Objective (RPO) - the point in time to which data must be recovered, determining acceptable data loss.",
+      explanation: `**Correct Answer:** Recovery Point Objective (RPO)
+
+**Definition:**
+RPO is the **point in time** to which data must be recovered, representing the maximum acceptable **data loss** measured in time.
+
+**Key Phrase Identification:**
+"point in time to which data must be recovered" + "acceptable data loss"
+→ Both phrases specifically describe RPO
+
+**RPO in Practice:**
+| RPO Setting | Meaning | Backup Strategy |
+|-------------|---------|-----------------|
+| 24 hours | Can lose up to 1 day of data | Daily backups |
+| 1 hour | Can lose up to 1 hour of data | Hourly backups |
+| 0 (zero) | Cannot lose ANY data | Real-time replication |
+
+**RPO vs RTO — The Key Difference:**
+• RPO = How much DATA can we lose? (backward-looking)
+• RTO = How long can we be DOWN? (forward-looking)
+
+Both are measured in time, but they measure different things.
+
+**Why Other Options Are Wrong:**
+• **RTO**: Time to RESUME operations — not about data loss
+• **MTPD**: When HARM becomes unacceptable — not specifically about data
+• **WRT**: Testing time AFTER recovery — not about data loss
+
+**Example:**
+RPO of 4 hours means: If disaster strikes at 3 PM, you must be able to restore data to at least 11 AM. Any transactions between 11 AM and 3 PM might be lost.
+
+**Exam Tip:**
+RPO drives backup FREQUENCY. Lower RPO = more frequent backups = higher cost.`,
       dropdownOptions: [
         { id: "opt-b-rto", order: 1, text: "Recovery Time Objective (RTO)", isCorrect: false },
         { id: "opt-b-rpo", order: 2, text: "Recovery Point Objective (RPO)", isCorrect: true },
@@ -13378,7 +13697,42 @@ export const iscBusinessContinuityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c-rto",
       },
-      explanation: "This is Recovery Time Objective (RTO) - the target time for resuming operations after a disaster.",
+      explanation: `**Correct Answer:** Recovery Time Objective (RTO)
+
+**Definition:**
+RTO is the **target time** for resuming a product, service, or activity after a disaster occurs.
+
+**Key Phrase Identification:**
+"target time set for **resumption**... after a disaster"
+→ "Resumption" + "target time" = RTO
+
+**RTO in the Recovery Timeline:**
+| Event | Metric |
+|-------|--------|
+| Disaster occurs | T = 0 |
+| Systems restored and tested | WRT period |
+| Operations resume | **RTO** (target) |
+| Harm becomes unacceptable | MTPD (limit) |
+
+**RTO Must Be Less Than MTPD:**
+RTO is your TARGET; MTPD is your DEADLINE.
+Setting RTO well below MTPD provides safety margin for unexpected delays.
+
+**Why Other Options Are Wrong:**
+• **RPO**: About DATA loss — not about RESUMPTION time
+• **MTPD**: When HARM occurs — not the TARGET for resumption
+• **WRT**: Time for TESTING after restore — one component of RTO
+
+**Example:**
+If RTO is 4 hours:
+- At T=0: Disaster strikes
+- By T=4 hours: Business operations must be running again
+
+**Exam Tip:**
+RTO drives recovery SITE strategy:
+• RTO < 1 hour → Hot site (always running)
+• RTO 1-24 hours → Warm site (ready to activate)
+• RTO > 24 hours → Cold site (basic infrastructure only)`,
       dropdownOptions: [
         { id: "opt-c-rto", order: 1, text: "Recovery Time Objective (RTO)", isCorrect: true },
         { id: "opt-c-rpo", order: 2, text: "Recovery Point Objective (RPO)", isCorrect: false },
@@ -13396,7 +13750,36 @@ export const iscBusinessContinuityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-d-mlo",
       },
-      explanation: "This is Minimum Service Level Objective (MSLO) - the minimum acceptable level of service during recovery.",
+      explanation: `**Correct Answer:** Minimum Service Level Objective (MSLO)
+
+**Definition:**
+MSLO defines the **minimum acceptable level of service** that must be maintained during disaster recovery — recognizing that full service may not be immediately possible.
+
+**Key Phrase Identification:**
+"**minimum level of service** that must be maintained during disaster recovery"
+→ "Minimum service level" during recovery = MSLO
+
+**MSLO in Practice:**
+| Normal Operation | MSLO During Recovery | Example |
+|------------------|---------------------|---------|
+| 100% capacity | 60% capacity | Process critical orders only |
+| All features available | Core features only | No reporting, only transactions |
+| 99.9% uptime | 95% uptime | More maintenance windows |
+
+**Why MSLO Matters:**
+During recovery, you may need to:
+• Run on reduced hardware
+• Skip non-critical processes
+• Limit user access
+MSLO defines what "good enough" looks like during this period.
+
+**Why Other Options Are Wrong:**
+• **RTO**: TIME to resume — not SERVICE LEVEL
+• **RPO**: DATA loss tolerance — not SERVICE LEVEL
+• **WRT**: TESTING time — not SERVICE LEVEL
+
+**Exam Tip:**
+MSLO helps set realistic expectations. Promising full service immediately after disaster is often unrealistic — MSLO defines acceptable degraded operation.`,
       dropdownOptions: [
         { id: "opt-d-rto", order: 1, text: "Recovery Time Objective (RTO)", isCorrect: false },
         { id: "opt-d-rpo", order: 2, text: "Recovery Point Objective (RPO)", isCorrect: false },
@@ -13414,7 +13797,43 @@ export const iscBusinessContinuityTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-e-wrt",
       },
-      explanation: "This is Work Recovery Time (WRT) - the time allowed for system testing and validation before going live.",
+      explanation: `**Correct Answer:** Work Recovery Time (WRT)
+
+**Definition:**
+WRT is the time allocated for **testing and validation** of recovered systems before resuming live operations.
+
+**Key Phrase Identification:**
+"maximum time allowed for system **testing before going live** after disaster recovery"
+→ Testing BEFORE going live = WRT
+
+**WRT in the Recovery Timeline:**
+| Phase | Activity | Time Metric |
+|-------|----------|-------------|
+| 1 | Disaster occurs | T = 0 |
+| 2 | Systems restored | Technical recovery |
+| 3 | Testing & validation | **WRT** |
+| 4 | Go live | RTO achieved |
+
+**Why WRT Is Critical:**
+Before going live, you must verify:
+• Data integrity (compare with pre-disaster state)
+• System functionality (all features work)
+• Integrations (connections to other systems)
+• Security (access controls intact)
+
+Skipping WRT risks going live with corrupted data or broken systems.
+
+**Important Relationship:**
+RTO = Technical Recovery Time + WRT
+If RTO is 4 hours and technical recovery takes 3 hours, WRT is only 1 hour.
+
+**Why Other Options Are Wrong:**
+• **RTO**: Total time to RESUME — WRT is a component of RTO
+• **RPO**: About DATA loss — not about testing
+• **MTPD**: When HARM occurs — not about testing
+
+**Exam Tip:**
+WRT is often underestimated. Always allocate adequate time for testing — rushing to go live can cause secondary failures.`,
       dropdownOptions: [
         { id: "opt-e-rto", order: 1, text: "Recovery Time Objective (RTO)", isCorrect: false },
         { id: "opt-e-rpo", order: 2, text: "Recovery Point Objective (RPO)", isCorrect: false },
@@ -13473,7 +13892,37 @@ export const iscERPControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c1-auth",
       },
-      explanation: "This is an authorization control - it ensures transactions are properly approved before execution based on dollar thresholds.",
+      explanation: `**Correct Answer:** Authorization Control
+
+**Control Classification:**
+This is an AUTHORIZATION control — it requires proper **approval** before a transaction can proceed based on predefined criteria.
+
+**How the Control Works:**
+| Condition | Action |
+|-----------|--------|
+| PO ≤ $10,000 | Automatically processed |
+| PO > $10,000 | Requires manager electronic approval |
+
+**Why Authorization (not other types):**
+• **Input Validation**: Checks data FORMAT/REASONABLENESS — this checks APPROVAL
+• **Segregation of Duties**: Separates FUNCTIONS — this is about approval AUTHORITY
+• **Detective Control**: Identifies issues AFTER — this PREVENTS before execution
+
+**Authorization Control Characteristics:**
+• PREVENTIVE control type
+• Based on dollar thresholds, transaction type, or other criteria
+• Tied to organizational hierarchy
+• Creates audit trail of approvals
+
+**Common Authorization Scenarios:**
+• Purchase orders above threshold (this scenario)
+• Journal entries above threshold
+• Credit memo approvals
+• Employee expense reimbursements
+• Payroll changes
+
+**Exam Tip:**
+Authorization controls enforce the principle that certain actions require management oversight. The threshold ($10,000) represents the organization's risk tolerance for autonomous purchasing.`,
       dropdownOptions: [
         { id: "opt-c1-auth", order: 1, text: "Authorization Control", isCorrect: true },
         { id: "opt-c1-valid", order: 2, text: "Input Validation Control", isCorrect: false },
@@ -13491,7 +13940,40 @@ export const iscERPControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c2-valid",
       },
-      explanation: "This is an automated input/processing validation control - it automatically validates transactions against established limits.",
+      explanation: `**Correct Answer:** Automated Validation Control
+
+**Control Classification:**
+This is an AUTOMATED VALIDATION control — the system automatically checks transactions against **predefined limits** without human intervention.
+
+**How the Control Works:**
+| Step | System Action |
+|------|---------------|
+| 1 | Order entered |
+| 2 | System retrieves customer credit limit from master file |
+| 3 | System compares order total to available credit |
+| 4 | If over limit → Hold for credit manager review |
+| 5 | If under limit → Process automatically |
+
+**Why Automated Validation (not Authorization):**
+| Aspect | Authorization Control | Automated Validation |
+|--------|----------------------|---------------------|
+| Human required? | Yes (manager approval) | No (system decides) |
+| Basis | Hierarchy/authority | Predefined rules |
+| Example | Manager approves PO | System checks credit |
+
+**Why NOT Other Options:**
+• **Segregation of Duties**: About separating FUNCTIONS, not validating against limits
+• **Detective Control**: Finds issues AFTER — this PREVENTS before processing
+
+**Automated Validation Examples:**
+• Credit limit checks (this scenario)
+• Inventory availability validation
+• Budget vs. actual checks
+• Duplicate payment detection
+• Three-way match (PO/Receipt/Invoice)
+
+**Exam Tip:**
+Automated validation controls are highly reliable because they can't be overridden accidentally and operate consistently on every transaction.`,
       dropdownOptions: [
         { id: "opt-c2-auth", order: 1, text: "Authorization Control", isCorrect: false },
         { id: "opt-c2-valid", order: 2, text: "Automated Validation Control", isCorrect: true },
@@ -13509,7 +13991,41 @@ export const iscERPControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c3-detect",
       },
-      explanation: "This is a detective control - it generates reports that help identify unusual items or potential errors after transactions occur.",
+      explanation: `**Correct Answer:** Detective Control
+
+**Control Classification:**
+This is a DETECTIVE control — it identifies potential issues **AFTER** transactions have been processed by generating comparison reports.
+
+**How the Control Works:**
+| Report Element | Detection Purpose |
+|----------------|-------------------|
+| Current month balance | What happened this period |
+| Prior month balance | Baseline comparison |
+| Variance percentage | Highlights significant changes |
+
+**Why Detective (not Preventive):**
+| Control Type | When It Acts | This Scenario |
+|--------------|--------------|---------------|
+| Preventive | BEFORE transaction | ✗ |
+| Detective | AFTER transaction | ✓ Report generated after close |
+| Corrective | AFTER detection | Next step (investigation) |
+
+The trial balance report doesn't STOP transactions — it helps FIND issues afterward.
+
+**Why NOT Other Options:**
+• **Authorization**: Approves transactions BEFORE — this reviews AFTER
+• **Input Validation**: Checks data at ENTRY — this checks data AT PERIOD END
+• **Segregation of Duties**: Separates functions — this REPORTS on outcomes
+
+**Common Detective Controls:**
+• Variance reports (this scenario)
+• Exception reports
+• Reconciliations
+• Analytical review
+• Audit logs
+
+**Exam Tip:**
+Detective controls are essential because not all errors can be prevented. A strong control environment combines preventive controls (to stop issues) with detective controls (to catch what slips through).`,
       dropdownOptions: [
         { id: "opt-c3-auth", order: 1, text: "Authorization Control", isCorrect: false },
         { id: "opt-c3-valid", order: 2, text: "Input Validation Control", isCorrect: false },
@@ -13527,7 +14043,39 @@ export const iscERPControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c4-sod",
       },
-      explanation: "This is a segregation of duties control - it prevents one person from performing incompatible functions that could enable fraud.",
+      explanation: `**Correct Answer:** Segregation of Duties Control
+
+**Control Classification:**
+This is a SEGREGATION OF DUTIES (SoD) control — it prevents one person from having **incompatible functions** that could enable fraud or error.
+
+**The Fraud Triangle Addressed:**
+| Fraud Element | How SoD Mitigates |
+|---------------|-------------------|
+| Opportunity | Eliminates ability to commit AND conceal |
+| Rationalization | Harder to justify when requires collusion |
+
+**Incompatible Functions in This Scenario:**
+| Function | Risk if Combined |
+|----------|------------------|
+| Create vendor | Set up fictitious vendor |
+| Approve payments | Pay the fictitious vendor |
+| **Result if same person** | Ghost vendor fraud scheme |
+
+**Why Segregation of Duties (not Authorization):**
+• **Authorization**: One person approves WITHIN their role
+• **SoD**: DIFFERENT people handle different functions
+
+This control ensures the person who CREATES can't also APPROVE.
+
+**Classic SoD Combinations to Separate:**
+| Authorization | Custody | Recording |
+|---------------|---------|-----------|
+| Approve POs | Receive goods | Record inventory |
+| Approve payroll | Distribute checks | Record expense |
+| Approve vendors | Make payments | Reconcile bank |
+
+**Exam Tip:**
+SoD is a fundamental internal control principle. When one person has all three functions (authorization, custody, recording), fraud risk is significantly elevated.`,
       dropdownOptions: [
         { id: "opt-c4-auth", order: 1, text: "Authorization Control", isCorrect: false },
         { id: "opt-c4-valid", order: 2, text: "Input Validation Control", isCorrect: false },
@@ -13545,7 +14093,44 @@ export const iscERPControlsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c5-config",
       },
-      explanation: "This is a configuration/change management control - it controls changes to master data and system settings with proper approvals and audit trails.",
+      explanation: `**Correct Answer:** Configuration/Change Management Control
+
+**Control Classification:**
+This is a CONFIGURATION/CHANGE MANAGEMENT control — it governs modifications to **master data and system settings** with proper authorization and documentation.
+
+**Control Elements in This Scenario:**
+| Element | Purpose |
+|---------|---------|
+| Controller approval | Proper authorization level |
+| User ID logging | Accountability |
+| Timestamp logging | When change occurred |
+| (Implied) Before/after values | What specifically changed |
+
+**Why Configuration Management (not Authorization):**
+| Aspect | Authorization | Configuration/Change Mgmt |
+|--------|---------------|---------------------------|
+| Applies to | Transactions | System/Master data changes |
+| Focus | Business decisions | IT governance |
+| Example | Approve $50K PO | Change account structure |
+
+**What Configuration Management Protects:**
+• Chart of accounts (this scenario)
+• User access rights
+• System parameters
+• Pricing tables
+• Tax tables
+• Approval workflows
+
+**Why NOT Other Options:**
+• **Authorization**: Typically for TRANSACTIONS, not master data changes
+• **Segregation of Duties**: About separating FUNCTIONS, not change governance
+• **Detective Control**: Identifies issues AFTER — this CONTROLS changes before
+
+**ITGC Context:**
+Configuration management is a key IT General Control (ITGC). Weak change controls can affect the reliability of ALL applications using that system.
+
+**Exam Tip:**
+Changes to master data (like chart of accounts) can have broad impacts across financial reporting. These changes require stricter controls than routine transactions.`,
       dropdownOptions: [
         { id: "opt-c5-auth", order: 1, text: "Authorization Control", isCorrect: false },
         { id: "opt-c5-config", order: 2, text: "Configuration/Change Management Control", isCorrect: true },
@@ -13617,7 +14202,46 @@ Please research the authoritative literature to find the specific guidance on th
           { source: "AICPA", topicCode: "AU-C 570.12" },
         ],
       },
-      explanation: "AU-C Section 570, The Auditor's Consideration of an Entity's Ability to Continue as a Going Concern, addresses the auditor's responsibility to evaluate whether substantial doubt exists about an entity's ability to continue as a going concern.",
+      explanation: `**Correct Citation:** AU-C Section 570
+
+**Full Title:**
+"The Auditor's Consideration of an Entity's Ability to Continue as a Going Concern"
+
+**How to Find This Citation:**
+
+Step 1: Identify the topic area
+• Going concern → Audit standards (AU-C)
+• Not tax (IRC) or accounting (ASC)
+
+Step 2: Search strategy
+• Search: "going concern" in AU-C
+• Navigate to: AU-C 570
+
+**What AU-C 570 Covers:**
+| Section | Content |
+|---------|---------|
+| .12-.13 | Auditor's responsibility to evaluate going concern |
+| .14-.17 | Evaluating conditions and events |
+| .18-.19 | Evaluating management's plans |
+| .20-.24 | Substantial doubt conclusions |
+| .25-.28 | Reporting implications |
+
+**Key Concepts in AU-C 570:**
+• "Reasonable period of time" = One year from financial statement date
+• Auditor evaluates MANAGEMENT's assessment
+• Must consider conditions in AGGREGATE
+
+**Conditions Mentioned in the Scenario:**
+✓ Recurring operating losses
+✓ Working capital deficiency
+✓ Inability to obtain financing
+✓ Loss of major customer
+
+All are explicitly listed in AU-C 570 as indicators of substantial doubt.
+
+**Common Mistakes:**
+• Citing ASC 205-40 (GAAP disclosure requirements, not auditor responsibility)
+• Using outdated SAS references instead of AU-C`,
       hint: "Look in AU-C Section 570 for guidance on going concern evaluation",
     },
   ],
@@ -13691,7 +14315,31 @@ export const audMaterialityTBS: TBSQuestion = {
         value: 205000,
         tolerance: 0,
       },
-      explanation: "Planning Materiality = Net Income Before Tax × 5% = $4,100,000 × 5% = $205,000",
+      explanation: `**Answer:** $205,000
+
+**Calculation:**
+Planning Materiality = Net Income Before Tax × 5%
+= $4,100,000 × 5%
+= **$205,000**
+
+**Why Net Income Benchmark:**
+Per the firm guidelines, use 5% of Net Income Before Tax for for-profit entities with stable earnings. The scenario confirms Sunrise Industries has stable earnings.
+
+**Benchmark Selection Logic:**
+| Entity Type | Preferred Benchmark |
+|-------------|---------------------|
+| For-profit (stable income) | 5% of Net Income ✓ |
+| For-profit (volatile income) | 0.5% of Revenue |
+| Asset-intensive | 1% of Total Assets |
+| Not-for-profit | 1-2% of Revenue/Expenses |
+
+**Authoritative Basis (AU-C 320):**
+Planning materiality is the auditor's judgment of what would influence user decisions. Common benchmarks are guidelines, not rules.
+
+**Common Mistakes:**
+• Using Net Income AFTER Tax (would be different amount)
+• Confusing planning materiality with performance materiality
+• Using revenue benchmark when income is available and stable`,
     },
     {
       id: "req-perf-mat",
@@ -13704,7 +14352,37 @@ export const audMaterialityTBS: TBSQuestion = {
         value: 153750,
         tolerance: 0,
       },
-      explanation: "Performance Materiality = Planning Materiality × 75% = $205,000 × 75% = $153,750",
+      explanation: `**Answer:** $153,750
+
+**Calculation:**
+Performance Materiality = Planning Materiality × 75%
+= $205,000 × 75%
+= **$153,750**
+
+**Why 75% (not 50%):**
+Per firm guidelines:
+• 75% for low-risk clients with strong controls ✓ (Sunrise qualifies)
+• 50% for high-risk clients or weak controls
+
+**What Performance Materiality Is (AU-C 320.09):**
+The amount(s) set by the auditor at LESS THAN materiality to reduce the probability that the aggregate of uncorrected and undetected misstatements exceeds materiality.
+
+**Performance Materiality Purpose:**
+| Concept | Amount | Purpose |
+|---------|--------|---------|
+| Planning Materiality | $205,000 | Overall threshold for FS |
+| Performance Materiality | $153,750 | Testing threshold (provides "buffer") |
+| Buffer | $51,250 | Cushion for undetected misstatements |
+
+**Why Set Lower Than Planning Materiality:**
+• Auditors may not detect all misstatements
+• Provides margin for sampling risk
+• Accounts for aggregation of smaller misstatements
+
+**Common Mistakes:**
+• Using 75% of a different base (like revenue)
+• Confusing with "clearly trivial" threshold
+• Setting PM equal to planning materiality (no buffer)`,
     },
     {
       id: "req-alt-mat-revenue",
@@ -13717,7 +14395,33 @@ export const audMaterialityTBS: TBSQuestion = {
         value: 410000,
         tolerance: 0,
       },
-      explanation: "Alternative = Total Revenue × 0.5% = $82,000,000 × 0.5% = $410,000",
+      explanation: `**Answer:** $410,000
+
+**Calculation:**
+Alternative Materiality (Revenue) = Total Revenue × 0.5%
+= $82,000,000 × 0.5%
+= **$410,000**
+
+**When to Use Revenue Benchmark:**
+• Entity has volatile income (losses, breakeven)
+• Income is not meaningful for users
+• Revenue is primary performance measure
+
+**Comparison of Benchmarks:**
+| Benchmark | Amount | Implication |
+|-----------|--------|-------------|
+| 5% Net Income | $205,000 | More conservative |
+| 0.5% Revenue | $410,000 | Less conservative |
+| 1% Assets | $450,000 | Least conservative |
+
+**Professional Judgment:**
+Notice that revenue-based materiality ($410,000) is DOUBLE the income-based materiality ($205,000). This illustrates why benchmark selection matters — different benchmarks can yield significantly different materiality levels.
+
+**Why Revenue Benchmark Is Higher:**
+Revenue ($82M) is much larger than net income ($4.1M). Even at a lower percentage (0.5% vs 5%), the absolute amount is higher.
+
+**Exam Tip:**
+In practice, auditors often calculate multiple benchmarks and use judgment to select the most appropriate one based on user needs and entity circumstances.`,
     },
     {
       id: "req-alt-mat-assets",
@@ -13730,7 +14434,40 @@ export const audMaterialityTBS: TBSQuestion = {
         value: 450000,
         tolerance: 0,
       },
-      explanation: "Alternative = Total Assets × 1% = $45,000,000 × 1% = $450,000",
+      explanation: `**Answer:** $450,000
+
+**Calculation:**
+Alternative Materiality (Assets) = Total Assets × 1%
+= $45,000,000 × 1%
+= **$450,000**
+
+**When to Use Asset Benchmark:**
+• Asset-intensive industries (manufacturing, utilities, real estate)
+• Balance sheet is primary focus for users
+• Entity has no meaningful income (development stage, turnaround)
+
+**Why 1% of Assets:**
+Users of financial statements in asset-intensive industries often focus on:
+• Asset valuation accuracy
+• Capital investment decisions
+• Collateral values
+• Return on assets metrics
+
+**Comparison of All Three Benchmarks:**
+| Benchmark | % Used | Base | Result |
+|-----------|--------|------|--------|
+| Net Income | 5% | $4.1M | $205,000 |
+| Revenue | 0.5% | $82M | $410,000 |
+| **Assets** | **1%** | **$45M** | **$450,000** |
+
+**Asset vs. Income Benchmarks:**
+For Sunrise Industries (manufacturing — moderately asset-intensive):
+• Asset benchmark gives highest materiality ($450K)
+• Income benchmark gives lowest materiality ($205K)
+The firm chose income because earnings are "stable" — users focus on profitability.
+
+**Exam Tip:**
+The CPA exam often tests the ability to calculate materiality using multiple benchmarks and understand when each is appropriate.`,
     },
     {
       id: "req-trivial",
@@ -13743,7 +14480,39 @@ export const audMaterialityTBS: TBSQuestion = {
         value: 10250,
         tolerance: 0,
       },
-      explanation: "Clearly Trivial = Planning Materiality × 5% = $205,000 × 5% = $10,250. Misstatements below this are clearly trivial.",
+      explanation: `**Answer:** $10,250
+
+**Calculation:**
+Clearly Trivial Threshold = Planning Materiality × 5%
+= $205,000 × 5%
+= **$10,250**
+
+**What "Clearly Trivial" Means (AU-C 450.A2):**
+Amounts that are clearly inconsequential, whether individually or in aggregate, and whether judged by size, nature, or circumstances.
+
+**The Materiality Hierarchy:**
+| Level | Amount | Treatment |
+|-------|--------|-----------|
+| Planning Materiality | $205,000 | Reporting threshold |
+| Performance Materiality | $153,750 | Testing threshold |
+| **Clearly Trivial** | **$10,250** | No accumulation needed |
+
+**How It's Used:**
+| Misstatement Size | Auditor Action |
+|-------------------|----------------|
+| > $10,250 | Accumulate on summary |
+| ≤ $10,250 | May ignore (clearly trivial) |
+
+**Why 5% of Planning Materiality:**
+This is a common convention (not required by standards). The threshold should be low enough that accumulated trivial items won't approach materiality.
+
+**Common Mistakes:**
+• Confusing "clearly trivial" with "clearly inconsequential"
+• Setting threshold too high (accumulation of ignored items may approach materiality)
+• Applying only to dollar amounts (nature and circumstances also matter)
+
+**Exam Tip:**
+"Clearly trivial" is NOT zero. It allows auditors to focus on significant items rather than immaterial amounts.`,
     },
   ],
 };
@@ -13809,7 +14578,33 @@ export const regTaxFormTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-hi-error",
       },
-      explanation: "Self-employed health insurance is NOT deductible on Schedule C. It is an above-the-line deduction on Form 1040, Schedule 1.",
+      explanation: `**Correct Answer:** Error - should be on Form 1040, not Schedule C
+
+**The Rule (IRC §162(l)):**
+Self-employed health insurance is an **above-the-line deduction** taken on Form 1040, Schedule 1 — NOT a business expense on Schedule C.
+
+**Why It's NOT on Schedule C:**
+| Deduction Type | Where Claimed | Effect on SE Tax |
+|----------------|---------------|------------------|
+| Schedule C expense | Line 28 | Reduces SE tax |
+| **Schedule 1 (Line 17)** | **Above-the-line** | **Does NOT reduce SE tax** |
+
+Self-employed health insurance reduces AGI but does NOT reduce self-employment tax. Putting it on Schedule C would incorrectly reduce SE tax.
+
+**Correct Treatment:**
+| Form | Line | Item | Amount |
+|------|------|------|--------|
+| Schedule 1 | Line 17 | Self-employed health insurance | $9,600 |
+| Schedule C | Line 15 | Should be $0 | Remove |
+
+**Impact of Error:**
+• Overstated Schedule C deduction: $9,600
+• Understated net profit: $9,600
+• Understated self-employment tax
+• Correct AGI deduction missed on Schedule 1
+
+**Common Exam Trap:**
+Many candidates assume all business-related expenses go on Schedule C. Health insurance is the exception — it's a personal deduction that happens to be available to the self-employed.`,
       dropdownOptions: [
         { id: "opt-hi-correct", order: 1, text: "Correct - proper Schedule C deduction", isCorrect: false },
         { id: "opt-hi-error", order: 2, text: "Error - should be on Form 1040, not Schedule C", isCorrect: true },
@@ -13826,7 +14621,38 @@ export const regTaxFormTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-meals-error",
       },
-      explanation: "Business meals are only 50% deductible (the 100% deduction for restaurant meals ended after 2022). Should be $3,200, not $6,400.",
+      explanation: `**Correct Answer:** Error - should be 50% ($3,200)
+
+**The Current Rule (IRC §274(n)):**
+Business meals are limited to **50% deductibility**. The temporary 100% deduction for restaurant meals (2021-2022 COVID relief) has **expired**.
+
+**Timeline of Meals Deduction:**
+| Period | Deductibility | Reason |
+|--------|---------------|--------|
+| Pre-2018 | 50% | Standard rule |
+| 2018-2020 | 50% | TCJA maintained |
+| 2021-2022 | 100% | CAA temporary relief |
+| **2023+** | **50%** | **Reverted to standard** |
+
+**Calculation Error:**
+| Item | Draft | Correct | Error |
+|------|-------|---------|-------|
+| Total meals | $6,400 | N/A | N/A |
+| Deductible (50%) | $6,400 | $3,200 | **$3,200 overstated** |
+
+**Requirements for ANY Meals Deduction:**
+• Business purpose (not entertainment)
+• Taxpayer or employee present
+• Not lavish or extravagant
+• Properly documented (who, what, when, where, why)
+
+**Common Mistakes:**
+• Assuming 100% deduction still applies (it doesn't)
+• Confusing meals with entertainment (entertainment is 0% deductible)
+• Failing to separate meals from entertainment on combined receipts
+
+**Exam Tip:**
+Always check the tax year. The 100% meals deduction was a temporary COVID provision — current law is 50%.`,
       dropdownOptions: [
         { id: "opt-meals-correct", order: 1, text: "Correct - 100% deductible", isCorrect: false },
         { id: "opt-meals-error", order: 2, text: "Error - should be 50% ($3,200)", isCorrect: true },
@@ -13843,7 +14669,40 @@ export const regTaxFormTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ho-check",
       },
-      explanation: "Home office can use simplified method ($5/sq ft, max 300 sq ft = $1,500) or actual expenses. If using actual, need Form 8829. The $4,500 suggests actual method which requires verification.",
+      explanation: `**Correct Answer:** Needs verification - simplified method would be $1,500
+
+**Two Home Office Methods (IRC §280A):**
+
+| Method | Calculation | This Scenario |
+|--------|-------------|---------------|
+| Simplified | $5 × sq ft (max 300) | 300 × $5 = **$1,500** |
+| Actual (Regular) | % of home expenses | ? (needs Form 8829) |
+
+**The Issue:**
+The $4,500 deduction doesn't match simplified method:
+• Simplified max: 300 sq ft × $5 = $1,500
+• Claimed: $4,500 (3× higher)
+
+**If Using Actual Method:**
+Business use % = 300 ÷ 2,000 = **15%**
+For $4,500 to be correct, total home expenses would need to be $30,000 ($4,500 ÷ 15%)
+
+This seems HIGH — requires verification via Form 8829.
+
+**Form 8829 Requirements (Actual Method):**
+• Mortgage interest/rent
+• Utilities
+• Insurance
+• Repairs
+• Depreciation
+• Subject to gross income limitation
+
+**Exclusive Use Requirement:**
+Scenario states "uses home office exclusively for business" ✓
+This satisfies the IRC §280A(c)(1) requirement.
+
+**Exam Tip:**
+When you see a home office deduction that doesn't match the simplified method, verify Form 8829 calculations or flag for review.`,
       dropdownOptions: [
         { id: "opt-ho-correct", order: 1, text: "Correct as shown", isCorrect: false },
         { id: "opt-ho-check", order: 2, text: "Needs verification - simplified method would be $1,500", isCorrect: true },
@@ -13858,9 +14717,41 @@ export const regTaxFormTBS: TBSQuestion = {
       points: 1,
       correctAnswer: {
         type: "dropdown",
-        correctOptionId: "opt-veh-check",
+        correctOptionId: "opt-veh-correct",
       },
-      explanation: "If using actual expenses, only the business-use percentage (60%) is deductible. Need to verify if $12,000 represents 60% of actual expenses or if it needs adjustment.",
+      explanation: `**Correct Answer:** Correct - properly limited to business use
+
+**Vehicle Expense Analysis:**
+The footnote states "Business use of vehicle: 60%"
+• If total vehicle expenses were $20,000
+• Business portion = $20,000 × 60% = $12,000 ✓
+
+**The entry appears correct** — it reflects only the business-use percentage.
+
+**Two Methods for Vehicle Expenses (IRC §274):**
+
+| Method | Calculation | Record Keeping |
+|--------|-------------|----------------|
+| **Actual** | (Gas + repairs + insurance + depreciation) × business % | Receipts + mileage log |
+| Standard Mileage | IRS rate × business miles | Mileage log only |
+
+**Why Actual Method May Be Chosen:**
+• Higher deduction for expensive vehicles
+• Already committed (used actual in prior year)
+• Vehicle used primarily for business
+
+**Important Restrictions:**
+• Cannot switch to standard mileage after using actual with depreciation
+• Actual method requires detailed records of all expenses
+• Must allocate each expense by business use %
+
+**Verification Question:**
+Is $12,000 actually 60% of total expenses?
+$12,000 ÷ 60% = $20,000 total expenses
+For a full year, this is reasonable (~$1,667/month)
+
+**Exam Tip:**
+Unlike some other answers in this TBS, this one is CORRECT. The exam tests your ability to identify both errors AND correct entries.`,
       dropdownOptions: [
         { id: "opt-veh-correct", order: 1, text: "Correct - properly limited to business use", isCorrect: true },
         { id: "opt-veh-check", order: 2, text: "Error - should be 60% of total expenses", isCorrect: false },
@@ -13878,7 +14769,40 @@ export const regTaxFormTBS: TBSQuestion = {
         value: 47700,
         tolerance: 100,
       },
-      explanation: "Original $60,500 - Health insurance $9,600 - Meals overstatement $3,200 = $47,700. Home office may also need adjustment depending on method used.",
+      explanation: `**Answer:** $47,700
+
+**Correction Calculation:**
+| Item | Original | Correction | Adjusted |
+|------|----------|------------|----------|
+| Total Expenses (Draft) | $60,500 | | |
+| Less: Health Insurance | | ($9,600) | Remove entirely |
+| Less: Meals Overstatement | | ($3,200) | 50% of $6,400 |
+| **Corrected Total** | | | **$47,700** |
+
+**Step-by-Step:**
+1. Original total expenses: $60,500
+2. Remove health insurance (Schedule 1, not C): -$9,600
+3. Reduce meals from 100% to 50%: -$3,200
+4. **Corrected expenses: $47,700**
+
+**Errors Identified:**
+| Error | Amount | Status |
+|-------|--------|--------|
+| Health insurance on Schedule C | $9,600 | ✓ Corrected |
+| Meals at 100% instead of 50% | $3,200 | ✓ Corrected |
+| Home office | $4,500 vs $1,500? | Flagged for review |
+| Vehicle expenses | $12,000 | Correct as shown |
+
+**Note on Home Office:**
+We did NOT adjust home office because:
+• The actual method (Form 8829) may legitimately yield $4,500
+• We flagged it for verification but didn't assume it was wrong
+• The question asks for "fixing errors" — this one needs verification first
+
+**Impact on Net Profit:**
+Original tentative profit: $124,500
+Add back removed deductions: +$12,800
+Corrected profit: $137,300 (before any home office adjustment)`,
     },
   ],
 };
@@ -13953,7 +14877,39 @@ export const tcpMultiStateTBS: TBSQuestion = {
         value: 66500,
         tolerance: 500,
       },
-      explanation: "CA individual income tax on $500K passthrough income = approximately $66,500 (at top marginal rate of 13.3%)",
+      explanation: `**Answer:** $66,500
+
+**Calculation:**
+CA Individual Income Tax on $500,000 passthrough income
+= $500,000 × 13.3% (top marginal rate)
+= **~$66,500**
+
+**Why This Calculation Works:**
+• Single-member LLC = Disregarded entity for tax
+• All LLC income passes through to owner's personal return
+• CA has nation's highest state income tax rate (13.3%)
+• At $500K income, owner is in top bracket
+
+**California Tax Rate Structure (2023+):**
+| Income Range | Rate |
+|-------------|------|
+| $0 - $10,099 | 1% |
+| ... | ... |
+| $677,276+ (Single) | 13.3% |
+
+**Why CA Is Expensive for Pass-Through Entities:**
+Unlike some states with separate corporate rates, CA taxes all pass-through income at individual rates. High-earning owners face the full 13.3% rate.
+
+**Comparison to Other States:**
+| State | Tax on $500K | Savings vs CA |
+|-------|-------------|---------------|
+| CA | $66,500 | — |
+| FL | $0 | $66,500 |
+| TX | $37,500 (franchise) | $29,000 |
+| NV | $0 | $66,500 |
+
+**Exam Tip:**
+For single-member LLCs, always apply the state's INDIVIDUAL income tax rate to passthrough income — not corporate rates.`,
     },
     {
       id: "req-tx-franchise",
@@ -13966,7 +14922,43 @@ export const tcpMultiStateTBS: TBSQuestion = {
         value: 37500,
         tolerance: 0,
       },
-      explanation: "TX Franchise Tax = $5,000,000 × 0.75% = $37,500 (services taxed at 0.75%, not 0.375%)",
+      explanation: `**Answer:** $37,500
+
+**Calculation:**
+TX Franchise Tax = Revenue × 0.75%
+= $5,000,000 × 0.75%
+= **$37,500**
+
+**Why 0.75% (not 0.375%):**
+| Entity Type | TX Franchise Rate |
+|-------------|-------------------|
+| Retailers/Wholesalers | 0.375% |
+| **All Others (Services)** | **0.75%** |
+
+TechStart is a SOFTWARE CONSULTING business (services), not retail. Therefore, use the 0.75% rate.
+
+**Texas Franchise Tax Structure:**
+• Also called "margin tax"
+• Based on REVENUE (not income)
+• No deduction for compensation, unlike some states
+• Applies to LLCs, corps, partnerships operating in TX
+
+**Key Distinction from Income Tax:**
+| Type | Base | TX Amount |
+|------|------|-----------|
+| Income Tax | Net Income | $0 (TX has no income tax) |
+| **Franchise Tax** | **Revenue** | **$37,500** |
+
+**Planning Consideration:**
+While TX has no income tax, the franchise tax on $5M revenue ($37,500) is significant but still less than CA's income tax ($66,500).
+
+**Net Savings: TX vs CA:**
+CA tax: $66,500
+TX franchise: $37,500
+**Annual savings: $29,000**
+
+**Exam Tip:**
+Texas is often called a "no income tax" state, but the franchise tax (margin tax) still represents a significant cost, especially for high-revenue service businesses.`,
     },
     {
       id: "req-best-state",
@@ -13978,7 +14970,37 @@ export const tcpMultiStateTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-nv",
       },
-      explanation: "Nevada has no income tax and no franchise tax, making it the best option purely for income tax savings. Texas has no income tax but has a franchise tax.",
+      explanation: `**Correct Answer:** Nevada
+
+**State-by-State Income Tax Comparison:**
+| State | Income Tax | Franchise Tax | Total Tax Cost |
+|-------|------------|---------------|----------------|
+| CA | $66,500 | $800+ | $67,300+ |
+| TX | $0 | $37,500 | $37,500 |
+| **NV** | **$0** | **$0** | **~$200** (LLC fee) |
+| FL | $0 (individual) | $0 | $138.75 (LLC fee) |
+
+**Why Nevada (not Florida or Texas):**
+• Nevada: No income tax + No franchise tax = Lowest total
+• Texas: No income tax BUT franchise tax of $37,500
+• Florida: Similar to Nevada, but question asks about income tax specifically
+
+**Nevada Advantages:**
+• No corporate income tax
+• No personal income tax
+• No franchise tax based on revenue
+• Only $200 annual LLC fee
+• Strong privacy protections
+• Business-friendly legal environment
+
+**Why NOT Texas:**
+Despite "no income tax" marketing, Texas's franchise tax on $5M revenue creates $37,500 annual cost. For a service business with this revenue, TX is NOT tax-free.
+
+**Florida vs Nevada:**
+Both are excellent choices for pure income tax savings. Florida has slightly lower LLC fees ($138.75 vs $200), but both are negligible compared to CA's $66,500.
+
+**Exam Tip:**
+"No income tax" doesn't mean "no business taxes." Always check for franchise taxes, gross receipts taxes, and other state-specific levies.`,
       dropdownOptions: [
         { id: "opt-ca", order: 1, text: "California - stay put", isCorrect: false },
         { id: "opt-tx", order: 2, text: "Texas", isCorrect: false },
@@ -13996,7 +15018,40 @@ export const tcpMultiStateTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-prop-tx",
       },
-      explanation: "Texas has the highest property tax rate at 1.69%. On an $800K property, this would be $13,520 annually vs $5,840 in CA.",
+      explanation: `**Correct Answer:** Texas
+
+**Property Tax Comparison (on $800,000 property):**
+| State | Rate | Annual Property Tax |
+|-------|------|---------------------|
+| **TX** | **1.69%** | **$13,520** |
+| FL | 0.83% | $6,640 |
+| CA | 0.73% | $5,840 |
+| NV | 0.55% | $4,400 |
+
+**Why Texas Has Highest Property Tax:**
+States with NO income tax often rely heavily on property taxes to fund government services. Texas is a prime example:
+• No state income tax → higher property tax
+• No franchise tax exemption for all businesses → still has margin tax
+
+**Property Tax Trade-Off:**
+| State | Income Tax | Property Tax | Trade-off |
+|-------|------------|--------------|-----------|
+| CA | Highest | Moderate | Pay more income tax |
+| TX | None | Highest | Pay more property tax |
+| NV | None | Lowest | Best overall? |
+
+**Impact on Relocation Decision:**
+| Cost | CA | TX | Difference |
+|------|----|----|------------|
+| Income Tax | $66,500 | $0 | -$66,500 |
+| Franchise Tax | $800 | $37,500 | +$36,700 |
+| Property Tax | $5,840 | $13,520 | +$7,680 |
+| **Net Savings** | — | — | **$22,120** |
+
+TX still saves money overall, but property tax partially offsets income tax savings.
+
+**Exam Tip:**
+Multi-state planning requires analyzing ALL taxes, not just income tax. High property taxes in TX/FL partially offset income tax savings.`,
       dropdownOptions: [
         { id: "opt-prop-ca", order: 1, text: "California", isCorrect: false },
         { id: "opt-prop-tx", order: 2, text: "Texas", isCorrect: true },
@@ -14014,7 +15069,43 @@ export const tcpMultiStateTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-nexus",
       },
-      explanation: "Even after relocating, the business may still have nexus in California if customers or employees remain there, potentially requiring CA tax filing.",
+      explanation: `**Correct Answer:** May still owe CA tax if nexus exists through customers/employees
+
+**The Nexus Trap:**
+Even after physically relocating, a business can maintain **nexus** (taxable presence) in California through:
+• Remote employees working in CA
+• Customers located in CA
+• Property or inventory in CA
+• Regular solicitation in CA
+
+**Nexus Triggers in California:**
+| Activity | Creates CA Nexus? |
+|----------|-------------------|
+| CA employees (even 1 remote) | YES |
+| Significant CA sales | YES (economic nexus) |
+| Office/warehouse in CA | YES |
+| Owner still resides in CA | YES (for passthrough) |
+| CA-based customers only | Possibly (Wayfair) |
+
+**California's Aggressive Nexus Rules:**
+CA has broad economic nexus rules since the *Wayfair* decision:
+• $500,000 sales threshold, OR
+• 25% of total sales in CA
+
+**Why This Is the KEY Planning Consideration:**
+| Scenario | Tax Implication |
+|----------|-----------------|
+| Clean break from CA | New state tax only |
+| **Maintain CA nexus** | **BOTH states' taxes** |
+
+A business could end up paying BOTH Nevada's minimal taxes AND California's high taxes if nexus persists.
+
+**Why Other Options Are Wrong:**
+• "Must relocate by January 1": No specific date requirement
+• "Must convert to C-Corp": Entity type doesn't eliminate nexus issues
+
+**Exam Tip:**
+State tax planning fails if nexus analysis is incomplete. Always ask: "Will we still have taxable presence in the old state?"`,
       dropdownOptions: [
         { id: "opt-nexus", order: 1, text: "May still owe CA tax if nexus exists through customers/employees", isCorrect: true },
         { id: "opt-timing", order: 2, text: "Must relocate by January 1 to avoid all CA tax", isCorrect: false },
@@ -14074,7 +15165,35 @@ export const barFinancialAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-gpm-declining",
       },
-      explanation: "GPM: Year 1 = 40%, Year 2 = 35%, Year 3 = 30%. The gross profit margin is declining despite revenue growth, indicating cost pressures.",
+      explanation: `**Correct Answer:** Declining
+
+**Gross Profit Margin Calculation:**
+GPM = Gross Profit ÷ Revenue × 100%
+
+| Year | Gross Profit | Revenue | GPM |
+|------|--------------|---------|-----|
+| Year 1 | $4,000 | $10,000 | **40%** |
+| Year 2 | $3,920 | $11,200 | **35%** |
+| Year 3 | $3,750 | $12,500 | **30%** |
+
+**Trend Analysis:**
+• GPM dropped 10 percentage points (40% → 30%) over 3 years
+• Revenue increased 25%, but COGS increased 46%
+• Gross profit DECREASED despite revenue growth
+
+**What This Indicates:**
+| Possible Cause | Explanation |
+|----------------|-------------|
+| Rising input costs | Materials/labor costs outpacing price increases |
+| Pricing pressure | May be discounting to maintain volume |
+| Product mix shift | Selling more low-margin products |
+| Efficiency decline | Production becoming less efficient |
+
+**Red Flag:**
+Declining GPM with growing revenue is a significant warning sign. The company is "buying" revenue growth at the expense of profitability.
+
+**Exam Tip:**
+Always calculate margin percentages, not just absolute amounts. Gross profit DECREASED in absolute terms ($4,000 → $3,750) while revenue INCREASED — a clear profitability problem.`,
       dropdownOptions: [
         { id: "opt-gpm-improving", order: 1, text: "Improving", isCorrect: false },
         { id: "opt-gpm-stable", order: 2, text: "Stable", isCorrect: false },
@@ -14091,7 +15210,42 @@ export const barFinancialAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-ar-concern",
       },
-      explanation: "A/R grew 87% (Y1 to Y3) while revenue grew only 25%. Days Sales Outstanding is increasing significantly, indicating collection issues.",
+      explanation: `**Correct Answer:** Growing faster than sales - collection concern
+
+**Accounts Receivable Analysis:**
+| Year | A/R | Revenue | A/R as % of Revenue |
+|------|-----|---------|---------------------|
+| Year 1 | $1,500 | $10,000 | 15% |
+| Year 2 | $2,100 | $11,200 | 19% |
+| Year 3 | $2,800 | $12,500 | **22%** |
+
+**Growth Comparison:**
+| Metric | Y1 to Y3 Growth |
+|--------|-----------------|
+| Revenue | +25% ($10,000 → $12,500) |
+| **A/R** | **+87%** ($1,500 → $2,800) |
+
+A/R grew 3.5x faster than revenue — a significant red flag.
+
+**Days Sales Outstanding (DSO):**
+DSO = (A/R ÷ Revenue) × 365
+
+| Year | DSO |
+|------|-----|
+| Year 1 | 55 days |
+| Year 2 | 68 days |
+| Year 3 | **82 days** |
+
+Collection period increased by 27 days — nearly a month longer!
+
+**What This Indicates:**
+• Relaxed credit policies to boost sales
+• Difficulty collecting from customers
+• Potential credit quality issues
+• Cash flow deterioration
+
+**Exam Tip:**
+When A/R grows faster than sales, it suggests either looser credit terms or collection problems. Both scenarios negatively impact cash flow and increase bad debt risk.`,
       dropdownOptions: [
         { id: "opt-ar-ok", order: 1, text: "Growing proportionally with sales", isCorrect: false },
         { id: "opt-ar-concern", order: 2, text: "Growing faster than sales - collection concern", isCorrect: true },
@@ -14108,7 +15262,42 @@ export const barFinancialAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-lev-increasing",
       },
-      explanation: "Total debt increased from $4.5M to $9.5M (111% increase) while assets grew only 43%. Debt-to-assets ratio is increasing significantly.",
+      explanation: `**Correct Answer:** Significantly increasing leverage
+
+**Debt Analysis:**
+| Year | Current Liab | LT Debt | Total Debt | Total Assets | Debt Ratio |
+|------|--------------|---------|------------|--------------|------------|
+| Year 1 | $2,500 | $2,000 | $4,500 | $10,500 | **43%** |
+| Year 2 | $3,200 | $3,500 | $6,700 | $12,500 | **54%** |
+| Year 3 | $4,500 | $5,000 | $9,500 | $15,000 | **63%** |
+
+**Growth Comparison:**
+| Metric | Y1 to Y3 Change |
+|--------|-----------------|
+| Total Debt | +111% ($4.5M → $9.5M) |
+| Total Assets | +43% ($10.5M → $15.0M) |
+
+Debt grew 2.5x faster than assets!
+
+**What Debt Ratio Means:**
+| Ratio Level | Interpretation |
+|-------------|----------------|
+| 30-40% | Conservative leverage |
+| 40-60% | Moderate leverage |
+| **60%+** | **High leverage — concern** |
+
+**Risk Implications:**
+• Higher interest expense burden
+• Reduced financial flexibility
+• Increased bankruptcy risk if downturn occurs
+• May face higher borrowing costs
+
+**Combined with Declining Profitability:**
+Net income falling + Debt rising = Deteriorating debt coverage
+Interest coverage ratios are likely declining.
+
+**Exam Tip:**
+Leverage analysis is critical for going concern assessment. Rapidly increasing debt with declining profitability is a major red flag.`,
       dropdownOptions: [
         { id: "opt-lev-stable", order: 1, text: "Stable leverage", isCorrect: false },
         { id: "opt-lev-decreasing", order: 2, text: "Decreasing leverage", isCorrect: false },
@@ -14125,7 +15314,44 @@ export const barFinancialAnalysisTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-concern-profit",
       },
-      explanation: "Despite 25% revenue growth, net income declined 41% ($1.6M to $950K). Profitability erosion is the most significant concern.",
+      explanation: `**Correct Answer:** Profitability declining despite revenue growth
+
+**The Core Problem:**
+| Metric | Year 1 | Year 3 | Change |
+|--------|--------|--------|--------|
+| Revenue | $10,000 | $12,500 | **+25%** |
+| Net Income | $1,600 | $950 | **-41%** |
+
+Revenue UP 25%, Net Income DOWN 41% — a fundamental disconnect.
+
+**Profit Margin Analysis:**
+| Year | Net Income | Revenue | Net Margin |
+|------|------------|---------|------------|
+| Year 1 | $1,600 | $10,000 | **16.0%** |
+| Year 2 | $1,320 | $11,200 | **11.8%** |
+| Year 3 | $950 | $12,500 | **7.6%** |
+
+Net profit margin declined by more than HALF.
+
+**Why This Is THE Primary Concern:**
+| Issue | Why It's Critical |
+|-------|-------------------|
+| Eroding margins | Unsustainable business model |
+| Growth ≠ Value | Revenue growth destroying value |
+| Cash implications | Less cash generated per dollar of sales |
+| Investor impact | Declining returns on investment |
+
+**Root Cause Analysis (from earlier questions):**
+• Gross margin declining (cost pressures)
+• A/R growing faster than sales (collection issues)
+• Leverage increasing (taking on debt to fund losses?)
+
+**Why NOT Other Options:**
+• "Revenue growth too slow": 25% growth is healthy — the problem is profitability
+• "Asset growth unsustainable": Asset growth is reasonable (43%) — the problem is what's happening to profit margins
+
+**Exam Tip:**
+Sustainable businesses grow PROFITABLY. Revenue growth that erodes margins may indicate an unsustainable competitive strategy.`,
       dropdownOptions: [
         { id: "opt-concern-revenue", order: 1, text: "Revenue growth is too slow", isCorrect: false },
         { id: "opt-concern-profit", order: 2, text: "Profitability declining despite revenue growth", isCorrect: true },
@@ -14143,7 +15369,42 @@ export const barFinancialAnalysisTBS: TBSQuestion = {
         value: 133,
         tolerance: 2,
       },
-      explanation: "DIO = (Inventory / COGS) × 365 = ($3,200 / $8,750) × 365 = 133 days. This is quite high, indicating slow inventory turnover.",
+      explanation: `**Answer:** 133 days
+
+**Calculation:**
+Days Inventory Outstanding = (Inventory ÷ COGS) × 365
+= ($3,200 ÷ $8,750) × 365
+= 0.3657 × 365
+= **133 days**
+
+**What This Means:**
+It takes Summit Corp 133 days (about 4.4 months) to sell its inventory on average.
+
+**Is 133 Days Good or Bad?**
+| Industry | Typical DIO |
+|----------|-------------|
+| Grocery | 20-30 days |
+| Retail | 60-90 days |
+| Manufacturing | 60-120 days |
+| **Summit Corp** | **133 days — HIGH** |
+
+**Trend Analysis:**
+| Year | Inventory | COGS | DIO |
+|------|-----------|------|-----|
+| Year 1 | $1,800 | $6,000 | 110 days |
+| Year 2 | $2,400 | $7,280 | 120 days |
+| Year 3 | $3,200 | $8,750 | **133 days** |
+
+DIO increased 23 days over 3 years — inventory is turning MORE SLOWLY.
+
+**Implications:**
+• Cash tied up in slow-moving inventory
+• Higher storage and insurance costs
+• Risk of obsolescence
+• Potential indicator of sales problems
+
+**Exam Tip:**
+Use ending inventory (not average) when only year-end data is provided. The formula using average inventory would be: (Beginning + Ending) ÷ 2 ÷ COGS × 365.`,
     },
   ],
 };
@@ -14212,7 +15473,31 @@ export const barBudgetingTBS: TBSQuestion = {
         value: 600000,
         tolerance: 0,
       },
-      explanation: "Flexible Budget Revenue = 12,000 units × $50 = $600,000",
+      explanation: `**Answer:** $600,000
+
+**Calculation:**
+Flexible Budget Revenue = Actual Units Sold × Standard Selling Price
+= 12,000 units × $50.00/unit = **$600,000**
+
+**Understanding Flexible Budgets:**
+A flexible budget adjusts the STATIC budget to the ACTUAL activity level:
+
+| Budget Type | Activity Level | Purpose |
+|-------------|----------------|---------|
+| Static Budget | Planned (10,000 units) | Original plan |
+| Flexible Budget | Actual (12,000 units) | "What should have happened" |
+| Actual Results | Actual (12,000 units) | What DID happen |
+
+**Why $600,000 (not $500,000 or $570,000):**
+• $500,000 = Static budget (10,000 × $50) - wrong activity level
+• $570,000 = Actual revenue - different question entirely
+• $600,000 = Flexible budget (12,000 × $50) - CORRECT
+
+**Key Concept:**
+Flexible budgets use STANDARD prices/rates but adjust to ACTUAL volume. This isolates volume effects from price/efficiency effects.
+
+**Exam Tip:**
+Flexible budget = "What SHOULD have been" at actual volume using standard costs/prices.`,
     },
     {
       id: "req-flex-dm",
@@ -14225,7 +15510,32 @@ export const barBudgetingTBS: TBSQuestion = {
         value: 180000,
         tolerance: 0,
       },
-      explanation: "Flexible Budget DM = 12,000 units × $15 = $180,000",
+      explanation: `**Answer:** $180,000
+
+**Calculation:**
+Flexible Budget Direct Materials = Actual Units × Standard DM Cost per Unit
+= 12,000 units × $15.00/unit = **$180,000**
+
+**Comparison to Other Budget Values:**
+
+| Budget Type | Direct Materials | Calculation |
+|-------------|------------------|-------------|
+| Static Budget | $150,000 | 10,000 × $15 |
+| Flexible Budget | **$180,000** | 12,000 × $15 |
+| Actual | $174,000 | Given |
+
+**Why This Matters:**
+Comparing Actual ($174,000) to Flexible Budget ($180,000) tells us Sterling SAVED $6,000 on materials — a FAVORABLE variance!
+
+**Variance Analysis Preview:**
+• DM Flexible Budget Variance = $174,000 - $180,000 = **+$6,000 Favorable**
+• Could be due to lower prices OR more efficient usage
+
+**Common Mistake:**
+Using static budget ($150,000) for variance analysis. This mixes volume and efficiency variances together, making analysis useless.
+
+**Exam Tip:**
+Always use flexible budget for meaningful variance analysis. Static budget comparisons include volume variance, which isn't controllable by production managers.`,
     },
     {
       id: "req-flex-dl",
@@ -14238,7 +15548,36 @@ export const barBudgetingTBS: TBSQuestion = {
         value: 120000,
         tolerance: 0,
       },
-      explanation: "Flexible Budget DL = 12,000 units × $10 = $120,000",
+      explanation: `**Answer:** $120,000
+
+**Calculation:**
+Flexible Budget Direct Labor = Actual Units × Standard DL Cost per Unit
+= 12,000 units × $10.00/unit = **$120,000**
+
+**Budget Comparison:**
+
+| Budget Type | Direct Labor | Calculation |
+|-------------|--------------|-------------|
+| Static Budget | $100,000 | 10,000 × $10 |
+| Flexible Budget | **$120,000** | 12,000 × $10 |
+| Actual | $126,000 | Given |
+
+**Variance Analysis:**
+• DL Flexible Budget Variance = $126,000 - $120,000 = **-$6,000 Unfavorable**
+• Sterling spent $6,000 MORE than expected for the actual volume
+
+**Possible Causes of Unfavorable DL Variance:**
+1. **Rate Variance** - Paid higher wages than standard
+2. **Efficiency Variance** - Took more hours than standard
+3. **Mix of both** - Common in practice
+
+**Breaking Down the Variance:**
+To determine if rate or efficiency, you'd need:
+• Actual hours worked (not given here)
+• Actual wage rate (not given here)
+
+**Exam Tip:**
+Flexible budget variance = Combined rate + efficiency variance. Further breakdown requires actual hours data.`,
     },
     {
       id: "req-sales-variance",
@@ -14251,7 +15590,41 @@ export const barBudgetingTBS: TBSQuestion = {
         value: -30000,
         tolerance: 0,
       },
-      explanation: "Sales Price Variance = $570,000 - $600,000 = -$30,000 Unfavorable. Actual price was $47.50, not $50.",
+      explanation: `**Answer:** -$30,000 (Unfavorable)
+
+**Calculation:**
+Sales Price Variance = Actual Revenue - Flexible Budget Revenue
+= $570,000 - $600,000 = **-$30,000 Unfavorable**
+
+**Breaking Down the Variance:**
+
+| Item | Value |
+|------|-------|
+| Actual Revenue | $570,000 |
+| Units Sold | 12,000 |
+| Actual Price per Unit | $570,000 ÷ 12,000 = **$47.50** |
+| Standard Price per Unit | **$50.00** |
+| Price Difference | -$2.50/unit |
+| Total Variance | -$2.50 × 12,000 = **-$30,000** |
+
+**Why Unfavorable (Negative):**
+Sterling sold at $47.50 instead of the standard $50.00 — they gave up $2.50 per unit in pricing power.
+
+**Possible Reasons for Lower Price:**
+• Competitive pressure / market conditions
+• Volume discounts to large customers
+• Promotional pricing
+• Mix shift to lower-priced products
+
+**Sign Convention:**
+• **Negative variance = Unfavorable** (less revenue or more cost)
+• **Positive variance = Favorable** (more revenue or less cost)
+
+**Common Mistake:**
+Confusing direction. If Actual < Budget for REVENUE, that's unfavorable. If Actual < Budget for COST, that's favorable.
+
+**Exam Tip:**
+For revenue: Actual > Budget = Favorable. For costs: Actual > Budget = Unfavorable.`,
     },
     {
       id: "req-dl-variance",
@@ -14264,7 +15637,39 @@ export const barBudgetingTBS: TBSQuestion = {
         value: -6000,
         tolerance: 0,
       },
-      explanation: "DL Variance = Actual ($126,000) - Flexible ($120,000) = -$6,000 Unfavorable",
+      explanation: `**Answer:** -$6,000 (Unfavorable)
+
+**Calculation:**
+Direct Labor Flexible Budget Variance = Actual DL - Flexible Budget DL
+= $126,000 - $120,000 = **-$6,000 Unfavorable**
+
+**Variance Summary:**
+
+| Component | Amount | Calculation |
+|-----------|--------|-------------|
+| Flexible Budget DL | $120,000 | 12,000 units × $10.00 |
+| Actual DL | $126,000 | Given |
+| **Variance** | **-$6,000** | Unfavorable |
+
+**Analysis:**
+Sterling spent $126,000 on direct labor when they should have spent only $120,000 at standard. This 5% overspend could indicate:
+
+**Potential Causes:**
+1. **Rate Issue** - Higher hourly wages than standard
+2. **Efficiency Issue** - More hours worked than standard
+3. **Overtime** - Premium pay for extra hours
+4. **Training time** - New workers less efficient
+5. **Quality issues** - Rework requiring extra labor
+
+**To Break Down Further (if data available):**
+• Rate Variance = (Actual Rate - Standard Rate) × Actual Hours
+• Efficiency Variance = (Actual Hours - Standard Hours) × Standard Rate
+
+**Sign Convention Reminder:**
+For COSTS: Actual > Budget = **Unfavorable** (spent more than planned)
+
+**Exam Tip:**
+The flexible budget variance is the TOTAL variance from price/rate and efficiency combined. It's the starting point for deeper variance analysis.`,
     },
     {
       id: "req-fixed-variance",
@@ -14277,7 +15682,38 @@ export const barBudgetingTBS: TBSQuestion = {
         value: -3500,
         tolerance: 0,
       },
-      explanation: "Fixed Variance = Actual ($82,000 + $41,500) - Budget ($80,000 + $40,000) = $123,500 - $120,000 = -$3,500 Unfavorable",
+      explanation: `**Answer:** -$3,500 (Unfavorable)
+
+**Calculation:**
+Total Fixed Cost Variance = Total Actual Fixed Costs - Total Budgeted Fixed Costs
+
+| Fixed Cost | Budget | Actual | Variance |
+|------------|--------|--------|----------|
+| Fixed Overhead | $80,000 | $82,000 | -$2,000 (U) |
+| Selling & Admin (Fixed) | $40,000 | $41,500 | -$1,500 (U) |
+| **Total** | **$120,000** | **$123,500** | **-$3,500 (U)** |
+
+**Key Concept — Fixed Costs Don't Flex:**
+Unlike variable costs, fixed costs do NOT adjust with volume:
+• Flexible Budget Fixed Costs = Static Budget Fixed Costs
+• $120,000 remains $120,000 whether producing 10,000 or 12,000 units
+
+**Why the Overspend?**
+Possible causes of the $3,500 unfavorable variance:
+• Unexpected equipment repairs
+• Higher insurance premiums
+• Rent increases
+• Additional administrative staff
+• Utility rate increases
+
+**Fixed Cost Variance Analysis:**
+Fixed costs only have a SPENDING (or budget) variance — no efficiency variance because there's no "standard" usage.
+
+**Common Mistake:**
+Trying to "flex" fixed costs. Fixed means fixed — they don't change with production volume.
+
+**Exam Tip:**
+Fixed cost variances are always comparing Actual to Budget (not to a flexed amount). Any overspend is typically investigated as a controllable spending issue.`,
     },
   ],
 };
