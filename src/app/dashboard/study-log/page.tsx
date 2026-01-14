@@ -1,21 +1,9 @@
 "use client";
 
-import { useState, useEffect } from"react";
-import { createClient } from"@/lib/supabase/client";
-import { useAuth } from"@/components/auth/AuthProvider";
-import { useStudySessionAchievements } from"@/components/gamification/AchievementProvider";
-import Link from"next/link";
-import type { StudySession, SectionCode } from"@/lib/supabase/types";
-
-const sections: SectionCode[] = ["FAR","AUD","REG","TCP","BAR","ISC"];
-
-// Get local date in YYYY-MM-DD format (avoids timezone issues with toISOString)
-function getLocalDateString(date: Date = new Date()): string {
- const year = date.getFullYear();
- const month = String(date.getMonth() + 1).padStart(2, '0');
- const day = String(date.getDate()).padStart(2, '0');
- return `${year}-${month}-${day}`;
-}
+import { useState, useEffect } from "react";
+import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/components/auth/AuthProvider";
+import Link from "next/link";
 
 interface PracticeAttempt {
  id: string;
@@ -55,6 +43,19 @@ interface ExamSimulationHistory {
  total_score_percentage: number | null;
  time_limit_seconds: number;
  time_spent_seconds: number;
+}
+
+interface TBSAttempt {
+ id: string;
+ tbs_id: string;
+ section: string | null;
+ started_at: string;
+ completed_at: string | null;
+ time_spent_seconds: number | null;
+ score_earned: number | null;
+ max_score: number | null;
+ score_percentage: number | null;
+ is_complete: boolean;
 }
 
 // Group attempts into sessions (attempts within 30 minutes of each other)
@@ -114,23 +115,15 @@ function createSessionFromAttempts(attempts: PracticeAttempt[]): PracticeSession
 }
 
 export default function StudyLogPage() {
- const { user, loading: authLoading, refreshProfile } = useAuth();
- const { onStudySessionLogged } = useStudySessionAchievements();
- const [sessions, setSessions] = useState<StudySession[]>([]);
+ const { user, loading: authLoading } = useAuth();
  const [practiceSessions, setPracticeSessions] = useState<PracticeSession[]>([]);
  const [visiblePracticeSessions, setVisiblePracticeSessions] = useState(5);
  const [loading, setLoading] = useState(true);
- const [showForm, setShowForm] = useState(false);
- const [formData, setFormData] = useState({
- section:"FAR"as SectionCode,
- date: getLocalDateString(),
- hours:"",
- notes:"",
- });
- const [submitting, setSubmitting] = useState(false);
- const [activeTab, setActiveTab] = useState<'manual' | 'practice' | 'exam'>('practice');
+ const [activeTab, setActiveTab] = useState<'practice' | 'tbs' | 'exam'>('practice');
  const [examSimulations, setExamSimulations] = useState<ExamSimulationHistory[]>([]);
  const [visibleExamSimulations, setVisibleExamSimulations] = useState(5);
+ const [tbsAttempts, setTbsAttempts] = useState<TBSAttempt[]>([]);
+ const [visibleTbsAttempts, setVisibleTbsAttempts] = useState(5);
  const supabase = createClient();
 
  useEffect(() => {
@@ -146,18 +139,6 @@ export default function StudyLogPage() {
  if (!supabase || !user) {
  setLoading(false);
  return;
- }
-
- // Fetch manual study sessions
- const { data: sessionData } = await supabase
- .from("study_sessions")
- .select("*")
- .eq("user_id", user.id)
- .order("date", { ascending: false })
- .limit(50);
-
- if (sessionData) {
- setSessions(sessionData as StudySession[]);
  }
 
  // Fetch practice attempts
@@ -185,70 +166,26 @@ export default function StudyLogPage() {
  setExamSimulations(examData as ExamSimulationHistory[]);
  }
 
+ // Fetch TBS attempts (standalone TBS practice, not exam TBS)
+ const { data: tbsData } = await supabase
+ .from("tbs_attempts")
+ .select("id, tbs_id, section, started_at, completed_at, time_spent_seconds, score_earned, max_score, score_percentage, is_complete")
+ .eq("user_id", user.id)
+ .eq("is_complete", true)
+ .is("exam_history_id", null) // Only standalone TBS, not exam simulations
+ .order("completed_at", { ascending: false })
+ .limit(50);
+
+ if (tbsData) {
+ setTbsAttempts(tbsData as TBSAttempt[]);
+ }
+
  setLoading(false);
- };
-
- const handleSubmit = async (e: React.FormEvent) => {
- e.preventDefault();
- if (!user || !supabase) return;
-
- setSubmitting(true);
-
- const { error } = await supabase.from("study_sessions").insert({
- user_id: user.id,
- section: formData.section,
- date: formData.date,
- hours: parseFloat(formData.hours),
- notes: formData.notes || null,
- });
-
- if (!error) {
- // Trigger achievement check
- await onStudySessionLogged(formData.section, parseFloat(formData.hours));
-
- // Refresh profile to update streak display
- await refreshProfile();
-
- setFormData({
- section:"FAR",
- date: getLocalDateString(),
- hours:"",
- notes:"",
- });
- setShowForm(false);
- fetchData();
- }
-
- setSubmitting(false);
- };
-
- const handleDelete = async (id: string) => {
- if (!confirm("Delete this study session?") || !supabase) return;
-
- const { error } = await supabase
- .from("study_sessions")
- .delete()
- .eq("id", id);
-
- if (!error) {
- fetchData();
- }
- };
-
- // Helper function to format hours (show minutes if under 1 hour)
- const formatTime = (hours: number): string => {
- if (hours === 0) return"0h";
- if (hours < 1) {
- const minutes = Math.round(hours * 60);
- return `${minutes}m`;
- }
- if (hours % 1 === 0) return `${hours}h`;
- return `${hours.toFixed(1)}h`;
  };
 
  // Format seconds to hours and minutes
  const formatSeconds = (seconds: number): string => {
- if (seconds === 0) return"0m";
+ if (seconds === 0) return "0m";
  const hours = Math.floor(seconds / 3600);
  const minutes = Math.round((seconds % 3600) / 60);
  if (hours === 0) return `${minutes}m`;
@@ -256,48 +193,36 @@ export default function StudyLogPage() {
  return `${hours}h ${minutes}m`;
  };
 
- // Calculate weekly stats from both manual sessions and practice
- // Get this week's start date as a string in local time (YYYY-MM-DD format)
+ // Calculate weekly stats from practice sessions
  const now = new Date();
  const thisWeekStart = new Date(now);
  thisWeekStart.setDate(now.getDate() - now.getDay());
  thisWeekStart.setHours(0, 0, 0, 0);
- const thisWeekStartString = getLocalDateString(thisWeekStart);
 
- // Manual session hours - compare date strings to avoid timezone issues
- const thisWeekManualSessions = sessions.filter(
- (s) => s.date >= thisWeekStartString
- );
- const weeklyManualHours = thisWeekManualSessions.reduce((sum, s) => sum + Number(s.hours), 0);
- const totalManualHours = sessions.reduce((sum, s) => sum + Number(s.hours), 0);
-
- // Practice session hours (from time_spent_seconds)
+ // Practice session stats
  const thisWeekPracticeSessions = practiceSessions.filter(
  (s) => s.date >= thisWeekStart
  );
  const weeklyPracticeSeconds = thisWeekPracticeSessions.reduce((sum, s) => sum + s.totalTimeSeconds, 0);
  const totalPracticeSeconds = practiceSessions.reduce((sum, s) => sum + s.totalTimeSeconds, 0);
 
- // Combined stats
- const weeklyTotalHours = weeklyManualHours + (weeklyPracticeSeconds / 3600);
- const totalTotalHours = totalManualHours + (totalPracticeSeconds / 3600);
+ // TBS session stats
+ const thisWeekTbsAttempts = tbsAttempts.filter(
+ (t) => t.completed_at && new Date(t.completed_at) >= thisWeekStart
+ );
+ const weeklyTbsSeconds = thisWeekTbsAttempts.reduce((sum, t) => sum + (t.time_spent_seconds || 0), 0);
+ const totalTbsSeconds = tbsAttempts.reduce((sum, t) => sum + (t.time_spent_seconds || 0), 0);
 
- // Group manual sessions by week
- // Use date strings to avoid timezone issues when grouping
- const groupedSessions = sessions.reduce((groups, session) => {
- // Parse the date string parts directly to avoid timezone conversion
- const [year, month, day] = session.date.split('-').map(Number);
- const date = new Date(year, month - 1, day); // month is 0-indexed
- const weekStart = new Date(date);
- weekStart.setDate(date.getDate() - date.getDay());
- const weekKey = getLocalDateString(weekStart);
+ // Exam simulation stats
+ const thisWeekExams = examSimulations.filter(
+ (e) => e.completed_at && new Date(e.completed_at) >= thisWeekStart
+ );
+ const weeklyExamSeconds = thisWeekExams.reduce((sum, e) => sum + (e.time_spent_seconds || 0), 0);
+ const totalExamSeconds = examSimulations.reduce((sum, e) => sum + (e.time_spent_seconds || 0), 0);
 
- if (!groups[weekKey]) {
- groups[weekKey] = [];
- }
- groups[weekKey].push(session);
- return groups;
- }, {} as Record<string, StudySession[]>);
+ // Combined totals
+ const weeklyTotalSeconds = weeklyPracticeSeconds + weeklyTbsSeconds + weeklyExamSeconds;
+ const totalTotalSeconds = totalPracticeSeconds + totalTbsSeconds + totalExamSeconds;
 
  // Show more practice sessions
  const handleShowMorePractice = () => {
@@ -307,6 +232,11 @@ export default function StudyLogPage() {
  // Show more exam simulations
  const handleShowMoreExams = () => {
  setVisibleExamSimulations(prev => prev + 10);
+ };
+
+ // Show more TBS attempts
+ const handleShowMoreTbs = () => {
+ setVisibleTbsAttempts(prev => prev + 10);
  };
 
  // Get exam type label
@@ -330,170 +260,84 @@ export default function StudyLogPage() {
  return (
  <div className="space-y-6">
  {/* Header */}
- <div className="flex items-center justify-between">
  <div>
  <h1 className="text-2xl font-bold text-[var(--foreground)]">Study Log</h1>
- <p className="text-[var(--muted)]">Track your study time and review practice history</p>
- </div>
- <button
- onClick={() => setShowForm(!showForm)}
- className="btn-primary"
- >
- {showForm ?"Cancel":"+ Log Session"}
- </button>
+ <p className="text-[var(--muted)]">Review your practice history and track progress</p>
  </div>
 
  {/* Stats */}
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
  <p className="text-sm text-[var(--muted)]">This Week</p>
- <p className="text-2xl font-bold text-[var(--primary)]">{formatTime(weeklyTotalHours)}</p>
- <p className="text-xs text-[var(--muted)] mt-1">
- {weeklyManualHours > 0 && `${formatTime(weeklyManualHours)} logged`}
- {weeklyManualHours > 0 && weeklyPracticeSeconds > 0 && ' + '}
- {weeklyPracticeSeconds > 0 && `${formatSeconds(weeklyPracticeSeconds)} practice`}
- </p>
+ <p className="text-2xl font-bold text-[var(--primary)]">{formatSeconds(weeklyTotalSeconds)}</p>
+ <p className="text-xs text-[var(--muted)] mt-1">total study time</p>
  </div>
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
- <p className="text-sm text-[var(--muted)]">Total Hours</p>
- <p className="text-2xl font-bold text-green-600 dark:text-green-400">{formatTime(totalTotalHours)}</p>
- <p className="text-xs text-[var(--muted)] mt-1">
- {totalManualHours > 0 && `${formatTime(totalManualHours)} logged`}
- {totalManualHours > 0 && totalPracticeSeconds > 0 && ' + '}
- {totalPracticeSeconds > 0 && `${formatSeconds(totalPracticeSeconds)} practice`}
- </p>
+ <p className="text-sm text-[var(--muted)]">All Time</p>
+ <p className="text-2xl font-bold text-green-600 dark:text-green-400">{formatSeconds(totalTotalSeconds)}</p>
+ <p className="text-xs text-[var(--muted)] mt-1">total study time</p>
  </div>
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
- <p className="text-sm text-[var(--muted)]">Practice Sessions</p>
- <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">{thisWeekPracticeSessions.length}</p>
- <p className="text-xs text-[var(--muted)] mt-1">this week</p>
- </div>
- <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
- <p className="text-sm text-[var(--muted)]">Questions Answered</p>
- <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+ <p className="text-sm text-[var(--muted)]">MCQs Answered</p>
+ <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
  {thisWeekPracticeSessions.reduce((sum, s) => sum + s.totalCount, 0)}
  </p>
  <p className="text-xs text-[var(--muted)] mt-1">this week</p>
  </div>
- </div>
-
- {/* Log Form */}
- {showForm && (
- <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
- <h2 className="text-lg font-semibold text-[var(--foreground)] mb-4">Log Study Session</h2>
- <form onSubmit={handleSubmit} className="space-y-4">
- <div className="grid md:grid-cols-3 gap-4">
- <div>
- <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
- Section
- </label>
- <select
- value={formData.section}
- onChange={(e) => setFormData({ ...formData, section: e.target.value as SectionCode })}
- className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-[var(--border)] bg-white dark:bg-[var(--card-hover)] text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
- >
- {sections.map((s) => (
- <option key={s} value={s}>{s}</option>
- ))}
- </select>
- </div>
- <div>
- <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
- Date
- </label>
- <input
- type="date"
- value={formData.date}
- onChange={(e) => setFormData({ ...formData, date: e.target.value })}
- max={new Date().toISOString().split("T")[0]}
- className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-[var(--border)] bg-white dark:bg-[var(--card-hover)] text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
- />
- </div>
- <div>
- <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
- Hours
- </label>
- <input
- type="number"
- step="0.25"
- min="0.25"
- max="24"
- value={formData.hours}
- onChange={(e) => setFormData({ ...formData, hours: e.target.value })}
- placeholder="e.g., 2.5"
- required
- className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-[var(--border)] bg-white dark:bg-[var(--card-hover)] text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
- />
+ <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-5">
+ <p className="text-sm text-[var(--muted)]">TBS Completed</p>
+ <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+ {thisWeekTbsAttempts.length}
+ </p>
+ <p className="text-xs text-[var(--muted)] mt-1">this week</p>
  </div>
  </div>
- <div>
- <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
- Notes (optional)
- </label>
- <textarea
- value={formData.notes}
- onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
- placeholder="What did you study? Any topics or chapters?"
- rows={2}
- className="w-full px-4 py-2 rounded-lg border border-[var(--border)] dark:border-[var(--border)] bg-white dark:bg-[var(--card-hover)] text-[var(--foreground)] focus:ring-2 focus:ring-[var(--primary)] outline-none resize-none"
- />
- </div>
- <button
- type="submit"
- disabled={submitting}
- className="btn-primary disabled:opacity-50"
- >
- {submitting ?"Saving...":"Save Session"}
- </button>
- </form>
- </div>
- )}
 
  {/* Tab Navigation */}
- <div className="flex border-b border-[var(--border)]">
+ <div className="flex flex-wrap border-b border-[var(--border)]">
  <button
  onClick={() => setActiveTab('practice')}
- className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+ className={`px-4 md:px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
  activeTab === 'practice'
  ? 'border-[var(--primary)] text-[var(--primary)]'
  : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
  }`}
  >
- Practice History ({practiceSessions.length})
+ MCQs ({practiceSessions.length})
+ </button>
+ <button
+ onClick={() => setActiveTab('tbs')}
+ className={`px-4 md:px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+ activeTab === 'tbs'
+ ? 'border-[var(--primary)] text-[var(--primary)]'
+ : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
+ }`}
+ >
+ TBS ({tbsAttempts.length})
  </button>
  <button
  onClick={() => setActiveTab('exam')}
- className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+ className={`px-4 md:px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
  activeTab === 'exam'
  ? 'border-[var(--primary)] text-[var(--primary)]'
  : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
  }`}
  >
- Exam Simulations ({examSimulations.length})
- </button>
- <button
- onClick={() => setActiveTab('manual')}
- className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
- activeTab === 'manual'
- ? 'border-[var(--primary)] text-[var(--primary)]'
- : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
- }`}
- >
- All Studying ({sessions.length})
+ Exams ({examSimulations.length})
  </button>
  </div>
 
- {/* Practice History Tab */}
+ {/* Multiple Choice Tab */}
  {activeTab === 'practice' && (
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
  <div className="p-6 border-b border-[var(--border)]">
  <div className="flex items-center justify-between">
- <h2 className="text-lg font-semibold text-[var(--foreground)]">Practice Sessions</h2>
+ <h2 className="text-lg font-semibold text-[var(--foreground)]">Multiple Choice Questions</h2>
  <Link
- href="/dashboard/practice/history"
+ href="/dashboard/practice"
  className="text-sm text-[var(--primary)] hover:underline"
  >
- View Full History →
+ Practice More MCQs →
  </Link>
  </div>
  <p className="text-sm text-[var(--muted)] mt-1">
@@ -508,8 +352,8 @@ export default function StudyLogPage() {
  <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
  </svg>
  </div>
- <p className="text-[var(--muted)] mb-4">No practice sessions yet</p>
- <Link href="/dashboard/practice"className="btn-primary inline-block">
+ <p className="text-[var(--muted)] mb-4">No MCQ practice sessions yet</p>
+ <Link href="/dashboard/practice" className="btn-primary inline-block">
  Start Practicing
  </Link>
  </div>
@@ -686,91 +530,103 @@ export default function StudyLogPage() {
  </div>
  )}
 
- {/* All Studying Tab */}
- {activeTab === 'manual' && (
+ {/* Task-Based Simulations Tab */}
+ {activeTab === 'tbs' && (
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
  <div className="p-6 border-b border-[var(--border)]">
- <h2 className="text-lg font-semibold text-[var(--foreground)]">All Studying</h2>
+ <div className="flex items-center justify-between">
+ <h2 className="text-lg font-semibold text-[var(--foreground)]">Task-Based Simulations</h2>
+ <Link
+ href="/dashboard/simulations"
+ className="text-sm text-[var(--primary)] hover:underline"
+ >
+ Practice More TBS →
+ </Link>
+ </div>
  <p className="text-sm text-[var(--muted)] mt-1">
- Track additional study time (reading, flashcards, etc.)
+ Click on a simulation to review your answers
  </p>
  </div>
 
- {sessions.length === 0 ? (
+ {tbsAttempts.length === 0 ? (
  <div className="p-12 text-center">
  <div className="w-16 h-16 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-full flex items-center justify-center mx-auto mb-4">
  <svg className="w-8 h-8 text-[var(--muted)]"fill="none"stroke="currentColor"viewBox="0 0 24 24">
- <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+ <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
  </svg>
  </div>
- <p className="text-[var(--muted)] mb-4">No manual study sessions logged yet</p>
- <button onClick={() => setShowForm(true)} className="btn-primary">
- Log Your First Session
- </button>
+ <p className="text-[var(--muted)] mb-4">No TBS practice sessions completed yet</p>
+ <Link href="/dashboard/simulations"className="btn-primary inline-block">
+ Start TBS Practice
+ </Link>
  </div>
  ) : (
+ <>
  <div className="divide-y divide-[var(--border)] dark:divide-[var(--border)]">
- {Object.entries(groupedSessions).map(([weekStart, weekSessions]) => {
- const weekTotal = weekSessions.reduce((sum, s) => sum + Number(s.hours), 0);
- const weekDate = new Date(weekStart);
-
- return (
- <div key={weekStart} className="p-6">
- <div className="flex items-center justify-between mb-4">
- <h3 className="font-medium text-[var(--foreground)]">
- Week of {weekDate.toLocaleDateString("en-US", { month:"short", day:"numeric"})}
- </h3>
- <span className="text-sm font-semibold text-[var(--primary)]">
- {formatTime(weekTotal)}
- </span>
- </div>
- <div className="space-y-3">
- {weekSessions.map((session) => (
- <div
- key={session.id}
- className="flex items-center justify-between py-2 px-4 bg-[var(--card)] dark:bg-[var(--card-hover)]/50 rounded-lg"
+ {tbsAttempts.slice(0, visibleTbsAttempts).map((tbs) => (
+ <Link
+ key={tbs.id}
+ href={`/dashboard/simulations/review/${tbs.id}`}
+ className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
  >
  <div className="flex items-center space-x-4">
- <div className="w-12 h-12 bg-[var(--primary)] rounded-lg flex items-center justify-center">
- <span className="text-white font-bold text-sm">{session.section}</span>
+ <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+ <span className="text-white font-bold text-sm">{tbs.section || 'TBS'}</span>
  </div>
  <div>
  <p className="font-medium text-[var(--foreground)]">
- {Number(session.hours) < 1
- ? `${Math.round(Number(session.hours) * 60)} minutes`
- : `${Number(session.hours).toFixed(1)} hours`}
+ Task-Based Simulation
+ {(tbs.time_spent_seconds || 0) > 0 && (
+ <span className="text-[var(--muted)] font-normal ml-2">
+ ({formatSeconds(tbs.time_spent_seconds || 0)})
+ </span>
+ )}
  </p>
  <p className="text-sm text-[var(--muted)]">
- {new Date(session.date).toLocaleDateString("en-US", {
+ {tbs.completed_at && new Date(tbs.completed_at).toLocaleDateString("en-US", {
  weekday:"short",
  month:"short",
  day:"numeric",
+ hour:"numeric",
+ minute:"2-digit",
  })}
  </p>
  </div>
  </div>
+
  <div className="flex items-center space-x-4">
- {session.notes && (
- <p className="text-sm text-[var(--muted)] max-w-xs truncate hidden md:block">
- {session.notes}
+ <div className="text-right">
+ <p className={`text-lg font-bold ${
+ (tbs.score_percentage || 0) >= 80 ?"text-green-600 dark:text-green-400":
+ (tbs.score_percentage || 0) >= 60 ?"text-yellow-600 dark:text-yellow-400":
+"text-red-600 dark:text-red-400"
+ }`}>
+ {tbs.score_percentage?.toFixed(0) || 0}%
  </p>
- )}
- <button
- onClick={() => handleDelete(session.id)}
- className="text-red-500 hover:text-red-700 p-1"
- >
- <svg className="w-5 h-5"fill="none"stroke="currentColor"viewBox="0 0 24 24">
- <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+ <p className="text-xs text-[var(--muted)]">
+ {tbs.score_earned || 0}/{tbs.max_score || 0} pts
+ </p>
+ </div>
+ <svg className="w-5 h-5 text-[var(--muted)]"fill="none"stroke="currentColor"viewBox="0 0 24 24">
+ <path strokeLinecap="round"strokeLinejoin="round"strokeWidth={2} d="M9 5l7 7-7 7"/>
  </svg>
- </button>
  </div>
- </div>
+ </Link>
  ))}
  </div>
+
+ {/* Show More Button */}
+ {visibleTbsAttempts < tbsAttempts.length && (
+ <div className="p-4 text-center border-t border-[var(--border)]">
+ <button
+ onClick={handleShowMoreTbs}
+ className="text-[var(--primary)] hover:text-[var(--primary-dark)] font-medium text-sm"
+ >
+ Show More ({tbsAttempts.length - visibleTbsAttempts} remaining)
+ </button>
  </div>
- );
- })}
- </div>
+ )}
+ </>
  )}
  </div>
  )}

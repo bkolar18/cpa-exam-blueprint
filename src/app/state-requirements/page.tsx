@@ -196,9 +196,12 @@ export default function StateRequirementsPage() {
  </div>
 
  <div className="mt-8 text-center">
- <Link href="/study-plan"className="btn-primary inline-block">
- Get Your Free Study Plan
+ <Link href="/signup" className="btn-primary inline-block">
+ Get Started Free Today
  </Link>
+ <p className="text-xs text-[var(--muted)] mt-3">
+ Free during beta • No credit card required
+ </p>
  </div>
  </div>
  </section>

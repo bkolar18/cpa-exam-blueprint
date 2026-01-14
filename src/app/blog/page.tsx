@@ -115,10 +115,10 @@ export default function BlogPage() {
  We&apos;re working on creating valuable content to help you pass the CPA exam. Check back soon!
  </p>
  <Link
- href="/study-plan"
+ href="/signup"
  className="btn-primary inline-block"
  >
- Build Your Study Plan
+ Create Free Account
  </Link>
  </div>
  ) : (
@@ -154,14 +154,17 @@ export default function BlogPage() {
  Ready to Start Your CPA Journey?
  </h2>
  <p className="text-gray-600 dark:text-[var(--muted-light)] mb-6 max-w-2xl mx-auto">
- Get a personalized study plan based on your schedule, background, and goals.
+ Get free access to practice questions, study tools, and personalized progress tracking with Meridian CPA Academy.
  </p>
  <Link
- href="/study-plan"
- className="btn-secondary inline-block"
+ href="/signup"
+ className="btn-primary inline-block"
  >
- Build My Free Study Plan
+ Get Started Free Today
  </Link>
+ <p className="text-xs text-[var(--muted)] mt-3">
+ Free during beta • No credit card required
+ </p>
  </section>
  </div>
  </div>

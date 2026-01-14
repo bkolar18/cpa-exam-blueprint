@@ -23,14 +23,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs">
-            <Link href="/study-plan" className="text-gray-300 hover:text-white transition-colors">
-              Study Plan
+            <Link href="/signup" className="text-gray-300 hover:text-white transition-colors">
+              Create Free Account
             </Link>
             <Link href="/working-full-time" className="text-gray-300 hover:text-white transition-colors">
               CPA While Working
             </Link>
-            <Link href="/signup" className="text-gray-300 hover:text-white transition-colors">
-              Get Started
+            <Link href="/cpa-academy" className="text-gray-300 hover:text-white transition-colors">
+              CPA Academy
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
               About

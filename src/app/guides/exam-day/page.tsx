@@ -471,10 +471,13 @@ export default function ExamDayGuidePage() {
             <Link href="/tools/score-release-calendar" className="btn-secondary">
               Score Release Calendar
             </Link>
-            <Link href="/study-plan" className="btn-primary">
-              Build My Study Plan
+            <Link href="/signup" className="btn-primary">
+              Create Free Account
             </Link>
           </div>
+          <p className="text-xs text-[var(--muted)] mt-3">
+            Free during beta • No credit card required
+          </p>
         </section>
         </FadeInOnScroll>
       </div>

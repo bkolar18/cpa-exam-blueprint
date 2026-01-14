@@ -191,11 +191,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             Ready to Start Studying?
           </h2>
           <p className="text-[var(--muted)] mb-6">
-            Get a personalized study plan tailored to your schedule and goals.
+            Get free access to practice questions, study tools, and personalized progress tracking with Meridian CPA Academy.
           </p>
-          <Link href="/study-plan" className="btn-secondary inline-block">
-            Build My Free Study Plan
+          <Link href="/signup" className="btn-primary inline-block">
+            Get Started Free Today
           </Link>
+          <p className="text-xs text-[var(--muted)] mt-3">
+            Free during beta • No credit card required
+          </p>
         </div>
       </article>
     </div>

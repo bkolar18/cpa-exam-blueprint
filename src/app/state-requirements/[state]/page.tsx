@@ -309,11 +309,14 @@ export default async function StatePage({ params }: PageProps) {
  Ready to Start Studying?
  </h3>
  <p className="text-[var(--muted)] mb-4">
- Get a personalized CPA study plan based on your schedule and background.
+ Get free access to practice questions, study tools, and personalized progress tracking with Meridian CPA Academy.
  </p>
- <Link href="/study-plan"className="btn-primary inline-block">
- Get Your Free Study Plan
+ <Link href="/signup" className="btn-primary inline-block">
+ Get Started Free Today
  </Link>
+ <p className="text-xs text-[var(--muted)] mt-3">
+ Free during beta • No credit card required
+ </p>
  </div>
  </div>
  </section>

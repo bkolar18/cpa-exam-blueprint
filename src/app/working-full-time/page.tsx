@@ -195,24 +195,41 @@ export default function WorkingFullTimePage() {
             {/* CTA Card */}
             <div className="bg-white dark:bg-[var(--card)] p-6 rounded-xl border border-[var(--border)]">
               <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">
-                Get Your Personalized Schedule
+                Start Your CPA Prep Today
               </h3>
               <p className="text-[var(--muted)] mb-6">
-                Build a study plan designed around your work schedule and available hours.
+                Get free access to practice questions, study tools, and personalized progress tracking with Meridian CPA Academy.
               </p>
-              <Link href="/study-plan" className="btn-secondary w-full text-center block">
-                Build My Study Plan
+              <Link href="/signup" className="btn-primary w-full text-center block">
+                Create Free Account
               </Link>
+              <p className="text-xs text-[var(--muted)] text-center mt-2">
+                Free during beta • No credit card required
+              </p>
               <div className="border-t border-[var(--border)] my-6" />
               <h4 className="font-medium text-[var(--foreground)] mb-3">
-                Ready to Practice?
+                What's Included
               </h4>
-              <p className="text-sm text-[var(--muted)] mb-4">
-                Access 6,000+ practice questions and track your progress.
-              </p>
-              <Link href="/signup" className="btn-outline w-full text-center block text-sm">
-                Get Started
-              </Link>
+              <ul className="text-sm text-[var(--muted)] space-y-2">
+                <li className="flex items-center space-x-2">
+                  <svg className="w-4 h-4 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                  <span>6,000+ practice questions</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg className="w-4 h-4 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                  <span>Personalized study plan</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg className="w-4 h-4 text-[var(--secondary)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                  <span>Progress tracking</span>
+                </li>
+              </ul>
             </div>
 
             {/* Quick Tips */}

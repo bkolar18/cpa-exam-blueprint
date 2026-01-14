@@ -344,16 +344,19 @@ export default function FailedSectionGuidePage() {
             Ready to Build Your Comeback Plan?
           </h2>
           <p className="text-[var(--muted)] mb-6">
-            Get a personalized study plan that accounts for your retake timeline and weak areas.
+            Get free access to practice questions, study tools, and personalized progress tracking with Meridian CPA Academy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/study-plan" className="btn-secondary">
-              Build My Study Plan
+            <Link href="/signup" className="btn-primary">
+              Get Started Free Today
             </Link>
-            <Link href="/tools/study-hours-calculator" className="btn-primary">
+            <Link href="/tools/study-hours-calculator" className="btn-secondary">
               Calculate Study Hours
             </Link>
           </div>
+          <p className="text-xs text-[var(--muted)] mt-3">
+            Free during beta • No credit card required
+          </p>
         </section>
       </div>
     </div>

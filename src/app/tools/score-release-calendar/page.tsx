@@ -427,9 +427,12 @@ export default function ScoreReleaseCalendarPage() {
  <p className="text-gray-600 dark:text-[var(--muted)] mb-4">
  Ready to start preparing for your exam?
  </p>
- <Link href="/study-plan"className="btn-primary inline-block">
- Get Your Free Study Plan
+ <Link href="/signup" className="btn-primary inline-block">
+ Get Started Free Today
  </Link>
+ <p className="text-xs text-[var(--muted)] mt-3">
+ Free during beta • No credit card required
+ </p>
  </div>
  </div>
  </section>

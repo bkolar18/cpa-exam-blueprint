@@ -368,11 +368,14 @@ export default function NTSTrackerPage() {
 
  <div className="mt-8 text-center">
  <p className="text-gray-600 dark:text-[var(--muted)] mb-4">
- Ready to create your study plan?
+ Ready to start your CPA prep?
  </p>
- <Link href="/study-plan"className="btn-primary inline-block">
- Get Your Free Study Plan
+ <Link href="/signup" className="btn-primary inline-block">
+ Get Started Free Today
  </Link>
+ <p className="text-xs text-[var(--muted)] mt-3">
+ Free during beta • No credit card required
+ </p>
  </div>
  </div>
  </section>

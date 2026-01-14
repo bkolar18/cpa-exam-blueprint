@@ -109,8 +109,108 @@ export default function TBSHeader({
    const scorePercent = savedScore ? Math.round((savedScore.earned / savedScore.total) * 100) : 0;
    return (
      <header className="bg-white dark:bg-[var(--card)] border-b border-gray-200 dark:border-[var(--border)] flex-shrink-0">
-       <div className="flex items-center justify-between px-4 py-3">
+       {/* Mobile Review Header */}
+       <div className="md:hidden">
+         {/* Row 1: Back button, badges, and close */}
+         <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 dark:border-[var(--border)]">
+           <div className="flex items-center gap-2">
+             {/* Close/Back Button */}
+             {onClose && (
+               <button
+                 onClick={onClose}
+                 className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-[var(--muted-light)]"
+                 title="Return to Review"
+               >
+                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
+                 </svg>
+               </button>
+             )}
+             {/* Review Mode Badge */}
+             <span className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium rounded">
+               Review
+             </span>
+             {/* Section Badge */}
+             <span className="px-2 py-0.5 bg-orange-500 text-white text-xs font-bold rounded">
+               {section}
+             </span>
+           </div>
+           {/* Score Badge */}
+           {savedScore && (
+             <div className={`px-2 py-0.5 rounded text-xs font-medium ${
+               scorePercent >= 75 ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' :
+               scorePercent >= 50 ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300' :
+               'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
+             }`}>
+               {scorePercent}%
+             </div>
+           )}
+         </div>
+         {/* Row 2: Title and tools */}
+         <div className="flex items-center justify-between px-3 py-2">
+           <h1 className="text-sm font-semibold text-[var(--foreground)] truncate flex-1 mr-2">
+             {title}
+           </h1>
+           <div className="flex items-center gap-1">
+             {/* Flag Button */}
+             <button
+               onClick={onFlagToggle}
+               className={`p-1.5 rounded-lg transition-colors ${
+                 isFlagged
+                   ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                   : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]'
+               }`}
+               title={isFlagged ? "Remove flag" : "Flag for review"}
+             >
+               <svg className="w-5 h-5" fill={isFlagged ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+               </svg>
+             </button>
+             {/* Notes Button */}
+             {onScratchPadToggle && (
+               <button
+                 onClick={onScratchPadToggle}
+                 className={`p-1.5 rounded-lg transition-colors ${
+                   showScratchPad
+                     ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400'
+                     : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-[var(--muted)]'
+                 }`}
+                 title="Notes"
+               >
+                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                 </svg>
+               </button>
+             )}
+             {/* Try Another Button - Mobile */}
+             {onReturnToLibrary && (
+               <button
+                 onClick={onReturnToLibrary}
+                 className="px-2.5 py-1 bg-[var(--primary)] text-white text-xs font-medium rounded-lg hover:bg-[var(--primary-dark)] transition-colors"
+               >
+                 Try Another
+               </button>
+             )}
+           </div>
+         </div>
+       </div>
+
+       {/* Desktop Review Header */}
+       <div className="hidden md:flex items-center justify-between px-4 py-3">
          <div className="flex items-center gap-3">
+           {/* Back/Close Button */}
+           {onClose && (
+             <button
+               onClick={onClose}
+               className="flex items-center gap-1 px-2 py-1 text-xs font-medium text-gray-600 dark:text-[var(--muted-light)] hover:text-gray-800 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors"
+               title="Return to Review"
+             >
+               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
+               </svg>
+               <span>Back</span>
+             </button>
+           )}
            {/* Review Mode Badge */}
            <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium rounded">
              Review Mode
@@ -165,7 +265,16 @@ export default function TBSHeader({
                </svg>
              </button>
            )}
-           {/* Close Button */}
+           {/* Try Another TBS Button */}
+           {onReturnToLibrary && (
+             <button
+               onClick={onReturnToLibrary}
+               className="px-4 py-2 bg-[var(--primary)] text-white rounded-lg font-medium hover:bg-[var(--primary-dark)] transition-colors"
+             >
+               Try Another
+             </button>
+           )}
+           {/* Close Review Button */}
            {onClose && (
              <button
                onClick={onClose}

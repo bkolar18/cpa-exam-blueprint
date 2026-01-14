@@ -201,6 +201,12 @@ export default function Header() {
               About
             </Link>
 
+            {/* Free Beta Microcopy */}
+            <div className="hidden lg:flex flex-col items-center text-xs text-[var(--muted)] -mx-1">
+              <span>Free during beta</span>
+              <span>No credit card required</span>
+            </div>
+
             {!loading && (
               <>
                 {user ? (
@@ -224,30 +230,33 @@ export default function Header() {
               </>
             )}
 
-            <Link href="/study-plan" className="btn-primary">
-              Build My Study Plan
+            <Link href="/signup" className="btn-primary">
+              Create Free Account
             </Link>
             <ThemeToggleSimple />
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-[var(--card)]"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Mobile: Theme toggle + menu button */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggleSimple />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-[var(--card)]"
             >
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -393,19 +402,17 @@ export default function Header() {
                 </>
               )}
 
-              <div className="pt-4 flex items-center justify-between border-t border-[var(--border)]">
-                <span className="text-sm text-[var(--muted)]">Theme</span>
-                <ThemeToggleSimple />
-              </div>
-
-              <div className="pt-2">
+              <div className="pt-4">
                 <Link
-                  href="/study-plan"
+                  href="/signup"
                   className="btn-primary text-center block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Build My Study Plan
+                  Create Free Account
                 </Link>
+                <p className="text-xs text-[var(--muted)] text-center mt-2">
+                  Free during beta • No credit card required
+                </p>
               </div>
             </div>
           </div>
