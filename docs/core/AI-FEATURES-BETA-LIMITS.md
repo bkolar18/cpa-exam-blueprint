@@ -425,6 +425,113 @@ describe('Beta Limits', () => {
 
 ---
 
+## Database Storage Tables
+
+### exam_debriefs Table
+
+Stores AI-generated post-exam analysis (one per simulation):
+
+```sql
+-- Migration: supabase/migrations/20260114_exam_debriefs.sql
+CREATE TABLE IF NOT EXISTS exam_debriefs (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+    simulation_id TEXT NOT NULL,
+    section TEXT NOT NULL,
+    debrief_content TEXT NOT NULL,
+    summary JSONB,  -- { mcq: { correct, total, accuracy }, tbs: { earned, max, accuracy } }
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    CONSTRAINT unique_user_simulation UNIQUE (user_id, simulation_id)
+);
+
+-- RLS: Users can only access their own debriefs
+-- Indexes: user_id, simulation_id, section, created_at DESC
+```
+
+### pre_exam_assessments Table
+
+Stores AI-generated pre-exam readiness evaluations (one per section per exam):
+
+```sql
+-- Migration: supabase/migrations/20260114_pre_exam_assessments.sql
+CREATE TABLE IF NOT EXISTS pre_exam_assessments (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+    section TEXT NOT NULL,
+    exam_date DATE NOT NULL,
+    assessment_content TEXT NOT NULL,
+    summary JSONB,  -- { section, examDate, daysRemaining, primeMeridianScore, totalAttempted, etc. }
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    CONSTRAINT unique_user_section_exam_date UNIQUE (user_id, section, exam_date)
+);
+
+-- One assessment per section per exam date per user
+-- RLS: Users can only access their own assessments
+-- Indexes: user_id, section, exam_date, created_at DESC
+```
+
+---
+
+## Feature Implementation Pages
+
+### Exam Debrief UI
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Exam Results | `/dashboard/exam-simulation/history/[id]` | Shows AI Debrief section after stats |
+| Debrief Page | `/dashboard/exam-simulation/debrief/[examId]` | Full debrief with exam summary |
+| Simulation Dashboard | `/dashboard/exam-simulation` | Lists previous debriefs section |
+
+**Features:**
+- Check if debrief exists before showing "Generate" vs "View" button
+- Store debriefs on generation with summary JSONB
+- Display recent debriefs with score badges (passing = 80%+)
+- Back navigation from debrief page to exam results
+
+### Pre-Exam Assessment UI
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Readiness Dashboard | `/dashboard/readiness` | Shows assessment section per section |
+| Assessment Page | `/dashboard/readiness/assessment/[section]` | Generate or view assessment |
+
+**Features:**
+- Recommendations checklist (PM≥80, Coverage≥70%, 3+ sims, 5+ TBS)
+- One assessment per exam (section + exam_date combination)
+- Requires exam date to be set in NTS Tracker
+- Shows "View Assessment" if already generated
+
+---
+
+## Route Caching Prevention
+
+All AI routes use dynamic rendering to prevent stale beta period detection:
+
+```typescript
+// At top of each AI route file
+export const dynamic = 'force-dynamic';
+
+// Dynamic beta period detection (NOT module-level constant)
+function isBetaPeriod(): boolean {
+  return process.env.IS_BETA_PERIOD === 'true';
+}
+
+// Use inside handler
+export async function POST(request: NextRequest) {
+  const IS_BETA_NOW = isBetaPeriod();
+  // ... rest of handler
+}
+```
+
+This ensures:
+- Beta period status is checked at runtime, not build time
+- Usage limits reflect current environment configuration
+- API responses are never cached
+
+---
+
 ## Related Documents
 
 - [MERIDIAN-NAVIGATOR-DESIGN.md](./MERIDIAN-NAVIGATOR-DESIGN.md) - Full feature specification

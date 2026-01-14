@@ -33,7 +33,7 @@ All 58 exam TBS questions have been enhanced with:
 
 | Section | Total Questions | Enhanced | Remaining | Status |
 |---------|-----------------|----------|-----------|--------|
-| FAR | ~1,835 | ~181 | ~1,654 | In Progress |
+| FAR | ~1,835 | ~266 | ~1,569 | In Progress |
 | AUD | 1,015 | 0 | 1,015 | Pending |
 | REG | 1,345 | 0 | 1,345 | Pending |
 | TCP | 805 | 0 | 805 | Pending |
@@ -57,15 +57,18 @@ All 58 exam TBS questions have been enhanced with:
 4. Business Combinations questions
 5. Revenue Recognition questions (far-rev-003 through far-rev-027) - ~21 questions
 6. Inventory questions (far-inv-002 through far-inv-030) - ~27 questions
+7. **PP&E questions (far-ppe-001 through far-ppe-030) - 30 questions** ✓ (Jan 14, 2026)
+8. **Intangibles questions (far-int-001 through far-int-025) - 25 questions** ✓ (Jan 14, 2026)
+9. **Investments questions started (far-inv-sec-001)** ✓ (Jan 14, 2026)
 
 ---
 
 ## Where to Continue
 
 ### Next Questions to Enhance
-Continue with **PP&E questions** starting at `far-ppe-002`:
-- `far-ppe-001` was already enhanced (visible in file)
-- Start from `far-ppe-002` (line ~3234 in far.ts)
+Continue with **Investments questions** starting at `far-inv-sec-002`:
+- `far-inv-sec-001` has been enhanced
+- Start from `far-inv-sec-002` (line ~4309 in far.ts)
 
 ### How to Find Next Batch
 Run grep to find questions needing enhancement:

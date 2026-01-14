@@ -3246,8 +3246,8 @@ const questions = [
       "D": "Delinquent property taxes assumed by the buyer"
     },
     "correctAnswer": "C",
-    "explanation": "Fencing and parking lots are land improvements, which are depreciable assets separate from land. Land costs include purchase price, closing costs, commissions, title insurance, legal fees, surveying, demolition of unwanted structures (net of salvage), and delinquent taxes assumed. Land itself is not depreciated.",
-    "tip": "Land improvements (fencing, paving, landscaping) are separate depreciable assets."
+    "explanation": "Per ASC 360-10-30, fencing and parking lots are land improvements—depreciable assets recorded separately from land. Land costs include: purchase price, closing costs, commissions, title insurance, legal fees, surveying, demolition of unwanted structures (net of salvage), and delinquent taxes assumed by buyer. Land itself is NOT depreciated because it has an indefinite useful life. Why other answers are wrong: (A) Real estate commissions are part of acquiring the land—capitalize; (B) Demolition costs to prepare land for intended use are capitalized to land; (D) Delinquent property taxes assumed by buyer are considered part of the purchase price.",
+    "tip": "Land improvements (fencing, paving, landscaping) are SEPARATE depreciable assets. Land itself is never depreciated."
   },
   {
     "id": "far-ppe-003",
@@ -3265,8 +3265,8 @@ const questions = [
       "D": "The fair value of a similar asset if purchased externally"
     },
     "correctAnswer": "B",
-    "explanation": "Self-constructed assets are capitalized at the cost of construction, including direct materials, direct labor, and a reasonable allocation of overhead (variable and fixed). No profit is included because the company cannot profit from itself. The asset should not be recorded above its fair value.",
-    "tip": "Self-constructed: materials + labor + overhead. No internal profit."
+    "explanation": "Per ASC 360-10-30, self-constructed assets are capitalized at the cost of construction: direct materials, direct labor, and a reasonable allocation of overhead (both variable and fixed). No profit is included because an entity cannot profit from transactions with itself. Additionally, the asset should not be recorded above its fair value. Why other answers are wrong: (A) Internal profit cannot be recognized—no arm's-length transaction; (C) Overhead MUST be allocated; excluding it understates asset cost; (D) Fair value is an upper limit but not the measurement basis—actual cost is used.",
+    "tip": "Self-constructed: Materials + Labor + Overhead. NO internal profit. Cannot exceed fair value."
   },
   {
     "id": "far-ppe-004",
@@ -3284,8 +3284,8 @@ const questions = [
       "D": "The company has any outstanding debt"
     },
     "correctAnswer": "C",
-    "explanation": "Interest capitalization applies to assets that require a period of time to get ready for their intended use (qualifying assets). Three conditions must be met: (1) expenditures for the asset have been made, (2) activities to get the asset ready are in progress, and (3) interest cost is being incurred. Assets purchased ready to use do not qualify.",
-    "tip": "Capitalize interest: qualifying asset + expenditures + activities + interest incurred."
+    "explanation": "Per ASC 835-20, interest capitalization applies to qualifying assets—those requiring a period of time to get ready for their intended use (self-constructed assets, assets acquired for major renovation). Three conditions must ALL be met: (1) expenditures for the asset have been made, (2) activities to get the asset ready are in progress, and (3) interest cost is being incurred. Capitalization begins when all conditions are met and ends when asset is substantially complete. Why other answers are wrong: (A) Multi-year use alone doesn't qualify—the asset must require preparation time; (B) Assets purchased ready to use do NOT qualify; (D) Simply having debt is insufficient—expenditures and construction activities must be occurring.",
+    "tip": "Interest capitalization: THREE conditions—expenditures made + activities in progress + interest incurred. Ready-to-use purchases don't qualify."
   },
   {
     "id": "far-ppe-005",
@@ -3429,8 +3429,8 @@ const questions = [
       "D": "Required only for buildings"
     },
     "correctAnswer": "B",
-    "explanation": "US GAAP permits but does not require component depreciation. An entity may depreciate significant components of an asset separately if they have different useful lives. IFRS requires component depreciation when parts have significantly different useful lives. In practice, many US companies depreciate assets as a whole.",
-    "tip": "US GAAP: component depreciation permitted, not required. IFRS: required."
+    "explanation": "Per ASC 360-10-35, US GAAP permits but does not require component depreciation. An entity MAY depreciate significant components of an asset separately if they have different useful lives. IFRS (IAS 16) REQUIRES component depreciation when parts have significantly different useful lives. In practice, many US companies depreciate assets as a whole for simplicity. Why other answers are wrong: (A) Not required—it's optional under US GAAP; (C) Not prohibited—it's a permitted method; (D) Not required only for buildings—the option applies to all fixed assets.",
+    "tip": "US GAAP: Component depreciation PERMITTED (optional). IFRS: REQUIRED. Major GAAP/IFRS difference."
   },
   {
     "id": "far-ppe-012",
@@ -3448,8 +3448,8 @@ const questions = [
       "D": "The asset's fair value declines below book value"
     },
     "correctAnswer": "C",
-    "explanation": "Impairment testing for long-lived assets held for use is performed when events or changes in circumstances indicate the carrying amount may not be recoverable (triggering events). Unlike goodwill, there is no annual testing requirement. Examples include significant decrease in market value, adverse changes in use, or operating losses.",
-    "tip": "Long-lived assets: test only when triggering events occur (not annually)."
+    "explanation": "Per ASC 360-10-35-21, impairment testing for long-lived assets held for use is performed only when events or changes in circumstances indicate the carrying amount may not be recoverable (triggering events). Unlike goodwill, there is NO annual testing requirement. Examples of triggers: significant decrease in market value, adverse changes in use, operating losses, or physical damage. Why other answers are wrong: (A) No half-life trigger exists—it's event-driven; (B) Annual testing is required for goodwill (ASC 350), NOT long-lived assets; (D) Fair value decline alone isn't the trigger—the test checks whether undiscounted cash flows cover carrying value.",
+    "tip": "Long-lived assets: Test only when TRIGGERING EVENTS occur (not annually). Goodwill = annual. PP&E = event-driven."
   },
   {
     "id": "far-ppe-013",
@@ -3488,8 +3488,8 @@ const questions = [
       "D": "A gain is recognized in other comprehensive income"
     },
     "correctAnswer": "B",
-    "explanation": "Under US GAAP, impairment losses on long-lived assets held for use cannot be reversed. Once written down, the reduced amount becomes the new cost basis for depreciation purposes. This differs from IFRS, which permits reversal of impairment losses (but not above original depreciated cost).",
-    "tip": "US GAAP: No reversal of impairment on assets held for use."
+    "explanation": "Per ASC 360-10-35, under US GAAP, impairment losses on long-lived assets held for use CANNOT be reversed. Once written down, the reduced amount becomes the new cost basis for depreciation purposes. This differs from IFRS (IAS 36), which permits reversal of impairment losses (but not above original depreciated cost). Why other answers are wrong: (A) Reversal is prohibited under US GAAP; (C) Fair value exceeding original cost is irrelevant—no reversal allowed regardless; (D) OCI is not used—impairment and any subsequent recovery would be in P&L under IFRS, but US GAAP doesn't permit recovery at all.",
+    "tip": "US GAAP: NO impairment reversal for assets held for use. IFRS: Reversal permitted (not above original). Major difference!"
   },
   {
     "id": "far-ppe-015",
@@ -3507,8 +3507,8 @@ const questions = [
       "D": "Historical cost"
     },
     "correctAnswer": "C",
-    "explanation": "Assets held for sale are measured at the lower of (1) carrying amount or (2) fair value less costs to sell. Depreciation ceases once classified as held for sale. If fair value less costs to sell is lower, a loss is recognized. Subsequent increases in fair value less costs to sell can be recognized (limited to cumulative losses).",
-    "tip": "Held for sale: lower of book value or (fair value − selling costs). Stop depreciating."
+    "explanation": "Per ASC 360-10-35-43, assets held for sale are measured at the lower of (1) carrying amount or (2) fair value less costs to sell. Depreciation CEASES once classified as held for sale. If fair value less costs to sell is lower, a loss is recognized. Subsequent increases in fair value less costs to sell can be recognized (limited to cumulative losses previously recorded). Why other answers are wrong: (A) Fair value alone ignores selling costs; (B) NRV is inventory terminology—held-for-sale assets use fair value less costs to sell; (D) Historical cost ignores impairment—must compare to FV less selling costs.",
+    "tip": "Held for sale: Lower of (1) Book Value or (2) Fair Value − Costs to Sell. STOP depreciating once classified."
   },
   {
     "id": "far-ppe-016",
@@ -3526,8 +3526,8 @@ const questions = [
       "D": "Debit to the related asset, credit to the ARO liability"
     },
     "correctAnswer": "D",
-    "explanation": "When an ARO is recognized, the entity records a liability (at fair value, typically present value of expected costs) and capitalizes an equal amount as an increase to the related long-lived asset. The asset addition is then depreciated over the asset's useful life. The liability accretes over time to the settlement amount.",
-    "tip": "ARO: Debit asset (capitalize), Credit liability (present value)."
+    "explanation": "Per ASC 410-20-25, when an ARO is recognized, the entity records a liability (at fair value, typically the present value of expected retirement costs) and capitalizes an equal amount as an increase to the related long-lived asset. The asset addition is then depreciated over the asset's useful life. The liability accretes over time using the credit-adjusted risk-free rate until it equals the expected settlement amount. Why other answers are wrong: (A) Retained earnings is not affected at initial recognition—only asset and liability; (B) 'Deferred charge' is outdated terminology; (C) No expense at inception—cost is capitalized to the asset and depreciated.",
+    "tip": "ARO Entry: DR Asset (capitalize), CR Liability (at PV). Then: Depreciate asset, Accrete liability over time."
   },
   {
     "id": "far-ppe-017",
@@ -3566,8 +3566,8 @@ const questions = [
       "D": "No boot (cash) is involved in the exchange"
     },
     "correctAnswer": "C",
-    "explanation": "An exchange has commercial substance if the entity's future cash flows are expected to change significantly as a result—either in timing, amount, or risk. Exchanges with commercial substance are recorded at fair value, and gains/losses are recognized. Exchanges lacking commercial substance are recorded at book value with no gain recognition.",
-    "tip": "Commercial substance = cash flows change significantly. Record at fair value."
+    "explanation": "Per ASC 845-10-30, an exchange has commercial substance if the entity's future cash flows are expected to change significantly as a result—either in timing, amount, or risk. Exchanges WITH commercial substance are recorded at FAIR VALUE, and full gains/losses are recognized. Exchanges LACKING commercial substance are recorded at BOOK VALUE with no gain recognition (losses are recognized). Why other answers are wrong: (A) Similar nature doesn't determine commercial substance—cash flow changes do; (B) Equal fair values are irrelevant—it's about future cash flow changes; (D) Boot (cash) presence doesn't determine substance—an exchange can have commercial substance with or without boot.",
+    "tip": "Commercial substance = Cash flows change significantly (timing, amount, risk). FV accounting + full gain recognition."
   },
   {
     "id": "far-ppe-019",
@@ -3606,8 +3606,8 @@ const questions = [
       "D": "At the lower of fair value or book value"
     },
     "correctAnswer": "B",
-    "explanation": "When an exchange lacks commercial substance and no boot is received, the acquired asset is recorded at the book value of the asset given up. No gain is recognized. Losses, however, must still be recognized if indicated (when fair value is less than book value). This preserves the original cost basis.",
-    "tip": "No commercial substance: record at book value given, no gain. Losses are recognized."
+    "explanation": "Per ASC 845-10-30, when an exchange lacks commercial substance and no boot is received, the acquired asset is recorded at the BOOK VALUE of the asset given up. NO gain is recognized (gains are deferred). However, losses MUST still be recognized if indicated (when fair value is less than book value). This preserves the original cost basis in the new asset. Why other answers are wrong: (A) Fair value accounting with gain/loss only applies to exchanges WITH commercial substance; (C) Losses are recognized immediately, not deferred; (D) Lower of cost or market is inventory terminology—not applicable here.",
+    "tip": "No commercial substance: Asset recorded at BOOK VALUE given. No gain (deferred), but losses MUST be recognized."
   },
   {
     "id": "far-ppe-021",
@@ -3646,8 +3646,8 @@ const questions = [
       "D": "As a cumulative effect adjustment to retained earnings"
     },
     "correctAnswer": "C",
-    "explanation": "Changes in accounting estimates (useful life, salvage value, depreciation method) are accounted for prospectively. The remaining depreciable amount is allocated over the revised remaining useful life. No restatement of prior periods is required. The new estimate is applied to current and future periods.",
-    "tip": "Estimate changes = prospective treatment (adjust current and future periods)."
+    "explanation": "Per ASC 250-10-45, changes in accounting estimates (useful life, salvage value) are accounted for PROSPECTIVELY. The remaining depreciable amount (Book Value − New Salvage) is allocated over the revised remaining useful life. No restatement of prior periods is required—the new estimate is applied to current and future periods only. Why other answers are wrong: (A) Extraordinary items were eliminated under US GAAP in 2015; (B) Retrospective treatment is for accounting POLICY changes, not estimate changes; (D) Cumulative effect adjustment is for certain policy changes adopted using modified retrospective method.",
+    "tip": "Estimate changes (life, salvage) = PROSPECTIVE. Policy changes = may be retrospective. Know the difference!"
   },
   {
     "id": "far-ppe-023",
@@ -3665,8 +3665,8 @@ const questions = [
       "D": "Repairs that maintain the asset in normal operating condition"
     },
     "correctAnswer": "B",
-    "explanation": "Costs that extend an asset's useful life, increase its capacity, or improve its efficiency should be capitalized. Routine repairs, maintenance, and minor parts replacement are expensed because they merely maintain the asset's current operating capability without extending its life or improving it.",
-    "tip": "Capitalize: extends life or improves asset. Expense: maintains current condition."
+    "explanation": "Per ASC 360-10-25, costs that extend an asset's useful life, increase its capacity, or improve its efficiency should be CAPITALIZED. Routine repairs, maintenance, and minor parts replacement are EXPENSED because they merely maintain the asset's current operating capability without extending its life or improving it. Why other answers are wrong: (A) Routine maintenance = expense (doesn't extend life); (C) Minor parts replacement = expense (doesn't improve efficiency); (D) Repairs maintaining normal condition = expense (doesn't add future benefit).",
+    "tip": "CAPITALIZE: extends life, increases capacity, improves efficiency. EXPENSE: maintains current condition."
   },
   {
     "id": "far-ppe-024",
@@ -3684,8 +3684,8 @@ const questions = [
       "D": "$30,000 loss"
     },
     "correctAnswer": "A",
-    "explanation": "Book value = Cost − Accumulated depreciation = $40,000 − $32,000 = $8,000. Sales proceeds = $10,000. Gain = Sales proceeds − Book value = $10,000 − $8,000 = $2,000 gain.",
-    "tip": "Gain/loss = Proceeds − Book value (Cost − Accum. depreciation).",
+    "explanation": "Per ASC 360-10-40, gain or loss on disposal equals proceeds minus book value. **Calculation:** Step 1: Book value = Cost − Accumulated Depreciation = $40,000 − $32,000 = $8,000. Step 2: Gain/Loss = Sales Proceeds − Book Value = $10,000 − $8,000 = $2,000 GAIN. Why other answers are wrong: (B) $2,000 loss would occur if BV exceeded proceeds—but here proceeds ($10K) > BV ($8K); (C) $10,000 gain confuses proceeds with gain; (D) $30,000 loss incorrectly compares proceeds to original cost.",
+    "tip": "Gain/Loss = Proceeds − Book Value. BV = Cost − Accumulated Depreciation. Simple but often tested!",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -3705,8 +3705,8 @@ const questions = [
       "D": "The reporting unit level"
     },
     "correctAnswer": "A",
-    "explanation": "Long-lived assets are grouped for impairment testing at the lowest level at which there are identifiable cash flows that are largely independent of other asset groups. This is often an asset group used together to generate cash flows. This differs from goodwill, which is tested at the reporting unit level.",
-    "tip": "Group assets at lowest level with independent cash flows."
+    "explanation": "Per ASC 360-10-35-23, long-lived assets are grouped for impairment testing at the lowest level at which there are identifiable cash flows that are largely independent of other asset groups. This is often an asset group used together to generate cash flows (e.g., a production line). This differs from goodwill, which is tested at the reporting unit level (ASC 350). Why other answers are wrong: (B) Entity level is too high—assets must be grouped at the lowest independent cash flow level; (C) Individual asset level may not have independent cash flows; (D) Reporting unit level applies to goodwill impairment, not long-lived assets.",
+    "tip": "PP&E impairment: Lowest level with independent cash flows. Goodwill impairment: Reporting unit level."
   },
   {
     "id": "far-ppe-026",
@@ -3724,8 +3724,8 @@ const questions = [
       "D": "Added to the carrying amount of the related asset and liability, using the current credit-adjusted risk-free rate"
     },
     "correctAnswer": "D",
-    "explanation": "Upward revisions to ARO estimates increase both the liability and the related asset. The increase is measured using the current credit-adjusted risk-free rate at the revision date (different from the original rate). Downward revisions are recorded using the original weighted average rate for the layers being reduced.",
-    "tip": "ARO increases: use current rate. ARO decreases: use original rate."
+    "explanation": "Per ASC 410-20-35, upward revisions to ARO estimates increase both the liability and the related asset. The increase is measured using the CURRENT credit-adjusted risk-free rate at the revision date (new layer). Downward revisions are recorded using the ORIGINAL weighted average rate for the layers being reduced (LIFO approach). Why other answers are wrong: (A) Waiting until settlement ignores the liability's present value growth; (B) Using original rate for increases is incorrect—current rate applies to upward revisions; (C) Expense recognition is incorrect—increases are capitalized to the asset.",
+    "tip": "ARO revisions: INCREASES use CURRENT rate (new layer). DECREASES use ORIGINAL rate (remove layers LIFO)."
   },
   {
     "id": "far-ppe-027",
@@ -3743,8 +3743,8 @@ const questions = [
       "D": "Recognized as revenue immediately"
     },
     "correctAnswer": "A",
-    "explanation": "US GAAP (ASC 958/IAS 20 by analogy) permits two methods for government grants related to assets: (1) reduce the carrying amount of the asset (net method), or (2) record deferred revenue and recognize it systematically over the asset's useful life. Both methods result in the same net income over the asset's life.",
-    "tip": "Asset grants: reduce asset cost OR defer and amortize over asset life."
+    "explanation": "Under US GAAP (ASC 958-605 for NFPs, IAS 20 by analogy for for-profits), two methods are permitted for government grants related to assets: (1) reduce the carrying amount of the asset (net method), resulting in lower depreciation, or (2) record as deferred revenue and recognize it systematically over the asset's useful life (gross method). Both methods result in the same total net income over the asset's life. Why other answers are wrong: (B) Equity is not credited—grants flow through earnings; (C) Other income timing depends on method chosen—not always immediate; (D) Immediate recognition is not GAAP-compliant for asset-related grants.",
+    "tip": "Asset grants: TWO methods—(1) Reduce asset cost (lower depreciation), OR (2) Defer + amortize over asset life."
   },
   {
     "id": "far-ppe-028",
@@ -3762,8 +3762,8 @@ const questions = [
       "D": "$8,000"
     },
     "correctAnswer": "B",
-    "explanation": "When boot is received in an exchange lacking commercial substance, recognize gain proportional to boot received. Total gain = FV given − BV given = $50,000 − $40,000 = $10,000. Boot proportion = $8,000 / $50,000 = 16%. Recognized gain = $10,000 × 16% = $1,600.",
-    "tip": "Boot received without commercial substance: recognize gain × (boot / total FV received).",
+    "explanation": "Per ASC 845-10-30, when boot is RECEIVED in an exchange lacking commercial substance, recognize gain proportional to the boot received. **Calculation:** Step 1: Total gain = FV given − BV given = $50,000 − $40,000 = $10,000. Step 2: Boot proportion = Boot Received ÷ Total FV Received = $8,000 ÷ $50,000 = 16%. Step 3: Recognized gain = Total Gain × Boot Proportion = $10,000 × 16% = $1,600. Why other answers are wrong: (A) $10,000 is the TOTAL gain—only the boot proportion is recognized; (C) $0 would apply if NO boot was received; (D) $8,000 confuses boot amount with gain amount.",
+    "tip": "Boot RECEIVED (no commercial substance): Recognize Gain × (Boot ÷ Total FV received). Partial gain recognition.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -3783,8 +3783,8 @@ const questions = [
       "D": "No gain or loss is recognized; the difference is absorbed in accumulated depreciation"
     },
     "correctAnswer": "D",
-    "explanation": "Under composite (or group) depreciation, individual assets are grouped and depreciated using a weighted average rate. When an individual asset is disposed of, no gain or loss is recognized. Cash proceeds are credited, the asset is removed at cost, and the difference goes to accumulated depreciation. Gains and losses average out over time.",
-    "tip": "Composite method: no individual gains/losses. Difference hits accumulated depreciation."
+    "explanation": "Per ASC 360, under composite (or group) depreciation, assets are grouped and depreciated using a weighted average rate and life. When an individual asset is disposed of, NO gain or loss is recognized. Entry: DR Cash (proceeds), DR Accumulated Depreciation (plug), CR Asset (at cost). The difference goes to accumulated depreciation. Gains and losses are expected to average out over time across the group. Why other answers are wrong: (A) Gains are NOT deferred—they're absorbed in accumulated depreciation; (B) Rate recalculation is optional, not required for each disposal; (C) Individual book value is not tracked under composite method.",
+    "tip": "Composite method: NO individual gains/losses. Difference = plug to Accumulated Depreciation. Simplifies recordkeeping."
   },
   {
     "id": "far-ppe-030",
@@ -3802,8 +3802,8 @@ const questions = [
       "D": "Zero, since no cost was incurred"
     },
     "correctAnswer": "C",
-    "explanation": "Donated assets are recorded at fair value on the date of donation. A corresponding credit is recorded as contribution revenue (for-profit entities) or contribution revenue with or without donor restrictions (not-for-profits). The fair value becomes the depreciable basis of the asset.",
-    "tip": "Donated assets = fair value at donation date."
+    "explanation": "Per ASC 958-605 (NFPs) and ASC 720 by analogy (for-profits), donated assets are recorded at FAIR VALUE on the date of donation. For-profit entities credit contribution revenue; NFPs credit contribution revenue with or without donor restrictions. The fair value becomes the depreciable basis of the asset going forward. Why other answers are wrong: (A) Appraised value less depreciation is incorrect—use fair value without depreciation adjustment; (B) Donor's book value is irrelevant—fair value of the recipient applies; (D) Zero ignores the economic benefit received and misstates assets.",
+    "tip": "Donated assets = FAIR VALUE at donation date. This becomes the depreciable basis."
   },
   {
     "id": "far-int-001",
@@ -3840,8 +3840,8 @@ const questions = [
       "D": "$1,200,000"
     },
     "correctAnswer": "B",
-    "explanation": "Fair value of net identifiable assets = $4,200,000 − $1,500,000 = $2,700,000. Goodwill = Purchase price − Fair value of net identifiable assets = $5,000,000 − $2,700,000 = $2,300,000.",
-    "tip": "Goodwill = Price paid − FV of net identifiable assets.",
+    "explanation": "Per ASC 805-30-30, goodwill equals the excess of purchase consideration over the fair value of identifiable net assets acquired. **Calculation:** Step 1: FV of net identifiable assets = Assets − Liabilities = $4,200,000 − $1,500,000 = $2,700,000. Step 2: Goodwill = Purchase Price − Net Assets = $5,000,000 − $2,700,000 = $2,300,000. Why other answers are wrong: (A) $800,000 is the difference between price and assets only, ignoring liabilities; (C) $3,500,000 subtracts only liabilities from purchase price; (D) $1,200,000 appears to be a calculation error.",
+    "tip": "Goodwill = Price Paid − (FV Assets − FV Liabilities). Remember to subtract liabilities to get NET assets!",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -3861,8 +3861,8 @@ const questions = [
       "D": "Not amortized, but tested for impairment annually"
     },
     "correctAnswer": "D",
-    "explanation": "Under US GAAP, goodwill is not amortized. Instead, it is tested for impairment at least annually at the reporting unit level, and more frequently if events indicate possible impairment. Private companies may elect to amortize goodwill over 10 years under a practical expedient.",
-    "tip": "Public company goodwill: no amortization, annual impairment test."
+    "explanation": "Per ASC 350-20-35, under US GAAP, goodwill is NOT amortized. Instead, it is tested for impairment at least annually at the reporting unit level, and more frequently if triggering events indicate possible impairment. Private companies may elect to amortize goodwill over 10 years under a practical expedient (ASU 2014-02). Why other answers are wrong: (A) Immediate expensing is incorrect—goodwill is an asset; (B) 40-year amortization was the old rule eliminated in 2001 (FAS 142, now ASC 350); (C) 10-year max is only for private company election, not the general rule.",
+    "tip": "Public companies: Goodwill NOT amortized—annual impairment test. Private companies: May ELECT 10-year amortization."
   },
   {
     "id": "far-int-004",
@@ -3880,8 +3880,8 @@ const questions = [
       "D": "$3,000,000"
     },
     "correctAnswer": "C",
-    "explanation": "Under the simplified goodwill impairment test (ASU 2017-04), impairment equals the excess of carrying amount over fair value, limited to the amount of goodwill. Excess = $10M − $8M = $2M. Since $2M is less than goodwill of $3M, the impairment loss is $2,000,000.",
-    "tip": "Goodwill impairment = Carrying amount − Fair value (but cannot exceed goodwill balance).",
+    "explanation": "Per ASC 350-20-35 (simplified test from ASU 2017-04), goodwill impairment equals the excess of the reporting unit's carrying amount over its fair value, LIMITED to the goodwill balance. **Calculation:** Step 1: Excess = Carrying Amount − Fair Value = $10M − $8M = $2M. Step 2: Compare to goodwill: $2M < $3M (goodwill balance). Step 3: Impairment = $2,000,000 (the lesser amount). Why other answers are wrong: (A) $5M exceeds goodwill balance; (B) $0 would apply if FV exceeded carrying amount; (D) $3M would apply if excess exceeded goodwill—we use the lesser.",
+    "tip": "Goodwill impairment = (Carrying Amount − Fair Value), but CANNOT exceed goodwill balance. Simple one-step test!",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -3901,8 +3901,8 @@ const questions = [
       "D": "Skip impairment testing entirely"
     },
     "correctAnswer": "A",
-    "explanation": "The qualitative assessment allows an entity to first assess qualitative factors to determine whether it is more likely than not (>50% probability) that the fair value of a reporting unit is less than its carrying amount. If not more likely than not, no quantitative test is required. This reduces the cost and effort of impairment testing.",
-    "tip": "Qualitative assessment: if <50% chance of impairment, skip quantitative test."
+    "explanation": "Per ASC 350-20-35-3A, the qualitative assessment (Step 0) allows an entity to first assess qualitative factors (macroeconomic conditions, industry trends, cost factors, financial performance) to determine whether it is more likely than not (>50% probability) that fair value is less than carrying amount. If NOT more likely than not, no quantitative test is required. Why other answers are wrong: (B) Amortization is a separate election for private companies, unrelated to Step 0; (C) Annual testing is still required—qualitative just replaces quantitative if indicators are favorable; (D) Testing cannot be skipped entirely—qualitative IS a form of testing.",
+    "tip": "Qualitative (Step 0): If <50% likelihood FV < CV, SKIP quantitative test. Saves cost/effort."
   },
   {
     "id": "far-int-006",
@@ -3920,8 +3920,8 @@ const questions = [
       "D": "Have a determinable useful life"
     },
     "correctAnswer": "A",
-    "explanation": "An intangible asset is identifiable if it meets either the separability criterion (can be separated from the entity and sold, transferred, licensed) OR the contractual-legal criterion (arises from contractual or legal rights). This distinguishes identifiable intangibles from goodwill, which is neither separable nor contractual.",
-    "tip": "Identifiable intangible: separable OR from contractual/legal rights."
+    "explanation": "Per ASC 805-20-25-4, an intangible asset is identifiable if it meets EITHER: (1) Separability criterion—can be separated from the entity and sold, transferred, licensed, rented, or exchanged; OR (2) Contractual-legal criterion—arises from contractual or legal rights (regardless of transferability). This distinguishes identifiable intangibles from goodwill, which is neither separable nor contractual. Why other answers are wrong: (B) Internal development relates to recognition, not identification; (C) No dollar threshold exists; (D) Indefinite-life intangibles are still identifiable.",
+    "tip": "Identifiable = SEPARABLE or CONTRACTUAL-LEGAL. If neither, it's goodwill. Key acquisition accounting concept!"
   },
   {
     "id": "far-int-007",
@@ -3939,8 +3939,8 @@ const questions = [
       "D": "$80,000"
     },
     "correctAnswer": "B",
-    "explanation": "Intangible assets are amortized over the shorter of their legal life or useful life. Here, useful life (8 years) is shorter than legal life (10 years). Annual amortization = $480,000 / 8 years = $60,000.",
-    "tip": "Amortize over shorter of legal or useful life.",
+    "explanation": "Per ASC 350-30-35, intangible assets with finite lives are amortized over the SHORTER of their legal life or useful life to the entity. **Calculation:** Legal life = 10 years, Useful life = 8 years. Use 8 years (shorter). Annual amortization = $480,000 ÷ 8 = $60,000. Why other answers are wrong: (A) $48,000 incorrectly uses the legal life ($480K ÷ 10); (C) $40,000 uses an incorrect life (12 years); (D) $80,000 uses an incorrect life (6 years).",
+    "tip": "Intangible amortization: Use SHORTER of legal life or useful life. Don't be fooled by the longer period!",
     "calculationRequired": true,
     "timeEstimateSeconds": 30
   },
@@ -3960,8 +3960,8 @@ const questions = [
       "D": "Expensed immediately"
     },
     "correctAnswer": "B",
-    "explanation": "Intangible assets with indefinite useful lives are not amortized. Instead, they are tested for impairment at least annually, or more frequently if events indicate impairment. Examples include certain trademarks, broadcast licenses, and franchises that can be renewed indefinitely at minimal cost.",
-    "tip": "Indefinite life intangibles: no amortization, annual impairment test."
+    "explanation": "Per ASC 350-30-35-18, intangible assets with indefinite useful lives are NOT amortized. Instead, they are tested for impairment at least annually (or more frequently if triggering events occur). Examples: certain trademarks, broadcast licenses, and franchises that can be renewed indefinitely at minimal cost. An indefinite life can later become finite if circumstances change. Why other answers are wrong: (A) 40-year amortization was the old rule (eliminated); (C) 20-year amortization is arbitrary and not GAAP; (D) Immediate expensing ignores the future economic benefits.",
+    "tip": "Indefinite life intangibles: NO amortization—annual impairment test (like goodwill). Finite life: amortize."
   },
   {
     "id": "far-int-009",
@@ -3979,8 +3979,8 @@ const questions = [
       "D": "Expensed as incurred"
     },
     "correctAnswer": "D",
-    "explanation": "Under US GAAP, research and development costs are expensed as incurred. This applies to both research (discovering new knowledge) and development (applying research to develop new products or processes). This differs from IFRS, which requires capitalization of development costs when criteria are met.",
-    "tip": "US GAAP: R&D costs expensed as incurred. (IFRS: development may be capitalized.)"
+    "explanation": "Per ASC 730-10-25, under US GAAP, research and development costs are EXPENSED AS INCURRED. This applies to both research (discovering new knowledge) and development (applying research to develop new products/processes). Exceptions: software development costs after technological feasibility (ASC 985-20) and certain internally developed software (ASC 350-40). This differs from IFRS (IAS 38), which requires capitalization of development costs when criteria are met. Why other answers are wrong: (A) Capitalization criteria don't exist for general R&D under US GAAP; (B) Deferral is not permitted; (C) R&D creates future benefits but fails capitalization criteria due to uncertainty.",
+    "tip": "US GAAP: R&D = EXPENSE as incurred. IFRS: Development MAY be capitalized. Major GAAP/IFRS difference!"
   },
   {
     "id": "far-int-010",
@@ -3998,8 +3998,8 @@ const questions = [
       "D": "Legal costs of obtaining a patent"
     },
     "correctAnswer": "D",
-    "explanation": "Legal costs of obtaining a patent are capitalized as part of the patent's cost, not expensed as R&D. R&D costs include personnel costs, materials consumed, depreciation of R&D equipment, purchased intangibles for R&D with no alternative future use, and contract R&D services.",
-    "tip": "Patent legal fees = capitalize. R&D costs = expense."
+    "explanation": "Per ASC 730-10-25, legal costs of obtaining a patent are CAPITALIZED as part of the patent's cost, not expensed as R&D. R&D costs that ARE expensed include: personnel costs, materials consumed, depreciation of R&D equipment, purchased intangibles with no alternative future use, contract R&D services, and allocated overhead. Why other answers are wrong: (A) R&D salaries = expense as incurred; (B) Materials consumed in R&D = expense; (C) Depreciation of R&D equipment = expense (but equipment with alternative use is capitalized first).",
+    "tip": "Patent LEGAL fees = capitalize to patent cost. All other R&D = expense. Know this distinction!"
   },
   {
     "id": "far-int-011",
@@ -4017,8 +4017,8 @@ const questions = [
       "D": "Not recorded until the R&D project is completed"
     },
     "correctAnswer": "B",
-    "explanation": "Equipment with alternative future uses (can be used in other projects or sold) is capitalized as a fixed asset. Depreciation during the time it's used for R&D is charged to R&D expense. Equipment purchased for a specific R&D project with no alternative future use is expensed immediately.",
-    "tip": "R&D equipment: if alternative use exists, capitalize and depreciate to R&D."
+    "explanation": "Per ASC 730-10-25, equipment with ALTERNATIVE FUTURE USES (can be used in other projects or sold) is CAPITALIZED as a fixed asset. Depreciation during R&D use is charged to R&D expense. Equipment purchased for a SPECIFIC R&D project with NO alternative future use is expensed immediately. Why other answers are wrong: (A) Immediate expensing only applies when NO alternative future use exists; (C) Depreciation goes to R&D expense during R&D use, not general expense; (D) Recording is immediate—don't wait for project completion.",
+    "tip": "R&D equipment: Alternative use = CAPITALIZE, depreciate to R&D. No alternative use = EXPENSE immediately."
   },
   {
     "id": "far-int-012",
@@ -4036,8 +4036,8 @@ const questions = [
       "D": "Management commits to funding the project"
     },
     "correctAnswer": "A",
-    "explanation": "Internal-use software has three stages: (1) preliminary project—expense, (2) application development—capitalize when management commits to fund and it's probable the project will be completed, (3) post-implementation—expense. Capitalized costs are amortized over the software's useful life.",
-    "tip": "Internal-use software: capitalize during application development stage."
+    "explanation": "Per ASC 350-40-25, internal-use software has three stages: (1) PRELIMINARY PROJECT—all costs expensed (conceptual formulation, evaluating alternatives); (2) APPLICATION DEVELOPMENT—capitalize when management commits to fund AND it's probable the project will be completed and used as intended; (3) POST-IMPLEMENTATION—expense (training, maintenance). Capitalized costs are amortized over useful life. Why other answers are wrong: (B) 'Ready for use' is too late—capitalize during development; (C) Capitalization is required during development stage; (D) Commitment alone is insufficient—also need probability of completion.",
+    "tip": "Internal-use software: 3 stages—Preliminary (expense), Development (capitalize), Post-implementation (expense)."
   },
   {
     "id": "far-int-013",
@@ -4055,8 +4055,8 @@ const questions = [
       "D": "The first sale is made"
     },
     "correctAnswer": "B",
-    "explanation": "For software developed for external sale, all costs before technological feasibility (defined as completion of a detailed program design or working model) are expensed as R&D. Costs after technological feasibility but before the product is available for release are capitalized. Costs after release are inventory or period costs.",
-    "tip": "Software for sale: capitalize from technological feasibility to product release."
+    "explanation": "Per ASC 985-20-25, for software developed for external sale, all costs BEFORE technological feasibility are expensed as R&D. Technological feasibility is established upon completion of a detailed program design OR working model. Costs AFTER technological feasibility but BEFORE product availability for release are CAPITALIZED. Costs after release are inventory or period costs. Why other answers are wrong: (A) Project approval is too early; (C) 'Ready for sale' is too late—capitalize during development; (D) First sale is irrelevant to capitalization timing.",
+    "tip": "Software for SALE: Capitalize from TECHNOLOGICAL FEASIBILITY → PRODUCT RELEASE. Before/after = expense."
   },
   {
     "id": "far-int-014",
@@ -4074,8 +4074,8 @@ const questions = [
       "D": "Straight-line only"
     },
     "correctAnswer": "A",
-    "explanation": "Capitalized software costs are amortized using the greater of: (1) straight-line over remaining estimated economic life, or (2) the ratio of current gross revenues to total anticipated gross revenues (revenue method). This ensures amortization is at least as fast as straight-line.",
-    "tip": "Software amortization: greater of straight-line or revenue ratio."
+    "explanation": "Per ASC 985-20-35, capitalized software costs are amortized using the GREATER of: (1) Straight-line over remaining estimated economic life, OR (2) Revenue ratio (current revenues ÷ total anticipated revenues). Using the greater ensures amortization is at least as aggressive as straight-line—matching expenses to revenue patterns. Why other answers are wrong: (B) Units-of-production alone doesn't capture revenue patterns; (C) DDB is not specified for software; (D) Straight-line alone may understate expense in early high-revenue years.",
+    "tip": "Software for sale amortization: GREATER of Straight-line OR Revenue ratio. Ensures adequate expense recognition."
   },
   {
     "id": "far-int-015",
@@ -4093,8 +4093,8 @@ const questions = [
       "D": "Long-lived tangible assets (PP&E)"
     },
     "correctAnswer": "D",
-    "explanation": "Finite-life intangible assets follow the same impairment model as PP&E under ASC 360. When events indicate impairment, compare carrying value to undiscounted cash flows. If impaired, write down to fair value. This differs from indefinite-life intangibles and goodwill, which are tested annually and written down directly to fair value.",
-    "tip": "Finite-life intangibles: impairment like PP&E (undiscounted CF test first)."
+    "explanation": "Per ASC 360-10-35, finite-life intangible assets follow the SAME impairment model as PP&E. Step 1: When triggering events occur, compare carrying value to UNDISCOUNTED cash flows. Step 2: If impaired (CV > undiscounted CFs), write down to FAIR VALUE. This differs from indefinite-life intangibles and goodwill, which are tested annually and written down directly to FV without the undiscounted CF step. Why other answers are wrong: (A) Inventory uses lower of cost or NRV; (B) Goodwill uses one-step FV test; (C) Indefinite-life intangibles use one-step FV test (like goodwill).",
+    "tip": "Finite-life intangibles = PP&E impairment model (2-step: undiscounted CF → FV). Indefinite-life = 1-step FV test."
   },
   {
     "id": "far-int-016",
@@ -4112,8 +4112,8 @@ const questions = [
       "D": "Record negative goodwill as a deferred credit"
     },
     "correctAnswer": "C",
-    "explanation": "When the fair value of net identifiable assets exceeds the purchase price, a bargain purchase occurs. The acquirer must first reassess whether all assets and liabilities have been properly identified and measured. If the excess remains after reassessment, it is recognized as a gain in earnings immediately.",
-    "tip": "Bargain purchase (negative goodwill): recognize immediate gain after reassessment."
+    "explanation": "Per ASC 805-30-25, when fair value of net identifiable assets EXCEEDS purchase price, a bargain purchase occurs ('negative goodwill'). **Calculation:** Net assets FV ($3.5M) − Price paid ($3M) = $500,000 bargain. The acquirer must FIRST reassess whether all assets and liabilities are properly identified and measured. If excess remains after reassessment, recognize as a GAIN IN EARNINGS immediately. Why other answers are wrong: (A) Goodwill can't be negative—it's a gain; (B) Proportional reduction was the old rule (pre-SFAS 141R); (D) Deferred credit treatment was also eliminated.",
+    "tip": "Bargain purchase = FV net assets > Price. After reassessment, recognize IMMEDIATE GAIN in earnings. No negative goodwill!"
   },
   {
     "id": "far-int-017",
@@ -4131,8 +4131,8 @@ const questions = [
       "D": "Expensed immediately"
     },
     "correctAnswer": "A",
-    "explanation": "Initial franchise fees paid for the right to operate under a franchise agreement are capitalized as an intangible asset. The franchisee amortizes this cost over the term of the franchise agreement. Ongoing royalties are expensed as incurred. If the franchise has an indefinite life, test for impairment annually.",
-    "tip": "Initial franchise fee = capitalize and amortize over franchise term."
+    "explanation": "Per ASC 350-30-25, initial franchise fees paid for the right to operate under a franchise agreement are CAPITALIZED as an intangible asset. The franchisee amortizes this cost over the term of the franchise agreement (finite life). Ongoing royalties are EXPENSED as incurred. If the franchise has an indefinite life (renewable indefinitely at minimal cost), test for impairment annually instead of amortizing. Why other answers are wrong: (B) Prepaid expense is incorrect classification—it's an intangible; (C) Indefinite life treatment is rare for franchise fees; (D) Immediate expense ignores the future economic benefit.",
+    "tip": "Initial franchise fee = CAPITALIZE + amortize over franchise term. Ongoing royalties = EXPENSE as incurred."
   },
   {
     "id": "far-int-018",
@@ -4150,8 +4150,8 @@ const questions = [
       "D": "Expensed immediately"
     },
     "correctAnswer": "A",
-    "explanation": "Acquired IPR&D in a business combination is recognized as an indefinite-life intangible asset at fair value. It is not amortized but is tested for impairment until the R&D project is completed (then it becomes finite-life and is amortized) or abandoned (then written off).",
-    "tip": "Acquired IPR&D: indefinite-life intangible until project completes or fails."
+    "explanation": "Per ASC 805-20-25, acquired in-process R&D (IPR&D) in a business combination is recognized as an INDEFINITE-LIFE intangible asset at fair value. It is NOT amortized but is tested for impairment annually until: (1) The project is COMPLETED—then it becomes finite-life and is amortized, OR (2) The project is ABANDONED—then it is written off. This differs from internal R&D, which is expensed. Why other answers are wrong: (B) IPR&D is separately identifiable, not part of goodwill; (C) Probability is not assessed—fair value is used; (D) Immediate expense was the old rule (pre-SFAS 141R).",
+    "tip": "Acquired IPR&D = Indefinite-life intangible until project completes (→ finite-life) or fails (→ write off)."
   },
   {
     "id": "far-int-019",
@@ -4169,8 +4169,8 @@ const questions = [
       "D": "Customer loyalty"
     },
     "correctAnswer": "D",
-    "explanation": "Customer loyalty represents the general affinity customers have toward a company and is not separable or arising from contractual rights—it is included in goodwill. Customer lists, customer relationships, and order backlogs meet the identifiability criteria (separable or contractual) and are recognized separately.",
-    "tip": "Customer loyalty = goodwill. Customer lists/relationships/backlog = identifiable intangibles."
+    "explanation": "Per ASC 805-20-55, customer loyalty represents general customer affinity and is NOT separable or arising from contractual rights—it's included in GOODWILL. Customer lists, customer relationships, and order backlogs meet the identifiability criteria (separable OR contractual-legal) and are recognized as SEPARATE intangibles at fair value. Why other answers are wrong: (A) Order backlog is contractual (customer orders); (B) Customer lists are separable (can be sold/transferred); (C) Customer relationships arise from customer contracts and are identifiable.",
+    "tip": "Customer LOYALTY = part of goodwill (not separable). Customer LISTS, RELATIONSHIPS, BACKLOG = identifiable intangibles."
   },
   {
     "id": "far-int-020",
@@ -4188,8 +4188,8 @@ const questions = [
       "D": "Capitalized similar to internal-use software if certain criteria are met"
     },
     "correctAnswer": "D",
-    "explanation": "Under ASU 2018-15, implementation costs for cloud computing arrangements that are service contracts (not licenses) are capitalized if they would be capitalized under the internal-use software guidance. The capitalized costs are then amortized over the term of the service contract and presented in the same income statement line as the service fees.",
-    "tip": "Cloud implementation costs: capitalize like internal-use software if service contract."
+    "explanation": "Per ASU 2018-15 (ASC 350-40), implementation costs for cloud computing arrangements that are SERVICE CONTRACTS (not licenses) are capitalized if they would be capitalized under internal-use software guidance (ASC 350-40). Capitalized costs are amortized over the term of the service contract and presented in the SAME income statement line as the service fees. Key: If the arrangement is a software LICENSE, capitalize under ASC 350-40 as an intangible. Why other answers are wrong: (A) Lease accounting doesn't apply to service contracts; (B) Inventory is for tangible goods; (C) Not all costs are expensed—application development costs are capitalized.",
+    "tip": "Cloud computing service = capitalize implementation costs like internal-use software. Amortize over contract term."
   },
   {
     "id": "far-int-021",
@@ -4207,8 +4207,8 @@ const questions = [
       "D": "Charged to retained earnings"
     },
     "correctAnswer": "C",
-    "explanation": "Legal fees to successfully defend an intangible asset (like a trademark or patent) are capitalized as part of the asset's cost because they help establish or maintain the asset's legal validity. If the defense is unsuccessful, the costs should be expensed, and the related intangible may need to be written off.",
-    "tip": "Successful defense costs = capitalize. Unsuccessful defense = expense."
+    "explanation": "Per ASC 350-30-25, legal fees to SUCCESSFULLY defend an intangible asset (trademark, patent) are CAPITALIZED as part of the asset's cost because they help establish/maintain legal validity and future economic benefits. If the defense is UNSUCCESSFUL, costs are EXPENSED immediately, and the related intangible may need impairment testing or write-off. Why other answers are wrong: (A) Loss recognition is incorrect for successful defense; (B) Expensing ignores the asset enhancement; (D) Retained earnings is bypassed—costs go through P&L.",
+    "tip": "SUCCESSFUL defense = capitalize to intangible. UNSUCCESSFUL defense = expense + potential impairment."
   },
   {
     "id": "far-int-022",
@@ -4226,8 +4226,8 @@ const questions = [
       "D": "Any revenue-generating unit"
     },
     "correctAnswer": "C",
-    "explanation": "A reporting unit is defined as an operating segment or one level below an operating segment (a component). A component is a reporting unit if it constitutes a business and discrete financial information is available. Two or more components may be aggregated if they have similar economic characteristics.",
-    "tip": "Reporting unit = operating segment or component below it."
+    "explanation": "Per ASC 350-20-35-33, a reporting unit is defined as an operating segment OR one level below (a component). A component is a reporting unit if: (1) It constitutes a business, AND (2) Discrete financial information is available. Two or more components may be aggregated if they have similar economic characteristics. Goodwill is assigned to reporting units and tested at that level. Why other answers are wrong: (A) Cost centers may not have discrete financials; (B) Entire company is too broad—must be segment level or below; (D) Revenue-generating unit is too vague.",
+    "tip": "Reporting unit = Operating segment OR one level below. Must be a business with discrete financial info."
   },
   {
     "id": "far-int-023",
@@ -4245,8 +4245,8 @@ const questions = [
       "D": "Internally developed goodwill"
     },
     "correctAnswer": "C",
-    "explanation": "Website development costs can be capitalized if they meet certain criteria (similar to internal-use software). Internally developed trademarks, customer lists, and goodwill cannot be capitalized under US GAAP because costs cannot be reliably separated from overall business development costs. Only acquired intangibles in these categories are recognized.",
-    "tip": "Most internally developed intangibles = expense. Website costs may be capitalized."
+    "explanation": "Per ASC 350-50-25, website development costs can be CAPITALIZED if they meet certain criteria (similar to internal-use software under ASC 350-40). Application/infrastructure development stage costs are capitalized; planning and operating stage costs are expensed. Internally developed trademarks, customer lists, and goodwill CANNOT be capitalized because costs cannot be reliably separated from overall business development costs. Why other answers are wrong: (A) Internally developed trademarks = expense; (B) Internally developed customer lists = expense; (D) Internally developed goodwill = prohibited from recognition.",
+    "tip": "Website development = may CAPITALIZE (like internal-use software). Trademarks, customer lists, goodwill = CANNOT capitalize internally."
   },
   {
     "id": "far-int-024",
@@ -4264,8 +4264,8 @@ const questions = [
       "D": "Amortized over 10 years (or less if a shorter life is more appropriate) and tested for impairment only upon a triggering event"
     },
     "correctAnswer": "D",
-    "explanation": "Private companies may elect to amortize goodwill on a straight-line basis over 10 years (or less if more appropriate). Under this alternative, goodwill is tested for impairment only when a triggering event occurs, rather than annually. This reduces the cost and complexity of goodwill accounting for private entities.",
-    "tip": "Private company alternative: amortize goodwill over ≤10 years, trigger-based testing."
+    "explanation": "Per ASU 2014-02 (ASC 350-20-35), private companies may ELECT to amortize goodwill on a straight-line basis over 10 years (or less if shorter life is more appropriate). Under this alternative, goodwill is tested for impairment ONLY when triggering events occur, rather than annually. This reduces cost and complexity for private entities. Public companies cannot use this election. Why other answers are wrong: (A) 40-year amortization is outdated (pre-FAS 142); (B) Revaluation to FV is not permitted for goodwill; (C) Immediate write-off ignores future economic benefits.",
+    "tip": "Private company ALTERNATIVE: Amortize goodwill ≤10 years + trigger-based impairment testing. Public = annual test, no amortization."
   },
   {
     "id": "far-int-025",
@@ -4283,8 +4283,8 @@ const questions = [
       "D": "Application and infrastructure development stage"
     },
     "correctAnswer": "B",
-    "explanation": "Content development costs for advertising purposes are expensed because advertising costs must generally be expensed under GAAP. Application/infrastructure development and graphics development costs meeting capitalization criteria are capitalized. Planning stage costs are expensed similar to the preliminary project stage for software.",
-    "tip": "Website: capitalize development, expense planning and advertising content."
+    "explanation": "Per ASC 350-50, content development costs for ADVERTISING purposes must be EXPENSED because advertising costs are generally expensed under GAAP (ASC 720-35). Application/infrastructure development costs and graphics development costs meeting capitalization criteria ARE capitalized. Planning stage costs are expensed (like preliminary project stage for software). Why other answers are wrong: (A) Graphics development stage = capitalize (if not advertising); (C) Planning stage = expense; (D) Application/infrastructure development = capitalize. Question asks which should NOT be capitalized.",
+    "tip": "Website stages: Planning = expense. Development + Graphics = capitalize. Advertising content = ALWAYS expense."
   },
   {
     "id": "far-inv-sec-001",
