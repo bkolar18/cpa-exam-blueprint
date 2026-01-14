@@ -1293,7 +1293,7 @@ export default function ExamSimulationSectionPage() {
  if (examState === 'results') {
  const score = getScore();
  const results = getResults();
- const passed = score.percentage >= 75;
+ const passed = score.percentage >= 80;
  const hasTBSResults = tbsResults.length > 0;
 
  return (
@@ -1313,8 +1313,8 @@ export default function ExamSimulationSectionPage() {
  </p>
  <p className="mt-4 text-white/70">
  {passed
- ? 'Great job! You scored above the typical passing threshold.'
- : 'The CPA exam typically requires around 75% to pass. Keep studying!'}
+ ? 'Great job! You scored above the recommended benchmark of 80%.'
+ : 'The recommended Prime Meridian benchmark is 80%. Keep studying!'}
  </p>
  </div>
  </div>
@@ -1360,7 +1360,7 @@ export default function ExamSimulationSectionPage() {
  <div className="divide-y divide-[var(--border)]">
  {tbsResults.map((result, i) => {
  const scorePercent = result.attempt.scorePercentage || 0;
- const isPassing = scorePercent >= 75;
+ const isPassing = scorePercent >= 80;
  return (
  <div key={i} className={`p-4 ${isPassing ? 'bg-green-50/50 dark:bg-green-900/10' : 'bg-red-50/50 dark:bg-red-900/10'}`}>
  <div className="flex items-center justify-between">
@@ -1474,12 +1474,12 @@ export default function ExamSimulationSectionPage() {
  <div className="flex-1 overflow-auto p-4 space-y-4">
  {/* Score Summary */}
  <div className={`rounded-lg p-4 text-center ${
- (tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0) >= 75
+ (tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0) >= 80
  ? 'bg-green-100 dark:bg-green-900/30'
  : 'bg-red-100 dark:bg-red-900/30'
  }`}>
  <p className={`text-3xl font-bold ${
- (tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0) >= 75
+ (tbsResults[reviewingTbsIndex].attempt.scorePercentage || 0) >= 80
  ? 'text-green-700 dark:text-green-300'
  : 'text-red-700 dark:text-red-300'
  }`}>

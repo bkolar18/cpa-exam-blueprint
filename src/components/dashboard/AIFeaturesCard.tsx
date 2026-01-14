@@ -94,7 +94,7 @@ const aiFeatures: AIFeatureConfig[] = [
     name: "AI Study Guide",
     description: "Personalized study plans",
     icon: StudyGuideIcon,
-    href: "/dashboard/readiness",
+    href: "/dashboard/study-log?tab=study-guide",
     color: "purple",
     limit: "1/month",
     proOnly: true,

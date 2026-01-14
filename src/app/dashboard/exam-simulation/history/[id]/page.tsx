@@ -83,6 +83,8 @@ export default function ExamHistoryPage() {
   const [loading, setLoading] = useState(true);
   const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
   const [reviewingTbsIndex, setReviewingTbsIndex] = useState<number | null>(null);
+  const [debriefExists, setDebriefExists] = useState<boolean | null>(null);
+  const [checkingDebrief, setCheckingDebrief] = useState(false);
 
   useEffect(() => {
     if (authLoading) return;
@@ -134,6 +136,24 @@ export default function ExamHistoryPage() {
     console.log(`[ExamHistory] Found ${tbsMap.size}/${(data.tbs_question_ids || []).length} TBS questions`);
     setTbsQuestions(tbsMap);
     setLoading(false);
+
+    // Check if debrief exists for this exam
+    checkDebriefExists(examId);
+  };
+
+  const checkDebriefExists = async (simId: string) => {
+    setCheckingDebrief(true);
+    try {
+      const response = await fetch(`/api/ai/exam-debrief?simulationId=${simId}`);
+      if (response.ok) {
+        const data = await response.json();
+        setDebriefExists(data.exists === true);
+      }
+    } catch (error) {
+      console.error('Error checking debrief:', error);
+    } finally {
+      setCheckingDebrief(false);
+    }
   };
 
   if (loading) {
@@ -199,7 +219,7 @@ export default function ExamHistoryPage() {
           <div className="text-right">
             <p
               className={`text-4xl font-bold ${
-                (examHistory.total_score_percentage || 0) >= 75
+                (examHistory.total_score_percentage || 0) >= 80
                   ? "text-green-600 dark:text-green-400"
                   : (examHistory.total_score_percentage || 0) >= 50
                   ? "text-yellow-600 dark:text-yellow-400"
@@ -258,6 +278,50 @@ export default function ExamHistoryPage() {
               Correct / Incorrect{skippedCount > 0 ? " / Skipped" : ""}
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* AI Debrief Section */}
+      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-xl border border-purple-200 dark:border-purple-800/50 p-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[var(--foreground)]">AI Exam Debrief</h3>
+              <p className="text-sm text-[var(--muted)]">
+                {checkingDebrief
+                  ? 'Checking...'
+                  : debriefExists
+                    ? 'View your personalized performance analysis'
+                    : 'Get personalized insights and recommendations'}
+              </p>
+            </div>
+          </div>
+          <Link
+            href={`/dashboard/exam-simulation/debrief/${examId}`}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:from-purple-700 hover:to-indigo-700 transition-all shadow-sm hover:shadow-md"
+          >
+            {debriefExists ? (
+              <>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                View Debrief
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Generate Debrief
+              </>
+            )}
+          </Link>
         </div>
       </div>
 
@@ -383,7 +447,7 @@ export default function ExamHistoryPage() {
             {examHistory.tbs_responses.map((tbs, index) => {
               const tbsQuestion = tbsQuestions.get(tbs.tbsId);
               const scorePercent = tbs.maxScore > 0 ? Math.round((tbs.scoreEarned / tbs.maxScore) * 100) : 0;
-              const isPassing = scorePercent >= 75;
+              const isPassing = scorePercent >= 80;
               return (
                 <div key={tbs.tbsId} className={`p-4 ${isPassing ? 'bg-green-50/50 dark:bg-green-900/10' : 'bg-red-50/50 dark:bg-red-900/10'}`}>
                   <div className="flex items-center justify-between">

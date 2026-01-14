@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import Anthropic from '@anthropic-ai/sdk';
-import { IS_BETA, isFeatureAvailable, type SubscriptionTier } from '@/lib/ai/beta-limits';
+import { isFeatureAvailable, type SubscriptionTier, getFeatureLimit, BETA_LIMITS } from '@/lib/ai/beta-limits';
+
+// Force dynamic to prevent caching
+export const dynamic = 'force-dynamic';
+
+function isBetaPeriod(): boolean {
+  return process.env.IS_BETA_PERIOD === 'true';
+}
 
 interface ExamDebriefRequest {
   simulationId: string;
@@ -27,6 +34,8 @@ interface ExamDebriefRequest {
 }
 
 export async function POST(request: NextRequest) {
+  const IS_BETA_NOW = isBetaPeriod();
+
   try {
     const supabase = await createClient();
     if (!supabase) {
@@ -234,8 +243,35 @@ Generate a comprehensive debrief with specific, actionable insights.`;
         onConflict: 'user_id,feature,period_type,period_key',
       });
 
+    // Store the debrief in the database
+    const { data: storedDebrief, error: storeError } = await supabase
+      .from('exam_debriefs')
+      .upsert({
+        user_id: user.id,
+        simulation_id: simulationId,
+        section,
+        debrief_content: debriefContent,
+        summary: {
+          mcq: { correct: mcqCorrect, total: mcqTotal, accuracy: mcqAccuracy },
+          tbs: tbsMax > 0 ? { earned: tbsEarned, max: tbsMax, accuracy: tbsAccuracy } : null,
+          timeUsed: totalTimeSeconds,
+          timeLimit: timeLimitSeconds,
+        },
+        created_at: new Date().toISOString(),
+      }, {
+        onConflict: 'user_id,simulation_id',
+      })
+      .select('id')
+      .single();
+
+    if (storeError) {
+      console.error('Error storing debrief:', storeError);
+      // Continue even if storage fails - still return the generated debrief
+    }
+
     return NextResponse.json({
       success: true,
+      debriefId: storedDebrief?.id,
       debrief: debriefContent,
       summary: {
         section,
@@ -245,12 +281,88 @@ Generate a comprehensive debrief with specific, actionable insights.`;
         timeUsed: totalTimeSeconds,
         timeLimit: timeLimitSeconds,
       },
-      isBeta: IS_BETA,
+      isBeta: IS_BETA_NOW,
       generatedAt: new Date().toISOString(),
     });
 
   } catch (error) {
     console.error('Error generating exam debrief:', error);
     return NextResponse.json({ error: 'Failed to generate exam debrief' }, { status: 500 });
+  }
+}
+
+// GET endpoint to retrieve debriefs
+export async function GET(request: NextRequest) {
+  try {
+    const supabase = await createClient();
+    if (!supabase) {
+      return NextResponse.json({ error: 'Server error' }, { status: 500 });
+    }
+
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+    }
+
+    const { searchParams } = new URL(request.url);
+    const simulationId = searchParams.get('simulationId');
+    const limit = parseInt(searchParams.get('limit') || '10');
+
+    if (simulationId) {
+      // Fetch specific debrief by simulation ID
+      const { data: debrief, error } = await supabase
+        .from('exam_debriefs')
+        .select('*')
+        .eq('user_id', user.id)
+        .eq('simulation_id', simulationId)
+        .single();
+
+      if (error && error.code !== 'PGRST116') {
+        console.error('Error fetching debrief:', error);
+        return NextResponse.json({ error: 'Failed to fetch debrief' }, { status: 500 });
+      }
+
+      if (!debrief) {
+        return NextResponse.json({ exists: false });
+      }
+
+      return NextResponse.json({
+        exists: true,
+        debrief: {
+          id: debrief.id,
+          simulationId: debrief.simulation_id,
+          section: debrief.section,
+          content: debrief.debrief_content,
+          summary: debrief.summary,
+          createdAt: debrief.created_at,
+        },
+      });
+    } else {
+      // Fetch list of recent debriefs
+      const { data: debriefs, error } = await supabase
+        .from('exam_debriefs')
+        .select('id, simulation_id, section, summary, created_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false })
+        .limit(limit);
+
+      if (error) {
+        console.error('Error fetching debriefs:', error);
+        return NextResponse.json({ error: 'Failed to fetch debriefs' }, { status: 500 });
+      }
+
+      return NextResponse.json({
+        debriefs: (debriefs || []).map(d => ({
+          id: d.id,
+          simulationId: d.simulation_id,
+          section: d.section,
+          summary: d.summary,
+          createdAt: d.created_at,
+        })),
+      });
+    }
+  } catch (error) {
+    console.error('Error in exam debrief GET:', error);
+    return NextResponse.json({ error: 'Failed to fetch debriefs' }, { status: 500 });
   }
 }

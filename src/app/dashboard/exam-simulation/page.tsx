@@ -47,16 +47,47 @@ const EXAM_CONFIG = {
   full: { questions: 72, timeMinutes: 144, label: "Full Testlet (144 min)" },
 };
 
+interface DebriefSummary {
+  id: string;
+  simulationId: string;
+  section: string;
+  summary: {
+    mcq?: { correct: number; total: number; accuracy: number };
+    tbs?: { earned: number; max: number; accuracy: number } | null;
+  };
+  createdAt: string;
+}
+
 export default function ExamSimulationPage() {
   const { user, profile, loading: authLoading } = useAuth();
   const [loading, setLoading] = useState(true);
   const [simulations, setSimulations] = useState<any[]>([]);
+  const [recentDebriefs, setRecentDebriefs] = useState<DebriefSummary[]>([]);
+  const [loadingDebriefs, setLoadingDebriefs] = useState(false);
   const supabase = createClient();
 
   useEffect(() => {
     if (authLoading) return;
     setLoading(false);
-  }, [authLoading]);
+    if (user) {
+      fetchRecentDebriefs();
+    }
+  }, [authLoading, user]);
+
+  const fetchRecentDebriefs = async () => {
+    setLoadingDebriefs(true);
+    try {
+      const response = await fetch('/api/ai/exam-debrief?limit=5');
+      if (response.ok) {
+        const data = await response.json();
+        setRecentDebriefs(data.debriefs || []);
+      }
+    } catch (error) {
+      console.error('Error fetching debriefs:', error);
+    } finally {
+      setLoadingDebriefs(false);
+    }
+  };
 
   const disciplineChoice = profile?.discipline_choice;
   const visibleSections = sections.filter(
@@ -302,6 +333,80 @@ export default function ExamSimulationPage() {
           </div>
         </div>
       </div>
+
+      {/* Previous AI Debriefs */}
+      {recentDebriefs.length > 0 && (
+        <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
+          <div className="p-6 border-b border-[var(--border)]">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-lg font-semibold text-[var(--foreground)]">Previous AI Debriefs</h2>
+                <p className="text-sm text-[var(--muted)]">Review your past exam performance analyses</p>
+              </div>
+            </div>
+          </div>
+          <div className="divide-y divide-[var(--border)]">
+            {recentDebriefs.map((debrief) => {
+              const mcqScore = debrief.summary?.mcq?.accuracy ?? 0;
+              const tbsScore = debrief.summary?.tbs?.accuracy;
+              const overallScore = tbsScore !== null && tbsScore !== undefined
+                ? Math.round((mcqScore + tbsScore) / 2)
+                : mcqScore;
+              const isPassing = overallScore >= 80;
+
+              return (
+                <Link
+                  key={debrief.id}
+                  href={`/dashboard/exam-simulation/debrief/${debrief.simulationId}`}
+                  className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                      isPassing
+                        ? 'bg-green-100 dark:bg-green-900/30'
+                        : 'bg-red-100 dark:bg-red-900/30'
+                    }`}>
+                      <span className={`text-lg font-bold ${
+                        isPassing
+                          ? 'text-green-700 dark:text-green-300'
+                          : 'text-red-700 dark:text-red-300'
+                      }`}>
+                        {overallScore}%
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[var(--foreground)]">
+                        {sections.find(s => s.code === debrief.section)?.name || debrief.section}
+                      </p>
+                      <div className="flex items-center gap-3 text-sm text-[var(--muted)]">
+                        <span>
+                          MCQ: {debrief.summary?.mcq?.correct || 0}/{debrief.summary?.mcq?.total || 0}
+                        </span>
+                        {debrief.summary?.tbs && (
+                          <span>
+                            TBS: {debrief.summary.tbs.accuracy}%
+                          </span>
+                        )}
+                        <span>
+                          {new Date(debrief.createdAt).toLocaleDateString()}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <svg className="w-5 h-5 text-[var(--muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Link to TBS Simulations */}
       <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800 p-6">

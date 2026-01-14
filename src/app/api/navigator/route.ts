@@ -153,24 +153,26 @@ function buildSystemPrompt(
 
   // Add analytics context for personalization
   if (analyticsContext) {
-    prompt += `\n\nSTUDENT PERFORMANCE CONTEXT:`;
+    prompt += `\n\nSTUDENT PERFORMANCE DATA (you have access to this and CAN share it with the student when asked):`;
+    if (analyticsContext.primeMeridianScore !== undefined) {
+      prompt += `\n- Prime Meridian Score: ${analyticsContext.primeMeridianScore}/100 (this is their overall exam readiness score for this section)`;
+    }
     if (analyticsContext.topicAccuracy !== undefined) {
-      prompt += `\n- Topic accuracy: ${analyticsContext.topicAccuracy}% (${analyticsContext.topicQuestionsAttempted || 0} questions)`;
+      prompt += `\n- Current topic accuracy: ${analyticsContext.topicAccuracy}% (${analyticsContext.topicQuestionsAttempted || 0} questions attempted)`;
     }
     if (analyticsContext.topicMasteryLevel) {
-      prompt += `\n- Topic mastery: ${analyticsContext.topicMasteryLevel}`;
-    }
-    if (analyticsContext.primeMeridianScore !== undefined) {
-      prompt += `\n- Overall readiness score: ${analyticsContext.primeMeridianScore}/100`;
+      prompt += `\n- Topic mastery level: ${analyticsContext.topicMasteryLevel}`;
     }
     if (analyticsContext.daysUntilExam !== undefined && analyticsContext.daysUntilExam > 0) {
-      prompt += `\n- Days until exam: ${analyticsContext.daysUntilExam}`;
+      prompt += `\n- Days until scheduled exam: ${analyticsContext.daysUntilExam}`;
     }
     if (analyticsContext.recentMistakeCount !== undefined && analyticsContext.recentMistakeCount > 0) {
-      prompt += `\n- Recent mistakes in this topic: ${analyticsContext.recentMistakeCount}`;
+      prompt += `\n- Recent mistakes in this topic (last 7 days): ${analyticsContext.recentMistakeCount}`;
     }
 
-    prompt += `\n\nUse this context to personalize your response. If the student is struggling with this topic, be more encouraging and thorough. If they're doing well, you can be more concise.`;
+    prompt += `\n\nWhen the student asks about their progress, Prime Meridian Score, accuracy, or performance - share this data with them and provide actionable advice. Use this context to personalize your responses.`;
+  } else {
+    prompt += `\n\nNote: No performance data is available for this student yet. If they ask about their Prime Meridian Score or progress, let them know they need to complete more practice questions to generate analytics.`;
   }
 
   return prompt;

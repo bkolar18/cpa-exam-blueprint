@@ -123,6 +123,13 @@ export default function ReadinessDashboardPage() {
  const [readinessData, setReadinessData] = useState<Record<string, SectionReadiness>>({});
  const [confidenceData, setConfidenceData] = useState<ConfidenceData[]>([]);
  const [loading, setLoading] = useState(true);
+ const [assessmentStatus, setAssessmentStatus] = useState<Record<string, {
+   available: boolean;
+   alreadyGenerated: boolean;
+   generatedAt?: string;
+   examDate?: string;
+   daysUntilExam?: number;
+ }>>({});
  const supabase = createClient();
 
  // Compute visible sections based on user's discipline choice
@@ -143,10 +150,27 @@ export default function ReadinessDashboardPage() {
  if (authLoading) return;
  if (user) {
  fetchReadinessData();
+ fetchAssessmentStatus();
  } else {
  setLoading(false);
  }
  }, [user, authLoading]);
+
+ const fetchAssessmentStatus = async () => {
+   const statuses: Record<string, typeof assessmentStatus[string]> = {};
+   for (const section of allSections) {
+     try {
+       const response = await fetch(`/api/ai/pre-exam-assessment?section=${section}`);
+       if (response.ok) {
+         const data = await response.json();
+         statuses[section] = data;
+       }
+     } catch (error) {
+       console.error(`Error fetching assessment status for ${section}:`, error);
+     }
+   }
+   setAssessmentStatus(statuses);
+ };
 
  const fetchReadinessData = async () => {
  if (!supabase || !user) {
@@ -1047,6 +1071,154 @@ export default function ReadinessDashboardPage() {
  </div>
  </div>
  )}
+
+ {/* Pre-Exam Assessment Section */}
+          <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl border border-amber-200 dark:border-amber-800/50 p-6">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-[var(--foreground)]">{selectedSection} Pre-Exam Assessment</h3>
+                  <p className="text-sm text-[var(--muted)] mt-1">
+                    {assessmentStatus[selectedSection]?.alreadyGenerated
+                      ? `Assessment generated on ${new Date(assessmentStatus[selectedSection].generatedAt!).toLocaleDateString()}`
+                      : assessmentStatus[selectedSection]?.examDate
+                        ? `One comprehensive AI assessment available per exam (${assessmentStatus[selectedSection].daysUntilExam} days until exam)`
+                        : 'Schedule your exam date to unlock your Pre-Exam Assessment'}
+                  </p>
+                  {!assessmentStatus[selectedSection]?.examDate && (
+                    <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">
+                      Set your exam date in the <Link href="/dashboard/nts" className="underline hover:no-underline">NTS Tracker</Link> to access this feature.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="flex-shrink-0">
+                {assessmentStatus[selectedSection]?.alreadyGenerated ? (
+                  <Link
+                    href={`/dashboard/readiness/assessment/${selectedSection.toLowerCase()}`}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-600 to-orange-600 text-white font-medium hover:from-amber-700 hover:to-orange-700 transition-all shadow-sm hover:shadow-md"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    View Assessment
+                  </Link>
+                ) : assessmentStatus[selectedSection]?.examDate ? (
+                  <Link
+                    href={`/dashboard/readiness/assessment/${selectedSection.toLowerCase()}`}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-600 to-orange-600 text-white font-medium hover:from-amber-700 hover:to-orange-700 transition-all shadow-sm hover:shadow-md"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                    Begin Pre-Exam Assessment
+                  </Link>
+                ) : (
+                  <Link
+                    href="/dashboard/nts"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300 font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    Schedule Exam
+                  </Link>
+                )}
+              </div>
+            </div>
+
+            {/* Readiness Recommendations */}
+            <div className="mt-6 pt-4 border-t border-amber-200 dark:border-amber-800/50">
+              <p className="text-sm font-medium text-[var(--foreground)] mb-3">What We Recommend Before Sitting:</p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <div className={`p-3 rounded-lg border ${
+                  currentReadiness.primeMeridian.overallScore >= 80
+                    ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                    : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
+                }`}>
+                  <div className="flex items-center gap-2">
+                    {currentReadiness.primeMeridian.overallScore >= 80 ? (
+                      <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="text-sm font-medium">Prime Meridian ≥ 80</span>
+                  </div>
+                  <p className="text-xs text-[var(--muted)] mt-1">Current: {currentReadiness.primeMeridian.overallScore}</p>
+                </div>
+
+                <div className={`p-3 rounded-lg border ${
+                  currentReadiness.coveragePercent >= 70
+                    ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                    : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
+                }`}>
+                  <div className="flex items-center gap-2">
+                    {currentReadiness.coveragePercent >= 70 ? (
+                      <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="text-sm font-medium">Coverage ≥ 70%</span>
+                  </div>
+                  <p className="text-xs text-[var(--muted)] mt-1">Current: {currentReadiness.coveragePercent}%</p>
+                </div>
+
+                <div className={`p-3 rounded-lg border ${
+                  currentReadiness.simulationCount >= 3
+                    ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                    : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
+                }`}>
+                  <div className="flex items-center gap-2">
+                    {currentReadiness.simulationCount >= 3 ? (
+                      <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="text-sm font-medium">3+ Simulations</span>
+                  </div>
+                  <p className="text-xs text-[var(--muted)] mt-1">Completed: {currentReadiness.simulationCount}</p>
+                </div>
+
+                <div className={`p-3 rounded-lg border ${
+                  currentReadiness.tbsStats.uniqueTBSCompleted >= 5
+                    ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                    : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
+                }`}>
+                  <div className="flex items-center gap-2">
+                    {currentReadiness.tbsStats.uniqueTBSCompleted >= 5 ? (
+                      <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="text-sm font-medium">5+ TBS Completed</span>
+                  </div>
+                  <p className="text-xs text-[var(--muted)] mt-1">Completed: {currentReadiness.tbsStats.uniqueTBSCompleted}</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
  {/* Note: Prime Meridian component includes its own disclaimer */}
  </>

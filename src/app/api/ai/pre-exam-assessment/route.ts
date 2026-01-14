@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import Anthropic from '@anthropic-ai/sdk';
-import { IS_BETA, isFeatureAvailable, type SubscriptionTier } from '@/lib/ai/beta-limits';
+import { isFeatureAvailable, type SubscriptionTier } from '@/lib/ai/beta-limits';
+
+// Force dynamic to prevent caching
+export const dynamic = 'force-dynamic';
+
+function isBetaPeriod(): boolean {
+  return process.env.IS_BETA_PERIOD === 'true';
+}
 
 // AICPA Blueprint content areas with weights
 const BLUEPRINT_WEIGHTS: Record<string, Record<string, { weight: string; minWeight: number; maxWeight: number }>> = {
@@ -40,6 +47,8 @@ const BLUEPRINT_WEIGHTS: Record<string, Record<string, { weight: string; minWeig
 };
 
 export async function POST(request: NextRequest) {
+  const IS_BETA_NOW = isBetaPeriod();
+
   try {
     const supabase = await createClient();
     if (!supabase) {
@@ -290,6 +299,37 @@ Generate a comprehensive readiness assessment with specific observations and opt
       .map(block => block.text)
       .join('\n');
 
+    // Store the assessment in the database
+    const assessmentSummary = {
+      section,
+      examDate: sectionProgress.exam_date,
+      daysRemaining: daysUntilExam,
+      primeMeridianScore: sectionProgress.prime_meridian_score,
+      totalAttempted: sectionProgress.total_questions_attempted,
+      mockExamTrend,
+      studyStreak: studyStreak?.current_streak || 0,
+    };
+
+    const { data: storedAssessment, error: storeError } = await supabase
+      .from('pre_exam_assessments')
+      .upsert({
+        user_id: user.id,
+        section,
+        exam_date: sectionProgress.exam_date,
+        assessment_content: assessmentContent,
+        summary: assessmentSummary,
+        created_at: new Date().toISOString(),
+      }, {
+        onConflict: 'user_id,section,exam_date',
+      })
+      .select('id')
+      .single();
+
+    if (storeError) {
+      console.error('Error storing assessment:', storeError);
+      // Continue even if storage fails
+    }
+
     // Record usage
     await supabase
       .from('ai_feature_usage')
@@ -304,17 +344,10 @@ Generate a comprehensive readiness assessment with specific observations and opt
 
     return NextResponse.json({
       success: true,
+      assessmentId: storedAssessment?.id,
       assessment: assessmentContent,
-      summary: {
-        section,
-        examDate: sectionProgress.exam_date,
-        daysRemaining: daysUntilExam,
-        primeMeridianScore: sectionProgress.prime_meridian_score,
-        totalAttempted: sectionProgress.total_questions_attempted,
-        mockExamTrend,
-        studyStreak: studyStreak?.current_streak || 0,
-      },
-      isBeta: IS_BETA,
+      summary: assessmentSummary,
+      isBeta: IS_BETA_NOW,
       generatedAt: new Date().toISOString(),
     });
 
@@ -324,7 +357,7 @@ Generate a comprehensive readiness assessment with specific observations and opt
   }
 }
 
-// GET endpoint to check if assessment is available
+// GET endpoint to check if assessment is available or retrieve existing
 export async function GET(request: NextRequest) {
   try {
     const supabase = await createClient();
@@ -338,6 +371,8 @@ export async function GET(request: NextRequest) {
     }
 
     const section = request.nextUrl.searchParams.get('section');
+    const includeContent = request.nextUrl.searchParams.get('includeContent') === 'true';
+
     if (!section) {
       return NextResponse.json({ error: 'Section parameter required' }, { status: 400 });
     }
@@ -372,9 +407,38 @@ export async function GET(request: NextRequest) {
       (new Date(sectionProgress.exam_date).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
     );
 
+    const alreadyGenerated = existingUsage && existingUsage.usage_count > 0;
+
+    // If requesting content and assessment exists, fetch from storage
+    if (includeContent && alreadyGenerated) {
+      const { data: storedAssessment } = await supabase
+        .from('pre_exam_assessments')
+        .select('*')
+        .eq('user_id', user.id)
+        .eq('section', section)
+        .eq('exam_date', sectionProgress.exam_date)
+        .single();
+
+      if (storedAssessment) {
+        return NextResponse.json({
+          available: false,
+          alreadyGenerated: true,
+          generatedAt: existingUsage?.created_at,
+          examDate: sectionProgress.exam_date,
+          daysUntilExam,
+          assessment: {
+            id: storedAssessment.id,
+            content: storedAssessment.assessment_content,
+            summary: storedAssessment.summary,
+            createdAt: storedAssessment.created_at,
+          },
+        });
+      }
+    }
+
     return NextResponse.json({
-      available: !existingUsage || existingUsage.usage_count === 0,
-      alreadyGenerated: existingUsage && existingUsage.usage_count > 0,
+      available: !alreadyGenerated,
+      alreadyGenerated,
       generatedAt: existingUsage?.created_at,
       examDate: sectionProgress.exam_date,
       daysUntilExam,

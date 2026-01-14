@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
 import Link from "next/link";
@@ -114,17 +115,68 @@ function createSessionFromAttempts(attempts: PracticeAttempt[]): PracticeSession
  };
 }
 
+// Study Guide types
+interface StudyGuideUsage {
+  used: number;
+  limit: number;
+  remaining: number;
+  tier: string;
+  resetDate: string;
+}
+
+type StudyStyle = 'intensive' | 'balanced' | 'spaced';
+
+const STUDY_STYLES: { value: StudyStyle; label: string; description: string }[] = [
+  { value: 'intensive', label: 'Intensive', description: 'Focus heavily on weak areas first' },
+  { value: 'balanced', label: 'Balanced', description: 'Mix of weak and strong areas' },
+  { value: 'spaced', label: 'Spaced', description: 'Distributed practice across all topics' },
+];
+
+const SECTIONS = [
+  { value: 'FAR', label: 'FAR - Financial Accounting & Reporting' },
+  { value: 'AUD', label: 'AUD - Auditing & Attestation' },
+  { value: 'REG', label: 'REG - Regulation' },
+  { value: 'TCP', label: 'TCP - Tax Compliance & Planning' },
+  { value: 'BAR', label: 'BAR - Business Analysis & Reporting' },
+  { value: 'ISC', label: 'ISC - Information Systems & Controls' },
+];
+
 export default function StudyLogPage() {
  const { user, loading: authLoading } = useAuth();
+ const searchParams = useSearchParams();
  const [practiceSessions, setPracticeSessions] = useState<PracticeSession[]>([]);
  const [visiblePracticeSessions, setVisiblePracticeSessions] = useState(5);
  const [loading, setLoading] = useState(true);
- const [activeTab, setActiveTab] = useState<'practice' | 'tbs' | 'exam'>('practice');
+ const [activeTab, setActiveTab] = useState<'practice' | 'tbs' | 'exam' | 'study-guide'>('practice');
  const [examSimulations, setExamSimulations] = useState<ExamSimulationHistory[]>([]);
  const [visibleExamSimulations, setVisibleExamSimulations] = useState(5);
  const [tbsAttempts, setTbsAttempts] = useState<TBSAttempt[]>([]);
  const [visibleTbsAttempts, setVisibleTbsAttempts] = useState(5);
  const supabase = createClient();
+
+ // Study Guide state
+ const [studyGuideUsage, setStudyGuideUsage] = useState<StudyGuideUsage | null>(null);
+ const [selectedSection, setSelectedSection] = useState<string>('FAR');
+ const [studyStyle, setStudyStyle] = useState<StudyStyle>('balanced');
+ const [availableHours, setAvailableHours] = useState<number>(10);
+ const [generatedGuide, setGeneratedGuide] = useState<string | null>(null);
+ const [generatingGuide, setGeneratingGuide] = useState(false);
+ const [guideError, setGuideError] = useState<string | null>(null);
+
+ // Handle URL tab parameter
+ useEffect(() => {
+  const tabParam = searchParams.get('tab');
+  if (tabParam === 'study-guide') {
+   setActiveTab('study-guide');
+  }
+ }, [searchParams]);
+
+ // Fetch study guide usage when on study-guide tab
+ useEffect(() => {
+  if (activeTab === 'study-guide' && user) {
+   fetchStudyGuideUsage();
+  }
+ }, [activeTab, user]);
 
  useEffect(() => {
  if (authLoading) return; // Wait for auth to finish
@@ -181,6 +233,56 @@ export default function StudyLogPage() {
  }
 
  setLoading(false);
+ };
+
+ // Fetch study guide usage
+ const fetchStudyGuideUsage = async () => {
+  try {
+   const response = await fetch('/api/ai/study-guide');
+   if (response.ok) {
+    const data = await response.json();
+    setStudyGuideUsage(data);
+   }
+  } catch (error) {
+   console.error('Error fetching study guide usage:', error);
+  }
+ };
+
+ // Generate study guide
+ const handleGenerateGuide = async () => {
+  if (!user) return;
+
+  setGeneratingGuide(true);
+  setGuideError(null);
+  setGeneratedGuide(null);
+
+  try {
+   const response = await fetch('/api/ai/study-guide', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+     section: selectedSection,
+     availableHoursPerWeek: availableHours,
+     studyStyle: studyStyle,
+    }),
+   });
+
+   const data = await response.json();
+
+   if (!response.ok) {
+    setGuideError(data.error || 'Failed to generate study guide');
+    return;
+   }
+
+   setGeneratedGuide(data.studyGuide);
+   // Refresh usage after generation
+   fetchStudyGuideUsage();
+  } catch (error) {
+   console.error('Error generating study guide:', error);
+   setGuideError('Failed to generate study guide. Please try again.');
+  } finally {
+   setGeneratingGuide(false);
+  }
  };
 
  // Format seconds to hours and minutes
@@ -324,6 +426,20 @@ export default function StudyLogPage() {
  }`}
  >
  Exams ({examSimulations.length})
+ </button>
+ <button
+ onClick={() => setActiveTab('study-guide')}
+ className={`px-4 md:px-6 py-3 text-sm font-medium border-b-2 transition-colors flex items-center gap-2 ${
+ activeTab === 'study-guide'
+ ? 'border-purple-500 text-purple-600 dark:text-purple-400'
+ : 'border-transparent text-[var(--muted)] hover:text-[var(--foreground)]'
+ }`}
+ >
+ <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+ </svg>
+ <span className="hidden sm:inline">AI Study Guide</span>
+ <span className="sm:hidden">AI Guide</span>
  </button>
  </div>
 
@@ -628,6 +744,190 @@ export default function StudyLogPage() {
  )}
  </>
  )}
+ </div>
+ )}
+
+ {/* AI Study Guide Tab */}
+ {activeTab === 'study-guide' && (
+ <div className="space-y-6">
+  {/* Usage Banner */}
+  {studyGuideUsage && (
+   <div className={`rounded-xl border p-4 ${
+    studyGuideUsage.remaining > 0
+     ? 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+     : 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
+   }`}>
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+     <div className="flex items-center gap-2">
+      <svg className={`w-5 h-5 ${studyGuideUsage.remaining > 0 ? 'text-purple-600 dark:text-purple-400' : 'text-red-600 dark:text-red-400'}`} fill="currentColor" viewBox="0 0 20 20">
+       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
+      </svg>
+      <span className={`text-sm font-medium ${studyGuideUsage.remaining > 0 ? 'text-purple-700 dark:text-purple-300' : 'text-red-700 dark:text-red-300'}`}>
+       {studyGuideUsage.remaining}/{studyGuideUsage.limit} generation{studyGuideUsage.limit > 1 ? 's' : ''} remaining this month
+      </span>
+     </div>
+     <span className="text-xs text-[var(--muted)]">
+      Resets {new Date(studyGuideUsage.resetDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+     </span>
+    </div>
+   </div>
+  )}
+
+  {/* Generator Card */}
+  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
+   <div className="p-6 border-b border-[var(--border)]">
+    <div className="flex items-center gap-3">
+     <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center">
+      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+      </svg>
+     </div>
+     <div>
+      <h2 className="text-lg font-semibold text-[var(--foreground)]">Generate AI Study Guide</h2>
+      <p className="text-sm text-[var(--muted)]">Get a personalized study plan based on your performance</p>
+     </div>
+    </div>
+   </div>
+
+   <div className="p-6 space-y-6">
+    {/* Section Selection */}
+    <div>
+     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+      Exam Section
+     </label>
+     <select
+      value={selectedSection}
+      onChange={(e) => setSelectedSection(e.target.value)}
+      className="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-white dark:bg-[var(--card-hover)] text-[var(--foreground)] focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
+     >
+      {SECTIONS.map((section) => (
+       <option key={section.value} value={section.value}>
+        {section.label}
+       </option>
+      ))}
+     </select>
+    </div>
+
+    {/* Study Style Selection */}
+    <div>
+     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+      Study Style
+     </label>
+     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      {STUDY_STYLES.map((style) => (
+       <button
+        key={style.value}
+        onClick={() => setStudyStyle(style.value)}
+        className={`p-4 rounded-lg border-2 text-left transition-all ${
+         studyStyle === style.value
+          ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
+          : 'border-[var(--border)] hover:border-purple-300 dark:hover:border-purple-700'
+        }`}
+       >
+        <div className={`font-medium ${studyStyle === style.value ? 'text-purple-700 dark:text-purple-300' : 'text-[var(--foreground)]'}`}>
+         {style.label}
+        </div>
+        <div className="text-xs text-[var(--muted)] mt-1">
+         {style.description}
+        </div>
+       </button>
+      ))}
+     </div>
+    </div>
+
+    {/* Available Hours */}
+    <div>
+     <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+      Available Study Hours Per Week
+     </label>
+     <div className="flex items-center gap-4">
+      <input
+       type="range"
+       min="5"
+       max="40"
+       step="5"
+       value={availableHours}
+       onChange={(e) => setAvailableHours(parseInt(e.target.value))}
+       className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-purple-500"
+      />
+      <span className="w-20 text-center font-medium text-[var(--foreground)] bg-purple-100 dark:bg-purple-900/30 px-3 py-1 rounded-lg">
+       {availableHours}h/week
+      </span>
+     </div>
+    </div>
+
+    {/* Error Message */}
+    {guideError && (
+     <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg text-sm">
+      {guideError}
+     </div>
+    )}
+
+    {/* Generate Button */}
+    <button
+     onClick={handleGenerateGuide}
+     disabled={generatingGuide || (studyGuideUsage?.remaining === 0)}
+     className="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+    >
+     {generatingGuide ? (
+      <>
+       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+       Generating Your Study Guide...
+      </>
+     ) : (
+      <>
+       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
+       </svg>
+       Generate Study Guide
+      </>
+     )}
+    </button>
+   </div>
+  </div>
+
+  {/* Generated Guide Display */}
+  {generatedGuide && (
+   <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)]">
+    <div className="p-6 border-b border-[var(--border)]">
+     <div className="flex items-center justify-between">
+      <div className="flex items-center gap-3">
+       <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
+        <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+       </div>
+       <div>
+        <h3 className="font-semibold text-[var(--foreground)]">Your {selectedSection} Study Guide</h3>
+        <p className="text-xs text-[var(--muted)]">Generated just now</p>
+       </div>
+      </div>
+      <button
+       onClick={() => {
+        navigator.clipboard.writeText(generatedGuide);
+       }}
+       className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] flex items-center gap-1"
+      >
+       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+       </svg>
+       Copy
+      </button>
+     </div>
+    </div>
+    <div className="p-6">
+     <pre className="whitespace-pre-wrap font-sans text-sm text-[var(--foreground)] leading-relaxed">
+      {generatedGuide}
+     </pre>
+    </div>
+   </div>
+  )}
+
+  {/* Help Text */}
+  <div className="text-center text-sm text-[var(--muted)] py-4">
+   <p>Your study guide will be personalized based on your practice history for the selected section.</p>
+   <p className="mt-1">The more you practice, the more tailored your guide will be!</p>
+  </div>
  </div>
  )}
  </div>

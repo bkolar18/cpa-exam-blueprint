@@ -66,22 +66,22 @@ export default function LoginPage() {
  <div className="max-w-md w-full">
  <div className="bg-white dark:bg-[var(--card)] rounded-2xl shadow-lg p-8">
  <div className="text-center mb-8">
- <Link href="/" className="inline-flex items-center space-x-3 mb-6 justify-center">
- <Image
-   src="/logo.png"
-   alt="Meridian CPA Review"
-   width={48}
-   height={48}
-   className="w-12 h-12 dark:brightness-0 dark:invert"
- />
- <div className="flex flex-col items-start">
-   <span className="text-xl font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
+ <Link href="/" className="inline-block mb-4">
+   <Image
+     src="/logo.png"
+     alt="Meridian CPA Review"
+     width={56}
+     height={56}
+     className="w-14 h-14 dark:brightness-0 dark:invert mx-auto"
+   />
+ </Link>
+ <Link href="/" className="block mb-4">
+   <span className="text-2xl font-bold bg-gradient-to-r from-[var(--primary)] to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
      Meridian
    </span>
-   <span className="text-xs font-semibold text-[var(--muted)] dark:text-gray-300 -mt-0.5 tracking-wide">
+   <span className="text-sm font-semibold text-[var(--muted)] dark:text-gray-300 ml-1">
      CPA Review
    </span>
- </div>
  </Link>
  <h1 className="text-2xl font-bold text-[var(--foreground)]">
  Welcome Back

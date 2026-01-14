@@ -54,11 +54,15 @@ export async function POST(request: NextRequest) {
 
     // Parse request body
     const body = await request.json();
-    const { section, availableHoursPerWeek } = body;
+    const { section, availableHoursPerWeek, studyStyle = 'balanced' } = body;
 
     if (!section) {
       return NextResponse.json({ error: 'Section is required' }, { status: 400 });
     }
+
+    // Validate study style
+    const validStyles = ['intensive', 'balanced', 'spaced'];
+    const effectiveStudyStyle = validStyles.includes(studyStyle) ? studyStyle : 'balanced';
 
     // Get user's subscription tier
     const { data: profile } = await supabase
@@ -155,6 +159,13 @@ export async function POST(request: NextRequest) {
     // Get blueprint weights for this section
     const blueprintAreas = BLUEPRINT_WEIGHTS[section] || {};
 
+    // Study style descriptions for the prompt
+    const studyStyleDescriptions: Record<string, string> = {
+      intensive: 'INTENSIVE - Focus heavily on weak areas first. Dedicate 70-80% of time to weak topics before moving to others.',
+      balanced: 'BALANCED - Mix weak and strong areas. Spend 50% on weak topics, 30% on moderate, 20% on maintaining strong areas.',
+      spaced: 'SPACED - Distributed practice across all topics. Rotate through all areas with slightly more emphasis on weaker ones.',
+    };
+
     // Build the prompt
     const systemPrompt = `You are Meridian Navigator, an AI CPA exam study guide generator. Your role is to create personalized, actionable study plans based on student performance data.
 
@@ -164,6 +175,8 @@ CRITICAL LANGUAGE RULES:
 3. ALWAYS frame feedback in terms of preparation metrics and benchmarks
 4. ALWAYS reference the "recommended Prime Meridian target of 80" instead of "passing"
 5. ALWAYS use phrases like "additional practice recommended" not "you need to study more or you'll fail"
+
+STUDY STYLE REQUESTED: ${studyStyleDescriptions[effectiveStudyStyle]}
 
 Frame all assessments as:
 - Observations about current metrics
@@ -175,6 +188,7 @@ Generate a comprehensive, personalized study guide in the following format:
 
 YOUR PERSONALIZED [SECTION] STUDY GUIDE
 Generated: [Current Date]
+Study Style: ${effectiveStudyStyle.charAt(0).toUpperCase() + effectiveStudyStyle.slice(1)}
 ${daysUntilExam ? `Exam Date: [Date] (${daysUntilExam} days away)` : 'Exam Date: Not yet scheduled'}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -202,7 +216,7 @@ STRONG AREAS (Maintain)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 WEEKLY STUDY SCHEDULE
-[If available hours provided, create a schedule]
+[If available hours provided, create a schedule that follows the ${effectiveStudyStyle} study style]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -210,11 +224,14 @@ End with the standard disclaimer about exam outcomes.`;
 
     const userMessage = `Generate a personalized study guide for ${section} based on this performance data:
 
+STUDY PREFERENCES:
+- Study Style: ${effectiveStudyStyle.toUpperCase()}
+${availableHoursPerWeek ? `- Available Study Hours Per Week: ${availableHoursPerWeek}` : '- Available Hours: Not specified'}
+
 CURRENT STATUS:
 - Prime Meridian Score: ${sectionProgress?.prime_meridian_score || 'Not yet calculated'}
 - Total Questions Attempted: ${sectionProgress?.total_questions_attempted || 0}
 ${daysUntilExam ? `- Days Until Exam: ${daysUntilExam}` : '- Exam: Not yet scheduled'}
-${availableHoursPerWeek ? `- Available Study Hours Per Week: ${availableHoursPerWeek}` : ''}
 
 AICPA BLUEPRINT AREAS FOR ${section}:
 ${Object.entries(blueprintAreas).map(([area, data]) =>
