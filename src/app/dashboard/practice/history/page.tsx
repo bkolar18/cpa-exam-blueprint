@@ -104,11 +104,11 @@ function PracticeHistoryContent() {
  const [savingNote, setSavingNote] = useState(false);
  const supabase = createClient();
 
- // Handle back to all sessions - clear URL param and state
+ // Handle back to all sessions - clear state (URL is handled by the effect)
  const handleBackToSessions = () => {
    setSelectedSession(null);
-   // Clear the session param from URL without full page reload
-   router.replace('/dashboard/practice/history', { scroll: false });
+   // Update URL without causing navigation issues
+   window.history.replaceState(null, '', '/dashboard/practice/history');
  };
 
  useEffect(() => {
@@ -360,7 +360,7 @@ function PracticeHistoryContent() {
  <div
  key={attempt.id}
  className={`p-4 rounded-lg border ${
- attempt.is_correct ?"border-green-200 bg-green-50":"border-red-200 bg-red-50"
+ attempt.is_correct ?"border-green-200 bg-green-50 dark:border-green-700 dark:bg-green-900/20":"border-red-200 bg-red-50 dark:border-red-700 dark:bg-red-900/20"
  }`}
  >
  <div className="flex items-start justify-between mb-3">
@@ -368,7 +368,7 @@ function PracticeHistoryContent() {
  Question {index + 1}
  </span>
  <span className={`px-2 py-1 rounded text-xs font-medium ${
- attempt.is_correct ?"bg-green-200 text-green-800":"bg-red-200 text-red-800"
+ attempt.is_correct ?"bg-green-200 text-green-800 dark:bg-green-800 dark:text-green-100":"bg-red-200 text-red-800 dark:bg-red-800 dark:text-red-100"
  }`}>
  {attempt.is_correct ?"Correct":"Incorrect"}
  </span>
@@ -390,13 +390,13 @@ function PracticeHistoryContent() {
  let textColor ="text-[var(--foreground)]";
 
  if (isCorrect) {
- bgColor ="bg-green-100 dark:bg-green-900/30";
- borderColor ="border-green-300 dark:border-green-700";
- textColor ="text-green-800 dark:text-green-300";
+ bgColor ="bg-green-100 dark:bg-green-900/40";
+ borderColor ="border-green-300 dark:border-green-600";
+ textColor ="text-green-800 dark:text-green-200";
  } else if (isSelected && !isCorrect) {
- bgColor ="bg-red-100 dark:bg-red-900/30";
- borderColor ="border-red-300 dark:border-red-700";
- textColor ="text-red-800 dark:text-red-300";
+ bgColor ="bg-red-100 dark:bg-red-900/40";
+ borderColor ="border-red-300 dark:border-red-600";
+ textColor ="text-red-800 dark:text-red-200";
  }
 
  return (

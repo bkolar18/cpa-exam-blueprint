@@ -119,12 +119,55 @@ const sections: { code: SectionCode; name: string; topics: string[] }[] = [
   },
 ];
 
+interface SavedSession {
+  section: string;
+  questionIds: string[];
+  currentIndex: number;
+  results: Array<{
+    questionId: string;
+    selectedAnswer: 'A' | 'B' | 'C' | 'D';
+    isCorrect: boolean;
+  }>;
+  startTime: string;
+  savedAt: string;
+}
+
+const SAVED_SESSION_KEY = 'cpa-practice-session';
+
+const sectionNames: Record<string, string> = {
+  FAR: 'Financial Accounting & Reporting',
+  AUD: 'Auditing & Attestation',
+  REG: 'Regulation',
+  TCP: 'Tax Compliance & Planning',
+  BAR: 'Business Analysis & Reporting',
+  ISC: 'Information Systems & Controls',
+};
+
 export default function PracticePage() {
   const { user, profile, loading: authLoading } = useAuth();
   const [attempts, setAttempts] = useState<PracticeAttempt[]>([]);
   const [practiceSessions, setPracticeSessions] = useState<PracticeSession[]>([]);
   const [loading, setLoading] = useState(true);
+  const [savedSession, setSavedSession] = useState<SavedSession | null>(null);
   const supabase = createClient();
+
+  // Check for saved session on mount
+  useEffect(() => {
+    const saved = localStorage.getItem(SAVED_SESSION_KEY);
+    if (saved) {
+      try {
+        const parsed: SavedSession = JSON.parse(saved);
+        setSavedSession(parsed);
+      } catch {
+        localStorage.removeItem(SAVED_SESSION_KEY);
+      }
+    }
+  }, []);
+
+  const discardSession = () => {
+    localStorage.removeItem(SAVED_SESSION_KEY);
+    setSavedSession(null);
+  };
 
   useEffect(() => {
     if (authLoading) return;
@@ -232,14 +275,49 @@ export default function PracticePage() {
         )}
       </div>
 
+      {/* Resume Session Banner */}
+      {savedSession && (
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-amber-100 dark:bg-amber-800/50 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-semibold text-amber-800 dark:text-amber-200">Resume Previous Session</p>
+                <p className="text-sm text-amber-600 dark:text-amber-300">
+                  {sectionNames[savedSession.section] || savedSession.section} • {savedSession.results.length}/{savedSession.questionIds.length} questions completed
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={discardSession}
+                className="px-3 py-1.5 text-sm font-medium text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-800/50 rounded-lg transition-colors"
+              >
+                Discard
+              </button>
+              <Link
+                href={`/dashboard/practice/${savedSession.section.toLowerCase()}`}
+                className="px-4 py-1.5 text-sm font-semibold bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
+              >
+                Resume
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Practice Banner */}
       <div className="bg-gradient-to-r from-[var(--primary)] to-blue-600 rounded-2xl p-8 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-bold mb-2">Practice Booklets Now Available!</h2>
+            <h2 className="text-2xl font-bold mb-2">Adaptive Practice Questions</h2>
             <p className="text-white/80 max-w-xl">
-              {totalAvailableQuestions} practice questions across {availableSections.length} sections.
-              Start practicing FAR, AUD, and REG today. More sections coming soon!
+              6,000+ practice questions and simulations across FAR, AUD, REG, and your chosen discipline section.
+              Full adaptive learning and progress tracking included.
             </p>
           </div>
           <div className="hidden md:block">

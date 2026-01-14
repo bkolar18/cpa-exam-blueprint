@@ -7,7 +7,8 @@ import { useAuth } from "@/components/auth/AuthProvider";
 import { createClient } from "@/lib/supabase/client";
 import { getQuestionById, PracticeQuestion } from "@/lib/data/practice-questions";
 import { getTBSById } from "@/lib/data/tbs";
-import type { TBSQuestion } from "@/lib/data/tbs/types";
+import type { TBSQuestion, UserResponse } from "@/lib/data/tbs/types";
+import TBSContainer from "@/components/tbs/TBSContainer";
 
 interface MCQResponse {
   questionId: string;
@@ -126,8 +127,11 @@ export default function ExamHistoryPage() {
       const tbs = getTBSById(tbsId);
       if (tbs) {
         tbsMap.set(tbsId, tbs);
+      } else {
+        console.warn(`[ExamHistory] TBS question not found for ID: ${tbsId}`);
       }
     }
+    console.log(`[ExamHistory] Found ${tbsMap.size}/${(data.tbs_question_ids || []).length} TBS questions`);
     setTbsQuestions(tbsMap);
     setLoading(false);
   };
@@ -419,110 +423,51 @@ export default function ExamHistoryPage() {
         </div>
       )}
 
-      {/* TBS Review Modal */}
-      {reviewingTbsIndex !== null && examHistory.tbs_responses[reviewingTbsIndex] && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-[var(--card)] rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
-            {/* Modal Header */}
-            <div className="p-4 border-b border-[var(--border)] flex items-center justify-between">
-              <div>
-                {(() => {
-                  const tbs = examHistory.tbs_responses[reviewingTbsIndex];
-                  const tbsQuestion = tbsQuestions.get(tbs.tbsId);
-                  return (
-                    <>
-                      <h3 className="text-lg font-semibold text-[var(--foreground)]">
-                        TBS Review: {tbsQuestion?.title || 'Task-Based Simulation'}
-                      </h3>
-                      <p className="text-sm text-[var(--muted)]">
-                        {tbsQuestion ? `${tbsQuestion.topic} • ${tbsQuestion.tbsType.replace('_', ' ')}` : tbs.tbsId}
-                      </p>
-                    </>
-                  );
-                })()}
+      {/* TBS Review Modal - Full TBSContainer in Review Mode */}
+      {reviewingTbsIndex !== null && examHistory.tbs_responses[reviewingTbsIndex] && (() => {
+        const tbsResponse = examHistory.tbs_responses[reviewingTbsIndex];
+        const tbsQuestion = tbsQuestions.get(tbsResponse.tbsId);
+
+        if (!tbsQuestion) {
+          // Fallback for missing TBS question data
+          return (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+              <div className="bg-white dark:bg-[var(--card)] rounded-xl max-w-md w-full p-6">
+                <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
+                  <p className="text-sm text-yellow-800 dark:text-yellow-200">
+                    TBS question data not available. The question may have been updated since you took this exam.
+                  </p>
+                  <p className="text-xs text-yellow-600 dark:text-yellow-400 mt-1">
+                    TBS ID: {tbsResponse.tbsId}
+                  </p>
+                </div>
+                <button
+                  onClick={() => setReviewingTbsIndex(null)}
+                  className="mt-4 w-full py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                >
+                  Close
+                </button>
               </div>
-              <button
-                onClick={() => setReviewingTbsIndex(null)}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-              >
-                <svg className="w-5 h-5 text-[var(--muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
             </div>
+          );
+        }
 
-            {/* Modal Content */}
-            <div className="flex-1 overflow-auto p-4 space-y-4">
-              {(() => {
-                const tbs = examHistory.tbs_responses[reviewingTbsIndex];
-                const tbsQuestion = tbsQuestions.get(tbs.tbsId);
-                const scorePercent = tbs.maxScore > 0 ? Math.round((tbs.scoreEarned / tbs.maxScore) * 100) : 0;
-                const isPassing = scorePercent >= 75;
-
-                return (
-                  <>
-                    {/* Score Summary */}
-                    <div className={`rounded-lg p-4 text-center ${
-                      isPassing ? 'bg-green-100 dark:bg-green-900/30' : 'bg-red-100 dark:bg-red-900/30'
-                    }`}>
-                      <p className={`text-3xl font-bold ${
-                        isPassing ? 'text-green-700 dark:text-green-300' : 'text-red-700 dark:text-red-300'
-                      }`}>
-                        {scorePercent}%
-                      </p>
-                      <p className="text-sm text-[var(--muted)] mt-1">
-                        {tbs.scoreEarned}/{tbs.maxScore} points earned
-                      </p>
-                    </div>
-
-                    {/* TBS Details */}
-                    {tbsQuestion && (
-                      <div className="space-y-3">
-                        <h4 className="font-medium text-[var(--foreground)]">Scenario</h4>
-                        <div className="p-3 bg-[var(--card)] dark:bg-[var(--card-hover)] rounded-lg border border-[var(--border)]">
-                          <p className="text-sm text-[var(--foreground)]">{tbsQuestion.scenarioText.slice(0, 500)}{tbsQuestion.scenarioText.length > 500 ? '...' : ''}</p>
-                        </div>
-
-                        <h4 className="font-medium text-[var(--foreground)] mt-4">Requirements Summary</h4>
-                        <div className="space-y-2">
-                          {tbsQuestion.requirements.map((req, idx) => (
-                            <div key={req.id} className="p-3 rounded-lg border bg-[var(--card)] dark:bg-[var(--card-hover)] border-[var(--border)]">
-                              <div className="flex items-start justify-between">
-                                <div>
-                                  <span className="font-medium text-[var(--foreground)]">{idx + 1}. {req.label}</span>
-                                  <p className="text-sm text-[var(--muted)] mt-1">{req.points} point{req.points !== 1 ? 's' : ''}</p>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {!tbsQuestion && (
-                      <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
-                        <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                          TBS question data not available. The question may have been updated since you took this exam.
-                        </p>
-                      </div>
-                    )}
-                  </>
-                );
-              })()}
-            </div>
-
-            {/* Modal Footer */}
-            <div className="p-4 border-t border-[var(--border)]">
-              <button
-                onClick={() => setReviewingTbsIndex(null)}
-                className="w-full py-2 bg-gray-100 dark:bg-[var(--card-hover)] text-gray-700 dark:text-[var(--muted-light)] rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              >
-                Close Review
-              </button>
-            </div>
+        return (
+          <div className="fixed inset-0 bg-black/50 z-50">
+            <TBSContainer
+              tbs={tbsQuestion}
+              reviewMode={true}
+              savedResponses={tbsResponse.responses as Record<string, UserResponse>}
+              savedScore={{
+                earned: tbsResponse.scoreEarned,
+                total: tbsResponse.maxScore
+              }}
+              onClose={() => setReviewingTbsIndex(null)}
+              isPracticeMode={true}
+            />
           </div>
-        </div>
-      )}
+        );
+      })()}
 
       {/* Actions */}
       <div className="flex justify-center space-x-4">

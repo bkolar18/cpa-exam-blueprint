@@ -393,6 +393,11 @@ export default function Header() {
                 </>
               )}
 
+              <div className="pt-4 flex items-center justify-between border-t border-[var(--border)]">
+                <span className="text-sm text-[var(--muted)]">Theme</span>
+                <ThemeToggleSimple />
+              </div>
+
               <div className="pt-2">
                 <Link
                   href="/study-plan"

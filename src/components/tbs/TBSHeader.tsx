@@ -41,6 +41,10 @@ interface TBSHeaderProps {
  onPrevious?: () => void;
  onNext?: () => void;
  onReturnToLibrary?: () => void;
+ // Review mode props
+ reviewMode?: boolean;
+ savedScore?: { earned: number; total: number };
+ onClose?: () => void;
 }
 
 function formatTime(seconds: number): string {
@@ -93,9 +97,88 @@ export default function TBSHeader({
  onPrevious,
  onNext,
  onReturnToLibrary,
+ reviewMode,
+ savedScore,
+ onClose,
 }: TBSHeaderProps) {
  const remainingSeconds = Math.max(0, timeLimit - elapsedSeconds);
  const timeColor = getTimeColor(elapsedSeconds, timeLimit);
+
+ // In review mode, show a simplified header with close button
+ if (reviewMode) {
+   const scorePercent = savedScore ? Math.round((savedScore.earned / savedScore.total) * 100) : 0;
+   return (
+     <header className="bg-white dark:bg-[var(--card)] border-b border-gray-200 dark:border-[var(--border)] flex-shrink-0">
+       <div className="flex items-center justify-between px-4 py-3">
+         <div className="flex items-center gap-3">
+           {/* Review Mode Badge */}
+           <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium rounded">
+             Review Mode
+           </span>
+           {/* Section Badge */}
+           <span className="px-2 py-1 bg-orange-500 text-white text-xs font-bold rounded">
+             {section}
+           </span>
+           {/* Title */}
+           <h1 className="text-lg font-semibold text-[var(--foreground)] truncate max-w-md">
+             {title}
+           </h1>
+         </div>
+         <div className="flex items-center gap-3">
+           {/* Score from original attempt */}
+           {savedScore && (
+             <div className={`px-3 py-1 rounded-lg text-sm font-medium ${
+               scorePercent >= 75 ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' :
+               scorePercent >= 50 ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300' :
+               'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
+             }`}>
+               Original Score: {savedScore.earned}/{savedScore.total} ({scorePercent}%)
+             </div>
+           )}
+           {/* Flag Button - still functional in review mode */}
+           <button
+             onClick={onFlagToggle}
+             className={`p-2 rounded-lg transition-colors ${
+               isFlagged
+                 ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                 : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-[var(--muted-light)]'
+             }`}
+             title={isFlagged ? "Remove flag" : "Flag for review"}
+           >
+             <svg className="w-5 h-5" fill={isFlagged ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+             </svg>
+           </button>
+           {/* Notes Button */}
+           {onScratchPadToggle && (
+             <button
+               onClick={onScratchPadToggle}
+               className={`p-2 rounded-lg transition-colors ${
+                 showScratchPad
+                   ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400'
+                   : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-[var(--muted-light)]'
+               }`}
+               title="Notes"
+             >
+               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+               </svg>
+             </button>
+           )}
+           {/* Close Button */}
+           {onClose && (
+             <button
+               onClick={onClose}
+               className="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+             >
+               Close Review
+             </button>
+           )}
+         </div>
+       </div>
+     </header>
+   );
+ }
 
  return (
  <header className="bg-white dark:bg-[var(--card)] border-b border-gray-200 flex-shrink-0">

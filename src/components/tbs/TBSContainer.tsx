@@ -28,6 +28,11 @@ interface TBSContainerProps {
  onPrevious?: () => void;
  isPracticeMode?: boolean;
  onReturnToLibrary?: () => void;
+ // Review mode props - for viewing completed TBS from history
+ reviewMode?: boolean;                              // Enable view-only review
+ savedResponses?: Record<string, UserResponse>;    // Pre-populate from history
+ savedScore?: { earned: number; total: number };   // Score from original attempt
+ onClose?: () => void;                             // Close review modal
 }
 
 type ViewMode ="work"|"review"|"results";
@@ -41,12 +46,17 @@ export default function TBSContainer({
  onPrevious,
  isPracticeMode = true,
  onReturnToLibrary,
+ reviewMode = false,
+ savedResponses,
+ savedScore,
+ onClose,
 }: TBSContainerProps) {
  // Auth and Supabase for saving notes (optional - works without auth provider for testing)
  const { user } = useAuthOptional();
  const supabase = createClient();
 
  // Use undo/redo hook for responses
+ // In review mode, initialize with saved responses
  const {
  state: responses,
  setState: setResponses,
@@ -54,10 +64,13 @@ export default function TBSContainer({
  redo,
  canUndo,
  canRedo,
- } = useUndoRedo<Record<string, UserResponse>>({});
+ } = useUndoRedo<Record<string, UserResponse>>(reviewMode && savedResponses ? savedResponses : {});
 
  // View mode state
  const [viewMode, setViewMode] = useState<ViewMode>("work");
+
+ // In review mode, set isSubmitted to true immediately so inputs are disabled
+ const [isSubmitted, setIsSubmitted] = useState(reviewMode);
 
  // Scratch pad notes state
  const [scratchPadNotes, setScratchPadNotes] = useState("");
@@ -66,7 +79,6 @@ export default function TBSContainer({
  const [currentExhibitId, setCurrentExhibitId] = useState<string | null>(
  tbs.exhibits.length > 0 ? tbs.exhibits[0].id : null
  );
- const [isSubmitted, setIsSubmitted] = useState(false);
  const [isPaused, setIsPaused] = useState(false);
  const [isFlagged, setIsFlagged] = useState(false);
  // Transitioning state for exam mode - shows loading overlay to prevent seeing results
@@ -110,20 +122,20 @@ export default function TBSContainer({
  }>;
  } | null>(null);
 
- // Timer effect
+ // Timer effect - disabled in review mode
  useEffect(() => {
- if (isSubmitted || isPaused) return;
+ if (isSubmitted || isPaused || reviewMode) return;
 
  const interval = setInterval(() => {
  setElapsedSeconds((prev) => prev + 1);
  }, 1000);
 
  return () => clearInterval(interval);
- }, [isSubmitted, isPaused]);
+ }, [isSubmitted, isPaused, reviewMode]);
 
- // Auto-save effect (every 30 seconds)
+ // Auto-save effect (every 30 seconds) - disabled in review mode
  useEffect(() => {
- if (isSubmitted) return;
+ if (isSubmitted || reviewMode) return;
 
  const saveInterval = setInterval(() => {
  // In a real implementation, this would save to the database
@@ -131,7 +143,7 @@ export default function TBSContainer({
  }, 30000);
 
  return () => clearInterval(saveInterval);
- }, [responses, isSubmitted]);
+ }, [responses, isSubmitted, reviewMode]);
 
  // Load TBS flag state from database
  useEffect(() => {
@@ -828,7 +840,7 @@ export default function TBSContainer({
  );
  }
 
- // Default: work view
+ // Default: work view (or review mode view)
  return (
  <SplitView
  leftPanel={
@@ -845,7 +857,7 @@ export default function TBSContainer({
  onResponseChange={handleResponseChange}
  isSubmitted={isSubmitted}
  showHints={showHints}
- showCorrectAnswer={isPracticeMode}
+ showCorrectAnswer={isPracticeMode || reviewMode}
  focusRequirementId={focusRequirementId}
  />
  }
@@ -893,6 +905,9 @@ export default function TBSContainer({
  onPrevious={onPrevious}
  onNext={onNext}
  onReturnToLibrary={isPracticeMode ? (isSubmitted ? onReturnToLibrary : handleExitSession) : undefined}
+ reviewMode={reviewMode}
+ savedScore={savedScore}
+ onClose={onClose}
  />
 
  {/* Report Issue Button - positioned at top right of content area */}

@@ -148,6 +148,29 @@ export default function SectionPracticePage() {
  }
  }, [section]);
 
+ // Intercept browser back button during quiz to show exit modal
+ useEffect(() => {
+   if (quizState !== 'quiz') return;
+
+   // Push a state so we can intercept the back button
+   window.history.pushState({ quizInProgress: true }, '');
+
+   const handlePopState = (event: PopStateEvent) => {
+     if (quizState === 'quiz') {
+       // Prevent navigation and show exit modal
+       event.preventDefault();
+       window.history.pushState({ quizInProgress: true }, '');
+       setShowExitConfirm(true);
+     }
+   };
+
+   window.addEventListener('popstate', handlePopState);
+
+   return () => {
+     window.removeEventListener('popstate', handlePopState);
+   };
+ }, [quizState]);
+
  // Save session to localStorage
  const saveSession = () => {
  const session: SavedSession = {

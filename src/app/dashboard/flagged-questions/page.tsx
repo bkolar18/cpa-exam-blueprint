@@ -51,6 +51,7 @@ export default function FlaggedQuestionsPage() {
  const [isLoading, setIsLoading] = useState(true);
  const [selectedSection, setSelectedSection] = useState<string>("all");
  const [filterType, setFilterType] = useState<FilterType>("all");
+ const [expandedQuestion, setExpandedQuestion] = useState<string | null>(null);
 
  useEffect(() => {
  const loadFlaggedQuestions = async () => {
@@ -375,13 +376,75 @@ export default function FlaggedQuestionsPage() {
  {/* Question */}
  {fq.question ? (
  <div>
- <p className="text-[var(--foreground)] mb-2">{fq.question.question}</p>
- <div className="flex items-center justify-end">
- {/* Difficulty badge removed - let adaptive model handle question selection */}
- <span className="text-xs text-[var(--muted)]">
- Flagged {new Date(fq.updated_at).toLocaleDateString()}
- </span>
- </div>
+ <button
+   onClick={() => setExpandedQuestion(expandedQuestion === fq.id ? null : fq.id)}
+   className="w-full text-left"
+ >
+   <p className="text-[var(--foreground)] mb-2">{fq.question.question}</p>
+   <div className="flex items-center justify-between">
+     <button
+       className="flex items-center gap-1 text-sm text-[var(--primary)] hover:text-[var(--primary-dark)] font-medium"
+       onClick={(e) => {
+         e.stopPropagation();
+         setExpandedQuestion(expandedQuestion === fq.id ? null : fq.id);
+       }}
+     >
+       <span>{expandedQuestion === fq.id ? "Hide Answer" : "Review Answer"}</span>
+       <svg
+         className={`w-4 h-4 transition-transform ${expandedQuestion === fq.id ? "rotate-180" : ""}`}
+         fill="none"
+         stroke="currentColor"
+         viewBox="0 0 24 24"
+       >
+         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+       </svg>
+     </button>
+     <span className="text-xs text-[var(--muted)]">
+       Flagged {new Date(fq.updated_at).toLocaleDateString()}
+     </span>
+   </div>
+ </button>
+
+ {/* Expanded Answer Review */}
+ {expandedQuestion === fq.id && (
+   <div className="mt-4 pt-4 border-t border-[var(--border)]">
+     <div className="space-y-2 mb-4">
+       {(["A", "B", "C", "D"] as const).map((letter) => {
+         const isCorrect = fq.question!.correctAnswer === letter;
+         return (
+           <div
+             key={letter}
+             className={`p-3 rounded-lg border ${
+               isCorrect
+                 ? "bg-green-100 dark:bg-green-900/40 border-green-300 dark:border-green-600 text-green-800 dark:text-green-200"
+                 : "bg-white dark:bg-[var(--card-hover)] border-gray-200 dark:border-[var(--border)] text-[var(--foreground)]"
+             }`}
+           >
+             <span className="font-bold mr-2">{letter}.</span>
+             <span>{fq.question!.options[letter]}</span>
+             {isCorrect && (
+               <span className="ml-2 text-green-600 dark:text-green-400 text-sm font-medium">
+                 ✓ Correct
+               </span>
+             )}
+           </div>
+         );
+       })}
+     </div>
+
+     {fq.question!.explanation && (
+       <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
+         <p className="text-sm font-medium text-blue-700 dark:text-blue-300 mb-1">Explanation</p>
+         <p className="text-sm text-blue-900 dark:text-blue-100">{fq.question!.explanation}</p>
+         {fq.question!.tip && (
+           <p className="text-sm text-blue-700 dark:text-blue-300 mt-2">
+             <span className="font-medium">Tip:</span> {fq.question!.tip}
+           </p>
+         )}
+       </div>
+     )}
+   </div>
+ )}
  </div>
  ) : (
  <div className="bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg">
