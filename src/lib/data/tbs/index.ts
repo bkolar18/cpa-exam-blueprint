@@ -84,8 +84,10 @@ export function getTBSBySection(
 }
 
 // Helper function to get a TBS by ID from all TBS questions
+// Also checks sampleTBSQuestions for legacy IDs (tbs-*-001 through tbs-*-011)
 export function getTBSById(id: string) {
-  return allTBSQuestions.find((tbs) => tbs.id === id);
+  return allTBSQuestions.find((tbs) => tbs.id === id)
+    || sampleTBSQuestions.find((tbs) => tbs.id === id);
 }
 
 // Helper function to get random TBS questions for practice
