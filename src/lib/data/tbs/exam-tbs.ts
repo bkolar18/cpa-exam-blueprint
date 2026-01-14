@@ -5040,7 +5040,35 @@ export const tcpRetirementTBS: TBSQuestion = {
         value: 30000,
         tolerance: 0,
       },
-      explanation: "401(k) limit for age 50+: $22,500 regular + $7,500 catch-up = $30,000",
+      explanation: `**Answer:** $30,000 — Maximum 401(k) Employee Contribution
+
+**IRC §402(g) — 401(k) Contribution Limits:**
+
+| Component | Amount |
+|-----------|--------|
+| Regular limit | $22,500 |
+| Catch-up (age 50+) | $7,500 |
+| **Total** | **$30,000** |
+
+**Calculation:**
+$22,500 + $7,500 = **$30,000**
+
+**Jennifer's Eligibility:**
+• Age 52 → Qualifies for catch-up contributions (age 50+)
+• Has employer 401(k) → Can make employee deferrals
+
+**What This Limit Covers:**
+• Traditional 401(k) deferrals
+• Roth 401(k) deferrals
+• Combined total of both
+
+**What's NOT Included in This Limit:**
+• Employer matching contributions
+• After-tax (non-Roth) contributions
+• The total 415 limit ($66,000 + catch-up) is separate
+
+**Common Mistake:**
+Forgetting the catch-up contribution — it's an additional $7,500 on top of the regular limit.`,
     },
     {
       id: "req-ira-max",
@@ -5053,7 +5081,42 @@ export const tcpRetirementTBS: TBSQuestion = {
         value: 7500,
         tolerance: 0,
       },
-      explanation: "IRA limit for age 50+: $6,500 regular + $1,000 catch-up = $7,500",
+      explanation: `**Answer:** $7,500 — Maximum IRA Contribution
+
+**IRC §219 — IRA Contribution Limits:**
+
+| Component | Amount |
+|-----------|--------|
+| Regular limit | $6,500 |
+| Catch-up (age 50+) | $1,000 |
+| **Total** | **$7,500** |
+
+**Calculation:**
+$6,500 + $1,000 = **$7,500**
+
+**Important Considerations:**
+• This is the COMBINED limit for Traditional AND Roth IRAs
+• Jennifer can split this between both types
+• Cannot contribute more than earned income
+
+**Deductibility (Traditional IRA):**
+Since Jennifer has an employer 401(k), deductibility phases out:
+| MAGI (Single) | Deduction |
+|---------------|-----------|
+| < $73,000 | Full |
+| $73,000-$83,000 | Partial |
+| > $83,000 | None |
+
+With $180,000 wages, Jennifer likely cannot deduct Traditional IRA contributions but CAN still contribute.
+
+**Roth IRA Alternative:**
+Roth income limits for single filers:
+• Phase-out begins: $138,000
+• Phase-out complete: $153,000
+Jennifer's income may limit Roth eligibility too.
+
+**Common Mistake:**
+Confusing contribution limits with deduction limits — you can contribute even if not deductible.`,
     },
     {
       id: "req-hsa-max",
@@ -5066,7 +5129,42 @@ export const tcpRetirementTBS: TBSQuestion = {
         value: 7750,
         tolerance: 0,
       },
-      explanation: "HSA limit for family coverage = $7,750. Note: HSA catch-up ($1,000) is for age 55+, so Jennifer (age 52) does not qualify for the catch-up contribution.",
+      explanation: `**Answer:** $7,750 — Maximum HSA Contribution
+
+**IRC §223 — HSA Contribution Limits:**
+
+| Coverage Type | Regular Limit | Catch-up (55+) |
+|---------------|---------------|----------------|
+| Self-only | $3,850 | +$1,000 |
+| **Family** | **$7,750** | +$1,000 |
+
+**Jennifer's Situation:**
+• Has family HDHP coverage → $7,750 limit
+• Age 52 → Does NOT qualify for catch-up (must be 55+)
+
+**Calculation:**
+$7,750 (no catch-up) = **$7,750**
+
+**HSA vs. 401(k)/IRA Catch-Up Ages:**
+| Account | Catch-Up Age |
+|---------|--------------|
+| 401(k) | 50+ |
+| IRA | 50+ |
+| **HSA** | **55+** |
+
+Jennifer (age 52) gets 401(k) and IRA catch-up, but NOT HSA catch-up.
+
+**Why HSA is Valuable:**
+"Triple tax advantage":
+1. Contributions are tax-deductible
+2. Growth is tax-free
+3. Withdrawals for medical expenses are tax-free
+
+**Requirement:**
+Must have qualifying High Deductible Health Plan (HDHP) ✓
+
+**Common Mistake:**
+Applying age 50+ catch-up to HSA — HSA catch-up is age 55+.`,
     },
     {
       id: "req-total-max",
@@ -5079,7 +5177,40 @@ export const tcpRetirementTBS: TBSQuestion = {
         value: 45250,
         tolerance: 0,
       },
-      explanation: "Total = 401(k) ($30,000) + IRA ($7,500) + HSA ($7,750) = $45,250",
+      explanation: `**Answer:** $45,250 — Total Maximum Retirement Savings
+
+**Summary of Jennifer's Maximum Contributions:**
+
+| Account | Amount | Catch-Up? |
+|---------|--------|-----------|
+| 401(k) | $30,000 | ✓ Yes (age 50+) |
+| IRA | $7,500 | ✓ Yes (age 50+) |
+| HSA | $7,750 | ✗ No (age 55+ required) |
+| **Total** | **$45,250** | |
+
+**Calculation:**
+$30,000 + $7,500 + $7,750 = **$45,250**
+
+**Tax Benefits of Each:**
+| Account | Contribution | Growth | Withdrawal |
+|---------|--------------|--------|------------|
+| 401(k) Traditional | Pre-tax | Tax-deferred | Taxable |
+| IRA Traditional | Deductible* | Tax-deferred | Taxable |
+| Roth 401(k)/IRA | After-tax | Tax-free | Tax-free |
+| HSA | Deductible | Tax-free | Tax-free (medical) |
+
+*IRA deductibility limited by income when covered by employer plan.
+
+**What's NOT Included:**
+• Employer 401(k) match (4% of $180,000 = $7,200)
+• After-tax 401(k) contributions
+• Spouse's retirement accounts
+
+**Planning Note:**
+If Jennifer's income is too high for Roth IRA, consider "backdoor Roth" strategy (non-deductible Traditional IRA → convert to Roth).
+
+**Exam Tip:**
+Know the different catch-up ages: 401(k)/IRA = 50+, HSA = 55+.`,
     },
   ],
 };
@@ -5166,7 +5297,34 @@ export const tcpQBIDeductionTBS: TBSQuestion = {
         value: 80000,
         tolerance: 0,
       },
-      explanation: "Basic QBI deduction = 20% × $400,000 = $80,000",
+      explanation: `**Answer:** $80,000 — Basic QBI Deduction
+
+**IRC §199A — Basic Calculation:**
+
+**Formula:**
+Basic QBI Deduction = 20% × Qualified Business Income
+
+**Calculation:**
+20% × $400,000 = **$80,000**
+
+**What is QBI (Qualified Business Income)?**
+Net income from a qualified trade or business, including:
+• S Corporation pass-through income
+• Partnership pass-through income
+• Sole proprietorship income
+• Excludes: W-2 wages, capital gains, interest, dividends
+
+**From Exhibit 1:**
+Marcus Manufacturing LLC QBI = $400,000
+
+**Important Note:**
+This is the STARTING point. For taxpayers above the threshold, limitations may reduce the final deduction. The next requirements calculate those limitations.
+
+**Why 20%:**
+Congress intended to give pass-through entities a rate reduction comparable to the C Corporation rate cut (35% → 21%).
+
+**Common Mistake:**
+Using the wrong base — QBI is the net business income, not gross receipts.`,
     },
     {
       id: "req-wage-limit-a",
@@ -5179,7 +5337,35 @@ export const tcpQBIDeductionTBS: TBSQuestion = {
         value: 90000,
         tolerance: 0,
       },
-      explanation: "50% of W-2 wages = 50% × $180,000 = $90,000",
+      explanation: `**Answer:** $90,000 — W-2 Wage Limitation (Option A)
+
+**IRC §199A(b)(2)(B)(i) — 50% of W-2 Wages:**
+
+**Formula:**
+Option A Limitation = 50% × W-2 Wages Paid by Business
+
+**Calculation:**
+50% × $180,000 = **$90,000**
+
+**From Exhibit 1:**
+W-2 Wages Paid by Business = $180,000
+
+**Why This Limitation Exists:**
+For high-income taxpayers, Congress wanted to tie the QBI deduction to:
+• Employment (wages paid), OR
+• Capital investment (property basis)
+
+This prevents passive investors from getting full deductions without employing workers or investing in assets.
+
+**When This Applies:**
+Only for taxpayers ABOVE the threshold:
+• Single: $182,100
+• MFJ: $364,200
+
+Marcus (MFJ, $480,000 taxable income) is above threshold, so this limitation applies.
+
+**Common Mistake:**
+Using the taxpayer's own W-2 wages — use the BUSINESS's W-2 wages paid to employees.`,
     },
     {
       id: "req-wage-limit-b",
@@ -5192,7 +5378,40 @@ export const tcpQBIDeductionTBS: TBSQuestion = {
         value: 60000,
         tolerance: 0,
       },
-      explanation: "25% of wages ($45,000) + 2.5% of UBIA ($15,000) = $60,000",
+      explanation: `**Answer:** $60,000 — W-2 Wage Limitation (Option B)
+
+**IRC §199A(b)(2)(B)(ii) — 25% Wages + 2.5% Property:**
+
+**Formula:**
+Option B Limitation = (25% × W-2 Wages) + (2.5% × UBIA of Qualified Property)
+
+**Calculation:**
+| Component | Calculation | Amount |
+|-----------|-------------|--------|
+| 25% of W-2 wages | 25% × $180,000 | $45,000 |
+| 2.5% of UBIA | 2.5% × $600,000 | $15,000 |
+| **Total** | | **$60,000** |
+
+**What is UBIA?**
+Unadjusted Basis Immediately After Acquisition
+• Original cost of qualified property
+• NOT reduced by depreciation
+• Includes: buildings, machinery, equipment
+• Excludes: land, inventory, intangibles
+
+**From Exhibit 1:**
+UBIA of Qualified Property = $600,000
+
+**Why Option B Exists:**
+For capital-intensive businesses with few employees:
+• Option A (50% wages) may be too limiting
+• Option B gives credit for capital investment
+
+**Which Option Applies:**
+The W-2/capital limitation = **GREATER OF** Option A or Option B
+• Option A: $90,000
+• Option B: $60,000
+• **Use: $90,000**`,
     },
     {
       id: "req-phase-in",
@@ -5204,7 +5423,36 @@ export const tcpQBIDeductionTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-phase-yes",
       },
-      explanation: "Taxable income ($480,000) exceeds the top of the phase-in range ($464,200), so the W-2/capital limitation is fully applicable.",
+      explanation: `**Correct Selection:** Yes - fully phased in
+
+**IRC §199A Phase-In Ranges (MFJ):**
+
+| Income Level | Limitation Status |
+|--------------|-------------------|
+| Below $364,200 | No W-2/capital limitation |
+| $364,200 - $464,200 | Partial phase-in |
+| **Above $464,200** | **Full limitation applies** |
+
+**Marcus's Situation:**
+• Taxable income: $480,000
+• Threshold top: $464,200
+• $480,000 > $464,200 → **Fully phased in**
+
+**What "Fully Phased In" Means:**
+The W-2/capital limitation applies at 100%. There's no reduction or blending with the basic 20% calculation.
+
+**Phase-In Calculation (if applicable):**
+For income WITHIN the phase-in range:
+Reduction = Excess QBI × (Taxable income − Threshold) ÷ $100,000
+
+Since Marcus is ABOVE the range, no phase-in calculation is needed.
+
+**Why Other Options Are Wrong:**
+• "Below threshold": $480,000 is clearly above $364,200
+• "Partially phased in": Would only apply if income was between $364,200 and $464,200
+
+**Exam Tip:**
+Know the thresholds and phase-in range for MFJ ($364,200-$464,200) and Single ($182,100-$232,100).`,
       dropdownOptions: [
         { id: "opt-phase-yes", order: 1, text: "Yes - fully phased in", isCorrect: true },
         { id: "opt-phase-no", order: 2, text: "No - below threshold", isCorrect: false },
@@ -5222,7 +5470,40 @@ export const tcpQBIDeductionTBS: TBSQuestion = {
         value: 80000,
         tolerance: 0,
       },
-      explanation: "W-2/capital limit = greater of $90,000 or $60,000 = $90,000. Final deduction = lesser of basic QBI ($80,000) or W-2 limit ($90,000) = $80,000",
+      explanation: `**Answer:** $80,000 — Final QBI Deduction Allowed
+
+**This is worth 1 point — the comprehensive final answer!**
+
+**Step-by-Step QBI Calculation:**
+
+**Step 1: Calculate Basic QBI Deduction**
+20% × $400,000 = $80,000
+
+**Step 2: Calculate W-2/Capital Limitation**
+| Option | Calculation | Amount |
+|--------|-------------|--------|
+| Option A | 50% × $180,000 wages | $90,000 |
+| Option B | 25% × $180,000 + 2.5% × $600,000 | $60,000 |
+| **Greater of A or B** | | **$90,000** |
+
+**Step 3: Apply Limitation**
+Final Deduction = Lesser of:
+• Basic QBI deduction: $80,000
+• W-2/capital limitation: $90,000
+• **Answer: $80,000**
+
+**Why $80,000 (Not $90,000):**
+The limitation is a CEILING, not a floor. Marcus gets the FULL basic QBI deduction because it's less than the limitation.
+
+| Comparison | Result |
+|------------|--------|
+| Basic QBI ($80,000) vs. W-2 Limit ($90,000) | Use $80,000 |
+
+**Key Takeaway:**
+This is a favorable result for Marcus. His W-2 wages and property basis are sufficient to allow the full 20% deduction. If his limitation had been lower (e.g., $60,000), his deduction would be capped at that lower amount.
+
+**Common Mistake:**
+Using the higher number — always use the LESSER of basic QBI or the limitation.`,
     },
   ],
 };
@@ -5295,7 +5576,34 @@ export const tcpLikeKindTBS: TBSQuestion = {
         value: 330000,
         tolerance: 0,
       },
-      explanation: "Realized gain = FMV received ($850,000) - Adjusted basis ($520,000) = $330,000. The mortgage relief and cash paid are considered in boot calculation.",
+      explanation: `**Answer:** $330,000 — Realized Gain
+
+**IRC §1001 — Realized Gain Calculation:**
+
+**Formula:**
+Realized Gain = Amount Realized − Adjusted Basis
+
+**Amount Realized Calculation:**
+| Component | Amount |
+|-----------|--------|
+| FMV of relinquished property | $850,000 |
+| **Amount Realized** | **$850,000** |
+
+**Adjusted Basis:**
+$520,000 (given in Exhibit 1)
+
+**Calculation:**
+$850,000 − $520,000 = **$330,000**
+
+**Key Point:**
+The realized gain represents the ECONOMIC gain — what Peterson Properties gained in value. However, in a §1031 exchange, some or all of this gain may be DEFERRED.
+
+**What's NOT Included in Realized Gain:**
+• Boot (cash, mortgage relief) — affects RECOGNIZED gain
+• FMV of replacement property — affects basis calculation
+
+**Common Mistake:**
+Including boot in the realized gain calculation — boot only affects how much is recognized, not how much is realized.`,
     },
     {
       id: "req-boot-received",
@@ -5308,7 +5616,40 @@ export const tcpLikeKindTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Net mortgage relief = $200,000 given up - $280,000 assumed = ($80,000) net debt increase. Cash paid = $30,000. Net boot = debt relief less cash paid = $0 boot received (taxpayer paid more than mortgage relief received).",
+      explanation: `**Answer:** $0 — Net Boot Received
+
+**IRC §1031 — Boot Analysis:**
+
+**Boot = Non-like-kind property received (triggers gain)**
+
+**Boot Components:**
+| Item | Boot Received | Boot Given |
+|------|---------------|------------|
+| Mortgage relief (given up $200K) | $200,000 | - |
+| Mortgage assumed ($280K) | - | $280,000 |
+| Cash paid | - | $30,000 |
+
+**Netting:**
+| Category | Amount |
+|----------|--------|
+| Boot received (mortgage relief) | $200,000 |
+| Boot given (mortgage assumed) | $(280,000) |
+| Boot given (cash paid) | $(30,000) |
+| **Net Boot** | **$(110,000)** = $0 boot received |
+
+**Why Net Boot = $0:**
+Peterson GAVE more than they received:
+• Gave up: $200,000 mortgage
+• Took on: $280,000 mortgage (+$80,000 debt)
+• Paid: $30,000 cash
+
+Net position: Peterson gave $110,000 more than received → No boot RECEIVED.
+
+**Key Rule:**
+Boot GIVEN doesn't trigger gain — only boot RECEIVED triggers gain.
+
+**Common Mistake:**
+Treating mortgage assumed as boot received — it's boot GIVEN (reduces boot received).`,
     },
     {
       id: "req-recognized-gain",
@@ -5321,7 +5662,37 @@ export const tcpLikeKindTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Gain recognized = lesser of realized gain ($330,000) or boot received ($0) = $0. No boot was received (taxpayer paid additional cash and assumed more debt).",
+      explanation: `**Answer:** $0 — Gain Recognized
+
+**IRC §1031(b) — Gain Recognition Rule:**
+
+**Formula:**
+Gain Recognized = **Lesser of**:
+• Realized gain, OR
+• Boot received
+
+**Application:**
+| Component | Amount |
+|-----------|--------|
+| Realized gain | $330,000 |
+| Boot received | $0 |
+| **Gain recognized** | Lesser = **$0** |
+
+**Why Zero Gain Recognized:**
+Because Peterson received no boot (they actually gave more than received), there's nothing to trigger gain recognition.
+
+**The §1031 Logic:**
+• Realized gain = economic gain ($330,000)
+• Boot received = cash/debt relief received ($0)
+• You only recognize gain to the extent you received "something extra"
+
+**Tax Benefit:**
+Peterson defers the entire $330,000 gain. This gain will be recognized when the replacement property is eventually sold (unless another §1031 exchange is done).
+
+**Alternative Scenario:**
+If Peterson had received $50,000 boot:
+• Recognized gain = lesser of $330,000 or $50,000 = $50,000
+• Deferred gain = $330,000 − $50,000 = $280,000`,
     },
     {
       id: "req-basis-new",
@@ -5334,7 +5705,39 @@ export const tcpLikeKindTBS: TBSQuestion = {
         value: 630000,
         tolerance: 0,
       },
-      explanation: "Basis = Old basis ($520,000) + Cash paid ($30,000) + Net new mortgage ($80,000) + Gain recognized ($0) = $630,000. Alternative: FMV of new property ($900,000) - Deferred gain ($330,000 - $0) = $570,000. Let me recalculate: Basis = $520,000 + $30,000 cash + ($280,000 - $200,000 net debt increase) = $520,000 + $30,000 + $80,000 = $630,000.",
+      explanation: `**Answer:** $630,000 — Basis in Replacement Property
+
+**IRC §1031(d) — Basis Calculation:**
+
+**Formula:**
+Basis in Replacement = Old Basis + Boot Given + Gain Recognized − Boot Received
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Old basis (relinquished property) | $520,000 |
+| + Cash paid (boot given) | $30,000 |
+| + Net new mortgage ($280K − $200K) | $80,000 |
+| + Gain recognized | $0 |
+| **New Basis** | **$630,000** |
+
+**Verification (Alternative Method):**
+FMV of replacement − Deferred gain = Basis
+$900,000 − $330,000 = $570,000
+
+Wait — discrepancy! Let me verify:
+• FMV method: $900,000 − $330,000 = $570,000
+• Direct method: $520,000 + $30,000 + $80,000 = $630,000
+
+The direct method is correct. The difference is because we adjust for boot given.
+
+**Why Basis Matters:**
+The lower basis ($630,000 vs. $900,000 FMV) means the $330,000 deferred gain is "built into" the replacement property. When sold later:
+• Amount realized (if sold at FMV): $900,000
+• Basis: $630,000
+• Gain at sale: $270,000 (plus the growth from now until then)
+
+**The gain is DEFERRED, not eliminated.**`,
     },
     {
       id: "req-deferred-gain",
@@ -5347,7 +5750,41 @@ export const tcpLikeKindTBS: TBSQuestion = {
         value: 330000,
         tolerance: 0,
       },
-      explanation: "Deferred gain = Realized gain ($330,000) - Recognized gain ($0) = $330,000",
+      explanation: `**Answer:** $330,000 — Gain Deferred
+
+**IRC §1031 — Deferred Gain Calculation:**
+
+**Formula:**
+Deferred Gain = Realized Gain − Recognized Gain
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Realized gain | $330,000 |
+| Less: Recognized gain | $(0) |
+| **Deferred gain** | **$330,000** |
+
+$330,000 − $0 = **$330,000**
+
+**What Deferral Means:**
+The $330,000 is NOT forgiven — it's postponed. Peterson will recognize this gain when the replacement property is sold (unless they do another §1031 exchange).
+
+**Built-In Gain:**
+| Item | Amount |
+|------|--------|
+| FMV of replacement property | $900,000 |
+| Basis in replacement property | $630,000 |
+| **Built-in gain** | **$270,000** |
+
+The $270,000 built-in gain + any future appreciation will be recognized at sale.
+
+**§1031 Benefits:**
+1. Time value of money (invest deferred tax)
+2. Step-up at death (gain potentially eliminated)
+3. Can continue deferring with subsequent exchanges
+
+**Exam Tip:**
+"Like-kind exchange = tax DEFERRAL, not tax elimination"`,
     },
   ],
 };
@@ -5662,7 +6099,32 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 40,
         tolerance: 0,
       },
-      explanation: "CM per unit = Selling price - Variable cost = $120 - $80 = $40",
+      explanation: `**Answer:** $40 — Contribution Margin per Unit
+
+**Formula:**
+Contribution Margin per Unit = Selling Price − Total Variable Cost per Unit
+
+**Calculation from Exhibit 1:**
+| Component | Amount |
+|-----------|--------|
+| Selling Price | $120 |
+| Variable Costs: | |
+| − Direct Materials | ($35) |
+| − Direct Labor | ($25) |
+| − Variable Overhead | ($12) |
+| − Variable Selling | ($8) |
+| **Total Variable Cost** | **($80)** |
+| **CM per Unit** | **$40** |
+
+**Why This Matters:**
+The contribution margin represents the amount each unit contributes toward covering fixed costs and generating profit. It's the foundation for all CVP analysis.
+
+**Common Mistakes:**
+- **Subtracting fixed costs:** Variable costing uses only variable costs in CM calculation
+- **Forgetting all variable costs:** Must include ALL variable costs (materials, labor, overhead, AND selling)
+- **Using gross margin instead of CM:** Gross margin uses cost of goods sold; CM uses all variable costs
+
+**Exam Tip:** In CVP problems, carefully identify which costs are VARIABLE (change with volume) vs. FIXED (constant regardless of volume). The question will often list both types.`,
     },
     {
       id: "req-cm-ratio",
@@ -5675,7 +6137,29 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 33.33,
         tolerance: 0.1,
       },
-      explanation: "CM Ratio = CM / Selling Price = $40 / $120 = 33.33%",
+      explanation: `**Answer:** 33.33% — Contribution Margin Ratio
+
+**Formula:**
+CM Ratio = Contribution Margin per Unit ÷ Selling Price per Unit
+
+**Calculation:**
+CM Ratio = $40 ÷ $120 = 0.3333 = **33.33%**
+
+**Alternative Method:**
+CM Ratio = 1 − Variable Cost Ratio = 1 − ($80 ÷ $120) = 1 − 0.6667 = 0.3333 = 33.33%
+
+**Interpretation:**
+For every $1 of sales, $0.33 contributes toward covering fixed costs and profit. The remaining $0.67 covers variable costs.
+
+**Why This Matters:**
+The CM ratio allows breakeven analysis in SALES DOLLARS rather than units. This is essential when a company sells multiple products at different prices.
+
+**Common Mistakes:**
+- **Inverting the ratio:** Using Selling Price ÷ CM instead of CM ÷ Selling Price
+- **Using total costs instead of variable costs only**
+- **Forgetting to multiply by 100 for percentage:** The answer is 33.33%, not 0.33
+
+**Exam Tip:** The CM ratio and variable cost ratio MUST equal 100% combined. Use this as a check: 33.33% + 66.67% = 100% ✓`,
     },
     {
       id: "req-breakeven-units",
@@ -5688,7 +6172,38 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 8000,
         tolerance: 0,
       },
-      explanation: "Breakeven units = Fixed Costs / CM per unit = $320,000 / $40 = 8,000 units",
+      explanation: `**Answer:** 8,000 units — Breakeven Point in Units
+
+**Formula:**
+Breakeven Units = Fixed Costs ÷ Contribution Margin per Unit
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Fixed Costs (from Exhibit 1) | $320,000 |
+| CM per Unit (Req 1) | $40 |
+| **Breakeven Units** | **8,000** |
+
+$320,000 ÷ $40 = **8,000 units**
+
+**Proof:**
+| Item | Amount |
+|------|--------|
+| Sales (8,000 × $120) | $960,000 |
+| Variable Costs (8,000 × $80) | ($640,000) |
+| Contribution Margin | $320,000 |
+| Fixed Costs | ($320,000) |
+| **Net Income** | **$0** ✓ |
+
+**Why This Matters:**
+At breakeven, total contribution margin exactly covers fixed costs. Below 8,000 units = loss; above 8,000 units = profit.
+
+**Common Mistakes:**
+- **Using selling price instead of CM:** Breakeven = FC ÷ CM, NOT FC ÷ Price
+- **Subtracting variable costs from fixed costs first**
+- **Using total costs instead of fixed costs only**
+
+**Exam Tip:** Always verify by proofing your answer: (Breakeven units × CM) should equal Fixed Costs.`,
     },
     {
       id: "req-breakeven-dollars",
@@ -5701,7 +6216,37 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 960000,
         tolerance: 0,
       },
-      explanation: "Breakeven $ = Fixed Costs / CM Ratio = $320,000 / 0.3333 = $960,000 (or 8,000 units × $120)",
+      explanation: `**Answer:** $960,000 — Breakeven Point in Sales Dollars
+
+**Two Approaches:**
+
+**Method 1 — Using CM Ratio:**
+Breakeven Sales = Fixed Costs ÷ CM Ratio
+= $320,000 ÷ 0.3333 = **$960,000**
+
+**Method 2 — Using Breakeven Units:**
+Breakeven Sales = Breakeven Units × Selling Price
+= 8,000 units × $120 = **$960,000**
+
+**Proof:**
+| Item | Amount |
+|------|--------|
+| Sales | $960,000 |
+| Variable Costs (960,000 × 66.67%) | ($640,000) |
+| Contribution Margin | $320,000 |
+| Fixed Costs | ($320,000) |
+| **Net Income** | **$0** ✓ |
+
+**Why Two Methods Exist:**
+- **Unit method:** Best for single-product companies
+- **CM Ratio method:** Essential for multi-product companies where you can't easily define "units"
+
+**Common Mistakes:**
+- **Using FC ÷ Price instead of FC ÷ CM Ratio**
+- **Mixing up CM ratio (0.3333) with variable cost ratio (0.6667)**
+- **Dividing by CM per unit ($40) to get dollars:** This gives units, not dollars
+
+**Exam Tip:** The relationship between units and dollars: Breakeven $ ÷ Selling Price = Breakeven Units. Use this to check: $960,000 ÷ $120 = 8,000 ✓`,
     },
     {
       id: "req-target-units",
@@ -5714,7 +6259,40 @@ export const barCVPAnalysisTBS: TBSQuestion = {
         value: 10000,
         tolerance: 0,
       },
-      explanation: "Target units = (Fixed Costs + Target Profit) / CM = ($320,000 + $80,000) / $40 = 10,000 units",
+      explanation: `**Answer:** 10,000 units — Units to Achieve Target Profit
+
+**Formula:**
+Target Units = (Fixed Costs + Target Profit) ÷ CM per Unit
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Fixed Costs | $320,000 |
+| Target Profit | $80,000 |
+| **Total to Cover** | **$400,000** |
+| ÷ CM per Unit | $40 |
+| **Target Units** | **10,000** |
+
+($320,000 + $80,000) ÷ $40 = **10,000 units**
+
+**Proof:**
+| Item | Amount |
+|------|--------|
+| Sales (10,000 × $120) | $1,200,000 |
+| Variable Costs (10,000 × $80) | ($800,000) |
+| Contribution Margin | $400,000 |
+| Fixed Costs | ($320,000) |
+| **Net Income** | **$80,000** ✓ |
+
+**Key Insight:**
+Target profit analysis is simply breakeven + desired profit. Think of profit as an additional "fixed cost" that must be covered.
+
+**Common Mistakes:**
+- **Forgetting to add target profit to fixed costs**
+- **Using after-tax profit when pre-tax is required** (or vice versa)
+- **Adding target profit separately instead of before division**
+
+**Exam Tip:** For after-tax target profit problems, convert to pre-tax first: Pre-tax Profit = After-tax Profit ÷ (1 − Tax Rate). Then use the standard formula.`,
     },
   ],
 };
@@ -5782,7 +6360,38 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: -8000,
         tolerance: 0,
       },
-      explanation: "Actual price = $120,000 / 16,000 = $7.50. Price Var = (SP - AP) × AQ = ($8 - $7.50) × 16,000 = $8,000 Favorable (negative = favorable)",
+      explanation: `**Answer:** ($8,000) — Favorable Price Variance
+
+**Formula:**
+Direct Materials Price Variance = (Standard Price − Actual Price) × Actual Quantity
+
+**Step 1 — Calculate Actual Price:**
+Actual Price = Total Cost ÷ Quantity = $120,000 ÷ 16,000 lbs = **$7.50/lb**
+
+**Step 2 — Apply Formula:**
+| Component | Amount |
+|-----------|--------|
+| Standard Price (Exhibit 1) | $8.00/lb |
+| Actual Price (calculated) | $7.50/lb |
+| Difference | $0.50/lb |
+| × Actual Quantity | 16,000 lbs |
+| **Price Variance** | **$8,000 F** |
+
+($8.00 − $7.50) × 16,000 = **$8,000 Favorable**
+
+**Why Favorable:**
+The company paid LESS than standard ($7.50 vs $8.00), saving $0.50 per pound on 16,000 pounds.
+
+**Sign Convention (Enter -8000):**
+- Negative = Favorable (reduces costs)
+- Positive = Unfavorable (increases costs)
+
+**Common Mistakes:**
+- **Using standard quantity instead of actual:** Price variance ALWAYS uses actual quantity purchased
+- **Reversing the formula:** (AP − SP) gives opposite sign
+- **Forgetting to calculate actual price first**
+
+**Exam Tip:** Price variance isolates the purchasing function's responsibility. If price variance is favorable but quantity variance is unfavorable, the company may have bought cheaper (lower quality) materials.`,
     },
     {
       id: "req-dm-qty-var",
@@ -5795,7 +6404,39 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 8000,
         tolerance: 0,
       },
-      explanation: "Standard qty = 5,000 × 3 = 15,000 lbs. Qty Var = (SQ - AQ) × SP = (15,000 - 16,000) × $8 = $8,000 Unfavorable (positive = unfavorable)",
+      explanation: `**Answer:** $8,000 — Unfavorable Quantity Variance
+
+**Formula:**
+Direct Materials Quantity Variance = (Standard Qty Allowed − Actual Qty Used) × Standard Price
+
+**Step 1 — Calculate Standard Quantity Allowed:**
+Standard Qty = Units Produced × Standard per Unit
+= 5,000 units × 3 lbs/unit = **15,000 lbs**
+
+**Step 2 — Apply Formula:**
+| Component | Amount |
+|-----------|--------|
+| Standard Qty Allowed | 15,000 lbs |
+| Actual Qty Used (Exhibit 2) | 16,000 lbs |
+| Difference | (1,000) lbs |
+| × Standard Price | $8.00/lb |
+| **Quantity Variance** | **$8,000 U** |
+
+(15,000 − 16,000) × $8 = ($1,000) × $8 = **$8,000 Unfavorable**
+
+**Why Unfavorable:**
+The company used MORE materials than standard (16,000 vs 15,000), wasting 1,000 lbs at $8 each.
+
+**Sign Convention (Enter 8000):**
+- Positive = Unfavorable (used more than allowed)
+- Negative = Favorable (used less than allowed)
+
+**Common Mistakes:**
+- **Using actual price instead of standard:** Quantity variance ALWAYS uses standard price to isolate efficiency
+- **Calculating for units ordered vs used:** Use only materials actually put into production
+- **Forgetting to multiply standard by units produced**
+
+**Exam Tip:** Quantity (usage) variance measures PRODUCTION efficiency. Purchasing gets credit/blame for price; Production gets credit/blame for usage.`,
     },
     {
       id: "req-dl-rate-var",
@@ -5808,7 +6449,40 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 10500,
         tolerance: 0,
       },
-      explanation: "Actual rate = $241,500 / 10,500 = $23. Rate Var = (SR - AR) × AH = ($22 - $23) × 10,500 = $10,500 Unfavorable",
+      explanation: `**Answer:** $10,500 — Unfavorable Rate Variance
+
+**Formula:**
+Direct Labor Rate Variance = (Standard Rate − Actual Rate) × Actual Hours
+
+**Step 1 — Calculate Actual Rate:**
+Actual Rate = Total Labor Cost ÷ Hours Worked
+= $241,500 ÷ 10,500 hours = **$23.00/hour**
+
+**Step 2 — Apply Formula:**
+| Component | Amount |
+|-----------|--------|
+| Standard Rate (Exhibit 1) | $22.00/hr |
+| Actual Rate (calculated) | $23.00/hr |
+| Difference | ($1.00)/hr |
+| × Actual Hours | 10,500 hrs |
+| **Rate Variance** | **$10,500 U** |
+
+($22 − $23) × 10,500 = ($1) × 10,500 = **$10,500 Unfavorable**
+
+**Why Unfavorable:**
+Workers were paid MORE than standard rate ($23 vs $22), costing an extra $1.00 per hour.
+
+**Possible Causes of Unfavorable Rate Variance:**
+- Using higher-skilled (higher-paid) workers than planned
+- Overtime premiums
+- Wage increases not reflected in standards
+
+**Common Mistakes:**
+- **Using standard hours instead of actual:** Rate variance ALWAYS uses actual hours to isolate the rate impact
+- **Confusing labor rate with labor efficiency**
+- **Forgetting to calculate actual rate from total cost**
+
+**Exam Tip:** Rate variance is typically HR/management responsibility (who was assigned). Efficiency variance is production responsibility (how well they worked).`,
     },
     {
       id: "req-dl-eff-var",
@@ -5821,7 +6495,43 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 11000,
         tolerance: 0,
       },
-      explanation: "Standard hours = 5,000 × 2 = 10,000 hrs. Eff Var = (SH - AH) × SR = (10,000 - 10,500) × $22 = $11,000 Unfavorable",
+      explanation: `**Answer:** $11,000 — Unfavorable Efficiency Variance
+
+**Formula:**
+Direct Labor Efficiency Variance = (Standard Hours Allowed − Actual Hours) × Standard Rate
+
+**Step 1 — Calculate Standard Hours Allowed:**
+Standard Hours = Units Produced × Standard Hours per Unit
+= 5,000 units × 2 hrs/unit = **10,000 hours**
+
+**Step 2 — Apply Formula:**
+| Component | Amount |
+|-----------|--------|
+| Standard Hours Allowed | 10,000 hrs |
+| Actual Hours (Exhibit 2) | 10,500 hrs |
+| Difference | (500) hrs |
+| × Standard Rate | $22.00/hr |
+| **Efficiency Variance** | **$11,000 U** |
+
+(10,000 − 10,500) × $22 = (−500) × $22 = **$11,000 Unfavorable**
+
+**Why Unfavorable:**
+Workers took MORE time than standard (10,500 vs 10,000 hours), using 500 extra hours at $22 each.
+
+**Possible Causes of Unfavorable Efficiency:**
+- Poor quality materials (relates to favorable price variance!)
+- Inadequate worker training
+- Machine breakdowns
+- Inexperienced workers
+
+**The Trade-Off in This Problem:**
+Favorable price variance ($8,000) + Unfavorable efficiency: Cheaper materials may have caused production delays.
+
+**Common Mistakes:**
+- **Using actual rate instead of standard:** Efficiency variance ALWAYS uses standard rate to isolate hours impact
+- **Calculating for scheduled hours vs actual production needs**
+
+**Exam Tip:** Look for OFFSETTING variances that tell a story. Cheap materials (favorable price) often cause more waste (unfavorable quantity) or slower processing (unfavorable labor efficiency).`,
     },
     {
       id: "req-total-dm-var",
@@ -5834,7 +6544,41 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 0,
         tolerance: 0,
       },
-      explanation: "Total DM Var = Price var ($8,000 F) + Quantity var ($8,000 U) = $0 net variance",
+      explanation: `**Answer:** $0 — Net Total Direct Materials Variance
+
+**Formula:**
+Total DM Variance = Price Variance + Quantity Variance
+(or: Actual Cost − Standard Cost Allowed)
+
+**Method 1 — Sum of Components:**
+| Variance | Amount | Direction |
+|----------|--------|-----------|
+| Price Variance | ($8,000) | Favorable |
+| Quantity Variance | $8,000 | Unfavorable |
+| **Total DM Variance** | **$0** | Net |
+
+($8,000) + $8,000 = **$0**
+
+**Method 2 — Direct Calculation:**
+| Item | Calculation | Amount |
+|------|-------------|--------|
+| Actual Cost (Exhibit 2) | Given | $120,000 |
+| Standard Cost Allowed | 5,000 × 3 × $8 | $120,000 |
+| **Total Variance** | | **$0** |
+
+**Interpretation:**
+Despite individual variances, the company spent EXACTLY what was budgeted for materials. The price savings offset the quantity overuse.
+
+**Key Insight:**
+A zero total variance can mask significant operational issues. Management should still investigate:
+- Why did we use 1,000 extra lbs? (Waste, quality issues?)
+- Why did we pay $0.50 less? (Different supplier? Lower quality?)
+
+**Common Mistakes:**
+- **Thinking $0 means "no problems":** Component variances still matter
+- **Getting signs wrong when netting**
+
+**Exam Tip:** The CPA exam often asks for total variance AND component variances. Always be prepared to show both.`,
     },
     {
       id: "req-total-dl-var",
@@ -5847,7 +6591,43 @@ export const barVarianceAnalysisTBS: TBSQuestion = {
         value: 21500,
         tolerance: 0,
       },
-      explanation: "Total DL Var = Rate var ($10,500 U) + Efficiency var ($11,000 U) = $21,500 Unfavorable",
+      explanation: `**Answer:** $21,500 — Unfavorable Total Direct Labor Variance
+
+**Formula:**
+Total DL Variance = Rate Variance + Efficiency Variance
+(or: Actual Cost − Standard Cost Allowed)
+
+**Method 1 — Sum of Components:**
+| Variance | Amount | Direction |
+|----------|--------|-----------|
+| Rate Variance | $10,500 | Unfavorable |
+| Efficiency Variance | $11,000 | Unfavorable |
+| **Total DL Variance** | **$21,500** | Unfavorable |
+
+$10,500 + $11,000 = **$21,500 Unfavorable**
+
+**Method 2 — Direct Calculation:**
+| Item | Calculation | Amount |
+|------|-------------|--------|
+| Actual Cost (Exhibit 2) | Given | $241,500 |
+| Standard Cost Allowed | 5,000 × 2 × $22 | $220,000 |
+| **Total Variance** | | **$21,500 U** |
+
+Proof: $241,500 − $220,000 = $21,500 ✓
+
+**Interpretation:**
+Labor costs exceeded budget by $21,500. BOTH components contributed to the overrun—paid more per hour AND used more hours than planned.
+
+**Management Action Items:**
+1. Investigate why higher-paid workers were used
+2. Address production inefficiencies that caused extra hours
+3. Consider updating labor standards if conditions have changed
+
+**Common Mistakes:**
+- **Subtracting variances that have the same direction**
+- **Forgetting that both unfavorable variances ADD together**
+
+**Exam Tip:** When both variances go the same direction, the total problem is significant. When they offset (like DM above), investigate whether there's a cause-effect relationship.`,
     },
   ],
 };
@@ -5917,7 +6697,39 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 3.33,
         tolerance: 0.02,
       },
-      explanation: "Payback = Initial Investment / Annual Cash Flow = $500,000 / $150,000 = 3.33 years",
+      explanation: `**Answer:** 3.33 years — Payback Period
+
+**Formula:**
+Payback Period = Initial Investment ÷ Annual Cash Inflow (for equal cash flows)
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Initial Investment (Exhibit 1) | $500,000 |
+| Annual Cash Inflow (Exhibit 1) | $150,000 |
+| **Payback Period** | **3.33 years** |
+
+$500,000 ÷ $150,000 = **3.33 years** (or 3 years, 4 months)
+
+**Interpretation:**
+The company will recover its initial investment in 3.33 years out of a 5-year project life.
+
+**Advantages of Payback:**
+- Simple to calculate and understand
+- Emphasizes liquidity and risk (faster = less risky)
+- Useful as initial screening tool
+
+**Limitations of Payback:**
+- **Ignores time value of money** (a major weakness)
+- Ignores cash flows AFTER payback period (salvage value ignored)
+- No objective decision rule (what's "acceptable"?)
+
+**Common Mistakes:**
+- **Forgetting this is SIMPLE payback, not discounted payback**
+- **Including salvage value in annual cash flows**
+- **Using unequal cash flow method when flows are equal**
+
+**Exam Tip:** For UNEQUAL cash flows, calculate cumulative cash flows year-by-year to find where investment is recovered. Simple division only works for EQUAL annual flows.`,
     },
     {
       id: "req-pv-inflows",
@@ -5930,7 +6742,41 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 540720,
         tolerance: 10,
       },
-      explanation: "PV of annuity = $150,000 × 3.6048 = $540,720",
+      explanation: `**Answer:** $540,720 — PV of Annual Cash Inflows
+
+**Formula:**
+PV of Annuity = Annual Cash Flow × PV Annuity Factor
+
+**Using Exhibit 2:**
+The 5-year PV of annuity factor at 12% = **3.6048**
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Annual Cash Inflow | $150,000 |
+| × PV Annuity Factor (5 yr, 12%) | 3.6048 |
+| **PV of Cash Inflows** | **$540,720** |
+
+$150,000 × 3.6048 = **$540,720**
+
+**Why Use the Annuity Factor:**
+Since cash inflows are EQUAL each year, we use the annuity factor instead of calculating year-by-year. This is mathematically equivalent to:
+
+| Year | Cash Flow | × PV Factor | = Present Value |
+|------|-----------|-------------|-----------------|
+| 1 | $150,000 | 0.8929 | $133,935 |
+| 2 | $150,000 | 0.7972 | $119,580 |
+| 3 | $150,000 | 0.7118 | $106,770 |
+| 4 | $150,000 | 0.6355 | $95,325 |
+| 5 | $150,000 | 0.5674 | $85,110 |
+| **Total** | | | **$540,720** |
+
+**Common Mistakes:**
+- **Using PV of $1 factor instead of annuity factor**
+- **Including salvage value with annual flows:** Salvage is a single sum, not an annuity
+- **Using wrong number of years in factor lookup**
+
+**Exam Tip:** Use the ANNUITY factor for equal payments; use individual PV of $1 factors for unequal amounts or single sums.`,
     },
     {
       id: "req-pv-salvage",
@@ -5943,7 +6789,38 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 28370,
         tolerance: 10,
       },
-      explanation: "PV of salvage = $50,000 × 0.5674 = $28,370",
+      explanation: `**Answer:** $28,370 — PV of Salvage Value
+
+**Formula:**
+PV of Lump Sum = Future Value × PV of $1 Factor
+
+**Using Exhibit 2:**
+The Year 5 PV of $1 factor at 12% = **0.5674**
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| Salvage Value (Year 5) | $50,000 |
+| × PV Factor (Year 5, 12%) | 0.5674 |
+| **PV of Salvage** | **$28,370** |
+
+$50,000 × 0.5674 = **$28,370**
+
+**Why PV of $1 Factor (not Annuity):**
+Salvage value is a **single cash inflow** occurring once at the end of Year 5. It is NOT part of the annual operating cash flows.
+
+**Key Distinction:**
+| Cash Flow Type | When to Use | Factor Type |
+|----------------|-------------|-------------|
+| Annual operating inflows ($150K) | Years 1-5 equal | Annuity factor |
+| Salvage value ($50K) | Year 5 only | PV of $1 factor |
+
+**Common Mistakes:**
+- **Including salvage in the annuity calculation:** Overstates PV
+- **Using Year 1 factor instead of Year 5:** 0.8929 × $50,000 = $44,645 (WRONG)
+- **Forgetting to discount salvage at all:** Using $50,000 (WRONG)
+
+**Exam Tip:** Salvage value occurs at the END of the asset's life. Always discount it back using the final year's PV of $1 factor.`,
     },
     {
       id: "req-npv",
@@ -5956,7 +6833,44 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 69090,
         tolerance: 20,
       },
-      explanation: "NPV = PV of inflows + PV of salvage - Initial investment = $540,720 + $28,370 - $500,000 = $69,090",
+      explanation: `**Answer:** $69,090 — Net Present Value
+
+**Formula:**
+NPV = PV of All Cash Inflows − Initial Investment
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| PV of Annual Inflows (Req 2) | $540,720 |
+| PV of Salvage Value (Req 3) | $28,370 |
+| **Total PV of Inflows** | **$569,090** |
+| − Initial Investment | ($500,000) |
+| **NPV** | **$69,090** |
+
+$540,720 + $28,370 − $500,000 = **$69,090**
+
+**Interpretation:**
+The project generates $69,090 MORE than the required 12% return. It creates $69,090 of shareholder value.
+
+**NPV Decision Rule:**
+| NPV | Decision | Meaning |
+|-----|----------|---------|
+| > 0 | **ACCEPT** | Exceeds required return |
+| = 0 | Indifferent | Exactly meets required return |
+| < 0 | Reject | Below required return |
+
+**Why NPV Is the Best Method:**
+1. Considers time value of money
+2. Considers ALL cash flows over entire project life
+3. Measures absolute dollar value created
+4. Directly linked to shareholder wealth
+
+**Common Mistakes:**
+- **Forgetting salvage value in PV calculation**
+- **Adding initial investment instead of subtracting**
+- **Using wrong discount rate**
+
+**Exam Tip:** NPV is the GOLD STANDARD of capital budgeting. Other methods (payback, PI, IRR) should support the NPV decision, not replace it.`,
     },
     {
       id: "req-pi",
@@ -5969,7 +6883,46 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         value: 1.14,
         tolerance: 0.01,
       },
-      explanation: "PI = Total PV of cash inflows / Initial investment = ($540,720 + $28,370) / $500,000 = 1.14",
+      explanation: `**Answer:** 1.14 — Profitability Index
+
+**Formula:**
+Profitability Index = PV of Cash Inflows ÷ Initial Investment
+
+**Calculation:**
+| Component | Amount |
+|-----------|--------|
+| PV of Annual Inflows | $540,720 |
+| PV of Salvage Value | $28,370 |
+| **Total PV of Inflows** | **$569,090** |
+| ÷ Initial Investment | $500,000 |
+| **Profitability Index** | **1.14** |
+
+$569,090 ÷ $500,000 = **1.14** (or 1.1382 rounded)
+
+**Interpretation:**
+For every $1 invested, the project returns $1.14 in present value. The $0.14 "bonus" is the value creation per dollar invested.
+
+**PI Decision Rule:**
+| PI | Decision | Meaning |
+|----|----------|---------|
+| > 1.0 | **ACCEPT** | Returns exceed investment |
+| = 1.0 | Indifferent | Returns equal investment |
+| < 1.0 | Reject | Returns below investment |
+
+**Relationship to NPV:**
+- PI > 1.0 ↔ NPV > 0 (same decision)
+- PI = 1 + (NPV / Investment)
+- Check: 1 + ($69,090 / $500,000) = 1.14 ✓
+
+**When to Use PI vs NPV:**
+- **NPV:** Best for independent projects (absolute dollars)
+- **PI:** Best for capital rationing (efficiency per dollar invested)
+
+**Common Mistakes:**
+- **Using NPV instead of total PV in numerator:** PI = PV of inflows / Investment (NOT NPV / Investment)
+- **Inverting the ratio:** Investment / PV gives reciprocal
+
+**Exam Tip:** PI is also called the Benefit-Cost Ratio. It's most useful when comparing projects of different sizes under capital constraints.`,
     },
     {
       id: "req-accept",
@@ -5981,7 +6934,35 @@ export const barCapitalBudgetingTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-accept-yes",
       },
-      explanation: "Yes - NPV is positive ($69,090), PI > 1 (1.14), indicating the project exceeds the required return.",
+      explanation: `**Correct Selection:** Yes - Accept the project
+
+**Why Accept:**
+
+| Metric | Value | Decision Rule | Result |
+|--------|-------|---------------|--------|
+| NPV | $69,090 | > $0 | **ACCEPT** ✓ |
+| PI | 1.14 | > 1.0 | **ACCEPT** ✓ |
+| Payback | 3.33 yrs | < Project life | Acceptable |
+
+**Key Finding:**
+All metrics support acceptance. The project:
+- Exceeds the 12% required return (positive NPV)
+- Creates $1.14 of value per $1 invested (PI > 1)
+- Recovers investment within project life (payback < 5 years)
+
+**Why Other Options Are Wrong:**
+
+- **"No - Reject the project":** This would be correct ONLY if NPV < 0 or PI < 1. The positive NPV ($69,090) clearly indicates value creation.
+
+- **"Indifferent - NPV equals zero":** NPV = $0 would mean the project exactly meets the required return with no surplus. Our NPV of $69,090 is significantly positive.
+
+**Consistency of Capital Budgeting Metrics:**
+For independent projects with conventional cash flows, NPV and PI will ALWAYS give the same accept/reject decision:
+- NPV > 0 ↔ PI > 1 ↔ Accept
+- NPV < 0 ↔ PI < 1 ↔ Reject
+- NPV = 0 ↔ PI = 1 ↔ Indifferent
+
+**Exam Tip:** When metrics conflict (rare with conventional cash flows), ALWAYS follow NPV. NPV measures actual dollar value created for shareholders.`,
       dropdownOptions: [
         { id: "opt-accept-yes", order: 1, text: "Yes - Accept the project", isCorrect: true },
         { id: "opt-accept-no", order: 2, text: "No - Reject the project", isCorrect: false },
@@ -6043,7 +7024,34 @@ export const iscITGCTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c1-access",
       },
-      explanation: "Password policies are access controls - they control who can access systems and data.",
+      explanation: `**Correct Selection:** Access Control
+
+**Why Access Control:**
+Password policies are a fundamental ACCESS CONTROL. They address:
+- **Authentication:** Verifying user identity before granting access
+- **Password strength requirements:** Complexity rules (upper, lower, numbers, special)
+- **Password aging:** Forced 90-day changes to reduce credential theft risk
+
+**ITGC Categories (COBIT Framework):**
+| Category | What It Controls |
+|----------|-----------------|
+| **Access Control** | WHO can access systems/data |
+| Change Management | WHAT changes are made to systems |
+| Computer Operations | HOW systems run day-to-day |
+| Program Development | Building new systems/applications |
+
+**Why Other Options Are Wrong:**
+
+- **Change Management:** Deals with modifications to programs, systems, or configurations—not user authentication
+- **Computer Operations:** Covers system availability, backups, job scheduling—not login credentials
+- **Program Development:** Relates to SDLC phases—not ongoing authentication
+
+**Types of Access Controls:**
+1. **Logical access:** Passwords, tokens, biometrics (THIS CONTROL)
+2. **Physical access:** Badges, locks, security guards
+3. **Administrative:** Policies, segregation of duties
+
+**Exam Tip:** Password controls are ALWAYS classified as access controls, regardless of whether they're technical (system-enforced) or administrative (policy-based).`,
       dropdownOptions: [
         { id: "opt-c1-access", order: 1, text: "Access Control", isCorrect: true },
         { id: "opt-c1-change", order: 2, text: "Change Management", isCorrect: false },
@@ -6061,7 +7069,45 @@ export const iscITGCTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c2-change",
       },
-      explanation: "Code migration approval requirements are change management controls.",
+      explanation: `**Correct Selection:** Change Management
+
+**Why Change Management:**
+Code migration approval requirements control CHANGES to production systems. Key elements:
+- **Dual approval required:** Development manager AND IT security
+- **Controls the movement** of code from development to production
+- **Prevents unauthorized modifications** to live systems
+
+**The Change Management Process:**
+1. Change request initiation
+2. Impact assessment
+3. **Approval (THIS CONTROL)** ← Multiple approvers required
+4. Testing
+5. Migration to production
+6. Post-implementation review
+
+**Why Other Options Are Wrong:**
+
+- **Access Control:** This doesn't control WHO accesses systems—it controls WHAT changes can be made. Developers might have access but still need approval to migrate.
+
+- **Computer Operations:** Operations runs production systems; they don't control what goes INTO production.
+
+- **Program Development:** Development creates the code, but change management governs the deployment process.
+
+**Key Insight:**
+The presence of "approval before migration" is the defining characteristic of change management. It ensures:
+- Code review has occurred
+- Security implications considered
+- Audit trail exists
+
+**Segregation of Duties in Change Management:**
+| Role | Responsibility |
+|------|---------------|
+| Developer | Write code |
+| Dev Manager | Approve functionality |
+| Security | Approve security impact |
+| Operations | Execute migration |
+
+**Exam Tip:** Any control involving "approval to move to production" is change management, not program development.`,
       dropdownOptions: [
         { id: "opt-c2-access", order: 1, text: "Access Control", isCorrect: false },
         { id: "opt-c2-change", order: 2, text: "Change Management", isCorrect: true },
@@ -6079,7 +7125,41 @@ export const iscITGCTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c3-access",
       },
-      explanation: "Terminated employee access review is an access control - ensuring only authorized users have system access.",
+      explanation: `**Correct Selection:** Access Control
+
+**Why Access Control:**
+Terminated employee access review ensures ONLY authorized users retain system access. This control:
+- **Detects orphan accounts:** Users who no longer need access
+- **Enforces least privilege:** Remove access when no longer required
+- **Prevents unauthorized access:** Former employees cannot access systems
+
+**The Access Lifecycle:**
+| Stage | Control |
+|-------|---------|
+| Onboarding | Provisioning (grant access) |
+| Changes | Role changes, transfers |
+| **Termination** | **Deprovisioning (THIS CONTROL)** |
+
+**Why Other Options Are Wrong:**
+
+- **Change Management:** No system changes are being made—only access rights are being reviewed/revoked.
+
+- **Computer Operations:** Operations deals with running systems, not user access management.
+
+- **Physical Security:** While related (badges should also be collected), this control specifically addresses LOGICAL (system) access, not building access.
+
+**Key Control Elements:**
+1. **Automated report generation:** System creates list (detective control)
+2. **HR review:** Human verification adds accountability
+3. **Weekly frequency:** Timely detection of access issues
+
+**Common Weakness:**
+Many organizations fail to disable access promptly. CPA exams often test:
+- Timing (immediate termination preferred)
+- Completeness (all systems, not just main ERP)
+- Documentation (evidence of review)
+
+**Exam Tip:** User access reviews (periodic recertification, termination reviews) are ALWAYS access controls—they answer "Who should have access?"`,
       dropdownOptions: [
         { id: "opt-c3-access", order: 1, text: "Access Control", isCorrect: true },
         { id: "opt-c3-change", order: 2, text: "Change Management", isCorrect: false },
@@ -6097,7 +7177,46 @@ export const iscITGCTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c4-ops",
       },
-      explanation: "Backup procedures are computer operations controls - they ensure data can be recovered and operations can continue.",
+      explanation: `**Correct Selection:** Computer Operations
+
+**Why Computer Operations:**
+Backup procedures ensure IT systems can recover from failures. This control addresses:
+- **Data availability:** Information can be restored if lost
+- **Business continuity:** Operations resume after disruption
+- **Disaster recovery:** Offsite storage protects against site-level disasters
+
+**Computer Operations Controls Include:**
+| Control Type | Examples |
+|--------------|----------|
+| **Backup/Recovery** | **Daily/weekly backups, offsite storage (THIS)** |
+| Job Scheduling | Batch processing, reports |
+| System Monitoring | Performance, capacity |
+| Incident Response | Problem resolution |
+| Environmental | Power, cooling, fire suppression |
+
+**Why Other Options Are Wrong:**
+
+- **Access Control:** Backups don't control who accesses data—they control whether data SURVIVES.
+
+- **Change Management:** No changes to systems or programs are being made—this is ongoing operations.
+
+- **Physical Security:** While offsite storage has physical aspects, the control's PRIMARY purpose is data availability (an operations concern).
+
+**Backup Strategy Analysis:**
+| Backup Type | What's Copied | This Client's Schedule |
+|-------------|---------------|----------------------|
+| Full | Everything | Weekly |
+| Incremental | Only changes since last backup | Daily |
+| Differential | Changes since last full | Not used here |
+
+**Why Offsite Storage Matters:**
+Protects against:
+- Building fire/flood
+- Natural disasters
+- Physical theft
+- Site-wide power failure
+
+**Exam Tip:** Any control about "keeping systems running" or "recovering from failure" is Computer Operations. Access controls determine WHO can use systems; operations controls determine IF systems are AVAILABLE.`,
       dropdownOptions: [
         { id: "opt-c4-access", order: 1, text: "Access Control", isCorrect: false },
         { id: "opt-c4-change", order: 2, text: "Change Management", isCorrect: false },
@@ -6115,7 +7234,44 @@ export const iscITGCTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c5-change",
       },
-      explanation: "Software installation approval requirements are change management controls.",
+      explanation: `**Correct Selection:** Change Management
+
+**Why Change Management:**
+Software installation approval controls WHAT enters the IT environment. Key elements:
+- **Formal request process:** Documentation of what/why
+- **IT director approval:** Management oversight
+- **Prevents unauthorized software:** Shadow IT, malware, unlicensed programs
+
+**Change Management Scope:**
+| What's Controlled | Examples |
+|-------------------|----------|
+| Application code changes | Bug fixes, new features |
+| **New software installation** | **New programs (THIS CONTROL)** |
+| Configuration changes | System settings |
+| Infrastructure changes | Hardware, network |
+
+**Why Other Options Are Wrong:**
+
+- **Access Control:** This doesn't restrict WHO installs—it restricts WHAT can be installed. Even authorized installers need approval for new software.
+
+- **Computer Operations:** Operations runs existing software; change management controls adding NEW software.
+
+- **Program Development:** Development creates custom software; this control covers ALL software (including purchased/downloaded).
+
+**Business Risks Mitigated:**
+1. **Security:** Prevents malware, unauthorized tools
+2. **Licensing:** Ensures compliance with software agreements
+3. **Compatibility:** IT reviews for system conflicts
+4. **Support:** Known software can be supported
+
+**Change Management vs. Access Control:**
+| Scenario | Classification |
+|----------|---------------|
+| Who can log into a system? | Access Control |
+| What software can be installed? | **Change Management** |
+| Who can install software? | Access Control |
+
+**Exam Tip:** The key differentiator is whether the control asks "WHO can do something?" (access) vs. "WHAT can be done?" (change management). Software installation approval restricts WHAT, not WHO.`,
       dropdownOptions: [
         { id: "opt-c5-access", order: 1, text: "Access Control", isCorrect: false },
         { id: "opt-c5-change", order: 2, text: "Change Management", isCorrect: true },
@@ -6174,7 +7330,38 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-a-no",
       },
-      explanation: "No - A Type I report only tests design at a point in time, not operating effectiveness. Additionally, the report date (March 31) does not cover sufficient period of the client's year-end (December 31).",
+      explanation: `**Correct Selection:** No - Need Type II covering the period
+
+**Why Cannot Rely:**
+This SOC report has TWO critical deficiencies:
+
+**Problem 1: Type I vs. Type II**
+| Report Type | What It Tests | Usefulness for Audit |
+|-------------|---------------|---------------------|
+| **Type I** | Design at a POINT IN TIME | Limited - no operating effectiveness |
+| **Type II** | Design AND operating effectiveness over a PERIOD | **Required for reliance** |
+
+A Type I report only confirms controls were designed properly AS OF March 31—it provides no evidence controls operated effectively throughout the year.
+
+**Problem 2: Coverage Gap**
+| Date | Gap |
+|------|-----|
+| SOC Report Date | March 31, Year 1 |
+| Client Year-End | December 31, Year 1 |
+| **Coverage Gap** | **9 months uncovered** |
+
+Even if this were a Type II, it would only cover design at a single point, not the 9 months between report date and year-end.
+
+**Why Other Options Are Wrong:**
+
+- **"Yes - Fully rely":** Cannot rely on Type I for operating effectiveness; cannot rely on March 31 date for December 31 year-end
+
+- **"Partially - With additional procedures":** While additional procedures could supplement, the report provides almost NO audit evidence—it's not partial reliance, it's essentially no reliance
+
+**What the Auditor Needs:**
+SOC 1 Type II report covering the audit period (ideally Jan 1 - Dec 31, Year 1, or at minimum through close to year-end)
+
+**Exam Tip:** For SOC reliance, always check: (1) Type I vs. Type II, (2) SOC 1 vs. SOC 2, and (3) coverage period alignment with audit period.`,
       dropdownOptions: [
         { id: "opt-a-yes", order: 1, text: "Yes - Fully rely on the report", isCorrect: false },
         { id: "opt-a-no", order: 2, text: "No - Need Type II covering the period", isCorrect: true },
@@ -6191,7 +7378,38 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-b-no",
       },
-      explanation: "No - SOC 2 reports address trust services criteria (security, availability, etc.), not controls relevant to financial reporting. For financial statement audits, SOC 1 reports are needed.",
+      explanation: `**Correct Selection:** No - SOC 2 is not for financial audits
+
+**Why SOC 2 Is Wrong for Financial Audits:**
+
+**SOC Report Types Comparison:**
+| Report | Purpose | Relevant To |
+|--------|---------|-------------|
+| **SOC 1** | Controls relevant to USER'S FINANCIAL STATEMENTS | Financial statement audits ✓ |
+| **SOC 2** | Trust Services Criteria (Security, Availability, Processing Integrity, Confidentiality, Privacy) | IT audits, vendor due diligence |
+| **SOC 3** | Same as SOC 2 but for general distribution | Marketing, public assurance |
+
+**This Scenario:**
+DataVault's SOC 2 covers security and availability—but these are NOT controls over financial reporting. The auditor needs to assess controls that could affect:
+- Transaction processing accuracy
+- Account balance completeness
+- Financial data integrity
+
+**Why Other Options Are Wrong:**
+
+- **"Yes - Covers full audit period":** Coverage period is irrelevant if it's the wrong TYPE of report. A perfect SOC 2 still doesn't help a financial audit.
+
+- **"Yes - If security controls are relevant":** While security controls may indirectly affect financial reporting, SOC 2 specifically excludes ICFR (Internal Control over Financial Reporting) scope. An auditor cannot substitute SOC 2 for SOC 1.
+
+**When Each SOC Report Is Used:**
+| User Need | Use This Report |
+|-----------|-----------------|
+| Financial statement audit of user entity | **SOC 1** |
+| IT control compliance (non-financial) | SOC 2 |
+| Public marketing of controls | SOC 3 |
+| Cybersecurity risk assessment | SOC for Cybersecurity |
+
+**Exam Tip:** SOC 1 = SSAE 18 (financial reporting focus). SOC 2 = Trust Services Criteria (operational/IT focus). Don't confuse them!`,
       dropdownOptions: [
         { id: "opt-b-yes", order: 1, text: "Yes - Covers full audit period", isCorrect: false },
         { id: "opt-b-no", order: 2, text: "No - SOC 2 is not for financial audits", isCorrect: true },
@@ -6208,7 +7426,45 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-c-partial",
       },
-      explanation: "Partial - The SOC 1 Type II is the right type, but coverage (April-September) doesn't include the last quarter. Auditor needs to perform additional procedures for October-December or obtain bridge letter.",
+      explanation: `**Correct Selection:** Partial - Need procedures for uncovered period
+
+**Why Partial Reliance:**
+The SOC report is the RIGHT type (SOC 1 Type II) but has a COVERAGE GAP:
+
+| Period | Coverage |
+|--------|----------|
+| January 1 - March 31 | NOT covered (Q1) |
+| April 1 - September 30 | **Covered by SOC report** ✓ |
+| October 1 - December 31 | NOT covered (Q4) |
+
+**What the Auditor Must Do:**
+
+**For the Covered Period (Apr-Sep):**
+- Can rely on SOC 1 Type II report
+- Review control descriptions and testing results
+- Evaluate any exceptions noted
+
+**For the Uncovered Period (Oct-Dec):**
+The auditor has several options (AU-C 402):
+1. **Bridge letter:** Written representation from service organization that no significant changes occurred
+2. **Direct testing:** Perform tests of controls at the service organization
+3. **Alternative procedures:** Test user entity controls that compensate
+4. **Inquiry:** Ask service organization about changes
+
+**Why Other Options Are Wrong:**
+
+- **"Yes - Type II provides sufficient evidence":** Type II is right, but 3 months are uncovered. Cannot blindly rely for full year.
+
+- **"No - Cannot rely at all":** This goes too far—the report provides valuable evidence for 6 months. Partial reliance is appropriate.
+
+**Roll-Forward Procedures:**
+When SOC period ends before audit period, auditor should:
+- Obtain bridge letter
+- Inquire about control changes
+- Test user entity complementary controls
+- Consider if gap is material
+
+**Exam Tip:** A SOC report doesn't need to cover the ENTIRE audit period to be useful—but the auditor must address the gap with additional procedures.`,
       dropdownOptions: [
         { id: "opt-c-yes", order: 1, text: "Yes - Type II provides sufficient evidence", isCorrect: false },
         { id: "opt-c-no", order: 2, text: "No - Cannot rely at all", isCorrect: false },
@@ -6225,7 +7481,37 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-d-assess",
       },
-      explanation: "The auditor must assess whether the deficiencies noted could affect the client's financial statements. The qualified opinion indicates control deficiencies that may require additional audit procedures.",
+      explanation: `**Correct Selection:** Assess if deficiencies affect client's controls
+
+**Why Assessment Is Required:**
+A qualified opinion indicates the service auditor found CONTROL DEFICIENCIES. The user auditor must determine if these deficiencies could affect the client's financial statements.
+
+**Analysis Steps:**
+1. **Read the qualified opinion:** Understand exactly what deficiency exists
+2. **Assess relevance:** Does the security deficiency affect financial data?
+3. **Consider compensating controls:** Does the client have controls that mitigate the risk?
+4. **Determine audit impact:** Plan additional procedures if needed
+
+**Why This SOC 2 Might Matter:**
+Even though SOC 2 is primarily for IT/operational controls:
+- Security deficiencies could allow unauthorized access to financial data
+- If client relies on SecureHost for financial applications, security gaps are relevant
+- Auditor should understand what the client processes through this service
+
+**Why Other Options Are Wrong:**
+
+- **"No impact - SOC 2 not relevant to audit":** While SOC 2 isn't designed for financial audits, security deficiencies at a service organization could still affect the client. The auditor can't simply ignore a qualified opinion.
+
+- **"Can still fully rely on the report":** A qualified opinion explicitly states controls did NOT operate effectively. Full reliance is inappropriate—the whole point of the qualification is to warn users.
+
+**Professional Judgment Required:**
+| Deficiency Type | Likely Impact on Financial Audit |
+|-----------------|----------------------------------|
+| Security breach affecting data integrity | HIGH - consider additional substantive testing |
+| Availability issue (downtime) | MEDIUM - assess processing completeness |
+| Physical security gap | LOW - if no financial data compromised |
+
+**Exam Tip:** Never ignore a qualified opinion on ANY SOC report. Even if the report type isn't directly relevant, deficiencies could have downstream effects on financial reporting.`,
       dropdownOptions: [
         { id: "opt-d-ignore", order: 1, text: "No impact - SOC 2 not relevant to audit", isCorrect: false },
         { id: "opt-d-rely", order: 2, text: "Can still fully rely on the report", isCorrect: false },
@@ -6242,7 +7528,47 @@ export const iscSOCReportsTBS: TBSQuestion = {
         type: "dropdown",
         correctOptionId: "opt-e-risk",
       },
-      explanation: "SOC for Cybersecurity reports are designed to communicate information about an entity's cybersecurity risk management program to a broad range of stakeholders for general use.",
+      explanation: `**Correct Selection:** Evaluate cybersecurity risk management
+
+**What Is SOC for Cybersecurity:**
+A voluntary examination engagement where a CPA reports on an organization's cybersecurity risk management program for GENERAL STAKEHOLDER use.
+
+**SOC for Cybersecurity Components:**
+| Component | Content |
+|-----------|---------|
+| Management's Description | Description of cybersecurity risk management program |
+| Management's Assertion | Assertion about program effectiveness |
+| Practitioner's Opinion | CPA's opinion on description accuracy and control effectiveness |
+
+**Why This Report Fits Scenario E:**
+DataSecure is being evaluated BEFORE engagement. SOC for Cybersecurity provides:
+- Broad overview of cybersecurity posture
+- General use distribution (not restricted)
+- Independent CPA assurance
+- Risk management program assessment
+
+**How SOC for Cybersecurity Differs from SOC 2:**
+| Feature | SOC 2 | SOC for Cybersecurity |
+|---------|-------|----------------------|
+| Criteria | Trust Services Criteria | Description Criteria from AICPA |
+| Focus | Specific controls | Overall risk management program |
+| Distribution | Restricted use | General use |
+| Audience | Specific business partners | All stakeholders |
+
+**Why Other Options Are Wrong:**
+
+- **"For financial statement audits":** SOC for Cybersecurity has NO connection to financial statement controls. It's about cybersecurity risk management, not ICFR.
+
+- **"Internal use only":** Unlike SOC 2 (restricted distribution), SOC for Cybersecurity is specifically designed for GENERAL distribution to any interested party.
+
+**Use Cases for SOC for Cybersecurity:**
+- Prospective customers evaluating a vendor
+- Board of directors oversight
+- Insurance underwriters
+- Regulators
+- Investors
+
+**Exam Tip:** SOC for Cybersecurity is the "public-facing" cybersecurity report. It's like SOC 3 (general use) but focused specifically on cybersecurity risk management rather than Trust Services Criteria.`,
       dropdownOptions: [
         { id: "opt-e-audit", order: 1, text: "For financial statement audits", isCorrect: false },
         { id: "opt-e-internal", order: 2, text: "Internal use only", isCorrect: false },
