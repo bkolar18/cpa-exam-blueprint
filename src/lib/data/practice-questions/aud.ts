@@ -1303,8 +1303,8 @@ const questions = [
       "D": "Assess going concern for five years into the future"
     },
     "correctAnswer": "B",
-    "explanation": "The auditor evaluates whether substantial doubt exists about the entity's ability to continue as a going concern for a reasonable period (one year from financial statement issuance for US GAAP). The auditor considers conditions and events, evaluates management's plans, and determines appropriate reporting. This is required in every audit.",
-    "tip": "Going concern: Evaluate in every audit. Period: 1 year from F/S issuance. Consider conditions, management's plans, report implications.",
+    "explanation": "GOING CONCERN evaluation is REQUIRED in every audit. The auditor must evaluate whether SUBSTANTIAL DOUBT exists about the entity's ability to continue for ONE YEAR from F/S ISSUANCE date (US GAAP). Process: (1) Identify CONDITIONS/EVENTS (recurring losses, negative cash flow, debt defaults), (2) Evaluate MANAGEMENT'S PLANS to mitigate, (3) Determine REPORTING implications. Why others fail: (A) GUARANTEE = Never—auditor provides reasonable assurance, not guarantees; (C) Only if client raises = NO—auditor must evaluate regardless; (D) Five years = Too long—one year is the standard period. Key: If substantial doubt exists AND mitigated by management plans → Disclose. If NOT mitigated → Adverse opinion may be needed.",
+    "tip": "Going concern: REQUIRED every audit. Period = 1 YEAR from F/S issuance. Evaluate conditions → Management plans → Report impact. No guarantee provided.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1324,8 +1324,8 @@ const questions = [
       "D": "Only test estimates that changed from prior year"
     },
     "correctAnswer": "B",
-    "explanation": "For estimates, auditors evaluate: management's estimation process, assumptions used, data underlying the estimate, whether the estimate is reasonable, and consistency with other evidence. The auditor may also develop an independent expectation or evaluate management's historical accuracy. Professional skepticism is essential.",
-    "tip": "Estimates audit approach: Evaluate process and assumptions, develop independent expectation, review subsequent events, consider bias.",
+    "explanation": "AUDITING ESTIMATES requires evaluating the PROCESS and ASSUMPTIONS—not just accepting management's numbers. Three audit approaches: (1) TEST MANAGEMENT'S PROCESS (how they developed estimate + assumptions used), (2) DEVELOP INDEPENDENT EXPECTATION (auditor's own estimate to compare), (3) Review SUBSEQUENT EVENTS (actual outcomes vs. estimates). Key elements to evaluate: ASSUMPTIONS reasonableness, DATA reliability, METHOD appropriateness, CONSISTENCY with other evidence. Why others fail: (A) Accept without question = Violates skepticism—estimates are subjective and prone to bias; (C) Independent estimates for ALL = Not required—pick most efficient approach; (D) Only changed estimates = Must evaluate ALL significant estimates, not just changes. PROFESSIONAL SKEPTICISM essential—estimates are where bias hides.",
+    "tip": "ESTIMATES: Evaluate process + assumptions OR develop independent estimate OR use subsequent events. SKEPTICISM critical—estimates = bias risk.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1345,8 +1345,8 @@ const questions = [
       "D": "Accept the specialist's work without question"
     },
     "correctAnswer": "A",
-    "explanation": "When management's specialist is used, the auditor evaluates: the specialist's competence, capabilities, and objectivity; understanding the specialist's work; and whether the work is adequate audit evidence. The auditor cannot simply rely on the specialist's reputation or credentials.",
-    "tip": "Management's specialist: Evaluate competence, capabilities, objectivity. Understand work and evaluate adequacy. Auditor remains responsible.",
+    "explanation": "When MANAGEMENT'S SPECIALIST is used (actuary, appraiser, engineer), the auditor must evaluate THREE things: (1) COMPETENCE = Qualifications, experience, certifications, (2) CAPABILITIES = Ability to do this specific work, (3) OBJECTIVITY = No conflicts of interest with client. Additionally: UNDERSTAND the specialist's work (methods, assumptions, data used), EVALUATE whether work is adequate audit evidence. Cannot just rely on reputation or credentials—must actively evaluate. Why others fail: (B) Hire own specialist every time = Not required—can use management's if properly evaluated; (C) Disclaim responsibility = NEVER—auditor always responsible for evidence used; (D) Accept without question = Violates skepticism.",
+    "tip": "Management's specialist: Evaluate COMPETENCE + CAPABILITIES + OBJECTIVITY. Understand methods/assumptions. Auditor ALWAYS remains responsible.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1366,8 +1366,8 @@ const questions = [
       "D": "Tax laws determining income tax expense"
     },
     "correctAnswer": "D",
-    "explanation": "Direct-effect laws are those with clear, direct financial statement impact - primarily tax laws and regulations affecting recorded amounts. The auditor must obtain sufficient evidence about compliance. Indirect-effect laws (environmental, safety, employment) may result in contingencies but don't directly determine F/S amounts. Different audit response for each.",
-    "tip": "Direct effect: Tax laws, regulations determining F/S amounts (test compliance). Indirect: Environmental, safety (be aware, follow up on identified noncompliance).",
+    "explanation": "DIRECT-EFFECT LAWS directly determine F/S AMOUNTS—primarily TAX LAWS that calculate income tax expense, pension regulations affecting liabilities, etc. Auditor must obtain SUFFICIENT EVIDENCE about compliance with direct-effect laws. INDIRECT-EFFECT LAWS (environmental, safety, employment) don't directly determine F/S amounts but may create CONTINGENCIES if violated. Different audit response: DIRECT = Test compliance, affects recorded amounts. INDIRECT = Be aware, follow up if noncompliance identified, consider contingencies. Why others are INDIRECT: (A) Occupational safety = May cause penalties/contingencies but doesn't determine F/S line items; (B) Anti-discrimination = Same—liability contingency risk; (C) Environmental = Same—cleanup liability contingency.",
+    "tip": "DIRECT effect = Determines F/S amounts (TAX LAWS). INDIRECT = May cause contingencies (environmental, safety, employment). Different audit response.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1387,8 +1387,8 @@ const questions = [
       "D": "Only significant deficiencies identified"
     },
     "correctAnswer": "B",
-    "explanation": "Documentation requirements include: discussion among team members about fraud, key elements of understanding of entity and environment including internal control, identified and assessed risks at F/S and assertion level, risks identified as significant, and the linkage between assessed risks and audit procedures (responses).",
-    "tip": "Risk documentation: Team discussion, understanding, assessed risks (F/S and assertion level), significant risks, risk-procedure linkage.",
+    "explanation": "RISK ASSESSMENT DOCUMENTATION must include: (1) TEAM DISCUSSION about fraud risks, (2) KEY ELEMENTS of understanding obtained (entity, environment, internal controls), (3) IDENTIFIED and ASSESSED RISKS at both F/S and ASSERTION levels, (4) SIGNIFICANT RISKS requiring special consideration, (5) LINKAGE between assessed risks and planned audit PROCEDURES (how you'll respond). This creates the audit trail from understanding → risk assessment → response. Why others fail: (A) Only final opinion = Incomplete—need to document the journey, not just destination; (C) Client signatures = Not required on workpapers; (D) Only significant deficiencies = That's internal control reporting, not risk assessment documentation.",
+    "tip": "Risk documentation: Team discussion + Understanding + Assessed risks (F/S + assertion) + Significant risks + LINKAGE to procedures. The complete audit trail.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1408,8 +1408,8 @@ const questions = [
       "D": "The sample is not randomly selected"
     },
     "correctAnswer": "A",
-    "explanation": "Sampling risk is the risk that the auditor's conclusion based on a sample may differ from the conclusion reached if the entire population were subjected to the same procedure. It can be controlled by adjusting sample size. Non-sampling risk relates to human error or using inappropriate procedures.",
-    "tip": "Sampling risk: Sample conclusion ≠ Population conclusion. Controlled by sample size. Non-sampling risk: Human error, wrong procedures.",
+    "explanation": "SAMPLING RISK = Risk that sample conclusion DIFFERS from what population conclusion would be if 100% tested. It exists whenever you test less than 100% of a population. CONTROLLED BY: Increasing SAMPLE SIZE (larger sample = less sampling risk). Two types: (1) RISK OF INCORRECT ACCEPTANCE = Conclude controls effective or no misstatement when they exist (audit efficiency issue), (2) RISK OF INCORRECT REJECTION = Conclude controls ineffective or misstatement exists when they don't (audit effectiveness issue). NON-SAMPLING RISK is DIFFERENT: Human error, wrong procedures, misinterpreting results—NOT controllable by sample size. Why others fail: (B) Population contains errors = Not about errors existing—about sample representing them; (C) Wrong procedure = NON-sampling risk; (D) Not random = Also non-sampling risk.",
+    "tip": "SAMPLING RISK = Sample ≠ Population conclusion. Control via SAMPLE SIZE. NON-sampling = Human error, wrong procedures (not size-controllable).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1429,8 +1429,8 @@ const questions = [
       "D": "Can delegate all audit work to internal auditors"
     },
     "correctAnswer": "A",
-    "explanation": "When internal auditors provide direct assistance, the external auditor must: evaluate their competence and objectivity, supervise and review their work, and retain responsibility for conclusions. Internal auditors should not work on high-risk areas or make significant judgments. External auditor remains responsible for the audit opinion.",
-    "tip": "Internal auditor direct assistance: External auditor supervises, reviews, remains responsible. Limited to lower-risk areas. Evaluate competence/objectivity.",
+    "explanation": "Using INTERNAL AUDITORS for DIRECT ASSISTANCE means they perform audit work under external auditor's direction. Requirements: (1) Evaluate COMPETENCE and OBJECTIVITY (do they have skill? Are they independent from operations?), (2) External auditor must SUPERVISE and REVIEW all their work, (3) External auditor RETAINS FULL RESPONSIBILITY for conclusions. LIMITATIONS: Internal auditors should NOT work on HIGH-RISK areas, significant JUDGMENTS, or complex estimates. Why others fail: (B) Not responsible = WRONG—external auditor is ALWAYS responsible for the opinion; (C) Only clerical = They can do substantive work, just not high-risk; (D) Delegate all work = Cannot—external auditor must perform key procedures and maintain responsibility. Key: It's DIRECT ASSISTANCE, not delegation of responsibility.",
+    "tip": "Internal auditor assistance: Evaluate competence/objectivity → SUPERVISE → REVIEW → External auditor REMAINS RESPONSIBLE. Limit to lower-risk work.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1450,8 +1450,8 @@ const questions = [
       "D": "Are only obtained for SEC audits"
     },
     "correctAnswer": "C",
-    "explanation": "Management representations are required written statements from management acknowledging responsibility for F/S, completeness of information, and other matters. However, they complement but do not replace substantive procedures. If other evidence is obtainable, representations alone are not sufficient. They are required for all audits.",
-    "tip": "Management representations: Required. Complement other evidence. Don't replace substantive procedures. Written, signed by CEO/CFO.",
+    "explanation": "MANAGEMENT REPRESENTATIONS are REQUIRED written statements (rep letter) but they COMPLEMENT—don't REPLACE—other audit evidence. Key representations: (1) F/S responsibility acknowledged, (2) All information/records provided, (3) Fraud known to management disclosed, (4) Related parties disclosed, (5) Subsequent events disclosed. If other evidence IS obtainable, representations ALONE are NOT sufficient—must corroborate. Signed by CEO and CFO, dated as of REPORT DATE. Why others fail: (A) Optional = REQUIRED in every audit; (B) Substitute for procedures = NEVER—they support, don't replace evidence; (D) SEC only = Required for ALL audits (public and private). Key: If management refuses to sign → SCOPE LIMITATION → Disclaimer or withdrawal.",
+    "tip": "Management reps: REQUIRED, COMPLEMENT evidence (don't replace). Signed by CEO/CFO. Refusal to sign = Scope limitation → Disclaimer.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1471,8 +1471,8 @@ const questions = [
       "D": "SEC issuer audits and certain other engagements per firm policy"
     },
     "correctAnswer": "D",
-    "explanation": "Under PCAOB standards, engagement quality review (EQR) is required for all SEC issuer audits. Under AICPA standards, EQR is required based on firm policy for engagements meeting specified criteria (high risk, public interest entities, etc.). The EQR partner evaluates significant judgments and the report before issuance.",
-    "tip": "EQR: Required for SEC issuers (PCAOB). AICPA: Based on firm policy/risk. Reviewer not engagement team member. Evaluates significant judgments.",
+    "explanation": "ENGAGEMENT QUALITY REVIEW (EQR) requirements differ by framework: PCAOB = Required for ALL SEC issuer audits. AICPA = Required based on FIRM POLICY for high-risk or public interest engagements. EQR Reviewer requirements: (1) NOT on engagement team, (2) QUALIFIED partner, (3) EVALUATES significant judgments, (4) Reviews REPORT before issuance. Must be done BEFORE report release—it's a quality checkpoint. Why others fail: (A) Only qualified opinions = Required regardless of opinion type; (B) Only first-year = Required for ongoing SEC audits too; (C) All audits = Under AICPA, it's based on firm policy, not all engagements. Key: EQR is about QUALITY CONTROL, providing fresh perspective on significant judgments.",
+    "tip": "EQR: PCAOB = Required for SEC issuers. AICPA = Firm policy based. Reviewer NOT on team, evaluates JUDGMENTS, reviews REPORT before issuance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1492,8 +1492,8 @@ const questions = [
       "D": "The quantity of the evidence"
     },
     "correctAnswer": "D",
-    "explanation": "Sufficiency refers to the quantity (amount) of audit evidence needed. Appropriateness refers to quality, which includes relevance and reliability. Both are required for adequate audit evidence.",
-    "tip": "Sufficiency = Quantity. Appropriateness = Quality (relevance + reliability).",
+    "explanation": "SUFFICIENCY = QUANTITY of audit evidence. APPROPRIATENESS = QUALITY of evidence (relevance + reliability). Both are required for ADEQUATE audit evidence. Think of it as: \"Do I have ENOUGH of the RIGHT evidence?\" Factors affecting quantity needed: RISK level (higher risk = more evidence), QUALITY of evidence (better quality = less quantity needed). Why others fail: (A) Reliability = Part of APPROPRIATENESS, not sufficiency; (B) Relevance = Part of APPROPRIATENESS, not sufficiency; (C) Quality = That's APPROPRIATENESS. Memory aid: SufficienT = quanTiTy (T's). APpropriate = quALity (letters look different—quality is different from quantity).",
+    "tip": "SUFFICIENCY = QUANTITY (how much). APPROPRIATENESS = QUALITY (relevance + reliability). Need ENOUGH of the RIGHT evidence.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1513,8 +1513,8 @@ const questions = [
       "D": "Relevance and reliability"
     },
     "correctAnswer": "D",
-    "explanation": "Appropriateness measures the quality of evidence through two dimensions: relevance (the evidence relates to the assertion being tested) and reliability (the evidence is believable and trustworthy).",
-    "tip": "Appropriate = Relevant (right assertion) + Reliable (trustworthy source).",
+    "explanation": "APPROPRIATENESS = QUALITY, measured by two dimensions: (1) RELEVANCE = Evidence relates to the ASSERTION being tested (testing existence? You need evidence about existence, not valuation). (2) RELIABILITY = Evidence is BELIEVABLE and TRUSTWORTHY (source, controls, form). Both dimensions must be met for appropriate evidence. Why others fail: (A) Availability/timeliness = Important but not the definition of appropriateness; (B) Format/presentation = Form affects reliability, but not the complete definition; (C) Quantity/cost = Quantity is SUFFICIENCY, cost is a practical consideration. Key: Appropriate evidence = Right type (relevant) from trustworthy source (reliable).",
+    "tip": "APPROPRIATENESS = RELEVANCE (tests the right assertion) + RELIABILITY (trustworthy source). Quality, not quantity.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1534,8 +1534,8 @@ const questions = [
       "D": "Not acceptable as audit evidence"
     },
     "correctAnswer": "B",
-    "explanation": "Evidence from independent external sources (confirmations, third-party documents) is generally more reliable than internally generated evidence because it is outside the client's control and less susceptible to manipulation.",
-    "tip": "External > Internal for reliability. Independent source = less manipulation risk.",
+    "explanation": "EXTERNAL evidence from INDEPENDENT sources is MORE RELIABLE than internally generated evidence. Why? It's OUTSIDE CLIENT CONTROL = less susceptible to manipulation. Reliability hierarchy (most to least): (1) External, directly to auditor (bank confirmation), (2) External, held by client (vendor invoice), (3) Internal, externally circulated (cancelled check), (4) Internal, internally circulated (purchase order). Why others fail: (A) Less reliable = Opposite is true; (C) Equal reliability = No—external is generally more reliable; (D) Not acceptable = External evidence is definitely acceptable and preferred. Key principle: The more INDEPENDENT the source and the less CLIENT INVOLVEMENT in handling, the more reliable.",
+    "tip": "EXTERNAL > INTERNAL for reliability. Most reliable: External, direct to auditor. Least: Internal, kept by client. Less client control = More reliable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1555,8 +1555,8 @@ const questions = [
       "D": "Inspection"
     },
     "correctAnswer": "D",
-    "explanation": "Inspection involves examining records, documents, or tangible assets. Confirmation seeks responses from third parties. Observation watches processes or procedures. Inquiry asks questions of client personnel.",
-    "tip": "Inspection = Examine documents/assets. Observation = Watch processes. Inquiry = Ask questions.",
+    "explanation": "Seven audit procedures (memorize these): (1) INSPECTION = Examine RECORDS, DOCUMENTS, or TANGIBLE ASSETS. (2) OBSERVATION = WATCH processes/procedures being performed. (3) INQUIRY = ASK QUESTIONS of knowledgeable persons. (4) CONFIRMATION = Request THIRD PARTY to respond directly to auditor. (5) RECALCULATION = Check MATHEMATICAL ACCURACY. (6) REPERFORMANCE = REDO procedures/controls. (7) ANALYTICAL PROCEDURES = Analyze RELATIONSHIPS in data. INSPECTION is examining physical things or documents. Why others fail: (A) Observation = WATCHING, not examining documents; (B) Inquiry = ASKING, not examining; (C) Confirmation = Getting EXTERNAL party response.",
+    "tip": "INSPECTION = Examine documents/assets. OBSERVATION = Watch. INQUIRY = Ask. CONFIRMATION = Third party responds. RECALCULATION = Check math. REPERFORMANCE = Redo.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1576,8 +1576,8 @@ const questions = [
       "D": "Based on the auditor's observation"
     },
     "correctAnswer": "C",
-    "explanation": "External confirmation is audit evidence obtained as a direct written response to the auditor from a third party. It provides highly reliable evidence because it comes from an independent source outside the client.",
-    "tip": "Confirmation = Third party responds directly to auditor. Very reliable external evidence.",
+    "explanation": "EXTERNAL CONFIRMATION = Evidence obtained as DIRECT WRITTEN RESPONSE from THIRD PARTY to the auditor. Highly reliable because: (1) INDEPENDENT source (outside client), (2) DIRECT to auditor (client can't intercept/alter), (3) WRITTEN documentation. Common confirmations: BANK (cash, loans, lines of credit), A/R (customer balances), A/P (vendor balances—less common), LEGAL (litigation status). Why others fail: (A) Client's accounting system = Internal, not external; (B) Generated internally = Opposite of external confirmation; (D) Auditor's observation = Different procedure entirely. Key: Confirmation is EXTERNAL + DIRECT TO AUDITOR = Very reliable.",
+    "tip": "CONFIRMATION = Third party responds DIRECTLY TO AUDITOR. Very reliable (external + direct). Common: Bank, A/R, Legal confirmations.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1597,8 +1597,8 @@ const questions = [
       "D": "Is never reliable"
     },
     "correctAnswer": "C",
-    "explanation": "Observation provides evidence only for the moment in time when observation occurs. It does not provide evidence that the observed behavior or procedure occurs consistently when the auditor is not present.",
-    "tip": "Observation = Point-in-time evidence. Behavior may differ when auditor isn't watching.",
+    "explanation": "OBSERVATION limitation: Only provides evidence for that POINT IN TIME. People may behave differently when watched (think: inventory count procedures observed once vs. how they're done all year). Does NOT prove consistent behavior when auditor isn't present. Often combined with other procedures to overcome this limitation. Why others fail: (A) Cannot be documented = Can be documented (auditor notes what was observed); (B) Cannot be performed = Auditors do perform observations regularly; (D) Never reliable = It IS reliable for that moment—just limited to that moment. Best use: Combine observation with inquiry and inspection for complete picture.",
+    "tip": "OBSERVATION = POINT-IN-TIME only. Behavior may differ when auditor leaves. Combine with other procedures to overcome limitation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1618,8 +1618,8 @@ const questions = [
       "D": "Identify unusual transactions"
     },
     "correctAnswer": "A",
-    "explanation": "Inquiry alone is generally not sufficient to test controls or to detect material misstatement at the assertion level. It must be combined with other procedures to provide sufficient appropriate evidence for controls testing.",
-    "tip": "Inquiry alone = Not enough for controls. Must combine with inspection, observation, or reperformance.",
+    "explanation": "INQUIRY ALONE is generally INSUFFICIENT for: (1) Testing OPERATING EFFECTIVENESS of controls, (2) Detecting material misstatement at assertion level. Why? Inquiry = Asking questions = Management's CLAIMS, not verified evidence. Must CORROBORATE with other procedures: INSPECTION (look at documents), OBSERVATION (watch the process), REPERFORMANCE (redo the control). Why others are OK for inquiry alone: (B) Plan audit = Inquiry helps understand and plan; (C) Understand business = Inquiry is appropriate for learning; (D) Identify unusual transactions = Inquiry can surface issues to investigate. Key: Inquiry is STARTING point, not sufficient for TESTING.",
+    "tip": "INQUIRY ALONE = Insufficient for testing controls/misstatement. Must CORROBORATE with inspection, observation, or reperformance. Good for understanding, not testing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1639,8 +1639,8 @@ const questions = [
       "D": "Comparing client records to external sources"
     },
     "correctAnswer": "C",
-    "explanation": "Recalculation consists of checking the mathematical accuracy of documents or records. The auditor independently performs the calculations to verify amounts recorded by the client.",
-    "tip": "Recalculation = Auditor independently verifies math (additions, extensions, etc.).",
+    "explanation": "RECALCULATION = Checking MATHEMATICAL ACCURACY. The auditor INDEPENDENTLY performs calculations to verify client's math: additions, multiplications (extensions), footings (column totals), crossfooting (row totals). Examples: Recalculate depreciation, recalculate invoice extensions (quantity × price), recalculate payroll totals. Very RELIABLE evidence because math is objective—either correct or not. Why others fail: (A) Estimating from industry data = ANALYTICAL PROCEDURES, not recalculation; (B) Asking management to recalculate = Auditor must do it independently; (D) Comparing to external sources = CONFIRMATION or analytical procedures. Key: RECALCULATION is pure math verification—auditor does the math themselves.",
+    "tip": "RECALCULATION = AUDITOR checks MATH independently. Additions, extensions, footings. Very reliable—math is objective. Auditor does it, not client.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1660,8 +1660,8 @@ const questions = [
       "D": "Is performed by client personnel"
     },
     "correctAnswer": "C",
-    "explanation": "Reperformance is the auditor's independent execution of procedures or controls that were originally performed by entity personnel. It tests more than math—it tests whether the client's procedures were properly applied.",
-    "tip": "Recalculation = Check math only. Reperformance = Redo the whole procedure/control.",
+    "explanation": "REPERFORMANCE = Auditor INDEPENDENTLY EXECUTES procedures/controls that client performed. Tests whether CLIENT'S PROCEDURES were properly applied—broader than just math. Examples: Redo bank reconciliation, re-execute three-way match (PO-receipt-invoice), reprocess aging schedule. The distinction: RECALCULATION = Only checks MATH. REPERFORMANCE = Redoes the ENTIRE PROCEDURE (which may include math plus logic, matching, verification steps). Why others fail: (A) No controls evidence = Reperformance IS great for controls testing; (B) Only calculations = That's recalculation; (D) Performed by client = Auditor performs reperformance, not client.",
+    "tip": "REPERFORMANCE = Redo ENTIRE procedure/control. RECALCULATION = Math only. Reperformance = broader (logic + matching + math). Great for controls testing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1681,8 +1681,8 @@ const questions = [
       "D": "Evaluating financial information through analysis of plausible relationships"
     },
     "correctAnswer": "D",
-    "explanation": "Analytical procedures evaluate financial information by studying plausible relationships among financial and nonfinancial data. They help identify unusual fluctuations, unexpected relationships, or amounts that differ from expectations.",
-    "tip": "Analytics = Compare and analyze relationships (trends, ratios, reasonableness).",
+    "explanation": "ANALYTICAL PROCEDURES = Evaluate financial information by analyzing PLAUSIBLE RELATIONSHIPS among data. Types: (1) TREND ANALYSIS (compare to prior periods), (2) RATIO ANALYSIS (GP%, current ratio, DSO), (3) REASONABLENESS TESTS (payroll = headcount × avg salary), (4) REGRESSION/STATISTICAL analysis. Key: Develops EXPECTATION then compares to ACTUAL. Identifies: Unusual fluctuations, unexpected relationships, amounts differing from expectations. Why others fail: (A) Requests to third parties = CONFIRMATION; (B) Interviewing management = INQUIRY; (C) Physical examination = INSPECTION. Key concept: Analytics is about RELATIONSHIPS and EXPECTATIONS—\"Does this make sense?\"",
+    "tip": "ANALYTICAL PROCEDURES = Analyze RELATIONSHIPS in data. Trends, ratios, reasonableness. Develop EXPECTATION → Compare to ACTUAL → Investigate differences.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1702,8 +1702,8 @@ const questions = [
       "D": "Planning only"
     },
     "correctAnswer": "B",
-    "explanation": "Analytical procedures are required during planning (to understand the entity and identify risks) and during the overall review near the end of the audit. They are optional but often useful during substantive testing.",
-    "tip": "Required: Planning + Final review. Optional: Substantive testing phase.",
+    "explanation": "ANALYTICAL PROCEDURES are REQUIRED at two phases: (1) PLANNING = Understand entity, identify risks, focus audit (required). (2) OVERALL REVIEW (near end) = Assess whether F/S are consistent with auditor's understanding, identify overlooked issues (required). SUBSTANTIVE TESTING phase = OPTIONAL but commonly used (can substitute for some detail testing if conditions met). Why others fail: (A) Substantive only = That's optional, not where they're required; (C) All phases = Wrong—substantive use is optional; (D) Planning only = Missing the required final review phase. Memory: Bookend requirement—PLANNING opens the audit, FINAL REVIEW closes it. Both require analytics.",
+    "tip": "Analytics REQUIRED: PLANNING + FINAL REVIEW (bookends). OPTIONAL: Substantive testing. Planning = Focus audit. Final = Overall reasonableness check.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1723,8 +1723,8 @@ const questions = [
       "D": "The auditor requests it verbally"
     },
     "correctAnswer": "C",
-    "explanation": "The reliability of internally generated evidence depends on the effectiveness of related controls. When internal controls are effective, internally generated evidence (like accounting records) is more reliable.",
-    "tip": "Strong controls = More reliable internal evidence. Weak controls = Less reliable.",
+    "explanation": "INTERNALLY GENERATED evidence reliability depends on CONTROL EFFECTIVENESS. Strong controls = Records prepared accurately, less manipulation risk. Weak controls = Records may contain errors, less reliable. Examples: Journal entries, internal memos, system reports—all more trustworthy when controls ensure accuracy. Why others fail: (A) Late in audit = Timing doesn't affect reliability; (B) Weak controls = OPPOSITE—makes internal evidence LESS reliable; (D) Verbal request = Form of request doesn't affect reliability. Key principle: Controls act as a quality check on internally generated information.",
+    "tip": "Internal evidence reliability = Depends on CONTROL EFFECTIVENESS. Strong controls = More reliable. Weak controls = Less reliable. Controls verify accuracy.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1744,8 +1744,8 @@ const questions = [
       "D": "Internally generated and externally circulated"
     },
     "correctAnswer": "B",
-    "explanation": "Documentary evidence is most reliable when externally generated and provided directly to the auditor (like bank confirmations). External circulation or direct receipt increases reliability by reducing client manipulation opportunity.",
-    "tip": "Most reliable: External, direct to auditor. Least: Internal, kept by client.",
+    "explanation": "DOCUMENTARY EVIDENCE RELIABILITY HIERARCHY (most to least reliable): (1) EXTERNALLY GENERATED + DIRECT TO AUDITOR (bank confirmation) = Most reliable—client cannot intercept/alter. (2) Externally generated + held by client (vendor invoice) = Less reliable—client could alter. (3) Internally generated + externally circulated (cancelled check) = Third party saw it. (4) INTERNALLY GENERATED + INTERNALLY HELD (purchase order) = Least reliable—fully within client control. Why others fail: (A) External + held by client = Not most reliable—client could tamper; (C) Internal + internal = Least reliable option; (D) Internal + external = Better than (C) but not best.",
+    "tip": "MOST RELIABLE: External + Direct to auditor. LEAST: Internal + Held by client. Key: Less client control = More reliable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1765,8 +1765,8 @@ const questions = [
       "D": "Satisfy SEC filing requirements"
     },
     "correctAnswer": "C",
-    "explanation": "Audit documentation provides the principal record of procedures performed, evidence obtained, and conclusions reached. It supports the auditor's report and demonstrates compliance with auditing standards.",
-    "tip": "Working papers = Support for report + Evidence of compliance with standards.",
+    "explanation": "AUDIT DOCUMENTATION (working papers) primary purposes: (1) SUPPORT the auditor's REPORT (basis for conclusions), (2) Demonstrate COMPLIANCE with auditing standards, (3) Assist in PLANNING and PERFORMANCE of audit, (4) Enable SUPERVISION and REVIEW, (5) Facilitate QUALITY CONTROL reviews. Key: Documentation is the EVIDENCE that audit was done properly. Why others fail: (A) Replace client records = No—auditor creates separate documentation; (B) Guarantee fraud detection = No guarantee—only reasonable assurance; (D) SEC filing requirement = Documentation is for audit support, not SEC filing.",
+    "tip": "WORKING PAPERS = Record of procedures + Evidence obtained + Conclusions reached. Supports report + Proves standards compliance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1786,8 +1786,8 @@ const questions = [
       "D": "Only the engagement partner to understand the work performed"
     },
     "correctAnswer": "A",
-    "explanation": "Documentation should be sufficient that an experienced auditor, having no previous connection with the engagement, could understand the nature, timing, extent of procedures, evidence obtained, and conclusions reached.",
-    "tip": "Standard: Could another experienced auditor understand what was done and why?",
+    "explanation": "The EXPERIENCED AUDITOR STANDARD: Documentation must be sufficient that an EXPERIENCED AUDITOR with NO PRIOR CONNECTION to the engagement could understand: (1) NATURE, TIMING, EXTENT of procedures performed, (2) EVIDENCE obtained, (3) CONCLUSIONS reached. This is the test for adequate documentation. Think: \"Could a stranger follow this and understand what I did and why?\" Why others fail: (B) Client management = Not the intended audience; (C) Court system = Not the primary standard; (D) Only engagement partner = Too narrow—should be understandable to any experienced auditor.",
+    "tip": "EXPERIENCED AUDITOR STANDARD: Could another qualified auditor (no prior connection) understand WHAT was done, WHAT was found, and WHAT was concluded?",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1807,8 +1807,8 @@ const questions = [
       "D": "5 years from the report date"
     },
     "correctAnswer": "A",
-    "explanation": "PCAOB rules require audit documentation for issuer audits to be retained for 7 years from the report release date. For nonissuers under AICPA standards, the retention period is 5 years.",
-    "tip": "PCAOB (issuers) = 7 years. AICPA (nonissuers) = 5 years.",
+    "explanation": "DOCUMENTATION RETENTION periods (from report date): PCAOB (SEC issuers) = 7 YEARS. AICPA (nonissuers) = 5 YEARS. During retention period: (1) Cannot DELETE or DISCARD documentation, (2) Any ADDITIONS must be documented with date, preparer, and reason, (3) Must be ACCESSIBLE for inspection. Why others fail: (B) Permanently = Neither standard requires permanent retention; (C) 3 years = Too short—minimum is 5 years; (D) 5 years = That's AICPA standard for nonissuers, not PCAOB. Memory: PCAOB is more stringent (7 > 5), consistent with SEC oversight.",
+    "tip": "PCAOB (issuers) = 7 YEARS retention. AICPA (nonissuers) = 5 YEARS. No deletions. Additions must be documented with date/reason.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1828,8 +1828,8 @@ const questions = [
       "D": "Provide legal protection for management"
     },
     "correctAnswer": "B",
-    "explanation": "The representation letter confirms oral representations made during the audit, documents management's responsibility for the financial statements, and reduces misunderstandings. It does not substitute for other audit evidence.",
-    "tip": "Rep letter = Confirms what management said, acknowledges their responsibility.",
+    "explanation": "MANAGEMENT REPRESENTATION LETTER purposes: (1) CONFIRMS oral representations made during audit (puts it in writing), (2) Documents management's RESPONSIBILITY for F/S and internal controls, (3) REDUCES MISUNDERSTANDINGS about what was said, (4) Acknowledges management provided all relevant information. Key: It's CONFIRMATION of what management already represented, not new evidence. Why others fail: (A) Replace other procedures = NEVER substitutes for other audit work; (C) Guarantee accuracy = No guarantees—management could still be wrong or lying; (D) Legal protection for management = Actually creates accountability, not protection.",
+    "tip": "REP LETTER = Confirms oral statements + Documents responsibility + Reduces misunderstandings. DOES NOT replace other procedures.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1849,8 +1849,8 @@ const questions = [
       "D": "Issue an adverse opinion"
     },
     "correctAnswer": "C",
-    "explanation": "Failure to obtain required written representations is a scope limitation that prevents the auditor from obtaining sufficient appropriate evidence. The auditor should disclaim an opinion and consider withdrawing from the engagement.",
-    "tip": "No rep letter = Scope limitation = Disclaim opinion.",
+    "explanation": "REFUSAL TO SIGN REP LETTER = SCOPE LIMITATION = DISCLAIM opinion. Why? If management won't acknowledge responsibility and confirm representations, auditor cannot obtain SUFFICIENT APPROPRIATE EVIDENCE. Actions when refused: (1) DISCLAIM opinion (scope limitation), (2) Consider WITHDRAWING from engagement, (3) Consider impact on OTHER evidence (if they won't sign, can you trust other representations?). Why others fail: (A) Oral instead = Not acceptable—must be WRITTEN; (B) Qualified opinion = Too lenient—this is pervasive, not specific; (D) Adverse opinion = Wrong type—adverse is for F/S departures, not scope issues. Key: No rep letter = Can't complete the audit properly.",
+    "tip": "REFUSE TO SIGN = Scope limitation = DISCLAIM opinion. Consider withdrawal. Oral representations are NOT substitute for written letter.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1870,8 +1870,8 @@ const questions = [
       "D": "Obtain an understanding of related party relationships and evaluate disclosure"
     },
     "correctAnswer": "D",
-    "explanation": "The auditor must obtain an understanding of related party relationships and transactions, remain alert for undisclosed relationships, evaluate whether identified transactions are properly accounted for and disclosed.",
-    "tip": "Related parties: Understand relationships, stay alert, evaluate accounting and disclosure.",
+    "explanation": "RELATED PARTY AUDITOR RESPONSIBILITIES: (1) OBTAIN UNDERSTANDING of related party relationships and transactions, (2) REMAIN ALERT throughout audit for undisclosed relationships, (3) EVALUATE whether identified transactions are properly accounted for, (4) EVALUATE DISCLOSURE (are they properly disclosed?). Key: UNDERSTAND + STAY ALERT + EVALUATE. Why others fail: (A) 100% testing = Not required—use judgment on what to test; (B) Eliminate transactions = Related party transactions are PERMITTED, just must be disclosed; (C) Guarantee disclosure = Auditor provides reasonable assurance, not guarantees. Related party risk: Transactions may not be at ARM'S LENGTH (fair market value).",
+    "tip": "Related parties: UNDERSTAND relationships + STAY ALERT + EVALUATE accounting + EVALUATE disclosure. Arm's length concern. No 100% testing required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1891,8 +1891,8 @@ const questions = [
       "D": "Asks the respondent to reply only if they disagree"
     },
     "correctAnswer": "A",
-    "explanation": "A positive confirmation requests the respondent to reply directly to the auditor in all cases, either confirming the information is correct or providing different information. Negative confirmations request a reply only if information is incorrect.",
-    "tip": "Positive = Always respond. Negative = Respond only if incorrect.",
+    "explanation": "TWO TYPES OF CONFIRMATIONS: POSITIVE = Respondent must REPLY IN ALL CASES (whether they agree or disagree). NEGATIVE = Respondent replies ONLY IF THEY DISAGREE. POSITIVE provides STRONGER evidence (you know they received it and responded). NEGATIVE provides WEAKER evidence (no response could mean: they agree, they ignored it, they never received it). Why others fail: (B) Only large balances = Positive can be sent to any selected items; (C) No response required = That's NEGATIVE confirmation; (D) Reply only if disagree = That's NEGATIVE confirmation. Key: POSITIVE = \"Please respond either way.\" NEGATIVE = \"Please respond only if wrong.\"",
+    "tip": "POSITIVE = Respond in ALL cases (stronger evidence). NEGATIVE = Respond ONLY if disagree (weaker—silence could mean anything).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1912,8 +1912,8 @@ const questions = [
       "D": "The assessed risk is low, population consists of many small balances, and a low exception rate is expected"
     },
     "correctAnswer": "D",
-    "explanation": "Negative confirmations as sole substantive procedure are appropriate only when: risk is low, population has many small homogeneous balances, very low exception rate is expected, and there's no reason to believe respondents will disregard requests.",
-    "tip": "Negative only when: Low risk + Many small items + Low exceptions expected.",
+    "explanation": "NEGATIVE CONFIRMATIONS as SOLE substantive procedure require ALL FOUR conditions: (1) RMM is LOW, (2) Population has MANY SMALL, HOMOGENEOUS items, (3) VERY LOW EXCEPTION RATE expected, (4) No reason to believe respondents will DISREGARD requests. Why all four? Negative confirmation provides WEAK evidence (silence may not mean agreement). Only usable when risk is minimal. Why others fail: (A) Weak controls = HIGH risk, need positive confirmations; (B) Can't obtain positive = Not a valid reason—must perform alternative procedures; (C) High risk = Need POSITIVE confirmations or more extensive testing. Key: Negative confirmations = convenience option only when conditions are ideal.",
+    "tip": "NEGATIVE as SOLE procedure: (1) Low risk + (2) Many small items + (3) Low exceptions + (4) Reliable respondents. ALL FOUR required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1933,8 +1933,8 @@ const questions = [
       "D": "Assume the balance is correct"
     },
     "correctAnswer": "B",
-    "explanation": "When responses to positive confirmations are not received, the auditor should perform alternative procedures to obtain the necessary evidence, such as examining subsequent cash receipts, shipping documents, or other relevant documentation.",
-    "tip": "No response to positive confirmation = Perform alternative procedures.",
+    "explanation": "NONRESPONSE to positive confirmation = Perform ALTERNATIVE PROCEDURES to obtain evidence. For A/R: (1) Examine SUBSEQUENT CASH RECEIPTS (if they paid, balance existed), (2) Review SHIPPING DOCUMENTS (goods shipped = sale occurred), (3) Examine SALES ORDERS and contracts, (4) Review customer CORRESPONDENCE. Why others fail: (A) Qualified opinion = Only if alternative procedures also fail and can't obtain evidence; (C) Negative confirmation = Wrong—already tried positive, need alternative evidence; (D) Assume correct = NEVER assume—must obtain evidence. Key: Confirmation is ONE source; if it fails, use other sources.",
+    "tip": "NO RESPONSE = Perform ALTERNATIVE PROCEDURES (subsequent receipts, shipping docs, contracts). NEVER assume balance is correct.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1954,8 +1954,8 @@ const questions = [
       "D": "Tests of controls only"
     },
     "correctAnswer": "A",
-    "explanation": "Substantive procedures are designed to detect material misstatements at the assertion level. They include tests of details (of transactions, balances, disclosures) and substantive analytical procedures.",
-    "tip": "Substantive = Tests of details + Substantive analytics. Both detect misstatements.",
+    "explanation": "SUBSTANTIVE PROCEDURES = Designed to DETECT MATERIAL MISSTATEMENT at assertion level. Two types: (1) TESTS OF DETAILS = Examine specific transactions, balances, disclosures (vouching, confirmations, cutoff tests). (2) SUBSTANTIVE ANALYTICAL PROCEDURES = Develop expectation and compare to actual. Both aim to find misstatements (vs. tests of controls which evaluate control effectiveness). Why others fail: (B) Risk assessment only = That's a separate phase before substantive testing; (C) Inquiry only = Inquiry alone is insufficient for substantive evidence; (D) Tests of controls only = That's for evaluating controls, not detecting misstatements.",
+    "tip": "SUBSTANTIVE = TESTS OF DETAILS + SUBSTANTIVE ANALYTICS. Purpose: DETECT misstatement. Different from tests of controls (evaluate control effectiveness).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1975,8 +1975,8 @@ const questions = [
       "D": "The auditor performs the wrong procedure"
     },
     "correctAnswer": "B",
-    "explanation": "Sampling risk is the risk that the auditor's conclusion based on a sample may differ from the conclusion reached if the same procedure were applied to the entire population. It exists whenever sampling is used.",
-    "tip": "Sampling risk = Sample conclusion ≠ Population conclusion. Nonsampling risk = All other risks.",
+    "explanation": "SAMPLING RISK = Risk that sample conclusion DIFFERS from conclusion if 100% of population were tested. Exists WHENEVER less than 100% is tested. Controlled by: INCREASING SAMPLE SIZE. NON-SAMPLING RISK = All OTHER audit risks: Human error, wrong procedure, misinterpretation, inappropriate sample selection. NOT controlled by sample size. Why others fail: (A) Not representative = One possible result of sampling risk, but not the definition; (C) Too large sample = Would actually REDUCE sampling risk; (D) Wrong procedure = That's NON-sampling risk (human error).",
+    "tip": "SAMPLING RISK = Sample ≠ Population conclusion (control via sample size). NON-SAMPLING = Human error, wrong procedures (NOT controllable by size).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1996,8 +1996,8 @@ const questions = [
       "D": "Audit efficiency"
     },
     "correctAnswer": "A",
-    "explanation": "Risk of incorrect acceptance (concluding a balance is not materially misstated when it is) affects effectiveness because a misstatement may go undetected. Risk of incorrect rejection affects efficiency (unnecessary additional work).",
-    "tip": "Incorrect acceptance = Effectiveness risk (miss misstatement). Incorrect rejection = Efficiency risk (extra work).",
+    "explanation": "FOUR SAMPLING RISKS (2 for substantive, 2 for controls): SUBSTANTIVE TESTING: (1) INCORRECT ACCEPTANCE = Conclude NO misstatement when one EXISTS = EFFECTIVENESS risk (miss the problem). (2) Incorrect Rejection = Conclude misstatement exists when it DOESN'T = Efficiency risk (do extra work needlessly). CONTROLS TESTING: (3) Risk of Assessing CR Too Low = Rely on controls that aren't effective = Effectiveness. (4) Risk of Assessing CR Too High = Don't rely on good controls = Efficiency. Why others fail: (B) Neither = Wrong; (C) Timing = Unrelated; (D) Efficiency = That's INCORRECT REJECTION. Key: ACCEPTANCE risks = EFFECTIVENESS. REJECTION risks = EFFICIENCY.",
+    "tip": "INCORRECT ACCEPTANCE = Effectiveness risk (miss misstatement—BAD). INCORRECT REJECTION = Efficiency risk (extra work—costly but not dangerous).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2017,8 +2017,8 @@ const questions = [
       "D": "Whether internal audit reports to management"
     },
     "correctAnswer": "C",
-    "explanation": "The external auditor evaluates the internal audit function's objectivity (reporting level, freedom from interference), competence (qualifications, training), and whether work is performed with due professional care following a systematic approach.",
-    "tip": "Evaluate internal audit: Objectivity, Competence, Systematic approach.",
+    "explanation": "When USING INTERNAL AUDIT WORK, external auditor evaluates THREE factors: (1) OBJECTIVITY = Reporting level (to audit committee?), freedom from interference, policies supporting independence. (2) COMPETENCE = Qualifications, training, certifications, experience. (3) SYSTEMATIC/DISCIPLINED APPROACH = Following professional standards, quality controls, adequate documentation. Why others fail: (A) Size of department = Doesn't determine quality; (B) Only technical qualifications = Missing objectivity and systematic approach; (D) Reports to management = Actually a concern—should report to audit committee for objectivity. Key: Internal audit work can reduce external audit effort, but must be properly evaluated.",
+    "tip": "Evaluate internal audit: (1) OBJECTIVITY (reporting level), (2) COMPETENCE (qualifications), (3) SYSTEMATIC approach (standards, QC). All three required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2038,8 +2038,8 @@ const questions = [
       "D": "Shifts to the specialist for the relevant amounts"
     },
     "correctAnswer": "A",
-    "explanation": "The auditor is solely responsible for the audit opinion expressed. Using a specialist does not reduce the auditor's responsibility. The auditor must evaluate the specialist's competence, work, and conclusions.",
-    "tip": "Auditor's responsibility is NOT reduced by using specialists or internal auditors.",
+    "explanation": "AUDITOR'S SPECIALIST (auditor hires) or MANAGEMENT'S SPECIALIST (client hires)—in EITHER case, AUDITOR RETAINS SOLE RESPONSIBILITY for the opinion. Using a specialist does NOT: (1) Reduce auditor's responsibility, (2) Create shared responsibility, (3) Require divided responsibility disclosure (unless using another CPA firm). Why others fail: (B) Divided responsibility = Only for component auditors (other CPA firms), not specialists; (C) Shared responsibility = Never shared with specialists; (D) Shifts to specialist = Never—auditor always responsible. Key: The buck stops with the auditor—regardless of who helps.",
+    "tip": "Using specialists: Auditor RETAINS SOLE RESPONSIBILITY. No sharing, no shifting. Auditor must evaluate specialist's work. The buck stops with auditor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2059,8 +2059,8 @@ const questions = [
       "D": "Correct entity"
     },
     "correctAnswer": "C",
-    "explanation": "Cutoff addresses whether transactions and events have been recorded in the correct accounting period. For example, ensuring sales near year-end are recorded in the proper fiscal year.",
-    "tip": "Cutoff = Correct period. Accuracy = Correct amount. Classification = Correct account.",
+    "explanation": "CUTOFF ASSERTION = Transactions recorded in the CORRECT ACCOUNTING PERIOD. Critical near YEAR-END: Is that December 31 sale recorded in THIS year or NEXT year? Is that December purchase recorded when goods were received? Cutoff errors can materially affect both income statement (revenue/expense timing) and balance sheet (A/R, inventory, A/P). Why others fail: (A) Correct account = CLASSIFICATION assertion; (B) Correct amount = ACCURACY assertion; (D) Correct entity = Related to entity boundaries, not a standard assertion. Key areas: SALES cutoff (shipping dates), PURCHASE cutoff (receiving dates), PAYROLL cutoff (pay period).",
+    "tip": "CUTOFF = Correct PERIOD. ACCURACY = Correct AMOUNT. CLASSIFICATION = Correct ACCOUNT. Cutoff critical near year-end (December/January).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2080,8 +2080,8 @@ const questions = [
       "D": "Classes of transactions"
     },
     "correctAnswer": "A",
-    "explanation": "Existence is an assertion about account balances—that assets, liabilities, and equity interests exist at a given date. Occurrence is the corresponding assertion for transactions—that transactions actually occurred.",
-    "tip": "Existence = Balances exist at a date. Occurrence = Transactions happened during the period.",
+    "explanation": "EXISTENCE vs. OCCURRENCE—both ask \"Is it real?\" but apply differently: EXISTENCE = For ACCOUNT BALANCES. Assets, liabilities, equity exist at the balance sheet DATE. OCCURRENCE = For TRANSACTIONS. Events actually happened during the PERIOD. Same concept, different application. Why others fail: (B) Presentation/disclosure = That has its own assertions (occurrence/classification); (C) Going concern = Different concept—ability to continue operating; (D) Classes of transactions = That's where OCCURRENCE applies, not existence. Memory: EXISTENCE = Point in time (balance sheet). OCCURRENCE = Period of time (income statement transactions).",
+    "tip": "EXISTENCE = Balances exist at a DATE (point in time). OCCURRENCE = Transactions happened during PERIOD. Same \"is it real?\" concept, different application.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2101,8 +2101,8 @@ const questions = [
       "D": "Assets"
     },
     "correctAnswer": "A",
-    "explanation": "Completeness (all items that should be recorded are recorded) is of particular concern for liabilities because companies may have incentive to understate obligations. For assets and revenue, existence/occurrence is often more concerning.",
-    "tip": "Completeness critical for: Liabilities, Expenses. Existence critical for: Assets, Revenue.",
+    "explanation": "COMPLETENESS ASSERTION = Are ALL items that SHOULD BE recorded actually recorded? Primary concern for LIABILITIES and EXPENSES because: Companies have INCENTIVE to UNDERSTATE obligations and expenses (makes financials look better). EXISTENCE/OCCURRENCE is primary concern for ASSETS and REVENUE because: Companies have incentive to OVERSTATE assets and revenue. Why others fail: (B) Revenue = OCCURRENCE is primary concern (overstatement risk); (C) Equity = Mixed, but not primary completeness concern; (D) Assets = EXISTENCE is primary concern (overstatement risk). Memory: Management wants to HIDE bad things (liabilities, expenses) and INFLATE good things (assets, revenue).",
+    "tip": "COMPLETENESS critical for: Liabilities, Expenses (understatement risk). EXISTENCE critical for: Assets, Revenue (overstatement risk). Follow the incentive.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2122,8 +2122,8 @@ const questions = [
       "D": "The entity has legal title or control of assets and owes the liabilities"
     },
     "correctAnswer": "D",
-    "explanation": "Rights and obligations asserts that the entity holds rights to assets or controls the rights to assets, and that liabilities are obligations of the entity. It addresses ownership and legal standing.",
-    "tip": "Rights/Obligations = Does the entity own the assets and owe the liabilities?",
+    "explanation": "RIGHTS AND OBLIGATIONS = Entity has LEGAL TITLE or CONTROL of assets, and OWES the liabilities recorded. Key question: \"Does this company actually OWN this asset and OWE this debt?\" Important for: Leased assets, consignment inventory, pledged/encumbered assets, factored receivables, guaranteed debt. Why others fail: (A) Appropriate values = VALUATION assertion; (B) All recorded = COMPLETENESS assertion; (C) Understandable disclosures = CLASSIFICATION AND UNDERSTANDABILITY assertion. Testing: Examine contracts, leases, title documents, loan agreements, confirmation with legal counsel.",
+    "tip": "RIGHTS/OBLIGATIONS = Owns assets + Owes liabilities. Check: Leases, consignments, pledged assets, guaranteed debt. Review contracts and legal docs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
