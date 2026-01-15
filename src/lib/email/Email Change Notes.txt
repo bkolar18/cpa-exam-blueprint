@@ -1,0 +1,29 @@
+lets modify our company name to better match the email style, lets also make sure the logo is white (when its going
+  to be inside the navy header) as it is also navy and thus impossible to see, in the Your Path to Passing email we
+  need to remove language that insinuates guarantees "I want to leave you with this truth: You have everything you
+  need to pass the CPA exam." cant say that. also change the title of this email so that it doesnt insinuate that our
+  course will make them pass. "Trust your review course but verify with the AICPA Blueprint" we should change this
+  statement too as our course is based off the AICPA Blueprint and we dont want our users to see this and doubt us,
+  "When you pass, come back and share your story—it helps the next candidate" change this to ensure it doesnt sound
+  like they WILL pass, In the Making 10-15 hours work email, we have to change this "That's absolutely enough to
+  pass—you'll just need a longer timeline." to not insinuate guarantees, change: Here's how to make your limited hours
+  work harder.
+
+  Recommended Resources
+  Study Hours Calculator
+  Calculate your realistic timeline
+  Working Full Time Guide
+  Strategies for busy schedules, to better reflect the current state of our project. make sure the changes we made
+  before are committed and pushed because i cant see the support or contact pages. Then do a full audit of all emails
+  to eliminate any other missed guarantee language and replace it with something else. Update our emails to best fit
+  our current dashboard capabilities.
+
+- in the "Your CPA Study Plan is Ready!" email, make sure the review your study plan button brings them to their study plan, not just the study plan builder on our site. if that requires building a place to store their study plan in their dashboard we can do that
+
+- CPA Strategies for Working Professionals needs to be changed to CPA Exam Strategies for Working Professionals. In this email, we need to rmove any references to having strategies from candidates or cpas or anyone because its fabricated (eg These strategies come from candidates who studied while working demanding jobs.) also, make sure to recommend our dashboard as a resource
+
+- add links to the Meridian CPA Academy on every email besides the password reset
+
+- 
+
+- 

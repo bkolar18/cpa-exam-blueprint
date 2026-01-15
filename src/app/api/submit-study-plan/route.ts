@@ -127,7 +127,7 @@ export async function POST(request: Request) {
             from: "Meridian CPA Review <onboarding@resend.dev>",
             to: [data.email],
             subject: segmentEmail.subject,
-            html: generateSegmentEmailHtml(segmentEmail),
+            html: generateSegmentEmailHtml(segmentEmail, data.email),
           });
         } catch (segmentError) {
           console.error("Error sending segment email:", segmentError);

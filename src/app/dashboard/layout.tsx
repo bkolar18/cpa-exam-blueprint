@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { AchievementProvider } from "@/components/gamification/AchievementProvider";
 import DashboardNav from "@/components/dashboard/DashboardNav";
+import { InactivityWarning } from "@/components/auth/InactivityWarning";
 
 export default function DashboardLayout({
   children,
@@ -43,6 +44,7 @@ export default function DashboardLayout({
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {children}
         </main>
+        <InactivityWarning timeoutMinutes={120} warningMinutes={5} />
       </div>
     </AchievementProvider>
   );

@@ -1,43 +1,28 @@
 Next steps:
 
-- lets change: not yet exam ready to exam not yet recommended. (if this blurb changes to exam ready at some point we should make sure to change that language to not imply guarantees, instead have something like "excellent coverage achieved". 
+- need to update contact us button to actually do something
 
-- lets also change the sentence: Students who reach 80 on Meridian typically pass their section. because we do not want to insinuate that this means they will pass. it should be, Students who reach an 80 on Meridian are generally well-prepared for their section.
+- need to link choose topics section of ai flashcard generator to our topic taxonomy if not already done and then integrate with mcq and tbs analytics for topic progress
 
-- on the meridian academy page we need to change Join thousands of CPA candidates using Meridian CPA Academy to stay organized and motivated. to Join CPA candidates using Meridian to stay organized and focused throughout their exam prep.
+- need to add upcoming exam date in settings for pre-exam assessment to be linked to instead of NTS Tracker to allow users to access feature
 
-- the How many hours per week can you study? drop down options cant be seen in dark mode, need to change the text color, https://cpa-exam-blueprint.vercel.app/tools/study-hours-calculator
+- for the study guide generation, lets make it downloadable as pdf, txt, or word doc. lets also make the detail much more robust. when listing topucs and subtopics, explain concepts, use examples, be thorough in your explanations and include codifications, common mistakes, tips for each subtopic. do not recommend other cpa exam providers as supplements, the whole point of our product is to be a cheaper and complete alternative. 
 
-- lets change “Two forms of ID required”
+- i didn't see the exam simulation debrief option in this screen https://www.meridiancpareview.com/dashboard/exam-simulation/aud. also, when i hit review on a tbs in this screen, it brings up a condensed review screen and we need it to behave like the study log tbs review (brings you view only mode of tbs)
 
-This is the biggest risk.
+- this page shouldn't exist: https://www.meridiancpareview.com/dashboard/practice/history. when we click on a multiple choice question session on this page https://www.meridiancpareview.com/dashboard/study-log, it should bring us right to the mcq session that the user clicked on, eg https://www.meridiancpareview.com/dashboard/practice/history?session=a028ce0b-7756-4a64-8866-e4cee12b48c3, which it currently does correctly. But when I hit Back to All sessions, the web page url changes from https://www.meridiancpareview.com/dashboard/practice/history?session=a028ce0b-7756-4a64-8866-e4cee12b48c3 to https://www.meridiancpareview.com/dashboard/practice/history but nothing visibly changes on the users page (content from https://www.meridiancpareview.com/dashboard/practice/history?session=a028ce0b-7756-4a64-8866-e4cee12b48c3 is still visible). if the user hits back to all sessions a second time, the screen changes to the https://www.meridiancpareview.com/dashboard/practice/history page, but it should be bringing us back to https://www.meridiancpareview.com/dashboard/study-log.
 
-“Prepare your ID documents (two forms required)”
-“Secondary ID: Credit card with signature or another government ID”
+- in a similar vein as the last issue, we should change Practice Questions and Adaptive Practice Questions at the top of the multiple choice review page to Multiple Choice Questions and Adaptive Multiple Choice Questions. On this page: https://www.meridiancpareview.com/dashboard/practice/history?session=a028ce0b-7756-4a64-8866-e4cee12b48c3, we should change Practice History to Multiple Choice History and Back to Practice to Back to MCQ Practice. We should also change Back to All Sessions to Back to Study Log
 
-⚠️ Problem:
-For the CPA exam, only one valid, government-issued ID with photo and signature is required (driver’s license or passport). A second ID is not universally required anymore and varies by Prometric exam/program.
+- are we required to say Powered by Claude AI on our AI page? or can we just remove that?
 
-If a candidate shows up thinking they must have two IDs and panics, that’s bad. on this page https://cpa-exam-blueprint.vercel.app/guides/exam-day
+- today should've been day 4 of my study streak but it updated to day 3 again.
 
-and Score release timing certainty
+- add advertisements for all added AI capabilities on website, do you recommend adding a separate ai capabilities page as well as adding descriptions for our ai capabilities on the how we compare page and home page? or is that too much mention of ai?
 
-“Core section scores are released every 1–2 weeks.”
 
-⚠️ This is generally true, but NASBA release windows still vary.
 
-✅ Safer:
 
-Core section scores are typically released every 1–2 weeks, depending on testing volume.
-
-- change this Real strategies from candidates who balanced busy season, client deadlines, and CPA exam prep. It's challenging, but absolutely doable. to Practical strategies for balancing busy season, client deadlines, and CPA exam prep. on https://cpa-exam-blueprint.vercel.app/working-full-time. also remove this This is the #1 strategy recommended by CPAs who passed while working.
-
-- https://cpa-exam-blueprint.vercel.app/blog on this page, replace instances of CPA Exam Blueprint Team to Meridian CPA Review
-
-- search the site for references of tips from experienced candidates, or any references of advice or strategies or testimonials from candidates. we have had no candidates use our platform and dont want to make claims we cant substantiate. some examples of this are here https://cpa-exam-blueprint.vercel.app/blog/far-section-complete-study-guide. replace instances of these with more appropriate language or remove the sections entirely. This is okay - "FAR is challenging, but thousands of candidates complete it every quarter. The difference in outcomes usually comes down to preparation quality, not intelligence." but this is not Final Tips from Experienced Candidates
-"I scheduled FAR first and gave it the most time. Don't underestimate it." because that quote is fabricated. We should change tips from experienced candidates on the study guide pages to Practical Study tips and change the wuotes to general tips
-
-- add a FAQ page to the website and add a link to it under the Learn section of the resources drop down
 
 
 
