@@ -22,8 +22,8 @@ const questions = [
       "D": "Public interest"
     },
     "correctAnswer": "B",
-    "explanation": "Integrity requires CPAs to be honest and candid within the constraints of client confidentiality. It is the core principle requiring that service and public trust should not be subordinated to personal gain. CPAs should observe both form and spirit of ethical standards.",
-    "tip": "Integrity = Honesty and candor. Objectivity = Impartiality. Due care = Competence and diligence.",
+    "explanation": "INTEGRITY requires CPAs to be HONEST and CANDID within client confidentiality constraints. It's the CORE ethical principle—service and public trust must NEVER be subordinated to personal gain. The six AICPA principles: (1) Responsibilities, (2) Public Interest, (3) Integrity, (4) Objectivity/Independence, (5) Due Care, (6) Scope/Nature of Services. Why others fail: (A) Objectivity = IMPARTIALITY and freedom from conflicts—not specifically about honesty; (C) Due care = COMPETENCE and diligence in performing services; (D) Public interest = Acting for collective well-being—broader than personal honesty. Key: Integrity addresses CHARACTER (honest/candid), while objectivity addresses BIAS (impartial/unbiased).",
+    "tip": "INTEGRITY = Honest + Candid (character). OBJECTIVITY = Impartial + Unbiased (judgment). DUE CARE = Competent + Diligent (performance).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -43,8 +43,8 @@ const questions = [
       "D": "The state of mind that permits an unbiased conclusion"
     },
     "correctAnswer": "A",
-    "explanation": "Independence in appearance means avoiding circumstances that would cause a reasonable and informed third party, aware of relevant information, to reasonably conclude that a firm's or member's integrity, objectivity, or professional skepticism is compromised. Independence in fact is the actual state of mind permitting unbiased conclusions.",
-    "tip": "In fact = State of mind (actual). In appearance = Perception by reasonable third parties.",
+    "explanation": "INDEPENDENCE IN APPEARANCE = Avoiding circumstances that would cause a REASONABLE, INFORMED THIRD PARTY to conclude independence is compromised. It's about PERCEPTION—what it LOOKS like to outsiders. Both types required: IN FACT (actual objectivity) + IN APPEARANCE (perceived objectivity). Why others fail: (B) Management override relates to internal control, not independence definition; (C) Partner rotation is a SAFEGUARD to maintain independence, not its definition; (D) This describes INDEPENDENCE IN FACT—the actual state of mind. Critical distinction: You can BE independent (in fact) but not LOOK independent (appearance)—both are required. Example: Owning $10 of client stock may not affect judgment (fact), but creates appearance problem.",
+    "tip": "IN FACT = What you ARE (state of mind). IN APPEARANCE = What you LOOK LIKE (third-party perception). BOTH required for audits.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -64,8 +64,8 @@ const questions = [
       "D": "Indirect financial interest, which may impair independence if material"
     },
     "correctAnswer": "A",
-    "explanation": "A direct financial interest in an audit client always impairs independence, regardless of materiality. Direct ownership of shares is a direct financial interest. Indirect financial interests (through mutual funds, etc.) impair independence only if material to the CPA. There is no 'immaterial' exception for direct interests.",
-    "tip": "Direct financial interest = Always impairs independence. Indirect = Only if material. Direct includes ownership, loans, and certain relationships.",
+    "explanation": "DIRECT financial interest in an audit client ALWAYS impairs independence—NO MATERIALITY EXCEPTION. Even owning ONE share of client stock = independence impaired. DIRECT = You own it directly (stocks, bonds, notes). INDIRECT = Owned through intermediary (mutual funds, 401k). The critical rule: DIRECT = Always impairs (any amount). INDIRECT = Only impairs if MATERIAL to the CPA. Why others fail: (B) Disclosure doesn't cure direct ownership—must DISPOSE of interest; (C) NO immaterial exception for direct interests—that only applies to indirect; (D) This IS direct (personal ownership), not indirect. Examples: Direct = Own stock personally. Indirect = Own mutual fund that happens to hold client stock.",
+    "tip": "DIRECT financial interest = ALWAYS impairs (even $1). INDIRECT = Only if MATERIAL. Direct = YOU own it. Indirect = Through intermediary.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -85,8 +85,8 @@ const questions = [
       "D": "A tax partner at the firm who has no involvement with the audit"
     },
     "correctAnswer": "A",
-    "explanation": "Covered members include: individuals on the attest engagement team, those in a position to influence the engagement, partners/managers who provide 10+ hours of non-attest services, and partners in the office principally responsible for the engagement. An audit manager on the engagement is clearly a covered member.",
-    "tip": "Covered members: Engagement team, those who influence, partners/managers with 10+ hours non-attest, partners in the office.",
+    "explanation": "COVERED MEMBERS must maintain independence for attest clients. Who's covered: (1) Attest ENGAGEMENT TEAM members, (2) Those who can INFLUENCE the engagement, (3) Partners/managers providing 10+ hours NON-ATTEST services to client, (4) Partners in OFFICE principally responsible for engagement, (5) The FIRM itself, (6) Entity that can influence firm's operations. An audit manager ON the engagement team = clearly covered. Why others fail: (B) Receptionist has no influence over audit—not covered; (C) Consultant in different office with NO involvement—not covered; (D) Tax partner with NO involvement and not in principal office—not covered (but would be if provided 10+ hours non-attest). Key: Connection to engagement or influence determines coverage.",
+    "tip": "COVERED = Engagement team + Influencers + 10+ hr non-attest providers + Partners in principal office. No connection = Not covered.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -106,8 +106,8 @@ const questions = [
       "D": "Preparing tax returns"
     },
     "correctAnswer": "A",
-    "explanation": "Making management decisions or performing management functions always impairs independence, regardless of management consent or safeguards. Examples include authorizing transactions, supervising client employees, or accepting responsibility for management functions. Other services may be acceptable with proper safeguards.",
-    "tip": "Always prohibited: Management functions/decisions. Never act as management or make management's decisions.",
+    "explanation": "MAKING MANAGEMENT DECISIONS = ALWAYS impairs independence. No safeguards or consent can overcome this—it's an absolute prohibition. Examples of management functions: Authorizing transactions, hiring/firing employees, directing operations, accepting responsibility for management duties. The principle: Auditor CANNOT audit their own decisions. Why others are acceptable: (B) RECOMMENDATIONS on controls = OK (management decides whether to implement); (C) Valuations can be OK if immaterial or management takes responsibility; (D) Tax returns = Permitted non-attest service with safeguards. Key distinction: ADVISING management vs. BEING management. Advise = OK. Decide = Never.",
+    "tip": "MANAGEMENT DECISIONS = Always prohibited, NO exceptions. ADVISING management = OK. You can RECOMMEND, but client must DECIDE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -127,8 +127,8 @@ const questions = [
       "D": "Business loan with below-market interest rate"
     },
     "correctAnswer": "B",
-    "explanation": "Certain loans from financial institution clients are permitted if obtained under normal lending procedures: automobile loans collateralized by the car, loans secured by cash deposits at the same institution, credit card balances under $10,000, and home mortgages. The mortgage must have been obtained under normal terms. Unsecured loans and below-market rates impair independence.",
-    "tip": "Permitted loans from financial institution clients: Auto loans, cash-secured, credit cards <$10K, normal mortgages. Must be normal terms.",
+    "explanation": "PERMITTED LOANS from financial institution audit clients (GRANDFATHERED types): (1) HOME MORTGAGES under normal terms, (2) AUTO LOANS collateralized by the car, (3) Loans secured by CASH DEPOSITS at same institution, (4) CREDIT CARDS under $10,000. Requirements: Normal lending procedures, terms, requirements. A home mortgage under normal terms = PERMITTED. Why others impair: (A) Unsecured loans = NOT on permitted list; (C) Student loan AFTER becoming covered member = New loans prohibited (existing grandfathered only); (D) Below-market rate = NOT normal terms (preferential treatment). Key: Loans must be (1) on the permitted list AND (2) obtained under NORMAL terms—no special treatment.",
+    "tip": "PERMITTED client loans: Mortgage, Auto, Cash-secured, Credit card <$10K. Must be NORMAL terms. New loans after coverage = Prohibited.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -148,8 +148,8 @@ const questions = [
       "D": "The report is issued"
     },
     "correctAnswer": "B",
-    "explanation": "The period of professional engagement begins either when the CPA begins performing attest services or when the CPA is engaged to perform attest services, whichever is earlier. It ends when the professional relationship terminates (usually when the report is issued or the engagement is terminated).",
-    "tip": "Period starts: When services begin OR when engaged, whichever is earlier. Ends: Report issuance or engagement termination.",
+    "explanation": "PERIOD OF PROFESSIONAL ENGAGEMENT starts at the EARLIER of: (1) When CPA BEGINS performing attest services, OR (2) When CPA is ENGAGED (contracted) to perform services. Period ENDS when: Report issued OR engagement terminated. Independence required throughout this ENTIRE period. Why others fail: (A) Engagement letter signing may occur AFTER being engaged verbally—period already started; (C) Fieldwork is late—period starts before fieldwork begins; (D) Report issuance = END of period, not beginning. Example: If verbally engaged January 1, letter signed January 15, fieldwork starts February 1—independence period began January 1.",
+    "tip": "Period STARTS = Earlier of (services begin OR engaged). Period ENDS = Report issued. Independence required ENTIRE period.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -169,8 +169,8 @@ const questions = [
       "D": "In response to a valid subpoena"
     },
     "correctAnswer": "D",
-    "explanation": "Confidential client information may be disclosed without consent in limited circumstances: (1) in response to a validly issued subpoena or summons, (2) in compliance with laws/regulations (like anti-money laundering), (3) in connection with professional disciplinary proceedings, (4) in peer reviews, (5) to successor auditors (with client consent usually expected but subpoena overrides).",
-    "tip": "Disclosure without consent: Subpoena, legal requirement, disciplinary proceedings, peer review. Client consent needed in most other cases.",
+    "explanation": "CONFIDENTIALITY exceptions (disclosure WITHOUT consent): (1) Valid SUBPOENA or summons—legal compulsion, (2) LEGAL/REGULATORY requirement (anti-money laundering, etc.), (3) Professional DISCIPLINARY proceedings, (4) PEER REVIEW, (5) QUALITY REVIEW under AICPA programs. A valid subpoena = CPA MUST comply—it's a court order. Why others require consent: (A) Business associate consulting = Need client consent; (B) Helping investors = NOT an exception—need consent; (C) Reference for other CPA = Need consent (successor auditor communications). Key principle: Default = CONFIDENTIAL. Exceptions are narrow and specific. When in doubt = Get consent.",
+    "tip": "Confidentiality exceptions: SUBPOENA, Legal requirement, Disciplinary, Peer review. Everything else = Get CLIENT CONSENT first.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -190,8 +190,8 @@ const questions = [
       "D": "Perform all services personally without delegation"
     },
     "correctAnswer": "B",
-    "explanation": "Due care requires CPAs to discharge professional responsibilities with competence and diligence. This includes undertaking only engagements the CPA can complete with professional competence, exercising due professional care, and adequately planning and supervising engagements. It does not guarantee outcomes or prohibit delegation.",
-    "tip": "Due care = Competence + Diligence. Not a guarantee of accuracy. Includes proper planning and supervision.",
+    "explanation": "DUE CARE = Professional COMPETENCE + DILIGENCE. The principle requires: (1) Only accept engagements you can COMPETENTLY complete, (2) Exercise due PROFESSIONAL CARE in performance, (3) Adequately PLAN and SUPERVISE work. Critical: Due care is about EFFORT and PROCESS, not guaranteeing results. Why others fail: (A) NO guarantee of accuracy—audits provide reasonable assurance, not guarantees; (C) Insurance is prudent but not an ethical requirement of due care; (D) Delegation is PERMITTED with proper supervision—due care requires oversight, not personal performance of everything. Key: Due care = \"Did you try your best with proper skill?\" not \"Were you perfect?\"",
+    "tip": "DUE CARE = Competence + Diligence (effort-based). NOT a guarantee. Delegation OK with SUPERVISION. Plan + Perform + Supervise.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -211,8 +211,8 @@ const questions = [
       "D": "An audit of financial statements"
     },
     "correctAnswer": "B",
-    "explanation": "Contingent fees are prohibited for: audits, reviews, compilations when third parties will use and no disclosure of lack of independence, examinations of prospective financial information, and original tax return preparation. Contingent fees are permitted for representation before IRS, amended tax returns, and consulting services not involving these prohibited services.",
-    "tip": "Contingent fees prohibited: Audits, reviews, compilations (certain), original tax returns. Permitted: IRS representation, amended returns, consulting.",
+    "explanation": "CONTINGENT FEES = Payment depends on outcome. PROHIBITED for: Audits, Reviews, Certain compilations, Prospective F/S examinations, ORIGINAL tax returns. PERMITTED for: IRS REPRESENTATION (exam/appeal), AMENDED returns, Consulting, Other services where no independence required. IRS representation = PERMITTED because outcome uncertain and fee motivates best effort for client. Why others prohibited: (A) Review = Attest service requiring independence; (C) Original tax return = Fee shouldn't depend on refund amount (creates bias to be aggressive); (D) Audit = Cannot have financial interest in outcome. Key principle: Contingent fees create SELF-INTEREST threat when CPA should be objective.",
+    "tip": "Contingent fees: PROHIBITED for attest + original tax returns. PERMITTED for IRS representation + amended returns + consulting.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -232,8 +232,8 @@ const questions = [
       "D": "Free initial consultation"
     },
     "correctAnswer": "B",
-    "explanation": "CPAs may not advertise in a manner that is false, misleading, or deceptive. Guaranteeing specific outcomes or using superlatives that cannot be substantiated violates these rules. Factual claims (largest firm if true, years of experience, free consultation offers) are acceptable if accurate.",
-    "tip": "Prohibited advertising: False, misleading, deceptive, unsubstantiated guarantees. Factual claims are acceptable if true.",
+    "explanation": "ADVERTISING must not be FALSE, MISLEADING, or DECEPTIVE. \"Guaranteed lowest fees\" = VIOLATES because: (1) Cannot substantiate guarantee, (2) Misleading—fees vary by engagement complexity, (3) Creates false expectation. Why others are acceptable: (A) \"Largest firm\" = OK IF TRUE and verifiable; (C) \"20 years experience\" = Factual, verifiable claim; (D) \"Free consultation\" = Offer of service, not misleading. Key test: Is it (1) TRUE? (2) VERIFIABLE? (3) Not creating FALSE EXPECTATIONS? CPA advertising IS permitted—just must be truthful. No ban on competitive pricing claims, just can't GUARANTEE outcomes.",
+    "tip": "Advertising: Must be TRUE + VERIFIABLE + Not misleading. GUARANTEES about outcomes/fees = Problem. Factual claims = OK.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -253,8 +253,8 @@ const questions = [
       "D": "Non-CPA owners must be actively participating in the firm and CPAs must hold majority ownership"
     },
     "correctAnswer": "D",
-    "explanation": "The AICPA permits non-CPA owners if: they actively participate in the firm's business, CPAs remain responsible for all attest and compilation services, and certain state-specific requirements are met (often majority CPA ownership). This allows professionals like attorneys or consultants to have ownership stakes.",
-    "tip": "Non-CPA ownership: Permitted with restrictions. Must actively participate. CPAs remain responsible for attest services. State rules vary.",
+    "explanation": "NON-CPA OWNERSHIP is PERMITTED with conditions: (1) Non-CPAs must ACTIVELY PARTICIPATE in firm (not passive investors), (2) CPAs must hold MAJORITY OWNERSHIP (financial control), (3) CPAs remain RESPONSIBLE for attest/compilation services, (4) Non-CPAs comply with firm's ethics policies. Allows attorneys, consultants, etc. to have ownership stakes. Why others fail: (A) 100% non-CPA ownership = Prohibited (CPAs must have majority); (B) Not limited to partnerships—any entity form permitted; (C) Complete prohibition is incorrect—limited ownership allowed. Key: This is an AICPA rule; STATE BOARDS may have stricter requirements (some prohibit any non-CPA ownership).",
+    "tip": "Non-CPA owners: ACTIVE participation + CPA MAJORITY + CPAs responsible for attest. State rules may be stricter than AICPA.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -274,8 +274,8 @@ const questions = [
       "D": "Employee benefit plan audits"
     },
     "correctAnswer": "B",
-    "explanation": "SEC rules prohibit certain non-audit services for audit clients including: internal audit outsourcing, financial information systems design/implementation, bookkeeping, appraisal/valuation services (if material), actuarial services, management functions, human resources, broker-dealer services, legal services, and expert services unrelated to the audit.",
-    "tip": "SEC prohibited services: Internal audit outsourcing, FIS design, bookkeeping, valuation, actuarial, management functions, HR, legal, expert (non-audit).",
+    "explanation": "SEC/SOX PROHIBITED non-audit services for SEC issuer audit clients (memorize this list): (1) INTERNAL AUDIT outsourcing, (2) Financial Information SYSTEMS design/implementation, (3) BOOKKEEPING, (4) APPRAISAL/VALUATION (material amounts), (5) ACTUARIAL services, (6) MANAGEMENT functions, (7) HUMAN RESOURCES, (8) BROKER-DEALER services, (9) LEGAL services, (10) EXPERT services unrelated to audit. Internal audit outsourcing = PROHIBITED because auditor would be auditing their own work. Why others are permitted: (A) Tax compliance = OK with audit committee pre-approval; (C) Due diligence = Generally OK; (D) Benefit plan audits = Separate engagement, not prohibited. SEC rules STRICTER than AICPA.",
+    "tip": "SEC PROHIBITED: Internal audit, FIS design, Bookkeeping, Valuation, Actuarial, Management, HR, Broker, Legal, Expert. Tax services = OK with approval.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -295,8 +295,8 @@ const questions = [
       "D": "Every 7 years with 3-year cooling off"
     },
     "correctAnswer": "C",
-    "explanation": "For SEC issuers, PCAOB Rule 3600T (originally SOX) requires the lead audit partner and concurring review partner to rotate after 5 consecutive years, followed by a 5-year cooling-off period before they can return to that engagement. Other partners have different rotation requirements.",
-    "tip": "Lead/concurring partner rotation: 5 years on, 5 years off. Other engagement partners: 7 years on, 2 years off (PCAOB).",
+    "explanation": "PCAOB/SOX partner rotation for SEC issuers: LEAD and CONCURRING REVIEW partners = 5 years ON, 5 years OFF (cooling period). This is the \"5-5 rule\" for key partners. Purpose: Prevent familiarity threats from long-term relationships. Other partners (engagement quality reviewer, etc.) = 7 years on, 2 years off. Why other answers fail: (A) 10/5 = Not the rule; (B) 3/2 = Too short, not the requirement; (D) 7/3 = Close but wrong cooling period. Memory aid: Lead partners are more critical, so they get EQUAL time on/off (5-5). This applies to SEC ISSUERS only—non-issuers follow different rules.",
+    "tip": "Lead/Concurring = 5 ON, 5 OFF (equal). Other partners = 7 ON, 2 OFF. SEC issuers only. Prevents FAMILIARITY threat.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -316,8 +316,8 @@ const questions = [
       "D": "Acceptable if the senior auditor works on a different engagement"
     },
     "correctAnswer": "C",
-    "explanation": "Immediate family (spouse, spousal equivalent, dependent) of a covered member in a key position at the client impairs independence. Key positions include officer, director, or employee in a position to exercise significant influence over the financial statements (like controller). The senior auditor cannot be on this engagement.",
-    "tip": "Immediate family in key position = Independence impaired. Key positions: Officers, directors, significant influence over F/S.",
+    "explanation": "IMMEDIATE FAMILY of COVERED MEMBER in KEY POSITION = Independence IMPAIRED. Period. Immediate family = Spouse, spousal equivalent, DEPENDENT. Key positions = Officer, Director, or employee with SIGNIFICANT INFLUENCE over F/S. Controller = Definitely a key position (oversees accounting/F/S). Why others fail: (A) Disclosure cannot cure this—must REMOVE auditor from engagement; (B) Separate finances irrelevant—spouse IS immediate family regardless; (D) Different engagement doesn't matter—spouse is at THIS client. Solution: Remove the senior auditor from this engagement entirely. Contrast with CLOSE relatives (siblings, parents)—only impaired if in key position AND certain other factors.",
+    "tip": "IMMEDIATE family (spouse/dependent) + KEY position = Always impaired. CLOSE relatives (siblings) = Only if key position + other factors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -337,8 +337,8 @@ const questions = [
       "D": "Declining an engagement due to lack of competence"
     },
     "correctAnswer": "B",
-    "explanation": "Acts discreditable include: discrimination or harassment in employment practices, negligence in preparing financial statements or tax returns, failure to follow standards, solicitation through coercion, and other acts that reflect adversely on integrity. Declining engagements and appropriate advertising are not discreditable.",
-    "tip": "Acts discreditable: Discrimination, harassment, negligence, failure to follow standards, fraud. Not: Declining engagements, proper advertising.",
+    "explanation": "ACTS DISCREDITABLE bring disgrace to the profession. Examples: (1) DISCRIMINATION/harassment in employment, (2) NEGLIGENCE in preparing F/S or tax returns, (3) FAILURE to follow standards/laws, (4) Solicitation through COERCION, (5) Government employment violation, (6) FRIVOLOUS complaints against other CPAs. Discrimination = ALWAYS discreditable—no exceptions. Why others are NOT discreditable: (A) Retaining records for unpaid fees = Permitted by law in most states (lien); (C) Advertising = Permitted if truthful; (D) Declining engagements = REQUIRED if lacking competence (due care principle). Key: \"Discreditable\" = Actions that damage profession's reputation or violate basic ethical standards.",
+    "tip": "DISCREDITABLE = Discrimination, Negligence, Coercion, Standard violations. NOT discreditable = Proper advertising, Declining engagements, Legal record retention.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -358,8 +358,8 @@ const questions = [
       "D": "Only attorneys can provide litigation support"
     },
     "correctAnswer": "C",
-    "explanation": "CPAs providing litigation support must maintain objectivity. If the CPA has a relationship that could impair objectivity (like auditor-client relationship), this must be disclosed and considered. The service is not prohibited but requires careful evaluation of conflicts and communication with affected parties.",
-    "tip": "Litigation support: Maintain objectivity. Disclose conflicts. Evaluate if prior relationships impair objectivity.",
+    "explanation": "LITIGATION SUPPORT by CPAs is PERMITTED but requires: (1) Maintain OBJECTIVITY throughout, (2) DISCLOSE potential conflicts (prior audit relationship), (3) Evaluate whether relationship IMPAIRS objectivity, (4) Communicate with affected parties. Prior auditor relationship creates potential conflict—doesn't prohibit service but requires disclosure/evaluation. Why others fail: (A) No requirement to resign from future audits; (B) NOT prohibited—just requires objectivity/disclosure; (D) CPAs CAN provide litigation support (expert witness, damage calculations, forensic accounting). Key distinction: OBJECTIVITY required (not independence). Litigation support is a consulting service, not attest.",
+    "tip": "Litigation support = PERMITTED. Requires OBJECTIVITY + DISCLOSURE of conflicts. Prior audit relationship = Disclose, evaluate, proceed if objective.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -379,8 +379,8 @@ const questions = [
       "D": "Self-interest threat"
     },
     "correctAnswer": "B",
-    "explanation": "The conceptual framework identifies seven threat categories: self-interest, self-review, advocacy, familiarity, undue influence, management participation, and structural. Competency is not a threat category - it's addressed under due care. The framework requires identifying threats and applying safeguards to reduce them to acceptable levels.",
-    "tip": "Independence threat categories: Self-interest, Self-review, Advocacy, Familiarity, Undue influence, Management participation, Structural.",
+    "explanation": "The 7 INDEPENDENCE THREAT categories (memorize): (1) SELF-INTEREST (financial stake in outcome), (2) SELF-REVIEW (auditing own work), (3) ADVOCACY (promoting client's position), (4) FAMILIARITY (too close to client), (5) UNDUE INFLUENCE (client pressure), (6) MANAGEMENT PARTICIPATION (acting as management), (7) STRUCTURAL (firm structure issues). COMPETENCY is NOT a threat category—it's addressed under DUE CARE principle (separate concept). The conceptual framework approach: IDENTIFY threats → EVALUATE significance → Apply SAFEGUARDS → If can't reduce to acceptable level, DECLINE engagement. Why B is wrong: Competency relates to ability to perform work, not independence.",
+    "tip": "7 Threats: Self-Interest, Self-Review, Advocacy, Familiarity, Undue Influence, Management Participation, Structural. COMPETENCY = Due care, NOT independence.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -400,8 +400,8 @@ const questions = [
       "D": "Reducing the scope of the audit"
     },
     "correctAnswer": "C",
-    "explanation": "Safeguards reduce threats to acceptable levels. Examples include: quality control policies, involvement of additional professionals to review work, consultation with third parties, rotation of personnel, discussion with those charged with governance, and disclosure of relationships. A second partner review is a common safeguard.",
-    "tip": "Safeguards: Additional review, consultation, rotation, TCWG discussion, disclosure, quality controls. Must reduce threat to acceptable level.",
+    "explanation": "SAFEGUARDS reduce independence threats to acceptable levels. Common safeguards: (1) SECOND PARTNER REVIEW (independent oversight), (2) Consultation with THIRD PARTIES, (3) ROTATION of personnel, (4) Discussion with THOSE CHARGED WITH GOVERNANCE (TCWG), (5) DISCLOSURE of relationships, (6) QUALITY CONTROL policies. Second partner review = Classic safeguard—adds independent perspective to catch issues. Why others are NOT safeguards: (A) Opinion type doesn't address independence threats; (B) Fee amount doesn't reduce threats (could increase self-interest threat); (D) Scope reduction = Audit issue, not independence safeguard. Key: Safeguards ADD oversight/review or REMOVE the threat source.",
+    "tip": "SAFEGUARDS = Add review, Rotate staff, Consult third parties, Discuss with TCWG, Disclose relationships. Goal: Reduce threat to ACCEPTABLE level.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -421,8 +421,8 @@ const questions = [
       "D": "Only from other CPAs"
     },
     "correctAnswer": "A",
-    "explanation": "Referral fees are permitted if: (1) disclosed to the client, and (2) the CPA does not perform services for the client that require independence. Commissions follow similar rules. Accepting referral fees from attest clients during the period of engagement impairs independence.",
-    "tip": "Referral fees/commissions: Permitted with disclosure if not an attest client. Prohibited if independence required.",
+    "explanation": "REFERRAL FEES and COMMISSIONS are PERMITTED with two requirements: (1) DISCLOSED to client in writing, AND (2) NOT from/for ATTEST clients (no independence required). Example: CPA refers client to financial planner, receives referral fee = OK if disclosed and CPA doesn't audit that client. Why others fail: (B) Not limited to tax—any non-attest service; (C) NOT always prohibited—permitted with disclosure for non-attest; (D) Can accept from anyone, not just CPAs. COMMISSIONS follow same rules: Permitted with disclosure if no independence required. Key: The fee creates SELF-INTEREST threat—disclosure addresses transparency, non-attest requirement addresses independence.",
+    "tip": "Referral fees/Commissions: PERMITTED if (1) DISCLOSED + (2) NOT attest client. Attest client = PROHIBITED regardless of disclosure.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -442,8 +442,8 @@ const questions = [
       "D": "Internal firm correspondence about the engagement"
     },
     "correctAnswer": "B",
-    "explanation": "CPAs must return client-provided records upon request, regardless of fee disputes. This includes original documents provided by the client. CPA-prepared workpapers generally belong to the CPA, though clients may be entitled to copies of work product that would be useful for future engagements.",
-    "tip": "Client records: Must return upon request. CPA workpapers: Generally CPA property. Work product: Client may be entitled to copies.",
+    "explanation": "CLIENT-PROVIDED RECORDS must be returned upon request—NO EXCEPTIONS for unpaid fees. These belong to the CLIENT. Records classification: (1) CLIENT RECORDS = Must return (original documents client gave you), (2) CPA WORKPAPERS = CPA property (can retain), (3) WORK PRODUCT = Client may be entitled to copies (F/S drafts, adjusting entries needed for future). Fee disputes don't justify withholding CLIENT'S OWN RECORDS. Why others are CPA property: (A) Workpapers = CPA prepared, CPA owns; (C) Working trial balance = CPA work product; (D) Internal correspondence = CPA's administrative records. Key: \"Whose records are they originally?\" Client's → Return. CPA's → May retain.",
+    "tip": "CLIENT records = MUST return (regardless of fees). CPA workpapers = CPA property. Work product = Client may get copies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -463,8 +463,8 @@ const questions = [
       "D": "If the gift is other than clearly insignificant"
     },
     "correctAnswer": "D",
-    "explanation": "Accepting gifts from attest clients creates a self-interest threat. Gifts that are clearly insignificant (tokens or small promotional items) generally do not impair independence. Gifts that are more than insignificant can impair independence, and there's no specific dollar threshold - it's based on facts and circumstances.",
-    "tip": "Gifts from clients: Clearly insignificant = OK. More than insignificant = May impair independence. No bright-line dollar test.",
+    "explanation": "GIFTS from attest clients: CLEARLY INSIGNIFICANT = OK. MORE THAN INSIGNIFICANT = Impairs independence. Creates SELF-INTEREST threat. NO specific dollar threshold—based on FACTS and CIRCUMSTANCES. Examples: Clearly insignificant = Logo pen, company calendar, modest promotional items. More than insignificant = Expensive wine, event tickets, electronics. Why others fail: (A) No $100 rule—it's facts/circumstances; (B) Not always prohibited—insignificant gifts OK; (C) Form of gift (cash vs. goods) not the determining factor—VALUE matters. Key test: Would a reasonable third party view this gift as potentially influencing the auditor's judgment?",
+    "tip": "Client gifts: CLEARLY INSIGNIFICANT = OK. MORE than insignificant = Impaired. NO dollar threshold—use JUDGMENT based on circumstances.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -484,8 +484,8 @@ const questions = [
       "D": "Independence is impaired only if the fees are material to the firm"
     },
     "correctAnswer": "C",
-    "explanation": "Under AICPA rules, independence is impaired if fees for professional services provided more than one year prior to the current report date remain unpaid when the report is issued. This creates an unpaid fee that functions like a loan to the client, creating a self-interest threat.",
-    "tip": "Unpaid fees rule: Fees from >1 year prior still unpaid at report date = Independence impaired. Treat like a loan to client.",
+    "explanation": "UNPAID FEES rule: Fees for services >1 YEAR PRIOR to current report date, still unpaid at report issuance = Independence IMPAIRED. Why? Unpaid fees function like a LOAN to client—creates SELF-INTEREST threat (firm has financial interest in client's well-being to get paid). Example: 2024 audit fees unpaid when 2025 report issued = Impaired (>1 year). Why others fail: (A) No retainer requirement—just the 1-year rule; (B) Payment plan doesn't cure—fees must be PAID; (D) No materiality exception—ANY fees >1 year old = Impaired. Key timing: Measured from service date to REPORT DATE, not engagement start.",
+    "tip": "UNPAID FEES >1 YEAR old at report date = Independence IMPAIRED. Functions like loan to client. Payment plans don't cure it.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -505,8 +505,8 @@ const questions = [
       "D": "Human resources policies"
     },
     "correctAnswer": "D",
-    "explanation": "SQCS requires firms to establish policies for: leadership responsibilities, relevant ethical requirements, acceptance/continuance of clients and engagements, human resources, engagement performance, and monitoring. Human resources includes hiring, competence development, assignment, and evaluation of personnel.",
-    "tip": "QC elements: Leadership, Ethics, Acceptance/Continuance, Human Resources, Engagement Performance, Monitoring.",
+    "explanation": "SQCS (Quality Control) requires 6 ELEMENTS (memorize): (1) LEADERSHIP responsibilities for quality, (2) Relevant ETHICAL requirements, (3) ACCEPTANCE and continuance of clients/engagements, (4) HUMAN RESOURCES (hiring, training, assignment, evaluation), (5) ENGAGEMENT PERFORMANCE, (6) MONITORING. Human resources = Required element covering personnel policies. Why others NOT required QC elements: (A) Office location = Administrative, not quality control; (B) Billing rates = Financial management, not QC; (C) Insurance = Risk management, not mandated by SQCS. Memory aid: \"LEADERS Accept HR's Engagement Monitoring\" (Leadership, Ethics, Acceptance, HR, Engagement, Monitoring).",
+    "tip": "6 QC Elements: Leadership, Ethics, Acceptance/Continuance, Human Resources, Engagement Performance, Monitoring. \"LEADERS Accept HR's Engagement Monitoring.\"",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -526,8 +526,8 @@ const questions = [
       "D": "AICPA"
     },
     "correctAnswer": "A",
-    "explanation": "State Boards of Accountancy have the authority to grant, suspend, and revoke CPA licenses within their jurisdiction. The AICPA is a voluntary membership organization. The PCAOB and SEC have authority over auditors of public companies but cannot revoke state licenses directly.",
-    "tip": "State Board = Licensing authority. AICPA = Membership organization. PCAOB/SEC = Public company oversight.",
+    "explanation": "STATE BOARD OF ACCOUNTANCY = LICENSING authority. Only state boards can GRANT, SUSPEND, or REVOKE CPA licenses. Each state has its own board. CPA is a STATE-ISSUED credential, not federal. Why others CANNOT revoke licenses: (B) PCAOB = Oversees auditors of PUBLIC companies, can bar from auditing issuers but not revoke license; (C) SEC = Regulates securities markets, can bar from practice before SEC but not revoke license; (D) AICPA = VOLUNTARY membership organization—can expel from membership but that doesn't affect license. Key hierarchy: State Board → License. PCAOB/SEC → Public company access. AICPA → Professional membership.",
+    "tip": "LICENSE authority = STATE BOARD only. PCAOB/SEC = Public company oversight. AICPA = Membership (voluntary). State board is the ONLY license authority.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -547,8 +547,8 @@ const questions = [
       "D": "Independence is not impaired"
     },
     "correctAnswer": "D",
-    "explanation": "Close relatives (non-dependent parents, siblings, children) in non-key positions at a client do not automatically impair independence. Key positions (officer, director, or significant influence over F/S) would cause impairment. An accounting supervisor not exercising significant influence is not a key position.",
-    "tip": "Close relatives: Key position = impaired. Non-key position = not automatically impaired. Evaluate other threats.",
+    "explanation": "CLOSE RELATIVES (non-dependent siblings, parents, children) are treated DIFFERENTLY from IMMEDIATE family. Close relative in NON-KEY position = NOT automatically impaired. Key distinction: IMMEDIATE family (spouse, dependent) in key position = ALWAYS impaired. CLOSE relative in non-key position = NOT impaired. Brother is CLOSE relative, not immediate. Accounting supervisor (non-key) ≠ CFO/Controller (key). Why others fail: (A) Residence sharing is irrelevant for close relatives; (B) Removal not required for non-key close relative; (C) Not impaired because: close relative + non-key position. Would BE impaired if: Brother was CFO (key position) OR if brother was spouse (immediate family).",
+    "tip": "CLOSE relatives (siblings/parents) + NON-key position = NOT impaired. IMMEDIATE family (spouse) + KEY position = ALWAYS impaired. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -568,8 +568,8 @@ const questions = [
       "D": "Only services provided during the audit period"
     },
     "correctAnswer": "B",
-    "explanation": "Under SOX, all non-audit services (except those specifically prohibited) provided to SEC issuer audit clients must be pre-approved by the audit committee. There is no dollar threshold - all services require pre-approval. The committee may establish pre-approval policies for certain routine services.",
-    "tip": "SEC issuer non-audit services: All require audit committee pre-approval. No dollar threshold. Prohibited services cannot be pre-approved.",
+    "explanation": "SOX AUDIT COMMITTEE PRE-APPROVAL: ALL non-audit services to SEC issuer audit clients require pre-approval—NO dollar threshold, NO exceptions (except prohibited services which can NEVER be provided). The audit committee can establish PRE-APPROVAL POLICIES for routine services (tax compliance, etc.) rather than approving each individually. Why others fail: (A) No $50K threshold—ALL amounts require approval; (C) Not just services affecting independence—ALL non-audit services; (D) Not limited to audit period—ANY services to issuer client. Key: SOX dramatically increased audit committee oversight. Purpose: Prevent auditor-client relationships that could impair independence.",
+    "tip": "SEC issuers: ALL non-audit services need AUDIT COMMITTEE pre-approval. NO dollar threshold. Prohibited services = Can NEVER be provided.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -589,8 +589,8 @@ const questions = [
       "D": "No action if the financial statements were fairly stated"
     },
     "correctAnswer": "A",
-    "explanation": "When a CPA discovers that procedures were omitted, they should assess the importance of the omitted procedures. If important, the CPA should perform the omitted procedures or alternative procedures. Based on results, determine if the report is still supported or if further action (notification, revision) is required.",
-    "tip": "Omitted procedures discovered post-report: Assess importance → Perform procedures → Determine action based on results.",
+    "explanation": "OMITTED PROCEDURES discovered post-report—follow this process: (1) ASSESS importance of omitted procedures to opinion, (2) If important, PERFORM omitted procedures or suitable ALTERNATIVES, (3) Based on results, determine if report is STILL SUPPORTED, (4) If not supported, take APPROPRIATE ACTION (notify client, revise F/S, notify users). Don't panic and withdraw immediately—first INVESTIGATE. Why others fail: (B) Don't immediately withdraw—assess first; (C) SEC notification not automatic for all clients—depends on findings; (D) \"No action\" is never correct—must at least assess importance. Key: Even if F/S were fairly stated, you need to VERIFY this by performing the omitted procedures.",
+    "tip": "Omitted procedures: ASSESS importance → PERFORM procedures → EVALUATE results → Take ACTION if needed. Don't immediately withdraw—investigate first.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -610,8 +610,8 @@ const questions = [
       "D": "Only if the existing auditor has been notified"
     },
     "correctAnswer": "C",
-    "explanation": "CPAs may solicit engagements and advertise their services. The prohibition is on solicitation through coercion, overreaching, or harassing conduct. Contacting a potential client is acceptable; the manner of solicitation must be professional and not involve improper pressure.",
-    "tip": "Client solicitation: Permitted if professional. Prohibited: Coercion, overreaching, harassment. No absolute prohibition on contacting potential clients.",
+    "explanation": "CLIENT SOLICITATION is PERMITTED—but the MANNER matters. Acceptable: Professional contact, advertising, competitive bidding. PROHIBITED: COERCION (threats), OVERREACHING (false claims), HARASSMENT (repeated unwanted contact). No rule against contacting another CPA's clients—competition is allowed! Why others fail: (A) No absolute prohibition on soliciting other CPAs' clients; (B) \"Regardless\" is too broad—manner DOES matter; (D) No requirement to notify existing auditor before soliciting (though communication with predecessor is required AFTER being engaged). Key: The profession allows competition; it just requires PROFESSIONAL conduct in seeking clients.",
+    "tip": "Solicitation: PERMITTED if professional. PROHIBITED if coercion/overreaching/harassment. No prior auditor notification required for solicitation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -631,8 +631,8 @@ const questions = [
       "D": "The former partner must not participate in the audit"
     },
     "correctAnswer": "A",
-    "explanation": "When a former partner joins an audit client in a key position, independence is impaired unless: (1) the former partner is not in a position to influence the audit, (2) all financial interests are liquidated, (3) amounts owed are settled, and (4) the former partner is not consulted on accounting or audit matters. CFO is definitely a position of influence.",
-    "tip": "Former partner at client: Must sever all financial ties, cannot influence audit. Key positions likely impair independence regardless.",
+    "explanation": "FORMER PARTNER joining audit client—independence is IMPAIRED unless ALL conditions met: (1) Former partner NOT in position to INFLUENCE audit, (2) All FINANCIAL interests LIQUIDATED, (3) All amounts OWED fully SETTLED, (4) Not CONSULTED on accounting/audit matters. CFO = KEY POSITION with significant influence—this arrangement is PROBLEMATIC. For independence: Former partner likely must not be CFO, OR firm may need to resign from engagement. Why others fail: (B) No specific cooling-off period in rules; (C) Former partners CAN affect independence; (D) \"Not participating\" doesn't address their position at client. Key: CFO can influence F/S that firm audits = Conflict.",
+    "tip": "Former partner at client: Sever ALL financial ties + Cannot INFLUENCE audit + Not CONSULTED. Key positions (CFO) = Very difficult to maintain independence.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -652,8 +652,8 @@ const questions = [
       "D": "Assuming management is dishonest"
     },
     "correctAnswer": "A",
-    "explanation": "Professional skepticism is an attitude that includes a questioning mind, being alert to conditions that may indicate misstatement due to error or fraud, and a critical assessment of audit evidence. It does not assume dishonesty but also does not assume honesty without corroboration.",
-    "tip": "Professional skepticism: Questioning mind + Critical assessment. Neither assume dishonesty nor unquestioned honesty.",
+    "explanation": "PROFESSIONAL SKEPTICISM = QUESTIONING MIND + CRITICAL ASSESSMENT of evidence. Key elements: (1) Alert to conditions indicating misstatement (error/fraud), (2) Question reliability of documents/responses, (3) Don't accept evidence at face value. CRITICAL BALANCE: Neither assume HONESTY nor assume DISHONESTY. Start neutral, let evidence guide conclusions. Why others fail: (B) Third-party verification for ALL transactions is impractical and not required; (C) Fraud risk exists in ALL engagements—you don't decline for that; (D) ASSUMING dishonesty is wrong—skepticism means neither assuming honesty NOR dishonesty. Key: \"Trust but verify\" mindset throughout the audit.",
+    "tip": "SKEPTICISM = Questioning mind + Critical assessment. DON'T assume honesty. DON'T assume dishonesty. Stay NEUTRAL, follow EVIDENCE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -673,8 +673,8 @@ const questions = [
       "D": "AICPA member firms performing accounting or auditing services"
     },
     "correctAnswer": "D",
-    "explanation": "AICPA member firms that perform accounting and auditing services (audits, reviews, compilations, attestation) must undergo peer review. This is a membership requirement. Firms auditing SEC issuers are also subject to PCAOB inspections. Non-member firms are not required but states may have separate requirements.",
-    "tip": "AICPA peer review: Required for member firms doing A&A work. Separate from PCAOB inspection for SEC work.",
+    "explanation": "AICPA PEER REVIEW: Required for AICPA MEMBER firms performing A&A services (audits, reviews, compilations, attestation). It's a MEMBERSHIP requirement—not based on firm size or client type. Purpose: Quality control through external review. Why others fail: (A) Not based on number of CPAs—it's based on services provided; (B) Not limited to compilations—ALL A&A services; (C) SEC issuers = PCAOB INSPECTION (separate requirement). Key distinction: PEER REVIEW = AICPA member requirement. PCAOB INSPECTION = SEC issuer auditor requirement. Both can apply to same firm! Non-AICPA members may have STATE peer review requirements.",
+    "tip": "AICPA PEER REVIEW = Member firms doing A&A work. PCAOB INSPECTION = SEC issuer auditors. Different requirements, can overlap.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -694,8 +694,8 @@ const questions = [
       "D": "Expulsion from membership"
     },
     "correctAnswer": "D",
-    "explanation": "The AICPA can admonish, suspend, or expel members for violations. Expulsion is the most severe sanction. The AICPA cannot impose fines (a state/regulatory power), suspend licenses (state board authority), or prosecute (government authority). Membership expulsion affects professional standing but not the license itself.",
-    "tip": "AICPA sanctions: Admonish, Suspend membership, Expel. Cannot fine, revoke license, or prosecute.",
+    "explanation": "AICPA SANCTIONS (least to most severe): (1) ADMONISH (warning), (2) SUSPEND membership, (3) EXPEL from membership (most severe). EXPULSION = Permanent removal from AICPA membership. Critical: AICPA is a VOLUNTARY membership organization—it can only affect MEMBERSHIP, not LICENSE. What AICPA CANNOT do: (A) Criminal prosecution = Government authority only; (B) Monetary fines = State/regulatory power; (C) License suspension = STATE BOARD authority only. Expulsion affects professional reputation and access to AICPA resources, but CPA can still practice with valid state license.",
+    "tip": "AICPA = Membership sanctions only (Admonish, Suspend, Expel). CANNOT fine, revoke license, or prosecute. License = STATE BOARD authority.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -715,8 +715,8 @@ const questions = [
       "D": "Shared equally between auditor and client"
     },
     "correctAnswer": "B",
-    "explanation": "Audit workpapers are the property of the auditor and should be retained. For SEC issuer audits, workpapers must be retained for 7 years per PCAOB rules (5 years under AICPA). While the workpapers belong to the auditor, the client may have certain rights to copies of work product needed for future engagements.",
-    "tip": "Workpaper ownership: Auditor's property. Retention: 7 years (PCAOB) or 5 years (AICPA). Client may be entitled to work product copies.",
+    "explanation": "AUDIT WORKPAPERS = AUDITOR'S property. The auditor creates them, owns them, and must retain them. RETENTION requirements: PCAOB (SEC issuers) = 7 YEARS. AICPA (non-issuers) = 5 YEARS. Although auditor owns workpapers, CLIENT may be entitled to: (1) Client-provided records back, (2) Copies of work product needed for future (adjusting entries, etc.). Why others fail: (A) Client doesn't own workpapers—only their original records; (C) SEC doesn't own workpapers (but can access for SEC issuers); (D) No shared ownership—auditor owns outright. Key: Ownership ≠ Access. Auditor owns but must provide access to regulators and certain items to clients.",
+    "tip": "WORKPAPERS = Auditor's property. RETENTION: 7 years (PCAOB/SEC) or 5 years (AICPA). Client owns their records, not workpapers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -736,8 +736,8 @@ const questions = [
       "D": "Independence is impaired if the investment exceeds 5% of the plan"
     },
     "correctAnswer": "C",
-    "explanation": "Financial interests in retirement plans over which the covered member has no control (defined benefit plans, defined contribution plans where member cannot direct investments into specific stocks) are considered indirect financial interests. Since the member has no control, independence is generally not impaired even if material, as it's treated like a mutual fund investment.",
-    "tip": "Retirement plan investments: No control = generally not impaired (like mutual funds). Control over investment direction = analyze like other investments.",
+    "explanation": "RETIREMENT PLAN investments in audit clients—CONTROL is the key factor. NO CONTROL over investments (defined benefit plans, 401k without self-directed stock options) = INDIRECT financial interest, treated like mutual fund holdings—generally NOT impaired. HAS CONTROL (can direct into specific stocks) = Analyze like DIRECT financial interest. The logic: If you can't choose to invest in the client, you can't have a self-interest threat from that investment. Why others fail: (A) Retirement plans CAN invest in audit clients; (B) Control DOES matter—no control = generally OK; (D) No 5% threshold—it's about CONTROL, not percentage.",
+    "tip": "Retirement plan investments: NO CONTROL = Not impaired (like mutual funds). HAS CONTROL = Analyze like direct interest. CONTROL is the key factor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -757,8 +757,8 @@ const questions = [
       "D": "Default risk"
     },
     "correctAnswer": "C",
-    "explanation": "Detection risk (DR) is the risk that audit procedures will not detect a material misstatement. It is the only component of audit risk that auditors can directly control through the nature, timing, and extent of procedures. Inherent risk (IR) and control risk (CR) exist independently of the audit.",
-    "tip": "Audit risk components: IR and CR are entity-related (auditor assesses). DR is audit-related (auditor controls through procedures).",
+    "explanation": "DETECTION RISK (DR) = Risk that audit PROCEDURES fail to detect a material misstatement that exists. The AUDIT RISK MODEL: AR = IR × CR × DR. Key insight: DR is the ONLY component the auditor can CONTROL—by adjusting NATURE (type of procedures), TIMING (when performed), and EXTENT (sample size). Why others fail: (A) Documentation risk = Not a component—refers to workpaper quality; (B) Discovery risk = Same concept, wrong term (not the standard term); (D) Default risk = Financial term for credit/loan default—unrelated to auditing. The three components: IR = Susceptibility to misstatement (entity characteristic). CR = Risk controls don't prevent/detect (entity controls). DR = Risk audit misses it (auditor's procedures). IR and CR EXIST regardless of audit; DR is about AUDIT EFFECTIVENESS.",
+    "tip": "AUDIT RISK = IR × CR × DR. Only DR is controllable by auditor. Lower DR needed = More work (larger samples, better procedures, year-end testing).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -778,8 +778,8 @@ const questions = [
       "D": "Detection risk is eliminated"
     },
     "correctAnswer": "B",
-    "explanation": "There is an inverse relationship between assessed IR/CR and acceptable DR. When IR and CR are high, the auditor must set DR low to maintain acceptable audit risk. Low DR requires more persuasive audit evidence (more extensive procedures, more reliable evidence, closer to year-end testing).",
-    "tip": "Inverse relationship: High IR/CR → Low DR needed → More audit work. Low IR/CR → Higher DR acceptable → Less work needed.",
+    "explanation": "INVERSE RELATIONSHIP: When IR and CR are HIGH, DR must be set LOW to keep overall audit risk acceptable. The math: AR = IR × CR × DR. If AR is fixed (e.g., 5%), and IR × CR is high, then DR must be LOW for equation to balance. LOW DR means: (1) MORE audit procedures, (2) LARGER sample sizes, (3) More RELIABLE evidence types, (4) Testing closer to YEAR-END. Why others fail: (A) High DR = More chance of missing misstatements—unacceptable when risks are high; (C) DR is always affected by IR/CR assessment—they're mathematically related; (D) DR cannot be eliminated—only reduced through more work. Practical example: High IR/CR in revenue → Must do extensive revenue testing, confirm more receivables, test closer to year-end.",
+    "tip": "INVERSE relationship: High IR/CR → Low DR → MORE WORK. Low IR/CR → Higher DR OK → LESS WORK. It's a mathematical certainty.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -799,8 +799,8 @@ const questions = [
       "D": "Stable market prices for inventory items"
     },
     "correctAnswer": "B",
-    "explanation": "Inherent risk is higher when accounts involve estimates, judgments, or complex calculations. Inventory with complex products requiring estimation (for obsolescence, lower of cost or NRV) has higher inherent risk than commodities with readily determinable values. Stable prices and experienced management reduce inherent risk.",
-    "tip": "Higher inherent risk: Complexity, estimation, judgment, volatile markets, unusual transactions. Lower: Routine, objective, stable.",
+    "explanation": "INHERENT RISK = Susceptibility to material misstatement BEFORE considering controls. HIGHER IR when: (1) Complex ESTIMATES required (obsolescence, NRV), (2) Significant JUDGMENT involved, (3) Unusual/NON-ROUTINE transactions, (4) High value or SUSCEPTIBLE to theft, (5) VOLATILE markets or prices. Complex inventory requiring estimation = HIGH IR because judgments can be wrong and manipulation is easier. Why others LOWER IR: (A) Commodities with quoted prices = OBJECTIVE valuation, less judgment = Lower IR; (C) Experienced management = Better judgment, fewer errors = Lower IR; (D) Stable prices = Less estimation uncertainty = Lower IR. Key concept: IR is about the ACCOUNT'S nature, not the company's controls. Think: \"How easy is it to get this wrong, regardless of controls?\"",
+    "tip": "HIGH IR: Estimates, judgments, complexity, volatility, fraud-susceptible. LOW IR: Routine, objective, stable, simple. IR = Account nature, not controls.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -820,8 +820,8 @@ const questions = [
       "D": "Has determined controls are ineffective or has decided not to test them"
     },
     "correctAnswer": "D",
-    "explanation": "Assessing control risk at maximum (100%) means the auditor either believes controls are not effective or has decided not to test controls (often because substantive procedures alone would be more efficient). This requires more extensive substantive testing to compensate. The auditor cannot skip substantive procedures.",
-    "tip": "CR at maximum: Either controls ineffective OR testing controls not efficient. Either way, rely on substantive procedures only.",
+    "explanation": "CONTROL RISK AT MAXIMUM (100%) means: (1) Controls are INEFFECTIVE at preventing/detecting misstatements, OR (2) Auditor chose NOT to test controls (efficiency decision). When CR = Maximum: Auditor CANNOT rely on controls, must do MORE SUBSTANTIVE TESTING. This is a strategic choice—sometimes testing controls costs more than just doing substantive work. Two audit approaches: (1) COMBINED approach = Test controls + Reduced substantive, (2) SUBSTANTIVE-ONLY = CR at max + Extensive substantive. Why others fail: (A) No withdrawal required—CR at max is a valid audit strategy; (B) Cannot rely on controls at ALL when CR is maximum; (C) Substantive procedures are REQUIRED regardless—they can never be skipped entirely. Key: CR at maximum doesn't mean audit failure—it means a substantive-only approach.",
+    "tip": "CR at MAXIMUM = No control reliance. Two reasons: Controls ineffective OR efficiency choice. Response = MORE substantive work.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -841,8 +841,8 @@ const questions = [
       "D": "The same as detection risk"
     },
     "correctAnswer": "C",
-    "explanation": "Risk of material misstatement (RMM) is the combined effect of inherent risk and control risk. It represents the risk that the financial statements are materially misstated prior to audit. RMM = IR × CR. Audit risk = RMM × DR. The auditor assesses RMM and adjusts procedures accordingly.",
-    "tip": "RMM = IR × CR (risk before audit). Audit Risk = RMM × DR (overall risk of wrong opinion).",
+    "explanation": "RISK OF MATERIAL MISSTATEMENT (RMM) = IR × CR. It's the combined risk that F/S contain material misstatement BEFORE the audit begins. The full model: AUDIT RISK = RMM × DR, or AR = (IR × CR) × DR. RMM represents the ENTITY'S risk—what exists regardless of whether an audit is performed. The auditor ASSESSES RMM but cannot change it (it's the entity's reality). Why others fail: (A) Fraud risk is ONE component of IR, not the full RMM definition; (B) Incorrect opinion risk = AUDIT RISK (AR), not RMM specifically; (D) Detection risk is separate from RMM—DR is multiplied BY RMM to get audit risk. Key relationship: High RMM → Need low DR → More audit work. The equation must balance to achieve acceptable audit risk (typically 5%).",
+    "tip": "RMM = IR × CR (entity's risk, pre-audit). AR = RMM × DR (total risk). Auditor assesses RMM, controls DR. High RMM = Do more work.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -862,8 +862,8 @@ const questions = [
       "D": "Detailed audit procedures for each account"
     },
     "correctAnswer": "A",
-    "explanation": "The overall audit strategy sets the scope, timing, and direction of the audit and guides development of the detailed audit plan. It includes determining resources needed, materiality, preliminary risk assessments, and the nature of internal control testing. The audit plan then details specific procedures.",
-    "tip": "Audit strategy: Overall scope, timing, direction. Audit plan: Detailed procedures. Strategy guides plan development.",
+    "explanation": "OVERALL AUDIT STRATEGY = The BIG PICTURE document covering SCOPE, TIMING, DIRECTION, and RESOURCES. It addresses: (1) What's being audited (scope), (2) When work will be done (timing), (3) How the audit will be managed (direction), (4) Who will do the work (resource allocation/staffing). The strategy GUIDES development of the detailed AUDIT PLAN. Key distinction: STRATEGY = Overall approach (the \"what\" and \"why\"). PLAN = Detailed procedures (the \"how\"). Why others fail: (B) Engagement letter = Contract terms, separate from strategy; (C) Audit report = Output, not planning; (D) Detailed procedures = That's the AUDIT PLAN, not the strategy. Sequence: Understand client → Develop STRATEGY → Develop detailed PLAN → Execute → Report.",
+    "tip": "STRATEGY = Scope, Timing, Direction, Resources (overview). PLAN = Detailed procedures. Strategy GUIDES plan development.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -883,8 +883,8 @@ const questions = [
       "D": "The entity's selection and application of accounting policies"
     },
     "correctAnswer": "A",
-    "explanation": "Obtaining an understanding requires knowledge of: industry/regulatory factors, entity nature and operations, accounting policies, objectives/strategies/business risks, and internal control. Detailed testing of account balances is part of substantive procedures, not the risk assessment/understanding phase.",
-    "tip": "Understanding the entity: Industry, Operations, Policies, Strategies, Controls. This precedes detailed testing.",
+    "explanation": "UNDERSTANDING THE ENTITY requires knowledge of five areas (AU-C 315): (1) INDUSTRY, regulatory, external factors, (2) Entity NATURE (operations, ownership, governance), (3) Accounting POLICIES and practices, (4) OBJECTIVES, strategies, business risks, (5) INTERNAL CONTROL system. This is RISK ASSESSMENT work—done BEFORE substantive testing. Why detailed testing is NOT required at this stage: Detailed testing of account balances = SUBSTANTIVE PROCEDURES performed AFTER risk assessment to respond to identified risks. Understanding phase = Learn the entity to IDENTIFY risks. Substantive phase = TEST to address those risks. Wrong to do detailed testing without first understanding what risks to address.",
+    "tip": "Understanding requires: Industry, Nature, Policies, Objectives, Controls. This PRECEDES detailed testing. Understand first → Test later.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -904,8 +904,8 @@ const questions = [
       "D": "External parties only"
     },
     "correctAnswer": "B",
-    "explanation": "Risk assessment procedures include inquiries of management and others within the entity. 'Others' includes employees at various levels, internal auditors, in-house legal counsel, and those charged with governance. Different people may have different information relevant to risk assessment.",
-    "tip": "Inquiries: Management + Others (various levels, different perspectives). Not limited to senior management.",
+    "explanation": "INQUIRIES must include MANAGEMENT AND OTHERS within the entity. \"Others\" means: (1) Employees at VARIOUS LEVELS (not just executives), (2) INTERNAL AUDITORS (if any), (3) In-house LEGAL counsel, (4) Those CHARGED WITH GOVERNANCE (audit committee, board). WHY multiple sources? Different people have different perspectives and information. Employees may know about issues management wouldn't mention. Internal audit may have identified control weaknesses. Legal may know about litigation. Why others fail: (A) Management ONLY = Insufficient, biased source; (C) Audit committee ONLY = Too narrow; (D) External parties = Not the primary source for understanding the entity (though may be useful). Key: Professional skepticism requires CORROBORATING information from multiple internal sources.",
+    "tip": "Inquire of MANAGEMENT + OTHERS (various levels). Different perspectives catch what management might miss or hide. Never rely on one source.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -925,8 +925,8 @@ const questions = [
       "D": "Identify areas of potential risk and focus the audit"
     },
     "correctAnswer": "D",
-    "explanation": "Planning-stage analytical procedures help identify areas of potential risk that may indicate misstatement. They enhance understanding of the client's business and highlight unusual changes or relationships requiring further investigation. Substantive analytical procedures (different purpose) provide evidence about account balances.",
-    "tip": "Planning analytics: Risk identification, focus audit. Substantive analytics: Provide evidence. Final analytics: Overall review.",
+    "explanation": "PLANNING-STAGE ANALYTICAL PROCEDURES are used to IDENTIFY RISK and FOCUS the audit—not to gather evidence. Purpose: (1) Enhance UNDERSTANDING of the business, (2) Identify UNUSUAL CHANGES requiring investigation, (3) FOCUS audit resources on higher-risk areas. Three types of analytics: PLANNING = Risk ID (required). SUBSTANTIVE = Provide evidence (optional but common). FINAL/COMPLETION = Overall reasonableness check (required). Why others fail: (A) Testing control effectiveness = Tests of controls, not analytics; (B) Verifying estimates = Substantive procedure purpose; (C) Providing substantive evidence = That's SUBSTANTIVE analytics, done during fieldwork. Planning analytics compare current to prior, industry benchmarks, expected relationships—looking for anomalies that signal risk.",
+    "tip": "Analytics purpose by phase: PLANNING = ID risk. SUBSTANTIVE = Gather evidence. FINAL = Overall reasonableness. Planning analytics = REQUIRED.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -946,8 +946,8 @@ const questions = [
       "D": "A fixed dollar amount set by GAAS"
     },
     "correctAnswer": "C",
-    "explanation": "Materiality is typically calculated as a percentage of a relevant benchmark such as total revenues, total assets, net income, or equity. The benchmark chosen depends on the entity's circumstances and users' focus. Common percentages: 0.5-1% of revenue, 1-2% of assets, 5-10% of income. Professional judgment is required.",
-    "tip": "Materiality benchmarks: Revenue (0.5-1%), Assets (1-2%), Income (5-10%). Choose based on entity type and user focus.",
+    "explanation": "MATERIALITY is calculated using a PERCENTAGE of a KEY BENCHMARK. Common benchmarks and ranges: REVENUE = 0.5-1% (stable income companies). ASSETS = 1-2% (asset-intensive industries, financial institutions). NET INCOME = 5-10% (stable profitable companies). EQUITY = 1-2% (for entities with volatile income). The benchmark choice depends on: (1) Entity TYPE (manufacturer vs. bank), (2) What USERS focus on, (3) Entity CIRCUMSTANCES (profit vs. loss). Why others fail: (A) Client requests don't determine materiality—auditor judgment does; (B) Only qualitative = Incomplete—quantitative basis is primary; (D) No fixed GAAS amount—it varies by entity size and circumstances. Key: PROFESSIONAL JUDGMENT required in both benchmark selection and percentage applied.",
+    "tip": "Materiality benchmarks: Revenue 0.5-1%, Assets 1-2%, Income 5-10%, Equity 1-2%. Choose based on entity type and user focus.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -967,8 +967,8 @@ const questions = [
       "D": "Equal to overall materiality"
     },
     "correctAnswer": "B",
-    "explanation": "Performance materiality is set at less than overall materiality to reduce the risk that aggregate uncorrected/undetected misstatements exceed overall materiality. It's used to determine the nature, timing, and extent of audit procedures. It accounts for the risk that multiple smaller misstatements could aggregate to a material amount.",
-    "tip": "Performance materiality < Overall materiality. Provides margin for aggregation of misstatements and undetected errors.",
+    "explanation": "PERFORMANCE MATERIALITY is set BELOW overall materiality to provide a BUFFER. The logic: Individual misstatements below overall materiality could AGGREGATE to exceed materiality when combined. Performance materiality (typically 50-75% of overall) accounts for: (1) AGGREGATION risk—multiple small misstatements adding up, (2) UNDETECTED misstatements—sampling risk and detection risk. Example: If overall materiality = $100K, performance materiality might be $60K. This ensures that even if multiple $40K misstatements exist, the audit catches enough to prevent total exceeding $100K. Why others fail: (A) Higher than overall = Defeats the purpose of the buffer; (C) Completion stage only = Must be set during PLANNING; (D) Equal to overall = Provides no safety margin.",
+    "tip": "Performance materiality < Overall (usually 50-75%). Provides BUFFER for aggregation + undetected errors. Set at PLANNING, not completion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -988,8 +988,8 @@ const questions = [
       "D": "Routine sales transactions"
     },
     "correctAnswer": "A",
-    "explanation": "Significant risks are identified RMMs that require special audit consideration. They typically involve significant judgments, unusual transactions, fraud risk, or complex accounting. Revenue recognition (especially complex arrangements) is often a significant risk due to judgment involved. Fraud risk in revenue recognition is presumed. Routine transactions generally are not significant risks.",
-    "tip": "Significant risks: Require special consideration. Characteristics: Complexity, judgment, fraud risk, unusual transactions, related parties.",
+    "explanation": "SIGNIFICANT RISKS require SPECIAL AUDIT CONSIDERATION because they have: (1) High COMPLEXITY, (2) Significant JUDGMENT involved, (3) FRAUD risk indicators, (4) UNUSUAL or non-routine nature, (5) RELATED PARTY involvement. REVENUE RECOGNITION in complex arrangements = Classic significant risk because: Involves estimates/judgment, inherently susceptible to manipulation, PRESUMED fraud risk under AU-C 240. Why others are NOT significant risks: (B) Bank reconciliations = ROUTINE procedure, minimal judgment; (C) Standard payroll = ROUTINE, systematic process; (D) Routine sales = Standard transactions without complexity. Key: Significant risks CANNOT be addressed with routine audit responses—need ENHANCED procedures, controls testing current year, substantive procedures at/near year-end.",
+    "tip": "SIGNIFICANT RISKS: Complexity + Judgment + Fraud susceptibility + Unusual nature. Revenue recognition = PRESUMED significant risk. Routine ≠ Significant.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1009,8 +1009,8 @@ const questions = [
       "D": "Misappropriation of assets"
     },
     "correctAnswer": "B",
-    "explanation": "AU-C 240 (and AS 2401 for PCAOB) presumes that improper revenue recognition is a fraud risk. Unless the auditor has determined this presumption is not applicable (and documented why), revenue recognition must be addressed as a fraud risk. Management override of controls is also a presumed risk.",
-    "tip": "Presumed fraud risks: Revenue recognition, Management override of controls. Can be rebutted with documentation.",
+    "explanation": "TWO PRESUMED FRAUD RISKS exist in every audit: (1) REVENUE RECOGNITION (improper recognition is the #1 fraud scheme), (2) MANAGEMENT OVERRIDE of controls (management can circumvent any control). For revenue recognition: PRESUMED risk = Must address it AS a fraud risk unless auditor determines presumption is NOT applicable and DOCUMENTS why. Examples where presumption might be rebutted: Simple one-product company, all cash sales, no complex arrangements. For management override: CANNOT be rebutted—always present because management designs controls and can override them. Why others fail: (A) Fraudulent financial reporting = Broad category, not the specific presumed risk; (C) Inventory theft = Common asset misappropriation but NOT a presumed risk; (D) Misappropriation = A fraud type but not specifically presumed in every audit.",
+    "tip": "PRESUMED fraud risks: (1) Revenue recognition (can rebut with documentation), (2) Management override (CANNOT rebut—always present).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1030,8 +1030,8 @@ const questions = [
       "D": "Rationalization"
     },
     "correctAnswer": "A",
-    "explanation": "The fraud triangle consists of three conditions generally present when fraud occurs: (1) Incentive/Pressure - motivation to commit fraud, (2) Opportunity - circumstances allowing fraud to occur, and (3) Rationalization - ability to justify the fraudulent act. Documentation is not a fraud condition.",
-    "tip": "Fraud triangle: Incentive (pressure), Opportunity, Rationalization. All three typically present when fraud occurs.",
+    "explanation": "The FRAUD TRIANGLE has three conditions present when fraud occurs: (1) INCENTIVE/PRESSURE = Motivation (financial targets, personal debt, bonus pressure). (2) OPPORTUNITY = Ability to commit (weak controls, poor segregation, override capability). (3) RATIONALIZATION = Mental justification (\"I'll pay it back,\" \"Company owes me,\" \"Everyone does it\"). All three must typically be present for fraud to occur. Remove ANY ONE = Fraud less likely. Why DOCUMENTATION is wrong: It's an audit concept for DETECTING fraud, not a condition CAUSING fraud. Other fraud models exist (fraud diamond adds \"capability\"), but CPA exam focuses on the classic triangle.",
+    "tip": "FRAUD TRIANGLE: Incentive (pressure) + Opportunity (ability) + Rationalization (justification). All three present = Fraud likely. Documentation ≠ fraud element.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1051,8 +1051,8 @@ const questions = [
       "D": "Inadequate segregation of duties"
     },
     "correctAnswer": "D",
-    "explanation": "Opportunity risk factors include: inadequate segregation of duties, lack of management oversight, deficient internal controls, complex organizational structure, and high employee turnover in accounting positions. Bonuses and stock price focus are incentive factors. Complaints may indicate rationalization or culture issues.",
-    "tip": "Opportunity factors: Weak controls, poor segregation, inadequate oversight. Incentive factors: Bonuses, targets, financial pressures.",
+    "explanation": "OPPORTUNITY fraud factors = CONDITIONS that ALLOW fraud to occur. Include: (1) INADEQUATE SEGREGATION of duties (one person controls too much), (2) Poor MANAGEMENT OVERSIGHT, (3) Deficient INTERNAL CONTROLS, (4) COMPLEX organizational structure hiding activities, (5) HIGH TURNOVER in accounting (less institutional knowledge). Inadequate segregation = OPPORTUNITY because person can both commit AND conceal fraud. Why others are INCENTIVE factors (not opportunity): (A) Stock price interest = PRESSURE to meet targets; (B) Complaints about ethics = RATIONALIZATION culture indicator; (C) Performance bonuses = PRESSURE/INCENTIVE to manipulate results. Key: OPPORTUNITY = \"How could they do it?\" INCENTIVE = \"Why would they do it?\" RATIONALIZATION = \"How do they justify it?\"",
+    "tip": "OPPORTUNITY = How could they? (weak controls, no segregation). INCENTIVE = Why would they? (bonuses, targets). RATIONALIZATION = How justify? (culture).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1072,8 +1072,8 @@ const questions = [
       "D": "Audit committee"
     },
     "correctAnswer": "D",
-    "explanation": "The five COSO internal control components are: (1) Control Environment, (2) Risk Assessment, (3) Control Activities, (4) Information and Communication, and (5) Monitoring Activities. The audit committee is part of corporate governance and relates to the control environment, but is not itself a component.",
-    "tip": "COSO components: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring. (CRIME mnemonic)",
+    "explanation": "COSO INTERNAL CONTROL FRAMEWORK has 5 components (memorize with \"CRIME\"): (1) CONTROL ENVIRONMENT = Tone at the top, ethics, governance. (2) RISK ASSESSMENT = Entity's process to identify/analyze risks. (3) INFORMATION & COMMUNICATION = Capturing and sharing relevant info. (4) MONITORING = Ongoing evaluation of control effectiveness. (5) CONTROL ACTIVITIES (not in CRIME but the E) = Policies/procedures like approvals, reconciliations. The AUDIT COMMITTEE is NOT a component—it's a governance body that SUPPORTS the control environment but is not a framework element itself. All five components must work together; weakness in one affects overall control effectiveness.",
+    "tip": "COSO = CRIME + Activities: Control environment, Risk assessment, Information/Communication, Monitoring, (control) Activities. Audit committee = Part of governance, not a component.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1093,8 +1093,8 @@ const questions = [
       "D": "Physical access controls"
     },
     "correctAnswer": "B",
-    "explanation": "Control environment sets the tone at the top and includes: integrity/ethical values, commitment to competence, board/audit committee participation, management philosophy and style, organizational structure, assignment of authority, and human resource policies. Segregation, reconciliation, and physical access are control activities.",
-    "tip": "Control environment: Tone at the top, ethics, competence, governance. Control activities: Specific procedures and policies.",
+    "explanation": "CONTROL ENVIRONMENT = The FOUNDATION that sets TONE AT THE TOP. Elements include: (1) INTEGRITY and ethical values (management walks the talk), (2) Commitment to COMPETENCE (hiring qualified people), (3) BOARD/Audit committee participation (governance oversight), (4) Management PHILOSOPHY and operating style, (5) ORGANIZATIONAL STRUCTURE (who reports to whom), (6) Assignment of AUTHORITY and responsibility, (7) HUMAN RESOURCE policies (incentives, training). Management's philosophy/operating style = Directly about leadership attitude and tone. Why others are CONTROL ACTIVITIES (not environment): (A) Segregation of duties = Specific procedure; (C) Reconciliations = Specific procedure; (D) Physical access controls = Specific procedure. Control environment is about CULTURE; control activities are about specific ACTIONS.",
+    "tip": "CONTROL ENVIRONMENT = Culture, ethics, tone, governance (soft). CONTROL ACTIVITIES = Specific procedures (hard). Philosophy/style = Environment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1114,8 +1114,8 @@ const questions = [
       "D": "Segregation of duties between ordering and receiving"
     },
     "correctAnswer": "B",
-    "explanation": "Detective controls identify errors or irregularities after they occur. Bank reconciliation review is detective - it detects discrepancies after transactions occur. Preventive controls stop errors before they happen: dual signatures, passwords, and segregation of duties are all preventive controls.",
-    "tip": "Preventive: Stop errors before (approvals, segregation). Detective: Find errors after (reconciliations, reviews, variance analysis).",
+    "explanation": "DETECTIVE CONTROLS identify errors/irregularities AFTER they occur. They don't prevent mistakes—they CATCH them. Examples: Bank RECONCILIATIONS, variance ANALYSIS, supervisory REVIEWS, exception REPORTS. MONTHLY BANK RECONCILIATION = Classic detective control—it DETECTS discrepancies between books and bank AFTER transactions have already occurred. PREVENTIVE CONTROLS stop errors BEFORE they happen: (A) Dual signatures = PREVENTIVE (stops unauthorized checks before issued); (C) Password requirements = PREVENTIVE (blocks unauthorized access before it happens); (D) Segregation of duties = PREVENTIVE (prevents one person from committing/concealing). Both types needed: PREVENTIVE = First line (stop it). DETECTIVE = Safety net (catch what slipped through).",
+    "tip": "PREVENTIVE = Stop before (approvals, segregation, passwords). DETECTIVE = Catch after (reconciliations, reviews, variance analysis). Need BOTH.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1135,8 +1135,8 @@ const questions = [
       "D": "System access security and user authentication"
     },
     "correctAnswer": "D",
-    "explanation": "IT general controls apply broadly to the IT environment and support application controls. ITGCs include: access security, program changes, program development, and computer operations. Input validation, automated calculations, and matching are application controls that relate to specific transaction processing.",
-    "tip": "ITGCs: Access security, Change management, Development, Operations. Application controls: Input, Processing, Output for specific applications.",
+    "explanation": "IT GENERAL CONTROLS (ITGCs) apply BROADLY across the IT environment and SUPPORT application controls. Four ITGC categories: (1) ACCESS SECURITY (user authentication, passwords, permissions), (2) PROGRAM CHANGES (change management, testing before implementation), (3) PROGRAM DEVELOPMENT (proper development lifecycle), (4) COMPUTER OPERATIONS (job scheduling, backup, recovery). System access security and user authentication = ITGC because it applies to ALL systems, not one specific application. Why others are APPLICATION CONTROLS: (A) Automated depreciation calculation = Specific to fixed assets module; (B) Three-way matching = Specific to A/P processing; (C) Input validation = Specific to data entry for particular transactions. Key: ITGCs are FOUNDATION—if ITGCs fail, application controls can't be trusted.",
+    "tip": "ITGCs = BROAD environment controls (Access, Changes, Development, Operations). Application controls = SPECIFIC transaction processing. ITGCs support all applications.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1156,8 +1156,8 @@ const questions = [
       "D": "The discussion is optional, not required"
     },
     "correctAnswer": "B",
-    "explanation": "AU-C 240 requires discussion among engagement team members about the risks of material misstatement due to fraud. The discussion should include key members and emphasize professional skepticism. It allows experienced team members to share insights and helps less experienced members understand fraud indicators.",
-    "tip": "Team discussion on fraud: Required, includes key members, emphasizes skepticism, shares insights across experience levels.",
+    "explanation": "FRAUD BRAINSTORMING SESSION is REQUIRED by AU-C 240. ALL KEY TEAM MEMBERS should participate to: (1) Share INSIGHTS about client-specific fraud risks, (2) Emphasize PROFESSIONAL SKEPTICISM mindset, (3) Consider how/where F/S might be susceptible to fraud, (4) Allow EXPERIENCED members to mentor newer staff. The discussion must include where fraud might occur and how it could be perpetrated/concealed. Why others fail: (A) Partners/managers only = Too narrow—staff doing fieldwork need fraud awareness too; (C) Only revenue testers = All team members need fraud awareness, not just revenue; (D) Optional = WRONG—it's specifically REQUIRED by auditing standards. Key: Fraud discussion should occur during PLANNING before fieldwork begins.",
+    "tip": "FRAUD DISCUSSION: Required, ALL key team members, during planning. Purpose: Skepticism, insights sharing, fraud awareness. NOT optional.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1177,8 +1177,8 @@ const questions = [
       "D": "Performing detailed tests of inventory count"
     },
     "correctAnswer": "C",
-    "explanation": "Overall responses address pervasive risks affecting the financial statements as a whole. They include: emphasizing professional skepticism, assigning more experienced staff, using specialists, providing more supervision, incorporating unpredictability, and changing timing/extent generally. Specific account testing is a response at the assertion level.",
-    "tip": "Financial statement level responses: Staffing, supervision, unpredictability, skepticism. Assertion level: Specific procedures for accounts.",
+    "explanation": "FINANCIAL STATEMENT LEVEL responses address PERVASIVE risks affecting the F/S as a whole. They're about HOW the audit is conducted generally: (1) Assign MORE EXPERIENCED staff, (2) Increase SUPERVISION of junior staff, (3) Use SPECIALISTS where needed, (4) Emphasize PROFESSIONAL SKEPTICISM, (5) Incorporate UNPREDICTABILITY (vary nature/timing/extent), (6) Change general TIMING (more year-end work). Experienced staff/more supervision = Overall response affecting entire audit approach. Why others are ASSERTION-LEVEL responses (specific account procedures): (A) Confirming A/P = Specific procedure for payables assertion; (B) Increased sample for A/R = Specific extent change for one account; (D) Inventory count tests = Specific procedure for inventory assertions. Key: F/S level = \"How do we run this audit?\" Assertion level = \"What specific tests for this account?\"",
+    "tip": "F/S LEVEL = Overall audit approach (staffing, supervision, skepticism, unpredictability). ASSERTION LEVEL = Specific account procedures. Different response types.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1198,8 +1198,8 @@ const questions = [
       "D": "Accuracy"
     },
     "correctAnswer": "C",
-    "explanation": "Occurrence addresses whether transactions and events that have been recorded have actually occurred and pertain to the entity. It's the opposite of completeness (which addresses whether all transactions are recorded). Occurrence tests for overstatement; completeness tests for understatement.",
-    "tip": "Occurrence: Did it happen? (overstatement risk). Completeness: Is everything recorded? (understatement risk). Often tested differently.",
+    "explanation": "OCCURRENCE assertion = Did recorded transactions ACTUALLY HAPPEN and pertain to this entity? Tests for OVERSTATEMENT risk (fictitious transactions, wrong period, wrong entity). Testing direction: START with RECORDED items → Trace to SUPPORTING EVIDENCE. COMPLETENESS is the OPPOSITE: Were ALL transactions recorded? Tests for UNDERSTATEMENT risk. Testing direction: Start with SOURCE DOCUMENTS → Trace to RECORDS. Why others fail: (A) Cutoff = About recording in the CORRECT PERIOD (timing, not whether it happened); (B) Completeness = OPPOSITE direction—whether everything is recorded; (D) Accuracy = About correct AMOUNTS and classifications, not whether transaction occurred. Key memory: OCCURRENCE = \"Did it happen?\" COMPLETENESS = \"Is everything recorded?\"",
+    "tip": "OCCURRENCE = Did it happen? (overstatement, trace from records to support). COMPLETENESS = All recorded? (understatement, trace from source to records).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1219,8 +1219,8 @@ const questions = [
       "D": "Whether amounts are recorded at appropriate values"
     },
     "correctAnswer": "C",
-    "explanation": "Rights and obligations addresses whether the entity holds or controls the rights to assets and whether liabilities are the obligations of the entity. This is particularly relevant for assets that may be leased, held on consignment, or subject to liens, and for understanding the nature of recorded liabilities.",
-    "tip": "Rights & Obligations: Does entity own/control assets? Are liabilities actually owed? Important for assets not clearly owned.",
+    "explanation": "RIGHTS AND OBLIGATIONS assertion asks: (1) Does entity HOLD or CONTROL RIGHTS to recorded assets? (2) Are recorded liabilities the entity's actual OBLIGATIONS? This is critical for: ASSETS that may be leased, held on CONSIGNMENT, subject to LIENS, or pledged as COLLATERAL. LIABILITIES that may be contingent, guaranteed, or shared. Example situations: Inventory on consignment (don't own it), leased equipment (operating vs. finance lease), factored receivables (sold or pledged?), land with liens. Why others fail: (A) Complete disclosures = COMPLETENESS assertion for disclosures; (B) Assets/liabilities exist = EXISTENCE assertion; (D) Appropriate values = VALUATION assertion. Key: Rights/obligations is about OWNERSHIP and OBLIGATION, not existence or value.",
+    "tip": "RIGHTS/OBLIGATIONS = Do we OWN assets? Do we OWE liabilities? Critical for consignment, leases, liens, pledged collateral. Ownership/obligation vs. existence/value.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1240,8 +1240,8 @@ const questions = [
       "D": "Accuracy of transaction recording"
     },
     "correctAnswer": "C",
-    "explanation": "Presentation and disclosure assertions include: occurrence/rights and obligations (disclosed events occurred and pertain to entity), completeness (all disclosures included), classification and understandability (properly classified and clearly presented), and accuracy and valuation (disclosed at appropriate amounts). Classification and understandability is unique to disclosures.",
-    "tip": "Disclosure assertions: Occurrence, Completeness, Classification & Understandability, Accuracy & Valuation. Focus on note disclosure quality.",
+    "explanation": "PRESENTATION AND DISCLOSURE ASSERTIONS (for note disclosures): (1) OCCURRENCE and Rights/Obligations = Disclosed events occurred and pertain to entity, (2) COMPLETENESS = All required disclosures are included, (3) CLASSIFICATION and UNDERSTANDABILITY = Properly classified, described, clearly presented, (4) ACCURACY and Valuation = Amounts and descriptions are correct. CLASSIFICATION AND UNDERSTANDABILITY is UNIQUE to disclosure assertions—it addresses whether disclosures are clear, well-organized, and understandable to users. Why others fail: (A) Existence = Account balance assertion, not specific to disclosures; (B) Valuation and allocation = Balance assertion (though accuracy/valuation is disclosure assertion); (D) Accuracy of transaction recording = Transaction assertion, not disclosure-specific.",
+    "tip": "DISCLOSURE ASSERTIONS: Occurrence, Completeness, Classification/Understandability (unique!), Accuracy/Valuation. Focus on NOTE quality and clarity.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1261,8 +1261,8 @@ const questions = [
       "D": "The successor must obtain the predecessor's workpapers"
     },
     "correctAnswer": "C",
-    "explanation": "The successor auditor is required to communicate with the predecessor auditor before accepting the engagement. Client permission is needed for the predecessor to respond. Inquiries include reasons for the change, disagreements with management, fraud concerns, and any issues bearing on integrity. Workpaper review is optional.",
-    "tip": "Predecessor communication: Required before acceptance. Need client permission. Ask about disagreements, fraud, integrity. Workpapers optional.",
+    "explanation": "PREDECESSOR-SUCCESSOR AUDITOR COMMUNICATION is REQUIRED before accepting engagement. Process: (1) Successor REQUESTS permission from CLIENT to contact predecessor, (2) Client grants permission (or successor considers implications if refused), (3) Successor INQUIRES about: reasons for change, disagreements with management, fraud concerns, integrity issues, unpaid fees. Why client permission needed: CONFIDENTIALITY—predecessor cannot share client info without permission. If client REFUSES permission = RED FLAG that should make successor consider carefully. Why others fail: (A) Only if terminated = Required in ALL cases of auditor change; (B) None/Optional = WRONG, it's specifically required; (D) Must obtain workpapers = OPTIONAL, not required (though often helpful). Key: Communication is REQUIRED; workpaper review is OPTIONAL.",
+    "tip": "Predecessor communication: REQUIRED before acceptance. Need CLIENT PERMISSION. Ask: Change reasons, disagreements, fraud, integrity. Workpapers = OPTIONAL.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1282,8 +1282,8 @@ const questions = [
       "D": "Confirming all transactions with third parties"
     },
     "correctAnswer": "C",
-    "explanation": "Identifying related parties requires multiple procedures: inquiring of management, reviewing prior-year workpapers, examining shareholder records, reviewing SEC filings and minutes, evaluating unusual or large transactions, and considering known business relationships. Relying only on management representations is insufficient.",
-    "tip": "Related party procedures: Multiple sources - inquiry, documents, minutes, unusual transactions. Don't rely solely on management representations.",
+    "explanation": "IDENTIFYING RELATED PARTIES requires MULTIPLE PROCEDURES because management may not disclose all relationships. Key procedures: (1) INQUIRE of management about related parties, (2) Review PRIOR-YEAR workpapers for known parties, (3) Examine SHAREHOLDER records and corporate structure, (4) Review MINUTES of board/shareholder meetings, (5) Review SEC FILINGS (proxy statements, 10-K), (6) Evaluate UNUSUAL or LARGE transactions (especially at non-market terms), (7) Consider known BUSINESS RELATIONSHIPS. Why others fail: (A) Only material transactions = Misses immaterial but related transactions; (B) Only management disclosure = INSUFFICIENT—management may hide or forget; (D) Confirm all with third parties = Not practical for related party ID. Key: Professional skepticism needed—related parties HIDE unfavorable relationships.",
+    "tip": "Related party ID: MULTIPLE sources (inquiry + documents + minutes + unusual transactions). NEVER rely solely on management. Skepticism required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
