@@ -1,6 +1,18 @@
 // Email Nurture Sequence for Meridian CPA Review
 // 7-email welcome sequence sent over 30 days
 
+import {
+  baseLayout,
+  header,
+  footer,
+  tipBox,
+  quoteBlock,
+  ctaSection,
+} from './components';
+import { EMAIL_BRAND } from './constants';
+
+const { colors } = EMAIL_BRAND;
+
 export interface NurtureEmail {
   id: number;
   dayOffset: number; // Days after signup to send
@@ -44,8 +56,8 @@ export const nurtureSequence: NurtureEmail[] = [
         "Prepare your study space before your first session"
       ],
       callToAction: {
-        text: "Review Your Study Plan",
-        url: "https://cpaexamblueprint.com/study-plan"
+        text: "Access Your Dashboard",
+        url: "https://meridiancpareview.com/dashboard"
       }
     }
   },
@@ -59,13 +71,13 @@ export const nurtureSequence: NurtureEmail[] = [
       headline: "Your First Week: A Strategic Approach",
       body: [
         "Your first week studying for the CPA exam sets the tone for everything that follows. Here's how to make it count.",
-        "Don't dive into content immediately. Instead, spend your first few sessions understanding the exam structure and your review materials.",
-        "Get familiar with how your course is organized. Know where to find lectures, practice questions, and simulations. This investment pays dividends later.",
-        "Then, start with the fundamentals. Whatever section you're tackling first, begin with the foundational concepts before moving to complex topics."
+        "Start by exploring your dashboard. Get familiar with the practice question bank and task-based simulations. Know where to track your progress and identify weak areas.",
+        "Don't try to cover everything at once. Pick one topic area in your first section and work through 20-30 practice questions. Focus on understanding the explanations, not just getting answers right.",
+        "The goal this week isn't to master content—it's to build the habit. Consistent daily practice beats marathon cramming every time."
       ],
       tips: [
-        "Watch the 'how to use this course' videos (most candidates skip these—don't)",
-        "Take one diagnostic quiz to assess your starting point",
+        "Explore your dashboard and find the progress tracking features",
+        "Complete a set of practice questions in your first topic area",
         "Set a realistic goal for hours this week, then hit it",
         "End each session by noting what you'll cover next (reduces startup friction)"
       ],
@@ -87,7 +99,7 @@ export const nurtureSequence: NurtureEmail[] = [
         "Multiple choice questions (MCQs) are 50% of your CPA exam score. Most candidates practice them wrong.",
         "The mistake: Doing MCQs passively, checking answers, and moving on without understanding WHY.",
         "The fix: For every question you miss, spend 2-3 minutes understanding the concept, not just memorizing the answer. Ask yourself: What rule or principle was being tested? Why is the correct answer correct? Why are the other options wrong?",
-        "This active review transforms wrong answers into learning opportunities. Candidates who do this consistently score significantly higher."
+        "This active review transforms wrong answers into learning opportunities. This approach helps build deeper understanding of the material."
       ],
       tips: [
         "Don't peek at the answer until you've committed to a choice",
@@ -97,7 +109,7 @@ export const nurtureSequence: NurtureEmail[] = [
       ],
       callToAction: {
         text: "More Study Strategies",
-        url: "https://cpaexamblueprint.com/blog"
+        url: "https://meridiancpareview.com/blog"
       }
     }
   },
@@ -150,7 +162,7 @@ export const nurtureSequence: NurtureEmail[] = [
       ],
       callToAction: {
         text: "Practice More Questions",
-        url: "https://cpaexamblueprint.com/dashboard/practice"
+        url: "https://meridiancpareview.com/dashboard/practice"
       }
     }
   },
@@ -176,32 +188,31 @@ export const nurtureSequence: NurtureEmail[] = [
         "Reach out if you need guidance—we're here to help"
       ],
       callToAction: {
-        text: "Access Free CPA Resources",
-        url: "https://cpaexamblueprint.com/tools/score-release-calendar"
+        text: "Access Free CPA Exam Resources",
+        url: "https://meridiancpareview.com/blog"
       }
     }
   },
   {
     id: 7,
     dayOffset: 30,
-    subject: "Your Path to Passing (Final Thoughts)",
-    previewText: "Everything you need to know, summarized",
+    subject: "Final Thoughts on Your CPA Journey",
+    previewText: "A month in—here's what matters most",
     category: "motivation",
     content: {
-      headline: "You Have Everything You Need",
+      headline: "Keep Moving Forward",
       body: [
         "This is my last scheduled email to you (though you'll continue receiving score release updates and occasional tips).",
-        "I want to leave you with this truth: You have everything you need to pass the CPA exam.",
-        "Not everyone who starts this journey finishes it. But you're still here, still committed, still showing up. That matters.",
+        "Not everyone who starts this journey finishes it. But you're still here, still committed, still showing up. That matters more than you might realize.",
         "The CPA exam tests persistence as much as knowledge. Every candidate who passed had moments of doubt. They kept going anyway.",
-        "In 12-18 months, you could be a licensed CPA. Think about that. The credential. The career opportunities. The sense of accomplishment. It's all within reach—if you keep moving forward.",
-        "Don't forget: we're here to help. Our blog is packed with free resources. Our tools are designed to support you. And our mission is your success."
+        "In 12-18 months, you could be working toward becoming a licensed CPA. Think about that. The credential. The career opportunities. The sense of accomplishment. It's within reach—if you keep moving forward.",
+        "Don't forget: we're here to help. Meridian CPA Academy is packed with free resources. Our tools are designed to support your preparation. And our mission is to help you study smarter."
       ],
       tips: [
         "Consistency over intensity: 15 focused hours beats 30 scattered hours",
-        "Trust your review course but verify with the AICPA Blueprint",
+        "Use the official AICPA Blueprint as your guide—our content is built around it",
         "Take care of yourself: sleep, exercise, and breaks improve retention",
-        "When you pass, come back and share your story—it helps the next candidate"
+        "Connect with other candidates—share tips and encouragement along the way"
       ],
       quote: {
         text: "Every expert was once a beginner. Every CPA once sat where you're sitting now.",
@@ -209,7 +220,7 @@ export const nurtureSequence: NurtureEmail[] = [
       },
       callToAction: {
         text: "Continue Studying",
-        url: "https://cpaexamblueprint.com/dashboard"
+        url: "https://meridiancpareview.com/dashboard"
       }
     }
   }
@@ -226,171 +237,57 @@ export function getEmailsUpToDay(maxDay: number): NurtureEmail[] {
 }
 
 // Generate HTML for a nurture email
-export function generateNurtureEmailHtml(email: NurtureEmail): string {
+export function generateNurtureEmailHtml(email: NurtureEmail, recipientEmail: string): string {
+  // Build body paragraphs
+  const bodyHtml = email.content.body
+    .map(p => `<p style="margin:0 0 16px 0;font-size:16px;">${p}</p>`)
+    .join('');
+
+  // Build tips section using component
   const tipsHtml = email.content.tips
-    ? `<div class="section">
-        <h3>Quick Tips</h3>
-        ${email.content.tips.map(tip => `<div class="tip">✓ ${tip}</div>`).join('')}
-       </div>`
+    ? tipBox({ tips: email.content.tips, title: 'Quick Tips' })
     : '';
 
+  // Build quote section using component
   const quoteHtml = email.content.quote
-    ? `<div class="quote">
-        <p>"${email.content.quote.text}"</p>
-        <p class="quote-author">— ${email.content.quote.author}</p>
-       </div>`
+    ? quoteBlock({
+        text: email.content.quote.text,
+        author: email.content.quote.author,
+      })
     : '';
 
+  // Build CTA section using component
   const ctaHtml = email.content.callToAction
-    ? `<div class="cta">
-        <a href="${email.content.callToAction.url}" class="button">${email.content.callToAction.text}</a>
-       </div>`
+    ? ctaSection({
+        text: email.content.callToAction.text,
+        url: email.content.callToAction.url,
+      })
     : '';
 
-  return `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.7;
-      color: #1a1a2e;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-    }
-    .wrapper {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .header {
-      background: linear-gradient(135deg, #1e3a5f, #152a45);
-      color: white;
-      padding: 30px;
-      border-radius: 12px 12px 0 0;
-      text-align: center;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 26px;
-      font-weight: 700;
-    }
-    .header .subtitle {
-      margin: 8px 0 0 0;
-      opacity: 0.9;
-      font-size: 15px;
-    }
-    .content {
-      background: white;
-      padding: 35px;
-      border-radius: 0 0 12px 12px;
-    }
-    .content p {
-      margin: 0 0 16px 0;
-      font-size: 16px;
-    }
-    .section {
-      background: #f8fafc;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 24px 0;
-      border-left: 4px solid #1e3a5f;
-    }
-    .section h3 {
-      margin: 0 0 12px 0;
-      color: #1e3a5f;
-      font-size: 16px;
-    }
-    .tip {
-      padding: 8px 0;
-      border-bottom: 1px solid #e2e8f0;
-      font-size: 15px;
-    }
-    .tip:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .quote {
-      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-      padding: 24px;
-      border-radius: 8px;
-      margin: 24px 0;
-      border-left: 4px solid #0ea5e9;
-      font-style: italic;
-    }
-    .quote p {
-      margin: 0;
-      font-size: 17px;
-      color: #0c4a6e;
-    }
-    .quote-author {
-      margin-top: 12px !important;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px !important;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid #e2e8f0;
-    }
-    .button {
-      display: inline-block;
-      background: #16a34a;
-      color: white !important;
-      padding: 14px 32px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 16px;
-    }
-    .footer {
-      text-align: center;
-      color: #64748b;
-      font-size: 13px;
-      margin-top: 24px;
-      padding: 0 20px;
-    }
-    .footer a {
-      color: #1e3a5f;
-    }
-    .divider {
-      height: 1px;
-      background: #e2e8f0;
-      margin: 24px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="header">
-      <h1>${email.content.headline}</h1>
-      <p class="subtitle">Meridian CPA Review</p>
-    </div>
-    <div class="content">
-      ${email.content.body.map(p => `<p>${p}</p>`).join('')}
+  const content = `
+    ${header({
+      type: 'full',
+      headline: email.content.headline,
+      showLogo: true,
+    })}
 
+    <div class="content" style="background:#ffffff;padding:35px;border-radius:0 0 12px 12px;">
+      ${bodyHtml}
       ${tipsHtml}
-
       ${quoteHtml}
-
       ${ctaHtml}
     </div>
-    <div class="footer">
-      <p>Meridian CPA Review — Affordable CPA exam study tools</p>
-      <p><a href="https://cpaexamblueprint.com">cpaexamblueprint.com</a></p>
-      <p style="margin-top: 16px; font-size: 12px;">
-        You received this email because you created a study plan at Meridian CPA Review.<br>
-        <a href="https://cpaexamblueprint.com/unsubscribe">Unsubscribe</a>
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+
+    ${footer({
+      type: 'full',
+      email: recipientEmail,
+      customMessage: 'You received this email because you created a study plan at Meridian CPA Review.',
+    })}
   `;
+
+  return baseLayout({
+    preheader: email.previewText,
+    subject: email.subject,
+    content,
+  });
 }

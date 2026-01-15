@@ -1,6 +1,17 @@
 // Segment-based email content for targeted follow-ups
 // Sends relevant content based on user behavior and quiz answers
 
+import {
+  baseLayout,
+  header,
+  footer,
+  resourceList,
+  ctaSection,
+} from './components';
+import { EMAIL_BRAND } from './constants';
+
+const { colors } = EMAIL_BRAND;
+
 export interface SegmentEmail {
   id: string;
   segment: string;
@@ -40,30 +51,30 @@ export const segmentEmails: Record<string, SegmentEmail> = {
   "working-full-time": {
     id: "seg-working-ft",
     segment: "working-full-time",
-    subject: "CPA Strategies for Working Professionals",
-    previewText: "Time-tested tips from candidates who work 40+ hours",
+    subject: "CPA Exam Strategies for Working Professionals",
+    previewText: "Practical tips for balancing work and CPA studies",
     content: {
       headline: "Studying While Working Full-Time",
       body: [
         "You mentioned you're working full-time while studying for the CPA exam. You're in good company—most candidates are balancing the same challenge.",
         "The key isn't finding more time. It's protecting the time you have and using it effectively.",
-        "I've compiled our best resources specifically for working professionals. These strategies come from candidates who studied while working demanding jobs.",
+        "We've put together strategies specifically for working professionals to help you make the most of your limited study time.",
         "Remember: consistent, moderate effort beats sporadic intensity. Even 10 focused hours per week compounds over time."
       ],
       callToAction: {
-        text: "Read the Full Guide",
-        url: "https://cpaexamblueprint.com/working-full-time"
+        text: "Access Your Dashboard",
+        url: "https://meridiancpareview.com/dashboard"
       },
       resources: [
         {
-          title: "CPA Exam While Working Full Time",
-          url: "https://cpaexamblueprint.com/blog/cpa-exam-while-working-full-time",
-          description: "Complete guide with sample schedules"
+          title: "Meridian CPA Academy",
+          url: "https://meridiancpareview.com/cpa-academy",
+          description: "Your free study dashboard with progress tracking"
         },
         {
-          title: "Study Hours Calculator",
-          url: "https://cpaexamblueprint.com/tools/study-hours-calculator",
-          description: "Plan your timeline based on available hours"
+          title: "Practice Questions",
+          url: "https://meridiancpareview.com/dashboard/practice",
+          description: "6,000+ blueprint-aligned questions"
         }
       ]
     }
@@ -75,26 +86,26 @@ export const segmentEmails: Record<string, SegmentEmail> = {
     subject: "Starting with FAR? Here's Your Game Plan",
     previewText: "Section-specific strategies for Financial Accounting & Reporting",
     content: {
-      headline: "Conquering FAR First",
+      headline: "Tackling FAR First",
       body: [
-        "Your study plan recommends starting with FAR—the most comprehensive core section. Good choice for building a strong foundation.",
+        "Your study plan recommends starting with FAR—the most comprehensive core section. This is a common choice for building a strong foundation.",
         "FAR has the lowest pass rate among core sections (40-43%), but that's largely because it covers the broadest range of topics, not because it's impossibly difficult.",
-        "The key to FAR success: don't skip governmental accounting. It's 20-30% of your score, and many candidates underestimate it.",
-        "I've put together FAR-specific resources to help you prepare strategically."
+        "A key focus area for FAR: governmental accounting. It's 20-30% of your score, and many candidates underestimate it.",
+        "Use Meridian CPA Academy to practice FAR questions and track your progress."
       ],
       callToAction: {
-        text: "FAR Study Guide",
-        url: "https://cpaexamblueprint.com/blog/far-section-complete-study-guide"
+        text: "Practice FAR Questions",
+        url: "https://meridiancpareview.com/dashboard/practice"
       },
       resources: [
         {
-          title: "FAR Section Complete Guide",
-          url: "https://cpaexamblueprint.com/blog/far-section-complete-study-guide",
-          description: "Content breakdown and study strategy"
+          title: "Meridian CPA Academy",
+          url: "https://meridiancpareview.com/cpa-academy",
+          description: "Your free study dashboard with progress tracking"
         },
         {
           title: "FAR Section Overview",
-          url: "https://cpaexamblueprint.com/sections/far",
+          url: "https://meridiancpareview.com/sections/far",
           description: "Exam format and key topics"
         }
       ]
@@ -105,28 +116,28 @@ export const segmentEmails: Record<string, SegmentEmail> = {
     id: "seg-aud-first",
     segment: "aud-first",
     subject: "Starting with AUD? Here's Your Strategy",
-    previewText: "Master auditing concepts with these proven approaches",
+    previewText: "Tips for mastering auditing concepts",
     content: {
-      headline: "Mastering Audit First",
+      headline: "Tackling Audit First",
       body: [
         "Your plan recommends starting with AUD—a solid choice if you're coming from an audit background or want to tackle conceptual material while fresh.",
         "AUD is unique among CPA sections: it tests the 'Evaluation' skill level, requiring professional judgment rather than just recall.",
-        "The secret to AUD: understand the 'why' behind procedures. Don't just memorize—learn why specific audit procedures are appropriate for specific risks.",
-        "Here are AUD-specific resources to guide your preparation."
+        "A helpful approach for AUD: understand the 'why' behind procedures. Don't just memorize—learn why specific audit procedures are appropriate for specific risks.",
+        "Use Meridian CPA Academy to practice AUD questions and track your progress."
       ],
       callToAction: {
-        text: "AUD Study Guide",
-        url: "https://cpaexamblueprint.com/blog/aud-section-complete-study-guide"
+        text: "Practice AUD Questions",
+        url: "https://meridiancpareview.com/dashboard/practice"
       },
       resources: [
         {
-          title: "AUD Section Complete Guide",
-          url: "https://cpaexamblueprint.com/blog/aud-section-complete-study-guide",
-          description: "Content areas and strategies"
+          title: "Meridian CPA Academy",
+          url: "https://meridiancpareview.com/cpa-academy",
+          description: "Your free study dashboard with progress tracking"
         },
         {
           title: "AUD Section Overview",
-          url: "https://cpaexamblueprint.com/sections/aud",
+          url: "https://meridiancpareview.com/sections/aud",
           description: "Exam format and key concepts"
         }
       ]
@@ -136,29 +147,29 @@ export const segmentEmails: Record<string, SegmentEmail> = {
   "reg-first": {
     id: "seg-reg-first",
     segment: "reg-first",
-    subject: "Starting with REG? Smart Choice",
-    previewText: "Tax and business law strategies for success",
+    subject: "Starting with REG? Here's Your Strategy",
+    previewText: "Tax and business law study tips",
     content: {
-      headline: "REG: Your Starting Point",
+      headline: "Tackling REG First",
       body: [
-        "Your plan recommends starting with REG—excellent for building confidence since it has the highest pass rate among core sections (58-64%).",
+        "Your plan recommends starting with REG. This section has historically had the highest pass rate among core sections (58-64%), making it a popular starting choice.",
         "REG combines federal taxation with business law. If you have any tax background, you'll find parts of this section familiar.",
-        "Key tip: Don't neglect business law (10-20% of the exam). Candidates often over-focus on tax and lose easy points on conceptual law questions.",
-        "Here are REG-specific resources for your preparation."
+        "Key tip: Don't neglect business law (10-20% of the exam). It's important to balance your study time across all topics.",
+        "Use Meridian CPA Academy to practice REG questions and track your progress."
       ],
       callToAction: {
-        text: "REG Study Guide",
-        url: "https://cpaexamblueprint.com/blog/reg-section-complete-study-guide"
+        text: "Practice REG Questions",
+        url: "https://meridiancpareview.com/dashboard/practice"
       },
       resources: [
         {
-          title: "REG Section Complete Guide",
-          url: "https://cpaexamblueprint.com/blog/reg-section-complete-study-guide",
-          description: "Content breakdown and formulas"
+          title: "Meridian CPA Academy",
+          url: "https://meridiancpareview.com/cpa-academy",
+          description: "Your free study dashboard with progress tracking"
         },
         {
           title: "REG Section Overview",
-          url: "https://cpaexamblueprint.com/sections/reg",
+          url: "https://meridiancpareview.com/sections/reg",
           description: "Exam structure and topics"
         }
       ]
@@ -173,25 +184,25 @@ export const segmentEmails: Record<string, SegmentEmail> = {
     content: {
       headline: "Maximizing Limited Study Time",
       body: [
-        "You indicated you have 10-15 hours per week for studying. That's absolutely enough to pass—you'll just need a longer timeline.",
+        "You indicated you have 10-15 hours per week for studying. Many candidates have successfully prepared for the CPA exam with similar schedules—it just requires a longer timeline and efficient use of your time.",
         "With limited hours, efficiency becomes critical. Every study session needs to count.",
         "The good news: research shows that spaced repetition (shorter, more frequent sessions) often produces better retention than marathon study days.",
-        "Here's how to make your limited hours work harder."
+        "Here's how to make your limited hours more effective."
       ],
       callToAction: {
-        text: "Time Management Tips",
-        url: "https://cpaexamblueprint.com/blog/cpa-exam-while-working-full-time"
+        text: "Access Your Dashboard",
+        url: "https://meridiancpareview.com/dashboard"
       },
       resources: [
         {
-          title: "Study Hours Calculator",
-          url: "https://cpaexamblueprint.com/tools/study-hours-calculator",
-          description: "Calculate your realistic timeline"
+          title: "Meridian CPA Academy",
+          url: "https://meridiancpareview.com/cpa-academy",
+          description: "Your free study dashboard with progress tracking"
         },
         {
-          title: "Working Full Time Guide",
-          url: "https://cpaexamblueprint.com/blog/cpa-exam-while-working-full-time",
-          description: "Strategies for busy schedules"
+          title: "Practice Questions",
+          url: "https://meridiancpareview.com/dashboard/practice",
+          description: "6,000+ blueprint-aligned questions"
         }
       ]
     }
@@ -203,27 +214,27 @@ export const segmentEmails: Record<string, SegmentEmail> = {
     subject: "Coming Back Stronger",
     previewText: "Strategies for candidates retaking a section",
     content: {
-      headline: "Retaking a Section? You've Got This.",
+      headline: "Retaking a Section? Here's How to Approach It",
       body: [
-        "If you're retaking a section, first know this: you're not alone. Most successful CPAs didn't pass every section on the first try.",
+        "If you're retaking a section, first know this: you're not alone. Many CPAs didn't pass every section on the first try.",
         "The fact that you're back studying shows resilience. That matters more than a first-attempt pass.",
         "For retakes, strategy is everything. Identify what went wrong last time—was it content gaps, time management, or test anxiety?",
-        "I've compiled our best resources for candidates in exactly your position."
+        "Use Meridian CPA Academy to focus on your weak areas and track your improvement."
       ],
       callToAction: {
-        text: "I Failed, Now What?",
-        url: "https://cpaexamblueprint.com/guides/failed-section"
+        text: "Access Your Dashboard",
+        url: "https://meridiancpareview.com/dashboard"
       },
       resources: [
         {
-          title: "I Failed, Now What? Guide",
-          url: "https://cpaexamblueprint.com/guides/failed-section",
-          description: "Complete recovery strategy"
+          title: "Meridian CPA Academy",
+          url: "https://meridiancpareview.com/cpa-academy",
+          description: "Your free study dashboard with progress tracking"
         },
         {
-          title: "Score Report Interpretation",
-          url: "https://cpaexamblueprint.com/guides/failed-section#score-report",
-          description: "What your score report tells you"
+          title: "Flagged Questions",
+          url: "https://meridiancpareview.com/dashboard/flagged-questions",
+          description: "Review questions you've bookmarked"
         }
       ]
     }
@@ -279,148 +290,51 @@ export function determineSegments(quizAnswers: {
 }
 
 // Generate HTML for segment email
-export function generateSegmentEmailHtml(email: SegmentEmail): string {
+export function generateSegmentEmailHtml(email: SegmentEmail, recipientEmail: string): string {
+  // Build body paragraphs
+  const bodyHtml = email.content.body
+    .map(p => `<p style="margin:0 0 16px 0;font-size:16px;">${p}</p>`)
+    .join('');
+
+  // Build resources section using component
   const resourcesHtml = email.content.resources
-    ? `<div class="resources">
-        <h3>Recommended Resources</h3>
-        ${email.content.resources.map(r => `
-          <a href="${r.url}" class="resource-item">
-            <div class="resource-title">${r.title}</div>
-            <div class="resource-desc">${r.description}</div>
-          </a>
-        `).join('')}
-       </div>`
+    ? resourceList({
+        title: 'Recommended Resources',
+        resources: email.content.resources,
+      })
     : '';
 
+  // Build CTA section using component
   const ctaHtml = email.content.callToAction
-    ? `<div class="cta">
-        <a href="${email.content.callToAction.url}" class="button">${email.content.callToAction.text}</a>
-       </div>`
+    ? ctaSection({
+        text: email.content.callToAction.text,
+        url: email.content.callToAction.url,
+      })
     : '';
 
-  return `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.7;
-      color: #1a1a2e;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-    }
-    .wrapper {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .header {
-      background: linear-gradient(135deg, #1e3a5f, #152a45);
-      color: white;
-      padding: 30px;
-      border-radius: 12px 12px 0 0;
-      text-align: center;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: 700;
-    }
-    .content {
-      background: white;
-      padding: 35px;
-      border-radius: 0 0 12px 12px;
-    }
-    .content p {
-      margin: 0 0 16px 0;
-      font-size: 16px;
-    }
-    .resources {
-      background: #f8fafc;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 24px 0;
-    }
-    .resources h3 {
-      margin: 0 0 16px 0;
-      color: #1e3a5f;
-      font-size: 16px;
-    }
-    .resource-item {
-      display: block;
-      padding: 12px;
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 6px;
-      margin-bottom: 8px;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s;
-    }
-    .resource-item:hover {
-      border-color: #1e3a5f;
-    }
-    .resource-item:last-child {
-      margin-bottom: 0;
-    }
-    .resource-title {
-      font-weight: 600;
-      color: #1e3a5f;
-      margin-bottom: 4px;
-    }
-    .resource-desc {
-      font-size: 14px;
-      color: #64748b;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid #e2e8f0;
-    }
-    .button {
-      display: inline-block;
-      background: #16a34a;
-      color: white !important;
-      padding: 14px 32px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 16px;
-    }
-    .footer {
-      text-align: center;
-      color: #64748b;
-      font-size: 13px;
-      margin-top: 24px;
-    }
-    .footer a {
-      color: #1e3a5f;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="header">
-      <h1>${email.content.headline}</h1>
-    </div>
-    <div class="content">
-      ${email.content.body.map(p => `<p>${p}</p>`).join('')}
+  const content = `
+    ${header({
+      type: 'full',
+      headline: email.content.headline,
+      showLogo: true,
+    })}
 
+    <div class="content" style="background:#ffffff;padding:35px;border-radius:0 0 12px 12px;">
+      ${bodyHtml}
       ${resourcesHtml}
-
       ${ctaHtml}
     </div>
-    <div class="footer">
-      <p>Meridian CPA Review — Affordable CPA exam study tools</p>
-      <p><a href="https://cpaexamblueprint.com">cpaexamblueprint.com</a></p>
-    </div>
-  </div>
-</body>
-</html>
+
+    ${footer({
+      type: 'full',
+      email: recipientEmail,
+      customMessage: 'You received this email based on your CPA study preferences.',
+    })}
   `;
+
+  return baseLayout({
+    preheader: email.previewText,
+    subject: email.subject,
+    content,
+  });
 }
