@@ -337,8 +337,8 @@ const questions = [
       "D": "Only income earned within the United States"
     },
     "correctAnswer": "B",
-    "explanation": "IRC Section 61 defines gross income broadly as all income from whatever source derived, unless specifically excluded by another provision of the tax code. This includes wages, business income, investment income, and all other income regardless of form or source.",
-    "tip": "Gross income = everything unless the code says it's excluded.",
+    "explanation": "Per IRC §61(a), gross income means 'all income from whatever source derived' unless specifically excluded by another Code section. This broad definition encompasses wages, salaries, business profits, interest, dividends, rents, royalties, capital gains, and virtually any accession to wealth. The key principle: start with everything taxable, then look for specific exclusions (§§101-139). Why other answers are wrong: (A) Only employment income—ignores investment income, business income, and other sources; (C) Form W-2 only—misses self-employment, investment income, rental income reported on other forms; (D) Only U.S. income—U.S. citizens/residents are taxed on worldwide income regardless of source.",
+    "tip": "IRC §61 = ALL income taxable unless excluded. Remember: 'from whatever source derived' is intentionally broad.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -358,8 +358,8 @@ const questions = [
       "D": "Employer-paid health insurance premiums"
     },
     "correctAnswer": "A",
-    "explanation": "Cash wages and tips are fully includible in gross income. Employer-paid health insurance premiums, pension contributions, and the first $50,000 of group term life insurance coverage are excluded from the employee's gross income under specific code sections.",
-    "tip": "Cash = taxable. Most employer benefits have specific exclusions.",
+    "explanation": "Per IRC §61, cash wages and tips are fully includible in gross income with no exclusion. Tips must be reported if they exceed $20/month. The other items have specific statutory exclusions: (B) Employer pension contributions—excluded under §402(a) until distributed; (C) Group term life up to $50,000—excluded under §79; (D) Health insurance premiums—excluded under §106. Why other answers are wrong: (B) Qualified pension contributions are deferred, not excluded permanently—tax is paid upon distribution; (C) Only the FIRST $50,000 of coverage is excluded—excess coverage is taxable; (D) Employer-paid health premiums have unlimited exclusion under §106.",
+    "tip": "Cash compensation = always taxable. Employer benefits = check for specific exclusions (§§79, 106, 132, 402).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -379,8 +379,8 @@ const questions = [
       "D": "Never taxable"
     },
     "correctAnswer": "B",
-    "explanation": "Interest on U.S. savings bonds (Series EE, I bonds) is taxable for federal income tax purposes but exempt from state and local taxes. This differs from municipal bonds, which are generally exempt from federal tax.",
-    "tip": "Federal bonds = taxable for federal, exempt from state. Municipal bonds = opposite.",
+    "explanation": "Per IRC §61(a)(4), interest income is generally includible in gross income. U.S. savings bond interest (Series EE, I, HH bonds) is subject to federal income tax but exempt from state and local taxes under 31 USC §3124 (federal instrumentalities doctrine). Taxpayers may defer reporting EE/I bond interest until redemption or may elect annual accrual. Why other answers are wrong: (A) Federal bonds are NOT federally exempt—only municipal bonds receive §103 federal exemption; (C) State exemption applies to ALL holders, not just some; (D) Interest on U.S. obligations is definitely taxable at the federal level.",
+    "tip": "Federal bonds = federally taxable, state-exempt. Municipal bonds = federally exempt (§103), may be state-taxable. Opposite treatment!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -400,8 +400,8 @@ const questions = [
       "D": "Included in income only if from a relative"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC Section 102, the value of property acquired by gift, bequest, devise, or inheritance is excluded from the recipient's gross income. The gift tax, if any, is paid by the donor, not the recipient.",
-    "tip": "Gifts are excluded from the recipient's income—donor may owe gift tax.",
+    "explanation": "Per IRC §102(a), gross income does not include the value of property acquired by gift, bequest, devise, or inheritance. The recipient receives the gift tax-free; any gift tax due is the donor's responsibility (IRC §2502). Important: Income FROM gifted property (interest, dividends, rent) IS taxable to the recipient—only the gift itself is excluded. Why other answers are wrong: (A) Gifts are specifically excluded under §102, not included; (C) No $10,000 threshold exists for gift INCOME exclusion—the annual exclusion ($18,000 for 2024) applies to the DONOR's gift tax, not recipient's income; (D) The exclusion applies regardless of whether the donor is a relative or stranger.",
+    "tip": "Gift to recipient = tax-free (§102). Gift TAX = donor's problem. Income FROM gift = taxable to recipient.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -421,8 +421,8 @@ const questions = [
       "D": "Taxable as capital gains"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC Section 101(a), life insurance proceeds paid by reason of the death of the insured are excluded from the beneficiary's gross income. This exclusion applies regardless of the amount and whether the policy was term or whole life.",
-    "tip": "Death benefit life insurance = tax-free to beneficiary.",
+    "explanation": "Per IRC §101(a)(1), life insurance proceeds paid by reason of the insured's death are excluded from the beneficiary's gross income. This exclusion is unlimited—there's no cap on the amount excludable. Exceptions: (1) Transfer-for-value rule under §101(a)(2)—if policy was sold, gain is taxable; (2) Employer-owned life insurance (EOLI) under §101(j) requires notice/consent. Why other answers are wrong: (A) The 'premiums paid' approach applies to SURRENDER of a policy by the owner, not death benefits to beneficiaries; (B) Death benefits are specifically excluded, not taxable; (D) Life insurance proceeds retain their character as excluded amounts, not capital gains.",
+    "tip": "Life insurance death benefit = 100% excluded (§101). Watch for transfer-for-value exception.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -442,8 +442,8 @@ const questions = [
       "D": "Excluded from gross income for federal tax purposes"
     },
     "correctAnswer": "D",
-    "explanation": "Interest on state and local government bonds (municipal bonds) is generally excluded from federal gross income under IRC Section 103. However, some municipal bonds (private activity bonds) may be subject to the alternative minimum tax.",
-    "tip": "Muni bond interest = federal tax-free (but may affect AMT).",
+    "explanation": "Per IRC §103(a), gross income does not include interest on any state or local bond. This exclusion allows state/local governments to borrow at lower interest rates because investors accept lower yields for tax-free income. Exception: Private activity bonds (PABs) may be tax preference items for AMT under §57(a)(5). Why other answers are wrong: (A) Municipal bond interest is federally EXEMPT, not taxable; (B) Itemizing is irrelevant—the exclusion applies to ALL taxpayers; (C) Most muni interest is state-exempt in the issuing state (but may be taxable in other states).",
+    "tip": "Municipal bonds (§103) = federally exempt. Opposite of federal bonds! Watch for AMT preference on private activity bonds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -463,8 +463,8 @@ const questions = [
       "D": "Self-employment tax rates"
     },
     "correctAnswer": "B",
-    "explanation": "Qualified dividends are taxed at preferential long-term capital gains rates of 0%, 15%, or 20% based on the taxpayer's taxable income level. To be qualified, dividends must be from domestic corporations or qualified foreign corporations and meet holding period requirements.",
-    "tip": "Qualified dividends = same rate as LTCG (0%, 15%, or 20%).",
+    "explanation": "Per IRC §1(h)(11), qualified dividends are taxed at preferential rates of 0%, 15%, or 20% (same as long-term capital gains rates), depending on the taxpayer's taxable income bracket. To qualify: (1) Paid by U.S. corporation or qualified foreign corporation; (2) Stock held >60 days during 121-day period around ex-dividend date. Dividends from REITs and money market funds typically do NOT qualify. Why other answers are wrong: (A) Ordinary rates apply to NON-qualified dividends; (C) The rate varies by income bracket—it's not a flat 15% for everyone; (D) Self-employment tax applies to earned income, not investment dividends.",
+    "tip": "Qualified dividends = LTCG rates (0/15/20%). Requirements: U.S./qualified foreign corp + 60-day holding period.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -484,8 +484,8 @@ const questions = [
       "D": "Deductible by the payor and taxable to the recipient"
     },
     "correctAnswer": "A",
-    "explanation": "The Tax Cuts and Jobs Act changed the treatment of alimony for agreements executed after 2018. Alimony is no longer deductible by the payor and is not included in the recipient's gross income. This reverses the prior treatment.",
-    "tip": "Post-2018 divorce: alimony is neither deductible nor taxable (no tax effect).",
+    "explanation": "Per IRC §71 as amended by TCJA (P.L. 115-97), for divorce/separation agreements executed after December 31, 2018, alimony is NOT deductible by the payor and NOT includible by the recipient. This reverses the pre-2019 treatment where alimony was 'above-the-line' deductible to payor and taxable to recipient. The new rule shifts the tax burden to the higher-earning payor. Why other answers are wrong: (B) The recipient has no deduction—and no inclusion either; (C) Alimony is not a capital transaction; (D) This describes PRE-2019 law, which no longer applies to new agreements.",
+    "tip": "Post-2018 alimony: NO deduction, NO income (TCJA change). Pre-2019 agreements: old rules (deductible/taxable) still apply.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -505,8 +505,8 @@ const questions = [
       "D": "Reduce basis in property by the canceled amount"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC Section 61(a)(12), income from the cancellation of debt is included in gross income. Exceptions exist for bankruptcy, insolvency, qualified principal residence indebtedness (for certain years), and qualified farm or business real property debt.",
-    "tip": "Debt forgiveness = taxable income unless an exception applies (bankruptcy, insolvency).",
+    "explanation": "Per IRC §61(a)(11), income from discharge of indebtedness is includible in gross income. When a creditor forgives a debt, the debtor has an accession to wealth equal to the canceled amount. Exceptions under §108: (1) Bankruptcy (Title 11); (2) Insolvency (to extent insolvent); (3) Qualified farm debt; (4) Qualified real property business debt; (5) Qualified principal residence debt (expired provisions may be extended). Why other answers are wrong: (A) The $600 threshold is for Form 1099-C REPORTING, not taxation—amounts under $600 are still taxable; (C) Cancellation of debt income is ordinary income, not capital gain; (D) Reducing basis is an ALTERNATIVE to inclusion, available only in certain §108 exclusion situations.",
+    "tip": "Debt cancellation = ordinary income (§61). Exceptions (§108): BIBB—Bankruptcy, Insolvency, Business property, residence (expired).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -526,8 +526,8 @@ const questions = [
       "D": "Report the full amount as ordinary income"
     },
     "correctAnswer": "D",
-    "explanation": "Prizes and awards, including lottery winnings, are fully includible in gross income as ordinary income under IRC Section 74. There is no de minimis exception. Gambling winnings are reported on Schedule 1 of Form 1040.",
-    "tip": "Lottery/gambling winnings = fully taxable ordinary income.",
+    "explanation": "Per IRC §74(a), gross income includes amounts received as prizes and awards. This includes lottery winnings, game show prizes, and other gambling winnings—ALL taxable as ordinary income at marginal rates. Gambling losses can offset winnings but only up to the amount of winnings (§165(d)), and only if the taxpayer itemizes. Winnings are reported on Form W-2G if over certain thresholds. Why other answers are wrong: (A) No 'windfall' exclusion exists—IRC §61 captures all accessions to wealth; (B) Gambling winnings are ordinary income, not capital gains; (C) There is NO de minimis threshold—even $1 of lottery winnings is technically taxable.",
+    "tip": "Prizes/gambling = ordinary income (§74). Losses offset only up to winnings (itemizers only). Report on W-2G.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -547,8 +547,8 @@ const questions = [
       "D": "At 100% if the taxpayer is still working"
     },
     "correctAnswer": "C",
-    "explanation": "Social Security benefits are taxed based on provisional income (modified AGI plus 50% of benefits). If provisional income exceeds certain thresholds, up to 50% or 85% of benefits become taxable. The maximum taxable portion is 85%.",
-    "tip": "Social Security taxability: 0%, 50%, or 85% based on provisional income thresholds.",
+    "explanation": "Per IRC §86, Social Security benefits may be partially taxable based on 'provisional income' (modified AGI + 50% of SS benefits + tax-exempt interest). For 2024: Single filers—0% taxable if provisional <$25,000; up to 50% taxable if $25,000-$34,000; up to 85% taxable if >$34,000. MFJ—0% if <$32,000; 50% if $32,000-$44,000; 85% if >$44,000. The maximum is 85%—never 100%. Why other answers are wrong: (A) Age is irrelevant to SS taxability—it depends on total income; (B) SS can be taxable for higher-income retirees; (D) Working status doesn't make benefits 100% taxable—same income thresholds apply.",
+    "tip": "Social Security taxability (§86): 0%, 50%, or MAX 85%. Calculate 'provisional income' = MAGI + 50% SS benefits + tax-exempt interest.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -568,8 +568,8 @@ const questions = [
       "D": "Excluded from gross income"
     },
     "correctAnswer": "A",
-    "explanation": "Unemployment compensation is fully taxable and included in gross income under IRC Section 85. Recipients receive Form 1099-G reporting the total amount paid during the year. Taxpayers can elect to have federal income tax withheld from benefits.",
-    "tip": "Unemployment benefits = fully taxable (no exclusion).",
+    "explanation": "Per IRC §85, unemployment compensation is fully includible in gross income. This includes state unemployment benefits, Federal Unemployment Trust Fund benefits, and Railroad Unemployment Insurance Act benefits. Reported on Form 1099-G. Note: The American Rescue Plan Act (2021) temporarily excluded up to $10,200 of unemployment for 2020 only—this was a one-time provision, not permanent law. Why other answers are wrong: (B) State taxation varies, but FEDERAL tax applies regardless; (C) All unemployment is taxable regardless of other income; (D) There is no exclusion under current law (post-2021).",
+    "tip": "Unemployment (§85) = fully taxable. Report on Schedule 1. The 2020 exclusion was temporary only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -589,8 +589,8 @@ const questions = [
       "D": "Fully taxable"
     },
     "correctAnswer": "A",
-    "explanation": "Worker's compensation payments received for personal physical injuries or sickness arising out of employment are excluded from gross income under IRC Section 104(a)(1). This includes both periodic payments and lump-sum settlements.",
-    "tip": "Worker's comp = tax-free (for physical injury/sickness).",
+    "explanation": "Per IRC §104(a)(1), amounts received under worker's compensation acts as compensation for personal physical injuries or physical sickness are excluded from gross income. This exclusion covers lost wages replacement and medical expense reimbursement from worker's comp insurance. However, if employee returns to work and receives 'continuation pay' in lieu of worker's comp, that pay is taxable. Why other answers are wrong: (B) Worker's comp is fully excluded, not partially; (C) There is no 'basis' concept for personal injury awards; (D) Worker's comp is specifically excluded, not taxable.",
+    "tip": "Worker's comp (§104) = 100% excluded for PHYSICAL injury. Non-physical injury awards (emotional distress without physical injury) = taxable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -610,8 +610,8 @@ const questions = [
       "D": "Fully taxable"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC Section 117, qualified scholarships used for tuition and required fees, books, supplies, and equipment are excluded from gross income for degree-seeking students. Amounts used for room, board, or other expenses are taxable.",
-    "tip": "Scholarship for tuition/fees = tax-free. Room and board = taxable.",
+    "explanation": "Per IRC §117(a), gross income does not include qualified scholarships received by degree candidates. 'Qualified' means amounts used for tuition, fees, books, supplies, and equipment REQUIRED for courses. Key limitations: (1) Must be degree-seeking student at eligible institution; (2) Room, board, travel, and research/teaching pay are TAXABLE; (3) Amounts representing payment for teaching/research services are taxable under §117(c). Why other answers are wrong: (B) No $10,000 threshold—the exclusion depends on USE, not amount; (C) Only the STUDENT excludes it; donors may get charitable deductions separately; (D) Amounts for qualifying educational expenses are excluded, not taxable.",
+    "tip": "Scholarship (§117) exclusion = TUITION only. Room/board/stipends = taxable. Must be degree candidate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -631,8 +631,8 @@ const questions = [
       "D": "The income is credited, set apart, or made available without substantial limitations"
     },
     "correctAnswer": "D",
-    "explanation": "Constructive receipt means income is taxable when it is credited to the taxpayer's account, set apart for them, or made available so they can draw upon it—even if not actually received. The taxpayer cannot turn their back on available income.",
-    "tip": "Constructive receipt = income available without restriction, even if not taken.",
+    "explanation": "Per Treas. Reg. §1.451-2(a), income is constructively received when credited to the taxpayer's account, set apart, or otherwise made available without substantial limitations or restrictions—regardless of actual possession. Example: Year-end bonus check available Dec 31 but not picked up until Jan 2 = taxable in year available. Key exceptions: Substantial limitations (e.g., forfeiture provisions, economic benefit doctrine). Why other answers are wrong: (A) 'Earning' is the accrual basis concept; cash basis taxpayers use receipt/constructive receipt; (B) Form 1099 issuance doesn't determine taxability—timing rules do; (C) Actual receipt is sufficient but not necessary—constructive receipt is enough.",
+    "tip": "Constructive receipt = available without restriction. Can't defer by refusing to pick up the check!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -652,8 +652,8 @@ const questions = [
       "D": "Excluded if used for repairs"
     },
     "correctAnswer": "B",
-    "explanation": "Under the cash method, advance rent is taxable in the year received regardless of the period covered. Even accrual-method taxpayers must include advance rent in income when received because there is no fixed obligation to return it.",
-    "tip": "Advance rent = taxable when received (no deferral allowed).",
+    "explanation": "Per IRC §61 and Treas. Reg. §1.61-8(b), advance rental payments must be included in gross income in the year RECEIVED, regardless of the period they cover or the taxpayer's accounting method. Unlike many prepayments, advance rent cannot be deferred under Rev. Proc. 2004-34 because there's no fixed obligation to return it. Example: Landlord receives $24,000 in December for 2 years' rent = all $24,000 taxable in year received. Why other answers are wrong: (A) No deferral until tenant moves out—income recognized when received; (C) Cannot spread over rental period—full amount taxable when received; (D) Use of funds (repairs vs. personal) doesn't affect timing of income recognition.",
+    "tip": "Advance rent = taxable when received (BOTH cash and accrual basis). No deferral allowed—this is a specific rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -673,8 +673,8 @@ const questions = [
       "D": "Personal use of company car"
     },
     "correctAnswer": "A",
-    "explanation": "Qualified employee discounts on employer merchandise (up to gross profit percentage) or services (up to 20%) are excluded from gross income under IRC Section 132. Personal use of company cars, club memberships for personal purposes, and cash bonuses are taxable.",
-    "tip": "Employee discounts = excluded up to limits. Cash/personal perks = taxable.",
+    "explanation": "Per IRC §132(c), qualified employee discounts are excluded from gross income. For merchandise: discount cannot exceed employer's gross profit percentage. For services: discount limited to 20% of price charged to customers. Must be: (1) offered on nondiscriminatory basis; (2) in employer's line of business where employee works. Why other answers are wrong: (B) Country club memberships for personal use are taxable compensation—§274(a)(3) disallows employer deduction and §61 includes value in employee income; (C) Cash bonuses are ALWAYS taxable—§61(a)(1); (D) Personal use of company cars is taxable compensation—must be included at fair market value or use IRS standard rates.",
+    "tip": "§132 fringe benefits: employee discount (merchandise = GP%, services = 20%), no-additional-cost services, working condition, de minimis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -694,8 +694,8 @@ const questions = [
       "D": "They are provided to all employees equally"
     },
     "correctAnswer": "B",
-    "explanation": "De minimis fringe benefits are excluded because their value is so small that accounting for them would be unreasonable or administratively impractical. Examples include occasional personal use of copy machine, coffee, holiday parties, and small gifts.",
-    "tip": "De minimis = too small to track (occasional coffee, parties, small gifts).",
+    "explanation": "Per IRC §132(e), de minimis fringe benefits are excluded because their value is so small and provided so infrequently that accounting for them would be unreasonable or administratively impractical. Examples: occasional coffee/donuts, holiday gifts (<$75), occasional personal use of copier, company picnics, flowers for illness. Key factors: frequency and value. Recurring benefits (like monthly transit passes over $21) don't qualify. Why other answers are wrong: (A) De minimis is defined by administrative impracticality, not a specific code list; (C) There's no fixed dollar amount—the test is whether accounting is 'unreasonable'; (D) Nondiscrimination rules apply to other §132 benefits, but de minimis doesn't require equal provision to all.",
+    "tip": "De minimis (§132(e)) = too small/infrequent to track. Think: occasional coffee, flowers, holiday turkey, company picnic.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -715,8 +715,8 @@ const questions = [
       "D": "Only if the employee pays the premiums"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC Section 79, employer-paid premiums for group term life insurance are excluded from the employee's income for coverage up to $50,000. The cost of coverage exceeding $50,000 (determined by IRS tables) is included in income.",
-    "tip": "$50,000 group life = excluded. Excess coverage = taxable (using IRS Table I costs).",
+    "explanation": "Per IRC §79, employer-paid group term life insurance premiums are excluded from employee gross income for coverage up to $50,000. Coverage EXCEEDING $50,000 results in taxable income based on IRS Table I rates (age-based uniform premium table), NOT actual premiums paid. Example: $100,000 coverage = first $50K excluded, excess $50K valued using Table I. Why other answers are wrong: (A) Workplace purchase is required for §79 treatment—outside policies don't qualify; (B) Only $50,000 is excluded, not unlimited; (D) The EMPLOYER paying premiums triggers the exclusion—employee-paid premiums don't qualify.",
+    "tip": "§79: Group term life = first $50K excluded. Excess taxed at Table I rates (not actual cost). Key: employer-paid coverage.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -736,8 +736,8 @@ const questions = [
       "D": "The portion of each payment that is a tax-free return of investment"
     },
     "correctAnswer": "D",
-    "explanation": "The exclusion ratio (investment in contract ÷ expected return) determines what portion of each annuity payment is a tax-free return of the taxpayer's investment (basis). The remaining portion is taxable as ordinary income.",
-    "tip": "Exclusion ratio = investment ÷ expected return. That % of each payment is tax-free.",
+    "explanation": "Per IRC §72, annuity payments are split between tax-free return of investment and taxable income using the exclusion ratio. Formula: Exclusion Ratio = Investment in Contract ÷ Expected Return. This ratio is applied to each payment; the excluded portion represents basis recovery, and the balance is ordinary income. Once basis is fully recovered (typically at life expectancy), ALL payments become fully taxable. Why other answers are wrong: (A) Total payments depend on longevity, not the exclusion ratio; (B) The interest rate is contract-based, not determined by exclusion ratio; (C) The 10% penalty (§72(t)) applies to early distributions, unrelated to exclusion ratio.",
+    "tip": "Annuity exclusion ratio (§72) = Investment ÷ Expected Return. Multiplied by each payment = tax-free portion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -757,8 +757,8 @@ const questions = [
       "D": "Taxable at capital gains rates"
     },
     "correctAnswer": "C",
-    "explanation": "Qualified distributions from Roth IRAs are completely tax-free if made after age 59½ (or due to death, disability, or first home purchase) and the 5-year holding period is met. Contributions to Roth IRAs are made with after-tax dollars.",
-    "tip": "Roth = after-tax in, tax-free out (if qualified: 59½ + 5 years).",
+    "explanation": "Per IRC §408A, qualified Roth IRA distributions are completely excluded from gross income. To be 'qualified,' the distribution must meet BOTH: (1) Made after age 59½, death, disability, or $10K first-time home purchase; AND (2) 5-taxable-year holding period from first Roth contribution. Unlike traditional IRAs, Roth contributions are after-tax (no deduction), so qualified distributions represent tax-free growth. Why other answers are wrong: (A) The 10% penalty applies to NON-qualified distributions only (and only on earnings, not contributions); (B) Qualified Roth distributions are TAX-FREE, not taxable; (D) Roth distributions don't get capital gains treatment—they're either fully excluded or ordinary income.",
+    "tip": "Roth qualified distribution = tax-free. Two tests: (1) Age 59½/death/disability/home AND (2) 5-year rule. Contributions always come out tax-free.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -778,8 +778,8 @@ const questions = [
       "D": "Received as punitive damages"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC Section 104(a)(2), damages received on account of personal physical injuries or physical sickness are excluded from income. Damages for emotional distress (without physical injury), lost wages, or punitive damages are taxable.",
-    "tip": "Physical injury damages = tax-free. Emotional-only or punitive = taxable.",
+    "explanation": "Per IRC §104(a)(2), damages (other than punitive) received on account of personal PHYSICAL injuries or PHYSICAL sickness are excluded from gross income. The Supreme Court in Commissioner v. Schleier established the 'physical' requirement. Emotional distress damages are excluded ONLY if they stem from physical injury. Medical expenses reimbursed through a damage award are excluded only if not previously deducted. Why other answers are wrong: (A) 'Any personal injury' is too broad—non-physical injury damages (defamation, discrimination) are taxable; (C) Emotional distress damages WITHOUT physical injury are fully taxable; (D) Punitive damages are ALWAYS taxable, even in physical injury cases—§104(a)(2) explicitly excludes them.",
+    "tip": "Physical injury damages (§104) = excluded. Key word: PHYSICAL. Punitive damages = always taxable. Emotional-only = taxable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -799,8 +799,8 @@ const questions = [
       "D": "Income is taxed to the person who earns it, regardless of who receives it"
     },
     "correctAnswer": "D",
-    "explanation": "The assignment of income doctrine prevents taxpayers from shifting income to lower-bracket family members. Income from services is taxed to the person who earns it, and income from property is taxed to the owner of the property.",
-    "tip": "You can't escape tax by giving away income—taxed to who earned it.",
+    "explanation": "The assignment of income doctrine (Lucas v. Earl, 1930) prevents taxpayers from avoiding tax by directing earned income to others. 'The fruit cannot be attributed to a tree different from that on which it grew.' Two key rules: (1) Income from SERVICES is taxed to the person who earns it; (2) Income from PROPERTY is taxed to the owner of the property. To shift property income, you must transfer the underlying property itself. Why other answers are wrong: (A) Family members don't share tax burden—the earner/owner is taxed; (B) Income shifting through assignment is precisely what the doctrine PREVENTS; (C) Assigning income to family doesn't avoid tax—it's still taxed to the earner.",
+    "tip": "Assignment of income (Lucas v. Earl): Income taxed to EARNER. Can't assign the fruit without the tree. Transfer property, not just income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -820,8 +820,8 @@ const questions = [
       "D": "Imputed interest income to the employer and compensation income to the employee"
     },
     "correctAnswer": "D",
-    "explanation": "Below-market loans between employer and employee are recharacterized: the forgone interest is treated as a payment from lender to borrower (compensation to employee) and a payment back from borrower to lender (interest income to employer). The employee has W-2 income.",
-    "tip": "Below-market employer loans = imputed compensation to employee + interest to employer.",
+    "explanation": "Per IRC §7872, below-market loans (interest rate below AFR) are recharacterized for tax purposes. For employer-employee loans: (1) Employer is deemed to pay compensation equal to forgone interest; (2) Employee is deemed to pay that amount back as interest. Result: Employee has W-2 compensation income; Employer has interest income (and wage deduction). Similar rules apply to gift loans, corporation-shareholder loans, and tax avoidance loans. De minimis exception: $10,000 for employee loans without tax avoidance motive. Why other answers are wrong: (A) No capital gain—this is ordinary income/compensation; (B) The employer has interest INCOME, not just a deduction; (C) Below-market loans have significant tax consequences under §7872.",
+    "tip": "Below-market loans (§7872): Impute AFR interest. Employee = compensation income. Employer = interest income. $10K de minimis for gift/compensation loans.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -841,8 +841,8 @@ const questions = [
       "D": "Included in income annually over the life of the bond"
     },
     "correctAnswer": "D",
-    "explanation": "Original issue discount (the excess of stated redemption price over issue price) must be included in income annually over the life of the bond using the constant yield method. This applies even though no cash is received until maturity.",
-    "tip": "OID = phantom income—taxed annually even without cash receipt.",
+    "explanation": "Per IRC §1272, original issue discount (excess of stated redemption price at maturity over issue price) must be included in gross income annually over the bond's life using constant yield method (effective interest). OID is 'phantom income'—taxed without cash receipt. As OID is recognized, the bondholder's basis increases. At maturity, there's no additional gain because basis equals redemption price. Exceptions: Tax-exempt bonds (§1288), short-term obligations, U.S. savings bonds (if deferral elected). Why other answers are wrong: (A) OID is specifically includible, not excluded; (B) OID is ordinary interest income, not capital gain; (C) Waiting until sale/maturity is incorrect—annual accrual is required.",
+    "tip": "OID (§1272) = phantom income accrued annually. Basis increases as OID recognized. Constant yield method required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -862,8 +862,8 @@ const questions = [
       "D": "The taxpayer is a full-time student"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC Section 135, interest on Series EE and I bonds may be excluded if proceeds are used for qualified higher education expenses (tuition and fees) for the taxpayer, spouse, or dependents. Income phase-outs apply, and the bond owner must be at least 24 when issued.",
-    "tip": "EE bond interest exclusion: education expenses + income limits + age 24+ at purchase.",
+    "explanation": "Per IRC §135, interest on Series EE and I bonds may be excluded from gross income if used for qualified higher education expenses (tuition and required fees—NOT room/board). Requirements: (1) Bonds purchased by taxpayer age 24+; (2) Used for taxpayer, spouse, or dependent; (3) MAGI below phase-out thresholds ($96,800-$111,800 single, $154,800-$184,800 MFJ for 2024); (4) Redemption in year expenses paid. The exclusion is proportional if expenses < redemption proceeds. Why other answers are wrong: (A) Age at purchase matters—must be 24+, not before 18; (B) No 5-year holding requirement for this exclusion; (D) Being a student is irrelevant—it's about how proceeds are used.",
+    "tip": "EE/I bond education exclusion (§135): Age 24+ at purchase + qualified tuition + income limits. Phase-outs can eliminate benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -883,8 +883,8 @@ const questions = [
       "D": "Previous year's standard deductions"
     },
     "correctAnswer": "B",
-    "explanation": "The tax benefit rule requires a taxpayer to include in income any recovery of an amount previously deducted if the deduction provided a tax benefit. If the prior deduction did not reduce tax (e.g., due to using standard deduction), the recovery may not be taxable.",
-    "tip": "Got a deduction? If you get it back, it's taxable (to the extent of tax benefit).",
+    "explanation": "Per IRC §111, the tax benefit rule requires inclusion in income of any recovery of a previously deducted item, but ONLY to the extent the prior deduction provided an actual tax benefit. Example: State tax refund is taxable only if the taxpayer itemized (and deducted state taxes) in the prior year. If the standard deduction was used, no tax benefit occurred, so no income on recovery. The rule prevents double tax benefits. Why other answers are wrong: (A) Medical expense payments aren't 'recoveries'—they're current expenses; (C) Only recoveries of DEDUCTED amounts are covered, and only to extent of actual benefit; (D) Standard deductions can't be 'recovered'—they're not actual expenses.",
+    "tip": "Tax benefit rule (§111): Recovery of deduction = income, BUT only to extent it reduced tax. State refunds = taxable only if you itemized.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -904,8 +904,8 @@ const questions = [
       "D": "Income is only taxable when the taxpayer's right to it becomes absolute"
     },
     "correctAnswer": "A",
-    "explanation": "The claim of right doctrine requires taxpayers to include in income amounts received under a claim of right (unrestricted use), even if there is an obligation to repay in the future. If repayment is required later, a deduction or credit is available in the year of repayment.",
-    "tip": "Claim of right = include when received; get deduction if repaid later.",
+    "explanation": "The claim of right doctrine (North American Oil Consolidated v. Burnet, 1932) requires income inclusion when the taxpayer receives funds under a claim of right, even if the right is disputed or repayment may be required later. If repayment occurs, IRC §1341 provides relief: taxpayer claims a deduction in the repayment year, OR takes a credit equal to the tax paid on the original inclusion (whichever provides greater benefit). Example: Bonus received in 2023, required to repay in 2025 = taxable in 2023, deduction/credit in 2025. Why other answers are wrong: (B) Disputed income IS taxable if received with unrestricted use; (C) Deferral isn't allowed—tax now, adjust later if repaid; (D) Income is taxable when RECEIVED under claim of right, not when legal disputes resolve.",
+    "tip": "Claim of right: Tax when received, even if disputed. §1341 relief if repaid later (deduction OR credit, whichever is better).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -925,8 +925,8 @@ const questions = [
       "D": "Economic benefits are always valued at cost to the provider"
     },
     "correctAnswer": "B",
-    "explanation": "Under the economic benefit doctrine, if a taxpayer receives an economic benefit (such as property set aside in a trust) with no substantial risk of forfeiture, income is recognized even without actual cash receipt. This prevents deferral through funded arrangements.",
-    "tip": "Economic benefit = if it's set aside for you without risk, it's taxable now.",
+    "explanation": "The economic benefit doctrine provides that a taxpayer realizes income when receiving an economic benefit, even if cash isn't received. If property or funds are irrevocably set aside for the taxpayer's benefit (no substantial risk of forfeiture), current taxation applies. This doctrine prevents tax deferral through funded nonqualified deferred compensation arrangements. The funds must be beyond the reach of the employer's creditors. Contrast with constructive receipt (available but not taken) vs. economic benefit (set aside securely). Why other answers are wrong: (A) Cash receipt isn't required—economic benefit triggers taxation; (C) Economic benefits ARE included, not excluded; (D) Valuation is at fair market value to the recipient, not cost to provider.",
+    "tip": "Economic benefit doctrine: Property secured for you (no forfeiture risk) = taxable now. Used to prevent funded deferred comp abuse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -946,7 +946,7 @@ const questions = [
       "D": "They are present in the foreign country for any period"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC Section 911, U.S. citizens and residents may exclude up to $120,000 (2023, indexed) of foreign earned income if they meet either the bona fide residence test or physical presence test (330 days in 12-month period) AND have a tax home in a foreign country.",
+    "explanation": "Per IRC §911, U.S. citizens/residents working abroad may exclude foreign earned income (up to $126,500 for 2024, inflation-adjusted) plus foreign housing costs above a base amount. Requirements: (1) Tax home in foreign country; AND (2) Meet either bona fide residence test (full tax year + intent to remain) OR physical presence test (330 full days in any 12-month period). Only EARNED income qualifies (wages, self-employment)—not investment income, pensions, or Social Security. Why other answers are wrong: (B) Foreign employer isn't required—U.S. employers can pay excluded income if tests met; (C) Paying foreign taxes isn't a requirement (but Foreign Tax Credit is alternative); (D) 'Any period' is insufficient—330 days or bona fide residence required.",
     "tip": "Foreign income exclusion = foreign tax home + either bona fide residence or 330-day test.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -967,8 +967,8 @@ const questions = [
       "D": "Taxed at capital gains rates"
     },
     "correctAnswer": "C",
-    "explanation": "Student loan forgiveness is generally taxable as cancellation of debt income. However, loans forgiven under Public Service Loan Forgiveness or for death/disability are excluded. The American Rescue Plan Act temporarily excluded all student loan forgiveness through 2025.",
-    "tip": "Student loan forgiveness = usually taxable (but PSLF and some others excluded).",
+    "explanation": "Per IRC §108(f), student loan forgiveness is generally taxable as cancellation of debt income under §61(a)(11). However, specific exclusions apply: (1) Public Service Loan Forgiveness (PSLF) under §108(f)(1); (2) Forgiveness due to death or total/permanent disability; (3) ARPA (2021) temporarily excluded ALL student loan forgiveness through December 31, 2025. After 2025, income-driven repayment (IDR) plan forgiveness will again be taxable unless Congress extends. Why other answers are wrong: (A) Employment status is irrelevant to taxability (PSLF requires public service, but that's different); (B) Not always excluded—only specific statutory exclusions apply; (D) Student loan forgiveness is ordinary income, not capital gains.",
+    "tip": "Student loan forgiveness = COD income (§108(f)). Exceptions: PSLF, death/disability, 2021-2025 ARPA exclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -988,8 +988,8 @@ const questions = [
       "D": "Can defer the income until the property is sold"
     },
     "correctAnswer": "B",
-    "explanation": "When an employee purchases property from an employer for less than FMV, the difference (bargain element) is compensation income. Exceptions exist for qualified employee discounts on inventory items (up to employer's gross profit percentage).",
-    "tip": "Bargain purchase from employer = taxable compensation (FMV - price paid).",
+    "explanation": "Per IRC §83, when an employee acquires property in connection with services for less than FMV, the bargain element (FMV minus amount paid) is ordinary compensation income. This applies to stock, real property, or any property transferred. The employee's basis is the amount paid PLUS compensation recognized. Exception: Qualified employee discounts under §132(c) on merchandise (up to gross profit %) or services (up to 20%) in employer's line of business. Why other answers are wrong: (A) The bargain element IS taxable compensation; (C) This is ordinary compensation income, not capital gain; (D) §83 requires immediate recognition when no substantial risk of forfeiture exists—no deferral.",
+    "tip": "Bargain purchase (§83): FMV - Price Paid = W-2 compensation income. Basis = Price Paid + Compensation. §132 discounts are the exception.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1009,8 +1009,8 @@ const questions = [
       "D": "All investment income regardless of AGI"
     },
     "correctAnswer": "A",
-    "explanation": "The 3.8% net investment income tax (NIIT) applies to the lesser of net investment income or modified AGI exceeding thresholds ($250,000 MFJ, $200,000 single). Net investment income includes interest, dividends, capital gains, rents, royalties, and passive business income.",
-    "tip": "NIIT: 3.8% on investment income if MAGI exceeds $250K MFJ / $200K single.",
+    "explanation": "Per IRC §1411, the 3.8% Net Investment Income Tax (NIIT) is imposed on the LESSER of: (1) Net investment income, OR (2) MAGI exceeding threshold ($250,000 MFJ, $200,000 single, $125,000 MFS). Net investment income includes: interest, dividends, capital gains, rental/royalty income, passive activity income, and non-qualified annuity income. EXCLUDED from NII: wages, self-employment income, active business income, Social Security, tax-exempt interest, distributions from qualified plans. Why other answers are wrong: (B) NIIT applies to ALL investment income types, not just dividends; (C) Self-employment income is subject to SE tax, not NIIT; (D) NIIT only applies when MAGI exceeds thresholds—not all investment income.",
+    "tip": "NIIT (§1411) = 3.8% × lesser of (NII OR excess MAGI). Thresholds: $250K MFJ, $200K Single. Excludes wages/SE income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1030,8 +1030,8 @@ const questions = [
       "D": "Must include benefits exceeding $5,000"
     },
     "correctAnswer": "B",
-    "explanation": "A cafeteria plan allows employees to choose between cash and qualified benefits. If the employee chooses qualified benefits (health insurance, FSA, etc.), those benefits are excluded from income. If cash is chosen, it's taxable. The choice doesn't trigger constructive receipt.",
-    "tip": "Cafeteria plan = choose benefits tax-free or cash taxable. No constructive receipt.",
+    "explanation": "Per IRC §125, a cafeteria plan allows employees to choose between cash and qualified benefits. If qualified benefits are chosen (health insurance, HSA contributions, FSA, dependent care, adoption assistance, group term life), the value is EXCLUDED from gross income. Cash elections are fully taxable. Key feature: No constructive receipt doctrine because the election is made BEFORE the plan year begins (prospective election). Qualified benefits retain their normal exclusion treatment. Why other answers are wrong: (A) Only CASH elections are included in income; (C) There's no cash equivalent taxation—benefit exclusions apply; (D) There's no $5,000 threshold for general §125 benefits (though dependent care FSA has $5,000 limit).",
+    "tip": "Cafeteria plan (§125): Pre-tax benefit election. Qualified benefits = excluded. Cash = taxable. No constructive receipt if elected prospectively.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1051,8 +1051,8 @@ const questions = [
       "D": "Are taxed immediately at reduced rates"
     },
     "correctAnswer": "B",
-    "explanation": "Capital gains invested in QOZ Funds are deferred until the earlier of the date the investment is sold or December 31, 2026. If held 10+ years, post-investment appreciation may be permanently excluded. The original gain is eventually recognized.",
-    "tip": "QOZ: defer gain until sale or 2026; 10+ years = exclude appreciation on QOZ investment.",
+    "explanation": "Per IRC §1400Z-2, capital gains invested in Qualified Opportunity Zone (QOZ) Funds within 180 days of realization are DEFERRED until the earlier of: (1) disposition of QOZ investment, or (2) December 31, 2026. Benefits: (1) Original gain deferral; (2) If held 10+ years, appreciation ON THE QOZ INVESTMENT is permanently excluded (§1400Z-2(c)). Note: The original invested gain IS eventually taxable—only post-investment appreciation gets permanent exclusion. TCJA's 5/7-year basis step-up provisions expired (required investment by 2019/2021). Why other answers are wrong: (A) Original gain is deferred, not permanently excluded; (C) 5-year holding provided basis step-up (now expired), not tax-free treatment; (D) Immediate taxation defeats the purpose—QOZ is a deferral mechanism.",
+    "tip": "QOZ (§1400Z-2): Defer gain until 2026 or sale. 10+ years = exclude appreciation on QOZ investment (not original gain).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },

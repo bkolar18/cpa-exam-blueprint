@@ -37,12 +37,59 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 0 | 1,345 | 0% | Pending |
+| REG | 1,345 | 35 | 1,310 | 3% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
 **Last Updated:** January 15, 2026
+
+---
+
+## REG Enhancement Progress
+
+**File:** `src/lib/data/practice-questions/reg.ts`
+
+### REG Individual Taxation - In Progress (35/223 Questions)
+
+| Batch | Questions | Range | Status |
+|-------|-----------|-------|--------|
+| Individual Tax Foundations | 35 | reg-001-001 to reg-001-035 | **Complete** |
+| Deductions FOR AGI | 35 | reg-002-001 to reg-002-035 | Pending |
+| Deductions FROM AGI | 35 | reg-003-001 to reg-003-035 | Pending |
+| Tax Credits | 35 | reg-004-001 to reg-004-035 | Pending |
+| Alternative Minimum Tax | 35 | reg-005-001 to reg-005-035 | Pending |
+| Property Transactions | 211 | reg-prop-* | Pending |
+| Entity Taxation | 300+ | Various | Pending |
+| Business Law | 200+ | Various | Pending |
+| Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 1)
+
+First 35 REG Individual Taxation questions have been enhanced with:
+- IRC section references (§61, §72, §79, §83, §85, §86, §101-117, §132, etc.)
+- "Why other answers are wrong:" distractor analysis for each wrong answer
+- Enhanced memory tips with IRC section citations
+- Coverage of gross income inclusions/exclusions, fringe benefits, timing doctrines
+
+**Key IRC References Used:**
+| Topic | IRC Section |
+|-------|-------------|
+| Gross Income | §61 |
+| Life Insurance | §101 |
+| Gifts/Inheritance | §102 |
+| Municipal Bonds | §103 |
+| Physical Injury Damages | §104 |
+| Discharge of Debt | §108 |
+| Foreign Income Exclusion | §911 |
+| Scholarships | §117 |
+| Fringe Benefits | §132 |
+| Group Term Life | §79 |
+| Annuities | §72 |
+| Social Security | §86 |
+| Unemployment | §85 |
+| Below-Market Loans | §7872 |
+| Property Transfers | §83 |
 
 ---
 
