@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import Anthropic from '@anthropic-ai/sdk';
 import { getFeatureLimit, type SubscriptionTier, BETA_LIMITS } from '@/lib/ai/beta-limits';
+import { rateLimitMiddleware } from '@/lib/security/rate-limit';
+import { logRateLimitExceeded, logAuthFailure } from '@/lib/security/logging';
+import { validateLength, MAX_LENGTHS, VALID_SECTIONS, validationErrorResponse, type ValidSection } from '@/lib/security/validation';
 
 // Force dynamic to prevent caching
 export const dynamic = 'force-dynamic';
@@ -264,10 +267,18 @@ export async function POST(request: Request) {
     } = await supabase.auth.getUser();
 
     if (authError || !user) {
+      await logAuthFailure(request, 'No authenticated user for Navigator', undefined);
       return NextResponse.json(
         { error: 'Authentication required to use the Navigator' },
         { status: 401 }
       );
+    }
+
+    // Check rate limit first (additional layer on top of usage limits)
+    const rateLimitResponse = await rateLimitMiddleware(request, 'navigator', user.id);
+    if (rateLimitResponse) {
+      await logRateLimitExceeded(request, 'navigator', user.id);
+      return rateLimitResponse;
     }
 
     // Get user's subscription tier
@@ -311,17 +322,25 @@ export async function POST(request: Request) {
 
     // Validate required fields
     if (!message || !message.trim()) {
-      return NextResponse.json(
-        { error: 'Message is required' },
-        { status: 400 }
-      );
+      return validationErrorResponse('Message is required');
+    }
+
+    // Validate message length (prevent abuse)
+    const messageValidation = validateLength(message, 'message', MAX_LENGTHS.body, request);
+    if (!messageValidation.valid) {
+      return validationErrorResponse(messageValidation.error!);
     }
 
     if (!mode || !['practice', 'review'].includes(mode)) {
-      return NextResponse.json(
-        { error: 'Mode must be either "practice" or "review"' },
-        { status: 400 }
-      );
+      return validationErrorResponse('Mode must be either "practice" or "review"');
+    }
+
+    // Validate section if provided
+    if (questionContext?.section) {
+      const upperSection = questionContext.section.toUpperCase();
+      if (!VALID_SECTIONS.includes(upperSection as ValidSection)) {
+        return validationErrorResponse(`Invalid section. Must be one of: ${VALID_SECTIONS.join(', ')}`);
+      }
     }
 
     // Check for Anthropic API key

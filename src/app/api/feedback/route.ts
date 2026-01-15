@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { requireAdmin, logAdminAction, ActionTypes } from '@/lib/admin/auth';
+import { rateLimitMiddleware } from '@/lib/security/rate-limit';
+import { logRateLimitExceeded, logAuthFailure, logUnauthorizedAccess } from '@/lib/security/logging';
+import { validateSection, validateLength, validateRequired, MAX_LENGTHS, validationErrorResponse } from '@/lib/security/validation';
 
 // Valid feedback types
 const FEEDBACK_TYPES = ['wrong_answer', 'unclear', 'outdated', 'typo', 'other'] as const;
@@ -36,30 +39,49 @@ export async function POST(request: Request) {
     const { data: { user }, error: authError } = await supabase.auth.getUser();
 
     if (authError || !user) {
+      await logAuthFailure(request, 'No authenticated user', undefined);
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }
       );
     }
 
+    // Check rate limit (user-based since authenticated)
+    const rateLimitResponse = await rateLimitMiddleware(request, 'feedback', user.id);
+    if (rateLimitResponse) {
+      await logRateLimitExceeded(request, 'feedback', user.id);
+      return rateLimitResponse;
+    }
+
     // Parse request body
     const body: SubmitFeedbackRequest = await request.json();
     const { questionId, section, feedbackType, comment } = body;
 
-    // Validate required fields
-    if (!questionId || !section || !feedbackType) {
-      return NextResponse.json(
-        { error: 'Missing required fields: questionId, section, feedbackType' },
-        { status: 400 }
-      );
+    // Validate questionId
+    const questionIdValidation = validateRequired(questionId, 'questionId', MAX_LENGTHS.questionId, request);
+    if (!questionIdValidation.valid) {
+      return validationErrorResponse(questionIdValidation.error!);
+    }
+
+    // Validate section
+    const sectionValidation = validateSection(section, request);
+    if (!sectionValidation.valid) {
+      return validationErrorResponse(sectionValidation.error!);
     }
 
     // Validate feedback type
-    if (!FEEDBACK_TYPES.includes(feedbackType)) {
-      return NextResponse.json(
-        { error: `Invalid feedback type. Must be one of: ${FEEDBACK_TYPES.join(', ')}` },
-        { status: 400 }
+    if (!feedbackType || !FEEDBACK_TYPES.includes(feedbackType)) {
+      return validationErrorResponse(
+        `Invalid feedback type. Must be one of: ${FEEDBACK_TYPES.join(', ')}`
       );
+    }
+
+    // Validate comment length if provided
+    if (comment) {
+      const commentValidation = validateLength(comment, 'comment', MAX_LENGTHS.comment, request);
+      if (!commentValidation.valid) {
+        return validationErrorResponse(commentValidation.error!);
+      }
     }
 
     // Insert feedback
@@ -67,8 +89,8 @@ export async function POST(request: Request) {
       .from('question_feedback')
       .insert({
         user_id: user.id,
-        question_id: questionId,
-        section: section.toUpperCase(),
+        question_id: questionIdValidation.sanitized,
+        section: sectionValidation.sanitized,
         feedback_type: feedbackType,
         comment: comment?.trim() || null,
         status: 'pending',
@@ -105,7 +127,7 @@ export async function POST(request: Request) {
 export async function GET(request: Request) {
   try {
     // Require admin access
-    await requireAdmin();
+    const admin = await requireAdmin();
 
     const supabase = await createClient();
 
@@ -161,11 +183,21 @@ export async function GET(request: Request) {
       offset,
     });
   } catch (error) {
-    if (error instanceof Error && error.message.includes('Admin access required')) {
-      return NextResponse.json(
-        { error: 'Admin access required' },
-        { status: 403 }
-      );
+    if (error instanceof Error) {
+      if (error.message.includes('Admin access required')) {
+        await logUnauthorizedAccess(request, 'feedback-list');
+        return NextResponse.json(
+          { error: 'Admin access required' },
+          { status: 403 }
+        );
+      }
+      if (error.message.includes('Authentication required')) {
+        await logAuthFailure(request, 'Unauthenticated admin access attempt');
+        return NextResponse.json(
+          { error: 'Authentication required' },
+          { status: 401 }
+        );
+      }
     }
 
     console.error('Feedback fetch error:', error);
@@ -261,11 +293,21 @@ export async function PATCH(request: Request) {
       feedback,
     });
   } catch (error) {
-    if (error instanceof Error && error.message.includes('Admin access required')) {
-      return NextResponse.json(
-        { error: 'Admin access required' },
-        { status: 403 }
-      );
+    if (error instanceof Error) {
+      if (error.message.includes('Admin access required')) {
+        await logUnauthorizedAccess(request, 'feedback-update');
+        return NextResponse.json(
+          { error: 'Admin access required' },
+          { status: 403 }
+        );
+      }
+      if (error.message.includes('Authentication required')) {
+        await logAuthFailure(request, 'Unauthenticated admin access attempt');
+        return NextResponse.json(
+          { error: 'Authentication required' },
+          { status: 401 }
+        );
+      }
     }
 
     console.error('Feedback update error:', error);
