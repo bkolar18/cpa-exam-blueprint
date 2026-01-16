@@ -6952,8 +6952,8 @@ const questions = [
       "D": "75"
     },
     "correctAnswer": "A",
-    "explanation": "An S corporation is limited to 100 shareholders. However, members of a family (up to six generations) can elect to be treated as one shareholder for this purpose.",
-    "tip": "S corp = 100 shareholder limit. Family members can count as one.",
+    "explanation": "Per IRC §1361(b)(1)(A), an S corporation is limited to 100 shareholders. However, under §1361(c)(1), members of a family (up to six generations from a common ancestor) can elect to be treated as one shareholder for this purpose. This allows large family businesses to maintain S status. Why other answers are wrong: (B) Unlimited—C corporations have no shareholder limit, but S corps are capped at 100; (C) 35—this was the pre-1996 limit, increased to 75, then 100 (2004); (D) 75—this was the pre-2004 limit.",
+    "tip": "§1361(b)(1)(A): S corp = 100 shareholder limit. §1361(c)(1): Family election treats up to 6 generations as ONE shareholder.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -6973,8 +6973,8 @@ const questions = [
       "D": "An individual U.S. citizen"
     },
     "correctAnswer": "D",
-    "explanation": "S corporation shareholders must be individuals, estates, certain trusts, or tax-exempt organizations. Partnerships, corporations, and nonresident aliens cannot be S corporation shareholders.",
-    "tip": "S corp shareholders: Individuals, estates, certain trusts, 501(c)(3)s. NO corps, partnerships, or NRAs.",
+    "explanation": "Per IRC §1361(b)(1)(B)-(C), S corporation shareholders must be individuals (who are U.S. citizens or resident aliens), estates, certain trusts (QSSTs, ESBTs, grantor trusts), or tax-exempt organizations under §401(a) or §501(c)(3). Specifically prohibited: partnerships, corporations, and nonresident aliens under §1361(b)(1)(C). Why other answers are wrong: (A) A partnership—entities cannot be S corp shareholders; (B) A C corporation—same prohibition on entity shareholders; (C) A nonresident alien—specifically excluded under §1361(b)(1)(C) because they would avoid U.S. taxation on pass-through income.",
+    "tip": "§1361(b)(1)(B)-(C): S corp shareholders = individuals (US citizens/residents), estates, certain trusts, 501(c)(3)s. NO corps, partnerships, NRAs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -6994,8 +6994,8 @@ const questions = [
       "D": "Common stock and preferred stock"
     },
     "correctAnswer": "A",
-    "explanation": "An S corporation can have only one class of stock. However, differences in voting rights alone do not create a second class of stock. Common stock with different voting rights is permitted as long as economic rights (distributions and liquidation) are identical.",
-    "tip": "S corp = one class of stock. Voting differences OK, but economic rights must be identical.",
+    "explanation": "Per IRC §1361(b)(1)(D), an S corporation may have only one class of stock. However, Reg. §1.1361-1(l)(1) clarifies that differences in voting rights alone do NOT create a second class of stock. Thus, voting and nonvoting common stock is permitted as long as all shares have identical rights to distributions and liquidation proceeds. Why other answers are wrong: (B) Different economic rights—this WOULD create a second class, terminating S status; (C) Stock held by foreign corporations—§1361(b)(1)(B) prohibits corporate shareholders entirely; (D) Common and preferred stock—preferred stock has different economic rights (priority distributions), creating a second class.",
+    "tip": "§1361(b)(1)(D): S corp = ONE class of stock. Reg. §1.1361-1(l): Voting differences OK, but economic rights (distributions/liquidation) must be IDENTICAL.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7015,8 +7015,8 @@ const questions = [
       "D": "The 15th day of the 3rd month of the tax year"
     },
     "correctAnswer": "D",
-    "explanation": "An S election must be filed no later than the 15th day of the 3rd month of the tax year to be effective for that year (March 15 for calendar-year corps). If filed late, the election is generally effective for the following tax year.",
-    "tip": "S election due by 3/15 for calendar year. Late = effective next year.",
+    "explanation": "Per IRC §1362(b)(1), an S election must be filed no later than the 15th day of the 3rd month of the tax year to be effective for that year. For a calendar-year corporation, this means March 15. If filed after this deadline, the election is generally effective for the following tax year under §1362(b)(2), unless the IRS grants late election relief under Rev. Proc. 2013-30. Why other answers are wrong: (A) Last day of tax year—too late for current-year effectiveness; (B) April 15 of following year—far too late; (C) First day of tax year—elections can be filed before this, but this isn't the deadline.",
+    "tip": "§1362(b)(1): S election due by 15th day of 3rd month (March 15 for calendar year). Late filing = next year effective (unless relief granted).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7036,8 +7036,8 @@ const questions = [
       "D": "Pays corporate income tax on its earnings"
     },
     "correctAnswer": "A",
-    "explanation": "An S corporation is a pass-through entity. It generally does not pay federal income tax; instead, income, losses, deductions, and credits pass through to shareholders who report them on their individual returns.",
-    "tip": "S corp = pass-through. No entity-level tax (usually). Income flows to shareholders' 1040s.",
+    "explanation": "Per IRC §1363(a), an S corporation generally does not pay federal income tax at the entity level. Instead, under §1366(a), items of income, loss, deduction, and credit pass through to shareholders who report them on their individual returns (Form 1040) based on their pro rata share. Exceptions requiring entity-level tax: BIG tax (§1374), passive income tax (§1375), and LIFO recapture. Why other answers are wrong: (B) Taxed as a partnership—while similar, S corps have different rules (basis from debt, required year-end, etc.); (C) Cannot distribute cash—S corps can and do make distributions; (D) Pays corporate income tax—this describes C corporations, not S corps.",
+    "tip": "§1363(a): S corp = pass-through entity, no entity-level tax (generally). §1366: Income/loss flows to shareholders' 1040s. Exceptions: §1374 BIG tax, §1375 passive income tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7057,8 +7057,8 @@ const questions = [
       "D": "March 15"
     },
     "correctAnswer": "D",
-    "explanation": "S corporation returns are due on the 15th day of the 3rd month following the close of the tax year. For a calendar-year S corporation, this is March 15. This matches the partnership return deadline and allows shareholders to receive K-1s before the April 15 individual filing deadline.",
-    "tip": "S corps and partnerships: March 15. C corps and individuals: April 15.",
+    "explanation": "Per IRC §6072(b), S corporation returns (Form 1120-S) are due on the 15th day of the 3rd month following the close of the tax year. For a calendar-year S corporation, this is March 15. This early deadline ensures shareholders receive Schedule K-1s in time to file their individual returns (due April 15). A 6-month extension to September 15 is available under §6081. Why other answers are wrong: (A) April 15—this is the deadline for C corporations and individuals; (B) September 15—this is the extended deadline, not the original; (C) October 15—this is the extended deadline for individual returns.",
+    "tip": "§6072(b): S corps/partnerships due 3/15 (calendar year). C corps/individuals due 4/15. Extension: 6 months to 9/15.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7078,8 +7078,8 @@ const questions = [
       "D": "$90,000"
     },
     "correctAnswer": "C",
-    "explanation": "In a Section 351 exchange (which applies to S corporations), the shareholder's basis in stock received equals the basis of property contributed. Tom's basis is $50,000 cash + $30,000 property basis = $80,000. The FMV of property is irrelevant for basis purposes.",
-    "tip": "Stock basis = basis of contributed cash + property. FMV doesn't matter in Section 351.",
+    "explanation": "Per IRC §358(a), in a §351 exchange (which applies to both C and S corporations), the shareholder's basis in stock received equals the adjusted basis of property contributed. Tom's stock basis calculation: Cash contributed ($50,000) + Property basis ($30,000) = $80,000 total stock basis. The property's FMV ($40,000) is irrelevant for basis purposes under §358—only the adjusted basis carries over. The corporation takes a carryover basis of $30,000 in the property under §362(a). Why other answers are wrong: (A) $100,000—incorrectly uses FMV of property ($40,000) + cash; (B) $50,000—ignores property's basis; (D) $90,000—uses FMV ($40,000) for property instead of basis.",
+    "tip": "§351/§358: Stock basis = basis of property contributed (not FMV). Cash basis = face value. §362(a): Corp takes carryover basis in property.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -7099,8 +7099,8 @@ const questions = [
       "D": "$28,000"
     },
     "correctAnswer": "B",
-    "explanation": "S corp stock basis is adjusted as follows: Beginning basis ($25,000) + ordinary income ($15,000) + tax-exempt income ($3,000) - distributions ($10,000) = $33,000. Tax-exempt income increases basis even though it's not taxable.",
-    "tip": "S corp basis: + income (taxable and tax-exempt), + contributions, - distributions, - losses.",
+    "explanation": "Per IRC §1367(a), S corp stock basis is adjusted annually: Increases under §1367(a)(1): Beginning basis ($25,000) + ordinary income ($15,000) + tax-exempt income ($3,000) = $43,000. Decreases under §1367(a)(2): Less distributions ($10,000) = $33,000 ending basis. Key point: Tax-exempt income increases basis under §1367(a)(1)(A) even though not taxable—this ensures distributions of previously-taxed/tax-exempt income are tax-free. Why other answers are wrong: (A) $30,000—ignores tax-exempt income's basis increase; (C) $43,000—forgot to subtract distributions; (D) $28,000—calculation error.",
+    "tip": "§1367(a): Basis adjustments: (+) income (taxable AND tax-exempt), (+) contributions; (-) distributions, (-) losses/deductions. Tax-exempt income increases basis!",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -7120,8 +7120,8 @@ const questions = [
       "D": "$20,000"
     },
     "correctAnswer": "B",
-    "explanation": "S corporation losses are limited to the shareholder's basis in stock plus direct loans to the corporation. Mike can deduct losses up to $20,000 stock basis + $10,000 debt basis = $30,000. The remaining $5,000 loss is suspended and carries forward indefinitely.",
-    "tip": "S corp loss limit = stock basis + debt basis. Excess suspended, carries forward indefinitely.",
+    "explanation": "Per IRC §1366(d)(1), S corporation losses are limited to the shareholder's adjusted basis in stock PLUS the shareholder's adjusted basis in any indebtedness of the S corporation to the shareholder. Mike's calculation: Stock basis ($20,000) + Debt basis ($10,000) = $30,000 total basis available. Deductible loss: $30,000 (limited by basis). Suspended loss under §1366(d)(2): $35,000 - $30,000 = $5,000, which carries forward indefinitely until basis is restored. Why other answers are wrong: (A) $25,000—doesn't use all available debt basis; (C) $35,000—exceeds combined basis; (D) $20,000—ignores debt basis (which IS includible for S corps).",
+    "tip": "§1366(d)(1): S corp loss limit = stock basis + DIRECT debt basis. §1366(d)(2): Excess suspended, carries forward indefinitely. Debt basis key difference from partnerships!",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -7141,8 +7141,8 @@ const questions = [
       "D": "Always capital gain"
     },
     "correctAnswer": "B",
-    "explanation": "For an S corporation with no accumulated E&P from C corporation years, distributions are tax-free to the extent of stock basis (return of capital) and any excess is treated as capital gain from the sale of stock.",
-    "tip": "S corp distributions (no C corp E&P): First reduce basis (tax-free), then capital gain.",
+    "explanation": "Per IRC §1368(b), for an S corporation that has NO accumulated earnings and profits (always been an S corp, never a C corp), distributions are treated as: (1) Tax-free return of basis to the extent of stock basis under §1368(b)(1); then (2) Capital gain from deemed sale of stock under §1368(b)(2) for any excess over basis. This is the simplest distribution regime. Why other answers are wrong: (A) Current E&P—S corps don't generate E&P; this rule applies only when there's old C corp E&P; (C) Ordinary income—distributions from S corps are never ordinary income; (D) Always capital gain—only the excess over basis is capital gain.",
+    "tip": "§1368(b) (no accumulated E&P): Distributions = (1) tax-free return of basis, then (2) capital gain on excess. No dividend treatment without old C corp E&P.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7162,8 +7162,8 @@ const questions = [
       "D": "An S corporation has passive investment income"
     },
     "correctAnswer": "C",
-    "explanation": "The BIG tax applies to S corporations that were formerly C corporations and recognize built-in gains (appreciation that existed at conversion) within the recognition period (5 years under current law). The tax is at the highest corporate rate (21%).",
-    "tip": "BIG tax: C-to-S conversions only. 5-year recognition period. Tax on appreciation at conversion.",
+    "explanation": "Per IRC §1374, the built-in gains (BIG) tax applies when a C corporation converts to an S corporation and disposes of assets with appreciation that existed at the time of conversion ('built-in gain') within the recognition period. The recognition period is currently 5 years under §1374(d)(7). The BIG tax rate equals the highest corporate rate (21% under §11(b)). The tax is imposed at the entity level, reducing the amount passing through to shareholders. Why other answers are wrong: (A) Shareholder sells stock—§1374 applies to asset dispositions by the corporation, not stock sales; (B) Any S corp sells appreciated assets—only former C corps with conversion-date appreciation; (D) Passive investment income—that's a different tax under §1375.",
+    "tip": "§1374 BIG tax: C-to-S conversions only. 5-year recognition period. Tax = 21% on appreciation existing at conversion. Entity-level tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7183,8 +7183,8 @@ const questions = [
       "D": "Take a minimum of 50% of profits as salary"
     },
     "correctAnswer": "C",
-    "explanation": "Shareholder-employees must receive reasonable compensation for services rendered, which is subject to payroll taxes (FICA). Unlike partners, S corporation shareholders do not pay self-employment tax on their share of pass-through income, creating an incentive to minimize salary.",
-    "tip": "S corp shareholder-employees need reasonable salary (with FICA). Pass-through income = no SE tax.",
+    "explanation": "Per IRS guidance and case law (David E. Watson, P.C. v. United States), shareholder-employees who perform services must receive reasonable compensation as W-2 wages subject to FICA taxes (Social Security and Medicare). Unlike partners who pay self-employment tax on their distributive share under §1402, S corporation pass-through income is NOT subject to SE tax under §1402(a)(2), creating an incentive to minimize salary and maximize distributions. The IRS actively scrutinizes S corps paying unreasonably low salaries. Why other answers are wrong: (A) SE tax on all income—that's partnership treatment, not S corp; (B) All as distributions—this avoids required payroll taxes and is IRS audit risk; (D) 50% minimum—there's no specific percentage rule.",
+    "tip": "S corp shareholder-employees: Reasonable W-2 wages required (with FICA). Pass-through income = NO SE tax (§1402(a)(2)). IRS scrutinizes low salary/high distribution schemes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7204,8 +7204,8 @@ const questions = [
       "D": "Depreciation expense"
     },
     "correctAnswer": "C",
-    "explanation": "Items that could affect shareholders differently must be separately stated. Capital gains and losses are separately stated because they retain their character when passed through. Shareholders may have different capital loss carryovers or tax situations affecting the treatment.",
-    "tip": "Separately stated: Capital gains/losses, Section 1231, charitable, tax-exempt income, etc.",
+    "explanation": "Per IRC §1366(a)(1), items that could affect shareholders' tax liability differently must be 'separately stated' on Schedule K-1. Capital gains and losses are separately stated because they retain their character under §1366(b) when passed through—shareholders may have different capital loss carryovers, holding period considerations, or §1(h) rate situations. Other separately stated items: §1231 gains/losses, charitable contributions (§170), interest income, dividend income, tax-exempt income, investment interest expense, and foreign taxes. Why other answers are wrong: (A) COGS—netted into ordinary income, not separately stated; (B) Officer compensation—deducted in computing ordinary income; (D) Depreciation—generally included in ordinary income calculation.",
+    "tip": "§1366(a)(1): Separately stated items = those affecting shareholders differently (capital gains/losses, §1231, charitable, tax-exempt, foreign tax). §1366(b): Items retain character.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7225,8 +7225,8 @@ const questions = [
       "D": "Has more than 50 shareholders"
     },
     "correctAnswer": "C",
-    "explanation": "The AAA is most relevant when an S corporation has accumulated E&P from years it was a C corporation. The AAA tracks previously taxed S corporation income and determines whether distributions come from tax-free AAA or taxable accumulated E&P.",
-    "tip": "AAA matters when S corp has old C corp E&P. AAA distributions first (tax-free), then E&P (dividend).",
+    "explanation": "Per IRC §1368(c) and (e), the Accumulated Adjustments Account (AAA) is most relevant when an S corporation has accumulated E&P from C corporation years. The AAA tracks the cumulative total of S corporation income that has already been taxed to shareholders, ensuring those amounts can be distributed tax-free before reaching the taxable E&P layer. Under §1368(c), distributions come first from AAA (tax-free to extent of basis), then from accumulated E&P (dividend). Why other answers are wrong: (A) Partnership taxation—S corps are not taxed as partnerships and don't use AAA; (B) Always S corp—AAA tracking is maintained but has no practical effect without accumulated E&P; (D) Shareholder count—irrelevant to AAA purpose.",
+    "tip": "§1368(c)/(e): AAA = previously-taxed S corp income. Critical when old C corp E&P exists: AAA distributed first (tax-free), then E&P (taxable dividend).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7246,8 +7246,8 @@ const questions = [
       "D": "Annual revenues exceed $25 million"
     },
     "correctAnswer": "B",
-    "explanation": "The S election terminates when the corporation ceases to meet eligibility requirements. A nonresident alien cannot be an S corporation shareholder, so a transfer to an NRA terminates the election. There are no revenue limits for S corporations.",
-    "tip": "S election terminates: NRA shareholder, 101+ shareholders, ineligible trust, 2nd class of stock.",
+    "explanation": "Per IRC §1362(d)(2), an S election terminates on the day the corporation ceases to be a 'small business corporation' under §1361(b). Under §1361(b)(1)(C), nonresident aliens cannot be S corporation shareholders, so a stock transfer to an NRA causes immediate involuntary termination. The corporation becomes a C corporation on the termination date. Other termination events: exceeding 100 shareholders, corporate or partnership shareholders, second class of stock. Why other answers are wrong: (A) Consecutive losses—no prohibition on operating losses; (C) Foreign branch—S corps can have foreign operations; (D) Revenue threshold—there are NO revenue limits for S corporations (unlike the gross receipts test for cash method).",
+    "tip": "§1362(d)(2): S election terminates when §1361(b) requirements fail. NRA shareholder, >100 shareholders, entity shareholders, 2nd class of stock = termination. NO revenue limits!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7267,8 +7267,8 @@ const questions = [
       "D": "25%"
     },
     "correctAnswer": "D",
-    "explanation": "An S corporation with accumulated E&P from C corporation years is subject to an entity-level tax on excess net passive income if passive investment income exceeds 25% of gross receipts. If this occurs for three consecutive years, the S election is terminated.",
-    "tip": "Passive income tax: >25% passive income + old C corp E&P = tax. 3 years = S election ends.",
+    "explanation": "Per IRC §1375(a), an S corporation with accumulated E&P from C corporation years is subject to an entity-level tax on excess net passive income if passive investment income (PII) exceeds 25% of gross receipts. Passive investment income under §1362(d)(3)(C) includes royalties, rents, dividends, interest, and annuities. Under §1362(d)(3), if PII exceeds 25% of gross receipts for THREE consecutive years AND the S corp has accumulated E&P, the S election terminates. Why other answers are wrong: (A) 50%—too high; (B) 75%—much too high; (C) 10%—too low.",
+    "tip": "§1375: Passive income tax = >25% passive income + C corp E&P. §1362(d)(3): 3 consecutive years >25% = S election TERMINATES.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7288,8 +7288,8 @@ const questions = [
       "D": "Deductible only as an itemized deduction"
     },
     "correctAnswer": "C",
-    "explanation": "Health insurance for 2%+ shareholder-employees must be included in their W-2 wages. However, the shareholder can claim a deduction for AGI for self-employed health insurance (assuming eligibility requirements are met). The net effect is similar to self-employed treatment.",
-    "tip": "2%+ S corp shareholders = treated like partners. Health premiums on W-2, then deduction for AGI.",
+    "explanation": "Per IRC §1372(a), an S corporation is treated as a partnership and 2%+ shareholders are treated as partners for fringe benefit purposes. Thus, health insurance premiums paid by the S corp for 2%+ shareholder-employees must be included in their W-2 wages (but NOT subject to FICA under Notice 2008-1). However, the shareholder can then claim the self-employed health insurance deduction under §162(l) as an above-the-line deduction on their Form 1040. Net effect: included in income but deductible. Why other answers are wrong: (A) Not deductible by corp—the S corp CAN deduct as compensation; (B) Fully excludable—the §106 exclusion doesn't apply to 2%+ shareholders; (D) Itemized deduction only—§162(l) is 'for AGI,' not an itemized deduction.",
+    "tip": "§1372(a): 2%+ S corp shareholders treated as partners for fringes. Health insurance: Include in W-2, then §162(l) above-the-line deduction. No FICA on health portion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7309,8 +7309,8 @@ const questions = [
       "D": "Income items"
     },
     "correctAnswer": "D",
-    "explanation": "The order for adjusting S corporation stock basis is: (1) increase for income items (including tax-exempt), (2) decrease for distributions, (3) decrease for nondeductible expenses, (4) decrease for losses and deductions. This order maximizes the amount of tax-free distributions.",
-    "tip": "Basis order: Income first (+), then distributions (-), then expenses (-), then losses (-).",
+    "explanation": "Per IRC §1367(a) and Reg. §1.1367-1(f), the ordering rules for adjusting S corporation stock basis are: (1) INCREASE for income items (including tax-exempt income) under §1367(a)(1); (2) DECREASE for distributions under §1367(a)(2)(A); (3) DECREASE for nondeductible, noncapital expenses under §1367(a)(2)(D); (4) DECREASE for losses and deductions under §1367(a)(2)(B)-(C). This ordering maximizes tax-free distributions by increasing basis for income BEFORE reducing for distributions. Why other answers are wrong: (A) Losses first—losses are applied last; (B) Distributions first—distributions come after income increases; (C) Nondeductible expenses first—these come after distributions.",
+    "tip": "§1367(a)/Reg. §1.1367-1(f): Basis order = (1) +Income, (2) -Distributions, (3) -Nondeductible expenses, (4) -Losses. Income FIRST maximizes tax-free distributions!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7330,8 +7330,8 @@ const questions = [
       "D": "A majority of shareholders"
     },
     "correctAnswer": "B",
-    "explanation": "All shareholders must consent to an S election. This includes any shareholders who held stock during the portion of the year before the election. Community property rules may require both spouses to consent even if only one is the shareholder of record.",
-    "tip": "S election = unanimous consent. ALL shareholders must agree, including pre-election shareholders.",
+    "explanation": "Per IRC §1362(a)(2), ALL persons who are shareholders at the time of the election must consent to the S election on Form 2553. Additionally, under Reg. §1.1362-6(b)(2), any shareholders who held stock during the portion of the tax year BEFORE the election must also consent for the election to be effective for that year. In community property states, both spouses may need to consent even if only one is the shareholder of record. Why other answers are wrong: (A) >50%—unanimous consent required, not majority; (C) Only U.S. citizens—all shareholders must consent (and NRAs can't be shareholders anyway); (D) Majority—requires ALL, not just majority.",
+    "tip": "§1362(a)(2): S election = UNANIMOUS consent on Form 2553. All current shareholders + all shareholders from earlier in the year must consent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7351,8 +7351,8 @@ const questions = [
       "D": "Owned by multiple S corporations"
     },
     "correctAnswer": "C",
-    "explanation": "A QSub must be a domestic corporation that is 100% owned by an S corporation parent and not an ineligible corporation. The QSub election causes the subsidiary to be disregarded for tax purposes, with all assets and operations treated as part of the parent S corporation.",
-    "tip": "QSub = 100% S corp owned. Treated as disregarded entity (part of parent S corp).",
+    "explanation": "Per IRC §1361(b)(3)(B), a Qualified Subchapter S Subsidiary (QSub) must be: (1) a domestic corporation; (2) 100% owned by an S corporation parent; and (3) not an ineligible corporation (e.g., bank, insurance company). Under §1361(b)(3)(A), once the QSub election is made, the subsidiary is disregarded as a separate entity for federal income tax purposes—all assets, liabilities, income, and deductions are treated as belonging to the parent S corporation. Why other answers are wrong: (A) Foreign corporation—must be domestic; (B) 80% ownership—requires 100%, not 80% (that's the §1504 affiliated group threshold); (D) Multiple S corp owners—only ONE S corp can own the QSub, and must own 100%.",
+    "tip": "§1361(b)(3): QSub = 100% S corp owned domestic corporation. Treated as disregarded (part of parent). Key: 100% ownership required, not 80%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7372,8 +7372,8 @@ const questions = [
       "D": "Stock ownership at year end only"
     },
     "correctAnswer": "B",
-    "explanation": "S corporation income is allocated on a per-share, per-day basis. Each share of stock is allocated an equal portion of each item for each day of the year. When stock is sold mid-year, income is allocated between seller and buyer based on days of ownership.",
-    "tip": "S corp income = per-share, per-day. Selling shareholder taxed on pre-sale days.",
+    "explanation": "Per IRC §1377(a)(1), S corporation items are allocated among shareholders on a per-share, per-day basis. Each share of stock is assigned an equal portion of each item for each day of the corporation's tax year. When stock changes hands mid-year, the selling shareholder is allocated income/loss for their days of ownership, and the buyer for theirs. This ensures equitable allocation regardless of when income is actually earned. Exception: §1377(a)(2) allows the 'closing of the books' election when all affected shareholders consent. Why other answers are wrong: (A) Beginning of year—ignores mid-year changes; (C) Shareholders' agreement—S corps cannot allocate specially (unlike partnerships); (D) Year end only—ignores mid-year ownership changes.",
+    "tip": "§1377(a)(1): S corp income = per-share, per-day allocation. Mid-year sales: allocate based on days owned. No special allocations allowed (unlike partnerships).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7393,8 +7393,8 @@ const questions = [
       "D": "Net income increases (after restoring stock basis to zero)"
     },
     "correctAnswer": "D",
-    "explanation": "When losses reduce debt basis, it is restored by subsequent net income increases—but only after stock basis has been restored to zero. Debt basis is restored before additional stock basis increases occur. Capital contributions increase stock basis, not debt basis.",
-    "tip": "Restore debt basis with income ONLY after stock basis hits zero. Debt basis restored first.",
+    "explanation": "Per IRC §1367(b)(2)(B) and Reg. §1.1367-2(c), when S corporation losses reduce a shareholder's debt basis, that debt basis is restored by subsequent net income increases—but ONLY after stock basis has been fully restored first. The restoration ordering under Reg. §1.1367-2(c)(1): (1) Income first restores stock basis to zero; (2) Remaining income restores debt basis. Capital contributions increase STOCK basis, not debt basis. Why other answers are wrong: (A) Capital contributions—these increase stock basis only; (B) Distributions—these reduce basis, not restore it; (C) Stock basis increases only—debt basis is restored after stock basis reaches its restoration point.",
+    "tip": "§1367(b)(2)(B)/Reg. §1.1367-2(c): Debt basis restoration = income increases AFTER stock basis restored to zero. Capital contributions only increase stock basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7414,8 +7414,8 @@ const questions = [
       "D": "Basis, passive activity, at-risk"
     },
     "correctAnswer": "B",
-    "explanation": "S corporation losses are subject to three limitations in this order: (1) stock and debt basis, (2) at-risk amount, and (3) passive activity rules. A loss must clear each hurdle before the next applies. Amounts failing any test are suspended and carried forward.",
-    "tip": "Loss limitation order: BASIS → AT-RISK → PASSIVE. Remember: BAP (like a baseball bat sound).",
+    "explanation": "S corporation losses are subject to THREE limitations applied in this specific order: (1) Stock and debt BASIS under §1366(d)—losses limited to combined stock + debt basis; (2) AT-RISK amount under §465—losses limited to amounts the taxpayer is economically at risk; (3) PASSIVE activity rules under §469—passive losses only offset passive income. Each limitation is applied before the next. Losses failing any test are suspended under that limitation's carryforward rules. Why other answers are wrong: (A) At-risk, basis, passive—wrong order (basis comes first); (C) Passive, basis, at-risk—completely reversed; (D) Basis, passive, at-risk—at-risk comes before passive.",
+    "tip": "Loss limitation order: §1366(d) BASIS → §465 AT-RISK → §469 PASSIVE. Mnemonic: 'BAP' or 'Before Any Party.' Each must pass before next applies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7435,8 +7435,8 @@ const questions = [
       "D": "$50,000 tax-free, $20,000 dividend"
     },
     "correctAnswer": "D",
-    "explanation": "Distributions come first from AAA (tax-free to extent of stock basis), then from accumulated E&P (dividend), then return of basis (tax-free), then capital gain. Here: $50,000 from AAA (tax-free, reduces stock basis to $10,000), $20,000 from E&P (taxable dividend).",
-    "tip": "With C corp E&P: AAA first (tax-free), then E&P (dividend), then basis, then gain.",
+    "explanation": "Per IRC §1368(c), when an S corporation has accumulated E&P from C corp years, distributions are applied in this order: (1) AAA—tax-free to extent of stock basis under §1368(c)(1); (2) Accumulated E&P—taxable dividend under §1368(c)(2); (3) Remaining basis—tax-free return of capital; (4) Capital gain—excess over basis. Calculation: $50,000 from AAA (tax-free, reduces basis to $10,000), then $20,000 from accumulated E&P (taxable dividend). Total: $50,000 tax-free + $20,000 dividend. Why other answers are wrong: (A) $50,000 tax-free, $20,000 capital gain—incorrectly skips E&P layer; (B) $60,000 tax-free—can't take more than AAA ($50,000) tax-free when E&P exists; (C) $70,000 return of capital—ignores the E&P dividend layer.",
+    "tip": "§1368(c) with E&P: Distribution order = (1) AAA (tax-free), (2) E&P (dividend), (3) Remaining basis (tax-free), (4) Capital gain. AAA shields against dividend treatment.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -7456,8 +7456,8 @@ const questions = [
       "D": "$52,000"
     },
     "correctAnswer": "B",
-    "explanation": "Beginning basis: $40,000. Add: ordinary income ($25,000) + tax-exempt interest ($2,000) = $67,000. Subtract: distributions ($15,000) = $52,000. Subtract: charitable ($3,000) + Section 179 ($5,000) = $44,000. Note: charitable and Section 179 are separately stated items that reduce basis.",
-    "tip": "Both deductible AND nondeductible items reduce basis. Track separately stated items.",
+    "explanation": "Per IRC §1367(a), S corp stock basis is adjusted following the ordering rules in Reg. §1.1367-1(f). Step-by-step: (1) Beginning basis: $40,000; (2) Add income items (§1367(a)(1)): Ordinary income $25,000 + tax-exempt interest $2,000 = +$27,000 → New basis: $67,000; (3) Subtract distributions (§1367(a)(2)(A)): -$15,000 → New basis: $52,000; (4) Subtract separately stated deductions (§1367(a)(2)(B)): Charitable contributions $3,000 + Section 179 expense $5,000 = -$8,000 → Ending basis: $44,000. Key: Charitable contributions and §179 are separately stated items that reduce shareholder basis even though they're deductible on the shareholder's return. Why other answers are wrong: (A) $42,000—calculation error; (C) $47,000—forgot one deduction item; (D) $52,000—forgot to subtract separately stated deductions.",
+    "tip": "§1367(a) comprehensive: (+) ALL income including tax-exempt, (-) distributions, (-) ALL deductions including separately stated (charitable, §179). Follow Reg. §1.1367-1(f) ordering.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -7477,8 +7477,8 @@ const questions = [
       "D": "$21,000"
     },
     "correctAnswer": "D",
-    "explanation": "The BIG tax applies to built-in gains recognized within 5 years of conversion. The built-in gain at conversion was $150,000, but only $100,000 was built-in at conversion (the question states $100,000 built-in gain). BIG tax = $100,000 × 21% = $21,000. Post-conversion appreciation is not subject to BIG tax.",
-    "tip": "BIG tax = built-in gain at conversion × 21%. Only conversion-date appreciation taxed.",
+    "explanation": "Per IRC §1374, the built-in gains (BIG) tax applies to recognized built-in gains within the 5-year recognition period under §1374(d)(7). The tax is computed on the NET recognized built-in gain under §1374(b), limited to the built-in gain that existed at the time of conversion. Calculation: The land had $100,000 built-in gain at conversion (per the question). Total gain on sale is $200,000, but only the conversion-date built-in gain of $100,000 is subject to BIG tax. BIG tax = $100,000 × 21% (highest corporate rate under §11(b)) = $21,000. The additional $100,000 post-conversion appreciation passes through to shareholders without entity-level tax. Why other answers are wrong: (A) $31,500—uses wrong tax rate; (B) $42,000—taxes full $200,000 gain; (C) $0—ignores that sale occurred within recognition period.",
+    "tip": "§1374 BIG tax calculation: Only conversion-date built-in gain × 21%. Post-conversion appreciation = no BIG tax. 5-year recognition period.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -7498,8 +7498,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "A",
-    "explanation": "The capital contribution ($2,000) and ordinary income ($8,000) increase stock basis to $10,000. This provides sufficient basis to deduct the $5,000 suspended loss. After deducting the loss, remaining basis is $5,000 ($10,000 - $5,000). She can deduct the entire suspended loss.",
-    "tip": "Suspended losses used when basis becomes available. New income + contributions create room.",
+    "explanation": "Per IRC §1366(d)(2), suspended losses from prior years are deductible when the shareholder's basis is restored. Step-by-step: (1) Beginning basis: $0; (2) Increase for capital contribution (§1367(a)(1)): +$2,000; (3) Increase for ordinary income (§1367(a)(1)(A)): +$8,000; (4) New basis before suspended loss: $10,000; (5) Apply suspended loss under §1366(d)(2): The shareholder has $5,000 suspended from last year, and now has $10,000 basis available. Deductible suspended loss = $5,000 (full amount). Ending basis: $10,000 - $5,000 = $5,000. Why other answers are wrong: (B) $8,000—only had $5,000 suspended; (C) $10,000—exceeds suspended loss available; (D) $0—incorrectly assumes no basis restoration.",
+    "tip": "§1366(d)(2): Suspended losses deductible when basis restored. Contributions + income create basis for previously suspended losses.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -7519,8 +7519,8 @@ const questions = [
       "D": "Shareholders to continue using pass-through losses indefinitely"
     },
     "correctAnswer": "B",
-    "explanation": "The PTTP is generally the longer of (1) one year after termination or (2) the due date for the last S corporation return (including extensions). During this period, distributions from the former AAA are treated as tax-free return of basis. Suspended losses can also be deducted if basis is increased.",
-    "tip": "PTTP = ~1 year after S termination. Allows tax-free AAA distributions and suspended loss use.",
+    "explanation": "Per IRC §1377(b), the post-termination transition period (PTTP) provides relief after an S election terminates. The PTTP is the longer of: (1) One year after the termination date, or (2) The due date (with extensions) for filing the last S corporation return. During the PTTP, two key benefits under §1377(b)(1): (A) Distributions from the former AAA are treated as tax-free return of basis (not dividends); (B) Suspended losses under §1366(d)(2) can be deducted if the shareholder increases stock basis (e.g., through contributions). Why other answers are wrong: (A) Immediate new election—§1362(g) requires a 5-year wait after revocation/termination before re-electing S status; (C) Continue Form 1120-S—the corporation files Form 1120 as a C corp after termination; (D) Indefinite pass-through losses—losses only usable if basis increased during PTTP.",
+    "tip": "§1377(b) PTTP: ~1 year after S termination. Benefits: (1) AAA distributions tax-free, (2) Suspended losses deductible if basis increased. §1362(g): 5-year wait for re-election.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7540,8 +7540,8 @@ const questions = [
       "D": "A direct loan from the shareholder to the S corporation"
     },
     "correctAnswer": "D",
-    "explanation": "Only direct loans from the shareholder to the corporation provide debt basis. Guaranteeing corporate debt does not create basis (unlike partnerships). Loans from the corporation to shareholder and loans from other shareholders do not provide basis.",
-    "tip": "S corp debt basis: DIRECT loans from shareholder only. Guarantees don't count (unlike partnerships).",
+    "explanation": "Per IRC §1366(d)(1)(B), an S corporation shareholder's debt basis consists ONLY of the adjusted basis of any indebtedness of the S corporation TO the shareholder. This means the shareholder must make a DIRECT loan to the corporation. Key distinction from partnerships: Under Reg. §1.1366-2(a)(2), guaranteeing corporate debt does NOT create debt basis for S corp shareholders (but does for partners under §752). The shareholder must have an actual economic outlay. Why other answers are wrong: (A) Loan FROM S corp to shareholder—this is the opposite direction; creates no basis; (B) Loan from another shareholder—the shareholder in question didn't make the loan; (C) Bank loan guarantee—guarantees don't count for S corps (major difference from partnerships).",
+    "tip": "§1366(d)(1)(B): S corp debt basis = DIRECT loans from shareholder only. Key difference: Guarantees DON'T count (unlike partnerships where §752 includes guarantees).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7561,8 +7561,8 @@ const questions = [
       "D": "Ordinary business income"
     },
     "correctAnswer": "D",
-    "explanation": "AAA is adjusted for taxable income/loss items and nondeductible expenses related to taxable income, but NOT for tax-exempt income or expenses related to tax-exempt income. Tax-exempt items affect Other Adjustments Account (OAA). Ordinary business income increases AAA.",
-    "tip": "AAA = taxable items only. Tax-exempt goes to OAA. AAA can go negative.",
+    "explanation": "Per IRC §1368(e)(1), the Accumulated Adjustments Account (AAA) is adjusted for items that affect TAXABLE income: increases for income (but NOT tax-exempt income), decreases for losses/deductions and nondeductible expenses RELATED to taxable income. Ordinary business income clearly increases AAA. Tax-exempt income and expenses related to tax-exempt income affect the Other Adjustments Account (OAA) instead under §1368(e)(1)(A). Why other answers are wrong: (A) Federal taxes from C corp years—these relate to pre-S periods, not S corp operations; (B) Life insurance proceeds—these are tax-exempt, so they go to OAA, not AAA; (C) Tax-exempt interest—specifically excluded from AAA; goes to OAA.",
+    "tip": "§1368(e)(1): AAA = TAXABLE items only (income, losses, nondeductible expenses related to taxable income). Tax-exempt items → OAA. AAA can go negative!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7582,8 +7582,8 @@ const questions = [
       "D": "The beneficiaries' marginal rates"
     },
     "correctAnswer": "A",
-    "explanation": "The S corporation portion of an ESBT is taxed at the highest individual marginal rate (currently 37%). This is because the income cannot be distributed to beneficiaries while retaining its S corporation character. The ESBT provides flexibility but at a tax cost.",
-    "tip": "ESBT S corp income = highest individual rate (37%). Separate S portion taxed at trust level.",
+    "explanation": "Per IRC §641(c)(2)(A), the S corporation portion of an Electing Small Business Trust (ESBT) is taxed at the highest individual marginal rate (currently 37% under §1(j)(2)). The ESBT rules under §1361(e) allow certain trusts to hold S corp stock, but with a trade-off: the S portion is treated as a separate trust and taxed at the highest rate rather than compressed trust brackets. This eliminates any benefit from distributing income to lower-bracket beneficiaries. Why other answers are wrong: (B) Capital gains rates—the S portion income is taxed at ordinary rates (37%), not preferential LTCG rates; (C) Trust's normal marginal rates—ESBT S portion uses the highest rate, not graduated rates; (D) Beneficiaries' rates—income cannot flow through to beneficiaries at their rates.",
+    "tip": "§641(c)(2)(A): ESBT S corp income = highest individual rate (37%). Separate S portion. Trade-off for flexibility of trust holding S corp stock.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7603,8 +7603,8 @@ const questions = [
       "D": "The lesser of 20% of QBI or 20% of taxable income (minus net capital gains)"
     },
     "correctAnswer": "D",
-    "explanation": "The Section 199A deduction is taken at the shareholder level, not the entity level. It equals 20% of qualified business income, limited to the greater of (1) 50% of W-2 wages or (2) 25% of W-2 wages plus 2.5% of qualified property, and cannot exceed 20% of taxable income minus net capital gains.",
-    "tip": "Section 199A: 20% of QBI, taken on shareholder's 1040. Subject to W-2/property and TI limits.",
+    "explanation": "Per IRC §199A(a), the qualified business income (QBI) deduction equals the LESSER of: (1) 20% of QBI from the pass-through business, or (2) 20% of taxable income minus net capital gains. For S corporation shareholders, the deduction is taken at the SHAREHOLDER level (Form 1040), not the entity level. Above certain income thresholds ($232,100 single/$464,200 MFJ for 2024), the deduction is further limited under §199A(b)(2) to the GREATER of: (A) 50% of W-2 wages, OR (B) 25% of W-2 wages + 2.5% of UBIA of qualified property. Why other answers are wrong: (A) Not available—§199A specifically applies to pass-through income including S corps; (B) Taken at corporate level—it's taken on the shareholder's individual return; (C) 20% of taxable income—that's the overall limit, not the deduction formula.",
+    "tip": "§199A QBI deduction: 20% of QBI (shareholder level), limited to 20% of (TI - net capital gains). High-income: W-2 wage/UBIA limitations apply.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7624,8 +7624,8 @@ const questions = [
       "D": "The corporation pays a penalty of $10,000"
     },
     "correctAnswer": "B",
-    "explanation": "The IRS may grant relief for inadvertent terminations under Section 1362(f) if: (1) the termination was inadvertent, (2) steps are taken to correct the problem within a reasonable time, and (3) the corporation and all affected shareholders agree to be treated as the IRS prescribes.",
-    "tip": "Inadvertent termination relief: Must be unintentional, corrected promptly, and parties agree to IRS terms.",
+    "explanation": "Per IRC §1362(f), the IRS may waive an inadvertent termination and treat the corporation as continuing to be an S corporation if ALL of the following conditions are met: (1) The termination was INADVERTENT (not intentional or due to negligence); (2) Within a REASONABLE time after discovery, steps are taken to correct the terminating event; (3) The corporation and ALL affected shareholders agree to be treated consistently as the IRS prescribes (e.g., making adjustments). The IRS has been relatively generous in granting relief through private letter rulings. Why other answers are wrong: (A) Corrected within 3 years—there's no specific time limit; reasonable time is facts-and-circumstances; (C) Fewer than 50 shareholders—shareholder count is irrelevant to relief; (D) $10,000 penalty—there's no specific penalty; relief depends on meeting the requirements.",
+    "tip": "§1362(f) inadvertent termination relief: (1) Inadvertent, (2) Timely correction, (3) All parties agree to IRS adjustments. IRS generally grants relief via PLR.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7645,8 +7645,8 @@ const questions = [
       "D": "Only in the first year of the S election"
     },
     "correctAnswer": "C",
-    "explanation": "The closing of the books method may be elected when there is a qualifying disposition (sale or complete termination of interest) and all affected shareholders consent. This method allocates actual income/loss to periods before and after the disposition rather than using per-share, per-day.",
-    "tip": "Closing the books: Needs qualifying disposition + all affected shareholders' consent.",
+    "explanation": "Per IRC §1377(a)(2), an S corporation may elect the 'closing of the books' method instead of the default per-share, per-day allocation under §1377(a)(1). This election is available ONLY when: (1) There is a 'qualifying disposition'—defined as a sale or exchange of 100% of a shareholder's interest, or complete termination of a shareholder's interest (redemption); AND (2) ALL 'affected shareholders' consent (both the disposing shareholder and acquiring shareholder(s)). The election allocates actual income/loss based on the corporation's books as of the disposition date. Why other answers are wrong: (A) >50 shareholders—shareholder count is irrelevant; (B) Any time—requires a qualifying disposition and consent; (D) First year only—can be used any year there's a qualifying disposition.",
+    "tip": "§1377(a)(2) closing the books: Requires (1) qualifying disposition (100% termination) + (2) ALL affected shareholders' consent. Alternative to per-share, per-day.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -7666,8 +7666,8 @@ const questions = [
       "D": "Paid in the last C corporation year, with tax spread over 4 years"
     },
     "correctAnswer": "D",
-    "explanation": "When a C corporation using LIFO converts to an S corporation, it must include the LIFO recapture amount (excess of FIFO value over LIFO value) in income in its last C corporation year. The resulting tax is paid over 4 years (25% per year). Stock basis is increased by the recapture amount.",
-    "tip": "LIFO recapture on C-to-S: Include in last C year, pay tax over 4 years. Stock basis increases.",
+    "explanation": "Per IRC §1363(d), when a C corporation using the LIFO inventory method converts to an S corporation, it must include the 'LIFO recapture amount' in gross income for its LAST C corporation tax year. The LIFO recapture amount equals the excess of the inventory's FIFO value over its LIFO value (representing the LIFO reserve). Under §1363(d)(3), the resulting tax liability is paid in 4 equal installments: (1) With the last C corp return, (2)-(4) With the next three S corp returns. Under §1367(a)(1), the shareholders' stock basis is INCREASED by the recapture amount (since it was taxed at the C corp level). Why other answers are wrong: (A) Avoided entirely—§1363(d) specifically requires recapture; (B) Paid by shareholders—it's a C corp level tax; (C) Deferred until sold—recapture is triggered at conversion, not sale.",
+    "tip": "§1363(d) LIFO recapture: C-to-S conversion triggers recapture in LAST C year. Tax paid over 4 years (25% each). Stock basis increases by recapture amount.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -7687,8 +7687,8 @@ const questions = [
       "D": "Recognizes gain to the extent FMV exceeds basis"
     },
     "correctAnswer": "A",
-    "explanation": "Under Section 721, no gain or loss is recognized when property is contributed to a partnership in exchange for a partnership interest. This is similar to Section 351 for corporations but with broader nonrecognition.",
-    "tip": "Section 721: Generally no gain/loss on contributions to partnership. More flexible than corps.",
+    "explanation": "Per IRC §721(a), no gain or loss is recognized to a partnership or any of its partners when property is contributed to the partnership in exchange for a partnership interest. This nonrecognition is broader than §351 for corporations because there's NO control requirement—any partner can contribute at any time tax-free. The partner takes a substituted basis in the partnership interest under §722, and the partnership takes a carryover basis under §723. Exceptions: §721(b) for investment partnerships and disguised sales under §707(a)(2)(B). Why other answers are wrong: (B) Ordinary income—no income recognized under §721; (C) FMV gain—basis, not FMV, determines gain; (D) FMV excess—applies only if §721 exception applies.",
+    "tip": "§721(a): No gain/loss on contribution to partnership. No control requirement (unlike §351). Partner: §722 substituted basis. Partnership: §723 carryover basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7708,8 +7708,8 @@ const questions = [
       "D": "Taxed as a separate entity"
     },
     "correctAnswer": "B",
-    "explanation": "A partnership is a pass-through entity. It files an information return (Form 1065) but does not pay income tax at the entity level. Income, losses, deductions, and credits pass through to partners who report them on their individual returns.",
-    "tip": "Partnerships: Form 1065 is informational only. No entity-level tax. Partners pay tax.",
+    "explanation": "Per IRC §701, a partnership is a pass-through entity (conduit) that is not subject to income tax at the entity level. The partnership files an information return (Form 1065) under §6031 and issues Schedule K-1s to partners reporting their distributive shares. Under §702(a), each partner includes their share of separately stated items and nonseparately computed income/loss on their individual return (Form 1040 or 1120). The partnership itself does not pay federal income tax. Why other answers are wrong: (A) Corporate income tax—partnerships are not subject to entity-level tax; (C) Exempt from filing—must file Form 1065; (D) Taxed as separate entity—that describes C corporations.",
+    "tip": "§701: Partnership = pass-through entity, no entity-level tax. §6031: File Form 1065 (informational). §702: Partners report K-1 items on their returns.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7729,8 +7729,8 @@ const questions = [
       "D": "February 15"
     },
     "correctAnswer": "A",
-    "explanation": "Partnership returns are due on the 15th day of the 3rd month following the close of the tax year. For a calendar-year partnership, this is March 15. This allows partners to receive Schedule K-1s in time to file their individual returns by April 15.",
-    "tip": "Partnerships and S corps: March 15. Earlier than C corps/individuals to provide K-1s.",
+    "explanation": "Per IRC §6072(b), a partnership's information return (Form 1065) is due on the 15th day of the 3rd month following the close of the tax year. For a calendar-year partnership, this is March 15. This earlier deadline (same as S corporations) ensures partners receive Schedule K-1s in time to file their individual returns (due April 15). A 6-month extension to September 15 is available under §6081 by filing Form 7004. Why other answers are wrong: (B) April 15—this is the deadline for C corporations and individuals; (C) September 15—this is the extended deadline; (D) February 15—too early; no entity uses this deadline.",
+    "tip": "§6072(b): Partnerships/S corps due 3/15 (calendar year). Allows time for K-1 distribution before partners' 4/15 deadline. Extension: 6 months to 9/15.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7750,8 +7750,8 @@ const questions = [
       "D": "Neither recourse nor nonrecourse liabilities"
     },
     "correctAnswer": "C",
-    "explanation": "A partner's outside basis includes their share of partnership liabilities. This applies to both recourse and nonrecourse liabilities. This is a key difference from S corporations, where debt does not increase shareholder basis unless directly loaned.",
-    "tip": "Partnership basis includes share of ALL liabilities. S corp basis requires direct loans only.",
+    "explanation": "Per IRC §752(a), any increase in a partner's share of partnership liabilities is treated as a cash contribution, thereby increasing the partner's outside basis. This applies to BOTH recourse liabilities (allocated to partners bearing economic risk of loss under Reg. §1.752-2) and nonrecourse liabilities (allocated generally per profit ratios under Reg. §1.752-3). This is a KEY DIFFERENCE from S corporations, where only DIRECT shareholder loans to the corporation increase basis—guarantees and proportionate share of entity debt do NOT increase S corp shareholder basis. Why other answers are wrong: (A) Only recourse—nonrecourse also included; (B) Only nonrecourse—recourse also included; (D) Neither—§752 specifically includes both.",
+    "tip": "§752(a): Partner basis includes share of ALL liabilities (recourse + nonrecourse). KEY DIFFERENCE: S corp basis requires DIRECT loans only, not debt share.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7771,8 +7771,8 @@ const questions = [
       "D": "Payroll tax withholding"
     },
     "correctAnswer": "B",
-    "explanation": "General partners pay self-employment tax on their distributive share of partnership ordinary income. This is different from S corporation shareholders, whose pass-through income is not subject to self-employment tax.",
-    "tip": "General partners = SE tax on ordinary income. S corp shareholders = no SE tax on K-1 income.",
+    "explanation": "Per IRC §1402(a), net earnings from self-employment includes a general partner's distributive share of partnership ordinary income (or loss) derived from any trade or business. General partners must pay self-employment tax (15.3% up to the Social Security wage base, then 2.9% Medicare only) on this income. This is a KEY DIFFERENCE from S corporations: under §1402(a)(2), S corporation pass-through income is NOT subject to SE tax (only reasonable wages are). Limited partners are generally exempt from SE tax on distributive share under §1402(a)(13). Why other answers are wrong: (A) Corporate income tax—partnerships are pass-through entities; (C) No additional taxes—general partners owe SE tax; (D) Payroll withholding—partners aren't employees; they pay estimated SE tax.",
+    "tip": "§1402(a): General partners pay SE tax on ordinary income. KEY DIFFERENCE: S corp K-1 income = NO SE tax. Limited partners exempt (§1402(a)(13)).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7792,8 +7792,8 @@ const questions = [
       "D": "Unlimited"
     },
     "correctAnswer": "A",
-    "explanation": "A limited partner's liability for partnership debts is generally limited to their capital contribution to the partnership. They do not have personal liability beyond that amount, provided they do not participate in management (which could make them a general partner).",
-    "tip": "Limited partners = limited liability (like shareholders). General partners = unlimited liability.",
+    "explanation": "Under state limited partnership law (Uniform Limited Partnership Act) and reinforced by tax regulations, a limited partner's personal liability for partnership debts is generally LIMITED to their capital contribution. They do not have personal liability beyond that investment amount. However, this protection can be lost if the limited partner participates in the CONTROL or management of the partnership business (which would make them a 'general partner' for liability purposes). For tax purposes, limited partners also receive favorable SE tax treatment under §1402(a)(13). Why other answers are wrong: (B) Equal to other partners—general partners have unlimited liability, limited partners do not; (C) Based on ownership percentage—limited liability doesn't scale with ownership; (D) Unlimited—this describes general partners.",
+    "tip": "Limited partners = limited liability (capital at risk only). Lose protection if they participate in management/control. §1402(a)(13): Also exempt from SE tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -7813,8 +7813,8 @@ const questions = [
       "D": "$70,000"
     },
     "correctAnswer": "C",
-    "explanation": "Alex's initial basis equals the basis of contributed property ($30,000) plus his share of partnership liabilities (25% × $80,000 = $20,000). Total outside basis = $30,000 + $20,000 = $50,000. The FMV is irrelevant for basis purposes.",
-    "tip": "Outside basis = property basis + share of liabilities. FMV doesn't matter.",
+    "explanation": "Per IRC §722 and §752(a), Alex's initial outside basis equals: (1) Basis of contributed property under §722: $30,000 (carryover basis from Alex); PLUS (2) Share of partnership liabilities under §752(a): 25% × $80,000 recourse debt = $20,000 (treated as deemed cash contribution). Total outside basis: $30,000 + $20,000 = $50,000. The property's FMV ($50,000) is irrelevant for partner basis calculations—only adjusted basis matters. The $20,000 built-in gain is tracked for §704(c) allocation purposes. Why other answers are wrong: (A) $100,000—incorrect calculation; (B) $30,000—ignores liability share; (D) $70,000—uses FMV instead of basis for property.",
+    "tip": "§722 + §752(a): Outside basis = property basis (not FMV) + share of partnership liabilities. Liabilities = deemed cash contribution.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -7834,8 +7834,8 @@ const questions = [
       "D": "$53,000"
     },
     "correctAnswer": "B",
-    "explanation": "Beginning basis: $45,000. Add: ordinary income ($20,000) + tax-exempt interest ($3,000) = $68,000. Subtract: charitable contributions ($2,000) + distributions ($10,000) = $56,000. Both taxable and tax-exempt income increase basis; separately stated deductions decrease basis.",
-    "tip": "Partnership basis: +income (all types), +contributions, -deductions, -distributions, +/- liability changes.",
+    "explanation": "Per IRC §705(a), a partner's outside basis is adjusted annually. Step-by-step: (1) Beginning basis: $45,000; (2) INCREASE under §705(a)(1): Ordinary income $20,000 + tax-exempt interest $3,000 = +$23,000 → New basis: $68,000; (3) DECREASE under §705(a)(2): Charitable contributions $2,000 + cash distributions $10,000 = -$12,000 → Ending basis: $56,000. Key: Tax-exempt interest increases basis under §705(a)(1)(B) even though not taxable—this ensures later distributions of those amounts are tax-free. Why other answers are wrong: (A) $55,000—calculation error; (C) $58,000—forgot to subtract charitable; (D) $53,000—calculation error.",
+    "tip": "§705(a): Partner basis adjustments: (+) ALL income (taxable + tax-exempt), (-) distributions, (-) separately stated deductions. Tax-exempt income increases basis!",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -7855,8 +7855,8 @@ const questions = [
       "D": "$15,000"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 723, the partnership's basis in contributed property (inside basis) equals the contributing partner's basis ($15,000). This is a carryover basis that preserves the built-in gain ($10,000) for allocation to the contributing partner under Section 704(c).",
-    "tip": "Inside basis = contributor's basis (carryover). Built-in gain tracked for later allocation.",
+    "explanation": "Per IRC §723, the partnership's basis in contributed property ('inside basis') equals the contributing partner's adjusted basis at the time of contribution—a CARRYOVER basis of $15,000. The partnership does NOT step up to FMV ($25,000). The built-in gain of $10,000 ($25,000 FMV - $15,000 basis) is tracked and must be allocated to the contributing partner under §704(c) if the property is later sold or depreciated. This prevents shifting of pre-contribution gain to non-contributing partners. Why other answers are wrong: (A) $20,000—no basis for this amount; (B) $25,000—FMV is irrelevant for inside basis; (C) $40,000—no basis for this calculation.",
+    "tip": "§723: Inside basis = contributor's carryover basis (not FMV). §704(c): Built-in gain/loss tracked and allocated to contributing partner on disposition.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7876,8 +7876,8 @@ const questions = [
       "D": "No gain recognized; basis reduced to $5,000"
     },
     "correctAnswer": "D",
-    "explanation": "In a current (nonliquidating) distribution, cash distributions reduce basis dollar-for-dollar but gain is recognized only if cash exceeds basis. Here, $25,000 cash is less than $30,000 basis, so no gain. Ending basis = $30,000 - $25,000 = $5,000.",
-    "tip": "Current cash distribution: Gain only if cash > basis. Basis reduced but not below zero.",
+    "explanation": "Per IRC §731(a)(1), in a current (nonliquidating) distribution, a partner recognizes gain ONLY if the cash distributed exceeds the partner's outside basis. Here, $25,000 cash is LESS than $30,000 basis, so NO gain is recognized. Under §733, the partner's outside basis is reduced (but not below zero) by the cash distributed: $30,000 - $25,000 = $5,000 ending basis. If cash had exceeded basis, the excess would be capital gain under §731(a)(1). Why other answers are wrong: (A) $5,000 gain—no gain because cash ≤ basis; (B) Basis remains $30,000—cash distributions reduce basis; (C) $25,000 gain—gain only on excess over basis, not full distribution.",
+    "tip": "§731(a)(1): Current cash distribution = gain ONLY if cash > basis. §733: Basis reduced by cash (not below zero). No loss on current distribution.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -7897,8 +7897,8 @@ const questions = [
       "D": "$20,000"
     },
     "correctAnswer": "B",
-    "explanation": "In a current distribution of property (other than cash), the partner takes a carryover basis in the property equal to the partnership's inside basis ($12,000), limited to the partner's outside basis. Since $12,000 < $20,000 outside basis, the partner takes $12,000 basis.",
-    "tip": "Current property distribution: Partner gets lesser of inside basis or outside basis.",
+    "explanation": "Per IRC §732(a)(1), in a current (nonliquidating) distribution of property other than cash, the partner's basis in the property equals the partnership's inside basis ($12,000), BUT cannot exceed the partner's remaining outside basis ($20,000). Since $12,000 inside basis < $20,000 outside basis, the partner takes a $12,000 carryover basis in the property. The partner's remaining outside basis is reduced under §733 to $20,000 - $12,000 = $8,000. FMV is irrelevant for basis. Why other answers are wrong: (A) $8,000—this is the remaining outside basis, not property basis; (C) $18,000—FMV is not used; (D) $20,000—only if inside basis exceeded outside basis (substituted basis).",
+    "tip": "§732(a)(1): Property basis in current distribution = LESSER of: (1) partnership's inside basis, or (2) partner's outside basis. FMV irrelevant.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -7918,8 +7918,8 @@ const questions = [
       "D": "Tax-free distributions"
     },
     "correctAnswer": "A",
-    "explanation": "Guaranteed payments are payments to partners for services (or use of capital) determined without regard to partnership income. They are deductible by the partnership in computing ordinary income and are ordinary income to the receiving partner (subject to SE tax).",
-    "tip": "Guaranteed payments = ordinary income to partner, deduction to partnership. Subject to SE tax.",
+    "explanation": "Per IRC §707(c), guaranteed payments are payments to a partner for services (or use of capital) determined WITHOUT regard to partnership income. They are treated like payments to a non-partner for deduction purposes: the partnership DEDUCTS them in computing ordinary income under §162. To the receiving partner, they are ORDINARY INCOME (not a distribution) and are subject to self-employment tax under §1402(a). The partner reports guaranteed payments in the year the partnership deducts them (matching). Why other answers are wrong: (B) Capital gains—guaranteed payments are always ordinary income; (C) Not reported until cash withdrawn—they're reported when earned, regardless of cash receipt; (D) Tax-free distributions—they're taxable payments, not distributions.",
+    "tip": "§707(c): Guaranteed payments = (1) Deductible by partnership, (2) Ordinary income to partner, (3) Subject to SE tax. Reported when partnership deducts, not when cash received.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7939,8 +7939,8 @@ const questions = [
       "D": "Cost of goods sold"
     },
     "correctAnswer": "B",
-    "explanation": "Items that could affect partners differently must be separately stated. Section 1231 gains/losses retain their character when passed through and may be affected by each partner's other 1231 transactions. Cost of goods sold, wages, and depreciation are included in ordinary income/loss calculation.",
-    "tip": "Separately stated: Capital gains/losses, 1231, charitable, foreign taxes, tax-exempt income, etc.",
+    "explanation": "Per IRC §702(a), items that could affect individual partners' tax liabilities differently MUST be separately stated on Schedule K-1. Section 1231 gains and losses are separately stated under §702(a)(3) because they retain their character when passed through under §702(b), and each partner may have different §1231 netting results (prior unrecaptured losses, other §1231 transactions). Other separately stated items include: capital gains/losses, §179 deductions, charitable contributions, tax-exempt income, foreign taxes, and investment interest. Why other answers are wrong: (A) Employee wages—included in ordinary income computation; (C) Depreciation—generally included in ordinary income (except §179); (D) COGS—netted into ordinary income.",
+    "tip": "§702(a): Separately stated items = those affecting partners differently. §702(b): Items retain character. Examples: §1231, capital gains/losses, charitable, foreign taxes, tax-exempt income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -7960,8 +7960,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "A",
-    "explanation": "Partnership losses are first limited by the partner's outside basis. The partner can only deduct losses up to their $15,000 basis. The remaining $10,000 loss is suspended and carried forward indefinitely until the partner has sufficient basis.",
-    "tip": "Partnership loss limited to outside basis. Excess suspended indefinitely. Then check at-risk and PAL.",
+    "explanation": "Per IRC §704(d), a partner's distributive share of partnership loss is deductible ONLY to the extent of the partner's outside basis at the end of the partnership year. Here, the $25,000 allocated loss is limited to the $15,000 outside basis. The partner can deduct only $15,000. The excess $10,000 loss is SUSPENDED under §704(d) and carries forward indefinitely until the partner has sufficient basis (through income allocation, contributions, or increased share of liabilities). After the basis test, losses must still pass §465 at-risk and §469 passive activity limitations. Why other answers are wrong: (B) $25,000—exceeds basis limitation; (C) $0—partner can deduct up to basis; (D) $10,000—this is the suspended amount, not deductible amount.",
+    "tip": "§704(d): Partnership loss limited to outside basis. Excess suspended indefinitely, carried forward. After basis: check §465 at-risk, then §469 passive activity.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -7981,8 +7981,8 @@ const questions = [
       "D": "Capital account balances"
     },
     "correctAnswer": "C",
-    "explanation": "Recourse liabilities are allocated to partners who bear the economic risk of loss—meaning they would be obligated to pay if the partnership could not. This is typically general partners who have personal liability for partnership debts.",
-    "tip": "Recourse debt = who bears economic risk of loss. Nonrecourse = profit ratios generally.",
+    "explanation": "Per Reg. §1.752-2, partnership RECOURSE liabilities are allocated to partners who bear the 'economic risk of loss'—the partner(s) who would be obligated to pay the creditor if the partnership could not (typically through personal liability or guarantees). For general partnerships, general partners bear economic risk equally. For limited partnerships, general partners typically bear all recourse liability risk. CONTRAST with nonrecourse liabilities under Reg. §1.752-3, which are allocated based on: (1) partnership minimum gain, (2) §704(c) minimum gain, then (3) profit-sharing ratios. Why other answers are wrong: (A) Profit ratios—that's for nonrecourse debt; (B) Loss ratios—not the test; (D) Capital account balances—irrelevant to liability allocation.",
+    "tip": "Reg. §1.752-2: Recourse debt = who bears economic risk of loss (obligation to pay). Reg. §1.752-3: Nonrecourse debt = minimum gain tiers, then profit ratios.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8002,8 +8002,8 @@ const questions = [
       "D": "$30,000"
     },
     "correctAnswer": "A",
-    "explanation": "Amount realized includes cash received ($100,000) plus relief from partnership liabilities ($20,000) = $120,000. Gain = amount realized ($120,000) - outside basis ($70,000) = $50,000. Liability relief is treated as additional sales proceeds.",
-    "tip": "Sale of interest: Amount realized = cash + liability relief. Don't forget the debt!",
+    "explanation": "Per IRC §752(d), when a partner sells their partnership interest, the partner's share of partnership liabilities is treated as an amount realized (as if cash received). Calculation: Amount realized = Cash received ($100,000) + Relief from liabilities under §752(d) ($20,000) = $120,000. Gain under §1001 = Amount realized ($120,000) - Outside basis ($70,000) = $50,000. Note: The gain character may be affected by 'hot assets' under §751 (portion could be ordinary income). Why other answers are wrong: (B) $70,000—incorrectly ignores liability relief; (C) $100,000—uses only cash received as amount realized; (D) $30,000—calculation error.",
+    "tip": "§752(d): Sale of partnership interest—liability relief = deemed cash received. Amount realized = cash + liability relief. Check §751 for ordinary income portion (hot assets).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -8023,8 +8023,8 @@ const questions = [
       "D": "Capital gain"
     },
     "correctAnswer": "A",
-    "explanation": "Section 751 'hot assets' include unrealized receivables and substantially appreciated inventory. When a partner sells their interest, the portion of gain attributable to hot assets is ordinary income, not capital gain. This prevents converting ordinary income to capital gain through sale.",
-    "tip": "Hot assets (Section 751) = ordinary income portion. Inventory + unrealized receivables.",
+    "explanation": "Per IRC §751, when a partner sells their partnership interest, the portion of gain attributable to 'hot assets' (§751 property) is treated as ORDINARY INCOME, not capital gain. §751(a) 'hot assets' include: (1) Unrealized receivables under §751(c)—including recapture amounts for depreciation under §§1245/1250; and (2) Substantially appreciated inventory under §751(d)—inventory with FMV > 120% of basis. This rule prevents partners from converting what would be ordinary income (if the partnership sold the assets) into capital gain (by selling the partnership interest). Why other answers are wrong: (B) Section 1231 gain—§751 produces ordinary, not §1231; (C) Tax-exempt—hot asset gain is fully taxable; (D) Capital gain—§751 specifically recharacterizes as ordinary.",
+    "tip": "§751: 'Hot assets' = unrealized receivables + substantially appreciated inventory (FMV > 120% basis). Gain attributable to hot assets = ORDINARY income, not capital.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8044,8 +8044,8 @@ const questions = [
       "D": "IRS advance approval"
     },
     "correctAnswer": "C",
-    "explanation": "Partnership allocations that differ from ownership percentages (special allocations) must have substantial economic effect to be respected. This means the allocation must affect capital accounts and liquidation distributions, not just tax benefits.",
-    "tip": "Special allocations need substantial economic effect. Must affect dollars, not just taxes.",
+    "explanation": "Per IRC §704(b) and Reg. §1.704-1(b)(2), for a partnership's special allocation (allocation differing from ownership percentages) to be respected for tax purposes, it must have 'substantial economic effect.' This two-part test requires: (1) ECONOMIC EFFECT—the allocation must be reflected in capital accounts, and liquidating distributions must follow capital accounts (affects real dollars, not just taxes); AND (2) SUBSTANTIALITY—the allocation must have a reasonable possibility of affecting dollar amounts received by partners (not just tax benefits). If the allocation fails these tests, the IRS will reallocate based on 'partners' interests in the partnership' (PIP). Why other answers are wrong: (A) Equal allocation—special allocations are permitted if they have SEE; (B) Unanimous approval—consent doesn't replace SEE requirement; (D) IRS approval—no advance approval needed, but IRS can challenge.",
+    "tip": "§704(b): Special allocations need SUBSTANTIAL ECONOMIC EFFECT (SEE). (1) Economic effect = affects capital accounts/liquidation; (2) Substantiality = real economic consequence, not just tax savings.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8065,8 +8065,8 @@ const questions = [
       "D": "Is determined by the partnership's holding period in the property"
     },
     "correctAnswer": "B",
-    "explanation": "When a partner contributes capital assets or Section 1231 property, the holding period 'tacks'—the partner's holding period in the partnership interest includes the period they held the contributed property. Cash contributions start a new holding period.",
-    "tip": "Contribute capital/1231 asset = holding period tacks. Cash contribution = new holding period.",
+    "explanation": "Per IRC §1223(1), when a partner contributes CAPITAL assets or §1231 property (assets that would produce capital gain or §1231 gain if sold), the holding period 'TACKS'—the partner's holding period in the partnership interest INCLUDES the period they held the contributed property. This ensures continuity of long-term capital gain treatment. However, if a partner contributes CASH or ordinary income property (inventory, accounts receivable), the holding period for that portion of the partnership interest begins on the contribution date (no tacking). If mixed property contributed, the partnership interest may have a split holding period. Why other answers are wrong: (A) Begins on contribution date—only for cash/ordinary property; (C) Always long-term—must meet >1 year requirement; (D) Partnership's holding period—that's inside basis rules.",
+    "tip": "§1223(1): Contribute capital/§1231 property = holding period TACKS. Contribute cash/ordinary property = new holding period begins. Split holding period if mixed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },

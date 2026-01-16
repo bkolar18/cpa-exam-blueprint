@@ -1,6 +1,6 @@
 # Question Explanation Enhancement - Status Update
 
-**Last Updated:** January 15, 2026
+**Last Updated:** January 16, 2026
 
 ---
 
@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 315 | 1,030 | 23% | In Progress |
+| REG | 1,345 | 365 | 980 | 27% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -63,9 +63,115 @@ All 58 exam TBS questions have been enhanced with:
 | Property Transactions - Like-Kind Exchanges | 35 | reg-007-001 to reg-007-035 | **Complete** |
 | Property Transactions - §1231/Recapture | 35 | reg-008-001 to reg-008-035 | **Complete** |
 | Entity Taxation - C Corps | 35 | reg-009-001 to reg-009-035 | **Complete** |
-| Entity Taxation | 300+ | Various | Pending |
+| Entity Taxation - S Corps | 35 | reg-010-001 to reg-010-035 | **Complete** |
+| Entity Taxation - Partnerships | 19 | reg-011-001 to reg-011-019 | **Complete** |
+| Entity Taxation | 250+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 16, 2026 (Session 9)
+
+**Batch 9-10: 50 Additional Questions Enhanced (reg-010-001 to reg-010-035 + reg-011-001 to reg-011-019)**
+
+Entity Taxation - S Corporations (35 questions - reg-010-001 to reg-010-035):
+- IRC section references (§1361, §1362, §1363, §1366, §1367, §1368, §1374, §1375, §1377, §6072)
+- S corp eligibility (§1361(b)) - 100 shareholders, U.S. citizens/residents, one class of stock
+- Family election (§1361(c)(1)) - 6 generations treated as one shareholder
+- Eligible shareholders (§1361(b)(1)(B)-(C)) - individuals, estates, certain trusts, 501(c)(3)s
+- Single class of stock (§1361(b)(1)(D)) - voting differences OK, economic rights must be identical
+- S election timing (§1362(b)) - by 15th day of 3rd month (March 15 for calendar year)
+- Pass-through taxation (§1363(a)) - no entity-level tax (generally)
+- Stock basis adjustments (§1367(a)) - income, distributions, losses, nondeductible expenses
+- Basis ordering rules (Reg. §1.1367-1(f)) - income first, then distributions, expenses, losses
+- Loss limitation (§1366(d)) - stock + debt basis, suspended losses carried forward
+- Loss limitation order - §1366(d) basis → §465 at-risk → §469 passive activity
+- Distribution rules without E&P (§1368(b)) - tax-free return of basis, then capital gain
+- Distribution rules with E&P (§1368(c)) - AAA first, then E&P (dividend), then basis
+- AAA purpose (§1368(e)) - tracks previously-taxed S corp income
+- Built-in gains tax (§1374) - 5-year recognition period, 21% rate
+- Passive income tax (§1375) - >25% passive income + C corp E&P
+- 2% shareholder fringe benefits (§1372(a)) - treated as partners
+- Reasonable compensation requirement - IRS scrutiny of salary/distribution mix
+- QSub rules (§1361(b)(3)) - 100% S corp owned, disregarded entity
+- Per-share, per-day allocation (§1377(a)(1))
+- Closing the books election (§1377(a)(2))
+- PTTP rules (§1377(b)) - ~1 year after termination
+- Debt basis requirements (§1366(d)(1)(B)) - direct loans only, not guarantees
+- ESBT taxation (§641(c)(2)(A)) - highest individual rate (37%)
+- QBI deduction (§199A) - 20% of QBI at shareholder level
+- Inadvertent termination relief (§1362(f))
+- LIFO recapture (§1363(d)) - 4-year installment payment
+
+Entity Taxation - Partnerships (19 questions - reg-011-001 to reg-011-019):
+- IRC section references (§701, §702, §704, §705, §707, §721, §722, §723, §731, §732, §733, §751, §752, §1223, §1402, §6031, §6072)
+- Partnership as pass-through (§701) - no entity-level tax
+- Contribution nonrecognition (§721(a)) - no control requirement (unlike §351)
+- Partner basis in contributed property (§722) - substituted basis
+- Partnership basis in contributed property (§723) - carryover basis
+- §704(c) built-in gain allocation - to contributing partner
+- Partner outside basis (§705(a)) - income/loss, distributions, liability changes
+- Liability inclusion (§752(a)) - recourse + nonrecourse both increase basis
+- SE tax for general partners (§1402(a)) - distributive share subject to SE
+- Limited partner exemption (§1402(a)(13)) - exempt from SE on distributive share
+- Current distribution rules (§731) - gain only if cash > basis
+- Property distribution basis (§732(a)(1)) - lesser of inside or outside basis
+- Guaranteed payments (§707(c)) - deductible by partnership, ordinary income to partner
+- Separately stated items (§702(a)) - items affecting partners differently
+- Loss limitation (§704(d)) - limited to outside basis
+- Recourse liability allocation (Reg. §1.752-2) - economic risk of loss
+- Nonrecourse liability allocation (Reg. §1.752-3) - minimum gain, then profit ratios
+- Sale of partnership interest (§752(d)) - liability relief = amount realized
+- Hot assets (§751) - ordinary income on unrealized receivables/inventory
+- Substantial economic effect (§704(b)) - required for special allocations
+- Holding period tacking (§1223(1)) - for capital/§1231 property contributions
+
+**Key IRC References Used (Batches 9-10):**
+| Topic | IRC Section |
+|-------|-------------|
+| S Corp Shareholder Limit | §1361(b)(1)(A) |
+| Family Election | §1361(c)(1) |
+| Eligible Shareholders | §1361(b)(1)(B)-(C) |
+| One Class of Stock | §1361(b)(1)(D) |
+| S Election Deadline | §1362(b)(1) |
+| S Corp Pass-Through | §1363(a) |
+| Pass-Through Items | §1366(a) |
+| Stock Basis Adjustments | §1367(a) |
+| Basis Ordering | Reg. §1.1367-1(f) |
+| Loss Limitation | §1366(d)(1) |
+| Suspended Losses | §1366(d)(2) |
+| Distribution (No E&P) | §1368(b) |
+| Distribution (With E&P) | §1368(c) |
+| AAA | §1368(e) |
+| Built-In Gains Tax | §1374 |
+| Passive Income Tax | §1375 |
+| 2% Shareholder Fringes | §1372(a) |
+| QSub | §1361(b)(3) |
+| Pro Rata Allocation | §1377(a)(1) |
+| Closing Books | §1377(a)(2) |
+| PTTP | §1377(b) |
+| Debt Basis | §1366(d)(1)(B) |
+| ESBT Tax Rate | §641(c)(2)(A) |
+| QBI Deduction | §199A |
+| Inadvertent Termination | §1362(f) |
+| LIFO Recapture | §1363(d) |
+| Partnership Pass-Through | §701 |
+| Separately Stated Items | §702(a) |
+| Special Allocations | §704(b) |
+| Partner Basis | §705(a) |
+| Guaranteed Payments | §707(c) |
+| Contribution Nonrecognition | §721(a) |
+| Partner Substituted Basis | §722 |
+| Partnership Carryover Basis | §723 |
+| Distribution Gain | §731(a) |
+| Property Distribution Basis | §732(a) |
+| Basis Reduction | §733 |
+| Hot Assets | §751 |
+| Liability Allocation | §752 |
+| Holding Period Tacking | §1223(1) |
+| SE Tax | §1402(a) |
+| Limited Partner SE Exemption | §1402(a)(13) |
+
+---
 
 ### REG Enhancement Completed - January 16, 2026 (Session 8)
 
