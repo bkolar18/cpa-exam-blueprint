@@ -2215,7 +2215,7 @@ const questions = [
     "id": "reg-003-021",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Vehicle donation rules",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2227,8 +2227,8 @@ const questions = [
       "D": "Fair market value"
     },
     "correctAnswer": "A",
-    "explanation": "For donated vehicles worth more than $500, the deduction is generally limited to the gross proceeds from the charity's sale. Exceptions allow FMV if the charity materially improves the vehicle or uses it substantially for charitable purposes.",
-    "tip": "Vehicle donation >$500: deduction = what charity sells it for (unless they use/improve it).",
+    "explanation": "Per IRC §170(f)(12), for donated vehicles, boats, or aircraft claimed at more than $500, the deduction is generally limited to the GROSS PROCEEDS from the charity's sale of the vehicle. The charity must provide Form 1098-C within 30 days of sale. Exceptions allowing FMV deduction: (1) Charity materially improves the vehicle (not just cleaning/maintenance); (2) Charity uses it significantly for exempt purpose (not just resale); (3) Charity gives to needy individual at below-market price for transportation. Why other answers are wrong: (B) Basis applies to ordinary income property; (C) Blue book value is outdated—proceeds rule now controls; (D) FMV only allowed under narrow exceptions.",
+    "tip": "Vehicle donation >$500 (§170(f)(12)) = charity's sale proceeds, not FMV. Get Form 1098-C. FMV only if used/improved by charity.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2236,7 +2236,7 @@ const questions = [
     "id": "reg-003-022",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Private foundation contributions",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2248,8 +2248,8 @@ const questions = [
       "D": "30% of AGI"
     },
     "correctAnswer": "D",
-    "explanation": "Cash contributions to private non-operating foundations are limited to 30% of AGI (vs. 60% for public charities). Contributions of appreciated property to private foundations are generally limited to 20% of AGI and deductible at basis, not FMV.",
-    "tip": "Private foundation limits: cash = 30% AGI; appreciated property = 20% AGI at basis.",
+    "explanation": "Per IRC §170(b)(1)(B), cash contributions to private non-operating foundations are limited to 30% of AGI (vs. 60% for public charities under §170(b)(1)(G)). Appreciated property to private foundations: 20% AGI limit AND deductible at COST BASIS only (not FMV) under §170(e)(1)(B)(ii). 'Public charities' (50% organizations) include churches, schools, hospitals, and organizations receiving substantial public support. Private foundations have stricter rules due to donor control. Why other answers are wrong: (A) 20% applies to appreciated property to private foundations; (B) 60% applies to cash to public charities; (C) 50% was old law for public charities.",
+    "tip": "Private foundation limits (§170(b)(1)(B)): cash = 30% AGI; appreciated property = 20% AGI at BASIS (not FMV).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2257,7 +2257,7 @@ const questions = [
     "id": "reg-003-023",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Quid pro quo contributions",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2269,8 +2269,8 @@ const questions = [
       "D": "The amount paid minus the fair market value of goods/services received"
     },
     "correctAnswer": "D",
-    "explanation": "For quid pro quo contributions (where donor receives something in return), only the excess of the payment over the FMV of goods or services received is deductible. Charities must provide written disclosure for payments over $75.",
-    "tip": "Quid pro quo: deduct payment minus value received. Charity must disclose if >$75.",
+    "explanation": "Per IRC §170(f)(8) and Reg. §1.170A-1(h), for 'quid pro quo' contributions where donor receives something in return, the deductible amount equals the EXCESS of payment over FMV of goods/services received. Charities must provide written disclosure for payments over $75 stating the FMV of benefits provided (§6115). De minimis benefits (insubstantial value) are disregarded: (1) annual membership benefits for payments ≤$75; (2) low-cost items ≤$12.50 (2023). Why other answers are wrong: (A) Partial deduction IS allowed for the contribution element; (B) That's the reduction amount, not the deductible amount; (C) Full amount would ignore the exchange element.",
+    "tip": "Quid pro quo (§170(f)(8)) = payment − FMV of benefit. Charity discloses if >$75. De minimis exceptions exist.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2278,7 +2278,7 @@ const questions = [
     "id": "reg-003-024",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Ordinary income property contributions",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2290,8 +2290,8 @@ const questions = [
       "D": "30% of AGI"
     },
     "correctAnswer": "C",
-    "explanation": "Contributions of ordinary income property (inventory, short-term capital gain property, Section 1245 recapture property) are deductible at the donor's basis, not FMV. This prevents donors from avoiding ordinary income recognition by donating appreciated ordinary income property.",
-    "tip": "Ordinary income property donation = basis only (not FMV). No end-run around ordinary income.",
+    "explanation": "Per IRC §170(e)(1)(A), contributions of ORDINARY INCOME property are deductible at adjusted basis (FMV minus the amount that would be ordinary income if sold). Ordinary income property includes: (1) Inventory; (2) Short-term capital gain property (held ≤1 year); (3) §1245 depreciation recapture property; (4) Self-created works (art, manuscripts). Policy rationale: prevents donors from converting potential ordinary income into a FMV charitable deduction while escaping ordinary income tax. Exception: Enhanced deduction for food inventory (§170(e)(3)). Why other answers are wrong: (A) Original cost may differ from adjusted basis; (B) FMV is reduced by ordinary income element; (D) 30% is the AGI limit for appreciated property, not the deduction amount.",
+    "tip": "Ordinary income property (§170(e)(1)(A)) = BASIS deduction (FMV − potential ordinary income). Prevents tax avoidance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2299,7 +2299,7 @@ const questions = [
     "id": "reg-003-025",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Appreciated property election",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2311,8 +2311,8 @@ const questions = [
       "D": "Treat the property as ordinary income property"
     },
     "correctAnswer": "B",
-    "explanation": "Donors of appreciated capital gain property can elect to deduct basis (rather than FMV) to qualify for the higher AGI limitation (60% for cash/property at basis vs. 30% for FMV of appreciated property). This may benefit taxpayers with large donations relative to AGI.",
-    "tip": "Appreciated property election: use basis for higher AGI limit. Good if high donation relative to income.",
+    "explanation": "Per IRC §170(b)(1)(C)(iii), donors of appreciated LTCG property to public charities may ELECT to use adjusted basis (instead of FMV) as the deduction amount. Benefit: qualifies for the higher 50% AGI limit (now 60% for cash-equivalent under TCJA) instead of 30% FMV limit. This election is beneficial when: (1) Large donation relative to AGI; (2) Basis is close to FMV; (3) Taxpayer needs more current deduction. The election applies to ALL appreciated property donated that year. Why other answers are wrong: (A) No mechanism to pay extra tax for higher limit; (C) Charitable contributions only carry FORWARD, never back; (D) Character is based on what would be realized if sold, not elective.",
+    "tip": "Appreciated property election (§170(b)(1)(C)(iii)) = choose BASIS for higher AGI limit (50%/60%) vs. FMV at 30%. All-or-nothing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2320,7 +2320,7 @@ const questions = [
     "id": "reg-003-026",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Qualified appraisal requirement",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2332,8 +2332,8 @@ const questions = [
       "D": "$250"
     },
     "correctAnswer": "B",
-    "explanation": "A qualified appraisal by a qualified appraiser is required for noncash contributions exceeding $5,000 (per item or group of similar items). Form 8283 Section B must be completed, and the appraiser must sign it.",
-    "tip": "Noncash >$5,000 = qualified appraisal required. Form 8283 Section B.",
+    "explanation": "Per IRC §170(f)(11)(C), a QUALIFIED APPRAISAL is required for noncash contributions exceeding $5,000 (per item or group of similar items). The appraisal must be: (1) By a qualified appraiser (licensed, education, experience); (2) Made no earlier than 60 days before donation and no later than tax return due date; (3) Attached to return via Form 8283 Section B (appraiser signs). Exceptions: Publicly traded securities (readily ascertainable value). Tiered requirements: $250-$500 = written acknowledgment; $501-$5,000 = Form 8283 Section A; >$5,000 = qualified appraisal + Form 8283 Section B. Why other answers are wrong: (A) $500 triggers Form 8283 Section A, not appraisal; (C) $10,000 exceeds threshold; (D) $250 requires only written acknowledgment.",
+    "tip": "Noncash >$5,000 (§170(f)(11)(C)) = qualified appraisal + Form 8283 Section B. $500-$5,000 = Section A only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2341,7 +2341,7 @@ const questions = [
     "id": "reg-003-027",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Conservation easement donations",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2353,8 +2353,8 @@ const questions = [
       "D": "100% of AGI for farmers and ranchers"
     },
     "correctAnswer": "B",
-    "explanation": "Qualified conservation contributions are deductible up to 50% of AGI (100% for qualified farmers and ranchers), with excess carried forward for 15 years instead of the normal 5 years. These are perpetual restrictions on property use for conservation purposes.",
-    "tip": "Conservation easements: 50% AGI limit (100% for farmers), 15-year carryforward.",
+    "explanation": "Per IRC §170(b)(1)(E), qualified conservation contributions are deductible up to 50% of AGI (vs. standard 30% for appreciated property), with excess carried forward for 15 YEARS (vs. standard 5 years). For qualified farmers/ranchers: 100% of AGI limit (§170(b)(1)(E)(iv)). Conservation easement = perpetual restriction on land use for conservation purposes (open space, habitat, historic). Recent IRS scrutiny: syndicated conservation easement transactions are 'listed transactions' (Notice 2017-10). Why other answers are wrong: (A) 30% is standard appreciated property limit; (C) 60% is for cash; (D) 100% applies to farmers/ranchers only, not general rule.",
+    "tip": "Conservation easements (§170(b)(1)(E)) = 50% AGI (100% for farmers) + 15-year carryforward. IRS scrutinizing syndicated deals.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2362,7 +2362,7 @@ const questions = [
     "id": "reg-003-028",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Medical expense for dependents",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2374,8 +2374,8 @@ const questions = [
       "D": "The person was a dependent when the expense was incurred OR paid"
     },
     "correctAnswer": "D",
-    "explanation": "Medical expenses are deductible if paid for someone who was a dependent either when the medical services were provided or when the expenses were paid. The dependent must meet the relationship and support tests but not necessarily the gross income test.",
-    "tip": "Medical for dependent: qualify when services provided OR when paid. Flexible timing.",
+    "explanation": "Per IRC §213(a) and Reg. §1.213-1(a)(3), medical expenses are deductible for individuals who were a dependent EITHER: (1) When the medical services were provided, OR (2) When the expense was paid. This allows flexible timing. 'Dependent' for §213 purposes: must meet relationship test (§152(d)(2)) and support test (>50%), but NOT the gross income test or joint return test (less strict than §152 dependent). Example: Adult child earning $50K wouldn't be §152 dependent but could qualify for parent's medical deduction. Why other answers are wrong: (A) Current status isn't required—status at either time works; (B) Support test applies but isn't the full rule; (C) Residence test may not apply to qualifying relatives.",
+    "tip": "Medical for dependent (§213): qualify when services rendered OR when paid. Less strict than §152 dependent definition.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2383,7 +2383,7 @@ const questions = [
     "id": "reg-003-029",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Long-term care premiums",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2395,8 +2395,8 @@ const questions = [
       "D": "Up to age-based limits as a medical expense"
     },
     "correctAnswer": "D",
-    "explanation": "Qualified long-term care insurance premiums are deductible as a medical expense up to age-based dollar limits (ranging from $480 for ages 40 and under to $5,960 for ages 71+ in 2023). The premiums are then subject to the 7.5% AGI floor.",
-    "tip": "LTC insurance premiums: deductible up to age-based limits, then subject to 7.5% floor.",
+    "explanation": "Per IRC §213(d)(1)(D) and §213(d)(10), qualified long-term care insurance premiums are deductible as medical expenses up to AGE-BASED dollar limits (indexed annually). 2023 limits: ≤40 = $480; 41-50 = $890; 51-60 = $1,790; 61-70 = $4,770; 71+ = $5,960. These amounts are then added to other medical expenses and subject to the 7.5% AGI floor. LTC policy must be 'qualified' (meets chronically ill requirements, daily benefit limits, consumer protections). Employer-paid premiums: excluded from income under §106(c)(1). Why other answers are wrong: (A) No nursing home requirement—insurance premiums qualify; (B) Individual policies also qualify; (C) Age-based caps limit deductible amount.",
+    "tip": "LTC premiums (§213(d)(10)) = deductible up to age-based limits ($480-$5,960 for 2023). Then subject to 7.5% AGI floor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2404,7 +2404,7 @@ const questions = [
     "id": "reg-003-030",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Miscellaneous itemized deductions",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2416,8 +2416,8 @@ const questions = [
       "D": "Still deductible for all taxpayers"
     },
     "correctAnswer": "A",
-    "explanation": "TCJA suspended miscellaneous itemized deductions subject to the 2% floor from 2018-2025. This includes unreimbursed employee expenses, tax preparation fees, investment expenses, and safe deposit box rental for investment purposes.",
-    "tip": "2% floor deductions: GONE through 2025 (employee expenses, tax prep, etc.).",
+    "explanation": "Per IRC §67(g) (added by TCJA), miscellaneous itemized deductions subject to the 2% AGI floor are SUSPENDED for 2018-2025. This includes: unreimbursed employee business expenses (travel, uniforms, tools); tax preparation fees; investment advisory fees; safe deposit box rental for investments; legal fees for tax advice; hobby expenses. NOT affected (still deductible): gambling losses (up to winnings), estate tax on IRD, amortizable bond premium, impairment-related work expenses. Self-employed individuals deduct business expenses on Schedule C (FOR AGI), not affected. Why other answers are wrong: (B) Employee vs SE distinction, but employees can't deduct either; (C) $10,000 is SALT cap; (D) TCJA suspended these deductions.",
+    "tip": "Misc. itemized 2% floor (§67(g)) = SUSPENDED 2018-2025. Employee expenses, tax prep, investment fees = NO deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2425,7 +2425,7 @@ const questions = [
     "id": "reg-003-031",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Foreign real property taxes",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2437,8 +2437,8 @@ const questions = [
       "D": "Subject to the SALT cap"
     },
     "correctAnswer": "B",
-    "explanation": "TCJA eliminated the deduction for foreign real property taxes on personal residences from 2018-2025. However, foreign taxes on investment or rental property remain deductible as business expenses. Foreign income taxes may still be deducted or credited.",
-    "tip": "Foreign property taxes on personal residence: not deductible (TCJA). Rental property OK.",
+    "explanation": "Per IRC §164(a)(3) as amended by TCJA, foreign real property taxes on PERSONAL-USE property are NOT deductible for 2018-2025. Pre-TCJA, foreign property taxes were deductible as itemized deductions. Exception: Foreign property taxes on BUSINESS or INVESTMENT property (e.g., rental real estate) remain deductible on Schedule E as ordinary business expenses—NOT subject to personal itemized deduction suspension. Foreign INCOME taxes may be deducted (itemized) OR credited (Form 1116)—taxpayer chooses annually. Why other answers are wrong: (A) Not deductible for personal property under TCJA; (C) Rental property exception exists but that's a business deduction; (D) SALT cap applies to domestic taxes only.",
+    "tip": "Foreign property taxes (§164(a)(3) TCJA) = NOT deductible on personal residence 2018-2025. Rental/business property OK.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2446,7 +2446,7 @@ const questions = [
     "id": "reg-003-032",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Bunching deductions strategy",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2458,8 +2458,8 @@ const questions = [
       "D": "Accelerating or deferring deductions to exceed the standard deduction in alternate years"
     },
     "correctAnswer": "D",
-    "explanation": "Bunching involves timing discretionary deductions (charitable contributions, property taxes, medical procedures) to concentrate them in alternate years, allowing itemization in some years while taking the standard deduction in others. This maximizes total deductions over time.",
-    "tip": "Bunching: concentrate deductions in one year to itemize, take standard in off years.",
+    "explanation": "The 'bunching' strategy is a tax planning technique to maximize deductions under TCJA's higher standard deduction. Concept: CONCENTRATE discretionary deductions (charitable contributions, property taxes, medical expenses) into alternating years to exceed the standard deduction threshold, then take the standard deduction in 'off' years. Example (MFJ $27,700 standard): Year 1—bunch $30K deductions → itemize; Year 2—minimal deductions → take $27,700 standard. Two-year total: $57,700 vs. $55,400 if spread evenly. Commonly used with donor-advised funds (contribute several years' charity in one year). Why other answers are wrong: (A) Can't claim both in same year; (B) Converting isn't feasible for most deductions; (C) Spreading LOSES benefit—bunching GAINS benefit.",
+    "tip": "Bunching = concentrate deductions in one year to itemize, take standard deduction in alternate years. DAFs facilitate charitable bunching.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2467,7 +2467,7 @@ const questions = [
     "id": "reg-003-033",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Donor-advised fund contributions",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2479,8 +2479,8 @@ const questions = [
       "D": "Subject to private foundation limits"
     },
     "correctAnswer": "C",
-    "explanation": "Contributions to donor-advised funds are deductible when made (not when grants are distributed), subject to public charity AGI limits (60% cash, 30% appreciated property). The donor gives up ownership but can recommend grants. DAFs are useful for bunching deductions.",
-    "tip": "DAF contribution: deductible when made (public charity rules). Great for bunching strategy.",
+    "explanation": "Per IRC §170(f)(18), contributions to donor-advised funds (DAFs) are deductible WHEN MADE to the sponsoring organization (typically a community foundation or financial institution charity). DAFs are public charities, so PUBLIC CHARITY limits apply: 60% AGI for cash, 30% AGI for appreciated property at FMV. The donor gives up legal ownership but retains advisory privileges over grants. DAFs cannot pay for pledge fulfillment, private benefit, or disqualified persons. DAFs are ideal for 'bunching'—contribute several years' worth, deduct now, recommend grants over time. Why other answers are wrong: (A) No dollar cap specific to DAFs; (B) Deductible immediately, not when distributed; (D) Public charity limits apply, not private foundation.",
+    "tip": "DAF contributions (§170(f)(18)) = deductible when made (public charity limits). Perfect for bunching charitable giving.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2488,7 +2488,7 @@ const questions = [
     "id": "reg-003-034",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Qualified charitable distribution",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2500,8 +2500,8 @@ const questions = [
       "D": "Is excluded from income and cannot be claimed as a charitable deduction"
     },
     "correctAnswer": "D",
-    "explanation": "QCDs allow taxpayers age 70½ or older to distribute up to $100,000 directly from an IRA to charity. The distribution is excluded from income (no deduction taken). QCDs can satisfy RMDs and benefit those who don't itemize.",
-    "tip": "QCD: excluded from income, satisfies RMD, no deduction. Age 70½+, up to $100K/year.",
+    "explanation": "Per IRC §408(d)(8), a Qualified Charitable Distribution (QCD) allows taxpayers age 70½ or older to distribute up to $100,000 annually DIRECTLY from an IRA to a qualified charity. Tax treatment: EXCLUDED from gross income entirely (not included then deducted). Benefits: (1) Satisfies RMD requirement; (2) Reduces AGI (affecting other AGI-based limitations); (3) Benefits non-itemizers (no deduction needed). NOT eligible for QCD: DAFs, supporting organizations, private foundations. SECURE 2.0 (2023): QCD limit indexed for inflation; one-time $50K to split-interest entities allowed. Why other answers are wrong: (A) Must be 70½ OR OLDER; (B) DAFs are specifically excluded; (C) It's excluded, not included then deducted.",
+    "tip": "QCD (§408(d)(8)) = age 70½+, up to $100K, excluded from income (not deducted). Satisfies RMD. Not to DAFs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2509,7 +2509,7 @@ const questions = [
     "id": "reg-003-035",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Pease limitation",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2521,8 +2521,8 @@ const questions = [
       "D": "Set at 3% of AGI over threshold amounts"
     },
     "correctAnswer": "B",
-    "explanation": "The Pease limitation (which reduced itemized deductions by 3% of AGI over threshold amounts, up to 80% of certain deductions) was suspended by TCJA from 2018-2025. Currently, itemized deductions are not phased out based on income.",
-    "tip": "Pease limitation: SUSPENDED through 2025. No AGI phase-out of itemized deductions.",
+    "explanation": "The Pease limitation (named after Congressman Donald Pease), codified in former IRC §68, is SUSPENDED for 2018-2025 under TCJA. Pre-TCJA Pease rule: Itemized deductions reduced by 3% of AGI exceeding threshold ($261,500 single, $313,800 MFJ for 2017), up to maximum 80% reduction of certain deductions. Medical expenses, investment interest, and casualty losses were exempt from Pease. Current law: NO Pease phase-out—itemized deductions are NOT reduced based on income level (though individual items like SALT have caps). Scheduled to return in 2026 unless extended. Why other answers are wrong: (A) Not in effect 2018-2025; (C) Pease applied to most itemized deductions; (D) Correct description but only for pre-TCJA law.",
+    "tip": "Pease limitation (former §68) = SUSPENDED 2018-2025. No AGI-based phase-out of itemized deductions currently.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2530,7 +2530,7 @@ const questions = [
     "id": "reg-004-001",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Credit vs deduction",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -2542,8 +2542,8 @@ const questions = [
       "D": "Must be itemized"
     },
     "correctAnswer": "B",
-    "explanation": "A tax credit directly reduces tax liability dollar-for-dollar, while a deduction only reduces taxable income. A $1,000 credit saves $1,000 in taxes, while a $1,000 deduction saves only $1,000 × the taxpayer's marginal tax rate.",
-    "tip": "Credit = dollar-for-dollar tax reduction. Deduction = reduces income (saves tax rate × deduction).",
+    "explanation": "Tax credits reduce tax liability directly, dollar-for-dollar, while deductions only reduce taxable income. Example: A taxpayer in the 24% bracket with a $1,000 credit saves $1,000 in taxes, but a $1,000 deduction saves only $240 ($1,000 × 24%). This fundamental distinction applies throughout the IRC. Credits are found in §§21-53 (personal credits) and §§38-45S (business credits). Why other answers are wrong: (A) Deductions reduce taxable income, not credits; (C) Credits are often MORE beneficial to lower-income taxpayers (many phase out at higher incomes); (D) Credits are claimed separately from itemized deductions—they apply whether you itemize or take the standard deduction.",
+    "tip": "Credit = reduces TAX dollar-for-dollar. Deduction = reduces INCOME. A $1,000 credit always beats a $1,000 deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2551,7 +2551,7 @@ const questions = [
     "id": "reg-004-002",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Refundable vs nonrefundable",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -2563,8 +2563,8 @@ const questions = [
       "D": "Must be repaid in future years"
     },
     "correctAnswer": "B",
-    "explanation": "A refundable credit can reduce tax below zero, resulting in a refund to the taxpayer. Nonrefundable credits can only reduce tax liability to zero—any excess is lost (unless carryover is allowed). Refundable credits include EITC and part of the Child Tax Credit.",
-    "tip": "Refundable = get money back even if no tax owed. Nonrefundable = reduces tax to zero max.",
+    "explanation": "Refundable credits can reduce tax liability below zero, resulting in a cash refund. Key refundable credits: EITC (§32), Additional Child Tax Credit (§24(d)), American Opportunity Credit (40% refundable under §25A(i)), Premium Tax Credit (§36B). Nonrefundable credits can only reduce tax to zero—any excess is generally lost unless carryforward is allowed. Why other answers are wrong: (A) This describes NONrefundable credits; (C) Many refundable credits specifically target low-income taxpayers (EITC is the largest); (D) Credits are not loans—no repayment required (exception: some PTC repayment if income exceeds estimates).",
+    "tip": "Refundable = can get money back (EITC, ACTC, 40% of AOTC, PTC). Nonrefundable = zero floor only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2572,7 +2572,7 @@ const questions = [
     "id": "reg-004-003",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Child Tax Credit amount",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -2584,8 +2584,8 @@ const questions = [
       "D": "$2,000 per qualifying child under age 17"
     },
     "correctAnswer": "D",
-    "explanation": "For 2023, the Child Tax Credit is $2,000 per qualifying child under age 17 at the end of the tax year. Up to $1,600 is refundable as the Additional Child Tax Credit. The enhanced amounts from 2021 have expired.",
-    "tip": "2023 Child Tax Credit: $2,000/child under 17. Up to $1,600 refundable.",
+    "explanation": "Per IRC §24(a), the Child Tax Credit for 2023 is $2,000 per qualifying child under age 17 at year-end. Key rules: (1) Up to $1,600 refundable as Additional Child Tax Credit (§24(d)); (2) Phases out at $200K single/$400K MFJ; (3) Child must have SSN; (4) Must be claimed as dependent. ARPA temporarily increased amounts for 2021 only ($3,000/$3,600)—those enhancements expired. Why other answers are wrong: (A) $3,000 was the 2021 ARPA amount for children 6-17; (B) $3,600 was the 2021 ARPA amount for children under 6; (C) $1,000 was the pre-TCJA amount (before 2018).",
+    "tip": "CTC (§24): $2,000/child under 17 (2023). ARPA amounts ($3K/$3.6K) were 2021 only. Up to $1,600 refundable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2593,7 +2593,7 @@ const questions = [
     "id": "reg-004-004",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Earned Income Credit",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -2605,8 +2605,8 @@ const questions = [
       "D": "A refundable credit for low-to-moderate income workers"
     },
     "correctAnswer": "D",
-    "explanation": "The EITC is a refundable credit for low-to-moderate income workers. The credit amount depends on earned income, AGI, filing status, and number of qualifying children. Taxpayers without children may qualify for a smaller credit.",
-    "tip": "EITC = refundable, based on earned income. Larger credit with more qualifying children.",
+    "explanation": "Per IRC §32, the EITC is a REFUNDABLE credit for low-to-moderate income workers with earned income. The credit amount depends on: (1) Earned income and AGI levels; (2) Filing status; (3) Number of qualifying children (0-3+). Maximum credits for 2023: ~$600 (no children), ~$3,995 (1 child), ~$6,604 (2 children), ~$7,430 (3+ children). Must file return to claim even if no tax owed. Why other answers are wrong: (A) Taxpayers WITHOUT children CAN qualify (smaller credit since ARPA expansion); (B) EITC applies to income tax, not SE tax; (C) EITC is specifically REFUNDABLE—the largest refundable credit program.",
+    "tip": "EITC (§32): REFUNDABLE, for low/moderate income. Increases with children (up to 3+). Must have earned income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2614,7 +2614,7 @@ const questions = [
     "id": "reg-004-005",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Child and Dependent Care Credit",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -2626,8 +2626,8 @@ const questions = [
       "D": "Take a vacation"
     },
     "correctAnswer": "C",
-    "explanation": "The Child and Dependent Care Credit is available for expenses paid for care of qualifying individuals (children under 13 or disabled dependents) that enable the taxpayer to work or actively look for work. Both spouses must have earned income (with some exceptions).",
-    "tip": "Care credit = expenses to enable work. Both spouses need earned income.",
+    "explanation": "Per IRC §21, the Child and Dependent Care Credit applies to expenses paid for care of qualifying individuals to enable the taxpayer (and spouse if MFJ) to WORK or LOOK FOR WORK. Qualifying individuals: (1) Dependent child under age 13; (2) Disabled spouse or dependent unable to care for self. Both spouses must have earned income unless one is disabled or full-time student. Credit = 20-35% of up to $3K (one) or $6K (two+) in expenses. Why other answers are wrong: (A) Medical appointments don't qualify as 'gainful employment' purpose; (B) Attending school only qualifies if for job training, and student spouse rule applies; (D) Vacation is not employment-related.",
+    "tip": "Care Credit (§21): expenses to WORK. Children under 13 or disabled dependents. Both spouses need earned income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2635,7 +2635,7 @@ const questions = [
     "id": "reg-004-006",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "American Opportunity Credit",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -2647,8 +2647,8 @@ const questions = [
       "D": "$2,000"
     },
     "correctAnswer": "A",
-    "explanation": "The AOTC provides a maximum credit of $2,500 per eligible student (100% of first $2,000 + 25% of next $2,000 in qualified expenses). It is available for the first four years of post-secondary education, and 40% ($1,000 max) is refundable.",
-    "tip": "AOTC: max $2,500/student. 40% ($1,000) refundable. First 4 years only.",
+    "explanation": "Per IRC §25A(i), the AOTC provides a maximum credit of $2,500 per eligible student, calculated as: 100% of first $2,000 + 25% of next $2,000 in qualified expenses (tuition, fees, course materials). Key rules: (1) First 4 years of post-secondary education only; (2) At least half-time enrollment; (3) 40% refundable (up to $1,000); (4) Phases out at $80K-$90K single, $160K-$180K MFJ. Why other answers are wrong: (B) $4,000 is the maximum qualified EXPENSES, not the credit amount; (C) $1,000 is the maximum REFUNDABLE portion; (D) $2,000 is the Lifetime Learning Credit maximum.",
+    "tip": "AOTC (§25A(i)): $2,500 max = 100% of $2K + 25% of $2K. First 4 years only. 40% ($1,000) refundable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2656,7 +2656,7 @@ const questions = [
     "id": "reg-004-007",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Lifetime Learning Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2668,8 +2668,8 @@ const questions = [
       "D": "Has no limit on the number of years it can be claimed"
     },
     "correctAnswer": "D",
-    "explanation": "The Lifetime Learning Credit (20% of up to $10,000 = $2,000 max) can be claimed for unlimited years, for any post-secondary education (including graduate school), and for courses to acquire or improve job skills. Unlike AOTC, it is nonrefundable and per-taxpayer rather than per-student.",
-    "tip": "LLC: unlimited years, any education level, $2,000 max per return, nonrefundable.",
+    "explanation": "Per IRC §25A(c), the Lifetime Learning Credit (LLC) can be claimed for UNLIMITED years—no 4-year limit. Other LLC features: (1) 20% of up to $10,000 expenses = $2,000 max; (2) ANY post-secondary education including graduate school, professional degrees, and job skills courses; (3) No enrollment requirements; (4) Per-TAXPAYER, not per-student. Key differences from AOTC: LLC is nonrefundable, lower max credit, but more flexible. Why other answers are wrong: (A) AOTC is larger ($2,500 vs $2,000); (B) LLC covers ALL education levels, not just graduate; (C) LLC is NONrefundable (AOTC is 40% refundable).",
+    "tip": "LLC (§25A(c)): UNLIMITED years, any education, $2,000 max, per-taxpayer, NONrefundable. vs AOTC: 4 years, larger, refundable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2677,7 +2677,7 @@ const questions = [
     "id": "reg-004-008",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Saver's Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2689,8 +2689,8 @@ const questions = [
       "D": "Taxpayers age 50 and older"
     },
     "correctAnswer": "B",
-    "explanation": "The Saver's Credit provides a nonrefundable credit of 10%-50% (depending on AGI) of retirement contributions up to $2,000 ($4,000 MFJ) for low-to-moderate income taxpayers. AGI limits are relatively low ($73,000 MFJ for 2023).",
-    "tip": "Saver's Credit: 10-50% of retirement contributions, low-income only, nonrefundable.",
+    "explanation": "Per IRC §25B, the Saver's Credit provides a NONrefundable credit for low-to-moderate income taxpayers contributing to retirement plans (401(k), IRA, 403(b), etc.). Credit rate: 50%, 20%, or 10% based on AGI (2023 limits: $73K MFJ, $54,750 HoH, $36,500 single). Maximum contribution base: $2,000 ($4,000 MFJ). Cannot be full-time student, under 18, or claimed as dependent. Why other answers are wrong: (A) HIGH-income taxpayers don't qualify—strict AGI limits; (C) Available to employees AND self-employed; (D) No age minimum—available to any age who meets income requirements.",
+    "tip": "Saver's Credit (§25B): 10-50% of retirement contributions (up to $2K). Low AGI limits. NONrefundable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2698,7 +2698,7 @@ const questions = [
     "id": "reg-004-009",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Foreign Tax Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2710,8 +2710,8 @@ const questions = [
       "D": "All foreign taxes paid"
     },
     "correctAnswer": "A",
-    "explanation": "The foreign tax credit is limited to the amount of U.S. tax attributable to foreign source income. The limitation is calculated as: (Foreign source taxable income / Total taxable income) × U.S. tax liability. Excess credits may be carried back 1 year and forward 10 years.",
-    "tip": "FTC limited to U.S. tax on foreign income. Prevents double non-taxation.",
+    "explanation": "Per IRC §901 and §904, the Foreign Tax Credit (FTC) is limited to U.S. tax on foreign source income. Formula: (Foreign source taxable income ÷ Worldwide taxable income) × U.S. tax = FTC limit. Purpose: prevent double taxation without allowing double non-taxation. Carryback 1 year, carryforward 10 years (§904(c)). Alternative: taxpayers with ≤$300/$600 of creditable foreign taxes can claim without Form 1116. Why other answers are wrong: (B) No fixed dollar limit—based on foreign income proportion; (C) Not 50%—uses actual ratio of foreign to total income; (D) Excess over U.S. tax on foreign income not currently creditable.",
+    "tip": "FTC (§901/904): Limited to U.S. tax on foreign income. Carryback 1/forward 10. Prevents double non-taxation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2719,7 +2719,7 @@ const questions = [
     "id": "reg-004-010",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Adoption Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2731,8 +2731,8 @@ const questions = [
       "D": "$5,000"
     },
     "correctAnswer": "B",
-    "explanation": "The Adoption Credit for 2023 allows a credit of up to $15,950 per eligible child for qualified adoption expenses. The credit is nonrefundable but can be carried forward for 5 years. Income phase-outs apply.",
-    "tip": "Adoption Credit: ~$15,950 max (2023), nonrefundable, 5-year carryforward.",
+    "explanation": "Per IRC §23, the Adoption Credit for 2023 is up to $15,950 per eligible child for qualified adoption expenses. Key rules: (1) NONrefundable but 5-year carryforward; (2) Phase-out: $239,230-$279,230 MAGI (2023); (3) Special needs adoption: full credit even if no expenses; (4) Expenses include fees, court costs, travel. For employer-provided adoption assistance (§137), same dollar limits but excluded from income, not credited. Why other answers are wrong: (A) $10,000 understates the indexed amount; (C) $20,000 overstates it; (D) $5,000 is far below the actual limit.",
+    "tip": "Adoption Credit (§23): ~$15,950 max (2023, indexed). NONrefundable, 5-year carryforward. Full credit for special needs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2740,7 +2740,7 @@ const questions = [
     "id": "reg-004-011",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Residential Energy Credits",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2752,8 +2752,8 @@ const questions = [
       "D": "30% of the cost of qualified property"
     },
     "correctAnswer": "D",
-    "explanation": "The Inflation Reduction Act restored the residential clean energy credit to 30% for property placed in service from 2022-2032. The credit applies to solar, wind, geothermal, and battery storage systems. It is nonrefundable but can be carried forward.",
-    "tip": "Residential Clean Energy Credit: 30% through 2032. Solar, wind, geothermal, batteries.",
+    "explanation": "Per IRC §25D as amended by IRA (P.L. 117-169), the Residential Clean Energy Credit is 30% for 2022-2032, then phases down (26% in 2033, 22% in 2034). Qualified property: solar electric, solar water heating, fuel cells, small wind, geothermal heat pumps, battery storage (new under IRA). NO dollar limit, carryforward available, principal residence OR second home. Why other answers are wrong: (A) 10% was for non-business energy property (not clean energy); (B) 22% is the 2034 rate, not current; (C) 26% was the 2020-2021 rate before IRA restoration to 30%.",
+    "tip": "Residential Clean Energy (§25D): 30% through 2032 (IRA extended). Solar, wind, geothermal, batteries. No cap!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2761,7 +2761,7 @@ const questions = [
     "id": "reg-004-012",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Premium Tax Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2773,8 +2773,8 @@ const questions = [
       "D": "Purchase coverage through a Health Insurance Marketplace and meet income requirements"
     },
     "correctAnswer": "D",
-    "explanation": "The Premium Tax Credit helps eligible individuals and families afford health insurance purchased through a Health Insurance Marketplace. Income must generally be between 100% and 400% of the federal poverty line (expanded during some years).",
-    "tip": "Premium Tax Credit: Marketplace insurance only, income-based, refundable.",
+    "explanation": "Per IRC §36B, the Premium Tax Credit (PTC) is a REFUNDABLE credit for taxpayers who: (1) Purchase coverage through a Health Insurance Marketplace (exchange); (2) Meet income requirements (100-400% FPL, temporarily eliminated upper limit through 2025); (3) Are not eligible for other minimum essential coverage. Can receive advance payments (APTC) or claim at filing. Reconciliation required on Form 8962. Why other answers are wrong: (A) Employer coverage makes you INELIGIBLE; (B) Medicare eligibility disqualifies you; (C) Must be MARKETPLACE coverage—private insurance outside exchange doesn't qualify.",
+    "tip": "PTC (§36B): REFUNDABLE, Marketplace coverage only, income-tested. Advance payments reconciled on Form 8962.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2782,7 +2782,7 @@ const questions = [
     "id": "reg-004-013",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Credit for Other Dependents",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2794,8 +2794,8 @@ const questions = [
       "D": "$500 for dependents who don't qualify for the Child Tax Credit"
     },
     "correctAnswer": "D",
-    "explanation": "The Credit for Other Dependents provides a $500 nonrefundable credit for dependents who don't qualify for the $2,000 Child Tax Credit (children 17 and older, qualifying relatives, etc.). It has the same income phase-out thresholds as the Child Tax Credit.",
-    "tip": "$500 credit for non-CTC dependents (age 17+, qualifying relatives). Nonrefundable.",
+    "explanation": "Per IRC §24(h)(4), the Credit for Other Dependents (ODC) provides $500 NONrefundable credit for dependents who DON'T qualify for the $2,000 CTC. Eligible dependents: (1) Children age 17+; (2) Qualifying relatives (parents, siblings, etc.); (3) Children without SSN. Same phase-out as CTC: $200K single, $400K MFJ. TCJA addition (2018-2025). Why other answers are wrong: (A) $1,000 overstates the credit amount; (B) $2,000 is the CTC amount for children UNDER 17; (C) No special $3,000 amount for disabled dependents under this credit.",
+    "tip": "ODC (§24(h)(4)): $500 for non-CTC dependents (17+, relatives). NONrefundable. TCJA provision (2018-2025).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2803,7 +2803,7 @@ const questions = [
     "id": "reg-004-014",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Elderly or Disabled Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2815,8 +2815,8 @@ const questions = [
       "D": "Age 55 or older"
     },
     "correctAnswer": "A",
-    "explanation": "The Credit for the Elderly or Disabled is available to taxpayers age 65 or older, or those under 65 who are permanently and totally disabled and have taxable disability income. Low income limits make the credit available primarily to low-income taxpayers.",
-    "tip": "Elderly/Disabled Credit: 65+ OR disabled with disability income. Very low income limits.",
+    "explanation": "Per IRC §22, the Credit for the Elderly or Disabled is available to: (1) Taxpayers age 65+ by year-end, OR (2) Under 65 but permanently/totally disabled with taxable disability income. Credit calculation complex: base amount minus nontaxable SS/pensions minus AGI excess, times 15%. Very low income limits effectively restrict to low-income taxpayers. Schedule R required. Why other answers are wrong: (B) Receiving SS alone doesn't qualify—must meet age or disability test; (C) Not limited to nursing home residents; (D) Age 55 is too young—must be 65+ or disabled.",
+    "tip": "Elderly/Disabled Credit (§22): 65+ OR disabled with disability income. 15% × adjusted base. Very low income limits.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2824,7 +2824,7 @@ const questions = [
     "id": "reg-004-015",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Electric Vehicle Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2836,8 +2836,8 @@ const questions = [
       "D": "$2,500 for all electric vehicles"
     },
     "correctAnswer": "A",
-    "explanation": "The IRA provides a credit up to $7,500 for new clean vehicles meeting critical mineral ($3,750) and battery component ($3,750) requirements. There are MSRP caps ($55,000 cars, $80,000 trucks/SUVs) and income limits. The credit is now available at point of sale.",
-    "tip": "EV credit: up to $7,500, based on battery/mineral sourcing. Price and income caps apply.",
+    "explanation": "Per IRC §30D as amended by IRA, the Clean Vehicle Credit is up to $7,500 for new EVs meeting: (1) Critical mineral requirement ($3,750)—minerals sourced from US/FTA countries; (2) Battery component requirement ($3,750)—manufactured in North America. Additional rules: MSRP caps ($55K cars, $80K trucks/SUVs), AGI limits ($150K single, $300K MFJ), final assembly in North America, point-of-sale transfer option available. Why other answers are wrong: (B) No $10,000 credit exists; (C) Many manufacturers qualify, not just Tesla; (D) $2,500 is too low—maximum is $7,500.",
+    "tip": "EV Credit (§30D): $7,500 max = $3,750 minerals + $3,750 battery. MSRP and income caps. North America assembly.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2845,7 +2845,7 @@ const questions = [
     "id": "reg-004-016",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Child Tax Credit phase-out",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2857,8 +2857,8 @@ const questions = [
       "D": "$150,000 for all filing statuses"
     },
     "correctAnswer": "C",
-    "explanation": "The $2,000 Child Tax Credit phases out by $50 for each $1,000 (or fraction) of modified AGI above $200,000 (single, HoH) or $400,000 (MFJ). These thresholds are significantly higher than for other credits, making it available to most middle-class families.",
-    "tip": "CTC phase-out: $200K single, $400K MFJ. High thresholds—most families qualify.",
+    "explanation": "Per IRC §24(b), the CTC phases out at MAGI of $200,000 (single, HoH, MFS) or $400,000 (MFJ). Phase-out rate: $50 reduction per $1,000 (or fraction) over threshold. TCJA significantly raised these thresholds from prior law ($75K/$110K). These high thresholds mean most middle-class families receive the full credit. The Credit for Other Dependents uses the same phase-out thresholds. Why other answers are wrong: (A) $500K is too high; (B) These were the OLD pre-TCJA thresholds; (D) No single $150K threshold exists.",
+    "tip": "CTC Phase-out (§24(b)): $200K single, $400K MFJ. TCJA raised thresholds. $50 reduction per $1K over.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2866,7 +2866,7 @@ const questions = [
     "id": "reg-004-017",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "EITC calculation",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2878,8 +2878,8 @@ const questions = [
       "D": "Is the same for all taxpayers"
     },
     "correctAnswer": "B",
-    "explanation": "The EITC has three phases: (1) phase-in where the credit increases with earned income, (2) plateau where the credit remains at maximum, and (3) phase-out where the credit decreases as income rises until eliminated. The credit amount and ranges depend on number of qualifying children.",
-    "tip": "EITC: phase-in (rises), plateau (max credit), phase-out (falls to zero).",
+    "explanation": "Per IRC §32(a), the EITC follows a distinctive three-phase pattern: (1) PHASE-IN: credit increases with earned income (encourages work); (2) PLATEAU: credit at maximum amount for income range; (3) PHASE-OUT: credit decreases as income rises until eliminated. Different schedules for 0, 1, 2, and 3+ qualifying children. The credit rate during phase-in ranges from ~7.65% (no children) to ~45% (3+ children). Why other answers are wrong: (A) Not flat—varies significantly with income; (C) Only partially true—increases first, then decreases; (D) Varies by income, filing status, and number of children.",
+    "tip": "EITC (§32): Three phases—phase-IN (rising), plateau (max), phase-OUT (falling). Creates work incentive.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2887,7 +2887,7 @@ const questions = [
     "id": "reg-004-018",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Care credit expense limits",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2899,8 +2899,8 @@ const questions = [
       "D": "$2,000 for one qualifying individual, $4,000 for two or more"
     },
     "correctAnswer": "A",
-    "explanation": "The Child and Dependent Care Credit is calculated on expenses up to $3,000 for one qualifying individual or $6,000 for two or more. The credit rate ranges from 20% to 35% based on AGI, resulting in a maximum credit of $600-$1,050 (one) or $1,200-$2,100 (two+).",
-    "tip": "Care credit: $3K/one, $6K/two+ in expenses. Credit = 20-35% of expenses.",
+    "explanation": "Per IRC §21(c), the Child and Dependent Care Credit expense limits are $3,000 for ONE qualifying individual or $6,000 for TWO OR MORE. Credit percentage: 35% for AGI ≤$15,000, reduced by 1% per $2,000 AGI, minimum 20% for AGI >$43,000. Maximum credits: $1,050 (one) to $600 (one), $2,100 (two+) to $1,200 (two+). Note: ARPA temporarily increased limits to $8K/$16K for 2021 only. Why other answers are wrong: (B) $5K/$10K were never the limits; (C) $8K/$16K were temporary 2021 ARPA amounts; (D) $2K/$4K understates the permanent limits.",
+    "tip": "Care Credit (§21): $3K/one, $6K/two+ expenses. 20-35% rate based on AGI. 2021 ARPA amounts ($8K/$16K) expired.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2908,7 +2908,7 @@ const questions = [
     "id": "reg-004-019",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Energy Efficient Home Improvement Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2920,8 +2920,8 @@ const questions = [
       "D": "An annual credit up to $3,200 for qualifying improvements"
     },
     "correctAnswer": "D",
-    "explanation": "IRA enhanced this credit to 30% of costs with annual limits (not lifetime): $1,200 general cap with sub-limits per item type, plus $2,000 for heat pumps. Qualifying improvements include insulation, windows, doors, and efficient HVAC systems.",
-    "tip": "Home efficiency credit (IRA): 30%, annual $1,200 cap + $2,000 for heat pumps.",
+    "explanation": "Per IRC §25C as amended by IRA, the Energy Efficient Home Improvement Credit is 30% of costs with ANNUAL limits (not lifetime like pre-IRA): $1,200 general cap with sub-limits ($600 windows, $500 doors, $600 electrical panel, etc.) PLUS $2,000 for heat pumps, heat pump water heaters, and biomass stoves = $3,200 max. Applies to existing homes (principal residence). Why other answers are wrong: (A) For existing homes, not new construction; (B) Pre-IRA was 10% with lifetime limits—IRA changed to 30% annual; (C) $500 was the old LIFETIME limit—now $3,200 ANNUAL.",
+    "tip": "§25C (IRA): 30%, ANNUAL limits ($1,200 + $2,000 heat pumps = $3,200 max). Changed from lifetime to annual!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2929,7 +2929,7 @@ const questions = [
     "id": "reg-004-020",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "First-time homebuyer credit history",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2941,8 +2941,8 @@ const questions = [
       "D": "Provides a $15,000 refundable credit"
     },
     "correctAnswer": "C",
-    "explanation": "The federal first-time homebuyer credit was available for homes purchased in 2008-2010 and has expired. The 2008 credit was essentially a loan that had to be repaid; the 2009-2010 credit did not require repayment unless the home was sold within 3 years.",
-    "tip": "Federal first-time homebuyer credit: EXPIRED (was 2008-2010 only).",
+    "explanation": "The federal First-Time Homebuyer Credit under §36 EXPIRED—available only for homes purchased 2008-2010. 2008 credit: $7,500 max, essentially an interest-free loan (15-year repayment). 2009-2010: $8,000 max, no repayment unless sold within 3 years. While legislation has been proposed to revive it, no current federal credit exists for first-time homebuyers. Why other answers are wrong: (A) Applied to both new and existing homes; (B) Credit EXPIRED in 2010—no current credit; (D) $15,000 was a proposed amount that never became law.",
+    "tip": "First-time homebuyer credit (§36): EXPIRED 2010. 2008=$7,500 (repayable), 2009-10=$8,000 (not repayable). NO current credit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2950,7 +2950,7 @@ const questions = [
     "id": "reg-004-021",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "General Business Credit",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2962,8 +2962,8 @@ const questions = [
       "D": "Only available to corporations"
     },
     "correctAnswer": "C",
-    "explanation": "The General Business Credit is an umbrella combining multiple credits (investment credit, work opportunity credit, research credit, small employer health insurance credit, etc.). It is limited to net income tax minus the greater of tentative minimum tax or 25% of net regular tax above $25,000.",
-    "tip": "General Business Credit = collection of many credits, limited by tax liability formula.",
+    "explanation": "Per IRC §38, the General Business Credit (GBC) is an UMBRELLA combining 30+ individual business credits including: investment credit (§46-§48E), Work Opportunity Credit (§51), R&D credit (§41), small employer health insurance credit (§45R), and others. GBC limitation per §38(c): net income tax minus greater of tentative minimum tax or 25% of regular tax over $25,000. Carryback 1 year, carryforward 20 years. Why other answers are wrong: (A) GBC is NONrefundable (limited exceptions); (B) Not single—combines many credits; (D) Available to all business taxpayers, not just corporations.",
+    "tip": "GBC (§38): Umbrella of 30+ credits. Limited by tax liability formula. Carryback 1/forward 20.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2971,7 +2971,7 @@ const questions = [
     "id": "reg-004-022",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Work Opportunity Tax Credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -2983,8 +2983,8 @@ const questions = [
       "D": "Only workers under age 25"
     },
     "correctAnswer": "C",
-    "explanation": "WOTC provides a credit for hiring individuals from targeted groups including veterans, ex-felons, long-term unemployed, SNAP recipients, SSI recipients, and others facing employment barriers. The credit is generally 40% of first-year wages up to $6,000.",
-    "tip": "WOTC: 40% of wages ($6K max) for hiring targeted group members. Must certify.",
+    "explanation": "Per IRC §51, WOTC rewards employers hiring from TARGETED GROUPS facing employment barriers: (1) Veterans (various categories); (2) Long-term unemployed (27+ weeks); (3) Ex-felons; (4) SNAP recipients; (5) SSI recipients; (6) Summer youth employees; (7) Vocational rehabilitation referrals; (8) Qualified long-term TANF recipients. Credit: 40% of first $6,000 wages ($2,400 max) for 400+ hours worked; 25% for 120-399 hours. Must certify via Form 8850 by start date. Why other answers are wrong: (A) Relocation alone doesn't qualify; (B) Must be from TARGETED groups, not just unemployed; (D) No age restriction (except summer youth program).",
+    "tip": "WOTC (§51): Targeted groups only. 40% × $6K wages = $2,400 max. Certify with Form 8850.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2992,7 +2992,7 @@ const questions = [
     "id": "reg-004-023",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Research and development credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3004,8 +3004,8 @@ const questions = [
       "D": "Regular credit method or alternative simplified credit method"
     },
     "correctAnswer": "D",
-    "explanation": "The R&D credit can be calculated using the regular credit method (20% of qualified research expenses exceeding a base amount) or the Alternative Simplified Credit (14% of qualified expenses exceeding 50% of average qualified expenses for prior 3 years).",
-    "tip": "R&D credit: regular method (20%) or ASC (14% of excess). Must be qualified research.",
+    "explanation": "Per IRC §41, the R&D credit offers two calculation methods: (1) REGULAR credit: 20% of qualified research expenses (QRE) exceeding a base amount tied to historical research intensity; (2) ALTERNATIVE SIMPLIFIED CREDIT (ASC): 14% of QRE exceeding 50% of average QRE for prior 3 years (or 6% if no prior QRE). QRE includes wages, supplies, and contract research (65%). Four-part test: technological uncertainty, process of experimentation, technological in nature, qualified purpose. Why other answers are wrong: (A) QRE includes supplies and contracts, not just wages; (B) Base amount uses gross receipts ratio, but credit isn't % of gross receipts; (C) Not flat—measures INCREASE over base amount.",
+    "tip": "R&D Credit (§41): Regular (20% over base) OR ASC (14% over 50% of 3-year avg). Must pass 4-part test.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3013,7 +3013,7 @@ const questions = [
     "id": "reg-004-024",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Rehabilitation credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3025,8 +3025,8 @@ const questions = [
       "D": "No longer available"
     },
     "correctAnswer": "B",
-    "explanation": "The Rehabilitation Tax Credit for certified historic structures is 20% of qualified rehabilitation expenditures. TCJA requires the credit to be claimed ratably over 5 years beginning in the year the building is placed in service. The 10% credit for pre-1936 buildings was repealed.",
-    "tip": "Historic rehab credit: 20%, spread over 5 years. Must be certified historic structure.",
+    "explanation": "Per IRC §47, the Rehabilitation Tax Credit for CERTIFIED HISTORIC STRUCTURES is 20% of qualified rehabilitation expenditures (QRE). TCJA change: Must claim credit RATABLY over 5 years (not all at once). Requirements: (1) Building must be listed on National Register or in registered historic district; (2) Substantial rehabilitation test (QRE > greater of adjusted basis or $5,000); (3) NPS certification required. TCJA REPEALED the 10% credit for pre-1936 non-historic buildings. Why other answers are wrong: (A) 10% credit was REPEALED by TCJA; (C) 25% is not a valid rate; (D) Historic credit still exists (only pre-1936 credit repealed).",
+    "tip": "Rehab Credit (§47): 20% over 5 YEARS for historic buildings. Pre-1936 10% credit REPEALED by TCJA.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3034,7 +3034,7 @@ const questions = [
     "id": "reg-004-025",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "AMT credit carryforward",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3046,8 +3046,8 @@ const questions = [
       "D": "Claim AMT paid in prior years against regular tax liability"
     },
     "correctAnswer": "D",
-    "explanation": "When a taxpayer pays AMT due to timing differences (deferral preferences like ISO exercises), they generate an AMT credit that can offset regular tax in future years when the timing reverses. The credit is nonrefundable and carries forward indefinitely.",
-    "tip": "AMT credit: recover prior AMT from timing items against future regular tax.",
+    "explanation": "Per IRC §53, the Minimum Tax Credit (MTC) allows recovery of AMT paid due to TIMING (deferral) preferences in future years against regular tax liability. Common generators: ISO exercise spread, MACRS depreciation differences, passive activity losses. Key rules: (1) Only TIMING items create MTC (not exclusion items like SALT deduction); (2) Carryforward indefinitely (no carryback); (3) Nonrefundable, but limited refundability existed 2007-2012. With TCJA raising AMT exemptions, far fewer individuals now pay AMT. Why other answers are wrong: (A) MTC offsets regular tax, not AMT; (B) No carryback—forward only; (C) MTC recovers AMT already paid, doesn't avoid it.",
+    "tip": "MTC (§53): Recover prior AMT from TIMING items against future regular tax. Carryforward only. ISO spreads common generator.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3055,7 +3055,7 @@ const questions = [
     "id": "reg-004-026",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Low-income housing credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3067,8 +3067,8 @@ const questions = [
       "D": "Annual credits over 10 years for qualified low-income housing projects"
     },
     "correctAnswer": "D",
-    "explanation": "LIHTC provides annual credits claimed over 10 years for developing qualified low-income rental housing. Credits are allocated by state housing agencies. The 9% credit applies to new construction; the 4% credit applies to acquisition and rehabilitation.",
-    "tip": "LIHTC: 10 years of credits. 9% for new construction, 4% for acquisition/rehab.",
+    "explanation": "Per IRC §42, the LIHTC provides annual credits over 10 YEARS for developing qualified low-income RENTAL housing. Two credit rates: (1) 9% credit (~70% PV)—new construction/substantial rehab without federal subsidies; (2) 4% credit (~30% PV)—acquisition costs and federally subsidized projects. State housing finance agencies allocate credits. Rent and income restrictions: tenants at ≤60% area median income, rent ≤30% of qualifying income. 15-year compliance period. Why other answers are wrong: (A) For rental developments, not individual homeowners; (B) For low-income rental, not personal residences; (C) Spread over 10 years, not one-time.",
+    "tip": "LIHTC (§42): 10 years of credits. 9% for new, 4% for acquisition/subsidized. State-allocated. 15-year compliance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3076,7 +3076,7 @@ const questions = [
     "id": "reg-004-027",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "EITC investment income limit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3088,8 +3088,8 @@ const questions = [
       "D": "$11,000"
     },
     "correctAnswer": "D",
-    "explanation": "For 2023, taxpayers with investment income exceeding $11,000 are ineligible for EITC. Investment income includes interest, dividends, capital gains, and other passive income. This limit was increased from $3,650 under the American Rescue Plan Act.",
-    "tip": "EITC disqualified if investment income >$11,000 (2023). Higher than old $3,650 limit.",
+    "explanation": "Per IRC §32(i), EITC is DISALLOWED if investment income exceeds threshold—approximately $11,000 for 2023 (indexed). Investment income includes: (1) Interest and dividends; (2) Capital gains; (3) Net rental/royalty income; (4) Passive activity income. ARPA PERMANENTLY increased this limit from $3,650 to $10,000 (indexed). Purpose: ensure EITC goes to working poor, not those with significant investment assets. Why other answers are wrong: (A) $15,000 is too high; (B) There IS a limit—investment income disqualifies at threshold; (C) $3,650 was the OLD limit before ARPA increase.",
+    "tip": "EITC Investment Income (§32(i)): ~$11,000 limit (2023). ARPA permanently raised from $3,650. Interest, dividends, gains, passive income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3097,7 +3097,7 @@ const questions = [
     "id": "reg-004-028",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Form 8863 requirements",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3109,8 +3109,8 @@ const questions = [
       "D": "Form 1098-T"
     },
     "correctAnswer": "D",
-    "explanation": "Educational institutions issue Form 1098-T reporting amounts billed or paid for qualified tuition and related expenses. Taxpayers use this information to complete Form 8863 to claim the American Opportunity or Lifetime Learning Credit.",
-    "tip": "1098-T = tuition statement for education credits. 1098-E = student loan interest.",
+    "explanation": "Per IRC §6050S, eligible educational institutions must issue Form 1098-T reporting tuition and related expenses. The form shows Box 1 (payments received) and Box 5 (scholarships/grants). Taxpayers use 1098-T to complete Form 8863 claiming AOTC or LLC. Note: 1098-T required but not conclusive—taxpayers may claim credits based on actual expenses even if different from form. Why other answers are wrong: (A) 1099-MISC reports miscellaneous income, not tuition; (B) 1098-E reports student loan INTEREST paid (for deduction, not credit); (C) W-2 reports wages, not education expenses.",
+    "tip": "1098-T = tuition statement (education credits). 1098-E = student loan interest (deduction). Different forms, different benefits!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3118,7 +3118,7 @@ const questions = [
     "id": "reg-004-029",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Used EV credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3130,8 +3130,8 @@ const questions = [
       "D": "No credit for used vehicles"
     },
     "correctAnswer": "B",
-    "explanation": "IRA created a new credit for used clean vehicles: the lesser of $4,000 or 30% of the sale price. The vehicle must be at least 2 years old, priced at $25,000 or less, and purchased from a dealer. Income limits apply ($75,000 single, $150,000 MFJ).",
-    "tip": "Used EV credit: 30% or $4,000 max, price ≤$25K, income limits apply.",
+    "explanation": "Per IRC §25E (new under IRA), the Previously-Owned Clean Vehicle Credit is the LESSER of $4,000 or 30% of sale price. Requirements: (1) Vehicle at least 2 model years old; (2) Sale price ≤$25,000; (3) Purchased from licensed dealer; (4) First transfer after August 16, 2022; (5) Buyer income limits: $75K single, $112.5K HoH, $150K MFJ. Credit once per 3 years per taxpayer. Point-of-sale transfer available. Why other answers are wrong: (A) $7,500 is for NEW EVs under §30D; (C) No $2,500 flat credit exists; (D) IRA CREATED used vehicle credit—didn't exist before.",
+    "tip": "Used EV Credit (§25E): 30% OR $4,000 max. Price ≤$25K, ≥2 years old, from dealer. Lower income limits than new EV credit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3139,7 +3139,7 @@ const questions = [
     "id": "reg-004-030",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Employer-provided childcare credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3151,8 +3151,8 @@ const questions = [
       "D": "A flat $10,000 credit"
     },
     "correctAnswer": "B",
-    "explanation": "The employer-provided childcare credit is 25% of qualified childcare facility expenditures plus 10% of qualified childcare resource and referral expenditures, with a maximum credit of $150,000. Basis of the facility must be reduced by the credit amount.",
-    "tip": "Employer childcare credit: 25% facility + 10% referral costs, max $150K.",
+    "explanation": "Per IRC §45F, the Employer-Provided Child Care Credit provides: 25% of qualified childcare facility expenditures (construction, acquisition, operation) PLUS 10% of qualified childcare resource and referral expenditures. Maximum credit: $150,000. Important: Basis reduction required for facility costs by credit amount. Recapture if facility ceases to be qualified within 10 years. Why other answers are wrong: (A) 10% rate only for referral expenses, not facilities; (C) 50% rate doesn't exist—it's 25%/10%; (D) No flat credit—based on actual expenditures up to $150K.",
+    "tip": "Employer Childcare (§45F): 25% facility + 10% referral = max $150K. Basis reduction required. 10-year recapture.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3160,7 +3160,7 @@ const questions = [
     "id": "reg-004-031",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Small employer health insurance credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3172,8 +3172,8 @@ const questions = [
       "D": "Only self-employed individuals"
     },
     "correctAnswer": "B",
-    "explanation": "The small employer health insurance credit (up to 50% of premiums, 35% for tax-exempt employers) requires: fewer than 25 FTEs, average annual wages below ~$58,000, employer pays at least 50% of premiums, and coverage purchased through SHOP marketplace.",
-    "tip": "Small employer health credit: <25 FTEs, low average wages, 50%+ premium contribution.",
+    "explanation": "Per IRC §45R, the Small Employer Health Insurance Credit requires: (1) Fewer than 25 FTEs; (2) Average annual wages below ~$58,000 (indexed); (3) Employer contributes ≥50% of premiums; (4) Coverage through SHOP marketplace. Credit: up to 50% of employer-paid premiums (35% for tax-exempt employers). Full credit for ≤10 FTEs with wages ≤$27,000; phases out above. Two consecutive year maximum. Why other answers are wrong: (A) Strict size limits—<25 FTEs; (C) 50 employees far exceeds limit; (D) Self-employed can't claim—must be employer with employees.",
+    "tip": "§45R: <25 FTEs, low wages (~$58K avg), SHOP coverage, 50%+ contribution. Max 50% credit (35% tax-exempt). 2-year max.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3181,7 +3181,7 @@ const questions = [
     "id": "reg-004-032",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Disabled access credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3193,8 +3193,8 @@ const questions = [
       "D": "A 100% deduction for accessibility improvements"
     },
     "correctAnswer": "A",
-    "explanation": "The Disabled Access Credit provides 50% of eligible expenditures between $250 and $10,250 (maximum credit $5,000) for small businesses making their facilities accessible to disabled individuals. The business must have gross receipts ≤$1M or ≤30 FTEs.",
-    "tip": "Disabled access credit: 50% of costs $250-$10,250 = max $5,000. Small business only.",
+    "explanation": "Per IRC §44, the Disabled Access Credit for SMALL businesses is 50% of eligible expenditures between $250 and $10,250 = maximum credit $5,000. Formula: 50% × (expenditures - $250), capped at 50% × $10,000. Eligible small business: gross receipts ≤$1M OR ≤30 full-time employees in prior year. Eligible expenditures: removing barriers, providing interpreters, readers, alternative formats. May combine with §190 deduction (up to $15,000). Why other answers are wrong: (B) No flat credit—calculated on actual costs; (C) 50%, not 25%; (D) Credit, not deduction (though §190 deduction also exists).",
+    "tip": "Disabled Access (§44): 50% × ($250-$10,250) = max $5,000. Small business only (≤$1M or ≤30 FTEs). Can combine with §190 deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3202,7 +3202,7 @@ const questions = [
     "id": "reg-004-033",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Credit ordering rules",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3214,8 +3214,8 @@ const questions = [
       "D": "Alphabetical order"
     },
     "correctAnswer": "C",
-    "explanation": "Nonrefundable credits are applied first to reduce tax liability to zero, then refundable credits are applied (which can result in a refund). This ordering maximizes benefit because refundable credits can generate refunds while nonrefundable credits cannot.",
-    "tip": "Order: nonrefundable credits first (to zero), then refundable (can get money back).",
+    "explanation": "Per the IRC ordering rules, NONREFUNDABLE credits apply first to reduce regular tax liability to zero, then REFUNDABLE credits apply (can result in payment to taxpayer). This maximizes benefit: nonrefundable credits would be lost if not used, while refundable credits are never lost. Specific order within nonrefundable: foreign tax credit, child/dependent credits, education credits, energy credits, etc. Refundable credits: EITC, ACTC, PTC, refundable portion of AOTC. Why other answers are wrong: (A) Ordering is statutory, not taxpayer choice; (B) REVERSED—nonrefundable first; (D) Not alphabetical—specific statutory order.",
+    "tip": "Credit order: NONrefundable first (reduce to zero), then REFUNDABLE (can go below zero). Maximizes total benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3223,7 +3223,7 @@ const questions = [
     "id": "reg-004-034",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Credit recapture",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3235,8 +3235,8 @@ const questions = [
       "D": "The property is disposed of or ceases to be qualified property within 5 years"
     },
     "correctAnswer": "D",
-    "explanation": "Investment tax credits are subject to recapture if the property is disposed of or ceases to be qualified property within 5 years of being placed in service. The recapture percentage decreases by 20% for each full year the property was held.",
-    "tip": "ITC recapture: if disposed within 5 years, pay back portion based on holding period.",
+    "explanation": "Per IRC §50(a), Investment Tax Credit recapture occurs if property is disposed of or ceases to be §38 property within the 5-year recapture period. Recapture percentage: 100% in year 1, decreasing 20% per year (80% year 2, 60% year 3, 40% year 4, 20% year 5, 0% after). Recaptured as additional tax, not amended return. Applies to ITC components: §48 energy, §48A coal, §48E clean energy. Similar rules for §45F childcare facility (10 years). Why other answers are wrong: (A) State relocation irrelevant; (B) Value decline doesn't trigger recapture; (C) Income changes don't affect prior credits.",
+    "tip": "ITC Recapture (§50(a)): Dispose within 5 years = pay back. 100%→80%→60%→40%→20%→0% schedule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3244,7 +3244,7 @@ const questions = [
     "id": "reg-004-035",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Income Taxes",
+    "subtopic": "Tax Credits",
     "conceptTested": "Employer Social Security credit",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3256,8 +3256,8 @@ const questions = [
       "D": "A flat $5,000 credit per employee"
     },
     "correctAnswer": "C",
-    "explanation": "Section 45S provides a credit for employers who provide paid family and medical leave. The credit is 12.5% of wages paid if the payment rate is 50% of normal wages, increasing by 0.25% for each percentage point above 50%, up to 25% if paying 100% of wages.",
-    "tip": "Paid leave credit: 12.5% base (at 50% pay), up to 25% (at 100% pay).",
+    "explanation": "Per IRC §45S, the Employer Credit for Paid Family and Medical Leave is: 12.5% of wages if paying 50% of normal wages, PLUS 0.25% for each percentage point above 50%, up to 25% if paying 100% of wages. Requirements: (1) Written policy providing at least 2 weeks paid leave; (2) Leave for FMLA purposes (birth, adoption, serious health); (3) Available to all qualifying employees; (4) Pay at least 50% of normal wages. Extended through 2025. Why other answers are wrong: (A) Available to ALL employers, not just large; (B) Credit is 12.5-25% of wages, not 100%; (D) No flat credit—percentage of wages paid.",
+    "tip": "Paid Leave Credit (§45S): 12.5% at 50% pay → 25% at 100% pay. Written policy, 2+ weeks, FMLA purposes. Through 2025.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },

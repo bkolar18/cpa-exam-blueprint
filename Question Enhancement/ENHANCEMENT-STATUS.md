@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 90 | 1,255 | 7% | In Progress |
+| REG | 1,345 | 140 | 1,205 | 10% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -50,20 +50,81 @@ All 58 exam TBS questions have been enhanced with:
 
 **File:** `src/lib/data/practice-questions/reg.ts`
 
-### REG Individual Taxation - In Progress (90/223 Questions)
+### REG Individual Taxation - In Progress (140/223 Questions)
 
 | Batch | Questions | Range | Status |
 |-------|-----------|-------|--------|
 | Individual Tax Foundations | 35 | reg-001-001 to reg-001-035 | **Complete** |
 | Deductions FOR AGI | 35 | reg-002-001 to reg-002-035 | **Complete** |
-| Deductions FROM AGI | 20 | reg-003-001 to reg-003-020 | **Complete** |
-| Deductions FROM AGI (continued) | 15 | reg-003-021 to reg-003-035 | Pending |
-| Tax Credits | 35 | reg-004-001 to reg-004-035 | Pending |
+| Deductions FROM AGI | 35 | reg-003-001 to reg-003-035 | **Complete** |
+| Tax Credits | 35 | reg-004-001 to reg-004-035 | **Complete** |
 | Alternative Minimum Tax | 35 | reg-005-001 to reg-005-035 | Pending |
 | Property Transactions | 211 | reg-prop-* | Pending |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 3)
+
+**Batch 3: 50 Additional Questions Enhanced (reg-003-021 to reg-004-035)**
+
+Deductions FROM AGI (continued) (15 questions - reg-003-021 to reg-003-035):
+- IRC section references (§170, §213, §164, §67, §68, §408(d)(8))
+- Vehicle donations, private foundation limits, quid pro quo contributions
+- Ordinary income property, qualified appraisal requirements, conservation easements
+- Medical expenses for dependents, long-term care premiums
+- Miscellaneous itemized deductions (suspended 2018-2025)
+- Foreign property taxes, bunching strategy, DAF rules
+- Qualified Charitable Distributions (QCDs), Pease limitation (suspended)
+
+Tax Credits (35 questions - reg-004-001 to reg-004-035):
+- IRC section references (§§21-53 personal credits, §§38-45S business credits)
+- Credit vs deduction distinction, refundable vs nonrefundable credits
+- Child Tax Credit (§24), EITC (§32), Child and Dependent Care (§21)
+- Education credits: AOTC (§25A(i)) and LLC (§25A(c))
+- Saver's Credit (§25B), Foreign Tax Credit (§901/904), Adoption Credit (§23)
+- Energy credits: Residential Clean Energy (§25D), Home Improvement (§25C)
+- Premium Tax Credit (§36B), Credit for Other Dependents (§24(h)(4))
+- Electric Vehicle Credits: New (§30D) and Used (§25E)
+- Business credits: WOTC (§51), R&D (§41), Rehabilitation (§47)
+- LIHTC (§42), Employer credits (§45F, §45R, §44, §45S)
+- Credit ordering rules, ITC recapture (§50(a))
+
+**Key IRC References Used (Batch 3):**
+| Topic | IRC Section |
+|-------|-------------|
+| Credit vs Deduction | §§21-53, §§38-45S |
+| Child Tax Credit | §24 |
+| Earned Income Tax Credit | §32 |
+| Child and Dependent Care Credit | §21 |
+| American Opportunity Credit | §25A(i) |
+| Lifetime Learning Credit | §25A(c) |
+| Saver's Credit | §25B |
+| Foreign Tax Credit | §901, §904 |
+| Adoption Credit | §23 |
+| Elderly/Disabled Credit | §22 |
+| Residential Clean Energy Credit | §25D |
+| Premium Tax Credit | §36B |
+| Credit for Other Dependents | §24(h)(4) |
+| Clean Vehicle Credit (New) | §30D |
+| Clean Vehicle Credit (Used) | §25E |
+| Energy Efficient Home Improvement | §25C |
+| General Business Credit | §38 |
+| Work Opportunity Tax Credit | §51 |
+| R&D Credit | §41 |
+| Rehabilitation Credit | §47 |
+| Low-Income Housing Credit | §42 |
+| Minimum Tax Credit | §53 |
+| Employer Childcare Credit | §45F |
+| Small Employer Health Credit | §45R |
+| Disabled Access Credit | §44 |
+| Paid Leave Credit | §45S |
+| ITC Recapture | §50(a) |
+| QCD | §408(d)(8) |
+| DAF Rules | §170(f)(18) |
+| Pease Limitation (suspended) | §68 |
+
+---
 
 ### REG Enhancement Completed - January 15, 2026 (Session 2)
 
