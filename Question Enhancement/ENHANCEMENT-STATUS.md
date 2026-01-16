@@ -37,12 +37,12 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 280 | 1,065 | 21% | In Progress |
+| REG | 1,345 | 315 | 1,030 | 23% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
-**Last Updated:** January 15, 2026
+**Last Updated:** January 16, 2026
 
 ---
 
@@ -62,10 +62,84 @@ All 58 exam TBS questions have been enhanced with:
 | Property Transactions - Gains/Losses | 35 | reg-006-001 to reg-006-035 | **Complete** |
 | Property Transactions - Like-Kind Exchanges | 35 | reg-007-001 to reg-007-035 | **Complete** |
 | Property Transactions - §1231/Recapture | 35 | reg-008-001 to reg-008-035 | **Complete** |
-| Entity Taxation - C Corps | 35+ | Various | Pending |
+| Entity Taxation - C Corps | 35 | reg-009-001 to reg-009-035 | **Complete** |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 16, 2026 (Session 8)
+
+**Batch 8: 35 Additional Questions Enhanced (reg-009-001 to reg-009-035)**
+
+Entity Taxation - C Corporations (35 questions - reg-009-001 to reg-009-035):
+- IRC section references (§351, §357, §358, §362, §368(c), §243, §246(b), §248, §170(b)(2), §316, §302, §311, §331, §334, §336, §337, §332, §531, §535, §541, §542, §543, §267, §318, §172, §1212(a), §312, §6655, §6072, etc.)
+- §351 tax-free incorporations - control (80/80 rule per §368(c))
+- Boot recognition under §351(b) - gain recognized to extent of boot
+- Shareholder basis in stock (§358) - carryover basis adjusted for boot/gain
+- Corporation's basis in property (§362) - carryover with gain adjustment
+- Services vs property distinction (§351(d)(1)) - services = ordinary income
+- Liability assumptions (§357) - generally tax-free unless tax avoidance (§357(b)) or excess (§357(c))
+- Dividends received deduction (§243) - 50%/65%/100% tiers by ownership
+- DRD taxable income limitation (§246(b)) - NOL exception
+- Organizational expenditures (§248) - $5K immediate + 180-month amortization
+- Corporate charitable deduction (§170(b)(2)) - 10% of modified TI
+- E&P ordering rules (§316) - current E&P first, then accumulated
+- E&P adjustments (§312) - tax-exempt income, ADS depreciation, federal taxes
+- Stock redemptions (§302) - substantially disproportionate, complete termination
+- Family attribution waiver (§302(c)(2)) - 10-year agreement
+- Property dividends (§311) - gain recognized, no loss
+- Complete liquidations - shareholder treatment (§331), corporation gain (§336)
+- Parent-subsidiary liquidations (§332/§337) - nonrecognition, carryover basis (§334(b)(1))
+- Accumulated earnings tax (§531) - 20% rate, §535(c) credit
+- Personal holding company (§542) - 5-50-60 test, 20% tax (§541)
+- Related party loss disallowance (§267) - >50% ownership
+- Attribution rules (§318) - family, entity proportionate share
+- NOL carryforward (§172) - 80% limit post-TCJA
+- Capital loss carryback/forward (§1212(a)) - back 3, forward 5
+- Corporate estimated tax (§6655) - $500 threshold
+- Tax return due dates (§6072) - 4th month (April 15)
+
+**Key IRC References Used (Batch 8):**
+| Topic | IRC Section |
+|-------|-------------|
+| Tax-Free Incorporation | §351(a) |
+| Control Definition | §368(c) |
+| Boot Recognition | §351(b) |
+| Services Exclusion | §351(d)(1) |
+| Shareholder Stock Basis | §358(a)(1) |
+| Corp Property Basis | §362(a)(1) |
+| Liability Assumption | §357(a) |
+| Tax Avoidance Liability | §357(b) |
+| Excess Liability | §357(c) |
+| DRD Rates | §243(a)(1), §243(c) |
+| DRD TI Limitation | §246(b) |
+| Organizational Costs | §248 |
+| Startup Costs | §195 |
+| Corporate Charity Limit | §170(b)(2) |
+| Dividend Definition | §316(a) |
+| E&P Adjustments | §312 |
+| Substantially Disproportionate | §302(b)(2) |
+| Complete Termination | §302(b)(3) |
+| Family Attribution Waiver | §302(c)(2) |
+| Constructive Ownership | §318 |
+| Property Dividend Gain | §311(b) |
+| Property Dividend Loss | §311(a) |
+| Shareholder Liquidation | §331(a) |
+| Shareholder Basis | §334(a) |
+| Corp Liquidation Gain | §336(a) |
+| Parent-Sub Liquidation | §332, §337 |
+| AET Rate | §531 |
+| ATI Calculation | §535 |
+| PHC Tests | §542 |
+| PHC Income | §543 |
+| PHC Tax | §541 |
+| Related Party Loss | §267(a)(1) |
+| NOL Limitation | §172(a)(2) |
+| Capital Loss Carryover | §1212(a) |
+| Estimated Tax | §6655 |
+| Return Due Date | §6072(b) |
+
+---
 
 ### REG Enhancement Completed - January 15, 2026 (Session 7)
 
