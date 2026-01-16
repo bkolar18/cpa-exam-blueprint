@@ -73,6 +73,117 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${BASE_URL}/guides/how-to-become-a-cpa`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/guides/best-order-cpa-exams`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
+
+  // Resource pages
+  const resourcePages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/resources`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/resources/cpa-pass-rates`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ]
+
+  // Comparison pages
+  const comparisonPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/compare/becker-vs-gleim`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
+
+  // Topic deep-dive pages
+  const topicPages: MetadataRoute.Sitemap = [
+    // FAR Topics
+    {
+      url: `${BASE_URL}/topics/far/lease-accounting`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/far/revenue-recognition`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/far/consolidations`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/far/government-accounting`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/far/nonprofit-accounting`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    // REG Topics
+    {
+      url: `${BASE_URL}/topics/reg/like-kind-exchanges`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/reg/basis-calculations`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/reg/partnership-taxation`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    // AUD Topics
+    {
+      url: `${BASE_URL}/topics/aud/audit-reports`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/aud/internal-controls`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/topics/aud/audit-evidence`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 
   // Blog posts (dynamically generated)
@@ -90,5 +201,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     console.log('No blog posts found for sitemap')
   }
 
-  return [...staticPages, ...sectionPages, ...guidePages, ...blogPosts]
+  return [...staticPages, ...sectionPages, ...guidePages, ...resourcePages, ...comparisonPages, ...topicPages, ...blogPosts]
 }
