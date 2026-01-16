@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 420 | 925 | 31% | In Progress |
+| REG | 1,345 | 440 | 905 | 33% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -66,9 +66,62 @@ All 58 exam TBS questions have been enhanced with:
 | Entity Taxation - S Corps | 35 | reg-010-001 to reg-010-035 | **Complete** |
 | Entity Taxation - Partnerships | 35 | reg-011-001 to reg-011-035 | **Complete** |
 | Entity Taxation - Estates & Trusts | 35 | reg-012-001 to reg-012-035 | **Complete** |
+| AMT Planning | 20 | reg-013-001 to reg-013-020 | **Complete** |
 | Entity Taxation | 200+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 16, 2026 (Session 11)
+
+**Batch 13: 20 AMT Planning Questions Enhanced (reg-013-001 to reg-013-020)**
+
+AMT Planning (20 questions):
+- §55 AMT purpose - ensure minimum tax on high-income with many preferences
+- §55(b)(1) AMT rates - 26% on first $220,700, 28% above (MFJ)
+- §55(d) AMT exemption - ~$133K MFJ, ~$86K single, phases out at 25%
+- §55(b)(2) AMTI starting point - begins with regular taxable income
+- TCJA changes - nearly doubled exemption, raised phaseout thresholds
+- §55(a) AMT vs regular tax - pay greater of regular or TMT
+- §56(b)(1)(A) SALT deduction - completely disallowed for AMT
+- §56(e)/§56(b)(1)(C) mortgage interest - acquisition debt only for AMT
+- §56(a)(1) depreciation - no adjustment for post-1998 personal property
+- §56 vs §57 difference - adjustments can +/−, preferences always +
+- §57(a)(5) private activity bond interest - tax-free regular, AMT preference
+- §55(d)(3) exemption phaseout - 25% rate, effective rate can exceed 28%
+- §53 minimum tax credit - only timing items generate credit
+- §56(b)(1)(E) standard deduction - not allowed for AMT
+- §56(b)(1)(B)/§213 medical expenses - 7.5% floor same for both
+- §56(b)(3) ISO exercise - bargain element is AMT adjustment
+- §55(b)(3) capital gains rates - same preferential rates for AMT
+- §56(d) AMT NOL - calculate separately, 80% limitation applies
+- §67(g) misc itemized deductions - suspended 2018-2025 both systems
+- §151(d)(5) personal exemptions - suspended 2018-2025 both systems
+
+**Key IRC References Used (Batch 13):**
+| Topic | IRC Section |
+|-------|-------------|
+| AMT Purpose | §55 |
+| AMT Rates | §55(b)(1) |
+| AMT Exemption | §55(d) |
+| AMTI Starting Point | §55(b)(2) |
+| TCJA Changes | §55(d) amendments |
+| AMT vs Regular Tax | §55(a) |
+| SALT Disallowance | §56(b)(1)(A) |
+| Mortgage Interest | §56(e), §56(b)(1)(C) |
+| Depreciation | §56(a)(1) |
+| Adjustments vs Preferences | §56, §57 |
+| Private Activity Bonds | §57(a)(5) |
+| Exemption Phaseout | §55(d)(3) |
+| Minimum Tax Credit | §53 |
+| Standard Deduction | §56(b)(1)(E) |
+| Medical Expenses | §56(b)(1)(B), §213 |
+| ISO Exercise | §56(b)(3) |
+| Capital Gains | §55(b)(3) |
+| AMT NOL | §56(d) |
+| Misc Itemized | §67(g) |
+| Personal Exemptions | §151(d)(5) |
+
+---
 
 ### REG Enhancement Completed - January 16, 2026 (Session 10)
 

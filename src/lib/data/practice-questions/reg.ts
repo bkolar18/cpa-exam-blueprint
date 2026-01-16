@@ -9157,8 +9157,8 @@ const questions = [
       "D": "Provide a tax credit for low-income taxpayers"
     },
     "correctAnswer": "A",
-    "explanation": "The AMT is a parallel tax system designed to ensure that taxpayers with substantial economic income who benefit from preferential treatment items pay at least a minimum amount of tax. Taxpayers pay the greater of regular tax or AMT.",
-    "tip": "AMT = backup tax system. Ensures wealthy pay minimum tax despite preferences/deductions.",
+    "explanation": "Under IRC §55, the Alternative Minimum Tax (AMT) is a parallel tax system designed to ensure that taxpayers with substantial economic income pay at least a minimum amount of tax, regardless of deductions, credits, and other tax preferences. Taxpayers pay the GREATER of regular tax or tentative minimum tax (TMT). The AMT was created in 1969 after Congress discovered 155 high-income taxpayers paid zero federal income tax. Why other answers are wrong: (B) Replace regular tax—AMT supplements, doesn't replace; (C) Reduce taxes—AMT increases taxes for those with many preferences; (D) Low-income credit—the Earned Income Credit serves that purpose, not AMT.",
+    "tip": "§55 AMT: Parallel system ensuring minimum tax despite preferences. Pay GREATER of regular tax or TMT. Created 1969 after zero-tax millionaires discovered.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9178,8 +9178,8 @@ const questions = [
       "D": "37%"
     },
     "correctAnswer": "C",
-    "explanation": "Individual AMT rates are 26% on the first $220,700 (2024, MFJ) of AMT income above the exemption, and 28% on AMT income above that threshold. These rates apply to ordinary income; capital gains are still taxed at preferential rates.",
-    "tip": "AMT rates: 26% up to threshold, 28% above. Much lower than top regular rate of 37%.",
+    "explanation": "Under IRC §55(b)(1), individual AMT rates are 26% on AMTI (above the exemption) up to approximately $220,700 (2024 MFJ), and 28% on AMTI exceeding that threshold. Importantly, capital gains within AMTI are still taxed at preferential rates (0%/15%/20%), not the 26%/28% rates. The AMT rates are actually LOWER than the top regular marginal rate of 37%, so AMT typically affects taxpayers through disallowed deductions rather than higher rates. Why other answers are wrong: (A) 15%/20%—these are capital gains rates, not AMT ordinary income rates; (B) 21%—this is the corporate tax rate; (D) 37%—this is the top regular individual rate.",
+    "tip": "§55(b)(1) AMT rates: 26% up to ~$220K, 28% above. Lower than 37% regular! Capital gains keep preferential rates. AMT hits via disallowed deductions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9199,8 +9199,8 @@ const questions = [
       "D": "Eliminates AMT for all taxpayers"
     },
     "correctAnswer": "B",
-    "explanation": "The AMT exemption is a deduction that reduces Alternative Minimum Taxable Income (AMTI) before applying AMT rates. It phases out at higher income levels, which can cause the effective AMT rate to exceed 28%.",
-    "tip": "AMT exemption = deduction from AMTI. Phases out at high income, increasing effective AMT.",
+    "explanation": "Under IRC §55(d), the AMT exemption is a deduction that reduces Alternative Minimum Taxable Income (AMTI) before applying AMT rates. For 2024: $133,300 MFJ, $85,700 single, $66,650 MFS. The exemption phases out at 25% for AMTI exceeding threshold amounts ($1,218,700 MFJ, $609,350 single). During the phaseout range, the effective marginal AMT rate can actually EXCEED 28% (reaching 32.5% or 35%) because each additional dollar of income loses exemption AND is taxed. Why other answers are wrong: (A) Same as standard deduction—AMT exemption amounts differ from standard deduction; (C) Tax credit—it's a deduction, not a credit; (D) Eliminates AMT—only reduces, and phases out at high income.",
+    "tip": "§55(d) AMT exemption: ~$133K MFJ, ~$86K single. Phases out at 25% rate. During phaseout, effective rate can exceed 28%! NOT same as standard deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9220,8 +9220,8 @@ const questions = [
       "D": "Total income"
     },
     "correctAnswer": "C",
-    "explanation": "AMTI calculation starts with regular taxable income. Adjustments and preferences are then added back or subtracted to arrive at AMTI. The AMT exemption is then subtracted to get the AMT base.",
-    "tip": "AMTI starts with regular taxable income, then add/subtract AMT adjustments and preferences.",
+    "explanation": "Under IRC §55(b)(2) and §56-58, Alternative Minimum Taxable Income (AMTI) calculation begins with REGULAR TAXABLE INCOME. Then: (1) Add back AMT adjustments (§56) like SALT deduction, certain depreciation timing differences, (2) Add AMT preference items (§57) like private activity bond interest, (3) Subtract any negative AMT adjustments. The AMT exemption under §55(d) is then subtracted from AMTI to arrive at the AMT base, to which the 26%/28% rates are applied. Why other answers are wrong: (A) Gross income—AMTI starts further down the calculation; (B) AGI—starts with taxable income, not AGI; (D) Total income—not a technical tax term used in AMTI calculation.",
+    "tip": "§55(b)(2) AMTI: Start with REGULAR TAXABLE INCOME + §56 adjustments + §57 preferences. Then subtract §55(d) exemption to get AMT base.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9241,8 +9241,8 @@ const questions = [
       "D": "Repealing the AMT entirely"
     },
     "correctAnswer": "A",
-    "explanation": "TCJA significantly increased the AMT exemption amounts and the income levels at which the exemption phases out. This reduced the number of taxpayers subject to AMT dramatically while keeping the system in place.",
-    "tip": "TCJA: Higher AMT exemption + higher phaseout = fewer people pay AMT. Still exists though!",
+    "explanation": "The Tax Cuts and Jobs Act of 2017 (P.L. 115-97) significantly modified individual AMT under §55(d) by: (1) INCREASING AMT exemption amounts dramatically (nearly doubled), (2) INCREASING phaseout thresholds substantially, (3) Indexing these amounts for inflation through 2025. Combined with the $10,000 SALT cap (§164(b)(6)) which limits regular tax SALT deduction anyway, TCJA reduced the number of AMT-affected taxpayers from about 5 million to under 200,000. Note: These provisions are temporary through 2025 unless extended. Why other answers are wrong: (B) 15% rates—rates remained 26%/28%; (C) Apply to all—actually applies to fewer; (D) Repealed—AMT still exists, just affects fewer people.",
+    "tip": "TCJA §55(d): Nearly doubled AMT exemption + much higher phaseouts = 5M taxpayers to ~200K affected. Temporary through 2025!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9262,8 +9262,8 @@ const questions = [
       "D": "Regular tax plus AMT"
     },
     "correctAnswer": "A",
-    "explanation": "The taxpayer pays the greater of regular tax or tentative minimum tax (TMT). If TMT exceeds regular tax, the excess is the AMT, which is added to regular tax. Effectively, taxpayers pay whichever system results in higher tax.",
-    "tip": "AMT = excess of tentative minimum tax over regular tax. Pay higher of the two systems.",
+    "explanation": "Under IRC §55(a), a taxpayer's total income tax liability equals the GREATER of: (1) Regular tax liability, or (2) Tentative minimum tax (TMT). Technically, AMT is calculated as: TMT minus regular tax (but not below zero). So if TMT = $50,000 and regular tax = $40,000, AMT = $10,000, and total tax = $40,000 + $10,000 = $50,000. Effectively, you pay whichever system is higher. Why other answers are wrong: (B) Regular minus AMT—would reduce tax, opposite of AMT's purpose; (C) Average—no averaging, it's the greater of the two; (D) Regular plus AMT—only correct if TMT > regular tax; otherwise AMT is zero.",
+    "tip": "§55(a): Total tax = GREATER of regular or TMT. AMT = TMT - regular tax (if positive). Think of it as paying the HIGHER of two systems.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9283,8 +9283,8 @@ const questions = [
       "D": "Fully deductible"
     },
     "correctAnswer": "B",
-    "explanation": "State and local income, sales, and property taxes (SALT) are not deductible for AMT purposes and must be added back to regular taxable income when computing AMTI. This is one of the largest AMT adjustments for many taxpayers.",
-    "tip": "No SALT deduction for AMT. Major reason people owe AMT (especially in high-tax states).",
+    "explanation": "Under IRC §56(b)(1)(A), state and local taxes (SALT)—including income, sales, and property taxes—are NOT deductible for AMT purposes and must be added back to regular taxable income when computing AMTI. Historically, this was the single largest AMT adjustment for many taxpayers, especially in high-tax states like California, New York, and New Jersey. Note: Post-TCJA, the $10,000 SALT cap under §164(b)(6) limits regular tax SALT anyway, reducing the AMT adjustment's impact for many. Why other answers are wrong: (A) Deductible up to $10,000—that's the regular tax limit post-TCJA, not AMT; (C) 50% deductible—no partial deduction for AMT; (D) Fully deductible—completely disallowed for AMT.",
+    "tip": "§56(b)(1)(A): NO SALT deduction for AMT. Add back entire SALT amount to AMTI. Historically biggest AMT trigger (high-tax state residents).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9304,8 +9304,8 @@ const questions = [
       "D": "Refinance any existing debt"
     },
     "correctAnswer": "C",
-    "explanation": "For AMT, qualified housing interest is limited to acquisition indebtedness (loans to buy, build, or substantially improve a qualified residence). Home equity loan interest not used for home improvements is not deductible for AMT, even if deductible for regular tax.",
-    "tip": "AMT mortgage interest: Only acquisition debt counts. No HELOC deduction unless for home improvement.",
+    "explanation": "Under IRC §56(e) and §56(b)(1)(C), mortgage interest for AMT purposes is limited to QUALIFIED HOUSING INTEREST, which is interest on acquisition indebtedness used to buy, build, or substantially improve a qualified residence (principal or second home). Home equity loan/HELOC interest used for other purposes (paying off credit cards, college tuition, vacations) is NOT deductible for AMT. Note: Post-TCJA, regular tax rules are now similar—§163(h)(3)(F) limits regular tax mortgage interest to acquisition debt through 2025, so this AMT adjustment has less impact currently. Why other answers are wrong: (A) Personal expenses—not qualified use; (B) Any real estate—must be personal residence, not investment property; (D) Refinancing any debt—only if refinancing acquisition debt and not exceeding prior principal.",
+    "tip": "§56(e)/§56(b)(1)(C): AMT mortgage interest = acquisition debt only (buy/build/improve residence). HELOC for non-home purposes disallowed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9325,8 +9325,8 @@ const questions = [
       "D": "Must use 150% declining balance method"
     },
     "correctAnswer": "A",
-    "explanation": "For personal property placed in service after 1998, there is generally no AMT depreciation adjustment. The 200% declining balance method used for regular tax also applies for AMT. Older rules required 150% DB for AMT.",
-    "tip": "Post-1998 personal property: No AMT depreciation adjustment. Real property may have adjustment.",
+    "explanation": "Under IRC §56(a)(1) as amended, for personal property (equipment, machinery, vehicles, furniture) placed in service after 1998, there is generally NO AMT depreciation adjustment—the same 200% declining balance method and MACRS class lives used for regular tax apply for AMT. This simplification eliminated a major computational burden. However, for REAL PROPERTY (buildings), AMT may still require 40-year straight-line (vs. 39-year or 27.5-year regular tax), creating a potential adjustment. Note: Bonus depreciation (§168(k)) and §179 expensing also apply the same for both systems. Why other answers are wrong: (B) Not deductible—depreciation is deductible for AMT; (C) Straight-line/longer lives—applies to real property, not personal property post-1998; (D) 150% DB—old rule pre-1999 for AMT.",
+    "tip": "§56(a)(1): Post-1998 personal property—NO AMT depreciation adjustment. Real property may still require 40-year ADS straight-line for AMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9346,8 +9346,8 @@ const questions = [
       "D": "Adjustments can increase or decrease AMTI; preferences only increase AMTI"
     },
     "correctAnswer": "D",
-    "explanation": "AMT adjustments can be either positive (increasing AMTI) or negative (decreasing AMTI) depending on timing differences. AMT preferences are always positive additions to AMTI—they represent permanent benefits that must be added back.",
-    "tip": "Adjustments = timing (can go either way). Preferences = permanent addbacks (always positive).",
+    "explanation": "Under IRC §56 and §57, AMT ADJUSTMENTS (§56) represent TIMING differences that reverse over time—depreciation computed differently, installment sale income recognized earlier for AMT, etc. These can be positive (add to AMTI) or NEGATIVE (reduce AMTI when the timing reverses). In contrast, AMT PREFERENCES (§57) represent permanent tax benefits that must ALWAYS be added back to AMTI—they only increase AMTI, never decrease it. Examples: Private activity bond interest (§57(a)(5)), percentage depletion excess (§57(a)(1)), pre-1987 accelerated depreciation. Key distinction: Timing items generate minimum tax credit (MTC) because they'll reverse; exclusion preferences don't generate MTC. Why other answers are wrong: (A) Corp vs individual—both apply to both; (B) No difference—significant conceptual difference; (C) Mandatory vs optional—both are mandatory.",
+    "tip": "§56 Adjustments = TIMING (can + or −), generate MTC. §57 Preferences = PERMANENT (always +), no MTC. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9367,8 +9367,8 @@ const questions = [
       "D": "Taxable for both regular tax and AMT"
     },
     "correctAnswer": "A",
-    "explanation": "Interest on most private activity bonds issued after August 7, 1986 is tax-exempt for regular tax purposes but is an AMT preference item that must be added to AMTI. Some bonds (like 501(c)(3) bonds) are exempt from this preference.",
-    "tip": "Private activity bond interest: Tax-free for regular tax, but add back for AMT.",
+    "explanation": "Under IRC §57(a)(5), interest on PRIVATE ACTIVITY BONDS (PABs) issued after August 7, 1986 is: (1) TAX-EXEMPT for regular tax purposes under §103, but (2) An AMT PREFERENCE ITEM that must be added back to AMTI. PABs are municipal bonds that finance private projects (sports stadiums, airports, housing projects, student loans). EXCEPTION: Interest on certain \"qualified\" bonds is NOT an AMT preference, including: 501(c)(3) organization bonds, qualified mortgage bonds, qualified veterans' mortgage bonds, and most bonds issued in 2009-2010 during financial crisis. Why other answers are wrong: (B) Exempt for both—most PAB interest is AMT preference; (C) Taxable for regular/exempt AMT—exactly backwards; (D) Taxable for both—regular tax exemption applies.",
+    "tip": "§57(a)(5): PAB interest = tax-free for regular tax BUT AMT preference. Exception: 501(c)(3) bonds, certain housing bonds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9388,8 +9388,8 @@ const questions = [
       "D": "75 cents per dollar of excess AMTI"
     },
     "correctAnswer": "B",
-    "explanation": "The AMT exemption phases out at 25 cents for every dollar of AMTI exceeding the threshold. This means the exemption is completely eliminated when AMTI exceeds the threshold by four times the exemption amount.",
-    "tip": "AMT exemption phaseout = 25% rate. Exemption gone when AMTI exceeds threshold by 4× exemption.",
+    "explanation": "Under IRC §55(d)(3), the AMT exemption phases out at 25 CENTS (25%) for every dollar of AMTI exceeding the threshold. For 2024: MFJ threshold ~$1,218,700, single ~$609,350. Example: If single taxpayer has AMTI of $809,350 (exceeds threshold by $200,000), exemption reduction = $200,000 × 25% = $50,000. Exemption completely eliminated when AMTI exceeds threshold by 4× the exemption amount ($342,800 for single = $85,700 × 4). CRITICAL: During the phaseout range, the EFFECTIVE marginal AMT rate exceeds 28%! Each extra $1 of income triggers 28¢ AMT + 25¢ × 28% (on lost exemption) = ~35% effective rate. Why other answers are wrong: (A) 100%—would eliminate exemption too fast; (C) 50%—double the actual rate; (D) 75%—would eliminate exemption faster than designed.",
+    "tip": "§55(d)(3): 25% phaseout rate. Exemption gone when AMTI exceeds threshold by 4× exemption. Effective rate can exceed 28% during phaseout!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9409,8 +9409,8 @@ const questions = [
       "D": "Neither preferences nor timing differences"
     },
     "correctAnswer": "B",
-    "explanation": "The MTC is generated when AMT is paid due to timing differences (like depreciation adjustments). Since these items will reverse in future years, the MTC allows recovery of the AMT when regular tax exceeds TMT. Exclusion preferences do not generate MTC.",
-    "tip": "MTC = credit for AMT paid on timing items. Recover when regular tax > TMT in future years.",
+    "explanation": "Under IRC §53, the MINIMUM TAX CREDIT (MTC) is generated when AMT is paid due to TIMING DIFFERENCES (deferral items from §56 adjustments like depreciation, installment sales, long-term contracts). Since these timing differences will REVERSE in future years, the MTC allows taxpayers to recover previously paid AMT in years when regular tax exceeds TMT. MTC can reduce regular tax liability to (but not below) the TMT for that year. IMPORTANT: AMT paid on EXCLUSION PREFERENCES (§57 items like private activity bond interest, percentage depletion excess) does NOT generate MTC because those benefits are permanent, not timing-related. Why other answers are wrong: (A) Preferences only—preferences don't generate MTC; (C) Both—only timing items generate MTC; (D) Neither—timing items definitely generate MTC.",
+    "tip": "§53 MTC: Only TIMING differences (§56 deferral items) generate credit. EXCLUSION preferences (§57) = no MTC. Use when regular tax > TMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9430,8 +9430,8 @@ const questions = [
       "D": "Reduced by 50%"
     },
     "correctAnswer": "A",
-    "explanation": "The standard deduction is not allowed for AMT purposes. Instead, taxpayers receive the AMT exemption. This applies regardless of whether the taxpayer itemizes or takes the standard deduction for regular tax purposes.",
-    "tip": "No standard deduction for AMT. Use AMT exemption only.",
+    "explanation": "Under IRC §56(b)(1)(E), the STANDARD DEDUCTION is NOT allowed for AMT purposes—it must be added back to regular taxable income when computing AMTI. Instead, taxpayers receive the §55(d) AMT EXEMPTION (a separate deduction from AMTI). This applies regardless of whether the taxpayer itemizes or takes the standard deduction for regular tax. Note: For itemizers, itemized deductions are used for AMT with specific adjustments (SALT disallowed, etc.). For standard deduction taxpayers, this creates a larger AMT adjustment since their regular taxable income was reduced by the full standard deduction. Why other answers are wrong: (B) Doubled—no doubling mechanism; (C) Fully allowed—explicitly disallowed by §56(b)(1)(E); (D) Reduced by 50%—completely disallowed, not partial.",
+    "tip": "§56(b)(1)(E): NO standard deduction for AMT. Use AMT exemption (§55(d)) instead. Major AMT trigger for non-itemizers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9451,8 +9451,8 @@ const questions = [
       "D": "10% of AGI"
     },
     "correctAnswer": "C",
-    "explanation": "The medical expense deduction floor is 7.5% of AGI for both regular tax and AMT purposes. This was permanently set by the TCJA. Previously, AMT required 10% floor, creating an adjustment.",
-    "tip": "Medical expenses: 7.5% floor for both regular and AMT. No adjustment needed now.",
+    "explanation": "Under IRC §56(b)(1)(B) as amended, the medical expense deduction floor is now 7.5% of AGI for BOTH regular tax and AMT purposes—no AMT adjustment required. Historical context: Pre-TCJA, regular tax floor was 7.5% (temporarily 10% for non-seniors), while AMT floor was always 10%, creating an AMT adjustment for the difference. The Consolidated Appropriations Act of 2021 made the 7.5% floor PERMANENT for both systems (previously scheduled to increase to 10%). This is taxpayer-friendly as medical expenses remain deductible without AMT modification. Why other answers are wrong: (A) Not deductible—medical expenses are deductible for AMT above the floor; (B) 5% floor—never been the threshold for either system; (D) 10% floor—old AMT rule, now aligned at 7.5%.",
+    "tip": "§56(b)(1)(B)/§213: Medical 7.5% floor = SAME for regular and AMT. No adjustment needed since 2021 (permanent). Previously AMT was 10%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9472,8 +9472,8 @@ const questions = [
       "D": "Ordinary income is recognized"
     },
     "correctAnswer": "B",
-    "explanation": "For regular tax, no income is recognized when exercising an ISO (if holding periods are met). For AMT, the bargain element (FMV minus exercise price) at exercise is an AMT adjustment that increases AMTI. This is a major AMT trigger.",
-    "tip": "ISO exercise: Tax-free for regular tax, but bargain element is AMT income. Major AMT trap!",
+    "explanation": "Under IRC §56(b)(3), when an employee exercises an INCENTIVE STOCK OPTION (ISO), the BARGAIN ELEMENT (FMV at exercise minus exercise price) is an AMT ADJUSTMENT that increases AMTI. For regular tax under §422, NO income is recognized at exercise if holding periods are met (1 year from exercise, 2 years from grant). This ISO spread has been a MAJOR AMT TRAP—employees exercise valuable options thinking no tax is due, then face massive unexpected AMT liability. Example: Exercise 10,000 shares at $5 when FMV = $50 → $450,000 AMT adjustment! The employee's AMT basis in the stock is increased by the spread, which can later reduce gain or create a §53 minimum tax credit. Why other answers are wrong: (A) No income—true for regular tax, false for AMT; (C) Capital gain—not recognized until sale; (D) Ordinary income—not for ISOs meeting requirements.",
+    "tip": "§56(b)(3): ISO BARGAIN ELEMENT (FMV − strike) = AMT adjustment at exercise. Major trap! AMT basis adjusts accordingly.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9493,8 +9493,8 @@ const questions = [
       "D": "The same preferential rates as regular tax (0%, 15%, or 20%)"
     },
     "correctAnswer": "D",
-    "explanation": "Long-term capital gains and qualified dividends retain their preferential rates (0%, 15%, or 20%) for AMT purposes. Only ordinary income is subject to the 26%/28% AMT rates.",
-    "tip": "Capital gains keep preferential rates for AMT. Only ordinary income at 26%/28%.",
+    "explanation": "Under IRC §55(b)(3), long-term capital gains and qualified dividends retain their PREFERENTIAL RATES (0%, 15%, or 20% based on income thresholds) for AMT purposes—the SAME rates as regular tax under §1(h). Only ORDINARY income is subject to the 26%/28% AMT rates. This is a critical planning point: investment income taxed at preferential rates does NOT increase AMT liability beyond regular tax! The AMT rate structure effectively only matters for ordinary income. Technical note: Net capital gain reduces the portion of AMTI subject to the 26%/28% rates, with capital gains taxed at their preferential rates on top. Why other answers are wrong: (A) Flat 15%—rates can be 0%, 15%, or 20% depending on income; (B) Ordinary rates—capital gains get preferential treatment; (C) 26%/28%—those are ordinary income AMT rates.",
+    "tip": "§55(b)(3): LTCG/qualified dividends = SAME preferential rates (0/15/20%) for AMT. Only ordinary income at 26%/28%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9514,8 +9514,8 @@ const questions = [
       "D": "Can offset 100% of AMTI"
     },
     "correctAnswer": "B",
-    "explanation": "The AMT NOL must be computed separately using AMT income and deduction amounts. It may differ from the regular tax NOL. The AMT NOL can only offset 80% of AMTI (same 80% limitation as regular tax post-TCJA).",
-    "tip": "Calculate separate AMT NOL using AMT figures. Same 80% limitation applies.",
+    "explanation": "Under IRC §56(d), the AMT NET OPERATING LOSS (ATNOL) must be computed SEPARATELY using AMT income and deduction amounts—not simply the regular tax NOL. The ATNOL may differ from regular NOL because: (1) Income/deductions differ (depreciation, SALT not deductible for AMT), (2) Some deductions allowed for regular tax are disallowed for AMT. Post-TCJA, both regular NOL and ATNOL can only offset 80% of taxable income/AMTI under §172(a) (exception: farming losses and pre-2018 NOLs). The ATNOL is limited to 80% of AMTI calculated without regard to the ATNOL deduction. Why other answers are wrong: (A) Same as regular—must recalculate using AMT figures; (C) Not allowed—AMT NOL is allowed, just calculated differently; (D) 100% offset—limited to 80% post-TCJA.",
+    "tip": "§56(d) ATNOL: Calculate SEPARATE AMT NOL using AMT figures. Subject to same 80% limitation (§172(a)) as regular NOL.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9535,8 +9535,8 @@ const questions = [
       "D": "Deductible at 50% for AMT"
     },
     "correctAnswer": "C",
-    "explanation": "TCJA suspended miscellaneous itemized deductions subject to the 2% floor for both regular tax and AMT for tax years 2018-2025. Before TCJA, these were not allowed for AMT, creating an adjustment.",
-    "tip": "2% misc deductions: Suspended entirely (2018-2025). No AMT adjustment currently needed.",
+    "explanation": "Under IRC §67(g) added by TCJA, miscellaneous itemized deductions subject to the 2% AGI floor are SUSPENDED for BOTH regular tax and AMT for tax years 2018-2025. These included unreimbursed employee expenses, tax preparation fees, investment expenses, safe deposit box fees, and hobby expenses. Historical context: Pre-TCJA, these deductions were allowed for regular tax (above 2% floor) but NOT allowed for AMT under §56(b)(1)(A), creating an AMT adjustment. Now moot since suspended entirely. Note: Certain business-related deductions that were reclassified as above-the-line (educator expenses, performing artists) remain deductible. Why other answers are wrong: (A) Fully deductible for AMT—suspended entirely; (B) Not AMT but yes regular—both suspended; (D) 50% for AMT—completely suspended.",
+    "tip": "§67(g): 2% floor misc deductions SUSPENDED 2018-2025 (both systems). Pre-TCJA: allowed regular, not AMT. Now irrelevant.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9556,8 +9556,8 @@ const questions = [
       "D": "Suspended through 2025 for both regular tax and AMT"
     },
     "correctAnswer": "D",
-    "explanation": "Personal exemptions were suspended by TCJA for tax years 2018-2025 for both regular tax and AMT. Before TCJA, personal exemptions were not allowed for AMT purposes and were a significant adjustment.",
-    "tip": "Personal exemptions: Suspended entirely (2018-2025). No longer an AMT issue currently.",
+    "explanation": "Under IRC §151(d)(5) added by TCJA, personal exemptions are SUSPENDED (reduced to zero) for BOTH regular tax and AMT for tax years 2018-2025. Pre-TCJA, personal exemptions ($4,050 per person in 2017) were allowed for regular tax but NOT for AMT under §56(b)(1)(E), creating a significant AMT adjustment—families with many dependents were particularly affected. TCJA eliminated this issue by suspending exemptions entirely and instead increasing the standard deduction and child tax credit. Note: After 2025, if TCJA provisions expire, personal exemptions may return—and with them, the AMT adjustment issue. Why other answers are wrong: (A) Same as regular—both are zero currently; (B) Not allowed/AMT preference—historically true, but now suspended for both; (C) Doubled—no doubling, just suspended.",
+    "tip": "§151(d)(5): Personal exemptions = ZERO (2018-2025). Pre-TCJA: $4,050/person regular, not AMT. Major historical adjustment eliminated.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
