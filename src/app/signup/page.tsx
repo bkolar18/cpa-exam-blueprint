@@ -41,7 +41,7 @@ export default function SignupPage() {
  email,
  password,
  options: {
- emailRedirectTo: `${window.location.origin}/auth/callback?next=/dashboard/onboarding`,
+ emailRedirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
  },
  });
 
@@ -65,7 +65,7 @@ export default function SignupPage() {
  const { error } = await supabase.auth.signInWithOAuth({
  provider:"google",
  options: {
- redirectTo: `${window.location.origin}/auth/callback?next=/dashboard/onboarding`,
+ redirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
  },
  });
 
