@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog/posts'
 import { stateSalaries } from '@/data/state-salaries'
+import { getAllStates } from '@/lib/data/state-requirements'
 
 const BASE_URL = 'https://meridiancpareview.com'
 
@@ -112,6 +113,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/compare/becker-vs-surgent`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/compare/surgent-vs-roger`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/compare/wiley-vs-uworld`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 
   // Topic deep-dive pages
@@ -203,6 +222,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
+  // "How to Become a CPA in [State]" pages (programmatic SEO)
+  const allStates = getAllStates()
+  const becomeCpaPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/guides/become-cpa-in`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    ...allStates.map((state) => ({
+      url: `${BASE_URL}/guides/become-cpa-in/${state.name.toLowerCase().replace(/\s+/g, '-')}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ]
+
   // Blog posts (dynamically generated)
   let blogPosts: MetadataRoute.Sitemap = []
   try {
@@ -218,5 +254,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     console.log('No blog posts found for sitemap')
   }
 
-  return [...staticPages, ...sectionPages, ...guidePages, ...resourcePages, ...comparisonPages, ...topicPages, ...stateSalaryPages, ...blogPosts]
+  return [...staticPages, ...sectionPages, ...guidePages, ...resourcePages, ...comparisonPages, ...topicPages, ...stateSalaryPages, ...becomeCpaPages, ...blogPosts]
 }
