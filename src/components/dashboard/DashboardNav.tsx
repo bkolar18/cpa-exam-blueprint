@@ -33,6 +33,7 @@ const groupedItems = [
     items: [
       { href: "/dashboard/readiness", label: "Exam Preparation", icon: "readiness" },
       { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
+      { href: "/dashboard/exam-schedule", label: "Exam Schedule", icon: "examDate" },
       { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
     ],
   },
@@ -40,22 +41,6 @@ const groupedItems = [
 
 // Settings stays separate
 const settingsItem = { href: "/dashboard/settings", label: "Settings", icon: "settings" };
-
-// All items flat for mobile
-const allNavItems = [
-  { href: "/dashboard", label: "Overview", icon: "home" },
-  { href: "/dashboard/practice", label: "Multiple Choice", icon: "practice" },
-  { href: "/dashboard/simulations", label: "Simulations", icon: "simulation" },
-  { href: "/dashboard/flashcards", label: "Notecards", icon: "cards" },
-  { href: "/dashboard/my-notes", label: "My Notes", icon: "notes" },
-  { href: "/dashboard/study-log", label: "Study Log", icon: "clock" },
-  { href: "/dashboard/flagged-questions", label: "Flagged Questions", icon: "flag" },
-  { href: "/dashboard/exam-simulation", label: "Exam Simulation", icon: "exam" },
-  { href: "/dashboard/readiness", label: "Exam Readiness", icon: "readiness" },
-  { href: "/dashboard/accolades", label: "Accolades", icon: "trophy" },
-  { href: "/dashboard/nts", label: "NTS Tracker", icon: "calendar" },
-  { href: "/dashboard/settings", label: "Settings", icon: "settings" },
-];
 
 const icons: Record<string, React.ReactNode> = {
   home: (
@@ -132,6 +117,12 @@ const icons: Record<string, React.ReactNode> = {
   cards: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+    </svg>
+  ),
+  examDate: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11v4l2 2" />
     </svg>
   ),
   chevronDown: (
@@ -314,29 +305,80 @@ export default function DashboardNav() {
           </div>
         </div>
 
-        {/* Mobile Navigation - flat list */}
+        {/* Mobile Navigation - organized by categories */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-[var(--border)]">
-            <div className="flex flex-col space-y-1">
-              {allNavItems.map((item) => {
-                const isActive = pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
-                      isActive
-                        ? "bg-[var(--primary)] text-white"
-                        : "text-[var(--foreground)] hover:bg-[var(--card)]"
-                    }`}
-                  >
-                    {icons[item.icon]}
-                    <span>{item.label}</span>
-                  </Link>
-                );
-              })}
-              <div className="pt-4 mt-4 border-t border-[var(--border)]">
+            <div className="flex flex-col space-y-4">
+              {/* Overview */}
+              <div>
+                {standaloneItems.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
+                        isActive
+                          ? "bg-[var(--primary)] text-white"
+                          : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                      }`}
+                    >
+                      {icons[item.icon]}
+                      <span>{item.label}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+
+              {/* Grouped sections */}
+              {groupedItems.map((group) => (
+                <div key={group.label} className="border-t border-[var(--border)] pt-3">
+                  <div className="flex items-center space-x-2 px-3 py-2 text-xs font-semibold text-[var(--muted)] uppercase tracking-wider">
+                    {icons[group.icon]}
+                    <span>{group.label}</span>
+                  </div>
+                  <div className="space-y-0.5">
+                    {group.items.map((item) => {
+                      const isActive = pathname === item.href;
+                      return (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`flex items-center space-x-3 px-3 py-2.5 ml-2 rounded-lg text-sm font-medium transition-colors ${
+                            isActive
+                              ? "bg-[var(--primary)] text-white"
+                              : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                          }`}
+                        >
+                          {icons[item.icon]}
+                          <span>{item.label}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+
+              {/* Settings */}
+              <div className="border-t border-[var(--border)] pt-3">
+                <Link
+                  href={settingsItem.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
+                    pathname === settingsItem.href
+                      ? "bg-[var(--primary)] text-white"
+                      : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                  }`}
+                >
+                  {icons[settingsItem.icon]}
+                  <span>{settingsItem.label}</span>
+                </Link>
+              </div>
+
+              {/* User & Sign Out */}
+              <div className="pt-2 border-t border-[var(--border)]">
                 <p className="px-3 text-sm text-[var(--muted)] mb-2">{user?.email}</p>
                 <button
                   onClick={signOut}

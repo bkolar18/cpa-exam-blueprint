@@ -1092,7 +1092,7 @@ export default function ReadinessDashboardPage() {
                   </p>
                   {!assessmentStatus[selectedSection]?.examDate && (
                     <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">
-                      Set your exam date in the <Link href="/dashboard/nts" className="underline hover:no-underline">NTS Tracker</Link> to access this feature.
+                      Set your exam date in <Link href="/dashboard/exam-schedule" className="underline hover:no-underline">Exam Schedule</Link> to access this feature.
                     </p>
                   )}
                 </div>
@@ -1121,7 +1121,7 @@ export default function ReadinessDashboardPage() {
                   </Link>
                 ) : (
                   <Link
-                    href="/dashboard/nts"
+                    href="/dashboard/exam-schedule"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300 font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
