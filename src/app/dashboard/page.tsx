@@ -445,8 +445,8 @@ export default function DashboardPage() {
  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
  <StatCard
  label="This Week"
- value={weeklyHours < 1 && weeklyHours > 0 ? formatHours(weeklyHours) : `${formatHours(weeklyHours)}h`}
- sublabel={profile?.weekly_study_hours ? `Goal: ${profile.weekly_study_hours}h` :"Set a goal"}
+ value={`${formatHours(weeklyHours)} ${weeklyHours === 1 ? 'hour' : 'hours'}`}
+ sublabel={profile?.weekly_study_hours ? `Goal: ${profile.weekly_study_hours} hours` : "Set a goal"}
  color="blue"
  />
  <Link href="/dashboard/readiness" className="block">
