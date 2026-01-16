@@ -22,8 +22,8 @@ const questions = [
       "D": "Only wages and salaries"
     },
     "correctAnswer": "A",
-    "explanation": "IRC Section 61 defines gross income broadly as 'all income from whatever source derived' unless a specific exclusion applies. This includes wages, interest, dividends, business income, gains, and more.",
-    "tip": "IRC 61 = ALL income is taxable unless Congress says otherwise. Start broad, then look for exclusions.",
+    "explanation": "Per IRC §61(a), gross income means 'all income from whatever source derived' unless specifically excluded. This includes wages, interest, dividends, rents, royalties, alimony (pre-2019), business income, capital gains, and virtually any accession to wealth. The Code then provides specific exclusions in §§101-139. Why other answers are wrong: (B) W-2 only—ignores self-employment, investment income, etc.; (C) Earned income only—passive and investment income are also taxable; (D) Wages/salaries only—misses all non-employment income.",
+    "tip": "IRC §61 = ALL income is taxable unless Congress says otherwise. Start broad, then look for exclusions in §§101-139.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -43,8 +43,8 @@ const questions = [
       "D": "Head of Household"
     },
     "correctAnswer": "A",
-    "explanation": "Qualifying Surviving Spouse (formerly Qualifying Widow(er)) uses the same favorable rates as Married Filing Jointly for two years after spouse's death. Head of Household is next most favorable, then Single, with MFS typically least favorable.",
-    "tip": "Rate favorability: MFJ/QSS > HOH > Single > MFS. MFS usually worst due to phase-outs.",
+    "explanation": "Per IRC §1(a), Qualifying Surviving Spouse (QSS) uses the same rate brackets as Married Filing Jointly for two years following the year of spouse's death, if the taxpayer maintains a home for a dependent child (§2(a)). The rate favorability order from best to worst is: MFJ/QSS > Head of Household (§1(b)) > Single (§1(c)) > Married Filing Separately (§1(d)). Why other answers are wrong: (B) Single—rates are higher than QSS and HOH; (C) MFS—typically worst rates plus loses many benefits; (D) HOH—favorable but not as good as QSS/MFJ rates.",
+    "tip": "Rate favorability: MFJ/QSS > HOH > Single > MFS. QSS = MFJ rates for 2 years after spouse's death (§2(a)).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -64,8 +64,8 @@ const questions = [
       "D": "Their itemized deductions exceed the standard deduction"
     },
     "correctAnswer": "D",
-    "explanation": "Taxpayers should choose the larger of their standard deduction or itemized deductions. Itemizing only makes sense when total itemized deductions (mortgage interest, state taxes, charity, etc.) exceed the standard deduction.",
-    "tip": "Itemize vs. Standard = whichever is LARGER. For 2024: $14,600 single, $29,200 MFJ.",
+    "explanation": "Per IRC §63(b)-(c), taxpayers may deduct the greater of (1) itemized deductions under §63(d) (mortgage interest §163(h), SALT up to $10K §164, charitable §170, etc.) or (2) the standard deduction under §63(c). Itemizing only benefits the taxpayer when total itemized deductions exceed the standard deduction amount. Why other answers are wrong: (A) Charitable contributions—itemizing for small charity donations may not exceed standard deduction; (B) Home ownership—mortgage interest alone may not exceed standard deduction post-TCJA; (C) AGI threshold—no such rule; itemizing depends on deduction amounts, not AGI.",
+    "tip": "IRC §63: Itemize vs. Standard = whichever is LARGER. Post-TCJA: $14,600 single, $29,200 MFJ (2024).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -85,8 +85,8 @@ const questions = [
       "D": "They have no dollar limits"
     },
     "correctAnswer": "A",
-    "explanation": "Above-the-line deductions reduce AGI directly, which can: (1) increase eligibility for credits/deductions that phase out at higher AGI, (2) reduce taxes in states using federal AGI, and (3) are available even if you don't itemize.",
-    "tip": "Above the line = reduces AGI = more valuable. Below the line = only helps if you itemize.",
+    "explanation": "Per IRC §62, deductions 'for AGI' (above-the-line) reduce AGI directly. This matters because many tax benefits phase out at higher AGI levels (e.g., IRA deductions §219, student loan interest §221, education credits §25A). Above-the-line deductions are available whether you itemize or take the standard deduction. Why other answers are wrong: (B) High-income only—above-line deductions (educator expenses, HSA, etc.) are available to all taxpayers; (C) No receipts—documentation is still required; (D) No limits—many have caps (e.g., student loan interest limited to $2,500).",
+    "tip": "IRC §62: Above-the-line = reduces AGI = preserves other tax benefits. Available even if you don't itemize.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -106,8 +106,8 @@ const questions = [
       "D": "Not taxable"
     },
     "correctAnswer": "C",
-    "explanation": "Long-term capital gains are taxed at preferential rates of 0%, 15%, or 20% depending on income level—lower than ordinary income rates which go up to 37%. This encourages long-term investment.",
-    "tip": "LTCG rates: 0%/15%/20%. Much better than ordinary rates (up to 37%). Hold > 1 year!",
+    "explanation": "Per IRC §1(h), net long-term capital gains (assets held >1 year per §1222(3)) are taxed at preferential rates: 0% for lower brackets, 15% for middle brackets, and 20% for higher brackets. These rates are significantly lower than ordinary income rates (up to 37%). An additional 3.8% NIIT may apply under §1411 for high earners. Why other answers are wrong: (A) Higher rates—LTCG rates are LOWER than ordinary rates; (B) Same rates—no, preferential rates apply; (D) Not taxable—capital gains ARE taxable, just at favorable rates.",
+    "tip": "IRC §1(h): LTCG rates = 0%/15%/20% (plus 3.8% NIIT if applicable). Hold >1 year for long-term treatment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -127,8 +127,8 @@ const questions = [
       "D": "Deductions are limited to 50% of AGI"
     },
     "correctAnswer": "B",
-    "explanation": "A $1,000 credit reduces your tax bill by $1,000 directly. A $1,000 deduction only reduces taxable income by $1,000, saving taxes based on your marginal rate (e.g., 22% bracket = $220 saved).",
-    "tip": "Credit = dollar-for-dollar reduction in TAX. Deduction = reduces taxable INCOME. Credit > Deduction.",
+    "explanation": "Under the IRC, credits directly reduce tax liability dollar-for-dollar, while deductions only reduce taxable income. A $1,000 credit saves $1,000 in tax. A $1,000 deduction saves taxes based on marginal rate (e.g., 22% bracket × $1,000 = $220 tax savings). Credits are defined throughout the Code (§§21-54); deductions in §§62-199A. Why other answers are wrong: (A) Indefinite carryforward—varies by credit type, not a universal feature; (C) No phase-outs—many credits DO phase out (e.g., Child Tax Credit §24(b)); (D) 50% AGI limit—only certain charitable deductions have AGI limits.",
+    "tip": "Credit = dollar-for-dollar TAX reduction. Deduction = reduces taxable INCOME × marginal rate. Credit > Deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -148,8 +148,8 @@ const questions = [
       "D": "Legal capacity"
     },
     "correctAnswer": "C",
-    "explanation": "Valid contracts require: (1) offer and acceptance, (2) consideration (exchange of value), (3) legal capacity (competent parties), and (4) legal purpose. Most contracts do NOT require writing—oral contracts are generally valid, except where the Statute of Frauds applies.",
-    "tip": "Contract elements: Offer, Acceptance, Consideration, Capacity, Legality. Writing usually NOT required.",
+    "explanation": "Under common law contract principles, valid contracts require: (1) mutual assent (offer + acceptance), (2) consideration (bargained-for exchange), (3) capacity (competent parties), and (4) legality (lawful purpose). Writing is NOT required UNLESS the Statute of Frauds applies (land sales, contracts >1 year, surety, UCC goods ≥$500). Why other answers are wrong: (A) Offer/acceptance—these ARE required elements; (B) Consideration—this IS a required element; (D) Capacity—this IS a required element. Writing is the exception, not the rule.",
+    "tip": "Contract elements: Offer, Acceptance, Consideration, Capacity, Legality. Writing required only under Statute of Frauds (MY LEGS).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -169,8 +169,8 @@ const questions = [
       "D": "General partnership"
     },
     "correctAnswer": "B",
-    "explanation": "An LLC provides limited liability to all members (like a corporation) while being taxed as a pass-through entity by default (like a partnership). General partnerships and sole proprietorships don't provide limited liability. C corps have double taxation.",
-    "tip": "LLC = best of both worlds: limited liability + pass-through taxation (default).",
+    "explanation": "An LLC (Limited Liability Company) provides limited liability protection to ALL members under state law while being classified as a partnership for federal tax purposes by default (Reg. §301.7701-3). Single-member LLCs are disregarded entities. LLCs can elect corporate treatment. Why other answers are wrong: (A) C corp—has limited liability but double taxation (corporate tax + dividend tax); (C) Sole proprietorship—no limited liability, owner is personally liable; (D) General partnership—no limited liability, partners are personally liable for partnership debts.",
+    "tip": "LLC = limited liability (state law) + pass-through taxation (default). Can elect corp treatment under check-the-box (Reg. §301.7701-3).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -190,8 +190,8 @@ const questions = [
       "D": "Practice before the IRS by tax practitioners"
     },
     "correctAnswer": "D",
-    "explanation": "Treasury Department Circular 230 establishes rules for practitioners (CPAs, attorneys, enrolled agents) who practice before the IRS. It covers due diligence, conflicts of interest, fees, advertising, and penalties for violations.",
-    "tip": "Circular 230 = Treasury rules for IRS practice. Covers CPAs, attorneys, EAs before IRS.",
+    "explanation": "Treasury Department Circular 230 (31 CFR Part 10) governs practice before the IRS by CPAs, attorneys, enrolled agents, and other practitioners. It covers standards of conduct including due diligence (§10.22), conflicts of interest (§10.29), fee restrictions (§10.27), advertising (§10.30), and sanctions for violations (§§10.50-10.52). Why other answers are wrong: (A) State CPA licensing—governed by state boards of accountancy; (B) SEC reporting—governed by securities laws and PCAOB; (C) AICPA membership—governed by AICPA bylaws, not Treasury.",
+    "tip": "Circular 230 (31 CFR Part 10) = Treasury rules for IRS practice. Covers CPAs, attorneys, EAs before IRS.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -211,8 +211,8 @@ const questions = [
       "D": "The amount the property is insured for"
     },
     "correctAnswer": "C",
-    "explanation": "Basis represents the taxpayer's investment in property for tax purposes. It's used to determine gain or loss on sale (Amount realized - Basis = Gain/Loss) and depreciation deductions. Initial basis is usually cost.",
-    "tip": "Basis = your investment for tax purposes. Gain/Loss = Sales Price - Basis.",
+    "explanation": "Per IRC §1012, basis generally equals the cost of property (amount paid plus acquisition costs). Basis is used to compute gain or loss under §1001(a): Amount Realized − Adjusted Basis = Gain/Loss. Basis is also the starting point for depreciation deductions under §167/§168. Why other answers are wrong: (A) Assessed value—property tax assessments are unrelated to tax basis; (B) FMV—basis equals cost, not current market value (except for inherited property §1014); (D) Insurance value—unrelated to tax basis calculations.",
+    "tip": "IRC §1012: Basis = cost. §1001: Gain/Loss = Amount Realized − Adjusted Basis. Inherited = FMV (§1014); Gift = carryover (§1015).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -232,8 +232,8 @@ const questions = [
       "D": "Being a domestic corporation"
     },
     "correctAnswer": "B",
-    "explanation": "S corporations cannot have nonresident alien shareholders. Other requirements: max 100 shareholders (family members count as one), only individuals/estates/certain trusts as shareholders, one class of stock, domestic corporation.",
-    "tip": "S corp killers: >100 shareholders, nonresident aliens, corps as shareholders, multiple stock classes.",
+    "explanation": "Per IRC §1361(b)(1)(C), S corporations cannot have nonresident alien shareholders. Other S corp requirements under §1361(b)(1): (A) max 100 shareholders (family members treated as one under §1361(c)(1)); (B) only individuals, estates, and certain trusts as shareholders; (D) only one class of stock (voting differences OK per §1361(c)(4)); must be domestic corporation. Why other answers are wrong: (A) 50 shareholders—limit is 100, not 50; (C) One class of stock—this is a REQUIREMENT, not disqualifying; (D) Domestic corporation—this is a REQUIREMENT, not disqualifying.",
+    "tip": "§1361(b) S corp requirements: ≤100 shareholders, no NRAs, eligible shareholders only, one class of stock, domestic corp.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -253,8 +253,8 @@ const questions = [
       "D": "A contract to sell a car for $600"
     },
     "correctAnswer": "A",
-    "explanation": "The Statute of Frauds requires writing for: (1) contracts for sale of land, (2) contracts that cannot be performed within one year, (3) promises to pay another's debt, (4) marriage contracts, and (5) sale of goods $500+ (UCC).",
-    "tip": "Statute of Frauds (MY LEGS): Marriage, Year+, Land, Executor, Goods $500+, Surety.",
+    "explanation": "Under the Statute of Frauds (common law and UCC §2-201), certain contracts must be in writing to be enforceable: (1) sale of land/real property interests, (2) contracts that cannot be performed within one year, (3) promises to pay another's debt (surety), (4) contracts in consideration of marriage, (5) sale of goods $500+ (UCC), and (6) executor promises to pay estate debts personally. Why other answers are wrong: (B) One-month employment—CAN be performed within one year, no writing required; (C) $400 painting—services, not goods, and under $500 anyway; (D) $600 car—goods $500+ requires writing, but $600 is close to threshold and car sales often have other formalities.",
+    "tip": "Statute of Frauds (MY LEGS): Marriage, Year+ performance impossible, Land, Executor, Goods ≥$500 (UCC §2-201), Surety.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -274,8 +274,8 @@ const questions = [
       "D": "Full-year convention"
     },
     "correctAnswer": "A",
-    "explanation": "The half-year convention treats all personal property as placed in service at the midpoint of the year, allowing half a year's depreciation in the first and last years. Real property uses the mid-month convention.",
-    "tip": "Personal property = half-year convention. Real property = mid-month convention.",
+    "explanation": "Per IRC §168(d)(1), the half-year convention applies to most personal property under MACRS, treating property as placed in service at the midpoint of the year regardless of actual date. This allows 50% of the first year's depreciation. The mid-quarter convention applies if >40% of personal property is placed in service in Q4 (§168(d)(3)). Real property uses the mid-month convention (§168(d)(2)). Why other answers are wrong: (B) Mid-month—applies to REAL property, not personal property; (C) No convention—MACRS always uses a convention; (D) Full-year—no such convention in MACRS.",
+    "tip": "§168(d): Personal property = half-year (or mid-quarter if >40% in Q4). Real property = mid-month convention.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -295,8 +295,8 @@ const questions = [
       "D": "Disregarded entity"
     },
     "correctAnswer": "B",
-    "explanation": "Partnerships are pass-through entities. The partnership files Form 1065 and issues Schedule K-1s to partners, but doesn't pay entity-level tax. Partners report their share of income on personal returns and pay tax individually.",
-    "tip": "Partnership = pass-through. No entity tax. Partners pay on their share via K-1.",
+    "explanation": "Per IRC §701, a partnership is NOT a taxable entity—it's a pass-through entity. The partnership files an informational return (Form 1065) under §6031 and issues Schedule K-1s to partners showing their distributive share under §702. Partners then report these items on their individual returns and pay tax at their individual rates. Why other answers are wrong: (A) Taxable entity—partnerships do NOT pay entity-level income tax; (C) Tax-exempt—partnerships ARE subject to tax, just at the partner level; (D) Disregarded entity—partnerships with 2+ members are recognized entities, not disregarded (single-member LLCs are disregarded).",
+    "tip": "IRC §701: Partnership = pass-through entity. No entity tax. §6031: Files Form 1065 (informational). §702: K-1s to partners.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9892,8 +9892,8 @@ const questions = [
       "D": "Consideration"
     },
     "correctAnswer": "A",
-    "explanation": "The essential elements of a valid contract are: (1) offer, (2) acceptance, (3) consideration, and (4) legal capacity of parties and legality of purpose. Writing is not required for all contracts, though some must be in writing under the Statute of Frauds.",
-    "tip": "Contract elements: Offer + Acceptance + Consideration + Capacity/Legality. Writing only for certain contracts.",
+    "explanation": "Under common law contract principles, a valid contract requires: (1) mutual assent (offer and acceptance), (2) consideration (bargained-for exchange), (3) legal capacity (competent parties), and (4) legality of purpose. Writing is NOT a universal requirement—oral contracts are generally enforceable unless the Statute of Frauds applies. Why other answers are wrong: (B) Offer—this IS required for mutual assent; (C) Acceptance—this IS required for mutual assent; (D) Consideration—this IS required as the bargained-for exchange.",
+    "tip": "Contract elements: Offer + Acceptance + Consideration + Capacity + Legality. Writing required only under Statute of Frauds (MY LEGS).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9913,8 +9913,8 @@ const questions = [
       "D": "In writing"
     },
     "correctAnswer": "A",
-    "explanation": "A valid offer must be: (1) definite and certain in its terms, (2) communicated to the offeree, and (3) made with serious intent. Vague proposals or invitations to negotiate are not offers.",
-    "tip": "Offer = definite terms + communicated + serious intent. Ads usually aren't offers (invitations to deal).",
+    "explanation": "Under common law, a valid offer must be: (1) definite and certain in essential terms (parties, subject matter, price, time), (2) communicated to the offeree, and (3) made with serious intent (objective test). Vague proposals, preliminary negotiations, and most advertisements are NOT offers—they're invitations to deal (Restatement (Second) of Contracts §26). Why other answers are wrong: (B) 24-hour acceptance—no such rule; offers remain open for reasonable time unless specified; (C) Licensed business—not required; individuals can make offers; (D) In writing—oral offers are generally valid.",
+    "tip": "Offer = definite terms + communicated + serious intent. Ads are usually invitations to deal, not offers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9934,8 +9934,8 @@ const questions = [
       "D": "The time period for performance"
     },
     "correctAnswer": "B",
-    "explanation": "Consideration is something of legal value (benefit or detriment) exchanged by the parties. It represents the bargained-for exchange that makes the contract binding. Past consideration and gifts are generally not valid consideration.",
-    "tip": "Consideration = bargained-for exchange. Both parties must give something of value.",
+    "explanation": "Per Restatement (Second) of Contracts §71, consideration is a bargained-for exchange in which each party incurs a legal detriment or confers a legal benefit. It must be: (1) bargained for (not past), (2) of legal value (not nominal or illusory), and (3) exchanged for the promise. Moral obligation, past services, and gifts lack bargain and don't qualify. Why other answers are wrong: (A) Written terms—consideration is about exchange of value, not documentation; (C) Signatures—signing shows assent, not consideration; (D) Time period—performance timing is a term, not consideration itself.",
+    "tip": "Consideration = bargained-for legal detriment/benefit. NOT: past acts, moral obligations, gifts, or illusory promises.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9955,8 +9955,8 @@ const questions = [
       "D": "The contract is for goods over $500"
     },
     "correctAnswer": "B",
-    "explanation": "A bilateral contract involves an exchange of promises—both parties promise to do something. A unilateral contract involves a promise in exchange for performance (completed action). Most contracts are bilateral.",
-    "tip": "Bilateral = promise for promise. Unilateral = promise for performance. Most contracts are bilateral.",
+    "explanation": "Per Restatement (Second) of Contracts §§1-2, a bilateral contract is formed when both parties exchange promises (promise for promise). A unilateral contract is formed when one party makes a promise in exchange for the other's completed performance (promise for act). Most commercial contracts are bilateral because both parties commit immediately. Why other answers are wrong: (A) Promise for performance—describes UNILATERAL contracts (e.g., reward offers); (C) Only one party bound—that's an illusory contract, not bilateral; (D) $500 threshold—this is Statute of Frauds for goods sales (UCC §2-201), unrelated to bilateral/unilateral distinction.",
+    "tip": "Bilateral = mutual promises (most common). Unilateral = promise for completed act (rewards, contests).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9976,8 +9976,8 @@ const questions = [
       "D": "A contract to buy groceries"
     },
     "correctAnswer": "B",
-    "explanation": "The Statute of Frauds requires certain contracts to be in writing, including: sale of goods $500+ (UCC), real property interests, contracts not performable within one year, promises to pay another's debt, and marriage-related promises.",
-    "tip": "MY LEGS: Marriage, Year+, Land, Executor, Goods $500+, Surety. These need writing.",
+    "explanation": "Under UCC §2-201, contracts for the sale of goods priced at $500 or more must be evidenced by a writing signed by the party to be charged. The Statute of Frauds (MY LEGS) requires writing for: Marriage consideration, Year+ (cannot be performed within one year), Land interests, Executor promises to pay estate debts personally, Goods ≥$500 (UCC), Surety (promise to pay another's debt). Why other answers are wrong: (A) One-week services—CAN be performed within one year, so no writing required; (C) Painting house—services contract under common law, performable within one year; (D) Groceries—goods under $500 don't require writing.",
+    "tip": "MY LEGS: Marriage, Year+, Land, Executor, Goods ≥$500 (UCC §2-201), Surety. Memory device for Statute of Frauds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -9997,8 +9997,8 @@ const questions = [
       "D": "A valid acceptance"
     },
     "correctAnswer": "A",
-    "explanation": "Under the common law mirror image rule, an acceptance must be unconditional and match the offer exactly. Any variation in terms constitutes a counteroffer, which rejects the original offer. The UCC has different rules for merchants.",
-    "tip": "Mirror image rule (common law): Acceptance must match offer exactly. Any change = counteroffer.",
+    "explanation": "Under common law's mirror image rule, an acceptance must match the offer's terms exactly. Any modification, addition, or variance in the acceptance constitutes a counteroffer that simultaneously: (1) rejects the original offer, and (2) creates a new offer that the original offeror may accept or reject. This is a COMMON LAW rule—UCC §2-207 relaxes this for goods transactions between merchants. Why other answers are wrong: (B) Automatically binding—changed terms reject the offer, not bind both parties; (C) Minor changes OK—common law requires EXACT match, no exceptions for minor changes; (D) Valid acceptance—it's a counteroffer/rejection, not a valid acceptance.",
+    "tip": "Common law: Mirror image rule = exact match required. UCC §2-207: Additional terms may be OK between merchants.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10018,8 +10018,8 @@ const questions = [
       "D": "Void and unenforceable"
     },
     "correctAnswer": "A",
-    "explanation": "Contracts with minors are voidable at the minor's option. The minor can choose to disaffirm (cancel) the contract or ratify it upon reaching majority. The adult party is bound and cannot void the contract.",
-    "tip": "Minor's contracts = voidable by minor. Minor chooses to enforce or disaffirm. Adult is bound.",
+    "explanation": "Under common law capacity rules, minors (under 18 in most states) lack full contractual capacity. Contracts entered by minors are VOIDABLE at the minor's option only—the adult party remains fully bound. The minor may: (1) disaffirm during minority or within reasonable time after reaching majority, or (2) ratify (expressly or by conduct) upon reaching majority. Exception: Contracts for 'necessaries' (food, clothing, shelter, medical care) are enforceable to prevent unjust enrichment. Why other answers are wrong: (B) Voidable by adult—only the MINOR has disaffirmance power; (C) Auto-ratified—ratification requires affirmative act or silence after majority; (D) Void—the contract EXISTS but is voidable, not void ab initio.",
+    "tip": "Minor's contracts = voidable by MINOR only (not adult). Exception: Necessaries are enforceable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10039,8 +10039,8 @@ const questions = [
       "D": "Voidable by the party under duress"
     },
     "correctAnswer": "D",
-    "explanation": "A contract made under duress (threats of harm or illegal pressure) is voidable by the victim. Physical duress may make a contract void, while economic duress makes it voidable. The victim can choose to enforce or rescind.",
-    "tip": "Duress = voidable by victim. Physical duress may be void. Victim chooses whether to enforce.",
+    "explanation": "Under Restatement (Second) of Contracts §§174-176, duress is an improper threat that leaves the victim no reasonable alternative but to assent. Physical duress (threat of violence to person) may render the contract VOID. Economic duress (wrongful threat to business/property) and other forms make the contract VOIDABLE at the victim's election. The victim may choose to: (1) affirm and enforce, or (2) rescind and seek restitution. Why other answers are wrong: (A) Valid/enforceable—duress negates genuine assent, making the contract defective; (B) Illegal—the contract itself isn't illegal, just improperly induced; (C) Void—only extreme physical duress is void; most duress is voidable.",
+    "tip": "Duress: Physical = potentially void. Economic/other = voidable by victim. Victim elects to enforce or rescind.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10060,8 +10060,8 @@ const questions = [
       "D": "Automatic termination of the contract"
     },
     "correctAnswer": "A",
-    "explanation": "A mutual (bilateral) mistake about a material fact makes the contract voidable by either party. The mistake must be about a basic assumption that materially affects the exchange. Unilateral mistakes generally don't allow rescission unless the other party knew.",
-    "tip": "Mutual mistake = either party can rescind. Unilateral mistake = generally stuck with contract.",
+    "explanation": "Under Restatement (Second) of Contracts §§152-154, a mutual (bilateral) mistake occurs when both parties are mistaken about a basic assumption that materially affects the agreed exchange. Either party may void the contract if: (1) the mistake concerns a material fact existing at formation, and (2) risk was not allocated to the party seeking rescission. A unilateral mistake (only one party mistaken) generally does NOT allow rescission unless the non-mistaken party knew or should have known of the mistake. Why other answers are wrong: (B) Only at-fault party—there's no 'fault' in mutual mistake; both are innocently wrong; (C) Neither can rescind—mutual material mistake IS grounds for rescission; (D) Auto-termination—rescission requires a party to elect it; it's not automatic.",
+    "tip": "Mutual mistake (both wrong on material fact) = either can rescind. Unilateral mistake = stuck, unless other party knew.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10081,8 +10081,8 @@ const questions = [
       "D": "The assignment is prohibited by law or the contract, or materially changes the obligor's duties"
     },
     "correctAnswer": "D",
-    "explanation": "Contract rights are generally assignable, but exceptions include: (1) assignment prohibited by statute, (2) contract terms prohibit assignment, (3) assignment materially changes obligor's duties/risks, or (4) personal service contracts.",
-    "tip": "Most rights assignable. Exceptions: prohibited, personal services, materially changes duties.",
+    "explanation": "Under Restatement (Second) of Contracts §§317-322, contract rights are generally freely assignable. An assignment transfers the assignor's rights to the assignee, who steps into the assignor's shoes. Exceptions where assignment is prohibited: (1) law prohibits (e.g., personal injury claims in some states), (2) contract expressly prohibits assignment, (3) assignment would materially change the obligor's duty or risk, or (4) personal services (obligor contracted for specific person's performance). Why other answers are wrong: (A) Written contract—writing doesn't affect assignability; (B) Minor assignee—assignee's capacity doesn't bar assignment; (C) Bilateral contract—bilateral/unilateral distinction doesn't affect assignability.",
+    "tip": "Rights generally assignable. NOT assignable: prohibited by law/contract, personal services, materially changes obligor's burden.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10102,8 +10102,8 @@ const questions = [
       "D": "Once their rights have vested"
     },
     "correctAnswer": "D",
-    "explanation": "An intended third party beneficiary can enforce a contract once their rights vest. Rights vest when: (1) the beneficiary manifests assent, (2) brings suit, or (3) materially changes position in reliance. Incidental beneficiaries cannot enforce.",
-    "tip": "Intended beneficiary = can enforce once vested. Incidental beneficiary = no rights.",
+    "explanation": "Under Restatement (Second) of Contracts §§302-315, an intended third party beneficiary (creditor or donee beneficiary) can enforce a contract once their rights vest. Rights vest when the beneficiary: (1) manifests assent to the promise, (2) materially changes position in justifiable reliance, or (3) brings suit. Before vesting, the contracting parties can modify or rescind. Incidental beneficiaries (unintended beneficiaries) have NO enforcement rights. Why other answers are wrong: (A) Never—intended beneficiaries CAN enforce once vested; (B) Consideration by beneficiary—not required; beneficiary need not have given anything; (C) Both parties agree—beneficiary's rights vest independently; no need for later agreement.",
+    "tip": "Intended beneficiary: Can enforce once vested (assent, reliance, or suit). Incidental beneficiary: Zero rights.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10123,8 +10123,8 @@ const questions = [
       "D": "Can recover the contract price minus damages for defects"
     },
     "correctAnswer": "D",
-    "explanation": "Substantial performance means the party has performed most obligations in good faith, with only minor deviations. The performing party can recover the contract price, but the non-breaching party can deduct damages for defects.",
-    "tip": "Substantial performance = can recover contract price minus cost to fix defects. Doesn't apply to UCC sales.",
+    "explanation": "Under common law's substantial performance doctrine (Restatement (Second) of Contracts §237), a party who has substantially performed in good faith—with only minor, unintentional deviations—can recover the contract price minus the cost to remedy defects. The performing party is NOT in total breach. This doctrine applies to COMMON LAW contracts (services, construction); UCC Article 2 requires 'perfect tender' for goods (UCC §2-601). Why other answers are wrong: (A) Total breach—substantial performance is NOT a total breach; it's sufficient performance; (B) Perform again—substantial performer need not start over; defects are remedied through damages; (C) Excused from all—the performer still owes damages for the minor defects.",
+    "tip": "Substantial performance (common law): Contract price minus defect cost. UCC (goods): Perfect tender required—no substantial performance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10144,8 +10144,8 @@ const questions = [
       "D": "A party clearly indicates they will not perform before performance is due"
     },
     "correctAnswer": "D",
-    "explanation": "Anticipatory breach (repudiation) occurs when a party unequivocally indicates, before performance is due, that they will not perform. The non-breaching party can: (1) treat the contract as breached immediately and sue, (2) wait and see, or (3) urge performance.",
-    "tip": "Anticipatory breach = clear statement of non-performance before due date. Can sue immediately.",
+    "explanation": "Under Restatement (Second) of Contracts §§250-253 and UCC §2-610, anticipatory repudiation (anticipatory breach) occurs when a party unequivocally communicates, before performance is due, that they will not or cannot perform. The repudiation must be clear and unambiguous. The non-breaching party may: (1) treat the contract as immediately breached and sue for damages, (2) wait a commercially reasonable time for performance, or (3) urge retraction of the repudiation. Why other answers are wrong: (A) Simultaneous breach—not anticipatory; that's actual breach; (B) Impossibility—that's a discharge doctrine, not anticipatory breach; (C) Early performance—that's not breach at all; it may create other issues but isn't anticipatory repudiation.",
+    "tip": "Anticipatory repudiation: CLEAR statement of non-performance BEFORE due date. Options: sue immediately, wait, or urge retraction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10165,8 +10165,8 @@ const questions = [
       "D": "Return parties to their pre-contract positions"
     },
     "correctAnswer": "C",
-    "explanation": "Compensatory damages aim to give the non-breaching party the benefit of their bargain—putting them in the position they would have been in had the contract been performed. This is the expectation interest.",
-    "tip": "Compensatory = benefit of the bargain (expectation). Punitive damages rare in contracts.",
+    "explanation": "Under Restatement (Second) of Contracts §347, compensatory damages protect the non-breaching party's expectation interest—placing them in the position they would have occupied had the contract been fully performed. This includes: direct damages (loss in value of performance), incidental damages (costs of dealing with breach), and consequential damages (foreseeable losses from breach). Punitive damages are generally NOT available in contract unless the breach also constitutes a tort. Why other answers are wrong: (A) Bonus—damages are compensatory, not a windfall; (B) Punish breacher—contract damages are compensatory, not punitive; (D) Pre-contract position—that describes RESTITUTION (returning unjust enrichment), not compensatory damages.",
+    "tip": "Compensatory = expectation interest (benefit of bargain). Restitution = pre-contract position. Punitive damages rare in contracts.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10186,8 +10186,8 @@ const questions = [
       "D": "Real property"
     },
     "correctAnswer": "D",
-    "explanation": "Specific performance (court-ordered completion of contract) is granted when money damages are inadequate, typically for unique items. Real property is always considered unique. Personal service contracts won't be specifically enforced (involuntary servitude concerns).",
-    "tip": "Specific performance for unique items (land, art). Never for personal services.",
+    "explanation": "Under Restatement (Second) of Contracts §§357-369, specific performance is an equitable remedy ordering the breaching party to perform as promised. Courts grant specific performance only when monetary damages are inadequate—typically for unique subject matter where no substitute exists. Real property is presumed unique (every parcel is different). UCC §2-716 allows specific performance for unique goods. Courts will NOT order specific performance of personal service contracts due to (1) 13th Amendment concerns (involuntary servitude), and (2) difficulty of supervision. Why other answers are wrong: (A) Commodities—fungible goods can be replaced; damages adequate; (B) Personal services—never specifically enforced; (C) Fungible goods—interchangeable items; money damages work.",
+    "tip": "Specific performance: Unique items only (land always, art, heirlooms). NEVER for personal services (involuntary servitude).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10207,8 +10207,8 @@ const questions = [
       "D": "Market conditions change unfavorably"
     },
     "correctAnswer": "B",
-    "explanation": "True impossibility discharges contract obligations when performance becomes objectively impossible through no fault of either party (e.g., subject matter destroyed, death of person essential to contract, law makes performance illegal). Mere difficulty or expense increase is not impossibility.",
-    "tip": "Impossibility = objectively impossible (not just harder). Subject destroyed, essential person dies, illegality.",
+    "explanation": "Under Restatement (Second) of Contracts §§261-265, impossibility (or impracticability) discharges contract obligations when: (1) an event occurs whose non-occurrence was a basic assumption of the contract, (2) the event makes performance objectively impossible or impracticable, and (3) neither party assumed the risk. Classic examples: subject matter destroyed (house burns), death/incapacity of person essential to performance, supervening illegality (law prohibits performance). Why other answers are wrong: (A) More expensive—increased cost alone is NOT impossibility (economic hardship usually doesn't excuse); (C) Doesn't want to—unwillingness is breach, not impossibility; (D) Market changes—foreseeable market fluctuations don't excuse performance.",
+    "tip": "Impossibility: Subject destroyed, essential person dies, supervening illegality. NOT: harder, costlier, or less profitable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10228,8 +10228,8 @@ const questions = [
       "D": "Sale of goods"
     },
     "correctAnswer": "D",
-    "explanation": "UCC Article 2 applies to contracts for the sale of goods (movable, tangible personal property). Services, real estate, and securities are governed by common law. Mixed contracts use the predominant purpose test.",
-    "tip": "UCC Article 2 = goods only. Services, real estate, employment = common law.",
+    "explanation": "UCC Article 2 (UCC §2-102) governs contracts for the sale of goods. 'Goods' are movable, tangible personal property at the time of identification to the contract (UCC §2-105). Real property, services, securities, and intellectual property are governed by common law. For mixed contracts (goods + services), courts apply the 'predominant purpose test'—if goods predominate, UCC applies; if services predominate, common law applies. Why other answers are wrong: (A) Real property—governed by common law and real property statutes, not UCC; (B) Employment—service contracts governed by common law and employment statutes; (C) Services only—common law governs pure service contracts.",
+    "tip": "UCC Article 2 = GOODS (movable, tangible). Mixed contracts: 'Predominant purpose test.' Services/land/IP = common law.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10249,8 +10249,8 @@ const questions = [
       "D": "Is irrevocable without consideration for up to 3 months if in writing"
     },
     "correctAnswer": "D",
-    "explanation": "Under UCC Section 2-205, a merchant's written offer to buy or sell goods that states it will be held open is irrevocable for the stated time (or reasonable time if none stated), up to 3 months, without consideration. Common law requires consideration for option contracts.",
-    "tip": "UCC firm offer: Merchant + written + states open = irrevocable up to 3 months. No consideration needed.",
+    "explanation": "Under UCC §2-205, a merchant's firm offer is irrevocable without consideration if: (1) made by a merchant, (2) in a signed writing, and (3) assures the offer will be held open. The irrevocability period is the stated time or a reasonable time, but not exceeding 3 months. If the assurance is on the offeree's form, it must be separately signed by the offeror. This differs from common law, which requires consideration (option contract) to make an offer irrevocable. Why other answers are wrong: (A) Revocable anytime—firm offers are specifically irrevocable; (B) 24-hour acceptance—no such rule; firm offers can be open up to 3 months; (C) Consideration required—UCC §2-205 eliminates consideration requirement for merchant firm offers.",
+    "tip": "UCC §2-205 firm offer: Merchant + signed writing + assurance = irrevocable up to 3 months. NO consideration needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10270,8 +10270,8 @@ const questions = [
       "D": "Explain ambiguous terms or show fraud, mistake, or illegality"
     },
     "correctAnswer": "D",
-    "explanation": "The parol evidence rule bars prior/contemporaneous evidence that contradicts a written contract intended as final. Exceptions: evidence to explain ambiguity, show fraud/duress/mistake/illegality, prove conditions precedent, or show lack of consideration.",
-    "tip": "Parol evidence rule: Can't contradict writing. CAN explain ambiguity, show fraud/mistake/illegality.",
+    "explanation": "Under the parol evidence rule (Restatement (Second) of Contracts §§213-216, UCC §2-202), prior or contemporaneous oral agreements cannot contradict a written contract intended as a final expression (integration). However, exceptions allow extrinsic evidence to: (1) explain ambiguous terms, (2) show fraud, duress, mistake, or illegality, (3) prove conditions precedent to formation, (4) establish lack of consideration, or (5) add consistent additional terms to a partial integration. Why other answers are wrong: (A) Change price—this contradicts the writing, which is barred; (B) Contradict terms—the rule's core prohibition; (C) Add terms to complete integration—a fully integrated agreement excludes all additional terms.",
+    "tip": "Parol evidence: Can't contradict final writing. CAN: explain ambiguity, show fraud/mistake/illegality, prove conditions precedent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10291,8 +10291,8 @@ const questions = [
       "D": "The contract is for goods over $500"
     },
     "correctAnswer": "B",
-    "explanation": "Liquidated damages are enforceable if: (1) actual damages are difficult to estimate at contract formation, and (2) the amount is a reasonable forecast of damages. If the amount is a penalty (punitive), it will not be enforced.",
-    "tip": "Liquidated damages: Must be reasonable estimate when damages hard to measure. Penalties void.",
+    "explanation": "Under Restatement (Second) of Contracts §356 and UCC §2-718, liquidated damages clauses are enforceable if: (1) actual damages are difficult to estimate at the time of contract formation, and (2) the stipulated amount is a reasonable forecast of compensatory damages. If the amount is grossly disproportionate to anticipated or actual harm, courts will strike it as an unenforceable penalty. The test is applied at formation, not breach. Why other answers are wrong: (A) Higher than actual—that's a penalty, which is unenforceable; (C) Both merchants—merchant status is irrelevant to liquidated damages validity; (D) $500 threshold—that's Statute of Frauds for goods, not liquidated damages.",
+    "tip": "Liquidated damages: (1) Damages hard to estimate at formation + (2) Reasonable forecast. Penalties = unenforceable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10312,8 +10312,8 @@ const questions = [
       "D": "A new agreement (accord) and performance of that agreement (satisfaction)"
     },
     "correctAnswer": "D",
-    "explanation": "Accord and satisfaction discharges contract obligations through: (1) accord—a new agreement to accept different performance, and (2) satisfaction—actual performance of the accord. Until satisfaction, the original duty remains.",
-    "tip": "Accord = new agreement. Satisfaction = performing the accord. Both needed to discharge.",
+    "explanation": "Under Restatement (Second) of Contracts §§281-285, accord and satisfaction is a method of discharging contract obligations through substituted performance. The accord is the new agreement to accept different performance than originally required. The satisfaction is the actual performance of the accord. BOTH are required for discharge—until the satisfaction is performed, the original obligation remains in effect (though it may be suspended). Why other answers are wrong: (A) Court approval—not required; parties can settle privately; (B) Original amount—the whole point is to accept DIFFERENT performance/payment; (C) One party's agreement—both parties must agree to the accord (new contract formation).",
+    "tip": "Accord = new agreement. Satisfaction = performing it. BOTH required. Original duty remains until satisfaction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10333,8 +10333,8 @@ const questions = [
       "D": "Must always be in writing"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC 2-209, modifications to contracts for goods do not require consideration if made in good faith. Common law requires consideration for modifications (the pre-existing duty rule). This is a significant UCC difference.",
-    "tip": "UCC modifications: No consideration needed, just good faith. Common law: Need new consideration.",
+    "explanation": "Under UCC §2-209(1), an agreement modifying a contract for the sale of goods needs no consideration to be binding—only good faith is required. This departs from the common law 'pre-existing duty rule,' which requires new consideration for any contract modification (a promise to do what you're already obligated to do isn't valid consideration). The UCC eliminates this technicality to reflect commercial reality. Note: If the original contract requires modifications to be in writing, the modification must be written (§2-209(2)). Why other answers are wrong: (A) Never enforceable—modifications ARE enforceable under UCC; (B) Requires consideration—that's common law, not UCC; (D) Must be written—only if the contract requires it or Statute of Frauds applies.",
+    "tip": "UCC §2-209: Modifications need NO consideration (just good faith). Common law: Pre-existing duty rule requires consideration.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10354,8 +10354,8 @@ const questions = [
       "D": "Become part of the contract unless they materially alter it, the offer limits acceptance, or objection is made"
     },
     "correctAnswer": "D",
-    "explanation": "UCC 2-207 abandons the mirror image rule. Between merchants, additional terms in acceptance become part of the contract UNLESS: (1) offer expressly limits acceptance, (2) terms materially alter the contract, or (3) timely objection is made.",
-    "tip": "UCC 2-207 (merchants): Additional terms in unless material, limited by offer, or objected to.",
+    "explanation": "Under UCC §2-207 ('Battle of the Forms'), a definite and seasonable expression of acceptance operates as acceptance even if it contains additional or different terms (abandoning common law's mirror image rule). Between merchants, additional terms automatically become part of the contract UNLESS: (1) the offer expressly limits acceptance to its terms, (2) the additional terms materially alter the contract (e.g., warranty disclaimers, arbitration clauses), or (3) the offeror timely objects. For non-merchants, additional terms are merely proposals. Why other answers are wrong: (A) Constitutes rejection—that's mirror image rule (common law), not UCC; (B) Always in—material alterations stay OUT; (C) Never in—non-material terms between merchants DO become part of the contract.",
+    "tip": "UCC §2-207: Between merchants, additional terms IN unless: (1) offer limits, (2) materially alter, (3) objection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -10375,8 +10375,8 @@ const questions = [
       "D": "6 years"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC 2-725, the statute of limitations for breach of a sales contract is 4 years from the date the breach occurs (usually delivery). Parties can agree to reduce this to as short as 1 year, but cannot extend it.",
-    "tip": "UCC SOL = 4 years from breach. Can reduce to 1 year by agreement. Cannot extend.",
+    "explanation": "Under UCC §2-725, the statute of limitations for breach of a contract for the sale of goods is 4 years from when the cause of action accrues (typically when breach occurs, usually at delivery). The parties may reduce the period to not less than 1 year, but cannot extend it beyond 4 years. For breach of warranty, the cause of action accrues at delivery (even if defect discovered later), unless the warranty explicitly extends to future performance. Why other answers are wrong: (A) 10 years—no UCC statute of limitations is 10 years; (B) 2 years—that's typically personal injury SOL, not UCC; (D) 6 years—common for written contracts in some states under common law, but UCC is 4 years.",
+    "tip": "UCC §2-725: 4-year SOL from breach (delivery). Can reduce to 1 year by agreement. Cannot extend.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10396,8 +10396,8 @@ const questions = [
       "D": "Applies to all sellers"
     },
     "correctAnswer": "A",
-    "explanation": "The implied warranty of merchantability arises only when the seller is a merchant dealing in goods of that kind. It warrants that goods are fit for ordinary purposes, adequately packaged, conform to labels, and are of fair average quality.",
-    "tip": "Merchantability: Seller must be merchant of those goods. Goods fit for ordinary purpose.",
+    "explanation": "Under UCC §2-314, the implied warranty of merchantability arises automatically ONLY when the seller is a 'merchant with respect to goods of that kind' (deals in or holds themselves out as having knowledge of such goods). The warranty guarantees that goods: (1) pass without objection in the trade, (2) are fit for ordinary purposes, (3) are adequately contained/packaged, (4) conform to label descriptions, and (5) are of fair average quality. Why other answers are wrong: (B) Cannot be disclaimed—it CAN be disclaimed (must mention 'merchantability' and be conspicuous per §2-316); (C) Goods must be perfect—merchantability requires 'fair average quality,' not perfection; (D) All sellers—only merchants of that type of goods give this warranty.",
+    "tip": "UCC §2-314: Merchantability = merchant seller of that goods type + fit for ordinary purpose. CAN be disclaimed (must say 'merchantability').",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10417,8 +10417,8 @@ const questions = [
       "D": "Be in writing and conspicuous, mentioning 'merchantability'"
     },
     "correctAnswer": "D",
-    "explanation": "To disclaim the implied warranty of merchantability, the disclaimer must: (1) mention the word 'merchantability,' and (2) if written, be conspicuous. Alternatively, 'as is' or similar language disclaims all implied warranties without mentioning merchantability specifically.",
-    "tip": "Disclaim merchantability: Use 'merchantability' + conspicuous, OR use 'as is.'",
+    "explanation": "Under UCC §2-316, to disclaim the implied warranty of merchantability, the disclaimer must: (1) mention the word 'merchantability' specifically, and (2) if in writing, be conspicuous (bold, larger font, contrasting color, etc.). Alternatively, 'as is,' 'with all faults,' or similar language disclaims ALL implied warranties without specifically mentioning merchantability. To disclaim fitness for particular purpose, the disclaimer must be written and conspicuous (but need not use specific words). Why other answers are wrong: (A) Any form—specific language requirements apply; (B) Court approval—not required; parties contract privately; (C) 'As is' only—'as is' is ONE method; alternatively use 'merchantability' + conspicuous.",
+    "tip": "UCC §2-316: Disclaim merchantability = 'merchantability' + conspicuous, OR 'as is' / 'with all faults.'",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10438,8 +10438,8 @@ const questions = [
       "D": "Buyer inspects and accepts goods"
     },
     "correctAnswer": "C",
-    "explanation": "FOB (Free on Board) shipping point means risk of loss passes to the buyer when goods are delivered to the carrier at the seller's location. The buyer bears the risk during transit. FOB destination means seller bears risk until delivery.",
-    "tip": "FOB shipping point = risk on buyer during transit. FOB destination = seller's risk until arrival.",
+    "explanation": "Under UCC §2-319, FOB (Free on Board) shipping point means risk of loss passes to the buyer when the seller delivers goods to the carrier at the shipping point (seller's location). The buyer bears all risk during transit and typically arranges/pays for shipping. FOB destination means seller retains risk until goods reach the buyer's location. These terms also determine who pays freight and who files claims for loss in transit. Why other answers are wrong: (A) Payment—payment timing doesn't determine risk passage under FOB terms; (B) Arrival at destination—that's FOB destination, not shipping point; (D) Inspection/acceptance—risk passes at delivery to carrier, not at buyer's acceptance.",
+    "tip": "UCC §2-319: FOB shipping point = buyer's risk in transit (buyer arranges freight). FOB destination = seller's risk until arrival.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10459,8 +10459,8 @@ const questions = [
       "D": "Only sue for damages"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC 2-601 (perfect tender rule), if goods fail to conform in any respect, the buyer may: (1) reject all, (2) accept all, or (3) accept conforming commercial units and reject the rest. Rejection must be timely with notice to seller.",
-    "tip": "Buyer's UCC options: Accept all, reject all, or accept some/reject some. Must give timely notice.",
+    "explanation": "Under UCC §2-601 (perfect tender rule), if goods or tender of delivery fail to conform to the contract in ANY respect, the buyer may: (1) reject the whole shipment, (2) accept the whole shipment, or (3) accept any conforming commercial unit(s) and reject the rest. Rejection must be made within a reasonable time after delivery (§2-602) and the buyer must seasonably notify the seller. After acceptance, buyer can still revoke acceptance under §2-608 if defect substantially impairs value and wasn't discoverable. Why other answers are wrong: (A) Return without notice—timely notice is REQUIRED under §2-602; (B) All or nothing—partial acceptance is permitted; (D) Only sue for damages—buyer has self-help remedies plus damages.",
+    "tip": "UCC §2-601 (perfect tender): Accept all, reject all, or accept some/reject some. MUST give timely notice to seller.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10480,8 +10480,8 @@ const questions = [
       "D": "Only sue for the contract price"
     },
     "correctAnswer": "A",
-    "explanation": "Upon buyer's breach, seller's remedies include: (1) withhold delivery, (2) stop goods in transit, (3) resell goods and recover difference, (4) recover damages (contract price minus market price plus incidentals), or (5) recover price if goods cannot be resold.",
-    "tip": "Seller's UCC remedies: Withhold, stop transit, resell, sue for damages/price, incidentals.",
+    "explanation": "Under UCC §§2-703 to 2-710, when a buyer breaches (wrongful rejection, repudiation, failure to pay), the seller's remedies include: (1) withhold delivery of undelivered goods (§2-703), (2) stop goods in transit if buyer is insolvent (§2-705), (3) resell goods and recover the contract-resale price difference plus incidentals (§2-706), (4) recover damages using contract price minus market price plus incidentals (§2-708), or (5) recover the full contract price if goods cannot reasonably be resold (§2-709). These remedies are cumulative and can be combined. Why other answers are wrong: (B) Cannot resell—resale is a PRIMARY remedy under §2-706; (C) Only cancel—cancellation is one option but seller can also pursue damages; (D) Only sue for price—that's available only when goods can't be resold.",
+    "tip": "Seller's UCC remedies (§§2-703–2-710): Withhold, stop transit, resell + difference, market damages, or price action.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10501,8 +10501,8 @@ const questions = [
       "D": "The contract is bilateral"
     },
     "correctAnswer": "B",
-    "explanation": "Duties generally can be delegated, but exceptions include: (1) duties requiring personal skill or judgment, (2) duties involving special trust, (3) contract prohibits delegation, or (4) delegation would materially change the obligee's expectancy.",
-    "tip": "Delegation: Generally allowed. NOT for personal services or if prohibited. Delegator stays liable!",
+    "explanation": "Under Restatement (Second) of Contracts §§318-322 and UCC §2-210, contract duties are generally delegable unless: (1) the obligee has a substantial interest in having the original obligor perform (personal skill, judgment, or character), (2) the contract prohibits delegation, (3) delegation would materially change the obligee's expectation, or (4) public policy forbids it. CRITICAL: The delegator remains liable even after delegation—the delegatee's failure to perform doesn't excuse the original obligor. Why other answers are wrong: (A) Delegator remains liable—this is TRUE, so it's not an exception; (C) Delegatee willing—willingness doesn't overcome the other exceptions; (D) Bilateral contract—bilateral/unilateral nature doesn't affect delegability.",
+    "tip": "Delegation: Generally OK. NOT allowed: personal services, prohibited, materially changes obligee's deal. Delegator STAYS LIABLE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10522,8 +10522,8 @@ const questions = [
       "D": "Valid only between merchants"
     },
     "correctAnswer": "C",
-    "explanation": "ESIGN (federal) and UETA (state) laws generally give electronic signatures and records the same legal effect as their paper equivalents. Exceptions exist for certain documents like wills, family law matters, and some UCC transactions.",
-    "tip": "E-signatures = valid like handwritten. ESIGN/UETA. Some exceptions (wills, family law).",
+    "explanation": "Under ESIGN (15 U.S.C. §7001 et seq., federal, 2000) and UETA (Uniform Electronic Transactions Act, adopted by 49 states), electronic signatures and electronic records are given the same legal effect, validity, and enforceability as their paper/manual counterparts. An 'electronic signature' is any electronic sound, symbol, or process attached to or logically associated with a record and executed with intent to sign. Exceptions include: wills, codicils, testamentary trusts, family law matters (divorce, adoption), court orders, foreclosure notices, cancellation of utilities, and certain UCC documents. Why other answers are wrong: (A) Never valid—e-signatures ARE valid under ESIGN/UETA; (B) Small transactions only—no dollar threshold; (D) Merchants only—applies to all parties.",
+    "tip": "ESIGN/UETA: E-signatures = legally equivalent to handwritten. Exceptions: wills, family law, court orders, foreclosures.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10543,8 +10543,8 @@ const questions = [
       "D": "The contract is oral"
     },
     "correctAnswer": "C",
-    "explanation": "Unconscionability has two elements: (1) procedural—unfair surprise or unequal bargaining power, and (2) substantive—grossly unfair terms. Courts can refuse enforcement, limit application, or strike offending clauses. It's determined at time of formation.",
-    "tip": "Unconscionability: Procedural (unfair process) + Substantive (unfair terms). Court decides.",
+    "explanation": "Under UCC §2-302 and Restatement (Second) of Contracts §208, unconscionability is a defense allowing courts to refuse enforcement of contracts (or clauses) that are grossly unfair. Courts analyze two elements: (1) Procedural unconscionability—unfair bargaining process (hidden terms, unequal bargaining power, lack of meaningful choice, fine print), and (2) Substantive unconscionability—grossly one-sided or oppressive terms. Both elements typically must be present. The test is applied at the time of contract formation. Remedies: refuse enforcement, strike offensive clauses, or limit application. Why other answers are wrong: (A) Below market—good deals aren't unconscionable; unfairness to one party is the issue; (B) Either party requests—it's a court determination, not automatic; (D) Oral contract—writing vs. oral is irrelevant to unconscionability.",
+    "tip": "UCC §2-302: Unconscionability = Procedural (unfair process) + Substantive (unfair terms). Tested at formation. Court decides remedy.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10564,8 +10564,8 @@ const questions = [
       "D": "Only if buyer requests cure"
     },
     "correctAnswer": "C",
-    "explanation": "UCC 2-508 allows sellers to cure by: (1) notifying buyer and delivering conforming goods if time for performance hasn't expired, or (2) if seller reasonably believed goods would be acceptable (e.g., prior course of dealing), seller gets reasonable additional time to cure.",
-    "tip": "Seller can cure: If time remains OR reasonably believed goods OK. Must notify buyer.",
+    "explanation": "Under UCC §2-508, the seller has a right to cure rejected nonconforming goods in two situations: (1) If the time for performance has NOT yet expired, seller may seasonably notify buyer of intent to cure and tender conforming goods within the contract time. (2) If seller had reasonable grounds to believe the goods would be acceptable (e.g., prior course of dealing, trade usage, or buyer accepted similar goods before), seller may have a further reasonable time to substitute conforming tender. The seller must notify the buyer of the intention to cure. Why other answers are wrong: (A) Minor defects only—cure applies to ANY nonconformity, not just minor ones; (B) Never/rejection final—UCC explicitly provides cure rights; (D) Buyer requests—seller's right exists regardless of buyer request.",
+    "tip": "UCC §2-508: Seller can cure if (1) time remains, or (2) reasonably believed goods OK. Must notify buyer of cure intent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10585,8 +10585,8 @@ const questions = [
       "D": "Performance becomes more expensive"
     },
     "correctAnswer": "C",
-    "explanation": "Frustration of purpose excuses performance when: (1) an event occurs whose nonoccurrence was a basic assumption, (2) the event substantially frustrates the principal purpose, and (3) the party isn't at fault. Different from impossibility—performance is possible but pointless.",
-    "tip": "Frustration: Performance possible but purpose destroyed. Classic case: coronation postponed.",
+    "explanation": "Under Restatement (Second) of Contracts §265, frustration of purpose discharges contract obligations when: (1) a supervening event occurs whose non-occurrence was a basic assumption of the contract, (2) the event substantially frustrates the principal purpose of the contract (both parties understood the purpose), and (3) the frustration is not the fault of the party seeking discharge. Key distinction from impossibility: Performance is still POSSIBLE but has become POINTLESS. Classic example: Krell v. Henry (1903)—room rented to view King's coronation procession; coronation postponed, contract discharged. Why other answers are wrong: (A) Either party requests—requires the specific elements above, not just a request; (B) Mind change—that's breach, not frustration; (D) More expensive—that's impracticability, not frustration of purpose.",
+    "tip": "Frustration of purpose: Performance possible but POINTLESS. Classic: Coronation cases. Distinct from impossibility/impracticability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -10606,8 +10606,8 @@ const questions = [
       "D": "Accept any substitute performance offered"
     },
     "correctAnswer": "A",
-    "explanation": "The non-breaching party has a duty to take reasonable steps to minimize damages. Failure to mitigate reduces recoverable damages by the amount that could have been avoided. The party need not take extraordinary or unreasonable measures.",
-    "tip": "Must mitigate: Take reasonable steps to reduce loss. Can't recover avoidable damages.",
+    "explanation": "Under Restatement (Second) of Contracts §350 and UCC §2-704/§2-715, the non-breaching party has a duty to mitigate (minimize) damages. This means taking reasonable steps to avoid or reduce losses after breach occurs. The non-breaching party cannot recover damages that could have been reasonably avoided. However, the party need not: (1) take extraordinary measures, (2) accept unreasonable substitute performance, or (3) act at significant expense or risk. Employment context: wrongfully terminated employee must seek comparable employment but need not accept a demotion. Why other answers are wrong: (B) Sue immediately—no immediacy requirement; mitigation doesn't mean immediate lawsuit; (C) Forgive breach—mitigation doesn't require waiving claims; (D) Accept any substitute—only REASONABLE substitutes need be considered.",
+    "tip": "Mitigation duty: Take REASONABLE steps to minimize loss. Can't recover avoidable damages. Not required: extraordinary measures.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },

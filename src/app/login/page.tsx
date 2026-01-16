@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
+import { clearAllAuthStorage } from "@/lib/supabase/clearAuthStorage";
 
 // Session timeout messages based on reason
 const SESSION_MESSAGES: Record<string, { title: string; message: string }> = {
@@ -18,9 +19,19 @@ const SESSION_MESSAGES: Record<string, { title: string; message: string }> = {
   },
 };
 
+// Error messages based on URL error parameter
+const ERROR_MESSAGES: Record<string, string> = {
+  link_expired: "Your verification link has expired. Please request a new one.",
+  link_invalid: "This verification link is invalid or has already been used.",
+  verification_failed: "Email verification failed. Please try again or contact support.",
+  auth_callback_error: "Authentication failed. Please try signing in again.",
+  supabase_not_configured: "Authentication service is not configured. Please contact support.",
+};
+
 function LoginContent() {
   const searchParams = useSearchParams();
   const reason = searchParams.get("reason");
+  const urlError = searchParams.get("error");
   const [sessionNotice, setSessionNotice] = useState<{ title: string; message: string } | null>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,11 +47,35 @@ function LoginContent() {
     }
   }, [reason]);
 
+  // Show error based on URL error parameter
+  useEffect(() => {
+    if (urlError && ERROR_MESSAGES[urlError]) {
+      setError(ERROR_MESSAGES[urlError]);
+      // Clean up the URL without reloading
+      window.history.replaceState({}, '', '/login');
+    }
+  }, [urlError]);
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
 
+    // Clear any stale auth state before logging in
+    // This ensures we don't have conflicting old sessions
+    clearAllAuthStorage();
+
+    // Also call server-side endpoint to clear httpOnly cookies
+    try {
+      await fetch('/api/auth/clear-session', { method: 'POST' });
+    } catch {
+      // Ignore errors - this is just a precaution
+    }
+
+    // Small delay to ensure storage is cleared
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    // Create a fresh client after clearing storage
     const supabase = createClient();
     if (!supabase) {
       setError("Authentication service not configured");
@@ -73,8 +108,11 @@ function LoginContent() {
         setTimeout(() => {
           subscription.unsubscribe();
           resolve();
-        }, 300);
+        }, 500);
       });
+
+      // Additional delay to ensure cookies are fully written
+      await new Promise(resolve => setTimeout(resolve, 100));
 
       // Use full page reload to ensure fresh auth state across all components
       window.location.href = "/dashboard";
