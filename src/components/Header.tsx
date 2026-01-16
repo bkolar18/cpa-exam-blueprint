@@ -24,36 +24,15 @@ export default function Header() {
     { name: "ISC", description: "Information Systems & Controls", href: "/sections/isc" },
   ];
 
-  const resources = {
-    tools: [
-      { name: "Score Release Calendar", href: "/tools/score-release-calendar" },
-      { name: "NTS Expiration Tracker", href: "/tools/nts-tracker" },
-      { name: "Study Hours Calculator", href: "/tools/study-hours-calculator" },
-      { name: "State Requirements", href: "/state-requirements" },
-    ],
-    guides: [
-      { name: "How to Become a CPA", href: "/guides/how-to-become-a-cpa" },
-      { name: "Best CPA Exam Order", href: "/guides/best-order-cpa-exams" },
-      { name: "Exam Day Walkthrough", href: "/guides/exam-day" },
-      { name: "I Failed, Now What?", href: "/guides/failed-section" },
-      { name: "State CPA Guides", href: "/guides/become-cpa-in" },
-    ],
-    data: [
-      { name: "CPA Pass Rates", href: "/resources/cpa-pass-rates" },
-      { name: "CPA Salary by State", href: "/resources/cpa-salary" },
-    ],
-    compare: [
-      { name: "Becker vs Gleim", href: "/compare/becker-vs-gleim" },
-      { name: "Becker vs Surgent", href: "/compare/becker-vs-surgent" },
-      { name: "Surgent vs Roger", href: "/compare/surgent-vs-roger" },
-      { name: "Wiley vs UWorld", href: "/compare/wiley-vs-uworld" },
-    ],
-    learn: [
-      { name: "Blog", href: "/blog" },
-      { name: "FAQ", href: "/faq" },
-      { name: "Resources Hub", href: "/resources" },
-    ],
-  };
+  // Simplified resources for dropdown - key pages only
+  const quickLinks = [
+    { name: "How to Become a CPA", href: "/guides/how-to-become-a-cpa", description: "Complete guide to CPA licensure" },
+    { name: "State Requirements", href: "/state-requirements", description: "Requirements by state" },
+    { name: "CPA Salary Data", href: "/resources/cpa-salary", description: "Salary info by state" },
+    { name: "Compare Courses", href: "/compare/becker-vs-gleim", description: "Becker vs Gleim & more" },
+    { name: "CPA Pass Rates", href: "/resources/cpa-pass-rates", description: "Latest exam statistics" },
+    { name: "Blog", href: "/blog", description: "Tips and insights" },
+  ];
 
   return (
     <header className="bg-[var(--background)] border-b border-[var(--border)] sticky top-0 z-50">
@@ -145,92 +124,41 @@ export default function Header() {
                 </svg>
               </button>
               {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[560px] bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg p-5">
-                  <div className="grid grid-cols-3 gap-6">
-                    {/* Left Column - Study Hub & Tools */}
-                    <div>
-                      {/* Study Hub Section */}
-                      <div className="mb-5">
-                        <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
-                          Study Hub
-                        </div>
-                        <Link
-                          href="/cpa-academy"
-                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                        >
-                          Meridian CPA Academy
-                        </Link>
-                      </div>
-                      {/* Free Tools Section */}
-                      <div>
-                        <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
-                          Free Tools
-                        </div>
-                        {resources.tools.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                    {/* Middle Column - Guides & Data */}
-                    <div>
-                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
-                        Guides
-                      </div>
-                      {resources.guides.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20 mt-5">
-                        Data & Stats
-                      </div>
-                      {resources.data.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                    {/* Right Column - Compare & Learn */}
-                    <div>
-                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
-                        Compare Providers
-                      </div>
-                      {resources.compare.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20 mt-5">
-                        Learn
-                      </div>
-                      {resources.learn.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg p-4">
+                  {/* CPA Academy - Featured */}
+                  <Link
+                    href="/cpa-academy"
+                    className="block px-3 py-2 mb-2 bg-[var(--primary)]/10 hover:bg-[var(--primary)] hover:text-white rounded-lg transition-all duration-200"
+                  >
+                    <div className="font-medium text-[var(--foreground)]">Meridian CPA Academy</div>
+                    <div className="text-xs text-[var(--muted)]">Start studying today</div>
+                  </Link>
+
+                  {/* Quick Links */}
+                  <div className="border-t border-[var(--border)] pt-2 mt-2">
+                    {quickLinks.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-3 py-2 hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
+                      >
+                        <div className="text-sm font-medium">{item.name}</div>
+                        <div className="text-xs text-[var(--muted)]">{item.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* View All Resources */}
+                  <div className="border-t border-[var(--border)] pt-3 mt-2">
+                    <Link
+                      href="/resources"
+                      className="flex items-center justify-between px-3 py-2 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200 font-medium"
+                    >
+                      <span>View All Resources</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -349,79 +277,31 @@ export default function Header() {
                   </svg>
                 </button>
                 {mobileResourcesOpen && (
-                  <div className="pb-2 pl-4 space-y-2">
+                  <div className="pb-2 pl-4 space-y-1">
                     <Link
                       href="/cpa-academy"
-                      className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                      className="block py-2 text-[var(--primary)] font-medium hover:text-[var(--primary)]"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Meridian CPA Academy
                     </Link>
-                    <div className="pt-2 border-t border-[var(--border)]">
-                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Tools</span>
-                      {resources.tools.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="pt-2 border-t border-[var(--border)]">
-                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Guides</span>
-                      {resources.guides.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="pt-2 border-t border-[var(--border)]">
-                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Data & Stats</span>
-                      {resources.data.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="pt-2 border-t border-[var(--border)]">
-                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Compare Providers</span>
-                      {resources.compare.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="pt-2 border-t border-[var(--border)]">
-                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Learn</span>
-                      {resources.learn.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
+                    {quickLinks.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block py-2 text-[var(--foreground)] hover:text-[var(--primary)]"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                    <Link
+                      href="/resources"
+                      className="block py-2 text-[var(--primary)] font-medium hover:text-[var(--primary)] flex items-center"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      View All Resources →
+                    </Link>
                   </div>
                 )}
               </div>
