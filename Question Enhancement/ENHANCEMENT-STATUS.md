@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 365 | 980 | 27% | In Progress |
+| REG | 1,345 | 420 | 925 | 31% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -64,14 +64,122 @@ All 58 exam TBS questions have been enhanced with:
 | Property Transactions - §1231/Recapture | 35 | reg-008-001 to reg-008-035 | **Complete** |
 | Entity Taxation - C Corps | 35 | reg-009-001 to reg-009-035 | **Complete** |
 | Entity Taxation - S Corps | 35 | reg-010-001 to reg-010-035 | **Complete** |
-| Entity Taxation - Partnerships | 19 | reg-011-001 to reg-011-019 | **Complete** |
-| Entity Taxation | 250+ | Various | Pending |
+| Entity Taxation - Partnerships | 35 | reg-011-001 to reg-011-035 | **Complete** |
+| Entity Taxation - Estates & Trusts | 35 | reg-012-001 to reg-012-035 | **Complete** |
+| Entity Taxation | 200+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
 
+### REG Enhancement Completed - January 16, 2026 (Session 10)
+
+**Batch 11-12: 51 Additional Questions Enhanced (reg-011-020 to reg-011-035 + reg-012-001 to reg-012-035)**
+
+Entity Taxation - Partnerships Continued (16 questions - reg-011-020 to reg-011-035):
+- §706(b) required tax year - majority interest → principal partners → least aggregate deferral
+- §83 + Reg. §1.721-1(b) services for capital interest - ordinary income (vs. profits interest safe harbor)
+- §752 + Reg. §1.752-3 nonrecourse liability allocation - three-tier approach
+- §752(b) + §731 contribution with encumbered property - debt relief as deemed distribution
+- §704(c) built-in gain/loss allocation - contributor bears pre-contribution gain/loss
+- §732(b) liquidating distribution - outside basis becomes property basis
+- §731(a)(2) liquidation loss recognition - only cash/receivables/inventory received
+- §754 + §743(b) basis adjustments - protects transferee from double tax
+- §707(a)(2)(B) disguised sales - 2-year presumption
+- §704(e) family partnerships - capital must be material, donor gets reasonable compensation
+- §708(b)(1) partnership termination - TCJA repealed technical termination rule
+- §465(b)(6) qualified nonrecourse financing - real property exception to at-risk rules
+- §704(c)(1)(B) mixing bowl transactions - 7-year rule for contributed property
+- §736 payments to retiring partners - (a) ordinary income vs. (b) distribution treatment
+- §734(b) distribution basis adjustments - vs. §743(b) transfer adjustments
+- §709(b) organizational expenses - $5,000 immediate (phases out over $50K) + 180-month amortization
+
+Entity Taxation - Estates & Trusts (35 questions - reg-012-001 to reg-012-035):
+- §6012(a)(3)/(4) filing requirements - $600 gross income threshold
+- §641 trust as separate taxpayer - distribution deduction mechanism
+- §651/§661 simple vs. complex trusts - mandatory vs. discretionary distributions
+- §§671-679 grantor trust rules - power to revoke, control enjoyment, reversions >5%
+- §676 revocable trusts - automatically grantor trusts during life
+- §642(b) exemptions - estate $600, simple trust $300, complex trust $100
+- §1(e) compressed trust brackets - 37% rate at ~$14,450 (vs. $600K+ for individuals)
+- §643(a) DNI calculation - ceiling on distribution deduction and beneficiary income
+- §643(a) DNI adjustments - add tax-exempt interest, subtract corpus capital gains
+- §651(b)/§661(b) distribution deduction - capped at DNI
+- §691 income in respect of decedent - no step-up basis, §691(c) deduction for estate tax
+- §652(b)/§662(b) character flow-through - conduit principle
+- §6654(l) estate estimated tax exemption - first 2 years after death
+- §662(a) two-tier system - required distributions first, then discretionary
+- §642(c) unlimited charitable deduction - from gross income per governing instrument
+- §645 election - revocable trust joins estate for tax benefits
+- §642(g) administration expenses - Form 1041 OR Form 706, not both
+- §642(h) final year excess deductions - pass through to beneficiaries
+- §§665-668 throwback rules - repealed for domestic trusts (1997), still applies to foreign
+- §663(b) 65-day rule - distributions treated as made in prior year
+- §663(a)(1) specific bequests - excluded from DNI (≤3 installments)
+- §642(b)(2)(C) qualified disability trust - individual exemption amount
+- §663(c) separate share rule - each share treated as separate trust for DNI
+- §1361(d) QSST requirements - one beneficiary, all income distributed currently
+- §1361(e) ESBT taxation - S corp portion at highest individual rate (37%)
+- §167(d) trust depreciation allocation - follows income allocation
+- §199A trust QBI - allocated per DNI, each party calculates own deduction
+- §267 related party loss disallowance - trust-beneficiary sales
+- §469 passive activity loss rules - apply at trust level
+- §1411(a)(2) trust NIIT - threshold at start of 37% bracket (~$14,450)
+- §643(e) trust termination - default no gain/loss, election for recognition
+
+**Key IRC References Used (Batches 11-12):**
+| Topic | IRC Section |
+|-------|-------------|
+| Required Tax Year | §706(b) |
+| Services for Capital Interest | §83, Reg. §1.721-1(b) |
+| Nonrecourse Liability Allocation | §752, Reg. §1.752-3 |
+| Debt Relief = Distribution | §752(b), §731 |
+| Built-in Gain/Loss Allocation | §704(c)(1)(A) |
+| Liquidating Distribution Basis | §732(b) |
+| Liquidation Loss Recognition | §731(a)(2) |
+| §754 Election | §754, §743(b), §734(b) |
+| Disguised Sales | §707(a)(2)(B) |
+| Family Partnerships | §704(e) |
+| Partnership Termination | §708(b)(1) |
+| Qualified Nonrecourse Financing | §465(b)(6) |
+| Mixing Bowl Transactions | §704(c)(1)(B) |
+| Retiring Partner Payments | §736(a), §736(b) |
+| Organizational Expenses | §709(b) |
+| Estate/Trust Filing | §6012(a)(3)/(4) |
+| Trust as Taxpayer | §641 |
+| Simple Trust | §651 |
+| Complex Trust | §661 |
+| Grantor Trust Rules | §§671-679 |
+| Revocable Trust | §676 |
+| Trust Exemptions | §642(b) |
+| Compressed Brackets | §1(e) |
+| DNI | §643(a) |
+| Distribution Deduction | §651(b), §661(b) |
+| IRD | §691, §691(c) |
+| Character Flow-Through | §652(b), §662(b) |
+| Estate Estimated Tax | §6654(l) |
+| Two-Tier System | §662(a) |
+| Trust Charitable Deduction | §642(c) |
+| §645 Election | §645 |
+| Admin Expense Election | §642(g) |
+| Final Year Pass-Through | §642(h) |
+| Throwback Rules | §§665-668 |
+| 65-Day Rule | §663(b) |
+| Specific Bequests | §663(a)(1) |
+| QDisT | §642(b)(2)(C) |
+| Separate Share Rule | §663(c) |
+| QSST | §1361(d) |
+| ESBT | §1361(e) |
+| Trust Depreciation | §167(d) |
+| Trust QBI | §199A, Reg. §1.199A-6 |
+| Related Party Loss | §267 |
+| Trust PAL | §469 |
+| Trust NIIT | §1411(a)(2) |
+| Trust Termination | §643(e) |
+
+---
+
 ### REG Enhancement Completed - January 16, 2026 (Session 9)
 
-**Batch 9-10: 50 Additional Questions Enhanced (reg-010-001 to reg-010-035 + reg-011-001 to reg-011-019)**
+**Batch 9-10: 54 Questions Enhanced (reg-010-001 to reg-010-035 + reg-011-001 to reg-011-019)**
 
 Entity Taxation - S Corporations (35 questions - reg-010-001 to reg-010-035):
 - IRC section references (§1361, §1362, §1363, §1366, §1367, §1368, §1374, §1375, §1377, §6072)

@@ -8086,8 +8086,8 @@ const questions = [
       "D": "The calendar year in all cases"
     },
     "correctAnswer": "C",
-    "explanation": "A partnership must generally use the tax year of partners owning a majority (>50%) of capital and profits. If no majority, it uses the tax year of all principal partners. If still no common year, it uses the year with the least aggregate deferral.",
-    "tip": "Partnership year: (1) majority interest, (2) principal partners, (3) least aggregate deferral.",
+    "explanation": "Per IRC §706(b), a partnership must generally use the tax year of partners owning a majority (>50%) of capital and profits interests. If no majority exists, it uses the tax year of all 'principal partners' (5%+ interest). If still no common year, it uses the year resulting in the least aggregate deferral of income to partners. This prevents tax deferral through fiscal year manipulation. Why other answers are wrong: (A) Capital accounts—ownership percentage, not capital account size, determines majority interest; (B) Managing partner only—the managing partner's year matters only if they are a principal partner; (D) Calendar year always—partnerships can use fiscal years if the majority partners use that year.",
+    "tip": "§706(b) year rules: (1) Majority interest (>50% P&L), (2) Principal partners (5%+), (3) Least aggregate deferral. NOT capital account size.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8107,8 +8107,8 @@ const questions = [
       "D": "Income only when the interest is sold"
     },
     "correctAnswer": "B",
-    "explanation": "When a partner receives a capital interest (interest in existing partnership assets) for services, they must recognize ordinary compensation income equal to the FMV of the interest. This differs from receiving only a profits interest, which is generally not taxable at receipt.",
-    "tip": "Services for capital interest = ordinary income (FMV). Profits interest only = generally tax-free.",
+    "explanation": "Under IRC §83 and Reg. §1.721-1(b)(1), when a partner receives a capital interest (liquidation value interest in existing partnership assets) in exchange for services, they must recognize ordinary compensation income equal to the FMV of the interest received. This is treated as payment for services, not a tax-free contribution under §721. A profits interest (future profits only, no liquidation value) generally qualifies for Rev. Proc. 93-27 safe harbor and is not taxable at receipt. Why other answers are wrong: (A) No income—only profits interests may be tax-free; (C) Capital gain—service income is always ordinary compensation; (D) Income only when sold—the taxable event is receipt of the capital interest, not later disposition.",
+    "tip": "§83 + Reg. §1.721-1(b): Services for CAPITAL interest = ordinary income (FMV). PROFITS interest = Rev. Proc. 93-27 safe harbor, generally tax-free.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8128,8 +8128,8 @@ const questions = [
       "D": "Economic risk of loss"
     },
     "correctAnswer": "A",
-    "explanation": "Nonrecourse liabilities (where no partner bears economic risk of loss) are allocated in a three-tier approach: (1) to partners with Section 704(c) minimum gain, (2) to partners per partnership minimum gain, (3) based on profit sharing ratios.",
-    "tip": "Nonrecourse debt = profit ratios (simplified). Recourse debt = economic risk of loss.",
+    "explanation": "Per IRC §752 and Reg. §1.752-3, nonrecourse liabilities (where no partner bears economic risk of loss) are allocated using a three-tier approach: (1) First, to partners to the extent of their share of §704(c) minimum gain (built-in gain property), (2) Second, to partners per their share of partnership minimum gain, (3) Third, based on profit-sharing ratios (or another 'reasonably consistent' method). Why other answers are wrong: (A) Profit sharing ratios—this is the final tier, but §704(c) and minimum gain come first; (B) Capital contribution percentages—not used for nonrecourse allocation; (D) Economic risk of loss—this applies to RECOURSE liabilities under §752 and Reg. §1.752-2, not nonrecourse.",
+    "tip": "§752 nonrecourse: Three-tier (1) §704(c) min gain, (2) partnership min gain, (3) profit ratios. RECOURSE = economic risk of loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8149,8 +8149,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "D",
-    "explanation": "When debt assumed exceeds basis, gain is recognized for the excess. The partner is relieved of $60,000 debt but gets back (60% relief if 40% owner, but assume 100% for simplicity means full relief minus share = treated as distribution). If 100% owner: relief = $60,000 treated as distribution. Distribution exceeds $50,000 basis by $10,000 = gain recognized.",
-    "tip": "Contribution with debt: Relief > basis = gain. Treat debt relief as cash distribution.",
+    "explanation": "Under IRC §752(b) and §731, when a partner contributes encumbered property, the debt assumed by the partnership is treated as a cash distribution to the contributing partner. Per §721, the general nonrecognition rule applies, BUT §731(a)(1) requires gain recognition when cash distributions (including deemed cash from debt relief) exceed outside basis. Calculation: Partner's initial basis = $50,000 (property basis). Debt relief treated as distribution = $60,000. Distribution exceeds basis by $10,000 ($60,000 - $50,000), so partner recognizes $10,000 gain. Why other answers are wrong: (A) $20,000—this would be FMV minus liability, not the correct calculation; (B) $30,000—this is the built-in gain (FMV - basis), which is not recognized at contribution; (C) $0—gain must be recognized when debt relief exceeds basis.",
+    "tip": "§752(b) + §731: Debt relief = deemed cash distribution. If relief > basis = gain. $60K relief - $50K basis = $10K gain.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -8170,8 +8170,8 @@ const questions = [
       "D": "$30,000 to A, $0 to B"
     },
     "correctAnswer": "B",
-    "explanation": "Under Section 704(c), the $20,000 built-in gain at contribution ($50,000 FMV - $30,000 basis) must be allocated entirely to contributing Partner A. The remaining $10,000 post-contribution gain ($60,000 - $50,000) is split 50/50. A: $20,000 + $5,000 = $25,000. B: $5,000.",
-    "tip": "Section 704(c): Built-in gain/loss at contribution goes to contributor. Post-contribution = normal split.",
+    "explanation": "Under IRC §704(c)(1)(A), when a partner contributes property with built-in gain or loss, that built-in amount must be allocated to the contributing partner when the property is later sold. Here: Built-in gain at contribution = $50,000 FMV - $30,000 basis = $20,000 (all to A). Post-contribution appreciation = $60,000 sale price - $50,000 FMV at contribution = $10,000 (split 50/50: $5,000 each). Total: A = $20,000 + $5,000 = $25,000. B = $5,000. Why other answers are wrong: (A) $15,000 each—ignores §704(c) allocation of built-in gain; (C) $20,000/$10,000—misallocates the post-contribution gain; (D) $30,000 to A—would ignore B's share of post-contribution gain.",
+    "tip": "§704(c): Built-in gain/loss at contribution → allocate entirely to contributor. Post-contribution gain/loss → normal P&L split.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -8191,8 +8191,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "C",
-    "explanation": "In a liquidating distribution, the partner's basis in distributed property equals their outside basis ($40,000). Unlike a current distribution where basis is limited to inside basis, a liquidating distribution transfers the full outside basis to the property (substituted basis).",
-    "tip": "Liquidating distribution: Property gets partner's outside basis. No gain/loss unless cash > basis.",
+    "explanation": "Under IRC §732(b), in a liquidating distribution (complete termination of partner's interest), the partner's basis in distributed property equals their remaining outside basis, regardless of the property's inside basis. This differs from §732(a)(1) current distributions where basis is limited to the property's inside basis. Here: Partner's outside basis = $40,000, which becomes the basis in the property received. This 'substituted basis' rule preserves the partner's investment for later gain/loss recognition. Why other answers are wrong: (A) $65,000—cannot add outside basis plus inside basis; (B) $25,000—this is inside basis, applies only to current distributions; (D) $50,000—FMV is irrelevant for basis determination in partnership distributions.",
+    "tip": "§732(b) liquidating: Property basis = partner's OUTSIDE basis. §732(a) current: Property basis = LESSER of inside basis or remaining outside basis.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -8212,8 +8212,8 @@ const questions = [
       "D": "No, losses are never allowed on liquidation"
     },
     "correctAnswer": "A",
-    "explanation": "A loss may be recognized in a complete liquidation ONLY if the partner receives only cash, unrealized receivables, and/or inventory. The loss is capital (not ordinary). Here, receiving only cash allows recognition of the $20,000 ($50,000 - $30,000) capital loss.",
-    "tip": "Liquidation loss: Only if receiving cash/receivables/inventory only. Capital loss.",
+    "explanation": "Under IRC §731(a)(2), a partner may recognize a loss ONLY in a complete liquidation AND ONLY if the partner receives nothing but cash, unrealized receivables, and/or inventory (§751 assets). Here, receiving only $30,000 cash against $50,000 basis allows recognition of a $20,000 loss. Per §741, this loss is capital in character (not ordinary). If the partner received ANY other property (equipment, land, etc.), no loss would be recognized—instead, basis would transfer to the property. Why other answers are wrong: (B) Ordinary loss—partnership liquidation losses are capital under §741; (C) Only if no unrealized receivables—receiving only cash OR receivables OR inventory permits loss recognition; (D) No losses—losses ARE allowed under the specific circumstances of §731(a)(2).",
+    "tip": "§731(a)(2): Liquidation loss ONLY if receiving cash/receivables/inventory ONLY. §741: Loss is CAPITAL. Any other property = no loss (basis transfers).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -8233,8 +8233,8 @@ const questions = [
       "D": "No adjustment to partnership basis"
     },
     "correctAnswer": "A",
-    "explanation": "With a Section 754 election in place, the purchasing partner receives a Section 743(b) adjustment equal to the difference between their outside basis (purchase price) and their share of the partnership's inside basis. This adjustment is specific to the new partner.",
-    "tip": "Section 754 + sale = 743(b) adjustment. Protects buyer from being taxed on built-in gains already paid for.",
+    "explanation": "Under IRC §754, when a partnership makes this election, it agrees to adjust the basis of partnership property upon certain triggering events. Per §743(b), when a partnership interest is transferred by sale (or inherited), the transferee partner receives a special basis adjustment equal to the difference between their outside basis (purchase price or FMV at death) and their proportionate share of the partnership's inside basis. This adjustment is personal to the new partner and prevents double taxation on built-in gains they already paid for. Why other answers are wrong: (B) All partners share—§743(b) adjustments are specific to the transferee partner only; (C) Selling partner recognizes additional gain—the selling partner's gain is already determined by sale price vs. their outside basis; (D) No adjustment—this is the result WITHOUT a §754 election.",
+    "tip": "§754 election + transfer/sale → §743(b) adjustment for TRANSFEREE only. Adjustment = outside basis - share of inside basis. Protects buyer from double tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8254,8 +8254,8 @@ const questions = [
       "D": "A guaranteed payment"
     },
     "correctAnswer": "C",
-    "explanation": "Section 707(a)(2)(B) treats certain contribution-distribution combinations as disguised sales if there is a transfer of property to a partnership and a related transfer of money or property to the partner. A rebuttable presumption of a sale exists for distributions within 2 years.",
-    "tip": "Contribution + distribution within 2 years = presumed disguised sale. Must rebut with facts.",
+    "explanation": "IRC §707(a)(2)(B) and Reg. §1.707-3 address 'disguised sales' where a partner contributes property and receives a related distribution of cash or other property. Under the regulations: (1) Transfers within 2 years are presumed to be disguised sales, (2) Transfers more than 2 years apart are presumed NOT to be sales, (3) The presumptions can be rebutted by facts and circumstances. If treated as a sale, the contributing partner recognizes gain/loss as if they sold the property directly. Why other answers are wrong: (A) Loan repayment—§707(a)(2)(B) specifically targets disguised sales, not loans; (B) Tax-free return of capital—a disguised sale triggers immediate gain recognition; (D) Guaranteed payment—those are for services or capital use under §707(c), not property contributions.",
+    "tip": "§707(a)(2)(B): Contribution + distribution within 2 years = PRESUMED disguised sale. Rebuttable. Results in gain recognition to contributor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8275,8 +8275,8 @@ const questions = [
       "D": "Equal shares with all partners"
     },
     "correctAnswer": "C",
-    "explanation": "When a family member receives a partnership interest by gift, and capital is a material income-producing factor, the donee's share of income cannot exceed their proportionate capital interest. Additionally, the donor must receive reasonable compensation for services before income is allocated.",
-    "tip": "Family partnership: Donee limited to capital share. Donor gets reasonable service compensation first.",
+    "explanation": "Under IRC §704(e), special rules apply to family partnerships where capital is a material income-producing factor (e.g., real estate, manufacturing—but not professional services). Per §704(e)(2), the donee's share of partnership income must be based on their capital interest, and the donor must first receive 'reasonable compensation' for services rendered to the partnership. This prevents income shifting by gifting partnership interests to family members in lower tax brackets. Why other answers are wrong: (A) Donor's tax bracket—irrelevant to the allocation rules; (B) Partnership agreement states—cannot override §704(e) limitations for family partnerships; (D) Equal shares—allocation is based on capital, not equal division.",
+    "tip": "§704(e) family partnerships: (1) Capital must be material income factor, (2) Donee limited to capital share, (3) Donor gets reasonable compensation FIRST. Prevents bracket shifting.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8296,8 +8296,8 @@ const questions = [
       "D": "50% or more of capital and profits interests are sold within 12 months"
     },
     "correctAnswer": "A",
-    "explanation": "The Tax Cuts and Jobs Act repealed the technical termination rule. Now a partnership terminates only when operations cease and assets are distributed. The old rule (50% sale within 12 months) no longer applies for tax years after 2017.",
-    "tip": "TCJA repealed technical terminations. Now only terminate when business ends.",
+    "explanation": "Under pre-TCJA IRC §708(b)(1)(B), a partnership would 'technically terminate' if 50% or more of capital and profits interests were sold or exchanged within 12 months. The Tax Cuts and Jobs Act of 2017 repealed this technical termination rule for tax years beginning after December 31, 2017. Now, under current §708(b)(1), a partnership terminates for tax purposes ONLY when no part of any business, financial operation, or venture continues to be carried on by any of its partners. Why other answers are wrong: (B) New partner admitted—adding partners does not terminate; (C) 3 consecutive loss years—losses are irrelevant to termination; (D) 50% sold within 12 months—this was the OLD rule, repealed by TCJA.",
+    "tip": "§708(b)(1) post-TCJA: Partnership terminates ONLY when business operations cease. Technical termination (50% sale rule) was REPEALED in 2017.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8317,8 +8317,8 @@ const questions = [
       "D": "Never increases the at-risk amount"
     },
     "correctAnswer": "A",
-    "explanation": "Generally, nonrecourse debt does not increase at-risk amounts. However, an exception exists for qualified nonrecourse financing secured by real property and obtained from qualified lenders (banks, government entities). This allows real estate investors to include such debt in their at-risk basis.",
-    "tip": "At-risk exception: Qualified nonrecourse financing for real estate from real lenders counts.",
+    "explanation": "Under IRC §465(b)(6), qualified nonrecourse financing is an exception to the general rule that nonrecourse debt does not increase a taxpayer's at-risk amount. To qualify, the financing must: (1) Be secured by real property used in the activity, (2) Be obtained from a 'qualified person' (generally, an unrelated bank, government entity, or person regularly engaged in lending—NOT the seller or a related party), (3) No person can be personally liable for repayment. This exception allows real estate investors to include such debt in their at-risk basis, enabling larger loss deductions. Why other answers are wrong: (B) Only if personally guaranteed—personal guarantees make debt recourse, not qualified nonrecourse; (C) Disregarded—qualified nonrecourse specifically IS counted; (D) Never increases—the exception in §465(b)(6) explicitly allows it.",
+    "tip": "§465(b)(6): Qualified nonrecourse = real property secured + from qualified lender (bank/government) + no personal liability. EXCEPTION to at-risk rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8338,8 +8338,8 @@ const questions = [
       "D": "All partners equally"
     },
     "correctAnswer": "C",
-    "explanation": "Section 704(c)(1)(B) requires the contributing partner to recognize any remaining built-in gain if contributed property is distributed to another partner within 7 years. This prevents tax-free shifting of built-in gains through partnership distributions.",
-    "tip": "Mixing bowl: Distribute contributed property to another partner within 7 years = contributor recognizes gain.",
+    "explanation": "Under IRC §704(c)(1)(B) ('mixing bowl transaction' rule), if contributed property with built-in gain is distributed to a partner OTHER than the contributor within 7 years of contribution, the CONTRIBUTING partner must recognize the remaining §704(c) built-in gain. This anti-abuse rule prevents partners from using the partnership as a conduit to shift built-in gains tax-free. The contributing partner is taxed as if the property were sold at FMV at the time of distribution. Why other answers are wrong: (A) Partner B only—the recipient doesn't trigger the gain recognition; the contributor does; (B) The partnership—partnerships are pass-through entities; gain flows to partners; (D) All partners equally—only the contributing partner is affected under §704(c)(1)(B).",
+    "tip": "§704(c)(1)(B) mixing bowl: Distribute contributed property to ANOTHER partner within 7 years → CONTRIBUTOR recognizes built-in gain. Anti-abuse rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8359,8 +8359,8 @@ const questions = [
       "D": "A distribution (return of capital or capital gain)"
     },
     "correctAnswer": "D",
-    "explanation": "Section 736(b) payments are for the retiring partner's interest in partnership property and are treated as distributions. This means tax-free to the extent of basis, then capital gain. Section 736(a) payments (for goodwill in service partnerships, unrealized receivables) are ordinary income.",
-    "tip": "Section 736: (a) payments = ordinary income, (b) payments = distribution treatment.",
+    "explanation": "Under IRC §736, payments to a retiring or deceased partner are classified into two categories: §736(b) payments are for the partner's share of partnership property (including goodwill if stated in the agreement or if capital is a material income-producing factor) and are treated as distributions—tax-free to the extent of basis under §731, then capital gain. §736(a) payments cover everything else (goodwill in service partnerships where capital is NOT material, plus unrealized receivables) and are treated as guaranteed payments or distributive share (ordinary income). Why other answers are wrong: (A) Self-employment income—§736(a) payments may be SE income, but (b) payments are not; (B) Guaranteed payments—this is §736(a), not (b); (C) Ordinary income—§736(b) payments get capital gain treatment, not ordinary.",
+    "tip": "§736(b) = property payments = distribution treatment (basis recovery, then capital gain). §736(a) = non-property = ordinary income. Key for service partnerships.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8380,8 +8380,8 @@ const questions = [
       "D": "When a new partner is admitted"
     },
     "correctAnswer": "B",
-    "explanation": "Section 734(b) adjusts partnership inside basis when distributions result in: (1) gain recognition by the distributee, or (2) the distributed property's basis differs from the partnership's inside basis. The adjustment preserves parity between inside and outside basis.",
-    "tip": "Section 734(b) = distribution adjustments. Section 743(b) = sale/transfer adjustments.",
+    "explanation": "Under IRC §734(b), with a §754 election in effect, the partnership adjusts its basis in REMAINING assets when a distribution causes: (1) Gain recognition to the distributee partner (adjust upward), or (2) A basis difference—either the distributed property takes a stepped-up basis in the partner's hands (adjust downward) or stepped-down basis (adjust upward). The goal is to preserve the aggregate inside/outside basis relationship. Note: §734(b) applies to distributions, while §743(b) applies to transfers/sales of partnership interests. Why other answers are wrong: (A) Partner sells interest—that triggers §743(b), not §734(b); (C) Acquires new assets—acquisition does not trigger basis adjustments; (D) New partner admitted—admission triggers §743(b) if by purchase.",
+    "tip": "§734(b) = DISTRIBUTION adjustments (gain recognized or basis shift). §743(b) = TRANSFER/SALE adjustments. Both require §754 election.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8401,8 +8401,8 @@ const questions = [
       "D": "$5,000 deductible immediately (reduced by excess over $50,000), remainder amortized over 180 months"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 709, up to $5,000 of organizational expenses can be deducted immediately, but this is reduced dollar-for-dollar by amounts exceeding $50,000. Since $60,000 exceeds $50,000 by $10,000, the immediate deduction is reduced to $0. The entire $60,000 is amortized over 180 months.",
-    "tip": "Org costs: $5,000 immediate (phases out over $50K), rest over 180 months. Same as corps.",
+    "explanation": "Under IRC §709(b), a partnership may elect to deduct up to $5,000 of organizational expenses in the first year, but this amount is reduced dollar-for-dollar by expenses exceeding $50,000. Here: $60,000 - $50,000 = $10,000 excess, so $5,000 - $10,000 = $0 immediate deduction. The full $60,000 must be amortized over 180 months (15 years) beginning with the month the partnership begins business. Note: This rule is similar to corporate §248 and startup costs under §195. Why other answers are wrong: (A) Capitalized with no deduction—amortization is available under §709(b); (B) $60,000 over 60 months—the amortization period is 180 months, not 60; (C) Immediately deductible in full—only up to $5,000 (reduced for excess) is immediately deductible.",
+    "tip": "§709(b): Org costs = $5,000 immediate (phases out $1-for-$1 over $50K) + remainder over 180 months. $60K expenses = $0 immediate, all amortized.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -8422,8 +8422,8 @@ const questions = [
       "D": "Any gross income"
     },
     "correctAnswer": "A",
-    "explanation": "An estate must file Form 1041 if it has gross income of $600 or more for the tax year, or if it has a beneficiary who is a nonresident alien.",
-    "tip": "Estate/trust filing threshold = $600 gross income. Lower than individual thresholds.",
+    "explanation": "Per IRC §6012(a)(3) and (4), an estate is required to file Form 1041 (U.S. Income Tax Return for Estates and Trusts) if it has: (1) Gross income of $600 or more for the tax year, OR (2) Any beneficiary who is a nonresident alien, regardless of income amount. This threshold is much lower than individual filing requirements. Why other answers are wrong: (B) $1,000—this is not the threshold; (C) Taxable income of $600—the test is GROSS income, not taxable income; (D) Any gross income—only $600+ triggers the requirement (unless NRA beneficiary).",
+    "tip": "§6012(a)(3)/(4): Estate/trust filing = $600 GROSS income OR any nonresident alien beneficiary. Much lower than individual thresholds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8443,8 +8443,8 @@ const questions = [
       "D": "A separate taxpayer with income distribution deduction"
     },
     "correctAnswer": "D",
-    "explanation": "A trust (other than a grantor trust) is taxed as a separate entity. It receives a distribution deduction for income distributed to beneficiaries, who then report that income. Undistributed income is taxed at trust rates.",
-    "tip": "Trusts = separate taxpayer. Distributed income taxed to beneficiaries; retained income taxed to trust.",
+    "explanation": "Under IRC §641, a trust (other than a grantor trust under §§671-679) is taxed as a separate entity with its own tax brackets under §1(e). The trust receives a distribution deduction under §651 (simple trusts) or §661 (complex trusts) for income distributed to beneficiaries, who then report that income on their individual returns under §652 or §662. Undistributed income is taxed at highly compressed trust rates (reaching the top 37% bracket at only ~$14,450 of income). Why other answers are wrong: (A) Part of grantor's return—only grantor trusts are reported this way; (B) Corporation—trusts have their own tax regime; (C) Pass-through like partnership—trusts are taxable entities, not pure pass-throughs.",
+    "tip": "§641: Trust = separate taxable entity. Distribution deduction (§651/§661) shifts income to beneficiaries. Compressed brackets = undistributed income taxed heavily.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8464,8 +8464,8 @@ const questions = [
       "D": "Distribute income at the trustee's discretion"
     },
     "correctAnswer": "C",
-    "explanation": "A simple trust: (1) must distribute all income currently, (2) cannot make distributions from corpus, and (3) cannot make charitable contributions. Any trust that does not meet all three requirements is a complex trust.",
-    "tip": "Simple trust = must distribute ALL income currently, NO corpus distributions, NO charity.",
+    "explanation": "Under IRC §651 and Reg. §1.651(a)-1, a simple trust must meet ALL of the following requirements: (1) Required to distribute all income currently to beneficiaries, (2) Cannot make distributions of corpus (principal), and (3) Cannot make charitable contributions from income. If a trust fails ANY of these tests in a given year, it is treated as a complex trust under §661 for that year. Note: A trust can be simple one year and complex another. Why other answers are wrong: (A) Terminate within 21 years—this relates to the rule against perpetuities, not trust classification; (B) Accumulate all income—this describes the opposite of a simple trust; (D) Discretionary distributions—simple trusts must distribute all income, not at discretion.",
+    "tip": "§651 simple trust: (1) ALL income distributed currently, (2) NO corpus distributions, (3) NO charity. Miss ANY = complex trust under §661.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8485,8 +8485,8 @@ const questions = [
       "D": "A 52-53 week year"
     },
     "correctAnswer": "B",
-    "explanation": "An estate may elect to use either a calendar year or any fiscal year ending within 12 months of the decedent's death. This provides flexibility in tax planning for estate income.",
-    "tip": "Estates can use fiscal year (within 12 months of death). Trusts usually must use calendar year.",
+    "explanation": "Under IRC §441 and §645, an estate has flexibility to elect either a calendar year OR any fiscal year ending within 12 months after the date of death. This allows for significant tax planning opportunities by controlling when income is reported. In contrast, trusts (other than tax-exempt trusts and certain charitable trusts) are generally required to use a calendar year under §644. Why other answers are wrong: (A) Only calendar year—estates specifically have fiscal year flexibility; (C) Decedent's tax year—the estate is a new entity and doesn't inherit the decedent's year; (D) 52-53 week year—while theoretically possible, this is not the standard description of estate year options.",
+    "tip": "§441/§645: Estates = fiscal year flexibility (any year-end within 12 months of death). §644: Trusts = generally CALENDAR year only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8506,8 +8506,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "C",
-    "explanation": "An estate receives a $600 exemption deduction. A trust that is required to distribute all income currently (simple trust) receives a $300 exemption, while other trusts (complex trusts) receive a $100 exemption.",
-    "tip": "Exemptions: Estate = $600, Simple trust = $300, Complex trust = $100.",
+    "explanation": "Under IRC §642(b), the exemption deductions for estates and trusts are: Estates = $600, Simple trusts (required to distribute all income currently) = $300, Complex trusts (all other trusts) = $100. These exemptions are not indexed for inflation and have remained unchanged for decades. They function similarly to the personal exemption for individuals. Why other answers are wrong: (A) $100—this is the complex trust exemption; (B) $300—this is the simple trust exemption; (D) $0—estates do receive an exemption, unlike S corporations which receive none.",
+    "tip": "§642(b) exemptions: Estate = $600, Simple trust = $300, Complex trust = $100. NOT indexed for inflation. Memorize these.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8527,8 +8527,8 @@ const questions = [
       "D": "The trust"
     },
     "correctAnswer": "B",
-    "explanation": "A grantor trust is disregarded for income tax purposes. All income, deductions, and credits are reported directly on the grantor's individual tax return as if they still owned the assets.",
-    "tip": "Grantor trust = ignored for tax purposes. Grantor reports all income on their 1040.",
+    "explanation": "Under IRC §§671-679, a grantor trust exists when the grantor retains certain powers or interests (e.g., power to revoke, control beneficial enjoyment, certain reversionary interests). The trust is disregarded for income tax purposes—all income, deductions, and credits flow directly to the grantor's individual return (Form 1040) as if they still personally owned the assets. The trust may still file an informational Form 1041 but owes no tax itself. Why other answers are wrong: (A) Beneficiaries—they report income from non-grantor trusts, not grantor trusts; (C) Trustee personally—the trustee is merely a fiduciary, not the taxpayer; (D) The trust—grantor trusts are not separate taxpayers.",
+    "tip": "§§671-679 grantor trust: Grantor retains control → trust disregarded → ALL income reported on GRANTOR's 1040. Trust files informational return only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -8548,8 +8548,8 @@ const questions = [
       "D": "The trust's taxable income"
     },
     "correctAnswer": "B",
-    "explanation": "DNI is a ceiling that limits both: (1) the trust's/estate's distribution deduction, and (2) the amount taxable to beneficiaries. Without DNI, income could be taxed twice or not at all.",
-    "tip": "DNI = cap on distribution deduction AND beneficiary income. Prevents double taxation/undertaxation.",
+    "explanation": "Under IRC §643(a), Distributable Net Income (DNI) serves as the critical mechanism for allocating taxable income between the fiduciary (estate/trust) and beneficiaries. DNI acts as a CEILING that limits: (1) The trust's/estate's distribution deduction under §651/§661, and (2) The maximum amount that beneficiaries must include in income under §652/§662. This prevents double taxation (if trust paid tax AND beneficiaries paid tax on same income) or undertaxation (if neither paid). Why other answers are wrong: (A) Minimum distribution—DNI is a ceiling, not a floor; (C) Subject to estate tax—DNI relates to income tax, not estate tax; (D) Trust's taxable income—taxable income and DNI differ in several ways (e.g., tax-exempt interest treatment).",
+    "tip": "§643(a) DNI = CEILING on (1) distribution deduction (§651/§661) AND (2) beneficiary income (§652/§662). Prevents double tax or no tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8569,8 +8569,8 @@ const questions = [
       "D": "Capital gains allocated to corpus"
     },
     "correctAnswer": "A",
-    "explanation": "DNI includes tax-exempt interest (reduced by allocable expenses) because it may be distributed to beneficiaries who need to report it. Capital gains allocated to corpus are typically excluded from DNI since they are not distributed.",
-    "tip": "DNI includes tax-exempt interest, excludes capital gains in corpus. Adjusts for what flows to beneficiaries.",
+    "explanation": "Under IRC §643(a), DNI starts with taxable income and makes specific adjustments. Key additions: Tax-exempt interest (net of allocable expenses under §265) is ADDED to DNI because it can be distributed to beneficiaries and retains its character. Key subtractions: Capital gains allocated to corpus are generally EXCLUDED from DNI (unless required to be distributed or actually distributed). This ensures DNI reflects what can flow to beneficiaries. Why other answers are wrong: (B) Depreciation—depreciation reduces both taxable income and DNI (no add-back); (C) Trustee fees—deductible against both, no add-back; (D) Capital gains in corpus—these are SUBTRACTED from DNI, not added.",
+    "tip": "§643(a) DNI adjustments: ADD tax-exempt interest (net of §265 expenses). SUBTRACT capital gains allocated to corpus. Reflects distributable amount.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8590,8 +8590,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "B",
-    "explanation": "The distribution deduction is limited to DNI ($15,000), even though more was distributed. The excess $3,000 is a tax-free distribution of corpus to beneficiaries (no income to report on that portion).",
-    "tip": "Distribution deduction capped at DNI. Excess distribution = tax-free corpus to beneficiaries.",
+    "explanation": "Under IRC §651(b), a simple trust's distribution deduction is limited to the LESSER of: (1) The amount required to be distributed currently, or (2) DNI. Here, DNI = $15,000 and amount distributed = $18,000. The deduction is capped at DNI ($15,000). The trust deducts $15,000, and the beneficiaries include $15,000 in their income. The excess $3,000 ($18,000 - $15,000) represents a tax-free distribution of corpus (principal), which is not income to the beneficiaries. Why other answers are wrong: (A) $3,000—this is the excess over DNI, not the deduction; (C) $18,000—distribution deduction cannot exceed DNI; (D) $0—simple trusts that distribute income do get a deduction.",
+    "tip": "§651(b): Distribution deduction = LESSER of (1) amount distributed or (2) DNI. Excess over DNI = tax-free corpus. Trust: $15K deduction. Beneficiaries: $15K income.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -8611,8 +8611,8 @@ const questions = [
       "D": "Life insurance proceeds"
     },
     "correctAnswer": "B",
-    "explanation": "IRD is income the decedent earned or was entitled to receive but had not yet received at death (e.g., unpaid salary, accrued interest, IRA distributions). It does not receive a stepped-up basis and is taxable when received by the estate or beneficiary.",
-    "tip": "IRD = earned but not received at death. No step-up, taxable to recipient. Get IRD deduction for estate tax.",
+    "explanation": "Under IRC §691, Income in Respect of a Decedent (IRD) represents amounts the decedent was entitled to receive but had not received before death (cash-basis items). Common examples: unpaid salary/wages, accrued but unpaid interest, IRA/401(k) distributions, installment sale payments. Critically, IRD does NOT receive a stepped-up basis under §1014 because it was never included in the decedent's taxable income. The recipient (estate or beneficiary) must report it as income. Under §691(c), recipients may deduct the estate tax attributable to the IRD. Why other answers are wrong: (A) Capital gains on inherited property—these get stepped-up basis under §1014; (C) Tax-exempt bond interest—remains tax-exempt, not IRD; (D) Life insurance proceeds—generally tax-free under §101(a).",
+    "tip": "§691 IRD: Earned but NOT received at death. NO stepped-up basis (§1014 doesn't apply). Taxable when received. §691(c) allows deduction for estate tax paid on IRD.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8632,8 +8632,8 @@ const questions = [
       "D": "Is determined by the beneficiary's tax situation"
     },
     "correctAnswer": "B",
-    "explanation": "Income distributed from a trust retains its character when it flows through to beneficiaries. If the trust received dividend income, the beneficiary reports dividend income. This is similar to partnership character pass-through.",
-    "tip": "Trust income keeps its character when distributed. Dividends stay dividends, etc.",
+    "explanation": "Under IRC §652(b) (simple trusts) and §662(b) (complex trusts), income distributed to beneficiaries retains the same character it had in the hands of the trust. This is known as the 'conduit principle' or 'character flow-through.' If the trust received qualified dividends, interest income, or capital gains, the beneficiary reports those same categories with their respective tax treatments (e.g., qualified dividends at preferential rates). This is similar to partnership pass-through under §702(b). Why other answers are wrong: (A) Ordinary income always—this would eliminate preferential treatment for dividends/capital gains; (C) Capital gain always—incorrect, character is preserved; (D) Beneficiary's situation—the character is determined at the trust level, not by beneficiary circumstances.",
+    "tip": "§652(b)/§662(b): Trust income RETAINS character when distributed (conduit principle). Dividends stay dividends, LTCG stays LTCG. Like partnership §702(b).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8653,8 +8653,8 @@ const questions = [
       "D": "Tax years when the estate has a loss"
     },
     "correctAnswer": "C",
-    "explanation": "Estates are not required to pay estimated taxes for any tax year ending before the date that is 2 years after the decedent's death. After that, normal estimated tax rules apply. Trusts must pay estimated taxes from the start.",
-    "tip": "Estates: No estimated tax for first 2 years. Trusts: Estimated tax required from year 1.",
+    "explanation": "Under IRC §6654(l), estates are exempt from estimated tax payment requirements for any tax year ending before the date that is 2 years after the decedent's date of death. This provides administrative relief during estate administration. After the 2-year period, normal estimated tax rules under §6654 apply. Trusts, however, receive NO such exemption and must make estimated tax payments from their first tax year. Why other answers are wrong: (A) Less than $1,000—this is a general safe harbor for individuals, not a special estate rule; (B) All tax years—the exemption is limited to the first 2 years; (D) Only loss years—the exemption is time-based, not income-based.",
+    "tip": "§6654(l): Estates = NO estimated tax for first 2 YEARS after death. Trusts = NO exemption, estimated tax required immediately. Key distinction!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8674,8 +8674,8 @@ const questions = [
       "D": "Much lower income levels"
     },
     "correctAnswer": "D",
-    "explanation": "Trusts and estates have extremely compressed tax brackets. They reach the 37% bracket at approximately $14,450 of taxable income (2024), compared to over $600,000 for single individuals. This creates incentive to distribute income to beneficiaries.",
-    "tip": "Trust brackets are compressed. 37% rate hits around $14K. Distribute to avoid high trust taxes!",
+    "explanation": "Under IRC §1(e), trusts and estates have extremely compressed tax brackets. They reach the highest 37% marginal rate at approximately $14,450 of taxable income (2024), compared to over $600,000 for single filers or $731,200 for married filing jointly. This dramatic compression creates strong incentive to distribute income to beneficiaries in lower brackets rather than accumulate it in the trust. The 3.8% NIIT threshold also kicks in at this low level. Why other answers are wrong: (A) Flat rate—trusts have progressive brackets, just compressed; (B) Higher income levels—the opposite is true; (C) Same levels—trust brackets are far more compressed than individual brackets.",
+    "tip": "§1(e) trust brackets: 37% rate at ~$14,450 vs. $600K+ for individuals. DISTRIBUTE to avoid trust-level tax! NIIT also hits at this level.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8695,8 +8695,8 @@ const questions = [
       "D": "Based on the trustee's designation"
     },
     "correctAnswer": "C",
-    "explanation": "Complex trusts use a two-tier system: First tier includes required current distributions (taxed to those beneficiaries first, up to their share of DNI). Second tier includes discretionary distributions (share remaining DNI). First tier has priority.",
-    "tip": "Complex trust tiers: Tier 1 = required distributions (first priority). Tier 2 = discretionary.",
+    "explanation": "Under IRC §662(a), complex trusts use a two-tier system for allocating DNI among beneficiaries: FIRST TIER (§662(a)(1)): Beneficiaries entitled to required current distributions receive their share of DNI first, up to the amount required to be distributed. SECOND TIER (§662(a)(2)): Any remaining DNI is allocated among beneficiaries receiving discretionary distributions, pro rata based on amounts received. First tier has absolute priority—they absorb DNI before second tier receives any allocation. Why other answers are wrong: (A) Equally—allocation is based on distribution amounts, not equal division; (B) Pro rata based on distributions—this is only partially correct (applies within tiers, but ignores the two-tier priority system); (D) Trustee designation—the tax law, not the trustee, determines allocation.",
+    "tip": "§662(a) two-tier system: Tier 1 (required distributions) absorbs DNI FIRST. Tier 2 (discretionary) gets remaining DNI pro rata. Critical for complex trusts!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8716,8 +8716,8 @@ const questions = [
       "D": "Unlimited if paid from gross income pursuant to the governing instrument"
     },
     "correctAnswer": "D",
-    "explanation": "Unlike individuals, trusts and estates can deduct charitable contributions without percentage limitations, provided the contribution is made from gross income and is authorized by the governing instrument. This is a significant tax planning opportunity.",
-    "tip": "Trust charitable deduction = unlimited (if from income per governing instrument). Better than individual rules!",
+    "explanation": "Under IRC §642(c), trusts and estates can deduct charitable contributions WITHOUT the percentage limitations that apply to individuals under §170. The requirements are: (1) The contribution must be paid from GROSS INCOME, and (2) The contribution must be authorized by the terms of the governing instrument. Unlike individuals (limited to 60%/30%/20% of AGI depending on the type of charity and contribution), trusts can deduct 100% of qualifying charitable contributions. This provides significant tax planning opportunities. Why other answers are wrong: (A) Not allowed—§642(c) specifically permits trust charitable deductions; (B) 60% of AGI—this is the individual limitation under §170, not applicable to trusts; (C) 30% of gross income—no such limitation exists for trusts.",
+    "tip": "§642(c): Trust charitable deduction = UNLIMITED (no % limits!) if: (1) from gross income, (2) per governing instrument. Much better than individual §170 limits!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8737,8 +8737,8 @@ const questions = [
       "D": "An estate to be treated as a trust"
     },
     "correctAnswer": "A",
-    "explanation": "Section 645 allows a qualified revocable trust (one that was treated as a grantor trust before death) to elect to be treated as part of the estate for income tax purposes. This allows fiscal year use and other estate benefits.",
-    "tip": "Section 645: Revocable trust can join estate for tax purposes. Gets estate benefits.",
+    "explanation": "Under IRC §645, a qualified revocable trust (QRT)—one that was treated as a grantor trust under §676 during the decedent's life due to the power to revoke—can elect to be treated as part of the estate for income tax purposes. This election provides several benefits: (1) The trust can use a fiscal year like an estate, (2) Only one Form 1041 need be filed for both entities, (3) Combined entities can take advantage of the estate's estimated tax exemption, (4) The $25,000 passive activity loss allowance may be available. Why other answers are wrong: (B) Avoid filing Form 1041—a Form 1041 must still be filed, just combined; (C) Estate income taxed to surviving spouse—no such election exists; (D) Estate treated as trust—the election works the opposite direction (trust joins estate).",
+    "tip": "§645: Revocable trust JOINS estate for tax purposes. Benefits: fiscal year, one Form 1041, estate's estimated tax exemption, possible PAL allowance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8758,8 +8758,8 @@ const questions = [
       "D": "Form 706 only"
     },
     "correctAnswer": "A",
-    "explanation": "Administration expenses can be deducted for either income tax purposes (Form 1041) or estate tax purposes (Form 706), but not both. A waiver statement must be filed if claiming the deduction on Form 1041.",
-    "tip": "Admin expenses: Choose 1041 OR 706, not both. File waiver for income tax deduction.",
+    "explanation": "Under IRC §642(g), administration expenses (executor fees, attorney fees, accountant fees, etc.) can be deducted for EITHER income tax purposes on Form 1041 OR estate tax purposes on Form 706, but NOT BOTH. To claim the deduction on Form 1041, the executor must file a waiver statement (under Reg. §1.642(g)-1) stating that the items have not been claimed for estate tax purposes and waiving the right to do so. The choice depends on which provides greater tax benefit (compare trust/estate rates vs. estate tax rates). Why other answers are wrong: (B) Both forms—§642(g) specifically prohibits double deduction; (C) Form 1041 only—expenses can alternatively be deducted on Form 706; (D) Form 706 only—expenses can alternatively be deducted on Form 1041.",
+    "tip": "§642(g): Admin expenses = Form 1041 OR Form 706, NOT BOTH. Must file waiver to claim on 1041. Strategic choice based on rates.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8779,8 +8779,8 @@ const questions = [
       "D": "Pass through to beneficiaries as itemized deductions"
     },
     "correctAnswer": "D",
-    "explanation": "In the final year, if deductions exceed income, the excess deductions pass through to beneficiaries who can claim them as itemized deductions (miscellaneous itemized deductions not subject to the 2% floor). Unused NOLs and capital loss carryovers also pass through.",
-    "tip": "Final year: Excess deductions, NOLs, capital losses pass to beneficiaries. Don't waste them!",
+    "explanation": "Under IRC §642(h), when an estate or trust terminates, certain unused tax attributes pass through to succeeding beneficiaries: (1) Excess deductions on termination—deductions exceeding gross income in the final year pass to beneficiaries as itemized deductions (not subject to the 2% AGI floor for miscellaneous deductions), (2) Unused NOLs and capital loss carryovers also pass through. These allow beneficiaries to utilize deductions that would otherwise be lost. The pass-through occurs on Schedule K-1 of the final Form 1041. Why other answers are wrong: (A) Carry back—trusts cannot carry back these amounts to prior years; (B) Refunded—there's no refund mechanism for excess deductions; (C) Lost—§642(h) specifically preserves these deductions for beneficiaries.",
+    "tip": "§642(h) final year: Excess deductions, NOLs, capital losses → pass to beneficiaries on K-1. NOT lost! Itemized deduction (no 2% floor).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8800,8 +8800,8 @@ const questions = [
       "D": "Simple trusts only"
     },
     "correctAnswer": "B",
-    "explanation": "The throwback rules were repealed for domestic trusts in 1997 but continue to apply to foreign trusts. These rules tax accumulation distributions (distributions exceeding current DNI) as if they had been distributed in prior years when earned.",
-    "tip": "Throwback rules: Only foreign trusts now. Domestic trusts exempt since 1997.",
+    "explanation": "Under IRC §§665-668, the 'throwback rules' apply to accumulation distributions—distributions that exceed the current year's DNI (i.e., distributions of previously accumulated income). These rules were REPEALED for domestic trusts by the Taxpayer Relief Act of 1997 but CONTINUE TO APPLY to foreign trusts. The rules tax the accumulation distribution to the beneficiary as if it had been distributed in the years when the income was actually earned (using the beneficiary's marginal rates from those years plus an interest charge). Why other answers are wrong: (A) All trusts—only foreign trusts are subject post-1997; (C) Only domestic trusts—the opposite; domestic trusts are exempt; (D) Simple trusts only—simple trusts cannot accumulate income by definition, so the rules never applied to them.",
+    "tip": "§§665-668 throwback: Repealed for DOMESTIC trusts (1997). Still applies to FOREIGN trusts. Taxes accumulated income as if distributed when earned.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8821,8 +8821,8 @@ const questions = [
       "D": "Taxed as a separate entity"
     },
     "correctAnswer": "A",
-    "explanation": "A revocable trust is a grantor trust during the grantor's lifetime because the grantor retains the power to revoke. All income is reported on the grantor's individual return. Upon death, it may become a separate taxpayer or elect Section 645 treatment.",
-    "tip": "Revocable trust = grantor trust while alive. Power to revoke = grantor trust status.",
+    "explanation": "Under IRC §676, a trust is a grantor trust if the grantor retains the power to revoke the trust and revest the corpus in the grantor. Since a revocable trust by definition gives the grantor this power, it is automatically a grantor trust during the grantor's lifetime. All income, deductions, and credits are reported on the grantor's individual Form 1040 as if they personally owned the assets. Upon the grantor's death, the power to revoke terminates, and the trust either becomes a separate taxpayer or can make a §645 election to join the estate. Why other answers are wrong: (B) Tax-exempt—revocable trusts are not exempt; income is taxable to the grantor; (C) Estate rates—during the grantor's life, individual rates apply through the grantor's return; (D) Separate entity—grantor trusts are disregarded for income tax purposes.",
+    "tip": "§676: Power to revoke = grantor trust. Revocable trust during life → grantor reports ALL income on Form 1040. At death → separate entity or §645 election.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8842,8 +8842,8 @@ const questions = [
       "D": "Over two tax years equally"
     },
     "correctAnswer": "C",
-    "explanation": "Section 663(b) allows complex trusts and estates to elect to treat distributions made within 65 days after year-end as if made on the last day of the preceding tax year. This provides flexibility in managing DNI and distribution deductions.",
-    "tip": "65-day rule: Distributions in first 65 days can be treated as prior year. Great planning tool!",
+    "explanation": "Under IRC §663(b), complex trusts (not simple trusts) and estates may elect to treat distributions made within 65 days after the close of the tax year as if made on the last day of the preceding tax year. This '65-day rule' provides crucial tax planning flexibility—fiduciaries can see the final year-end numbers before deciding how much to distribute to utilize DNI efficiently. The election must be made on a timely filed return (including extensions) and applies to the amount specified. Why other answers are wrong: (A) When beneficiary requests—the timing election is made by the fiduciary, not the beneficiary; (B) Following tax year—the election treats distributions as made in the PRIOR year, not the following year; (D) Over two years equally—distributions are treated as made entirely in the prior year, not split.",
+    "tip": "§663(b) 65-day rule: Distributions in first 65 days of Year 2 can be treated as made in Year 1. Election on return. Key planning tool for DNI management!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8863,8 +8863,8 @@ const questions = [
       "D": "Deductible by the estate"
     },
     "correctAnswer": "A",
-    "explanation": "Specific bequests (specific amounts of money or specific property) paid in three or fewer installments are excluded from DNI and are not taxable to the beneficiary. They are distributions of corpus, not income.",
-    "tip": "Specific bequests (≤3 installments) = not income to beneficiary. Excluded from DNI.",
+    "explanation": "Under IRC §663(a)(1), specific bequests—gifts or bequests of a specific sum of money or specific property—are excluded from the calculation of DNI and are NOT taxable income to the beneficiary, provided the bequest is payable in three or fewer installments. These represent distributions of corpus (principal), not income. The estate receives no distribution deduction for specific bequests. Examples: '$50,000 to my nephew' or 'my diamond ring to my daughter.' Why other answers are wrong: (B) Capital gains tax—specific bequests are not subject to capital gains since they're not sales; (C) Taxable income—§663(a)(1) specifically excludes these from DNI and beneficiary income; (D) Deductible by estate—the estate does not receive a distribution deduction for specific bequests.",
+    "tip": "§663(a)(1): Specific bequests (sum/property) in ≤3 installments = EXCLUDED from DNI. NOT income to beneficiary. NO distribution deduction to estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -8884,8 +8884,8 @@ const questions = [
       "D": "Power to distribute income among charitable beneficiaries"
     },
     "correctAnswer": "A",
-    "explanation": "Grantor trust status is triggered when the grantor retains certain powers, including: power to revoke, power to control beneficial enjoyment, certain reversionary interests, power to substitute assets, and certain administrative powers.",
-    "tip": "Grantor trust triggers: Revoke, control who gets what, reversions >5%, borrow without security, swap assets.",
+    "explanation": "Under IRC §§671-679, specific powers retained by the grantor trigger grantor trust status. Key triggers include: §676—power to revoke, §674—power to control beneficial enjoyment (who gets income/corpus and when), §673—reversionary interest exceeding 5% of trust value, §675—certain administrative powers (power to borrow without adequate security, power to substitute assets of equivalent value, voting stock of controlled corporation). Why other answers are wrong: (B) Invade corpus for health—this is an ascertainable standard that does NOT trigger grantor trust status; (C) Replace trustee with independent trustee—replacing with an INDEPENDENT trustee is generally acceptable; (D) Distribute among charitable beneficiaries—charitable distribution powers do not create grantor trust status.",
+    "tip": "Grantor trust triggers (§§671-679): §676 revoke, §674 control enjoyment, §673 reversion >5%, §675 borrow/swap assets. Ascertainable standards (HEMS) = SAFE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8905,8 +8905,8 @@ const questions = [
       "D": "$29,500"
     },
     "correctAnswer": "C",
-    "explanation": "DNI = Taxable income ($30,000) - Capital gains allocated to corpus ($5,000) + Tax-exempt interest net of expenses ($4,000 - $500 = $3,500) = $28,500. Capital gains in corpus are excluded; tax-exempt interest is added back.",
-    "tip": "DNI: Start with TI, subtract corpus capital gains, add back net tax-exempt income.",
+    "explanation": "Per IRC §643(a), DNI is calculated by starting with taxable income and making specific adjustments: DNI = Taxable income - Capital gains allocated to corpus + Tax-exempt interest (net of §265 allocable expenses). Calculation: $30,000 (taxable income) - $5,000 (capital gains in corpus, excluded from DNI) + $3,500 ($4,000 tax-exempt interest - $500 allocable expenses) = $28,500. Capital gains allocated to corpus are excluded because they won't be distributed; tax-exempt interest is added back because it can be distributed and must be tracked. Why other answers are wrong: (A) $34,000—this adds tax-exempt interest without subtracting capital gains; (B) $25,000—this subtracts capital gains but forgets to add tax-exempt interest; (D) $29,500—computational error.",
+    "tip": "§643(a) DNI formula: Taxable income - corpus capital gains + net tax-exempt interest. $30K - $5K + ($4K - $0.5K) = $28,500.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -8926,8 +8926,8 @@ const questions = [
       "D": "Fully deductible by the trust"
     },
     "correctAnswer": "A",
-    "explanation": "Trusts are subject to the same passive activity loss limitations as individuals. Passive losses can only offset passive income and cannot be distributed to beneficiaries. Suspended losses are released when the activity is disposed of.",
-    "tip": "Trusts: PAL rules apply at trust level. Passive losses don't pass through to beneficiaries.",
+    "explanation": "Under IRC §469, trusts and estates are subject to the same passive activity loss (PAL) limitations as individuals. Key rules: (1) Passive losses can only offset passive income, (2) Excess passive losses are suspended and carried forward at the trust level, (3) Suspended passive losses are NOT distributed to beneficiaries—they remain with the trust, (4) When the trust disposes of its entire interest in a passive activity in a fully taxable transaction, all suspended losses are released and become deductible. Why other answers are wrong: (B) Always passed through—passive losses stay at the trust level; (C) Converted to capital losses—no such conversion exists; (D) Fully deductible—§469 limitations apply to trusts just like individuals.",
+    "tip": "§469 PAL: Trusts = SAME rules as individuals. Passive losses stay at trust level, NOT distributed. Released only on full disposition of activity.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8947,8 +8947,8 @@ const questions = [
       "D": "$200,000"
     },
     "correctAnswer": "B",
-    "explanation": "For trusts and estates, the 3.8% NIIT applies to the lesser of undistributed net investment income or the excess of AGI over the threshold where the highest tax bracket begins (approximately $14,450 for 2024). This is much lower than individual thresholds.",
-    "tip": "Trust NIIT: Threshold = where 37% bracket starts (~$14K). Much lower than individual $200K-$250K.",
+    "explanation": "Under IRC §1411(a)(2), trusts and estates are subject to the 3.8% Net Investment Income Tax (NIIT) on the LESSER of: (1) Undistributed net investment income, or (2) The excess of AGI over the threshold where the highest income tax bracket (37%) begins—approximately $14,450 for 2024 (adjusted annually for inflation). This is dramatically lower than individual thresholds ($200,000 for single, $250,000 for MFJ). The compressed trust brackets mean NIIT hits almost immediately on undistributed investment income, creating incentive to distribute. Why other answers are wrong: (A) $250,000—this is the MFJ individual threshold, not trusts; (C) $14,450—this is approximately correct but the answer asks for the principle, not the dollar amount; (D) $200,000—this is the single individual threshold.",
+    "tip": "§1411(a)(2) Trust NIIT: 3.8% on lesser of (1) undistributed NII or (2) AGI over start of 37% bracket (~$14,450). MUCH lower than individual $200K-$250K!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -8968,8 +8968,8 @@ const questions = [
       "D": "No personal exemption"
     },
     "correctAnswer": "B",
-    "explanation": "A qualified disability trust (established for the benefit of a disabled individual under 65) is allowed a personal exemption equal to that available to individual taxpayers, rather than the standard $100 complex trust exemption. This provides significant tax savings.",
-    "tip": "Qualified disability trust = individual exemption amount. Better than normal $100 complex trust exemption.",
+    "explanation": "Under IRC §642(b)(2)(C), a qualified disability trust (QDisT) receives a personal exemption equal to the exemption amount available to individual taxpayers under §151, rather than the standard $100 complex trust exemption. Requirements for QDisT status: (1) Established solely for the benefit of a disabled individual under age 65, (2) All beneficiaries must be disabled, (3) Meets requirements of 42 U.S.C. §1396p(c)(2)(B)(iv). This provides substantial tax savings compared to regular complex trusts. Why other answers are wrong: (A) $100—this is the normal complex trust exemption, not QDisT; (C) Unlimited exemptions—no trust receives unlimited exemptions; (D) No exemption—QDisTs specifically receive the individual exemption amount.",
+    "tip": "§642(b)(2)(C) QDisT: Personal exemption = INDIVIDUAL amount (vs. $100 complex trust). Requires: beneficiary disabled + under 65. Significant tax savings!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -8989,8 +8989,8 @@ const questions = [
       "D": "All income must be distributed to one beneficiary"
     },
     "correctAnswer": "C",
-    "explanation": "The separate share rule treats substantially independent shares of a trust as separate trusts for purposes of computing DNI. This prevents one beneficiary's distribution from carrying out DNI that should be taxable to another beneficiary.",
-    "tip": "Separate share rule: Each share gets own DNI. Prevents unfair DNI allocation among beneficiaries.",
+    "explanation": "Under IRC §663(c) and Reg. §1.663(c)-1, the separate share rule applies when a trust or estate has substantially separate and independent shares for different beneficiaries. The rule treats each share as a separate trust for purposes of computing DNI. This prevents inequitable results where one beneficiary's distribution could carry out DNI that economically belongs to another beneficiary. Example: A trust with two equal shares for Child A and Child B—if only Child A receives distributions in Year 1, only half the DNI should be taxable to Child A. Why other answers are wrong: (A) Simple trust—the separate share rule doesn't change classification; (B) Separate returns—one Form 1041 is still filed; (D) All to one beneficiary—the rule allows proper allocation among multiple beneficiaries.",
+    "tip": "§663(c) separate share rule: Each beneficiary's separate share = treated as own trust for DNI. Prevents unfair DNI shifting between beneficiaries.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9010,8 +9010,8 @@ const questions = [
       "D": "A step-up in basis equal to the IRD"
     },
     "correctAnswer": "A",
-    "explanation": "Section 691(c) allows a deduction for the estate tax paid on IRD items. Since IRD is included in both the estate (for estate tax) and taxable income (to recipient), the deduction mitigates double taxation. It's an itemized deduction not subject to the 2% floor.",
-    "tip": "IRD deduction: Deduct estate tax paid on IRD. Reduces double taxation on IRD items.",
+    "explanation": "Under IRC §691(c), when a beneficiary or estate receives Income in Respect of a Decedent (IRD), they may deduct the federal estate tax attributable to that IRD item. This addresses the potential double taxation of IRD—it's included in the gross estate for estate tax AND taxable to the recipient as income. The §691(c) deduction is taken as an itemized deduction (or above-the-line for estates/trusts) and is NOT subject to the 2% AGI floor. The deduction equals the estate tax that would not have been paid if the IRD had been excluded from the gross estate. Why other answers are wrong: (B) Capital gain treatment—IRD retains its ordinary income character; (C) Full exclusion—IRD is taxable, though partially offset by §691(c) deduction; (D) Step-up in basis—IRD specifically does NOT receive stepped-up basis under §1014.",
+    "tip": "§691(c): Deduction for estate tax paid on IRD. Prevents double tax (estate tax + income tax). NO 2% floor. IRD still taxable but partially offset.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9031,8 +9031,8 @@ const questions = [
       "D": "Accumulate income for at least 5 years"
     },
     "correctAnswer": "C",
-    "explanation": "A QSST is permitted to hold S corporation stock. Requirements include: (1) one current income beneficiary, (2) all income must be distributed currently to that beneficiary, (3) corpus distributions can only go to the income beneficiary during their lifetime.",
-    "tip": "QSST: One beneficiary, all income distributed currently. Can hold S corp stock.",
+    "explanation": "Under IRC §1361(d), a Qualified Subchapter S Trust (QSST) is one of two types of trusts (along with ESBTs) permitted to hold S corporation stock. QSST requirements: (1) ONLY ONE current income beneficiary (who must be a U.S. citizen or resident), (2) ALL income must be distributed (or required to be distributed) CURRENTLY to that beneficiary, (3) Corpus distributions during the beneficiary's lifetime can only go to that beneficiary, (4) The beneficiary's interest must terminate on death or trust termination, (5) Beneficiary must make the QSST election. The S corp income is taxed to the beneficiary, not the trust. Why other answers are wrong: (A) Grantor trust—QSSTs are not grantor trusts; (B) Multiple beneficiaries—only ONE income beneficiary allowed; (D) Accumulate income—all income must be distributed currently.",
+    "tip": "§1361(d) QSST: ONE beneficiary + ALL income distributed currently + beneficiary makes election. S corp income taxed to beneficiary. Contrast with ESBT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9052,8 +9052,8 @@ const questions = [
       "D": "The trustee's discretion"
     },
     "correctAnswer": "B",
-    "explanation": "Trust depreciation is allocated between the fiduciary and beneficiaries based on income allocable to each under the trust instrument or local law. If income is distributed, beneficiaries get proportionate depreciation; if retained, the trust claims it.",
-    "tip": "Trust depreciation follows income. Distributed income = beneficiary's depreciation share.",
+    "explanation": "Under IRC §167(d) and Reg. §1.167(h)-1, depreciation on trust property must be allocated between the trust and its beneficiaries in the same proportion as income is allocable to each. The trust instrument or state law determines how income is allocated; depreciation follows that same allocation. Example: If 60% of trust income is distributable to beneficiaries and 40% retained by the trust, then 60% of depreciation is allocated to beneficiaries and 40% to the trust. This prevents mismatch between income and depreciation deductions. Why other answers are wrong: (A) Trust agreement only—depreciation allocation follows income allocation, which may be determined by law; (C) Equal shares—allocation is based on income proportions, not equality; (D) Trustee's discretion—the allocation is determined by income flow, not discretionary.",
+    "tip": "§167(d): Trust depreciation FOLLOWS income allocation. Distributed income = beneficiary's depreciation share. Retained income = trust's depreciation share.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9073,8 +9073,8 @@ const questions = [
       "D": "The highest marginal individual rate"
     },
     "correctAnswer": "D",
-    "explanation": "The S corporation portion of an ESBT is taxed as a separate trust and is subject to tax at the highest marginal individual rate (37%). This is different from QSSTs where income flows through to the beneficiary at their rate.",
-    "tip": "ESBT S corp income = 37% flat rate. Costly but flexible. QSST may be better if one beneficiary.",
+    "explanation": "Under IRC §1361(e), an Electing Small Business Trust (ESBT) can hold S corporation stock. The ESBT is treated as having TWO separate trusts for tax purposes: (1) The S corporation portion—taxed at the HIGHEST marginal individual rate (currently 37%) on all S corp items, and (2) The non-S portion—taxed under normal trust rules. The 37% flat rate applies to ALL S corp income, regardless of amount—there's no benefit from lower brackets. This makes ESBTs more expensive than QSSTs but more flexible (can have multiple beneficiaries, accumulate income). Why other answers are wrong: (A) Capital gains rates—ordinary income is taxed at 37%, though capital gains within the S corp may get preferential rates; (B) Normal trust rates—the S portion is specifically taxed at the highest rate, not normal brackets; (C) Beneficiaries' rates—ESBT S corp income is taxed at the trust level, not passed to beneficiaries.",
+    "tip": "§1361(e) ESBT: S corp portion taxed at FLAT 37%. More expensive than QSST but more flexible (multiple beneficiaries, can accumulate). Strategic choice.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9094,8 +9094,8 @@ const questions = [
       "D": "Always passed through entirely to beneficiaries"
     },
     "correctAnswer": "C",
-    "explanation": "Section 199A applies to trusts. QBI, W-2 wages, and UBIA of qualified property are allocated between the trust and beneficiaries based on the relative portions of DNI allocated to each. Each then calculates their own Section 199A deduction.",
-    "tip": "Trust QBI: Allocated like other income. Beneficiaries and trust each calculate own 199A deduction.",
+    "explanation": "Under IRC §199A and Reg. §1.199A-6, trusts and estates are eligible for the qualified business income (QBI) deduction. The calculation involves: (1) QBI, W-2 wages, and UBIA of qualified property are allocated between the trust and beneficiaries based on the relative share of DNI allocable to each, (2) Each party (trust and each beneficiary) then independently calculates their own §199A deduction based on their allocated amounts and their own taxable income. The deduction is NOT simply passed through—each taxpayer applies their own limitations. Why other answers are wrong: (A) Not available—§199A explicitly includes trusts and estates; (B) Retained income only—both retained and distributed portions generate QBI, allocated accordingly; (D) Entirely to beneficiaries—allocation follows DNI, not automatic pass-through.",
+    "tip": "§199A for trusts: QBI/wages/UBIA allocated between trust and beneficiaries per DNI proportions. EACH calculates own deduction with own limits. NOT simple pass-through.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9115,8 +9115,8 @@ const questions = [
       "D": "Deductible but only against capital gains"
     },
     "correctAnswer": "C",
-    "explanation": "Section 267 disallows losses on sales between related parties, including sales between a trust and its beneficiaries. Additionally, gains on such sales may be treated as ordinary income if the property is depreciable to the buyer.",
-    "tip": "Trust-beneficiary sales: Losses disallowed (Section 267). Gains may be ordinary if depreciable.",
+    "explanation": "Under IRC §267, losses on sales or exchanges of property between related parties are disallowed. Per §267(b)(6), a fiduciary (trust) and a beneficiary are related parties. The loss is permanently disallowed at the time of sale, though the buyer may be able to offset future gain on resale to a third party (under §267(d)). Additionally, under §267(b)(13), if the buyer is a related party and the property is depreciable in their hands, any GAIN is treated as ordinary income rather than capital gain. Why other answers are wrong: (A) Deferred—under §267, losses are disallowed (not deferred like §1031); (B) Fully deductible—§267 specifically disallows related party losses; (D) Only against capital gains—the loss is completely disallowed, not limited to capital gains offset.",
+    "tip": "§267: Trust-beneficiary = related parties. Losses DISALLOWED. Gains may be ordinary if property depreciable to buyer. Watch for disguised losses!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9136,8 +9136,8 @@ const questions = [
       "D": "Gain or loss based on FMV"
     },
     "correctAnswer": "A",
-    "explanation": "Generally, when a trust terminates and distributes property in kind, no gain or loss is recognized by the trust, and beneficiaries take a carryover basis. However, the trust can elect to recognize gain or loss and give beneficiaries a FMV basis.",
-    "tip": "Trust termination: Generally no gain/loss, carryover basis. Can elect gain/loss recognition.",
+    "explanation": "Under IRC §643(e), when a trust terminates and distributes property in kind to beneficiaries, the default rule is: (1) No gain or loss recognized by the trust, and (2) Beneficiaries receive a CARRYOVER BASIS (the trust's basis transfers to them). However, under §643(e)(3), the trust may ELECT to recognize gain or loss on the distribution, treating it as if sold at FMV. If elected, beneficiaries receive FMV basis. This election is useful if the trust has losses to use or if beneficiaries would prefer a higher basis. Why other answers are wrong: (B) Gain only if FMV > basis—without election, no gain is recognized regardless of values; (C) Loss only if basis > FMV—without election, no loss is recognized; (D) Gain or loss based on FMV—only if the §643(e)(3) election is made.",
+    "tip": "§643(e) trust termination: DEFAULT = no gain/loss + carryover basis. ELECTION §643(e)(3) = recognize gain/loss + FMV basis to beneficiaries. Strategic choice!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
