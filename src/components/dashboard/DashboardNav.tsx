@@ -179,7 +179,7 @@ function NavDropdown({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-[var(--card)] rounded-lg shadow-lg border border-[var(--border)] py-1 z-50">
+        <div className="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-[var(--card)] rounded-lg shadow-lg border border-[var(--border)] py-1 z-50 max-h-80 overflow-y-auto">
           {items.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -208,6 +208,27 @@ export default function DashboardNav() {
   const pathname = usePathname();
   const { user, signOut } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // Track which mobile sections are expanded (all collapsed by default)
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+
+  const toggleMobileSection = (label: string) => {
+    setExpandedSections(prev => {
+      const next = new Set(prev);
+      if (next.has(label)) {
+        next.delete(label);
+      } else {
+        next.add(label);
+      }
+      return next;
+    });
+  };
+
+  // Reset expanded sections when menu closes
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      setExpandedSections(new Set());
+    }
+  }, [mobileMenuOpen]);
 
   return (
     <nav className="bg-[var(--background)] border-b border-[var(--border)] sticky top-0 z-50">
@@ -305,10 +326,10 @@ export default function DashboardNav() {
           </div>
         </div>
 
-        {/* Mobile Navigation - organized by categories */}
+        {/* Mobile Navigation - organized by categories with collapsible sections */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[var(--border)]">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 border-t border-[var(--border)] max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <div className="flex flex-col space-y-2">
               {/* Overview */}
               <div>
                 {standaloneItems.map((item) => {
@@ -331,38 +352,66 @@ export default function DashboardNav() {
                 })}
               </div>
 
-              {/* Grouped sections */}
-              {groupedItems.map((group) => (
-                <div key={group.label} className="border-t border-[var(--border)] pt-3">
-                  <div className="flex items-center space-x-2 px-3 py-2 text-xs font-semibold text-[var(--muted)] uppercase tracking-wider">
-                    {icons[group.icon]}
-                    <span>{group.label}</span>
+              {/* Grouped sections - collapsible */}
+              {groupedItems.map((group) => {
+                const isExpanded = expandedSections.has(group.label);
+                const hasActiveChild = group.items.some(item => pathname === item.href);
+
+                return (
+                  <div key={group.label} className="border-t border-[var(--border)] pt-2">
+                    <button
+                      onClick={() => toggleMobileSection(group.label)}
+                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg transition-colors ${
+                        hasActiveChild
+                          ? "bg-[var(--primary)]/10 text-[var(--primary)]"
+                          : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                      }`}
+                    >
+                      <div className="flex items-center space-x-2">
+                        {icons[group.icon]}
+                        <span className="text-sm font-semibold">{group.label}</span>
+                        {hasActiveChild && (
+                          <span className="w-2 h-2 rounded-full bg-[var(--primary)]"></span>
+                        )}
+                      </div>
+                      <span className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}>
+                        {icons.chevronDown}
+                      </span>
+                    </button>
+
+                    {/* Collapsible content with smooth animation */}
+                    <div
+                      className={`overflow-hidden transition-all duration-200 ease-in-out ${
+                        isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="space-y-0.5 pt-1 pb-1">
+                        {group.items.map((item) => {
+                          const isActive = pathname === item.href;
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`flex items-center space-x-3 px-3 py-2.5 ml-4 rounded-lg text-sm font-medium transition-colors ${
+                                isActive
+                                  ? "bg-[var(--primary)] text-white"
+                                  : "text-[var(--foreground)] hover:bg-[var(--card)]"
+                              }`}
+                            >
+                              {icons[item.icon]}
+                              <span>{item.label}</span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                  <div className="space-y-0.5">
-                    {group.items.map((item) => {
-                      const isActive = pathname === item.href;
-                      return (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={`flex items-center space-x-3 px-3 py-2.5 ml-2 rounded-lg text-sm font-medium transition-colors ${
-                            isActive
-                              ? "bg-[var(--primary)] text-white"
-                              : "text-[var(--foreground)] hover:bg-[var(--card)]"
-                          }`}
-                        >
-                          {icons[item.icon]}
-                          <span>{item.label}</span>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
 
               {/* Settings */}
-              <div className="border-t border-[var(--border)] pt-3">
+              <div className="border-t border-[var(--border)] pt-2">
                 <Link
                   href={settingsItem.href}
                   onClick={() => setMobileMenuOpen(false)}

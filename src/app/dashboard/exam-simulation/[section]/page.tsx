@@ -28,6 +28,23 @@ interface ExamResult {
  timeSpent: number;
 }
 
+interface SavedExamSession {
+ section: string;
+ selectedConfig: keyof typeof EXAM_CONFIGS;
+ questionIds: string[];
+ currentIndex: number;
+ answers: Record<number, 'A' | 'B' | 'C' | 'D' | null>;
+ flagged: number[];
+ timeRemaining: number;
+ questionTimes: Record<number, number>;
+ tbsQuestionIds: string[];
+ currentTbsIndex: number;
+ examState: ExamState;
+ savedAt: string;
+}
+
+const SAVED_EXAM_SESSION_KEY = 'cpa-exam-simulation-session';
+
 interface TBSResult {
  tbs: TBSQuestion;
  attempt: TBSAttempt;
@@ -364,6 +381,21 @@ export default function ExamSimulationSectionPage() {
  // Timer ref
  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+ // Refs for auto-save
+ const examStateRef = useRef<ExamState>('setup');
+ const questionsRef = useRef<PracticeQuestion[]>([]);
+ const answersRef = useRef<Record<number, 'A' | 'B' | 'C' | 'D' | null>>({});
+ const flaggedRef = useRef<Set<number>>(new Set());
+ const timeRemainingRef = useRef(0);
+ const currentIndexRef = useRef(0);
+ const questionTimesRef = useRef<Record<number, number>>({});
+ const tbsQuestionsRef = useRef<TBSQuestion[]>([]);
+ const currentTbsIndexRef = useRef(0);
+ const selectedConfigRef = useRef<keyof typeof EXAM_CONFIGS>('mini');
+
+ // Saved session state
+ const [savedSession, setSavedSession] = useState<SavedExamSession | null>(null);
+
  const hasQuestions = sectionHasQuestions(section);
  const totalAvailable = getQuestionsBySection(section).length;
  const availableTBS = getExamTBSBySection(section);
@@ -388,6 +420,124 @@ export default function ExamSimulationSectionPage() {
  if (timerRef.current) clearInterval(timerRef.current);
  };
  }, [examState, timeRemaining]);
+
+ // Check for saved session on mount
+ useEffect(() => {
+   const saved = localStorage.getItem(SAVED_EXAM_SESSION_KEY);
+   if (saved) {
+     try {
+       const parsed: SavedExamSession = JSON.parse(saved);
+       if (parsed.section === section) {
+         setSavedSession(parsed);
+       }
+     } catch {
+       localStorage.removeItem(SAVED_EXAM_SESSION_KEY);
+     }
+   }
+ }, [section]);
+
+ // Keep refs in sync with state for auto-save
+ useEffect(() => {
+   examStateRef.current = examState;
+   questionsRef.current = questions;
+   answersRef.current = answers;
+   flaggedRef.current = flagged;
+   timeRemainingRef.current = timeRemaining;
+   currentIndexRef.current = currentIndex;
+   questionTimesRef.current = questionTimes;
+   tbsQuestionsRef.current = tbsQuestions;
+   currentTbsIndexRef.current = currentTbsIndex;
+   selectedConfigRef.current = selectedConfig;
+ }, [examState, questions, answers, flagged, timeRemaining, currentIndex, questionTimes, tbsQuestions, currentTbsIndex, selectedConfig]);
+
+ // Auto-save session when navigating away or closing tab
+ useEffect(() => {
+   const saveExamSession = () => {
+     const state = examStateRef.current;
+     // Only save if exam is in progress (not setup or results)
+     if (state === 'setup' || state === 'results' || questionsRef.current.length === 0) {
+       return;
+     }
+
+     const session: SavedExamSession = {
+       section,
+       selectedConfig: selectedConfigRef.current,
+       questionIds: questionsRef.current.map(q => q.id),
+       currentIndex: currentIndexRef.current,
+       answers: answersRef.current,
+       flagged: Array.from(flaggedRef.current),
+       timeRemaining: timeRemainingRef.current,
+       questionTimes: questionTimesRef.current,
+       tbsQuestionIds: tbsQuestionsRef.current.map(t => t.id),
+       currentTbsIndex: currentTbsIndexRef.current,
+       examState: state,
+       savedAt: new Date().toISOString(),
+     };
+     localStorage.setItem(SAVED_EXAM_SESSION_KEY, JSON.stringify(session));
+   };
+
+   const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+     const state = examStateRef.current;
+     if (state !== 'setup' && state !== 'results' && questionsRef.current.length > 0) {
+       saveExamSession();
+       e.preventDefault();
+       e.returnValue = '';
+     }
+   };
+
+   window.addEventListener('beforeunload', handleBeforeUnload);
+
+   return () => {
+     window.removeEventListener('beforeunload', handleBeforeUnload);
+     saveExamSession();
+   };
+ }, [section]);
+
+ // Resume saved session
+ const resumeExamSession = () => {
+   if (!savedSession) return;
+
+   const allQuestions = getQuestionsBySection(section);
+   const resumedQuestions = savedSession.questionIds
+     .map(id => allQuestions.find(q => q.id === id))
+     .filter((q): q is PracticeQuestion => q !== undefined);
+
+   if (resumedQuestions.length === 0) {
+     localStorage.removeItem(SAVED_EXAM_SESSION_KEY);
+     setSavedSession(null);
+     return;
+   }
+
+   // Resume TBS if any
+   const resumedTBS = savedSession.tbsQuestionIds
+     .map(id => availableTBS.find(t => t.id === id))
+     .filter((t): t is TBSQuestion => t !== undefined);
+
+   setSelectedConfig(savedSession.selectedConfig);
+   setQuestions(resumedQuestions);
+   setCurrentIndex(savedSession.currentIndex);
+   setAnswers(savedSession.answers);
+   setFlagged(new Set(savedSession.flagged));
+   setTimeRemaining(savedSession.timeRemaining);
+   setQuestionTimes(savedSession.questionTimes);
+   setTbsQuestions(resumedTBS);
+   setCurrentTbsIndex(savedSession.currentTbsIndex);
+   setQuestionStartTime(Date.now());
+   setExamState(savedSession.examState);
+   setSavedSession(null);
+   localStorage.removeItem(SAVED_EXAM_SESSION_KEY);
+ };
+
+ // Discard saved session
+ const discardExamSession = () => {
+   localStorage.removeItem(SAVED_EXAM_SESSION_KEY);
+   setSavedSession(null);
+ };
+
+ // Clear saved session (when exam completes)
+ const clearSavedExamSession = () => {
+   localStorage.removeItem(SAVED_EXAM_SESSION_KEY);
+ };
 
  const handlePause = () => {
  recordQuestionTime();
@@ -628,6 +778,7 @@ export default function ExamSimulationSectionPage() {
  }
 
  setIsSubmitting(false);
+ clearSavedExamSession();
  setExamState('results');
  }, [questions, answers, questionTimes, user, supabase, selectedConfig, timeRemaining, tbsResults, section, onStudySessionLogged, onPracticeSessionCompleted]);
 
@@ -723,6 +874,41 @@ export default function ExamSimulationSectionPage() {
  </div>
  </div>
  </div>
+
+ {/* Saved Session Banner */}
+ {savedSession && (
+   <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-xl p-4">
+     <div className="flex items-center justify-between">
+       <div className="flex items-center space-x-3">
+         <div className="w-10 h-10 bg-amber-100 dark:bg-amber-800 rounded-lg flex items-center justify-center">
+           <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+           </svg>
+         </div>
+         <div>
+           <h3 className="font-semibold text-amber-800 dark:text-amber-200">Resume Previous Exam</h3>
+           <p className="text-sm text-amber-600 dark:text-amber-400">
+             {EXAM_CONFIGS[savedSession.selectedConfig].label} • {Object.keys(savedSession.answers).length}/{savedSession.questionIds.length} answered • {formatTime(savedSession.timeRemaining)} remaining
+           </p>
+         </div>
+       </div>
+       <div className="flex items-center space-x-2">
+         <button
+           onClick={discardExamSession}
+           className="px-4 py-2 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-800 rounded-lg transition-colors"
+         >
+           Discard
+         </button>
+         <button
+           onClick={resumeExamSession}
+           className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
+         >
+           Resume
+         </button>
+       </div>
+     </div>
+   </div>
+ )}
 
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
  <h2 className="text-lg font-semibold text-[var(--foreground)] mb-6">Select Exam Length</h2>

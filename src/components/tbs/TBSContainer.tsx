@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { TBSQuestion, TBSAttempt, UserResponse } from "@/lib/data/tbs/types";
 import TBSHeader from "./TBSHeader";
 import TBSInstructions from "./TBSInstructions";
@@ -124,6 +124,86 @@ export default function TBSContainer({
  feedback: string;
  }>;
  } | null>(null);
+
+ // Refs for auto-save on navigate away
+ const responsesRef = useRef<Record<string, UserResponse>>({});
+ const elapsedSecondsRef = useRef(0);
+ const isSubmittedRef = useRef(false);
+ const scratchPadNotesRef = useRef("");
+
+ // Keep refs in sync
+ useEffect(() => {
+   responsesRef.current = responses;
+   elapsedSecondsRef.current = elapsedSeconds;
+   isSubmittedRef.current = isSubmitted;
+   scratchPadNotesRef.current = scratchPadNotes;
+ }, [responses, elapsedSeconds, isSubmitted, scratchPadNotes]);
+
+ // Auto-save session when navigating away - disabled in review mode
+ useEffect(() => {
+   if (reviewMode) return;
+
+   const saveSessionOnExit = async () => {
+     // Don't save if already submitted or no user
+     if (isSubmittedRef.current || !user || !supabase) return;
+
+     // Don't save if no responses
+     if (Object.keys(responsesRef.current).length === 0) return;
+
+     try {
+       const attemptId = crypto.randomUUID();
+       await supabase.from("tbs_attempts").upsert({
+         id: attemptId,
+         user_id: user.id,
+         tbs_id: tbs.id,
+         section: tbs.section,
+         started_at: startTime.toISOString(),
+         time_spent_seconds: elapsedSecondsRef.current,
+         responses: responsesRef.current,
+         is_complete: false,
+       }, {
+         onConflict: 'user_id,tbs_id',
+         ignoreDuplicates: false,
+       });
+
+       // Save scratch pad notes if any
+       if (scratchPadNotesRef.current.trim()) {
+         await supabase.from("question_notes").upsert({
+           user_id: user.id,
+           question_id: `tbs_${tbs.id}`,
+           section: tbs.section,
+           topic: tbs.topic,
+           subtopic: tbs.subtopic || null,
+           note: `[Simulation: ${tbs.title}]\n\n${scratchPadNotesRef.current.trim()}`,
+           is_starred: false,
+           confidence: null,
+           updated_at: new Date().toISOString(),
+         }, {
+           onConflict: 'user_id,question_id'
+         });
+       }
+     } catch (error) {
+       console.error("Auto-save TBS session failed:", error);
+     }
+   };
+
+   const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+     if (!isSubmittedRef.current && Object.keys(responsesRef.current).length > 0) {
+       // Note: We can't await here, but the browser will try to complete the request
+       saveSessionOnExit();
+       e.preventDefault();
+       e.returnValue = '';
+     }
+   };
+
+   window.addEventListener('beforeunload', handleBeforeUnload);
+
+   return () => {
+     window.removeEventListener('beforeunload', handleBeforeUnload);
+     // Save on component unmount (navigation away)
+     saveSessionOnExit();
+   };
+ }, [reviewMode, user, supabase, tbs, startTime]);
 
  // Build Navigator question context for TBS
  const navigatorContext: NavigatorQuestionContext = useMemo(() => ({

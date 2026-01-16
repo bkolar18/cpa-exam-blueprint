@@ -103,6 +103,12 @@ export default function SectionPracticePage() {
  // Per-question timing for time analytics
  const questionStartTime = useRef<Date | null>(null);
 
+ // Refs for auto-save (needed for event handlers to access current state)
+ const quizStateRef = useRef<QuizState>('setup');
+ const questionsRef = useRef<PracticeQuestion[]>([]);
+ const currentQuestionIndexRef = useRef(0);
+ const resultsRef = useRef<QuizResult[]>([]);
+
  // Fetch user's practice history for adaptive selection
  useEffect(() => {
  const fetchHistory = async () => {
@@ -170,6 +176,56 @@ export default function SectionPracticePage() {
      window.removeEventListener('popstate', handlePopState);
    };
  }, [quizState]);
+
+ // Keep refs in sync with state for auto-save
+ useEffect(() => {
+   quizStateRef.current = quizState;
+   questionsRef.current = questions;
+   currentQuestionIndexRef.current = currentQuestionIndex;
+   resultsRef.current = results;
+ }, [quizState, questions, currentQuestionIndex, results]);
+
+ // Auto-save session when navigating away or closing tab
+ useEffect(() => {
+   const saveSessionFromRefs = () => {
+     // Only save if quiz is in progress and has questions
+     if (quizStateRef.current !== 'quiz' || questionsRef.current.length === 0) {
+       return;
+     }
+
+     const session: SavedSession = {
+       section,
+       questionIds: questionsRef.current.map(q => q.id),
+       currentIndex: currentQuestionIndexRef.current,
+       results: resultsRef.current.map(r => ({
+         questionId: r.question.id,
+         selectedAnswer: r.selectedAnswer,
+         isCorrect: r.isCorrect,
+       })),
+       startTime: quizStartTime.current?.toISOString() || new Date().toISOString(),
+       savedAt: new Date().toISOString(),
+     };
+     localStorage.setItem(SAVED_SESSION_KEY, JSON.stringify(session));
+   };
+
+   // Handle tab close/refresh
+   const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+     if (quizStateRef.current === 'quiz' && questionsRef.current.length > 0) {
+       saveSessionFromRefs();
+       // Show browser's native "unsaved changes" dialog
+       e.preventDefault();
+       e.returnValue = '';
+     }
+   };
+
+   window.addEventListener('beforeunload', handleBeforeUnload);
+
+   // Cleanup: auto-save when component unmounts (navigation away)
+   return () => {
+     window.removeEventListener('beforeunload', handleBeforeUnload);
+     saveSessionFromRefs();
+   };
+ }, [section]);
 
  // Save session to localStorage
  const saveSession = () => {
