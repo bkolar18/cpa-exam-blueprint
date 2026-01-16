@@ -4,36 +4,90 @@ import { createContext, useContext, useEffect, useState, useCallback } from "rea
 import { User, Session } from "@supabase/supabase-js";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
 import { clearAllAuthStorage } from "@/lib/supabase/clearAuthStorage";
+import { trackAuthError, setUser as setTrackedUser } from "@/lib/errorTracking";
 import type { Profile } from "@/lib/supabase/types";
+
+type AuthErrorType = 'network' | 'service_unavailable' | 'session_expired' | 'unknown' | null;
 
 interface AuthContextType {
   user: User | null;
   profile: Profile | null;
   session: Session | null;
   loading: boolean;
+  error: AuthErrorType;
+  isServiceAvailable: boolean;
   signOut: () => Promise<void>;
   refreshProfile: () => Promise<void>;
+  retryAuth: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
+
+// Helper to classify errors
+function classifyError(error: Error | { message?: string; code?: string; status?: number } | unknown): AuthErrorType {
+  const message = error instanceof Error ? error.message :
+    (typeof error === 'object' && error !== null && 'message' in error) ? String((error as { message?: string }).message) : '';
+
+  // Check for status code in error object
+  const status = (typeof error === 'object' && error !== null && 'status' in error)
+    ? (error as { status?: number }).status
+    : undefined;
+
+  if (message.includes('fetch') || message.includes('network') || message.includes('Failed to fetch')) {
+    return 'network';
+  }
+  if (message.includes('503') || message.includes('unavailable') || message.includes('timeout')) {
+    return 'service_unavailable';
+  }
+  // 406 (Not Acceptable) and 401 (Unauthorized) indicate session issues
+  if (status === 406 || status === 401 || message.includes('406') || message.includes('401') ||
+      message.includes('expired') || message.includes('invalid') || message.includes('JWT') ||
+      message.includes('Not Acceptable') || message.includes('Unauthorized')) {
+    return 'session_expired';
+  }
+  return 'unknown';
+}
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<AuthErrorType>(null);
+  const [isServiceAvailable, setIsServiceAvailable] = useState(true);
+  const [retryCount, setRetryCount] = useState(0);
 
   const fetchProfile = useCallback(async (userId: string): Promise<Profile | null> => {
     const supabase = createClient();
     if (!supabase) return null;
 
-    const { data, error } = await supabase
+    const { data, error, status } = await supabase
       .from("profiles")
       .select("*")
       .eq("id", userId)
       .single();
 
-    if (error) return null;
+    if (error) {
+      trackAuthError("profile_fetch_failed", error.message, { userId, status });
+
+      // Check if this is a session expiration error (406 or 401)
+      if (status === 406 || status === 401) {
+        setError('session_expired');
+        // Clear auth state and redirect to login
+        clearAllAuthStorage();
+        setUser(null);
+        setProfile(null);
+        setSession(null);
+        setTrackedUser(null);
+        // Redirect to login with reason
+        if (typeof window !== 'undefined') {
+          window.location.href = '/login?reason=session_expired';
+        }
+        return null;
+      }
+
+      return null;
+    }
     return data as Profile;
   }, []);
 
@@ -44,90 +98,157 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [user, fetchProfile]);
 
+  // Retry auth function that can be called manually
+  const retryAuth = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    setRetryCount(prev => prev + 1);
+
+    const supabase = createClient();
+    if (!supabase) {
+      setError('service_unavailable');
+      setIsServiceAvailable(false);
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const { data: { session: localSession }, error: sessionError } =
+        await supabase.auth.getSession();
+
+      if (sessionError) {
+        const errorType = classifyError(sessionError);
+        setError(errorType);
+        trackAuthError("retry_session_failed", sessionError.message, { retryCount });
+
+        if (errorType === 'session_expired') {
+          clearAllAuthStorage();
+        }
+        setLoading(false);
+        return;
+      }
+
+      // Success - clear error state
+      setError(null);
+      setIsServiceAvailable(true);
+
+      if (localSession) {
+        setSession(localSession);
+        setUser(localSession.user);
+        setTrackedUser(localSession.user.id, localSession.user.email);
+        fetchProfile(localSession.user.id).then(setProfile);
+      }
+      setLoading(false);
+    } catch (err) {
+      const errorType = classifyError(err);
+      setError(errorType);
+      setIsServiceAvailable(errorType !== 'service_unavailable' && errorType !== 'network');
+      trackAuthError("retry_exception", err instanceof Error ? err.message : "Unknown error", { retryCount });
+      setLoading(false);
+    }
+  }, [fetchProfile, retryCount]);
+
   useEffect(() => {
     if (!isSupabaseConfigured()) {
       setLoading(false);
+      setIsServiceAvailable(false);
       return;
     }
 
     const supabase = createClient();
     if (!supabase) {
       setLoading(false);
+      setIsServiceAvailable(false);
       return;
     }
 
-    async function initializeAuth() {
+    let initialSessionReceived = false;
+
+    // Set up auth state listener FIRST - this is the recommended approach per Supabase docs
+    // The listener will receive INITIAL_SESSION event with current session state
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, currentSession) => {
+        // Clear any previous errors on successful auth events
+        setError(null);
+        setIsServiceAvailable(true);
+
+        if (event === 'INITIAL_SESSION') {
+          initialSessionReceived = true;
+          if (currentSession) {
+            setSession(currentSession);
+            setUser(currentSession.user);
+            setTrackedUser(currentSession.user.id, currentSession.user.email);
+            if (currentSession.user) {
+              fetchProfile(currentSession.user.id).then(setProfile);
+            }
+          }
+          setLoading(false);
+        } else if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+          if (currentSession) {
+            setSession(currentSession);
+            setUser(currentSession.user);
+            setTrackedUser(currentSession.user.id, currentSession.user.email);
+            if (currentSession.user) {
+              fetchProfile(currentSession.user.id).then(setProfile);
+            }
+          }
+          setLoading(false);
+        } else if (event === 'SIGNED_OUT') {
+          setSession(null);
+          setUser(null);
+          setProfile(null);
+          setTrackedUser(null);
+          setLoading(false);
+        }
+      }
+    );
+
+    // Fallback: Check getSession after a delay in case INITIAL_SESSION doesn't fire
+    const fallbackTimeout = setTimeout(async () => {
+      if (initialSessionReceived) return;
+
       try {
-        // Step 1: Get local session - this is the primary source of truth
         const { data: { session: localSession }, error: sessionError } =
-          await supabase!.auth.getSession();
+          await supabase.auth.getSession();
 
         if (sessionError) {
-          // Only clear on explicit auth errors, not network issues
-          if (sessionError.message?.includes('invalid') || sessionError.message?.includes('expired')) {
-            console.error("Invalid session, clearing storage:", sessionError);
+          const errorType = classifyError(sessionError);
+          setError(errorType);
+          trackAuthError("session_fetch_failed", sessionError.message, {
+            isInvalid: sessionError.message?.includes('invalid'),
+            isExpired: sessionError.message?.includes('expired')
+          });
+          if (errorType === 'session_expired') {
             clearAllAuthStorage();
-          } else {
-            console.warn("Session fetch warning (may be transient):", sessionError);
           }
           setLoading(false);
           return;
         }
 
+        // Success - clear error state
+        setError(null);
+        setIsServiceAvailable(true);
+
         if (localSession) {
-          // Trust the local session - Supabase handles token refresh automatically
-          // Only validate with server if the token looks suspicious (very old)
-          const tokenAge = localSession.expires_at
-            ? (localSession.expires_at * 1000) - Date.now()
-            : Infinity;
-
-          // If token expires in less than 5 minutes, try to refresh
-          if (tokenAge < 5 * 60 * 1000 && tokenAge > 0) {
-            const { data: { session: refreshedSession } } =
-              await supabase!.auth.refreshSession();
-            if (refreshedSession) {
-              setSession(refreshedSession);
-              setUser(refreshedSession.user);
-              fetchProfile(refreshedSession.user.id).then(setProfile);
-              return;
-            }
-          }
-
-          // Session looks good, use it
           setSession(localSession);
           setUser(localSession.user);
+          setTrackedUser(localSession.user.id, localSession.user.email);
           fetchProfile(localSession.user.id).then(setProfile);
         }
-      } catch (error) {
-        console.error("Auth initialization failed:", error);
-        // Don't clear on transient errors - just log and continue
-        // User can manually sign out if needed
-      } finally {
+        setLoading(false);
+      } catch (err) {
+        const errorType = classifyError(err);
+        setError(errorType);
+        setIsServiceAvailable(errorType !== 'service_unavailable' && errorType !== 'network');
+        trackAuthError("session_check_exception", err instanceof Error ? err.message : "Unknown error");
         setLoading(false);
       }
-    }
+    }, 100);
 
-    initializeAuth();
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
-          setSession(session);
-          setUser(session?.user ?? null);
-          if (session?.user) {
-            fetchProfile(session.user.id).then(setProfile);
-          }
-        } else if (event === 'SIGNED_OUT') {
-          setSession(null);
-          setUser(null);
-          setProfile(null);
-        }
-        setLoading(false);
-      }
-    );
-
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      clearTimeout(fallbackTimeout);
+    };
   }, [fetchProfile]);
 
   const signOut = useCallback(async () => {
@@ -142,7 +263,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, profile, session, loading, signOut, refreshProfile }}>
+    <AuthContext.Provider value={{ user, profile, session, loading, error, isServiceAvailable, signOut, refreshProfile, retryAuth }}>
       {children}
     </AuthContext.Provider>
   );
@@ -165,7 +286,13 @@ export const useAuthOptional = () => {
     profile: null,
     session: null,
     loading: false,
+    error: null,
+    isServiceAvailable: true,
     signOut: async () => {},
     refreshProfile: async () => {},
+    retryAuth: async () => {},
   };
 };
+
+// Export the error type for use in components
+export type { AuthErrorType };

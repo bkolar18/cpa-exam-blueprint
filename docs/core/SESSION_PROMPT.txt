@@ -1,285 +1,215 @@
 ================================================================================
 CPA EXAM BLUEPRINT - SESSION PROMPT
 ================================================================================
-Last Updated: 2026-01-11
+Last Updated: 2026-01-16
 
 IMPORTANT: Read this file at the start of each session to understand project
 context and continue work seamlessly.
 
 ================================================================================
-CRITICAL RULES - READ FIRST
+QUICK START - READ FIRST
 ================================================================================
 
-1. **LOG ALL RESPONSES**: You MUST copy EVERY response you generate to
-   "cpa claude responses.txt" in this project directory. The user CANNOT read
-   responses in the console. This is critical for project efficiency.
+1. This is a CPA exam prep lead generation site (Meridian CPA Review)
+2. Tech stack: Next.js 16.1.1, React 19, TypeScript, Tailwind CSS v4, Supabase
+3. Live URL: https://cpa-exam-blueprint.vercel.app
+4. Repo: https://github.com/bkolar18/cpa-exam-blueprint
 
-2. **LOCAL FILES ONLY**: SESSION_PROMPT.txt, SESSION_LOG.txt, and
-   CLAUDE_CONTEXT.txt are LOCAL working files. Do NOT push these to GitHub
-   every time you update them. Only push when explicitly requested or when
-   committing actual code changes.
+PROJECT DIRECTORY:
+cd "C:\Users\brenn\Documents\Coding Projects\CPA Exam Site\cpa-exam-blueprint"
 
-================================================================================
-PROJECT OVERVIEW
-================================================================================
-
-Project: CPA Exam Blueprint
-Purpose: Lead generation website for CPA review firm (affiliate: Surgent)
-         A family member works at Surgent - goal is to reduce reliance on
-         affiliate marketing with an owned marketing channel.
-Stack: Next.js 16.1.1, React 19, Tailwind CSS v4, TypeScript, Supabase
-Repo: https://github.com/bkolar18/cpa-exam-blueprint
-Live: https://cpa-exam-blueprint.vercel.app
+COMMON COMMANDS:
+npm run dev        # Start dev server (localhost:3000)
+npm run build      # Production build (ALWAYS run before committing)
+git push           # Deploy to Vercel (auto-deploys from main)
 
 ================================================================================
-CURRENT PROJECT STATE (as of 2026-01-11)
+CURRENT PROJECT STATE (as of 2026-01-16)
 ================================================================================
 
-Phase 1 (Free Tools) - COMPLETE
-- Score Release Calendar with countdown timer
-- NTS Expiration Tracker with email reminders
-- Study Hours Calculator for all 6 sections
-- State Requirements Guide (55 states/jurisdictions)
-- Enhanced Study Plan quiz with discipline sections
+COMPLETED PHASES:
+- Phase 1: Free Tools (Score Calendar, NTS Tracker, Study Calculator, 55 States)
+- Phase 2: Content & Authority (Blog, Guides, Success Stories)
+- Phase 3: CPA Academy / Dashboard (Auth, MCQs, TBS, Gamification, Admin)
 
-Phase 2 (Content & Authority) - COMPLETE
-- MDX blog infrastructure with 8 articles
-- Exam Day Walkthrough guide
-- "I Failed, Now What?" retaker guide
-- Success Stories section (5 stories)
+CONTENT STATUS:
+- MCQ Questions: 5,810 across 176 batch files (49.2% medium)
+- TBS Questions: 470+ across all 6 sections
+- State Requirements: 55 states/jurisdictions
 
-Phase 3 (CPA Academy / Dashboard) - COMPLETE
-- Supabase database integration (PostgreSQL)
-- User authentication (email/password) - NOW USING COOKIE-BASED AUTH
-- User dashboard with study tracking
-- Study session logging with streaks
-- Section progress management
-- NTS tracking in dashboard
-- Gamification (points, badges, achievements)
-- 5,810 MCQ practice questions across all 6 sections
-- Practice history and accuracy tracking
-- Surgent promotional banner (per-account, 30-day reappearance)
-- Exam Simulation Mode with pause functionality
-- TBS (Task-Based Simulations) practice with progress tracking
-- TBS Exit Session feature (save & resume)
-
-Phase 3.5 (Question Bank Expansion) - IN PROGRESS
-- MCQs: 5,810 total (176 batch files) - 49.2% medium (near 50-60% target)
-- TBS: 190+ total - distributed across all 6 sections
-- Dark mode fixes completed for all pages
-
-Phase 4 (Email Nurturing) - NOT STARTED
-Phase 5 (AI Features) - NOT STARTED
+RECENT MAJOR WORK (2026-01-16):
+- Implemented industry-standard error tracking infrastructure
+- Added graceful degradation for auth failures
+- Created AuthErrorBanner component for user-friendly error UI
+- Created ErrorBoundary for React error catching
+- Updated AuthProvider with error state, retry logic, and service availability tracking
 
 ================================================================================
-CRITICAL: DATABASE MIGRATION REQUIRED FOR TBS TRACKING
+AUTH SYSTEM ARCHITECTURE (Updated 2026-01-16)
 ================================================================================
 
-**RUN THIS SQL IN SUPABASE SQL EDITOR BEFORE TBS TRACKING WILL WORK:**
+**CRITICAL: Cookie-based auth using @supabase/ssr (NOT localStorage)**
 
-```sql
--- Step 1: Add section column if it doesn't exist
-ALTER TABLE tbs_attempts
-ADD COLUMN IF NOT EXISTS section TEXT CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC'));
+KEY FILES:
+- src/lib/supabase/client.ts - Browser client (createBrowserClient)
+- src/lib/supabase/middleware.ts - Session refresh middleware
+- src/lib/supabase/server.ts - Server-side client for API routes
+- src/components/auth/AuthProvider.tsx - Auth context with graceful degradation
+- src/components/auth/AuthErrorBanner.tsx - Auth error UI
+- src/lib/errorTracking.ts - Centralized error tracking
 
--- Step 2: Drop the foreign key constraint on tbs_id
-DO $$
-DECLARE
-    fk_name TEXT;
-BEGIN
-    SELECT conname INTO fk_name
-    FROM pg_constraint
-    WHERE conrelid = 'tbs_attempts'::regclass
-    AND contype = 'f'
-    AND confrelid = 'tbs_questions'::regclass;
-
-    IF fk_name IS NOT NULL THEN
-        EXECUTE format('ALTER TABLE tbs_attempts DROP CONSTRAINT %I', fk_name);
-    END IF;
-END $$;
-
--- Step 3: Change tbs_id from UUID to TEXT
-ALTER TABLE tbs_attempts
-ALTER COLUMN tbs_id TYPE TEXT USING tbs_id::TEXT;
-
--- Step 4: Create indexes for faster queries
-CREATE INDEX IF NOT EXISTS idx_tbs_attempts_section ON tbs_attempts(section);
-CREATE INDEX IF NOT EXISTS idx_tbs_attempts_user_section ON tbs_attempts(user_id, section);
+AUTH CONTEXT NOW PROVIDES:
+```typescript
+{
+  user, profile, session, loading,
+  error,              // 'network' | 'service_unavailable' | 'session_expired' | 'unknown' | null
+  isServiceAvailable, // boolean
+  signOut, refreshProfile, retryAuth
+}
 ```
 
-This migration is required because:
-- Frontend TBS IDs are strings like "far-i-1-1-je"
-- Database was expecting UUID foreign keys to tbs_questions table
-- We now store section directly in tbs_attempts for easy querying
+GRACEFUL DEGRADATION:
+- Network/service errors show error UI instead of redirecting
+- Users can retry authentication
+- Progressive retry delays (300ms, 600ms)
+- Only redirects to login when user is clearly not authenticated
 
 ================================================================================
-KEY DOCUMENTS TO READ (Updated 2026-01-11)
+KEY DOCUMENTS TO READ
 ================================================================================
 
 **MUST READ FIRST (Before creating ANY TBS):**
+1. docs/core/CLAUDE.md - Quick reference, TBS types, batch limits
 
-1. **docs/tbs-system-architecture.md** (CRITICAL - READ FIRST!)
-   - Complete TBS creation guidelines and standards
-   - TypeScript interfaces and type definitions
-   - Exhibit structure templates
-   - Quality requirements and validation rules
+**Session Context:**
+2. docs/core/CLAUDE_CONTEXT.txt - Comprehensive project context
+3. docs/core/SESSION_LOG.txt - Session-by-session accomplishments
+4. docs/claude instructions/TODO.md - Current task list
 
-**Session Context Files:**
-
-2. **CURRENT_STATUS_2026-01-10.txt** (Reference for TBS expansion plan)
-   - Phase 1 & Phase 2 TBS expansion plan
-   - Distribution targets for 350 total TBS
-
-3. **TODO.md** - Current project task list
-
-**TBS Files:**
-
-4. **src/lib/data/tbs/*.ts** (TBS question files)
-   - types.ts: TBS type definitions
-   - far-tbs.ts, aud-tbs.ts, reg-tbs.ts, tcp-tbs.ts, bar-tbs.ts, isc-tbs.ts
-   - index.ts: Central exports
-
-**Auth & API Files (Recently Updated):**
-
-5. **src/lib/supabase/client.ts** - Browser client (uses createBrowserClient for cookie auth)
-6. **src/lib/supabase/middleware.ts** - Session refresh middleware
-7. **src/app/api/tbs/stats/route.ts** - TBS stats API (queries tbs_attempts directly)
-8. **src/app/api/tbs/attempts/route.ts** - TBS attempts API (no tbs_questions JOIN)
+**Technical Reference:**
+5. docs/core/ANALYTICS.md - Prime Meridian scoring system
+6. docs/core/TOPIC-MAPPING.md - AICPA content area mapping
 
 ================================================================================
-IMMEDIATE NEXT STEPS (Pick up here!)
+IMMEDIATE PRIORITIES (Pick up here!)
 ================================================================================
 
-**PRIORITY 1: Verify TBS Tracking Works**
-1. User needs to run the SQL migration above in Supabase
-2. User needs to log out and log back in (to get cookie-based auth)
-3. Test completing a TBS and verifying progress appears on simulations page
+**PRIORITY 1: Test Auth Flow**
+- Test login/logout with various scenarios
+- Verify graceful degradation works on network errors
+- Confirm error tracking is capturing auth events
 
-**PRIORITY 2: TBS Expansion (if time permits)**
-- Current: ~190 TBS
-- Target: 350 TBS
-- See CURRENT_STATUS_2026-01-10.txt for distribution plan
+**PRIORITY 2: Content Expansion**
+- TBS: 470+ → 500+ (add ~30 more)
+- MCQ medium difficulty: 49.2% → 55% target
 
 **PRIORITY 3: Other Tasks**
-- Continue MCQ medium difficulty expansion (49.2% → 55% target)
-- Phase 4: Email Nurturing
-- Phase 5: AI Features
+- Phase 4: Email Nurturing (not started)
+- Phase 5: AI Features (partially complete)
 
 ================================================================================
-RECENT FIXES (2026-01-11) - IMPORTANT CONTEXT
-================================================================================
-
-1. **Auth Cookie Fix (CRITICAL)**
-   - Changed from localStorage-based auth to cookie-based auth
-   - src/lib/supabase/client.ts: Uses createBrowserClient from @supabase/ssr
-   - src/lib/supabase/middleware.ts: Properly refreshes sessions
-   - Users must LOG OUT and LOG BACK IN to get new cookie-based session
-
-2. **TBS Progress Tracking Fix**
-   - Issue: Stats/Attempts APIs used INNER JOIN with tbs_questions
-   - Problem: Frontend TBS IDs don't exist in tbs_questions table
-   - Fix: Query tbs_attempts directly, use section column stored there
-   - Files: api/tbs/stats/route.ts, api/tbs/attempts/route.ts
-
-3. **TBS Exit Session Feature**
-   - New modal when exiting incomplete TBS
-   - "Save & Exit" - saves responses as incomplete attempt
-   - "Exit Without Saving" - exits without saving
-   - Shows progress summary (questions answered, time spent)
-   - src/components/tbs/TBSContainer.tsx
-
-4. **Notes Not Appearing in My Notes**
-   - Related to auth cookie issue - should be fixed after re-login
-
-5. **Dark Mode Fixes (5 pages)**
-   - Study Hours Calculator, NTS Tracker, Score Release Calendar
-   - Exam Day Walkthrough, Failed Section Guide
-   - All colored sections now have proper dark: variants
-
-================================================================================
-TBS QUESTION STATUS (as of 2026-01-11)
-================================================================================
-
-| Section | Questions | File Location              |
-|---------|-----------|----------------------------|
-| FAR     | ~25+      | src/lib/data/tbs/far-tbs.ts |
-| AUD     | ~30+      | src/lib/data/tbs/aud-tbs.ts |
-| REG     | ~30       | src/lib/data/tbs/reg-tbs.ts |
-| TCP     | ~25+      | src/lib/data/tbs/tcp-tbs.ts |
-| BAR     | ~25+      | src/lib/data/tbs/bar-tbs.ts |
-| ISC     | ~12       | src/lib/data/tbs/isc-tbs.ts |
-| SAMPLE  | 58        | src/lib/data/tbs/sample-tbs.ts |
-|---------|-----------|----------------------------|
-| TOTAL   | ~190+     | Target: 350                |
-
-================================================================================
-MCQ PRACTICE QUESTIONS STATUS (as of 2026-01-10)
-================================================================================
-
-**Total Questions: 5,810 across 176 batch files**
-
-| Section | Questions | Batches | Easy% | Med% | Hard% |
-|---------|-----------|---------|-------|------|-------|
-| FAR     | 1,680     | 55      | 19%   | 46%  | 35%   |
-| AUD     | 1,015     | 29      | 18%   | 52%  | 30%   |
-| REG     | 1,260     | 36      | 16%   | 47%  | 36%   |
-| TCP     | 805       | 23      | 17%   | 51%  | 32%   |
-| BAR     | 490       | 14      | 17%   | 56%  | 27%   |
-| ISC     | 560       | 16      | 15%   | 50%  | 35%   |
-
-================================================================================
-DATABASE STATUS (Supabase - ACTIVE)
-================================================================================
-
-The database is fully integrated and active. Key tables:
-- profiles (user data, gamification, promo_dismissed_at)
-- study_sessions (logged study hours)
-- section_progress (FAR/AUD/REG/discipline status)
-- nts_entries (Notice to Schedule tracking)
-- practice_attempts (questions, user answers)
-- user_badges (earned achievements)
-- question_notes (MCQ and TBS notes)
-- tbs_attempts (TBS progress tracking) - NEEDS MIGRATION
-
-================================================================================
-CORE PROJECT STRUCTURE
+FILE STRUCTURE HIGHLIGHTS
 ================================================================================
 
 src/
 ├── app/
-│   ├── api/
-│   │   └── tbs/                    # TBS API routes (recently fixed)
-│   │       ├── attempts/           # GET/POST attempts
-│   │       └── stats/              # GET stats
-│   ├── auth/callback/              # Supabase auth callback
-│   ├── dashboard/
-│   │   ├── simulations/            # TBS practice (with progress tracking)
-│   │   ├── my-notes/               # User notes hub
+│   ├── api/                    # API routes
+│   │   ├── tbs/                # TBS API (stats, attempts)
+│   │   ├── ai/                 # AI features (flashcards, debrief)
+│   │   └── admin/              # Admin API
+│   ├── dashboard/              # Protected user dashboard
+│   │   ├── practice/           # MCQ practice
+│   │   ├── simulations/        # TBS simulations
+│   │   ├── exam-simulation/    # Timed exams
+│   │   ├── readiness/          # Prime Meridian score
 │   │   └── ...
+│   ├── login/, signup/         # Auth pages
 │   └── ...
 ├── components/
-│   ├── auth/AuthProvider.tsx       # Auth context (cookie-based)
-│   └── tbs/
-│       └── TBSContainer.tsx        # TBS UI (includes Exit Session)
+│   ├── auth/
+│   │   ├── AuthProvider.tsx    # Auth context with graceful degradation
+│   │   └── AuthErrorBanner.tsx # Error UI (NEW)
+│   ├── ErrorBoundary.tsx       # React error boundary (NEW)
+│   └── ...
 └── lib/
-    ├── supabase/
-    │   ├── client.ts               # Browser client (createBrowserClient)
-    │   ├── middleware.ts           # Session refresh
-    │   └── server.ts               # Server client
-    └── data/
-        └── tbs/                    # TBS question files
-            ├── types.ts
-            ├── far-tbs.ts, aud-tbs.ts, etc.
-            └── index.ts
+    ├── errorTracking.ts        # Centralized error tracking (NEW)
+    ├── supabase/               # Supabase client/server/middleware
+    ├── data/
+    │   ├── practice-questions/ # MCQ files
+    │   └── tbs/                # TBS files
+    └── ...
 
 ================================================================================
-COMMANDS
+TBS QUESTION GUIDELINES
 ================================================================================
 
-cd "C:\Users\brenn\Documents\Coding Projects\CPA Exam Site\cpa-exam-blueprint"
-npm run dev                      # Start dev server
-npm run build                    # Production build
-npx tsc --noEmit --skipLibCheck  # TypeScript check only
-git push                         # Deploy to Vercel (auto)
+**BATCH SIZE LIMIT: 10 questions max per batch**
 
+TBS TYPES:
+- numeric_entry: Calculate and enter values
+- document_review: Review documents, identify errors
+- journal_entry: Create journal entries
+- dropdown: Select from options
+- research: Find authoritative citations
+
+CONTENT AREAS:
+- FAR: FAR-I, FAR-II, FAR-III, FAR-IV
+- AUD: AUD-I, AUD-II, AUD-III, AUD-IV
+- REG: REG-I, REG-II, REG-III, REG-IV, REG-V
+- TCP: TCP-I, TCP-II, TCP-III, TCP-IV
+- BAR: BAR-I, BAR-II, BAR-III
+- ISC: ISC-I, ISC-II, ISC-III
+
+================================================================================
+DATABASE MIGRATIONS (Outstanding)
+================================================================================
+
+**TBS Tracking Migration (if not already run):**
+```sql
+-- Run in Supabase SQL Editor
+ALTER TABLE tbs_attempts
+ADD COLUMN IF NOT EXISTS section TEXT CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC'));
+
+ALTER TABLE tbs_attempts
+ALTER COLUMN tbs_id TYPE TEXT USING tbs_id::TEXT;
+
+CREATE INDEX IF NOT EXISTS idx_tbs_attempts_section ON tbs_attempts(section);
+CREATE INDEX IF NOT EXISTS idx_tbs_attempts_user_section ON tbs_attempts(user_id, section);
+```
+
+**Practice Achievements Migration (if not already run):**
+```sql
+-- Run: supabase/migrations/20260112_add_practice_achievements.sql
+```
+
+================================================================================
+GOLDEN RULES
+================================================================================
+
+1. SESSION FILES ARE LOCAL - don't push to GitHub every update
+2. READ DOCS BEFORE TBS WORK - check CLAUDE.md for type definitions
+3. ALWAYS run `npm run build` before committing code
+4. PREFER editing existing files over creating new ones
+5. Use CSS variables for colors (see globals.css)
+6. Include Claude Code + Happy attribution in commits
+
+================================================================================
+ERROR TRACKING (NEW 2026-01-16)
+================================================================================
+
+**To add Sentry for production error tracking:**
+```bash
+npx @sentry/wizard@latest -i nextjs
+```
+Then update src/lib/errorTracking.ts to use Sentry instead of console logging.
+
+**Current error tracking functions:**
+- captureException(error, context) - Track exceptions
+- captureMessage(message, level) - Track non-exception events
+- trackAuthError(action, message, extra) - Auth-specific errors
+- trackApiError(endpoint, status, message, extra) - API errors
+- setUser(id, email) - Set user context for correlation
+
+================================================================================
+END OF SESSION PROMPT
 ================================================================================

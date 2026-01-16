@@ -1,7 +1,7 @@
 ================================================================================
 CPA EXAM BLUEPRINT - CLAUDE CONTEXT
 ================================================================================
-Last Updated: 2026-01-10
+Last Updated: 2026-01-16
 
 This is a comprehensive context file for Claude Code sessions. It contains
 complete project history, workflow preferences, golden rules, and detailed
@@ -23,17 +23,19 @@ TABLE OF CONTENTS
 10. API REFERENCE
 11. STYLING GUIDE
 12. PRACTICE QUESTIONS SYSTEM
-   12.5 EXAM SIMULATION SYSTEM
-   12.6 TBS (TASK-BASED SIMULATION) SYSTEM (NEW 2026-01-10)
+    12.5 EXAM SIMULATION SYSTEM
+    12.6 TBS (TASK-BASED SIMULATION) SYSTEM
 13. GAMIFICATION SYSTEM
-14. FUTURE ROADMAP
-15. KEY DOCUMENTS REFERENCE
+14. AUTHENTICATION SYSTEM (Updated 2026-01-16)
+15. ERROR TRACKING & GRACEFUL DEGRADATION (NEW 2026-01-16)
+16. FUTURE ROADMAP
+17. KEY DOCUMENTS REFERENCE
 
 ================================================================================
 1. PROJECT IDENTITY
 ================================================================================
 
-Name: CPA Exam Blueprint
+Name: Meridian CPA Review (formerly CPA Exam Blueprint)
 Tagline: Free CPA Study Plans from Licensed CPAs
 Domain: cpa-exam-blueprint.vercel.app (production)
 Repository: https://github.com/bkolar18/cpa-exam-blueprint
@@ -64,9 +66,11 @@ VALUE PROPOSITION:
 - Free tools (score calendar, NTS tracker, calculator)
 - State-specific requirement guides (55 states/jurisdictions)
 - 5,810 MCQ practice questions across all 6 sections
-- 500+ TBS (Task-Based Simulation) questions across all 6 sections
+- 470+ TBS (Task-Based Simulation) questions across all 6 sections
 - Exam simulation mode with timed tests and pause functionality
 - User dashboard with progress tracking and gamification
+- Prime Meridian exam readiness scoring system
+- AI-powered flashcard generation
 - Guidance from "licensed CPAs" (authority positioning)
 
 MONETIZATION:
@@ -117,6 +121,7 @@ STYLING:
 DATABASE & AUTH (ACTIVE):
 - Supabase (PostgreSQL)
 - Supabase Auth (email/password)
+- Cookie-based authentication (using @supabase/ssr)
 - Row Level Security (RLS) enabled
 
 EMAIL:
@@ -127,9 +132,13 @@ DEPLOYMENT:
 - Vercel (auto-deploy from GitHub main branch)
 - Vercel Analytics enabled
 
-FUTURE ADDITIONS:
-- AI: Anthropic Claude API for chatbot (API key exists for scraper)
-- Email automation for nurturing sequences
+AI FEATURES:
+- Anthropic Claude API for:
+  - Flashcard generation
+  - Exam debrief analysis
+  - Pre-exam assessment
+  - Study guide generation
+  - Weekly reports
 
 ENVIRONMENT VARIABLES:
 ```
@@ -138,13 +147,7 @@ RESEND_API_KEY=re_XEVXzFPr_HsK9GPJzNhGorSNHrpsxo9dU
 EMAIL_TO=delivered@resend.dev  # TODO: Set real admin email
 NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
 NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-anon-key>
-ANTHROPIC_API_KEY=<for-data-extraction>
-
-# Future
-NEXTAUTH_SECRET=
-NEXTAUTH_URL=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
+ANTHROPIC_API_KEY=<for-ai-features>
 ```
 
 ================================================================================
@@ -159,12 +162,30 @@ cpa-exam-blueprint/
 ├── tsconfig.json
 ├── tailwind.config.ts
 │
-├── PROJECT_ROADMAP.md            # 5-phase implementation plan
-├── SESSION_PROMPT.txt            # Quick start for new sessions
-├── SESSION_LOG.txt               # Session-by-session accomplishments
-├── CLAUDE_CONTEXT.txt            # This file - comprehensive context
-├── cpa claude responses.txt      # Strategic planning session logs
-├── CPA Exam Blueprint - Business Overview.txt  # Business description for Surgent
+├── docs/
+│   ├── core/
+│   │   ├── CLAUDE_CONTEXT.txt    # This file - comprehensive context
+│   │   ├── SESSION_LOG.txt       # Session-by-session accomplishments
+│   │   ├── SESSION_PROMPT.txt    # Quick start for new sessions
+│   │   ├── CLAUDE.md             # Quick reference for Claude
+│   │   ├── ANALYTICS.md          # Prime Meridian scoring system
+│   │   ├── TOPIC-MAPPING.md      # AICPA content area mapping
+│   │   └── archive/              # Historical documentation
+│   ├── admin/
+│   │   ├── SETUP.md
+│   │   ├── EMAIL_INTEGRATION.md
+│   │   └── database-schema.sql
+│   └── claude instructions/
+│       ├── TODO.md               # Current task list
+│       └── troubleshooting.txt
+│
+├── supabase/
+│   └── migrations/               # SQL migration files
+│
+├── scripts/
+│   ├── validate-tbs.js           # TBS validation script
+│   ├── check-blueprint-alignment.js  # AICPA alignment checker
+│   └── ...
 │
 ├── public/
 │   └── (static assets)
@@ -174,142 +195,264 @@ cpa-exam-blueprint/
     │   ├── globals.css           # Design system, CSS variables
     │   ├── layout.tsx            # Root layout with Header/Footer
     │   ├── page.tsx              # Home page
+    │   ├── sitemap.ts            # Dynamic sitemap generation
     │   │
     │   ├── api/
-    │   │   ├── submit-study-plan/
-    │   │   │   └── route.ts      # POST: Study plan email + admin notification
-    │   │   ├── subscribe-score-release/
-    │   │   │   └── route.ts      # POST: Score calendar email subscription
-    │   │   └── subscribe-nts/
-    │   │       └── route.ts      # POST: NTS tracker email subscription
+    │   │   ├── submit-study-plan/route.ts
+    │   │   ├── subscribe-score-release/route.ts
+    │   │   ├── subscribe-nts/route.ts
+    │   │   ├── feedback/route.ts
+    │   │   ├── navigator/route.ts
+    │   │   ├── ai/
+    │   │   │   ├── exam-debrief/route.ts
+    │   │   │   ├── generate-flashcard/route.ts
+    │   │   │   ├── generate-flashcards/route.ts
+    │   │   │   ├── pre-exam-assessment/route.ts
+    │   │   │   ├── study-guide/route.ts
+    │   │   │   └── weekly-report/route.ts
+    │   │   ├── tbs/
+    │   │   │   ├── attempts/route.ts       # GET/POST TBS attempts
+    │   │   │   ├── attempts/[id]/route.ts  # Individual attempt
+    │   │   │   ├── stats/route.ts          # TBS statistics
+    │   │   │   └── questions/route.ts      # TBS questions
+    │   │   ├── admin/
+    │   │   │   ├── activity/route.ts
+    │   │   │   ├── analytics/route.ts
+    │   │   │   ├── announcements/route.ts
+    │   │   │   ├── feedback/route.ts
+    │   │   │   ├── questions/route.ts
+    │   │   │   └── users/route.ts
+    │   │   ├── email/
+    │   │   │   ├── preview/route.ts
+    │   │   │   ├── process-queue/route.ts
+    │   │   │   ├── test/route.ts
+    │   │   │   └── webhook/route.ts
+    │   │   └── csp-report/route.ts
     │   │
     │   ├── auth/
-    │   │   └── callback/
-    │   │       └── route.ts      # Supabase auth callback handler
+    │   │   └── callback/route.ts     # Supabase auth callback
     │   │
-    │   ├── login/
-    │   │   └── page.tsx          # Login page
-    │   ├── signup/
-    │   │   └── page.tsx          # Signup page
+    │   ├── login/page.tsx
+    │   ├── signup/page.tsx
+    │   ├── forgot-password/page.tsx
+    │   ├── reset-password/page.tsx
     │   │
-    │   ├── cpa-academy/
-    │   │   └── page.tsx          # CPA Academy landing/marketing page
+    │   ├── admin/
+    │   │   ├── layout.tsx
+    │   │   ├── page.tsx              # Admin dashboard
+    │   │   ├── activity/page.tsx
+    │   │   ├── analytics/page.tsx
+    │   │   ├── announcements/page.tsx
+    │   │   ├── feedback/page.tsx
+    │   │   ├── questions/page.tsx
+    │   │   ├── security/page.tsx
+    │   │   └── users/page.tsx
     │   │
     │   ├── dashboard/
-    │   │   ├── layout.tsx        # Dashboard layout with sidebar
-    │   │   ├── page.tsx          # Main dashboard with stats
-    │   │   ├── study-log/
-    │   │   │   └── page.tsx      # Log study sessions
-    │   │   ├── sections/
-    │   │   │   └── page.tsx      # Manage section progress
-    │   │   ├── nts/
-    │   │   │   └── page.tsx      # Manage NTS entries
+    │   │   ├── layout.tsx            # Dashboard layout with nav + auth protection
+    │   │   ├── page.tsx              # Main dashboard overview
+    │   │   ├── study-log/page.tsx    # Log study sessions
+    │   │   ├── nts/page.tsx          # Manage NTS entries
     │   │   ├── practice/
-    │   │   │   ├── page.tsx      # Practice overview
-    │   │   │   ├── [section]/
-    │   │   │   │   └── page.tsx  # Section practice questions
-    │   │   │   └── history/
-    │   │   │       └── page.tsx  # Review past attempts
+    │   │   │   ├── page.tsx          # Practice overview
+    │   │   │   ├── [section]/page.tsx # Section practice questions
+    │   │   │   └── history/page.tsx  # Review past attempts
     │   │   ├── exam-simulation/
-    │   │   │   └── [section]/
-    │   │   │       └── page.tsx  # Timed exam with pause functionality
-    │   │   ├── accolades/
-    │   │   │   └── page.tsx      # Badges and achievements
-    │   │   └── settings/
-    │   │       └── page.tsx      # User preferences
+    │   │   │   ├── page.tsx          # Simulation config
+    │   │   │   ├── [section]/page.tsx # Timed exam with pause
+    │   │   │   ├── history/[id]/page.tsx
+    │   │   │   └── debrief/[examId]/page.tsx
+    │   │   ├── simulations/
+    │   │   │   ├── page.tsx          # TBS simulation library
+    │   │   │   ├── [id]/page.tsx     # Individual TBS
+    │   │   │   ├── section/[section]/page.tsx
+    │   │   │   └── review/[attemptId]/page.tsx
+    │   │   ├── flashcards/
+    │   │   │   ├── page.tsx          # Flashcard overview
+    │   │   │   ├── [section]/page.tsx
+    │   │   │   └── review/page.tsx
+    │   │   ├── readiness/
+    │   │   │   ├── page.tsx          # Exam readiness dashboard (Prime Meridian)
+    │   │   │   └── assessment/[section]/page.tsx
+    │   │   ├── analytics/page.tsx    # User analytics
+    │   │   ├── my-notes/page.tsx     # User notes hub
+    │   │   ├── flagged-questions/page.tsx
+    │   │   ├── accolades/page.tsx    # Badges and achievements
+    │   │   └── settings/page.tsx     # User preferences
     │   │
-    │   ├── study-plan/
-    │   │   └── page.tsx          # 5-step quiz with email capture
+    │   ├── study-plan/page.tsx       # 5-step quiz with email capture
+    │   ├── cpa-academy/page.tsx      # CPA Academy landing page
+    │   ├── pricing/page.tsx          # Pricing page
+    │   ├── faq/page.tsx              # FAQ page
     │   │
     │   ├── sections/
     │   │   ├── far/page.tsx
     │   │   ├── aud/page.tsx
     │   │   ├── reg/page.tsx
-    │   │   └── tcp/page.tsx
+    │   │   ├── tcp/page.tsx
+    │   │   ├── bar/page.tsx
+    │   │   └── isc/page.tsx
     │   │
     │   ├── tools/
-    │   │   ├── score-release-calendar/
-    │   │   │   └── page.tsx      # Countdown timer, email subscribe
-    │   │   ├── nts-tracker/
-    │   │   │   └── page.tsx      # Expiration calculator, reminders
-    │   │   └── study-hours-calculator/
-    │   │       └── page.tsx      # Hours per section calculator
+    │   │   ├── score-release-calendar/page.tsx
+    │   │   ├── nts-tracker/page.tsx
+    │   │   └── study-hours-calculator/page.tsx
     │   │
     │   ├── state-requirements/
-    │   │   ├── page.tsx          # State grid landing page (22 states)
-    │   │   └── [state]/
-    │   │       └── page.tsx      # Dynamic state detail pages
+    │   │   ├── page.tsx              # State grid landing page
+    │   │   └── [state]/page.tsx      # Dynamic state pages (55 states)
+    │   │
+    │   ├── resources/
+    │   │   ├── page.tsx
+    │   │   ├── cpa-pass-rates/page.tsx
+    │   │   └── cpa-salary/
+    │   │       ├── page.tsx
+    │   │       └── [state]/page.tsx
     │   │
     │   ├── blog/
-    │   │   ├── page.tsx          # Blog listing
-    │   │   └── [slug]/
-    │   │       └── page.tsx      # Individual blog posts (8 articles)
+    │   │   ├── page.tsx              # Blog listing
+    │   │   └── [slug]/page.tsx       # Individual blog posts
     │   │
     │   ├── guides/
-    │   │   ├── exam-day/
-    │   │   │   └── page.tsx      # Exam day walkthrough
-    │   │   └── failed-section/
-    │   │       └── page.tsx      # "I Failed, Now What?" guide
+    │   │   ├── exam-day/page.tsx
+    │   │   ├── failed-section/page.tsx
+    │   │   ├── how-to-become-a-cpa/page.tsx
+    │   │   ├── best-order-cpa-exams/page.tsx
+    │   │   └── become-cpa-in/
+    │   │       ├── page.tsx
+    │   │       └── [state]/page.tsx
     │   │
-    │   ├── success-stories/
-    │   │   ├── page.tsx          # Stories listing (5 stories)
-    │   │   └── [slug]/
-    │   │       └── page.tsx      # Individual story pages
+    │   ├── compare/
+    │   │   ├── becker-vs-surgent/page.tsx
+    │   │   ├── becker-vs-gleim/page.tsx
+    │   │   ├── surgent-vs-roger/page.tsx
+    │   │   └── wiley-vs-uworld/page.tsx
     │   │
-    │   ├── recommended-program/
-    │   │   └── page.tsx          # Surgent affiliate page
+    │   ├── topics/                   # SEO topic pages
+    │   │   ├── aud/...
+    │   │   ├── far/...
+    │   │   └── reg/...
     │   │
-    │   ├── working-full-time/
-    │   │   └── page.tsx          # Time management tips
-    │   │
-    │   └── about/
-    │       └── page.tsx          # CPA credentials, trust building
+    │   └── support/page.tsx
     │
     ├── components/
-    │   ├── Header.tsx            # Navigation with dropdowns
-    │   ├── Footer.tsx            # Site footer
-    │   ├── SectionPage.tsx       # Reusable section template
-    │   └── auth/
-    │       └── AuthProvider.tsx  # Auth context with profile management
+    │   ├── Header.tsx                # Navigation with dropdowns
+    │   ├── Footer.tsx                # Site footer
+    │   ├── SectionPage.tsx           # Reusable section template
+    │   ├── LayoutWrapper.tsx
+    │   ├── ErrorBoundary.tsx         # React error boundary (NEW 2026-01-16)
+    │   │
+    │   ├── auth/
+    │   │   ├── AuthProvider.tsx      # Auth context with graceful degradation
+    │   │   ├── AuthErrorBanner.tsx   # Auth error UI component (NEW 2026-01-16)
+    │   │   └── InactivityWarning.tsx
+    │   │
+    │   ├── dashboard/
+    │   │   ├── DashboardNav.tsx
+    │   │   ├── PrimeMeridianScore.tsx # Exam readiness score display
+    │   │   └── ...
+    │   │
+    │   ├── tbs/
+    │   │   ├── TBSContainer.tsx      # Main TBS UI with exit session
+    │   │   ├── TBSHeader.tsx
+    │   │   ├── WorkArea.tsx
+    │   │   ├── ExhibitPanel.tsx
+    │   │   └── ...
+    │   │
+    │   ├── practice/
+    │   │   └── ...
+    │   │
+    │   ├── flashcards/
+    │   │   └── ...
+    │   │
+    │   ├── gamification/
+    │   │   ├── AchievementProvider.tsx
+    │   │   └── ...
+    │   │
+    │   ├── navigator/                # Meridian Navigator chat
+    │   │   └── ...
+    │   │
+    │   ├── admin/
+    │   │   └── ...
+    │   │
+    │   ├── seo/
+    │   │   └── ...
+    │   │
+    │   ├── animations/
+    │   │   └── ...
+    │   │
+    │   └── theme/
+    │       └── ThemeProvider.tsx
     │
     └── lib/
+        ├── errorTracking.ts          # Centralized error tracking (NEW 2026-01-16)
+        │
         ├── supabase/
-        │   ├── client.ts         # Browser Supabase client
-        │   ├── server.ts         # Server Supabase client
-        │   └── types.ts          # Database types (Profile, etc.)
+        │   ├── client.ts             # Browser client (createBrowserClient from @supabase/ssr)
+        │   ├── server.ts             # Server Supabase client
+        │   ├── middleware.ts         # Session refresh middleware
+        │   ├── clearAuthStorage.ts
+        │   └── types.ts              # Database types (Profile, etc.)
         │
         ├── gamification/
-        │   ├── types.ts          # Badge, Achievement types
-        │   ├── badges.ts         # Badge definitions
-        │   └── points.ts         # Point calculations
+        │   ├── types.ts              # Badge, Achievement types
+        │   ├── badges.ts             # Badge definitions
+        │   ├── points.ts             # Point calculations
+        │   └── checker.ts            # Achievement trigger logic
+        │
+        ├── scoring/
+        │   ├── prime-meridian.ts     # Prime Meridian score calculation
+        │   └── taxonomy.ts           # AICPA topic taxonomy
+        │
+        ├── adaptive/
+        │   └── ...                   # Adaptive question selection
+        │
+        ├── ai/
+        │   └── ...                   # AI feature utilities
+        │
+        ├── email/
+        │   └── ...                   # Email utilities
+        │
+        ├── security/
+        │   └── ...                   # Security utilities
+        │
+        ├── admin/
+        │   └── ...                   # Admin utilities
+        │
+        ├── blog/
+        │   └── ...                   # Blog utilities
+        │
+        ├── flashcards/
+        │   └── ...                   # Flashcard utilities
+        │
+        ├── resend/
+        │   └── ...                   # Resend email integration
         │
         └── data/
             ├── practice-questions/
-            │   ├── types.ts      # QuestionSet, PracticeQuestion
-            │   ├── index.ts      # Exports and helper functions
-            │   ├── far.ts        # 100 FAR questions
-            │   ├── aud.ts        # 100 AUD questions
-            │   ├── reg.ts        # 100 REG questions
-            │   ├── tcp.ts        # 100 TCP questions
-            │   ├── bar.ts        # 100 BAR questions
-            │   └── isc.ts        # 100 ISC questions
+            │   ├── types.ts          # QuestionSet, PracticeQuestion
+            │   ├── index.ts          # Exports and helper functions
+            │   ├── far.ts            # FAR questions
+            │   ├── aud.ts            # AUD questions
+            │   ├── reg.ts            # REG questions
+            │   ├── tcp.ts            # TCP questions
+            │   ├── bar.ts            # BAR questions
+            │   └── isc.ts            # ISC questions
             │
-            ├── tbs/                     # TBS QUESTIONS (NEW 2026-01-10!)
-            │   ├── types.ts             # TBS type definitions
-            │   ├── tbs-research-guide.md # Research & creation guidelines
-            │   ├── far-tbs.ts           # 19 FAR TBS (need 10 more)
-            │   ├── aud-tbs.ts           # 29 AUD TBS
-            │   ├── reg-tbs.ts           # 30 REG TBS
-            │   ├── tcp-tbs.ts           # 21 TCP TBS
-            │   ├── bar-tbs.ts           # 21 BAR TBS
-            │   ├── isc-tbs.ts           # 12 ISC TBS
-            │   ├── sample-tbs.ts        # 58 original sample TBS
-            │   └── index.ts             # Central exports
+            ├── tbs/
+            │   ├── types.ts          # TBS type definitions
+            │   ├── index.ts          # Central exports
+            │   ├── far-tbs.ts        # FAR TBS questions
+            │   ├── aud-tbs.ts        # AUD TBS questions
+            │   ├── reg-tbs.ts        # REG TBS questions
+            │   ├── tcp-tbs.ts        # TCP TBS questions
+            │   ├── bar-tbs.ts        # BAR TBS questions
+            │   ├── isc-tbs.ts        # ISC TBS questions
+            │   ├── sample-tbs.ts     # Sample TBS
+            │   └── exam-tbs.ts       # Exam TBS
             │
-            ├── score-release-dates.ts  # 2025-2026 release schedule
-            ├── state-requirements.ts   # 55 states/jurisdictions data
-            ├── blog-posts.ts           # Blog post metadata
-            └── success-stories.ts      # Success story data
+            ├── score-release-dates.ts
+            └── state-requirements.ts
 
 ================================================================================
 5. WORKFLOW PREFERENCES
@@ -323,7 +466,7 @@ DEVELOPMENT:
 GIT CONVENTIONS:
 - Main branch only (no feature branches for this project)
 - Commit messages: Clear, descriptive, include scope
-- Always include Claude Code attribution in commits
+- Always include Claude Code and Happy attribution in commits
 
 FILE ORGANIZATION:
 - Keep related files together (page + its data)
@@ -337,26 +480,26 @@ CODE STYLE:
 - Tailwind utility classes
 
 DOCUMENTATION:
-- **CRITICAL**: Log EVERY response to "cpa claude responses.txt" (user cannot read console)
 - Update SESSION_LOG.txt after each session
 - Update CLAUDE_CONTEXT.txt when major changes occur
-- Session files (SESSION_*.txt, CLAUDE_CONTEXT.txt) are local - don't push to GitHub every time
+- Session files (SESSION_*.txt, CLAUDE_CONTEXT.txt) are local - don't push every time
 
 ================================================================================
 6. GOLDEN RULES
 ================================================================================
 
 **CRITICAL - TOP PRIORITY:**
-1. LOG ALL RESPONSES: Copy EVERY console response to "cpa claude responses.txt"
-   - The user CANNOT read responses in the console
-   - This is essential for project efficiency and continuity
-   - Do this for EVERY response, no exceptions
 
-2. SESSION FILES ARE LOCAL: Do NOT push these to GitHub every update:
+1. SESSION FILES ARE LOCAL: Do NOT push these to GitHub every update:
    - SESSION_PROMPT.txt
    - SESSION_LOG.txt
    - CLAUDE_CONTEXT.txt
    - Only push when committing actual code changes or when explicitly requested
+
+2. READ DOCS BEFORE TBS WORK: Before creating ANY TBS questions:
+   - Read docs/core/CLAUDE.md for type definitions
+   - Check TBS batch size limit (10 questions max per batch)
+   - Verify content areas match section
 
 **STANDARD RULES:**
 3. ALWAYS read SESSION_PROMPT.txt at session start
@@ -390,7 +533,7 @@ PHASE 1: Free Tools (Completed 2026-01-03)
 - Score Release Calendar with countdown timer
 - NTS Expiration Tracker with reminder system
 - Study Hours Calculator for all 6 sections
-- State Requirements Guide (started with 10 states, now 22)
+- State Requirements Guide (55 states/jurisdictions)
 - Enhanced Study Plan with discipline selection
 - Added "Free Tools" dropdown to navigation
 
@@ -403,42 +546,28 @@ PHASE 2: Content & Authority (Completed 2026-01-04)
 - Success Stories section (5 stories)
 - Simplified header navigation
 
-PHASE 3: CPA Academy / Dashboard (Completed 2026-01-05, Enhanced 2026-01-08)
-----------------------------------------------------------------------------
+PHASE 3: CPA Academy / Dashboard (Completed, Enhanced through 2026-01-16)
+------------------------------------------------------------------------
 - Supabase database integration (PostgreSQL)
 - User authentication (email/password via Supabase Auth)
+- Cookie-based authentication using @supabase/ssr
 - User dashboard with study tracking
 - Study session logging with streak tracking
 - Section progress management
 - NTS tracking in dashboard
 - Gamification system (points, badges, achievements)
-- 5,810 practice questions across all 6 sections (176 batch files)
+- 5,810 MCQ practice questions across all 6 sections
+- 470+ TBS questions across all 6 sections
 - Practice history and accuracy tracking
 - Exam simulation mode with timed tests and pause functionality
+- TBS simulations with exit/resume functionality
+- Prime Meridian exam readiness scoring system
+- AI-powered flashcard generation
 - Surgent promotional banner (per-account, 30-day reappearance)
-- State requirements expanded to 22 states
-
-PHASE 3.5: Question Bank Expansion (In Progress as of 2026-01-10)
------------------------------------------------------------------
-MCQ Questions:
-- Expanded from 600 to 5,810 questions
-- 176 question batch files in docs/question-batches/
-- Difficulty distribution analysis and tracking
-- Target: 50-60% medium difficulty (currently at 49.2%)
-- See docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md for full breakdown
-
-TBS Questions (NEW - Added 2026-01-10):
-- Created comprehensive TBS folder structure: src/lib/data/tbs/
-- 500+ total TBS questions (expanded from 58 sample to 500+)
-- Target: 500 total - COMPLETED January 2026
-- Created TBS research guide with complexity levels
-- TBS types: Numeric Entry, Document Review, Journal Entry, Dropdown, Research
-- Complexity distribution: 40% simple, 45% moderate, 15% complex
-- See src/lib/data/tbs/tbs-research-guide.md for full details
-
-Dark Mode Fix (2026-01-10):
-- Fixed state requirements pages for dark mode readability
-- Updated [state]/page.tsx and StateSelector.tsx
+- State requirements expanded to 55 states
+- Admin dashboard for content management
+- Graceful degradation for auth failures (NEW 2026-01-16)
+- Error tracking infrastructure (NEW 2026-01-16)
 
 PHASE 4: Email Nurturing (NOT STARTED)
 --------------------------------------
@@ -446,11 +575,13 @@ PHASE 4: Email Nurturing (NOT STARTED)
 - Segment-based content delivery
 - Automated score release notifications
 
-PHASE 5: AI Features (NOT STARTED)
-----------------------------------
-- AI chatbot (Anthropic Claude)
-- AI-powered study recommendations
-- Diagnostic quizzes per section
+PHASE 5: AI Features (PARTIALLY COMPLETE)
+-----------------------------------------
+- AI flashcard generation (DONE)
+- AI exam debrief (DONE)
+- AI pre-exam assessment (DONE)
+- AI study guide generation (DONE)
+- AI chatbot (Meridian Navigator) - partially implemented
 
 ================================================================================
 8. DATABASE SCHEMA (Supabase - ACTIVE)
@@ -460,7 +591,6 @@ The database is fully integrated and active. All tables have Row Level Security.
 
 ```sql
 -- PROFILES TABLE
--- Stores user profile data and gamification stats
 CREATE TABLE profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id),
   email TEXT UNIQUE NOT NULL,
@@ -477,13 +607,12 @@ CREATE TABLE profiles (
   current_streak INTEGER DEFAULT 0,
   longest_streak INTEGER DEFAULT 0,
   last_study_date DATE,
-  promo_dismissed_at TIMESTAMPTZ,  -- For Surgent banner (30-day reappearance)
+  promo_dismissed_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ DEFAULT now(),
   updated_at TIMESTAMPTZ DEFAULT now()
 );
 
 -- STUDY SESSIONS TABLE
--- Tracks logged study hours
 CREATE TABLE study_sessions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
@@ -496,7 +625,6 @@ CREATE TABLE study_sessions (
 );
 
 -- SECTION PROGRESS TABLE
--- Tracks status of each CPA section
 CREATE TABLE section_progress (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
@@ -513,7 +641,6 @@ CREATE TABLE section_progress (
 );
 
 -- NTS ENTRIES TABLE
--- Tracks Notice to Schedule documents
 CREATE TABLE nts_entries (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
@@ -528,7 +655,6 @@ CREATE TABLE nts_entries (
 );
 
 -- PRACTICE ATTEMPTS TABLE
--- Tracks user answers to practice questions
 CREATE TABLE practice_attempts (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
@@ -542,8 +668,24 @@ CREATE TABLE practice_attempts (
   created_at TIMESTAMPTZ DEFAULT now()
 );
 
+-- TBS ATTEMPTS TABLE (Updated schema)
+CREATE TABLE tbs_attempts (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  tbs_id TEXT NOT NULL,  -- String ID like "far-i-1-1-je"
+  section TEXT CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC')),
+  responses JSONB,
+  score_earned INTEGER,
+  score_possible INTEGER,
+  score_percentage DECIMAL(5,2),
+  time_spent_seconds INTEGER,
+  is_complete BOOLEAN DEFAULT false,
+  started_at TIMESTAMPTZ DEFAULT now(),
+  completed_at TIMESTAMPTZ,
+  UNIQUE(user_id, tbs_id)
+);
+
 -- USER BADGES TABLE
--- Tracks earned achievements
 CREATE TABLE user_badges (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
@@ -552,17 +694,25 @@ CREATE TABLE user_badges (
   UNIQUE(user_id, badge_id)
 );
 
+-- QUESTION NOTES TABLE
+CREATE TABLE question_notes (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE,
+  question_id TEXT NOT NULL,
+  question_type TEXT NOT NULL CHECK (question_type IN ('mcq', 'tbs')),
+  section TEXT NOT NULL CHECK (section IN ('FAR', 'AUD', 'REG', 'TCP', 'BAR', 'ISC')),
+  note_content TEXT NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now(),
+  UNIQUE(user_id, question_id, question_type)
+);
+
 -- Indexes for performance
 CREATE INDEX idx_study_sessions_user_date ON study_sessions(user_id, date);
 CREATE INDEX idx_practice_attempts_user ON practice_attempts(user_id);
 CREATE INDEX idx_section_progress_user ON section_progress(user_id);
-```
-
-PENDING MIGRATION:
-```sql
--- Run this in Supabase SQL Editor for promo banner feature
-ALTER TABLE profiles
-ADD COLUMN IF NOT EXISTS promo_dismissed_at TIMESTAMPTZ DEFAULT NULL;
+CREATE INDEX idx_tbs_attempts_section ON tbs_attempts(section);
+CREATE INDEX idx_tbs_attempts_user_section ON tbs_attempts(user_id, section);
 ```
 
 ================================================================================
@@ -600,75 +750,31 @@ interface PracticeQuestion {
   topic: string;
   difficulty: 'easy' | 'medium' | 'hard';
   question: string;
-  options: {
-    A: string;
-    B: string;
-    C: string;
-    D: string;
-  };
+  options: { A: string; B: string; C: string; D: string; };
   correctAnswer: 'A' | 'B' | 'C' | 'D';
   explanation: string;
   tip?: string;
 }
+```
 
-interface QuestionSet {
+TBS QUESTION:
+```typescript
+interface TBSQuestion {
+  id: string;
   section: SectionCode;
-  sectionName: string;
-  topics: string[];
-  questions: PracticeQuestion[];
-}
-```
-
-SCORE RELEASE DATE:
-```typescript
-interface ScoreReleaseDate {
-  date: string;
-  type: "core" | "discipline";
-  testingWindow?: string;
-  sections: string[];
-  notes?: string;
-}
-```
-
-STATE REQUIREMENT:
-```typescript
-interface StateRequirement {
-  code: string;           // "CA", "TX", etc.
-  name: string;           // "California"
-  boardName: string;
-  boardUrl: string;
-  educationRequirements: {
-    totalCredits: number;
-    accountingCredits: number;
-    businessCredits: number;
-    notes: string[];
-  };
-  experienceRequirements: {
-    totalHours: number;
-    yearsRequired: number;
-    supervisionRequired: boolean;
-    acceptableExperience: string[];
-  };
-  examRequirements: {
-    canSitBeforeDegree: boolean;
-    creditTransfer: boolean;
-    notes: string[];
-  };
-  fees: {
-    initialApplication: number;
-    perSection: number;
-    reexamFee: number;
-    notes: string[];
-  };
-  ethicsExam: {
-    required: boolean;
-    examName: string;
-    whenRequired: string;
-  };
-  residency: {
-    required: boolean;
-    notes: string;
-  };
+  tbsType: TBSType;
+  topic: string;
+  subtopic: string;
+  difficulty: Difficulty;
+  skillLevel: SkillLevel;
+  contentArea: string;
+  title: string;
+  scenarioText: string;
+  timeEstimateMinutes: number;
+  maxScorePoints: number;
+  exhibits: TBSExhibit[];
+  requirements: TBSRequirement[];
+  journalAccounts?: JournalAccount[];
 }
 ```
 
@@ -678,49 +784,31 @@ interface StateRequirement {
 
 POST /api/submit-study-plan
 ---------------------------
-Request:
-```json
-{
-  "email": "user@example.com",
-  "workingFullTime": "yes" | "no",
-  "hoursPerWeek": "10" | "20" | "30" | "40",
-  "accountingBackground": "strong" | "moderate" | "limited",
-  "disciplineSection": "TCP" | "BAR" | "ISC",
-  "studyPlan": { ... }
-}
-```
-Response: { "success": true }
-
-Actions:
-1. Sends formatted study plan email to user
-2. Sends lead notification to admin (EMAIL_TO)
-
+Sends formatted study plan email to user and admin notification.
 
 POST /api/subscribe-score-release
 ---------------------------------
-Request: { "email": "user@example.com" }
-Response: { "success": true }
-
-Actions:
-1. Sends confirmation email to user
-2. Notifies admin of new subscriber
-
+Subscribes user to score release notifications.
 
 POST /api/subscribe-nts
 -----------------------
-Request:
-```json
-{
-  "email": "user@example.com",
-  "ntsDate": "2025-01-15",
-  "expirationDate": "2025-07-15T00:00:00.000Z"
-}
-```
-Response: { "success": true }
+Subscribes user to NTS expiration reminders.
 
-Actions:
-1. Sends confirmation with reminder schedule to user
-2. Notifies admin of new subscriber
+GET/POST /api/tbs/attempts
+--------------------------
+Get user's TBS attempts or create new attempt.
+
+GET /api/tbs/stats
+------------------
+Get user's TBS statistics by section.
+
+POST /api/ai/generate-flashcard
+-------------------------------
+Generate AI-powered flashcard for a topic.
+
+POST /api/ai/exam-debrief
+-------------------------
+Generate AI analysis of exam simulation results.
 
 ================================================================================
 11. STYLING GUIDE
@@ -756,195 +844,74 @@ const sectionColors = {
 };
 ```
 
-BUTTON CLASSES:
-```css
-.btn-primary    /* Navy background, white text */
-.btn-secondary  /* Green background, white text */
-```
-
-COMMON PATTERNS:
-- Cards: `bg-white rounded-xl p-6 border border-[var(--border)]`
-- Sections: `py-12` or `py-16` for vertical spacing
-- Max width: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`
-- Headings: `text-[var(--foreground)]` with appropriate size
-- Muted text: `text-[var(--muted)]`
-
 ================================================================================
 12. PRACTICE QUESTIONS SYSTEM
 ================================================================================
 
 OVERVIEW:
-- 5,810 total questions across 176 batch files
-- Original 600 in TypeScript files (src/lib/data/practice-questions/)
-- Expanded 5,200+ in JSON batch files (docs/question-batches/)
+- 5,810 total MCQ questions across 176 batch files
 - Immediate feedback with explanations
 - Accuracy tracking by section
 - History review with filtering
 - Exam simulation mode with timed tests
 
-QUESTION DISTRIBUTION (as of 2026-01-08):
-| Section | Questions | Batches | Easy% | Med% | Hard% |
-|---------|-----------|---------|-------|------|-------|
-| FAR     | 1,680     | 55      | 19%   | 46%  | 35%   |
-| AUD     | 1,015     | 29      | 18%   | 52%  | 30%   |
-| REG     | 1,260     | 36      | 16%   | 47%  | 36%   |
-| TCP     | 805       | 23      | 17%   | 51%  | 32%   |
-| BAR     | 490       | 14      | 17%   | 56%  | 27%   |
-| ISC     | 560       | 16      | 15%   | 50%  | 35%   |
-| TOTAL   | 5,810     | 176     | 17%   | 49%  | 33%   |
-
-Target Distribution: 17% easy, 55% medium, 28% hard
-Current Gap: Need ~336 more medium questions to reach 55% target
-
-FILES - Original TypeScript:
-- src/lib/data/practice-questions/types.ts: PracticeQuestion, QuestionSet interfaces
-- src/lib/data/practice-questions/index.ts: Exports, helper functions
-- src/lib/data/practice-questions/{far,aud,reg,tcp,bar,isc}.ts: 100 questions each
-
-FILES - JSON Batch System:
-- docs/question-batches/{section}/{section}-batch-{number}-{topic}.json
-- docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md: Complete breakdown of all batches
-- Batch naming: far-batch-001 through far-batch-055, etc.
-
-QUESTION STRUCTURE:
-Each question has:
-- id: Unique identifier (e.g., "far-001", "far-med-015")
-- section: FAR, AUD, REG, TCP, BAR, or ISC
-- topic: Specific topic within section
-- difficulty: easy, medium, or hard
-- question: The question text
-- options: A, B, C, D answer choices
-- correctAnswer: A, B, C, or D
-- explanation: Why the answer is correct
-- tip (optional): Additional study tip
-
-TOPICS COVERED:
-- FAR: Conceptual Framework, Revenue Recognition, Leases, Government, NFP,
-       Consolidations, Foreign Currency, Derivatives, Pensions, etc.
-- AUD: Ethics, Risk Assessment, Evidence, Sampling, Reports, Reviews,
-       Government Auditing, Group Audits, etc.
-- REG: Individual Tax, Business Tax, Property Transactions, Business Law,
-       Circular 230, Gift/Estate Tax, etc.
-- TCP: Tax Planning, Estate Tax, Retirement, International Tax,
-       Business Succession, Passive Activities, etc.
-- BAR: Financial Analysis, Cost Accounting, Budgeting, Data Analytics,
-       Capital Budgeting, Derivatives, etc.
-- ISC: IT Controls, Cybersecurity, Data Management, Cloud, IT Audit,
-       SOC Reports, Encryption, Disaster Recovery, etc.
-
-HELPER FUNCTIONS:
-```typescript
-getQuestionsBySection(section: SectionCode): PracticeQuestion[]
-getQuestionsByTopic(section: SectionCode, topic: string): PracticeQuestion[]
-getQuestionsByDifficulty(section, difficulty): PracticeQuestion[]
-getRandomQuestions(section, count, options?): PracticeQuestion[]
-getQuestionById(id: string): PracticeQuestion | undefined
-getTopicsForSection(section: SectionCode): string[]
-getQuestionCount(section: SectionCode): number
-sectionHasQuestions(section: SectionCode): boolean
-```
+QUESTION DISTRIBUTION (as of 2026-01-10):
+| Section | Questions | Easy% | Med% | Hard% |
+|---------|-----------|-------|------|-------|
+| FAR     | 1,680     | 19%   | 46%  | 35%   |
+| AUD     | 1,015     | 18%   | 52%  | 30%   |
+| REG     | 1,260     | 16%   | 47%  | 36%   |
+| TCP     | 805       | 17%   | 51%  | 32%   |
+| BAR     | 490       | 17%   | 56%  | 27%   |
+| ISC     | 560       | 15%   | 50%  | 35%   |
 
 ================================================================================
 12.5 EXAM SIMULATION SYSTEM
 ================================================================================
 
 OVERVIEW:
-The exam simulation feature provides timed practice tests that mimic the real
-CPA exam experience with pause functionality for flexibility.
-
-LOCATION: src/app/dashboard/exam-simulation/[section]/page.tsx
+Timed practice tests mimicking the real CPA exam with pause functionality.
 
 EXAM STATES:
 - 'setup': Configure exam (question count, time limit)
 - 'exam': Active exam with timer running
 - 'paused': Exam paused, timer stopped
-- 'review': Review answers before final submission
+- 'review': Review answers before submission
 - 'results': View final score and explanations
 
-PAUSE FUNCTIONALITY (Added 2026-01-08):
-- Pause button in timer bar during exam
-- Timer stops when paused, resumes correctly
-- Paused overlay shows:
-  * Current progress (question X of Y)
-  * Questions answered count
-  * Resume button
-  * "End Exam & Submit" option for early termination
-- Records question time before pausing
-
-KEY FUNCTIONS:
-```typescript
-handlePause(): void     // Stops timer, records time, sets paused state
-handleResume(): void    // Resets question start time, returns to exam state
-handleEndExam(): void   // Submits exam early from paused state
-```
+EXAM CONFIGS:
+- MCQ Only: Just multiple choice questions
+- Mixed Practice: MCQ + 1 TBS
+- Realistic Testlet: MCQ + 2 TBS
 
 ================================================================================
-12.6 TBS (TASK-BASED SIMULATION) SYSTEM (NEW 2026-01-10)
+12.6 TBS (TASK-BASED SIMULATION) SYSTEM
 ================================================================================
 
 OVERVIEW:
-TBS questions simulate the actual CPA exam format with multi-step scenarios,
-exhibits, and various response types. Created to complement MCQ practice.
-
-LOCATION: src/lib/data/tbs/
-
-FILES:
-- types.ts: TBSQuestion, TBSExhibit, TBSRequirement interfaces
-- tbs-research-guide.md: Research documentation and creation guidelines
-- far-tbs.ts: 19 FAR TBS questions
-- aud-tbs.ts: 29 AUD TBS questions
-- reg-tbs.ts: 30 REG TBS questions
-- tcp-tbs.ts: 21 TCP TBS questions
-- bar-tbs.ts: 21 BAR TBS questions
-- isc-tbs.ts: 12 ISC TBS questions
-- sample-tbs.ts: 58 original sample TBS
-- index.ts: Central exports and helper functions
-
-CURRENT STATUS (2026-01-10):
-- Total TBS: 500+ questions (COMPLETED January 2026)
-- All 6 sections: FAR, AUD, REG, TCP, BAR, ISC (~75+ each)
-- Distribution: ~25% easy, ~60% medium, ~15% hard per section
+470+ TBS questions simulating the actual CPA exam format.
 
 TBS TYPES:
 - numeric_entry: Calculate and enter numeric values
-- document_review: Review documents, identify errors/issues
+- document_review: Review documents, identify errors
 - journal_entry: Create journal entries with debits/credits
 - dropdown: Select from option lists
 - research: Find authoritative literature citations
 
-COMPLEXITY LEVELS:
-| Level    | Requirements | Exhibits | Time Est. | Distribution |
-|----------|--------------|----------|-----------|--------------|
-| Simple   | 3-5          | 1-2      | 8-12 min  | 40%          |
-| Moderate | 5-7          | 2-3      | 12-16 min | 45%          |
-| Complex  | 7-10         | 3-4      | 16-22 min | 15%          |
+TBS DISTRIBUTION (as of 2026-01-11):
+| Section | Questions |
+|---------|-----------|
+| FAR     | ~90+      |
+| AUD     | ~90+      |
+| REG     | ~80+      |
+| TCP     | ~80+      |
+| BAR     | ~80+      |
+| ISC     | ~50+      |
 
-TBS QUESTION STRUCTURE:
-```typescript
-interface TBSQuestion {
-  id: string;                    // e.g., "tbs-far-012"
-  section: SectionCode;          // FAR, AUD, REG, TCP, BAR, ISC
-  tbsType: TBSType;              // numeric_entry, document_review, etc.
-  topic: string;                 // e.g., "Leases"
-  subtopic: string;              // e.g., "Lessee Accounting - Operating Lease"
-  difficulty: Difficulty;        // easy, medium, hard
-  skillLevel: SkillLevel;        // remembering_understanding, application, analysis, evaluation
-  contentArea: string;           // e.g., "FAR-III"
-  title: string;                 // Display title
-  scenarioText: string;          // Main scenario description
-  timeEstimateMinutes: number;   // Estimated completion time
-  maxScorePoints: number;        // Total points available
-  exhibits: TBSExhibit[];        // Tables, documents, memos
-  requirements: TBSRequirement[]; // Individual questions/tasks
-  journalAccounts?: JournalAccount[]; // For journal_entry type
-}
-```
-
-HELPER FUNCTIONS:
-```typescript
-getAllTBSQuestions(): TBSQuestion[]     // Get all TBS across sections
-getTBSBySection(section): TBSQuestion[] // Get TBS for specific section
-```
+EXIT SESSION FEATURE:
+- Save & Exit: Saves progress as incomplete attempt
+- Exit Without Saving: Exits without database save
+- Shows progress summary (questions answered, time spent)
 
 ================================================================================
 13. GAMIFICATION SYSTEM
@@ -953,146 +920,131 @@ getTBSBySection(section): TBSQuestion[] // Get TBS for specific section
 POINTS:
 - Study session: 10 points per hour logged
 - Practice question correct: 5 points
-- Practice question incorrect: 1 point (participation)
+- Practice question incorrect: 1 point
 - Section passed: 100 points
 
 STREAKS:
 - Tracked by consecutive days with logged study sessions
-- Current streak and longest streak stored in profile
-- Calculated when logging sessions
+- Current and longest streak stored in profile
 
-BADGES (Examples):
+BADGES:
 - First Study Session
-- 7-Day Streak
-- 30-Day Streak
-- 100 Practice Questions
+- 7-Day Streak, 30-Day Streak
+- 100 Practice Questions, etc.
 - Section Passed (per section)
-- All Core Sections Passed
 - CPA Complete
 
-STORAGE:
-- Points: profiles.total_points
-- Badges: user_badges table (badge_id + earned_at)
-- Streak: profiles.current_streak, profiles.longest_streak
-
 ================================================================================
-14. FUTURE ROADMAP
+14. AUTHENTICATION SYSTEM (Updated 2026-01-16)
 ================================================================================
 
-IMMEDIATE (Ready to Start):
+ARCHITECTURE:
+- Cookie-based auth using @supabase/ssr (NOT localStorage)
+- Session refresh via middleware on each request
+- Graceful degradation on auth failures
 
-**CRITICAL: Before creating ANY TBS, read docs/tbs-system-architecture.md**
+KEY FILES:
+- src/lib/supabase/client.ts: Uses createBrowserClient from @supabase/ssr
+- src/lib/supabase/middleware.ts: Refreshes auth tokens
+- src/lib/supabase/server.ts: Server-side client for API routes
+- src/components/auth/AuthProvider.tsx: Auth context with error handling
 
-TBS EXPANSION - COMPLETED (January 2026):
-- [x] Phase 1: Reached 200 TBS
-- [x] Phase 2: Expanded to 350 TBS
-- [x] Phase 3: Expanded to 500+ TBS (75+ per section)
-      See docs/TBS_EXPANSION_2026-01-10.md for full documentation
-      Complexity: 40% simple, 45% moderate, 15% complex
-      See CURRENT_STATUS_2026-01-10.txt for full ID numbering
+AUTH CONTEXT PROVIDES:
+```typescript
+interface AuthContextType {
+  user: User | null;
+  profile: Profile | null;
+  session: Session | null;
+  loading: boolean;
+  error: AuthErrorType;  // 'network' | 'service_unavailable' | 'session_expired' | 'unknown' | null
+  isServiceAvailable: boolean;
+  signOut: () => Promise<void>;
+  refreshProfile: () => Promise<void>;
+  retryAuth: () => Promise<void>;
+}
+```
 
-PHASE 3 - Other tasks:
-- [ ] Continue adding medium MCQ questions (~336 more needed for 55% target)
-      Priority sections: FAR (46%), REG (47%)
-- [ ] Phase 4: Email Nurturing
-  - [ ] Design 7-email welcome sequence
-  - [ ] Set up email automation (Resend + cron or external service)
-  - [ ] Implement segment tracking
+ERROR TYPES:
+- 'network': Connection issues
+- 'service_unavailable': Supabase service down
+- 'session_expired': Token expired/invalid
+- 'unknown': Other errors
 
-SHORT-TERM:
-- [x] Practice questions expanded to 5,810 (was 600)
-- [ ] Continue balancing difficulty distribution
-- [ ] Add remaining 28 states to requirements guide
-- [ ] More blog posts for SEO
-- [ ] Diagnostic quizzes per section
+================================================================================
+15. ERROR TRACKING & GRACEFUL DEGRADATION (NEW 2026-01-16)
+================================================================================
 
-MEDIUM-TERM (Phase 5):
-- [ ] Integrate Anthropic Claude API for chatbot
-- [ ] AI-powered study recommendations
-- [ ] Enhanced progress analytics
+ERROR TRACKING (src/lib/errorTracking.ts):
+- Centralized error capture and tracking
+- Ready for Sentry integration
+- Functions: captureException, captureMessage, trackAuthError, trackApiError
+- User context tracking for error correlation
+
+GRACEFUL DEGRADATION:
+- AuthProvider classifies errors by type
+- Dashboard layout shows error UI instead of redirecting on network/service errors
+- Users can retry authentication or sign in again
+- Retry logic with progressive delays (up to 2 retries)
+
+COMPONENTS:
+- src/components/ErrorBoundary.tsx: React error boundary
+- src/components/auth/AuthErrorBanner.tsx: User-friendly auth error UI
+- AuthStatusIndicator: Minimal inline error indicator for headers
+
+TO ADD SENTRY:
+```bash
+npx @sentry/wizard@latest -i nextjs
+```
+Then update errorTracking.ts to use Sentry instead of console logging.
+
+================================================================================
+16. FUTURE ROADMAP
+================================================================================
+
+IMMEDIATE (In Progress):
+- [ ] MCQ medium difficulty expansion (49.2% → 55% target)
+- [ ] TBS expansion to 500+ questions
+- [ ] AICPA Blueprint alignment refinements
+
+PHASE 4 (Not Started):
+- [ ] 7-email welcome sequence
+- [ ] Email automation setup
+- [ ] Segment-based content delivery
+
+PHASE 5 (Partially Complete):
+- [x] AI flashcard generation
+- [x] AI exam debrief
+- [x] AI pre-exam assessment
+- [ ] AI chatbot (Meridian Navigator) - enhancement needed
 
 LONG-TERM:
 - [ ] Mobile app (PWA)
 - [ ] Video content integration
-- [ ] Community features (forums, study groups)
+- [ ] Community features
 - [ ] Referral program
 
-WISHLIST:
-- Exit-intent popup for email capture
-- A/B testing infrastructure
-- Admin dashboard for content management
-- Integration with other CPA review providers (if needed)
-
 ================================================================================
-KEY DOCUMENTS REFERENCE
+17. KEY DOCUMENTS REFERENCE
 ================================================================================
-
-**MUST READ FIRST (Before creating ANY TBS):**
-
-1. **docs/tbs-system-architecture.md** (CRITICAL - READ FIRST!)
-   - Complete TBS creation guidelines and standards
-   - TypeScript interfaces and type definitions
-   - Exhibit structure templates
-   - Quality requirements and validation rules
-   - FOLLOW THIS DOCUMENT PRECISELY FOR ALL TBS CREATION
 
 **Session Context:**
+1. docs/core/SESSION_PROMPT.txt - Quick start for new sessions
+2. docs/core/SESSION_LOG.txt - Session accomplishments
+3. docs/claude instructions/TODO.md - Current task list
 
-2. **CURRENT_STATUS_2026-01-10.txt** (CRITICAL)
-   - Detailed instructions for resuming current work
-   - TBS Expansion: COMPLETED - 500+ TBS across all 6 sections
-   - See docs/TBS_EXPANSION_2026-01-10.md for documentation
-   - Distribution targets and ID numbering
-   - READ THIS for immediate pickup
+**Technical Reference:**
+4. docs/core/CLAUDE.md - Quick reference for Claude
+5. docs/core/ANALYTICS.md - Prime Meridian scoring system
+6. docs/core/TOPIC-MAPPING.md - AICPA content area mapping
 
-3. **src/lib/data/tbs/tbs-research-guide.md**
-   - CPA exam TBS research and background
-   - Complexity level definitions (40% simple, 45% moderate, 15% complex)
-   - Topic priorities by section
-   - TBS type descriptions and best practices
+**TBS Reference:**
+7. src/lib/data/tbs/*.ts - TBS question files
+8. src/lib/data/tbs/types.ts - TBS type definitions
 
-**TBS Question Files:**
-
-4. **src/lib/data/tbs/*.ts** (TBS FILES)
-   - types.ts: TBS type definitions (TBSQuestion, TBSExhibit, TBSRequirement)
-   - far-tbs.ts: 19 FAR TBS (need 10 more for Phase 1, then ~33 more for Phase 2)
-   - aud-tbs.ts: 29 AUD TBS (need ~33 more for Phase 2)
-   - reg-tbs.ts: 30 REG TBS (need ~33 more for Phase 2)
-   - tcp-tbs.ts: 21 TCP TBS (need ~17 more for Phase 2)
-   - bar-tbs.ts: 21 BAR TBS (need ~17 more for Phase 2)
-   - isc-tbs.ts: 12 ISC TBS (need ~17 more for Phase 2)
-   - sample-tbs.ts: 58 original sample TBS
-   - index.ts: Central exports and helper functions
-
-**MCQ Reference:**
-
-5. docs/DIFFICULTY-DISTRIBUTION-ANALYSIS.md (Updated 01/08)
-   - Complete breakdown of all 5,810 MCQ questions
-   - Distribution by section, difficulty, and batch
-   - Gap analysis for reaching target distribution
-   - Lists all 176 question batch files
-
-6. docs/question-batches/ (MCQ JSON files)
-   - Contains all question batch JSON files organized by section
-   - Format: {section}-batch-{number}-{topic}.json
-
-**Other Reference:**
-
-7. CPA Exam Blueprint - Business Overview.txt
-   - Complete business description for Surgent team
-   - Marketing funnel explanation
-
-8. cpa claude responses.txt
-   - All strategic planning responses
-   - Technical decisions and explanations
-
-9. SESSION_PROMPT.txt
-   - Quick start guide for new sessions
-   - Current state overview
-
-10. SESSION_LOG.txt
-    - Detailed session-by-session accomplishments
-    - Commits and technical details
+**Auth Reference:**
+9. src/lib/supabase/client.ts - Browser auth client
+10. src/components/auth/AuthProvider.tsx - Auth context
+11. src/lib/errorTracking.ts - Error tracking utilities
 
 ================================================================================
 END OF CONTEXT FILE

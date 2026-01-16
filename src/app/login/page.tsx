@@ -1,73 +1,109 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
-export default function LoginPage() {
- const [email, setEmail] = useState("");
- const [password, setPassword] = useState("");
- const [error, setError] = useState<string | null>(null);
- const [loading, setLoading] = useState(false);
- const router = useRouter();
+// Session timeout messages based on reason
+const SESSION_MESSAGES: Record<string, { title: string; message: string }> = {
+  inactivity: {
+    title: "Session Timed Out",
+    message: "You were logged out due to inactivity. Please sign in again to continue.",
+  },
+  session_expired: {
+    title: "Session Expired",
+    message: "Your session has expired. Please sign in again to continue.",
+  },
+};
 
- const handleLogin = async (e: React.FormEvent) => {
- e.preventDefault();
- setError(null);
- setLoading(true);
+function LoginContent() {
+  const searchParams = useSearchParams();
+  const reason = searchParams.get("reason");
+  const [sessionNotice, setSessionNotice] = useState<{ title: string; message: string } | null>(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
- const supabase = createClient();
- if (!supabase) {
- setError("Authentication service not configured");
- setLoading(false);
- return;
- }
+  // Show session notice based on URL reason parameter
+  useEffect(() => {
+    if (reason && SESSION_MESSAGES[reason]) {
+      setSessionNotice(SESSION_MESSAGES[reason]);
+      // Clean up the URL without reloading
+      window.history.replaceState({}, '', '/login');
+    }
+  }, [reason]);
 
- const { data, error: signInError } = await supabase.auth.signInWithPassword({
- email,
- password,
- });
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
 
- if (signInError) {
- setError(signInError.message);
- setLoading(false);
- return;
- }
+    const supabase = createClient();
+    if (!supabase) {
+      setError("Authentication service not configured");
+      setLoading(false);
+      return;
+    }
 
- // Wait for the session to be properly set before redirecting
- if (data.session) {
-   // Small delay to ensure cookies are set and auth state is updated
-   await new Promise(resolve => setTimeout(resolve, 150));
-   router.push("/dashboard");
-   router.refresh();
- } else {
-   setError("Login succeeded but no session was created. Please try again.");
-   setLoading(false);
- }
- };
+    const { data, error: signInError } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
- const handleGoogleLogin = async () => {
- setError(null);
+    if (signInError) {
+      setError(signInError.message);
+      setLoading(false);
+      return;
+    }
 
- const supabase = createClient();
- if (!supabase) {
- setError("Authentication service not configured");
- return;
- }
+    // Wait for the session to be properly set before redirecting
+    if (data.session) {
+      // Wait for auth state change event to confirm session is persisted
+      await new Promise<void>((resolve) => {
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+          if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+            subscription.unsubscribe();
+            resolve();
+          }
+        });
+        // Fallback timeout in case event already fired
+        setTimeout(() => {
+          subscription.unsubscribe();
+          resolve();
+        }, 300);
+      });
 
- const { error } = await supabase.auth.signInWithOAuth({
- provider:"google",
- options: {
- redirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
- },
- });
+      // Use full page reload to ensure fresh auth state across all components
+      window.location.href = "/dashboard";
+    } else {
+      setError("Login succeeded but no session was created. Please try again.");
+      setLoading(false);
+    }
+  };
 
- if (error) {
- setError(error.message);
- }
- };
+  const handleGoogleLogin = async () => {
+    setError(null);
+
+    const supabase = createClient();
+    if (!supabase) {
+      setError("Authentication service not configured");
+      return;
+    }
+
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
+      },
+    });
+
+    if (error) {
+      setError(error.message);
+    }
+  };
 
  return (
  <div className="min-h-screen bg-[var(--card)] dark:bg-[var(--background)] flex items-center justify-center py-12 px-4">
@@ -98,6 +134,28 @@ export default function LoginPage() {
  Sign in to access your dashboard
  </p>
  </div>
+
+ {sessionNotice && (
+ <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 px-4 py-3 rounded-lg mb-6">
+   <div className="flex items-start gap-3">
+     <svg className="w-5 h-5 text-amber-500 dark:text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+     </svg>
+     <div>
+       <p className="font-medium text-amber-800 dark:text-amber-200">{sessionNotice.title}</p>
+       <p className="text-sm text-amber-700 dark:text-amber-300 mt-1">{sessionNotice.message}</p>
+     </div>
+     <button
+       onClick={() => setSessionNotice(null)}
+       className="ml-auto text-amber-500 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-200"
+     >
+       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+       </svg>
+     </button>
+   </div>
+ </div>
+ )}
 
  {error && (
  <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg mb-6">
@@ -194,4 +252,16 @@ export default function LoginPage() {
  </div>
  </div>
  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[var(--card)] dark:bg-[var(--background)] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+      </div>
+    }>
+      <LoginContent />
+    </Suspense>
+  );
 }

@@ -19,6 +19,7 @@ export default function NTSPage() {
  section:"FAR"as SectionCode,
  issue_date:"",
  expiration_date:"",
+ exam_date:"",
  status:"active"as NTSStatus,
  notes:"",
  });
@@ -57,17 +58,33 @@ export default function NTSPage() {
  section:"FAR",
  issue_date:"",
  expiration_date:"",
+ exam_date:"",
  status:"active",
  notes:"",
  });
  setEditingEntry(null);
  };
 
- const openEdit = (entry: NTSEntry) => {
+ const openEdit = async (entry: NTSEntry) => {
+ // Fetch exam_date from section_progress for this section
+ let examDate = "";
+ if (supabase && user) {
+   const { data: progress } = await supabase
+     .from("section_progress")
+     .select("exam_date")
+     .eq("user_id", user.id)
+     .eq("section", entry.section)
+     .maybeSingle();
+   if (progress?.exam_date) {
+     examDate = progress.exam_date;
+   }
+ }
+
  setFormData({
  section: entry.section,
  issue_date: entry.issue_date,
  expiration_date: entry.expiration_date,
+ exam_date: examDate,
  status: entry.status,
  notes: entry.notes ||"",
  });
@@ -101,6 +118,42 @@ export default function NTSPage() {
  if (!error) {
  await onNTSAdded();
  }
+ }
+
+ // Sync exam_date to section_progress if provided
+ if (formData.exam_date) {
+   // First check if there's an existing progress entry for this section
+   const { data: existing } = await supabase
+     .from("section_progress")
+     .select("id, attempt_number")
+     .eq("user_id", user.id)
+     .eq("section", formData.section)
+     .order("attempt_number", { ascending: false })
+     .limit(1)
+     .maybeSingle();
+
+   if (existing) {
+     // Update existing entry
+     await supabase
+       .from("section_progress")
+       .update({
+         exam_date: formData.exam_date,
+         status: "scheduled",
+         updated_at: new Date().toISOString(),
+       })
+       .eq("id", existing.id);
+   } else {
+     // Create new entry with attempt_number = 1
+     await supabase
+       .from("section_progress")
+       .insert({
+         user_id: user.id,
+         section: formData.section,
+         exam_date: formData.exam_date,
+         status: "scheduled",
+         attempt_number: 1,
+       });
+   }
  }
 
  resetForm();
@@ -238,6 +291,20 @@ export default function NTSPage() {
  className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
  />
  </div>
+ </div>
+ <div>
+ <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+ Scheduled Exam Date <span className="text-[var(--muted)] font-normal">(optional)</span>
+ </label>
+ <input
+ type="date"
+ value={formData.exam_date}
+ onChange={(e) => setFormData({ ...formData, exam_date: e.target.value })}
+ className="w-full px-4 py-2 rounded-lg border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+ />
+ <p className="text-xs text-[var(--muted)] mt-1">
+ Used for Pre-Exam Assessment and study recommendations
+ </p>
  </div>
  <div>
  <label className="block text-sm font-medium text-[var(--foreground)] mb-2">

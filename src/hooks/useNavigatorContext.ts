@@ -112,13 +112,14 @@ export function useNavigatorContext(
 
       // Fetch topic performance if topic is specified
       if (topic) {
+        // Use maybeSingle() to avoid 406 error when no row exists
         const { data: topicPerf } = await supabase
           .from("user_topic_performance")
           .select("accuracy, questions_attempted, mastery_level")
           .eq("user_id", user.id)
           .eq("section", section)
           .eq("topic", topic)
-          .single();
+          .maybeSingle();
 
         if (topicPerf) {
           context.topicAccuracy = Math.round(topicPerf.accuracy * 100);
@@ -145,12 +146,13 @@ export function useNavigatorContext(
       }
 
       // Fetch section progress for Prime Meridian score
+      // Use maybeSingle() to avoid 406 error when no row exists
       const { data: sectionProgress } = await supabase
         .from("section_progress")
         .select("prime_meridian_score, exam_date")
         .eq("user_id", user.id)
         .eq("section", section)
-        .single();
+        .maybeSingle();
 
       if (sectionProgress) {
         context.primeMeridianScore = sectionProgress.prime_meridian_score;
