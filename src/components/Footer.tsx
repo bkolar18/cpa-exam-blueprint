@@ -26,11 +26,20 @@ export default function Footer() {
             <Link href="/signup" className="text-gray-300 hover:text-white transition-colors">
               Create Free Account
             </Link>
-            <Link href="/working-full-time" className="text-gray-300 hover:text-white transition-colors">
-              CPA While Working
+            <Link href="/resources" className="text-gray-300 hover:text-white transition-colors">
+              Resources
             </Link>
-            <Link href="/cpa-academy" className="text-gray-300 hover:text-white transition-colors">
-              CPA Academy
+            <Link href="/guides/how-to-become-a-cpa" className="text-gray-300 hover:text-white transition-colors">
+              Become a CPA
+            </Link>
+            <Link href="/state-requirements" className="text-gray-300 hover:text-white transition-colors">
+              State Requirements
+            </Link>
+            <Link href="/resources/cpa-salary" className="text-gray-300 hover:text-white transition-colors">
+              CPA Salary
+            </Link>
+            <Link href="/compare/becker-vs-gleim" className="text-gray-300 hover:text-white transition-colors">
+              Compare Courses
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
               About
@@ -51,6 +60,12 @@ export default function Footer() {
             </Link>
             <Link href="/sections/tcp" className="text-gray-300 hover:text-white transition-colors">
               TCP
+            </Link>
+            <Link href="/sections/bar" className="text-gray-300 hover:text-white transition-colors">
+              BAR
+            </Link>
+            <Link href="/sections/isc" className="text-gray-300 hover:text-white transition-colors">
+              ISC
             </Link>
           </div>
 

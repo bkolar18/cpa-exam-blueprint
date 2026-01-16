@@ -25,7 +25,7 @@ export default function LoginPage() {
  return;
  }
 
- const { error: signInError } = await supabase.auth.signInWithPassword({
+ const { data, error: signInError } = await supabase.auth.signInWithPassword({
  email,
  password,
  });
@@ -36,8 +36,16 @@ export default function LoginPage() {
  return;
  }
 
- router.push("/dashboard");
- router.refresh();
+ // Wait for the session to be properly set before redirecting
+ if (data.session) {
+   // Small delay to ensure cookies are set and auth state is updated
+   await new Promise(resolve => setTimeout(resolve, 150));
+   router.push("/dashboard");
+   router.refresh();
+ } else {
+   setError("Login succeeded but no session was created. Please try again.");
+   setLoading(false);
+ }
  };
 
  const handleGoogleLogin = async () => {

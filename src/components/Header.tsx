@@ -32,13 +32,26 @@ export default function Header() {
       { name: "State Requirements", href: "/state-requirements" },
     ],
     guides: [
+      { name: "How to Become a CPA", href: "/guides/how-to-become-a-cpa" },
+      { name: "Best CPA Exam Order", href: "/guides/best-order-cpa-exams" },
       { name: "Exam Day Walkthrough", href: "/guides/exam-day" },
       { name: "I Failed, Now What?", href: "/guides/failed-section" },
-      { name: "Working Full Time", href: "/working-full-time" },
+      { name: "State CPA Guides", href: "/guides/become-cpa-in" },
+    ],
+    data: [
+      { name: "CPA Pass Rates", href: "/resources/cpa-pass-rates" },
+      { name: "CPA Salary by State", href: "/resources/cpa-salary" },
+    ],
+    compare: [
+      { name: "Becker vs Gleim", href: "/compare/becker-vs-gleim" },
+      { name: "Becker vs Surgent", href: "/compare/becker-vs-surgent" },
+      { name: "Surgent vs Roger", href: "/compare/surgent-vs-roger" },
+      { name: "Wiley vs UWorld", href: "/compare/wiley-vs-uworld" },
     ],
     learn: [
       { name: "Blog", href: "/blog" },
       { name: "FAQ", href: "/faq" },
+      { name: "Resources Hub", href: "/resources" },
     ],
   };
 
@@ -132,8 +145,8 @@ export default function Header() {
                 </svg>
               </button>
               {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[420px] bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg p-5">
-                  <div className="grid grid-cols-2 gap-8">
+                <div className="absolute top-full left-0 mt-2 w-[560px] bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg p-5">
+                  <div className="grid grid-cols-3 gap-6">
                     {/* Left Column - Study Hub & Tools */}
                     <div>
                       {/* Study Hub Section */}
@@ -164,12 +177,39 @@ export default function Header() {
                         ))}
                       </div>
                     </div>
-                    {/* Right Column - Guides & Learn */}
+                    {/* Middle Column - Guides & Data */}
                     <div>
                       <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
                         Guides
                       </div>
                       {resources.guides.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20 mt-5">
+                        Data & Stats
+                      </div>
+                      {resources.data.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-2 px-2 -mx-2 text-sm text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white rounded transition-all duration-200"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    {/* Right Column - Compare & Learn */}
+                    <div>
+                      <div className="text-xs font-bold text-[var(--primary)] uppercase tracking-wider mb-2 pb-1 border-b border-[var(--primary)]/20">
+                        Compare Providers
+                      </div>
+                      {resources.compare.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
@@ -344,21 +384,43 @@ export default function Header() {
                       ))}
                     </div>
                     <div className="pt-2 border-t border-[var(--border)]">
+                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Data & Stats</span>
+                      {resources.data.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="pt-2 border-t border-[var(--border)]">
+                      <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Compare Providers</span>
+                      {resources.compare.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="pt-2 border-t border-[var(--border)]">
                       <span className="text-xs text-[var(--muted-foreground)] uppercase tracking-wider">Learn</span>
-                      <Link
-                        href="/blog"
-                        className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Blog
-                      </Link>
-                      <Link
-                        href="/faq"
-                        className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        FAQ
-                      </Link>
+                      {resources.learn.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block py-1 text-[var(--foreground)] hover:text-[var(--primary)]"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 )}
