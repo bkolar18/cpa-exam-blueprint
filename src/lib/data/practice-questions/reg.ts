@@ -4000,7 +4000,7 @@ const questions = [
     "id": "reg-006-001",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Definition of capital asset",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -4012,8 +4012,8 @@ const questions = [
       "D": "Only stocks and bonds"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC Section 1221, a capital asset is all property held by the taxpayer EXCEPT: (1) inventory, (2) depreciable business property, (3) real property used in business, (4) accounts receivable, (5) creative works in hands of creator, and certain other items.",
-    "tip": "Capital assets = everything EXCEPT the exclusions (inventory, business property, receivables, etc.).",
+    "explanation": "Per IRC §1221, capital asset = ALL property held by taxpayer EXCEPT specific exclusions: (1) inventory, (2) depreciable business property, (3) real property used in business, (4) accounts receivable, (5) self-created works (patents, art), (6) supplies, (7) commodities hedging transactions, (8) certain securities dealer inventory. Key insight: It's a NEGATIVE definition—everything IS a capital asset unless excluded. Why other answers are wrong: (A) Real estate is ONE type of capital asset but doesn't define it; (B) Business property (§1231 property) is specifically EXCLUDED from capital assets; (D) Stocks/bonds are capital assets but so is personal-use property, investment property, etc.",
+    "tip": "§1221 Capital Asset = EVERYTHING except 8 exclusions. Negative definition—memorize what's OUT, not what's IN.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4021,7 +4021,7 @@ const questions = [
     "id": "reg-006-002",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Short-term vs long-term",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -4033,8 +4033,8 @@ const questions = [
       "D": "Six months or less"
     },
     "correctAnswer": "C",
-    "explanation": "Long-term capital gain or loss treatment requires a holding period of more than one year. Property held for one year or less produces short-term capital gain or loss. The holding period generally begins the day after acquisition.",
-    "tip": "Long-term = MORE than 1 year. One year exactly = still short-term.",
+    "explanation": "Per IRC §1222, long-term = holding period MORE than one year. Short-term = one year OR LESS. Holding period begins day AFTER acquisition (§1223). Critical exam trap: bought 1/15/24, sold 1/15/25 = SHORT-TERM (exactly one year, not more than). Must sell 1/16/25 or later for long-term. Special rules: gifts (tack donor's period if using carryover basis), inheritances (automatic long-term per §1223(9)), §1031 exchanges (tacking), wash sales (tacking). Why other answers are wrong: (A) Six months was pre-1988 rule—obsolete; (B) One year or less = SHORT-term definition; (D) Six months or less is irrelevant under current law.",
+    "tip": "Long-term = MORE than 1 year. Exactly 365 days = still SHORT-term! Day count matters.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4042,7 +4042,7 @@ const questions = [
     "id": "reg-006-003",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "LTCG tax rates",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -4054,8 +4054,8 @@ const questions = [
       "D": "15%"
     },
     "correctAnswer": "A",
-    "explanation": "Long-term capital gains are taxed at preferential rates of 0%, 15%, or 20% depending on taxable income. The 0% rate applies to lower brackets, 15% to middle brackets, and 20% to high-income taxpayers (plus potential 3.8% NIIT).",
-    "tip": "LTCG rates: 0% (low income), 15% (middle), 20% (high income). Plus possible 3.8% NIIT.",
+    "explanation": "Per IRC §1(h), regular LTCG rates are 0%/15%/20% based on taxable income brackets. 2024 thresholds: 0% up to ~$47K (single)/$94K (MFJ); 15% middle; 20% above ~$518K (single)/$583K (MFJ). Plus 3.8% NIIT (§1411) if MAGI exceeds $200K/$250K. Max effective rate = 23.8% (20% + 3.8%). Special rates: collectibles 28%, unrecaptured §1250 25%, QSBS exclusion. Why other answers are wrong: (B) 28% is collectibles rate, not general LTCG; (C) 10% doesn't exist as LTCG rate; (D) 15% is middle bracket, not maximum.",
+    "tip": "LTCG brackets: 0%/15%/20%. Max = 23.8% with NIIT. Know special rates: 28% collectibles, 25% §1250.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4063,7 +4063,7 @@ const questions = [
     "id": "reg-006-004",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Short-term capital gain treatment",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -4075,8 +4075,8 @@ const questions = [
       "D": "0%"
     },
     "correctAnswer": "B",
-    "explanation": "Short-term capital gains (property held one year or less) are taxed at ordinary income tax rates, which can be as high as 37%. There is no preferential rate for short-term gains, making the holding period important for tax planning.",
-    "tip": "Short-term gains = ordinary rates (up to 37%). No preferential treatment.",
+    "explanation": "Per IRC §1(h), short-term capital gains (holding period ≤1 year) receive NO preferential rate—taxed as ordinary income at rates up to 37%. Tax planning impact: waiting to exceed one year can drop rate from 37% to 20% (or even 0%). STCG also subject to 3.8% NIIT if applicable. Netting: STCG first offsets STCL, then excess nets against LTCL before hitting ordinary rates. Why other answers are wrong: (A) 15% is middle LTCG bracket; (C) 28% is collectibles rate (long-term only); (D) 0% is lowest LTCG bracket—STCGs never qualify.",
+    "tip": "STCG = ordinary rates (up to 37%). No preference! Hold >1 year to get 0%/15%/20% LTCG rates.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4084,7 +4084,7 @@ const questions = [
     "id": "reg-006-005",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Capital loss limitation",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -4096,8 +4096,8 @@ const questions = [
       "D": "$3,000"
     },
     "correctAnswer": "D",
-    "explanation": "Net capital losses can offset ordinary income up to $3,000 per year ($1,500 if married filing separately). Any excess capital loss is carried forward indefinitely to future years, retaining its short-term or long-term character.",
-    "tip": "$3,000 capital loss limit against ordinary income. Excess carries forward forever.",
+    "explanation": "Per IRC §1211(b), individuals can deduct NET capital losses against ordinary income up to $3,000/year ($1,500 MFS). Net = after netting gains against losses. Process: (1) Net STCG vs STCL, (2) Net LTCG vs LTCL, (3) Net the two results, (4) If net loss, deduct up to $3,000. Excess carries forward under §1212(b) INDEFINITELY, retaining ST/LT character. Never expires! Why other answers are wrong: (A) $10,000 is no recognized limit; (B) Unlimited would allow massive ordinary income shelter—not allowed; (C) $1,000 was never the individual limit ($1,500 is MFS limit).",
+    "tip": "§1211: $3,000 capital loss limit ($1,500 MFS). §1212: excess carries forward forever, keeps character.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4105,7 +4105,7 @@ const questions = [
     "id": "reg-006-006",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Capital loss carryover",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -4117,8 +4117,8 @@ const questions = [
       "D": "Convert to ordinary losses"
     },
     "correctAnswer": "C",
-    "explanation": "Excess capital losses carry forward indefinitely until fully used. The carryforward retains its character as short-term or long-term. Unlike corporate capital losses, individual capital losses cannot be carried back.",
-    "tip": "Individual capital losses: carry forward forever (no carryback). Keep ST/LT character.",
+    "explanation": "Per IRC §1212(b), individual capital loss carryforwards are INDEFINITE—never expire! Character (ST/LT) is retained. Key distinction from corporations: individuals = forward only (indefinite); corporations = back 3, forward 5 years under §1212(a). Planning note: taxpayer dying with carryforward loses it (doesn't pass to heirs). Why other answers are wrong: (A) Never lost—carries forward until used; (B) Carryback is for CORPORATIONS (3 years back), not individuals; (D) Capital losses stay capital—only §1244 stock converts to ordinary loss.",
+    "tip": "Individual §1212(b): forward forever, never back. Corporation §1212(a): back 3, forward 5. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4126,7 +4126,7 @@ const questions = [
     "id": "reg-006-007",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Netting process",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4138,8 +4138,8 @@ const questions = [
       "D": "Long-term losses always offset short-term gains first"
     },
     "correctAnswer": "B",
-    "explanation": "Capital gains and losses are first netted within holding period categories: short-term gains against short-term losses, and long-term gains against long-term losses. Then, if one category has a net gain and the other a net loss, they are netted against each other.",
-    "tip": "Net ST together, net LT together, then net the results against each other.",
+    "explanation": "Per IRC §1222, netting follows specific sequence: Step 1: Net STCG vs STCL → Net ST result. Step 2: Net LTCG vs LTCL → Net LT result. Step 3: If both positive = report separately. If both negative = combine, apply $3,000 limit. If mixed = net against each other. Worst outcome: net STCG (taxed at ordinary rates) + net LTCL (limited to $3,000). Best outcome: net LTCG (preferential rates). Why other answers are wrong: (A) Character matters for rates—can't ignore holding period; (C)/(D) Cross-netting happens AFTER within-category netting, not first.",
+    "tip": "Netting order: (1) ST vs ST, (2) LT vs LT, (3) Then cross-net the results. Character matters for tax rates!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4147,7 +4147,7 @@ const questions = [
     "id": "reg-006-008",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Collectibles gain rate",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4159,8 +4159,8 @@ const questions = [
       "D": "25%"
     },
     "correctAnswer": "A",
-    "explanation": "Long-term gains on collectibles (art, antiques, gems, stamps, coins, precious metals, and most coins) are taxed at a maximum rate of 28%, which is higher than the standard 20% maximum for other capital assets.",
-    "tip": "Collectibles = 28% max rate. Higher than regular LTCG (20% max).",
+    "explanation": "Per IRC §1(h)(4)-(5), collectibles LTCG taxed at max 28%—higher than regular LTCG. Collectibles defined: artwork, rugs, antiques, metals (gold, silver), gems, stamps, coins, wine, baseball cards. Also includes gains from collectibles HELD THROUGH pass-through entities. Note: lower-bracket taxpayers may pay less than 28%. Still subject to 3.8% NIIT. Short-term collectible gains = ordinary rates (no special treatment). Why other answers are wrong: (B) 15% is middle regular LTCG bracket; (C) 20% is max regular LTCG rate; (D) 25% is unrecaptured §1250 rate.",
+    "tip": "Collectibles LTCG = 28% max. Higher than regular 20%. Remember: 28% collectibles, 25% §1250, 20%/15%/0% regular.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4168,7 +4168,7 @@ const questions = [
     "id": "reg-006-009",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Unrecaptured Section 1250 gain",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4180,8 +4180,8 @@ const questions = [
       "D": "25%"
     },
     "correctAnswer": "D",
-    "explanation": "Unrecaptured Section 1250 gain represents straight-line depreciation taken on real property that must be 'recaptured' at a maximum 25% rate when the property is sold, even though the overall gain may qualify as long-term capital gain.",
-    "tip": "Unrecaptured 1250 = prior straight-line depreciation on real estate = 25% max rate.",
+    "explanation": "Per IRC §1(h)(1)(E), unrecaptured §1250 gain = straight-line depreciation taken on real property, taxed at max 25%. Applies to: residential rental (27.5-year SL) and commercial (39-year SL). Calculation: lesser of (1) accumulated depreciation or (2) recognized gain. Example: $500K building, $100K depreciation, sold for $550K. Gain = $150K. Unrecaptured §1250 = $100K at 25% max, remaining $50K at regular LTCG rates. Why other answers are wrong: (A) 28% is collectibles rate; (B) 15% is middle LTCG bracket; (C) 20% is max regular LTCG—remaining gain after §1250.",
+    "tip": "Unrecaptured §1250 = prior straight-line depreciation on real estate = 25% max. Then regular LTCG on remainder.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4189,7 +4189,7 @@ const questions = [
     "id": "reg-006-010",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Wash sale rule",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4201,8 +4201,8 @@ const questions = [
       "D": "90 days before the sale"
     },
     "correctAnswer": "B",
-    "explanation": "The wash sale rule disallows a loss on sale of securities if substantially identical securities are purchased within 30 days before or 30 days after the sale (a 61-day window centered on the sale date). The disallowed loss is added to the basis of the new shares.",
-    "tip": "Wash sale: 30 days before + sale date + 30 days after = 61-day danger zone.",
+    "explanation": "Per IRC §1091, wash sale rule: loss DISALLOWED if substantially identical securities acquired within 30 days BEFORE or 30 days AFTER sale (61-day total window). Good news: disallowed loss adds to NEW shares' basis (not lost, just deferred). Holding period of old shares tacks onto new. 'Substantially identical' = same stock/bonds; different classes may qualify. Applies to: stocks, bonds, options. Does NOT apply to gains or real estate. Why other answers are wrong: (A) Only 30 days after misses 'before' window; (C) 60 days after is wrong—it's 30 each direction; (D) 90 days before is fabricated.",
+    "tip": "§1091 Wash Sale: 30 before + sale day + 30 after = 61 days. Loss deferred to new basis, not lost!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4210,7 +4210,7 @@ const questions = [
     "id": "reg-006-011",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Related party loss rule",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4222,8 +4222,8 @@ const questions = [
       "D": "Disallowed entirely"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 267, losses on sales or exchanges between related parties are disallowed. However, the disallowed loss can offset gain when the related party subsequently sells to an unrelated party. Related parties include family members and controlled entities.",
-    "tip": "Related party sale loss = disallowed. But can offset related party's later gain.",
+    "explanation": "Per IRC §267(a)(1), losses on sales/exchanges between related parties are DISALLOWED—cannot deduct. Related parties (§267(b)): family (spouse, siblings, ancestors, lineal descendants—NOT in-laws); >50% owned entities; trusts with related beneficiaries. Silver lining: when buyer later sells to unrelated party, disallowed loss offsets THEIR gain (not below zero). §267(d). Example: Parent sells stock to child at $5K loss (disallowed). Child later sells for $3K gain—can offset with parent's loss. Why other answers are wrong: (A) $3,000 is unrelated—that's capital loss limit; (B) Technically disallowed to seller, but buyer gets offset; (C) Fully deductible is wrong—whole point is disallowance.",
+    "tip": "§267 Related Party Loss = DISALLOWED. Buyer later can offset gain up to disallowed amount. Family excludes in-laws!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4231,7 +4231,7 @@ const questions = [
     "id": "reg-006-012",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Holding period - gift",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4243,8 +4243,8 @@ const questions = [
       "D": "Is always long-term"
     },
     "correctAnswer": "C",
-    "explanation": "When the donee uses carryover basis (donor's basis), the donor's holding period tacks on. However, if the donee uses FMV basis (for loss property sold at a loss), the holding period begins on the date of the gift.",
-    "tip": "Gift holding period: tacks if using donor's basis; starts new if using FMV basis.",
+    "explanation": "Per IRC §1223(2), gift holding period TACKS (adds donor's period) when using CARRYOVER basis (gain property or gain situation). But if using FMV basis (loss property sold at loss), holding period starts fresh on gift date. Integration with §1015 basis rules: (1) FMV ≥ donor's basis = carryover basis = tacking; (2) FMV < donor's basis AND sold at loss = FMV basis = new holding period; (3) FMV < donor's basis AND sold in 'no man's land' = no gain/loss recognized. Why other answers are wrong: (A)/(D) Depends on which basis used—not always one or the other; (B) Only true when using FMV basis for loss.",
+    "tip": "§1223(2) Gift Holding: TACK if carryover basis (gain). START FRESH if FMV basis (loss).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4252,7 +4252,7 @@ const questions = [
     "id": "reg-006-013",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Holding period - inheritance",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4264,8 +4264,8 @@ const questions = [
       "D": "Short-term regardless of how long the decedent held it"
     },
     "correctAnswer": "A",
-    "explanation": "Inherited property is automatically considered held long-term, regardless of how long the decedent held it or how long the beneficiary holds it before sale. This rule applies even if the beneficiary sells the property immediately after inheriting it.",
-    "tip": "Inherited property = automatic long-term. Sell it the next day and it's still LTCG.",
+    "explanation": "Per IRC §1223(9), inherited property is AUTOMATICALLY long-term—regardless of decedent's holding period OR how long heir holds before selling. Sell day after inheriting = still LTCG! Combined with §1014 step-up basis, this creates powerful planning: appreciated stock held short-term by decedent becomes (1) stepped-up basis AND (2) automatic long-term to heirs. Exception: IRD items (§691) don't get basis step-up but still get automatic LT holding period. Why other answers are wrong: (B) Decedent's period irrelevant—it's automatic LT; (C) No 1-year rule—immediate LT; (D) Never short-term for inheritance.",
+    "tip": "§1223(9) Inherited = AUTOMATIC long-term. Sell next day = still LTCG! Plus §1014 step-up basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4273,7 +4273,7 @@ const questions = [
     "id": "reg-006-014",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Personal use asset losses",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4285,8 +4285,8 @@ const questions = [
       "D": "Fully deductible"
     },
     "correctAnswer": "B",
-    "explanation": "Losses on sales of personal-use property are not deductible. Only gains on personal-use property are taxable. This asymmetrical treatment encourages converting personal-use property to investment or business use before selling at a loss.",
-    "tip": "Personal asset gains = taxable. Personal asset losses = NOT deductible. Unfair but true.",
+    "explanation": "Per IRC §165(c), losses are deductible only for: (1) trade/business, (2) profit-seeking (investment), or (3) casualty/theft of personal property. Personal-use asset sale losses don't qualify under any category = NOT deductible. Asymmetric treatment: GAINS on personal assets ARE taxable! Planning: convert to rental before selling at loss (but watch recapture). Personal residence loss: no deduction even though gain would be taxable (after §121 exclusion). Why other answers are wrong: (A) Capital loss requires profit motive—personal use doesn't qualify; (C) No itemized deduction for sale losses; (D) Fully deductible is the opposite of reality.",
+    "tip": "Personal-use loss = NOT deductible (§165). But personal-use GAIN = taxable! Asymmetric and unfair.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4294,7 +4294,7 @@ const questions = [
     "id": "reg-006-015",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Section 121 exclusion basics",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4306,8 +4306,8 @@ const questions = [
       "D": "$500,000 of gain"
     },
     "correctAnswer": "C",
-    "explanation": "Section 121 allows exclusion of up to $250,000 of gain ($500,000 for married filing jointly) on the sale of a principal residence. The taxpayer must have owned and used the home as a principal residence for at least 2 of the 5 years before sale.",
-    "tip": "Section 121: $250K single, $500K MFJ. Must own and use 2 of 5 years.",
+    "explanation": "Per IRC §121, home sale exclusion: $250K single, $500K MFJ (both spouses must meet use test, one must meet ownership). Requirements: owned AND used as principal residence 2 of 5 years before sale (need not be consecutive). Can use every 2 years. Partial exclusion if move due to job, health, or unforeseen circumstances. Depreciation recapture not excludable. No exclusion for nonqualified use periods (post-2008). Why other answers are wrong: (A) $1M is fabricated; (B) $125,000 was OLD law (pre-1997); (D) $500K is MFJ amount, not single.",
+    "tip": "§121: $250K single, $500K MFJ. Own + Use 2/5 years. Can repeat every 2 years. Know partial exclusion rules!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4315,7 +4315,7 @@ const questions = [
     "id": "reg-006-016",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Worthless securities",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4327,8 +4327,8 @@ const questions = [
       "D": "The date the company filed for bankruptcy"
     },
     "correctAnswer": "B",
-    "explanation": "Worthless securities are treated as sold on the last day of the tax year in which they become worthless. This deemed sale date affects the holding period determination (short-term vs. long-term) for the resulting capital loss.",
-    "tip": "Worthless securities: deemed sold 12/31 of year they become worthless. Affects holding period.",
+    "explanation": "Per IRC §165(g), worthless securities = deemed sold on LAST DAY of tax year they become worthless (December 31 for calendar-year taxpayers). Critical for holding period: stock bought 7/1/24, becomes worthless 3/1/25 = deemed sold 12/31/25 = LONG-TERM (held >1 year from 7/1/24 to 12/31/25). Also relevant: 7-year lookback period for claiming worthlessness (§6511(d)(1)). §1244 stock: ordinary loss up to $50K/$100K even if worthless. Why other answers are wrong: (A) Delisting date irrelevant; (C) Taxpayer determination doesn't control timing; (D) Bankruptcy date doesn't control—it's year-end.",
+    "tip": "§165(g) Worthless Securities: deemed sold 12/31 of year worthless. Check if this pushes holding period to LT!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4336,7 +4336,7 @@ const questions = [
     "id": "reg-006-017",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Small business stock gain exclusion",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4348,8 +4348,8 @@ const questions = [
       "D": "There is no exclusion for QSBS"
     },
     "correctAnswer": "C",
-    "explanation": "For QSBS acquired after September 27, 2010 and held more than 5 years, 100% of gain may be excluded (up to the greater of $10 million or 10× basis). Earlier acquisition dates have 50% or 75% exclusion rates.",
-    "tip": "QSBS post-9/27/2010: 100% exclusion if held 5+ years. Max $10M or 10× basis.",
+    "explanation": "Per IRC §1202, QSBS exclusion timeline: Pre-2/18/09 = 50%; 2/18/09-9/27/10 = 75%; Post-9/27/10 = 100%. Requirements: (1) C corporation, (2) gross assets ≤$50M at issuance, (3) active business (not service, finance, etc.), (4) original issuance to taxpayer, (5) held >5 years. Exclusion limit: greater of $10M or 10× adjusted basis. Excluded gain not subject to AMT (post-9/27/10 stock). Why other answers are wrong: (A)/(B) Old rates for pre-9/27/10 stock; (D) Exclusion definitely exists—it's massive tax benefit.",
+    "tip": "§1202 QSBS: 100% exclusion (post-9/27/10), 5+ year hold, $50M asset test, $10M or 10× basis cap. Huge benefit!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4357,7 +4357,7 @@ const questions = [
     "id": "reg-006-018",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Net Investment Income Tax",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4369,8 +4369,8 @@ const questions = [
       "D": "All capital gains regardless of income"
     },
     "correctAnswer": "C",
-    "explanation": "The 3.8% NIIT applies to net investment income (including capital gains) for taxpayers with modified AGI exceeding $200,000 (single) or $250,000 (MFJ). The tax is on the lesser of NII or the excess of MAGI over the threshold.",
-    "tip": "NIIT: 3.8% on investment income if MAGI exceeds $200K single / $250K MFJ.",
+    "explanation": "Per IRC §1411, NIIT = 3.8% on LESSER of: (1) Net Investment Income (NII), OR (2) excess of MAGI over threshold ($200K single, $250K MFJ, $125K MFS—NOT indexed!). NII includes: capital gains (ST and LT), dividends, interest, rental income, royalties, passive income. NII excludes: wages, self-employment income, active business income, distributions from qualified plans, §1202 QSBS exclusion amount. Why other answers are wrong: (A) Applies to BOTH ST and LT gains; (B) Threshold is MAGI, not gains amount; (D) Only applies if MAGI exceeds threshold.",
+    "tip": "§1411 NIIT: 3.8% × lesser of NII or (MAGI − $200K/$250K). Thresholds NOT indexed—more people hit each year!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4378,7 +4378,7 @@ const questions = [
     "id": "reg-006-019",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Installment sale reporting",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4390,8 +4390,8 @@ const questions = [
       "D": "Proportionally as payments are received"
     },
     "correctAnswer": "D",
-    "explanation": "The installment method recognizes gain proportionally as payments are received. Each payment is split between return of basis, interest income, and capital gain based on the gross profit percentage. Taxpayers may elect out to recognize all gain immediately.",
-    "tip": "Installment sale: recognize gain as payments come in (GP% of each payment).",
+    "explanation": "Per IRC §453, installment method = recognize gain proportionally as payments received. Formula: Gross Profit % = (Selling Price − Basis) ÷ Selling Price. Each payment: GP% × Principal = gain recognized. Interest portion = ordinary income (reported separately). Installment method is AUTOMATIC unless taxpayer elects OUT. Exceptions (can't use): inventory, dealer property, publicly traded securities, depreciation recapture (recognized immediately). Why other answers are wrong: (A) Waiting until all received defeats purpose; (B) Installment is default—election is to opt OUT; (C) All in year of sale = electing out.",
+    "tip": "§453 Installment: Gain = GP% × each payment. Automatic unless elect out. Depreciation recapture = immediate!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4399,7 +4399,7 @@ const questions = [
     "id": "reg-006-020",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Section 1244 stock loss",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4411,8 +4411,8 @@ const questions = [
       "D": "$50,000 ($100,000 for married filing jointly)"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1244 allows individuals to treat losses on qualified small business stock as ordinary losses (rather than capital losses) up to $50,000 per year ($100,000 MFJ). Losses exceeding these limits are capital losses.",
-    "tip": "Section 1244: $50K ordinary loss ($100K MFJ) on small business stock. Better than capital loss.",
+    "explanation": "Per IRC §1244, qualified small business stock LOSSES treated as ORDINARY (not capital) up to $50K/year ($100K MFJ). Why it matters: ordinary loss offsets ordinary income without $3,000 capital loss limit! Requirements: (1) domestic corporation, (2) original issuance for money/property (not stock/services), (3) total paid-in capital ≤$1M at issuance, (4) corporation was mainly operating company. Excess loss over limit = capital loss. GAINS are still capital. Why other answers are wrong: (A) Amounts doubled incorrectly; (B) Unlimited would be too generous; (C) $25K is fabricated.",
+    "tip": "§1244 Loss: $50K ordinary ($100K MFJ). Offsets salary without $3K limit! Gains still capital. Better than §1202.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4420,7 +4420,7 @@ const questions = [
     "id": "reg-006-021",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Corporate capital losses",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -4432,8 +4432,8 @@ const questions = [
       "D": "Only capital gains, with unlimited carryforward"
     },
     "correctAnswer": "B",
-    "explanation": "Unlike individuals, corporations cannot deduct capital losses against ordinary income. Corporate capital losses offset only capital gains. Unused losses may be carried back 3 years and forward 5 years as short-term capital losses.",
-    "tip": "Corporate capital losses: offset gains only. Carryback 3, carryforward 5.",
+    "explanation": "Per IRC §1211(a) and §1212(a), corporations: (1) Capital losses offset ONLY capital gains—no ordinary income offset (unlike individuals' $3K); (2) Carryback 3 years, carryforward 5 years; (3) ALL carryovers become SHORT-TERM regardless of original character. Compare individuals §1212(b): forward only (indefinite), retain character. Corporate rule prevents sheltering operating income with investment losses. Why other answers are wrong: (A) $3,000 is INDIVIDUAL rule, not corporate; (C) Unlimited would shelter operating income; (D) Limited to 5-year forward, plus 3-year back exists.",
+    "tip": "Corporate §1212(a): losses offset gains ONLY. Back 3, forward 5. ALL become ST. Individuals: forward forever, keep character.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4441,7 +4441,7 @@ const questions = [
     "id": "reg-006-022",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Qualified Opportunity Zone deferral",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4453,8 +4453,8 @@ const questions = [
       "D": "Are permanently excluded from income"
     },
     "correctAnswer": "A",
-    "explanation": "Capital gains invested in a QOZ Fund within 180 days of the gain event can be deferred until the earlier of sale of the QOZ investment or December 31, 2026. If held 10+ years, gain on the QOZ investment itself may be permanently excluded.",
-    "tip": "QOZ: defer original gain until 2026 or sale. Hold 10+ years for exclusion on new appreciation.",
+    "explanation": "Per IRC §1400Z-2, QOZ benefits: (1) DEFER original gain until earlier of QOF sale or 12/31/2026 (trigger date); (2) If held 10+ years, EXCLUDE gain on QOZ investment appreciation. OLD benefits expired: 5-year hold = 10% basis step-up (required investment by 12/31/19); 7-year hold = 15% step-up (required investment by 12/31/17). Now only deferral + 10-year exclusion remain. Must invest within 180 days of gain event. Why other answers are wrong: (B) 10% step-up required 5-year hold AND investment by 2019—expired; (C) No flat rate; (D) Only NEW appreciation excluded after 10 years, not original gain.",
+    "tip": "§1400Z QOZ: Defer original gain to 2026. Hold 10+ years = exclude NEW appreciation. Step-up benefits expired!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4462,7 +4462,7 @@ const questions = [
     "id": "reg-006-023",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Section 121 partial exclusion",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4474,8 +4474,8 @@ const questions = [
       "D": "Only a job transfer by employer"
     },
     "correctAnswer": "C",
-    "explanation": "A partial exclusion (prorated based on time qualifying) is available when the sale is due to: (1) change in place of employment, (2) health reasons, or (3) unforeseen circumstances (such as divorce, death, disaster, or job loss).",
-    "tip": "Partial 121 exclusion: prorate for job change, health, or unforeseen circumstances.",
+    "explanation": "Per IRC §121(c), partial exclusion available if sale due to: (1) Change in employment (50+ miles from old home to new job); (2) Health (doctor recommended move); (3) Unforeseen circumstances (divorce, death, disaster, job loss, multiple births from single pregnancy). Formula: (Days qualified ÷ 730) × $250K/$500K. Example: lived 1 year, job transfer → (365 ÷ 730) × $250K = $125K exclusion. Safe harbors in Reg. §1.121-3. Why other answers are wrong: (A) Health is ONE of three categories; (B) Taxpayer choice doesn't qualify—must meet specific circumstances; (D) Job transfer is ONE example of employment change.",
+    "tip": "§121(c) Partial: (Days ÷ 730) × $250K. Job, Health, or Unforeseen. 730 days = 2 years.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4483,7 +4483,7 @@ const questions = [
     "id": "reg-006-024",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Straddle rules",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4495,8 +4495,8 @@ const questions = [
       "D": "Treated as long-term"
     },
     "correctAnswer": "C",
-    "explanation": "The straddle rules prevent premature loss recognition when a taxpayer holds offsetting positions (positions that substantially reduce risk of loss). Losses on disposition of one position are deferred to the extent of unrealized gain in the offsetting position.",
-    "tip": "Straddle: can't take loss while holding offsetting gain position. Prevents cherry-picking.",
+    "explanation": "Per IRC §1092, straddle = offsetting positions that substantially diminish risk. Loss rule: loss DEFERRED to extent of UNREALIZED gain in offsetting position. Prevents 'cherry-picking' (taking loss while deferring gain). Also: holding period tolled while in straddle (§1092(d)). Example: long stock + put option. Sell stock at loss while put has unrealized gain → loss deferred. Additional rules: interest/carrying charges must be capitalized (§263(g)). Why other answers are wrong: (A) Not permanent—deferred until offsetting position closed; (B) Fully deductible defeats anti-abuse purpose; (D) Character affected by tolling, not automatic LT.",
+    "tip": "§1092 Straddle: Loss deferred by unrealized gain in offset. Holding period TOLLED. Prevents cherry-picking!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4504,7 +4504,7 @@ const questions = [
     "id": "reg-006-025",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Constructive sale rules",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4516,8 +4516,8 @@ const questions = [
       "D": "Sells stock and buys it back within 30 days"
     },
     "correctAnswer": "A",
-    "explanation": "Section 1259 treats certain transactions as constructive sales that trigger gain recognition: short sales against the box, forward contracts to deliver stock, and other derivative positions that substantially eliminate risk and opportunity for gain.",
-    "tip": "Constructive sale: lock in gain through derivatives = taxable now. No more deferring.",
+    "explanation": "Per IRC §1259, constructive sale triggers IMMEDIATE gain recognition when taxpayer eliminates risk/reward through: (1) Short sale against the box (short sell same stock you own); (2) Forward contract to deliver shares; (3) Options (certain combinations); (4) Other derivative positions substantially eliminating risk. Purpose: prevent wealthy taxpayers from 'monetizing' appreciated positions without tax. Deemed sold at FMV when constructive sale occurs. Why other answers are wrong: (B) Family sale is §267 related party rule, not constructive sale; (C) Charitable donation gets different treatment (no gain, deduction); (D) 30-day repurchase is §1091 wash sale rule (for losses, not gains).",
+    "tip": "§1259 Constructive Sale: Lock in gain via derivatives = taxable NOW. Short against box, forwards, etc.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4525,7 +4525,7 @@ const questions = [
     "id": "reg-006-026",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Capital gain dividend",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4537,8 +4537,8 @@ const questions = [
       "D": "Tax-free return of capital"
     },
     "correctAnswer": "B",
-    "explanation": "Capital gain distributions from mutual funds retain their long-term character to the shareholder, regardless of how long the shareholder held the fund shares. This is reported on Form 1099-DIV and qualified for preferential LTCG rates.",
-    "tip": "Mutual fund capital gain distribution = LTCG to you, even if you just bought the fund.",
+    "explanation": "Per IRC §852(b)(3), mutual fund capital gain distributions are LTCG to shareholders regardless of their holding period in fund shares. Fund passes through character of its internal gains. Reported in Box 2a of 1099-DIV. Planning trap: buying fund before distribution date = paying tax on gains you didn't economically earn (basis doesn't adjust). Sell shares separately = gain/loss based on YOUR holding period. Why other answers are wrong: (A) Distributions are LTCG from fund's perspective; (C) Ordinary income is separate category (interest, non-qualified dividends); (D) Return of capital reduces basis, isn't capital gain.",
+    "tip": "§852 Mutual Fund Distribution: LTCG regardless of YOUR holding period. Avoid buying before distribution date!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4546,7 +4546,7 @@ const questions = [
     "id": "reg-006-027",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Carried interest taxation",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4558,8 +4558,8 @@ const questions = [
       "D": "More than 3 years for long-term treatment"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1061 requires a more than 3-year holding period for long-term capital gain treatment on carried interest (also called profits interest or promote) received by fund managers in investment partnerships. The 1-year period still applies to other taxpayers.",
-    "tip": "Carried interest: 3-year hold required for LTCG (not the normal 1 year).",
+    "explanation": "Per IRC §1061 (TCJA addition), carried interest (promote/profits interest) in investment partnerships requires >3 YEAR holding period for LTCG rates. Applies to: private equity, hedge fund, venture capital managers. If sold before 3 years: recharacterized as SHORT-TERM (ordinary rates). Applies at both partnership AND partner level. Exceptions: capital interests (not just profits), real estate partnerships with different structures. Why other answers are wrong: (A) 5 years is §1202 QSBS, not carried interest; (B) There IS a special 3-year requirement; (C) 1 year is normal rule—§1061 extends to 3 years for carried interest.",
+    "tip": "§1061 Carried Interest: 3-year hold (not 1 year) for LTCG. Private equity/hedge fund managers affected.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4567,7 +4567,7 @@ const questions = [
     "id": "reg-006-028",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Section 1256 contracts",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4579,8 +4579,8 @@ const questions = [
       "D": "Mark-to-market rules with 60% long-term / 40% short-term treatment"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1256 contracts are marked to market at year-end (gain/loss recognized even without sale). Any gain or loss is treated as 60% long-term and 40% short-term capital gain/loss, regardless of actual holding period.",
-    "tip": "Section 1256 contracts: mark-to-market + 60/40 LTCG/STCG split. Blended rate.",
+    "explanation": "Per IRC §1256, special rules for: regulated futures contracts, foreign currency contracts, non-equity options, dealer equity options. Two key rules: (1) MARK-TO-MARKET at year-end (recognize unrealized gain/loss); (2) 60/40 SPLIT: 60% long-term, 40% short-term regardless of actual holding period. Effective blended rate: ~26.8% max (vs 37% pure ST or 20% pure LT). Can carry back losses 3 years against §1256 gains. Why other answers are wrong: (A) Not ordinary—it's capital; (B) Not 100% LT—it's 60/40; (C) Normal rules don't apply—§1256 is special regime.",
+    "tip": "§1256: Mark-to-market + 60% LT / 40% ST. Blended rate ~26.8%. Futures, forex, non-equity options.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4588,7 +4588,7 @@ const questions = [
     "id": "reg-006-029",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Patent sale treatment",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4600,8 +4600,8 @@ const questions = [
       "D": "Tax-free income"
     },
     "correctAnswer": "B",
-    "explanation": "Under Section 1235, the sale of a patent by an individual who created it (or certain related parties) qualifies for long-term capital gain treatment, regardless of the holding period. This is an exception to the rule that self-created assets are not capital assets.",
-    "tip": "Self-created patent sale = LTCG (Section 1235). Exception to creator rule.",
+    "explanation": "Per IRC §1235, sale of patent by HOLDER (creator or purchaser before reduction to practice) = AUTOMATIC LTCG regardless of holding period! Major exception to §1221(a)(3) (self-created works = not capital assets). Requirements: (1) transfer ALL substantial rights, (2) holder is individual (not corporation), (3) not related party sale. Payments based on use/production = treated as sale proceeds, not royalty income. Why other answers are wrong: (A) Would be ordinary under general rules, but §1235 overrides; (C) Automatic LT regardless of holding period; (D) Not tax-free—just favorable LTCG treatment.",
+    "tip": "§1235 Patent: AUTOMATIC LTCG regardless of holding period. Exception to self-created = not capital asset rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4609,7 +4609,7 @@ const questions = [
     "id": "reg-006-030",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Section 121 and home office",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4621,8 +4621,8 @@ const questions = [
       "D": "Fully taxable"
     },
     "correctAnswer": "C",
-    "explanation": "When a home was used partly for business, the Section 121 exclusion can apply to gain on the entire property if the business portion was within the home. However, depreciation claimed on the business portion must be recaptured as ordinary income.",
-    "tip": "Home office in home: exclusion OK but recapture depreciation. Separate building = no exclusion on that.",
+    "explanation": "Per IRC §121(d)(6), home office IN the home: §121 exclusion applies to ENTIRE gain EXCEPT depreciation recapture. Depreciation allowed/allowable after 5/6/97 must be recognized as ORDINARY income (unrecaptured §1250). Separate structure (detached office/rental unit): allocate gain—business portion CANNOT be excluded. Key distinction: integrated vs. separate. Example: $100K gain, $15K depreciation taken = $15K ordinary income, $85K excludable. Why other answers are wrong: (A) No 10% threshold exists; (B) Not fully excludable—depreciation recapture applies; (D) Only depreciation portion taxable.",
+    "tip": "§121 + Home Office: Gain excludable EXCEPT depreciation recapture. Integrated = OK. Separate building = NO exclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4630,7 +4630,7 @@ const questions = [
     "id": "reg-006-031",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Nonqualified use period",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4642,8 +4642,8 @@ const questions = [
       "D": "Is fully excludable"
     },
     "correctAnswer": "A",
-    "explanation": "Gain attributable to nonqualified use periods after 2008 (when the home was not the principal residence) is not eligible for exclusion. The taxable portion is calculated by prorating based on nonqualified use time versus total ownership time.",
-    "tip": "Nonqualified use (rental before 2009 exempted): gain prorated = that portion not excludable.",
+    "explanation": "Per IRC §121(b)(5), nonqualified use = periods after 1/1/2009 when home NOT used as principal residence (e.g., rental, second home). Taxable gain = Total Gain × (Nonqualified Use ÷ Total Ownership). EXCEPTIONS: (1) Use BEFORE 1/1/2009; (2) Periods AFTER last use as principal residence (can rent out after moving); (3) Temporary absences up to 2 years (military, health). Example: Own 10 years, rented 2 years (2015-2017), then moved in = 2/10 = 20% not excludable. Why other answers are wrong: (B) Still capital gain, not ordinary; (C) No 5-year waiting; (D) Not fully excludable—must prorate.",
+    "tip": "§121(b)(5) Nonqualified Use: (NQU days ÷ Total ownership) × Gain = taxable. Post-2008 only. Rental AFTER moving = OK!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4651,7 +4651,7 @@ const questions = [
     "id": "reg-006-032",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Options - capital asset treatment",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4663,8 +4663,8 @@ const questions = [
       "D": "Ordinary income or loss"
     },
     "correctAnswer": "A",
-    "explanation": "An option is a capital asset. Gain or loss on sale of an option (without exercise) is capital in nature, with the holding period based on how long the option was held. If the option expires worthless, the holder has a capital loss.",
-    "tip": "Sell option = capital gain/loss. Option holding period applies. Expires = capital loss.",
+    "explanation": "Per IRC §1234, options are capital assets. BUYER who sells: capital gain/loss, holding period = time held option. BUYER if exercised: option cost added to stock basis, holding period starts at exercise. BUYER if expires: capital loss on expiration date. SELLER (writer): if expires, premium = short-term gain; if exercised, added to sale proceeds. Non-equity options: may be §1256 (60/40 rule). Why other answers are wrong: (B) Can be long-term if held >1 year; (C) §1231 is for depreciable business property, not options; (D) Options are capital assets, not ordinary.",
+    "tip": "§1234 Options: Sell = capital G/L (option holding period). Exercise = cost added to stock basis. Expire = capital loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4672,7 +4672,7 @@ const questions = [
     "id": "reg-006-033",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Tax lot selection",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4684,8 +4684,8 @@ const questions = [
       "D": "Specific identification if adequately identified, otherwise FIFO"
     },
     "correctAnswer": "D",
-    "explanation": "Taxpayers can specifically identify which shares are sold if they adequately identify them at the time of sale. Otherwise, FIFO (first-in, first-out) is the default. Mutual funds may use average cost basis. The method can affect whether gains are short or long-term.",
-    "tip": "Specific ID shares for best tax result. Otherwise FIFO applies. Mutual funds can average.",
+    "explanation": "Per Reg. §1.1012-1, stock basis methods: (1) SPECIFIC IDENTIFICATION: designate which shares sold (must adequately identify at/before sale—by date acquired, cost, etc.); (2) FIFO default: if not specifically identified, earliest shares sold first. AVERAGE COST: ONLY for mutual funds/DRIPs (Reg. §1.1012-1(e)). Planning: specific ID lets you choose highest basis shares (minimize gain) or optimize LT vs ST character. Why other answers are wrong: (A) Can't change methods arbitrarily—must use valid method; (B) Average cost only for mutual funds; (C) FIFO is default but specific ID available.",
+    "tip": "Specific ID = best tax planning (choose high basis). FIFO = default. Average cost = mutual funds ONLY.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4693,7 +4693,7 @@ const questions = [
     "id": "reg-006-034",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Real estate capital gain vs ordinary",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4705,8 +4705,8 @@ const questions = [
       "D": "Long-term capital gain"
     },
     "correctAnswer": "A",
-    "explanation": "Real estate held primarily for sale to customers in the ordinary course of business (dealer property) produces ordinary income, not capital gain. This is similar to inventory treatment. The determination depends on holding purpose, not the property itself.",
-    "tip": "Dealer = ordinary income. Investor = capital gain. Same property, different tax treatment.",
+    "explanation": "Per IRC §1221(a)(1), property held primarily for sale to customers in ordinary course of business = NOT a capital asset (inventory-like). Real estate dealers: flippers, subdividers, frequent sellers. Factors courts consider: (1) holding period, (2) number of sales, (3) improvement activities, (4) advertising/marketing, (5) intent at acquisition, (6) time/effort devoted. Can be dealer for some properties, investor for others (separate intent). Also: §453 installment method NOT available for dealer property. Why other answers are wrong: (B) §1231 is for business property held >1 year, not dealer; (C) Installment not allowed for dealer; (D) Dealer property isn't capital asset.",
+    "tip": "Dealer (sells to customers) = ordinary income. Investor (holds for appreciation) = capital gain. Intent controls!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4714,7 +4714,7 @@ const questions = [
     "id": "reg-006-035",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Property Transactions",
+    "subtopic": "Gains and Losses",
     "conceptTested": "Pass-through entity capital gains",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -4726,8 +4726,8 @@ const questions = [
       "D": "As ordinary income"
     },
     "correctAnswer": "A",
-    "explanation": "Capital gains from pass-through entities (partnerships, S corps) retain their character when passed to owners. The gain is reported on Schedule K-1 and the owner reports it on their personal return as capital gain, preserving preferential rates.",
-    "tip": "Pass-through capital gains = still capital gains to owners. Character preserved.",
+    "explanation": "Per IRC §702(b) (partnerships) and §1366(b) (S corps), character of separately stated items passes through to owners. Capital gains remain capital gains; ordinary income remains ordinary. Reported on Schedule K-1: Box 8 (partnerships) or Box 7 (S corps) for capital gains. Owner's holding period in entity is IRRELEVANT—entity's holding period in asset controls ST vs LT. NIIT may apply at owner level. Why other answers are wrong: (B) Flow-through happens annually, not just at disposition; (C) Dividends are different—these are K-1 items; (D) Character preserved—doesn't convert to ordinary.",
+    "tip": "§702(b)/§1366(b): Character preserved through pass-throughs. K-1 capital gain = capital gain to you. Entity's holding period controls.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },

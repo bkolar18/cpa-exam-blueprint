@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 175 | 1,170 | 13% | In Progress |
+| REG | 1,345 | 210 | 1,135 | 16% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -59,11 +59,71 @@ All 58 exam TBS questions have been enhanced with:
 | Deductions FROM AGI | 35 | reg-003-001 to reg-003-035 | **Complete** |
 | Tax Credits | 35 | reg-004-001 to reg-004-035 | **Complete** |
 | Property Transactions - Basis | 35 | reg-005-001 to reg-005-035 | **Complete** |
-| Property Transactions - Gains/Losses | 35 | reg-006-001 to reg-006-035 | Pending |
+| Property Transactions - Gains/Losses | 35 | reg-006-001 to reg-006-035 | **Complete** |
 | Property Transactions - §1231/Depreciation | 35+ | Various | Pending |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 5)
+
+**Batch 5: 35 Additional Questions Enhanced (reg-006-001 to reg-006-035)**
+
+Property Transactions - Gains and Losses (35 questions - reg-006-001 to reg-006-035):
+- IRC section references (§§1, §1091, §1202, §1211, §1212, §1221, §1222, §1223, §1234, §1235, §1244, §1256, §1259, §1411, §1400Z, etc.)
+- Capital asset definition (§1221) - negative definition with 8 exclusions
+- Holding period rules (§1222/1223) - short-term vs long-term, tacking rules
+- Capital gain rates - 0%/15%/20% brackets, plus 28% collectibles, 25% unrecaptured §1250
+- Capital loss limitations (§1211) - $3,000 individual, gains only for corporations
+- Capital loss carryovers (§1212) - individual vs corporate rules
+- Netting process - within category first, then cross-netting
+- Wash sale rule (§1091) - 61-day window, basis adjustment
+- Related party losses (§267) - disallowance and buyer's offset
+- Section 121 home sale exclusion - $250K/$500K, 2/5 year test, partial exclusion
+- Worthless securities (§165(g)) - deemed sale on 12/31
+- QSBS exclusion (§1202) - 100% exclusion post-9/27/2010, 5-year hold
+- Net Investment Income Tax (§1411) - 3.8% on NII above thresholds
+- Installment sales (§453) - gross profit percentage method
+- Section 1244 stock - $50K/$100K ordinary loss
+- Corporate vs individual capital loss rules
+- Qualified Opportunity Zones (§1400Z-2) - deferral and exclusion
+- Straddle rules (§1092), constructive sales (§1259)
+- Section 1256 contracts - 60/40 mark-to-market
+- Carried interest (§1061) - 3-year holding period
+- Patent sales (§1235) - automatic LTCG
+- Options (§1234) - capital asset treatment
+- Pass-through entity capital gains (§702(b), §1366(b))
+
+**Key IRC References Used (Batch 5):**
+| Topic | IRC Section |
+|-------|-------------|
+| Capital Gain Rates | §1(h) |
+| Wash Sales | §1091 |
+| QSBS Exclusion | §1202 |
+| Capital Loss Limit - Individuals | §1211(b) |
+| Capital Loss Limit - Corporations | §1211(a) |
+| Capital Loss Carryover - Individuals | §1212(b) |
+| Capital Loss Carryover - Corporations | §1212(a) |
+| Capital Asset Definition | §1221 |
+| Holding Period | §1222, §1223 |
+| Options | §1234 |
+| Patent Sales | §1235 |
+| Small Business Stock Loss | §1244 |
+| Section 1256 Contracts | §1256 |
+| Constructive Sales | §1259 |
+| Related Party Losses | §267 |
+| Home Sale Exclusion | §121 |
+| Worthless Securities | §165(g) |
+| NIIT | §1411 |
+| QOZ | §1400Z-2 |
+| Straddle Rules | §1092 |
+| Carried Interest | §1061 |
+| Installment Sales | §453 |
+| Mutual Fund Distributions | §852(b)(3) |
+| Partnership Pass-Through | §702(b) |
+| S Corp Pass-Through | §1366(b) |
+
+---
 
 ### REG Enhancement Completed - January 15, 2026 (Session 4)
 
