@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 245 | 1,100 | 18% | In Progress |
+| REG | 1,345 | 280 | 1,065 | 21% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -61,10 +61,63 @@ All 58 exam TBS questions have been enhanced with:
 | Property Transactions - Basis | 35 | reg-005-001 to reg-005-035 | **Complete** |
 | Property Transactions - Gains/Losses | 35 | reg-006-001 to reg-006-035 | **Complete** |
 | Property Transactions - Like-Kind Exchanges | 35 | reg-007-001 to reg-007-035 | **Complete** |
-| Property Transactions - §1231/Depreciation | 35+ | Various | Pending |
+| Property Transactions - §1231/Recapture | 35 | reg-008-001 to reg-008-035 | **Complete** |
+| Entity Taxation - C Corps | 35+ | Various | Pending |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 7)
+
+**Batch 7: 35 Additional Questions Enhanced (reg-008-001 to reg-008-035)**
+
+Property Transactions - §1231 and Depreciation Recapture (35 questions - reg-008-001 to reg-008-035):
+- IRC section references (§1231, §1245, §1250, §291, §179, §197, §1252, §1239, §453, §170, §1014, §1015, §168(k), etc.)
+- §1231 property definition - business property held >1 year (not capital assets)
+- §1231 best-of-both-worlds treatment - net gain = LTCG, net loss = ordinary
+- §1231 lookback rule - prior 5 years' losses convert current gains to ordinary
+- §1231 casualty hotchpot - two-step netting process
+- §1245 property - personal property, §197 intangibles, QIP
+- §1245 full recapture - all depreciation recaptured as ordinary income
+- §1250 property - depreciable real property (buildings)
+- §1250 limited recapture - excess over straight-line only (usually zero post-1986)
+- Unrecaptured §1250 gain - 25% maximum rate for real estate depreciation
+- Recapture ordering - recapture FIRST, then §1231 netting
+- Recapture calculations - lesser of gain or depreciation
+- §291 corporate recapture - 20% additional for real property
+- §179 recapture - business use drops to 50% or below
+- Gift and inheritance - gift transfers taint, death eliminates via step-up
+- Installment sales - §453(i) requires immediate recapture recognition
+- Charitable contributions - deduction reduced by recapture amount
+- §1239 related party - ALL gain ordinary on depreciable property sales
+- Partnership recapture - passes through to partners as ordinary
+- Comprehensive calculations - multi-layer gain characterization
+
+**Key IRC References Used (Batch 7):**
+| Topic | IRC Section |
+|-------|-------------|
+| §1231 Property Definition | §1231(b) |
+| §1231 Best-of-Both-Worlds | §1231(a) |
+| §1231 Lookback Rule | §1231(c) |
+| §1245 Property | §1245(a)(3) |
+| §1245 Full Recapture | §1245(a)(1) |
+| §1250 Property | §1250(c) |
+| §1250 Limited Recapture | §1250(a) |
+| Unrecaptured §1250 Rate | §1(h)(1)(E) |
+| Corporate §291 Recapture | §291(a)(1) |
+| §179 Recapture | §179(d)(10) |
+| Gift - No Recognition | §1245(b)(1) |
+| Inheritance - Step-up | §1014 |
+| Installment - Immediate | §453(i) |
+| Charitable Reduction | §170(e)(1)(A) |
+| Related Party - All Ordinary | §1239 |
+| QIP as §1245 | §1245(a)(3)(C) |
+| Farm Conservation Recapture | §1252 |
+| §197 Intangibles Recapture | §197, §1245(a)(3) |
+| Partnership Pass-Through | §751(c), §702(b) |
+| Bonus Depreciation | §168(k) |
+
+---
 
 ### REG Enhancement Completed - January 15, 2026 (Session 6)
 

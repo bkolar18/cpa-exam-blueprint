@@ -5482,8 +5482,8 @@ const questions = [
       "D": "Stocks and bonds"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1231 property includes depreciable property and land used in a trade or business, held for more than one year. This is NOT a capital asset by definition, but Section 1231 provides potential capital gain treatment on net gains.",
-    "tip": "Section 1231 = business property held >1 year. Gets best-of-both-worlds treatment.",
+    "explanation": "Per IRC §1231(b), Section 1231 property includes: (1) depreciable property used in a trade or business, AND (2) real property used in a trade or business—both held MORE than one year. Note: §1231 property is specifically EXCLUDED from the capital asset definition under §1221(a)(2), yet §1231 provides preferential treatment. Section 1231 does NOT include inventory, property held for sale, or personal-use assets. Why other answers are wrong: (A) Inventory—excluded by §1231(b)(1)(A); (C) Personal-use assets—not used in trade/business; (D) Stocks and bonds—these ARE capital assets under §1221, not §1231 property.",
+    "tip": "§1231 property = business/investment property held >1 year. NOT capital assets by definition, but treated favorably.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5503,8 +5503,8 @@ const questions = [
       "D": "Ordinary income"
     },
     "correctAnswer": "A",
-    "explanation": "Section 1231 provides 'best of both worlds' treatment: net Section 1231 gains are treated as long-term capital gains (preferential rates), while net Section 1231 losses are treated as ordinary losses (fully deductible against ordinary income).",
-    "tip": "1231 net gain = LTCG rate. 1231 net loss = ordinary deduction. Win-win.",
+    "explanation": "Per IRC §1231(a), the 'best of both worlds' treatment: (1) Net §1231 GAINS are treated as LTCG—taxed at preferential rates (0%/15%/20%); (2) Net §1231 LOSSES are treated as ORDINARY losses—fully deductible against ordinary income (no $3,000 capital loss limit). This asymmetric treatment encourages business investment while protecting against downside risk. Why other answers are wrong: (B) Short-term capital gain—net §1231 gains are specifically LTCG; (C) Tax-exempt—gains are taxable, just at preferential rates; (D) Ordinary income—that would be worse than LTCG treatment for gains.",
+    "tip": "§1231 = BEST OF BOTH WORLDS. Net gain → LTCG rates. Net loss → ordinary deduction. Win-win!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5524,8 +5524,8 @@ const questions = [
       "D": "Residential rental buildings"
     },
     "correctAnswer": "A",
-    "explanation": "Section 1245 property includes depreciable personal property used in a trade or business, such as machinery, equipment, furniture, and vehicles. It also includes certain amortizable intangibles and some real property like single-purpose agricultural structures.",
-    "tip": "Section 1245 = depreciable personal property (equipment, machinery, vehicles).",
+    "explanation": "Per IRC §1245(a)(3), Section 1245 property includes: (1) tangible personal property subject to depreciation (machinery, equipment, vehicles, furniture), (2) certain amortizable §197 intangibles (goodwill, covenants not to compete), (3) specific real property like single-purpose agricultural/horticultural structures. Key distinction: §1245 triggers FULL recapture (all depreciation as ordinary income). Why other answers are wrong: (B) Land—land is NOT depreciable and not §1245; (C) Inventory—not depreciable, not §1245; (D) Residential rental buildings—these are §1250 property (depreciable real property).",
+    "tip": "§1245 = depreciable PERSONAL property + some intangibles. Full recapture (all depreciation → ordinary income).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5545,8 +5545,8 @@ const questions = [
       "D": "Depreciable real property (buildings)"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1250 property is depreciable real property—primarily buildings and structural components. This includes commercial buildings, residential rental property, and other improvements to real property (but not land, which isn't depreciable).",
-    "tip": "Section 1250 = depreciable real property (buildings). Not land.",
+    "explanation": "Per IRC §1250(c), Section 1250 property is any REAL PROPERTY (other than §1245 property) that is or has been subject to depreciation. This includes: commercial buildings, residential rental buildings, warehouses, structural components. Land is NOT §1250 property because land cannot be depreciated. The key distinction: §1250 has LIMITED recapture (only excess over straight-line depreciation). Why other answers are wrong: (A) Land—not depreciable, cannot be §1250; (B) Inventory—not depreciable; (C) Personal property—that's §1245 property.",
+    "tip": "§1250 = depreciable REAL PROPERTY (buildings). Limited recapture (excess over straight-line only). Land never included.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5566,8 +5566,8 @@ const questions = [
       "D": "Increase the taxpayer's basis in property"
     },
     "correctAnswer": "A",
-    "explanation": "Depreciation recapture prevents taxpayers from getting the best of both worlds: ordinary deductions during the holding period and then capital gain rates on sale. The recaptured depreciation is taxed as ordinary income.",
-    "tip": "Recapture = you got ordinary deduction, so you pay ordinary tax on that portion.",
+    "explanation": "The policy rationale for §§1245 and 1250 recapture: Without recapture, taxpayers could: (1) deduct depreciation against ORDINARY income (up to 37% tax benefit), then (2) recognize LTCG on sale (0%/15%/20% rate). Recapture prevents this arbitrage by taxing the depreciation portion as ordinary income when the property is sold at a gain. It ensures 'what you deducted as ordinary, you pay back as ordinary.' Why other answers are wrong: (B) Allow additional depreciation—recapture doesn't create deductions; (C) Permanent ordinary conversion—it's not permanent, just for the recapture portion; (D) Increase basis—recapture doesn't affect basis.",
+    "tip": "Recapture policy: You got ORDINARY deductions, so you pay ORDINARY tax on that gain portion. Anti-arbitrage rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5587,8 +5587,8 @@ const questions = [
       "D": "15%"
     },
     "correctAnswer": "B",
-    "explanation": "Unrecaptured Section 1250 gain (straight-line depreciation on real property) is taxed at a maximum rate of 25%. This is higher than regular capital gains rates but lower than ordinary income rates.",
-    "tip": "Unrecaptured 1250 = 25% max. It's the 'in-between' rate for real estate depreciation.",
+    "explanation": "Per IRC §1(h)(1)(E), unrecaptured §1250 gain is taxed at a MAXIMUM rate of 25%. This applies to straight-line depreciation taken on real property (buildings). It's an 'in-between' rate: higher than regular LTCG rates (0%/15%/20%) but lower than ordinary income rates (up to 37%). For post-1986 real estate using MACRS straight-line, there's NO actual §1250 recapture (ordinary income)—just this 25% unrecaptured gain. Why other answers are wrong: (A) 20%—that's the top regular LTCG rate; (C) Ordinary rates—that would be actual §1250 recapture, which rarely applies post-1986; (D) 15%—that's a middle LTCG rate.",
+    "tip": "Unrecaptured §1250 = 25% MAX rate. In-between rate for real estate depreciation. Memorize: 28% collectibles, 25% unrecaptured §1250.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5608,8 +5608,8 @@ const questions = [
       "D": "Accumulated depreciation or original cost"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1245 recapture is the lesser of: (1) gain realized (amount realized minus adjusted basis), or (2) depreciation taken (sometimes called 'recomputed basis minus adjusted basis'). You can't recapture more depreciation than your actual gain.",
-    "tip": "1245 recapture = lesser of gain or depreciation taken. Taxed as ordinary income.",
+    "explanation": "Per IRC §1245(a)(1), Section 1245 recapture = LESSER of: (1) GAIN REALIZED (Amount Realized − Adjusted Basis), or (2) DEPRECIATION TAKEN (also called 'recomputed basis minus adjusted basis'). You cannot recapture more depreciation than your actual gain, and you cannot recognize more recapture than total depreciation taken. Example: $100K gain, $80K depreciation → $80K recapture. Or: $60K gain, $80K depreciation → $60K recapture. Why other answers are wrong: (A) FMV or cost—these are inputs, not the recapture formula; (C) Gain or FMV—FMV isn't directly used; (D) Depreciation or cost—misses the gain limitation.",
+    "tip": "§1245 recapture = LESSER of (gain realized) or (depreciation taken). Can't recapture more than you made OR took!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5629,8 +5629,8 @@ const questions = [
       "D": "Only excess depreciation over straight-line"
     },
     "correctAnswer": "A",
-    "explanation": "For Section 1245 property (personal property), ALL depreciation taken is potentially recaptured as ordinary income, limited by the gain recognized. This is 'full recapture' unlike Section 1250's limited recapture.",
-    "tip": "1245 = full recapture (all depreciation). 1250 = limited recapture (excess only, usually).",
+    "explanation": "Per IRC §1245(a)(1), Section 1245 provides FULL RECAPTURE—ALL depreciation taken is potentially recaptured as ORDINARY INCOME, limited only by the amount of gain. This is more aggressive than §1250's limited recapture (excess over straight-line only). The policy: personal property often appreciates less than buildings, so full recapture is appropriate. Why other answers are wrong: (B) 50% of depreciation—no such partial rule; (C) No recapture for personal property—the opposite is true; (D) Only excess over straight-line—that's §1250 treatment, not §1245.",
+    "tip": "§1245 = FULL recapture (all depreciation → ordinary). §1250 = LIMITED recapture (excess over straight-line). Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5650,8 +5650,8 @@ const questions = [
       "D": "50% of depreciation"
     },
     "correctAnswer": "C",
-    "explanation": "Section 1250 requires ordinary income recapture only for depreciation in excess of straight-line. Since MACRS uses straight-line for real property (post-1986), there's typically no 1250 recapture—but there is 'unrecaptured 1250 gain' at 25%.",
-    "tip": "Post-1986 real estate: no actual 1250 recapture (all straight-line), but 25% unrecaptured gain.",
+    "explanation": "Per IRC §1250(a), Section 1250 recapture is LIMITED to depreciation in EXCESS of straight-line (accelerated depreciation only). Since MACRS requires straight-line for real property placed in service after 1986, there's typically ZERO actual §1250 recapture (ordinary income). HOWEVER, there IS 'unrecaptured §1250 gain' taxed at 25% under §1(h). The practical distinction: post-1986 real estate has 25% rate gain, not ordinary income recapture. Why other answers are wrong: (A) First year only—no such rule; (B) All depreciation—that's §1245, not §1250; (D) 50%—no such rule.",
+    "tip": "Post-1986 §1250: usually $0 actual recapture (no excess over S/L). BUT: 25% unrecaptured gain still applies!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5671,8 +5671,8 @@ const questions = [
       "D": "After all capital gain"
     },
     "correctAnswer": "A",
-    "explanation": "Recapture is determined first, reducing the gain that goes into the Section 1231 netting process. Only the gain remaining after recapture is treated as Section 1231 gain. The ordering is: recapture → Section 1231 → capital gain netting.",
-    "tip": "First recapture, then 1231 netting. Recapture pulls gain out of favorable treatment.",
+    "explanation": "Per IRC §§1245/1250 and 1231, the ORDERING RULE is critical: (1) FIRST: Calculate depreciation recapture (ordinary income); (2) THEN: Remaining gain enters §1231 'hotchpot' for netting. Only gain AFTER recapture gets §1231 treatment. This prevents taxpayers from using §1231's favorable treatment on what should be ordinary recapture income. Why other answers are wrong: (B) Elected by taxpayer—recapture is MANDATORY, not elective; (C) Following year—recognized in year of sale; (D) After capital gain—recapture is first, not last.",
+    "tip": "ORDERING: Recapture FIRST → then §1231 netting. Recapture 'pulls out' ordinary income before favorable treatment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5692,8 +5692,8 @@ const questions = [
       "D": "Current year net 1231 gain to be treated as ordinary income to extent of prior 5-year net 1231 losses"
     },
     "correctAnswer": "D",
-    "explanation": "The lookback rule prevents taxpayers from recognizing ordinary losses in one year and capital gains in another on Section 1231 property. Net 1231 gains are recharacterized as ordinary income to the extent of unrecaptured net 1231 losses from the prior 5 years.",
-    "tip": "Lookback: prior 5 years' 1231 losses convert current 1231 gains to ordinary.",
+    "explanation": "Per IRC §1231(c), the LOOKBACK RULE prevents abuse of §1231's best-of-both-worlds treatment. If you claimed ordinary LOSSES in prior years, current §1231 GAINS are recharacterized as ORDINARY INCOME to the extent of unrecaptured net §1231 losses from the PRIOR 5 YEARS. This prevents: Year 1 ordinary loss, Year 2 LTCG on same type of property. Fair is fair! Why other answers are wrong: (A) 2-year carryback—lookback looks back, doesn't carry back; (B) All gains ordinary—only to extent of prior losses; (C) 5-year recognition—no such spreading rule.",
+    "tip": "LOOKBACK: Prior 5 years' §1231 losses → convert current §1231 gains to ordinary. Anti-abuse rule!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5713,8 +5713,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "B",
-    "explanation": "Adjusted basis = $50,000 - $30,000 = $20,000. Gain = $45,000 - $20,000 = $25,000. Recapture = lesser of gain ($25,000) or depreciation ($30,000) = $25,000. All gain is recaptured as ordinary income.",
-    "tip": "Recapture = lesser of gain or depreciation. Here: $25K gain < $30K depreciation.",
+    "explanation": "Per IRC §1245(a)(1): Step 1: Adjusted Basis = $50K cost − $30K depreciation = $20K. Step 2: Gain Realized = $45K amount realized − $20K adjusted basis = $25K. Step 3: §1245 Recapture = LESSER of gain ($25K) or depreciation ($30K) = $25K ORDINARY INCOME. All gain is recaptured because gain < depreciation. No §1231 gain remains. Why other answers are wrong: (A) $20K—that's adjusted basis, not recapture; (C) $30K—can't recapture more than gain realized; (D) $0—there IS gain, so there IS recapture.",
+    "tip": "Formula: Recapture = lesser of (gain, depreciation). Here: $25K gain < $30K depreciation → $25K ordinary. All gain is recaptured!",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -5734,8 +5734,8 @@ const questions = [
       "D": "There is no depreciation recapture"
     },
     "correctAnswer": "D",
-    "explanation": "Depreciation recapture only applies when there is a gain. If property is sold at a loss (amount realized less than adjusted basis), there is no recapture. The loss is a Section 1231 loss and may be ordinary if net 1231 is a loss.",
-    "tip": "No gain = no recapture. Recapture only applies to the extent of gain.",
+    "explanation": "Per IRC §§1245(a)(1) and 1250(a)(1), depreciation recapture ONLY applies when there is a GAIN. The recapture formula is 'lesser of gain or depreciation'—if gain is zero or negative (a loss), recapture is zero. The LOSS is characterized as a §1231 loss and enters the §1231 netting process. If net §1231 is a loss, it's an ORDINARY loss (fully deductible). Why other answers are wrong: (A) 50% recaptured—no recapture at all on losses; (B) Loss converted to ordinary income—wrong direction; (C) Depreciation still recaptured—no, recapture requires gain.",
+    "tip": "NO GAIN = NO RECAPTURE. Loss goes into §1231 netting. Net §1231 loss = ordinary loss (fully deductible).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5755,8 +5755,8 @@ const questions = [
       "D": "Recognized in full regardless of boot"
     },
     "correctAnswer": "B",
-    "explanation": "In a like-kind exchange, recapture is recognized to the extent of boot received (lesser of boot or recapture potential). If no boot is received, recapture is deferred. The recapture potential carries over to the replacement property.",
-    "tip": "1031 with boot: recapture recognized first, before other gain.",
+    "explanation": "Per IRC §1245(b)(4) and Treas. Reg. §1.1245-4(d), in a §1031 like-kind exchange, depreciation recapture is recognized to the extent of BOOT RECEIVED. Ordering: recapture is recognized FIRST, then any remaining boot triggers §1231 gain. If NO boot is received, recapture is DEFERRED—the recapture potential carries over to the replacement property's basis. Why other answers are wrong: (A) Always fully recognized—only to extent of boot; (C) Never recognized—recognized if boot received; (D) Full recognition regardless of boot—boot limits recognition.",
+    "tip": "§1031 + recapture: Recognized to extent of BOOT. Recapture recognized FIRST (ordering rule). No boot = deferred.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5776,8 +5776,8 @@ const questions = [
       "D": "Recapture is triggered immediately"
     },
     "correctAnswer": "A",
-    "explanation": "A gift is not a recognition event for depreciation recapture. The recapture potential carries over to the donee along with the carryover basis. The donee will recognize recapture when they sell the property.",
-    "tip": "Gift = no recapture trigger. Recapture potential follows the property.",
+    "explanation": "Per IRC §1245(b)(1), a GIFT is NOT a recognition event for depreciation recapture. The recapture potential 'taints' the property and transfers to the DONEE along with the carryover basis under §1015. When the donee eventually sells, they recognize recapture based on the ORIGINAL owner's depreciation. The recapture taint follows the property, not the person. Why other answers are wrong: (B) Depreciation eliminated—it's not eliminated, just transferred; (C) Donor pays recapture—no recognition event on gift; (D) Immediate trigger—gifts don't trigger recapture.",
+    "tip": "Gift = NO recognition event. Recapture potential TRANSFERS to donee. Donee pays when they sell!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5797,8 +5797,8 @@ const questions = [
       "D": "Recapture potential is eliminated due to stepped-up basis"
     },
     "correctAnswer": "D",
-    "explanation": "Inherited property receives a stepped-up basis to FMV at death, eliminating the built-in depreciation recapture. This is a significant benefit—the decedent's depreciation deductions never result in recapture at ordinary rates.",
-    "tip": "Death step-up eliminates recapture potential. Major estate planning benefit.",
+    "explanation": "Per IRC §1014, inherited property receives a STEPPED-UP BASIS to FMV at date of death, which ELIMINATES all built-in depreciation recapture potential. The decedent's depreciation deductions provided tax benefits that are NEVER recaptured. This is a major estate planning benefit: hold appreciated, depreciated property until death to avoid recapture entirely! Unlike gifts (carryover basis, recapture transfers), death = clean slate. Why other answers are wrong: (A) Deferred to heir's sale—no, it's eliminated; (B) Estate pays—no, basis step-up eliminates it; (C) Heir recognizes—no recapture potential after step-up.",
+    "tip": "DEATH = step-up eliminates recapture! Major benefit. Hold depreciated property until death for recapture forgiveness.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5818,8 +5818,8 @@ const questions = [
       "D": "Recognized in full in the year of sale"
     },
     "correctAnswer": "D",
-    "explanation": "Depreciation recapture cannot be deferred using the installment method. All recapture income is recognized in the year of sale, even if payment is received over time. Only the gain exceeding recapture can be reported on the installment method.",
-    "tip": "Recapture = immediate recognition. No installment deferral for recapture portion.",
+    "explanation": "Per IRC §453(i), depreciation recapture CANNOT be deferred using the installment method. ALL recapture income must be recognized in the YEAR OF SALE, even if payments are spread over many years. Only the gain EXCEEDING recapture (the §1231/capital gain portion) can be reported under installment method. This prevents taxpayers from deferring what should be immediate ordinary income. Why other answers are wrong: (A) Never recognized—it IS recognized, just not deferred; (B) Final year—recognized in FIRST year (sale year); (C) Ratably—no, all in year of sale.",
+    "tip": "§453(i): Recapture = IMMEDIATE recognition in year of sale. NO installment deferral! Only excess gain can be spread.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5839,8 +5839,8 @@ const questions = [
       "D": "The charitable deduction is reduced by the recapture amount"
     },
     "correctAnswer": "D",
-    "explanation": "When donating ordinary income property (including the recapture portion of Section 1245 property), the charitable deduction is limited to basis, not FMV. The recapture reduces the deduction rather than creating taxable income.",
-    "tip": "Donate 1245 property = deduction limited to basis. Recapture 'built in' reduces deduction.",
+    "explanation": "Per IRC §170(e)(1)(A), when donating ORDINARY INCOME PROPERTY (property that would generate ordinary income if sold, including §1245 recapture property), the charitable deduction must be REDUCED by the ordinary income that would have resulted. For §1245 property: Deduction = FMV − Recapture amount = essentially BASIS. The recapture portion reduces the deduction rather than triggering taxable income. Why other answers are wrong: (A) Recapture as ordinary income—no, it reduces the deduction instead; (B) Full FMV deduction—only for LTCG property to qualified charities; (C) No deduction—there is a deduction, just reduced.",
+    "tip": "Donate §1245 property → deduction reduced by recapture amount. Effectively = basis deduction. No ordinary income triggered.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5860,8 +5860,8 @@ const questions = [
       "D": "All gains and losses together"
     },
     "correctAnswer": "A",
-    "explanation": "The 1231 process involves: (1) net casualty and theft gains/losses (if net loss, treat as ordinary; if net gain, move to main pot), (2) net the main 1231 gains and losses (including casualty net gain), (3) apply lookback rule, (4) characterize the result.",
-    "tip": "Two-step 1231: first casualties (hotchpot), then combine with other 1231 transactions.",
+    "explanation": "Per IRC §1231(a), the §1231 netting process has TWO STEPS: (1) FIRST 'HOTCHPOT': Net casualty/theft gains and losses on §1231 property. If net LOSS → ordinary loss (doesn't go to main pot). If net GAIN → moves to main pot. (2) MAIN POT: Net all §1231 gains/losses (including casualty net gain from step 1). If net gain → LTCG. If net loss → ordinary loss. Then apply lookback rule to net gains. Why other answers are wrong: (B) Capital vs 1231—they don't net together directly; (C) Ordinary vs 1231—§1231 IS ordinary or capital depending on net; (D) All together—casualties must be netted first.",
+    "tip": "Two-pot §1231: (1) Casualty hotchpot first → net loss = ordinary, net gain → main pot. (2) Main pot → net gain = LTCG, net loss = ordinary.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5881,8 +5881,8 @@ const questions = [
       "D": "50% of all depreciation"
     },
     "correctAnswer": "C",
-    "explanation": "Section 291 requires corporations to recapture an additional 20% of the excess of what would be 1245 recapture over actual 1250 recapture on real property. This effectively recaptures 20% of straight-line depreciation on buildings.",
-    "tip": "Corps pay extra: 20% of (1245 recapture - 1250 recapture) on real property.",
+    "explanation": "Per IRC §291(a)(1), CORPORATIONS must recognize ADDITIONAL ordinary income recapture equal to 20% of the EXCESS of what would have been §1245 recapture (full) over actual §1250 recapture (limited/zero). Since post-1986 real property has zero §1250 recapture (all straight-line), this means corporations recapture 20% of ALL depreciation on §1250 property as ordinary income. Individuals don't have this rule—they only have 25% unrecaptured gain. Why other answers are wrong: (A) No additional—§291 DOES create additional recapture; (B) All §1245—not additional, that's normal recapture; (D) 50%—it's 20%, not 50%.",
+    "tip": "§291 (CORPS ONLY): Extra recapture = 20% × (what §1245 would be − actual §1250). For post-86 property: 20% of ALL depreciation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5902,8 +5902,8 @@ const questions = [
       "D": "The property is sold at any time"
     },
     "correctAnswer": "C",
-    "explanation": "If business use of Section 179 property drops to 50% or less before the end of the MACRS recovery period, the excess Section 179 deduction over regular MACRS depreciation must be recaptured as ordinary income.",
-    "tip": "179 recapture: business use drops ≤50%. Recapture = 179 taken - what MACRS would have been.",
+    "explanation": "Per IRC §179(d)(10), if business use of §179 property drops to 50% OR LESS before the end of the MACRS recovery period, the EXCESS §179 deduction over what regular MACRS depreciation would have been must be RECAPTURED as ordinary income. This prevents taxpayers from taking immediate expensing then converting to personal use. Recapture amount = §179 taken − MACRS that would have been allowed. Why other answers are wrong: (A) Fully depreciated—no recapture issue then; (B) Never—there IS a recapture trigger; (D) Sold at any time—sale triggers normal recapture, not §179-specific.",
+    "tip": "§179 recapture: Business use ≤50% before recovery period ends. Recapture = §179 taken − MACRS would have been.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5923,8 +5923,8 @@ const questions = [
       "D": "No allocation is required"
     },
     "correctAnswer": "B",
-    "explanation": "When selling property that includes both real property (building) and personal property (equipment, fixtures), the total price must be allocated based on fair market values. Each type follows its own recapture rules.",
-    "tip": "Allocate between 1245 personal property and 1250 real property by FMV.",
+    "explanation": "Per Treas. Reg. §1.1245-1(a)(5), when a sale includes BOTH real property (building—§1250) and personal property (equipment, fixtures—§1245), the total sales price must be ALLOCATED based on relative FMVs. Each category follows its own recapture rules: personal property → §1245 full recapture; building → §1250/unrecaptured gain. This commonly occurs in business sales. Why other answers are wrong: (A) All §1250—ignores personal property requiring §1245; (C) All §1245—ignores building requiring §1250; (D) No allocation required—allocation IS required for proper tax treatment.",
+    "tip": "Mixed sale: ALLOCATE by FMV. Personal property → §1245 (full recapture). Building → §1250 (25% unrecaptured). Land → no recapture.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5944,8 +5944,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "C",
-    "explanation": "Adjusted basis = $100,000 - $80,000 = $20,000. Gain = $90,000 - $20,000 = $70,000. Section 1245 recapture = lesser of gain ($70,000) or depreciation ($80,000) = $70,000 ordinary. Remaining 1231 gain = $0.",
-    "tip": "All $70K gain is 1245 recapture (ordinary). No 1231 gain remains.",
+    "explanation": "Per IRC §1245(a)(1): Step 1: Adjusted Basis = $100K cost − $80K depreciation = $20K. Step 2: Total Gain = $90K sales price − $20K basis = $70K. Step 3: §1245 Recapture = lesser of gain ($70K) or depreciation ($80K) = $70K ORDINARY INCOME. Step 4: §1231 Gain = Total gain − Recapture = $70K − $70K = $0. ALL gain is absorbed by recapture; nothing flows to §1231. Why other answers are wrong: (A) $70K—that's total gain, but all is recapture, not §1231; (B) $90K—that's sales price, not §1231 gain; (D) $10K—no such calculation.",
+    "tip": "All $70K recaptured (gain < depreciation). §1231 gain = $0. When gain ≤ depreciation, ALL gain = ordinary recapture.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -5965,8 +5965,8 @@ const questions = [
       "D": "$600,000"
     },
     "correctAnswer": "B",
-    "explanation": "Adjusted basis = $500,000 - $100,000 = $400,000. Total gain = $600,000 - $400,000 = $200,000. Unrecaptured 1250 gain = lesser of gain ($200,000) or depreciation ($100,000) = $100,000 at 25%. Remaining $100,000 is Section 1231 gain.",
-    "tip": "Unrecaptured 1250 = depreciation recaptured at 25% (lesser of gain or depreciation).",
+    "explanation": "Per IRC §1(h)(1)(E) and §1250: Step 1: Adjusted Basis = $500K − $100K depreciation = $400K. Step 2: Total Gain = $600K − $400K = $200K. Step 3: Unrecaptured §1250 = lesser of total gain ($200K) or depreciation ($100K) = $100K at 25% MAX rate. Step 4: Remaining = $200K − $100K = $100K §1231 gain → LTCG rates (0%/15%/20%). No actual §1250 recapture (ordinary) because straight-line was used. Why other answers are wrong: (A) $0—there IS depreciation to recapture; (C) $200K—can't exceed depreciation taken; (D) $600K—that's sales price.",
+    "tip": "Building: Unrecaptured §1250 = lesser of (gain, depreciation) at 25%. Excess = §1231 → LTCG rates.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -5986,8 +5986,8 @@ const questions = [
       "D": "Special recapture rules separate from Section 1245"
     },
     "correctAnswer": "A",
-    "explanation": "Bonus depreciation is treated like other MACRS depreciation for recapture purposes. It is included in total depreciation subject to Section 1245 recapture and is recaptured as ordinary income to the extent of gain on sale.",
-    "tip": "Bonus depreciation = part of 1245 recapture. No special treatment.",
+    "explanation": "Per IRC §168(k) and §1245, bonus depreciation receives NO special recapture treatment—it's included in total depreciation subject to normal §1245 recapture. If you expense 100% of equipment in Year 1 via bonus depreciation and sell in Year 2 at a gain, ALL depreciation (including bonus) is recaptured as ORDINARY INCOME. The accelerated benefit = accelerated recapture if sold early. Why other answers are wrong: (B) No recapture—bonus IS subject to recapture; (C) Capital gains rates—recaptured as ordinary income; (D) Special rules—no special rules, normal §1245 applies.",
+    "tip": "Bonus depreciation = normal §1245 recapture. No special treatment. 100% bonus Year 1 → 100% recapture if sold at gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6007,8 +6007,8 @@ const questions = [
       "D": "$60,000 ordinary (1245)"
     },
     "correctAnswer": "C",
-    "explanation": "Adjusted basis = $60,000 - $45,000 = $15,000. Gain = $75,000 - $15,000 = $60,000. Section 1245 recapture = lesser of gain ($60,000) or depreciation ($45,000) = $45,000 ordinary. Remaining $15,000 is Section 1231 gain.",
-    "tip": "Split: $45K 1245 recapture (ordinary) + $15K excess = 1231 gain.",
+    "explanation": "Per IRC §1245(a)(1): Step 1: Adjusted Basis = $60K − $45K = $15K. Step 2: Total Gain = $75K − $15K = $60K. Step 3: §1245 Recapture = lesser of gain ($60K) or depreciation ($45K) = $45K ORDINARY. Step 4: §1231 Gain = $60K − $45K = $15K (LTCG rates). Key: Gain EXCEEDS depreciation, so we split the gain. Recapture is LIMITED to depreciation taken. Why other answers are wrong: (A) $15K ordinary/$45K §1231—reversed the amounts; (B) $60K §1231—ignores recapture; (D) $60K ordinary—can't recapture more than depreciation ($45K).",
+    "tip": "Gain > Depreciation: Split! $45K recapture (ordinary) + $15K excess (§1231 → LTCG). Recapture capped at depreciation.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -6028,8 +6028,8 @@ const questions = [
       "D": "Section 1245 property"
     },
     "correctAnswer": "D",
-    "explanation": "Qualified improvement property, despite being real property, is often treated as Section 1245 property for recapture purposes due to special depreciation rules. This subjects it to full recapture rather than the limited 1250 recapture.",
-    "tip": "QIP can be 1245 property despite being building improvements. Full recapture possible.",
+    "explanation": "Per IRC §1245(a)(3)(C), qualified improvement property (QIP—interior improvements to nonresidential buildings) is treated as §1245 PROPERTY despite being real property. This is because QIP qualifies for accelerated depreciation (15-year life, or bonus depreciation). Consequence: FULL recapture as ordinary income (like equipment), not limited §1250 recapture. This is a significant trap—building improvements can have §1245 treatment! Why other answers are wrong: (A) Neither—it IS specifically §1245; (B) Personal property—it's real property but treated as §1245; (C) §1250—no, special rule makes it §1245.",
+    "tip": "QIP = §1245 property despite being building improvement! Full recapture. Watch for this exam trap.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6049,8 +6049,8 @@ const questions = [
       "D": "Section 1245 recapture"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1252 requires recapture as ordinary income of previously deducted soil and water conservation expenses when farm land is sold within 10 years. The recapture phases out: 100% if sold within 5 years, decreasing 20% per year thereafter.",
-    "tip": "Farm land conservation expenses: recaptured if sold within 10 years (Section 1252).",
+    "explanation": "Per IRC §1252, when FARM LAND with previously deducted soil and water conservation expenses is sold, those expenses are RECAPTURED as ordinary income if sold within 10 years. Phase-out schedule: 100% recapture if sold in years 1-5; 80% in year 6; 60% in year 7; 40% in year 8; 20% in year 9; 0% after 10 years. This prevents farmers from deducting conservation costs then quickly selling improved land at capital gain rates. Why other answers are wrong: (A) No recapture—§1252 specifically creates recapture; (C) Capital gains—the recapture is ORDINARY income; (D) §1245—this is §1252, a separate provision for farm conservation.",
+    "tip": "§1252 farm recapture: Conservation expenses recaptured if sold within 10 years. 100% years 1-5, then phases out 20%/year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6070,8 +6070,8 @@ const questions = [
       "D": "Section 1250 recapture"
     },
     "correctAnswer": "C",
-    "explanation": "Section 197 intangibles (goodwill, covenants not to compete, customer lists, etc.) are subject to Section 1245 recapture. All amortization previously deducted is recaptured as ordinary income to the extent of gain.",
-    "tip": "197 intangibles = 1245 property. Full recapture of amortization.",
+    "explanation": "Per IRC §1245(a)(3) and §197, amortizable §197 intangibles (goodwill, going concern value, customer lists, covenants not to compete, franchises, trademarks) are treated as §1245 PROPERTY. Result: FULL RECAPTURE—all amortization previously deducted is recaptured as ORDINARY INCOME to the extent of gain. This is significant when selling businesses: goodwill amortization creates future recapture exposure. Why other answers are wrong: (A) Capital gains only—no, amortization is recaptured as ordinary; (B) No recapture—there IS recapture; (D) §1250—no, §197 intangibles are §1245 property.",
+    "tip": "§197 intangibles (goodwill, etc.) = §1245 property. FULL amortization recapture as ordinary income!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6091,8 +6091,8 @@ const questions = [
       "D": "Ordinary income to extent of depreciation taken by the original owner"
     },
     "correctAnswer": "D",
-    "explanation": "When Section 1245 property is transferred to a related party (in a transaction where loss is disallowed), the recapture taint follows the property. Any gain on subsequent sale by the related party is ordinary income to the extent of the original owner's depreciation.",
-    "tip": "Related party sale: recapture taint transfers. Later gain = ordinary to extent of prior depreciation.",
+    "explanation": "Per IRC §1245(b)(3), when §1245 property is transferred to a related party in a transaction where LOSS IS DISALLOWED under §267, the recapture 'taint' transfers to the buyer. Any GAIN on subsequent sale by the related party is ORDINARY INCOME to the extent of the ORIGINAL owner's depreciation. This prevents using related party sales to convert recapture income to capital gain. Why other answers are wrong: (A) §1231 gain—no, it's ordinary to extent of prior depreciation; (B) Tax-free—subsequent sale is taxable; (C) Capital gain—no, recapture taint follows the property.",
+    "tip": "Related party §1245: Recapture TAINT transfers. Buyer's later gain = ordinary to extent of seller's depreciation!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6112,8 +6112,8 @@ const questions = [
       "D": "Long-term capital loss"
     },
     "correctAnswer": "B",
-    "explanation": "Net Section 1231 losses are treated as ordinary losses, fully deductible against ordinary income without the $3,000 capital loss limitation. This is the 'loss' benefit of Section 1231's best-of-both-worlds treatment.",
-    "tip": "Net 1231 loss = ordinary loss (fully deductible). Better than capital loss.",
+    "explanation": "Per IRC §1231(a)(2), when the §1231 netting produces a NET LOSS, the loss is treated as an ORDINARY LOSS—fully deductible against ordinary income with NO $3,000 annual limitation (unlike capital losses). This is the 'loss side' of §1231's best-of-both-worlds treatment: losses get ordinary treatment (better), gains get capital treatment (better). Win-win! Why other answers are wrong: (A) STCL—net §1231 losses are ordinary, not capital; (C) Suspended—recognized immediately; (D) LTCL—ordinary is better than capital loss treatment.",
+    "tip": "Net §1231 LOSS = ORDINARY loss (fully deductible, no $3K limit). Better than capital loss treatment!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6133,8 +6133,8 @@ const questions = [
       "D": "$200,000 at ordinary rates, $500,000 at 25%"
     },
     "correctAnswer": "B",
-    "explanation": "Adjusted basis = $800,000. Gain = $700,000. Unrecaptured 1250 = $200,000 (depreciation) at 25%. Remaining $500,000 = 1231 gain → LTCG rates. No actual 1250 recapture (ordinary) because straight-line was used.",
-    "tip": "Building gain: depreciation portion at 25%, excess at LTCG rates.",
+    "explanation": "Per IRC §1(h)(1)(E) and §1250: Step 1: Adjusted Basis = $1M − $200K = $800K. Step 2: Total Gain = $1.5M − $800K = $700K. Step 3: Unrecaptured §1250 = lesser of gain ($700K) or depreciation ($200K) = $200K at 25% rate. Step 4: Remaining = $700K − $200K = $500K §1231 → LTCG rates. No actual §1250 recapture (ordinary) because post-86 straight-line was used. Why other answers are wrong: (A) $700K at LTCG—ignores 25% unrecaptured portion; (C) $700K ordinary—that would be §1245, not §1250; (D) $200K ordinary/$500K at 25%—reversed!",
+    "tip": "Building: LAYER the gain. First $200K (depreciation) at 25%, remaining $500K at LTCG rates.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -6154,8 +6154,8 @@ const questions = [
       "D": "Passes through to partners and is ordinary income to each partner"
     },
     "correctAnswer": "D",
-    "explanation": "When a partnership sells Section 1245 property, the recapture income passes through to partners. Each partner reports their share of the ordinary income from recapture on their individual return, maintaining the character.",
-    "tip": "Partnership 1245 recapture: passes through as ordinary income to partners.",
+    "explanation": "Per IRC §751(c) and §1245, when a PARTNERSHIP sells §1245 property, the depreciation recapture is calculated at the partnership level but PASSES THROUGH to partners, retaining its ORDINARY INCOME character. Each partner reports their distributive share of recapture on their individual return. The character is NOT changed by pass-through—ordinary remains ordinary (§702(b)). Why other answers are wrong: (A) Not applicable—recapture DOES apply to partnerships; (B) GP only—all partners share proportionally; (C) Partnership level only—partnerships are pass-through entities.",
+    "tip": "Partnership §1245: Recapture calculated at partnership level, PASSES THROUGH as ordinary income to each partner.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6175,8 +6175,8 @@ const questions = [
       "D": "Deferred until property is sold outside the group"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1239 converts all gain to ordinary income (not just recapture) when depreciable property is sold between related parties. This prevents sellers from converting ordinary income to capital gain through related party sales.",
-    "tip": "Section 1239: sell depreciable property to related party = ALL gain is ordinary.",
+    "explanation": "Per IRC §1239, when DEPRECIABLE property is sold between RELATED PARTIES, ALL gain is treated as ORDINARY INCOME—not just the recapture portion! This is broader than normal recapture. Policy: The buyer will depreciate the property (ordinary deductions), so the seller shouldn't get capital gain treatment. Related parties include: >50% owned entities, certain family members. Why other answers are wrong: (A) Capital gain—no, ALL gain is ordinary under §1239; (C) §1231—no, §1239 overrides §1231 treatment; (D) Deferred—recognized immediately, not deferred.",
+    "tip": "§1239: Related party sale of DEPRECIABLE property = ALL gain is ordinary (not just recapture). Very broad rule!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6196,8 +6196,8 @@ const questions = [
       "D": "No recapture applies to casualties"
     },
     "correctAnswer": "A",
-    "explanation": "Casualty gains on business property are subject to the same recapture rules as sales. The gain (insurance proceeds minus adjusted basis) triggers 1245 or 1250 recapture to the extent of depreciation. The involuntary conversion rules may allow deferral.",
-    "tip": "Casualty gain = recapture applies. Can defer under Section 1033 if reinvest.",
+    "explanation": "Per IRC §§1245(b)(4) and 1250(d)(4), casualty gains on business property are subject to the SAME recapture rules as voluntary sales. The gain (insurance proceeds − adjusted basis) triggers §1245 or §1250 recapture to the extent of depreciation taken. HOWEVER, the §1033 involuntary conversion rules may allow DEFERRAL if proceeds are reinvested in similar property within the replacement period. Why other answers are wrong: (B) All proceeds tax-free—only if no gain; (C) Only excess—same rules as sales; (D) No recapture for casualties—casualties DO trigger recapture.",
+    "tip": "Casualty/insurance = same recapture as sale. BUT §1033 may allow deferral if reinvested in similar property.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
