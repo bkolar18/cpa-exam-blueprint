@@ -5,6 +5,7 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/JsonLd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +17,58 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://meridiancpareview.com";
+const siteName = "Meridian CPA Review";
+const siteDescription = "Affordable CPA exam prep with 6,000+ practice questions, 500+ task-based simulations, adaptive progress tracking, and unlimited access with no expiration.";
+
 export const metadata: Metadata = {
-  title: "Meridian CPA Review | Smart CPA Exam Prep for Less",
-  description: "Affordable CPA exam prep with 6,000+ practice questions, 500+ task-based simulations, adaptive progress tracking, and unlimited access with no expiration.",
-  keywords: "CPA exam, CPA study plan, CPA practice questions, CPA study aid, affordable CPA prep, FAR, AUD, REG, TCP",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Meridian CPA Review | Smart CPA Exam Prep for Less",
+    template: "%s | Meridian CPA Review",
+  },
+  description: siteDescription,
+  keywords: "CPA exam, CPA study plan, CPA practice questions, CPA study aid, affordable CPA prep, FAR, AUD, REG, TCP, BAR, ISC, task-based simulations",
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: siteName,
+    title: "Meridian CPA Review | Smart CPA Exam Prep for Less",
+    description: siteDescription,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Meridian CPA Review - Affordable CPA Exam Prep",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meridian CPA Review | Smart CPA Exam Prep for Less",
+    description: siteDescription,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add your Google Search Console verification code here when you have it
+    // google: "your-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -56,6 +105,8 @@ export default function RootLayout({
           </AuthProvider>
         </ThemeProvider>
         <Analytics />
+        <OrganizationJsonLd />
+        <WebsiteJsonLd />
       </body>
     </html>
   );

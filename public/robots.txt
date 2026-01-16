@@ -1,0 +1,30 @@
+# Robots.txt for Meridian CPA Review
+# https://meridiancpareview.com
+
+User-agent: *
+Allow: /
+
+# Disallow protected/private routes
+Disallow: /dashboard
+Disallow: /dashboard/*
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login
+Disallow: /signup
+Disallow: /settings
+
+# Allow search engines to access public content
+Allow: /
+Allow: /about
+Allow: /faq
+Allow: /pricing
+Allow: /blog
+Allow: /blog/*
+Allow: /sections/*
+Allow: /state-requirements
+Allow: /guides/*
+
+# Sitemap location
+Sitemap: https://meridiancpareview.com/sitemap.xml

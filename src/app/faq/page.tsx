@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FAQPageJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = {
   title: "FAQ | Meridian CPA Review",
@@ -51,6 +52,7 @@ const faqs = [
 export default function FAQPage() {
   return (
     <div>
+      <FAQPageJsonLd faqs={faqs} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
