@@ -200,10 +200,42 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
 
 ---
 
+## UI/UX Improvements (Jan 16, 2026)
+
+### Navigation Enhancements
+
+**Header Updates (`src/components/Header.tsx`):**
+- Simplified Resources dropdown from complex 3-column layout to single-column design (320px width)
+- Added "Meridian CPA Academy" featured link at top of dropdown
+- Created `quickLinks` array with 6 key pages:
+  - How to Become a CPA
+  - State Requirements
+  - CPA Salary Data
+  - Compare Courses
+  - CPA Pass Rates
+  - Blog
+- Added "View All Resources" link to Resources Hub
+- Mobile menu updated to match simplified structure
+
+**Footer Updates (`src/components/Footer.tsx`):**
+- Added SEO page links: Resources, Become a CPA, State Requirements, CPA Salary, Compare Courses
+- All 6 exam section links (FAR, AUD, REG, TCP, BAR, ISC)
+- Compact, responsive layout
+
+### Authentication Fix
+
+**Login Page (`src/app/login/page.tsx`):**
+- Fixed race condition where users were redirected back to login after successful authentication
+- Added session confirmation check (`if (data.session)`) before redirect
+- Added 150ms delay to ensure cookies are set and auth state is updated
+- Added error handling for edge case where login succeeds but no session is created
+
+---
+
 ## Next Steps
 
 1. ~~**Immediate:** Add favicon for Google search results~~ **Done**
-2. **Short-term:** Expand footer with Resources link
+2. ~~**Short-term:** Expand footer with Resources link~~ **Done** (Jan 16, 2026)
 3. ~~**Medium-term:** Complete remaining Phase 2 topic pages~~ **Done** (11 topic pages complete)
 4. ~~**Long-term:** Implement programmatic SEO for state-specific content~~ **Done** (111 programmatic pages created)
 
