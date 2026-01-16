@@ -51,6 +51,32 @@ interface SavedPracticeSession {
 
 const SAVED_SESSION_KEY = 'cpa-practice-session';
 
+/**
+ * Calculate the displayed study streak based on last_study_date.
+ * Returns 0 if the user hasn't studied today or yesterday (streak is broken).
+ * This ensures the streak resets visually at midnight instead of only on next study.
+ */
+function getDisplayedStreak(lastStudyDate: string | null | undefined, currentStreak: number): number {
+  if (!lastStudyDate || currentStreak <= 0) return 0;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+
+  const lastStudy = new Date(lastStudyDate);
+  lastStudy.setHours(0, 0, 0, 0);
+
+  // If last study was today or yesterday, streak is still active
+  if (lastStudy >= yesterday) {
+    return currentStreak;
+  }
+
+  // Streak is broken - they missed more than one day
+  return 0;
+}
+
 export default function DashboardPage() {
  const searchParams = useSearchParams();
  const isVerified = searchParams.get("verified") ==="true";
@@ -487,7 +513,10 @@ export default function DashboardPage() {
  />
  <StatCard
  label="Study Streak"
- value={`${profile?.current_streak || 0} ${(profile?.current_streak || 0) === 1 ? 'day' : 'days'}`}
+ value={(() => {
+   const displayedStreak = getDisplayedStreak(profile?.last_study_date, profile?.current_streak || 0);
+   return `${displayedStreak} ${displayedStreak === 1 ? 'day' : 'days'}`;
+ })()}
  sublabel={profile?.longest_streak ? `Best: ${profile.longest_streak} ${profile.longest_streak === 1 ? 'day' : 'days'}` :"Log a session"}
  color="orange"
  />
