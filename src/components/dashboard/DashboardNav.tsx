@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { useState, useRef, useEffect } from "react";
 import { ThemeToggleSimple } from "@/components/theme/ThemeToggle";
+import { isAdminEmailClient } from "@/lib/admin/client";
 
 // Standalone nav items
 const standaloneItems = [
@@ -130,6 +131,11 @@ const icons: Record<string, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   ),
+  admin: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>
+  ),
 };
 
 // Dropdown component
@@ -211,6 +217,9 @@ export default function DashboardNav() {
   // Track which mobile sections are expanded (all collapsed by default)
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
+  // Check if user is an admin
+  const isAdmin = isAdminEmailClient(user?.email);
+
   const toggleMobileSection = (label: string) => {
     setExpandedSections(prev => {
       const next = new Set(prev);
@@ -273,6 +282,21 @@ export default function DashboardNav() {
                 </Link>
               );
             })}
+
+            {/* Admin link (only for admin users) */}
+            {isAdmin && (
+              <Link
+                href="/admin"
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  pathname.startsWith("/admin")
+                    ? "bg-purple-600 text-white"
+                    : "text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white"
+                }`}
+              >
+                {icons.admin}
+                <span>Admin</span>
+              </Link>
+            )}
 
             {/* Grouped items with dropdowns */}
             {groupedItems.map((group) => (
@@ -350,6 +374,21 @@ export default function DashboardNav() {
                     </Link>
                   );
                 })}
+                {/* Admin link (only for admin users) */}
+                {isAdmin && (
+                  <Link
+                    href="/admin"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
+                      pathname.startsWith("/admin")
+                        ? "bg-purple-600 text-white"
+                        : "text-purple-600 dark:text-purple-400 hover:bg-purple-600/10"
+                    }`}
+                  >
+                    {icons.admin}
+                    <span>Admin</span>
+                  </Link>
+                )}
               </div>
 
               {/* Grouped sections - collapsible */}
