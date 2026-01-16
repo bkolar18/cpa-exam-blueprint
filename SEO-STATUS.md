@@ -90,13 +90,19 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
 
 ---
 
-## Phase 3: Programmatic SEO (Planned)
+## Phase 3: Programmatic SEO (In Progress)
 
 | Content Type | Template | Quantity | Status |
 |--------------|----------|----------|--------|
-| State Salary Pages | `/resources/cpa-salary-[state]` | 50 | Pending |
+| State Salary Pages | `/resources/cpa-salary/[state]` | 51 (index + 50 states) | **Complete** |
 | "How to Become CPA in [State]" | `/guides/become-cpa-[state]` | 50 | Pending |
 | Additional Comparisons | `/compare/[provider1]-vs-[provider2]` | 5-10 | Pending |
+
+### State Salary Pages Details:
+- **Index Page:** `/resources/cpa-salary` - Lists all 50 states with salary comparisons
+- **Individual State Pages:** `/resources/cpa-salary/[state]` - 50 dynamic pages
+- **Data Source:** `src/data/state-salaries.ts` - Comprehensive salary data for all 50 states
+- **Features:** Salary by experience level, cost of living adjustment, top industries, job growth
 
 ---
 
@@ -128,6 +134,10 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
 - Topic: Government Accounting
 - Topic: Nonprofit Accounting
 
+### Newly Added (Jan 16, 2026):
+- CPA Salary Index Page
+- 50 State Salary Pages (programmatic)
+
 ---
 
 ## Sitemap Status
@@ -141,6 +151,7 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
 - Resource pages (2 - /resources, /resources/cpa-pass-rates)
 - Comparison pages (1 - /compare/becker-vs-gleim)
 - Topic pages (11 - lease-accounting, revenue-recognition, consolidations, government-accounting, nonprofit-accounting, like-kind-exchanges, basis-calculations, partnership-taxation, audit-reports, internal-controls, audit-evidence)
+- State salary pages (51 - index + 50 state pages, dynamically generated from `src/data/state-salaries.ts`)
 - Blog posts (13, dynamically generated)
 
 ---

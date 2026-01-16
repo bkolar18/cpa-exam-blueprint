@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog/posts'
+import { stateSalaries } from '@/data/state-salaries'
 
 const BASE_URL = 'https://meridiancpareview.com'
 
@@ -186,6 +187,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // State salary pages (programmatic SEO)
+  const stateSalaryPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/resources/cpa-salary`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    ...stateSalaries.map((state) => ({
+      url: `${BASE_URL}/resources/cpa-salary/${state.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ]
+
   // Blog posts (dynamically generated)
   let blogPosts: MetadataRoute.Sitemap = []
   try {
@@ -201,5 +218,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     console.log('No blog posts found for sitemap')
   }
 
-  return [...staticPages, ...sectionPages, ...guidePages, ...resourcePages, ...comparisonPages, ...topicPages, ...blogPosts]
+  return [...staticPages, ...sectionPages, ...guidePages, ...resourcePages, ...comparisonPages, ...topicPages, ...stateSalaryPages, ...blogPosts]
 }
