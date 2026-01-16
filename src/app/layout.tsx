@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Meridian CPA Review | Smart CPA Exam Prep for Less",
-  description: "Affordable CPA exam prep with 6,000+ practice questions, progress tracking, and unlimited access with no expiration. Quality study materials at 95% less than the competition.",
+  description: "Affordable CPA exam prep with 6,000+ practice questions, 500+ task-based simulations, adaptive progress tracking, and unlimited access with no expiration.",
   keywords: "CPA exam, CPA study plan, CPA practice questions, CPA study aid, affordable CPA prep, FAR, AUD, REG, TCP",
 };
 
