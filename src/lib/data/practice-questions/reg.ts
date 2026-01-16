@@ -1072,8 +1072,8 @@ const questions = [
       "D": "Standard deductions"
     },
     "correctAnswer": "B",
-    "explanation": "Deductions for AGI are called above-the-line deductions because they are subtracted from gross income to arrive at AGI (the 'line'). These are more valuable than itemized deductions because they reduce AGI, which affects eligibility for various tax benefits.",
-    "tip": "FOR AGI = above the line. FROM AGI = below the line (itemized or standard).",
+    "explanation": "Per IRC §62, deductions FOR AGI are called 'above-the-line' deductions because they reduce gross income to arrive at AGI—the metaphorical 'line' on Form 1040. These deductions are MORE valuable than itemized deductions because: (1) They're available even if you claim the standard deduction; (2) Lower AGI increases eligibility for credits/deductions that phase out at higher income levels; (3) They reduce taxes in states that use federal AGI. Why other answers are wrong: (A) Itemized deductions are FROM AGI (below the line); (C) Below-the-line means FROM AGI, not FOR AGI; (D) Standard deduction is a fixed amount taken FROM AGI, not a deduction FOR AGI.",
+    "tip": "FOR AGI = above the line (§62). Reduces AGI = more valuable. FROM AGI = below the line (itemized/standard).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1093,8 +1093,8 @@ const questions = [
       "D": "$100"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC Section 62(a)(2)(D), eligible educators (K-12 teachers, counselors, principals who work at least 900 hours) can deduct up to $300 of unreimbursed expenses for classroom supplies, books, and professional development as a deduction FOR AGI.",
-    "tip": "Educator expense deduction = $300 for K-12 teachers (above the line).",
+    "explanation": "Per IRC §62(a)(2)(D), eligible educators may deduct up to $300 of unreimbursed expenses FOR AGI. Eligible educators are K-12 teachers, instructors, counselors, principals, or aides who work at least 900 hours per school year. Qualifying expenses include books, supplies, equipment, computer software, and professional development courses. If both spouses are eligible educators on MFJ return, each can claim $300 ($600 total). Why other answers are wrong: (B) $500—incorrect amount, limit is $300; (C) $1,000—far exceeds the actual limit; (D) $100—this was an old limit, increased to $300.",
+    "tip": "Educator expense (§62(a)(2)(D)) = $300 FOR AGI. Must be K-12 and work 900+ hours.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1114,8 +1114,8 @@ const questions = [
       "D": "Always fully deductible"
     },
     "correctAnswer": "A",
-    "explanation": "Traditional IRA contributions may be fully deductible, partially deductible, or not deductible depending on the taxpayer's income, filing status, and whether covered by an employer retirement plan. The deduction phases out at certain income levels for covered taxpayers.",
-    "tip": "Traditional IRA deduction depends on income + whether you have employer plan.",
+    "explanation": "Per IRC §219, traditional IRA deductibility depends on: (1) Whether taxpayer (or spouse) is an 'active participant' in an employer retirement plan, and (2) Modified AGI level. If NOT covered by employer plan: full deduction regardless of income. If covered: deduction phases out at certain MAGI thresholds (2023: $73,000-$83,000 single; $116,000-$136,000 MFJ if contributing spouse is covered). Contribution limit: $6,500 under 50, $7,500 age 50+ (2023). Why other answers are wrong: (B) Never deductible—false, deduction is available under proper circumstances; (C) Self-employed only—available to anyone with earned income; (D) Always deductible—phase-outs apply to active participants.",
+    "tip": "Traditional IRA (§219): Deductibility depends on employer plan coverage + income. Not covered by plan = always deductible.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1135,8 +1135,8 @@ const questions = [
       "D": "$4,000"
     },
     "correctAnswer": "C",
-    "explanation": "Taxpayers may deduct up to $2,500 of interest paid on qualified student loans as a deduction for AGI. The deduction phases out at higher income levels and is not available to taxpayers who are claimed as dependents.",
-    "tip": "Student loan interest = up to $2,500 (above the line), subject to income phase-out.",
+    "explanation": "Per IRC §221, taxpayers may deduct up to $2,500 of interest paid on qualified education loans as a deduction FOR AGI. Requirements: (1) Loan was for qualified higher education expenses; (2) Taxpayer is not claimed as a dependent; (3) Filing status is not MFS. The deduction phases out at higher MAGI levels (2023: $75,000-$90,000 single; $155,000-$185,000 MFJ). Why other answers are wrong: (A) $5,000—twice the actual limit; (B) $1,000—too low, limit is $2,500; (D) $4,000—not the correct amount.",
+    "tip": "Student loan interest (§221) = max $2,500 FOR AGI. Subject to income phase-out. Can't use if MFS or dependent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1156,8 +1156,8 @@ const questions = [
       "D": "Deductible only if exceeds $10,000"
     },
     "correctAnswer": "C",
-    "explanation": "For divorce agreements executed before January 1, 2019, alimony paid is deductible FOR AGI by the payor and includible in the recipient's gross income. This treatment was eliminated for agreements executed after 2018.",
-    "tip": "Pre-2019 divorce: alimony deductible (FOR AGI). Post-2018: no tax effect.",
+    "explanation": "Per IRC §215 (pre-TCJA), alimony paid under divorce/separation agreements executed BEFORE January 1, 2019 is deductible FOR AGI by the payor and includible in the recipient's income under §71. This 'income-shifting' treatment was REPEALED by TCJA for post-2018 agreements (see reg-001-008). To qualify as alimony: payments must be in cash, under written agreement, not designated as non-alimony, parties can't live together, and no liability after death. Why other answers are wrong: (A) Not deductible—describes post-2018 law only; (B) Itemized deduction—it was always FOR AGI; (D) $10,000 threshold—no minimum amount exists.",
+    "tip": "Pre-2019 alimony (§215): FOR AGI to payor, income to recipient. Post-2018: NO tax effect (TCJA repeal).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1177,8 +1177,8 @@ const questions = [
       "D": "Deductible FOR AGI within annual limits"
     },
     "correctAnswer": "D",
-    "explanation": "HSA contributions are deductible FOR AGI up to annual limits ($3,850 for self-only coverage, $7,750 for family in 2023). Distributions for qualified medical expenses are tax-free, making HSAs triple-tax-advantaged.",
-    "tip": "HSA = triple tax benefit: deduct contributions, tax-free growth, tax-free medical distributions.",
+    "explanation": "Per IRC §223, HSA contributions are deductible FOR AGI up to annual limits (2023: $3,850 self-only, $7,750 family; 2024: $4,150 self-only, $8,300 family). Requirements: must be enrolled in High Deductible Health Plan (HDHP), no other health coverage, not enrolled in Medicare, not a dependent. HSAs provide TRIPLE tax benefit: (1) Contributions deductible FOR AGI; (2) Earnings grow tax-free; (3) Distributions for qualified medical expenses are tax-free. Why other answers are wrong: (A) Contributions ARE deductible, not just tax-free growth; (B) Both employer and employee contributions are deductible; (C) HSA is above-the-line, not itemized.",
+    "tip": "HSA (§223) = TRIPLE tax advantage: deduct contributions FOR AGI + tax-free growth + tax-free medical withdrawals.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1198,8 +1198,8 @@ const questions = [
       "D": "100%"
     },
     "correctAnswer": "B",
-    "explanation": "Self-employed taxpayers may deduct 50% of self-employment tax as a deduction FOR AGI. This represents the employer-equivalent portion since employees do not pay tax on the employer's share of FICA taxes.",
-    "tip": "Self-employment tax: pay 15.3%, deduct half (employer portion) FOR AGI.",
+    "explanation": "Per IRC §164(f), self-employed taxpayers may deduct 50% (half) of self-employment tax paid as a deduction FOR AGI. Rationale: Employees pay only 7.65% FICA; employers pay matching 7.65% that isn't taxable to employee. Self-employed pay both halves (15.3% total under §1401), so §164(f) allows deduction of the 'employer-equivalent' portion to equalize treatment. The SE tax itself is calculated on Schedule SE; the deduction is claimed on Schedule 1. Why other answers are wrong: (A) While 50% is approximately correct, answer B is more precise; (C) None—incorrect, the deduction is explicitly allowed; (D) 100%—only half is deductible, not the full amount.",
+    "tip": "SE tax deduction (§164(f)) = 50% of SE tax. Equalizes treatment with employees who don't pay employer's share.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1219,8 +1219,8 @@ const questions = [
       "D": "At 50% of the premium amount"
     },
     "correctAnswer": "B",
-    "explanation": "Self-employed individuals may deduct 100% of health insurance premiums paid for themselves, spouse, and dependents as a deduction FOR AGI. The deduction cannot exceed the taxpayer's net self-employment income from the business.",
-    "tip": "SE health insurance = 100% deductible FOR AGI, limited to SE net profit.",
+    "explanation": "Per IRC §162(l), self-employed individuals may deduct 100% of health insurance premiums paid for themselves, spouse, dependents, and children under age 27 as a deduction FOR AGI. Key limitations: (1) Cannot exceed net earnings from self-employment; (2) Cannot claim if eligible for subsidized employer coverage (self or spouse); (3) Deduction reduces earned income for SE tax purposes but doesn't reduce SE tax itself. Coverage includes medical, dental, vision, and qualified long-term care insurance. Why other answers are wrong: (A) This is an above-the-line deduction, not itemized; (C) Having employees doesn't disqualify the deduction; (D) 100% is deductible, not 50%.",
+    "tip": "SE health insurance (§162(l)) = 100% FOR AGI, limited to net SE income. Not available if eligible for employer coverage.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1240,8 +1240,8 @@ const questions = [
       "D": "$6,500"
     },
     "correctAnswer": "B",
-    "explanation": "SEP-IRA contributions are limited to 25% of net self-employment earnings (after the SE tax deduction) up to the annual dollar limit ($66,000 in 2023). The contribution is deductible FOR AGI.",
-    "tip": "SEP = 25% of net SE earnings, max $66,000 (2023). Deduct FOR AGI.",
+    "explanation": "Per IRC §408(k) and §404(h), SEP-IRA contributions for self-employed individuals are limited to 25% of 'net self-employment earnings' (net SE income minus deductible SE tax) up to the annual defined contribution limit ($66,000 for 2023, $69,000 for 2024). Due to circular calculation, the effective rate is approximately 20% of net SE income before the SEP deduction. SEP contributions are deductible FOR AGI. Key advantage: can be established and funded until tax filing deadline (including extensions). Why other answers are wrong: (A) $22,500 is the 401(k) elective deferral limit; (C) $100,000 exceeds the maximum; (D) $6,500 is the traditional IRA contribution limit.",
+    "tip": "SEP-IRA (§408(k)) = 25% of net SE earnings (after SE tax deduction), max $66,000 (2023). Effective rate ~20%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1261,8 +1261,8 @@ const questions = [
       "D": "Deductible FOR AGI"
     },
     "correctAnswer": "D",
-    "explanation": "The penalty for early withdrawal of savings from a time deposit (such as a CD) is deductible FOR AGI. This is reported on Schedule 1 and offsets the interest income that must be reported gross on the tax return.",
-    "tip": "Early withdrawal penalty on savings = deductible FOR AGI.",
+    "explanation": "Per IRC §62(a)(9), the penalty (forfeiture) charged by a financial institution for early withdrawal of savings from a time deposit (CD, savings bond, etc.) is deductible FOR AGI. This deduction is proper because the taxpayer must report gross interest income on Form 1099-INT even though not all was received due to the penalty. The deduction is claimed on Schedule 1, line 18. Why other answers are wrong: (A) It's a deduction, not a credit—credits reduce tax directly; (B) It IS deductible under §62(a)(9); (C) It's an above-the-line deduction, not itemized.",
+    "tip": "Early withdrawal penalty on savings (§62(a)(9)) = FOR AGI. Prevents taxation of interest never received.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1282,8 +1282,8 @@ const questions = [
       "D": "Only members of the Armed Forces on active duty who move due to military orders"
     },
     "correctAnswer": "D",
-    "explanation": "The Tax Cuts and Jobs Act suspended the moving expense deduction for most taxpayers from 2018-2025. The only exception is for members of the Armed Forces on active duty who move pursuant to military orders.",
-    "tip": "Moving expense deduction: military only (2018-2025). Suspended for others.",
+    "explanation": "Per IRC §217(k), TCJA suspended the moving expense deduction for most taxpayers from 2018-2025. The ONLY exception: active-duty members of the Armed Forces who move pursuant to military orders related to a permanent change of station. Qualifying expenses include transportation, lodging, and storage costs. The old 50-mile distance test and 39-week time test don't apply to military moves. Why other answers are wrong: (A) 50-mile rule was suspended for non-military taxpayers; (B) Self-employed are also suspended during TCJA period; (C) General employment moves are not deductible (2018-2025).",
+    "tip": "Moving expense (§217): MILITARY ONLY during 2018-2025 (TCJA suspension). Others: NO deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1303,8 +1303,8 @@ const questions = [
       "D": "An itemized deduction"
     },
     "correctAnswer": "B",
-    "explanation": "The Section 199 domestic production activities deduction was repealed by TCJA effective 2018. It was partially replaced by the Section 199A qualified business income deduction, which provides a 20% deduction for pass-through business income.",
-    "tip": "Old Section 199 repealed → new Section 199A (QBI deduction) for pass-throughs.",
+    "explanation": "Former IRC §199 (Domestic Production Activities Deduction/DPAD) was REPEALED by TCJA effective for tax years after 2017. It provided a deduction up to 9% of qualified production activities income. It was replaced in concept by §199A, which provides up to a 20% deduction for Qualified Business Income (QBI) from pass-through entities (sole proprietorships, partnerships, S corps). Note: §199A and old §199 have different purposes and calculations—§199A is NOT truly a replacement but filled a similar policy gap. Why other answers are wrong: (A) §199 was repealed, not available; (C) It applied to all business types before repeal; (D) It was a deduction in calculating taxable income, not itemized.",
+    "tip": "Old §199 (DPAD): REPEALED by TCJA. New §199A (QBI): 20% deduction for pass-through income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1324,8 +1324,8 @@ const questions = [
       "D": "Active participants up to $25,000 subject to AGI phase-out"
     },
     "correctAnswer": "D",
-    "explanation": "Taxpayers who actively participate in rental real estate activities may deduct up to $25,000 of rental losses against non-passive income. This allowance phases out between $100,000 and $150,000 of modified AGI.",
-    "tip": "Active rental losses: $25,000 allowance, phases out at $100K-$150K AGI.",
+    "explanation": "Per IRC §469(i), rental real estate is generally passive, but taxpayers who 'actively participate' (not materially participate) may deduct up to $25,000 of losses against non-passive income. Requirements: own at least 10% interest and participate in management decisions. Phase-out: allowance is reduced 50% of MAGI over $100,000, fully phased out at $150,000 MAGI. Real estate professionals (§469(c)(7)) can treat rentals as non-passive. Why other answers are wrong: (A) RE professionals have unlimited deduction, but the $25K rule applies to active participants; (B) Passive investors face full passive loss limitations; (C) Passive loss rules limit ALL taxpayers' rental losses.",
+    "tip": "Active rental loss allowance (§469(i)) = $25,000, phases out $100K-$150K MAGI. RE professionals: unlimited.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1345,8 +1345,8 @@ const questions = [
       "D": "Only available through employers"
     },
     "correctAnswer": "B",
-    "explanation": "Archer MSAs (predecessors to HSAs) are still available for existing accounts, and contributions are deductible FOR AGI. However, new Archer MSAs generally cannot be established—most taxpayers now use HSAs instead.",
-    "tip": "Archer MSA = grandfathered accounts. HSA is the current equivalent.",
+    "explanation": "Per IRC §220, Archer Medical Savings Account contributions are deductible FOR AGI within annual limits. Archer MSAs were predecessors to HSAs, available only to employees of small employers (≤50 employees) or self-employed individuals with high-deductible health plans. While NEW Archer MSAs are no longer available (last established in 2007), existing accounts remain valid. Distributions for qualified medical expenses are tax-free. HSAs (§223) largely replaced Archer MSAs with broader eligibility. Why other answers are wrong: (A) Existing accounts can still receive contributions; (C) They are above-the-line deductions; (D) Self-employed individuals can also participate.",
+    "tip": "Archer MSA (§220) = grandfathered FOR AGI deduction. HSAs (§223) replaced them for most taxpayers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1366,8 +1366,8 @@ const questions = [
       "D": "Deductible FOR AGI"
     },
     "correctAnswer": "D",
-    "explanation": "Attorney fees and court costs paid in connection with claims of unlawful discrimination, whistleblower awards, and certain other employment-related claims are deductible FOR AGI under IRC Section 62(a)(20) and (21).",
-    "tip": "Discrimination case attorney fees = deductible FOR AGI (not limited by 2% floor).",
+    "explanation": "Per IRC §62(a)(20) and (21), attorney fees and court costs paid in connection with unlawful discrimination claims (Title VII, ADA, ADEA, etc.) and certain whistleblower awards are deductible FOR AGI. This above-the-line treatment prevents the unfair result of taxing settlement/award income while denying meaningful deduction for fees (which would occur if only available as miscellaneous itemized deduction—now suspended by TCJA). The deduction is limited to the amount included in gross income. Why other answers are wrong: (A) It's a deduction, not a credit; (B) They ARE deductible under §62(a)(20)-(21); (C) Congress specifically made this above-the-line, not itemized.",
+    "tip": "Discrimination/whistleblower attorney fees (§62(a)(20)-(21)) = FOR AGI. Prevents income/deduction mismatch.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1387,8 +1387,8 @@ const questions = [
       "D": "Deductible as itemized deductions"
     },
     "correctAnswer": "A",
-    "explanation": "Sole proprietors deduct ordinary and necessary business expenses on Schedule C, which flows to Form 1040 as a deduction FOR AGI. The net profit or loss reduces or increases AGI directly.",
-    "tip": "Schedule C expenses = FOR AGI. Net profit goes to Form 1040.",
+    "explanation": "Per IRC §162 and §62(a)(1), ordinary and necessary business expenses of a sole proprietor are deducted on Schedule C (Profit or Loss from Business). The NET profit or loss from Schedule C flows to Form 1040 Schedule 1 as a deduction FOR AGI (if loss) or addition to income (if profit). 'Ordinary' means common/accepted in the industry; 'necessary' means helpful/appropriate (not indispensable). Why other answers are wrong: (B) Business expenses are deducted currently, not capitalized until sale; (C) No $10,000 limit exists for legitimate business expenses; (D) Schedule C is above-the-line, not an itemized deduction.",
+    "tip": "Schedule C expenses (§162) = FOR AGI. Net profit/loss flows to Schedule 1, Form 1040.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1408,8 +1408,8 @@ const questions = [
       "D": "$10,000 with excess amortized over 84 months"
     },
     "correctAnswer": "D",
-    "explanation": "Taxpayers may deduct up to $10,000 per year of reforestation expenses (planting or seeding for timber production) FOR AGI. Amounts exceeding $10,000 are amortized over 84 months beginning in the month incurred.",
-    "tip": "Reforestation: $10,000 current deduction FOR AGI; excess amortized 84 months.",
+    "explanation": "Per IRC §194, taxpayers may deduct up to $10,000 per year ($5,000 MFS) of qualified reforestation expenditures FOR AGI. Qualified expenditures include site preparation, seeds/seedlings, labor, and equipment for planting trees for timber production. Amounts exceeding $10,000 must be amortized over 84 months (7 years) beginning in the month paid or incurred. Note: Timber losses and gains receive special §1231 treatment. Why other answers are wrong: (A) $25,000—exceeds the $10,000 limit; (B) $1,000—too low; (C) $5,000—correct for MFS, but standard limit is $10,000.",
+    "tip": "Reforestation (§194) = $10,000 current deduction FOR AGI + 84-month amortization for excess.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1429,8 +1429,8 @@ const questions = [
       "D": "Any military travel is involved"
     },
     "correctAnswer": "C",
-    "explanation": "National Guard and reserve members may deduct travel expenses FOR AGI when traveling more than 100 miles from home to perform services as a reservist. The deduction is limited to the federal per diem rate for lodging, meals, and incidentals.",
-    "tip": "Reserve travel deduction: 100+ miles from home, limited to federal per diem rates.",
+    "explanation": "Per IRC §62(a)(2)(E), National Guard and reserve members may deduct travel expenses FOR AGI when traveling MORE than 100 miles from home to perform reserve services. The deduction covers transportation, lodging, and 50% of meals, but is limited to the federal per diem rate (General Services Administration rates for locality). The travel must be away from home overnight. This is one of the few employee business expense deductions that survived TCJA. Why other answers are wrong: (A) Active duty doesn't apply—this rule is for reserve service; (B) Must be >100 miles, not within 50 miles; (D) Distance requirement must be met.",
+    "tip": "Reserve travel (§62(a)(2)(E)) = >100 miles from home + overnight. Limited to federal per diem rates.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1450,8 +1450,8 @@ const questions = [
       "D": "$7,000"
     },
     "correctAnswer": "C",
-    "explanation": "For 2023, the maximum IRA contribution is $6,500 for taxpayers under age 50 (increased to $7,500 for those 50 and older with catch-up contributions). This limit applies across all traditional and Roth IRAs combined.",
-    "tip": "2023 IRA limit: $6,500 under 50, $7,500 age 50+. Combined for all IRAs.",
+    "explanation": "Per IRC §219(b), the maximum IRA contribution for 2023 is $6,500 for taxpayers under age 50 ($7,500 with $1,000 catch-up for age 50+). For 2024: $7,000 under 50, $8,000 age 50+. This limit is the COMBINED maximum for traditional and Roth IRAs (not per account). Contributions cannot exceed earned income for the year. Spousal IRAs under §219(c) allow a non-working spouse to contribute based on working spouse's income if filing jointly. Why other answers are wrong: (A) $5,500 was the pre-2019 limit; (B) $6,000 was the 2019-2022 limit; (D) $7,000 is the 2024 limit.",
+    "tip": "IRA limit (§219): 2023 = $6,500 (<50) / $7,500 (50+). 2024 = $7,000 / $8,000. Combined for all IRAs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1471,8 +1471,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "C",
-    "explanation": "Net capital losses can offset ordinary income up to $3,000 per year ($1,500 for married filing separately). Excess losses are carried forward indefinitely to future years, retaining their short-term or long-term character.",
-    "tip": "Capital loss deduction: max $3,000/year against ordinary income. Excess carries forward.",
+    "explanation": "Per IRC §1211(b), net capital losses (after offsetting capital gains) may offset ordinary income up to $3,000 per year ($1,500 for MFS). Excess losses carry forward indefinitely under §1212(b), retaining their short-term or long-term character. The netting process: (1) Net STCG vs STCL; (2) Net LTCG vs LTCL; (3) Net results against each other; (4) Apply $3,000 limit against ordinary income if net loss. Why other answers are wrong: (A) The $3,000 limit prevents unlimited offset; (B) $1,000—understates the limit; (D) $10,000—far exceeds the actual limit.",
+    "tip": "Capital loss deduction (§1211(b)) = max $3,000/year vs. ordinary income ($1,500 MFS). Excess carries forward indefinitely.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1492,8 +1492,8 @@ const questions = [
       "D": "A credit against tax"
     },
     "correctAnswer": "B",
-    "explanation": "When an employee receives jury duty pay but must turn it over to the employer (who paid regular salary during jury service), the remitted amount is deductible FOR AGI. This prevents double taxation of the same income.",
-    "tip": "Jury pay given to employer = deduct FOR AGI (avoids double tax on income).",
+    "explanation": "Per IRC §62(a)(13), jury duty pay that must be turned over to an employer (who continued paying salary during jury service) is deductible FOR AGI. Rationale: The employee must report the jury pay as income (Form 1099-MISC), and the employer also paid salary. The §62(a)(13) deduction prevents double taxation—without it, the employee would be taxed on both the salary AND jury pay received for the same days. The deduction equals the amount remitted to employer. Why other answers are wrong: (A) It IS deductible under §62(a)(13); (C) It's above-the-line, not itemized; (D) It's a deduction, not a credit.",
+    "tip": "Jury pay remitted to employer (§62(a)(13)) = FOR AGI. Prevents double taxation of same days' pay.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1513,8 +1513,8 @@ const questions = [
       "D": "Net self-employment earnings reduced by the Keogh deduction itself and 50% of SE tax"
     },
     "correctAnswer": "D",
-    "explanation": "The Keogh contribution base is net self-employment earnings reduced by the deductible portion of SE tax. The contribution itself is also part of the calculation, creating a circular calculation that results in an effective rate lower than the stated percentage.",
-    "tip": "Keogh base = net SE income - ½ SE tax. The math is circular (20% plan ≈ 18.59% effective).",
+    "explanation": "Per IRC §401(c)(2) and §404(a)(8), Keogh (HR-10) plan contributions for self-employed individuals are based on 'net self-employment earnings'—defined as net SE income MINUS the deduction for 50% of SE tax AND the Keogh contribution itself. This creates a circular calculation: for a 20% money purchase plan, the effective rate is ~18.59%; for a 25% profit-sharing plan, it's ~20%. Worksheets in IRS Pub 560 help calculate this. Why other answers are wrong: (A) W-2 wages apply to employees, not self-employed; (B) Household income is irrelevant; (C) GROSS income doesn't account for required reductions.",
+    "tip": "Keogh base (§401(c)) = Net SE income - ½ SE tax - Keogh itself. Circular calculation reduces effective rate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1534,8 +1534,8 @@ const questions = [
       "D": "$22,500"
     },
     "correctAnswer": "C",
-    "explanation": "SIMPLE IRA employee contributions are limited to $15,500 for 2023 ($19,000 for age 50+). This is lower than 401(k) limits. Employers must make either matching contributions (up to 3%) or non-elective contributions (2% of compensation).",
-    "tip": "SIMPLE IRA: $15,500 employee limit (2023). Lower than 401(k)'s $22,500.",
+    "explanation": "Per IRC §408(p), SIMPLE (Savings Incentive Match Plan for Employees) IRA employee elective deferrals are limited to $15,500 for 2023 ($19,000 with catch-up for age 50+). For 2024: $16,000 ($19,500 age 50+). SIMPLE IRAs are designed for small businesses (≤100 employees). Employer must either: (1) Match employee contributions dollar-for-dollar up to 3% of compensation, OR (2) Make 2% non-elective contribution for ALL eligible employees. Why other answers are wrong: (A) $66,000 is the DC plan total limit; (B) $6,500 is the regular IRA limit; (D) $22,500 is the 401(k) deferral limit.",
+    "tip": "SIMPLE IRA (§408(p)): $15,500 employee deferral (2023). Lower than 401(k)'s $22,500.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1555,8 +1555,8 @@ const questions = [
       "D": "$66,000 plus catch-up if age 50+ (2023)"
     },
     "correctAnswer": "D",
-    "explanation": "Solo 401(k) allows employee deferrals ($22,500 or $30,000 if 50+) plus employer contributions (25% of compensation), with total limited to $66,000 ($73,500 if 50+) for 2023. This allows larger retirement savings than SEP-IRAs for some self-employed individuals.",
-    "tip": "Solo 401(k): employee deferral + employer contribution = up to $66K (2023).",
+    "explanation": "Per IRC §415 and §402(g), Solo 401(k) (Individual 401(k)) combines: (1) Employee elective deferral: $22,500 (2023), $30,000 if 50+; plus (2) Employer profit-sharing: 25% of net SE earnings (after SE tax deduction). Total: up to $66,000 ($73,500 if 50+) for 2023. For 2024: $69,000 ($76,500 age 50+). Solo 401(k)s can provide HIGHER contributions than SEP-IRAs when self-employment income is moderate, because of the separate employee deferral. Why other answers are wrong: (A) $100,000 exceeds limits; (B) Total compensation caps apply; (C) $22,500 is only the employee deferral portion.",
+    "tip": "Solo 401(k) (§415) = employee deferral ($22,500) + employer (25%) = up to $66K (2023). Great for moderate SE income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1576,8 +1576,8 @@ const questions = [
       "D": "Only passive activity income"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC Section 469, passive activity losses can only offset passive activity income. Excess losses are suspended and carried forward to offset future passive income or recognized when the activity is disposed of in a fully taxable transaction.",
-    "tip": "Passive losses = offset passive income only. Suspended until disposition.",
+    "explanation": "Per IRC §469, passive activity losses (PALs) can ONLY offset passive activity income. Three income baskets exist: (1) Active/earned income (wages, material participation businesses); (2) Portfolio income (interest, dividends, capital gains); (3) Passive income (rental, non-material participation businesses). PALs cannot cross baskets. Suspended losses carry forward and are fully deductible when the ENTIRE interest in the passive activity is disposed of in a fully taxable transaction (§469(g)). Exception: $25,000 rental loss allowance for active participants (§469(i)). Why other answers are wrong: (A) Portfolio income is a separate basket; (B) Active income is separate basket; (C) The three-basket system prevents unlimited offset.",
+    "tip": "Passive losses (§469) = offset passive income ONLY. Three baskets: active, portfolio, passive. Losses freed at disposition.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1597,8 +1597,8 @@ const questions = [
       "D": "The amount of income generated"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC Section 465, losses from business or investment activities are limited to the amount the taxpayer has at risk—generally the amount of money and adjusted basis of property contributed, plus amounts borrowed for which the taxpayer is personally liable.",
-    "tip": "At-risk = can only deduct what you could actually lose (your economic exposure).",
+    "explanation": "Per IRC §465, losses are limited to the amount the taxpayer has 'at risk'—the economic exposure to loss. At-risk amounts include: (1) Cash contributed; (2) Adjusted basis of property contributed; (3) Amounts borrowed for which taxpayer is PERSONALLY liable (recourse debt); (4) Certain qualified nonrecourse financing for real estate. NOT at-risk: nonrecourse debt (except RE), amounts protected by guarantees/stop-loss agreements. At-risk rules apply BEFORE passive loss rules. Suspended losses carry forward. Why other answers are wrong: (A) Additional borrowing can increase at-risk; (C) FMV isn't the measure—basis and liability are; (D) Income doesn't determine deductible loss amounts.",
+    "tip": "At-risk (§465) = your economic exposure. Cash + basis + recourse debt. Applies BEFORE passive loss rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1618,8 +1618,8 @@ const questions = [
       "D": "$116,000"
     },
     "correctAnswer": "D",
-    "explanation": "For 2023, the IRA deduction phase-out for active participants in employer plans begins at $116,000 MAGI (MFJ) and is fully phased out at $136,000. Non-active participant spouses have higher thresholds ($218,000-$228,000).",
-    "tip": "IRA deduction phase-out (MFJ active participant): $116K-$136K for 2023.",
+    "explanation": "Per IRC §219(g), the traditional IRA deduction phases out based on MAGI if the taxpayer (or spouse) is an 'active participant' in an employer retirement plan. For 2023 MFJ (contributing spouse is active participant): phase-out $116,000-$136,000. For 2024: $123,000-$143,000. Single filers (2023): $73,000-$83,000. If SPOUSE is covered but taxpayer is NOT: higher thresholds apply ($218,000-$228,000 for 2023). Why other answers are wrong: (A) $150,000—not a phase-out boundary; (B) $218,000—applies when spouse (not taxpayer) is covered; (C) $73,000—single filer phase-out start.",
+    "tip": "IRA deduction phase-out (§219(g)): MFJ active = $116K-$136K (2023). Single = $73K-$83K. Spouse covered only = much higher.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1639,8 +1639,8 @@ const questions = [
       "D": "They are over age 59½"
     },
     "correctAnswer": "A",
-    "explanation": "A spousal IRA allows a non-working spouse to contribute to an IRA based on the working spouse's earned income. The couple must file jointly, and the working spouse must have earned income at least equal to the combined IRA contributions.",
-    "tip": "Spousal IRA: working spouse's income supports non-working spouse's contribution.",
+    "explanation": "Per IRC §219(c) (Kay Bailey Hutchison Spousal IRA provision), a non-working (or low-earning) spouse can contribute to an IRA based on the working spouse's compensation. Requirements: (1) Must file jointly (MFJ); (2) Working spouse must have earned income ≥ combined IRA contributions of both spouses; (3) Same contribution limits apply ($6,500 under 50, $7,500 age 50+ for 2023). Each spouse maintains SEPARATE IRAs—there's no 'joint' IRA. Why other answers are wrong: (B) Non-working spouse needs NO personal income; (C) Must file JOINTLY, not separately; (D) Age 59½ is for penalty-free withdrawals, not contributions.",
+    "tip": "Spousal IRA (§219(c)) = non-working spouse contributes using working spouse's income. Must file MFJ.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1660,8 +1660,8 @@ const questions = [
       "D": "Be carried back 2 years and forward 20 years"
     },
     "correctAnswer": "A",
-    "explanation": "Post-TCJA, NOLs can only be carried forward indefinitely (no carryback for most taxpayers) and are limited to 80% of taxable income in the carryforward year. Special rules apply for farming losses and certain disaster losses.",
-    "tip": "NOL (post-TCJA): forward only, 80% of taxable income limit per year.",
+    "explanation": "Per IRC §172 as amended by TCJA, NOLs arising in tax years after 2017: (1) NO carryback (eliminated for most taxpayers); (2) Carried forward INDEFINITELY; (3) Limited to 80% of taxable income in the carryforward year. Exceptions: Farming losses can be carried back 2 years (§172(b)(1)(B)); insurance company losses have special rules. CARES Act temporarily allowed 5-year carryback for 2018-2020 NOLs. Why other answers are wrong: (B) 80% limit prevents full offset; (C) NOLs offset ordinary income, not just capital gains; (D) This was pre-TCJA law—no longer applies.",
+    "tip": "NOL (§172 post-TCJA): Forward only + 80% of taxable income limit. Exceptions: farming, insurance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1681,8 +1681,8 @@ const questions = [
       "D": "$289,000 single / $578,000 MFJ (2023, indexed for inflation)"
     },
     "correctAnswer": "D",
-    "explanation": "Section 461(l) limits excess business losses for non-corporate taxpayers to $289,000 (single) or $578,000 (MFJ) for 2023, indexed for inflation. Disallowed losses become NOL carryforwards. This applies after passive loss rules.",
-    "tip": "Excess business loss cap: ~$289K single / ~$578K MFJ. Excess becomes NOL.",
+    "explanation": "Per IRC §461(l), non-corporate taxpayers (individuals, trusts, estates) face an 'excess business loss' limitation. For 2023: $289,000 single/$578,000 MFJ (indexed annually). For 2024: $305,000/$610,000. Losses exceeding this cap are DISALLOWED in current year and converted to NOL carryforwards (subject to 80% limitation). Calculation: Aggregate business income/loss (trade or business items only, NOT investment). Applies AFTER at-risk and passive loss rules. Effective through 2028. Why other answers are wrong: (A) $500,000 is not the limit; (B) Limits DO exist under §461(l); (C) $250,000 was an earlier proposed amount.",
+    "tip": "Excess business loss (§461(l)) = $289K single/$578K MFJ (2023). Excess → NOL carryforward. Applies after PAL rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1702,8 +1702,8 @@ const questions = [
       "D": "Are deductible as itemized deductions without limit"
     },
     "correctAnswer": "C",
-    "explanation": "Under TCJA, hobby expenses are no longer deductible (miscellaneous itemized deductions subject to 2% floor were eliminated). However, hobby income must still be reported. This creates a particularly unfavorable result for hobby activities.",
-    "tip": "Hobby income = taxable. Hobby expenses = not deductible (TCJA). Worst of both worlds.",
+    "explanation": "Per IRC §183, activities not engaged in for profit (hobbies) cannot generate deductible losses. Pre-TCJA: hobby expenses were deductible as miscellaneous itemized deductions (subject to 2% AGI floor) but only to extent of hobby income. Post-TCJA: miscellaneous itemized deductions are SUSPENDED (2018-2025), so hobby expenses are NOT deductible AT ALL. However, hobby INCOME must still be reported. This creates the 'worst of both worlds'—taxable income, no deductible expenses. The 9-factor 'profit motive' test determines hobby vs. business. Why other answers are wrong: (A) Hobbies can't create NOLs; (B) Expenses aren't deductible post-TCJA; (D) No longer available as itemized deductions.",
+    "tip": "Hobby loss (§183 + TCJA): Income taxable, expenses NOT deductible. Worst result! Establish profit motive to avoid.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1723,8 +1723,8 @@ const questions = [
       "D": "10% of total home expenses"
     },
     "correctAnswer": "B",
-    "explanation": "The simplified home office deduction method allows $5 per square foot of qualified business use space, up to a maximum of 300 square feet ($1,500 maximum deduction). The regular method requires calculating actual expenses and allocating based on square footage.",
-    "tip": "Simplified home office: $5/sq ft, max 300 sq ft = $1,500 max deduction.",
+    "explanation": "Per Rev. Proc. 2013-13, the simplified home office deduction method allows $5 per square foot of qualified business use space, maximum 300 square feet = $1,500 maximum deduction. Available for self-employed individuals with exclusive/regular business use space. Advantages: no depreciation recapture, no complex expense tracking. Regular method (IRC §280A): allocates actual expenses (mortgage interest, utilities, insurance, depreciation, repairs) based on business-use percentage—often yields larger deduction but requires records and creates depreciation recapture. Why other answers are wrong: (A) Describes the regular method; (C) $2,500 is not the amount; (D) 10% is not the formula.",
+    "tip": "Simplified home office = $5/sq ft × max 300 sq ft = $1,500 max. No records needed, no depreciation recapture.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1744,8 +1744,8 @@ const questions = [
       "D": "They meet AGI and multiple employer tests"
     },
     "correctAnswer": "D",
-    "explanation": "Qualified performing artists can deduct employee business expenses FOR AGI if: (1) AGI is $16,000 or less before the deduction, (2) they had at least two employers, (3) expenses exceed 10% of gross income from performing, and (4) they file jointly or are unmarried.",
-    "tip": "Performing artist deduction: AGI ≤ $16K + 2 employers + expenses > 10% of performing income.",
+    "explanation": "Per IRC §62(a)(2)(B), qualified performing artists can deduct employee business expenses FOR AGI—one of few surviving employee expense deductions post-TCJA. Strict requirements: (1) AGI ≤ $16,000 (before QPA deduction); (2) At least TWO employers in performing arts; (3) Allowable expenses exceed 10% of performing arts gross income; (4) MFJ filers must BOTH be QPAs or file separately. The low AGI threshold means few performers qualify. Why other answers are wrong: (A) Stringent tests must be met; (B) It's above-the-line, doesn't require itemizing; (C) Specific income/expense thresholds apply.",
+    "tip": "Qualified performing artist (§62(a)(2)(B)) = FOR AGI. AGI ≤ $16K + 2 employers + expenses > 10% of income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1765,8 +1765,8 @@ const questions = [
       "D": "The same as defined contribution limits"
     },
     "correctAnswer": "C",
-    "explanation": "Defined benefit plan contributions are determined actuarially based on the benefits promised at retirement. Contributions can exceed defined contribution limits because they must be sufficient to fund the promised benefit, making them attractive for older self-employed individuals.",
-    "tip": "Defined benefit = actuarial calculation. Can exceed DC limits for older, high-income self-employed.",
+    "explanation": "Per IRC §404(a)(1) and §415(b), defined benefit (DB) plan contributions are determined by actuarial calculations to fund the promised retirement benefit (up to $265,000/year benefit for 2023, $275,000 for 2024). Unlike defined contribution plans with fixed percentage limits, DB plans work backward from promised benefits. For older self-employed individuals (closer to retirement), this can allow contributions FAR exceeding DC limits ($66,000), sometimes $200,000+ annually. Requires enrolled actuary. Why other answers are wrong: (A) DB contributions ARE deductible FOR AGI; (B) $66,000 is the DC limit—DB can exceed this; (D) DB and DC have fundamentally different structures.",
+    "tip": "Defined benefit (§404(a)) = actuarial funding. Can exceed DC limits significantly for older, high-income self-employed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1786,8 +1786,8 @@ const questions = [
       "D": "Only as itemized deductions"
     },
     "correctAnswer": "A",
-    "explanation": "Fee-basis state and local government officials (paid on a fee basis rather than salary) are one of the limited categories of employees who can still deduct unreimbursed employee business expenses FOR AGI, similar to qualified performing artists and reservists.",
-    "tip": "Fee-basis government officials = one of few employee groups with FOR AGI expense deduction.",
+    "explanation": "Per IRC §62(a)(2)(C), fee-basis state or local government officials are one of the few categories of employees who can deduct unreimbursed employee business expenses FOR AGI. 'Fee-basis' means compensation is based on fees received for specific services (like notary fees, marriage fees, filing fees) rather than a fixed salary. This provision survived TCJA's elimination of most employee business expense deductions. Other surviving categories: qualified performing artists (§62(a)(2)(B)), Armed Forces reservists (§62(a)(2)(E)), and disabled employees with impairment-related work expenses (§62(a)(2)(F)). Why other answers are wrong: (B) Fee-basis officials CAN deduct; (C) The 2% floor applied to miscellaneous itemized—this is FOR AGI; (D) It's above-the-line, not itemized.",
+    "tip": "Fee-basis government officials (§62(a)(2)(C)) = FOR AGI. One of few employee expense deductions surviving TCJA.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1795,7 +1795,7 @@ const questions = [
     "id": "reg-003-001",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Standard vs itemized deduction choice",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -1807,8 +1807,8 @@ const questions = [
       "D": "They have any medical expenses"
     },
     "correctAnswer": "C",
-    "explanation": "Taxpayers should itemize when their total itemized deductions exceed the standard deduction. After TCJA nearly doubled the standard deduction, fewer taxpayers benefit from itemizing. The decision is purely mathematical—choose the larger deduction.",
-    "tip": "Itemize only if total itemized > standard deduction. Do the math.",
+    "explanation": "Per IRC §63, taxpayers deduct the GREATER of standard deduction or itemized deductions. The choice is purely mathematical—itemize only when total Schedule A deductions exceed the applicable standard deduction. TCJA nearly doubled standard deductions, so fewer taxpayers (approximately 10% vs. 30% pre-TCJA) benefit from itemizing. Itemized deductions include: medical expenses (>7.5% AGI), SALT (≤$10K), mortgage interest, charitable contributions, and casualty losses (disaster only). Why other answers are wrong: (A) AGI level doesn't determine whether to itemize—total deductions do; (B) Home ownership alone doesn't mean itemizing is beneficial (SALT cap limits impact); (D) Medical expenses must exceed 7.5% of AGI to provide any benefit.",
+    "tip": "Itemize vs. standard (§63) = choose the LARGER. TCJA doubled standard deduction, so fewer itemize (~10%).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1816,7 +1816,7 @@ const questions = [
     "id": "reg-003-002",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "2023 standard deduction amounts",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -1828,8 +1828,8 @@ const questions = [
       "D": "$20,800"
     },
     "correctAnswer": "A",
-    "explanation": "For 2023, the standard deduction is $27,700 for married filing jointly, $13,850 for single and married filing separately, and $20,800 for head of household. These amounts are indexed annually for inflation.",
-    "tip": "2023 standard deduction: $27,700 MFJ, $20,800 HoH, $13,850 single/MFS.",
+    "explanation": "Per IRC §63(c), the 2023 standard deduction amounts are: MFJ/Qualifying Surviving Spouse = $27,700; Head of Household = $20,800; Single/MFS = $13,850. For 2024: MFJ = $29,200; HoH = $21,900; Single/MFS = $14,600. These amounts are indexed annually for inflation. Additional standard deductions for age 65+/blind: $1,500 if married ($1,850 if single/HoH) per qualifying condition (2023). Dependents have a limited standard deduction under §63(c)(5). Why other answers are wrong: (B) $30,000 exceeds the 2023 MFJ amount; (C) $13,850 is the single/MFS amount; (D) $20,800 is the HoH amount.",
+    "tip": "2023 standard deduction (§63(c)): $27,700 MFJ, $20,800 HoH, $13,850 Single/MFS. Add $1,500-$1,850 for 65+/blind.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1837,7 +1837,7 @@ const questions = [
     "id": "reg-003-003",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Medical expense threshold",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -1849,8 +1849,8 @@ const questions = [
       "D": "7.5% of AGI"
     },
     "correctAnswer": "D",
-    "explanation": "Medical and dental expenses are deductible as itemized deductions to the extent they exceed 7.5% of AGI. This threshold was made permanent at 7.5% after fluctuating between 7.5% and 10% in prior years.",
-    "tip": "Medical deduction = expenses exceeding 7.5% of AGI.",
+    "explanation": "Per IRC §213(a), qualified medical/dental expenses are deductible as itemized deductions to the extent they exceed 7.5% of AGI. The threshold was permanently set at 7.5% (after fluctuating to 10% under ACA and back). Qualifying expenses include: doctor/hospital fees, prescriptions, insurance premiums (if not pre-tax), medical equipment, transportation for medical care. NOT deductible: cosmetic surgery (unless medically necessary), gym memberships, OTC drugs (except insulin), funeral expenses. Why other answers are wrong: (A) 10% was the ACA threshold (no longer applies); (B) No fixed dollar threshold exists; (C) 2% was the old miscellaneous itemized deduction floor.",
+    "tip": "Medical expense threshold (§213) = 7.5% of AGI. Only excess is deductible. Permanent since 2021.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1858,7 +1858,7 @@ const questions = [
     "id": "reg-003-004",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Mortgage interest deduction",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -1870,8 +1870,8 @@ const questions = [
       "D": "$1,000,000 for all loans"
     },
     "correctAnswer": "C",
-    "explanation": "For mortgages originated after December 15, 2017, interest is deductible on acquisition debt up to $750,000 ($375,000 MFS). Loans originated before that date are grandfathered at the $1,000,000 limit. Home equity loan interest is only deductible if used to buy, build, or improve the home.",
-    "tip": "Mortgage interest: $750K limit for post-12/15/2017 loans; $1M grandfathered.",
+    "explanation": "Per IRC §163(h)(3) as amended by TCJA, qualified residence interest is deductible on 'acquisition indebtedness' up to $750,000 ($375,000 MFS) for mortgages originated AFTER December 15, 2017. GRANDFATHERED: Pre-12/16/2017 loans retain $1,000,000 limit. 'Acquisition debt' = debt to acquire, construct, or substantially improve a qualified residence (principal + one second home). Home equity debt interest is ONLY deductible if proceeds used to buy/build/improve the home (TCJA eliminated deduction for other uses like credit card payoff). Why other answers are wrong: (A) $2,000,000 exceeds any limit; (B) $500,000 is too low; (D) $1,000,000 only for pre-TCJA loans.",
+    "tip": "Mortgage interest (§163(h)(3)): $750K post-12/15/2017. $1M grandfathered. Home equity = buy/build/improve only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1879,7 +1879,7 @@ const questions = [
     "id": "reg-003-005",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "SALT deduction cap",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -1891,8 +1891,8 @@ const questions = [
       "D": "No limit"
     },
     "correctAnswer": "B",
-    "explanation": "TCJA imposed a $10,000 cap ($5,000 MFS) on the combined deduction for state and local income taxes (or sales taxes) and property taxes. This limit applies through 2025 and significantly impacts taxpayers in high-tax states.",
-    "tip": "SALT cap: $10,000 total ($5,000 MFS) for state/local income + property taxes.",
+    "explanation": "Per IRC §164(b)(6)(B) (added by TCJA), the SALT deduction is capped at $10,000 ($5,000 MFS) for COMBINED: (1) State/local income taxes OR sales taxes (choose one); plus (2) State/local property taxes. This cap applies 2018-2025 and significantly impacts taxpayers in high-tax states (CA, NY, NJ, etc.). Foreign real property taxes are NOT deductible. Note: Business/rental property taxes are NOT subject to the cap (deducted on Schedule C/E). Some states created 'SALT cap workarounds' (charitable contributions for tax credits). Why other answers are wrong: (A) $5,000 is the MFS limit; (C) $15,000 exceeds the cap; (D) TCJA imposed the $10K limit.",
+    "tip": "SALT cap (§164(b)(6)) = $10,000 total ($5,000 MFS). Income OR sales tax + property tax. Expires after 2025.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1900,7 +1900,7 @@ const questions = [
     "id": "reg-003-006",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Charitable contribution limits",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -1912,8 +1912,8 @@ const questions = [
       "D": "100% of AGI"
     },
     "correctAnswer": "C",
-    "explanation": "Cash contributions to public charities (50% organizations) are deductible up to 60% of AGI under TCJA (increased from 50%). Contributions of appreciated property are limited to 30% of AGI. Lower limits apply to private foundations.",
-    "tip": "Charitable cash: 60% AGI limit. Appreciated property: 30% AGI limit.",
+    "explanation": "Per IRC §170(b)(1)(G) (TCJA provision), cash contributions to public charities ('50% organizations') are deductible up to 60% of AGI (increased from 50%). Other limits: LTCG property to public charities = 30% AGI (FMV); cash to private non-operating foundations = 30% AGI; appreciated property to private foundations = 20% AGI (basis only). Excess contributions carry forward 5 years under §170(d). Note: CARES Act allowed 100% AGI limit for 2020-2021 (expired). Why other answers are wrong: (A) 30% applies to LTCG property or private foundations; (B) 50% was the pre-TCJA limit; (D) 100% was temporary CARES Act provision.",
+    "tip": "Charitable limits (§170): Cash to public = 60% AGI; LTCG property = 30% AGI; Private foundation = 30%/20%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1921,7 +1921,7 @@ const questions = [
     "id": "reg-003-007",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Qualifying medical expenses",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -1933,8 +1933,8 @@ const questions = [
       "D": "Prescription medications and insulin"
     },
     "correctAnswer": "D",
-    "explanation": "Prescription medications and insulin are deductible medical expenses. Cosmetic surgery (unless for disfigurement from disease, accident, or congenital abnormality), gym memberships for general health, and non-prescription vitamins are not deductible.",
-    "tip": "Deductible medical: prescriptions, doctor visits, hospital. NOT gym, cosmetics, vitamins.",
+    "explanation": "Per IRC §213(d), deductible medical expenses include amounts paid for diagnosis, cure, mitigation, treatment, or prevention of disease. Prescriptions and insulin (even without prescription) are specifically deductible under §213(b). Also deductible: doctor/hospital fees, medical equipment, medically necessary travel, long-term care premiums (limited). NOT deductible: (A) OTC vitamins/supplements taken for general health; (B) Cosmetic surgery under §213(d)(9) unless for congenital abnormality, injury from accident, or disfiguring disease; (C) Gym memberships for general fitness (unless prescribed by doctor for specific condition). Why other answers are wrong: Each represents a specifically nondeductible category.",
+    "tip": "Medical expenses (§213): Prescriptions + insulin = YES. Cosmetics/gym/vitamins = NO (unless medically necessary).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1942,7 +1942,7 @@ const questions = [
     "id": "reg-003-008",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Capital gains property contributions",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -1954,8 +1954,8 @@ const questions = [
       "D": "Fair market value, limited to 30% of AGI"
     },
     "correctAnswer": "D",
-    "explanation": "Long-term capital gain property contributed to a public charity is deductible at fair market value (no gain recognition), but the deduction is limited to 30% of AGI. The taxpayer can elect to use basis and get the 50% limit instead.",
-    "tip": "LTCG property to charity: FMV deduction at 30% limit, or elect basis at 50% limit.",
+    "explanation": "Per IRC §170(b)(1)(C), contributions of long-term capital gain property (held >1 year) to public charities are deductible at FMV but limited to 30% of AGI (vs. 60% for cash). The donor does NOT recognize the built-in gain—a double benefit. Alternative under §170(b)(1)(C)(iii): Taxpayer can ELECT to use adjusted basis instead of FMV, which allows the higher 50% AGI limit—useful when basis is close to FMV or taxpayer has large contribution. Tangible personal property: FMV only if related to charity's exempt purpose (§170(e)(1)(B)(i)). Why other answers are wrong: (A) 50% applies to basis election; (B) It IS deductible; (C) Basis is an election, not the default rule.",
+    "tip": "LTCG property (§170): FMV at 30% limit OR elect basis at 50% limit. No gain recognized on built-in appreciation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1963,7 +1963,7 @@ const questions = [
     "id": "reg-003-009",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Investment interest expense",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -1975,8 +1975,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "C",
-    "explanation": "Investment interest expense (interest on loans to purchase taxable investments) is deductible as an itemized deduction only to the extent of net investment income. Excess interest carries forward indefinitely to future years.",
-    "tip": "Investment interest limited to net investment income. Excess carries forward.",
+    "explanation": "Per IRC §163(d), investment interest expense (interest on debt used to acquire property held for investment, like margin loans) is deductible only to the extent of NET INVESTMENT INCOME. Net investment income includes: interest, dividends (unless qualified), short-term capital gains, royalties, and annuities. Qualified dividends and LTCG are EXCLUDED unless taxpayer elects to treat them as investment income (which subjects them to ordinary rates). Excess investment interest carries forward indefinitely. This limitation is applied on Form 4952. Why other answers are wrong: (A) Mortgage interest has separate rules; (B) AGI is not the limit; (D) No fixed dollar limit exists.",
+    "tip": "Investment interest (§163(d)) = limited to net investment income. Excess carries forward. Qualified div/LTCG excluded unless elected.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1984,7 +1984,7 @@ const questions = [
     "id": "reg-003-010",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Casualty loss deduction",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -1996,8 +1996,8 @@ const questions = [
       "D": "They exceed 10% of AGI"
     },
     "correctAnswer": "C",
-    "explanation": "TCJA limits personal casualty loss deductions to losses from federally declared disasters only (2018-2025). The loss must exceed $100 per casualty and total losses must exceed 10% of AGI. Casualty gains can offset non-disaster losses.",
-    "tip": "Personal casualty loss: federal disaster only (TCJA). Still need $100 + 10% AGI floors.",
+    "explanation": "Per IRC §165(h)(5) (TCJA provision), personal casualty losses are deductible ONLY if attributable to a federally declared disaster (2018-2025). Even for disaster losses, limitations apply: (1) $100 floor per casualty under §165(h)(1); (2) 10% of AGI floor for aggregate losses under §165(h)(2)(A). Loss amount = lesser of FMV decline or adjusted basis, minus insurance reimbursement. Exception: Casualty gains can offset non-disaster casualty losses (netting rule). Business/rental casualty losses remain fully deductible (no disaster requirement). Why other answers are wrong: (A) Insurance reduces the loss but isn't required; (B) $100 floor applies but disaster is the main requirement; (D) 10% floor applies but disaster is prerequisite.",
+    "tip": "Personal casualty loss (§165(h)(5)): DISASTER ONLY (TCJA). Then apply $100 per casualty + 10% AGI floors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2005,7 +2005,7 @@ const questions = [
     "id": "reg-003-011",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Gambling losses",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2017,8 +2017,8 @@ const questions = [
       "D": "Without limitation"
     },
     "correctAnswer": "A",
-    "explanation": "Gambling losses are deductible as an itemized deduction, but only to the extent of gambling winnings reported as income. Gambling winnings must be reported in full; losses cannot create a net deduction.",
-    "tip": "Gambling losses limited to winnings. Report all winnings, deduct losses up to that amount.",
+    "explanation": "Per IRC §165(d), gambling losses are deductible as an itemized deduction but ONLY to the extent of gambling winnings reported as income. Gambling winnings are ALWAYS taxable (reported on Form W-2G if over thresholds or Form 1040). Losses cannot create a net deduction or NOL. Documentation required: diary/log of wins/losses, tickets, receipts. Professional gamblers (trade or business under §162) can deduct losses on Schedule C (not itemized) but still limited to gambling income; they also deduct business expenses. Why other answers are wrong: (B) $3,000 is the capital loss limit, not gambling; (C) Non-professionals can deduct losses too (just itemized); (D) Losses ARE limited to winnings.",
+    "tip": "Gambling losses (§165(d)) = itemized deduction LIMITED to gambling winnings. Can't create net loss. Keep records!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2026,7 +2026,7 @@ const questions = [
     "id": "reg-003-012",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Charitable contribution substantiation",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2038,8 +2038,8 @@ const questions = [
       "D": "Form 8283"
     },
     "correctAnswer": "B",
-    "explanation": "All cash contributions, regardless of amount, require a bank record (canceled check, credit card statement) or written communication from the charity showing the amount and date. Contributions of $250 or more require a contemporaneous written acknowledgment.",
-    "tip": "Cash charity: bank record or receipt for any amount. $250+ needs written acknowledgment.",
+    "explanation": "Per IRC §170(f)(17), ALL cash contributions (regardless of amount) require a bank record (canceled check, bank/credit card statement) OR written communication from the donee showing organization name, date, and amount. For $250+ contributions: additional contemporaneous written acknowledgment from charity stating (1) amount, (2) whether goods/services provided, and (3) description/good faith estimate of goods/services if any (§170(f)(8)). For non-cash donations $500+: Form 8283 required. For $5,000+: qualified appraisal generally required. Why other answers are wrong: (A) Documentation IS required for all cash; (C) Appraisals are for non-cash $5,000+; (D) Form 8283 is for non-cash $500+.",
+    "tip": "Cash charity substantiation (§170(f)): ANY amount = bank record/receipt. $250+ = written acknowledgment. $500+ non-cash = Form 8283.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2047,7 +2047,7 @@ const questions = [
     "id": "reg-003-013",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Donation of clothing and household items",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2059,8 +2059,8 @@ const questions = [
       "D": "They are in good used condition or better"
     },
     "correctAnswer": "D",
-    "explanation": "Donated clothing and household items must be in good used condition or better to be deductible. A deduction may be allowed for items not in good condition if the deduction exceeds $500 and a qualified appraisal is obtained.",
-    "tip": "Donated clothes/household items: must be in good condition (or get appraisal if >$500).",
+    "explanation": "Per IRC §170(f)(16), donated clothing and household items are NOT deductible unless in 'good used condition or better.' Exception: Items NOT in good condition may be deductible if claimed deduction exceeds $500 AND taxpayer obtains qualified appraisal (and attaches to return). 'Household items' includes furniture, furnishings, electronics, appliances, linens—NOT food, paintings, antiques, jewelry, or collectibles. Deduction amount for non-cash: FMV (typically thrift store value). Why other answers are wrong: (A) Holding period determines short-term vs. long-term character, not deductibility; (B) Must be qualified organization, but condition is the specific requirement; (C) $500 is appraisal exception threshold, not general requirement.",
+    "tip": "Donated goods (§170(f)(16)) = must be 'good used condition or better.' Under that? Need $500+ deduction + appraisal.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2068,7 +2068,7 @@ const questions = [
     "id": "reg-003-014",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Charitable mileage rate",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2080,8 +2080,8 @@ const questions = [
       "D": "65.5 cents per mile"
     },
     "correctAnswer": "A",
-    "explanation": "The charitable mileage rate is set by statute at 14 cents per mile and does not change with inflation. This is significantly lower than the business mileage rate (65.5 cents for 2023) or medical/moving rate (22 cents for 2023).",
-    "tip": "Charity mileage = 14 cents (fixed by statute). Much lower than business rate.",
+    "explanation": "Per IRC §170(i), the charitable mileage rate is SET BY STATUTE at 14 cents per mile and does NOT change with inflation (unlike business and medical rates which IRS adjusts annually). Comparison for 2023: Business = 65.5 cents/mile (IRS adjusts); Medical/Moving = 22 cents/mile; Charitable = 14 cents/mile (fixed). Alternatively, actual vehicle expenses (gas, oil) may be deducted for charitable driving. Parking and tolls are separately deductible. Why other answers are wrong: (B) 22 cents is the 2023 medical/moving rate; (C) 56 cents is outdated; (D) 65.5 cents is the 2023 business rate.",
+    "tip": "Charitable mileage (§170(i)) = 14 cents FIXED (no inflation adjustment). Business = ~65 cents, Medical = ~22 cents (IRS adjusts).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2089,7 +2089,7 @@ const questions = [
     "id": "reg-003-015",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Points on home purchase",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2101,8 +2101,8 @@ const questions = [
       "D": "Always amortized over the loan term"
     },
     "correctAnswer": "C",
-    "explanation": "Points paid on the purchase of a principal residence are generally fully deductible in the year paid if: (1) the loan is secured by the principal residence, (2) points are computed as a percentage of the loan, (3) charging points is an established practice in the area, and (4) points don't exceed typical amounts.",
-    "tip": "Points on home purchase = deduct in year paid (if typical and meets requirements).",
+    "explanation": "Per IRC §461(g)(2) and Rev. Proc. 94-27, points paid to obtain a mortgage on a PRINCIPAL residence purchase are currently deductible (not amortized) if: (1) Loan secured by principal residence; (2) Points computed as percentage of loan; (3) Paying points is established area practice; (4) Points don't exceed typical amounts; (5) Points paid from taxpayer's funds (not borrowed). Seller-paid points: deductible by buyer (reduces basis). Second home/investment: amortize over loan term. Important: Points on refinance generally must be amortized (see reg-003-016). Why other answers are wrong: (A) Seller-paid points ARE deductible (by buyer); (B) Points are deductible; (D) Amortization applies to refinances, not purchase.",
+    "tip": "Points on HOME PURCHASE (§461(g)(2)) = currently deductible if meets requirements. Refinance points = amortize.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2110,7 +2110,7 @@ const questions = [
     "id": "reg-003-016",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Points on refinance",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2122,8 +2122,8 @@ const questions = [
       "D": "Fully deductible in the year paid"
     },
     "correctAnswer": "A",
-    "explanation": "Points paid on a refinanced mortgage must be amortized over the life of the loan. However, if the refinance is on the principal residence and part of the proceeds are used for home improvements, that portion of points may be currently deductible.",
-    "tip": "Refinance points = amortize over loan life. Purchase points = deduct immediately.",
+    "explanation": "Per IRC §461(g)(1), points paid on mortgage refinancing must generally be AMORTIZED (ratably deducted) over the life of the loan. Example: $3,000 points on 30-year refinance = $100/year deduction. Exceptions: (1) Portion used for home improvement may be currently deductible; (2) If refinancing is paid off early (sold or refinanced again), remaining unamortized points are fully deductible in year of payoff. Why purchase points differ: Purchase points represent prepaid interest that is currently deductible under §461(g)(2) safe harbor. Why other answers are wrong: (B) Points ARE deductible (just amortized); (C) Home improvement portion is exception, not the rule; (D) Amortization, not current deduction.",
+    "tip": "Refinance points (§461(g)(1)) = AMORTIZE over loan life. Early payoff = deduct remaining balance. Home improvement portion = currently deductible.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2131,7 +2131,7 @@ const questions = [
     "id": "reg-003-017",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "State income vs sales tax",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2143,8 +2143,8 @@ const questions = [
       "D": "Only state income taxes"
     },
     "correctAnswer": "C",
-    "explanation": "Taxpayers may deduct either state and local income taxes or state and local sales taxes, but not both. Those in states without income tax (like Texas or Florida) often benefit from deducting sales taxes. Either choice is combined with property taxes for the $10,000 SALT cap.",
-    "tip": "SALT: choose income tax OR sales tax (not both), plus property tax. Total capped at $10K.",
+    "explanation": "Per IRC §164(b)(5), taxpayers may ELECT to deduct either state/local INCOME taxes OR state/local SALES taxes—but NOT both. This election is made annually. Taxpayers in states with no income tax (TX, FL, WA, NV, etc.) benefit from deducting sales taxes. Sales tax calculation: actual receipts OR IRS optional sales tax tables (from IRS.gov). Either choice (income or sales) is COMBINED with property taxes and subject to $10,000 SALT cap. Foreign income taxes are NOT deductible (but may be creditable under §901). Why other answers are wrong: (A) Property tax is deductible but income/sales is also available; (B) Cannot deduct BOTH income and sales; (D) Can choose sales instead of income tax.",
+    "tip": "SALT election (§164(b)(5)) = income tax OR sales tax (not both) + property tax. All subject to $10K cap.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2152,7 +2152,7 @@ const questions = [
     "id": "reg-003-018",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Charitable carryover",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2164,8 +2164,8 @@ const questions = [
       "D": "Carried back 2 years"
     },
     "correctAnswer": "C",
-    "explanation": "Charitable contributions exceeding the applicable AGI percentage limitation (60%, 50%, 30%, or 20%) may be carried forward for 5 years. Carryovers are used after current year contributions and retain their original character.",
-    "tip": "Excess charitable contributions: 5-year carryforward. Used after current year gifts.",
+    "explanation": "Per IRC §170(d)(1), charitable contributions exceeding the applicable AGI percentage limit may be carried forward for 5 years. Carryover ordering: (1) Current year contributions are used FIRST; (2) Oldest carryovers are used next (FIFO). Carryovers RETAIN their original character (cash vs. property, public vs. private). Separate calculations apply for each AGI limit category. If taxpayer dies, unused carryover is lost (no deduction on final return beyond current limits). Why other answers are wrong: (A) 10 years—too long; (B) Carryover IS allowed; (D) No carryBACK—only carryforward.",
+    "tip": "Charitable carryover (§170(d)(1)) = 5 years forward. FIFO ordering. Current year first, then oldest carryovers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2173,7 +2173,7 @@ const questions = [
     "id": "reg-003-019",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Medical expense timing",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2185,8 +2185,8 @@ const questions = [
       "D": "In the year the charge is made"
     },
     "correctAnswer": "D",
-    "explanation": "Medical expenses paid by credit card are deductible in the year the charge is made, not when the credit card bill is paid. The credit card company pays the provider, creating an obligation to the credit card company, which is considered payment.",
-    "tip": "Credit card medical expenses: deduct when charged, not when card is paid off.",
+    "explanation": "Per Reg. §1.213-1(a)(1), medical expenses are deductible in the year PAID. For credit card payments, the charge date is considered the payment date because the credit card company pays the provider directly—creating a debt from taxpayer to credit card company. When the credit card bill is subsequently paid is irrelevant for timing. This differs from promissory notes (deductible when note payments made) and checks (deductible when delivered/mailed). Medical services received but not yet paid are NOT deductible until actually paid. Why other answers are wrong: (A) Payment timing is the charge date, not installments; (B) Service receipt date is irrelevant—payment date controls; (C) Credit card bill payment date doesn't matter.",
+    "tip": "Medical timing (Reg. §1.213): Credit card = deduct when CHARGED (not when bill paid). Check = when mailed/delivered.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2194,7 +2194,7 @@ const questions = [
     "id": "reg-003-020",
     "section": "REG",
     "topic": "Individual Taxation",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Deductions FROM AGI",
     "conceptTested": "Real property taxes",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -2206,8 +2206,8 @@ const questions = [
       "D": "The owner of the property who pays them"
     },
     "correctAnswer": "D",
-    "explanation": "Real property taxes are deductible by the owner who pays them. A tenant paying property taxes on behalf of a landlord cannot deduct them. If property is sold mid-year, taxes are prorated between buyer and seller based on ownership period.",
-    "tip": "Property taxes: owner who pays can deduct. Prorate on sale.",
+    "explanation": "Per IRC §164(a)(1), state/local real property taxes are deductible by the owner who PAYS them. Both ownership AND payment are required. Tenant paying landlord's taxes: NOT deductible (considered additional rent). Property sold mid-year: Taxes prorated between buyer and seller based on ownership days under §164(d)—regardless of who actually pays the bill. The party who bears economic burden (based on proration) claims the deduction. Investment/rental property taxes: deductible on Schedule E (not Schedule A) and NOT subject to SALT cap. Why other answers are wrong: (A) Second homes and investment property taxes also deductible; (B) Deed name isn't sole factor—payment matters; (C) Must be owner AND payor.",
+    "tip": "Real property taxes (§164): Owner who PAYS = deducts. Sale year = prorate by ownership days. Rental property = Schedule E (no SALT cap).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },

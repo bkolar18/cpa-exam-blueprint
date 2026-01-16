@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 35 | 1,310 | 3% | In Progress |
+| REG | 1,345 | 90 | 1,255 | 7% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -50,19 +50,61 @@ All 58 exam TBS questions have been enhanced with:
 
 **File:** `src/lib/data/practice-questions/reg.ts`
 
-### REG Individual Taxation - In Progress (35/223 Questions)
+### REG Individual Taxation - In Progress (90/223 Questions)
 
 | Batch | Questions | Range | Status |
 |-------|-----------|-------|--------|
 | Individual Tax Foundations | 35 | reg-001-001 to reg-001-035 | **Complete** |
-| Deductions FOR AGI | 35 | reg-002-001 to reg-002-035 | Pending |
-| Deductions FROM AGI | 35 | reg-003-001 to reg-003-035 | Pending |
+| Deductions FOR AGI | 35 | reg-002-001 to reg-002-035 | **Complete** |
+| Deductions FROM AGI | 20 | reg-003-001 to reg-003-020 | **Complete** |
+| Deductions FROM AGI (continued) | 15 | reg-003-021 to reg-003-035 | Pending |
 | Tax Credits | 35 | reg-004-001 to reg-004-035 | Pending |
 | Alternative Minimum Tax | 35 | reg-005-001 to reg-005-035 | Pending |
 | Property Transactions | 211 | reg-prop-* | Pending |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 2)
+
+**Batch 2: 55 Additional Questions Enhanced (reg-002-001 to reg-003-020)**
+
+Deductions FOR AGI (35 questions - reg-002-001 to reg-002-035):
+- IRC section references (§62, §164(f), §162(l), §219, §221, §223, §408, §461, §469, etc.)
+- "Why other answers are wrong:" distractor analysis for each wrong answer
+- Enhanced memory tips with IRC section citations
+- Coverage of educator expenses, IRA deductions, student loan interest, HSA, self-employment deductions, passive loss rules, at-risk limitations
+
+Deductions FROM AGI / Itemized Deductions (20 questions - reg-003-001 to reg-003-020):
+- IRC section references (§63, §163, §164, §165, §170, §213, §461, etc.)
+- Standard deduction amounts, medical expense threshold, SALT cap, mortgage interest limits
+- Charitable contribution limits and substantiation rules
+- Casualty loss disaster requirement, gambling loss limitations
+- Points on purchase vs refinance, investment interest expense
+
+**Key IRC References Used (Batch 2):**
+| Topic | IRC Section |
+|-------|-------------|
+| Deductions FOR AGI (general) | §62 |
+| Educator Expenses | §62(a)(2)(D) |
+| Traditional IRA | §219 |
+| Student Loan Interest | §221 |
+| HSA Contributions | §223 |
+| Self-Employment Tax Deduction | §164(f) |
+| Self-Employed Health Insurance | §162(l) |
+| SEP-IRA | §408(k) |
+| Passive Activity Losses | §469 |
+| At-Risk Limitations | §465 |
+| NOL | §172 |
+| Excess Business Loss | §461(l) |
+| Standard Deduction | §63 |
+| Medical Expenses | §213 |
+| SALT Deduction | §164 |
+| Mortgage Interest | §163(h) |
+| Charitable Contributions | §170 |
+| Casualty Losses | §165(h) |
+| Gambling Losses | §165(d) |
+| Investment Interest | §163(d) |
 
 ### REG Enhancement Completed - January 15, 2026 (Session 1)
 
