@@ -3,17 +3,35 @@
 -- Without this, new users will get "Database Error" after signup
 
 -- =============================================
--- 1. Create the function (if not exists, or replace)
+-- 0. First, fix the profiles table to allow null email temporarily
+--    (in case email isn't available at signup time)
+-- =============================================
+ALTER TABLE public.profiles ALTER COLUMN email DROP NOT NULL;
+
+-- =============================================
+-- 1. Create the function with better error handling
 -- =============================================
 CREATE OR REPLACE FUNCTION public.handle_new_user()
-RETURNS TRIGGER AS $$
+RETURNS TRIGGER
+SECURITY DEFINER
+SET search_path = public
+AS $$
 BEGIN
   INSERT INTO public.profiles (id, email)
-  VALUES (NEW.id, NEW.email)
-  ON CONFLICT (id) DO NOTHING;  -- Prevent errors if profile somehow already exists
+  VALUES (
+    NEW.id,
+    COALESCE(NEW.email, NEW.raw_user_meta_data->>'email', '')
+  )
+  ON CONFLICT (id) DO UPDATE SET
+    email = COALESCE(EXCLUDED.email, profiles.email);
   RETURN NEW;
+EXCEPTION
+  WHEN OTHERS THEN
+    -- Log error but don't fail the signup
+    RAISE WARNING 'Failed to create profile for user %: %', NEW.id, SQLERRM;
+    RETURN NEW;
 END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
+$$ LANGUAGE plpgsql;
 
 -- =============================================
 -- 2. Drop existing trigger if it exists (to recreate cleanly)
