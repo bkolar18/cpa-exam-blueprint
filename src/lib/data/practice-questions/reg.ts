@@ -4747,8 +4747,8 @@ const questions = [
       "D": "Deferral of gain on exchange of like-kind real property"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1031 allows for DEFERRAL (not exclusion) of gain when like-kind real property held for business or investment is exchanged for other like-kind real property. The gain is deferred until the replacement property is sold.",
-    "tip": "Section 1031 = deferral, not exclusion. Only real property now (TCJA changed this).",
+    "explanation": "Per IRC §1031(a)(1), no gain or loss is RECOGNIZED (deferred) when property held for productive use in trade/business or for investment is exchanged solely for like-kind property. Post-TCJA (effective for exchanges after 12/31/2017), §1031 applies only to real property. The key is DEFERRAL—the gain isn't forgiven, it's preserved in lower basis of replacement property. Why other answers are wrong: (A) Exclusion of gain—§1031 DEFERS gain, it doesn't exclude it like §121 does for primary residence; (B) Personal property deferral—TCJA eliminated personal property from §1031 treatment; (C) Tax-free exchange of any business property—must be like-kind AND held for business/investment (not for sale).",
+    "tip": "IRC §1031 = DEFERRAL, not exclusion. Post-TCJA: REAL PROPERTY ONLY. Gain preserved in lower basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4768,8 +4768,8 @@ const questions = [
       "D": "Real property used in business or held for investment"
     },
     "correctAnswer": "D",
-    "explanation": "TCJA limited Section 1031 to real property only, effective for exchanges after December 31, 2017. Previously, personal property like vehicles and equipment could qualify. Now only real estate qualifies for like-kind exchange treatment.",
-    "tip": "Post-TCJA: Section 1031 = REAL PROPERTY ONLY. No more equipment, vehicles, etc.",
+    "explanation": "Per IRC §1031(a)(1) as amended by TCJA (P.L. 115-97), effective for exchanges completed after December 31, 2017, like-kind exchange treatment applies ONLY to real property held for productive use in trade/business or for investment. Pre-TCJA, §1031 applied to personal property exchanges (vehicles, equipment, artwork). Now those are fully taxable sales. Why other answers are wrong: (A) Vehicles and equipment—personal property no longer qualifies post-TCJA; (B) All business property—excludes inventory/dealer property and now excludes personal property; (C) Personal property only—the exact opposite of current law.",
+    "tip": "TCJA changed everything: §1031 = REAL PROPERTY ONLY after 2017. Equipment, vehicles, art = no longer qualify.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4789,8 +4789,8 @@ const questions = [
       "D": "Property of equal value"
     },
     "correctAnswer": "C",
-    "explanation": "For real property, like-kind is broadly interpreted. Any real property held for business or investment can be exchanged for any other real property. An office building can be exchanged for farmland, raw land for apartments, etc.",
-    "tip": "Real estate like-kind = very broad. Any real property for any real property.",
+    "explanation": "Per IRC §1031(a) and Treas. Reg. §1.1031(a)-1(b), for real property, 'like-kind' refers to the NATURE or CHARACTER of the property, not its grade or quality. Any real estate held for business/investment is like-kind to any other real estate: office building ↔ farmland, raw land ↔ apartments, commercial ↔ residential rental. The only real property restriction is U.S. vs. foreign (not like-kind to each other). Why other answers are wrong: (A) Same state—geographic location is irrelevant; (B) Identical type—this was the pre-TCJA rule for PERSONAL property (truck for truck); (D) Equal value—value differences are handled through boot, not like-kind determination.",
+    "tip": "Real property like-kind = VERY broad. Any U.S. real estate ↔ any U.S. real estate. Nature/character matters, not grade/quality.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4810,8 +4810,8 @@ const questions = [
       "D": "The property given up"
     },
     "correctAnswer": "B",
-    "explanation": "Boot is non-like-kind property received in the exchange, including cash, debt relief, and other property. Receipt of boot triggers gain recognition to the extent of the boot received (limited to realized gain).",
-    "tip": "Boot = the extra stuff (cash, debt relief). Receiving boot triggers taxable gain.",
+    "explanation": "Per IRC §1031(b), if a taxpayer receives money or non-like-kind property ('boot') in addition to like-kind property, gain is recognized to the extent of the boot. Boot includes: (1) cash received, (2) debt relief (mortgage assumed by other party), (3) non-like-kind property received. Boot triggers taxable gain recognition, limited to the lesser of boot received or gain realized. Why other answers are wrong: (A) Real property received—like-kind property received is the TAX-FREE portion, not boot; (C) Transaction costs—these REDUCE boot, not create it; (D) Property given up—boot is what you RECEIVE, not give.",
+    "tip": "Boot = non-like-kind stuff RECEIVED (cash, debt relief, other property). Boot RECEIVED triggers gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4831,8 +4831,8 @@ const questions = [
       "D": "Qualifies only if held for more than one year"
     },
     "correctAnswer": "C",
-    "explanation": "Property held primarily for sale to customers (inventory or dealer property) does not qualify for Section 1031 treatment. Both the property given up and the property received must be held for productive use in trade/business or for investment.",
-    "tip": "Dealer property = no 1031. Must be held for business use or investment, not sale.",
+    "explanation": "Per IRC §1031(a)(2)(A), §1031 does NOT apply to stock in trade or other property held primarily for sale. Dealer property (inventory) fails the 'held for productive use or investment' requirement. Both the relinquished AND replacement property must be held for business use or investment—not for sale to customers. This distinguishes investors from dealers. Why other answers are wrong: (A) Qualifies if exchanged for investment property—dealer property NEVER qualifies regardless of what it's exchanged for; (B) Qualifies for §1031—specifically excluded by statute; (D) Qualifies if held >1 year—holding period doesn't cure dealer status.",
+    "tip": "Dealer/inventory property = NEVER qualifies for §1031. Must be held for business USE or investment, not SALE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4852,8 +4852,8 @@ const questions = [
       "D": "Does not qualify because personal-use property is excluded"
     },
     "correctAnswer": "D",
-    "explanation": "Personal-use property, including a personal residence, does not qualify for Section 1031 treatment. The property must be held for productive use in trade or business or for investment. Personal residences may qualify for Section 121 exclusion instead.",
-    "tip": "Personal use property = no 1031. Principal residence = use Section 121 instead.",
+    "explanation": "Per IRC §1031(a)(1), property must be 'held for productive use in a trade or business or for investment' to qualify. Personal-use property (primary residence, vacation home used personally) fails this test. For principal residences, §121 provides up to $250K/$500K EXCLUSION (not deferral) if ownership and use tests are met. Different sections, different benefits! Why other answers are wrong: (A) Held >2 years—holding period doesn't convert personal use to investment property; (B) §121 rules—§121 is a separate EXCLUSION provision, not part of §1031 exchange rules; (C) Qualifies for §1031—expressly fails the business/investment requirement.",
+    "tip": "Personal use = NO §1031. Use §121 for principal residence instead (exclusion, not deferral).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4873,8 +4873,8 @@ const questions = [
       "D": "The lesser of boot received or gain realized"
     },
     "correctAnswer": "D",
-    "explanation": "Gain is recognized to the extent of the lesser of: (1) boot received, or (2) gain realized. You cannot be taxed on more boot than you receive, and you cannot recognize more gain than you actually have.",
-    "tip": "Recognized gain = lesser of boot or realized gain. Can't recognize more than either.",
+    "explanation": "Per IRC §1031(b), gain is recognized to the extent of boot received BUT limited by §1031(c) to the gain realized. Formula: Recognized Gain = LESSER of (boot received) or (realized gain). This prevents taxpayers from being taxed on boot exceeding their actual economic gain. Example: $50K realized gain, $80K boot → recognize only $50K. Why other answers are wrong: (A) Boot regardless of gain—can't recognize more gain than you actually have; (B) FMV of property received—this determines realized gain, not recognized gain; (C) Total gain realized—only if boot equals or exceeds realized gain.",
+    "tip": "Recognized gain = LESSER of (boot received, gain realized). Two-step: calculate realized gain FIRST, then compare to boot.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4894,8 +4894,8 @@ const questions = [
       "D": "The loss is fully recognized"
     },
     "correctAnswer": "B",
-    "explanation": "Losses in like-kind exchanges are never recognized, even if boot is received. The loss is deferred by carrying over the loss into a higher basis in the replacement property. This differs from gain treatment.",
-    "tip": "1031 losses = NEVER recognized (deferred). Unlike gains which are recognized with boot.",
+    "explanation": "Per IRC §1031(c), NO loss is recognized in a like-kind exchange, even if boot is received. This is asymmetric treatment: gains may be partially recognized (when boot received), but losses are ALWAYS deferred. The loss is preserved in a higher basis in the replacement property. Why other answers are wrong: (A) Loss recognized to extent of boot—this rule applies to GAINS under §1031(b), not losses; (C) Loss carried forward—it's not a carryforward; it's embedded in basis; (D) Loss fully recognized—§1031(c) specifically prohibits loss recognition.",
+    "tip": "§1031 losses = NEVER recognized (asymmetric!). Loss deferred via higher basis. Unlike gains which trigger recognition with boot.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4915,8 +4915,8 @@ const questions = [
       "D": "Increases basis in new property"
     },
     "correctAnswer": "B",
-    "explanation": "Mortgage relief (having debt assumed by the other party) is treated as boot received. The taxpayer is relieved of a liability, which is economically equivalent to receiving cash. This triggers gain recognition to the extent of the relief.",
-    "tip": "Debt relief = boot received. Getting out of a mortgage = taxable boot.",
+    "explanation": "Per Treas. Reg. §1.1031(d)-2, when liabilities are assumed by the other party, the taxpayer is treated as receiving boot equal to the debt relief. Economic rationale: being relieved of a $100K mortgage is economically identical to receiving $100K cash. This 'deemed boot' triggers gain recognition under §1031(b). Why other answers are wrong: (A) No tax consequences—debt relief has significant tax impact as boot; (C) Must recognize a loss—losses are never recognized in §1031 exchanges; (D) Increases basis—debt relief DECREASES basis (opposite effect).",
+    "tip": "Debt relief = boot RECEIVED. $100K mortgage assumed by buyer = same as receiving $100K cash. Triggers gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4936,8 +4936,8 @@ const questions = [
       "D": "Ignoring the mortgages entirely"
     },
     "correctAnswer": "C",
-    "explanation": "When both parties exchange mortgaged properties, the mortgages are netted. Boot is determined by net debt relief (debt relieved minus debt assumed). Only net relief creates boot; assuming more debt than relieved creates no boot but requires cash or other boot to balance.",
-    "tip": "Net the mortgages: (debt relieved - debt assumed). Net relief = boot received.",
+    "explanation": "Per Treas. Reg. §1.1031(d)-2, when both parties assume each other's mortgages, the liabilities are NETTED. Boot = Net debt relief (debt given up - debt assumed). If you're relieved of $200K mortgage but assume $150K mortgage, net boot = $50K. Key rule: cash given can offset debt relief boot, but NOT cash received. Why other answers are wrong: (A) Larger mortgage only—must net both sides; (B) Adding mortgages—would double-count; they offset each other; (D) Ignoring mortgages—mortgages are critical to boot calculation.",
+    "tip": "NET the mortgages: (debt relieved − debt assumed) = net boot. Cash given offsets debt relief. Cash received does NOT offset.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4957,8 +4957,8 @@ const questions = [
       "D": "The cost of the replacement property"
     },
     "correctAnswer": "C",
-    "explanation": "The substituted basis formula: Basis of new property = Basis of old property - Boot received + Boot given + Gain recognized - Loss recognized. This formula ensures deferred gain is preserved in the new property's basis.",
-    "tip": "New basis = old basis - boot received + boot given + gain recognized.",
+    "explanation": "Per IRC §1031(d), the basis of replacement property = Basis of property given up − Boot received + Boot given + Gain recognized − Loss recognized. Alternative approach: FMV of property received − Deferred gain = Basis. The formula preserves deferred gain in lower basis, ensuring eventual taxation upon sale of replacement property. Why other answers are wrong: (A) Zero—would mean no deferred gain mechanism; (B) FMV received—ignores the deferral concept; (D) Cost—this isn't a purchase, it's an exchange with substituted basis.",
+    "tip": "Basis formula: Old basis − boot received + boot given + gain recognized. Or: FMV received − deferred gain. Both methods work!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4978,8 +4978,8 @@ const questions = [
       "D": "90 days of relinquishing the old property"
     },
     "correctAnswer": "C",
-    "explanation": "The taxpayer must identify potential replacement property within 45 days of transferring the relinquished property. The identification must be in writing and signed, and generally up to three properties can be identified (or more under certain rules).",
-    "tip": "45-day identification deadline. 180-day acquisition deadline. Both are hard deadlines.",
+    "explanation": "Per IRC §1031(a)(3)(A), replacement property must be identified within 45 DAYS after transfer of relinquished property. Per Treas. Reg. §1.1031(k)-1(c), identification must be: (1) in writing, (2) signed by taxpayer, (3) unambiguously describe property. The 45 days is a HARD deadline—no extensions, not even weekends/holidays. This is often the critical deadline in failed exchanges. Why other answers are wrong: (A) 180 days—that's the ACQUISITION deadline; (B) 30 days—no such rule; (D) 90 days—no such rule.",
+    "tip": "45-day ID deadline is HARD—no extensions! 180-day acquisition deadline. Mark your calendar from transfer date.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4999,8 +4999,8 @@ const questions = [
       "D": "90 days"
     },
     "correctAnswer": "A",
-    "explanation": "The replacement property must be received by the earlier of: (1) 180 days after the transfer of the relinquished property, or (2) the due date (including extensions) of the tax return for the year of the transfer.",
-    "tip": "180 days OR tax return due date, whichever is earlier. Get an extension if needed!",
+    "explanation": "Per IRC §1031(a)(3)(B), replacement property must be received by the EARLIER of: (1) 180 days after transfer of relinquished property, OR (2) due date (including extensions) for tax return of year of transfer. Critical planning point: if you exchange in January without a return extension, your acquisition deadline may be April 15, not 180 days! Why other answers are wrong: (B) One year—too long; (C) 45 days—that's the IDENTIFICATION deadline; (D) 90 days—no such rule.",
+    "tip": "Acquisition = EARLIER of 180 days OR tax return due date. File extension to get full 180 days if exchange is in Jan-April!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5020,8 +5020,8 @@ const questions = [
       "D": "Must be a bank or financial institution"
     },
     "correctAnswer": "A",
-    "explanation": "A qualified intermediary facilitates deferred exchanges by holding sale proceeds (avoiding constructive receipt by the taxpayer) and acquiring replacement property. The QI cannot be the taxpayer, their agent, or certain related parties.",
-    "tip": "QI holds the money so you don't touch it. Touching proceeds = taxable sale.",
+    "explanation": "Per Treas. Reg. §1.1031(k)-1(g)(4), a qualified intermediary (QI) is an unrelated third party who: (1) holds sale proceeds from relinquished property, (2) acquires replacement property on taxpayer's behalf, (3) transfers it to taxpayer. The QI prevents 'actual or constructive receipt' which would disqualify the exchange. The QI CANNOT be: taxpayer, agent of taxpayer (attorney, accountant, employee, broker who worked on the transaction). Why other answers are wrong: (B) Optional in all exchanges—required for deferred/Starker exchanges; (C) Can be attorney/CPA—they're disqualified as related parties; (D) Must be bank—no such requirement.",
+    "tip": "QI = middleman who holds proceeds. Taxpayer CANNOT touch the money! QI can't be your agent (attorney, CPA, broker).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5041,8 +5041,8 @@ const questions = [
       "D": "Up to three replacement properties regardless of their value"
     },
     "correctAnswer": "D",
-    "explanation": "The three-property rule allows identification of up to three properties without regard to their fair market value. Alternative rules include the 200% rule (unlimited properties if total FMV ≤ 200% of relinquished) or 95% rule (must acquire 95% of identified value).",
-    "tip": "3-property rule: up to 3 properties, any value. Alternative: 200% rule or 95% rule.",
+    "explanation": "Per Treas. Reg. §1.1031(k)-1(c)(4), the three-property rule allows identification of up to 3 replacement properties regardless of total FMV. Alternatives: (1) 200% rule—unlimited properties if total FMV ≤ 200% of relinquished property; (2) 95% rule—if exceeding both limits, must acquire 95% of identified property FMV. Most exchanges use the simple 3-property rule. Why other answers are wrong: (A) 200% of relinquished value—that's the 200% rule, a separate alternative; (B) Same state—no geographic restriction; (C) Only one property—unnecessarily restrictive.",
+    "tip": "3-property rule = identify up to 3, ANY value. Or use 200% rule (unlimited properties, ≤200% FMV). Most use 3-property rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5062,8 +5062,8 @@ const questions = [
       "D": "Either party disposes of the property within 2 years"
     },
     "correctAnswer": "D",
-    "explanation": "When a like-kind exchange occurs between related parties, both parties must hold their property for at least 2 years or the exchange is disqualified. Exceptions exist for death, involuntary conversion, or exchanges where tax avoidance was not a principal purpose.",
-    "tip": "Related party 1031: 2-year holding period for BOTH parties or it's disqualified.",
+    "explanation": "Per IRC §1031(f), when like-kind exchanges occur between related parties (per §267(b) or §707(b)(1)), BOTH parties must hold their received property for at least 2 YEARS or the exchange is disqualified retroactively. Exceptions: (1) death of either party, (2) involuntary conversion, (3) IRS is satisfied tax avoidance wasn't principal purpose. This prevents 'basis shifting' between related parties. Why other answers are wrong: (A) Family members—being related triggers the 2-year rule, doesn't automatically disqualify; (B) Simultaneous exchange—timing doesn't matter for related parties; (C) Real property—property type doesn't affect the 2-year rule.",
+    "tip": "Related party §1031: BOTH parties must hold for 2 YEARS or entire exchange is disqualified. Anti-abuse rule!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5083,8 +5083,8 @@ const questions = [
       "D": "Is determined by the 45-day rule"
     },
     "correctAnswer": "B",
-    "explanation": "The holding period of the relinquished property 'tacks' onto the replacement property. This means if the taxpayer held the old property for 5 years, the new property immediately has a 5-year holding period for capital gain purposes.",
-    "tip": "Holding period tacks in 1031. New property inherits old property's holding period.",
+    "explanation": "Per IRC §1223(1), when property has a substituted basis (as in §1031 exchanges), the holding period of the relinquished property 'tacks' onto the replacement property. If old property was held 5 years, new property starts with 5-year holding period. This is beneficial for long-term capital gain treatment if replacement property is later sold. Why other answers are wrong: (A) Starts fresh—would be detrimental to taxpayers and inconsistent with substituted basis concept; (C) Always long-term—depends on original holding period; (D) 45-day rule—that's for identification, not holding period.",
+    "tip": "Holding period TACKS per §1223. Old property held 5 years → new property starts at 5 years. Beneficial for LTCG treatment!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5104,8 +5104,8 @@ const questions = [
       "D": "Both cash boot received and mortgage relief"
     },
     "correctAnswer": "C",
-    "explanation": "Cash (or FMV of other property) given can offset mortgage boot received but NOT cash boot received. If you give cash and receive cash, they don't net. But cash given can offset debt relief to reduce recognized gain.",
-    "tip": "Cash given offsets debt relief, NOT cash received. Important distinction!",
+    "explanation": "Per Treas. Reg. §1.1031(d)-2, cash or other property GIVEN can offset mortgage boot (debt relief), but cash given does NOT offset cash received—they remain separate. Example: Give $50K cash, get relieved of $100K mortgage → net boot = $50K (not netted against cash you might also receive). This asymmetric netting rule is frequently tested! Why other answers are wrong: (A) No effect—cash given definitely reduces net boot from debt relief; (B) Cash only—can't offset cash received with cash given; (D) Both—can only offset mortgage relief, not cash.",
+    "tip": "Cash given offsets DEBT RELIEF only, NOT cash received. They're treated asymmetrically. Common exam trap!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5125,8 +5125,8 @@ const questions = [
       "D": "Only the additional cash invested"
     },
     "correctAnswer": "C",
-    "explanation": "The exchanged basis (carryover portion) continues the depreciation method and life of the relinquished property. Any additional basis from boot given or recognized gain is depreciated as if newly purchased property.",
-    "tip": "Split the basis: carryover portion = continue old depreciation; new basis = fresh start.",
+    "explanation": "Per Treas. Reg. §1.168(i)-6, replacement property basis is bifurcated: (1) Exchanged basis (carryover)—continues depreciation method/life of relinquished property; (2) Excess basis (from boot given or gain recognized)—treated as newly placed in service, starts fresh MACRS. This 'split basis' rule ensures deferred gain portion continues prior depreciation treatment. Why other answers are wrong: (A) Original cost—not relevant for exchange basis; (B) FMV—ignores substituted basis concept; (D) Only cash invested—misses the carryover component.",
+    "tip": "Split basis depreciation: Carryover portion → continue old method/life. Excess basis → new MACRS. Two calculations!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5146,8 +5146,8 @@ const questions = [
       "D": "Qualifies only if no boot is involved"
     },
     "correctAnswer": "B",
-    "explanation": "U.S. real property and foreign real property are NOT considered like-kind. An exchange must be U.S. property for U.S. property OR foreign property for foreign property. This is one of the few restrictions on real property like-kind treatment.",
-    "tip": "U.S. real property ≠ foreign real property for 1031. Different categories.",
+    "explanation": "Per IRC §1031(h), U.S. real property and foreign real property are NOT like-kind to each other. Exchanges must be: U.S. real property ↔ U.S. real property, OR foreign real property ↔ foreign real property. This is one of the FEW restrictions on real property like-kind (normally very broad). Policy: prevents avoiding FIRPTA and other international tax rules. Why other answers are wrong: (A) Qualifies—expressly prohibited by §1031(h); (C) Similar use—use doesn't matter, it's the U.S./foreign distinction; (D) No boot—boot is irrelevant to the like-kind determination.",
+    "tip": "U.S. ≠ foreign real property per §1031(h). One of the few real property restrictions! U.S.↔U.S. or foreign↔foreign only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5167,8 +5167,8 @@ const questions = [
       "D": "Reducing the amount of boot received or increasing basis"
     },
     "correctAnswer": "D",
-    "explanation": "Exchange expenses reduce the amount realized (like reducing boot received) or are added to basis. They can effectively reduce recognized gain by offsetting boot. They are not separately deductible as expenses.",
-    "tip": "Exchange costs reduce boot (or increase basis). Help minimize taxable gain.",
+    "explanation": "Per Treas. Reg. §1.1031(k)-1(g)(7), exchange expenses (commissions, title insurance, escrow fees, legal fees) reduce the amount realized from relinquished property or are added to basis of replacement property. Effect: reduces boot received, which reduces recognized gain. They are NOT separately deductible as current expenses—they're capitalized into the transaction. Why other answers are wrong: (A) Ignored—they have significant impact on boot/basis; (B) Capital losses—not a loss, just reduces gain recognition; (C) Currently deductible—must be capitalized.",
+    "tip": "Exchange expenses REDUCE boot (or increase basis). Capitalize them, don't deduct. Effective at minimizing recognized gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5188,8 +5188,8 @@ const questions = [
       "D": "The exchange is between related parties"
     },
     "correctAnswer": "B",
-    "explanation": "A reverse exchange occurs when the taxpayer acquires replacement property before disposing of the relinquished property. An exchange accommodation titleholder (EAT) holds title to one property. Safe harbor requires parking the property for no more than 180 days.",
-    "tip": "Reverse exchange = buy new before selling old. Use EAT to hold property temporarily.",
+    "explanation": "Per Rev. Proc. 2000-37, a reverse exchange occurs when replacement property is acquired BEFORE relinquished property is transferred. Since taxpayer can't hold both properties simultaneously and claim §1031, an Exchange Accommodation Titleholder (EAT) 'parks' one property. Safe harbor: property must be parked ≤180 days. Same 45-day ID and 180-day deadlines apply. Why other answers are wrong: (A) Multiple properties—that's a multi-property exchange, not reverse; (C) Cash before property—irrelevant to reverse exchange definition; (D) Related parties—separate issue under §1031(f).",
+    "tip": "Reverse = buy BEFORE sell. EAT parks property up to 180 days. Same 45/180 deadlines. Use when dream property appears first!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5209,8 +5209,8 @@ const questions = [
       "D": "Improve their own property with exchange proceeds"
     },
     "correctAnswer": "C",
-    "explanation": "An improvement exchange allows the taxpayer to acquire property and have improvements made using exchange proceeds before taking title. An EAT holds the property while improvements are made, which must be completed within the 180-day period.",
-    "tip": "Build-to-suit: EAT holds property while improvements made. Must finish in 180 days.",
+    "explanation": "Per Rev. Proc. 2000-37, a build-to-suit/improvement exchange allows taxpayer to exchange into property that will be improved using exchange proceeds. An EAT holds title while improvements are constructed. All improvements must be completed within 180-day acquisition period—work in progress at day 180 doesn't count toward exchange value. Why other answers are wrong: (A) Only land portion—improvements completed by day 180 count too; (B) Immediate possession—taxpayer can't possess while EAT holds title; (D) Improve own property—can't use proceeds to improve property you already own.",
+    "tip": "Build-to-suit: EAT holds while improvements made. MUST complete by day 180—unfinished work doesn't count!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5230,8 +5230,8 @@ const questions = [
       "D": "Gain is recognized only to the extent of boot received, limited to realized gain"
     },
     "correctAnswer": "D",
-    "explanation": "Receiving boot doesn't disqualify the exchange—it just triggers recognition of gain to the extent of the lesser of boot received or gain realized. The exchange still defers gain on the like-kind property received.",
-    "tip": "Boot triggers partial recognition, not disqualification. Still a valid 1031.",
+    "explanation": "Per IRC §1031(b), receiving boot does NOT disqualify the exchange—it simply triggers gain recognition limited to the LESSER of boot received or realized gain. The like-kind property portion still qualifies for deferral. This is called a 'partial' exchange. Many exchanges intentionally include some boot for cash flow while still deferring most gain. Why other answers are wrong: (A) Two separate sales—still one integrated transaction; (B) Loss recognized—losses NEVER recognized in §1031; (C) Entire exchange disqualified—boot triggers partial recognition, not disqualification.",
+    "tip": "Boot = partial recognition, NOT disqualification. Still valid §1031 for like-kind portion. Recognized gain = lesser of boot or gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5251,8 +5251,8 @@ const questions = [
       "D": "Each asset is treated separately with only the real property qualifying"
     },
     "correctAnswer": "D",
-    "explanation": "When an exchange involves both qualifying real property and non-qualifying personal property, the exchange is bifurcated. The real property exchange qualifies for 1031; the personal property is a separate taxable transaction.",
-    "tip": "Mixed exchanges: split qualifying real property from non-qualifying personal property.",
+    "explanation": "Per Treas. Reg. §1.1031(j)-1, when an exchange involves both qualifying (real) and non-qualifying (personal) property, the transaction is BIFURCATED. The real property portion qualifies for §1031 deferral; the personal property portion is a separate taxable exchange. This commonly occurs when purchasing property with fixtures, furniture, or equipment. Allocate values carefully! Why other answers are wrong: (A) All like-kind—personal property doesn't qualify post-TCJA; (B) Must restructure—bifurcation is automatic; (C) Entire exchange disqualified—only personal property portion is taxable.",
+    "tip": "Mixed exchange = BIFURCATE. Real property → §1031 deferral. Personal property → taxable. Allocate values between them!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5272,8 +5272,8 @@ const questions = [
       "D": "The entire exchange is taxable"
     },
     "correctAnswer": "B",
-    "explanation": "If boot includes an installment note, the taxpayer can use the installment method to report gain from the boot as payments are received. This provides additional deferral beyond the 1031 deferral on the like-kind property.",
-    "tip": "Boot note = can use installment method. Double deferral potential.",
+    "explanation": "Per IRC §453 combined with §1031, when boot includes an installment note, the taxpayer can report recognized gain using the installment method—paying tax as principal payments are received. This creates 'double deferral': §1031 defers gain on like-kind property, §453 spreads boot-triggered gain over collection period. Powerful planning tool! Why other answers are wrong: (A) Installment unavailable—it IS available for boot portion; (C) All gain immediately—only if taxpayer elects out of installment method; (D) Entire exchange taxable—boot note only affects boot portion.",
+    "tip": "Boot note → installment method (§453) available! Double deferral: §1031 + §453. Spreads tax over collection period.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5293,8 +5293,8 @@ const questions = [
       "D": "Qualify for 1031 treatment"
     },
     "correctAnswer": "A",
-    "explanation": "Partnership interests are specifically excluded from Section 1031 treatment, regardless of what the partnership owns. However, tenant-in-common interests and Delaware statutory trust interests in real property may qualify.",
-    "tip": "Partnership interests = no 1031. But TIC interests and DST interests OK.",
+    "explanation": "Per IRC §1031(a)(2)(D), partnership interests are SPECIFICALLY EXCLUDED from like-kind exchange treatment, even if the partnership owns 100% real property. Rationale: partnership interests are considered personal property, not direct ownership of underlying assets. HOWEVER, tenant-in-common (TIC) interests and Delaware Statutory Trust (DST) interests qualify because they're treated as direct real property ownership. Why other answers are wrong: (B) Domestic partnership—location doesn't matter, still excluded; (C) Only real property—underlying assets irrelevant, partnership interest itself is excluded; (D) Qualify—expressly excluded by statute.",
+    "tip": "Partnership interests = EXCLUDED per §1031(a)(2)(D). TIC and DST interests qualify (treated as direct real property ownership).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5314,8 +5314,8 @@ const questions = [
       "D": "Exchanging property and then dropping out of the deal"
     },
     "correctAnswer": "A",
-    "explanation": "In a drop and swap, a partnership distributes property to partners (as TIC interests), and each partner then does their own 1031 exchange. This allows partners with different investment goals to each pursue separate exchanges.",
-    "tip": "Drop and swap: partnership distributes TIC interests, then partners do separate 1031s.",
+    "explanation": "The 'drop and swap' technique addresses the partnership interest exclusion under §1031(a)(2)(D). Step 1 (Drop): Partnership distributes property to partners as tenant-in-common (TIC) interests in a §731 liquidating distribution. Step 2 (Swap): Each partner individually completes their own §1031 exchange. This allows partners with different investment goals to pursue separate replacement properties. IRS scrutinizes for substance! Why other answers are wrong: (B) Related entities—different concept; (C) Dropping price—not a real technique; (D) Dropping out—not the concept.",
+    "tip": "Drop and swap: Partnership → distributes TIC interests → partners do separate §1031s. Workaround for partnership exclusion!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5335,8 +5335,8 @@ const questions = [
       "D": "This combination is never allowed"
     },
     "correctAnswer": "A",
-    "explanation": "A taxpayer can convert rental property to a principal residence, live in it for 2+ years, then sell and use both Section 121 (exclude gain up to limits) and Section 1031 (for any investment portion). Complex rules apply to these hybrid situations.",
-    "tip": "Can combine 121 and 1031 with careful planning. Rental → residence → sale.",
+    "explanation": "Per IRC §121(d)(10), a taxpayer can strategically combine §121 and §1031 benefits. Example: Convert rental to principal residence → live in it 2+ years → sell. §121 excludes up to $250K/$500K gain; §1031 could defer remaining gain if exchange executed. Key restriction: For property acquired via §1031, §121 exclusion requires 5-year ownership (not 2) per §121(d)(10). Complex rules—must plan carefully! Why other answers are wrong: (B) Exchanging residence—personal residence doesn't qualify for §1031; (C) Different states—geographic location irrelevant; (D) Never allowed—it IS allowed with proper planning.",
+    "tip": "§121 + §1031 combo: Convert rental → residence → sell. Watch 5-year rule if property was acquired via prior §1031!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5356,8 +5356,8 @@ const questions = [
       "D": "Immediately taxable regardless of boot"
     },
     "correctAnswer": "A",
-    "explanation": "Depreciation recapture (unrecaptured Section 1250 gain for real property) is deferred in a 1031 exchange if no boot is received. If boot is received, recapture is recognized first, then remaining gain. The recapture potential carries over to the new property.",
-    "tip": "Recapture is deferred in 1031 (no boot). Boot triggers recapture recognition first.",
+    "explanation": "Per Treas. Reg. §1.1250-3(d), depreciation recapture (unrecaptured §1250 gain for real property—taxed at 25%) is DEFERRED in a §1031 exchange when no boot is received. The recapture potential carries over to replacement property. When boot IS received, recapture is recognized FIRST (ordering rule), then other gain. This prevents cherry-picking to recognize only favorable gain types. Why other answers are wrong: (B) Never applicable to real property—unrecaptured §1250 gain exists for depreciable real estate; (C) Personal property only—applies to real property too; (D) Immediately taxable—only with boot, and recapture carries over to extent deferred.",
+    "tip": "Recapture DEFERRED if no boot. With boot, recapture recognized FIRST (ordering rule), then other gain. Recapture carries over!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5377,8 +5377,8 @@ const questions = [
       "D": "Avoiding deferred exchanges entirely"
     },
     "correctAnswer": "A",
-    "explanation": "QI bankruptcy risk (taxpayer loses funds if QI fails) can be mitigated by requiring qualified escrow or trust accounts (funds held by third party), QI bonding or fidelity insurance, and choosing financially stable QIs.",
-    "tip": "Protect exchange funds: qualified escrow, bonding, insurance. QI bankruptcy = you lose.",
+    "explanation": "Per Treas. Reg. §1.1031(k)-1(g)(3), qualified escrow accounts and qualified trusts provide taxpayer protection—funds are held by third party (bank/escrow company), not the QI directly. Additional protections: fidelity bonds, errors & omissions insurance, segregated accounts, financial statement review. Several high-profile QI bankruptcies have caused taxpayers to lose exchange funds—due diligence is critical! Why other answers are wrong: (B) Only bank QIs—non-banks can be safe with proper safeguards; (C) 45-day completion—doesn't address QI solvency risk; (D) Avoid deferred exchanges—deferred exchanges are often necessary.",
+    "tip": "Protect yourself: qualified escrow/trust (held by third party), bonds, insurance. QI bankruptcy = YOUR loss. Do due diligence!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5398,8 +5398,8 @@ const questions = [
       "D": "Personal property (disqualifying post-TCJA)"
     },
     "correctAnswer": "B",
-    "explanation": "Per IRS Revenue Ruling 2004-86, properly structured DST interests are treated as direct interests in real property for 1031 purposes. This allows 1031 exchange into passive real estate investments without partnership interest disqualification.",
-    "tip": "DST = treated as real property interest for 1031. Popular for passive investors.",
+    "explanation": "Per Rev. Rul. 2004-86, a properly structured Delaware Statutory Trust (DST) interest is treated as an undivided fractional interest in real property—NOT as a partnership interest or security. This allows DST interests to qualify for §1031 treatment, unlike partnership interests which are excluded under §1031(a)(2)(D). DSTs are popular for passive investors exiting active management while deferring gain. Why other answers are wrong: (A) Partnership interest—DSTs are specifically NOT treated as partnerships for §1031; (C) Security—proper DST structure avoids securities classification; (D) Personal property—DSTs represent real property interests.",
+    "tip": "DST = undivided real property interest per Rev. Rul. 2004-86. Qualifies for §1031! Popular for passive investors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5419,8 +5419,8 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "C",
-    "explanation": "Realized gain = $250,000 (FMV given) - $100,000 (basis) = $150,000. Boot received = $30,000 cash. Recognized gain = lesser of boot ($30,000) or realized gain ($150,000) = $30,000. The remaining $120,000 is deferred.",
-    "tip": "Calculate: (1) Realized gain, (2) Boot received, (3) Recognized = lesser of the two.",
+    "explanation": "Per IRC §1031(b), gain recognized = LESSER of boot received or realized gain. Step 1: Realized Gain = FMV given ($250K) − Basis ($100K) = $150K. Step 2: Boot received = $30K cash. Step 3: Recognized gain = lesser of $30K or $150K = $30K. The remaining $120K gain is DEFERRED into lower basis of replacement property. Why other answers are wrong: (A) $120K—that's the DEFERRED gain, not recognized; (B) $0—would be true only if no boot received; (D) $150K—that's total REALIZED gain, not recognized.",
+    "tip": "Three steps: (1) Realized = FMV given − basis, (2) Boot received, (3) Recognized = LESSER of (1) and (2). Memorize this!",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -5440,8 +5440,8 @@ const questions = [
       "D": "$100,000"
     },
     "correctAnswer": "D",
-    "explanation": "Basis formula: Old basis ($100,000) - Boot received ($30,000) + Boot given ($0) + Gain recognized ($30,000) = $100,000. Alternatively: FMV received ($220,000) - Deferred gain ($120,000) = $100,000.",
-    "tip": "New basis = old basis - boot received + boot given + gain recognized. Or: FMV - deferred gain.",
+    "explanation": "Per IRC §1031(d), two methods yield same answer. Method 1 (Formula): Old basis ($100K) − Boot received ($30K) + Boot given ($0) + Gain recognized ($30K) = $100K. Method 2 (FMV approach): FMV received ($220K) − Deferred gain ($120K) = $100K. Both methods work—use whichever is faster! Why other answers are wrong: (A) $130K—incorrectly adds boot received instead of subtracting; (B) $70K—forgot to add gain recognized; (C) $220K—that's FMV, ignoring deferred gain concept.",
+    "tip": "Basis formula: Old − boot received + boot given + gain recognized. OR: FMV received − deferred gain. Both work!",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -5461,8 +5461,8 @@ const questions = [
       "D": "Always long-term capital gain"
     },
     "correctAnswer": "A",
-    "explanation": "Recognized gain in a 1031 exchange retains the character it would have had if the property were sold. This means Section 1231 property produces 1231 gain, and depreciation recapture (Section 1245/1250) is recognized first if applicable.",
-    "tip": "Gain character = same as if sold. Recapture recognized before other gain.",
+    "explanation": "Per Treas. Reg. §1.1031(a)-1(a)(2), recognized gain in a §1031 exchange retains its character as if the property were sold—§1231 gain remains §1231 gain, depreciation recapture (§§1245/1250) is recaptured. Ordering rule: recapture is recognized FIRST when boot triggers gain, then other gain (§1231/capital). This prevents taxpayers from selectively recognizing only favorable gain character. Why other answers are wrong: (B) Type of boot—boot triggers recognition, but doesn't determine character; (C) Always ordinary—could be capital or §1231 depending on property; (D) Always LTCG—ignores recapture ordering.",
+    "tip": "Gain CHARACTER preserved as if sold. Recapture recognized FIRST (ordering rule), then §1231/capital gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },

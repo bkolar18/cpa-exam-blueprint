@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 210 | 1,135 | 16% | In Progress |
+| REG | 1,345 | 245 | 1,100 | 18% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -60,10 +60,80 @@ All 58 exam TBS questions have been enhanced with:
 | Tax Credits | 35 | reg-004-001 to reg-004-035 | **Complete** |
 | Property Transactions - Basis | 35 | reg-005-001 to reg-005-035 | **Complete** |
 | Property Transactions - Gains/Losses | 35 | reg-006-001 to reg-006-035 | **Complete** |
+| Property Transactions - Like-Kind Exchanges | 35 | reg-007-001 to reg-007-035 | **Complete** |
 | Property Transactions - §1231/Depreciation | 35+ | Various | Pending |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 6)
+
+**Batch 6: 35 Additional Questions Enhanced (reg-007-001 to reg-007-035)**
+
+Property Transactions - Like-Kind Exchanges (35 questions - reg-007-001 to reg-007-035):
+- IRC section references (§1031, §1031(a), §1031(b), §1031(c), §1031(d), §1031(f), §1031(h), §1223, §267, §707, etc.)
+- Basic §1031 concept - DEFERRAL not exclusion, gain preserved in lower basis
+- TCJA changes - real property only after December 31, 2017
+- Like-kind definition - nature/character for real property (very broad)
+- Boot definition and treatment - cash, debt relief, non-like-kind property
+- Dealer/inventory property exclusion - held for sale doesn't qualify
+- Personal-use property exclusion - §1031 vs §121 comparison
+- Gain recognition formula - lesser of boot received or realized gain
+- Loss recognition - NEVER recognized in §1031 (asymmetric treatment)
+- Mortgage assumption as boot - debt relief = boot received
+- Netting mortgages - cash given offsets debt relief only (not cash received)
+- Basis calculation formula - old basis − boot received + boot given + gain recognized
+- 45-day identification deadline - hard deadline, no extensions
+- 180-day acquisition deadline - earlier of 180 days or tax return due date
+- Qualified intermediary (QI) requirements - can't be taxpayer's agent
+- Three-property rule and alternatives (200% rule, 95% rule)
+- Related party rules - 2-year holding period for both parties
+- Holding period tacking - §1223 substituted basis
+- Boot offset rules - cash given offsets debt relief only
+- Depreciation of replacement property - split basis (carryover vs excess)
+- U.S. vs foreign property - NOT like-kind per §1031(h)
+- Exchange expenses - reduce boot or increase basis
+- Reverse exchanges (Rev. Proc. 2000-37) - buy before sell, EAT parking
+- Improvement/build-to-suit exchanges - EAT holds while improvements made
+- Partial exchanges - boot triggers partial recognition, not disqualification
+- Multi-asset exchanges - bifurcate qualifying and non-qualifying property
+- §1031 and installment method (§453) - double deferral potential
+- Partnership interest exclusion - §1031(a)(2)(D) specifically excludes
+- Drop and swap planning - partnership → TIC distribution → individual §1031s
+- §121/§1031 combination - convert rental to residence, 5-year rule
+- Depreciation recapture - deferred if no boot, recapture recognized first (ordering)
+- QI bankruptcy risk - qualified escrow, bonding, insurance protection
+- Delaware Statutory Trust (DST) - Rev. Rul. 2004-86, qualifies for §1031
+- Comprehensive calculations - realized gain, recognized gain, basis
+
+**Key IRC/Regulatory References Used (Batch 6):**
+| Topic | IRC/Reg Section |
+|-------|-----------------|
+| Like-Kind Exchange | §1031(a)(1) |
+| Boot Recognition | §1031(b) |
+| Loss Nonrecognition | §1031(c) |
+| Basis of Replacement Property | §1031(d) |
+| Related Party Rules | §1031(f) |
+| U.S. vs Foreign Property | §1031(h) |
+| Excluded Property (Dealer) | §1031(a)(2)(A) |
+| Partnership Interest Exclusion | §1031(a)(2)(D) |
+| Like-Kind Definition | Treas. Reg. §1.1031(a)-1(b) |
+| Mortgage Netting | Treas. Reg. §1.1031(d)-2 |
+| Qualified Intermediary | Treas. Reg. §1.1031(k)-1(g)(4) |
+| Identification Rules | Treas. Reg. §1.1031(k)-1(c) |
+| Three-Property Rule | Treas. Reg. §1.1031(k)-1(c)(4) |
+| Qualified Escrow | Treas. Reg. §1.1031(k)-1(g)(3) |
+| Exchange Expenses | Treas. Reg. §1.1031(k)-1(g)(7) |
+| Split Basis Depreciation | Treas. Reg. §1.168(i)-6 |
+| Recapture in Exchanges | Treas. Reg. §1.1250-3(d) |
+| Reverse/Improvement Exchanges | Rev. Proc. 2000-37 |
+| DST Treatment | Rev. Rul. 2004-86 |
+| Holding Period Tacking | §1223(1) |
+| Related Parties | §267(b), §707(b)(1) |
+| §121/1031 Combination | §121(d)(10) |
+| Installment Method | §453 |
+
+---
 
 ### REG Enhancement Completed - January 15, 2026 (Session 5)
 
