@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 140 | 1,205 | 10% | In Progress |
+| REG | 1,345 | 175 | 1,170 | 13% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -50,7 +50,7 @@ All 58 exam TBS questions have been enhanced with:
 
 **File:** `src/lib/data/practice-questions/reg.ts`
 
-### REG Individual Taxation - In Progress (140/223 Questions)
+### REG Individual Taxation + Property Transactions - In Progress (175 Questions)
 
 | Batch | Questions | Range | Status |
 |-------|-----------|-------|--------|
@@ -58,11 +58,60 @@ All 58 exam TBS questions have been enhanced with:
 | Deductions FOR AGI | 35 | reg-002-001 to reg-002-035 | **Complete** |
 | Deductions FROM AGI | 35 | reg-003-001 to reg-003-035 | **Complete** |
 | Tax Credits | 35 | reg-004-001 to reg-004-035 | **Complete** |
-| Alternative Minimum Tax | 35 | reg-005-001 to reg-005-035 | Pending |
-| Property Transactions | 211 | reg-prop-* | Pending |
+| Property Transactions - Basis | 35 | reg-005-001 to reg-005-035 | **Complete** |
+| Property Transactions - Gains/Losses | 35 | reg-006-001 to reg-006-035 | Pending |
+| Property Transactions - §1231/Depreciation | 35+ | Various | Pending |
 | Entity Taxation | 300+ | Various | Pending |
 | Business Law | 200+ | Various | Pending |
 | Professional Ethics | 50+ | Various | Pending |
+
+### REG Enhancement Completed - January 15, 2026 (Session 4)
+
+**Batch 4: 35 Additional Questions Enhanced (reg-005-001 to reg-005-035)**
+
+Property Transactions - Basis (35 questions - reg-005-001 to reg-005-035):
+- IRC section references (§§1001-1091, §§267, §307, §351, §358, §453, §722, §752, §1014, §1015, §1016, §1031, §1033, etc.)
+- Definition and uses of basis, cost basis, adjusted basis
+- Gift basis (§1015) - carryover, dual basis for loss property, gift tax addition
+- Inherited basis (§1014) - step-up/step-down, alternate valuation (§2032)
+- Stock basis - purchase, dividends (§307), splits, wash sales (§1091)
+- Entity basis - partnership (§722/752), S corporation (§1367)
+- Converted property, employee compensation (§83), ESPP (§423), ISO (§422)
+- Improvements vs repairs (§263), casualty adjustments
+- Special rules - installment sales (§453), like-kind exchanges (§1031), involuntary conversions (§1033)
+- Section 121 home sale exclusion, related party rules (§267)
+- Section 351 corporate formation, §197 intangibles, §338(h)(10) elections
+- Community property (§1014(b)(6)), estate planning concepts
+
+**Key IRC References Used (Batch 4):**
+| Topic | IRC Section |
+|-------|-------------|
+| Gain/Loss Calculation | §1001 |
+| Cost Basis | §1012 |
+| Inherited Basis | §1014 |
+| Gift Basis | §1015 |
+| Adjusted Basis | §1016 |
+| Like-Kind Exchanges | §1031 |
+| Involuntary Conversions | §1033 |
+| Wash Sales | §1091 |
+| Related Party Sales | §267 |
+| Stock Rights/Dividends | §307 |
+| Corporate Formation | §351, §358, §362 |
+| Installment Sales | §453 |
+| Partnership Basis | §722, §752, §705 |
+| S Corp Basis | §1367, §1366 |
+| Property for Services | §83 |
+| ISO Stock | §422 |
+| ESPP Stock | §423 |
+| §197 Intangibles | §197 |
+| Acquisition Allocation | §1060 |
+| Deemed Asset Sale | §338(h)(10) |
+| Alternate Valuation | §2032 |
+| Community Property | §1014(b)(6) |
+| Capitalization Rules | §263 |
+| Depreciation | §167, §168 |
+
+---
 
 ### REG Enhancement Completed - January 15, 2026 (Session 3)
 

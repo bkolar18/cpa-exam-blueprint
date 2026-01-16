@@ -3265,7 +3265,7 @@ const questions = [
     "id": "reg-005-001",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Definition of basis",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -3277,8 +3277,8 @@ const questions = [
       "D": "Only property tax assessments"
     },
     "correctAnswer": "C",
-    "explanation": "Basis is the starting point for calculating gain or loss on disposition (sales price minus basis equals gain/loss) and for determining depreciation deductions on business or investment property. It represents the taxpayer's investment in the property for tax purposes.",
-    "tip": "Basis = your tax investment. Used for gain/loss and depreciation calculations.",
+    "explanation": "Per IRC §1001 and §167, basis is the taxpayer's tax investment in property, used for: (1) Calculating gain or loss on disposition (Amount Realized − Adjusted Basis = Gain/Loss per §1001(a)); (2) Determining depreciation deductions (depreciable basis × rate per §167). Basis rules are found throughout IRC Subchapter O (§§1011-1023) and vary based on how property was acquired. Why other answers are wrong: (A) Insurance coverage based on replacement cost/FMV, not tax basis; (B) FMV is a valuation concept—basis is cost/investment concept; (D) Property taxes based on assessed value, not tax basis.",
+    "tip": "Basis = tax investment. Two main uses: (1) Gain/loss calculation (§1001), (2) Depreciation base (§167).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3286,7 +3286,7 @@ const questions = [
     "id": "reg-005-002",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Cost basis",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -3298,8 +3298,8 @@ const questions = [
       "D": "Only the purchase price"
     },
     "correctAnswer": "A",
-    "explanation": "Cost basis includes the purchase price plus all costs incidental to the purchase, including sales tax, freight, installation, legal fees, and other acquisition costs. These amounts are capitalized into basis rather than deducted.",
-    "tip": "Cost basis = price paid + all costs to acquire and prepare for use.",
+    "explanation": "Per IRC §1012, cost basis includes purchase price PLUS all costs to acquire and place property in service: sales tax, freight, installation, title insurance, recording fees, legal fees, testing, site preparation. These acquisition costs are capitalized, not deducted. Reg. §1.263(a)-2 distinguishes capitalized costs from deductible expenses. Why other answers are wrong: (B) Includes financing too—borrowed amounts count as cost; (C) FMV used for gifts/inheritances, not purchases; (D) Must include ALL acquisition costs, not just purchase price.",
+    "tip": "Cost Basis (§1012) = Price + ALL acquisition costs. Think: what did it cost to get property ready for use?",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3307,7 +3307,7 @@ const questions = [
     "id": "reg-005-003",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Adjusted basis",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -3319,8 +3319,8 @@ const questions = [
       "D": "Original cost divided by years held"
     },
     "correctAnswer": "C",
-    "explanation": "Adjusted basis starts with cost basis, increases for capital improvements and certain other additions, and decreases for depreciation, amortization, depletion, and other reductions. This adjusted figure is used to calculate gain or loss on sale.",
-    "tip": "Adjusted basis = cost + improvements - depreciation. The number used for gain/loss.",
+    "explanation": "Per IRC §1016, Adjusted Basis = Original Basis + Additions (capital improvements, §1016(a)(1)) − Reductions (depreciation/amortization/depletion, §1016(a)(2)). Common adjustments: Increase for improvements, assessments, casualty restoration. Decrease for depreciation (§167/168), depletion (§611), amortization (§197), casualty losses, certain distributions. This is the figure used to compute gain/loss under §1001. Why other answers are wrong: (A) FMV is for inherited property, not adjusted basis calculation; (B) FMV minus costs describes amount realized, not basis; (D) No time-based division—specific adjustments apply.",
+    "tip": "Adjusted Basis (§1016) = Original + Improvements − Depreciation. The number for gain/loss calculations.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3328,7 +3328,7 @@ const questions = [
     "id": "reg-005-004",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Gift basis - general rule",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -3340,8 +3340,8 @@ const questions = [
       "D": "The original purchase price paid by the donor"
     },
     "correctAnswer": "B",
-    "explanation": "The general rule for gifted property is that the donee takes the donor's adjusted basis (carryover basis). This ensures that built-in gains are not escaped through gifting. Special rules apply when FMV is less than basis.",
-    "tip": "Gift basis = donor's basis carries over. Built-in gain transfers with the property.",
+    "explanation": "Per IRC §1015(a), the general rule for gifted property is CARRYOVER BASIS—donee takes donor's adjusted basis. This ensures built-in gains are not escaped through gifting (gains 'carry over' to donee). Holding period also tacks. Special dual-basis rule applies when FMV < donor's basis (see §1015(a) loss property rule). Gift tax paid may increase basis for appreciation portion (§1015(d)). Why other answers are wrong: (A) FMV used for inheritances (§1014), not gifts; (C) Zero basis never applies to gifts; (D) Must use ADJUSTED basis, not original cost.",
+    "tip": "Gift Basis (§1015) = Donor's adjusted basis carries over. 'Carryover' = gain carries to donee.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3349,7 +3349,7 @@ const questions = [
     "id": "reg-005-005",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Inherited property basis",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -3361,8 +3361,8 @@ const questions = [
       "D": "Zero basis"
     },
     "correctAnswer": "C",
-    "explanation": "Inherited property receives a basis equal to fair market value at the date of death (or alternate valuation date if elected). This 'step-up' eliminates built-in gains, while a 'step-down' eliminates built-in losses.",
-    "tip": "Inherited basis = FMV at death. Built-in gains/losses disappear at death.",
+    "explanation": "Per IRC §1014(a), inherited property receives basis equal to FMV at date of death (or alternate valuation date per §2032 if elected). 'Step-up' eliminates built-in GAINS—major planning benefit. 'Step-down' eliminates built-in LOSSES—planning caution (sell losers before death!). Exception: IRD items (§691) don't get stepped-up basis. Holding period is automatically long-term (§1223(9)). Why other answers are wrong: (A) Original cost irrelevant—FMV at death controls; (B) Carryover is for GIFTS (§1015), not inheritances; (D) Zero basis never applies to inheritances.",
+    "tip": "Inherited Basis (§1014) = FMV at death. Step-up erases gains. Step-down erases losses (sell losers before death!).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3370,7 +3370,7 @@ const questions = [
     "id": "reg-005-006",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Stock basis from purchase",
     "difficulty": "easy",
     "questionFormat": "MCQ",
@@ -3382,8 +3382,8 @@ const questions = [
       "D": "Fair market value on the purchase date"
     },
     "correctAnswer": "C",
-    "explanation": "The basis of purchased stock includes the purchase price plus any broker's commission or other acquisition costs. These amounts are capitalized into basis and reduce gain (or increase loss) when the stock is sold.",
-    "tip": "Stock basis = price paid + commissions. Commissions are capitalized, not deducted.",
+    "explanation": "Per IRC §1012, stock basis = purchase price + broker's commissions + other acquisition costs (SEC fees, transfer taxes). Commissions are capitalized into basis, reducing gain (or increasing loss) on sale—NOT currently deductible. Same treatment on sale: commissions reduce amount realized. Dividends received are separate income, don't reduce basis (unless return of capital). Why other answers are wrong: (A) Regular dividends don't affect basis; (B) Must include ALL acquisition costs; (D) FMV approach used for gifts/inheritances, not purchases.",
+    "tip": "Stock Basis (§1012) = Price + Buy commissions. Sell commissions reduce Amount Realized. Dividends = separate income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3391,7 +3391,7 @@ const questions = [
     "id": "reg-005-007",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Gift basis - loss property",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3403,8 +3403,8 @@ const questions = [
       "D": "The average of donor's basis and FMV"
     },
     "correctAnswer": "C",
-    "explanation": "When FMV at gift date is less than donor's basis, the donee has a dual basis: donor's basis for gain and FMV for loss. If the donee sells between these amounts, no gain or loss is recognized. This prevents transferring losses.",
-    "tip": "Gift loss property: gain basis = donor's; loss basis = FMV. Selling between = no gain/loss.",
+    "explanation": "Per IRC §1015(a), when FMV at gift date < donor's basis, donee has DUAL BASIS: (1) For GAIN: donor's basis; (2) For LOSS: FMV at gift date. If donee sells between these two amounts = NO gain or loss (the 'twilight zone'). Purpose: prevents transferring losses via gift—donor should sell to recognize loss, then gift cash. Planning: Gift appreciated property (gain carries over), sell loss property yourself. Why other answers are wrong: (A) Zero basis never applies; (B) Donor's basis is for calculating GAIN only; (D) No averaging rule exists.",
+    "tip": "Gift loss property (§1015): GAIN basis = donor's, LOSS basis = FMV. Sell between = nothing. Gift winners, sell losers!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3412,7 +3412,7 @@ const questions = [
     "id": "reg-005-008",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Gift tax addition to basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3424,8 +3424,8 @@ const questions = [
       "D": "Gift tax attributable to the net appreciation in the gift"
     },
     "correctAnswer": "D",
-    "explanation": "The donee's basis can be increased by the portion of gift tax paid that is attributable to the appreciation in the gift. The increase is calculated as: Gift tax × (Net appreciation / Taxable gift amount). The basis cannot exceed FMV.",
-    "tip": "Gift tax increases basis only for appreciation portion. Formula: tax × (gain/value).",
+    "explanation": "Per IRC §1015(d), donee's basis is increased by gift tax paid, but ONLY the portion attributable to NET APPRECIATION. Formula: Gift Tax × (Net Appreciation ÷ Taxable Gift Amount). Net appreciation = FMV at gift − donor's basis. Basis cannot exceed FMV at gift date. This rule applies to gifts after 1976. Example: $100K FMV, $60K basis, $40K gift tax. Increase = $40K × ($40K ÷ $100K) = $16K. Why other answers are wrong: (A) No 50% rule exists; (B) Increase IS allowed for appreciation portion; (C) Full gift tax only allowed pre-1977; now limited to appreciation.",
+    "tip": "Gift Tax Basis Increase (§1015(d)) = Tax × (Appreciation ÷ Gift Value). Only covers appreciation portion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3433,7 +3433,7 @@ const questions = [
     "id": "reg-005-009",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Stock dividend basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3445,8 +3445,8 @@ const questions = [
       "D": "Each new share has FMV basis"
     },
     "correctAnswer": "C",
-    "explanation": "For nontaxable stock dividends of the same class, the shareholder's original basis is allocated proportionally between the old and new shares. Total basis remains the same, but per-share basis decreases.",
-    "tip": "Stock dividend = spread existing basis over more shares. Total basis unchanged.",
+    "explanation": "Per IRC §307, when a nontaxable stock dividend is received, the original basis is ALLOCATED between old and new shares based on relative FMV. Total basis remains UNCHANGED—just spread over more shares. Example: 100 shares with $1,000 basis, receive 10-share dividend. New basis = $1,000 ÷ 110 shares = $9.09/share. Holding period of new shares tacks onto original shares. Why other answers are wrong: (A) Original per-share basis DOES change (decreases); (B) New shares receive allocated portion, not zero; (D) FMV only used for taxable dividends.",
+    "tip": "Nontaxable Stock Dividend (§307): SAME total basis, allocate over MORE shares. Per-share basis decreases.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3454,7 +3454,7 @@ const questions = [
     "id": "reg-005-010",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Stock split basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3466,8 +3466,8 @@ const questions = [
       "D": "100 shares with $100 basis each"
     },
     "correctAnswer": "C",
-    "explanation": "In a stock split, the total basis remains the same but is spread over more shares. With 200 shares after the split and the same $5,000 total basis (100 × $50), each share now has a basis of $25.",
-    "tip": "Stock split: same total basis, more shares = lower per-share basis.",
+    "explanation": "Per IRC §307, stock splits work like stock dividends for basis purposes. Total basis is PRESERVED and spread over new shares. Calculation: Original total basis = 100 × $50 = $5,000. After 2-for-1 split: 200 shares. New per-share basis = $5,000 ÷ 200 = $25/share. Holding period unchanged—original acquisition date applies. Why other answers are wrong: (A) Zero basis never applies to splits; (B) $50/share would DOUBLE total basis—not allowed; (D) Number of shares doubles, basis per share halves.",
+    "tip": "Stock Split: Total basis SAME, shares double → per-share basis halves. 2-for-1 = divide basis by 2.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -3475,7 +3475,7 @@ const questions = [
     "id": "reg-005-011",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Wash sale basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3487,8 +3487,8 @@ const questions = [
       "D": "Fair market value at purchase date"
     },
     "correctAnswer": "B",
-    "explanation": "In a wash sale, the disallowed loss is added to the basis of the newly purchased stock. This preserves the loss for future recognition when the new stock is eventually sold. The holding period of the old stock also tacks on.",
-    "tip": "Wash sale: loss disallowed now but added to new stock's basis. Loss preserved for later.",
+    "explanation": "Per IRC §1091, wash sale rules DISALLOW loss when substantially identical securities acquired within 30 days before/after the sale (61-day window). BUT the disallowed loss is ADDED to basis of replacement stock (§1091(d)), preserving the loss for later. Holding period also tacks. Example: Sell at $8K loss, buy replacement for $15K. New basis = $15K + $8K = $23K. Why other answers are wrong: (A) Must add disallowed loss; (C) Old basis doesn't transfer directly—must add to NEW purchase price; (D) FMV irrelevant.",
+    "tip": "Wash Sale (§1091): Loss disallowed NOW but added to new stock's basis. Loss preserved, just deferred.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3496,7 +3496,7 @@ const questions = [
     "id": "reg-005-012",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Converted property basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3508,8 +3508,8 @@ const questions = [
       "D": "The lower of adjusted basis or FMV at date of conversion"
     },
     "correctAnswer": "D",
-    "explanation": "When converting personal property to business use, the depreciable basis is the lower of: (1) the taxpayer's adjusted basis, or (2) fair market value at the date of conversion. This prevents depreciation of personal losses.",
-    "tip": "Personal to business: depreciation basis = LOWER of basis or FMV at conversion.",
+    "explanation": "Per Reg. §1.167(g)-1, when converting personal property to business use, depreciable basis = LOWER of: (1) Adjusted basis, or (2) FMV at conversion date. Purpose: prevents depreciation of personal economic losses. For GAIN on later sale: use adjusted basis (may create gain). For LOSS on later sale: use FMV at conversion (may create dual-basis situation). Why other answers are wrong: (A) HIGHER would allow deducting personal losses—not permitted; (B) Must account for decline in value; (C) Only FMV if less than basis.",
+    "tip": "Personal → Business (Reg. 1.167(g)-1): Depreciation basis = LOWER of basis or FMV. Can't depreciate personal losses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3517,7 +3517,7 @@ const questions = [
     "id": "reg-005-013",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Partnership interest basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3529,8 +3529,8 @@ const questions = [
       "D": "Fair market value of the interest"
     },
     "correctAnswer": "B",
-    "explanation": "A partner's outside basis includes: contributions (cash and property basis), share of partnership income, share of tax-exempt income, and share of partnership liabilities. It is reduced by distributions, losses, and nondeductible expenses.",
-    "tip": "Partner basis = contributions + income + share of liabilities - distributions - losses.",
+    "explanation": "Per IRC §722 and §752, a partner's OUTSIDE BASIS includes: (1) Cash/property contributed (§722); (2) Share of partnership liabilities (§752(a)—increases basis); (3) Share of income (§705(a)(1)(A)); (4) Share of tax-exempt income. DECREASES for: distributions (§733), share of losses (§705(a)(2)), nondeductible expenses. Key difference from S corps: Partners get basis for ENTITY-LEVEL debt. Why other answers are wrong: (A) Liabilities also contribute; (C) Capital account ≠ outside basis (different concepts); (D) FMV irrelevant for tax basis.",
+    "tip": "Partner Basis (§722/752): Contributions + Share of liabilities + Income − Distributions − Losses. Liabilities give basis!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3538,7 +3538,7 @@ const questions = [
     "id": "reg-005-014",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "S corporation shareholder basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3550,8 +3550,8 @@ const questions = [
       "D": "Distributions received"
     },
     "correctAnswer": "C",
-    "explanation": "S corp shareholder basis increases for: capital contributions, share of income (ordinary and separately stated), and share of tax-exempt income. Unlike partnerships, shareholders do NOT get basis for corporate-level debt (unless they personally loan to the corporation).",
-    "tip": "S corp basis: contributions + income + tax-exempt. NO basis for corporate debt (unlike partnerships).",
+    "explanation": "Per IRC §1367, S corp shareholder stock basis is INCREASED by: (1) Capital contributions; (2) Share of ordinary income (§1367(a)(1)(A)); (3) Share of separately stated income items; (4) Share of tax-exempt income. DECREASED by: distributions (§1368), share of losses, nondeductible expenses. KEY DIFFERENCE from partnerships: NO basis for corporate-level debt—only personal loans TO the S corp create debt basis (§1366(d)(1)(B)). Why other answers are wrong: (A) Losses DECREASE basis; (B) NO basis for entity debt—unlike partnerships; (D) Distributions DECREASE basis.",
+    "tip": "S Corp Basis (§1367): + Contributions + Income + Tax-exempt − Distributions − Losses. NO basis for corp debt (unlike partnerships)!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3559,7 +3559,7 @@ const questions = [
     "id": "reg-005-015",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Real estate basis allocation",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3571,8 +3571,8 @@ const questions = [
       "D": "Only the building"
     },
     "correctAnswer": "A",
-    "explanation": "The total cost of real estate must be allocated between land (non-depreciable) and building (depreciable) based on their relative fair market values. Common methods include using property tax assessments or appraisals.",
-    "tip": "Allocate real estate cost: land (not depreciable) vs building (depreciable) by FMV ratio.",
+    "explanation": "Per Reg. §1.167(a)-5, when acquiring real property, total cost must be allocated between LAND (non-depreciable—§167 doesn't apply) and BUILDING (depreciable). Allocation based on relative FMVs. Common methods: property tax assessments, appraisals, insurance valuations, or sales contracts specifying values. IRS scrutinizes allocations favoring buildings over land. Example: $500K purchase, land FMV $150K (30%), building FMV $350K (70%). Allocate 70% to building. Why other answers are wrong: (B/D) Must allocate to both; (C) Must use reasonable method, not taxpayer preference—IRS can challenge.",
+    "tip": "Real Estate Basis: Allocate by FMV ratio. Land = NOT depreciable. Building = depreciable. Can't manipulate allocation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3580,7 +3580,7 @@ const questions = [
     "id": "reg-005-016",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Casualty loss basis adjustment",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3592,8 +3592,8 @@ const questions = [
       "D": "Basis is reduced by the casualty loss deduction claimed plus insurance received"
     },
     "correctAnswer": "D",
-    "explanation": "After a casualty, basis is reduced by: (1) any insurance proceeds received, and (2) any casualty loss deduction claimed. This prevents double benefits (deduction plus preserved basis). Repair costs that restore the property are not added to basis.",
-    "tip": "Casualty reduces basis by: insurance received + loss deduction claimed.",
+    "explanation": "Per IRC §1016(a)(1), after a casualty, basis is reduced by: (1) Insurance proceeds received, PLUS (2) Casualty loss deduction claimed (if any). Purpose: prevents double benefit—can't both deduct loss AND preserve basis. Repair costs that RESTORE property = currently deductible (don't add to basis). IMPROVEMENTS (better than before) = add to basis. Note: TCJA suspended personal casualty losses 2018-2025 except for federally declared disasters. Why other answers are wrong: (A) Basis IS reduced; (B) Repairs don't add to basis; (C) Must also subtract loss deduction claimed.",
+    "tip": "Casualty reduces basis by: Insurance + Deduction claimed. Repairs = deduct, don't capitalize.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3601,7 +3601,7 @@ const questions = [
     "id": "reg-005-017",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "ISO stock basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3613,8 +3613,8 @@ const questions = [
       "D": "The exercise price paid"
     },
     "correctAnswer": "D",
-    "explanation": "The basis of stock acquired through an ISO exercise is the amount paid (exercise price). For regular tax purposes, there is no income recognition at exercise. For AMT purposes, the spread at exercise is an adjustment.",
-    "tip": "ISO stock basis = exercise price paid. No regular income at exercise (but AMT adjustment).",
+    "explanation": "Per IRC §422, stock basis from ISO exercise = EXERCISE PRICE PAID. Regular tax treatment: NO income at exercise (assuming holding requirements met). AMT treatment: spread (FMV − exercise price) is AMT preference item (§56(b)(3)), creating dual basis—regular basis = exercise price, AMT basis = FMV at exercise. If holding requirements violated (disqualifying disposition): ordinary income recognized, basis = exercise price + ordinary income. Why other answers are wrong: (A) Zero not possible—paid exercise price; (B) Grant date FMV irrelevant; (C) FMV at exercise is for AMT, not regular tax.",
+    "tip": "ISO Basis (§422): Regular tax = exercise price paid. AMT = FMV at exercise. Spread = AMT adjustment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3622,7 +3622,7 @@ const questions = [
     "id": "reg-005-018",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "ESPP stock basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3634,8 +3634,8 @@ const questions = [
       "D": "The discounted amount actually paid for the stock"
     },
     "correctAnswer": "D",
-    "explanation": "For qualifying ESPP stock, the initial basis is the amount actually paid (the discounted price). When sold, ordinary income may be recognized based on the discount and FMV at various dates, with basis adjustments.",
-    "tip": "ESPP basis = price paid (discounted amount). Ordinary income rules apply on disposition.",
+    "explanation": "Per IRC §423, qualifying ESPP stock's INITIAL basis = amount actually paid (discounted price, typically 85% of lower of FMV at offering or purchase date). On DISPOSITION, ordinary income recognized increases basis. Qualifying disposition (1 year from purchase + 2 years from offering): ordinary income = lesser of (1) discount at offering date or (2) actual gain. Disqualifying disposition: ordinary income = spread at purchase. Why other answers are wrong: (A) Zero impossible—paid for stock; (B/C) FMV only relevant for calculating ordinary income portion, not initial basis.",
+    "tip": "ESPP Basis (§423): Initial = price paid (discounted). Add ordinary income recognized on sale to get final basis for gain/loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3643,7 +3643,7 @@ const questions = [
     "id": "reg-005-019",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Bargain purchase basis",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3655,8 +3655,8 @@ const questions = [
       "D": "The employer's basis"
     },
     "correctAnswer": "C",
-    "explanation": "When an employee receives property at a bargain price, the discount is taxable compensation. The employee's basis equals FMV (the amount paid plus the taxable compensation element). This gives the employee full basis as if FMV was paid.",
-    "tip": "Bargain purchase basis = FMV (amount paid + compensation income recognized).",
+    "explanation": "Per IRC §83, when employee receives property at bargain price, the discount = taxable compensation income (§61(a)(1)). Employee's basis = FMV = amount paid + compensation recognized. This makes the employee 'whole'—as if they paid FMV. Example: FMV $10K, paid $6K. Compensation = $4K. Basis = $10K (or $6K paid + $4K income). Taxed once on discount, no second tax on sale. Why other answers are wrong: (A) Zero never applies; (B) Bargain price ignores compensation element; (D) Employer's basis irrelevant to employee.",
+    "tip": "Bargain Purchase Basis (§83) = FMV = Amount paid + Compensation income. Taxed on discount, basis reflects it.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3664,7 +3664,7 @@ const questions = [
     "id": "reg-005-020",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Property received for services",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3676,8 +3676,8 @@ const questions = [
       "D": "Fair market value when received (amount included in income)"
     },
     "correctAnswer": "D",
-    "explanation": "Property received for services is taxable at FMV when received. The recipient's basis equals the FMV (the amount included in income). This ensures no double taxation—basis equals the amount already taxed.",
-    "tip": "Property for services: basis = FMV = amount you already paid tax on.",
+    "explanation": "Per IRC §83 and general tax principles, property received for services: FMV is included in income (§61(a)(1)), and recipient's basis = that FMV. This ensures no double taxation—already taxed on receipt, so basis equals taxed amount. If property received is restricted (§83(b) election), basis = amount included in income. Works same for cash: receive $1,000, taxed on $1,000, basis in whatever purchased = $1,000. Why other answers are wrong: (A) Payor's basis irrelevant—this is a taxable exchange; (B) Zero would create double taxation; (C) Cost to perform ≠ value received.",
+    "tip": "Property for Services: Basis = FMV = Income recognized. Already taxed once, basis reflects it.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3685,7 +3685,7 @@ const questions = [
     "id": "reg-005-021",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Improvements vs repairs",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -3697,8 +3697,8 @@ const questions = [
       "D": "Only expenditures over $10,000"
     },
     "correctAnswer": "B",
-    "explanation": "Capital improvements that must be added to basis include expenditures that: adapt property to a new use, extend useful life, or increase value. Routine repairs and maintenance are currently deductible as ordinary expenses.",
-    "tip": "Capitalize: betterments, adaptations, restorations. Deduct: routine repairs/maintenance.",
+    "explanation": "Per IRC §263(a) and Reg. §1.263(a)-3, capitalize (add to basis) expenditures that: (1) BETTER property (materially increase capacity, productivity, efficiency); (2) RESTORE property (rebuild after casualty, major component replacement); (3) ADAPT property to new or different use. Contrast with §162 REPAIRS: routine maintenance that keeps property in ordinary operating condition = currently deductible. No dollar threshold determines capital vs. expense. Safe harbor election for routine maintenance available. Why other answers are wrong: (A) Repairs are deducted, not capitalized; (C) Must meet BRA tests; (D) No $10K rule—based on nature of expenditure.",
+    "tip": "Capitalize (§263): Better, Restore, Adapt (BRA). Deduct: routine repairs/maintenance. Nature matters, not amount.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3706,7 +3706,7 @@ const questions = [
     "id": "reg-005-022",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Installment sale basis recovery",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3718,8 +3718,8 @@ const questions = [
       "D": "Based on the taxpayer's election"
     },
     "correctAnswer": "B",
-    "explanation": "Under the installment method, basis is recovered proportionally with each payment. The gross profit percentage (gain ÷ contract price) determines what portion of each payment is taxable gain versus tax-free return of basis.",
-    "tip": "Installment sale: each payment = GP% is gain + (1 - GP%) is return of basis.",
+    "explanation": "Per IRC §453, installment method recovers basis PROPORTIONALLY with each payment. Key formula: Gross Profit Percentage = Gross Profit ÷ Contract Price. Each payment = (GP% × Principal Payment) is taxable gain + (1 − GP%) is tax-free return of basis. Example: Sell for $100K, basis $60K, GP% = 40%. Each $10K payment = $4K gain + $6K return of basis. Interest payments are separate ordinary income. Why other answers are wrong: (A) Accelerating all basis = no installment benefit; (C) Deferring basis recovery = overtaxation early; (D) No election on method—proportional required.",
+    "tip": "Installment Sale (§453): Each payment × GP% = Gain. GP% = Gross Profit ÷ Contract Price.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3727,7 +3727,7 @@ const questions = [
     "id": "reg-005-023",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Like-kind exchange basis",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3739,8 +3739,8 @@ const questions = [
       "D": "The lower of FMV or basis of property given"
     },
     "correctAnswer": "C",
-    "explanation": "Like-kind exchange basis = Basis of property given up - Boot received + Boot given + Gain recognized - Loss recognized. The formula ensures that deferred gain or loss is preserved in the new property's basis.",
-    "tip": "Like-kind basis = old basis - boot received + boot given + gain recognized.",
+    "explanation": "Per IRC §1031(d), like-kind exchange basis formula: Basis of property GIVEN UP − Boot RECEIVED + Boot GIVEN + Gain RECOGNIZED. Alternative formula: FMV of property received − Deferred gain. Purpose: preserves deferred gain in replacement property's lower basis. Post-2017: Only real property held for business/investment qualifies. Example: Give property with $50K basis, FMV $80K. Receive property FMV $70K + $10K boot. Gain = $10K (boot received). New basis = $50K − $10K + $0 + $10K = $50K. Why other answers are wrong: (A/B) Neither zero nor FMV—substituted basis applies; (D) No 'lower of' rule for §1031.",
+    "tip": "§1031 Basis = Old Basis − Boot Received + Boot Given + Gain Recognized. Preserves deferred gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3748,7 +3748,7 @@ const questions = [
     "id": "reg-005-024",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Involuntary conversion basis",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3760,8 +3760,8 @@ const questions = [
       "D": "Fair market value of replacement property"
     },
     "correctAnswer": "A",
-    "explanation": "When gain is deferred in an involuntary conversion, the basis of the replacement property is its cost minus the deferred gain. This substituted basis ensures the deferred gain will be recognized when the replacement property is eventually sold.",
-    "tip": "Section 1033 basis = cost of replacement - deferred gain. Preserves deferred gain.",
+    "explanation": "Per IRC §1033(b), when gain is deferred in an involuntary conversion, replacement property basis = COST of replacement − DEFERRED gain. This 'substituted basis' ensures deferred gain is recognized on later sale. Example: Property with $50K basis destroyed, $100K insurance received, $90K replacement purchased. Realized gain = $50K. Recognized gain = $10K (not reinvested). Deferred gain = $40K. Replacement basis = $90K − $40K = $50K. Why other answers are wrong: (B) Not same as old—depends on replacement cost; (C) Insurance = amount realized, not basis; (D) Cost minus deferral, not FMV.",
+    "tip": "§1033 Basis = Replacement Cost − Deferred Gain. Like §1031, preserves deferred gain in lower basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3769,7 +3769,7 @@ const questions = [
     "id": "reg-005-025",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Section 121 exclusion and basis",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3781,8 +3781,8 @@ const questions = [
       "D": "Reduces the basis of the next home purchased"
     },
     "correctAnswer": "A",
-    "explanation": "Section 121 provides a permanent exclusion (up to $250,000 single/$500,000 MFJ) for gain on sale of a principal residence. Unlike the old rollover rules, there is no requirement to purchase a replacement home and no basis reduction.",
-    "tip": "Section 121 = permanent exclusion. No replacement required, no basis adjustment needed.",
+    "explanation": "Per IRC §121, home sale exclusion is PERMANENT—excluded gain is never taxed, no basis adjustment needed anywhere. Up to $250K single/$500K MFJ excluded if owned and used as principal residence 2 of last 5 years. Key differences from old §1034 rollover (repealed 1997): No replacement required, no basis reduction, can use every 2 years. Gain above exclusion = taxable. If partial use/rental, allocate and apply depreciation recapture. Why other answers are wrong: (B) Not deferred—permanently excluded; (C/D) No basis adjustments required—it's an exclusion, not deferral.",
+    "tip": "§121 Exclusion = PERMANENT, not deferral. No replacement required, no basis adjustment. $250K/$500K limit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3790,7 +3790,7 @@ const questions = [
     "id": "reg-005-026",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Related party basis rules",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3802,8 +3802,8 @@ const questions = [
       "D": "Can offset gain recognized by the related party on the subsequent sale"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 267, losses on sales to related parties are disallowed. However, when the related party later sells to an unrelated party, any gain recognized can be offset (but not below zero) by the previously disallowed loss.",
-    "tip": "Related party loss: disallowed to seller, but can offset related party's later gain.",
+    "explanation": "Per IRC §267(d), when related party loss is disallowed, related party buyer takes seller's basis. On SUBSEQUENT sale to unrelated party, the previously disallowed loss can OFFSET the related party's gain (but only to zero—can't create a loss). Example: A sells to related party B for $60K, basis $100K. Loss $40K disallowed to A. B's basis = $60K (cost). B later sells for $90K to unrelated party. B's gain = $30K, but offsets $30K of disallowed loss. B reports $0 gain. Remaining $10K loss = permanently lost. Why other answers are wrong: (A) Basis = cost paid, not old basis; (B) Seller can't deduct; (C) Can offset gain—not entirely lost.",
+    "tip": "§267 Related Party Loss: Disallowed to seller, but can offset buyer's later gain (not below zero).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3811,7 +3811,7 @@ const questions = [
     "id": "reg-005-027",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Section 351 exchange basis",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3823,8 +3823,8 @@ const questions = [
       "D": "Basis of property transferred minus boot received plus gain recognized"
     },
     "correctAnswer": "D",
-    "explanation": "In a Section 351 exchange, the shareholder's basis in stock received equals the basis of property transferred, decreased by boot received, increased by gain recognized, and decreased by loss recognized. This preserves deferred gain.",
-    "tip": "Section 351 stock basis = property basis - boot received + gain recognized.",
+    "explanation": "Per IRC §358, shareholder's stock basis in §351 exchange = Basis of property transferred − Boot received + Gain recognized. Same 'substituted basis' concept as §1031/1033—preserves deferred gain. Corporation takes carryover basis in property (§362(a)), increased by shareholder's gain recognized. Example: Transfer property with $50K basis, $80K FMV for stock ($70K) + cash ($10K). Gain recognized = $10K (boot). Stock basis = $50K − $10K + $10K = $50K. Why other answers are wrong: (A) Corp's basis differs (carryover + gain); (B) Zero never applies; (C) FMV would eliminate deferral benefit.",
+    "tip": "§351/358 Stock Basis = Property Basis − Boot + Gain Recognized. Corp gets carryover basis (§362).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3832,7 +3832,7 @@ const questions = [
     "id": "reg-005-028",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Amortizable Section 197 intangibles",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3844,8 +3844,8 @@ const questions = [
       "D": "Immediately deductible"
     },
     "correctAnswer": "A",
-    "explanation": "Section 197 intangibles (goodwill, going concern value, covenants not to compete, customer lists, etc.) acquired in connection with a business are amortized over 15 years using the straight-line method, beginning in the month of acquisition.",
-    "tip": "Section 197 intangibles = 15-year straight-line amortization. No shorter recovery allowed.",
+    "explanation": "Per IRC §197, §197 intangibles are amortized over 15 YEARS straight-line, beginning in month of acquisition. §197 intangibles include: goodwill, going concern value, workforce in place, customer lists, covenants not to compete, franchises, trademarks, trade names. Must be acquired in connection with business acquisition. Self-created goodwill = not amortizable (no basis). Anti-churning rules prevent related party transactions to restart amortization. Why other answers are wrong: (B) 5 years too short—15 years mandatory; (C) IS recoverable through amortization; (D) Must capitalize and amortize, not immediately deduct.",
+    "tip": "§197 Intangibles: 15-year straight-line amortization. Goodwill, covenants, customer lists, etc. No acceleration allowed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3853,7 +3853,7 @@ const questions = [
     "id": "reg-005-029",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Stock rights basis",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3865,8 +3865,8 @@ const questions = [
       "D": "Basis equal to FMV"
     },
     "correctAnswer": "C",
-    "explanation": "When nontaxable stock rights have FMV less than 15% of the stock's FMV, the rights have zero basis unless the taxpayer elects to allocate part of the stock's basis to the rights. If FMV is 15% or more, allocation is required.",
-    "tip": "Stock rights <15% of stock FMV: zero basis (or elect to allocate). ≥15%: must allocate.",
+    "explanation": "Per IRC §307(b), nontaxable stock rights basis rules: If rights FMV < 15% of stock FMV = ZERO basis (unless taxpayer ELECTS to allocate). If rights FMV ≥ 15% of stock FMV = MUST allocate based on relative FMVs. Allocation formula: Rights basis = Stock basis × (Rights FMV ÷ Total FMV). Election is irrevocable, made on return for year received. Example: Stock FMV $100, rights FMV $10 (10%). Default = zero rights basis. If elect: allocate 10% of stock basis to rights. Why other answers are wrong: (A) Allocation only if elect or ≥15%; (B) No carryover from corp; (D) FMV only matters for taxable distributions.",
+    "tip": "Stock Rights (§307): <15% = Zero (or elect allocate). ≥15% = Must allocate. Based on relative FMVs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3874,7 +3874,7 @@ const questions = [
     "id": "reg-005-030",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Alternate valuation date",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3886,8 +3886,8 @@ const questions = [
       "D": "One year after death"
     },
     "correctAnswer": "C",
-    "explanation": "The executor can elect the alternate valuation date (6 months after death or date of disposition if earlier) if it reduces both the gross estate value and estate tax liability. Beneficiaries then receive this alternate value as basis.",
-    "tip": "Alternate valuation: 6 months after death. Must reduce estate AND estate tax.",
+    "explanation": "Per IRC §2032, executor can elect alternate valuation date = 6 MONTHS after death (or date of disposition if earlier). Requirements: (1) Must reduce GROSS ESTATE value, AND (2) Must reduce ESTATE TAX (or generation-skipping tax). Both conditions required. Beneficiaries then receive this alternate value as basis (§1014). Used when estate declined in value after death. Cannot cherry-pick—all estate assets valued at same date. Why other answers are wrong: (A) Only two choices: date of death or 6 months after; (B) Probate completion irrelevant; (D) One year is wrong—it's 6 months.",
+    "tip": "Alternate Valuation (§2032): 6 months after death OR earlier disposition. Must reduce estate AND estate tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3895,7 +3895,7 @@ const questions = [
     "id": "reg-005-031",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Community property basis",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3907,8 +3907,8 @@ const questions = [
       "D": "Receives a full step-up for both halves (100%)"
     },
     "correctAnswer": "D",
-    "explanation": "In community property states, when one spouse dies, both halves of community property receive a stepped-up basis to FMV at date of death. This is more favorable than common law states where only the decedent's half receives a step-up.",
-    "tip": "Community property = FULL step-up at first death (both halves). Big advantage.",
+    "explanation": "Per IRC §1014(b)(6), in community property states, BOTH halves of community property receive stepped-up basis when either spouse dies—100% step-up, not just decedent's half. Community property states: AZ, CA, ID, LA, NV, NM, TX, WA, WI. This is MAJOR advantage over common law states where only decedent's 50% steps up. Planning: convert separate property to community property before death. Why other answers are wrong: (A) Original cost eliminated by step-up; (B) Federal tax law provides the step-up; (C) BOTH halves step up in community property states—that's the benefit.",
+    "tip": "Community Property (§1014(b)(6)): FULL 100% step-up at first death. Both halves. Major planning advantage!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3916,7 +3916,7 @@ const questions = [
     "id": "reg-005-032",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Basis of assets acquired in taxable acquisition",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3928,8 +3928,8 @@ const questions = [
       "D": "The purchase price allocated among assets based on fair market values"
     },
     "correctAnswer": "D",
-    "explanation": "In a taxable asset acquisition, the buyer receives a cost basis equal to the purchase price, allocated among acquired assets based on their relative fair market values using the residual method (assets allocated before goodwill).",
-    "tip": "Taxable acquisition = cost basis allocated by FMV. Residual method for goodwill.",
+    "explanation": "Per IRC §1012 and §1060, taxable asset acquisition = buyer gets COST basis, allocated using residual method (§338 rules). Allocation order (§1060): Class I (cash), II (marketable securities), III (receivables, inventory), IV (other tangible assets), V (§197 intangibles except goodwill), VI (all §197 intangibles except goodwill), VII (goodwill and going concern value—residual). Buyer and seller must use consistent allocations (Form 8594). Why other answers are wrong: (A) Book value is accounting, not tax; (B) No 'lower of' rule—cost basis applies; (C) Carryover is for tax-free transactions, not taxable purchases.",
+    "tip": "Taxable Acquisition: Cost basis allocated by FMV. Residual method (§1060)—goodwill last. Form 8594 required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3937,7 +3937,7 @@ const questions = [
     "id": "reg-005-033",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Section 338(h)(10) election",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3949,8 +3949,8 @@ const questions = [
       "D": "A liquidation followed by a new corporation"
     },
     "correctAnswer": "C",
-    "explanation": "A Section 338(h)(10) election treats a qualified stock purchase as a deemed asset sale by the target for tax purposes. The buyer receives stepped-up basis in the target's assets, while the seller recognizes gain at the corporate level.",
-    "tip": "338(h)(10) = treat stock deal as asset deal. Buyer gets stepped-up asset basis.",
+    "explanation": "Per IRC §338(h)(10), a joint election by buyer and selling consolidated group (or S corp shareholders) treats a qualified stock purchase as a DEEMED ASSET SALE by target. Result: Buyer receives STEPPED-UP basis in target's assets (like asset purchase). Seller recognizes gain at corporate level (single tax for S corps). Target's tax attributes disappear. Used when: stepped-up basis benefit exceeds tax cost, or S corp stock sale. Requires: 80%+ stock purchase within 12 months. Why other answers are wrong: (A) Has significant tax effects; (B) Not nontaxable—gain recognized; (D) Deemed asset sale, not actual liquidation.",
+    "tip": "§338(h)(10): Stock purchase → deemed asset sale. Buyer gets stepped-up asset basis. S corps frequently use.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3958,7 +3958,7 @@ const questions = [
     "id": "reg-005-034",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Carryover vs stepped-up basis planning",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3970,8 +3970,8 @@ const questions = [
       "D": "Sold immediately to recognize gain"
     },
     "correctAnswer": "C",
-    "explanation": "Appreciated property held until death receives a stepped-up basis, permanently eliminating built-in gain. Gifted property retains carryover basis, preserving the gain for the donee. Estate planning often favors holding appreciated assets until death.",
-    "tip": "Hold winners until death (step-up erases gain). Gift losers (use loss yourself).",
+    "explanation": "Per §1014 step-up rules, appreciated property HELD UNTIL DEATH permanently eliminates built-in gain—heirs receive FMV basis. Compare: GIFT (§1015)—donee takes carryover basis, gain preserved. SALE—gain recognized now. CHARITABLE—no gain, but also no inheritance. Planning rule: Hold APPRECIATED assets until death (step-up). Gift or donate DEPRECIATED property (use loss yourself). Sell DEPRECIATED property before death (step-down would eliminate deductible loss). Why other answers are wrong: (A) Charity good but no family benefit; (B) Gift preserves gain—death eliminates it; (D) Sale triggers tax now.",
+    "tip": "Hold WINNERS until death (step-up erases gain). Gift/sell LOSERS (use loss yourself, avoid step-down).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3979,7 +3979,7 @@ const questions = [
     "id": "reg-005-035",
     "section": "REG",
     "topic": "Property Transactions",
-    "subtopic": "Business Entities",
+    "subtopic": "Basis of Property",
     "conceptTested": "Depreciated property basis at death",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -3991,8 +3991,8 @@ const questions = [
       "D": "$100,000 (fair market value at death)"
     },
     "correctAnswer": "D",
-    "explanation": "Inherited property receives FMV at death as basis, regardless of the decedent's adjusted basis. A fully depreciated asset with zero basis to the decedent gets a full step-up to FMV, allowing the beneficiary to depreciate the property again.",
-    "tip": "Death step-up can create new depreciation on fully depreciated property. Powerful planning tool.",
+    "explanation": "Per IRC §1014(a), inherited property basis = FMV at death, REGARDLESS of decedent's adjusted basis. Fully depreciated property with $0 basis gets FULL STEP-UP to FMV. Beneficiary can DEPRECIATE the property again from the new FMV basis! This is powerful planning: depreciate asset during life (deductions), then step-up at death (fresh depreciation for heirs). No depreciation recapture at death. Also applies to stepped-down situations (FMV less than basis). Why other answers are wrong: (A) Original cost irrelevant; (B) Executor doesn't determine basis—law does; (C) Zero is decedent's basis, not heir's.",
+    "tip": "Death Step-Up (§1014): FMV regardless of old basis. Fully depreciated → heirs can depreciate again. Powerful planning!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
