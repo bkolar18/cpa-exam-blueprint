@@ -3697,8 +3697,8 @@ const questions = [
       "D": "Real property only"
     },
     "correctAnswer": "D",
-    "explanation": "The TCJA (effective 2018) limited Section 1031 like-kind exchanges to real property only. Exchanges of personal property (equipment, vehicles, art) no longer qualify for nonrecognition treatment. Real property includes land, buildings, and certain improvements.",
-    "tip": "Post-TCJA: 1031 = real property ONLY. No more personal property exchanges.",
+    "explanation": "Per IRC §1031(a)(1) as amended by TCJA (effective for exchanges completed after December 31, 2017), like-kind exchange nonrecognition treatment is limited to real property held for productive use in a trade or business or for investment. Per §1031(a)(2), property used primarily for sale (inventory) does not qualify. The TCJA eliminated §1031 treatment for personal property (equipment, vehicles, artwork, collectibles). Real property includes land, buildings, and structural improvements. Why other answers are wrong: (A) Personal property exchanges NO LONGER qualify post-TCJA; (B) Inventory and stock are specifically excluded per §1031(a)(2); (C) Only real property qualifies, not all business property.",
+    "tip": "IRC §1031 post-TCJA: REAL PROPERTY ONLY. Personal property exchanges eliminated. No inventory or stock.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -3718,8 +3718,8 @@ const questions = [
       "D": "At least 18 months"
     },
     "correctAnswer": "C",
-    "explanation": "Long-term capital gain treatment requires holding the asset for MORE than one year (more than 12 months). Selling on the one-year anniversary results in short-term treatment. The day after the one-year mark qualifies for preferential long-term rates.",
-    "tip": "LTCG = MORE than 12 months. Day 366 qualifies, day 365 doesn't.",
+    "explanation": "Per IRC §1222(3), a long-term capital gain requires the capital asset to be held for MORE than 1 year. Per §1(h), long-term capital gains receive preferential tax rates (0%, 15%, or 20% depending on income). Selling on exactly the 1-year anniversary results in short-term treatment per §1222(1). The holding period begins the day after acquisition per Reg. §1.1223-1(a). Why other answers are wrong: (A) 6 months is not the holding period requirement; (B) 'At least 12 months' would include the anniversary date, but MORE than 12 months is required; (D) 18 months is not the threshold - just more than 12 months.",
+    "tip": "IRC §1222(3): LTCG = MORE than 1 year (>365 days). Sell on anniversary = STCG. Day 366+ = LTCG.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -3739,8 +3739,8 @@ const questions = [
       "D": "$500,000"
     },
     "correctAnswer": "D",
-    "explanation": "Married taxpayers filing jointly can exclude up to $500,000 of gain on the sale of a principal residence ($250,000 for single filers). Both spouses must meet the use test (2 of last 5 years), and at least one must meet the ownership test. Neither spouse can have used the exclusion within 2 years.",
-    "tip": "Home sale exclusion: $250K single, $500K MFJ. Must meet 2-of-5-year ownership and use tests.",
+    "explanation": "Per IRC §121(b)(1), single taxpayers may exclude up to $250,000 of gain, and per §121(b)(2), married taxpayers filing jointly may exclude up to $500,000. Per §121(a), the exclusion requires ownership AND use as a principal residence for at least 2 of the 5 years preceding the sale. For the $500,000 MFJ exclusion per §121(b)(2)(A), both spouses must meet the use test, at least one must meet the ownership test, and neither may have used the exclusion within 2 years. Why other answers are wrong: (A) $750,000 is not a threshold; (B) $1,000,000 is not a threshold; (C) $250,000 is the single filer limit, not MFJ.",
+    "tip": "IRC §121: $250K single, $500K MFJ. 2-of-5-year ownership AND use tests. Both spouses use test for joint.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3760,8 +3760,8 @@ const questions = [
       "D": "Eliminating gain recognition entirely"
     },
     "correctAnswer": "A",
-    "explanation": "The installment method allows sellers to defer gain recognition by reporting gain proportionally as payments are received over time. This spreads the tax liability, potentially keeping the seller in lower tax brackets and providing time value of money benefits.",
-    "tip": "Installment sale = defer gain to match when cash received. Exception: depreciation recapture recognized in year 1.",
+    "explanation": "Per IRC §453(a), the installment method allows gain recognition to be deferred until payments are actually received. Per §453(c), each payment received includes a portion representing gain (gross profit ratio × payment). This provides tax benefits through: (1) deferral and time value of money, (2) potential lower tax brackets in later years, and (3) matching tax liability to cash flow. Per §453(i), depreciation recapture under §§1245/1250 must be recognized in year of sale regardless of payment timing. Why other answers are wrong: (B) Installment method doesn't reduce basis; (C) It doesn't convert income character; (D) Gain is deferred, not eliminated - recognized as payments received.",
+    "tip": "IRC §453: Defer gain until cash received. Recapture (§1245/§1250) recognized in year 1 regardless.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3781,8 +3781,8 @@ const questions = [
       "D": "Carryover basis from the decedent"
     },
     "correctAnswer": "A",
-    "explanation": "Property acquired from a decedent receives a stepped-up (or stepped-down) basis to fair market value at the date of death (or alternate valuation date). This eliminates income tax on appreciation during the decedent's lifetime, making inheritance tax-advantageous for appreciated assets.",
-    "tip": "Inherited property = FMV basis at death. All unrealized gain disappears. Key estate planning benefit.",
+    "explanation": "Per IRC §1014(a)(1), property acquired from a decedent receives a basis equal to the FMV at the date of death. Per §1014(a)(2), the executor may elect the alternate valuation date (6 months after death) under §2032 if it reduces estate value. This 'stepped-up' (or 'stepped-down') basis eliminates income tax on unrealized appreciation during the decedent's lifetime - a significant estate planning advantage for appreciated assets. Per §1014(e), this doesn't apply to appreciated property gifted to decedent within 1 year of death if it returns to donor. Why other answers are wrong: (B) Zero basis is incorrect - FMV applies; (C) Estate taxes don't determine heir's income tax basis; (D) Carryover basis applies to gifts, not inheritances.",
+    "tip": "IRC §1014: Inherited property = FMV at death (stepped-up basis). Unrealized gain eliminated. §2032 alternate valuation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3802,8 +3802,8 @@ const questions = [
       "D": "Fair market value at the date of gift"
     },
     "correctAnswer": "A",
-    "explanation": "For gifts of appreciated property, the donee takes carryover basis (donor's adjusted basis). This means the built-in gain transfers to the donee. If FMV at gift is less than donor's basis, special dual-basis rules apply for computing gain versus loss.",
-    "tip": "Gift basis: appreciated property = carryover. Loss property = dual basis (FMV for loss, carryover for gain).",
+    "explanation": "Per IRC §1015(a), when property with built-in gain (FMV > basis) is gifted, the donee takes the donor's adjusted basis (carryover basis), plus any gift tax paid attributable to appreciation per §1015(d). The built-in gain transfers to the donee. Per §1015(a), if FMV at gift is LESS than basis (loss property), dual-basis rules apply: donee uses FMV for computing loss but carryover basis for computing gain, potentially creating a 'no gain/no loss' zone. Why other answers are wrong: (B) Zero basis is incorrect; (C) Higher of FMV or basis is not the rule - it's carryover for gain property; (D) FMV applies only for loss computation on loss property.",
+    "tip": "IRC §1015: Gift of appreciated property = carryover basis. Loss property = dual basis (FMV for loss, carryover for gain).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3823,8 +3823,8 @@ const questions = [
       "D": "Deferral of the boot into future years"
     },
     "correctAnswer": "B",
-    "explanation": "Boot (cash or non-like-kind property received) triggers gain recognition to the extent of the lesser of boot received or realized gain. Boot cannot create or increase a loss. The remaining gain is deferred through reduced basis in the replacement property.",
-    "tip": "Boot = gain recognized (lesser of boot or realized gain). Boot can't trigger loss recognition.",
+    "explanation": "Per IRC §1031(b), when boot (cash or non-like-kind property) is received in an otherwise qualifying like-kind exchange, gain is recognized to the extent of the lesser of: (1) the boot received, or (2) the realized gain. Per §1031(c), no loss is recognized in a like-kind exchange, even if boot is received - boot cannot create or trigger loss recognition. The remaining deferred gain is preserved through reduced basis in the replacement property per §1031(d). Why other answers are wrong: (A) Boot doesn't disqualify the exchange - it just triggers partial gain recognition; (C) Boot doesn't automatically create ordinary income - character depends on underlying asset; (D) Boot triggers immediate recognition, not deferral.",
+    "tip": "IRC §1031(b): Boot = gain recognized (lesser of boot or realized gain). §1031(c): Boot cannot trigger loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3844,8 +3844,8 @@ const questions = [
       "D": "30 days; 90 days"
     },
     "correctAnswer": "A",
-    "explanation": "Deferred (Starker) exchanges require: (1) identification of replacement property within 45 days of transferring the relinquished property, and (2) receipt of replacement property within 180 days (or the due date of the tax return, if earlier). Both deadlines run from the relinquished property transfer.",
-    "tip": "1031 timing: 45 days to identify, 180 days to close. Both start from sale of old property.",
+    "explanation": "Per IRC §1031(a)(3)(A), in a deferred (Starker) exchange, replacement property must be identified in writing within 45 days after transfer of the relinquished property. Per §1031(a)(3)(B), the replacement property must be received within the earlier of: (1) 180 days after transfer, or (2) the due date (with extensions) of the tax return for the year of transfer. Both deadlines run from the relinquished property transfer date and cannot be extended (even for holidays or weekends). Why other answers are wrong: (B) 60 days identification is incorrect - it's 45 days; (C) 90/365 days are not the correct timeframes; (D) 30/90 days are not the correct timeframes.",
+    "tip": "IRC §1031(a)(3): 45 days to identify, 180 days (or return due date) to receive. Deadlines are strict - no extensions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3865,8 +3865,8 @@ const questions = [
       "D": "Real property only"
     },
     "correctAnswer": "A",
-    "explanation": "Section 1245 applies to personal property (equipment, machinery, vehicles) and certain real property like single-purpose agricultural structures. Gain is recaptured as ordinary income to the extent of depreciation taken, not limited to the excess over straight-line like Section 1250.",
-    "tip": "Section 1245 = personal property recapture. ALL depreciation recaptured as ordinary income (up to gain).",
+    "explanation": "Per IRC §1245(a), Section 1245 recapture applies to depreciable personal property (equipment, machinery, vehicles, furniture) and certain real property including single-purpose agricultural structures per §1245(a)(3). When sold at a gain, ALL depreciation (or amortization) previously taken is recaptured as ordinary income, up to the amount of the gain. Per §1245(a)(1), recapture is the LESSER of: (1) recomputed basis minus adjusted basis (total depreciation), or (2) gain realized. Section 1250 applies to buildings/real property with different rules. Why other answers are wrong: (B) Inventory is not a capital asset and doesn't involve depreciation recapture; (C) Goodwill/intangibles under §197 follow §1245 rules but the question asks what §1245 covers - it's broader; (D) Real property generally falls under §1250, not §1245 (except certain structures).",
+    "tip": "IRC §1245: Personal property depreciation = 100% ordinary recapture. §1250: Real property = different rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3886,8 +3886,8 @@ const questions = [
       "D": "15%"
     },
     "correctAnswer": "B",
-    "explanation": "Unrecaptured Section 1250 gain (straight-line depreciation on real property sold at a gain) is taxed at a maximum rate of 25%. This is higher than the regular long-term capital gains rates (0%/15%/20%) but lower than ordinary income rates.",
-    "tip": "Real property depreciation recapture = 25% max rate. Better than ordinary, worse than regular LTCG.",
+    "explanation": "Per IRC §1(h)(1)(E), unrecaptured Section 1250 gain is taxed at a maximum rate of 25%. This applies to straight-line depreciation taken on real property (buildings, improvements) that is sold at a gain. Per §1(h)(6), unrecaptured §1250 gain equals the LESSER of: (1) §1231 gain attributable to the property, or (2) accumulated depreciation. The 25% rate is a middle ground: higher than regular LTCG rates (0%/15%/20%) but lower than ordinary income rates (up to 37%). Note: §1250 'additional depreciation' (excess over straight-line, rare today) is recaptured as ordinary income. Why other answers are wrong: (A) 20% is the top regular LTCG rate, not the unrecaptured §1250 rate; (C) 28% is the collectibles rate, not depreciation recapture; (D) 15% is a regular LTCG rate, not applicable to depreciation recapture.",
+    "tip": "IRC §1(h)(1)(E): Unrecaptured §1250 gain = 25% max rate. Regular LTCG = 0%/15%/20%. Collectibles = 28%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3907,8 +3907,8 @@ const questions = [
       "D": "Ordinary income"
     },
     "correctAnswer": "A",
-    "explanation": "Net Section 1231 gains are treated as long-term capital gains (preferential rates), while net Section 1231 losses are fully deductible as ordinary losses. However, the 5-year lookback rule recharacterizes gains as ordinary income to the extent of non-recaptured Section 1231 losses from the prior 5 years.",
-    "tip": "Section 1231: net gain = LTCG, net loss = ordinary deduction. Lookback rule prevents manipulation.",
+    "explanation": "Per IRC §1231(a), net §1231 gains receive preferential long-term capital gain treatment (0%/15%/20% rates), while net §1231 losses are fully deductible as ordinary losses (no $3,000 capital loss limitation). This is the 'best of both worlds' treatment. However, per IRC §1231(c), the 5-year lookback rule applies: current year net §1231 gains are recharacterized as ordinary income to the extent of 'non-recaptured net §1231 losses' from the preceding 5 years. This anti-abuse rule prevents taxpayers from timing §1231 gains and losses to maximize ordinary loss deductions while getting capital gain treatment. Why other answers are wrong: (B) Short-term capital gains don't apply to §1231 property held over 1 year; (C) Self-employment income doesn't result from property sales; (D) Ordinary income treatment only applies under the lookback rule or if net result is a loss.",
+    "tip": "IRC §1231: Net gain = LTCG (subject to 5-year lookback). Net loss = ordinary deduction. 'Best of both worlds.'",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3928,8 +3928,8 @@ const questions = [
       "D": "Gross profit divided by contract price"
     },
     "correctAnswer": "D",
-    "explanation": "The gross profit ratio equals gross profit (selling price minus adjusted basis) divided by the contract price. This ratio is applied to each payment received to determine the taxable gain portion. The remainder of each payment is return of basis.",
-    "tip": "Gross profit ratio = Gross profit / Contract price. Apply to each payment to find taxable gain.",
+    "explanation": "Per IRC §453 and Reg. §15a.453-1(b)(2), the gross profit ratio in an installment sale equals: Gross Profit ÷ Contract Price. Gross profit = selling price minus adjusted basis. Contract price = selling price minus liabilities assumed by buyer (if less than basis) plus any excess liabilities over basis. Each payment received is multiplied by this ratio to determine the taxable gain portion; the remainder is tax-free return of basis. Example: $100,000 sale, $60,000 basis = $40,000 gross profit. GPR = 40,000/100,000 = 40%. Each $10,000 payment = $4,000 gain + $6,000 basis recovery. Why other answers are wrong: (A) Contract price ÷ gross profit inverts the ratio; (B) Selling price ÷ basis doesn't calculate a meaningful ratio for gain recognition; (C) Gross profit ÷ selling price would work only if contract price equals selling price (no liability adjustments).",
+    "tip": "IRC §453: GPR = Gross Profit ÷ Contract Price. Apply GPR to each payment to find taxable gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3949,8 +3949,8 @@ const questions = [
       "D": "Deferred until the property is sold to an unrelated party"
     },
     "correctAnswer": "B",
-    "explanation": "Section 267 disallows losses on sales between related parties. However, when the related buyer later sells to an unrelated party at a gain, the previously disallowed loss can offset that gain (but cannot create or increase a loss). This prevents tax benefit shifting.",
-    "tip": "Related party loss: disallowed to seller, but buyer can use to offset gain (not create loss).",
+    "explanation": "Per IRC §267(a)(1), losses on sales or exchanges between related parties (as defined in §267(b): siblings, spouse, ancestors, descendants, controlled entities >50%) are disallowed. However, per IRC §267(d), when the related buyer subsequently sells the property to an unrelated party at a gain, the previously disallowed loss can offset that gain. The offset is limited - it can reduce gain but cannot create or increase a loss for the buyer. Example: A sells to related B for $60K (A's basis $100K). A's $40K loss is disallowed. B later sells to unrelated C for $75K. B has $15K gain reduced by A's $40K disallowed loss = $0 gain (not $25K loss). Why other answers are wrong: (A) Losses are never deductible in full between related parties; (C) Losses aren't permanently disallowed - the §267(d) offset rule preserves partial benefit; (D) Losses aren't deferred - they're disallowed to the seller but may benefit the buyer.",
+    "tip": "IRC §267: Related party loss = disallowed to seller. §267(d): Buyer can use to offset gain only (not create loss).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3970,8 +3970,8 @@ const questions = [
       "D": "60 days before or after the sale (121-day window)"
     },
     "correctAnswer": "C",
-    "explanation": "The wash sale rule disallows a loss if substantially identical securities are purchased within 30 days before OR 30 days after the sale date (61-day total window). The disallowed loss is added to the basis of the replacement securities, preserving the loss for future recognition.",
-    "tip": "Wash sale = 61-day window (30 before + sale day + 30 after). Loss adds to replacement basis.",
+    "explanation": "Per IRC §1091(a), the wash sale rule disallows loss recognition if the taxpayer acquires substantially identical stock or securities within 30 days BEFORE or 30 days AFTER the sale (61-day total window: day -30 through day +30, including sale date). Per §1091(d), the disallowed loss is added to the basis of the replacement securities, preserving the loss for future recognition when the replacement is sold. The holding period of the original shares also tacks onto the replacement per §1223(4). 'Substantially identical' generally means same company, same type (common stock, not options vs. stock). Why other answers are wrong: (A) The window includes 30 days before, not just after; (B) The window includes 30 days after, not just before; (D) The window is 61 days total (30+1+30), not 121 days.",
+    "tip": "IRC §1091: Wash sale = 61-day window (30 before + sale day + 30 after). Disallowed loss → added to replacement basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3991,8 +3991,8 @@ const questions = [
       "D": "3 of the last 5 years before the sale"
     },
     "correctAnswer": "C",
-    "explanation": "Section 121 requires ownership AND use as a principal residence for at least 2 of the 5 years preceding the sale. The 2 years do not need to be consecutive or the most recent 2 years. Partial exclusion may be available for those not meeting the full requirements due to health, employment, or unforeseen circumstances.",
-    "tip": "Section 121: 2 of last 5 years ownership AND use. Don't have to be consecutive.",
+    "explanation": "Per IRC §121(a) and (b), to qualify for the full home sale exclusion ($250,000 single/$500,000 MFJ per §121(b)), the taxpayer must meet BOTH: (1) Ownership test - owned for at least 2 of the 5 years before sale, AND (2) Use test - used as principal residence for at least 2 of the 5 years before sale. The 2 years (730 days) don't need to be consecutive or the most recent 2 years. Per §121(c), a reduced exclusion (prorated) is available if full requirements aren't met due to change in employment, health, or unforeseen circumstances. Per §121(b)(3), the exclusion can only be used once every 2 years. Why other answers are wrong: (A) Entire ownership period is not required - just 2 of last 5 years; (B) 1 of 3 years is incorrect threshold; (D) 3 of 5 years overstates the requirement.",
+    "tip": "IRC §121: 2 of last 5 years owned AND used. $250K single/$500K MFJ. Once every 2 years. Not consecutive required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4012,8 +4012,8 @@ const questions = [
       "D": "Zero basis"
     },
     "correctAnswer": "B",
-    "explanation": "Replacement property basis equals the basis of the relinquished property, plus any gain recognized, plus any additional cash paid, minus cash received. This substituted basis preserves the deferred gain for recognition when the replacement property is eventually sold.",
-    "tip": "1031 replacement basis = old basis + gain recognized + cash paid - cash received. Deferred gain embedded in lower basis.",
+    "explanation": "Per IRC §1031(d), the basis of replacement property in a like-kind exchange equals: Basis of relinquished property, plus gain recognized (if any), plus cash paid (additional boot given), minus cash/boot received. Formula: New Basis = Old Basis + Gain Recognized + Boot Paid - Boot Received. This 'substituted basis' preserves the deferred gain by embedding it in a lower basis, ensuring the gain is recognized when the replacement property is eventually sold. Example: Old basis $100K, boot received $20K, gain recognized $20K (limited to boot). New basis = $100K + $20K - $20K = $100K. Why other answers are wrong: (A) FMV basis would eliminate the deferral - that's the point of substituted basis; (C) Contract price ignores original basis and deferral mechanics; (D) Zero basis doesn't apply to like-kind exchanges.",
+    "tip": "IRC §1031(d): New basis = Old basis + Gain recognized + Boot paid - Boot received. Deferred gain = lower basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4033,8 +4033,8 @@ const questions = [
       "D": "$5,000 per year"
     },
     "correctAnswer": "C",
-    "explanation": "Individual taxpayers may deduct net capital losses against ordinary income up to $3,000 per year ($1,500 for married filing separately). Excess capital losses carry forward indefinitely and retain their character (short-term or long-term) in the carryforward year.",
-    "tip": "$3,000 annual capital loss limit against ordinary income. Unlimited carryforward, keeps ST/LT character.",
+    "explanation": "Per IRC §1211(b), individual taxpayers may deduct net capital losses against ordinary income up to $3,000 per year ($1,500 for married filing separately). Per IRC §1212(b), excess capital losses carry forward indefinitely to future tax years and retain their short-term or long-term character. The netting order per §1(h): first offset ST losses against ST gains, LT losses against LT gains, then net the two categories. Corporations have different rules under §1211(a) - no deduction against ordinary income, only carryback 3 years/forward 5 years. Why other answers are wrong: (A) Unlimited deduction is incorrect - $3,000 cap applies to individuals; (B) $1,500 is the MFS limit, not the general limit; (D) $5,000 is not the correct threshold.",
+    "tip": "IRC §1211(b): $3,000 capital loss limit vs. ordinary income ($1,500 MFS). §1212(b): Unlimited carryforward, keeps character.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4054,8 +4054,8 @@ const questions = [
       "D": "Deferral of invested gain and potential exclusion of appreciation after 10 years"
     },
     "correctAnswer": "D",
-    "explanation": "QOZ investment provides: (1) deferral of the invested capital gain until December 31, 2026 or earlier disposition, and (2) exclusion of appreciation in the QOZ investment if held at least 10 years. The original basis step-up benefits (for 5 and 7 year holds) expired after 2021.",
-    "tip": "QOZ: defer gain until 2026, exclude appreciation after 10-year hold. Step-up benefits expired.",
+    "explanation": "Per IRC §1400Z-2, Qualified Opportunity Zone (QOZ) Fund investments provide: (1) Deferral - invested capital gain is deferred until the earlier of December 31, 2026, or disposition of the QOZ investment per §1400Z-2(b)(1); (2) Exclusion - per §1400Z-2(c), if the QOZ investment is held for at least 10 years, appreciation in the QOZ investment (not the original deferred gain) is permanently excluded from income by electing FMV basis. The original basis step-up benefits (10% at 5 years, 15% at 7 years) per §1400Z-2(b)(2)(B) expired after December 31, 2021 (investments needed to be made by 2019/2021 to qualify). Why other answers are wrong: (A) QOZ doesn't convert ordinary income to capital gain; (B) The 10-year exclusion applies to appreciation only, not 100% of all gains; (C) The invested gain is deferred, not immediately excluded.",
+    "tip": "IRC §1400Z-2: QOZ = defer gain until 2026, exclude appreciation if held 10+ years. Basis step-up benefits expired.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4075,8 +4075,8 @@ const questions = [
       "D": "Status as a real estate professional"
     },
     "correctAnswer": "C",
-    "explanation": "The $25,000 rental loss allowance requires active participation (a lower standard than material participation) and phases out between $100,000 and $150,000 AGI. Active participation means meaningful involvement in management decisions like approving tenants and setting rent.",
-    "tip": "$25K rental loss allowance: active participation + AGI under $150K. Phase-out starts at $100K AGI.",
+    "explanation": "Per IRC §469(i), the $25,000 special allowance for rental real estate losses requires: (1) Active participation (lower standard than material participation per §469(i)(6) - making management decisions like approving tenants, setting rent, authorizing repairs), and (2) Modified AGI below $150,000. The allowance phases out by 50 cents per dollar of MAGI over $100,000 (fully phased out at $150,000). Per §469(i)(2), the taxpayer must own at least 10% of the activity. This is different from the real estate professional exception under §469(c)(7) which requires material participation. Why other answers are wrong: (A) Commercial vs. residential doesn't matter - active participation does; (B) Material participation is a higher standard not required for this allowance; (D) Real estate professional status eliminates the passive loss limitation entirely - different provision.",
+    "tip": "IRC §469(i): $25K rental allowance = active participation + AGI under $150K. Phase-out $100K-$150K (50¢ per $1).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4096,8 +4096,8 @@ const questions = [
       "D": "Capital losses up to $50,000"
     },
     "correctAnswer": "A",
-    "explanation": "Section 1244 allows shareholders to treat losses on qualified small business stock as ordinary losses (rather than capital losses) up to $100,000 per year for married filing jointly ($50,000 for others). This provides immediate tax benefit instead of being limited to $3,000 annual capital loss deduction.",
-    "tip": "Section 1244: ordinary loss treatment up to $100K MFJ, $50K others. Must be original issue stock.",
+    "explanation": "Per IRC §1244(a), losses on qualified small business stock receive ordinary loss treatment (deductible against ordinary income without the $3,000 capital loss limitation). Per §1244(b), the annual limit is $100,000 for married filing jointly ($50,000 for all others). Requirements per §1244(c): stock must be original issue (purchased from corporation, not secondary market), corporation must be a domestic small business corporation (aggregate capital ≤$1 million at time of issuance), and stock must be issued for money or property (not services). Excess losses over the annual limit are treated as capital losses. Why other answers are wrong: (B) Long-term capital losses still have the $3,000 deduction limit; (C) Losses aren't suspended - they get immediate ordinary treatment; (D) These are ordinary losses, not capital losses.",
+    "tip": "IRC §1244: Ordinary loss up to $100K MFJ/$50K others. Original issue + ≤$1M capitalization at issuance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4117,8 +4117,8 @@ const questions = [
       "D": "The conversion results from a personal casualty"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1033 allows deferral of gain from involuntary conversions (casualty, theft, condemnation) if the taxpayer reinvests the proceeds in property similar or related in service or use within the replacement period (generally 2 years, 3 years for condemned real property).",
-    "tip": "1033: reinvest in similar-use property within 2 years (3 for condemned real property) to defer gain.",
+    "explanation": "Per IRC §1033(a), gain from involuntary conversions (casualty, theft, condemnation, requisition) is deferred if the taxpayer reinvests the proceeds in property 'similar or related in service or use' (stricter than like-kind) within the replacement period. Per §1033(a)(2)(B), the replacement period is generally 2 years from the end of the tax year in which gain is realized. Per §1033(g), condemned real property held for business/investment gets 3 years and only needs to meet the 'like-kind' standard (easier). Basis of replacement property is reduced by deferred gain per §1033(b). Why other answers are wrong: (A) Reinvestment in 'any property' doesn't qualify - must be similar or related in service/use; (C) Proceeds equaling basis means no gain, making deferral irrelevant; (D) Personal casualty losses follow different rules under §165(c)(3) - this is about gain deferral.",
+    "tip": "IRC §1033: Involuntary conversion = similar-use replacement within 2 years (3 for condemned realty). Basis reduced by deferred gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4138,8 +4138,8 @@ const questions = [
       "D": "The taxpayer cannot have actual or constructive receipt of funds"
     },
     "correctAnswer": "D",
-    "explanation": "A qualified intermediary holds the exchange proceeds to prevent the taxpayer from having actual or constructive receipt of funds, which would trigger immediate gain recognition. The QI facilitates the exchange by acquiring the relinquished property, holding proceeds, and acquiring replacement property for the taxpayer.",
-    "tip": "QI prevents constructive receipt. Funds must go directly to QI, not taxpayer, for valid deferred exchange.",
+    "explanation": "Per Reg. §1.1031(k)-1(g)(4), a qualified intermediary (QI) is essential in deferred (Starker) exchanges because the taxpayer cannot have actual or constructive receipt of the exchange proceeds per §1031. Constructive receipt would occur if funds are available to the taxpayer, even if not actually received, triggering immediate gain recognition. The QI facilitates by: (1) acquiring the relinquished property from the taxpayer, (2) holding exchange proceeds in a segregated account, and (3) using proceeds to acquire replacement property for the taxpayer. The QI must not be a disqualified person (agent, employee, related party). Why other answers are wrong: (A) QIs facilitate exchanges but don't provide tax advice; (B) QIs don't guarantee property values; (C) IRS approval is not required for exchanges.",
+    "tip": "Reg. §1.1031(k)-1(g): QI prevents constructive receipt. Must be independent (not agent/employee/related party).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4159,8 +4159,8 @@ const questions = [
       "D": "The deferred gain is recognized by the original taxpayer"
     },
     "correctAnswer": "D",
-    "explanation": "If property received in a like-kind exchange with a related party is disposed of within 2 years, the deferred gain is triggered. This prevents basis-shifting transactions among related parties designed to achieve tax-free extraction of appreciated property.",
-    "tip": "Related party 1031: 2-year disposition by either party triggers deferred gain. Anti-abuse rule.",
+    "explanation": "Per IRC §1031(f), if a taxpayer completes a like-kind exchange with a related party (per §267(b) or §707(b)(1)), and EITHER party disposes of the property received within 2 years, the deferred gain is recognized by the original exchanger. This anti-abuse rule per §1031(f)(1) prevents related party transactions designed to: (1) shift basis to a party planning to sell, (2) extract cash tax-free through a related party sale. Exceptions per §1031(f)(2): death of either party, involuntary conversion, or IRS determination that tax avoidance wasn't a principal purpose. Why other answers are wrong: (A) The related party doesn't pay the tax - the original taxpayer does; (B) There's no exclusion - deferred gain is triggered; (C) Disposition within 2 years definitely affects the exchange.",
+    "tip": "IRC §1031(f): Related party exchange + either disposes within 2 years = gain triggered. Anti-basis-shifting rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4180,8 +4180,8 @@ const questions = [
       "D": "Both parties must file amended returns"
     },
     "correctAnswer": "B",
-    "explanation": "If a related party purchaser resells within 2 years, the original seller must recognize the remaining deferred gain when the related party receives payment from the resale (or the amount of the remaining installment payments, if less). This prevents using related parties to accelerate cash while deferring gain.",
-    "tip": "Installment sale to related party + resale within 2 years = acceleration of remaining gain to original seller.",
+    "explanation": "Per IRC §453(e), if property is sold on installment to a related party (per §453(f)(1) referencing §267(b) and §318(a)), and the related party disposes of the property within 2 years (a 'second disposition'), the original seller must recognize remaining deferred gain. Per §453(e)(1), gain is recognized when the related party receives payment from the resale. The amount recognized is the lesser of: (1) amount realized by related party on second disposition, or (2) remaining installment payments to original seller. This prevents using related parties to get cash while deferring gain. Exceptions per §453(e)(6): involuntary conversions, death, sales where tax avoidance wasn't principal purpose. Why other answers are wrong: (A) Installment method is accelerated, not continued; (C) Original seller recognizes gain, not related party; (D) Amended returns aren't required - gain is reported in the year of second disposition.",
+    "tip": "IRC §453(e): Installment to related party + resale within 2 years = remaining gain accelerated to original seller.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4201,8 +4201,8 @@ const questions = [
       "D": "1 year"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1202 requires the QSBS to be held for more than 5 years to qualify for the exclusion (100% for stock acquired after September 27, 2010). The exclusion is limited to the greater of $10 million or 10 times the adjusted basis of QSBS in that corporation.",
-    "tip": "QSBS exclusion: 5+ year hold, $10M or 10x basis cap. Must be original issue C corp stock, qualified business.",
+    "explanation": "Per IRC §1202(a), gain on the sale of qualified small business stock (QSBS) is eligible for exclusion if held for more than 5 years. Per §1202(a)(1), the exclusion percentage is 100% for stock acquired after September 27, 2010 (75% for 2009-9/27/2010; 50% for earlier). Per §1202(b)(1), the exclusion is limited to the GREATER of: $10 million, or 10 times the taxpayer's adjusted basis in QSBS of that corporation. Requirements per §1202(c)-(e): original issue C corporation stock, acquired at original issuance for money/property/services, corporation must be a qualified small business (≤$50M gross assets), and must meet active business requirements. Why other answers are wrong: (A) 3 years is not long enough; (C) 7 years exceeds the requirement; (D) 1 year is far short of the 5-year requirement.",
+    "tip": "IRC §1202: QSBS = 5+ years held, 100% exclusion (post-9/27/2010), cap = greater of $10M or 10× basis. C corp only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4222,8 +4222,8 @@ const questions = [
       "D": "180 days"
     },
     "correctAnswer": "C",
-    "explanation": "Section 1045 allows deferral of gain on QSBS held more than 6 months if the proceeds are reinvested in replacement QSBS within 60 days. The deferred gain reduces the basis of the replacement stock. This allows entrepreneurs to diversify without immediate tax.",
-    "tip": "Section 1045 rollover: 6+ months held, reinvest in new QSBS within 60 days. Combine with 1202 on new stock.",
+    "explanation": "Per IRC §1045(a), taxpayers may elect to roll over (defer) gain from the sale of QSBS held for more than 6 months if the proceeds are reinvested in replacement QSBS within 60 days of the sale. Per §1045(b)(3), the deferred gain reduces the basis of the replacement QSBS. The replacement stock starts a new 5-year holding period for §1202 exclusion purposes, but the §1045 rollover allows entrepreneurs to diversify investments without immediate tax. Can be used multiple times, rolling from company to company. Per §1045(a), only non-corporate taxpayers (individuals, trusts, estates) qualify. Why other answers are wrong: (A) 1 year exceeds the 60-day requirement; (B) 45 days is the §1031 identification deadline, not the §1045 reinvestment period; (D) 180 days is the §1031 completion deadline, not applicable here.",
+    "tip": "IRC §1045: QSBS rollover = 6+ months held, reinvest in new QSBS within 60 days. Basis reduced by deferred gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4243,8 +4243,8 @@ const questions = [
       "D": "The taxpayer may hold both properties indefinitely"
     },
     "correctAnswer": "B",
-    "explanation": "Reverse exchanges use an exchange accommodation titleholder (EAT) to hold title to either the replacement or relinquished property during the exchange period. Rev. Proc. 2000-37 provides safe harbor requirements: the taxpayer cannot own both properties simultaneously for more than the exchange period (180 days).",
-    "tip": "Reverse 1031: use EAT to hold one property. Can't own both simultaneously. 45-day ID, 180-day completion still apply.",
+    "explanation": "Per Rev. Proc. 2000-37, reverse like-kind exchanges (acquiring replacement property before disposing of relinquished property) require an Exchange Accommodation Titleholder (EAT) to hold legal title to one property during the exchange period. The EAT, often an LLC established by a qualified intermediary, temporarily takes title to either the replacement property (typical) or relinquished property, allowing the exchange to proceed. The taxpayer cannot own both properties simultaneously outside the safe harbor. The 45-day identification and 180-day completion deadlines per §1031(a)(3) still apply. Within 180 days, the taxpayer must complete the exchange by having the EAT transfer the parked property. Why other answers are wrong: (A) Reverse exchanges can qualify using the safe harbor; (C) Simultaneous transfers aren't required with EAT structure; (D) The 180-day completion deadline prevents indefinite holding.",
+    "tip": "Rev. Proc. 2000-37: Reverse 1031 = use EAT to park one property. Still 45-day ID, 180-day completion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4264,8 +4264,8 @@ const questions = [
       "D": "Gains from the sale of investment real estate"
     },
     "correctAnswer": "B",
-    "explanation": "NIIT applies to investment income including capital gains from investment assets. Gains from passive activities and investment real estate are subject to NIIT. The non-excluded portion of QSBS gains is also subject. Gains from active businesses (not passive) are generally exempt if the taxpayer materially participates.",
-    "tip": "NIIT on capital gains: applies to investment/passive gains. Active business gains may be exempt.",
+    "explanation": "Per IRC §1411, the 3.8% Net Investment Income Tax (NIIT) applies to individuals with MAGI exceeding $200,000 (single) or $250,000 (MFJ). Per §1411(c)(1), net investment income includes capital gains from investment assets. This includes: gains from Section 1202 QSBS (to the extent not excluded), and gains from investment real estate (passive activity). Per §1411(c)(2), gains from an active trade or business where the taxpayer materially participates are NOT subject to NIIT. The NIIT applies to the LESSER of: net investment income, or MAGI above the threshold. Why other answers are wrong: (C) Active business gains with material participation are exempt from NIIT; (D) Investment real estate gains alone aren't the complete answer - QSBS non-excluded portion also applies.",
+    "tip": "IRC §1411: NIIT = 3.8% on investment income. Active business (material participation) = exempt. Passive/investment = taxable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4285,8 +4285,8 @@ const questions = [
       "D": "Complete avoidance of all taxes"
     },
     "correctAnswer": "B",
-    "explanation": "A CRT is tax-exempt, so it can sell appreciated property without immediate capital gains tax. The trust distributes income to beneficiaries over time, and gain is recognized as distributed (using ordering rules). The donor receives a charitable deduction for the present value of the remainder interest going to charity.",
-    "tip": "CRT planning: contribute appreciated property, trust sells tax-free, gain recognized as distributed. Partial charitable deduction.",
+    "explanation": "Per IRC §664, a Charitable Remainder Trust (CRT) is a tax-exempt entity that can sell appreciated property without immediate capital gains recognition. When appreciated property is contributed and the CRT sells, no tax is paid at the trust level. Per §664(b), distributions to non-charitable beneficiaries follow ordering rules: (1) ordinary income, (2) capital gains, (3) other income, (4) principal. This defers gain recognition until distributed over the trust term (often 10-20+ years). Per §170, the donor receives a charitable deduction for the present value of the remainder interest passing to charity. Why other answers are wrong: (A) Gain isn't immediately excluded - it's deferred until distributed; (C) CRT doesn't convert capital gain to ordinary income; (D) Complete tax avoidance doesn't occur - gain is recognized as distributed to income beneficiaries.",
+    "tip": "IRC §664: CRT = tax-exempt trust. Sell appreciated property, defer gain until distributions. §170 deduction for remainder.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4306,8 +4306,8 @@ const questions = [
       "D": "Impute interest at the applicable federal rate, recharacterizing principal as interest"
     },
     "correctAnswer": "D",
-    "explanation": "If stated interest is below the applicable federal rate (AFR), the IRS imputes interest under Section 1274 or 483. This recharacterizes part of the stated principal payments as interest, increasing the seller's ordinary interest income and reducing capital gain. Original issue discount rules may also apply.",
-    "tip": "Below-market installment notes: IRS imputes interest at AFR. Increases ordinary income, reduces capital gain.",
+    "explanation": "Per IRC §1274 (for sales of property) and §483 (for deferred payment contracts), if an installment sale note does not provide adequate stated interest (at least the applicable federal rate - AFR), the IRS will impute interest. Per §1274(c), the unstated interest is calculated using the AFR, which recharacterizes a portion of stated principal as imputed interest income. This increases the seller's ordinary income (interest) while reducing capital gain (lower principal). The buyer correspondingly gets additional interest deduction. Per §1274(d), AFR is published monthly in three tiers: short-term (≤3 years), mid-term (3-9 years), and long-term (>9 years). Why other answers are wrong: (A) The gain character isn't changed to ordinary - only the allocation shifts; (B) The buyer actually gets MORE interest deduction; (C) Installment method still applies.",
+    "tip": "IRC §1274/§483: Below-AFR interest = IRS imputes interest. More ordinary income (interest), less capital gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4327,8 +4327,8 @@ const questions = [
       "D": "Converting real property to personal property for 1031 purposes"
     },
     "correctAnswer": "C",
-    "explanation": "Cost segregation reclassifies building components (electrical, plumbing fixtures, carpeting) from 39-year (commercial) or 27.5-year (residential) property to 5, 7, or 15-year property. This accelerates depreciation deductions, though it increases depreciation recapture on sale.",
-    "tip": "Cost segregation = accelerated depreciation via shorter-life classification. Increases recapture but provides time value.",
+    "explanation": "Per IRC §168, cost segregation studies identify building components that qualify for shorter MACRS recovery periods: 5-year (carpeting, specialized electrical), 7-year (certain furniture/fixtures), or 15-year (land improvements, parking lots) instead of 39-year (nonresidential) or 27.5-year (residential). This reclassification accelerates depreciation deductions per §168(e), providing significant time value of money benefits. With §168(k) bonus depreciation, shorter-life property can often be immediately expensed. Tradeoff: accelerated depreciation increases recapture under §1245 (personal property) or unrecaptured §1250 (real property improvements) upon sale. Why other answers are wrong: (A) Recapture is increased, not eliminated; (B) Total depreciable basis doesn't change - only timing; (D) Components remain classified as personal or real property - doesn't convert categories for §1031.",
+    "tip": "IRC §168: Cost segregation = reclassify components to shorter lives (5/7/15 years). Accelerates deductions, increases recapture.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4348,8 +4348,8 @@ const questions = [
       "D": "May not be excluded and is taxable"
     },
     "correctAnswer": "D",
-    "explanation": "For homes with nonqualified use periods after January 1, 2009, gain allocable to those periods cannot be excluded under Section 121. The exclusion is reduced proportionally based on nonqualified use periods divided by total ownership. Exceptions exist for certain temporary absences.",
-    "tip": "Nonqualified use (post-2009 rental periods) reduces Section 121 exclusion proportionally.",
+    "explanation": "Per IRC §121(b)(5), for homes with nonqualified use periods after January 1, 2009, gain attributable to those periods cannot be excluded. The non-excludable portion equals: Gain × (Nonqualified use periods ÷ Total ownership period). Per §121(b)(5)(C), nonqualified use means any period (after 2008) where the property was NOT used as the taxpayer's principal residence. Example: Own 10 years, rent out 4 years post-2008, gain = $200,000. Taxable portion = $200,000 × (4/10) = $80,000. Maximum exclusion applies only to remaining $120,000. Per §121(b)(5)(C)(ii), exceptions: periods BEFORE the property was used as principal residence don't count as nonqualified. Why other answers are wrong: (A) This isn't §1231 gain treatment; (B) Gain isn't deferred - it's taxable now; (C) The nonqualified portion is NOT excludable.",
+    "tip": "IRC §121(b)(5): Post-2008 nonqualified use = proportional reduction in exclusion. NQU before residence use is OK.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4369,8 +4369,8 @@ const questions = [
       "D": "Provide guaranteed returns"
     },
     "correctAnswer": "A",
-    "explanation": "DSTs are structured so investors are treated as owning an undivided fractional interest in real property, qualifying for 1031 exchanges. Rev. Rul. 2004-86 provides the framework. DSTs allow smaller investors to access institutional-quality properties while deferring gain through 1031 exchanges.",
-    "tip": "DST = 1031-eligible fractional real estate interest. Passive investment, treated as direct property ownership.",
+    "explanation": "Per Rev. Rul. 2004-86, Delaware Statutory Trusts (DSTs) qualify as 1031 replacement properties because investors are treated as owning an undivided fractional interest in the underlying real property (not a partnership interest). The IRS approved this treatment when DSTs meet specific requirements: (1) trustee makes all investment decisions, (2) beneficiaries cannot vote on trust matters, (3) no new investors after initial offering, (4) no refinancing except for emergencies. This allows passive investors to participate in institutional-quality real estate while deferring gain through §1031 exchanges. Why other answers are wrong: (B) DSTs typically have minimum investments of $25,000-$100,000; (C) DSTs are not publicly traded - they're private placements; (D) No investment guarantees returns - real estate involves risk.",
+    "tip": "Rev. Rul. 2004-86: DST = §1031-eligible fractional real property ownership. Passive, institutional-quality investment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4390,8 +4390,8 @@ const questions = [
       "D": "The selling partner recognizes no gain"
     },
     "correctAnswer": "C",
-    "explanation": "Without a 754 election, the new partner's outside basis does not adjust the inside basis of partnership assets. When appreciated assets are sold, the new partner is allocated their share of gain, effectively being taxed on appreciation they already paid for. Section 754 election prevents this double taxation.",
-    "tip": "No 754 election = new partner taxed on gain already paid for in purchase price. Always consider 754 election.",
+    "explanation": "Per IRC §743, when a partnership interest is purchased (not contributed), the new partner's outside basis reflects the purchase price, but without a §754 election, the partnership's inside basis in its assets remains unchanged. If the partnership has appreciated assets, the new partner will be allocated their distributive share of built-in gain when those assets are sold - effectively being taxed on appreciation they already paid for in the purchase price. Per §754 and §743(b), if the partnership makes a §754 election, the new partner receives a special basis adjustment equal to the difference between their outside basis and their share of inside basis. This eliminates the economic double taxation. Why other answers are wrong: (A) Partnership doesn't terminate from interest sales post-2017 (technical termination repealed); (B) Without §754, there's NO stepped-up basis adjustment; (D) The selling partner recognizes gain/loss on the sale.",
+    "tip": "IRC §754/§743(b): No election = new partner taxed on built-in gain already paid for. Election = special basis adjustment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4411,8 +4411,8 @@ const questions = [
       "D": "The net loss enters the main Section 1231 hotchpot"
     },
     "correctAnswer": "A",
-    "explanation": "Section 1231(a) requires casualty gains and losses on business property to be netted first. If casualties net to a loss, the loss is fully deductible as ordinary loss and does not enter the main Section 1231 computation. If casualties net to a gain, the gain enters the Section 1231 hotchpot.",
-    "tip": "Section 1231 casualty netting: net casualty loss = ordinary loss (bypasses 1231). Net gain → enters 1231 hotchpot.",
+    "explanation": "Per IRC §1231(a)(4)(C), casualty gains and losses on business/investment property held over 1 year must be netted separately BEFORE entering the main §1231 computation. This is the 'first-tier' or 'sub-hotchpot' netting. If the casualty sub-netting results in a NET LOSS: the loss is treated as an ordinary loss (fully deductible against ordinary income) and does NOT enter the main §1231 'hotchpot.' If casualties result in a NET GAIN: that gain enters the main §1231 hotchpot to be combined with other §1231 gains and losses. This rule prevents taxpayers from 'cherry-picking' individual casualty transactions for favorable treatment. Why other answers are wrong: (B) Net casualty losses aren't capital losses - they're ordinary; (C) While this is true of ordinary losses, it doesn't describe the unique treatment; (D) Net losses specifically bypass the hotchpot.",
+    "tip": "IRC §1231(a)(4)(C): Casualty sub-netting: Net loss = ordinary (bypasses hotchpot). Net gain = enters §1231 hotchpot.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },

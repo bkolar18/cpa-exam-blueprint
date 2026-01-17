@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 175 | 630 | 22% | In Progress |
+| TCP | 805 | 210 | 595 | 26% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 175 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 210 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -61,6 +61,7 @@ All 58 exam TBS questions have been enhanced with:
 | C Corporation Planning | 35 | tcp-003-001 to tcp-003-035 | **Complete** |
 | S Corporation Planning | 35 | tcp-004-001 to tcp-004-035 | **Complete** |
 | Partnership Planning | 35 | tcp-005-001 to tcp-005-035 | **Complete** |
+| Property Planning | 35 | tcp-006-001 to tcp-006-035 | **Complete** |
 | More batches | ... | ... | Pending |
 
 ### TCP Enhancement Completed - January 17, 2026 (Session 1)
@@ -372,6 +373,94 @@ All 58 exam TBS questions have been enhanced with:
 | Partnership Mergers | IRC §708(b)(2)(A) |
 | Publicly Traded Partnerships | IRC §7704 |
 | Anti-Abuse Rule | Reg. §1.701-2 |
+
+---
+
+### TCP Enhancement Completed - January 17, 2026 (Session 6)
+
+**Property Planning Questions Enhanced (tcp-006-001 to tcp-006-035)**
+
+35 Property Planning questions enhanced with:
+- IRC §1031 like-kind exchanges (post-TCJA real property only)
+- IRC §1031(a)(2) excluded property (inventory, stock)
+- IRC §1031(a)(3) deferred exchange timing (45-day ID, 180-day completion)
+- IRC §1031(b)/(c) boot recognition rules (gain recognized, no loss)
+- IRC §1031(d) substituted basis calculation
+- IRC §1031(f) related party exchange rules (2-year disposition trigger)
+- IRC §1222 holding period requirements (LTCG/STCG)
+- IRC §1245 personal property depreciation recapture (100% ordinary)
+- IRC §1250 real property depreciation recapture
+- IRC §1(h)(1)(E) unrecaptured §1250 gain (25% max rate)
+- IRC §1(h)(1)(F) collectibles gain (28% max rate)
+- IRC §1231 Section 1231 netting (net gain = LTCG, net loss = ordinary)
+- IRC §1231(c) 5-year lookback rule
+- IRC §1231(a)(4)(C) casualty sub-netting rules
+- IRC §121 home sale exclusion ($250K/$500K, 2-of-5-year test)
+- IRC §121(b)(5) nonqualified use reduction
+- IRC §453 installment sale method
+- IRC §453(i) depreciation recapture in year 1
+- IRC §453(e) related party resale (2-year rule)
+- IRC §1014 stepped-up basis at death
+- IRC §1015 gift basis rules (carryover/dual-basis)
+- IRC §267 related party loss disallowance
+- IRC §267(d) loss offset rule for related buyer
+- IRC §1091 wash sale rules (61-day window)
+- IRC §1033 involuntary conversion deferral (2-year/3-year replacement)
+- IRC §1202 QSBS exclusion (5-year hold, $10M cap)
+- IRC §1045 QSBS rollover (60-day reinvestment)
+- IRC §1244 small business stock ordinary loss ($100K MFJ)
+- IRC §1211(b) capital loss limitation ($3,000/year)
+- IRC §1212(b) capital loss carryforward
+- IRC §1400Z-2 Qualified Opportunity Zone benefits
+- IRC §469(i) $25,000 rental loss allowance
+- IRC §1411 Net Investment Income Tax (3.8%)
+- IRC §664 charitable remainder trusts
+- IRC §1274/§483 imputed interest rules (AFR)
+- IRC §168 cost segregation and MACRS
+- IRC §754/§743(b) partnership basis adjustments
+- Rev. Proc. 2000-37 reverse exchange safe harbor
+- Rev. Rul. 2004-86 Delaware Statutory Trust treatment
+- Reg. §1.1031(k)-1(g) qualified intermediary rules
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Like-Kind Exchange | IRC §1031 |
+| Post-TCJA Rules | IRC §1031 (real property only) |
+| Deferred Exchange | IRC §1031(a)(3) |
+| Boot Recognition | IRC §1031(b), (c) |
+| Substituted Basis | IRC §1031(d) |
+| Related Party 1031 | IRC §1031(f) |
+| Section 1245 Recapture | IRC §1245 |
+| Section 1250 Recapture | IRC §1250 |
+| Unrecaptured §1250 | IRC §1(h)(1)(E) |
+| Section 1231 Netting | IRC §1231 |
+| 5-Year Lookback | IRC §1231(c) |
+| Casualty Sub-Netting | IRC §1231(a)(4)(C) |
+| Home Sale Exclusion | IRC §121 |
+| Nonqualified Use | IRC §121(b)(5) |
+| Installment Sales | IRC §453 |
+| Related Party Installment | IRC §453(e) |
+| Inherited Basis | IRC §1014 |
+| Gift Basis | IRC §1015 |
+| Related Party Loss | IRC §267 |
+| Wash Sale Rule | IRC §1091 |
+| Involuntary Conversion | IRC §1033 |
+| QSBS Exclusion | IRC §1202 |
+| QSBS Rollover | IRC §1045 |
+| Section 1244 Stock | IRC §1244 |
+| Capital Loss Limit | IRC §1211(b), §1212(b) |
+| Opportunity Zones | IRC §1400Z-2 |
+| Rental Loss Allowance | IRC §469(i) |
+| NIIT | IRC §1411 |
+| CRT Planning | IRC §664 |
+| Imputed Interest | IRC §1274, §483 |
+| Cost Segregation | IRC §168 |
+| DST Investments | Rev. Rul. 2004-86 |
+| Reverse Exchanges | Rev. Proc. 2000-37 |
+| Qualified Intermediary | Reg. §1.1031(k)-1(g) |
 
 ---
 
