@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 105 | 700 | 13% | In Progress |
+| TCP | 805 | 140 | 665 | 17% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 105 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 140 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -59,7 +59,7 @@ All 58 exam TBS questions have been enhanced with:
 | Individual Tax Compliance | 35 | tcp-001-001 to tcp-001-035 | **Complete** |
 | Tax Planning | 35 | tcp-002-001 to tcp-002-035 | **Complete** |
 | C Corporation Planning | 35 | tcp-003-001 to tcp-003-035 | **Complete** |
-| S Corporation Planning | 35 | tcp-004-001 to tcp-004-035 | Pending |
+| S Corporation Planning | 35 | tcp-004-001 to tcp-004-035 | **Complete** |
 | More batches | ... | ... | Pending |
 
 ### TCP Enhancement Completed - January 17, 2026 (Session 1)
@@ -238,6 +238,63 @@ All 58 exam TBS questions have been enhanced with:
 | Spin-Offs | IRC §355 |
 | QSBS Requirements | IRC §1202(d) |
 | Controlled Groups | IRC §1563 |
+
+### TCP Enhancement Completed - January 17, 2026 (Session 4)
+
+**S Corporation Planning Questions Enhanced (tcp-004-001 to tcp-004-035)**
+
+35 S Corporation Planning questions enhanced with:
+- IRC §1361 S corporation eligibility (100 shareholders, one class of stock, eligible shareholders)
+- IRC §1362 S corporation election, revocation, and termination
+- IRC §1366 pass-through taxation, loss limitations
+- IRC §1367 stock basis adjustments (ordering: income → nondeductible → losses → distributions)
+- IRC §1368 distribution ordering (AAA → E&P → OAA → basis)
+- IRC §1372 fringe benefit rules for >2% shareholders (partner treatment)
+- IRC §1374 built-in gains tax (5-year recognition period, 21% rate)
+- IRC §1375 excess passive income tax (>25% threshold)
+- IRC §1378 required taxable year (calendar year default)
+- IRC §1402(a)(2) SE tax exclusion for S corp distributions
+- IRC §199A QBI deduction (individual level, K-1 reporting)
+- IRC §465 at-risk rules (stock basis + personally liable debt)
+- IRC §469 passive activity limitations
+- IRC §461(l) excess business loss limitation
+- Loss limitation order: Basis → At-risk → Passive → Excess business loss
+- Reasonable compensation requirements (Rev. Rul. 74-44)
+- QSST vs ESBT trust requirements
+- Open account debt rules (Reg. §1.1367-2, $25K threshold)
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| S Corp Eligibility | IRC §1361 |
+| 100 Shareholder Limit | IRC §1361(b)(1)(A) |
+| One Class of Stock | IRC §1361(b)(1)(D) |
+| S Election | IRC §1362(a) |
+| Election Timing | IRC §1362(b) |
+| Revocation | IRC §1362(d)(1) |
+| Pass-Through Taxation | IRC §1366 |
+| Loss Limitation (Basis) | IRC §1366(d) |
+| Basis Adjustments | IRC §1367(a) |
+| Basis Ordering | IRC §1367(a)(2) |
+| Distribution Treatment | IRC §1368 |
+| AAA Ordering | IRC §1368(c) |
+| Fringe Benefits | IRC §1372 |
+| Health Insurance Deduction | IRC §162(l), §1372 |
+| Built-in Gains Tax | IRC §1374 |
+| BIG Recognition Period | IRC §1374(d)(7) |
+| Excess Passive Income | IRC §1375 |
+| Calendar Year Required | IRC §1378 |
+| SE Tax Exclusion | IRC §1402(a)(2) |
+| QBI Deduction | IRC §199A |
+| At-Risk Rules | IRC §465 |
+| Debt Basis | IRC §1366(d)(1)(B) |
+| QSST Requirements | IRC §1361(d) |
+| ESBT Rules | IRC §1361(e) |
+| Open Account Debt | Reg. §1.1367-2 |
+| Inadvertent Termination | IRC §1362(f) |
+| Reasonable Compensation | Rev. Rul. 74-44 |
 
 ---
 

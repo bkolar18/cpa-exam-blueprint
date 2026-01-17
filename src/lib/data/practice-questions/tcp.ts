@@ -2227,8 +2227,8 @@ const questions = [
       "D": "Ability to have unlimited shareholders"
     },
     "correctAnswer": "A",
-    "explanation": "S corporations are pass-through entities where income is taxed only at the shareholder level, avoiding the double taxation that occurs with C corporations (corporate tax plus shareholder dividend tax). S corps have shareholder limits (100), one class of stock requirement, and use individual (not corporate) tax rates.",
-    "tip": "S corp = single level of tax (pass-through). C corp = potential double tax (corporate + dividend).",
+    "explanation": "Per IRC §1366, S corporations are pass-through entities where income, deductions, and credits flow through to shareholders who report them on their individual returns. This avoids the double taxation of C corporations (corporate tax per §11 plus shareholder dividend tax per §1(h)(11)). Per §1361, S corps are limited to 100 shareholders, one class of stock, and certain eligible shareholders only. Why other answers are wrong: (B) S corps use individual rates (up to 37%), not necessarily lower than C corp 21%; (C) Multiple classes are prohibited per §1361(b)(1)(D); (D) 100 shareholder limit per §1361(b)(1)(A).",
+    "tip": "IRC §1366: S corp = pass-through, single level of tax. §1361: 100 shareholder limit, one class of stock, no entity owners.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2248,8 +2248,8 @@ const questions = [
       "D": "75"
     },
     "correctAnswer": "A",
-    "explanation": "An S corporation may have no more than 100 shareholders. Family members (within six generations of a common ancestor) can elect to be treated as a single shareholder for this purpose. Exceeding the limit terminates the S election.",
-    "tip": "S corp = 100 shareholder max. Family members can elect to count as one shareholder.",
+    "explanation": "Per IRC §1361(b)(1)(A), an S corporation cannot have more than 100 shareholders. Per §1361(c)(1), family members within six generations of a common ancestor can elect to be treated as a single shareholder, effectively allowing more than 100 individuals to own stock. Exceeding 100 shareholders (counting families as one) terminates the S election per §1362(d)(2). Why other answers are wrong: (B) Unlimited shareholders apply to C corps, not S corps; (C) 35 was the limit prior to 2005; (D) 75 was the limit from 1997-2004.",
+    "tip": "IRC §1361(b)(1)(A): S corp = 100 shareholder max. §1361(c)(1): Family election allows multiple individuals to count as one.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -2269,8 +2269,8 @@ const questions = [
       "D": "U.S. citizen individual"
     },
     "correctAnswer": "B",
-    "explanation": "S corporation shareholders must be individuals (U.S. citizens or residents), estates, certain trusts (grantor trusts, QSSTs, ESBTs), and certain tax-exempt organizations. Partnerships, corporations, and nonresident aliens cannot be S corporation shareholders.",
-    "tip": "S corp shareholders: individuals, estates, certain trusts. NOT partnerships, corporations, or nonresident aliens.",
+    "explanation": "Per IRC §1361(b)(1)(B)-(C), S corporation shareholders are limited to: individuals who are U.S. citizens or resident aliens, estates, certain trusts (grantor trusts per §1361(c)(2)(A)(i), QSSTs per §1361(d), ESBTs per §1361(e)), and certain §501(c)(3) organizations. Partnerships, corporations, and nonresident aliens are expressly prohibited. Ownership by an ineligible shareholder terminates the S election. Why other answers are wrong: (A) Grantor trusts are eligible per §1361(c)(2)(A)(i); (C) Estates are eligible per §1361(b)(1)(B); (D) U.S. citizen individuals are the primary eligible shareholders.",
+    "tip": "IRC §1361(b)(1)(B)-(C): Eligible S corp shareholders = individuals (U.S. only), estates, certain trusts, some §501(c)(3)s. NO partnerships/corps/NRAs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2290,8 +2290,8 @@ const questions = [
       "D": "No compensation if they choose"
     },
     "correctAnswer": "A",
-    "explanation": "Shareholder-employees who perform services for an S corporation must receive reasonable compensation (salary subject to employment taxes) before taking distributions. The IRS may recharacterize distributions as wages if no reasonable salary is paid, resulting in back taxes and penalties.",
-    "tip": "S corp owner-employees: must pay reasonable salary first. Can't take all income as distributions to avoid payroll tax.",
+    "explanation": "Per IRS guidance (Rev. Rul. 74-44) and case law (e.g., David E. Watson P.C. v. U.S.), S corporation shareholder-employees who perform services must receive reasonable compensation subject to FICA taxes (IRC §3101/§3111) before taking distributions. The IRS can recharacterize distributions as wages under the substance-over-form doctrine, resulting in back employment taxes, interest, and penalties. Factors include comparable compensation, services rendered, and dividend history. Why other answers are wrong: (B) No 50% rule exists; (C) Distributions need not equal compensation; (D) Compensation is required if services are performed.",
+    "tip": "Rev. Rul. 74-44: S corp owner-employees must receive reasonable salary. IRS will recharacterize distributions as wages if salary too low.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2311,8 +2311,8 @@ const questions = [
       "D": "Shareholders cannot have different voting rights"
     },
     "correctAnswer": "C",
-    "explanation": "S corporations may have only one class of stock, meaning all shares must have identical rights to distribution and liquidation proceeds. However, voting rights may differ (voting and non-voting common stock is permitted). Differences in distribution rights would create a second class of stock.",
-    "tip": "One class = identical distribution and liquidation rights. Voting rights CAN differ.",
+    "explanation": "Per IRC §1361(b)(1)(D), an S corporation can have only one class of stock. Per Reg. §1.1361-1(l), this means all outstanding shares must confer identical rights to distribution and liquidation proceeds. Per §1.1361-1(l)(1), differences in voting rights alone do not create a second class (voting/non-voting common is permitted). Shareholder agreements affecting distribution rights can create a second class. Why other answers are wrong: (A) Stock can be transferred freely; (B) Only one class of common is allowed, but it's about distribution/liquidation rights; (D) Voting rights CAN differ per Reg. §1.1361-1(l)(1).",
+    "tip": "IRC §1361(b)(1)(D): One class of stock = identical distribution and liquidation rights. Reg. §1.1361-1(l): Voting can differ.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2332,8 +2332,8 @@ const questions = [
       "D": "December 31 of the prior year"
     },
     "correctAnswer": "B",
-    "explanation": "To be effective for the current tax year, Form 2553 must be filed by the 15th day of the 3rd month of the tax year (March 15 for calendar-year corporations). If filed later, the election is effective for the following tax year. Late election relief may be available under Rev. Proc. 2013-30.",
-    "tip": "S election deadline: March 15 for calendar year corps (2½ months into year). Late = effective next year.",
+    "explanation": "Per IRC §1362(b)(1), to be effective for the current tax year, Form 2553 must be filed by the 15th day of the 3rd month of the tax year (March 15 for calendar-year corporations) or at any time during the preceding tax year. Per §1362(b)(3), if filed after this deadline, the election is effective for the following tax year. Rev. Proc. 2013-30 provides late election relief for inadvertent failures. Why other answers are wrong: (A) 15th day of 2nd month is too early - deadline is 3rd month; (C) Return due date is too late for current year effectiveness; (D) December 31 of prior year would work, but March 15 is the latest current-year deadline.",
+    "tip": "IRC §1362(b)(1): S election deadline = 15th day of 3rd month (March 15 for calendar year). Rev. Proc. 2013-30: late relief available.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2353,8 +2353,8 @@ const questions = [
       "D": "The shareholder's share of nondeductible expenses"
     },
     "correctAnswer": "C",
-    "explanation": "Stock basis increases for the shareholder's share of income (both separately stated items and nonseparately computed income) and additional capital contributions. Basis decreases for distributions, nondeductible expenses, and losses. Proper basis tracking is essential for determining loss deductibility and distribution taxation.",
-    "tip": "S corp basis increases: income, contributions. Decreases: distributions, losses, nondeductible expenses.",
+    "explanation": "Per IRC §1367(a)(1), stock basis is increased by the shareholder's pro rata share of: (A) separately stated income items (capital gains, §1231 gains, tax-exempt income), and (B) nonseparately computed income (ordinary business income). Basis also increases for additional capital contributions. Per §1367(a)(2), basis decreases for distributions, nondeductible expenses, and losses/deductions. Why other answers are wrong: (A) Losses decrease basis per §1367(a)(2)(B); (B) Distributions decrease basis per §1367(a)(2)(A); (D) Nondeductible expenses decrease basis per §1367(a)(2)(D).",
+    "tip": "IRC §1367(a)(1): Basis increases = income items + contributions. §1367(a)(2): Decreases = distributions, losses, nondeductible expenses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2374,8 +2374,8 @@ const questions = [
       "D": "Stock basis first, then AAA"
     },
     "correctAnswer": "C",
-    "explanation": "Distributions from an S corporation with accumulated E&P (from prior C corp years) come first from AAA (tax-free to extent of basis), then from accumulated E&P (taxable dividend), then from the other adjustments account, and finally from remaining stock basis. An election can be made to distribute E&P first.",
-    "tip": "S corp with E&P: AAA first (tax-free), then E&P (dividend), then OAA, then basis.",
+    "explanation": "Per IRC §1368(c), when an S corporation has accumulated E&P (from prior C corp years), distributions are sourced in order: (1) AAA (accumulated adjustments account) - tax-free to extent of stock basis per §1368(b), (2) accumulated E&P - taxable as dividend per §1368(c)(2), (3) remaining AAA if any, (4) OAA (other adjustments account), (5) remaining stock basis. Per §1368(e)(3), an election can be made to bypass AAA and distribute E&P first. Why other answers are wrong: (A) Not proportional - specific ordering applies; (B) E&P comes after AAA; (D) Stock basis is the final layer, not first.",
+    "tip": "IRC §1368(c): Distribution order = AAA → E&P (dividend) → OAA → basis. §1368(e)(3): E&P bypass election available.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2395,8 +2395,8 @@ const questions = [
       "D": "Shareholder guarantees of corporate debt"
     },
     "correctAnswer": "C",
-    "explanation": "Debt basis in an S corporation comes only from direct loans from the shareholder to the corporation. Unlike partnerships, guarantees of corporate debt and back-to-back loans generally do not create basis. Debt basis allows loss deductions after stock basis is exhausted.",
-    "tip": "S corp debt basis = direct shareholder loans only. Guarantees don't count (unlike partnerships).",
+    "explanation": "Per IRC §1366(d)(1)(A), shareholders can deduct losses to the extent of stock basis plus debt basis. Debt basis only comes from direct loans from the shareholder to the corporation per Reg. §1.1366-2(a). Unlike partnerships (§752), guarantees of corporate debt do NOT create basis in S corps (see cases like Selfe, Harris). Back-to-back loans may create basis only if structured properly with genuine debtor-creditor relationship. Why other answers are wrong: (A) Corporate accounts payable don't give shareholders basis; (B) Third-party borrowings don't flow through to shareholders; (D) Guarantees don't create S corp basis (key difference from partnerships).",
+    "tip": "IRC §1366(d): Debt basis = direct shareholder-to-corporation loans only. Guarantees ≠ basis (unlike partnerships under §752).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2416,8 +2416,8 @@ const questions = [
       "D": "Subject to FICA and FUTA taxes"
     },
     "correctAnswer": "A",
-    "explanation": "S corporation distributions are not subject to self-employment tax or FICA/FUTA taxes. Only wages paid to shareholder-employees are subject to employment taxes. This creates a planning opportunity but also IRS scrutiny of unreasonably low salaries designed to avoid employment taxes.",
-    "tip": "S corp advantage: distributions avoid employment tax. But salary must be reasonable - can't minimize to avoid taxes.",
+    "explanation": "Per IRC §1402(a)(2), an S corporation shareholder's distributive share of income is NOT subject to self-employment tax (unlike general partners/LLC members). Per §3121(a), distributions are also not 'wages' subject to FICA (§3101/§3111) or FUTA (§3301). Only actual W-2 wages are subject to employment taxes. This creates significant employment tax savings but invites IRS scrutiny of unreasonably low salaries. Why other answers are wrong: (B) Distributions are generally tax-free to extent of basis, not capital gains; (C) SE tax doesn't apply to S corp distributions per §1402(a)(2); (D) FICA/FUTA only applies to wages, not distributions.",
+    "tip": "IRC §1402(a)(2): S corp distributions ≠ SE income. Only W-2 wages subject to employment tax. Major planning benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2437,8 +2437,8 @@ const questions = [
       "D": "Have always been S corporations"
     },
     "correctAnswer": "A",
-    "explanation": "The built-in gains (BIG) tax applies when a C corporation converts to S status and sells assets with built-in gains within the recognition period (currently 5 years). The tax is at the highest corporate rate (21%) on the net recognized built-in gain, limited to the built-in gain at conversion.",
-    "tip": "BIG tax = corporate-level tax on appreciated assets sold within 5 years of C-to-S conversion.",
+    "explanation": "Per IRC §1374, the built-in gains (BIG) tax applies when a C corporation converts to S status and recognizes built-in gains within the recognition period per §1374(d)(7) (5 years for conversions after 2011). The tax rate is the highest corporate rate (21% per §11(b)) on net recognized built-in gain, limited to the NUBIG at conversion date. This prevents conversion to avoid corporate-level tax on appreciated assets. Why other answers are wrong: (B) Contributed property has different rules under §362; (C) Property distributions are covered by §311, not BIG; (D) Always-S corporations have no built-in gains exposure.",
+    "tip": "IRC §1374: BIG tax = 21% on gains from pre-conversion assets sold within 5-year recognition period. Only applies to C-to-S conversions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2458,8 +2458,8 @@ const questions = [
       "D": "25%"
     },
     "correctAnswer": "D",
-    "explanation": "S corporations with accumulated E&P (from C corp years) are subject to a corporate-level tax on excess net passive income if passive investment income exceeds 25% of gross receipts. If this occurs for three consecutive years, the S election automatically terminates.",
-    "tip": "Excess passive income: >25% passive + accumulated E&P = corporate tax. 3 consecutive years = S termination.",
+    "explanation": "Per IRC §1375(a), an S corporation with accumulated E&P (from C corp years) is subject to a corporate-level tax on excess net passive income when passive investment income exceeds 25% of gross receipts. Per §1362(d)(3), if passive income exceeds 25% of gross receipts for three consecutive years while the corporation has E&P, the S election automatically terminates. This encourages S corps to distribute C corp E&P. Why other answers are wrong: (A) 50% is not the threshold; (B) 75% is too high; (C) 10% is too low - the threshold is 25%.",
+    "tip": "IRC §1375: Excess passive income tax when >25% passive + E&P. §1362(d)(3): 3 consecutive years = automatic S termination.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2479,8 +2479,8 @@ const questions = [
       "D": "On their individual returns based on their share of qualified business income"
     },
     "correctAnswer": "D",
-    "explanation": "The Section 199A QBI deduction is claimed by shareholders on their individual returns, not at the corporate level. The S corporation reports each shareholder's share of QBI, W-2 wages, and UBIA on Schedule K-1. Shareholders then compute their deduction subject to individual income limitations.",
-    "tip": "QBI deduction is individual-level. S corp provides info on K-1; shareholder calculates deduction on personal return.",
+    "explanation": "Per IRC §199A(a), the QBI deduction is claimed by individuals, not entities. S corporations report each shareholder's pro rata share of qualified business income, W-2 wages, and UBIA (unadjusted basis immediately after acquisition) of qualified property on Schedule K-1 per §199A(f)(1)(A). Shareholders compute their deduction on Form 8995/8995-A, subject to income limitations per §199A(b) and SSTB rules per §199A(d). Why other answers are wrong: (A) Employee count doesn't affect eligibility; (B) QBI deduction is against QBI, not wages; (C) The deduction is individual-level, not on Form 1120-S.",
+    "tip": "IRC §199A: QBI deduction = individual level. S corp reports QBI, W-2 wages, UBIA on K-1. Shareholder calculates on Form 8995.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2500,8 +2500,8 @@ const questions = [
       "D": "Deductible by the corporation but taxable as a dividend"
     },
     "correctAnswer": "C",
-    "explanation": "Health insurance premiums paid for more-than-2% S corp shareholder-employees must be included in the shareholder's W-2 (Box 1, not subject to FICA). The shareholder can then deduct the amount above-the-line on their personal return (self-employed health insurance deduction). This differs from C corp treatment.",
-    "tip": ">2% S corp shareholder health insurance: reported on W-2, then deducted by shareholder. Net effect similar to sole proprietor.",
+    "explanation": "Per IRC §1372(a), more-than-2% S corp shareholders are treated as partners for fringe benefit purposes, not employees. Health insurance premiums paid by the S corp must be included in the shareholder's W-2 wages (Box 1, but excluded from FICA boxes per Notice 2008-1). Per §162(l), the shareholder can then deduct the amount above-the-line as self-employed health insurance. This differs from C corps where benefits are excluded under §106. Why other answers are wrong: (A) Premiums are deductible by the shareholder; (B) Not tax-free due to §1372 partner treatment; (D) Not a taxable dividend - it's W-2 wages deductible above-the-line.",
+    "tip": "IRC §1372: >2% shareholders treated as partners for fringes. Health insurance → W-2 → §162(l) above-the-line deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2521,8 +2521,8 @@ const questions = [
       "D": "67%"
     },
     "correctAnswer": "C",
-    "explanation": "Voluntary revocation of an S election requires consent from shareholders owning more than 50% of the outstanding shares (voting and nonvoting). The revocation can specify a future effective date; otherwise, it's effective at the beginning of the following tax year if filed after the 15th day of the 3rd month.",
-    "tip": "S revocation requires >50% shareholder consent. Can specify effective date.",
+    "explanation": "Per IRC §1362(d)(1)(B), voluntary revocation requires consent from shareholders owning more than 50% of the issued and outstanding shares (both voting and nonvoting). Per §1362(d)(1)(C)-(D), the revocation is effective: (1) on the specified date if one is designated, (2) at the beginning of the next tax year if filed after the 15th day of the 3rd month, or (3) at the beginning of the current year if filed before that date. Why other answers are wrong: (A) 100% consent is not required; (B) 25% is insufficient; (D) 67% is not the threshold - only >50% is needed.",
+    "tip": "IRC §1362(d)(1)(B): S revocation = >50% shareholder consent. Can specify effective date or defaults per §1362(d)(1)(C)-(D).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2542,8 +2542,8 @@ const questions = [
       "D": "The excess creates a negative basis"
     },
     "correctAnswer": "C",
-    "explanation": "Distributions exceeding stock basis (for an S corp without accumulated E&P) are treated as gain from the sale of stock - typically long-term capital gain if the stock has been held more than one year. Stock basis cannot go below zero; excess distributions generate capital gain.",
-    "tip": "S corp distribution > basis = capital gain (sale treatment). Basis can't go negative.",
+    "explanation": "Per IRC §1368(b)(2), distributions exceeding stock basis (for an S corp without accumulated E&P, or after AAA is exhausted) are treated as gain from the sale or exchange of property (the stock). Per §1222, this is typically long-term capital gain if the stock has been held more than one year. Stock basis cannot go below zero per §1367(a)(2). Why other answers are wrong: (A) Distributions cannot be 'returned' - they're taxable; (B) The excess is capital gain, not ordinary income; (D) Negative basis is not permitted - excess creates capital gain instead.",
+    "tip": "IRC §1368(b)(2): Distribution > basis = capital gain (sale treatment). Basis cannot go negative per §1367(a)(2).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2563,8 +2563,8 @@ const questions = [
       "D": "Deductible against other income sources"
     },
     "correctAnswer": "B",
-    "explanation": "S corporation losses exceeding the shareholder's basis (stock plus debt basis) are suspended and carried forward indefinitely until sufficient basis is restored. Basis can be restored through additional capital contributions, loans to the corporation, or allocation of future income.",
-    "tip": "Suspended S corp losses: carried forward indefinitely, deductible when basis is restored.",
+    "explanation": "Per IRC §1366(d)(2), S corporation losses exceeding the shareholder's adjusted basis in stock and indebtedness are not allowed for that year but are carried forward indefinitely until sufficient basis is restored. Basis can be restored through additional capital contributions, direct loans to the corporation per §1366(d)(1)(A), or allocation of future income per §1367(a)(1). No time limit applies to the carryforward. Why other answers are wrong: (A) Losses are not lost - they carry forward indefinitely; (C) Suspended losses retain their character, not converted to capital; (D) Losses are limited to basis, not deductible against other income until basis exists.",
+    "tip": "IRC §1366(d)(2): Suspended losses carry forward indefinitely. Restore basis via contributions, loans, or future income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2584,8 +2584,8 @@ const questions = [
       "D": "Any fiscal year selected by the shareholders"
     },
     "correctAnswer": "A",
-    "explanation": "S corporations must generally use a calendar year unless they can establish a business purpose for a different year or elect a fiscal year under Section 444 (which requires a deposit payment to compensate for deferral). This prevents deferral of shareholder income recognition.",
-    "tip": "S corps = calendar year required (generally). Section 444 fiscal year election requires deposit payment.",
+    "explanation": "Per IRC §1378(a), an S corporation must use the 'permitted year' which is generally a calendar year (December 31 year-end). Per §1378(b), exceptions exist for: (1) fiscal years with a valid business purpose approved by IRS, or (2) a Section 444 election for a fiscal year with up to 3 months' deferral (requiring a deposit payment per §7519 to offset the deferral benefit). This prevents income deferral that would occur with mismatched years. Why other answers are wrong: (B) S corps don't follow shareholder years like partnerships; (C) S corps have no parent corporation; (D) Fiscal years require special elections.",
+    "tip": "IRC §1378: S corps = calendar year required. §444 election allows fiscal year with deposit payment per §7519.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2605,8 +2605,8 @@ const questions = [
       "D": "Cost of goods sold"
     },
     "correctAnswer": "B",
-    "explanation": "Items that could affect shareholders' tax liability differently (based on individual circumstances) must be separately stated. These include charitable contributions, capital gains/losses, Section 1231 gains/losses, tax-exempt income, investment interest, foreign taxes, and rental activities. Items like COGS and business depreciation are part of ordinary income.",
-    "tip": "Separately stated = items affecting shareholders differently. Charitable, capital gains, Section 1231, tax-exempt income, etc.",
+    "explanation": "Per IRC §1366(a)(1)(A), items that could affect shareholders' tax liability differently must be separately stated on Schedule K-1. Per Reg. §1.1366-1(a)(2), these include: charitable contributions (subject to individual AGI limits), capital gains/losses, §1231 gains/losses, tax-exempt interest, investment interest expense, foreign taxes, rental activities, and §179 deductions. Items like COGS, wages, and business depreciation are part of nonseparately computed income per §1366(a)(1)(B). Why other answers are wrong: (A) Depreciation flows through ordinary income; (C) Wages are part of ordinary income; (D) COGS is part of ordinary income calculation.",
+    "tip": "IRC §1366(a)(1)(A): Separately stated = items with varying individual treatment. Charitable, capital gains, §1231, tax-exempt, foreign taxes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2626,8 +2626,8 @@ const questions = [
       "D": "Never restore the election"
     },
     "correctAnswer": "A",
-    "explanation": "Under Section 1362(f), the IRS may grant inadvertent termination relief if: (1) the termination was inadvertent, (2) steps are taken to correct the terminating event within a reasonable time, and (3) the corporation and shareholders agree to any adjustments required by the IRS.",
-    "tip": "Inadvertent termination relief available if corrected quickly and adjustments accepted. Apply via PLR.",
+    "explanation": "Per IRC §1362(f), the IRS may provide inadvertent termination relief if: (1) the termination was inadvertent (not willful), (2) within a reasonable time after discovery, steps are taken to correct the terminating event (e.g., disqualifying shareholder sells stock, second class issue fixed), and (3) the corporation and all shareholders agree to any adjustments required by the IRS. Relief is typically requested via private letter ruling (PLR). Why other answers are wrong: (B) No automatic restoration exists; (C) Tax avoidance is not the only disqualifying factor; (D) Relief is available under §1362(f).",
+    "tip": "IRC §1362(f): Inadvertent termination relief if: inadvertent, corrected promptly, agree to IRS adjustments. Request via PLR.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2647,8 +2647,8 @@ const questions = [
       "D": "Must exclude distributions from income"
     },
     "correctAnswer": "A",
-    "explanation": "S corporation shareholder-employees are treated the same as C corporation shareholder-employees for qualified retirement plan purposes. They can participate in 401(k) plans, receive employer matching, and are subject to the same contribution limits. This differs from the health insurance treatment.",
-    "tip": "S corp retirement plans = same as C corp. Full participation allowed. Different from health insurance treatment.",
+    "explanation": "Unlike fringe benefits under IRC §1372, retirement plan treatment for S corporation shareholder-employees is the same as C corporation employees. They can fully participate in 401(k) plans per §401(k), receive employer matching contributions per §401(m), and are subject to the same contribution limits under §402(g) ($23,000 for 2024) and §415(c) ($69,000 total). This is a notable exception to the §1372 partner treatment for fringes. Why other answers are wrong: (B) They CAN participate in qualified plans; (C) Sole proprietor rules (limited to net SE income) don't apply; (D) Distributions are taxable per §402.",
+    "tip": "S corp retirement plans = same as C corp (exception to §1372 fringe rules). Full 401(k) participation, employer matching allowed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2668,8 +2668,8 @@ const questions = [
       "D": "Income, nondeductible expenses, losses, distributions"
     },
     "correctAnswer": "D",
-    "explanation": "Stock basis is adjusted in this order: (1) increased for income items, (2) decreased for nondeductible, noncapital expenses (like 50% meals, penalties), (3) decreased for deductible losses and deductions, (4) decreased for distributions. This ordering can affect loss deductibility.",
-    "tip": "Basis order: +income, -nondeductible expenses, -losses, -distributions. Order matters for loss limitation.",
+    "explanation": "Per IRC §1367 and Reg. §1.1367-1(f), stock basis is adjusted in this specific order: (1) increased for income items per §1367(a)(1), (2) decreased for nondeductible, noncapital expenses per §1367(a)(2)(D) (e.g., 50% meals, penalties, life insurance premiums), (3) decreased for deductible losses and deductions per §1367(a)(2)(B), (4) decreased for distributions per §1367(a)(2)(A). This ordering maximizes loss deductibility by reducing basis for nondeductible items before losses. Why other answers are wrong: (A) Distributions come last, not second; (B) Distributions come after income adjustments; (C) Income increases come first, not distributions.",
+    "tip": "Reg. §1.1367-1(f): Basis order = +income → -nondeductible expenses → -losses → -distributions. Order maximizes loss deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2689,8 +2689,8 @@ const questions = [
       "D": "Accumulated E&P at conversion date"
     },
     "correctAnswer": "C",
-    "explanation": "NUBIG equals the excess of FMV of assets over their adjusted basis at the S election date, but is reduced by built-in loss assets and built-in deduction items (like accounts receivable for cash basis, depreciation adjustments). NUBIG caps the total built-in gains tax exposure over the recognition period.",
-    "tip": "NUBIG = FMV - basis of all assets (net of built-in losses). This caps total BIG tax exposure.",
+    "explanation": "Per IRC §1374(d)(1), net unrealized built-in gain (NUBIG) equals the excess of FMV of assets over their adjusted basis at the S election date. Per §1374(d)(3), this is reduced by built-in loss assets and 'recognized built-in loss' items (like accounts receivable for cash-basis taxpayers that would be taxable when collected, depreciation adjustments). NUBIG caps cumulative BIG tax exposure per §1374(c)(2). Why other answers are wrong: (A) Missing the netting of built-in losses; (B) Liabilities are not subtracted in the NUBIG calculation; (D) E&P is a separate concept from NUBIG.",
+    "tip": "IRC §1374(d)(1): NUBIG = (FMV - basis) for all assets, netted. Includes built-in loss items. Caps total BIG tax per §1374(c)(2).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2710,8 +2710,8 @@ const questions = [
       "D": "The trust's normal graduated rates"
     },
     "correctAnswer": "A",
-    "explanation": "The S corporation income portion of an ESBT is taxed at the highest individual marginal rate (currently 37%) at the trust level, regardless of the trust's other income or distributions to beneficiaries. This is separate from the trust's other income, which is taxed normally. QBI deduction may apply.",
-    "tip": "ESBT S corp income = taxed at highest individual rate (37%) at trust level. Separate from other trust income.",
+    "explanation": "Per IRC §641(c)(2)(A), the S corporation portion of an ESBT is taxed as a separate trust at the highest individual marginal rate (37% per §1(j)(2)(E) for 2024). This applies regardless of the trust's other income or distributions to beneficiaries. Per §641(c)(2)(C), the S portion may claim the §199A QBI deduction. The non-S portion is taxed under normal trust rules per §641(a). Why other answers are wrong: (B) Capital gains in the S portion are taxed at 20% (highest LTCG rate), but other income at 37%; (C) Beneficiary rates don't apply to the S portion; (D) The S portion uses the highest rate, not normal graduated rates.",
+    "tip": "IRC §641(c)(2)(A): ESBT S portion = taxed at highest individual rate (37%). Separate from non-S trust income. QBI applies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2731,8 +2731,8 @@ const questions = [
       "D": "3 years"
     },
     "correctAnswer": "A",
-    "explanation": "After revocation or termination, a corporation cannot make a new S election for 5 years without IRS consent. The IRS may consent to an earlier re-election if: (1) more than 50% ownership has changed, or (2) the event causing termination was not reasonably within the corporation's control.",
-    "tip": "S election terminated → 5-year waiting period. IRS may consent to earlier re-election in certain circumstances.",
+    "explanation": "Per IRC §1362(g), after revocation or termination, a corporation cannot make a new S election for 5 years without IRS consent. Per Reg. §1.1362-5(a), IRS may consent to earlier re-election if: (1) more than 50% of stock ownership has changed since termination, or (2) the event causing termination was not reasonably within the control of the corporation or shareholders with a substantial interest, and was not part of a plan to terminate and re-elect. Why other answers are wrong: (B) 10 years is too long; (C) 1 year is too short; (D) 3 years is incorrect - the period is 5 years.",
+    "tip": "IRC §1362(g): 5-year waiting period after S termination. IRS consent for earlier re-election if >50% ownership change.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -2752,8 +2752,8 @@ const questions = [
       "D": "Is a corporate-level account, not shareholder-level"
     },
     "correctAnswer": "D",
-    "explanation": "AAA is a corporate-level account tracking undistributed S corp income that has been taxed to shareholders. Stock basis is shareholder-level. AAA can go negative from losses; it's not reduced by tax-exempt income (unlike basis) but is reduced by nondeductible expenses and distributions.",
-    "tip": "AAA = corporate account (same for all shareholders). Basis = individual shareholder account. AAA can go negative.",
+    "explanation": "Per IRC §1368(e)(1), AAA is a corporate-level account tracking undistributed S corporation income that has been taxed to shareholders - it's the same for all shareholders regardless of their individual circumstances. Stock basis per §1367 is shareholder-level, varying based on each shareholder's contributions, loans, and acquisition cost. Per §1368(e)(1)(A), AAA can go negative from losses. AAA is NOT increased by tax-exempt income (unlike basis), but is reduced by nondeductible expenses. Why other answers are wrong: (A) AAA IS reduced by nondeductible expenses per §1368(e)(1)(A); (B) AAA CAN go negative; (C) Tax-exempt income does NOT increase AAA (only basis).",
+    "tip": "IRC §1368(e)(1): AAA = corporate-level account. Basis = shareholder-level. AAA can go negative, not increased by tax-exempt.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2773,8 +2773,8 @@ const questions = [
       "D": "Comparable compensation in similar businesses"
     },
     "correctAnswer": "A",
-    "explanation": "The IRS considers factors like duties performed, training, experience, time and effort devoted, comparable compensation in similar businesses, dividend history, and economic conditions. The shareholder's desired distribution level is irrelevant - compensation must be objectively reasonable regardless of preferences.",
-    "tip": "Reasonable compensation based on job duties, experience, comparables, time devoted. Not on what shareholder wants.",
+    "explanation": "Per IRS guidance and case law (e.g., Radtke, David E. Watson P.C.), reasonable compensation factors include: duties performed, training and experience, time devoted to the business, comparable compensation in similar businesses, dividend/distribution history, compensation paid in prior years, and local economic conditions. The shareholder's desired distribution level is irrelevant - compensation must be objectively reasonable based on services rendered. Why other answers are wrong: (B) Time devoted IS a factor; (C) Training/experience IS a factor; (D) Comparable compensation IS a key factor.",
+    "tip": "Reasonable compensation factors (IRS/case law): duties, experience, time, comparables, dividend history. NOT shareholder preferences.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2794,8 +2794,8 @@ const questions = [
       "D": "The income beneficiary's interest must terminate upon the earlier of death or trust termination"
     },
     "correctAnswer": "B",
-    "explanation": "A QSST must have exactly one current income beneficiary who receives all income currently. Principal distributions are limited to that beneficiary. The beneficiary's income interest must terminate at death or trust termination. Having multiple current income beneficiaries disqualifies QSST status.",
-    "tip": "QSST = single current beneficiary, all income distributed currently. Multiple beneficiaries → use ESBT instead.",
+    "explanation": "Per IRC §1361(d)(3), a QSST must meet these requirements: (A) only ONE current income beneficiary (an individual), (B) all trust income must be distributed (or required to be distributed) currently to that beneficiary per §1361(d)(3)(B), (C) corpus distributions during the income beneficiary's life may only go to that beneficiary per §1361(d)(3)(A)(ii), and (D) the income beneficiary's interest must terminate on the earlier of death or trust termination per §1361(d)(3)(A)(iv). Why other answers are wrong: (A) All income to one beneficiary IS required; (C) Principal to current beneficiary IS required; (D) Termination at death IS required.",
+    "tip": "IRC §1361(d)(3): QSST = ONE current beneficiary, all income distributed currently. Multiple beneficiaries → ESBT under §1361(e).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2815,8 +2815,8 @@ const questions = [
       "D": "Stock basis only"
     },
     "correctAnswer": "C",
-    "explanation": "A shareholder's at-risk amount in an S corporation includes stock basis plus amounts borrowed for which the shareholder is personally liable or has pledged property (other than the S corp interest) as security. Unlike partnerships, S corp shareholders generally cannot include nonrecourse debt in their at-risk amount.",
-    "tip": "At-risk in S corp = basis + personal liability debt. More restrictive than partnership at-risk rules.",
+    "explanation": "Per IRC §465(b), a shareholder's at-risk amount in an S corporation includes: (1) stock basis, and (2) amounts borrowed for which the shareholder is personally liable or has pledged property (other than the S corp interest) as security per §465(b)(2). Unlike partnerships (where qualified nonrecourse real estate financing per §465(b)(6) counts), S corp shareholders generally cannot include the corporation's nonrecourse debt in their at-risk amount. Why other answers are wrong: (A) Debt basis and at-risk are not identical concepts; (B) Nonrecourse debt doesn't add to at-risk for S corps; (D) Debt can increase at-risk if personally liable.",
+    "tip": "IRC §465(b): S corp at-risk = stock basis + personally liable debt. Nonrecourse doesn't count (unlike real estate partnerships).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2836,8 +2836,8 @@ const questions = [
       "D": "Converting when the corporation has substantial accumulated E&P"
     },
     "correctAnswer": "A",
-    "explanation": "Optimal C-to-S conversion timing minimizes built-in gains exposure by converting when asset values are low relative to basis (minimal appreciation or depreciation). Converting before a planned asset sale triggers BIG tax. Accumulated E&P creates passive income concerns. Conversion during asset depressions reduces tax exposure.",
-    "tip": "C-to-S conversion: best when assets have minimal built-in gain. Avoid converting before planned asset sales.",
+    "explanation": "Per IRC §1374, the built-in gains tax applies to gains recognized within 5 years of C-to-S conversion on assets with built-in gain at conversion. Optimal timing minimizes NUBIG per §1374(d)(1) by converting when asset values are low (minimal appreciation or market decline). Converting before a planned asset sale triggers BIG tax at 21%. Accumulated E&P creates §1375 passive income concerns and potential §1362(d)(3) termination. Why other answers are wrong: (B) Converting before asset sales maximizes BIG tax exposure; (C) Maximum appreciation creates maximum BIG exposure; (D) E&P creates passive income problems, making conversion less favorable.",
+    "tip": "IRC §1374 planning: Convert when assets have minimal built-in gain. Avoid pre-sale conversions. Consider E&P passive income issues.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2857,8 +2857,8 @@ const questions = [
       "D": "Making a deemed dividend election on the return"
     },
     "correctAnswer": "B",
-    "explanation": "An S corporation can elect to treat distributions as coming from accumulated E&P first (bypassing AAA) by making the election on a timely filed return with shareholder consent. This may be desirable to purge E&P and eliminate passive income concerns, even though it creates taxable dividends.",
-    "tip": "E&P bypass election: purge E&P intentionally to avoid passive income issues. Requires shareholder consent.",
+    "explanation": "Per IRC §1368(e)(3), an S corporation with accumulated E&P may elect to treat distributions as coming from E&P first (bypassing AAA) by making the election on a timely filed return with consent of all affected shareholders. This 'E&P purge' election creates taxable dividends but eliminates the E&P that causes §1375 excess passive income tax and potential §1362(d)(3) termination. Why other answers are wrong: (A) Property vs. cash doesn't affect the ordering; (C) Any distribution uses the standard ordering unless election made; (D) There's no 'deemed dividend' election - it's an E&P ordering election.",
+    "tip": "IRC §1368(e)(3): E&P bypass election with shareholder consent on timely return. Purges E&P to avoid §1375/§1362(d)(3) issues.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2878,8 +2878,8 @@ const questions = [
       "D": "Basis, passive activity, at-risk, excess business loss"
     },
     "correctAnswer": "A",
-    "explanation": "S corporation losses are subject to limitations in this order: (1) basis limitation, (2) at-risk limitation, (3) passive activity limitation, (4) excess business loss limitation. Losses must pass each hurdle before being deductible. Suspended losses at each level carry forward separately.",
-    "tip": "Loss limitation order: Basis → At-risk → Passive → Excess business loss. Each creates separate carryforward.",
+    "explanation": "S corporation losses are subject to limitations in this statutory order: (1) basis limitation per IRC §1366(d), (2) at-risk limitation per §465, (3) passive activity limitation per §469, (4) excess business loss limitation per §461(l). Losses must pass each hurdle before being deductible. Each limitation creates its own carryforward: basis-suspended losses per §1366(d)(2), at-risk suspended losses per §465(a)(2), passive losses per §469(b), and excess business losses convert to NOLs per §461(l)(2). Why other answers are wrong: (B) Basis comes before at-risk; (C) Passive comes after at-risk, not first; (D) Losses before distributions in the ordering.",
+    "tip": "Loss order: §1366(d) basis → §465 at-risk → §469 passive → §461(l) excess business loss. Each has separate carryforward.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2899,8 +2899,8 @@ const questions = [
       "D": "Are always treated as equity contributions"
     },
     "correctAnswer": "A",
-    "explanation": "The open account debt rules (post-2014) allow shareholders to treat advances and repayments during the year as net increases or decreases to a single open account debt balance, rather than tracing each advance. The net increase at year-end provides debt basis; net decrease triggers gain. Maximum $25,000 threshold applies.",
-    "tip": "Open account debt: net advances/repayments during year, simplifies tracking. $25K threshold for special treatment.",
+    "explanation": "Per Reg. §1.1367-2(a), the open account debt rules (effective for post-2014 years) allow shareholders to treat advances and repayments during the year as net increases or decreases to a single open account debt balance, rather than tracing each transaction. Per Reg. §1.1367-2(a)(2)(i), if the shareholder's open account debt at year-end exceeds $25,000, the debt is treated as a separate debt for basis purposes. Net increases provide debt basis; net decreases may trigger gain. Why other answers are wrong: (B) Advances CAN provide debt basis if properly structured; (C) Formal notes aren't required for open account treatment; (D) Loans are not automatically equity.",
+    "tip": "Reg. §1.1367-2: Open account debt = net advances/repayments simplify tracking. >$25K at year-end = separate debt treatment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2920,8 +2920,8 @@ const questions = [
       "D": "Distributing appreciated assets to shareholders"
     },
     "correctAnswer": "C",
-    "explanation": "The most straightforward way to avoid BIG tax is to wait until after the 5-year recognition period to sell appreciated assets. Other strategies include using NOL carryforwards to offset recognized built-in gains, contributing assets with built-in losses, or electing S status when asset values are depressed.",
-    "tip": "BIG tax avoidance: wait 5 years, use NOLs, convert when values are low. Installment sales don't defer BIG tax.",
+    "explanation": "Per IRC §1374(d)(7), the recognition period is 5 years (for conversions after 2011). The simplest BIG tax avoidance is waiting until after this period to sell appreciated assets - gains recognized after 5 years are not subject to §1374. Per §1374(b)(2), NOL and capital loss carryforwards from C corp years can offset recognized built-in gains. Converting when values are low minimizes NUBIG. Why other answers are wrong: (A) Immediate sale maximizes BIG tax; (B) Per §1374(d)(6), installment sales don't defer BIG tax - gain is recognized at sale; (D) Distributing appreciated property triggers corporate gain per §311(b) plus BIG tax.",
+    "tip": "IRC §1374: Avoid BIG tax by waiting 5 years, using C corp NOLs, or converting when values low. Installment sales don't help.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2941,8 +2941,8 @@ const questions = [
       "D": "The business plans to raise capital from foreign investors"
     },
     "correctAnswer": "C",
-    "explanation": "S corporations are advantageous when owners want to minimize employment taxes because distributions (beyond reasonable salary) are not subject to self-employment or FICA taxes. LLCs allow flexible allocations and can have foreign/entity owners. Loss pass-through is more limited in S corps due to stricter basis rules.",
-    "tip": "S corp advantage: employment tax savings on distributions. LLC advantage: flexibility, no ownership restrictions, easier loss pass-through.",
+    "explanation": "Per IRC §1402(a)(2), S corporation distributions are not subject to self-employment tax (unlike LLC/partnership distributive shares per §1402(a)(1)). This provides significant tax savings when owner-employees take reasonable salary plus distributions. LLCs offer: flexible allocations per §704(b), foreign/entity ownership (prohibited for S corps per §1361(b)(1)), and easier loss pass-through (LLC members get basis for entity debt per §752, S corp shareholders don't). Why other answers are wrong: (A) Flexibility favors LLC; (B) Loss pass-through favors LLC due to basis rules; (D) Foreign investors disqualify S corp status.",
+    "tip": "S corp advantage: §1402(a)(2) employment tax savings. LLC advantages: §704(b) flexibility, §752 debt basis, no ownership limits.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
