@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 210 | 595 | 26% | In Progress |
+| TCP | 805 | 245 | 560 | 30% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 210 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 245 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -62,6 +62,7 @@ All 58 exam TBS questions have been enhanced with:
 | S Corporation Planning | 35 | tcp-004-001 to tcp-004-035 | **Complete** |
 | Partnership Planning | 35 | tcp-005-001 to tcp-005-035 | **Complete** |
 | Property Planning | 35 | tcp-006-001 to tcp-006-035 | **Complete** |
+| Estate and Gift Planning | 35 | tcp-007-001 to tcp-007-035 | **Complete** |
 | More batches | ... | ... | Pending |
 
 ### TCP Enhancement Completed - January 17, 2026 (Session 1)
@@ -461,6 +462,83 @@ All 58 exam TBS questions have been enhanced with:
 | DST Investments | Rev. Rul. 2004-86 |
 | Reverse Exchanges | Rev. Proc. 2000-37 |
 | Qualified Intermediary | Reg. §1.1031(k)-1(g) |
+
+---
+
+### TCP Enhancement Completed - January 17, 2026 (Session 7)
+
+**Estate and Gift Planning Questions Enhanced (tcp-007-001 to tcp-007-035)**
+
+35 Estate and Gift Planning questions enhanced with:
+- IRC §2503(b) annual gift tax exclusion ($18,000 for 2024)
+- IRC §2513 gift-splitting for married couples
+- IRC §2010(c)(3) basic exclusion amount (BEA) - $13.61M for 2024
+- IRC §2010(c)(4) portability (DSUE)
+- IRC §2056 marital deduction (unlimited for U.S. citizen spouse)
+- IRC §2056(d)/§2056A QDOT for non-citizen spouses
+- IRC §2056(b)(7) QTIP trust requirements
+- IRC §2503(e) tuition/medical payment exclusion
+- IRC §2031-§2044 gross estate inclusion rules
+- IRC §1014 stepped-up basis at death
+- IRC §2601/§2611/§2613 generation-skipping transfer (GST) tax
+- IRC §2631/§2642 GST exemption and inclusion ratio
+- IRC §2035 three-year rule (life insurance, gift tax gross-up)
+- IRC §2036/§2038 retained interest estate inclusion
+- IRC §2041/§2514 powers of appointment
+- IRC §2042 life insurance incidents of ownership
+- IRC §2032 alternate valuation date
+- IRC §2032A special use valuation for farms/businesses
+- IRC §2702 GRATs and QPRTs
+- IRC §664 charitable remainder trusts (CRAT vs CRUT)
+- IRC §2522/§2055 charitable lead trusts
+- IRC §6166 estate tax deferral for closely-held businesses
+- IRC §303 stock redemptions for estate taxes
+- IRC §671-§679 intentionally defective grantor trusts (IDGTs)
+- IRC §2704 valuation discount limitations
+- Rev. Rul. 85-13 grantor trust sale treatment
+- Reg. §20.2010-1(c) anti-clawback rules
+- Reg. §25.2511-2 completed gift requirements
+- Crummey v. Commissioner withdrawal powers
+- Diedrich v. Commissioner net gift rules
+- Estate of Grace reciprocal trust doctrine
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Annual Exclusion | IRC §2503(b) |
+| Gift-Splitting | IRC §2513 |
+| Basic Exclusion Amount | IRC §2010(c)(3) |
+| Portability | IRC §2010(c)(4) |
+| Marital Deduction | IRC §2056 |
+| QDOT | IRC §2056A |
+| QTIP | IRC §2056(b)(7) |
+| Tuition/Medical Exclusion | IRC §2503(e) |
+| Gross Estate | IRC §2031-§2044 |
+| Stepped-Up Basis | IRC §1014 |
+| GST Tax | IRC §2601 |
+| GST Exemption | IRC §2631 |
+| Inclusion Ratio | IRC §2642 |
+| 3-Year Rule | IRC §2035 |
+| Retained Interest | IRC §2036 |
+| Powers of Appointment | IRC §2041 |
+| Life Insurance | IRC §2042 |
+| Alternate Valuation | IRC §2032 |
+| Special Use Valuation | IRC §2032A |
+| GRAT | IRC §2702 |
+| QPRT | IRC §2702 |
+| CRT | IRC §664 |
+| CLT | IRC §2522 |
+| Section 6166 Deferral | IRC §6166 |
+| Section 303 Redemption | IRC §303 |
+| IDGT | IRC §671-§679 |
+| Crummey Powers | Crummey v. Comm'r |
+| Net Gifts | Diedrich v. Comm'r |
+| Dynasty Trusts | IRC §2631 |
+| SLAT | IRC §2505, §2036 |
+| FLP/LLC Discounts | IRC §2031, §2704 |
+| Anti-Clawback | Reg. §20.2010-1(c) |
 
 ---
 

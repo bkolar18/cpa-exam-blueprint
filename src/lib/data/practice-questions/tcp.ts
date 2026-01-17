@@ -4432,8 +4432,8 @@ const questions = [
       "D": "$17,000"
     },
     "correctAnswer": "A",
-    "explanation": "The annual gift tax exclusion for 2024 is $18,000 per donee (indexed for inflation). A married couple can give $36,000 per donee if gift-splitting is elected. Gifts within the exclusion do not require filing Form 709 (unless gift-splitting applies).",
-    "tip": "2024 annual exclusion = $18,000 per donee. Married couples = $36,000 with gift-splitting.",
+    "explanation": "Per IRC §2503(b), the annual gift tax exclusion for 2024 is $18,000 per donee (indexed for inflation under §2503(b)(2)). Per IRC §2513, a married couple can elect gift-splitting, allowing them to give $36,000 per donee combined. Per §6019, gifts within the exclusion do not require filing Form 709 unless gift-splitting is elected or gifts of future interests are made. The exclusion applies only to gifts of present interests per §2503(b). Why other answers are wrong: (B) $20,000 is not the current exclusion amount; (C) $15,000 was the 2018-2021 amount; (D) $17,000 was the 2022-2023 amount.",
+    "tip": "IRC §2503(b): 2024 annual exclusion = $18,000/donee. Gift-splitting (§2513) = $36,000/donee for married couples.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -4453,8 +4453,8 @@ const questions = [
       "D": "$13,610,000"
     },
     "correctAnswer": "D",
-    "explanation": "For 2024, the basic exclusion amount is $13,610,000 per person (indexed for inflation under TCJA). A married couple can transfer up to $27,220,000 tax-free using portability. This amount is scheduled to revert to approximately $6-7 million in 2026 when TCJA expires.",
-    "tip": "2024 exemption = $13.61M. TCJA sunsets 2026 - exemption will approximately halve.",
+    "explanation": "Per IRC §2010(c)(3) as modified by TCJA, the basic exclusion amount (BEA) for 2024 is $13,610,000 per person (indexed for inflation). Per §2010(c)(4) (portability), a surviving spouse can use the deceased spouse's unused exemption (DSUE), allowing married couples to transfer up to $27,220,000 tax-free. Per TCJA sunset provisions, the BEA is scheduled to revert to approximately $6-7 million (adjusted for inflation) on January 1, 2026. The unified credit per §2010(c)(1) eliminates tax up to the BEA. Why other answers are wrong: (A) $5.49M was the pre-TCJA 2017 exemption; (B) $11.7M was the 2021 exemption; (C) $12.92M was the 2023 exemption.",
+    "tip": "IRC §2010(c)(3): 2024 BEA = $13.61M/person. TCJA sunsets 2026 → ~$6-7M. Portability doubles for couples.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4474,8 +4474,8 @@ const questions = [
       "D": "Present interests"
     },
     "correctAnswer": "D",
-    "explanation": "The annual exclusion applies only to gifts of present interests (an unrestricted right to immediate use, possession, or enjoyment). Future interests (gifts where enjoyment is delayed) do not qualify for the annual exclusion, even if they are otherwise complete gifts.",
-    "tip": "Annual exclusion = present interest only. Gifts to trusts may need Crummey powers for exclusion.",
+    "explanation": "Per IRC §2503(b), the annual gift tax exclusion applies only to gifts of 'present interests' - defined as an unrestricted right to immediate use, possession, or enjoyment of the property or income from it. Per Reg. §25.2503-3, future interests (gifts where the donee's enjoyment is delayed or contingent) do NOT qualify for the annual exclusion. Examples of future interests: remainder interests, reversions, gifts to most trusts without withdrawal rights. Crummey withdrawal powers (Crummey v. Commissioner, 9th Cir. 1968) convert future interests to present interests for exclusion purposes. Why other answers are wrong: (A) Future interests specifically do NOT qualify; (B) Real property can be present or future interest; (C) Cash is eligible but not the only qualifying gift.",
+    "tip": "IRC §2503(b): Annual exclusion = present interest only. Trust gifts need Crummey powers to qualify.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4495,8 +4495,8 @@ const questions = [
       "D": "A deduction only if the surviving spouse is a U.S. citizen"
     },
     "correctAnswer": "A",
-    "explanation": "The marital deduction provides an unlimited estate tax deduction for qualifying transfers to a surviving spouse who is a U.S. citizen. If the surviving spouse is not a citizen, the marital deduction is only available through a qualified domestic trust (QDOT).",
-    "tip": "Unlimited marital deduction requires U.S. citizen spouse. Non-citizen → use QDOT.",
+    "explanation": "Per IRC §2056(a), the estate tax marital deduction allows an unlimited deduction for property passing to a surviving spouse. However, per IRC §2056(d), if the surviving spouse is NOT a U.S. citizen, the marital deduction is available ONLY if property passes through a Qualified Domestic Trust (QDOT) per §2056A. QDOT requirements include: U.S. trustee, withholding on distributions, IRS regulatory compliance. For gift tax, per §2523(i), the annual exclusion to a non-citizen spouse is increased to $185,000 (2024) instead of unlimited marital deduction. Why other answers are wrong: (B) There is no fixed dollar limitation - it's unlimited; (C) The deduction itself is unlimited, not limited to citizens; (D) Citizenship affects HOW deduction is taken, not WHETHER it's available.",
+    "tip": "IRC §2056: Unlimited marital deduction for U.S. citizen spouse. Non-citizen spouse → QDOT (§2056A) required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4516,8 +4516,8 @@ const questions = [
       "D": "Avoid filing an estate tax return"
     },
     "correctAnswer": "C",
-    "explanation": "Portability allows the surviving spouse to use the deceased spouse's unused exemption (DSUE) amount, effectively doubling the exemption for married couples. A timely filed estate tax return (Form 706) is required to elect portability, even if no tax is owed.",
-    "tip": "Portability = use deceased spouse's unused exemption. Requires timely Form 706 filing to elect.",
+    "explanation": "Per IRC §2010(c)(4), portability allows a surviving spouse to use the deceased spouse's unused exemption (DSUE) amount. This effectively allows married couples to combine their exemptions ($27.22M for 2024). Per §2010(c)(5)(A), a timely filed estate tax return (Form 706) is REQUIRED to elect portability, even if no estate tax is otherwise due. The return must be filed within 9 months of death (plus 6-month extension). Rev. Proc. 2022-32 provides simplified late portability election for smaller estates. Why other answers are wrong: (A) Portability relates to exemption, not marital deduction; (B) Transfers go to surviving spouse, not deceased's estate; (D) Form 706 filing is required, not avoided.",
+    "tip": "IRC §2010(c)(4): Portability = DSUE (deceased spouse's unused exemption). Requires timely Form 706 even if no tax due.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4537,8 +4537,8 @@ const questions = [
       "D": "Avoid all gift tax on any amount"
     },
     "correctAnswer": "C",
-    "explanation": "Gift-splitting (Section 2513) allows a gift made by one spouse to be treated as made one-half by each spouse. This doubles the annual exclusion ($36,000 per donee in 2024) and allows both spouses' unified credits to be used. Both spouses must consent, requiring Form 709.",
-    "tip": "Gift-splitting doubles exclusion and uses both spouses' credits. Requires both to file Form 709.",
+    "explanation": "Per IRC §2513, gift-splitting allows a gift made by one spouse to be treated as made one-half by each spouse, regardless of which spouse actually owns the gifted property. Benefits include: (1) doubles the annual exclusion ($36,000 per donee in 2024), (2) uses both spouses' unified credits for taxable gifts. Per §2513(a)(1), both spouses must consent to split ALL gifts made during the year. Per §6019, both spouses must file Form 709 (or one spouse can consent on the other's return). Why other answers are wrong: (A) The annual exclusion itself isn't split between donees; (B) This describes separate gifts, not gift-splitting; (D) Taxable gifts exceeding the exemption still incur tax.",
+    "tip": "IRC §2513: Gift-splitting = each spouse treats as giving half. Doubles exclusion to $36K. Both file Form 709.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4558,8 +4558,8 @@ const questions = [
       "D": "Limited to the annual exclusion amount"
     },
     "correctAnswer": "C",
-    "explanation": "Payments made directly to educational institutions for tuition (not room/board/books) and directly to medical providers for medical care are excluded from gift tax without limit under Section 2503(e). These payments are in addition to the annual exclusion.",
-    "tip": "Direct tuition/medical payments = unlimited exclusion. Must pay institution/provider directly.",
+    "explanation": "Per IRC §2503(e), direct payments to educational institutions for tuition and to medical providers for medical care are EXCLUDED from gift tax without any dollar limit. Per §2503(e)(2)(A), qualified tuition includes only amounts paid for education/training - NOT room, board, books, or supplies. Per §2503(e)(2)(B), qualified medical expenses include those defined in §213(d). Critical: payments must be made DIRECTLY to the institution/provider, not to the individual. This exclusion is IN ADDITION to the annual exclusion. Why other answers are wrong: (A) No income tax deduction results from this gift exclusion; (B) These payments are completely excluded, not subject to gift tax; (D) No dollar limit applies to qualified payments.",
+    "tip": "IRC §2503(e): Direct tuition/medical = unlimited gift tax exclusion. Must pay provider directly, not individual.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4579,8 +4579,8 @@ const questions = [
       "D": "Only assets titled in the decedent's name"
     },
     "correctAnswer": "A",
-    "explanation": "The gross estate includes all property in which the decedent had an interest at death, regardless of how it passes. This includes probate assets, jointly held property, life insurance proceeds (if decedent owned the policy), retirement accounts, revocable trusts, and property over which decedent had a general power of appointment.",
-    "tip": "Gross estate = broad inclusion. Life insurance, joint property, retirement accounts all included.",
+    "explanation": "Per IRC §2031-§2044, the gross estate includes ALL property in which the decedent had an interest at death, regardless of how title passes. Key inclusions: §2033 (property owned), §2034 (dower/curtesy), §2035 (gifts within 3 years if life insurance), §2036 (retained life estates), §2037 (reversionary interests), §2038 (revocable transfers), §2039 (annuities/retirement), §2040 (joint interests), §2041 (general powers of appointment), §2042 (life insurance with incidents of ownership), §2044 (QTIP property). Non-probate assets (beneficiary designations, joint tenancy, POD accounts) ARE included. Why other answers are wrong: (B) U.S. citizens/residents include worldwide assets; (C) Probate vs. non-probate doesn't affect inclusion; (D) Title is irrelevant - control and incidents matter.",
+    "tip": "IRC §2031-§2044: Gross estate = ALL interests including life insurance (§2042), retirement (§2039), joint (§2040).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4600,8 +4600,8 @@ const questions = [
       "D": "Original cost to the decedent"
     },
     "correctAnswer": "B",
-    "explanation": "Property included in the gross estate receives a stepped-up (or stepped-down) basis to fair market value at date of death (or alternate valuation date if elected). This eliminates income tax on unrealized appreciation during the decedent's lifetime.",
-    "tip": "Death = FMV basis. Wipes out all unrealized gain. Key planning consideration.",
+    "explanation": "Per IRC §1014(a)(1), property included in a decedent's gross estate receives a basis equal to its fair market value (FMV) at the date of death (stepped-up or stepped-down). Per §1014(a)(2), if the executor elects alternate valuation under §2032, basis equals FMV on the alternate date (6 months after death or earlier disposition). This 'step-up' eliminates income tax on ALL unrealized appreciation during the decedent's lifetime - a significant planning benefit. Exception per §1014(e): property gifted to decedent within 1 year of death that returns to donor doesn't get step-up. Why other answers are wrong: (A) Carryover basis applies to gifts (§1015), not inheritances; (C) Zero basis doesn't apply; (D) Original cost is irrelevant - FMV at death controls.",
+    "tip": "IRC §1014: Inherited property = FMV basis at death (step-up). Eliminates lifetime appreciation. Huge planning benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -4621,8 +4621,8 @@ const questions = [
       "D": "Non-family members only"
     },
     "correctAnswer": "B",
-    "explanation": "The GST tax applies to transfers to skip persons - generally those two or more generations below the transferor (grandchildren, great-grandchildren). The tax prevents avoidance of estate/gift tax at the intermediate generation. The GST exemption equals the estate exemption ($13,610,000 in 2024).",
-    "tip": "GST = transfers to skip persons (2+ generations below). Same exemption as estate tax.",
+    "explanation": "Per IRC §2601, the generation-skipping transfer (GST) tax applies to transfers to 'skip persons' - per §2613(a), individuals assigned to a generation two or more below the transferor (grandchildren, great-grandchildren, unrelated individuals 37.5+ years younger). Per §2611, GST applies to: direct skips, taxable terminations, and taxable distributions. The GST tax rate equals the maximum estate tax rate (40%). Per §2631, each person has a GST exemption equal to the basic exclusion amount ($13,610,000 for 2024). The GST prevents families from avoiding transfer tax at each generation. Why other answers are wrong: (A) One generation below are non-skip persons (children); (C) Siblings are the same generation; (D) Family members can be skip persons.",
+    "tip": "IRC §2601: GST tax = transfers to skip persons (2+ generations below). §2631: Exemption = $13.61M (2024).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4642,8 +4642,8 @@ const questions = [
       "D": "Allowing the trustee to make distributions"
     },
     "correctAnswer": "B",
-    "explanation": "Crummey powers give beneficiaries a temporary right to withdraw contributed amounts, converting what would be a future interest (not eligible for annual exclusion) into a present interest (eligible). Beneficiaries typically allow the withdrawal right to lapse, and the gift remains in trust.",
-    "tip": "Crummey withdrawal power = present interest → annual exclusion available for trust gifts.",
+    "explanation": "Per Crummey v. Commissioner (9th Cir. 1968), Crummey powers give trust beneficiaries a temporary right to withdraw contributions, converting a future interest (ineligible for annual exclusion per §2503(b)) into a present interest (eligible). Typically, beneficiaries receive notice of contribution and have 30-60 days to withdraw. If not exercised, the withdrawal right lapses and the gift remains in trust. Per IRC §2514(e), lapse of withdrawal power over the greater of $5,000 or 5% of trust corpus is NOT a taxable gift by the beneficiary (the '5 and 5' rule). Hanging powers limit annual lapse to this amount. Why other answers are wrong: (A) Grantor trust status is separate from exclusion eligibility; (C) Crummey doesn't reduce corpus - it creates withdrawal rights; (D) Trustee distributions don't create present interest.",
+    "tip": "Crummey v. Comm'r: Withdrawal power = present interest for §2503(b) exclusion. 5-and-5 rule (§2514(e)) limits gift on lapse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4663,8 +4663,8 @@ const questions = [
       "D": "The trust has owned the policy for more than 3 years at death"
     },
     "correctAnswer": "D",
-    "explanation": "Life insurance is excluded from the insured's estate if the ILIT owns the policy and the insured has no incidents of ownership. If an existing policy is transferred to an ILIT, the insured must survive 3 years after transfer (Section 2035). Having the trust purchase a new policy avoids this issue.",
-    "tip": "ILIT excludes insurance from estate. Transfer existing policy → 3-year survival requirement.",
+    "explanation": "Per IRC §2042, life insurance proceeds are included in the gross estate if the decedent possessed any 'incidents of ownership' (policy control, beneficiary designation rights, borrowing rights). An Irrevocable Life Insurance Trust (ILIT) excludes insurance from the estate when the TRUST (not the insured) owns all incidents. Per IRC §2035(a), if the insured transfers an EXISTING policy to an ILIT and dies within 3 years of the transfer, the proceeds are pulled back into the estate. Solution: have the ILIT purchase a NEW policy to avoid the 3-year rule. Premiums paid by grantor can qualify for annual exclusion via Crummey powers. Why other answers are wrong: (A) Insured should NOT be a beneficiary - defeats purpose; (B) Annual exclusion relates to funding, not ownership; (C) Transfer doesn't automatically work - 3-year survival required.",
+    "tip": "IRC §2042: ILIT owns policy = excludes from estate. §2035: Transfer existing policy → must survive 3 years.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4684,8 +4684,8 @@ const questions = [
       "D": "Real estate only"
     },
     "correctAnswer": "A",
-    "explanation": "Minority discounts (for lack of control) and marketability discounts (for lack of a ready market) can significantly reduce the gift/estate tax value of closely-held business interests, family limited partnerships, and LLCs. These discounts can range from 15% to 40% or more combined.",
-    "tip": "Valuation discounts = minority + marketability. Significant tax savings on family business transfers.",
+    "explanation": "Per IRC §2031 (estate) and §2512 (gift), property is valued at FMV - what a willing buyer would pay a willing seller. For closely-held business interests, FLPs, and LLCs, valuation discounts reflect: (1) Minority/lack of control discount - reduced value because interest holder cannot force liquidation, direct management, or compel distributions; (2) Lack of marketability discount - reduced value due to absence of ready market to sell the interest. Combined discounts typically range 25-45% depending on facts. Per Reg. §25.2701-3 and case law (Mandelbaum, Estate of Janda), discounts must be substantiated by qualified appraisals. Note: IRC §2704 limits certain artificial restrictions. Why other answers are wrong: (B) Cash has no discount; (C) Publicly traded securities have ready market; (D) Real estate may qualify but business interests are primary application.",
+    "tip": "IRC §2031/§2512: Valuation discounts (minority + marketability) = 25-45% on closely-held interests. Requires appraisal.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4705,8 +4705,8 @@ const questions = [
       "D": "The estate has insufficient liquidity"
     },
     "correctAnswer": "B",
-    "explanation": "Section 6166 allows deferral of estate tax attributable to closely-held business interests if the business exceeds 35% of the adjusted gross estate. Interest-only payments can be made for 4 years, followed by up to 10 annual installments. Special 2% interest rate applies to a portion of deferred tax.",
-    "tip": "Section 6166: closely-held business >35% of estate. 14-year payout option with favorable interest rate.",
+    "explanation": "Per IRC §6166, estate tax attributable to closely-held business interests can be deferred and paid in installments if the business value exceeds 35% of the adjusted gross estate. Per §6166(a), deferral allows: (1) interest-only payments for 4 years, (2) followed by up to 10 annual principal installments (14 years total). Per §6166(d), closely-held business includes sole proprietorship, partnership (≤45 partners or ≥20% capital), and corporation (≤45 shareholders or ≥20% voting stock). Per §6601(j), a special 2% interest rate applies to the first $1,750,000 (adjusted for inflation) of deferred tax; remainder at 45% of the underpayment rate. Why other answers are wrong: (A) Must exceed 35% threshold - any interest doesn't qualify; (C) Alternate valuation is unrelated to deferral; (D) Liquidity isn't the test - 35% business value is.",
+    "tip": "IRC §6166: Business >35% of estate = 14-year deferral (4 years interest-only + 10 installments). 2% rate on portion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4726,8 +4726,8 @@ const questions = [
       "D": "Provide lifetime income to beneficiaries"
     },
     "correctAnswer": "B",
-    "explanation": "A GRAT transfers assets to an irrevocable trust while the grantor retains annuity payments for a term. The taxable gift is the remainder value (gift minus retained annuity). If assets appreciate more than the Section 7520 rate, the excess passes to beneficiaries gift-tax free. Zeroed-out GRATs are popular.",
-    "tip": "GRAT transfers appreciation above hurdle rate tax-free. Risk: grantor must survive the term.",
+    "explanation": "Per IRC §2702, a Grantor Retained Annuity Trust (GRAT) transfers assets to an irrevocable trust while the grantor retains fixed annuity payments for a specified term. The taxable gift equals the transfer value minus the present value of the retained annuity (calculated using §7520 rate). If assets appreciate more than the §7520 rate (hurdle rate), excess appreciation passes to remainder beneficiaries gift-tax free. 'Zeroed-out' GRATs set the annuity so taxable gift approaches zero. Per §2036, if grantor dies during the term, the full value is included in the estate. Why other answers are wrong: (A) Charities are not involved in GRATs (that's a CRT); (C) GRATs don't avoid all taxes - just transfer excess appreciation; (D) Income goes to grantor, not beneficiaries, during the term.",
+    "tip": "IRC §2702: GRAT = annuity to grantor, remainder to beneficiaries. Appreciation above §7520 rate passes tax-free.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4747,8 +4747,8 @@ const questions = [
       "D": "It decreases both the gross estate value and estate tax liability"
     },
     "correctAnswer": "D",
-    "explanation": "The alternate valuation date (6 months after death) may be elected only if it decreases both the value of the gross estate AND the estate tax liability (after credits). If either would increase, the election is not available. Property distributed before 6 months is valued at distribution date.",
-    "tip": "Alternate valuation: only if BOTH gross estate AND tax decrease. Not for basis step-up planning alone.",
+    "explanation": "Per IRC §2032(a), the executor may elect to value estate assets 6 months after death (alternate valuation date) instead of date of death. However, per §2032(c), the election is available ONLY if it DECREASES BOTH: (1) the gross estate value, AND (2) the estate/GST tax liability (after credits). This prevents basis step-up manipulation without tax savings. Per §2032(a)(1), property distributed or sold before 6 months is valued at disposition date. The election is irrevocable once made on Form 706 and applies to ALL estate assets. Why other answers are wrong: (A) Real property alone doesn't enable election; (B) Executor preference isn't sufficient - must meet requirements; (C) The election cannot INCREASE estate value.",
+    "tip": "IRC §2032: Alternate valuation = 6 months post-death. Must decrease BOTH gross estate AND tax liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4768,8 +4768,8 @@ const questions = [
       "D": "Filed Form 709"
     },
     "correctAnswer": "B",
-    "explanation": "A gift is complete when the donor has so parted with dominion and control as to leave no power to change its disposition. Retained powers (to revoke, change beneficiaries, or control investment) may cause the gift to be incomplete. Completion timing affects annual exclusion year.",
-    "tip": "Complete gift = donor relinquishes dominion and control. Retained powers → incomplete gift.",
+    "explanation": "Per Reg. §25.2511-2(b), a gift is complete when the donor has 'so parted with dominion and control as to leave in him no power to change its disposition.' If the donor retains power to revoke the transfer, change beneficiaries, or reclaim property, the gift is INCOMPLETE (no current gift tax, but included in estate at death). Per §2501, gift tax applies only to completed transfers. Completion timing matters: determines which year's annual exclusion applies and when gift tax return is due. Irrevocable transfers without retained powers are complete. Why other answers are wrong: (A) Signing a document alone doesn't complete the gift; (C) Gifts require donative intent, not consideration; (D) Filing Form 709 reports completed gifts - doesn't create completion.",
+    "tip": "Reg. §25.2511-2: Complete gift = donor relinquishes ALL dominion and control. Retained powers → incomplete gift.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4789,8 +4789,8 @@ const questions = [
       "D": "The power is exercised at death"
     },
     "correctAnswer": "B",
-    "explanation": "A general power of appointment (power to appoint to self, one's estate, or creditors) causes inclusion in the gross estate under Section 2041, whether or not exercised. A limited (special) power (cannot appoint to self, estate, or creditors) does not cause estate inclusion.",
-    "tip": "General power = can appoint to self → estate inclusion. Limited/special power = no estate inclusion.",
+    "explanation": "Per IRC §2041(a)(2), property subject to a general power of appointment is included in the power holder's gross estate. Per §2041(b)(1), a 'general power' is one that allows appointment to the holder themselves, their estate, their creditors, or creditors of their estate - essentially equivalent to ownership. A 'limited' or 'special' power (can only appoint among a defined class excluding self/estate/creditors) does NOT cause estate inclusion per §2041. Per §2514, similar rules apply for gift tax - exercise or release of general power is a taxable transfer. The power need not be exercised - mere possession at death causes inclusion. Why other answers are wrong: (A) Creating the trust isn't relevant - it's the power that matters; (C) Income receipt doesn't define general power; (D) Exercise is not required for inclusion.",
+    "tip": "IRC §2041: General power (appoint to self/estate/creditors) = estate inclusion. Limited power = no inclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4810,8 +4810,8 @@ const questions = [
       "D": "Transfer a residence to children at a reduced gift tax value while retaining the right to live there"
     },
     "correctAnswer": "D",
-    "explanation": "A QPRT transfers a personal residence to an irrevocable trust while the grantor retains the right to live there for a term of years. The taxable gift is the remainder value (discounted for retained use). If the grantor survives the term, the residence passes to beneficiaries with a reduced transfer tax cost.",
-    "tip": "QPRT = discounted gift of residence. Must survive term or full value included in estate.",
+    "explanation": "Per IRC §2702(a)(3)(A)(ii), a Qualified Personal Residence Trust (QPRT) allows the grantor to transfer a personal residence to an irrevocable trust while retaining the right to live there for a specified term of years. The taxable gift is the remainder value (residence FMV discounted by the present value of the grantor's retained use, calculated using §7520 rates). If the grantor survives the term, the residence passes to beneficiaries at the original discounted gift value - substantial transfer tax savings. Per §2036, if the grantor dies during the term, the full FMV is included in the estate. After the term, grantor can rent back from beneficiaries. Why other answers are wrong: (A) Exclusion isn't automatic - must survive term; (B) Beneficiaries take carryover basis, not stepped-up; (C) No capital gains avoidance occurs.",
+    "tip": "IRC §2702: QPRT = discounted gift of residence. Grantor must survive term or full value in estate (§2036).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4831,8 +4831,8 @@ const questions = [
       "D": "Capital gain treatment"
     },
     "correctAnswer": "A",
-    "explanation": "Section 303 allows an estate (or beneficiary) to redeem stock from a closely-held corporation to pay estate taxes, funeral, and administration expenses and receive exchange (capital gain) treatment rather than dividend treatment. The stock must exceed 35% of the adjusted gross estate.",
-    "tip": "Section 303: stock redemption for estate taxes = exchange treatment, not dividend. Requires >35% test.",
+    "explanation": "Per IRC §303, an estate or beneficiary can redeem stock from a closely-held corporation to pay estate taxes, funeral expenses, and administration expenses and receive EXCHANGE treatment (capital gain, not dividend). Per §303(b)(2)(A), the stock value must exceed 35% of the adjusted gross estate (same threshold as §6166 deferral). The redemption amount qualifying for exchange treatment is limited to the sum of estate taxes, funeral costs, and administrative expenses. With stepped-up basis, the capital gain is typically minimal. Per §303(c), stock of two or more corporations can be aggregated if the estate owns 20%+ of each. Why other answers are wrong: (B) It's not tax-free - it's exchange (capital gain) treatment; (C) Ordinary income treatment is what §303 avoids; (D) Capital gain treatment IS the correct answer - but (A) is more precise.",
+    "tip": "IRC §303: Redemption for estate taxes = exchange (capital gain) treatment. Stock must be >35% of estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4852,8 +4852,8 @@ const questions = [
       "D": "Income to charity for a term, with remainder to family"
     },
     "correctAnswer": "D",
-    "explanation": "A charitable lead trust (CLT) pays income to charity for a specified term, with the remainder passing to non-charitable beneficiaries (typically family). The CLT provides a gift/estate tax deduction for the present value of the charitable lead interest, reducing transfer taxes on the remainder.",
-    "tip": "CLT = charity first, family remainder. Opposite of CRT. Good for transferring appreciation.",
+    "explanation": "Per IRC §2522 (gift tax) and §2055 (estate tax), a Charitable Lead Trust (CLT) provides income payments (annuity or unitrust) to a qualified charity for a specified term, with the remainder passing to non-charitable beneficiaries (typically family members). The donor receives a gift/estate tax deduction for the present value of the charitable lead interest. If trust assets appreciate more than the §7520 rate during the term, excess appreciation passes to family at reduced or zero transfer tax cost. CLTs are the OPPOSITE of CRTs (where individuals receive income and charity gets remainder). CLTs can be grantor or non-grantor for income tax. Why other answers are wrong: (A) Family first/charity remainder describes a CRT; (B) All to charity would be an outright charitable gift; (C) Grantor income/charity remainder is a CRT.",
+    "tip": "IRC §2522/§2055: CLT = charity gets income, family gets remainder. Opposite of CRT. Transfers appreciation efficiently.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -4873,8 +4873,8 @@ const questions = [
       "D": "Allocating sufficient GST exemption to equal the transfer value"
     },
     "correctAnswer": "D",
-    "explanation": "A trust's inclusion ratio determines GST tax. An inclusion ratio of zero (no GST tax) requires allocating GST exemption equal to the property's value at transfer. The applicable fraction equals GST exemption allocated divided by value of property transferred. Timely allocation is important to avoid inclusion ratio issues.",
-    "tip": "Zero inclusion ratio = full GST exemption allocation. Timely allocation avoids later problems.",
+    "explanation": "Per IRC §2642, a trust's GST tax exposure is determined by its 'inclusion ratio.' Per §2642(a)(1), inclusion ratio = 1 minus the 'applicable fraction.' The applicable fraction per §2642(a)(2) = GST exemption allocated ÷ value of property transferred. For an inclusion ratio of ZERO (fully exempt from GST tax): the numerator (GST exemption) must equal the denominator (transfer value). Per §2632, GST exemption can be allocated on a timely gift tax return or at death. Automatic allocation rules under §2632(c) apply to direct skips and transfers to GST trusts. Late allocation uses FMV at allocation date (may be higher than original transfer). Why other answers are wrong: (A) Grantor trust status doesn't affect GST inclusion ratio; (B) Duration doesn't determine GST exemption; (C) Distributions to non-skip persons don't create GST exemption.",
+    "tip": "IRC §2642: Inclusion ratio = 1 - (GST exemption ÷ transfer value). Zero ratio = fully GST-exempt trust.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4894,8 +4894,8 @@ const questions = [
       "D": "The property was transferred to a family member"
     },
     "correctAnswer": "B",
-    "explanation": "Section 2036 includes in the gross estate property transferred during life if the decedent retained: (1) possession/enjoyment or income from the property for life, or (2) the right to designate who will possess or enjoy the property. This applies to many retained interest arrangements.",
-    "tip": "Section 2036: retain life interest → full estate inclusion (despite gift tax already paid).",
+    "explanation": "Per IRC §2036(a), property transferred during life is included in the gross estate if the decedent retained: (1) per §2036(a)(1), possession/enjoyment of the property or income for life, or any period not ascertainable without reference to death, or for any period not ending before death; OR (2) per §2036(a)(2), the right to designate who shall possess or enjoy the property or income. Common §2036 triggers: retained life estates, FLP arrangements with retained control, revocable trusts, arrangements where transferor continues to live in/use property. Gift tax paid on the transfer is still included per the 'gross-up' rule. Why other answers are wrong: (A) Transfer can be complete for gift tax but still cause estate inclusion; (C) Gift tax payment is irrelevant to §2036; (D) Family transfers don't inherently trigger §2036.",
+    "tip": "IRC §2036: Retained life estate or control = estate inclusion. Applies despite 'complete' gift for gift tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -4915,8 +4915,8 @@ const questions = [
       "D": "The trust is included in the grantor's estate"
     },
     "correctAnswer": "A",
-    "explanation": "An IDGT is structured so the grantor is treated as the owner for income tax purposes (pays tax on trust income) but the trust is complete for gift/estate tax purposes (excluded from estate). This allows tax-free growth as the grantor's payment of income tax is an additional tax-free gift.",
-    "tip": "IDGT = grantor trust for income tax, complete gift for transfer tax. Grantor paying tax = additional tax-free gift.",
+    "explanation": "An Intentionally Defective Grantor Trust (IDGT) is structured so: (1) the grantor is treated as owner for INCOME TAX purposes under IRC §671-§679 (typically via power to substitute assets per §675(4)(C) or borrowing power per §675(2)), meaning grantor pays tax on all trust income; BUT (2) the transfer is COMPLETE for gift/estate tax purposes per §2511, meaning excluded from gross estate. Benefits: trust grows income-tax-free (grantor pays tax = additional tax-free gift to trust beneficiaries per Rev. Rul. 2004-64); sales to IDGT are not recognized events (grantor selling to self). Common for freeze transactions and installment note sales. Why other answers are wrong: (B) Trust income is taxable - to the grantor; (C) Annuity payments describe a GRAT; (D) The goal is estate EXCLUSION, not inclusion.",
+    "tip": "IDGT = grantor trust (§671-§679) for income tax + complete gift for estate tax. Grantor pays tax = extra gift.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4936,8 +4936,8 @@ const questions = [
       "D": "Gifts to charities within 3 years of death"
     },
     "correctAnswer": "B",
-    "explanation": "Section 2035 includes in the gross estate: (1) life insurance transferred within 3 years of death (or incidents of ownership released), and (2) gift taxes paid on any gifts made within 3 years of death (gross-up rule). Most other gifts are not brought back, but GRAT/QPRT failures are covered by other sections.",
-    "tip": "3-year rule: life insurance transfers and gift taxes paid. Regular gifts not brought back under 2035.",
+    "explanation": "Per IRC §2035(a), the 3-year rule brings back into the gross estate: (1) per §2035(a)(2), life insurance policies transferred within 3 years of death (or incidents of ownership released within 3 years); (2) per §2035(b), gift taxes paid by decedent or estate on gifts made within 3 years of death (the 'gross-up' rule - ensures tax-inclusive treatment). Per §2035(d), most other gifts made within 3 years are NOT included under §2035 (the general gift inclusion rule was repealed in 1981). However, GRAT/QPRT failures are covered by §2036/§2038, not §2035. Section 2035 also applies to powers released within 3 years that would have caused inclusion under §2036-2038. Why other answers are wrong: (A) Regular gifts are not brought back; (C) No $1M threshold; (D) Charitable gifts don't create this issue.",
+    "tip": "IRC §2035: 3-year rule = life insurance transfers + gift tax paid (gross-up). Regular gifts NOT included.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4957,8 +4957,8 @@ const questions = [
       "D": "Property transferred to charity"
     },
     "correctAnswer": "B",
-    "explanation": "Section 2032A allows qualifying farm and closely-held business real estate to be valued at its actual use rather than highest and best use (which would be higher). The reduction is capped ($1,390,000 in 2024). Recapture tax applies if the property is sold or use changes within 10 years.",
-    "tip": "Section 2032A: farm/business real property valued at actual use. 10-year recapture if use changes.",
+    "explanation": "Per IRC §2032A, qualifying farm and closely-held business real estate can be valued at its 'actual use' (farm/business) rather than 'highest and best use' (often higher development value). Per §2032A(a)(2), the reduction in value is capped ($1,390,000 for 2024, indexed). Requirements per §2032A(b): real property must be located in U.S., used for farming/business for 5 of 8 years before death, 50%+ of estate is farm/business property, 25%+ is real property. Per §2032A(c), if qualified heirs dispose of property or change use within 10 years, recapture tax applies (additional estate tax saved by election). Why other answers are wrong: (A) Not all real property qualifies - must be farm/business; (C) Personal residences don't qualify; (D) Charitable property has separate rules.",
+    "tip": "IRC §2032A: Farm/business real property at actual use. Cap = $1.39M (2024). 10-year recapture if use changes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4978,8 +4978,8 @@ const questions = [
       "D": "A larger taxable gift"
     },
     "correctAnswer": "A",
-    "explanation": "In a net gift, the donee agrees to pay the gift tax, reducing the taxable gift by the amount of tax paid (circular calculation). If the tax paid by the donee exceeds the donor's basis in the property, the donor may recognize gain to that extent (Diedrich v. Commissioner).",
-    "tip": "Net gift reduces gift value but may trigger gain to donor if tax exceeds basis.",
+    "explanation": "Per Rev. Rul. 75-72 and Reg. §25.2511-1, a 'net gift' occurs when the donee agrees to pay the resulting gift tax as a condition of the transfer. The taxable gift is reduced by the gift tax the donee will pay (circular calculation required). Per Diedrich v. Commissioner (S. Ct. 1982), if the gift tax paid by the donee exceeds the donor's adjusted basis in the gifted property, the donor recognizes capital gain on the excess (the donee's payment discharges the donor's tax obligation = amount realized). Net gifts are useful when donor lacks liquidity for gift tax. Why other answers are wrong: (B) Gift tax isn't eliminated - just shifted to donee; (C) Gain is capital, not ordinary (if asset is capital); (D) The taxable gift is smaller, not larger.",
+    "tip": "Net gift: Donee pays gift tax → reduced taxable gift. Diedrich: Donor has gain if tax > basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -4999,8 +4999,8 @@ const questions = [
       "D": "Terminate after 21 years"
     },
     "correctAnswer": "A",
-    "explanation": "Dynasty trusts are designed to last for multiple generations (potentially perpetually in states without Rule Against Perpetuities) while avoiding estate tax at each generation. Properly structured with GST exemption, the trust corpus is never subject to estate or GST tax regardless of growth.",
-    "tip": "Dynasty trust: multi-generational wealth transfer. Use GST exemption. Perpetual in some states.",
+    "explanation": "A dynasty trust is designed to last for multiple generations (perpetually in states that have repealed or modified the Rule Against Perpetuities: Delaware, South Dakota, Nevada, Alaska, etc.) while avoiding estate and GST tax at each generation. Per IRC §2631, allocating sufficient GST exemption at creation achieves a zero inclusion ratio, meaning the trust corpus is NEVER subject to GST tax regardless of appreciation. Trust beneficiaries receive distributions without estate inclusion (assuming no general powers of appointment). Benefits compound over generations: no estate tax erosion at each death. Properly drafted dynasty trusts include spendthrift provisions for asset protection. Why other answers are wrong: (B) Dynasty trusts can accumulate income; (C) Marital deduction is separate planning tool; (D) Perpetual duration is a key feature.",
+    "tip": "Dynasty trust: Multi-generational, GST-exempt, perpetual in some states. Wealth compounds without estate tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5020,8 +5020,8 @@ const questions = [
       "D": "The surviving spouse unlimited access to principal"
     },
     "correctAnswer": "A",
-    "explanation": "A QTIP trust provides the surviving spouse with all income for life (mandatory) while allowing the deceased spouse to control who receives the property at the survivor's death. The property qualifies for the marital deduction at the first death but is included in the survivor's estate (or taxed to survivor's estate under Section 2044).",
-    "tip": "QTIP = marital deduction + control remainder. Surviving spouse must get all income for life.",
+    "explanation": "Per IRC §2056(b)(7), a Qualified Terminable Interest Property (QTIP) trust qualifies for the estate tax marital deduction even though it's a 'terminable interest' (would normally fail per §2056(b)(1)). Requirements: (1) surviving spouse must receive ALL income from the property for life (payable at least annually per §2056(b)(7)(B)(ii)); (2) no person can have power to appoint property to anyone other than surviving spouse during spouse's lifetime per §2056(b)(7)(B)(ii)(II); (3) executor must elect QTIP treatment on Form 706. The donor spouse controls the remainder (who gets property at survivor's death). Per §2044, QTIP property is included in the survivor's gross estate at second death. Why other answers are wrong: (B) Estate tax IS due on survivor's death; (C) Donor doesn't retain property - transfers to trust; (D) Spouse gets income, not unlimited principal access.",
+    "tip": "IRC §2056(b)(7): QTIP = marital deduction + donor controls remainder. Spouse gets all income. Included in survivor's estate (§2044).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5041,8 +5041,8 @@ const questions = [
       "D": "Receive income tax deductions for trust contributions"
     },
     "correctAnswer": "B",
-    "explanation": "A SLAT allows a married person to create an irrevocable trust for the benefit of their spouse (and potentially descendants), using their gift tax exemption to remove assets from their estate while retaining indirect access through the spouse beneficiary. Both spouses can create SLATs but must avoid reciprocal trust doctrine issues.",
-    "tip": "SLAT = use exemption + indirect access via spouse. Avoid reciprocal trusts with different terms.",
+    "explanation": "A Spousal Lifetime Access Trust (SLAT) allows one spouse to create an irrevocable trust for the other spouse's benefit (and descendants), using the donor spouse's gift tax exemption per IRC §2505 to remove assets from their estate while retaining INDIRECT access through distributions to the beneficiary spouse. Per §2036, the donor cannot retain direct access or estate inclusion results. Both spouses can create SLATs, but per the reciprocal trust doctrine (U.S. v. Estate of Grace), the trusts must have sufficiently different terms (different trustees, different distribution standards, different assets, staggered timing) to avoid being treated as each spouse creating a trust for themselves. Popular for using TCJA exemption before 2026 sunset. Why other answers are wrong: (A) SLATs don't avoid all estate taxes - just remove gifted assets; (C) SLATs are NOT joint trusts - each spouse creates separate trust; (D) No income tax deduction for irrevocable trust contributions.",
+    "tip": "SLAT: Use exemption + indirect access via spouse beneficiary. Avoid reciprocal trust doctrine with different terms.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5062,8 +5062,8 @@ const questions = [
       "D": "Facilitate discounted transfers of minority interests to family members"
     },
     "correctAnswer": "D",
-    "explanation": "FLPs and LLCs allow business owners to transfer minority, non-controlling interests to family members at discounted values (minority and marketability discounts). The senior generation retains control through general partner/manager interests while transferring value at reduced gift tax cost.",
-    "tip": "FLP/LLC transfers: minority interests qualify for discounts. IRS scrutinizes deathbed transfers and lack of business purpose.",
+    "explanation": "Family Limited Partnerships (FLPs) and LLCs facilitate estate planning by allowing transfers of minority, non-controlling interests at discounted values per IRC §2031/§2512 (FMV standard accounts for lack of control and marketability). The senior generation typically retains 1-2% general partner/manager interests (control) while gifting limited partner/member interests (value). Combined discounts of 25-45% are common. Per IRC §2704, certain restrictions that disappear at death may be disregarded, and IRS scrutinizes: (1) deathbed transfers (Estate of Strangi), (2) transfers lacking legitimate business purpose, (3) commingling of personal/entity assets. Per §2036(a), retained control over transferred assets can cause estate inclusion. Why other answers are wrong: (A) FLPs don't eliminate income tax - pass-through entity; (B) FLPs don't relate to marital deduction; (C) FLPs reduce, don't avoid all transfer taxes.",
+    "tip": "FLP/LLC: Minority interests = discounts (25-45%). IRS scrutinizes lack of business purpose and §2036 control retention.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5083,8 +5083,8 @@ const questions = [
       "D": "Paid entirely from the residuary estate"
     },
     "correctAnswer": "B",
-    "explanation": "Estate tax apportionment depends on state law and the decedent's will. Many states have equitable apportionment statutes that allocate tax burden proportionally among beneficiaries. Without direction, taxes may be paid from the residue (burdening residuary beneficiaries) or apportioned. Planning documents should address apportionment.",
-    "tip": "Tax apportionment = state law default unless will specifies. Important planning consideration.",
+    "explanation": "Per IRC §2205 and §2206, estate tax apportionment follows state law unless the decedent's will specifies otherwise. Most states have adopted some form of equitable apportionment statute requiring each beneficiary to bear their proportionate share of estate taxes. Without specific direction in the will, common default rules vary: (1) burden falls on residuary estate (penalizing residuary beneficiaries), (2) equitable apportionment across all recipients. IRC §2207A provides specific rules for QTIP property tax apportionment. Per §2207B, §2036 property (retained interests) may have its own apportionment rules. Planning documents should explicitly address tax apportionment to avoid unintended results. Why other answers are wrong: (A) Equal apportionment regardless of value isn't the standard; (C) Non-probate assets also bear their share under many state laws; (D) Payment from residue only is one option, not universal.",
+    "tip": "IRC §2205-§2207: Tax apportionment follows state law or will provisions. Critical planning consideration.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5104,8 +5104,8 @@ const questions = [
       "D": "CRATs must distribute all income annually"
     },
     "correctAnswer": "B",
-    "explanation": "A CRAT pays a fixed annuity amount (determined at creation, at least 5% of initial value). A CRUT pays a fixed percentage of trust assets revalued annually (at least 5%), so payments fluctuate with trust value. CRUTs allow additional contributions; CRATs do not.",
-    "tip": "CRAT = fixed payment. CRUT = percentage of revalued assets. CRUT allows additions, CRAT doesn't.",
+    "explanation": "Per IRC §664(d)(1), a Charitable Remainder Annuity Trust (CRAT) pays a fixed annuity amount (at least 5% but not more than 50% of initial FMV) that doesn't change regardless of trust performance. Per §664(d)(2), a Charitable Remainder Unitrust (CRUT) pays a fixed percentage (at least 5%, not more than 50%) of trust assets revalued ANNUALLY - payments fluctuate with trust value. Key distinction per §664(b): CRATs do NOT allow additional contributions after creation; CRUTs DO allow additions. Both provide income tax deduction per §170 for present value of remainder to charity. Per §664(d)(1)(D) and (d)(2)(D), the actuarial remainder value must be at least 10% of initial FMV. Why other answers are wrong: (A) INVERTED - CRUTs allow additions, CRATs don't; (C) Deduction depends on factors, not trust type; (D) Neither must distribute all income.",
+    "tip": "IRC §664: CRAT = fixed $ amount (no additions). CRUT = % of revalued assets (allows additions). Both ≥5%, ≤50%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5125,8 +5125,8 @@ const questions = [
       "D": "The trust receives a stepped-up basis"
     },
     "correctAnswer": "C",
-    "explanation": "Selling assets to a grantor trust for an installment note removes future appreciation from the seller's estate. Since the trust is a grantor trust, no gain is recognized on the sale (disregarded transaction). Interest payments may be below AFR if structured properly. The note replaces the asset value in the estate.",
-    "tip": "Installment sale to IDGT = freeze value + no gain recognition (grantor trust). Appreciation benefits beneficiaries.",
+    "explanation": "An installment sale to an Intentionally Defective Grantor Trust (IDGT) is a powerful estate freeze technique. Per Rev. Rul. 85-13, sales between a grantor and grantor trust are disregarded for income tax - NO GAIN is recognized on the sale (grantor treated as selling to self). The seller receives an installment note (valued at face for estate tax), removing future appreciation from the estate. Interest must be at least the Applicable Federal Rate (AFR) per IRC §1274 to avoid imputed interest, but AFR is often below actual investment returns. Trust assets appreciate outside the estate; only the frozen note value remains. Trust typically 'seeded' with 10% gift to avoid equity stripping concerns. Why other answers are wrong: (A) Estate taxes are reduced on appreciation, not eliminated; (B) No gain IS a key benefit but (C) is more complete; (D) Trust takes carryover basis from grantor.",
+    "tip": "Installment sale to IDGT: No gain (Rev. Rul. 85-13) + freeze estate value. Appreciation passes to beneficiaries tax-free.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5146,8 +5146,8 @@ const questions = [
       "D": "Gift tax being assessed on previously exempt gifts"
     },
     "correctAnswer": "C",
-    "explanation": "When the exemption reverts to approximately $6-7 million in 2026, estates that used the higher exemption for lifetime gifts could theoretically owe estate tax on the difference. IRS regulations provide anti-clawback protection - the higher exemption will be used to calculate estate tax if the exemption was higher when gifts were made.",
-    "tip": "Anti-clawback rules protect large gifts made under higher TCJA exemption. Use it or lose it before 2026.",
+    "explanation": "Per the TCJA sunset on December 31, 2025, the basic exclusion amount will revert from ~$13.61M to approximately $6-7M (adjusted for inflation). The 'clawback' concern: if someone uses $12M of exemption for lifetime gifts under TCJA, and dies after 2025 with a $7M exemption, would they owe estate tax on the $5M difference? Per Reg. §20.2010-1(c) (the anti-clawback regulations), the answer is NO - the estate tax calculation uses the HIGHER of the exemption at death OR the exemption at the time of prior gifts. This provides certainty for taxpayers making large gifts before 2026. Strategy: 'use it or lose it' - make gifts before sunset to lock in higher exemption. Why other answers are wrong: (A) Basis step-up is a separate issue; (B) Gifts aren't literally returned to estate; (D) Previously exempt gifts remain exempt.",
+    "tip": "Reg. §20.2010-1(c): Anti-clawback protects large TCJA gifts. Use $13.61M exemption before 2026 sunset.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
