@@ -100,22 +100,22 @@ export default function AdminSidebar() {
         </div>
       </div>
 
-      {/* Mobile bottom navigation */}
+      {/* Mobile bottom navigation - scrollable to show all items */}
       <div className="lg:hidden fixed bottom-0 inset-x-0 bg-gray-900 border-t border-gray-800 z-50">
-        <nav className="flex justify-around py-2">
-          {navigation.slice(0, 5).map((item) => {
+        <nav className="flex overflow-x-auto py-2 px-2 gap-1 no-scrollbar">
+          {navigation.map((item) => {
             const isActive = pathname === item.href ||
               (item.href !== '/admin' && pathname?.startsWith(item.href));
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex flex-col items-center px-3 py-2 text-xs ${
+                className={`flex flex-col items-center px-3 py-2 text-xs min-w-[60px] flex-shrink-0 ${
                   isActive ? 'text-[var(--primary)]' : 'text-gray-400'
                 }`}
               >
                 <item.icon className="h-5 w-5" />
-                <span className="mt-1">{item.name}</span>
+                <span className="mt-1 whitespace-nowrap">{item.name}</span>
               </Link>
             );
           })}
