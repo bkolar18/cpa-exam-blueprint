@@ -616,7 +616,7 @@ export default function ReadinessDashboardPage() {
             <button
               key={section}
               onClick={() => setSelectedSection(section)}
-              className={`px-2 sm:px-4 py-2 sm:py-3 rounded-xl font-medium transition-all sm:w-[100px] text-center ${
+              className={`px-2 sm:px-4 py-2 sm:py-3 rounded-xl font-medium transition-all w-[70px] sm:w-[100px] text-center ${
                 selectedSection === section
                   ? 'bg-[var(--primary)] text-white shadow-lg scale-105'
                   : 'bg-white dark:bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] hover:border-[var(--primary)]'
@@ -1073,31 +1073,31 @@ export default function ReadinessDashboardPage() {
  )}
 
  {/* Pre-Exam Assessment Section */}
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl border border-amber-200 dark:border-amber-800/50 p-6">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl border border-amber-200 dark:border-amber-800/50 p-4 sm:p-6">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-[var(--foreground)]">{selectedSection} Pre-Exam Assessment</h3>
-                  <p className="text-sm text-[var(--muted)] mt-1">
+                <div className="min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-[var(--foreground)]">{selectedSection} Pre-Exam Assessment</h3>
+                  <p className="text-xs sm:text-sm text-[var(--muted)] mt-1">
                     {assessmentStatus[selectedSection]?.alreadyGenerated
-                      ? `Assessment generated on ${new Date(assessmentStatus[selectedSection].generatedAt!).toLocaleDateString()}`
+                      ? `Generated ${new Date(assessmentStatus[selectedSection].generatedAt!).toLocaleDateString()}`
                       : assessmentStatus[selectedSection]?.examDate
-                        ? `One comprehensive AI assessment available per exam (${assessmentStatus[selectedSection].daysUntilExam} days until exam)`
-                        : 'Schedule your exam date to unlock your Pre-Exam Assessment'}
+                        ? `${assessmentStatus[selectedSection].daysUntilExam} days until exam`
+                        : 'Schedule your exam to unlock'}
                   </p>
                   {!assessmentStatus[selectedSection]?.examDate && (
                     <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">
-                      Set your exam date in <Link href="/dashboard/exam-schedule" className="underline hover:no-underline">Exam Schedule</Link> to access this feature.
+                      Set your exam date in <Link href="/dashboard/exam-schedule" className="underline hover:no-underline">Exam Schedule</Link>
                     </p>
                   )}
                 </div>
               </div>
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 self-start sm:self-auto">
                 {assessmentStatus[selectedSection]?.alreadyGenerated ? (
                   <Link
                     href={`/dashboard/readiness/assessment/${selectedSection.toLowerCase()}`}
@@ -1136,7 +1136,7 @@ export default function ReadinessDashboardPage() {
             {/* Readiness Recommendations */}
             <div className="mt-6 pt-4 border-t border-amber-200 dark:border-amber-800/50">
               <p className="text-sm font-medium text-[var(--foreground)] mb-3">What We Recommend Before Sitting:</p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="grid sm:grid-cols-3 gap-3">
                 <div className={`p-3 rounded-lg border ${
                   currentReadiness.primeMeridian.overallScore >= 80
                     ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
@@ -1192,29 +1192,9 @@ export default function ReadinessDashboardPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     )}
-                    <span className="text-sm font-medium">3+ Simulations</span>
+                    <span className="text-sm font-medium">3+ Exam Simulations</span>
                   </div>
                   <p className="text-xs text-[var(--muted)] mt-1">Completed: {currentReadiness.simulationCount}</p>
-                </div>
-
-                <div className={`p-3 rounded-lg border ${
-                  currentReadiness.tbsStats.uniqueTBSCompleted >= 5
-                    ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
-                    : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
-                }`}>
-                  <div className="flex items-center gap-2">
-                    {currentReadiness.tbsStats.uniqueTBSCompleted >= 5 ? (
-                      <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    )}
-                    <span className="text-sm font-medium">5+ TBS Completed</span>
-                  </div>
-                  <p className="text-xs text-[var(--muted)] mt-1">Completed: {currentReadiness.tbsStats.uniqueTBSCompleted}</p>
                 </div>
               </div>
             </div>
