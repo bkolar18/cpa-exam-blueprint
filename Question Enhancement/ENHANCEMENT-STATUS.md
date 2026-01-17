@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 245 | 560 | 30% | In Progress |
+| TCP | 805 | 280 | 525 | 35% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 245 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 280 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -63,6 +63,7 @@ All 58 exam TBS questions have been enhanced with:
 | Partnership Planning | 35 | tcp-005-001 to tcp-005-035 | **Complete** |
 | Property Planning | 35 | tcp-006-001 to tcp-006-035 | **Complete** |
 | Estate and Gift Planning | 35 | tcp-007-001 to tcp-007-035 | **Complete** |
+| State and Local Tax | 35 | tcp-008-001 to tcp-008-035 | **Complete** |
 | More batches | ... | ... | Pending |
 
 ### TCP Enhancement Completed - January 17, 2026 (Session 1)
@@ -539,6 +540,62 @@ All 58 exam TBS questions have been enhanced with:
 | SLAT | IRC §2505, §2036 |
 | FLP/LLC Discounts | IRC §2031, §2704 |
 | Anti-Clawback | Reg. §20.2010-1(c) |
+
+---
+
+### TCP Enhancement Completed - January 17, 2026 (Session 8)
+
+**State and Local Tax Questions Enhanced (tcp-008-001 to tcp-008-035)**
+
+35 State and Local Tax questions enhanced with:
+- Quill Corp. v. North Dakota (1992) physical presence nexus
+- South Dakota v. Wayfair (2018) economic nexus for sales tax
+- P.L. 86-272 (15 U.S.C. §381-384) income tax protection
+- IRC §164(b)(6) SALT deduction cap ($10K/$5K MFS)
+- IRS Notice 2020-75 PTET SALT workaround
+- UDITPA apportionment formulas (property, payroll, sales)
+- Single sales factor apportionment
+- Market-based vs cost-of-performance sourcing
+- Combined reporting and unitary business (Mobil Oil test)
+- Water's edge election for combined groups
+- Statutory residency (permanent abode + 183 days)
+- Throwback/throwout rules for "nowhere income"
+- Allocation vs apportionment (nonbusiness vs business income)
+- Marketplace facilitator laws (post-Wayfair)
+- Streamlined Sales Tax (SST/SSUTA)
+- Economic/factor presence nexus for income tax (MTC model)
+- Related-party add-back statutes
+- Affiliate/attributional nexus (Scripto/Tyler Pipe doctrine)
+- Gross receipts taxes (Ohio CAT, Washington B&O, Texas margin)
+- Voluntary Disclosure Agreements (VDAs)
+- Texas v. New Jersey escheat priority rules
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Physical Presence Nexus | Quill Corp. v. North Dakota |
+| Economic Nexus | South Dakota v. Wayfair |
+| Income Tax Protection | P.L. 86-272 |
+| SALT Cap | IRC §164(b)(6) |
+| PTET Workaround | IRS Notice 2020-75 |
+| Apportionment Formula | UDITPA |
+| Single Sales Factor | State law variations |
+| Market-Based Sourcing | MTC model regulations |
+| Combined Reporting | Mobil Oil Corp. v. Comm'r |
+| Water's Edge | State election rules |
+| Statutory Residency | State law (183-day rules) |
+| Throwback Rules | UDITPA §17 |
+| Allocation | UDITPA (nonbusiness income) |
+| Marketplace Facilitator | State marketplace laws |
+| Streamlined Sales Tax | SSUTA |
+| Factor Presence | MTC model thresholds |
+| Add-Back Statutes | State anti-avoidance rules |
+| Affiliate Nexus | Scripto/Tyler Pipe |
+| Gross Receipts Tax | Ohio CAT, Washington B&O |
+| VDA Program | MTC multistate VDA |
+| Escheat Priority | Texas v. New Jersey |
 
 ---
 

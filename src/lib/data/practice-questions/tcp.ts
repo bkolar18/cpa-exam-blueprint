@@ -5167,8 +5167,8 @@ const questions = [
       "D": "Employees, property, or regular physical presence in the state"
     },
     "correctAnswer": "D",
-    "explanation": "Traditional physical presence nexus requires employees, property (owned or leased), or regular physical presence in a state. This includes offices, warehouses, inventory, traveling salespeople, and service personnel. Many states now also impose economic nexus based on sales thresholds.",
-    "tip": "Physical nexus = people or property in the state. Economic nexus = sales threshold (no physical presence required).",
+    "explanation": "Under traditional physical presence nexus standards (established in Quill Corp. v. North Dakota, 1992), a business must have employees, property (owned or leased), or regular physical presence in a state to be subject to state income or franchise tax. This includes offices, warehouses, inventory, traveling salespeople, and service personnel. Many states now also impose economic nexus (factor presence) for income tax based on sales, property, or payroll thresholds—parallel to post-Wayfair sales tax economic nexus. Why other answers are wrong: (A) A single transaction alone typically doesn't create physical presence nexus without other factors; (B) Customers in a state don't create physical presence for the seller; (C) Online sales without more don't create physical presence—but may create economic nexus post-Wayfair.",
+    "tip": "Physical nexus = employees, property, or regular presence in state. Quill established (later limited to sales tax by Wayfair).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5188,8 +5188,8 @@ const questions = [
       "D": "Remote sellers to collect sales tax based on economic nexus without physical presence"
     },
     "correctAnswer": "D",
-    "explanation": "Wayfair overturned the physical presence requirement for sales tax nexus (from Quill). States can now require remote sellers to collect sales tax based on economic nexus (typically $100,000 in sales or 200 transactions). Most states have adopted economic nexus laws following Wayfair.",
-    "tip": "Wayfair = economic nexus for sales tax. Physical presence no longer required. Check each state's thresholds.",
+    "explanation": "South Dakota v. Wayfair (2018) overruled Quill's physical presence requirement for sales tax nexus. The Supreme Court held that states may require remote sellers to collect sales tax based on economic nexus—substantial connection to the state through economic activity. South Dakota's threshold ($100,000 in sales OR 200 transactions) was deemed constitutional. Most states have adopted similar economic nexus laws. Why other answers are wrong: (A) Wayfair allows taxation of out-of-state businesses, not just in-state; (B) Federal government doesn't administer state sales taxes; (C) Businesses must still have nexus (economic threshold)—not 'all businesses regardless of nexus.'",
+    "tip": "Wayfair (2018): Economic nexus OK for sales tax. Overruled Quill's physical presence requirement. Most states: $100K or 200 transactions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5209,8 +5209,8 @@ const questions = [
       "D": "States adopt federal definitions of income, deductions, or taxable income as a starting point"
     },
     "correctAnswer": "D",
-    "explanation": "State conformity means states adopt federal definitions (AGI, taxable income, depreciation methods) as a starting point for calculating state tax. States may conform to current federal law (rolling conformity) or a fixed date (static conformity). States then add modifications.",
-    "tip": "Conformity = federal starting point with state modifications. Rolling vs. static conformity varies by state.",
+    "explanation": "State conformity means states adopt federal tax definitions—such as AGI, taxable income, or specific IRC provisions—as a starting point for state income tax. Rolling conformity automatically adopts current federal law; static (fixed-date) conformity freezes at a specific IRC version. States then add modifications (additions and subtractions) to federal income. Examples: Many states decoupled from 100% bonus depreciation, requiring addback with state depreciation adjustment. Why other answers are wrong: (A) IRS administers only federal taxes—states have their own tax agencies; (B) SALT deductibility is a federal rule, not state conformity; (C) Tax rates are set independently by each state—conformity affects definitions, not rates.",
+    "tip": "Conformity: states use federal definitions as starting point. Rolling = current IRC; Static = fixed date. State modifications adjust from there.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5230,8 +5230,8 @@ const questions = [
       "D": "$15,000 for joint filers"
     },
     "correctAnswer": "C",
-    "explanation": "TCJA limited the SALT deduction to $10,000 ($5,000 for MFS) for tax years 2018-2025. This includes state and local income taxes (or sales taxes if elected) plus property taxes combined. This cap significantly impacted taxpayers in high-tax states.",
-    "tip": "SALT cap = $10K total (income/sales + property taxes combined). Expires after 2025.",
+    "explanation": "Per IRC §164(b)(6) as added by TCJA, the itemized deduction for state and local taxes is capped at $10,000 ($5,000 for married filing separately) for tax years 2018-2025. This cap applies to the combined total of: (1) state/local income taxes OR general sales taxes (whichever the taxpayer elects), plus (2) real property taxes. Foreign real property taxes are no longer deductible. This cap significantly impacted high-tax state taxpayers, spurring PTET workarounds (IRS Notice 2020-75). Why other answers are wrong: (A) The cap applies to all property taxes, not just non-primary residence; (B) The cap is $10,000 for most filers, $5,000 only for MFS; (D) $15,000 is not a statutory amount—the cap is $10,000.",
+    "tip": "IRC §164(b)(6): SALT cap $10K ($5K MFS) for 2018-2025. Includes income/sales + property taxes combined. Consider PTET workaround.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5251,8 +5251,8 @@ const questions = [
       "D": "Allocate a multistate business's income among states where it has nexus"
     },
     "correctAnswer": "D",
-    "explanation": "Apportionment formulas divide a multistate business's income among states where it has nexus, ensuring each state taxes only its fair share. Traditional formulas use property, payroll, and sales factors. Many states now use single sales factor apportionment.",
-    "tip": "Apportionment = divide income among states. Most states moving to single sales factor.",
+    "explanation": "Income apportionment formulas divide a multistate business's apportionable (business) income among states where it has nexus, ensuring each state taxes only its fair share of income. Traditional UDITPA (Uniform Division of Income for Tax Purposes Act) formula uses equally-weighted property, payroll, and sales factors. Many states now use single sales factor or double-weighted sales to attract employers. Apportionment differs from allocation, which assigns specific nonbusiness income entirely to one state. Why other answers are wrong: (A) Federal taxable income is the federal starting point—apportionment is a state calculation; (B) Apportionment applies to income tax, not sales tax rates; (C) Apportionment divides income proportionally—it doesn't assign all income to one state.",
+    "tip": "Apportionment: divides business income among nexus states. UDITPA: property + payroll + sales factors. Most states now use single sales factor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5272,8 +5272,8 @@ const questions = [
       "D": "The assessed value of real and personal property"
     },
     "correctAnswer": "D",
-    "explanation": "Property taxes are ad valorem taxes based on the assessed value of property (real property and sometimes tangible personal property). Assessment methods vary by jurisdiction but typically involve market value, income approach, or cost approach. Tax = assessed value × mill rate.",
-    "tip": "Property tax = assessed value × rate. Assessment methods and rates vary widely by locality.",
+    "explanation": "Property taxes are ad valorem ('according to value') taxes imposed by local governments based on the assessed value of real property and sometimes tangible personal property (equipment, fixtures). Assessment methods include: market approach (comparable sales), income approach (capitalized rental income), and cost approach (reproduction cost minus depreciation). Tax liability = assessed value × mill rate (or millage rate—dollars per $1,000 of assessed value). Why other answers are wrong: (A) Original purchase price may differ significantly from current assessed value—assessments typically reflect market value; (B) Property tax is based on property value, not income; (C) Property owner's income is irrelevant—property tax is asset-based, not income-based.",
+    "tip": "Property tax: ad valorem on assessed value. Tax = Assessed Value × Mill Rate. Assessment: market, income, or cost approach.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -5293,8 +5293,8 @@ const questions = [
       "D": "$10,000 in sales or 50 transactions"
     },
     "correctAnswer": "A",
-    "explanation": "Following Wayfair, most states adopted the South Dakota threshold: $100,000 in sales OR 200 transactions in the state. Some states eliminated the transaction threshold or have different sales thresholds. Businesses must monitor nexus in each state where they sell.",
-    "tip": "Common threshold: $100K sales or 200 transactions. But thresholds vary by state - always verify.",
+    "explanation": "Following South Dakota v. Wayfair (2018), most states adopted economic nexus thresholds modeled on South Dakota's law: $100,000 in sales OR 200 transactions in the state. However, thresholds vary: some states eliminated the transaction threshold; others use higher sales thresholds (e.g., California uses $500,000); a few use lower thresholds. Businesses must monitor nexus in each state and register once thresholds are met. The MTC (Multistate Tax Commission) provides a nexus questionnaire guide. Why other answers are wrong: (B) $500,000 is used by some states (like California) but isn't the common standard; (C) $1,000,000 exceeds typical thresholds; (D) $10,000 is far below any state's threshold—states use higher amounts for administrative feasibility.",
+    "tip": "Common economic nexus: $100K sales OR 200 transactions (South Dakota model). Thresholds vary—California uses $500K. Monitor each state.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5314,8 +5314,8 @@ const questions = [
       "D": "Are service businesses"
     },
     "correctAnswer": "B",
-    "explanation": "Single sales factor apportionment bases state tax entirely on the percentage of sales in that state. Businesses with heavy property and payroll in a state but sales primarily elsewhere pay less state tax than under traditional three-factor formulas. This is why many states adopted single sales factor - to attract employers.",
-    "tip": "Single sales factor benefits employers (property/payroll in state, sales elsewhere). Hurts pure sales-in-state businesses.",
+    "explanation": "Single sales factor apportionment (SSF) bases state income tax entirely on the percentage of sales in that state, ignoring property and payroll factors. This benefits businesses with significant property and payroll in a state but sales primarily elsewhere—they pay less state tax than under traditional equally-weighted three-factor (UDITPA) formulas. States adopted SSF to attract employers: 'Come build your factory here—we won't tax income based on your property and payroll here.' Why other answers are wrong: (A) Businesses with most sales IN the state would face higher apportionment under SSF (100% sales weight vs. 33% under traditional); (C) Having no employees doesn't uniquely benefit from SSF—it's the property/payroll in-state with sales elsewhere that benefits; (D) Service businesses aren't uniquely benefited—the benefit depends on where sales/property/payroll are located.",
+    "tip": "Single sales factor: 100% sales weight. Benefits: property/payroll IN state, sales OUT of state. States use SSF to attract employers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5335,8 +5335,8 @@ const questions = [
       "D": "All online purchases"
     },
     "correctAnswer": "C",
-    "explanation": "Common sales tax exemptions include sales for resale (to avoid pyramiding tax), sales to nonprofits and government entities, manufacturing equipment, and certain necessities (groceries, prescription drugs in many states). Services are taxable in some states but exempt in others.",
-    "tip": "Resale exemption prevents tax pyramiding. Nonprofits and government usually exempt. Service taxability varies.",
+    "explanation": "Most states exempt from sales tax: (1) Sales for resale—using a resale certificate prevents tax pyramiding (tax on tax), so only final consumers pay; (2) Sales to exempt organizations—nonprofits (§501(c)(3) entities), government agencies, and religious organizations typically present exemption certificates; (3) Manufacturing machinery and equipment exemptions encourage capital investment. Some states also exempt groceries, prescription drugs, and certain clothing. Service taxability varies widely by state. Why other answers are wrong: (A) No de minimis exemption exists for small purchases; (B) Most states tax many services—they're not universally exempt; (D) Post-Wayfair, online purchases are generally taxable—remote sellers must collect if they have economic nexus.",
+    "tip": "Key exemptions: resale (prevents pyramiding), exempt orgs (nonprofits, government), manufacturing equipment. Service taxability varies by state.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5356,8 +5356,8 @@ const questions = [
       "D": "Replace income tax for certain transactions"
     },
     "correctAnswer": "B",
-    "explanation": "Use tax complements sales tax by taxing the use, storage, or consumption of tangible personal property when sales tax was not collected (e.g., out-of-state purchases, purchases from non-collecting sellers). Use tax prevents avoidance of sales tax through out-of-state purchases.",
-    "tip": "Use tax = backup to sales tax. Applies when sales tax wasn't collected. Same rate as sales tax.",
+    "explanation": "Use tax is a complementary tax to sales tax, imposed on the use, storage, or consumption of tangible personal property when sales tax was not collected at the time of purchase. Common situations: out-of-state purchases from sellers without nexus (pre-Wayfair, now less common), purchases from non-collecting sellers, and items removed from inventory for business use. Use tax is typically the same rate as sales tax and is owed by the purchaser/user. Why other answers are wrong: (A) Use tax applies to tangible personal property, not services—service taxation is handled differently; (C) Use tax applies to both business and personal purchases; (D) Use tax doesn't replace income tax—it complements sales tax for the same types of transactions.",
+    "tip": "Use tax: complements sales tax when seller didn't collect. Same rate as sales tax. Owed by purchaser/user.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5377,8 +5377,8 @@ const questions = [
       "D": "Elimination of self-employment taxes"
     },
     "correctAnswer": "B",
-    "explanation": "PTETs allow pass-through entities (S corps, partnerships) to elect to pay state income tax at the entity level. The entity gets a deduction (not subject to SALT cap), and owners receive a credit or exclusion on their individual returns. IRS Notice 2020-75 approved this workaround.",
-    "tip": "PTET = SALT cap workaround. Entity pays state tax, gets full deduction. Owner gets credit/exclusion.",
+    "explanation": "Pass-through entity taxes (PTETs) allow S corporations and partnerships to elect to pay state income tax at the entity level rather than passing the liability to owners. Per IRS Notice 2020-75, the entity-level tax is deductible in computing the entity's income—this deduction is NOT subject to the $10,000 SALT cap under IRC §164(b)(6). Owners then receive either a state tax credit or an income exclusion on their individual returns. Over 30 states have enacted PTET elections since 2018. Why other answers are wrong: (A) PTETs don't avoid state taxes—they shift where tax is paid and deducted; (C) PTET is a state deduction mechanism, not a federal-state conversion; (D) PTET affects income taxes, not self-employment taxes.",
+    "tip": "PTET: IRS Notice 2020-75 SALT workaround. Entity pays & deducts state tax (no $10K cap). Owner gets credit/exclusion. 30+ states offer.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5398,8 +5398,8 @@ const questions = [
       "D": "Assigns specific types of income (like interest, dividends) entirely to one state"
     },
     "correctAnswer": "D",
-    "explanation": "Allocation assigns specific categories of nonbusiness income (interest, dividends, rents, royalties, capital gains from nonbusiness assets) entirely to one state, typically the taxpayer's domicile or where the income-producing property is located. Apportionment divides business/operational income among states using a formula.",
-    "tip": "Allocate = assign 100% to one state (nonbusiness income). Apportion = divide by formula (business income).",
+    "explanation": "Under UDITPA and most state tax systems, allocation assigns specific types of nonbusiness income—such as interest, dividends, rents, royalties, and capital gains from nonbusiness assets—100% to one state. Allocation destination varies: dividends/interest typically to commercial domicile; rental/royalty income to situs of property; capital gains to situs of property. Apportionment, by contrast, divides business (operational) income among states using a formula (property/payroll/sales factors). Why other answers are wrong: (A) Allocation applies to income taxes, not sales tax; (B) Neither allocation nor apportionment inherently reduces tax—they determine which state(s) tax; (C) This describes apportionment, not allocation—allocation assigns 100% to one state without a formula.",
+    "tip": "Allocation: nonbusiness income → 100% to one state (domicile or situs). Apportionment: business income → formula-based division among states.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5419,8 +5419,8 @@ const questions = [
       "D": "Works in the state for any period"
     },
     "correctAnswer": "C",
-    "explanation": "Statutory residency rules (varying by state) typically treat an individual as a resident if they maintain a permanent place of abode in the state AND spend more than 183 days there. This can result in dual residency situations where an individual is taxed as a resident by multiple states.",
-    "tip": "Statutory resident = permanent abode + 183+ days. Can be resident of multiple states simultaneously.",
+    "explanation": "Statutory residency rules treat an individual as a tax resident (subject to tax on worldwide income) if they maintain a permanent place of abode in the state AND spend more than 183 days there during the tax year. This is separate from domicile (the 'true home' based on intent). An individual can be: (1) a domiciliary resident of one state, AND (2) a statutory resident of another state—creating dual residency and potential double taxation (mitigated by credits for taxes paid to other states). Why other answers are wrong: (A) Property ownership alone doesn't create statutory residency without the 183-day presence; (B) Birthplace is irrelevant to current residency; (D) Working in a state creates source-state taxation, not necessarily residency.",
+    "tip": "Statutory residency: permanent abode + 183+ days = resident for tax purposes. Separate from domicile. Dual residency possible.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5440,8 +5440,8 @@ const questions = [
       "D": "All S corporations"
     },
     "correctAnswer": "B",
-    "explanation": "Combined reporting states require corporations that are part of a unitary business to file combined returns. A unitary business exists when there is functional integration, centralized management, and economies of scale among affiliated entities. This prevents income shifting among affiliates.",
-    "tip": "Unitary business = functional integration + centralized management + economies of scale. Prevents income shifting.",
+    "explanation": "Combined reporting states require affiliated corporations engaged in a unitary business to file combined returns, computing income as a single taxpayer before apportionment. The three unities test (from Mobil Oil Corp. v. Commissioner of Taxes) establishes a unitary business: (1) functional integration—shared operations, (2) centralized management—common executive control, and (3) economies of scale—shared resources, purchasing, financing. Combined reporting prevents income shifting through intercompany transactions among affiliates. Why other answers are wrong: (A) Headquarters location doesn't determine unitary status—it's about operational integration; (C) Profitability is irrelevant to unitary determination; (D) S corporations are pass-through entities and typically not subject to corporate combined reporting rules.",
+    "tip": "Unitary business (Mobil test): functional integration + centralized management + economies of scale. Combined reporting prevents income shifting.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5461,8 +5461,8 @@ const questions = [
       "D": "Where the service is performed"
     },
     "correctAnswer": "A",
-    "explanation": "Market-based sourcing assigns service income to where the customer receives the benefit (the market state), rather than where the service is performed (cost-of-performance). Most states have moved to market-based sourcing for services. This can significantly impact service businesses.",
-    "tip": "Market-based = where customer is. Cost-of-performance = where work done. Major impact on service companies.",
+    "explanation": "Market-based sourcing assigns service and intangible income to the state where the customer receives the benefit of the service (the market state). This contrasts with cost-of-performance sourcing, which assigns income to where the service is performed (typically the provider's location). Most states have shifted to market-based sourcing, following MTC model regulations. This significantly impacts service businesses—a law firm in State A serving clients in State B has sales factor in State B under market-based sourcing. Why other answers are wrong: (B) This describes cost-of-performance sourcing, not market-based; (C) States don't divide service income equally—they use specific sourcing rules; (D) This is cost-of-performance, the alternative to market-based sourcing.",
+    "tip": "Market-based sourcing: service income to customer's location (market). Cost-of-performance: to provider's location. Most states now use market-based.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5482,8 +5482,8 @@ const questions = [
       "D": "Buyers to self-assess use tax on marketplace purchases"
     },
     "correctAnswer": "C",
-    "explanation": "Marketplace facilitator laws shift sales tax collection responsibility from individual sellers to the marketplace platform (Amazon, eBay, Etsy). The marketplace collects and remits tax on sales made through its platform, simplifying compliance for small sellers.",
-    "tip": "Marketplace facilitator = platform collects tax for third-party sellers. Most states have adopted these laws.",
+    "explanation": "Marketplace facilitator laws require the marketplace platform (Amazon, eBay, Etsy, Walmart Marketplace) to collect and remit sales tax on behalf of third-party sellers using the platform. The marketplace is treated as the retailer for sales tax purposes. This dramatically simplifies compliance for small sellers who previously had to track nexus and register in every state. All states with sales tax have adopted marketplace facilitator laws (following Wayfair). Why other answers are wrong: (A) Marketplace facilitator laws address sales tax collection, not income reporting to IRS (though marketplaces do issue 1099-Ks); (B) Under these laws, the marketplace—not the seller—is responsible for collection; (D) The marketplace collects tax at checkout—buyers don't self-assess use tax on marketplace purchases.",
+    "tip": "Marketplace facilitator: platform (Amazon, eBay, etc.) collects/remits sales tax for third-party sellers. All sales tax states have adopted.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5503,8 +5503,8 @@ const questions = [
       "D": "Double taxation when income is taxed by both a resident and nonresident state"
     },
     "correctAnswer": "D",
-    "explanation": "Resident states typically provide a credit for income taxes paid to other states on income sourced to those states. This prevents double taxation when income is taxed by both the residence state (worldwide taxation) and the source state (where income is earned).",
-    "tip": "Credit for other state taxes = resident state credit for nonresident taxes paid. Prevents double taxation.",
+    "explanation": "Resident states typically provide a credit for income taxes paid to other states on income sourced to those states. This prevents double taxation when income is taxed by both: (1) the residence state (which taxes worldwide income), and (2) the source state (which taxes income earned within its borders). The credit is usually limited to the lesser of: tax actually paid to the other state, or the resident state's tax on that income. Some states have reciprocal agreements eliminating withholding for cross-border workers. Why other answers are wrong: (A) The credit relates to state income taxes, not itemized deductions; (B) The credit doesn't prevent multistate operations—it prevents double taxation; (C) States can and do impose income tax—the credit prevents double taxation, not all taxation.",
+    "tip": "Other-state credit: resident state allows credit for nonresident taxes paid on sourced income. Limited to lesser of: actual tax paid or home-state tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5524,8 +5524,8 @@ const questions = [
       "D": "Providing services to customers"
     },
     "correctAnswer": "C",
-    "explanation": "P.L. 86-272 prohibits states from imposing income tax on sellers whose only in-state activity is soliciting orders for tangible personal property, with orders approved and shipped from outside the state. It does not apply to services, intangibles, or sales tax. Many states interpret this narrowly.",
-    "tip": "P.L. 86-272 = income tax protection for mere solicitation of TPP sales. Doesn't cover services or sales tax.",
+    "explanation": "Public Law 86-272 (15 U.S.C. §381-384) is federal law prohibiting states from imposing net income tax on sellers whose only in-state activity is solicitation of orders for tangible personal property (TPP), where orders are approved and shipped from outside the state. Key limitations: (1) applies ONLY to TPP—not services, intangibles, or digital goods; (2) applies ONLY to income tax—not sales tax, gross receipts tax, or franchise tax; (3) narrow interpretation by states means many activities (training, repairs, credit collection) can break protection. Why other answers are wrong: (A) Website activities may exceed protected solicitation per MTC guidance; (B) P.L. 86-272 protects only solicitation for TPP with out-of-state approval—broader sales activities aren't protected; (D) Services are explicitly NOT protected by P.L. 86-272.",
+    "tip": "P.L. 86-272: federal income tax protection for mere solicitation of TPP orders (approved/shipped outside state). No protection for services, sales tax, or gross receipts.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5545,8 +5545,8 @@ const questions = [
       "D": "The sale is made through a marketplace"
     },
     "correctAnswer": "B",
-    "explanation": "Throwback rules source sales to the seller's (origin) state if the seller is not taxable in the destination state. This prevents 'nowhere income' - sales that would escape taxation entirely. Not all states have throwback rules; some have throwout rules instead.",
-    "tip": "Throwback = source to seller's state if not taxable in buyer's state. Prevents nowhere income.",
+    "explanation": "Throwback rules assign sales to the seller's (origin) state for apportionment purposes when the seller is not taxable in the destination state (often due to P.L. 86-272 protection). This prevents 'nowhere income'—sales that would escape all state taxation because neither the origin nor destination state can tax. Example: If a company in State A ships to customers in State B where it's protected by P.L. 86-272, the sales are 'thrown back' to State A's sales factor. Alternative: throwout rules exclude such sales from both numerator and denominator. Why other answers are wrong: (A) International sales have separate sourcing rules; (C) Sale amount doesn't trigger throwback—taxability does; (D) Marketplace sales are handled by marketplace facilitator rules, not throwback.",
+    "tip": "Throwback: sales to non-taxable destination state → add to seller's state sales factor. Prevents 'nowhere income.' Some states use throwout instead.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5566,8 +5566,8 @@ const questions = [
       "D": "Inventory only"
     },
     "correctAnswer": "A",
-    "explanation": "Many states and localities impose property tax on tangible personal property used in business - equipment, furniture, fixtures, machinery, and in some states, inventory. Businesses must file personal property renditions listing taxable assets. Rates and rules vary significantly by jurisdiction.",
-    "tip": "Business personal property tax = equipment, furniture, fixtures. Inventory taxable in some states. File annual renditions.",
+    "explanation": "Many states and localities impose ad valorem property tax on tangible personal property (TPP) used in business—equipment, furniture, fixtures, machinery, vehicles, and in some states, inventory. Businesses must file annual personal property renditions (or declarations) listing taxable assets, typically by original cost, year acquired, and description. Some states exempt certain categories (manufacturing equipment, inventory, agricultural equipment). Rates and assessment ratios vary significantly by jurisdiction. Why other answers are wrong: (B) Intangible assets like goodwill are not subject to property tax—property tax applies to tangible property; (C) Real estate is taxed separately from personal property; (D) Inventory is only one category, and not all states tax it—equipment and furniture are more universally taxed.",
+    "tip": "Business personal property tax: equipment, furniture, fixtures, vehicles. File annual renditions. Inventory treatment varies by state.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5587,8 +5587,8 @@ const questions = [
       "D": "At the federal level"
     },
     "correctAnswer": "C",
-    "explanation": "Destination-based sourcing imposes sales tax based on where the buyer takes possession or where the product is delivered. Most states use destination sourcing. Origin-based sourcing (fewer states) taxes based on where the seller is located. This affects which rate applies.",
-    "tip": "Destination sourcing (most states) = buyer's location rate. Origin sourcing = seller's location rate.",
+    "explanation": "Destination-based sourcing imposes sales tax based on where the buyer takes delivery or receives the product—the destination determines both nexus and applicable rate. Most states (over 40) use destination sourcing, consistent with Streamlined Sales Tax (SST) requirements. Origin-based sourcing (Texas, Arizona, and a few others) taxes based on the seller's location. For remote sales, even origin states generally use destination rules. Why other answers are wrong: (A) Sourcing rules are determined by law, not seller's choice; (B) This describes origin-based sourcing, not destination-based; (D) Sales tax is imposed at state/local level, not federal—there is no federal sales tax.",
+    "tip": "Destination sourcing (most states): buyer's delivery location determines rate. Origin sourcing (few states): seller's location. SST requires destination.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5608,8 +5608,8 @@ const questions = [
       "D": "Property tax abatements"
     },
     "correctAnswer": "C",
-    "explanation": "States offer various incentives: investment tax credits, job creation credits, property tax abatements, sales tax exemptions for manufacturing equipment, and income tax credits. States cannot reduce federal tax rates - that's solely federal jurisdiction. Incentives require compliance with job/investment commitments.",
-    "tip": "State incentives: job credits, investment credits, property abatements, sales tax exemptions. No federal rate control.",
+    "explanation": "States offer various tax incentives to attract businesses and investment: (1) investment tax credits for new equipment or facilities, (2) job creation/retention credits based on new hires meeting wage thresholds, (3) property tax abatements reducing or eliminating property tax for a period, (4) sales tax exemptions for manufacturing equipment, (5) income tax credits for R&D, training, or specific industries. Incentives typically require compliance with commitments (jobs, investment, wages) and include clawback provisions for non-compliance. Why other answers are wrong: (C) States have no authority over federal tax rates—federal rates are set by Congress under IRC; (A), (B), and (D) are all examples of actual state incentives.",
+    "tip": "State incentives: job credits, investment credits, property abatements, sales tax exemptions, R&D credits. Clawback for non-compliance. States can't touch federal rates.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -5629,8 +5629,8 @@ const questions = [
       "D": "Website visits from state residents"
     },
     "correctAnswer": "B",
-    "explanation": "Factor presence nexus creates income tax nexus when property, payroll, or sales in a state exceed certain thresholds (often $50,000-$500,000 depending on the state and factor). This is an economic nexus concept for income tax, parallel to Wayfair's sales tax nexus.",
-    "tip": "Factor presence = economic nexus for income tax. Based on property, payroll, or sales thresholds.",
+    "explanation": "Factor presence nexus establishes income/franchise tax nexus when a business exceeds economic thresholds for property, payroll, or sales in a state—without requiring physical presence. The Multistate Tax Commission (MTC) model uses: $50,000 property, $50,000 payroll, $500,000 sales, or 25% of total for any factor. States vary in adoption and thresholds. This parallels Wayfair's economic nexus for sales tax but applies to income/franchise taxes. Factor presence can override P.L. 86-272 protection for services (since 86-272 only protects TPP). Why other answers are wrong: (A) Physical presence is not required—factor presence is economic nexus; (C) Customer count isn't a factor—it's property, payroll, or sales amounts; (D) Website visits alone don't establish factor presence nexus.",
+    "tip": "Factor presence: economic nexus for income tax. MTC thresholds: $50K property, $50K payroll, $500K sales, or 25% of any factor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5650,8 +5650,8 @@ const questions = [
       "D": "The source of the income"
     },
     "correctAnswer": "A",
-    "explanation": "Business income (apportioned) arises from the taxpayer's regular trade or business operations (transactional test) or from assets used in the business (functional test). Nonbusiness income (allocated 100% to one state) is from activities unrelated to the business. Classification significantly affects state tax.",
-    "tip": "Business income = from regular operations or business assets → apportion. Nonbusiness = unrelated → allocate.",
+    "explanation": "Under UDITPA and most state laws, business income (subject to apportionment) is determined by two tests: (1) Transactional test—income arising from transactions in the regular course of the taxpayer's trade or business; (2) Functional test—income from property integral to the taxpayer's business. Nonbusiness income (allocated 100% to one state) is from activities unrelated to the business—passive investments, non-operational asset sales. Classification significantly impacts state tax: business income is divided among states by formula; nonbusiness income goes entirely to one state. Why other answers are wrong: (B) Amount doesn't determine classification—nature of the income matters; (C) Passive status doesn't automatically mean nonbusiness—must apply transactional/functional tests; (D) Source state isn't the test—it's whether income arises from regular operations or integral assets.",
+    "tip": "Business income (apportion): transactional test (regular course) OR functional test (integral property). Nonbusiness (allocate): unrelated activities → 100% to one state.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5671,8 +5671,8 @@ const questions = [
       "D": "Only corporations with physical presence in the state"
     },
     "correctAnswer": "C",
-    "explanation": "Water's edge elections limit the combined group to U.S. corporations, domestic international sales corporations (DISCs), foreign sales corporations (FSCs), and foreign corporations deriving significant income from U.S. sources or connected with U.S. trade or business. This excludes purely foreign operations.",
-    "tip": "Water's edge = U.S. entities + foreign with U.S. connections. Excludes purely foreign operations from combined return.",
+    "explanation": "A water's edge election in combined reporting limits the combined group to: (1) U.S. corporations, (2) domestic international sales corporations (DISCs), (3) foreign corporations deriving significant income from U.S. sources (often 20%+ test), and (4) foreign corporations effectively connected with U.S. trade or business. This excludes purely foreign subsidiaries' worldwide income from the combined return. Without the election, worldwide combined reporting would include all unitary affiliates globally. Water's edge is typically elective but may require a fee or commitment period. Why other answers are wrong: (A) Sales threshold isn't the basis—U.S. connection is; (B) 'Coastal states' is a literal misreading—water's edge is a metaphor for U.S. borders; (D) Physical presence isn't required—U.S. income or trade/business connection suffices.",
+    "tip": "Water's edge: combined group limited to U.S. entities + foreign with U.S. income/ECI. Excludes purely foreign operations. Often elective with fee.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5692,8 +5692,8 @@ const questions = [
       "D": "Write off unclaimed amounts as bad debts"
     },
     "correctAnswer": "C",
-    "explanation": "Escheat laws require businesses to report and remit unclaimed property (uncashed payroll checks, vendor payments, customer refunds, unused gift cards) to the state after a dormancy period. Priority rules determine which state receives the property. Non-compliance results in penalties and interest.",
-    "tip": "Escheat = remit dormant property to state. Priority: owner's last known address, then state of incorporation.",
+    "explanation": "Unclaimed property (escheat) laws require businesses to report and remit dormant property to the state after a dormancy period (typically 3-5 years, varying by property type). Common items: uncashed payroll and vendor checks, customer refunds and credits, unused gift cards, dormant accounts, unredeemed money orders. Priority rules (from Texas v. New Jersey) determine which state receives: (1) state of owner's last known address, then (2) state of holder's incorporation. States actively audit for non-compliance, with significant penalties and interest. Why other answers are wrong: (A) Property goes to the state, not charity; (B) Unclaimed property isn't income—it's a liability owed to others; (D) Bad debt deduction is a tax concept—escheat is remitting property owed to others.",
+    "tip": "Escheat: dormant property → state. Priority: owner's address (1st), then holder's incorporation (2nd). Texas v. New Jersey rules. Active state audits.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5713,8 +5713,8 @@ const questions = [
       "D": "Canned (prewritten) software and custom software"
     },
     "correctAnswer": "D",
-    "explanation": "States often distinguish between canned (prewritten) software (often taxable as tangible personal property) and custom software (often exempt as a service). SaaS (cloud-based software) treatment varies widely - some states tax it, others don't. Delivery method (download vs. physical) may also affect taxability.",
-    "tip": "Software tax varies: canned often taxable, custom often exempt. SaaS treatment inconsistent across states.",
+    "explanation": "Sales tax treatment of software varies significantly by state, with key distinctions: (1) Canned (prewritten/off-the-shelf) software—often taxable as tangible personal property or specified digital product; (2) Custom software—often exempt as a nontaxable service (creating unique program per customer specifications); (3) SaaS (cloud-based software)—treatment varies widely: some states tax as data processing service, others exempt, some tax as tangible property substitute. Delivery method (physical media vs. download vs. cloud access) also affects taxability in some states. Why other answers are wrong: (A) Price doesn't determine taxability—nature of the software matters; (B) Residency of buyer isn't the distinguishing factor; (C) Business vs. personal use rarely affects software taxability.",
+    "tip": "Software taxability: canned (often taxable) vs. custom (often exempt as service). SaaS treatment varies widely—check each state's rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5734,8 +5734,8 @@ const questions = [
       "D": "Add back all intercompany transactions"
     },
     "correctAnswer": "C",
-    "explanation": "Add-back statutes combat income shifting by requiring taxpayers to add back deductions for certain payments (royalties, interest, intangible expenses, management fees) to related parties. Exceptions often exist for payments with valid business purpose, if subject to tax elsewhere, or arm's-length transactions.",
-    "tip": "Add-back = reverse deductions for related-party payments. Anti-income-shifting measure. Exceptions may apply.",
+    "explanation": "Related-party add-back statutes combat income shifting by requiring taxpayers to add back deductions for payments to related parties (typically 50%+ common ownership). Common add-back items: royalties and licensing fees, interest payments, intangible expenses, management fees. This prevents states from losing tax base when companies pay deductible fees to affiliates in no-tax or low-tax states. Exceptions typically exist for: (1) payments with valid business purpose (arm's-length), (2) payments subject to tax elsewhere, (3) payments to unrelated parties. Over 30 states have add-back statutes. Why other answers are wrong: (A) Federal tax deductions aren't targeted—related-party payments are; (B) This describes combined reporting, not add-back; (D) Only specific categories (royalties, interest, intangibles) require add-back, not all intercompany transactions.",
+    "tip": "Add-back: disallow deductions for royalties/interest/fees to related parties (50%+ ownership). Anti-income-shifting. Exceptions for arm's-length and taxed-elsewhere.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5755,8 +5755,8 @@ const questions = [
       "D": "Companies use the same bank"
     },
     "correctAnswer": "B",
-    "explanation": "Affiliate nexus attributes an in-state affiliate's presence to an out-of-state seller. For example, if an online retailer has a brick-and-mortar affiliate in a state that accepts returns or promotes products, the online seller may have nexus. Click-through affiliate programs have also been nexus triggers.",
-    "tip": "Affiliate nexus = attribute in-state affiliate activities to out-of-state seller. Click-through affiliates also create nexus.",
+    "explanation": "Affiliate (attributional) nexus establishes nexus for an out-of-state seller based on in-state activities of a related entity. Common scenarios: (1) Brick-and-mortar affiliate accepting returns or promoting online seller's products (creating 'substantial nexus' under Scripto/Tyler Pipe); (2) Click-through nexus—in-state affiliates earning referral commissions create nexus for the seller (upheld in Overstock.com cases); (3) In-state distribution or fulfillment centers operated by affiliates. The key test is whether the in-state affiliate's activities benefit the out-of-state seller's sales. Why other answers are wrong: (A) Having any affiliate isn't sufficient—the affiliate must perform nexus-creating activities in-state; (C) Common shareholders alone don't create affiliate nexus; (D) Using the same bank is irrelevant to tax nexus.",
+    "tip": "Affiliate nexus: in-state affiliate's activities (returns, promotions, click-through referrals) create nexus for out-of-state seller. Scripto/Tyler Pipe doctrine.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5776,8 +5776,8 @@ const questions = [
       "D": "Allow deductions for cost of goods sold and operating expenses"
     },
     "correctAnswer": "A",
-    "explanation": "Gross receipts taxes (like Ohio's CAT or Texas's franchise tax margin version) tax total revenue with limited or no deductions for expenses. This means unprofitable businesses still owe tax. Gross receipts taxes may still be deductible on federal returns as business taxes.",
-    "tip": "Gross receipts tax = tax on revenue, not profit. Owed even if unprofitable. Ohio CAT, Texas margin tax examples.",
+    "explanation": "Gross receipts taxes differ from income taxes by taxing total revenue (receipts) with no or limited deductions for expenses. Key characteristics: (1) No deduction for cost of goods sold (unlike income tax); (2) No deduction for operating expenses; (3) Tax owed even by unprofitable businesses; (4) Lower rate but broader base. Examples: Ohio Commercial Activity Tax (CAT)—0.26% on receipts over $1M; Washington B&O tax; Nevada Commerce Tax. Texas margin tax allows limited deductions (COGS or compensation). Gross receipts taxes are generally deductible on federal returns under IRC §164. Why other answers are wrong: (B) Unprofitable businesses owe gross receipts tax—it's based on revenue; (C) Deductibility on federal returns doesn't distinguish them from income taxes; (D) This describes income tax, not gross receipts tax.",
+    "tip": "Gross receipts tax: revenue-based, no expense deductions, owed even if unprofitable. Examples: Ohio CAT, Washington B&O, Texas margin (limited deductions).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5797,8 +5797,8 @@ const questions = [
       "D": "Filing a nonresident return"
     },
     "correctAnswer": "C",
-    "explanation": "To avoid statutory residency, an individual typically must: (1) not maintain a permanent place of abode in the state, OR (2) spend fewer than 183 days in the state. Both conditions must be met to avoid statutory residency. Domicile is a separate analysis based on intent.",
-    "tip": "Break statutory residency: no permanent abode OR under 183 days. Careful tracking and documentation essential.",
+    "explanation": "To avoid statutory residency in a high-tax state, an individual typically must break EITHER prong of the test: (1) Not maintain a permanent place of abode in the state (sell or give up the home/apartment), OR (2) Spend fewer than 183 days in the state (careful day counting required). Breaking either prong avoids statutory residency—the test is conjunctive (permanent abode AND 183+ days). Note: domicile is a separate test based on intent to remain permanently. An individual can avoid statutory residency but still be domiciled there (or vice versa). Why other answers are wrong: (A) Remote work doesn't change where you're physically present; (B) Changing domicile doesn't automatically break statutory residency if you still have an abode and 183+ days; (D) Filing status doesn't determine residency—physical facts do.",
+    "tip": "Break statutory residency: eliminate permanent abode OR stay under 183 days. Must break one prong. Domicile is separate (intent-based) test.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5818,8 +5818,8 @@ const questions = [
       "D": "Eliminate all sales tax"
     },
     "correctAnswer": "C",
-    "explanation": "The SST Project is a cooperative effort among states to simplify sales tax administration through uniform definitions, rate databases, single state-level administration, and certified service providers. Sellers using SST-certified software receive liability protection. Not all states participate.",
-    "tip": "SST = voluntary state cooperation for simplified sales tax. Uniform definitions, certified providers, liability protection.",
+    "explanation": "The Streamlined Sales Tax (SST) Project is a voluntary multi-state effort (Streamlined Sales and Use Tax Agreement—SSUTA) to simplify and harmonize sales tax administration. Key features: (1) uniform definitions for taxable items, (2) single state-level tax administration (not local-by-local), (3) state-provided rate databases, (4) certified service providers (CSPs) handling tax calculation/filing, (5) liability protection for sellers using CSPs or SST-certified software. Currently 24 member states. SST facilitates compliance, especially for remote sellers post-Wayfair. Why other answers are wrong: (A) IRS administers federal taxes only—SST is state-level; (B) SST doesn't create a national sales tax—it harmonizes existing state taxes; (D) SST simplifies sales tax, not eliminates it.",
+    "tip": "SST (SSUTA): 24-state voluntary cooperation. Uniform definitions, rate databases, certified service providers, liability protection. Simplifies multistate compliance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -5839,8 +5839,8 @@ const questions = [
       "D": "Standard property/payroll/sales factors don't accurately reflect their economic activity"
     },
     "correctAnswer": "D",
-    "explanation": "Certain industries use special apportionment formulas because standard factors don't reflect their activities. Banks may use deposits or loans. Airlines use revenue passenger miles. Railroads and trucking use mileage. Broadcasting companies may use audience factors. These better reflect economic presence.",
-    "tip": "Special apportionment: banks (deposits), airlines (miles), broadcasters (audience). Standard factors don't fit all businesses.",
+    "explanation": "Special apportionment formulas apply to industries where standard property/payroll/sales factors don't accurately capture economic activity: (1) Financial institutions—receipts factor based on loans, deposits, credit card transactions by customer location; (2) Airlines—revenue passenger miles, departures, revenue ton miles; (3) Railroads—car/locomotive miles, revenue ton miles; (4) Trucking—mobile property weighted by miles in each state; (5) Broadcasters—audience factors based on listeners/viewers by state; (6) Telecommunications—end-user locations. MTC has model regulations for several industries. Why other answers are wrong: (A) These industries do have physical presence—their operations just don't fit standard factors well; (B) There's no federal mandate—states choose to adopt special formulas; (C) These industries are taxable—they just use different apportionment methods.",
+    "tip": "Special apportionment: banks (deposits/loans), airlines (miles), broadcasters (audience), telecom (end-users). Standard factors don't fit all industries.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5860,8 +5860,8 @@ const questions = [
       "D": "Complete immunity from all state taxes"
     },
     "correctAnswer": "A",
-    "explanation": "VDAs allow businesses that discover unreported state tax liability to come forward voluntarily. Benefits typically include penalty waiver, limited lookback period (often 3-4 years instead of full statute), and possible interest reduction. VDAs must be initiated before the state contacts the taxpayer.",
-    "tip": "VDA = penalty waiver + limited lookback for voluntary disclosure. Must contact state BEFORE they contact you.",
+    "explanation": "A Voluntary Disclosure Agreement (VDA) allows businesses that discover unreported state tax liability to proactively approach the state. Typical VDA benefits: (1) Full penalty waiver (often 25%+ of tax); (2) Limited lookback period—typically 3-4 years instead of full statute (often 7+ years); (3) Possible interest reduction (not always); (4) Avoided criminal referral for willful non-compliance. Critical requirement: VDA must be initiated BEFORE the state contacts the taxpayer—once under audit or investigation, VDA is unavailable. The MTC offers a multistate VDA program. Why other answers are wrong: (B) VDAs don't provide future audit immunity—just settle past liability; (C) VDAs require payment, not refund; (D) VDAs reduce, but don't eliminate, tax liability (penalties waived, but tax and often interest still owed).",
+    "tip": "VDA: penalty waiver + limited lookback (3-4 years). MUST contact state BEFORE they contact you. MTC offers multistate VDA program.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -5881,8 +5881,8 @@ const questions = [
       "D": "Utilizing available credits and incentives"
     },
     "correctAnswer": "C",
-    "explanation": "Legitimate planning includes location decisions, structuring to manage nexus, using available incentives, PTET elections, and timing strategies. Falsifying factor data is fraud. States actively audit apportionment factors and impose penalties for misreporting.",
-    "tip": "Legitimate SALT planning: location, nexus management, incentives, timing. Never falsify data - fraud penalties severe.",
+    "explanation": "Legitimate SALT planning strategies include: (1) Location decisions—choosing states with favorable tax regimes for headquarters, operations, or incorporation; (2) Nexus management—structuring activities to avoid creating nexus in high-tax states where legally possible; (3) Using available credits and incentives—job credits, investment credits, property abatements; (4) PTET elections to avoid SALT cap; (5) Entity structuring—choosing entity types that minimize state tax. However, falsifying apportionment factor data (misrepresenting where property, payroll, or sales occur) is tax fraud, subject to criminal penalties and civil fraud penalties. States actively audit apportionment. Why other answers are wrong: (A), (B), and (D) are all legitimate SALT planning strategies; (C) is fraud—misrepresenting facts to reduce tax liability.",
+    "tip": "Legitimate SALT planning: location, nexus management, incentives, PTET, entity structure. Fraud: falsifying factor data → criminal/civil penalties.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
