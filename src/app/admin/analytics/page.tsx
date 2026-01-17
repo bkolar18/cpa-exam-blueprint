@@ -481,7 +481,7 @@ function GeneralAnalyticsContent({ data }: { data: AnalyticsData | null }) {
  </div>
  </div>
  </div>
- </div>
+ </>
  );
 }
 
