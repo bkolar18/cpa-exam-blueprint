@@ -22,8 +22,8 @@ const questions = [
       "D": "$1,000"
     },
     "correctAnswer": "B",
-    "explanation": "For single taxpayers under 65, the filing threshold is generally equal to the standard deduction amount. Since personal exemptions were suspended by the TCJA (2018-2025), the filing threshold is now just the standard deduction. For 2024, this is $14,600 for single filers under 65.",
-    "tip": "Filing threshold = standard deduction (personal exemptions suspended through 2025).",
+    "explanation": "Per IRC §6012, a single taxpayer under age 65 must file when gross income equals or exceeds the standard deduction amount ($14,600 for 2024, $15,000 for 2025). The Tax Cuts and Jobs Act (TCJA) suspended personal exemptions through 2025 under IRC §151(d)(5), so the filing threshold is now simply the standard deduction. Why other answers are wrong: (A) Personal exemptions are suspended through 2025 and are not part of the current filing threshold; (C) This was the pre-TCJA rule when personal exemptions existed; (D) The $1,000 threshold is far below the standard deduction and would require filing for nearly everyone.",
+    "tip": "IRC §6012: Filing threshold = standard deduction amount. Personal exemptions suspended through 2025 per TCJA.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -43,8 +43,8 @@ const questions = [
       "D": "$100"
     },
     "correctAnswer": "A",
-    "explanation": "A taxpayer must file a federal income tax return if net self-employment income is $400 or more, regardless of other income or the filing threshold. This lower threshold ensures self-employment tax is paid on all qualifying self-employment income.",
-    "tip": "Self-employment = $400 threshold, much lower than standard filing threshold.",
+    "explanation": "Per IRC §6017, a taxpayer must file a return if net self-employment earnings are $400 or more, regardless of total gross income. This lower threshold ensures self-employment tax under IRC §1401 (12.4% Social Security + 2.9% Medicare) is calculated and paid on all qualifying SE income. Why other answers are wrong: (B) $600 is the reporting threshold for Form 1099-NEC, not the SE filing threshold; (C) The standard deduction applies to regular filing requirements, but SE income has its own $400 threshold; (D) $100 is too low - the threshold has been $400 since 1965.",
+    "tip": "IRC §6017: SE filing threshold = $400. Much lower than regular filing threshold to capture SE tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -64,8 +64,8 @@ const questions = [
       "D": "Loss of child tax credit eligibility"
     },
     "correctAnswer": "A",
-    "explanation": "IRA contribution limits are the same regardless of filing status (though deduction limits may differ). However, married filing separately results in loss of earned income credit, reduced eligibility for child tax credit, lower phase-out thresholds, and inability to deduct student loan interest.",
-    "tip": "MFS loses many credits and deductions but IRA contribution limits stay the same.",
+    "explanation": "Per IRC §219(b), IRA contribution limits ($7,000 for 2024, $8,000 if 50+) are the same regardless of filing status. Filing status only affects the deduction phase-out thresholds for traditional IRAs. MFS has numerous tax disadvantages under various IRC sections, but contribution limits are not among them. Why other answers are wrong: (B) Correct statement - MFS has lower/zero phase-out thresholds for student loan interest (IRC §221), traditional IRA deductions, and many credits; (C) Correct statement - IRC §32(d) completely disallows EIC for MFS filers; (D) Correct statement - IRC §24(b) provides reduced CTC for MFS filers with phase-outs starting at $200,000 instead of $400,000.",
+    "tip": "MFS disadvantages: no EIC, reduced CTC, no student loan deduction, lower phase-outs. But IRA contribution limits stay the same.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -85,8 +85,8 @@ const questions = [
       "D": "April 15"
     },
     "correctAnswer": "D",
-    "explanation": "Individual income tax returns (Form 1040) for calendar-year taxpayers are due April 15 following the close of the tax year. If April 15 falls on a weekend or holiday, the due date is the next business day. An automatic 6-month extension to October 15 is available.",
-    "tip": "Individual returns = April 15. Extension gives 6 months to October 15.",
+    "explanation": "Per IRC §6072(a), individual income tax returns for calendar-year taxpayers are due on the 15th day of the fourth month following the close of the tax year (April 15). If April 15 falls on a weekend or legal holiday, the due date moves to the next business day per IRC §7503. Form 4868 provides an automatic 6-month extension to October 15. Why other answers are wrong: (A) April 30 is not a standard tax deadline for individuals; (B) June 15 is the automatic extension for U.S. citizens abroad, not the regular due date; (C) March 15 is the due date for S corporations and partnerships, not individuals.",
+    "tip": "IRC §6072(a): Individuals = April 15. S corps/partnerships = March 15. C corps = April 15.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -106,8 +106,8 @@ const questions = [
       "D": "Is only available to taxpayers expecting a refund"
     },
     "correctAnswer": "B",
-    "explanation": "Form 4868 provides an automatic 6-month extension of time to FILE (no approval needed), but it does NOT extend the time to PAY. Taxes owed are still due by April 15, and interest and penalties accrue on any unpaid balance from that date.",
-    "tip": "Extension to file ≠ extension to pay. Always pay by April 15 to avoid penalties and interest.",
+    "explanation": "Per IRC §6081(a), Form 4868 provides an automatic 6-month extension of time to FILE, but IRC §6151 still requires payment by the original due date (April 15). Interest under IRC §6601 and failure-to-pay penalties under IRC §6651(a)(2) accrue on any unpaid balance from the original due date. Why other answers are wrong: (A) This is a common misconception - the extension only extends filing time, not payment time; (C) Form 4868 provides an AUTOMATIC extension with no IRS approval required; (D) Any taxpayer can request an extension regardless of whether they expect a refund or balance due.",
+    "tip": "IRC §6081: Extension to FILE only. Payment still due April 15 to avoid penalties (§6651) and interest (§6601).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -127,8 +127,8 @@ const questions = [
       "D": "June 15"
     },
     "correctAnswer": "A",
-    "explanation": "Estimated tax payments are due April 15, June 15, September 15, and January 15 of the following year. Note the uneven spacing - the third quarter payment is September 15, not August 15. This gives taxpayers extra time for the summer period.",
-    "tip": "Estimated tax dates: 4/15, 6/15, 9/15, 1/15. Notice Q3 is September, not August.",
+    "explanation": "Per IRC §6654(c), estimated tax payments are due in four installments: April 15, June 15, September 15, and January 15 of the following year. The periods are not evenly spaced - Q3 covers June-August but payment isn't due until September 15, providing extra time during summer. Why other answers are wrong: (B) January 15 is the Q4 payment date for income earned September-December; (C) April 15 is the Q1 payment date for income earned January-March; (D) June 15 is the Q2 payment date for income earned April-May.",
+    "tip": "IRC §6654: Estimated tax due dates = 4/15, 6/15, 9/15, 1/15. Note the irregular spacing - Q3 is September, not August!",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -148,8 +148,8 @@ const questions = [
       "D": "120%"
     },
     "correctAnswer": "C",
-    "explanation": "Taxpayers can avoid the estimated tax underpayment penalty by paying the lesser of 90% of current year tax or 100% of prior year tax (110% if prior year AGI exceeded $150,000, or $75,000 if MFS). With AGI of $180,000, the higher 110% threshold applies.",
-    "tip": "Prior year AGI > $150K = must pay 110% of prior year tax (not 100%) for safe harbor.",
+    "explanation": "Per IRC §6654(d)(1)(C), taxpayers with prior year AGI exceeding $150,000 ($75,000 if MFS) must pay 110% of prior year tax to use the prior year safe harbor. With AGI of $180,000, the higher 110% threshold applies. The alternative safe harbor is 90% of current year tax under IRC §6654(d)(1)(B). Why other answers are wrong: (A) 90% of CURRENT year tax is a safe harbor, but the question asks about prior year tax; (B) 100% of prior year tax is the safe harbor for AGI ≤$150,000, not applicable here; (D) 120% is not a threshold used in estimated tax calculations.",
+    "tip": "IRC §6654 safe harbors: 90% of current year OR 100% of prior year (110% if prior AGI > $150K).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -157,7 +157,7 @@ const questions = [
     "id": "tcp-001-008",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "International Taxation",
+    "subtopic": "Withholding",
     "conceptTested": "W-4 Updates",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -169,8 +169,8 @@ const questions = [
       "D": "Uses a system based on withholding allowances"
     },
     "correctAnswer": "A",
-    "explanation": "The redesigned Form W-4 (effective 2020) eliminated withholding allowances. It now uses a system based on filing status, income from multiple jobs, dependents, and other adjustments (additional withholding or deductions). Employees only need to submit a new W-4 when circumstances change.",
-    "tip": "Post-2020 W-4 eliminated 'allowances' - now based on filing status, multiple jobs, dependents, and adjustments.",
+    "explanation": "Per IRC §3402(f)(2) and the redesigned Form W-4 (effective 2020 per TCJA implementation), withholding is now based on filing status, income from multiple jobs, dependents, and other adjustments rather than the old allowance system. Employees only need to submit a new W-4 when circumstances change - not annually. Why other answers are wrong: (B) No annual requirement exists - employees only submit new W-4s when life circumstances change; (C) The allowance system was eliminated starting in 2020; (D) Same as C - withholding allowances were replaced with the new factor-based system.",
+    "tip": "Post-2020 W-4: No more allowances! Now uses filing status, multiple jobs, dependents, and adjustments per IRC §3402.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -178,7 +178,7 @@ const questions = [
     "id": "tcp-001-009",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Failure to File Penalty",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -190,8 +190,8 @@ const questions = [
       "D": "5% of unpaid tax per month, up to 25%"
     },
     "correctAnswer": "D",
-    "explanation": "The failure to file penalty is 5% of unpaid tax for each month (or part of month) the return is late, up to a maximum of 25%. This is much steeper than the failure to pay penalty (0.5% per month). If both apply, the failure to file penalty is reduced by the failure to pay penalty.",
-    "tip": "File penalty (5%/month) is 10x worse than pay penalty (0.5%/month). Always file on time!",
+    "explanation": "Per IRC §6651(a)(1), the failure to file penalty is 5% of the unpaid tax for each month (or part of month) the return is late, up to a maximum of 25%. If the return is over 60 days late, the minimum penalty is the lesser of $510 (2024) or 100% of the tax due. Why other answers are wrong: (A) 10% per month would reach the 25% cap in only 2.5 months - the actual rate is 5%; (B) There is no flat $500 penalty for failure to file; (C) 0.5% per month is the failure to PAY penalty under IRC §6651(a)(2), not failure to FILE.",
+    "tip": "IRC §6651: File penalty = 5%/month (max 25%). Pay penalty = 0.5%/month (max 25%). File is 10x worse - always file!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -199,7 +199,7 @@ const questions = [
     "id": "tcp-001-010",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Accuracy-Related Penalty",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -211,8 +211,8 @@ const questions = [
       "D": "50% of the understatement"
     },
     "correctAnswer": "C",
-    "explanation": "The accuracy-related penalty under Section 6662 is 20% of the underpayment attributable to negligence, substantial understatement of income tax, or substantial valuation misstatement. Substantial understatement occurs when the understatement exceeds the greater of 10% of the correct tax or $5,000.",
-    "tip": "Most accuracy penalties = 20%. The 75% rate is for fraud (Section 6663).",
+    "explanation": "Per IRC §6662(a), the accuracy-related penalty is 20% of the underpayment attributable to negligence, substantial understatement of income tax, substantial valuation misstatement, or other specified causes. A substantial understatement exists under IRC §6662(d)(1)(A) when the understatement exceeds the greater of 10% of the correct tax or $5,000. Why other answers are wrong: (A) 75% is the civil FRAUD penalty under IRC §6663, not the accuracy-related penalty; (B) 10% is not a penalty rate - it's the threshold for defining substantial understatement; (D) 50% is not used in accuracy penalty calculations.",
+    "tip": "IRC §6662: Accuracy penalty = 20%. IRC §6663: Fraud = 75%. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -220,7 +220,7 @@ const questions = [
     "id": "tcp-001-011",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Professional Responsibility",
+    "subtopic": "Statute of Limitations",
     "conceptTested": "Three-Year Rule",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -232,8 +232,8 @@ const questions = [
       "D": "5 years from the date of filing"
     },
     "correctAnswer": "C",
-    "explanation": "The general assessment period is 3 years from the later of the filing date or the due date (including extensions). If a return is filed early, the statute runs from the due date. Special rules extend the period to 6 years for substantial omissions and indefinitely for fraud or failure to file.",
-    "tip": "General rule = 3 years from later of filing or due date. Extended to 6 years for 25%+ omission.",
+    "explanation": "Per IRC §6501(a), the IRS must assess tax within 3 years after the return was filed. Under IRC §6501(b)(1), an early-filed return is treated as filed on the due date, so the period runs from the later of filing date or due date. Extended periods apply for substantial omissions (6 years per §6501(e)) and fraud (unlimited per §6501(c)(1)). Why other answers are wrong: (A) 7 years is not a standard assessment period in the IRC; (B) 2 years is the refund claim period from payment date, not the assessment period; (D) 5 years is not a general assessment period.",
+    "tip": "IRC §6501: General SOL = 3 years from later of filing or due date. Omission >25% = 6 years. Fraud = unlimited.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -241,7 +241,7 @@ const questions = [
     "id": "tcp-001-012",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Professional Responsibility",
+    "subtopic": "Statute of Limitations",
     "conceptTested": "Six-Year Rule",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -253,8 +253,8 @@ const questions = [
       "D": "The taxpayer omits more than 25% of gross income"
     },
     "correctAnswer": "D",
-    "explanation": "The assessment period extends to 6 years when the taxpayer omits gross income exceeding 25% of the gross income stated on the return. For example, if stated gross income is $100,000 and the omission is $30,000 (30%), the 6-year rule applies. Fraud creates an unlimited period.",
-    "tip": "25%+ gross income omission = 6 years. Fraud = unlimited. Otherwise = 3 years.",
+    "explanation": "Per IRC §6501(e)(1)(A), the assessment period extends to 6 years when the taxpayer omits gross income exceeding 25% of the amount stated on the return. Example: If reported gross income is $100,000 and actual was $130,000, the $30,000 omission (30%) triggers the 6-year rule. Per IRC §6501(e)(1)(B)(ii), this also applies to substantial overstatements of basis. Why other answers are wrong: (A) EIC claims have no effect on the assessment period; (B) Electronic vs. paper filing has no effect on SOL; (C) Filing an extension affects the due date but not the assessment period duration.",
+    "tip": "IRC §6501(e): Omission >25% of stated gross income = 6-year SOL. Also applies to basis overstatements.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -274,8 +274,8 @@ const questions = [
       "D": "3 years from the original due date only"
     },
     "correctAnswer": "C",
-    "explanation": "A refund claim must be filed within 3 years from the filing date of the original return (including extensions) OR 2 years from the date the tax was paid, whichever is later. If filed after 3 years, the refund is limited to amounts paid within the 2 years preceding the claim.",
-    "tip": "Refund claim deadline = later of 3 years from filing or 2 years from payment.",
+    "explanation": "Per IRC §6511(a), a refund claim must be filed within 3 years from the date the return was filed OR 2 years from the date the tax was paid, whichever is LATER. Under IRC §6511(b)(2), if the claim is filed after 3 years, the refund is limited to amounts paid within the 2 years before the claim. Why other answers are wrong: (A) 4 years is not a valid refund period under the IRC; (B) While 2 years from payment is one option, the statute allows the LATER of this or 3 years from filing; (D) The period runs from filing date, not original due date, and the 2-year payment rule is an alternative.",
+    "tip": "IRC §6511: Refund claim = LATER of 3 years from filing or 2 years from payment. File late → limited refund.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -283,7 +283,7 @@ const questions = [
     "id": "tcp-001-014",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Filing Status",
     "conceptTested": "Qualifying Surviving Spouse",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -295,8 +295,8 @@ const questions = [
       "D": "Two years"
     },
     "correctAnswer": "D",
-    "explanation": "Qualifying surviving spouse status is available for the two tax years following the year of the spouse's death, provided the taxpayer doesn't remarry, maintains a household as the principal residence for a dependent child, and pays more than half the household costs. This status allows use of MFJ tax rates and standard deduction.",
-    "tip": "QSS = 2 years after death year. Must have dependent child and maintain household.",
+    "explanation": "Per IRC §2(a), qualifying surviving spouse (QSS) status is available for the two tax years following the year of spouse's death. Requirements: (1) could have filed jointly in year of death, (2) has a dependent child, (3) maintains household as child's principal residence, and (4) doesn't remarry. QSS allows MFJ tax rates and standard deduction. Why other answers are wrong: (A) The status is limited to 2 years, not 3; (B) QSS has a strict 2-year limit regardless of remarriage status; (C) One year is incorrect - the status covers both of the two years following death.",
+    "tip": "IRC §2(a): QSS = 2 years after death year. Requires dependent child + maintain household. MFJ rates apply.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -316,8 +316,8 @@ const questions = [
       "D": "August 15"
     },
     "correctAnswer": "C",
-    "explanation": "U.S. citizens and resident aliens living abroad receive an automatic 2-month extension to file (June 15) without filing Form 4868. However, interest on unpaid tax still runs from April 15. They can file Form 4868 by June 15 for an additional extension to October 15.",
-    "tip": "Citizens abroad = automatic extension to June 15 for filing (but interest still starts April 15).",
+    "explanation": "Per IRC §6081 and Reg. §1.6081-5, U.S. citizens and resident aliens living abroad receive an automatic 2-month extension to file (June 15) without filing Form 4868. However, interest under IRC §6601 still accrues from April 15 on any unpaid balance. They can file Form 4868 by June 15 for an additional extension to October 15. Why other answers are wrong: (A) October 15 is available with Form 4868 but not automatically; (B) April 15 is the regular due date for domestic filers; (D) August 15 is not a valid extension date for any filing status.",
+    "tip": "IRC §6081/Reg. §1.6081-5: Citizens abroad = automatic June 15 extension for filing. Interest still runs from April 15!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -325,7 +325,7 @@ const questions = [
     "id": "tcp-001-016",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Estimated Taxes",
     "conceptTested": "Annualized Income Method",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -337,8 +337,8 @@ const questions = [
       "D": "The quarterly averaging method"
     },
     "correctAnswer": "C",
-    "explanation": "The annualized income installment method allows taxpayers with uneven income (seasonal businesses, large year-end bonuses) to base each quarterly payment on income actually earned through that period. This prevents overpayment in early quarters when income is low and avoids penalties when income arrives later.",
-    "tip": "Uneven income? Use annualized installment method to match payments to when income is earned.",
+    "explanation": "Per IRC §6654(d)(2), the annualized income installment method allows taxpayers with uneven income to base each quarterly payment on income actually earned through that period, using annualization factors (2.4, 3.0, 1.5, 1.0 for the four quarters). This is ideal for seasonal businesses or year-end bonuses. Why other answers are wrong: (A) Prior year safe harbor requires equal payments regardless of income timing; (B) Current year safe harbor also assumes even income distribution; (D) 'Quarterly averaging method' is not a recognized tax concept.",
+    "tip": "IRC §6654(d)(2): Annualized installment method = match payments to income timing. Perfect for uneven/seasonal income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -346,7 +346,7 @@ const questions = [
     "id": "tcp-001-017",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Reasonable Cause Defense",
     "difficulty": "medium",
     "questionFormat": "MCQ",
@@ -358,8 +358,8 @@ const questions = [
       "D": "Ignorance of tax law"
     },
     "correctAnswer": "A",
-    "explanation": "Reasonable reliance on incorrect advice from a qualified tax professional can constitute reasonable cause for penalty abatement, provided the taxpayer supplied accurate information to the professional. Ignorance of law, disagreement with law, and voluntary financial decisions generally do not constitute reasonable cause.",
-    "tip": "Reasonable cause = reliance on professional advice, death/serious illness, fire/disaster. Not ignorance of law.",
+    "explanation": "Per IRC §6664(c) and Reg. §1.6664-4, reasonable reliance on incorrect advice from a qualified tax professional can constitute reasonable cause for penalty abatement, provided the taxpayer: (1) supplied accurate and complete information, and (2) relied in good faith on the professional's advice. Other reasonable cause examples include death/illness, fire/casualty, or erroneous IRS written advice. Why other answers are wrong: (B) Disagreement with tax law is not reasonable cause - taxpayers must comply while disputing; (C) Voluntary financial decisions do not excuse non-payment; (D) Ignorance of tax law is generally not a defense per the legal maxim 'ignorantia juris non excusat.'",
+    "tip": "IRC §6664(c): Reasonable cause = professional reliance, death/illness, fire/disaster. NOT ignorance or disagreement with law.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -379,8 +379,8 @@ const questions = [
       "D": "Assigned only to victims of identity theft"
     },
     "correctAnswer": "B",
-    "explanation": "An IP PIN is a 6-digit number assigned to eligible taxpayers to help prevent the use of their SSN on fraudulent returns. While initially provided to identity theft victims, the IRS now allows any taxpayer to opt into the IP PIN program. It changes annually and must be included on the return.",
-    "tip": "IP PIN = voluntary 6-digit number that changes yearly. Anyone can now opt in for extra protection.",
+    "explanation": "Per IRS procedures, an IP PIN is a 6-digit number that verifies a taxpayer's identity and helps prevent fraudulent use of their SSN on tax returns. Since 2021, the IRS expanded the program to allow any taxpayer to voluntarily request an IP PIN through the IRS website. The PIN changes annually and must be included on returns. Why other answers are wrong: (A) IP PINs are voluntary, not required for electronic filers; (C) IP PINs are separate 6-digit numbers, not SSNs; (D) While initially for identity theft victims, any taxpayer can now opt in to the program.",
+    "tip": "IP PIN = voluntary 6-digit number that changes yearly. Available to ANY taxpayer since 2021 for fraud protection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -400,8 +400,8 @@ const questions = [
       "D": "7 years after filing"
     },
     "correctAnswer": "C",
-    "explanation": "Records should be kept at least 3 years from filing or due date to match the general statute of limitations. Records supporting property basis should be kept until the property is disposed of plus the statute period. Records for worthless securities or bad debts should be kept 7 years.",
-    "tip": "General rule = 3 years. Keep property basis records until disposal + 3 years. Keep employment records 4 years.",
+    "explanation": "Per IRS guidance aligned with IRC §6501 statute of limitations, records should generally be retained for at least 3 years from the filing date or due date, whichever is later. Special rules apply: (1) property basis records should be kept until disposal plus 3 years, (2) records for worthless securities or bad debts should be kept 7 years per IRC §6511(d), (3) employment records 4 years per Reg. §31.6001-1. Why other answers are wrong: (A) Indefinite retention is unnecessary for most records; (B) 1 year is insufficient as it doesn't cover the 3-year statute of limitations; (D) 7 years is only required for specific situations like worthless securities.",
+    "tip": "Record retention: 3 years general, 7 years for worthless securities/bad debts, property basis until disposal + 3 years.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -421,8 +421,8 @@ const questions = [
       "D": "Includes the estate's income for the remainder of the year"
     },
     "correctAnswer": "B",
-    "explanation": "The final Form 1040 for a deceased taxpayer includes only income from January 1 through the date of death. The return is filed by the personal representative (executor/administrator) or surviving spouse. Income earned by the estate after death is reported on Form 1041 (estate income tax return).",
-    "tip": "Final 1040 = Jan 1 to death date only. Estate income after death goes on Form 1041.",
+    "explanation": "Per IRC §443(a)(2), the final Form 1040 for a deceased taxpayer includes only income from January 1 through the date of death. The tax year ends on the date of death. Under IRC §6012(b)(1), the return is filed by the personal representative (executor/administrator) or surviving spouse. Income earned by the estate after death is reported on Form 1041 per IRC §641. Why other answers are wrong: (A) While the estate may be involved in filing, the return is the decedent's personal return, not the estate's; (C) No 30-day deadline exists - the regular April 15 due date applies; (D) Post-death income belongs to the estate and goes on Form 1041.",
+    "tip": "Final 1040 = Jan 1 to death date per IRC §443. Post-death income → Form 1041 (estate return) per IRC §641.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -442,8 +442,8 @@ const questions = [
       "D": "$600 during the year"
     },
     "correctAnswer": "D",
-    "explanation": "Form 1099-NEC must be filed for nonemployee compensation of $600 or more paid during the year. This includes payments to independent contractors, freelancers, and other non-employees for services. The form must be provided to the recipient by January 31 and filed with the IRS.",
-    "tip": "1099-NEC threshold = $600. Same threshold applies to 1099-MISC for rent, royalties, etc.",
+    "explanation": "Per IRC §6041A, Form 1099-NEC must be filed for nonemployee compensation of $600 or more paid during the year. This applies to payments to independent contractors, freelancers, and other non-employees for services. The form must be provided to recipients by January 31 and filed with the IRS by the same date per IRC §6071(c). Why other answers are wrong: (A) $1,000 is not a reporting threshold for any 1099 form; (B) $100 is too low - the threshold has been $600 since the form's inception; (C) $400 is the self-employment filing threshold (IRC §6017), not the 1099-NEC reporting threshold.",
+    "tip": "IRC §6041A: 1099-NEC threshold = $600 for nonemployee compensation. Due to recipient and IRS by January 31.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -463,8 +463,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "D",
-    "explanation": "An FBAR must be filed if the aggregate value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. This is filed electronically with FinCEN (not the IRS) by April 15 with an automatic extension to October 15. Penalties for non-filing can be severe.",
-    "tip": "FBAR = $10,000 aggregate max value at ANY point in year. Filed with FinCEN, not IRS.",
+    "explanation": "Per 31 CFR §1010.350 (Bank Secrecy Act regulations), an FBAR must be filed if the aggregate maximum value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. Filed electronically with FinCEN (not IRS) by April 15 with automatic extension to October 15. Penalties for willful non-filing can be the greater of $100,000 or 50% of account balance. Why other answers are wrong: (A) $50,000 is a Form 8938 (FATCA) threshold for domestic filers, not FBAR; (B) $100,000 is not a standard reporting threshold; (C) $5,000 is too low - the FBAR threshold has been $10,000 since inception.",
+    "tip": "FBAR (31 CFR §1010.350): $10,000 aggregate max value at ANY point in year. Filed with FinCEN, not IRS. Severe penalties!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -484,8 +484,8 @@ const questions = [
       "D": "Is attached to the income tax return"
     },
     "correctAnswer": "D",
-    "explanation": "Form 8938 is filed with the IRS as an attachment to Form 1040, while FBAR is filed separately with FinCEN. Form 8938 has higher thresholds ($50,000/$200,000 depending on residence and filing status) and covers a broader range of assets including certain foreign stocks and interests, not just bank accounts.",
-    "tip": "Form 8938 = filed with 1040, higher thresholds, broader assets. FBAR = separate FinCEN filing, $10K threshold.",
+    "explanation": "Per IRC §6038D (FATCA), Form 8938 is filed with the IRS as an attachment to Form 1040, while FBAR is filed separately with FinCEN under the Bank Secrecy Act. Form 8938 has HIGHER thresholds ($50,000 for domestic single filers, $200,000 for foreign residents) and covers broader assets including foreign stocks, interests in foreign entities, and financial accounts. Why other answers are wrong: (A) Form 8938 covers MORE than bank accounts - it includes stocks, partnership interests, and other financial assets; (B) Form 8938 has HIGHER thresholds ($50,000+) than FBAR ($10,000); (C) FBAR is filed with FinCEN, not Form 8938.",
+    "tip": "Form 8938 (FATCA): with IRS/1040, $50K+ threshold, broad assets. FBAR: with FinCEN, $10K threshold, bank accounts only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -493,7 +493,7 @@ const questions = [
     "id": "tcp-001-024",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Fraud Penalty",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -505,8 +505,8 @@ const questions = [
       "D": "50%"
     },
     "correctAnswer": "A",
-    "explanation": "The civil fraud penalty is 75% of the underpayment attributable to fraud. This is significantly higher than the 20% accuracy-related penalty. The IRS must prove fraud by clear and convincing evidence. The fraud penalty preempts the accuracy-related penalty for the same underpayment.",
-    "tip": "Fraud = 75% penalty + unlimited assessment period. IRS must prove by clear and convincing evidence.",
+    "explanation": "Per IRC §6663(a), the civil fraud penalty is 75% of the portion of the underpayment attributable to fraud. The IRS must prove fraud by clear and convincing evidence per IRC §7454. Under IRC §6501(c)(1), the assessment period is unlimited for fraud. The fraud penalty precludes the 20% accuracy penalty on the same underpayment. Why other answers are wrong: (B) 100% is not used as a civil fraud penalty rate; (C) 20% is the accuracy-related penalty under IRC §6662, not the fraud penalty; (D) 50% is not used in civil fraud calculations.",
+    "tip": "IRC §6663: Fraud = 75% penalty. IRC §6501(c)(1): Unlimited assessment period. IRS must prove by clear and convincing evidence.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -526,8 +526,8 @@ const questions = [
       "D": "The federal short-term rate plus 3 percentage points"
     },
     "correctAnswer": "D",
-    "explanation": "For individual taxpayers, the underpayment interest rate is the federal short-term rate plus 3 percentage points (rounded to the nearest whole percent). The rate is adjusted quarterly. This is higher than the corporate underpayment rate (federal short-term rate plus 3%) for large corporate underpayments.",
-    "tip": "Individual underpayment interest = short-term federal rate + 3%. Adjusted quarterly.",
+    "explanation": "Per IRC §6621(a)(2), the underpayment interest rate for individuals is the federal short-term rate plus 3 percentage points, rounded to the nearest whole percent. The rate is determined quarterly per IRC §6621(b). Large corporate underpayments (over $100,000) use short-term rate plus 5 percentage points per IRC §6621(c). Why other answers are wrong: (A) Prime rate is not used in IRS interest calculations; (B) The rate is variable, not a flat 6%; (C) Short-term rate plus 2 points is the overpayment rate for non-corporations, not the underpayment rate.",
+    "tip": "IRC §6621: Underpayment interest = federal short-term rate + 3%. Overpayment = short-term + 2%. Adjusted quarterly.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -535,7 +535,7 @@ const questions = [
     "id": "tcp-001-026",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Professional Responsibility",
+    "subtopic": "Statute of Limitations",
     "conceptTested": "Basis Overstatement",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -547,8 +547,8 @@ const questions = [
       "D": "Only applies to real property transactions"
     },
     "correctAnswer": "B",
-    "explanation": "The extended 6-year assessment period applies when there is an omission from gross income exceeding 25% of stated gross income. An overstatement of basis that leads to an understatement of gain (and thus omission of income) can trigger this extension. This was clarified by legislation following the Supreme Court's Home Concrete decision.",
-    "tip": "Basis overstatement creating 25%+ income omission = 6-year statute. Per IRC Section 6501(e)(1)(B).",
+    "explanation": "Per IRC §6501(e)(1)(B)(ii), as amended by the Surface Transportation Act of 2015 following the Supreme Court's Home Concrete decision, an overstatement of basis that results in an omission of gross income exceeding 25% of stated gross income triggers the 6-year assessment period. This clarified that understated gains from overstated basis are treated as omitted income. Why other answers are wrong: (A) Basis overstatement creating 25%+ omission does affect the SOL; (C) Unlimited assessment is only for fraud under IRC §6501(c)(1); (D) The rule applies to all property types, not just real property.",
+    "tip": "IRC §6501(e)(1)(B)(ii): Basis overstatement → 25%+ income omission = 6-year SOL. Clarified post-Home Concrete.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -568,8 +568,8 @@ const questions = [
       "D": "The taxpayer receives all deductions and credits they would normally claim"
     },
     "correctAnswer": "C",
-    "explanation": "When the IRS prepares a substitute for return, it is not considered a return filed by the taxpayer. Therefore, the statute of limitations for assessment never begins to run. The IRS can assess tax at any time. SFRs typically include only income reported to the IRS without favorable deductions or filing status.",
-    "tip": "SFR = not a valid return for SOL purposes. Taxpayer should always file their own return to start the clock.",
+    "explanation": "Per IRC §6020(b) and the Supreme Court's Beard v. Commissioner decision, a substitute for return prepared by the IRS is not a valid return for purposes of starting the statute of limitations under IRC §6501(a). Without a valid taxpayer-filed return, the SOL never begins and the IRS can assess tax indefinitely. SFRs use only third-party reported income and typically disallow favorable deductions. Why other answers are wrong: (A) Taxpayers can and should file their own return even after SFR to claim deductions and start the SOL; (B) The SFR does not start the SOL - only a taxpayer-filed return does; (D) SFRs typically use single filing status and no itemized deductions.",
+    "tip": "IRC §6020(b) SFR: Not a valid return for SOL. IRS can assess forever. Always file your own return to start the clock!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -577,7 +577,7 @@ const questions = [
     "id": "tcp-001-028",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Substantial Understatement Definition",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -589,8 +589,8 @@ const questions = [
       "D": "5% of tax shown on return or $2,500"
     },
     "correctAnswer": "A",
-    "explanation": "A substantial understatement exists when the understatement exceeds the greater of 10% of the tax required to be shown on the return or $5,000. The penalty is 20% of the underpayment attributable to the substantial understatement. Adequate disclosure with reasonable basis can reduce the understatement amount.",
-    "tip": "Substantial understatement = greater of 10% of correct tax or $5,000. Results in 20% penalty.",
+    "explanation": "Per IRC §6662(d)(1)(A), a substantial understatement exists when the understatement exceeds the greater of 10% of the tax required to be shown on the return OR $5,000. This triggers the 20% accuracy-related penalty under IRC §6662(a). Under IRC §6662(d)(2)(B), adequate disclosure with reasonable basis can reduce the understatement amount. Why other answers are wrong: (B) 15%/$7,500 is not the statutory threshold; (C) 20%/$10,000 is not the statutory threshold; (D) 5%/$2,500 is too low - this would trigger penalties for minor errors.",
+    "tip": "IRC §6662(d)(1)(A): Substantial understatement = greater of 10% of correct tax or $5,000. Triggers 20% penalty.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -610,8 +610,8 @@ const questions = [
       "D": "The requesting spouse did not know and had no reason to know of the understatement"
     },
     "correctAnswer": "A",
-    "explanation": "Traditional innocent spouse relief under 6015(b) does not require divorce or separation. Requirements are: (1) joint return filed, (2) understatement due to other spouse's erroneous items, (3) requesting spouse didn't know/have reason to know of understatement, and (4) inequitable to hold requesting spouse liable. Separation relief under 6015(c) requires living apart.",
-    "tip": "6015(b) innocent spouse = no divorce required. 6015(c) separation relief = must be separated 12+ months.",
+    "explanation": "Per IRC §6015(b), traditional innocent spouse relief does NOT require divorce or separation. The four requirements are: (1) joint return filed, (2) understatement due to erroneous items of the other spouse, (3) requesting spouse didn't know and had no reason to know of the understatement, and (4) it would be inequitable to hold requesting spouse liable. IRC §6015(c) separation of liability relief DOES require living apart for 12+ months or divorce. Why other answers are wrong: (B) Inequity is a required element under §6015(b)(1)(D); (C) Erroneous items of the other spouse are required under §6015(b)(1)(B); (D) Lack of knowledge is required under §6015(b)(1)(C).",
+    "tip": "IRC §6015(b): No divorce/separation required. IRC §6015(c): Must be divorced or separated 12+ months. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -619,7 +619,7 @@ const questions = [
     "id": "tcp-001-030",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Estimated Taxes",
     "conceptTested": "Exception for Small Balance",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -631,8 +631,8 @@ const questions = [
       "D": "$500"
     },
     "correctAnswer": "A",
-    "explanation": "No estimated tax penalty applies if the balance due (tax minus withholding and credits) is less than $1,000. This de minimis exception prevents penalties for small underpayments. The $1,000 threshold applies regardless of whether the taxpayer met the safe harbor requirements.",
-    "tip": "$1,000 rule: If you owe less than $1,000 at filing, no estimated tax penalty regardless of payments.",
+    "explanation": "Per IRC §6654(e)(1), no estimated tax penalty applies if the total tax shown on the return minus withholding and refundable credits is less than $1,000. This de minimis exception prevents penalties for small underpayments regardless of whether other safe harbor requirements were met. Why other answers are wrong: (B) $1,500 is not the statutory threshold; (C) $2,500 is not the statutory threshold; (D) $500 was the threshold before 1998 - it was increased to $1,000 by the IRS Restructuring and Reform Act.",
+    "tip": "IRC §6654(e)(1): No estimated tax penalty if balance due < $1,000. This exception applies regardless of safe harbor status.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -652,8 +652,8 @@ const questions = [
       "D": "Collect taxes from a defaulting taxpayer"
     },
     "correctAnswer": "C",
-    "explanation": "A John Doe summons is used when the IRS seeks information about taxpayers whose identities are not known. It requires court approval and must show reasonable basis for believing the group has failed to comply with tax law. This tool is often used to obtain records from third parties about potentially non-compliant taxpayers.",
-    "tip": "John Doe summons = fishing for unknown taxpayers. Requires court approval. Used against banks, crypto exchanges, etc.",
+    "explanation": "Per IRC §7609(f), a John Doe summons is used to obtain information about taxpayers whose identities are unknown. It requires prior court approval and the IRS must demonstrate: (1) the summons relates to a particular person or ascertainable group, (2) reasonable basis for believing the group has failed to comply, and (3) the information is not available from other sources. Used against banks, crypto exchanges, and other third parties. Why other answers are wrong: (A) Levies are collection tools under IRC §6331, not summons; (B) Standard summons are used for named taxpayers; (D) Collection procedures are separate from information-gathering summons.",
+    "tip": "IRC §7609(f): John Doe summons = unknown taxpayers. Requires court approval. Often used for crypto exchanges, offshore banks.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -661,7 +661,7 @@ const questions = [
     "id": "tcp-001-032",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Penalty Stacking",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -673,8 +673,8 @@ const questions = [
       "D": "Only the failure to pay penalty applies"
     },
     "correctAnswer": "A",
-    "explanation": "When both penalties apply for the same month, the failure to file penalty (5%) is reduced by the failure to pay penalty (0.5%), resulting in a net 4.5% failure to file penalty plus 0.5% failure to pay penalty = 5% total for that month. This prevents double-counting the failure to pay component.",
-    "tip": "Penalty stacking: 5% FTF is reduced by 0.5% FTP = 4.5% + 0.5% = 5% total per month (not 5.5%).",
+    "explanation": "Per IRC §6651(c)(1), when both failure to file (FTF) and failure to pay (FTP) penalties apply for the same month, the FTF penalty is reduced by the FTP penalty. Result: 5% FTF minus 0.5% FTP = 4.5% net FTF, plus 0.5% FTP = 5% total per month (not 5.5%). This prevents double-counting the payment component. Maximum combined penalty is 25% FTF + 25% FTP = 47.5% (not 50%). Why other answers are wrong: (B) Full application of both (5.5%) would be excessive; (C) FTP still applies even when FTF applies; (D) FTF still applies even when FTP applies.",
+    "tip": "IRC §6651(c)(1): FTF reduced by FTP when both apply. 5% - 0.5% + 0.5% = 5% total/month (not 5.5%).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -694,8 +694,8 @@ const questions = [
       "D": "6 years from assessment"
     },
     "correctAnswer": "A",
-    "explanation": "The IRS has 10 years from the date of assessment to collect taxes. This is the collection statute expiration date (CSED). The period can be extended by agreement, bankruptcy, or other specified events. After the CSED, the IRS can no longer legally collect the debt.",
-    "tip": "3 years to assess, 10 years to collect (CSED). Watch for events that toll the collection period.",
+    "explanation": "Per IRC §6502(a), the IRS has 10 years from the date of assessment to collect taxes. This is the Collection Statute Expiration Date (CSED). The period can be tolled (suspended) by: (1) Form 900 waiver, (2) bankruptcy, (3) pending Offer in Compromise, (4) CDP hearing, or (5) taxpayer outside U.S. for 6+ continuous months. After CSED, the debt is legally unenforceable. Why other answers are wrong: (B) Collection time is limited, not unlimited; (C) 3 years is the assessment period under IRC §6501, not collection; (D) 6 years is the extended assessment period for 25%+ omissions, not collection.",
+    "tip": "IRC §6502: Collection = 10 years from assessment (CSED). IRC §6501: Assessment = 3 years from filing. Don't confuse them!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -703,7 +703,7 @@ const questions = [
     "id": "tcp-001-034",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Individual Taxation",
+    "subtopic": "Penalties",
     "conceptTested": "Reportable Transaction Penalties",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -715,8 +715,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "B",
-    "explanation": "The penalty for failing to disclose a listed transaction is $200,000 for individuals ($100,000 for others) or, if greater, 75% of the decrease in tax shown on the return as a result of the transaction. Listed transactions are abusive tax avoidance transactions specifically identified by the IRS.",
-    "tip": "Listed transaction disclosure penalty = greater of $200K or 75% of tax benefit. Very severe penalty.",
+    "explanation": "Per IRC §6707A(b), failure to disclose a listed transaction results in a penalty of the GREATER of: (1) $200,000 for individuals ($100,000 for others), or (2) 75% of the decrease in tax shown on the return attributable to the transaction. Listed transactions are abusive tax avoidance schemes specifically identified by the IRS in notices and regulations. Why other answers are wrong: (A) 75% alone is only half the rule - must compare to $200,000 minimum; (C) $5,000 is the penalty for other reportable transactions, not listed transactions; (D) $10,000 is the penalty for certain other reportable transactions.",
+    "tip": "IRC §6707A: Listed transaction penalty = GREATER of $200K or 75% of tax benefit. One of the most severe penalties!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -724,7 +724,7 @@ const questions = [
     "id": "tcp-001-035",
     "section": "TCP",
     "topic": "Individual Tax Compliance",
-    "subtopic": "Joint Return",
+    "subtopic": "Filing Status",
     "conceptTested": "Community Property Rules",
     "difficulty": "hard",
     "questionFormat": "MCQ",
@@ -736,8 +736,8 @@ const questions = [
       "D": "Each spouse reports only their own earned income"
     },
     "correctAnswer": "A",
-    "explanation": "In community property states, when spouses file separately, each spouse must report half of the total community income and deductions. This includes half of the other spouse's earnings. Separate property income is reported by the spouse who owns it. Community property states include Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, Washington, and Wisconsin.",
-    "tip": "Community property MFS = each reports 50% of combined community income. Can't shift income by filing separately.",
+    "explanation": "Per IRC §66 and Poe v. Seaborn (1930), community property laws are recognized for federal tax purposes. When spouses file separately (MFS), each must report 50% of the total community income, including half of the other spouse's earnings. Separate property income is reported only by the owning spouse. Community property states: Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, Washington, and Wisconsin. Why other answers are wrong: (B) Federal law recognizes state community property rules per Poe v. Seaborn; (C) Both spouses report 50%, not just the higher earner; (D) Community earnings are split 50/50 regardless of who earned them.",
+    "tip": "IRC §66: Community property MFS = 50/50 split of community income. 9 states: AZ, CA, ID, LA, NV, NM, TX, WA, WI.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
