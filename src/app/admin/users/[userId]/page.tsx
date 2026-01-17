@@ -453,23 +453,86 @@ export default function UserDetailPage({ params }: { params: Promise<{ userId: s
       </div>
 
       {/* AI Usage */}
-      {data.aiStats.totalUses > 0 && (
-        <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
-          <h3 className="font-semibold text-[var(--foreground)] dark:text-white mb-4">AI Feature Usage</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="text-center p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-              <p className="text-2xl font-bold text-purple-600">{data.aiStats.totalUses}</p>
-              <p className="text-xs text-[var(--muted)]">Total AI Uses</p>
-            </div>
-            {Object.entries(data.aiStats.byFeature).map(([feature, count]) => (
-              <div key={feature} className="text-center p-3 bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg">
-                <p className="text-2xl font-bold text-[var(--foreground)] dark:text-white">{count}</p>
-                <p className="text-xs text-[var(--muted)] capitalize">{feature.replace(/_/g, ' ')}</p>
-              </div>
-            ))}
-          </div>
+      <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
+        <div className="flex items-center gap-2 mb-4">
+          <svg className="h-5 w-5 text-purple-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+          </svg>
+          <h3 className="font-semibold text-[var(--foreground)] dark:text-white">AI Feature Usage</h3>
         </div>
-      )}
+
+        {data.aiStats.totalUses > 0 ? (
+          <>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+              <div className="text-center p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+                <p className="text-2xl font-bold text-purple-600">{data.aiStats.totalUses}</p>
+                <p className="text-xs text-[var(--muted)]">Total AI Uses</p>
+              </div>
+              {Object.entries(data.aiStats.byFeature).map(([feature, count]) => {
+                const featureConfig: Record<string, { color: string; label: string }> = {
+                  'navigator': { color: 'blue', label: 'Navigator Chats' },
+                  'study_guide': { color: 'green', label: 'Study Guides' },
+                  'explanation': { color: 'yellow', label: 'Explanations' },
+                  'hint': { color: 'orange', label: 'Hints' },
+                  'feedback': { color: 'pink', label: 'Feedback' }
+                };
+                const config = featureConfig[feature] || { color: 'gray', label: feature.replace(/_/g, ' ') };
+                return (
+                  <div key={feature} className="text-center p-3 bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg">
+                    <p className="text-2xl font-bold text-[var(--foreground)] dark:text-white">{count}</p>
+                    <p className="text-xs text-[var(--muted)] capitalize">{config.label}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* AI Usage Breakdown Bar */}
+            {Object.keys(data.aiStats.byFeature).length > 1 && (
+              <div>
+                <p className="text-xs font-medium text-[var(--muted)] mb-2">Usage Breakdown</p>
+                <div className="space-y-2">
+                  {Object.entries(data.aiStats.byFeature)
+                    .sort(([,a], [,b]) => b - a)
+                    .map(([feature, count]) => {
+                      const percentage = Math.round((count / data.aiStats.totalUses) * 100);
+                      const featureLabels: Record<string, string> = {
+                        'navigator': 'Navigator',
+                        'study_guide': 'Study Guide',
+                        'explanation': 'Explanation',
+                        'hint': 'Hint',
+                        'feedback': 'Feedback'
+                      };
+                      return (
+                        <div key={feature}>
+                          <div className="flex justify-between text-xs mb-1">
+                            <span className="text-[var(--foreground)] dark:text-white capitalize">
+                              {featureLabels[feature] || feature.replace(/_/g, ' ')}
+                            </span>
+                            <span className="text-[var(--muted)]">{count} ({percentage}%)</span>
+                          </div>
+                          <div className="w-full bg-gray-200 dark:bg-[var(--card-hover)] rounded-full h-2">
+                            <div
+                              className="h-2 rounded-full bg-purple-500"
+                              style={{ width: `${percentage}%` }}
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="text-center py-6">
+            <svg className="h-12 w-12 text-[var(--muted)] mx-auto mb-3 opacity-50" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+            </svg>
+            <p className="text-sm text-[var(--muted)]">No AI features used yet</p>
+            <p className="text-xs text-[var(--muted)] mt-1">Navigator, Study Guides, and other AI features will appear here</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
