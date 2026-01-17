@@ -96,6 +96,13 @@ function LoginContent() {
 
     // Wait for the session to be properly set before redirecting
     if (data.session) {
+      // Clear any stale inactivity timestamp to prevent immediate logout
+      try {
+        localStorage.removeItem('lastActivity');
+      } catch {
+        // Ignore - localStorage might not be available
+      }
+
       // Wait for auth state change event to confirm session is persisted
       await new Promise<void>((resolve) => {
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {

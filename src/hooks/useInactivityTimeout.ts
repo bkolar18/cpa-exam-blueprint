@@ -91,14 +91,23 @@ export function useInactivityTimeout({
       const storedTime = parseInt(stored, 10);
       const timeSinceActivity = Date.now() - storedTime;
 
-      // If inactive too long, log out immediately
-      if (timeSinceActivity >= timeout) {
+      // Check if user just logged in (via URL params or fresh dashboard load)
+      const url = new URL(window.location.href);
+      const justLoggedIn = url.searchParams.get('verified') === 'true';
+
+      // If inactive too long AND not a fresh login, log out immediately
+      if (timeSinceActivity >= timeout && !justLoggedIn) {
         handleLogout();
         return;
       }
 
-      // Adjust timer based on stored activity
-      lastActivityRef.current = storedTime;
+      // If just logged in, reset the timer to now
+      if (justLoggedIn) {
+        lastActivityRef.current = Date.now();
+      } else {
+        // Adjust timer based on stored activity
+        lastActivityRef.current = storedTime;
+      }
     }
 
     // Update storage on activity
