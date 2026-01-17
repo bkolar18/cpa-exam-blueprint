@@ -127,7 +127,7 @@ const questions = [
       "D": "Deductions are limited to 50% of AGI"
     },
     "correctAnswer": "B",
-    "explanation": "Under the IRC, credits directly reduce tax liability dollar-for-dollar, while deductions only reduce taxable income. A $1,000 credit saves $1,000 in tax. A $1,000 deduction saves taxes based on marginal rate (e.g., 22% bracket × $1,000 = $220 tax savings). Credits are defined throughout the Code (§§21-54); deductions in §§62-199A. Why other answers are wrong: (A) Indefinite carryforward—varies by credit type, not a universal feature; (C) No phase-outs—many credits DO phase out (e.g., Child Tax Credit §24(b)); (D) 50% AGI limit—only certain charitable deductions have AGI limits.",
+    "explanation": "Under the IRC, credits directly reduce tax liability dollar-for-dollar, while deductions only reduce taxable income. A $1,000 credit saves $1,000 in tax. A $1,000 deduction saves taxes based on marginal rate (e.g., 22% bracket × $1,000 = $220 tax savings). Credits are defined throughout the Code (§§21-54); deductions in §§62-199A. Why other answers are wrong: (A) Indefinite carryforward—varies by credit type, not a universal feature; (C) No phase-outs—many credits DO phase out (e.g., Child Tax Credit §24(b)); (D) 50% AGI limit—only certain charitable deductions have AGI limits, not all deductions.",
     "tip": "Credit = dollar-for-dollar TAX reduction. Deduction = reduces taxable INCOME × marginal rate. Credit > Deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -316,8 +316,8 @@ const questions = [
       "D": "Inventory held for sale"
     },
     "correctAnswer": "B",
-    "explanation": "Section 1231 property includes depreciable business property and real property used in a trade or business, held more than one year. Net 1231 gains are taxed as LTCG; net 1231 losses are ordinary losses—the 'best of both worlds.'",
-    "tip": "Section 1231 = business property held >1 year. Gains = LTCG rates. Losses = ordinary. Win-win!",
+    "explanation": "Per IRC §1231, section 1231 property includes depreciable business property and real property used in a trade or business, held more than one year. Net 1231 gains are taxed as LTCG; net 1231 losses are ordinary losses—the 'best of both worlds.' Why other answers are wrong: (A) Personal use assets—these are personal capital assets, not §1231 property; (C) Stocks and bonds—these are capital assets under §1221, not §1231 business property; (D) Inventory—specifically excluded from both capital asset and §1231 treatment under §1221(a)(1).",
+    "tip": "§1231: Section 1231 = business property held >1 year. Gains = LTCG rates. Losses = ordinary. Win-win!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -799,8 +799,8 @@ const questions = [
       "D": "Income is taxed to the person who earns it, regardless of who receives it"
     },
     "correctAnswer": "D",
-    "explanation": "The assignment of income doctrine (Lucas v. Earl, 1930) prevents taxpayers from avoiding tax by directing earned income to others. 'The fruit cannot be attributed to a tree different from that on which it grew.' Two key rules: (1) Income from SERVICES is taxed to the person who earns it; (2) Income from PROPERTY is taxed to the owner of the property. To shift property income, you must transfer the underlying property itself. Why other answers are wrong: (A) Family members don't share tax burden—the earner/owner is taxed; (B) Income shifting through assignment is precisely what the doctrine PREVENTS; (C) Assigning income to family doesn't avoid tax—it's still taxed to the earner.",
-    "tip": "Assignment of income (Lucas v. Earl): Income taxed to EARNER. Can't assign the fruit without the tree. Transfer property, not just income.",
+    "explanation": "Per IRC, the assignment of income doctrine (Lucas v. Earl, 1930) prevents taxpayers from avoiding tax by directing earned income to others. 'The fruit cannot be attributed to a tree different from that on which it grew.' Two key rules: (1) Income from SERVICES is taxed to the person who earns it; (2) Income from PROPERTY is taxed to the owner of the property. To shift property income, you must transfer the underlying property itself. Why other answers are wrong: (A) Family members don't share tax burden—the earner/owner is taxed; (B) Income shifting through assignment is precisely what the doctrine PREVENTS; (C) Assigning income to family doesn't avoid tax—it's still taxed to the earner.",
+    "tip": "IRC: Assignment of income (Lucas v. Earl): Income taxed to EARNER. Can't assign the fruit without the tree. Transfer property, not just income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -925,8 +925,8 @@ const questions = [
       "D": "Economic benefits are always valued at cost to the provider"
     },
     "correctAnswer": "B",
-    "explanation": "The economic benefit doctrine provides that a taxpayer realizes income when receiving an economic benefit, even if cash isn't received. If property or funds are irrevocably set aside for the taxpayer's benefit (no substantial risk of forfeiture), current taxation applies. This doctrine prevents tax deferral through funded nonqualified deferred compensation arrangements. The funds must be beyond the reach of the employer's creditors. Contrast with constructive receipt (available but not taken) vs. economic benefit (set aside securely). Why other answers are wrong: (A) Cash receipt isn't required—economic benefit triggers taxation; (C) Economic benefits ARE included, not excluded; (D) Valuation is at fair market value to the recipient, not cost to provider.",
-    "tip": "Economic benefit doctrine: Property secured for you (no forfeiture risk) = taxable now. Used to prevent funded deferred comp abuse.",
+    "explanation": "Per IRC, the economic benefit doctrine provides that a taxpayer realizes income when receiving an economic benefit, even if cash isn't received. If property or funds are irrevocably set aside for the taxpayer's benefit (no substantial risk of forfeiture), current taxation applies. This doctrine prevents tax deferral through funded nonqualified deferred compensation arrangements. The funds must be beyond the reach of the employer's creditors. Contrast with constructive receipt (available but not taken) vs. economic benefit (set aside securely). Why other answers are wrong: (A) Cash receipt isn't required—economic benefit triggers taxation; (C) Economic benefits ARE included, not excluded; (D) Valuation is at fair market value to the recipient, not cost to provider.",
+    "tip": "IRC: Economic benefit doctrine: Property secured for you (no forfeiture risk) = taxable now. Used to prevent funded deferred comp abuse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1933,7 +1933,7 @@ const questions = [
       "D": "Prescription medications and insulin"
     },
     "correctAnswer": "D",
-    "explanation": "Per IRC §213(d), deductible medical expenses include amounts paid for diagnosis, cure, mitigation, treatment, or prevention of disease. Prescriptions and insulin (even without prescription) are specifically deductible under §213(b). Also deductible: doctor/hospital fees, medical equipment, medically necessary travel, long-term care premiums (limited). NOT deductible: (A) OTC vitamins/supplements taken for general health; (B) Cosmetic surgery under §213(d)(9) unless for congenital abnormality, injury from accident, or disfiguring disease; (C) Gym memberships for general fitness (unless prescribed by doctor for specific condition). Why other answers are wrong: Each represents a specifically nondeductible category.",
+    "explanation": "Per IRC §213(d), deductible medical expenses include amounts paid for diagnosis, cure, mitigation, treatment, or prevention of disease. Prescriptions and insulin (even without prescription) are specifically deductible under §213(b). Also deductible: doctor/hospital fees, medical equipment, medically necessary travel, long-term care premiums (limited). NOT deductible: (A) OTC vitamins/supplements taken for general health; (B) Cosmetic surgery under §213(d)(9) unless for congenital abnormality, injury from accident, or disfiguring disease; (C) Gym memberships for general fitness (unless prescribed by doctor for specific condition). Why other answers are wrong: (A) Over-the-counter vitamins taken for general health purposes are not deductible medical expenses under IRC §213(d), as they are considered supplements rather than treatment for a specific medical condition. (B) Cosmetic surgery performed solely for personal appearance is specifically excluded from deductible medical expenses under IRC §213(d)(9), unless it corrects a congenital abnormality, treats injury from an accident, or addresses a disfiguring disease. (C) Health club memberships for general fitness are not deductible medical expenses, as they serve general wellness purposes rather than treating a specific medical condition, unless specifically prescribed by a physician for a particular medical condition.",
     "tip": "Medical expenses (§213): Prescriptions + insulin = YES. Cosmetics/gym/vitamins = NO (unless medically necessary).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -2458,8 +2458,8 @@ const questions = [
       "D": "Accelerating or deferring deductions to exceed the standard deduction in alternate years"
     },
     "correctAnswer": "D",
-    "explanation": "The 'bunching' strategy is a tax planning technique to maximize deductions under TCJA's higher standard deduction. Concept: CONCENTRATE discretionary deductions (charitable contributions, property taxes, medical expenses) into alternating years to exceed the standard deduction threshold, then take the standard deduction in 'off' years. Example (MFJ $27,700 standard): Year 1—bunch $30K deductions → itemize; Year 2—minimal deductions → take $27,700 standard. Two-year total: $57,700 vs. $55,400 if spread evenly. Commonly used with donor-advised funds (contribute several years' charity in one year). Why other answers are wrong: (A) Can't claim both in same year; (B) Converting isn't feasible for most deductions; (C) Spreading LOSES benefit—bunching GAINS benefit.",
-    "tip": "Bunching = concentrate deductions in one year to itemize, take standard deduction in alternate years. DAFs facilitate charitable bunching.",
+    "explanation": "Per IRC §63, the 'bunching' strategy is a tax planning technique to maximize deductions under TCJA's higher standard deduction. Concept: CONCENTRATE discretionary deductions (charitable contributions, property taxes, medical expenses) into alternating years to exceed the standard deduction threshold, then take the standard deduction in 'off' years. Example (MFJ $27,700 standard): Year 1—bunch $30K deductions → itemize; Year 2—minimal deductions → take $27,700 standard. Two-year total: $57,700 vs. $55,400 if spread evenly. Commonly used with donor-advised funds (contribute several years' charity in one year). Why other answers are wrong: (A) Can't claim both in same year; (B) Converting isn't feasible for most deductions; (C) Spreading LOSES benefit—bunching GAINS benefit.",
+    "tip": "§63: Bunching = concentrate deductions in one year to itemize, take standard deduction in alternate years. DAFs facilitate charitable bunching.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3214,7 +3214,7 @@ const questions = [
       "D": "Alphabetical order"
     },
     "correctAnswer": "C",
-    "explanation": "Per the IRC ordering rules, NONREFUNDABLE credits apply first to reduce regular tax liability to zero, then REFUNDABLE credits apply (can result in payment to taxpayer). This maximizes benefit: nonrefundable credits would be lost if not used, while refundable credits are never lost. Specific order within nonrefundable: foreign tax credit, child/dependent credits, education credits, energy credits, etc. Refundable credits: EITC, ACTC, PTC, refundable portion of AOTC. Why other answers are wrong: (A) Ordering is statutory, not taxpayer choice; (B) REVERSED—nonrefundable first; (D) Not alphabetical—specific statutory order.",
+    "explanation": "Per IRC §38 and §27, NONREFUNDABLE credits apply first to reduce regular tax liability to zero, then REFUNDABLE credits apply (can result in payment to taxpayer). This maximizes benefit: nonrefundable credits would be lost if not used, while refundable credits are never lost. Specific order within nonrefundable: foreign tax credit, child/dependent credits, education credits, energy credits, etc. Refundable credits: EITC, ACTC, PTC, refundable portion of AOTC. Why other answers are wrong: (A) Ordering is statutory, not taxpayer choice; (B) REVERSED—nonrefundable first; (D) Not alphabetical—specific statutory order.",
     "tip": "Credit order: NONrefundable first (reduce to zero), then REFUNDABLE (can go below zero). Maximizes total benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -3571,7 +3571,7 @@ const questions = [
       "D": "Only the building"
     },
     "correctAnswer": "A",
-    "explanation": "Per Reg. §1.167(a)-5, when acquiring real property, total cost must be allocated between LAND (non-depreciable—§167 doesn't apply) and BUILDING (depreciable). Allocation based on relative FMVs. Common methods: property tax assessments, appraisals, insurance valuations, or sales contracts specifying values. IRS scrutinizes allocations favoring buildings over land. Example: $500K purchase, land FMV $150K (30%), building FMV $350K (70%). Allocate 70% to building. Why other answers are wrong: (B/D) Must allocate to both; (C) Must use reasonable method, not taxpayer preference—IRS can challenge.",
+    "explanation": "Per Reg. §1.167(a)-5, when acquiring real property, total cost must be allocated between LAND (non-depreciable—§167 doesn't apply) and BUILDING (depreciable). Allocation based on relative FMVs. Common methods: property tax assessments, appraisals, insurance valuations, or sales contracts specifying values. IRS scrutinizes allocations favoring buildings over land. Example: $500K purchase, land FMV $150K (30%), building FMV $350K (70%). Allocate 70% to building. Why other answers are wrong: (B) Allocating basis only to land is incorrect because it ignores the building component, which needs separate allocation for depreciation purposes; (C) Taxpayers cannot simply choose their preferred allocation method—the allocation must be reasonable and supportable, as the IRS can challenge arbitrary allocations that don't reflect economic reality; (D) Allocating basis only to the building ignores the land component and violates the requirement that total basis must be allocated between both components based on their relative values.",
     "tip": "Real Estate Basis: Allocate by FMV ratio. Land = NOT depreciable. Building = depreciable. Can't manipulate allocation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -3634,7 +3634,7 @@ const questions = [
       "D": "The discounted amount actually paid for the stock"
     },
     "correctAnswer": "D",
-    "explanation": "Per IRC §423, qualifying ESPP stock's INITIAL basis = amount actually paid (discounted price, typically 85% of lower of FMV at offering or purchase date). On DISPOSITION, ordinary income recognized increases basis. Qualifying disposition (1 year from purchase + 2 years from offering): ordinary income = lesser of (1) discount at offering date or (2) actual gain. Disqualifying disposition: ordinary income = spread at purchase. Why other answers are wrong: (A) Zero impossible—paid for stock; (B/C) FMV only relevant for calculating ordinary income portion, not initial basis.",
+    "explanation": "Per IRC §423, qualifying ESPP stock's INITIAL basis = amount actually paid (discounted price, typically 85% of lower of FMV at offering or purchase date). On DISPOSITION, ordinary income recognized increases basis. Qualifying disposition (1 year from purchase + 2 years from offering): ordinary income = lesser of (1) discount at offering date or (2) actual gain. Disqualifying disposition: ordinary income = spread at purchase. Why other answers are wrong: (A) Zero basis is incorrect because the employee actually paid cash for the stock, which establishes basis equal to the amount paid under general tax principles; (B) Fair market value at offering date is used in calculating the discount amount and potential ordinary income recognition upon disposition, but it does not determine the employee's initial cost basis in the shares; (C) Fair market value at purchase date is similarly used for computing the discount benefit and ordinary income treatment on sale, but the employee's actual basis remains the discounted amount they paid, not the full fair market value.",
     "tip": "ESPP Basis (§423): Initial = price paid (discounted). Add ordinary income recognized on sale to get final basis for gain/loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -3739,7 +3739,7 @@ const questions = [
       "D": "The lower of FMV or basis of property given"
     },
     "correctAnswer": "C",
-    "explanation": "Per IRC §1031(d), like-kind exchange basis formula: Basis of property GIVEN UP − Boot RECEIVED + Boot GIVEN + Gain RECOGNIZED. Alternative formula: FMV of property received − Deferred gain. Purpose: preserves deferred gain in replacement property's lower basis. Post-2017: Only real property held for business/investment qualifies. Example: Give property with $50K basis, FMV $80K. Receive property FMV $70K + $10K boot. Gain = $10K (boot received). New basis = $50K − $10K + $0 + $10K = $50K. Why other answers are wrong: (A/B) Neither zero nor FMV—substituted basis applies; (D) No 'lower of' rule for §1031.",
+    "explanation": "Per IRC §1031(d), like-kind exchange basis formula: Basis of property GIVEN UP − Boot RECEIVED + Boot GIVEN + Gain RECOGNIZED. Alternative formula: FMV of property received − Deferred gain. Purpose: preserves deferred gain in replacement property's lower basis. Post-2017: Only real property held for business/investment qualifies. Example: Give property with $50K basis, FMV $80K. Receive property FMV $70K + $10K boot. Gain = $10K (boot received). New basis = $50K − $10K + $0 + $10K = $50K. Why other answers are wrong: (A) Zero basis is incorrect—like-kind exchanges use substituted basis rules, not zero basis; (B) Fair market value would result in a stepped-up basis that eliminates the deferred gain, contrary to §1031's purpose of deferring recognition; (D) There is no \"lower of\" rule in §1031 exchanges—the basis is specifically calculated using the substituted basis formula, not a comparison between FMV and original basis.",
     "tip": "§1031 Basis = Old Basis − Boot Received + Boot Given + Gain Recognized. Preserves deferred gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -3781,7 +3781,7 @@ const questions = [
       "D": "Reduces the basis of the next home purchased"
     },
     "correctAnswer": "A",
-    "explanation": "Per IRC §121, home sale exclusion is PERMANENT—excluded gain is never taxed, no basis adjustment needed anywhere. Up to $250K single/$500K MFJ excluded if owned and used as principal residence 2 of last 5 years. Key differences from old §1034 rollover (repealed 1997): No replacement required, no basis reduction, can use every 2 years. Gain above exclusion = taxable. If partial use/rental, allocate and apply depreciation recapture. Why other answers are wrong: (B) Not deferred—permanently excluded; (C/D) No basis adjustments required—it's an exclusion, not deferral.",
+    "explanation": "Per IRC §121, home sale exclusion is PERMANENT—excluded gain is never taxed, no basis adjustment needed anywhere. Up to $250K single/$500K MFJ excluded if owned and used as principal residence 2 of last 5 years. Key differences from old §1034 rollover (repealed 1997): No replacement required, no basis reduction, can use every 2 years. Gain above exclusion = taxable. If partial use/rental, allocate and apply depreciation recapture. Why other answers are wrong: (B) Not deferred—permanently excluded under §121, unlike the old §1034 rollover provisions that required deferral and basis adjustments; (C) No retroactive basis adjustment to the sold home occurs—the exclusion applies to the gain calculation, not the property's historical basis; (D) No basis reduction to future home purchases—§121 exclusion is complete and permanent with no carryover effects to replacement property.",
     "tip": "§121 Exclusion = PERMANENT, not deferral. No replacement required, no basis adjustment. $250K/$500K limit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -4138,7 +4138,7 @@ const questions = [
       "D": "Long-term losses always offset short-term gains first"
     },
     "correctAnswer": "B",
-    "explanation": "Per IRC §1222, netting follows specific sequence: Step 1: Net STCG vs STCL → Net ST result. Step 2: Net LTCG vs LTCL → Net LT result. Step 3: If both positive = report separately. If both negative = combine, apply $3,000 limit. If mixed = net against each other. Worst outcome: net STCG (taxed at ordinary rates) + net LTCL (limited to $3,000). Best outcome: net LTCG (preferential rates). Why other answers are wrong: (A) Character matters for rates—can't ignore holding period; (C)/(D) Cross-netting happens AFTER within-category netting, not first.",
+    "explanation": "Per IRC §1222, netting follows specific sequence: Step 1: Net STCG vs STCL → Net ST result. Step 2: Net LTCG vs LTCL → Net LT result. Step 3: If both positive = report separately. If both negative = combine, apply $3,000 limit. If mixed = net against each other. Worst outcome: net STCG (taxed at ordinary rates) + net LTCL (limited to $3,000). Best outcome: net LTCG (preferential rates). Why other answers are wrong: (A) This ignores the critical distinction between short-term and long-term holding periods, which determines tax rates—short-term gains are taxed at ordinary rates while long-term gains receive preferential treatment, so character must be preserved initially; (C) This describes cross-category netting, but the IRC requires within-category netting to occur first before any short-term gains can offset long-term losses; (D) This also describes cross-category netting occurring prematurely—long-term losses can only offset short-term gains after the within-category netting process is completed in steps 1 and 2.",
     "tip": "Netting order: (1) ST vs ST, (2) LT vs LT, (3) Then cross-net the results. Character matters for tax rates!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -4243,7 +4243,7 @@ const questions = [
       "D": "Is always long-term"
     },
     "correctAnswer": "C",
-    "explanation": "Per IRC §1223(2), gift holding period TACKS (adds donor's period) when using CARRYOVER basis (gain property or gain situation). But if using FMV basis (loss property sold at loss), holding period starts fresh on gift date. Integration with §1015 basis rules: (1) FMV ≥ donor's basis = carryover basis = tacking; (2) FMV < donor's basis AND sold at loss = FMV basis = new holding period; (3) FMV < donor's basis AND sold in 'no man's land' = no gain/loss recognized. Why other answers are wrong: (A)/(D) Depends on which basis used—not always one or the other; (B) Only true when using FMV basis for loss.",
+    "explanation": "Per IRC §1223(2), gift holding period TACKS (adds donor's period) when using CARRYOVER basis (gain property or gain situation). But if using FMV basis (loss property sold at loss), holding period starts fresh on gift date. Integration with §1015 basis rules: (1) FMV ≥ donor's basis = carryover basis = tacking; (2) FMV < donor's basis AND sold at loss = FMV basis = new holding period; (3) FMV < donor's basis AND sold in 'no man's land' = no gain/loss recognized. Why other answers are wrong: (A) Holding period is not always short-term because it depends on which basis is used—when using carryover basis, the donor's holding period (which could be long-term) is included; (B) The holding period only begins on the date of the gift when using FMV basis for loss property, but when using carryover basis, the donor's holding period is included; (D) The holding period is not always long-term because the total period depends on both the donor's original holding period and whether carryover or FMV basis applies.",
     "tip": "§1223(2) Gift Holding: TACK if carryover basis (gain). START FRESH if FMV basis (loss).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -4348,7 +4348,7 @@ const questions = [
       "D": "There is no exclusion for QSBS"
     },
     "correctAnswer": "C",
-    "explanation": "Per IRC §1202, QSBS exclusion timeline: Pre-2/18/09 = 50%; 2/18/09-9/27/10 = 75%; Post-9/27/10 = 100%. Requirements: (1) C corporation, (2) gross assets ≤$50M at issuance, (3) active business (not service, finance, etc.), (4) original issuance to taxpayer, (5) held >5 years. Exclusion limit: greater of $10M or 10× adjusted basis. Excluded gain not subject to AMT (post-9/27/10 stock). Why other answers are wrong: (A)/(B) Old rates for pre-9/27/10 stock; (D) Exclusion definitely exists—it's massive tax benefit.",
+    "explanation": "Per IRC §1202, QSBS exclusion timeline: Pre-2/18/09 = 50%; 2/18/09-9/27/10 = 75%; Post-9/27/10 = 100%. Requirements: (1) C corporation, (2) gross assets ≤$50M at issuance, (3) active business (not service, finance, etc.), (4) original issuance to taxpayer, (5) held >5 years. Exclusion limit: greater of $10M or 10× adjusted basis. Excluded gain not subject to AMT (post-9/27/10 stock). Why other answers are wrong: (A) 50% exclusion only applies to QSBS acquired before February 18, 2009, making this rate outdated for current planning purposes; (B) 75% exclusion only applies to QSBS acquired between February 18, 2009 and September 27, 2010, also an outdated rate; (D) This is completely incorrect as IRC §1202 specifically provides for gain exclusion on QSBS, representing one of the most significant tax benefits available to small business investors.",
     "tip": "§1202 QSBS: 100% exclusion (post-9/27/10), 5+ year hold, $50M asset test, $10M or 10× basis cap. Huge benefit!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -5209,8 +5209,8 @@ const questions = [
       "D": "Improve their own property with exchange proceeds"
     },
     "correctAnswer": "C",
-    "explanation": "Per Rev. Proc. 2000-37, a build-to-suit/improvement exchange allows taxpayer to exchange into property that will be improved using exchange proceeds. An EAT holds title while improvements are constructed. All improvements must be completed within 180-day acquisition period—work in progress at day 180 doesn't count toward exchange value. Why other answers are wrong: (A) Only land portion—improvements completed by day 180 count too; (B) Immediate possession—taxpayer can't possess while EAT holds title; (D) Improve own property—can't use proceeds to improve property you already own.",
-    "tip": "Build-to-suit: EAT holds while improvements made. MUST complete by day 180—unfinished work doesn't count!",
+    "explanation": "Per IRC §1001, per Rev. Proc. 2000-37, a build-to-suit/improvement exchange allows taxpayer to exchange into property that will be improved using exchange proceeds. An EAT holds title while improvements are constructed. All improvements must be completed within 180-day acquisition period—work in progress at day 180 doesn't count toward exchange value. Why other answers are wrong: (A) Only land portion—improvements completed by day 180 count too; (B) Immediate possession—taxpayer can't possess while EAT holds title; (D) Improve own property—can't use proceeds to improve property you already own.",
+    "tip": "§1001: Build-to-suit: EAT holds while improvements made. MUST complete by day 180—unfinished work doesn't count!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -6301,7 +6301,7 @@ const questions = [
       "D": "$150,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §535(c)(2), the accumulated earnings credit is the greater of (1) reasonable business needs minus accumulated E&P, OR (2) the minimum credit. For non-service corporations, the minimum is $250,000 per §535(c)(2)(B). For 'specified' service corporations (health, law, accounting, engineering, architecture, actuarial science, performing arts, consulting - per §535(c)(2)(B)), the minimum is only $150,000. Why wrong: (A), (C), (D) don't match either statutory threshold.",
+    "explanation": "Under IRC §535(c)(2), the accumulated earnings credit is the greater of (1) reasonable business needs minus accumulated E&P, OR (2) the minimum credit. For non-service corporations, the minimum is $250,000 per §535(c)(2)(B). For 'specified' service corporations (health, law, accounting, engineering, architecture, actuarial science, performing arts, consulting - per §535(c)(2)(B)), the minimum is only $150,000. Why other answers are wrong: (A) $200,000 is not a statutory threshold under IRC §535(c)(2) for either type of corporation. (C) $100,000 is below both the non-service corporation minimum of $250,000 and the service corporation minimum of $150,000. (D) $150,000 represents the minimum credit for specified service corporations, not non-service corporations.",
     "tip": "§535(c)(2): AE credit minimum = $250K regular corps, $150K service corps. Credit reduces ATI.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
@@ -6343,7 +6343,7 @@ const questions = [
       "D": "$30,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §351(b), gain is recognized to the extent of 'boot' (money + FMV of non-stock property) received. CALCULATION: Realized gain = FMV received ($80,000) - Basis transferred ($50,000) = $30,000. Recognized gain = LESSER of (1) realized gain ($30,000) or (2) boot received ($10,000 cash) = $10,000. The stock worth $70,000 is NOT boot - only the $10,000 cash triggers recognition. Why wrong: (A) Zero ignores boot; (C)/(D) exceed boot received. Stock basis becomes $50,000 - $10,000 boot + $10,000 gain = $50,000.",
+    "explanation": "Under IRC §351(b), gain is recognized to the extent of 'boot' (money + FMV of non-stock property) received. CALCULATION: Realized gain = FMV received ($80,000) - Basis transferred ($50,000) = $30,000. Recognized gain = LESSER of (1) realized gain ($30,000) or (2) boot received ($10,000 cash) = $10,000. The stock worth $70,000 is NOT boot - only the $10,000 cash triggers recognition. Why other answers are wrong: (A) $0 ignores the boot received rule - any cash or non-stock property received triggers gain recognition up to the boot amount. (C) $20,000 incorrectly calculates recognized gain as something other than the boot received, possibly confusing it with the difference between stock and total consideration. (D) $30,000 represents the total realized gain, failing to apply the limitation that recognized gain cannot exceed boot received. Stock basis becomes $50,000 - $10,000 boot + $10,000 gain = $50,000.",
     "tip": "§351(b): Gain recognized = lesser of realized gain OR boot. Boot = cash + FMV of non-stock property.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -6364,7 +6364,7 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §358(a)(1), shareholder's basis in stock received = basis of property transferred ($30,000) - boot received ($0) - loss recognized ($0) + gain recognized ($0) + liabilities assumed by corp ($0) = $30,000. This is a 'substituted basis' that preserves the $20,000 built-in gain ($50,000 FMV - $30,000 basis). When Amy sells the stock, she'll recognize the deferred gain. Why wrong: (A) understates basis; (C)/(D) would be FMV-based, not allowed in tax-free exchanges.",
+    "explanation": "Under IRC §358(a)(1), shareholder's basis in stock received = basis of property transferred ($30,000) - boot received ($0) - loss recognized ($0) + gain recognized ($0) + liabilities assumed by corp ($0) = $30,000. This is a 'substituted basis' that preserves the $20,000 built-in gain ($50,000 FMV - $30,000 basis). When Amy sells the stock, she'll recognize the deferred gain. Why other answers are wrong: (A) $20,000 appears to be the built-in gain amount ($50,000 FMV - $30,000 basis), but this is not how stock basis is calculated in Section 351 transactions; (C) $40,000 has no basis in the Section 351 calculations and doesn't represent any relevant amount in this transaction; (D) $50,000 would represent taking a fair market value basis in the stock, but tax-free exchanges under Section 351 require substituted basis, not stepped-up FMV basis.",
     "tip": "§358: Stock basis = property basis - boot + gain recognized. Preserves built-in gain for later.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
@@ -6385,7 +6385,7 @@ const questions = [
       "D": "$70,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §362(a)(1), the corporation takes a 'transferred basis' (carryover basis) in property received equal to the transferor's basis ($40,000), increased by any gain recognized by the transferor. Since Bob recognized no gain (no boot received), corp basis = $40,000. The corporation 'inherits' the $60,000 built-in gain. Why wrong: (A) FMV basis not allowed; (C)/(D) are arbitrary amounts. Note: If Bob had recognized gain, corp basis would increase by that amount per §362(a).",
+    "explanation": "Under IRC §362(a)(1), the corporation takes a 'transferred basis' (carryover basis) in property received equal to the transferor's basis ($40,000), increased by any gain recognized by the transferor. Since Bob recognized no gain (no boot received), corp basis = $40,000. The corporation 'inherits' the $60,000 built-in gain. Why other answers are wrong: (A) $100,000 represents the fair market value of the land, but corporations do not take a fair market value basis in Section 351 exchanges - they must use the transferor's carryover basis; (C) $60,000 appears to represent the built-in gain ($100,000 - $40,000), but this is not the corporation's basis - the built-in gain remains unrealized until the corporation disposes of the property; (D) $70,000 has no basis in the Section 351 rules and appears to be an arbitrary amount that doesn't correspond to any relevant tax calculation. Note: If Bob had recognized gain, corp basis would increase by that amount per §362(a).",
     "tip": "§362(a): Corp basis = transferor's basis + gain recognized by transferor. Carryover basis.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
@@ -6406,7 +6406,7 @@ const questions = [
       "D": "$100,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §243(c), 20-79% ownership = 65% DRD. CALCULATION: Tentative DRD = $100,000 × 65% = $65,000. Taxable income limitation check per §246(b): 65% × $200,000 TI = $130,000. Since tentative DRD ($65,000) < TI limitation ($130,000), no limitation applies. Final DRD = $65,000. NOTE: The TI limitation only applies if DRD would CREATE or INCREASE an NOL - then no limitation. Why wrong: (A) uses 50% rate; (C)/(D) aren't valid DRD amounts.",
+    "explanation": "Under IRC §243(c), 20-79% ownership = 65% DRD. CALCULATION: Tentative DRD = $100,000 × 65% = $65,000. Taxable income limitation check per §246(b): 65% × $200,000 TI = $130,000. Since tentative DRD ($65,000) < TI limitation ($130,000), no limitation applies. Final DRD = $65,000. NOTE: The TI limitation only applies if DRD would CREATE or INCREASE an NOL - then no limitation. Why other answers are wrong: (A) $50,000 incorrectly applies the 50% DRD rate, which only applies to ownership below 20%. (C) $80,000 uses the 80% DRD rate, which only applies to 80% or greater ownership. (D) $100,000 represents the full dividend amount without any DRD calculation, ignoring the required percentage reduction under IRC §243.",
     "tip": "§243(c): 20-79% = 65% DRD. §246(b) TI limit applies unless DRD creates NOL.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -6427,7 +6427,7 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §248, organizational expenditures are deductible as: (1) Up to $5,000 immediately (reduced dollar-for-dollar when total exceeds $50,000), PLUS (2) Remainder amortized over 180 months beginning with the month business begins. CALCULATION: Immediate deduction = $5,000. Remaining = $10,000 - $5,000 = $5,000. Monthly amortization = $5,000 ÷ 180 = $27.78. Year 1 amortization = $27.78 × 12 = $333. Total Year 1 = $5,000 + $333 = $5,333. Same rules apply to startup costs under §195.",
+    "explanation": "Under IRC §248, organizational expenditures are deductible as: (1) Up to $5,000 immediately (reduced dollar-for-dollar when total exceeds $50,000), PLUS (2) Remainder amortized over 180 months beginning with the month business begins. CALCULATION: Immediate deduction = $5,000. Remaining = $10,000 - $5,000 = $5,000. Monthly amortization = $5,000 ÷ 180 = $27.78. Year 1 amortization = $27.78 × 12 = $333. Total Year 1 = $5,000 + $333 = $5,333. Same rules apply to startup costs under §195. Why other answers are wrong: (A) $5,000—only the immediate deduction; ignores 12 months of amortization; (C) $5,667—incorrect amortization calculation; (D) $10,000—cannot expense full amount immediately; §248 requires amortization of excess over $5,000.",
     "tip": "§248: $5K immediate + 180-month amortization. Phase-out starts at $50K. Same for §195 startups.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -6469,7 +6469,7 @@ const questions = [
       "D": "$30,000 dividend, $10,000 return of capital"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §316(a), dividend ordering: (1) FIRST from current E&P (regardless of accumulated E&P balance), (2) THEN from accumulated E&P. Analysis: Current E&P = $50,000 (positive), Accumulated E&P = ($30,000) deficit. Since current E&P ($50,000) exceeds distribution ($40,000), ENTIRE $40,000 is dividend. The accumulated deficit is irrelevant when current E&P covers the distribution. Why wrong: (A)/(C)/(D) misapply the ordering rules - current E&P must be exhausted first regardless of accumulated deficit.",
+    "explanation": "Under IRC §316(a), dividend ordering: (1) FIRST from current E&P (regardless of accumulated E&P balance), (2) THEN from accumulated E&P. Analysis: Current E&P = $50,000 (positive), Accumulated E&P = ($30,000) deficit. Since current E&P ($50,000) exceeds distribution ($40,000), ENTIRE $40,000 is dividend. The accumulated deficit is irrelevant when current E&P covers the distribution. Why other answers are wrong: (A) incorrectly treats the entire distribution as return of capital, ignoring the positive current E&P that must be applied first under the ordering rules. (C) incorrectly splits the distribution between dividend and return of capital, failing to recognize that current E&P alone covers the entire distribution amount. (D) also incorrectly splits the distribution and misapplies the E&P amounts by seemingly netting current and accumulated E&P, which violates the sequential ordering requirement under IRC §316(a).",
     "tip": "§316: Current E&P first (even with accumulated deficit), then accumulated E&P. Order matters!",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -6490,7 +6490,7 @@ const questions = [
       "D": "50%"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §302(b)(2), 'substantially disproportionate' requires meeting THREE tests after redemption: (1) Own less than 50% of total voting power (§302(b)(2)(B)); (2) Own less than 80% of pre-redemption voting stock percentage (§302(b)(2)(C)); (3) Own less than 80% of pre-redemption common stock percentage (if common outstanding). All conditions must be met. If ANY fails, redemption is treated as §301 distribution (dividend to extent of E&P). Why wrong: (A)/(C)/(D) alone are incomplete - BOTH the 50% absolute test AND 80% relative test must be satisfied.",
+    "explanation": "Under IRC §302(b)(2), 'substantially disproportionate' requires meeting THREE tests after redemption: (1) Own less than 50% of total voting power (§302(b)(2)(B)); (2) Own less than 80% of pre-redemption voting stock percentage (§302(b)(2)(C)); (3) Own less than 80% of pre-redemption common stock percentage (if common outstanding). All conditions must be met. If ANY fails, redemption is treated as §301 distribution (dividend to extent of E&P). Why other answers are wrong: (A) Only addresses the 80% relative test but ignores the 50% absolute requirement - both tests must be satisfied simultaneously. (C) Only addresses the 50% absolute test but ignores the 80% relative requirement - both conditions are mandatory for qualification. (D) The 50% threshold is incorrect - there is no 50% requirement in the substantially disproportionate test; the actual thresholds are 50% of total voting power and 80% of the pre-redemption percentage.",
     "tip": "§302(b)(2): Substantially disproportionate = <50% absolute AND <80% of old %. Test BOTH.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -6595,7 +6595,7 @@ const questions = [
       "D": "80% or more"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §542, a personal holding company (PHC) must meet BOTH tests: (1) STOCK TEST per §542(a)(2): More than 50% of stock owned (directly or constructively) by 5 or fewer individuals at any time during last half of tax year; (2) INCOME TEST per §542(a)(1): At least 60% of 'adjusted ordinary gross income' (AOGI) is 'PHC income.' §543 defines PHC income: dividends, interest, royalties, annuities, rents (unless 50%+ of AOGI), personal service income (if >25% owned by performer). PHC tax = 20% on undistributed PHC income per §541. Why wrong: (A)/(C)/(D) state incorrect percentages for the income test.",
+    "explanation": "Under IRC §542, a personal holding company (PHC) must meet BOTH tests: (1) STOCK TEST per §542(a)(2): More than 50% of stock owned (directly or constructively) by 5 or fewer individuals at any time during last half of tax year; (2) INCOME TEST per §542(a)(1): At least 60% of 'adjusted ordinary gross income' (AOGI) is 'PHC income.' §543 defines PHC income: dividends, interest, royalties, annuities, rents (unless 50%+ of AOGI), personal service income (if >25% owned by performer). PHC tax = 20% on undistributed PHC income per §541. Why other answers are wrong: (A) 50% is incorrect - this percentage relates to the stock ownership test, not the income test requirement. (C) 75% sets the threshold too high and is not the statutory requirement under IRC §542(a)(1). (D) 80% also sets an excessive threshold that exceeds the actual statutory requirement for PHC income classification.",
     "tip": "§542 PHC = 5-50-60 rule: 5 or fewer own >50% AND 60%+ AOGI is PHC income. §541: 20% tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -6616,7 +6616,7 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §267(a)(1), NO LOSS is allowed on sales or exchanges between related persons. §267(b)(2) defines 'related persons' to include an individual and a corporation where the individual owns (directly or constructively per §267(c)) more than 50% of the corporation's stock. Since 60% > 50%, shareholder is related = $15,000 loss FULLY disallowed. HOWEVER, §267(d) provides relief: if corporation later sells property at gain, gain is reduced (not below zero) by previously disallowed loss. Why wrong: (A)/(B)/(C) allow partial deduction - §267 is all-or-nothing; entire loss is disallowed.",
+    "explanation": "Under IRC §267(a)(1), NO LOSS is allowed on sales or exchanges between related persons. §267(b)(2) defines 'related persons' to include an individual and a corporation where the individual owns (directly or constructively per §267(c)) more than 50% of the corporation's stock. Since 60% > 50%, shareholder is related = $15,000 loss FULLY disallowed. HOWEVER, §267(d) provides relief: if corporation later sells property at gain, gain is reduced (not below zero) by previously disallowed loss. Why other answers are wrong: (A) $7,500 incorrectly suggests only half the loss is disallowed, but §267 doesn't provide for partial disallowance based on ownership percentage. (B) $9,000 incorrectly implies some proportional calculation allowing partial deduction, but the related party rules under §267 are absolute - no partial deductions are permitted. (C) $15,000 incorrectly allows the full loss deduction, ignoring that transactions between related parties (here, 60% ownership exceeds the 50% threshold) result in complete disallowance of losses under §267.",
     "tip": "§267(a)(1): No loss on related party sales. §267(b)(2): >50% = related. §267(d): Deferred loss reduces buyer's future gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -6637,7 +6637,7 @@ const questions = [
       "D": "$5,000"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §6655, a C corporation must make estimated tax payments if its expected tax liability is $500 or more. PAYMENT SCHEDULE per §6655(c): Due on 15th of 4th, 6th, 9th, and 12th months of tax year (April 15, June 15, Sept 15, Dec 15 for calendar year). SAFE HARBORS per §6655(d): (1) Pay 100% of prior year tax; OR (2) Pay 100% of current year tax in equal installments. Large corporations (>$1M taxable income in any of 3 prior years) cannot use prior year safe harbor for 2nd-4th installments. Why wrong: (A) $100 is individual threshold; (C)/(D) are incorrect thresholds.",
+    "explanation": "Under IRC §6655, a C corporation must make estimated tax payments if its expected tax liability is $500 or more. PAYMENT SCHEDULE per §6655(c): Due on 15th of 4th, 6th, 9th, and 12th months of tax year (April 15, June 15, Sept 15, Dec 15 for calendar year). SAFE HARBORS per §6655(d): (1) Pay 100% of prior year tax; OR (2) Pay 100% of current year tax in equal installments. Large corporations (>$1M taxable income in any of 3 prior years) cannot use prior year safe harbor for 2nd-4th installments. Why other answers are wrong: (A) $100 is too low - this threshold would require virtually all corporations to make estimated payments; (C) $1,000 exceeds the actual statutory threshold and would allow corporations with tax liability between $500-$999 to avoid estimated payments when they're required to make them; (D) $5,000 is far above the statutory threshold and would inappropriately exempt many corporations from the estimated tax payment requirement.",
     "tip": "§6655: Corp estimated tax = $500 threshold. Due 4th/6th/9th/12th months. Large corps: limited safe harbor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
@@ -6721,7 +6721,7 @@ const questions = [
       "D": "Tax-exempt municipal bond interest"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §312, E&P represents the corporation's economic ability to pay dividends. E&P ADJUSTMENTS differ from taxable income: (1) TAX-EXEMPT INCOME (D - CORRECT): Increases E&P even though not taxable - represents real economic earnings; (2) FEDERAL TAXES (C): Reduces E&P (paid to government, not available for dividends); (3) MACRS vs. ADS (A): E&P uses SLOWER ADS depreciation - accelerated MACRS excess reduces TI more than E&P; (4) NONDEDUCTIBLE ITEMS (B - penalties, 50% meals): Reduce E&P even though not tax-deductible. Why wrong: (A) increases E&P deduction gap; (B)/(C) reduce E&P.",
+    "explanation": "Under IRC §312, E&P represents the corporation's economic ability to pay dividends. E&P ADJUSTMENTS differ from taxable income: (1) TAX-EXEMPT INCOME (D - CORRECT): Increases E&P even though not taxable - represents real economic earnings; (2) FEDERAL TAXES (C): Reduces E&P (paid to government, not available for dividends); (3) MACRS vs. ADS (A): E&P uses SLOWER ADS depreciation - accelerated MACRS excess reduces TI more than E&P; (4) NONDEDUCTIBLE ITEMS (B - penalties, 50% meals): Reduce E&P even though not tax-deductible. Why other answers are wrong: (A) Excess MACRS depreciation over ADS creates a timing difference that reduces E&P because E&P calculations use the slower ADS method, making the MACRS excess an unfavorable adjustment; (B) Nondeductible penalties reduce E&P even though they don't affect taxable income, as they represent economic outflows that diminish the corporation's ability to pay dividends; (C) Federal income taxes paid reduce E&P since these payments represent funds no longer available to shareholders and decrease the corporation's dividend-paying capacity.",
     "tip": "§312 E&P: Add tax-exempt income, subtract federal taxes, use ADS depreciation, deduct nondeductible items.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -6763,7 +6763,7 @@ const questions = [
       "D": "$5,000"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §351(d)(1), services are NOT 'property' for §351 purposes. Chris receives stock for services = ORDINARY COMPENSATION income equal to FMV of stock = $10,000. CONTROL TEST: Only count property transferors - Alex (60 shares) + Beth (30 shares) = 90 shares = 90% control. Chris's 10 shares are EXCLUDED from control calculation. Since Alex+Beth have 80%+ control per §368(c), their transfers qualify for §351 nonrecognition. Alex's basis = $40,000 carryover; Beth's basis = $30,000 cost; Chris's basis = $10,000 (FMV = income recognized). Why wrong: (B)/(C)/(D) miscalculate - services always = FMV income.",
+    "explanation": "Under IRC §351(d)(1), services are NOT 'property' for §351 purposes. Chris receives stock for services = ORDINARY COMPENSATION income equal to FMV of stock = $10,000. CONTROL TEST: Only count property transferors - Alex (60 shares) + Beth (30 shares) = 90 shares = 90% control. Chris's 10 shares are EXCLUDED from control calculation. Since Alex+Beth have 80%+ control per §368(c), their transfers qualify for §351 nonrecognition. Alex's basis = $40,000 carryover; Beth's basis = $30,000 cost; Chris's basis = $10,000 (FMV = income recognized). Why other answers are wrong: (B) $20,000 incorrectly doubles the required income recognition - there's no basis for recognizing twice the fair market value of services rendered. (C) $0 incorrectly applies §351 nonrecognition treatment to services, but IRC §351(d)(1) explicitly excludes services from qualifying as 'property' for tax-free treatment. (D) $5,000 appears to arbitrarily reduce the income recognition by half, but services rendered for stock must be recognized at full fair market value with no reduction allowed.",
     "tip": "§351(d)(1): Services ≠ property. Service provider = ordinary income at FMV. Stock excluded from 80% control test.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -6784,7 +6784,7 @@ const questions = [
       "D": "$45,000"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §357(c), if liabilities assumed EXCEED the adjusted basis of ALL property transferred, the EXCESS is treated as gain (usually capital if capital asset transferred). CALCULATION: Liability assumed = $45,000. Basis of property = $30,000. Excess = $45,000 - $30,000 = $15,000 gain recognized. STOCK BASIS per §358: $30,000 (basis) - $45,000 (liability) + $15,000 (gain recognized) = $0. NOTE: §357(c)(3) excludes liabilities that would give rise to deduction when paid (accounts payable) from the §357(c) calculation. Why wrong: (A) $70,000 is total appreciation; (B) ignores §357(c); (D) uses full liability amount.",
+    "explanation": "Under IRC §357(c), if liabilities assumed EXCEED the adjusted basis of ALL property transferred, the EXCESS is treated as gain (usually capital if capital asset transferred). CALCULATION: Liability assumed = $45,000. Basis of property = $30,000. Excess = $45,000 - $30,000 = $15,000 gain recognized. STOCK BASIS per §358: $30,000 (basis) - $45,000 (liability) + $15,000 (gain recognized) = $0. NOTE: §357(c)(3) excludes liabilities that would give rise to deduction when paid (accounts payable) from the §357(c) calculation. Why wrong: (A) $70,000 represents the total appreciation in the property ($100,000 FMV - $30,000 basis), but this ignores the liability relief rules under §357(c); (B) $0 incorrectly assumes no gain recognition, but §357(c) requires gain recognition when liabilities exceed basis; (D) $45,000 uses the full liability amount as gain, but §357(c) only requires recognition of the excess of liabilities over basis.",
     "tip": "§357(c): Liability exceeds basis = gain on excess. §357(c)(3): Deductible liabilities (A/P) excluded from calculation.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
@@ -6805,7 +6805,7 @@ const questions = [
       "D": "$40,000"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §243(a)(1), <20% ownership = 50% DRD. CALCULATION: Tentative DRD = $80,000 × 50% = $40,000. BUT §246(b) TAXABLE INCOME LIMITATION applies: DRD cannot exceed applicable % × taxable income (computed WITHOUT DRD). Limit = 50% × $60,000 = $30,000. Since tentative DRD ($40,000) > TI limitation ($30,000), DRD is LIMITED to $30,000. EXCEPTION: TI limitation does NOT apply if DRD would CREATE or INCREASE an NOL (here it wouldn't - $60K - $40K = $20K profit, so limitation applies). Why wrong: (A)/(D) ignore TI limitation; (B) uses full dividend amount.",
+    "explanation": "Under IRC §243(a)(1), <20% ownership = 50% DRD. CALCULATION: Tentative DRD = $80,000 × 50% = $40,000. BUT §246(b) TAXABLE INCOME LIMITATION applies: DRD cannot exceed applicable % × taxable income (computed WITHOUT DRD). Limit = 50% × $60,000 = $30,000. Since tentative DRD ($40,000) > TI limitation ($30,000), DRD is LIMITED to $30,000. EXCEPTION: TI limitation does NOT apply if DRD would CREATE or INCREASE an NOL (here it wouldn't - $60K - $40K = $20K profit, so limitation applies). Why other answers are wrong: (A) $52,000 has no basis in the DRD calculation rules - it's neither the tentative DRD amount nor properly applies the taxable income limitation; (B) $80,000 incorrectly uses the full dividend amount without applying the required 50% DRD percentage for ownership below 20%; (D) $40,000 represents the tentative DRD calculation ($80,000 × 50%) but ignores the taxable income limitation under §246(b), which restricts the deduction to $30,000 when the limitation applies.",
     "tip": "§246(b): DRD ≤ (DRD% × TI). Exception: No limit if DRD creates/increases NOL. Always check both!",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
@@ -6826,7 +6826,7 @@ const questions = [
       "D": "$80,000 dividend"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §316 E&P ordering with a CURRENT DEFICIT: The deficit is allocated RATABLY throughout the year. For a 12/31 distribution, the FULL current deficit has accrued. CALCULATION: Accumulated E&P on 12/31 = $100,000 - $40,000 (full year deficit) = $60,000. Distribution ordering: First from remaining accumulated E&P ($60,000 = dividend), then return of capital ($20,000 reduces stock basis per §301(c)(2)). CONTRAST: If distribution was on 7/1, only half the deficit ($20,000) would have accrued, leaving $80,000 accumulated E&P. Why wrong: (B)/(C)/(D) misapply deficit allocation or ordering rules.",
+    "explanation": "Under IRC §316 E&P ordering with a CURRENT DEFICIT: The deficit is allocated RATABLY throughout the year. For a 12/31 distribution, the FULL current deficit has accrued. CALCULATION: Accumulated E&P on 12/31 = $100,000 - $40,000 (full year deficit) = $60,000. Distribution ordering: First from remaining accumulated E&P ($60,000 = dividend), then return of capital ($20,000 reduces stock basis per §301(c)(2)). CONTRAST: If distribution was on 7/1, only half the deficit ($20,000) would have accrued, leaving $80,000 accumulated E&P. Why other answers are wrong: (B) incorrectly treats only $40,000 as dividend, failing to recognize that $60,000 of accumulated E&P remains after the deficit allocation. (C) incorrectly treats the entire distribution as dividend, ignoring that the current year deficit reduces available E&P below the distribution amount. (D) treats the full $80,000 as dividend, failing to account for how the current year deficit reduces the accumulated E&P available for dividend treatment.",
     "tip": "§316: Current deficit allocates ratably through year. Year-end = full deficit applied to accumulated E&P.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
@@ -6847,7 +6847,7 @@ const questions = [
       "D": "Parent recognizes $200,000 gain; takes $500,000 basis"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §332, when an 80%+ controlled subsidiary liquidates into its parent, NONRECOGNITION applies to BOTH corporations. REQUIREMENTS per §332(b): (1) Parent owns at least 80% of voting power AND 80% of value (§1504(a)(2) control); (2) Distribution in complete cancellation of sub's stock; (3) Complete within tax year OR per adopted plan. CONSEQUENCES: Sub recognizes NO gain/loss per §337(a). Parent recognizes NO gain/loss per §332(a). Parent takes CARRYOVER BASIS in assets per §334(b)(1) = $300,000. Tax attributes (NOLs, E&P) carry over per §381. Why wrong: (A)/(C)/(D) assume gain recognition or FMV basis - both incorrect for §332.",
+    "explanation": "Under IRC §332, when an 80%+ controlled subsidiary liquidates into its parent, NONRECOGNITION applies to BOTH corporations. REQUIREMENTS per §332(b): (1) Parent owns at least 80% of voting power AND 80% of value (§1504(a)(2) control); (2) Distribution in complete cancellation of sub's stock; (3) Complete within tax year OR per adopted plan. CONSEQUENCES: Sub recognizes NO gain/loss per §337(a). Parent recognizes NO gain/loss per §332(a). Parent takes CARRYOVER BASIS in assets per §334(b)(1) = $300,000. Tax attributes (NOLs, E&P) carry over per §381. Why other answers are wrong: (A) incorrectly assumes Sub recognizes the $200,000 gain on distribution - this violates §337(a) nonrecognition for qualifying subsidiary liquidations, though it correctly gives Parent fair market value basis which would be wrong under carryover basis rules. (C) incorrectly assumes Sub recognizes gain while correctly applying carryover basis to Parent - this is internally inconsistent since gain recognition would typically trigger fair market value basis treatment. (D) incorrectly assumes Parent recognizes gain and takes fair market value basis - under §332, the parent never recognizes gain or loss on receipt of liquidating distributions from controlled subsidiaries.",
     "tip": "§332/§337: 80%+ sub liquidation = tax-free. §334(b)(1): Parent takes carryover basis. §381: Attributes carry over.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -6910,7 +6910,7 @@ const questions = [
       "D": "$120,000 gain recognized"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §357(b), if liability assumption has TAX AVOIDANCE as principal purpose OR NO BONA FIDE BUSINESS PURPOSE, the liability is treated as MONEY (boot) received by transferor. ANALYSIS: Placing debt on property 30 days before transfer to extract cash = classic tax avoidance pattern. The $30,000 liability is treated as boot. GAIN CALCULATION: Realized gain = FMV $150,000 - Basis $50,000 = $100,000. Recognized gain = LESSER of (1) realized gain ($100,000) or (2) boot received ($30,000) = $30,000. Eric's stock basis = $50,000 - $30,000 (liability) + $30,000 (gain) = $50,000. Why wrong: (A) no gain ignores §357(b); (C) recognizes full gain; (D) adds amounts incorrectly.",
+    "explanation": "Under IRC §357(b), if liability assumption has TAX AVOIDANCE as principal purpose OR NO BONA FIDE BUSINESS PURPOSE, the liability is treated as MONEY (boot) received by transferor. ANALYSIS: Placing debt on property 30 days before transfer to extract cash = classic tax avoidance pattern. The $30,000 liability is treated as boot. GAIN CALCULATION: Realized gain = FMV $150,000 - Basis $50,000 = $100,000. Recognized gain = LESSER of (1) realized gain ($100,000) or (2) boot received ($30,000) = $30,000. Eric's stock basis = $50,000 - $30,000 (liability) + $30,000 (gain) = $50,000. Why other answers are wrong: (A) incorrectly assumes no gain would be recognized, ignoring the application of §357(b) when liability assumption has a tax avoidance purpose; (C) incorrectly recognizes the full realized gain of $100,000, failing to apply the boot limitation rule; (D) incorrectly adds amounts together ($100,000 + $30,000 - $10,000 = $120,000) which has no basis in the tax law.",
     "tip": "§357(b): Tax avoidance liability = boot. Recognized gain = lesser of realized gain or boot. Red flag: recent debt.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
@@ -7666,7 +7666,7 @@ const questions = [
       "D": "Paid in the last C corporation year, with tax spread over 4 years"
     },
     "correctAnswer": "D",
-    "explanation": "Per IRC §1363(d), when a C corporation using the LIFO inventory method converts to an S corporation, it must include the 'LIFO recapture amount' in gross income for its LAST C corporation tax year. The LIFO recapture amount equals the excess of the inventory's FIFO value over its LIFO value (representing the LIFO reserve). Under §1363(d)(3), the resulting tax liability is paid in 4 equal installments: (1) With the last C corp return, (2)-(4) With the next three S corp returns. Under §1367(a)(1), the shareholders' stock basis is INCREASED by the recapture amount (since it was taxed at the C corp level). Why other answers are wrong: (A) Avoided entirely—§1363(d) specifically requires recapture; (B) Paid by shareholders—it's a C corp level tax; (C) Deferred until sold—recapture is triggered at conversion, not sale.",
+    "explanation": "Per IRC §1363(d), when a C corporation using the LIFO inventory method converts to an S corporation, it must include the 'LIFO recapture amount' in gross income for its LAST C corporation tax year. The LIFO recapture amount equals the excess of the inventory's FIFO value over its LIFO value (representing the LIFO reserve). Under §1363(d)(3), the resulting tax liability is paid in 4 equal installments: (1) With the last C corp return, (2)-(4) With the next three S corp returns. Under §1367(a)(1), the shareholders' stock basis is INCREASED by the recapture amount (since it was taxed at the C corp level). Why other answers are wrong: (A) The LIFO recapture cannot be avoided entirely—§1363(d) specifically mandates the recapture when converting from C to S corporation status; (B) The tax is not paid by the shareholders but rather is a corporate-level tax imposed on the C corporation in its final year; (C) The recapture is not deferred until the inventory is sold but is triggered immediately upon the conversion from C to S corporation status.",
     "tip": "§1363(d) LIFO recapture: C-to-S conversion triggers recapture in LAST C year. Tax paid over 4 years (25% each). Stock basis increases by recapture amount.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -8128,7 +8128,7 @@ const questions = [
       "D": "Economic risk of loss"
     },
     "correctAnswer": "A",
-    "explanation": "Per IRC §752 and Reg. §1.752-3, nonrecourse liabilities (where no partner bears economic risk of loss) are allocated using a three-tier approach: (1) First, to partners to the extent of their share of §704(c) minimum gain (built-in gain property), (2) Second, to partners per their share of partnership minimum gain, (3) Third, based on profit-sharing ratios (or another 'reasonably consistent' method). Why other answers are wrong: (A) Profit sharing ratios—this is the final tier, but §704(c) and minimum gain come first; (B) Capital contribution percentages—not used for nonrecourse allocation; (D) Economic risk of loss—this applies to RECOURSE liabilities under §752 and Reg. §1.752-2, not nonrecourse.",
+    "explanation": "Per IRC §752 and Reg. §1.752-3, nonrecourse liabilities (where no partner bears economic risk of loss) are allocated using a three-tier approach: (1) First, to partners to the extent of their share of §704(c) minimum gain (built-in gain property), (2) Second, to partners per their share of partnership minimum gain, (3) Third, based on profit-sharing ratios (or another 'reasonably consistent' method). Why other answers are wrong: (B) Capital contribution percentages—not used for nonrecourse allocation; (C) Loss sharing ratios only—nonrecourse liabilities follow the three-tier system and do not use loss ratios; (D) Economic risk of loss—this applies to RECOURSE liabilities under §752 and Reg. §1.752-2, not nonrecourse.",
     "tip": "§752 nonrecourse: Three-tier (1) §704(c) min gain, (2) partnership min gain, (3) profit ratios. RECOURSE = economic risk of loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -8212,7 +8212,7 @@ const questions = [
       "D": "No, losses are never allowed on liquidation"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §731(a)(2), a partner may recognize a loss ONLY in a complete liquidation AND ONLY if the partner receives nothing but cash, unrealized receivables, and/or inventory (§751 assets). Here, receiving only $30,000 cash against $50,000 basis allows recognition of a $20,000 loss. Per §741, this loss is capital in character (not ordinary). If the partner received ANY other property (equipment, land, etc.), no loss would be recognized—instead, basis would transfer to the property. Why other answers are wrong: (B) Ordinary loss—partnership liquidation losses are capital under §741; (C) Only if no unrealized receivables—receiving only cash OR receivables OR inventory permits loss recognition; (D) No losses—losses ARE allowed under the specific circumstances of §731(a)(2).",
+    "explanation": "Under IRC §731(a)(2), a partner may recognize a loss ONLY in a complete liquidation AND ONLY if the partner receives nothing but cash, unrealized receivables, and/or inventory (§751 assets). Here, receiving only $30,000 cash against $50,000 basis allows recognition of a $20,000 loss. Per §741, this loss is capital in character (not ordinary). If the partner received ANY other property (equipment, land, etc.), no loss would be recognized—instead, basis would transfer to the property. Why other answers are wrong: (B) Partnership liquidation losses are capital under §741, not ordinary; (C) Receiving only cash OR unrealized receivables OR inventory permits loss recognition—the presence of unrealized receivables doesn't prevent loss recognition; (D) Losses ARE allowed under the specific circumstances of §731(a)(2) in complete liquidations when only money and §751 assets are received.",
     "tip": "§731(a)(2): Liquidation loss ONLY if receiving cash/receivables/inventory ONLY. §741: Loss is CAPITAL. Any other property = no loss (basis transfers).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -8254,7 +8254,7 @@ const questions = [
       "D": "A guaranteed payment"
     },
     "correctAnswer": "C",
-    "explanation": "IRC §707(a)(2)(B) and Reg. §1.707-3 address 'disguised sales' where a partner contributes property and receives a related distribution of cash or other property. Under the regulations: (1) Transfers within 2 years are presumed to be disguised sales, (2) Transfers more than 2 years apart are presumed NOT to be sales, (3) The presumptions can be rebutted by facts and circumstances. If treated as a sale, the contributing partner recognizes gain/loss as if they sold the property directly. Why other answers are wrong: (A) Loan repayment—§707(a)(2)(B) specifically targets disguised sales, not loans; (B) Tax-free return of capital—a disguised sale triggers immediate gain recognition; (D) Guaranteed payment—those are for services or capital use under §707(c), not property contributions.",
+    "explanation": "IRC §707(a)(2)(B) and Reg. §1.707-3 address 'disguised sales' where a partner contributes property and receives a related distribution of cash or other property. Under the regulations: (1) Transfers within 2 years are presumed to be disguised sales, (2) Transfers more than 2 years apart are presumed NOT to be sales, (3) The presumptions can be rebutted by facts and circumstances. If treated as a sale, the contributing partner recognizes gain/loss as if they sold the property directly. Why other answers are wrong: (A) Loan repayment—while partners can make loans to partnerships, §707(a)(2)(B) specifically targets a different transaction pattern involving property contributions followed by cash distributions, not loan arrangements; (B) Tax-free return of capital—this would not trigger the recharacterization rules under §707(a)(2)(B), as the section specifically applies to situations that may result in gain recognition rather than tax-free treatment; (D) Guaranteed payment—these are payments for services or use of capital under §707(c) and involve ongoing compensation arrangements, not the property contribution and distribution pattern described in the question.",
     "tip": "§707(a)(2)(B): Contribution + distribution within 2 years = PRESUMED disguised sale. Rebuttable. Results in gain recognition to contributor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -8338,7 +8338,7 @@ const questions = [
       "D": "All partners equally"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §704(c)(1)(B) ('mixing bowl transaction' rule), if contributed property with built-in gain is distributed to a partner OTHER than the contributor within 7 years of contribution, the CONTRIBUTING partner must recognize the remaining §704(c) built-in gain. This anti-abuse rule prevents partners from using the partnership as a conduit to shift built-in gains tax-free. The contributing partner is taxed as if the property were sold at FMV at the time of distribution. Why other answers are wrong: (A) Partner B only—the recipient doesn't trigger the gain recognition; the contributor does; (B) The partnership—partnerships are pass-through entities; gain flows to partners; (D) All partners equally—only the contributing partner is affected under §704(c)(1)(B).",
+    "explanation": "Under IRC §704(c)(1)(B) ('mixing bowl transaction' rule), if contributed property with built-in gain is distributed to a partner OTHER than the contributor within 7 years of contribution, the CONTRIBUTING partner must recognize the remaining §704(c) built-in gain. This anti-abuse rule prevents partners from using the partnership as a conduit to shift built-in gains tax-free. The contributing partner is taxed as if the property were sold at FMV at the time of distribution. Why other answers are wrong: (A) Partner B only—the recipient partner does not trigger the gain recognition under this rule; (B) The partnership—partnerships are pass-through entities and do not recognize gain at the entity level; the gain flows through to the individual partners; (D) All partners equally—the §704(c)(1)(B) rule specifically targets only the original contributing partner, not all partners in the partnership.",
     "tip": "§704(c)(1)(B) mixing bowl: Distribute contributed property to ANOTHER partner within 7 years → CONTRIBUTOR recognizes built-in gain. Anti-abuse rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -8380,7 +8380,7 @@ const questions = [
       "D": "When a new partner is admitted"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §734(b), with a §754 election in effect, the partnership adjusts its basis in REMAINING assets when a distribution causes: (1) Gain recognition to the distributee partner (adjust upward), or (2) A basis difference—either the distributed property takes a stepped-up basis in the partner's hands (adjust downward) or stepped-down basis (adjust upward). The goal is to preserve the aggregate inside/outside basis relationship. Note: §734(b) applies to distributions, while §743(b) applies to transfers/sales of partnership interests. Why other answers are wrong: (A) Partner sells interest—that triggers §743(b), not §734(b); (C) Acquires new assets—acquisition does not trigger basis adjustments; (D) New partner admitted—admission triggers §743(b) if by purchase.",
+    "explanation": "Under IRC §734(b), with a §754 election in effect, the partnership adjusts its basis in REMAINING assets when a distribution causes: (1) Gain recognition to the distributee partner (adjust upward), or (2) A basis difference—either the distributed property takes a stepped-up basis in the partner's hands (adjust downward) or stepped-down basis (adjust upward). The goal is to preserve the aggregate inside/outside basis relationship. Note: §734(b) applies to distributions, while §743(b) applies to transfers/sales of partnership interests. Why other answers are wrong: (A) Partner sells interest—that triggers §743(b), not §734(b); (C) Acquires new assets—acquisition does not trigger basis adjustments under §734(b); (D) New partner admitted—admission triggers §743(b) if by purchase, not §734(b) adjustments.",
     "tip": "§734(b) = DISTRIBUTION adjustments (gain recognized or basis shift). §743(b) = TRANSFER/SALE adjustments. Both require §754 election.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -8863,7 +8863,7 @@ const questions = [
       "D": "Deductible by the estate"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §663(a)(1), specific bequests—gifts or bequests of a specific sum of money or specific property—are excluded from the calculation of DNI and are NOT taxable income to the beneficiary, provided the bequest is payable in three or fewer installments. These represent distributions of corpus (principal), not income. The estate receives no distribution deduction for specific bequests. Examples: '$50,000 to my nephew' or 'my diamond ring to my daughter.' Why other answers are wrong: (B) Capital gains tax—specific bequests are not subject to capital gains since they're not sales; (C) Taxable income—§663(a)(1) specifically excludes these from DNI and beneficiary income; (D) Deductible by estate—the estate does not receive a distribution deduction for specific bequests.",
+    "explanation": "Under IRC §663(a)(1), specific bequests—gifts or bequests of a specific sum of money or specific property—are excluded from the calculation of DNI and are NOT taxable income to the beneficiary, provided the bequest is payable in three or fewer installments. These represent distributions of corpus (principal), not income. The estate receives no distribution deduction for specific bequests. Examples: '$50,000 to my nephew' or 'my diamond ring to my daughter.' Why other answers are wrong: (B) Capital gains tax—specific bequests are not subject to capital gains since they're not sales or dispositions of property; (C) Taxable income—§663(a)(1) specifically excludes specific bequests from DNI and therefore they are not taxable income to the beneficiary; (D) Deductible by estate—the estate does not receive a distribution deduction for specific bequests since they are distributions of corpus, not income.",
     "tip": "§663(a)(1): Specific bequests (sum/property) in ≤3 installments = EXCLUDED from DNI. NOT income to beneficiary. NO distribution deduction to estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -9157,7 +9157,7 @@ const questions = [
       "D": "Provide a tax credit for low-income taxpayers"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §55, the Alternative Minimum Tax (AMT) is a parallel tax system designed to ensure that taxpayers with substantial economic income pay at least a minimum amount of tax, regardless of deductions, credits, and other tax preferences. Taxpayers pay the GREATER of regular tax or tentative minimum tax (TMT). The AMT was created in 1969 after Congress discovered 155 high-income taxpayers paid zero federal income tax. Why other answers are wrong: (B) Replace regular tax—AMT supplements, doesn't replace; (C) Reduce taxes—AMT increases taxes for those with many preferences; (D) Low-income credit—the Earned Income Credit serves that purpose, not AMT.",
+    "explanation": "Under IRC §55, the Alternative Minimum Tax (AMT) is a parallel tax system designed to ensure that taxpayers with substantial economic income pay at least a minimum amount of tax, regardless of deductions, credits, and other tax preferences. Taxpayers pay the GREATER of regular tax or tentative minimum tax (TMT). The AMT was created in 1969 after Congress discovered 155 high-income taxpayers paid zero federal income tax. Why other answers are wrong: (B) The AMT does not replace the regular income tax system but operates as a parallel system alongside it - taxpayers calculate both regular tax and AMT and pay whichever is higher; (C) The AMT does not reduce taxes but actually increases the tax burden for taxpayers who claim substantial deductions and preferences by adding back many deductions and using higher rates; (D) The AMT is not designed to provide benefits for low-income taxpayers - it primarily affects middle and upper-income taxpayers, while low-income tax relief is provided through other mechanisms like the Earned Income Tax Credit.",
     "tip": "§55 AMT: Parallel system ensuring minimum tax despite preferences. Pay GREATER of regular tax or TMT. Created 1969 after zero-tax millionaires discovered.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
@@ -9367,7 +9367,7 @@ const questions = [
       "D": "Taxable for both regular tax and AMT"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §57(a)(5), interest on PRIVATE ACTIVITY BONDS (PABs) issued after August 7, 1986 is: (1) TAX-EXEMPT for regular tax purposes under §103, but (2) An AMT PREFERENCE ITEM that must be added back to AMTI. PABs are municipal bonds that finance private projects (sports stadiums, airports, housing projects, student loans). EXCEPTION: Interest on certain \"qualified\" bonds is NOT an AMT preference, including: 501(c)(3) organization bonds, qualified mortgage bonds, qualified veterans' mortgage bonds, and most bonds issued in 2009-2010 during financial crisis. Why other answers are wrong: (B) Exempt for both—most PAB interest is AMT preference; (C) Taxable for regular/exempt AMT—exactly backwards; (D) Taxable for both—regular tax exemption applies.",
+    "explanation": "Under IRC §57(a)(5), interest on PRIVATE ACTIVITY BONDS (PABs) issued after August 7, 1986 is: (1) TAX-EXEMPT for regular tax purposes under §103, but (2) An AMT PREFERENCE ITEM that must be added back to AMTI. PABs are municipal bonds that finance private projects (sports stadiums, airports, housing projects, student loans). EXCEPTION: Interest on certain \"qualified\" bonds is NOT an AMT preference, including: 501(c)(3) organization bonds, qualified mortgage bonds, qualified veterans' mortgage bonds, and most bonds issued in 2009-2010 during financial crisis. Why other answers are wrong: (B) This incorrectly states that PAB interest is exempt for both regular tax and AMT—while it is exempt for regular tax, most PAB interest must be added back as an AMT preference item; (C) This reverses the correct treatment, incorrectly stating that PAB interest is taxable for regular tax but exempt for AMT—the opposite is true; (D) This incorrectly treats PAB interest as taxable for both regular tax and AMT—PAB interest retains its regular tax exemption under §103, even though it's an AMT preference.",
     "tip": "§57(a)(5): PAB interest = tax-free for regular tax BUT AMT preference. Exception: 501(c)(3) bonds, certain housing bonds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -9409,7 +9409,7 @@ const questions = [
       "D": "Neither preferences nor timing differences"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §53, the MINIMUM TAX CREDIT (MTC) is generated when AMT is paid due to TIMING DIFFERENCES (deferral items from §56 adjustments like depreciation, installment sales, long-term contracts). Since these timing differences will REVERSE in future years, the MTC allows taxpayers to recover previously paid AMT in years when regular tax exceeds TMT. MTC can reduce regular tax liability to (but not below) the TMT for that year. IMPORTANT: AMT paid on EXCLUSION PREFERENCES (§57 items like private activity bond interest, percentage depletion excess) does NOT generate MTC because those benefits are permanent, not timing-related. Why other answers are wrong: (A) Preferences only—preferences don't generate MTC; (C) Both—only timing items generate MTC; (D) Neither—timing items definitely generate MTC.",
+    "explanation": "Under IRC §53, the MINIMUM TAX CREDIT (MTC) is generated when AMT is paid due to TIMING DIFFERENCES (deferral items from §56 adjustments like depreciation, installment sales, long-term contracts). Since these timing differences will REVERSE in future years, the MTC allows taxpayers to recover previously paid AMT in years when regular tax exceeds TMT. MTC can reduce regular tax liability to (but not below) the TMT for that year. IMPORTANT: AMT paid on EXCLUSION PREFERENCES (§57 items like private activity bond interest, percentage depletion excess) does NOT generate MTC because those benefits are permanent, not timing-related. Why other answers are wrong: (A) Preference items only—preference items represent permanent exclusions that don't reverse over time, so they don't generate MTC; (C) Both preferences and timing differences—while timing differences do generate MTC, preference items do not because they are permanent tax benefits rather than timing adjustments that will reverse in future years; (D) Neither preferences nor timing differences—this is incorrect because timing differences specifically do generate MTC under the tax code's design to prevent double taxation when these temporary adjustments reverse in subsequent years.",
     "tip": "§53 MTC: Only TIMING differences (§56 deferral items) generate credit. EXCLUSION preferences (§57) = no MTC. Use when regular tax > TMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -9556,7 +9556,7 @@ const questions = [
       "D": "Suspended through 2025 for both regular tax and AMT"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §151(d)(5) added by TCJA, personal exemptions are SUSPENDED (reduced to zero) for BOTH regular tax and AMT for tax years 2018-2025. Pre-TCJA, personal exemptions ($4,050 per person in 2017) were allowed for regular tax but NOT for AMT under §56(b)(1)(E), creating a significant AMT adjustment—families with many dependents were particularly affected. TCJA eliminated this issue by suspending exemptions entirely and instead increasing the standard deduction and child tax credit. Note: After 2025, if TCJA provisions expire, personal exemptions may return—and with them, the AMT adjustment issue. Why other answers are wrong: (A) Same as regular—both are zero currently; (B) Not allowed/AMT preference—historically true, but now suspended for both; (C) Doubled—no doubling, just suspended.",
+    "explanation": "Under IRC §151(d)(5) added by TCJA, personal exemptions are SUSPENDED (reduced to zero) for BOTH regular tax and AMT for tax years 2018-2025. Pre-TCJA, personal exemptions ($4,050 per person in 2017) were allowed for regular tax but NOT for AMT under §56(b)(1)(E), creating a significant AMT adjustment—families with many dependents were particularly affected. TCJA eliminated this issue by suspending exemptions entirely and instead increasing the standard deduction and child tax credit. Note: After 2025, if TCJA provisions expire, personal exemptions may return—and with them, the AMT adjustment issue. Why other answers are wrong: (A) Allowed at the same amount as regular tax—This was never true; pre-TCJA, personal exemptions were allowed for regular tax but disallowed for AMT, creating an adjustment. Currently, both are zero. (B) Not allowed (an AMT preference)—This was historically accurate before TCJA when personal exemptions were disallowed for AMT while allowed for regular tax, but it's no longer current law since both taxes now have suspended exemptions. (C) Doubled—Personal exemptions are not doubled for AMT; they are completely suspended for both regular tax and AMT under current law.",
     "tip": "§151(d)(5): Personal exemptions = ZERO (2018-2025). Pre-TCJA: $4,050/person regular, not AMT. Major historical adjustment eliminated.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -9577,8 +9577,8 @@ const questions = [
       "D": "Doubled"
     },
     "correctAnswer": "B",
-    "explanation": "Passive activity losses must be separately computed for AMT purposes using AMT income and deductions (e.g., AMT depreciation). This can result in different suspended losses for regular tax versus AMT.",
-    "tip": "Separate PAL calculations for regular tax and AMT. Use respective depreciation, etc.",
+    "explanation": "Per IRC §58(b), passive activity losses for AMT must be separately computed using AMT income and deductions (e.g., AMT depreciation under §56(a)(1)). This creates two sets of suspended losses—one for regular tax and one for AMT—that are tracked and released separately. Why other answers are wrong: (A) Regular tax figures—must use AMT figures; (C) Ignored entirely—PAL rules apply to both systems; (D) Doubled—no doubling, just separate calculation.",
+    "tip": "IRC §58(b): Separate PAL calculations for regular tax and AMT. Track two sets of suspended losses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9598,8 +9598,8 @@ const questions = [
       "D": "$10 million"
     },
     "correctAnswer": "B",
-    "explanation": "The Inflation Reduction Act of 2022 created a new corporate AMT (CAMT) that applies to corporations with average annual adjusted financial statement income exceeding $1 billion. This replaces the old corporate AMT that was repealed by TCJA.",
-    "tip": "New corporate AMT (2023+): Only for corps with $1B+ book income. 15% rate on AFSI.",
+    "explanation": "Per IRC §59(k) (added by Inflation Reduction Act 2022), the Corporate Alternative Minimum Tax (CAMT) applies to 'applicable corporations' with average annual adjusted financial statement income (AFSI) exceeding $1 billion over a 3-year testing period. The CAMT rate is 15% on AFSI. This replaced the pre-TCJA corporate AMT which was based on preferences. Why other answers are wrong: (A) $100 million—threshold is $1 billion; (C) $1 million—far too low; (D) $10 million—still too low.",
+    "tip": "IRC §59(k) CAMT: $1B+ AFSI threshold, 15% rate. Tests 3-year average. Replaced old preference-based corp AMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -9619,8 +9619,8 @@ const questions = [
       "D": "Deductible, but must be recalculated using AMT figures for percentage limitations"
     },
     "correctAnswer": "D",
-    "explanation": "Charitable contributions are deductible for AMT, but the percentage limitations must be computed using AMTI rather than AGI. This can result in different deductible amounts for regular tax versus AMT, though often the difference is small.",
-    "tip": "Charity deductible for AMT, but use AMTI (not AGI) for percentage limits.",
+    "explanation": "Per IRC §56(b)(1)(E), charitable contributions remain deductible for AMT purposes, but the percentage limitations (e.g., 60% AGI for cash, 30% for appreciated property) must be computed using AMTI instead of AGI. Since AMTI differs from AGI due to adjustments and preferences, the deductible amount may differ. Why other answers are wrong: (A) Without limitation—percentage limits still apply; (B) Lower percentage—same percentages, just applied to different base; (C) Not deductible—charity IS deductible for AMT.",
+    "tip": "IRC §56(b)(1)(E): Charity deductible for AMT. Same % limits, but use AMTI (not AGI) as the base.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9640,8 +9640,8 @@ const questions = [
       "D": "$3,000"
     },
     "correctAnswer": "A",
-    "explanation": "The MTC is generated only from AMT attributable to deferral (timing) preferences, not exclusion preferences. The ISO exercise ($5,000) creates MTC because the income will be recognized later. SALT ($3,000) is an exclusion preference generating no MTC.",
-    "tip": "MTC only from timing items (ISO, depreciation). No MTC from exclusion items (SALT, private activity bond interest).",
+    "explanation": "Per IRC §53, the Minimum Tax Credit (MTC) is generated only from AMT attributable to 'deferral' or 'timing' items—preferences that merely accelerate tax recognition (ISO bargain element, depreciation differences). The ISO exercise ($5,000) qualifies because that income will eventually be recognized for regular tax. SALT ($3,000) is an 'exclusion' preference (permanently disallowed under §56(b)(1)(A)) generating no MTC. Why other answers are wrong: (B) $8,000—includes SALT exclusion item; (C) $0—ISO timing item generates MTC; (D) $3,000—that's the exclusion item, not timing.",
+    "tip": "IRC §53 MTC: Only from timing/deferral items (ISO, depreciation). NO MTC from exclusion items (SALT, PAB interest).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -9661,8 +9661,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "C",
-    "explanation": "For AMT purposes, when the bargain element is included in AMTI at exercise, the AMT basis in the stock is stepped up to FMV ($40,000). For regular tax, basis remains $10,000. This creates a dual basis system until the stock is sold.",
-    "tip": "ISO stock: Regular basis = exercise price. AMT basis = FMV at exercise. Track both!",
+    "explanation": "Per IRC §56(b)(3) and §83(e)(3), when the ISO bargain element ($30,000) is included in AMTI at exercise, the AMT basis is stepped up to FMV ($40,000). Regular tax basis remains $10,000 (exercise price). This creates a dual basis system tracked until sale. When sold, the regular tax gain/loss differs from AMT gain/loss, creating an MTC adjustment. Why other answers are wrong: (A) $10,000—that's regular tax basis only; (B) $25,000—incorrect middle calculation; (D) $50,000—no basis addition beyond FMV.",
+    "tip": "IRC §56(b)(3): ISO AMT basis = FMV at exercise. Regular basis = exercise price. Track dual basis until sale.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -9682,8 +9682,8 @@ const questions = [
       "D": "$140,000"
     },
     "correctAnswer": "D",
-    "explanation": "AMTI = Regular TI ($100,000) + SALT addback ($15,000) + Private activity bond interest ($5,000) + ISO bargain element ($20,000) = $140,000. All three items are AMT adjustments/preferences that increase AMTI.",
-    "tip": "AMTI: Start with TI, add back SALT, private activity interest, ISO bargain element, etc.",
+    "explanation": "Per IRC §55(b)(2), AMTI starts with regular taxable income, then applies adjustments (§56) and preferences (§57). Calculation: Regular TI ($100,000) + SALT addback per §56(b)(1)(A) ($15,000) + Private activity bond interest per §57(a)(5) ($5,000) + ISO bargain element per §56(b)(3) ($20,000) = $140,000. Why other answers are wrong: (A) $100,000—ignores all adjustments; (B) $120,000—misses one item; (C) $135,000—misses one item.",
+    "tip": "AMTI (§55(b)(2)): Start with TI + §56 adjustments (SALT, ISO) + §57 preferences (PAB interest).",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -9703,8 +9703,8 @@ const questions = [
       "D": "$133,300"
     },
     "correctAnswer": "D",
-    "explanation": "For 2024, the AMT exemption for MFJ is approximately $133,300 (indexed for inflation). Single/HOH is approximately $85,700. These amounts are reduced by 25 cents for each dollar of AMTI exceeding the phaseout thresholds.",
-    "tip": "2024 AMT exemption: MFJ ~$133K, Single ~$86K. Phaseouts at ~$1.2M MFJ, ~$609K single.",
+    "explanation": "Per IRC §55(d), the AMT exemption for 2024 is approximately $133,300 for MFJ/QSS (indexed under §55(d)(4)). Single/HOH is approximately $85,700. Under §55(d)(3), these amounts phase out at 25 cents per dollar of AMTI exceeding thresholds (~$1,218,700 MFJ, ~$609,350 single for 2024). Why other answers are wrong: (A) $200,000—too high; (B) $65,000—that's pre-TCJA or incorrect amount; (C) $85,000—closer to single amount, not MFJ.",
+    "tip": "IRC §55(d): 2024 AMT exemption MFJ ~$133K, Single ~$86K. §55(d)(3) phaseout at 25% rate above thresholds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9724,8 +9724,8 @@ const questions = [
       "D": "Regular tax, but only to the extent it exceeds tentative minimum tax"
     },
     "correctAnswer": "D",
-    "explanation": "The MTC can reduce regular tax liability, but only to the extent that regular tax exceeds the tentative minimum tax for that year. This prevents the credit from creating or increasing an AMT liability in the credit year.",
-    "tip": "Use MTC when regular tax > TMT. Credit limited to that excess. Prevents AMT from MTC use.",
+    "explanation": "Per IRC §53(c), the minimum tax credit can reduce regular tax liability only to the extent that regular tax exceeds tentative minimum tax (TMT) for the year. This limitation prevents the MTC from creating AMT liability. Formula: MTC allowed = Regular tax − TMT (if positive). The unused MTC carries forward indefinitely. Why other answers are wrong: (A) Reduce AMT—MTC reduces regular tax, not AMT; (B) Without limitation—limited to excess over TMT; (C) Both—only applies against regular tax.",
+    "tip": "IRC §53(c): MTC = reduces regular tax, limited to (Regular Tax − TMT). Cannot create AMT. Unlimited carryforward.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9745,8 +9745,8 @@ const questions = [
       "D": "Allowed without limitation"
     },
     "correctAnswer": "B",
-    "explanation": "The AMT foreign tax credit must be separately computed using AMT taxable income. It is limited to 90% of AMT computed before the FTC, meaning at least 10% of AMT must be paid even with foreign taxes. Regular tax has no such 90% limit.",
-    "tip": "AMT FTC: Separate calculation, limited to 90% of AMT. Must pay at least 10% of AMT.",
+    "explanation": "Per IRC §59(a), the AMT foreign tax credit must be separately computed using AMTI and is limited to 90% of AMT before the credit. This means at least 10% of tentative minimum tax must be paid regardless of foreign taxes paid. Regular tax FTC under §904 has no such 90% limitation. Why other answers are wrong: (A) Same as regular FTC—must be separately calculated using AMTI; (C) Not allowed—FTC IS allowed for AMT; (D) Without limitation—capped at 90% of pre-credit AMT.",
+    "tip": "IRC §59(a): AMT FTC = separate calculation, limited to 90% of pre-credit AMT. Must pay at least 10% AMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9766,8 +9766,8 @@ const questions = [
       "D": "150% declining balance"
     },
     "correctAnswer": "C",
-    "explanation": "For real property placed in service after 1998, there is no AMT depreciation adjustment because regular tax already requires straight-line depreciation. Both regular tax and AMT use 27.5 years (residential) or 39 years (nonresidential).",
-    "tip": "Post-1998 real property: No AMT adjustment. Both use straight-line over regular lives.",
+    "explanation": "Per IRC §56(a)(1)(A)(ii), for real property placed in service after 1998, there is NO AMT depreciation adjustment because regular tax under §168 already requires straight-line depreciation. Both systems use: 27.5 years (residential rental under §168(c)) or 39 years (nonresidential under §168(c)). Pre-1999 real property required 40-year ADS for AMT. Why other answers are wrong: (A) 30 years—not a standard depreciation period; (B) 40 years—applies to pre-1999 property only; (D) 150% DB—not used for real property.",
+    "tip": "IRC §56(a)(1)(A)(ii): Post-1998 real property = NO AMT adjustment. Both use SL 27.5/39 years.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9787,8 +9787,8 @@ const questions = [
       "D": "Fully deductible for AMT"
     },
     "correctAnswer": "C",
-    "explanation": "Excess IDC (the difference between current expensing and 10-year amortization) is an AMT preference, but only to the extent it exceeds 65% of net income from oil and gas properties. This is a targeted preference for oil and gas investors.",
-    "tip": "IDC preference: Excess over 10-year amortization, but only portion exceeding 65% of O&G income.",
+    "explanation": "Per IRC §57(a)(2), intangible drilling costs in excess of the amount that would have been deductible if amortized over 10 years are an AMT preference item, but only to the extent such excess exceeds 65% of net income from oil and gas properties. This protects small producers while targeting large investors. Why other answers are wrong: (A) Always adjustment—incorrect because the excess IDC only becomes an AMT preference when it exceeds the 65% of net oil and gas income threshold, not regardless of amount; (B) Not an adjustment—incorrect because IDC excess IS specifically an AMT preference item under IRC §57(a)(2) when the threshold is met; (D) Fully deductible—incorrect because AMT limits the deduction using the 10-year amortization method rather than allowing full immediate deductibility like regular tax.",
+    "tip": "IRC §57(a)(2): IDC preference = excess over 10-year amortization, but only if exceeding 65% of O&G net income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9808,8 +9808,8 @@ const questions = [
       "D": "21%"
     },
     "correctAnswer": "B",
-    "explanation": "The CAMT imposed by the Inflation Reduction Act of 2022 is a 15% tax on adjusted financial statement income (AFSI) for corporations with over $1 billion in average AFSI. It is based on book income, not taxable income.",
-    "tip": "CAMT: 15% on book income for $1B+ corporations. Different from old corporate AMT.",
+    "explanation": "Per IRC §55(b)(2) as amended by the Inflation Reduction Act of 2022, the Corporate Alternative Minimum Tax (CAMT) is a 15% tax on adjusted financial statement income (AFSI) for 'applicable corporations' with over $1 billion in average AFSI. Unlike the old corporate AMT based on tax preferences, CAMT uses book income per financial statements (GAAP). Why other answers are wrong: (A) 20%—old corporate AMT rate, repealed by TCJA; (C) 28%—not applicable; (D) 21%—regular corporate tax rate under §11.",
+    "tip": "IRC §55(b)(2) CAMT: 15% on AFSI (book income) for $1B+ corps. Different from pre-TCJA 20% preference-based AMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -9829,8 +9829,8 @@ const questions = [
       "D": "The adjustment is spread over two years"
     },
     "correctAnswer": "B",
-    "explanation": "If ISO stock is sold in a disqualifying disposition in the same year as exercise, regular tax and AMT treatment converge—ordinary income is recognized in both systems. No AMT adjustment is needed because there's no timing difference.",
-    "tip": "Same-year ISO disqualifying disposition: No AMT adjustment. Regular and AMT same.",
+    "explanation": "Per IRC §56(b)(3) and §422(c)(2), if ISO stock is sold in a disqualifying disposition in the same taxable year as exercise, regular tax and AMT treatment converge. Both systems recognize ordinary income equal to the lesser of: (a) bargain element at exercise or (b) gain at sale. No AMT adjustment is needed because there's no timing difference—income recognized in both systems simultaneously. Why other answers are wrong: (A) Full bargain element—not when same-year DQ; (C) Half—no such rule; (D) Spread over two years—all recognized in disposition year.",
+    "tip": "IRC §56(b)(3): Same-year DQ disposition = NO AMT adjustment. Regular and AMT converge. Timing difference eliminated.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -9850,8 +9850,8 @@ const questions = [
       "D": "$85,000"
     },
     "correctAnswer": "C",
-    "explanation": "Excess AMTI = $700,000 - $609,350 = $90,650. Phaseout = $90,650 × 25% = $22,662.50. Reduced exemption = $85,000 - $22,662 = $62,338. The exemption is reduced but not eliminated.",
-    "tip": "Phaseout: (AMTI - threshold) × 25% = reduction. Exemption - reduction = usable exemption.",
+    "explanation": "Per IRC §55, excess AMTI = $700,000 - $609,350 = $90,650. Phaseout = $90,650 × 25% = $22,662.50 (rounded to $22,662). Reduced exemption = $85,000 - $22,662 = $62,338. The exemption is reduced but not eliminated. Why other answers are wrong: (A) $0—exemption is only eliminated when phaseout exceeds the full exemption amount; (B) $22,662—this is the REDUCTION amount, not the remaining exemption; (D) $85,000—this ignores the phaseout entirely; the full exemption only applies below the threshold.",
+    "tip": "§55: Phaseout: (AMTI - threshold) × 25% = reduction. Exemption - reduction = usable exemption.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -9871,8 +9871,8 @@ const questions = [
       "D": "Not an AMT adjustment"
     },
     "correctAnswer": "C",
-    "explanation": "Percentage depletion in excess of the adjusted basis of the mineral property is an AMT preference item. This prevents unlimited depletion deductions from creating a permanent tax benefit. Cost depletion is not subject to this preference.",
-    "tip": "Percentage depletion > adjusted basis = AMT preference. Cost depletion is not a preference.",
+    "explanation": "Per IRC §57(a)(1), percentage depletion in excess of the adjusted basis of the mineral property is an AMT preference item. This prevents unlimited depletion deductions from creating a permanent tax benefit. Cost depletion is not subject to this preference. Why other answers are wrong: (A) Deductible for AMT only—it's a preference that increases AMTI, not a special AMT deduction; (B) Subject to recapture—depletion preferences aren't recaptured like depreciation; (D) Not an AMT adjustment—it is specifically listed as a preference item in §57(a)(1).",
+    "tip": "§55: Percentage depletion > adjusted basis = AMT preference. Cost depletion is not a preference.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11173,7 +11173,7 @@ const questions = [
       "D": "Creates a new contract"
     },
     "correctAnswer": "B",
-    "explanation": "Under Restatement (Third) of Agency §4.02, ratification 'relates back' to the time of the original unauthorized act, making it as if the agent had authority from the very beginning. This retroactive effect: (1) creates rights and liabilities as of the original transaction date, (2) validates the transaction from inception, and (3) affects matters like statute of limitations (runs from original date, not ratification). However, ratification cannot adversely affect rights that third parties acquired in the interim period. Why other answers are wrong: (A) Effective only from ratification date—incorrect; the key feature of ratification is its RETROACTIVE effect; (C) Must be approved by third party—third party approval isn't required; ratification is a unilateral act by the principal; (D) Creates new contract—ratification validates the ORIGINAL transaction; it doesn't create a new one.",
+    "explanation": "Under Restatement (Third) of Agency §4.02, ratification 'relates back' to the time of the original unauthorized act, making it as if the agent had authority from the very beginning. This retroactive effect: (1) creates rights and liabilities as of the original transaction date, (2) validates the transaction from inception, and (3) affects matters like statute of limitations (runs from original date, not ratification). However, ratification cannot adversely affect rights that third parties acquired in the interim period. Why other answers are wrong: (A) Effective only from ratification date—incorrect; the key feature of ratification is its retroactive effect that makes the act valid from the original date, not just from the ratification date forward; (C) Must be approved by third party—third party approval isn't required; ratification is a unilateral act by the principal that doesn't depend on third party consent; (D) Creates new contract—ratification validates the original transaction that was already made; it doesn't create a new contract but rather gives legal effect to the existing unauthorized act.",
     "tip": "Ratification relates back to original act. Treated as if authorized from the start. Cannot prejudice interim third-party rights. §4.02.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -11362,8 +11362,8 @@ const questions = [
       "D": "Limited liability for the owner"
     },
     "correctAnswer": "A",
-    "explanation": "A sole proprietorship is the simplest business form characterized by: (1) UNLIMITED PERSONAL LIABILITY—the owner is personally liable for ALL business debts and obligations; no legal separation between owner and business, (2) Single owner by definition (sole = one), (3) No state formation filing required (though business licenses/permits may be needed), (4) Pass-through taxation—business income reported on owner's personal tax return (Schedule C). The owner's personal assets (house, car, savings) are at risk for business debts. Why other answers are wrong: (B) Required state registration—NO filing required to form (licenses are operational, not formation documents); (C) Multiple owners—'sole' means one owner; multiple owners = partnership; (D) Limited liability—sole proprietors have UNLIMITED liability; limited liability requires a different entity form (LLC, corporation).",
-    "tip": "Sole proprietorship: Simplest form, no filing required, UNLIMITED personal liability. Owner and business are legally the same.",
+    "explanation": "Per Revised Uniform Partnership Act (RUPA), a sole proprietorship is the simplest business form characterized by: (1) UNLIMITED PERSONAL LIABILITY—the owner is personally liable for ALL business debts and obligations; no legal separation between owner and business, (2) Single owner by definition (sole = one), (3) No state formation filing required (though business licenses/permits may be needed), (4) Pass-through taxation—business income reported on owner's personal tax return (Schedule C). The owner's personal assets (house, car, savings) are at risk for business debts. Why other answers are wrong: (B) Required state registration—NO filing required to form (licenses are operational, not formation documents); (C) Multiple owners—'sole' means one owner; multiple owners = partnership; (D) Limited liability—sole proprietors have UNLIMITED liability; limited liability requires a different entity form (LLC, corporation).",
+    "tip": "Revised: Sole proprietorship: Simplest form, no filing required, UNLIMITED personal liability. Owner and business are legally the same.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11509,7 +11509,7 @@ const questions = [
       "D": "Shareholders have commingled personal and corporate funds or used the corporation to perpetrate fraud"
     },
     "correctAnswer": "D",
-    "explanation": "Under the 'alter ego' doctrine developed through case law, courts will 'pierce the corporate veil' and hold shareholders personally liable when the corporate form has been abused. Common factors justifying veil-piercing: (1) COMMINGLING—mixing personal and corporate funds/assets, (2) UNDERCAPITALIZATION—insufficient capital to meet foreseeable obligations, (3) IGNORING FORMALITIES—no board meetings, no corporate records, no separation between owner and entity, (4) ALTER EGO—corporation is mere instrumentality of shareholder, (5) FRAUD OR INJUSTICE—using corporate form to perpetrate fraud or evade obligations. Courts apply these factors to prevent injustice. Why other answers are wrong: (A) Paying dividends—normal corporate activity; doesn't justify piercing; (B) More than 100 shareholders—number of shareholders is irrelevant to veil-piercing; (C) Making profit—normal business success; doesn't justify piercing.",
+    "explanation": "Under common law alter ego doctrine, courts will 'pierce the corporate veil' and hold shareholders personally liable when the corporate form has been abused. Common factors justifying veil-piercing: (1) COMMINGLING—mixing personal and corporate funds/assets, (2) UNDERCAPITALIZATION—insufficient capital to meet foreseeable obligations, (3) IGNORING FORMALITIES—no board meetings, no corporate records, no separation between owner and entity, (4) ALTER EGO—corporation is mere instrumentality of shareholder, (5) FRAUD OR INJUSTICE—using corporate form to perpetrate fraud or evade obligations. Courts apply these factors to prevent injustice. Why other answers are wrong: (A) Paying dividends—normal corporate activity; doesn't justify piercing; (B) More than 100 shareholders—number of shareholders is irrelevant to veil-piercing; (C) Making profit—normal business success; doesn't justify piercing.",
     "tip": "Piercing the corporate veil: Commingling, undercapitalization, ignore formalities, alter ego, fraud. Keep corporation SEPARATE from personal affairs!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -11824,7 +11824,7 @@ const questions = [
       "D": "All partners have unlimited liability"
     },
     "correctAnswer": "A",
-    "explanation": "Under ULPA 2001 §404, a Limited Liability Limited Partnership (LLLP) combines features of a limited partnership with the liability shield of an LLP. In an LLLP: (1) GENERAL partners are also PROTECTED from vicarious liability—they can manage without personal liability for other partners' conduct or partnership obligations; (2) LIMITED partners retain their traditional limited liability. This eliminates the main disadvantage of being a general partner in an LP. The LLLP elects this status by so stating in its certificate of limited partnership. Why other answers are wrong: (B) Only limited partners protected—the KEY feature of LLLP is that GENERAL partners also get protection; (C) Taxed as corporation—LLLPs are taxed as partnerships (pass-through), not corporations; (D) All partners unlimited liability—exactly backwards; LLLP provides liability protection to ALL partners.",
+    "explanation": "Under ULPA 2001 §404, a Limited Liability Limited Partnership (LLLP) combines features of a limited partnership with the liability shield of an LLP. In an LLLP: (1) GENERAL partners are also PROTECTED from vicarious liability—they can manage without personal liability for other partners' conduct or partnership obligations; (2) LIMITED partners retain their traditional limited liability. This eliminates the main disadvantage of being a general partner in an LP. The LLLP elects this status by so stating in its certificate of limited partnership. Why other answers are wrong: (B) This is incorrect because the key feature of LLLP is that general partners also get liability protection, not just limited partners—both types of partners receive protection; (C) This is wrong because LLLPs are taxed as partnerships with pass-through taxation, not as corporations which face double taxation; (D) This is exactly backwards—the LLLP structure specifically provides liability protection to all partners, both general and limited partners, rather than unlimited liability.",
     "tip": "LLLP (ULPA 2001 §404): LP + LLP shield. GENERAL partners get limited liability protection too. Best of LP structure with full liability protection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -11908,8 +11908,8 @@ const questions = [
       "D": "Liable only if the corporation is never formed"
     },
     "correctAnswer": "C",
-    "explanation": "Under established corporate law principles, a PROMOTER who signs a contract on behalf of a corporation to be formed is PERSONALLY LIABLE on that contract. Key rules: (1) Corporation CANNOT be liable at signing because it doesn't yet exist, (2) When corporation forms and ADOPTS the contract, both promoter AND corporation become liable, (3) Promoter is released ONLY by NOVATION—a new agreement where the third party expressly releases the promoter and agrees to look solely to the corporation. Mere adoption by the corporation does NOT release the promoter. This protects third parties who contracted relying on the promoter. Why other answers are wrong: (A) Automatically released on formation—WRONG; formation + adoption doesn't release; need novation; (B) Never personally liable—WRONG; promoters ARE personally liable; (D) Liable only if never formed—WRONG; promoter liable even if corporation forms unless novation.",
-    "tip": "Promoter liability: Personally liable on pre-incorporation contracts. Corporation adoption adds corporation as liable party but does NOT release promoter. Need NOVATION!",
+    "explanation": "Per IRC §721, under established corporate law principles, a PROMOTER who signs a contract on behalf of a corporation to be formed is PERSONALLY LIABLE on that contract. Key rules: (1) Corporation CANNOT be liable at signing because it doesn't yet exist, (2) When corporation forms and ADOPTS the contract, both promoter AND corporation become liable, (3) Promoter is released ONLY by NOVATION—a new agreement where the third party expressly releases the promoter and agrees to look solely to the corporation. Mere adoption by the corporation does NOT release the promoter. This protects third parties who contracted relying on the promoter. Why other answers are wrong: (A) Automatically released on formation—WRONG; formation + adoption doesn't release; need novation; (B) Never personally liable—WRONG; promoters ARE personally liable; (D) Liable only if never formed—WRONG; promoter liable even if corporation forms unless novation.",
+    "tip": "§721: Promoter liability: Personally liable on pre-incorporation contracts. Corporation adoption adds corporation as liable party but does NOT release promoter. Need NOVATION!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12223,7 +12223,7 @@ const questions = [
       "D": "Dischargeable debts"
     },
     "correctAnswer": "A",
-    "explanation": "Under 11 U.S.C. §507(a)(1), DOMESTIC SUPPORT OBLIGATIONS (DSOs)—child support, alimony, spousal maintenance—have FIRST PRIORITY among unsecured claims. They are paid before all other priority claims including administrative expenses, wages, and taxes. Additionally, under §523(a)(5), DSOs are NONDISCHARGEABLE—the debtor must pay them regardless of bankruptcy outcome. This reflects public policy favoring support of children and former spouses over commercial creditors. DSOs owed to governmental units get the same priority. Why other answers are wrong: (B) Same as credit card debt—credit cards are general unsecured claims with NO priority; DSOs are first priority; (C) Paid after secured creditors—DSOs are first UNSECURED priority; secured creditors have rights to collateral separately; (D) Dischargeable—WRONG; DSOs are specifically NONDISCHARGEABLE under §523(a)(5).",
+    "explanation": "Under 11 U.S.C. §507(a)(1), DOMESTIC SUPPORT OBLIGATIONS (DSOs)—child support, alimony, spousal maintenance—have FIRST PRIORITY among unsecured claims. They are paid before all other priority claims including administrative expenses, wages, and taxes. Additionally, under §523(a)(5), DSOs are NONDISCHARGEABLE—the debtor must pay them regardless of bankruptcy outcome. This reflects public policy favoring support of children and former spouses over commercial creditors. DSOs owed to governmental units get the same priority. Why other answers are wrong: (B) Credit card debt represents general unsecured claims with NO priority status, ranking far below DSOs in the payment hierarchy; (C) While secured creditors do have rights to their collateral, DSOs hold first priority among all unsecured claims and are not subordinated to any other unsecured obligations; (D) DSOs are specifically NONDISCHARGEABLE under §523(a)(5), meaning the debtor remains legally obligated to pay these obligations even after receiving a bankruptcy discharge.",
     "tip": "Domestic support obligations (11 U.S.C. §507(a)(1)): FIRST priority + NONDISCHARGEABLE (§523(a)(5)). Child support/alimony must be paid.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -12349,7 +12349,7 @@ const questions = [
       "D": "In the ordinary course of business"
     },
     "correctAnswer": "A",
-    "explanation": "Under 11 U.S.C. §547, the trustee can AVOID (recover) PREFERENTIAL TRANSFERS. Elements: (1) Transfer to or for benefit of a creditor, (2) For antecedent (pre-existing) debt, (3) Made while debtor was INSOLVENT, (4) Within 90 DAYS before filing (or 1 YEAR for INSIDERS), (5) That enabled creditor to receive MORE than in Chapter 7 liquidation. Defenses (§547(c)): ordinary course of business payments, contemporaneous exchange for new value, subsequent new value given. The policy is EQUALITY—creditors should share pro rata, not race to collect before bankruptcy. Why other answers are wrong: (B) To secured creditors—payments to secured creditors can be preferences too; (C) After filing—post-petition transfers are different; preferences are pre-petition; (D) Ordinary course—ordinary course payments are a DEFENSE to preference, not what makes something preferential.",
+    "explanation": "Under 11 U.S.C. §547, the trustee can AVOID (recover) PREFERENTIAL TRANSFERS. Elements: (1) Transfer to or for benefit of a creditor, (2) For antecedent (pre-existing) debt, (3) Made while debtor was INSOLVENT, (4) Within 90 DAYS before filing (or 1 YEAR for INSIDERS), (5) That enabled creditor to receive MORE than in Chapter 7 liquidation. Defenses (§547(c)): ordinary course of business payments, contemporaneous exchange for new value, subsequent new value given. The policy is EQUALITY—creditors should share pro rata, not race to collect before bankruptcy. Why other answers are wrong: (B) Payments to secured creditors can still constitute preferential transfers if they meet all the statutory elements under §547(b); secured status alone does not exempt a transfer from preference attack. (C) Transfers made after the bankruptcy filing are post-petition transfers governed by different provisions of the Bankruptcy Code; preferential transfers by definition must occur before the bankruptcy petition is filed. (D) Payments made in the ordinary course of business are protected by the ordinary course defense under §547(c)(2), meaning they cannot be avoided as preferences even if they otherwise meet the preferential transfer elements.",
     "tip": "Preferences (11 U.S.C. §547): 90 days (1 year insiders) + insolvent + creditor gets more than Ch. 7. Defense: ordinary course, new value.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -12559,7 +12559,7 @@ const questions = [
       "D": "Made in the ordinary course of business or a contemporaneous exchange for new value"
     },
     "correctAnswer": "D",
-    "explanation": "Under 11 U.S.C. §547(c), several defenses allow creditors to retain preference payments: (1) CONTEMPORANEOUS EXCHANGE—§547(c)(1) if the transfer was substantially contemporaneous exchange for new value given to debtor, (2) ORDINARY COURSE—§547(c)(2) if the debt was incurred in ordinary course and paid in ordinary course (most common defense), (3) PURCHASE MONEY—§547(c)(3) for PMSIs properly perfected within 30 days, (4) SUBSEQUENT NEW VALUE—§547(c)(4) if creditor gave new value after the transfer, (5) DE MINIMIS—§547(c)(9) for non-consumer debts under $7,575. Why other answers are wrong: (A) Luxury goods—this is a non-dischargeability ground under §523, not a preference defense; (B) To a family member—insiders have LONGER preference period (1 year), making preferences easier to avoid; (C) After preference period—payments outside the 90-day (or 1-year insider) window aren't preferences to begin with.",
+    "explanation": "Under 11 U.S.C. §547(c), several defenses allow creditors to retain preference payments: (1) CONTEMPORANEOUS EXCHANGE—§547(c)(1) if the transfer was substantially contemporaneous exchange for new value given to debtor, (2) ORDINARY COURSE—§547(c)(2) if the debt was incurred in ordinary course and paid in ordinary course (most common defense), (3) PURCHASE MONEY—§547(c)(3) for PMSIs properly perfected within 30 days, (4) SUBSEQUENT NEW VALUE—§547(c)(4) if creditor gave new value after the transfer, (5) DE MINIMIS—§547(c)(9) for non-consumer debts under $7,575. Why other answers are wrong: (A) Luxury goods—this relates to non-dischargeability grounds under §523, not a preference defense under §547; (B) To a family member—being a family member (insider) actually makes preference avoidance easier because insiders have a longer preference period (1 year versus 90 days), not a defense; (C) Made after the preference period—transfers occurring outside the 90-day window (or 1-year for insiders) aren't preferences to begin with, so there would be no preference action to defend against.",
     "tip": "§547(c) preference defenses: Ordinary course (most common), contemporaneous exchange, subsequent new value, PMSI, de minimis (<$7,575).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -12958,8 +12958,8 @@ const questions = [
       "D": "Only institutional investors"
     },
     "correctAnswer": "C",
-    "explanation": "Under Rule 501(a) of Regulation D, ACCREDITED INVESTORS include: (1) Natural persons with NET WORTH over $1 million EXCLUDING primary residence (equity in home doesn't count), (2) Natural persons with INCOME over $200,000 individually or $300,000 with spouse in each of the last two years with expectation to continue, (3) DIRECTORS, executive officers, or general partners of the issuer, (4) INSTITUTIONS—banks, insurance companies, registered investment companies, employee benefit plans with $5M+ assets, (5) Trusts with $5M+ assets, (6) Entities with all equity owners who are accredited. The 2020 amendments added persons with certain professional certifications (Series 7, 65, 82) and knowledgeable employees of private funds. Why other answers are wrong: (A) Purchased securities before—experience alone doesn't qualify; (B) Requests designation—must meet objective criteria; (D) Only institutional—natural persons can qualify too.",
-    "tip": "Rule 501(a) accredited: $1M net worth (no home) OR $200K/$300K income. Plus institutions, directors/officers, professionals (Series 7, 65, 82).",
+    "explanation": "Per Securities Act of 1933 §4, Regulation D, under Rule 501(a) of Regulation D, ACCREDITED INVESTORS include: (1) Natural persons with NET WORTH over $1 million EXCLUDING primary residence (equity in home doesn't count), (2) Natural persons with INCOME over $200,000 individually or $300,000 with spouse in each of the last two years with expectation to continue, (3) DIRECTORS, executive officers, or general partners of the issuer, (4) INSTITUTIONS—banks, insurance companies, registered investment companies, employee benefit plans with $5M+ assets, (5) Trusts with $5M+ assets, (6) Entities with all equity owners who are accredited. The 2020 amendments added persons with certain professional certifications (Series 7, 65, 82) and knowledgeable employees of private funds. Why other answers are wrong: (A) Purchased securities before—experience alone doesn't qualify; (B) Requests designation—must meet objective criteria; (D) Only institutional—natural persons can qualify too.",
+    "tip": "§4: Rule 501(a) accredited: $1M net worth (no home) OR $200K/$300K income. Plus institutions, directors/officers, professionals (Series 7, 65, 82).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13126,8 +13126,8 @@ const questions = [
       "D": "Only accredited investors"
     },
     "correctAnswer": "A",
-    "explanation": "Under Regulation D Rule 506(b), issuers may raise UNLIMITED amounts without SEC registration if: (1) Sales to UNLIMITED number of ACCREDITED investors, (2) Sales to up to 35 NON-ACCREDITED investors who are 'SOPHISTICATED' (alone or with a purchaser representative, have sufficient knowledge/experience to evaluate risks), (3) NO GENERAL SOLICITATION or advertising permitted—issuer must have pre-existing relationship with offerees, (4) If ANY non-accredited investors participate, specified DISCLOSURE documents must be provided. Securities are 'RESTRICTED' and cannot be freely resold. Rule 506 preempts state registration (NSMIA). Why other answers are wrong: (B) Only 35 total—only non-accredited are limited to 35; accredited are unlimited; (C) General public with advertising—that's Rule 506(c), not 506(b); (D) Only accredited—up to 35 sophisticated non-accredited also permitted.",
-    "tip": "Rule 506(b): UNLIMITED accredited + up to 35 sophisticated non-accredited. NO advertising. If non-accredited, disclosure required. Preempts state registration.",
+    "explanation": "Per Securities Act of 1933 §5, under Regulation D Rule 506(b), issuers may raise UNLIMITED amounts without SEC registration if: (1) Sales to UNLIMITED number of ACCREDITED investors, (2) Sales to up to 35 NON-ACCREDITED investors who are 'SOPHISTICATED' (alone or with a purchaser representative, have sufficient knowledge/experience to evaluate risks), (3) NO GENERAL SOLICITATION or advertising permitted—issuer must have pre-existing relationship with offerees, (4) If ANY non-accredited investors participate, specified DISCLOSURE documents must be provided. Securities are 'RESTRICTED' and cannot be freely resold. Rule 506 preempts state registration (NSMIA). Why other answers are wrong: (B) Only 35 total—only non-accredited are limited to 35; accredited are unlimited; (C) General public with advertising—that's Rule 506(c), not 506(b); (D) Only accredited—up to 35 sophisticated non-accredited also permitted.",
+    "tip": "§5: Rule 506(b): UNLIMITED accredited + up to 35 sophisticated non-accredited. NO advertising. If non-accredited, disclosure required. Preempts state registration.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13189,8 +13189,8 @@ const questions = [
       "D": "It affects stock price by at least 5%"
     },
     "correctAnswer": "B",
-    "explanation": "Under the MATERIALITY standard established in TSC Industries v. Northway (1976) and Basic Inc. v. Levinson (1988), information is MATERIAL if there is a SUBSTANTIAL LIKELIHOOD that a REASONABLE INVESTOR would consider it IMPORTANT in making an investment decision. The test is OBJECTIVE—not whether any particular investor relied, but whether a reasonable person would. For contingent/speculative events (like merger negotiations), Basic established a 'probability/magnitude' test: balance probability that the event will occur against its anticipated magnitude. No bright-line threshold (e.g., 5% of assets) exists—context matters. Why other answers are wrong: (A) Any investor—standard is REASONABLE investor, not all; (C) Executive compensation—only one category of material information; (D) 5% price impact—no fixed percentage threshold.",
-    "tip": "Materiality (TSC/Basic): SUBSTANTIAL LIKELIHOOD + REASONABLE INVESTOR would consider IMPORTANT. No bright-line test—context matters.",
+    "explanation": "Per Federal securities laws, under the MATERIALITY standard established in TSC Industries v. Northway (1976) and Basic Inc. v. Levinson (1988), information is MATERIAL if there is a SUBSTANTIAL LIKELIHOOD that a REASONABLE INVESTOR would consider it IMPORTANT in making an investment decision. The test is OBJECTIVE—not whether any particular investor relied, but whether a reasonable person would. For contingent/speculative events (like merger negotiations), Basic established a 'probability/magnitude' test: balance probability that the event will occur against its anticipated magnitude. No bright-line threshold (e.g., 5% of assets) exists—context matters. Why other answers are wrong: (A) Any investor—standard is REASONABLE investor, not all; (C) Executive compensation—only one category of material information; (D) 5% price impact—no fixed percentage threshold.",
+    "tip": "Federal: Materiality (TSC/Basic): SUBSTANTIAL LIKELIHOOD + REASONABLE INVESTOR would consider IMPORTANT. No bright-line test—context matters.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13273,8 +13273,8 @@ const questions = [
       "D": "They are related to an insider"
     },
     "correctAnswer": "C",
-    "explanation": "Under the DIRKS v. SEC (1983) framework, TIPPEE LIABILITY for insider trading requires THREE elements: (1) TIPPER BREACHED fiduciary duty by disclosing Material Nonpublic Information (MNPI), (2) Tipper received a PERSONAL BENEFIT (direct or indirect)—including pecuniary gain, reputational benefit, or gift to relative/friend, (3) TIPPEE KNEW or should have known of the tipper's breach and personal benefit. The tippee 'inherits' the tipper's duty. In Salman v. United States (2016), the Supreme Court clarified that gifts to trading relatives/friends satisfy the personal benefit test. Why other answers are wrong: (A) Same industry—industry relationship irrelevant; (B) Merely receive information—must also know of breach and benefit; (D) Related to insider—relationship alone doesn't create liability without knowledge of breach.",
-    "tip": "Dirks/Salman tippee test: (1) Tipper BREACHED duty, (2) Tipper got PERSONAL BENEFIT, (3) Tippee KNEW of breach/benefit. Gifts to friends count as benefit.",
+    "explanation": "Per Securities Exchange Act §10(b), under the DIRKS v. SEC (1983) framework, TIPPEE LIABILITY for insider trading requires THREE elements: (1) TIPPER BREACHED fiduciary duty by disclosing Material Nonpublic Information (MNPI), (2) Tipper received a PERSONAL BENEFIT (direct or indirect)—including pecuniary gain, reputational benefit, or gift to relative/friend, (3) TIPPEE KNEW or should have known of the tipper's breach and personal benefit. The tippee 'inherits' the tipper's duty. In Salman v. United States (2016), the Supreme Court clarified that gifts to trading relatives/friends satisfy the personal benefit test. Why other answers are wrong: (A) Same industry—industry relationship irrelevant; (B) Merely receive information—must also know of breach and benefit; (D) Related to insider—relationship alone doesn't create liability without knowledge of breach.",
+    "tip": "§10: Dirks/Salman tippee test: (1) Tipper BREACHED duty, (2) Tipper got PERSONAL BENEFIT, (3) Tippee KNEW of breach/benefit. Gifts to friends count as benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13294,8 +13294,8 @@ const questions = [
       "D": "Sales to non-accredited investors"
     },
     "correctAnswer": "A",
-    "explanation": "Under Regulation D Rule 506(c) (added by JOBS Act 2012), issuers may use GENERAL SOLICITATION and ADVERTISING—a major departure from traditional private placement rules. Requirements: (1) ALL purchasers must be ACCREDITED INVESTORS—no non-accredited permitted (unlike 506(b)'s 35), (2) Issuer must take REASONABLE STEPS to VERIFY accredited status—cannot merely rely on self-certification. Acceptable verification methods: reviewing tax returns/W-2s for income, obtaining bank/brokerage statements for net worth, written confirmation from attorney/CPA/broker, or prior accredited investor status verification. Why other answers are wrong: (B) Lower disclosure—same securities law disclosure applies; (C) State registration—506(c) also preempts state registration (NSMIA); (D) Non-accredited—absolutely prohibited under 506(c); that's the tradeoff for allowing advertising.",
-    "tip": "Rule 506(c): CAN ADVERTISE but ALL buyers must be VERIFIED accredited (no self-certification). Tradeoff: Advertising allowed, but no non-accredited.",
+    "explanation": "Per Securities Act of 1933 §5, under Regulation D Rule 506(c) (added by JOBS Act 2012), issuers may use GENERAL SOLICITATION and ADVERTISING—a major departure from traditional private placement rules. Requirements: (1) ALL purchasers must be ACCREDITED INVESTORS—no non-accredited permitted (unlike 506(b)'s 35), (2) Issuer must take REASONABLE STEPS to VERIFY accredited status—cannot merely rely on self-certification. Acceptable verification methods: reviewing tax returns/W-2s for income, obtaining bank/brokerage statements for net worth, written confirmation from attorney/CPA/broker, or prior accredited investor status verification. Why other answers are wrong: (B) Lower disclosure—same securities law disclosure applies; (C) State registration—506(c) also preempts state registration (NSMIA); (D) Non-accredited—absolutely prohibited under 506(c); that's the tradeoff for allowing advertising.",
+    "tip": "§5: Rule 506(c): CAN ADVERTISE but ALL buyers must be VERIFIED accredited (no self-certification). Tradeoff: Advertising allowed, but no non-accredited.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13378,8 +13378,8 @@ const questions = [
       "D": "Unlimited amounts from accredited investors"
     },
     "correctAnswer": "B",
-    "explanation": "Under REGULATION CROWDFUNDING (JOBS Act Title III, Rules 100-503), issuers can raise up to $5 MILLION in a 12-month period from retail investors. Requirements: (1) Offerings MUST be conducted through SEC-REGISTERED FUNDING PORTALS or broker-dealers, (2) INDIVIDUAL INVESTMENT LIMITS based on income/net worth: if both annual income AND net worth are under $124,000, investor may invest greater of $2,500 or 5% of lesser of income/net worth; if either exceeds $124,000, can invest up to 10%, capped at $124,000 total/year, (3) Issuer must file FORM C disclosures (business description, financials, use of proceeds, risks). No accreditation required—truly open to the public. Why other answers are wrong: (A) $500,000—limit raised to $5M in 2020; (C) $20 million—that's Reg A+ Tier 1; (D) Unlimited to accredited—that's Reg D; crowdfunding has dollar limits.",
-    "tip": "Reg Crowdfunding: $5M/year, through registered portal, individual limits based on income/net worth, Form C required. Retail investors welcome.",
+    "explanation": "Per Securities Act of 1933 §4, Regulation D, under REGULATION CROWDFUNDING (JOBS Act Title III, Rules 100-503), issuers can raise up to $5 MILLION in a 12-month period from retail investors. Requirements: (1) Offerings MUST be conducted through SEC-REGISTERED FUNDING PORTALS or broker-dealers, (2) INDIVIDUAL INVESTMENT LIMITS based on income/net worth: if both annual income AND net worth are under $124,000, investor may invest greater of $2,500 or 5% of lesser of income/net worth; if either exceeds $124,000, can invest up to 10%, capped at $124,000 total/year, (3) Issuer must file FORM C disclosures (business description, financials, use of proceeds, risks). No accreditation required—truly open to the public. Why other answers are wrong: (A) $500,000—limit raised to $5M in 2020; (C) $20 million—that's Reg A+ Tier 1; (D) Unlimited to accredited—that's Reg D; crowdfunding has dollar limits.",
+    "tip": "§4: Reg Crowdfunding: $5M/year, through registered portal, individual limits based on income/net worth, Form C required. Retail investors welcome.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13399,8 +13399,8 @@ const questions = [
       "D": "An insider trades on company information"
     },
     "correctAnswer": "A",
-    "explanation": "Under the MISAPPROPRIATION THEORY established in United States v. O'Hagan (1997), insider trading liability extends to OUTSIDERS who misappropriate confidential information by breaching a duty owed to the SOURCE of that information—even if they have no duty to the company whose securities are traded. Example: An attorney learns of a pending acquisition while representing the acquiring company, then trades in the target company's stock. The attorney breaches duty to his own firm/client (the source), not the target company. This theory complements the classical theory (breach of duty to shareholders). Why other answers are wrong: (B) Company releases false information—that's fraud, not misappropriation; (C) Analyst makes predictions—analysis isn't misappropriation; (D) Insider trades on company info—that's classical theory, not misappropriation.",
-    "tip": "O'Hagan MISAPPROPRIATION: Breach duty to SOURCE of info (not traded company). Outsiders liable. Complements classical insider trading theory.",
+    "explanation": "Per Securities Exchange Act §10(b), under the MISAPPROPRIATION THEORY established in United States v. O'Hagan (1997), insider trading liability extends to OUTSIDERS who misappropriate confidential information by breaching a duty owed to the SOURCE of that information—even if they have no duty to the company whose securities are traded. Example: An attorney learns of a pending acquisition while representing the acquiring company, then trades in the target company's stock. The attorney breaches duty to his own firm/client (the source), not the target company. This theory complements the classical theory (breach of duty to shareholders). Why other answers are wrong: (B) Company releases false information—that's fraud, not misappropriation; (C) Analyst makes predictions—analysis isn't misappropriation; (D) Insider trades on company info—that's classical theory, not misappropriation.",
+    "tip": "§10: O'Hagan MISAPPROPRIATION: Breach duty to SOURCE of info (not traded company). Outsiders liable. Complements classical insider trading theory.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13483,8 +13483,8 @@ const questions = [
       "D": "In addition to federal law, though certain federal exemptions preempt state registration"
     },
     "correctAnswer": "D",
-    "explanation": "State securities laws ('BLUE SKY LAWS') exist IN ADDITION TO federal law—issuers must comply with both. However, the NATIONAL SECURITIES MARKETS IMPROVEMENT ACT (NSMIA 1996) PREEMPTS state REGISTRATION (not anti-fraud) for 'COVERED SECURITIES': (1) Securities listed on national exchanges (NYSE, NASDAQ), (2) Rule 506 offerings (Reg D), (3) Securities sold to 'qualified purchasers' (defined by SEC), (4) Certain investment company securities. States RETAIN: anti-fraud enforcement powers, notice filing fees (states can require filing copies and fees even for preempted offerings). Blue sky laws vary by state—some use merit review (substance), others only disclosure. Why other answers are wrong: (A) Only out-of-state—applies to in-state too; (B) Identical—vary significantly by state; (C) Completely preempted—only registration preempted for covered securities; anti-fraud retained.",
-    "tip": "Blue sky = state law. NSMIA preempts REGISTRATION for covered securities (listed, 506). States KEEP anti-fraud + notice fees. NOT identical across states.",
+    "explanation": "Per Securities Act of 1933 §5, state securities laws ('BLUE SKY LAWS') exist IN ADDITION TO federal law—issuers must comply with both. However, the NATIONAL SECURITIES MARKETS IMPROVEMENT ACT (NSMIA 1996) PREEMPTS state REGISTRATION (not anti-fraud) for 'COVERED SECURITIES': (1) Securities listed on national exchanges (NYSE, NASDAQ), (2) Rule 506 offerings (Reg D), (3) Securities sold to 'qualified purchasers' (defined by SEC), (4) Certain investment company securities. States RETAIN: anti-fraud enforcement powers, notice filing fees (states can require filing copies and fees even for preempted offerings). Blue sky laws vary by state—some use merit review (substance), others only disclosure. Why other answers are wrong: (A) Only out-of-state—applies to in-state too; (B) Identical—vary significantly by state; (C) Completely preempted—only registration preempted for covered securities; anti-fraud retained.",
+    "tip": "§5: Blue sky = state law. NSMIA preempts REGISTRATION for covered securities (listed, 506). States KEEP anti-fraud + notice fees. NOT identical across states.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14554,7 +14554,7 @@ const questions = [
       "D": "Must itemize if spouse itemizes"
     },
     "correctAnswer": "B",
-    "explanation": "Under the IRC, MARRIED FILING SEPARATELY (MFS) taxpayers face significant LIMITATIONS and PENALTIES: (1) NO Earned Income Tax Credit (EITC) under §32; (2) NO adoption credit under §23; (3) Education credits (§25A) are disallowed; (4) Student loan interest deduction (§221) is disallowed; (5) IRA contribution phase-outs START AT $0 for active participants; (6) Up to 85% of Social Security may be taxable (§86); (7) MUST BOTH ITEMIZE or BOTH take standard deduction—cannot mix; (8) Child Tax Credit limitations. MFS is generally disadvantageous except for specific situations (liability protection, IBR loan payments). Why other answers are wrong: (A) Same benefits as MFJ—MFS loses many benefits; (C) Double standard deduction—MFS gets HALF, not double; (D) Must itemize if spouse itemizes—this IS a correct limitation, but (B) captures the broader picture.",
+    "explanation": "Under the IRC, MARRIED FILING SEPARATELY (MFS) taxpayers face significant LIMITATIONS and PENALTIES: (1) NO Earned Income Tax Credit (EITC) under §32; (2) NO adoption credit under §23; (3) Education credits (§25A) are disallowed; (4) Student loan interest deduction (§221) is disallowed; (5) IRA contribution phase-outs START AT $0 for active participants; (6) Up to 85% of Social Security may be taxable (§86); (7) MUST BOTH ITEMIZE or BOTH take standard deduction—cannot mix; (8) Child Tax Credit limitations. MFS is generally disadvantageous except for specific situations (liability protection, IBR loan payments). Why other answers are wrong: (A) Same benefits as MFJ—MFS loses many benefits including EITC, adoption credit, education credits, and faces lower income thresholds for various phase-outs; (C) Double standard deduction—MFS taxpayers get exactly half the MFJ standard deduction amount, not double; (D) Must itemize if spouse itemizes—while this is true that both spouses must use the same deduction method, this represents only one specific limitation rather than the comprehensive set of restrictions MFS taxpayers face.",
     "tip": "MFS penalties: NO EITC, NO education credits, NO student loan deduction, SS 85% taxable, both must itemize OR both standard. Generally worst status!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -14575,7 +14575,7 @@ const questions = [
       "D": "Son or daughter"
     },
     "correctAnswer": "C",
-    "explanation": "Per IRC §152(c)(2), the RELATIONSHIP TEST for a qualifying child includes: (1) SON or DAUGHTER (including adopted, stepchild, or eligible foster child placed by authorized agency); (2) SIBLING (brother, sister, half-brother/sister, stepbrother/sister); or (3) DESCENDANT of any of these (grandchild, niece, nephew). The relationship must go DOWNWARD (child/sibling/their descendants). Parents, grandparents, aunts, and uncles are EXCLUDED from QC but may qualify as QUALIFYING RELATIVES under §152(d). Why other answers are wrong: (A) Stepchild or foster child—these ARE included, making this answer incomplete but not wrong; (B) Sibling or half-sibling—these ARE included; (D) Son or daughter—these ARE included. (C) is the ONLY answer that lists EXCLUDED persons (parents/grandparents).",
+    "explanation": "Per IRC §152(c)(2), the RELATIONSHIP TEST for a qualifying child includes: (1) SON or DAUGHTER (including adopted, stepchild, or eligible foster child placed by authorized agency); (2) SIBLING (brother, sister, half-brother/sister, stepbrother/sister); or (3) DESCENDANT of any of these (grandchild, niece, nephew). The relationship must go DOWNWARD (child/sibling/their descendants). Parents, grandparents, aunts, and uncles are EXCLUDED from QC but may qualify as QUALIFYING RELATIVES under §152(d). Why other answers are wrong: (A) Stepchild or foster child—these ARE included in the qualifying child relationship test under the son or daughter category; (B) Sibling or half-sibling—these ARE specifically included in the qualifying child relationship test; (D) Son or daughter—these ARE the primary relationship category included in the qualifying child relationship test.",
     "tip": "IRC §152(c)(2) QC relationship: Child, stepchild, foster, sibling, half-sibling, step-sibling, or DESCENDANTS of these. Parents/aunts/uncles = QR only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -14932,7 +14932,7 @@ const questions = [
       "D": "Recreation and transportation"
     },
     "correctAnswer": "C",
-    "explanation": "Per Reg. §1.152-1(a)(2), TOTAL SUPPORT for the dependency tests includes: food, LODGING (at FAIR RENTAL VALUE, not actual cost), clothing, education, medical/dental care, recreation, transportation, and similar necessities. EXCLUDED from support: Per IRC §152(f)(5), SCHOLARSHIPS received by a FULL-TIME STUDENT are NOT counted as support provided by the student OR included in total support calculations. This prevents a scholarship from disqualifying a student as a dependent. Tax-exempt income is also generally excluded from the support calculation. Why other answers are wrong: (A) Food and lodging—these ARE included in support; (B) Clothing and medical—these ARE included in support; (D) Recreation and transportation—these ARE included in support. (C) scholarships is the ONLY item specifically EXCLUDED.",
+    "explanation": "Per Reg. §1.152-1(a)(2), TOTAL SUPPORT for the dependency tests includes: food, LODGING (at FAIR RENTAL VALUE, not actual cost), clothing, education, medical/dental care, recreation, transportation, and similar necessities. EXCLUDED from support: Per IRC §152(f)(5), SCHOLARSHIPS received by a FULL-TIME STUDENT are NOT counted as support provided by the student OR included in total support calculations. This prevents a scholarship from disqualifying a student as a dependent. Tax-exempt income is also generally excluded from the support calculation. Why other answers are wrong: (A) Food and lodging—these ARE included in support calculations as they represent basic necessities provided to the dependent; (B) Clothing and medical expenses—these ARE included in support as they constitute essential care and necessities provided to the dependent; (D) Recreation and transportation—these ARE included in support as they represent additional care and necessities provided to the dependent.",
     "tip": "Support (Reg. §1.152-1(a)(2)): Food, lodging (FRV), clothing, education, medical, recreation, transportation. SCHOLARSHIPS excluded (§152(f)(5))!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -15352,7 +15352,7 @@ const questions = [
       "D": "The degree of control the payer has over how work is performed"
     },
     "correctAnswer": "D",
-    "explanation": "Per common law rules adopted by IRS (Rev. Rul. 87-41, Reg. §31.3121(d)-1), the KEY factor distinguishing EMPLOYEES from INDEPENDENT CONTRACTORS is the DEGREE OF CONTROL the payer has over HOW work is performed. IRS examines THREE categories: (1) BEHAVIORAL CONTROL—instructions on when, where, how to work; (2) FINANCIAL CONTROL—business expenses, opportunity for profit/loss, significant investment; (3) TYPE OF RELATIONSHIP—written contracts, benefits, permanency. EMPLOYEES are controlled in method and means; INDEPENDENT CONTRACTORS control their own methods. Misclassification has significant tax consequences (employment taxes, penalties). Why other answers are wrong: (A) Benefits—a factor but not the KEY factor; (B) Engagement length—duration alone doesn't determine status; (C) Payment method—how paid is less important than control over work.",
+    "explanation": "Per common law rules adopted by IRS (Rev. Rul. 87-41, Reg. §31.3121(d)-1), the KEY factor distinguishing EMPLOYEES from INDEPENDENT CONTRACTORS is the DEGREE OF CONTROL the payer has over HOW work is performed. IRS examines THREE categories: (1) BEHAVIORAL CONTROL—instructions on when, where, how to work; (2) FINANCIAL CONTROL—business expenses, opportunity for profit/loss, significant investment; (3) TYPE OF RELATIONSHIP—written contracts, benefits, permanency. EMPLOYEES are controlled in method and means; INDEPENDENT CONTRACTORS control their own methods. Misclassification has significant tax consequences (employment taxes, penalties). Why other answers are wrong: (A) Benefits provision is a factor under \"type of relationship\" but not the primary distinguishing factor—many independent contractors receive no benefits while still being properly classified; (B) Length of engagement relates to permanency considerations but duration alone doesn't determine worker status—both employees and contractors can have short-term or long-term arrangements; (C) Payment calculation method (hourly vs. project-based) is a financial control consideration but secondary to behavioral control—contractors can be paid hourly while maintaining independence if they control how work is performed.",
     "tip": "Reg. §31.3121(d)-1: CONTROL is key. IRS tests: Behavioral control, Financial control, Relationship type. Employee = controlled. IC = independent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -16150,7 +16150,7 @@ const questions = [
       "D": "Any gift tax resulting from the transfer"
     },
     "correctAnswer": "D",
-    "explanation": "In a NET GIFT arrangement (recognized by the IRS and courts), the DONEE agrees to pay ANY GIFT TAX resulting from the transfer. Per Diedrich v. Commissioner and Rev. Rul. 75-72, the gift tax paid by the donee is treated as CONSIDERATION received by the donor, which REDUCES the amount of the taxable gift. This creates a CIRCULAR CALCULATION: Gift = FMV - Gift tax, but Gift tax depends on Gift amount. Formula: Net gift = FMV / (1 + gift tax rate). Additionally, if gift tax paid exceeds donor's basis, the donor recognizes INCOME. Why other answers are wrong: (A) Carrying costs—not part of net gift arrangement; (B) Annual exclusion—not relevant to net gift; (C) Donor's income tax—not the net gift mechanism.",
+    "explanation": "Per Treas. Reg. §25.2512-1 and Rev. Rul. 75-72, in a NET GIFT arrangement the DONEE agrees to pay ANY GIFT TAX resulting from the transfer. The gift tax paid by the donee is treated as CONSIDERATION received by the donor, which REDUCES the amount of the taxable gift (Diedrich v. Commissioner). This creates a CIRCULAR CALCULATION: Gift = FMV - Gift tax, but Gift tax depends on Gift amount. Formula: Net gift = FMV / (1 + gift tax rate). Additionally, if gift tax paid exceeds donor's basis, the donor recognizes INCOME. Why other answers are wrong: (A) Carrying costs—not part of net gift arrangement; (B) Annual exclusion—not relevant to net gift; (C) Donor's income tax—not the net gift mechanism.",
     "tip": "Net gift: Donee pays gift tax = consideration to donor = reduces taxable gift. Circular calculation. May trigger income to donor if tax > basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -16234,7 +16234,7 @@ const questions = [
       "D": "A completed gift when the trust becomes irrevocable"
     },
     "correctAnswer": "A",
-    "explanation": "Per Reg. §25.2511-2(c), a transfer to a REVOCABLE trust is NOT a completed gift because the grantor retains the power to revest the property in themselves. A gift is COMPLETE only when the donor has 'so parted with dominion and control as to leave in him no power to change its disposition.' The transfer becomes complete for gift tax purposes when: (1) The trust becomes IRREVOCABLE, or (2) At the grantor's DEATH (when revocation power terminates). For ESTATE tax, the property is included under §2038 (revocable transfers). Why other answers are wrong: (B) Split gift—requires completed gift and married donors; (C) Completed when transferred—not if revocable; (D) Complete when irrevocable—partially correct, but (A) is the best answer.",
+    "explanation": "Per Reg. §25.2511-2(c), a transfer to a REVOCABLE trust is NOT a completed gift because the grantor retains the power to revest the property in themselves. A gift is COMPLETE only when the donor has 'so parted with dominion and control as to leave in him no power to change its disposition.' The transfer becomes complete for gift tax purposes when: (1) The trust becomes IRREVOCABLE, or (2) At the grantor's DEATH (when revocation power terminates). For ESTATE tax, the property is included under §2038 (revocable transfers). Why other answers are wrong: (B) Split gift provisions require a completed gift and married donors making joint elections - this doesn't apply to revocable trusts where no gift occurs; (C) A gift is not completed merely upon transfer to a revocable trust since the grantor maintains control; (D) While the transfer would become complete when the trust becomes irrevocable, this doesn't address the current status of the revocable trust transfer.",
     "tip": "Reg. §25.2511-2(c): Revocable transfer = NOT a completed gift. Gift completes when power to revoke terminates. §2038: Included in estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -16507,8 +16507,8 @@ const questions = [
       "D": "June 15"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6072(a), individual income tax returns are due on the 15th day of the 4th month following the close of the tax year. For calendar-year taxpayers, this is April 15. If the date falls on a weekend or holiday, the due date is extended to the next business day under §7503.",
-    "tip": "Individual = April 15 (§6072(a)). C Corps = April 15 (§6072(b)). S Corps/Partnerships = March 15 (§6072(b)). These are the key dates.",
+    "explanation": "Per IRC §6072(a), individual income tax returns are due on the 15th day of the 4th month following the close of the tax year. For calendar-year taxpayers, this is April 15. If the date falls on a weekend or holiday, the due date is extended to the next business day under §7503. Why other answers are wrong: (A) October 15—this is the extended due date after filing Form 4868, not the original due date; (B) March 15—this is the due date for S corporations and partnerships under §6072(b), not individuals; (D) June 15—this is the due date for U.S. citizens living abroad per §6081(a), not the general rule.",
+    "tip": "Individual = April 15 (§6072(a)). C Corps = April 15. S Corps/Partnerships = March 15. Extensions add 6 months.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -16528,8 +16528,8 @@ const questions = [
       "D": "12 months"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6081(a), Form 4868 provides an automatic 6-month extension to file an individual tax return, extending the due date from April 15 to October 15. The extension is for filing only—it does not extend the time to pay. Tax is still due by April 15 to avoid penalties under §6651 and interest under §6601.",
-    "tip": "Extension to file (§6081) ≠ extension to pay. Pay by April 15 to avoid failure-to-pay penalty and interest.",
+    "explanation": "Per IRC §6081(a), Form 4868 provides an automatic 6-month extension to file an individual tax return, extending the due date from April 15 to October 15. The extension is for filing only—it does not extend the time to pay. Tax is still due by April 15 to avoid penalties under §6651 and interest under §6601. Why other answers are wrong: (A) 3 months—incorrect; the extension is 6 months; (B) 4 months—this was the old extension period before 2005; now it's 6 months; (D) 12 months—no automatic 12-month extension exists for individuals.",
+    "tip": "Extension to file (§6081) ≠ extension to pay. 6-month extension (April 15 → October 15). Pay by April 15!",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -16549,8 +16549,8 @@ const questions = [
       "D": "7 years from filing"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §6501(a), the general statute of limitations for assessment is 3 years from the later of the filing date or the due date. Per §6501(b)(1), if a return is filed early, the 3-year period begins on the due date. This period is extended to 6 years under §6501(e) for substantial omissions or unlimited under §6501(c) for fraud or failure to file.",
-    "tip": "General rule = 3 years (§6501(a)). Extended to 6 years if >25% gross income omission (§6501(e)). No limit for fraud (§6501(c)).",
+    "explanation": "Per IRC §6501(a), the general statute of limitations for assessment is 3 years from the later of the filing date or the due date. Per §6501(b)(1), if a return is filed early, the 3-year period begins on the due date. This period is extended to 6 years under §6501(e) for substantial omissions (>25% of gross income) or unlimited under §6501(c) for fraud or failure to file. Why other answers are wrong: (A) 2 years—this is the period for refund claims after payment under §6511(a), not assessment; (C) 5 years—no 5-year assessment period exists in the Code; (D) 7 years—this applies to bad debt/worthless security deductions under §6511(d)(1), not IRS assessments.",
+    "tip": "3 years general (§6501(a)), 6 years for >25% omission (§6501(e)), unlimited for fraud (§6501(c)).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -16570,8 +16570,8 @@ const questions = [
       "D": "5% of unpaid tax per month, up to 25%"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §6651(a)(1), the failure-to-file penalty is 5% of unpaid tax per month or part of a month, up to a maximum of 25%. The failure-to-pay penalty under §6651(a)(2) is 0.5% per month, also up to 25%. Per §6651(c)(1), when both apply, the failure-to-file penalty is reduced by the failure-to-pay amount.",
-    "tip": "5% to file (§6651(a)(1)), 0.5% to pay (§6651(a)(2)). Filing late is more expensive than paying late—file on time even if you can't pay!",
+    "explanation": "Per IRC §6651(a)(1), the failure-to-file penalty is 5% of unpaid tax per month or part of a month, up to a maximum of 25%. The failure-to-pay penalty under §6651(a)(2) is 0.5% per month, also up to 25%. Per §6651(c)(1), when both apply, the failure-to-file penalty is reduced by the failure-to-pay amount (net 4.5% + 0.5% = 5% combined). Why other answers are wrong: (A) 10% per month, up to 50%—overstates the penalty; no such rate exists; (B) Flat $250—there is no flat-dollar failure-to-file penalty (minimum penalty is the lesser of $485 or 100% of tax for returns 60+ days late); (C) 0.5% per month, up to 25%—this is the failure-to-PAY penalty, not failure-to-FILE.",
+    "tip": "5% to file, 0.5% to pay (§6651). File on time even if you can't pay—filing late costs 10× more!",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -16591,8 +16591,8 @@ const questions = [
       "D": "April 15, July 15, October 15, January 15"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6654(c), estimated tax payments are due on April 15, June 15, September 15, and January 15 of the following year. Note that the second quarter payment is due June 15 (2 months after Q1), not July 15. The fourth payment is due January 15 of the next year.",
-    "tip": "Estimated tax dates are in §6654(c). April, June, September, January—the June date is only 2 months after April.",
+    "explanation": "Per IRC §6654(c), estimated tax payments are due on April 15, June 15, September 15, and January 15 of the following year. Note the uneven spacing: Q2 is due June 15 (only 2 months after Q1), not July 15. Why other answers are wrong: (A) January 15, April 15, July 15, October 15—January is for Q4 of the prior year, and July 15 is incorrect (should be June 15); (B) March 15, June 15, September 15, December 15—these are not the correct dates; March 15 is the due date for S corp/partnership returns; (D) April 15, July 15, October 15, January 15—July 15 is incorrect; Q2 is due June 15.",
+    "tip": "Estimated tax: April 15, JUNE 15 (not July!), September 15, January 15. The June date trips up test-takers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -16612,8 +16612,8 @@ const questions = [
       "D": "First pay the disputed tax in full"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6213(a), the Tax Court is a prepayment forum—taxpayers can challenge a deficiency without paying the disputed tax first. However, the IRS must have issued a notice of deficiency under §6212 before a petition can be filed. The petition must be filed within 90 days of the notice (150 days if outside U.S.).",
-    "tip": "Tax Court = no prepayment (§6213). District Court or Court of Federal Claims = must pay first, then sue for refund.",
+    "explanation": "Per IRC §6213(a), the Tax Court is a prepayment forum—taxpayers can challenge a deficiency without paying the disputed tax first. However, the IRS must first issue a notice of deficiency (90-day letter) under §6212 before a petition can be filed. The petition must be filed within 90 days (150 days if taxpayer is outside U.S.). Why other answers are wrong: (B) Income threshold—no income threshold exists for Tax Court jurisdiction; (C) Attorney representation—taxpayers may represent themselves (pro se) in Tax Court; (D) Pay first—this is required for District Court or Court of Federal Claims, not Tax Court.",
+    "tip": "Tax Court = no prepayment (§6213). District Court/Court of Federal Claims = pay first, then sue for refund.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -16633,8 +16633,8 @@ const questions = [
       "D": "10% of the understatement"
     },
     "correctAnswer": "A",
-    "explanation": "The accuracy-related penalty under IRC §6662(a) is 20% and applies to underpayments due to negligence (§6662(b)(1)), disregard of rules (§6662(b)(1)), substantial understatement (§6662(b)(2)), substantial valuation misstatement (§6662(b)(3)), and other specified causes. Per §6662(d)(1)(A), a substantial understatement exists when the understatement exceeds the greater of 10% of the correct tax or $5,000.",
-    "tip": "20% accuracy penalty (§6662), 75% civil fraud (§6663). Know the 10%/$5,000 threshold for substantial understatement under §6662(d).",
+    "explanation": "Per IRC §6662(a), the accuracy-related penalty is 20% and applies to underpayments due to negligence (§6662(b)(1)), substantial understatement (§6662(b)(2)), or valuation misstatement (§6662(b)(3)). Per §6662(d)(1)(A), a substantial understatement exists when the understatement exceeds the greater of 10% of the correct tax or $5,000. Why other answers are wrong: (B) 50%—no 50% penalty exists in the Code; (C) 75%—this is the civil FRAUD penalty under §6663, not accuracy-related; (D) 10%—understates the penalty rate for accuracy-related penalties.",
+    "tip": "20% accuracy penalty (§6662), 75% civil fraud (§6663). Substantial = greater of 10% of tax or $5,000.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16654,8 +16654,8 @@ const questions = [
       "D": "The taxpayer files an amended return"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6501(e)(1)(A), the 6-year statute of limitations applies when there is an omission of gross income exceeding 25% of the gross income stated on the return. For trade or business under §6501(e)(1)(B), this includes omissions of amounts over 25% of gross receipts. The extended period provides the IRS more time to discover substantial omissions.",
-    "tip": "25% = 6 years (§6501(e)). Fraud or failure to file = unlimited (§6501(c)). Overstated deductions don't trigger 6 years.",
+    "explanation": "Per IRC §6501(e)(1)(A), the 6-year statute of limitations applies when there is an omission of gross income exceeding 25% of the gross income stated on the return. For trade or business under §6501(e)(1)(B), this includes omissions exceeding 25% of gross receipts. Why other answers are wrong: (A) IRS issues notice of deficiency—this doesn't extend the limitations period; the notice must be issued within the period; (B) Any amount omitted—the 3-year period applies for minor omissions; the 6-year extension requires >25% omission; (D) Amended return filed—filing an amended return doesn't extend the period (though it may restart it for new items).",
+    "tip": ">25% omission = 6 years (§6501(e)). Fraud = unlimited (§6501(c)). Overstated deductions don't trigger 6-year period.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16675,8 +16675,8 @@ const questions = [
       "D": "Calculate the statute of limitations period"
     },
     "correctAnswer": "C",
-    "explanation": "The IRS Discriminant Function System (DIF) assigns scores to returns based on the probability that an audit would result in a tax change. Returns with higher DIF scores are more likely to be selected for examination. The system uses statistical models based on past audit results. The IRS's authority to examine returns is granted under IRC §7602.",
-    "tip": "DIF is the primary computer screening method. IRS examination authority comes from §7602. Other methods include informant tips and information matching.",
+    "explanation": "Per IRC §7602 (IRS examination authority), the Discriminant Function System (DIF) assigns scores to returns based on the probability that an audit would result in a tax change. Returns with higher DIF scores are more likely to be selected for examination. The system uses statistical models based on past audit results. Why other answers are wrong: (A) Match information returns—this is the Automated Underreporter (AUR) program, not DIF; (B) Determine penalty amount—penalties are calculated per §6651-6663, not by DIF; (D) Calculate limitations period—the statute of limitations is determined by §6501, not a scoring system.",
+    "tip": "DIF = audit selection scoring. AUR = W-2/1099 matching. IRS examination authority per §7602.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16696,8 +16696,8 @@ const questions = [
       "D": "Filing a formal written protest for proposed adjustments over $25,000"
     },
     "correctAnswer": "D",
-    "explanation": "For proposed adjustments exceeding $25,000, IRS procedures require a formal written protest to appeal. For smaller amounts, a small case request or brief written statement may be sufficient. The Appeals Office is independent of the examination function and has authority to settle cases based on hazards of litigation. The right to appeal is part of the Taxpayer Bill of Rights under IRC §7803(a)(3).",
-    "tip": "Over $25,000 = formal protest required. Under $25,000 = small case request acceptable. Appeals authority is administrative, not statutory.",
+    "explanation": "Per IRS procedures and the Taxpayer Bill of Rights under IRC §7803(a)(3), for proposed adjustments exceeding $25,000, a formal written protest is required to request Appeals. For smaller amounts, a small case request or brief written statement is sufficient. The Appeals Office is independent and can settle cases based on hazards of litigation. Why other answers are wrong: (A) Calling IRS hotline—a phone call is insufficient; a written request is required; (B) Filing amended return—this doesn't invoke Appeals; it's a separate process; (C) Filing Tax Court petition—this bypasses Appeals and goes directly to litigation (though Appeals can be requested after petition).",
+    "tip": ">$25,000 = formal written protest. <$25,000 = small case request. Appeals is administrative, independent of Exam.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16717,8 +16717,8 @@ const questions = [
       "D": "Ignorance of the tax law"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6651(a)(1), reasonable cause may be established when a taxpayer exercises ordinary business care and prudence but still fails to comply. Per Treas. Reg. §301.6651-1(c), reliance on professional advice (if the taxpayer provided complete information) can demonstrate reasonable cause. Ignorance of law, lack of funds, and busy schedules generally do not excuse filing failures.",
-    "tip": "Reasonable cause exception in §6651(a). Document your due diligence and professional reliance per Treas. Reg. §301.6651-1(c).",
+    "explanation": "Per IRC §6651(a)(1) and Treas. Reg. §301.6651-1(c), reasonable cause may be established when a taxpayer exercises ordinary business care and prudence but still fails to comply. Reliance on professional advice (when the taxpayer provided complete and accurate information) can demonstrate reasonable cause. Why other answers are wrong: (B) Lack of funds—inability to PAY doesn't excuse failure to FILE; taxpayers can file without payment; (C) Heavy work schedule—personal inconvenience is not reasonable cause; (D) Ignorance of law—generally not an excuse per the legal maxim 'ignorantia juris non excusat.'",
+    "tip": "Reasonable cause: ordinary business care + reliance on competent advisor. Ignorance, busy, broke = NOT excuses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16738,8 +16738,8 @@ const questions = [
       "D": "Runs from the due date of the return until paid"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §6601(a), interest on underpayments runs from the due date of the return (without regard to extensions) until payment is received. Unlike penalties, interest generally cannot be waived or abated under §6404 except for IRS errors. Interest is compounded daily per §6622 and charged on the unpaid tax plus any penalties. Personal tax interest is not deductible under §163(h).",
-    "tip": "Interest cannot be waived (§6601)—penalties can (§6651). Interest runs from original due date, not extended due date.",
+    "explanation": "Per IRC §6601(a), interest on underpayments runs from the due date of the return (without regard to extensions) until payment is received. Interest is compounded daily per §6622 and charged on unpaid tax plus penalties. Unlike penalties, interest generally cannot be waived under §6404 except for IRS errors. Why other answers are wrong: (A) Can be waived for reasonable cause—penalties can be waived per §6651(a), but interest cannot (except for IRS error per §6404); (B) Charged only if penalties apply—interest accrues regardless of penalties; (C) Deductible as business expense—personal tax interest is nondeductible under §163(h); only business tax interest may be deductible.",
+    "tip": "Interest: cannot be waived, runs from original due date, compounded daily. Penalties CAN be waived for reasonable cause.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16759,8 +16759,8 @@ const questions = [
       "D": "100% of the current year tax liability"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6654(d)(1)(B), the safe harbor requires paying at least 90% of the current year tax or 100% of the prior year tax. Per §6654(d)(1)(C), the prior year threshold increases to 110% if prior year AGI exceeded $150,000. Meeting either test under §6654(d)(1)(B) avoids the underpayment penalty.",
-    "tip": "Safe harbor: 90% current OR 100% prior (§6654(d)(1)(B)). 110% if AGI > $150K (§6654(d)(1)(C)).",
+    "explanation": "Per IRC §6654(d)(1)(B), the safe harbor requires paying at least 90% of the current year tax or 100% of the prior year tax (whichever is less). Per §6654(d)(1)(C), the prior year threshold increases to 110% if prior year AGI exceeded $150,000 ($75,000 MFS). Why other answers are wrong: (A) Amount withheld prior year—withholding isn't a safe harbor test; must meet 90%/100% threshold; (B) 80% current year—understates the requirement; it's 90%, not 80%; (D) 100% current year—this would always work but isn't required; 90% current is sufficient.",
+    "tip": "Safe harbor: 90% current OR 100% prior (110% if AGI>$150K). Pay via withholding OR estimated payments.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16780,8 +16780,8 @@ const questions = [
       "D": "The same period as the assessment statute of limitations"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §6511(a), the refund statute of limitations is the later of 3 years from the date the return was filed or 2 years from the date the tax was paid. Per §6511(b)(2)(A), if the claim is filed within 3 years, the refund is limited to the amount paid within 3 years of the claim plus the extension period.",
-    "tip": "Refund SOL: 3 years from filing OR 2 years from payment (§6511(a)). Refund amount limited per §6511(b)(2).",
+    "explanation": "Per IRC §6511(a), the refund statute of limitations is the later of 3 years from the date the return was filed or 2 years from the date the tax was paid. Per §6511(b)(2)(A), if the claim is filed within 3 years, the refund is limited to amounts paid within 3 years plus any extension period. Why other answers are wrong: (A) 2 years from payment only—this is one prong; the 3-year-from-filing test may be later; (C) 5 years from due date—no such refund period exists; (D) Same as assessment SOL—assessment is 3 years per §6501(a), but refund has the 2-year payment alternative.",
+    "tip": "Refund SOL: LATER of 3 years from filing OR 2 years from payment (§6511(a)). Amount limited per §6511(b).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16801,8 +16801,8 @@ const questions = [
       "D": "April 15, 2024"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6511(a), to claim a refund, an amended return must be filed within 3 years from the date the original return was filed. The original return was filed April 15, 2022, so the amended return must be filed by April 15, 2025. Form 1040-X is the amended return for individuals. If only a correction (no refund) is needed, there's no specific deadline.",
-    "tip": "Amended return for refund = 3 years from original filing date per §6511(a). No refund possible after that date.",
+    "explanation": "Per IRC §6511(a), to claim a refund, an amended return must be filed within 3 years from the date the original return was filed. The original was filed April 15, 2022, so the deadline is April 15, 2025 (3 years later). Form 1040-X is used. Why other answers are wrong: (B) April 15, 2026—this would be 4 years, exceeding the 3-year limit; (C) No time limit—incorrect; the 3-year limit is statutory; (D) April 15, 2024—this is only 2 years from filing.",
+    "tip": "Amended return for refund = 3 years from original filing date (§6511(a)). Use Form 1040-X.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -16822,8 +16822,8 @@ const questions = [
       "D": "60 days"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6213(a), a taxpayer has 90 days from the date of the notice of deficiency to petition the Tax Court (150 days if the notice is addressed to a person outside the United States). The 90-day deadline is jurisdictional—if no petition is filed, the deficiency becomes final per §6213(c) and the IRS can assess and collect the tax.",
-    "tip": "90-day deadline in §6213(a) is jurisdictional—missing it means no Tax Court. Outside U.S. = 150 days.",
+    "explanation": "Per IRC §6213(a), a taxpayer has 90 days from the date of the notice of deficiency to petition the Tax Court (150 days if addressed to a person outside the U.S.). The deadline is jurisdictional—missing it means the deficiency becomes final per §6213(c). Why other answers are wrong: (B) 120 days—no such deadline exists for petitioning the Tax Court; (C) 30 days—too short; 30 days is typically for responding to IRS letters, not petitioning Tax Court; (D) 60 days—incorrect; there is no 60-day period for petitioning the Tax Court under the statutory notice of deficiency provisions.",
+    "tip": "90-day letter = 90 days to petition Tax Court (§6213(a)). Jurisdictional—miss it and you lose Tax Court option.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16843,8 +16843,8 @@ const questions = [
       "D": "0.5% per month"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6651(c)(1), when both penalties apply, the failure-to-file penalty (5%) is reduced by the failure-to-pay penalty (0.5%), resulting in a net failure-to-file of 4.5%. Combined with the 0.5% failure-to-pay, the total is 5% per month. This prevents double-counting the failure-to-pay component.",
-    "tip": "Per §6651(c)(1): 5% - 0.5% + 0.5% = 5% total. The failure-to-file penalty is reduced by the failure-to-pay amount.",
+    "explanation": "Per IRC §6651(c)(1), when both penalties apply, the failure-to-file penalty (5%) is reduced by the failure-to-pay penalty (0.5%), resulting in a net 4.5% + 0.5% = 5% per month. This prevents double-counting. Calculation: 5% file - 0.5% reduction + 0.5% pay = 5% total. Why other answers are wrong: (B) 5.5% per month—would occur if penalties weren't coordinated, but §6651(c)(1) prevents this; (C) 10% per month—overstates; no 10% monthly penalty exists; (D) 0.5% per month—this is only the failure-to-pay penalty, ignoring failure-to-file.",
+    "tip": "Combined penalty = 5% (not 5.5%) per §6651(c)(1). File penalty reduced by pay penalty to avoid stacking.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -16864,8 +16864,8 @@ const questions = [
       "D": "Unlimited"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6502(a), the collection statute of limitations is 10 years from the date of assessment. This period can be extended by agreement under §6502(a)(2) or suspended under §6503 for bankruptcy, offer in compromise, or collection due process hearing. After 10 years, the liability is extinguished and the IRS cannot pursue collection.",
-    "tip": "Assessment = 3 years (§6501). Collection = 10 years (§6502). Fraud = unlimited for assessment (§6501(c)), but collection still 10 years.",
+    "explanation": "Per IRC §6502(a), the collection statute of limitations is 10 years from the date of assessment. This period can be extended by agreement under §6502(a)(2) or suspended under §6503 for bankruptcy, offer in compromise, or CDP hearing. After 10 years, the liability expires. Why other answers are wrong: (A) 3 years—this is the ASSESSMENT period under §6501(a), not collection; (B) 6 years—this is the extended assessment period for >25% omission under §6501(e); (D) Unlimited—collection has a statutory limit; only fraud ASSESSMENT is unlimited per §6501(c).",
+    "tip": "Assessment = 3 years (§6501). Collection = 10 years (§6502). Fraud assessment = unlimited, but collection still 10 years.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16885,8 +16885,8 @@ const questions = [
       "D": "$1,000"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §6041(a), Form 1099-NEC must be issued for nonemployee compensation of $600 or more paid to an individual who is not an employee. This applies to payments for services in the course of trade or business, not for merchandise. Payments to corporations generally don't require 1099s per Treas. Reg. §1.6041-3(p) (with exceptions for legal and medical services).",
-    "tip": "$600 threshold per §6041(a) for 1099-NEC. Must be filed by January 31—no extension available.",
+    "explanation": "Per IRC §6041(a), Form 1099-NEC must be issued for nonemployee compensation of $600 or more paid in the course of trade or business. Payments to corporations generally don't require 1099s per Treas. Reg. §1.6041-3(p) (exceptions: legal and medical services). Why other answers are wrong: (A) $100—too low; the threshold is $600; (B) $400—this is the self-employment tax threshold, not the 1099 filing threshold; (D) $1,000—too high; the threshold is $600.",
+    "tip": "$600 threshold for 1099-NEC (§6041(a)). Due January 31—no extension. No 1099 to corporations (except attorneys/medical).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16906,8 +16906,8 @@ const questions = [
       "D": "Form 8821"
     },
     "correctAnswer": "C",
-    "explanation": "Form 2848, Power of Attorney and Declaration of Representative, authorizes an individual to represent a taxpayer before the IRS under Circular 230 (31 C.F.R. Part 10). Form 8821 only authorizes the IRS to disclose tax information under IRC §6103 but does not grant representation rights. The representative must be eligible to practice before the IRS (attorney, CPA, enrolled agent, etc.).",
-    "tip": "Form 2848 = POA with representation (Circular 230). Form 8821 = information disclosure only under §6103, no representation authority.",
+    "explanation": "Per Circular 230 (31 C.F.R. Part 10), Form 2848 (Power of Attorney and Declaration of Representative) authorizes an individual to represent a taxpayer before the IRS. The representative must be eligible to practice (attorney, CPA, enrolled agent, etc.). Why other answers are wrong: (A) Form 4868—this is the automatic extension request for individuals, not a POA; (B) Form 8879—this is the e-file signature authorization, not a POA; (D) Form 8821—this authorizes information disclosure under §6103 but does NOT grant representation rights.",
+    "tip": "Form 2848 = POA with representation. Form 8821 = disclosure only (no representation). Circular 230 governs practice.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16927,8 +16927,8 @@ const questions = [
       "D": "Know the maximum amount of time to respond to an IRS request"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §7803(a)(3), the Taxpayer Bill of Rights includes the right to be informed, which means knowing what they need to do to comply and understanding deadlines for responding to IRS requests. Other rights include quality service, paying no more than correct tax, challenging the IRS, and finality.",
-    "tip": "Know the 10 taxpayer rights in §7803(a)(3): informed, quality service, pay only what's owed, challenge, appeal, finality, privacy, confidentiality, retain representation, fair tax system.",
+    "explanation": "Per IRC §7803(a)(3), the Taxpayer Bill of Rights includes 10 fundamental rights. The right to be informed means knowing what to do to comply with tax laws, including deadlines for responding to IRS requests. Why other answers are wrong: (A) All liabilities discharged after 5 years—the collection period is 10 years per §6502, not 5; (B) Demand IRS employee termination—taxpayers have no such right; (C) Refuse to pay disputed tax—taxpayers must pay or petition Tax Court; they cannot simply refuse to pay.",
+    "tip": "10 Taxpayer Rights (§7803(a)(3)): Informed, Quality Service, Pay No More Than Owed, Challenge, Appeal, Finality, Privacy, Confidentiality, Representation, Fair System.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16948,8 +16948,8 @@ const questions = [
       "D": "75% of the underpayment due to fraud"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §6663(a), the civil fraud penalty is 75% of the portion of the underpayment attributable to fraud. Unlike the accuracy-related penalty under §6662 (20%), the fraud penalty requires the IRS to prove fraud by clear and convincing evidence per §6663(b). Per §6662(b), the fraud penalty replaces (not stacks with) the accuracy-related penalty for the fraudulent portion.",
-    "tip": "75% fraud penalty (§6663) replaces 20% accuracy penalty (§6662) for the fraudulent portion. IRS has burden of proof per §6663(b).",
+    "explanation": "Per IRC §6663(a), the civil fraud penalty is 75% of the underpayment attributable to fraud. The IRS must prove fraud by clear and convincing evidence per §6663(b). The fraud penalty replaces (not stacks with) the accuracy-related penalty for the fraudulent portion. Why other answers are wrong: (A) 100%—overstates the penalty; (B) 20%—this is the accuracy-related penalty under §6662, not fraud; (C) 50%—no such penalty rate exists.",
+    "tip": "75% fraud penalty (§6663) replaces 20% accuracy penalty (§6662). IRS burden = clear and convincing evidence.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -16969,8 +16969,8 @@ const questions = [
       "D": "Covers all communications between any CPA and client"
     },
     "correctAnswer": "C",
-    "explanation": "IRC §7525(a) extends privilege to tax advice communications between taxpayers and federally authorized tax practitioners (CPAs, enrolled agents, attorneys) in noncriminal IRS proceedings and Tax Court. Per §7525(b), it does not apply to written tax shelter advice. The privilege also does not apply to criminal matters or state tax issues and is narrower than attorney-client privilege.",
-    "tip": "§7525(a): noncriminal, federal tax matters only. §7525(b): NO privilege for tax shelter advice. Does NOT apply to criminal investigations.",
+    "explanation": "Per IRC §7525(a), the federally authorized tax practitioner privilege extends to tax advice communications with CPAs, enrolled agents, and attorneys in noncriminal federal tax proceedings. Per §7525(b), it does NOT apply to written tax shelter advice. Why other answers are wrong: (A) Cannot be waived—like attorney-client privilege, the client can waive it; (B) Identical to attorney-client—it's narrower (federal, noncriminal only, no shelters); (D) All CPA communications—only TAX ADVICE is privileged, not preparation or accounting services.",
+    "tip": "§7525 privilege: noncriminal, federal, tax advice only. NO privilege for tax shelters (§7525(b)) or criminal matters.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16990,7 +16990,7 @@ const questions = [
       "D": "The taxpayer simply cannot afford to pay the full amount"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §7122(a), the IRS may accept an OIC based on: doubt as to collectibility (taxpayer's assets and income are insufficient), doubt as to liability (genuine dispute about the correct tax under §7122(d)), or effective tax administration under §7122(c) (exceptional circumstances where collection would create economic hardship or be unfair). Simply being unable to pay isn't sufficient.",
+    "explanation": "Under IRC §7122(a), the IRS may accept an OIC based on: doubt as to collectibility (taxpayer's assets and income are insufficient), doubt as to liability (genuine dispute about the correct tax under §7122(d)), or effective tax administration under §7122(c) (exceptional circumstances where collection would create economic hardship or be unfair). Why other answers are wrong: (B) Payment plan—installment agreements under §6159 are separate from OIC; (C) Bankruptcy—this is a different legal process, not an OIC ground; (D) Cannot afford—this alone is insufficient; doubt as to collectibility requires analysis of reasonable collection potential (assets + future income).",
     "tip": "OIC bases under §7122: doubt as to liability (§7122(d)), doubt as to collectibility, or effective tax administration (§7122(c)).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17011,7 +17011,7 @@ const questions = [
       "D": "A reasonable basis and is disclosed on the return"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6662(d)(2)(B), the substantial understatement penalty can be avoided if: (1) the position has substantial authority, or (2) the position has at least a reasonable basis AND is adequately disclosed on Form 8275. Per §6662(d)(2)(C), for tax shelters, the taxpayer must also reasonably believe the position is more likely than not correct.",
+    "explanation": "Under IRC §6662(d)(2)(B), the substantial understatement penalty can be avoided if: (1) the position has substantial authority, or (2) the position has at least a reasonable basis AND is adequately disclosed on Form 8275. Per §6662(d)(2)(C), for tax shelters, the taxpayer must also reasonably believe the position is more likely than not correct. Why other answers are wrong: (B) Colorable support is a standard below reasonable basis (~20%) and is insufficient to avoid the substantial understatement penalty; (C) Prior audit approval does not provide protection from penalties in future years, as IRS approval in one audit doesn't create binding precedent for subsequent tax positions; (D) This option incorrectly states the requirements—while reasonable basis with disclosure can avoid the penalty, this option fails to mention that substantial authority alone (without disclosure) is also sufficient to avoid the penalty.",
     "tip": "Penalty avoidance per §6662(d)(2)(B): substantial authority (~40%), or reasonable basis (~20%) with disclosure. Stricter rules for shelters.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17032,7 +17032,7 @@ const questions = [
       "D": "U.S. Court of Federal Claims"
     },
     "correctAnswer": "C",
-    "explanation": "The U.S. District Court is the only trial court for tax matters that provides a right to jury trial under the Seventh Amendment. Under IRC §7422, District Court and Court of Federal Claims require prepayment of the disputed tax (refund suit), while Tax Court under §6213 does not require prepayment.",
+    "explanation": "The U.S. District Court is the only trial court for tax matters that provides a right to jury trial under the Seventh Amendment. Under IRC §7422, District Court and Court of Federal Claims require prepayment of the disputed tax (refund suit), while Tax Court under §6213 does not require prepayment. Why other answers are wrong: (A) Any forum—no, only District Court provides jury trials; (B) Tax Court—no jury trials, judge decides all issues; (D) Court of Federal Claims—no jury trials, bench trials only.",
     "tip": "Jury trial = District Court only. No prepayment = Tax Court (§6213). Refund suit = District Court or Court of Federal Claims (§7422).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -17053,7 +17053,7 @@ const questions = [
       "D": "Requests the shift in writing"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §7491(a), the burden of proof shifts to the IRS in court proceedings if the taxpayer introduces credible evidence, maintains adequate records, cooperates with reasonable IRS requests per §7491(a)(2)(B), and meets any applicable substantiation requirements. Per §7491(a)(1), this applies only to factual issues, not legal interpretations.",
+    "explanation": "Under IRC §7491(a), the burden of proof shifts to the IRS in court proceedings if the taxpayer introduces credible evidence, maintains adequate records, cooperates with reasonable IRS requests per §7491(a)(2)(B), and meets any applicable substantiation requirements. Per §7491(a)(1), this applies only to factual issues, not legal interpretations. Why other answers are wrong: (A) Timely petition—filing alone doesn't shift the burden; (C) Disputes adjustment—disputing doesn't shift burden without credible evidence; (D) Written request—no such procedure exists for burden shifting.",
     "tip": "Burden shift per §7491(a) requires: credible evidence, records, cooperation (§7491(a)(2)(B)), and substantiation. Only for factual issues.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17074,7 +17074,7 @@ const questions = [
       "D": "Appeal only to IRS Appeals"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6330(c), a CDP hearing allows the taxpayer to challenge the underlying liability (if not previously contested per §6330(c)(2)(B)), propose collection alternatives (installment agreement under §6159, OIC under §7122), and challenge the appropriateness of the collection action. Per §6330(d), the taxpayer may appeal to Tax Court within 30 days of the determination.",
+    "explanation": "Under IRC §6330(c), a CDP hearing allows the taxpayer to challenge the underlying liability (if not previously contested per §6330(c)(2)(B)), propose collection alternatives (installment agreement under §6159, OIC under §7122), and challenge the appropriateness of the collection action. Per §6330(d), the taxpayer may appeal to Tax Court within 30 days of the determination. Why other answers are wrong: (B) Automatic 2-year stay—no automatic stay; collection may proceed if taxpayer waives or after determination; (C) Forgive penalties—CDP is not automatic penalty relief; (D) Appeals only—taxpayer CAN appeal to Tax Court per §6330(d), not just IRS Appeals.",
     "tip": "CDP hearing per §6330(c): challenge liability (if first opportunity), propose alternatives. Tax Court appeal within 30 days per §6330(d).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17095,7 +17095,7 @@ const questions = [
       "D": "That the understatement was due to a math error"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §6015(b), traditional innocent spouse relief requires: (1) joint return filed, (2) understatement attributable to erroneous items of the other spouse, (3) the requesting spouse did not know and had no reason to know of the understatement, and (4) it would be inequitable to hold the requesting spouse liable. Alternative relief options exist under §6015(c) (separation of liability) and §6015(f) (equitable relief).",
+    "explanation": "Under IRC §6015(b), traditional innocent spouse relief requires: (1) joint return filed, (2) understatement attributable to erroneous items of the other spouse, (3) the requesting spouse did not know and had no reason to know of the understatement, and (4) it would be inequitable to hold the requesting spouse liable. Alternative relief options exist under §6015(c) (separation of liability) and §6015(f) (equitable relief). Why other answers are wrong: (A) Divorced—divorce is NOT required; relief is available to married couples too; (C) Lower income—income disparity is not a requirement; (D) Math error—math errors don't create innocent spouse issues; this relief is for erroneous ITEMS of the other spouse.",
     "tip": "Innocent spouse per §6015(b): joint return, other spouse's error, didn't know, inequitable. Alternatives: §6015(c) (separation), §6015(f) (equitable).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17116,7 +17116,7 @@ const questions = [
       "D": "Any tax underpayment"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §7201, tax evasion requires: (1) an additional tax is due, (2) the taxpayer committed an affirmative act of evasion (concealment of assets, false entries, etc.), and (3) willfulness (intentional violation of a known legal duty per Cheek v. U.S.). The government must prove each element beyond a reasonable doubt. Penalty is up to $100,000 ($500,000 for corporations) and/or 5 years imprisonment.",
+    "explanation": "Under IRC §7201, tax evasion requires: (1) an additional tax is due, (2) the taxpayer committed an affirmative act of evasion (concealment of assets, false entries, etc.), and (3) willfulness (intentional violation of a known legal duty per Cheek v. U.S.). The government must prove each element beyond a reasonable doubt. Penalty is up to $100,000 ($500,000 for corporations) and/or 5 years imprisonment. Why other answers are wrong: (B) Negligence—mere negligence is a civil penalty under §6662, not criminal evasion; (C) Failure to file—this is a separate crime under §7203, not evasion which requires affirmative acts; (D) Any underpayment—underpayment alone is civil; evasion requires willful intent.",
     "tip": "Tax evasion (§7201) = willful + affirmative act. Criminal standard = beyond reasonable doubt. Up to 5 years/$100,000.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -17137,7 +17137,7 @@ const questions = [
       "D": "When the IRS files Form 668(Y) with the county recorder"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §6321, a federal tax lien arises automatically when: (1) a tax is assessed, (2) notice and demand for payment is sent under §6303, and (3) the taxpayer neglects or refuses to pay. The lien attaches to all property and rights to property. Per §6323, filing the Notice of Federal Tax Lien (Form 668) makes the lien public for priority purposes but is not required for the lien to exist.",
+    "explanation": "Under IRC §6321, a federal tax lien arises automatically when: (1) a tax is assessed, (2) notice and demand for payment is sent under §6303, and (3) the taxpayer neglects or refuses to pay. The lien attaches to all property and rights to property. Per §6323, filing the Notice of Federal Tax Lien (Form 668) makes the lien public for priority purposes but is not required for the lien to exist. Why other answers are wrong: (B) Assets exceed amount owed—no such requirement; lien arises regardless of asset levels; (C) 60 days after deficiency notice—the notice of deficiency is for assessment, not lien creation; (D) Form 668 filing—filing PERFECTS the lien for priority but the lien arises automatically earlier.",
     "tip": "Lien arises automatically per §6321 (assess, demand, nonpayment). Filing per §6323 just makes it public for priority purposes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17158,7 +17158,7 @@ const questions = [
       "D": "The taxpayer has no prior penalties in the last 3 years and is in compliance"
     },
     "correctAnswer": "D",
-    "explanation": "First-time abatement (FTA) is an IRS administrative waiver under IRM 20.1.1.3.6.1 for §6651 failure-to-file or failure-to-pay penalties if the taxpayer has: (1) no penalties for the prior 3 tax years, (2) filed all required returns or extensions, and (3) paid or arranged to pay any taxes due. It's a relief valve for otherwise compliant taxpayers.",
+    "explanation": "First-time abatement (FTA) is an IRS administrative waiver under IRM 20.1.1.3.6.1 for §6651 failure-to-file or failure-to-pay penalties if the taxpayer has: (1) no penalties for the prior 3 tax years, (2) filed all required returns or extensions, and (3) paid or arranged to pay any taxes due. It's a relief valve for otherwise compliant taxpayers. Why other answers are wrong: (A) Written request—FTA can be requested by phone; no formal written request is required; (B) Under $1,000—no dollar threshold; FTA depends on compliance history, not penalty amount; (C) Amended return—filing an amended return doesn't trigger FTA; compliance history is the key.",
     "tip": "FTA per IRM 20.1.1.3.6.1: clean 3-year history, all returns filed, all taxes paid. Available by phone—no formal request needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -17179,7 +17179,7 @@ const questions = [
       "D": "A declared federal disaster period"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §6503(a), the assessment statute is suspended during the 90-day period (150 days if outside U.S.) for the taxpayer to petition the Tax Court, plus 60 additional days. It's also suspended under §6503(h) during bankruptcy and under §6503(k) while an offer in compromise is pending. The suspension ensures the IRS has adequate time after restrictions are lifted.",
+    "explanation": "Under IRC §6503(a), the assessment statute is suspended during the 90-day period (150 days if outside U.S.) for the taxpayer to petition the Tax Court, plus 60 additional days. It's also suspended under §6503(h) during bankruptcy and under §6503(k) while an offer in compromise is pending. The suspension ensures the IRS has adequate time after restrictions are lifted. Why other answers are wrong: (A) Outside U.S. 60+ days—the 150-day rule applies to taxpayers who were outside the U.S. when the deficiency notice was sent, not to general travel; (C) CPA unavailable—practitioner availability doesn't toll the statute; (D) Disaster period—disaster relief may extend deadlines but doesn't automatically suspend the assessment statute.",
     "tip": "Statute suspended per §6503 during: Tax Court petition period (§6503(a)), bankruptcy (§6503(h)), OIC pending (§6503(k)).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17200,7 +17200,7 @@ const questions = [
       "D": "The client insists on taking the position"
     },
     "correctAnswer": "B",
-    "explanation": "Under IRC §6694(a), a preparer faces a penalty for an undisclosed position unless it has substantial authority, or for a disclosed position unless it has a reasonable basis. The penalty is the greater of $1,000 or 50% of preparer's fee. Per §6694(b), willful or reckless positions carry a higher penalty of the greater of $5,000 or 75% of the fee.",
+    "explanation": "Under IRC §6694(a), a preparer faces a penalty for an undisclosed position unless it has substantial authority, or for a disclosed position unless it has a reasonable basis. The penalty is the greater of $1,000 or 50% of preparer's fee. Per §6694(b), willful or reckless positions carry a higher penalty of the greater of $5,000 or 75% of the fee. Why other answers are wrong: (A) Any support—mere arguable support is below reasonable basis; insufficient to avoid penalties; (C) CPA status—professional credential doesn't exempt preparer from penalty standards; (D) Client insistence—preparer cannot rely on client pressure to avoid responsibility.",
     "tip": "Preparer penalties: §6694(a) = $1,000/50% (undisclosed needs substantial authority). §6694(b) = $5,000/75% for willful/reckless.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17221,7 +17221,7 @@ const questions = [
       "D": "Impose penalties without issuing a notice"
     },
     "correctAnswer": "C",
-    "explanation": "Substance over form is a judicial doctrine allowing the IRS to look through the legal form of a transaction to its underlying economic substance and tax it accordingly. Related doctrines include step transaction (treating multiple steps as one), business purpose (transactions must have non-tax purpose), and economic substance codified in IRC §7701(o) (must change economic position meaningfully apart from tax effects).",
+    "explanation": "Substance over form is a judicial doctrine allowing the IRS to look through the legal form of a transaction to its underlying economic substance and tax it accordingly. Related doctrines include step transaction (treating multiple steps as one), business purpose (transactions must have non-tax purpose), and economic substance codified in IRC §7701(o) (must change economic position meaningfully apart from tax effects). Why other answers are wrong: (A) Extend statute indefinitely—the doctrine doesn't affect statute of limitations; (B) Assess without appeals—taxpayers always have appeal rights; (D) Penalties without notice—due process requires notice before penalties.",
     "tip": "Substance over form, step transaction, business purpose are judicial doctrines. Economic substance is now codified in §7701(o).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -17284,7 +17284,7 @@ const questions = [
       "D": "More than 12 months"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §1222(3)-(4), long-term capital gain or loss treatment requires a holding period of MORE than one year. Per §1223, the holding period begins the day after acquisition and includes the date of sale. An asset held for exactly 12 months is still short-term under §1222(1)-(2); it must be held for at least one year plus one day.",
+    "explanation": "Under IRC §1222(3)-(4), long-term capital gain or loss treatment requires a holding period of MORE than one year. Per §1223, the holding period begins the day after acquisition and includes the date of sale. An asset held for exactly 12 months is still short-term under §1222(1)-(2); it must be held for at least one year plus one day. Why other answers are wrong: (A) 18 months—this was the old rule (1978-1984); current law is >12 months; (B) More than 6 months—this shorter period applied 1977-1978; (C) At least 12 months—close but wrong; 'at least' means exactly 12 months qualifies, but §1222 requires MORE than 12 months.",
     "tip": "MORE than 12 months = long-term (§1222(3)). The day after purchase is day 1 per §1223 holding period rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -17683,7 +17683,7 @@ const questions = [
       "D": "No additional gain is recognized by either party"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §453(e), when a related party buyer (as defined in §453(f)(1)) resells property within 2 years, the original seller must recognize gain as if the original sale was for cash (to the extent of the resale proceeds per §453(e)(1)). This rule prevents using installment sales to related parties as a device to defer gain while still getting cash out.",
+    "explanation": "Under IRC §453(e), when a related party buyer (as defined in §453(f)(1)) resells property within 2 years, the original seller must recognize gain as if the original sale was for cash (to the extent of the resale proceeds per §453(e)(1)). This rule prevents using installment sales to related parties as a device to defer gain while still getting cash out. Why other answers are wrong: (B) Only related party gains—the ORIGINAL seller must accelerate gain recognition, not just the reseller; (C) Shared equally—no equal sharing rule; acceleration falls entirely on original seller; (D) No additional gain—this ignores the anti-abuse rule of §453(e).",
     "tip": "Related party resale within 2 years accelerates original seller's gain per §453(e). Prevents installment sale abuse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -17893,7 +17893,7 @@ const questions = [
       "D": "Available to active participants with AGI under $150,000"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §469(i), the $25,000 allowance is available to active participants (not just material participants per §469(i)(6)) in rental real estate. Per §469(i)(3), it phases out by 50 cents for each dollar of AGI over $100,000, completely eliminated at $150,000 AGI. Active participation requires significant participation in management decisions.",
+    "explanation": "Under IRC §469(i), the $25,000 allowance is available to active participants (not just material participants per §469(i)(6)) in rental real estate. Per §469(i)(3), it phases out by 50 cents for each dollar of AGI over $100,000, completely eliminated at $150,000 AGI. Active participation requires significant participation in management decisions. Why other answers are wrong: (B) Real estate professionals only—RE professionals use different rules under §469(c)(7); the $25K allowance is for active participants; (C) All rental owners—passive investors without active participation don't qualify; (D) Under $150,000—partially correct but incomplete; allowance begins phasing out at $100,000, not available at full $150,000.",
     "tip": "$25,000 rental loss allowance per §469(i): active participant, phaseout $100K-$150K AGI (§469(i)(3)). MFS = generally $0.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -17956,7 +17956,7 @@ const questions = [
       "D": "Recognized proportionally with each payment"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §453(i), depreciation recapture under §1245 and §1250 is recognized in full in the year of sale, regardless of installment method treatment. Per §453(i)(2), the recapture amount increases basis for purposes of computing the remaining gain that can be deferred under §453. Only the §1231 gain portion qualifies for installment treatment.",
+    "explanation": "Under IRC §453(i), depreciation recapture under §1245 and §1250 is recognized in full in the year of sale, regardless of installment method treatment. Per §453(i)(2), the recapture amount increases basis for purposes of computing the remaining gain that can be deferred under §453. Only the §1231 gain portion qualifies for installment treatment. Why other answers are wrong: (B) Deferred to final payment—§453(i) explicitly denies deferral for recapture; (C) Excluded from calculation—recapture IS part of the calculation, just recognized immediately; (D) Proportional recognition—this applies to §1231 gain, not recapture income.",
     "tip": "Recapture accelerated to year of sale per §453(i). Cannot defer ordinary recapture income. Only §1231 gain can be deferred.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -18103,7 +18103,7 @@ const questions = [
       "D": "Health insurance premiums paid by employer"
     },
     "correctAnswer": "B",
-    "explanation": "Personal use of an employer-provided vehicle is taxable compensation under IRC §61. Per §106, health insurance is excludable. Per §132(f), qualified transportation is excludable up to monthly limits. Per §79, group term life insurance up to $50,000 is excludable. The value of personal use must be included in the employee's W-2 income.",
+    "explanation": "Personal use of an employer-provided vehicle is taxable compensation under IRC §61. Per §106, health insurance is excludable. Per §132(f), qualified transportation is excludable up to monthly limits. Per §79, group term life insurance up to $50,000 is excludable. The value of personal use must be included in the employee's W-2 income. Why other answers are wrong: (A) Qualified transportation—excludable up to $315/month (2024) per §132(f); (C) Group term life $50K—excluded under §79, only excess coverage is taxable; (D) Health insurance—fully excludable under §106 regardless of amount.",
     "tip": "Personal use of company car = taxable per §61. Health insurance excluded per §106. Group term life per §79 ($50K limit).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -18229,7 +18229,7 @@ const questions = [
       "D": "$2,500"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §25A(i), the AOTC provides a maximum credit of $2,500 per eligible student (100% of first $2,000 + 25% of next $2,000 per §25A(i)(1)). Per §25A(i)(6), 40% of the credit (up to $1,000) is refundable. Per §25A(i)(2), it's available for the first 4 years of post-secondary education. AGI phaseouts apply under §25A(i)(4).",
+    "explanation": "Under IRC §25A(i), the AOTC provides a maximum credit of $2,500 per eligible student (100% of first $2,000 + 25% of next $2,000 per §25A(i)(1)). Per §25A(i)(6), 40% of the credit (up to $1,000) is refundable. Per §25A(i)(2), it's available for the first 4 years of post-secondary education. AGI phaseouts apply under §25A(i)(4). Why other answers are wrong: (A) $4,000—this is the maximum QUALIFIED EXPENSES, not the credit amount; (B) $1,500—this was the old Hope Credit maximum; (C) $2,000—this is the Lifetime Learning Credit maximum per §25A(c).",
     "tip": "AOTC per §25A(i): $2,500 max, 40% refundable ($1,000), first 4 years only. Lifetime Learning (§25A(c)) = $2,000, nonrefundable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -18271,7 +18271,7 @@ const questions = [
       "D": "They don't have a Roth IRA"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §219(g), for taxpayers covered by an employer plan (active participant per §219(g)(5)), the traditional IRA deduction phases out based on AGI and filing status. Per §219(g)(2), if AGI is below the phaseout range, the full deduction is allowed. Above the range, no deduction is allowed. A nondeductible contribution can still be made per §408(o).",
+    "explanation": "Under IRC §219(g), for taxpayers covered by an employer plan (active participant per §219(g)(5)), the traditional IRA deduction phases out based on AGI and filing status. Per §219(g)(2), if AGI is below the phaseout range, the full deduction is allowed. Above the range, no deduction is allowed. A nondeductible contribution can still be made per §408(o). Why other answers are wrong: (B) Under age 50—age affects CONTRIBUTION limits (catch-up contributions), not deductibility; (C) Less than $100,000—phaseouts vary by filing status, not a flat $100K; (D) No Roth IRA—having a Roth doesn't affect traditional IRA deductibility.",
     "tip": "Active participant phaseouts per §219(g). Single: ~$77K-$87K. MFJ: ~$123K-$143K (2024).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -18607,7 +18607,7 @@ const questions = [
       "D": "Fully deductible in the current year"
     },
     "correctAnswer": "A",
-    "explanation": "Under IRC §461(l), excess business losses (losses exceeding $305,000 single or $610,000 MFJ for 2024 per §461(l)(3)) are not allowed in the current year. Per §461(l)(2), the disallowed amount is carried forward and treated as part of the NOL under §172. Per §461(l)(1), this limitation applies before the passive loss rules of §469.",
+    "explanation": "Under IRC §461(l), excess business losses (losses exceeding $305,000 single or $610,000 MFJ for 2024 per §461(l)(3)) are not allowed in the current year. Per §461(l)(2), the disallowed amount is carried forward and treated as part of the NOL under §172. Per §461(l)(1), this limitation applies before the passive loss rules of §469. Why other answers are wrong: (B) Permanently disallowed—losses are preserved as NOL carryforward, not permanently lost; (C) Passive income only—EBL rules apply to ACTIVE business losses, different from §469 passive loss rules; (D) Fully deductible—the whole point of §461(l) is to LIMIT the deduction.",
     "tip": "EBL per §461(l) applies before §469 passive loss rules. Threshold indexed (§461(l)(3)). Disallowed becomes NOL carryforward.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -18775,7 +18775,7 @@ const questions = [
       "D": "Never required to file a tax return"
     },
     "correctAnswer": "C",
-    "explanation": "Under IRC §701, partnerships are pass-through entities—the partnership itself is not subject to income tax. Per §6031, the partnership files an informational return (Form 1065). Per §702, income, deductions, gains, losses, and credits pass through to partners based on their distributive shares under §704 and are reported on each partner's individual return via Schedule K-1.",
+    "explanation": "Under IRC §701, partnerships are pass-through entities—the partnership itself is not subject to income tax. Per §6031, the partnership files an informational return (Form 1065). Per §702, income, deductions, gains, losses, and credits pass through to partners based on their distributive shares under §704 and are reported on each partner's individual return via Schedule K-1. Why other answers are wrong: (A) 21% flat rate—this applies to C corporations under §11, not partnerships; (B) Separately taxable—partnerships are NOT taxable entities; only C corps are; (D) Never files return—Form 1065 is required under §6031 (informational, not tax-paying).",
     "tip": "Partnerships don't pay tax per §701—partners do per §702. Form 1065 is informational per §6031; K-1s allocate items.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -19132,7 +19132,7 @@ const questions = [
       "D": "Corporate income being taxed at the corporate level and again when distributed as dividends"
     },
     "correctAnswer": "D",
-    "explanation": "Double taxation refers to corporate income being taxed first at the corporate level under IRC §11 (21% rate) and again at the shareholder level under §1(h)(11) when distributed as dividends (qualified dividend rates). S corporations under §1363, partnerships under §701, and LLCs taxed as partnerships avoid double taxation through pass-through treatment.",
+    "explanation": "Double taxation refers to corporate income being taxed first at the corporate level under IRC §11 (21% rate) and again at the shareholder level under §1(h)(11) when distributed as dividends (qualified dividend rates). S corporations under §1363, partnerships under §701, and LLCs taxed as partnerships avoid double taxation through pass-through treatment. Why other answers are wrong: (A) Two states—this is 'multi-state taxation,' not double taxation; (B) AMT and regular tax—AMT is an alternative calculation, not double taxation; (C) Federal and state—these are different tax systems, not the same income taxed twice at the same level.",
     "tip": "Double tax: corporate 21% (§11) + shareholder dividend tax (§1(h)(11)). Pass-throughs (§701, §1363) avoid with single level of tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -19321,7 +19321,7 @@ const questions = [
       "D": "Include the benefit in W-2 wages but can claim an above-the-line deduction"
     },
     "correctAnswer": "D",
-    "explanation": "Under IRC §1372, >2% S corporation shareholder-employees are treated as partners for fringe benefit purposes and cannot exclude employer-paid health insurance per §106. The premiums must be included in W-2 income per Notice 2008-1 (subject to income tax, not FICA). However, the shareholder can then claim an above-the-line deduction per §162(l).",
+    "explanation": "Under IRC §1372, >2% S corporation shareholder-employees are treated as partners for fringe benefit purposes and cannot exclude employer-paid health insurance per §106. The premiums must be included in W-2 income per Notice 2008-1 (subject to income tax, not FICA). However, the shareholder can then claim an above-the-line deduction per §162(l). Why other answers are wrong: (A) Distribution treatment—it's wages, not a distribution; (B) Penalty tax—no penalty, just different treatment; (C) Exclude like others—§1372 prevents exclusion for >2% shareholders.",
     "tip": ">2% shareholder per §1372: health insurance on W-2, but deduct above-the-line per §162(l). Net effect similar to exclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -19447,7 +19447,7 @@ const questions = [
       "D": "A security agreement is authenticated or secured party has possession"
     },
     "correctAnswer": "A",
-    "explanation": "Under UCC §9-203, attachment requires: (1) value given by secured party, (2) debtor has rights in collateral, and (3) authenticated security agreement describing collateral OR secured party possession. Per §9-310, filing is required for perfection, not attachment. Attachment gives the secured party rights against the debtor.",
+    "explanation": "Under UCC §9-203, attachment requires: (1) value given by secured party, (2) debtor has rights in collateral, and (3) authenticated security agreement describing collateral OR secured party possession. Per §9-310, filing is required for perfection, not attachment. Attachment gives the secured party rights against the debtor. Why other answers are wrong: (B) Value given by the secured party is required for attachment under UCC §9-203(b)(1), making this an incorrect choice since the question asks what is NOT required; (C) The debtor having rights in the collateral is required for attachment under UCC §9-203(b)(2), making this an incorrect choice; (D) An authenticated security agreement or secured party possession is required for attachment under UCC §9-203(b)(3), making this an incorrect choice.",
     "tip": "Per UCC §9-203, Attachment = rights against debtor (VAR: Value, Agreement, Rights). Perfection (§9-310) = rights against third parties.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -19468,7 +19468,7 @@ const questions = [
       "D": "Foreclose on collateral"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC §9-310, filing a financing statement (UCC-1) is the most common method of perfecting a security interest. Perfection establishes priority against other creditors and protects against the debtor's bankruptcy. Per §9-502, the UCC-1 must contain the debtor's name, secured party's name, and collateral description.",
+    "explanation": "Under UCC §9-310, filing a financing statement (UCC-1) is the most common method of perfecting a security interest. Perfection establishes priority against other creditors and protects against the debtor's bankruptcy. Per §9-502, the UCC-1 must contain the debtor's name, secured party's name, and collateral description. Why other answers are wrong: (A) Release debtor—filing doesn't release liability; (B) Create security interest—creation/attachment is per §9-203, not filing; (D) Foreclose—foreclosure is a default remedy under §9-610, not filing's purpose.",
     "tip": "Per UCC §9-310, filing perfects the interest, doesn't create it. §9-502 lists filing requirements.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -19489,7 +19489,7 @@ const questions = [
       "D": "Is primarily liable along with the principal debtor"
     },
     "correctAnswer": "D",
-    "explanation": "Under common law suretyship principles (Restatement Third of Suretyship §15), a surety is primarily liable—the creditor can seek payment from either the principal debtor or surety from the start. A guarantor of collection is secondarily liable—the creditor must first exhaust remedies against the principal debtor.",
+    "explanation": "Under common law suretyship principles (Restatement Third of Suretyship §15), a surety is primarily liable—the creditor can seek payment from either the principal debtor or surety from the start. A guarantor of collection is secondarily liable—the creditor must first exhaust remedies against the principal debtor. Why other answers are wrong: (A) Must be compensated—both sureties and guarantors can be gratuitous; (B) Cannot assert defenses—sureties CAN generally assert the debtor's defenses; (C) No liability until default—this describes a guarantor of collection, not a surety.",
     "tip": "Surety = primarily liable (Restatement §15). Guarantor of collection = secondarily liable (creditor must sue debtor first).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -19552,7 +19552,7 @@ const questions = [
       "D": "Marshaling only"
     },
     "correctAnswer": "A",
-    "explanation": "Under Restatement Third of Suretyship §27, after paying the creditor, a surety has the right of subrogation—stepping into the creditor's shoes to pursue the principal debtor. Per §22, the surety also has rights of reimbursement (direct right against debtor) and per §55 contribution (from co-sureties).",
+    "explanation": "Under Restatement Third of Suretyship §27, after paying the creditor, a surety has the right of subrogation—stepping into the creditor's shoes to pursue the principal debtor. Per §22, the surety also has rights of reimbursement (direct right against debtor) and per §55 contribution (from co-sureties). Why other answers are wrong: (B) Revocation—surety cannot unilaterally revoke after obligation is created; (C) Additional compensation—creditor owes nothing extra to surety; (D) Marshaling only—surety has multiple rights, not just marshaling (§24).",
     "tip": "Per Restatement §27 Subrogation, §22 Reimbursement, §55 Contribution. Surety steps into creditor's shoes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -19573,7 +19573,7 @@ const questions = [
       "D": "The collateral is purchased at a foreclosure sale"
     },
     "correctAnswer": "A",
-    "explanation": "Under UCC §9-103, a PMSI exists when the secured party's value enables the debtor to acquire the collateral (seller credit or enabling loan). Per §9-324, PMSIs get special priority rules—they can take priority over earlier-filed security interests if properly perfected within the grace period.",
+    "explanation": "Under UCC §9-103, a PMSI exists when the secured party's value enables the debtor to acquire the collateral (seller credit or enabling loan). Per §9-324, PMSIs get special priority rules—they can take priority over earlier-filed security interests if properly perfected within the grace period. Why other answers are wrong: (B) Real property pledge—PMSIs are UCC Article 9 concepts for personal property, not real estate; (C) Multiple creditors sharing—this describes pari passu or shared collateral arrangements; (D) Foreclosure sale purchase—buying at foreclosure creates new ownership, not a PMSI.",
     "tip": "Per UCC §9-103, PMSI: seller finances purchase OR lender enables purchase. §9-324 grants special priority if perfected within 20 days.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -19615,7 +19615,7 @@ const questions = [
       "D": "Bankruptcy of the principal debtor"
     },
     "correctAnswer": "A",
-    "explanation": "Under Restatement Third of Suretyship §41, a compensated surety is discharged to the extent of harm caused by a material modification (change in terms, extension of time, release of collateral) made without consent. Per §37, the debtor's bankruptcy generally does not discharge the surety.",
+    "explanation": "Under Restatement Third of Suretyship §41, a compensated surety is discharged to the extent of harm caused by a material modification (change in terms, extension of time, release of collateral) made without consent. Per §37, the debtor's bankruptcy generally does not discharge the surety. Why other answers are wrong: (B) Failure to give notice of default—no general duty to notify surety of default; (C) Assignment of debt—creditor can generally assign; surety remains liable to new creditor; (D) Debtor's bankruptcy—per §37, this does NOT discharge the surety.",
     "tip": "Per Restatement §41, material changes without consent discharge surety to extent harmed. Compensated surety standard.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -19678,7 +19678,7 @@ const questions = [
       "D": "Equal shares regardless of maximum exposure"
     },
     "correctAnswer": "A",
-    "explanation": "Under Restatement Third of Suretyship §55, co-sureties share liability pro rata based on their maximum exposure. Here the ratios are $100K:$150K:$150K or 1:1.5:1.5. Total maximum is $400K, so ratios are 25%, 37.5%, 37.5% per §57 calculation method.",
+    "explanation": "Under Restatement Third of Suretyship §55, co-sureties share liability pro rata based on their maximum exposure. Here the ratios are $100K:$150K:$150K or 1:1.5:1.5. Total maximum is $400K, so ratios are 25%, 37.5%, 37.5% per §57 calculation method. Why other answers are wrong: (B) No contribution—§55 expressly provides for contribution among co-sureties; (C) First-in-time—suretyship contribution is by exposure ratios, not timing; (D) Equal shares—not equal; proportional to maximum exposure.",
     "tip": "Per Restatement §55, contribution is pro rata by maximum exposure. §57 provides calculation methodology.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
@@ -19741,7 +19741,7 @@ const questions = [
       "D": "Required to be in writing under the Statute of Frauds"
     },
     "correctAnswer": "D",
-    "explanation": "Under the Statute of Frauds (Restatement Second of Contracts §112), a promise to answer for the debt of another must be in writing and signed by the party to be charged. Per Restatement §116, the main purpose (leading object) exception applies: if the surety's main purpose is their own benefit, no writing is required.",
+    "explanation": "Under the Statute of Frauds (Restatement Second of Contracts §112), a promise to answer for the debt of another must be in writing and signed by the party to be charged. Per Restatement §116, the main purpose (leading object) exception applies: if the surety's main purpose is their own benefit, no writing is required. Why other answers are wrong: (A) Only valid if notarized—notarization is not required, just a signed writing; (B) Unenforceable regardless—it IS enforceable if in writing; (C) No writing needed—the Statute of Frauds requires writing for suretyship promises.",
     "tip": "Per Restatement §112, suretyship requires writing. §116 main purpose exception: if surety benefits primarily, no writing needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -19762,7 +19762,7 @@ const questions = [
       "D": "Take possession of collateral without judicial process if done peacefully"
     },
     "correctAnswer": "B",
-    "explanation": "Under UCC §9-609, the secured party may repossess peacefully or judicially. Per §9-620, strict foreclosure requires notice and under §9-620(e), the debtor can object within 20 days. Under §9-620(e), if 60% of cash price (consumer goods) or obligation is paid, must sell per §9-610.",
+    "explanation": "Under UCC §9-609, the secured party may repossess peacefully or judicially. Per §9-620, strict foreclosure requires notice and under §9-620(e), the debtor can object within 20 days. Under §9-620(e), if 60% of cash price (consumer goods) or obligation is paid, must sell per §9-610. Why other answers are wrong: (A) Sale at public or private auction is specifically permitted under §9-610, which allows secured parties to dispose of collateral through commercially reasonable sales; (C) Applying proceeds to cover expenses first, then the debt is the correct distribution method required by §9-615; (D) Peaceful repossession without judicial process is expressly authorized under §9-609, provided no breach of peace occurs.",
     "tip": "Per UCC §9-609 repossession, §9-620 strict foreclosure with notice. §9-620(e): 60% paid = must sell under §9-610.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -19804,7 +19804,7 @@ const questions = [
       "D": "Compel the principal debtor to pay the debt when due"
     },
     "correctAnswer": "D",
-    "explanation": "Under Restatement Third of Suretyship §21, exoneration is the surety's right to compel the principal debtor to pay the obligation when due, before the surety must pay. Per §24, marshaling allows the surety to require the creditor to pursue the debtor's assets first.",
+    "explanation": "Under Restatement Third of Suretyship §21, exoneration is the surety's right to compel the principal debtor to pay the obligation when due, before the surety must pay. Per §24, marshaling allows the surety to require the creditor to pursue the debtor's assets first. Why other answers are wrong: (A) Collect from co-sureties before paying—that's contribution (§55), not exoneration; (B) Require creditor to pursue collateral—that's marshaling (§24), not exoneration; (C) Released at any time—surety cannot unilaterally withdraw from the obligation.",
     "tip": "Per Restatement §21, exoneration: force debtor to pay. §24 marshaling: force creditor to pursue debtor's property first.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -20014,7 +20014,7 @@ const questions = [
       "D": "Fully liable for the entire debt"
     },
     "correctAnswer": "A",
-    "explanation": "Under Restatement Third of Suretyship §40, when a creditor releases one co-surety, the remaining co-sureties are generally discharged to the extent they would have been entitled to contribution from the released surety under §55. This protects contribution rights.",
+    "explanation": "Under Restatement Third of Suretyship §40, when a creditor releases one co-surety, the remaining co-sureties are generally discharged to the extent they would have been entitled to contribution from the released surety under §55. This protects contribution rights. Why other answers are wrong: (B) Indemnification from creditor—no such right exists; (C) Automatically released—they're only released to the extent of the released surety's share, not entirely; (D) Fully liable—this would unfairly deprive them of contribution rights.",
     "tip": "Per Restatement §40, release of one co-surety: others discharged to extent of §55 contribution share.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -20056,7 +20056,7 @@ const questions = [
       "D": "Must be filed to be effective"
     },
     "correctAnswer": "B",
-    "explanation": "Under UCC §9-339, the UCC expressly provides that secured parties may agree to subordinate their priority. A subordination agreement is enforceable between the parties without filing or debtor consent. This is commonly used in intercreditor agreements.",
+    "explanation": "Under UCC §9-339, the UCC expressly provides that secured parties may agree to subordinate their priority. A subordination agreement is enforceable between the parties without filing or debtor consent. This is commonly used in intercreditor agreements. Why other answers are wrong: (A) Unenforceable—§9-339 expressly makes these enforceable; (C) Requires debtor approval—debtor consent is not required; (D) Must be filed—no filing required for subordination agreements.",
     "tip": "Per UCC §9-339, subordination agreements: enforceable between parties. No filing needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -20077,7 +20077,7 @@ const questions = [
       "D": "The suretyship is void from inception"
     },
     "correctAnswer": "B",
-    "explanation": "Under Restatement Third of Suretyship §12, fraud by the principal debtor that is unknown to the creditor does not release the surety from liability to the creditor. Per §12 comment d, the surety's remedy is against the debtor. Under §12(2), if the creditor participated in or knew of the fraud, the surety may be released.",
+    "explanation": "Under Restatement Third of Suretyship §12, fraud by the principal debtor that is unknown to the creditor does not release the surety from liability to the creditor. Per §12 comment d, the surety's remedy is against the debtor. Under §12(2), if the creditor participated in or knew of the fraud, the surety may be released. Why other answers are wrong: (A) Avoid liability to creditor—surety remains liable to innocent creditor per §12; (C) Creditor must refund—no refund obligation to surety; (D) Void from inception—the suretyship remains valid as to the innocent creditor.",
     "tip": "Per Restatement §12, debtor's fraud (unknown to creditor): surety still liable. §12(2) creditor's fraud: surety released.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -20140,7 +20140,7 @@ const questions = [
       "D": "The surety is discharged"
     },
     "correctAnswer": "D",
-    "explanation": "Under Restatement Third of Suretyship §47, if the principal debtor makes a valid tender of payment and the creditor refuses it, the surety is discharged. The surety should not be held liable when the debtor has offered to perform but the creditor wrongfully rejected the tender.",
+    "explanation": "Under Restatement Third of Suretyship §47, if the principal debtor makes a valid tender of payment and the creditor refuses it, the surety is discharged. The surety should not be held liable when the debtor has offered to perform but the creditor wrongfully rejected the tender. Why other answers are wrong: (A) Creditor can pursue surety—no, the surety is discharged by the wrongful refusal; (B) Surety must pay—surety is released when debtor's valid tender was refused; (C) Surety remains liable—the wrongful refusal discharges the surety.",
     "tip": "Per Restatement §47, creditor refuses valid tender from debtor = surety discharged. Wrongful refusal releases surety.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -20371,7 +20371,7 @@ const questions = [
       "D": "The drawer of a check"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC §3-412, the maker of a note is obligated to pay (primarily liable). Per §3-413, the acceptor of a draft is primarily liable. Under §3-414, drawers are secondarily liable, and per §3-415, indorsers are secondarily liable—they pay only upon presentment and dishonor per §3-501.",
+    "explanation": "Under UCC §3-412, the maker of a note is obligated to pay (primarily liable). Per §3-413, the acceptor of a draft is primarily liable. Under §3-414, drawers are secondarily liable, and per §3-415, indorsers are secondarily liable—they pay only upon presentment and dishonor per §3-501. Why other answers are wrong: (A) First holder—holders have rights but not liability; (B) All indorsers—indorsers are secondarily liable per §3-415, not primary; (D) Drawer of check—drawers are secondarily liable per §3-414.",
     "tip": "Per UCC §3-412 maker, §3-413 acceptor = primary. §3-414 drawer, §3-415 indorsers = secondary (pay if primary defaults).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -20413,7 +20413,7 @@ const questions = [
       "D": "The first bank to receive the check for collection"
     },
     "correctAnswer": "D",
-    "explanation": "Under UCC §4-105(2), the depository bank is the first bank to receive the check for collection—typically where the check is deposited. Per §4-105(3), the payor bank is the bank on which the check is drawn. Under §4-105(5), collecting banks are intermediaries.",
+    "explanation": "Under UCC §4-105(2), the depository bank is the first bank to receive the check for collection—typically where the check is deposited. Per §4-105(3), the payor bank is the bank on which the check is drawn. Under §4-105(5), collecting banks are intermediaries. Why other answers are wrong: (A) Federal Reserve—Fed banks are intermediary/collecting banks, not depository; (B) Bank that pays—that's the payor bank per §4-105(3); (C) Bank check is drawn on—that's also the payor bank.",
     "tip": "Per UCC §4-105(2) depository = first to receive. §4-105(3) payor = drawer's bank. §4-105(5) collecting = intermediaries.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -20518,7 +20518,7 @@ const questions = [
       "D": "6 months after its date"
     },
     "correctAnswer": "D",
-    "explanation": "Under UCC §4-404, a check becomes stale 6 months after its date. Per §4-404, a bank is not obligated to pay a stale check but may do so in good faith. Holders should present checks promptly to preserve recourse against indorsers under §3-415(e).",
+    "explanation": "Under UCC §4-404, a check becomes stale 6 months after its date. Per §4-404, a bank is not obligated to pay a stale check but may do so in good faith. Holders should present checks promptly to preserve recourse against indorsers under §3-415(e). Why other answers are wrong: (A) 1 year—too long; stale period is 6 months per §4-404; (B) 30 days—too short; this is the indorser discharge period for dishonored check; (C) 60 days—too short; no such UCC provision.",
     "tip": "Per UCC §4-404, stale check: 6 months. Bank can still pay but not obligated. §3-415(e) indorser discharge.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -20791,7 +20791,7 @@ const questions = [
       "D": "The bank is both the drawer and the drawee"
     },
     "correctAnswer": "D",
-    "explanation": "Under UCC §3-104(g), a cashier's check is drawn by a bank on itself—the bank is both drawer and drawee. Per §3-412, this makes the bank primarily liable as maker. Unlike personal checks, a cashier's check is backed by the issuing bank's credit per §3-411.",
+    "explanation": "Under UCC §3-104(g), a cashier's check is drawn by a bank on itself—the bank is both drawer and drawee. Per §3-412, this makes the bank primarily liable as maker. Unlike personal checks, a cashier's check is backed by the issuing bank's credit per §3-411. Why other answers are wrong: (A) Cannot be negotiated—cashier's checks ARE negotiable; (B) Requires no signature—bank signature is required; (C) Only over $10,000—no minimum amount requirement.",
     "tip": "Per UCC §3-104(g), cashier's check: bank draws on itself. §3-412 bank primarily liable. §3-411 special rules apply.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -20833,7 +20833,7 @@ const questions = [
       "D": "Indorsers are discharged to the extent of the impairment"
     },
     "correctAnswer": "D",
-    "explanation": "Under UCC §3-605(e), if a holder unjustifiably impairs collateral or releases a secondary obligor, any indorser or accommodation party with recourse is discharged to the extent of impairment. Per §3-605, this parallels suretyship principles (Restatement Third of Suretyship).",
+    "explanation": "Under UCC §3-605(e), if a holder unjustifiably impairs collateral or releases a secondary obligor, any indorser or accommodation party with recourse is discharged to the extent of impairment. Per §3-605, this parallels suretyship principles (Restatement Third of Suretyship). Why other answers are wrong: (A) No party affected—§3-605 provides discharge rights; (B) All parties discharged—only secondary parties are discharged, and only to extent of impairment; (C) Only primary party—primary party (maker) is NOT discharged by collateral impairment.",
     "tip": "Per UCC §3-605(e), impair collateral/release guarantor: indorsers discharged to extent harmed. Parallels suretyship law.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -20854,7 +20854,7 @@ const questions = [
       "D": "The check is void"
     },
     "correctAnswer": "B",
-    "explanation": "Under UCC §3-114, when the amount in words and figures differ, the words control. Per §3-114, words are considered less susceptible to alteration than figures. Under §3-114, handwritten terms prevail over typewritten, and typewritten over printed.",
+    "explanation": "Under UCC §3-114, when the amount in words and figures differ, the words control. Per §3-114, words are considered less susceptible to alteration than figures. Under §3-114, handwritten terms prevail over typewritten, and typewritten over printed. Why other answers are wrong: (A) Figures control—incorrect; words are preferred per §3-114; (C) Larger amount controls—no such rule exists; (D) Check is void—discrepancy doesn't void the check; §3-114 provides resolution.",
     "tip": "Per UCC §3-114, words > figures. Handwritten > typed > printed. These rules resolve ambiguities.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -20896,7 +20896,7 @@ const questions = [
       "D": "An electronic file that replaces physical checks entirely"
     },
     "correctAnswer": "A",
-    "explanation": "Under 12 USC §5002 (Check 21 Act), banks can create substitute checks—paper reproductions meeting specific requirements that are the legal equivalent of the original. Per 12 USC §5004, the bank that creates a substitute check warrants it meets legal equivalence requirements.",
+    "explanation": "Under 12 USC §5002 (Check 21 Act), banks can create substitute checks—paper reproductions meeting specific requirements that are the legal equivalent of the original. Per 12 USC §5004, the bank that creates a substitute check warrants it meets legal equivalence requirements. Why other answers are wrong: (B) Only over $5,000—no minimum amount; substitute checks can be any amount; (C) Signed by agent—substitute checks are copies of originals, not separately signed; (D) Electronic file—substitute checks are PAPER reproductions, not electronic files.",
     "tip": "Per Check 21 Act (12 USC §5002), substitute check = legal equivalent of original. §5004 bank warranties apply.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -20917,8 +20917,8 @@ const questions = [
       "D": "All contracts"
     },
     "correctAnswer": "A",
-    "explanation": "UCC Article 2 governs contracts for the sale of goods—tangible, movable personal property. It does not apply to real estate, services, or intangibles. For mixed contracts (goods and services), courts often apply Article 2 if goods are the predominant purpose.",
-    "tip": "Article 2 = goods (tangible, movable). Services = common law. Mixed contracts = predominant purpose test.",
+    "explanation": "Per UCC §2-102 and §2-105(1), Article 2 governs contracts for the sale of 'goods'—tangible, movable personal property existing at the time of identification to the contract. It does not apply to real estate, services, or intangibles. For mixed contracts (goods and services), courts apply the 'predominant purpose test' (common law). Why other answers are wrong: (B) Real estate—governed by common law and state property law; (C) Services—governed by common law contract principles; (D) All contracts—only goods contracts fall under Article 2.",
+    "tip": "UCC §2-102: Article 2 = sale of goods (§2-105 = tangible, movable). Mixed contracts = predominant purpose test.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -20938,8 +20938,8 @@ const questions = [
       "D": "6 months with proper consideration"
     },
     "correctAnswer": "C",
-    "explanation": "A merchant's written, signed offer to buy or sell goods that assures it will be held open is irrevocable for the time stated or a reasonable time, but not exceeding 3 months, without consideration. This is the firm offer rule unique to UCC Article 2.",
-    "tip": "Firm offer: merchant, written, signed, assures open. Max 3 months. No consideration needed.",
+    "explanation": "Per UCC §2-205, a merchant's written, signed offer to buy or sell goods that by its terms gives assurance it will be held open is irrevocable for the stated time or a reasonable time, but not exceeding 3 months, without consideration. This 'firm offer' rule is unique to the UCC and differs from common law's option contract requiring consideration. Why other answers are wrong: (A) Time stated only—also reasonable time if none stated, up to 3 months; (B) 30 days max—limit is 3 months under §2-205; (D) Requires consideration—firm offer does NOT require consideration.",
+    "tip": "UCC §2-205: Firm offer = merchant + written + signed + assures open. Max 3 months. No consideration needed (unlike common law).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -20959,7 +20959,7 @@ const questions = [
       "D": "$500 or more"
     },
     "correctAnswer": "D",
-    "explanation": "The UCC Statute of Frauds requires contracts for the sale of goods priced at $500 or more to be in writing. The writing must indicate a contract for sale, be signed by the party to be charged, and specify quantity. Exceptions include specially manufactured goods, admissions, and part performance.",
+    "explanation": "Under UCC §2-201, the UCC Statute of Frauds requires contracts for the sale of goods priced at $500 or more to be in writing. The writing must indicate a contract for sale, be signed by the party to be charged, and specify quantity. Exceptions include specially manufactured goods, admissions, and part performance. Why other answers are wrong: (A) $1,000—this is the NEW UCC threshold (Article 2 revision), but most states still use original $500; (B) $5,000—too high; no such threshold exists; (C) $250—too low; common law has no such threshold.",
     "tip": "$500 threshold for goods. Writing needs: contract exists, signature, quantity. Price/other terms can be missing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -20980,8 +20980,8 @@ const questions = [
       "D": "A merchant sells goods of a kind they regularly deal in"
     },
     "correctAnswer": "D",
-    "explanation": "The implied warranty of merchantability arises automatically when a merchant sells goods of the kind they regularly deal in. Goods must be fit for ordinary purposes, of fair average quality, and properly packaged and labeled. Non-merchants don't make this warranty.",
-    "tip": "Merchantability: merchant seller + goods they deal in. Goods must be fit for ordinary purpose.",
+    "explanation": "Per UCC §2-314(1), the implied warranty of merchantability arises automatically when a merchant sells goods of the kind they regularly deal in. Under §2-314(2), merchantable goods must: (a) pass without objection in the trade, (b) be of fair average quality, (c) be fit for ordinary purposes, (d) run of even kind/quality, (e) be adequately packaged/labeled, (f) conform to label representations. Non-merchants don't make this warranty. Why other answers are wrong: (A) Express guarantee—that creates express warranty under §2-313; (B) Buyer inspects—inspection relates to discovery, not warranty creation; (C) Any seller—only MERCHANTS make merchantability warranty.",
+    "tip": "UCC §2-314: Merchantability = MERCHANT seller + goods of their kind. Must be fit for ORDINARY purpose.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21001,8 +21001,8 @@ const questions = [
       "D": "Title is transferred"
     },
     "correctAnswer": "C",
-    "explanation": "FOB (Free on Board) shipping point means risk of loss passes when the seller delivers conforming goods to the carrier at the shipping point. The buyer bears risk during transit. FOB destination means risk passes when goods reach the buyer's location.",
-    "tip": "FOB shipping point: risk passes at shipment (seller done when given to carrier). FOB destination: risk passes on arrival.",
+    "explanation": "Per UCC §2-319(1)(a), FOB (Free on Board) shipping point means risk of loss passes when the seller delivers conforming goods to the carrier at the shipping point. The buyer bears risk during transit and pays freight. Under §2-319(1)(b), FOB destination means risk passes when goods are duly tendered at the buyer's location. Why other answers are wrong: (A) Payment—risk passage is independent of payment timing; (B) Buyer receives goods—that's FOB destination, not shipping point; (D) Title transfer—UCC separates risk from title under §2-509.",
+    "tip": "UCC §2-319: FOB shipping point = risk passes at shipment. FOB destination = risk passes on arrival.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21022,8 +21022,8 @@ const questions = [
       "D": "Only cancel the contract"
     },
     "correctAnswer": "A",
-    "explanation": "When the seller fails to deliver or delivers non-conforming goods, the buyer can cover (buy substitute goods) and recover the difference between cover price and contract price, plus incidental and consequential damages. Cover must be reasonable and in good faith.",
-    "tip": "Cover = buy substitute goods. Damages = cover price - contract price. Must act in good faith.",
+    "explanation": "Per UCC §2-712, when the seller fails to deliver or the buyer rightfully rejects, the buyer may 'cover' by making a reasonable good faith purchase of substitute goods. Under §2-712(2), buyer recovers the difference between cover price and contract price, plus incidental and consequential damages under §2-715, minus expenses saved. Why other answers are wrong: (B) Specific performance—only available for unique goods under §2-716; (C) Punitive damages—generally not available under UCC; (D) Cancel only—buyer has multiple remedies under §2-711.",
+    "tip": "UCC §2-712: Cover = substitute goods in good faith. Damages = cover − contract price + §2-715 incidentals/consequentials.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21043,8 +21043,8 @@ const questions = [
       "D": "The additional terms are always included"
     },
     "correctAnswer": "C",
-    "explanation": "Section 2-207 allows contract formation even when acceptance differs from the offer. Between merchants, additional terms become part of the contract unless: (1) the offer limits acceptance to its terms, (2) the terms materially alter the contract, or (3) the offeror objects within a reasonable time.",
-    "tip": "2-207: definite acceptance + different terms = contract. Additional terms: merchants = included unless material alteration.",
+    "explanation": "Per UCC §2-207, a definite acceptance creates a contract even with additional terms. Between merchants, additional terms become part of the contract unless: (1) the offer limits acceptance to its terms, (2) the terms materially alter the contract, or (3) the offeror objects within a reasonable time. Why other answers are wrong: (A) Only offeror's terms—this is common law mirror image rule, NOT UCC; (B) No contract formed—§2-207 specifically allows contract formation with different terms; (D) Always included—additional terms only become part of contract if conditions are met.",
+    "tip": "§2-104: 2-207: definite acceptance + different terms = contract. Additional terms: merchants = included unless material alteration.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21064,8 +21064,8 @@ const questions = [
       "D": "Any goods are sold"
     },
     "correctAnswer": "A",
-    "explanation": "The warranty of fitness for a particular purpose arises when: (1) the seller knows or has reason to know the buyer's particular purpose, and (2) the buyer relies on the seller's skill or judgment to select suitable goods. Any seller (not just merchants) can make this warranty.",
-    "tip": "Fitness: seller knows purpose + buyer relies on seller's expertise. Any seller (not just merchants).",
+    "explanation": "Per UCC §2-315, the implied warranty of fitness for a particular purpose arises when: (1) the seller has reason to know the buyer's particular purpose, and (2) the buyer relies on the seller's skill or judgment to furnish suitable goods. Unlike merchantability (§2-314), ANY seller—not just merchants—can make this warranty. Why other answers are wrong: (B) Ordinary purpose—that's merchantability under §2-314, not fitness; (C) Manufacturer only—any seller with knowledge can create fitness warranty; (D) Any goods—requires seller knowledge + buyer reliance.",
+    "tip": "UCC §2-315: Fitness = seller knows PARTICULAR purpose + buyer RELIES on seller. Any seller (vs. §2-314 merchantability = merchants only).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21085,8 +21085,8 @@ const questions = [
       "D": "Only seek money damages"
     },
     "correctAnswer": "C",
-    "explanation": "The UCC's perfect tender rule allows the buyer to reject goods if they fail to conform in any respect. The buyer can reject the whole delivery, accept the whole, or accept any commercial units and reject the rest. Rejection must be within a reasonable time after delivery.",
-    "tip": "Perfect tender: any non-conformity = right to reject (whole, part, or none). Limited by cure rights and installment contracts.",
+    "explanation": "Per UCC §2-601, the 'perfect tender' rule provides that if goods fail to conform to the contract in ANY respect, the buyer may: (a) reject the whole, (b) accept the whole, or (c) accept any commercial unit(s) and reject the rest. Under §2-602, rejection must occur within a reasonable time after delivery/tender, and buyer must seasonably notify seller. Why other answers are wrong: (A) Accept at full price—buyer has rejection options; (B) Price reduction only—rejection is available; (D) Money damages only—rejection and specific performance may also be available.",
+    "tip": "UCC §2-601: Perfect tender = ANY non-conformity triggers rejection right. §2-508 cure rights and §2-612 installment contracts limit this rule.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21106,8 +21106,8 @@ const questions = [
       "D": "The time for performance has not expired or seller had reason to believe tender was acceptable"
     },
     "correctAnswer": "D",
-    "explanation": "The seller has the right to cure if: (1) time for performance hasn't expired, or (2) the seller had reasonable grounds to believe the tender would be acceptable (e.g., prior course of dealing). The seller must notify the buyer of intent to cure and make a conforming delivery.",
-    "tip": "Cure: before deadline always. After deadline only if seller reasonably believed goods acceptable.",
+    "explanation": "Per UCC §2-508(1), if the time for performance has not expired, the seller may cure by notifying the buyer of intent to cure and making a conforming tender within the contract time. Under §2-508(2), even after time expires, seller may have additional reasonable time to cure if seller had reasonable grounds to believe the tender would be acceptable (e.g., prior course of dealing, industry custom). Why other answers are wrong: (A) Goods destroyed—that's impossibility, not cure; (B) Contract silent—cure right is statutory under UCC, not contract-based; (C) Buyer resold—buyer's actions may waive or limit cure right.",
+    "tip": "UCC §2-508: Cure before deadline = always available. After deadline = only if seller reasonably believed tender OK.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21127,8 +21127,8 @@ const questions = [
       "D": "Simply state 'no warranties'"
     },
     "correctAnswer": "A",
-    "explanation": "To disclaim merchantability, the disclaimer must specifically mention 'merchantability' and, if in writing, must be conspicuous (noticeable to a reasonable person). 'As is' or 'with all faults' language disclaims all implied warranties. Fitness for particular purpose requires a conspicuous writing.",
-    "tip": "Merchantability disclaimer: must say 'merchantability' + conspicuous if written. 'As is' disclaims all implied warranties.",
+    "explanation": "Per UCC §2-316(2), to disclaim the implied warranty of merchantability, the disclaimer must specifically mention 'merchantability' and, if in writing, must be conspicuous. Under §2-316(3)(a), expressions like 'as is' or 'with all faults' disclaim ALL implied warranties. For fitness for particular purpose under §2-316(2), disclaimer must be in writing and conspicuous. Why other answers are wrong: (B) Signed waiver—not required, just conspicuousness; (C) 30 days notice—no such requirement; (D) 'No warranties'—must specifically say 'merchantability' or use 'as is' language.",
+    "tip": "UCC §2-316: Merchantability disclaimer = say 'merchantability' + conspicuous. 'As is' = disclaims ALL implied warranties.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21148,8 +21148,8 @@ const questions = [
       "D": "Risk of loss may shift to breaching buyer to extent of any insurance deficiency"
     },
     "correctAnswer": "D",
-    "explanation": "When the buyer breaches as to goods already identified to the contract, risk of loss remains with the seller. However, if the goods are damaged or destroyed, the seller can treat the risk of loss as having rested on the buyer to the extent of any deficiency in the seller's insurance coverage.",
-    "tip": "Breach affects risk: breaching party may bear uninsured risk. Protects innocent party's insurance coverage.",
+    "explanation": "Per UCC §2-510(3), when the buyer breaches as to goods already identified to the contract, the seller may treat the risk of loss as having rested on the buyer for a commercially reasonable time, to the extent of any deficiency in the seller's effective insurance coverage. This protects the non-breaching seller from bearing uninsured losses caused by buyer's breach. Why other answers are wrong: (A) Shared equally—risk shifts to breaching buyer to extent of insurance gap; (B) No change—breach DOES affect risk allocation; (C) Remains with seller until cure—buyer breach shifts risk to buyer for insurance deficiency.",
+    "tip": "UCC §2-510(3): Buyer breach = seller can treat risk as on buyer for insurance deficiency. Protects innocent seller.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21169,8 +21169,8 @@ const questions = [
       "D": "Repossess goods already paid for"
     },
     "correctAnswer": "B",
-    "explanation": "When the buyer breaches, the seller can resell the goods in a commercially reasonable manner and recover the difference between the resale price and contract price, plus incidental damages. Alternatively, the seller can sue for market price damages or, in some cases, the contract price.",
-    "tip": "Seller's resale: contract price - resale price + incidentals. Must be commercially reasonable. Alternative: market price damages.",
+    "explanation": "Per UCC §2-706, when the buyer wrongfully rejects or repudiates, the seller may resell the goods in a commercially reasonable manner and recover the difference between resale price and contract price, plus incidental damages under §2-710, minus expenses saved. Alternatively, under §2-708 seller can recover market price damages, or under §2-709 the contract price in limited circumstances. Why other answers are wrong: (A) Contract price only—multiple remedies available; (C) Specific performance—this is a buyer's remedy under §2-716; (D) Repossess paid goods—buyer paid, so no repossession right.",
+    "tip": "UCC §2-706: Seller resale = contract price − resale price + §2-710 incidentals. Must be commercially reasonable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21190,8 +21190,8 @@ const questions = [
       "D": "The non-conformity substantially impairs that installment and cannot be cured"
     },
     "correctAnswer": "D",
-    "explanation": "For installment contracts, the perfect tender rule is relaxed. The buyer can reject an installment only if the non-conformity substantially impairs that installment and cannot be cured. The buyer can cancel the whole contract only if non-conformity substantially impairs the whole contract.",
-    "tip": "Installment: substantial impairment test, not perfect tender. Whole contract breach requires impairment of entire deal.",
+    "explanation": "Per UCC §2-612(2), in an installment contract, the buyer may reject an installment only if the non-conformity substantially impairs the value of that installment AND cannot be cured. Under §2-612(3), the buyer can cancel the whole contract only if the non-conformity substantially impairs the value of the whole contract. This is a higher standard than the §2-601 perfect tender rule. Why other answers are wrong: (A) Prior breaches—not sufficient alone; (B) 24-hour notice—no such requirement; (C) Any defect—requires SUBSTANTIAL impairment, not any defect.",
+    "tip": "UCC §2-612: Installment contracts = SUBSTANTIAL impairment test (vs. §2-601 perfect tender). Must impair + be incurable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21211,8 +21211,8 @@ const questions = [
       "D": "All goods being sold at retail"
     },
     "correctAnswer": "B",
-    "explanation": "Express warranties are created by: (1) affirmations of fact or promise regarding the goods, (2) descriptions of the goods, or (3) samples or models, if they become part of the basis of the bargain. Seller's opinions or puffing ('best in town') don't create warranties.",
-    "tip": "Express warranty: fact, description, sample. Must be 'basis of bargain.' Opinion/puffing = no warranty.",
+    "explanation": "Per UCC §2-313, express warranties are created by: (1) affirmation of fact or promise relating to the goods (§2-313(1)(a)), (2) description of the goods (§2-313(1)(b)), or (3) sample or model (§2-313(1)(c)), if they become part of the basis of the bargain. Under §2-313(2), seller's opinions or 'puffing' ('best in town') do NOT create express warranties. Why other answers are wrong: (A) Opinion—puffing doesn't create warranty; (C) Course of dealing—may create implied terms, but express warranty requires §2-313 elements; (D) Retail sales—no automatic warranty from retail status.",
+    "tip": "UCC §2-313: Express warranty = fact/promise, description, or sample as 'basis of bargain.' Puffing ≠ warranty.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21232,8 +21232,8 @@ const questions = [
       "D": "A good faith purchaser for value"
     },
     "correctAnswer": "D",
-    "explanation": "A person with voidable title (obtained through fraud, bounced check, or minor's sale) can transfer good title to a good faith purchaser for value (BFP). The original owner's recourse is against the wrongdoer, not the BFP. Void title (theft) cannot be transferred even to a BFP.",
-    "tip": "Voidable title: BFP gets good title. Void title (theft): no one gets good title. BFP = good faith + value.",
+    "explanation": "Per UCC §2-403(1), a person with voidable title has power to transfer good title to a good faith purchaser for value (GFPV). Voidable title arises from: fraud, bounced check, impersonation, or delivery to minor. Under §2-403, the GFPV gets clean title and original owner's remedy is against the wrongdoer. Void title (theft) cannot be transferred even to a GFPV—'nemo dat' applies. Why other answers are wrong: (A) Original owner only—GFPV can receive good title; (B) Any purchaser—must be GOOD FAITH + VALUE; (C) No one—voidable (not void) title CAN be transferred to GFPV.",
+    "tip": "UCC §2-403(1): Voidable title + GFPV = good title transferred. Void title (theft) = no one gets good title (nemo dat).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21253,8 +21253,8 @@ const questions = [
       "D": "Signifies acceptance, fails to reject after reasonable opportunity, or does any act inconsistent with seller's ownership"
     },
     "correctAnswer": "D",
-    "explanation": "Acceptance occurs when buyer: (1) signifies the goods are conforming or will be accepted despite non-conformity, (2) fails to make an effective rejection after a reasonable opportunity to inspect, or (3) does any act inconsistent with the seller's ownership. Acceptance obligates the buyer to pay.",
-    "tip": "Acceptance: signify conformity, fail to reject, or inconsistent act. Once accepted, can't reject (but can revoke in limited cases).",
+    "explanation": "Per UCC §2-606(1), acceptance of goods occurs when buyer: (a) signifies the goods conform or will be accepted despite non-conformity, (b) fails to make effective rejection after reasonable opportunity to inspect, or (c) does any act inconsistent with seller's ownership. Under §2-607(1), acceptance obligates buyer to pay the contract price. Why other answers are wrong: (A) Opens packaging—not acceptance, just inspection opportunity; (B) Places order—that's contract formation, not acceptance of goods; (C) Signs receipt—merely acknowledges delivery, not acceptance.",
+    "tip": "UCC §2-606: Acceptance = signify, fail to reject, or inconsistent act. §2-607: Acceptance → pay obligation. Revoke under §2-608.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21274,7 +21274,7 @@ const questions = [
       "D": "The seller is insolvent"
     },
     "correctAnswer": "C",
-    "explanation": "Specific performance is available when goods are unique (art, antiques, custom goods) or in other proper circumstances where damages would be inadequate. The UCC liberalizes the common law rule. Requirements contracts for essential goods may also qualify.",
+    "explanation": "Under UCC §2-716, specific performance is available when goods are unique (art, antiques, custom goods) or in other proper circumstances where damages would be inadequate. The UCC liberalizes the common law rule. Requirements contracts for essential goods may also qualify. Why other answers are wrong: (A) Market exceeds contract—price difference is handled by damages under §2-713, not specific performance; (B) Any breach—specific performance requires unique goods, not just any breach; (D) Seller is insolvent—insolvency triggers special buyer rights under §2-502, not specific performance.",
     "tip": "Specific performance: unique goods or inadequate damages. UCC more liberal than common law.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -21295,8 +21295,8 @@ const questions = [
       "D": "Void for indefiniteness"
     },
     "correctAnswer": "A",
-    "explanation": "Requirements and output contracts are valid under the UCC despite lack of a fixed quantity. The quantity is the buyer's actual requirements (or seller's output) occurring in good faith. Quantities cannot be unreasonably disproportionate to stated estimates or prior comparable requirements.",
-    "tip": "Requirements: buyer's good faith needs. Output: seller's good faith production. Cannot be unreasonably disproportionate to estimates.",
+    "explanation": "Per UCC §2-306(1), requirements and output contracts are enforceable despite indefinite quantity terms. The quantity is measured by the buyer's actual requirements (or seller's actual output) occurring in good faith, and except as otherwise agreed, cannot be unreasonably disproportionate to stated estimates or prior comparable requirements. This validates contracts that would fail at common law for indefiniteness. Why other answers are wrong: (B) Whatever buyer wants—must be in good faith, not arbitrary; (C) Average of prior—it's ACTUAL requirements, not averaged; (D) Void for indefiniteness—UCC §2-306 saves these contracts.",
+    "tip": "UCC §2-306(1): Requirements/output = good faith actual needs, not unreasonably disproportionate to estimates or prior dealing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21316,8 +21316,8 @@ const questions = [
       "D": "Only the entruster can authorize sale"
     },
     "correctAnswer": "B",
-    "explanation": "Entrustment to a merchant who deals in goods of that kind gives the merchant power to transfer all rights of the entruster to a buyer in the ordinary course of business. The original owner can sue the merchant for conversion but cannot recover the goods from the BIOC.",
-    "tip": "Entrustment: BIOC gets good title from merchant. Owner's remedy is against merchant, not buyer.",
+    "explanation": "Per UCC §2-403(2), entrusting possession of goods to a merchant who deals in goods of that kind gives the merchant power to transfer all rights of the entruster to a buyer in ordinary course of business (BIOCB). Under §2-403(3), BIOCB means a buyer who buys in good faith, without knowledge of third-party rights, from a person in the business of selling such goods. Original owner's remedy is against the merchant for conversion. Why other answers are wrong: (A) Can never sell—merchant CAN transfer to BIOCB; (C) Loses all claims—owner retains conversion claim against merchant; (D) Only entruster can authorize—BIOCB gets title even without express authorization.",
+    "tip": "UCC §2-403(2): Entrustment to merchant + BIOCB = good title. Owner's claim is against merchant, not buyer.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21337,8 +21337,8 @@ const questions = [
       "D": "In writing and notarized"
     },
     "correctAnswer": "B",
-    "explanation": "Liquidated damages are enforceable if reasonable in light of anticipated or actual harm caused by breach, the difficulties of proof of loss, and the inconvenience of otherwise obtaining a remedy. Unreasonably large liquidated damages are void as a penalty.",
-    "tip": "Liquidated damages: must be reasonable estimate of harm. Penalty clauses unenforceable.",
+    "explanation": "Per UCC §2-718(1), liquidated damages clauses are enforceable if reasonable in light of: (1) anticipated or actual harm caused by the breach, (2) difficulties of proof of loss, and (3) inconvenience or nonfeasibility of otherwise obtaining an adequate remedy. A term fixing unreasonably large liquidated damages is void as a penalty. Why other answers are wrong: (A) Regardless of amount—amount must be reasonable; (C) 10% of price—no fixed percentage requirement; (D) In writing and notarized—reasonableness test, not formality requirements.",
+    "tip": "UCC §2-718(1): Liquidated damages = reasonable estimate of harm + difficult to prove + no adequate alternative remedy. Penalty = void.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21358,8 +21358,8 @@ const questions = [
       "D": "Satisfies the Statute of Frauds against both parties if not objected to within 10 days"
     },
     "correctAnswer": "D",
-    "explanation": "Between merchants, a written confirmation sent within a reasonable time that is sufficient against the sender satisfies the Statute of Frauds against the recipient unless written notice of objection is given within 10 days of receipt. This is the merchant's confirmatory memo rule.",
-    "tip": "Merchant confirmation: binds recipient unless they object in writing within 10 days. Only between merchants.",
+    "explanation": "Per UCC §2-201(2), between merchants, a written confirmation sent within a reasonable time that is sufficient against the sender satisfies the Statute of Frauds against the recipient unless written notice of objection is given within 10 days of receipt. This is the merchant's confirmatory memo rule. Why other answers are wrong: (A) Both signatures required—the memo only needs sender's signature; (B) No effect—§2-201(2) creates significant effect between merchants; (C) Binds sender only—without objection, it binds BOTH parties.",
+    "tip": "§2-104: Merchant confirmation: binds recipient unless they object in writing within 10 days. Only between merchants.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -21379,8 +21379,8 @@ const questions = [
       "D": "Any non-conformity exists"
     },
     "correctAnswer": "A",
-    "explanation": "Revocation of acceptance requires: (1) non-conformity that substantially impairs value to the buyer, (2) acceptance was either on reasonable assumption of cure or without discovery of defect due to difficulty of discovery or seller's assurances, and (3) revocation within a reasonable time after discovery.",
-    "tip": "Revocation: substantial impairment + accepted under reasonable belief of cure or hidden defect. Higher standard than rejection.",
+    "explanation": "Per UCC §2-608(1), buyer may revoke acceptance when: (1) non-conformity substantially impairs value to the buyer, AND (2) acceptance was either (a) on reasonable assumption defect would be cured and it hasn't been, or (b) without discovery due to difficulty of discovery or seller's assurances. Under §2-608(2), revocation must occur within reasonable time after buyer discovers or should have discovered the grounds, and before substantial change in goods not caused by defects. Why other answers are wrong: (B) Change mind 30 days—no such right; (C) Price drop—not grounds for revocation; (D) Any non-conformity—requires SUBSTANTIAL impairment.",
+    "tip": "UCC §2-608: Revocation = substantial impairment + accepted on cure assumption OR hidden defect. Higher standard than §2-601 rejection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21400,8 +21400,8 @@ const questions = [
       "D": "Creditors of the buyer can immediately attach the goods"
     },
     "correctAnswer": "B",
-    "explanation": "In a sale on approval (goods delivered for buyer's use/trial), title and risk remain with the seller until the buyer accepts. The buyer can return conforming goods at the seller's risk and expense. The goods are not subject to claims of the buyer's creditors until acceptance.",
-    "tip": "Sale on approval: for buyer's use, risk with seller. Sale or return: for resale, risk with buyer. Key distinction!",
+    "explanation": "Per UCC §2-326(1)(a), in a sale on approval (goods delivered primarily for buyer's use), title and risk remain with the seller until the buyer accepts. Under §2-327(1)(a), return is at seller's risk and expense, and goods are not subject to claims of buyer's creditors until acceptance. Contrast with §2-326(1)(b) 'sale or return' (goods for resale) where risk is with buyer. Why other answers are wrong: (A) Risk passes immediately—no, risk stays with seller in sale on approval; (C) Cannot return—buyer CAN return if not satisfied; (D) Creditors can attach—not until acceptance under §2-326(2).",
+    "tip": "UCC §2-326/§2-327: Sale on approval (use) = risk with seller. Sale or return (resale) = risk with buyer. Creditors: §2-326(2).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21421,8 +21421,8 @@ const questions = [
       "D": "Only the immediate buyer"
     },
     "correctAnswer": "A",
-    "explanation": "The UCC offers three alternative provisions for privity. The least expansive (Alternative A) extends warranty protection to family, household members, or guests of the buyer who may reasonably be expected to use the goods and suffer personal injury. States may adopt broader alternatives.",
-    "tip": "Privity: UCC relaxes for third party beneficiaries. Minimum = household + guests for personal injury. States vary.",
+    "explanation": "Per UCC §2-318, warranty protection extends beyond the immediate buyer. Alternative A (minimum) covers family, household members, or guests who may reasonably be expected to use, consume, or be affected by the goods and are injured in person. Alternative B extends to any natural person. Alternative C extends to any person. States choose which alternative to adopt. Why other answers are wrong: (B) Anyone in distribution chain—that's vertical privity, not the beneficiary issue; (C) Only those who paid—non-buyers can be protected; (D) Immediate buyer only—§2-318 specifically extends protection beyond buyer.",
+    "tip": "UCC §2-318: Alternative A = household/guests + personal injury (minimum). States may adopt broader B or C alternatives.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21442,8 +21442,8 @@ const questions = [
       "D": "The contract is automatically void"
     },
     "correctAnswer": "C",
-    "explanation": "Anticipatory repudiation occurs when a party indicates they won't perform before performance is due. The aggrieved party may: (1) await performance for a commercially reasonable time, (2) resort to any remedy for breach, or (3) suspend their own performance. The repudiating party can retract if the other hasn't acted in reliance.",
-    "tip": "Anticipatory breach: can await or act on breach immediately. Repudiation can be retracted before reliance or cancellation.",
+    "explanation": "Per UCC §2-610, when either party repudiates the contract before performance is due, the aggrieved party may: (a) await performance for a commercially reasonable time, (b) resort to any remedy for breach (§2-703 seller, §2-711 buyer), or (c) in either case suspend their own performance. Under §2-611, the repudiating party may retract unless the aggrieved party has cancelled, materially changed position, or indicated the repudiation is final. Why other answers are wrong: (A) Specific performance only—multiple remedies available; (B) Must wait—can act immediately under §2-610; (D) Automatically void—contract still exists, just breached.",
+    "tip": "UCC §2-610: Anticipatory repudiation = await OR act immediately + suspend own performance. §2-611: can retract before reliance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21463,8 +21463,8 @@ const questions = [
       "D": "Cover was impossible"
     },
     "correctAnswer": "B",
-    "explanation": "Consequential damages include losses the seller had reason to know would result from the breach (e.g., lost profits, injury) and that could not reasonably be prevented by cover or otherwise. Incidental damages (inspection, storage, shipping costs) are recoverable without this foreseeability requirement.",
-    "tip": "Consequential: foreseeable losses that couldn't be mitigated. Incidental: costs of dealing with breach. Sellers can limit consequential damages.",
+    "explanation": "Per UCC §2-715(2), buyer's consequential damages include: (a) losses resulting from general or particular requirements the seller had reason to know at time of contracting and which could not reasonably be prevented by cover or otherwise, and (b) injury to person or property proximately resulting from breach. Under §2-715(1), incidental damages (inspection, storage, shipping) don't require foreseeability. Why other answers are wrong: (A) Always presumed—must prove seller had reason to know; (C) Requested in contract—based on foreseeability, not contract language; (D) Cover impossible—mitigation applies but isn't determinative.",
+    "tip": "UCC §2-715: Consequential = foreseeable (seller knew) + couldn't mitigate. §2-715(1) incidental = no foreseeability required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21484,7 +21484,7 @@ const questions = [
       "D": "Is enforceable without consideration if made in good faith"
     },
     "correctAnswer": "D",
-    "explanation": "Unlike common law, UCC contract modifications don't require consideration—good faith is sufficient. However, if the contract as modified falls within the Statute of Frauds ($500+), the modification must be in writing. A no-oral-modification clause can require written modifications.",
+    "explanation": "Under UCC §2-209(1), unlike common law, UCC contract modifications don't require consideration—good faith is sufficient. However, per §2-209(3), if the contract as modified falls within the Statute of Frauds ($500+), the modification must be in writing. A no-oral-modification clause can require written modifications per §2-209(2). Why other answers are wrong: (A) Always in writing—only needed if over $500 or NOM clause per §2-209(2)-(3); (B) Void if price increases—price changes are valid if in good faith; (C) Requires consideration—§2-209(1) eliminates consideration requirement.",
     "tip": "UCC modification: no consideration needed, just good faith. Written if over $500 or NOM clause exists.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -21505,8 +21505,8 @@ const questions = [
       "D": "The buyer requests additional goods"
     },
     "correctAnswer": "C",
-    "explanation": "Commercial impracticability excuses performance when: (1) performance is made impracticable, (2) by an event the non-occurrence of which was a basic assumption of the contract, and (3) without fault of the seller. If only part of capacity is affected, the seller must allocate fairly among customers.",
-    "tip": "Impracticability: unforeseen event + impracticable (not just expensive). Must allocate available supply fairly.",
+    "explanation": "Per UCC §2-615(a), a seller is excused when performance is made impracticable by an event the non-occurrence of which was a basic assumption of the contract, or by compliance with governmental regulation. Under §2-615(b), if only part of capacity is affected, seller must allocate production fairly among customers. This is higher standard than impossibility—increased cost alone is insufficient. Why other answers are wrong: (A) Market changes—not sufficient, must be impracticable; (B) More expensive—mere cost increase doesn't excuse; (D) Buyer requests more—buyer's change doesn't excuse seller.",
+    "tip": "UCC §2-615: Impracticability = unforeseen event + basic assumption + not seller's fault. §2-615(b): must allocate fairly.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21526,8 +21526,8 @@ const questions = [
       "D": "The buyer fails to respond to invoices"
     },
     "correctAnswer": "B",
-    "explanation": "A seller can reclaim goods from an insolvent buyer who received goods on credit if demand is made within a reasonable time after the seller discovers insolvency. For cash sales (payment due on delivery), the seller can reclaim within 10 days of delivery. BFP's rights cut off reclamation.",
-    "tip": "Reclamation: insolvency + reasonable time demand. Cash sale = 10 days. BFP defeats reclamation right.",
+    "explanation": "Per UCC §2-702(2), a seller may reclaim goods from an insolvent buyer who received goods on credit if the seller demands return within a reasonable time after discovering the insolvency. Under §2-507(2), for cash sales where payment was due on delivery, reclamation demand must be within 10 days of delivery. Under §2-702(3), the seller's reclamation right is subject to the rights of a good faith purchaser. Why other answers are wrong: (A) Any amount unpaid—requires insolvency; (C) Custom-made—not a factor; (D) Fails to respond—requires insolvency, not mere non-response.",
+    "tip": "UCC §2-702: Reclaim from insolvent buyer within reasonable time. §2-507(2): cash sale = 10 days. BFP defeats reclamation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21547,8 +21547,8 @@ const questions = [
       "D": "Valid if the parties intend to be bound, with price to be a reasonable price"
     },
     "correctAnswer": "D",
-    "explanation": "The UCC allows contracts with open terms if the parties intend to make a contract. An open price means a reasonable price at the time of delivery. Other terms that can be left open include: place of delivery (seller's place), time of payment (delivery), and time of delivery (reasonable time).",
-    "tip": "Open terms OK if intent to contract. Price = reasonable. Delivery = seller's place. Time = reasonable. Only quantity must be stated.",
+    "explanation": "Per UCC §2-204(3), a contract with open terms is valid if the parties intend to make a contract and there is a reasonably certain basis for remedy. Under §2-305, open price means reasonable price at delivery. §2-308: open delivery place = seller's place. §2-310: open time for payment = on delivery. §2-309: open delivery time = reasonable time. Only quantity must be stated for Statute of Frauds under §2-201. Why other answers are wrong: (A) 10 days—no such requirement; (B) Merchants only—applies to all parties; (C) Void—UCC gap-fillers save the contract.",
+    "tip": "UCC §2-204(3): Open terms OK with intent + reasonable basis. Gap-fillers: §2-305 price, §2-308 place, §2-309/310 time.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -21568,8 +21568,8 @@ const questions = [
       "D": "Inspected by the buyer"
     },
     "correctAnswer": "B",
-    "explanation": "Goods must be identified to the contract before risk of loss can pass. Identification occurs when specific goods are designated as those to which the contract refers. This can happen at contracting (existing goods), when goods are shipped/marked (fungible), or when crops are planted/animals conceived.",
-    "tip": "Identification = these specific goods for this contract. Risk rules don't apply until goods are identified.",
+    "explanation": "Per UCC §2-501(1), goods must be identified to the contract before any interest in them can pass to the buyer, including risk of loss under §2-509. Identification occurs: (a) when contract is made if goods are existing and identified, (b) for future goods when goods are shipped, marked, or otherwise designated by the seller, (c) for crops when planted or animals when conceived. Why other answers are wrong: (A) Buyer's possession—risk may pass earlier; (C) Paid in full—payment doesn't determine identification; (D) Inspected—inspection doesn't determine identification.",
+    "tip": "UCC §2-501: Identification = specific goods designated for this contract. §2-509 risk rules require identification first.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -21589,8 +21589,8 @@ const questions = [
       "D": "The buyer simply refuses to pay"
     },
     "correctAnswer": "A",
-    "explanation": "The seller can recover the price when: (1) the buyer accepted the goods, (2) conforming goods are lost or damaged after risk passed to buyer, or (3) the goods cannot be resold at a reasonable price after reasonable effort. In other cases, the seller is limited to damages (contract-market or contract-resale).",
-    "tip": "Price action: acceptance, risk passed, or can't resell. Otherwise seller must prove damages, not collect full price.",
+    "explanation": "Per UCC §2-709(1), seller may recover the full contract price when: (a) buyer accepted the goods (§2-607 obligates payment), (b) conforming goods are lost or damaged within a commercially reasonable time after risk passed to buyer, or (c) goods identified to the contract cannot be resold at a reasonable price after reasonable effort. Under §2-709(2), seller holding goods for buyer must resell if possible. Why other answers are wrong: (B) Market price lower—that's a damages measure under §2-708; (C) Anticipatory repudiation—other remedies under §2-703; (D) Refuses to pay—must show one of the §2-709 conditions.",
+    "tip": "UCC §2-709: Price action = acceptance, risk passed + loss, or can't resell reasonably. Otherwise use §2-706/§2-708 damages.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21610,8 +21610,8 @@ const questions = [
       "D": "Subject to a 24-hour cooling off period"
     },
     "correctAnswer": "B",
-    "explanation": "Unless specifically announced as 'without reserve,' auctions are with reserve. In with reserve auctions, the auctioneer may withdraw goods at any time before the hammer falls. In without reserve auctions, once the auctioneer calls for bids, the goods cannot be withdrawn unless no bid is received in reasonable time.",
-    "tip": "Default = with reserve (auctioneer can withdraw). Without reserve must be announced (can't withdraw after calling for bids).",
+    "explanation": "Per UCC §2-328(3), an auction is 'with reserve' unless explicitly announced as 'without reserve.' In with reserve auctions, the auctioneer may withdraw goods at any time before hammer falls. Under §2-328(3), in without reserve auctions, once the auctioneer calls for bids on an article, it cannot be withdrawn unless no bid is made within a reasonable time. §2-328(2): sale is complete when auctioneer announces completion. Why other answers are wrong: (A) Without reserve—must be announced; (C) Final on first bid—not until hammer falls; (D) Cooling off—no such UCC requirement.",
+    "tip": "UCC §2-328: Default = with reserve (can withdraw). Without reserve = cannot withdraw after calling for bids.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -21631,8 +21631,8 @@ const questions = [
       "D": "Immediately cancel the contract"
     },
     "correctAnswer": "A",
-    "explanation": "When reasonable grounds for insecurity arise regarding the other party's performance, the insecure party may demand adequate assurance of due performance in writing. The demanding party may suspend their own performance until assurance is received. Failure to provide adequate assurance within 30 days is a repudiation.",
-    "tip": "Demand assurance: must be in writing. No response in 30 days = repudiation. Can suspend pending assurance.",
+    "explanation": "Per UCC §2-609(1), when reasonable grounds for insecurity arise, the insecure party may demand adequate assurance of due performance in writing and may suspend any performance for which return has not already been received until assurance is provided. Under §2-609(4), failure to provide adequate assurance within a reasonable time not exceeding 30 days constitutes a repudiation of the contract. Why other answers are wrong: (B) Withhold payment only—can suspend ANY performance; (C) Preliminary injunction—UCC provides self-help remedy; (D) Immediately cancel—must demand assurance and wait up to 30 days first.",
+    "tip": "UCC §2-609: Demand assurance in writing + suspend performance. No assurance within 30 days = repudiation under §2-609(4).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -21652,7 +21652,7 @@ const questions = [
       "D": "Tax textbook"
     },
     "correctAnswer": "A",
-    "explanation": "Primary sources are official pronouncements of tax law, including the Internal Revenue Code, Treasury Regulations, Revenue Rulings, Revenue Procedures, and court cases. Textbooks, articles, and IRS publications are secondary sources that explain or interpret primary sources.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), primary sources (substantial authority) include the IRC, Treasury Regulations, Revenue Rulings, Revenue Procedures, and court cases. These are official pronouncements of tax law. Why other answers are wrong: (B) Tax articles are secondary sources with no legal weight; (C) IRS Publications are informational guides, not binding authority; (D) Tax textbooks explain the law but cannot be cited as authority.",
     "tip": "Primary: Code, Regs, Rulings, Cases. Secondary: everything else (treatises, articles, publications).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -21673,7 +21673,7 @@ const questions = [
       "D": "IRS Revenue Rulings"
     },
     "correctAnswer": "C",
-    "explanation": "The Internal Revenue Code (IRC), enacted by Congress, is the highest statutory authority for federal tax law. Only the U.S. Constitution and tax treaties can override the Code. All other sources (regulations, rulings, cases) interpret or apply the Code.",
+    "explanation": "Per IRC §7701 and U.S. Constitution Art. I, §8, the Internal Revenue Code (IRC), enacted by Congress, is the highest statutory authority for federal tax law. Only the U.S. Constitution and tax treaties can override the Code. Why other answers are wrong: (A) Tax Court decisions interpret, not override, the Code; (B) Treasury Regulations implement the Code under IRC §7805 but cannot contradict it; (D) IRS Revenue Rulings are just administrative interpretations.",
     "tip": "Constitution > Treaties > IRC > Regulations > Rulings > Cases (persuasive authority varies by court).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -21694,8 +21694,8 @@ const questions = [
       "D": "Final court decisions"
     },
     "correctAnswer": "C",
-    "explanation": "Revenue Rulings are official IRS interpretations of how the tax law applies to specific fact patterns. They are published for guidance and can be relied upon by taxpayers. While not as authoritative as the Code or regulations, they indicate the IRS position on an issue.",
-    "tip": "Revenue Rulings: IRS position on specific facts. Published in Internal Revenue Bulletin. Can be relied upon.",
+    "explanation": "Per Treas. Reg. §601.601(d)(2), revenue Rulings are official IRS interpretations of how the tax law applies to specific fact patterns. They are published for guidance and can be relied upon by taxpayers. While not as authoritative as the Code or regulations, they indicate the IRS position on an issue.",
+    "tip": "§601: Revenue Rulings: IRS position on specific facts. Published in Internal Revenue Bulletin. Can be relied upon.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21715,8 +21715,8 @@ const questions = [
       "D": "No weight"
     },
     "correctAnswer": "A",
-    "explanation": "Legislative regulations are issued under specific Congressional authority (e.g., Section 1502 consolidated return regulations). They have the force and effect of law and are nearly impossible to challenge. Interpretive regulations explain the Code and can be challenged if they contradict the statute.",
-    "tip": "Legislative regs = force of law (specific Congressional grant). Interpretive regs = can be challenged if unreasonable.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), legislative regulations are issued under specific Congressional authority (e.g., Section 1502 consolidated return regulations). They have the force and effect of law and are nearly impossible to challenge. Interpretive regulations explain the Code and can be challenged if they contradict the statute.",
+    "tip": "§1: Legislative regs = force of law (specific Congressional grant). Interpretive regs = can be challenged if unreasonable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21736,8 +21736,8 @@ const questions = [
       "D": "First pay the disputed tax"
     },
     "correctAnswer": "A",
-    "explanation": "Tax Court is a pre-payment forum—taxpayers can challenge deficiencies without first paying. However, a statutory notice of deficiency (90-day letter) from the IRS is required to establish jurisdiction. The petition must be filed within 90 days of the notice.",
-    "tip": "Tax Court: no prepayment, but need 90-day letter. District Court/CFC: must pay first, then sue for refund.",
+    "explanation": "Per IRC §6213, Tax Court is a pre-payment forum—taxpayers can challenge deficiencies without first paying. However, a statutory notice of deficiency (90-day letter) from the IRS is required to establish jurisdiction. The petition must be filed within 90 days of the notice. Why other answers are wrong: (B) 30 days after assessment—assessment follows Tax Court, doesn't trigger Tax Court jurisdiction; (C) Income over $100,000—no income threshold for Tax Court; (D) First pay tax—Tax Court is the NO-PAY forum; District Court and CFC require prepayment.",
+    "tip": "§7442: Tax Court: no prepayment, but need 90-day letter. District Court/CFC: must pay first, then sue for refund.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21757,8 +21757,8 @@ const questions = [
       "D": "Is binding only on the taxpayer who requested it for the specific transaction"
     },
     "correctAnswer": "D",
-    "explanation": "A private letter ruling (PLR) is the IRS's response to a taxpayer's request for guidance on how the law applies to their specific proposed transaction. It is binding only on that taxpayer for that transaction. Other taxpayers cannot rely on it but may find it useful as an indicator of IRS position.",
-    "tip": "PLR: binding only on requesting taxpayer. Can't cite as authority. Useful for insight into IRS thinking.",
+    "explanation": "Per IRC §6110, a private letter ruling (PLR) is the IRS's response to a taxpayer's request for guidance on how the law applies to their specific proposed transaction. It is binding only on that taxpayer for that transaction. Other taxpayers cannot rely on it but may find it useful as an indicator of IRS position. Why other answers are wrong: (A) No legal significance—PLRs ARE legally significant to the requesting taxpayer; (B) Supersedes Revenue Rulings—Revenue Rulings have broader authority; (C) Relied upon by any taxpayer—PLRs are only binding on the requesting taxpayer.",
+    "tip": "§6110: PLR: binding only on requesting taxpayer. Can't cite as authority. Useful for insight into IRS thinking.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -21778,7 +21778,7 @@ const questions = [
       "D": "The U.S. District Court"
     },
     "correctAnswer": "B",
-    "explanation": "Tax Court decisions are appealed to the U.S. Court of Appeals for the circuit where the taxpayer resides. District Court decisions also go to the Circuit Court of Appeals. Court of Federal Claims decisions go to the Court of Appeals for the Federal Circuit. Ultimate appeal is to the Supreme Court.",
+    "explanation": "Per 28 U.S.C. §7482, Tax Court decisions are appealed to the U.S. Court of Appeals for the circuit where the taxpayer resides. District Court decisions also go to the Circuit Court of Appeals. Court of Federal Claims decisions go to the Court of Appeals for the Federal Circuit. Why other answers are wrong: (A) CFC is a trial court, not appellate; (C) Supreme Court review is discretionary via certiorari; (D) District Court is a trial court.",
     "tip": "Tax Court/District Court → Circuit Court of Appeals. CFC → Federal Circuit. All → Supreme Court (if cert granted).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -21799,8 +21799,8 @@ const questions = [
       "D": "Cannot be relied upon by taxpayers"
     },
     "correctAnswer": "B",
-    "explanation": "Temporary regulations have the same legal force as final regulations but are time-limited, typically expiring within 3 years. They are issued when immediate guidance is needed and are published simultaneously as proposed regulations to invite public comment before finalization.",
-    "tip": "Temporary regs: full legal effect, 3-year limit. Proposed regs: no legal effect, just for comment.",
+    "explanation": "Per IRC §7805, temporary regulations have the same legal force as final regulations but are time-limited, typically expiring within 3 years. They are issued when immediate guidance is needed and are published simultaneously as proposed regulations to invite public comment before finalization. Why other answers are wrong: (A) No legal effect until finalized—temporary regs DO have immediate legal effect; (C) Only individual taxpayers—temporary regs apply to all affected taxpayers; (D) Cannot be relied upon—taxpayers CAN rely on them while in effect.",
+    "tip": "§7805: Temporary regs: full legal effect, 3-year limit. Proposed regs: no legal effect, just for comment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21820,7 +21820,7 @@ const questions = [
       "D": "The most recent published opinion"
     },
     "correctAnswer": "B",
-    "explanation": "Under the Golsen rule, the Tax Court follows the precedent of the circuit court to which the taxpayer's case is appealable, even if the Tax Court disagrees. This ensures consistency in application within each circuit. If no circuit precedent exists, the Tax Court follows its own analysis.",
+    "explanation": "Under the Golsen rule (Golsen v. Commissioner, 54 T.C. 742 (1970)), the Tax Court follows the precedent of the circuit court to which the taxpayer's case is appealable, even if the Tax Court disagrees. This ensures consistency in application within each circuit. If no circuit precedent exists, the Tax Court follows its own analysis. Why other answers are wrong: (A) Its own precedent regardless—Golsen requires following circuit precedent when it exists; (C) Only Supreme Court—Tax Court follows both Supreme Court and relevant circuit; (D) Most recent opinion—age of opinion is irrelevant; hierarchy matters.",
     "tip": "Golsen: Tax Court follows taxpayer's circuit. Important for forum shopping when circuits differ.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -21841,8 +21841,8 @@ const questions = [
       "D": "Substantive tax law interpretations"
     },
     "correctAnswer": "A",
-    "explanation": "Revenue Procedures describe internal IRS practices and procedures, including how taxpayers should interact with the IRS, safe harbors, and procedural matters. Examples include procedures for filing ruling requests, automatic accounting method changes, and late election relief.",
-    "tip": "Revenue Procedures = how to do something (procedures). Revenue Rulings = how law applies to facts (substance).",
+    "explanation": "Per Treas. Reg. §601.601(d)(2), revenue Procedures describe internal IRS practices and procedures, including how taxpayers should interact with the IRS, safe harbors, and procedural matters. Examples include procedures for filing ruling requests, automatic accounting method changes, and late election relief.",
+    "tip": "§601: Revenue Procedures = how to do something (procedures). Revenue Rulings = how law applies to facts (substance).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21862,8 +21862,8 @@ const questions = [
       "D": "$100,000 or less for any tax year"
     },
     "correctAnswer": "C",
-    "explanation": "Small case procedures are available when the amount in dispute is $50,000 or less per tax year. The procedures are less formal, decisions are final (no appeal), and opinions are not published as precedent. This provides an accessible forum for smaller disputes.",
-    "tip": "S case: ≤$50,000, informal, no appeal, not precedent. Regular case: appealable, may be precedent.",
+    "explanation": "Per IRC §7463, small case (S case) procedures are available when the amount in dispute is $50,000 or less per tax year. The procedures are less formal, decisions are final (no appeal), and opinions are not published as precedent. This provides an accessible forum for smaller disputes. Why other answers are wrong: (A) Any amount if elected—there IS a dollar limit; (B) $25,000 or less—this was the OLD threshold; (D) $100,000 or less—too high; the current threshold is $50,000.",
+    "tip": "§7442: S case: ≤$50,000, informal, no appeal, not precedent. Regular case: appealable, may be precedent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21883,8 +21883,8 @@ const questions = [
       "D": "Have the force of law"
     },
     "correctAnswer": "A",
-    "explanation": "Committee reports (House Ways and Means, Senate Finance, Conference) explain Congress's intent when enacting tax legislation. While not binding law, courts give weight to legislative history when statutory language is ambiguous. The Conference Report is particularly important when resolving differences.",
-    "tip": "Committee reports: explain intent. Useful for ambiguous statutes. Conference Report resolves House-Senate differences.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), committee reports (House Ways and Means, Senate Finance, Conference) explain Congress's intent when enacting tax legislation. While not binding law, courts give weight to legislative history when statutory language is ambiguous. The Conference Report is particularly important when resolving differences.",
+    "tip": "§1: Committee reports: explain intent. Useful for ambiguous statutes. Conference Report resolves House-Senate differences.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21904,8 +21904,8 @@ const questions = [
       "D": "Is only issued in S cases"
     },
     "correctAnswer": "B",
-    "explanation": "Memorandum decisions apply well-established legal principles to specific facts. Regular Tax Court decisions (TC Reports) address significant legal issues and are more likely to be cited as precedent. Both are citable, but regular decisions carry more weight for novel issues.",
-    "tip": "Memo = fact-driven, established law. Regular = legal issues. Both citable, regular decisions more authoritative.",
+    "explanation": "Tax Court memorandum decisions apply well-established legal principles to specific facts. Regular Tax Court decisions (TC Reports) address significant legal issues and are more likely to be cited as precedent. Both are citable, but regular decisions carry more weight for novel issues. Why other answers are wrong: (A) Novel legal issues—that's what REGULAR decisions address, not memo decisions; (C) No precedential value—memo decisions ARE citable, just lower weight than regular; (D) Only S cases—S case decisions are separate; memos are for regular cases applying settled law.",
+    "tip": "§7442: Memo = fact-driven, established law. Regular = legal issues. Both citable, regular decisions more authoritative.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21925,8 +21925,8 @@ const questions = [
       "D": "Written legal advice from IRS counsel to field offices, released to the public"
     },
     "correctAnswer": "D",
-    "explanation": "Chief Counsel Advice (CCA) includes Field Service Advice, Technical Assistance, and Litigation Guidance memos. They must be released to the public but cannot be cited as precedent. They provide insight into IRS legal positions and strategies.",
-    "tip": "CCA: public but not precedent. Shows IRS thinking. Include Field Service Advice and Technical Advice.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), chief Counsel Advice (CCA) includes Field Service Advice, Technical Assistance, and Litigation Guidance memos. They must be released to the public but cannot be cited as precedent. They provide insight into IRS legal positions and strategies.",
+    "tip": "§1: CCA: public but not precedent. Shows IRS thinking. Include Field Service Advice and Technical Advice.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -21946,7 +21946,7 @@ const questions = [
       "D": "Any source the taxpayer finds persuasive"
     },
     "correctAnswer": "C",
-    "explanation": "Substantial authority includes: the IRC, legislative history, regulations, revenue rulings/procedures, tax treaties, court cases, Congressional intent, IRS notices/announcements, and private letter rulings/TAMs (only for the taxpayer to whom issued). Secondary sources like treatises are excluded.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), substantial authority includes: the IRC, legislative history, regulations, revenue rulings/procedures, tax treaties, court cases, Congressional intent, IRS notices/announcements, and private letter rulings/TAMs (only for the taxpayer to whom issued). Why other answers are wrong: (A) is too narrow as it only includes published court cases while substantial authority encompasses many other sources; (B) is incomplete as it only includes the Internal Revenue Code when the regulation specifies numerous additional authoritative sources; (D) is incorrect because not every source a taxpayer finds persuasive qualifies - secondary sources like treatises and tax journals are specifically excluded from the definition of substantial authority.",
     "tip": "Substantial authority sources listed in regulations. Does NOT include: IRS publications, textbooks, articles.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -21967,7 +21967,7 @@ const questions = [
       "D": "Are immediately binding on taxpayers"
     },
     "correctAnswer": "A",
-    "explanation": "Proposed regulations have no legal effect—they are issued for public comment before finalization. However, they indicate the Treasury's interpretation and likely future position. Final regulations may differ based on comments received. Taxpayers rely on proposed regulations at their own risk.",
+    "explanation": "Per IRC §7805(e), proposed regulations have no legal effect—they are issued for public comment before finalization. However, they indicate the Treasury's interpretation and likely future position. Why other answers are wrong: (B) Nothing can supersede the IRC except the Constitution; (C) Proposed regulations are specifically designed to be modified based on comments; (D) Only final/temporary regulations are binding.",
     "tip": "Proposed = no legal effect, just preview. Comment period required before finalization.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -21988,7 +21988,7 @@ const questions = [
       "D": "The CFC follows national (Federal Circuit) precedent rather than regional circuits"
     },
     "correctAnswer": "D",
-    "explanation": "The CFC follows Federal Circuit precedent, which may differ from regional circuits. A taxpayer might prefer CFC if Federal Circuit precedent is favorable. Tax Court follows the taxpayer's regional circuit (Golsen rule). District Court follows its regional circuit as well.",
+    "explanation": "The CFC follows Federal Circuit precedent, which may differ from regional circuits. A taxpayer might prefer CFC if Federal Circuit precedent is favorable. Tax Court follows the taxpayer's regional circuit (Golsen rule). District Court follows its regional circuit as well. Why other answers are wrong: (A) No filing fee—CFC has filing fees; (B) Cannot be appealed—CFC decisions ARE appealable to Federal Circuit; (C) Prepayment challenges—CFC is a REFUND forum requiring prepayment, like District Court.",
     "tip": "Forum shopping: consider which precedent applies. CFC = Federal Circuit. Tax Court/District = regional circuits.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -22009,8 +22009,8 @@ const questions = [
       "D": "The IRS accepts the decision and will follow it in similar cases"
     },
     "correctAnswer": "D",
-    "explanation": "Acquiescence (acq.) means the IRS accepts the court's decision and will follow it in handling similar cases. Nonacquiescence (nonacq.) means the IRS disagrees and will continue to litigate the issue. An action on decision (AOD) may explain the IRS's reasoning.",
-    "tip": "ACQ = IRS accepts, will follow. NONACQ = IRS disagrees, will continue to litigate issue.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), acquiescence (acq.) means the IRS accepts the court's decision and will follow it in handling similar cases. Nonacquiescence (nonacq.) means the IRS disagrees and will continue to litigate the issue. An action on decision (AOD) may explain the IRS's reasoning.",
+    "tip": "§1: ACQ = IRS accepts, will follow. NONACQ = IRS disagrees, will continue to litigate issue.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22051,8 +22051,8 @@ const questions = [
       "D": "Publish Tax Court opinions"
     },
     "correctAnswer": "B",
-    "explanation": "IRS Notices provide interim guidance pending issuance of regulations, announce the IRS's position on emerging issues, or describe regulations to be issued. They are published in the Internal Revenue Bulletin and can be relied upon by taxpayers.",
-    "tip": "Notices: interim guidance, pending regulations, emerging issues. Published in IRB. Can be relied upon.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), iRS Notices provide interim guidance pending issuance of regulations, announce the IRS's position on emerging issues, or describe regulations to be issued. They are published in the Internal Revenue Bulletin and can be relied upon by taxpayers.",
+    "tip": "§1: Notices: interim guidance, pending regulations, emerging issues. Published in IRB. Can be relied upon.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22072,8 +22072,8 @@ const questions = [
       "D": "The case cannot be appealed"
     },
     "correctAnswer": "C",
-    "explanation": "District Court is the only forum offering jury trials in tax cases. This may benefit a taxpayer with sympathetic facts. However, the taxpayer must pay the disputed tax first and sue for a refund. District Court judges are generalists, not tax specialists.",
-    "tip": "District Court: jury trial available, must prepay tax. Tax Court: no jury, specialized judges, no prepayment.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), district Court is the only forum offering jury trials in tax cases. This may benefit a taxpayer with sympathetic facts. However, the taxpayer must pay the disputed tax first and sue for a refund. District Court judges are generalists, not tax specialists.",
+    "tip": "§1: District Court: jury trial available, must prepay tax. Tax Court: no jury, specialized judges, no prepayment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22093,8 +22093,8 @@ const questions = [
       "D": "Always accept the IRS interpretation"
     },
     "correctAnswer": "A",
-    "explanation": "Under Chevron deference, if the statute is ambiguous, courts defer to the agency's reasonable interpretation. If the statute is clear, the agency must follow it. More recent cases have refined this, with less deference to interpretive regulations that weren't subject to notice-and-comment rulemaking.",
-    "tip": "Chevron: ambiguous statute + reasonable interpretation = deference. Clear statute = no deference needed.",
+    "explanation": "Under Chevron deference (Chevron U.S.A. v. NRDC), if the statute is ambiguous, courts defer to the agency's reasonable interpretation. If the statute is clear, the agency must follow it. More recent cases have refined this, with less deference to interpretive regulations that weren't subject to notice-and-comment rulemaking. Why other answers are wrong: (B) Never defer—courts DO defer when statute is ambiguous; (C) Only proposed regs—proposed regs have NO legal force; deference applies to final/temporary regs; (D) Always accept—courts only defer if the interpretation is REASONABLE.",
+    "tip": "§7805: Chevron: ambiguous statute + reasonable interpretation = deference. Clear statute = no deference needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22114,7 +22114,7 @@ const questions = [
       "D": "The more recent source controls"
     },
     "correctAnswer": "C",
-    "explanation": "The Internal Revenue Code, enacted by Congress, is higher authority than Treasury Regulations, issued by the executive branch. If a regulation conflicts with clear statutory language, the statute controls. Regulations must be consistent with the statute to be valid.",
+    "explanation": "Per IRC §7805(a) and constitutional separation of powers, the Internal Revenue Code, enacted by Congress, is higher authority than Treasury Regulations, issued by the executive branch. If a regulation conflicts with clear statutory language, the statute controls. Regulations must be consistent with the statute to be valid (Chevron deference doctrine).",
     "tip": "Code > Regulations. Regulation contradicting clear statutory language is invalid.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -22135,7 +22135,7 @@ const questions = [
       "D": "Only by writ of certiorari, typically to resolve circuit court conflicts"
     },
     "correctAnswer": "D",
-    "explanation": "Supreme Court review is discretionary through certiorari. The Court typically grants cert when there are circuit splits (different courts reaching different results) or significant federal questions. Very few tax cases reach the Supreme Court, but its decisions are binding on all courts.",
+    "explanation": "Per 28 U.S.C. §1254, Supreme Court review is discretionary through certiorari. The Court typically grants cert when there are circuit splits (different courts reaching different results) or significant federal questions. Very few tax cases reach the Supreme Court, but its decisions are binding on all courts. Why other answers are wrong: (A) Only when IRS requests—either party can petition for cert; (B) All cases over $1 million—no automatic jurisdiction based on amount; (C) Automatically on appeal—Supreme Court review is DISCRETIONARY, not automatic.",
     "tip": "Supreme Court: certiorari, resolves conflicts, rarely grants. Decisions bind all courts and the IRS.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -22156,8 +22156,8 @@ const questions = [
       "D": "Issued before a transaction occurs"
     },
     "correctAnswer": "B",
-    "explanation": "TAMs provide guidance from the IRS National Office to field personnel on specific, usually complex or controversial, issues during audits. They are binding on the IRS for that taxpayer's issue but cannot be cited as precedent by others. They are released to the public in redacted form.",
-    "tip": "TAM: National Office guidance on audit issue. Binding on IRS for that taxpayer. Public but not precedent.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), tAMs provide guidance from the IRS National Office to field personnel on specific, usually complex or controversial, issues during audits. They are binding on the IRS for that taxpayer's issue but cannot be cited as precedent by others. They are released to the public in redacted form.",
+    "tip": "§1: TAM: National Office guidance on audit issue. Binding on IRS for that taxpayer. Public but not precedent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22177,8 +22177,8 @@ const questions = [
       "D": "Find supporting authority, then identify facts"
     },
     "correctAnswer": "B",
-    "explanation": "Tax research follows a structured process: (1) gather relevant facts, (2) identify tax issues, (3) locate applicable authority (Code, regulations, cases), (4) analyze how authority applies to facts, (5) reach conclusions, and (6) communicate findings. Facts drive the analysis.",
-    "tip": "GILAC: Gather facts, Identify issues, Locate authority, Analyze, Conclude/Communicate. Facts first!",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), tax research follows a structured process: (1) gather relevant facts, (2) identify tax issues, (3) locate applicable authority (Code, regulations, cases), (4) analyze how authority applies to facts, (5) reach conclusions, and (6) communicate findings. Facts drive the analysis.",
+    "tip": "§1: GILAC: Gather facts, Identify issues, Locate authority, Analyze, Conclude/Communicate. Facts first!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22198,7 +22198,7 @@ const questions = [
       "D": "The treaty always controls"
     },
     "correctAnswer": "B",
-    "explanation": "Treaties and the IRC are at the same level under the Constitution. When they conflict, the later-enacted provision generally controls (later-in-time rule). However, Congress typically includes treaty override language in legislation, and courts try to harmonize where possible.",
+    "explanation": "Per IRC §7852(d) and U.S. Constitution Art. VI, treaties and the IRC are at the same level. When they conflict, the later-enacted provision generally controls (later-in-time rule). However, Congress typically includes treaty override language in legislation, and courts try to harmonize where possible.",
     "tip": "Later-in-time: later statute or treaty prevails. Congress often includes explicit override language.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -22219,7 +22219,7 @@ const questions = [
       "D": "Only follows Supreme Court decisions"
     },
     "correctAnswer": "B",
-    "explanation": "Stare decisis means courts follow precedent from courts with appellate authority. A district court follows its circuit and Supreme Court. Tax Court follows the taxpayer's circuit (Golsen) and Supreme Court. Decisions from other circuits are persuasive but not binding.",
+    "explanation": "Stare decisis means courts follow precedent from courts with appellate authority. A district court follows its circuit and Supreme Court. Tax Court follows the taxpayer's circuit (Golsen) and Supreme Court. Decisions from other circuits are persuasive but not binding. Why other answers are wrong: (A) All prior case law regardless—only decisions from courts with authority over the current court are binding; (C) Can ignore all prior decisions—stare decisis REQUIRES following binding precedent; (D) Only Supreme Court—circuit court decisions are also binding on lower courts within the circuit.",
     "tip": "Stare decisis: binding precedent from higher court in same chain. Other circuits = persuasive only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -22240,8 +22240,8 @@ const questions = [
       "D": "Is issued by a local IRS office on completed transactions applying established principles"
     },
     "correctAnswer": "D",
-    "explanation": "Determination letters are issued by IRS field offices on completed transactions where the law is settled. Common examples include employer plan qualification letters. They differ from private letter rulings, which are issued by the National Office for proposed transactions or novel issues.",
-    "tip": "Determination letter: field office, completed transaction, settled law. PLR: National Office, proposed transaction, uncertain law.",
+    "explanation": "Per IRC §6110, determination letters are issued by IRS field offices on completed transactions where the law is settled. Common examples include employer plan qualification letters. They differ from private letter rulings, which are issued by the National Office for proposed transactions or novel issues. Why other answers are wrong: (A) Cannot be relied upon—determination letters CAN be relied upon by the requesting taxpayer; (B) Published in IRB—they are NOT published; only Rev. Rulings and Rev. Procs. are; (C) Same as Revenue Ruling—Rev. Rulings apply to all taxpayers; determination letters are specific.",
+    "tip": "§6110: Determination letter: field office, completed transaction, settled law. PLR: National Office, proposed transaction, uncertain law.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22261,8 +22261,8 @@ const questions = [
       "D": "Appeal IRS decisions"
     },
     "correctAnswer": "B",
-    "explanation": "Citators (like RIA Checkpoint or CCH Intelliconnect) show whether cases have been affirmed, reversed, or distinguished by later courts, whether regulations have been amended, and what other authorities cite the same sources. Essential for verifying authority is still good law.",
-    "tip": "Citators: verify authority is still valid. Check if case was reversed, reg was amended, or ruling was obsoleted.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), citators (like RIA Checkpoint or CCH Intelliconnect) show whether cases have been affirmed, reversed, or distinguished by later courts, whether regulations have been amended, and what other authorities cite the same sources. Essential for verifying authority is still good law.",
+    "tip": "§1: Citators: verify authority is still valid. Check if case was reversed, reg was amended, or ruling was obsoleted.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -22282,8 +22282,8 @@ const questions = [
       "D": "5 (cross references)"
     },
     "correctAnswer": "C",
-    "explanation": "Regulation numbers follow the pattern: prefix.CodeSection-RegNumber. The prefix indicates the tax type (1 = income tax, 20 = estate tax, 25 = gift tax, 31 = employment tax). Here, 1.162-5 is income tax regulation 5 under Code Section 162 (business expenses).",
-    "tip": "Read reg numbers: 1. = income tax, then code section, then specific reg number. 1.162-5 = income tax, section 162, reg #5.",
+    "explanation": "Per IRC §7805, regulation numbers follow the pattern: prefix.CodeSection-RegNumber. The prefix indicates the tax type (1 = income tax, 20 = estate tax, 25 = gift tax, 31 = employment tax). Here, 1.162-5 is income tax regulation 5 under Code Section 162 (business expenses). Why other answers are wrong: (A) 1625 (excise taxes)—misreads the number; the dots separate components; (B) Section 1 (tax imposed)—the '1' is the TAX TYPE prefix, not a code section; (D) Section 5 (cross references)—the '-5' is the specific regulation number, not a code section.",
+    "tip": "§7805: Read reg numbers: 1. = income tax, then code section, then specific reg number. 1.162-5 = income tax, section 162, reg #5.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22303,8 +22303,8 @@ const questions = [
       "D": "Have more precedential value"
     },
     "correctAnswer": "A",
-    "explanation": "Announcements are generally of shorter-term or narrower interest, often covering administrative matters, upcoming deadlines, or corrections. Notices typically address more substantive guidance on new legislation or policy positions. Both are published in the Internal Revenue Bulletin.",
-    "tip": "Announcements: administrative, short-term, corrections. Notices: substantive guidance, interim rules, policy.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), announcements are generally of shorter-term or narrower interest, often covering administrative matters, upcoming deadlines, or corrections. Notices typically address more substantive guidance on new legislation or policy positions. Both are published in the Internal Revenue Bulletin.",
+    "tip": "§1: Announcements: administrative, short-term, corrections. Notices: substantive guidance, interim rules, policy.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -22324,8 +22324,8 @@ const questions = [
       "D": "Persuasive but not binding, as dicta are comments not essential to the decision"
     },
     "correctAnswer": "D",
-    "explanation": "Dicta (obiter dictum) are judicial comments not essential to the decision—they don't resolve the issues in the case. While potentially persuasive and indicating judicial thinking, dicta are not binding precedent. The holding (ratio decidendi) is the binding legal principle.",
-    "tip": "Holding = binding (essential to decision). Dicta = persuasive only (side comments, not essential).",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), dicta (obiter dictum) are judicial comments not essential to the decision—they don't resolve the issues in the case. While potentially persuasive and indicating judicial thinking, dicta are not binding precedent. The holding (ratio decidendi) is the binding legal principle.",
+    "tip": "§1: Holding = binding (essential to decision). Dicta = persuasive only (side comments, not essential).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -22345,8 +22345,8 @@ const questions = [
       "D": "International tax treaties"
     },
     "correctAnswer": "B",
-    "explanation": "Secondary sources (treatises, tax services, articles) provide overviews and explanations that help identify relevant primary authorities. Starting with the Code on unfamiliar topics can be inefficient. Secondary sources guide the researcher to applicable Code sections, regulations, and cases.",
-    "tip": "Start with secondary sources for background. Then verify with primary authority. Cite only primary.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), secondary sources (treatises, tax services, articles) provide overviews and explanations that help identify relevant primary authorities. Starting with the Code on unfamiliar topics can be inefficient. Secondary sources guide the researcher to applicable Code sections, regulations, and cases.",
+    "tip": "§1: Start with secondary sources for background. Then verify with primary authority. Cite only primary.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22366,8 +22366,8 @@ const questions = [
       "D": "Secondary sources over primary sources"
     },
     "correctAnswer": "C",
-    "explanation": "When evaluating authority: (1) factual similarity matters—cases with similar facts are more relevant, (2) recency matters—more recent authority reflects current law, (3) court level matters—higher courts carry more weight, and (4) jurisdiction matters—binding authority trumps persuasive.",
-    "tip": "Evaluate: similar facts, recent date, higher court, binding jurisdiction. Best authority has all four.",
+    "explanation": "Per Treas. Reg. §1.6662-4(d)(3)(iii), when evaluating authority: (1) factual similarity matters—cases with similar facts are more relevant, (2) recency matters—more recent authority reflects current law, (3) court level matters—higher courts carry more weight, and (4) jurisdiction matters—binding authority trumps persuasive.",
+    "tip": "§1: Evaluate: similar facts, recent date, higher court, binding jurisdiction. Best authority has all four.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22387,8 +22387,8 @@ const questions = [
       "D": "Only individuals born in the U.S."
     },
     "correctAnswer": "C",
-    "explanation": "U.S. persons include U.S. citizens (regardless of where they live), resident aliens, domestic corporations, domestic partnerships, and certain estates and trusts. U.S. persons are taxed on worldwide income and must report foreign accounts and assets.",
-    "tip": "U.S. persons: citizens, resident aliens, domestic entities. Taxed on worldwide income.",
+    "explanation": "Per IRC §7701(a)(30), U.S. persons include U.S. citizens (regardless of where they live), resident aliens, domestic corporations, domestic partnerships, and certain estates and trusts. U.S. persons are taxed on worldwide income and must report foreign accounts and assets. Why other answers are wrong: (A) Conducting U.S. business—nonresidents can do business in U.S. without being U.S. persons; (B) Only citizens in U.S.—citizens abroad and resident aliens also qualify; (D) Only U.S.-born—naturalized citizens and resident aliens also qualify.",
+    "tip": "Revised: U.S. persons: citizens, resident aliens, domestic entities. Taxed on worldwide income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -22408,8 +22408,8 @@ const questions = [
       "D": "31+ days in current year AND a weighted 183+ day total over 3 years"
     },
     "correctAnswer": "D",
-    "explanation": "The substantial presence test requires: (1) at least 31 days in the current year, AND (2) a weighted total of 183+ days over 3 years (current year days + 1/3 of prior year + 1/6 of second prior year). Meeting this test makes the alien a resident for tax purposes.",
-    "tip": "Substantial presence: 31 days current year + weighted 183 over 3 years. Formula: 100% + 1/3 + 1/6.",
+    "explanation": "Per IRC §7701(b)(3), the substantial presence test requires: (1) at least 31 days in the current year, AND (2) a weighted total of 183+ days over 3 years (current year days + 1/3 of prior year + 1/6 of second prior year). Meeting this test makes the alien a resident for tax purposes. Why other answers are wrong: (A) 60 days—no significance; (B) 365 days over 5 years—wrong timeframe and calculation; (C) 183 days current year only—ignores the 31-day threshold and weighted formula.",
+    "tip": "IRC: Substantial presence: 31 days current year + weighted 183 over 3 years. Formula: 100% + 1/3 + 1/6.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -22429,8 +22429,8 @@ const questions = [
       "D": "Encourage investment in foreign countries"
     },
     "correctAnswer": "A",
-    "explanation": "The foreign tax credit prevents double taxation by allowing U.S. taxpayers to credit foreign income taxes paid against their U.S. tax liability. This ensures income earned abroad and taxed by a foreign country isn't taxed again in full by the U.S.",
-    "tip": "FTC: credit for foreign taxes paid on foreign-source income. Prevents same income being taxed twice.",
+    "explanation": "Per IRC §901, the foreign tax credit prevents double taxation by allowing U.S. taxpayers to credit foreign income taxes paid against their U.S. tax liability. This ensures income earned abroad and taxed by a foreign country isn't taxed again in full by the U.S. Why other answers are wrong: (B) Reduce rates for exporters—FTC doesn't affect rates, it offsets liability; (C) Defer foreign earnings—FTC provides immediate credit, not deferral; (D) Encourage foreign investment—while a side effect, the purpose is preventing double taxation.",
+    "tip": "§901: FTC: credit for foreign taxes paid on foreign-source income. Prevents same income being taxed twice.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -22450,8 +22450,8 @@ const questions = [
       "D": "Where payment is received"
     },
     "correctAnswer": "B",
-    "explanation": "Personal service income is sourced where the services are performed, regardless of the employer's location, payment location, or employee's residence. Services performed in the U.S. generate U.S.-source income; services abroad generate foreign-source income.",
-    "tip": "Personal services: where performed. Interest: residence of payer. Dividends: domestic vs. foreign corp.",
+    "explanation": "Per IRC §861(a)(3) and §862(a)(3), personal service income is sourced where the services are performed, regardless of the employer's location, payment location, or employee's residence. Services performed in the U.S. generate U.S.-source income; services abroad generate foreign-source income. Why other answers are wrong: (A) Employer location—irrelevant to sourcing; (C) Employee's residence—doesn't determine source; (D) Payment location—where check is received doesn't affect source.",
+    "tip": "IRC: Personal services: where performed. Interest: residence of payer. Dividends: domestic vs. foreign corp.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -22471,7 +22471,7 @@ const questions = [
       "D": "$10,000 at any time during the year"
     },
     "correctAnswer": "D",
-    "explanation": "FBAR filing is required when the aggregate value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. This is a Bank Secrecy Act requirement filed with FinCEN (Treasury), not the IRS, by April 15 (auto-extended to October 15).",
+    "explanation": "Per 31 CFR §1010.350 (Bank Secrecy Act), FBAR filing is required when the aggregate value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. This requirement is filed with FinCEN (Treasury), not the IRS, by April 15 (auto-extended to October 15). Why other answers are wrong: (A) $50K last day—this is FATCA Form 8938 threshold, not FBAR; (B) $100K average—no such threshold; (C) $1K anytime—threshold is $10K, not $1K.",
     "tip": "FBAR: $10K aggregate at any time. File with FinCEN, not IRS. Due April 15 (auto-extension to Oct 15).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -22492,8 +22492,8 @@ const questions = [
       "D": "Tax-exempt"
     },
     "correctAnswer": "B",
-    "explanation": "Dividends from domestic corporations are U.S.-source income. Dividends from foreign corporations are generally foreign-source, except when a certain percentage of the foreign corporation's income is effectively connected with a U.S. trade or business.",
-    "tip": "Dividend source: domestic corp = U.S. source. Foreign corp = foreign source (with exceptions).",
+    "explanation": "Per IRC §861(a)(2), dividends from domestic corporations are U.S.-source income. Dividends from foreign corporations are generally foreign-source, except when a certain percentage of the foreign corporation's income is effectively connected with a U.S. trade or business. Why other answers are wrong: (A) Foreign-source—domestic corporation dividends are always U.S.-source; (C) Shareholder residence—residence of recipient doesn't determine source; (D) Tax-exempt—dividends are taxable.",
+    "tip": "Model: Dividend source: domestic corp = U.S. source. Foreign corp = foreign source (with exceptions).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -22513,8 +22513,8 @@ const questions = [
       "D": "$50,000 per year"
     },
     "correctAnswer": "C",
-    "explanation": "The FTC limitation prevents using foreign taxes to offset U.S. tax on U.S.-source income. The limit = (Pre-credit U.S. tax) × (Foreign-source taxable income / Worldwide taxable income). Excess credits carry back 1 year and forward 10 years.",
-    "tip": "FTC limit = US tax × (foreign income / worldwide income). Can't use FTC to offset tax on US-source income.",
+    "explanation": "Per IRC §904, the FTC limitation prevents using foreign taxes to offset U.S. tax on U.S.-source income. The limit = (Pre-credit U.S. tax) × (Foreign-source taxable income / Worldwide taxable income). Excess credits carry back 1 year and forward 10 years. Why other answers are wrong: (A) 25% of liability—no such percentage limit; (B) All foreign taxes—limited to U.S. tax on foreign income; (D) $50,000 per year—no dollar cap exists.",
+    "tip": "§901: FTC limit = US tax × (foreign income / worldwide income). Can't use FTC to offset tax on US-source income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22534,8 +22534,8 @@ const questions = [
       "D": "Any shares of a foreign corporation"
     },
     "correctAnswer": "A",
-    "explanation": "A CFC is a foreign corporation where U.S. shareholders (each owning 10% or more) together own more than 50% of the total combined voting power or value on any day during the tax year. CFC status triggers current U.S. taxation of certain undistributed income.",
-    "tip": "CFC: U.S. shareholders (10%+) own >50% vote or value. Triggers Subpart F and GILTI inclusions.",
+    "explanation": "Per IRC §957, a CFC is a foreign corporation where U.S. shareholders (each owning 10% or more) together own more than 50% of the total combined voting power or value on any day during the tax year. CFC status triggers current U.S. taxation of certain undistributed income. Why other answers are wrong: (B) 10% total stock—10% is the threshold for individual U.S. shareholder status, not CFC status; (C) 100% ownership—only need >50%; (D) Any shares—requires >50% by 10%+ shareholders.",
+    "tip": "§706: CFC: U.S. shareholders (10%+) own >50% vote or value. Triggers Subpart F and GILTI inclusions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22555,8 +22555,8 @@ const questions = [
       "D": "All income of a controlled foreign corporation"
     },
     "correctAnswer": "A",
-    "explanation": "Subpart F income includes foreign personal holding company income (passive income like dividends, interest, rents, royalties), foreign base company sales and services income (related-party transactions), and insurance income. It's taxed currently to U.S. shareholders even if not distributed.",
-    "tip": "Subpart F: passive income + related-party sales/services. Taxed currently, not when distributed.",
+    "explanation": "Per IRC §952, Subpart F income includes foreign personal holding company income (passive income like dividends, interest, rents, royalties), foreign base company sales and services income (related-party transactions), and insurance income. It's taxed currently to U.S. shareholders even if not distributed. Why other answers are wrong: (B) Only dividends—Subpart F includes much more than dividends; (C) Manufacturing income—active manufacturing is generally NOT Subpart F; (D) All CFC income—only specific categories, not all income.",
+    "tip": "§541: Subpart F: passive income + related-party sales/services. Taxed currently, not when distributed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22576,8 +22576,8 @@ const questions = [
       "D": "Capital gains on foreign investments"
     },
     "correctAnswer": "B",
-    "explanation": "GILTI is a CFC's tested income exceeding a deemed return (10% of qualified business asset investment—QBAI). It's designed to tax 'excess' returns presumed attributable to intangibles. Corporate shareholders receive a 50% deduction, resulting in an effective rate of about 10.5%.",
-    "tip": "GILTI: CFC income - 10% of tangible assets (QBAI). 50% deduction for C corps. Taxed currently.",
+    "explanation": "Per IRC §951A, GILTI is a CFC's tested income exceeding a deemed return (10% of qualified business asset investment—QBAI). It's designed to tax 'excess' returns presumed attributable to intangibles. Corporate shareholders receive a 50% deduction, resulting in an effective rate of about 10.5%. Why other answers are wrong: (A) Licensing intangibles—GILTI is broader than just licensing; (C) Only tax havens—applies regardless of foreign jurisdiction; (D) Capital gains—GILTI is ordinary income concept.",
+    "tip": "Model: GILTI: CFC income - 10% of tangible assets (QBAI). 50% deduction for C corps. Taxed currently.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22597,8 +22597,8 @@ const questions = [
       "D": "Where the lender is located"
     },
     "correctAnswer": "C",
-    "explanation": "Interest is sourced based on the residence (or in the case of corporations, country of incorporation) of the payer. Interest paid by a U.S. resident or domestic corporation is U.S.-source. Interest from foreign obligors is foreign-source.",
-    "tip": "Interest source: payer's residence. Royalties: where IP is used. Rent: property location.",
+    "explanation": "Per IRC §861(a)(1), interest is sourced based on the residence (or in the case of corporations, country of incorporation) of the payer. Interest paid by a U.S. resident or domestic corporation is U.S.-source. Interest from foreign obligors is foreign-source. Why other answers are wrong: (A) Currency—currency of payment is irrelevant; (B) Where funds used—use of funds doesn't determine source; (D) Lender location—source follows the payer, not the lender.",
+    "tip": "§351: Interest source: payer's residence. Royalties: where IP is used. Rent: property location.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22618,8 +22618,8 @@ const questions = [
       "D": "30%"
     },
     "correctAnswer": "D",
-    "explanation": "Fixed, Determinable, Annual, Periodic (FDAP) income paid to nonresidents is subject to 30% withholding. FDAP includes interest, dividends, rents, royalties, and some compensation. Tax treaties may reduce this rate. The withholding is on gross income with no deductions.",
-    "tip": "FDAP: 30% withholding on gross (no deductions). Treaties may reduce. ECI = regular rates with deductions.",
+    "explanation": "Per IRC §1441, Fixed, Determinable, Annual, Periodic (FDAP) income paid to nonresidents is subject to 30% withholding. FDAP includes interest, dividends, rents, royalties, and some compensation. Tax treaties may reduce this rate. The withholding is on gross income with no deductions. Why other answers are wrong: (A) 37%—this is the top individual marginal rate, not FDAP withholding; (B) 10%—too low; (C) 21%—this is the corporate rate.",
+    "tip": "§1441: FDAP: 30% withholding on gross (no deductions). Treaties may reduce. ECI = regular rates with deductions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22639,8 +22639,8 @@ const questions = [
       "D": "Only taxed if remitted to the U.S."
     },
     "correctAnswer": "C",
-    "explanation": "ECI (income connected to a U.S. trade or business) is taxed at graduated rates, the same as U.S. persons, with allowable deductions. This differs from FDAP income, which is subject to flat 30% withholding on gross income. Nonresidents pay tax only on U.S.-source income.",
-    "tip": "ECI: U.S. trade or business income, regular tax with deductions. FDAP: passive income, 30% gross.",
+    "explanation": "Per IRC §871(b), ECI (income connected to a U.S. trade or business) is taxed at graduated rates, the same as U.S. persons, with allowable deductions. This differs from FDAP income, which is subject to flat 30% withholding on gross income. Nonresidents pay tax only on U.S.-source income. Why other answers are wrong: (A) Exempt—ECI is taxable; (B) 30% withholding—that's FDAP, not ECI; (D) Only if remitted—taxed regardless of remittance.",
+    "tip": "§61: ECI: U.S. trade or business income, regular tax with deductions. FDAP: passive income, 30% gross.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22660,8 +22660,8 @@ const questions = [
       "D": "Override the U.S. Constitution"
     },
     "correctAnswer": "B",
-    "explanation": "Tax treaties reduce withholding rates on cross-border payments (dividends, interest, royalties), define when business profits can be taxed, provide tie-breaker rules for dual residents, and include mechanisms to prevent double taxation. Each treaty is separately negotiated with different terms.",
-    "tip": "Treaties: reduce rates, allocate taxing rights, prevent double taxation. Must claim treaty benefits on return.",
+    "explanation": "Tax treaties reduce withholding rates on cross-border payments (dividends, interest, royalties), define when business profits can be taxed, provide tie-breaker rules for dual residents, and include mechanisms to prevent double taxation. Each treaty is separately negotiated with different terms. Why other answers are wrong: (A) Increase tax—treaties reduce, not increase taxes; (C) Apply equally—each treaty is unique; (D) Override Constitution—treaties cannot override constitutional provisions.",
+    "tip": "§6601: Treaties: reduce rates, allocate taxing rights, prevent double taxation. Must claim treaty benefits on return.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22681,8 +22681,8 @@ const questions = [
       "D": "Foreign real estate holdings"
     },
     "correctAnswer": "C",
-    "explanation": "Form 5471 is required for U.S. persons who are officers, directors, or shareholders of certain foreign corporations. It reports ownership, income, and transactions with the foreign corporation. Substantial penalties apply for failure to file (up to $10,000 per year per entity).",
-    "tip": "Form 5471: foreign corporations. Form 8865: foreign partnerships. FBAR: foreign bank accounts.",
+    "explanation": "Per IRC §6038, Form 5471 is required for U.S. persons who are officers, directors, or shareholders of certain foreign corporations. It reports ownership, income, and transactions with the foreign corporation. Substantial penalties apply for failure to file (up to $10,000 per year per entity). Why other answers are wrong: (A) Travel expenses—not a separate required form; (B) Foreign bank accounts—that's FBAR (FinCEN 114); (D) Foreign real estate—reported on Form 8938 if over threshold, not 5471.",
+    "tip": "§6651: Form 5471: foreign corporations. Form 8865: foreign partnerships. FBAR: foreign bank accounts.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22702,8 +22702,8 @@ const questions = [
       "D": "Cost"
     },
     "correctAnswer": "A",
-    "explanation": "Section 482 requires that intercompany transactions be priced as if conducted between unrelated parties at arm's length. This prevents income shifting between jurisdictions through artificial pricing. Methods include comparable uncontrolled price, cost plus, and resale price.",
-    "tip": "Transfer pricing: arm's length = price unrelated parties would use. Prevents income shifting to low-tax jurisdictions.",
+    "explanation": "Per IRC §482, intercompany transactions must be priced as if conducted between unrelated parties at arm's length. This prevents income shifting between jurisdictions through artificial pricing. Methods include comparable uncontrolled price, cost plus, and resale price. Why other answers are wrong: (B) IRS fair market value—IRS adjusts to arm's length, doesn't set price; (C) Book value—accounting concept, not transfer pricing standard; (D) Cost—cost-plus is one method but cost alone ignores profit margins.",
+    "tip": "IRC: Transfer pricing: arm's length = price unrelated parties would use. Prevents income shifting to low-tax jurisdictions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22723,8 +22723,8 @@ const questions = [
       "D": "Passive category income and general category income"
     },
     "correctAnswer": "D",
-    "explanation": "Foreign tax credits are calculated in separate baskets to prevent cross-crediting. The main baskets are: passive category income (dividends, interest, rents, royalties) and general category income (active business income). High-taxed income can be recharacterized.",
-    "tip": "FTC baskets: passive and general. Prevents using high foreign taxes on passive income to offset low-taxed active income.",
+    "explanation": "Per IRC §904(d), foreign tax credits are calculated in separate baskets to prevent cross-crediting. The main baskets are: passive category income (dividends, interest, rents, royalties) and general category income (active business income). High-taxed income can be recharacterized. Why other answers are wrong: (A) Earned/unearned—not FTC basket categories; (B) Short/long-term—capital gain concept, not FTC; (C) Manufacturing/services—no such baskets exist.",
+    "tip": "§901: FTC baskets: passive and general. Prevents using high foreign taxes on passive income to offset low-taxed active income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22744,8 +22744,8 @@ const questions = [
       "D": "$200,000 in all cases"
     },
     "correctAnswer": "B",
-    "explanation": "Form 8938 reports specified foreign financial assets. Thresholds vary: $50,000 on last day or $75,000 at any time for single filers living in the U.S. (double for MFJ, higher for foreign residents). This is separate from FBAR and filed with the tax return.",
-    "tip": "Form 8938 (FATCA): higher thresholds than FBAR. Filed with return. FBAR filed separately with FinCEN.",
+    "explanation": "Per IRC §6038D, Form 8938 reports specified foreign financial assets. Thresholds vary: $50,000 on last day or $75,000 at any time for single filers living in the U.S. (double for MFJ, higher for foreign residents). This is separate from FBAR and filed with the tax return. Why other answers are wrong: (A) $10K anytime—that's the FBAR threshold; (C) $100K regardless—thresholds vary by filing status/residence; (D) $200K in all cases—only applies to certain categories.",
+    "tip": "IRC: Form 8938 (FATCA): higher thresholds than FBAR. Filed with return. FBAR filed separately with FinCEN.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22765,8 +22765,8 @@ const questions = [
       "D": "Where payment is received"
     },
     "correctAnswer": "B",
-    "explanation": "Income from sales of purchased inventory is sourced where title passes. If inventory is produced and sold, income is allocated between production activities (where performed) and sales activities (title passage). Title passage can be by contract or default rules.",
-    "tip": "Inventory: title passage location. Produced inventory: split between production and sales source.",
+    "explanation": "Per IRC §861(a)(6) and §862(a)(6), income from sales of purchased inventory is sourced where title passes. If inventory is produced and sold, income is allocated between production activities (where performed) and sales activities (title passage). Title passage can be by contract or default rules. Why other answers are wrong: (A) Where negotiated—negotiation location is irrelevant; (C) Seller's residence—residence doesn't determine inventory sale source; (D) Payment received—payment location doesn't affect source.",
+    "tip": "§9-601: Inventory: title passage location. Produced inventory: split between production and sales source.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22786,8 +22786,8 @@ const questions = [
       "D": "Only if they apply for U.S. citizenship"
     },
     "correctAnswer": "C",
-    "explanation": "An individual with a green card (lawful permanent resident status) is treated as a U.S. resident for tax purposes from the first day they are present in the U.S. as an LPR. Status continues until officially relinquished or administratively/judicially determined to be abandoned.",
-    "tip": "Green card = resident from first day present as LPR. Continues until formally surrendered or revoked.",
+    "explanation": "Per IRC §7701(b)(1)(A)(i), an individual with a green card (lawful permanent resident status) is treated as a U.S. resident for tax purposes from the first day they are present in the U.S. as an LPR. Status continues until officially relinquished or administratively/judicially determined to be abandoned. Why other answers are wrong: (A) Substantial presence—that's a separate test; (B) 5 years—no waiting period for tax residency; (D) Citizenship application—not required for tax residency.",
+    "tip": "IRC: Green card = resident from first day present as LPR. Continues until formally surrendered or revoked.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22807,8 +22807,8 @@ const questions = [
       "D": "Purchase of foreign securities"
     },
     "correctAnswer": "B",
-    "explanation": "Section 367 is an 'outbound toll charge' requiring gain recognition when appreciated property is transferred to a foreign corporation in transactions that would otherwise be tax-free (like Section 351 contributions or reorganizations). This prevents taxpayers from moving appreciated assets offshore tax-free.",
-    "tip": "Section 367: gain recognized on outbound transfers. Can't use 351/reorganization to avoid tax on transfer to foreign corp.",
+    "explanation": "Per IRC §367, this provision is an 'outbound toll charge' requiring gain recognition when appreciated property is transferred to a foreign corporation in transactions that would otherwise be tax-free (like Section 351 contributions or reorganizations). This prevents taxpayers from moving appreciated assets offshore tax-free. Why other answers are wrong: (A) All international transactions—only applies to specific transfer types; (C) Repatriation—§367 covers outbound, not inbound; (D) Purchase of securities—purchases aren't tax-free exchanges.",
+    "tip": "§1001: Section 367: gain recognized on outbound transfers. Can't use 351/reorganization to avoid tax on transfer to foreign corp.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -22828,8 +22828,8 @@ const questions = [
       "D": "The corporation is publicly traded"
     },
     "correctAnswer": "B",
-    "explanation": "A PFIC exists when a foreign corporation meets either: (1) 75% of gross income is passive (income test), or (2) 50% of assets produce or are held to produce passive income (asset test). PFIC shareholders face harsh tax treatment including interest charges on deferred gains.",
-    "tip": "PFIC: 75% income or 50% assets passive. Unlike CFC, no ownership threshold. Harsh tax treatment.",
+    "explanation": "Per IRC §1297, a PFIC exists when a foreign corporation meets either: (1) 75% of gross income is passive (income test), or (2) 50% of assets produce or are held to produce passive income (asset test). PFIC shareholders face harsh tax treatment including interest charges on deferred gains. Why other answers are wrong: (A) Any passive income—must meet 75% or 50% threshold; (C) U.S. shareholders >50%—that defines a CFC, not PFIC; (D) Publicly traded—trading status is irrelevant to PFIC definition.",
+    "tip": "§61: PFIC: 75% income or 50% assets passive. Unlike CFC, no ownership threshold. Harsh tax treatment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22849,8 +22849,8 @@ const questions = [
       "D": "Replace the corporate income tax"
     },
     "correctAnswer": "C",
-    "explanation": "The branch profits tax (30%, reduced by treaty) applies to a foreign corporation's effectively connected earnings that are repatriated or deemed repatriated. It mimics the withholding tax on dividends that would apply if the branch were a U.S. subsidiary paying dividends to its foreign parent.",
-    "tip": "Branch profits tax: 30% on ECI 'dividend equivalent.' Equalizes treatment with subsidiary + dividend structure.",
+    "explanation": "Per IRC §884, the branch profits tax (30%, reduced by treaty) applies to a foreign corporation's effectively connected earnings that are repatriated or deemed repatriated. It mimics the withholding tax on dividends that would apply if the branch were a U.S. subsidiary paying dividends to its foreign parent. Why other answers are wrong: (A) State taxes—federal tax, not state; (B) Encourage investment—it's a tax, not an incentive; (D) Replace corporate tax—in addition to, not replacement of corporate tax.",
+    "tip": "§884: Branch profits tax: 30% on ECI 'dividend equivalent.' Equalizes treatment with subsidiary + dividend structure.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22870,8 +22870,8 @@ const questions = [
       "D": "May claim a deemed-paid credit for the foreign taxes paid by the corporation"
     },
     "correctAnswer": "D",
-    "explanation": "Corporate shareholders owning 10% or more can claim a deemed-paid (indirect) foreign tax credit for foreign taxes paid by the foreign corporation on earnings from which dividends are paid. This gives credit for underlying corporate taxes, not just withholding taxes.",
-    "tip": "Deemed paid credit: corporate shareholder, 10%+ ownership. Credit for corp-level foreign taxes, not just withholding.",
+    "explanation": "Per IRC §960, corporate shareholders owning 10% or more can claim a deemed-paid (indirect) foreign tax credit for foreign taxes paid by the foreign corporation on earnings from which dividends are paid. This gives credit for underlying corporate taxes, not just withholding taxes. Why other answers are wrong: (A) Must include in GILTI—GILTI is separate from actual dividend; (B) Capital gains rates—dividends taxed as ordinary; (C) No FTC—10%+ corporate owners can claim deemed-paid credit.",
+    "tip": "§901: Deemed paid credit: corporate shareholder, 10%+ ownership. Credit for corp-level foreign taxes, not just withholding.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22891,8 +22891,8 @@ const questions = [
       "D": "All corporations with foreign payments"
     },
     "correctAnswer": "A",
-    "explanation": "BEAT is a minimum tax on large corporations (average gross receipts of $500M+ over 3 years) with significant base erosion payments (deductible payments to foreign related parties exceeding 3% of deductions). It prevents excessive profit shifting through related-party payments.",
-    "tip": "BEAT: large corps, significant foreign related-party payments. Minimum tax to prevent profit stripping.",
+    "explanation": "Per IRC §59A, BEAT is a minimum tax on large corporations (average gross receipts of $500M+ over 3 years) with significant base erosion payments (deductible payments to foreign related parties exceeding 3% of deductions). It prevents excessive profit shifting through related-party payments. Why other answers are wrong: (B) Only domestic corps—applies to foreign corps with U.S. branches too; (C) Partnerships—BEAT applies to corporations; (D) All foreign payments—only applies to large corps with significant payments.",
+    "tip": "§59: BEAT: large corps, significant foreign related-party payments. Minimum tax to prevent profit stripping.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22912,8 +22912,8 @@ const questions = [
       "D": "Invest in foreign subsidiaries"
     },
     "correctAnswer": "C",
-    "explanation": "FDII provides a 37.5% deduction for income derived from sales to foreign persons and services provided to foreign persons, resulting in an effective tax rate of about 13.125%. This incentivizes keeping operations and IP in the U.S. while exporting.",
-    "tip": "FDII: export incentive. 37.5% deduction for foreign-derived income. Encourages U.S.-based production for export.",
+    "explanation": "Per IRC §250, FDII provides a 37.5% deduction for income derived from sales to foreign persons and services provided to foreign persons, resulting in an effective tax rate of about 13.125%. This incentivizes keeping operations and IP in the U.S. while exporting. Why other answers are wrong: (A) Hire foreign workers—not the purpose; (B) Move offshore—FDII encourages staying in U.S.; (D) Foreign subsidiaries—FDII applies to direct exports, not subsidiary investments.",
+    "tip": "§250: FDII: export incentive. 37.5% deduction for foreign-derived income. Encourages U.S.-based production for export.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22933,8 +22933,8 @@ const questions = [
       "D": "Distributes earnings to foreign shareholders"
     },
     "correctAnswer": "C",
-    "explanation": "Section 956 treats a CFC's investment in U.S. property (loans to U.S. shareholders, U.S. stock, U.S. real estate) as a deemed distribution to U.S. shareholders. This prevents using CFC funds in the U.S. without triggering a taxable dividend. TCJA reduced its impact for C corps.",
-    "tip": "Section 956: CFC investment in U.S. property = deemed dividend. Prevents repatriation avoidance.",
+    "explanation": "Per IRC §956, this provision treats a CFC's investment in U.S. property (loans to U.S. shareholders, U.S. stock, U.S. real estate) as a deemed distribution to U.S. shareholders. This prevents using CFC funds in the U.S. without triggering a taxable dividend. TCJA reduced its impact for C corps. Why other answers are wrong: (A) Tax haven—tax haven location doesn't trigger §956; (B) Earns any income—only U.S. property investments trigger §956; (D) Foreign shareholder distributions—§956 addresses U.S. shareholders.",
+    "tip": "§1368: Section 956: CFC investment in U.S. property = deemed dividend. Prevents repatriation avoidance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22954,8 +22954,8 @@ const questions = [
       "D": "No special tax consequences"
     },
     "correctAnswer": "A",
-    "explanation": "Covered expatriates (meeting asset, tax, or compliance thresholds) are treated as having sold all worldwide assets for FMV on the day before expatriation. Gains exceeding an exclusion amount (~$886,000 in 2024) are taxed. Special rules apply to deferred compensation and trusts.",
-    "tip": "Exit tax: mark-to-market on expatriation. Covered = high net worth, high tax, or non-compliant.",
+    "explanation": "Per IRC §877A, covered expatriates (meeting asset, tax, or compliance thresholds) are treated as having sold all worldwide assets for FMV on the day before expatriation. Gains exceeding an exclusion amount (~$886,000 in 2024) are taxed. Special rules apply to deferred compensation and trusts. Why other answers are wrong: (B) Criminal penalties—exit tax is civil, not criminal; (C) Future withholding—applies to certain deferred compensation, but main tax is mark-to-market; (D) No consequences—covered expatriates face significant tax.",
+    "tip": "§§101-140: Exit tax: mark-to-market on expatriation. Covered = high net worth, high tax, or non-compliant.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22975,8 +22975,8 @@ const questions = [
       "D": "Foreign tax credits"
     },
     "correctAnswer": "C",
-    "explanation": "Form 3520 reports transactions with foreign trusts (transfers, distributions, beneficial interests) and receipt of gifts or bequests from foreign persons exceeding $100,000. Failure to file can result in penalties of 35% of the trust's gross value or 5-25% of gifts.",
-    "tip": "Form 3520: foreign trusts + large foreign gifts ($100K+). Harsh penalties for non-filing.",
+    "explanation": "Per IRC §6048, Form 3520 reports transactions with foreign trusts (transfers, distributions, beneficial interests) and receipt of gifts or bequests from foreign persons exceeding $100,000. Failure to file can result in penalties of 35% of the trust's gross value or 5-25% of gifts. Why other answers are wrong: (A) CFC income—reported on Form 5471; (B) Foreign bank accounts—reported on FBAR; (D) Foreign tax credits—reported on Form 1116.",
+    "tip": "§1368: Form 3520: foreign trusts + large foreign gifts ($100K+). Harsh penalties for non-filing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -22996,8 +22996,8 @@ const questions = [
       "D": "Citizenship only"
     },
     "correctAnswer": "A",
-    "explanation": "Treaty tie-breakers resolve dual residency in this order: (1) permanent home, (2) center of vital interests (personal and economic ties), (3) habitual abode, (4) nationality. If still unresolved, competent authorities of both countries negotiate. The result affects which country has primary taxing rights.",
-    "tip": "Treaty tie-breaker: home → vital interests → habitual abode → nationality. Resolves which country treats person as resident.",
+    "explanation": "Tax treaty tie-breakers (based on OECD model) resolve dual residency in this order: (1) permanent home, (2) center of vital interests (personal and economic ties), (3) habitual abode, (4) nationality. If still unresolved, competent authorities of both countries negotiate. The result affects which country has primary taxing rights. Why other answers are wrong: (B) Higher tax rate—tax rate is irrelevant; (C) Taxpayer election—no unilateral election allowed; (D) Citizenship only—citizenship is fourth in the hierarchy.",
+    "tip": "§6601: Treaty tie-breaker: home → vital interests → habitual abode → nationality. Resolves which country treats person as resident.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23017,8 +23017,8 @@ const questions = [
       "D": "Environmental impact data"
     },
     "correctAnswer": "B",
-    "explanation": "Country-by-country reporting (Form 8975) requires MNEs with $850M+ in annual revenue to report revenues, profits, taxes paid, employees, and assets for each tax jurisdiction. This provides transparency for tax authorities to assess transfer pricing risks.",
-    "tip": "CbC reporting: $850M+ MNEs. Report key data by jurisdiction. Filed with master and local file documentation.",
+    "explanation": "Per IRC §6038(a), country-by-country reporting (Form 8975) requires MNEs with $850M+ in annual revenue to report revenues, profits, taxes paid, employees, and assets for each tax jurisdiction. This provides transparency for tax authorities to assess transfer pricing risks. Why other answers are wrong: (A) Only U.S. operations—reports ALL jurisdictions; (C) Management compensation—not the focus of CbC reporting; (D) Environmental data—not required in tax reporting.",
+    "tip": "§482: CbC reporting: $850M+ MNEs. Report key data by jurisdiction. Filed with master and local file documentation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23038,8 +23038,8 @@ const questions = [
       "D": "The election is made annually and applies to all foreign taxes for that year"
     },
     "correctAnswer": "D",
-    "explanation": "Taxpayers may elect to deduct foreign taxes instead of claiming the credit. The election applies to all foreign taxes for the year (can't mix credit and deduction). Deduction is beneficial when in an excess credit position or when simplicity is preferred. Credits are usually more valuable.",
-    "tip": "Deduction vs. credit: election applies to all foreign taxes. Credit usually better (reduces tax dollar-for-dollar).",
+    "explanation": "Per IRC §275, taxpayers may elect to deduct foreign taxes instead of claiming the credit. The election applies to all foreign taxes for the year (can't mix credit and deduction). Deduction is beneficial when in an excess credit position or when simplicity is preferred. Credits are usually more valuable. Why other answers are wrong: (A) Only passive income—applies to all foreign taxes; (B) Rate exceeds 30%—tax rate doesn't affect the choice; (C) Always required—deduction is an available alternative.",
+    "tip": "IRC: Deduction vs. credit: election applies to all foreign taxes. Credit usually better (reduces tax dollar-for-dollar).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23059,8 +23059,8 @@ const questions = [
       "D": "Capital gains rates only"
     },
     "correctAnswer": "C",
-    "explanation": "Default PFIC rules impose tax at the highest ordinary rates on 'excess distributions' and gains, plus an interest charge as if the income had been earned pro rata over the holding period and taxes deferred. QEF or MTM elections avoid this harsh treatment but require annual income inclusion.",
-    "tip": "PFIC default: ordinary rates + interest charge. QEF election: current income inclusion. MTM: annual FMV adjustment.",
+    "explanation": "Per IRC §1291, default PFIC rules impose tax at the highest ordinary rates on 'excess distributions' and gains, plus an interest charge as if the income had been earned pro rata over the holding period and taxes deferred. QEF or MTM elections avoid this harsh treatment but require annual income inclusion. Why other answers are wrong: (A) No U.S. tax—PFIC income is taxable; (B) Tax-free accumulation—the interest charge prevents this; (D) Capital gains only—taxed at ordinary rates plus interest.",
+    "tip": "§1223: PFIC default: ordinary rates + interest charge. QEF election: current income inclusion. MTM: annual FMV adjustment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23080,8 +23080,8 @@ const questions = [
       "D": "Former U.S. shareholders own 80%+ after acquisition of a U.S. corporation and the group lacks substantial business in the foreign country"
     },
     "correctAnswer": "D",
-    "explanation": "Section 7874 treats a foreign acquirer as a domestic corporation (full tax consequences) if former U.S. shareholders own 80%+ after an inversion transaction and the group lacks substantial business activities in the foreign country. At 60-79%, the U.S. corporation is limited in using tax attributes.",
-    "tip": "Section 7874: 80%+ = treated as domestic. 60-79% = attribute limitations. Substantial business activities test applies.",
+    "explanation": "Per IRC §7874, a foreign acquirer is treated as a domestic corporation (full tax consequences) if former U.S. shareholders own 80%+ after an inversion transaction and the group lacks substantial business activities in the foreign country. At 60-79%, the U.S. corporation is limited in using tax attributes. Why other answers are wrong: (A) Publicly traded—trading status irrelevant; (B) U.S. CEO—executive location doesn't trigger §7874; (C) Any U.S. operations—requires 80%+ ownership and lack of foreign substance.",
+    "tip": "Model: Section 7874: 80%+ = treated as domestic. 60-79% = attribute limitations. Substantial business activities test applies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23101,8 +23101,8 @@ const questions = [
       "D": "Is subject to a foreign effective tax rate exceeding 90% of the U.S. corporate rate"
     },
     "correctAnswer": "D",
-    "explanation": "The high-tax exclusion allows elective exclusion of CFC tested income (from GILTI) that is subject to a foreign effective tax rate exceeding 90% of the U.S. corporate rate (currently 18.9%). This recognizes that highly-taxed foreign income doesn't represent the 'low-taxed' income GILTI targets.",
-    "tip": "GILTI high-tax exclusion: foreign rate > 90% of U.S. rate (>18.9%). Elective, can apply to some CFCs.",
+    "explanation": "Per IRC §951A(c)(2), the high-tax exclusion allows elective exclusion of CFC tested income (from GILTI) that is subject to a foreign effective tax rate exceeding 90% of the U.S. corporate rate (currently 18.9%). This recognizes that highly-taxed foreign income doesn't represent the 'low-taxed' income GILTI targets. Why other answers are wrong: (A) Distributed as dividends—exclusion applies to tested income, not dividends; (B) Manufacturing only—applies to all income types; (C) Earned in U.S.—applies to foreign income only.",
+    "tip": "§§101-140: GILTI high-tax exclusion: foreign rate > 90% of U.S. rate (>18.9%). Elective, can apply to some CFCs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23122,8 +23122,8 @@ const questions = [
       "D": "Reported as income with no deduction available"
     },
     "correctAnswer": "C",
-    "explanation": "Jury duty pay is taxable income. When an employee is required to remit the pay to their employer (who continues paying wages during service), the employee reports the income and claims an above-the-line deduction for the amount remitted to the employer.",
-    "tip": "Jury pay remitted to employer: report income, deduct as adjustment. No double-counting with wages.",
+    "explanation": "Per IRC §62(a)(13), jury duty pay is taxable income. When an employee is required to remit the pay to their employer (who continues paying wages during service), the employee reports the income and claims an above-the-line deduction for the amount remitted to the employer.",
+    "tip": "§62: Jury pay remitted to employer: report income, deduct as adjustment. No double-counting with wages.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23143,8 +23143,8 @@ const questions = [
       "D": "Received by the offeror"
     },
     "correctAnswer": "A",
-    "explanation": "The mailbox rule provides that an acceptance is effective upon proper dispatch (placing in the mail with proper postage), not upon receipt. This creates the contract and cuts off the offeror's power to revoke. Rejections and revocations are effective upon receipt.",
-    "tip": "Acceptance: effective on dispatch. Rejection/revocation: effective on receipt. Creates certainty for offeree.",
+    "explanation": "Under common law contract doctrine (Restatement Second of Contracts §63), the mailbox rule provides that an acceptance is effective upon proper dispatch (placing in the mail with proper postage), not upon receipt. This creates the contract and cuts off the offeror's power to revoke. Rejections and revocations are effective upon receipt. Why other answers are wrong: (B) Offeror opens mail—receipt is irrelevant for acceptance; (C) Three days—no waiting period applies; (D) Received—revocations and rejections require receipt, but acceptance is on dispatch.",
+    "tip": "Mailbox Rule: Acceptance = effective on dispatch. Rejection/revocation = effective on receipt. Creates certainty for offeree.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23164,8 +23164,8 @@ const questions = [
       "D": "Is always long-term"
     },
     "correctAnswer": "C",
-    "explanation": "When the donee uses carryover basis (donor's basis), the holding period 'tacks'—the donee includes the donor's holding period. If FMV at gift is less than basis and FMV is used for loss, the holding period starts on the gift date.",
-    "tip": "Carryover basis = tacking allowed. FMV basis (for loss) = holding period starts at gift date.",
+    "explanation": "Per IRC §1223(2), when the donee uses carryover basis (donor's basis), the holding period 'tacks'—the donee includes the donor's holding period. If FMV at gift is less than basis and FMV is used for loss, the holding period starts on the gift date. Why other answers are wrong: (A) Starts at sale—holding period must exist before sale; (B) Starts at gift—only if FMV basis is used for loss; (D) Always long-term—depends on donor's holding period and tacking.",
+    "tip": "§1012: Carryover basis = tacking allowed. FMV basis (for loss) = holding period starts at gift date.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23185,8 +23185,8 @@ const questions = [
       "D": "Deductible by the partnership"
     },
     "correctAnswer": "B",
-    "explanation": "Under Section 721, contributions of property to a partnership in exchange for a partnership interest are tax-free to both the partner and partnership. The partner takes a substituted basis in their partnership interest equal to the property's basis.",
-    "tip": "Section 721: tax-free formation. Basis carries over. Compare to Section 351 for corporations.",
+    "explanation": "Per IRC §721, contributions of property to a partnership in exchange for a partnership interest are tax-free to both the partner and partnership. The partner takes a substituted basis in their partnership interest equal to the property's basis. Why other answers are wrong: (A) Fully taxable—§721 provides nonrecognition; (C) Taxable only if gain—no gain recognized regardless of built-in appreciation; (D) Deductible—contributions aren't deductible, they create basis.",
+    "tip": "Revised: Section 721: tax-free formation. Basis carries over. Compare to Section 351 for corporations.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23206,7 +23206,7 @@ const questions = [
       "D": "Not be based on unreasonable assumptions and must consider all relevant facts"
     },
     "correctAnswer": "D",
-    "explanation": "Written tax advice must not be based on unreasonable factual or legal assumptions, must consider all relevant facts the practitioner knows or should know, and must not unreasonably rely on statements of the taxpayer. Practitioners must use reasonable efforts to identify relevant facts.",
+    "explanation": "Per Circular 230 §10.37, written tax advice must not be based on unreasonable factual or legal assumptions, must consider all relevant facts the practitioner knows or should know, and must not unreasonably rely on statements of the taxpayer. Practitioners must use reasonable efforts to identify relevant facts. Why other answers are wrong: (A) 10 pages—no length requirement; (B) Net worth—irrelevant to advice requirements; (C) Guarantee outcome—cannot guarantee results.",
     "tip": "Circular 230 written advice: reasonable assumptions, consider all facts, identify limitations.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
@@ -23227,8 +23227,8 @@ const questions = [
       "D": "90% of current year tax"
     },
     "correctAnswer": "B",
-    "explanation": "For taxpayers with prior year AGI over $150,000 ($75,000 MFS), the safe harbor requires 110% of prior year tax. The alternative is 90% of current year tax. Meeting either test avoids the underpayment penalty.",
-    "tip": "AGI > $150K: 110% prior year OR 90% current year. Under $150K: 100% prior year OR 90% current year.",
+    "explanation": "Per IRC §6654, for taxpayers with prior year AGI over $150,000 ($75,000 MFS), the safe harbor requires 110% of prior year tax. The alternative is 90% of current year tax. Meeting either test avoids the underpayment penalty. Why other answers are wrong: (A) 100% prior year—applies to AGI under $150K; (C) 80% current—threshold is 90%, not 80%; (D) 90% current only—110% prior year is also an option.",
+    "tip": "IRC: AGI > $150K: 110% prior year OR 90% current year. Under $150K: 100% prior year OR 90% current year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23248,8 +23248,8 @@ const questions = [
       "D": "Self-employed individuals only"
     },
     "correctAnswer": "C",
-    "explanation": "The Tax Cuts and Jobs Act suspended the moving expense deduction for all taxpayers except active duty members of the Armed Forces moving due to a military order. For military members, expenses remain deductible above-the-line and employer reimbursements are excludable.",
-    "tip": "Post-TCJA: moving expenses only for active duty military. Suspended for all others through 2025.",
+    "explanation": "Per IRC §217, the Tax Cuts and Jobs Act suspended the moving expense deduction for all taxpayers except active duty members of the Armed Forces moving due to a military order. For military members, expenses remain deductible above-the-line and employer reimbursements are excludable. Why other answers are wrong: (A) No one—military exception exists; (B) Anyone for employment—suspended through 2025 for non-military; (D) Self-employed only—no such exception.",
+    "tip": "§217: Post-TCJA: moving expenses only for active duty military. Suspended for all others through 2025.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23269,7 +23269,7 @@ const questions = [
       "D": "A two-year lease of an apartment"
     },
     "correctAnswer": "D",
-    "explanation": "Common law Statute of Frauds requires writing for: contracts that cannot be performed within one year, promises to pay another's debt, contracts for sale of land, marriage-related promises, and executor promises. A 2-year lease qualifies; a 1-year contract starting tomorrow can be performed within a year.",
+    "explanation": "Common law Statute of Frauds requires writing for: contracts that cannot be performed within one year, promises to pay another's debt, contracts for sale of land, marriage-related promises, and executor promises. A 2-year lease qualifies; a 1-year contract starting tomorrow can be performed within a year. Why other answers are wrong: (A) Painting services—no specific category requiring writing; (B) Car for $400—under UCC $500 threshold; (C) 1-year starting tomorrow—can be performed within one year from making.",
     "tip": "MY LEGS: Marriage, Year (can't complete in 1 year), Land, Executor, Goods ($500+), Surety.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -23290,8 +23290,8 @@ const questions = [
       "D": "Defers gain until the shareholder sells"
     },
     "correctAnswer": "B",
-    "explanation": "When a corporation distributes appreciated property, it recognizes gain as if it sold the property for FMV. The shareholder receives a FMV basis. For depreciated property, loss is not recognized unless it's a complete liquidation. This prevents corporations from distributing appreciation tax-free.",
-    "tip": "Appreciated property distribution: corp recognizes gain. Loss not recognized on non-liquidating distributions.",
+    "explanation": "Per IRC §311(b), when a corporation distributes appreciated property, it recognizes gain as if it sold the property for FMV. The shareholder receives a FMV basis. For depreciated property, loss is not recognized unless it's a complete liquidation. This prevents corporations from distributing appreciation tax-free. Why other answers are wrong: (A) No gain—gain is recognized on appreciated property; (C) Recognizes loss—loss not recognized on non-liquidating distributions; (D) Defers gain—no deferral, immediate recognition.",
+    "tip": "Model: Appreciated property distribution: corp recognizes gain. Loss not recognized on non-liquidating distributions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23311,8 +23311,8 @@ const questions = [
       "D": "FMV of property received plus boot received minus adjusted basis of property given"
     },
     "correctAnswer": "D",
-    "explanation": "Realized gain = Amount realized (FMV of property received + boot received + liabilities relieved) minus Adjusted basis of property given. Recognized gain is the lesser of realized gain or boot received.",
-    "tip": "Realized = Amount received - Adjusted basis given. Recognized = lesser of realized or boot.",
+    "explanation": "Per IRC §1001, realized gain = Amount realized (FMV of property received + boot received + liabilities relieved) minus Adjusted basis of property given. Recognized gain is the lesser of realized gain or boot received. Why other answers are wrong: (A) Boot only—realized gain considers full amount realized; (B) Boot minus boot basis—incorrect formula; (C) FMV minus FMV—ignores boot and basis.",
+    "tip": "§1001: Realized = Amount received - Adjusted basis given. Recognized = lesser of realized or boot.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -23332,8 +23332,8 @@ const questions = [
       "D": "The agent believes they have authority"
     },
     "correctAnswer": "C",
-    "explanation": "Apparent authority is created by the principal's manifestations to third parties that lead them to reasonably believe the agent has authority. Even if actual authority doesn't exist, the principal is bound if they created the appearance of authority.",
-    "tip": "Apparent authority: principal's conduct → third party's reasonable belief. Principal estopped from denying.",
+    "explanation": "Under agency law (Restatement Third of Agency §2.03), apparent authority is created by the principal's manifestations to third parties that lead them to reasonably believe the agent has authority. Even if actual authority doesn't exist, the principal is bound if they created the appearance of authority. Why other answers are wrong: (A) Implied from position—that's implied authority; (B) Express grant—that's express authority; (D) Agent's belief—agent's subjective belief doesn't create apparent authority.",
+    "tip": "§691: Apparent authority: principal's conduct → third party's reasonable belief. Principal estopped from denying.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23353,8 +23353,8 @@ const questions = [
       "D": "Short-term capital gain"
     },
     "correctAnswer": "B",
-    "explanation": "For S corporations without C corporation E&P, distributions are first a tax-free return of stock basis, then capital gain when basis is exhausted. If the S corp has accumulated E&P from C corp years, distributions come from AAA first (tax-free), then E&P (dividend), then basis.",
-    "tip": "No E&P: basis reduction → capital gain. With E&P: AAA → E&P → basis → capital gain.",
+    "explanation": "Per IRC §1368, for S corporations without C corporation E&P, distributions are first a tax-free return of stock basis, then capital gain when basis is exhausted. If the S corp has accumulated E&P from C corp years, distributions come from AAA first (tax-free), then E&P (dividend), then basis. Why other answers are wrong: (A) Dividends—requires E&P, which this S corp lacks; (C) Ordinary income—excess over basis is capital gain; (D) Short-term CG—it's long/short based on holding period.",
+    "tip": "§1368: No E&P: basis reduction → capital gain. With E&P: AAA → E&P → basis → capital gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23374,8 +23374,8 @@ const questions = [
       "D": "Available only for international adoptions"
     },
     "correctAnswer": "B",
-    "explanation": "The adoption credit is nonrefundable and covers qualified adoption expenses up to a maximum per child (~$16,810 for 2024). Unused credit carries forward for 5 years. Higher amounts may apply for special needs adoptions. Income phaseouts apply.",
-    "tip": "Adoption credit: nonrefundable, 5-year carryforward. Special needs = full credit even without expenses.",
+    "explanation": "Per IRC §36C, the adoption credit is nonrefundable and covers qualified adoption expenses up to a maximum per child (~$16,810 for 2024). Unused credit carries forward for 5 years. Higher amounts may apply for special needs adoptions. Income phaseouts apply. Why other answers are wrong: (A) Refundable—it's nonrefundable; (C) Deducted from gross income—it's a credit, not deduction; (D) International only—available for domestic and international adoptions.",
+    "tip": "IRC: Adoption credit: nonrefundable, 5-year carryforward. Special needs = full credit even without expenses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23395,7 +23395,7 @@ const questions = [
       "D": "Represent clients only in Tax Court"
     },
     "correctAnswer": "B",
-    "explanation": "Enrolled agents are federally authorized tax practitioners who can represent taxpayers before all administrative levels of the IRS (examinations, appeals, collections). They cannot represent clients in court. EAs are licensed by passing a comprehensive exam or through IRS experience.",
+    "explanation": "Per Circular 230, enrolled agents are federally authorized tax practitioners who can represent taxpayers before all administrative levels of the IRS (examinations, appeals, collections). They cannot represent clients in court. EAs are licensed by passing a comprehensive exam or through IRS experience. Why other answers are wrong: (A) Practice law in courts—EAs cannot represent in court; (C) Only prepare returns—EAs have full IRS representation authority; (D) Tax Court only—EAs represent before IRS, not Tax Court.",
     "tip": "EAs: full IRS representation (not courts). Licensed by exam or IRS experience. Regulated by Circular 230.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -23416,8 +23416,8 @@ const questions = [
       "D": "A financing statement is filed within 30 days"
     },
     "correctAnswer": "B",
-    "explanation": "A PMSI in equipment (non-inventory) has superpriority over prior perfected interests if perfected within 20 days after the debtor receives possession. No notice to prior creditors is required for equipment (unlike inventory). This 20-day grace period makes equipment financing practical.",
-    "tip": "PMSI equipment: 20-day grace period, no notice. PMSI inventory: before possession + notice to prior creditors.",
+    "explanation": "Per UCC §9-324(a), a PMSI in equipment (non-inventory) has superpriority over prior perfected interests if perfected within 20 days after the debtor receives possession. No notice to prior creditors is required for equipment (unlike inventory). This 20-day grace period makes equipment financing practical. Why other answers are wrong: (A) Notice required—notice is for inventory PMSI, not equipment; (C) Before possession—20-day grace period allows post-possession perfection; (D) 30 days—the period is 20 days, not 30.",
+    "tip": "§6601: PMSI equipment: 20-day grace period, no notice. PMSI inventory: before possession + notice to prior creditors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23437,8 +23437,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "B",
-    "explanation": "A guaranteed minimum ensures the partner receives at least the stated amount. If the distributive share is less, the difference is a guaranteed payment. Here, the partner receives $35,000 distributive share plus $15,000 guaranteed payment to reach the $50,000 minimum.",
-    "tip": "Guaranteed minimum: payment = minimum - distributive share (if positive). Total = distributive share + guaranteed payment.",
+    "explanation": "Per IRC §707(c), a guaranteed minimum ensures the partner receives at least the stated amount. If the distributive share is less, the difference is a guaranteed payment. Here, the partner receives $35,000 distributive share plus $15,000 guaranteed payment to reach the $50,000 minimum. Why other answers are wrong: (A) $35,000—that's the distributive share, not the guaranteed payment; (C) $0—guaranteed payment is needed to reach minimum; (D) $50,000—that's the total, guaranteed payment is only $15,000.",
+    "tip": "§704: Guaranteed minimum: payment = minimum - distributive share (if positive). Total = distributive share + guaranteed payment.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -23458,8 +23458,8 @@ const questions = [
       "D": "Subject to 10% penalty regardless of age"
     },
     "correctAnswer": "C",
-    "explanation": "Qualified Roth IRA distributions (5-year rule + age 59½, death, disability, or first home purchase) are completely tax-free. Nonqualified distributions: contributions come out first (tax-free), then earnings (taxable + possibly 10% penalty).",
-    "tip": "Qualified Roth: 5-year rule + trigger. Nonqualified: contributions first (tax-free), then taxable earnings.",
+    "explanation": "Per IRC §408A, qualified Roth IRA distributions (5-year rule + age 59½, death, disability, or first home purchase) are completely tax-free. Nonqualified distributions: contributions come out first (tax-free), then earnings (taxable + possibly 10% penalty). Why other answers are wrong: (A) Taxable on earnings only—qualified distributions are 100% tax-free; (B) Ordinary income—qualified distributions aren't taxable at all; (D) 10% penalty—qualified distributions avoid penalties.",
+    "tip": "§§219: Qualified Roth: 5-year rule + trigger. Nonqualified: contributions first (tax-free), then taxable earnings.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23479,8 +23479,8 @@ const questions = [
       "D": "Must independently verify all client information"
     },
     "correctAnswer": "C",
-    "explanation": "Due diligence requires practitioners to make reasonable inquiries if furnished information appears incorrect, incomplete, or inconsistent. They may generally rely on client information without verification unless it appears problematic. Common sense investigation of questionable items is required.",
-    "tip": "Due diligence: can rely on info unless red flags. Must inquire if something seems wrong.",
+    "explanation": "Per Circular 230 §10.22, due diligence requires practitioners to make reasonable inquiries if furnished information appears incorrect, incomplete, or inconsistent. They may generally rely on client information without verification unless it appears problematic. Common sense investigation of questionable items is required. Why other answers are wrong: (A) No obligation—must inquire when information appears wrong; (B) Rely without verification always—cannot rely on clearly problematic information; (D) Verify all independently—not required, only when red flags exist.",
+    "tip": "Circular: Due diligence: can rely on info unless red flags. Must inquire if something seems wrong.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23500,8 +23500,8 @@ const questions = [
       "D": "Liable only for tax obligations"
     },
     "correctAnswer": "C",
-    "explanation": "LLC members enjoy limited liability similar to corporate shareholders—they are not personally liable for LLC debts and obligations beyond their investment. Unlike limited partners, LLC members can participate in management without losing liability protection.",
-    "tip": "LLC: limited liability + management participation. Unlike LP where active participation = personal liability.",
+    "explanation": "Under Uniform Limited Liability Company Act (ULLCA), LLC members enjoy limited liability similar to corporate shareholders—they are not personally liable for LLC debts and obligations beyond their investment. Unlike limited partners, LLC members can participate in management without losing liability protection. Why other answers are wrong: (A) Liable if managing—LLC allows management participation with protection; (B) Liable for all debts—limited liability shields personal assets; (D) Liable for taxes only—no personal liability for business obligations.",
+    "tip": "§303: LLC: limited liability + management participation. Unlike LP where active participation = personal liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23521,8 +23521,8 @@ const questions = [
       "D": "Charitable contributions"
     },
     "correctAnswer": "C",
-    "explanation": "State and local taxes (including income and property taxes) are deductible for regular tax but not for AMT, requiring an add-back. Standard deduction, personal exemptions (when applicable), and certain depreciation differences are also AMT adjustments.",
-    "tip": "AMT add-backs: SALT, personal exemptions, standard deduction, certain depreciation. Not add-back: mortgage interest on acquisition debt.",
+    "explanation": "Per IRC §56, state and local taxes (including income and property taxes) are deductible for regular tax but not for AMT, requiring an add-back. Standard deduction, personal exemptions (when applicable), and certain depreciation differences are also AMT adjustments. Why other answers are wrong: (A) Mortgage interest—allowed for AMT on acquisition debt; (B) Municipal bond interest—most is exempt for AMT too (except private activity bonds); (D) Charitable contributions—same for AMT and regular tax.",
+    "tip": "§63: AMT add-backs: SALT, personal exemptions, standard deduction, certain depreciation. Not add-back: mortgage interest on acquisition debt.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23542,8 +23542,8 @@ const questions = [
       "D": "Accounts receivable from services rendered"
     },
     "correctAnswer": "D",
-    "explanation": "Capital assets include investment property, personal-use property, and collectibles. Exceptions (NOT capital assets) include: inventory, accounts receivable from business, depreciable/real business property (Section 1231), supplies, and certain government publications.",
-    "tip": "Capital assets: everything EXCEPT inventory, receivables, business property, supplies, some copyrights.",
+    "explanation": "Per IRC §1221, capital assets include investment property, personal-use property, and collectibles. Exceptions (NOT capital assets) include: inventory, accounts receivable from business, depreciable/real business property (Section 1231), supplies, and certain government publications. Why other answers are wrong: (A) Personal artwork—capital asset as personal property; (B) Personal automobile—capital asset; (C) Investment stock—capital asset.",
+    "tip": "§1221: Capital assets: everything EXCEPT inventory, receivables, business property, supplies, some copyrights.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -23563,8 +23563,8 @@ const questions = [
       "D": "Any ownership interest"
     },
     "correctAnswer": "C",
-    "explanation": "Section 351 requires that transferors, in the aggregate, control the corporation immediately after the exchange. Control means owning at least 80% of total combined voting power AND at least 80% of each class of nonvoting stock. A single transferor or group must meet this test.",
-    "tip": "Section 351 control: 80% vote + 80% each nonvoting class. Measured immediately after transfer.",
+    "explanation": "Per IRC §351 and §368(c), transferors, in the aggregate, must control the corporation immediately after the exchange. Control means owning at least 80% of total combined voting power AND at least 80% of each class of nonvoting stock. A single transferor or group must meet this test. Why other answers are wrong: (A) 100%—only 80% required; (B) 50% voting—control requires 80%; (D) Any interest—insufficient; must meet 80% threshold.",
+    "tip": "Model: Section 351 control: 80% vote + 80% each nonvoting class. Measured immediately after transfer.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23584,8 +23584,8 @@ const questions = [
       "D": "To any creditor within 2 years before filing"
     },
     "correctAnswer": "A",
-    "explanation": "Preferences are payments made within 90 days (1 year for insiders) for antecedent debts that allow a creditor to receive more than they would in a Chapter 7 liquidation. The trustee can avoid these payments to redistribute them equitably. Exceptions apply for ordinary course payments.",
-    "tip": "Preference: 90 days (1 year insider), antecedent debt, creditor improved position. Ordinary course = exception.",
+    "explanation": "Per 11 U.S.C. §547, preferences are payments made within 90 days (1 year for insiders) for antecedent debts that allow a creditor to receive more than they would in a Chapter 7 liquidation. The trustee can avoid these payments to redistribute them equitably. Exceptions apply for ordinary course payments. Why other answers are wrong: (B) Secured only—applies to all creditors; (C) Under $1,000—no such minimum; (D) Within 2 years—90 days is the standard (1 year for insiders).",
+    "tip": "§701: Preference: 90 days (1 year insider), antecedent debt, creditor improved position. Ordinary course = exception.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23605,8 +23605,8 @@ const questions = [
       "D": "Is made to all partners equally"
     },
     "correctAnswer": "B",
-    "explanation": "Section 751(b) recharacterizes disproportionate distributions—those that change a partner's share of 'hot assets' (unrealized receivables and substantially appreciated inventory). The partner is treated as exchanging their share of hot assets for other property, recognizing ordinary income on the exchange.",
-    "tip": "Section 751(b): disproportionate distribution of hot assets = deemed exchange, ordinary income recognized.",
+    "explanation": "Per Revised Uniform Partnership Act (RUPA), section 751(b) recharacterizes disproportionate distributions—those that change a partner's share of 'hot assets' (unrealized receivables and substantially appreciated inventory). The partner is treated as exchanging their share of hot assets for other property, recognizing ordinary income on the exchange.",
+    "tip": "Revised: Section 751(b): disproportionate distribution of hot assets = deemed exchange, ordinary income recognized.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23626,8 +23626,8 @@ const questions = [
       "D": "All activities are rental activities"
     },
     "correctAnswer": "B",
-    "explanation": "Activities can be grouped if they constitute an appropriate economic unit, considering factors such as: common control, common ownership, geographic location, business interdependence, and similar types of business. Once grouped, the activities are treated as one for passive activity purposes.",
-    "tip": "Grouping: appropriate economic unit. Factors: control, ownership, location, interdependence, similarity. Consistent treatment required.",
+    "explanation": "Per IRC §469 and Treas. Reg. §1.469-4, activities can be grouped if they constitute an appropriate economic unit, considering factors such as: common control, common ownership, geographic location, business interdependence, and similar types of business. Once grouped, the activities are treated as one for passive activity purposes. Why other answers are wrong: (A) Unrelated—must form an appropriate economic unit; (C) Maximize losses—not a valid purpose for grouping; (D) All rental—rental activities have separate grouping rules.",
+    "tip": "IRC: Grouping: appropriate economic unit. Factors: control, ownership, location, interdependence, similarity. Consistent treatment required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23647,8 +23647,8 @@ const questions = [
       "D": "5% of the excess claimed"
     },
     "correctAnswer": "A",
-    "explanation": "The erroneous refund penalty is 20% of the excessive amount claimed if due to reckless or intentional disregard of rules or regulations. This applies to claims for refund or credit that have no reasonable basis. The 75% fraud penalty may apply if fraud is involved.",
-    "tip": "Erroneous refund: 20% for reckless/intentional disregard. Separate from accuracy-related and fraud penalties.",
+    "explanation": "Per IRC §6676, the erroneous refund penalty is 20% of the excessive amount claimed if due to reckless or intentional disregard of rules or regulations. This applies to claims for refund or credit that have no reasonable basis. The 75% fraud penalty may apply if fraud is involved. Why other answers are wrong: (B) 75%—that's the fraud penalty; (C) 100% of refund—no such penalty; (D) 5%—too low, it's 20%.",
+    "tip": "IRC: Erroneous refund: 20% for reckless/intentional disregard. Separate from accuracy-related and fraud penalties.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23668,8 +23668,8 @@ const questions = [
       "D": "Scienter (intent to deceive), materiality, reliance, and damages"
     },
     "correctAnswer": "D",
-    "explanation": "Private Rule 10b-5 claims require: (1) misstatement or omission, (2) of material fact, (3) made with scienter (intentional or reckless), (4) in connection with purchase or sale of securities, (5) reliance, and (6) economic loss. Negligence is insufficient—scienter is required.",
-    "tip": "10b-5 private action: scienter required (not just negligence). SEC enforcement has lower standard.",
+    "explanation": "Per Securities Exchange Act §10(b), Rule 10b-5, private Rule 10b-5 claims require: (1) misstatement or omission, (2) of material fact, (3) made with scienter (intentional or reckless), (4) in connection with purchase or sale of securities, (5) reliance, and (6) economic loss. Negligence is insufficient—scienter is required.",
+    "tip": "§10: 10b-5 private action: scienter required (not just negligence). SEC enforcement has lower standard.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23689,8 +23689,8 @@ const questions = [
       "D": "Determine trustee compensation"
     },
     "correctAnswer": "B",
-    "explanation": "DNI limits the distribution deduction the trust can claim and determines the amount and character of income passed through to beneficiaries. It prevents the trust from deducting more than its taxable income and ensures income retains its character (ordinary, capital, etc.) when distributed.",
-    "tip": "DNI: limits deduction + characterizes income to beneficiaries. Trust/estate splits income with beneficiaries.",
+    "explanation": "Per IRC §643, DNI limits the distribution deduction the trust can claim and determines the amount and character of income passed through to beneficiaries. It prevents the trust from deducting more than its taxable income and ensures income retains its character (ordinary, capital, etc.) when distributed. Why other answers are wrong: (A) Trust tax rate—DNI doesn't affect rate; (C) Estate taxes only—DNI applies to income tax, not estate tax; (D) Trustee compensation—separate calculation.",
+    "tip": "§11: DNI: limits deduction + characterizes income to beneficiaries. Trust/estate splits income with beneficiaries.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23710,7 +23710,7 @@ const questions = [
       "D": "Criminal imprisonment only"
     },
     "correctAnswer": "A",
-    "explanation": "Office of Professional Responsibility (OPR) sanctions include: censure (public reprimand), suspension from practice, disbarment, and monetary penalties up to gross income from the engagement. These are administrative sanctions; criminal violations are separate matters.",
+    "explanation": "Per Circular 230 §10.50, Office of Professional Responsibility (OPR) sanctions include: censure (public reprimand), suspension from practice, disbarment, and monetary penalties up to gross income from the engagement. These are administrative sanctions; criminal violations are separate matters. Why other answers are wrong: (B) CPA license only—OPR sanctions IRS practice, state boards control CPA licenses; (C) Written reprimand only—censure is public, plus suspension and disbarment available; (D) Criminal only—these are administrative sanctions.",
     "tip": "Circular 230 sanctions: censure, suspension, disbarment, monetary penalty. Administrative, not criminal (though can have both).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
@@ -23731,8 +23731,8 @@ const questions = [
       "D": "An electing small business trust"
     },
     "correctAnswer": "C",
-    "explanation": "S corporation shareholders must be individuals, certain trusts (grantor, voting, testamentary, QSST, ESBT), or estates. Partnerships, corporations, and nonresident aliens are ineligible. If an ineligible shareholder obtains stock, the S election terminates.",
-    "tip": "Ineligible S shareholders: partnerships, corporations, NRAs. ESBTs and QSSTs specifically allowed.",
+    "explanation": "Per IRC §1361(b)(1), S corporation shareholders must be individuals, certain trusts (grantor, voting, testamentary, QSST, ESBT), or estates. Partnerships, corporations, and nonresident aliens are ineligible. If an ineligible shareholder obtains stock, the S election terminates. Why other answers are wrong: (A) Resident alien—eligible shareholder; (B) Grantor trust—eligible shareholder; (D) ESBT—eligible shareholder.",
+    "tip": "§1362: Ineligible S shareholders: partnerships, corporations, NRAs. ESBTs and QSSTs specifically allowed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23752,8 +23752,8 @@ const questions = [
       "D": "Report all gain as ordinary income"
     },
     "correctAnswer": "C",
-    "explanation": "When a related party resells installment sale property within 2 years, the original seller must recognize gain to the extent of the resale proceeds (up to remaining deferred gain). This prevents using related parties to convert installment sales to cash while deferring gain.",
-    "tip": "Related party resale < 2 years: original seller accelerates gain. Prevents installment sale abuse.",
+    "explanation": "Per IRC §453(e), when a related party resells installment sale property within 2 years, the original seller must recognize gain to the extent of the resale proceeds (up to remaining deferred gain). This prevents using related parties to convert installment sales to cash while deferring gain. Why other answers are wrong: (A) Amended return—gain recognized in year of resale; (B) Continue deferring—gain accelerates; (D) Ordinary income—character depends on original asset.",
+    "tip": "§267: Related party resale < 2 years: original seller accelerates gain. Prevents installment sale abuse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23773,8 +23773,8 @@ const questions = [
       "D": "Only applies to personal service contracts"
     },
     "correctAnswer": "C",
-    "explanation": "Impossibility requires that performance is objectively impossible (death of unique party, destruction of specific goods, illegality). Impracticability allows discharge when an unforeseen event makes performance unreasonably difficult or expensive, even though technically possible.",
-    "tip": "Impossibility: can't be done at all. Impracticability: unreasonably difficult/expensive. Both require unforeseen events.",
+    "explanation": "Per Restatement (Second) of Contracts §261 and UCC §2-615, impossibility requires that performance is objectively impossible (death of unique party, destruction of specific goods, illegality). Impracticability allows discharge when an unforeseen event makes performance unreasonably difficult or expensive, even though technically possible. Why other answers are wrong: (A) Not valid—impracticability is recognized; (B) Physical destruction—that's impossibility; (D) Personal service only—applies to goods and services.",
+    "tip": "§261: Impossibility: can't be done at all. Impracticability: unreasonably difficult/expensive. Both require unforeseen events.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23794,8 +23794,8 @@ const questions = [
       "D": "1 of the last 3 years"
     },
     "correctAnswer": "A",
-    "explanation": "An activity is presumed to be a for-profit activity (not a hobby) if it produces a profit in 3 of the last 5 years (2 of 7 years for horse activities). The presumption can be rebutted by the IRS. Hobbies cannot generate deductible losses beyond income from the hobby.",
-    "tip": "Profit presumption: 3 of 5 years (2 of 7 for horses). Hobby = no loss deduction under current law.",
+    "explanation": "Per IRC §183, an activity is presumed to be a for-profit activity (not a hobby) if it produces a profit in 3 of the last 5 years (2 of 7 years for horse activities). The presumption can be rebutted by the IRS. Hobbies cannot generate deductible losses beyond income from the hobby. Why other answers are wrong: (B) All 5 years—only 3 needed; (C) Any single year—1 year isn't enough; (D) 1 of 3 years—standard is 3 of 5.",
+    "tip": "IRC: Profit presumption: 3 of 5 years (2 of 7 for horses). Hobby = no loss deduction under current law.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23815,8 +23815,8 @@ const questions = [
       "D": "Subject to gift tax at transfer"
     },
     "correctAnswer": "C",
-    "explanation": "Property in a revocable trust is included in the grantor's gross estate under Section 2038 because the grantor retained the power to alter, amend, revoke, or terminate. This power 'strings' the property back into the estate despite the earlier transfer.",
-    "tip": "Revocable trust: included in estate (Section 2038). No completed gift during life. Basis stepped up at death.",
+    "explanation": "Per IRC §2038, property in a revocable trust is included in the grantor's gross estate because the grantor retained the power to alter, amend, revoke, or terminate. This power 'strings' the property back into the estate despite the earlier transfer. Why other answers are wrong: (A) Taxed to beneficiaries—grantor trust rules apply during life; (B) Excluded from estate—retained control includes it; (D) Gift tax at transfer—no completed gift for revocable transfers.",
+    "tip": "§2031: Revocable trust: included in estate (Section 2038). No completed gift during life. Basis stepped up at death.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23836,8 +23836,8 @@ const questions = [
       "D": "Any employee of the company"
     },
     "correctAnswer": "C",
-    "explanation": "The trust fund recovery penalty (100% penalty) applies to 'responsible persons' who willfully fail to collect, account for, or pay over employment taxes withheld from employees. Responsible persons include officers, directors, employees with authority over finances, and even some outside parties.",
-    "tip": "Trust fund penalty: 100% of tax. Responsible + willful. Can apply to multiple persons. Personal liability.",
+    "explanation": "Per IRC §6672, the trust fund recovery penalty (100% penalty) applies to 'responsible persons' who willfully fail to collect, account for, or pay over employment taxes withheld from employees. Responsible persons include officers, directors, employees with authority over finances, and even some outside parties. Why other answers are wrong: (A) Only payroll providers—applies to any responsible person; (B) Corporate employer only—pierces corporate veil to individuals; (D) Any employee—must be responsible person with authority.",
+    "tip": "§6672: Trust fund penalty: 100% of tax. Responsible + willful. Can apply to multiple persons. Personal liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -23857,8 +23857,8 @@ const questions = [
       "D": "Years of work history"
     },
     "correctAnswer": "B",
-    "explanation": "Social Security taxability depends on provisional income (AGI + tax-exempt interest + 50% of benefits). Up to 50% is taxable if provisional income exceeds the first threshold; up to 85% is taxable above the second threshold.",
-    "tip": "Provisional income = AGI + tax-exempt interest + 50% of SS benefits. Determines how much of SS is taxable.",
+    "explanation": "Per IRC §86, Social Security taxability depends on provisional income (AGI + tax-exempt interest + 50% of benefits). Up to 50% is taxable if provisional income exceeds the first threshold; up to 85% is taxable above the second threshold. Why other answers are wrong: (A) Recipient's age—age doesn't determine taxability; (C) State of residence—federal tax based on income, not state; (D) Work history—determines benefit amount, not taxability.",
+    "tip": "§86: Provisional income = AGI + tax-exempt interest + 50% of SS benefits. Determines how much of SS is taxable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23878,8 +23878,8 @@ const questions = [
       "D": "Equal value on both sides"
     },
     "correctAnswer": "B",
-    "explanation": "Consideration requires a bargained-for exchange where each party provides something of legal value (benefit to promisor or detriment to promisee). It doesn't require equal value—courts don't assess adequacy of consideration.",
-    "tip": "Consideration: bargained-for exchange + legal value. Courts don't evaluate adequacy (fairness).",
+    "explanation": "Per Restatement (Second) of Contracts §71, consideration requires a bargained-for exchange where each party provides something of legal value (benefit to promisor or detriment to promisee). It doesn't require equal value—courts don't assess adequacy of consideration. Why other answers are wrong: (A) Cash only—consideration can be services, promises, or property; (C) Written agreement—consideration need not be written; (D) Equal value—adequacy isn't required.",
+    "tip": "§71: Consideration: bargained-for exchange + legal value. Courts don't evaluate adequacy (fairness).",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23899,8 +23899,8 @@ const questions = [
       "D": "Is halved"
     },
     "correctAnswer": "D",
-    "explanation": "In a stock split, total basis remains the same but is divided among the new number of shares. In a 2-for-1 split, the shareholder has twice as many shares, so per-share basis is halved. No gain or loss is recognized.",
-    "tip": "Stock split: total basis unchanged, per-share basis adjusted. Stock dividend: similar treatment.",
+    "explanation": "Per IRC §307, in a stock split, total basis remains the same but is divided among the new number of shares. In a 2-for-1 split, the shareholder has twice as many shares, so per-share basis is halved. No gain or loss is recognized. Why other answers are wrong: (A) Unchanged—per-share basis changes even though total basis doesn't; (B) Becomes zero—basis is allocated, not eliminated; (C) Doubles—per-share basis is halved, not doubled.",
+    "tip": "§1012: Stock split: total basis unchanged, per-share basis adjusted. Stock dividend: similar treatment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23920,8 +23920,8 @@ const questions = [
       "D": "Any type of income"
     },
     "correctAnswer": "A",
-    "explanation": "Corporate capital losses can only offset capital gains—they cannot offset ordinary income at all. Excess capital losses carry back 3 years and forward 5 years. This differs from individuals who can deduct $3,000 against ordinary income.",
-    "tip": "Corp capital losses: only offset capital gains. Carryback 3 years, forward 5 years. No $3,000 ordinary offset.",
+    "explanation": "Per IRC §1211(a), corporate capital losses can only offset capital gains—they cannot offset ordinary income at all. Excess capital losses carry back 3 years and forward 5 years. This differs from individuals who can deduct $3,000 against ordinary income. Why other answers are wrong: (B) $3,000 ordinary—that's for individuals, not corporations; (C) Operating income unlimited—capital losses can't offset ordinary income; (D) Any income—limited to capital gains only.",
+    "tip": "Model: Corp capital losses: only offset capital gains. Carryback 3 years, forward 5 years. No $3,000 ordinary offset.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23941,8 +23941,8 @@ const questions = [
       "D": "25% to 50%"
     },
     "correctAnswer": "B",
-    "explanation": "Failure to deposit penalties are tiered: 2% for 1-5 days late, 5% for 6-15 days late, 10% for 16+ days late, and 15% if not paid within 10 days of first IRS notice. Intentional failure can result in higher penalties.",
-    "tip": "Deposit penalties: 2% → 5% → 10% → 15% based on lateness. Use EFTPS for proper deposits.",
+    "explanation": "Per IRC §6656, failure to deposit penalties are tiered: 2% for 1-5 days late, 5% for 6-15 days late, 10% for 16+ days late, and 15% if not paid within 10 days of first IRS notice. Intentional failure can result in higher penalties. Why other answers are wrong: (A) 0-5%—minimum is 2%; (C) 10-25%—maximum is 15% (plus 100% trust fund penalty if willful); (D) 25-50%—exceeds the tiered penalty structure.",
+    "tip": "IRC: Deposit penalties: 2% → 5% → 10% → 15% based on lateness. Use EFTPS for proper deposits.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23962,8 +23962,8 @@ const questions = [
       "D": "Volunteers only"
     },
     "correctAnswer": "C",
-    "explanation": "Anyone who prepares or substantially assists in preparing any federal tax return for compensation must obtain a PTIN and include it on returns they prepare. PTINs must be renewed annually. This includes employed preparers, not just practice owners.",
-    "tip": "PTIN: required for any compensated preparer. Must renew annually. Include on all returns prepared.",
+    "explanation": "Per Circular 230 §10.3, anyone who prepares or substantially assists in preparing any federal tax return for compensation must obtain a PTIN and include it on returns they prepare. PTINs must be renewed annually. This includes employed preparers, not just practice owners. Why other answers are wrong: (A) Attorneys only—all compensated preparers need PTIN; (B) CPAs only—applies to all preparers; (D) Volunteers only—volunteers don't need PTINs, compensated preparers do.",
+    "tip": "§10: PTIN: required for any compensated preparer. Must renew annually. Include on all returns prepared.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -23983,8 +23983,8 @@ const questions = [
       "D": "An itemized deduction"
     },
     "correctAnswer": "B",
-    "explanation": "For pre-2019 divorce agreements, alimony is deductible by the payer (above-the-line) and taxable to the recipient. Post-2018 agreements eliminate this treatment—alimony is neither deductible nor taxable. Pre-2019 agreements can elect new treatment.",
-    "tip": "Alimony: pre-2019 = deductible/taxable. Post-2018 = no deduction/no income. Old agreements can elect new rules.",
+    "explanation": "Per IRC §71 (pre-2019) / IRC §61(a) (post-2018), for pre-2019 divorce agreements, alimony is deductible by the payer (above-the-line) and taxable to the recipient. Post-2018 agreements eliminate this treatment—alimony is neither deductible nor taxable. Pre-2019 agreements can elect new treatment.",
+    "tip": "§71: Alimony: pre-2019 = deductible/taxable. Post-2018 = no deduction/no income. Old agreements can elect new rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24004,8 +24004,8 @@ const questions = [
       "D": "Purchasing insurance for the agent"
     },
     "correctAnswer": "B",
-    "explanation": "Principal's duties include: compensation (if agreed), reimbursement for authorized expenses, indemnification for losses from authorized acts, and cooperation (not interfering with agent's performance). The agent owes fiduciary duties to the principal.",
-    "tip": "Principal's duties: pay, reimburse, indemnify, cooperate. Agent's duties: loyalty, obedience, care.",
+    "explanation": "Per Restatement (Third) of Agency, principal's duties include: compensation (if agreed), reimbursement for authorized expenses, indemnification for losses from authorized acts, and cooperation (not interfering with agent's performance). The agent owes fiduciary duties to the principal. Why other answers are wrong: (A) No duties—principal has multiple duties; (C) Only workspace—reimbursement and compensation also required; (D) Purchasing insurance—not a required duty.",
+    "tip": "Restatement: Principal's duties: pay, reimburse, indemnify, cooperate. Agent's duties: loyalty, obedience, care.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24025,8 +24025,8 @@ const questions = [
       "D": "Increased by income first, then reduced by distributions"
     },
     "correctAnswer": "D",
-    "explanation": "S corporation basis adjustments follow this order: (1) increase for income (including tax-exempt), (2) decrease for distributions (not below zero), (3) decrease for nondeductible expenses, (4) decrease for deductions and losses. This ordering maximizes tax-free distributions.",
-    "tip": "Basis order: + income, - distributions, - nondeductible expenses, - losses. Sequence matters!",
+    "explanation": "Per IRC §1367, S corporation basis adjustments follow this order: (1) increase for income (including tax-exempt), (2) decrease for distributions (not below zero), (3) decrease for nondeductible expenses, (4) decrease for deductions and losses. This ordering maximizes tax-free distributions. Why other answers are wrong: (A) Net amounts only—ordering matters for tax-free distributions; (B) Not until next year—adjustments occur during the year; (C) Distributions first—income increases basis first.",
+    "tip": "§1367: Basis order: + income, - distributions, - nondeductible expenses, - losses. Sequence matters!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24046,8 +24046,8 @@ const questions = [
       "D": "Appraise the properties"
     },
     "correctAnswer": "A",
-    "explanation": "A qualified intermediary (QI) facilitates the exchange by holding sale proceeds and using them to acquire replacement property. Using a QI prevents actual or constructive receipt of cash, which would disqualify the exchange. The QI cannot be related to the taxpayer.",
-    "tip": "QI: holds funds, facilitates exchange. Avoids constructive receipt. Cannot be related party.",
+    "explanation": "Per IRC §1031 and Treas. Reg. §1.1031(k)-1, a qualified intermediary (QI) facilitates the exchange by holding sale proceeds and using them to acquire replacement property. Using a QI prevents actual or constructive receipt of cash, which would disqualify the exchange. The QI cannot be related to the taxpayer. Why other answers are wrong: (B) Negotiate price—not the QI's role; (C) Title insurance—that's a title company function; (D) Appraise—that's an appraiser's role.",
+    "tip": "§1031: QI: holds funds, facilitates exchange. Avoids constructive receipt. Cannot be related party.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24067,8 +24067,8 @@ const questions = [
       "D": "Applies to all debtors equally"
     },
     "correctAnswer": "A",
-    "explanation": "The means test determines if Chapter 7 would be an abuse for above-median-income debtors. If current monthly income exceeds the state median, a complex calculation determines if sufficient disposable income exists for a Chapter 13 repayment plan instead.",
-    "tip": "Means test: above median income → presumption of abuse → may be forced to Chapter 13.",
+    "explanation": "Per 11 U.S.C. §707(b), the means test determines if Chapter 7 would be an abuse for above-median-income debtors. If current monthly income exceeds the state median, a complex calculation determines if sufficient disposable income exists for a Chapter 13 repayment plan instead. Why other answers are wrong: (B) Only assets—means test focuses on income; (C) Attorney performs—trustee/court applies the test; (D) Applies equally—varies by state median income.",
+    "tip": "§701: Means test: above median income → presumption of abuse → may be forced to Chapter 13.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24088,8 +24088,8 @@ const questions = [
       "D": "The total distribution amount"
     },
     "correctAnswer": "A",
-    "explanation": "In a current (non-liquidating) distribution, gain is recognized only if cash received exceeds the partner's outside basis. Loss is never recognized in current distributions. Property distributions generally don't trigger gain.",
-    "tip": "Current distribution: gain only if cash > basis. No loss. Property = no gain (basis substituted).",
+    "explanation": "Per IRC §731(a), in a current (non-liquidating) distribution, gain is recognized only if cash received exceeds the partner's outside basis. Loss is never recognized in current distributions. Property distributions generally don't trigger gain. Why other answers are wrong: (B) Cash minus capital account—outside basis is used, not capital account; (C) Zero always—gain recognized if cash exceeds basis; (D) Total amount—only excess over basis is gain.",
+    "tip": "Revised: Current distribution: gain only if cash > basis. No loss. Property = no gain (basis substituted).",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -24109,8 +24109,8 @@ const questions = [
       "D": "30% of the cost with no annual limit"
     },
     "correctAnswer": "D",
-    "explanation": "The residential clean energy credit is 30% of costs for qualified solar, wind, geothermal, and battery storage installations through 2032. There's no annual limit or lifetime cap. The credit is nonrefundable but can be carried forward.",
-    "tip": "Solar/clean energy: 30% credit (through 2032). No cap. Nonrefundable with carryforward.",
+    "explanation": "Per IRC §25D, the residential clean energy credit is 30% of costs for qualified solar, wind, geothermal, and battery storage installations through 2032. There's no annual limit or lifetime cap. The credit is nonrefundable but can be carried forward. Why other answers are wrong: (A) Flat $500—credit is percentage-based; (B) New construction only—applies to existing homes too; (C) 10%—credit is 30% through 2032.",
+    "tip": "IRC: Solar/clean energy: 30% credit (through 2032). No cap. Nonrefundable with carryforward.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24130,8 +24130,8 @@ const questions = [
       "D": "50% of taxable income"
     },
     "correctAnswer": "B",
-    "explanation": "Post-2020 NOLs can offset only 80% of taxable income (computed without the NOL deduction). They cannot be carried back (except farming losses) but carry forward indefinitely. Pre-2018 NOLs followed different rules (2-year carryback, 20-year carryforward, 100% deduction).",
-    "tip": "Post-2020 NOL: 80% limit, no carryback (except farms), indefinite carryforward.",
+    "explanation": "Per IRC §172, post-2020 NOLs can offset only 80% of taxable income (computed without the NOL deduction). They cannot be carried back (except farming losses) but carry forward indefinitely. Pre-2018 NOLs followed different rules (2-year carryback, 20-year carryforward, 100% deduction). Why other answers are wrong: (A) 100%—limit is 80% post-2020; (C) $500K/year—no dollar limit, percentage limit; (D) 50%—limit is 80%, not 50%.",
+    "tip": "§11: Post-2020 NOL: 80% limit, no carryback (except farms), indefinite carryforward.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24151,8 +24151,8 @@ const questions = [
       "D": "$100,000 or less"
     },
     "correctAnswer": "A",
-    "explanation": "The IRS must accept (guaranteed installment agreement) requests when tax owed is $50,000 or less and the taxpayer agrees to full payment within 72 months or the collection statute, whichever is shorter. The taxpayer must be in filing compliance.",
-    "tip": "Guaranteed IA: ≤$50K, pay in 72 months, in compliance. Streamlined IA has different thresholds.",
+    "explanation": "Per IRC §6159, the IRS must accept (guaranteed installment agreement) requests when tax owed is $50,000 or less and the taxpayer agrees to full payment within 72 months or the collection statute, whichever is shorter. The taxpayer must be in filing compliance. Why other answers are wrong: (B) Any amount with hardship—guaranteed IA has $50K limit; (C) $25K only—threshold is $50K; (D) $100K—exceeds guaranteed IA threshold.",
+    "tip": "§6502: Guaranteed IA: ≤$50K, pay in 72 months, in compliance. Streamlined IA has different thresholds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24172,8 +24172,8 @@ const questions = [
       "D": "All sales under $1 million"
     },
     "correctAnswer": "A",
-    "explanation": "Section 4(a)(2) exempts transactions not involving a public offering (private placements). Factors include number/sophistication of offerees, manner of offering (no advertising), and investor access to information. Regulation D provides safe harbors for this exemption.",
-    "tip": "4(a)(2): private placement. Reg D provides safe harbors (Rules 504, 505, 506). No general solicitation for most.",
+    "explanation": "Per Securities Act of 1933 §4, Regulation D, section 4(a)(2) exempts transactions not involving a public offering (private placements). Factors include number/sophistication of offerees, manner of offering (no advertising), and investor access to information. Regulation D provides safe harbors for this exemption.",
+    "tip": "§4: 4(a)(2): private placement. Reg D provides safe harbors (Rules 504, 505, 506). No general solicitation for most.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24193,8 +24193,8 @@ const questions = [
       "D": "Book value"
     },
     "correctAnswer": "C",
-    "explanation": "Estate assets are valued at FMV on the date of death. The executor may elect the alternate valuation date (6 months later or earlier disposition date) if it reduces both the gross estate and estate tax liability. This valuation also becomes the heir's stepped-up basis.",
-    "tip": "DOD valuation: date of death or 6-month alternate. Alternate only if reduces both estate and tax.",
+    "explanation": "Per IRC §2031 and §2032, estate assets are valued at FMV on the date of death. The executor may elect the alternate valuation date (6 months later or earlier disposition date) if it reduces both the gross estate and estate tax liability. This valuation also becomes the heir's stepped-up basis. Why other answers are wrong: (A) Assessed value—FMV is used, not property tax value; (B) Purchase price—current FMV, not historical cost; (D) Book value—FMV standard applies.",
+    "tip": "§1012: DOD valuation: date of death or 6-month alternate. Alternate only if reduces both estate and tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24214,8 +24214,8 @@ const questions = [
       "D": "$147,000 per employee"
     },
     "correctAnswer": "B",
-    "explanation": "FUTA applies to the first $7,000 of each employee's wages. The full FUTA rate is 6.0%, but a 5.4% credit is available if state unemployment taxes are paid timely, resulting in an effective rate of 0.6%. This wage base has remained $7,000 since 1983.",
-    "tip": "FUTA: $7,000 wage base. 6% - 5.4% credit = 0.6% effective rate. Employer-only tax.",
+    "explanation": "Per IRC §3301 and §3306, FUTA applies to the first $7,000 of each employee's wages. The full FUTA rate is 6.0%, but a 5.4% credit is available if state unemployment taxes are paid timely, resulting in an effective rate of 0.6%. This wage base has remained $7,000 since 1983. Why other answers are wrong: (A) Unlimited—$7,000 cap applies; (C) $10,000—wage base is $7,000; (D) $147,000—that's the Social Security wage base.",
+    "tip": "IRC: FUTA: $7,000 wage base. 6% - 5.4% credit = 0.6% effective rate. Employer-only tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24235,8 +24235,8 @@ const questions = [
       "D": "Always provide the most aggressive tax position"
     },
     "correctAnswer": "A",
-    "explanation": "Best practices include: communicating clearly about engagement terms, establishing facts and evaluating information, advising clients of correct tax return positions and consequences of positions taken, and acting fairly and with integrity.",
-    "tip": "Best practices: clear communication, establish facts, advise on positions, act with integrity.",
+    "explanation": "Per Circular 230 §10.33, best practices include: communicating clearly about engagement terms, establishing facts and evaluating information, advising clients of correct tax return positions and consequences of positions taken, and acting fairly and with integrity. Why other answers are wrong: (B) Minimize documentation—documentation should be thorough; (C) Avoid explaining penalties—must advise on consequences; (D) Most aggressive position—should advise on correct positions.",
+    "tip": "Circular: Best practices: clear communication, establish facts, advise on positions, act with integrity.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24256,8 +24256,8 @@ const questions = [
       "D": "Only tuition at public universities"
     },
     "correctAnswer": "C",
-    "explanation": "529 distributions are tax-free for qualified higher education expenses: tuition, fees, books, supplies, equipment, and room/board (for at least half-time students). Up to $10,000/year can also be used for K-12 tuition. Student loan payments up to $10,000 lifetime also qualify.",
-    "tip": "529: tax-free for QHEE. Room/board OK if half-time. K-12 tuition OK ($10K/yr). Student loans ($10K lifetime).",
+    "explanation": "Per IRC §529, distributions are tax-free for qualified higher education expenses: tuition, fees, books, supplies, equipment, and room/board (for at least half-time students). Up to $10,000/year can also be used for K-12 tuition. Student loan payments up to $10,000 lifetime also qualify. Why other answers are wrong: (A) Contributor's state only—can use at any eligible institution; (B) Any education—must be qualified expenses; (D) Public universities only—private institutions qualify too.",
+    "tip": "IRC: 529: tax-free for QHEE. Room/board OK if half-time. K-12 tuition OK ($10K/yr). Student loans ($10K lifetime).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24277,8 +24277,8 @@ const questions = [
       "D": "They learn of the contract's existence"
     },
     "correctAnswer": "A",
-    "explanation": "An intended (not incidental) beneficiary can enforce the contract after their rights vest. Rights vest when the beneficiary: (1) assents to the promise, (2) materially relies on it, or (3) brings suit. Before vesting, the parties can modify or rescind.",
-    "tip": "Intended beneficiary: can enforce. Rights vest on assent, reliance, or suit. Incidental beneficiary: no rights.",
+    "explanation": "Per Restatement (Second) of Contracts §311, an intended (not incidental) beneficiary can enforce the contract after their rights vest. Rights vest when the beneficiary: (1) assents to the promise, (2) materially relies on it, or (3) brings suit. Before vesting, the parties can modify or rescind. Why other answers are wrong: (B) Promisor acknowledges—acknowledgment isn't vesting; (C) Provides consideration—beneficiary doesn't provide consideration; (D) Learns of contract—knowledge alone doesn't vest rights.",
+    "tip": "§691: Intended beneficiary: can enforce. Rights vest on assent, reliance, or suit. Incidental beneficiary: no rights.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24298,8 +24298,8 @@ const questions = [
       "D": "Any 12-month period elected by the partners"
     },
     "correctAnswer": "A",
-    "explanation": "Partnership tax year is determined by: (1) majority interest tax year (partners owning >50%), (2) if none, principal partners' tax year (partners with ≥5%), (3) if none, least aggregate deferral year. Section 444 allows fiscal year election with required payments.",
-    "tip": "Partnership year: majority interest → principal partners → least aggregate deferral. Prevents income deferral abuse.",
+    "explanation": "Per IRC §706(b), partnership tax year is determined by: (1) majority interest tax year (partners owning >50%), (2) if none, principal partners' tax year (partners with ≥5%), (3) if none, least aggregate deferral year. Section 444 allows fiscal year election with required payments.",
+    "tip": "§706: Partnership year: majority interest → principal partners → least aggregate deferral. Prevents income deferral abuse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24319,8 +24319,8 @@ const questions = [
       "D": "No longer available"
     },
     "correctAnswer": "C",
-    "explanation": "100% bonus depreciation applied through 2022. It phases down: 80% in 2023, 60% in 2024, 40% in 2025, 20% in 2026, then expires. Bonus depreciation applies to new property with recovery periods of 20 years or less, and used property (with acquisition requirements).",
-    "tip": "Bonus depreciation phaseout: 80% (2023) → 60% (2024) → 40% (2025) → 20% (2026) → 0% (2027).",
+    "explanation": "Per IRC §168(k), 100% bonus depreciation applied through 2022. It phases down: 80% in 2023, 60% in 2024, 40% in 2025, 20% in 2026, then expires. Bonus depreciation applies to new property with recovery periods of 20 years or less, and used property (with acquisition requirements). Why other answers are wrong: (A) 25%—2024 rate is 60%; (B) 100%—that was 2022; (D) No longer available—still available at reduced rates.",
+    "tip": "§1001: Bonus depreciation phaseout: 80% (2023) → 60% (2024) → 40% (2025) → 20% (2026) → 0% (2027).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24340,8 +24340,8 @@ const questions = [
       "D": "Statute of limitations on the principal debt"
     },
     "correctAnswer": "C",
-    "explanation": "Sureties can assert most defenses available to the principal debtor (payment, fraud, statute of limitations, illegality). However, the debtor's personal defenses (bankruptcy, incapacity, death) cannot be asserted by the surety. The surety remains liable despite debtor's bankruptcy.",
-    "tip": "Surety can use debtor's contract defenses. Cannot use: debtor's bankruptcy, incapacity, death (personal defenses).",
+    "explanation": "Under suretyship law (Restatement Third of Suretyship), sureties can assert most defenses available to the principal debtor (payment, fraud, statute of limitations, illegality). However, the debtor's personal defenses (bankruptcy, incapacity, death) cannot be asserted by the surety. The surety remains liable despite debtor's bankruptcy. Why other answers are wrong: (A) Payment—surety CAN assert payment defense; (B) Fraud—surety CAN assert fraud defense; (D) Statute of limitations—surety CAN assert this defense.",
+    "tip": "§6501: Surety can use debtor's contract defenses. Cannot use: debtor's bankruptcy, incapacity, death (personal defenses).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24361,8 +24361,8 @@ const questions = [
       "D": "Shareholder approval by 2/3 vote"
     },
     "correctAnswer": "B",
-    "explanation": "Type B requires acquiring control (80%) using solely voting stock of the acquirer. No boot (cash or other property) is permitted. If any boot is paid, the entire transaction is taxable. This is the strictest reorganization regarding boot.",
-    "tip": "Type B: voting stock ONLY (no boot at all). Must get 80% control. Very strict requirements.",
+    "explanation": "Per IRC §368(a)(1)(B), Type B requires acquiring control (80%) using solely voting stock of the acquirer. No boot (cash or other property) is permitted. If any boot is paid, the entire transaction is taxable. This is the strictest reorganization regarding boot. Why other answers are wrong: (A) Boot up to 20%—no boot allowed in Type B; (C) Assets only—Type B is stock-for-stock, not asset acquisition; (D) 2/3 vote—shareholder approval not the defining feature.",
+    "tip": "§368: Type B: voting stock ONLY (no boot at all). Must get 80% control. Very strict requirements.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24382,8 +24382,8 @@ const questions = [
       "D": "Regular tax to the extent it exceeds tentative minimum tax"
     },
     "correctAnswer": "D",
-    "explanation": "The MTC is generated when AMT is paid on deferral items (like ISO exercises) that will reverse. In future years, the MTC can reduce regular tax liability to the extent regular tax exceeds tentative minimum tax. It prevents permanent double taxation of timing differences.",
-    "tip": "MTC: from deferral items (not exclusion items). Credits regular tax down to TMT. Carries forward indefinitely.",
+    "explanation": "Per IRC §53, the MTC is generated when AMT is paid on deferral items (like ISO exercises) that will reverse. In future years, the MTC can reduce regular tax liability to the extent regular tax exceeds tentative minimum tax. It prevents permanent double taxation of timing differences. Why other answers are wrong: (A) AMT in any year—MTC offsets regular tax, not AMT; (B) Self-employment tax—MTC only offsets regular income tax; (C) Both taxes—only reduces regular tax.",
+    "tip": "IRC: MTC: from deferral items (not exclusion items). Credits regular tax down to TMT. Carries forward indefinitely.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24403,8 +24403,8 @@ const questions = [
       "D": "Tax returns filed with the IRS"
     },
     "correctAnswer": "C",
-    "explanation": "Work product doctrine protects documents and tangible things prepared in anticipation of litigation. It's broader than attorney-client privilege and can protect accountant work product. However, it can be overcome if the opposing party shows substantial need and inability to obtain equivalent information.",
-    "tip": "Work product: prepared for litigation. Can be overcome for substantial need. Mental impressions get stronger protection.",
+    "explanation": "Under Federal Rules of Civil Procedure Rule 26(b)(3), work product doctrine protects documents and tangible things prepared in anticipation of litigation. It's broader than attorney-client privilege and can protect accountant work product. However, it can be overcome if the opposing party shows substantial need and inability to obtain equivalent information. Why other answers are wrong: (A) Any third party—only litigation-related materials; (B) All accountant documents—only litigation preparation; (D) Tax returns—filed returns aren't protected work product.",
+    "tip": "IRC: Work product: prepared for litigation. Can be overcome for substantial need. Mental impressions get stronger protection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24424,8 +24424,8 @@ const questions = [
       "D": "Powers such as the ability to revoke, control beneficial enjoyment, or certain administrative powers"
     },
     "correctAnswer": "D",
-    "explanation": "Grantor trust status arises when the grantor retains: power to revoke, power to control beneficial enjoyment, certain administrative powers (borrow without security, substitute assets), power to distribute income to grantor/spouse, or reversionary interest over 5%.",
-    "tip": "Grantor trust: grantor retains too much control. Trust income taxed to grantor. Intentional grantor trusts = planning tool.",
+    "explanation": "Per IRC §§671-679, grantor trust status arises when the grantor retains: power to revoke, power to control beneficial enjoyment, certain administrative powers (borrow without security, substitute assets), power to distribute income to grantor/spouse, or reversionary interest over 5%. Why other answers are wrong: (A) Remainder only—remainder without control powers may not trigger grantor trust rules; (B) No powers—no grantor trust if no retained powers; (C) Income only—income right alone may not be sufficient.",
+    "tip": "§2501: Grantor trust: grantor retains too much control. Trust income taxed to grantor. Intentional grantor trusts = planning tool.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24445,8 +24445,8 @@ const questions = [
       "D": "The agent is personally liable to the third party, and the principal is also liable once disclosed"
     },
     "correctAnswer": "D",
-    "explanation": "With an undisclosed principal, the agent is personally liable because the third party believed they were contracting with the agent. Once the principal is disclosed, the third party can elect to hold either the agent or principal liable (but not both for the same damages).",
-    "tip": "Undisclosed principal: agent liable (appeared to be the contracting party). Third party can elect agent or principal once known.",
+    "explanation": "Per Restatement (Third) of Agency §6.03, with an undisclosed principal, the agent is personally liable because the third party believed they were contracting with the agent. Once the principal is disclosed, the third party can elect to hold either the agent or principal liable (but not both for the same damages). Why other answers are wrong: (A) No one liable—someone must be liable; (B) Agent only—principal also liable once disclosed; (C) Principal only—agent liable since third party relied on agent.",
+    "tip": "§691: Undisclosed principal: agent liable (appeared to be the contracting party). Third party can elect agent or principal once known.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24466,8 +24466,8 @@ const questions = [
       "D": "Only to general partners"
     },
     "correctAnswer": "A",
-    "explanation": "Qualified nonrecourse financing (real estate secured debt from qualified lenders) is allocated to partners based on their profit-sharing ratios, allowing limited partners to include this debt in basis for at-risk purposes. This is an exception to the general rule that nonrecourse debt doesn't create at-risk basis.",
-    "tip": "Qualified nonrecourse real estate debt: at-risk for all partners. Allocated by profit ratios. Exception to at-risk rules.",
+    "explanation": "Per IRC §465(b)(6), qualified nonrecourse financing (real estate secured debt from qualified lenders) is allocated to partners based on their profit-sharing ratios, allowing limited partners to include this debt in basis for at-risk purposes. This is an exception to the general rule that nonrecourse debt doesn't create at-risk basis. Why other answers are wrong: (B) Largest capital account—not the allocation method; (C) Not in basis—qualified nonrecourse IS included; (D) Only GPs—LPs can include it too.",
+    "tip": "§1012: Qualified nonrecourse real estate debt: at-risk for all partners. Allocated by profit ratios. Exception to at-risk rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24487,8 +24487,8 @@ const questions = [
       "D": "Is capital gain"
     },
     "correctAnswer": "C",
-    "explanation": "ISO exercise creates no regular tax income, but the bargain element (FMV minus exercise price) is an AMT adjustment. If qualifying holding periods are met (2 years from grant, 1 year from exercise), gain at sale is long-term capital gain. Disqualifying disposition results in ordinary income.",
-    "tip": "ISO: no regular income at exercise, but AMT adjustment. LTCG if holding periods met. NQSO: ordinary income at exercise.",
+    "explanation": "Per IRC §422, ISO exercise creates no regular tax income, but the bargain element (FMV minus exercise price) is an AMT adjustment. If qualifying holding periods are met (2 years from grant, 1 year from exercise), gain at sale is long-term capital gain. Disqualifying disposition results in ordinary income. Why other answers are wrong: (A) Never taxable—taxable at sale; (B) Ordinary income—not at exercise for regular tax; (D) Capital gain—bargain element is AMT preference, not capital gain.",
+    "tip": "IRC: ISO: no regular income at exercise, but AMT adjustment. LTCG if holding periods met. NQSO: ordinary income at exercise.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24508,8 +24508,8 @@ const questions = [
       "D": "Written requests for documentation to verify specific items"
     },
     "correctAnswer": "D",
-    "explanation": "Correspondence audits are conducted by mail—the IRS requests specific documentation to verify items on the return. They're typically for simple issues (W-2 discrepancies, charitable deductions). Office audits are at IRS offices; field audits are at taxpayer's location for complex cases.",
-    "tip": "Audit types: correspondence (mail), office (IRS office), field (taxpayer location). Complexity increases with each type.",
+    "explanation": "Per IRC §7602, correspondence audits are conducted by mail—the IRS requests specific documentation to verify items on the return. They're typically for simple issues (W-2 discrepancies, charitable deductions). Office audits are at IRS offices; field audits are at taxpayer's location for complex cases. Why other answers are wrong: (A) Full review at IRS—that's an office audit; (B) Criminal investigation—separate from civil audits; (C) Home visit—that's a field audit.",
+    "tip": "§7602: Audit types: correspondence (mail), office (IRS office), field (taxpayer location). Complexity increases with each type.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24529,8 +24529,8 @@ const questions = [
       "D": "The disallowed loss is lost forever"
     },
     "correctAnswer": "C",
-    "explanation": "When property from a Section 267 loss sale is resold, the buyer can offset their gain by the seller's previously disallowed loss. However, the disallowed loss cannot create or increase a loss—it only reduces gain. Any unused portion of the disallowed loss disappears.",
-    "tip": "Section 267 disallowed loss: buyer uses to offset gain only. Can't create loss. Unused portion = gone.",
+    "explanation": "Per IRC §267(d), when property from a Section 267 loss sale is resold, the buyer can offset their gain by the seller's previously disallowed loss. However, the disallowed loss cannot create or increase a loss—it only reduces gain. Any unused portion of the disallowed loss disappears. Why other answers are wrong: (A) No gain—gain is recognized, but may be offset; (B) Full gain—can be reduced by disallowed loss; (D) Lost forever—buyer can use it against gain.",
+    "tip": "§1001: Section 267 disallowed loss: buyer uses to offset gain only. Can't create loss. Unused portion = gone.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24550,8 +24550,8 @@ const questions = [
       "D": "Force dissolution of the corporation"
     },
     "correctAnswer": "C",
-    "explanation": "Derivative actions are suits brought by shareholders on behalf of the corporation when directors fail to act on corporate claims. Recovery goes to the corporation, not the suing shareholder. Shareholders must first demand board action (unless futile) and show contemporaneous ownership.",
-    "tip": "Derivative suit: shareholder sues for corporation's benefit. Recovery to corp. Demand required (unless futile).",
+    "explanation": "Per Model Business Corporation Act (MBCA) §7.40, derivative actions are suits brought by shareholders on behalf of the corporation when directors fail to act on corporate claims. Recovery goes to the corporation, not the suing shareholder. Shareholders must first demand board action (unless futile) and show contemporaneous ownership. Why other answers are wrong: (A) Remove directors—that's a different shareholder right; (B) Personal damages—that's a direct suit, not derivative; (D) Force dissolution—separate remedy.",
+    "tip": "Model: Derivative suit: shareholder sues for corporation's benefit. Recovery to corp. Demand required (unless futile).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24571,8 +24571,8 @@ const questions = [
       "D": "An ineligible shareholder acquires stock or eligibility requirements are otherwise violated"
     },
     "correctAnswer": "D",
-    "explanation": "S election terminates when eligibility requirements are violated: ineligible shareholder (corporation, partnership, NRA) acquires stock, more than 100 shareholders, second class of stock created, or passive income rule violation (for corps with E&P). Termination can be prospective or retroactive.",
-    "tip": "S termination events: ineligible shareholder, >100 shareholders, 2nd class of stock, passive income violation.",
+    "explanation": "Per IRC §1362(d), S election terminates when eligibility requirements are violated: ineligible shareholder (corporation, partnership, NRA) acquires stock, more than 100 shareholders, second class of stock created, or passive income rule violation (for corps with E&P). Termination can be prospective or retroactive. Why other answers are wrong: (A) Revenue over $10M—no revenue limit; (B) Pays dividends—dividends are allowed; (C) Has a loss—losses don't terminate election.",
+    "tip": "§1362: S termination events: ineligible shareholder, >100 shareholders, 2nd class of stock, passive income violation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -24592,8 +24592,8 @@ const questions = [
       "D": "The taxpayer must pay more than half the cost of maintaining a household"
     },
     "correctAnswer": "A",
-    "explanation": "A qualifying child must live with the taxpayer for more than half the year, not the entire year. A qualifying relative parent does not need to live with the taxpayer at all. The taxpayer must be unmarried (or considered unmarried) at year-end and pay more than half the cost of maintaining the household.",
-    "tip": "For head of household, a dependent parent doesn't need to live with you - you just need to pay over half their household costs.",
+    "explanation": "Per IRC §2(b), a qualifying child must live with the taxpayer for more than half the year, not the entire year. A qualifying relative parent does not need to live with the taxpayer at all. The taxpayer must be unmarried (or considered unmarried) at year-end and pay more than half the cost of maintaining the household. Why other answers are wrong: (B) Principal residence—this IS required; (C) Unmarried—this IS required; (D) Pay over half—this IS required.",
+    "tip": "§2: For head of household, a dependent parent doesn't need to live with you - you just need to pay over half their household costs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -24613,8 +24613,8 @@ const questions = [
       "D": "25%"
     },
     "correctAnswer": "A",
-    "explanation": "Long-term capital gains from collectibles (art, antiques, stamps, coins, gems, most metals) are taxed at a maximum rate of 28%. This is higher than the preferential 0%/15%/20% rates that apply to most other long-term capital gains.",
-    "tip": "Remember: Collectibles and Section 1202 QSBS exclusion amounts are both taxed at 28% max rate.",
+    "explanation": "Per IRC §1(h)(5), long-term capital gains from collectibles (art, antiques, stamps, coins, gems, most metals) are taxed at a maximum rate of 28%. This is higher than the preferential 0%/15%/20% rates that apply to most other long-term capital gains. Why other answers are wrong: (B) 15%—that's the standard LTCG rate; (C) 20%—that's the top standard LTCG rate; (D) 25%—that's unrecaptured §1250 gain rate.",
+    "tip": "§1222: Remember: Collectibles and Section 1202 QSBS exclusion amounts are both taxed at 28% max rate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -24634,8 +24634,8 @@ const questions = [
       "D": "The offeror can revoke after performance begins"
     },
     "correctAnswer": "B",
-    "explanation": "A bilateral contract involves an exchange of promises by both parties. Each party's promise serves as consideration for the other's promise. In contrast, a unilateral contract involves a promise in exchange for performance, where only the offeror makes a promise and the offeree accepts by performing the requested act.",
-    "tip": "Bilateral = both promise; Unilateral = one promises, other performs.",
+    "explanation": "Per Restatement (Second) of Contracts, a bilateral contract involves an exchange of promises by both parties. Each party's promise serves as consideration for the other's promise. In contrast, a unilateral contract involves a promise in exchange for performance, where only the offeror makes a promise and the offeree accepts by performing the requested act. Why other answers are wrong: (A) One party promises—that's unilateral; (C) Performance acceptance—that's unilateral; (D) Revoke after performance—can't revoke once performance begins.",
+    "tip": "Common: Bilateral = both promise; Unilateral = one promises, other performs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -24655,8 +24655,8 @@ const questions = [
       "D": "The tax year of its majority interest partners"
     },
     "correctAnswer": "D",
-    "explanation": "Partnerships must use the tax year of their majority interest partners (partners owning more than 50% of capital and profits). If there is no majority interest, the partnership uses the tax year of all principal partners. If principal partners have different years, the partnership uses the year resulting in the least aggregate deferral.",
-    "tip": "Partnership year rule priority: (1) Majority interest, (2) Principal partners, (3) Least aggregate deferral.",
+    "explanation": "Per IRC §706(b), partnerships must use the tax year of their majority interest partners (partners owning more than 50% of capital and profits). If there is no majority interest, the partnership uses the tax year of all principal partners. If principal partners have different years, the partnership uses the year resulting in the least aggregate deferral. Why other answers are wrong: (A) Any fiscal year—not freely elected; (B) Least deferral—only if majority/principal tests fail; (C) Calendar year—only if other tests don't apply.",
+    "tip": "Revised: Partnership year rule priority: (1) Majority interest, (2) Principal partners, (3) Least aggregate deferral.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -24676,7 +24676,7 @@ const questions = [
       "D": "The practitioner believes they can competently represent both"
     },
     "correctAnswer": "A",
-    "explanation": "Under Circular 230, a practitioner may represent conflicting interests before the IRS only if: (1) the practitioner reasonably believes they can provide competent and diligent representation to each client, and (2) each affected client provides informed consent in writing. Both conditions must be satisfied.",
+    "explanation": "Per Circular 230 §10.29, a practitioner may represent conflicting interests before the IRS only if: (1) the practitioner reasonably believes they can provide competent and diligent representation to each client, and (2) each affected client provides informed consent in writing. Both conditions must be satisfied. Why other answers are wrong: (B) Never permitted—conflicts can be waived; (C) Written consent only—also need reasonable belief of competent representation; (D) Competent belief only—also need written consent.",
     "tip": "Circular 230 conflict rules mirror legal ethics - competent belief + written consent from all.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
@@ -24697,8 +24697,8 @@ const questions = [
       "D": "Ratification"
     },
     "correctAnswer": "C",
-    "explanation": "Apparent authority arises when the principal's conduct leads a third party to reasonably believe the agent has authority to act. It is based on the third party's reasonable perception, not actual authority granted. Express authority is explicitly stated, implied authority is reasonably necessary to carry out express authority, and ratification is after-the-fact approval.",
-    "tip": "Apparent authority focuses on what the third party reasonably believes based on the principal's actions.",
+    "explanation": "Per Restatement (Third) of Agency §2.03, apparent authority arises when the principal's conduct leads a third party to reasonably believe the agent has authority to act. It is based on the third party's reasonable perception, not actual authority granted. Express authority is explicitly stated, implied authority is reasonably necessary to carry out express authority, and ratification is after-the-fact approval. Why other answers are wrong: (A) Express—requires explicit statement; (B) Implied—inferred from position/custom; (D) Ratification—after-the-fact approval.",
+    "tip": "§691: Apparent authority focuses on what the third party reasonably believes based on the principal's actions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -24718,8 +24718,8 @@ const questions = [
       "D": "Deductible from AGI as an itemized deduction"
     },
     "correctAnswer": "A",
-    "explanation": "For divorce or separation agreements executed after December 31, 2018, alimony payments are not deductible by the payor and not includible in income by the recipient. The Tax Cuts and Jobs Act eliminated the alimony deduction for agreements executed after 2018. Tom's 2020 divorce decree falls under these new rules.",
-    "tip": "Post-2018 divorces: Alimony is not deductible by payor and not taxable to recipient.",
+    "explanation": "Per IRC §71 (pre-2019) / IRC §61(a) (post-2018), for divorce or separation agreements executed after December 31, 2018, alimony payments are not deductible by the payor and not includible in income by the recipient. The Tax Cuts and Jobs Act eliminated the alimony deduction for agreements executed after 2018. Tom's 2020 divorce decree falls under these new rules.",
+    "tip": "§71: Post-2018 divorces: Alimony is not deductible by payor and not taxable to recipient.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -24739,8 +24739,8 @@ const questions = [
       "D": "Provide for product liability contingencies"
     },
     "correctAnswer": "C",
-    "explanation": "The accumulated earnings tax (AET) is a penalty tax imposed on corporations that accumulate earnings beyond reasonable business needs for the purpose of avoiding the income tax that would be imposed on shareholders if dividends were distributed. Legitimate business purposes for accumulation (expansion, acquisition, contingencies) do not trigger the tax.",
-    "tip": "AET targets tax avoidance intent. Document legitimate business reasons for retaining earnings.",
+    "explanation": "Per IRC §531, the accumulated earnings tax (AET) is a penalty tax imposed on corporations that accumulate earnings beyond reasonable business needs for the purpose of avoiding the income tax that would be imposed on shareholders if dividends were distributed. Legitimate business purposes for accumulation (expansion, acquisition, contingencies) do not trigger the tax. Why other answers are wrong: (A) Expand facilities—legitimate business purpose; (B) Acquire business—legitimate purpose; (D) Product liability—legitimate contingency.",
+    "tip": "Model: AET targets tax avoidance intent. Document legitimate business reasons for retaining earnings.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24760,8 +24760,8 @@ const questions = [
       "D": "$50,000 ordinary income"
     },
     "correctAnswer": "C",
-    "explanation": "The Section 1231 lookback rule requires net Section 1231 gains to be treated as ordinary income to the extent of non-recaptured Section 1231 losses from the prior 5 years. The $30,000 of prior losses converts $30,000 of the current gain to ordinary income. The remaining $20,000 is treated as long-term capital gain.",
-    "tip": "Section 1231 lookback recaptures prior ordinary loss treatment - prevents manipulation between ordinary loss and capital gain.",
+    "explanation": "Per IRC §1231(c), the Section 1231 lookback rule requires net Section 1231 gains to be treated as ordinary income to the extent of non-recaptured Section 1231 losses from the prior 5 years. The $30,000 of prior losses converts $30,000 of the current gain to ordinary income. The remaining $20,000 is treated as long-term capital gain. Why other answers are wrong: (A) $30K LTCG/$20K ordinary—reversed; (B) $50K LTCG—ignores lookback recapture; (D) $50K ordinary—only $30K is recaptured.",
+    "tip": "§1222: Section 1231 lookback recaptures prior ordinary loss treatment - prevents manipulation between ordinary loss and capital gain.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -24781,8 +24781,8 @@ const questions = [
       "D": "At any time before the debtor defaults"
     },
     "correctAnswer": "B",
-    "explanation": "A PMSI in inventory must be perfected BEFORE the debtor receives possession of the inventory, and the secured party must send notification to holders of conflicting security interests who have filed financing statements. This is stricter than PMSI in equipment, which allows 20 days after possession for perfection.",
-    "tip": "PMSI timing: Equipment = 20 days AFTER possession; Inventory = BEFORE possession + notify existing creditors.",
+    "explanation": "Per UCC §9-324(b), a PMSI in inventory must be perfected BEFORE the debtor receives possession of the inventory, and the secured party must send notification to holders of conflicting security interests who have filed financing statements. This is stricter than PMSI in equipment, which allows 20 days after possession for perfection. Why other answers are wrong: (A) 20 days after—that's equipment PMSI; (C) 30 days—no such period; (D) Before default—must be before possession.",
+    "tip": "§6601: PMSI timing: Equipment = 20 days AFTER possession; Inventory = BEFORE possession + notify existing creditors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24802,8 +24802,8 @@ const questions = [
       "D": "Make additional capital contributions to restore basis"
     },
     "correctAnswer": "C",
-    "explanation": "During the PTTP (generally one year after the termination date), shareholders can deduct any suspended losses from the S corporation period to the extent of stock basis. However, they cannot increase basis during this period. The PTTP provides a limited window to utilize losses that were previously suspended due to insufficient basis.",
-    "tip": "PTTP is a one-year window after S termination to use suspended losses against stock basis only.",
+    "explanation": "Per IRC §1377(b), during the PTTP (generally one year after the termination date), shareholders can deduct any suspended losses from the S corporation period to the extent of stock basis. However, they cannot increase basis during this period. The PTTP provides a limited window to utilize losses that were previously suspended due to insufficient basis. Why other answers are wrong: (A) Retain S status—S election is terminated; (B) Increase basis—cannot increase basis during PTTP; (D) Capital contributions—don't restore basis during PTTP.",
+    "tip": "Model: PTTP is a one-year window after S termination to use suspended losses against stock basis only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24823,8 +24823,8 @@ const questions = [
       "D": "Only AGI exceeding the threshold"
     },
     "correctAnswer": "A",
-    "explanation": "The Earned Income Credit phases out based on the greater of earned income or AGI. This prevents taxpayers with low earned income but high investment income from receiving the credit. The credit is designed to benefit working individuals and families with lower total income.",
-    "tip": "EIC phase-out uses the GREATER of earned income or AGI - this prevents those with high investment income from qualifying.",
+    "explanation": "Per IRC §32, the Earned Income Credit phases out based on the greater of earned income or AGI. This prevents taxpayers with low earned income but high investment income from receiving the credit. The credit is designed to benefit working individuals and families with lower total income. Why other answers are wrong: (B) Lesser of—would allow high AGI taxpayers to qualify; (C) Earned only—AGI also considered; (D) AGI only—earned income also considered.",
+    "tip": "§32: EIC phase-out uses the GREATER of earned income or AGI - this prevents those with high investment income from qualifying.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24844,8 +24844,8 @@ const questions = [
       "D": "The federal poverty level"
     },
     "correctAnswer": "A",
-    "explanation": "The Chapter 7 means test compares the debtor's current monthly income to the state median income for a household of the same size. If income exceeds the median, further calculations determine whether the debtor has sufficient disposable income to repay creditors under Chapter 13, potentially resulting in a presumption of abuse.",
-    "tip": "Means test = State median income comparison. Above median triggers additional calculations.",
+    "explanation": "Per 11 U.S.C. §707(b), the Chapter 7 means test compares the debtor's current monthly income to the state median income for a household of the same size. If income exceeds the median, further calculations determine whether the debtor has sufficient disposable income to repay creditors under Chapter 13, potentially resulting in a presumption of abuse. Why other answers are wrong: (B) National average—state-specific medians used; (C) 150% minimum wage—no such benchmark; (D) Poverty level—not the comparison standard.",
+    "tip": "§701: Means test = State median income comparison. Above median triggers additional calculations.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24865,8 +24865,8 @@ const questions = [
       "D": "80%"
     },
     "correctAnswer": "B",
-    "explanation": "The gross profit percentage equals gross profit divided by the contract price. Gross profit = $100,000 selling price - $60,000 basis = $40,000. Contract price = $100,000 (selling price with no assumed mortgage). Gross profit percentage = $40,000 / $100,000 = 40%. Each payment received is 40% gain and 60% return of basis.",
-    "tip": "Gross profit % = (Selling price - Basis) / Contract price. Apply this % to each payment received.",
+    "explanation": "Per IRC §453, the gross profit percentage equals gross profit divided by the contract price. Gross profit = $100,000 selling price - $60,000 basis = $40,000. Contract price = $100,000 (selling price with no assumed mortgage). Gross profit percentage = $40,000 / $100,000 = 40%. Each payment received is 40% gain and 60% return of basis. Why other answers are wrong: (A) 20%—$20K down / $100K price, but that's not the GP%; (C) 60%—basis recovery percentage, not GP%; (D) 80%—note / price, not GP%.",
+    "tip": "§1012: Gross profit % = (Selling price - Basis) / Contract price. Apply this % to each payment received.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -24886,8 +24886,8 @@ const questions = [
       "D": "Self-employment income"
     },
     "correctAnswer": "D",
-    "explanation": "Guaranteed payments for services are treated as self-employment income to the receiving partner. They are subject to self-employment tax and are not wages (so no income tax withholding). The partnership deducts guaranteed payments as a business expense, and they are separately stated on Schedule K-1.",
-    "tip": "Partners aren't employees - guaranteed payments = self-employment income, not wages.",
+    "explanation": "Per IRC §707(c), guaranteed payments for services are treated as self-employment income to the receiving partner. They are subject to self-employment tax and are not wages (so no income tax withholding). The partnership deducts guaranteed payments as a business expense, and they are separately stated on Schedule K-1. Why other answers are wrong: (A) Wages—partners aren't employees; (B) Capital gains—ordinary SE income; (C) Distributive share—separately stated from distributive share.",
+    "tip": "Revised: Partners aren't employees - guaranteed payments = self-employment income, not wages.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -24907,8 +24907,8 @@ const questions = [
       "D": "Approximately 40% likelihood of success"
     },
     "correctAnswer": "D",
-    "explanation": "Substantial authority is an objective standard that is more stringent than 'reasonable basis' (approximately 20%) but less stringent than 'more likely than not' (greater than 50%). It is generally considered to require approximately a 40% likelihood that the position would be sustained on its merits.",
-    "tip": "Tax position standards: Reasonable basis (~20%) < Substantial authority (~40%) < More likely than not (>50%).",
+    "explanation": "Per IRC §6662 and Treas. Reg. §1.6662-4, substantial authority is an objective standard that is more stringent than 'reasonable basis' (approximately 20%) but less stringent than 'more likely than not' (greater than 50%). It is generally considered to require approximately a 40% likelihood that the position would be sustained on its merits. Why other answers are wrong: (A) Reasonable basis—only ~20%; (B) More likely than not—requires >50%; (C) Greater than 50%—that's MLTN standard.",
+    "tip": "Circular: Tax position standards: Reasonable basis (~20%) < Substantial authority (~40%) < More likely than not (>50%).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24928,8 +24928,8 @@ const questions = [
       "D": "Subject to the 10% early withdrawal penalty"
     },
     "correctAnswer": "B",
-    "explanation": "Converting a traditional IRA to a Roth IRA is a taxable event. The converted amount is included in ordinary income in the year of conversion. However, the 10% early withdrawal penalty does not apply to the converted amount (though the 5-year rule must be satisfied for tax-free withdrawal of converted amounts).",
-    "tip": "Roth conversion = taxable event but no 10% penalty on the conversion itself.",
+    "explanation": "Per IRC §408A, converting a traditional IRA to a Roth IRA is a taxable event. The converted amount is included in ordinary income in the year of conversion. However, the 10% early withdrawal penalty does not apply to the converted amount (though the 5-year rule must be satisfied for tax-free withdrawal of converted amounts). Why other answers are wrong: (A) Not taxable until distribution—taxable at conversion; (C) Capital gain—ordinary income treatment; (D) 10% penalty—no penalty on conversion itself.",
+    "tip": "§§219: Roth conversion = taxable event but no 10% penalty on the conversion itself.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -24949,7 +24949,7 @@ const questions = [
       "D": "Within 24 hours of receipt"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC Article 4, the midnight deadline is midnight of the next banking day following the banking day on which the bank receives the relevant item or notice. A bank must take proper action (pay, return, or send notice) on items before this deadline or it becomes accountable for the item.",
+    "explanation": "Per UCC §4-104(a)(10), the midnight deadline is midnight of the next banking day following the banking day on which the bank receives the relevant item or notice. A bank must take proper action (pay, return, or send notice) on items before this deadline or it becomes accountable for the item. Why other answers are wrong: (A) 5 banking days—too long; (B) Close of business same day—deadline is midnight next day; (D) 24 hours—midnight deadline is more precise.",
     "tip": "Midnight deadline = midnight of NEXT banking day after receipt. Miss it and the bank is liable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -24970,8 +24970,8 @@ const questions = [
       "D": "$20,000"
     },
     "correctAnswer": "D",
-    "explanation": "In a like-kind exchange, gain is recognized to the extent of boot received. Realized gain = $150,000 FMV given - $100,000 basis = $50,000. Boot received = $20,000 cash. Recognized gain is the lesser of realized gain ($50,000) or boot received ($20,000) = $20,000.",
-    "tip": "Boot forces gain recognition. Recognized gain = lesser of (realized gain, boot received).",
+    "explanation": "Per IRC §1031, in a like-kind exchange, gain is recognized to the extent of boot received. Realized gain = $150,000 FMV given - $100,000 basis = $50,000. Boot received = $20,000 cash. Recognized gain is the lesser of realized gain ($50,000) or boot received ($20,000) = $20,000. Why other answers are wrong: (A) $30,000—difference between FMVs, not the rule; (B) $50,000—full realized gain, but only boot is recognized; (C) $0—boot forces some recognition.",
+    "tip": "§1001: Boot forces gain recognition. Recognized gain = lesser of (realized gain, boot received).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -24991,8 +24991,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "A",
-    "explanation": "In a Section 351 exchange, gain is recognized to the extent of boot received. Realized gain = $100,000 FMV - $40,000 basis = $60,000. Boot received = $15,000 cash. Recognized gain = lesser of realized gain ($60,000) or boot ($15,000) = $15,000.",
-    "tip": "Section 351 boot rule mirrors like-kind exchanges: recognize lesser of realized gain or boot.",
+    "explanation": "Per IRC §351(b), in a Section 351 exchange, gain is recognized to the extent of boot received. Realized gain = $100,000 FMV - $40,000 basis = $60,000. Boot received = $15,000 cash. Recognized gain = lesser of realized gain ($60,000) or boot ($15,000) = $15,000. Why other answers are wrong: (B) $45,000—stock received, not recognized gain; (C) $60,000—realized gain, but limited by boot; (D) $0—boot forces recognition.",
+    "tip": "MBCA: Section 351 boot rule mirrors like-kind exchanges: recognize lesser of realized gain or boot.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -25012,8 +25012,8 @@ const questions = [
       "D": "Exercise of incentive stock options (excess of FMV over exercise price)"
     },
     "correctAnswer": "D",
-    "explanation": "The exercise of incentive stock options (ISOs) creates an AMT adjustment equal to the excess of the stock's FMV over the exercise price at the date of exercise. This is a positive adjustment that increases AMTI. Charitable contributions and acquisition debt interest are allowed for both regular tax and AMT.",
-    "tip": "ISO exercise is the most common AMT preference item - the bargain element is taxable for AMT.",
+    "explanation": "Per IRC §56(b)(3), the exercise of incentive stock options (ISOs) creates an AMT adjustment equal to the excess of the stock's FMV over the exercise price at the date of exercise. This is a positive adjustment that increases AMTI. Charitable contributions and acquisition debt interest are allowed for both regular tax and AMT. Why other answers are wrong: (A) State income tax refunds are generally included in regular taxable income when previously deducted, but this is not an AMT preference item or adjustment; (B) Charitable contributions are deductible for both regular tax and AMT purposes with the same limitations, so no adjustment is required; (C) Home mortgage interest on acquisition debt is deductible for both regular tax and AMT calculations, creating no AMT adjustment.",
+    "tip": "§170: ISO exercise is the most common AMT preference item - the bargain element is taxable for AMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25033,8 +25033,8 @@ const questions = [
       "D": "Only sue the principal"
     },
     "correctAnswer": "A",
-    "explanation": "When an undisclosed principal is later discovered, the third party may elect to hold either the agent or the principal liable, but generally must elect one. This election doctrine prevents the third party from recovering twice. Once the third party obtains a judgment against one, the third party cannot pursue the other.",
-    "tip": "Undisclosed principal discovered = third party elects agent OR principal, not both.",
+    "explanation": "Per Restatement (Third) of Agency §6.09, when an undisclosed principal is later discovered, the third party may elect to hold either the agent or the principal liable, but generally must elect one. This election doctrine prevents the third party from recovering twice. Once the third party obtains a judgment against one, the third party cannot pursue the other. Why other answers are wrong: (B) Both simultaneously—must elect one; (C) Agent only—principal also liable once discovered; (D) Principal only—agent remains liable.",
+    "tip": "§1362: Undisclosed principal discovered = third party elects agent OR principal, not both.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25054,8 +25054,8 @@ const questions = [
       "D": "Determining the maximum deduction available to the estate or trust"
     },
     "correctAnswer": "C",
-    "explanation": "DNI serves three key functions: (1) limits the distribution deduction for the estate/trust, (2) caps the amount taxable to beneficiaries, and (3) determines the character of income in beneficiaries' hands. It does not determine the applicable tax rate, which is based on the estate/trust tax brackets.",
-    "tip": "DNI has three purposes: cap trust deduction, cap beneficiary income, preserve character.",
+    "explanation": "Per IRC §643(a), DNI serves three key functions: (1) limits the distribution deduction for the estate/trust under IRC §651/§661, (2) caps the amount taxable to beneficiaries under IRC §652/§662, and (3) determines the character of income in beneficiaries' hands. It does not determine the applicable tax rate, which is based on the estate/trust tax brackets under IRC §1(e).",
+    "tip": "State: DNI has three purposes: cap trust deduction, cap beneficiary income, preserve character.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25075,8 +25075,8 @@ const questions = [
       "D": "$5,000 gain"
     },
     "correctAnswer": "D",
-    "explanation": "Father's $20,000 loss is disallowed under Section 267 related party rules. Daughter's basis is her cost of $30,000. When Daughter sells for $55,000, she has a $25,000 potential gain. However, she can use Father's disallowed loss to offset gain, reducing gain to $5,000 ($55,000 - $30,000 - $20,000 used from disallowed loss = $5,000).",
-    "tip": "Related party disallowed loss becomes buyer's offset - but only against gain, never to create a loss.",
+    "explanation": "Per IRC §267(d), father's $20,000 loss is disallowed under Section 267 related party rules. Daughter's basis is her cost of $30,000. When Daughter sells for $55,000, she has a $25,000 potential gain. However, she can use Father's disallowed loss to offset gain, reducing gain to $5,000 ($55,000 - $30,000 - $20,000 used from disallowed loss = $5,000). Why other answers are wrong: (A) $25,000—ignores benefit of disallowed loss; (B) $0—gain exists; (C) $55,000—ignores basis and disallowed loss.",
+    "tip": "§1001: Related party disallowed loss becomes buyer's offset - but only against gain, never to create a loss.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -25096,7 +25096,7 @@ const questions = [
       "D": "Advising clients of the importance of conclusions reached"
     },
     "correctAnswer": "C",
-    "explanation": "Circular 230 Section 10.33 describes best practices including clear communication, establishing facts, evaluating assumptions, applying law, and advising clients of conclusions. Guaranteeing specific tax outcomes would be inappropriate as tax positions may be challenged, and outcomes depend on IRS interpretation and audit selection.",
+    "explanation": "Per Circular 230 §10.33, best practices include clear communication, establishing facts, evaluating assumptions, applying law, and advising clients of conclusions. Guaranteeing specific tax outcomes would be inappropriate as tax positions may be challenged, and outcomes depend on IRS interpretation and audit selection. Why other answers are wrong: (A) Clear communication—IS a best practice; (B) Establish facts—IS a best practice; (D) Advise on conclusions—IS a best practice.",
     "tip": "Never guarantee tax outcomes - tax law involves interpretation and audit risk.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
@@ -25117,8 +25117,8 @@ const questions = [
       "D": "Adjust the basis of partnership assets upon certain triggering events"
     },
     "correctAnswer": "D",
-    "explanation": "A Section 754 election allows a partnership to adjust the basis of partnership assets following a transfer of a partnership interest (Section 743(b)) or a distribution of property (Section 734(b)). This prevents new partners from inheriting built-in gains or losses in partnership assets.",
-    "tip": "Section 754 = optional basis adjustment election. Benefits incoming partners who pay premium for appreciated assets.",
+    "explanation": "Per IRC §754, a Section 754 election allows a partnership to adjust the basis of partnership assets following a transfer of a partnership interest (Section 743(b)) or a distribution of property (Section 734(b)). This prevents new partners from inheriting built-in gains or losses in partnership assets. Why other answers are wrong: (A) Distribute tax-free—distributions have their own rules; (B) Elect out of K—that's §761; (C) Convert to S—not through §754.",
+    "tip": "Revised: Section 754 = optional basis adjustment election. Benefits incoming partners who pay premium for appreciated assets.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25138,8 +25138,8 @@ const questions = [
       "D": "More than 50% of personal services in real property trades and more than 500 hours of material participation"
     },
     "correctAnswer": "C",
-    "explanation": "Real estate professional status requires: (1) more than 50% of personal services performed in real property trades or businesses, (2) more than 750 hours in real property trades or businesses, AND (3) material participation in each rental activity (unless the taxpayer elects to treat all interests as a single activity). All three requirements must be met.",
-    "tip": "Real estate professional = 50%+ time in real estate + 750+ hours + material participation in each rental (or aggregate election).",
+    "explanation": "Per IRC §469(c)(7), real estate professional status requires: (1) more than 50% of personal services performed in real property trades or businesses, (2) more than 750 hours in real property trades or businesses, AND (3) material participation in each rental activity (unless the taxpayer elects to treat all interests as a single activity). All three requirements must be met. Why other answers are wrong: (A) Missing material participation; (B) Missing 50% test; (D) 500 hours wrong threshold.",
+    "tip": "IRC: Real estate professional = 50%+ time in real estate + 750+ hours + material participation in each rental (or aggregate election).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25159,8 +25159,8 @@ const questions = [
       "D": "Accountants certifying financial statements"
     },
     "correctAnswer": "C",
-    "explanation": "Under Section 11, the issuer has strict liability for material misstatements or omissions in the registration statement and cannot assert a due diligence defense. Directors, underwriters, and experts (including accountants for portions they certified) can avoid liability by proving they conducted reasonable investigation and had reasonable grounds to believe statements were true.",
-    "tip": "Issuer = strict liability under Section 11. Everyone else can claim due diligence defense.",
+    "explanation": "Per Securities Act of 1933 §11, the issuer has strict liability for material misstatements or omissions in the registration statement and cannot assert a due diligence defense. Directors, underwriters, and experts (including accountants for portions they certified) can avoid liability by proving they conducted reasonable investigation and had reasonable grounds to believe statements were true. Why other answers are wrong: (A) Directors—CAN assert due diligence; (B) Underwriters—CAN assert; (D) Accountants—CAN assert for their portions.",
+    "tip": "§5: Issuer = strict liability under Section 11. Everyone else can claim due diligence defense.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25180,8 +25180,8 @@ const questions = [
       "D": "$200,000"
     },
     "correctAnswer": "C",
-    "explanation": "The built-in gains tax applies to the lesser of: (1) recognized gain ($300,000 - $100,000 = $200,000) or (2) built-in gain at conversion ($250,000 - $100,000 = $150,000). The $50,000 appreciation after conversion is not subject to BIG tax. Therefore, $150,000 is the built-in gain subject to corporate-level tax.",
-    "tip": "BIG tax only reaches gain existing at C-to-S conversion. Post-conversion appreciation passes through tax-free.",
+    "explanation": "Per IRC §1374, the built-in gains tax applies to the lesser of: (1) recognized gain ($300,000 - $100,000 = $200,000) or (2) built-in gain at conversion ($250,000 - $100,000 = $150,000). The $50,000 appreciation after conversion is not subject to BIG tax. Therefore, $150,000 is the built-in gain subject to corporate-level tax. Why other answers are wrong: (A) $300,000—sale price, not BIG; (B) $50,000—post-conversion appreciation; (D) $200,000—total gain, but BIG limited to conversion date.",
+    "tip": "Model: BIG tax only reaches gain existing at C-to-S conversion. Post-conversion appreciation passes through tax-free.",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -25201,8 +25201,8 @@ const questions = [
       "D": "$50,000 ordinary loss and $100,000 capital loss"
     },
     "correctAnswer": "C",
-    "explanation": "Section 1244 allows ordinary loss treatment on qualifying small business stock, but the deduction is limited to $100,000 per year for married filing jointly ($50,000 for other filers). The excess $50,000 is treated as a capital loss. Section 1244 must be original issue stock (not purchased in secondary market).",
-    "tip": "Section 1244 ordinary loss limit: $100,000 MFJ, $50,000 others. Excess becomes capital loss.",
+    "explanation": "Per IRC §1244, Section 1244 allows ordinary loss treatment on qualifying small business stock, but the deduction is limited to $100,000 per year for married filing jointly ($50,000 for other filers). The excess $50,000 is treated as a capital loss. Section 1244 must be original issue stock (not purchased in secondary market). Why other answers are wrong: (A) $150K capital—ignores §1244 ordinary treatment; (B) $150K ordinary—exceeds annual limit; (D) Reversed amounts.",
+    "tip": "§1222: Section 1244 ordinary loss limit: $100,000 MFJ, $50,000 others. Excess becomes capital loss.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -25222,8 +25222,8 @@ const questions = [
       "D": "The debtor converts the case to Chapter 7"
     },
     "correctAnswer": "A",
-    "explanation": "A cramdown allows the bankruptcy court to confirm a Chapter 11 reorganization plan even though an impaired class of creditors has not accepted it. For cramdown, the plan must not discriminate unfairly, be fair and equitable to the dissenting class, and at least one impaired class must accept the plan.",
-    "tip": "Cramdown = court forces plan on dissenting creditors. Requires 'fair and equitable' treatment and no unfair discrimination.",
+    "explanation": "Per 11 U.S.C. §1129(b), a cramdown allows the bankruptcy court to confirm a Chapter 11 reorganization plan even though an impaired class of creditors has not accepted it. For cramdown, the plan must not discriminate unfairly, be fair and equitable to the dissenting class, and at least one impaired class must accept the plan. Why other answers are wrong: (B) Abandon collateral—not cramdown; (C) Reject contract—executory contract rejection; (D) Convert to Ch. 7—case conversion.",
+    "tip": "§368: Cramdown = court forces plan on dissenting creditors. Requires 'fair and equitable' treatment and no unfair discrimination.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25243,8 +25243,8 @@ const questions = [
       "D": "Section 736(b) payments - distributions for partnership interest"
     },
     "correctAnswer": "A",
-    "explanation": "In a service partnership, if the partnership agreement does not provide for goodwill payments, payments for unstated goodwill are treated as Section 736(a) payments - either guaranteed payments or distributive share. These are ordinary income to the retiring partner and deductible by the partnership. If goodwill is stated in the agreement, it's treated as Section 736(b).",
-    "tip": "Service partnership silent on goodwill = Section 736(a) ordinary income. Stated goodwill = Section 736(b) capital.",
+    "explanation": "Per IRC §736(a), in a service partnership, if the partnership agreement does not provide for goodwill payments, payments for unstated goodwill are treated as Section 736(a) payments - either guaranteed payments or distributive share. These are ordinary income to the retiring partner and deductible by the partnership. If goodwill is stated in the agreement, it's treated as Section 736(b). Why other answers are wrong: (B) Return of capital—requires capital investment; (C) Tax-free—liquidating payments are taxable; (D) 736(b)—only if goodwill stated.",
+    "tip": "Revised: Service partnership silent on goodwill = Section 736(a) ordinary income. Stated goodwill = Section 736(b) capital.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25264,8 +25264,8 @@ const questions = [
       "D": "Future earnings of controlled foreign corporations"
     },
     "correctAnswer": "A",
-    "explanation": "Section 965 imposed a one-time transition tax on the accumulated post-1986 deferred foreign income of specified foreign corporations, deemed repatriated in the last tax year before January 1, 2018. This was part of the transition to the territorial tax system. Cash assets were taxed at 15.5% and non-cash at 8%.",
-    "tip": "Section 965 = one-time 'toll charge' on accumulated offshore earnings (15.5% cash, 8% non-cash) as transition to territorial system.",
+    "explanation": "Per IRC §965, section 965 imposed a one-time transition tax on the accumulated post-1986 deferred foreign income of specified foreign corporations, deemed repatriated in the last tax year before January 1, 2018. This was part of the transition to the territorial tax system. Cash assets were taxed at 15.5% and non-cash at 8%. Why other answers are wrong: (B) All foreign source—only accumulated deferred income; (C) PFIC only—applied to CFCs; (D) Future earnings—transition applied to past accumulations.",
+    "tip": "IRC: Section 965 = one-time 'toll charge' on accumulated offshore earnings (15.5% cash, 8% non-cash) as transition to territorial system.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25285,8 +25285,8 @@ const questions = [
       "D": "Applies only if the option is exercised"
     },
     "correctAnswer": "C",
-    "explanation": "The wash sale rule applies to purchases of substantially identical stock OR securities, including options to acquire substantially identical stock. Purchasing a call option within 30 days before or after selling stock at a loss triggers the wash sale rule. The disallowed loss is added to the basis of the replacement position (the option).",
-    "tip": "Wash sale rule covers options too. Buying calls/puts on same stock within 61-day window disallows the loss.",
+    "explanation": "Per IRC §1091, the wash sale rule applies to purchases of substantially identical stock OR securities, including options to acquire substantially identical stock. Purchasing a call option within 30 days before or after selling stock at a loss triggers the wash sale rule. The disallowed loss is added to the basis of the replacement position (the option). Why other answers are wrong: (A) Options not identical—options CAN be substantially identical; (B) Options not stock—rule covers options; (D) Only if exercised—applies upon purchase.",
+    "tip": "§1012: Wash sale rule covers options too. Buying calls/puts on same stock within 61-day window disallows the loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25306,8 +25306,8 @@ const questions = [
       "D": "Split between the parent and subsidiary"
     },
     "correctAnswer": "B",
-    "explanation": "Under the consolidated return regulations, gain or loss on intercompany transactions is deferred until a corresponding event occurs, typically when the property leaves the consolidated group through sale to an outsider. This matching principle ensures the consolidated group is taxed as if it were a single entity.",
-    "tip": "Consolidated returns defer intercompany gains/losses until the asset leaves the group - single entity concept.",
+    "explanation": "Per Treas. Reg. §1.1502-13, under the consolidated return regulations, gain or loss on intercompany transactions is deferred until a corresponding event occurs, typically when the property leaves the consolidated group through sale to an outsider. This matching principle ensures the consolidated group is taxed as if it were a single entity. Why other answers are wrong: (A) Recognized immediately—deferred until outside sale; (C) Never recognized—recognized when leaves group; (D) Split—not how intercompany rules work.",
+    "tip": "Model: Consolidated returns defer intercompany gains/losses until the asset leaves the group - single entity concept.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25327,8 +25327,8 @@ const questions = [
       "D": "Qualifying Surviving Spouse"
     },
     "correctAnswer": "B",
-    "explanation": "Head of Household status allows the dependent parent to live separately if the taxpayer pays more than half the cost of maintaining that separate household. This is an exception to the 'same principal place of abode' rule for parents.",
-    "tip": "Parents are the only qualifying dependents who don't have to live with you for HOH status.",
+    "explanation": "Per IRC §2(b), Head of Household status allows the dependent parent to live separately if the taxpayer pays more than half the cost of maintaining that separate household. This is an exception to the 'same principal place of abode' rule for parents. Why other answers are wrong: (A) Single—qualifies for better HOH status; (C) MFS—unmarried taxpayer; (D) QSS—requires deceased spouse within past 2 years.",
+    "tip": "§2: Parents are the only qualifying dependents who don't have to live with you for HOH status.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25348,8 +25348,8 @@ const questions = [
       "D": "Deductible by the payer only"
     },
     "correctAnswer": "C",
-    "explanation": "For divorce agreements executed after December 31, 2018, alimony is neither deductible by the payer nor includible by the recipient. The pre-2019 rules (deductible/includible) only apply to agreements executed before 2019.",
-    "tip": "TCJA changed alimony rules for post-2018 agreements. Remember the cutoff date.",
+    "explanation": "Per IRC §71 (repealed for post-2018 agreements), for divorce agreements executed after December 31, 2018, alimony is neither deductible by the payer nor includible by the recipient. The pre-2019 rules (deductible/includible) only apply to agreements executed before 2019. Why other answers are wrong: (A) Includible only—neither deductible nor includible; (B) Deductible/includible—that was pre-2019 law; (D) Deductible only—neither applies.",
+    "tip": "§71: TCJA changed alimony rules for post-2018 agreements. Remember the cutoff date.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25369,8 +25369,8 @@ const questions = [
       "D": "Not available because SSTBs are phased out at this income level"
     },
     "correctAnswer": "D",
-    "explanation": "For specified service trades or businesses (law, medicine, consulting, etc.), the QBI deduction phases out completely for taxpayers above certain income thresholds. At $500,000 of taxable income, the SSTB deduction is fully phased out.",
-    "tip": "SSTBs have their own phase-out. Non-SSTBs only face the W-2/UBIA limitation at high income.",
+    "explanation": "Per IRC §199A, for specified service trades or businesses (law, medicine, consulting, etc.), the QBI deduction phases out completely for taxpayers above certain income thresholds. At $500,000 of taxable income, the SSTB deduction is fully phased out. Why other answers are wrong: (A) 20% of taxable income—that's the overall cap, not SSTB rule; (B) 20% without limitation—SSTB has income limits; (C) W-2/UBIA—applies to non-SSTBs, not SSTBs at this income.",
+    "tip": "§199: SSTBs have their own phase-out. Non-SSTBs only face the W-2/UBIA limitation at high income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25390,8 +25390,8 @@ const questions = [
       "D": "$1,000 gain"
     },
     "correctAnswer": "B",
-    "explanation": "When FMV at gift is less than donor's basis, there's a dual basis: donor's basis ($8,000) for gain, FMV ($6,000) for loss. Selling at $7,000 is between these values, so no gain or loss is recognized.",
-    "tip": "Gift with FMV < basis creates a 'gray zone.' Sale price between basis and FMV = no gain/loss.",
+    "explanation": "Per IRC §1015, when FMV at gift is less than donor's basis, there's a dual basis: donor's basis ($8,000) for gain, FMV ($6,000) for loss. Selling at $7,000 is between these values, so no gain or loss is recognized. Why other answers are wrong: (A) $1,000 loss—can't use donor's basis for loss; (C) $7,000 gain—ignores basis; (D) $1,000 gain—can't use FMV for gain.",
+    "tip": "§1012: Gift with FMV < basis creates a 'gray zone.' Sale price between basis and FMV = no gain/loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25411,8 +25411,8 @@ const questions = [
       "D": "Not taxable"
     },
     "correctAnswer": "B",
-    "explanation": "Net Section 1231 gains are treated as long-term capital gains (favorable rates). Net 1231 losses are treated as ordinary losses. Since there are no prior year 1231 losses to recapture, the $6,000 net gain is LTCG.",
-    "tip": "Section 1231 = 'best of both worlds' if net gain (LTCG) but net loss is ordinary.",
+    "explanation": "Per IRC §1231, net Section 1231 gains are treated as long-term capital gains (favorable rates). Net 1231 losses are treated as ordinary losses. Since there are no prior year 1231 losses to recapture, the $6,000 net gain is LTCG. Why other answers are wrong: (A) Ordinary income—only if prior losses to recapture; (C) Short-term—§1231 gains are long-term; (D) Not taxable—the gain is taxable.",
+    "tip": "§1222: Section 1231 = 'best of both worlds' if net gain (LTCG) but net loss is ordinary.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -25432,8 +25432,8 @@ const questions = [
       "D": "$30,000"
     },
     "correctAnswer": "B",
-    "explanation": "Realized gain = FMV received ($80,000) - Basis given ($50,000) = $30,000. However, gain recognized is limited to boot received ($10,000 cash). The remaining $20,000 gain is deferred.",
-    "tip": "In a 1031 exchange, gain recognized = lesser of realized gain or boot received.",
+    "explanation": "Per IRC §1031, realized gain = FMV received ($80,000) - Basis given ($50,000) = $30,000. However, gain recognized is limited to boot received ($10,000 cash). The remaining $20,000 gain is deferred. Why other answers are wrong: (A) $0—boot forces recognition; (C) $20,000—that's the deferred gain; (D) $30,000—limited by boot received.",
+    "tip": "§1001: In a 1031 exchange, gain recognized = lesser of realized gain or boot received.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -25453,8 +25453,8 @@ const questions = [
       "D": "Long-term capital gain at 15%/20%"
     },
     "correctAnswer": "C",
-    "explanation": "For real property, straight-line depreciation is recaptured as 'unrecaptured Section 1250 gain' taxed at a maximum rate of 25%. Only excess depreciation (above straight-line) would be ordinary income under Section 1250.",
-    "tip": "Real property (1250): Straight-line recapture = max 25%. Personal property (1245) = ordinary income.",
+    "explanation": "Per IRC §1(h)(1)(E), for real property, straight-line depreciation is recaptured as 'unrecaptured Section 1250 gain' taxed at a maximum rate of 25%. Only excess depreciation (above straight-line) would be ordinary income under Section 1250. Why other answers are wrong: (A) STCG—it's a special 25% rate; (B) §1245 ordinary—§1245 is for personal property; (D) 15%/20%—unrecaptured 1250 has its own 25% rate.",
+    "tip": "§1245: Real property (1250): Straight-line recapture = max 25%. Personal property (1245) = ordinary income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25474,8 +25474,8 @@ const questions = [
       "D": "None qualify for Section 351 because control test fails"
     },
     "correctAnswer": "D",
-    "explanation": "Section 351 requires property transferors to have 80% control immediately after the exchange. A and B together contributed property for 75% (40% + 35%) of the stock. Since they don't have 80% control, Section 351 doesn't apply. C's stock for services would be compensation regardless. All three recognize income: A and B on their property transfers, C on compensation.",
-    "tip": "Services for stock = taxable compensation always. Property for stock = tax-free only if 80% control by property contributors.",
+    "explanation": "Per IRC §351, Section 351 requires property transferors to have 80% control immediately after the exchange. A and B together contributed property for 75% (40% + 35%) of the stock. Since they don't have 80% control, Section 351 doesn't apply. C's stock for services would be compensation regardless. All three recognize income: A and B on their property transfers, C on compensation. Why other answers are wrong: (A) Only A—control test fails for all; (B) All three tax-free—services never tax-free and control fails; (C) A&B tax-free—control test not met.",
+    "tip": "Model: Services for stock = taxable compensation always. Property for stock = tax-free only if 80% control by property contributors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -25495,8 +25495,8 @@ const questions = [
       "D": "$30,000 dividend, $20,000 capital gain"
     },
     "correctAnswer": "B",
-    "explanation": "Distributions are: (1) dividend to extent of E&P ($30,000), (2) tax-free return of capital to extent of stock basis ($10,000), (3) capital gain for excess ($50,000 - $30,000 - $10,000 = $10,000).",
-    "tip": "Distribution ordering: E&P (dividend) → Basis (return of capital) → Excess (capital gain).",
+    "explanation": "Per IRC §301, distributions are: (1) dividend to extent of E&P ($30,000), (2) tax-free return of capital to extent of stock basis ($10,000), (3) capital gain for excess ($50,000 - $30,000 - $10,000 = $10,000). Why other answers are wrong: (A) $50K dividend—exceeds E&P; (C) $30K div/$20K ROC—excess over basis is gain; (D) $30K div/$20K gain—ignores basis recovery.",
+    "tip": "Model: Distribution ordering: E&P (dividend) → Basis (return of capital) → Excess (capital gain).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -25516,8 +25516,8 @@ const questions = [
       "D": "Having a grantor trust as a shareholder"
     },
     "correctAnswer": "C",
-    "explanation": "S corporations can only have eligible shareholders: individuals, estates, certain trusts, and tax-exempt organizations. Partnerships and C corporations cannot be S corporation shareholders.",
-    "tip": "S corp shareholders: individuals, estates, and certain trusts only. No partnerships or corps.",
+    "explanation": "Per IRC §1361(b)(1), S corporations can only have eligible shareholders: individuals, estates, certain trusts, and tax-exempt organizations. Partnerships and C corporations cannot be S corporation shareholders. Why other answers are wrong: (A) 100 shareholders—allowed; (B) Nonvoting stock—permitted (one class but voting differences OK); (D) Grantor trust—eligible shareholder.",
+    "tip": "§1362: S corp shareholders: individuals, estates, and certain trusts only. No partnerships or corps.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25537,8 +25537,8 @@ const questions = [
       "D": "$0 because stock basis is zero"
     },
     "correctAnswer": "A",
-    "explanation": "S corporation losses first reduce stock basis, then debt basis. Since stock basis is zero, the $15,000 loss reduces the shareholder's debt basis from $20,000 to $5,000. The full loss is deductible.",
-    "tip": "S corp loss deduction: Stock basis first, then debt basis. Debt must be direct loans from shareholder.",
+    "explanation": "Per IRC §1366 and §1367, S corporation losses first reduce stock basis, then debt basis. Since stock basis is zero, the $15,000 loss reduces the shareholder's debt basis from $20,000 to $5,000. The full loss is deductible. Why other answers are wrong: (B) $20,000—loss is only $15,000; (C) $35,000—exceeds loss amount; (D) $0—debt basis allows deduction.",
+    "tip": "IRC: S corp loss deduction: Stock basis first, then debt basis. Debt must be direct loans from shareholder.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -25558,8 +25558,8 @@ const questions = [
       "D": "Capital gain of $50,000; basis of $50,000"
     },
     "correctAnswer": "C",
-    "explanation": "A capital interest received for services is taxable as ordinary compensation income equal to the fair value received. The partner's basis equals the income recognized.",
-    "tip": "Services for capital interest = ordinary income. Services for profits interest only = usually no immediate income.",
+    "explanation": "Per IRC §83, a capital interest received for services is taxable as ordinary compensation income equal to the fair value received. The partner's basis equals the income recognized. Why other answers are wrong: (A) Deferred—taxable when received; (B) No income/zero basis—capital interest is taxable; (D) Capital gain—it's compensation, ordinary income.",
+    "tip": "Revised: Services for capital interest = ordinary income. Services for profits interest only = usually no immediate income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25579,8 +25579,8 @@ const questions = [
       "D": "Capital gain of $20,000"
     },
     "correctAnswer": "D",
-    "explanation": "Cash distributions in excess of basis result in capital gain. The $30,000 basis is first reduced to zero, and the remaining $20,000 is treated as gain from the sale of a partnership interest (capital gain).",
-    "tip": "Cash distribution: Excess over basis = capital gain. Property distribution = no gain, carryover basis.",
+    "explanation": "Per IRC §731(a), cash distributions in excess of basis result in capital gain. The $30,000 basis is first reduced to zero, and the remaining $20,000 is treated as gain from the sale of a partnership interest (capital gain). Why other answers are wrong: (A) No gain—cash exceeds basis; (B) ROC only—excess creates gain; (C) Ordinary—excess cash over basis is capital gain.",
+    "tip": "Revised: Cash distribution: Excess over basis = capital gain. Property distribution = no gain, carryover basis.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -25600,8 +25600,8 @@ const questions = [
       "D": "$0 because distributions exceed DNI"
     },
     "correctAnswer": "B",
-    "explanation": "The distribution deduction is limited to the lesser of distributions made or DNI. Since DNI ($40,000) is less than distributions ($50,000), the deduction is limited to $40,000.",
-    "tip": "Distribution deduction = lesser of actual distributions or DNI. DNI sets the ceiling.",
+    "explanation": "Per IRC §651, the distribution deduction is limited to the lesser of distributions made or DNI. Since DNI ($40,000) is less than distributions ($50,000), the deduction is limited to $40,000. Why other answers are wrong: (A) $50,000—exceeds DNI limit; (C) $10,000—that's the excess; (D) $0—deduction is allowed up to DNI.",
+    "tip": "§1368: Distribution deduction = lesser of actual distributions or DNI. DNI sets the ceiling.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25621,8 +25621,8 @@ const questions = [
       "D": "Annual exclusion if the trustee is independent"
     },
     "correctAnswer": "B",
-    "explanation": "The annual exclusion requires a present interest—an unrestricted right to immediate use, possession, or enjoyment. Discretionary trust distributions are not a present interest because the beneficiary cannot demand distribution.",
-    "tip": "Present interest = can access now. Future interest or discretionary = no annual exclusion without Crummey powers.",
+    "explanation": "Per IRC §2503(b), the annual exclusion requires a present interest—an unrestricted right to immediate use, possession, or enjoyment. Discretionary trust distributions are not a present interest because the beneficiary cannot demand distribution. Why other answers are wrong: (A) Child = exclusion—relationship irrelevant, interest type matters; (C) Actuarial—present interest is all-or-nothing; (D) Independent trustee—trustee identity doesn't matter.",
+    "tip": "§§101-140: Present interest = can access now. Future interest or discretionary = no annual exclusion without Crummey powers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25642,8 +25642,8 @@ const questions = [
       "D": "A contract for personal services worth $1,000"
     },
     "correctAnswer": "C",
-    "explanation": "The Statute of Frauds requires writing for: (1) contracts that cannot be performed within one year, (2) sale of goods ≥$500, (3) sale of real property, (4) guarantees/suretyship agreements, (5) marriage contracts.",
-    "tip": "MY LEGS: Marriage, Year+, Land, Executor, Goods ≥$500, Suretyship. Guarantees always require writing.",
+    "explanation": "Under common law and UCC §2-201, the Statute of Frauds requires writing for: (1) contracts that cannot be performed within one year, (2) sale of goods ≥$500, (3) sale of real property, (4) guarantees/suretyship agreements, (5) marriage contracts. Why other answers are wrong: (A) 1-year starting today—can be performed within a year; (B) Goods $400—under $500 threshold; (D) Personal services $1K—no dollar threshold for services.",
+    "tip": "§6501: MY LEGS: Marriage, Year+, Land, Executor, Goods ≥$500, Suretyship. Guarantees always require writing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25663,8 +25663,8 @@ const questions = [
       "D": "Is only bound if it ratifies the transaction"
     },
     "correctAnswer": "B",
-    "explanation": "Apparent authority arises when the principal's conduct causes a third party to reasonably believe the agent has authority. If prior dealings led the vendor to reasonably believe the manager could order $8,000, the company may be bound.",
-    "tip": "Apparent authority = reasonable belief based on principal's conduct. Past dealings can create it.",
+    "explanation": "Per Restatement (Third) of Agency §2.03, apparent authority arises when the principal's conduct causes a third party to reasonably believe the agent has authority. If prior dealings led the vendor to reasonably believe the manager could order $8,000, the company may be bound. Why other answers are wrong: (A) Never bound—apparent authority can bind; (C) Automatically bound—depends on reasonable belief; (D) Only if ratifies—binding without ratification if apparent authority exists.",
+    "tip": "§691: Apparent authority = reasonable belief based on principal's conduct. Past dealings can create it.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25684,8 +25684,8 @@ const questions = [
       "D": "An LLC must have at least two members"
     },
     "correctAnswer": "A",
-    "explanation": "LLCs provide limited liability to all members regardless of their participation in management. This differs from limited partnerships where general partners have unlimited liability. LLCs can have one member and can elect various tax treatments.",
-    "tip": "LLC = limited liability + management flexibility. Unlike LPs, members can manage and stay protected.",
+    "explanation": "Per Uniform Limited Liability Company Act (ULLCA), LLCs provide limited liability to all members regardless of their participation in management. This differs from limited partnerships where general partners have unlimited liability. LLCs can have one member and can elect various tax treatments. Why other answers are wrong: (B) Must be partnership—can elect corp taxation; (C) Lose liability if manage—members can manage with protection; (D) Two members—single-member LLCs allowed.",
+    "tip": "Revised: LLC = limited liability + management flexibility. Unlike LPs, members can manage and stay protected.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25705,8 +25705,8 @@ const questions = [
       "D": "Chapter 11 reorganization"
     },
     "correctAnswer": "D",
-    "explanation": "Chapter 11 allows reorganization—the business continues operating while restructuring debts. Chapter 7 liquidates the business. Chapter 13 is only for individuals with regular income.",
-    "tip": "Chapter 7 = liquidation (end business). Chapter 11 = reorganization (continue business). Chapter 13 = individuals only.",
+    "explanation": "Per 11 U.S.C. §1101 et seq., Chapter 11 allows reorganization—the business continues operating while restructuring debts. Chapter 7 liquidates the business. Chapter 13 is only for individuals with regular income. Why other answers are wrong: (A) Ch. 13—only for individuals; (B) Out-of-court liquidation—business wants to continue; (C) Ch. 7—ends the business.",
+    "tip": "§368: Chapter 7 = liquidation (end business). Chapter 11 = reorganization (continue business). Chapter 13 = individuals only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25726,8 +25726,8 @@ const questions = [
       "D": "Material misrepresentation or omission"
     },
     "correctAnswer": "B",
-    "explanation": "Rule 10b-5 does not require privity (direct contractual relationship). The elements are: (1) material misrepresentation/omission, (2) scienter, (3) connection with securities purchase/sale, (4) reliance, (5) damages, (6) loss causation.",
-    "tip": "10b-5 = broad anti-fraud rule. No privity needed. Requires scienter (intentional or reckless conduct).",
+    "explanation": "Per Securities Exchange Act §10(b) and Rule 10b-5, Rule 10b-5 does not require privity (direct contractual relationship). The elements are: (1) material misrepresentation/omission, (2) scienter, (3) connection with securities purchase/sale, (4) reliance, (5) damages, (6) loss causation. Why other answers are wrong: (A) Scienter—IS required; (C) Securities connection—IS required; (D) Material misrep—IS required.",
+    "tip": "§10: 10b-5 = broad anti-fraud rule. No privity needed. Requires scienter (intentional or reckless conduct).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25747,8 +25747,8 @@ const questions = [
       "D": "The return is being audited"
     },
     "correctAnswer": "A",
-    "explanation": "Practitioners may rely on information furnished by the client without verification unless it appears incorrect, incomplete, or inconsistent with other facts known to the practitioner. Red flags require further inquiry.",
-    "tip": "General reliance is okay, but investigate red flags. Don't be willfully blind to obvious problems.",
+    "explanation": "Per Circular 230 §10.22, practitioners may rely on information furnished by the client without verification unless it appears incorrect, incomplete, or inconsistent with other facts known to the practitioner. Red flags require further inquiry. Why other answers are wrong: (B) New client—newness alone doesn't require verification; (C) Refundable credits—not automatic trigger; (D) Under audit—audit status doesn't change due diligence.",
+    "tip": "Circular: General reliance is okay, but investigate red flags. Don't be willfully blind to obvious problems.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25768,8 +25768,8 @@ const questions = [
       "D": "Under age 17"
     },
     "correctAnswer": "D",
-    "explanation": "The Child Tax Credit requires the child be under age 17 at the end of the tax year. This is different from the dependent child rules (under 19, or under 24 if student) and the Child and Dependent Care Credit (under 13).",
-    "tip": "Different credits have different age rules. Child Tax Credit = under 17. Care Credit = under 13.",
+    "explanation": "Per IRC §24, the Child Tax Credit requires the child be under age 17 at the end of the tax year. This is different from the dependent child rules (under 19, or under 24 if student) and the Child and Dependent Care Credit (under 13). Why other answers are wrong: (A) Under 19—that's for dependent status; (B) Under 24 student—also for dependent status; (C) Under 13—that's for child care credit.",
+    "tip": "§24: Different credits have different age rules. Child Tax Credit = under 17. Care Credit = under 13.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25789,8 +25789,8 @@ const questions = [
       "D": "$10,000"
     },
     "correctAnswer": "D",
-    "explanation": "The total state and local tax (SALT) deduction is limited to $10,000 ($5,000 if MFS). Even though total SALT paid is $23,000, the deduction is capped at $10,000.",
-    "tip": "SALT cap = $10,000 ($5,000 MFS). Includes state/local income OR sales tax, plus property taxes.",
+    "explanation": "Per IRC §164(b)(6), the total state and local tax (SALT) deduction is limited to $10,000 ($5,000 if MFS). Even though total SALT paid is $23,000, the deduction is capped at $10,000. Why other answers are wrong: (A) $15,000—exceeds cap; (B) $23,000—total paid, but capped; (C) $8,000—property only, ignores cap on total.",
+    "tip": "§164: SALT cap = $10,000 ($5,000 MFS). Includes state/local income OR sales tax, plus property taxes.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -25810,8 +25810,8 @@ const questions = [
       "D": "Yes, because he spent more than 500 hours"
     },
     "correctAnswer": "A",
-    "explanation": "Material participation requires meeting one of several tests. The 100-hour test also requires that no other individual participate more. Here, others participated 2,000 hours total. The taxpayer doesn't meet the 500-hour test either.",
-    "tip": "500 hours = automatic material participation. 100-500 hours requires no one else participates more.",
+    "explanation": "Per IRC §469 and Treas. Reg. §1.469-5T, material participation requires meeting one of several tests. The 100-hour test also requires that no other individual participate more. Here, others participated 2,000 hours total. The taxpayer doesn't meet the 500-hour test either. Why other answers are wrong: (B) 750 hours—that's for real estate professional; (C) 100+ hours—must also be more than any other person; (D) 500+ hours—400 hours doesn't meet this test.",
+    "tip": "IRC: 500 hours = automatic material participation. 100-500 hours requires no one else participates more.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25831,8 +25831,8 @@ const questions = [
       "D": "Sale of rental property with payments over 5 years"
     },
     "correctAnswer": "B",
-    "explanation": "The installment method is not available for sales of publicly traded property (securities traded on established markets). It's available for sales of real property, personal property used in a business, and other non-dealer property.",
-    "tip": "No installment method for: inventory, publicly traded securities, depreciation recapture (ordinary income portion).",
+    "explanation": "Per IRC §453(k), the installment method is not available for sales of publicly traded property (securities traded on established markets). It's available for sales of real property, personal property used in a business, and other non-dealer property. Why other answers are wrong: (A) Farm equipment—eligible for installment; (C) Land—eligible; (D) Rental property—eligible.",
+    "tip": "§1001: No installment method for: inventory, publicly traded securities, depreciation recapture (ordinary income portion).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25852,8 +25852,8 @@ const questions = [
       "D": "Accumulates earnings beyond reasonable business needs to avoid shareholder-level tax"
     },
     "correctAnswer": "D",
-    "explanation": "The accumulated earnings tax penalizes corporations that accumulate earnings beyond reasonable business needs for the purpose of avoiding shareholder income tax on dividends. It's a penalty tax on excessive accumulation with tax avoidance intent.",
-    "tip": "AET = penalty for excessive accumulation to avoid dividends. Requires tax avoidance purpose.",
+    "explanation": "Per IRC §531, the accumulated earnings tax penalizes corporations that accumulate earnings beyond reasonable business needs for the purpose of avoiding shareholder income tax on dividends. It's a penalty tax on excessive accumulation with tax avoidance intent. Why other answers are wrong: (A) Fails to distribute—no requirement to distribute; (B) 100+ shareholders—that affects S corp eligibility; (C) E&P over $250K—that's just the minimum credit amount.",
+    "tip": "§531: AET = penalty for excessive accumulation to avoid dividends. Requires tax avoidance purpose.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25873,8 +25873,8 @@ const questions = [
       "D": "Medicare tax applies only up to the Social Security wage base"
     },
     "correctAnswer": "A",
-    "explanation": "Social Security tax has a wage base (indexed annually). Medicare tax has no wage limit but adds 0.9% additional tax on wages exceeding $200,000 (single) or $250,000 (MFJ). At exactly $200,000 single, the additional tax hasn't started.",
-    "tip": "SS = wage base cap. Medicare = no cap + 0.9% additional above threshold.",
+    "explanation": "Per IRC §3101 and §3121, Social Security tax has a wage base (indexed annually). Medicare tax has no wage limit but adds 0.9% additional tax on wages exceeding $200,000 (single) or $250,000 (MFJ). At exactly $200,000 single, the additional tax hasn't started. Why other answers are wrong: (B) Both have limits—only SS has wage base; (C) SS on full $200K—exceeds wage base; (D) Medicare capped—Medicare has no cap.",
+    "tip": "§86: SS = wage base cap. Medicare = no cap + 0.9% additional above threshold.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25894,8 +25894,8 @@ const questions = [
       "D": "3 years (no extension)"
     },
     "correctAnswer": "A",
-    "explanation": "If a taxpayer omits more than 25% of gross income stated on the return, the statute of limitations extends to 6 years. Here, $40,000 omitted ÷ $100,000 reported = 40% > 25%, so 6-year rule applies.",
-    "tip": "SOL: 3 years normal, 6 years if >25% income omitted, unlimited for fraud.",
+    "explanation": "Per IRC §6501(e), if a taxpayer omits more than 25% of gross income stated on the return, the statute of limitations extends to 6 years. Here, $40,000 omitted ÷ $100,000 reported = 40% > 25%, so 6-year rule applies. Why other answers are wrong: (B) Unlimited/fraud—fraud not established; (C) 5 years—no 5-year SOL; (D) 3 years—extended due to >25% omission.",
+    "tip": "§6501: SOL: 3 years normal, 6 years if >25% income omitted, unlimited for fraud.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -25915,8 +25915,8 @@ const questions = [
       "D": "For value, in good faith, without notice of defects"
     },
     "correctAnswer": "D",
-    "explanation": "HDC requirements: (1) holder of a negotiable instrument, (2) taken for value, (3) taken in good faith, (4) taken without notice of defenses, claims, or that it's overdue/dishonored.",
-    "tip": "HDC = value + good faith + no notice of problems. HDCs take free of most personal defenses.",
+    "explanation": "Per UCC §3-302, HDC requirements: (1) holder of a negotiable instrument, (2) taken for value, (3) taken in good faith, (4) taken without notice of defenses, claims, or that it's overdue/dishonored. Why other answers are wrong: (A) From maker only—can be from any prior holder; (B) Notary authentication—not required; (C) After maturity—can't be HDC if instrument is overdue.",
+    "tip": "§3-104: HDC = value + good faith + no notice of problems. HDCs take free of most personal defenses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25936,8 +25936,8 @@ const questions = [
       "D": "A subsequent purchaser who paid value without knowledge"
     },
     "correctAnswer": "C",
-    "explanation": "Perfected security interests generally have priority over unperfected interests, regardless of which attached first. 'First to file or perfect' is the general rule among perfected creditors.",
-    "tip": "Perfected beats unperfected. Among perfected creditors, first to file/perfect wins.",
+    "explanation": "Per UCC §9-322, perfected security interests generally have priority over unperfected interests, regardless of which attached first. 'First to file or perfect' is the general rule among perfected creditors. Why other answers are wrong: (A) Prior perfected—first to file/perfect wins; (B) Buyer in ordinary course—takes free of security interest; (D) BFP without knowledge—protection varies by situation.",
+    "tip": "§6601: Perfected beats unperfected. Among perfected creditors, first to file/perfect wins.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -25957,8 +25957,8 @@ const questions = [
       "D": "No deduction; both grow tax-free"
     },
     "correctAnswer": "B",
-    "explanation": "Traditional IRA contributions are deductible (subject to limits if covered by employer plan). Roth IRA contributions are not deductible but qualified distributions are tax-free. Only the Traditional IRA provides an immediate deduction.",
-    "tip": "Traditional IRA = deduction now, taxed later. Roth IRA = no deduction, tax-free later.",
+    "explanation": "Per IRC §219 and §408A, Traditional IRA contributions are deductible (subject to limits if covered by employer plan). Roth IRA contributions are not deductible but qualified distributions are tax-free. Only the Traditional IRA provides an immediate deduction. Why other answers are wrong: (A) $13K—Roth not deductible; (C) Roth deduction—Roth contributions are never deductible; (D) No deduction—Traditional IS deductible.",
+    "tip": "§§219: Traditional IRA = deduction now, taxed later. Roth IRA = no deduction, tax-free later.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -25978,8 +25978,8 @@ const questions = [
       "D": "$250,000"
     },
     "correctAnswer": "A",
-    "explanation": "Section 121 requires ownership and use as a principal residence for at least 2 of the last 5 years. At 18 months, the taxpayer doesn't meet the 2-year requirement, so no exclusion applies. The full $400,000 gain is taxable.",
-    "tip": "Section 121: 2-year ownership AND 2-year use required. Reduced exclusion available for certain hardships.",
+    "explanation": "Per IRC §121, Section 121 requires ownership and use as a principal residence for at least 2 of the last 5 years. At 18 months, the taxpayer doesn't meet the 2-year requirement, so no exclusion applies. The full $400,000 gain is taxable. Why other answers are wrong: (B) $0—doesn't meet 2-year test; (C) $150,000—no partial exclusion without hardship; (D) $250,000—that's the max exclusion if qualifies.",
+    "tip": "§1001: Section 121: 2-year ownership AND 2-year use required. Reduced exclusion available for certain hardships.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26020,8 +26020,8 @@ const questions = [
       "D": "Applies to all sellers of goods"
     },
     "correctAnswer": "A",
-    "explanation": "The implied warranty of merchantability only applies to merchants who regularly deal in goods of that kind. It means goods must be fit for ordinary purposes. Casual sellers don't give this warranty.",
-    "tip": "Merchantability = merchant sellers only. Fitness for particular purpose = any seller (if knows buyer's purpose).",
+    "explanation": "Per UCC §2-314, the implied warranty of merchantability only applies to merchants who regularly deal in goods of that kind. It means goods must be fit for ordinary purposes. Casual sellers don't give this warranty. Why other answers are wrong: (B) Must be stated—it's implied, not express; (C) Cannot disclaim—can be disclaimed with proper language; (D) All sellers—only merchant sellers.",
+    "tip": "§2-104: Merchantability = merchant sellers only. Fitness for particular purpose = any seller (if knows buyer's purpose).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26041,7 +26041,7 @@ const questions = [
       "D": "Substantial authority (approximately 40% chance of success)"
     },
     "correctAnswer": "D",
-    "explanation": "For undisclosed positions, Circular 230 requires substantial authority (approximately 40% chance of being sustained). For disclosed positions, only reasonable basis is needed. Tax shelters require more likely than not standard.",
+    "explanation": "Per Circular 230 §10.34, for undisclosed positions, substantial authority (approximately 40% chance of being sustained) is required. For disclosed positions, only reasonable basis is needed. Tax shelters require more likely than not standard. Why other answers are wrong: (A) MLTN—that's for tax shelters; (B) Should—not a defined standard; (C) Reasonable basis—only for disclosed positions.",
     "tip": "Undisclosed position = substantial authority. Disclosed position = reasonable basis. Tax shelter = more likely than not.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -26062,8 +26062,8 @@ const questions = [
       "D": "$250"
     },
     "correctAnswer": "C",
-    "explanation": "The educator expense deduction allows eligible teachers to deduct up to $300 (as adjusted for inflation) for unreimbursed classroom expenses as an above-the-line deduction. The excess may be deductible as a miscellaneous itemized deduction subject to limitations.",
-    "tip": "Educator expense = above-the-line up to the limit. Check current limit annually—it adjusts for inflation.",
+    "explanation": "Per IRC §62(a)(2)(D), the educator expense deduction allows eligible teachers to deduct up to $300 (as adjusted for inflation) for unreimbursed classroom expenses as an above-the-line deduction. The excess may be deductible as a miscellaneous itemized deduction subject to limitations. Why other answers are wrong: (A) Must itemize—it's above-the-line; (B) $400—exceeds the limit; (D) $250—outdated limit.",
+    "tip": "§§161-199: Educator expense = above-the-line up to the limit. Check current limit annually—it adjusts for inflation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26083,8 +26083,8 @@ const questions = [
       "D": "100%"
     },
     "correctAnswer": "C",
-    "explanation": "Social Security benefits are taxed based on provisional income (MAGI + 50% of benefits). At higher income levels, up to 85% of benefits can be taxable. The maximum taxable amount is always 85%, never 100%.",
-    "tip": "Social Security taxation: 0%, 50%, or up to 85% based on provisional income. Never more than 85%.",
+    "explanation": "Per IRC §86, Social Security benefits are taxed based on provisional income (MAGI + 50% of benefits). At higher income levels, up to 85% of benefits can be taxable. The maximum taxable amount is always 85%, never 100%. Why other answers are wrong: (A) 0%—applies only at very low income; (B) 50%—middle tier, can go higher; (D) 100%—maximum is 85%.",
+    "tip": "§86: Social Security taxation: 0%, 50%, or up to 85% based on provisional income. Never more than 85%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26104,8 +26104,8 @@ const questions = [
       "D": "Earned income above $200,000"
     },
     "correctAnswer": "C",
-    "explanation": "The 3.8% NIIT applies to the lesser of net investment income OR the excess of MAGI over threshold ($200,000 single, $250,000 MFJ). It applies to interest, dividends, capital gains, rental income, and passive income.",
-    "tip": "NIIT = 3.8% on lesser of NII or MAGI over threshold. Not just capital gains—includes interest, dividends, passive income.",
+    "explanation": "Per IRC §1411, the 3.8% NIIT applies to the lesser of net investment income OR the excess of MAGI over threshold ($200,000 single, $250,000 MFJ). It applies to interest, dividends, capital gains, rental income, and passive income. Why other answers are wrong: (A) Only passive—includes all investment income; (B) All NII regardless—requires MAGI threshold; (D) Earned income—applies to investment, not earned income.",
+    "tip": "IRC: NIIT = 3.8% on lesser of NII or MAGI over threshold. Not just capital gains—includes interest, dividends, passive income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26125,8 +26125,8 @@ const questions = [
       "D": "Loss deferred until daughter sells the stock"
     },
     "correctAnswer": "B",
-    "explanation": "Losses on sales between related parties (family members) are disallowed. The buyer takes the purchase price as basis. However, if the buyer later sells at a gain, the previously disallowed loss can offset that gain.",
-    "tip": "Related party loss = disallowed but may reduce buyer's future gain. Daughter's basis = $10,000 (cost).",
+    "explanation": "Per IRC §267, losses on sales between related parties (family members) are disallowed. The buyer takes the purchase price as basis under IRC §1012. However, if the buyer later sells at a gain, the previously disallowed loss can offset that gain under IRC §267(d).",
+    "tip": "§267: Related party loss = disallowed but may reduce buyer's future gain per §267(d). Daughter's basis = $10,000 (cost).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26146,8 +26146,8 @@ const questions = [
       "D": "Loss deferred to the year of subsequent sale"
     },
     "correctAnswer": "B",
-    "explanation": "The wash sale rule disallows losses when substantially identical stock is acquired within 30 days before or after the sale. The disallowed loss is added to the basis of the replacement stock.",
-    "tip": "Wash sale = 61-day window (30 before, sale date, 30 after). Loss added to new stock's basis.",
+    "explanation": "Per IRC §1091, the wash sale rule disallows losses when substantially identical stock is acquired within 30 days before or after the sale. The disallowed loss is added to the basis of the replacement stock. Why other answers are wrong: (A) Loss allowed—wash sale applies; (C) Different tax year—61-day window spans years; (D) Deferred to sale—added to basis, not deferred.",
+    "tip": "§1012: Wash sale = 61-day window (30 before, sale date, 30 after). Loss added to new stock's basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26167,8 +26167,8 @@ const questions = [
       "D": "$250,000"
     },
     "correctAnswer": "B",
-    "explanation": "To defer the entire gain in an involuntary conversion, the taxpayer must reinvest an amount equal to or greater than the proceeds received ($150,000). Reinvesting less results in gain recognized to the extent of the deficiency.",
-    "tip": "Section 1033: Reinvest full proceeds to defer all gain. Unlike 1031, you reinvest proceeds, not value.",
+    "explanation": "Per IRC §1033, to defer the entire gain in an involuntary conversion, the taxpayer must reinvest an amount equal to or greater than the proceeds received ($150,000). Reinvesting less results in gain recognized to the extent of the deficiency. Why other answers are wrong: (A) $100K—that's the basis; (C) $50K—that's the gain; (D) $250K—exceeds what's needed.",
+    "tip": "§1012: Section 1033: Reinvest full proceeds to defer all gain. Unlike 1031, you reinvest proceeds, not value.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26188,8 +26188,8 @@ const questions = [
       "D": "$100,000 (100% of W-2 wages)"
     },
     "correctAnswer": "B",
-    "explanation": "Above the threshold, the QBI deduction is limited to the greater of: (a) 50% of W-2 wages, or (b) 25% of W-2 wages plus 2.5% of UBIA. Here: 50% × $100,000 = $50,000 is greater than $25,000 (25% × $100,000 + 0).",
-    "tip": "W-2 limitation: Greater of 50% wages OR (25% wages + 2.5% UBIA). Compare to 20% QBI.",
+    "explanation": "Per IRC §199A, above the threshold, the QBI deduction is limited to the greater of: (a) 50% of W-2 wages, or (b) 25% of W-2 wages plus 2.5% of UBIA. Here: 50% × $100,000 = $50,000 is greater than $25,000 (25% × $100,000 + 0). Why other answers are wrong: (A) $40K—20% of QBI, but limited by W-2; (C) $25K—lesser of the two limits; (D) $100K—that's total wages.",
+    "tip": "§1001: W-2 limitation: Greater of 50% wages OR (25% wages + 2.5% UBIA). Compare to 20% QBI.",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -26209,8 +26209,8 @@ const questions = [
       "D": "$25,000"
     },
     "correctAnswer": "B",
-    "explanation": "Corporate charitable deductions are limited to 10% of taxable income computed without the charitable deduction, NOL carryback, or DRD. Limit = 10% × $500,000 = $50,000. The $25,000 excess carries forward 5 years.",
-    "tip": "C corp charitable limit = 10% of adjusted taxable income. Excess carries forward 5 years.",
+    "explanation": "Per IRC §170(b)(2), corporate charitable deductions are limited to 10% of taxable income computed without the charitable deduction, NOL carryback, or DRD. Limit = 10% × $500,000 = $50,000. The $25,000 excess carries forward 5 years. Why other answers are wrong: (A) $37,500—7.5% is incorrect; (C) $75,000—exceeds 10% limit; (D) $25,000—that's the carryforward amount.",
+    "tip": "§170: C corp charitable limit = 10% of adjusted taxable income. Excess carries forward 5 years.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -26230,8 +26230,8 @@ const questions = [
       "D": "$65,000 (65% DRD)"
     },
     "correctAnswer": "D",
-    "explanation": "DRD percentages: <20% ownership = 50% DRD, 20-79% ownership = 65% DRD, 80%+ ownership = 100% DRD. At 25% ownership, the 65% DRD applies: $100,000 × 65% = $65,000.",
-    "tip": "DRD tiers: <20% = 50%, 20-79% = 65%, 80%+ = 100%. Ownership determines the percentage.",
+    "explanation": "Per IRC §243, DRD percentages: <20% ownership = 50% DRD, 20-79% ownership = 65% DRD, 80%+ ownership = 100% DRD. At 25% ownership, the 65% DRD applies: $100,000 × 65% = $65,000. Why other answers are wrong: (A) 100%—requires 80%+ ownership; (B) $0—DRD is allowed; (C) 50%—that's for <20% ownership.",
+    "tip": "§243: DRD tiers: <20% = 50%, 20-79% = 65%, 80%+ = 100%. Ownership determines the percentage.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -26251,8 +26251,8 @@ const questions = [
       "D": "S corporation election abuse"
     },
     "correctAnswer": "B",
-    "explanation": "The PHC tax targets closely held corporations (5 or fewer individuals own >50% of stock) that primarily earn passive income (dividends, rents, royalties). It prevents deferral of passive income at lower corporate rates.",
-    "tip": "PHC tax: Closely held + passive income = penalty tax. Forces distribution of investment income.",
+    "explanation": "Per IRC §541, the PHC tax targets closely held corporations (5 or fewer individuals own >50% of stock) that primarily earn passive income (dividends, rents, royalties). It prevents deferral of passive income at lower corporate rates. Why other answers are wrong: (A) Accumulated earnings tax addresses excess accumulation—PHC focuses on passive income; (C) Excessive compensation is a separate issue (reasonable compensation rules); (D) S corporations have their own anti-abuse rules—PHC applies only to C corporations.",
+    "tip": "§541: PHC tax: Closely held + passive income = penalty tax. Forces distribution of investment income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26272,8 +26272,8 @@ const questions = [
       "D": "No corporate-level tax because it's an S corporation"
     },
     "correctAnswer": "B",
-    "explanation": "The built-in gains tax applies to S corporations that were formerly C corporations. If assets with built-in gain at conversion are sold within the recognition period (5 years), a corporate-level tax applies on the pre-conversion gain.",
-    "tip": "BIG tax = corporate tax on C corp appreciation sold within 5 years of S election. Prevents C-to-S conversion abuse.",
+    "explanation": "Per IRC §1374, the built-in gains tax applies to S corporations that were formerly C corporations. If assets with built-in gain at conversion are sold within the recognition period (5 years), a corporate-level tax applies on the pre-conversion gain. Why other answers are wrong: (A) Not all gain—only pre-conversion appreciation is subject to BIG tax; (C) PHC tax applies to passive income in closely held C corps, not S corps; (D) S corps generally avoid corporate tax, but BIG tax is an exception for former C corps.",
+    "tip": "§1374: BIG tax = corporate tax on C corp appreciation sold within 5 years of S election. Prevents C-to-S conversion abuse.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26293,8 +26293,8 @@ const questions = [
       "D": "Stock basis, then AAA"
     },
     "correctAnswer": "C",
-    "explanation": "S corporation distributions are applied in order: (1) AAA (tax-free return of previously taxed income), (2) Accumulated E&P (taxable dividend), (3) Stock basis (tax-free return of capital), (4) Excess (capital gain).",
-    "tip": "S corp distribution order: AAA → AE&P → Basis → Gain. AAA represents S corp earnings already taxed to shareholders.",
+    "explanation": "Per IRC §1368, S corporation distributions are applied in order: (1) AAA (tax-free return of previously taxed income), (2) Accumulated E&P (taxable dividend), (3) Stock basis (tax-free return of capital), (4) Excess (capital gain). Why other answers are wrong: (A) \"Previously taxed income\" is AAA, but the question asks what comes FIRST—AAA is correct but (A) reverses order terminology; (B) E&P comes after AAA, not before; (D) Stock basis comes after AAA and E&P are exhausted.",
+    "tip": "§1368: S corp distribution order: AAA → AE&P → Basis → Gain. AAA represents S corp earnings already taxed to shareholders.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26314,8 +26314,8 @@ const questions = [
       "D": "A distribution reducing partner's basis"
     },
     "correctAnswer": "A",
-    "explanation": "Guaranteed payments are deductible by the partnership in computing ordinary income and are ordinary income to the receiving partner. They're similar to salary—deductible expense to payer, ordinary income to recipient.",
-    "tip": "Guaranteed payments = like salary. Deductible to partnership, ordinary income to partner, subject to SE tax.",
+    "explanation": "Per IRC §707(c), guaranteed payments are deductible by the partnership in computing ordinary income and are ordinary income to the receiving partner. They're similar to salary—deductible expense to payer, ordinary income to recipient.",
+    "tip": "§707: Guaranteed payments = like salary. Deductible to partnership, ordinary income to partner, subject to SE tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26335,8 +26335,8 @@ const questions = [
       "D": "Tax-free return of capital"
     },
     "correctAnswer": "C",
-    "explanation": "Section 751 'hot assets' (unrealized receivables and inventory) convert what would otherwise be capital gain into ordinary income. This prevents converting ordinary income assets into capital gain through entity sale.",
-    "tip": "Hot assets (751): Unrealized receivables + inventory. Gain = ordinary income, not capital gain.",
+    "explanation": "Per IRC §751, 'hot assets' (unrealized receivables and substantially appreciated inventory) convert what would otherwise be capital gain into ordinary income. This prevents converting ordinary income assets into capital gain through entity sale. Why other answers are wrong: (A) Depreciation recapture (§1245/1250) is separate—hot assets are specifically §751 items; (B) Although partnership interests are capital assets, §751 carves out ordinary income for hot asset portions; (D) Sale of partnership interest is taxable, not a return of capital.",
+    "tip": "§1222: Hot assets (751): Unrealized receivables + inventory. Gain = ordinary income, not capital gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26356,8 +26356,8 @@ const questions = [
       "D": "Simple trust"
     },
     "correctAnswer": "A",
-    "explanation": "A complex trust is any trust that is not a simple trust. Simple trusts must distribute all income currently, cannot make charitable contributions from trust income, and cannot distribute principal. Complex trusts can do any of these.",
-    "tip": "Simple trust = must distribute all income, no charity, no principal distribution. Anything else = complex.",
+    "explanation": "Per IRC §§651-663 (Subpart B & C), a complex trust is any trust that is not a simple trust. Simple trusts must distribute all income currently, cannot make charitable contributions from trust income, and cannot distribute principal. Complex trusts can do any of these. Why other answers are wrong: (B) Grantor trusts are taxed to the grantor under §§671-679—different classification; (C) \"Qualified trust\" refers to retirement plans, not fiduciary income tax classification; (D) Simple trusts must distribute ALL income and cannot do what this trust does.",
+    "tip": "§170: Simple trust = must distribute all income, no charity, no principal distribution. Anything else = complex.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26377,8 +26377,8 @@ const questions = [
       "D": "The trust at trust tax rates"
     },
     "correctAnswer": "B",
-    "explanation": "A grantor trust is ignored for income tax purposes. All income, deductions, and credits are reported on the grantor's personal return as if the trust assets were still owned directly by the grantor.",
-    "tip": "Grantor trust = tax transparent. Grantor taxed on all income. Trust is disregarded for income tax.",
+    "explanation": "Per IRC §§671-679, a grantor trust is ignored for income tax purposes. All income, deductions, and credits are reported on the grantor's personal return as if the trust assets were still owned directly by the grantor. Why other answers are wrong: (A) Beneficiaries are taxed in non-grantor trusts based on distributions—grantor trusts ignore trust existence; (C) Income is taxed currently to grantor, not deferred; (D) Trust tax rates don't apply—the trust is a disregarded entity for income tax.",
+    "tip": "§2501: Grantor trust = tax transparent. Grantor taxed on all income. Trust is disregarded for income tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26398,8 +26398,8 @@ const questions = [
       "D": "The beneficiaries are family members"
     },
     "correctAnswer": "A",
-    "explanation": "Life insurance proceeds are included in the gross estate if the decedent had 'incidents of ownership' (the right to change beneficiaries, borrow against policy, etc.) at death, or if proceeds are payable to the estate.",
-    "tip": "Life insurance in estate if: (1) payable to estate, OR (2) decedent had incidents of ownership. Transfer policy to avoid inclusion.",
+    "explanation": "Per IRC §2042, life insurance proceeds are included in the gross estate if the decedent had 'incidents of ownership' (the right to change beneficiaries, borrow against policy, etc.) at death, or if proceeds are payable to the estate. Why other answers are wrong: (B) Life insurance is only included if decedent had incidents of ownership or proceeds payable to estate; (C) No $100,000 threshold exists—inclusion depends on ownership/control; (D) Beneficiary identity is irrelevant—incidents of ownership is the test.",
+    "tip": "§2501: Life insurance in estate if: (1) payable to estate, OR (2) decedent had incidents of ownership. Transfer policy to avoid inclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26419,8 +26419,8 @@ const questions = [
       "D": "$17,000 (half the annual exclusion)"
     },
     "correctAnswer": "B",
-    "explanation": "Gift splitting allows a married couple to treat a gift made by one spouse as made half by each. The $50,000 gift is split: $25,000 attributed to each spouse. Each can then apply their annual exclusion to their portion.",
-    "tip": "Gift splitting = divide gift between spouses. Double the exclusion available. Requires spouse consent.",
+    "explanation": "Per IRC §2513, gift splitting allows a married couple to treat a gift made by one spouse as made half by each. The $50,000 gift is split: $25,000 attributed to each spouse. Each can then apply their annual exclusion to their portion. Why other answers are wrong: (A) $50,000 is the total gift—splitting means each spouse is treated as giving half; (C) $34,000 is twice the annual exclusion, not how much each gives; (D) $17,000 is the annual exclusion, not the split amount.",
+    "tip": "§§101-140: Gift splitting = divide gift between spouses. Double the exclusion available. Requires spouse consent.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -26440,8 +26440,8 @@ const questions = [
       "D": "5% of the underpayment"
     },
     "correctAnswer": "A",
-    "explanation": "The accuracy-related penalty is 20% of the underpayment for: (1) negligence, (2) substantial understatement (>$5,000 or 10% of correct tax), (3) substantial valuation misstatement, or (4) transaction lacking economic substance.",
-    "tip": "Accuracy penalty = 20%. Fraud penalty = 75%. Substantial understatement = >$5,000 or 10% of tax.",
+    "explanation": "Per IRC §6662, the accuracy-related penalty is 20% of the underpayment for: (1) negligence, (2) substantial understatement (>$5,000 or 10% of correct tax), (3) substantial valuation misstatement, or (4) transaction lacking economic substance. Why other answers are wrong: (B) 50% is not a standard penalty rate; (C) 75% is the civil fraud penalty under §6663, not accuracy-related; (D) 5% is the late filing penalty rate per month, not accuracy-related.",
+    "tip": "IRC: Accuracy penalty = 20%. Fraud penalty = 75%. Substantial understatement = >$5,000 or 10% of tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26461,7 +26461,7 @@ const questions = [
       "D": "The preparer who signed the return"
     },
     "correctAnswer": "B",
-    "explanation": "Taxpayers generally bear the burden of proof to substantiate items on their returns. The burden can shift to the IRS if the taxpayer maintains adequate records, cooperates, and meets credibility requirements under IRC Section 7491.",
+    "explanation": "Per IRC §7491, taxpayers generally bear the burden of proof to substantiate items on their returns. The burden can shift to the IRS if the taxpayer maintains adequate records, cooperates, and meets credibility requirements under IRC §7491. Why other answers are wrong: (A) IRS doesn't bear the burden in all cases—only when burden shifts; (C) The court resolves disputes but doesn't determine the correct tax independently; (D) Preparers sign the return but taxpayers are responsible for substantiation.",
     "tip": "Taxpayer has burden of proof initially. Can shift to IRS with good records and cooperation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -26482,8 +26482,8 @@ const questions = [
       "D": "A promise to make a gift"
     },
     "correctAnswer": "A",
-    "explanation": "Valid consideration requires a bargained-for exchange of legal value. Forbearance (giving up a legal right) constitutes valid consideration. Gifts, past consideration, and pre-existing duties generally do not.",
-    "tip": "Consideration = legal detriment to promisee OR legal benefit to promisor. Must be bargained-for.",
+    "explanation": "Per Restatement (Second) of Contracts §71, valid consideration requires a bargained-for exchange of legal value. Forbearance (giving up a legal right) constitutes valid consideration. Gifts, past consideration, and pre-existing duties generally do not. Why other answers are wrong: (B) Past consideration is not consideration—the service was already performed without bargained-for exchange; (C) Pre-existing duty rule—doing what you're already obligated to do lacks new consideration; (D) Gifts lack bargained-for exchange—they're one-sided promises.",
+    "tip": "§71: Consideration = legal detriment to promisee OR legal benefit to promisor. Must be bargained-for.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26503,8 +26503,8 @@ const questions = [
       "D": "Intended donee beneficiary with enforceable rights"
     },
     "correctAnswer": "D",
-    "explanation": "A donee beneficiary is an intended third-party beneficiary who receives the benefit as a gift (not to satisfy a debt). Life insurance beneficiaries are typically donee beneficiaries with enforceable contract rights.",
-    "tip": "Intended beneficiary = enforceable rights. Donee (gift) vs Creditor (debt payment). Incidental = no rights.",
+    "explanation": "Per Restatement (Second) of Contracts §302, a donee beneficiary is an intended third-party beneficiary who receives the benefit as a gift (not to satisfy a debt). Life insurance beneficiaries are typically donee beneficiaries with enforceable contract rights. Why other answers are wrong: (A) Creditor beneficiary exists when benefit satisfies a debt owed to them—spouse is receiving a gift; (B) Assignee obtains rights through assignment, not original designation as beneficiary; (C) Incidental beneficiaries have no enforceable rights—insurance beneficiaries are intended, not incidental.",
+    "tip": "§2042: Intended beneficiary = enforceable rights. Donee (gift) vs Creditor (debt payment). Incidental = no rights.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26524,8 +26524,8 @@ const questions = [
       "D": "Only the principal once disclosed"
     },
     "correctAnswer": "A",
-    "explanation": "When the principal is undisclosed, both the agent and principal can be held liable because the third party contracted with the agent personally. The agent remains liable even after the principal is disclosed.",
-    "tip": "Undisclosed principal: Agent personally liable. Principal also liable once discovered. Third party can choose.",
+    "explanation": "Per Restatement (Third) of Agency §6.03, when the principal is undisclosed, both the agent and principal can be held liable because the third party contracted with the agent personally. The agent remains liable even after the principal is disclosed. Why other answers are wrong: (B) Ratification isn't required—both are liable once the contract exists; (C) Agent alone isn't the only liable party—principal is also bound; (D) Both remain liable—principal's disclosure doesn't release the agent from personal liability.",
+    "tip": "§691: Undisclosed principal: Agent personally liable. Principal also liable once discovered. Third party can choose.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26545,8 +26545,8 @@ const questions = [
       "D": "Their own negligent acts"
     },
     "correctAnswer": "B",
-    "explanation": "LLP partners retain personal liability for their own wrongful acts but are generally protected from liability arising from other partners' malpractice or negligence. This is popular for professional service firms.",
-    "tip": "LLP = protect from others' malpractice, not your own. Compare to LP where limited partners have full protection but can't manage.",
+    "explanation": "Per IRC §6662(c), lLP partners retain personal liability for their own wrongful acts but are generally protected from liability arising from other partners' malpractice or negligence. This is popular for professional service firms.",
+    "tip": "§6662: LLP = protect from others' malpractice, not your own. Compare to LP where limited partners have full protection but can't manage.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26566,8 +26566,8 @@ const questions = [
       "D": "After the bankruptcy petition is filed"
     },
     "correctAnswer": "B",
-    "explanation": "Preferences are transfers made within 90 days of bankruptcy (1 year for insiders) to existing creditors for existing debts while the debtor was insolvent. They're voidable to ensure equal treatment of creditors.",
-    "tip": "Preference = unfair payment before bankruptcy. 90 days for regular creditors, 1 year for insiders.",
+    "explanation": "Per 11 U.S.C. §547, preferences are transfers made within 90 days of bankruptcy (1 year for insiders) to existing creditors for existing debts while the debtor was insolvent. They're voidable to ensure equal treatment of creditors. Why other answers are wrong: (A) Ordinary course of business payments are a defense to preference avoidance under §547(c)(2)—they're protected from recovery; (C) Preference rules apply to all types of creditors, not just secured creditors—unsecured creditors can also receive recoverable preference payments; (D) Post-petition transfers are governed by different bankruptcy rules and aren't considered preferences—preference payments must occur before the bankruptcy petition is filed.",
+    "tip": "§547: Preference = unfair payment before bankruptcy. 90 days for regular creditors, 1 year for insiders.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26587,8 +26587,8 @@ const questions = [
       "D": "Sales only to banks and insurance companies"
     },
     "correctAnswer": "B",
-    "explanation": "Rule 506(b) allows unlimited capital raising from unlimited accredited investors plus up to 35 non-accredited but sophisticated investors. General solicitation is not permitted. It's the most commonly used private placement exemption.",
-    "tip": "506(b): No ads, unlimited accredited, 35 sophisticated. 506(c): Ads allowed but accredited only.",
+    "explanation": "Per Securities Act of 1933 §3, rule 506(b) allows unlimited capital raising from unlimited accredited investors plus up to 35 non-accredited but sophisticated investors. General solicitation is not permitted. It's the most commonly used private placement exemption.",
+    "tip": "§3: 506(b): No ads, unlimited accredited, 35 sophisticated. 506(c): Ads allowed but accredited only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26608,7 +26608,7 @@ const questions = [
       "D": "Amending a return to claim a larger refund"
     },
     "correctAnswer": "C",
-    "explanation": "Circular 230 prohibits contingent fees for preparing original returns, amended returns, and refund claims. Contingent fees are permitted for IRS examinations, appeals, and judicial proceedings.",
+    "explanation": "Per Treasury Circular 230 §10.27, contingent fees are prohibited for preparing original returns, amended returns, and refund claims. Contingent fees are permitted for IRS examinations, appeals, and judicial proceedings. Why other answers are wrong: (A) Estimated tax payments are part of return preparation—contingent fees prohibited; (B) Original return prep is specifically prohibited; (D) Amending returns is explicitly prohibited for contingent fee arrangements.",
     "tip": "Contingent fee allowed: Audits, appeals, litigation. NOT allowed: Return prep, amendments, refund claims.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -26650,8 +26650,8 @@ const questions = [
       "D": "32%"
     },
     "correctAnswer": "C",
-    "explanation": "Long-term gains on collectibles (artwork, antiques, coins, stamps, precious metals) are taxed at a maximum rate of 28%, not the normal preferential LTCG rates of 0%/15%/20%.",
-    "tip": "Collectibles = max 28% LTCG rate. Higher than regular LTCG but lower than ordinary income for high brackets.",
+    "explanation": "Per IRC §1(h)(4), long-term gains on collectibles (artwork, antiques, coins, stamps, precious metals) are taxed at a maximum rate of 28%, not the normal preferential LTCG rates of 0%/15%/20%. Why other answers are wrong: (A) 0% LTCG rate only applies to low-income taxpayers on regular capital assets, not collectibles; (B) 15% is the standard LTCG rate—collectibles don't qualify; (D) 32% ordinary rate would apply to short-term gains, but this is long-term (3 years).",
+    "tip": "IRC: Collectibles = max 28% LTCG rate. Higher than regular LTCG but lower than ordinary income for high brackets.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26671,8 +26671,8 @@ const questions = [
       "D": "As an itemized deduction without limitation"
     },
     "correctAnswer": "A",
-    "explanation": "Under the TCJA (2018-2025), hobby expenses are not deductible at all because miscellaneous itemized deductions subject to the 2% floor were eliminated. Hobby income is still fully taxable.",
-    "tip": "Current law (TCJA): Hobby expenses = $0 deduction. Income still taxable. Bad deal for hobbyists.",
+    "explanation": "Per IRC §183 and TCJA changes, under current law (2018-2025), hobby expenses are not deductible at all because miscellaneous itemized deductions subject to the 2% floor were eliminated. Hobby income is still fully taxable. Why other answers are wrong: (B) Business deductions require profit motive—hobbies lack this; (C) Pre-TCJA law allowed deductions up to hobby income, but TCJA eliminated this; (D) Hobby deductions are completely eliminated under TCJA, not available as itemized deductions.",
+    "tip": "§§161-199: Current law (TCJA): Hobby expenses = $0 deduction. Income still taxable. Bad deal for hobbyists.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26692,8 +26692,8 @@ const questions = [
       "D": "An unconditional promise or order to pay a fixed amount in money"
     },
     "correctAnswer": "D",
-    "explanation": "Negotiability requires: (1) written and signed by maker/drawer, (2) unconditional promise/order, (3) fixed amount of money, (4) payable on demand or at definite time, (5) payable to order or bearer.",
-    "tip": "Negotiability = WSUFO: Writing, Signed, Unconditional, Fixed money, Order/bearer + demand or definite time.",
+    "explanation": "Per UCC §3-104, negotiability requires: (1) written and signed by maker/drawer, (2) unconditional promise/order, (3) fixed amount of money, (4) payable on demand or at definite time, (5) payable to order or bearer. Why other answers are wrong: (A) Collateral may secure payment but doesn't affect negotiability status; (B) Only the maker/drawer must sign—two signatures aren't required; (C) The promise must be unconditional, not just any promise to pay.",
+    "tip": "§3-104: Negotiability = WSUFO: Writing, Signed, Unconditional, Fixed money, Order/bearer + demand or definite time.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26713,8 +26713,8 @@ const questions = [
       "D": "Perfects before delivery and notifies prior secured parties"
     },
     "correctAnswer": "D",
-    "explanation": "A PMSI in inventory has super-priority if: (1) perfected when debtor receives possession, and (2) written notice sent to prior secured parties before debtor receives possession. This protects suppliers.",
-    "tip": "PMSI inventory: Perfect before delivery + notify existing creditors. PMSI non-inventory: Perfect within 20 days.",
+    "explanation": "Per UCC §9-324, a PMSI in inventory has super-priority if: (1) perfected when debtor receives possession, and (2) written notice sent to prior secured parties before debtor receives possession. This protects suppliers. Why other answers are wrong: (A) Possession isn't required for PMSI priority—filing and notice are; (B) 30-day registration isn't the rule—perfection must occur before delivery; (C) First-to-file rule doesn't apply when PMSI requirements are met—PMSI has super-priority.",
+    "tip": "§6601: PMSI inventory: Perfect before delivery + notify existing creditors. PMSI non-inventory: Perfect within 20 days.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26734,8 +26734,8 @@ const questions = [
       "D": "Have a real estate license"
     },
     "correctAnswer": "A",
-    "explanation": "Real estate professional status requires: (1) more than 750 hours in real property trades/businesses, AND (2) more than 50% of personal services in real property activities. Material participation in each activity is still required.",
-    "tip": "RE professional: 750 hours + majority of time in RE. Still need material participation in each rental.",
+    "explanation": "Per IRC §469(c)(7), real estate professional status requires: (1) more than 750 hours in real property trades/businesses, AND (2) more than 50% of personal services in real property activities. Material participation in each activity is still required. Why other answers are wrong: (B) License isn't required—only hour tests matter; (C) Number of properties is irrelevant—time requirements determine status; (D) Real estate license is not a requirement for RE professional status.",
+    "tip": "§1001: RE professional: 750 hours + majority of time in RE. Still need material participation in each rental.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26755,8 +26755,8 @@ const questions = [
       "D": "Can be claimed by anyone regardless of enrollment status"
     },
     "correctAnswer": "B",
-    "explanation": "The American Opportunity Credit is partially refundable (40%), limited to first 4 years, max $2,500. The Lifetime Learning Credit is non-refundable, available for any year of post-secondary, max $2,000.",
-    "tip": "AOC: First 4 years, $2,500 max, 40% refundable. LLC: Any year, $2,000 max, non-refundable.",
+    "explanation": "Per IRC §25A, the American Opportunity Credit is partially refundable (40%), limited to first 4 years, max $2,500. The Lifetime Learning Credit is non-refundable, available for any year of post-secondary, max $2,000. Why other answers are wrong: (A) Graduate education qualifies for LLC, not AOC—AOC is limited to first 4 years of undergraduate; (C) Both credits have income phase-outs; (D) AOC requires at least half-time enrollment—LLC allows any enrollment status.",
+    "tip": "IRC: AOC: First 4 years, $2,500 max, 40% refundable. LLC: Any year, $2,000 max, non-refundable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26776,8 +26776,8 @@ const questions = [
       "D": "State court with jurisdiction"
     },
     "correctAnswer": "C",
-    "explanation": "The US Tax Court allows taxpayers to contest deficiencies before paying. District Court and Court of Federal Claims require full payment first (refund suits). This prepayment forum choice is an important taxpayer right.",
-    "tip": "Tax Court = contest before paying. District Court/Claims = pay first, sue for refund.",
+    "explanation": "Per IRC §6213, the US Tax Court allows taxpayers to contest deficiencies before paying. District Court and Court of Federal Claims require full payment first (refund suits). This prepayment forum choice is an important taxpayer right. Why other answers are wrong: (A) District Court requires full payment first, then refund suit; (B) Court of Federal Claims also requires payment first; (D) State courts have no jurisdiction over federal tax deficiencies.",
+    "tip": "§7442: Tax Court = contest before paying. District Court/Claims = pay first, sue for refund.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26797,8 +26797,8 @@ const questions = [
       "D": "Be over 65 years old"
     },
     "correctAnswer": "B",
-    "explanation": "Head of household requires: (1) unmarried or considered unmarried at year-end, (2) paid more than half the cost of maintaining a home, (3) home was main home of qualifying person for more than half the year (parent exception).",
-    "tip": "HOH: Unmarried + pay >50% home costs + qualifying person lives there >50% of year (parents can live elsewhere).",
+    "explanation": "Per IRC §2(b), head of household requires: (1) unmarried or considered unmarried at year-end, (2) paid more than half the cost of maintaining a home, (3) home was main home of qualifying person for more than half the year (parent exception). Why other answers are wrong: (A) HOH requires being unmarried—married taxpayers file joint or MFS; (C) Only one qualifying person is needed, not two dependents; (D) Age is irrelevant to HOH status.",
+    "tip": "§2: HOH: Unmarried + pay >50% home costs + qualifying person lives there >50% of year (parents can live elsewhere).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26818,8 +26818,8 @@ const questions = [
       "D": "Taxable only if the taxpayer is over the filing threshold"
     },
     "correctAnswer": "C",
-    "explanation": "Cancellation of debt is generally gross income under Section 61(a)(12). Exclusions apply for: bankruptcy, insolvency (limited to insolvency amount), qualified farm/real property debt, qualified principal residence debt (expired), and student loans (if qualified forgiveness).",
-    "tip": "COD income: Generally taxable. Exclusions: Bankruptcy, insolvency, certain farm/real property debt.",
+    "explanation": "Per IRC §61, cancellation of debt is generally gross income under Section 61(a)(12). Exclusions apply for: bankruptcy, insolvency (limited to insolvency amount), qualified farm/real property debt, qualified principal residence debt (expired), and student loans (if qualified forgiveness).",
+    "tip": "§61: COD income: Generally taxable. Exclusions: Bankruptcy, insolvency, certain farm/real property debt.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -26839,8 +26839,8 @@ const questions = [
       "D": "100%"
     },
     "correctAnswer": "A",
-    "explanation": "Self-employed individuals pay both employee and employer portions of FICA (15.3% total). They deduct 50% (the employer-equivalent portion) as an above-the-line adjustment to income.",
-    "tip": "SE tax deduction = 50% of SE tax paid. Mirrors the employer's deduction for employee FICA.",
+    "explanation": "Per IRC §164(f), self-employed individuals pay both employee and employer portions of FICA (15.3% total). They deduct 50% (the employer-equivalent portion) as an above-the-line adjustment to income. Why other answers are wrong: (B) 7.65% is the employee half—the deduction is 50% of total SE tax; (C) 0% is wrong—SE individuals do get a deduction; (D) 100% would be too generous—employees can't deduct their FICA share either.",
+    "tip": "§61: SE tax deduction = 50% of SE tax paid. Mirrors the employer's deduction for employee FICA.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26860,8 +26860,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "C",
-    "explanation": "Net earnings from SE = Net profit × 92.35% (1 - 7.65%). This adjustment mirrors the fact that employees don't pay FICA on the employer's share. $100,000 × 0.9235 = $92,350.",
-    "tip": "SE income base = Net profit × 92.35%. Then multiply by 15.3% for SE tax (up to wage base for SS portion).",
+    "explanation": "Per IRC §1402, net earnings from SE = Net profit × 92.35% (1 - 7.65%). This adjustment mirrors the fact that employees don't pay FICA on the employer's share. $100,000 × 0.9235 = $92,350. Calculation: Net profit × 92.35% = $100,000 × 0.9235 = $92,350. Why other answers are wrong: (A) $107,650 adds 7.65% instead of subtracting; (B) $100,000 doesn't apply the 92.35% adjustment; (D) $50,000 is half, which doesn't relate to the formula.",
+    "tip": "IRC: SE income base = Net profit × 92.35%. Then multiply by 15.3% for SE tax (up to wage base for SS portion).",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -26881,8 +26881,8 @@ const questions = [
       "D": "$8,000"
     },
     "correctAnswer": "A",
-    "explanation": "Medical expenses are deductible to the extent they exceed 7.5% of AGI. Floor = $80,000 × 7.5% = $6,000. Deductible = $8,000 - $6,000 = $2,000.",
-    "tip": "Medical deduction = Expenses - (7.5% × AGI). Only excess over floor is deductible.",
+    "explanation": "Per IRC §213, medical expenses are deductible to the extent they exceed 7.5% of AGI. Floor = $80,000 × 7.5% = $6,000. Deductible = $8,000 - $6,000 = $2,000. Calculation: Floor = $80,000 × 7.5% = $6,000; Deductible = $8,000 − $6,000 = $2,000. Why other answers are wrong: (B) $6,000 is the floor amount (not deductible); (C) $0 would mean no deduction but expenses exceed the floor; (D) $8,000 ignores the 7.5% AGI floor requirement.",
+    "tip": "§213: Medical deduction = Expenses - (7.5% × AGI). Only excess over floor is deductible.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -26902,8 +26902,8 @@ const questions = [
       "D": "20% of AGI"
     },
     "correctAnswer": "B",
-    "explanation": "TCJA caps the SALT deduction at $10,000 ($5,000 for married filing separately). This includes property taxes plus state/local income or sales taxes combined.",
-    "tip": "SALT cap = $10,000 ($5,000 MFS). Includes property + income/sales taxes combined.",
+    "explanation": "Per IRC §164(b)(6), tCJA caps the SALT deduction at $10,000 ($5,000 for married filing separately). This includes property taxes plus state/local income or sales taxes combined.",
+    "tip": "§164: SALT cap = $10,000 ($5,000 MFS). Includes property + income/sales taxes combined.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26923,8 +26923,8 @@ const questions = [
       "D": "24 at year-end if a student"
     },
     "correctAnswer": "B",
-    "explanation": "The Child Tax Credit requires the child to be under age 17 at year-end (not yet reached 17th birthday). Other requirements include: relationship, residency, support, dependent status, citizenship, and taxpayer ID.",
-    "tip": "CTC: Under 17. Dependent exemption: Under 19 (or 24 if student). Different age thresholds!",
+    "explanation": "Per IRC §24, the Child Tax Credit requires the child to be under age 17 at year-end (not yet reached 17th birthday). Other requirements include: relationship, residency, support, dependent status, citizenship, and taxpayer ID. Why other answers are wrong: (A) 13 is the age limit for child/dependent care credit, not CTC; (C) 19 is the dependent exemption age for non-students; (D) 24 is for full-time students for dependency, not CTC.",
+    "tip": "§24: CTC: Under 17. Dependent exemption: Under 19 (or 24 if student). Different age thresholds!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26944,8 +26944,8 @@ const questions = [
       "D": "A refundable credit"
     },
     "correctAnswer": "D",
-    "explanation": "The EIC is a refundable credit designed to benefit low-to-moderate income workers. It increases with earned income up to a point, then phases out. Taxpayers can receive a refund even if they owe no tax.",
-    "tip": "EIC: Refundable, increases with income (to a point), phases out at higher income. Benefits working poor.",
+    "explanation": "Per IRC §32, the EIC is a refundable credit designed to benefit low-to-moderate income workers. It increases with earned income up to a point, then phases out. Taxpayers can receive a refund even if they owe no tax. Why other answers are wrong: (A) EIC has no age minimum (can claim with qualifying children at any age; without children, ages 25-64); (B) EIC is available with 0-3+ children—more children = larger credit; (C) EIC is refundable, not nonrefundable—that's its key benefit.",
+    "tip": "§32: EIC: Refundable, increases with income (to a point), phases out at higher income. Benefits working poor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -26965,8 +26965,8 @@ const questions = [
       "D": "$2,000 loss"
     },
     "correctAnswer": "B",
-    "explanation": "When FMV at gift < donor's basis: For gain, use donor's basis ($12,000). For loss, use FMV at gift ($8,000). Sale at $10,000 is between these amounts, so no gain or loss is recognized.",
-    "tip": "Gift basis 'double basis' rule: Sale price between FMV and donor's basis = no gain/loss.",
+    "explanation": "Per IRC §1015, when FMV at gift < donor's basis: For gain, use donor's basis ($12,000). For loss, use FMV at gift ($8,000). Sale at $10,000 is between these amounts, so no gain or loss is recognized. Why other answers are wrong: (A) Using gain basis ($12,000), $10,000 sale = $2,000 loss (can't use gain basis for loss); (C) $10,000 gain ignores the basis entirely; (D) Using loss basis ($8,000), $10,000 sale = $2,000 gain (can't use loss basis for gain).",
+    "tip": "§1012: Gift basis 'double basis' rule: Sale price between FMV and donor's basis = no gain/loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -26986,8 +26986,8 @@ const questions = [
       "D": "Real property (buildings) with depreciation in excess of straight-line"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1250 recaptures as ordinary income the excess of accelerated depreciation over straight-line on real property. Since 1986, most real property uses straight-line, so 1250 recapture is rare. Unrecaptured 1250 gain is taxed at 25%.",
-    "tip": "1250 recapture: Excess depreciation on realty = ordinary income. Unrecaptured 1250 (straight-line) = 25% max rate.",
+    "explanation": "Per IRC §1250, Section 1250 recaptures as ordinary income the excess of accelerated depreciation over straight-line on real property. Since 1986, most real property uses straight-line, so 1250 recapture is rare. Unrecaptured 1250 gain is taxed at 25%. Why other answers are wrong: (A) Inventory isn't depreciable—§1250 applies to depreciable realty; (B) Goodwill/intangibles are subject to §197 amortization, not §1250; (C) Personal property uses §1245 recapture (full recapture), not §1250.",
+    "tip": "§1001: 1250 recapture: Excess depreciation on realty = ordinary income. Unrecaptured 1250 (straight-line) = 25% max rate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27007,8 +27007,8 @@ const questions = [
       "D": "Hold sale proceeds to avoid constructive receipt"
     },
     "correctAnswer": "D",
-    "explanation": "A qualified intermediary holds funds and facilitates the exchange without the taxpayer taking constructive receipt of cash. Direct receipt of cash triggers recognition. The QI enables the 45-day identification and 180-day exchange periods.",
-    "tip": "QI prevents constructive receipt of cash. Critical for deferred exchanges to maintain tax-deferred status.",
+    "explanation": "Per IRC §1031, a qualified intermediary holds funds and facilitates the exchange without the taxpayer taking constructive receipt of cash. Direct receipt of cash triggers recognition. The QI enables the 45-day identification and 180-day exchange periods. Why other answers are wrong: (A) QIs don't provide financing—they hold exchange proceeds; (B) QIs facilitate but don't guarantee closing; (C) Appraisals are separate from the QI's role.",
+    "tip": "§1031: QI prevents constructive receipt of cash. Critical for deferred exchanges to maintain tax-deferred status.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27028,8 +27028,8 @@ const questions = [
       "D": "Passive losses from the same activity"
     },
     "correctAnswer": "B",
-    "explanation": "The lookback rule prevents cherry-picking. Net 1231 gains are treated as ordinary income to the extent of unrecaptured net 1231 losses from the 5 preceding tax years. This ensures prior ordinary losses don't offset current capital gains.",
-    "tip": "1231 lookback: Prior 5-year losses = ordinary treatment of current gain. Prevents loss/gain timing games.",
+    "explanation": "Per IRC §1231(c), the lookback rule prevents cherry-picking. Net 1231 gains are treated as ordinary income to the extent of unrecaptured net 1231 losses from the 5 preceding tax years. This ensures prior ordinary losses don't offset current capital gains. Why other answers are wrong: (A) Only losses from prior 5 years are recaptured, not all prior gains; (C) Depreciation recapture is §1245/1250—this is 1231 lookback; (D) Passive losses are §469, unrelated to 1231 lookback.",
+    "tip": "§1222: 1231 lookback: Prior 5-year losses = ordinary treatment of current gain. Prevents loss/gain timing games.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27049,8 +27049,8 @@ const questions = [
       "D": "60%"
     },
     "correctAnswer": "C",
-    "explanation": "Gross profit = Selling price - Basis = $100,000 - $60,000 = $40,000. GP% = Gross profit / Contract price = $40,000 / $100,000 = 40%. Each payment is 40% gain, 60% return of basis.",
-    "tip": "Installment GP% = Gross profit ÷ Contract price. Apply to each payment to determine taxable gain.",
+    "explanation": "Per IRC §453, gross profit = Selling price - Basis = $100,000 - $60,000 = $40,000. GP% = Gross profit / Contract price = $40,000 / $100,000 = 40%. Each payment is 40% gain, 60% return of basis. Calculation: GP = $100,000 − $60,000 = $40,000; GP% = $40,000 ÷ $100,000 = 40%. Why other answers are wrong: (A) 80% would mean basis is only $20,000; (B) 20% confuses down payment ratio with GP%; (D) 60% is the return of basis portion, not the gain portion.",
+    "tip": "§1012: Installment GP% = Gross profit ÷ Contract price. Apply to each payment to determine taxable gain.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -27070,8 +27070,8 @@ const questions = [
       "D": "At least 80% of voting stock and 80% of all other stock"
     },
     "correctAnswer": "D",
-    "explanation": "Section 351 control requires 80% of total voting power AND 80% of all other classes of stock, measured immediately after the exchange. Multiple transferors can qualify together as a 'control group.'",
-    "tip": "351 control = 80% vote + 80% other stock. Immediately after exchange. Group transferors together.",
+    "explanation": "Per IRC §368(c), Section 351 control requires 80% of total voting power AND 80% of all other classes of stock, measured immediately after the exchange. Multiple transferors can qualify together as a 'control group.' Why other answers are wrong: (A) 51% isn't enough—must be 80% vote AND 80% other; (B) Any amount isn't sufficient—80% threshold must be met; (C) Voting stock alone isn't enough—also need 80% of other classes.",
+    "tip": "Model: 351 control = 80% vote + 80% other stock. Immediately after exchange. Group transferors together.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27091,8 +27091,8 @@ const questions = [
       "D": "Current and accumulated earnings and profits"
     },
     "correctAnswer": "D",
-    "explanation": "Distributions are dividends to the extent of E&P (current year first, then accumulated). Distributions exceeding E&P are return of capital (reduce basis), then capital gain if basis is exhausted.",
-    "tip": "Distribution ordering: Current E&P → Accumulated E&P → Return of capital → Capital gain.",
+    "explanation": "Per IRC §316, distributions are dividends to the extent of E&P (current year first, then accumulated). Distributions exceeding E&P are return of capital (reduce basis), then capital gain if basis is exhausted. Why other answers are wrong: (A) Taxable income differs from E&P due to timing differences; (B) Stock basis determines return of capital, not dividend status; (C) Retained earnings (GAAP) differs from E&P (tax concept).",
+    "tip": "Model: Distribution ordering: Current E&P → Accumulated E&P → Return of capital → Capital gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27112,8 +27112,8 @@ const questions = [
       "D": "Paying excessive dividends"
     },
     "correctAnswer": "A",
-    "explanation": "The AET (currently 20%) penalizes corporations that accumulate earnings beyond reasonable business needs to help shareholders avoid dividend tax. It applies in addition to regular corporate tax.",
-    "tip": "AET: Penalty for excessive accumulation to avoid shareholder dividend tax. Reasonable business needs defense.",
+    "explanation": "Per IRC §531, the AET (currently 20%) penalizes corporations that accumulate earnings beyond reasonable business needs to help shareholders avoid dividend tax. It applies in addition to regular corporate tax. Why other answers are wrong: (B) AET doesn't target charitable contributions—those are encouraged; (C) Investing in tax-exempts is addressed by other provisions, not AET; (D) Paying dividends is the solution to AET, not what it targets.",
+    "tip": "§531: AET: Penalty for excessive accumulation to avoid shareholder dividend tax. Reasonable business needs defense.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27133,8 +27133,8 @@ const questions = [
       "D": "A nonresident alien individual"
     },
     "correctAnswer": "A",
-    "explanation": "S corp shareholders must be: individuals (citizens/residents), estates, certain trusts (QSSTs, ESBTs, grantor trusts), and certain tax-exempt organizations. Partnerships, corporations, and nonresident aliens cannot be shareholders.",
-    "tip": "S corp shareholders: US individuals, estates, certain trusts. NOT: Partnerships, corps, NRAs.",
+    "explanation": "Per IRC §1361(b), S corp shareholders must be: individuals (citizens/residents), estates, certain trusts (QSSTs, ESBTs, grantor trusts), and certain tax-exempt organizations. Partnerships, corporations, and nonresident aliens cannot be shareholders. Why other answers are wrong: (B) C corporations cannot be S corp shareholders; (C) Partnerships cannot be S corp shareholders; (D) Nonresident aliens cannot be S corp shareholders.",
+    "tip": "IRC: S corp shareholders: US individuals, estates, certain trusts. NOT: Partnerships, corps, NRAs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27154,8 +27154,8 @@ const questions = [
       "D": "Nondeductible expenses"
     },
     "correctAnswer": "C",
-    "explanation": "Shareholder basis increases by: capital contributions, share of income items (ordinary and separate). Decreases by: distributions, share of losses, nondeductible expenses. Order matters for loss deductibility.",
-    "tip": "S corp basis: + contributions, + income. − distributions, − losses, − nondeductible expenses.",
+    "explanation": "Per IRC §1367, shareholder basis increases by: capital contributions, share of income items (ordinary and separate). Decreases by: distributions, share of losses, nondeductible expenses. Order matters for loss deductibility. Why other answers are wrong: (A) Distributions decrease basis, not increase it; (B) Loss items decrease basis, not increase it; (D) Nondeductible expenses decrease basis, not increase it.",
+    "tip": "§1367: S corp basis: + contributions, + income. − distributions, − losses, − nondeductible expenses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27175,8 +27175,8 @@ const questions = [
       "D": "$50,000 gain"
     },
     "correctAnswer": "C",
-    "explanation": "Under Section 721, contributions of property to a partnership in exchange for a partnership interest are generally tax-free. The partner takes a carryover basis in the partnership interest equal to the property's basis.",
-    "tip": "Section 721: Partnership contributions = no gain/loss. Unlike Section 351, no control requirement.",
+    "explanation": "Per IRC §721, contributions of property to a partnership in exchange for a partnership interest are generally tax-free. The partner takes a carryover basis in the partnership interest equal to the property's basis. Why other answers are wrong: (A) $20,000 would be the built-in gain, but §721 defers recognition; (B) $5,000 has no basis in the calculation; (D) $50,000 is FMV, not recognized gain—§721 defers gain.",
+    "tip": "Revised: Section 721: Partnership contributions = no gain/loss. Unlike Section 351, no control requirement.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27196,8 +27196,8 @@ const questions = [
       "D": "Equal allocation among all partners"
     },
     "correctAnswer": "C",
-    "explanation": "Special allocations must have substantial economic effect to be respected. This means the allocation must affect the partners' economic interests (not just taxes) and be reflected in capital account maintenance and liquidation.",
-    "tip": "Substantial economic effect: Economic impact beyond tax benefits. Proper capital account maintenance required.",
+    "explanation": "Per IRC §704(b), special allocations must have substantial economic effect to be respected. This means the allocation must affect the partners' economic interests (not just taxes) and be reflected in capital account maintenance and liquidation.",
+    "tip": "§704: Substantial economic effect: Economic impact beyond tax benefits. Proper capital account maintenance required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27217,8 +27217,8 @@ const questions = [
       "D": "The partner's capital account becomes negative"
     },
     "correctAnswer": "B",
-    "explanation": "Current distributions are generally tax-free return of basis. Gain is recognized only when cash distributed exceeds the partner's outside basis (excess is capital gain). Property distributions never trigger gain to the partner.",
-    "tip": "Current distribution: Cash > basis = gain. Property distribution = no gain to partner (carryover basis).",
+    "explanation": "Per IRC §731, current distributions are generally tax-free return of basis. Gain is recognized only when cash distributed exceeds the partner's outside basis (excess is capital gain). Property distributions never trigger gain to the partner. Why other answers are wrong: (A) Income share and distribution are separate concepts—distribution in excess of basis triggers gain; (C) Appreciated property distributions don't trigger gain to partner (carryover basis); (D) Negative capital account alone doesn't trigger gain—cash exceeding basis does.",
+    "tip": "Revised: Current distribution: Cash > basis = gain. Property distribution = no gain to partner (carryover basis).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27238,8 +27238,8 @@ const questions = [
       "D": "Limit the deduction for distributions and the taxable amount to beneficiaries"
     },
     "correctAnswer": "D",
-    "explanation": "DNI is a ceiling on (1) the distribution deduction taken by the estate/trust, and (2) the amount taxable to beneficiaries. It prevents double taxation and ensures income is taxed once—to either the fiduciary or beneficiaries.",
-    "tip": "DNI = ceiling on distribution deduction and taxable to beneficiaries. Character flows through.",
+    "explanation": "Per IRC §643, DNI is a ceiling on (1) the distribution deduction taken by the estate/trust, and (2) the amount taxable to beneficiaries. It prevents double taxation and ensures income is taxed once—to either the fiduciary or beneficiaries. Why other answers are wrong: (A) Trustee compensation is determined by state law/trust document, not DNI; (B) Required minimum distributions apply to retirement accounts, not trusts; (C) Estate tax uses gross estate and deductions, not DNI.",
+    "tip": "§1368: DNI = ceiling on distribution deduction and taxable to beneficiaries. Character flows through.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27259,8 +27259,8 @@ const questions = [
       "D": "Married for at least 10 years"
     },
     "correctAnswer": "B",
-    "explanation": "The marital deduction is unlimited for property passing to a US citizen spouse. For non-citizen spouses, property must pass to a Qualified Domestic Trust (QDOT) to qualify for the deduction.",
-    "tip": "Marital deduction: Unlimited for US citizen spouse. Non-citizen spouse requires QDOT.",
+    "explanation": "Per IRC §2056, the marital deduction is unlimited for property passing to a US citizen spouse. For non-citizen spouses, property must pass to a Qualified Domestic Trust (QDOT) to qualify for the deduction. Why other answers are wrong: (A) Being named in the will isn't required—property can pass by operation of law; (C) Spouse need not be sole beneficiary—deduction applies to amount passing to spouse; (D) No marriage duration requirement exists for marital deduction.",
+    "tip": "§2501: Marital deduction: Unlimited for US citizen spouse. Non-citizen spouse requires QDOT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27280,8 +27280,8 @@ const questions = [
       "D": "Present interests"
     },
     "correctAnswer": "D",
-    "explanation": "The annual exclusion applies only to present interests—gifts of immediate enjoyment. Future interests (remainder interests, reversions) don't qualify. Crummey powers can convert future interests to present interests.",
-    "tip": "Annual exclusion: Present interests only. Future interest = no exclusion. Crummey power = makes it present.",
+    "explanation": "Per IRC §2503(b), the annual exclusion applies only to present interests—gifts of immediate enjoyment. Future interests (remainder interests, reversions) don't qualify. Crummey powers can convert future interests to present interests. Why other answers are wrong: (A) Testamentary transfers are at death, not lifetime gifts—different rules apply; (B) $10,000 threshold is outdated—and no minimum exists for annual exclusion; (C) Future interests don't qualify for the annual exclusion.",
+    "tip": "§§101-140: Annual exclusion: Present interests only. Future interest = no exclusion. Crummey power = makes it present.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27301,8 +27301,8 @@ const questions = [
       "D": "3 years"
     },
     "correctAnswer": "D",
-    "explanation": "The general statute of limitations for assessment is 3 years from the later of the due date or filing date. Extended to 6 years if >25% of gross income is omitted. No limit for fraud or failure to file.",
-    "tip": "Assessment SOL: 3 years (general), 6 years (>25% omission), unlimited (fraud/no return).",
+    "explanation": "Per IRC §6501, the general statute of limitations for assessment is 3 years from the later of the due date or filing date. Extended to 6 years if >25% of gross income is omitted. No limit for fraud or failure to file. Why other answers are wrong: (A) 6 years only applies when >25% gross income is omitted; (B) Unlimited period only for fraud or non-filing; (C) 1 year is too short—general period is 3 years.",
+    "tip": "§6501: Assessment SOL: 3 years (general), 6 years (>25% omission), unlimited (fraud/no return).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27322,8 +27322,8 @@ const questions = [
       "D": "Equal to the failure to pay penalty"
     },
     "correctAnswer": "B",
-    "explanation": "Failure to file: 5% per month, max 25%. Failure to pay: 0.5% per month, max 25%. When both apply, FTF is reduced by FTP amount. File on time to avoid the larger penalty!",
-    "tip": "FTF = 5%/month (25% max). FTP = 0.5%/month (25% max). FTF is 10x worse—file even if you can't pay!",
+    "explanation": "Per IRC §6651, failure to file: 5% per month, max 25%. Failure to pay: 0.5% per month, max 25%. When both apply, FTF is reduced by FTP amount. File on time to avoid the larger penalty! Why other answers are wrong: (A) 0.5%/month is failure to PAY, not failure to file; (C) 10% flat isn't correct—it's 5% per month up to 25%; (D) FTF (5%/month) is 10x more severe than FTP (0.5%/month).",
+    "tip": "IRC: FTF = 5%/month (25% max). FTP = 0.5%/month (25% max). FTF is 10x worse—file even if you can't pay!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27343,7 +27343,7 @@ const questions = [
       "D": "A contract for the sale of real property"
     },
     "correctAnswer": "D",
-    "explanation": "Statute of Frauds requires writing for: real property sales/transfers, contracts that can't be performed within 1 year, sale of goods $500+ (UCC), suretyship, and contracts in consideration of marriage.",
+    "explanation": "Per Statute of Frauds (common law and UCC §2-201), writing is required for: real property sales/transfers, contracts that can't be performed within 1 year, sale of goods $500+ (UCC), suretyship, and contracts in consideration of marriage. Why other answers are wrong: (A) At-will employment is terminable within 1 year—no writing required; (B) 6 months is under 1 year—no writing required; (C) $400 is under UCC's $500 threshold for goods.",
     "tip": "Statute of Frauds: MY LEGS (Marriage, Year+, Land, Executor, Goods $500+, Surety).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -27364,8 +27364,8 @@ const questions = [
       "D": "Collect criminal penalties"
     },
     "correctAnswer": "B",
-    "explanation": "Anticipatory breach/repudiation occurs when a party unequivocally indicates they won't perform. The non-breaching party can: treat it as immediate breach and sue, wait until performance due, or attempt to obtain assurances.",
-    "tip": "Anticipatory breach: Clear indication of non-performance. Other party can sue immediately or wait.",
+    "explanation": "Per Restatement (Second) of Contracts §253, anticipatory breach/repudiation occurs when a party unequivocally indicates they won't perform. The non-breaching party can: treat it as immediate breach and sue, wait until performance due, or attempt to obtain assurances. Why other answers are wrong: (A) Waiting is optional, not required—immediate remedies are available; (C) Specific performance requires court process after breach, not \"immediately\"; (D) Contract breach is civil, not criminal—no criminal penalties.",
+    "tip": "Common: Anticipatory breach: Clear indication of non-performance. Other party can sue immediately or wait.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27385,8 +27385,8 @@ const questions = [
       "D": "Duty to guarantee the outcome"
     },
     "correctAnswer": "C",
-    "explanation": "Agents owe fiduciary duties to principals: loyalty (no conflicts, no self-dealing, no competition), obedience (follow lawful instructions), care (reasonable skill), accounting, and notification.",
-    "tip": "Agent duties: Loyalty, obedience, care, accounting, notification. Loyalty is paramount.",
+    "explanation": "Per Restatement (Third) of Agency §8.01, agents owe fiduciary duties to principals: loyalty (no conflicts, no self-dealing, no competition), obedience (follow lawful instructions), care (reasonable skill), accounting, and notification. Why other answers are wrong: (A) Legal advice requires a law license—agents aren't required to be attorneys; (B) Agents must exercise care, not guarantee profits; (D) Agents must use reasonable efforts but don't guarantee outcomes.",
+    "tip": "Restatement: Agent duties: Loyalty, obedience, care, accounting, notification. Loyalty is paramount.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27406,8 +27406,8 @@ const questions = [
       "D": "Limited liability for all members regardless of participation in management"
     },
     "correctAnswer": "D",
-    "explanation": "LLCs provide limited liability to all members (owners) while allowing them to participate in management—combining the liability protection of corporations with the flexibility of partnerships.",
-    "tip": "LLC: Limited liability + management flexibility + pass-through taxation (default). Best of both worlds.",
+    "explanation": "Per Uniform Limited Liability Company Act (ULLCA), LLCs provide limited liability to all members (owners) while allowing them to participate in management—combining the liability protection of corporations with the flexibility of partnerships. Why other answers are wrong: (A) Unlimited liability is for general partnerships, not LLCs; (B) Public trading isn't required for LLC liability protection; (C) ALL members get limited liability, regardless of management role.",
+    "tip": "Revised: LLC: Limited liability + management flexibility + pass-through taxation (default). Best of both worlds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27427,8 +27427,8 @@ const questions = [
       "D": "Approval by a bankruptcy court"
     },
     "correctAnswer": "B",
-    "explanation": "Attachment requires: (1) value given by secured party, (2) debtor has rights in the collateral, (3) authenticated security agreement describing collateral OR secured party has possession. All three elements required.",
-    "tip": "Attachment (VRA): Value, Rights in collateral, Agreement (authenticated) or possession. Creates enforceable interest.",
+    "explanation": "Per UCC §9-203, attachment requires: (1) value given by secured party, (2) debtor has rights in the collateral, (3) authenticated security agreement describing collateral OR secured party has possession. All three elements required. Why other answers are wrong: (A) Filing perfects but doesn't create attachment—attachment comes first; (C) Possession is ONE way to satisfy the agreement requirement, not the only method; (D) Bankruptcy court approval isn't needed for attachment.",
+    "tip": "§6601: Attachment (VRA): Value, Rights in collateral, Agreement (authenticated) or possession. Creates enforceable interest.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27448,7 +27448,7 @@ const questions = [
       "D": "Transfer ownership of collateral"
     },
     "correctAnswer": "C",
-    "explanation": "Perfection gives public notice and establishes priority against other creditors. Filing a UCC-1 financing statement is the most common method. Perfection doesn't create the interest—attachment does that.",
+    "explanation": "Per UCC §9-310, perfection gives public notice and establishes priority against other creditors. Filing a UCC-1 financing statement is the most common method. Perfection doesn't create the interest—attachment under UCC §9-203 does that. Why other answers are wrong: (A) Perfection doesn't guarantee payment—it establishes priority; (B) Attachment creates the interest; perfection gives priority; (D) Perfection doesn't transfer ownership—collateral stays with debtor.",
     "tip": "Attachment = creates interest. Perfection = priority over others. File UCC-1 to perfect (usually).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -27469,8 +27469,8 @@ const questions = [
       "D": "Requires complete repayment of all debts"
     },
     "correctAnswer": "B",
-    "explanation": "Chapter 7 = liquidation (trustee sells assets, distributes to creditors, debtor discharged). Chapter 11 = reorganization (debtor continues operating under court supervision with a plan to repay creditors over time).",
-    "tip": "Ch. 7 = liquidate and close. Ch. 11 = reorganize and continue. Ch. 13 = individual wage earner reorganization.",
+    "explanation": "Per 11 U.S.C. §§701-784 (Ch. 7) and §§1101-1174 (Ch. 11), Chapter 7 = liquidation (trustee sells assets, distributes to creditors, debtor discharged). Chapter 11 = reorganization (debtor continues operating under court supervision with a plan to repay creditors over time). Why other answers are wrong: (A) Chapter 7 liquidates—Chapter 11 allows continued operation; (C) Chapter 11 is available to businesses and high-income individuals; (D) Chapter 11 doesn't require complete repayment—creditors often receive less.",
+    "tip": "§368: Ch. 7 = liquidate and close. Ch. 11 = reorganize and continue. Ch. 13 = individual wage earner reorganization.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27490,7 +27490,7 @@ const questions = [
       "D": "Marketing their services"
     },
     "correctAnswer": "A",
-    "explanation": "Circular 230 requires due diligence in: preparing returns and documents, determining correctness of oral/written representations to Treasury, and determining correctness of representations to clients about tax matters.",
+    "explanation": "Per Treasury Circular 230 §10.22, due diligence is required in: preparing returns and documents, determining correctness of oral/written representations to Treasury, and determining correctness of representations to clients about tax matters. Why other answers are wrong: (B) Fee setting isn't a due diligence requirement—it's a separate ethical issue; (C) Software selection is a business decision, not due diligence; (D) Marketing is regulated separately from due diligence requirements.",
     "tip": "Due diligence: Know the facts, determine correctness, prepare carefully. Relying on client info is OK if reasonable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
@@ -27511,8 +27511,8 @@ const questions = [
       "D": "A 10% chance of success"
     },
     "correctAnswer": "A",
-    "explanation": "For undisclosed positions: Must have substantial authority (~40% chance). For disclosed positions: Must have reasonable basis (~20% chance). 'Realistic possibility' (1 in 3, ~33%) was the old standard but still appears in some rules.",
-    "tip": "Position standards: Substantial authority (40%), Reasonable basis (20%). Disclosure lowers threshold.",
+    "explanation": "Per Treasury Circular 230, for undisclosed positions: Must have substantial authority (~40% chance). For disclosed positions: Must have reasonable basis (~20% chance). 'Realistic possibility' (1 in 3, ~33%) was the old standard but still appears in some rules. Why other answers are wrong: (B) IRS pre-approval isn't required for tax positions; (C) A favorable court ruling isn't necessary—positions below that threshold can still be taken; (D) 10% is below reasonable basis standard.",
+    "tip": "Circular: Position standards: Substantial authority (40%), Reasonable basis (20%). Disclosure lowers threshold.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27532,8 +27532,8 @@ const questions = [
       "D": "A personal residence with rental income excluded"
     },
     "correctAnswer": "B",
-    "explanation": "Personal use exceeds greater of 14 days or 10% of rental days (10 days), so deductions are limited. Expenses are allocated between personal and rental, and rental deductions are limited to rental income (no loss).",
-    "tip": "Vacation home rules: Personal use >14 days or 10% of rental days = limited deductions. Can't generate loss.",
+    "explanation": "Per IRC §280A, personal use exceeds greater of 14 days or 10% of rental days (10 days here), so deductions are limited. Expenses are allocated between personal and rental, and rental deductions are limited to rental income (no loss). Why other answers are wrong: (A) Property is rented significantly (100 days), so rental deductions apply; (C) Full deductions aren't allowed due to personal use exceeding the threshold; (D) Rental income isn't excluded—it must be reported.",
+    "tip": "§§101-140: Vacation home rules: Personal use >14 days or 10% of rental days = limited deductions. Can't generate loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -27553,8 +27553,8 @@ const questions = [
       "D": "Have rental income exceeding $25,000"
     },
     "correctAnswer": "B",
-    "explanation": "Active participants in rental real estate can deduct up to $25,000 of losses against non-passive income. This phases out $1 for every $2 of MAGI over $100,000, completely eliminated at $150,000 MAGI.",
-    "tip": "$25K allowance: Active participation + MAGI <$150K. Not same as material participation. Phases out $100K-$150K.",
+    "explanation": "Per IRC §469(i), active participants in rental real estate can deduct up to $25,000 of losses against non-passive income. This phases out $1 for every $2 of MAGI over $100,000, completely eliminated at $150,000 MAGI. Why other answers are wrong: (A) Must actively participate, not just own; (C) RE professionals escape passive rules entirely—different provision; (D) The $25K allowance is for losses, not income requirement.",
+    "tip": "IRC: $25K allowance: Active participation + MAGI <$150K. Not same as material participation. Phases out $100K-$150K.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27574,8 +27574,8 @@ const questions = [
       "D": "Mortgage interest on primary residence"
     },
     "correctAnswer": "C",
-    "explanation": "Interest on certain private activity bonds is tax-exempt for regular tax but is a preference item for AMT. Other AMT adjustments include: SALT deduction, accelerated depreciation differences, and ISO exercise spread.",
-    "tip": "AMT preferences: Private activity bond interest, ISO spread, accelerated depreciation differences.",
+    "explanation": "Per IRC §164(b)(6), interest on certain private activity bonds is tax-exempt for regular tax but is a preference item for AMT. Other AMT adjustments include: SALT deduction, accelerated depreciation differences, and ISO exercise spread.",
+    "tip": "§164: AMT preferences: Private activity bond interest, ISO spread, accelerated depreciation differences.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27595,8 +27595,8 @@ const questions = [
       "D": "At least 50% of working hours"
     },
     "correctAnswer": "C",
-    "explanation": "Home office deduction requires regular and exclusive business use AND either: (1) principal place of business, (2) place to meet clients, or (3) separate structure. Employees lost this deduction under TCJA.",
-    "tip": "Home office: Regular + exclusive use. Principal place of business OR client meetings OR separate structure.",
+    "explanation": "Per IRC §280A(c), home office deduction requires regular and exclusive business use AND either: (1) principal place of business, (2) place to meet clients, or (3) separate structure. Employees lost this deduction under TCJA. Why other answers are wrong: (A) You can have another office and still claim home office if it's principal place of business; (B) \"Primarily\" is insufficient—must be \"exclusive\" use; (D) 50% of hours isn't the test—regular and exclusive use is.",
+    "tip": "IRC: Home office: Regular + exclusive use. Principal place of business OR client meetings OR separate structure.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27616,8 +27616,8 @@ const questions = [
       "D": "Distribution to buy a car"
     },
     "correctAnswer": "A",
-    "explanation": "IRA early withdrawal exceptions include: death, disability, substantially equal periodic payments, medical expenses >7.5% AGI, health insurance while unemployed, first-time home ($10K), higher education expenses.",
-    "tip": "IRA 72(t) exceptions: Death, disability, SEPP, medical, education, first home. Roth: 5-year rule also applies.",
+    "explanation": "Per IRC §72(t), IRA early withdrawal exceptions include: death, disability, substantially equal periodic payments, medical expenses >7.5% AGI, health insurance while unemployed, first-time home ($10K), higher education expenses. Why other answers are wrong: (B) Credit card debt isn't a qualified exception; (C) Vacations aren't a qualified purpose; (D) Car purchases aren't a qualified exception.",
+    "tip": "§213: IRA 72(t) exceptions: Death, disability, SEPP, medical, education, first home. Roth: 5-year rule also applies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27637,8 +27637,8 @@ const questions = [
       "D": "Depreciate residential rental property faster"
     },
     "correctAnswer": "C",
-    "explanation": "Section 179 allows immediate expensing of qualifying property (tangible personal property, certain real property improvements) up to the annual dollar limit, subject to taxable income limitation and phase-out for total asset purchases.",
-    "tip": "Section 179: Immediate expensing up to limit. Limited to taxable income. Phases out at high purchase levels.",
+    "explanation": "Per IRC §179, Section 179 allows immediate expensing of qualifying property (tangible personal property, certain real property improvements) up to the annual dollar limit, subject to taxable income limitation and phase-out for total asset purchases. Why other answers are wrong: (A) §179 doesn't avoid recapture—asset disposition may trigger recapture; (B) Dollar limits apply—can't expense unlimited amounts; (D) Residential rental property doesn't qualify for §179.",
+    "tip": "§1001: Section 179: Immediate expensing up to limit. Limited to taxable income. Phases out at high purchase levels.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27658,8 +27658,8 @@ const questions = [
       "D": "Only property with a useful life over 20 years"
     },
     "correctAnswer": "B",
-    "explanation": "TCJA expanded bonus depreciation to 100% (phasing down after 2022) and extended it to used property for the first time. Applies to property with recovery period of 20 years or less.",
-    "tip": "Bonus depreciation: 100% (phasing down), includes used property (new under TCJA), 20-year recovery or less.",
+    "explanation": "Per IRC §168(k), TCJA expanded bonus depreciation to 100% (phasing down after 2022) and extended it to used property for the first time. Applies to property with recovery period of 20 years or less. Why other answers are wrong: (A) Real property generally doesn't qualify (except QIP); (C) TCJA extended bonus to used property—new isn't required; (D) Property with >20 year life doesn't qualify.",
+    "tip": "§1001: Bonus depreciation: 100% (phasing down), includes used property (new under TCJA), 20-year recovery or less.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27679,8 +27679,8 @@ const questions = [
       "D": "Have owned the home for at least 10 years"
     },
     "correctAnswer": "C",
-    "explanation": "Section 121 excludes up to $250,000 gain ($500,000 MFJ) if the taxpayer owned and used the home as principal residence for at least 2 of 5 years before sale. No age requirement or replacement home needed.",
-    "tip": "Section 121: 2 years owned + 2 years used (in last 5 years). $250K single, $500K MFJ. No replacement required.",
+    "explanation": "Per IRC §121, Section 121 excludes up to $250,000 gain ($500,000 MFJ) if the taxpayer owned and used the home as principal residence for at least 2 of 5 years before sale. No age requirement or replacement home needed. Why other answers are wrong: (A) No replacement home required—old law before 1997 had this requirement; (B) Age 55 was old law—current §121 has no age requirement; (D) 10-year ownership isn't required—2 of 5 years is the test.",
+    "tip": "§1001: Section 121: 2 years owned + 2 years used (in last 5 years). $250K single, $500K MFJ. No replacement required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27700,8 +27700,8 @@ const questions = [
       "D": "Exemption from all state and local taxes"
     },
     "correctAnswer": "B",
-    "explanation": "QOZ benefits: (1) Deferral of invested capital gains until 2026 or earlier sale, (2) Basis step-up after holding periods, (3) Exclusion of gain on QOF investment if held 10+ years.",
-    "tip": "QOZ: Defer gains, step-up basis over time, exclude appreciation after 10 years. Invest capital gains within 180 days.",
+    "explanation": "Per IRC §1400Z-2, QOZ benefits: (1) Deferral of invested capital gains until 2026 or earlier sale, (2) Basis step-up after holding periods, (3) Exclusion of gain on QOF investment if held 10+ years. Why other answers are wrong: (A) QOZ investment isn't immediately deductible—it's a deferral mechanism; (C) No 20% tax credit exists for QOZ; (D) QOZ doesn't exempt from state/local taxes.",
+    "tip": "§1012: QOZ: Defer gains, step-up basis over time, exclude appreciation after 10 years. Invest capital gains within 180 days.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27721,8 +27721,8 @@ const questions = [
       "D": "Indefinitely but limited to 80% of taxable income"
     },
     "correctAnswer": "D",
-    "explanation": "TCJA: NOLs carry forward indefinitely (no carryback for most NOLs) but are limited to 80% of taxable income. Pre-2018 NOLs followed 2-year back/20-year forward rules.",
-    "tip": "Post-2017 NOLs: Indefinite carryforward, 80% limit, generally no carryback. Pre-2018 NOLs had different rules.",
+    "explanation": "Per IRC §172, TCJA: NOLs carry forward indefinitely (no carryback for most NOLs) but are limited to 80% of taxable income. Pre-2018 NOLs followed 2-year back/20-year forward rules. Why other answers are wrong: (A) 5 years only is too short—post-TCJA NOLs carry indefinitely; (B) 2-back/20-forward was pre-2018 law—no longer applies; (C) 80% limit applies, not 100% offset.",
+    "tip": "§11: Post-2017 NOLs: Indefinite carryforward, 80% limit, generally no carryback. Pre-2018 NOLs had different rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27742,8 +27742,8 @@ const questions = [
       "D": "The corporation has fewer total shares outstanding"
     },
     "correctAnswer": "C",
-    "explanation": "Substantially disproportionate: (1) <50% of voting after, (2) voting % after < 80% of voting % before, (3) common stock % after < 80% of common % before. Qualifies as exchange (capital gain), not dividend.",
-    "tip": "Substantially disproportionate: <50% AND <80% of prior percentage. Meets this = exchange treatment.",
+    "explanation": "Per IRC §302(b)(2), substantially disproportionate: (1) <50% of voting after, (2) voting % after < 80% of voting % before, (3) common stock % after < 80% of common % before. Qualifies as exchange (capital gain), not dividend. Why other answers are wrong: (A) Receiving more than basis doesn't determine treatment—ownership tests do; (B) Owning any shares is allowed if tests are met; (D) Fewer total shares outstanding doesn't determine the shareholder's treatment.",
+    "tip": "§302: Substantially disproportionate: <50% AND <80% of prior percentage. Meets this = exchange treatment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -27763,8 +27763,8 @@ const questions = [
       "D": "Gain or loss equal to proceeds minus stock basis (capital treatment)"
     },
     "correctAnswer": "D",
-    "explanation": "In complete liquidation, shareholders exchange stock for liquidating distributions. Gain/loss = FMV of property received minus stock basis. Generally capital gain/loss treatment.",
-    "tip": "Complete liquidation: Exchange treatment for shareholders. Gain = FMV received - Stock basis. Capital character.",
+    "explanation": "Per IRC §331, in complete liquidation, shareholders exchange stock for liquidating distributions. Gain/loss = FMV of property received minus stock basis. Generally capital gain/loss treatment. Why other answers are wrong: (A) Gain/loss is recognized at liquidation, not deferred; (B) E&P determines dividends in ongoing distributions, not liquidation treatment; (C) Liquidation proceeds are capital, not ordinary income.",
+    "tip": "§331: Complete liquidation: Exchange treatment for shareholders. Gain = FMV received - Stock basis. Capital character.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27784,8 +27784,8 @@ const questions = [
       "D": "Pay FICA tax on the premiums with no deduction"
     },
     "correctAnswer": "C",
-    "explanation": ">2% S corp shareholder-employees can't exclude health insurance premiums. The corporation deducts the premiums, includes them in the shareholder's W-2, and the shareholder deducts as self-employed health insurance (above-the-line).",
-    "tip": ">2% S corp shareholder: Health insurance on W-2, then deduct above-the-line (like self-employed).",
+    "explanation": "Per IRC §1372, >2% S corp shareholder-employees can't exclude health insurance premiums. The corporation deducts the premiums, includes them in the shareholder's W-2, and the shareholder deducts as self-employed health insurance (above-the-line). Why other answers are wrong: (A) Premiums are wages, not dividends; (B) >2% shareholders can't exclude premiums like regular employees; (D) FICA doesn't apply to these premiums, and a deduction IS allowed.",
+    "tip": "IRC: >2% S corp shareholder: Health insurance on W-2, then deduct above-the-line (like self-employed).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27805,8 +27805,8 @@ const questions = [
       "D": "A net operating loss"
     },
     "correctAnswer": "C",
-    "explanation": "S status terminates when eligibility requirements are violated: exceeding 100 shareholders, having an ineligible shareholder (partnership, corporation, NRA), issuing a second class of stock, or late filing of required forms.",
-    "tip": "S termination: Ineligible shareholder, >100 shareholders, second class of stock. Careful with trust/entity shareholders!",
+    "explanation": "Per IRC §1362(d), S status terminates when eligibility requirements are violated: exceeding 100 shareholders, having an ineligible shareholder (partnership, corporation, NRA), issuing a second class of stock, or late filing of required forms. Why other answers are wrong: (A) Multiple locations don't affect S status; (B) Shareholder death doesn't terminate—estate can be shareholder; (D) NOLs don't terminate S status.",
+    "tip": "§1362: S termination: Ineligible shareholder, >100 shareholders, second class of stock. Careful with trust/entity shareholders!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27826,8 +27826,8 @@ const questions = [
       "D": "Increases the partner's outside basis"
     },
     "correctAnswer": "D",
-    "explanation": "Partnership liabilities increase partners' outside basis because the partner may ultimately be required to contribute capital to pay the debt. Recourse liabilities are allocated to partners who bear economic risk of loss.",
-    "tip": "Partnership debt increases outside basis. Recourse = who bears risk. Nonrecourse = generally by profit sharing.",
+    "explanation": "Per IRC §752, partnership liabilities increase partners' outside basis because the partner may ultimately be required to contribute capital to pay the debt. Recourse liabilities are allocated to partners who bear economic risk of loss. Why other answers are wrong: (A) Liabilities increase basis, not decrease; (B) Recourse allocated by economic risk, not equally; (C) Liabilities definitely affect basis—they're treated like contributions.",
+    "tip": "Revised: Partnership debt increases outside basis. Recourse = who bears risk. Nonrecourse = generally by profit sharing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27847,8 +27847,8 @@ const questions = [
       "D": "Adjusts the basis of partnership assets for the purchasing partner"
     },
     "correctAnswer": "D",
-    "explanation": "Section 754 allows basis adjustment to partnership assets when interests are transferred or distributions occur. This prevents the new partner from being taxed on built-in gain that existed before they purchased.",
-    "tip": "754 election: Adjusts inside basis to reflect purchase price. Prevents double taxation of built-in gain/loss.",
+    "explanation": "Per IRC §754 and §743(b), Section 754 allows basis adjustment to partnership assets when interests are transferred or distributions occur. This prevents the new partner from being taxed on built-in gain that existed before they purchased. Why other answers are wrong: (A) Partnership doesn't recognize gain—the adjustment is to inside basis; (B) Sale of interest doesn't terminate partnership; (C) Liquidation isn't required—754 allows continued operation with adjusted basis.",
+    "tip": "UCC: 754 election: Adjusts inside basis to reflect purchase price. Prevents double taxation of built-in gain/loss.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27868,8 +27868,8 @@ const questions = [
       "D": "All debts of the decedent"
     },
     "correctAnswer": "A",
-    "explanation": "Executors have personal liability for estate taxes if they distribute assets before ensuring taxes are paid. They should obtain a discharge from personal liability or retain assets sufficient to cover potential tax.",
-    "tip": "Executor liability: Distribute before paying taxes = personal liability. Get discharge from IRS to protect yourself.",
+    "explanation": "Per IRC §6901, executors have personal liability for estate taxes if they distribute assets before ensuring taxes are paid. They should obtain a discharge from personal liability or retain assets sufficient to cover potential tax. Why other answers are wrong: (B) Executor liability extends beyond estate assets if taxes not paid first; (C) Federal estate tax liability applies, not just state; (D) Executors aren't liable for all decedent debts—transferee liability is specific to taxes.",
+    "tip": "§727: Executor liability: Distribute before paying taxes = personal liability. Get discharge from IRS to protect yourself.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27889,8 +27889,8 @@ const questions = [
       "D": "Transfer of unused exemption to surviving spouse if timely election filed"
     },
     "correctAnswer": "D",
-    "explanation": "Portability allows the surviving spouse to use the deceased spouse's unused exemption amount. An election must be made on a timely filed estate tax return (Form 706), even if no tax is due.",
-    "tip": "Portability: Must elect on timely Form 706. Not automatic! File even if no tax due to preserve DSUE.",
+    "explanation": "Per IRC §2010(c)(5), portability allows the surviving spouse to use the deceased spouse's unused exemption amount. An election must be made on a timely filed estate tax return (Form 706), even if no tax is due. Why other answers are wrong: (A) DSUE goes to surviving spouse, not beneficiaries; (B) Not indefinite—limited to last deceased spouse and requires timely election; (C) Not automatic—must elect on Form 706.",
+    "tip": "§§101-140: Portability: Must elect on timely Form 706. Not automatic! File even if no tax due to preserve DSUE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27910,8 +27910,8 @@ const questions = [
       "D": "The IRS always allows a 30% discount"
     },
     "correctAnswer": "C",
-    "explanation": "Minority interest discounts (lack of control) and marketability discounts (not easily sold) may reduce FMV for gift tax purposes. These must be supportable by appraisal and are subject to IRS scrutiny.",
-    "tip": "Valuation discounts: Minority interest, lack of marketability. Supportable by appraisal. IRS often challenges.",
+    "explanation": "Per IRC §2512 and Treas. Reg. §25.2512-1, minority interest discounts (lack of control) and marketability discounts (not easily sold) may reduce FMV for gift tax purposes. These must be supportable by appraisal and are subject to IRS scrutiny. Why other answers are wrong: (A) No automatic family discount—discounts must be substantiated; (B) Private companies qualify—public stock is easily valued/sold; (D) No fixed 30% discount—each situation requires appraisal.",
+    "tip": "§2501: Valuation discounts: Minority interest, lack of marketability. Supportable by appraisal. IRS often challenges.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27931,8 +27931,8 @@ const questions = [
       "D": "Direct access to Supreme Court"
     },
     "correctAnswer": "B",
-    "explanation": "The IRS Office of Appeals provides administrative review before litigation. Appeals officers have settlement authority and can consider hazards of litigation. Most disputes are resolved at Appeals without court.",
-    "tip": "IRS Appeals: Administrative review before court. Settlement authority. Resolves most disputes.",
+    "explanation": "Per IRC §7803(e), the IRS Office of Appeals provides administrative review before litigation. Appeals officers have settlement authority and can consider hazards of litigation. Most disputes are resolved at Appeals without court. Why other answers are wrong: (A) No automatic penalty abatement—appeals review the merits; (C) Congressional hearings aren't part of tax dispute process; (D) Must go through lower courts first—no direct Supreme Court access.",
+    "tip": "§7442: IRS Appeals: Administrative review before court. Settlement authority. Resolves most disputes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27952,8 +27952,8 @@ const questions = [
       "D": "50% of the total tax due"
     },
     "correctAnswer": "C",
-    "explanation": "The civil fraud penalty is 75% of the portion of the underpayment attributable to fraud. The burden of proof is on the IRS to prove fraud by clear and convincing evidence. No statute of limitations for fraud.",
-    "tip": "Fraud penalty = 75%. IRS must prove fraud. No SOL for fraud. Criminal fraud = separate prosecution.",
+    "explanation": "Per IRC §6663, the civil fraud penalty is 75% of the portion of the underpayment attributable to fraud. The burden of proof is on the IRS to prove fraud by clear and convincing evidence. No statute of limitations for fraud. Why other answers are wrong: (A) Fraud penalty is percentage-based, not flat $10,000; (B) 20% is the accuracy-related penalty, not fraud; (D) 50% of total tax isn't the fraud calculation—it's 75% of the fraudulent underpayment.",
+    "tip": "IRC: Fraud penalty = 75%. IRS must prove fraud. No SOL for fraud. Criminal fraud = separate prosecution.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -27973,8 +27973,8 @@ const questions = [
       "D": "All oral testimony in court"
     },
     "correctAnswer": "A",
-    "explanation": "The parol evidence rule excludes evidence of prior or contemporaneous agreements that contradict a fully integrated written contract. Exceptions: fraud, mistake, ambiguity, subsequent modifications.",
-    "tip": "Parol evidence: Can't use prior/contemporaneous evidence to contradict final written contract. Exceptions exist.",
+    "explanation": "Per Restatement (Second) of Contracts §213, the parol evidence rule excludes evidence of prior or contemporaneous agreements that contradict a fully integrated written contract. Exceptions: fraud, mistake, ambiguity, subsequent modifications. Why other answers are wrong: (B) Written contracts ARE enforceable—the rule protects them; (C) Parties can modify contracts—subsequent agreements are allowed; (D) Oral testimony is allowed for exceptions like fraud, ambiguity.",
+    "tip": "§1374: Parol evidence: Can't use prior/contemporaneous evidence to contradict final written contract. Exceptions exist.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -27994,7 +27994,7 @@ const questions = [
       "D": "Payment must be made before inspection"
     },
     "correctAnswer": "C",
-    "explanation": "Under UCC perfect tender, if goods or delivery fail to conform to the contract in any respect, the buyer may: reject all, accept all, or accept some and reject others. More strict than common law substantial performance.",
+    "explanation": "Per UCC §2-601, under perfect tender, if goods or delivery fail to conform to the contract in any respect, the buyer may: reject all, accept all, or accept some and reject others. More strict than common law substantial performance. Why other answers are wrong: (A) No 24-hour delivery requirement exists; (B) Substantial performance is common law—UCC requires perfect tender; (D) Buyer generally may inspect before payment.",
     "tip": "UCC perfect tender: Exact conformity required. Buyer can reject non-conforming goods. Seller may have right to cure.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -28015,8 +28015,8 @@ const questions = [
       "D": "The agent claims to have authority"
     },
     "correctAnswer": "C",
-    "explanation": "Apparent authority arises from the principal's conduct that leads a reasonable third party to believe the agent has authority. The principal is bound even if actual authority was never granted.",
-    "tip": "Apparent authority: Principal's conduct → Third party's reasonable belief. Binds principal even without actual authority.",
+    "explanation": "Per Restatement (Third) of Agency §2.03, apparent authority arises from the principal's conduct that leads a reasonable third party to believe the agent has authority. The principal is bound even if actual authority was never granted. Why other answers are wrong: (A) Ratification is a separate concept—creates authority after the fact; (B) Written actual authority is different from apparent authority; (D) Agent's claims alone don't create apparent authority—principal's conduct is key.",
+    "tip": "§691: Apparent authority: Principal's conduct → Third party's reasonable belief. Binds principal even without actual authority.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28036,7 +28036,7 @@ const questions = [
       "D": "The corporation has more than 10 shareholders"
     },
     "correctAnswer": "C",
-    "explanation": "Veil piercing occurs when: (1) corporate formalities ignored, (2) undercapitalization, (3) commingling of funds, (4) corporation used as alter ego or to perpetrate fraud. Courts look at the totality of circumstances.",
+    "explanation": "Under common law alter ego doctrine, veil piercing occurs when: (1) corporate formalities ignored, (2) undercapitalization, (3) commingling of funds, (4) corporation used as alter ego or to perpetrate fraud. Courts look at the totality of circumstances. Why other answers are wrong: (A) Operating in multiple states doesn't trigger veil piercing—that's normal business; (B) Earning profits doesn't support piercing—it shows proper business purpose; (D) Number of shareholders is irrelevant to veil piercing analysis.",
     "tip": "Veil piercing: Ignore formalities + undercapitalize + commingle funds + fraud = lose liability protection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -28057,8 +28057,8 @@ const questions = [
       "D": "All sales of securities"
     },
     "correctAnswer": "A",
-    "explanation": "Rule 10b-5 is the primary antifraud provision for securities. It prohibits: material misstatements/omissions, manipulative devices, and deceptive practices in connection with the purchase or sale of any security.",
-    "tip": "10b-5: Antifraud rule. Material misrepresentation or omission + scienter + in connection with buy/sell.",
+    "explanation": "Per Securities Exchange Act §10(b), Rule 10b-5, rule 10b-5 is the primary antifraud provision for securities. It prohibits: material misstatements/omissions, manipulative devices, and deceptive practices in connection with the purchase or sale of any security.",
+    "tip": "§10: 10b-5: Antifraud rule. Material misrepresentation or omission + scienter + in connection with buy/sell.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28078,8 +28078,8 @@ const questions = [
       "D": "Loans from shareholders"
     },
     "correctAnswer": "B",
-    "explanation": "Bankruptcy claim priority: (1) Secured claims (to extent of collateral), (2) Priority claims (admin expenses, wages, taxes), (3) General unsecured. Administrative expenses preserve estate value and are paid first.",
-    "tip": "Bankruptcy priority: Secured → Priority (admin, wages, taxes) → General unsecured → Equity.",
+    "explanation": "Per 11 U.S.C. §507, bankruptcy claim priority: (1) Secured claims (to extent of collateral), (2) Priority claims (admin expenses, wages, taxes), (3) General unsecured. Administrative expenses preserve estate value and are paid first among unsecured claims. Why other answers are wrong: (A) Trade payables are general unsecured—lower priority; (C) Unsecured bonds are general unsecured—same as trade payables; (D) Shareholder loans are often subordinated or equity—lowest priority.",
+    "tip": "§2-508: Bankruptcy priority: Secured → Priority (admin, wages, taxes) → General unsecured → Equity.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28099,8 +28099,8 @@ const questions = [
       "D": "Can never be held liable"
     },
     "correctAnswer": "C",
-    "explanation": "A surety is primarily liable—the creditor can pursue the surety immediately without first attempting collection from the debtor. A guarantor has secondary liability—creditor must first try to collect from the debtor.",
-    "tip": "Surety = primary liability (joint with debtor). Guarantor = secondary liability (after debtor defaults).",
+    "explanation": "Per Restatement (Third) of Suretyship §1, a surety is primarily liable—the creditor can pursue the surety immediately without first attempting collection from the debtor. A guarantor has secondary liability—creditor must first try to collect from the debtor. Why other answers are wrong: (A) Any party can be a surety, not just financial institutions; (B) Secondary liability describes a guarantor, not surety; (D) Sureties can definitely be held liable—that's their purpose.",
+    "tip": "§6502: Surety = primary liability (joint with debtor). Guarantor = secondary liability (after debtor defaults).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28120,8 +28120,8 @@ const questions = [
       "D": "Discuss potential penalties"
     },
     "correctAnswer": "B",
-    "explanation": "Written advice must not: (1) be based on unreasonable factual/legal assumptions, (2) unreasonably rely on client representations, (3) consider relevant facts the practitioner knows or should know, (4) take into account all relevant federal tax issues.",
-    "tip": "Written advice: No unreasonable assumptions, don't ignore known facts, consider all relevant issues.",
+    "explanation": "Per Treasury Circular 230 §10.37, written advice must not: (1) be based on unreasonable factual/legal assumptions, (2) unreasonably rely on client representations, (3) ignore relevant facts the practitioner knows or should know, (4) fail to consider all relevant federal tax issues. Why other answers are wrong: (A) Written advice IS provided to clients—that's its purpose; (C) Opinions are expected—the concern is their basis; (D) Penalty discussion may be required in certain advice.",
+    "tip": "Circular: Written advice: No unreasonable assumptions, don't ignore known facts, consider all relevant issues.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28141,8 +28141,8 @@ const questions = [
       "D": "Any taxpayer for their own return only"
     },
     "correctAnswer": "A",
-    "explanation": "Full practice rights before IRS: CPAs, attorneys, and enrolled agents. Enrolled actuaries limited to certain matters. Registered tax return preparers have limited rights (returns they prepared, examinations only).",
-    "tip": "Full IRS practice: CPA, attorney, enrolled agent. Others have limited rights.",
+    "explanation": "Per Treasury Circular 230 §10.3, full practice rights before IRS: CPAs, attorneys, and enrolled agents. Enrolled actuaries limited to certain matters. Registered tax return preparers have limited rights (returns they prepared, examinations only). Why other answers are wrong: (B) Must have credentials—not any accountant; (C) Registered preparers have LIMITED rights, not all matters; (D) Taxpayers can represent themselves, but the question asks who may practice in all matters.",
+    "tip": "Circular: Full IRS practice: CPA, attorney, enrolled agent. Others have limited rights.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -28162,8 +28162,8 @@ const questions = [
       "D": "All income of children under 18"
     },
     "correctAnswer": "A",
-    "explanation": "The kiddie tax applies parents' top marginal rate to net unearned income of children under 19 (or under 24 if full-time students) above a threshold amount. Prevents shifting investment income to children's lower brackets.",
-    "tip": "Kiddie tax: Unearned income > threshold taxed at parents' rate. Under 19 (or 24 if student).",
+    "explanation": "Per IRC §1(g), the kiddie tax applies parents' top marginal rate to net unearned income of children under 19 (or under 24 if full-time students) above a threshold amount. Prevents shifting investment income to children's lower brackets. Why other answers are wrong: (B) Earned income is taxed at child's rate, not parents' rate; (C) Investment losses aren't taxed—the kiddie tax applies to income; (D) Not all income is taxed at parents' rate—only unearned income above threshold.",
+    "tip": "IRC: Kiddie tax: Unearned income > threshold taxed at parents' rate. Under 19 (or 24 if student).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28183,8 +28183,8 @@ const questions = [
       "D": "Exclude all foreign income"
     },
     "correctAnswer": "C",
-    "explanation": "Taxpayers may elect to either credit or deduct foreign taxes (itemized deduction). The credit is usually more beneficial but is limited to US tax on foreign income. The election applies to all foreign taxes for the year.",
-    "tip": "Foreign tax: Credit (usually better, limited) OR deduction (no limit but less valuable). Can't do both.",
+    "explanation": "Per IRC §901 and §164, taxpayers may elect to either credit or deduct foreign taxes (itemized deduction). The credit is usually more beneficial but is limited to US tax on foreign income. The election applies to all foreign taxes for the year. Why other answers are wrong: (A) Taxpayers don't receive refunds from foreign countries through US tax treatment; (B) Deduction IS available as an alternative to credit; (D) Foreign earned income exclusion (§911) is separate from foreign tax treatment.",
+    "tip": "§§161-199: Foreign tax: Credit (usually better, limited) OR deduction (no limit but less valuable). Can't do both.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28204,8 +28204,8 @@ const questions = [
       "D": "The taxpayer's AGI"
     },
     "correctAnswer": "C",
-    "explanation": "At-risk amount includes: cash invested, adjusted basis of property contributed, and amounts borrowed for which the taxpayer is personally liable (recourse) or has pledged other property. Nonrecourse debt generally not included.",
-    "tip": "At-risk = cash + property basis + recourse debt. Generally excludes nonrecourse debt. Limits losses.",
+    "explanation": "Per IRC §465, at-risk amount includes: cash invested, adjusted basis of property contributed, and amounts borrowed for which the taxpayer is personally liable (recourse) or has pledged other property. Nonrecourse debt generally not included. Why other answers are wrong: (A) 50% of gross income isn't the at-risk calculation; (B) FMV of assets isn't the measure—it's invested amounts and recourse debt; (D) AGI isn't used in at-risk calculations.",
+    "tip": "§1012: At-risk = cash + property basis + recourse debt. Generally excludes nonrecourse debt. Limits losses.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28225,8 +28225,8 @@ const questions = [
       "D": "Any ownership connection between corporations"
     },
     "correctAnswer": "A",
-    "explanation": "Affiliated group: Common parent owns directly 80%+ of vote and value of at least one subsidiary, with the group owning 80%+ of all includible corporations. S corps, foreign corps, and certain others excluded.",
-    "tip": "Consolidated return: 80% vote + 80% value affiliation. All must elect. S corps and foreign corps excluded.",
+    "explanation": "Per IRC §1504, affiliated group: Common parent owns directly 80%+ of vote and value of at least one subsidiary, with the group owning 80%+ of all includible corporations. S corps, foreign corps, and certain others excluded. Why other answers are wrong: (B) 50% ownership isn't sufficient—80% vote and value required; (C) Same state isn't required—can be in different states; (D) \"Any ownership\" is too vague—specific 80% thresholds apply.",
+    "tip": "§1501: Consolidated return: 80% vote + 80% value affiliation. All must elect. S corps and foreign corps excluded.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -28246,8 +28246,8 @@ const questions = [
       "D": "10% of gross receipts"
     },
     "correctAnswer": "A",
-    "explanation": "If an S corp has accumulated E&P from C years and passive investment income exceeds 25% of gross receipts, a corporate-level tax applies to excess net passive income. Three consecutive years = S termination.",
-    "tip": "S corp passive income: >25% of receipts + C corp E&P = tax. 3 consecutive years = S termination.",
+    "explanation": "Per IRC §1375, if an S corp has accumulated E&P from C years and passive investment income exceeds 25% of gross receipts, a corporate-level tax applies to excess net passive income. Three consecutive years = S termination under §1362(d)(3). Why other answers are wrong: (B) 50% isn't the threshold—25% triggers the tax; (C) Any amount doesn't trigger tax—must exceed 25% and have C corp E&P; (D) 10% isn't the threshold.",
+    "tip": "§1362: S corp passive income: >25% of receipts + C corp E&P = tax. 3 consecutive years = S termination.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   }
