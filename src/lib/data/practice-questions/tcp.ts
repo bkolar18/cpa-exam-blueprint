@@ -2962,8 +2962,8 @@ const questions = [
       "D": "Limited liability for all partners"
     },
     "correctAnswer": "A",
-    "explanation": "Partnerships provide pass-through taxation where income is taxed only at the partner level, avoiding double taxation. Limited liability depends on the entity type (LP, LLP, LLC), not tax classification. Tax rates depend on partner status. Partnership returns can be complex due to allocation requirements.",
-    "tip": "Partnership = pass-through (no entity tax). C corp = double tax potential (entity + shareholder).",
+    "explanation": "Per IRC §701, partnerships are pass-through entities where income is taxed only at the partner level per §702, avoiding the double taxation of C corporations (corporate tax under §11 plus shareholder dividend tax under §1(h)(11)). Per §701, a partnership is not subject to income tax; partners are taxable on their distributive share per §702. Why other answers are wrong: (B) Partnership income is taxed at individual rates (up to 37%), which may exceed C corp 21% rate; (C) Partnership returns (Form 1065) can be complex due to Subchapter K allocation rules; (D) Limited liability depends on entity type (LP, LLP, LLC), not tax classification.",
+    "tip": "IRC §701: Partnership = pass-through (no entity tax). §702: Partners taxed on distributive share. C corp = potential double tax.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -2983,8 +2983,8 @@ const questions = [
       "D": "Tax-free if the partner receives an 80% interest"
     },
     "correctAnswer": "C",
-    "explanation": "Under Section 721, property contributions to a partnership are generally tax-free without any control requirement (unlike Section 351 for corporations which requires 80% control). Partners take carryover basis in their interest. Exceptions exist for contributions of services, certain disguised sales, and debt in excess of basis.",
-    "tip": "Partnership contributions = no control test (unlike Section 351). Generally tax-free regardless of % received.",
+    "explanation": "Per IRC §721(a), no gain or loss is recognized when property is contributed to a partnership in exchange for an interest, regardless of the percentage received. This differs from §351 (corporations), which requires 80% control per §368(c). Per §722, the contributing partner takes a carryover basis equal to the property's adjusted basis. Exceptions per §721(b): contributions to investment partnerships (gain recognized), services (§83 applies), disguised sales per §707(a)(2)(B), and liabilities exceeding basis per §752. Why other answers are wrong: (A) Liability assumption can trigger gain only if net relief exceeds basis; (B) Contributions are not taxable events (unlike sales); (D) The 80% control test applies to §351 corporate formations, not partnerships.",
+    "tip": "IRC §721: Partnership contributions = tax-free, NO control test required. §722: Carryover basis. Compare to §351 (80% control).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3004,8 +3004,8 @@ const questions = [
       "D": "Gross income only"
     },
     "correctAnswer": "A",
-    "explanation": "A partner's outside basis includes capital contributions, share of income, and share of partnership liabilities (both recourse and nonrecourse under Section 752). This differs from S corporations where shareholders generally do not include their share of entity debt in basis.",
-    "tip": "Partnership basis includes share of ALL partnership debt. S corp basis includes only direct shareholder loans.",
+    "explanation": "Per IRC §752(a), an increase in a partner's share of partnership liabilities is treated as a cash contribution, increasing outside basis. Per Reg. §1.752-1 through §1.752-3, both recourse liabilities (allocated based on economic risk of loss) and nonrecourse liabilities (allocated based on minimum gain, §704(c) gain, and profit ratios) increase partner basis. This is a key partnership advantage over S corporations, where shareholders only get basis for direct loans per §1366(d)(1)(B). Why other answers are wrong: (B) Expenses don't directly constitute basis components; (C) Section 704(b) book capital accounts are different from tax outside basis; (D) Gross income alone doesn't define basis - it's one component along with contributions and liabilities.",
+    "tip": "IRC §752: Partner basis includes ALL partnership debt (recourse and nonrecourse). S corp = direct loans only per §1366(d)(1)(B).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3025,8 +3025,8 @@ const questions = [
       "D": "Must be made in proportion to ownership percentages"
     },
     "correctAnswer": "C",
-    "explanation": "Partnerships have flexibility to make special allocations (different from ownership percentages) if the allocations have substantial economic effect under Section 704(b). This means allocations must affect the partners' economic interests (through capital accounts and liquidation rights), not just tax benefits.",
-    "tip": "Special allocations allowed if substantial economic effect. Must affect real economics, not just taxes.",
+    "explanation": "Per IRC §704(b), allocations of partnership items are respected if they have substantial economic effect per Reg. §1.704-1(b)(2). This allows partnerships to allocate income, gain, loss, and deductions differently than ownership percentages - a key advantage over S corporations (which must allocate pro-rata per §1377(a)). Per Reg. §1.704-1(b)(2)(ii), economic effect requires: (1) capital account maintenance, (2) liquidation per capital accounts, and (3) deficit restoration obligation (or qualified income offset). Why other answers are wrong: (A) Capital contribution ratios are not required; (B) Equal allocation is not required; (D) Ownership percentage allocation is required for S corps, not partnerships.",
+    "tip": "IRC §704(b): Special allocations allowed if substantial economic effect. Key partnership advantage over S corps (pro-rata only).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3046,8 +3046,8 @@ const questions = [
       "D": "Subject to self-employment tax"
     },
     "correctAnswer": "B",
-    "explanation": "Current cash distributions are tax-free to the extent of the partner's outside basis. Cash distributed in excess of basis is treated as gain from the sale of the partnership interest (typically capital gain). This allows partners to withdraw previously-taxed income without additional tax.",
-    "tip": "Partnership cash distribution: tax-free up to basis, capital gain on excess.",
+    "explanation": "Per IRC §731(a)(1), gain is recognized on a cash distribution only to the extent it exceeds the partner's outside basis - the distribution is tax-free up to basis. Per §731(a), gain from excess cash distribution is treated as gain from sale of the partnership interest (typically capital gain, subject to §751 hot asset rules). Per §733, basis is reduced by cash distributed (but not below zero). This allows withdrawal of previously-taxed pass-through income without additional tax. Why other answers are wrong: (A) Distributions are not ordinary income - they reduce basis first; (C) Gain character is determined by §741/§751, usually capital; (D) Distributions are not subject to SE tax (unlike distributive share).",
+    "tip": "IRC §731: Cash distribution = tax-free up to basis. Excess = gain from sale of interest. §733: Basis reduced by cash.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3067,8 +3067,8 @@ const questions = [
       "D": "Exempt from self-employment tax"
     },
     "correctAnswer": "A",
-    "explanation": "A general partner's distributive share of ordinary trade or business income is subject to self-employment tax. Limited partners are generally exempt from SE tax on their distributive share (except for guaranteed payments for services). This is a key difference from S corporation treatment.",
-    "tip": "General partners = SE tax on ordinary income. Limited partners = generally exempt (except guaranteed payments).",
+    "explanation": "Per IRC §1402(a), a general partner's distributive share of ordinary partnership income from a trade or business is included in net earnings from self-employment. Per §1402(a)(13), limited partners are generally exempt from SE tax on their distributive share (except for guaranteed payments per §707(c)). This differs from S corporations where distributions are not subject to SE tax per §1402(a)(2), making S corp election beneficial for SE tax savings. Why other answers are wrong: (B) Partners are not employees - FICA withholding does not apply; they pay SE tax directly; (C) Ordinary partnership income is taxed at ordinary rates, not capital gain rates; (D) General partners ARE subject to SE tax on ordinary income.",
+    "tip": "IRC §1402(a): General partners = SE tax on ordinary income. §1402(a)(13): Limited partners exempt. Compare to S corp §1402(a)(2) exclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -3088,8 +3088,8 @@ const questions = [
       "D": "Deductible by the partnership and treated as self-employment income to the partner"
     },
     "correctAnswer": "D",
-    "explanation": "Guaranteed payments for services are deductible by the partnership (reducing ordinary income to other partners) and reported as ordinary/self-employment income to the receiving partner. They are determined without regard to partnership income. The partner is not treated as an employee, so no withholding applies.",
-    "tip": "Guaranteed payments: deductible by partnership, SE income to partner. No employment tax withholding - partner pays SE tax.",
+    "explanation": "Per IRC §707(c), guaranteed payments for services are determined without regard to partnership income and are deductible by the partnership under §162 (reducing ordinary income allocated to other partners). Per §707(c) and §1402(a), the receiving partner reports guaranteed payments as ordinary income subject to SE tax. Per Reg. §1.707-1(c), the partner is not treated as an employee, so no FICA withholding applies - the partner pays SE tax on Schedule SE. Why other answers are wrong: (A) Guaranteed payments ARE deductible by the partnership; (B) Guaranteed payments are ordinary income, not capital gain; (C) They are not added to capital accounts - they are compensation for services.",
+    "tip": "IRC §707(c): Guaranteed payments = deductible by partnership, SE income to partner. No withholding - not employee status.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3109,8 +3109,8 @@ const questions = [
       "D": "Capital contribution percentages"
     },
     "correctAnswer": "A",
-    "explanation": "Nonrecourse liabilities are allocated in three tiers: (1) first to partners with minimum gain, (2) then to partners per Section 704(c) built-in gain allocation, (3) finally to all partners based on profit-sharing ratios. Since no partner bears economic risk for nonrecourse debt, it's shared based on minimum gain and profits.",
-    "tip": "Nonrecourse debt allocation: minimum gain first, 704(c) second, then profit ratios. No economic risk = shared allocation.",
+    "explanation": "Per Reg. §1.752-3(a), nonrecourse liabilities are allocated in three tiers: (1) first to partners to extent of partnership minimum gain per §1.704-2(g), (2) then to partners per §704(c) built-in gain allocations, (3) finally to partners based on their share of partnership profits per the partnership agreement. Since no partner bears economic risk of loss for nonrecourse debt, allocation is based on these factors rather than the constructive liquidation test used for recourse debt per §1.752-2. Why other answers are wrong: (B) Economic risk of loss applies to recourse liabilities per §1.752-2, not nonrecourse; (C) Voting percentages are not a factor in liability allocation; (D) Capital contributions don't determine nonrecourse allocation - profit ratios do (for tier 3).",
+    "tip": "Reg. §1.752-3: Nonrecourse = minimum gain → §704(c) → profit ratios. No economic risk test (that's for recourse per §1.752-2).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3130,8 +3130,8 @@ const questions = [
       "D": "Reduces the selling partner's gain"
     },
     "correctAnswer": "C",
-    "explanation": "A Section 754 election allows the partnership to adjust the basis of its assets with respect to a transferee partner (Section 743(b) adjustment). This prevents the new partner from being taxed on gain already paid for in the purchase price. Without 754, the new partner would share in gain when appreciated assets are sold.",
-    "tip": "Section 754 protects new partners from double tax on gain already paid for. Creates inside basis adjustment.",
+    "explanation": "Per IRC §754 and §743(b), when a partnership interest is transferred and a §754 election is in effect, the partnership adjusts the basis of its assets with respect to the transferee partner. The adjustment equals the difference between the transferee's outside basis and their share of inside basis. This prevents double taxation - without §754, the new partner would be taxed on gain already economically paid for in the purchase price. The adjustment is personal to the transferee per §743(b). Why other answers are wrong: (A) Section 754 does not eliminate Form 1065 filing requirements; (B) It does not affect profit allocations - only asset basis; (D) It does not reduce the seller's gain - only protects the buyer.",
+    "tip": "IRC §754/§743(b): Stepped-up inside basis for new partner. Prevents double tax on pre-acquisition appreciation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3151,8 +3151,8 @@ const questions = [
       "D": "The distribution occurs within 2 years and is not subject to entrepreneurial risk"
     },
     "correctAnswer": "D",
-    "explanation": "Under the disguised sale rules (Section 707(a)(2)(B)), a contribution and related distribution within 2 years may be recharacterized as a sale, requiring gain recognition. A presumption of disguised sale applies if the distribution occurs within 2 years and the distribution is not subject to the entrepreneurial risks of partnership operations.",
-    "tip": "Disguised sale: contribution + distribution within 2 years presumed a sale. After 2 years, presumed not a sale.",
+    "explanation": "Per IRC §707(a)(2)(B) and Reg. §1.707-3, a contribution of property followed by a related distribution may be recharacterized as a disguised sale. Per Reg. §1.707-3(c), distributions within 2 years of contribution are presumed to be part of a sale unless the distribution is subject to entrepreneurial risks of partnership operations. Per Reg. §1.707-3(d), distributions after 2 years are presumed NOT to be a sale. The presumptions can be rebutted based on facts and circumstances. Why other answers are wrong: (A) The 50% interest threshold is not the test - timing and entrepreneurial risk matter; (B) Holding period before contribution is irrelevant; (C) Distributions AFTER 7 years relates to mixing bowl rules (§704(c)(1)(B)/§737), not disguised sales.",
+    "tip": "IRC §707(a)(2)(B): Disguised sale presumption = distribution within 2 years. >2 years = presumed not a sale (rebuttable).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3172,8 +3172,8 @@ const questions = [
       "D": "Reduction of the contributing partner's capital account"
     },
     "correctAnswer": "B",
-    "explanation": "Section 704(c) prevents shifting of pre-contribution gains or losses to other partners. When property with built-in gain or loss is contributed and later sold, the pre-contribution gain or loss must be allocated to the contributing partner. Several methods (traditional, curative, remedial) accomplish this.",
-    "tip": "704(c) = contributing partner keeps their built-in gain/loss. Prevents shifting tax attributes to other partners.",
+    "explanation": "Per IRC §704(c)(1)(A), when property with built-in gain or loss is contributed to a partnership, the partnership must allocate items of income, gain, loss, and deduction so that the contributing partner is allocated the pre-contribution gain or loss when the property is sold or depreciated. Per Reg. §1.704-3, three methods are available: traditional, curative, and remedial. This prevents shifting tax attributes to non-contributing partners. Why other answers are wrong: (A) Built-in gain is not recognized immediately at contribution per §721; (C) Equal sharing would shift the contributor's built-in gain to others; (D) Capital accounts are adjusted for book purposes, but §704(c) governs tax allocations.",
+    "tip": "IRC §704(c): Built-in gain/loss stays with contributor. Methods: traditional, curative, remedial per Reg. §1.704-3.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3193,8 +3193,8 @@ const questions = [
       "D": "The highest capital account balance"
     },
     "correctAnswer": "A",
-    "explanation": "Recourse liabilities are allocated to partners who bear the economic risk of loss, determined by a constructive liquidation test. A partner bears economic risk of loss if they would be obligated to make payment without right of reimbursement if the partnership constructively liquidated.",
-    "tip": "Recourse debt → to partner with economic risk of loss (often general partners, guarantors).",
+    "explanation": "Per Reg. §1.752-2(a), recourse liabilities are allocated to the partner(s) who bear the economic risk of loss. Per Reg. §1.752-2(b), this is determined using a constructive liquidation test: assume all assets become worthless, liabilities are due, and partners must contribute to satisfy obligations. A partner bears economic risk of loss if they would be obligated to make payment (through guarantee, contribution, or otherwise) without right of reimbursement. General partners typically bear economic risk for partnership recourse debt. Why other answers are wrong: (B) Profit-sharing percentage determines nonrecourse allocation tier 3, not recourse; (C) Personal liability under state law is one factor, but economic risk of loss is the tax standard; (D) Capital account balance doesn't determine recourse liability allocation.",
+    "tip": "Reg. §1.752-2: Recourse liability = to partner with economic risk of loss (constructive liquidation test). Often general partners/guarantors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3214,8 +3214,8 @@ const questions = [
       "D": "Fair market value of the property"
     },
     "correctAnswer": "A",
-    "explanation": "In a current distribution, the partner takes carryover basis in distributed property (partnership's basis), but this is limited to the partner's remaining outside basis after any cash distributed. This prevents creating loss through property distributions while preserving deferred gain.",
-    "tip": "Property distribution basis = carryover (partnership's basis), capped at partner's remaining outside basis.",
+    "explanation": "Per IRC §732(a)(1), in a current (non-liquidating) distribution, the partner's basis in distributed property equals the partnership's basis in that property (carryover basis). However, per §732(a)(2), this is limited to the partner's outside basis reduced by any cash distributed in the same transaction. Per §731(a), no loss is recognized on current property distributions. This preserves deferred gain while preventing basis creation beyond what the partner has invested. Why other answers are wrong: (B) Gain recognized would increase property basis only in liquidating distributions per §732(b); (C) Zero basis is incorrect - carryover applies; (D) FMV basis does not apply - carryover basis is used.",
+    "tip": "IRC §732(a): Property distribution basis = partnership's basis (carryover), capped at partner's remaining outside basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3235,8 +3235,8 @@ const questions = [
       "D": "Section 704(c) built-in gain"
     },
     "correctAnswer": "C",
-    "explanation": "Section 751(a) (hot assets) treats gain attributable to unrealized receivables (including recapture) and inventory items as ordinary income rather than capital gain. This prevents converting ordinary income to capital gain through partnership interest sales.",
-    "tip": "Hot assets = ordinary income on partnership sale. Includes receivables, inventory, recapture items.",
+    "explanation": "Per IRC §751(a), when a partner sells their partnership interest, gain attributable to 'hot assets' is treated as ordinary income rather than capital gain. Per §751(c)-(d), hot assets include: unrealized receivables (including depreciation recapture under §§1245, 1250) and substantially appreciated inventory (FMV > 120% of basis). This prevents character conversion - without §751, partners could convert ordinary income items to capital gain by selling their interest. Why other answers are wrong: (A) Section 736(a) applies to retiring partner payments, not interest sales; (B) Section 754 relates to basis adjustments, not character of gain; (D) Section 704(c) relates to allocation of built-in gain, not character on sale.",
+    "tip": "IRC §751(a): Hot assets = ordinary income on partnership interest sale. Includes receivables, recapture, appreciated inventory.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3256,8 +3256,8 @@ const questions = [
       "D": "Equal profit and loss sharing"
     },
     "correctAnswer": "C",
-    "explanation": "Economic effect requires: (1) capital accounts maintained under Section 704(b), (2) liquidating distributions made in accordance with positive capital accounts, and (3) partners with deficit balances must restore them (or have a qualified income offset). These rules ensure allocations affect real economics.",
-    "tip": "Economic effect = capital account maintenance + liquidation per capital accounts + deficit restoration (or QIO).",
+    "explanation": "Per Reg. §1.704-1(b)(2)(ii)(b), for a special allocation to have economic effect, the partnership agreement must satisfy a three-part test: (1) capital accounts maintained under Reg. §1.704-1(b)(2)(iv), (2) liquidating distributions made according to positive capital account balances, and (3) partners with deficit capital accounts must have an unconditional obligation to restore the deficit upon liquidation (or use the alternative test with qualified income offset per Reg. §1.704-1(b)(2)(ii)(d)). Why other answers are wrong: (A) Unanimous consent is not required for valid allocations; (B) IRS approval is not required - allocations are respected if they meet the regulations; (D) Equal sharing is not required - that defeats the purpose of special allocations.",
+    "tip": "Reg. §1.704-1(b)(2)(ii): Economic effect = (1) capital accounts, (2) liquidation per capital accounts, (3) deficit restoration or QIO.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3277,8 +3277,8 @@ const questions = [
       "D": "Allocation of depreciation deductions"
     },
     "correctAnswer": "B",
-    "explanation": "Mixing bowl rules prevent using partnerships to exchange property tax-free. Section 704(c)(1)(B) triggers gain if contributed property is distributed to another partner within 7 years. Section 737 triggers gain if a contributing partner receives other property within 7 years while built-in gain remains.",
-    "tip": "Mixing bowl = anti-abuse for property exchanges via partnership. 7-year window for contributed property.",
+    "explanation": "Per IRC §704(c)(1)(B), if contributed property with built-in gain is distributed to a partner other than the contributor within 7 years, the contributor recognizes the remaining §704(c) gain. Per IRC §737, if a contributing partner receives property (other than their contributed property) within 7 years while §704(c) gain remains, the contributor recognizes gain up to the lesser of: (1) excess of FMV of distributed property over outside basis, or (2) net precontribution gain. These 'mixing bowl' rules prevent tax-free property swaps through partnerships. Why other answers are wrong: (A) Cash contributions don't trigger mixing bowl rules; (C) Guaranteed payments are addressed under §707(c), not mixing bowl; (D) Depreciation allocations are governed by §704(c), not §704(c)(1)(B)/§737.",
+    "tip": "IRC §704(c)(1)(B)/§737: Mixing bowl = 7-year anti-abuse. Prevents tax-free property exchanges through partnerships.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3298,8 +3298,8 @@ const questions = [
       "D": "Any year selected by the partners"
     },
     "correctAnswer": "C",
-    "explanation": "Partnerships must use the required taxable year rules: (1) the year of majority interest partners (>50% profits and capital), (2) if no majority, the year of all principal partners (≥5% interest), (3) if principal partners differ, the year resulting in least aggregate deferral of income.",
-    "tip": "Partnership year: majority interest → principal partners → least aggregate deferral. Prevents income deferral.",
+    "explanation": "Per IRC §706(b)(1)(B), partnerships must use the taxable year determined under hierarchical rules in Reg. §1.706-1(b): (1) First, the year of majority interest partners (partners owning >50% of profits AND capital), (2) if no majority interest year, the year of all principal partners (partners with ≥5% interest), (3) if principal partners have different years, the year resulting in least aggregate deferral per Reg. §1.706-1(b)(3). A partnership can elect a fiscal year under §444 with required payments. Why other answers are wrong: (A) Calendar year is not required in all cases - depends on partner years; (B) Managing partner's year is not the determining factor; (D) Partners cannot freely select any year - anti-deferral rules apply.",
+    "tip": "IRC §706(b): Partnership year = majority interest → principal partners → least aggregate deferral. Anti-deferral purpose.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3319,8 +3319,8 @@ const questions = [
       "D": "Distributive share or guaranteed payment (ordinary income)"
     },
     "correctAnswer": "D",
-    "explanation": "Section 736(a) payments (for unstated goodwill in service partnerships and payments for future services) are treated as distributive share of partnership income or guaranteed payments - both ordinary income to the recipient. These payments are deductible by the partnership.",
-    "tip": "736(a) = ordinary income (distributive share or guaranteed payment). 736(b) = capital/Section 751 treatment.",
+    "explanation": "Per IRC §736(a), payments to a retiring partner that are not for the partner's interest in partnership property (§736(b)) are treated as: (1) a distributive share of partnership income if determined by partnership income, or (2) a guaranteed payment if fixed amount. Both are ordinary income to the recipient and deductible by the partnership (reducing other partners' shares). Per §736(b)(2), for general partners in service partnerships, payments for unstated goodwill are §736(a) payments (ordinary income). Why other answers are wrong: (A) Return of capital treatment applies under §736(b)(1) for property interests; (B) §736(a) payments are taxable; (C) Capital gain treatment applies to §736(b) payments, not §736(a).",
+    "tip": "IRC §736(a): Retiring partner payments = ordinary income (distributive share or guaranteed payment). §736(b) = capital/§751.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3340,8 +3340,8 @@ const questions = [
       "D": "The excess is treated as gain from the sale of a partnership interest"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 752, when a partnership assumes liabilities, the contributing partner is treated as receiving a distribution equal to the liability relief. If this deemed distribution exceeds the partner's basis, the excess is gain from sale of the partnership interest.",
-    "tip": "Liability assumption = deemed distribution to contributor. If > basis, gain recognized.",
+    "explanation": "Per IRC §752(b), a decrease in a partner's share of partnership liabilities (including liability assumption by partnership) is treated as a cash distribution to that partner. Per §731(a)(1), if this deemed distribution exceeds the partner's outside basis, the excess is recognized as gain from the sale of the partnership interest - typically capital gain under §741 (subject to §751 ordinary income for hot assets). This prevents negative basis. Why other answers are wrong: (A) The partnership's basis in property is determined under §723 (carryover), not affected by excess liabilities; (B) Capital accounts can become negative for book purposes, but tax basis cannot; (C) Gain IS recognized when deemed distribution exceeds basis per §731(a)(1).",
+    "tip": "IRC §752(b): Liability assumption = deemed cash distribution. §731(a)(1): If exceeds basis, gain from sale of interest.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3361,8 +3361,8 @@ const questions = [
       "D": "The family member must perform substantial services"
     },
     "correctAnswer": "A",
-    "explanation": "Under Section 704(e), a person who acquires a capital interest in a partnership where capital is material will be recognized as a partner if they actually own the interest (by gift or purchase). Donee partners must receive reasonable compensation for services before profits are allocated, and the donor's share can't be reduced below reasonable compensation.",
-    "tip": "Family partnership: donee recognized if capital is material income-producing factor. Reasonable allocation required.",
+    "explanation": "Per IRC §704(e)(1), a family member is recognized as a partner if they own a capital interest in a partnership where capital is a material income-producing factor, acquired by gift or purchase. Per §704(e)(2), the donee's share of partnership income must be reasonable, and the donor must receive reasonable compensation for services. The IRS can reallocate income if allocations don't reasonably compensate the donor for services or capital contributed. These rules prevent abuse through income-shifting to lower-bracket family members. Why other answers are wrong: (B) No age requirement exists - minors can be recognized partners; (C) Donor need not retain control; (D) Services are not required if capital is the material factor.",
+    "tip": "IRC §704(e): Family partnership recognized if capital is material income factor. Must allocate reasonable compensation to donor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3382,8 +3382,8 @@ const questions = [
       "D": "Capital contributions by other partners"
     },
     "correctAnswer": "C",
-    "explanation": "Under Section 731(c), marketable securities distributed by a partnership are generally treated as money (cash) rather than property. This can trigger gain recognition if the value exceeds the partner's basis. Exceptions apply for securities contributed by the distributee partner and certain investment partnerships.",
-    "tip": "Marketable securities = treated as cash for distribution purposes. Can trigger gain like cash distribution.",
+    "explanation": "Per IRC §731(c)(1), marketable securities distributed by a partnership are generally treated as money (cash) rather than property. Per §731(a)(1), this can trigger gain recognition if the FMV of securities exceeds the partner's outside basis, just like an excess cash distribution. Per §731(c)(3)(A), exceptions apply for: (1) securities contributed by the distributee partner, (2) investment partnerships distributing to partners who contributed comparable securities, and (3) certain actively traded partnership interests. Why other answers are wrong: (A) Guaranteed payments are under §707(c), not distributions; (B) Marketable securities are NOT treated as property with carryover basis; (D) Distributions are not contributions by other partners.",
+    "tip": "IRC §731(c): Marketable securities = treated as cash on distribution. Can trigger gain if FMV exceeds basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -3403,8 +3403,8 @@ const questions = [
       "D": "A new partner contributes property"
     },
     "correctAnswer": "A",
-    "explanation": "A Section 743(b) adjustment is mandatory when a partnership interest is transferred and the partnership has a substantial built-in loss (inside basis exceeds FMV by more than $250,000). Similarly, Section 734(b) adjustment is mandatory when a substantial basis reduction occurs. This prevents loss trafficking.",
-    "tip": "Mandatory 754: >$250K built-in loss on transfer. Prevents trafficking in partnership losses.",
+    "explanation": "Per IRC §743(d), added by the American Jobs Creation Act of 2004, a §743(b) basis adjustment is MANDATORY (without a §754 election) when a partnership interest is transferred and the partnership has a 'substantial built-in loss' - defined as inside basis exceeding FMV by more than $250,000. Per §734(d), a §734(b) adjustment is mandatory when a 'substantial basis reduction' (>$250,000) would result from a distribution. These mandatory rules prevent trafficking in partnership losses. Why other answers are wrong: (B) Property distributions trigger §734(b), not mandatory §743(b); (C) Guaranteed payments don't trigger basis adjustments; (D) New partner contributions don't trigger §743(b) (that's for transfers of existing interests).",
+    "tip": "IRC §743(d): Mandatory §743(b) when >$250K built-in loss. §734(d): Mandatory §734(b) for substantial basis reduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3424,8 +3424,8 @@ const questions = [
       "D": "All partnership operations cease completely"
     },
     "correctAnswer": "D",
-    "explanation": "After TCJA repealed technical terminations, a partnership now continues for tax purposes until operations cease completely or a partnership merger/division occurs. The old rule triggering termination on 50%+ interest transfer in 12 months was eliminated for tax years after December 31, 2017.",
-    "tip": "Technical terminations repealed by TCJA. Partnership continues until operations cease or merger/division.",
+    "explanation": "Per IRC §708(a), a partnership continues for tax purposes until no part of any business, financial operation, or venture continues to be carried on by any partners. The TCJA (Tax Cuts and Jobs Act of 2017) repealed §708(b)(1)(B), which previously terminated partnerships when 50%+ of interests were transferred within 12 months. For tax years after December 31, 2017, partnerships only terminate upon: (1) complete cessation of operations per §708(a), or (2) partnership mergers/divisions per §708(b)(2). Why other answers are wrong: (A) Mergers DO terminate the non-continuing partnership; (B) Managing partner changes don't cause termination; (C) The 50%/12-month rule was REPEALED by TCJA.",
+    "tip": "IRC §708: Partnership continues until operations cease. TCJA repealed technical termination (50%/12-month rule no longer applies).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3445,8 +3445,8 @@ const questions = [
       "D": "Receive less than their profit share"
     },
     "correctAnswer": "A",
-    "explanation": "Section 751(b) treats a distribution as a taxable exchange to the extent a partner receives more or less than their proportionate share of Section 751 property (hot assets - unrealized receivables and inventory) in exchange for other property. This prevents converting ordinary income to capital gain through distributions.",
-    "tip": "751(b) = disproportionate distributions of hot assets. Deemed exchange triggers ordinary income.",
+    "explanation": "Per IRC §751(b), when a distribution causes a partner to receive more or less than their proportionate share of §751 property (hot assets: unrealized receivables per §751(c) and inventory per §751(d)), the distribution is treated as a taxable exchange. The partner is deemed to exchange their share of hot assets for cold assets (or vice versa), triggering ordinary income to the extent of hot asset exchange. This prevents character conversion - otherwise partners could receive cold assets and claim capital gain treatment while shifting hot assets to other partners. Why other answers are wrong: (B) Basis less than FMV doesn't trigger §751(b); (C) Partner exit triggers §736, not specifically §751(b); (D) Receiving less than profit share is not the test - disproportionate hot asset receipt is.",
+    "tip": "IRC §751(b): Disproportionate distribution of hot assets = deemed taxable exchange. Prevents ordinary→capital conversion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3466,8 +3466,8 @@ const questions = [
       "D": "The allocation is made at year-end"
     },
     "correctAnswer": "C",
-    "explanation": "Substantiality requires that there be a reasonable possibility the allocation will substantially affect dollar amounts received by partners independent of tax consequences. 'Shifting' allocations (that net out over time) and 'transitory' allocations (that offset in the same year) fail the substantiality test.",
-    "tip": "Substantiality = allocation must affect real economics, not just taxes. Shifting and transitory allocations fail.",
+    "explanation": "Per Reg. §1.704-1(b)(2)(iii), an allocation is 'substantial' only if there is a reasonable possibility that the allocation will substantially affect the dollar amounts received by the partners from the partnership, independent of tax consequences. Per Reg. §1.704-1(b)(2)(iii)(b)-(c), allocations fail substantiality if they are: (1) 'shifting' allocations (net out over time with no real economic effect), or (2) 'transitory' allocations (offset within the same year). Both patterns suggest tax motivation without real economics. Why other answers are wrong: (A) Equal income and loss shares doesn't make allocations non-substantial; (B) After-tax consequences differing is the EXPECTED result of substantial allocations; (D) Year-end timing alone doesn't determine substantiality.",
+    "tip": "Reg. §1.704-1(b)(2)(iii): Substantiality = reasonable possibility allocation affects economics independent of taxes. Shifting/transitory fail.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3487,8 +3487,8 @@ const questions = [
       "D": "Allowing different allocation schemes at different partnership levels"
     },
     "correctAnswer": "D",
-    "explanation": "Tiered structures allow different allocation arrangements at each level. Upper-tier partnerships can aggregate multiple investments, facilitate tax-efficient carried interest structures, and provide flexibility for different investor classes. However, anti-abuse rules and look-through rules apply to prevent manipulation.",
-    "tip": "Tiered partnerships = flexibility in allocation structures. Watch for look-through and anti-abuse rules.",
+    "explanation": "Tiered partnership structures (partnerships owning interests in other partnerships) provide planning flexibility by allowing different allocation arrangements at each level per IRC §704(b). Upper-tier partnerships can aggregate investments for institutional investors while lower-tier partnerships allocate based on different criteria. Carried interest structures benefit from multiple levels. However, Reg. §1.701-2 (anti-abuse rule) and various look-through provisions (§704(c)(1)(B), §707, §752) apply to prevent manipulation. Why other answers are wrong: (A) Character is determined at the partnership level per §702 - tiering doesn't convert ordinary to capital; (B) SE tax rules look through tiers - general partner status flows through; (C) Section 754 elections are made at each partnership level separately.",
+    "tip": "Tiered partnerships: Different allocations at each level per §704(b). Subject to anti-abuse (Reg. §1.701-2) and look-through rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3508,8 +3508,8 @@ const questions = [
       "D": "Taxable at fair market value upon receipt"
     },
     "correctAnswer": "A",
-    "explanation": "Under Rev. Proc. 93-27 and 2001-43, a profits interest (right to future profits, not existing capital) is generally not taxable upon receipt if: (1) the interest is not related to a substantially certain stream of income, (2) the partner doesn't dispose of it within 2 years, and (3) it's not a publicly traded interest.",
-    "tip": "Profits interest = generally tax-free at grant under safe harbor. Capital interest = taxable at FMV on receipt.",
+    "explanation": "Per Rev. Proc. 93-27 (as clarified by Rev. Proc. 2001-43), a profits interest (right to share in future profits and appreciation, but not existing capital) is generally not taxable upon receipt if safe harbor requirements are met: (1) the interest is not related to a substantially certain and predictable stream of income, (2) the partner does not dispose of the interest within 2 years, and (3) the interest is not a publicly traded partnership interest. If the safe harbor is met, no income under §83 on grant. Capital interests (right to existing assets) are taxable at FMV on receipt. Why other answers are wrong: (B) Profits interests are not guaranteed payments per §707(c); (C) Capital gains don't apply at receipt - §83 would treat as ordinary income if taxable; (D) FMV taxation applies to capital interests, not safe harbor profits interests.",
+    "tip": "Rev. Proc. 93-27/2001-43: Profits interest = tax-free at grant if safe harbor met. Capital interest = taxable at FMV per §83.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3529,8 +3529,8 @@ const questions = [
       "D": "Five years"
     },
     "correctAnswer": "C",
-    "explanation": "Section 1061 requires a 3-year holding period (instead of 1 year) for long-term capital gain treatment on gains from applicable partnership interests (carried interests). Gains on assets held 1-3 years are recharacterized as short-term capital gain. This affects fund managers and other service providers receiving profits interests.",
-    "tip": "Carried interest = 3-year hold for LTCG treatment (vs. normal 1-year). Section 1061.",
+    "explanation": "Per IRC §1061(a), added by TCJA, gain from an 'applicable partnership interest' (carried interest received in exchange for services) receives long-term capital gain treatment only if the holding period exceeds 3 years (not the normal 1-year rule). Per §1061(c)(4), gains on assets held between 1-3 years are recharacterized as short-term capital gain. This affects fund managers, real estate sponsors, and other service providers who receive profits interests. Per §1061(c)(1), an applicable partnership interest is any interest transferred in connection with performance of services. Why other answers are wrong: (A) One year is the general LTCG rule per §1222, but §1061 requires 3 years for carried interest; (B) Two years is incorrect; (D) Five years is incorrect - it's specifically 3 years.",
+    "tip": "IRC §1061: Carried interest = 3-year hold for LTCG (not 1-year). Assets held 1-3 years = STCG treatment. TCJA provision.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3550,8 +3550,8 @@ const questions = [
       "D": "The partner's share of income for the year"
     },
     "correctAnswer": "B",
-    "explanation": "In a current distribution, basis is reduced first by cash received (dollar for dollar, potentially triggering gain if exceeding basis), then by the partnership's basis in distributed property (limited to remaining basis). Property basis reduction comes after cash because cash can trigger gain while property generally cannot in current distributions.",
-    "tip": "Distribution order: reduce basis by cash first (can trigger gain), then property basis (limited to remaining basis).",
+    "explanation": "Per IRC §732 and §733, when a partner receives a current distribution, outside basis is reduced in this order: (1) First by cash distributed (dollar for dollar per §733(1)), potentially triggering gain if cash exceeds basis per §731(a)(1), (2) Then by the partnership's basis in distributed property (carryover basis per §732(a)(1)), limited to remaining outside basis per §732(a)(2). Cash comes first because excess cash triggers gain, while property distributions generally cannot trigger gain in current distributions. Why other answers are wrong: (A) FMV is used for determining gain on excess cash, but basis reduction uses partnership's basis in property; (C) Partnership's basis in property reduces outside basis, but only after cash; (D) The partner's distributive share for the year affects basis separately per §705, not the distribution ordering.",
+    "tip": "IRC §733/§732: Distribution order = cash first (can trigger gain), then property basis (capped at remaining outside basis).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3571,8 +3571,8 @@ const questions = [
       "D": "A distribution results in gain or basis adjustment to the distributee partner"
     },
     "correctAnswer": "D",
-    "explanation": "Section 734(b) adjustments apply when a distribution occurs and the partnership has a Section 754 election in effect (or mandatory adjustment applies). The partnership adjusts its asset basis by: gain recognized by distributee, or the difference between distributed property's carryover basis and inside basis.",
-    "tip": "734(b) = distribution adjustments. 743(b) = transfer adjustments. Both require 754 election (or mandatory trigger).",
+    "explanation": "Per IRC §734(b), when a partnership has a §754 election in effect (or mandatory adjustment under §734(d) applies), the partnership adjusts the basis of its remaining assets when a distribution occurs that either: (1) triggers gain recognition to the distributee per §731(a)(1), or (2) results in a basis adjustment to distributed property per §732. The adjustment equals the gain recognized by the distributee or the difference between the partnership's basis in distributed property and the distributee's basis in that property. Per §734(d), adjustment is mandatory when substantial basis reduction (>$250,000) would occur. Why other answers are wrong: (A) Acquiring new property doesn't trigger §734(b); (B) New partner admission triggers §743(b), not §734(b); (C) Interest sales trigger §743(b), not §734(b).",
+    "tip": "IRC §734(b): Distribution adjustments to remaining partnership assets. §743(b): Transfer adjustments. Both require §754 or mandatory trigger.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3592,8 +3592,8 @@ const questions = [
       "D": "The debt is recourse to all partners"
     },
     "correctAnswer": "B",
-    "explanation": "When a partnership borrows funds and distributes them to a contributing partner, and these transactions are related (within 2 years), the IRS may treat the contribution and distribution as a disguised sale. The regulations provide detailed rules for analyzing whether the debt-financed distribution is disguised sale proceeds.",
-    "tip": "Debt-financed distribution + contribution within 2 years = potential disguised sale. Analyze the facts carefully.",
+    "explanation": "Per Reg. §1.707-5, when a partnership borrows funds and distributes proceeds to a partner who contributed property, the distribution may be recharacterized as disguised sale proceeds under §707(a)(2)(B). Per Reg. §1.707-5(b), if the partnership's borrowing is traceable to a distribution to the contributing partner within 2 years of contribution, and not subject to entrepreneurial risk, it's presumed to be a disguised sale. The debt-financed distribution rules prevent using partnership borrowing to extract tax-free proceeds that economically function as sale consideration. Why other answers are wrong: (A) Debt exceeding FMV is not the test - timing and connection matter; (C) Additional capital contributions don't trigger the rule; (D) Recourse to all partners is not determinative - the distribution's relation to contribution matters.",
+    "tip": "Reg. §1.707-5: Debt-financed distribution + contribution within 2 years = potential disguised sale. Watch for traceable borrowings.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3613,8 +3613,8 @@ const questions = [
       "D": "Automatically convert partnerships to C corporations"
     },
     "correctAnswer": "A",
-    "explanation": "The anti-abuse rule allows the IRS to recast partnership transactions that comply technically with subchapter K but produce tax results inconsistent with the intent of subchapter K. The IRS can treat the partnership as an aggregate, adjust allocations, or disregard transactions entirely.",
-    "tip": "Anti-abuse rule: IRS can recast transactions that technically comply but abuse subchapter K intent.",
+    "explanation": "Per Reg. §1.701-2, the partnership anti-abuse rule allows the IRS to recast transactions that technically comply with Subchapter K but achieve tax results inconsistent with the intent of the partnership rules. Per Reg. §1.701-2(b), the IRS may: (1) disregard the partnership for federal tax purposes, (2) treat one or more partners as not partners, (3) adjust the partnership's accounting methods, (4) reallocate partnership items, or (5) otherwise adjust to achieve tax results consistent with Subchapter K intent. The rule targets transactions formed or availed of with a principal purpose to reduce taxes inconsistent with congressional intent. Why other answers are wrong: (B) No 20% penalty is specified in the anti-abuse rule; (C) It doesn't deny all deductions - just recharacterizes abusive transactions; (D) It doesn't convert to C corp status - it may treat the partnership as aggregate or disregard it.",
+    "tip": "Reg. §1.701-2: Anti-abuse rule allows IRS to recast transactions inconsistent with Subchapter K intent. Multiple remedies available.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -3634,8 +3634,8 @@ const questions = [
       "D": "Neither partnership (a new partnership is formed)"
     },
     "correctAnswer": "B",
-    "explanation": "In a partnership merger, the resulting partnership is a continuation of the partnership whose partners own more than 50% of capital and profits in the merged entity. The other partnership is terminated, and its partners are deemed to contribute assets to the continuing partnership in exchange for interests.",
-    "tip": "Partnership merger: >50% capital/profits determines which continues. Other partnership terminates.",
+    "explanation": "Per IRC §708(b)(2)(A) and Reg. §1.708-1(c), when two or more partnerships merge, the resulting partnership is considered a continuation of the partnership whose partners own more than 50% of the capital and profits interest in the resulting partnership. Per Reg. §1.708-1(c)(3), the non-continuing partnership is treated as terminated, and its partners are deemed to contribute their proportionate share of assets and liabilities to the continuing partnership in exchange for interests. The continuing partnership retains its EIN and tax elections. Why other answers are wrong: (A) Number of partners is not the determining factor; (C) Both partnerships cannot equally continue - only one continues per §708(b)(2)(A); (D) A new partnership is not formed - the >50% partnership continues.",
+    "tip": "IRC §708(b)(2)(A): Partnership merger = >50% capital/profits continues. Other partnership terminates (deemed asset contribution).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3655,8 +3655,8 @@ const questions = [
       "D": "It has fewer than 500 partners"
     },
     "correctAnswer": "A",
-    "explanation": "Publicly traded partnerships are taxed as corporations unless 90% or more of their gross income is qualifying income: interest, dividends, real property rents, gain from real property sales, and income from natural resource activities. MLPs in the oil, gas, and real estate sectors often meet this exception.",
-    "tip": "PTP = taxed as C corp unless 90%+ qualifying income (passive/resource income). Most MLPs qualify.",
+    "explanation": "Per IRC §7704(a), a publicly traded partnership (PTP) is generally taxed as a corporation. However, per §7704(c), a PTP is not taxed as a corporation if 90% or more of its gross income is 'qualifying income' per §7704(d): interest, dividends, real property rents, gains from sale of real property, and income/gains from certain natural resource activities (exploration, development, mining, production, processing, refining, transportation, marketing). Most MLPs (master limited partnerships) in energy and real estate sectors qualify for this exception. Why other answers are wrong: (B) PTPs cannot simply elect partnership treatment - they must meet the 90% test; (C) Individual partners only is not the test - publicly traded partnerships have tradeable interests regardless of partner type; (D) Partner count is not the determinant - it's the 90% income test.",
+    "tip": "IRC §7704: PTP taxed as C corp UNLESS 90%+ qualifying income (passive, real estate, natural resources). Most MLPs qualify.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -3676,8 +3676,8 @@ const questions = [
       "D": "The partner's distributive share of tax-exempt income"
     },
     "correctAnswer": "A",
-    "explanation": "Section 705 decreases outside basis for: distributions, the partner's share of partnership losses and deductions, and the partner's share of nondeductible expenditures (like non-allowed meals deduction, penalties) that are not capital items. Tax-exempt income increases basis; guaranteed payments don't directly affect basis.",
-    "tip": "Basis decreases: distributions, losses, nondeductible non-capital items. Increases: income (including tax-exempt), contributions.",
+    "explanation": "Per IRC §705(a)(2), a partner's outside basis is decreased (but not below zero) by: (A) distributions to the partner per §733, (B) the partner's distributive share of partnership losses and deductions per §702, and (C) the partner's distributive share of nondeductible, noncapital expenditures per §705(a)(2)(B) (such as penalties, 50% disallowed meals expense, political contributions). Per §705(a)(1), basis is INCREASED by income (including tax-exempt income per §705(a)(1)(B)) and contributions. Guaranteed payments affect basis only through the resulting partnership income/loss, not directly. Why other answers are wrong: (B) Capital contributions INCREASE basis, not decrease; (C) Guaranteed payments received affect the recipient's ordinary income but don't directly reduce basis; (D) Tax-exempt income INCREASES basis per §705(a)(1)(B).",
+    "tip": "IRC §705(a)(2): Basis decreased by distributions, losses, nondeductible noncapital items. §705(a)(1): Increased by income and contributions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },

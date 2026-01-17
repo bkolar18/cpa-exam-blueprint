@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 140 | 665 | 17% | In Progress |
+| TCP | 805 | 175 | 630 | 22% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 140 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 175 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -60,6 +60,7 @@ All 58 exam TBS questions have been enhanced with:
 | Tax Planning | 35 | tcp-002-001 to tcp-002-035 | **Complete** |
 | C Corporation Planning | 35 | tcp-003-001 to tcp-003-035 | **Complete** |
 | S Corporation Planning | 35 | tcp-004-001 to tcp-004-035 | **Complete** |
+| Partnership Planning | 35 | tcp-005-001 to tcp-005-035 | **Complete** |
 | More batches | ... | ... | Pending |
 
 ### TCP Enhancement Completed - January 17, 2026 (Session 1)
@@ -295,6 +296,82 @@ All 58 exam TBS questions have been enhanced with:
 | Open Account Debt | Reg. §1.1367-2 |
 | Inadvertent Termination | IRC §1362(f) |
 | Reasonable Compensation | Rev. Rul. 74-44 |
+
+### TCP Enhancement Completed - January 17, 2026 (Session 5)
+
+**Partnership Planning Questions Enhanced (tcp-005-001 to tcp-005-035)**
+
+35 Partnership Planning questions enhanced with:
+- IRC §701 partnership as pass-through entity
+- IRC §702 partner's distributive share
+- IRC §704(b) substantial economic effect for special allocations
+- IRC §704(c) built-in gain/loss allocation (traditional, curative, remedial methods)
+- IRC §704(c)(1)(B) and §737 mixing bowl rules (7-year window)
+- IRC §704(e) family partnership rules
+- IRC §705 basis computation (increases and decreases)
+- IRC §706(b) partnership taxable year rules
+- IRC §707(a)(2)(B) disguised sale rules (2-year presumption)
+- IRC §707(c) guaranteed payments
+- IRC §708 partnership continuation and termination (TCJA repeal of technical terminations)
+- IRC §721 tax-free contributions (no control test)
+- IRC §722/§723 carryover basis rules
+- IRC §731 distribution taxation (cash and property)
+- IRC §732 distributed property basis
+- IRC §733 partner basis reduction on distributions
+- IRC §734(b) distribution basis adjustments
+- IRC §736(a)/(b) retiring partner payments
+- IRC §737 precontribution gain rules
+- IRC §743(b) transfer basis adjustments
+- IRC §751(a)/(b) hot assets (unrealized receivables, inventory)
+- IRC §752 liability allocations (recourse and nonrecourse)
+- IRC §754 optional basis adjustment election
+- IRC §1061 carried interest 3-year holding period
+- IRC §7704 publicly traded partnership rules
+- Reg. §1.701-2 partnership anti-abuse rule
+- Reg. §1.704-1(b)(2) economic effect requirements
+- Reg. §1.707-3 disguised sale regulations
+- Reg. §1.707-5 debt-financed distributions
+- Reg. §1.752-2/§1.752-3 liability allocation regulations
+- Rev. Proc. 93-27/2001-43 profits interest safe harbor
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Pass-Through Taxation | IRC §701, §702 |
+| Tax-Free Contributions | IRC §721 |
+| Carryover Basis | IRC §722, §723 |
+| Special Allocations | IRC §704(b) |
+| Economic Effect | Reg. §1.704-1(b)(2) |
+| Built-In Gain Allocation | IRC §704(c) |
+| Mixing Bowl Rules | IRC §704(c)(1)(B), §737 |
+| Disguised Sales | IRC §707(a)(2)(B) |
+| Guaranteed Payments | IRC §707(c) |
+| Partnership Year | IRC §706(b) |
+| Partner Basis | IRC §705 |
+| Distribution Taxation | IRC §731 |
+| Property Distribution Basis | IRC §732 |
+| Basis Reduction | IRC §733 |
+| Distribution Adjustments | IRC §734(b) |
+| Transfer Adjustments | IRC §743(b) |
+| Section 754 Election | IRC §754 |
+| Hot Assets | IRC §751(a), §751(b) |
+| Recourse Liabilities | Reg. §1.752-2 |
+| Nonrecourse Liabilities | Reg. §1.752-3 |
+| Retiring Partner Payments | IRC §736 |
+| Family Partnerships | IRC §704(e) |
+| Marketable Securities | IRC §731(c) |
+| Mandatory Adjustments | IRC §743(d), §734(d) |
+| Technical Terminations | IRC §708 (TCJA repeal) |
+| Disproportionate Distributions | IRC §751(b) |
+| Substantiality | Reg. §1.704-1(b)(2)(iii) |
+| Tiered Partnerships | Reg. §1.701-2 |
+| Profits Interest | Rev. Proc. 93-27 |
+| Carried Interest | IRC §1061 |
+| Partnership Mergers | IRC §708(b)(2)(A) |
+| Publicly Traded Partnerships | IRC §7704 |
+| Anti-Abuse Rule | Reg. §1.701-2 |
 
 ---
 
