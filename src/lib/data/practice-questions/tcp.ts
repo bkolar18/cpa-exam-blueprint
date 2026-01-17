@@ -757,8 +757,8 @@ const questions = [
       "D": "Billing customers early in December"
     },
     "correctAnswer": "A",
-    "explanation": "Cash-method taxpayers recognize income when received. Delaying billing pushes receipt of payment into the next year, deferring income recognition. Depositing checks later doesn't help - constructive receipt occurs when payment is available. Backdating invoices is fraudulent and doesn't affect cash basis recognition.",
-    "tip": "Cash basis income planning: control when you BILL, not when you deposit. Constructive receipt matters.",
+    "explanation": "Per IRC §451 and Reg. §1.451-1, cash-method taxpayers recognize income when received or constructively received. Delaying billing pushes receipt of payment into the next year, legitimately deferring income recognition. Under the constructive receipt doctrine (Reg. §1.451-2), income is taxable when it's made available without substantial limitations - simply delaying deposit of a check already received doesn't defer income. Why other answers are wrong: (B) Depositing checks later is ineffective because constructive receipt occurred when the check was received per Reg. §1.451-2; (C) Backdating invoices is fraudulent and doesn't change the cash basis timing rule; (D) Billing early in December accelerates receipt into the current year, opposite of the deferral goal.",
+    "tip": "IRC §451: Cash method income = when received. Control billing date (legal) not deposit date (ineffective). Constructive receipt per Reg. §1.451-2.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -778,8 +778,8 @@ const questions = [
       "D": "Spreading deductions evenly across years"
     },
     "correctAnswer": "A",
-    "explanation": "Bunching involves concentrating itemized deductions (like charitable contributions) into alternate years to exceed the standard deduction in those years, then taking the standard deduction in the other years. This maximizes total deductions compared to spreading expenses evenly when the standard deduction is high.",
-    "tip": "Bunching = alternate year strategy. High itemized year → itemize; low year → standard deduction.",
+    "explanation": "Per IRC §63, taxpayers choose between the standard deduction and itemized deductions each year. Bunching involves concentrating deductible expenses (charitable contributions per §170, medical expenses per §213, state taxes per §164 subject to $10,000 SALT cap) into alternate years to exceed the standard deduction, then taking the standard deduction in other years. This is particularly valuable post-TCJA when the standard deduction is high ($14,600 single, $29,200 MFJ for 2024). Why other answers are wrong: (B) Converting itemized to business deductions is a different strategy and may not be available; (C) Taking the standard deduction every year fails to maximize years when itemized exceeds standard; (D) Spreading evenly may result in never exceeding the standard deduction threshold.",
+    "tip": "IRC §63: Bunching = concentrate deductions in alternate years to beat high standard deduction. Especially useful post-TCJA with $10K SALT cap (§164).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -799,8 +799,8 @@ const questions = [
       "D": "Fully taxable at ordinary rates"
     },
     "correctAnswer": "B",
-    "explanation": "Interest from municipal bonds (issued by state and local governments) is generally exempt from federal income tax. It may also be exempt from state tax if issued by the taxpayer's home state. However, some municipal bond interest (private activity bonds) may be a preference item for AMT purposes.",
-    "tip": "Muni bond interest = federally tax-exempt. Compare tax-equivalent yield to taxable bonds.",
+    "explanation": "Per IRC §103(a), interest on state and local government bonds (municipal bonds) is excluded from gross income. This exclusion applies to bonds issued for governmental purposes. Per IRC §57(a)(5), interest on certain private activity bonds may be an AMT preference item. Double tax-free status (federal and state) applies when the bondholder resides in the issuing state. Why other answers are wrong: (A) Capital gains rates apply to gain on bond sale, not to interest income; (C) There is no deferral mechanism - interest is simply excluded from income under §103; (D) Municipal bond interest is specifically excluded, not taxed at ordinary rates.",
+    "tip": "IRC §103: Muni bond interest = federally tax-exempt. Private activity bond interest may trigger AMT per §57(a)(5). Compare tax-equivalent yield.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -820,8 +820,8 @@ const questions = [
       "D": "At least 18 months"
     },
     "correctAnswer": "C",
-    "explanation": "Long-term capital gain treatment requires a holding period of more than one year (12 months). If sold on the one-year anniversary, the gain is still short-term. Holding one day beyond the one-year anniversary qualifies for the preferential 0%/15%/20% rates instead of ordinary income rates.",
-    "tip": "LTCG = held MORE than 12 months. Sale on exact anniversary = short-term.",
+    "explanation": "Per IRC §1222(3), a long-term capital gain requires holding property for MORE than one year. Per IRC §1(h), LTCG rates are 0%/15%/20% depending on income level, versus ordinary rates (up to 37%) for short-term gains. The holding period begins the day after acquisition per Reg. §1.1223-1. If sold exactly on the one-year anniversary, the gain is still short-term because the requirement is 'more than' 12 months. Why other answers are wrong: (A) 24 months exceeds the requirement - 12 months is sufficient; (B) 6 months is too short for LTCG treatment; (D) 18 months was a historical requirement but hasn't applied since 1988.",
+    "tip": "IRC §1222(3): LTCG = held MORE than 12 months. Day after 1-year anniversary qualifies. LTCG rates per §1(h): 0%/15%/20%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -841,8 +841,8 @@ const questions = [
       "D": "Roth IRA contributions"
     },
     "correctAnswer": "D",
-    "explanation": "Roth IRA contributions are made with after-tax dollars, and qualified distributions are tax-free. If a taxpayer expects higher rates in retirement, paying tax now at lower rates (Roth) is preferable to deferring tax (Traditional IRA) only to pay at higher rates later.",
-    "tip": "Roth = pay tax now (good if rates rise). Traditional = pay tax later (good if rates drop). Consider future brackets.",
+    "explanation": "Per IRC §408A, Roth IRA contributions are made with after-tax dollars, and qualified distributions (after age 59½ and 5-year holding) are completely tax-free. Per IRC §408, traditional IRA contributions may be deductible, but all distributions are taxed as ordinary income under §72. If tax rates will be higher in retirement, paying tax now at lower current rates (Roth) is mathematically superior to deferring tax and paying at higher future rates (Traditional). Why other answers are wrong: (A) Non-deductible traditional IRA has the worst outcome: no current deduction, but earnings are still taxed on distribution; (B) IRAs provide valuable tax benefits in either form; (C) Traditional IRA would result in paying higher taxes in retirement if brackets increase.",
+    "tip": "IRC §408A (Roth): Pay tax now, tax-free later. IRC §408 (Traditional): Deduct now, taxed later. Higher future rates favor Roth.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -862,8 +862,8 @@ const questions = [
       "D": "Dividend-paying stocks"
     },
     "correctAnswer": "A",
-    "explanation": "The kiddie tax applies to unearned income (interest, dividends, capital gains) above a threshold. Growth stocks that don't pay dividends produce no current income and thus avoid kiddie tax. The gain is deferred until sale, potentially when the child is no longer subject to kiddie tax rules.",
-    "tip": "Kiddie tax planning: use growth stocks or Series EE/I bonds to defer income until child is older.",
+    "explanation": "Per IRC §1(g), the kiddie tax applies to unearned income (interest, dividends, capital gains) above the threshold ($2,500 for 2024) for children under 19 (or under 24 if full-time students). Growth stocks that don't pay dividends produce no current income - gain is deferred until sale under IRC §1001. By the time of sale, the child may be over 19 and no longer subject to kiddie tax. Why other answers are wrong: (B) Money market funds generate current interest income, fully subject to kiddie tax; (C) Corporate bonds generate interest income, subject to kiddie tax; (D) Dividend-paying stocks generate qualified dividends currently, subject to kiddie tax.",
+    "tip": "IRC §1(g): Kiddie tax on unearned income >$2,500. Defer income with growth stocks, Series EE/I bonds until child is 19+ (24 if student).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -883,8 +883,8 @@ const questions = [
       "D": "January of the following year"
     },
     "correctAnswer": "A",
-    "explanation": "Under constructive receipt doctrine, income is taxable when it is made available to the taxpayer without substantial limitations, not when actually received. A check received December 30 is constructively received then, even if deposited later. The taxpayer cannot defer income by delaying deposit.",
-    "tip": "Constructive receipt = income available without restriction. Can't delay by not depositing a check you received.",
+    "explanation": "Per Reg. §1.451-2 (constructive receipt doctrine), income is taxable in the year it is credited to the taxpayer's account, set apart for them, or otherwise made available without substantial limitations. A check received December 30 is constructively received on that date - the taxpayer could have cashed it immediately. Merely choosing not to deposit it doesn't create a substantial limitation. Why other answers are wrong: (B) Taxpayers cannot choose the year - constructive receipt determines timing; (C) Income is not split between years - it's fully taxable when constructively received; (D) January timing would only apply if the check were received in January or had substantial restrictions.",
+    "tip": "Reg. §1.451-2: Constructive receipt = when available without substantial limitations. Check received = income received, regardless of deposit date.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -904,8 +904,8 @@ const questions = [
       "D": "NSOs create ordinary income at exercise; ISOs generally do not for regular tax"
     },
     "correctAnswer": "D",
-    "explanation": "At exercise, NSOs create ordinary income equal to the spread (FMV minus exercise price). ISOs generally do not create regular tax income at exercise (but do create an AMT preference item). ISO holders recognize gain at sale, potentially qualifying for capital gain treatment if holding requirements are met.",
-    "tip": "ISO = no regular tax at exercise (but AMT preference). NSO = ordinary income at exercise.",
+    "explanation": "Per IRC §83(a), NSO exercise creates ordinary W-2 income equal to the spread (FMV - exercise price), subject to income tax and FICA. Per IRC §422, ISOs receive preferential treatment: no regular income tax at exercise, though the spread is an AMT preference item under IRC §56(b)(3). For ISOs, if holding requirements are met (2 years from grant, 1 year from exercise per §422(a)), the entire gain is LTCG. Why other answers are wrong: (A) Capital gain treatment is only at sale, not exercise for either type; (B) NSOs definitely create tax consequences at exercise under §83(a); (C) This is backwards - ISOs avoid regular tax at exercise, NSOs create ordinary income.",
+    "tip": "IRC §422 (ISO): No regular tax at exercise, AMT preference, LTCG if holding requirements met. IRC §83 (NSO): Ordinary income at exercise.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -925,8 +925,8 @@ const questions = [
       "D": "Donating loss positions to charity"
     },
     "correctAnswer": "B",
-    "explanation": "Tax loss harvesting is the strategy of selling investments at a loss to realize capital losses that offset capital gains and up to $3,000 of ordinary income annually. Taxpayers often reinvest in similar (but not substantially identical) securities to maintain market exposure while realizing the tax benefit.",
-    "tip": "Loss harvesting: sell to realize loss, reinvest in similar (not identical) security. Watch wash sale rules!",
+    "explanation": "Per IRC §1211(b), capital losses offset capital gains and up to $3,000 of ordinary income annually. Tax loss harvesting strategically sells investments at a loss to realize this tax benefit. Per IRC §1091, the wash sale rule disallows the loss if substantially identical securities are purchased within 30 days before or after the sale. Investors typically reinvest in similar (but not substantially identical) securities to maintain market exposure. Why other answers are wrong: (A) Holding losing positions indefinitely never realizes the tax loss; (C) Converting ST to LT losses isn't a recognized strategy - character depends on holding period per §1222; (D) Donating loss positions to charity wastes the loss deduction because the deduction is based on FMV, not basis.",
+    "tip": "IRC §1211(b): Losses offset gains + $3,000 ordinary income. Reinvest in similar (not identical) security. Watch §1091 wash sale (61-day window).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -946,8 +946,8 @@ const questions = [
       "D": "$250,000 for all filers"
     },
     "correctAnswer": "C",
-    "explanation": "The NIIT applies to the lesser of net investment income or MAGI exceeding threshold amounts: $250,000 (MFJ), $200,000 (single/HoH), $125,000 (MFS). Net investment income includes interest, dividends, capital gains, and passive income, but not wages or active business income.",
-    "tip": "NIIT = 3.8% on investment income. Thresholds: $200K single, $250K MFJ, $125K MFS. Not indexed for inflation!",
+    "explanation": "Per IRC §1411, the 3.8% Net Investment Income Tax (NIIT) applies to the lesser of: (1) net investment income, or (2) MAGI exceeding threshold amounts: $250,000 (MFJ), $200,000 (single/HoH), $125,000 (MFS). These thresholds are NOT indexed for inflation. NII per §1411(c) includes interest, dividends, capital gains, rents, royalties, and passive business income, but excludes wages, self-employment income, and active business income. Why other answers are wrong: (A) These amounts are incorrect - $400K and $450K are not NIIT thresholds; (B) $125,000 is the MFS threshold, not single filers; (D) $250,000 is only for MFJ, not all filers.",
+    "tip": "IRC §1411: NIIT = 3.8% on lesser of NII or MAGI over threshold ($200K single, $250K MFJ). Thresholds NOT inflation-indexed!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -967,8 +967,8 @@ const questions = [
       "D": "Allowing stepped-up basis for the buyer"
     },
     "correctAnswer": "C",
-    "explanation": "Installment sales allow sellers to spread gain recognition over the period payments are received, rather than recognizing all gain in the year of sale. This provides deferral benefits and may keep the seller in lower tax brackets each year. However, depreciation recapture is recognized in year of sale.",
-    "tip": "Installment sale = defer gain to when payments received. Exception: depreciation recapture recognized in year 1.",
+    "explanation": "Per IRC §453, installment sales allow sellers to recognize gain ratably as payments are received rather than all at once. The gross profit ratio (gain ÷ contract price) is applied to each payment. This provides deferral benefits and may keep the seller in lower tax brackets. However, per IRC §453(i), depreciation recapture under §1245 and §1250 is fully recognized in the year of sale, not deferred. Why other answers are wrong: (A) Installment sales don't change character from ordinary to capital - that depends on asset type; (B) Gain is deferred, not eliminated - total tax paid is the same over time; (D) Stepped-up basis for buyers is a death-related concept (§1014), unrelated to installment sales.",
+    "tip": "IRC §453: Installment sale = recognize gain as payments received (gross profit ratio). Exception per §453(i): depreciation recapture in year 1.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -988,8 +988,8 @@ const questions = [
       "D": "$7,000"
     },
     "correctAnswer": "B",
-    "explanation": "For 2024, the employee elective deferral limit for 401(k) plans is $23,000 (indexed for inflation). Those age 50 and over can contribute an additional $7,500 catch-up. The $69,000 is the total annual addition limit (employee + employer contributions).",
-    "tip": "2024 401(k): $23,000 employee limit + $7,500 catch-up if 50+. Total additions capped at $69,000.",
+    "explanation": "Per IRC §402(g), the employee elective deferral limit for 401(k) plans is $23,000 for 2024 (indexed annually for inflation). Per IRC §414(v), those age 50+ can contribute an additional $7,500 catch-up contribution ($30,500 total). Per IRC §415(c), the total annual addition limit (employee + employer) is $69,000 for 2024. These limits apply across all 401(k)/403(b)/457 plans combined. Why other answers are wrong: (A) $15,500 was the limit in 2008, now outdated; (C) $69,000 is the total additions limit including employer contributions per §415(c); (D) $7,000 is the 2024 IRA contribution limit per §219, not 401(k).",
+    "tip": "IRC §402(g): 2024 401(k) deferral = $23,000. §414(v): +$7,500 catch-up if 50+. §415(c): Total additions cap = $69,000.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1009,8 +1009,8 @@ const questions = [
       "D": "Conversion of ordinary income to capital gain"
     },
     "correctAnswer": "B",
-    "explanation": "Donating appreciated stock held long-term provides a deduction for fair market value while avoiding recognition of the built-in capital gain. If the stock were sold first, the taxpayer would owe capital gains tax, reducing the amount available for charity. The deduction is the same (FMV) either way.",
-    "tip": "Donate appreciated stock, don't sell first. Avoid cap gains tax and get FMV deduction.",
+    "explanation": "Per IRC §170(e)(1), donations of long-term appreciated capital gain property to public charities are deductible at FMV. Critically, the built-in gain is never recognized - the charity receives the property with a carryover basis but won't owe tax as a §501(c)(3) organization. If the stock were sold first, the taxpayer would owe capital gains tax (up to 23.8% with NIIT), reducing funds available for charity. Per §170(b)(1)(C), the deduction for such property is limited to 30% of AGI (vs. 60% for cash). Why other answers are wrong: (A) The deduction amount (FMV) is the same either way; (C) No provision allows double FMV deduction; (D) Donations don't convert ordinary income to capital gain.",
+    "tip": "IRC §170(e)(1): Donate LTCG property at FMV, avoid recognizing gain. 30% AGI limit per §170(b)(1)(C). Never sell appreciated stock to donate cash!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1030,8 +1030,8 @@ const questions = [
       "D": "Significant charitable contributions"
     },
     "correctAnswer": "C",
-    "explanation": "Exercising ISOs creates an AMT adjustment equal to the spread (FMV minus exercise price). This is one of the most common AMT triggers. Acquisition debt interest, charitable contributions, and qualified dividends are generally not AMT preference items.",
-    "tip": "ISO exercise = major AMT trigger. Plan ISO exercises to avoid or minimize AMT.",
+    "explanation": "Per IRC §56(b)(3), the spread on ISO exercise (FMV minus exercise price) is an AMT adjustment item. This is one of the most significant AMT triggers because the spread can be substantial. The AMT exemption per §55(d) ($85,700 single, $133,300 MFJ for 2024) phases out at higher incomes. Per §163(h)(3), acquisition debt interest remains deductible for AMT. Qualified dividends and charitable contributions are not AMT preference items. Why other answers are wrong: (A) Qualified dividends are taxed at the same preferential rates for both regular tax and AMT; (B) Home acquisition mortgage interest is not an AMT adjustment; (D) Charitable contributions are not an AMT preference item.",
+    "tip": "IRC §56(b)(3): ISO spread = AMT adjustment. Plan exercise to stay within AMT exemption. Consider same-day sale to avoid AMT.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1051,8 +1051,8 @@ const questions = [
       "D": "Consulting business"
     },
     "correctAnswer": "C",
-    "explanation": "Architecture and engineering are specifically excluded from the definition of specified service trades or businesses (SSTBs). Law, health, accounting, actuarial science, performing arts, consulting, athletics, financial services, and brokerage services are all SSTBs subject to income-based QBI limitations.",
-    "tip": "Architecture and engineering are NOT SSTBs - they get full QBI benefit regardless of income.",
+    "explanation": "Per IRC §199A(d)(2) and Reg. §1.199A-5, SSTBs include health, law, accounting, actuarial science, performing arts, consulting, athletics, financial services, brokerage, and any business where the principal asset is reputation/skill of employees. However, architecture and engineering are SPECIFICALLY EXCLUDED from the SSTB definition. This means architecture firms get full QBI deduction (20% of qualified business income) regardless of taxable income level. Why other answers are wrong: (A) Law practice is explicitly listed as an SSTB per §199A(d)(2)(A); (B) Medical/health practices are SSTBs per §199A(d)(2)(A); (D) Consulting is an SSTB per §199A(d)(2)(A).",
+    "tip": "IRC §199A(d)(2): SSTBs = health, law, accounting, consulting, etc. Architecture & engineering EXCLUDED - full QBI at any income level!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1072,8 +1072,8 @@ const questions = [
       "D": "When paid, regardless of the benefit period"
     },
     "correctAnswer": "A",
-    "explanation": "Even for cash-method taxpayers, prepaid expenses extending beyond 12 months beyond the end of the current tax year must be capitalized and deducted over the benefit period. The 12-month rule allows current deduction if the benefit doesn't extend more than 12 months after payment.",
-    "tip": "12-month rule: prepaid expense deductible if benefit doesn't extend beyond 12 months from payment date.",
+    "explanation": "Per Reg. §1.263(a)-4(f), the 12-month rule allows cash-method taxpayers to currently deduct prepaid expenses IF the benefit period doesn't extend beyond 12 months after the earlier of: (1) the date of payment, or (2) the first date the benefit is realized. Expenses extending beyond this period must be capitalized and amortized over the benefit period under IRC §461. This prevents distortion of income through large prepayments. Why other answers are wrong: (B) Economic performance rules (§461(h)) apply to accrual method, not cash method; (C) Cash method generally allows deduction when paid, not when benefit received; (D) The 12-month rule limits the 'when paid' deduction for prepayments extending too far.",
+    "tip": "Reg. §1.263(a)-4(f): 12-month rule - deduct prepaid if benefit ≤12 months from payment. Longer periods = capitalize and amortize.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1093,8 +1093,8 @@ const questions = [
       "D": "Rolling over all assets to an IRA"
     },
     "correctAnswer": "A",
-    "explanation": "NUA strategy involves taking a lump-sum distribution from the 401(k) with employer stock distributed in-kind rather than sold. Only the cost basis is taxed as ordinary income at distribution. The NUA (appreciation) is taxed as long-term capital gain when the stock is later sold.",
-    "tip": "NUA = get LTCG treatment on employer stock appreciation instead of ordinary income. Requires in-kind distribution.",
+    "explanation": "Per IRC §402(e)(4), net unrealized appreciation (NUA) on employer securities distributed in-kind from a qualified plan is excluded from income at distribution. Only the plan's cost basis in the stock is taxed as ordinary income. The NUA is taxed as LTCG when the stock is later sold, regardless of how long it's held post-distribution. Requirements: lump-sum distribution triggered by separation from service, death, disability, or age 59½. Why other answers are wrong: (B) Roth conversion would convert all value to Roth, losing the NUA benefit; (C) Donating from a 401(k) isn't directly possible; (D) Rolling to an IRA forfeits the NUA treatment - all future distributions become ordinary income.",
+    "tip": "IRC §402(e)(4): NUA = distribute employer stock in-kind, pay ordinary tax only on basis. All appreciation = LTCG at sale. Don't roll to IRA!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1114,8 +1114,8 @@ const questions = [
       "D": "Rental property"
     },
     "correctAnswer": "C",
-    "explanation": "Publicly traded securities cannot use installment sale reporting because there's a readily available market for immediate sale. Other ineligible property includes inventory and dealer sales. Real property (business use, residence, rental) generally qualifies for installment sale treatment.",
-    "tip": "Installment sales not available for: inventory, dealer property, publicly traded securities.",
+    "explanation": "Per IRC §453(k)(2), publicly traded securities are excluded from installment sale treatment because they are traded on an established securities market and can be immediately converted to cash. Per IRC §453(b)(2), inventory and dealer sales are also excluded. Real property (§453(l)), personal residences, and rental property generally qualify. The rationale is that installment treatment is for sales where payment is genuinely deferred, not where liquid assets are involved. Why other answers are wrong: (A) Real property used in business is eligible for installment sale per §453; (B) Personal residence sales can use installment treatment; (D) Rental property qualifies for installment sale treatment.",
+    "tip": "IRC §453(k)(2): No installment sale for publicly traded securities (readily convertible). Also excluded: inventory (§453(b)(2)), dealer property.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1135,8 +1135,8 @@ const questions = [
       "D": "Gifts of property to family members"
     },
     "correctAnswer": "A",
-    "explanation": "The assignment of income doctrine prevents taxpayers from avoiding tax by directing earned income to another person. The person who earns income must report it. However, transferring income-producing property (shifting the 'tree' not just the 'fruit') is permitted, as is paying reasonable wages to family employees.",
-    "tip": "Assignment of income: can't assign fruit, but can gift the tree. Transfer property, not just income.",
+    "explanation": "The assignment of income doctrine (established in Lucas v. Earl, 281 U.S. 111 (1930) and codified through judicial interpretation) prevents taxpayers from avoiding tax by directing earned income to another person. Per the 'fruit and tree' analogy (Helvering v. Horst), income is taxed to the person who earns it or owns the income-producing property. Transferring the 'tree' (property) is permitted per IRC §102 (gift rules), shifting future income to the donee. Why other answers are wrong: (B) Employing family at FMV wages is legitimate - wages shift income if actually earned per §162; (C) Transferring dividend stock (the 'tree') successfully shifts future dividend income; (D) Property gifts are allowed under §102.",
+    "tip": "Assignment of income (Lucas v. Earl): Can't assign 'fruit' (income earned). CAN gift the 'tree' (income-producing property) per §102.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1156,8 +1156,8 @@ const questions = [
       "D": "Deferral of the original gain and potential exclusion of future appreciation"
     },
     "correctAnswer": "D",
-    "explanation": "Investing capital gains in a QOZ Fund provides: (1) deferral of the original gain until December 31, 2026, or earlier disposition, and (2) exclusion of appreciation on the QOZ investment if held at least 10 years. The original gain step-up benefits expired after 2021.",
-    "tip": "QOZ: defer gain until 2026, exclude appreciation after 10-year hold. Original gain step-up benefits expired.",
+    "explanation": "Per IRC §1400Z-2, investing capital gains in a Qualified Opportunity Zone Fund provides: (1) deferral of the original gain until the earlier of December 31, 2026, or disposition per §1400Z-2(b), and (2) per §1400Z-2(c), permanent exclusion of appreciation on the QOZ investment if held at least 10 years. Note: The 10%/15% basis step-up for 5/7-year holds per §1400Z-2(b)(2)(B) expired after 2021 - only deferral and appreciation exclusion remain available. Why other answers are wrong: (A) QOZ doesn't convert ST to LT gain; (B) The original gain is deferred, not excluded - only future appreciation is excluded; (C) The original gain is merely deferred until 2026, not immediately excluded.",
+    "tip": "IRC §1400Z-2: QOZ = defer original gain to 2026 per (b), exclude appreciation after 10 years per (c). Basis step-up benefits expired 2021.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1177,8 +1177,8 @@ const questions = [
       "D": "30 days during the 61-day period around the ex-dividend date"
     },
     "correctAnswer": "A",
-    "explanation": "For common stock dividends to qualify for the preferential 0%/15%/20% rates, the stock must be held for more than 60 days during the 121-day period beginning 60 days before the ex-dividend date. Preferred stock has a 91-day requirement during a 181-day window for dividends on periods over 366 days.",
-    "tip": "Qualified dividend holding period: >60 days in 121-day window around ex-dividend date.",
+    "explanation": "Per IRC §1(h)(11)(B)(iii), for dividends to qualify for preferential rates (0%/15%/20% per §1(h)), the stock must be held for more than 60 days during the 121-day period beginning 60 days before the ex-dividend date. This prevents 'dividend stripping' - buying stock just before ex-date, collecting the dividend, and selling. For preferred stock with dividends attributable to periods >366 days, the requirement is 91 days in a 181-day window per §1(h)(11)(B)(iii)(II). Why other answers are wrong: (B) 90 days before is not the correct period; (C) 120 days after payment date is not the rule; (D) 30 days/61-day period is the wash sale rule (§1091), not dividend qualification.",
+    "tip": "IRC §1(h)(11)(B)(iii): Qualified dividends = hold >60 days in 121-day window around ex-dividend date. Prevents dividend stripping.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1198,8 +1198,8 @@ const questions = [
       "D": "Delaying retirement"
     },
     "correctAnswer": "C",
-    "explanation": "Roth IRAs do not have RMDs during the owner's lifetime. Converting traditional IRA assets to Roth (paying tax now) reduces future RMDs by removing those assets from accounts subject to RMD rules. This is especially valuable in lower income years when conversion tax cost is reduced.",
-    "tip": "Roth conversion reduces RMDs - no lifetime RMDs for Roth IRAs. Convert in low-income years.",
+    "explanation": "Per IRC §408A(c)(5), Roth IRAs are exempt from RMD rules during the owner's lifetime (RMDs apply to inherited Roths post-SECURE Act). Converting traditional IRA assets to Roth per §408A(d)(3) removes those assets from RMD calculations, as RMDs per §401(a)(9) only apply to traditional IRAs, 401(k)s, and other pre-tax accounts. This is especially valuable during low-income years (e.g., early retirement, before Social Security) when conversion tax is minimized. Why other answers are wrong: (A) Increasing withdrawals depletes the account but doesn't reduce RMD percentages; (B) More traditional IRA contributions increase future RMDs; (D) Delaying retirement doesn't affect IRA RMDs (age-based).",
+    "tip": "IRC §408A(c)(5): No lifetime RMDs for Roth IRAs. Convert traditional to Roth per §408A(d)(3) in low-income years to reduce future RMDs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1219,8 +1219,8 @@ const questions = [
       "D": "The contribution is deductible immediately while grants can be made in future years"
     },
     "correctAnswer": "D",
-    "explanation": "DAFs provide immediate charitable deduction when the contribution is made, while allowing the donor to recommend grants to specific charities over time. This separates the tax benefit timing from the charitable disbursement timing. Contributions are irrevocable, and grants must go to qualified charities, not individuals.",
-    "tip": "DAF = deduction now, grant later. Great for bunching in high-income years with gradual distributions.",
+    "explanation": "Per IRC §170 and §4966, a donor advised fund contribution provides an immediate charitable deduction in the year of contribution, while the donor retains advisory privileges over future grants. This separates tax timing from charitable disbursement. Cash contributions to DAFs are deductible up to 60% of AGI per §170(b)(1)(A); appreciated property up to 30% per §170(b)(1)(C). DAF contributions are irrevocable per §4966. Why other answers are wrong: (A) Contributions cannot be revoked - they're immediately owned by the sponsoring charity; (B) Grants can only go to §501(c)(3) organizations, not individuals per §4966(c); (C) Deduction occurs at contribution, not when grants are made.",
+    "tip": "IRC §170/§4966: DAF = immediate deduction, recommend grants later. Perfect for bunching in high-income years. Contributions irrevocable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1240,8 +1240,8 @@ const questions = [
       "D": "The taxpayer expects to forfeit the property"
     },
     "correctAnswer": "C",
-    "explanation": "Section 83(b) allows taxpayers to elect to include restricted property in income at grant (when value is typically low) rather than at vesting (when value may be higher). If property appreciates substantially, all appreciation after the 83(b) election is taxed as capital gain. If property decreases in value or is forfeited, the election cannot be reversed.",
-    "tip": "83(b) election = pay tax now at low value, get capital gain on future appreciation. Must file within 30 days!",
+    "explanation": "Per IRC §83(b), taxpayers can elect to include restricted property in gross income at grant (based on FMV at grant minus amount paid) rather than at vesting (when the substantial risk of forfeiture lapses per §83(a)). If the property substantially appreciates between grant and vesting, all post-election appreciation is taxed as capital gain (LTCG if held >1 year from grant). Critical: The election must be filed with the IRS within 30 days of the grant date per Reg. §1.83-2(b). Why other answers are wrong: (A) If property decreases or is forfeited, the tax paid is lost with no deduction - 83(b) is a bet on appreciation; (B) 83(b) accelerates, not defers, income recognition; (D) Forfeiture risk makes 83(b) a poor choice - you'd pay tax on property you never keep.",
+    "tip": "IRC §83(b): Elect within 30 days to include at grant value. Bet on appreciation → future gain is LTCG. If forfeited, no refund!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1261,8 +1261,8 @@ const questions = [
       "D": "50% of gain, capped at $5 million"
     },
     "correctAnswer": "B",
-    "explanation": "For QSBS acquired after September 27, 2010, Section 1202 allows 100% exclusion of gain, limited to the greater of $10 million or 10 times the adjusted basis of QSBS in that corporation. The stock must be held more than 5 years and meet other requirements (C corp, active business, under $50M gross assets).",
-    "tip": "QSBS = up to 100% exclusion, max of $10M or 10x basis. Must hold 5+ years, C corp, active business.",
+    "explanation": "Per IRC §1202(a), for QSBS acquired after September 27, 2010, taxpayers can exclude 100% of gain from gross income, subject to per-issuer limitations. Per §1202(b), the exclusion is limited to the greater of $10 million or 10 times the adjusted basis of QSBS disposed of during the year from that corporation. Requirements per §1202(c)-(e): stock acquired at original issuance, C corporation, held >5 years, corporation had ≤$50M gross assets at issuance, active business (not personal services, finance, etc.). Why other answers are wrong: (A) 75% was the rate for stock acquired 2/18/09-9/27/10; (C) $250,000 is far below the actual limit; (D) 50% was the rate for stock acquired before 2/17/09.",
+    "tip": "IRC §1202: QSBS = 100% exclusion (post-9/27/10), max greater of $10M or 10x basis. Hold 5+ years, C corp, ≤$50M assets at issuance.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1282,8 +1282,8 @@ const questions = [
       "D": "A minimum tax credit usable in future years"
     },
     "correctAnswer": "D",
-    "explanation": "AMT paid due to deferral preferences (like ISO exercises or MACRS vs. AMT depreciation) generates a minimum tax credit (MTC) that can offset regular tax in future years. Exclusion items (like private activity bond interest) do not generate MTC. The credit helps equalize taxation over time.",
-    "tip": "Deferral AMT items → MTC credit for future regular tax offset. Exclusion items → no credit.",
+    "explanation": "Per IRC §53(d), AMT paid due to deferral preferences generates a minimum tax credit (MTC) that can offset regular tax liability in future years. Deferral items include ISO exercises per §56(b)(3) and MACRS vs. AMT depreciation per §56(a)(1) - these create timing differences that reverse. Per §53(d)(1)(B), exclusion items (like private activity bond interest per §57(a)(5)) do NOT generate MTC because they represent permanent differences. Why other answers are wrong: (A) There's no loss deduction for AMT paid; (B) AMT doesn't affect future exemption amounts; (C) Deferral AMT items provide future benefit through MTC.",
+    "tip": "IRC §53: Deferral AMT items (ISO, depreciation) → generate MTC for future regular tax offset. Exclusion items (PAB interest) → no MTC.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1303,8 +1303,8 @@ const questions = [
       "D": "Withdrawing from a 401(k) to fund a Roth IRA"
     },
     "correctAnswer": "C",
-    "explanation": "The backdoor Roth strategy allows high-income taxpayers who exceed Roth IRA income limits to make non-deductible traditional IRA contributions and then convert to Roth. The pro-rata rule may cause partial taxation if the taxpayer has other pre-tax IRA balances. This remains a legal strategy after Build Back Better failed to eliminate it.",
-    "tip": "Backdoor Roth: nondeductible traditional IRA → convert to Roth. Beware pro-rata rule if you have pre-tax IRAs.",
+    "explanation": "Per IRC §408A(c)(3), Roth IRA contributions phase out at higher income levels ($161,000-$176,000 single, $240,000-$250,000 MFJ for 2024). The 'backdoor Roth' strategy bypasses these limits: contribute to a non-deductible traditional IRA (no income limit per §219), then convert to Roth per §408A(d)(3). Critical: The pro-rata rule per §408(d)(2) applies if you have any pre-tax IRA balances - you cannot convert just the after-tax portion. Why other answers are wrong: (A) Borrowing from a Roth IRA isn't a recognized strategy; (B) Excess contributions trigger 6% penalty per §4973; (D) Using 401(k) withdrawals would be taxable and potentially penalized.",
+    "tip": "Backdoor Roth: nondeductible traditional IRA per §219 → convert per §408A(d)(3). Pro-rata rule (§408(d)(2)): aggregate all IRAs!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1324,8 +1324,8 @@ const questions = [
       "D": "The parent's marginal rate"
     },
     "correctAnswer": "D",
-    "explanation": "Under current law (post-TCJA correction), a child's unearned income subject to the kiddie tax is taxed at the parents' marginal rate. The first threshold amount (indexed, approximately $1,300) is tax-free, the second threshold amount is taxed at the child's rate, and amounts above that are taxed at the parents' marginal rate.",
-    "tip": "Kiddie tax = parent's rate (current law). Brief use of trust rates was repealed retroactively.",
+    "explanation": "Per IRC §1(g), a child's unearned income above the kiddie tax threshold is taxed at the parent's marginal rate. For 2024, the first $1,300 of unearned income is tax-free (standard deduction equivalent), the next $1,300 is taxed at the child's rate, and amounts above $2,600 are taxed at the parent's rate. Note: TCJA briefly changed this to trust rates, but the Taxpayer Certainty and Disaster Tax Relief Act of 2019 retroactively restored the parent's rate rule. Applies to children under 19 (or under 24 if full-time students). Why other answers are wrong: (A) 15% flat rate doesn't apply to kiddie tax; (B) Trust rates applied briefly 2018-2019 but were retroactively repealed; (C) Using only the child's rate would defeat the purpose of the kiddie tax.",
+    "tip": "IRC §1(g): Kiddie tax = parent's marginal rate on unearned income >$2,600 (2024). Trust rate provision (2018-19) retroactively repealed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1345,8 +1345,8 @@ const questions = [
       "D": "All income to charity with remainder to individuals"
     },
     "correctAnswer": "C",
-    "explanation": "A CRAT pays a fixed annuity amount (at least 5% of initial fair market value) to the non-charitable beneficiary for a term or life, with the remainder going to charity. A charitable remainder unitrust (CRUT), in contrast, pays a percentage of trust value determined annually. Both provide income tax deductions at creation.",
-    "tip": "CRAT = fixed payment. CRUT = variable payment based on annual value. Both give upfront deductions.",
+    "explanation": "Per IRC §664(d)(1), a charitable remainder annuity trust (CRAT) pays a fixed annuity amount (at least 5% but not more than 50% of initial FMV per §664(d)(1)(A)) to the non-charitable beneficiary for a term of years (≤20) or for life. The remainder passes to charity. Per §664(d)(2), a charitable remainder unitrust (CRUT) pays a fixed percentage of annually revalued trust assets. Both provide income tax deductions at creation under §170 based on the present value of the charitable remainder. Why other answers are wrong: (A) Both CRAT and CRUT provide upfront deductions; (B) Variable payments describe a CRUT, not CRAT; (D) This describes a charitable lead trust - CRTs work in reverse.",
+    "tip": "IRC §664(d)(1): CRAT = fixed annuity (5-50% of initial FMV). §664(d)(2): CRUT = percentage of annual value. Both give upfront §170 deductions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1366,8 +1366,8 @@ const questions = [
       "D": "60 days before or after the sale (121-day total period)"
     },
     "correctAnswer": "C",
-    "explanation": "The wash sale rule disallows a loss if substantially identical securities are purchased within 30 days before or 30 days after the sale, creating a 61-day window (30 days before + sale day + 30 days after). The disallowed loss is added to the basis of the replacement shares.",
-    "tip": "Wash sale = 61-day window total (30 before + day of sale + 30 after). Loss adds to replacement basis.",
+    "explanation": "Per IRC §1091(a), a loss is disallowed if the taxpayer acquires substantially identical securities within 30 days before or 30 days after the sale, creating a 61-day total window. Per §1091(d), the disallowed loss is added to the basis of the replacement shares, preserving the economic loss for future recognition. 'Substantially identical' includes the same stock but not similar stocks in the same industry or index funds tracking similar indices. Why other answers are wrong: (A) The rule applies to purchases both before AND after the sale; (B) Same as A - both directions are covered; (D) 60/121 days is the qualified dividend holding period rule per §1(h)(11), not wash sales.",
+    "tip": "IRC §1091: Wash sale = 61-day window (30 before + sale day + 30 after). Disallowed loss → added to replacement basis per §1091(d).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1387,8 +1387,8 @@ const questions = [
       "D": "45 days of the sale"
     },
     "correctAnswer": "D",
-    "explanation": "In a deferred 1031 exchange, replacement property must be identified in writing within 45 days of transferring the relinquished property. The exchange must be completed within 180 days (or the due date of the tax return, if earlier). The 45-day and 180-day periods run concurrently.",
-    "tip": "1031 timing: 45 days to identify, 180 days to close. Both periods start on sale of relinquished property.",
+    "explanation": "Per IRC §1031(a)(3)(A), in a deferred (Starker) exchange, replacement property must be identified in writing within 45 days of transferring the relinquished property. Per §1031(a)(3)(B), the exchange must be completed within 180 days (or the due date of the return including extensions, if earlier). Both periods run concurrently from the transfer date. The 3-property rule or 200% rule per Reg. §1.1031(k)-1(c) limits identification options. Why other answers are wrong: (A) 90 days is not a deadline under §1031; (B) 180 days is the completion deadline, not identification; (C) 30 days is too short - the identification period is 45 days.",
+    "tip": "IRC §1031(a)(3): Identify replacement in 45 days, close in 180 days (both from transfer). 3-property or 200% rule applies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1408,8 +1408,8 @@ const questions = [
       "D": "Making after-tax 401(k) contributions and converting to Roth"
     },
     "correctAnswer": "D",
-    "explanation": "The mega backdoor Roth allows employees whose 401(k) plans permit after-tax contributions (beyond the regular elective deferral limit) to contribute and then convert those after-tax funds to Roth (in-plan or via rollover). This can add up to approximately $46,000 of additional Roth contributions in 2024.",
-    "tip": "Mega backdoor = after-tax 401(k) contributions → Roth. Plan must allow after-tax and in-service distributions.",
+    "explanation": "Per IRC §415(c), the total 401(k) annual addition limit is $69,000 for 2024. The 'mega backdoor Roth' uses after-tax contributions (beyond the $23,000 elective deferral per §402(g)) to fill the gap to $69,000. These after-tax funds are then converted to Roth via in-plan Roth conversion per §402A or rollover to Roth IRA per §408A. This allows up to ~$46,000 of additional Roth savings ($69,000 - $23,000). Requirements: plan must permit after-tax contributions AND in-service distributions or in-plan conversions. Why other answers are wrong: (A) Contributing to multiple Roth IRAs doesn't increase limits; (B) SEP IRAs are for self-employed, different strategy; (C) Traditional IRA conversion is the regular backdoor, limited to $7,000.",
+    "tip": "Mega backdoor: After-tax 401(k) up to §415(c) limit ($69K) → convert to Roth per §402A or §408A. Plan must allow both features.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1429,8 +1429,8 @@ const questions = [
       "D": "Converting QSBS to S corporation stock"
     },
     "correctAnswer": "C",
-    "explanation": "Section 1045 allows non-corporate taxpayers to roll over gain from the sale of QSBS held more than 6 months by purchasing replacement QSBS within 60 days. The gain is deferred and reduces the basis of the replacement stock. This can be combined with Section 1202 exclusion for the replacement stock.",
-    "tip": "Section 1045 rollover: sell QSBS (held 6+ months) → reinvest in new QSBS within 60 days → defer gain.",
+    "explanation": "Per IRC §1045(a), non-corporate taxpayers can defer gain on the sale of QSBS held more than 6 months by purchasing replacement QSBS within 60 days of the sale. Per §1045(b)(3), the deferred gain reduces the basis of the replacement stock. This can be stacked with §1202: roll into new QSBS, hold 5 years, then exclude 100% of gain (including the rolled gain). Replacement stock must meet all §1202(c) requirements. Why other answers are wrong: (A) Donating to a CRT is a different planning strategy; (B) QOZ and QSBS are separate programs with different requirements; (D) Converting to S corp stock would disqualify - QSBS must be C corp stock per §1202(c).",
+    "tip": "IRC §1045: Sell QSBS (held 6+ months) → reinvest in new QSBS within 60 days → defer gain. Stack with §1202 for potential 100% exclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1450,8 +1450,8 @@ const questions = [
       "D": "20% of QBI or 50% of W-2 wages plus 25% of UBIA"
     },
     "correctAnswer": "B",
-    "explanation": "For non-SSTB businesses, taxpayers above the income threshold face a limitation: QBI deduction cannot exceed the greater of (1) 50% of W-2 wages, or (2) 25% of W-2 wages plus 2.5% of the unadjusted basis immediately after acquisition (UBIA) of qualified property.",
-    "tip": "QBI cap = greater of: (1) 50% W-2 wages, or (2) 25% wages + 2.5% UBIA. Both limits phase in above threshold.",
+    "explanation": "Per IRC §199A(b)(2), for taxpayers above the income threshold ($191,950 single, $383,900 MFJ for 2024), the QBI deduction for non-SSTB businesses is limited to the greater of: (1) 50% of W-2 wages paid by the business, or (2) 25% of W-2 wages plus 2.5% of the unadjusted basis immediately after acquisition (UBIA) of qualified property per §199A(b)(6). The W-2 wage/UBIA limit phases in between the threshold and $241,950 single/$483,900 MFJ. Why other answers are wrong: (A) 50% of QBI is the base calculation before limitations, not a cap; (C) These percentages are reversed; (D) These percentages don't match the statutory formula.",
+    "tip": "IRC §199A(b)(2): QBI cap = greater of 50% W-2 wages OR (25% W-2 + 2.5% UBIA). Phases in above $191,950 single/$383,900 MFJ (2024).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1471,8 +1471,8 @@ const questions = [
       "D": "Avoid the 10% early withdrawal penalty on any distribution"
     },
     "correctAnswer": "B",
-    "explanation": "QCDs allow taxpayers 70½ or older to transfer up to $105,000 (2024, indexed) directly from an IRA to qualified charities. The distribution satisfies RMD requirements but isn't included in gross income. This benefits taxpayers who don't itemize or want to reduce AGI for other phase-outs.",
-    "tip": "QCD = direct IRA-to-charity transfer. Satisfies RMD, doesn't increase AGI, doesn't require itemizing.",
+    "explanation": "Per IRC §408(d)(8), taxpayers age 70½ or older can make qualified charitable distributions (QCDs) of up to $105,000 annually (2024, indexed per §408(d)(8)(B)) directly from an IRA to qualified public charities. The QCD satisfies RMD requirements per §401(a)(9) but is excluded from gross income under §408(d)(8)(A). This provides benefits even for non-itemizers and reduces AGI for purposes of other phase-outs (Social Security taxation, Medicare premiums, etc.). Why other answers are wrong: (A) QCDs don't affect the 60% AGI charitable limit - they're a separate exclusion; (C) QCDs are not related to Roth conversions; (D) The 10% penalty is for early distributions before 59½ - QCDs require age 70½.",
+    "tip": "IRC §408(d)(8): QCD = direct IRA-to-charity (70½+), up to $105,000 (2024). Excludes from income, satisfies RMD, no itemizing needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },

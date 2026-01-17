@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 35 | 770 | 4% | In Progress |
+| TCP | 805 | 70 | 735 | 9% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 35 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 70 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -57,7 +57,7 @@ All 58 exam TBS questions have been enhanced with:
 | Batch | Questions | Range | Status |
 |-------|-----------|-------|--------|
 | Individual Tax Compliance | 35 | tcp-001-001 to tcp-001-035 | **Complete** |
-| Tax Planning | 35 | tcp-002-001 to tcp-002-035 | Pending |
+| Tax Planning | 35 | tcp-002-001 to tcp-002-035 | **Complete** |
 | Entity Tax Compliance | 35 | tcp-003-001 to tcp-003-035 | Pending |
 | More batches | ... | ... | Pending |
 
@@ -98,6 +98,70 @@ All 58 exam TBS questions have been enhanced with:
 | Collection SOL | IRC §6502 |
 | Refund Claims | IRC §6511 |
 | Innocent Spouse | IRC §6015 |
+
+### TCP Enhancement Completed - January 17, 2026 (Session 2)
+
+**Tax Planning Questions Enhanced (tcp-002-001 to tcp-002-035)**
+
+35 Tax Planning questions enhanced with:
+- IRC §451 and Reg. §1.451-2 constructive receipt doctrine
+- IRC §63 standard deduction and bunching strategies
+- IRC §103 municipal bond interest exclusion
+- IRC §1222 holding period rules for LTCG
+- IRC §408/§408A traditional vs Roth IRA taxation
+- IRC §1(g) kiddie tax rules and thresholds
+- IRC §422 ISO taxation and §83 NSO rules
+- IRC §1211(b) capital loss limitations
+- IRC §1091 wash sale rules (61-day window)
+- IRC §1411 Net Investment Income Tax thresholds
+- IRC §453 installment sale reporting
+- IRC §402(g)/§414(v)/§415(c) retirement contribution limits
+- IRC §170(e)(1) appreciated property donations
+- IRC §56(b)(3) AMT preference items for ISOs
+- IRC §199A(d)(2) SSTB definitions and QBI limitations
+- IRC §402(e)(4) NUA strategy rules
+- IRC §1400Z-2 Qualified Opportunity Zone benefits
+- IRC §1(h)(11) qualified dividend holding period
+- IRC §664 charitable remainder trusts (CRAT vs CRUT)
+- IRC §83(b) election for restricted property
+- IRC §1202/§1045 QSBS exclusion and rollover
+- IRC §53 minimum tax credit for deferral items
+- IRC §408A(d)(3) backdoor Roth and pro-rata rules
+- IRC §1031(a)(3) like-kind exchange timing rules
+- IRC §199A(b)(2) QBI W-2 wage limitations
+- IRC §408(d)(8) qualified charitable distributions (QCDs)
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Constructive Receipt | Reg. §1.451-2 |
+| Bunching Strategy | IRC §63 |
+| Municipal Bonds | IRC §103 |
+| LTCG Holding Period | IRC §1222(3) |
+| Roth vs Traditional | IRC §408A, §408 |
+| Kiddie Tax | IRC §1(g) |
+| ISO vs NSO | IRC §422, §83 |
+| Tax Loss Harvesting | IRC §1211(b) |
+| Wash Sale Rule | IRC §1091 |
+| NIIT | IRC §1411 |
+| Installment Sales | IRC §453 |
+| 401(k) Limits | IRC §402(g), §415(c) |
+| Appreciated Donations | IRC §170(e)(1) |
+| AMT Triggers | IRC §56(b)(3) |
+| SSTB/QBI | IRC §199A |
+| NUA Strategy | IRC §402(e)(4) |
+| Opportunity Zones | IRC §1400Z-2 |
+| Qualified Dividends | IRC §1(h)(11) |
+| CRAT/CRUT | IRC §664 |
+| 83(b) Election | IRC §83(b) |
+| QSBS | IRC §1202, §1045 |
+| AMT Credit | IRC §53 |
+| Backdoor Roth | IRC §408A(d)(3) |
+| 1031 Exchange | IRC §1031(a)(3) |
+| QBI Limitations | IRC §199A(b)(2) |
+| QCDs | IRC §408(d)(8) |
 | FBAR Threshold | 31 CFR §1010.350 |
 | FATCA (Form 8938) | IRC §6038D |
 | Listed Transactions | IRC §6707A |
