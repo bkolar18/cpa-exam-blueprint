@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface User {
  id: string;
@@ -349,6 +350,13 @@ export default function UserManagementPage() {
  </div>
  </div>
  </div>
+
+ <Link
+ href={`/admin/users/${selectedUser.id}`}
+ className="block w-full py-2 px-4 bg-[var(--primary)] text-white text-center rounded-lg font-medium hover:bg-[var(--primary-hover)] transition-colors"
+ >
+ View Full Analytics
+ </Link>
 
  <div className="text-xs text-[var(--muted)] dark:text-[var(--muted)]">
  User ID: {selectedUser.id}
