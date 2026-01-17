@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { rateLimitMiddleware } from "@/lib/security/rate-limit";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -21,11 +22,24 @@ function formatDate(dateString: string): string {
 
 export async function POST(request: Request) {
   try {
+    // Rate limit check
+    const rateLimitResponse = await rateLimitMiddleware(request, 'subscribe-nts');
+    if (rateLimitResponse) return rateLimitResponse;
+
     const data: NTSSubscriptionData = await request.json();
 
-    if (!data.email || !data.expirationDate) {
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!data.email || !emailRegex.test(data.email)) {
       return NextResponse.json(
-        { error: "Email and expiration date are required" },
+        { error: "Valid email is required" },
+        { status: 400 }
+      );
+    }
+
+    if (!data.expirationDate) {
+      return NextResponse.json(
+        { error: "Expiration date is required" },
         { status: 400 }
       );
     }

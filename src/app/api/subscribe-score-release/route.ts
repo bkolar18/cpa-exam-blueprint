@@ -1,15 +1,29 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { rateLimitMiddleware } from "@/lib/security/rate-limit";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    // Rate limit check
+    const rateLimitResponse = await rateLimitMiddleware(request, 'subscribe-score-release');
+    if (rateLimitResponse) return rateLimitResponse;
+
     const { email } = await request.json();
 
     if (!email) {
       return NextResponse.json(
         { error: "Email is required" },
+        { status: 400 }
+      );
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: "Invalid email format" },
         { status: 400 }
       );
     }

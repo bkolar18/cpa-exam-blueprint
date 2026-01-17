@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { useState, useRef, useEffect } from "react";
 import { ThemeToggleSimple } from "@/components/theme/ThemeToggle";
-import { isAdminEmailClient } from "@/lib/admin/client";
+import { useAdminStatus } from "@/hooks/useAdminStatus";
 
 // Standalone nav items
 const standaloneItems = [
@@ -217,8 +217,8 @@ export default function DashboardNav() {
   // Track which mobile sections are expanded (all collapsed by default)
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
-  // Check if user is an admin
-  const isAdmin = isAdminEmailClient(user?.email);
+  // Check if user is an admin (secure - no email exposure)
+  const { isAdmin } = useAdminStatus();
 
   const toggleMobileSection = (label: string) => {
     setExpandedSections(prev => {

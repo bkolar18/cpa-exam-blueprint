@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
+import { logRateLimitExceeded } from './logging';
 
 interface RateLimitConfig {
   windowMs: number;      // Time window in milliseconds
@@ -23,6 +24,14 @@ export const RATE_LIMITS: Record<string, RateLimitConfig> = {
   // Auth-related (stricter)
   'auth/login': { windowMs: 300000, maxRequests: 10 },  // 5 min window
   'auth/signup': { windowMs: 3600000, maxRequests: 5 }, // 1 hour window
+
+  // Public email subscription endpoints (prevent abuse)
+  'subscribe-score-release': { windowMs: 3600000, maxRequests: 5 }, // 5 per hour
+  'subscribe-nts': { windowMs: 3600000, maxRequests: 5 }, // 5 per hour
+  'submit-study-plan': { windowMs: 3600000, maxRequests: 10 }, // 10 per hour
+
+  // Admin status check (lightweight but prevent enumeration)
+  'auth/admin-status': { windowMs: 60000, maxRequests: 30 },
 
   // Default for unspecified endpoints
   'default': { windowMs: 60000, maxRequests: 100 },
@@ -161,6 +170,11 @@ export async function rateLimitMiddleware(
   const result = await checkRateLimit(identifier, endpoint);
 
   if (!result.allowed) {
+    // Log rate limit violation to security events
+    logRateLimitExceeded(request, endpoint, userId).catch(err => {
+      console.error('Failed to log rate limit event:', err);
+    });
+
     return new Response(
       JSON.stringify({
         error: 'Too many requests',

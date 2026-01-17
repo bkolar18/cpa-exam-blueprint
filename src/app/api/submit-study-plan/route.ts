@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { NextResponse } from "next/server";
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { determineSegments, getSegmentEmail, generateSegmentEmailHtml } from "@/lib/email/segment-content";
-import { nurtureSequence, generateNurtureEmailHtml } from "@/lib/email/nurture-sequence";
+import { rateLimitMiddleware } from "@/lib/security/rate-limit";
 
 // Lazy initialization to avoid build-time errors
 let supabaseAdmin: SupabaseClient | null = null;
@@ -34,7 +34,20 @@ interface StudyPlanData {
 
 export async function POST(request: Request) {
   try {
+    // Rate limit check
+    const rateLimitResponse = await rateLimitMiddleware(request, 'submit-study-plan');
+    if (rateLimitResponse) return rateLimitResponse;
+
     const data: StudyPlanData = await request.json();
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!data.email || !emailRegex.test(data.email)) {
+      return NextResponse.json(
+        { error: "Valid email is required" },
+        { status: 400 }
+      );
+    }
 
     // Send study plan to user
     await resend.emails.send({
