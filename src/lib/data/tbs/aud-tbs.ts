@@ -1205,22 +1205,22 @@ export const audEvidenceEvaluationTBS: TBSQuestion = {
 };
 
 // =============================================================================
-// RESEARCH TBS - Required per Section
+// PCAOB Standards - Migrated from research TBS (CPA Evolution 2024)
 // =============================================================================
 
 export const audResearchPCAOBTBS: TBSQuestion = {
   id: "tbs-aud-020",
   section: "AUD",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Professional Standards",
   subtopic: "PCAOB Standards",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "AUD-I",
-  title: "Research - Issuer Audit Misstatement Detection",
-  scenarioText: `A staff auditor discovered suspicious activities during an audit of a publicly traded company that may indicate intentional misstatement of the financial statements. They need to find the authoritative PCAOB guidance regarding the auditor's responsibilities when encountering potential intentional misstatements.
+  title: "Issuer Audit Misstatement Detection Analysis",
+  scenarioText: `A staff auditor discovered suspicious activities during an audit of a publicly traded company that may indicate intentional misstatement of the financial statements.
 
-Required: Cite the PCAOB Auditing Standard that addresses the auditor's responsibility related to detecting intentional misstatements in financial statements.`,
+Review the authoritative literature excerpts and identify the PCAOB Auditing Standard that addresses the auditor's responsibility related to detecting intentional misstatements in financial statements.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -1244,24 +1244,48 @@ Required: Cite the PCAOB Auditing Standard that addresses the auditor's responsi
 Please help me locate the relevant PCAOB Auditing Standard.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "PCAOB Auditing Standards",
+        paragraphs: [
+          "PCAOB AS 1015 - Due Professional Care",
+          "The auditor should exercise due professional care in planning and performing the audit and in preparing the report. Due professional care requires the auditor to exercise professional skepticism.",
+          "",
+          "PCAOB AS 2110 - Identifying and Assessing Risks of Material Misstatement",
+          "The auditor should obtain an understanding of the company and its environment to identify and assess the risks of material misstatement of the financial statements whether due to error or fraud.",
+          "",
+          "PCAOB AS 2301 - The Auditor's Responses to the Risks of Material Misstatement",
+          "The auditor should design and implement audit responses that address the identified risks of material misstatement.",
+          "",
+          "PCAOB AS 2401 - Consideration of Fraud in a Financial Statement Audit",
+          "The auditor has a responsibility to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether caused by error or fraud. This standard establishes requirements and provides direction relevant to fulfilling that responsibility, as it relates to fraud, in an audit of financial statements.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-pcaob-citation",
       order: 1,
-      type: "citation",
-      label: "PCAOB Auditing Standard on Fraud",
+      type: "dropdown",
+      label: "Which PCAOB standard addresses the auditor's responsibility for detecting fraud?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-as1015", order: 1, text: "PCAOB AS 1015 - Due Professional Care", isCorrect: false },
+        { id: "opt-as2110", order: 2, text: "PCAOB AS 2110 - Identifying Risks", isCorrect: false },
+        { id: "opt-as2301", order: 3, text: "PCAOB AS 2301 - Responses to Risks", isCorrect: false },
+        { id: "opt-as2401", order: 4, text: "PCAOB AS 2401 - Consideration of Fraud", isCorrect: true },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "PCAOB",
-        topicCode: "AS 2401",
-        alternativeCitations: [
-          { source: "PCAOB", topicCode: "Auditing Standard No. 2401" },
-          { source: "PCAOB", topicCode: "AS 2401 Consideration of Fraud" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-as2401",
       },
-      explanation: "Per PCAOB AS 2401, 'Consideration of Fraud in a Financial Statement Audit' addresses the auditor's responsibility for fraud in issuer audits.",
+      explanation: "Per PCAOB AS 2401, 'Consideration of Fraud in a Financial Statement Audit' specifically addresses the auditor's responsibility for planning and performing the audit to detect material misstatements caused by fraud in issuer audits.",
     },
   ],
 };
@@ -2909,22 +2933,22 @@ export const audRelatedPartiesTBS: TBSQuestion = {
 };
 
 // =============================================================================
-// RESEARCH TBS - AICPA Standards
+// AICPA Standards - Migrated from research TBS (CPA Evolution 2024)
 // =============================================================================
 
 export const audResearchAICPATBS: TBSQuestion = {
   id: "tbs-aud-033",
   section: "AUD",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Professional Standards",
   subtopic: "AICPA Standards",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "AUD-I",
-  title: "Research - Substantive Procedures Guidance",
-  scenarioText: `A staff auditor needs to understand the professional standards regarding the information the auditor uses to support the audit opinion. Research the AICPA guidance that establishes requirements for obtaining and evaluating information to support conclusions in a financial statement audit.
+  title: "Substantive Procedures Guidance Analysis",
+  scenarioText: `A staff auditor needs to understand the professional standards regarding the information the auditor uses to support the audit opinion.
 
-Required: Cite the AICPA AU-C section that addresses the nature and sufficiency of information supporting the auditor's conclusions.`,
+Review the authoritative literature excerpts and identify the AICPA AU-C section that addresses the nature and sufficiency of information supporting the auditor's conclusions.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -2947,24 +2971,48 @@ Required: Cite the AICPA AU-C section that addresses the nature and sufficiency 
 Please help me locate the correct AU-C section.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "AICPA AU-C Standards",
+        paragraphs: [
+          "AU-C Section 200 - Overall Objectives of the Independent Auditor",
+          "The objective of the auditor is to obtain reasonable assurance about whether the financial statements as a whole are free from material misstatement, whether due to fraud or error.",
+          "",
+          "AU-C Section 315 - Understanding the Entity and Its Environment",
+          "The auditor should obtain an understanding of the entity and its environment, including its internal control, sufficient to identify and assess the risks of material misstatement.",
+          "",
+          "AU-C Section 330 - Performing Audit Procedures in Response to Assessed Risks",
+          "The auditor should design and perform further audit procedures whose nature, timing, and extent are responsive to the assessed risks of material misstatement.",
+          "",
+          "AU-C Section 500 - Audit Evidence",
+          "The auditor should design and perform audit procedures that are appropriate in the circumstances for the purpose of obtaining sufficient appropriate audit evidence. Audit evidence is information used by the auditor in arriving at the conclusions on which the auditor's opinion is based. Sufficiency is the measure of the quantity of audit evidence. Appropriateness is the measure of the quality of audit evidence.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-aicpa-citation",
       order: 1,
-      type: "citation",
-      label: "AICPA AU-C Section on Audit Evidence",
+      type: "dropdown",
+      label: "Which AU-C section addresses sufficient appropriate audit evidence?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-200", order: 1, text: "AU-C Section 200 - Overall Objectives", isCorrect: false },
+        { id: "opt-315", order: 2, text: "AU-C Section 315 - Understanding the Entity", isCorrect: false },
+        { id: "opt-330", order: 3, text: "AU-C Section 330 - Performing Audit Procedures", isCorrect: false },
+        { id: "opt-500", order: 4, text: "AU-C Section 500 - Audit Evidence", isCorrect: true },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "AICPA",
-        topicCode: "AU-C 500",
-        alternativeCitations: [
-          { source: "AICPA", topicCode: "AU-C Section 500" },
-          { source: "AICPA", topicCode: "AU-C 500 Audit Evidence" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-500",
       },
-      explanation: "Per AU-C 500, Audit Evidence, establishes requirements for sufficient appropriate audit evidence in financial statement audits.",
+      explanation: "Per AU-C 500, Audit Evidence, establishes requirements for obtaining sufficient appropriate audit evidence. It defines sufficiency (quantity) and appropriateness (quality) of evidence.",
     },
   ],
 };
@@ -10095,20 +10143,21 @@ Required: Evaluate each issue and determine the overall opinion impact.`,
 };
 
 // Phase 3 expansion - Batch 3 (tbs-aud-082 through tbs-aud-086)
+// Public Company Audit Standards - Migrated from research TBS (CPA Evolution 2024)
 
 export const audResearchIssuerRequirementsTBS: TBSQuestion = {
   id: "tbs-aud-082",
   section: "AUD",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "PCAOB Standards",
   subtopic: "Issuer Audit Requirements",
   difficulty: "hard",
   skillLevel: "analysis",
   contentArea: "AUD-IV",
-  title: "Research: Public Company Audit Standards",
-  scenarioText: `Your firm has been engaged to audit SecureTech Corp, a publicly traded company. The engagement partner has asked you to research several PCAOB requirements unique to issuer audits.
+  title: "Public Company Audit Standards Analysis",
+  scenarioText: `Your firm has been engaged to audit SecureTech Corp, a publicly traded company. The engagement partner has asked you to identify several PCAOB requirements unique to issuer audits.
 
-Required: Research the applicable PCAOB standards and cite the relevant guidance for each topic described.`,
+Review the authoritative literature excerpts and answer the questions about applicable PCAOB standards.`,
   timeEstimateMinutes: 12,
   maxScorePoints: 3,
   exhibits: [
@@ -10127,58 +10176,87 @@ Required: Research the applicable PCAOB standards and cite the relevant guidance
         ],
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "PCAOB Auditing Standards",
+        paragraphs: [
+          "PCAOB AS 1201 - Supervision of the Audit Engagement",
+          "The engagement partner is responsible for the engagement and its performance. The engagement partner is responsible for proper supervision of the work of engagement team members.",
+          "",
+          "PCAOB AS 1215 - Audit Documentation",
+          "Audit documentation is the written record of the basis for the auditor's conclusions that provides the support for the auditor's representations. The auditor must retain audit documentation for seven years from the date the auditor grants permission to use the auditor's report.",
+          "",
+          "PCAOB AS 1220 - Engagement Quality Review",
+          "For each audit engagement and each engagement to review interim financial information, an engagement quality reviewer must perform an engagement quality review. The engagement quality reviewer must be a partner or another individual in an equivalent position.",
+          "",
+          "PCAOB AS 2101 - Audit Planning",
+          "The auditor must properly plan the audit. This standard establishes requirements regarding audit planning activities.",
+          "",
+          "PCAOB AS 2201 - An Audit of Internal Control Over Financial Reporting",
+          "The audit of internal control over financial reporting should be integrated with the audit of the financial statements. The objectives are to express an opinion on the effectiveness of the company's internal control over financial reporting.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-documentation",
       order: 1,
-      type: "citation",
-      label: "Cite the PCAOB standard for audit documentation retention period",
+      type: "dropdown",
+      label: "Which PCAOB standard requires 7-year retention of audit documentation?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-as1201", order: 1, text: "PCAOB AS 1201 - Supervision", isCorrect: false },
+        { id: "opt-as1215", order: 2, text: "PCAOB AS 1215 - Audit Documentation", isCorrect: true },
+        { id: "opt-as1220", order: 3, text: "PCAOB AS 1220 - Engagement Quality Review", isCorrect: false },
+        { id: "opt-as2101", order: 4, text: "PCAOB AS 2101 - Audit Planning", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "PCAOB",
-        topicCode: "AS 1215",
-        alternativeCitations: [
-          { source: "PCAOB", topicCode: "AS 1215.14" },
-          { source: "PCAOB", topicCode: "Auditing Standard No. 3" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-as1215",
       },
-      explanation: "PCAOB AS 1215 (formerly AS 3) requires retention of audit documentation for 7 years from report date",
+      explanation: "PCAOB AS 1215 (formerly AS 3) requires retention of audit documentation for 7 years from the date the auditor grants permission to use the auditor's report.",
     },
     {
       id: "req-icfr",
       order: 2,
-      type: "citation",
-      label: "Cite the PCAOB standard for integrated audit of ICFR",
+      type: "dropdown",
+      label: "Which PCAOB standard covers the integrated audit of internal control over financial reporting?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-as1201-icfr", order: 1, text: "PCAOB AS 1201 - Supervision", isCorrect: false },
+        { id: "opt-as1215-icfr", order: 2, text: "PCAOB AS 1215 - Audit Documentation", isCorrect: false },
+        { id: "opt-as2101-icfr", order: 3, text: "PCAOB AS 2101 - Audit Planning", isCorrect: false },
+        { id: "opt-as2201", order: 4, text: "PCAOB AS 2201 - Audit of ICFR", isCorrect: true },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "PCAOB",
-        topicCode: "AS 2201",
-        alternativeCitations: [
-          { source: "PCAOB", topicCode: "Auditing Standard No. 5" },
-          { source: "PCAOB", topicCode: "AS 2201.01" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-as2201",
       },
-      explanation: "PCAOB AS 2201 (formerly AS 5) covers audit of internal control over financial reporting integrated with financial statement audit",
+      explanation: "PCAOB AS 2201 (formerly AS 5) covers the audit of internal control over financial reporting integrated with the financial statement audit.",
     },
     {
       id: "req-eqr",
       order: 3,
-      type: "citation",
-      label: "Cite the PCAOB standard for engagement quality review",
+      type: "dropdown",
+      label: "Which PCAOB standard establishes engagement quality review requirements?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-as1201-eqr", order: 1, text: "PCAOB AS 1201 - Supervision", isCorrect: false },
+        { id: "opt-as1215-eqr", order: 2, text: "PCAOB AS 1215 - Audit Documentation", isCorrect: false },
+        { id: "opt-as1220-eqr", order: 3, text: "PCAOB AS 1220 - Engagement Quality Review", isCorrect: true },
+        { id: "opt-as2201-eqr", order: 4, text: "PCAOB AS 2201 - Audit of ICFR", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "PCAOB",
-        topicCode: "AS 1220",
-        alternativeCitations: [
-          { source: "PCAOB", topicCode: "Auditing Standard No. 7" },
-          { source: "PCAOB", topicCode: "QC 20" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-as1220-eqr",
       },
-      explanation: "PCAOB AS 1220 (formerly AS 7) covers engagement quality review requirements for issuers",
+      explanation: "PCAOB AS 1220 (formerly AS 7) covers engagement quality review requirements for issuer audits.",
     },
   ],
 };

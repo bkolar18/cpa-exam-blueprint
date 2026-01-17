@@ -1565,16 +1565,17 @@ Required: Calculate cash flow from operating activities using the indirect metho
 // RESEARCH TBS - Required per Section
 // =============================================================================
 
+// Migrated from research to document_review (CPA Evolution 2024)
 export const farResearchLeaseTBS: TBSQuestion = {
   id: "tbs-far-024",
   section: "FAR",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Leases",
   subtopic: "Lease Classification",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "FAR-III",
-  title: "Research - Long-Term Asset Usage Agreement",
+  title: "Document Review - Long-Term Asset Usage Agreement",
   scenarioText: `A client is entering into a multi-year agreement to use manufacturing equipment owned by another party. The client wants to understand how to account for this arrangement under current GAAP—specifically, how to determine whether the arrangement should be recorded as an asset with a corresponding liability or treated differently.
 
 • The arrangement term is 8 years
@@ -1583,7 +1584,7 @@ export const farResearchLeaseTBS: TBSQuestion = {
 • There is no option to purchase the equipment
 • The present value of payments equals 85% of the equipment's fair value
 
-Required: Cite the specific ASC paragraph that provides the criteria for determining the accounting treatment for such arrangements.`,
+Required: Review the authoritative literature and identify the ASC paragraph that provides the criteria for determining the accounting treatment for such arrangements.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -1598,9 +1599,26 @@ Required: Cite the specific ASC paragraph that provides the criteria for determi
         to: "Audit Staff",
         date: "Current Date",
         subject: "Asset Usage Arrangement Research",
-        body: `Please research the authoritative guidance for determining how to account for long-term arrangements where a client uses another party's asset. The client needs the citation that lists the criteria for determining the appropriate accounting model.
+        body: `Please review the authoritative guidance for determining how to account for long-term arrangements where a client uses another party's asset. The client needs guidance on the criteria for determining the appropriate accounting model.
 
-Find the ASC paragraph that specifies when such arrangements should be recorded as an asset and liability versus expensed over time.`,
+Determine which ASC paragraph specifies when such arrangements should be recorded as an asset and liability versus expensed over time.`,
+      },
+    },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpt",
+      type: "text",
+      content: {
+        type: "text",
+        title: "FASB ASC 842 - Leases (Selected Paragraphs)",
+        paragraphs: [
+          "ASC 842-10-25-1: At the commencement date, a lessee shall classify a lease as a finance lease or an operating lease.",
+          "ASC 842-10-25-2: A lessee shall classify a lease as a finance lease when the lease meets ANY of the following criteria at lease commencement: (a) The lease transfers ownership of the underlying asset to the lessee by the end of the lease term. (b) The lease grants the lessee an option to purchase the underlying asset that the lessee is reasonably certain to exercise. (c) The lease term is for the major part of the remaining economic life of the underlying asset. (d) The present value of the sum of the lease payments and any residual value guaranteed by the lessee equals or exceeds substantially all of the fair value of the underlying asset. (e) The underlying asset is of such a specialized nature that it is expected to have no alternative use to the lessor at the end of the lease term.",
+          "ASC 842-10-25-3: If none of the criteria in paragraph 842-10-25-2 is met, a lessee shall classify the lease as an operating lease.",
+          "ASC 842-20-25-1: At the commencement date, a lessee shall recognize a right-of-use asset and a lease liability.",
+          "ASC 842-30-25-1: At the commencement date, a lessor shall classify each lease as one of the following: (a) A sales-type lease (b) A direct financing lease (c) An operating lease.",
+        ],
       },
     },
   ],
@@ -1608,19 +1626,18 @@ Find the ASC paragraph that specifies when such arrangements should be recorded 
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "ASC Citation for Finance Lease Classification Criteria",
+      type: "dropdown",
+      label: "Which ASC paragraph provides the criteria for classifying a lease as a finance lease?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-842-10-25-1", order: 1, text: "ASC 842-10-25-1 - Lease classification requirement", isCorrect: false },
+        { id: "opt-842-10-25-2", order: 2, text: "ASC 842-10-25-2 - Finance lease classification criteria", isCorrect: true },
+        { id: "opt-842-20-25-1", order: 3, text: "ASC 842-20-25-1 - Right-of-use asset recognition", isCorrect: false },
+        { id: "opt-842-30-25-1", order: 4, text: "ASC 842-30-25-1 - Lessor classification", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "FASB",
-        topicCode: "842-10",
-        sectionCode: "25",
-        paragraph: "2",
-        alternativeCitations: [
-          { source: "FASB", topicCode: "842-10-25", sectionCode: "2" },
-          { source: "FASB", topicCode: "ASC 842-10-25-2" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-842-10-25-2",
       },
       explanation: "ASC 842-10-25-2 provides the five criteria for classifying a lease as a finance lease: (1) transfer of ownership, (2) purchase option reasonably certain, (3) lease term is major part of economic life, (4) PV of payments equals substantially all of fair value, (5) specialized asset with no alternative use.",
     },
@@ -8382,18 +8399,19 @@ export const farCashFlowInvestingTBS: TBSQuestion = {
   ],
 };
 
-// FAR-082: Research Citation - Lease Classification - Medium
+// FAR-082: Document Review - Lease Classification - Medium
+// Migrated from research to document_review (CPA Evolution 2024)
 export const farResearchLeaseClassTBS: TBSQuestion = {
   id: "tbs-far-082",
   section: "FAR",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Leases",
   subtopic: "Classification Criteria",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "FAR-III",
-  title: "Research: Right-of-Use Asset Accounting",
-  scenarioText: `Using the FASB Accounting Standards Codification, identify the authoritative guidance for determining how a company that obtains the right to use another party's asset should account for the arrangement.`,
+  title: "Document Review: Right-of-Use Asset Accounting",
+  scenarioText: `Using the FASB Accounting Standards Codification excerpts provided, identify the authoritative guidance for determining how a company that obtains the right to use another party's asset should account for the arrangement.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 4,
   exhibits: [
@@ -8404,10 +8422,27 @@ export const farResearchLeaseClassTBS: TBSQuestion = {
       type: "text",
       content: {
         type: "text",
-        title: "Research Task",
+        title: "Analysis Task",
         paragraphs: [
-          "Your supervisor has asked you to locate the specific ASC paragraph that describes the criteria for determining the accounting model for arrangements involving the right to use another party's property.",
+          "Your supervisor has asked you to identify the specific ASC paragraph that describes the criteria for determining the accounting model for arrangements involving the right to use another party's property.",
           "Identify the criteria used to determine if such an arrangement transfers substantially all risks and rewards of ownership.",
+        ],
+      },
+    },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpt",
+      type: "text",
+      content: {
+        type: "text",
+        title: "FASB ASC 842 - Leases (Selected Paragraphs)",
+        paragraphs: [
+          "ASC 842-10-15-1: The guidance in this Topic applies to all lessees and lessors.",
+          "ASC 842-20-25-1: At the commencement date, a lessee shall recognize a right-of-use asset and a lease liability.",
+          "ASC 842-20-25-2: A lessee shall classify a lease as a finance lease when the lease meets any of the following criteria: (a) ownership transfer, (b) purchase option reasonably certain to exercise, (c) lease term is major part of economic life, (d) present value of payments substantially equals fair value, (e) underlying asset is specialized with no alternative use.",
+          "ASC 842-20-25-3: If none of the finance lease criteria are met, the lease is classified as an operating lease.",
+          "ASC 842-30-25-1: At the commencement date, a lessor shall classify each lease as a sales-type, direct financing, or operating lease.",
         ],
       },
     },
@@ -8444,18 +8479,16 @@ export const farResearchLeaseClassTBS: TBSQuestion = {
     {
       id: "req-classification-section",
       order: 3,
-      type: "citation",
-      label: "Enter the full ASC citation for finance lease classification criteria",
+      type: "dropdown",
+      label: "Which ASC paragraph lists the five finance lease classification criteria?",
       points: 2,
-      correctAnswer: {
-        type: "citation",
-        source: "FASB",
-        topicCode: "ASC 842-20-25-2",
-        alternativeCitations: [
-          { source: "FASB", topicCode: "842-20-25-2" },
-          { source: "FASB", topicCode: "ASC 842-20-25" }
-        ]
-      },
+      dropdownOptions: [
+        { id: "opt-842-20-25-1", order: 1, text: "ASC 842-20-25-1 - Right-of-use asset recognition", isCorrect: false },
+        { id: "opt-842-20-25-2", order: 2, text: "ASC 842-20-25-2 - Finance lease classification criteria", isCorrect: true },
+        { id: "opt-842-20-25-3", order: 3, text: "ASC 842-20-25-3 - Operating lease classification", isCorrect: false },
+        { id: "opt-842-30-25-1", order: 4, text: "ASC 842-30-25-1 - Lessor classification", isCorrect: false },
+      ],
+      correctAnswer: { type: "dropdown", correctOptionId: "opt-842-20-25-2" },
       explanation: "ASC 842-20-25-2 lists the five criteria for finance lease classification",
     },
   ],

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Consolidations for CPA Exam | Eliminations & NCI | Meridian CPA Review',
@@ -7,9 +8,20 @@ export const metadata: Metadata = {
   keywords: 'consolidations CPA exam, consolidated financial statements, elimination entries, noncontrolling interest, intercompany transactions',
 };
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function ConsolidationsPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "FAR", url: `${baseUrl}/sections/far` },
+          { name: "Consolidations", url: `${baseUrl}/topics/far/consolidations` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

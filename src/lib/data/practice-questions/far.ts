@@ -3,6 +3,7 @@ import { PracticeQuestion, QuestionSet } from './types';
 // FAR - Financial Accounting & Reporting
 // Total Questions: 1835
 // Last Updated: 2026-01-08
+// 2026 Blueprint Audit: Verified 2026-01-16 (ASC 820/805 references current)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const questions = [

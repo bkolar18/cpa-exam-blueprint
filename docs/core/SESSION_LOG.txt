@@ -10,6 +10,139 @@ IMPORTANT REMINDERS:
 - Only push to GitHub when committing actual code changes
 
 ================================================================================
+SESSION: 2026-01-16 (Session 2 - Auto-Save, Mobile Nav, DB Fixes)
+================================================================================
+
+OBJECTIVES:
+- Fix 500 error on practice_attempts insert
+- Fix 500 error on feedback submission
+- Implement auto-save for study sessions when navigating away
+- Improve mobile navigation UX with collapsible sections
+
+ACCOMPLISHED:
+
+1. Database Trigger Fix (500 Error on practice_attempts)
+   - Issue: trigger_update_topic_performance failing on insert
+   - Root cause: NULL topic handling and unique constraint issues
+   - Fix: Updated trigger function with:
+     * NULL topic handling (skip if topic is null/empty)
+     * Exception handler to log warning instead of failing
+     * Proper unique constraint (not just index)
+   - Created migration: 20260116_fix_topic_performance_trigger.sql
+
+2. Question Feedback Table Creation (500 Error on feedback)
+   - Issue: question_feedback table didn't exist in production
+   - Also: Existing table had column mismatch (feedback_text vs comment)
+   - Fix: Created migration with proper schema
+   - Fix: Renamed feedback_text → comment, made it nullable
+   - Created migration: 20260116_create_question_feedback.sql
+
+3. Auto-Save for Practice Sessions
+   - Added refs to track quiz state for event handlers
+   - Auto-saves to localStorage when:
+     * User closes/refreshes tab (beforeunload event)
+     * User navigates away (component unmount)
+   - Shows resume banner on practice setup screen
+   - User can discard or resume saved session
+   - Files: src/app/dashboard/practice/[section]/page.tsx
+
+4. Auto-Save for Exam Simulations
+   - Added refs for all exam state (questions, answers, flags, time, TBS)
+   - Auto-saves to localStorage on navigate away
+   - Shows resume banner with exam details:
+     * Config type, answered count, time remaining
+   - User can discard or resume
+   - Clears saved session when exam is submitted
+   - Files: src/app/dashboard/exam-simulation/[section]/page.tsx
+
+5. Auto-Save for TBS Practice
+   - Added refs for responses and elapsed time
+   - Auto-saves to database (tbs_attempts with is_complete: false)
+   - Also saves scratch pad notes if any
+   - Disabled in review mode
+   - Files: src/components/tbs/TBSContainer.tsx
+
+6. Mobile Navigation Improvements
+   - Made Study and Progress sections collapsible
+   - Sections collapsed by default when menu opens
+   - Smooth expand/collapse animation (200ms)
+   - Active child indicator (dot) shows current page section
+   - Added scroll support for menu overflow
+   - Reset to collapsed when menu closes
+   - Desktop dropdowns also have max-height with scroll
+   - Files: src/components/dashboard/DashboardNav.tsx
+
+TECHNICAL DETAILS:
+- Files created: 2 SQL migrations
+- Files modified: 4 (practice page, exam sim page, TBSContainer, DashboardNav)
+- Lines changed: ~565 additions, ~34 deletions
+- Build verified: npm run build passes
+
+NEW FEATURES:
+- Auto-save on navigate away (all study session types)
+- Browser "unsaved changes" warning before close
+- Resume banners for incomplete sessions
+- Collapsible mobile menu sections
+- Scrollable dropdowns
+
+COMMITS:
+- e5e71d6: Add auto-save for study sessions and improve mobile navigation UX
+
+BLOCKERS/ISSUES:
+- User must run SQL migrations in Supabase SQL Editor for DB fixes
+
+NEXT SESSION PRIORITIES:
+1. Test auto-save/resume functionality across all session types
+2. Continue TBS expansion (~470 → 500+ target)
+3. MCQ medium difficulty expansion (49.2% → 55% target)
+4. Phase 4: Email Nurturing
+
+================================================================================
+SESSION: 2026-01-16 (Session 1 - Navigator Fix, Exam Schedule, Study Streak)
+================================================================================
+
+OBJECTIVES:
+- Fix Navigator 406 errors (user_topic_performance and section_progress)
+- Add exam date field to NTS form synced to section_progress
+- Fix study streak to reset at midnight when day is missed
+- Create dedicated Exam Schedule page
+- Reorganize mobile navigation
+
+ACCOMPLISHED:
+
+1. Navigator 406 Error Fix
+   - Changed .single() to .maybeSingle() in useNavigatorContext.ts
+   - Prevents 406 errors when no data exists for user
+
+2. Exam Date Field in NTS
+   - Added exam_date field to NTS form
+   - Syncs to section_progress table
+   - Allows users to track actual exam dates separate from NTS validity
+
+3. Study Streak Reset Fix
+   - Added getDisplayedStreak() function in dashboard/page.tsx
+   - Checks last_study_date against today/yesterday
+   - Shows 0 if streak is broken (missed yesterday)
+   - Previously: Streak showed old value until first study of new session
+
+4. Exam Schedule Page Created
+   - New page: /dashboard/exam-schedule
+   - Cards for each section with date pickers
+   - Days countdown with color-coded urgency
+   - Respects user's discipline choice
+   - Quick links to NTS Tracker, Exam Preparation, Study Log
+
+5. Mobile Navigation Reorganization
+   - Added Exam Schedule to Progress dropdown (above NTS Tracker)
+   - Added examDate icon to icons record
+   - Updated Pre-Exam Assessment links to point to /dashboard/exam-schedule
+
+COMMITS:
+- d8a3203: Fix Navigator 406 errors and add exam date to NTS form
+- e4a9d64: Fix study streak to reset at midnight when day is missed
+- dd507af: Add Exam Schedule page and reorganize mobile navigation
+
+================================================================================
 SESSION: 2026-01-16 (Auth Error Tracking + Graceful Degradation + Docs Update)
 ================================================================================
 

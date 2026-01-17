@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Nonprofit Accounting for CPA Exam | Net Assets & Contributions | Meridian CPA Review',
@@ -7,9 +8,20 @@ export const metadata: Metadata = {
   keywords: 'nonprofit accounting CPA exam, net asset classifications, contribution accounting, donor restrictions, NFP financial statements',
 };
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function NonprofitAccountingPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "FAR", url: `${baseUrl}/sections/far` },
+          { name: "Nonprofit Accounting", url: `${baseUrl}/topics/far/nonprofit-accounting` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

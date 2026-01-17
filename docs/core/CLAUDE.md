@@ -44,8 +44,8 @@ Key types from `src/lib/data/tbs/types.ts`:
 Always use complete absolute Windows paths with backslashes for ALL file operations.
 
 ## Current TBS Status
-Target: 50 questions per section (350 total)
-Current: ~190 TBS total
+Target: 80-90 questions per section (~500 total)
+Current: ~500 TBS total (Practice: ~180, Exam: ~58, Section files: ~260+)
 
 ## Critical: Auth Architecture (Updated 2026-01-11)
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'CPA Exam Resources & Guides | Meridian CPA Review',
@@ -7,7 +8,20 @@ export const metadata: Metadata = {
   keywords: 'CPA exam resources, CPA study guide, CPA exam help, CPA preparation, free CPA resources',
 };
 
-const resourceCategories = [
+interface Resource {
+  title: string;
+  href: string;
+  description: string;
+}
+
+interface ResourceCategory {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  resources: Resource[];
+}
+
+const resourceCategories: ResourceCategory[] = [
   {
     title: 'Getting Started',
     description: 'Everything you need to know before starting your CPA journey.',
@@ -51,7 +65,7 @@ const resourceCategories = [
       { title: 'Study Hours Calculator', href: '/tools/study-hours-calculator', description: 'Estimate your study time needs' },
       { title: 'NTS Expiration Tracker', href: '/tools/nts-tracker', description: 'Track your Notice to Schedule' },
       { title: 'Score Release Calendar', href: '/tools/score-release-calendar', description: 'When to expect your scores' },
-      { title: 'Studying While Working', href: '/guides/cpa-exam-working-full-time', description: 'Balance work and exam prep', comingSoon: true },
+      { title: 'Studying While Working', href: '/working-full-time', description: 'Balance work and exam prep' },
     ],
   },
   {
@@ -68,7 +82,7 @@ const resourceCategories = [
     ],
   },
   {
-    title: 'Compare & Decide',
+    title: 'Compare CPA Review Courses',
     description: 'Compare CPA review courses and make informed decisions.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,8 +90,23 @@ const resourceCategories = [
       </svg>
     ),
     resources: [
+      { title: 'Best Budget CPA Courses', href: '/resources/best-budget-cpa-review', description: 'Affordable options under $2,000' },
       { title: 'Becker vs Gleim', href: '/compare/becker-vs-gleim', description: 'Compare two popular CPA review courses' },
-      { title: 'Best Order for CPA Exams', href: '/guides/best-order-cpa-exams', description: 'Which section to take first' },
+      { title: 'Roger vs Wiley', href: '/compare/roger-vs-wiley', description: 'UWorld Roger vs Wiley comparison' },
+      { title: 'Becker vs Roger', href: '/compare/becker-vs-roger', description: 'Premium vs engaging teaching styles' },
+    ],
+  },
+  {
+    title: 'Free Study Resources',
+    description: 'Free video lectures, practice materials, and community resources.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    resources: [
+      { title: 'Free CPA Videos', href: '/resources/free-cpa-videos', description: 'YouTube channels and video lectures' },
+      { title: 'Free Practice Materials', href: '/resources/free-practice-materials', description: 'AICPA sample tests and official resources' },
     ],
   },
 ];
@@ -103,9 +132,19 @@ const featuredResources = [
   },
 ];
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function ResourcesPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "Resources", url: `${baseUrl}/resources` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,27 +201,14 @@ export default function ResourcesPage() {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ml-12">
                   {category.resources.map((resource) => (
-                    <div key={resource.title}>
-                      {resource.comingSoon ? (
-                        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-[var(--border)] p-4 opacity-60">
-                          <div className="flex items-center justify-between mb-1">
-                            <h4 className="font-medium text-[var(--foreground)]">{resource.title}</h4>
-                            <span className="text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-0.5 rounded">
-                              Coming Soon
-                            </span>
-                          </div>
-                          <p className="text-sm text-[var(--muted)]">{resource.description}</p>
-                        </div>
-                      ) : (
-                        <Link
-                          href={resource.href}
-                          className="block bg-white dark:bg-[var(--card)] rounded-lg border border-[var(--border)] p-4 hover:border-[var(--primary)] hover:shadow-md transition-all"
-                        >
-                          <h4 className="font-medium text-[var(--foreground)] mb-1">{resource.title}</h4>
-                          <p className="text-sm text-[var(--muted)]">{resource.description}</p>
-                        </Link>
-                      )}
-                    </div>
+                    <Link
+                      key={resource.title}
+                      href={resource.href}
+                      className="block bg-white dark:bg-[var(--card)] rounded-lg border border-[var(--border)] p-4 hover:border-[var(--primary)] hover:shadow-md transition-all"
+                    >
+                      <h4 className="font-medium text-[var(--foreground)] mb-1">{resource.title}</h4>
+                      <p className="text-sm text-[var(--muted)]">{resource.description}</p>
+                    </Link>
                   ))}
                 </div>
               </div>

@@ -18,7 +18,16 @@ export default function DashboardLayout({
   const router = useRouter();
   const [retryCount, setRetryCount] = useState(0);
   const [isRetrying, setIsRetrying] = useState(false);
+  const [initialDelay, setInitialDelay] = useState(true);
   const MAX_RETRIES = 2;
+
+  // Give AuthProvider time to process session on initial load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setInitialDelay(false);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Retry auth check if initial check fails
   const retryAuthCheck = useCallback(async () => {
@@ -54,6 +63,11 @@ export default function DashboardLayout({
       return;
     }
 
+    // Wait for initial delay to let AuthProvider process the session
+    if (initialDelay) {
+      return;
+    }
+
     // Only redirect after loading is complete, no user, and retries exhausted
     if (!loading && !user && !isRetrying) {
       if (retryCount < MAX_RETRIES) {
@@ -61,13 +75,14 @@ export default function DashboardLayout({
         retryAuthCheck();
       } else {
         // All retries exhausted, redirect to login
-        router.push("/login");
+        // Use window.location.href for full page reload to ensure clean state
+        window.location.href = "/login";
       }
     }
-  }, [user, loading, router, retryCount, isRetrying, retryAuthCheck, error]);
+  }, [user, loading, retryCount, isRetrying, retryAuthCheck, error, initialDelay]);
 
   // Show loading state while checking auth or retrying
-  if (loading || isRetrying || (!user && !error && retryCount < MAX_RETRIES)) {
+  if (loading || isRetrying || initialDelay || (!user && !error && retryCount < MAX_RETRIES)) {
     return (
       <div className="min-h-screen bg-[var(--background)] flex flex-col items-center justify-center gap-4">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd, FAQPageJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Lease Accounting (ASC 842) Guide for CPA Exam | FAR',
@@ -127,9 +128,21 @@ const faqs = [
   },
 ];
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function LeaseAccountingPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "FAR", url: `${baseUrl}/sections/far` },
+          { name: "Lease Accounting (ASC 842)", url: `${baseUrl}/topics/far/lease-accounting` },
+        ]}
+      />
+      <FAQPageJsonLd faqs={faqs} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

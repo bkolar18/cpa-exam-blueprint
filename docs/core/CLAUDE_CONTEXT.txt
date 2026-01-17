@@ -42,15 +42,9 @@ Repository: https://github.com/bkolar18/cpa-exam-blueprint
 Owner: bkolar18 (Brenn)
 
 Purpose:
-A lead generation website that helps CPA exam candidates with free tools and
-study plans, ultimately recommending a CPA review program (Surgent) for
-monetization through affiliate commissions.
-
-IMPORTANT CONTEXT:
-A family member works at Surgent. The goal of this site is to reduce Surgent's
-reliance on affiliate marketing by creating an owned marketing channel that
-provides genuine value to CPA candidates and builds trust before recommending
-Surgent. Read "CPA Exam Blueprint - Business Overview.txt" for full details.
+A full-service CPA review company providing comprehensive exam preparation
+resources including practice questions, task-based simulations, study tools,
+and personalized learning experiences to help candidates pass the CPA exam.
 
 ================================================================================
 2. BUSINESS CONTEXT
@@ -65,29 +59,29 @@ VALUE PROPOSITION:
 - Free personalized study plans (competitors charge for this)
 - Free tools (score calendar, NTS tracker, calculator)
 - State-specific requirement guides (55 states/jurisdictions)
-- 5,810 MCQ practice questions across all 6 sections
-- 470+ TBS (Task-Based Simulation) questions across all 6 sections
+- 6,065+ MCQ practice questions across all 6 sections
+- ~500 TBS (Task-Based Simulation) questions across all 6 sections
 - Exam simulation mode with timed tests and pause functionality
 - User dashboard with progress tracking and gamification
 - Prime Meridian exam readiness scoring system
 - AI-powered flashcard generation
 - Guidance from "licensed CPAs" (authority positioning)
 
-MONETIZATION:
-- Affiliate Partner: Surgent CPA Review
-- Commission: Earned on referral signups
-- Lead Capture: Email collection for nurturing
-- Dashboard Promo: Surgent banner with 30-day reappearance
+BUSINESS MODEL:
+- Full-service CPA review platform
+- Subscription-based access to premium features
+- Free tier with limited access to build trust
+- Premium tier with full question bank, AI features, and analytics
 
 COMPETITIVE DIFFERENTIATION:
 | Competitors Do          | We Do Instead                    |
 |-------------------------|----------------------------------|
-| Rank by commission      | Recommend ONE program honestly   |
-| Generic tips            | Personalized plans               |
-| Anonymous content       | Named CPA credentials            |
-| Paid tools              | Free tools that actually help    |
-| Transactional           | Ongoing email nurture            |
-| No user accounts        | Free dashboard with gamification |
+| Expensive subscriptions | Affordable, value-focused pricing|
+| Generic content         | Personalized study plans         |
+| Outdated materials      | Current, blueprint-aligned content|
+| Limited practice        | 6,065+ MCQs and ~500 TBS         |
+| No progress tracking    | Full dashboard with gamification |
+| No AI features          | AI-powered flashcards & analysis |
 
 CPA EXAM STRUCTURE (CPA Evolution 2024+):
 - 3 Core Sections: FAR, AUD, REG (continuous testing)

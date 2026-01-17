@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Audit Evidence for CPA Exam | Sufficiency, Appropriateness & Procedures | Meridian CPA Review',
@@ -7,9 +8,20 @@ export const metadata: Metadata = {
   keywords: 'audit evidence CPA exam, audit procedures, sufficient appropriate evidence, audit documentation, substantive procedures',
 };
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function AuditEvidencePage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "AUD", url: `${baseUrl}/sections/aud` },
+          { name: "Audit Evidence", url: `${baseUrl}/topics/aud/audit-evidence` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

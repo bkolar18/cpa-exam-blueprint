@@ -15,6 +15,8 @@ import {
 } from "@/lib/scoring/prime-meridian";
 import PrimeMeridianCompass from "@/components/dashboard/PrimeMeridianCompass";
 import AIFeaturesCard from "@/components/dashboard/AIFeaturesCard";
+import { OBBBATransitionBanner } from "@/components/dashboard/OBBBATransitionBanner";
+import type { TaxContentPreference } from "@/lib/utils/tax-content-version";
 
 // Type for study session from Supabase
 interface StudySessionRow {
@@ -134,6 +136,17 @@ export default function DashboardPage() {
  if (typeof window !=="undefined") {
  localStorage.setItem("upgrade_promo_dismissed", Date.now().toString());
  }
+ };
+
+ // Dismiss OBBBA transition banner - saves to database
+ const dismissOBBBABanner = async () => {
+   if (!supabase || !user) return;
+   await supabase
+     .from("profiles")
+     .update({ obbba_banner_dismissed_at: new Date().toISOString() })
+     .eq("id", user.id);
+   // Refresh profile to update the dismissed state
+   await refreshProfile();
  };
 
  useEffect(() => {
@@ -360,6 +373,15 @@ export default function DashboardPage() {
  </div>
  </div>
  )}
+
+ {/* OBBBA Tax Law Transition Banner */}
+ <OBBBATransitionBanner
+   targetDate={profile?.target_completion_date || null}
+   disciplineChoice={profile?.discipline_choice || null}
+   taxContentVersion={(profile?.tax_content_version as TaxContentPreference) || null}
+   dismissedAt={profile?.obbba_banner_dismissed_at || null}
+   onDismiss={dismissOBBBABanner}
+ />
 
  {/* Resume Practice Session Banner */}
  {savedPracticeSession && (

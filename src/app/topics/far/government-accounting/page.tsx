@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Government Accounting for CPA Exam | Fund Accounting & GASB | Meridian CPA Review',
@@ -7,9 +8,20 @@ export const metadata: Metadata = {
   keywords: 'government accounting CPA exam, fund accounting, GASB, modified accrual, governmental funds, proprietary funds',
 };
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function GovernmentAccountingPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "FAR", url: `${baseUrl}/sections/far` },
+          { name: "Government Accounting", url: `${baseUrl}/topics/far/government-accounting` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

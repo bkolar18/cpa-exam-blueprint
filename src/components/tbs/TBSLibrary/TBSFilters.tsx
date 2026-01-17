@@ -17,15 +17,18 @@ interface TBSFiltersProps {
  showStatusFilter?: boolean;
 }
 
+// Note: 'research' and 'written_communication' types were deprecated in CPA Evolution 2024
+// and have been migrated to 'document_review' format. Hidden from filters but types
+// retained in codebase for backward compatibility with legacy user progress data.
 const tbsTypes: { value: TBSType |"all"; label: string }[] = [
  { value:"all", label:"All Types"},
  { value:"numeric_entry", label:"Numeric Entry"},
  { value:"journal_entry", label:"Journal Entry"},
  { value:"document_review", label:"Document Review"},
- { value:"research", label:"Research"},
  { value:"reconciliation", label:"Reconciliation"},
  { value:"dropdown", label:"Dropdown"},
- { value:"written_communication", label:"Written Communication"},
+ // { value:"research", label:"Research"},  // Deprecated - migrated to document_review
+ // { value:"written_communication", label:"Written Communication"},  // Deprecated
 ];
 
 const statusOptions: { value: TBSStatus |"all"; label: string }[] = [

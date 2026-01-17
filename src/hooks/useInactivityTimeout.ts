@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import { performFullLogout } from "@/lib/auth/logout";
 
 interface UseInactivityTimeoutOptions {
   /** Timeout in milliseconds (default: 30 minutes) */
@@ -31,7 +30,6 @@ export function useInactivityTimeout({
   onWarning,
   onLogout,
 }: UseInactivityTimeoutOptions = {}) {
-  const router = useRouter();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const warningRef = useRef<NodeJS.Timeout | null>(null);
   const lastActivityRef = useRef<number>(Date.now());
@@ -50,15 +48,20 @@ export function useInactivityTimeout({
   const handleLogout = useCallback(async () => {
     clearTimers();
 
-    const supabase = createClient();
-    if (supabase) {
-      await supabase.auth.signOut();
+    // Clear lastActivity from localStorage before logout
+    try {
+      localStorage.removeItem("lastActivity");
+    } catch {
+      // Ignore errors - localStorage might not be available
     }
 
+    // Call onLogout callback before redirect (for any cleanup)
     onLogout?.();
-    router.push("/login?reason=inactivity");
-    router.refresh();
-  }, [clearTimers, onLogout, router]);
+
+    // Perform comprehensive logout with full page redirect
+    // This clears all storage, cookies, and redirects to login
+    await performFullLogout('inactivity');
+  }, [clearTimers, onLogout]);
 
   const resetTimer = useCallback(() => {
     if (!enabled) return;

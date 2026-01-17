@@ -239,6 +239,87 @@ For each enhanced explanation:
 
 ---
 
+## Quality Control Process
+
+### Automated Audit Script
+
+Run the MCQ content audit script after each enhancement batch:
+
+```bash
+node scripts/audit-mcq-content.js --section REG --output audit-results.json
+```
+
+**Options:**
+- `--section FAR|AUD|REG|TCP|BAR|ISC` - Audit specific section
+- `--output filename.json` - Export detailed results
+- `--verbose` - Show additional details
+
+### Audit Categories
+
+| Category | Severity | Description |
+|----------|----------|-------------|
+| `outdated_standard` | Critical | Uses superseded standards (ASC 605→606, ASC 840→842, FAS→ASC) |
+| `duplicate_id` | Critical | Same question ID used multiple times |
+| `missing_answer` | Critical | No correctAnswer field |
+| `short_question` | Critical | Question <10 characters (likely empty) |
+| `duplicate_options` | High | Same answer option appears twice |
+| `option_count` | High | Not exactly 4 options |
+| `no_authoritative_ref` | Low | Missing IRC, ASC, AU-C, or other authority citation |
+| `short_question_stem` | Info | Question 10-20 chars (may be intentionally concise) |
+| `tax_threshold_no_year` | Info | Tax amounts without year context |
+
+### Section-Specific Standards
+
+| Standard | Applies To | Notes |
+|----------|------------|-------|
+| ASC 605 (old revenue) | FAR, AUD, BAR | Use ASC 606 instead |
+| ASC 840 (old leases) | FAR, AUD, BAR | Use ASC 842 instead |
+| FAS statements | FAR, AUD, BAR | Use ASC codification |
+| Goodwill amortization | FAR, BAR only | REG/TCP can use (IRC §197 allows tax amortization) |
+
+### Valid Authoritative Reference Patterns
+
+The audit script recognizes these patterns as valid references:
+
+| Pattern | Examples |
+|---------|----------|
+| ASC + 3 digits | ASC 606, ASC 842 |
+| IRC + section | IRC §61, IRC §1031 |
+| § + number | §1231, §351 |
+| AU-C + 3 digits | AU-C 705, AU-C 500 |
+| PCAOB AS + number | PCAOB AS 2201 |
+| Circular 230 | Circular 230 |
+| Reg. + section | Reg. §301.7701-3 |
+| UCC + section | UCC §2-201 |
+| CFR reference | 31 CFR Part 10 |
+| Common law | "common law" |
+| Statute of Frauds | "Statute of Frauds" |
+| FASB, GAAP, AICPA | General references |
+
+### Pre-Commit Quality Gate
+
+Before committing enhanced questions:
+
+1. **Run the audit script** for the section you modified
+2. **Verify 0 critical issues**
+3. **Check that enhanced questions pass** the authoritative reference check
+4. **Review any new high-severity issues**
+
+Example workflow:
+```bash
+# After enhancing REG questions
+node scripts/audit-mcq-content.js --section REG
+
+# Expected output for quality work:
+# === ISSUES BY SEVERITY ===
+#   critical: 0
+#   high: 0
+#   medium: 0
+#   low: [decreasing as questions are enhanced]
+```
+
+---
+
 ## Success Metrics
 
 ### Pilot Success Criteria

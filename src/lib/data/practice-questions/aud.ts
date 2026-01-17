@@ -3,6 +3,7 @@ import { PracticeQuestion, QuestionSet } from './types';
 // AUD - Auditing & Attestation
 // Total Questions: 1015
 // Last Updated: 2026-01-08
+// 2026 Blueprint Audit: Verified 2026-01-16 (SQMS/QM standards current)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const questions = [

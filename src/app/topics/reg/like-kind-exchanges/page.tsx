@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Like-Kind Exchanges (Section 1031) Guide for CPA Exam | REG',
@@ -154,9 +155,20 @@ const faqs = [
   },
 ];
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function LikeKindExchangesPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "REG", url: `${baseUrl}/sections/reg` },
+          { name: "Like-Kind Exchanges (Section 1031)", url: `${baseUrl}/topics/reg/like-kind-exchanges` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 to-green-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

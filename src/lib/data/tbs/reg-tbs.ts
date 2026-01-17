@@ -1514,22 +1514,22 @@ Key Circular 230 sections: §10.21 (knowledge of client error), §10.27 (conting
 };
 
 // =============================================================================
-// RESEARCH TBS - Required for REG Section
+// DOCUMENT REVIEW TBS (Migrated from Research - CPA Evolution 2024)
 // =============================================================================
 
 export const regResearchIRCTBS: TBSQuestion = {
   id: "tbs-reg-022",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "IRC Citations",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-I",
-  title: "Research - Business Asset Cost Recovery",
+  title: "Business Asset Cost Recovery Analysis",
   scenarioText: `A client purchased equipment for their business and needs to understand how to recover the cost of tangible property over time for tax purposes.
 
-Required: Cite the IRC section that establishes the cost recovery system for tangible depreciable property placed in service in a trade or business.`,
+Review the authoritative literature excerpts provided and identify the IRC section that establishes the cost recovery system for tangible depreciable property placed in service in a trade or business.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -1551,25 +1551,49 @@ Issue: Client purchased $500,000 of manufacturing equipment. They want to know t
 Needed: Primary IRC citation that governs the accelerated cost recovery system used for most tangible depreciable business assets.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Selected Sections",
+        paragraphs: [
+          "IRC Section 162 - Trade or Business Expenses",
+          "(a) In general. - There shall be allowed as a deduction all the ordinary and necessary expenses paid or incurred during the taxable year in carrying on any trade or business...",
+          "",
+          "IRC Section 167 - Depreciation",
+          "(a) General rule. - There shall be allowed as a depreciation deduction a reasonable allowance for the exhaustion, wear and tear (including a reasonable allowance for obsolescence)...",
+          "",
+          "IRC Section 168 - Accelerated Cost Recovery System",
+          "(a) General rule. - Except as otherwise provided in this section, the depreciation deduction provided by section 167(a) for any tangible property shall be determined by using (1) the applicable depreciation method, (2) the applicable recovery period, and (3) the applicable convention.",
+          "(b) Applicable depreciation method. - (1) In general. Except as provided in paragraphs (2) and (3), the applicable depreciation method is the 200 percent declining balance method, switching to the straight line method for the 1st taxable year for which using the straight line method will yield a larger allowance.",
+          "",
+          "IRC Section 179 - Election to Expense Certain Depreciable Business Assets",
+          "(a) Treatment as expenses. - A taxpayer may elect to treat the cost of any section 179 property as an expense which is not chargeable to capital account. Any cost so treated shall be allowed as a deduction for the taxable year in which the section 179 property is placed in service.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-irc-citation",
       order: 1,
-      type: "citation",
-      label: "IRC Section for Depreciation",
+      type: "dropdown",
+      label: "Which IRC section establishes the cost recovery system for tangible depreciable business property?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-162", order: 1, text: "IRC Section 162 - Trade or Business Expenses", isCorrect: false },
+        { id: "opt-167", order: 2, text: "IRC Section 167 - Depreciation (General)", isCorrect: false },
+        { id: "opt-168", order: 3, text: "IRC Section 168 - Accelerated Cost Recovery System (MACRS)", isCorrect: true },
+        { id: "opt-179", order: 4, text: "IRC Section 179 - Election to Expense", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 168",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 168" },
-          { source: "IRC", topicCode: "IRC Section 168" },
-          { source: "IRC", topicCode: "26 USC 168" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-168",
       },
-      explanation: "Per IRC §168, the Accelerated Cost Recovery System (MACRS) provides depreciation rules for tangible property.",
+      explanation: "Per IRC §168, the Accelerated Cost Recovery System (MACRS) provides the specific depreciation methods, recovery periods, and conventions for tangible property placed in service. While §167 establishes the general depreciation allowance, §168 contains the detailed rules that most tangible business assets follow.",
     },
   ],
 };
@@ -2648,19 +2672,20 @@ export const regEntitySelectionTBS: TBSQuestion = {
   ],
 };
 
+// Migrated from research TBS - CPA Evolution 2024
 export const regResearchIRCSection351TBS: TBSQuestion = {
   id: "tbs-reg-031",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "Corporate Formation",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-V",
-  title: "Research - Property Transfer to Corporation",
+  title: "Property Transfer to Corporation Analysis",
   scenarioText: `A client is starting a new business and plans to transfer appreciated property (land and equipment) to a newly formed corporation in exchange for all of the stock. The client wants to know if they can defer recognizing the built-in gain.
 
-Required: Cite the IRC section that governs the tax treatment when a taxpayer transfers property to a corporation in exchange for stock.`,
+Review the authoritative literature excerpts and identify the IRC section that governs the tax treatment when a taxpayer transfers property to a corporation in exchange for stock.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -2680,25 +2705,49 @@ Required: Cite the IRC section that governs the tax treatment when a taxpayer tr
 Needed: The IRC section that addresses whether gain must be recognized when property is contributed to a corporation in exchange for stock, and under what conditions deferral is available.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Corporate Formation Sections",
+        paragraphs: [
+          "IRC Section 351 - Transfer to Corporation Controlled by Transferor",
+          "(a) General rule. - No gain or loss shall be recognized if property is transferred to a corporation by one or more persons solely in exchange for stock in such corporation and immediately after the exchange such person or persons are in control (as defined in section 368(c)) of the corporation.",
+          "(b) Receipt of property. - If subsection (a) would apply to an exchange but for the fact that there is received, in addition to the stock permitted to be received under subsection (a), other property or money, then gain shall be recognized, but not in excess of the sum of such money and the fair market value of such other property.",
+          "",
+          "IRC Section 357 - Assumption of Liability",
+          "(a) General rule. - Except as provided in subsections (b) and (c), if the taxpayer receives property which would be permitted to be received without recognition of gain if it were the sole consideration, and as part of the consideration, another party to the exchange assumes a liability of the taxpayer, such assumption shall not be treated as money or other property.",
+          "",
+          "IRC Section 358 - Basis to Distributees",
+          "(a) General rule. - In the case of an exchange to which section 351 applies, the basis of the property permitted to be received under such section without the recognition of gain or loss shall be the same as that of the property exchanged.",
+          "",
+          "IRC Section 1001 - Determination of Amount of and Recognition of Gain or Loss",
+          "(a) Computation of gain or loss. - The gain from the sale or other disposition of property shall be the excess of the amount realized therefrom over the adjusted basis provided in section 1011 for determining gain.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-351-citation",
       order: 1,
-      type: "citation",
-      label: "IRC Section for Controlled Corporation Transfers",
+      type: "dropdown",
+      label: "Which IRC section governs the nonrecognition of gain on transfers to controlled corporations?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-351", order: 1, text: "IRC Section 351 - Transfer to Corporation Controlled by Transferor", isCorrect: true },
+        { id: "opt-357", order: 2, text: "IRC Section 357 - Assumption of Liability", isCorrect: false },
+        { id: "opt-358", order: 3, text: "IRC Section 358 - Basis to Distributees", isCorrect: false },
+        { id: "opt-1001", order: 4, text: "IRC Section 1001 - Determination of Gain or Loss", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 351",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 351" },
-          { source: "IRC", topicCode: "IRC Section 351" },
-          { source: "IRC", topicCode: "26 USC 351" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-351",
       },
-      explanation: "Per IRC §351, no gain or loss is recognized on transfers of property to a corporation solely in exchange for stock if transferors control corporation immediately after.",
+      explanation: "Per IRC §351, no gain or loss is recognized on transfers of property to a corporation solely in exchange for stock if transferors control the corporation immediately after the exchange. The 80% control test from §368(c) must be met.",
     },
   ],
 };
@@ -3944,20 +3993,20 @@ export const regBankruptcyTBS: TBSQuestion = {
   ],
 };
 
-// IRC Research - At-Risk Rules
+// IRC At-Risk Rules - Migrated from research TBS (CPA Evolution 2024)
 export const regResearchAtRiskTBS: TBSQuestion = {
   id: "tbs-reg-041",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "At-Risk Limitations",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-IV",
-  title: "Research - Loss Limitation Based on Economic Exposure",
-  scenarioText: `A client invested cash in a limited partnership that also has substantial nonrecourse financing. The client's share of partnership losses exceeds their cash investment. Research the IRC provisions that may limit the deductibility of these losses.
+  title: "Loss Limitation Analysis - Economic Exposure",
+  scenarioText: `A client invested cash in a limited partnership that also has substantial nonrecourse financing. The client's share of partnership losses exceeds their cash investment.
 
-Required: Cite the IRC section that limits loss deductions based on the taxpayer's actual economic investment in an activity.`,
+Review the authoritative literature excerpts and identify the IRC section that limits loss deductions based on the taxpayer's actual economic investment in an activity.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -3977,25 +4026,50 @@ Required: Cite the IRC section that limits loss deductions based on the taxpayer
 Needed: Primary IRC citation for the rules that limit loss deductions based on the taxpayer's actual economic exposure to loss.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Loss Limitation Provisions",
+        paragraphs: [
+          "IRC Section 465 - Deductions Limited to Amount at Risk",
+          "(a) Limitation to amount at risk. - (1) In general. In the case of an individual engaged in an activity to which this section applies, any loss from such activity for the taxable year shall be allowed only to the extent of the aggregate amount with respect to which the taxpayer is at risk for such activity at the close of the taxable year.",
+          "(b) Amounts considered at risk. - (1) In general. For purposes of this section, a taxpayer shall be considered at risk for an activity with respect to amounts including the amount of money and the adjusted basis of other property contributed by the taxpayer to the activity, and amounts borrowed with respect to such activity to the extent the taxpayer is personally liable for the repayment.",
+          "",
+          "IRC Section 469 - Passive Activity Losses and Credits Limited",
+          "(a) Disallowance. - If for any taxable year the taxpayer is described in paragraph (2), neither the passive activity loss nor the passive activity credit for the taxable year shall be allowed.",
+          "(d) Passive activity loss defined. - The term 'passive activity loss' means the amount by which the aggregate losses from all passive activities for the taxable year exceed the aggregate income from all passive activities for such year.",
+          "",
+          "IRC Section 704(d) - Partner's Share of Loss Limited to Basis",
+          "A partner's distributive share of partnership loss shall be allowed only to the extent of the adjusted basis of such partner's interest in the partnership at the end of the partnership year in which such loss occurred.",
+          "",
+          "IRC Section 183 - Activities Not Engaged in for Profit",
+          "(a) General rule. - In the case of an activity engaged in by an individual or an S corporation, if such activity is not engaged in for profit, no deduction attributable to such activity shall be allowed under this chapter except as provided in this section.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-465-citation",
       order: 1,
-      type: "citation",
-      label: "IRC Section for At-Risk Limitations",
+      type: "dropdown",
+      label: "Which IRC section limits loss deductions to the taxpayer's actual economic exposure?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-465", order: 1, text: "IRC Section 465 - Deductions Limited to Amount at Risk", isCorrect: true },
+        { id: "opt-469", order: 2, text: "IRC Section 469 - Passive Activity Losses Limited", isCorrect: false },
+        { id: "opt-704d", order: 3, text: "IRC Section 704(d) - Partner's Share Limited to Basis", isCorrect: false },
+        { id: "opt-183", order: 4, text: "IRC Section 183 - Activities Not Engaged in for Profit", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 465",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 465" },
-          { source: "IRC", topicCode: "IRC Section 465" },
-          { source: "IRC", topicCode: "26 USC 465" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-465",
       },
-      explanation: "Per IRC §465, loss deductions are limited to the amount the taxpayer has at risk in the activity (cash + adjusted basis of property + recourse debt).",
+      explanation: "Per IRC §465, loss deductions are limited to the amount the taxpayer has 'at risk' in the activity. At-risk amounts include cash invested, adjusted basis of property contributed, and amounts borrowed for which the taxpayer is personally liable. Nonrecourse debt generally does not increase the at-risk amount.",
     },
   ],
 };
@@ -5234,20 +5308,20 @@ export const regUCCPriorityTBS: TBSQuestion = {
   ],
 };
 
-// Employment Tax Research
+// Employment Tax Worker Classification - Migrated from research TBS (CPA Evolution 2024)
 export const regResearchEmploymentTaxTBS: TBSQuestion = {
   id: "tbs-reg-052",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "Employment Taxes",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-I",
-  title: "Research - Worker Classification Authority",
+  title: "Worker Classification Authority Analysis",
   scenarioText: `A client is being audited by the IRS regarding worker classification. The auditor claims certain independent contractors should be reclassified as employees.
 
-Required: Cite the primary IRC section that defines who is an employee for employment tax purposes.`,
+Review the authoritative literature excerpts and identify the primary IRC section that defines who is an employee for employment tax purposes.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -5267,25 +5341,49 @@ Required: Cite the primary IRC section that defines who is an employee for emplo
 Please provide the IRC section citation that establishes the definition and criteria for determining employee status for employment tax purposes.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Employment Tax Definitions",
+        paragraphs: [
+          "IRC Section 3121 - Definitions (FICA)",
+          "(d) Employee. - For purposes of this chapter, the term 'employee' means any individual who, under the usual common law rules applicable in determining the employer-employee relationship, has the status of an employee.",
+          "(d)(3) For purposes of this chapter, if any individual has the status of an employee under the usual common law rules, he shall be considered an employee.",
+          "",
+          "IRC Section 3401 - Definitions (Income Tax Withholding)",
+          "(c) Employee. - For purposes of this chapter, the term 'employee' includes an officer, employee, or elected official of the United States, a State, or any political subdivision thereof.",
+          "",
+          "IRC Section 3306 - Definitions (FUTA)",
+          "(i) Employee. - For purposes of this chapter, the term 'employee' has the meaning assigned to such term by section 3121(d).",
+          "",
+          "IRC Section 7701(a)(20) - General Definitions",
+          "The term 'employee' includes an officer of a corporation.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-3121-citation",
       order: 1,
-      type: "citation",
-      label: "IRC Section defining employee for FICA",
+      type: "dropdown",
+      label: "Which IRC section defines 'employee' for FICA employment tax purposes?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-3121", order: 1, text: "IRC Section 3121(d) - FICA Definitions", isCorrect: true },
+        { id: "opt-3401", order: 2, text: "IRC Section 3401(c) - Income Tax Withholding Definitions", isCorrect: false },
+        { id: "opt-3306", order: 3, text: "IRC Section 3306(i) - FUTA Definitions", isCorrect: false },
+        { id: "opt-7701", order: 4, text: "IRC Section 7701(a)(20) - General Definitions", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 3121(d)",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 3121(d)" },
-          { source: "IRC", topicCode: "IRC Section 3121" },
-          { source: "IRC", topicCode: "26 USC 3121" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-3121",
       },
-      explanation: "IRC Section 3121(d) defines 'employee' for FICA purposes using common law principles.",
+      explanation: "IRC Section 3121(d) defines 'employee' for FICA purposes using common law rules. The common law test examines factors such as behavioral control, financial control, and the type of relationship to determine employee vs. independent contractor status.",
     },
   ],
 };
@@ -5892,18 +5990,20 @@ export const regInnocentSpouseTBS: TBSQuestion = {
   ],
 };
 
-// Research - Section 754 Election
+// Section 754 Election - Migrated from research TBS (CPA Evolution 2024)
 export const regResearchSection754TBS: TBSQuestion = {
   id: "tbs-reg-058",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "Partnership Basis Adjustments",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "REG-V",
-  title: "Research - Partnership Property Basis Election",
-  scenarioText: `A partnership interest is being sold to a new partner at a price different from the selling partner's share of the partnership's inside basis. The partnership wants to elect to allow the new partner's share of partnership asset basis to reflect their purchase price. Research the IRC provisions that allow this election.`,
+  title: "Partnership Property Basis Election Analysis",
+  scenarioText: `A partnership interest is being sold to a new partner at a price different from the selling partner's share of the partnership's inside basis. The partnership wants to elect to allow the new partner's share of partnership asset basis to reflect their purchase price.
+
+Review the authoritative literature excerpts and identify the IRC section that provides for an election allowing partnerships to adjust the basis of partnership property upon transfers of partnership interests.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -5920,7 +6020,30 @@ export const regResearchSection754TBS: TBSQuestion = {
         date: "Current Date",
         body: `Our client, ABC Partnership, is selling a 25% interest to a new partner. The selling partner's share of inside basis is lower than the purchase price. The partnership wants to make an election that allows the partnership's asset basis to be adjusted for the benefit of the new partner.
 
-Required: Cite the IRC section that provides for an election allowing partnerships to adjust the basis of partnership property upon transfers of partnership interests.`,
+Required: Identify the IRC section that provides for an election allowing partnerships to adjust the basis of partnership property upon transfers of partnership interests.`,
+      },
+    },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Partnership Basis Provisions",
+        paragraphs: [
+          "IRC Section 704(d) - Limitation on Allowance of Losses",
+          "A partner's distributive share of partnership loss shall be allowed only to the extent of the adjusted basis of such partner's interest in the partnership at the end of the partnership year in which such loss occurred.",
+          "",
+          "IRC Section 743(b) - Optional Adjustment to Basis of Partnership Property",
+          "In the case of a transfer of an interest in a partnership by sale or exchange or upon the death of a partner, a partnership with respect to which the election provided in section 754 is in effect... shall increase the adjusted basis of the partnership property by the excess of the basis to the transferee partner of his interest in the partnership over his proportionate share of the adjusted basis of the partnership property.",
+          "",
+          "IRC Section 754 - Manner of Electing Optional Adjustment to Basis of Partnership Property",
+          "If a partnership files an election, in accordance with regulations prescribed by the Secretary, the basis of partnership property shall be adjusted, in the case of a distribution of property, in the manner provided in section 734 and, in the case of a transfer of a partnership interest, in the manner provided in section 743.",
+          "",
+          "IRC Section 755 - Rules for Allocation of Basis",
+          "Any increase or decrease in the adjusted basis of partnership property under section 734(b) (relating to the optional adjustment to basis of undistributed partnership property) or section 743(b) (relating to the optional adjustment to basis of partnership property) shall be allocated among the partnership properties.",
+        ],
       },
     },
   ],
@@ -5928,20 +6051,20 @@ Required: Cite the IRC section that provides for an election allowing partnershi
     {
       id: "req-754-citation",
       order: 1,
-      type: "citation",
-      label: "IRC Section for optional basis adjustment election",
+      type: "dropdown",
+      label: "Which IRC section allows partnerships to elect optional basis adjustments upon transfer of interests?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-704d", order: 1, text: "IRC Section 704(d) - Limitation on Allowance of Losses", isCorrect: false },
+        { id: "opt-743b", order: 2, text: "IRC Section 743(b) - Optional Adjustment to Basis", isCorrect: false },
+        { id: "opt-754", order: 3, text: "IRC Section 754 - Manner of Electing Optional Adjustment", isCorrect: true },
+        { id: "opt-755", order: 4, text: "IRC Section 755 - Rules for Allocation of Basis", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 754",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 754" },
-          { source: "IRC", topicCode: "IRC Section 754" },
-          { source: "IRC", topicCode: "26 USC 754" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-754",
       },
-      explanation: "IRC Section 754 allows partnerships to elect to adjust basis of partnership property upon transfer of partnership interest.",
+      explanation: "IRC Section 754 allows partnerships to elect to adjust the basis of partnership property upon transfer of a partnership interest (under §743) or distribution of property (under §734). Section 743(b) provides the mechanics of the adjustment, but §754 is the election provision.",
     },
   ],
 };
@@ -7447,19 +7570,20 @@ Required: Determine the deductible amount for the current year and any carryforw
   ],
 };
 
+// Corporate Tax Provisions - Migrated from research TBS (CPA Evolution 2024)
 export const regResearchTaxableIncomeTBS: TBSQuestion = {
   id: "tbs-reg-071",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Corporate Taxation",
   subtopic: "Taxable Income Calculation",
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "REG-II",
-  title: "Research: Corporate Tax Provisions",
-  scenarioText: `You are researching IRC provisions for a corporate client. The client needs citations for fundamental tax concepts that apply to corporate taxpayers, including income recognition, deductions unique to corporations, and loss carryforward rules.
+  title: "Corporate Tax Provisions Analysis",
+  scenarioText: `You are researching IRC provisions for a corporate client. The client needs to understand fundamental tax concepts that apply to corporate taxpayers, including income recognition, deductions unique to corporations, and loss carryforward rules.
 
-Required: Research and cite the appropriate IRC sections for each corporate tax issue described.`,
+Review the authoritative literature excerpts and identify the appropriate IRC sections for each corporate tax issue.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 3,
   exhibits: [
@@ -7478,58 +7602,88 @@ Required: Research and cite the appropriate IRC sections for each corporate tax 
         ],
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Corporate Tax Provisions",
+        paragraphs: [
+          "IRC Section 11 - Tax Imposed",
+          "(a) Corporations in general. - A tax is hereby imposed for each taxable year on the taxable income of every corporation.",
+          "(b) Amount of tax. - The amount of the tax imposed by subsection (a) shall be 21 percent of taxable income.",
+          "",
+          "IRC Section 61 - Gross Income Defined",
+          "(a) General definition. - Except as otherwise provided in this subtitle, gross income means all income from whatever source derived, including but not limited to: (1) Compensation for services; (2) Gross income derived from business; (3) Gains derived from dealings in property; (4) Interest; (5) Rents; (6) Royalties; (7) Dividends...",
+          "",
+          "IRC Section 63 - Taxable Income Defined",
+          "(a) In general. - Except as provided in subsection (b), for purposes of this subtitle, the term 'taxable income' means gross income minus the deductions allowed by this chapter.",
+          "",
+          "IRC Section 172 - Net Operating Loss Deduction",
+          "(a) Deduction allowed. - There shall be allowed as a deduction for the taxable year an amount equal to the lesser of: (1) the aggregate of the net operating loss carryovers to such year, plus the net operating loss carrybacks to such year, or (2) 80 percent of taxable income computed without regard to the deduction allowable under this section.",
+          "",
+          "IRC Section 243 - Dividends Received by Corporations",
+          "(a) General rule. - In the case of a corporation, there shall be allowed as a deduction an amount equal to the following percentages of the amount received as dividends from a domestic corporation: (1) 50 percent, in the case of dividends received by a corporation owning less than 20 percent of the distributing corporation; (2) 65 percent, in the case of dividends received by a corporation owning 20 percent or more.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-gross-income",
       order: 1,
-      type: "citation",
-      label: "Cite the IRC section defining gross income",
+      type: "dropdown",
+      label: "Which IRC section defines gross income?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-11", order: 1, text: "IRC Section 11 - Tax Imposed", isCorrect: false },
+        { id: "opt-61", order: 2, text: "IRC Section 61 - Gross Income Defined", isCorrect: true },
+        { id: "opt-63", order: 3, text: "IRC Section 63 - Taxable Income Defined", isCorrect: false },
+        { id: "opt-172", order: 4, text: "IRC Section 172 - Net Operating Loss Deduction", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "61",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 61" },
-          { source: "IRC", topicCode: "IRC 61" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-61",
       },
-      explanation: "IRC Section 61 defines gross income as all income from whatever source derived",
+      explanation: "IRC Section 61 defines gross income as 'all income from whatever source derived.' This is the foundational definition used for both individual and corporate taxpayers.",
     },
     {
       id: "req-drd",
       order: 2,
-      type: "citation",
-      label: "Cite the IRC section for dividends received deduction",
+      type: "dropdown",
+      label: "Which IRC section provides for the dividends received deduction?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-61-drd", order: 1, text: "IRC Section 61 - Gross Income Defined", isCorrect: false },
+        { id: "opt-163", order: 2, text: "IRC Section 163 - Interest Deduction", isCorrect: false },
+        { id: "opt-243", order: 3, text: "IRC Section 243 - Dividends Received by Corporations", isCorrect: true },
+        { id: "opt-301", order: 4, text: "IRC Section 301 - Distributions of Property", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "243",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 243" },
-          { source: "IRC", topicCode: "IRC 243" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-243",
       },
-      explanation: "IRC Section 243 provides for the dividends received deduction for corporations",
+      explanation: "IRC Section 243 provides the dividends received deduction (DRD) for corporations, allowing 50% or 65% deduction depending on ownership percentage.",
     },
     {
       id: "req-nol",
       order: 3,
-      type: "citation",
-      label: "Cite the IRC section for NOL limitations",
+      type: "dropdown",
+      label: "Which IRC section addresses net operating loss limitations?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-11-nol", order: 1, text: "IRC Section 11 - Tax Imposed", isCorrect: false },
+        { id: "opt-63-nol", order: 2, text: "IRC Section 63 - Taxable Income Defined", isCorrect: false },
+        { id: "opt-172-nol", order: 3, text: "IRC Section 172 - Net Operating Loss Deduction", isCorrect: true },
+        { id: "opt-382", order: 4, text: "IRC Section 382 - Limitation on NOL after Ownership Change", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "172",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 172" },
-          { source: "IRC", topicCode: "IRC 172" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-172-nol",
       },
-      explanation: "IRC Section 172 addresses net operating loss deduction and limitations",
+      explanation: "IRC Section 172 establishes the net operating loss deduction rules, including the 80% taxable income limitation for post-2017 NOLs.",
     },
   ],
 };
@@ -9387,20 +9541,20 @@ Required: Determine gross profit percentage and annual gain recognition.`,
   ],
 };
 
-// Section 1031 Research
+// Section 1031 Like-Kind Exchanges - Migrated from research TBS (CPA Evolution 2024)
 export const regResearchSection1031TBS: TBSQuestion = {
   id: "tbs-reg-086",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Property Transactions",
   subtopic: "Like-Kind Exchanges",
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "REG-III",
-  title: "Tax-Deferred Property Exchange Research",
-  scenarioText: `A client sold investment real estate and wants to defer recognition of the gain by acquiring replacement property. Research the IRC provisions that allow for nonrecognition treatment when exchanging similar types of property.
+  title: "Tax-Deferred Property Exchange Analysis",
+  scenarioText: `A client sold investment real estate and wants to defer recognition of the gain by acquiring replacement property.
 
-Required: Cite the IRC section governing tax-deferred exchanges of qualifying property.`,
+Review the authoritative literature excerpts and answer the questions about tax-deferred exchanges of qualifying property.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [
@@ -9420,24 +9574,47 @@ Required: Cite the IRC section governing tax-deferred exchanges of qualifying pr
         ],
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Like-Kind Exchange Provisions",
+        paragraphs: [
+          "IRC Section 1001 - Determination of Amount of and Recognition of Gain or Loss",
+          "(c) Recognition of gain or loss. - Except as otherwise provided in this subtitle, the entire amount of the gain or loss, determined under this section, on the sale or exchange of property shall be recognized.",
+          "",
+          "IRC Section 1031 - Exchange of Real Property Held for Productive Use or Investment",
+          "(a) Nonrecognition of gain or loss from exchanges solely in kind. - (1) In general. No gain or loss shall be recognized on the exchange of real property held for productive use in a trade or business or for investment if such real property is exchanged solely for real property of like kind which is to be held either for productive use in a trade or business or for investment.",
+          "(a)(3) Requirement that property be identified and that exchange be completed not more than 180 days after transfer of exchanged property. For purposes of this subsection, any property received by the taxpayer shall be treated as property which is not like-kind property if: (A) such property is not identified as property to be received in the exchange on or before the day which is 45 days after the date on which the taxpayer transfers the property relinquished in the exchange, or (B) such property is received after the earlier of (i) the day which is 180 days after the date on which the taxpayer transfers the property relinquished in the exchange, or (ii) the due date for the taxpayer's return.",
+          "(h) Special rules for foreign real property. - Real property located in the United States and real property located outside the United States are not property of a like kind.",
+          "",
+          "IRC Section 1033 - Involuntary Conversions",
+          "(a) General rule. - If property (as a result of its destruction, theft, seizure, or condemnation) is compulsorily or involuntarily converted into property similar or related in service or use to the property so converted, or into money, no gain shall be recognized.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "IRC section governing like-kind exchanges",
+      type: "dropdown",
+      label: "Which IRC section governs tax-deferred like-kind exchanges?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-1001", order: 1, text: "IRC Section 1001 - Determination of Gain or Loss", isCorrect: false },
+        { id: "opt-1031", order: 2, text: "IRC Section 1031 - Exchange of Real Property", isCorrect: true },
+        { id: "opt-1033", order: 3, text: "IRC Section 1033 - Involuntary Conversions", isCorrect: false },
+        { id: "opt-1245", order: 4, text: "IRC Section 1245 - Depreciation Recapture", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "1031",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 1031" },
-          { source: "IRC", topicCode: "Sec. 1031" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-1031",
       },
-      explanation: "IRC Section 1031 governs nonrecognition treatment for like-kind exchanges",
+      explanation: "IRC Section 1031 governs nonrecognition treatment for like-kind exchanges of real property held for productive use or investment.",
     },
     {
       id: "req-id-days",

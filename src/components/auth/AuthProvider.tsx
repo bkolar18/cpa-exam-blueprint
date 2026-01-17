@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from "rea
 import { User, Session } from "@supabase/supabase-js";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
 import { clearAllAuthStorage } from "@/lib/supabase/clearAuthStorage";
+import { performFullLogout } from "@/lib/auth/logout";
 import { trackAuthError, setUser as setTrackedUser } from "@/lib/errorTracking";
 import type { Profile } from "@/lib/supabase/types";
 
@@ -57,7 +58,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isServiceAvailable, setIsServiceAvailable] = useState(true);
   const [retryCount, setRetryCount] = useState(0);
 
-  const fetchProfile = useCallback(async (userId: string): Promise<Profile | null> => {
+  const fetchProfile = useCallback(async (userId: string, isInitialLoad: boolean = false): Promise<Profile | null> => {
     const supabase = createClient();
     if (!supabase) return null;
 
@@ -68,10 +69,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       .single();
 
     if (error) {
-      trackAuthError("profile_fetch_failed", error.message, { userId, status });
+      trackAuthError("profile_fetch_failed", error.message, { userId, status, isInitialLoad });
 
       // Check if this is a session expiration error (406 or 401)
-      if (status === 406 || status === 401) {
+      // But DON'T redirect if this is an initial load after login -
+      // the session might just need a moment to propagate
+      if ((status === 406 || status === 401) && !isInitialLoad) {
         setError('session_expired');
         // Clear auth state and redirect to login
         clearAllAuthStorage();
@@ -86,6 +89,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return null;
       }
 
+      // For initial load, just log the error but don't redirect
+      // The user can still use the app, we'll retry on next refresh
       return null;
     }
     return data as Profile;
@@ -179,7 +184,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             setUser(currentSession.user);
             setTrackedUser(currentSession.user.id, currentSession.user.email);
             if (currentSession.user) {
-              fetchProfile(currentSession.user.id).then(setProfile);
+              // Pass isInitialLoad=true to prevent redirect on 401/406 during initial auth
+              fetchProfile(currentSession.user.id, true).then(setProfile);
             }
           }
           setLoading(false);
@@ -189,7 +195,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             setUser(currentSession.user);
             setTrackedUser(currentSession.user.id, currentSession.user.email);
             if (currentSession.user) {
-              fetchProfile(currentSession.user.id).then(setProfile);
+              // Pass isInitialLoad=true for SIGNED_IN to handle fresh login after session expiry
+              fetchProfile(currentSession.user.id, true).then(setProfile);
             }
           }
           setLoading(false);
@@ -233,7 +240,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           setSession(localSession);
           setUser(localSession.user);
           setTrackedUser(localSession.user.id, localSession.user.email);
-          fetchProfile(localSession.user.id).then(setProfile);
+          // Pass isInitialLoad=true for fallback session check
+          fetchProfile(localSession.user.id, true).then(setProfile);
         }
         setLoading(false);
       } catch (err) {
@@ -252,14 +260,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [fetchProfile]);
 
   const signOut = useCallback(async () => {
-    const supabase = createClient();
-    if (supabase) {
-      await supabase.auth.signOut();
-    }
-    clearAllAuthStorage();
+    // Clear local state immediately for responsive UI
     setUser(null);
     setProfile(null);
     setSession(null);
+    setTrackedUser(null);
+
+    // Perform comprehensive logout with full page redirect
+    // This clears all storage, cookies (client + server), and redirects to login
+    await performFullLogout('user_initiated');
   }, []);
 
   return (

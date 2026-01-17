@@ -535,21 +535,22 @@ Both Dropdown 3 and Dropdown 5 test the same concept (reasonable assurance). The
   ],
 };
 
+// Migrated from research to document_review (CPA Evolution 2024)
 export const sampleResearchTBS: TBSQuestion = {
   id: "tbs-far-003",
   section: "FAR",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Revenue Recognition",
   subtopic: "Identifying Performance Obligations",
   difficulty: "medium",
   skillLevel: "application",
   contentArea: "FAR-III",
-  title: "Revenue Recognition Research",
+  title: "Document Review - Revenue Recognition Standards",
   scenarioText: `Henderson Software Company enters into a contract to provide software licensing, implementation services, and two years of technical support to a customer for a total contract price of $500,000.
 
 The controller needs to determine if each promise should be accounted for as a separate performance obligation.
 
-Required: Research the authoritative literature and provide the citation that describes when a promised good or service is distinct and should be accounted for as a separate performance obligation.`,
+Required: Review the authoritative literature excerpts and identify the ASC paragraph that describes when a promised good or service is distinct and should be accounted for as a separate performance obligation.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -579,24 +580,41 @@ The implementation services require significant customization of the software fo
 Please advise on the proper revenue recognition treatment.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpt",
+      type: "text",
+      content: {
+        type: "text",
+        title: "FASB ASC 606 - Revenue from Contracts with Customers (Selected Paragraphs)",
+        paragraphs: [
+          "ASC 606-10-25-1: An entity shall recognize revenue when (or as) it satisfies a performance obligation by transferring a promised good or service to a customer.",
+          "ASC 606-10-25-14: An entity shall identify the promised goods or services in a contract and determine which of those are performance obligations.",
+          "ASC 606-10-25-19: A good or service that is promised to a customer is distinct if BOTH of the following criteria are met: (a) The customer can benefit from the good or service either on its own or together with other resources that are readily available to the customer (that is, the good or service is capable of being distinct), and (b) The entity's promise to transfer the good or service to the customer is separately identifiable from other promises in the contract (that is, the promise to transfer the good or service is distinct within the context of the contract).",
+          "ASC 606-10-25-20: A customer can benefit from a good or service in accordance with paragraph 606-10-25-19(a) if the good or service could be used, consumed, sold for an amount that is greater than scrap value, or otherwise held in a way that generates economic benefits.",
+          "ASC 606-10-25-21: Factors that indicate that two or more promises to transfer goods or services are not separately identifiable include: (a) The entity provides a significant service of integrating the goods or services with other goods or services promised in the contract, (b) One or more of the goods or services significantly modifies or customizes another good or service promised in the contract.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "Authoritative Citation",
-      description: "Enter the authoritative reference that describes when a good or service is distinct",
+      type: "dropdown",
+      label: "Which ASC paragraph defines when a good or service is considered distinct?",
+      description: "Identify the authoritative reference that describes when a good or service is distinct",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-606-25-1", order: 1, text: "ASC 606-10-25-1 - General revenue recognition principle", isCorrect: false },
+        { id: "opt-606-25-14", order: 2, text: "ASC 606-10-25-14 - Identifying promised goods/services", isCorrect: false },
+        { id: "opt-606-25-19", order: 3, text: "ASC 606-10-25-19 - Distinct good or service criteria", isCorrect: true },
+        { id: "opt-606-25-21", order: 4, text: "ASC 606-10-25-21 - Factors for non-distinct promises", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "FASB",
-        topicCode: "606-10-25-19",
-        alternativeCitations: [
-          { source: "FASB", topicCode: "ASC 606-10-25-19" },
-          { source: "FASB", topicCode: "606-10-25-20" },
-          { source: "FASB", topicCode: "ASC 606-10-25-20" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-606-25-19",
       },
       explanation: `**Correct Citation:** ASC 606-10-25-19 (or 606-10-25-20)
 
@@ -4328,20 +4346,21 @@ Build a basis schedule working through each component systematically.`,
   ],
 };
 
-// REG TBS 6: Ethics - Circular 230 (Medium - Research)
+// REG TBS 6: Ethics - Circular 230 (Medium - Document Review)
+// Migrated from research to document_review (CPA Evolution 2024)
 export const regCircular230TBS: TBSQuestion = {
   id: "tbs-reg-006",
   section: "REG",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Ethics & Professional Responsibility",
   subtopic: "Treasury Circular 230",
   difficulty: "medium",
   skillLevel: "application",
   contentArea: "REG-I",
-  title: "Circular 230 Research",
+  title: "Document Review - Circular 230 Standards",
   scenarioText: `A CPA is preparing a tax return for a client who wants to take an aggressive position on a deduction. The CPA needs to determine the minimum standard required for taking a tax return position under Circular 230.
 
-Required: Research the authoritative guidance and identify the citation that describes the standard for tax return positions.`,
+Required: Review the authoritative guidance excerpts and identify the section that describes the standard for tax return positions.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -4365,24 +4384,41 @@ Please research the applicable standard that practitioners must meet when taking
 Key question: What is the minimum confidence level required for a practitioner to sign a return with this position?`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpt",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Treasury Circular 230 (31 CFR Part 10) - Selected Sections",
+        paragraphs: [
+          "Section 10.22 - Diligence as to accuracy: A practitioner must exercise due diligence in preparing or assisting in the preparation of, approving, and filing tax returns, documents, affidavits, and other papers relating to Internal Revenue Service matters.",
+          "Section 10.33 - Best practices for tax advisors: Tax advisors should provide clients with the highest quality representation concerning Federal tax issues by adhering to best practices, including clearly communicating the terms of the engagement and the form and extent of the advice to be rendered.",
+          "Section 10.34 - Standards with respect to tax returns and documents, affidavits and other papers: (a) A practitioner may not willfully, recklessly, or through gross incompetence sign a tax return or claim for refund that the practitioner knows or reasonably should know contains a position that lacks a reasonable basis. (b) A practitioner may not advise a client to take a position on a tax return or claim for refund unless the practitioner has a reasonable belief that the position has a realistic possibility of being sustained on its merits. For undisclosed positions, there must be substantial authority; for disclosed positions, there must be a reasonable basis.",
+          "Section 10.35 - Competence: A practitioner must possess the necessary competence to engage in practice before the Internal Revenue Service.",
+          "Section 10.37 - Requirements for written advice: A practitioner must not give written advice concerning Federal tax issues if the practitioner bases the advice on unreasonable factual or legal assumptions.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "Circular 230 Citation",
+      type: "dropdown",
+      label: "Which Circular 230 section establishes the standard for tax return positions?",
       description: "Identify the section of Circular 230 that establishes the standard for tax return positions",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-10-22", order: 1, text: "Section 10.22 - Diligence as to accuracy", isCorrect: false },
+        { id: "opt-10-33", order: 2, text: "Section 10.33 - Best practices for tax advisors", isCorrect: false },
+        { id: "opt-10-34", order: 3, text: "Section 10.34 - Standards with respect to tax returns and documents", isCorrect: true },
+        { id: "opt-10-37", order: 4, text: "Section 10.37 - Requirements for written advice", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "Treasury",
-        topicCode: "Circular 230 Section 10.34",
-        alternativeCitations: [
-          { source: "Treasury", topicCode: "10.34" },
-          { source: "Treasury", topicCode: "Circ. 230 §10.34" },
-          { source: "Treasury", topicCode: "31 CFR 10.34" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-10-34",
       },
       explanation: `**Correct Citation:** Circular 230 Section 10.34
 
@@ -14145,18 +14181,19 @@ Changes to master data (like chart of accounts) can have broad impacts across fi
 // BATCH 3 - Distribution Balance Additions
 // ============================================
 
-// AUD TBS 10: Research - AICPA Standards (Medium - Research)
+// AUD TBS 10: Document Review - AICPA Standards (Medium - Document Review)
+// Migrated from research to document_review (CPA Evolution 2024)
 export const audResearchTBS: TBSQuestion = {
   id: "tbs-aud-010",
   section: "AUD",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Professional Standards",
   subtopic: "AICPA Standards Research",
   difficulty: "medium",
   skillLevel: "application",
   contentArea: "AUD-I",
-  title: "Authoritative Literature Research",
-  scenarioText: `Your audit team needs to determine the appropriate guidance for a specific audit situation. Research the authoritative literature to find the citation that addresses the auditor's responsibility when there is substantial doubt about an entity's ability to continue as a going concern.`,
+  title: "Document Review - Going Concern Standards",
+  scenarioText: `Your audit team needs to determine the appropriate guidance for a specific audit situation. Review the authoritative literature excerpts to identify the AU-C section that addresses the auditor's responsibility when there is substantial doubt about an entity's ability to continue as a going concern.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -14180,7 +14217,24 @@ export const audResearchTBS: TBSQuestion = {
 
 Management has provided a plan to address these conditions, but we have substantial doubt about the entity's ability to continue as a going concern for a reasonable period of time.
 
-Please research the authoritative literature to find the specific guidance on the auditor's responsibility regarding going concern evaluation and the consideration of management's plans.`,
+Please identify the authoritative literature that provides specific guidance on the auditor's responsibility regarding going concern evaluation and the consideration of management's plans.`,
+      },
+    },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpt",
+      type: "text",
+      content: {
+        type: "text",
+        title: "AICPA Professional Standards - Selected AU-C Sections",
+        paragraphs: [
+          "AU-C Section 200 - Overall Objectives of the Independent Auditor: The auditor's overall objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from material misstatement and to report on the financial statements in accordance with the auditor's findings.",
+          "AU-C Section 315 - Understanding the Entity and Its Environment: The auditor should obtain an understanding of the entity and its environment, including its internal control, sufficient to identify and assess the risks of material misstatement of the financial statements.",
+          "AU-C Section 570 - The Auditor's Consideration of an Entity's Ability to Continue as a Going Concern: The auditor has a responsibility to evaluate whether there is substantial doubt about the entity's ability to continue as a going concern for a reasonable period of time. Conditions and events that may indicate substantial doubt include recurring operating losses, working capital deficiencies, inability to obtain financing, and loss of principal customers.",
+          "AU-C Section 580 - Written Representations: The auditor should obtain written representations from management about matters material to the financial statements when other sufficient appropriate audit evidence cannot reasonably be expected to exist.",
+          "AU-C Section 700 - Forming an Opinion and Reporting on Financial Statements: The auditor should form an opinion on whether the financial statements are presented fairly, in all material respects, in accordance with the applicable financial reporting framework.",
+        ],
       },
     },
   ],
@@ -14188,19 +14242,19 @@ Please research the authoritative literature to find the specific guidance on th
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "Authoritative Citation",
-      description: "Enter the AU-C section that addresses the auditor's responsibility relating to going concern",
+      type: "dropdown",
+      label: "Which AU-C section addresses the auditor's responsibility for evaluating going concern?",
+      description: "Identify the AU-C section that addresses the auditor's responsibility relating to going concern",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-auc-200", order: 1, text: "AU-C Section 200 - Overall Objectives of the Independent Auditor", isCorrect: false },
+        { id: "opt-auc-315", order: 2, text: "AU-C Section 315 - Understanding the Entity and Its Environment", isCorrect: false },
+        { id: "opt-auc-570", order: 3, text: "AU-C Section 570 - Going Concern Evaluation", isCorrect: true },
+        { id: "opt-auc-700", order: 4, text: "AU-C Section 700 - Forming an Opinion and Reporting", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "AICPA",
-        topicCode: "AU-C 570",
-        alternativeCitations: [
-          { source: "AICPA", topicCode: "AU-C Section 570" },
-          { source: "AICPA", topicCode: "570" },
-          { source: "AICPA", topicCode: "AU-C 570.12" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-auc-570",
       },
       explanation: `**Correct Citation:** AU-C Section 570
 

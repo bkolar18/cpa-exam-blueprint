@@ -10627,8 +10627,8 @@ const questions = [
       "D": "Payment is made"
     },
     "correctAnswer": "C",
-    "explanation": "An agency relationship exists when: (1) there is mutual consent, (2) the agent acts on behalf of the principal, and (3) the principal has the right to control the agent's actions. Writing, consideration, and filing are not required.",
-    "tip": "Agency = consent + acting on behalf + principal control. No writing or payment required.",
+    "explanation": "Under Restatement (Third) of Agency §1.01, an agency relationship is created when: (1) one person (principal) manifests assent that another (agent) shall act on the principal's behalf, (2) the agent manifests assent or otherwise consents, and (3) the principal has the right to control the agent's actions. No formalities required—agency can arise from conduct alone. Writing is only required for specific agency types (e.g., power of attorney for real estate). Why other answers are wrong: (A) Written agreement filed with state—no filing or writing required for most agency relationships; (B) Signed contract—oral agreements and even implied-in-fact agency relationships are valid; (D) Payment made—consideration is NOT required; gratuitous agency is enforceable.",
+    "tip": "Agency = consent + acting on behalf + principal control. No writing, consideration, or filing required (Restatement §1.01).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10648,8 +10648,8 @@ const questions = [
       "D": "Authority created by law"
     },
     "correctAnswer": "A",
-    "explanation": "Express authority is authority that the principal explicitly grants to the agent, either orally or in writing. The principal directly communicates what the agent is authorized to do.",
-    "tip": "Express authority = principal directly tells agent what they can do (oral or written).",
+    "explanation": "Under Restatement (Third) of Agency §2.01, express authority (also called 'actual authority') arises when a principal makes explicit manifestations to an agent about the scope of the agent's authority. It may be oral or written—the principal directly communicates what acts the agent is authorized to perform. Express authority can be granted through formal documents (power of attorney), oral instructions, or detailed job descriptions. Why other answers are wrong: (B) Authority based on past actions—this describes APPARENT authority (§2.03), created by principal's manifestations to third parties, not express authority; (C) Authority implied from the relationship—this is IMPLIED authority (incidental authority) under §2.01, which arises from what's reasonably necessary to accomplish express duties; (D) Authority created by law—this describes statutory authority (e.g., durable power of attorney statutes), not express authority.",
+    "tip": "Express authority = principal explicitly tells agent what to do (oral or written). Restatement (Third) §2.01.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10669,8 +10669,8 @@ const questions = [
       "D": "Conduct only one specific transaction"
     },
     "correctAnswer": "A",
-    "explanation": "A general agent has authority to conduct a series of transactions involving continuity of service (e.g., manager). A special agent is authorized for only one or a few specific transactions (e.g., selling a house).",
-    "tip": "General agent = ongoing authority. Special agent = specific transaction(s) only.",
+    "explanation": "Under Restatement (Third) of Agency §1.04(7), a general agent is authorized to conduct a series of transactions involving a continuity of service for the principal—examples include a business manager, purchasing agent, or property manager. A special agent (§1.04(8)) has limited authority for one or a few specific transactions (e.g., real estate broker hired to sell one property). General agents typically have broader implied authority because of their ongoing relationship. Why other answers are wrong: (B) Act only in emergencies—emergency authority is a separate concept (§2.05) that applies when an agent must act to protect the principal's interests; (C) Represent in court—this is an attorney-in-fact or legal representative, not the definition of general agent; (D) Only one specific transaction—this describes a SPECIAL agent, the opposite of a general agent.",
+    "tip": "General agent = ongoing/series of transactions. Special agent = one or few transactions. Restatement (Third) §1.04.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10690,8 +10690,8 @@ const questions = [
       "D": "Ownership interest in the business"
     },
     "correctAnswer": "B",
-    "explanation": "Principal's duties to agent include: (1) compensation (if agreed), (2) reimbursement for authorized expenses, (3) indemnification for losses incurred in following lawful instructions, and (4) cooperation in performance.",
-    "tip": "Principal owes agent: Pay (if agreed), reimburse expenses, indemnify for authorized acts, cooperate.",
+    "explanation": "Under Restatement (Third) of Agency §§8.13-8.15, a principal's duties to an agent include: (1) compensation as agreed (§8.13)—if no amount specified, reasonable value is implied; (2) reimbursement for authorized expenses (§8.14)—expenses reasonably incurred in discharging duties; (3) indemnification (§8.14)—for losses suffered in carrying out lawful instructions; and (4) cooperation—dealing fairly and in good faith. Gratuitous agents are still owed reimbursement and indemnification. Why other answers are wrong: (A) Providing housing—not a general duty; only if specifically agreed or customary in the relationship; (C) Lifetime employment—no implied duty; agency is typically at-will unless otherwise agreed; (D) Ownership interest—no duty to provide equity; compensation is the requirement, not ownership.",
+    "tip": "Principal's duties: Compensation (if agreed), reimburse expenses, indemnify for authorized acts, cooperate. Restatement §§8.13-8.15.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10711,8 +10711,8 @@ const questions = [
       "D": "Disclosing confidential information to competitors"
     },
     "correctAnswer": "B",
-    "explanation": "The agent owes fiduciary duties including: loyalty (no self-dealing or conflicts), obedience, care, accounting, and notification. The agent must put the principal's interests above their own.",
-    "tip": "Agent is fiduciary: Loyalty, obedience, care, accounting, notification. Principal's interests first!",
+    "explanation": "Under Restatement (Third) of Agency §§8.01-8.12, an agent owes fiduciary duties to the principal including: (1) Loyalty (§8.01)—no self-dealing, conflicts of interest, or competition; (2) Obedience (§8.09)—follow reasonable instructions; (3) Care (§8.08)—act with competence and diligence; (4) Accounting (§8.12)—keep accurate records, account for property/money; (5) Notification (§8.11)—communicate material information. The agent must put the principal's interests above their own in matters related to the agency. Why other answers are wrong: (A) Acting in agent's own best interest—violates duty of loyalty; agent must prioritize principal; (C) Keeping all profits—violates duty to account; profits belong to principal; (D) Disclosing confidential info to competitors—violates duty of loyalty and duty of confidentiality (§8.05).",
+    "tip": "Agent's fiduciary duties: Loyalty, obedience, care, accounting, notification. Principal's interests first! Restatement §§8.01-8.12.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10732,8 +10732,8 @@ const questions = [
       "D": "The agent taking a vacation"
     },
     "correctAnswer": "A",
-    "explanation": "Agency terminates by operation of law upon: death of principal or agent, incapacity of either party, impossibility of performance, bankruptcy of principal (and sometimes agent), or war between principal and agent's countries.",
-    "tip": "Agency ends automatically: Death, incapacity, impossibility, bankruptcy. No notice needed.",
+    "explanation": "Under Restatement (Third) of Agency §3.07, agency terminates by operation of law upon: (1) death of principal or agent (unless a durable power of attorney), (2) incapacity of either party, (3) impossibility or illegality of performance, (4) bankruptcy of principal (and agent in some cases), or (5) war between countries of principal and agent. No notice required—termination is automatic. Exception: Durable powers of attorney (under state statutes) survive principal's incapacity. Why other answers are wrong: (B) Change in market conditions—economic changes don't automatically terminate agency; only impossibility does; (C) Agent's marriage—personal status changes don't terminate agency unless they affect capacity; (D) Agent taking vacation—temporary absence doesn't terminate agency relationship.",
+    "tip": "Agency ends automatically: Death, incapacity, impossibility, bankruptcy. Exception: Durable POA survives incapacity. Restatement §3.07.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -10753,8 +10753,8 @@ const questions = [
       "D": "Reasonably necessary to carry out express authority"
     },
     "correctAnswer": "D",
-    "explanation": "Implied authority is authority that is reasonably necessary to accomplish expressly authorized tasks, consistent with custom and practice, or naturally flowing from the nature of the agency relationship.",
-    "tip": "Implied authority = what's reasonably necessary to do the job. Incidental powers.",
+    "explanation": "Under Restatement (Third) of Agency §2.01, implied authority (also called 'incidental authority') is actual authority that is reasonably necessary to carry out express authority. It includes powers: (1) reasonably necessary to accomplish expressly authorized tasks, (2) consistent with custom and trade usage, and (3) naturally flowing from the position or nature of the agency relationship. For example, a manager given express authority to 'run the store' has implied authority to hire employees, order inventory, and pay routine bills. Why other answers are wrong: (A) Created by third party expectations only—this describes APPARENT authority (§2.03), which arises from principal's manifestations to third parties; (B) Limited to emergencies—emergency authority (§2.05) is a separate concept for unforeseen situations threatening principal's interests; (C) Explicitly forbidden by principal—if forbidden, it's NOT authorized; agent would exceed authority.",
+    "tip": "Implied authority = what's reasonably necessary to accomplish express duties. Part of actual authority. Restatement §2.01.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10774,8 +10774,8 @@ const questions = [
       "D": "The agent believes they have authority"
     },
     "correctAnswer": "A",
-    "explanation": "Apparent authority arises from the principal's manifestations to third parties that reasonably lead them to believe an agent has authority. It can bind the principal even if the agent lacks actual authority.",
-    "tip": "Apparent authority: Principal's conduct + third party's reasonable belief. Can bind principal!",
+    "explanation": "Under Restatement (Third) of Agency §2.03, apparent authority arises when a principal's manifestations to a third party cause the third party to reasonably believe the agent has authority to act on the principal's behalf. Key elements: (1) traceable to principal's conduct (not agent's claims), (2) third party's reasonable belief, and (3) third party's reliance. Apparent authority can bind the principal even if the agent lacks actual authority—protecting reasonable third-party expectations. Example: Principal lets agent use company letterhead despite revoking authority. Why other answers are wrong: (B) Contract requires it—apparent authority is based on conduct, not contractual provisions; (C) Agent worked many years—longevity alone doesn't create apparent authority; must trace to principal's manifestations; (D) Agent believes they have authority—agent's belief creates no authority; must come from PRINCIPAL's actions toward THIRD PARTIES.",
+    "tip": "Apparent authority: Principal's manifestations → third party's reasonable belief. Can bind principal even without actual authority! §2.03.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10795,8 +10795,8 @@ const questions = [
       "D": "Both the agent and principal"
     },
     "correctAnswer": "C",
-    "explanation": "When an agent acts with authority for a disclosed principal (third party knows both that there is a principal and the principal's identity), only the principal is liable on the contract. The agent drops out of the transaction.",
-    "tip": "Disclosed principal + authority = principal liable, agent not liable. Agent drops out.",
+    "explanation": "Under Restatement (Third) of Agency §6.01, when an agent with authority contracts on behalf of a DISCLOSED principal (third party knows there is a principal AND knows the principal's identity), only the principal is bound on the contract. The agent 'drops out' and is neither a party nor liable unless they agreed otherwise. This reflects the third party's understanding that they're contracting with the principal through the agent. Why other answers are wrong: (A) Neither party—the principal IS liable; that's the whole point of agency; (B) Only the agent—wrong; with disclosed principal and authority, agent drops out; principal is the contracting party; (D) Both agent and principal—this applies to PARTIALLY disclosed principal (identity unknown) or UNDISCLOSED principal, not disclosed principal.",
+    "tip": "Disclosed principal + authority = ONLY principal liable. Agent drops out. Restatement (Third) §6.01.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10816,8 +10816,8 @@ const questions = [
       "D": "Neither is liable"
     },
     "correctAnswer": "C",
-    "explanation": "When the principal is undisclosed (third party doesn't know there is a principal), both the agent and principal may be liable. The third party can elect to hold either liable once the principal's identity is discovered.",
-    "tip": "Undisclosed principal: Third party can sue either agent or principal. Must elect one.",
+    "explanation": "Under Restatement (Third) of Agency §6.03, when an agent contracts for an UNDISCLOSED principal (third party doesn't know there is a principal—thinks agent is acting for themselves), BOTH the agent and principal may be liable on the contract. The agent is liable because the third party reasonably believed they were dealing with the agent personally. The principal is liable because the agent acted with authority. When the principal's existence is discovered, the third party may elect to hold EITHER liable but generally must choose one (election doctrine). Why other answers are wrong: (A) Only principal liable—agent is ALSO liable because third party thought they were dealing with agent personally; (B) Only agent liable—principal is also liable if agent had authority; (D) Neither liable—both are potentially liable under §6.03.",
+    "tip": "Undisclosed principal: BOTH agent AND principal may be liable. Third party elects which to pursue. Restatement §6.03.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10837,8 +10837,8 @@ const questions = [
       "D": "Have knowledge of material facts and ratify the entire transaction"
     },
     "correctAnswer": "D",
-    "explanation": "Ratification requires: (1) principal has knowledge of material facts, (2) principal accepts the entire transaction (can't ratify part), (3) principal had capacity at time of act and ratification, and (4) act was legal.",
-    "tip": "Ratification: Full knowledge + accept entire deal + capacity + legal act. Relates back!",
+    "explanation": "Under Restatement (Third) of Agency §4.01-4.02, ratification allows a principal to adopt an unauthorized act of an agent, giving it the same effect as if it had been authorized originally. Requirements: (1) principal must have knowledge of material facts (§4.06), (2) principal must accept the ENTIRE transaction—cannot ratify selectively (§4.07), (3) principal must have had capacity at time of both the original act and ratification, (4) the act must have been legal, and (5) third party's position must not have materially changed. Ratification 'relates back'—treats the act as authorized from the start. Why other answers are wrong: (A) Pay additional consideration—no consideration required for ratification; (B) Sign a new contract—ratification can be by conduct, words, or silence; no new contract needed; (C) File a court petition—no court involvement required; ratification is a private act.",
+    "tip": "Ratification: Knowledge + accept entire deal + capacity + legal act. Relates back to original act! Restatement §§4.01-4.02.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10858,8 +10858,8 @@ const questions = [
       "D": "The employee was an independent contractor"
     },
     "correctAnswer": "C",
-    "explanation": "Respondeat superior makes employers vicariously liable for employee torts committed within the scope of employment. Factors include whether conduct was of the type employed to perform, occurred during work time/place, and was motivated by serving the employer.",
-    "tip": "Respondeat superior: Employer liable for employee torts within scope of employment.",
+    "explanation": "Under Restatement (Third) of Agency §§2.04 and 7.07, respondeat superior ('let the master answer') makes an employer vicariously liable for torts committed by an employee acting within the scope of employment. 'Scope of employment' factors include: (1) conduct was of the type the employee was hired to perform, (2) occurred substantially within authorized time and space limits, (3) was actuated at least in part by a purpose to serve the employer, and (4) used methods not seriously unforeseeable. Why other answers are wrong: (A) Employer authorized the tort—authorization isn't required; employer is liable for employee's negligence even without approval; (B) Tort at any time—must be within SCOPE of employment; personal frolics and detours don't qualify; (D) Employee was IC—respondeat superior applies to EMPLOYEES, not independent contractors (principal lacks control over IC's methods).",
+    "tip": "Respondeat superior: Employer liable for employee torts within scope of employment. NOT for independent contractors. §§2.04, 7.07.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10879,8 +10879,8 @@ const questions = [
       "D": "Employees"
     },
     "correctAnswer": "B",
-    "explanation": "A principal is generally not vicariously liable for torts of independent contractors because the principal lacks control over how the work is performed. Exceptions: inherently dangerous activities, non-delegable duties, and negligent selection.",
-    "tip": "Independent contractors: Principal usually not liable for their torts. Exceptions for dangerous activities.",
+    "explanation": "Under Restatement (Third) of Agency §7.07(3), a principal is generally NOT vicariously liable for torts of independent contractors because the principal lacks the right to control the manner and method of the IC's work. The distinction is control—employees are subject to principal's control; ICs control their own methods. Exceptions where liability exists: (1) inherently dangerous activities, (2) non-delegable duties (statutory or common law), (3) negligent selection of the IC, and (4) apparent agency (held out as employee). Why other answers are wrong: (A) Servants—servants/employees ARE subject to respondeat superior; principal IS liable for their torts; (C) All agents—incorrect; not all agents create vicarious tort liability; (D) Employees—employers ARE vicariously liable for employee torts within scope of employment.",
+    "tip": "Independent contractors: Principal usually NOT liable for their torts (no control over method). Exceptions: dangerous work, non-delegable duties. §7.07(3).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10900,8 +10900,8 @@ const questions = [
       "D": "Whether the worker is paid hourly or by the job"
     },
     "correctAnswer": "A",
-    "explanation": "The key factor is the principal's right to control the manner and method of work performance. With employees, the principal controls how work is done. With independent contractors, the principal controls only the result, not the method.",
-    "tip": "Employee vs IC: Control over method = employee. Control only over result = IC.",
+    "explanation": "Under Restatement (Third) of Agency §7.07 and IRS common law factors, the most important factor distinguishing an employee from an independent contractor is the DEGREE OF CONTROL the principal has over HOW the work is performed. Employee: Principal controls the method, manner, and means of work (behavioral control). Independent contractor: Principal specifies only the result; the IC controls their own methods, tools, and schedule. Additional factors include financial control (investment, expenses, profit opportunity) and relationship type (permanence, benefits, contracts). Why other answers are wrong: (B) Benefits provided—relevant but not determinative; some employees lack benefits; (C) Length of relationship—ongoing relationships can be either employee or IC; (D) Hourly vs job payment—payment method is one factor but not the key distinction; ICs can be paid hourly.",
+    "tip": "Employee vs IC: KEY = control over METHOD of work. Employee = principal controls how. IC = principal controls result only. §7.07, IRS factors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10921,8 +10921,8 @@ const questions = [
       "D": "File annual reports with the state"
     },
     "correctAnswer": "B",
-    "explanation": "The duty to account requires agents to keep accurate records of all transactions, account for money and property belonging to the principal, and not commingle the principal's assets with their own.",
-    "tip": "Duty to account: Track principal's money/property, keep records, don't commingle funds.",
+    "explanation": "Under Restatement (Third) of Agency §8.12, an agent has a duty to account to the principal for property received or handled on the principal's behalf. This includes: (1) keeping accurate records of all transactions, (2) rendering accounts when requested or at regular intervals, (3) NOT commingling the principal's funds with the agent's own funds, and (4) turning over property belonging to the principal upon demand or termination. Commingling makes tracing difficult and is considered a breach of fiduciary duty. Why other answers are wrong: (A) Prepare tax returns—not part of the accounting duty; agent accounts TO the principal, not to tax authorities; (C) Hire an accountant—the duty is on the AGENT to account, not to delegate to a CPA; (D) File annual reports with state—this is a corporate compliance matter, not the agency duty to account.",
+    "tip": "Duty to account: Keep records, account for principal's property/money, NO commingling. Restatement (Third) §8.12.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10942,8 +10942,8 @@ const questions = [
       "D": "Can be revoked at any time by the principal"
     },
     "correctAnswer": "A",
-    "explanation": "An agency coupled with an interest (where the agent has a security interest in the subject matter of the agency) cannot be unilaterally revoked by the principal. It also survives the principal's death and incapacity. Example: power of attorney to sell property securing a debt.",
-    "tip": "Agency coupled with interest: Irrevocable. Agent has stake in subject matter. Survives death.",
+    "explanation": "Under Restatement (Third) of Agency §3.12, an agency coupled with an interest (power given as security) exists when the agent has a proprietary interest in the subject matter of the agency—typically a security interest in the property the agent is authorized to deal with. Key characteristics: (1) IRREVOCABLE by the principal without agent's consent, (2) survives the principal's death, (3) survives the principal's incapacity, and (4) survives the principal's bankruptcy (in some cases). Example: Creditor holds power of attorney to sell debtor's property if debt isn't paid. Why other answers are wrong: (B) Terminates upon death—NO; agency coupled with interest SURVIVES principal's death; (C) Must be renewed annually—no renewal requirement; it continues until the interest is satisfied; (D) Revocable at any time—NO; that's the key distinction; this type of agency CANNOT be unilaterally revoked.",
+    "tip": "Agency coupled with interest: IRREVOCABLE without agent's consent. Survives death and incapacity. Agent has security interest in subject matter. §3.12.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10963,8 +10963,8 @@ const questions = [
       "D": "Both agent and principal may be liable"
     },
     "correctAnswer": "D",
-    "explanation": "With a partially disclosed principal (third party knows an agency exists but not the principal's identity), both the agent and principal may be held liable on the contract. This protects the third party who couldn't fully evaluate the principal.",
-    "tip": "Partially disclosed: Third party knows there's a principal but not who. Both may be liable.",
+    "explanation": "Under Restatement (Third) of Agency §6.02, when an agent contracts for a PARTIALLY DISCLOSED principal (third party knows there is a principal but doesn't know the principal's identity), both the agent and principal may be liable on the contract. Rationale: The third party couldn't fully evaluate the principal's creditworthiness or reputation, so they reasonably relied on the agent. The principal is bound because the agent acted with authority. Why other answers are wrong: (A) Contract is void—the contract is valid and enforceable; uncertainty of identity doesn't void it; (B) Only principal liable—incorrect; agent is ALSO liable because third party relied on agent's reputation; (C) Only agent liable—incorrect; principal is also bound if agent had authority.",
+    "tip": "Partially disclosed principal: Third party knows there's a principal but not identity. BOTH agent and principal may be liable. §6.02.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -10984,8 +10984,8 @@ const questions = [
       "D": "Is only valid for one year"
     },
     "correctAnswer": "C",
-    "explanation": "A durable power of attorney includes language stating it survives the principal's incapacity. This allows the agent to continue acting when the principal becomes unable to manage affairs. Non-durable powers terminate upon incapacity.",
-    "tip": "Durable POA: Survives principal's incapacity. Must specifically state it's durable.",
+    "explanation": "Under the Uniform Durable Power of Attorney Act (UDPAA) and state statutes, a durable power of attorney expressly states that the agent's authority survives the principal's subsequent incapacity (or becomes effective upon incapacity—a 'springing' power). Common language: 'This power shall not be affected by subsequent disability or incapacity' or 'notwithstanding the subsequent disability or incapacity of the principal.' Non-durable powers terminate automatically upon principal's incapacity under Restatement §3.07. Why other answers are wrong: (A) Cannot include financial decisions—durable POAs commonly cover financial matters (banking, investments, property); (B) Terminates upon incapacity—that describes a NON-durable POA; durable POAs explicitly survive incapacity; (D) Only valid for one year—no standard expiration; durable POAs continue until revoked, terminated, or principal's death.",
+    "tip": "Durable POA: Expressly states it survives incapacity. Allows agent to act when principal cannot. Uniform Durable POA Act.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11005,8 +11005,8 @@ const questions = [
       "D": "Punitive damages in all cases"
     },
     "correctAnswer": "B",
-    "explanation": "An agent who purports to act with authority implicitly warrants to third parties that they have such authority. If the agent lacks authority and the principal is not bound, the agent is liable for breach of this warranty of authority.",
-    "tip": "Agent warrants authority to third parties. If no authority, agent liable for breach of warranty.",
+    "explanation": "Under Restatement (Third) of Agency §6.10, when an agent purports to act on behalf of a principal, they implicitly warrant to third parties that: (1) they have authority to act, (2) the principal exists and has capacity, and (3) they are authorized to make the representations. If the agent lacks actual authority and the principal is not bound (no apparent authority, no ratification), the agent is personally liable for breach of the implied warranty of authority. Damages = the third party's loss from the transaction not being enforceable against the principal. Why other answers are wrong: (A) Criminal fraud—breach of warranty is civil, not criminal; fraud requires intent to deceive; (C) Principal's debts—agent isn't liable for principal's debts; only for warranty breach; (D) Punitive damages in all cases—punitive damages require aggravating factors; not automatic.",
+    "tip": "Warranty of authority: Agent implicitly represents they have authority. If not, agent liable for third party's loss. Restatement §6.10.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11026,8 +11026,8 @@ const questions = [
       "D": "Third parties receive actual or constructive notice of termination"
     },
     "correctAnswer": "D",
-    "explanation": "After termination, apparent authority continues as to third parties until they receive notice. Those who previously dealt with the agent need actual notice. Others may receive constructive notice (e.g., newspaper publication).",
-    "tip": "After termination: Give actual notice to prior dealers, constructive notice to others.",
+    "explanation": "Under Restatement (Third) of Agency §3.11, apparent authority continues after agency termination until third parties have notice. The type of notice required depends on the third party's prior dealings: (1) Third parties who previously dealt with the agent require ACTUAL NOTICE (direct communication); (2) Third parties who knew of the agency but didn't deal with agent may be given CONSTRUCTIVE NOTICE (newspaper publication, trade journal notice); (3) Third parties with no prior knowledge aren't owed notice. This protects third parties who reasonably relied on the agent's continuing authority. Why other answers are wrong: (A) One year—no automatic one-year rule; authority continues until notice; (B) Legal newspaper publication—publication gives constructive notice to some, but prior dealers need actual notice; (C) Agent finds new employment—agent's subsequent employment is irrelevant to third parties' reasonable beliefs.",
+    "tip": "After termination: Actual notice to prior dealers, constructive notice to others. Apparent authority continues until notice given. §3.11.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11047,8 +11047,8 @@ const questions = [
       "D": "The agent wants to take time off"
     },
     "correctAnswer": "C",
-    "explanation": "Agents can appoint subagents when: (1) expressly authorized, (2) implied by custom or trade, or (3) necessary due to unforeseen circumstances. The subagent owes duties to both the agent and principal.",
-    "tip": "Subagents: OK if authorized, customary, or emergency. Subagent owes duties to both.",
+    "explanation": "Under Restatement (Third) of Agency §3.15, an agent may appoint a subagent when: (1) expressly authorized by the principal, (2) implied authority based on custom or trade usage (e.g., insurance agents commonly appoint subagents), or (3) reasonably necessary due to unforeseen circumstances or emergency. The subagent owes fiduciary duties to both the appointing agent AND the principal. The original agent remains responsible to the principal for the subagent's conduct. Why other answers are wrong: (A) Family member—family relationship doesn't authorize subagency; must meet one of the three criteria; (B) Never delegate—incorrect; delegation IS permitted when authorized, customary, or necessary; (D) Agent wants time off—personal convenience alone doesn't justify subagency without authorization.",
+    "tip": "Subagents: OK if (1) authorized, (2) customary, or (3) emergency. Subagent owes duties to both agent and principal. §3.15.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11068,8 +11068,8 @@ const questions = [
       "D": "Follow all instructions, including illegal ones"
     },
     "correctAnswer": "A",
-    "explanation": "The duty of obedience requires agents to follow all reasonable and lawful instructions. Agents should not follow instructions that are illegal, unethical, or outside the scope of authority. Agents may deviate in emergencies.",
-    "tip": "Obedience: Follow lawful, reasonable instructions. Don't obey illegal orders.",
+    "explanation": "Under Restatement (Third) of Agency §8.09, an agent has a duty to obey all reasonable and lawful instructions from the principal that are within the scope of the agency relationship. Limitations: (1) No duty to follow ILLEGAL instructions—agent should refuse; (2) No duty to follow instructions outside the scope of agency; (3) Agent may deviate in emergencies when following instructions would harm the principal's interests and communication is impractical; (4) Agent should clarify ambiguous instructions. Why other answers are wrong: (B) Never question decisions—agent may and should seek clarification; blind obedience isn't required; (C) Perform without pay—obedience relates to following instructions, not compensation terms; (D) Follow illegal instructions—agents must NOT follow illegal orders; doing so creates personal liability.",
+    "tip": "Duty of obedience: Follow reasonable, lawful instructions within scope. NOT illegal orders. May deviate in emergency. Restatement §8.09.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11089,8 +11089,8 @@ const questions = [
       "D": "The employee substantially departed from the scope of employment for personal reasons"
     },
     "correctAnswer": "D",
-    "explanation": "A 'frolic' is a substantial departure from employment duties for personal purposes, taking the employee outside the scope of employment. A 'detour' is a minor deviation that may still be within scope. Frolics = no employer liability.",
-    "tip": "Frolic = major personal departure (no liability). Detour = minor deviation (still liable).",
+    "explanation": "Under Restatement (Third) of Agency §7.07(2), the distinction between 'frolic' and 'detour' determines employer vicarious liability. A FROLIC is a substantial departure from the scope of employment for purely personal reasons—employee abandons employer's business entirely. The employer is NOT liable because the employee acted outside the scope. A DETOUR is a minor deviation (stopping for coffee during deliveries) where the employee is still generally serving the employer's interests—employer remains liable. The employee may re-enter scope of employment after a frolic by resuming duties. Why other answers are wrong: (A) Employer didn't authorize—respondeat superior doesn't require authorization; just scope; (B) Victim should have known—irrelevant to vicarious liability analysis; (C) On break—breaks may still be within scope depending on circumstances.",
+    "tip": "Frolic = substantial personal departure (no employer liability). Detour = minor deviation (still liable). Key: Was employee serving employer? §7.07(2).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11110,8 +11110,8 @@ const questions = [
       "D": "A principal's conduct leads a third party to reasonably believe an agency exists, and the third party detrimentally relies"
     },
     "correctAnswer": "D",
-    "explanation": "Agency by estoppel occurs when: (1) principal's acts or failure to act create appearance of agency, (2) third party reasonably relies on that appearance, and (3) third party changes position to their detriment. The principal is estopped from denying agency.",
-    "tip": "Estoppel: Principal's conduct + third party reliance + detriment = can't deny agency.",
+    "explanation": "Under Restatement (Third) of Agency §2.05, agency by estoppel (sometimes called 'apparent agency') prevents a principal from denying an agency relationship when: (1) the principal's conduct (or failure to act when they should have) creates a reasonable appearance of agency, (2) a third party reasonably relies on that appearance, and (3) the third party changes position to their detriment in reliance. Unlike apparent authority (which assumes actual agency), estoppel may apply where NO agency ever existed but the principal should be held accountable for the third party's reasonable belief. Why other answers are wrong: (A) Parties sign agreement—estoppel doesn't require any agreement; it's based on conduct and reliance; (B) Agent acts without authority—that's unauthorized action, not estoppel; estoppel requires principal's conduct creating appearance; (C) Agent exceeds authority—exceeding authority may create apparent authority, but estoppel specifically requires detrimental reliance.",
+    "tip": "Agency by estoppel: Principal's conduct + third party's reasonable reliance + detrimental change of position. Principal can't deny agency. §2.05.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11131,8 +11131,8 @@ const questions = [
       "D": "Never personally liable because they were acting for the principal"
     },
     "correctAnswer": "A",
-    "explanation": "An agent is always personally liable for their own torts, regardless of whether they were acting within the scope of employment. The fact that the principal may also be vicariously liable does not shield the agent from personal liability.",
-    "tip": "Agent always liable for own torts. 'I was just following orders' is no defense.",
+    "explanation": "Under Restatement (Third) of Agency §7.01, an agent is ALWAYS personally liable for their own torts, regardless of whether they were acting within the scope of employment or on behalf of the principal. 'I was just following orders' is not a defense to tort liability. The principal may ALSO be vicariously liable under respondeat superior, creating joint and several liability—both can be sued and the injured party can recover from either or both. The agent cannot avoid personal liability by pointing to the principal. Why other answers are wrong: (B) Liable only if principal insolvent—agent's liability is independent of principal's solvency; (C) Only intentional torts—agent is liable for ALL torts: negligence, intentional, and strict liability; (D) Never liable because acting for principal—wrong; agency relationship doesn't shield personal tort liability.",
+    "tip": "Agent ALWAYS personally liable for own torts. Acting for principal is no defense. Joint liability with principal if in scope. §7.01.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11152,8 +11152,8 @@ const questions = [
       "D": "Only the agent needs to sign"
     },
     "correctAnswer": "C",
-    "explanation": "The equal dignities rule requires that if a contract must be in writing under the Statute of Frauds, the agent's authority to enter that contract must also be in writing. Example: Agent selling real property needs written authority.",
-    "tip": "Equal dignities: Contract needs writing → authority needs writing. Real estate = written POA.",
+    "explanation": "The equal dignities rule requires that if a contract falls within the Statute of Frauds and must be in writing to be enforceable, then the agent's authority to enter that contract on behalf of the principal must also be in writing. This prevents circumvention of the Statute of Frauds through oral agency appointments. Common example: Real property sales require a written contract (Statute of Frauds), so the power of attorney authorizing an agent to sell must also be written. Note: Many states have modified or eliminated this rule by statute. Why other answers are wrong: (A) Contract oral if agent present—incorrect; the rule requires written authority, regardless of agent's presence; (B) Agency need not be in writing—this is the OPPOSITE of the rule; (D) Only agent needs to sign—the underlying contract requirements must still be met; agent's authority must ALSO be written.",
+    "tip": "Equal dignities rule: If contract requires writing (Statute of Frauds), agent's authority must ALSO be in writing. Example: Written POA for real estate sales.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11173,8 +11173,8 @@ const questions = [
       "D": "Creates a new contract"
     },
     "correctAnswer": "B",
-    "explanation": "Ratification relates back to the time of the original unauthorized act, making it as if the agent had authority from the beginning. This creates rights and liabilities as of the original transaction date.",
-    "tip": "Ratification relates back. Treated as if authorized from the start.",
+    "explanation": "Under Restatement (Third) of Agency §4.02, ratification 'relates back' to the time of the original unauthorized act, making it as if the agent had authority from the very beginning. This retroactive effect: (1) creates rights and liabilities as of the original transaction date, (2) validates the transaction from inception, and (3) affects matters like statute of limitations (runs from original date, not ratification). However, ratification cannot adversely affect rights that third parties acquired in the interim period. Why other answers are wrong: (A) Effective only from ratification date—incorrect; the key feature of ratification is its RETROACTIVE effect; (C) Must be approved by third party—third party approval isn't required; ratification is a unilateral act by the principal; (D) Creates new contract—ratification validates the ORIGINAL transaction; it doesn't create a new one.",
+    "tip": "Ratification relates back to original act. Treated as if authorized from the start. Cannot prejudice interim third-party rights. §4.02.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11194,8 +11194,8 @@ const questions = [
       "D": "Proceed without disclosure if the conflict is minor"
     },
     "correctAnswer": "C",
-    "explanation": "When a conflict of interest exists, the agent must make full disclosure to the principal. With informed consent, the agent may proceed. Acting without disclosure is a breach of the duty of loyalty, and any transaction may be voided.",
-    "tip": "Conflict of interest: Must disclose fully. Get principal's informed consent before proceeding.",
+    "explanation": "Under Restatement (Third) of Agency §8.01 (duty of loyalty), when an agent has a conflict of interest with the principal, the agent must: (1) make FULL DISCLOSURE of all material facts regarding the conflict, and (2) obtain the principal's INFORMED CONSENT before proceeding. 'Informed consent' means the principal understands the nature of the conflict and its potential effects on the transaction. Acting on a conflict without disclosure is a breach of fiduciary duty, and the principal may: void the transaction, recover profits, or seek damages. Why other answers are wrong: (A) Report to government agency—conflicts are handled between principal and agent, not reported to authorities; (B) Resign immediately—disclosure and consent allows agent to continue; resignation isn't required; (D) Proceed without disclosure if minor—ALL conflicts require disclosure, regardless of magnitude; 'minor' is subjective.",
+    "tip": "Conflict of interest: FULL disclosure + INFORMED consent required. Acting without disclosure = breach of loyalty, transaction voidable. §8.01.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11215,8 +11215,8 @@ const questions = [
       "D": "The agency ends but the principal is liable for breach of contract damages"
     },
     "correctAnswer": "D",
-    "explanation": "A principal always has the power to terminate an agency (unless coupled with an interest), but may not have the right. Wrongful termination ends the agency but exposes the principal to breach of contract damages to the agent.",
-    "tip": "Principal has power to terminate, but may owe damages if no right to terminate.",
+    "explanation": "Under Restatement (Third) of Agency §3.10, a principal always has the POWER to terminate an agency (it ends the relationship), but may not have the RIGHT to do so if termination breaches the agency contract. The distinction: POWER = ability to end the relationship; RIGHT = contractual permission to do so. Wrongful termination (terminating before agreed term without cause) ends the agency immediately but exposes the principal to liability for breach of contract damages (lost compensation, expectation damages). Exception: Agency coupled with an interest cannot be unilaterally terminated (§3.12). Why other answers are wrong: (A) Force continued relationship—courts don't order specific performance of personal service contracts; (B) No damages—agent IS entitled to contract damages for wrongful termination; (C) Termination void, agency continues—agency ENDS (power exercised), but damages are owed.",
+    "tip": "Power vs. Right to terminate: Principal has POWER (can end it), but may lack RIGHT (breach). Wrongful termination = agency ends + damages. §3.10.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11236,8 +11236,8 @@ const questions = [
       "D": "Only if the employer specifically authorized the tort"
     },
     "correctAnswer": "C",
-    "explanation": "Employers may be liable for employees' intentional torts if: (1) force is authorized (bouncer), (2) friction is inherent in the job (collection agent), (3) employee advances employer's interests, or (4) employer is negligent in hiring/supervision.",
-    "tip": "Intentional torts: Employer liable if foreseeable in nature of job or advancing employer's purpose.",
+    "explanation": "Under Restatement (Third) of Agency §7.07, an employer MAY be vicariously liable for an employee's intentional torts if the conduct was foreseeable or in furtherance of the employer's business. Situations where liability exists: (1) Force is authorized or expected in the job (bouncer, security guard), (2) Friction or confrontation is inherent (collection agent, customer service), (3) Employee was acting to further employer's business purpose (overzealous sales tactics), (4) Employer negligent in hiring/supervision/retention. The key is whether the intentional tort was a foreseeable risk of the employment. Why other answers are wrong: (A) On lunch break—lunch breaks are typically outside scope; timing isn't the test for intentional torts; (B) Never, only negligence—incorrect; employers CAN be liable for intentional torts in proper circumstances; (D) Only if specifically authorized—authorization isn't required; foreseeability and furthering business are sufficient.",
+    "tip": "Intentional torts: Employer liable if foreseeable given job nature OR employee advancing employer's purpose. §7.07.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11257,8 +11257,8 @@ const questions = [
       "D": "Act only with human intervention"
     },
     "correctAnswer": "B",
-    "explanation": "UETA and ESIGN recognize electronic agents (computer programs) as capable of forming binding contracts. A principal who programs or uses an electronic agent is bound by contracts the system makes according to its programming.",
-    "tip": "Electronic agents can form binding contracts. Principal responsible for system's actions.",
+    "explanation": "Under the Uniform Electronic Transactions Act (UETA) §14 and federal ESIGN Act, electronic agents (automated computer systems) are recognized as capable of forming legally binding contracts. An electronic agent is a program that independently initiates or responds to electronic messages without human review. The principal who deploys the electronic agent is bound by contracts formed according to the agent's programming, even if no human reviewed the specific transaction. This enables e-commerce (automated ordering systems, trading algorithms). Why other answers are wrong: (A) Never bind principal—incorrect; electronic agents DO bind principals under UETA/ESIGN; (C) Only process payments—electronic agents can form contracts, negotiate terms, and more; (D) Only with human intervention—the key feature is autonomous action WITHOUT human review.",
+    "tip": "Electronic agents: Can form binding contracts under UETA §14 and ESIGN. Principal responsible for automated system's actions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11278,8 +11278,8 @@ const questions = [
       "D": "The principal is located out of state"
     },
     "correctAnswer": "B",
-    "explanation": "While agents generally can act for undisclosed principals, they cannot engage in fraud. If non-disclosure would constitute fraud (misrepresentation, confidential relationship), the agent must disclose. Also, certain fiduciary dealings require disclosure.",
-    "tip": "Can act for undisclosed principal, but can't commit fraud through non-disclosure.",
+    "explanation": "Under Restatement (Third) of Agency §§6.03 and 8.05, while agents generally have no duty to disclose the principal's identity (undisclosed principal is permitted), disclosure IS required when non-disclosure would constitute fraud or breach fiduciary duties. Situations requiring disclosure: (1) Agent's concealment amounts to misrepresentation, (2) Agent has fiduciary or confidential relationship with third party, (3) Third party specifically asks and lying would be fraudulent, (4) Transaction involves the agent personally where third party would want to know. The undisclosed principal doctrine facilitates commerce but cannot be used to commit fraud. Why other answers are wrong: (A) Third party asks—asking alone doesn't create duty; fraudulent denial does; (C) Contract over $500—dollar threshold relates to Statute of Frauds, not disclosure duty; (D) Principal out of state—location is irrelevant to disclosure duty.",
+    "tip": "Undisclosed principal OK, but can't commit fraud through non-disclosure. Must disclose if concealment = fraud or breach of fiduciary duty. §§6.03, 8.05.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11299,8 +11299,8 @@ const questions = [
       "D": "The third party is negligent"
     },
     "correctAnswer": "C",
-    "explanation": "Inherent agency power (recognized in Restatement 2nd) binds principals when agents act within the usual scope of their type of agency, protecting third parties who reasonably expect such authority. Restatement 3rd eliminated this doctrine, relying on apparent authority.",
-    "tip": "Inherent power: General agent acting in usual way may bind principal. Protects third parties.",
+    "explanation": "Under Restatement (Second) of Agency §§8A and 161, 'inherent agency power' allowed a principal to be bound by an agent's unauthorized act when the agent acted within the usual scope of similar agents, even absent actual or apparent authority. This protected third parties who reasonably expected such authority based on industry custom. Example: General manager making customary purchases. NOTE: Restatement (Third) of Agency ELIMINATED inherent agency power, instead relying on expanded apparent authority and estoppel doctrines. Some courts still apply the concept. Why other answers are wrong: (A) Contract benefits principal—benefit alone doesn't create authority; principal isn't bound just because transaction is profitable; (B) Never, only actual authority—incorrect; inherent power was an independent basis for binding principal; (D) Third party negligent—third party negligence is irrelevant; inherent power protects reasonable third-party expectations.",
+    "tip": "Inherent agency power (Restatement 2nd): General agent acting in usual way binds principal. Restatement 3rd eliminated—uses apparent authority instead.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -11320,8 +11320,8 @@ const questions = [
       "D": "Ends immediately"
     },
     "correctAnswer": "A",
-    "explanation": "The duty of confidentiality survives termination of the agency. Former agents cannot disclose or use the principal's trade secrets and confidential information. General skills and knowledge acquired may be used.",
-    "tip": "Confidentiality survives termination. Can't use trade secrets. General skills OK.",
+    "explanation": "Under Restatement (Third) of Agency §8.05, the agent's duty of confidentiality SURVIVES TERMINATION of the agency relationship. Former agents cannot disclose or use the principal's trade secrets, proprietary information, or other confidential information learned during the agency. This duty continues INDEFINITELY—there is no automatic expiration. However, the agent MAY use: (1) general skills, knowledge, and experience developed (not trade secrets), (2) publicly available information, and (3) information they knew before the agency. Why other answers are wrong: (B) Only one year—no automatic time limit; confidentiality continues indefinitely for trade secrets; (C) Only if written agreement—confidentiality arises from the fiduciary relationship, not just from contract; (D) Ends immediately—incorrect; this is one of the duties that SURVIVES termination.",
+    "tip": "Confidentiality survives termination INDEFINITELY for trade secrets. General skills/knowledge may be used. No time limit. §8.05.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11341,8 +11341,8 @@ const questions = [
       "D": "Personal to the agent only"
     },
     "correctAnswer": "A",
-    "explanation": "Under the imputed knowledge doctrine, notice or knowledge acquired by an agent within the scope of agency is imputed to the principal, even if the agent fails to communicate it. Exceptions: agent is acting adversely to principal's interests.",
-    "tip": "Agent's knowledge = principal's knowledge (usually). Principal can't claim ignorance.",
+    "explanation": "Under Restatement (Third) of Agency §5.03, knowledge acquired by an agent acting within the scope of agency is generally IMPUTED to the principal, even if the agent fails to actually communicate it to the principal. The principal cannot claim ignorance of facts the agent knew. This facilitates commerce by allowing third parties to rely on agent communications. Exceptions where knowledge is NOT imputed: (1) Agent is acting adversely to the principal's interests (fraud against principal), (2) Agent and third party are colluding against principal, (3) Information is outside the scope of agency. Why other answers are wrong: (B) Only if in writing—imputed knowledge applies regardless of how agent learned information; (C) Never imputed—incorrect; imputation is the general rule under §5.03; (D) Personal to agent only—wrong; the whole point is that agent's knowledge IS the principal's knowledge.",
+    "tip": "Imputed knowledge: Agent's knowledge = principal's knowledge (within scope). Principal can't claim ignorance. Exception: adverse agent. §5.03.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11362,8 +11362,8 @@ const questions = [
       "D": "Limited liability for the owner"
     },
     "correctAnswer": "A",
-    "explanation": "A sole proprietorship has unlimited liability—the owner is personally responsible for all business debts. Formation requires no state filing (though licenses may be needed). There is only one owner by definition.",
-    "tip": "Sole proprietorship: Simplest form, no filing, unlimited liability. Owner = business.",
+    "explanation": "A sole proprietorship is the simplest business form characterized by: (1) UNLIMITED PERSONAL LIABILITY—the owner is personally liable for ALL business debts and obligations; no legal separation between owner and business, (2) Single owner by definition (sole = one), (3) No state formation filing required (though business licenses/permits may be needed), (4) Pass-through taxation—business income reported on owner's personal tax return (Schedule C). The owner's personal assets (house, car, savings) are at risk for business debts. Why other answers are wrong: (B) Required state registration—NO filing required to form (licenses are operational, not formation documents); (C) Multiple owners—'sole' means one owner; multiple owners = partnership; (D) Limited liability—sole proprietors have UNLIMITED liability; limited liability requires a different entity form (LLC, corporation).",
+    "tip": "Sole proprietorship: Simplest form, no filing required, UNLIMITED personal liability. Owner and business are legally the same.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11383,8 +11383,8 @@ const questions = [
       "D": "Only by filing articles with the state"
     },
     "correctAnswer": "A",
-    "explanation": "General partnerships can be formed by agreement (oral or written) or simply by conduct that demonstrates an intent to carry on a business for profit as co-owners. No state filing is required to form a general partnership.",
-    "tip": "General partnership: No filing needed. Can be oral, written, or implied from conduct.",
+    "explanation": "Under the Revised Uniform Partnership Act (RUPA) §202, a general partnership is formed when two or more persons associate to carry on as co-owners a business for profit. Formation can occur by: (1) Express oral agreement, (2) Written partnership agreement, or (3) Conduct demonstrating co-ownership intent (sharing profits, contributing capital, participating in management). NO STATE FILING is required to form a general partnership—it can exist even without the partners realizing it. Sharing profits creates a presumption of partnership. Why other answers are wrong: (B) Only written agreement—oral agreements and conduct are sufficient under RUPA; (C) SEC registration—partnerships don't register with SEC; securities regulation is separate; (D) Filing articles with state—general partnerships need NO state filing (unlike LPs, LLCs, and corporations).",
+    "tip": "General partnership (RUPA §202): No filing needed. Oral, written, or implied by conduct. Profit sharing presumes partnership.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11404,8 +11404,8 @@ const questions = [
       "D": "Only if they are employees"
     },
     "correctAnswer": "B",
-    "explanation": "Shareholders have limited liability—they can lose only their investment in the corporation. Personal assets are generally protected from corporate creditors. Exceptions include piercing the corporate veil and personal guarantees.",
-    "tip": "Corporate shareholders: Limited liability. Maximum loss = investment. Personal assets protected.",
+    "explanation": "Under corporate law principles codified in the Revised Model Business Corporation Act (RMBCA), shareholders enjoy LIMITED LIABILITY—their maximum loss is limited to their investment (capital contribution) in the corporation. The corporation is a separate legal entity from its shareholders, creating a 'corporate shield' that protects shareholders' personal assets from corporate creditors. Exceptions that can impose personal liability: (1) Piercing the corporate veil (fraud, alter ego, undercapitalization), (2) Personal guarantees signed by shareholder, (3) Shareholder's own tortious conduct. Why other answers are wrong: (A) Debts during ownership—timing of ownership is irrelevant; shareholders aren't personally liable for corporate debts; (C) Personally and without limit—describes sole proprietors and general partners, not corporate shareholders; (D) Only if employees—employment status doesn't affect shareholder liability.",
+    "tip": "Corporate shareholders (RMBCA): Limited liability = max loss is investment. Personal assets protected unless veil pierced.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11425,8 +11425,8 @@ const questions = [
       "D": "Limited liability and choice of tax treatment"
     },
     "correctAnswer": "D",
-    "explanation": "LLCs combine limited liability (like corporations) with tax flexibility. By default, single-member LLCs are taxed as sole proprietorships and multi-member LLCs as partnerships, but they can elect corporate taxation.",
-    "tip": "LLC: Best of both worlds. Limited liability + tax flexibility (pass-through or elect corporate).",
+    "explanation": "Under state LLC statutes (modeled on the Uniform Limited Liability Company Act - ULLCA) and IRS 'check-the-box' regulations (Treas. Reg. §301.7701-3), LLCs provide: (1) LIMITED LIABILITY for all members—like corporations, members' personal assets are protected, (2) TAX FLEXIBILITY—by default, single-member LLCs are 'disregarded entities' (taxed as sole proprietorships) and multi-member LLCs are taxed as partnerships, but LLCs can elect C corp or S corp taxation. This combines the best features of corporations (liability protection) and partnerships (pass-through taxation, operational flexibility). Why other answers are wrong: (A) Unlimited liability and corporate taxation—exactly backwards; LLCs have LIMITED liability and DEFAULT pass-through taxation; (B) Only pass-through taxation—LLCs can ELECT corporate taxation; they have flexibility; (C) Only limited liability, no tax flexibility—LLC's key advantage IS tax flexibility via check-the-box.",
+    "tip": "LLC (ULLCA): Limited liability + tax flexibility. Default: Pass-through. Can elect C corp or S corp. Best of both worlds.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11446,8 +11446,8 @@ const questions = [
       "D": "Three partners of any type"
     },
     "correctAnswer": "C",
-    "explanation": "A limited partnership requires at least one general partner (with unlimited liability and management authority) and at least one limited partner (with limited liability but no management authority). State filing is required.",
-    "tip": "LP: Must have 1+ general partner + 1+ limited partner. General = liability + control.",
+    "explanation": "Under the Uniform Limited Partnership Act (ULPA 2001) §102, a limited partnership must have at least: (1) ONE GENERAL PARTNER—who has unlimited personal liability for partnership obligations and management authority, and (2) ONE LIMITED PARTNER—who has limited liability (loses only their investment) but traditionally no management role. Formation requires filing a Certificate of Limited Partnership with the state (unlike general partnerships). The general partner manages; limited partners are passive investors. Why other answers are wrong: (A) Only limited partners—LP must have at least one GENERAL partner; can't be all limited; (B) Two general partners—only ONE general partner is required; (D) Three partners of any type—specific requirement is at least one of EACH type (general and limited), not a total count.",
+    "tip": "Limited partnership (ULPA §102): Minimum = 1 general partner + 1 limited partner. State filing required. General = unlimited liability + control.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11467,8 +11467,8 @@ const questions = [
       "D": "Articles of incorporation (or certificate of incorporation)"
     },
     "correctAnswer": "D",
-    "explanation": "Articles of incorporation (also called certificate of incorporation or charter) is the document filed with the state to create a corporation. Bylaws are internal rules adopted by the corporation after formation.",
-    "tip": "Articles of incorporation = filed with state to form corp. Bylaws = internal rules (not filed).",
+    "explanation": "Under RMBCA §2.02, the Articles of Incorporation (also called Certificate of Incorporation or Corporate Charter in some states) is the foundational document filed with the state to legally create a corporation. Required contents typically include: corporate name, number of authorized shares, registered agent/office, and incorporator names. Corporate existence begins when articles are filed and accepted. Bylaws are internal governance rules adopted AFTER formation—they are not filed with the state. Why other answers are wrong: (A) Partnership agreement—governs partnerships, not corporations; (B) Bylaws—internal rules adopted AFTER formation, not the formation document itself; (C) Operating agreement—governs LLCs, not corporations.",
+    "tip": "Articles of incorporation (RMBCA §2.02): Filed with state to CREATE corporation. Bylaws = internal rules (not filed, adopted after formation).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -11488,8 +11488,8 @@ const questions = [
       "D": "Jointly and severally liable for all partnership obligations"
     },
     "correctAnswer": "D",
-    "explanation": "General partners have joint and several liability for all partnership obligations. A creditor can pursue any partner for the full amount of the debt. Partners can seek contribution from other partners afterward.",
-    "tip": "General partners: Joint and several liability. Creditor can collect entire debt from any partner.",
+    "explanation": "Under RUPA §306(a), general partners are JOINTLY AND SEVERALLY liable for all partnership obligations. This means: (1) A creditor can sue ANY partner for the FULL amount of a partnership debt, (2) The creditor doesn't have to sue all partners or exhaust partnership assets first (though some states require this), (3) A partner who pays more than their share can seek CONTRIBUTION from other partners under RUPA §401(b). Joint and several liability creates significant personal risk—one partner's personal assets can be seized for another partner's business mistakes. Why other answers are wrong: (A) Only debts they personally incur—all partners are liable for ALL partnership obligations, regardless of who incurred them; (B) Protected by limited liability—general partners have UNLIMITED liability; limited liability requires different entity; (C) Only their share—creditor can collect ENTIRE debt from any one partner.",
+    "tip": "General partners (RUPA §306): Joint and several liability = creditor can collect FULL debt from ANY partner. Partner can seek contribution later.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11509,8 +11509,8 @@ const questions = [
       "D": "Shareholders have commingled personal and corporate funds or used the corporation to perpetrate fraud"
     },
     "correctAnswer": "D",
-    "explanation": "Courts pierce the veil when shareholders disregard the corporate form: commingling funds, inadequate capitalization, ignoring formalities, using the corporation as an alter ego, or committing fraud. This removes limited liability protection.",
-    "tip": "Veil pierced: Commingling, undercapitalization, ignore formalities, fraud. Treat corp as separate!",
+    "explanation": "Under the 'alter ego' doctrine developed through case law, courts will 'pierce the corporate veil' and hold shareholders personally liable when the corporate form has been abused. Common factors justifying veil-piercing: (1) COMMINGLING—mixing personal and corporate funds/assets, (2) UNDERCAPITALIZATION—insufficient capital to meet foreseeable obligations, (3) IGNORING FORMALITIES—no board meetings, no corporate records, no separation between owner and entity, (4) ALTER EGO—corporation is mere instrumentality of shareholder, (5) FRAUD OR INJUSTICE—using corporate form to perpetrate fraud or evade obligations. Courts apply these factors to prevent injustice. Why other answers are wrong: (A) Paying dividends—normal corporate activity; doesn't justify piercing; (B) More than 100 shareholders—number of shareholders is irrelevant to veil-piercing; (C) Making profit—normal business success; doesn't justify piercing.",
+    "tip": "Piercing the corporate veil: Commingling, undercapitalization, ignore formalities, alter ego, fraud. Keep corporation SEPARATE from personal affairs!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11530,8 +11530,8 @@ const questions = [
       "D": "Guaranteed success"
     },
     "correctAnswer": "A",
-    "explanation": "Directors owe fiduciary duties of care (make informed decisions) and loyalty (act in corporation's best interest, avoid conflicts). They are not guarantors of success. The business judgment rule protects good-faith decisions.",
-    "tip": "Directors: Duty of care + duty of loyalty. Business judgment rule protects good-faith decisions.",
+    "explanation": "Under RMBCA §8.30-8.31, corporate directors owe fiduciary duties to the corporation: (1) DUTY OF CARE—act with the care an ordinarily prudent person would exercise; make informed decisions after reasonable inquiry (review materials, ask questions, consider alternatives); (2) DUTY OF LOYALTY—act in the corporation's best interest, not self-interest; avoid conflicts of interest; don't usurp corporate opportunities; don't compete with the corporation. Directors are NOT guarantors of success—the business judgment rule protects honest mistakes. Why other answers are wrong: (B) Only profit maximization—directors must consider various stakeholders and legal obligations, not just profits; (C) Strict liability for losses—directors aren't strictly liable; they're protected by the business judgment rule for good-faith decisions; (D) Guaranteed success—impossible standard; directors use reasonable care, not guarantee outcomes.",
+    "tip": "Directors' fiduciary duties (RMBCA §8.30-8.31): CARE (informed decisions) + LOYALTY (corp's interest, no conflicts). Business judgment rule protects good faith.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11551,8 +11551,8 @@ const questions = [
       "D": "All decisions regardless of circumstances"
     },
     "correctAnswer": "A",
-    "explanation": "The business judgment rule presumes directors acted on an informed basis, in good faith, and in honest belief that the action was in the corporation's best interest. Directors with conflicts or who act without due diligence lose this protection.",
-    "tip": "BJR: Protects informed, good-faith, loyal decisions. Lost if self-dealing or grossly uninformed.",
+    "explanation": "Under RMBCA §8.31 and established case law (Smith v. Van Gorkom, Aronson v. Lewis), the business judgment rule (BJR) creates a PRESUMPTION that directors acted: (1) On an informed basis (gathered relevant information), (2) In good faith (honestly believed action was proper), (3) In the honest belief that the action was in the corporation's best interest, (4) Without conflicts of interest (disinterested). When BJR applies, courts won't second-guess business decisions even if results are poor. BJR is LOST when directors: have undisclosed conflicts, are grossly uninformed, act in bad faith, or waste corporate assets. Why other answers are wrong: (B) Shareholders approve every decision—shareholder approval isn't required for BJR protection; (C) Corporation makes profit—profit isn't the test; process matters more than outcome; (D) All decisions regardless—BJR has requirements; conflicts and gross negligence defeat it.",
+    "tip": "Business judgment rule (RMBCA §8.31): Presumption of informed, good-faith, loyal decisions. LOST if conflict, gross negligence, or bad faith.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11572,8 +11572,8 @@ const questions = [
       "D": "Cannot modify default statutory rules"
     },
     "correctAnswer": "B",
-    "explanation": "The operating agreement governs LLC internal affairs, member relations, management, and profit sharing. It is not filed with the state and can be oral or written (though written is advisable). It can modify most default statutory rules.",
-    "tip": "Operating agreement: Internal LLC rules. Not filed. Can override most default rules.",
+    "explanation": "Under ULLCA §110, the operating agreement is the foundational governance document for an LLC, governing: (1) Internal affairs and management structure, (2) Relations among members and between members and LLC, (3) Profit/loss allocation and distributions, (4) Voting rights and decision-making processes, (5) Transfer of membership interests, (6) Member withdrawal and dissolution. The operating agreement is NOT filed with the state (unlike articles of organization). It can be oral or written, though written is strongly advisable. It can modify MOST default statutory rules (except certain mandatory provisions). Why other answers are wrong: (A) Must be filed with state—operating agreement is INTERNAL, not filed; articles of organization are filed; (C) Required only for single-member LLCs—operating agreements benefit ALL LLCs, multi-member especially; (D) Cannot modify default rules—operating agreements CAN override most default statutory provisions.",
+    "tip": "Operating agreement (ULLCA §110): Internal LLC governance. NOT filed with state. Can be oral/written. Modifies most default rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11593,8 +11593,8 @@ const questions = [
       "D": "Sell the partnership's real property"
     },
     "correctAnswer": "A",
-    "explanation": "Each general partner is an agent of the partnership with apparent authority to bind it in the ordinary course of business. Actions outside ordinary course (selling real property, admitting partners, confessing judgment) require consent of all partners.",
-    "tip": "Partners bind partnership in ordinary course. Extraordinary acts need all partners' consent.",
+    "explanation": "Under RUPA §301(1), each general partner is an AGENT of the partnership with apparent authority to bind the partnership in transactions apparently for carrying on the partnership business in the ordinary course. Third parties can rely on this apparent authority. Actions OUTSIDE ordinary course require unanimous partner consent under RUPA §401(j), including: selling substantial partnership assets, admitting new partners, confessing judgment, submitting claims to arbitration, or making unusual contracts. Why other answers are wrong: (B) Admit new partners without consent—RUPA §401(i) requires UNANIMOUS consent to admit partners; (C) Dissolve without notice—dissolution has specific requirements under RUPA Article 8; (D) Sell real property—disposing of real property is generally extraordinary, requiring all partners' consent.",
+    "tip": "Partner authority (RUPA §301): Apparent authority in ORDINARY course. EXTRAORDINARY acts (real property, new partners) = need unanimous consent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11614,8 +11614,8 @@ const questions = [
       "D": "The same as a general partner"
     },
     "correctAnswer": "B",
-    "explanation": "Under ULPA 2001, limited partners have limited liability regardless of participation in control. The old 'control rule' that imposed liability for participating in management has been eliminated in modern limited partnership law.",
-    "tip": "Modern LP law: Limited partners protected even if they participate in management.",
+    "explanation": "Under ULPA 2001 §303, limited partners have LIMITED LIABILITY—they can lose only their capital contribution, regardless of whether they participate in management. This is a major change from older law: the 1976 Revised ULPA imposed personal liability on limited partners who participated in 'control' of the partnership (the 'control rule'). ULPA 2001 ELIMINATED the control rule, recognizing that modern investors may want governance rights without losing liability protection. Now limited partners can vote, be employees, or participate in decisions without losing their shield. Why other answers are wrong: (A) Always unlimited—limited partners have LIMITED liability; that's why they're called 'limited'; (C) Unlimited if they vote—ULPA 2001 eliminated this; voting doesn't create liability; (D) Same as general partner—general partners have unlimited liability; limited partners do not.",
+    "tip": "Limited partner liability (ULPA 2001 §303): Limited to capital contribution. 'Control rule' ELIMINATED—can participate in management without losing shield.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11635,8 +11635,8 @@ const questions = [
       "D": "Vote on major matters, elect directors, and inspect corporate records"
     },
     "correctAnswer": "D",
-    "explanation": "Shareholders vote on fundamental matters (mergers, amendments, dissolution), elect/remove directors, and have inspection rights. Day-to-day management is delegated to directors and officers, not shareholders.",
-    "tip": "Shareholders vote, elect directors, inspect. Don't manage day-to-day. That's for officers.",
+    "explanation": "Under RMBCA §7.21 and §16.02, shareholders have specific rights including: (1) VOTE on fundamental matters—mergers (§11.04), amendments to articles (§10.03), dissolution (§14.02), sale of substantially all assets (§12.02); (2) ELECT and remove directors (§8.03, §8.08); (3) INSPECT corporate books and records for proper purpose (§16.02); (4) Receive dividends when declared; (5) Sue derivatively on behalf of corporation. Shareholders do NOT manage day-to-day operations—that's delegated to directors (policy) and officers (execution). Why other answers are wrong: (A) Set executive compensation—board of directors sets compensation, often with compensation committee; (B) Hire and fire employees—management function delegated to officers; (C) Manage daily operations—shareholders are passive owners; directors and officers manage.",
+    "tip": "Shareholder rights (RMBCA): Vote on fundamentals, elect/remove directors, inspect records. Day-to-day management = directors and officers.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11656,8 +11656,8 @@ const questions = [
       "D": "Corporate tax treatment"
     },
     "correctAnswer": "B",
-    "explanation": "An LLP is a general partnership where partners have limited liability for partnership obligations arising from other partners' negligence or misconduct. Partners remain liable for their own misconduct and, in some states, for contract debts.",
-    "tip": "LLP: Shield from other partners' malpractice. Common for law/accounting firms.",
+    "explanation": "Under RUPA §306(c) (as amended for LLPs), a Limited Liability Partnership provides partners with a 'liability shield' protecting them from vicarious liability for OTHER partners' negligence, malpractice, or misconduct. This is especially valuable for professional firms (law, accounting, architecture) where one partner's malpractice could otherwise expose all partners. Partners REMAIN personally liable for: (1) Their OWN negligence/misconduct, (2) Those they directly supervise, and (3) In some states ('partial shield'), contract debts. LLPs require state registration and often professional liability insurance. Why other answers are wrong: (A) No liability protection—LLPs DO provide significant protection from co-partner malpractice; (C) Protection from all partnership debts—some states have 'partial shield' leaving contract liability; even full shield doesn't protect from own conduct; (D) Corporate tax treatment—LLPs are taxed as partnerships (pass-through), not corporations.",
+    "tip": "LLP (RUPA §306(c)): Shield from OTHER partners' malpractice. Still liable for OWN conduct. Popular for professional firms.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11677,8 +11677,8 @@ const questions = [
       "D": "Having dividend and liquidation preferences but often no voting rights"
     },
     "correctAnswer": "D",
-    "explanation": "Preferred stock has priority over common stock for dividends and liquidation distributions. However, preferred stockholders typically don't have voting rights unless dividends are in arrears. Common stock has voting rights and unlimited upside.",
-    "tip": "Preferred: Dividend/liquidation priority, usually no vote. Common: Vote + unlimited upside.",
+    "explanation": "Under RMBCA §6.01, corporations may issue different classes of stock with varying rights. Preferred stock typically has: (1) DIVIDEND PREFERENCE—receives dividends before common stockholders; may be cumulative (arrears must be paid) or non-cumulative; (2) LIQUIDATION PREFERENCE—paid before common stockholders if corporation dissolves; (3) Often NO VOTING RIGHTS—trades voting power for financial preferences. Common stock has: voting rights (one share = one vote typically), residual claim to assets and earnings, unlimited upside potential but last in line for distributions. Preferred stock is 'preferred' for dividends/liquidation but 'inferior' for voting and growth potential. Why other answers are wrong: (A) Being unsecured—both preferred and common are unsecured equity; debt is secured/unsecured; (B) More voting power—preferred typically has LESS or NO voting power; (C) Having no rights—preferred has significant economic rights (preferences).",
+    "tip": "Preferred stock (RMBCA §6.01): Dividend + liquidation priority, usually NO vote. Common: Voting + unlimited upside but last in line.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11698,8 +11698,8 @@ const questions = [
       "D": "Automatically becomes an LLC"
     },
     "correctAnswer": "B",
-    "explanation": "Under RUPA, dissociation doesn't automatically dissolve the partnership. The partnership may continue with remaining partners buying out the dissociating partner's interest. Dissolution occurs only in certain circumstances or if partners choose.",
-    "tip": "Dissociation ≠ automatic dissolution. Partnership can continue; buyout departing partner.",
+    "explanation": "Under RUPA §601-603, DISSOCIATION (a partner leaving) and DISSOLUTION (partnership ending) are separate concepts. When a partner dissociates: (1) Partnership MAY CONTINUE if remaining partners (within 90 days) agree or if partnership agreement permits, (2) Dissociating partner's interest is bought out at fair value (RUPA §701), (3) Dissociating partner is released from future obligations but remains liable for pre-dissociation debts. Dissolution occurs only upon: expiration of term, unanimous consent to dissolve, illegality, judicial decree, or certain triggering events specified in the agreement. Why other answers are wrong: (A) Always dissolves—under RUPA, partnership can continue; old UPA required dissolution; (C) Liquidate within 30 days—no such requirement; partnerships can take reasonable time to wind up; (D) Automatically becomes LLC—entity type changes require formal conversion, not automatic.",
+    "tip": "Dissociation vs. dissolution (RUPA §601-603): Dissociation = partner leaves; partnership CAN continue. Buyout at fair value. Dissolution = partnership ends.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11719,8 +11719,8 @@ const questions = [
       "D": "To dissolve the corporation"
     },
     "correctAnswer": "C",
-    "explanation": "A derivative suit is brought by shareholders on behalf of the corporation when directors fail to take action against wrongdoers (usually directors or officers). Recovery goes to the corporation, not directly to shareholders.",
-    "tip": "Derivative suit: Shareholders sue on corporation's behalf. Recovery goes to corp, not shareholders.",
+    "explanation": "Under RMBCA §7.40-7.47, a shareholder derivative suit allows shareholders to sue ON BEHALF OF THE CORPORATION when directors fail to act against wrongdoers (typically directors, officers, or third parties who harmed the corporation). Key features: (1) Shareholder must have owned stock at time of wrong or acquired by operation of law, (2) Must first DEMAND that directors take action (or show demand would be futile), (3) Any recovery goes to the CORPORATION, not directly to shareholders, (4) Court must approve settlement or dismissal. This differs from a direct suit (shareholder sues for their own injury). Why other answers are wrong: (A) Against other shareholders—derivative suits are against wrongdoers on behalf of corp; direct suits may be against shareholders; (B) Recover personal damages—recovery goes to CORPORATION, not personally to plaintiff-shareholder; (D) To dissolve corporation—dissolution requires different procedures (RMBCA §14.30).",
+    "tip": "Derivative suit (RMBCA §7.40-7.47): Shareholder sues ON BEHALF of corporation. Recovery goes to CORP. Must demand or show demand futile.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11740,8 +11740,8 @@ const questions = [
       "D": "A board of directors required by law"
     },
     "correctAnswer": "C",
-    "explanation": "LLCs can be member-managed (all members participate in management) or manager-managed (designated managers run operations). The operating agreement specifies the management structure. Managers can be members or outsiders.",
-    "tip": "LLC: Member-managed or manager-managed. Operating agreement controls structure.",
+    "explanation": "Under ULLCA §407, LLCs have flexibility in management structure: (1) MEMBER-MANAGED (default)—all members have equal rights to manage and bind the LLC; decisions typically by majority; similar to general partnership. (2) MANAGER-MANAGED—designated managers (who may be members, non-members, or both) run day-to-day operations; members without manager status don't have management authority. The operating agreement specifies which structure applies and details of authority. This flexibility is a key advantage of LLCs over corporations (which require director/officer structure). Why other answers are wrong: (A) Only members—managers can be non-members in manager-managed LLCs; (B) Only non-member managers—members can be managers; member-managed LLCs are common; (D) Board of directors required—LLCs are NOT required to have directors; that's corporate structure.",
+    "tip": "LLC management (ULLCA §407): Member-managed (default) OR manager-managed. Operating agreement controls. No board required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11761,8 +11761,8 @@ const questions = [
       "D": "Sell their shares before other shareholders"
     },
     "correctAnswer": "A",
-    "explanation": "Preemptive rights allow existing shareholders to purchase a proportionate amount of newly issued stock before it's offered to others, maintaining their ownership percentage. These rights may be granted or denied in the articles of incorporation.",
-    "tip": "Preemptive rights: Buy new shares first to maintain percentage ownership. Not automatic in all states.",
+    "explanation": "Under RMBCA §6.30, preemptive rights give existing shareholders the right to purchase their proportionate share of newly issued stock BEFORE it's offered to outsiders, allowing them to maintain their ownership percentage. Example: 10% owner has right to buy 10% of new issuance. Under RMBCA, preemptive rights exist ONLY if expressly granted in articles of incorporation ('opt-in' approach). Preemptive rights protect against dilution of voting power and economic interest. Why other answers are wrong: (B) Force buyback—describes a 'put' right or redemption right, not preemptive rights; (C) Vote on all decisions—voting rights are separate from preemptive rights; (D) Sell before others—describes a 'first refusal' or tag-along right, not preemptive rights.",
+    "tip": "Preemptive rights (RMBCA §6.30): Buy new shares first to maintain ownership %. Must be in articles. Protects against dilution.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11782,8 +11782,8 @@ const questions = [
       "D": "Only to the extent of their capital contribution to the partnership"
     },
     "correctAnswer": "D",
-    "explanation": "A new partner's liability for pre-existing partnership obligations is limited to their capital contribution. They have no personal liability for debts incurred before joining. For post-admission debts, they have full liability.",
-    "tip": "New partner: Pre-admission debts limited to capital. Post-admission debts = full liability.",
+    "explanation": "Under RUPA §306(b), a new partner admitted to an existing partnership has LIMITED liability for pre-existing partnership obligations—they are liable only to the extent of their capital contribution. Their personal assets CANNOT be reached for debts incurred before they joined. However, for obligations arising AFTER admission, the new partner has full joint and several liability like other general partners. This protects new partners from inheriting unknown liabilities while still making them responsible going forward. Why other answers are wrong: (A) Only post-admission debts—new partner IS liable for pre-admission debts, but only to extent of capital; (B) Equal liability before and after—liability differs: limited for pre-admission, full for post-admission; (C) Personally without limit—personal liability exists only for POST-admission debts.",
+    "tip": "New partner (RUPA §306(b)): PRE-admission debts = limited to capital contribution. POST-admission debts = full joint and several liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -11803,8 +11803,8 @@ const questions = [
       "D": "A quorum (typically a majority of shares) present, and majority of quorum must approve"
     },
     "correctAnswer": "D",
-    "explanation": "Shareholder action requires a quorum (usually a majority of shares entitled to vote). Once a quorum exists, a majority of shares present and voting can approve routine matters. Some actions require supermajority votes.",
-    "tip": "Shareholder voting: Quorum required (usually majority). Then majority of quorum approves.",
+    "explanation": "Under RMBCA §7.25 and §7.27, valid shareholder action at a meeting requires: (1) QUORUM—typically a majority of shares entitled to vote must be present (in person or by proxy); quorum may be reduced to one-third in articles but not below; (2) APPROVAL—once a quorum exists, most matters pass by majority of shares actually voted (not majority of quorum). Some fundamental changes (mergers, dissolution, amendments) may require supermajority (2/3) approval. Quorum is determined at meeting start; members leaving don't break quorum once established. Why other answers are wrong: (A) Board prior approval—shareholder meetings don't require board pre-approval; board has its own authority; (B) Unanimous consent—unanimous consent is an alternative to meetings, not a meeting requirement; (C) All shareholders present—only a QUORUM (majority) is required, not all shareholders.",
+    "tip": "Shareholder voting (RMBCA §7.25-7.27): Quorum = majority present. Then majority of votes cast approves. Supermajority for some fundamental changes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11824,8 +11824,8 @@ const questions = [
       "D": "All partners have unlimited liability"
     },
     "correctAnswer": "A",
-    "explanation": "An LLLP combines a limited partnership with LLP status, giving general partners the same liability shield as limited partners. General partners manage but aren't personally liable for other partners' malpractice or partnership debts.",
-    "tip": "LLLP: LP + LLP protection. General partners get liability shield too.",
+    "explanation": "Under ULPA 2001 §404, a Limited Liability Limited Partnership (LLLP) combines features of a limited partnership with the liability shield of an LLP. In an LLLP: (1) GENERAL partners are also PROTECTED from vicarious liability—they can manage without personal liability for other partners' conduct or partnership obligations; (2) LIMITED partners retain their traditional limited liability. This eliminates the main disadvantage of being a general partner in an LP. The LLLP elects this status by so stating in its certificate of limited partnership. Why other answers are wrong: (B) Only limited partners protected—the KEY feature of LLLP is that GENERAL partners also get protection; (C) Taxed as corporation—LLLPs are taxed as partnerships (pass-through), not corporations; (D) All partners unlimited liability—exactly backwards; LLLP provides liability protection to ALL partners.",
+    "tip": "LLLP (ULPA 2001 §404): LP + LLP shield. GENERAL partners get limited liability protection too. Best of LP structure with full liability protection.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11845,8 +11845,8 @@ const questions = [
       "D": "Is largely abolished; corporations have broad powers unless articles limit them"
     },
     "correctAnswer": "D",
-    "explanation": "Modern corporate statutes (like MBCA) give corporations broad powers to engage in any lawful business. Ultra vires is largely abolished. It may be raised only by: shareholders to enjoin, corporation against officers, or attorney general.",
-    "tip": "Ultra vires mostly abolished. Corps have broad powers. Can only be raised in limited ways now.",
+    "explanation": "Under RMBCA §3.01 and §3.04, the ultra vires doctrine (Latin: 'beyond the powers') is largely ABOLISHED in modern corporate law. Corporations now have broad general powers to engage in any lawful business unless the articles specifically limit purposes. RMBCA §3.04 states that ultra vires may be raised ONLY in three narrow situations: (1) Shareholder proceeding to ENJOIN an unauthorized act, (2) Corporation suing directors/officers for exceeding authority, (3) Attorney General seeking dissolution for abuse of powers. Contracts cannot be voided simply because corporation lacked authority. Why other answers are wrong: (A) Only nonprofits—ultra vires doctrine historically applied to all corporations; (B) Any shareholder void any contract—ultra vires doesn't allow contract avoidance under modern law; (C) All unauthorized acts void—under modern law, unauthorized acts are generally enforceable.",
+    "tip": "Ultra vires (RMBCA §3.04): Largely ABOLISHED. Corps have broad powers. Can only be raised to enjoin, sue insiders, or by AG.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11866,8 +11866,8 @@ const questions = [
       "D": "Articles are properly filed"
     },
     "correctAnswer": "A",
-    "explanation": "A de facto corporation exists when: (1) statute exists for incorporation, (2) good faith attempt to comply, and (3) business conducted as corporation. This protects parties dealing with the entity, but the state can challenge corporate status.",
-    "tip": "De facto corp: Tried to incorporate in good faith + acted as corp. Protected from third parties.",
+    "explanation": "Under common law doctrine (limited by RMBCA §2.04), a 'de facto corporation' exists when: (1) A valid statute authorizing incorporation exists, (2) There was a GOOD FAITH attempt to comply with the statute (colorable compliance), and (3) Business was actually conducted as if it were a corporation. This doctrine protects both the organizers and third parties who dealt with the entity believing it was a valid corporation. Third parties cannot deny corporate status; only the STATE can challenge it (through quo warranto). Note: RMBCA §2.04 limits this doctrine—persons who act as a corporation knowing articles weren't filed are personally liable. Why other answers are wrong: (B) Corporation dissolved—de facto addresses formation defects, not dissolution; (C) Shareholders unlimited liability—de facto doctrine PROTECTS shareholders by recognizing corporate status; (D) Articles properly filed—if properly filed, it's a de jure corporation, not de facto.",
+    "tip": "De facto corporation: Good faith attempt to incorporate + acted as corp. Third parties can't deny corporate status. State can challenge.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11887,8 +11887,8 @@ const questions = [
       "D": "Subject to each partner's personal creditors"
     },
     "correctAnswer": "B",
-    "explanation": "Under RUPA, property acquired with partnership funds is partnership property. The partnership owns property as an entity, and partners have no individual ownership interest that can be transferred or reached by personal creditors.",
-    "tip": "Property bought with partnership funds = partnership property. Partners can't individually transfer.",
+    "explanation": "Under RUPA §204(c), property acquired with partnership funds is PRESUMED to be partnership property. Under RUPA's 'entity theory,' the partnership itself owns the property as a separate legal entity—individual partners have NO ownership interest in specific partnership property. This means: (1) Partners CANNOT individually transfer partnership property, (2) Personal creditors of partners CANNOT reach partnership property (only the partner's transferable interest), (3) Partnership property is NOT subject to a partner's family property laws. The partnership can own property in its own name. Why other answers are wrong: (A) Owned by acquiring partner—partnership funds create presumption of partnership ownership; (C) Personal property of all partners equally—under entity theory, PARTNERSHIP owns it, not partners individually; (D) Subject to personal creditors—personal creditors can only get a charging order, not the property itself.",
+    "tip": "Partnership property (RUPA §204): Property bought with partnership funds = partnership property. Partnership owns as ENTITY. Partners can't transfer or subject to personal creditors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11908,8 +11908,8 @@ const questions = [
       "D": "Liable only if the corporation is never formed"
     },
     "correctAnswer": "C",
-    "explanation": "Promoters are personally liable on pre-incorporation contracts. Formation and adoption by the corporation does not automatically release the promoter. Release requires novation—a new agreement where the third party releases the promoter.",
-    "tip": "Promoter personally liable. Incorporation + adoption doesn't release. Need novation!",
+    "explanation": "Under established corporate law principles, a PROMOTER who signs a contract on behalf of a corporation to be formed is PERSONALLY LIABLE on that contract. Key rules: (1) Corporation CANNOT be liable at signing because it doesn't yet exist, (2) When corporation forms and ADOPTS the contract, both promoter AND corporation become liable, (3) Promoter is released ONLY by NOVATION—a new agreement where the third party expressly releases the promoter and agrees to look solely to the corporation. Mere adoption by the corporation does NOT release the promoter. This protects third parties who contracted relying on the promoter. Why other answers are wrong: (A) Automatically released on formation—WRONG; formation + adoption doesn't release; need novation; (B) Never personally liable—WRONG; promoters ARE personally liable; (D) Liable only if never formed—WRONG; promoter liable even if corporation forms unless novation.",
+    "tip": "Promoter liability: Personally liable on pre-incorporation contracts. Corporation adoption adds corporation as liable party but does NOT release promoter. Need NOVATION!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11929,8 +11929,8 @@ const questions = [
       "D": "Makes other members personally liable"
     },
     "correctAnswer": "B",
-    "explanation": "A charging order is the exclusive remedy against a member's LLC interest. It gives the creditor rights to receive distributions that would otherwise go to the debtor-member. It doesn't give management rights or ability to force liquidation.",
-    "tip": "Charging order: Creditor gets distributions only. Can't take interest, vote, or force dissolution.",
+    "explanation": "Under ULLCA §503, a CHARGING ORDER is the EXCLUSIVE remedy for a judgment creditor against a debtor-member's LLC interest. The charging order gives the creditor the right to RECEIVE DISTRIBUTIONS that would otherwise go to the debtor-member—essentially an assignment of the member's economic rights. The creditor does NOT receive: (1) Management or voting rights, (2) The ability to force the LLC to make distributions, (3) The right to force liquidation/dissolution, (4) Actual ownership of the membership interest. This protects the LLC and other members from outsider interference while allowing creditors to eventually collect. Why other answers are wrong: (A) Take member's LLC interest—creditor gets distributions only, not the actual interest; (C) Force dissolution—charging order creditor cannot force dissolution; (D) Other members personally liable—charging order affects only the debtor-member's interest.",
+    "tip": "Charging order (ULLCA §503): EXCLUSIVE creditor remedy. Gets distributions only. NO voting, NO management, NO forced dissolution.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11950,8 +11950,8 @@ const questions = [
       "D": "Shareholders"
     },
     "correctAnswer": "A",
-    "explanation": "Close corporations (small number of shareholders, stock transfer restrictions) may eliminate the board of directors and be managed directly by shareholders. They can also have more relaxed corporate formalities while maintaining liability protection.",
-    "tip": "Close corp: Can eliminate board. Shareholders manage directly. Relaxed formalities.",
+    "explanation": "Under RMBCA Subchapter F (§7.32) and state close corporation statutes, a statutory close corporation has special flexibility: (1) May ELIMINATE the board of directors and be managed directly by shareholders, (2) May have relaxed formalities (fewer meetings, less formal records), (3) Shareholders can enter agreements that would be invalid in public corporations. Close corporations typically have: small number of shareholders, no public market for shares, and stock transfer restrictions. This structure allows closely-held businesses to operate more like partnerships while maintaining corporate liability protection. Why other answers are wrong: (B) Without articles—ALL corporations need articles of incorporation; (C) Without any formalities—some formalities still required to maintain liability protection; (D) Without shareholders—corporations by definition have shareholders (even if one person).",
+    "tip": "Close corporation (RMBCA §7.32): Can eliminate board—shareholders manage directly. Relaxed formalities. Limited shareholders, transfer restrictions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11971,8 +11971,8 @@ const questions = [
       "D": "Creditors first, then partners' capital, then profits"
     },
     "correctAnswer": "D",
-    "explanation": "Upon winding up, partnership assets are distributed: (1) outside creditors, (2) partners for advances/loans (partners as creditors), (3) partners' capital contributions, (4) remaining profits per profit-sharing ratios.",
-    "tip": "Winding up order: Outside creditors → partner loans → capital → profits.",
+    "explanation": "Under RUPA §807, when a partnership dissolves and winds up, assets are distributed in this priority order: (1) OUTSIDE CREDITORS—debts owed to non-partner creditors (suppliers, banks, etc.), (2) PARTNERS AS CREDITORS—loans and advances made by partners to the partnership (not capital contributions), (3) PARTNERS' CAPITAL CONTRIBUTIONS—return of what partners invested, (4) REMAINING PROFITS—distributed according to profit-sharing ratios. If assets are insufficient, losses are allocated in reverse order. Under RUPA's single account approach, each partner has one capital account that may be positive or negative. Why other answers are wrong: (A) Equally among partners and creditors—creditors have priority over partners; (B) By percentage interest—that's only for PROFITS after creditors and capital are paid; (C) Partners first, then creditors—exactly backwards; creditors ALWAYS come first.",
+    "tip": "Winding up (RUPA §807): Creditors FIRST → partner loans → capital → profits. Creditors ALWAYS have priority over partners.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -11992,8 +11992,8 @@ const questions = [
       "D": "Only shareholders"
     },
     "correctAnswer": "C",
-    "explanation": "Mergers typically require: (1) board approval of both corporations, (2) shareholder approval (usually majority) of both corporations, and (3) filing with the state. Dissenting shareholders may have appraisal rights.",
-    "tip": "Merger: Both boards approve + both shareholders vote + state filing. Dissenters get appraisal rights.",
+    "explanation": "Under RMBCA §11.04, a merger between corporations requires approval by BOTH corporations: (1) BOARD of directors of each corporation must adopt a plan of merger and recommend it to shareholders, (2) SHAREHOLDERS of each corporation must approve (typically majority of shares entitled to vote, though some states require 2/3). After approval: (3) Articles of merger filed with the state. Exceptions: Short-form merger—a parent owning 90%+ can merge with subsidiary without subsidiary shareholder vote (RMBCA §11.05). Dissenting shareholders may have APPRAISAL RIGHTS to demand fair value for their shares (RMBCA §13.02). Why other answers are wrong: (A) SEC approval—SEC regulates securities, not merger approvals; (B) Only boards—shareholder approval is required for mergers; (D) Only shareholders—board must also approve and recommend the merger.",
+    "tip": "Merger (RMBCA §11.04): Both boards approve + both shareholders vote + state filing. Dissenters get appraisal rights. Short-form exception: 90%+ parent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12013,8 +12013,8 @@ const questions = [
       "D": "Cannot be modified"
     },
     "correctAnswer": "A",
-    "explanation": "LLC operating agreements can modify fiduciary duties, though most states prohibit eliminating the duty of loyalty entirely or acting in bad faith. This flexibility distinguishes LLCs from corporations and partnerships.",
-    "tip": "LLC fiduciary duties: Can be modified by operating agreement. Can't eliminate bad faith liability.",
+    "explanation": "Under ULLCA §110(c)-(d), LLC operating agreements have significant flexibility to MODIFY fiduciary duties, unlike corporations and traditional partnerships. The operating agreement may: (1) Identify specific categories of activities that don't violate duties, (2) Alter standards of conduct for duties, (3) Reduce or eliminate aspects of fiduciary duties. LIMITATIONS (cannot be waived): (1) Cannot eliminate the obligation of GOOD FAITH and fair dealing, (2) Cannot eliminate liability for intentional misconduct or knowing violations of law, (3) Cannot unreasonably reduce duty of care below gross negligence. This flexibility is a key advantage of LLCs for sophisticated business relationships. Why other answers are wrong: (B) Identical to corporate duties—LLC duties are more flexible and modifiable; (C) Don't exist—members DO owe fiduciary duties by default; (D) Cannot be modified—the KEY feature is that they CAN be modified.",
+    "tip": "LLC fiduciary duties (ULLCA §110): CAN be modified/reduced by operating agreement. CANNOT eliminate: good faith, intentional misconduct liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12034,8 +12034,8 @@ const questions = [
       "D": "Binding only after the corporation is formed"
     },
     "correctAnswer": "C",
-    "explanation": "Under MBCA, pre-incorporation subscriptions are irrevocable for 6 months unless the subscription agreement provides otherwise or all subscribers agree to revocation. This allows promoters to secure commitments before incorporation.",
-    "tip": "Pre-incorporation subscriptions: Irrevocable 6 months (MBCA) unless agreement says otherwise.",
+    "explanation": "Under RMBCA §6.20, a pre-incorporation stock subscription (an agreement to purchase stock in a corporation to be formed) is IRREVOCABLE for 6 MONTHS unless: (1) The subscription agreement itself provides otherwise, or (2) ALL subscribers consent to the revocation. This gives promoters time to organize the corporation while having committed capital. After the corporation is formed, the subscription becomes a binding contract, and the corporation can sue for any unpaid subscription price. Stock subscriptions are typically used when promoting new ventures requiring capital commitments before formation. Why other answers are wrong: (A) Illegal in most states—pre-incorporation subscriptions are legal and recognized by RMBCA; (B) Always revocable—WRONG; they are IRREVOCABLE for 6 months by default; (D) Binding only after formation—subscriptions are binding commitments BEFORE formation; that's their purpose.",
+    "tip": "Pre-incorporation subscription (RMBCA §6.20): IRREVOCABLE for 6 months unless agreement says otherwise or all subscribers consent to revocation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12055,8 +12055,8 @@ const questions = [
       "D": "Partnership by estoppel, to those who rely on the representation"
     },
     "correctAnswer": "D",
-    "explanation": "Partnership by estoppel makes a person who represents themselves as a partner (or allows others to do so) liable to third parties who rely on that representation. This protects those who reasonably believe they're dealing with a partner.",
-    "tip": "Partnership by estoppel: Hold yourself out as partner = liable to those who rely on it.",
+    "explanation": "Under RUPA §308, PARTNERSHIP BY ESTOPPEL holds a person liable as if they were a partner when: (1) The person REPRESENTS themselves as a partner (or consents to others doing so), AND (2) A third party RELIES on that representation, AND (3) The third party CHANGES POSITION based on that reliance. This protects third parties who reasonably believe they're dealing with a partner and extend credit or enter transactions based on that belief. The 'partner by estoppel' is liable to those specific third parties who relied, even though they're not actually a partner. Why other answers are wrong: (A) General tort principles—partnership by estoppel is a specific equitable doctrine, not general tort law; (B) Criminal law—false representation as partner might be fraud, but estoppel is civil liability; (C) Only UPA—RUPA §308 codifies this doctrine; it's part of modern partnership law.",
+    "tip": "Partnership by estoppel (RUPA §308): Represent yourself as partner + third party relies + detrimental reliance = liable as partner to that party.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12076,8 +12076,8 @@ const questions = [
       "D": "Block a merger"
     },
     "correctAnswer": "A",
-    "explanation": "Appraisal rights (dissenters' rights) allow shareholders who object to certain fundamental changes (mergers, major asset sales) to demand the corporation purchase their shares at fair value. They cannot block the transaction.",
-    "tip": "Appraisal rights: Dissenter can demand fair value buyout. Can't stop the transaction.",
+    "explanation": "Under RMBCA Chapter 13 (§§13.01-13.31), APPRAISAL RIGHTS (also called 'dissenters' rights') allow shareholders who object to certain fundamental corporate changes to demand that the corporation purchase their shares at FAIR VALUE. Triggering events include: mergers (§13.02), sale of substantially all assets, certain amendments reducing shareholder rights. Process: (1) Shareholder gives notice of intent to dissent BEFORE vote, (2) Shareholder votes AGAINST (or abstains from) the transaction, (3) After approval, shareholder demands payment, (4) Corporation pays fair value or fair value is judicially determined. Dissenter CANNOT block the transaction—they can only exit at fair value. Why other answers are wrong: (B) Force dissolution—appraisal provides exit, not dissolution power; (C) Replace board—that requires voting, proxy contests, not appraisal; (D) Block a merger—appraisal is an EXIT remedy, not a BLOCKING remedy.",
+    "tip": "Appraisal rights (RMBCA Ch. 13): Dissenter can demand FAIR VALUE buyout for certain fundamental changes. CANNOT block transaction—only exit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12097,8 +12097,8 @@ const questions = [
       "D": "Only debt counseling"
     },
     "correctAnswer": "C",
-    "explanation": "Chapter 7 is liquidation bankruptcy. A trustee collects and sells the debtor's nonexempt assets, distributes proceeds to creditors, and remaining qualifying debts are discharged. The debtor gets a 'fresh start.'",
-    "tip": "Chapter 7 = liquidation. Sell assets, pay creditors, discharge remaining debt. Fresh start.",
+    "explanation": "Under 11 U.S.C. §§701-784, Chapter 7 is LIQUIDATION bankruptcy. Process: (1) Trustee is appointed, (2) Trustee collects the debtor's NONEXEMPT assets (debtor keeps exempt property), (3) Assets are liquidated (sold), (4) Proceeds distributed to creditors according to priority, (5) Remaining qualifying debts are DISCHARGED. The debtor gets a 'fresh start'—freed from personal liability for dischargeable debts. Available to individuals and businesses, but the means test limits access for higher-income individual debtors. Why other answers are wrong: (A) Guaranteed repayment—creditors often receive pennies on the dollar or nothing; no guarantees; (B) Reorganization of debts—that's Chapter 11 (business) or Chapter 13 (individual); (D) Only debt counseling—debtors must complete credit counseling, but Ch. 7 is liquidation, not just counseling.",
+    "tip": "Chapter 7 (11 U.S.C. §§701-784): LIQUIDATION. Trustee sells nonexempt assets, pays creditors, remaining debts discharged. Fresh start.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12118,8 +12118,8 @@ const questions = [
       "D": "Only liquidation of assets"
     },
     "correctAnswer": "A",
-    "explanation": "Chapter 11 is reorganization bankruptcy, primarily for businesses. The debtor usually continues operating while developing a plan to restructure debts and emerge as a viable entity. Creditors vote on the reorganization plan.",
-    "tip": "Chapter 11 = reorganization. Business keeps operating. Restructure debts to survive.",
+    "explanation": "Under 11 U.S.C. §§1101-1195, Chapter 11 is REORGANIZATION bankruptcy, primarily for businesses (though individuals can use it). Key features: (1) Debtor usually continues operating as 'debtor in possession' (DIP), (2) DIP proposes a PLAN OF REORGANIZATION to restructure debts, (3) Creditors vote on the plan in classes, (4) Court confirms the plan if it meets legal requirements, (5) Business emerges as a viable ongoing entity. Chapter 11 preserves jobs, maintains going-concern value, and maximizes creditor recovery compared to liquidation. Why other answers are wrong: (B) Personal debt adjustment only—that's Chapter 13; Ch. 11 is primarily for businesses; (C) Municipal debt—that's Chapter 9, specifically for municipalities; (D) Only liquidation—that's Chapter 7; Ch. 11 is reorganization to continue operating.",
+    "tip": "Chapter 11 (11 U.S.C. §§1101-1195): REORGANIZATION. Business keeps operating as DIP. Proposes plan. Creditors vote. Emerges restructured.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12139,8 +12139,8 @@ const questions = [
       "D": "The IRS"
     },
     "correctAnswer": "B",
-    "explanation": "A voluntary petition is filed by the debtor who chooses to seek bankruptcy protection. An involuntary petition is filed by creditors against the debtor. Both result in bankruptcy proceedings but have different requirements.",
-    "tip": "Voluntary = debtor files. Involuntary = creditors file against debtor.",
+    "explanation": "Under 11 U.S.C. §301, a VOLUNTARY petition is filed by the DEBTOR who chooses to seek bankruptcy protection. The debtor initiates the case by filing a petition, schedules, and statements with the bankruptcy court. Contrast with INVOLUNTARY petition (§303): filed by CREDITORS against the debtor without debtor's consent (requires meeting specific requirements). Voluntary filing is the most common way bankruptcy cases begin—the debtor recognizes they need debt relief. Why other answers are wrong: (A) Creditors—creditors file INVOLUNTARY petitions, not voluntary; (C) Bankruptcy court—the court doesn't initiate cases; it adjudicates cases filed by parties; (D) IRS—the IRS is a creditor that can join involuntary petitions but doesn't file voluntary petitions for debtors.",
+    "tip": "Voluntary petition (11 U.S.C. §301): Filed by DEBTOR seeking relief. Involuntary (§303): Filed by CREDITORS against debtor.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12160,8 +12160,8 @@ const questions = [
       "D": "Allows creditors to continue lawsuits"
     },
     "correctAnswer": "B",
-    "explanation": "The automatic stay takes effect immediately upon filing and stops most collection efforts, lawsuits, foreclosures, wage garnishments, and harassment. Creditors must get court permission (relief from stay) to continue collection actions.",
-    "tip": "Automatic stay: Immediate upon filing. Halts collections, lawsuits, foreclosures.",
+    "explanation": "Under 11 U.S.C. §362, the AUTOMATIC STAY takes effect IMMEDIATELY upon filing a bankruptcy petition. It halts virtually all collection activities against the debtor, including: lawsuits, foreclosures, repossessions, wage garnishments, phone calls, letters, and other harassment. The stay gives the debtor 'breathing room' to reorganize or liquidate. Creditors who violate the stay may be held in contempt and liable for damages. Creditors seeking to continue collection must file a motion for 'relief from stay' under §362(d). Why other answers are wrong: (A) Only secured creditors—the stay applies to virtually ALL creditors; (C) Lasts forever—stay lifts when case closes, debt is discharged, or court grants relief; (D) Allows continued lawsuits—the stay STOPS lawsuits; that's its primary purpose.",
+    "tip": "Automatic stay (11 U.S.C. §362): IMMEDIATE upon filing. Stops ALL collection—lawsuits, foreclosures, garnishments, calls. Creditors need relief from stay.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12181,8 +12181,8 @@ const questions = [
       "D": "Keep their home regardless of value"
     },
     "correctAnswer": "A",
-    "explanation": "The homestead exemption protects a specified amount of equity in the debtor's primary residence from creditors. Amounts vary significantly by state. Some states have unlimited homestead exemptions; others have modest limits.",
-    "tip": "Homestead exemption: Protect home equity (amount varies by state). Not the whole house usually.",
+    "explanation": "Under 11 U.S.C. §522(d)(1) (federal exemption) and various state laws, the HOMESTEAD EXEMPTION protects a specified amount of EQUITY in the debtor's PRIMARY RESIDENCE from creditors. The federal exemption is approximately $27,900 (indexed for inflation), but amounts vary dramatically by state—Texas and Florida have UNLIMITED homestead exemptions, while others are modest. The exemption protects equity, not necessarily the entire home value. Debtor keeps the home if equity is within exemption limits. Why other answers are wrong: (B) Transfer home to relatives—fraudulent transfers can be avoided by trustee; this isn't what exemption allows; (C) Sell home tax-free—tax treatment is separate from bankruptcy exemptions; (D) Keep regardless of value—only protected equity up to exemption amount; excess equity can be reached.",
+    "tip": "Homestead exemption (11 U.S.C. §522): Protects home EQUITY up to limit. Federal ~$27,900. States vary—TX/FL unlimited, others modest.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12202,8 +12202,8 @@ const questions = [
       "D": "Individuals with regular income who meet debt limits"
     },
     "correctAnswer": "D",
-    "explanation": "Chapter 13 is for individuals with regular income who want to repay debts over 3-5 years through a court-approved plan. Debt limits apply (unsecured < approximately $465,000; secured < approximately $1.4 million as indexed).",
-    "tip": "Chapter 13: Individuals only, regular income, debt limits, 3-5 year repayment plan.",
+    "explanation": "Under 11 U.S.C. §§1301-1330, Chapter 13 is the 'wage earner's plan'—available ONLY to INDIVIDUALS (not corporations or partnerships) with REGULAR INCOME who meet DEBT LIMITS. Debt limits (indexed): unsecured debt < ~$465,275; secured debt < ~$1,395,875. The debtor proposes a 3-5 YEAR REPAYMENT PLAN to pay creditors from future income. Advantages: keep property, catch up on mortgages, may pay less than full debt. Why other answers are wrong: (A) Banks and insurance companies—these entities are ineligible for ANY bankruptcy chapter; (B) Municipalities—that's Chapter 9, specifically for governmental units; (C) Corporations—corporations cannot file Chapter 13; they use Chapter 7 or 11.",
+    "tip": "Chapter 13 (11 U.S.C. §§1301-1330): INDIVIDUALS only with regular income + debt limits. 3-5 year repayment plan. Keep property.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12223,8 +12223,8 @@ const questions = [
       "D": "Dischargeable debts"
     },
     "correctAnswer": "A",
-    "explanation": "Domestic support obligations have first priority and are paid before other priority claims, administrative expenses, and general unsecured creditors. They are also non-dischargeable—the debtor must pay them regardless of bankruptcy.",
-    "tip": "Domestic support = first priority + non-dischargeable. Must pay child support/alimony.",
+    "explanation": "Under 11 U.S.C. §507(a)(1), DOMESTIC SUPPORT OBLIGATIONS (DSOs)—child support, alimony, spousal maintenance—have FIRST PRIORITY among unsecured claims. They are paid before all other priority claims including administrative expenses, wages, and taxes. Additionally, under §523(a)(5), DSOs are NONDISCHARGEABLE—the debtor must pay them regardless of bankruptcy outcome. This reflects public policy favoring support of children and former spouses over commercial creditors. DSOs owed to governmental units get the same priority. Why other answers are wrong: (B) Same as credit card debt—credit cards are general unsecured claims with NO priority; DSOs are first priority; (C) Paid after secured creditors—DSOs are first UNSECURED priority; secured creditors have rights to collateral separately; (D) Dischargeable—WRONG; DSOs are specifically NONDISCHARGEABLE under §523(a)(5).",
+    "tip": "Domestic support obligations (11 U.S.C. §507(a)(1)): FIRST priority + NONDISCHARGEABLE (§523(a)(5)). Child support/alimony must be paid.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12244,8 +12244,8 @@ const questions = [
       "D": "Helping the debtor avoid bankruptcy"
     },
     "correctAnswer": "C",
-    "explanation": "The Chapter 7 trustee collects the debtor's nonexempt property, liquidates it, investigates the debtor's financial affairs, and distributes proceeds to creditors according to priority. The trustee also examines proofs of claim.",
-    "tip": "Ch. 7 trustee: Collect assets, sell them, distribute to creditors, investigate debtor.",
+    "explanation": "Under 11 U.S.C. §704, the Chapter 7 TRUSTEE's duties include: (1) COLLECT all property of the bankruptcy estate, (2) LIQUIDATE (sell) nonexempt assets, (3) INVESTIGATE the debtor's financial affairs and examine proofs of claim, (4) DISTRIBUTE proceeds to creditors according to priority (§726), (5) Object to improper exemptions or claims, (6) Oppose discharge if fraud is found. The trustee is a fiduciary for the estate and creditors, not the debtor. Why other answers are wrong: (A) Representing the debtor—trustee represents the ESTATE and CREDITORS, not the debtor; debtor has own attorney; (B) Lending money—trustees don't lend; they collect and distribute; (D) Helping avoid bankruptcy—trustee's job is to administer the case, not prevent it.",
+    "tip": "Chapter 7 trustee (11 U.S.C. §704): COLLECT property, LIQUIDATE assets, INVESTIGATE debtor, DISTRIBUTE to creditors. Fiduciary for estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12265,8 +12265,8 @@ const questions = [
       "D": "At least three creditors with unsecured claims totaling at least $18,600"
     },
     "correctAnswer": "D",
-    "explanation": "If a debtor has 12+ creditors, at least three must join in the involuntary petition with combined unsecured claims of at least $18,600 (indexed amount). If fewer than 12 creditors, one creditor meeting the amount can file.",
-    "tip": "Involuntary: 12+ creditors = need 3 petitioners. <12 creditors = 1 petitioner OK. Minimum claim amount.",
+    "explanation": "Under 11 U.S.C. §303(b), involuntary bankruptcy petitions have specific requirements. If debtor has 12 OR MORE creditors: at least THREE creditors must join, with combined unsecured claims of at least $18,600 (indexed—was ~$19,700 in 2024). If debtor has FEWER than 12 creditors: ONE creditor meeting the minimum amount can file alone. Additional rules: claims must be noncontingent, not subject to bona fide dispute; debtor must be generally not paying debts as they come due. Involuntary petitions are NOT available under Chapter 13. Why other answers are wrong: (A) All creditors join—only 3 required (or 1 if <12 creditors); (B) Government approval—no government pre-approval needed; (C) One creditor—only if debtor has fewer than 12 creditors.",
+    "tip": "Involuntary petition (11 U.S.C. §303): 12+ creditors = need 3 petitioners. <12 creditors = 1 petitioner OK. Minimum ~$18,600 unsecured.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12286,8 +12286,8 @@ const questions = [
       "D": "Calculate the debtor's discharge amount"
     },
     "correctAnswer": "A",
-    "explanation": "The means test determines if Chapter 7 filing would be an abuse based on debtor's income. If income exceeds state median and the debtor can pay significant amounts to unsecured creditors, they may be required to file Chapter 13 instead.",
-    "tip": "Means test: Too much income? Can't use Ch. 7. Must use Ch. 13 (repayment plan).",
+    "explanation": "Under 11 U.S.C. §707(b), the MEANS TEST determines if a Chapter 7 filing would constitute 'abuse.' Two-part test: (1) Compare debtor's income to STATE MEDIAN income—if below median, means test is passed; (2) If above median, calculate disposable income after allowed expenses. If debtor has sufficient disposable income to pay meaningful amounts to unsecured creditors (generally $12,850+ over 5 years), Chapter 7 may be dismissed or converted to Chapter 13. The test prevents higher-income debtors from liquidating when they could repay debts. Why other answers are wrong: (B) Priority of creditors—that's determined by §507, not means test; (C) Attorney fees—fees are separate from means test; (D) Discharge amount—means test determines eligibility, not discharge amount.",
+    "tip": "Means test (11 U.S.C. §707(b)): Income > state median + can pay creditors = Ch. 7 abuse. Must use Ch. 13 repayment plan instead.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12307,8 +12307,8 @@ const questions = [
       "D": "Medical bills"
     },
     "correctAnswer": "A",
-    "explanation": "Student loans are generally not dischargeable unless the debtor proves undue hardship (difficult standard). Other non-dischargeable debts include taxes (recent), domestic support, fraud debts, DUI judgments, and criminal fines.",
-    "tip": "Non-dischargeable: Student loans, taxes (recent), child support, fraud, DUI, criminal fines.",
+    "explanation": "Under 11 U.S.C. §523(a)(8), STUDENT LOANS are generally NONDISCHARGEABLE unless the debtor proves 'undue hardship' (the Brunner test is extremely difficult to meet). Other nondischargeable debts under §523 include: (1) Certain taxes (within 3 years), (2) Domestic support obligations (§523(a)(5)), (3) Debts from fraud (§523(a)(2)), (4) DUI judgments (§523(a)(9)), (5) Criminal fines/restitution (§523(a)(7)), (6) Debts not listed in schedules (§523(a)(3)). Why other answers are wrong: (B) Personal loans—generally dischargeable unless fraud involved; (C) Credit card debt—generally dischargeable unless recent luxury purchases or fraud; (D) Medical bills—generally dischargeable (they're unsecured consumer debt).",
+    "tip": "Nondischargeable debts (11 U.S.C. §523): Student loans (unless undue hardship), recent taxes, DSOs, fraud, DUI, criminal fines.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12328,8 +12328,8 @@ const questions = [
       "D": "Loses their security interest"
     },
     "correctAnswer": "B",
-    "explanation": "Secured creditors have rights to their collateral. They are paid first from the collateral proceeds. If collateral value is less than the debt, the deficiency becomes an unsecured claim. Secured creditors often seek relief from stay to foreclose.",
-    "tip": "Secured creditors: Get paid from collateral first. Deficiency becomes unsecured claim.",
+    "explanation": "Under 11 U.S.C. §506, a SECURED CREDITOR has rights in COLLATERAL and is paid from collateral value before unsecured creditors share in remaining estate assets. Key rules: (1) Secured creditor's claim is 'secured' only to extent of collateral VALUE; (2) If debt exceeds collateral value, DEFICIENCY becomes an unsecured claim; (3) Secured creditors may seek RELIEF FROM STAY (§362(d)) to foreclose; (4) In Ch. 11, secured creditors may receive deferred payments equal to collateral value. Secured status provides significant protection. Why other answers are wrong: (A) No priority over unsecured—secured creditors ARE paid first from their collateral; (C) Share collateral with all creditors—collateral goes to the secured creditor first; (D) Loses security interest—properly perfected security interests generally survive bankruptcy.",
+    "tip": "Secured creditors (11 U.S.C. §506): Rights to COLLATERAL first. Deficiency = unsecured claim. May seek relief from stay to foreclose.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12349,8 +12349,8 @@ const questions = [
       "D": "In the ordinary course of business"
     },
     "correctAnswer": "A",
-    "explanation": "A voidable preference is a transfer made to a creditor within 90 days before filing (or 1 year for insiders), while debtor was insolvent, that enables the creditor to receive more than they would in Chapter 7 liquidation.",
-    "tip": "Preference: Payment within 90 days (1 year for insiders) + insolvent + creditor gets more than in Ch. 7.",
+    "explanation": "Under 11 U.S.C. §547, the trustee can AVOID (recover) PREFERENTIAL TRANSFERS. Elements: (1) Transfer to or for benefit of a creditor, (2) For antecedent (pre-existing) debt, (3) Made while debtor was INSOLVENT, (4) Within 90 DAYS before filing (or 1 YEAR for INSIDERS), (5) That enabled creditor to receive MORE than in Chapter 7 liquidation. Defenses (§547(c)): ordinary course of business payments, contemporaneous exchange for new value, subsequent new value given. The policy is EQUALITY—creditors should share pro rata, not race to collect before bankruptcy. Why other answers are wrong: (B) To secured creditors—payments to secured creditors can be preferences too; (C) After filing—post-petition transfers are different; preferences are pre-petition; (D) Ordinary course—ordinary course payments are a DEFENSE to preference, not what makes something preferential.",
+    "tip": "Preferences (11 U.S.C. §547): 90 days (1 year insiders) + insolvent + creditor gets more than Ch. 7. Defense: ordinary course, new value.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12370,8 +12370,8 @@ const questions = [
       "D": "90 days of filing"
     },
     "correctAnswer": "A",
-    "explanation": "The trustee can avoid fraudulent transfers made within 2 years before filing if made with intent to defraud creditors or for less than reasonably equivalent value while debtor was insolvent. State law may extend this period.",
-    "tip": "Fraudulent transfers: 2 years under bankruptcy code. State law may allow longer lookback.",
+    "explanation": "Under 11 U.S.C. §548, the trustee can avoid FRAUDULENT TRANSFERS made within 2 YEARS before filing. Two types: (1) ACTUAL FRAUD (§548(a)(1)(A))—transfer made with intent to hinder, delay, or defraud creditors; (2) CONSTRUCTIVE FRAUD (§548(a)(1)(B))—transfer for less than 'reasonably equivalent value' while debtor was insolvent, undercapitalized, or unable to pay debts. Additionally, trustee may use state fraudulent transfer law (§544(b)), which often has 4-6 year lookback periods. Why other answers are wrong: (B) 10 years—too long; federal lookback is 2 years (state law may be 4-6 years); (C) 30 days—too short; 30 days would miss most fraudulent planning; (D) 90 days—that's the preference period; fraudulent transfer lookback is 2 years.",
+    "tip": "Fraudulent transfers (11 U.S.C. §548): 2 years lookback. Actual fraud (intent) OR constructive fraud (no fair value while insolvent). State law may extend.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12391,8 +12391,8 @@ const questions = [
       "D": "Must cease all operations"
     },
     "correctAnswer": "C",
-    "explanation": "In Chapter 11, the debtor typically remains in possession and operates the business as 'debtor in possession' (DIP). The DIP has the powers and duties of a trustee, including fiduciary duties to creditors. A trustee is appointed only for cause.",
-    "tip": "Ch. 11 DIP: Debtor stays in control, runs business. Has trustee powers and fiduciary duties.",
+    "explanation": "Under 11 U.S.C. §1107-1108, in Chapter 11 the DEBTOR IN POSSESSION (DIP) continues to manage the business with the POWERS AND DUTIES OF A TRUSTEE. This includes: operating the business (§1108), using/selling property, obtaining credit (DIP financing), assuming/rejecting executory contracts, and filing a plan of reorganization. The DIP owes FIDUCIARY DUTIES to creditors and the estate. A trustee is appointed only for CAUSE (fraud, mismanagement, incompetence) under §1104. This distinguishes Ch. 11 from Ch. 7 where a trustee always takes over. Why other answers are wrong: (A) No fiduciary duties—WRONG; DIP has fiduciary duties to creditors; (B) Replaced by trustee—not automatic; DIP status is the default in Ch. 11; (D) Must cease operations—WRONG; continuing operations is the PURPOSE of Ch. 11.",
+    "tip": "Debtor in possession (11 U.S.C. §1107-1108): Debtor stays in control with trustee powers + fiduciary duties. Trustee appointed only for cause (§1104).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12412,8 +12412,8 @@ const questions = [
       "D": "Relieves the debtor from personal liability for discharged debts"
     },
     "correctAnswer": "D",
-    "explanation": "Discharge relieves the debtor from personal liability for dischargeable debts. Creditors cannot collect from the debtor. However, liens on secured property may survive, and co-debtors/guarantors remain liable for their obligations.",
-    "tip": "Discharge: Debtor freed from personal liability. Liens may survive. Co-signers still liable.",
+    "explanation": "Under 11 U.S.C. §524, a bankruptcy DISCHARGE releases the debtor from PERSONAL LIABILITY for dischargeable debts. Key effects: (1) Creditors are permanently enjoined from collecting the debt from the debtor, (2) The debt still technically exists—it's just unenforceable against the debtor, (3) LIENS ON COLLATERAL may SURVIVE discharge (§506)—secured creditor can still foreclose, (4) CO-DEBTORS and GUARANTORS remain liable on their obligations—discharge only benefits the debtor. Why other answers are wrong: (A) Terminates liens on secured property—WRONG; liens often survive discharge; (B) Eliminates third-party guarantees—WRONG; guarantors remain liable for their own promise; (C) Eliminates all debts—WRONG; nondischargeable debts survive (§523).",
+    "tip": "Discharge (11 U.S.C. §524): Debtor freed from PERSONAL liability. BUT: Liens may survive. Co-signers still liable. Nondischargeable debts survive.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12433,8 +12433,8 @@ const questions = [
       "D": "Federal law or state law, depending on state rules"
     },
     "correctAnswer": "D",
-    "explanation": "Some states allow debtors to choose between federal bankruptcy exemptions or state exemptions. Other states have 'opted out' and require use of state exemptions only. The debtor cannot mix and match between systems.",
-    "tip": "Exemptions: Some states let debtor choose federal or state. Others require state only. Can't mix.",
+    "explanation": "Under 11 U.S.C. §522(b), bankruptcy exemptions (property debtor can keep) depend on STATE law: (1) Some states allow debtors to CHOOSE between federal bankruptcy exemptions (§522(d)) or state exemptions; (2) Other states have 'OPTED OUT'—debtors MUST use state exemptions only (cannot use federal). About 2/3 of states have opted out. Important rule: Debtor CANNOT mix and match—must use all federal OR all state exemptions, not both. Exemptions vary dramatically—Texas/Florida have unlimited homestead; other states have modest limits. Why other answers are wrong: (A) Whatever they choose—limited to federal OR state, not anything; (B) Only federal—only if state allows federal option; (C) Only state—some states allow federal option.",
+    "tip": "Exemptions (11 U.S.C. §522(b)): Federal OR state depending on state rules. ~2/3 states opted out = state only. Can't mix federal and state.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12454,8 +12454,8 @@ const questions = [
       "D": "After secured claims but before most other priority claims"
     },
     "correctAnswer": "A",
-    "explanation": "Administrative expenses (costs of bankruptcy, professional fees) are high priority claims. They are paid after domestic support obligations but before most other priority claims like wages, benefits, and taxes.",
-    "tip": "Priority order: Domestic support → admin expenses → wages → taxes → general unsecured.",
+    "explanation": "Under 11 U.S.C. §507(a), priority claims are paid in order before general unsecured creditors. Administrative expenses (§507(a)(2)) include: costs of preserving the estate, trustee fees, attorney fees, and post-petition business expenses. Priority order: (1) Domestic support obligations (§507(a)(1))—first priority; (2) ADMINISTRATIVE EXPENSES (§507(a)(2))—second priority; (3) Gap claims in involuntary cases (§507(a)(3)); (4) Employee wages (up to ~$15,150, earned within 180 days) (§507(a)(4)); (5) Employee benefits (§507(a)(5)); (6) Grain farmers/fishermen (§507(a)(6)); (7) Consumer deposits (§507(a)(7)); (8) Taxes (§507(a)(8)); then general unsecured. Why other answers are wrong: (B) Only if funds remain—admin expenses have high priority; not residual; (C) Last—general unsecured is last; (D) After secured—secured creditors look to collateral; priorities are among unsecured.",
+    "tip": "Priority (11 U.S.C. §507): DSOs first → ADMIN EXPENSES second → wages → taxes → general unsecured last.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12475,8 +12475,8 @@ const questions = [
       "D": "Avoid all secured debts"
     },
     "correctAnswer": "B",
-    "explanation": "Reaffirmation is a voluntary agreement where the debtor agrees to remain liable for a debt (usually secured) despite the discharge. Often used to keep a car or home. Requires court approval if debtor is unrepresented and creates undue hardship.",
-    "tip": "Reaffirmation: Keep debt alive to keep collateral (car, home). Voluntary. Court may review.",
+    "explanation": "Under 11 U.S.C. §524(c), a REAFFIRMATION AGREEMENT allows the debtor to voluntarily REMAIN LIABLE for a debt that would otherwise be discharged, typically to KEEP COLLATERAL (car, home). Requirements: (1) Made before discharge, (2) Contains required disclosures, (3) Debtor may rescind within 60 days, (4) If debtor is unrepresented by attorney, court must approve and find no undue hardship. Common use: debtor reaffirms car loan to keep the car. Risk: If debtor defaults post-bankruptcy, creditor can repossess AND sue for deficiency. Why other answers are wrong: (A) Discharge nondischargeable debt—reaffirmation doesn't change nondischargeability; (C) Cancel bankruptcy—reaffirmation doesn't cancel the case; (D) Avoid secured debts—reaffirmation KEEPS liability; doesn't avoid it.",
+    "tip": "Reaffirmation (11 U.S.C. §524(c)): Voluntary agreement to remain liable to keep collateral. Risk: Deficiency if default. Court reviews if unrepresented.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12496,8 +12496,8 @@ const questions = [
       "D": "The debtor alone"
     },
     "correctAnswer": "A",
-    "explanation": "Chapter 11 plan confirmation requires court approval after creditor voting. At least one impaired class must accept. The plan must be feasible, in good faith, and meet other requirements. Cramdown provisions allow confirmation over objecting classes.",
-    "tip": "Ch. 11 plan: Creditor voting + court approval. One impaired class must accept. Cramdown possible.",
+    "explanation": "Under 11 U.S.C. §1129, a Chapter 11 plan must be CONFIRMED by the BANKRUPTCY COURT. Confirmation requirements include: (1) Plan complies with applicable law, (2) Proposed in good faith, (3) Plan is FEASIBLE (debtor can make payments), (4) Each impaired class has accepted OR cramdown requirements met, (5) At least ONE impaired class accepts (not counting insiders). Creditors vote in classes based on similarity of claims. Court reviews plan and creditor objections before confirmation. Why other answers are wrong: (B) Unanimous creditor approval—not required; cramdown can override dissenting classes; (C) Trustee confirms—court confirms, not trustee; (D) Debtor alone—creditor voting and court approval required.",
+    "tip": "Ch. 11 confirmation (11 U.S.C. §1129): Creditor voting + court approval. Good faith, feasible, one impaired class accepts. Cramdown if needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12517,8 +12517,8 @@ const questions = [
       "D": "Only real property"
     },
     "correctAnswer": "C",
-    "explanation": "The bankruptcy estate includes all legal and equitable interests in property at the time of filing, wherever located. This includes causes of action, accounts receivable, and inheritances received within 180 days after filing.",
-    "tip": "Estate: All debtor's property interests at filing + inheritances within 180 days.",
+    "explanation": "Under 11 U.S.C. §541, the BANKRUPTCY ESTATE includes all LEGAL AND EQUITABLE INTERESTS of the debtor in property AS OF THE FILING DATE, wherever located and by whomever held. This includes: (1) Real and personal property, (2) Causes of action, (3) Accounts receivable, (4) Inheritances, bequests, or life insurance proceeds received within 180 DAYS after filing, (5) Property recovered by trustee, (6) Community property. Exceptions: Spendthrift trust interests (limited), ERISA-qualified retirement accounts. Why other answers are wrong: (A) After filing only—estate is primarily property AT filing (with 180-day inheritance exception); (B) Only free and clear—encumbered property is estate property; liens just have priority; (D) Only real property—ALL types of property interests are included.",
+    "tip": "Bankruptcy estate (11 U.S.C. §541): ALL debtor's property interests at filing + inheritances within 180 days. Wherever located, by whomever held.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12538,8 +12538,8 @@ const questions = [
       "D": "Individuals"
     },
     "correctAnswer": "C",
-    "explanation": "Insurance companies, banks, and certain other financial institutions cannot file Chapter 7. They are liquidated under state or federal regulatory schemes. Railroads cannot file Chapter 7 but can file Chapter 11.",
-    "tip": "Can't file Ch. 7: Banks, insurance companies, railroads. Special regulatory liquidation instead.",
+    "explanation": "Under 11 U.S.C. §109(b), certain entities are INELIGIBLE for Chapter 7: (1) INSURANCE COMPANIES—liquidated under state insurance commissioner supervision, (2) BANKS and savings associations—liquidated by FDIC or OCC, (3) RAILROADS—can only file Chapter 11 (special railroad reorganization rules), (4) Credit unions—liquidated under NCUA supervision. These entities have specialized regulatory liquidation procedures that supersede bankruptcy. Stockbrokers and commodity brokers have special Chapter 7 provisions. Why other answers are wrong: (A) Corporations—corporations CAN file Chapter 7; (B) Partnerships—partnerships CAN file Chapter 7; (D) Individuals—individuals CAN file Chapter 7 (subject to means test).",
+    "tip": "Ineligible for Ch. 7 (11 U.S.C. §109(b)): Insurance companies, banks, railroads. Special regulatory schemes apply instead.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12559,8 +12559,8 @@ const questions = [
       "D": "Made in the ordinary course of business or a contemporaneous exchange for new value"
     },
     "correctAnswer": "D",
-    "explanation": "Defenses to preferences include: ordinary course of business, contemporaneous exchange for new value, subsequent new value given, purchase money security interest, and small transfers (under $7,575 to non-consumer creditors).",
-    "tip": "Preference defenses: Ordinary course, new value exchange, subsequent new value, PMSI.",
+    "explanation": "Under 11 U.S.C. §547(c), several defenses allow creditors to retain preference payments: (1) CONTEMPORANEOUS EXCHANGE—§547(c)(1) if the transfer was substantially contemporaneous exchange for new value given to debtor, (2) ORDINARY COURSE—§547(c)(2) if the debt was incurred in ordinary course and paid in ordinary course (most common defense), (3) PURCHASE MONEY—§547(c)(3) for PMSIs properly perfected within 30 days, (4) SUBSEQUENT NEW VALUE—§547(c)(4) if creditor gave new value after the transfer, (5) DE MINIMIS—§547(c)(9) for non-consumer debts under $7,575. Why other answers are wrong: (A) Luxury goods—this is a non-dischargeability ground under §523, not a preference defense; (B) To a family member—insiders have LONGER preference period (1 year), making preferences easier to avoid; (C) After preference period—payments outside the 90-day (or 1-year insider) window aren't preferences to begin with.",
+    "tip": "§547(c) preference defenses: Ordinary course (most common), contemporaneous exchange, subsequent new value, PMSI, de minimis (<$7,575).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12580,8 +12580,8 @@ const questions = [
       "D": "Failing to pay priority debts"
     },
     "correctAnswer": "C",
-    "explanation": "Entire discharge may be denied for: fraudulent transfer/concealment of property within a year, destroying/falsifying records, making false oaths, failing to explain loss of assets, or violating court orders. This differs from non-dischargeable specific debts.",
-    "tip": "No discharge at all: Fraud, false statements, destroy records, hide assets. Bad faith = no fresh start.",
+    "explanation": "Under 11 U.S.C. §727(a), the court will DENY the debtor's ENTIRE discharge (not just individual debts) for specific acts of bad faith: (1) §727(a)(2)—fraudulent transfer or concealment of property within 1 year before filing, (2) §727(a)(3)—destroying or failing to keep adequate books and records, (3) §727(a)(4)—making false oaths or claims in bankruptcy, (4) §727(a)(5)—failing to satisfactorily explain loss of assets, (5) §727(a)(6)—refusing to obey court orders. This is different from §523 (specific debts non-dischargeable)—§727 denies discharge entirely. Why other answers are wrong: (A) Discharge within 4 years—the Chapter 7 to Chapter 7 bar is 8 years under §727(a)(8); (B) Too many debts—debt amount doesn't disqualify from discharge; (D) Failing to pay priority—payment of priority debts is not a condition of discharge in Chapter 7.",
+    "tip": "§727(a) ENTIRE discharge denied: Fraudulent transfer, destroy records, false oath, hide assets, disobey court. Different from §523 (specific debts).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12601,8 +12601,8 @@ const questions = [
       "D": "All creditors unanimously approve"
     },
     "correctAnswer": "A",
-    "explanation": "Cramdown permits plan confirmation over objecting classes if at least one impaired class accepts, the plan doesn't unfairly discriminate, and is 'fair and equitable' to each dissenting class (secured creditors retain liens, unsecured get liquidation value).",
-    "tip": "Cramdown: One impaired class accepts + fair and equitable + no unfair discrimination. Force plan through.",
+    "explanation": "Under 11 U.S.C. §1129(b), CRAMDOWN allows plan confirmation over dissenting creditor classes if: (1) At least ONE impaired class of creditors accepts the plan—§1129(a)(10), (2) The plan does not UNFAIRLY DISCRIMINATE against dissenting classes, (3) The plan is FAIR AND EQUITABLE to each dissenting class. Fair and equitable means: for secured creditors—retain liens and receive value equal to allowed secured claim; for unsecured creditors—receive at least liquidation value, and no junior class receives anything unless senior paid in full (absolute priority rule). Why other answers are wrong: (B) Pay all debts in full—cramdown allows paying less than full if fair and equitable; (C) Only secured creditors agree—need at least one impaired accepting class, not necessarily secured; (D) Unanimous approval—cramdown exists precisely to overcome lack of unanimous consent.",
+    "tip": "§1129(b) cramdown: One impaired class accepts + fair and equitable + no unfair discrimination. Secured keep liens; unsecured get liquidation value minimum.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12622,8 +12622,8 @@ const questions = [
       "D": "3 years before bankruptcy"
     },
     "correctAnswer": "D",
-    "explanation": "Income taxes receive priority if: (1) due within 3 years before filing, (2) assessed within 240 days, or (3) still assessable. Older taxes may be dischargeable if returns were filed on time and no fraud occurred.",
-    "tip": "Tax priority: 3-year lookback for returns due. Older taxes may be dischargeable.",
+    "explanation": "Under 11 U.S.C. §507(a)(8), income taxes are 8th priority claims if they meet ANY of these criteria: (1) §507(a)(8)(A)(i)—tax for a year ending on or before filing for which return was due within 3 YEARS before bankruptcy, (2) §507(a)(8)(A)(ii)—assessed within 240 DAYS before filing (or assessable but not assessed due to offer in compromise), (3) §507(a)(8)(A)(iii)—not yet assessed but still assessable. Taxes meeting these tests must be paid in full in Chapter 13 and are non-dischargeable. Older taxes may be dischargeable if: returns were timely filed, no fraud, and not assessed within 240 days. Why other answers are wrong: (A) 10 years—no 10-year rule for priority status; (B) 1 year—too short, the lookback is 3 years; (C) 2 years—close but incorrect; the actual period is 3 years from due date.",
+    "tip": "§507(a)(8) tax priority: 3-year lookback (return due date) OR 240-day assessment rule. Priority taxes non-dischargeable, must pay in full.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12643,8 +12643,8 @@ const questions = [
       "D": "The debtor has other creditors"
     },
     "correctAnswer": "B",
-    "explanation": "Relief from stay is granted for: (1) cause, including lack of adequate protection of secured creditor's interest, or (2) debtor has no equity in property AND property isn't necessary for effective reorganization (in Ch. 11).",
-    "tip": "Relief from stay: Cause/no adequate protection OR no equity + not needed for reorg.",
+    "explanation": "Under 11 U.S.C. §362(d), a creditor may obtain RELIEF FROM AUTOMATIC STAY by filing a motion demonstrating: (1) §362(d)(1)—FOR CAUSE, including lack of adequate protection of the creditor's interest in property (e.g., collateral depreciating without insurance or payments), OR (2) §362(d)(2)—TWO-PRONG TEST: debtor has no equity in the property AND the property is not necessary for an effective reorganization. In Chapter 7 liquidations, the second prong (no reorganization) is usually met. Adequate protection may include periodic payments, additional liens, or other relief. Why other answers are wrong: (A) Any inconvenience—inconvenience alone is insufficient; must show cause or meet §362(d)(2) test; (C) Debt is very large—size of debt is irrelevant to relief from stay; (D) Other creditors exist—existence of other creditors doesn't grant relief.",
+    "tip": "§362(d) relief from stay: (1) Cause including no adequate protection, OR (2) No equity + not needed for reorganization. Motion required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12664,8 +12664,8 @@ const questions = [
       "D": "The contract is automatically assigned"
     },
     "correctAnswer": "B",
-    "explanation": "Rejection treats the contract as breached immediately before filing, giving the non-debtor party a pre-petition unsecured claim for damages. Assumption requires curing defaults and providing adequate assurance of future performance.",
-    "tip": "Reject contract = pre-petition breach claim (unsecured). Assume = cure defaults + assure performance.",
+    "explanation": "Under 11 U.S.C. §365, the trustee or DIP (debtor-in-possession) may ASSUME or REJECT executory contracts and unexpired leases. If REJECTED under §365(g), the rejection constitutes a breach occurring immediately BEFORE the petition date, giving the non-debtor party a PRE-PETITION GENERAL UNSECURED CLAIM for damages. To ASSUME a contract under §365(b), the trustee must: (1) CURE all defaults (or provide adequate assurance of cure), (2) COMPENSATE the other party for actual pecuniary loss from default, (3) Provide ADEQUATE ASSURANCE of future performance. Contracts may also be assigned under §365(f) if assumable. Why other answers are wrong: (A) Fully enforceable—rejection terminates the contract; (C) Trustee must fully perform—rejection excuses future performance; (D) Automatically assigned—assignment requires assumption first and court approval.",
+    "tip": "§365 executory contracts: Reject = pre-petition unsecured claim. Assume = cure defaults + adequate assurance. Can then assign if assumable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12685,8 +12685,8 @@ const questions = [
       "D": "3 years"
     },
     "correctAnswer": "A",
-    "explanation": "Above-median income debtors in Chapter 13 must commit all projected disposable income to their repayment plan for 5 years (60 months). Below-median debtors may have 3-year plans. Plans must pay priority claims in full.",
-    "tip": "Ch. 13: Above median = 5 years. Below median = 3 years minimum. Disposable income to plan.",
+    "explanation": "Under 11 U.S.C. §1325(b)(4), Chapter 13 plan commitment periods are based on the debtor's income relative to state median: (1) ABOVE-MEDIAN income debtors must commit all projected disposable income to the plan for 5 YEARS (60 months)—this is the 'applicable commitment period,' (2) BELOW-MEDIAN income debtors may propose 3-year plans (36 months). Disposable income under §1325(b)(2) is calculated using the 'means test' formula from §707(b)(2). Priority claims (taxes, support) must be paid in full under §1322(a)(2). Why other answers are wrong: (B) 10 years—no 10-year requirement in Chapter 13; (C) 1 year—far too short for above-median debtors; (D) 3 years—this is the period for below-median debtors, not above-median.",
+    "tip": "§1325(b)(4) Chapter 13: Above median = 5 years. Below median = 3 years. Disposable income (means test) committed to plan.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12706,8 +12706,8 @@ const questions = [
       "D": "A secured claim equal to collateral value and unsecured claim for the deficiency"
     },
     "correctAnswer": "D",
-    "explanation": "An undersecured claim is bifurcated: the secured claim equals collateral value; the deficiency becomes a general unsecured claim. Exception: In Chapter 13, purchase money loans on principal residence cannot be bifurcated.",
-    "tip": "Undersecured: Split into secured (collateral value) + unsecured (deficiency). Home mortgage exception in Ch. 13.",
+    "explanation": "Under 11 U.S.C. §506(a), when a secured claim EXCEEDS collateral value (undersecured), the claim is BIFURCATED into two parts: (1) SECURED CLAIM—equal to the value of the collateral, and (2) UNSECURED CLAIM—for the deficiency (amount exceeding collateral value). This applies in Chapters 7, 11, 12, and 13. IMPORTANT EXCEPTION: Under §1322(b)(2), Chapter 13 debtors CANNOT bifurcate (strip down) a purchase money mortgage on the debtor's PRINCIPAL RESIDENCE—the entire claim remains secured. This protects home mortgage lenders from cramdown. Why other answers are wrong: (A) One priority claim—bifurcation creates secured and unsecured claims, not priority; (B) Administrative + priority—these are different claim categories entirely; (C) Two secured claims—only one secured claim (for collateral value); deficiency is unsecured.",
+    "tip": "§506(a) bifurcation: Undersecured = secured claim (collateral value) + unsecured (deficiency). EXCEPTION: No strip-down on primary residence mortgage in Ch. 13.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12727,8 +12727,8 @@ const questions = [
       "D": "8 years"
     },
     "correctAnswer": "D",
-    "explanation": "A debtor who receives a Chapter 7 discharge cannot receive another Chapter 7 discharge in a case filed within 8 years. For Chapter 7 to Chapter 13, it's 4 years. Chapter 13 to Chapter 13 is 2 years.",
-    "tip": "Discharge intervals: Ch. 7 to Ch. 7 = 8 years. Ch. 7 to Ch. 13 = 4 years. Ch. 13 to Ch. 13 = 2 years.",
+    "explanation": "Under 11 U.S.C. §727(a)(8) and §1328(f), debtors face waiting periods between discharge grants: (1) §727(a)(8)—Chapter 7 to Chapter 7: 8 YEARS from prior filing date, (2) §727(a)(9)—Chapter 13 to Chapter 7: 6 YEARS (unless prior plan paid 70%+ of unsecured and was best effort), (3) §1328(f)(1)—Chapter 7 to Chapter 13: 4 YEARS from prior filing, (4) §1328(f)(2)—Chapter 13 to Chapter 13: 2 YEARS from prior filing. These periods run from FILING DATE to FILING DATE (not discharge to filing). Why other answers are wrong: (A) 2 years—this is Ch. 13 to Ch. 13, not Ch. 7 to Ch. 7; (B) 4 years—this is Ch. 7 to Ch. 13, not Ch. 7 to Ch. 7; (C) 6 years—this is Ch. 13 to Ch. 7, not Ch. 7 to Ch. 7.",
+    "tip": "§727(a)(8) repeat filing: Ch. 7→Ch. 7 = 8 years. Ch. 7→Ch. 13 = 4 years. Ch. 13→Ch. 13 = 2 years. Runs filing to filing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12748,8 +12748,8 @@ const questions = [
       "D": "Deny all claims"
     },
     "correctAnswer": "B",
-    "explanation": "The trustee has 'strong-arm' powers to avoid: (1) unperfected security interests (as if a hypothetical lien creditor), (2) unrecorded real property interests, and (3) certain statutory liens. This brings assets into the estate.",
-    "tip": "Strong-arm: Trustee beats unperfected security interests. Perfect your liens before bankruptcy!",
+    "explanation": "Under 11 U.S.C. §544 (the 'STRONG-ARM' clause), the bankruptcy trustee has extraordinary avoiding powers: (1) §544(a)(1)—status of HYPOTHETICAL LIEN CREDITOR: trustee can avoid any transfer voidable by a judicial lien creditor, beating unperfected security interests, (2) §544(a)(3)—status of BONA FIDE PURCHASER of real property: trustee can avoid unrecorded interests in real estate, (3) §544(b)—ACTUAL UNSECURED CREDITOR: trustee can avoid any transfer voidable by an actual creditor under state law. These powers 'bring assets back' into the estate for distribution. Why other answers are wrong: (A) Physical force—'strong-arm' is metaphorical, referring to legal avoiding powers; (C) Increase debtor's debts—powers bring assets IN, don't create new debts; (D) Deny all claims—trustee avoids transfers, doesn't wholesale deny claims.",
+    "tip": "§544 strong-arm: Trustee = hypothetical lien creditor + BFP of real property. Beats unperfected security interests and unrecorded deeds. Perfect your liens!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12769,8 +12769,8 @@ const questions = [
       "D": "The debt exceeds $10,000"
     },
     "correctAnswer": "C",
-    "explanation": "Debts from fraud or false written statements about financial condition are non-dischargeable if: (1) the statement was materially false, (2) in writing regarding debtor's financial condition, (3) creditor reasonably relied, and (4) debtor intended to deceive.",
-    "tip": "Fraud exception: Material + written + reasonable reliance + intent to deceive = non-dischargeable.",
+    "explanation": "Under 11 U.S.C. §523(a)(2), debts for money, property, or services obtained through FALSE PRETENSES or FRAUD are non-dischargeable. For false FINANCIAL STATEMENTS specifically under §523(a)(2)(B), all four elements must be proven: (1) MATERIALLY FALSE—the statement misrepresented financial condition significantly, (2) IN WRITING—oral false statements are covered under §523(a)(2)(A) with different standards, (3) REASONABLE RELIANCE—the creditor actually and reasonably relied on the statement, (4) INTENT TO DECEIVE—debtor made statement with intent to defraud. Common example: Falsely listing assets on a credit application. Why other answers are wrong: (A) Filed bankruptcy before—prior filing affects discharge eligibility, not non-dischargeability of specific debts; (B) Simply failed to pay—non-payment alone isn't fraud; (D) Debt exceeds $10,000—no dollar threshold for fraud exception.",
+    "tip": "§523(a)(2)(B) fraud exception: (1) Materially false, (2) IN WRITING, (3) reasonable reliance, (4) intent to deceive. All four required for non-discharge.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12790,8 +12790,8 @@ const questions = [
       "D": "Liquidation for small businesses"
     },
     "correctAnswer": "A",
-    "explanation": "Subchapter V provides a streamlined Chapter 11 process for small business debtors (debt below ~$7.5 million). Benefits include: no creditors' committee, no U.S. Trustee fees, faster confirmation timeline, and the debtor can retain equity without paying unsecured creditors in full.",
-    "tip": "Subchapter V: Faster, cheaper Ch. 11 for small business. Debtor keeps equity if plan approved.",
+    "explanation": "Under 11 U.S.C. §§1181-1195 (Subchapter V), the Small Business Reorganization Act (SBRA) of 2019 created a streamlined Chapter 11 process for SMALL BUSINESS DEBTORS with aggregate debts not exceeding approximately $7.5 million. Key advantages: (1) NO CREDITORS' COMMITTEE—reduces costs, (2) NO U.S. TRUSTEE QUARTERLY FEES, (3) FASTER TIMELINE—plan filed within 90 days, confirmation hearing faster, (4) DEBTOR RETAINS EQUITY—no absolute priority rule if plan commits projected disposable income for 3-5 years (similar to Chapter 13), (5) Only the DEBTOR can propose a plan. Why other answers are wrong: (B) Elimination of all debt—debts are restructured, not eliminated; (C) Conversion to Chapter 7 only—Subchapter V is a reorganization, not liquidation; (D) Liquidation—Subchapter V preserves the business as a going concern.",
+    "tip": "§§1181-1195 Subchapter V (SBRA 2019): Small business Ch. 11 (<$7.5M debt). No committee, no U.S. Trustee fees, debtor keeps equity. Plan in 90 days.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12811,8 +12811,8 @@ const questions = [
       "D": "Is only required for secured claims"
     },
     "correctAnswer": "B",
-    "explanation": "A properly filed proof of claim is prima facie evidence of validity and amount. The trustee or parties in interest may object. If objected to, the creditor must prove their claim. Deadlines for filing vary by chapter.",
-    "tip": "Proof of claim: Prima facie valid. Can be objected to. Creditor then proves validity.",
+    "explanation": "Under 11 U.S.C. §502 and Bankruptcy Rule 3001, a properly filed PROOF OF CLAIM is PRIMA FACIE EVIDENCE of the validity and amount of the claim. This means: (1) The claim is presumed valid unless OBJECTED TO by the trustee, debtor, or other parties in interest under §502(a), (2) If an objection is filed, the BURDEN SHIFTS to the creditor to prove the claim's validity and amount, (3) After a hearing, the court determines the ALLOWED claim amount under §502(b). Filing deadlines: Chapter 7/11 typically 90 days after first 341 meeting; Chapter 13 typically 70 days. Government claims get 180 days. Why other answers are wrong: (A) Automatically accepted without review—can be objected to; (C) Filed before petition—proof of claim is filed AFTER petition, not before; (D) Only secured claims—all creditors (secured and unsecured) must file proofs of claim.",
+    "tip": "§502 proof of claim: Prima facie valid + can be objected to + burden shifts to creditor. File within deadline (90 days Ch. 7/11, 70 days Ch. 13).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -12832,8 +12832,8 @@ const questions = [
       "D": "Trading of securities on stock exchanges"
     },
     "correctAnswer": "A",
-    "explanation": "The Securities Act of 1933 governs the initial issuance of securities (the primary market). It requires registration of securities offerings and disclosure of material information to investors. The 1934 Act covers secondary trading.",
-    "tip": "1933 Act = new issues/registration. 1934 Act = trading/ongoing disclosure.",
+    "explanation": "Under the SECURITIES ACT OF 1933 (15 U.S.C. §77a et seq.), Congress established federal regulation of the PRIMARY MARKET—the initial issuance and sale of securities to the public. Key provisions: (1) §5 requires REGISTRATION of securities offerings with the SEC, (2) §7 specifies registration statement contents, (3) §10 requires delivery of a PROSPECTUS with specified disclosures. The 1933 Act philosophy is 'sunlight as disinfectant'—forcing disclosure of material information so investors can make informed decisions. The SEC reviews but does NOT approve offerings. Why other answers are wrong: (B) Broker-dealer conduct—regulated by the 1934 Act and FINRA; (C) Corporate governance—primarily state law (Delaware, etc.); (D) Trading on exchanges—the Securities Exchange Act of 1934 covers the secondary market.",
+    "tip": "1933 Act = PRIMARY market (new issues, registration, prospectus). 1934 Act = SECONDARY market (trading, reporting). '33 = new, '34 = more.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12853,8 +12853,8 @@ const questions = [
       "D": "Bank savings account"
     },
     "correctAnswer": "A",
-    "explanation": "Securities include stocks, bonds, notes, investment contracts, and other instruments. Bank deposits and insurance policies are generally excluded. Real estate is not a security unless packaged as an investment scheme.",
-    "tip": "Securities: Stocks, bonds, notes, investment contracts. Bank CDs and insurance excluded.",
+    "explanation": "Under §2(a)(1) of the 1933 Act, a 'SECURITY' includes: stocks, bonds, debentures, notes, investment contracts, and numerous other instruments. The HOWEY TEST (SEC v. W.J. Howey Co., 1946) defines an investment contract as: (1) investment of money, (2) in a common enterprise, (3) with expectation of profits, (4) solely from efforts of others. Items specifically EXCLUDED: bank deposits (FDIC regulated), insurance policies (state insurance law), and commodity futures (CFTC regulated). Real estate itself is not a security, but fractional interests marketed as investments may qualify under Howey. Why other answers are wrong: (B) Real estate—only a security if packaged as investment scheme (Howey); (C) Commodity futures—regulated by CFTC, not SEC; (D) Bank savings—excluded, regulated by bank regulators.",
+    "tip": "§2(a)(1) security: Howey test—investment + common enterprise + expectation of profit from others' efforts. Bank CDs, insurance, commodities EXCLUDED.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12874,8 +12874,8 @@ const questions = [
       "D": "Only information about management"
     },
     "correctAnswer": "B",
-    "explanation": "The registration statement includes a prospectus with financial statements (audited), description of business, risk factors, management information, use of proceeds, and other material information enabling informed investment decisions.",
-    "tip": "Registration: Full disclosure—audited financials, business info, risks, management.",
+    "explanation": "Under 1933 Act §7 and Schedule A, the REGISTRATION STATEMENT must contain comprehensive disclosures enabling investors to make informed decisions: (1) AUDITED FINANCIAL STATEMENTS (balance sheet, income statement, cash flows), (2) Description of BUSINESS and properties, (3) RISK FACTORS specific to the offering and company, (4) MANAGEMENT discussion and compensation, (5) USE OF PROCEEDS—how the money will be spent, (6) Legal proceedings, material contracts. The registration statement has two parts: Part I is the PROSPECTUS (delivered to investors), Part II contains additional information filed with SEC. Why other answers are wrong: (A) Only company name—grossly inadequate; §7 requires extensive disclosure; (C) Guaranteed returns—illegal to promise; securities involve risk; (D) Only management—one of many required disclosures.",
+    "tip": "§7 registration: Audited financials + business description + risk factors + management + use of proceeds. Part I = prospectus to investors.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12895,8 +12895,8 @@ const questions = [
       "D": "Approves all investment decisions"
     },
     "correctAnswer": "B",
-    "explanation": "The SEC reviews registration statements for completeness and adequacy, enforces securities laws, and regulates securities markets. The SEC does NOT approve securities or guarantee they are good investments.",
-    "tip": "SEC: Reviews disclosure, enforces laws. Does NOT approve or guarantee investments.",
+    "explanation": "The SEC (Securities and Exchange Commission), created by the 1934 Act §4, has three primary functions: (1) REVIEW registration statements for completeness and adequacy of disclosure (NOT for investment merit), (2) ENFORCE federal securities laws through civil and administrative actions, (3) REGULATE securities markets, broker-dealers, investment advisers, and other market participants. CRITICAL: The SEC does NOT APPROVE securities or guarantee they are good investments—it only ensures adequate disclosure. Unregistered securities may be illegal, but SEC registration doesn't mean they're safe. Why other answers are wrong: (A) Guarantees good investments—SEC explicitly disclaims this; disclosure-based system; (C) Sets stock prices—market forces set prices; (D) Approves investment decisions—individual investor responsibility.",
+    "tip": "SEC role: Reviews disclosure (not merit), enforces laws, regulates markets. Does NOT approve or guarantee investments!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12916,8 +12916,8 @@ const questions = [
       "D": "Initial public offerings"
     },
     "correctAnswer": "A",
-    "explanation": "The 1934 Act covers secondary market trading (exchanges, broker-dealers), ongoing reporting (10-K, 10-Q, 8-K), proxy solicitation, tender offers, and insider trading. It governs already-issued securities.",
-    "tip": "1934 Act: Trading, periodic reports (10-K, 10-Q), proxies, insider trading.",
+    "explanation": "The SECURITIES EXCHANGE ACT OF 1934 (15 U.S.C. §78a et seq.) regulates the SECONDARY MARKET—trading of already-issued securities. Key provisions: (1) §12—registration of securities traded on exchanges, (2) §13—PERIODIC REPORTING (10-K annual, 10-Q quarterly, 8-K current), (3) §14—PROXY SOLICITATION rules, (4) §14(d)—tender offer regulation, (5) §16—insider reporting and short-swing profits, (6) §10(b)/Rule 10b-5—ANTI-FRAUD provisions. The 1934 Act also created the SEC and regulates broker-dealers, exchanges, and self-regulatory organizations (FINRA). Why other answers are wrong: (B) Private placements—exempt from registration under 1933 Act §4; (C) State registration—'blue sky' laws are state law; (D) IPOs—initial public offerings are 1933 Act territory.",
+    "tip": "1934 Act = SECONDARY market: Trading + periodic reports (10-K, 10-Q, 8-K) + proxies + insider trading + 10b-5. Created the SEC.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12937,8 +12937,8 @@ const questions = [
       "D": "Avoidance of all securities laws"
     },
     "correctAnswer": "C",
-    "explanation": "Private placement exemptions (like Regulation D) allow issuers to sell securities without full SEC registration to limited numbers of sophisticated or accredited investors. Anti-fraud provisions still apply.",
-    "tip": "Private placement: No registration, limited investors, anti-fraud rules still apply.",
+    "explanation": "Under 1933 Act §4(a)(2), transactions by an issuer NOT involving a public offering are EXEMPT from registration. REGULATION D (Rules 504, 506) provides safe harbors to meet this exemption: (1) Rule 504—offerings up to $10 million, (2) Rule 506(b)—unlimited amount to unlimited accredited + up to 35 sophisticated, no advertising, (3) Rule 506(c)—unlimited to verified accredited only, advertising permitted. CRITICAL: Exemption from REGISTRATION only—anti-fraud provisions (§17(a), Rule 10b-5) ALWAYS apply. Exempt offerings still require accurate disclosure; fraud is never exempt. Why other answers are wrong: (A) Guaranteed returns—never permitted; all investments have risk; (B) Unlimited public investors—that's what registration is for; private placement = limited; (D) Avoids all securities laws—anti-fraud rules always apply.",
+    "tip": "§4(a)(2) private placement: Exempt from REGISTRATION only. Anti-fraud (§17, 10b-5) ALWAYS applies. Reg D = safe harbors (504, 506).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -12958,8 +12958,8 @@ const questions = [
       "D": "Only institutional investors"
     },
     "correctAnswer": "C",
-    "explanation": "Accredited investors include: individuals with $1M+ net worth (excluding primary residence), individuals with $200K+ income ($300K with spouse), directors/officers of issuer, and certain institutions (banks, insurance companies).",
-    "tip": "Accredited: $1M net worth (no home) OR $200K income ($300K joint). Plus institutions, insiders.",
+    "explanation": "Under Rule 501(a) of Regulation D, ACCREDITED INVESTORS include: (1) Natural persons with NET WORTH over $1 million EXCLUDING primary residence (equity in home doesn't count), (2) Natural persons with INCOME over $200,000 individually or $300,000 with spouse in each of the last two years with expectation to continue, (3) DIRECTORS, executive officers, or general partners of the issuer, (4) INSTITUTIONS—banks, insurance companies, registered investment companies, employee benefit plans with $5M+ assets, (5) Trusts with $5M+ assets, (6) Entities with all equity owners who are accredited. The 2020 amendments added persons with certain professional certifications (Series 7, 65, 82) and knowledgeable employees of private funds. Why other answers are wrong: (A) Purchased securities before—experience alone doesn't qualify; (B) Requests designation—must meet objective criteria; (D) Only institutional—natural persons can qualify too.",
+    "tip": "Rule 501(a) accredited: $1M net worth (no home) OR $200K/$300K income. Plus institutions, directors/officers, professionals (Series 7, 65, 82).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -12979,8 +12979,8 @@ const questions = [
       "D": "The issuer, directors, signing officers, underwriters, and experts who consented"
     },
     "correctAnswer": "D",
-    "explanation": "Section 11 defendants include: the issuer (strict liability), directors, officers who signed, underwriters, and experts (like auditors) for portions they certified. All except the issuer have due diligence defenses.",
-    "tip": "Section 11 defendants: Issuer + directors + signing officers + underwriters + experts. Issuer = strict liability.",
+    "explanation": "Under 1933 Act §11, liability for material misstatements or omissions in the REGISTRATION STATEMENT extends to multiple parties: (1) ISSUER—strict liability, no defenses, (2) Every person who SIGNED the registration (CEO, CFO, CAO, majority of directors), (3) Every DIRECTOR (whether or not they signed), (4) UNDERWRITERS, (5) EXPERTS (accountants, engineers, appraisers) for portions they 'expertised.' All defendants except the issuer may assert the DUE DILIGENCE defense. Purchasers need NOT prove reliance for Section 11 claims (unlike 10b-5). Why other answers are wrong: (A) Only auditors—many parties are liable; (B) Only underwriters—directors and others also liable; (C) Only issuing company—Section 11 casts a wide net intentionally.",
+    "tip": "§11 defendants: Issuer (STRICT liability) + signers + ALL directors + underwriters + experts. DUE DILIGENCE defense for all except issuer.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13000,8 +13000,8 @@ const questions = [
       "D": "All defendants except the issuing company"
     },
     "correctAnswer": "D",
-    "explanation": "All Section 11 defendants except the issuer can assert due diligence—that they conducted reasonable investigation and reasonably believed statements were true. The issuer has strict liability with no due diligence defense.",
-    "tip": "Due diligence: Available to all except issuer. Reasonable investigation + reasonable belief in truth.",
+    "explanation": "Under 1933 Act §11(b), the DUE DILIGENCE defense allows defendants (except the issuer) to avoid liability by proving: (1) For NON-EXPERTISED portions—they conducted a REASONABLE INVESTIGATION and had reasonable grounds to believe statements were true (no material misstatements/omissions), (2) For EXPERTISED portions—no reasonable grounds to believe they were materially false, and they had no knowledge of falsity. The standard is what a 'PRUDENT MAN in the management of his own property' would do. Directors, underwriters, and officers must investigate; experts need only ensure their own portions are accurate. ISSUER has STRICT LIABILITY—no due diligence defense available. Why other answers are wrong: (A) Only underwriters—all defendants except issuer have it; (B) No defendants—most defendants have it; (C) Issuing company—issuer is the one party WITHOUT this defense.",
+    "tip": "§11(b) due diligence: Reasonable investigation + reasonable belief (prudent man standard). Issuer = STRICT LIABILITY, NO defense.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13021,8 +13021,8 @@ const questions = [
       "D": "Selling securities in violation of registration requirements"
     },
     "correctAnswer": "D",
-    "explanation": "Section 12(a)(1) creates liability for selling securities that should have been registered but weren't, or selling before the registration statement became effective. Buyers can rescind the purchase.",
-    "tip": "Section 12(a)(1): Selling unregistered securities. Buyer can rescind. Strict liability.",
+    "explanation": "Under 1933 Act §12(a)(1), sellers are liable for selling securities in violation of §5's REGISTRATION REQUIREMENTS—either: (1) Selling securities that should have been registered but WEREN'T, or (2) Selling securities BEFORE the registration statement became effective (gun-jumping). Remedies: The buyer may RESCIND the purchase (get money back) or, if securities were sold, recover damages. §12(a)(1) is STRICT LIABILITY—no intent, reliance, or causation need be proven. The seller who passed title (privity requirement) is liable. This is often easier to prove than fraud claims. Why other answers are wrong: (A) Insider trading—§10(b)/Rule 10b-5 and §16 handle that; (B) Proxy fraud—§14 of the 1934 Act; (C) Misstatements in registration—that's §11 or §12(a)(2).",
+    "tip": "§12(a)(1): STRICT LIABILITY for selling unregistered securities or selling before effective. Buyer can RESCIND. Privity required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13042,8 +13042,8 @@ const questions = [
       "D": "Only that the stock price decreased"
     },
     "correctAnswer": "C",
-    "explanation": "Rule 10b-5 elements: (1) material misrepresentation/omission, (2) scienter (intent to deceive), (3) connection with securities purchase/sale, (4) reliance, (5) causation, and (6) damages.",
-    "tip": "10b-5 elements: Material misstatement + scienter + reliance + causation + damages. Intent required!",
+    "explanation": "Under 1934 Act §10(b) and Rule 10b-5, the plaintiff in a PRIVATE action must prove SIX elements: (1) MATERIAL misrepresentation or omission—substantial likelihood reasonable investor would consider it important, (2) SCIENTER—intent to deceive, manipulate, or defraud (recklessness may suffice), (3) IN CONNECTION WITH purchase or sale of securities (standing requirement—plaintiff must be buyer or seller), (4) RELIANCE—plaintiff actually relied on the misstatement (fraud-on-the-market theory may establish presumption), (5) ECONOMIC LOSS CAUSATION—the misstatement caused the loss, (6) DAMAGES—actual monetary harm. Rule 10b-5 is the broadest anti-fraud provision. Why other answers are wrong: (A) SEC approved—SEC doesn't approve transactions; (B) Only false statement—must also prove scienter, reliance, causation, damages; (D) Stock price decreased—must show causation linking decrease to misstatement.",
+    "tip": "Rule 10b-5: Material misstatement + SCIENTER + in connection with purchase/sale + reliance + loss causation + damages. All SIX required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13063,8 +13063,8 @@ const questions = [
       "D": "Corporate officers, directors, large shareholders, and anyone with material nonpublic information"
     },
     "correctAnswer": "D",
-    "explanation": "Traditional insiders include officers, directors, and 10%+ shareholders. Temporary insiders include attorneys, accountants, and investment bankers with access to MNPI. Tippees who receive MNPI may also be liable.",
-    "tip": "Insiders: Officers, directors, 10%+ shareholders, plus those with MNPI. Tippees too!",
+    "explanation": "Under Rule 10b-5 and §16 of the 1934 Act, INSIDERS include: (1) TRADITIONAL INSIDERS—corporate officers, directors, and beneficial owners of MORE THAN 10% of a class of equity securities, (2) TEMPORARY/CONSTRUCTIVE INSIDERS—attorneys, accountants, investment bankers, and consultants who receive MNPI through a confidential relationship, (3) TIPPEES—persons who receive MNPI from insiders (liable under Dirks framework if tipper breached duty for personal benefit). The key is possession of MATERIAL NONPUBLIC INFORMATION (MNPI) plus a duty not to trade. Trading while possessing MNPI violates §10(b) anti-fraud provisions. Why other answers are wrong: (A) Only 50%+ shareholders—10%+ triggers §16 reporting; any MNPI holder can be liable under 10b-5; (B) All employees regardless of knowledge—must have MNPI; (C) Only the CEO—all officers, directors, and MNPI holders are covered.",
+    "tip": "Insiders: Officers + directors + 10%+ owners + temporary insiders (lawyers, accountants) + TIPPEES. Key = MNPI + duty. §16 reports required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13084,8 +13084,8 @@ const questions = [
       "D": "An annual report filed with the SEC containing audited financial statements"
     },
     "correctAnswer": "D",
-    "explanation": "Form 10-K is the annual report required by the 1934 Act, containing audited financial statements, MD&A, business description, and other disclosures. It must be filed within 60-90 days after fiscal year end (depending on company size).",
-    "tip": "10-K: Annual, audited financials. 10-Q: Quarterly, unaudited. 8-K: Current events.",
+    "explanation": "Under 1934 Act §13 and Regulation S-K, FORM 10-K is the ANNUAL REPORT containing: (1) AUDITED financial statements (balance sheet, income statement, cash flows, equity changes), (2) MD&A—Management's Discussion and Analysis of financial condition and results, (3) Description of BUSINESS and properties, (4) RISK FACTORS, (5) Executive compensation, (6) Legal proceedings. Filing deadlines: Large accelerated filers (≥$700M float)—60 days; Accelerated filers—75 days; Non-accelerated—90 days. Compare to: 10-Q (quarterly, UNAUDITED), 8-K (current events within 4 business days). Why other answers are wrong: (A) Registration statement—that's Form S-1 for IPOs; (B) Proxy statement—that's Schedule 14A; (C) Quarterly report—that's Form 10-Q.",
+    "tip": "10-K = ANNUAL + AUDITED. Filing: 60/75/90 days by size. 10-Q = quarterly/unaudited. 8-K = current events (4 days).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13105,8 +13105,8 @@ const questions = [
       "D": "The issuer, offerees, and purchasers are all within one state"
     },
     "correctAnswer": "D",
-    "explanation": "The intrastate exemption requires: issuer is incorporated/organized and doing business in the state, all offerees and purchasers are state residents. Resale restrictions apply for 6-9 months to prevent interstate distribution.",
-    "tip": "Intrastate: All parties in one state. Issuer organized there + does business there + buyers residents.",
+    "explanation": "Under 1933 Act §3(a)(11) and Rule 147/147A, the INTRASTATE OFFERING exemption allows unregistered offerings when securities are offered and sold ONLY to residents of a SINGLE STATE. Requirements: (1) ISSUER must be incorporated/organized in the state AND doing 80%+ of business there (offices, revenue, assets, employees), (2) All OFFEREES and PURCHASERS must be state residents at time of sale, (3) RESALE RESTRICTIONS—securities cannot be resold to out-of-state buyers for 6 months (Rule 147) or 6 months (Rule 147A). Rule 147A (2016) modernized the rule: issuer may be incorporated elsewhere if principal place of business is in the state. Why other answers are wrong: (A) Under $1 million—that's a dollar-based exemption concept, not intrastate; (B) All accredited—that's Regulation D; (C) Under 35 investors—that's Rule 506(b)'s non-accredited limit.",
+    "tip": "§3(a)(11)/Rule 147: INTRASTATE = all in ONE state. Issuer organized + does business there. Buyers = residents. 6-month resale restriction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13126,8 +13126,8 @@ const questions = [
       "D": "Only accredited investors"
     },
     "correctAnswer": "A",
-    "explanation": "Rule 506(b) allows sales to unlimited accredited investors plus up to 35 non-accredited investors (who must be sophisticated). No general solicitation or advertising is permitted. Disclosure requirements apply if non-accredited participate.",
-    "tip": "506(b): Unlimited accredited + up to 35 sophisticated. No general solicitation.",
+    "explanation": "Under Regulation D Rule 506(b), issuers may raise UNLIMITED amounts without SEC registration if: (1) Sales to UNLIMITED number of ACCREDITED investors, (2) Sales to up to 35 NON-ACCREDITED investors who are 'SOPHISTICATED' (alone or with a purchaser representative, have sufficient knowledge/experience to evaluate risks), (3) NO GENERAL SOLICITATION or advertising permitted—issuer must have pre-existing relationship with offerees, (4) If ANY non-accredited investors participate, specified DISCLOSURE documents must be provided. Securities are 'RESTRICTED' and cannot be freely resold. Rule 506 preempts state registration (NSMIA). Why other answers are wrong: (B) Only 35 total—only non-accredited are limited to 35; accredited are unlimited; (C) General public with advertising—that's Rule 506(c), not 506(b); (D) Only accredited—up to 35 sophisticated non-accredited also permitted.",
+    "tip": "Rule 506(b): UNLIMITED accredited + up to 35 sophisticated non-accredited. NO advertising. If non-accredited, disclosure required. Preempts state registration.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13147,8 +13147,8 @@ const questions = [
       "D": "Trades by any shareholder"
     },
     "correctAnswer": "B",
-    "explanation": "Section 16(b) requires officers, directors, and 10%+ shareholders to disgorge profits from any purchase and sale (or sale and purchase) of company stock within 6 months. Intent is irrelevant—it's strict liability.",
-    "tip": "Short-swing profits: Officers/directors/10%+ must give back profits from buy-sell within 6 months.",
+    "explanation": "Under 1934 Act §16(b), SHORT-SWING PROFIT recovery applies to statutory insiders (officers, directors, 10%+ beneficial owners). Any PROFITS from a PURCHASE AND SALE (or sale and purchase) of the company's equity securities within a SIX-MONTH PERIOD must be DISGORGED to the company. Key features: (1) STRICT LIABILITY—no proof of intent, reliance, or misuse of inside information required, (2) AUTOMATIC matching—courts pair the lowest purchase with the highest sale to maximize profit recovery, (3) Corporation can sue, or any shareholder derivatively, (4) Two-year statute of limitations. This deters insider trading by removing the profit incentive. Why other answers are wrong: (A) Any profitable trade—only within 6 months; (C) Sales at a loss—no disgorgement if no profit; (D) Any shareholder—only officers, directors, 10%+ owners.",
+    "tip": "§16(b) short-swing: Officers/directors/10%+ owners must disgorge profits from buy-sell (or sell-buy) within 6 MONTHS. STRICT LIABILITY—no intent required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13168,8 +13168,8 @@ const questions = [
       "D": "Within one year after purchase"
     },
     "correctAnswer": "C",
-    "explanation": "The final prospectus must be delivered to investors before or with the confirmation of sale. During the waiting period, a preliminary prospectus ('red herring') may be used but no sales can be made until registration is effective.",
-    "tip": "Prospectus: Delivered at or before sale confirmation. Red herring during waiting period.",
+    "explanation": "Under 1933 Act §5(b)(2), a FINAL PROSPECTUS meeting §10(a) requirements must be delivered to the purchaser AT OR BEFORE the confirmation of sale (trade settlement). The prospectus is Part I of the registration statement and contains all material information for investors. The registration process has three periods: (1) PRE-FILING—no offers, no sales, (2) WAITING PERIOD—oral offers permitted, preliminary prospectus ('RED HERRING') may be distributed, but NO SALES, (3) POST-EFFECTIVE—offers and sales permitted with final prospectus delivery. The red herring lacks final price and effective date. Why other answers are wrong: (A) Only purchases over $100,000—all purchasers must receive prospectus; (B) Only if requested—mandatory delivery, not upon request; (D) Within one year—must be at or before confirmation, not one year later.",
+    "tip": "§5(b)(2): Final prospectus BEFORE or WITH confirmation of sale. Pre-filing=nothing. Waiting=red herring/offers only. Post-effective=sales OK.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13189,8 +13189,8 @@ const questions = [
       "D": "It affects stock price by at least 5%"
     },
     "correctAnswer": "B",
-    "explanation": "Information is material if there is a substantial likelihood that a reasonable investor would consider it important in deciding whether to buy or sell. The TSC Industries/Basic standard focuses on reasonable investors, not all investors.",
-    "tip": "Material: Would reasonable investor consider it important? Substantial likelihood test.",
+    "explanation": "Under the MATERIALITY standard established in TSC Industries v. Northway (1976) and Basic Inc. v. Levinson (1988), information is MATERIAL if there is a SUBSTANTIAL LIKELIHOOD that a REASONABLE INVESTOR would consider it IMPORTANT in making an investment decision. The test is OBJECTIVE—not whether any particular investor relied, but whether a reasonable person would. For contingent/speculative events (like merger negotiations), Basic established a 'probability/magnitude' test: balance probability that the event will occur against its anticipated magnitude. No bright-line threshold (e.g., 5% of assets) exists—context matters. Why other answers are wrong: (A) Any investor—standard is REASONABLE investor, not all; (C) Executive compensation—only one category of material information; (D) 5% price impact—no fixed percentage threshold.",
+    "tip": "Materiality (TSC/Basic): SUBSTANTIAL LIKELIHOOD + REASONABLE INVESTOR would consider IMPORTANT. No bright-line test—context matters.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13210,8 +13210,8 @@ const questions = [
       "D": "Telephone calls to each shareholder"
     },
     "correctAnswer": "B",
-    "explanation": "Companies must file proxy statements with the SEC and deliver them to shareholders before soliciting votes. The proxy statement must disclose matters to be voted on, director information, executive compensation, and other required items.",
-    "tip": "Proxy solicitation: Must file proxy statement with SEC, deliver to shareholders.",
+    "explanation": "Under 1934 Act §14(a) and Regulation 14A, companies soliciting PROXY VOTES from shareholders must: (1) FILE a PROXY STATEMENT (Schedule 14A) with the SEC, (2) DELIVER it to shareholders BEFORE soliciting their votes. Required disclosures include: matters to be voted on, director nominees and their qualifications, executive COMPENSATION (including pay-versus-performance tables), related party transactions, audit committee report, and shareholder proposals. Companies must also file a FORM DEF 14A (definitive proxy) and provide a PROXY CARD for voting. Annual meeting proxy statements must include SAY-ON-PAY votes (Dodd-Frank). Why other answers are wrong: (A) Nothing—extensive disclosure required; (C) Only meeting notice—proxy statement contains comprehensive disclosure; (D) Telephone calls—written proxy statement required.",
+    "tip": "§14(a)/Reg 14A: File proxy statement with SEC + deliver to shareholders. Includes exec compensation, director info, say-on-pay votes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13231,8 +13231,8 @@ const questions = [
       "D": "$5 million"
     },
     "correctAnswer": "A",
-    "explanation": "Regulation A+ has two tiers: Tier 1 allows up to $20 million in 12 months, Tier 2 allows up to $75 million. Tier 2 requires audited financials and ongoing reporting but preempts state registration requirements.",
-    "tip": "Reg A+: Tier 1 = $20M (state law applies). Tier 2 = $75M (preempts state, needs audited financials).",
+    "explanation": "Under Regulation A+ (2015 amendments to 1933 Act §3(b)), smaller companies have a streamlined path to public offerings in TWO TIERS: (1) TIER 1—up to $20 million in 12 months, state registration NOT preempted, unaudited financials OK, no ongoing reporting, (2) TIER 2—up to $75 million in 12 months, state registration PREEMPTED, requires AUDITED financials, ongoing reporting (annual, semiannual), investment limits for non-accredited (10% of greater of income or net worth). Both tiers require filing an OFFERING CIRCULAR with the SEC. Reg A+ is often called a 'mini-IPO'—more disclosure than Reg D but less than full S-1 registration. Why other answers are wrong: (B) Unlimited—caps at $20M (Tier 1) or $75M (Tier 2); (C) $1 million—too low; (D) $5 million—that's Regulation Crowdfunding.",
+    "tip": "Reg A+: TIER 1 = $20M (state law applies). TIER 2 = $75M (preempts state + audited + ongoing reporting). Both = offering circular + SEC review.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13252,8 +13252,8 @@ const questions = [
       "D": "Securities may be sold to anyone"
     },
     "correctAnswer": "A",
-    "explanation": "During the waiting period (after filing, before effectiveness), oral offers are permitted, preliminary prospectuses ('red herrings') may be distributed, but no sales or binding contracts. The SEC reviews the registration during this time.",
-    "tip": "Waiting period: Offers OK, preliminary prospectus OK, sales NOT OK.",
+    "explanation": "Under 1933 Act §5, the WAITING PERIOD (between registration filing and SEC effectiveness, typically 20 days minimum) has specific rules: (1) ORAL OFFERS are permitted—issuers and underwriters can discuss the offering, (2) WRITTEN OFFERS via PRELIMINARY PROSPECTUS ('red herring') are allowed—it contains most registration information but lacks final price and effective date, (3) NO SALES or binding contracts permitted—only indications of interest can be gathered, (4) 'FREE WRITING PROSPECTUSES' may be used if accompanied by or preceded by preliminary prospectus. The SEC reviews and may issue comment letters. Why other answers are wrong: (B) No communication—oral offers and red herrings are permitted; (C) SEC approves securities—SEC never 'approves' securities, only declares registration effective; (D) Securities may be sold—sales are prohibited until post-effective period.",
+    "tip": "§5 WAITING PERIOD: Oral offers OK + red herring OK + free writing (with prospectus) OK. NO SALES. SEC reviews, doesn't 'approve.'",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13273,8 +13273,8 @@ const questions = [
       "D": "They are related to an insider"
     },
     "correctAnswer": "C",
-    "explanation": "Tippee liability requires: (1) tipper breached fiduciary duty by disclosing MNPI, (2) tipper received personal benefit (direct or indirect), and (3) tippee knew or should have known of the tipper's breach and benefit.",
-    "tip": "Tippee liability: Tipper breach + tipper benefit + tippee knew. Dirks case framework.",
+    "explanation": "Under the DIRKS v. SEC (1983) framework, TIPPEE LIABILITY for insider trading requires THREE elements: (1) TIPPER BREACHED fiduciary duty by disclosing Material Nonpublic Information (MNPI), (2) Tipper received a PERSONAL BENEFIT (direct or indirect)—including pecuniary gain, reputational benefit, or gift to relative/friend, (3) TIPPEE KNEW or should have known of the tipper's breach and personal benefit. The tippee 'inherits' the tipper's duty. In Salman v. United States (2016), the Supreme Court clarified that gifts to trading relatives/friends satisfy the personal benefit test. Why other answers are wrong: (A) Same industry—industry relationship irrelevant; (B) Merely receive information—must also know of breach and benefit; (D) Related to insider—relationship alone doesn't create liability without knowledge of breach.",
+    "tip": "Dirks/Salman tippee test: (1) Tipper BREACHED duty, (2) Tipper got PERSONAL BENEFIT, (3) Tippee KNEW of breach/benefit. Gifts to friends count as benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13294,8 +13294,8 @@ const questions = [
       "D": "Sales to non-accredited investors"
     },
     "correctAnswer": "A",
-    "explanation": "Rule 506(c) permits general solicitation and advertising, unlike 506(b). However, ALL purchasers must be accredited investors, and the issuer must take reasonable steps to verify accredited status. No non-accredited investors are permitted.",
-    "tip": "506(c): Can advertise, but ALL buyers must be verified accredited. 506(b): No advertising, some non-accredited OK.",
+    "explanation": "Under Regulation D Rule 506(c) (added by JOBS Act 2012), issuers may use GENERAL SOLICITATION and ADVERTISING—a major departure from traditional private placement rules. Requirements: (1) ALL purchasers must be ACCREDITED INVESTORS—no non-accredited permitted (unlike 506(b)'s 35), (2) Issuer must take REASONABLE STEPS to VERIFY accredited status—cannot merely rely on self-certification. Acceptable verification methods: reviewing tax returns/W-2s for income, obtaining bank/brokerage statements for net worth, written confirmation from attorney/CPA/broker, or prior accredited investor status verification. Why other answers are wrong: (B) Lower disclosure—same securities law disclosure applies; (C) State registration—506(c) also preempts state registration (NSMIA); (D) Non-accredited—absolutely prohibited under 506(c); that's the tradeoff for allowing advertising.",
+    "tip": "Rule 506(c): CAN ADVERTISE but ALL buyers must be VERIFIED accredited (no self-certification). Tradeoff: Advertising allowed, but no non-accredited.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13315,8 +13315,8 @@ const questions = [
       "D": "That financial statements fairly present the company's condition and that internal controls are effective"
     },
     "correctAnswer": "D",
-    "explanation": "SOX Section 302 requires CEO/CFO certification that: reports are accurate, don't contain material misstatements, fairly present financial condition, they are responsible for internal controls, and they've disclosed any significant deficiencies or fraud.",
-    "tip": "SOX certification: CEO/CFO certify accuracy, fair presentation, internal controls, disclosed deficiencies.",
+    "explanation": "Under Sarbanes-Oxley Act §302 (15 U.S.C. §7241), CEO and CFO must personally CERTIFY in each periodic report (10-K, 10-Q): (1) They have REVIEWED the report, (2) Report contains no MATERIAL MISSTATEMENTS or omissions, (3) Financial statements FAIRLY PRESENT the company's financial condition and results (not just GAAP compliance), (4) They are RESPONSIBLE for establishing and maintaining INTERNAL CONTROLS, (5) They have DISCLOSED to auditors any significant deficiencies, material weaknesses, or fraud involving management. SOX §906 adds criminal certification with penalties up to $5M/20 years for knowing false certification. §404 requires management assessment of internal control effectiveness with auditor attestation for accelerated filers. Why other answers are wrong: (A) Stock prices will increase—never guaranteed; (B) Only quarterly—both 10-K and 10-Q require certification; (C) Only accurate—must also certify fair presentation and internal controls.",
+    "tip": "SOX §302: CEO/CFO certify (1) reviewed report, (2) no misstatements, (3) FAIRLY presents, (4) responsible for controls, (5) disclosed deficiencies/fraud.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13336,8 +13336,8 @@ const questions = [
       "D": "5 years from offering"
     },
     "correctAnswer": "B",
-    "explanation": "Section 11 claims must be brought within 1 year after discovery of the misstatement (or when it should have been discovered with reasonable diligence), but in no event more than 3 years after the securities were offered to the public.",
-    "tip": "Section 11 SOL: 1 year from discovery, max 3 years from offering.",
+    "explanation": "Under 1933 Act §13, the STATUTE OF LIMITATIONS for Section 11 claims (registration statement misstatements) has TWO components: (1) STATUTE OF LIMITATIONS—1 YEAR from when plaintiff DISCOVERED or reasonably SHOULD HAVE DISCOVERED the untruth or omission (inquiry notice standard), (2) STATUTE OF REPOSE—maximum 3 YEARS from when the securities were BONA FIDE OFFERED to the public (absolute outer limit). The repose period runs regardless of discovery. Compare to Rule 10b-5: 2 years from discovery, 5 years from violation. Section 12 has similar 1 year/3 year periods. Why other answers are wrong: (A) No time limit—clear statutory limits exist; (C) 2 years discovery/5 years violation—that's Rule 10b-5, not Section 11; (D) 5 years from offering—repose is 3 years, not 5.",
+    "tip": "§11/§12 SOL: 1 YEAR from discovery (or should have discovered) + 3 YEAR repose from offering. Compare 10b-5: 2 year discovery/5 year violation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13357,8 +13357,8 @@ const questions = [
       "D": "Intent to deceive or reckless disregard for the truth"
     },
     "correctAnswer": "D",
-    "explanation": "Scienter requires intent to deceive, manipulate, or defraud. Most courts also accept recklessness (severe departure from standards of care that presents danger of misleading). Simple negligence is insufficient for 10b-5 liability.",
-    "tip": "Scienter: Intent or recklessness. Negligence not enough for 10b-5. Higher standard than Section 11.",
+    "explanation": "Under Rule 10b-5, SCIENTER is the mental state required—established in Ernst & Ernst v. Hochfelder (1976). It means INTENT to deceive, manipulate, or defraud. Most circuit courts extend scienter to include RECKLESSNESS—a 'severe departure from the standards of ordinary care' that presents a danger of misleading (not merely heightened negligence). MERE NEGLIGENCE is INSUFFICIENT for Rule 10b-5 liability. This is a HIGHER STANDARD than Section 11 (which has no scienter requirement—negligence-based with due diligence defense) and Section 12(a)(2) (reasonable care defense). The SEC can pursue enforcement actions with negligence, but private plaintiffs must prove scienter. Why other answers are wrong: (A) Any mistake—must be intentional or reckless; (B) Good faith errors—good faith negates scienter; (C) Simple negligence—insufficient; need intent or recklessness.",
+    "tip": "Scienter (Hochfelder): INTENT to deceive OR RECKLESSNESS. Negligence NOT enough for 10b-5. Higher bar than §11/§12. SEC can use negligence; plaintiffs cannot.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13378,8 +13378,8 @@ const questions = [
       "D": "Unlimited amounts from accredited investors"
     },
     "correctAnswer": "B",
-    "explanation": "Regulation Crowdfunding allows issuers to raise up to $5 million in a 12-month period through SEC-registered platforms. Individual investment limits apply based on income/net worth. The issuer must file Form C disclosures.",
-    "tip": "Reg Crowdfunding: $5M max/year, use registered platform, individual investor limits apply.",
+    "explanation": "Under REGULATION CROWDFUNDING (JOBS Act Title III, Rules 100-503), issuers can raise up to $5 MILLION in a 12-month period from retail investors. Requirements: (1) Offerings MUST be conducted through SEC-REGISTERED FUNDING PORTALS or broker-dealers, (2) INDIVIDUAL INVESTMENT LIMITS based on income/net worth: if both annual income AND net worth are under $124,000, investor may invest greater of $2,500 or 5% of lesser of income/net worth; if either exceeds $124,000, can invest up to 10%, capped at $124,000 total/year, (3) Issuer must file FORM C disclosures (business description, financials, use of proceeds, risks). No accreditation required—truly open to the public. Why other answers are wrong: (A) $500,000—limit raised to $5M in 2020; (C) $20 million—that's Reg A+ Tier 1; (D) Unlimited to accredited—that's Reg D; crowdfunding has dollar limits.",
+    "tip": "Reg Crowdfunding: $5M/year, through registered portal, individual limits based on income/net worth, Form C required. Retail investors welcome.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13399,8 +13399,8 @@ const questions = [
       "D": "An insider trades on company information"
     },
     "correctAnswer": "A",
-    "explanation": "The misappropriation theory (O'Hagan case) extends liability to outsiders who misappropriate confidential information in breach of a duty to the source of information—not necessarily the company whose securities are traded.",
-    "tip": "Misappropriation: Breach duty to source of info (not company). Outsiders can be liable.",
+    "explanation": "Under the MISAPPROPRIATION THEORY established in United States v. O'Hagan (1997), insider trading liability extends to OUTSIDERS who misappropriate confidential information by breaching a duty owed to the SOURCE of that information—even if they have no duty to the company whose securities are traded. Example: An attorney learns of a pending acquisition while representing the acquiring company, then trades in the target company's stock. The attorney breaches duty to his own firm/client (the source), not the target company. This theory complements the classical theory (breach of duty to shareholders). Why other answers are wrong: (B) Company releases false information—that's fraud, not misappropriation; (C) Analyst makes predictions—analysis isn't misappropriation; (D) Insider trades on company info—that's classical theory, not misappropriation.",
+    "tip": "O'Hagan MISAPPROPRIATION: Breach duty to SOURCE of info (not traded company). Outsiders liable. Complements classical insider trading theory.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13420,8 +13420,8 @@ const questions = [
       "D": "They are part of a single plan of financing, involve same class of securities, made around the same time"
     },
     "correctAnswer": "D",
-    "explanation": "Integration factors: same plan of financing, same class of security, made at or about the same time, same type of consideration, made for same general purpose. Six months safe harbor exists between offerings.",
-    "tip": "Integration: Same plan, same security class, similar timing = may be combined. 6-month safe harbor.",
+    "explanation": "Under the SEC's INTEGRATION DOCTRINE, multiple offerings may be treated as ONE offering if they are part of a single plan of financing. Traditional FIVE-FACTOR test: (1) SAME PLAN OF FINANCING, (2) Same CLASS OF SECURITY offered, (3) Made at or about the SAME TIME, (4) Same TYPE OF CONSIDERATION (cash, property), (5) Made for SAME GENERAL PURPOSE. If integrated, a private placement could lose its exemption if combined with a public offering. SAFE HARBORS: (1) Rule 152's 6-MONTH safe harbor between completed offerings, (2) 2020 amendments created general principle that offerings don't integrate if based on separate facts and circumstances, with specific safe harbors for terminated/completed offerings, offers 30+ days before/after. Why other answers are wrong: (A) More than one year apart—6 months is the safe harbor; (B) Different exemptions—can still integrate; (C) Different issuers—integration applies to same issuer.",
+    "tip": "Integration: Same plan + same securities + same time + same consideration + same purpose. 6-MONTH safe harbor. 2020 rules more issuer-friendly.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13441,8 +13441,8 @@ const questions = [
       "D": "Be completed within 5 days"
     },
     "correctAnswer": "A",
-    "explanation": "Williams Act rules require: (1) tender offer open for at least 20 business days, (2) shareholders may withdraw tendered shares during this period, (3) if offer is oversubscribed, pro-rata acceptance, (4) all holders treated equally.",
-    "tip": "Tender offer: 20 business days minimum, withdrawal rights, pro-rata if oversubscribed, equal treatment.",
+    "explanation": "Under the WILLIAMS ACT (1968 amendments to 1934 Act §14(d)-(e)), tender offers are regulated to protect target company shareholders. Key requirements: (1) MINIMUM 20 BUSINESS DAYS—offer must remain open, extended if material changes, (2) WITHDRAWAL RIGHTS—shareholders may withdraw tendered shares at ANY TIME during the offer period, (3) PRO-RATA ACCEPTANCE—if offer is oversubscribed and offeror is only taking a portion, must accept proportionally from all tendering shareholders (no first-come-first-served), (4) ALL-HOLDERS/BEST PRICE—offer must be open to all holders of the class, at the same price. Schedule TO filing required within 10 days of commencing. Target must file Schedule 14D-9 (recommendation). Why other answers are wrong: (B) SEC approval—SEC doesn't approve tender offers; (C) Only target company—acquirers make tender offers; (D) Completed in 5 days—minimum is 20 business days.",
+    "tip": "Williams Act tender offers: 20 BUSINESS DAYS minimum + withdrawal rights + pro-rata if oversubscribed + all holders same price. Schedule TO required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13462,8 +13462,8 @@ const questions = [
       "D": "Material misstatements or omissions in a prospectus or oral communication"
     },
     "correctAnswer": "D",
-    "explanation": "Section 12(a)(2) applies to material misstatements/omissions in prospectuses or oral communications in connection with securities offerings. The seller can escape liability by proving they didn't know and couldn't reasonably have known of the untruth.",
-    "tip": "Section 12(a)(2): Misstatements in prospectus/oral. Reasonable care defense available.",
+    "explanation": "Under 1933 Act §12(a)(2), sellers are liable for material MISSTATEMENTS or OMISSIONS in a PROSPECTUS or ORAL COMMUNICATION in connection with an offering. Unlike §12(a)(1) (unregistered sales), §12(a)(2) addresses the QUALITY of disclosure. Key features: (1) Applies to prospectuses AND oral statements, (2) REASONABLE CARE DEFENSE available—seller not liable if they didn't know and couldn't have known with reasonable care, (3) Remedy: RESCISSION (return of purchase price) or DAMAGES if sold, (4) Limited to PUBLIC OFFERINGS—Supreme Court in Gustafson limited to initial distributions, not secondary trading. Lower standard than 10b-5 (no scienter required). Why other answers are wrong: (A) Insider trading—Rule 10b-5 and §16; (B) Only intentional fraud—reasonable care defense means negligence is enough; (C) Only unregistered sales—that's §12(a)(1).",
+    "tip": "§12(a)(2): Misstatements in prospectus/oral. REASONABLE CARE defense (not strict liability). Rescission remedy. Limited to public offerings (Gustafson).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13483,8 +13483,8 @@ const questions = [
       "D": "In addition to federal law, though certain federal exemptions preempt state registration"
     },
     "correctAnswer": "D",
-    "explanation": "State blue sky laws exist alongside federal law. However, NSMIA preempts state registration for 'covered securities' (national exchange listed, Rule 506 offerings, certain others). States retain anti-fraud enforcement power.",
-    "tip": "Blue sky laws: In addition to federal. But covered securities (506, listed) preempt state registration.",
+    "explanation": "State securities laws ('BLUE SKY LAWS') exist IN ADDITION TO federal law—issuers must comply with both. However, the NATIONAL SECURITIES MARKETS IMPROVEMENT ACT (NSMIA 1996) PREEMPTS state REGISTRATION (not anti-fraud) for 'COVERED SECURITIES': (1) Securities listed on national exchanges (NYSE, NASDAQ), (2) Rule 506 offerings (Reg D), (3) Securities sold to 'qualified purchasers' (defined by SEC), (4) Certain investment company securities. States RETAIN: anti-fraud enforcement powers, notice filing fees (states can require filing copies and fees even for preempted offerings). Blue sky laws vary by state—some use merit review (substance), others only disclosure. Why other answers are wrong: (A) Only out-of-state—applies to in-state too; (B) Identical—vary significantly by state; (C) Completely preempted—only registration preempted for covered securities; anti-fraud retained.",
+    "tip": "Blue sky = state law. NSMIA preempts REGISTRATION for covered securities (listed, 506). States KEEP anti-fraud + notice fees. NOT identical across states.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13504,8 +13504,8 @@ const questions = [
       "D": "Specified material events such as changes in control, bankruptcy, or departure of directors"
     },
     "correctAnswer": "D",
-    "explanation": "Form 8-K reports significant events: entry into material agreements, bankruptcy, change in control, departure of directors/principal officers, amendments to articles, changes in fiscal year, and other specified material events.",
-    "tip": "8-K: Report within 4 business days. Major events—change in control, bankruptcy, director departure, etc.",
+    "explanation": "Under 1934 Act §13(a) and Form 8-K, public companies must report CURRENT EVENTS within 4 BUSINESS DAYS of occurrence. Reportable events include: (1) SECTION 1—Business/operations: change in control, bankruptcy/receivership, delisting, (2) SECTION 2—Financial: auditor changes, non-reliance on prior financials, (3) SECTION 3—Securities: unregistered sales, material modification of shareholder rights, (4) SECTION 5—Corporate governance: director departure, officer appointment/departure, bylaw amendments, (5) SECTION 7—Regulation FD disclosure, (6) SECTION 8—Other material events (voluntary disclosure). Some items (e.g., earnings releases) are 'furnished' not 'filed' (different liability). Why other answers are wrong: (A) Monthly regardless—only when specified events occur; (B) Only annual—8-K is for current events, not periodic; (C) Each trading day—only when reportable events occur.",
+    "tip": "8-K: 4 BUSINESS DAYS for material events—change in control, bankruptcy, director/officer changes, auditor changes, material agreements. Some items furnished, not filed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13525,8 +13525,8 @@ const questions = [
       "D": "Analysts not communicate with companies"
     },
     "correctAnswer": "B",
-    "explanation": "Regulation FD prevents selective disclosure. If a company intentionally discloses material nonpublic information to analysts or investors, it must simultaneously disclose publicly. If unintentional, public disclosure must occur promptly (within 24 hours).",
-    "tip": "Reg FD: No selective disclosure. Tell analysts, must tell public simultaneously. Unintentional = 24 hours.",
+    "explanation": "REGULATION FD (Fair Disclosure, 2000) prevents SELECTIVE DISCLOSURE of Material Nonpublic Information (MNPI). When a company (officers, directors, investor relations) discloses MNPI to securities market professionals (analysts, institutional investors, large shareholders): (1) INTENTIONAL disclosure—must SIMULTANEOUSLY disclose PUBLICLY (press release, 8-K, website), (2) UNINTENTIONAL disclosure—must PROMPTLY disclose publicly (within 24 HOURS or before next trading, whichever is later). Applies to: broker-dealers, investment advisers, investment companies, holders of company securities who would reasonably be expected to trade. Does NOT apply to: communications under confidentiality agreement, communications to attorneys/accountants/investment bankers providing services. Why other answers are wrong: (A) Insiders disclose trades—that's §16 reporting; (C) All trading reported—not required; (D) Analysts can't communicate—they can, but company can't give them MNPI selectively.",
+    "tip": "Reg FD: Intentional MNPI to analysts = SIMULTANEOUS public disclosure. Unintentional = within 24 HOURS. No selective tipping to market pros.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13546,8 +13546,8 @@ const questions = [
       "D": "Reduced disclosure requirements and ability to test the waters with investors"
     },
     "correctAnswer": "D",
-    "explanation": "EGCs (annual revenue under $1.235 billion) enjoy: scaled disclosure, 2 years of audited financials instead of 3, delayed internal control attestation, confidential submission of registration statements, and ability to 'test the waters' with QIBs and institutional investors.",
-    "tip": "EGC: Reduced disclosure, 2 years financials, test the waters, confidential filing. Revenue threshold.",
+    "explanation": "Under the JOBS ACT (2012), an EMERGING GROWTH COMPANY (EGC) qualifies if it had total annual gross revenues under $1.235 BILLION in its most recent fiscal year. EGC benefits include: (1) SCALED DISCLOSURE—2 years of audited financials (vs. 3), reduced executive compensation disclosure, (2) DELAYED SOX §404(b)—no auditor attestation of internal controls, (3) CONFIDENTIAL SUBMISSION—can submit draft registration statements confidentially for SEC review, (4) TEST THE WATERS—can gauge interest from QIBs and institutional accredited investors before filing, (5) NO AUDITOR ROTATION discussion/voting. EGC status lasts until: 5 years after IPO, $1.235B+ revenue, $700M+ public float, or $1B+ debt issuance in 3 years. Why other answers are wrong: (A) Exemption from all laws—still subject to securities laws, just with accommodations; (B) Guaranteed approval—SEC never guarantees; (C) No filing—still must file, just with scaled disclosure.",
+    "tip": "JOBS Act EGC: <$1.235B revenue. Benefits: 2 years financials, confidential filing, test the waters, no §404(b) auditor attestation. Lasts 5 years or until thresholds hit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -13567,8 +13567,8 @@ const questions = [
       "D": "State CPA licensing"
     },
     "correctAnswer": "C",
-    "explanation": "Circular 230 contains rules governing the practice of attorneys, CPAs, enrolled agents, and other authorized practitioners before the IRS. It sets standards for tax practice, including due diligence, conflicts of interest, and written advice.",
-    "tip": "Circular 230 = IRS practice rules. Who can practice, how they must behave with IRS.",
+    "explanation": "TREASURY CIRCULAR 230 (31 CFR Part 10) governs PRACTICE BEFORE THE INTERNAL REVENUE SERVICE. It establishes: (1) Who may practice (attorneys, CPAs, enrolled agents, enrolled actuaries, enrolled retirement plan agents), (2) DUTIES and RESTRICTIONS (due diligence, conflicts, fees, confidentiality), (3) Standards for written tax advice, (4) SANCTIONS (censure, suspension, disbarment, monetary penalties). The Office of Professional Responsibility (OPR) enforces Circular 230. It does NOT govern SEC matters, Federal Reserve regulations, or state CPA licensing. Why other answers are wrong: (A) Federal Reserve banking—regulated by Federal Reserve Board; (B) SEC-registered accountants—PCAOB and SEC regulate; (D) State CPA licensing—state boards of accountancy regulate.",
+    "tip": "Circular 230 (31 CFR Part 10): IRS practice rules. Who can practice + duties + sanctions. OPR enforces. NOT SEC, banking, or state licensing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13588,8 +13588,8 @@ const questions = [
       "D": "Attorneys, CPAs, enrolled agents, and other authorized persons"
     },
     "correctAnswer": "D",
-    "explanation": "Practitioners who may practice before the IRS include: attorneys, CPAs (licensed and in good standing), enrolled agents, enrolled actuaries, enrolled retirement plan agents, and registered tax return preparers (limited practice).",
-    "tip": "Can practice before IRS: Attorneys, CPAs, enrolled agents, enrolled actuaries, RTPPs (limited).",
+    "explanation": "Under Circular 230 §10.3, practitioners authorized to practice before the IRS include: (1) ATTORNEYS—licensed and in good standing in any U.S. jurisdiction, (2) CERTIFIED PUBLIC ACCOUNTANTS (CPAs)—licensed and in good standing, (3) ENROLLED AGENTS (EAs)—passed IRS exam (SEE) or former IRS employees, (4) ENROLLED ACTUARIES—enrolled by Joint Board for Enrollment of Actuaries, (5) ENROLLED RETIREMENT PLAN AGENTS (ERPAs)—limited to retirement plan matters. Unenrolled return preparers have LIMITED practice rights (only examinations of returns they prepared). Why other answers are wrong: (A) Any return filer—filing doesn't grant practice rights; (B) Only attorneys—CPAs and EAs also have full practice rights; (C) Only CPAs—attorneys and EAs also qualify.",
+    "tip": "§10.3 practitioners: Attorneys, CPAs, EAs, enrolled actuaries, ERPAs. Unenrolled preparers = LIMITED (only returns they prepared).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13609,8 +13609,8 @@ const questions = [
       "D": "Only representations to the IRS"
     },
     "correctAnswer": "C",
-    "explanation": "Due diligence is required in all aspects of practice: preparing documents and returns, determining correctness of representations, and relying on client information. Practitioners cannot knowingly accept false information.",
-    "tip": "Due diligence: Applies to everything—returns, documents, communications with IRS and clients.",
+    "explanation": "Under Circular 230 §10.22, practitioners must exercise DUE DILIGENCE in ALL aspects of practice: (1) PREPARING or assisting in preparing documents and returns, (2) Determining the CORRECTNESS of written or oral representations to clients and the IRS, (3) Determining correctness of representations made to the Department of Treasury. Practitioners cannot KNOWINGLY accept client information they know to be false. Due diligence is an ONGOING obligation—not limited to specific dollar amounts or only IRS communications. Why other answers are wrong: (A) Only matters over $10,000—no dollar threshold; applies to all matters; (B) Only tax returns—applies to all documents, oral/written representations; (D) Only IRS representations—also applies to representations to clients.",
+    "tip": "§10.22 due diligence: ALL aspects—returns, documents, representations to IRS AND clients. No dollar threshold. Cannot accept known false info.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13630,8 +13630,8 @@ const questions = [
       "D": "Required"
     },
     "correctAnswer": "C",
-    "explanation": "Contingent fees are generally prohibited for preparing original tax returns, amended returns, or refund claims. Exceptions exist for: IRS examinations, judicial proceedings, and refund claims meeting specific criteria.",
-    "tip": "Contingent fees: NO for original returns. OK for audits/exams and judicial proceedings.",
+    "explanation": "Under Circular 230 §10.27, CONTINGENT FEES are GENERALLY PROHIBITED for: (1) Preparing ORIGINAL tax returns, (2) Preparing AMENDED returns, (3) Preparing REFUND CLAIMS. EXCEPTIONS where contingent fees ARE permitted: (1) IRS EXAMINATIONS and challenges to original determinations, (2) JUDICIAL PROCEEDINGS (Tax Court, federal courts), (3) Certain refund claims not originally prepared by the practitioner. Rationale: Contingent fees for original returns could encourage aggressive positions. Why other answers are wrong: (A) Allowed for corporate only—prohibition applies to all returns; (B) Permitted without restriction—significant restrictions exist; (D) Required—contingent fees are optional where permitted, never required.",
+    "tip": "§10.27 contingent fees: PROHIBITED for original/amended returns and refund claims. ALLOWED for examinations, judicial proceedings, certain refund claims.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13651,8 +13651,8 @@ const questions = [
       "D": "Is enrolled in a tax course"
     },
     "correctAnswer": "A",
-    "explanation": "Enrolled agents pass a comprehensive IRS exam (SEE) or have relevant IRS employment experience. They are federally authorized to represent taxpayers before the IRS at all administrative levels. They must complete continuing education to maintain status.",
-    "tip": "Enrolled agent: Pass IRS exam or IRS experience. Can represent at all IRS levels.",
+    "explanation": "Under Circular 230 §10.4, an ENROLLED AGENT (EA) is federally authorized to practice before the IRS. Enrollment requires: (1) Passing the SPECIAL ENROLLMENT EXAMINATION (SEE)—a comprehensive three-part exam covering individual taxation, business taxation, and representation/procedures, OR (2) Having relevant IRS EMPLOYMENT experience (former IRS employees may qualify). EAs can represent taxpayers at ALL ADMINISTRATIVE LEVELS before the IRS—examinations, appeals, and collection. Unlike CPAs and attorneys (licensed by states), EAs hold FEDERAL credentials. Must complete 72 hours CE per 3-year cycle. Why other answers are wrong: (B) Accounting degree—not required; EA requires passing SEE or IRS experience; (C) State bar—that's an attorney; (D) Enrolled in a tax course—must pass exam or have IRS experience.",
+    "tip": "§10.4 Enrolled Agent: Pass SEE (3-part IRS exam) OR former IRS employee. FEDERAL credential. All IRS levels. 72 hours CE per 3 years.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13672,8 +13672,8 @@ const questions = [
       "D": "Use or disclose client information without consent except as required by law"
     },
     "correctAnswer": "D",
-    "explanation": "Practitioners must maintain confidentiality of client information. They cannot knowingly disclose client information without consent unless required by law (e.g., court order) or necessary to defend against misconduct charges.",
-    "tip": "Keep client info confidential. Disclose only with consent or if legally required.",
+    "explanation": "Under Circular 230 §10.21, practitioners must NOT knowingly USE or DISCLOSE client information obtained in practice without client CONSENT. EXCEPTIONS permitting disclosure: (1) Required by LAW (court order, subpoena, statutory requirement), (2) Necessary to DEFEND against charges of misconduct in disciplinary proceedings, (3) As permitted by IRC §7216 (tax return preparer disclosure rules). The confidentiality obligation continues after the engagement ends. Why other answers are wrong: (A) Charge fees—fees are permitted under §10.27; (B) Prepare amended returns—practitioners can and should prepare these when needed; (C) Accept new clients—no prohibition on accepting clients.",
+    "tip": "§10.21 confidentiality: Cannot use/disclose client info without CONSENT. Exceptions: Required by law, defend against misconduct charges, IRC §7216.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -13693,8 +13693,8 @@ const questions = [
       "D": "The client promises to disclose the position"
     },
     "correctAnswer": "C",
-    "explanation": "Practitioners must have a reasonable belief that the position has at least a realistic possibility of being sustained on the merits. For positions requiring disclosure, the reasonable basis standard (lower) applies.",
-    "tip": "Return position standard: Realistic possibility of success (about 1 in 3). Higher than 'reasonable basis.'",
+    "explanation": "Under Circular 230 §10.34, practitioners must not sign returns or advise positions unless they have REASONABLE BELIEF the position will be SUSTAINED ON ITS MERITS. The standards: (1) REALISTIC POSSIBILITY—approximately 1 in 3 (33%) chance of success on merits (general standard), (2) REASONABLE BASIS—lower standard (approximately 20%) for disclosed positions (taxpayer must attach disclosure), (3) SUBSTANTIAL AUTHORITY—approximately 40% for undisclosed positions avoiding understatement penalty. A position may not be frivolous or for improper purposes. Why other answers are wrong: (A) Fee amount—no minimum fee threshold; (B) Certainly prevail—100% certainty not required; realistic possibility sufficient; (D) Client promises disclosure—disclosure is relevant to standard, but practitioner still needs reasonable belief.",
+    "tip": "§10.34 return positions: REALISTIC POSSIBILITY (~33%). Lower REASONABLE BASIS (~20%) if disclosed. Cannot advise frivolous positions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13714,8 +13714,8 @@ const questions = [
       "D": "The practitioner believes they can provide competent representation, it's not prohibited by law, and each affected client gives informed written consent"
     },
     "correctAnswer": "D",
-    "explanation": "Representation despite conflict requires: (1) practitioner reasonably believes they can provide competent, diligent representation, (2) representation not prohibited by law, and (3) each affected client gives informed consent in writing.",
-    "tip": "Conflict OK if: Competent representation possible + not illegal + written informed consent from all.",
+    "explanation": "Under Circular 230 §10.29, a practitioner with a CONFLICT OF INTEREST may still represent a client if ALL THREE conditions are met: (1) Practitioner REASONABLY BELIEVES they can provide COMPETENT AND DILIGENT representation to each affected client, (2) Representation is NOT PROHIBITED BY LAW, (3) Each affected client gives INFORMED WRITTEN CONSENT within 30 days of conflict discovery. Conflicts include: representation directly adverse to another client, significant risk current client representation limited by responsibilities to others. Why other answers are wrong: (A) Conflict is minor—all conflicts require the three conditions regardless of size; (B) Client doesn't know—disclosure is required; hidden conflicts violate rules; (C) Practitioner needs fee—financial need is irrelevant to conflict analysis.",
+    "tip": "§10.29 conflicts: OK if (1) competent/diligent representation possible, (2) not prohibited by law, (3) WRITTEN informed consent from ALL affected within 30 days.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13735,8 +13735,8 @@ const questions = [
       "D": "Upon request, regardless of any fee dispute"
     },
     "correctAnswer": "D",
-    "explanation": "Client records must be returned upon request. The practitioner cannot withhold client records as leverage for fee collection. Work product may be retained pending fee payment, but original client records must be returned.",
-    "tip": "Return client records on request, even if fees unpaid. Work product may be retained.",
+    "explanation": "Under Circular 230 §10.28, practitioners must return CLIENT RECORDS upon request, REGARDLESS OF ANY FEE DISPUTE. Client records include: documents provided by the client, tax returns and supporting schedules, and documents the client needs for compliance. Practitioners MAY retain their own WORK PRODUCT (analysis, notes, memos) pending fee payment in most jurisdictions. The rule prevents practitioners from using client records as leverage for unpaid fees. There is no mandatory waiting period—return must be prompt upon request. Why other answers are wrong: (A) Within 180 days—no specific time limit; must return upon request; (B) Only with written request—any request triggers obligation; (C) Only after fee payment—cannot withhold CLIENT RECORDS for fees (work product may be different).",
+    "tip": "§10.28 return records: Client records upon request REGARDLESS of fee dispute. Work product MAY be retained. Cannot hold records hostage for fees.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13756,8 +13756,8 @@ const questions = [
       "D": "Only telephone communications"
     },
     "correctAnswer": "B",
-    "explanation": "Practice before IRS includes: preparing documents for IRS filing, corresponding with IRS, representing clients at conferences/hearings/meetings, and rendering written advice on matters within IRS jurisdiction.",
-    "tip": "Practice before IRS: Broad definition. Returns, correspondence, representation, written advice.",
+    "explanation": "Under Circular 230 §10.2(a)(4), PRACTICE BEFORE THE IRS is broadly defined to include: (1) PREPARING or filing documents with the IRS (returns, forms, claims), (2) CORRESPONDING and COMMUNICATING with the IRS on behalf of taxpayers, (3) REPRESENTING clients at conferences, hearings, and meetings with IRS personnel, (4) Rendering WRITTEN ADVICE on federal tax matters within IRS jurisdiction. Practice is NOT limited to in-person appearances—it encompasses all substantive interactions with the IRS on a taxpayer's behalf. Phone calls, letters, and written opinions all constitute practice. Why other answers are wrong: (A) Only in-person—includes correspondence, documents, written advice; (C) Only filing returns—also includes representation, correspondence, advice; (D) Only telephone—also includes all other forms of interaction.",
+    "tip": "§10.2(a)(4) 'practice' = BROAD: Preparing documents + correspondence + representation + written advice. Not just in-person appearances.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13777,8 +13777,8 @@ const questions = [
       "D": "Only criminal prosecution"
     },
     "correctAnswer": "A",
-    "explanation": "OPR can impose: private or public censure (reprimand), suspension from practice, disbarment (permanent prohibition), and monetary penalties. Sanctions are based on violation severity and practitioner's conduct history.",
-    "tip": "Circular 230 sanctions: Censure, suspension, disbarment, money penalties. OPR enforces.",
+    "explanation": "Under Circular 230 §10.50, the Office of Professional Responsibility (OPR) may impose SANCTIONS for violations: (1) CENSURE—private or public reprimand; practitioner can continue practice, (2) SUSPENSION—temporary prohibition from practice for a specified period, (3) DISBARMENT—permanent prohibition from practice before the IRS, (4) MONETARY PENALTIES—fines for specific violations. Sanctions are determined based on: severity of violation, willfulness, harm to clients/tax system, prior disciplinary history, and aggravating/mitigating factors. Why other answers are wrong: (B) Only monetary penalties—also includes censure, suspension, disbarment; (C) Only state licensing—OPR handles federal Circular 230, states handle CPA licensing; (D) Only criminal prosecution—OPR handles administrative discipline, DOJ handles criminal.",
+    "tip": "§10.50 sanctions: CENSURE (reprimand) + SUSPENSION (temporary) + DISBARMENT (permanent) + MONETARY PENALTIES. OPR enforces. Severity-based.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13798,8 +13798,8 @@ const questions = [
       "D": "Promptly advise the client of the error and its consequences"
     },
     "correctAnswer": "D",
-    "explanation": "Practitioners must promptly advise clients of errors, omissions, or noncompliance discovered in prior returns. The practitioner should recommend corrective action but cannot amend without client authorization. The duty is to advise, not to file.",
-    "tip": "Discover error: Must advise client promptly. Cannot file amended return without client OK.",
+    "explanation": "Under Circular 230 §10.21, when a practitioner discovers an ERROR, OMISSION, or NONCOMPLIANCE in a previously filed return, they must PROMPTLY ADVISE THE CLIENT of: (1) The nature of the error/omission, (2) The CONSEQUENCES of the error (potential penalties, interest, criminal exposure), (3) Corrective action options (amended return, disclosure). The practitioner CANNOT file an amended return without CLIENT AUTHORIZATION—the duty is to advise and recommend, not to act unilaterally. The practitioner should NOT report the client directly to the IRS. Why other answers are wrong: (A) Report to IRS—no duty to report; advise client only; (B) Withdraw—withdrawal is option if client refuses correction, but first step is advising; (C) Immediately file amended—cannot amend without client consent.",
+    "tip": "§10.21 errors: PROMPTLY ADVISE client of error + consequences. Cannot file amended without client OK. No duty to report to IRS.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13819,8 +13819,8 @@ const questions = [
       "D": "Approved by the IRS before publication"
     },
     "correctAnswer": "A",
-    "explanation": "Advertising must not be false, fraudulent, coercive, or misleading. Practitioners cannot make false claims about credentials, fees, or services. Fee information may be advertised but must be honored for at least 30 days.",
-    "tip": "Advertising OK if truthful, not misleading. No false claims about credentials or guarantees.",
+    "explanation": "Under Circular 230 §10.30, practitioner advertising must be TRUTHFUL and NOT MISLEADING. Prohibited conduct: (1) FALSE or misleading statements about qualifications, services, or fees, (2) Implying special relationships with IRS or ability to improperly obtain favorable results, (3) Making claims that cannot be substantiated, (4) Guaranteeing specific outcomes. Fee advertising is PERMITTED but advertised fees must be honored for at least 30 DAYS unless clearly stated otherwise. Advertising may include professional credentials, areas of expertise, and fee information. Why other answers are wrong: (B) Limited to print only—all media permitted if truthful; (C) Prohibited entirely—advertising is permitted; (D) IRS approval required—no prior approval needed.",
+    "tip": "§10.30 advertising: TRUTHFUL + NOT MISLEADING. Cannot guarantee results or imply IRS connections. Advertised fees honored 30 days. No prior approval needed.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13840,8 +13840,8 @@ const questions = [
       "D": "Any form of advertising"
     },
     "correctAnswer": "A",
-    "explanation": "Uninvited in-person solicitation is prohibited when the potential client is in a vulnerable condition (e.g., facing audit, in financial distress). Written solicitations are permitted if clearly labeled as advertising.",
-    "tip": "No in-person solicitation of vulnerable persons. Written solicitation OK with proper labeling.",
+    "explanation": "Under Circular 230 §10.30(b), practitioners may NOT use UNINVITED IN-PERSON SOLICITATION when the potential client is: (1) Under AUDIT or examination by the IRS, (2) In FINANCIAL DISTRESS, (3) Otherwise in a VULNERABLE condition that impairs judgment. This protects vulnerable taxpayers from high-pressure tactics. WRITTEN SOLICITATIONS are permitted but must be clearly labeled as ADVERTISING MATERIAL. Email solicitations must include 'Advertisement' in subject line. Why other answers are wrong: (B) Email to existing clients—permitted; existing clients can be contacted; (C) Any form of solicitation—written solicitation is permitted with proper labeling; (D) Any form of advertising—advertising is permitted if truthful and not misleading.",
+    "tip": "§10.30(b) solicitation: NO uninvited in-person to VULNERABLE persons (audit, financial distress). Written OK but label as 'Advertising Material.'",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13861,8 +13861,8 @@ const questions = [
       "D": "Must immediately report to OPR"
     },
     "correctAnswer": "A",
-    "explanation": "Unlike some professional codes, Circular 230 does not require practitioners to report other practitioners' violations. Reporting is permissive, not mandatory. However, a practitioner cannot assist in violations.",
-    "tip": "No duty to report other practitioners' violations. But cannot assist violations.",
+    "explanation": "Under Circular 230, there is NO MANDATORY DUTY to report another practitioner's violations to OPR. Reporting is PERMISSIVE—practitioners MAY report but are not required to (unlike some state ethics rules that mandate reporting). However, a practitioner CANNOT: (1) ASSIST or participate in violations, (2) Knowingly ASSOCIATE with practitioners engaged in misconduct. This differs from AICPA rules and some state CPA board rules which require reporting known violations. Why other answers are wrong: (B) Must ignore—can choose to report (permissive); (C) Report to state only—may report to OPR (federal); (D) Must immediately report—no mandatory reporting requirement.",
+    "tip": "No MANDATORY duty to report other practitioners' violations—PERMISSIVE only. But CANNOT assist or associate with misconduct. Different from some CPA board rules.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13882,8 +13882,8 @@ const questions = [
       "D": "Request penalty abatement"
     },
     "correctAnswer": "B",
-    "explanation": "Form 2848 (Power of Attorney and Declaration of Representative) authorizes a practitioner to represent the taxpayer before the IRS, including receiving confidential information, signing documents, and appearing on the taxpayer's behalf.",
-    "tip": "Form 2848: Power of attorney for IRS representation. Form 8821 = disclosure only, no representation.",
+    "explanation": "FORM 2848 (Power of Attorney and Declaration of Representative) authorizes a practitioner to REPRESENT a taxpayer before the IRS. It grants authority to: (1) RECEIVE confidential tax information from IRS, (2) SIGN documents on behalf of taxpayer (if authorized), (3) REPRESENT taxpayer at conferences, hearings, examinations, (4) Perform acts taxpayer could perform. The practitioner must be authorized under §10.3 and must sign Part II declaration. Compare to FORM 8821 (Tax Information Authorization)—allows IRS to release info to designee but NO representation rights. Why other answers are wrong: (A) Apply for EA status—Form 23 for EA enrollment; (C) Report misconduct—complaints to OPR; (D) Request penalty abatement—Form 843 or written request.",
+    "tip": "Form 2848: POWER OF ATTORNEY for IRS representation (receive info, sign, represent). Form 8821: INFO ONLY, no representation. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13903,8 +13903,8 @@ const questions = [
       "D": "The importance of conclusions reached, including potential penalties for noncompliance"
     },
     "correctAnswer": "D",
-    "explanation": "Best practices include: communicating clearly with clients about engagement terms and limitations, establishing facts, evaluating reasonableness of positions, and advising clients about penalties and importance of conclusions reached.",
-    "tip": "Best practices: Clear communication, honest advice about risks and penalties.",
+    "explanation": "Under Circular 230 §10.33, BEST PRACTICES for tax advisors include: (1) COMMUNICATING clearly with clients about engagement terms, purpose, and limitations, (2) ESTABLISHING the facts, determining which facts are relevant, (3) EVALUATING reasonableness of assumptions and representations, (4) Relating applicable LAW to relevant facts, (5) Arriving at a conclusion supported by law and facts, (6) ADVISING clients about importance of conclusions reached and potential PENALTIES for noncompliance. These are aspirational standards, not mandatory, but represent the standard of care expected. Why other answers are wrong: (A) How to hide income—advising illegal activity is disreputable conduct; (B) IRS will never audit—false statement; cannot guarantee no audit; (C) Avoid all taxes—cannot promise illegal avoidance.",
+    "tip": "§10.33 best practices: Clear communication + establish facts + evaluate assumptions + apply law + advise on penalties. ASPIRATIONAL standard, not mandatory.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13924,8 +13924,8 @@ const questions = [
       "D": "Passing a competency exam for each client"
     },
     "correctAnswer": "A",
-    "explanation": "Competence requires knowledge, skill, thoroughness, and preparation reasonably necessary for representation. Practitioners may handle unfamiliar matters if they can become competent through study or associate with a competent practitioner.",
-    "tip": "Competence: Proper knowledge and preparation. Can learn new areas or associate with experts.",
+    "explanation": "Under Circular 230 §10.35(a), practitioners must possess the necessary COMPETENCE to engage in practice before the IRS. Competent representation requires: (1) Appropriate KNOWLEDGE of the subject matter, (2) Necessary SKILL to apply that knowledge, (3) THOROUGHNESS in preparation and analysis, (4) Adequate PREPARATION for the specific matter. A practitioner may handle an UNFAMILIAR matter if they can become competent through reasonable STUDY or ASSOCIATE with a competent practitioner. Accepting matters beyond competence is prohibited. Why other answers are wrong: (B) Expert in all areas—competence in specific matter required, not universal expertise; (C) 10 years experience—no minimum experience requirement; competence is matter-specific; (D) Competency exam per client—no such requirement exists.",
+    "tip": "§10.35(a) competence: Knowledge + skill + thoroughness + preparation. Can handle unfamiliar matters if can BECOME competent or ASSOCIATE with expert.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13945,8 +13945,8 @@ const questions = [
       "D": "Responding immediately"
     },
     "correctAnswer": "A",
-    "explanation": "Diligence requires timely responses to proper IRS requests and pursuing matters reasonably to conclusion. Practitioners should not unreasonably delay and should represent clients zealously within legal bounds.",
-    "tip": "Diligent = timely response + see matters through. Don't ignore or unreasonably delay.",
+    "explanation": "Under Circular 230 §10.35(b), practitioners must act with DILIGENCE in representation, which requires: (1) Responding TIMELY to proper and lawful requests for information from the IRS, (2) PURSUING matters reasonably to CONCLUSION, (3) Not UNREASONABLY DELAYING the resolution of matters. A practitioner must act promptly but need not respond immediately—reasonable time is permitted. Extensions may be requested when appropriate. The duty is to be responsive and to see matters through, not to abandon clients mid-engagement. Why other answers are wrong: (B) Never requesting extensions—extensions are appropriate and permitted; (C) Only written requests—must respond to proper requests regardless of form; (D) Responding immediately—timely, not immediate, response required.",
+    "tip": "§10.35(b) diligence: TIMELY response to IRS requests + pursue to CONCLUSION + no UNREASONABLE DELAY. Extensions permitted. Don't abandon clients.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13966,8 +13966,8 @@ const questions = [
       "D": "The client refuses to sign the return"
     },
     "correctAnswer": "B",
-    "explanation": "Practitioners may rely in good faith on client information without independent verification, unless they know or have reason to know it's incorrect, incomplete, or inconsistent. Red flags trigger additional inquiry obligations.",
-    "tip": "Can rely on client info in good faith. Red flags = must investigate further.",
+    "explanation": "Under Circular 230 §10.34(d), practitioners may RELY on client-provided information in GOOD FAITH without independent verification. However, practitioners CANNOT ignore RED FLAGS—they must make REASONABLE INQUIRIES if: (1) Information appears INCORRECT on its face, (2) Information is INCOMPLETE, (3) Information is INCONSISTENT with other known facts, (4) Practitioner KNOWS or reasonably SHOULD KNOW information is false. Red flags trigger duty to investigate. Practitioners cannot 'willfully blind' themselves to obvious problems. Why other answers are wrong: (A) New client—applies to all clients, not based on relationship length; (C) Not in writing—can rely on oral information if no red flags; (D) Client refuses to sign—signing is separate from reliance issue.",
+    "tip": "§10.34(d) reliance on client: GOOD FAITH reliance OK. RED FLAGS (incorrect, incomplete, inconsistent) = must investigate. Cannot be 'willfully blind.'",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -13987,8 +13987,8 @@ const questions = [
       "D": "Require all employees to be enrolled agents"
     },
     "correctAnswer": "C",
-    "explanation": "Firms must take reasonable steps to ensure compliance with Circular 230, including clear ethical policies, proper supervision, and corrective action for violations. Managing partners may be subject to discipline for firm violations.",
-    "tip": "Firms must ensure compliance: Policies, supervision, training. Managing partners accountable.",
+    "explanation": "Under Circular 230 §10.36, FIRMS employing practitioners have SUPERVISORY responsibilities: (1) Take REASONABLE STEPS to ensure members/employees/associates comply with Circular 230, (2) Establish and implement PROCEDURES to ensure compliance, (3) Provide adequate SUPERVISION of staff, (4) Take CORRECTIVE ACTION when violations occur. MANAGING PARTNERS or officers with principal authority may be DISCIPLINED for firm's failure to comply. Firms cannot escape responsibility by delegating—supervisory duties are non-delegable. Why other answers are wrong: (A) Separate IRS registration—no separate firm registration required; (B) No oversight—significant oversight responsibilities; (D) All employees must be EAs—employees need not be EAs; supervision by qualified practitioners sufficient.",
+    "tip": "§10.36 firm responsibility: REASONABLE STEPS + PROCEDURES + SUPERVISION + CORRECTIVE ACTION. Managing partners can be disciplined for firm failures.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14008,8 +14008,8 @@ const questions = [
       "D": "Be submitted to OPR for approval"
     },
     "correctAnswer": "A",
-    "explanation": "Written advice must: be based on reasonable factual and legal assumptions, consider all relevant facts, not rely on unreasonable assumptions, and relate law to facts. Practitioners should not take into account that the position might not be audited.",
-    "tip": "Written advice: Reasonable assumptions, consider all facts, don't assume no audit.",
+    "explanation": "Under Circular 230 §10.37, WRITTEN TAX ADVICE must: (1) Be based on REASONABLE FACTUAL AND LEGAL assumptions, (2) Reasonably consider ALL RELEVANT FACTS the practitioner knows or reasonably should know, (3) Not rely on UNREASONABLE assumptions about future events, (4) Relate applicable LAW to relevant facts, (5) NOT take into account the possibility that a return will NOT BE AUDITED or that a matter will NOT be raised on audit. Practitioners cannot give 'don't worry, they won't audit' advice. Written advice includes emails and memos. Why other answers are wrong: (B) Guarantee outcome—cannot guarantee specific results; (C) Include SSN—no such requirement; (D) OPR approval—no prior approval required.",
+    "tip": "§10.37 written advice: Reasonable assumptions + ALL relevant facts + relate law to facts. CANNOT assume position won't be audited.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14029,8 +14029,8 @@ const questions = [
       "D": "$50 per return"
     },
     "correctAnswer": "A",
-    "explanation": "IRC Section 6694 imposes penalties: $1,000 (or 50% of income from return) for unreasonable positions, $5,000 (or 75% of income) for willful, reckless, or intentional disregard. These are in addition to Circular 230 sanctions.",
-    "tip": "Section 6694 penalties: $1,000 for unreasonable position, $5,000 for willful/reckless. Plus Circ 230.",
+    "explanation": "Under IRC §6694, PREPARER PENALTIES apply for return positions: (1) §6694(a)—UNREASONABLE POSITION: Greater of $1,000 or 50% of income earned from the return. Applies if position lacks substantial authority (and not disclosed) or lacks reasonable basis (if disclosed), (2) §6694(b)—WILLFUL/RECKLESS conduct: Greater of $5,000 or 75% of income earned. Applies for willful attempt to understate tax, reckless disregard of rules/regulations, or intentional disregard. These are SEPARATE from Circular 230 sanctions—a preparer can face both §6694 penalties AND OPR discipline. Why other answers are wrong: (B) Criminal prosecution only—these are civil penalties; criminal is separate under §7206; (C) No monetary penalty—clear monetary penalties exist; (D) $50 per return—that's §6695 procedural penalty.",
+    "tip": "§6694 penalties: (a) UNREASONABLE = $1,000 or 50% income. (b) WILLFUL/RECKLESS = $5,000 or 75% income. SEPARATE from Circular 230 sanctions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14050,8 +14050,8 @@ const questions = [
       "D": "Notify the SEC"
     },
     "correctAnswer": "B",
-    "explanation": "For listed transactions (IRS-identified abusive tax avoidance transactions) and similar reportable transactions, the 'more likely than not' standard applies (greater than 50% chance of success). Stricter disclosure and reasonable cause rules apply.",
-    "tip": "Listed transactions: Higher standard—more likely than not (>50%). Special disclosure required.",
+    "explanation": "Under Circular 230 and IRC §6662A, advice on LISTED TRANSACTIONS (IRS-identified abusive tax avoidance schemes published in IRS guidance) requires HEIGHTENED STANDARDS: (1) MORE LIKELY THAN NOT standard—greater than 50% probability of being sustained on merits, (2) Full DISCLOSURE of transaction required on Form 8886, (3) STRICT LIABILITY for accuracy-related penalties (§6662A)—no reasonable cause defense for undisclosed listed transactions, (4) Practitioner must make REASONABLE EFFORTS to identify listed transactions. Listed transactions are the most aggressive—normal 'realistic possibility' is insufficient. Why other answers are wrong: (A) Normal standards—heightened standards apply; (C) Refuse engagement—may accept if meets higher standard; (D) Notify SEC—IRS, not SEC, regulates tax matters.",
+    "tip": "LISTED TRANSACTIONS: MORE LIKELY THAN NOT (>50%) standard. Form 8886 disclosure. No reasonable cause defense if undisclosed. Highest standard.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14071,8 +14071,8 @@ const questions = [
       "D": "Conduct disciplinary proceedings and impose sanctions for Circular 230 violations"
     },
     "correctAnswer": "D",
-    "explanation": "OPR investigates potential Circular 230 violations, conducts disciplinary proceedings, and imposes sanctions (censure, suspension, disbarment, monetary penalties). It does not handle criminal matters (Criminal Investigation does) or tax collection (IRS Collection does).",
-    "tip": "OPR: Investigates and sanctions Circular 230 violations. Administrative, not criminal.",
+    "explanation": "The OFFICE OF PROFESSIONAL RESPONSIBILITY (OPR) is the IRS division that: (1) INVESTIGATES potential Circular 230 violations, (2) Conducts DISCIPLINARY PROCEEDINGS against practitioners, (3) IMPOSES SANCTIONS (censure, suspension, disbarment, monetary penalties), (4) Maintains LISTS of suspended/disbarred practitioners. OPR handles ADMINISTRATIVE discipline only—NOT: tax refunds (IRS Refund office), tax collection (IRS Collection), or CRIMINAL PROSECUTION (Department of Justice and IRS Criminal Investigation). Practitioners may appeal OPR decisions. Why other answers are wrong: (A) Issue refunds—that's IRS processing; (B) Collect taxes—that's IRS Collection; (C) Prosecute crimes—that's DOJ/Criminal Investigation.",
+    "tip": "OPR = ADMINISTRATIVE discipline: Investigate + discipline + sanction Circular 230 violations. NOT refunds, collection, or criminal prosecution.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14092,8 +14092,8 @@ const questions = [
       "D": "An enrolled agent license"
     },
     "correctAnswer": "A",
-    "explanation": "Anyone who prepares or assists in preparing federal tax returns for compensation must have a PTIN. This includes employees of tax preparation firms. The PTIN must be renewed annually and must appear on all returns prepared.",
-    "tip": "PTIN required for all paid preparers. Annual renewal. Must appear on returns.",
+    "explanation": "Under IRC §6109(a)(4) and IRS regulations, ALL PAID TAX RETURN PREPARERS must obtain a PREPARER TAX IDENTIFICATION NUMBER (PTIN). Requirements: (1) Must be RENEWED ANNUALLY (fee required), (2) Must appear on EVERY return prepared (in the 'Paid Preparer' section), (3) Applies to anyone who receives COMPENSATION for preparing or assisting in preparing federal tax returns, (4) Includes EMPLOYEES of tax preparation firms (not just partners/owners). The PTIN is separate from and does not replace requirements for CPAs, attorneys, or enrolled agents. Why other answers are wrong: (B) CPA license—PTIN is separate; CPAs still need PTIN; (C) Special IRS certification—PTIN is the requirement; (D) EA license—EAs need PTIN too; PTIN is universal for paid preparers.",
+    "tip": "§6109(a)(4) PTIN: REQUIRED for ALL paid preparers. Annual renewal. Must appear on returns. Separate from CPA/EA credentials.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14113,8 +14113,8 @@ const questions = [
       "D": "Only accepting contingent fees"
     },
     "correctAnswer": "C",
-    "explanation": "Disreputable conduct includes: conviction of tax crimes or crimes involving dishonesty, providing false opinions, willful failure to file returns or pay taxes, pattern of disregarding rules, misappropriation of client funds, and solicitation through false/deceptive means.",
-    "tip": "Disreputable conduct: Crime, false opinions, willful noncompliance, stealing client funds.",
+    "explanation": "Under Circular 230 §10.51, INCOMPETENCE AND DISREPUTABLE CONDUCT includes: (1) CONVICTION of any crime involving dishonesty, breach of trust, or tax crimes, (2) Giving FALSE or MISLEADING opinions, (3) WILLFUL FAILURE to file required tax returns or pay taxes, (4) Pattern of WILLFUL DISREGARD of rules and regulations, (5) MISAPPROPRIATION of client funds, (6) False or DECEPTIVE solicitation, (7) Contemptuous conduct before IRS, (8) Knowingly aiding tax fraud. OPR may pursue suspension or disbarment for any of these. Why other answers are wrong: (A) Only audit adjustments—audit adjustments alone aren't disreputable; (B) Only tax crime conviction—many other forms of disreputable conduct; (D) Only accepting contingent fees—contingent fees for original returns are prohibited but separate from disreputable conduct.",
+    "tip": "§10.51 disreputable conduct: Crime conviction + false opinions + willful noncompliance + client fund theft + deceptive solicitation. Grounds for suspension/disbarment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14134,8 +14134,8 @@ const questions = [
       "D": "All matters the same as CPAs"
     },
     "correctAnswer": "A",
-    "explanation": "Unenrolled return preparers (with PTIN but not CPA/attorney/EA) have limited practice rights: they can represent clients only in examinations for returns they prepared and signed, before revenue agents and examiners only.",
-    "tip": "Unenrolled preparer: Only represent on returns THEY prepared. Only at examination level.",
+    "explanation": "Under Circular 230 §10.7(c), UNENROLLED RETURN PREPARERS (those with PTIN but not CPA, attorney, or EA credentials) have LIMITED practice rights: (1) May represent taxpayers ONLY in EXAMINATIONS for returns they personally PREPARED AND SIGNED, (2) May appear only before REVENUE AGENTS and EXAMINERS—not appeals officers, collection, or other IRS functions, (3) Cannot represent in appeals, collections, or Tax Court. This is significantly narrower than full practitioners who can represent at all administrative levels. Why other answers are wrong: (B) Appeals and Tax Court—limited to examinations only; (C) No representation—some limited representation is allowed; (D) Same as CPAs—much more limited rights than CPAs/attorneys/EAs.",
+    "tip": "§10.7(c) unenrolled preparers: LIMITED to examinations of returns THEY prepared + signed. NO appeals, collections, or Tax Court. Much narrower than CPAs/EAs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14155,8 +14155,8 @@ const questions = [
       "D": "Is broader than attorney-client privilege"
     },
     "correctAnswer": "C",
-    "explanation": "Section 7525 provides limited privilege for CPAs and EAs similar to attorney-client privilege, but only for: (1) non-criminal tax matters, (2) before IRS and federal courts, (3) tax advice only (not return preparation), and (4) does not apply to tax shelters.",
-    "tip": "Section 7525: Limited privilege for CPAs/EAs. Tax advice only. Not criminal. Not tax shelters.",
+    "explanation": "Under IRC §7525, the FEDERALLY AUTHORIZED TAX PRACTITIONER PRIVILEGE extends attorney-client-like protection to CPAs and EAs, but with SIGNIFICANT LIMITATIONS: (1) Applies ONLY to TAX ADVICE—NOT to return preparation, tax accrual workpapers, or business advice, (2) Applies ONLY in NON-CRIMINAL federal tax matters—no privilege in criminal investigations, (3) Applies before IRS and in FEDERAL COURTS only—no state court protection, (4) Does NOT apply to TAX SHELTERS or corporate tax shelter communications, (5) Client can WAIVE the privilege. Much narrower than attorney-client privilege. Why other answers are wrong: (A) Only criminal—applies to NON-criminal only; (B) All tax communications—only tax advice, not return prep; (D) Broader than attorney-client—actually much NARROWER.",
+    "tip": "§7525 privilege: CPAs/EAs get limited privilege for TAX ADVICE only. NON-criminal + federal court only + NO tax shelters. Narrower than attorney-client.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14176,8 +14176,8 @@ const questions = [
       "D": "No continuing education is required"
     },
     "correctAnswer": "B",
-    "explanation": "Enrolled agents must complete 72 hours of continuing education every three-year enrollment cycle, with a minimum of 16 hours each year, including 2 hours of ethics annually. CE must be from IRS-approved providers.",
-    "tip": "EA continuing education: 72 hours per 3 years, minimum 16/year, 2 hours ethics/year.",
+    "explanation": "Under Circular 230 §10.6(e), ENROLLED AGENTS must complete CONTINUING EDUCATION to maintain enrollment: (1) 72 HOURS per three-year enrollment cycle, (2) MINIMUM 16 HOURS per year (no year can be zero), (3) Must include 2 HOURS OF ETHICS per year, (4) CE programs must be from IRS-APPROVED providers (AICPA, state societies, commercial providers), (5) Some hours may be through self-study. Enrolled actuaries and ERPAs have different requirements. Failure to complete CE can result in loss of enrollment. Why other answers are wrong: (A) 20 hours annually—total is 72 over 3 years with 16/year minimum; (C) 100 hours per year—excessive; requirement is 72 over 3 years; (D) No CE required—CE is mandatory for EAs.",
+    "tip": "§10.6(e) EA CE: 72 HOURS per 3 years + minimum 16/YEAR + 2 ethics/year. IRS-approved providers. Must maintain or lose enrollment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14197,8 +14197,8 @@ const questions = [
       "D": "Failure to furnish copy to taxpayer, failure to sign, failure to include PTIN, and other procedural failures"
     },
     "correctAnswer": "D",
-    "explanation": "Section 6695 imposes penalties for: failure to furnish copy to taxpayer ($50), failure to sign return ($50), failure to include PTIN ($50), failure to retain copies ($50 per return), failure to file correct information returns, and negotiating refund checks.",
-    "tip": "Section 6695: Procedural penalties—no copy, no signature, no PTIN, etc. $50 each.",
+    "explanation": "Under IRC §6695, PROCEDURAL PENALTIES for tax return preparers include: (1) §6695(a)—Failure to FURNISH COPY to taxpayer: $55 per return, (2) §6695(b)—Failure to SIGN return: $55 per return, (3) §6695(c)—Failure to include PTIN: $55 per return, (4) §6695(d)—Failure to RETAIN copies or list: $55 per return, (5) §6695(e)—Failure to file CORRECT information returns: $55 per return, (6) §6695(f)—NEGOTIATING or endorsing refund checks: $560 per check. These are SEPARATE from §6694 (unreasonable positions) and Circular 230 sanctions. Penalties are inflation-adjusted. Why other answers are wrong: (A) Only math errors—multiple procedural violations covered; (B) Only late filing—applies to specific preparer failures; (C) Only fraud—fraud is criminal; these are civil penalties.",
+    "tip": "§6695 PROCEDURAL penalties: No copy, no signature, no PTIN, no records = $55 each. Negotiating refund check = $560. Separate from §6694.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14218,8 +14218,8 @@ const questions = [
       "D": "The advice was reasonable, the other practitioner was competent, and reliance was in good faith"
     },
     "correctAnswer": "D",
-    "explanation": "Practitioners may rely on third-party advice if: (1) the advice was reasonable, (2) the advice was from a competent practitioner, and (3) reliance was in good faith. The practitioner cannot blindly rely and must evaluate the advice.",
-    "tip": "Relying on others: Must be reasonable, from competent source, good faith. Still use judgment.",
+    "explanation": "Under Circular 230 §10.34(c), practitioners may RELY ON ADVICE from another practitioner if: (1) The advice was REASONABLE under the circumstances, (2) The advice was from a COMPETENT practitioner (one qualified to give such advice), (3) Reliance was in GOOD FAITH (not mere rubber-stamping). The practitioner must still apply JUDGMENT—cannot blindly accept without evaluation. The relying practitioner should consider whether the advice is consistent with known facts and applicable law. Why other answers are wrong: (A) Family member—relationship irrelevant; competence matters; (B) Verbal and informal—form of advice doesn't matter; substance does; (C) Any form—not any advice; must meet reasonableness standards.",
+    "tip": "§10.34(c) reliance on others: REASONABLE advice + COMPETENT source + GOOD FAITH reliance. Cannot blindly accept—must still use judgment.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14239,8 +14239,8 @@ const questions = [
       "D": "Advertising violations"
     },
     "correctAnswer": "B",
-    "explanation": "Expedited suspension (without full hearing) is authorized when: professional license is lost or suspended, felony conviction, conviction of offense involving dishonesty or breach of trust, conviction of tax crime, or failure to file returns/pay taxes for four years.",
-    "tip": "Expedited suspension: Lost license, felony, tax crimes, 4 years unfiled returns. No hearing first.",
+    "explanation": "Under Circular 230 §10.82, EXPEDITED SUSPENSION allows OPR to suspend a practitioner WITHOUT A FULL HEARING prior to suspension for: (1) Loss or suspension of PROFESSIONAL LICENSE (CPA, attorney), (2) FELONY CONVICTION of any crime, (3) Conviction of crime involving DISHONESTY or BREACH OF TRUST, (4) Conviction of any TAX CRIME, (5) Failure to FILE returns or PAY taxes for FOUR consecutive years. After expedited suspension, practitioner can request hearing to lift suspension. This provides quick action for serious misconduct. Why other answers are wrong: (A) Any violation—only specific serious violations; (C) Late filing single return—requires FOUR YEARS of noncompliance; (D) Advertising violations—not grounds for expedited suspension.",
+    "tip": "§10.82 EXPEDITED suspension (no prior hearing): Lost license + felony + dishonesty crime + tax crime + 4 YEARS unfiled returns/unpaid taxes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14260,8 +14260,8 @@ const questions = [
       "D": "Advise the client and, if not corrected, consider withdrawal"
     },
     "correctAnswer": "D",
-    "explanation": "If a client fails to comply with federal tax laws or submit correct information, the practitioner must advise the client of noncompliance and consequences. If client refuses correction, the practitioner should consider withdrawal and whether to continue.",
-    "tip": "Client fraud: Advise client, recommend correction. If refused, consider withdrawal. No duty to report.",
+    "explanation": "Under Circular 230 §10.21, when a practitioner KNOWS a client has submitted FALSE INFORMATION to the IRS: (1) Must ADVISE THE CLIENT of the noncompliance, error, or omission, (2) Must explain CONSEQUENCES (penalties, interest, potential criminal exposure), (3) Must recommend CORRECTIVE ACTION (e.g., amended return), (4) If client REFUSES to correct, practitioner should CONSIDER WITHDRAWAL from engagement. CRITICAL: There is NO DUTY to report the client directly to the IRS—confidentiality applies. Cannot assist in ongoing fraud but not required to report past fraud. Why other answers are wrong: (A) Continue without action—must advise client; (B) File amended without consent—cannot act without client authorization; (C) Report to IRS—no duty to report; advise client only.",
+    "tip": "§10.21 client fraud: ADVISE client + explain consequences + recommend correction. If refused, CONSIDER WITHDRAWAL. NO duty to report to IRS.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14281,8 +14281,8 @@ const questions = [
       "D": "Censure is a public reprimand; disbarment is permanent prohibition from practice"
     },
     "correctAnswer": "D",
-    "explanation": "Censure is a public or private reprimand—the practitioner is criticized but may continue practicing. Suspension is temporary prohibition. Disbarment is the permanent prohibition from practice before the IRS, the most severe administrative sanction.",
-    "tip": "Censure = reprimand, can practice. Suspension = temporary. Disbarment = permanent ban.",
+    "explanation": "Under Circular 230 §10.50, OPR sanctions have different severity levels: (1) CENSURE—public or private REPRIMAND criticizing the practitioner's conduct; practitioner MAY CONTINUE practicing, (2) SUSPENSION—TEMPORARY prohibition from practice for a specified period; practitioner cannot practice during suspension, (3) DISBARMENT—PERMANENT prohibition from practice before the IRS; the most severe administrative sanction. Additionally, MONETARY PENALTIES may be imposed. Sanctions are based on violation severity, willfulness, harm caused, and prior history. Disbarred practitioners may later apply for reinstatement. Why other answers are wrong: (A) They are the same—significantly different consequences; (B) Censure criminal/disbarment civil—both are administrative, not criminal; (C) Disbarment temporary/censure permanent—opposite; disbarment is permanent.",
+    "tip": "§10.50 sanctions: CENSURE = reprimand (can practice). SUSPENSION = temporary ban. DISBARMENT = PERMANENT ban. Severity hierarchy.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14302,8 +14302,8 @@ const questions = [
       "D": "6"
     },
     "correctAnswer": "C",
-    "explanation": "There are five filing statuses: (1) Single, (2) Married Filing Jointly, (3) Married Filing Separately, (4) Head of Household, and (5) Qualifying Surviving Spouse (formerly Qualifying Widow(er)).",
-    "tip": "5 filing statuses: S, MFJ, MFS, HOH, QSS. Know the requirements for each.",
+    "explanation": "Under IRC §1, there are FIVE filing statuses available for individual taxpayers: (1) MARRIED FILING JOINTLY (§1(a))—spouses file one return, combining income/deductions; (2) HEAD OF HOUSEHOLD (§1(b))—unmarried with qualifying person; (3) SINGLE (§1(c))—unmarried taxpayers not qualifying for other statuses; (4) MARRIED FILING SEPARATELY (§1(d))—spouses file separate returns; (5) QUALIFYING SURVIVING SPOUSE (§2(a))—formerly 'qualifying widow(er),' uses MFJ rates for 2 years after spouse's death. Each status has different rate brackets and standard deductions. Why other answers are wrong: (A) 3 statuses—misses HOH and QSS; (B) 4 statuses—misses one status (usually QSS); (D) 6 statuses—there are only 5 recognized filing statuses under the IRC.",
+    "tip": "IRC §1: FIVE filing statuses. MFJ (§1(a)), HOH (§1(b)), Single (§1(c)), MFS (§1(d)), QSS (§2(a)). Memorize the five!",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -14323,8 +14323,8 @@ const questions = [
       "D": "January 1 of the tax year"
     },
     "correctAnswer": "A",
-    "explanation": "Filing status is determined as of December 31 of the tax year. If married on December 31, you are considered married for the entire year. Exception: death of spouse during the year has special rules.",
-    "tip": "Filing status = status on December 31. Married on 12/31 = married for the whole year.",
+    "explanation": "Per IRC §§1-2 and Reg. §1.1-1, filing status is determined as of the LAST DAY OF THE TAX YEAR (December 31 for calendar-year taxpayers). If you are married on December 31, you are considered married for the ENTIRE year—even if married on December 31. If unmarried on December 31, you are unmarried for the year. EXCEPTION: If a spouse dies during the year, the surviving spouse may file MFJ for that year (not the date of death). Why other answers are wrong: (B) Date return filed—irrelevant; status is determined by year-end facts, not filing date; (C) Any date chosen—taxpayers cannot elect their determination date; (D) January 1—status at year-end controls, not beginning of year.",
+    "tip": "Filing status = status on DECEMBER 31. Married on 12/31 = married all year. Spouse dies during year = can still file MFJ.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -14344,8 +14344,8 @@ const questions = [
       "D": "Have income over $50,000"
     },
     "correctAnswer": "C",
-    "explanation": "Head of Household requires: (1) unmarried (or considered unmarried) on December 31, (2) pay more than half the cost of maintaining a home, and (3) the home is the main home of a qualifying person for more than half the year.",
-    "tip": "HOH: Unmarried + pay >50% home costs + qualifying person lives there >6 months.",
+    "explanation": "Per IRC §2(b), HEAD OF HOUSEHOLD status requires THREE elements: (1) UNMARRIED (or 'considered unmarried' under §7703(b)) on December 31; (2) PAY MORE THAN HALF the cost of maintaining a home (rent, utilities, insurance, repairs, food at home—NOT clothing, education, or transportation); (3) The home is the MAIN HOME of a QUALIFYING PERSON for more than half the year (>6 months). Qualifying persons include: qualifying child (§152(c)), qualifying relative who is a dependent and related (§152(d)), or dependent parent (need not live with taxpayer—§2(b)(1)(B)). Why other answers are wrong: (A) Own a home—renters can be HOH; home ownership not required; (B) Be married—must be UNmarried or considered unmarried; (D) Income over $50,000—no income threshold exists for HOH status.",
+    "tip": "IRC §2(b) HOH: (1) Unmarried, (2) Pay >50% home costs, (3) Qualifying person lives there >6 months. Parent exception: can live elsewhere.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -14365,8 +14365,8 @@ const questions = [
       "D": "Full dependents and partial dependents"
     },
     "correctAnswer": "A",
-    "explanation": "There are two categories: (1) qualifying child, which has specific age, relationship, residency, and support tests, and (2) qualifying relative, which has different tests including a gross income limit.",
-    "tip": "Two types: Qualifying child (younger, no income limit) and qualifying relative (income limit, any age).",
+    "explanation": "Under IRC §152, there are TWO categories of dependents: (1) QUALIFYING CHILD (§152(c))—must meet relationship, age (<19 or <24 if student), residency (>6 months), and support tests (child doesn't provide >50% own support); NO gross income limit; (2) QUALIFYING RELATIVE (§152(d))—must meet relationship (or member of household), support (taxpayer provides >50%), GROSS INCOME limit (<exemption amount), and NOT be anyone's qualifying child. The tests differ significantly—QC focuses on age/residency; QR focuses on income/support. Why other answers are wrong: (B) Children and adults—QC can include siblings, not just children; QR can include any age; (C) Related and unrelated—both categories can include unrelated persons (foster child for QC; household member for QR); (D) Full/partial dependents—no such classification exists in the IRC.",
+    "tip": "IRC §152: TWO types. QC (§152(c)) = age/residency tests, no income limit. QR (§152(d)) = income limit, support test, any age.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -14386,8 +14386,8 @@ const questions = [
       "D": "File a joint return with their spouse (except to claim a refund)"
     },
     "correctAnswer": "D",
-    "explanation": "A person filing a joint return with their spouse generally cannot be claimed as a dependent. Exception: they can be claimed if the joint return was filed solely to claim a refund of taxes withheld.",
-    "tip": "Joint return test: Can't claim as dependent if they filed jointly (unless only for refund claim).",
+    "explanation": "Per IRC §152(b)(2), a person generally CANNOT be claimed as a dependent if they FILE A JOINT RETURN with their spouse. This 'joint return test' applies to BOTH qualifying child and qualifying relative. EXCEPTION: The person CAN be claimed as a dependent if the joint return was filed SOLELY TO CLAIM A REFUND of taxes withheld or estimated taxes paid (i.e., no tax liability on either separate or joint return). Why other answers are wrong: (A) Live outside U.S.—citizenship/residency is a separate test (§152(b)(3)); doesn't automatically disqualify; (B) Over age 18—age limit applies only to QC (§152(c)(3)); QR has no age limit; (C) Have any income—QC has no income limit; QR income limit is ~$5,050 (2024), not zero.",
+    "tip": "IRC §152(b)(2): Joint return test. Married person filing jointly = NOT your dependent. Exception: joint return filed ONLY for refund.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -14407,8 +14407,8 @@ const questions = [
       "D": "Only the year of the spouse's death"
     },
     "correctAnswer": "C",
-    "explanation": "Qualifying Surviving Spouse is available for the two tax years following the year of the spouse's death. Requirements: didn't remarry, have a dependent child, and maintained a home as the child's principal residence.",
-    "tip": "QSS: 2 years after death year. Need dependent child + maintain home. Same rates as MFJ.",
+    "explanation": "Per IRC §2(a), QUALIFYING SURVIVING SPOUSE (QSS) status is available for the TWO TAX YEARS FOLLOWING the year of the spouse's death. Requirements: (1) Taxpayer's spouse died in either of the TWO preceding tax years; (2) Taxpayer did NOT REMARRY before end of current year; (3) Taxpayer has a DEPENDENT CHILD (qualifying child) or stepchild; (4) Taxpayer paid >50% of maintaining a home that was the child's PRINCIPAL RESIDENCE for the entire year. QSS uses the SAME tax rates as Married Filing Jointly—the most favorable rates. Why other answers are wrong: (A) Any widowed taxpayer—must meet specific requirements (child, not remarried, etc.); (B) Up to 5 years—only available for 2 years after death year; (D) Only year of death—in the death year, surviving spouse can file MFJ; QSS is for the following 2 years.",
+    "tip": "IRC §2(a) QSS: 2 years AFTER death year + dependent child + maintain home + not remarried. Uses MFJ rates!",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -14428,8 +14428,8 @@ const questions = [
       "D": "21 at year end"
     },
     "correctAnswer": "C",
-    "explanation": "The age test requires the child to be under 19 at year end, or under 24 if a full-time student. No age limit applies if the child is permanently and totally disabled. Age is measured at December 31.",
-    "tip": "QC age: <19, or <24 if full-time student, or any age if permanently disabled.",
+    "explanation": "Per IRC §152(c)(3), the AGE TEST for a qualifying child requires the child to be: (1) Under age 19 at the END of the calendar year, OR (2) Under age 24 at the end of the year AND a FULL-TIME STUDENT for at least 5 months during the year, OR (3) PERMANENTLY AND TOTALLY DISABLED (any age). Age is measured as of December 31. Additionally, under §152(c)(3)(A), the child must be younger than the taxpayer (or spouse if MFJ). Why other answers are wrong: (A) Under 16—that's the Child Tax Credit age limit, not QC age test; (B) Under 18—too restrictive; QC allows under 19; (D) Under 21—no such threshold; 19/24 are the key ages.",
+    "tip": "IRC §152(c)(3) QC age: <19 (or <24 if full-time student 5+ months, or any age if disabled). Measured at December 31.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14449,8 +14449,8 @@ const questions = [
       "D": "More than half the year"
     },
     "correctAnswer": "D",
-    "explanation": "The residency test requires the child to live with the taxpayer for more than half the year (over 6 months). Temporary absences for school, illness, vacation, or military service count as living at home.",
-    "tip": "QC residency: >6 months. Temporary absences (school, vacation, military) still count.",
+    "explanation": "Per IRC §152(c)(1)(B), the RESIDENCY TEST for a qualifying child requires the child to have the SAME PRINCIPAL PLACE OF ABODE as the taxpayer for MORE THAN HALF THE YEAR (>6 months). Per Reg. §1.152-1(b), TEMPORARY ABSENCES count as living with the taxpayer—including absences for: education (school, college), illness, business, vacation, military service, or incarceration. The test focuses on where the child 'normally lives'—not physical presence every day. Why other answers are wrong: (A) At least 9 months—overstates the requirement; >6 months (half year) is sufficient; (B) At least one day—far too lenient; must be >50% of the year; (C) The entire year—too strict; Code requires only more than half the year.",
+    "tip": "IRC §152(c)(1)(B) QC residency: Same principal abode >6 months. Temporary absences (school, vacation, military, illness) count!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14470,8 +14470,8 @@ const questions = [
       "D": "$1,000"
     },
     "correctAnswer": "B",
-    "explanation": "A qualifying relative must have gross income less than the exemption amount ($4,700 for 2023, $5,050 for 2024). This amount is indexed annually. Note: The personal exemption is suspended but this amount is still used for this test.",
-    "tip": "QR gross income: Less than exemption amount (~$5,000). Tax-exempt income excluded.",
+    "explanation": "Per IRC §152(d)(1)(B), a qualifying relative must have GROSS INCOME less than the EXEMPTION AMOUNT (§151(d)). For 2024, this threshold is $5,050 (indexed annually). Although the personal exemption deduction was suspended by TCJA (2018-2025), the exemption AMOUNT is still used for this gross income test. GROSS INCOME under §61 includes wages, interest, dividends, taxable Social Security, and net self-employment income. It EXCLUDES tax-exempt income like municipal bond interest. Why other answers are wrong: (A) Standard deduction amount—the QR test uses the exemption amount (~$5,050), not the standard deduction (~$14,600); (C) $10,000—too high; actual threshold is approximately half that; (D) $1,000—far too low; actual threshold is ~$5,050 (2024).",
+    "tip": "IRC §152(d)(1)(B) QR gross income test: <exemption amount (~$5,050 for 2024). Uses §61 gross income (excludes tax-exempt income).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14491,8 +14491,8 @@ const questions = [
       "D": "At least 25% of support"
     },
     "correctAnswer": "A",
-    "explanation": "The taxpayer must provide more than 50% of the potential dependent's total support for the year. Support includes food, lodging, clothing, medical care, education, and similar items.",
-    "tip": "QR support: Taxpayer must provide >50%. Include fair rental value of lodging.",
+    "explanation": "Per IRC §152(d)(1)(C), the SUPPORT TEST for a qualifying relative requires the TAXPAYER to provide MORE THAN HALF (>50%) of the person's TOTAL SUPPORT for the year. Per Reg. §1.152-1(a)(2), support includes: food, lodging (at FAIR RENTAL VALUE, not actual cost), clothing, medical/dental care, education, recreation, transportation, and similar necessities. Support EXCLUDES: scholarships for full-time students, and the person's own savings that aren't spent. The test compares taxpayer's contributions to TOTAL support from all sources. Why other answers are wrong: (B) 100% of support—threshold is >50%, not 100%; (C) Any amount of support—providing any amount isn't enough; must provide MAJORITY; (D) At least 25%—too low; must exceed 50%.",
+    "tip": "IRC §152(d)(1)(C) QR support: Taxpayer provides >50% of TOTAL support. Lodging = fair rental value. Scholarships excluded.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14512,8 +14512,8 @@ const questions = [
       "D": "Have no income"
     },
     "correctAnswer": "B",
-    "explanation": "Unlike qualifying relative, the qualifying child support test only requires that the child NOT provide more than half of their own support. The taxpayer doesn't have to provide most of the support—just the child can't.",
-    "tip": "QC support: Child must NOT provide >50% of own support. Different from QR test!",
+    "explanation": "Per IRC §152(c)(1)(D), the SUPPORT TEST for a qualifying child is DIFFERENT from the QR test. For QC, the child must NOT have provided MORE THAN HALF of their OWN support for the year. KEY DISTINCTION: The QC support test focuses on what the CHILD provides—NOT what the taxpayer provides. The taxpayer doesn't need to provide >50%—they just need the child NOT to be self-supporting. This allows grandparents, other family, or multiple sources to provide support, as long as the child isn't primarily self-supporting. Why other answers are wrong: (A) Receive support only from parents—support can come from anyone; (C) Receive more than half support from taxpayer—that's the QR test, not QC; (D) Have no income—child can have income; they just can't provide >50% of their own support.",
+    "tip": "IRC §152(c)(1)(D) QC support: Child must NOT provide >50% of OWN support. Different from QR! Focus on child's self-support, not taxpayer's contributions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14533,8 +14533,8 @@ const questions = [
       "D": "Only property taxes"
     },
     "correctAnswer": "C",
-    "explanation": "Cost of maintaining a home includes: rent or mortgage interest (not principal), property taxes, insurance, repairs, utilities, and food consumed in the home. It does not include clothing, education, medical, vacations, or capital items.",
-    "tip": "Home costs: Rent, mortgage interest, taxes, insurance, repairs, utilities, food at home. NOT clothing.",
+    "explanation": "Per IRC §2(b)(1) and IRS Pub. 501, to qualify for HEAD OF HOUSEHOLD, the taxpayer must pay MORE THAN HALF the cost of MAINTAINING A HOME. Qualifying household expenses include: RENT or MORTGAGE INTEREST (not principal payments), property taxes, property insurance, repairs/maintenance, utilities (gas, electric, water), and FOOD CONSUMED IN THE HOME. EXCLUDED from household costs: clothing, education, medical care, vacations, life insurance, transportation, and the fair rental value of the home. The cost is calculated for the year, comparing taxpayer's payments to total household costs. Why other answers are wrong: (A) Clothing and transportation—these are personal expenses, not home maintenance; (B) Only mortgage payments—multiple costs count, and only INTEREST portion of mortgage qualifies; (D) Only property taxes—taxes are one component, but other costs also count.",
+    "tip": "IRC §2(b) home costs: Rent/mortgage INTEREST + taxes + insurance + repairs + utilities + food at home. NOT clothing, education, medical, or principal.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14554,8 +14554,8 @@ const questions = [
       "D": "Must itemize if spouse itemizes"
     },
     "correctAnswer": "B",
-    "explanation": "MFS typically results in higher tax. Limitations include: no EITC, education credits reduced, child tax credit reduced, Social Security may be taxable, IRA contribution phase-outs start at $0, and both must itemize if one does.",
-    "tip": "MFS penalties: No EITC, limited credits, SS taxable, must both itemize or both standard deduction.",
+    "explanation": "Under the IRC, MARRIED FILING SEPARATELY (MFS) taxpayers face significant LIMITATIONS and PENALTIES: (1) NO Earned Income Tax Credit (EITC) under §32; (2) NO adoption credit under §23; (3) Education credits (§25A) are disallowed; (4) Student loan interest deduction (§221) is disallowed; (5) IRA contribution phase-outs START AT $0 for active participants; (6) Up to 85% of Social Security may be taxable (§86); (7) MUST BOTH ITEMIZE or BOTH take standard deduction—cannot mix; (8) Child Tax Credit limitations. MFS is generally disadvantageous except for specific situations (liability protection, IBR loan payments). Why other answers are wrong: (A) Same benefits as MFJ—MFS loses many benefits; (C) Double standard deduction—MFS gets HALF, not double; (D) Must itemize if spouse itemizes—this IS a correct limitation, but (B) captures the broader picture.",
+    "tip": "MFS penalties: NO EITC, NO education credits, NO student loan deduction, SS 85% taxable, both must itemize OR both standard. Generally worst status!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14575,8 +14575,8 @@ const questions = [
       "D": "Son or daughter"
     },
     "correctAnswer": "C",
-    "explanation": "Qualifying child relationship includes: child, stepchild, adopted child, eligible foster child, sibling, stepsibling, half-sibling, or descendants of any of these. It does NOT include parents or grandparents (they may be qualifying relatives).",
-    "tip": "QC relationship: Your child, sibling, or their descendants. NOT parents (they're QR).",
+    "explanation": "Per IRC §152(c)(2), the RELATIONSHIP TEST for a qualifying child includes: (1) SON or DAUGHTER (including adopted, stepchild, or eligible foster child placed by authorized agency); (2) SIBLING (brother, sister, half-brother/sister, stepbrother/sister); or (3) DESCENDANT of any of these (grandchild, niece, nephew). The relationship must go DOWNWARD (child/sibling/their descendants). Parents, grandparents, aunts, and uncles are EXCLUDED from QC but may qualify as QUALIFYING RELATIVES under §152(d). Why other answers are wrong: (A) Stepchild or foster child—these ARE included, making this answer incomplete but not wrong; (B) Sibling or half-sibling—these ARE included; (D) Son or daughter—these ARE included. (C) is the ONLY answer that lists EXCLUDED persons (parents/grandparents).",
+    "tip": "IRC §152(c)(2) QC relationship: Child, stepchild, foster, sibling, half-sibling, step-sibling, or DESCENDANTS of these. Parents/aunts/uncles = QR only.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14596,8 +14596,8 @@ const questions = [
       "D": "They simply choose to be considered unmarried"
     },
     "correctAnswer": "A",
-    "explanation": "A married person is 'considered unmarried' if: (1) filing separately, (2) maintained home as main home for child who is dependent for over 6 months, (3) paid over half cost of home upkeep, and (4) spouse didn't live in home last 6 months of year.",
-    "tip": "Considered unmarried: File MFS + lived apart last 6 months + dependent child + pay >50% home costs.",
+    "explanation": "Per IRC §7703(b), a married person may be 'CONSIDERED UNMARRIED' (and thus eligible for HOH) if ALL of the following conditions are met: (1) Files a SEPARATE RETURN (MFS); (2) Paid MORE THAN HALF the cost of maintaining the home for the year; (3) Taxpayer's home was the PRINCIPAL RESIDENCE of a qualifying child (must be dependent) for MORE THAN HALF the year; (4) Spouse did NOT live in the home during the LAST SIX MONTHS of the tax year. This 'abandoned spouse' rule allows married persons to claim HOH benefits without divorce. Why other answers are wrong: (B) File jointly—must file SEPARATELY to be considered unmarried; (C) Married less than one year—duration of marriage is irrelevant; (D) Simply choose—cannot elect status; must meet all four objective requirements.",
+    "tip": "IRC §7703(b) 'Considered unmarried': (1) File MFS, (2) Pay >50% home costs, (3) Dependent child lived there >6 months, (4) Spouse absent last 6 months.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14617,8 +14617,8 @@ const questions = [
       "D": "Live in a different state"
     },
     "correctAnswer": "B",
-    "explanation": "A person cannot be a qualifying relative if they are the qualifying child of any taxpayer (even if that taxpayer doesn't claim them). This prevents double-claiming and ensures proper categorization.",
-    "tip": "Can't be QR if person is anyone's qualifying child—even if that taxpayer doesn't claim them.",
+    "explanation": "Per IRC §152(d)(1)(D), to be a QUALIFYING RELATIVE, the person must NOT be the QUALIFYING CHILD of the taxpayer OR of ANY OTHER TAXPAYER. This 'not a qualifying child' test prevents double categorization. IMPORTANT: Even if the other taxpayer doesn't actually CLAIM the person, if the person MEETS the QC tests for anyone, they CANNOT be a qualifying relative. Example: A 20-year-old (non-student) living with parents who doesn't support themselves might be QC of parents, so grandparents cannot claim them as QR. Why other answers are wrong: (A) Also be a qualifying child—the tests are MUTUALLY EXCLUSIVE; cannot be both; (C) Be over age 65—no age requirement for QR (any age qualifies); (D) Live in a different state—residence requirements vary; this is not a universal QR test.",
+    "tip": "IRC §152(d)(1)(D): Can't be QR if person is ANYONE's qualifying child—even if that taxpayer doesn't claim them. Mutual exclusivity!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14638,8 +14638,8 @@ const questions = [
       "D": "The taxpayer who files first"
     },
     "correctAnswer": "A",
-    "explanation": "Tiebreaker rules: (1) parent wins over non-parent, (2) if both parents and child lived with each, parent with longer residency wins, (3) if same residency, parent with highest AGI wins, (4) if neither is parent, highest AGI wins.",
-    "tip": "Tiebreaker: Parent first → longer residency → higher AGI. Non-parents use AGI only.",
+    "explanation": "Per IRC §152(c)(4), when a child is the QUALIFYING CHILD of more than one taxpayer, TIEBREAKER RULES determine who may claim the child: (1) If ONLY ONE is the PARENT, the PARENT claims; (2) If BOTH are PARENTS (divorced/separated) who don't file jointly, the parent with whom the child lived LONGER wins; (3) If child lived with both parents EQUALLY, the parent with the HIGHEST AGI wins; (4) If NEITHER is a parent (e.g., grandparents), the person with the HIGHEST AGI claims the child. Parents ALWAYS take priority over non-parents. Only ONE taxpayer may claim. Why other answers are wrong: (B) Older taxpayer—age is never a tiebreaker criterion; (C) More dependents—number of dependents is irrelevant; (D) Files first—filing order is irrelevant; objective criteria control.",
+    "tip": "IRC §152(c)(4) tiebreakers: (1) Parent beats non-parent, (2) Longer residency, (3) Higher AGI. Parents always win over others!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14659,8 +14659,8 @@ const questions = [
       "D": "The dependent has no income"
     },
     "correctAnswer": "C",
-    "explanation": "A multiple support agreement (Form 2120) is used when no one person provides >50% support. Requirements: (1) group provides >50%, (2) taxpayer provides >10%, (3) each who could claim (but for >50% test) signs a waiver.",
-    "tip": "MSA: Group provides >50%, taxpayer provides >10%, others waive. Form 2120.",
+    "explanation": "Per IRC §152(d)(3), a MULTIPLE SUPPORT AGREEMENT allows one member of a group to claim a qualifying relative when NO SINGLE PERSON provides >50% of support. Requirements: (1) TWO OR MORE persons together provide MORE THAN 50% of the person's total support; (2) EACH person in the group would be entitled to claim the dependent EXCEPT for the >50% support requirement; (3) The claiming taxpayer provides MORE THAN 10% of support; (4) EACH other eligible person signs a written WAIVER (Form 2120, Multiple Support Declaration) agreeing not to claim. Only ONE person claims; others waive. Why other answers are wrong: (A) Oldest supporter—age is irrelevant; any eligible person providing >10% may claim; (B) 100% support—defeats purpose; MSA is for when no one provides >50%; (D) No income—dependent's income is tested separately under §152(d)(1)(B), not the MSA rules.",
+    "tip": "IRC §152(d)(3) MSA: Group >50% total + claimant >10% + others waive (Form 2120). Used when no one person provides majority.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14680,8 +14680,8 @@ const questions = [
       "D": "Any amount"
     },
     "correctAnswer": "B",
-    "explanation": "A dependent child with only earned income must file if income exceeds the standard deduction amount (~$14,600 for 2024). Different rules apply for unearned income (often $1,250 threshold) or combined earned/unearned income.",
-    "tip": "Dependent filing: Earned only = exceeds standard deduction. Unearned has lower threshold (~$1,250).",
+    "explanation": "Per IRC §6012(a)(1) and §63(c)(5), a DEPENDENT with ONLY EARNED INCOME must file a return if earned income exceeds the STANDARD DEDUCTION amount ($14,600 for 2024 single filers). Dependent's standard deduction is limited to the GREATER OF: (1) $1,300 (2024), or (2) earned income plus $450, up to the regular standard deduction. If the dependent has UNEARNED INCOME (interest, dividends), different thresholds apply: generally $1,300 (2024) for unearned-only or complex rules for combined income. The 'kiddie tax' (§1(g)) may also require filing. Why other answers are wrong: (A) $1,000—too low; this approximates the unearned income threshold; (C) $5,000—arbitrary; not a filing threshold; (D) Any amount—no filing required for small amounts below the standard deduction.",
+    "tip": "Dependent filing: Earned only = exceeds standard deduction (~$14,600). Unearned only = ~$1,300. Combined = more complex rules apply.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14701,8 +14701,8 @@ const questions = [
       "D": "The parent with higher income"
     },
     "correctAnswer": "A",
-    "explanation": "The custodial parent (parent with whom the child lived the majority of nights) generally has the right to claim the child as a qualifying child. The noncustodial parent can claim only if custodial parent releases the claim (Form 8332).",
-    "tip": "Divorced: Custodial parent claims child. Can release claim via Form 8332.",
+    "explanation": "Per IRC §152(c)(4)(B), for DIVORCED OR SEPARATED PARENTS, the child is treated as the qualifying child of the CUSTODIAL PARENT (the parent with whom the child lived for the GREATER NUMBER OF NIGHTS during the year). This is the default rule. Per IRC §152(e), the custodial parent may RELEASE the claim to the noncustodial parent using Form 8332 (Release/Revocation of Release of Claim to Exemption for Child). The release transfers the dependency exemption and Child Tax Credit to the noncustodial parent, but HOH status, EITC, and dependent care credit remain with the custodial parent. Why other answers are wrong: (B) The father—gender is irrelevant; residency determines custodial parent; (C) Whoever files first—filing order is irrelevant; residency controls; (D) Higher income—income is a tiebreaker only when both parents have equal residency.",
+    "tip": "IRC §152(c)(4)(B): Custodial parent (more nights) claims child. §152(e): Form 8332 releases claim to noncustodial parent (limited benefits transfer).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14722,8 +14722,8 @@ const questions = [
       "D": "The dependent's Social Security Number"
     },
     "correctAnswer": "D",
-    "explanation": "You must provide the dependent's Social Security Number (or ITIN or ATIN for adopted children) on your return. Failure to include a valid number will result in denial of the dependent exemption and related credits.",
-    "tip": "Must list dependent's SSN (or ITIN/ATIN). No number = no dependency claim.",
+    "explanation": "Per IRC §151(e) and §6109(e), to claim a person as a dependent, you must include the dependent's TAXPAYER IDENTIFICATION NUMBER (TIN) on your return. For most dependents, this is their SOCIAL SECURITY NUMBER (SSN). Alternatives: ITIN (Individual Taxpayer Identification Number) for those ineligible for SSN, or ATIN (Adoption Taxpayer Identification Number) for children in process of adoption. Per §6724, failure to include a correct TIN results in DENIAL of the dependency-related deductions and credits. The IRS may also impose accuracy penalties. Why other answers are wrong: (A) Driver's license number—not a valid TIN for tax purposes; (B) No identification required—TIN is mandatory to claim; (C) Employer ID (EIN)—used for businesses, not individual dependents.",
+    "tip": "IRC §151(e): Must include dependent's SSN (or ITIN/ATIN). No TIN = no claim + potential penalties. Non-negotiable requirement!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -14743,8 +14743,8 @@ const questions = [
       "D": "They receive government assistance"
     },
     "correctAnswer": "B",
-    "explanation": "The relationship test for qualifying relative can be satisfied by: (1) being in a specified relationship (child, sibling, parent, aunt, uncle, etc.), OR (2) living as a member of taxpayer's household for entire year (if not violating local law).",
-    "tip": "QR relationship: Specific relative OR member of household all year. Can't violate local law.",
+    "explanation": "Per IRC §152(d)(2), the RELATIONSHIP TEST for a qualifying relative can be satisfied in TWO ways: (1) Being in a SPECIFIED RELATIONSHIP under §152(d)(2)(A)-(H): child/descendant, sibling, parent/ancestor, stepparent, niece/nephew, aunt/uncle, son/daughter-in-law, or brother/sister-in-law; OR (2) Being a MEMBER OF THE TAXPAYER'S HOUSEHOLD for the ENTIRE YEAR (all 12 months). The household member rule allows UNRELATED persons to qualify if they live with the taxpayer all year AND the relationship does NOT VIOLATE LOCAL LAW (e.g., some states prohibit cohabitation). Why other answers are wrong: (A) Sign an agreement—no written agreement is required; (C) Over age 65—no age requirement for QR; (D) Receive government assistance—government benefits don't affect QR status (though may affect support calculations).",
+    "tip": "IRC §152(d)(2) QR relationship: Specified relative (parent, aunt, uncle, in-laws, etc.) OR member of household ALL YEAR (if legal).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14764,8 +14764,8 @@ const questions = [
       "D": "The parent has income over $50,000"
     },
     "correctAnswer": "C",
-    "explanation": "Special rule: A dependent parent doesn't have to live with the taxpayer. The taxpayer can maintain a separate home for the parent and still qualify for HOH. This is the only qualifying person who doesn't have to live with the taxpayer.",
-    "tip": "HOH parent exception: Dependent parent can live elsewhere (nursing home). Taxpayer must pay >50% home costs.",
+    "explanation": "Per IRC §2(b)(1)(B), there is a SPECIAL EXCEPTION for DEPENDENT PARENTS: A dependent parent does NOT have to live with the taxpayer to qualify the taxpayer for Head of Household status. The taxpayer can maintain a SEPARATE HOME for the parent (e.g., nursing home, parent's own residence) and STILL qualify for HOH, as long as: (1) The taxpayer pays MORE THAN HALF the cost of maintaining the parent's home; (2) The parent qualifies as the taxpayer's dependent. This is the ONLY qualifying person who doesn't have to live with the taxpayer for HOH purposes. Why other answers are wrong: (A) Taxpayer is married—HOH requires being unmarried or 'considered unmarried'; (B) Parent files joint return—joint return test applies; (D) Parent has income over $50,000—QR gross income test would likely disqualify them.",
+    "tip": "IRC §2(b)(1)(B) PARENT EXCEPTION: Dependent parent can live ELSEWHERE (nursing home, own home). Taxpayer pays >50% of THAT home's costs. ONLY exception to residency!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14785,8 +14785,8 @@ const questions = [
       "D": "Nothing—Form 8332 is not recognized"
     },
     "correctAnswer": "B",
-    "explanation": "Form 8332 releases only the dependency exemption and child tax credit to the noncustodial parent. The custodial parent retains: Head of Household status, EITC, child and dependent care credit, and exclusion for dependent care benefits.",
-    "tip": "Form 8332: Noncustodial gets dependency + CTC. Custodial keeps HOH, EITC, dependent care credit.",
+    "explanation": "Per IRC §152(e), when a CUSTODIAL PARENT releases the dependency claim using FORM 8332, the NONCUSTODIAL parent can claim ONLY: (1) The dependency EXEMPTION (suspended 2018-2025 but still relevant for determining status); (2) The CHILD TAX CREDIT (§24). The CUSTODIAL PARENT RETAINS: (1) Head of Household filing status; (2) EITC (§32)—must live with child >6 months; (3) Child and Dependent Care Credit (§21); (4) Exclusion for employer-provided dependent care (§129). Form 8332 transfers LIMITED benefits only—the residency-based benefits stay with the custodial parent. Why other answers are wrong: (A) All benefits—only exemption and CTC transfer; (C) Only EITC—EITC stays with custodial parent; (D) Nothing—Form 8332 IS a valid release mechanism under §152(e).",
+    "tip": "Form 8332 (§152(e)): Noncustodial gets EXEMPTION + CTC only. Custodial KEEPS: HOH, EITC, dependent care credit. Limited transfer!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14806,8 +14806,8 @@ const questions = [
       "D": "Any age if receiving dividends"
     },
     "correctAnswer": "A",
-    "explanation": "The kiddie tax applies to children: under age 18, or under 19 who don't provide half their support, or full-time students under 24 who don't provide half their support. It taxes unearned income above a threshold at the parent's rate.",
-    "tip": "Kiddie tax: <18, or <19 if dependent, or <24 if student + dependent. Unearned income taxed at parent's rate.",
+    "explanation": "Per IRC §1(g), the KIDDIE TAX applies to the UNEARNED INCOME of a child who is: (1) Under age 18 at year end; OR (2) Under age 19 at year end AND does NOT provide more than half their own support (i.e., is a dependent); OR (3) A FULL-TIME STUDENT under age 24 at year end AND does NOT provide more than half their own support. The kiddie tax taxes net unearned income above a threshold ($2,500 for 2024: first $1,250 offset by standard deduction, next $1,250 at child's rate) at the PARENT'S MARGINAL TAX RATE. After TCJA revision, it uses parent's rate (not trust rates as briefly applied). Why other answers are wrong: (B) Only under age 14—that was the original rule; now extends to 18/19/24; (C) Only if a dependent—under-18 children are subject regardless of dependency status; (D) Any age receiving dividends—age limits apply.",
+    "tip": "IRC §1(g) Kiddie Tax: <18, or <19 if not self-supporting, or <24 if student + not self-supporting. Unearned income above threshold taxed at PARENT'S rate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14827,8 +14827,8 @@ const questions = [
       "D": "A resident of any country"
     },
     "correctAnswer": "C",
-    "explanation": "A dependent must be a U.S. citizen, U.S. national, U.S. resident alien, or a resident of Canada or Mexico. An exception exists for certain adopted children.",
-    "tip": "Dependent must be: U.S. citizen/national/resident, OR Canada/Mexico resident.",
+    "explanation": "Per IRC §152(b)(3), to be claimed as a dependent, a person must be: (1) A U.S. CITIZEN; (2) A U.S. NATIONAL (American Samoa, Swains Island); (3) A U.S. RESIDENT ALIEN; or (4) A RESIDENT OF CANADA OR MEXICO. This citizenship/residency test applies to BOTH qualifying child and qualifying relative. EXCEPTION under §152(b)(3)(B): An adopted child who lives with the taxpayer as a household member for the entire year is treated as a U.S. citizen regardless of actual citizenship. This treaty-based exception for Canada/Mexico residents does NOT extend to other countries. Why other answers are wrong: (A) Born in U.S.—birth location is irrelevant; citizenship/residency status matters; (B) U.S. citizen only—nationals, resident aliens, and Canada/Mexico residents also qualify; (D) Resident of any country—only U.S., Canada, or Mexico; other countries don't qualify.",
+    "tip": "IRC §152(b)(3) citizenship test: U.S. citizen, national, resident alien, OR Canada/Mexico resident. Adopted children exception applies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14848,8 +14848,8 @@ const questions = [
       "D": "May file Married Filing Jointly for that year if not remarried"
     },
     "correctAnswer": "D",
-    "explanation": "In the year of death, the surviving spouse may file MFJ with the deceased spouse (if not remarried by year end). This is often the most advantageous status. QSS status is available for the following two years if conditions are met.",
-    "tip": "Year of death: Can file MFJ. Years 2-3 after: QSS if conditions met. Then single/HOH.",
+    "explanation": "Per IRC §6013(a)(3) and §2(a), in the YEAR A SPOUSE DIES, the surviving spouse may file MARRIED FILING JOINTLY for that entire year (if not remarried before year-end). The deceased spouse's income up to the date of death is included on the joint return. This is typically the most advantageous status due to MFJ's favorable rates. TIMELINE: Year of death = MFJ available; Years 1-2 AFTER death = QUALIFYING SURVIVING SPOUSE (§2(a)) if conditions met (dependent child, maintain home, not remarried); Year 3+ = Single or HOH. Why other answers are wrong: (A) Must file HOH—MFJ is available and usually better; (B) Cannot file a return—return is still required; (C) Must file as single—MFJ is available in the death year.",
+    "tip": "Death year: MFJ allowed (§6013(a)(3)). Years 1-2 after: QSS (§2(a)). Year 3+: Single/HOH. Remarriage ends MFJ/QSS eligibility.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14869,8 +14869,8 @@ const questions = [
       "D": "They are permanently and totally disabled"
     },
     "correctAnswer": "D",
-    "explanation": "A qualifying child must be younger than the taxpayer (or the taxpayer's spouse if filing jointly). The one exception: there is no age requirement if the person is permanently and totally disabled.",
-    "tip": "QC must be younger than taxpayer. Exception: Disabled = no age requirement at all.",
+    "explanation": "Per IRC §152(c)(3)(A), a person must be YOUNGER THAN THE TAXPAYER (or younger than the taxpayer's spouse, if filing MFJ) to be a qualifying child. This prevents a taxpayer from claiming an older sibling as a dependent. The ONLY EXCEPTION: Per §152(c)(3)(B), there is NO AGE REQUIREMENT if the individual is PERMANENTLY AND TOTALLY DISABLED. A disabled person of any age (even older than the taxpayer) can be a qualifying child if all other QC tests are met. Disability is defined under §22(e)(3)—unable to engage in substantial gainful activity due to physical or mental condition expected to last 12+ months or result in death. Why other answers are wrong: (A) No income—income is not a QC test; (B) Lives with taxpayer—residency is a separate test; (C) Is a student—student status affects age limit, not the 'younger than taxpayer' rule.",
+    "tip": "IRC §152(c)(3)(A): QC must be YOUNGER than taxpayer. §152(c)(3)(B) exception: Permanently disabled = NO age limit at all.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14890,8 +14890,8 @@ const questions = [
       "D": "Their unearned income"
     },
     "correctAnswer": "C",
-    "explanation": "A dependent's standard deduction is the greater of: (1) $1,250 (2024), or (2) earned income plus $400, not to exceed the regular standard deduction. This prevents dependents with no/low earned income from using the full standard deduction.",
-    "tip": "Dependent's standard deduction: Greater of $1,250 OR (earned income + $400), capped at regular amount.",
+    "explanation": "Per IRC §63(c)(5), a DEPENDENT'S STANDARD DEDUCTION is LIMITED to the GREATER OF: (1) $1,300 (2024, indexed annually); OR (2) The dependent's EARNED INCOME plus $450 (2024), up to the REGULAR standard deduction amount (~$14,600 for 2024). This formula prevents dependents with little or no earned income from sheltering large amounts of unearned income. Example: A dependent with $3,000 earned income gets a standard deduction of $3,450 ($3,000 + $450). A dependent with only $500 unearned income gets $1,300 (the minimum). Why other answers are wrong: (A) $500—too low; minimum is $1,300 (2024); (B) Their total income—the formula is specific, not simply total income; (D) Their unearned income—unearned income doesn't increase the standard deduction; only earned income does.",
+    "tip": "IRC §63(c)(5): Dependent's std deduction = GREATER of $1,300 OR (earned income + $450), capped at regular amount. Protects against sheltering unearned income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14911,8 +14911,8 @@ const questions = [
       "D": "Net earnings from self-employment"
     },
     "correctAnswer": "D",
-    "explanation": "Gross income for the QR test includes all taxable income: wages, interest, dividends, net self-employment income, taxable Social Security. It excludes tax-exempt income, nontaxable Social Security, and gifts.",
-    "tip": "QR gross income: Include taxable income (wages, SE income, taxable SS). Exclude tax-exempt amounts.",
+    "explanation": "Per IRC §152(d)(1)(B) and §61, GROSS INCOME for the qualifying relative test includes all items of TAXABLE income under §61: wages, interest, dividends, NET self-employment income (gross receipts minus business expenses), TAXABLE portion of Social Security benefits, rental income, and capital gains. EXCLUDED from gross income for this test: TAX-EXEMPT interest (municipal bonds under §103), NONTAXABLE Social Security (amounts below the taxable threshold under §86), gifts and inheritances (§102), and welfare benefits. Why other answers are wrong: (A) Child support received—child support is NOT includible in recipient's gross income (§71); (B) Tax-exempt interest—specifically EXCLUDED from gross income; (C) Social Security (fully included)—only the TAXABLE portion counts; up to 85% may be taxable under §86, not 100%.",
+    "tip": "QR gross income (§152(d)(1)(B)): Taxable income under §61—wages, NET SE income, taxable SS, interest, dividends. EXCLUDES tax-exempt income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14932,8 +14932,8 @@ const questions = [
       "D": "Recreation and transportation"
     },
     "correctAnswer": "C",
-    "explanation": "Support includes: food, lodging (at fair rental value), clothing, education, medical, recreation, transportation, and similar necessities. Scholarships received by full-time students are NOT included in total support calculations.",
-    "tip": "Support includes everything needed to live. Scholarships excluded for full-time students.",
+    "explanation": "Per Reg. §1.152-1(a)(2), TOTAL SUPPORT for the dependency tests includes: food, LODGING (at FAIR RENTAL VALUE, not actual cost), clothing, education, medical/dental care, recreation, transportation, and similar necessities. EXCLUDED from support: Per IRC §152(f)(5), SCHOLARSHIPS received by a FULL-TIME STUDENT are NOT counted as support provided by the student OR included in total support calculations. This prevents a scholarship from disqualifying a student as a dependent. Tax-exempt income is also generally excluded from the support calculation. Why other answers are wrong: (A) Food and lodging—these ARE included in support; (B) Clothing and medical—these ARE included in support; (D) Recreation and transportation—these ARE included in support. (C) scholarships is the ONLY item specifically EXCLUDED.",
+    "tip": "Support (Reg. §1.152-1(a)(2)): Food, lodging (FRV), clothing, education, medical, recreation, transportation. SCHOLARSHIPS excluded (§152(f)(5))!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14953,8 +14953,8 @@ const questions = [
       "D": "Cannot file separately"
     },
     "correctAnswer": "C",
-    "explanation": "In community property states (AZ, CA, ID, LA, NV, NM, TX, WA, WI), MFS filers generally must each report half of community property income. Separate property income is reported by the earning spouse.",
-    "tip": "Community property + MFS: Split community income 50/50. Separate property stays with owner.",
+    "explanation": "Per IRC §66 and state community property laws, in COMMUNITY PROPERTY STATES (Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, Washington, Wisconsin), married taxpayers filing separately must each report ONE-HALF of COMMUNITY INCOME. Community income generally includes: wages earned during marriage, income from community property, and business income. SEPARATE PROPERTY income (income from property owned before marriage or acquired by gift/inheritance) is reported by the owning spouse. Exception under §66(a): Spouses living apart all year who don't transfer community income may treat all earnings as separate income. Why other answers are wrong: (A) Report all to higher earner—community income is split 50/50; (B) Each report only own income—community income must be split regardless of who earned it; (D) Cannot file separately—MFS is available; just requires income splitting.",
+    "tip": "Community property (§66): MFS = split community income 50/50. 9 states: AZ, CA, ID, LA, NV, NM, TX, WA, WI. Separate property stays separate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14974,8 +14974,8 @@ const questions = [
       "D": "Only the following year"
     },
     "correctAnswer": "A",
-    "explanation": "A child born alive any time during the year, even on December 31, may be claimed as a dependent for the entire year if all tests are met. Similarly, a child who dies during the year may be claimed if tests were met while alive.",
-    "tip": "Born any day = full year dependent (if tests met). Death during year = still claimable if qualified.",
+    "explanation": "Per IRS Publication 501 and Reg. §1.152-1, a child born ALIVE at ANY TIME during the year—even on December 31—may be claimed as a dependent for the ENTIRE YEAR if all other dependency tests are met. There is NO proration of dependency claims. Similarly, a child who DIES during the year may still be claimed as a dependent if the child met the dependency tests while alive. The key is that the child was alive at some point during the tax year and met the applicable tests. Birth certificate or death certificate establishes the dates. Why other answers are wrong: (B) One day prorated—no proration exists; full-year claim or nothing; (C) Cannot be claimed until age 1—no minimum age requirement; newborns qualify; (D) Only the following year—the birth year itself qualifies for the dependency claim.",
+    "tip": "Born alive ANY day of year = full-year dependent (no proration). Dies during year = still claimable if tests met while alive.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -14995,8 +14995,8 @@ const questions = [
       "D": "Never—married children don't qualify"
     },
     "correctAnswer": "A",
-    "explanation": "A married child can be a qualifying person for HOH if the taxpayer can claim the child as a dependent. This requires the child to not file a joint return (exception: filed only to claim refund). Other qualifying child tests must be met.",
-    "tip": "Married child for HOH: Only if you can claim them as dependent (joint return test applies).",
+    "explanation": "Per IRC §2(b)(1)(A) and §152(b)(2), a MARRIED CHILD can be a qualifying person for HEAD OF HOUSEHOLD if the taxpayer can claim the child as a DEPENDENT. The key obstacle is the JOINT RETURN TEST under §152(b)(2): A person who files a joint return with their spouse generally cannot be claimed as a dependent. EXCEPTION: The married child CAN be claimed if the joint return was filed SOLELY TO CLAIM A REFUND (no tax liability on either separate or joint return). If the married child doesn't file jointly, or files only for refund, all other QC tests (relationship, age, residency, support) must still be met. Why other answers are wrong: (B) Spouse has no income—spouse's income level doesn't control; joint return test is the issue; (C) Married less than one year—marriage duration is irrelevant; (D) Never qualify—married children CAN qualify if joint return test is satisfied.",
+    "tip": "Married child for HOH: Must pass joint return test (§152(b)(2)). No joint return filed, OR joint return only for refund claim = can be QP.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15016,8 +15016,8 @@ const questions = [
       "D": "Be any age"
     },
     "correctAnswer": "A",
-    "explanation": "The Child Tax Credit has an additional age requirement: the qualifying child must be under age 17 at the end of the year. This is younger than the general qualifying child age test (under 19, or 24 if student).",
-    "tip": "CTC: Regular QC tests PLUS under age 17 at year end. Stricter than dependency age.",
+    "explanation": "Per IRC §24(c), for the CHILD TAX CREDIT (CTC), a qualifying child must meet ALL the regular qualifying child tests under §152(c) AND an ADDITIONAL age requirement: the child must be UNDER AGE 17 at the END of the calendar year. This is STRICTER than the general QC age test (under 19, or under 24 if full-time student). The CTC provides up to $2,000 per qualifying child (2024), with up to $1,700 refundable as the Additional CTC. Phase-out begins at $200,000 AGI ($400,000 MFJ). Why other answers are wrong: (B) Have earned income—the child doesn't need earned income for CTC; the taxpayer needs earned income for refundable portion; (C) U.S. citizen only—child needs SSN valid for employment, but can be citizen, national, or resident; (D) Any age—17-year-olds and older don't qualify for CTC (but may qualify for $500 ODC).",
+    "tip": "IRC §24(c) CTC: Regular QC tests PLUS under age 17 at year end. 17+ = no CTC (may get $500 Other Dependent Credit instead).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15037,8 +15037,8 @@ const questions = [
       "D": "Federal income tax and Social Security"
     },
     "correctAnswer": "C",
-    "explanation": "FICA (Federal Insurance Contributions Act) taxes consist of two components: Social Security tax (OASDI) and Medicare tax. Both employers and employees pay these taxes on wages.",
-    "tip": "FICA = Social Security + Medicare. Both employer and employee pay half each.",
+    "explanation": "Under the FEDERAL INSURANCE CONTRIBUTIONS ACT (FICA), codified at IRC §§3101-3128, employment taxes consist of TWO components: (1) SOCIAL SECURITY (OASDI—Old-Age, Survivors, and Disability Insurance) under §3101(a) and §3111(a)—6.2% each from employee and employer (12.4% total) up to the wage base; (2) MEDICARE (HI—Hospital Insurance) under §3101(b) and §3111(b)—1.45% each from employee and employer (2.9% total) with no wage base limit. Combined FICA rate is 7.65% employee + 7.65% employer = 15.3% total. Why other answers are wrong: (A) Medicare and unemployment—FUTA is separate from FICA; (B) Social Security only—Medicare is also part of FICA; (D) Federal income tax—income tax withholding is separate from FICA.",
+    "tip": "FICA (IRC §§3101-3128) = Social Security (6.2% each) + Medicare (1.45% each). Total: 7.65% employee + 7.65% employer = 15.3%.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -15058,8 +15058,8 @@ const questions = [
       "D": "7.65%"
     },
     "correctAnswer": "C",
-    "explanation": "The Social Security tax rate is 6.2% for employees and 6.2% for employers (12.4% total). This applies only to wages up to the annual wage base ($168,600 for 2024). Self-employed pay the full 12.4%.",
-    "tip": "Social Security: 6.2% employee + 6.2% employer = 12.4% total. Up to wage base.",
+    "explanation": "Per IRC §3101(a), the EMPLOYEE'S Social Security tax rate is 6.2% on wages up to the annual WAGE BASE ($168,600 for 2024, indexed annually). Per §3111(a), employers pay a matching 6.2%, for a combined rate of 12.4%. Self-employed individuals pay the full 12.4% under §1401(a). Once an employee's wages exceed the wage base with ONE employer, that employer stops withholding SS tax; if multiple employers, each withholds up to the base (excess claimed as credit on Form 1040). Why other answers are wrong: (A) 12.4%—that's the COMBINED rate (employee + employer); (B) 1.45%—that's the Medicare rate; (D) 7.65%—that's combined SS + Medicare for employees.",
+    "tip": "IRC §3101(a): Employee SS = 6.2%. §3111(a): Employer SS = 6.2%. Total = 12.4%. Applies only to wage base ($168,600 for 2024).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -15079,8 +15079,8 @@ const questions = [
       "D": "2.9%"
     },
     "correctAnswer": "C",
-    "explanation": "The basic Medicare tax rate is 1.45% for employees and 1.45% for employers (2.9% total). Unlike Social Security, there is no wage base limit for Medicare tax. An additional 0.9% applies to high earners.",
-    "tip": "Medicare: 1.45% employee + 1.45% employer = 2.9% total. No wage cap!",
+    "explanation": "Per IRC §3101(b), the EMPLOYEE'S basic Medicare tax rate is 1.45% on ALL wages—there is NO WAGE BASE LIMIT. Per §3111(b), employers pay a matching 1.45%, for a combined basic rate of 2.9%. Additionally, per §3101(b)(2), employees owe an ADDITIONAL MEDICARE TAX of 0.9% on wages exceeding $200,000 (single), $250,000 (MFJ), or $125,000 (MFS)—this additional tax is employee-only with NO employer match. Self-employed pay 2.9% under §1401(b), plus the 0.9% additional tax if applicable. Why other answers are wrong: (A) 6.2%—that's the Social Security rate; (B) 0.9%—that's the Additional Medicare Tax, not the basic rate; (D) 2.9%—that's the combined basic rate (employee + employer).",
+    "tip": "IRC §3101(b): Employee Medicare = 1.45% (no wage cap). §3101(b)(2): +0.9% Additional Medicare Tax on high earners (employee only).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -15100,8 +15100,8 @@ const questions = [
       "D": "Employers only"
     },
     "correctAnswer": "D",
-    "explanation": "FUTA is paid entirely by employers—employees do not pay FUTA tax. The tax funds unemployment compensation programs. The gross rate is 6.0% on the first $7,000 of wages per employee.",
-    "tip": "FUTA: Employer only pays. Employee pays nothing for federal unemployment.",
+    "explanation": "Per IRC §3301, the FEDERAL UNEMPLOYMENT TAX ACT (FUTA) imposes an excise tax on EMPLOYERS ONLY—employees do NOT pay FUTA. The gross FUTA rate is 6.0% under §3301 on the first $7,000 of wages per employee annually (the FUTA wage base under §3306(b)(1)). Employers receive a credit of up to 5.4% for state unemployment taxes paid (§3302), resulting in a net effective rate of 0.6%. FUTA funds the federal/state unemployment compensation system. Form 940 is filed annually. Why other answers are wrong: (A) Both equally—employees pay nothing toward FUTA; (B) Federal government—FUTA is paid by employers to the government; (C) Employees only—employees are not liable for FUTA.",
+    "tip": "IRC §3301 FUTA: EMPLOYER ONLY pays. 6.0% gross - 5.4% state credit = 0.6% net. First $7,000 wages per employee.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -15121,8 +15121,8 @@ const questions = [
       "D": "File their tax return"
     },
     "correctAnswer": "C",
-    "explanation": "Form W-4 (Employee's Withholding Certificate) provides the employer with information needed to calculate federal income tax withholding. Employees indicate filing status, multiple jobs, dependents, and other adjustments.",
-    "tip": "W-4: Employee gives to employer for withholding calculation. Updated in 2020.",
+    "explanation": "Per IRC §3402(f)(2) and IRS regulations, FORM W-4 (Employee's Withholding Certificate) is used by employees to provide employers with information needed to calculate FEDERAL INCOME TAX WITHHOLDING. The redesigned 2020 W-4 collects: (1) Filing status; (2) Multiple jobs/spouse works adjustments; (3) Dependent credits; (4) Other income and deductions; (5) Extra withholding amounts. Employees must complete W-4 when starting a new job. Changes can be made anytime but take effect by the start of the first payroll period ending 30+ days after submission. Why other answers are wrong: (A) Unemployment benefits—not related to W-4; (B) Report wages earned—W-2 reports wages, not W-4; (D) File tax return—W-4 is for withholding, not filing.",
+    "tip": "Form W-4 (IRC §3402(f)(2)): Employee → Employer for withholding calculation. 2020 redesign eliminated allowances; uses filing status, credits, adjustments.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -15142,8 +15142,8 @@ const questions = [
       "D": "December 31"
     },
     "correctAnswer": "A",
-    "explanation": "Employers must furnish Form W-2 to employees by January 31 following the tax year. The same January 31 deadline applies for filing W-2s with the Social Security Administration (paper or electronic).",
-    "tip": "W-2 deadline: January 31 to employee AND to SSA. Same date for both.",
+    "explanation": "Per IRC §6051(a) and §6071(c), employers must furnish FORM W-2 (Wage and Tax Statement) to employees by JANUARY 31 following the calendar year. The SAME January 31 deadline applies for filing W-2s with the SOCIAL SECURITY ADMINISTRATION (SSA) per §6071(c)—whether paper or electronic. This unified deadline (since 2017) helps combat refund fraud by allowing IRS to verify wages before issuing refunds. W-2 shows wages, tips, compensation, and all taxes withheld (federal, state, FICA). Failure to furnish penalties apply under §6722. Why other answers are wrong: (B) February 28—that was the old SSA filing deadline; now both are January 31; (C) April 15—that's the individual return deadline; (D) December 31—that's year-end, not the W-2 deadline.",
+    "tip": "IRC §6051, §6071(c): W-2 due JANUARY 31 to employees AND SSA. Same deadline for both since 2017.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -15163,8 +15163,8 @@ const questions = [
       "D": "7.65%"
     },
     "correctAnswer": "B",
-    "explanation": "The self-employment tax rate is 15.3% (12.4% Social Security + 2.9% Medicare). Self-employed individuals pay both the employer and employee portions. The Social Security portion applies up to the wage base limit.",
-    "tip": "SE tax: 15.3% (12.4% SS + 2.9% Medicare). Self-employed pay both halves.",
+    "explanation": "Per IRC §1401, the SELF-EMPLOYMENT TAX rate is 15.3%, consisting of: (1) §1401(a): 12.4% for Social Security (OASDI)—equivalent to 6.2% employee + 6.2% employer portions; (2) §1401(b): 2.9% for Medicare (HI)—equivalent to 1.45% employee + 1.45% employer portions. The Social Security portion applies only up to the wage base ($168,600 for 2024); Medicare applies to ALL net SE earnings. Additionally, the 0.9% Additional Medicare Tax under §1401(b)(2) applies to SE income exceeding $200K (single)/$250K (MFJ). Why other answers are wrong: (A) 12.4%—that's only the Social Security portion; (C) 6.2%—that's the employee-only SS rate; (D) 7.65%—that's employee-only FICA (SS + Medicare).",
+    "tip": "IRC §1401 SE tax: 15.3% = 12.4% SS (§1401(a)) + 2.9% Medicare (§1401(b)). Self-employed pay BOTH halves. SS stops at wage base; Medicare continues.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15184,8 +15184,8 @@ const questions = [
       "D": "100% of net self-employment income"
     },
     "correctAnswer": "C",
-    "explanation": "Self-employment tax is calculated on 92.35% (100% - 7.65%) of net earnings from self-employment. This reduction approximates the employer's share of FICA that employees don't pay tax on.",
-    "tip": "SE tax base = Net SE income × 92.35%. Reduces base to account for 'employer half.'",
+    "explanation": "Per IRC §1402(a)(12), self-employment tax is calculated on 92.35% (100% - 7.65%) of NET EARNINGS FROM SELF-EMPLOYMENT. This reduction replicates the treatment of W-2 employees who don't pay income tax on the employer's FICA contribution. Calculation: Net SE income × 0.9235 = SE tax base. Then apply 15.3% (or 12.4% on portion exceeding wage base for Medicare-only). Net earnings = gross SE income minus allowable business deductions under §162. Why other answers are wrong: (A) 50%—not the correct reduction percentage; (B) Gross income—must use NET earnings, not gross; (D) 100%—the 7.65% reduction mirrors employer's untaxed FICA contribution.",
+    "tip": "IRC §1402(a)(12): SE tax base = Net SE income × 92.35%. The 7.65% reduction mirrors employer's untaxed FICA share.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15205,8 +15205,8 @@ const questions = [
       "D": "5.4%"
     },
     "correctAnswer": "A",
-    "explanation": "The gross FUTA rate is 6.0%, but employers receive a credit of up to 5.4% for state unemployment taxes paid, resulting in a net effective rate of 0.6% on the first $7,000 of each employee's wages.",
-    "tip": "FUTA: 6.0% gross - 5.4% credit = 0.6% net rate. On first $7,000 per employee.",
+    "explanation": "Per IRC §3301, the gross FUTA rate is 6.0% on the first $7,000 of wages per employee (the FUTA wage base under §3306(b)(1)). However, under IRC §3302, employers receive a CREDIT of up to 5.4% for contributions to STATE UNEMPLOYMENT FUNDS that meet federal requirements. This results in a NET EFFECTIVE FUTA RATE of 0.6% (6.0% - 5.4%). Maximum FUTA per employee: $7,000 × 0.6% = $42/year. Credit reduction states (those that borrowed from federal fund) may have reduced credits, increasing effective rate. Why other answers are wrong: (B) 2.0%—not a standard FUTA rate; (C) 6.0%—that's the GROSS rate before credit; (D) 5.4%—that's the maximum credit, not the net rate.",
+    "tip": "IRC §3301-3302: FUTA = 6.0% gross - 5.4% state credit = 0.6% NET. First $7,000 wages per employee. Max $42/employee/year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15226,8 +15226,8 @@ const questions = [
       "D": "$500,000 for all taxpayers"
     },
     "correctAnswer": "B",
-    "explanation": "The 0.9% Additional Medicare Tax applies to wages over $200,000 (single/HOH), $250,000 (MFJ), or $125,000 (MFS). Employers must withhold on wages over $200,000 regardless of filing status. Only employees pay this tax.",
-    "tip": "Additional Medicare: 0.9% on wages over $200K (single)/$250K (MFJ). Employee only, no employer match.",
+    "explanation": "Per IRC §3101(b)(2), the 0.9% ADDITIONAL MEDICARE TAX applies to wages exceeding threshold amounts: $200,000 (single, HOH, QSS), $250,000 (MFJ), or $125,000 (MFS). This tax is paid by EMPLOYEES ONLY—there is NO employer match. Employers must withhold on wages over $200,000 regardless of filing status (cannot consider spouse's wages). If underwithholding occurs due to multiple jobs or spouse's income, the employee reconciles on Form 8959. The tax also applies to SE income under §1401(b)(2). Why other answers are wrong: (A) $125,000 for all—that's only the MFS threshold; (C) $168,600—that's the Social Security wage base, not Additional Medicare; (D) $500,000—no such threshold exists.",
+    "tip": "IRC §3101(b)(2): Additional Medicare Tax = 0.9% on wages >$200K (single)/$250K (MFJ)/$125K (MFS). EMPLOYEE ONLY—no employer match.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15247,8 +15247,8 @@ const questions = [
       "D": "$500,000"
     },
     "correctAnswer": "B",
-    "explanation": "If employment taxes during the lookback period (July 1 through June 30 of the prior fiscal year) exceeded $50,000, the employer is a semi-weekly depositor. Otherwise, they are a monthly depositor.",
-    "tip": "Deposit schedule: >$50K lookback = semi-weekly. ≤$50K = monthly. $100K+ in one day = next day.",
+    "explanation": "Per Reg. §31.6302-1(b), employers determine their deposit schedule based on the LOOKBACK PERIOD (July 1 through June 30 of the prior fiscal year). If total employment taxes during the lookback period exceeded $50,000, the employer is a SEMI-WEEKLY DEPOSITOR; otherwise, a MONTHLY DEPOSITOR. Semi-weekly depositors must deposit within 3 banking days of payday (Wed-Fri paydays deposit by Wednesday; Sat-Tue paydays deposit by Friday). Monthly depositors deposit by the 15th of the following month. The $100,000 NEXT-DAY RULE overrides both schedules. Why other answers are wrong: (A) $10,000—too low; (C) $100,000—that's the next-day deposit trigger, not the semi-weekly threshold; (D) $500,000—no such threshold.",
+    "tip": "Reg. §31.6302-1(b): >$50K lookback = semi-weekly depositor. ≤$50K = monthly. $100K+ accumulated in one day = next banking day.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15268,8 +15268,8 @@ const questions = [
       "D": "State income tax"
     },
     "correctAnswer": "C",
-    "explanation": "Form 941 reports wages paid, federal income tax withheld, both employee and employer portions of Social Security and Medicare taxes. It is filed quarterly, due by the last day of the month following the quarter end.",
-    "tip": "Form 941: Quarterly. Reports federal withholding + FICA (both portions). Due end of month after quarter.",
+    "explanation": "Per IRC §6011 and §6071(a), FORM 941 (Employer's Quarterly Federal Tax Return) is used to report: (1) Total wages paid; (2) FEDERAL INCOME TAX WITHHELD; (3) EMPLOYEE portion of Social Security and Medicare taxes; (4) EMPLOYER portion of Social Security and Medicare taxes; (5) Adjustments, credits, and deposits. Form 941 is filed QUARTERLY, due by the last day of the month following the quarter-end (April 30, July 31, October 31, January 31). If all taxes were deposited timely, employers have 10 extra days. Small employers may use annual Form 944 instead. Why other answers are wrong: (A) Worker's comp—not reported on Form 941; (B) FUTA—reported on Form 940 annually; (D) State income tax—reported on state forms, not federal 941.",
+    "tip": "Form 941 (IRC §6011, §6071): Quarterly report of withholding + FICA (both portions). Due end of month after quarter (4/30, 7/31, 10/31, 1/31).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15289,8 +15289,8 @@ const questions = [
       "D": "100%"
     },
     "correctAnswer": "C",
-    "explanation": "Self-employed individuals can deduct 50% of self-employment tax as an adjustment to gross income (for AGI). This approximates the employer's share of FICA that W-2 employees never pay tax on.",
-    "tip": "SE tax deduction: 50% deductible FOR AGI. Mirrors employer's untaxed FICA portion.",
+    "explanation": "Per IRC §164(f), self-employed individuals may deduct 50% (one-half) of self-employment tax as an adjustment to gross income (deduction FOR AGI). This above-the-line deduction is available whether or not the taxpayer itemizes. The rationale: W-2 employees don't pay income tax on the employer's FICA contribution—this deduction provides equivalent treatment to self-employed individuals. The deduction appears on Schedule 1, Line 15. Note: This deduction reduces INCOME TAX, not SE tax itself. Why other answers are wrong: (A) None—50% IS deductible; (B) 25%—not the correct percentage; (D) 100%—only half (the 'employer equivalent') is deductible.",
+    "tip": "IRC §164(f): Deduct 50% of SE tax FOR AGI (above-the-line). Mirrors employer's FICA that employees don't pay tax on.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15310,8 +15310,8 @@ const questions = [
       "D": "A payee fails to provide a correct TIN or underreported interest/dividends"
     },
     "correctAnswer": "D",
-    "explanation": "Backup withholding (24%) applies to certain payments (interest, dividends, non-employee compensation) when the payee fails to provide a correct TIN, fails to certify TIN, or IRS notifies of underreporting.",
-    "tip": "Backup withholding: 24% on payments when TIN missing/incorrect or underreporting notice.",
+    "explanation": "Per IRC §3406, BACKUP WITHHOLDING at 24% applies to certain REPORTABLE PAYMENTS (interest, dividends, non-employee compensation, broker proceeds, rents, royalties) when: (1) The payee FAILS TO PROVIDE a correct TIN (§3406(a)(1)(A)); (2) The payee fails to CERTIFY TIN as correct (Form W-9); (3) IRS notifies payer of INCORRECT TIN (CP2100 notice); (4) IRS notifies payer of payee's UNDERREPORTING of interest/dividends. The payer withholds 24% and remits to IRS. Payee claims credit on tax return. Why other answers are wrong: (A) Over $100,000—income level is irrelevant; (B) New business—employer's newness doesn't trigger backup withholding; (C) No W-4—W-4 issues affect regular withholding, not backup withholding on 1099 payments.",
+    "tip": "IRC §3406: Backup withholding = 24% on reportable payments when TIN missing/incorrect/uncertified or IRS underreporting notice.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15331,8 +15331,8 @@ const questions = [
       "D": "$600"
     },
     "correctAnswer": "B",
-    "explanation": "Household employers must withhold FICA if they pay a household employee cash wages of $2,700 or more (2024, indexed annually). FUTA applies if paying $1,000+ in any calendar quarter. The 'nanny tax' uses Schedule H.",
-    "tip": "Household employee: FICA if wages ≥$2,700 (indexed). FUTA if $1,000+ in any quarter.",
+    "explanation": "Per IRC §3121(a)(7)(B) and IRS Publication 926, the 'NANNY TAX' rules require household employers to withhold and pay FICA (Social Security + Medicare) if they pay a household employee cash wages of $2,700 OR MORE during the calendar year (2024, indexed annually). FUTA applies under §3306(a)(3) if total cash wages paid to ALL household employees is $1,000 or more in ANY calendar quarter. Household employment taxes are reported on SCHEDULE H (Form 1040). Household employees include: nannies, housekeepers, private nurses, gardeners, cooks (if working in/around the home). Why other answers are wrong: (A) $1,000—that's the FUTA quarterly threshold; (C) $7,000—that's the FUTA wage base; (D) $600—that's the 1099 threshold, not household FICA.",
+    "tip": "IRC §3121(a)(7)(B) Nanny Tax: FICA if cash wages ≥$2,700/year. FUTA if $1,000+/quarter total. Report on Schedule H.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15352,8 +15352,8 @@ const questions = [
       "D": "The degree of control the payer has over how work is performed"
     },
     "correctAnswer": "D",
-    "explanation": "The primary factor is the degree of control: employees are subject to control over what, when, where, and how they work. Independent contractors control their methods and means. IRS uses behavioral, financial, and relationship factors.",
-    "tip": "Employee vs IC: Control is key. Employee = payer controls method. IC = controls own method.",
+    "explanation": "Per common law rules adopted by IRS (Rev. Rul. 87-41, Reg. §31.3121(d)-1), the KEY factor distinguishing EMPLOYEES from INDEPENDENT CONTRACTORS is the DEGREE OF CONTROL the payer has over HOW work is performed. IRS examines THREE categories: (1) BEHAVIORAL CONTROL—instructions on when, where, how to work; (2) FINANCIAL CONTROL—business expenses, opportunity for profit/loss, significant investment; (3) TYPE OF RELATIONSHIP—written contracts, benefits, permanency. EMPLOYEES are controlled in method and means; INDEPENDENT CONTRACTORS control their own methods. Misclassification has significant tax consequences (employment taxes, penalties). Why other answers are wrong: (A) Benefits—a factor but not the KEY factor; (B) Engagement length—duration alone doesn't determine status; (C) Payment method—how paid is less important than control over work.",
+    "tip": "Reg. §31.3121(d)-1: CONTROL is key. IRS tests: Behavioral control, Financial control, Relationship type. Employee = controlled. IC = independent.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15373,8 +15373,8 @@ const questions = [
       "D": "January 31"
     },
     "correctAnswer": "D",
-    "explanation": "Form 1099-NEC reports nonemployee compensation (payments to independent contractors) of $600 or more. Due date is January 31 to recipients and to the IRS (same deadline for both).",
-    "tip": "1099-NEC: January 31 to recipient AND IRS. Same deadline as W-2s.",
+    "explanation": "Per IRC §6041A and §6071(c), FORM 1099-NEC (Nonemployee Compensation) is used to report payments of $600 OR MORE to independent contractors, freelancers, and other nonemployees for services performed in trade or business. The form is due to RECIPIENTS by JANUARY 31 and must be filed with the IRS by the SAME JANUARY 31 deadline (whether paper or electronic). This form was reintroduced in 2020, replacing Box 7 of Form 1099-MISC for nonemployee compensation. The unified January 31 deadline helps combat refund fraud. Why other answers are wrong: (A) February 28—that's the 1099-MISC IRS filing deadline (paper); (B) March 31—electronic 1099-MISC deadline; (C) December 31—year-end, not filing deadline.",
+    "tip": "IRC §6041A, §6071(c): Form 1099-NEC for IC payments ≥$600. Due JANUARY 31 to recipient AND IRS. Same as W-2 deadline.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15394,8 +15394,8 @@ const questions = [
       "D": "Only Social Security tax stops; Medicare continues"
     },
     "correctAnswer": "D",
-    "explanation": "Social Security tax (6.2%) has an annual wage base limit ($168,600 for 2024). Medicare (1.45%) has no wage limit and continues on all wages. Above $200K/$250K, Additional Medicare Tax (0.9%) also applies.",
-    "tip": "SS has wage cap. Medicare has no cap. SS stops, Medicare never stops.",
+    "explanation": "Per IRC §3121(a)(1), Social Security tax has an annual WAGE BASE LIMIT ($168,600 for 2024, indexed annually). Once an employee's wages exceed this limit, Social Security tax (6.2% employee + 6.2% employer) STOPS being withheld. However, per §3121(a), Medicare tax (1.45% each) has NO WAGE BASE LIMIT—it continues on ALL wages regardless of amount. Additionally, per §3101(b)(2), the 0.9% Additional Medicare Tax applies to wages exceeding $200K (single)/$250K (MFJ). Why other answers are wrong: (A) Only Medicare stops—incorrect; Medicare NEVER stops; (B) Both at reduced rate—rates don't reduce; SS stops entirely above base; (C) Both stop—Medicare continues indefinitely.",
+    "tip": "IRC §3121(a)(1): SS wage base ($168,600 for 2024)—SS STOPS above this. Medicare (§3121(a))—NO cap, NEVER stops.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15415,8 +15415,8 @@ const questions = [
       "D": "Only corporations"
     },
     "correctAnswer": "B",
-    "explanation": "The trust fund recovery penalty (100% of unpaid trust fund taxes) applies to responsible persons who willfully fail to collect, account for, or pay over employment taxes (income tax withholding and employee FICA).",
-    "tip": "TFRP: 100% penalty on responsible persons for unpaid trust fund taxes. Personal liability!",
+    "explanation": "Per IRC §6672, the TRUST FUND RECOVERY PENALTY (TFRP) equals 100% of unpaid TRUST FUND TAXES and applies to any person who: (1) Is RESPONSIBLE for collecting, accounting for, or paying over withheld taxes; AND (2) WILLFULLY fails to do so. Trust fund taxes include: federal income tax withheld from employees AND the employee's share of FICA (NOT the employer's share). 'Responsible persons' may include corporate officers, directors, shareholders, employees with financial control, or outside accountants/payroll providers with check-signing authority. The penalty creates PERSONAL LIABILITY—piercing the corporate veil. Why other answers are wrong: (A) Late Form 941—late filing has separate penalties; (C) Employees—employees aren't responsible for employer's tax obligations; (D) Only corporations—TFRP applies to ALL business types.",
+    "tip": "IRC §6672 TFRP: 100% penalty = trust fund taxes (withholding + employee FICA). Responsible person + willful failure = PERSONAL liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15436,8 +15436,8 @@ const questions = [
       "D": "$1,000 or more"
     },
     "correctAnswer": "B",
-    "explanation": "Self-employment tax must be paid if net earnings from self-employment are $400 or more for the year. This is the threshold for being subject to the 15.3% SE tax.",
-    "tip": "SE tax threshold: $400 net SE income. Below $400 = no SE tax (but may still owe income tax).",
+    "explanation": "Per IRC §1402(b)(2), self-employment tax is required if NET EARNINGS FROM SELF-EMPLOYMENT are $400 OR MORE for the tax year. Net earnings = gross SE income minus allowable business deductions, then × 92.35%. If net SE earnings are below $400, NO self-employment tax is due (though income tax may still apply). Self-employed individuals file Schedule SE to calculate SE tax. The $400 threshold ensures that minimal amounts of SE income don't trigger the administrative burden of SE tax calculation. Why other answers are wrong: (A) $100—too low; (C) $600—that's the 1099 threshold; (D) $1,000—too high.",
+    "tip": "IRC §1402(b)(2): SE tax required if net SE earnings ≥$400. Below $400 = no SE tax. File Schedule SE.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15457,8 +15457,8 @@ const questions = [
       "D": "The end of each week"
     },
     "correctAnswer": "A",
-    "explanation": "Employees receiving $20 or more in tips during a calendar month must report them to their employer by the 10th day of the following month. The employer withholds income tax and FICA on reported tips.",
-    "tip": "Tips ≥$20/month: Report to employer by 10th of next month. Employer withholds taxes.",
+    "explanation": "Per IRC §6053(a), employees receiving CASH TIPS of $20 OR MORE in any calendar month must report them to their employer by the 10TH DAY OF THE FOLLOWING MONTH. Employees use Form 4070 (or similar written statement) to report tips. The employer then withholds FEDERAL INCOME TAX and FICA taxes on reported tips from the employee's regular wages. If wages are insufficient to cover withholding, the employee must pay the remainder directly. Unreported tips are still taxable to the employee and may trigger a penalty under §6652(b). Why other answers are wrong: (B) Year end—too late; tips must be reported monthly; (C) When filing return—employer needs timely information for withholding; (D) End of each week—reporting is monthly, not weekly.",
+    "tip": "IRC §6053(a): Tips ≥$20/month → report to employer by 10th of next month. Employer withholds from wages.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15478,8 +15478,8 @@ const questions = [
       "D": "By the next banking day"
     },
     "correctAnswer": "D",
-    "explanation": "The $100,000 next-day deposit rule requires that when undeposited taxes reach $100,000 or more on any day, the deposit must be made by the next banking day. This overrides the regular monthly or semi-weekly schedule.",
-    "tip": "$100K rule: Next banking day deposit. Trumps normal monthly/semi-weekly schedule.",
+    "explanation": "Per Reg. §31.6302-1(c)(3), the $100,000 NEXT-DAY DEPOSIT RULE requires that when undeposited employment taxes accumulate to $100,000 OR MORE on ANY single day, the deposit must be made by the NEXT BANKING DAY (not the next calendar day). This rule OVERRIDES the regular monthly or semi-weekly deposit schedule. Example: If a large payroll on Wednesday creates $100,000+ liability, deposit is due Thursday. Once triggered, the employer becomes a semi-weekly depositor for the remainder of the calendar year AND the following year. Deposits must be made electronically through EFTPS. Why other answers are wrong: (A) 3 days—too long; must be next banking day; (B) 15 days—far too long; (C) End of quarter—defeats the purpose of the rule.",
+    "tip": "Reg. §31.6302-1(c)(3): $100K+ on any day = NEXT BANKING DAY deposit. Overrides monthly/semi-weekly. Triggers semi-weekly status.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15499,8 +15499,8 @@ const questions = [
       "D": "Only self-employment income"
     },
     "correctAnswer": "C",
-    "explanation": "The 3.8% NIIT applies to net investment income (interest, dividends, capital gains, passive income), NOT to wages or self-employment income. It applies when AGI exceeds $200K (single) or $250K (MFJ).",
-    "tip": "NIIT: Investment income only. Wages already subject to Medicare/Additional Medicare instead.",
+    "explanation": "Per IRC §1411, the 3.8% NET INVESTMENT INCOME TAX (NIIT) applies to the LESSER OF: (1) Net investment income, OR (2) the excess of MAGI over threshold amounts ($200K single, $250K MFJ, $125K MFS). NET INVESTMENT INCOME includes: interest, dividends, capital gains, rental/royalty income, passive activity income, and income from trading in financial instruments. NIIT does NOT apply to: WAGES, SELF-EMPLOYMENT INCOME (already subject to SE tax/Medicare), distributions from qualified retirement plans, or tax-exempt interest. NIIT complements the 0.9% Additional Medicare Tax, which covers wages/SE income. Why other answers are wrong: (A) All income over $200K—only INVESTMENT income; (B) All wages—wages subject to Medicare, not NIIT; (D) Only SE income—SE income excluded from NIIT.",
+    "tip": "IRC §1411 NIIT: 3.8% on NET INVESTMENT INCOME (interest, dividends, gains, passive). NOT wages or SE income. Threshold: $200K/$250K.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15520,8 +15520,8 @@ const questions = [
       "D": "Subject to FICA withholding"
     },
     "correctAnswer": "C",
-    "explanation": "General partners pay self-employment tax on their distributive share of partnership ordinary income. Limited partners generally are not subject to SE tax on their distributive share (except guaranteed payments for services).",
-    "tip": "General partner = SE tax on distributive share. Limited partner = usually no SE tax.",
+    "explanation": "Per IRC §1402(a), a GENERAL PARTNER'S distributive share of partnership ORDINARY INCOME is subject to SELF-EMPLOYMENT TAX. This includes the partner's share of trade or business income, plus any guaranteed payments for services. Per §1402(a)(13), LIMITED PARTNERS are generally NOT subject to SE tax on their distributive share of partnership income—only guaranteed payments for services are subject to SE tax for limited partners. The rationale: general partners are actively involved in the business (like self-employed individuals); limited partners are passive investors. Why other answers are wrong: (A) FUTA—partners aren't employees, so FUTA doesn't apply; (B) No employment tax—general partners DO pay SE tax; (D) FICA withholding—FICA applies to W-2 employees, not partners.",
+    "tip": "IRC §1402(a): GENERAL partner = SE tax on distributive share. §1402(a)(13): LIMITED partner = NO SE tax on distributive share (only guaranteed payments).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15541,8 +15541,8 @@ const questions = [
       "D": "10% to 50%"
     },
     "correctAnswer": "B",
-    "explanation": "Late deposit penalties are: 2% (1-5 days late), 5% (6-15 days late), 10% (16+ days late), 15% (amounts still unpaid more than 10 days after IRS notice). Amounts not deposited within 10 days of notice are 15%.",
-    "tip": "Late deposit penalty: 2%-5%-10%-15% based on days late. Escalates with time.",
+    "explanation": "Per IRC §6656, the FAILURE TO DEPOSIT PENALTY for employment taxes escalates based on the length of delay: (1) 2% if deposit is 1-5 DAYS LATE; (2) 5% if deposit is 6-15 DAYS LATE; (3) 10% if deposit is 16+ DAYS LATE (but before IRS notice); (4) 15% if deposit remains unpaid more than 10 DAYS AFTER IRS NOTICE (or the day of the first delinquency notice, if earlier). These penalties apply to the amount of underpayment. The penalty is in addition to interest on late deposits. Employers can request penalty abatement for reasonable cause. Why other answers are wrong: (A) 1% to 5%—doesn't capture the full range; (C) 5% to 25%—maximum is 15%; (D) 10% to 50%—far too high.",
+    "tip": "IRC §6656 late deposit penalty: 2% (1-5 days) → 5% (6-15 days) → 10% (16+ days) → 15% (after IRS notice). Escalating structure.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15562,8 +15562,8 @@ const questions = [
       "D": "There was a reasonable basis and consistent treatment, plus filing of required returns"
     },
     "correctAnswer": "D",
-    "explanation": "Section 530 provides relief from reclassification if the employer: (1) had a reasonable basis for treating workers as ICs, (2) consistently treated similar workers as ICs, and (3) filed required Form 1099s.",
-    "tip": "Section 530 safe harbor: Reasonable basis + consistent treatment + filed 1099s = protected.",
+    "explanation": "Per SECTION 530 of the Revenue Act of 1978 (not in the IRC), employers may avoid employment tax liability for treating workers as INDEPENDENT CONTRACTORS (even if IRS reclassifies them as employees) if ALL THREE conditions are met: (1) REASONABLE BASIS—employer had a reasonable basis for the classification (judicial precedent, IRS ruling, industry practice, etc.); (2) CONSISTENT TREATMENT—employer (and predecessors) consistently treated similar workers as ICs; (3) REPORTING COMPLIANCE—employer filed all required Form 1099s for the workers. Section 530 relief does NOT require proving the workers actually ARE independent contractors—just that the classification was reasonable. Why other answers are wrong: (A) Earnings under $50K—no income threshold; (B) No audit for 3 years—audit history irrelevant; (C) Worker consent—worker agreement doesn't establish IC status.",
+    "tip": "Section 530 safe harbor: (1) Reasonable basis, (2) Consistent treatment, (3) Filed 1099s = protected from reclassification liability.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15583,8 +15583,8 @@ const questions = [
       "D": "Never pay self-employment tax"
     },
     "correctAnswer": "A",
-    "explanation": "Ministers and members of religious orders are generally treated as self-employed for Social Security/Medicare purposes, paying SE tax rather than FICA. They may apply for exemption from SE tax on religious grounds (Form 4361).",
-    "tip": "Ministers: Treated as self-employed for FICA purposes. Can apply for religious exemption.",
+    "explanation": "Per IRC §1402(c)(4) and §3121(b)(8), MINISTERS and members of RELIGIOUS ORDERS performing ministerial duties are treated as SELF-EMPLOYED for Social Security and Medicare tax purposes—even if employed by a church. They pay SE TAX (15.3%) rather than having FICA withheld. The rationale: constitutional separation of church and state (churches don't withhold employment taxes). Per §1402(e), ministers may apply for EXEMPTION from SE tax by filing Form 4361 if they are conscientiously opposed to public insurance for religious reasons. This exemption is irrevocable. Why other answers are wrong: (B) Exempt from all federal taxes—they still pay income tax; (C) Only Medicare—they pay full SE tax (SS + Medicare) unless exempt; (D) Never pay SE tax—they DO pay unless they file for exemption.",
+    "tip": "IRC §1402(c)(4): Ministers = self-employed for FICA (pay SE tax, not FICA). §1402(e): May elect exemption via Form 4361 (irrevocable).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15604,8 +15604,8 @@ const questions = [
       "D": "Monthly"
     },
     "correctAnswer": "B",
-    "explanation": "Form 940 is filed annually by January 31 (February 10 if all FUTA tax was deposited timely). Deposits are made quarterly if accumulated FUTA liability exceeds $500. The form reconciles deposits with total liability.",
-    "tip": "Form 940: Annual (by 1/31). Deposits quarterly if >$500 FUTA liability.",
+    "explanation": "Per IRC §6011(a) and §6071(a), FORM 940 (Employer's Annual Federal Unemployment Tax Return) is filed ANNUALLY—due by JANUARY 31 following the calendar year (extended to FEBRUARY 10 if all FUTA taxes were deposited on time throughout the year). While Form 940 is filed annually, FUTA deposits are made QUARTERLY if the employer's accumulated FUTA liability exceeds $500 at the end of any quarter. Deposits are due by the last day of the month following the quarter. If liability never exceeds $500, all FUTA is paid with Form 940. Why other answers are wrong: (A) Quarterly—Form 941 is quarterly; Form 940 is annual; (C) Only when >$500—the form is always filed annually; the $500 threshold affects deposit timing; (D) Monthly—not a monthly filing requirement.",
+    "tip": "Form 940 (IRC §6011, §6071): ANNUAL FUTA return due 1/31 (2/10 if deposits timely). Deposits quarterly if liability >$500.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15625,8 +15625,8 @@ const questions = [
       "D": "The employee is exempt from further withholding"
     },
     "correctAnswer": "C",
-    "explanation": "Each employer must withhold Social Security tax on wages up to the wage base, regardless of other employment. If total wages exceed the base, the employee claims the excess Social Security tax as a credit on Form 1040.",
-    "tip": "Multiple employers: Each withholds full amount. Employee claims excess SS tax credit on return.",
+    "explanation": "Per IRC §3102(a) and §31(b), EACH EMPLOYER must withhold Social Security tax on wages paid, up to the annual wage base ($168,600 for 2024), REGARDLESS of the employee's other employment. Employers have no obligation to coordinate withholding with other employers. If an employee works for MULTIPLE EMPLOYERS and total wages exceed the wage base, the employee may have EXCESS Social Security tax withheld. The excess is claimed as a CREDIT against income tax on Form 1040 (line for 'excess social security'). Note: The employer's share is NOT refundable—each employer's liability is calculated independently. Why other answers are wrong: (A) Only first employer—each employer withholds independently; (B) Proportional reduction—employers don't coordinate; (D) Employee exempt—employee still has tax withheld; excess is refunded via return.",
+    "tip": "IRC §3102(a), §31(b): Each employer withholds SS up to wage base. Multiple jobs = excess SS withheld → claim credit on Form 1040.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15646,8 +15646,8 @@ const questions = [
       "D": "Health insurance premiums paid by employer"
     },
     "correctAnswer": "A",
-    "explanation": "Personal use of a company vehicle is a taxable fringe benefit subject to income tax withholding and FICA. Health insurance, dependent care (up to limit), and group term life (up to $50K) are generally excludable.",
-    "tip": "Taxable fringe: Personal car use, excess life insurance, non-qualifying benefits. Report as wages.",
+    "explanation": "Per IRC §61(a)(1) and Reg. §1.61-21, the PERSONAL USE OF A COMPANY VEHICLE is a TAXABLE FRINGE BENEFIT, subject to both federal income tax withholding and FICA taxes. The value must be included in the employee's W-2 wages. In contrast, the following fringe benefits are generally EXCLUDABLE from income and employment taxes: (1) Health insurance premiums (§106); (2) Dependent care assistance up to $5,000 (§129); (3) Group term life insurance up to $50,000 coverage (§79); (4) Qualified transportation benefits up to limits (§132(f)). Taxable fringes must be valued using IRS methods (commuting, lease value, cents-per-mile). Why other answers are wrong: (B) Dependent care up to $5,000—excludable under §129; (C) Group term life up to $50K—excludable under §79; (D) Health insurance—excludable under §106.",
+    "tip": "IRC §61(a)(1): Personal vehicle use = TAXABLE fringe (W-2 wages). Excludable: health insurance (§106), dependent care (§129), life ≤$50K (§79).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15667,8 +15667,8 @@ const questions = [
       "D": "Subject to FUTA"
     },
     "correctAnswer": "C",
-    "explanation": "S corporation flow-through income is NOT subject to self-employment tax. Only wages paid to shareholder-employees are subject to FICA. This differs from partnerships where distributive share may be subject to SE tax.",
-    "tip": "S corp K-1 income: No SE tax. Wages subject to FICA. Must pay reasonable wages!",
+    "explanation": "Per IRC §1402(a)(2), an S CORPORATION SHAREHOLDER-EMPLOYEE's share of S corporation FLOW-THROUGH INCOME (K-1 income) is NOT subject to self-employment tax. Only WAGES paid to the shareholder-employee are subject to FICA (6.2% + 1.45% each for employer and employee). This differs from partnerships, where general partners' distributive shares ARE subject to SE tax. IMPORTANT: S corp shareholder-employees must receive REASONABLE COMPENSATION (wages) for services performed—the IRS challenges situations where shareholders take only distributions to avoid employment taxes (see David Watson case). Why other answers are wrong: (A) Exempt from all employment taxes—WAGES are still subject to FICA; (B) Subject to SE tax—S corp K-1 income is specifically excluded from SE tax; (D) Subject to FUTA—shareholders aren't subject to FUTA on K-1 income.",
+    "tip": "IRC §1402(a)(2): S corp K-1 income = NO SE tax. WAGES = FICA. Must pay REASONABLE wages or IRS recharacterizes distributions!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15688,8 +15688,8 @@ const questions = [
       "D": "Any wages are paid"
     },
     "correctAnswer": "A",
-    "explanation": "Agricultural labor has special FICA rules: employer must withhold if (1) cash wages to worker are $150 or more in the year, OR (2) employer's total agricultural wages are $2,500 or more. Different from general employment rules.",
-    "tip": "Farm workers: FICA if wages ≥$150 to worker OR employer pays $2,500+ total agricultural wages.",
+    "explanation": "Per IRC §3121(a)(8), AGRICULTURAL WORKERS (farm laborers) have special FICA rules. FICA applies when EITHER: (1) Cash wages paid to the INDIVIDUAL WORKER are $150 OR MORE during the calendar year; OR (2) The EMPLOYER'S total cash wages for agricultural labor are $2,500 OR MORE during the year (the '$2,500 test'). If the $2,500 test is met, ALL agricultural workers are subject to FICA regardless of individual wages. These thresholds differ from the general $0 threshold for regular employment. FUTA for agricultural workers has a separate $20,000/quarter test under §3306(a)(2). Why other answers are wrong: (B) Works more than 20 hours—hours worked doesn't determine FICA liability; (C) Year-round workers only—seasonal/part-time workers are covered if thresholds met; (D) Any wages—the special thresholds apply to agricultural labor.",
+    "tip": "IRC §3121(a)(8) Farm labor FICA: $150+ to worker OR employer pays $2,500+ total agricultural wages. Special thresholds!",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15709,8 +15709,8 @@ const questions = [
       "D": "5% of wages"
     },
     "correctAnswer": "C",
-    "explanation": "Penalties for incorrect/late W-2s: $50 if corrected within 30 days, $110 if corrected by August 1, $290 if later or not corrected (2023 rates). Intentional disregard penalty is $580 per return with no cap.",
-    "tip": "W-2 penalties: $50/$110/$290 based on when corrected. Intentional = $580/return, no cap.",
+    "explanation": "Per IRC §6721 and §6722, penalties for FAILURE TO FILE CORRECT INFORMATION RETURNS (including W-2s) are tiered based on when the error is corrected: (1) $60 per return if corrected within 30 DAYS of due date (2024 rates); (2) $120 per return if corrected after 30 days but by AUGUST 1; (3) $310 per return if corrected after August 1 or NOT CORRECTED. Maximum annual penalties apply based on employer size. INTENTIONAL DISREGARD carries a penalty of $630 per return with NO MAXIMUM CAP. Similar penalties apply under §6722 for failure to furnish correct payee statements. Penalties are inflation-adjusted periodically. Why other answers are wrong: (A) $100 flat—penalties are tiered, not flat; (B) $50 per return—that's less than current rates; (D) 5% of wages—not a percentage-based penalty.",
+    "tip": "IRC §6721/§6722: W-2 penalties tiered by correction date. ~$60 (30 days)/$120 (by 8/1)/$310 (later). Intentional = $630+, no cap.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15730,8 +15730,8 @@ const questions = [
       "D": "10%"
     },
     "correctAnswer": "A",
-    "explanation": "Supplemental wages (bonuses, commissions, overtime) paid separately can use the optional flat 22% withholding rate. If supplemental wages exceed $1 million for the year, the excess is withheld at 37%.",
-    "tip": "Supplemental wages: Optional flat 22% withholding. Over $1M = 37% on excess.",
+    "explanation": "Per IRC §3402 and Reg. §31.3402(g)-1, when SUPPLEMENTAL WAGES (bonuses, commissions, overtime pay, back pay, severance) are paid SEPARATELY from regular wages, the employer may use the OPTIONAL FLAT RATE method for federal income tax withholding: 22% on supplemental wages up to $1 million. Per Reg. §31.3402(g)-1(a)(2), if supplemental wages exceed $1 MILLION for the year, the EXCESS is withheld at the maximum individual rate—currently 37%. Alternatively, employers may use the aggregate method (combining supplemental with regular wages). Why other answers are wrong: (B) 24%—that's the backup withholding rate; (C) 37%—that applies only to supplemental wages exceeding $1M; (D) 10%—not a valid supplemental wage rate.",
+    "tip": "Reg. §31.3402(g)-1: Supplemental wages = optional flat 22% withholding. Over $1M = 37% on excess. Bonuses, commissions, overtime.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15751,8 +15751,8 @@ const questions = [
       "D": "Report annual wages"
     },
     "correctAnswer": "B",
-    "explanation": "Form 941-X (Adjusted Employer's Quarterly Federal Tax Return or Claim for Refund) is used to correct errors discovered on a previously filed Form 941. It can be used to adjust overpayments or underpayments.",
-    "tip": "Form 941-X: Correct/amend Form 941 errors. Can claim refund or adjust balance.",
+    "explanation": "Per IRS instructions and Reg. §31.6402(a)-2, FORM 941-X (Adjusted Employer's Quarterly Federal Tax Return or Claim for Refund) is used to CORRECT ERRORS discovered on a previously filed Form 941. It serves two purposes: (1) ADJUSTMENT—to increase or decrease tax liability and adjust future deposits/payments; (2) CLAIM FOR REFUND—to request a refund of overpaid taxes. Common corrections include: wage and tip corrections, tax rate errors, fringe benefit adjustments, and sick pay third-party corrections. Form 941-X must be filed separately for each quarter being corrected. The form includes both underreported and overreported adjustments. Why other answers are wrong: (A) File quarterly taxes—Form 941 is for original quarterly filing; (C) Apply for EIN—Form SS-4 is used for that; (D) Report annual wages—W-2s and W-3 report annual wages.",
+    "tip": "Form 941-X: AMEND/CORRECT Form 941 errors. Can adjust liability or claim refund. File separately for each corrected quarter.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15772,8 +15772,8 @@ const questions = [
       "D": "$17,000"
     },
     "correctAnswer": "A",
-    "explanation": "For 2024, the annual gift tax exclusion is $18,000 per donee. This amount is indexed for inflation and increased from $17,000 in 2023. A donor can give up to this amount to any number of recipients without using any of their lifetime exemption or filing a gift tax return.",
-    "tip": "The annual exclusion increases periodically with inflation. Know the current year's amount for the exam.",
+    "explanation": "Per IRC §2503(b), the ANNUAL GIFT TAX EXCLUSION is $18,000 per donee for 2024 (indexed for inflation under §2503(b)(2)). This exclusion applies separately to each donee—a donor can give $18,000 to any number of recipients without: (1) Filing a gift tax return (Form 709); (2) Using any lifetime exemption; (3) Paying gift tax. The exclusion applies only to PRESENT INTERESTS (immediate use/enjoyment). Married couples can give $36,000 per donee through GIFT SPLITTING (§2513). Why other answers are wrong: (B) $15,000—that was the 2018-2021 amount; (C) $16,000—that was 2022; (D) $17,000—that was 2023.",
+    "tip": "IRC §2503(b): Annual exclusion = $18,000/donee (2024). Present interests only. Gift splitting = $36,000/donee for married couples.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -15793,8 +15793,8 @@ const questions = [
       "D": "$34,000"
     },
     "correctAnswer": "A",
-    "explanation": "Gift splitting allows married couples to treat a gift made by one spouse as made one-half by each spouse. With the 2024 annual exclusion of $18,000 per spouse, a married couple can give up to $36,000 per donee ($18,000 × 2) without any gift tax consequences.",
-    "tip": "Gift splitting requires both spouses to consent and both must file gift tax returns even if only one spouse made the gift.",
+    "explanation": "Per IRC §2513, married couples may elect GIFT SPLITTING—treating a gift made by one spouse as made one-half by each spouse. This effectively doubles the annual exclusion: $18,000 × 2 = $36,000 per donee (2024). Requirements: (1) Both spouses must CONSENT; (2) Both must be U.S. citizens or residents; (3) Neither spouse gifted the property to the other; (4) BOTH must file gift tax returns (Form 709) even if only one spouse made the gift. The election applies to ALL gifts during the year. Why other answers are wrong: (B) $18,000—that's the single-person exclusion; (C) $27,000—no such amount; (D) $34,000—not a valid amount under gift splitting rules.",
+    "tip": "IRC §2513 gift splitting: $18,000 × 2 = $36,000/donee. BOTH spouses must consent and file Form 709, even if one spouse made all gifts.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -15814,8 +15814,8 @@ const questions = [
       "D": "$5.49 million"
     },
     "correctAnswer": "C",
-    "explanation": "For 2024, the basic exclusion amount (unified credit exemption) is $13.61 million. The Tax Cuts and Jobs Act doubled the exemption through 2025, after which it is scheduled to revert to approximately $5-6 million (adjusted for inflation) unless Congress acts.",
-    "tip": "The exemption is unified for gift and estate tax purposes—lifetime gifts reduce the amount available at death.",
+    "explanation": "Per IRC §2010(c), the BASIC EXCLUSION AMOUNT (unified credit equivalent) for 2024 is $13.61 million. The Tax Cuts and Jobs Act of 2017 (TCJA) doubled the exemption through 2025 under §2010(c)(3)(C). After 2025, it's scheduled to REVERT to approximately $5-7 million (adjusted for inflation) unless Congress acts. The exemption is UNIFIED—the same exclusion applies to both lifetime gifts (§2505) and estate tax (§2010). Lifetime taxable gifts reduce the exemption available at death. Why other answers are wrong: (A) $11.58 million—that was 2020; (B) $12.92 million—that was 2023; (D) $5.49 million—that's the pre-TCJA level.",
+    "tip": "IRC §2010(c): 2024 exemption = $13.61M. UNIFIED for gift and estate tax. TCJA doubled it through 2025; reverts to ~$6-7M after.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -15835,8 +15835,8 @@ const questions = [
       "D": "$25,000"
     },
     "correctAnswer": "B",
-    "explanation": "The taxable gift is the total gift minus the annual exclusion: $25,000 - $18,000 = $7,000. The $7,000 taxable gift will reduce Sarah's lifetime exemption but no gift tax will be owed unless the lifetime exemption has been exhausted.",
-    "tip": "Taxable gift = Total gift - Annual exclusion. The annual exclusion applies per donee.",
+    "explanation": "Per IRC §2503(a) and (b), the TAXABLE GIFT equals the total gift minus the annual exclusion: $25,000 - $18,000 = $7,000. The $7,000 taxable gift must be reported on Form 709 and reduces Sarah's LIFETIME EXEMPTION under §2505—but no gift TAX is actually owed unless the $13.61 million (2024) lifetime exemption has been exhausted. The taxable gift gets added to the estate tax base at death (adjusted taxable gifts under §2001(b)). Why other answers are wrong: (A) $0—must exceed annual exclusion ($18,000) for zero taxable gift; (C) $18,000—that's the exclusion amount, not the taxable gift; (D) $25,000—fails to subtract the annual exclusion.",
+    "tip": "IRC §2503: Taxable gift = Total gift - Annual exclusion ($18,000). Report on Form 709; reduces lifetime exemption.",
     "calculationRequired": true,
     "timeEstimateSeconds": 45
   },
@@ -15856,8 +15856,8 @@ const questions = [
       "D": "Limited to the unified credit amount"
     },
     "correctAnswer": "A",
-    "explanation": "The marital deduction is unlimited for transfers to a surviving spouse who is a U.S. citizen. This means a decedent can leave any amount to a surviving spouse without incurring estate tax. If the spouse is not a U.S. citizen, the unlimited deduction generally is not available unless a Qualified Domestic Trust (QDOT) is used.",
-    "tip": "The unlimited marital deduction defers estate tax until the surviving spouse dies—it doesn't eliminate the tax entirely.",
+    "explanation": "Per IRC §2056(a), the estate tax MARITAL DEDUCTION is UNLIMITED for property passing to a surviving spouse who is a U.S. CITIZEN. A decedent can leave any amount to a citizen spouse estate-tax-free. The deduction DEFERS tax (not eliminates)—property will be taxed in the surviving spouse's estate. Per §2056(d), if the spouse is NOT a U.S. citizen, the unlimited deduction is NOT available unless property passes through a Qualified Domestic Trust (QDOT) under §2056A. Why other answers are wrong: (B) 50%—marital deduction is unlimited, not capped; (C) $500,000—no such limit exists; (D) Unified credit amount—marital deduction is separate from and in addition to the unified credit.",
+    "tip": "IRC §2056(a): UNLIMITED marital deduction for U.S. citizen spouse. §2056(d): Non-citizen spouse requires QDOT. Defers tax, doesn't eliminate it.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -15877,8 +15877,8 @@ const questions = [
       "D": "Cash only"
     },
     "correctAnswer": "B",
-    "explanation": "The annual exclusion applies only to gifts of present interests—rights to immediate use, possession, or enjoyment. Future interests, where the donee's enjoyment is delayed, do not qualify for the annual exclusion. This is why gifts to trusts often require special provisions (like Crummey powers) to qualify.",
-    "tip": "Crummey powers give beneficiaries a temporary withdrawal right, converting a future interest to a present interest.",
+    "explanation": "Per IRC §2503(b), the annual gift tax exclusion applies ONLY to gifts of PRESENT INTERESTS—rights to immediate use, possession, or enjoyment of property. FUTURE INTERESTS, where the donee's enjoyment is postponed or conditioned, do NOT qualify for the exclusion. Per Reg. §25.2503-3, a present interest is an unrestricted right to immediate enjoyment. Gifts to TRUSTS are typically future interests unless: (1) Trust qualifies under §2503(c) (minor's trust); or (2) Beneficiaries have CRUMMEY POWERS (temporary withdrawal rights) per Crummey v. Commissioner. Why other answers are wrong: (A) Future interests—excluded from annual exclusion; (C) Revocable transfers—not completed gifts; (D) Cash only—any present interest qualifies.",
+    "tip": "IRC §2503(b): Annual exclusion = PRESENT interests only. Future interests don't qualify. Crummey powers convert future → present interest.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -15898,8 +15898,8 @@ const questions = [
       "D": "Payment directly to a medical provider for a friend's surgery"
     },
     "correctAnswer": "D",
-    "explanation": "Qualified transfers for medical expenses are unlimited exclusions if paid directly to the medical provider. Living expenses and tuition reimbursements to the individual don't qualify. Medical payments must go directly to the provider, not to the patient or a family member for reimbursement.",
-    "tip": "Qualified medical and educational exclusions require DIRECT payment to the provider/institution—not to the person.",
+    "explanation": "Per IRC §2503(e), QUALIFIED TRANSFERS for medical care or educational tuition are EXCLUDED from gift tax without limit and without using the annual exclusion. Requirements: (1) Payment must be made DIRECTLY to the medical provider or educational institution—NOT to the individual; (2) For education, ONLY TUITION qualifies (not room, board, books, or living expenses); (3) For medical, qualified expenses under §213(d). Payments to the individual for reimbursement DO NOT qualify. Why other answers are wrong: (A) Nursing home payment to family member—must be direct to provider; (B) Living expenses—not qualified; tuition only; (C) Reimbursement to individual—must be direct payment to institution.",
+    "tip": "IRC §2503(e): Qualified transfers = UNLIMITED exclusion. Must pay DIRECTLY to medical provider/school. Tuition only (not room/board). Separate from annual exclusion.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15919,8 +15919,8 @@ const questions = [
       "D": "Gift splitting is elected regardless of amount"
     },
     "correctAnswer": "D",
-    "explanation": "A gift tax return must be filed when: (1) gifts to any one donee exceed the annual exclusion, (2) gift splitting is elected (even if total gifts are under the exclusion), (3) gifts of future interests are made, or (4) gifts to a non-citizen spouse exceed the annual exclusion for such gifts ($185,000 in 2024).",
-    "tip": "Gift splitting always requires filing by both spouses, even if no taxable gift results.",
+    "explanation": "Per IRC §6019, FORM 709 (Gift Tax Return) must be filed when: (1) Gifts to any one donee EXCEED the annual exclusion ($18,000 in 2024); (2) GIFT SPLITTING is elected under §2513—BOTH spouses must file even if total gifts are under the exclusion; (3) Gifts of FUTURE INTERESTS are made (no annual exclusion available); (4) Gifts to a NON-CITIZEN SPOUSE exceed the special exclusion ($185,000 in 2024 under §2523(i)). Filing deadline: April 15 following the gift year (extensions available). Why other answers are wrong: (A) Any gift—only taxable or reportable gifts require filing; (B) Exceeds exclusion—correct but incomplete; (C) Total exceeds $18,000—per-donee threshold, not aggregate.",
+    "tip": "IRC §6019: File Form 709 if: (1) >$18,000/donee, (2) Gift splitting elected, (3) Future interests, (4) Non-citizen spouse >$185,000. Due April 15.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15940,8 +15940,8 @@ const questions = [
       "D": "Qualified charitable remainder trust assets"
     },
     "correctAnswer": "C",
-    "explanation": "Life insurance proceeds are included in the gross estate if payable to the estate or if the decedent held any incidents of ownership in the policy. Life insurance payable to named beneficiaries where the decedent held no incidents of ownership is excluded. Irrevocable transfers without retained interests made more than 3 years before death are also excluded.",
-    "tip": "Incidents of ownership include the right to change beneficiaries, borrow against the policy, or surrender for cash value.",
+    "explanation": "Per IRC §2042, LIFE INSURANCE proceeds are included in the decedent's gross estate if: (1) Payable to the ESTATE (§2042(1)); or (2) The decedent held any INCIDENTS OF OWNERSHIP in the policy at death (§2042(2)). Incidents of ownership include: right to change beneficiaries, borrow against the policy, surrender for cash value, or assign the policy. Life insurance payable to named beneficiaries where decedent held NO incidents is excluded. Per §2035(a), transfers of life insurance within 3 YEARS of death are pulled back into the estate. Why other answers are wrong: (A) No incidents, named beneficiary—EXCLUDED; (B) Irrevocable transfer 5 years ago, no retained interest—EXCLUDED; (D) CRT assets—excluded under §2055.",
+    "tip": "IRC §2042: Life insurance included if payable to estate OR decedent had incidents of ownership. §2035: 3-year rule for transferred policies.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -15961,8 +15961,8 @@ const questions = [
       "D": "Expenses of the decedent's last illness paid after death if claimed on the final Form 1040"
     },
     "correctAnswer": "C",
-    "explanation": "Administration expenses, including attorney fees, executor commissions, and court costs, are deductible from the gross estate. These cannot be deducted on both the estate tax return and the estate's income tax return. Medical expenses paid after death can be deducted on the estate return OR the decedent's final income tax return, but not both.",
-    "tip": "Double deduction is prohibited—expenses deducted on Form 706 cannot also be deducted on the estate's Form 1041.",
+    "explanation": "Per IRC §2053(a), DEDUCTIBLE ESTATE EXPENSES include: (1) FUNERAL EXPENSES; (2) ADMINISTRATION EXPENSES (attorney fees, executor commissions, court costs, appraisal fees); (3) Claims against the estate (DEBTS); (4) Unpaid mortgages. Per §642(g), administration expenses CANNOT be deducted on BOTH Form 706 (estate tax) AND Form 1041 (estate income tax)—must choose one. Per §2053(c)(1)(A), MEDICAL EXPENSES paid within one year after death can be deducted on Form 706 OR the decedent's final Form 1040, but not both. Why other answers are wrong: (A) Post-death income taxes—not deductible on Form 706; (B) State inheritance taxes paid by beneficiaries—paid by beneficiaries, not estate; (D) Medical expenses claimed on 1040—cannot double-deduct.",
+    "tip": "IRC §2053(a): Deductible = funeral, administration, debts, mortgages. §642(g): No double deduction (Form 706 vs 1041).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -15982,8 +15982,8 @@ const questions = [
       "D": "$0 because it was a bona fide sale"
     },
     "correctAnswer": "B",
-    "explanation": "When property is transferred for less than full consideration, the gift is the excess of the FMV of property given over the FMV of property received: $50,000 - $20,000 = $30,000 gift. This $30,000 would then be reduced by the annual exclusion to determine the taxable gift.",
-    "tip": "Gift amount = FMV of property transferred - FMV of consideration received.",
+    "explanation": "Per IRC §2512(b), when property is transferred for LESS THAN ADEQUATE CONSIDERATION, the GIFT equals the excess of FMV of property given OVER the FMV of property (or money) received. Calculation: $50,000 (stock FMV) - $20,000 (car FMV) = $30,000 GIFT. This $30,000 gross gift is then reduced by the $18,000 annual exclusion to determine the $12,000 taxable gift. The transfer is partly a sale (for $20,000 consideration) and partly a gift (for the $30,000 excess). Why other answers are wrong: (A) $20,000—that's the consideration received, not the gift; (C) $50,000—fails to reduce by consideration received; (D) $0—transaction was not at arm's length FMV.",
+    "tip": "IRC §2512(b): Gift = FMV given - FMV received. Partial consideration = partial gift. Then subtract annual exclusion for taxable gift.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -16003,8 +16003,8 @@ const questions = [
       "D": "$80,000"
     },
     "correctAnswer": "D",
-    "explanation": "Inherited property receives a basis equal to its fair market value at the date of death (or alternate valuation date if elected). Since no alternate valuation was elected, Bob's basis is the date of death value of $80,000. The original cost basis of $10,000 is irrelevant.",
-    "tip": "Inherited property = stepped-up (or stepped-down) basis to FMV at death. Gifted property = carryover basis.",
+    "explanation": "Per IRC §1014(a), property acquired from a decedent receives a BASIS equal to the FAIR MARKET VALUE at the date of death (or alternate valuation date under §2032 if elected). This is the 'STEPPED-UP BASIS' rule (or stepped-down if property declined in value). Since no alternate valuation was elected, Bob's basis is the DATE OF DEATH value: $80,000. The father's original cost of $10,000 is irrelevant—inherited property gets a fresh start at FMV. The 6-month value of $85,000 is also irrelevant without the §2032 election. Why other answers are wrong: (A) $85,000—alternate valuation wasn't elected; (B) $10,000—that's carryover basis for gifts, not inherited property; (C) $45,000—no such calculation applies.",
+    "tip": "IRC §1014(a): Inherited property = FMV at death (stepped-up basis). §1015: Gifted property = carryover basis. Know the difference!",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16024,8 +16024,8 @@ const questions = [
       "D": "$3,000 gain"
     },
     "correctAnswer": "B",
-    "explanation": "When FMV at gift date is less than donor's basis, the donee has dual basis: donor's basis ($40,000) for gain, FMV at gift ($35,000) for loss. Since selling price of $38,000 is between these amounts, no gain or loss is recognized. This is the 'no-man's land' rule for depreciated gifts.",
-    "tip": "For gifts where FMV < donor's basis: gain uses carryover basis, loss uses FMV, and sales in between = zero gain/loss.",
+    "explanation": "Per IRC §1015(a), when GIFTED PROPERTY has FMV at gift date LESS than donor's basis, the donee has a DUAL BASIS: (1) For GAIN: Use donor's carryover basis ($40,000); (2) For LOSS: Use FMV at date of gift ($35,000). Sale at $38,000 is BETWEEN these amounts—this is the 'NO-MAN'S LAND' where NO GAIN OR LOSS is recognized. Test: $38,000 > $35,000 (no loss using loss basis); $38,000 < $40,000 (no gain using gain basis). Result: $0 gain/loss. Why other answers are wrong: (A) $2,000 loss—would need sale below $35,000 (loss basis); (C) $3,000 loss—using wrong basis; (D) $3,000 gain—would need sale above $40,000 (gain basis).",
+    "tip": "IRC §1015: Depreciated gift = DUAL BASIS. Gain basis = donor's basis. Loss basis = FMV at gift. Sale between = NO gain/loss (no-man's land).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -16045,8 +16045,8 @@ const questions = [
       "D": "Can be elected on an asset-by-asset basis"
     },
     "correctAnswer": "B",
-    "explanation": "The alternate valuation date is 6 months after death, or if property is distributed, sold, or otherwise disposed of within that period, the date of disposition. The election applies to the entire estate (not individual assets) and can only be elected if it reduces both the gross estate and the estate tax liability.",
-    "tip": "Alternate valuation = 6 months after death, entire estate, must reduce both value AND tax liability.",
+    "explanation": "Per IRC §2032(a), the ALTERNATE VALUATION DATE election allows the estate to value property at SIX MONTHS AFTER DEATH (or the date of earlier disposition if property is distributed, sold, or exchanged within that period). Requirements under §2032(c): (1) Election must REDUCE BOTH the gross estate value AND the estate tax liability; (2) Election applies to the ENTIRE ESTATE—cannot cherry-pick assets; (3) Election is irrevocable. The alternate date also affects the beneficiary's stepped-up basis under §1014. Why other answers are wrong: (A) Any estate—must reduce both value and tax; (C) 12 months—it's 6 months, not 12; (D) Asset-by-asset—must apply to entire estate.",
+    "tip": "IRC §2032: Alternate valuation = 6 months after death (or earlier disposition). Must reduce BOTH value AND tax. Applies to ENTIRE estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16066,8 +16066,8 @@ const questions = [
       "D": "$32,000"
     },
     "correctAnswer": "B",
-    "explanation": "The $50,000 tuition payment qualifies for the unlimited educational exclusion (paid directly to the institution) and is not a taxable gift. The $18,000 cash gift is covered by the annual exclusion. Total taxable gift = $0. The educational exclusion is separate from and in addition to the annual exclusion.",
-    "tip": "Qualified tuition payments are unlimited AND separate from the annual exclusion. Room and board don't qualify.",
+    "explanation": "Per IRC §2503(e), the $50,000 TUITION PAYMENT qualifies for the UNLIMITED educational exclusion because it was paid DIRECTLY to the university. This is NOT a taxable gift and is SEPARATE from the annual exclusion. The $18,000 CASH for living expenses is covered by the $18,000 annual exclusion under §2503(b). Total taxable gift: $0. Key: The qualified transfer exclusion (§2503(e)) is IN ADDITION TO the annual exclusion—Grandpa can give the tuition + annual exclusion to the same person. Why other answers are wrong: (A) $50,000—tuition paid directly to school is excluded; (C) $18,000—cash is within annual exclusion; (D) $32,000—miscalculates the exclusions.",
+    "tip": "IRC §2503(e): Direct tuition = UNLIMITED exclusion + SEPARATE from annual exclusion. Can give tuition + $18,000 cash to same person tax-free.",
     "calculationRequired": true,
     "timeEstimateSeconds": 75
   },
@@ -16087,8 +16087,8 @@ const questions = [
       "D": "Allowed as a deduction from the gross estate"
     },
     "correctAnswer": "D",
-    "explanation": "State death taxes are currently allowed as a deduction from the gross estate, not as a credit. The state death tax credit was phased out and replaced with the deduction. This change increased the effective federal estate tax burden for estates in states with estate or inheritance taxes.",
-    "tip": "The state death tax credit was repealed—now it's a deduction, which is less valuable than a dollar-for-dollar credit.",
+    "explanation": "Per IRC §2058, state death taxes paid are allowed as a DEDUCTION from the gross estate, not as a credit. The former state death tax CREDIT (§2011) was phased out by EGTRRA 2001 and replaced with the deduction starting in 2005. A DEDUCTION reduces taxable estate (saving 40% × deduction amount), while a CREDIT would reduce tax dollar-for-dollar—so the deduction is LESS VALUABLE than the former credit. This increased effective federal estate tax for estates in states with estate/inheritance taxes. Why other answers are wrong: (A) Not deductible, no credit—incorrect; deduction IS allowed; (B) Only if under exemption—deduction applies regardless of size; (C) Credit—the credit was repealed; now a deduction only.",
+    "tip": "IRC §2058: State death taxes = DEDUCTION (not credit). Former §2011 credit was repealed. Deduction < credit in value.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16108,8 +16108,8 @@ const questions = [
       "D": "$13,000,000"
     },
     "correctAnswer": "A",
-    "explanation": "Taxable estate = Gross estate - Deductions. Deductions = Funeral ($50,000) + Administration ($150,000) + Debts ($300,000) + Charitable ($1,000,000) = $1,500,000. Taxable estate = $15,000,000 - $1,500,000 = $13,500,000.",
-    "tip": "Estate deductions: expenses (funeral, admin), debts, losses, charitable, and marital. Calculate step by step.",
+    "explanation": "Per IRC §2051, TAXABLE ESTATE = Gross estate - Allowable deductions. Deductions under §2053-2056: Funeral expenses (§2053(a)(1)): $50,000; Administration costs (§2053(a)(2)): $150,000; Debts (§2053(a)(3)): $300,000; Charitable bequests (§2055): $1,000,000. Total deductions = $1,500,000. Taxable estate = $15,000,000 - $1,500,000 = $13,500,000. Note: Marital deduction (§2056) would further reduce this if spouse received property. Why other answers are wrong: (B) $14,500,000—only subtrracted $500,000; (C) $15,000,000—no deductions taken; (D) $13,000,000—incorrect math.",
+    "tip": "IRC §2051: Taxable estate = Gross estate - (§2053 expenses/debts + §2054 losses + §2055 charitable + §2056 marital).",
     "calculationRequired": true,
     "timeEstimateSeconds": 90
   },
@@ -16129,8 +16129,8 @@ const questions = [
       "D": "$0"
     },
     "correctAnswer": "A",
-    "explanation": "The DSUE is the unused portion of the deceased spouse's exclusion: $13.61 million - $10 million = $3.61 million. This amount is 'portable' to the surviving spouse if elected on a timely filed estate tax return (Form 706). The surviving spouse can use their own exemption plus the DSUE.",
-    "tip": "DSUE = Decedent's unused exemption. Requires timely Form 706 election, even if no tax is due.",
+    "explanation": "Per IRC §2010(c)(4), the DECEASED SPOUSAL UNUSED EXCLUSION (DSUE) amount equals the decedent's unused exclusion: $13.61M (2024 exemption) - $10M (estate used) = $3.61M DSUE. This amount is PORTABLE to the surviving spouse under §2010(c)(2)(B), meaning the survivor can use their own exemption PLUS the DSUE (potentially $13.61M + $3.61M = $17.22M). REQUIREMENTS: (1) Must elect on TIMELY FILED Form 706, even if no estate tax is due; (2) Only LAST deceased spouse's DSUE is available. Why other answers are wrong: (B) $10M—that's what was used, not unused; (C) $13.61M—that's the full exemption, not DSUE; (D) $0—portability IS available.",
+    "tip": "IRC §2010(c)(4) DSUE: Deceased spouse's UNUSED exemption. Requires timely Form 706 election. Only LAST deceased spouse's DSUE counts.",
     "calculationRequired": true,
     "timeEstimateSeconds": 60
   },
@@ -16150,8 +16150,8 @@ const questions = [
       "D": "Any gift tax resulting from the transfer"
     },
     "correctAnswer": "D",
-    "explanation": "A net gift is a gift where the donee agrees to pay any gift tax owed. The gift tax is treated as consideration, reducing the amount of the gift. This creates a circular calculation since the gift tax depends on the gift amount, which depends on the gift tax paid.",
-    "tip": "Net gift reduces the taxable gift because the donee paying the tax is treated as consideration received by the donor.",
+    "explanation": "In a NET GIFT arrangement (recognized by the IRS and courts), the DONEE agrees to pay ANY GIFT TAX resulting from the transfer. Per Diedrich v. Commissioner and Rev. Rul. 75-72, the gift tax paid by the donee is treated as CONSIDERATION received by the donor, which REDUCES the amount of the taxable gift. This creates a CIRCULAR CALCULATION: Gift = FMV - Gift tax, but Gift tax depends on Gift amount. Formula: Net gift = FMV / (1 + gift tax rate). Additionally, if gift tax paid exceeds donor's basis, the donor recognizes INCOME. Why other answers are wrong: (A) Carrying costs—not part of net gift arrangement; (B) Annual exclusion—not relevant to net gift; (C) Donor's income tax—not the net gift mechanism.",
+    "tip": "Net gift: Donee pays gift tax = consideration to donor = reduces taxable gift. Circular calculation. May trigger income to donor if tax > basis.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16171,8 +16171,8 @@ const questions = [
       "D": "$800,000"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 2036, if the decedent retained a life estate or the right to income from transferred property, the entire fair market value of the property at death is included in the gross estate. This 'string' pulls the property back into the estate despite the earlier transfer.",
-    "tip": "Section 2036: Retained life estate or income right = full FMV included in estate. The gift was 'incomplete' for estate purposes.",
+    "explanation": "Per IRC §2036(a), if the decedent transferred property but RETAINED: (1) The right to INCOME from the property, or (2) The right to USE or possess the property for life (a LIFE ESTATE), the ENTIRE FMV of the property at death is included in the gross estate—not just the retained interest. David retained the right to live in the home (life estate), so the full $800,000 FMV is included under §2036. This 'string' statute pulls the property back into the estate even though the transfer was completed during life. Why other answers are wrong: (A) $0—§2036 requires full inclusion; (B) Actuarial value of life estate—that would apply for gift tax, not estate; (C) Remainder value—entire FMV is included, not just remainder.",
+    "tip": "IRC §2036: Retained life estate or income right = ENTIRE FMV included in estate at death. The transfer 'strings' attach to pull property back.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -16192,8 +16192,8 @@ const questions = [
       "D": "Only the current year's taxable gifts"
     },
     "correctAnswer": "A",
-    "explanation": "The gift tax is calculated on cumulative lifetime taxable gifts using current year rates. Tax on current year gifts is computed by calculating the tentative tax on all cumulative gifts and subtracting the tentative tax on prior year gifts. This ensures the progressive rate structure applies to cumulative giving.",
-    "tip": "Gift tax is cumulative. Current year tax = Tax on total cumulative gifts - Tax on prior cumulative gifts.",
+    "explanation": "Per IRC §2502(a) and §2504, the gift tax is calculated on CUMULATIVE LIFETIME taxable gifts using CURRENT YEAR RATES. The computation: (1) Calculate tentative tax on ALL cumulative lifetime gifts (current + prior years) at current rates; (2) SUBTRACT tentative tax that would have applied to PRIOR years' cumulative gifts at current rates; (3) Result is current year's gift tax before unified credit. This cumulative approach ensures the PROGRESSIVE rate structure applies to total giving, not just annual amounts. Why other answers are wrong: (B) Rates when made—current rates apply to all cumulative gifts; (C) Without annual exclusions—annual exclusions are subtracted first; (D) Only current year—cumulative calculation required.",
+    "tip": "IRC §2502: Gift tax = cumulative. Current tax = (Tax on all cumulative gifts) - (Tax on prior cumulative gifts). Uses CURRENT rates for all.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16213,8 +16213,8 @@ const questions = [
       "D": "Historical cost adjusted for inflation"
     },
     "correctAnswer": "C",
-    "explanation": "Special use valuation under Section 2032A allows qualifying real property used in farming or a closely held business to be valued based on its actual use rather than its highest and best use. This can significantly reduce estate values for family farms and businesses, but comes with recapture rules if the use changes.",
-    "tip": "2032A is for family farms and businesses—must continue qualified use or face recapture of tax savings.",
+    "explanation": "Per IRC §2032A, SPECIAL USE VALUATION allows qualifying real property used in FARMING or a CLOSELY HELD BUSINESS to be valued at its ACTUAL USE rather than its 'highest and best use' (development value). This can reduce estate values by up to $1.31 million (2024, indexed). Requirements: (1) Decedent was U.S. citizen/resident; (2) Property passed to qualified heir; (3) 50%+ of estate is real/personal farm/business property; (4) 25%+ is qualifying real property; (5) Property used for qualified use 5 of 8 years before death. RECAPTURE: If qualified use ceases within 10 years, tax savings are recaptured. Why other answers are wrong: (A) Average values—not the method; (B) Highest and best use—that's the DEFAULT, not §2032A; (D) Historical cost—not a valuation method.",
+    "tip": "IRC §2032A: Special use valuation = ACTUAL use (farm/business), not highest and best. Max reduction ~$1.31M. 10-year recapture if use changes.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16234,8 +16234,8 @@ const questions = [
       "D": "A completed gift when the trust becomes irrevocable"
     },
     "correctAnswer": "A",
-    "explanation": "A revocable transfer is not a completed gift because the grantor retains the power to revest the property. A gift is complete only when the donor has parted with dominion and control. When the trust becomes irrevocable (including at grantor's death), the transfer becomes complete.",
-    "tip": "No completed gift if donor can revoke. Gift becomes complete when power to revoke terminates.",
+    "explanation": "Per Reg. §25.2511-2(c), a transfer to a REVOCABLE trust is NOT a completed gift because the grantor retains the power to revest the property in themselves. A gift is COMPLETE only when the donor has 'so parted with dominion and control as to leave in him no power to change its disposition.' The transfer becomes complete for gift tax purposes when: (1) The trust becomes IRREVOCABLE, or (2) At the grantor's DEATH (when revocation power terminates). For ESTATE tax, the property is included under §2038 (revocable transfers). Why other answers are wrong: (B) Split gift—requires completed gift and married donors; (C) Completed when transferred—not if revocable; (D) Complete when irrevocable—partially correct, but (A) is the best answer.",
+    "tip": "Reg. §25.2511-2(c): Revocable transfer = NOT a completed gift. Gift completes when power to revoke terminates. §2038: Included in estate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -16255,8 +16255,8 @@ const questions = [
       "D": "Included in the gross estate at the $2 million face value"
     },
     "correctAnswer": "D",
-    "explanation": "Under Section 2035, life insurance transferred within 3 years of death is pulled back into the gross estate at its full face value. This special rule applies only to life insurance and certain other transfers that would have been included under Sections 2036-2038. The transfer occurred only 2 years before death, so the full $2 million is included.",
-    "tip": "The 3-year rule primarily catches life insurance transfers. Most other gifts are not pulled back after 3 years.",
+    "explanation": "Per IRC §2035(a), life insurance on the decedent's life transferred within THREE YEARS of death is 'pulled back' into the gross estate at its FULL FACE VALUE (death benefit), not the transfer value. This special rule under §2035(a)(2) applies because the policy would have been includible under §2042 (incidents of ownership) had the transfer not been made. Thomas transferred ownership only 2 years before death—within the 3-year window—so the entire $2 million face value is included. The 3-year rule generally applies only to: life insurance and transfers that would have triggered §§2036-2038. Why other answers are wrong: (A) Cash surrender value—face value is used; (B) Partial inclusion—full face value is included; (C) Excluded—3-year rule applies.",
+    "tip": "IRC §2035(a): Life insurance transferred within 3 YEARS of death = FULL FACE VALUE included. Not cash value, not prorated—entire death benefit.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16276,8 +16276,8 @@ const questions = [
       "D": "All transfers to grandchildren"
     },
     "correctAnswer": "A",
-    "explanation": "The GST tax applies to transfers to skip persons—those at least two generations below the transferor (like grandchildren when a child is living). It's designed to prevent families from avoiding one level of transfer tax by skipping a generation. The tax applies to both lifetime and testamentary transfers.",
-    "tip": "GST prevents wealthy families from giving to grandchildren to avoid estate tax at the children's level.",
+    "explanation": "Per IRC §2601, the GENERATION-SKIPPING TRANSFER (GST) TAX applies to transfers to SKIP PERSONS—those at least TWO GENERATIONS below the transferor. Per §2613, a skip person includes: grandchildren (when parent is living), unrelated persons 37.5+ years younger. The GST tax rate equals the maximum estate tax rate (40% in 2024). It applies to BOTH lifetime gifts and testamentary transfers. The GST exemption equals the estate tax exemption ($13.61M for 2024). Purpose: Prevent wealthy families from avoiding one level of transfer tax by 'skipping' the children's generation. Why other answers are wrong: (B) Only testamentary—applies to lifetime too; (C) 10 years younger—must be 2+ generations (37.5 years for non-relatives); (D) All grandchildren—not if parent is deceased.",
+    "tip": "IRC §2601 GST: Skip person = 2+ generations below. Rate = 40%. Exemption = $13.61M (2024). Prevents skipping transfer tax at children's level.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -16297,8 +16297,8 @@ const questions = [
       "D": "Taxable termination"
     },
     "correctAnswer": "D",
-    "explanation": "A taxable termination occurs when an interest in a trust terminates (such as the child's death) and skip persons (grandchildren) become the beneficiaries. A direct skip is an outright transfer to a skip person. A taxable distribution is a distribution from a trust to a skip person during the trust's existence.",
-    "tip": "GST types: Direct skip (outright), Taxable termination (at death/end of interest), Taxable distribution (during trust).",
+    "explanation": "Per IRC §2612, there are THREE types of GST events: (1) DIRECT SKIP (§2612(c))—outright transfer to a skip person; (2) TAXABLE TERMINATION (§2612(a))—termination of a non-skip person's interest (like the child's death) where skip persons become beneficiaries; (3) TAXABLE DISTRIBUTION (§2612(b))—distribution from trust to skip person during the trust's existence. In this scenario, the child has a life income interest; at the child's DEATH, the interest terminates and grandchildren (skip persons) receive the principal—this is a TAXABLE TERMINATION. The trust pays GST tax. Why other answers are wrong: (A) Taxable distribution—that's during the trust, not at termination of interest; (B) QTIP—different concept (marital trust); (C) Direct skip—that's an outright transfer, not a trust termination.",
+    "tip": "IRC §2612 GST types: Direct skip (outright), Taxable termination (interest ends, skip persons take), Taxable distribution (trust pays to skip person).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16318,8 +16318,8 @@ const questions = [
       "D": "$2,156,000"
     },
     "correctAnswer": "B",
-    "explanation": "Tax base = Taxable estate + Adjusted taxable gifts = $15M + $2M = $17M. Tentative tax at 40% = $6.8M. Unified credit on $13.61M exemption = $5.444M. Estate tax = $6.8M - $5.444M = $1.356M. (Note: Actual computation uses graduated rates, but 40% applies at these levels.)",
-    "tip": "Estate tax: Tax on (taxable estate + adjusted taxable gifts) - unified credit - gift tax paid. Gifts are added back.",
+    "explanation": "Per IRC §2001(b), estate tax is computed on the TAX BASE = Taxable estate + Adjusted taxable gifts. Calculation: Tax base = $15M + $2M = $17M. Tentative tax at 40% (maximum rate under §2001(c)) = $6.8M. UNIFIED CREDIT under §2010 (on $13.61M exemption) = $5.444M. Estate tax = $6.8M - $5.444M = $1.356M. Note: Gift tax already paid on the $2M is subtracted (not applicable here as unified credit absorbed it). The unified credit ensures no tax until cumulative transfers exceed the exemption. Why other answers are wrong: (A) $556,000—undercalculated; (C) $1,556,000—overcalculated; (D) $2,156,000—significantly overcalculated.",
+    "tip": "IRC §2001(b): Estate tax = Tax on (taxable estate + adjusted taxable gifts) - unified credit - gift tax previously paid. Gifts are added back!",
     "calculationRequired": true,
     "timeEstimateSeconds": 120
   },
@@ -16339,8 +16339,8 @@ const questions = [
       "D": "The surviving spouse elects to defer payment"
     },
     "correctAnswer": "C",
-    "explanation": "Section 6166 allows estates with a closely held business interest exceeding 35% of the adjusted gross estate to defer estate tax payments attributable to the business interest. The tax can be paid in installments over up to 14 years, with only interest due for the first 4 years.",
-    "tip": "Section 6166: 35% test for closely held business, up to 14 years to pay, special 2% interest rate on deferred tax.",
+    "explanation": "Per IRC §6166, estates may DEFER estate tax payments when a CLOSELY HELD BUSINESS interest exceeds 35% of the ADJUSTED GROSS ESTATE. The deferral allows: (1) INTEREST ONLY for the first 4 years (starting 5 years after due date); (2) Principal paid in up to 10 ANNUAL INSTALLMENTS (years 5-14); (3) Total deferral period = up to 14 years. A special 2% interest rate applies to the first ~$1.75M of deferred tax (2024). 'Closely held business' means sole proprietorship, partnership (≤45 partners), or corporation (≤45 shareholders). Why other answers are wrong: (A) Any real property—must be business property meeting 35% test; (B) Liquidity issues—not the test; must be closely held business; (D) Spouse election—§6166 is about business, not spouse.",
+    "tip": "IRC §6166: Closely held business >35% of estate = defer tax up to 14 years. 4 years interest-only + 10 annual installments. 2% rate on first ~$1.75M.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -16360,8 +16360,8 @@ const questions = [
       "D": "The estate claims the alternate valuation date"
     },
     "correctAnswer": "B",
-    "explanation": "The unlimited marital deduction is not available for transfers to a non-citizen spouse unless the property passes through a QDOT. The QDOT must have at least one U.S. trustee, and estate tax is imposed when principal is distributed to the spouse or at the spouse's death.",
-    "tip": "Non-citizen spouse = no marital deduction unless QDOT is used. The QDOT defers (not eliminates) the estate tax.",
+    "explanation": "Per IRC §2056(d), the UNLIMITED marital deduction is NOT available for property passing to a surviving spouse who is NOT a U.S. CITIZEN—unless the property passes through a QUALIFIED DOMESTIC TRUST (QDOT) under §2056A. QDOT requirements: (1) At least ONE trustee must be a U.S. citizen or domestic corporation; (2) Trustee must have right to withhold estate tax on distributions; (3) Meets regulatory requirements. Estate TAX is DEFERRED (not eliminated) and imposed when: principal is distributed to spouse, or at spouse's death. An annual exclusion of $185,000 (2024) is available for lifetime gifts to non-citizen spouses under §2523(i). Why other answers are wrong: (A) U.S. citizen spouse—unlimited deduction already available; (C) Charitable—different deduction; (D) Alternate valuation—unrelated.",
+    "tip": "IRC §2056A QDOT: Required for marital deduction to non-citizen spouse. U.S. trustee required. Tax imposed on distributions or at spouse's death.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16381,8 +16381,8 @@ const questions = [
       "D": "Allowing the trustee to distribute income annually"
     },
     "correctAnswer": "B",
-    "explanation": "Crummey powers give trust beneficiaries a temporary right (typically 30-60 days) to withdraw their share of contributions. This converts what would be a future interest (not eligible for annual exclusion) into a present interest. The beneficiary rarely exercises the power, but its existence qualifies the gift.",
-    "tip": "Crummey = temporary withdrawal right = present interest = annual exclusion. Must give actual notice to beneficiaries.",
+    "explanation": "Per IRC §2503(b), the annual gift exclusion ($18,000 for 2024) is only available for gifts of PRESENT INTERESTS. A Crummey power (named after the landmark case Crummey v. Commissioner) gives trust beneficiaries a TEMPORARY RIGHT TO WITHDRAW their share of contributions (typically 30-60 days). This converts what would otherwise be a future interest (trust remainder) into a PRESENT INTEREST, qualifying for the annual exclusion. Requirements: (1) Beneficiary must receive ACTUAL NOTICE of the withdrawal right; (2) Reasonable time to exercise (30+ days); (3) Economic substance (beneficiary must have legal ability to withdraw). Why other answers are wrong: (A) Grantor trust conversion—unrelated; Crummey doesn't change grantor trust status; (C) Revocable for limited period—Crummey trusts remain irrevocable; (D) Annual income distribution—income distribution doesn't create present interest for contributions.",
+    "tip": "IRC §2503(b) Crummey power: Temporary withdrawal right → present interest → annual exclusion. MUST give actual notice to each beneficiary.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16402,8 +16402,8 @@ const questions = [
       "D": "Nothing is included because the trust is a separate entity"
     },
     "correctAnswer": "C",
-    "explanation": "Property subject to a general power of appointment (power to appoint to oneself, one's estate, creditors, or creditors of one's estate) is included in the gross estate at fair market value, whether or not the power is exercised. A limited or special power does not cause inclusion.",
-    "tip": "General power = estate inclusion. Limited power (can't appoint to self/estate/creditors) = no estate inclusion.",
+    "explanation": "Per IRC §2041(a)(2), the FULL VALUE of property subject to a GENERAL POWER OF APPOINTMENT is included in the decedent's gross estate, WHETHER OR NOT the power is exercised. A general power means the ability to appoint to (1) the decedent, (2) decedent's estate, (3) decedent's creditors, or (4) creditors of decedent's estate. A LIMITED (or 'special') power—one that CANNOT be exercised in favor of these four parties—does NOT cause estate inclusion under §2041. The rationale: a general power gives the holder equivalent ownership rights over the property. Why other answers are wrong: (A) Value at grant—FMV at DEATH controls, not grant date; (B) Only portion appointed—entire value included whether exercised or not; (D) Trust separate entity—irrelevant; power holder's estate includes the property regardless of trust structure.",
+    "tip": "IRC §2041: General power (can appoint to self/estate/creditors) = FULL estate inclusion. Limited power = NO inclusion. Exercise NOT required.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16423,8 +16423,8 @@ const questions = [
       "D": "100% ownership of publicly traded stock"
     },
     "correctAnswer": "A",
-    "explanation": "A minority interest in a family limited partnership (FLP) may qualify for both minority/lack of control discounts (because the holder cannot control entity decisions) and lack of marketability discounts (because there's no ready market for the interest). These discounts can reduce the gift/estate tax value significantly.",
-    "tip": "FLP discounts: minority discount (no control) + marketability discount (no market) = potentially 25-40% total discount.",
+    "explanation": "Per IRC §2512 (gifts) and §2031 (estates), property is valued at FAIR MARKET VALUE—what a willing buyer would pay a willing seller. For MINORITY INTERESTS in closely held entities (FLPs, LLCs), courts recognize two discounts: (1) LACK OF CONTROL (minority discount)—holder cannot force liquidation, distributions, or management decisions; (2) LACK OF MARKETABILITY—no ready market exists to sell the interest. Combined discounts of 25-40% are common. IRS scrutinizes FLPs under §2036 (retained interests) and §2704 (applicable restrictions), but legitimate business purpose FLPs survive challenge. Why other answers are wrong: (B) Cash—valued at face, no discount possible; (C) Remainder interest—valued using actuarial tables (IRC §7520), not valuation discounts; (D) 100% public stock—readily marketable at quoted price, no discount.",
+    "tip": "IRC §§2031/2512: Valuation discounts apply to minority interests in FLPs/LLCs. Minority (no control) + Marketability (no market) = 25-40% discount.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16444,8 +16444,8 @@ const questions = [
       "D": "The present value of the remainder interest passing to beneficiaries"
     },
     "correctAnswer": "D",
-    "explanation": "The taxable gift in a GRAT is the present value of the remainder interest—what beneficiaries will receive after the annuity term. The higher the annuity payments and longer the term, the smaller the remainder (taxable gift). A 'zeroed-out' GRAT has minimal taxable gift while potentially transferring appreciation tax-free.",
-    "tip": "GRAT: Taxable gift = FMV of property - PV of retained annuity. Goal is to minimize remainder value at creation.",
+    "explanation": "Per IRC §2702, when a grantor transfers property to a trust and retains an interest (like an annuity), the VALUE OF THE GIFT is the FMV of the property MINUS the present value of the retained interest. In a GRAT, the grantor retains fixed annuity payments for a term of years. The TAXABLE GIFT is the present value of the REMAINDER interest passing to beneficiaries. A 'zeroed-out' GRAT sets annuity payments high enough to make the remainder value near zero at creation—if assets outperform the §7520 rate, excess growth passes gift-tax-free. Risk: grantor must survive the term; death during term causes estate inclusion under §2036. Why other answers are wrong: (A) Zero/all rights—grantor retains annuity only, not all rights; (B) Full FMV—ignores retained annuity value subtraction; (C) PV of annuity—that's the RETAINED interest, not the gift.",
+    "tip": "IRC §2702 GRAT: Gift = FMV - PV of retained annuity = remainder value. 'Zeroed-out' GRAT → minimal gift, growth passes tax-free if beats §7520 rate.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -16465,8 +16465,8 @@ const questions = [
       "D": "A gift of the full $500,000"
     },
     "correctAnswer": "A",
-    "explanation": "Under Section 7872, interest-free or below-market loans result in imputed interest. The foregone interest (difference between AFR and rate charged) is treated as a gift from lender to borrower and interest income to the lender. For demand loans, this is computed annually.",
-    "tip": "Below-market loans: foregone interest = gift from lender and interest income to lender. Use AFR as the benchmark.",
+    "explanation": "Per IRC §7872, interest-free or below-market loans between family members result in IMPUTED INTEREST. The foregone interest (difference between the Applicable Federal Rate (AFR) and the rate actually charged) creates: (1) A GIFT from lender to borrower equal to the foregone interest; (2) INTEREST INCOME to the lender (phantom income). For DEMAND loans, foregone interest is computed ANNUALLY. For TERM loans, the gift is the LUMP SUM present value difference at inception. Exception: the $10,000 de minimis rule exempts small loans, and the $100,000 exception limits imputed interest to borrower's net investment income. Why other answers are wrong: (B) Only if not repaid—gift occurs annually regardless of repayment; (C) No gift/just a loan—§7872 specifically imputes gift treatment; (D) Full $500,000—only foregone interest is the gift, not principal.",
+    "tip": "IRC §7872: Below-AFR loans → foregone interest = gift + phantom interest income. De minimis: $10K exempt; $100K cap on investment income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -16486,8 +16486,8 @@ const questions = [
       "D": "Is given the power to appoint the property to anyone"
     },
     "correctAnswer": "A",
-    "explanation": "A QTIP trust qualifies for the marital deduction if the surviving spouse is entitled to all income at least annually for life and no person has the power to appoint property to anyone other than the surviving spouse during the spouse's life. The executor must elect QTIP treatment. At the spouse's death, the property is included in the spouse's estate.",
-    "tip": "QTIP = income to spouse for life, no one else gets principal during spouse's life, included in survivor's estate.",
+    "explanation": "Per IRC §2056(b)(7), a QUALIFIED TERMINABLE INTEREST PROPERTY (QTIP) trust qualifies for the UNLIMITED MARITAL DEDUCTION if: (1) Surviving spouse receives ALL INCOME at least ANNUALLY for life; (2) NO PERSON has power to appoint property to anyone OTHER than the surviving spouse during spouse's lifetime; (3) Executor makes the QTIP ELECTION on Form 706. Benefit: First spouse controls ULTIMATE disposition (e.g., to children from prior marriage) while still getting marital deduction. Trade-off: Property is INCLUDED in surviving spouse's estate under §2044. This differs from outright transfers where spouse has full control. Why other answers are wrong: (B) Withdraw principal anytime—not required; QTIP can limit principal access; (C) Named as trustee—not a requirement; (D) Power to appoint to anyone—this would be outright ownership, not QTIP.",
+    "tip": "IRC §2056(b)(7) QTIP: (1) ALL income annually for life; (2) No one else gets property during spouse's life; (3) Executor elects. Included in survivor's estate (§2044).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },

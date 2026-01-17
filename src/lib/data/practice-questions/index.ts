@@ -4,7 +4,14 @@ import { regQuestions } from './reg';
 import { tcpQuestions } from './tcp';
 import { barQuestions } from './bar';
 import { iscQuestions } from './isc';
+// OBBBA versions (for post-July 2026 testing)
+import { tcpQuestionsOBBBA } from './tcp-obbba';
+import { regQuestionsOBBBA } from './reg-obbba';
 import { QuestionSet, PracticeQuestion, SectionCode } from './types';
+import {
+  type TaxContentVersion,
+  isTaxAffectedSection,
+} from '@/lib/utils/tax-content-version';
 
 export * from './types';
 export { farQuestions } from './far';
@@ -24,10 +31,77 @@ export const questionSets: Record<SectionCode, QuestionSet | null> = {
   ISC: iscQuestions,
 };
 
+/**
+ * Versioned question sets for tax-affected sections (REG/TCP).
+ *
+ * For TCJA (pre-July 2026): Uses current content (2024 tax year figures)
+ * For OBBBA (post-July 2026): Uses OBBBA-specific content
+ *
+ * Students select their version via Settings > Tax Content Version
+ * or automatically based on their target completion date.
+ */
+export const versionedQuestionSets: Record<
+  'REG' | 'TCP',
+  Record<TaxContentVersion, QuestionSet | null>
+> = {
+  REG: {
+    tcja: regQuestions,       // Current TCJA content (pre-July 2026)
+    obbba: regQuestionsOBBBA, // OBBBA content (post-July 2026)
+  },
+  TCP: {
+    tcja: tcpQuestions,       // Current TCJA content (pre-July 2026)
+    obbba: tcpQuestionsOBBBA, // OBBBA content (post-July 2026)
+  },
+};
+
 // Get all questions for a section
 export function getQuestionsBySection(section: SectionCode): PracticeQuestion[] {
   const questionSet = questionSets[section];
   return questionSet?.questions || [];
+}
+
+/**
+ * Get questions for a section with tax content version awareness.
+ *
+ * For tax-affected sections (REG, TCP), returns version-specific questions.
+ * For non-tax sections (FAR, AUD, BAR, ISC), returns standard questions.
+ *
+ * @param section - The section code
+ * @param taxContentVersion - The tax content version ('tcja' or 'obbba')
+ * @returns Array of practice questions for the section
+ */
+export function getQuestionsBySectionVersioned(
+  section: SectionCode,
+  taxContentVersion: TaxContentVersion
+): PracticeQuestion[] {
+  // For non-tax sections, return standard questions
+  if (!isTaxAffectedSection(section)) {
+    return getQuestionsBySection(section);
+  }
+
+  // For REG/TCP, return version-specific questions
+  const versionedSet = versionedQuestionSets[section as 'REG' | 'TCP'];
+  const questionSet = versionedSet?.[taxContentVersion];
+
+  // Fallback to standard questions if versioned set not available
+  if (!questionSet) {
+    console.warn(
+      `Versioned question set not found for ${section}/${taxContentVersion}, falling back to default`
+    );
+    return getQuestionsBySection(section);
+  }
+
+  return questionSet.questions || [];
+}
+
+/**
+ * Get question count for a section with version awareness.
+ */
+export function getQuestionCountVersioned(
+  section: SectionCode,
+  taxContentVersion: TaxContentVersion
+): number {
+  return getQuestionsBySectionVersioned(section, taxContentVersion).length;
 }
 
 // Get questions filtered by topic

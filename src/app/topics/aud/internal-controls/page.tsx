@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Internal Controls for CPA Exam | COSO Framework & SOC Reports | Meridian CPA Review',
@@ -7,9 +8,20 @@ export const metadata: Metadata = {
   keywords: 'internal controls CPA exam, COSO framework, internal control components, SOC 1 SOC 2, control activities, control deficiencies',
 };
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function InternalControlsPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "AUD", url: `${baseUrl}/sections/aud` },
+          { name: "Internal Controls", url: `${baseUrl}/topics/aud/internal-controls` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -164,14 +164,14 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
 - Static pages (home, about, pricing, FAQ, blog, state-requirements, login, signup)
 - Section pages (6)
 - Guide pages (3 - failed-section, how-to-become-a-cpa, best-order-cpa-exams)
-- Resource pages (2 - /resources, /resources/cpa-pass-rates)
-- Comparison pages (4 - becker-vs-gleim, becker-vs-surgent, surgent-vs-roger, wiley-vs-uworld)
+- Resource pages (4 - /resources, /resources/cpa-pass-rates, /resources/free-cpa-videos, /resources/free-practice-materials)
+- Comparison pages (6 - becker-vs-gleim, becker-vs-surgent, surgent-vs-roger, wiley-vs-uworld, roger-vs-wiley, becker-vs-roger)
 - Topic pages (11 - lease-accounting, revenue-recognition, consolidations, government-accounting, nonprofit-accounting, like-kind-exchanges, basis-calculations, partnership-taxation, audit-reports, internal-controls, audit-evidence)
 - State salary pages (51 - index + 50 state pages, dynamically generated from `src/data/state-salaries.ts`)
 - "How to Become CPA in [State]" pages (56 - index + 55 jurisdiction pages, dynamically generated from `src/lib/data/state-requirements.ts`)
 - Blog posts (13, dynamically generated)
 
-**Total Pages in Sitemap:** ~148 pages
+**Total Pages in Sitemap:** ~152 pages
 
 ---
 
@@ -252,6 +252,58 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
 
 ---
 
+## Phase 4: SEO Schema & Content Extension (Jan 16, 2026)
+
+### JSON-LD Schema Enhancements
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| ArticleJsonLd | **Complete** | `src/components/seo/JsonLd.tsx` |
+| HowToJsonLd | **Complete** | `src/components/seo/JsonLd.tsx` |
+| BreadcrumbJsonLd (topic pages) | **Complete** | All 11 topic pages |
+| BreadcrumbJsonLd (resources) | **Complete** | `/resources`, `/resources/free-cpa-videos`, `/resources/free-practice-materials` |
+
+### Schema Implementation Details:
+
+**Blog Posts (`src/app/blog/[slug]/page.tsx`):**
+- ArticleJsonLd with headline, description, author, dates
+- BreadcrumbJsonLd: Home > Blog > [Post Title]
+
+**How to Become a CPA (`src/app/guides/how-to-become-a-cpa/page.tsx`):**
+- HowToJsonLd with 6 steps, totalTime (PT6Y), estimatedCost
+- BreadcrumbJsonLd: Home > Resources > How to Become a CPA
+- FAQPageJsonLd for FAQ section
+
+**All 11 Topic Pages:**
+- BreadcrumbJsonLd: Home > [Section] > [Topic Name]
+- FAR: lease-accounting, consolidations, government-accounting, nonprofit-accounting, revenue-recognition
+- AUD: audit-evidence, audit-reports, internal-controls
+- REG: basis-calculations, like-kind-exchanges, partnership-taxation
+
+### New Comparison Pages
+
+| Page | URL | Status |
+|------|-----|--------|
+| Roger vs Wiley | `/compare/roger-vs-wiley` | **Complete** |
+| Becker vs Roger | `/compare/becker-vs-roger` | **Complete** |
+
+### Free Resources Section
+
+| Page | URL | Content | Status |
+|------|-----|---------|--------|
+| Free CPA Videos | `/resources/free-cpa-videos` | YouTube channels (Farhat, Edspira, Darius Clark, etc.) | **Complete** |
+| Free Practice Materials | `/resources/free-practice-materials` | AICPA sample tests, FASB, IRS publications | **Complete** |
+
+### Resources Page Updates
+
+**Updated:** `src/app/resources/page.tsx`
+- Added "Compare CPA Review Courses" category
+- Added "Free Study Resources" category
+- Added BreadcrumbJsonLd
+- Fixed TypeScript typing issues
+
+---
+
 ## Notes
 
 - All comparison pages use Option B approach (competitor vs competitor, not us vs them)
@@ -261,3 +313,4 @@ This document tracks the SEO content strategy implementation for Meridian CPA Re
   - No pass rate guarantees
   - No fake team members
   - All data from public sources with citations
+- Free resources pages use LINK-ONLY approach (no republishing AICPA content)

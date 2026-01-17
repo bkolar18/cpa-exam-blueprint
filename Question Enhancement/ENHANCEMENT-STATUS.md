@@ -37,7 +37,7 @@ All 58 exam TBS questions have been enhanced with:
 |---------|-----------------|----------|-----------|------------|--------|
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
-| REG | 1,345 | 440 | 905 | 33% | In Progress |
+| REG | 1,345 | 734 | 611 | 55% | In Progress |
 | TCP | 805 | 0 | 805 | 0% | Pending |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
@@ -67,9 +67,371 @@ All 58 exam TBS questions have been enhanced with:
 | Entity Taxation - Partnerships | 35 | reg-011-001 to reg-011-035 | **Complete** |
 | Entity Taxation - Estates & Trusts | 35 | reg-012-001 to reg-012-035 | **Complete** |
 | AMT Planning | 20 | reg-013-001 to reg-013-020 | **Complete** |
-| Entity Taxation | 200+ | Various | Pending |
-| Business Law | 200+ | Various | Pending |
-| Professional Ethics | 50+ | Various | Pending |
+| REG Foundations | 14 | reg-000-001 to reg-000-014 | **Complete** |
+| Business Law - Contracts | 35 | reg-014-001 to reg-014-035 | **Complete** |
+| Business Law - Agency | 35 | reg-015-001 to reg-015-035 | **Complete** |
+| Business Law - Business Structures | 35 | reg-016-001 to reg-016-035 | **Complete** |
+| Business Law - Bankruptcy | 35 | reg-017-001 to reg-017-035 | **Complete** |
+| Business Law - Securities Regulation | 35 | reg-018-001 to reg-018-035 | **Complete** |
+| Professional Ethics - Circular 230 | 35 | reg-019-001 to reg-019-035 | **Complete** |
+| Filing Status and Dependents | 35 | reg-020-001 to reg-020-035 | **Complete** |
+| Employment Tax | 35 | reg-021-001 to reg-021-035 | **Complete** |
+| Gift and Estate Tax | 35 | reg-022-001 to reg-022-035 | **Complete** |
+
+### REG Enhancement Completed - January 16, 2026 (Session 20)
+
+**Gift and Estate Tax Questions Enhanced (reg-022-001 to reg-022-035)**
+
+35 Gift and Estate Tax questions enhanced with:
+- IRC §2001-2704 (Estate and Gift Tax) comprehensive references
+- IRC §2503 annual exclusion and present interest rules
+- IRC §2513 gift splitting between spouses
+- IRC §2010 unified credit and exemption amount
+- IRC §2056/2056A marital deduction and QDOT requirements
+- IRC §2036/2038 retained interest inclusion rules
+- IRC §2041 general powers of appointment
+- IRC §2702 GRAT/GRUT special valuation rules
+- IRC §7872 below-market loan rules
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Annual Exclusion | IRC §2503(b) |
+| Gift Splitting | IRC §2513 |
+| Unified Credit | IRC §2010 |
+| Marital Deduction | IRC §2056 |
+| QDOT Requirements | IRC §2056A |
+| Retained Life Estate | IRC §2036 |
+| Powers of Appointment | IRC §2041 |
+| GRAT Valuation | IRC §2702 |
+| Below-Market Loans | IRC §7872 |
+| Crummey Powers | IRC §2503(b) |
+| GST Tax | IRC §2601 |
+| QTIP Trusts | IRC §2056(b)(7) |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 19)
+
+**Employment Tax Questions Enhanced (reg-021-001 to reg-021-035)**
+
+35 Employment Tax questions enhanced with:
+- IRC §§3101-3128 (FICA) section references
+- IRC §§3301-3306 (FUTA) section references
+- IRC §1401-1402 (SE tax) section references
+- IRC §6672 (Trust Fund Recovery Penalty)
+- Regulation references for deposit rules and withholding
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| FICA Components | IRC §§3101-3128 |
+| Social Security Rate | IRC §3101(a), §3111(a) |
+| Medicare Rate | IRC §3101(b), §3111(b) |
+| Additional Medicare Tax | IRC §3101(b)(2) |
+| FUTA Tax | IRC §§3301-3306 |
+| Self-Employment Tax | IRC §1401 |
+| SE Tax Base (92.35%) | IRC §1402(a)(12) |
+| SE Tax Deduction | IRC §164(f) |
+| W-4 Purpose | IRC §3402(f)(2) |
+| W-2 Deadline | IRC §6051, §6071(c) |
+| Form 941 | IRC §6011, §6071(a) |
+| Form 940 | IRC §6011, §6071(a) |
+| Deposit Rules | Reg. §31.6302-1 |
+| $100K Next-Day Rule | Reg. §31.6302-1(c)(3) |
+| Trust Fund Recovery Penalty | IRC §6672 |
+| Late Deposit Penalty | IRC §6656 |
+| Backup Withholding | IRC §3406 |
+| Nanny Tax | IRC §3121(a)(7)(B) |
+| Worker Classification | Reg. §31.3121(d)-1 |
+| 1099-NEC | IRC §6041A, §6071(c) |
+| NIIT | IRC §1411 |
+| Partner SE Tax | IRC §1402(a), §1402(a)(13) |
+| S Corp K-1 and SE Tax | IRC §1402(a)(2) |
+| Supplemental Wage Withholding | Reg. §31.3402(g)-1 |
+| Form 941-X | Reg. §31.6402(a)-2 |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 18)
+
+**Filing Status and Dependents Questions Enhanced (reg-020-001 to reg-020-035)**
+
+35 Filing Status and Dependents questions enhanced with:
+- IRC §1 filing status section references
+- IRC §2 QSS and HOH requirements
+- IRC §152 dependency tests (QC and QR)
+- IRC §7703(b) considered unmarried rules
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Filing Status Overview | IRC §1(a)-(d) |
+| Married Filing Jointly | IRC §1(a), §6013 |
+| Head of Household | IRC §1(b), §2(b) |
+| Single Status | IRC §1(c) |
+| Married Filing Separately | IRC §1(d) |
+| Qualifying Surviving Spouse | IRC §2(a) |
+| Qualifying Child Tests | IRC §152(c) |
+| Qualifying Relative Tests | IRC §152(d) |
+| Relationship Test (QC) | IRC §152(c)(2) |
+| Age Test (QC) | IRC §152(c)(3) |
+| Residency Test (QC) | IRC §152(c)(1)(B) |
+| Support Test (QC vs QR) | IRC §152(c)(1)(D), §152(d)(1)(C) |
+| Gross Income Test (QR) | IRC §152(d)(1)(B) |
+| Tiebreaker Rules | IRC §152(c)(4) |
+| Multiple Support Agreement | IRC §152(d)(3), Form 2120 |
+| Joint Return Test | IRC §152(b)(2) |
+| Citizenship Test | IRC §152(b)(3) |
+| Considered Unmarried | IRC §7703(b) |
+| Form 8332 Release | IRC §152(e) |
+| Kiddie Tax | IRC §1(g) |
+| Dependent's Standard Deduction | IRC §63(c)(5) |
+| Community Property | IRC §66 |
+| Child Tax Credit Age | IRC §24(c) |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 17)
+
+**Professional Ethics - Circular 230 Questions Enhanced (reg-019-001 to reg-019-035)**
+
+35 Circular 230 questions enhanced with:
+- 31 CFR Part 10 (Circular 230) section references
+- IRC penalty sections (§6694, §6695, §7525)
+- OPR enforcement and sanctions references
+- Distractor analysis for all wrong answers
+- Memory tips with regulatory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Circular 230 Overview | 31 CFR Part 10 |
+| Who May Practice | §10.3 |
+| Enrolled Agents | §10.4 |
+| Due Diligence | §10.22 |
+| Confidentiality | §10.21 |
+| Conflicts of Interest | §10.29 |
+| Contingent Fees | §10.27 |
+| Return of Records | §10.28 |
+| Return Positions | §10.34 |
+| Written Tax Advice | §10.37 |
+| Advertising & Solicitation | §10.30 |
+| Competence & Diligence | §10.35 |
+| Firm Responsibility | §10.36 |
+| Best Practices | §10.33 |
+| Sanctions | §10.50 |
+| Disreputable Conduct | §10.51 |
+| Expedited Suspension | §10.82 |
+| Preparer Penalties | IRC §6694, §6695 |
+| Tax Practitioner Privilege | IRC §7525 |
+| EA Continuing Education | §10.6(e) |
+| Practice Definition | §10.2(a)(4) |
+| Listed Transactions | IRC §6662A |
+| Form 2848 POA | IRS Forms |
+| OPR Functions | OPR Enforcement |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 16)
+
+**Business Law - Securities Regulation Questions Enhanced (reg-018-001 to reg-018-035)**
+
+35 Securities Regulation questions enhanced with:
+- Securities Act of 1933 section references (§§2-17)
+- Securities Exchange Act of 1934 section references (§§10, 12-16)
+- SEC Rule references (10b-5, 501, 506, etc.)
+- Case law citations (Howey, Dirks, O'Hagan, TSC Industries, Basic)
+- Distractor analysis for all wrong answers
+- Memory tips with legal authority citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| 1933 Act Purpose | 15 U.S.C. §77a et seq., §5 |
+| Definition of Security | §2(a)(1), Howey Test |
+| Registration Statement | §7, Schedule A |
+| SEC Role | 1934 Act §4 |
+| 1934 Act Scope | 15 U.S.C. §78a et seq. |
+| Private Placement | §4(a)(2), Regulation D |
+| Accredited Investor | Rule 501(a) |
+| Section 11 Liability | 1933 Act §11, §11(b) |
+| Section 12 Liability | 1933 Act §12(a)(1), §12(a)(2) |
+| Rule 10b-5 | 1934 Act §10(b), Rule 10b-5 |
+| Insider Trading | §16, Dirks, O'Hagan |
+| Form 10-K/10-Q/8-K | 1934 Act §13 |
+| Intrastate Exemption | §3(a)(11), Rule 147/147A |
+| Rule 506(b)/(c) | Regulation D |
+| Short-Swing Profits | 1934 Act §16(b) |
+| Prospectus Delivery | §5(b)(2), §10(a) |
+| Materiality | TSC Industries, Basic Inc. |
+| Proxy Rules | §14(a), Regulation 14A |
+| Regulation A+ | §3(b) |
+| Tipper-Tippee | Dirks v. SEC, Salman |
+| Scienter | Ernst & Ernst v. Hochfelder |
+| Crowdfunding | JOBS Act Title III |
+| Misappropriation | United States v. O'Hagan |
+| Integration | Rule 152 |
+| Tender Offers | Williams Act, §14(d)-(e) |
+| Blue Sky Laws | NSMIA |
+| Regulation FD | Fair Disclosure |
+| Emerging Growth Company | JOBS Act |
+| SOX Certification | SOX §302, §906 |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 15)
+
+**Business Law - Bankruptcy Questions Enhanced (reg-017-001 to reg-017-035)**
+
+35 Bankruptcy questions enhanced with:
+- 11 U.S.C. (Bankruptcy Code) section references
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Bankruptcy Chapters Overview | 11 U.S.C. §§101, 301, 302 |
+| Automatic Stay | 11 U.S.C. §362 |
+| Exempt Property | 11 U.S.C. §522 |
+| Priority Claims | 11 U.S.C. §507 |
+| Preferences | 11 U.S.C. §547 |
+| Fraudulent Transfers | 11 U.S.C. §548 |
+| Non-dischargeable Debts | 11 U.S.C. §523 |
+| Denial of Discharge | 11 U.S.C. §727 |
+| Chapter 7 Means Test | 11 U.S.C. §707(b) |
+| Chapter 11 Cramdown | 11 U.S.C. §1129(b) |
+| Chapter 13 Plan Periods | 11 U.S.C. §1325(b)(4) |
+| Strong-Arm Powers | 11 U.S.C. §544 |
+| Executory Contracts | 11 U.S.C. §365 |
+| Relief from Stay | 11 U.S.C. §362(d) |
+| Claim Bifurcation | 11 U.S.C. §506(a) |
+| Subchapter V (SBRA) | 11 U.S.C. §§1181-1195 |
+| Proof of Claim | 11 U.S.C. §502 |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 14)
+
+**Business Law - Business Structures Questions Enhanced (reg-016-001 to reg-016-035)**
+
+35 Business Structures questions enhanced with:
+- RMBCA (Revised Model Business Corporation Act) section references
+- RUPA (Revised Uniform Partnership Act) section references
+- ULPA 2001 (Uniform Limited Partnership Act) section references
+- ULLCA (Uniform Limited Liability Company Act) section references
+- Treas. Reg. §301.7701-3 (check-the-box) reference
+- Distractor analysis for all wrong answers
+- Memory tips with legal authority citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| Sole Proprietorship | General law principles |
+| General Partnership Formation | RUPA §202 |
+| Partner Liability | RUPA §306 |
+| Partner Authority | RUPA §301 |
+| Partnership Dissociation | RUPA §601-603 |
+| Partnership Winding Up | RUPA §807 |
+| Partnership by Estoppel | RUPA §308 |
+| Partnership Property | RUPA §204 |
+| Limited Partnership | ULPA 2001 §102, §303 |
+| LLLP | ULPA 2001 §404 |
+| Corporation Formation | RMBCA §2.02 |
+| Shareholder Limited Liability | RMBCA principles |
+| Directors' Duties | RMBCA §8.30-8.31 |
+| Business Judgment Rule | RMBCA §8.31 |
+| Piercing the Corporate Veil | Alter ego doctrine |
+| Shareholder Rights | RMBCA §7.21, §16.02 |
+| Preemptive Rights | RMBCA §6.30 |
+| Quorum Requirements | RMBCA §7.25-7.27 |
+| Derivative Suits | RMBCA §7.40-7.47 |
+| Merger Approval | RMBCA §11.04 |
+| Appraisal Rights | RMBCA Ch. 13 |
+| Ultra Vires | RMBCA §3.04 |
+| De Facto Corporation | Common law/RMBCA §2.04 |
+| Close Corporation | RMBCA §7.32 |
+| Promoter Liability | Corporate law principles |
+| Stock Subscription | RMBCA §6.20 |
+| Stock Classes | RMBCA §6.01 |
+| LLC Formation | ULLCA, Treas. Reg. §301.7701-3 |
+| LLC Operating Agreement | ULLCA §110 |
+| LLC Management | ULLCA §407 |
+| LLC Fiduciary Duties | ULLCA §110(c)-(d) |
+| LLC Charging Order | ULLCA §503 |
+| LLP | RUPA §306(c) |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 13)
+
+**Business Law - Agency Questions Enhanced (reg-015-001 to reg-015-035)**
+
+35 Agency questions enhanced with:
+- Restatement (Third) of Agency section references (§§1.01, 2.01, 2.03, 2.05, 3.07, 3.10, 3.11, 3.12, 3.15, 4.01-4.02, 5.03, 6.01-6.03, 6.10, 7.01, 7.07, 8.01, 8.05, 8.08-8.12, 8.13-8.15)
+- Uniform Durable Power of Attorney Act (UDPAA) references
+- UETA §14 and ESIGN Act for electronic agents
+- Equal dignities rule
+- Distractor analysis for all wrong answers
+- Memory tips with legal authority citations
+
+**Key Topics Enhanced:**
+| Topic | Restatement Reference |
+|-------|----------------------|
+| Agency Creation | §1.01 |
+| Express/Implied Authority | §2.01 |
+| Apparent Authority | §2.03 |
+| Agency by Estoppel | §2.05 |
+| Termination by Operation of Law | §3.07 |
+| Power vs. Right to Terminate | §3.10 |
+| Notice After Termination | §3.11 |
+| Agency Coupled with Interest | §3.12 |
+| Subagents | §3.15 |
+| Ratification | §§4.01-4.02 |
+| Imputed Knowledge | §5.03 |
+| Disclosed Principal Liability | §6.01 |
+| Partially Disclosed Principal | §6.02 |
+| Undisclosed Principal | §6.03 |
+| Warranty of Authority | §6.10 |
+| Agent's Tort Liability | §7.01 |
+| Respondeat Superior | §7.07 |
+| Frolic vs. Detour | §7.07(2) |
+| Agent's Fiduciary Duties | §§8.01-8.12 |
+| Principal's Duties | §§8.13-8.15 |
+
+---
+
+### REG Enhancement Completed - January 16, 2026 (Session 12)
+
+**REG Foundations Questions Enhanced (reg-000-001 to reg-000-014)**
+
+14 foundation questions enhanced with:
+- IRC section references (§61, §62, §63, §1, §2, §1012, §1001, §168, §701, §1361)
+- Treasury Regulation citations (Reg. §301.7701-3)
+- Circular 230 references (31 CFR Part 10)
+- UCC and common law references for Business Law topics
+- Distractor analysis for all wrong answers
+
+**Quality Control Improvements:**
+- Updated audit script (`scripts/audit-mcq-content.js`) with section-specific rules
+- Goodwill amortization now correctly allowed for REG/TCP (IRC §197 tax treatment)
+- Added new authoritative reference patterns: UCC, Reg., CFR, common law, Statute of Frauds
+- Short question threshold adjusted (10 chars critical, 10-20 chars info-only)
+- Enhanced MCQ-EXPLANATION-ENHANCEMENT-PLAN.md with comprehensive QC documentation
+
+**Current REG Audit Status:**
+- Critical issues: 0
+- High issues: 0
+- Missing authoritative refs: 783 (down from 850)
+
+---
 
 ### REG Enhancement Completed - January 16, 2026 (Session 11)
 

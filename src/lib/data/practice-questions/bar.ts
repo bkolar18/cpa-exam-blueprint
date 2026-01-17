@@ -3,6 +3,7 @@ import { PracticeQuestion, QuestionSet } from './types';
 // BAR - Business Analysis & Reporting
 // Total Questions: 490
 // Last Updated: 2026-01-08
+// 2026 Blueprint Audit: Verified 2026-01-16 (ASC 805, valuation models current)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const questions = [

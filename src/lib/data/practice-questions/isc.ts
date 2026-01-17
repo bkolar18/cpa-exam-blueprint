@@ -1,8 +1,9 @@
 import { PracticeQuestion, QuestionSet } from './types';
 
 // ISC - Information Systems & Controls
-// Total Questions: 575
-// Last Updated: 2026-01-08
+// Total Questions: 585
+// Last Updated: 2026-01-16
+// 2026-01-16: Added Regulatory Compliance topic (HIPAA, PCI DSS v4.0, GDPR)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const questions = [
@@ -3739,7 +3740,7 @@ const questions = [
       "D": "Tamper-resistant hardware for key generation, storage, and operations"
     },
     "correctAnswer": "D",
-    "explanation": "HSMs are dedicated, tamper-resistant hardware devices that generate, store, and manage cryptographic keys. They perform crypto operations internally without exposing keys, meeting compliance requirements (PCI-DSS, FIPS 140-2).",
+    "explanation": "HSMs are dedicated, tamper-resistant hardware devices that generate, store, and manage cryptographic keys. They perform crypto operations internally without exposing keys, meeting compliance requirements (PCI DSS v4.0, FIPS 140-2/140-3).",
     "tip": "HSM = tamper-resistant key management. Keys never leave HSM. Required for high-security.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -3844,7 +3845,7 @@ const questions = [
       "D": "Cannot be stored in databases"
     },
     "correctAnswer": "B",
-    "explanation": "Tokens are random substitutes with no mathematical relationship to original data—the mapping is stored in a secure token vault. Unlike encryption, tokens cannot be reversed without vault access. Useful for PCI compliance (credit cards).",
+    "explanation": "Tokens are random substitutes with no mathematical relationship to original data—the mapping is stored in a secure token vault. Unlike encryption, tokens cannot be reversed without vault access. Useful for PCI DSS compliance to reduce scope by removing cardholder data from systems.",
     "tip": "Tokenization = random replacement + vault lookup. Encryption = mathematical transformation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
@@ -12080,6 +12081,220 @@ const questions = [
     "tip": "APIs = new attack surface. Require authentication, authorization, rate limiting, input validation, encryption.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
+  },
+  // =============================================================================
+  // REGULATORY COMPLIANCE - HIPAA, PCI DSS, Privacy Regulations
+  // Added 2026-01-16 for 2026 Blueprint alignment
+  // =============================================================================
+  {
+    "id": "isc-reg-001",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "HIPAA",
+    "conceptTested": "PHI vs ePHI definition",
+    "difficulty": "easy",
+    "questionFormat": "MCQ",
+    "question": "Under HIPAA, Protected Health Information (PHI) differs from electronic Protected Health Information (ePHI) in that:",
+    "options": {
+      "A": "PHI only includes medical records, while ePHI includes billing information",
+      "B": "ePHI is PHI that is created, received, stored, or transmitted electronically",
+      "C": "PHI is regulated by the Privacy Rule only, while ePHI is unregulated",
+      "D": "ePHI requires patient consent, while PHI does not"
+    },
+    "correctAnswer": "B",
+    "explanation": "ePHI (electronic Protected Health Information) is the subset of PHI that is maintained in or transmitted by electronic media. The HIPAA Security Rule specifically protects ePHI, while the Privacy Rule covers all PHI regardless of format (paper, verbal, electronic).",
+    "tip": "ePHI = electronic PHI. Security Rule protects ePHI specifically. Privacy Rule covers ALL PHI formats.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "isc-reg-002",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "HIPAA",
+    "conceptTested": "HIPAA Security Rule safeguards",
+    "difficulty": "medium",
+    "questionFormat": "MCQ",
+    "question": "The HIPAA Security Rule requires covered entities to implement which three categories of safeguards?",
+    "options": {
+      "A": "Physical, technical, and financial safeguards",
+      "B": "Administrative, physical, and technical safeguards",
+      "C": "Preventive, detective, and corrective safeguards",
+      "D": "Network, application, and database safeguards"
+    },
+    "correctAnswer": "B",
+    "explanation": "The HIPAA Security Rule mandates three categories of safeguards: (1) Administrative safeguards (policies, procedures, workforce training), (2) Physical safeguards (facility access, workstation security, device controls), and (3) Technical safeguards (access controls, audit controls, transmission security, encryption).",
+    "tip": "HIPAA Security Rule = Administrative + Physical + Technical. Remember: APT safeguards.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "isc-reg-003",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "HIPAA",
+    "conceptTested": "Business Associate Agreement",
+    "difficulty": "medium",
+    "questionFormat": "MCQ",
+    "question": "A Business Associate Agreement (BAA) under HIPAA is required when:",
+    "options": {
+      "A": "Two healthcare providers share patient referrals",
+      "B": "A vendor or contractor will create, receive, maintain, or transmit PHI on behalf of a covered entity",
+      "C": "A patient requests their medical records",
+      "D": "A covered entity implements new software"
+    },
+    "correctAnswer": "B",
+    "explanation": "A BAA is a contract required by HIPAA when a business associate (vendor, contractor, or subcontractor) will handle PHI on behalf of a covered entity. The BAA specifies how PHI will be protected and limits its use and disclosure. Examples include cloud providers, billing services, and IT support with PHI access.",
+    "tip": "BAA = contract with vendors who handle PHI. Required BEFORE sharing any PHI with business associates.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "isc-reg-004",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "HIPAA",
+    "conceptTested": "HIPAA Security Rule requirements",
+    "difficulty": "hard",
+    "questionFormat": "MCQ",
+    "question": "The proposed 2025 updates to the HIPAA Security Rule would require covered entities to restore critical systems within what timeframe after a cybersecurity incident?",
+    "options": {
+      "A": "24 hours",
+      "B": "72 hours",
+      "C": "7 days",
+      "D": "30 days"
+    },
+    "correctAnswer": "B",
+    "explanation": "The December 2024 HIPAA Security Rule NPRM proposes requiring covered entities to establish procedures to restore critical electronic information systems and data within 72 hours of a disruption. This reflects the increasing importance of cyber resilience in healthcare.",
+    "tip": "Proposed HIPAA update: 72-hour restoration requirement. Also requires technology asset inventories and network maps.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "isc-reg-005",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "HIPAA",
+    "conceptTested": "ePHI identifiers",
+    "difficulty": "medium",
+    "questionFormat": "MCQ",
+    "question": "Which of the following is NOT one of the 18 HIPAA identifiers that make health information 'individually identifiable'?",
+    "options": {
+      "A": "Social Security number",
+      "B": "Blood type",
+      "C": "Email address",
+      "D": "Medical record number"
+    },
+    "correctAnswer": "B",
+    "explanation": "HIPAA defines 18 specific identifiers including names, dates, SSN, medical record numbers, email addresses, IP addresses, and biometric identifiers. Blood type alone is NOT an identifier—it becomes PHI only when combined with an identifier. De-identified data has all 18 identifiers removed.",
+    "tip": "18 HIPAA identifiers include: names, dates, SSN, addresses, phone/fax, email, MRN, account numbers, license numbers, VIN, URLs, IP addresses, biometrics, photos.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "isc-reg-006",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "PCI DSS",
+    "conceptTested": "PCI DSS v4.0 overview",
+    "difficulty": "medium",
+    "questionFormat": "MCQ",
+    "question": "PCI DSS v4.0, effective March 2024, introduced significant changes including:",
+    "options": {
+      "A": "Reducing requirements from 500 to 200",
+      "B": "Eliminating encryption requirements for stored card data",
+      "C": "Requiring 12-character minimum passwords and customized approach for compliance",
+      "D": "Removing MFA requirements for administrative access"
+    },
+    "correctAnswer": "C",
+    "explanation": "PCI DSS v4.0 introduced major updates including: increased password length from 7 to 12 characters, a 'customized approach' allowing flexible compliance methods, enhanced MFA requirements, script management for payment pages (Requirement 6.4.3), and over 500 total requirements (up from 370).",
+    "tip": "PCI DSS v4.0: 12-char passwords, customized approach, 500+ requirements, script management on payment pages.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "isc-reg-007",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "PCI DSS",
+    "conceptTested": "PCI DSS scope",
+    "difficulty": "easy",
+    "questionFormat": "MCQ",
+    "question": "PCI DSS compliance is required for organizations that:",
+    "options": {
+      "A": "Process any financial transactions",
+      "B": "Store, process, or transmit cardholder data",
+      "C": "Have more than 100 employees",
+      "D": "Operate e-commerce websites"
+    },
+    "correctAnswer": "B",
+    "explanation": "PCI DSS applies to any organization that stores, processes, or transmits cardholder data (CHD) or sensitive authentication data (SAD). This includes merchants, payment processors, acquirers, issuers, and service providers in the payment card ecosystem.",
+    "tip": "PCI DSS scope = anywhere CHD or SAD is stored, processed, or transmitted. Reduce scope by tokenization or outsourcing.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 45
+  },
+  {
+    "id": "isc-reg-008",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "PCI DSS",
+    "conceptTested": "PCI DSS v4.0 requirements",
+    "difficulty": "hard",
+    "questionFormat": "MCQ",
+    "question": "Under PCI DSS v4.0 Requirement 6.4.3, organizations must implement controls to:",
+    "options": {
+      "A": "Encrypt all data at rest using AES-256",
+      "B": "Manage and authorize all payment page scripts to prevent e-skimming attacks",
+      "C": "Conduct penetration testing quarterly",
+      "D": "Implement biometric authentication for all users"
+    },
+    "correctAnswer": "B",
+    "explanation": "PCI DSS v4.0 Requirement 6.4.3 addresses e-skimming/Magecart attacks by requiring organizations to manage scripts on payment pages. Organizations must maintain an inventory of scripts, authorize each script, and implement integrity controls to detect unauthorized changes.",
+    "tip": "Req 6.4.3 = payment page script management. Combat e-skimming/Magecart by controlling all scripts.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 75
+  },
+  {
+    "id": "isc-reg-009",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "Privacy Regulations",
+    "conceptTested": "GDPR basics",
+    "difficulty": "medium",
+    "questionFormat": "MCQ",
+    "question": "The EU General Data Protection Regulation (GDPR) applies to organizations:",
+    "options": {
+      "A": "Only if headquartered in the European Union",
+      "B": "That process personal data of EU residents, regardless of where the organization is located",
+      "C": "Only if they have physical operations in EU member states",
+      "D": "Only for financial services companies"
+    },
+    "correctAnswer": "B",
+    "explanation": "GDPR has extraterritorial scope—it applies to any organization worldwide that processes personal data of EU residents, regardless of where the organization is located. This includes offering goods/services to EU residents or monitoring their behavior.",
+    "tip": "GDPR has global reach. If you process EU resident data, GDPR applies regardless of your location.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 60
+  },
+  {
+    "id": "isc-reg-010",
+    "section": "ISC",
+    "topic": "Regulatory Compliance",
+    "subtopic": "Privacy Regulations",
+    "conceptTested": "Data breach notification",
+    "difficulty": "medium",
+    "questionFormat": "MCQ",
+    "question": "Under GDPR, organizations must notify the supervisory authority of a personal data breach within:",
+    "options": {
+      "A": "24 hours",
+      "B": "72 hours",
+      "C": "7 days",
+      "D": "30 days"
+    },
+    "correctAnswer": "B",
+    "explanation": "GDPR Article 33 requires notification to the supervisory authority within 72 hours of becoming aware of a personal data breach, unless the breach is unlikely to result in risk to individuals. If individuals face high risk, they must also be notified directly.",
+    "tip": "GDPR breach notification: 72 hours to authority, 'without undue delay' to affected individuals if high risk.",
+    "calculationRequired": false,
+    "timeEstimateSeconds": 60
   }
 ] as unknown as PracticeQuestion[];
 
@@ -12101,6 +12316,7 @@ export const iscQuestions: QuestionSet = {
       "IT Governance",
       "IT Risk Management",
       "Network Security",
+      "Regulatory Compliance",
       "SOC Reports"
     ],
   questions,

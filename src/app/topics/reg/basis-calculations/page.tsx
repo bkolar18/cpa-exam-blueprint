@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Basis Calculations Guide for CPA Exam | REG',
@@ -171,9 +172,20 @@ const practiceProblems = [
   },
 ];
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function BasisCalculationsPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "REG", url: `${baseUrl}/sections/reg` },
+          { name: "Basis Calculations", url: `${baseUrl}/topics/reg/basis-calculations` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 to-green-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

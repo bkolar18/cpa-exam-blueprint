@@ -38,7 +38,7 @@ export async function POST(request: Request) {
 
     // Send study plan to user
     await resend.emails.send({
-      from: "Meridian CPA Review <onboarding@resend.dev>",
+      from: "Meridian CPA Review <hello@meridiancpareview.com>",
       to: [data.email],
       subject: "Your Personalized CPA Study Plan",
       html: `
@@ -124,7 +124,7 @@ export async function POST(request: Request) {
       if (segmentEmail) {
         try {
           await resend.emails.send({
-            from: "Meridian CPA Review <onboarding@resend.dev>",
+            from: "Meridian CPA Review <hello@meridiancpareview.com>",
             to: [data.email],
             subject: segmentEmail.subject,
             html: generateSegmentEmailHtml(segmentEmail, data.email),
@@ -139,7 +139,7 @@ export async function POST(request: Request) {
     // Send notification to admin with segment info
     const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
     await resend.emails.send({
-      from: "Meridian CPA Review <onboarding@resend.dev>",
+      from: "Meridian CPA Review <hello@meridiancpareview.com>",
       to: [adminEmail],
       subject: `New Lead: ${data.email}`,
       html: `

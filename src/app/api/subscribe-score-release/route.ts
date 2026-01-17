@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: "Meridian CPA Review <onboarding@resend.dev>",
+      from: "Meridian CPA Review <hello@meridiancpareview.com>",
       to: [email],
       subject: "Score Release Notifications Confirmed",
       html: `
@@ -69,7 +69,7 @@ export async function POST(request: Request) {
     // Notify admin of new subscriber
     const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
     await resend.emails.send({
-      from: "Meridian CPA Review <onboarding@resend.dev>",
+      from: "Meridian CPA Review <hello@meridiancpareview.com>",
       to: [adminEmail],
       subject: `New Score Release Subscriber: ${email}`,
       html: `

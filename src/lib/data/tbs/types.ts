@@ -7,14 +7,26 @@ import { SectionCode } from '../practice-questions/types';
 // Core TBS Types
 // ============================================================================
 
+// CPA Evolution (2024) TBS Types
+// Note: Standalone research simulations and written communication were ELIMINATED
+// in the 2024 CPA Evolution update. Authoritative literature now appears as
+// exhibits within select simulations rather than as a searchable resource.
+//
+// MIGRATION STATUS (January 2026):
+// - All 25 research TBS have been migrated to 'document_review' format
+// - Citation requirements converted to dropdown requirements with literature exhibits
+// - 'research' and 'written_communication' types retained for backward compatibility
+//   with any existing user progress data that references the old type
 export type TBSType =
   | 'numeric_entry'        // Free-response calculations
-  | 'document_review'      // Analyze documents, select corrections
+  | 'document_review'      // Analyze documents, select corrections/issues
   | 'journal_entry'        // Record transactions with debits/credits
   | 'dropdown'             // Option list / dropdown selections
-  | 'research'             // Search authoritative literature
   | 'reconciliation'       // Bank/account reconciliations
-  | 'written_communication'; // Draft business correspondence
+  | 'exhibit_analysis'     // Analyze provided authoritative literature exhibits (new format)
+  // DEPRECATED (removed from actual CPA Exam in 2024 but retained for legacy content):
+  | 'research'             // [DEPRECATED] Search authoritative literature
+  | 'written_communication'; // [DEPRECATED] Draft business correspondence
 
 export type ExhibitType =
   | 'memo'

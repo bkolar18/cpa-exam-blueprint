@@ -22,6 +22,14 @@ export function createClient(): SupabaseClient | null {
   return supabaseClient;
 }
 
+/**
+ * Clears the cached Supabase client instance.
+ * Call this when clearing auth storage to ensure a fresh client is created.
+ */
+export function clearCachedClient(): void {
+  supabaseClient = null;
+}
+
 export function isSupabaseConfigured() {
   return !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }

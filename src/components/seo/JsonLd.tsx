@@ -172,3 +172,116 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
     />
   );
 }
+
+// Article schema for blog posts
+interface ArticleJsonLdProps {
+  headline: string;
+  description: string;
+  author: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+  url: string;
+}
+
+export function ArticleJsonLd({
+  headline,
+  description,
+  author,
+  datePublished,
+  dateModified,
+  image = "https://meridiancpareview.com/og-image.png",
+  url,
+}: ArticleJsonLdProps) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    author: {
+      "@type": "Person",
+      name: author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Meridian CPA Review",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://meridiancpareview.com/logo.png",
+      },
+    },
+    datePublished,
+    dateModified: dateModified || datePublished,
+    image,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+// HowTo schema for guide pages
+interface HowToStep {
+  name: string;
+  text: string;
+  url?: string;
+}
+
+interface HowToJsonLdProps {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+  totalTime?: string; // ISO 8601 duration format (e.g., "PT6Y" for 6 years)
+  estimatedCost?: {
+    currency: string;
+    value: string;
+  };
+}
+
+export function HowToJsonLd({
+  name,
+  description,
+  steps,
+  totalTime,
+  estimatedCost,
+}: HowToJsonLdProps) {
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.url && { url: step.url }),
+    })),
+  };
+
+  if (totalTime) {
+    jsonLd.totalTime = totalTime;
+  }
+
+  if (estimatedCost) {
+    jsonLd.estimatedCost = {
+      "@type": "MonetaryAmount",
+      currency: estimatedCost.currency,
+      value: estimatedCost.value,
+    };
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}

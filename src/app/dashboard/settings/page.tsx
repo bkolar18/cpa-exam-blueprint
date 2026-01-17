@@ -6,6 +6,12 @@ import { useAuth } from "@/components/auth/AuthProvider";
 import { useProfileAchievements } from "@/components/gamification/AchievementProvider";
 import { getAllStates } from "@/lib/data/state-requirements";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import {
+  getEffectiveTaxContentVersion,
+  getVersionLabel,
+  getVersionDescription,
+  type TaxContentPreference,
+} from "@/lib/utils/tax-content-version";
 
 export default function SettingsPage() {
   const { user, profile, refreshProfile, loading: authLoading } = useAuth();
@@ -17,6 +23,7 @@ export default function SettingsPage() {
     discipline_choice: "",
     weekly_study_hours: "",
     working_full_time: false,
+    tax_content_version: "auto" as TaxContentPreference,
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -32,9 +39,17 @@ export default function SettingsPage() {
         discipline_choice: profile.discipline_choice || "",
         weekly_study_hours: profile.weekly_study_hours?.toString() || "",
         working_full_time: profile.working_full_time || false,
+        tax_content_version: (profile.tax_content_version as TaxContentPreference) || "auto",
       });
     }
   }, [profile]);
+
+  // Computed effective tax version for display
+  const effectiveTaxVersion = getEffectiveTaxContentVersion(
+    formData.tax_content_version,
+    formData.target_completion_date || null,
+    null
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,6 +67,7 @@ export default function SettingsPage() {
         discipline_choice: formData.discipline_choice || null,
         weekly_study_hours: formData.weekly_study_hours ? parseInt(formData.weekly_study_hours) : null,
         working_full_time: formData.working_full_time,
+        tax_content_version: formData.tax_content_version,
       })
       .eq("id", user.id);
 
@@ -224,6 +240,111 @@ export default function SettingsPage() {
                 I&apos;m working full-time while studying
               </label>
             </div>
+          </div>
+        </div>
+
+        {/* Tax Content Version */}
+        <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-[var(--foreground)]">Tax Content Version</h2>
+            <span className="text-xs px-2 py-1 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+              Affects REG &amp; TCP only
+            </span>
+          </div>
+
+          <p className="text-sm text-[var(--muted)] mb-4">
+            Tax law changed significantly with the OBBBA Act (July 2025). The CPA Exam tests OBBBA provisions
+            starting July 1, 2026. Choose the content version that matches your exam timing.
+          </p>
+
+          <div className="space-y-3">
+            {/* Automatic Option */}
+            <label className={`flex items-start p-3 rounded-lg border cursor-pointer transition-colors ${
+              formData.tax_content_version === "auto"
+                ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                : "border-[var(--border)] hover:border-[var(--primary)]/50"
+            }`}>
+              <input
+                type="radio"
+                name="tax_content_version"
+                value="auto"
+                checked={formData.tax_content_version === "auto"}
+                onChange={(e) => setFormData({ ...formData, tax_content_version: e.target.value as TaxContentPreference })}
+                className="mt-1 w-4 h-4 text-[var(--primary)] border-[var(--border)] focus:ring-[var(--primary)]"
+              />
+              <div className="ml-3">
+                <span className="text-sm font-medium text-[var(--foreground)]">
+                  Automatic (Recommended)
+                </span>
+                <p className="text-xs text-[var(--muted)] mt-1">
+                  Uses your target completion date to show the right content. Currently:{" "}
+                  <span className="font-medium">{getVersionLabel(effectiveTaxVersion)}</span>
+                </p>
+              </div>
+            </label>
+
+            {/* TCJA Option */}
+            <label className={`flex items-start p-3 rounded-lg border cursor-pointer transition-colors ${
+              formData.tax_content_version === "tcja"
+                ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                : "border-[var(--border)] hover:border-[var(--primary)]/50"
+            }`}>
+              <input
+                type="radio"
+                name="tax_content_version"
+                value="tcja"
+                checked={formData.tax_content_version === "tcja"}
+                onChange={(e) => setFormData({ ...formData, tax_content_version: e.target.value as TaxContentPreference })}
+                className="mt-1 w-4 h-4 text-[var(--primary)] border-[var(--border)] focus:ring-[var(--primary)]"
+              />
+              <div className="ml-3">
+                <span className="text-sm font-medium text-[var(--foreground)]">
+                  Pre-July 2026 (TCJA)
+                </span>
+                <p className="text-xs text-[var(--muted)] mt-1">
+                  {getVersionDescription("tcja")}
+                </p>
+              </div>
+            </label>
+
+            {/* OBBBA Option */}
+            <label className={`flex items-start p-3 rounded-lg border cursor-pointer transition-colors ${
+              formData.tax_content_version === "obbba"
+                ? "border-[var(--primary)] bg-[var(--primary)]/5"
+                : "border-[var(--border)] hover:border-[var(--primary)]/50"
+            }`}>
+              <input
+                type="radio"
+                name="tax_content_version"
+                value="obbba"
+                checked={formData.tax_content_version === "obbba"}
+                onChange={(e) => setFormData({ ...formData, tax_content_version: e.target.value as TaxContentPreference })}
+                className="mt-1 w-4 h-4 text-[var(--primary)] border-[var(--border)] focus:ring-[var(--primary)]"
+              />
+              <div className="ml-3">
+                <span className="text-sm font-medium text-[var(--foreground)]">
+                  Post-July 2026 (OBBBA)
+                </span>
+                <p className="text-xs text-[var(--muted)] mt-1">
+                  {getVersionDescription("obbba")}
+                </p>
+              </div>
+            </label>
+          </div>
+
+          {/* Current Version Indicator */}
+          <div className="mt-4 p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700">
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-sm text-blue-700 dark:text-blue-300">
+                <strong>Currently using:</strong> {getVersionLabel(effectiveTaxVersion)}
+              </span>
+            </div>
+            <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">
+              FAR, AUD, BAR, and ISC content is unaffected by these tax law changes.
+            </p>
           </div>
         </div>
 

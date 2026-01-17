@@ -7,7 +7,17 @@ import AdminHeader from '@/components/admin/AdminHeader';
 function isAdminEmail(email: string | null | undefined): boolean {
   if (!email) return false;
   const adminEmails = process.env.ADMIN_EMAILS?.split(',').map(e => e.trim().toLowerCase()) || [];
-  return adminEmails.includes(email.toLowerCase());
+  const isAdmin = adminEmails.includes(email.toLowerCase());
+
+  // Debug logging (remove in production)
+  console.log('[Admin Layout] Email check:', {
+    userEmail: email,
+    adminEmails,
+    isAdmin,
+    envVar: process.env.ADMIN_EMAILS,
+  });
+
+  return isAdmin;
 }
 
 export default async function AdminLayout({
@@ -15,21 +25,37 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log('[Admin Layout] Starting auth check...');
+
   const supabase = await createClient();
 
   if (!supabase) {
+    console.log('[Admin Layout] No supabase client - redirecting to /login');
     redirect('/login');
   }
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const { data: { user }, error } = await supabase.auth.getUser();
+
+  console.log('[Admin Layout] getUser result:', {
+    hasUser: !!user,
+    userEmail: user?.email,
+    error: error?.message
+  });
 
   if (!user) {
+    console.log('[Admin Layout] No user - redirecting to /login');
     redirect('/login');
   }
 
-  if (!isAdminEmail(user.email)) {
+  const adminCheck = isAdminEmail(user.email);
+  console.log('[Admin Layout] Admin check result:', adminCheck);
+
+  if (!adminCheck) {
+    console.log('[Admin Layout] Not admin - redirecting to /dashboard');
     redirect('/dashboard');
   }
+
+  console.log('[Admin Layout] Auth passed! Rendering admin dashboard.');
 
   return (
     <div className="min-h-screen bg-[var(--background)]">

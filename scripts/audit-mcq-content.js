@@ -31,13 +31,15 @@ const EXPECTED_FORMATS = [
 ];
 
 // Outdated accounting standards (should use current equivalents)
+// Note: Some standards apply only to certain sections (e.g., GAAP goodwill impairment doesn't apply to REG/TCP tax questions)
 const OUTDATED_STANDARDS = {
-  'ASC 605': { replacement: 'ASC 606', topic: 'revenue recognition', severity: 'critical' },
-  'ASC 840': { replacement: 'ASC 842', topic: 'lease accounting', severity: 'critical' },
-  'FAS 13': { replacement: 'ASC 842', topic: 'lease accounting', severity: 'critical' },
-  'FAS 5': { replacement: 'ASC 450', topic: 'contingencies', severity: 'high' },
-  'FAS 141': { replacement: 'ASC 805', topic: 'business combinations', severity: 'high' },
-  'goodwill amortization': { replacement: 'impairment testing only', topic: 'goodwill', severity: 'critical' },
+  'ASC 605': { replacement: 'ASC 606', topic: 'revenue recognition', severity: 'critical', sections: ['FAR', 'AUD', 'BAR'] },
+  'ASC 840': { replacement: 'ASC 842', topic: 'lease accounting', severity: 'critical', sections: ['FAR', 'AUD', 'BAR'] },
+  'FAS 13': { replacement: 'ASC 842', topic: 'lease accounting', severity: 'critical', sections: ['FAR', 'AUD', 'BAR'] },
+  'FAS 5': { replacement: 'ASC 450', topic: 'contingencies', severity: 'high', sections: ['FAR', 'AUD', 'BAR'] },
+  'FAS 141': { replacement: 'ASC 805', topic: 'business combinations', severity: 'high', sections: ['FAR', 'AUD', 'BAR'] },
+  // Note: 'goodwill amortization' is valid for REG/TCP (IRC §197 allows 15-year tax amortization) but not for FAR GAAP
+  'goodwill amortization': { replacement: 'impairment testing only', topic: 'goodwill', severity: 'critical', sections: ['FAR', 'BAR'] },
 };
 
 // Valid authoritative reference patterns
@@ -45,12 +47,18 @@ const AUTHORITATIVE_PATTERNS = [
   /ASC\s+\d{3}/i,          // ASC 606, ASC 842
   /AU-C\s+\d{3}/i,         // AU-C 705
   /IRC\s+§?\s*\d+/i,       // IRC §1211
+  /§\s*\d+/i,              // §1231 (without IRC prefix)
   /Section\s+\d+/i,        // Section 1231
   /PCAOB\s+AS\s+\d+/i,     // PCAOB AS 2201
   /Circular\s+230/i,       // Circular 230
   /FASB/i,                 // General FASB reference
   /GAAP/i,                 // GAAP reference
   /AICPA/i,                // AICPA reference
+  /UCC\s+§?\s*\d/i,        // UCC §2-201
+  /Reg\.\s+§?\s*\d/i,      // Reg. §301.7701-3 (Treasury Regs)
+  /\d+\s+CFR/i,            // 31 CFR (Code of Federal Regulations)
+  /common\s+law/i,         // Common law reference
+  /Statute\s+of\s+Frauds/i, // Statute of Frauds
 ];
 
 // ============== EXTRACTION ==============
@@ -189,6 +197,12 @@ function validateMCQ(mcq, section) {
 
   // A. Answer Accuracy - Check for outdated standards
   for (const [pattern, info] of Object.entries(OUTDATED_STANDARDS)) {
+    // Skip if this outdated standard doesn't apply to this section
+    // (e.g., goodwill amortization is valid for REG/TCP tax but not FAR GAAP)
+    if (info.sections && !info.sections.includes(section)) {
+      continue;
+    }
+
     if (fullContent.toLowerCase().includes(pattern.toLowerCase())) {
       // Check if it's in a distractor context
       const isDistractor = mcq.question.toLowerCase().includes('incorrect') ||
@@ -273,9 +287,15 @@ function validateMCQ(mcq, section) {
   }
 
   // I. Empty Question/Options
-  if (!mcq.question || mcq.question.length < 20) {
+  // Note: Some questions like "A partnership is:" or "Form 10-K is:" are valid MCQ stems
+  // 10 chars minimum to catch truly empty questions, but allow short definitional stems
+  if (!mcq.question || mcq.question.length < 10) {
     addIssue('critical', 'short_question', mcq.id, section,
-      `Question is too short (${mcq.question?.length || 0} chars)`);
+      `Question is too short or empty (${mcq.question?.length || 0} chars)`);
+  } else if (mcq.question.length < 20) {
+    // Informational only - short questions may be intentionally concise
+    addIssue('info', 'short_question_stem', mcq.id, section,
+      `Question stem is short (${mcq.question.length} chars) - verify this is intentional`);
   }
 
   // J. Tax Year Currency (for REG/TCP)

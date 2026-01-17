@@ -1,7 +1,8 @@
 // Meridian CPA Review Taxonomy
-// Based on AICPA CPA Exam Blueprint (2024)
+// Based on AICPA CPA Exam Blueprint (2026) - Effective January 1, 2026
 // Topic names aligned with actual question bank data for accurate tracking
 // Study hours and question targets based on industry recommendations
+// Last reviewed: 2026-01-16
 
 export interface SubtopicInfo {
   name: string;

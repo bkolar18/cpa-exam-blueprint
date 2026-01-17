@@ -4,6 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import { getPostBySlug, getPostSlugs } from '@/lib/blog/posts';
 import { categoryLabels, categoryColors } from '@/lib/blog/types';
+import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -98,8 +99,27 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const baseUrl = "https://meridiancpareview.com";
+  const postUrl = `${baseUrl}/blog/${slug}`;
+
   return (
     <div>
+      {/* Structured Data */}
+      <ArticleJsonLd
+        headline={post.title}
+        description={post.description}
+        author={post.author}
+        datePublished={post.publishedAt}
+        dateModified={post.updatedAt}
+        url={postUrl}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "Blog", url: `${baseUrl}/blog` },
+          { name: post.title, url: postUrl },
+        ]}
+      />
       {/* Header */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -20,6 +20,12 @@ import {
  SectionCode,
 } from"@/lib/data/practice-questions";
 import {
+ getEffectiveTaxContentVersion,
+ getVersionLabel,
+ isTaxAffectedSection,
+ type TaxContentPreference,
+} from"@/lib/utils/tax-content-version";
+import {
  selectAdaptiveQuestions,
  buildHistoryFromAttempts,
  buildTopicPerformance,
@@ -71,7 +77,7 @@ const sectionNames: Record<string, string> = {
 export default function SectionPracticePage() {
  const params = useParams();
  const router = useRouter();
- const { user, refreshProfile } = useAuth();
+ const { user, profile, refreshProfile } = useAuth();
  const supabase = createClient();
  const { onStudySessionLogged } = useStudySessionAchievements();
  const { onPracticeSessionCompleted } = usePracticeSessionAchievements();
@@ -79,6 +85,14 @@ export default function SectionPracticePage() {
  const sectionParam = params.section as string;
  const section = sectionParam.toUpperCase() as SectionCode;
  const sectionName = sectionNames[sectionParam.toLowerCase()] || section;
+
+ // Compute effective tax content version for REG/TCP sections
+ const effectiveTaxVersion = getEffectiveTaxContentVersion(
+   (profile?.tax_content_version as TaxContentPreference) || null,
+   profile?.target_completion_date || null,
+   null
+ );
+ const showTaxVersionIndicator = isTaxAffectedSection(section);
 
  const [quizState, setQuizState] = useState<QuizState>('setup');
  const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
@@ -619,6 +633,35 @@ export default function SectionPracticePage() {
  </div>
  </div>
  </div>
+
+ {/* Tax Content Version Indicator (REG/TCP only) */}
+ {showTaxVersionIndicator && (
+ <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-4">
+   <div className="flex items-center justify-between">
+     <div className="flex items-center gap-3">
+       <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+         <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+       </div>
+       <div>
+         <p className="text-sm font-medium text-blue-800 dark:text-blue-300">
+           Tax Law Version: <span className="font-semibold">{getVersionLabel(effectiveTaxVersion)}</span>
+         </p>
+         <p className="text-xs text-blue-600 dark:text-blue-400">
+           Questions reflect {effectiveTaxVersion === 'tcja' ? 'current TCJA rules' : 'new OBBBA rules'} for this section.
+         </p>
+       </div>
+     </div>
+     <Link
+       href="/dashboard/settings#tax-content-version"
+       className="text-xs text-blue-700 dark:text-blue-300 hover:underline whitespace-nowrap"
+     >
+       Change in Settings
+     </Link>
+   </div>
+ </div>
+ )}
 
  {/* Quiz Setup */}
  <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">

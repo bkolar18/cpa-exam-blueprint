@@ -2879,20 +2879,20 @@ export const tcpSCorpDistributionsTBS: TBSQuestion = {
   ],
 };
 
-// Research - IRC Section Citation
+// Pass-Through Business Deduction - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearchTaxPlanningTBS: TBSQuestion = {
   id: "tbs-tcp-021",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "QBI Deduction Authority",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-I",
-  title: "Research - Pass-Through Business Deduction",
+  title: "Pass-Through Business Deduction Analysis",
   scenarioText: `A client who owns a sole proprietorship wants to reduce their taxable income. They've heard that owners of non-corporate businesses may be entitled to deduct a portion of their business profits on their individual tax return.
 
-Required: Cite the IRC section that provides for a deduction available to owners of pass-through entities based on their business income.`,
+Review the authoritative literature excerpts and identify the IRC section that provides for a deduction available to owners of pass-through entities based on their business income.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -2912,25 +2912,49 @@ Required: Cite the IRC section that provides for a deduction available to owners
 Needed: The primary IRC section number that provides for a deduction based on income from pass-through entities.`,
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Pass-Through Deductions",
+        paragraphs: [
+          "IRC Section 162 - Trade or Business Expenses",
+          "(a) In general. - There shall be allowed as a deduction all the ordinary and necessary expenses paid or incurred during the taxable year in carrying on any trade or business...",
+          "",
+          "IRC Section 199A - Qualified Business Income",
+          "(a) Allowance of deduction. - In the case of a taxpayer other than a corporation, there shall be allowed as a deduction for any taxable year an amount equal to the lesser of: (1) the combined qualified business income amount of the taxpayer, or (2) 20 percent of the excess (if any) of the taxable income of the taxpayer for the taxable year over the net capital gain.",
+          "(b) Combined qualified business income amount. - For purposes of this section, the term 'combined qualified business income amount' means an amount equal to 20 percent of the qualified business income with respect to each qualified trade or business.",
+          "",
+          "IRC Section 212 - Expenses for Production of Income",
+          "In the case of an individual, there shall be allowed as a deduction all the ordinary and necessary expenses paid or incurred during the taxable year for the production or collection of income...",
+          "",
+          "IRC Section 469 - Passive Activity Losses and Credits Limited",
+          "(a) Disallowance. - If for any taxable year the taxpayer is described in paragraph (2), neither the passive activity loss nor the passive activity credit for the taxable year shall be allowed.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-199a-citation",
       order: 1,
-      type: "citation",
-      label: "IRC Section for QBI Deduction",
+      type: "dropdown",
+      label: "Which IRC section provides the deduction for qualified business income from pass-through entities?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-162", order: 1, text: "IRC Section 162 - Trade or Business Expenses", isCorrect: false },
+        { id: "opt-199a", order: 2, text: "IRC Section 199A - Qualified Business Income", isCorrect: true },
+        { id: "opt-212", order: 3, text: "IRC Section 212 - Expenses for Production of Income", isCorrect: false },
+        { id: "opt-469", order: 4, text: "IRC Section 469 - Passive Activity Losses Limited", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 199A",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 199A" },
-          { source: "IRC", topicCode: "IRC Section 199A" },
-          { source: "IRC", topicCode: "26 USC 199A" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-199a",
       },
-      explanation: "Per IRC §199A, QBI deduction allows 20% deduction for qualified business income from pass-through entities.",
+      explanation: "Per IRC §199A (enacted by TCJA), the QBI deduction allows non-corporate taxpayers to deduct up to 20% of qualified business income from pass-through entities such as sole proprietorships, partnerships, and S corporations.",
     },
   ],
 };
@@ -3362,20 +3386,20 @@ export const tcpRetirementPlanSelectionTBS: TBSQuestion = {
   ],
 };
 
-// Research - Restricted Property Income Election
+// Restricted Property Income Election - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearch83bTBS: TBSQuestion = {
   id: "tbs-tcp-028",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "Equity Compensation",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-I",
-  title: "Research - Restricted Property Income Election",
+  title: "Restricted Property Income Election Analysis",
   scenarioText: `An employee received restricted stock that will vest over several years. Rather than recognizing income as each portion vests, they want to make an election to include the entire value in income at the time of grant.
 
-Required: Find the IRC section that allows a taxpayer to elect to include the value of property transferred in connection with services in income before it is substantially vested.`,
+Review the authoritative literature excerpts and identify the IRC section that allows a taxpayer to elect to include the value of property transferred in connection with services in income before it is substantially vested.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -3393,24 +3417,49 @@ Required: Find the IRC section that allows a taxpayer to elect to include the va
         body: "Client received restricted stock vesting over 4 years. They believe the stock will appreciate significantly and want to accelerate income recognition to the grant date. Find the IRC section that permits this election.",
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Property Transferred for Services",
+        paragraphs: [
+          "IRC Section 61 - Gross Income Defined",
+          "(a) General definition. - Except as otherwise provided in this subtitle, gross income means all income from whatever source derived, including compensation for services.",
+          "",
+          "IRC Section 83 - Property Transferred in Connection with Performance of Services",
+          "(a) General rule. - If property is transferred to any person in connection with the performance of services, the excess of the fair market value of such property over the amount paid shall be included in the gross income of the person who performed such services, in the first taxable year in which the rights of the person having the beneficial interest in such property are transferable or are not subject to a substantial risk of forfeiture.",
+          "(b) Election to include in gross income in year of transfer. - Any person who performs services in connection with which property is transferred may elect to include in his gross income, for the taxable year in which such property is transferred, the excess (if any) of the fair market value of such property at the time of transfer over the amount (if any) paid for such property. This election must be made within 30 days of the transfer date.",
+          "",
+          "IRC Section 409A - Nonqualified Deferred Compensation Plans",
+          "(a) Rules relating to constructive receipt. - If at any time during a taxable year a nonqualified deferred compensation plan fails to meet the requirements of paragraphs (2), (3), and (4), all compensation deferred under the plan for the taxable year and all preceding taxable years shall be includible in gross income.",
+          "",
+          "IRC Section 422 - Incentive Stock Options",
+          "(a) In general. - Section 421(a) shall apply with respect to the transfer of a share of stock to an individual pursuant to his exercise of an incentive stock option if no disposition of such share is made by him within 2 years from the date of granting the option.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-83b",
       order: 1,
-      type: "citation",
-      label: "IRC Section for early recognition election",
+      type: "dropdown",
+      label: "Which IRC section allows early recognition of income for restricted property?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-61", order: 1, text: "IRC Section 61 - Gross Income Defined", isCorrect: false },
+        { id: "opt-83b", order: 2, text: "IRC Section 83(b) - Election for Property Transferred", isCorrect: true },
+        { id: "opt-409a", order: 3, text: "IRC Section 409A - Nonqualified Deferred Compensation", isCorrect: false },
+        { id: "opt-422", order: 4, text: "IRC Section 422 - Incentive Stock Options", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 83(b)",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 83(b)" },
-          { source: "IRC", topicCode: "26 USC 83(b)" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-83b",
       },
-      explanation: "Per IRC §83(b), election allows taxpayer to recognize income at grant rather than vesting.",
+      explanation: "Per IRC §83(b), a taxpayer may elect to recognize income at the time of grant rather than waiting until vesting. This election must be filed within 30 days of the transfer and is advantageous when the taxpayer expects significant appreciation.",
     },
   ],
 };
@@ -4194,20 +4243,20 @@ export const tcpPartnershipLiquidationTBS: TBSQuestion = {
   ],
 };
 
-// Research - Primary Residence Sale
+// Personal Residence Sale - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearch121TBS: TBSQuestion = {
   id: "tbs-tcp-041",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "Personal Residence",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-III",
-  title: "Research - Personal Residence Sale",
+  title: "Personal Residence Sale Exclusion Analysis",
   scenarioText: `A married couple is selling the home they have lived in for the past 5 years. The sale will result in a substantial gain. They want to know if any of the gain can be sheltered from taxation.
 
-Required: Find the IRC section that provides relief from taxation on the sale of a taxpayer's primary home.`,
+Review the authoritative literature excerpts and identify the IRC section that provides relief from taxation on the sale of a taxpayer's primary home.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -4225,24 +4274,49 @@ Required: Find the IRC section that provides relief from taxation on the sale of
         body: "A client who has owned and lived in their home for 5 years is selling it for a $400,000 gain. They believe there may be a provision that allows them to avoid paying tax on some or all of this gain. Find the relevant IRC section.",
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Sale of Residence Provisions",
+        paragraphs: [
+          "IRC Section 121 - Exclusion of Gain from Sale of Principal Residence",
+          "(a) Exclusion. - Gross income shall not include gain from the sale or exchange of property if, during the 5-year period ending on the date of the sale or exchange, such property has been owned and used by the taxpayer as the taxpayer's principal residence for periods aggregating 2 years or more.",
+          "(b) Limitations. - (1) In general. The amount of gain excluded from gross income under subsection (a) shall not exceed $250,000. (2) Special rules for joint returns. In the case of a husband and wife who make a joint return for the taxable year of the sale or exchange, $500,000 shall be substituted for $250,000.",
+          "",
+          "IRC Section 1001 - Determination of Amount of and Recognition of Gain or Loss",
+          "(a) Computation of gain or loss. - The gain from the sale or other disposition of property shall be the excess of the amount realized therefrom over the adjusted basis.",
+          "",
+          "IRC Section 1031 - Exchange of Real Property",
+          "(a) Nonrecognition of gain or loss from exchanges solely in kind. - No gain or loss shall be recognized on the exchange of real property held for productive use in a trade or business or for investment.",
+          "",
+          "IRC Section 1033 - Involuntary Conversions",
+          "(a) General rule. - If property is compulsorily or involuntarily converted, no gain shall be recognized if the taxpayer acquires replacement property similar in service or use.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-121",
       order: 1,
-      type: "citation",
-      label: "IRC Section for home sale exclusion",
+      type: "dropdown",
+      label: "Which IRC section provides the gain exclusion for sale of a principal residence?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-121", order: 1, text: "IRC Section 121 - Exclusion of Gain from Sale of Principal Residence", isCorrect: true },
+        { id: "opt-1001", order: 2, text: "IRC Section 1001 - Determination of Gain or Loss", isCorrect: false },
+        { id: "opt-1031", order: 3, text: "IRC Section 1031 - Exchange of Real Property", isCorrect: false },
+        { id: "opt-1033", order: 4, text: "IRC Section 1033 - Involuntary Conversions", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 121",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 121" },
-          { source: "IRC", topicCode: "26 USC 121" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-121",
       },
-      explanation: "Per IRC §121, primary residence gain exclusion: $250K single / $500K married.",
+      explanation: "Per IRC §121, a taxpayer may exclude up to $250,000 of gain ($500,000 for married filing jointly) from the sale of their principal residence if they meet the ownership and use tests (2 of prior 5 years).",
     },
   ],
 };
@@ -4751,20 +4825,20 @@ export const tcpCLTPlanningTBS: TBSQuestion = {
   ],
 };
 
-// Research - Real Property Exchange Deferral
+// Investment Property Exchange - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearch1031TBS: TBSQuestion = {
   id: "tbs-tcp-049",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Research",
   subtopic: "Property Exchanges",
   difficulty: "medium",
   skillLevel: "remembering_understanding",
   contentArea: "TCP-III",
-  title: "Research - Investment Property Exchange",
-  scenarioText: `A client owns a commercial building they want to sell. However, they don't want to pay tax on the gain right away. Instead, they plan to use the proceeds to purchase another investment property. They've heard there may be a way to defer the gain.
+  title: "Investment Property Exchange Analysis",
+  scenarioText: `A client owns a commercial building they want to sell. However, they don't want to pay tax on the gain right away. Instead, they plan to use the proceeds to purchase another investment property.
 
-Required: Find the IRC section that allows taxpayers to defer gain recognition when exchanging real property held for investment or business use.`,
+Review the authoritative literature excerpts and identify the IRC section that allows taxpayers to defer gain recognition when exchanging real property held for investment or business use.`,
   timeEstimateMinutes: 8,
   maxScorePoints: 2,
   exhibits: [
@@ -4782,24 +4856,48 @@ Required: Find the IRC section that allows taxpayers to defer gain recognition w
         body: "Client wants to sell a commercial building and reinvest in another property without recognizing gain. Find the IRC section that provides for deferral when exchanging investment real estate.",
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Property Exchange Provisions",
+        paragraphs: [
+          "IRC Section 1001 - Determination of Amount of and Recognition of Gain or Loss",
+          "(c) Recognition of gain or loss. - Except as otherwise provided in this subtitle, the entire amount of the gain or loss, determined under this section, on the sale or exchange of property shall be recognized.",
+          "",
+          "IRC Section 1031 - Exchange of Real Property Held for Productive Use or Investment",
+          "(a) Nonrecognition of gain or loss from exchanges solely in kind. - No gain or loss shall be recognized on the exchange of real property held for productive use in a trade or business or for investment if such real property is exchanged solely for real property of like kind which is to be held either for productive use in a trade or business or for investment.",
+          "",
+          "IRC Section 1033 - Involuntary Conversions",
+          "(a) General rule. - If property is compulsorily or involuntarily converted into property similar or related in service or use to the property so converted, or into money, no gain shall be recognized.",
+          "",
+          "IRC Section 453 - Installment Method",
+          "(a) General rule. - Except as otherwise provided in this section, income from an installment sale shall be taken into account for purposes of this title under the installment method.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-1031",
       order: 1,
-      type: "citation",
-      label: "IRC Section for like-kind exchanges",
+      type: "dropdown",
+      label: "Which IRC section allows deferral of gain on like-kind real property exchanges?",
       points: 2,
+      dropdownOptions: [
+        { id: "opt-1001", order: 1, text: "IRC Section 1001 - Determination of Gain or Loss", isCorrect: false },
+        { id: "opt-1031", order: 2, text: "IRC Section 1031 - Exchange of Real Property", isCorrect: true },
+        { id: "opt-1033", order: 3, text: "IRC Section 1033 - Involuntary Conversions", isCorrect: false },
+        { id: "opt-453", order: 4, text: "IRC Section 453 - Installment Method", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "Section 1031",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "IRC 1031" },
-          { source: "IRC", topicCode: "26 USC 1031" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-1031",
       },
-      explanation: "Per IRC §1031, like-kind exchanges allow deferral of gain on qualifying property exchanges.",
+      explanation: "Per IRC §1031, like-kind exchanges allow complete deferral of gain when real property held for investment or business use is exchanged for other qualifying real property.",
     },
   ],
 };
@@ -6039,20 +6137,20 @@ Required: Calculate regular tax and AMT implications.`,
   ],
 };
 
-// Research - Business Use of Residence
+// Business Use of Residence - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearchSec280ATBS: TBSQuestion = {
   id: "tbs-tcp-059",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Tax Planning",
   subtopic: "Business Use of Residence",
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "TCP-I",
-  title: "Research - Business Use of Personal Residence",
+  title: "Business Use of Personal Residence Analysis",
   scenarioText: `A self-employed client uses a portion of their personal residence exclusively for business. They want to understand the rules and limitations for deducting expenses related to business use of a dwelling unit.
 
-Required: Research and cite the IRC section that addresses the deductibility of expenses when a taxpayer uses their dwelling for both personal and business purposes.`,
+Review the authoritative literature excerpts and answer the questions about business use of home deductions.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [
@@ -6072,24 +6170,47 @@ Required: Research and cite the IRC section that addresses the deductibility of 
         ],
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Home Office Provisions",
+        paragraphs: [
+          "IRC Section 162 - Trade or Business Expenses",
+          "(a) In general. - There shall be allowed as a deduction all the ordinary and necessary expenses paid or incurred during the taxable year in carrying on any trade or business.",
+          "",
+          "IRC Section 280A - Disallowance of Certain Expenses in Connection with Business Use of Home",
+          "(a) General rule. - Except as otherwise provided in this section, in the case of a taxpayer who is an individual, no deduction otherwise allowable under this chapter shall be allowed with respect to the use of a dwelling unit which is used by the taxpayer during the taxable year as a residence.",
+          "(c) Exceptions for certain business use. - Subsection (a) shall not apply to any item to the extent such item is allocable to a portion of the dwelling unit which is exclusively used on a regular basis: (1) as the principal place of business for any trade or business of the taxpayer, or (2) as a place of business which is used by patients, clients, or customers in meeting or dealing with the taxpayer.",
+          "(g) Special rule for rental of dwelling unit for less than 15 days. - If a dwelling unit is used during the taxable year as a residence and such dwelling unit is actually rented for less than 15 days during the taxable year, then the income derived from such use for the taxable year shall not be included in the gross income of such taxpayer.",
+          "",
+          "IRC Section 469 - Passive Activity Losses",
+          "(a) Disallowance. - The passive activity loss shall not be allowed.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "IRC section governing business use of home",
+      type: "dropdown",
+      label: "Which IRC section governs business use of home deductions?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-162", order: 1, text: "IRC Section 162 - Trade or Business Expenses", isCorrect: false },
+        { id: "opt-280a", order: 2, text: "IRC Section 280A - Business Use of Home", isCorrect: true },
+        { id: "opt-469", order: 3, text: "IRC Section 469 - Passive Activity Losses", isCorrect: false },
+        { id: "opt-183", order: 4, text: "IRC Section 183 - Hobby Loss Rules", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "280A",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 280A" },
-          { source: "IRC", topicCode: "Sec. 280A" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-280a",
       },
-      explanation: "Per IRC §280A, this section governs deductions for business use of home.",
+      explanation: "Per IRC §280A, this section specifically governs the deductibility of expenses related to business use of a dwelling unit.",
     },
     {
       id: "req-exclusive",
@@ -6682,20 +6803,20 @@ Required: Calculate gift tax implications and qualified distribution amounts.`,
   ],
 };
 
-// Section 83 Research
+// Section 83 Restricted Stock - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearchSection83TBS: TBSQuestion = {
   id: "tbs-tcp-064",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Compensation Planning",
   subtopic: "Restricted Stock",
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "TCP-I",
-  title: "Restricted Stock Income Election Research",
-  scenarioText: `An executive received company stock subject to vesting requirements as part of a compensation package. The shares are subject to forfeiture if employment terminates before vesting is complete. Research the tax treatment of property received for services when subject to restrictions, including any available elections to accelerate income recognition.
+  title: "Restricted Stock Income Election Analysis",
+  scenarioText: `An executive received company stock subject to vesting requirements as part of a compensation package. The shares are subject to forfeiture if employment terminates before vesting is complete.
 
-Required: Cite the IRC section governing property transfers in connection with services and analyze the available elections.`,
+Review the authoritative literature excerpts and answer the questions about the tax treatment of property received for services when subject to restrictions.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [
@@ -6715,24 +6836,49 @@ Required: Cite the IRC section governing property transfers in connection with s
         ],
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Property Transferred for Services",
+        paragraphs: [
+          "IRC Section 61 - Gross Income Defined",
+          "(a) General definition. - Gross income means all income from whatever source derived, including compensation for services.",
+          "",
+          "IRC Section 83 - Property Transferred in Connection with Performance of Services",
+          "(a) General rule. - If property is transferred to any person in connection with the performance of services, the excess of the fair market value of such property over the amount paid shall be included in the gross income of the person who performed such services, in the first taxable year in which the rights are transferable or are not subject to a substantial risk of forfeiture.",
+          "(b) Election to include in gross income in year of transfer. - Any person who performs services in connection with which property is transferred may elect to include in gross income for the taxable year in which such property is transferred, the excess of the fair market value at the time of transfer over the amount paid. This election must be made within 30 days of the transfer date.",
+          "",
+          "IRC Section 409A - Nonqualified Deferred Compensation Plans",
+          "(a) Rules relating to constructive receipt. - Certain compensation plans must meet requirements to avoid immediate taxation.",
+          "",
+          "IRC Section 422 - Incentive Stock Options",
+          "(a) In general. - Special rules apply to the transfer of stock pursuant to exercise of an incentive stock option.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "IRC section governing property transfers for services",
+      type: "dropdown",
+      label: "Which IRC section governs property transfers for services?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-61", order: 1, text: "IRC Section 61 - Gross Income Defined", isCorrect: false },
+        { id: "opt-83", order: 2, text: "IRC Section 83 - Property Transferred for Services", isCorrect: true },
+        { id: "opt-409a", order: 3, text: "IRC Section 409A - Nonqualified Deferred Compensation", isCorrect: false },
+        { id: "opt-422", order: 4, text: "IRC Section 422 - Incentive Stock Options", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "83",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 83" },
-          { source: "IRC", topicCode: "Sec. 83" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-83",
       },
-      explanation: "Per IRC §83, this section governs transfers of property in connection with services.",
+      explanation: "Per IRC §83, this section governs the tax treatment of property transferred in connection with the performance of services, including restricted stock grants.",
     },
     {
       id: "req-deadline",
@@ -7755,20 +7901,20 @@ Required: Evaluate grouping election options and material participation rules.`,
   ],
 };
 
-// Section 643 Trust Research
+// Section 643 Trust DNI - Migrated from research TBS (CPA Evolution 2024)
 export const tcpResearchSection643TBS: TBSQuestion = {
   id: "tbs-tcp-072",
   section: "TCP",
-  tbsType: "research",
+  tbsType: "document_review",
   topic: "Trust Taxation",
   subtopic: "Distributable Net Income",
   difficulty: "medium",
   skillLevel: "analysis",
   contentArea: "TCP-IV",
-  title: "Trust Distribution Character Research",
+  title: "Trust Distribution Character Analysis",
   scenarioText: `A trust is making distributions to its beneficiaries and must determine how to characterize the income for tax purposes. The trustee needs to understand the rules for determining which types of income (dividends, interest, capital gains) flow through to beneficiaries and in what character.
 
-Required: Cite the IRC section that defines the income measure used to determine the character and amount of taxable distributions to trust beneficiaries.`,
+Review the authoritative literature excerpts and answer the questions about distributable net income.`,
   timeEstimateMinutes: 10,
   maxScorePoints: 4,
   exhibits: [
@@ -7789,24 +7935,50 @@ Required: Cite the IRC section that defines the income measure used to determine
         ],
       },
     },
+    {
+      id: "exhibit-literature",
+      order: 2,
+      title: "Authoritative Literature Excerpts",
+      type: "text",
+      content: {
+        type: "text",
+        title: "Internal Revenue Code - Trust Taxation Provisions",
+        paragraphs: [
+          "IRC Section 641 - Imposition of Tax on Trusts",
+          "(a) Application of tax. - The tax imposed by section 1(e) shall apply to the taxable income of estates or of any kind of property held in trust.",
+          "",
+          "IRC Section 643 - Definitions Applicable to Subparts A, B, C, and D",
+          "(a) Distributable net income. - For purposes of this part, the term 'distributable net income' means, with respect to any taxable year, the taxable income of the estate or trust computed with the following modifications:",
+          "(3) Capital gains and losses. - Gains from the sale or exchange of capital assets shall be excluded to the extent that such gains are allocated to corpus and are not paid, credited, or required to be distributed to any beneficiary during the taxable year.",
+          "(5) Tax-exempt interest. - There shall be included any tax-exempt interest received by the estate or trust, reduced by disbursements allocable to such interest.",
+          "",
+          "IRC Section 651 - Deduction for Distributions to Beneficiaries",
+          "(a) Deduction. - In the case of any trust the terms of which provide that all of its income is required to be distributed currently, there shall be allowed as a deduction an amount equal to the amount of the income for the taxable year which is required to be distributed currently.",
+          "",
+          "IRC Section 661 - Deduction for Distributions",
+          "(a) General rule. - In any taxable year there shall be allowed as a deduction in computing the taxable income of an estate or trust the sum of the amount of income which is required to be distributed currently.",
+        ],
+      },
+    },
   ],
   requirements: [
     {
       id: "req-citation",
       order: 1,
-      type: "citation",
-      label: "IRC section defining distributable net income",
+      type: "dropdown",
+      label: "Which IRC section defines distributable net income (DNI)?",
       points: 1,
+      dropdownOptions: [
+        { id: "opt-641", order: 1, text: "IRC Section 641 - Imposition of Tax on Trusts", isCorrect: false },
+        { id: "opt-643", order: 2, text: "IRC Section 643 - Definitions (DNI)", isCorrect: true },
+        { id: "opt-651", order: 3, text: "IRC Section 651 - Deduction for Distributions", isCorrect: false },
+        { id: "opt-661", order: 4, text: "IRC Section 661 - Deduction for Distributions", isCorrect: false },
+      ],
       correctAnswer: {
-        type: "citation",
-        source: "IRC",
-        topicCode: "643",
-        alternativeCitations: [
-          { source: "IRC", topicCode: "Section 643" },
-          { source: "IRC", topicCode: "Sec. 643" },
-        ],
+        type: "dropdown",
+        correctOptionId: "opt-643",
       },
-      explanation: "Per IRC §643, this section defines distributable net income (DNI) for trust taxation.",
+      explanation: "Per IRC §643, this section defines distributable net income (DNI), which determines the character and amount of taxable distributions to trust beneficiaries.",
     },
     {
       id: "req-cap-gain",

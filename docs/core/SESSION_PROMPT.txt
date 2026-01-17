@@ -10,7 +10,7 @@ context and continue work seamlessly.
 QUICK START - READ FIRST
 ================================================================================
 
-1. This is a CPA exam prep lead generation site (Meridian CPA Review)
+1. This is a full-service CPA review company (Meridian CPA Review)
 2. Tech stack: Next.js 16.1.1, React 19, TypeScript, Tailwind CSS v4, Supabase
 3. Live URL: https://cpa-exam-blueprint.vercel.app
 4. Repo: https://github.com/bkolar18/cpa-exam-blueprint
@@ -33,8 +33,8 @@ COMPLETED PHASES:
 - Phase 3: CPA Academy / Dashboard (Auth, MCQs, TBS, Gamification, Admin)
 
 CONTENT STATUS:
-- MCQ Questions: 5,810 across 176 batch files (49.2% medium)
-- TBS Questions: 470+ across all 6 sections
+- MCQ Questions: 6,065+ across all 6 sections
+- TBS Questions: ~500 across all 6 sections
 - State Requirements: 55 states/jurisdictions
 
 RECENT MAJOR WORK (2026-01-16):

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { HowToJsonLd, BreadcrumbJsonLd, FAQPageJsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'How to Become a CPA in 2025-2026 | Step-by-Step Guide',
@@ -139,9 +140,31 @@ const faqs = [
   },
 ];
 
+const baseUrl = "https://meridiancpareview.com";
+
 export default function HowToBecomeCPAPage() {
   return (
     <div>
+      {/* Structured Data */}
+      <HowToJsonLd
+        name="How to Become a CPA"
+        description="Complete step-by-step guide to becoming a Certified Public Accountant, including education requirements, the CPA exam, work experience, and state licensing."
+        totalTime="PT6Y"
+        estimatedCost={{ currency: "USD", value: "1500-5000" }}
+        steps={steps.map((step) => ({
+          name: step.title,
+          text: step.description,
+          url: step.link?.startsWith('/') ? `${baseUrl}${step.link}` : step.link,
+        }))}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: baseUrl },
+          { name: "Resources", url: `${baseUrl}/resources` },
+          { name: "How to Become a CPA", url: `${baseUrl}/guides/how-to-become-a-cpa` },
+        ]}
+      />
+      <FAQPageJsonLd faqs={faqs} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

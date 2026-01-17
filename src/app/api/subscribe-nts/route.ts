@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: "Meridian CPA Review <onboarding@resend.dev>",
+      from: "Meridian CPA Review <hello@meridiancpareview.com>",
       to: [data.email],
       subject: "NTS Expiration Reminders Confirmed",
       html: `
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
     // Notify admin of new subscriber
     const adminEmail = process.env.EMAIL_TO || "delivered@resend.dev";
     await resend.emails.send({
-      from: "Meridian CPA Review <onboarding@resend.dev>",
+      from: "Meridian CPA Review <hello@meridiancpareview.com>",
       to: [adminEmail],
       subject: `New NTS Tracker Subscriber: ${data.email}`,
       html: `
