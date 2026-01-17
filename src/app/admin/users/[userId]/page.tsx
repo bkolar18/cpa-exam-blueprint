@@ -54,8 +54,10 @@ interface UserAnalytics {
   };
   progressSummary: {
     sectionsStarted: number;
-    totalTopicsCompleted: number;
+    sectionsPassed: number;
+    sectionsScheduled: number;
     overallProgress: number;
+    sectionDetails: { section: string; status: string; score: number | null; examDate: string | null }[];
   };
   dateRange: { start: string; end: string };
 }
@@ -244,15 +246,21 @@ export default function UserDetailPage({ params }: { params: Promise<{ userId: s
         </div>
 
         <div className="bg-white dark:bg-[var(--card)] rounded-xl border border-[var(--border)] p-6">
-          <h3 className="font-semibold text-[var(--foreground)] dark:text-white mb-4">Study Progress</h3>
+          <h3 className="font-semibold text-[var(--foreground)] dark:text-white mb-4">CPA Exam Progress</h3>
           <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <span className="text-[var(--muted)]">Sections Started</span>
-              <span className="font-bold text-[var(--foreground)] dark:text-white">{data.progressSummary.sectionsStarted}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-[var(--muted)]">Topics Completed</span>
-              <span className="font-bold text-[var(--foreground)] dark:text-white">{data.progressSummary.totalTopicsCompleted}</span>
+            <div className="grid grid-cols-3 gap-3 mb-4">
+              <div className="text-center p-2 bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg">
+                <p className="text-lg font-bold text-blue-600">{data.progressSummary.sectionsStarted}</p>
+                <p className="text-xs text-[var(--muted)]">Studying</p>
+              </div>
+              <div className="text-center p-2 bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg">
+                <p className="text-lg font-bold text-yellow-600">{data.progressSummary.sectionsScheduled}</p>
+                <p className="text-xs text-[var(--muted)]">Scheduled</p>
+              </div>
+              <div className="text-center p-2 bg-gray-50 dark:bg-[var(--card-hover)] rounded-lg">
+                <p className="text-lg font-bold text-green-600">{data.progressSummary.sectionsPassed}</p>
+                <p className="text-xs text-[var(--muted)]">Passed</p>
+              </div>
             </div>
             <div>
               <div className="flex justify-between text-sm mb-1">
@@ -266,6 +274,37 @@ export default function UserDetailPage({ params }: { params: Promise<{ userId: s
                 />
               </div>
             </div>
+            {data.progressSummary.sectionDetails.length > 0 && (
+              <div className="mt-4 pt-4 border-t border-[var(--border)]">
+                <p className="text-xs font-medium text-[var(--muted)] mb-2">Section Details</p>
+                <div className="space-y-2">
+                  {data.progressSummary.sectionDetails.map(s => (
+                    <div key={s.section} className="flex items-center justify-between text-sm">
+                      <span className="font-medium text-[var(--foreground)] dark:text-white">{s.section}</span>
+                      <div className="flex items-center gap-2">
+                        <span className={`px-2 py-0.5 rounded text-xs ${
+                          s.status === 'passed' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
+                          s.status === 'scheduled' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
+                          s.status === 'studying' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                          s.status === 'failed' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' :
+                          'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400'
+                        }`}>
+                          {s.status.replace('_', ' ')}
+                        </span>
+                        {s.score !== null && (
+                          <span className={`font-bold ${s.score >= 75 ? 'text-green-600' : 'text-red-600'}`}>
+                            {s.score}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {data.progressSummary.sectionDetails.length === 0 && (
+              <p className="text-sm text-[var(--muted)] text-center py-2">No section progress recorded yet</p>
+            )}
           </div>
         </div>
       </div>

@@ -97,11 +97,12 @@ export async function GET(
       .eq('user_id', userId)
       .gte('created_at', startDate.toISOString());
 
-    // Get study progress
-    const { data: studyProgress } = await serviceClient
-      .from('study_progress')
+    // Get section progress (user's study status for each CPA section)
+    const { data: sectionProgress } = await serviceClient
+      .from('section_progress')
       .select('*')
-      .eq('user_id', userId);
+      .eq('user_id', userId)
+      .order('updated_at', { ascending: false });
 
     // Calculate MCQ stats
     const mcqStats = {
@@ -194,6 +195,20 @@ export async function GET(
         const data = tbsStats.bySection[section];
         data.avgScore = data.completed > 0 ? Math.round(data.avgScore / data.completed) : 0;
       });
+
+      // Calculate average scores for byType (count completed attempts per type)
+      const typeCompleted: Record<string, number> = {};
+      tbsAttempts?.forEach(a => {
+        const tbsType = a.tbs_type || 'general';
+        if (a.is_complete && a.score_percentage !== null) {
+          typeCompleted[tbsType] = (typeCompleted[tbsType] || 0) + 1;
+        }
+      });
+      Object.keys(tbsStats.byType).forEach(type => {
+        const data = tbsStats.byType[type];
+        const completed = typeCompleted[type] || 0;
+        data.avgScore = completed > 0 ? Math.round(data.avgScore / completed) : 0;
+      });
     }
 
     // Calculate exam stats
@@ -269,15 +284,36 @@ export async function GET(
       aiStats.byFeature[feature] = (aiStats.byFeature[feature] || 0) + 1;
     });
 
-    // Study progress summary
+    // Section progress summary
     const progressSummary = {
-      sectionsStarted: studyProgress?.length || 0,
-      totalTopicsCompleted: studyProgress?.reduce((sum, p) => sum + (p.topics_completed || 0), 0) || 0,
-      overallProgress: 0
+      sectionsStarted: sectionProgress?.filter(s => s.status !== 'not_started').length || 0,
+      sectionsPassed: sectionProgress?.filter(s => s.status === 'passed').length || 0,
+      sectionsScheduled: sectionProgress?.filter(s => s.status === 'scheduled').length || 0,
+      overallProgress: 0,
+      sectionDetails: [] as { section: string; status: string; score: number | null; examDate: string | null }[]
     };
-    if (studyProgress && studyProgress.length > 0) {
-      const totalProgress = studyProgress.reduce((sum, p) => sum + (p.progress_percentage || 0), 0);
-      progressSummary.overallProgress = Math.round(totalProgress / studyProgress.length);
+
+    // Calculate overall progress based on section statuses
+    if (sectionProgress && sectionProgress.length > 0) {
+      // Progress weights: not_started=0, studying=25, scheduled=50, failed=25, passed=100
+      const statusWeights: Record<string, number> = {
+        'not_started': 0,
+        'studying': 25,
+        'scheduled': 50,
+        'failed': 25,
+        'passed': 100
+      };
+      const totalProgress = sectionProgress.reduce((sum, s) => sum + (statusWeights[s.status] || 0), 0);
+      const maxProgress = sectionProgress.length * 100;
+      progressSummary.overallProgress = Math.round((totalProgress / maxProgress) * 100);
+
+      // Add section details
+      progressSummary.sectionDetails = sectionProgress.map(s => ({
+        section: s.section,
+        status: s.status,
+        score: s.score,
+        examDate: s.exam_date
+      }));
     }
 
     // Overall summary
