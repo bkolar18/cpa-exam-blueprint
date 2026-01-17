@@ -1492,8 +1492,8 @@ const questions = [
       "D": "Single level of taxation on business income"
     },
     "correctAnswer": "A",
-    "explanation": "C corporations can accumulate earnings at the flat 21% corporate rate, which may be lower than individual rates. However, this creates potential double taxation when earnings are distributed. C corps do not have pass-through taxation, and dividends paid are not deductible.",
-    "tip": "C corp = 21% flat rate for accumulation. Good when shareholders are in higher individual brackets.",
+    "explanation": "Per IRC §11(b), C corporations are taxed at a flat 21% rate (post-TCJA), which is lower than the top individual rate of 37%. This allows earnings accumulation at favorable rates, though per IRC §301 distributions create double taxation (corporate tax + qualified dividend tax to shareholders). Per IRC §243, dividends paid to shareholders are not deductible by the corporation. Why other answers are wrong: (B) Pass-through of losses is an S corp feature per §1366, not C corps; (C) Dividends paid are never deductible - only dividends received may qualify for the DRD; (D) C corps face double taxation, the opposite of single-level tax.",
+    "tip": "IRC §11(b): C corp = flat 21% rate. Accumulate at low corp rate, but distributions create double tax per §301. No dividend deduction.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1513,8 +1513,8 @@ const questions = [
       "D": "A capital contribution"
     },
     "correctAnswer": "B",
-    "explanation": "If compensation paid to shareholder-employees exceeds reasonable amounts, the IRS may recharacterize the excess as a constructive dividend. This eliminates the corporate deduction, creates double taxation, and may impose penalties. Documentation of reasonable compensation is essential.",
-    "tip": "C corp owner compensation must be reasonable. Excess → constructive dividend → no deduction + double tax.",
+    "explanation": "Per IRC §162(a)(1), only 'reasonable' compensation is deductible. Under judicial doctrines and IRS practice, excessive compensation to shareholder-employees is recharacterized as a constructive dividend under IRC §301. This creates double taxation: the corporation loses the deduction, and the shareholder still has taxable income. Factors include comparable salaries, services rendered, and corporate dividend history (Elliots, Inc. factors). Why other answers are wrong: (A) Loans require repayment terms and interest; (C) Return of capital requires a distribution, not compensation; (D) Capital contributions come from shareholders, not go to them.",
+    "tip": "IRC §162(a)(1): Only reasonable compensation deductible. Excess → constructive dividend per §301 → lost deduction + shareholder income.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1534,8 +1534,8 @@ const questions = [
       "D": "21%"
     },
     "correctAnswer": "D",
-    "explanation": "The Tax Cuts and Jobs Act established a flat 21% corporate tax rate beginning in 2018, replacing the prior graduated rate structure that ranged from 15% to 35%. This flat rate applies to all taxable income regardless of amount.",
-    "tip": "C corp rate = flat 21% since 2018 (TCJA). No longer graduated.",
+    "explanation": "Per IRC §11(b), as amended by TCJA effective January 1, 2018, the corporate income tax rate is a flat 21% on all taxable income. This replaced the prior graduated structure (15%, 25%, 34%, 35%). The flat rate simplifies planning and benefits corporations with higher incomes that previously paid 34-35%. Why other answers are wrong: (A) 28% was the rate under Clinton-era proposals, never enacted for corporations; (B) 35% was the pre-TCJA top marginal rate; (C) 15% was the pre-TCJA rate only on the first $50,000 of income.",
+    "tip": "IRC §11(b): C corp rate = flat 21% (TCJA 2018). Pre-TCJA was graduated 15-35%. No brackets, no surtax bubbles.",
     "calculationRequired": false,
     "timeEstimateSeconds": 30
   },
@@ -1555,8 +1555,8 @@ const questions = [
       "D": "A flat 21% rate"
     },
     "correctAnswer": "C",
-    "explanation": "Qualified dividends (meeting holding period requirements) are taxed at preferential long-term capital gain rates: 0% for taxpayers in the 10-12% brackets, 15% for middle brackets, and 20% for the highest bracket. Ordinary dividends are taxed at regular income rates.",
-    "tip": "Qualified dividends = 0%/15%/20% rates (same as LTCG). Must meet holding period requirement.",
+    "explanation": "Per IRC §1(h)(11), qualified dividends are taxed at preferential rates: 0% (up to $47,025 single/$94,050 MFJ for 2024), 15% (up to $518,900 single/$583,750 MFJ), and 20% (above those thresholds). Per §1(h)(11)(B)(iii), the stock must be held >60 days in the 121-day window around the ex-dividend date. High earners also pay 3.8% NIIT per §1411. Ordinary dividends (not meeting requirements) are taxed at up to 37%. Why other answers are wrong: (A) SE tax applies to self-employment income, not dividends; (B) Only non-qualified dividends are taxed at ordinary rates; (D) 21% is the corporate rate, not shareholder dividend rate.",
+    "tip": "IRC §1(h)(11): Qualified dividends = 0%/15%/20% + possible 3.8% NIIT per §1411. Hold >60 days in 121-day window.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1576,8 +1576,8 @@ const questions = [
       "D": "Be U.S. citizens or residents"
     },
     "correctAnswer": "C",
-    "explanation": "Section 351 provides nonrecognition treatment when property is transferred to a corporation solely in exchange for stock, if the transferors control (80% or more of voting power and total shares) the corporation immediately after the exchange. Services do not qualify as property for this purpose.",
-    "tip": "Section 351 = 80% control test, immediately after exchange. Services ≠ property.",
+    "explanation": "Per IRC §351(a), no gain or loss is recognized when property is transferred to a corporation solely in exchange for stock, if the transferors are in 'control' immediately after the exchange. Per IRC §368(c), control means at least 80% of total voting power AND at least 80% of total shares of all other classes. Per Reg. §1.351-1(a)(1), services do not qualify as 'property,' so stock issued for services is taxable. Why other answers are wrong: (A) Intangible property can qualify - 'property' is broadly defined; (B) 50% is incorrect - the threshold is 80% per §368(c); (D) Citizenship is irrelevant to §351 application.",
+    "tip": "IRC §351: 80% control per §368(c) = 80% voting + 80% each other class. Services ≠ property. 'Immediately after' = key timing.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1597,8 +1597,8 @@ const questions = [
       "D": "100% of taxable income in any carryforward year"
     },
     "correctAnswer": "C",
-    "explanation": "For NOLs arising after December 31, 2020, the deduction is limited to 80% of taxable income (before the NOL deduction). The NOL can be carried forward indefinitely but cannot be carried back (except for certain farm losses). The 80% limit ensures some minimum tax is paid.",
-    "tip": "Post-2020 NOLs: 80% limitation, indefinite carryforward, no carryback (generally).",
+    "explanation": "Per IRC §172(a) as amended by TCJA and CARES Act, NOLs arising after December 31, 2020 can offset only 80% of taxable income (computed before the NOL deduction). Per §172(b)(1)(A), NOLs carry forward indefinitely. Per §172(b)(1), no carryback is allowed except for farm losses per §172(b)(1)(B). The 80% limit ensures at least 20% of income remains taxable. Why other answers are wrong: (A) NOLs definitely carry forward indefinitely; (B) 50% was never the limitation; (D) 100% offset was allowed pre-TCJA but not after 2020.",
+    "tip": "IRC §172: Post-2020 NOLs = 80% of taxable income limitation. Indefinite carryforward, no carryback (except farms).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1618,8 +1618,8 @@ const questions = [
       "D": "$50,000"
     },
     "correctAnswer": "B",
-    "explanation": "Most corporations receive a minimum accumulated earnings credit of $250,000 ($150,000 for certain personal service corporations). This allows accumulation up to these amounts without risk of the accumulated earnings tax, even without documented business needs.",
-    "tip": "AET credit: $250K for most corps, $150K for personal service corps. Safe harbor for accumulation.",
+    "explanation": "Per IRC §535(c)(2), the accumulated earnings credit equals the greater of: (1) $250,000 ($150,000 for personal service corporations per §535(c)(2)(B)) minus accumulated E&P at end of prior year, or (2) the reasonable business needs of the corporation. This provides a safe harbor for accumulating earnings up to $250,000 without proving specific business needs. The AET rate is 20% per §531. Why other answers are wrong: (A) $150,000 applies only to personal service corporations; (C) $500,000 is not an AET threshold; (D) $50,000 is far below the minimum credit.",
+    "tip": "IRC §535(c)(2): AET credit = $250K (most corps) or $150K (PSCs). Safe harbor for accumulation without documented needs.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1639,8 +1639,8 @@ const questions = [
       "D": "At least 60% of adjusted ordinary gross income is PHC income"
     },
     "correctAnswer": "D",
-    "explanation": "A corporation is a PHC if: (1) more than 50% of stock is owned by 5 or fewer individuals at any time during the last half of the tax year, AND (2) at least 60% of adjusted ordinary gross income is PHC income (dividends, interest, rents, royalties, personal service contracts). PHCs face a 20% tax on undistributed PHC income.",
-    "tip": "PHC = 5-or-fewer own >50% + 60%+ PHC income. Pay dividends to avoid 20% PHC tax.",
+    "explanation": "Per IRC §542(a), a PHC exists when: (1) per §542(a)(2), more than 50% of stock value is owned by 5 or fewer individuals during the last half of the tax year (attribution rules of §544 apply), AND (2) per §542(a)(1), at least 60% of adjusted ordinary gross income is PHC income per §543 (dividends, interest, rents, royalties, personal service contracts). The PHC tax per §541 is 20% on undistributed PHC income. Why other answers are wrong: (A) 80% is too high - 60% is the threshold; (B) 40% is too low; (C) 50% is also too low - the threshold is 60%.",
+    "tip": "IRC §542: PHC = 5-or-fewer own >50% + 60%+ PHC income per §543. 20% tax on undistributed income per §541.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1660,8 +1660,8 @@ const questions = [
       "D": "$1,000,000 per year"
     },
     "correctAnswer": "D",
-    "explanation": "Section 162(m) limits the deduction for compensation paid to covered employees of publicly traded corporations to $1 million per year. After TCJA, covered employees include CEO, CFO, and the three highest-paid officers, with no exception for performance-based compensation.",
-    "tip": "162(m) = $1M cap per covered employee. Performance-based exception eliminated by TCJA.",
+    "explanation": "Per IRC §162(m)(1), publicly traded corporations cannot deduct compensation to any covered employee exceeding $1 million per year. Per §162(m)(3) as amended by TCJA, covered employees include the CEO, CFO, and the three highest-paid officers. Critically, TCJA eliminated the prior exception for performance-based compensation - ALL compensation counts toward the limit. Once covered, an employee remains covered even after leaving. Why other answers are wrong: (A) $2M is not a threshold; (B) There is a specific $1M limit; (C) $500K is the golden parachute limit concept, not §162(m).",
+    "tip": "IRC §162(m): $1M deduction cap per covered employee of public corps. TCJA eliminated performance-based exception.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1681,8 +1681,8 @@ const questions = [
       "D": "50%"
     },
     "correctAnswer": "A",
-    "explanation": "The dividends received deduction depends on ownership percentage: 50% DRD for less than 20% ownership, 65% DRD for 20% to less than 80% ownership, and 100% DRD for 80% or more ownership (affiliated group). With 30% ownership, the 65% DRD applies.",
-    "tip": "DRD: <20% ownership → 50%; 20-79% → 65%; 80%+ → 100%.",
+    "explanation": "Per IRC §243, the dividends received deduction (DRD) varies by ownership: §243(a)(1) provides 50% DRD for <20% ownership, §243(c) provides 65% DRD for 20% to <80% ownership, and §243(a)(3) provides 100% DRD for 80%+ ownership (affiliated group members). With 30% ownership, the 65% DRD under §243(c) applies. Note: The DRD may be limited by the taxable income limitation per §246(b). Why other answers are wrong: (B) 80% applies to 20%+ ownership for consolidated returns, but 65% is the DRD rate; (C) 100% requires 80%+ ownership; (D) 50% applies only to <20% ownership.",
+    "tip": "IRC §243 DRD: <20% ownership = 50%; 20-79% = 65%; 80%+ = 100%. Subject to taxable income limitation per §246(b).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1702,8 +1702,8 @@ const questions = [
       "D": "Be pro rata to all shareholders"
     },
     "correctAnswer": "A",
-    "explanation": "A redemption is treated as a sale (eligible for capital gain treatment) only if it meets one of several tests: complete termination of interest, substantially disproportionate distribution, not essentially equivalent to a dividend (meaningful reduction), or partial liquidation. Otherwise, it's taxed as a dividend to the extent of E&P.",
-    "tip": "Redemption as sale requires: complete termination, substantially disproportionate, or meaningful reduction.",
+    "explanation": "Per IRC §302(a), a redemption is treated as an exchange (capital gain eligible) if it meets tests under §302(b): (1) §302(b)(3) complete termination of interest, (2) §302(b)(2) substantially disproportionate, (3) §302(b)(1) not essentially equivalent to a dividend (meaningful reduction per U.S. v. Davis), or (4) §302(b)(4) partial liquidation. Per §302(d), if none apply, the redemption is treated as a §301 distribution (dividend to extent of E&P). Why other answers are wrong: (B) Public vs. private status doesn't determine treatment; (C) Timing doesn't affect §302 analysis; (D) Pro rata distributions are the opposite of what qualifies - they're more likely dividend treatment.",
+    "tip": "IRC §302(b): Redemption = sale if complete termination, substantially disproportionate, or meaningful reduction. Otherwise → dividend per §302(d).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1723,8 +1723,8 @@ const questions = [
       "D": "5%"
     },
     "correctAnswer": "A",
-    "explanation": "C corporations can deduct charitable contributions up to 10% of taxable income computed before the charitable contribution deduction, DRD, NOL deduction, and certain other items. Excess contributions can be carried forward 5 years.",
-    "tip": "Corporate charitable limit = 10% of modified taxable income. 5-year carryforward for excess.",
+    "explanation": "Per IRC §170(b)(2)(A), a C corporation's charitable contribution deduction is limited to 10% of taxable income computed under §170(b)(2)(C) before the charitable deduction, DRD, NOL deduction, and capital loss carryback. Per §170(d)(2), excess contributions carry forward 5 years (FIFO order). This is lower than individuals' limits (60% for cash, 30% for capital gain property). Why other answers are wrong: (B) 25% was a temporary COVID-era limit for cash contributions (2020-2021); (C) 60% is the individual cash contribution limit; (D) 5% is not a threshold used for corporate contributions.",
+    "tip": "IRC §170(b)(2)(A): Corp charitable limit = 10% of modified taxable income. 5-year carryforward per §170(d)(2).",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1744,8 +1744,8 @@ const questions = [
       "D": "Offset any type of income without limitation"
     },
     "correctAnswer": "A",
-    "explanation": "C corporations can only use capital losses to offset capital gains - there is no $3,000 ordinary income offset like individuals have. Net capital losses can be carried back 3 years and forward 5 years (all as short-term). Unused losses expire after the 5-year carryforward period.",
-    "tip": "Corp capital losses: only offset gains, carry back 3/forward 5 (all short-term). No ordinary income offset.",
+    "explanation": "Per IRC §1211(a), C corporations can only deduct capital losses to the extent of capital gains - no ordinary income offset is allowed (unlike the $3,000 individual deduction per §1211(b)). Per IRC §1212(a)(1), net capital losses carry back 3 years and forward 5 years, treated as short-term regardless of original character. Unused losses after 5-year carryforward expire worthless. Why other answers are wrong: (B) $3,000 ordinary income offset is for individuals per §1211(b), not corporations; (C) §1244 is for shareholders' losses on small business stock, not corporate losses; (D) Corporations face strict capital-gains-only limitation.",
+    "tip": "IRC §1211(a): Corp capital losses only offset capital gains. §1212(a)(1): Carryback 3/forward 5 (all short-term). No ordinary offset.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1765,8 +1765,8 @@ const questions = [
       "D": "The first estimated payment"
     },
     "correctAnswer": "D",
-    "explanation": "Large corporations (taxable income of $1 million or more in any of the 3 preceding years) can use prior year tax for only the first quarterly estimated payment. Remaining payments must be based on current year liability. Any shortfall from the first quarter must be made up in the second quarter.",
-    "tip": "Large corp = prior year safe harbor only for Q1. Must use current year estimate for Q2-Q4.",
+    "explanation": "Per IRC §6655(d)(2), 'large corporations' (taxable income ≥$1M in any of the 3 preceding years) can use the prior year safe harbor only for the first estimated tax payment. Per §6655(d)(2)(B)(ii), the Q1 shortfall must be recaptured in Q2. For Q2-Q4, payments must be based on current year annualized income per §6655(e). This prevents large corporations from benefiting indefinitely from prior-year estimates. Why other answers are wrong: (A) Large corps can use prior year for Q1 only, not Q2; (B) Q3 is incorrect - only Q1 allows prior year; (C) 'Any' is too broad - Q1 is permitted.",
+    "tip": "IRC §6655(d)(2): Large corp ($1M+ prior income) = prior year safe harbor ONLY for Q1. Q2-Q4 must use current year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1786,8 +1786,8 @@ const questions = [
       "D": "No limit on retirement plan contributions"
     },
     "correctAnswer": "C",
-    "explanation": "C corporation shareholder-employees can receive tax-free fringe benefits (health insurance, group term life up to $50,000, etc.) regardless of ownership percentage. S corp shareholders owning more than 2% cannot exclude these benefits from income. This is a significant C corp planning advantage.",
-    "tip": "C corp = full fringe benefits for owner-employees. S corp >2% shareholders can't exclude health insurance.",
+    "explanation": "C corporation shareholder-employees can receive tax-free fringe benefits under IRC §106 (health insurance), §79 (group term life up to $50,000), §132 (various fringes) regardless of ownership percentage. Per IRC §1372, S corp shareholders owning more than 2% are treated as partners for fringe benefit purposes, making benefits taxable income (though deductible above-the-line per §162(l)). This is a significant C corp advantage for owner-heavy businesses. Why other answers are wrong: (A) Personal expenses are never deductible; (B) Above-the-line deduction is an S corp benefit, not exclusion; (D) Retirement contribution limits apply to all employers.",
+    "tip": "C corp fringes (§106, §79, §132) = excludable for all shareholders. S corp >2% owners per §1372 = treated as partners, benefits taxable.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1807,8 +1807,8 @@ const questions = [
       "D": "Both corporation and shareholders may recognize gain or loss"
     },
     "correctAnswer": "D",
-    "explanation": "In a complete liquidation, the corporation recognizes gain or loss as if it sold its assets at FMV (Section 336). Shareholders recognize gain or loss on the exchange of stock for liquidating distributions (Section 331). This results in potential double taxation on appreciated assets.",
-    "tip": "C corp liquidation = double tax: corporate level on asset appreciation + shareholder level on stock exchange.",
+    "explanation": "Per IRC §336(a), the liquidating corporation recognizes gain or loss as if it sold assets at FMV (with loss limitations in §336(d) for certain related party and recently contributed property). Per IRC §331(a), shareholders treat liquidating distributions as full payment in exchange for their stock, recognizing capital gain or loss. This creates double taxation on appreciated assets - corporate tax on the appreciation, then shareholder tax on the distribution. Why other answers are wrong: (A) Both parties recognize gain/loss; (B) Corporations also recognize per §336; (C) Shareholders also recognize per §331.",
+    "tip": "IRC §336 (corp) + §331 (shareholders): Both recognize gain/loss in complete liquidation. Double tax on appreciation.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1828,8 +1828,8 @@ const questions = [
       "D": "Common stock (equity contribution)"
     },
     "correctAnswer": "D",
-    "explanation": "When a corporation is thinly capitalized (excessive debt relative to equity), the IRS may recharacterize shareholder loans as equity contributions. This converts deductible interest payments into nondeductible dividends and eliminates basis for loan repayment. A reasonable debt-to-equity ratio helps support debt treatment.",
-    "tip": "Thin capitalization risk: loans → equity. Interest → dividend (no deduction). Document arm's-length loan terms.",
+    "explanation": "Per case law and IRS practice (see Laidlaw Transportation, Estate of Mixon), the IRS can recharacterize purported debt as equity when the corporation is thinly capitalized. Factors per Fin Hay Realty include debt-to-equity ratio, repayment terms, interest rate, subordination, and whether outside lenders would extend similar credit. If recharacterized: (1) interest becomes nondeductible dividend, (2) principal repayments become dividend distributions, (3) shareholder loses basis in 'loan.' Why other answers are wrong: (A) Guaranteed payments are a partnership concept; (B) Capital leases relate to property, not shareholder financing; (C) Preferred stock has different characteristics than equity contributions.",
+    "tip": "Thin capitalization: IRS recharacterizes loans as equity. Interest → nondeductible dividends. Document arm's-length loan terms (Fin Hay factors).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1849,8 +1849,8 @@ const questions = [
       "D": "C corps are required to use a calendar year"
     },
     "correctAnswer": "C",
-    "explanation": "C corporations are not subject to the required taxable year rules that apply to partnerships, S corporations, and personal service corporations. They can generally select any fiscal year-end (though newly formed corporations must use the year shown on Form 1120 for the first return).",
-    "tip": "C corps have fiscal year flexibility. S corps and partnerships must generally use calendar year.",
+    "explanation": "Per IRC §441, C corporations are not subject to the required taxable year rules of IRC §706(b) (partnerships) or §1378 (S corporations). This gives C corps flexibility to select any fiscal year-end for business planning purposes (aligning with industry cycles, deferring income, etc.). In contrast, S corps must generally use calendar year per §1378, and partnerships must use the majority interest taxable year per §706(b). Why other answers are wrong: (A) IRS approval may be needed for changes, but initial selection is flexible; (B) Pass-through rules apply to S corps/partnerships, not C corps; (D) C corps have fiscal year flexibility, not a calendar year requirement.",
+    "tip": "IRC §441: C corps can choose any fiscal year. S corps (§1378) and partnerships (§706(b)) generally must use calendar year.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1870,8 +1870,8 @@ const questions = [
       "D": "Compute the dividends received deduction"
     },
     "correctAnswer": "B",
-    "explanation": "E&P measures a corporation's economic ability to pay dividends. Distributions are dividends (taxable to shareholders) to the extent of current and accumulated E&P. Distributions exceeding E&P are return of capital (reducing stock basis), then capital gain if basis is exhausted.",
-    "tip": "E&P determines dividend treatment: distribution up to E&P = dividend; excess = return of capital → capital gain.",
+    "explanation": "Per IRC §316(a), a 'dividend' is any distribution of property made by a corporation to its shareholders out of E&P. E&P measures the corporation's economic ability to pay dividends. Per §301(c), distributions are ordered: (1) dividend to extent of E&P (taxable as ordinary income or qualified dividends), (2) return of capital (tax-free basis reduction), (3) capital gain when basis exhausted. E&P differs from taxable income - it's adjusted for economic reality. Why other answers are wrong: (A) Tax liability is computed from taxable income, not E&P; (C) Stock basis is determined under §1012 and §358, not E&P; (D) DRD is computed under §243 based on ownership percentage.",
+    "tip": "IRC §316(a): E&P defines 'dividend.' §301(c) ordering: Dividend (to E&P) → return of capital → capital gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1891,8 +1891,8 @@ const questions = [
       "D": "The excess is treated as a loan from the corporation"
     },
     "correctAnswer": "A",
-    "explanation": "Under Section 357(c), if liabilities assumed exceed the transferor's basis in property transferred, the excess is recognized as gain. This prevents taxpayers from extracting tax-free cash by having the corporation assume liabilities greater than their investment. The character is determined by the property transferred.",
-    "tip": "357(c): Liabilities > basis = gain. Can't extract tax-free cash through excessive liability assumption.",
+    "explanation": "Per IRC §357(c)(1), if liabilities assumed by the corporation exceed the transferor's aggregate basis in all property transferred, the excess is recognized as gain. Per §357(c)(3), certain liabilities (payment of which would be deductible) are excluded from this calculation. The gain character is determined under §357(c)(1)(B) based on the assets transferred. This prevents taxpayers from extracting tax-free cash through liability assumptions. Why other answers are wrong: (B) The transaction still qualifies for §351, only the excess triggers gain; (C) This is essentially the same as (A), the correct answer; (D) Treating excess as a loan would allow tax-free extraction, which §357(c) prevents.",
+    "tip": "IRC §357(c): Liabilities assumed > total basis = recognize gain. §357(c)(3): Exclude deductible-if-paid liabilities.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -1912,8 +1912,8 @@ const questions = [
       "D": "The distribution reduces E&P by the property's basis"
     },
     "correctAnswer": "B",
-    "explanation": "When a C corporation distributes appreciated property, it recognizes gain as if it sold the property at FMV (Section 311(b)). Shareholders receive dividend treatment to the extent of E&P and take FMV basis in the property. E&P is reduced by FMV, not basis.",
-    "tip": "C corp property distribution: corp recognizes gain on appreciation, shareholder gets FMV basis.",
+    "explanation": "Per IRC §311(b), when a C corporation distributes appreciated property, it recognizes gain as if the property were sold at FMV. Per §312(b)(1), E&P is reduced by the greater of the property's FMV or adjusted basis. Per §301(d), the shareholder's basis in distributed property is FMV. Note: Per §311(a), no loss is recognized on distribution of depreciated property. Why other answers are wrong: (A) Gain IS recognized under §311(b) - the General Utilities doctrine was repealed; (C) Shareholders take FMV basis, not carryover; (D) E&P is reduced by FMV (or basis if greater), not just basis.",
+    "tip": "IRC §311(b): Corp recognizes gain on appreciated property distribution. §301(d): Shareholder takes FMV basis. No loss on depreciated per §311(a).",
     "calculationRequired": false,
     "timeEstimateSeconds": 60
   },
@@ -1933,8 +1933,8 @@ const questions = [
       "D": "March 15"
     },
     "correctAnswer": "A",
-    "explanation": "C corporation returns (Form 1120) are due on the 15th day of the 4th month after year-end. For calendar-year corporations, this is April 15. A 6-month extension (to October 15) is available. This differs from S corporations and partnerships, which are due March 15.",
-    "tip": "C corp = April 15 due date (4th month). S corp/partnership = March 15 (3rd month).",
+    "explanation": "Per IRC §6072(b), C corporation returns are due on the 15th day of the 4th month after year-end (April 15 for calendar-year corps). Per §6081, a 6-month extension to October 15 is available via Form 7004. This differs from flow-through entities: S corps and partnerships per §6072(b) are due the 15th day of the 3rd month (March 15). C corps have later due dates because they're not providing K-1s to owners. Why other answers are wrong: (B) September 15 would be the 9th month, incorrect; (C) October 15 is the extended due date, not original; (D) March 15 is for S corps/partnerships, not C corps.",
+    "tip": "IRC §6072(b): C corp = April 15 (4th month). S corp/partnership = March 15 (3rd month). C corps don't provide K-1s, so due later.",
     "calculationRequired": false,
     "timeEstimateSeconds": 45
   },
@@ -1954,8 +1954,8 @@ const questions = [
       "D": "50% of taxable income"
     },
     "correctAnswer": "A",
-    "explanation": "Section 163(j) limits business interest deductions to business interest income plus 30% of adjusted taxable income (ATI). ATI excludes interest, depreciation (through 2025), and amortization. Disallowed interest carries forward indefinitely. Small businesses (under $30M gross receipts) are exempt.",
-    "tip": "163(j): Business interest limited to 30% ATI + interest income. Small business exception at $30M.",
+    "explanation": "Per IRC §163(j)(1), business interest expense is limited to business interest income plus 30% of adjusted taxable income (ATI). Per §163(j)(8), ATI is computed without regard to interest expense, interest income, NOLs, and the §199A deduction. Through 2025, depreciation and amortization are also excluded from ATI per §163(j)(8)(A)(v). Per §163(j)(2), disallowed interest carries forward indefinitely. Per §163(j)(3), businesses with average gross receipts under $30M (adjusted for inflation) are exempt. Why other answers are wrong: (B) These thresholds don't match §163(j); (C) The formula is 30% ATI + interest income, not 50% depreciation; (D) 50% taxable income is not the correct limitation.",
+    "tip": "IRC §163(j): Business interest ≤ interest income + 30% ATI. Small business exempt (<$30M). Disallowed interest carries forward indefinitely.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1975,8 +1975,8 @@ const questions = [
       "D": "The Section 382 limitation (value × long-term tax-exempt rate)"
     },
     "correctAnswer": "D",
-    "explanation": "After an ownership change (more than 50% shift in ownership over 3 years), annual use of pre-change NOLs is limited to the Section 382 limitation: the corporation's value at the ownership change date multiplied by the federal long-term tax-exempt rate. This prevents trafficking in NOLs.",
-    "tip": "Section 382 limit = company value × long-term tax-exempt rate. Prevents NOL trafficking after ownership changes.",
+    "explanation": "Per IRC §382(a), after an ownership change (>50 percentage point shift in ownership by 5% shareholders over 3 years per §382(g)), annual use of pre-change losses is limited to the Section 382 limitation. Per §382(b)(1), this equals the value of the loss corporation immediately before the change multiplied by the federal long-term tax-exempt rate (published monthly by IRS). This prevents 'trafficking' in NOLs through acquisitions of loss corporations. Why other answers are wrong: (A) 50% of post-change income is not the formula; (B) Post-change taxable income is the cap but not the limitation formula; (C) 20% of NOL balance is not the rule.",
+    "tip": "IRC §382: Post-ownership-change NOL limit = corp value × long-term tax-exempt rate. Prevents NOL trafficking acquisitions.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -1996,8 +1996,8 @@ const questions = [
       "D": "Less than 100% of any class of stock"
     },
     "correctAnswer": "C",
-    "explanation": "A substantially disproportionate redemption requires: (1) after the redemption, the shareholder owns less than 50% of total voting power, AND (2) the shareholder's percentage of voting stock AND common stock is less than 80% of the pre-redemption percentage. Both conditions must be met.",
-    "tip": "Substantially disproportionate: <50% voting power AND <80% of prior percentage for both voting and common.",
+    "explanation": "Per IRC §302(b)(2), for a redemption to be substantially disproportionate, ALL of the following must be met: (1) per §302(b)(2)(B), shareholder owns <50% of total voting power after redemption, (2) per §302(b)(2)(C), voting stock percentage after < 80% of voting stock percentage before, AND (3) common stock percentage after < 80% of common stock percentage before. Attribution rules of §318 apply. Why other answers are wrong: (A) This describes the 80% requirement but misses the <50% voting power test; (B) These are not the correct thresholds per §302(b)(2); (D) 100% of any class has no relevance to this test.",
+    "tip": "IRC §302(b)(2): <50% voting power after + <80% of prior % for BOTH voting and common. Attribution (§318) applies!",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2017,8 +2017,8 @@ const questions = [
       "D": "Transfer of assets solely for voting stock"
     },
     "correctAnswer": "C",
-    "explanation": "A Type A reorganization is a statutory merger or consolidation under state law. It offers the most flexibility in consideration used (can include some cash and other property). Other types: Type B (stock-for-stock), Type C (assets-for-voting stock), Type D (divisive or acquisitive), Type E (recapitalization), Type F (change in form).",
-    "tip": "Type A = statutory merger. Most flexible on consideration. Other letters = more restrictions on what can be exchanged.",
+    "explanation": "Per IRC §368(a)(1)(A), a Type A reorganization is a statutory merger or consolidation pursuant to applicable state law. It's the most flexible on consideration - continuity of interest requires only about 40% stock consideration (case law, not statutory). Other types per §368(a)(1): Type B (stock-for-voting-stock, solely voting stock required), Type C (assets-for-voting-stock), Type D (divisive/acquisitive), Type E (recapitalization), Type F (mere change in form), Type G (bankruptcy). Why other answers are wrong: (A) Recapitalization is Type E; (B) Stock-for-stock is Type B; (D) Assets-for-voting-stock is Type C.",
+    "tip": "IRC §368(a)(1)(A): Type A = statutory merger. Most flexible on boot. B = stock-for-stock, C = assets-for-voting-stock.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2038,8 +2038,8 @@ const questions = [
       "D": "At least 50% of voting power"
     },
     "correctAnswer": "B",
-    "explanation": "An affiliated group eligible to file a consolidated return requires the common parent to own at least 80% of the voting power and 80% of the total value of the stock of each includible subsidiary. Once elected, all members must file consolidated. Certain corporations (S corps, foreign corps, tax-exempt entities) are excluded.",
-    "tip": "Consolidated return = 80% voting + 80% value. Election binds all members once made.",
+    "explanation": "Per IRC §1504(a), an affiliated group consists of corporations connected through stock ownership with a common parent, where the parent owns at least 80% of voting power AND 80% of value of at least one subsidiary, and other members are similarly connected. Per Reg. §1.1502-75, consolidated return election is binding and irrevocable without IRS consent. Per §1504(b), certain corporations are excluded: S corps, foreign corps, tax-exempt entities, insurance companies (separate filing rules), and others. Why other answers are wrong: (A) 50% is insufficient - 80% is required per §1504(a)(2); (C) 100% is not required; (D) 50% voting is below the threshold.",
+    "tip": "IRC §1504(a): Affiliated group = 80% voting + 80% value. Election is binding per Reg. §1.1502-75. S corps, foreign corps excluded.",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2059,8 +2059,8 @@ const questions = [
       "D": "Depreciation in excess of straight-line"
     },
     "correctAnswer": "A",
-    "explanation": "Tax-exempt interest increases E&P but not taxable income - it represents economic income available for dividends. Conversely, federal taxes reduce E&P but not taxable income. DRD reduces taxable income but not E&P. Accelerated depreciation in excess of straight-line reduces taxable income more than E&P.",
-    "tip": "E&P = economic income for dividends. Add: tax-exempt income, life insurance proceeds. Subtract: federal taxes.",
+    "explanation": "Per IRC §312 and Reg. §1.312-6, E&P measures economic income available for dividends, differing from taxable income. Tax-exempt interest (§103) increases E&P because it represents economic value, but is excluded from taxable income. Other E&P adjustments: federal taxes paid reduce E&P (not deductible), DRD increases taxable income more than E&P (§312(a)(3)), and E&P uses ADS depreciation per §312(k). Why other answers are wrong: (B) Federal taxes reduce E&P but not taxable income; (C) DRD increases taxable income reduction without reducing E&P; (D) Excess depreciation reduces taxable income more than E&P.",
+    "tip": "IRC §312: E&P adds tax-exempt income, subtracts federal taxes. DRD doesn't reduce E&P. Use ADS depreciation per §312(k).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2080,8 +2080,8 @@ const questions = [
       "D": "Convert ordinary income to capital gain"
     },
     "correctAnswer": "B",
-    "explanation": "Section 338 allows an acquiring corporation that purchases at least 80% of target stock within 12 months to elect to treat the acquisition as a deemed asset purchase for tax purposes. This steps up asset basis (creating depreciation deductions) but triggers immediate gain recognition at the target level.",
-    "tip": "Section 338 = treat stock purchase as asset purchase. Get basis step-up but trigger target-level gain.",
+    "explanation": "Per IRC §338(a), if a corporation makes a qualified stock purchase (acquiring ≥80% of target within 12 months per §338(d)(3)), it may elect to treat the target as having sold all assets at FMV. Per §338(h)(10), if both parties consent, only one level of tax is triggered (target level). This provides stepped-up basis for depreciation/amortization but triggers immediate gain recognition. Often used when target has NOLs or low basis assets. Why other answers are wrong: (A) Gain recognition is triggered, not avoided; (C) There's no deferral - gain is immediately recognized; (D) Character conversion is not the purpose.",
+    "tip": "IRC §338: Elect to treat stock purchase as asset purchase. §338(h)(10): Joint election for single-level tax. Steps up basis but triggers gain.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2101,8 +2101,8 @@ const questions = [
       "D": "Exceeds a deemed return on tangible depreciable assets"
     },
     "correctAnswer": "D",
-    "explanation": "GILTI is the excess of a CFC's tested income over 10% of its qualified business asset investment (QBAI - depreciable tangible assets). It's designed to tax income exceeding a routine return on tangible assets, presumed to be attributable to intangibles. U.S. shareholders of CFCs include GILTI in income annually.",
-    "tip": "GILTI = CFC income above 10% return on tangible assets. Targets excess returns attributable to intangibles.",
+    "explanation": "Per IRC §951A, Global Intangible Low-Taxed Income (GILTI) is the excess of a U.S. shareholder's aggregate net CFC tested income over 10% of QBAI (Qualified Business Asset Investment - depreciable tangible property per §951A(d)). GILTI is included in income currently under §951A(a), with a 50% deduction for C corps per §250(a)(1)(B)(i) (resulting in 10.5% effective rate). The theory: returns exceeding 10% are attributable to intangibles. Why other answers are wrong: (A) Passive income is Subpart F, not GILTI; (B) Prior taxation doesn't define GILTI; (C) Transferred intangibles are addressed by §367, not GILTI.",
+    "tip": "IRC §951A: GILTI = CFC income > 10% of QBAI (tangible assets). §250 deduction → 10.5% effective rate for C corps. Targets intangible returns.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2122,8 +2122,8 @@ const questions = [
       "D": "More than 50% foreign ownership"
     },
     "correctAnswer": "C",
-    "explanation": "BEAT applies to corporations with average annual gross receipts of $500 million or more over 3 years AND a base erosion percentage of at least 3% (2% for certain banks/dealers). BEAT is a minimum tax on modified taxable income, adding back deductible payments to foreign affiliates.",
-    "tip": "BEAT = minimum tax for large corps with significant deductible payments to foreign affiliates. $500M+ receipts, 3%+ erosion.",
+    "explanation": "Per IRC §59A, the Base Erosion and Anti-Abuse Tax (BEAT) applies to 'applicable taxpayers': corporations with (1) average annual gross receipts ≥$500M over 3 years per §59A(e)(1)(B), AND (2) base erosion percentage ≥3% (2% for banks/dealers) per §59A(e)(1)(C). BEAT is computed as 10% (12.5% after 2025) of modified taxable income (adding back base erosion payments to foreign affiliates per §59A(c)) minus regular tax. Why other answers are wrong: (A) Foreign tax credits are addressed by §904, not BEAT; (B) Any erosion payments isn't enough - must meet the percentage threshold; (D) 50% foreign ownership isn't the test.",
+    "tip": "IRC §59A: BEAT = min tax for $500M+ corps with 3%+ base erosion payments to foreign affiliates. 10% rate (12.5% after 2025).",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2143,8 +2143,8 @@ const questions = [
       "D": "Be engaged in an active trade or business for at least 5 years"
     },
     "correctAnswer": "D",
-    "explanation": "Section 355 requires both the distributing corporation and the controlled corporation to be engaged in active trades or businesses immediately after the distribution, with each business conducted for at least 5 years before the distribution. Other requirements include distribution for a valid business purpose, not principally a device to distribute E&P, and continuity of interest.",
-    "tip": "Section 355 spin-off: both entities need 5-year active business, valid business purpose, not a device for E&P distribution.",
+    "explanation": "Per IRC §355(b)(1), for a tax-free spin-off, both the distributing corporation and controlled corporation must be 'engaged in the active conduct of a trade or business' immediately after the distribution. Per §355(b)(2)(B), each business must have been actively conducted for at least 5 years before the distribution. Other requirements: valid business purpose (Reg. §1.355-2(b)), not a device for E&P distribution per §355(a)(1)(B), continuity of interest, and distribution of control per §355(a)(1)(D). Why other answers are wrong: (A) Equal value is not required; (B) Common shareholders typically remain; (C) 1 year is insufficient - 5 years is required.",
+    "tip": "IRC §355(b): Both entities need 5-year active business. Also: business purpose, not a device, continuity of interest, distribute control.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2164,8 +2164,8 @@ const questions = [
       "D": "$50 million"
     },
     "correctAnswer": "D",
-    "explanation": "Section 1202 QSBS requires the issuing C corporation to have aggregate gross assets not exceeding $50 million at the time of stock issuance (and immediately after). Gross assets include cash received for the stock. The corporation must also be engaged in a qualified trade or business (certain service businesses are excluded).",
-    "tip": "QSBS gross asset limit = $50M at issuance. Must be C corp in qualified active business.",
+    "explanation": "Per IRC §1202(d)(1), for stock to qualify as QSBS, the corporation must have aggregate gross assets ≤$50 million at the time of stock issuance and immediately after. Per §1202(d)(2), gross assets include cash received for the stock being issued. Per §1202(e), the corporation must be a C corp engaged in a qualified trade or business (excluding certain service businesses, hotels, farming, mineral extraction, and financial institutions). Why other answers are wrong: (A) $100M is too high; (B) $5M is too low; (C) $25M is also too low - the limit is $50M per §1202(d)(1).",
+    "tip": "IRC §1202(d)(1): QSBS gross asset limit = $50M at issuance (including cash received). Must be C corp in qualified active business per §1202(e).",
     "calculationRequired": false,
     "timeEstimateSeconds": 75
   },
@@ -2185,8 +2185,8 @@ const questions = [
       "D": "At least 80% of each corporation"
     },
     "correctAnswer": "C",
-    "explanation": "A brother-sister controlled group requires: (1) 5 or fewer persons own more than 50% of each corporation's stock (voting power or value), AND (2) the same persons own more than 50% of each corporation considering only their identical ownership (the lesser percentage owned in each). Controlled groups must share certain tax benefits.",
-    "tip": "Brother-sister: 5 or fewer own >50% of each + >50% identical ownership. Share brackets, AMT exemption, etc.",
+    "explanation": "Per IRC §1563(a)(2), a brother-sister controlled group exists when 5 or fewer persons (individuals, estates, trusts) own: (1) per §1563(a)(2)(A), more than 50% of each corporation's voting power or value (80% test under §1563(a)(2) alternative), AND (2) per §1563(a)(2)(B), more than 50% identical ownership (the minimum percentage each person owns in all corporations). Controlled groups must allocate one accumulated earnings credit per §535(c)(5), one AMT exemption, and share other benefits. Why other answers are wrong: (A) Missing the identical ownership requirement; (B) These are not the correct thresholds; (D) 80% is the parent-subsidiary test, not brother-sister.",
+    "tip": "IRC §1563(a)(2): Brother-sister = 5 or fewer own >50% each corp + >50% identical ownership. Share AET credit, AMT exemption.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },
@@ -2206,8 +2206,8 @@ const questions = [
       "D": "Providing a deduction for income from exports exceeding routine returns"
     },
     "correctAnswer": "D",
-    "explanation": "FDII provides a deduction for U.S. corporations on income from serving foreign markets (exports) that exceeds a routine return on tangible assets. The deduction results in an effective tax rate of approximately 13.125% on FDII (compared to 21% regular rate). FDII mirrors GILTI as an incentive to keep intangibles in the U.S.",
-    "tip": "FDII = export incentive. Effective 13.125% rate on income from serving foreign markets (vs. 21% regular rate).",
+    "explanation": "Per IRC §250(a)(1)(A), domestic C corporations receive a deduction for Foreign-Derived Intangible Income (FDII). FDII per §250(b)(4) is income from serving foreign markets that exceeds a 10% deemed return on tangible depreciable assets (QBAI per §250(b)(2)(B)), mirroring GILTI's formula. The 37.5% deduction per §250(a)(1)(A) results in an effective 13.125% rate (21% × (1-37.5%)) versus 21% on domestic income. This incentivizes keeping intangibles in the U.S. Why other answers are wrong: (A) FDII doesn't eliminate tax, just reduces rate; (B) Deferral is not the mechanism; (C) Not all foreign-source is excluded, only the excess return portion.",
+    "tip": "IRC §250: FDII = export income > 10% return on QBAI. 37.5% deduction → 13.125% effective rate. Mirrors GILTI as U.S. intangible incentive.",
     "calculationRequired": false,
     "timeEstimateSeconds": 90
   },

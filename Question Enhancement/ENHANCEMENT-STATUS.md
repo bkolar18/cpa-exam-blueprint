@@ -38,7 +38,7 @@ All 58 exam TBS questions have been enhanced with:
 | FAR | 1,835 | 1,835 | 0 | 100% | **Complete** |
 | AUD | 1,015 | 1,015 | 0 | 100% | **Complete** |
 | REG | 1,345 | 1,345 | 0 | 100% | **Complete** |
-| TCP | 805 | 70 | 735 | 9% | In Progress |
+| TCP | 805 | 105 | 700 | 13% | In Progress |
 | BAR | 490 | 0 | 490 | 0% | Pending |
 | ISC | 575 | 0 | 575 | 0% | Pending |
 
@@ -49,7 +49,7 @@ All 58 exam TBS questions have been enhanced with:
 ## TCP Enhancement Progress - IN PROGRESS
 
 **File:** `src/lib/data/practice-questions/tcp.ts`
-**Status:** 70 of 805 TCP MCQs enhanced with authoritative references
+**Status:** 105 of 805 TCP MCQs enhanced with authoritative references
 **Started:** January 17, 2026
 
 ### TCP Enhancement Summary
@@ -58,7 +58,8 @@ All 58 exam TBS questions have been enhanced with:
 |-------|-----------|-------|--------|
 | Individual Tax Compliance | 35 | tcp-001-001 to tcp-001-035 | **Complete** |
 | Tax Planning | 35 | tcp-002-001 to tcp-002-035 | **Complete** |
-| Entity Tax Compliance | 35 | tcp-003-001 to tcp-003-035 | Pending |
+| C Corporation Planning | 35 | tcp-003-001 to tcp-003-035 | **Complete** |
+| S Corporation Planning | 35 | tcp-004-001 to tcp-004-035 | Pending |
 | More batches | ... | ... | Pending |
 
 ### TCP Enhancement Completed - January 17, 2026 (Session 1)
@@ -166,6 +167,77 @@ All 58 exam TBS questions have been enhanced with:
 | FATCA (Form 8938) | IRC §6038D |
 | Listed Transactions | IRC §6707A |
 | Community Property | IRC §66 |
+
+### TCP Enhancement Completed - January 17, 2026 (Session 3)
+
+**C Corporation Planning Questions Enhanced (tcp-003-001 to tcp-003-035)**
+
+35 C Corporation Planning questions enhanced with:
+- IRC §11(b) corporate tax rate (flat 21% post-TCJA)
+- IRC §162(a)(1) reasonable compensation rules
+- IRC §301 distribution treatment and constructive dividends
+- IRC §351/§368(c) corporate formation and 80% control test
+- IRC §172 NOL limitations (80% offset, indefinite carryforward)
+- IRC §531/§535 accumulated earnings tax and credit
+- IRC §541/§542/§543 personal holding company rules
+- IRC §162(m) executive compensation limits ($1M)
+- IRC §243/§246 dividends received deduction (50%/65%/100%)
+- IRC §302 stock redemption treatment tests
+- IRC §170(b)(2) corporate charitable contribution limits (10%)
+- IRC §1211(a)/§1212(a) corporate capital loss rules
+- IRC §6655 large corporation estimated tax rules
+- IRC §1372 fringe benefit rules for S corp >2% shareholders
+- IRC §331/§336 complete liquidation rules
+- IRC §441/§706/§1378 taxable year selection
+- IRC §316/§301 E&P and dividend definitions
+- IRC §357(c) liabilities in excess of basis
+- IRC §311 property distributions and gain recognition
+- IRC §163(j) business interest expense limitations
+- IRC §382 NOL limitation after ownership changes
+- IRC §368(a)(1) corporate reorganization types (A through G)
+- IRC §1504 consolidated return requirements
+- IRC §338 deemed asset acquisition election
+- IRC §951A/§250 GILTI and FDII international provisions
+- IRC §59A BEAT minimum tax
+- IRC §355 tax-free spin-off requirements
+- IRC §1202(d) QSBS gross asset limit ($50M)
+- IRC §1563 controlled group definitions
+- Distractor analysis for all wrong answers
+- Memory tips with statutory citations
+
+**Key Topics Enhanced:**
+| Topic | Authority Reference |
+|-------|---------------------|
+| C Corp Tax Rate | IRC §11(b) |
+| Reasonable Compensation | IRC §162(a)(1) |
+| Constructive Dividends | IRC §301 |
+| Section 351 Formation | IRC §351, §368(c) |
+| NOL Limitations | IRC §172 |
+| Accumulated Earnings Tax | IRC §531, §535 |
+| Personal Holding Company | IRC §541, §542, §543 |
+| Executive Comp Limit | IRC §162(m) |
+| Dividends Received Deduction | IRC §243, §246 |
+| Stock Redemptions | IRC §302 |
+| Corporate Charitable | IRC §170(b)(2) |
+| Capital Loss Rules | IRC §1211(a), §1212(a) |
+| Large Corp Estimated Tax | IRC §6655 |
+| Fringe Benefits | IRC §106, §79, §1372 |
+| Complete Liquidation | IRC §331, §336 |
+| Taxable Year | IRC §441, §1378 |
+| Earnings & Profits | IRC §312, §316 |
+| Liability Assumption | IRC §357(c) |
+| Property Distributions | IRC §311 |
+| Interest Expense Limit | IRC §163(j) |
+| Section 382 NOL Limit | IRC §382 |
+| Reorganizations | IRC §368 |
+| Consolidated Returns | IRC §1504 |
+| Section 338 Election | IRC §338 |
+| GILTI | IRC §951A |
+| FDII | IRC §250 |
+| BEAT | IRC §59A |
+| Spin-Offs | IRC §355 |
+| QSBS Requirements | IRC §1202(d) |
+| Controlled Groups | IRC §1563 |
 
 ---
 
