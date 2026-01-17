@@ -1,8 +1,10 @@
-import { createClient } from '@/lib/supabase/server';
+import { createClient, createServiceRoleClient } from '@/lib/supabase/server';
 import Link from 'next/link';
 
 async function getStats() {
  const supabase = await createClient();
+ // Use service role client to bypass RLS for admin queries
+ const serviceClient = createServiceRoleClient();
 
  if (!supabase) {
  return {
@@ -13,29 +15,29 @@ async function getStats() {
  };
  }
 
- // Get total users
- const { count: totalUsers } = await supabase
+ // Get total users (service role to ensure accurate count)
+ const { count: totalUsers } = await (serviceClient || supabase)
  .from('profiles')
  .select('*', { count: 'exact', head: true });
 
- // Get pending feedback count
- const { count: pendingFeedback } = await supabase
+ // Get pending feedback count (must use service role to bypass RLS)
+ const { count: pendingFeedback } = await (serviceClient || supabase)
  .from('question_feedback')
  .select('*', { count: 'exact', head: true })
  .eq('status', 'pending');
 
- // Get practice sessions today
+ // Get practice sessions today (service role to bypass RLS)
  const today = new Date();
  today.setHours(0, 0, 0, 0);
- const { count: practiceSessionsToday } = await supabase
+ const { count: practiceSessionsToday } = await (serviceClient || supabase)
  .from('practice_sessions')
  .select('*', { count: 'exact', head: true })
  .gte('created_at', today.toISOString());
 
- // Get active users in last 7 days
+ // Get active users in last 7 days (service role to bypass RLS)
  const sevenDaysAgo = new Date();
  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
- const { data: activeUsersData } = await supabase
+ const { data: activeUsersData } = await (serviceClient || supabase)
  .from('practice_sessions')
  .select('user_id')
  .gte('created_at', sevenDaysAgo.toISOString());
@@ -51,11 +53,12 @@ async function getStats() {
 }
 
 async function getRecentFeedback() {
- const supabase = await createClient();
+ // Use service role client to bypass RLS for admin access
+ const serviceClient = createServiceRoleClient();
 
- if (!supabase) return [];
+ if (!serviceClient) return [];
 
- const { data } = await supabase
+ const { data } = await serviceClient
  .from('question_feedback')
  .select('id, question_id, section, feedback_type, status, created_at')
  .order('created_at', { ascending: false })
@@ -65,11 +68,12 @@ async function getRecentFeedback() {
 }
 
 async function getRecentSignups() {
- const supabase = await createClient();
+ // Use service role client to bypass RLS for admin access
+ const serviceClient = createServiceRoleClient();
 
- if (!supabase) return [];
+ if (!serviceClient) return [];
 
- const { data } = await supabase
+ const { data } = await serviceClient
  .from('profiles')
  .select('id, email, full_name, created_at')
  .order('created_at', { ascending: false })

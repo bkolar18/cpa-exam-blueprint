@@ -35,9 +35,16 @@ export async function GET(request: NextRequest) {
     const section = searchParams.get('section');
     const type = searchParams.get('type');
 
+    // Join with profiles to get user email
     let query = serviceClient
       .from('question_feedback')
-      .select('*')
+      .select(`
+        *,
+        profiles:user_id (
+          email,
+          full_name
+        )
+      `)
       .order('created_at', { ascending: false });
 
     if (status && status !== 'all') {

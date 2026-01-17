@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createClient, createServiceRoleClient } from '@/lib/supabase/server';
 
 // Check if email is in admin list
 function isAdminEmail(email: string | null | undefined): boolean {
@@ -22,14 +22,20 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
+    // Use service role client to bypass RLS for admin queries
+    const serviceClient = createServiceRoleClient();
+    if (!serviceClient) {
+      return NextResponse.json({ error: 'Service client unavailable' }, { status: 500 });
+    }
+
     const searchParams = request.nextUrl.searchParams;
     const section = searchParams.get('section');
     const accuracy = searchParams.get('accuracy');
     const sortBy = searchParams.get('sortBy') || 'times_shown';
     const sortOrder = searchParams.get('sortOrder') || 'desc';
 
-    // Try to get from question_stats table first
-    let query = supabase
+    // Try to get from question_stats table first (if it exists)
+    let query = serviceClient
       .from('question_stats')
       .select('*');
 
@@ -67,18 +73,24 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ questions: statsData });
     }
 
-    // Fallback: Calculate stats from practice_attempts
-    const { data: attempts, error: attemptsError } = await supabase
+    // Fallback: Calculate stats from practice_attempts (using service client)
+    const { data: attempts, error: attemptsError } = await serviceClient
       .from('practice_attempts')
       .select('question_id, section, topic, is_correct, time_spent_seconds');
 
     if (attemptsError) {
       console.error('Error fetching attempts:', attemptsError);
-      return NextResponse.json({ error: 'Failed to fetch question data' }, { status: 500 });
+      // If practice_attempts also fails (table might not exist or be empty), return empty array
+      return NextResponse.json({ questions: [], message: 'No practice data available yet' });
     }
 
-    // Get feedback counts
-    const { data: feedbackData } = await supabase
+    // If no attempts yet, return empty with helpful message
+    if (!attempts || attempts.length === 0) {
+      return NextResponse.json({ questions: [], message: 'No practice attempts recorded yet. Stats will appear once users start practicing.' });
+    }
+
+    // Get feedback counts (using service client)
+    const { data: feedbackData } = await serviceClient
       .from('question_feedback')
       .select('question_id');
 

@@ -12,7 +12,11 @@ interface Feedback {
  status: string;
  admin_notes: string | null;
  created_at: string;
- user_email?: string;
+ user_id?: string;
+ profiles?: {
+  email: string;
+  full_name: string | null;
+ } | null;
 }
 
 const feedbackTypeLabels: Record<string, string> = {
@@ -294,6 +298,9 @@ export default function FeedbackManagementPage() {
  Status
  </th>
  <th className="px-4 py-3 text-left text-xs font-semibold text-[var(--muted)] dark:text-[var(--muted)] uppercase tracking-wider">
+ Submitted By
+ </th>
+ <th className="px-4 py-3 text-left text-xs font-semibold text-[var(--muted)] dark:text-[var(--muted)] uppercase tracking-wider">
  Date
  </th>
  <th className="px-4 py-3 text-left text-xs font-semibold text-[var(--muted)] dark:text-[var(--muted)] uppercase tracking-wider">
@@ -340,6 +347,9 @@ export default function FeedbackManagementPage() {
  </span>
  </td>
  <td className="px-4 py-3 text-sm text-[var(--muted)] dark:text-[var(--muted)]">
+ {item.profiles?.email || 'Unknown'}
+ </td>
+ <td className="px-4 py-3 text-sm text-[var(--muted)] dark:text-[var(--muted)]">
  {new Date(item.created_at).toLocaleDateString()}
  </td>
  <td className="px-4 py-3">
@@ -355,7 +365,7 @@ export default function FeedbackManagementPage() {
  </tr>
  {expandedId === item.id && (
  <tr key={`${item.id}-expanded`}>
- <td colSpan={6} className="px-4 py-4 bg-gray-50 dark:bg-[var(--card-hover)]/30">
+ <td colSpan={7} className="px-4 py-4 bg-gray-50 dark:bg-[var(--card-hover)]/30">
  <div className="space-y-4">
  {item.comment && (
  <div>
