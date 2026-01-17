@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createClient, createServiceRoleClient } from '@/lib/supabase/server';
 
 // Check if email is in admin list
 function isAdminEmail(email: string | null | undefined): boolean {
@@ -10,6 +10,7 @@ function isAdminEmail(email: string | null | undefined): boolean {
 
 export async function GET(request: NextRequest) {
   try {
+    // Verify admin status with regular auth client
     const supabase = await createClient();
 
     if (!supabase) {
@@ -20,6 +21,13 @@ export async function GET(request: NextRequest) {
 
     if (!user || !isAdminEmail(user.email)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    // Use service role client to bypass RLS for admin activity log
+    const serviceClient = createServiceRoleClient();
+    if (!serviceClient) {
+      console.error('Service role client not configured');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
     const searchParams = request.nextUrl.searchParams;
@@ -44,7 +52,7 @@ export async function GET(request: NextRequest) {
         break;
     }
 
-    let query = supabase
+    let query = serviceClient
       .from('activity_log')
       .select('*')
       .order('created_at', { ascending: false })

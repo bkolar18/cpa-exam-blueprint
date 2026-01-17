@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createClient, createServiceRoleClient } from '@/lib/supabase/server';
 
 // Check if email is in admin list
 function isAdminEmail(email: string | null | undefined): boolean {
@@ -10,6 +10,7 @@ function isAdminEmail(email: string | null | undefined): boolean {
 
 export async function GET(request: NextRequest) {
   try {
+    // First verify admin status with regular auth client
     const supabase = await createClient();
 
     if (!supabase) {
@@ -22,13 +23,20 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
+    // Use service role client to bypass RLS for admin data access
+    const serviceClient = createServiceRoleClient();
+    if (!serviceClient) {
+      console.error('Service role client not configured');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+    }
+
     const searchParams = request.nextUrl.searchParams;
     const tier = searchParams.get('tier');
     const sortBy = searchParams.get('sortBy') || 'created_at';
     const sortOrder = searchParams.get('sortOrder') || 'desc';
 
-    // Get profiles with user stats
-    let query = supabase
+    // Get profiles with user stats using service role client
+    let query = serviceClient
       .from('profiles')
       .select('id, email, full_name, created_at, subscription_tier');
 
@@ -57,21 +65,21 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ users: [] });
     }
 
-    // Get session counts
-    const { data: sessionCounts } = await supabase
+    // Get session counts using service client
+    const { data: sessionCounts } = await serviceClient
       .from('practice_sessions')
       .select('user_id')
       .in('user_id', userIds);
 
     // Get last active times
-    const { data: lastActiveTimes } = await supabase
+    const { data: lastActiveTimes } = await serviceClient
       .from('practice_sessions')
       .select('user_id, created_at')
       .in('user_id', userIds)
       .order('created_at', { ascending: false });
 
     // Get streaks from study_streaks table if it exists, otherwise calculate
-    const { data: streaks } = await supabase
+    const { data: streaks } = await serviceClient
       .from('study_streaks')
       .select('user_id, current_streak')
       .in('user_id', userIds);

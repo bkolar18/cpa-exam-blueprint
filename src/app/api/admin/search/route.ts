@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createClient, createServiceRoleClient } from '@/lib/supabase/server';
 
 // Check if email is in admin list
 function isAdminEmail(email: string | null | undefined): boolean {
@@ -10,6 +10,7 @@ function isAdminEmail(email: string | null | undefined): boolean {
 
 export async function GET(request: NextRequest) {
   try {
+    // Verify admin status with regular auth client
     const supabase = await createClient();
 
     if (!supabase) {
@@ -22,6 +23,13 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
+    // Use service role client to bypass RLS for admin search
+    const serviceClient = createServiceRoleClient();
+    if (!serviceClient) {
+      console.error('Service role client not configured');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+    }
+
     const searchParams = request.nextUrl.searchParams;
     const query = searchParams.get('q');
 
@@ -31,8 +39,8 @@ export async function GET(request: NextRequest) {
 
     const searchQuery = query.toLowerCase();
 
-    // Search users by email or name
-    const { data: usersData } = await supabase
+    // Search users by email or name using service client
+    const { data: usersData } = await serviceClient
       .from('profiles')
       .select('id, email, full_name')
       .or(`email.ilike.%${searchQuery}%,full_name.ilike.%${searchQuery}%`)
@@ -45,7 +53,7 @@ export async function GET(request: NextRequest) {
     }));
 
     // Search feedback by question_id or comment
-    const { data: feedbackData } = await supabase
+    const { data: feedbackData } = await serviceClient
       .from('question_feedback')
       .select('id, question_id, section, feedback_type, comment')
       .or(`question_id.ilike.%${searchQuery}%,comment.ilike.%${searchQuery}%`)
@@ -58,7 +66,7 @@ export async function GET(request: NextRequest) {
     }));
 
     // Search questions by ID (from question_stats if available, otherwise from feedback)
-    const { data: questionStatsData } = await supabase
+    const { data: questionStatsData } = await serviceClient
       .from('question_stats')
       .select('question_id, section, topic')
       .ilike('question_id', `%${searchQuery}%`)
@@ -72,7 +80,7 @@ export async function GET(request: NextRequest) {
 
     // If no results from question_stats, try to find from feedback
     if (questions.length === 0) {
-      const { data: feedbackQuestionsData } = await supabase
+      const { data: feedbackQuestionsData } = await serviceClient
         .from('question_feedback')
         .select('question_id, section')
         .ilike('question_id', `%${searchQuery}%`)

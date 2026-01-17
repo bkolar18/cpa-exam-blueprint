@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createClient, createServiceRoleClient } from '@/lib/supabase/server';
 
 // Check if email is in admin list
 function isAdminEmail(email: string | null | undefined): boolean {
@@ -10,6 +10,7 @@ function isAdminEmail(email: string | null | undefined): boolean {
 
 export async function GET(request: NextRequest) {
   try {
+    // Verify admin status with regular auth client
     const supabase = await createClient();
 
     if (!supabase) {
@@ -20,6 +21,13 @@ export async function GET(request: NextRequest) {
 
     if (!user || !isAdminEmail(user.email)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    // Use service role client to bypass RLS for admin analytics
+    const serviceClient = createServiceRoleClient();
+    if (!serviceClient) {
+      console.error('Service role client not configured');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
     const searchParams = request.nextUrl.searchParams;
@@ -42,7 +50,7 @@ export async function GET(request: NextRequest) {
         startDate = new Date('2020-01-01');
     }
 
-    // Fetch all data in parallel
+    // Fetch all data in parallel using service client
     const [
       profilesResult,
       sessionsResult,
@@ -50,11 +58,11 @@ export async function GET(request: NextRequest) {
       streaksResult,
       aiUsageResult,
     ] = await Promise.all([
-      supabase.from('profiles').select('id, created_at, subscription_tier'),
-      supabase.from('practice_sessions').select('id, user_id, section, created_at').gte('created_at', startDate.toISOString()),
-      supabase.from('practice_attempts').select('id, user_id, question_id, section, topic, is_correct, created_at').gte('created_at', startDate.toISOString()),
-      supabase.from('study_streaks').select('user_id, current_streak'),
-      supabase.from('ai_feature_usage').select('id, user_id, feature, period_type, period_key, usage_count, last_used_at, created_at').gte('created_at', startDate.toISOString()),
+      serviceClient.from('profiles').select('id, created_at, subscription_tier'),
+      serviceClient.from('practice_sessions').select('id, user_id, section, created_at').gte('created_at', startDate.toISOString()),
+      serviceClient.from('practice_attempts').select('id, user_id, question_id, section, topic, is_correct, created_at').gte('created_at', startDate.toISOString()),
+      serviceClient.from('study_streaks').select('user_id, current_streak'),
+      serviceClient.from('ai_feature_usage').select('id, user_id, feature, period_type, period_key, usage_count, last_used_at, created_at').gte('created_at', startDate.toISOString()),
     ]);
 
     const profiles = profilesResult.data || [];
