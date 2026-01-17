@@ -26,8 +26,11 @@ export async function GET(request: NextRequest) {
     // Use service role client to bypass RLS for admin data access
     const serviceClient = createServiceRoleClient();
     if (!serviceClient) {
-      console.error('Service role client not configured');
-      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+      console.error('Service role client not configured - SUPABASE_SERVICE_ROLE_KEY may be missing');
+      return NextResponse.json({
+        error: 'Server configuration error',
+        details: 'Service role key not configured. Check Vercel environment variables.'
+      }, { status: 500 });
     }
 
     const searchParams = request.nextUrl.searchParams;
@@ -53,9 +56,14 @@ export async function GET(request: NextRequest) {
 
     const { data: profiles, error } = await query;
 
+    console.log('[Admin Users API] Profiles fetched:', profiles?.length || 0, 'users');
+    if (profiles && profiles.length > 0) {
+      console.log('[Admin Users API] First user email:', profiles[0]?.email);
+    }
+
     if (error) {
       console.error('Error fetching profiles:', error);
-      return NextResponse.json({ error: 'Failed to fetch users' }, { status: 500 });
+      return NextResponse.json({ error: 'Failed to fetch users', details: error.message }, { status: 500 });
     }
 
     // Get practice session counts and last active dates
