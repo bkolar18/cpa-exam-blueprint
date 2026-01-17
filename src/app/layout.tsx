@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { AuthProvider } from "@/components/auth/AuthProvider";
@@ -109,6 +110,7 @@ export default function RootLayout({
           </AuthProvider>
         </ThemeProvider>
         <Analytics />
+        <GoogleAnalytics />
         <OrganizationJsonLd />
         <WebsiteJsonLd />
       </body>
